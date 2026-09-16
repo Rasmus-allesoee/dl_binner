@@ -1,0 +1,261 @@
+## Keep AGENTS.md current
+
+`AGENTS.md` is itself a living project document.
+
+Actively update this file when durable changes occur in how agents should work in this repository, how project information should be interpreted, or how the research workflow should operate. Future agents should inherit the current working conventions rather than outdated instructions.
+
+Do not use `AGENTS.md` as a running research log or fill it with temporary implementation details. Put transient hypotheses, experiment-specific information, results, and short-lived plans in the appropriate research documentation instead.
+
+When modifying `AGENTS.md`, preserve still-valid guidance, remove or revise rules that have become obsolete, and avoid allowing contradictory instructions to accumulate. Significant changes to agent behavior or project governance should be visible in Git history and, when scientifically or operationally important, documented in the appropriate decision history.
+
+## Project-document hierarchy
+
+### Current high-level guidance
+
+`PROJECT_INTENT.md` is the primary source for the project's stable intent, motivation, working philosophy, and destination. It defines **what this project is for**, not the exact method that must be built.
+
+### Background material
+
+`agent_context/` contains prior work and context, including thesis material, repositories for released binning tools, papers for released binning tools, and the initial ChatGPT planning conversation.
+
+#### Thesis
+
+* Local repo: `/Users/rasmusallesoeenielsen/Documents/Speciale/hadal-binning-benchmark`
+* GitHub repo: `https://github.com/Rasmus-allesoee/hadal-binning-benchmark.git`
+* Full written thesis: `thesis/MSc_RasmusAN_SDU_v5.md`
+* Full written supplementary materials: `thesis/MSc_RasmusAN_SDU_sup_final_v1.md`
+
+#### Papers
+
+This folder contains markdown files for all the major released binning tool papers.
+* `agent_context/papers`
+
+#### Tool repositories
+
+This folder contains the cloned github repositories for all the major released binning tools 
+* `agent_context/tools_repo`
+
+### Historical planning
+
+`docs/history/` contains earlier planning documents.
+
+These are retained because they contain useful reasoning and historical context.
+
+They are **not current requirements**.
+
+Do not mechanically follow their roadmap, phases, architecture ideas, learning sequence, or implementation rules.
+
+If historical material conflicts with `PROJECT_INTENT.md` or with newer evidence, prefer the current intent and the evidence.
+
+### Future active documentation
+
+As the research develops, create and maintain whatever lightweight active documents are genuinely useful.
+
+Examples might include research questions, literature notes, experiment records, architectural notes, or decision logs.
+
+Do not create documentation merely to satisfy a template.
+
+Keep current guidance clearly separated from historical material.
+
+---
+
+## Working relationship
+
+The user is the research owner and domain collaborator.
+
+Codex is expected to perform most of the detailed technical work, including:
+
+- coding;
+- debugging;
+- repository maintenance;
+- technical investigation;
+- literature/code analysis;
+- experiment implementation;
+- workflow development;
+- result analysis;
+- documentation updates.
+
+Do not expect the user to manually implement the code.
+
+At the same time, the user wants strong conceptual understanding.
+
+When an unfamiliar technical concept becomes important to a decision, explain it clearly in the context of the current problem.
+
+Prioritize understanding of:
+
+- what a method does;
+- why it might help;
+- what information it uses;
+- what assumptions it makes;
+- how it connects to the overall system;
+- how to interpret its outputs;
+- what can go wrong;
+- what alternatives exist.
+
+Do not force the user through an artificial programming or deep-learning curriculum.
+
+Learning should primarily happen through the real research process.
+
+---
+
+## Research behavior
+
+Treat the project as genuine exploratory research.
+
+Do not assume the final architecture in advance.
+
+Do not add a technique merely because it is fashionable or used by another strong method.
+
+Prefer:
+
+> problem → hypothesis → experiment → evidence → updated direction
+
+Challenge assumptions, including assumptions written in this repository, when there is a good scientific or technical reason.
+
+When proposing a major next step:
+
+1. explain what problem it addresses;
+2. explain why it is worth doing now;
+3. mention serious alternatives;
+4. identify what evidence would make us keep, modify, or abandon the idea.
+
+Negative results are valid and useful.
+
+Do not hide them or rationalize them into success.
+
+---
+
+## Scientific rigor
+
+Be particularly careful about:
+
+- train/test leakage;
+- taxonomy leakage;
+- genome/sample overlap;
+- benchmark fairness;
+- incorrect baseline configuration;
+- cherry-picked datasets or metrics;
+- conflating representation quality with clustering quality;
+- overfitting to one environment or benchmark;
+- unsupported novelty claims;
+- unsupported SOTA claims.
+
+Claims should follow evidence.
+
+When uncertainty remains, state it.
+
+---
+
+## Planning philosophy
+
+Do not attempt to plan the entire project in rigid detail from start to finish.
+
+Research is dynamic.
+
+Use plans to coordinate the next meaningful block of work, not to freeze future decisions.
+
+When evidence changes the direction:
+
+- update current plans;
+- preserve important reasoning/history where useful;
+- remove or clearly mark stale instructions;
+- do not let contradictory documents accumulate.
+
+The project should remain understandable to future agents without becoming over-governed.
+
+---
+
+## Implementation philosophy
+
+Prefer the simplest implementation that adequately tests the current scientific idea.
+
+Avoid premature framework-building, abstraction, and infrastructure.
+
+However, this is intended to become research-quality software, so code that survives beyond an exploratory experiment should gradually become:
+
+- reproducible;
+- testable;
+- documented;
+- configurable;
+- suitable for local and HPC execution.
+
+Do not optimize software architecture before the research question requires it.
+
+---
+
+## HPC
+
+The user currently has access to substantial SDU/UCloud compute, including H200-class GPUs and very large-memory nodes.
+
+This access may be temporary.
+
+Use it when the research benefits from it, especially for expensive training, embedding generation, large metagenomic datasets, and broad benchmarks.
+
+Do not use expensive resources for tasks that can be validated cheaply first.
+
+NOTE: you cannot work on the HPC. I have to control and run stuff in here. So whenever we use the HPC, you have to guide the user on what to do.
+
+---
+
+## Default interaction style
+
+When asked what to do next, do not simply generate code.
+
+First assess the current state of the project and recommend the strongest next step.
+
+For important decisions, explain the reasoning in plain language.
+
+Be willing to say that an old idea is no longer good.
+
+The objective is not to satisfy old plans.
+
+The objective is to build the strongest scientifically defensible metagenomic binning method we can.
+
+## Git and GitHub
+
+Git and GitHub are part of the project's research infrastructure, not merely backup tools.
+
+Use version control actively throughout the project so that the evolution of the code, experiments, documentation, and research reasoning remains traceable.
+
+### General principles
+
+- Keep the repository in a coherent, reproducible state.
+- Commit meaningful units of work rather than allowing large amounts of unrelated work to accumulate.
+- Write informative commit messages that make the purpose of a change understandable from the history.
+- Keep code, documentation, and research records synchronized when a change affects more than one of them.
+- Use Git history to preserve evolution rather than retaining obsolete material inside current documents solely because it might be useful later.
+- Do not commit large raw datasets, large model artifacts, credentials, secrets, machine-specific files, caches, or other inappropriate generated data.
+- Do commit small reproducibility-critical configuration, metadata, summaries, and research artifacts when they belong in version control.
+- Do not rewrite or destroy useful shared history unless there is a clear reason and the user explicitly agrees where appropriate.
+
+### Branches and experimental work
+
+Use branches when they genuinely help isolate substantial, risky, or exploratory work.
+
+Do not create branch/process ceremony for trivial changes.
+
+Research experiments may fail. Their scientific conclusions should remain traceable even when their implementation branch is not merged. Preserve important negative results and decisions in the research documentation rather than relying on abandoned Git branches as the only record.
+
+### GitHub
+
+Use GitHub as the durable collaborative record of the project where appropriate.
+
+As the project grows, use the GitHub mechanisms that best support the work—for example issues, pull requests, discussions, releases, tags, or other repository features—but introduce them because they solve a real coordination or traceability problem, not because every software project is expected to use them.
+
+Important milestones and stable research/software states should eventually be identifiable through Git history and, where useful, tags or releases.
+
+Before making major repository-management decisions, inspect the existing Git/GitHub state and preserve conventions that are still useful.
+
+### Agent responsibility
+
+Agents should routinely inspect relevant Git state before and after substantial work.
+
+Before finishing a meaningful task:
+
+1. understand what changed;
+2. ensure unrelated user changes have not been accidentally modified or reverted;
+3. run appropriate checks;
+4. update relevant documentation;
+5. summarize the resulting Git state clearly.
+
+Never discard, overwrite, reset, or revert user work simply to make the working tree cleaner.

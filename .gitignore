@@ -1,0 +1,24 @@
+# Local reference caches; provenance belongs in docs/evidence/.
+/agent_context/tools_repo/
+/agent_context/papers/
+
+# Large or regenerable research artifacts. Track manifests and small summaries.
+/data/raw/
+/data/processed/
+/artifacts/
+/runs/
+/scratch/
+
+# Local environments and machine state.
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
