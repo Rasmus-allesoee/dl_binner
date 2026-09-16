@@ -1,0 +1,75 @@
+# Questions and Hypotheses
+
+Updated: 2026-09-16
+
+This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. No hypothesis below has been experimentally tested in this project.
+
+Question statuses: `open`, `answered`, `deferred`, `superseded`. Hypothesis statuses: `untested`, `testing`, `supported within scope`, `not supported`, `inconclusive`, `abandoned`, `superseded`. A material revision preserves the previous statement and records why it changed; use a new ID if it is a different scientific claim.
+
+## Q001
+
+**Which recoverable errors remain in correctly configured contemporary binners, and where are they introduced?**
+
+Status: open. Opened: 2026-09-16.
+
+The candidate focus is contig loss/misassignment in fragmented prokaryotic assemblies with weak or distorted coverage. Separate information absence, representation failure, clustering error, and quality/refinement selection. Evidence: [thesis](../evidence/2026-09-16-thesis.md), [landscape](../evidence/2026-09-16-landscape.md). Related: H001; [D002](../decisions/D002-investigate-before-architecture.md).
+
+Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
+
+## Q002
+
+**What would make an intervention meaningfully different from the closest prior art?**
+
+Status: open. Opened: 2026-09-16.
+
+TaxVAMB, GenomeFace, CompleteBin, DCVBin, SCGBinner, REMAG, and UncertainGen occupy several initially attractive directions. Their relevance depends on the selected regime. See [review depth and open audit items](../evidence/2026-09-16-landscape.md).
+
+Needed to resolve: full relevant methods and code-path review, publication/release refresh, and a comparison between the proposed mechanism and existing approaches. An unfamiliar architecture or new combination is not evidence of novelty. No candidate method is selected.
+
+## Q003
+
+**What simulation and real-data design can test the chosen mechanism without importing the thesis's confounders?**
+
+Status: open. Opened: 2026-09-16.
+
+The previous simulation has one pair per ANI region, simplified abundance structure, clean shredded contigs, and pooled-input duplication artifacts. We need a question-specific design with explicit truth and recoverability, realistic follow-up, and distinct development/evaluation roles. Evidence: [thesis limits](../evidence/2026-09-16-thesis.md), [assets](../evidence/assets.md).
+
+Availability update, 2026-09-16: the owner confirmed the original artifacts remain on UCloud and said we should build our own optimized simulations when useful. Data availability is therefore owner-confirmed; file identity and protocol suitability remain open. The old datasets are optional prior evidence, not prescribed evaluation data.
+
+## Q004
+
+**What biological and computational improvement will count as success for the selected regime?**
+
+Status: open. Opened: 2026-09-16.
+
+Candidate endpoints include true recovered sequence at controlled impurity, genome recovery with missing targets counted, and cost. A new approach might improve one useful part of this tradeoff without winning every aggregate ranking. Proxy quality, origin-based purity, and full MIMAG categories must remain distinct.
+
+Needed to resolve: define the intended use, primary endpoint, denominators, thresholds, resource constraints, comparison population, and uncertainty analysis in the first experiment protocol before results are examined. Do not inherit the thesis's composite score as the project's objective.
+
+## Q005
+
+**Which information can the eventual method reasonably require, and how broadly should it transfer?**
+
+Status: open. Opened: 2026-09-16.
+
+Single/multi-sample coverage, taxonomy, pretrained references, marker genes, and graph/read evidence carry different assumptions and costs. Temporary HPC access affects execution strategy but does not alone justify a permanently expensive method. Evidence: [initial assessment](2026-09-16-initial-assessment.md), [assets](../evidence/assets.md).
+
+Needed to resolve: connect the target biological use to accessible inputs, record available compute/access duration when a job is planned, and audit genome/sample/pretraining overlap. A claim of unseen-genome generalization needs a corresponding evaluation design.
+
+## H001
+
+**Some avoidable binning errors arise because coverage reliability varies across contigs or samples in ways that existing preprocessing and feature integration do not adequately handle.**
+
+Status: untested. Proposed: 2026-09-16. Scope: a candidate explanation for Q001, not a novelty claim or model specification.
+
+Motivation: reported coverage dilution and recovery differences in [the thesis](../evidence/2026-09-16-thesis.md). Caveat: absolute depth loss alone is insufficient evidence because normalization can remove scale, and workflow comparisons also change clustering populations. Adaptive weighting and uncertainty modeling already have [prior art](../evidence/2026-09-16-landscape.md).
+
+Discriminating test: hold sequences, truth, sample composition, and clustering conditions fixed while comparing valid coverage inputs with a controlled, characterized distortion; inspect actual post-normalization features. Establish whether a simple reliability treatment changes truth-based recovery at comparable contamination. Check realism separately through mapped or real data. No such experiment has been run.
+
+Competing explanations: nonidentifiable shared sequence, mapping ambiguity, insufficient sequence signal, a clustering/selection issue, or incorrect baseline configuration.
+
+Rejection/modification: the distortion disappears after preprocessing; current methods already handle it; performance does not track the proposed mechanism; improvement only reflects increased contamination or a proxy-score change; or the target sequence is not recoverable from the available evidence. Update the hypothesis or abandon it with a linked result.
+
+## Closed and superseded records
+
+None in this project's active research record yet. Earlier project alternatives and staged learning plans remain in [historical planning](../history/README.md). They were not failed experiments. Close future entries in place, preserving their evidence and resolution dates.

@@ -1,3 +1,5 @@
+> Historical planning. Not current requirements. [PROJECT_INTENT.md](../../PROJECT_INTENT.md) is the current stable intent; [STATE.md](../STATE.md) identifies active work.
+
 # Project Charter — Next-Generation Deep-Learning Metagenomic Binner
 
 > **Status:** Initial charter. Stable in purpose, deliberately revisable in implementation.

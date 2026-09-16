@@ -15,6 +15,8 @@ They must not be treated as:
 - implementation specifications;
 - constraints that override newer evidence.
 
+The active handoff is [../STATE.md](../STATE.md), and the record conventions are [../WORKING.md](../WORKING.md). New scientific decisions and experiments live in their own linked records, including when later superseded.
+
 The current high-level project intent is defined in:
 
 - `../../PROJECT_INTENT.md`

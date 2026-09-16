@@ -1,3 +1,5 @@
+> Historical planning. These phases and learning requirements are nonbinding. Follow [current state](../STATE.md) for the next research block.
+
 # Learning and Research Roadmap
 
 > This roadmap is directional, not contractual. The **destination is fixed**: a completed, independently evaluated binning method. The path should change when experiments or literature justify it.

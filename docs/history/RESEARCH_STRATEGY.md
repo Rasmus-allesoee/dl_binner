@@ -1,3 +1,5 @@
+> Historical planning. Not the active research strategy. Follow [current state](../STATE.md) to the current assessment and evidence.
+
 # Research Strategy
 
 ## 1. Purpose

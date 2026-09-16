@@ -1,3 +1,5 @@
+> Historical planning. Status labels below refer to that planning period. Current decisions are indexed [here](../decisions/README.md).
+
 # Major Decisions and Research Direction Log
 
 > Record decisions that materially affect the scientific question, architecture, datasets, evaluation, project scope, or reproducibility. Do not log trivial code choices.

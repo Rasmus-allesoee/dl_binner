@@ -1,3 +1,5 @@
+> Historical planning. Not current instructions. Start with [current state](../STATE.md) and [project intent](../../PROJECT_INTENT.md).
+
 # Agent Context — Project Owner, Motivation, and Working Style
 
 > Purpose: Give coding/research agents enough context to make good decisions without repeatedly asking the owner to restate why this project exists.

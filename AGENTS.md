@@ -27,12 +27,12 @@ When modifying `AGENTS.md`, preserve still-valid guidance, remove or revise rule
 
 #### Papers
 
-This folder contains markdown files for all the major released binning tool papers.
+This folder contains local copies and transcriptions of selected binning papers. It is not an exhaustive or necessarily current bibliography, and file presence does not mean a paper has been reviewed. Consult `docs/evidence/` for reviewed evidence and publication/version updates.
 * `agent_context/papers`
 
 #### Tool repositories
 
-This folder contains the cloned github repositories for all the major released binning tools 
+This folder contains local third-party source copies. They may lack Git metadata and must not be treated as pinned, runnable baselines without checking their provenance and configuration.
 * `agent_context/tools_repo`
 
 ### Historical planning
@@ -47,15 +47,22 @@ Do not mechanically follow their roadmap, phases, architecture ideas, learning s
 
 If historical material conflicts with `PROJECT_INTENT.md` or with newer evidence, prefer the current intent and the evidence.
 
-### Future active documentation
+### Active research documentation
 
-As the research develops, create and maintain whatever lightweight active documents are genuinely useful.
+After reading this file and `PROJECT_INTENT.md`, read `docs/STATE.md`. It is the single current handoff and points to the next research block, evidence, and open dependencies.
 
-Examples might include research questions, literature notes, experiment records, architectural notes, or decision logs.
+Follow `docs/WORKING.md` for record ownership, provenance, and maintenance:
 
-Do not create documentation merely to satisfy a template.
+- `docs/research/questions.md` owns question/hypothesis status and resolution history.
+- `docs/evidence/` contains dated source interpretations, code observations, and asset provenance.
+- `docs/decisions/` records consequential choices and their alternatives, reasoning, and supersession.
+- `experiments/` records actual protocols, run attempts, configurations, results, and conclusions.
 
-Keep current guidance clearly separated from historical material.
+Keep source reports, direct observations, interpretations, and untested hypotheses distinguishable. Do not present prior thesis results or paper claims as reproduced results of this project.
+
+When evidence changes the direction, update the relevant record and `docs/STATE.md` together. Preserve negative outcomes, abandoned hypotheses, and superseded decisions with explicit reasons and links. Original source documents remain source documents; do not rewrite them to reflect our later interpretation.
+
+Create and split documents only when information needs an owner. Do not duplicate the current handoff in separate logs or create records merely to fill a template. Run `python3 scripts/check_docs.py` after changing maintained documentation.
 
 ---
 
