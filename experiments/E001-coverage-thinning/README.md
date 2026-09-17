@@ -1,0 +1,136 @@
+# E001: Where Does Reduced Coverage Evidence Lose Recoverable Sequence?
+
+Date: 2026-09-17
+Execution status: planned
+Scientific outcome: not assessed
+Protocol: prospective design v1; not yet an executable or launch-ready workflow
+Questions: [Q001](../../docs/research/questions.md#q001), [Q003](../../docs/research/questions.md#q003), [Q004](../../docs/research/questions.md#q004); hypothesis [H001](../../docs/research/questions.md#h001)
+Decision: [D003](../../docs/decisions/D003-coverage-diagnostic.md); evidence: [method audit](../../docs/evidence/2026-09-17-targeted-audit.md), [data contract](../../docs/evidence/2026-09-17-benchmark-data.md)
+
+## Question and limits
+
+On one fixed known-origin assembly, does reducing mapped read evidence cause a material recovery loss in current binners, and does the evidence point to filtering, available signal, representation, or clustering/selection?
+
+The first target is **sampling reliability**, not all forms of misleading coverage. Holding assembly fixed isolates the binner's response; it deliberately omits the assembly deterioration that lower sequencing depth would cause in an end-to-end workflow. Neither weaker performance after thinning nor better performance with truth labels proves an avoidable methodological failure.
+
+An embedding is a learned numerical representation; clustering turns it into bins. We preserve both because a useful representation can still produce poor bins. This experiment diagnoses where to investigate next; it does not create our new method.
+
+## Data and fixed population
+
+Use CAMI II Marine's ten short-read samples and pooled short-read gold-standard assembly (GSA), with matching contig-origin truth. This is development data. Fresh downloads are required, as confirmed by the owner. Artifact locators and acquisition caveats are owned by the [data contract](../../docs/evidence/2026-09-17-benchmark-data.md).
+
+Before any binning scores are examined:
+
+1. Verify the original GSA/truth ID and length joins, sample identities, source metadata and hashes. Retain the original files unchanged.
+2. Create one canonical input FASTA with all GSA sequences **at least 2,500 bp**, preserving IDs and sequence bytes. Selection uses length only, not taxonomy, coverage or tool success. Map against this exact reference. This common support restriction excludes shorter contigs and changes mapping competition relative to the complete GSA; conclusions are restricted accordingly.
+3. Establish an immutable manifest for every input contig: ID, length, sequence hash, source genome(s), domain if known, ambiguity flags, and inclusion/exclusion reasons. No source labels appear in model features or renamed FASTA IDs.
+4. Define `U`, the conservative evaluation subset: single-owner truth contigs assigned to bacteria/archaea, excluding confirmed chimeras and exact sequence/reverse-complement duplicates assigned to different source genomes. Keep excluded/ambiguous/non-prokaryotic sequences in the binner's input and account for their bases separately. Single-owner truth does not prove that available features identify that origin.
+5. Freeze genome population `G`: every source genome with at least 200,000 bp in `U`. Report genomes/bases outside G, rather than silently dropping them. All members of G remain in every condition, including wholly unassigned genomes. If domain/source identity cannot be established, resolve that contract before calling the primary endpoint prokaryotic.
+
+No genome selection based on preliminary binner performance. No extra fragmentation, strain selection, or assembly is performed in this protocol. The original GSA is error-free source sequence, not a realistic assembler output. Before training, require at least 20 genomes in G and at least 100 eligible short probe queries (2,500-9,999 bp) spanning at least ten genomes. These are minimum interpretability checks, not a statistical power calculation. Failure triggers a documented redesign before scores, not hidden replacement. Report ambiguity fractions even when these gates pass.
+
+## Conditions
+
+| Condition | Intervention | Purpose |
+| --- | --- | --- |
+| C0: full mapped evidence | All canonical primary mapped alignments from all ten samples | Reference condition; not called perfect coverage or an oracle |
+| CS: scale-only control | Multiply each C0 coverage mean by 0.1 and depth variance by 0.01 before native normalization; recompute dependent totals and square roots consistently | Feature/preprocessing control for multiplicative depth scaling, with no sampling noise. Not simulated low-depth reads |
+| CT: thinned evidence | Keep 10% of read templates independently within each sample; both mates and retained alignments of each template receive the same selection. Recompute all native coverage features from the thinned BAMs | Paired stochastic reduction in observations at fixed assembly, reference and sample count |
+
+Use [samtools 1.24 `view --subsample`](https://www.htslib.org/doc/samtools-view.html), not a new sampling algorithm. Always thin the original C0 BAM, never an already thinned file. Use explicit seeds and verify pair consistency on fixtures. Do not multiply variance by 0.01 for CT: thinning changes variance and zeros, so these must be measured again. The CS variance rule instead describes deterministic scaling of a depth signal.
+
+CS is initially a **preprocessing-only** control: compare accepted IDs, profile features, total-abundance features, variance channels and zero handling with C0. VAMB's uniform column scaling should cancel up to numerical effects. COMEBin's fixed pseudocount can prevent exact cancellation, particularly near zero. MetaBAT2's absolute-depth filters need not be invariant. Record actual differences; never assert a blanket invariance across tools. CS does not require redundant full model runs when features are effectively unchanged. A material discrepancy is investigated before interpreting CT.
+
+This test does not model contig-specific mapping bias, competing assembly references, compositional GC bias, or correlated biological samples. A follow-up custom simulation would be needed to distinguish those mechanisms. Do not label arbitrary matrix noise as read-mapping competition.
+
+## Native baselines and information access
+
+Use the exact `metabat`, `vamb`, `COMEBin` and `AMBER_evaluation` audit commits in [tool snapshots](../../docs/evidence/2026-09-17-tool-snapshots.json). Pin runtime dependencies and bundled marker-file hashes during preflight; cloning a branch head again is not a version pin. If a release replaces an audited snapshot, trace the affected paths and amend this protocol before runs.
+
+- **MetaBAT2:** native depth-mean/variance input, default scientific thresholds, nonzero random seed, `--saveCls` and `--unbinned`. Do not use `--cvExt` or disable recruitment merely to simplify the adapter.
+- **VAMB:** `bin default`, native VAE and clustering, no TaxVAMB/Taxometer or marker reclustering. Use native BAM-derived trimmed coverage. Retain `latent.npz`, `model.pt`, identifiers and the full cluster assignments. Keep default training schedule (300 epochs at this snapshot), with explicit seeds/resources.
+- **COMEBin:** the inspected 1.1.0 pipeline, six views, mean plus square-root variance, default max normalization, 200-epoch maximum with native early stopping, batch size 1,024 and native N50-dependent temperature. Generate augmentation intervals once and reuse them across C0/CT and replicates; preserve their hash. Recompute coverage for **every view** after thinning. Retain the complete Leiden candidate grid, marker estimates, chosen partition, full labels and final bins. Quality-threshold output subsets are supplementary, not the primary result.
+
+The canonical input population is common; native feature estimators and marker use are not artificially made identical. Comparisons between tools are descriptive. The controlled causal contrast is within a tool. No source genome IDs, truth-derived abundances, taxonomic labels or oracle cluster counts enter training/selection. Target-data unsupervised fitting is declared transductive, not an unseen-genome generalization experiment.
+
+Use existing model implementations; permissible adapter changes only export intermediate arrays/IDs, isolate run directories, or fix documented compatibility issues without changing the scientific algorithm. Preserve patches with hashes and fixture tests. Use a fresh clone/worktree for execution rather than editing the owner's reference caches.
+
+## Mapping and reproducibility
+
+Use [BWA-MEM2 v2.2.1](https://github.com/bwa-mem2/bwa-mem2/releases/tag/v2.2.1) paired-read mapping to the canonical FASTA, with default alignment parameters and explicit thread/read-group settings. Use samtools 1.24 for sorting, indexing, validation and thinning. Resolve binary/container digests before execution. Retain primary mapped records (`-F 2308` excludes unmapped, secondary and supplementary records), with no extra MAPQ cutoff; low-MAPQ evidence remains visible. Do not use source-genome simulator BAMs as competitive contig mappings.
+
+Verify archive read layout before writing the final mapping command: interleaved and separate-mate files are not interchangeable. Preserve read/sample identities. Record mapper arguments, library statistics, flag/MAPQ distributions, mapped pairs, reference `SN/LN` headers, and all feature-extractor options. A mapper failure or wrong-reference BAM stops the experiment.
+
+Replicates are fixed prospectively:
+
+- Training/clustering seeds: **11, 23, 47**, paired between C0 and CT for each method. MetaBAT2 seed zero means random and is not used.
+- CT sampling seed for sample index `s` in replicate `r`: `1000 * (r + 1) + s`, with `r=0..2`, `s=0..9`. Reuse each thinned BAM across all methods.
+- COMEBin sequence-augmentation seed: **101**, fixed across all conditions; training stochasticity remains separate.
+- Run the first paired replicate across the three methods as the resource pilot, then the other two if integrity/resource checks pass. The pilot remains in the results; never retain only the best seed. Maximum: **18 native binner runs, including 12 learned-model fits**, excluding optional follow-up work.
+
+Three paired replicates measure combined sampling/training variability, not three independent microbial communities. If separating these variance components becomes necessary, that requires an explicit later factorial design.
+
+## Endpoints
+
+### Primary: purity-constrained assembled-sequence recovery
+
+For genome `g` in fixed G, let `A_g` be its total bases in U. For predicted bin `b`, let `L_b` include **all** assigned input bases, and let `T_bg` be bases from U belonging to g. Define:
+
+```text
+P_bg = T_bg / L_b
+R95_g = max({T_bg / A_g : L_b >= 200000 and P_bg >= 0.95} union {0})
+R95 = mean over the fixed genome set G of R95_g
+Delta = R95(C0) - R95(CT)
+```
+
+`P_bg` is a conservative confirmed-origin fraction: ambiguous/unscored bases are not credited as true positives, but remain in the bin denominator. Its complement is an upper bound on impurity, not proof that every ambiguous base is contamination. Report the excluded mass and the standard AMBER result beside it. This construction keeps primary denominators fixed even if an evaluator supports alternative truth associations.
+
+Count unassigned genomes as zero, and use only the best qualifying bin per genome so fragmentation is penalized. Also report the base-weighted version, all per-genome values, and inclusive recovery counts at `R95_g >= 0.5` and `>= 0.9`. These are **assembled-sequence** endpoints, not whole-source-genome completeness or MIMAG quality.
+
+Run the pinned AMBER unchanged on the canonical input truth and native assignments with no small-bin-tail exclusion (`--filter 0`). Retain its per-bin/per-genome tables and strict-threshold labels. E001's inclusive thresholds intentionally differ at exact boundaries. Do not claim identical values for the conservative subset and AMBER's full/multi-origin population.
+
+### Secondary: locate the loss
+
+- Base accounting: assigned, unassigned, filtered, ambiguous, out-of-domain and wrong-origin bases; raw clusters versus output-size/quality filtering. Preserve all contig IDs, including zero-depth rows.
+- Fixed length strata: `[2500,5000)`, `[5000,10000)`, `[10000,50000)`, `[50000,infinity)` bp. Within each genome use its qualifying primary bin when scoring recovery of a length stratum; never recompute purity only on convenient short fragments.
+- Coverage reliability: C0/CT native means, variances, read support, zeros and post-normalization changes. Fix coverage strata from C0 (genome median depth quartiles); do not reclassify genomes after treatment.
+- Representation diagnostics: exact 10-neighbor same-origin fraction in composition-only, coverage-only, equal-block normalized concatenation, and learned embeddings. Use cosine distance on L2-normalized nonzero blocks; zero rows have no evidence and are reported separately. Use each method's actual normalized feature blocks. For VAMB include its total-abundance feature in the coverage block. Freeze query IDs before looking at results; exclude self, augmented siblings, and cross-origin identical-sequence copies. Restrict this probe to fixed unique-origin genomes with at least 11 eligible contigs, reporting the excluded population. Cap at 10,000 hash-selected queries (`SHA256("E001-probe:" + ID)`, lowest hashes), searching against the full eligible reference set in batches. Labels only score neighbors, never choose them. These are conditional separability diagnostics, not an implementable oracle binner or calibrated probabilities.
+- Selection diagnostic: for each fixed COMEBin embedding, evaluate all **already generated native** candidate partitions and compare native selection with the truth-best candidate under R95. This is a clearly labeled oracle upper bound using evaluation truth. Do not return its choice as an ordinary baseline or mix it into the main method ranking.
+- Runtime, peak CPU/GPU memory and CPU/GPU hours, separated into mapping, feature extraction, training, clustering and evaluation. Count setup/preprocessing, not just neural inference.
+
+Report per-replicate paired effects and distributions over fixed genomes. Contigs and ten coverage columns are not independent biological replicates. No population-level significance or cross-environment robustness claim follows from this single-community experiment.
+
+## Decision rules fixed before results
+
+- **Proceed to a focused intervention test:** mean Delta is at least **0.05 absolute R95** in COMEBin, positive in all three paired replicates, and stage evidence identifies a plausible avoidable component. A candidate-selection gap of at least **0.03 R95** at fixed embeddings supports examining selection. Alternatively, a raw-feature-to-embedding neighbor-purity drop of at least **0.10** on at least **5% of the fixed eligible short-query bases** supports investigating representation loss. These are project triage thresholds, not statistical significance or novelty criteria. Neighborhood evidence must involve the same contigs that lose correct recovery, not a disjoint easy subset.
+- **Modify direction:** a reproducible error is predominantly input filtering, final size/marker selection, or ordinary configuration. Test that narrower cause. If a contemporary alternative already handles it, do not build a redundant method.
+- **No support in this setting:** no material reproducible loss, or degraded neighborhoods in both raw and learned spaces without evidence of retained signal. Do not escalate noise severity to manufacture a gap. This does not refute H001 for all communities or mapping biases.
+- **Inconclusive:** joins, truth, source versions, baseline convergence or resources are invalid; the target length stratum is insufficient; or seed variability dominates the proposed effect. Technical failure is not zero biological recovery.
+
+Prior art comparisons with QuickBin's appropriate published/development mode, McDevol and GenomeFace are required before promoting a resulting reliability idea to a new-method claim. A high oracle score only motivates a test of a realizable procedure.
+
+## Implementation and execution gates
+
+**Gate 0, next task: implement and validate locally.** Build only the E001 harness: prospective configuration, acquisition manifest builder, FASTA/truth/assignment validators, pair-preserving thinning adapter, native feature/stage-output adapters and small metric summaries. Use established FASTA/BAM parsers and samtools, not custom alignment parsing. Add hand-calculable fixtures for a perfect partition, merge, split, missing genome, unassigned contig, wrong ID, duplicate/multiple assignment, ambiguous truth, threshold boundaries and zero coverage. Compare the unique-origin cases with pinned AMBER; verify multi-origin behavior separately. Test native preprocessing against scale-only expectations and verify all COMEBin views change together. No training on research data is required for these checks.
+
+Each predicted partition must assign a contig to at most one bin; unknown IDs, duplicate rows and cross-bin duplicate assignments fail preflight. Multiple possible origins in the **truth** are different and must be retained explicitly. Export feature/embedding masks and IDs, verify every join, and account for dropped input rows as unassigned rather than removing them from evaluation. Never repair overlapping predictions by silently assigning a contig to the largest bin.
+
+Produce explicit Linux environments/container digests and smoke commands with tiny synthetic fixtures. Run the portable harness checks locally. If exact native dependencies cannot execute on this machine, clearly mark those checks unexecuted and supply an owner-run Linux smoke job; inspect its returned outputs before the scientific pilot. Do not substitute a different tool/PyTorch version and call it native parity. Source checkout/model/header verification precedes execution. Do not install every cached binner or create a general benchmark platform. An adapter that cannot preserve native behavior is a blocker, not an excuse to silently simplify a method.
+
+**Gate 1: acquire and inventory the public data.** Download setup/truth first, inspect archive members safely, and freeze the sample/contig/metric populations. Before bulk reads, provide the owner the exact UCloud commands, storage estimate and manifest-return command. No privileged UCloud access is assumed. If data access or an input contract fails, record it and amend the protocol rather than fabricate a path or checksum.
+
+**Gate 2: owner-run pilot and paired runs.** Return-artifact inspection and owner confirmation of available resources are prerequisites. Start with at most 32 CPU threads, 128 GiB RAM and one GPU; GPU VRAM requirements must be estimated in the smoke/pilot, not inferred from the owner's H200 access. Planning ceilings: 500 GiB scratch, 256 CPU-hours preprocessing, 48 GPU-hours total, and 4 hours per learned-model fit. These are stop/review limits, not measured runtime predictions. If input exceeds 250,000 retained contigs or 4 Gbp, or expected jobs exceed the ceilings, stop and amend before running; do not take a score-dependent subset or shorten native training ad hoc.
+
+Before Gate 2, commit executable code/configuration and record that pre-existing Git commit, resolved tool and dependency versions, database/model hashes, commands, inputs, seeds, hardware and environment. Numerical values above move into the executable configuration when implemented; this document then explains that configuration rather than maintaining an independent competing table.
+
+## Attempts and results
+
+No attempts have been launched. No data payload, feature tensor, model, benchmark score or experimental conclusion exists yet. Literature/code inspection and documentation validation are not E001 scientific runs.
+
+Every later attempt gets a unique `run-NNN` entry with status, condition/seed, source/config/input hashes, logs and output locations, including crashes/timeouts. Never overwrite a previous run directory. Legal empty output is evaluated as zero recovery with undefined purity where appropriate; a crashed or truncated output is not.
+
+## Retention and amendments
+
+Retain source archives/checksums, canonical FASTA/truth and inclusion manifests, C0 mapping provenance, fixed augmentation intervals, native features/embeddings with IDs, all candidate/final labels, logs, complete resolved configurations and compact result tables. Bulk artifacts remain outside Git. Thinned BAMs are regenerable from pinned C0 BAMs, samtools version and seeds; deletion still requires a recorded retention decision. Return compact manifests, checks, resource logs and tables from UCloud; inspect them before interpreting or marking completion.
+
+2026-09-17: initial prospective design. No results were available when conditions, thresholds and gates were selected. Subsequent changes must state date, reason and whether any outcome was already visible.

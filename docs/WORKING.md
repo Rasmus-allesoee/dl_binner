@@ -1,6 +1,6 @@
 # Working with the Research Record
 
-Established: 2026-09-16. This is the operating convention; [D001](decisions/D001-research-record.md) records its rationale.
+Established: 2026-09-16. Updated: 2026-09-17. This is the operating convention; [D001](decisions/D001-research-record.md) records its rationale.
 
 ## Sources of truth
 
@@ -34,7 +34,7 @@ Do not move old experiment or decision records just to label them historical: ch
 
 Distinguish four things in prose: **source report**, **direct observation here**, **our interpretation**, and **untested hypothesis**. A paper's performance claim is not our reproduced result. A source-code read is not a successful run.
 
-Every consequential claim should identify its source and the relevant section, figure, table, file/function, or experiment result. For changing external resources, record the consulted date and version or commit if available. Keep paper versions distinct from software versions. Record corrections alongside the earlier interpretation.
+Every consequential claim should identify its source and the relevant section, figure, table, file/function, or experiment result. For changing external resources, record the consulted date and version or commit if available. Keep paper versions distinct from software versions. Record corrections alongside the earlier interpretation. ZIP snapshots are sufficient for reading; executable baselines need an immutable source identity plus verified dependencies/payloads. Check `git rev-parse --show-toplevel` so a nested unversioned cache cannot inherit the project's commit by mistake.
 
 Downloaded paper text can have missing equations, tables, or extraction artifacts. Consult the original when such content matters to a decision. Never silently edit the source to make it agree with our interpretation. The full source and the research note serve different purposes.
 
@@ -72,13 +72,13 @@ Before finishing substantial work, inspect the diff, run appropriate checks, upd
 
 When a GitHub remote is established, use issues for bounded work or unresolved implementation problems, and PRs for substantial reviewable changes. Link `Q`/`H`/`D`/`E` identifiers. Close issues with a link to the durable record, including negative outcomes. Use milestones only for actual deliverables, tags for verified reproducible states, and releases plus an appropriate archive for material supporting a paper. Introduce automated checks when there is a remote and a useful check to run; do not require elaborate labels or project boards now.
 
-Repository creation, visibility, licensing, and first publication are separate owner choices when publication is requested. Local work continues without them. No remote, public repository, CI service, or publication was created during foundation setup.
+Repository creation, visibility, licensing, and first publication are separate owner choices when publication is requested. Local work continues without them. No remote, public repository, CI service, or publication was created during foundation setup. Before first push, review source-paper/thesis packaging and the full history: an ignore rule or `git rm --cached` does not remove files from earlier commits. See [D001's clarification](decisions/D001-research-record.md#source-packaging-clarification-2026-09-17); do not rewrite history without owner agreement.
 
 ## Working on UCloud
 
 Codex does not operate UCloud. For each relevant experiment, prepare a tested local smoke check, a job command or script, configuration, expected outputs, approximate resource needs, and a collection/checksum command. The owner runs it. Do not mark a run complete until returned outputs have been inspected. Document queue failures, incomplete runs, and unavailable outputs explicitly.
 
-Use the thesis assets selectively. The owner confirmed they remain available, and explicitly allows new simulations optimized for this project. Dataset design follows the current scientific question.
+Use thesis assets selectively and public field benchmarks alongside custom simulations. The owner confirmed thesis availability and allows new simulations optimized for the question. Public data used for development are not an untouched final test set; clearly label changed assemblies, reference populations, read subsets or synthetic coverage. Reuse a standard evaluator where appropriate and test any supplementary metrics against explicit truth contracts. E001's choice is recorded in [D003](decisions/D003-coverage-diagnostic.md).
 
 ## End-of-task check
 

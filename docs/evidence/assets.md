@@ -1,10 +1,10 @@
 # Assets and Selective Reuse
 
-Last checked: 2026-09-16. "Owner-confirmed" availability is distinct from a file or checksum verified by Codex.
+Updated: 2026-09-17. Each entry distinguishes inspection date and owner-confirmed availability from verified files/checksums.
 
 ## A001: Thesis repository
 
-- Local checkout inspected: `/Users/rasmusallesoeenielsen/Documents/Speciale/hadal-binning-benchmark`.
+- Local checkout inspected on 2026-09-16: `/Users/rasmusallesoeenielsen/Documents/Speciale/hadal-binning-benchmark`.
 - Commit: `4029b810045ff9196be0035e48e7fb32ca4be792`; branch `main`; clean on inspection; no remote configured in that checkout.
 - Upstream locator supplied by project guidance: [Rasmus-allesoee/hadal-binning-benchmark](https://github.com/Rasmus-allesoee/hadal-binning-benchmark). The local checkout was the source inspected for this task.
 - Documentation inspected: `README.md`, `docs/limitations.md`, `docs/data_availability.md`, `strain_sim/README.md`, and the relevant beginning of `strain_sim/config/config_strain.yaml`.
@@ -20,6 +20,8 @@ Last checked: 2026-09-16. "Owner-confirmed" availability is distinct from a file
 | Compute accounting | `real_benchmark/benchmarks/`, `docs/compute_requirements.md` | Preprocessing attribution, parallelism, hardware comparability |
 
 These are reuse candidates, not dependencies imported into this project. Port a small component with attribution and tests only when the first protocol needs it.
+
+Source-packaging clarification, 2026-09-17: the thesis is prior research, like the other papers, not project implementation. Its complete text/figures need not be in the eventual public working tree. They are already tracked in local history; [D001](../decisions/D001-research-record.md#source-packaging-clarification-2026-09-17) records why no deletion/history rewrite was performed during this audit.
 
 ## A002: Original hadal data and intermediate artifacts
 
@@ -37,18 +39,24 @@ The existing simulation design is characterized in the [thesis note](2026-09-16-
 
 ## A004: Local tool source cache
 
-`agent_context/tools_repo/` contains 25 tool directories (about 324 MB), with no `.git` directories found within the inspected depth. Examples include VAMB/TaxVAMB, COMEBin, SemiBin, CompleteBin, GenomeFace, SCGBinner, DCVBin, REMAG, and LorBin, plus evaluation/workflow dependencies.
+On 2026-09-17, `agent_context/tools_repo/` contains 31 directories. The owner explained the previous copies were ZIP downloads and replaced the main binner snapshots with clones, adding AMBER evaluation, CAMISIM, McDevol, BBTools/QuickBin, BASALT-Air, ancient-DNA AMBER and DCVBin sources. ZIP copies remain entirely adequate for background reading.
 
-Directory names ending in `main` or `master` do not identify a release. Selected files consulted in the [landscape note](2026-09-16-landscape.md) have [recorded hashes](context-sources.sha256). Before a baseline run, obtain a verified upstream tag or commit, environment, model weights, and database versions. Keep any compatibility patch explicit and report it with the baseline.
+The [audited snapshot manifest](2026-09-17-tool-snapshots.json) records 13 selected locations, including 12 tool-repository commits and an unversioned GenomeFace copy. The [targeted audit](2026-09-17-targeted-audit.md) defines actual review depth. Nonblocking qualifications: DCVBin's tracked model payload is absent; McDevol has staged-deletion/untracked index anomalies although the two reviewed blobs match HEAD; some clones have untracked Finder files. No cache files or nested Git state were repaired, removed, or committed here.
+
+Before a baseline run, verify the tool's own repository root, exact commit/archive identity, executable environment, model weights and database versions. Git run inside GenomeFace resolves to the enclosing `dl_binner` repo, not a GenomeFace revision. A valid clone is not by itself a validated runnable baseline. Preserve compatibility patches with the run and use separate execution checkouts.
 
 ## A005: Local paper cache
 
-The cache contains 40 Markdown paper files and two PDFs across methods, benchmarks, evaluation, and foundation models. File names can be stale: the QuickBin cache points to a preprint, while a journal article was found during the current search. `Arangasamy_2025_paper_old.md` is a separate historical copy, not independent evidence.
+On 2026-09-17 the cache contains 41 Markdown files and four PDFs. The owner added UncertainGen, replaced the QuickBin transcription with the journal version, and improved several other transcriptions. Their supplied fingerprint edits were preserved in commit `2b1e51b` before the current audit refresh. `Arangasamy_2025_paper_old.md` is historical, not independent evidence; a PDF's filename alone does not establish its revision.
 
-The [landscape](2026-09-16-landscape.md) records what was actually screened. Mathematical expressions are missing in portions of some extracted text; verify the original before using such expressions. Full paper text is preserved locally, with a fingerprint inventory, instead of being replaced by our summaries.
+The [initial landscape](2026-09-16-landscape.md) and [new audit](2026-09-17-targeted-audit.md) distinguish what was read and when. Original online sources were consulted where accessible; GenomeFace's original full text remained unavailable through this browser pass. Extraction graphics and missing equations must not be treated as verified mathematics. Fingerprinted file presence is not proof of reading or transcription fidelity.
+
+## A006: Public benchmark acquisition
+
+[E001](../../experiments/E001-coverage-thinning/README.md) selects CAMI II Marine as development/diagnostic data. The owner confirmed on 2026-09-17 that we should plan fresh downloads. [The data contract](2026-09-17-benchmark-data.md) owns official locators, artifact distinctions, CAMI III availability and the acquisition gate. No payload or experimental input hash has been verified. The first task is setup/truth inspection; existing thesis artifacts are not prerequisites.
 
 ## Before an artifact becomes an experimental input
 
 Create a small input manifest alongside the experiment containing source/accession, immutable version or checksum, sample/genome/contig IDs, preprocessing, storage/retrieval instructions, and split role. Check joins by identifiers and lengths rather than relying on row order. State what is unavailable or uncertain. A recorded UCloud path must not become a hard-coded assumption in reusable code.
 
-There is no project training or evaluation dataset selected yet. H200-class GPU and large-memory access are owner-reported capabilities, not allocated resources or executed jobs.
+A development dataset and prospective E001 protocol are selected; final evaluation datasets are not. H200-class GPU and large-memory access are owner-reported capabilities, not allocated resources or executed jobs. Exact runtime environments and UCloud storage/compute budgets remain to be established before launch.

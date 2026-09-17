@@ -3,6 +3,8 @@
 Date: 2026-09-16
 Scope: targeted reading of local abstracts, method overviews, selected results and limitations; selected README/code inspection; a limited primary-source web refresh. This is a starting map, not a systematic review, complete implementation audit, or reproduced ranking.
 
+Follow-up, 2026-09-17: [targeted audit](2026-09-17-targeted-audit.md) resolves the relevant execution paths and updates prior-art interpretation. [Data audit](2026-09-17-benchmark-data.md) establishes public benchmark roles. The owner replaced several ZIP caches and paper transcriptions; old local paths and cache descriptions below identify this historical inspection, not current file availability. In particular, UncertainGen is now cached and reviewed, QuickBin's transcription is the journal paper, and several tools now have verified Git commits.
+
 ## Comparison studies that shape the first experiment
 
 | Source | What it contributes | Important boundary |

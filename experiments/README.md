@@ -4,7 +4,9 @@ No experiments have been run in this project. The thesis is [prior evidence](../
 
 ## Register
 
-No experiment IDs have been allocated. Add a link here when an actual protocol is created; the individual record owns its status and outcome.
+- [E001: Where does reduced coverage evidence lose recoverable sequence?](E001-coverage-thinning/README.md)
+
+The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 
 ## Record convention
 

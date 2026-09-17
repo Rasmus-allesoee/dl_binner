@@ -25,3 +25,9 @@ Initialize local Git and preserve the starting material before changing guidance
 Agents update the current handoff when direction changes, while past evidence and outcomes remain identifiable. Git records ordinary editing history; important scientific reversals also receive explicit explanations. New record files are created on demand rather than preallocating a roadmap.
 
 Revisit if the question register becomes difficult to navigate, multiple people need concurrent experiment tracking, or run volume makes ordinary manifests inadequate. Any later service must preserve exportable protocols, provenance, and conclusions in the repository.
+
+## Source-packaging clarification, 2026-09-17
+
+The owner correctly distinguishes the thesis from this new project's software: it is a prior source paper, and its full text/figures need not be vendored into the eventual public working tree. Retain citations, provenance and our interpretations regardless of source packaging. Clones and ZIP caches are both acceptable research context; only sources selected for execution require a verified runnable dependency chain.
+
+The thesis snapshot already exists in the foundation commits. Removing it from the current index or adding an ignore rule would **not** remove it from history or prevent its transfer in a first push. During this audit we therefore leave local source files/history intact and record the pre-publication choice explicitly. When publication is requested, recommend a lean current tree with source locators; decide with the owner whether retaining the existing source-containing history is acceptable or whether a separately approved history migration is needed. No remote creation, push, deletion or history rewrite is authorized by this clarification.

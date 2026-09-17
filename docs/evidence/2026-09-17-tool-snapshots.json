@@ -1,0 +1,110 @@
+{
+  "date": "2026-09-17",
+  "scope": "Selected local source snapshots, not a full cache inventory or a runnable environment lock.",
+  "tools": [
+    {
+      "name": "metabat",
+      "path": "agent_context/tools_repo/metabat",
+      "upstream": "https://bitbucket.org/berkeleylab/metabat.git",
+      "commit": "8eb96023ef627d1955c05e3aca348c84b8757914",
+      "worktree": "?? .DS_Store",
+      "scope": "Source inspection only; installation, dependencies and external models/databases not validated."
+    },
+    {
+      "name": "vamb",
+      "path": "agent_context/tools_repo/vamb",
+      "upstream": "https://github.com/RasmussenLab/vamb.git",
+      "commit": "b146fb610921aef1da8aed5d739f1ce80d21b33a",
+      "worktree": "clean",
+      "scope": "Source inspection only; installation, dependencies and external models/databases not validated."
+    },
+    {
+      "name": "COMEBin",
+      "path": "agent_context/tools_repo/COMEBin",
+      "upstream": "https://github.com/ziyewang/COMEBin.git",
+      "commit": "1b476a41fac893294c70212a869573a732560ce5",
+      "worktree": "?? .DS_Store\n?? COMEBin/.DS_Store",
+      "scope": "Source inspection only; installation, dependencies and external models/databases not validated."
+    },
+    {
+      "name": "SemiBin",
+      "path": "agent_context/tools_repo/SemiBin",
+      "upstream": "https://github.com/BigDataBiology/SemiBin.git",
+      "commit": "f7c45dcbcdfa81e8fbc3e08b04c54683122e72d6",
+      "worktree": "?? .DS_Store\n?? SemiBin/.DS_Store\n?? test/.DS_Store",
+      "scope": "Source inspection only; installation, dependencies and external models/databases not validated."
+    },
+    {
+      "name": "genomeface",
+      "path": "agent_context/tools_repo/genomeface",
+      "upstream": "https://portal.nersc.gov/project/m1982/genomeface_repo",
+      "commit": null,
+      "worktree": "Unversioned source copy; git rev-parse resolves to parent dl_binner, not a tool repository.",
+      "scope": "Source inspection only; installation, dependencies and external models/databases not validated."
+    },
+    {
+      "name": "dcvbin",
+      "path": "agent_context/tools_repo/dcvbin",
+      "upstream": "https://github.com/dengdengf/dcvbin.git",
+      "commit": "732ee4257f7da200994f4c105e9dacbc74242883",
+      "worktree": "M DNABERT-S/.DS_Store\n D DNABERT-S/pytorch_model.bin\n?? .DS_Store\n?? marker_gene/.DS_Store\n?? marker_gene/auxiliary/.DS_Store\n?? myvae/.DS_Store",
+      "scope": "Source-path audit only; missing tracked model payload means not run-ready."
+    },
+    {
+      "name": "BBTools",
+      "path": "agent_context/tools_repo/BBTools",
+      "upstream": "https://github.com/bbushnell/BBTools.git",
+      "commit": "7e82985927578e9ec2da8815859859d0d7a93063",
+      "worktree": "?? .DS_Store\n?? current/.DS_Store\n?? pipelines/.DS_Store",
+      "scope": "Source inspection only; installation, dependencies and external models/databases not validated."
+    },
+    {
+      "name": "AMBER_evaluation",
+      "path": "agent_context/tools_repo/AMBER_evaluation",
+      "upstream": "https://github.com/CAMI-challenge/AMBER.git",
+      "commit": "f8b3a601043d13fc4227d5691c13561eb4490e50",
+      "worktree": "?? .DS_Store\n?? cami_i_hc/.DS_Store",
+      "scope": "Source inspection only; installation, dependencies and external models/databases not validated."
+    },
+    {
+      "name": "CAMISIM",
+      "path": "agent_context/tools_repo/CAMISIM",
+      "upstream": "https://github.com/CAMI-challenge/CAMISIM.git",
+      "commit": "7ce6013c6d5a0fac8ba8a80e52a03560d3546fa6",
+      "worktree": "?? .DS_Store\n?? defaults/.DS_Store\n?? nextflow_defaults/.DS_Store\n?? pipelines/.DS_Store\n?? tools/.DS_Store",
+      "scope": "Source inspection only; installation, dependencies and external models/databases not validated."
+    },
+    {
+      "name": "McDevol",
+      "path": "agent_context/tools_repo/McDevol",
+      "upstream": "https://github.com/soedinglab/McDevol.git",
+      "commit": "1fa3bad078b45c645df53fc54e6f0ff194a6965e",
+      "worktree": "D  .gitattributes\nD  .github/workflows/release.yml\nD  .gitignore\nD  LICENSE\nD  README.md\nD  environment.yml\nD  mcdevol/byol_model.py\nD  mcdevol/clustering.py\nD  mcdevol/dataparsing.py\nD  mcdevol/genomeface_weights/general_t2eval.m.data-00000-of-00001\nD  mcdevol/genomeface_weights/general_t2eval.m.index\nD  mcdevol/kmer_counter.cpython-39-x86_64-linux-gnu.so\nD  mcdevol/mcdevol.py\nD  mcdevol/pyproject.toml\nD  mcdevol/version.py\nD  setup.py\nD  tests/test_byol_model.py\nD  tests/test_clustering.py\nD  tests/test_dataparsing.py\nD  util/aligner2counts.cpp\nD  util/convertfasta_multi2single.cpp\nD  util/get_sequence_bybin.cpp\n?? .DS_Store\n?? .gitattributes\n?? .github/\n?? .gitignore\n?? LICENSE\n?? README.md\n?? environment.yml\n?? mcdevol/\n?? setup.py\n?? tests/\n?? util/",
+      "scope": "README and byol_model.py only; their blob hashes match HEAD despite abnormal staged-deletion/untracked state. Not run-ready."
+    },
+    {
+      "name": "CompleteBin",
+      "path": "agent_context/tools_repo/CompleteBin",
+      "upstream": "https://github.com/zoubohao/CompleteBin.git",
+      "commit": "07c5649270646a29dc027d6234d66b048fed6d45",
+      "worktree": "?? .DS_Store\n?? CompleteBin/.DS_Store",
+      "scope": "Source inspection only; installation, dependencies and external models/databases not validated."
+    },
+    {
+      "name": "BASALT-Air",
+      "path": "agent_context/tools_repo/BASALT-Air",
+      "upstream": "https://github.com/PKU-EMBL/BASALT-Air.git",
+      "commit": "9040810c1f8f994bf8787f3c25984d64f3e4bd3b",
+      "worktree": "clean",
+      "scope": "Source inspection only; installation, dependencies and external models/databases not validated."
+    },
+    {
+      "name": "amber_binning",
+      "path": "agent_context/tools_repo/amber_binning",
+      "upstream": "https://github.com/genomewalker/amber.git",
+      "commit": "7992db287410823890d2b4a6db311ab2356dfb13",
+      "worktree": "clean",
+      "scope": "Source inspection only; installation, dependencies and external models/databases not validated."
+    }
+  ]
+}

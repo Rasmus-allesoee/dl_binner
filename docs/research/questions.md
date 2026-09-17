@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-09-16
+Updated: 2026-09-17
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. No hypothesis below has been experimentally tested in this project.
 
@@ -16,6 +16,8 @@ The candidate focus is contig loss/misassignment in fragmented prokaryotic assem
 
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
 
+2026-09-17: [E001](../../experiments/E001-coverage-thinning/README.md) now specifies the first test, with paired thinning on a fixed public assembly and native stage outputs. The [audit](../evidence/2026-09-17-targeted-audit.md) resolves enough input/normalization questions to implement it. Still open: no performance gap or avoidable loss has been observed.
+
 ## Q002
 
 **What would make an intervention meaningfully different from the closest prior art?**
@@ -25,6 +27,8 @@ Status: open. Opened: 2026-09-16.
 TaxVAMB, GenomeFace, CompleteBin, DCVBin, SCGBinner, REMAG, and UncertainGen occupy several initially attractive directions. Their relevance depends on the selected regime. See [review depth and open audit items](../evidence/2026-09-16-landscape.md).
 
 Needed to resolve: full relevant methods and code-path review, publication/release refresh, and a comparison between the proposed mechanism and existing approaches. An unfamiliar architecture or new combination is not evidence of novelty. No candidate method is selected.
+
+2026-09-17: [targeted audit](../evidence/2026-09-17-targeted-audit.md) narrows the novelty space. GenomeFace's inspected balance is global, UncertainGen does not establish calibrated coverage uncertainty, McDevol already augments coverage counts, and current QuickBin contains optional length-aware coverage likelihood code. DCVBin's inspected basic path uses coverage. These resolve specific source questions, not Q002 as a whole. Mechanism-focused comparisons are required after a residual failure is established.
 
 ## Q003
 
@@ -36,6 +40,8 @@ The previous simulation has one pair per ANI region, simplified abundance struct
 
 Availability update, 2026-09-16: the owner confirmed the original artifacts remain on UCloud and said we should build our own optimized simulations when useful. Data availability is therefore owner-confirmed; file identity and protocol suitability remain open. The old datasets are optional prior evidence, not prescribed evaluation data.
 
+2026-09-17: the owner emphasized **public CAMI benchmarks as well as custom simulations**. [D003](../decisions/D003-coverage-diagnostic.md) chooses CAMI II Marine for E001 development, with fresh downloads (owner-confirmed). [Data audit](../evidence/2026-09-17-benchmark-data.md) separates available CAMI III toy data from the active challenge's scheduled assembly release. Custom CAMISIM data are deferred until a concrete mechanism needs them. Final independent evaluation and real-assembly validation remain open; E001's fixed GSA does not answer them.
+
 ## Q004
 
 **What biological and computational improvement will count as success for the selected regime?**
@@ -46,6 +52,8 @@ Candidate endpoints include true recovered sequence at controlled impurity, geno
 
 Needed to resolve: define the intended use, primary endpoint, denominators, thresholds, resource constraints, comparison population, and uncertainty analysis in the first experiment protocol before results are examined. Do not inherit the thesis's composite score as the project's objective.
 
+2026-09-17: E001 defines a fixed-population, purity-constrained assembled-sequence recovery endpoint, AMBER companion reports, length/stage diagnostics and explicit triage/resource thresholds. This answers protocol requirements for that diagnostic only. The eventual method's biological success criteria and independent validation remain open.
+
 ## Q005
 
 **Which information can the eventual method reasonably require, and how broadly should it transfer?**
@@ -55,6 +63,8 @@ Status: open. Opened: 2026-09-16.
 Single/multi-sample coverage, taxonomy, pretrained references, marker genes, and graph/read evidence carry different assumptions and costs. Temporary HPC access affects execution strategy but does not alone justify a permanently expensive method. Evidence: [initial assessment](2026-09-16-initial-assessment.md), [assets](../evidence/assets.md).
 
 Needed to resolve: connect the target biological use to accessible inputs, record available compute/access duration when a job is planned, and audit genome/sample/pretraining overlap. A claim of unseen-genome generalization needs a corresponding evaluation design.
+
+2026-09-17: E001 uses target-data unsupervised fits, sequence/coverage inputs and native COMEBin marker information, explicitly without a pretrained taxonomy/foundation model. It diagnoses transductive behavior. This does not commit the eventual method to those inputs or make public CAMI genomes novel to all prior tools.
 
 ## H001
 
@@ -69,6 +79,8 @@ Discriminating test: hold sequences, truth, sample composition, and clustering c
 Competing explanations: nonidentifiable shared sequence, mapping ambiguity, insufficient sequence signal, a clustering/selection issue, or incorrect baseline configuration.
 
 Rejection/modification: the distortion disappears after preprocessing; current methods already handle it; performance does not track the proposed mechanism; improvement only reflects increased contamination or a proxy-score change; or the target sequence is not recoverable from the available evidence. Update the hypothesis or abandon it with a linked result.
+
+2026-09-17 refinement, preserving the original claim: [E001](../../experiments/E001-coverage-thinning/README.md) tests **sampling reliability at fixed assembly**, not every mapping distortion contemplated above. Its scale-only control may eliminate a naive absolute-depth explanation, while its stage diagnostics distinguish reduced information from possible avoidable processing loss. No reliability correction or new model is being proposed yet. Degradation under thinning alone is not support; a null result in one community is not a universal rejection of H001.
 
 ## Closed and superseded records
 

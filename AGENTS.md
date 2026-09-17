@@ -32,7 +32,7 @@ This folder contains local copies and transcriptions of selected binning papers.
 
 #### Tool repositories
 
-This folder contains local third-party source copies. They may lack Git metadata and must not be treated as pinned, runnable baselines without checking their provenance and configuration.
+This folder contains a mixture of cloned repositories and ZIP/source snapshots. Both are useful for inspection. For an execution baseline, verify the repository root, commit or source archive hash, local modifications, dependencies, and required model/database payloads. Git invoked inside an unversioned cache can resolve to this enclosing project; do not mistake that commit for the tool's version. Preserve reference caches and use a separate checkout/environment for execution.
 * `agent_context/tools_repo`
 
 ### Historical planning
@@ -150,6 +150,8 @@ Be particularly careful about:
 Claims should follow evidence.
 
 When uncertainty remains, state it.
+
+Use public community benchmarks alongside question-specific simulations. Keep unmodified benchmark results distinct from controlled derivatives, and treat data used for mechanism selection as development data. Reuse established evaluators where their contracts fit; add tested diagnostic summaries before considering a replacement framework. Audit the actual input and execution paths rather than inferring them from a paper title or README.
 
 ---
 

@@ -4,6 +4,8 @@ Date: 2026-09-16
 Status: foundation assessment; current applicability is determined by [STATE](../STATE.md)
 Decision: [D002](../decisions/D002-investigate-before-architecture.md)
 
+Follow-up, 2026-09-17: the proposed audit/protocol block is complete. [D003](../decisions/D003-coverage-diagnostic.md) selects a public-data coverage diagnostic, with [E001](../../experiments/E001-coverage-thinning/README.md) as the prospective protocol. The earlier preference below for a new simulation is refined: use released CAMI data first when they already test the question, and custom simulations when additional causal control is needed. This assessment is retained as the starting reasoning, not a second current task list.
+
 ## Recommendation
 
 The strongest immediate step is a **focused diagnosis of a recoverable failure in current binning methods**, supported by a targeted paper/code audit. Start by investigating missing or misassigned contigs in fragmented prokaryotic assemblies when coverage is weak or misleading. Establish whether the cause lies in the available information, its learned representation, or the clustering and selection procedure.

@@ -4,6 +4,8 @@ Date: 2026-09-16
 Status: accepted
 Scope: provisional next research block; no model or final benchmark selected
 
+Progress, 2026-09-17: the targeted audit and first protocol are complete. [D003](D003-coverage-diagnostic.md) refines the next action to E001 implementation/preflight, preserving this decision's failure-before-architecture principle. No residual error or new method has yet been demonstrated.
+
 ## Problem and evidence
 
 The [thesis](../evidence/2026-09-16-thesis.md) identifies workflow effects, quality-estimator disagreements, and different loss/contamination patterns. It does not establish which residual failure in current software is both solvable and insufficiently addressed. The [landscape reconnaissance](../evidence/2026-09-16-landscape.md) shows substantial existing work on taxonomy, learned sequence features, marker guidance, and uncertainty.
