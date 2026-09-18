@@ -55,6 +55,14 @@ Review-driver preparation: 63 portable tests passed, including external-distribu
 
 ## Native check status
 
+### GI inventory attempt failed before acquisition
+
+Owner return verified: [archive](../../agent_context/gi-inventory-return.tar.gz), [checksum](../../agent_context/gi-inventory-return.tar.gz.sha256), SHA-256 `05287ad75941a1120034c78c9834b264fb4e158cf8d8136b7bf6946ffc8af80e`. Safe archive members and the executed driver match the prepared inventory wrapper. At 2026-09-18 19:37:08 UTC the prerequisites command failed with exit 127 because `/usr/bin/time` was absent. The timing wrapper could not launch Python; acquisition and conversion never ran. This is an infrastructure failure, not a dataset or scientific result. A container restart/replacement would explain loss of the system package, but that event is not confirmed by the return.
+
+Root cause in our wrapper: it assumed the earlier container's system utility persisted, although only experiment files/environments under `/work` are intended to persist. The corrected inventory wrapper checks/install GNU time before timed commands and records package/version/hash and bootstrap logs. Its explicit `--retry-missing-time` mode checks the known failure signature and absence of inventory/conversion data, verifies the old return checksum, and moves the failed stage and return files intact into `failed-inventory-missing-time/`. It refuses existing recovery destinations or partial data; no automatic deletion/retry loop. Only then does the normal grouped inventory resume. The already executed source snapshot and installed tool environments are unchanged.
+
+Local verification: 65 portable tests pass, including failed-attempt preservation and refusal to recover over existing inventory data. Shell syntax and documentation checks pass. Actual recovery and GI acquisition remain owner-run and unexecuted at this handoff.
+
 ### Environment review resolved, 2026-09-18
 
 The owner-returned [review archive](../../agent_context/environment-review-return.tar.gz) verifies against its [checksum](../../agent_context/environment-review-return.tar.gz.sha256): `b00b14cc6665b6ff7a6c12fb8a0a284596ff75bebc5a4f923864fec64e7a6819`. All 71 members passed path/type/duplicate checks; the executed review script matches the locally prepared source. All ten recorded commands, pip checks, both native smoke reports and final status pass.

@@ -27,6 +27,40 @@ class PreflightDriverTests(unittest.TestCase):
             self.assertEqual(result.returncode, 2)
             self.assertIn("existing", result.stderr)
             self.assertFalse((root / "inventory-stage").exists())
+            retry = subprocess.run(["bash", str(driver), str(root), "--retry-missing-time"], capture_output=True, text=True,
+                                   env={**os.environ, "PATH": str(mocks) + os.pathsep + os.environ["PATH"]})
+            self.assertEqual(retry.returncode, 2)
+            self.assertFalse((root / "failed-inventory-missing-time").exists())
+
+    def test_inventory_recovery_preserves_inspected_failure(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            code = root / "e001-code-9c2b0ec6feb3"
+            code.mkdir()
+            (code / "SOURCE_COMMIT").write_text("9c2b0ec6feb3b7884bbf7d519c63176d4fb10aea\n")
+            old = root / "inventory-stage"
+            old.mkdir()
+            (old / "exit-code.txt").write_text("127\n")
+            (old / "prerequisites.exit-code.txt").write_text("127\n")
+            (old / "prerequisites.stderr").write_text("/usr/bin/time: No such file or directory\n")
+            (root / "gi-inventory-return.tar.gz").write_bytes(b"preserve fixture")
+            (root / "gi-inventory-return.tar.gz.sha256").write_text("fixture checksum\n")
+            mocks = root / "mock-bin"
+            mocks.mkdir()
+            for name, body in {"uname": 'if [ "$1" = -s ]; then echo Linux; else echo x86_64; fi',
+                               "sha256sum": "echo mock-checksum"}.items():
+                path = mocks / name
+                path.write_text("#!/bin/sh\n" + body + "\n")
+                path.chmod(0o755)
+            driver = Path(__file__).resolve().parents[1] / "scripts/e001_gi_inventory.sh"
+            result = subprocess.run(["bash", str(driver), str(root), "--retry-missing-time"], capture_output=True, text=True,
+                                    env={**os.environ, "PATH": str(mocks) + os.pathsep + os.environ["PATH"]})
+            # The intentionally incomplete source fixture stops before any installation.
+            self.assertNotEqual(result.returncode, 0)
+            saved = root / "failed-inventory-missing-time"
+            self.assertEqual((saved / "gi-inventory-return.tar.gz").read_bytes(), b"preserve fixture")
+            self.assertEqual((saved / "inventory-stage/exit-code.txt").read_text(), "127\n")
+            self.assertFalse((root / "inventory").exists())
 
     def test_download_failure_is_packaged_and_stops_before_install(self):
         with tempfile.TemporaryDirectory() as directory:

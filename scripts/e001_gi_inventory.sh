@@ -6,6 +6,23 @@ case "$root" in /*) ;; *) exit 2 ;; esac
 [[ $(uname -s) == Linux && $(uname -m) == x86_64 ]] || { echo 'Linux x86_64 required' >&2; exit 2; }
 code="$root/e001-code-9c2b0ec6feb3"
 [[ $(cat "$code/SOURCE_COMMIT") == 9c2b0ec6feb3b7884bbf7d519c63176d4fb10aea ]]
+if [[ ${2:-} == --retry-missing-time ]]; then
+    # Only recover the inspected pre-download failure; never move partial data.
+    for name in inventory input-preflight failed-inventory-missing-time; do
+        [[ ! -e "$root/$name" && ! -L "$root/$name" ]] || { echo "STOP: unexpected $root/$name" >&2; exit 2; }
+    done
+    [[ $(cat "$root/inventory-stage/exit-code.txt") == 127 ]]
+    [[ $(cat "$root/inventory-stage/prerequisites.exit-code.txt") == 127 ]]
+    [[ $(cat "$root/inventory-stage/prerequisites.stderr") == *'/usr/bin/time: No such file or directory'* ]]
+    [[ -f "$root/gi-inventory-return.tar.gz" && -f "$root/gi-inventory-return.tar.gz.sha256" ]]
+    (cd "$root" && sha256sum --check gi-inventory-return.tar.gz.sha256)
+    mkdir "$root/failed-inventory-missing-time"
+    mv "$root/inventory-stage" "$root/gi-inventory-return.tar.gz" "$root/gi-inventory-return.tar.gz.sha256" "$root/failed-inventory-missing-time/"
+    echo 'Preserved the failed attempt in failed-inventory-missing-time/'
+elif [[ -n ${2:-} ]]; then
+    echo 'Unknown option' >&2
+    exit 2
+fi
 for name in inventory-stage inventory input-preflight gi-inventory-return.tar.gz gi-inventory-return.tar.gz.sha256; do
     [[ ! -e "$root/$name" && ! -L "$root/$name" ]] || { echo "STOP: existing $root/$name; preserve for inspection" >&2; exit 2; }
 done
@@ -44,6 +61,22 @@ cp "$code/SOURCE_COMMIT" "$logs/source-commit.txt"
 cp "$code/experiments/E001-coverage-thinning/acquisition.json" "$logs/acquisition.json"
 sha256sum "$logs/executed-driver.sh" "$code/scripts/e001.py" "$code/scripts/e001lib/acquire.py" "$code/scripts/e001lib/records.py" > "$logs/code.sha256"
 df -h "$root" > "$logs/disk-before.txt"
+if [[ ! -x /usr/bin/time ]]; then
+    echo 'Installing missing GNU time in this disposable job container; logs in inventory-stage/time-install.log'
+    # Bootstrap cannot itself depend on the utility it is installing.
+    if sudo -n apt-get update > "$logs/time-install.log" 2>&1 && \
+       sudo -n env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends time >> "$logs/time-install.log" 2>&1; then
+        printf '0\n' > "$logs/time-install.exit-code.txt"
+    else
+        status=$?
+        printf '%s\n' "$status" > "$logs/time-install.exit-code.txt"
+        tail -n 30 "$logs/time-install.log"
+        exit "$status"
+    fi
+fi
+/usr/bin/time --version > "$logs/time-version.txt"
+dpkg-query -W time > "$logs/time-package.txt"
+sha256sum /usr/bin/time > "$logs/time-binary.sha256"
 run() {
     local label=$1 status
     shift
