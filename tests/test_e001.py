@@ -21,7 +21,7 @@ from e001lib.acquire import archive_inventory, download_inventory
 from e001lib.metrics import neighbor_purity, score
 from e001lib.native import (mapping_commands, metabat_commands, run_checked, scale_comebin, scale_metabat_depth,
                             thinning_command, validate_comebin_pair, verify_source)
-from e001lib.records import ContractError, EXPERIMENT, config, digest, partition, prepare_hmp, sequences, table, truth_table, validate_attempt, write_cami, write_json
+from e001lib.records import ContractError, EXPERIMENT, audit_hmp, config, digest, partition, prepare_hmp, sequences, table, truth_table, validate_attempt, write_cami, write_json
 from e001lib.smoke import bam_inventory, check_interleaved, check_thinned_fixture, make_fixture
 
 
@@ -264,6 +264,19 @@ class HMPTests(Files):
         mapping.write_text(mapping.read_text() + "PC2\tg1\t2\tref_c\t10\t1\t4\n")
         with self.assertRaises(ContractError):
             prepare_hmp(fasta, mapping, self.root / "out", nodes)
+
+    def test_hmp_audit_reports_all_join_categories_without_mutating_inputs(self):
+        fasta, mapping, _ = self.setup_hmp()
+        fasta.write_text(fasta.read_text() + ">ref_missing_from_1_to_4_total_4\nACGT\n>ref_a_from_3_to_2602_total_2600\n" + "A" * 2600 + "\n")
+        mapping.write_text(mapping.read_text() + "PC2\tg1\t2\tref_extra\t10\t1\t4\n")
+        before_fasta, before_mapping = digest(fasta), digest(mapping)
+        report = audit_hmp(fasta, mapping)
+        self.assertFalse(report["join_contract_passes"])
+        self.assertEqual(report["fasta_keys_missing_mapping_count"], 1)
+        self.assertEqual(report["mapping_keys_missing_fasta_count"], 1)
+        self.assertEqual(report["fasta_duplicate_coordinate_count"], 1)
+        self.assertEqual(report["fasta_records"], 4)
+        self.assertEqual((before_fasta, before_mapping), (digest(fasta), digest(mapping)))
 
 
 class AcquisitionTests(Files):

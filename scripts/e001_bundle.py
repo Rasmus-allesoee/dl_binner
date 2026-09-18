@@ -14,6 +14,7 @@ PATHS = (
     "scripts/e001_ucloud_preflight.sh",
     "scripts/e001_environment_review.py",
     "scripts/e001_gi_inventory.sh",
+    "scripts/e001_hmp_audit.sh",
     "scripts/e001_retry_conversion.sh",
     "tests", "experiments/E001-coverage-thinning",
     "docs/evidence/2026-09-17-tool-snapshots.json",

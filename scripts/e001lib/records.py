@@ -5,7 +5,7 @@ import gzip
 import hashlib
 import json
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 from Bio import SeqIO
@@ -18,6 +18,8 @@ EXPERIMENT = ROOT / "experiments/E001-coverage-thinning"
 # converter error exposed the same malformed record with underscores.  Keep
 # both exact observed spellings narrow; do not generalize this exception.
 KNOWN_EMPTY_ORPHAN_IDS = frozenset({"*from__to*-42_total_0", "_from__to_-42_total_0"})
+HMP_HEADER = re.compile(r"(.+)_from_([0-9]+)_to_([0-9]+)_total_([0-9]+)")
+DNA_ALPHABET = set("ACGTRYSWKMBDHVN")
 
 
 class ContractError(ValueError):
@@ -77,9 +79,102 @@ def sequences(path, skip_known_empty=False, excluded=None):
                 continue
             require(record.id and record.id not in seen, f"Duplicate/empty FASTA ID: {record.id}")
             seen.add(record.id)
-            require(seq and set(seq.upper()) <= set("ACGTRYSWKMBDHVN"), f"Invalid DNA: {record.id}")
+            require(seq and set(seq.upper()) <= DNA_ALPHABET, f"Invalid DNA: {record.id}")
             yield record.id, seq
     require(seen, "Empty FASTA")
+
+
+def _coordinate_examples(counts, limit=20):
+    return [{"contig_id": key[0], "start": key[1], "end": key[2], "count": counts[key]}
+            for key in sorted(counts)[:limit]]
+
+
+def audit_hmp(fasta, mapping, example_limit=20):
+    """Report every FASTA/mapping coordinate mismatch without changing inputs."""
+    columns = ("anonymous_contig_id", "genome_id", "tax_id", "contig_id",
+               "number_reads", "start_position", "end_position")
+    mapping_counts, mapping_signatures, mapping_invalid = Counter(), defaultdict(set), []
+    for row in table(mapping, columns):
+        try:
+            key = (row["contig_id"], int(row["start_position"]), int(row["end_position"]))
+        except ValueError:
+            mapping_invalid.append({"contig_id": row["contig_id"],
+                                    "start": row["start_position"], "end": row["end_position"]})
+            continue
+        mapping_counts[key] += 1
+        mapping_signatures[key].add(tuple(row[name] for name in ("genome_id", "tax_id", "number_reads")))
+
+    fasta_counts, fasta_ids = Counter(), Counter()
+    malformed, invalid, length_mismatch, excluded = [], [], [], []
+    with open_text(fasta) as handle:
+        require(handle.read(1) == ">", f"Not a FASTA file: {fasta}")
+        handle.seek(0)
+        for record in SeqIO.parse(handle, "fasta"):
+            fasta_ids[record.id] += 1
+            sequence = str(record.seq)
+            if record.id in KNOWN_EMPTY_ORPHAN_IDS and not sequence:
+                excluded.append({"id": record.id, "length": 0,
+                                 "sha256": hashlib.sha256(b"").hexdigest(),
+                                 "reason": "known_empty_orphan"})
+                continue
+            match = HMP_HEADER.fullmatch(record.id)
+            if match is None:
+                malformed.append(record.id)
+                continue
+            accession, start, end, declared = match.groups()
+            key = (accession, int(start), int(end))
+            fasta_counts[key] += 1
+            if not sequence or not set(sequence.upper()) <= DNA_ALPHABET:
+                invalid.append(record.id)
+            expected = int(declared)
+            coordinate_length = key[2] - key[1] + 1
+            if len(sequence) != expected or expected != coordinate_length:
+                length_mismatch.append({"id": record.id, "actual": len(sequence),
+                                        "declared": expected, "coordinate": coordinate_length})
+
+    fasta_duplicate = Counter({key: count for key, count in fasta_counts.items() if count > 1})
+    mapping_duplicate = Counter({key: count for key, count in mapping_counts.items() if count > 1})
+    mapping_conflicting = {key: signatures for key, signatures in mapping_signatures.items() if len(signatures) > 1}
+    fasta_missing_mapping = Counter({key: count for key, count in fasta_counts.items() if key not in mapping_counts})
+    mapping_missing_fasta = Counter({key: count for key, count in mapping_counts.items() if key not in fasta_counts})
+    duplicate_ids = {identifier: count for identifier, count in fasta_ids.items()
+                     if count > 1 and identifier not in KNOWN_EMPTY_ORPHAN_IDS}
+    join_contract_passes = not any((mapping_invalid, malformed, invalid, length_mismatch,
+                                    duplicate_ids, fasta_duplicate, mapping_conflicting,
+                                    fasta_missing_mapping, mapping_missing_fasta))
+    return {
+        "status": "join_audit",
+        "join_contract_passes": join_contract_passes,
+        "fasta_records": sum(fasta_ids.values()),
+        "fasta_coordinate_keys": len(fasta_counts),
+        "fasta_duplicate_id_count": len(duplicate_ids),
+        "fasta_duplicate_id_examples": [{"id": identifier, "count": count}
+                                         for identifier, count in sorted(duplicate_ids.items())[:example_limit]],
+        "fasta_duplicate_coordinate_count": len(fasta_duplicate),
+        "fasta_duplicate_coordinate_examples": _coordinate_examples(fasta_duplicate, example_limit),
+        "fasta_keys_missing_mapping_count": len(fasta_missing_mapping),
+        "fasta_keys_missing_mapping_examples": _coordinate_examples(fasta_missing_mapping, example_limit),
+        "fasta_malformed_header_count": len(malformed),
+        "fasta_malformed_header_examples": malformed[:example_limit],
+        "fasta_invalid_dna_count": len(invalid),
+        "fasta_invalid_dna_examples": invalid[:example_limit],
+        "fasta_length_mismatch_count": len(length_mismatch),
+        "fasta_length_mismatch_examples": length_mismatch[:example_limit],
+        "excluded_known_empty_count": len(excluded),
+        "excluded_known_empty_examples": excluded[:example_limit],
+        "mapping_rows": sum(mapping_counts.values()),
+        "mapping_coordinate_keys": len(mapping_counts),
+        "mapping_duplicate_coordinate_count": len(mapping_duplicate),
+        "mapping_duplicate_coordinate_examples": _coordinate_examples(mapping_duplicate, example_limit),
+        "mapping_conflicting_coordinate_count": len(mapping_conflicting),
+        "mapping_conflicting_coordinate_examples": _coordinate_examples(
+            Counter({key: len(signatures) for key, signatures in mapping_conflicting.items()}), example_limit),
+        "mapping_keys_missing_fasta_count": len(mapping_missing_fasta),
+        "mapping_keys_missing_fasta_examples": _coordinate_examples(mapping_missing_fasta, example_limit),
+        "mapping_invalid_coordinate_count": len(mapping_invalid),
+        "mapping_invalid_coordinate_examples": mapping_invalid[:example_limit],
+        "source_sha256": {"fasta": digest(fasta), "mapping": digest(mapping)},
+    }
 
 
 def table(path, columns, cami=False):
@@ -212,7 +307,7 @@ def prepare_hmp(fasta, mapping, out, nodes=None):
     # A failed conversion leaves no complete inventory marker; retain it for diagnosis.
     with (out / "canonical.fna").open("x") as handle:
         for original, sequence in sequences(fasta, skip_known_empty=True, excluded=excluded_fasta):
-            match = re.fullmatch(r"(.+)_from_([0-9]+)_to_([0-9]+)_total_([0-9]+)", original)
+            match = HMP_HEADER.fullmatch(original)
             require(match is not None, f"Unexpected HMP FASTA header: {original}")
             accession, start, end, declared = match.groups()
             key = (accession, int(start), int(end))

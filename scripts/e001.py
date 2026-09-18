@@ -9,7 +9,7 @@ import sys
 from e001lib.acquire import archive_inventory, download_inventory
 from e001lib.metrics import score
 from e001lib.native import verify_source
-from e001lib.records import ContractError, digest, partition, prepare_hmp, require, validate_attempt, write_cami, write_json
+from e001lib.records import ContractError, audit_hmp, digest, partition, prepare_hmp, require, validate_attempt, write_cami, write_json
 from e001lib.smoke import amber_smoke, feature_smoke, make_fixture, mapping_smoke, metabat_smoke
 
 
@@ -27,6 +27,10 @@ def main():
     prepare.add_argument("--mapping", required=True, type=Path)
     prepare.add_argument("--nodes", type=Path)
     prepare.add_argument("--out", required=True, type=Path)
+    audit = sub.add_parser("audit-hmp", help="Read-only FASTA/mapping coordinate audit")
+    audit.add_argument("--fasta", required=True, type=Path)
+    audit.add_argument("--mapping", required=True, type=Path)
+    audit.add_argument("--out", required=True, type=Path)
     evaluate = sub.add_parser("evaluate")
     evaluate.add_argument("--population", required=True, type=Path)
     evaluate.add_argument("--assignments", required=True, type=Path)
@@ -53,6 +57,9 @@ def main():
         write_json(args.out, result)
     elif args.command == "prepare-hmp":
         result = prepare_hmp(args.fasta, args.mapping, args.out, args.nodes)
+    elif args.command == "audit-hmp":
+        result = audit_hmp(args.fasta, args.mapping)
+        write_json(args.out, result)
     elif args.command == "evaluate":
         population = json.loads(args.population.read_text())
         require(population.get("gates") and all(population["gates"].values()), "Population is not validated/frozen")
