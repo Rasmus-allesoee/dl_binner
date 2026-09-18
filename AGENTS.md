@@ -194,15 +194,17 @@ Do not optimize software architecture before the research question requires it.
 
 ## HPC
 
-The user currently has access to substantial SDU/UCloud compute, including H200-class GPUs and very large-memory nodes.
+The owner's current UCloud access is CPU-only (clarified 2026-09-18). Do not assume H200/GPU access or the old large-memory allocation. The dated capabilities/budget are recorded in [assets](docs/evidence/assets.md#a007-current-compute-access); experiment-specific ceilings belong in the experiment configuration.
 
 This access may be temporary.
 
-Use it when the research benefits from it, especially for expensive training, embedding generation, large metagenomic datasets, and broad benchmarks.
+Use it when the research benefits from it, after cheap local checks and measured CPU/storage feasibility. Native CPU support is not proof that a full training schedule is affordable. Account for charged allocated vCPU-hours, including idle/setup time, rather than equating process CPU time with the owner's spend.
 
 Do not use expensive resources for tasks that can be validated cheaply first.
 
 NOTE: you cannot work on the HPC. I have to control and run stuff in here. So whenever we use the HPC, you have to guide the user on what to do.
+
+Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
 ---
 

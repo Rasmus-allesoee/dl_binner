@@ -1,6 +1,6 @@
 # Assets and Selective Reuse
 
-Updated: 2026-09-17. Each entry distinguishes inspection date and owner-confirmed availability from verified files/checksums.
+Updated: 2026-09-18. Each entry distinguishes inspection date and owner-confirmed availability from verified files/checksums.
 
 ## A001: Thesis repository
 
@@ -53,10 +53,16 @@ The [initial landscape](2026-09-16-landscape.md) and [new audit](2026-09-17-targ
 
 ## A006: Public benchmark acquisition
 
-[E001](../../experiments/E001-coverage-thinning/README.md) selects CAMI II Marine as development/diagnostic data. The owner confirmed on 2026-09-17 that we should plan fresh downloads. [The data contract](2026-09-17-benchmark-data.md) owns official locators, artifact distinctions, CAMI III availability and the acquisition gate. No payload or experimental input hash has been verified. The first task is setup/truth inspection; existing thesis artifacts are not prerequisites.
+[E001](../../experiments/E001-coverage-thinning/README.md) now selects CAMI II HMP gastrointestinal development/diagnostic data under [D004](../decisions/D004-human-cpu-preflight.md), replacing the earlier Marine plan. Fresh acquisition is prepared. [The new audit](2026-09-18-human-cpu-audit.md) owns the human-data interpretation; [acquisition.json](../../experiments/E001-coverage-thinning/acquisition.json) owns URLs, actual GI sample IDs and publisher MD5s. Only metadata and tiny prefixes have been read, not complete payloads or verified experimental input hashes. The [September 17 data audit](2026-09-17-benchmark-data.md) remains historical context for Marine/CAMI III. No thesis artifact is required.
+
+## A007: Current compute access
+
+Owner-confirmed 2026-09-18 in [prompt3](../../agent_context/prompt3_second_step.md): UCloud AMD EPYC 9535, 1-128 vCPU, 3-384 GB DDR5-6000 RAM, approximately 2,100 allocated core-hours, **no GPU**, and 250 GB storage. The owner expects that up to 10 TB storage may be obtainable; this is not an allocated quota. These figures supersede prior H200/2-TB-node assumptions. UCloud application, persistent work path, remaining access duration and native environments are not yet verified.
+
+Budget charging is allocated vCPU count times wall-clock allocation time, not just observed process CPU time. Experiment-specific reserves/ceilings belong in [E001 configuration](../../experiments/E001-coverage-thinning/config.json). CPU support, available maximum RAM and a larger storage quota do not establish that an experiment is affordable. Initial preflight needs neither a GPU nor increased storage.
 
 ## Before an artifact becomes an experimental input
 
 Create a small input manifest alongside the experiment containing source/accession, immutable version or checksum, sample/genome/contig IDs, preprocessing, storage/retrieval instructions, and split role. Check joins by identifiers and lengths rather than relying on row order. State what is unavailable or uncertain. A recorded UCloud path must not become a hard-coded assumption in reusable code.
 
-A development dataset and prospective E001 protocol are selected; final evaluation datasets are not. H200-class GPU and large-memory access are owner-reported capabilities, not allocated resources or executed jobs. Exact runtime environments and UCloud storage/compute budgets remain to be established before launch.
+A development dataset and E001 protocol are selected; final evaluation datasets are not. Current owner-reported resources are in A007. Actual native runtimes, data identities and measured CPU/storage feasibility remain to be established before scientific launch.

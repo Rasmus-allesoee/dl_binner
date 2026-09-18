@@ -71,6 +71,8 @@ The long-term goal is to show that I can:
 
 The project should strengthen my path toward computational biology, biomedical AI, genomics, human health, drug discovery, and related research areas.
 
+Clarified 2026-09-18: development and core benchmarking should center human-associated microbiomes. The environmental thesis provides prior experience and evidence, not a requirement to continue environmental research.
+
 ---
 
 ## Ultimate destination
@@ -247,16 +249,11 @@ The new repository should develop its own clean identity around method research 
 
 I currently still have access to SDU/UCloud HPC resources.
 
-This can include:
-
-- H200-class NVIDIA GPUs;
-- large-memory systems approaching 2 TB RAM;
-- many CPU cores;
-- cluster-scale storage and compute.
+The current access is CPU-only, as clarified on 2026-09-18. Earlier expectations of H200 GPUs and very large-memory nodes are superseded. Current capabilities and budget belong in the dated [asset record](docs/evidence/assets.md#a007-current-compute-access), with operational limits in each experiment's configuration. Do not assume GPU access will return.
 
 This access may eventually disappear.
 
-That makes it strategically useful to perform compute-intensive research while the resources remain available.
+Use the allocation strategically while it remains available, without letting the available hardware prescribe the scientific method.
 
 At the same time, do not waste HPC resources merely because they exist.
 

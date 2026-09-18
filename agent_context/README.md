@@ -7,6 +7,8 @@ These materials explain the project's background. Current authority is [PROJECT_
 | [Thesis](thesis/MSc_RasmusAN_SDU_v5.md) and [supplement](thesis/MSc_RasmusAN_SDU_sup_final_v1.md) | Prior study, preserved with its original figures. Both Markdown files match the inspected thesis repository at commit `4029b810045ff9196be0035e48e7fb32ca4be792`. Source work: Rasmus A. Nielsen, MSc thesis, SDU, June 2026; source repository documents CC BY 4.0 for data/figures/docs. |
 | [Beginning-of-project prompt](prompt_beginning_of_project.md) | The owner brief that initiated foundation setup |
 | [First research-step prompt](prompt2_first_step.md) | Owner brief and feedback initiating the targeted audit, including public-benchmark and source-cache clarifications |
+| [Second research-step prompt](prompt3_second_step.md) | Owner brief for Gate 0/Gate 1, clarifying human-microbiome focus, mapper alternatives and actual CPU-only budget |
+| [Prior chat answer](prompt2_answer.md) | Owner-supplied copy of the earlier audit handoff; its Marine direction is superseded by D004 and current STATE |
 | [Planning conversation](chatgpt_project_planning.md) | Historical motivation and alternatives; subsequent owner instructions and PROJECT_INTENT take precedence |
 | `papers/` | Local paper copies and transcriptions, excluded from Git; neither an exhaustive bibliography nor proof of review |
 | `tools_repo/` | Mixture of clones and ZIP/source copies, excluded from Git; selected commits and qualifications are recorded in the tool snapshot manifest |

@@ -1,5 +1,7 @@
 # Public Benchmarks and the First Data Contract
 
+Follow-up, 2026-09-18: E001's Marine choice is superseded by [D004](../decisions/D004-human-cpu-preflight.md) and the [human-data/CPU audit](2026-09-18-human-cpu-audit.md). This dated note remains evidence about the earlier options, not current acquisition instructions.
+
 Checked: 2026-09-17
 Scope: official CAMI pages, archive listings and Zenodo metadata; no dataset payload downloaded or checksum verified. Related: [Q003](../research/questions.md#q003), [E001](../../experiments/E001-coverage-thinning/README.md).
 

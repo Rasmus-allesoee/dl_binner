@@ -1,0 +1,4 @@
+# Harness only. Native tools use their own isolated, source-pinned environments.
+biopython==1.85
+numpy==2.2.6
+pysam==0.23.3

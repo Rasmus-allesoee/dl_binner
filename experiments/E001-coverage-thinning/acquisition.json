@@ -1,0 +1,30 @@
+{
+  "dataset": "CAMI-II-HMP-GI-short-read",
+  "doi": "10.4126/FRL01-006425518",
+  "metadata_checked": "2026-09-18",
+  "base_url": "https://frl.publisso.de/data/frl%3A6425518/",
+  "publisher_manifest": "md5sums.tsv",
+  "body_site_source": "README.md",
+  "inventory_files": [
+    {"path": "README.md", "md5": null, "max_bytes": 65536},
+    {"path": "md5sums.tsv", "md5": null, "max_bytes": 2000000},
+    {"path": "per_bodysite/gastro_bam/gsa.fa", "md5": "22018c5a264d309bcf8412f816260052", "max_bytes": 2000000000},
+    {"path": "per_bodysite/gastro_bam/gsa_pooled_mapping_fixed.tsv", "md5": "954106872f9af342c0b7fd4422d8db9f", "max_bytes": 64000000},
+    {"path": "per_bodysite/gastro_bam/gsa_pooled_mapping.tsv", "md5": "6bed38a056082b3358c8796c97f136cf", "max_bytes": 64000000},
+    {"path": "gastrooral/setup.tar.gz", "md5": "eebd129ce7f8640683eb744a0e946223", "max_bytes": 4000000000}
+  ],
+  "read_archives_not_authorized_by_inventory": [
+    {"sample": 0, "path": "gastrooral/sample_0.tar.gz", "md5": "60e04c041c38ea168af03fc55dff15d6"},
+    {"sample": 1, "path": "gastrooral/sample_1.tar.gz", "md5": "c3747f91ae06188d0cf8d76a2ac02118"},
+    {"sample": 2, "path": "gastrooral/sample_2.tar.gz", "md5": "843990471f8ef667ff87ac2626c68d01"},
+    {"sample": 3, "path": "gastrooral/sample_3.tar.gz", "md5": "9d8edda648e0fee325e5d224f94389ec"},
+    {"sample": 4, "path": "gastrooral/sample_4.tar.gz", "md5": "377e8a41e8761a5a50a5994baae862b0"},
+    {"sample": 5, "path": "gastrooral/sample_5.tar.gz", "md5": "31bfddea9681fb3b69a01870a524f7db"},
+    {"sample": 9, "path": "gastrooral/sample_9.tar.gz", "md5": "f3c155ef8e50a946d5b526ef5df47a6e"},
+    {"sample": 10, "path": "gastrooral/sample_10.tar.gz", "md5": "b976afea3dd99c1dc550caf576856a11"},
+    {"sample": 11, "path": "gastrooral/sample_11.tar.gz", "md5": "cf527e8420911e6cfbee0f6c07816636"},
+    {"sample": 12, "path": "gastrooral/sample_12.tar.gz", "md5": "fd67f3823b6d7ede682c02f1586c372d"}
+  ],
+  "taxonomy_candidate_url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_DATABASES/taxdump_cami2_toy.tar.gz",
+  "taxonomy_status": "Publisher-linked; availability and payload not verified. Inspect setup inventory first."
+}

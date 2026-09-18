@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-09-17
+Updated: 2026-09-18
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. No hypothesis below has been experimentally tested in this project.
 
@@ -17,6 +17,8 @@ The candidate focus is contig loss/misassignment in fragmented prokaryotic assem
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
 
 2026-09-17: [E001](../../experiments/E001-coverage-thinning/README.md) now specifies the first test, with paired thinning on a fixed public assembly and native stage outputs. The [audit](../evidence/2026-09-17-targeted-audit.md) resolves enough input/normalization questions to implement it. Still open: no performance gap or avoidable loss has been observed.
+
+2026-09-18: the Gate 0 harness and portable fixtures are implemented. Exact native checks are prepared for UCloud, not passed. [D004](../decisions/D004-human-cpu-preflight.md) changes execution choices, not the hypothesis; no scientific gap has been observed.
 
 ## Q002
 
@@ -42,6 +44,8 @@ Availability update, 2026-09-16: the owner confirmed the original artifacts rema
 
 2026-09-17: the owner emphasized **public CAMI benchmarks as well as custom simulations**. [D003](../decisions/D003-coverage-diagnostic.md) chooses CAMI II Marine for E001 development, with fresh downloads (owner-confirmed). [Data audit](../evidence/2026-09-17-benchmark-data.md) separates available CAMI III toy data from the active challenge's scheduled assembly release. Custom CAMISIM data are deferred until a concrete mechanism needs them. Final independent evaluation and real-assembly validation remain open; E001's fixed GSA does not answer them.
 
+2026-09-18: the owner clarified that human-associated microbiomes, not environmental research, are the focus. [D004](../decisions/D004-human-cpu-preflight.md) replaces Marine with CAMI II HMP GI. Full corrected-truth/coordinate joins, historical taxonomy, sample inventory and interpretability floors remain open; prefix inspection alone does not validate them. The shared gastrooral GSA and GI-only GSA must not be conflated.
+
 ## Q004
 
 **What biological and computational improvement will count as success for the selected regime?**
@@ -53,6 +57,8 @@ Candidate endpoints include true recovered sequence at controlled impurity, geno
 Needed to resolve: define the intended use, primary endpoint, denominators, thresholds, resource constraints, comparison population, and uncertainty analysis in the first experiment protocol before results are examined. Do not inherit the thesis's composite score as the project's objective.
 
 2026-09-17: E001 defines a fixed-population, purity-constrained assembled-sequence recovery endpoint, AMBER companion reports, length/stage diagnostics and explicit triage/resource thresholds. This answers protocol requirements for that diagnostic only. The eventual method's biological success criteria and independent validation remain open.
+
+2026-09-18: metric fixtures now pass locally; AMBER parity remains a native Linux check. GPU assumptions were superseded by the actual CPU-only budget. Full-schedule feasibility is required before launch, and removing COMEBin would require revising its specific triage claims prospectively.
 
 ## Q005
 

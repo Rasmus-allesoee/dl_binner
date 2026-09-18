@@ -9,6 +9,7 @@ Evidence notes distinguish what a source reports, what we inspected directly, an
 | [Targeted paper/code audit, 2026-09-17](2026-09-17-targeted-audit.md) | Native information paths, normalization, relevant uncertainty/weighting prior art and AMBER semantics for E001 |
 | [Public benchmark audit, 2026-09-17](2026-09-17-benchmark-data.md) | CAMI II development-data contract, fresh acquisition and verified CAMI III distinctions |
 | [Tool snapshots, 2026-09-17](2026-09-17-tool-snapshots.json) | Exact selected source commits and checkout qualifications; not an executable environment lock |
+| [Human-data and CPU audit, 2026-09-18](2026-09-18-human-cpu-audit.md) | GI acquisition/ID contract, mapper alternatives, CPU-only reassessment and unresolved native feasibility |
 | [Assets and reuse](assets.md) | Available prior work, data availability, provenance, and unresolved reproducibility details |
 | [Context fingerprints](context-sources.sha256) | Current local fingerprints: 45 paper files, two thesis Markdown files, and 36 selected source/README files; historical versions remain in Git |
 

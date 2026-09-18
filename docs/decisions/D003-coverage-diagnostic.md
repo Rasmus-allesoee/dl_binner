@@ -1,7 +1,7 @@
 # D003: Diagnose Coverage Loss on a Fixed Public Assembly
 
 Date: 2026-09-17
-Status: accepted
+Status: superseded in dataset/mapper/compute choices by [D004](D004-human-cpu-preflight.md), 2026-09-18; diagnostic rationale retained
 Scope: authorize implementation and preflight of E001; scientific execution remains gated by its data/environment checks and owner-operated UCloud budget
 Refines: [D002](D002-investigate-before-architecture.md)
 

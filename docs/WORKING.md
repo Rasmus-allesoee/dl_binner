@@ -1,6 +1,6 @@
 # Working with the Research Record
 
-Established: 2026-09-16. Updated: 2026-09-17. This is the operating convention; [D001](decisions/D001-research-record.md) records its rationale.
+Established: 2026-09-16. Updated: 2026-09-18. This is the operating convention; [D001](decisions/D001-research-record.md) records its rationale.
 
 ## Sources of truth
 
@@ -78,7 +78,9 @@ Repository creation, visibility, licensing, and first publication are separate o
 
 Codex does not operate UCloud. For each relevant experiment, prepare a tested local smoke check, a job command or script, configuration, expected outputs, approximate resource needs, and a collection/checksum command. The owner runs it. Do not mark a run complete until returned outputs have been inspected. Document queue failures, incomplete runs, and unavailable outputs explicitly.
 
-Use thesis assets selectively and public field benchmarks alongside custom simulations. The owner confirmed thesis availability and allows new simulations optimized for the question. Public data used for development are not an untouched final test set; clearly label changed assemblies, reference populations, read subsets or synthetic coverage. Reuse a standard evaluator where appropriate and test any supplementary metrics against explicit truth contracts. E001's choice is recorded in [D003](decisions/D003-coverage-diagnostic.md).
+Use thesis assets selectively and public field benchmarks alongside custom simulations. The owner confirmed thesis availability and allows new simulations optimized for the question. Public data used for development are not an untouched final test set; clearly label changed assemblies, reference populations, read subsets or synthetic coverage. Reuse a standard evaluator where appropriate and test any supplementary metrics against explicit truth contracts. E001's current choice is recorded in [D004](decisions/D004-human-cpu-preflight.md).
+
+Portable software fixtures and native compatibility smoke checks are recorded separately from scientific `run-NNN` attempts; they do not test the biological hypothesis. Record actual allocated vCPU-hours as well as process resource measurements. Do not treat a version-pinned recipe as a resolved environment lock or a tiny smoke as proof that full training fits the budget.
 
 ## End-of-task check
 

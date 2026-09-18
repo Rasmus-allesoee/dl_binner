@@ -24,7 +24,7 @@ See [current state](docs/STATE.md) for implementation status, completed work, an
 | [Source context](agent_context/README.md) | Original thesis and planning material, plus local reference caches |
 | [Historical planning](docs/history/README.md) | Earlier ideas retained as history |
 
-Research software, reusable workflows, and data manifests will be added when an actual experiment needs them. The directory name `dl_binner` is a working name, not an architectural commitment.
+The first experiment now has a small [validation harness and operations guide](experiments/E001-coverage-thinning/OPERATIONS.md), not a new binning model or general benchmark platform. The directory name `dl_binner` is a working name, not an architectural commitment.
 
 ## Check the documentation
 
