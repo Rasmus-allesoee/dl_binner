@@ -29,7 +29,13 @@ Source: output supplied by the owner in chat, inspected here; not direct HPC acc
 - Startup banner reports AMD EPYC 9535, 256 visible CPUs, roughly 755 GiB host RAM and 13-day uptime. These are not the owner's 4-vCPU/12-GB allocation or elapsed job time. `df` reports shared filesystem capacity (7.2P total, 2.1P available), not personal quota. The ASPEED graphics listing does not establish an allocated ML accelerator; the job remains CPU-only.
 - SSH/ttyd startup messages contain no reported failure and do not require SSH configuration for this browser-terminal workflow.
 
-Next checkpoint: extract only the verified committed bundle into a new code directory, verify `SOURCE_COMMIT`, and return output. Then prepare micromamba under the experiment root and GNU time in the disposable Ubuntu container, with explicit software provenance and installation logs. No research data download, tool-environment installation or smoke result is inferred from this probe.
+The next checkpoint at that time was extraction. The owner has subsequently returned a successful checksum, `Code extraction verified` at the expected path, and full source commit `9c2b0ec6feb3b7884bbf7d519c63176d4fb10aea`. Extraction is now confirmed. No software installation, native smoke or research-data acquisition has been reported.
+
+## Grouped driver preparation, 2026-09-18
+
+The owner explicitly authorizes grouping steps that do not require intermediate interpretation and takes responsibility for requesting job extensions. This supersedes per-command chat pauses and repeated remaining-time questions. The supplemental [driver](../../scripts/e001_ucloud_preflight.sh) groups verified micromamba bootstrap, GNU time installation and unchanged mapping/AMBER setup/smoke, with fail-fast stages and return packaging. Its micromamba pin/checksum comes from the official release API as documented in [operations](OPERATIONS.md#current-grouped-execution). It does not acquire GI data or run scientific training.
+
+Local validation: **60 portable tests passed**, including a mocked failed download that packages logs, never reaches system/tool installation and refuses a second attempt over the same outputs. Shell syntax passed. This tests orchestration failure handling, not actual Linux installs or native parity. The actual driver and all native stages remain owner-run and unexecuted at this handoff. The old execution snapshot remains unchanged; the separate driver's hash and exact executed copy are recorded by the driver itself.
 
 ## Native checks still pending
 
