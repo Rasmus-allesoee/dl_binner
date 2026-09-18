@@ -37,15 +37,31 @@ The owner explicitly authorizes grouping steps that do not require intermediate 
 
 Local validation: **60 portable tests passed**, including a mocked failed download that packages logs, never reaches system/tool installation and refuses a second attempt over the same outputs. Shell syntax passed. This tests orchestration failure handling, not actual Linux installs or native parity. The actual driver and all native stages remain owner-run and unexecuted at this handoff. The old execution snapshot remains unchanged; the separate driver's hash and exact executed copy are recorded by the driver itself.
 
-## Native checks still pending
+## First native return reviewed, 2026-09-18
+
+Owner-supplied [terminal output](../../agent_context/e001_ucloud_preflight_output.txt), [return archive](../../agent_context/preflight-return.tar.gz) and [checksum](../../agent_context/preflight-return.tar.gz.sha256) are preserved as a compact synthetic-check record (approximately 97 KiB archive; no research data). SHA-256 `45b5887fdbc80a43eb25a55a960000c5da57399d6cff33c0f47e323d793ad820` verified. All 108 archive members were inspected for path/type/duplicate safety without extraction. The returned driver matches our local driver hash, and returned setup/smoke hashes identify the transferred scripts.
+
+All setup, pip-check, pipeline and smoke exit codes are zero. micromamba 2.9.0 and Ubuntu GNU time package `1.9-0.2build1` installed successfully; GNU time's display string `UNKNOWN` is not an installation failure. Native mapping reports strobealign 0.17.0 and samtools 1.24. AMBER reports the intended `f8b3a601043d13fc4227d5691c13561eb4490e50` source commit. Package-script security warnings are advisory; no reported solver/import/command failure occurred.
+
+- Mapping: 1,870 records; correct-reference fraction 1.0 on the tiny unique-reference fixture. Both thinning checks preserve mates: 107/935 and 111/1,045 retained templates. Random 10% sampling need not retain exactly 10% in small fixtures. No inference about metagenomic mapping accuracy or throughput follows.
+- AMBER: perfect, merged, split, missing, unassigned, strict threshold boundary and multi-origin assertions pass. The conservative E001 R95 agrees with AMBER-derived purity-filtered recovery on unique-origin cases. Unconstrained AMBER recall intentionally differs for merged bins (1.0 versus R95 0.0), and multi-origin behavior intentionally differs (1.0 versus 0.5). Neither difference is an evaluator bug.
+- Driver timestamps: 14:25:02-14:26:02 UTC, 60 seconds total. Mapping smoke: 0.40 seconds, maximum RSS 53,528 KiB; AMBER: 1.58 seconds, 164,744 KiB. Setup: mapping 17 seconds, AMBER 37 seconds. The batch interval corresponds to approximately 0.067 allocated core-hours at 4 vCPU, not total job cost; idle/earlier allocation remains additional.
+
+**Reproducibility caveat:** both pip inventories expose `easybuild`, `easybuild-easyblocks`, `easybuild-easyconfigs` and `easybuild-framework` 5.3.1, absent from our install recipes and conda inventories. External Python paths or user-site exposure are a hypothesis, not a confirmed cause. Core fixture assertions passed, but do not call these fully isolated/reconstructable environments yet. The micromamba `list --explicit` outputs also lack an `@EXPLICIT` header/checksums and include blank entries; pip freeze contains conda build-time `file://` paths. Preserve them as observed inventories, not directly replayable locks.
+
+Next: [environment review](../../scripts/e001_environment_review.py), no downloads or reinstallations. It records package/import origins with inherited paths, removes PYTHONPATH/PYTHONHOME/PYTHONUSERBASE and disables user-site for child processes, asserts distribution/import containment, records structured conda package provenance, and reruns both native checks into a new directory. Existing installs and first outputs stay intact. Return the resulting archive for inspection before GI acquisition. Python's [environment documentation](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONNOUSERSITE) grounds the process-local isolation controls; these do not edit shell startup files.
+
+Review-driver preparation: 63 portable tests passed, including external-distribution injection/detection, successful clean-process exclusion and failure-status recording. No native clean-environment rerun has yet occurred. Documentation links and whitespace checks pass for maintained edits; original owner terminal output is preserved verbatim.
+
+## Native check status
 
 | Native check | Current status and what it must establish |
 | --- | --- |
-| strobealign 0.17.0 / samtools 1.24 | Unexecuted. Actual SAM/BAM compatibility, primary flags, NM tags, sorting, mate-preserving thinning and executable identities. Portable tests exercise validators only; pysam's bundled HTSlib is not substituted for samtools 1.24. |
-| Pinned AMBER | Unexecuted. File-parser/metric parity on unique-origin fixtures, missing genomes, strict boundaries and separately characterized multi-origin behavior. |
+| strobealign 0.17.0 / samtools 1.24 | Synthetic native checks passed in the returned job. Environment-isolation rerun pending; real-read mapping remains untested. |
+| Pinned AMBER | Native fixture checks passed, including intended unique/multi-origin and threshold semantics. Environment-isolation rerun pending; no scientific dataset evaluated. |
 | Pinned VAMB | Unexecuted. Actual BAM/TNF extraction, native scale invariance including total abundance, zero-row/zero-column behavior and CPU forward pass under its specified dependencies. |
 | Pinned COMEBin | Unexecuted. Fixed augmentation identity, full native six-view coverage recomputation, measured variance, pseudocount-aware scaling and CPU forward pass. |
 | Pinned MetaBAT2 | Unexecuted. Source-built executable, native mean/variance extraction and assignment format, including genuine empty output versus command failure. |
-| Linux environment recipes | Unresolved. Produce and inspect explicit conda package URLs, pip versions, binary hashes and source identities before claiming a frozen runtime. |
+| Linux environment recipes | Mapping/AMBER recipes installed successfully; inventories inspected with external-package visibility/replayability caveats above. Other tool recipes remain unresolved. |
 
 Full native training/clustering, marker payload verification, CPU throughput projection, real-read prefix mapping comparison, full data/truth/taxonomy joins and research launch remain later gates. The smoke job is deliberately not a surrogate benchmark. A failure is retained and investigated; no older PyTorch/tool substitution is allowed under the original pin.

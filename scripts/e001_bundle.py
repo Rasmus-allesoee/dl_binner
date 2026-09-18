@@ -12,6 +12,7 @@ PATHS = (
     "scripts/e001.py", "scripts/e001lib", "scripts/e001_bundle.py",
     "scripts/e001_linux_setup.sh", "scripts/e001_linux_smoke.sh",
     "scripts/e001_ucloud_preflight.sh",
+    "scripts/e001_environment_review.py",
     "tests", "experiments/E001-coverage-thinning",
     "docs/evidence/2026-09-17-tool-snapshots.json",
 )

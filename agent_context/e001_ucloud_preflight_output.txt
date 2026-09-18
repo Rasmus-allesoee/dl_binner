@@ -1,0 +1,97 @@
+e001_ucloud_preflight.sh: OK
+START: download-micromamba (output saved in bootstrap/download-micromamba.log)
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 17.4M  100 17.4M    0     0  41.6M      0 --:--:-- --:--:-- --:--:-- 41.6M
+PASS: download-micromamba
+START: verify-micromamba (output saved in bootstrap/verify-micromamba.log)
+/work/Home/dl_binner/e001/e001-gate0/bin/micromamba.part: OK
+PASS: verify-micromamba
+START: micromamba-version (output saved in bootstrap/micromamba-version.log)
+2.9.0
+PASS: micromamba-version
+START: apt-update (output saved in bootstrap/apt-update.log)
+Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1580 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1960 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [56.2 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2149 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [671 B]
+Get:14 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [78.5 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [40.4 kB]
+Get:16 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1533 kB]
+Get:17 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1245 kB]
+Get:18 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+Get:19 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1801 kB]
+Fetched 32.7 MB in 1s (22.6 MB/s)                                                                                                                                                                                           
+Reading package lists...                                                                                                                                                                                                    
+PASS: apt-update                                                                                                                                                                                                            
+START: install-time (output saved in bootstrap/install-time.log)                                                                                                                                                            
+Reading state information...                                                                                                                                                                                                
+The following NEW packages will be installed:                                                                                                                                                                               
+  time                                                                                                                                                                                                                      
+0 upgraded, 1 newly installed, 0 to remove and 104 not upgraded.                                                                                                                                                            
+Need to get 45.2 kB of archives.                                                                                                                                                                                            
+After this operation, 129 kB of additional disk space will be used.                                                                                                                                                         
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 time amd64 1.9-0.2build1 [45.2 kB]                                                                                                                                  
+Fetched 45.2 kB in 0s (439 kB/s)                                                                                                                                                                                            
+Selecting previously unselected package time.                                                                                                                                                                               
+(Reading database ... 128878 files and directories currently installed.)                                                                                                                                                    
+Preparing to unpack .../time_1.9-0.2build1_amd64.deb ...                                                                                                                                                                    
+Unpacking time (1.9-0.2build1) ...                                                                                                                                                                                          
+Setting up time (1.9-0.2build1) ...                                                                                                                                                                                         
+Processing triggers for install-info (7.1-3build2) ...                                                                                                                                                                      
+Processing triggers for man-db (2.12.0-4build2) ...                                                                                                                                                                         
+PASS: install-time                                                                                                                                                                                                          
+START: time-version (output saved in bootstrap/time-version.log)                                                                                                                                                            
+time (GNU Time) UNKNOWN                                                                                                                                                                                                     
+Copyright (C) 2018 Free Software Foundation, Inc.                                                                                                                                                                           
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.                                                                                                                                             
+This is free software: you are free to change and redistribute it.                                                                                                                                                          
+There is NO WARRANTY, to the extent permitted by law.                                                                                                                                                                       
+                                                                                                                                                                                                                            
+Written by David Keppel, David MacKenzie, and Assaf Gordon.                                                                                                                                                                 
+PASS: time-version
+START: mapping-setup (output saved in bootstrap/mapping-setup.log)
+Linking pysam-0.23.3-py312hf5ad864_3
+Linking samtools-1.24-h9dcdb79_1
+
+Transaction finished
+
+
+To activate this environment, use:
+
+    micromamba activate /work/Home/dl_binner/e001/e001-gate0/envs/mapping
+
+Or to execute a single command in this environment, use:
+
+    micromamba run -p /work/Home/dl_binner/e001/e001-gate0/envs/mapping mycommand
+
+Setup completed. Resolved locks still need inspection; native smoke and scientific runs are not complete.
+PASS: mapping-setup
+START: mapping-smoke (output saved in bootstrap/mapping-smoke.log)
+PASS: mapping-smoke
+START: amber-setup (output saved in bootstrap/amber-setup.log)
+Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 140.0 MB/s eta 0:00:00
+Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2026.3.post1-py2.py3-none-any.whl (508 kB)
+Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 70.6 MB/s eta 0:00:00
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading tornado-6.5.10-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (467 kB)
+Downloading tzdata-2026.4-py2.py3-none-any.whl (347 kB)
+Downloading xyzservices-2026.9.1-py3-none-any.whl (98 kB)
+Installing collected packages: pytz, xyzservices, tzdata, tornado, six, PyYAML, pysam, pyparsing, pyarrow, pillow, numpy, narwhals, MarkupSafe, kiwisolver, fonttools, cycler, python-dateutil, jinja2, contourpy, biopython, pandas, matplotlib, seaborn, bokeh
+
+Successfully installed MarkupSafe-3.0.3 PyYAML-6.0.3 biopython-1.87 bokeh-3.8.2 contourpy-1.4.0 cycler-0.12.1 fonttools-4.65.0 jinja2-3.1.6 kiwisolver-1.5.1 matplotlib-3.10.8 narwhals-2.26.0 numpy-2.0.1 pandas-2.2.2 pillow-12.3.0 pyarrow-23.0.1 pyparsing-3.3.2 pysam-0.23.3 python-dateutil-2.9.0.post0 pytz-2026.3.post1 seaborn-0.13.2 six-1.17.0 tornado-6.5.10 tzdata-2026.4 xyzservices-2026.9.1
+Setup completed. Resolved locks still need inspection; native smoke and scientific runs are not complete.
+PASS: amber-setup
+START: amber-smoke (output saved in bootstrap/amber-smoke.log)
+PASS: amber-smoke
+Mapping and AMBER synthetic checks finished. Stop for review; no GI acquisition is authorized.
+Return archive: /work/Home/dl_binner/e001/e001-gate0/preflight-return.tar.gz
+PREFLIGHT EXIT CODE: 0
