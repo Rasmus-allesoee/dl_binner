@@ -1,0 +1,207 @@
+e001-code-6901be8153c2.tar.gz: OK                                                                                                                                                                                           
+Auditing existing GI FASTA and corrected mapping; no downloads or installations.                                                                                                                                            
+{                                                                                                                                                                                                                           
+  "status": "join_audit",                                                                                                                                                                                                   
+  "join_contract_passes": false,                                                                                                                                                                                            
+  "fasta_records": 210634,                                                                                                                                                                                                  
+  "fasta_coordinate_keys": 210632,                                                                                                                                                                                          
+  "fasta_duplicate_id_count": 0,                                                                                                                                                                                            
+  "fasta_duplicate_id_examples": [],                                                                                                                                                                                        
+  "fasta_duplicate_coordinate_count": 0,                                                                                                                                                                                    
+  "fasta_duplicate_coordinate_examples": [],                                                                                                                                                                                
+  "fasta_keys_missing_mapping_count": 20,                                                                                                                                                                                   
+  "fasta_keys_missing_mapping_examples": [                                                                                                                                                                                  
+    {                                                                                                                                                                                                                       
+      "contig_id": "AP012167.1",                                                                                                                                                                                            
+      "start": 1,                                                                                                                                                                                                           
+      "end": 2395134,                                                                                                                                                                                                       
+      "count": 1                                                                                                                                                                                                            
+    },                                                                                                                                                                                                                      
+    {                                                                                                                                                                                                                       
+      "contig_id": "AP012168.1",                                                                                                                                                                                            
+      "start": 1,                                                                                                                                                                                                           
+      "end": 42448,                                                                                                                                                                                                         
+      "count": 1                                                                                                                                                                                                            
+    },
+    {
+      "contig_id": "AP012169.1",
+      "start": 1,
+      "end": 35387,
+      "count": 1
+    },
+    {
+      "contig_id": "AP012170.1",
+      "start": 2,
+      "end": 35340,
+      "count": 1
+    },
+    {
+      "contig_id": "AP012171.1",
+      "start": 1,
+      "end": 25334,
+      "count": 1
+    },
+    {
+      "contig_id": "AP012172.1",
+      "start": 1,
+            "end": 17882,
+      "count": 1
+    },
+    {
+      "contig_id": "AP012173.1",
+      "start": 1,
+      "end": 11627,
+      "count": 1
+    },
+    {
+      "contig_id": "AP012174.1",
+      "start": 1,
+      "end": 10300,
+      "count": 1
+    },
+    {
+      "contig_id": "AP012175.1",
+      "start": 1,
+      "end": 8556,
+      "count": 1
+    },
+    {
+      "contig_id": "AP012176.1",
+      "start": 1,
+      "end": 5866,
+      "count": 1
+    },
+    {
+      "contig_id": "CP002039.1",
+      "start": 1,
+      "end": 5513886,
+      "count": 1
+    },
+    {
+      "contig_id": "CP002341.1",
+      "start": 2,
+      "end": 2125752,
+      "count": 1
+    },
+        {
+      "contig_id": "CP002342.1",
+      "start": 1,
+      "end": 6222,
+      "count": 1
+    },
+    {
+      "contig_id": "CP002609.1",
+      "start": 3,
+      "end": 1894400,
+      "count": 1
+    },
+    {
+      "contig_id": "CP002610.1",
+      "start": 1,
+      "end": 4541,
+      "count": 1
+    },
+    {
+      "contig_id": "CP002611.1",
+      "start": 1,
+      "end": 78145,
+      "count": 1
+    },
+    {
+      "contig_id": "CP009236.1",
+      "start": 2,
+      "end": 3237652,
+      "count": 1
+    },
+    {
+      "contig_id": "CP012580.1",
+      "start": 1,
+      "end": 6645476,
+      "count": 1
+    },
+    {
+      "contig_id": "CP014870.1",
+      "start": 2,
+      "end": 5027698,
+      "count": 1
+    },
+    {
+            "contig_id": "CP014870.1",
+      "start": 5027705,
+      "end": 6823534,
+      "count": 1
+    }
+  ],
+  "fasta_malformed_header_count": 0,
+  "fasta_malformed_header_examples": [],
+  "fasta_invalid_dna_count": 0,
+  "fasta_invalid_dna_examples": [],
+  "fasta_length_mismatch_count": 0,
+  "fasta_length_mismatch_examples": [],
+  "excluded_known_empty_count": 2,
+  "excluded_known_empty_examples": [
+    {
+      "id": "_from__to_-42_total_0",
+      "length": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "known_empty_orphan"
+    },
+    {
+      "id": "_from__to_-42_total_0",
+      "length": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "known_empty_orphan"
+    }
+  ],
+  "mapping_rows": 210618,
+  "mapping_coordinate_keys": 210612,
+  "mapping_duplicate_coordinate_count": 6,
+  "mapping_duplicate_coordinate_examples": [
+    {
+      "contig_id": "AE017286.1",
+      "start": 6,
+      "end": 202297,
+      "count": 2
+    },
+    {
+      "contig_id": "CP004122.1",
+      "start": 11,
+      "end": 136186,
+      "count": 2
+    },
+    {
+      "contig_id": "CP010256.1",
+      "start": 4106006,
+            "count": 2
+    },
+    {
+      "contig_id": "CP015405.1",
+      "start": 5127384,
+      "end": 5128743,
+      "count": 2
+    },
+    {
+      "contig_id": "CP017403.1",
+      "start": 22,
+      "end": 4140355,
+      "count": 2
+    },
+    {
+      "contig_id": "HG917869.1",
+      "start": 696659,
+      "end": 699124,
+      "count": 2
+    }
+  ],
+  "mapping_conflicting_coordinate_count": 0,
+  "mapping_conflicting_coordinate_examples": [],
+  "mapping_keys_missing_fasta_count": 0,
+  "mapping_keys_missing_fasta_examples": [],
+  "mapping_invalid_coordinate_count": 0,
+  "mapping_invalid_coordinate_examples": [],
+  "source_sha256": {
+    "fasta": "67aeeeb70e5ba0e1506bf95c79bb25b06869c0486e6c0ea111763c3b060c0baf",
+    "mapping": "4353f05be6a94c0c05be083088148eac01bcf34dc05c6a061709ff5fbd61d720"
+  }
+}
+HMP AUDIT EXIT CODE: 0; return hmp-join-audit-return.tar.gz and .sha256

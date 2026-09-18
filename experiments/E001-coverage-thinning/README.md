@@ -1,7 +1,7 @@
 # E001: Where Does Reduced Coverage Evidence Lose Recoverable Sequence?
 
 Date: 2026-09-17. Updated: 2026-09-18
-Execution status: mapping/AMBER isolated native smoke passed; GI files acquired, alias-aware coordinate conversion pending; remaining native validation and scientific execution pending
+Execution status: mapping/AMBER isolated native smoke passed; GI files acquired, coordinate conversion blocked on 20 FASTA-only truth-join records; remaining native validation and scientific execution pending
 Scientific outcome: not assessed
 Protocol: prospective v2; [config.json](config.json) owns numerical settings; scientific launch not authorized
 Questions: [Q001](../../docs/research/questions.md#q001), [Q003](../../docs/research/questions.md#q003), [Q004](../../docs/research/questions.md#q004); hypothesis [H001](../../docs/research/questions.md#h001)

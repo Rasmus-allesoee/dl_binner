@@ -245,6 +245,8 @@ Use version control actively throughout the project so that the evolution of the
 - Do commit small reproducibility-critical configuration, metadata, summaries, and research artifacts when they belong in version control.
 - Do not rewrite or destroy useful shared history unless there is a clear reason and the user explicitly agrees where appropriate.
 
+Project commit subjects use a lowercase purpose prefix matching the repository's existing convention, such as `fix:`, `research:`, `ops:`, `docs:`, or `test:`. Do not create new unprefixed project commits.
+
 ### Branches and experimental work
 
 Use branches when they genuinely help isolate substantial, risky, or exploratory work.
