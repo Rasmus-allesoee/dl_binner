@@ -36,8 +36,8 @@
     "initial_scientific_vcpus": 16,
     "initial_scientific_ram_gb": 48,
     "max_fit_core_hours": 80,
-    "working_storage_ceiling_gb": 200,
-    "owner_storage_gb": 250,
+    "working_storage_review_gb": 200,
+    "owner_initial_storage_gb": 250,
     "max_contigs": 250000,
     "max_input_bp": 4000000000
   }

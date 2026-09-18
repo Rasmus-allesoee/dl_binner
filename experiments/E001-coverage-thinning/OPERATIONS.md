@@ -22,17 +22,77 @@ The first two commands are needed only for a new local environment. Native tests
 
 ## Gate 0: Owner-run Linux smoke
 
-Start with **8 vCPU, 24 GB RAM, no GPU**, on an x86-64 Linux UCloud application with micromamba, Git, GNU `time` and `timeout`. Confirm the application and persistent work-directory path with Codex before running. Do not leave the allocated machine idle: charged core-hours are allocated vCPUs multiplied by elapsed hours, including setup, downloads and idle time. The initial preflight allowance is 32 core-hours, not an instruction to consume it.
+Owner-confirmed setup: **Terminal / Ubuntu / Aug2026**, DeIC Interactive HPC (SDU/K8s), CPU only, persistent root **`/work/Home/dl_binner/e001/e001-gate0`**, access expiry unknown. No owner-side execution has occurred. Keep environments at `$WORK/envs/mapping`, `$WORK/envs/amber`, etc. Package caches live at `$WORK/micromamba` and `$WORK/cache/pip`; they are not shared environments.
 
-Transfer the committed project code, tests, E001 files and `docs/evidence/2026-09-17-tool-snapshots.json`; keep its source commit and transfer checksum. No paper/thesis/tool-cache upload or public GitHub repository is needed. Codex will prepare the transfer command once the destination is known. Use new external directories, not `agent_context/tools_repo`. The examples below assume `CODE` is that code directory and `WORK` a new persistent directory; neither is a literal UCloud path.
+Start with **8 vCPU, at least 24 GB RAM, one node, no GPU, a two-hour job limit**, named `e001-gate0-preflight`. Select the CPU product available to the owner's allocation; the public [product catalog](https://docs.cloud.sdu.dk/guide/resources-products.html) currently calls the Zen5 family `cpu-amd-zen5`, but the actual selectable label/RAM must be confirmed in the UI. If 8 vCPU provides more than 24 GB, keep that allocation; do not increase CPU merely to match an old label. If no suitable option is available, return a screenshot before submitting. The owner-reported CPU model differs from the current public catalog; record the actual allocation rather than silently overwriting either source.
+
+Two hours reserves at most **16 allocated core-hours** at 8 vCPU, within the 32-core-hour total preflight allowance. This is an initial timebox, not a measured installation estimate. Setup can be network/solver-bound; return failures instead of extending or retrying automatically. Stop the job when finished or stepping away: setup, downloads and idle allocation all consume budget. Select Bash, attach **Home** in Storage so it mounts at `/work/Home`, and leave initialization scripts, public links, SSH and multi-node options unused. Official [job submission documentation](https://docs.cloud.sdu.dk/guide/submitting.html) describes the controls and persistent `/work` volumes; consulted 2026-09-18. App version availability and bundled prerequisites have not been verified inside the owner's job.
+
+### First checkpoint: transfer and prerequisites
+
+Locally, Codex commits reviewed changes, then runs:
+
+```sh
+python3 scripts/e001_bundle.py --out artifacts/e001-transfer
+```
+
+This reads an allowlist from the clean Git HEAD and creates `e001-code-<12-character-commit>.tar.gz` plus `.tar.gz.sha256`. It includes runtime scripts, tests, the E001 protocol/configuration and tool-source snapshot, with the full commit in `SOURCE_COMMIT`. It excludes Git history, thesis/papers/tool caches, local environments, raw data and results. It is an execution package, not a complete documentation checkout. It downloads nothing, takes seconds and refuses existing output names or a dirty checkout. Artifacts are ignored locally. Verify archive contents and portable tests from an extracted copy before handoff.
+
+**Before starting the paid job**, use UCloud Files to create/open `Home/dl_binner/e001/e001-gate0/transfer` and upload the two files. This transfers our small code package only, not software environments or research data. Use the [file upload interface](https://docs.cloud.sdu.dk/guide/file-management.html); neither a GitHub remote nor SSH setup is required. Do not use the interface's Uncompress action yet. Then start the job as specified above.
+
+Codex supplies the literal checksum filename in chat. Run only this initial read-only probe, replacing that filename with the supplied one:
+
+```sh
+bash <<'SH'
+set -eu
+cd /work/Home/dl_binner/e001/e001-gate0/transfer
+pwd
+uname -sm
+cat /etc/os-release
+df -h .
+for cmd in bash git micromamba python3 tar sha256sum timeout curl bzip2; do
+    command -v "$cmd" || printf 'MISSING: %s\n' "$cmd"
+done
+if test -x /usr/bin/time; then /usr/bin/time --version; else printf 'MISSING: GNU time\n'; fi
+sha256sum --check e001-code-<commit>.tar.gz.sha256
+SH
+```
+
+This reads the mounted directory, OS, program availability and uploaded archive; it creates no experiment files, installs/downloads nothing, and should take seconds with negligible RAM/CPU. Shell/session history may be recorded by Terminal itself. Return **all output**, the UI's selected machine name/vCPU/RAM, and job start time. A missing command is a finding, not permission to install ad hoc. A missing path, checksum failure, unexpected architecture or other error means stop. Even if everything passes, stop here for inspection. No code extraction, installs, smoke or inventory yet. `df` reports filesystem capacity, not necessarily the owner's quota; UI allocation is authoritative for vCPU/RAM.
+
+### Later checkpoints: extraction and prerequisites
+
+After inspection, Codex supplies the literal commit in these commands. They extract only the verified package, preserve the upload, and refuse an existing code directory:
+
+```sh
+export WORK=/work/Home/dl_binner/e001/e001-gate0
+export CODE="$WORK/e001-code-<commit>"
+test ! -e "$CODE" && tar -xzf "$WORK/transfer/e001-code-<commit>.tar.gz" -C "$WORK"
+cat "$CODE/SOURCE_COMMIT"
+```
+
+Expected work: seconds, less than a few MB written, no downloads; return the commit or any error and do not continue after failure. Before setup, verify Git, micromamba, GNU time and timeout. If missing, prepare an explicit reviewed bootstrap from the observed Ubuntu version: persistent micromamba binary under `$WORK/bin`, caches under `$WORK/micromamba`, tool environments still under `$WORK/envs`. Do not assume micromamba is bundled or run a remote installer blindly. System packages, if needed, modify the disposable container, not the persistent project. Bootstrap commands and software download sizes are deferred until the probe identifies what is actually missing.
+
+### Later checkpoints: mapping, then AMBER
+
+Issue each command separately in chat after explaining its row below; inspect returned output before the next command. Variables must be restored after opening a new terminal. Do not paste this entire block as an unattended sequence.
 
 ```sh
 cd "$CODE"
-bash scripts/e001_linux_setup.sh mapping "$WORK"
+timeout --signal=TERM --kill-after=60s 45m bash scripts/e001_linux_setup.sh mapping "$WORK"
 bash scripts/e001_linux_smoke.sh mapping "$WORK"
-bash scripts/e001_linux_setup.sh amber "$WORK"
+timeout --signal=TERM --kill-after=60s 45m bash scripts/e001_linux_setup.sh amber "$WORK"
 bash scripts/e001_linux_smoke.sh amber "$WORK"
 ```
+
+| Command | Purpose and writes | Downloads/resources | Return and stop condition |
+| --- | --- | --- | --- |
+| Mapping setup | Install pinned strobealign/samtools and fixture dependencies in `envs/mapping`; create `locks/mapping`, caches and empty `sources` directory. Setup stdout/stderr, exit code and elapsed seconds are retained under the lock directory. | Software only. Allow minutes to tens of minutes and several GB disk headroom across both environments; unmeasured Linux solve, 45-minute command cap (6 allocated core-hours at 8 vCPU). | Full terminal output and locks. Stop on any error/timeout, absent completion line, failed pip check or nonzero setup status. Do not delete partial environments. |
+| Mapping smoke | Generate tiny synthetic FASTA/reads/BAMs in `fixture`; align and thin them; write `smoke/mapping*`. No research data. | No intended downloads. Threads bounded by the harness; should be minutes, not a benchmark. 30-minute smoke cap (4 allocated core-hours); actual usage saved. | `mapping.stdout`, `.stderr`, `.resources.txt`, `.exit-code.txt`, `mapping/smoke.json` if produced. Stop on any failure; return partial files too. |
+| AMBER setup | Clone pinned evaluator to `sources/AMBER_evaluation`, install in `envs/amber`, retain `locks/amber` and caches. | Software/source only, including pip dependencies; 45-minute cap. No reference genomes, GI data or models. | Full output and locks, same failure rules as mapping setup. |
+| AMBER smoke | Exercise actual evaluator on small synthetic truth/binning tables; write `smoke/amber*`. No scientific binning. | No intended downloads; small CPU/RAM workload, 30-minute cap. | AMBER stdout/stderr, resource/status files and `amber/smoke.json`; stop for inspection even on success. |
+
+Per-command timeouts are failure bounds, not additive permission to exceed the two-hour job or 32-core-hour preflight budget. Do not start a stage when the job is about to expire. A killed job may lack the final status file; that means incomplete, not success. Return logs before retrying or extending. Setup logs use `tee`; native smoke stdout is saved to files and a successful run can be quiet at the terminal.
 
 **Return these first.** Inspect failures before proceeding. This checks alignment output, BAM headers/flags/NM tags, template-preserving samtools thinning, and pinned AMBER unique/multi-origin semantics and strict thresholds. It does not estimate research-scale model training cost.
 
@@ -76,7 +136,7 @@ The ten selected GI archives total roughly **94 GB compressed** according to the
 
 Before reads, inspect one archive's inventory to establish its actual interleaved FASTQ/member layout, needed metadata and checksum contract. Prepare a sequential download/extract/map plan: at most one sample archive, one extracted library and one sort workspace at a time; preserve checksums and record any regenerable deletion with owner agreement. Do not download simulator source-genome BAMs as coverage input. C0 BAMs and retained feature/model outputs still accumulate.
 
-250 GB is enough for the inventory but **not yet established sufficient for E001**. Plan at most 200 GB working occupancy, retaining headroom for environments and filesystem overhead. A 0.5-1 TB quota would simplify later retention, but no increase is required now. Estimate peak storage from one sample and all retained outputs before bulk work; pause if it exceeds the configured limit.
+250 GB is enough for the inventory but **not yet established sufficient for E001**. The owner's execution brief clarifies that storage can expand and is not a current scientific design constraint. The former 200-GB ceiling is now a provisioning review threshold, not a cap: estimate peak storage from one sample and retained outputs and arrange more space when needed. Do not reduce samples, replicates or retention merely to fit the conservative estimate. Still verify sufficient actual free space before writes; an expandable quota is not automatically already allocated.
 
 The experiment ceiling is **800 of the available 2,100 allocated core-hours**, including the 32-core-hour preflight and 200-core-hour preprocessing ceilings; these are nested limits, not additive allowances. Preserve at least 1,300 core-hours for later work. Initially plan 16 vCPU/48 GB for scientific jobs, only after measurement. A learned fit must be projected below 80 core-hours and the complete schedule below the total ceiling. Twelve fits at that per-fit ceiling would already exceed the experiment budget: passing each individual ceiling is not sufficient. Use actual throughput and retained population size to decide whether COMEBin fits; do not shorten native training, drop replicates or silently replace it. If it does not fit, amend the question and decision rules before scientific scores.
 

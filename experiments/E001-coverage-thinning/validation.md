@@ -15,6 +15,10 @@ Date: 2026-09-18. These are software checks, not E001 scientific attempts or bio
 
 ## Prepared but not executed
 
+### Transfer preparation, 2026-09-18
+
+The owner confirms no UCloud execution yet. The updated portable suite passes **59 tests**, including committed-file allowlisting, source-commit/checksum preservation, refusal to overwrite transfers, dirty-checkout rejection and symlink rejection. Shell syntax and documentation/context checks pass. Source validation now reports a contract error even outside a Git checkout, as expected for transferred code. Setup logging and persistent package-cache paths are prepared but not Linux-validated. The bundle contains no environments, source-paper/thesis caches or research data. Actual upload checksum, installed prerequisites and all native outcomes remain pending.
+
 | Native check | Current status and what it must establish |
 | --- | --- |
 | strobealign 0.17.0 / samtools 1.24 | Unexecuted. Actual SAM/BAM compatibility, primary flags, NM tags, sorting, mate-preserving thinning and executable identities. Portable tests exercise validators only; pysam's bundled HTSlib is not substituted for samtools 1.24. |

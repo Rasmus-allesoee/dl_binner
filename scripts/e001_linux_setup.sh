@@ -12,6 +12,9 @@ code=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 prefix="$root/envs/$tool"
 [[ ! -e "$prefix" && ! -e "$root/locks/$tool" ]] || { printf '%s\n' 'Environment/lock directory already exists; inspect before retrying' >&2; exit 2; }
 mkdir -p "$root/sources" "$root/locks/$tool"
+exec > >(tee "$root/locks/$tool/setup.stdout") 2> >(tee "$root/locks/$tool/setup.stderr" >&2)
+trap 'status=$?; printf "%s\n" "$status" > "$root/locks/$tool/setup.exit-code.txt"; printf "%s\n" "$SECONDS" > "$root/locks/$tool/setup.elapsed-seconds.txt"' EXIT
+export MAMBA_ROOT_PREFIX="$root/micromamba" PIP_CACHE_DIR="$root/cache/pip"
 export PYTHONDONTWRITEBYTECODE=1
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
 

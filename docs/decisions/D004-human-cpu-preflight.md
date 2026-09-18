@@ -25,6 +25,8 @@ The sequence-selection rule, read-thinning contrast, conservative endpoint, seed
 
 ## Revisit and stopping conditions
 
+Operational clarification, 2026-09-18: the owner can expand storage and explicitly rejects shrinking E001 to fit the initial conservative estimate. The former 200-GB working ceiling is now a provisioning review threshold (`working_storage_review_gb`); CPU and population ceilings remain unchanged. Preserve measured storage estimates and provision adequate space before execution. No dataset, replicate, training or endpoint change follows from this clarification.
+
 Unresolved truth/coordinate joins, unknown taxonomy, insufficient short-contig/genome support, native parity failures or projected budget overruns block scientific launch. Amend prospectively rather than choosing successful genomes, silently changing native defaults, or converting crashes to zero recovery. A narrower CPU-feasible diagnostic is acceptable, but requires explicitly revised claims and triage rules if COMEBin is removed.
 
-The next step is **owner-run mapping/AMBER synthetic smoke and GI assembly/truth inventory**, followed by returned-output inspection. No new model design is warranted yet. [E001](../../experiments/E001-coverage-thinning/README.md) and its [operations guide](../../experiments/E001-coverage-thinning/OPERATIONS.md) own execution details.
+The next step is **owner-run mapping/AMBER synthetic smoke**, followed by returned-output inspection before GI assembly/truth inventory. No new model design is warranted yet. [E001](../../experiments/E001-coverage-thinning/README.md) and its [operations guide](../../experiments/E001-coverage-thinning/OPERATIONS.md) own execution details.

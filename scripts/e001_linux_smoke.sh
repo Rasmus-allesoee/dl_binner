@@ -9,6 +9,7 @@ case "$tool" in mapping|amber|vamb|comebin|metabat) ;; *) exit 2 ;; esac
 code=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 [[ ! -e "$root/smoke/$tool" && ! -e "$root/smoke/$tool.stdout" ]] || { printf '%s\n' 'Smoke output exists; preserve it and inspect before retrying' >&2; exit 2; }
 mkdir -p "$root/smoke"
+export MAMBA_ROOT_PREFIX="$root/micromamba" PIP_CACHE_DIR="$root/cache/pip"
 export PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=11
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
 export E001_METABAT_PREFIX="$root/envs/metabat"

@@ -21,7 +21,9 @@ def verify_source(tool, source):
     snapshots = json.loads((ROOT / "docs/evidence/2026-09-17-tool-snapshots.json").read_text())
     expected = next(t["commit"] for t in snapshots["tools"] if t["name"] == tool)
     def git(*args):
-        return subprocess.check_output(["git", "-C", str(source), *args], text=True).strip()
+        result = subprocess.run(["git", "-C", str(source), *args], text=True, capture_output=True)
+        require(result.returncode == 0, f"Cannot verify {tool} Git source: {result.stderr.strip()}")
+        return result.stdout.strip()
     require(Path(git("rev-parse", "--show-toplevel")).resolve() == source, "Tool has no independent Git root")
     require(git("rev-parse", "HEAD") == expected, f"Wrong {tool} commit")
     require(not git("diff", "HEAD", "--"), f"Tracked {tool} source modifications")

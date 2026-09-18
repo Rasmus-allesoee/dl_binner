@@ -204,6 +204,8 @@ Do not use expensive resources for tasks that can be validated cheaply first.
 
 NOTE: you cannot work on the HPC. I have to control and run stuff in here. So whenever we use the HPC, you have to guide the user on what to do.
 
+For owner-run execution, give one actionable checkpoint at a time and inspect returned outputs before advancing. Explain each major command's purpose, files changed, software/data downloads, expected resource use, requested outputs, and stopping conditions in chat, not only in documentation. Keep per-tool environments inside the experiment's persistent work directory. Record actual setup and return-artifact status in the experiment guide and STATE; never infer execution from prepared commands. Storage estimates should inform provisioning, not silently change scientific design when the owner can expand storage.
+
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
 ---
