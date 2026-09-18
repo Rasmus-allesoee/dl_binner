@@ -22,7 +22,7 @@ The first two commands are needed only for a new local environment. Native tests
 
 ## Gate 0: Owner-run Linux smoke
 
-Owner-confirmed setup: **Terminal / Ubuntu / Aug2026**, DeIC Interactive HPC (SDU/K8s), CPU only, persistent root **`/work/Home/dl_binner/e001/e001-gate0`**, access expiry unknown. No owner-side execution has occurred. Keep environments at `$WORK/envs/mapping`, `$WORK/envs/amber`, etc. Package caches live at `$WORK/micromamba` and `$WORK/cache/pip`; they are not shared environments.
+Owner-confirmed setup: **Terminal / Ubuntu / Aug2026**, DeIC Interactive HPC (SDU/K8s), CPU only, persistent root **`/work/Home/dl_binner/e001/e001-gate0`**, access expiry unknown. The [initial owner probe](validation.md#owner-returned-initial-probe-2026-09-18) confirms the upload checksum, mount and Ubuntu 24.04.4 x86_64; micromamba and GNU time are missing. Actual job allocation is **4 vCPU/12 GB**, started 2026-09-18 at 15:29, with submitted duration not yet confirmed. Keep it for extraction/bootstrap; the 8/24 recommendation below is not a minimum for those steps. At 4 vCPU, each allocated hour costs 4 core-hours, including idle time. Confirm remaining job time before installation. Keep environments at `$WORK/envs/mapping`, `$WORK/envs/amber`, etc. Package caches live at `$WORK/micromamba` and `$WORK/cache/pip`; they are not shared environments.
 
 Start with **8 vCPU, at least 24 GB RAM, one node, no GPU, a two-hour job limit**, named `e001-gate0-preflight`. Select the CPU product available to the owner's allocation; the public [product catalog](https://docs.cloud.sdu.dk/guide/resources-products.html) currently calls the Zen5 family `cpu-amd-zen5`, but the actual selectable label/RAM must be confirmed in the UI. If 8 vCPU provides more than 24 GB, keep that allocation; do not increase CPU merely to match an old label. If no suitable option is available, return a screenshot before submitting. The owner-reported CPU model differs from the current public catalog; record the actual allocation rather than silently overwriting either source.
 
@@ -65,10 +65,21 @@ This reads the mounted directory, OS, program availability and uploaded archive;
 After inspection, Codex supplies the literal commit in these commands. They extract only the verified package, preserve the upload, and refuse an existing code directory:
 
 ```sh
-export WORK=/work/Home/dl_binner/e001/e001-gate0
-export CODE="$WORK/e001-code-<commit>"
-test ! -e "$CODE" && tar -xzf "$WORK/transfer/e001-code-<commit>.tar.gz" -C "$WORK"
+bash <<'SH'
+set -euo pipefail
+WORK=/work/Home/dl_binner/e001/e001-gate0
+CODE="$WORK/e001-code-9c2b0ec6feb3"
+cd "$WORK/transfer"
+sha256sum --check e001-code-9c2b0ec6feb3.tar.gz.sha256
+if test -e "$CODE" || test -L "$CODE"; then
+    printf 'STOP: code directory already exists; preserve it for inspection.\n' >&2
+    exit 1
+fi
+tar --keep-old-files -xzf e001-code-9c2b0ec6feb3.tar.gz -C "$WORK"
+test "$(cat "$CODE/SOURCE_COMMIT")" = 9c2b0ec6feb3b7884bbf7d519c63176d4fb10aea
+printf 'Code extraction verified: %s\n' "$CODE"
 cat "$CODE/SOURCE_COMMIT"
+SH
 ```
 
 Expected work: seconds, less than a few MB written, no downloads; return the commit or any error and do not continue after failure. Before setup, verify Git, micromamba, GNU time and timeout. If missing, prepare an explicit reviewed bootstrap from the observed Ubuntu version: persistent micromamba binary under `$WORK/bin`, caches under `$WORK/micromamba`, tool environments still under `$WORK/envs`. Do not assume micromamba is bundled or run a remote installer blindly. System packages, if needed, modify the disposable container, not the persistent project. Bootstrap commands and software download sizes are deferred until the probe identifies what is actually missing.

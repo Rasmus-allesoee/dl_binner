@@ -13,13 +13,25 @@ Date: 2026-09-18. These are software checks, not E001 scientific attempts or bio
 - `python3 scripts/check_docs.py --check-context` passed, including all 83 present source fingerprints. Ten optional missing ZIP-cache paths belong to the explicitly historical September 16 notes, not current baseline provenance.
 - Python AST parsing and `git diff --check` passed for the implementation. The separately committed owner brief retains its original trailing space; source briefs were preserved verbatim, not reformatted.
 
-## Prepared but not executed
-
 ### Transfer preparation, 2026-09-18
 
-The owner confirms no UCloud execution yet. The updated portable suite passes **59 tests**, including committed-file allowlisting, source-commit/checksum preservation, refusal to overwrite transfers, dirty-checkout rejection and symlink rejection. Shell syntax and documentation/context checks pass. Source validation now reports a contract error even outside a Git checkout, as expected for transferred code. Setup logging and persistent package-cache paths are prepared but not Linux-validated. The bundle contains no environments, source-paper/thesis caches or research data. Actual upload checksum, installed prerequisites and all native outcomes remain pending.
+At transfer preparation, no UCloud execution had occurred. The updated portable suite passes **59 tests**, including committed-file allowlisting, source-commit/checksum preservation, refusal to overwrite transfers, dirty-checkout rejection and symlink rejection. Shell syntax and documentation/context checks pass. Source validation now reports a contract error even outside a Git checkout, as expected for transferred code. Setup logging and persistent package-cache paths are prepared but not Linux-validated. The bundle contains no environments, source-paper/thesis caches or research data. The later owner-returned probe below updates transfer status; native outcomes remain pending.
 
 The actual transfer archive was built from committed source `9c2b0ec6feb3b7884bbf7d519c63176d4fb10aea` and inspected locally. All **59 tests also passed from its extracted copy outside Git**, using the existing macOS portable environment; this does not validate Linux dependency resolution. `shasum -a 256 -c` passed. Local ignored locator: `artifacts/e001-transfer/e001-code-9c2b0ec6feb3.tar.gz`, with adjacent `.tar.gz.sha256`; approximately 47 KiB. SHA-256: `be85a52dd47eaab8aa9b68f3f9aaa38541d43ed9b68695c26169f95e111a3c85`. Intended owner-side upload locator: `/work/Home/dl_binner/e001/e001-gate0/transfer/`. Upload has not been confirmed. The package intentionally predates this results-only record; its embedded `SOURCE_COMMIT` identifies the executable snapshot. The builder can regenerate equivalent code from that commit, but gzip timestamps mean a rebuilt archive must receive its own checksum.
+
+## Owner-returned initial probe, 2026-09-18
+
+Source: output supplied by the owner in chat, inspected here; not direct HPC access. Job identifier `j-12396047-job-0`, start 15:29 on 2026-09-18 (owner-reported local time; timezone not independently verified). Owner reports **4 vCPU / 12 GB RAM**. Actual submitted duration/end time has not been supplied. The original 8-vCPU/24-GB recommendation was conservative, not a scientific requirement; retain the smaller allocation for extraction and prerequisite bootstrap. Native smoke feasibility remains unmeasured.
+
+- Working directory `/work/Home/dl_binner/e001/e001-gate0/transfer`; mounted filesystem `/work/Home`.
+- Ubuntu 24.04.4 LTS, Linux x86_64. Bash, Git, Python 3, tar, sha256sum, timeout, curl and bzip2 are present at `/usr/bin/` paths. **micromamba and `/usr/bin/time` are missing**. Presence alone does not validate program versions.
+- Owner's `sha256sum --check` reports `e001-code-9c2b0ec6feb3.tar.gz: OK`. This supersedes the pending upload status at package preparation. Code extraction and all installations remain unconfirmed.
+- Startup banner reports AMD EPYC 9535, 256 visible CPUs, roughly 755 GiB host RAM and 13-day uptime. These are not the owner's 4-vCPU/12-GB allocation or elapsed job time. `df` reports shared filesystem capacity (7.2P total, 2.1P available), not personal quota. The ASPEED graphics listing does not establish an allocated ML accelerator; the job remains CPU-only.
+- SSH/ttyd startup messages contain no reported failure and do not require SSH configuration for this browser-terminal workflow.
+
+Next checkpoint: extract only the verified committed bundle into a new code directory, verify `SOURCE_COMMIT`, and return output. Then prepare micromamba under the experiment root and GNU time in the disposable Ubuntu container, with explicit software provenance and installation logs. No research data download, tool-environment installation or smoke result is inferred from this probe.
+
+## Native checks still pending
 
 | Native check | Current status and what it must establish |
 | --- | --- |
