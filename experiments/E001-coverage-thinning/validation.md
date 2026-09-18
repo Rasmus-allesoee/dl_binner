@@ -55,6 +55,12 @@ Review-driver preparation: 63 portable tests passed, including external-distribu
 
 ## Native check status
 
+### GI download succeeded; coordinate collision found
+
+The new owner [terminal output](../../agent_context/e001_gi_inventory_terminal_output.txt) and checksum-verified return replace the earlier same-named local return; the earlier failure remains preserved in Git and UCloud's `failed-inventory-missing-time/`. Recovery installed GNU time, prerequisites passed, and all six manifest-listed files downloaded: GSA 972,133,785 bytes; corrected mapping 12,597,447; original mapping 25,194,106; setup archive 1,906,532,721; README 741; checksum manifest 709,793. The setup member list includes `metadata.tsv`, `genome_to_id.tsv`, per-sample taxonomic profiles and `config.ini`; no extraction is authorized yet.
+
+Conversion failed with `Duplicate truth row` while reading mapping rows, before output-directory creation. Independent read-only inspection of the publisher's corrected mapping (MD5 verified as `954106872f9af342c0b7fd4422d8db9f`) finds 210,618 rows and six duplicated (contig_id,start_position,end_position,genome_id) groups; all six contain differing rows, including differing anonymous IDs. Example: PC21351 and PC21352 both describe HG917869.1:696659-699124 in OTU_97.20215.0. This violates our assumed one-coordinate/one-anonymous-ID join, rather than showing corrupt downloads. Do not drop truth rows blindly. A targeted scan of the already downloaded FASTA is required to count corresponding records and compare sequence hashes before choosing a correction. No biological result or scientific approval follows.
+
 ### GI inventory attempt failed before acquisition
 
 Owner return verified: [archive](../../agent_context/gi-inventory-return.tar.gz), [checksum](../../agent_context/gi-inventory-return.tar.gz.sha256), SHA-256 `05287ad75941a1120034c78c9834b264fb4e158cf8d8136b7bf6946ffc8af80e`. Safe archive members and the executed driver match the prepared inventory wrapper. At 2026-09-18 19:37:08 UTC the prerequisites command failed with exit 127 because `/usr/bin/time` was absent. The timing wrapper could not launch Python; acquisition and conversion never ran. This is an infrastructure failure, not a dataset or scientific result. A container restart/replacement would explain loss of the system package, but that event is not confirmed by the return.
