@@ -55,13 +55,27 @@ Review-driver preparation: 63 portable tests passed, including external-distribu
 
 ## Native check status
 
+### Environment review resolved, 2026-09-18
+
+The owner-returned [review archive](../../agent_context/environment-review-return.tar.gz) verifies against its [checksum](../../agent_context/environment-review-return.tar.gz.sha256): `b00b14cc6665b6ff7a6c12fb8a0a284596ff75bebc5a4f923864fec64e7a6819`. All 71 members passed path/type/duplicate checks; the executed review script matches the locally prepared source. All ten recorded commands, pip checks, both native smoke reports and final status pass.
+
+Confirmed cause: the four EasyBuild distributions came from `/home/ucloud/.local/lib/python3.12/site-packages` with `site.ENABLE_USER_SITE=true`; PYTHONPATH and PYTHONHOME were unset even in the observed processes. With clean-process controls, user-site is disabled, all discovered distributions are inside the intended environment prefix, and NumPy/Biopython/pysam (plus pandas for AMBER) resolve inside that prefix. Required module origins were already correct in the first run. No installation changes were needed.
+
+The isolated mapping report preserves 1,870 records, correct-reference fraction 1.0, and exactly the same retained-template counts/pair-consistency results. AMBER's checks match the first return. The mapping BAM byte hash differs between output locations; no byte-identical-output claim is made. Command timings for the clean smoke reruns were approximately 0.52 and 1.67 seconds, not research-scale benchmarks.
+
+Structured conda metadata now contains 52 mapping and 27 AMBER package records, all with URLs and at least one package checksum. This repairs provenance missing from the first text exports, but does not establish tested environment reconstruction or hashed pip wheel locks. Those remain runtime-freeze work before science, not blockers for bounded GI inventory.
+
+**Disposition:** the isolation concern is resolved for these checked imports/distributions. Proceed to GI assembly/truth/setup acquisition and initial coordinate inventory, with process-local Python isolation retained. Other binner smoke, taxonomy resolution, CPU feasibility and scientific launch remain gated. The new inventory driver wraps the unchanged transferred snapshot and returns summaries only; no GI acquisition has run yet.
+
+Local preparation checks: 64 portable tests passed, including refusal to overwrite an existing inventory before starting work; shell syntax and documentation checks passed. Maintained setup/smoke scripts now apply the observed isolation fix for future transfers. Existing UCloud code stays untouched, and the new inventory wrapper supplies the same controls around the old snapshot. The inventory download/conversion itself remains unexecuted here.
+
 | Native check | Current status and what it must establish |
 | --- | --- |
-| strobealign 0.17.0 / samtools 1.24 | Synthetic native checks passed in the returned job. Environment-isolation rerun pending; real-read mapping remains untested. |
-| Pinned AMBER | Native fixture checks passed, including intended unique/multi-origin and threshold semantics. Environment-isolation rerun pending; no scientific dataset evaluated. |
+| strobealign 0.17.0 / samtools 1.24 | Synthetic native checks and isolation rerun passed. Real-read mapping remains untested. |
+| Pinned AMBER | Native fixtures and isolation rerun passed, including intended unique/multi-origin and threshold semantics. No scientific dataset evaluated. |
 | Pinned VAMB | Unexecuted. Actual BAM/TNF extraction, native scale invariance including total abundance, zero-row/zero-column behavior and CPU forward pass under its specified dependencies. |
 | Pinned COMEBin | Unexecuted. Fixed augmentation identity, full native six-view coverage recomputation, measured variance, pseudocount-aware scaling and CPU forward pass. |
 | Pinned MetaBAT2 | Unexecuted. Source-built executable, native mean/variance extraction and assignment format, including genuine empty output versus command failure. |
-| Linux environment recipes | Mapping/AMBER recipes installed successfully; inventories inspected with external-package visibility/replayability caveats above. Other tool recipes remain unresolved. |
+| Linux environment recipes | Mapping/AMBER installed and process isolation verified; structured provenance captured. Reconstructable locks and other tool recipes remain pending. |
 
 Full native training/clustering, marker payload verification, CPU throughput projection, real-read prefix mapping comparison, full data/truth/taxonomy joins and research launch remain later gates. The smoke job is deliberately not a surrogate benchmark. A failure is retained and investigated; no older PyTorch/tool substitution is allowed under the original pin.

@@ -16,6 +16,8 @@ exec > >(tee "$root/locks/$tool/setup.stdout") 2> >(tee "$root/locks/$tool/setup
 trap 'status=$?; printf "%s\n" "$status" > "$root/locks/$tool/setup.exit-code.txt"; printf "%s\n" "$SECONDS" > "$root/locks/$tool/setup.elapsed-seconds.txt"' EXIT
 export MAMBA_ROOT_PREFIX="$root/micromamba" PIP_CACHE_DIR="$root/cache/pip"
 export PYTHONDONTWRITEBYTECODE=1
+unset PYTHONPATH PYTHONHOME PYTHONUSERBASE
+export PYTHONNOUSERSITE=1 PIP_DISABLE_PIP_VERSION_CHECK=1
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
 
 create_env() {

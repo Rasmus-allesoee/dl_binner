@@ -13,6 +13,7 @@ PATHS = (
     "scripts/e001_linux_setup.sh", "scripts/e001_linux_smoke.sh",
     "scripts/e001_ucloud_preflight.sh",
     "scripts/e001_environment_review.py",
+    "scripts/e001_gi_inventory.sh",
     "tests", "experiments/E001-coverage-thinning",
     "docs/evidence/2026-09-17-tool-snapshots.json",
 )

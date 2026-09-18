@@ -11,6 +11,8 @@ code=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 mkdir -p "$root/smoke"
 export MAMBA_ROOT_PREFIX="$root/micromamba" PIP_CACHE_DIR="$root/cache/pip"
 export PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=11
+unset PYTHONPATH PYTHONHOME PYTHONUSERBASE
+export PYTHONNOUSERSITE=1 PIP_DISABLE_PIP_VERSION_CHECK=1
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
 export E001_METABAT_PREFIX="$root/envs/metabat"
 if [[ "$tool" == mapping ]]; then
