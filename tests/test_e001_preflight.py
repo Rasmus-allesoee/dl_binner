@@ -71,6 +71,8 @@ class PreflightDriverTests(unittest.TestCase):
             (stage / "stderr.txt").write_text("E001 check failed: Invalid DNA: orphan\n")
             (root / "conversion-alias-return.tar.gz").write_bytes(b"return")
             (root / "conversion-alias-return.tar.gz.sha256").write_text("fixture\n")
+            (root / "input-preflight-v2").mkdir()
+            (root / "input-preflight-v2/canonical.fna").write_text("partial\n")
             mocks = root / "mock-bin"
             mocks.mkdir()
             sha = mocks / "sha256sum"
@@ -86,6 +88,7 @@ class PreflightDriverTests(unittest.TestCase):
             saved = root / "failed-conversion-malformed-fasta"
             self.assertEqual((saved / "conversion-alias-return.tar.gz").read_bytes(), b"return")
             self.assertTrue((saved / "conversion-alias-stage").exists())
+            self.assertTrue((saved / "input-preflight-v2/canonical.fna").exists())
             self.assertTrue((root / "conversion-alias-stage").exists())
 
     def test_download_failure_is_packaged_and_stops_before_install(self):
