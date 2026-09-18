@@ -14,6 +14,7 @@ from Bio.Seq import Seq
 
 ROOT = Path(__file__).resolve().parents[2]
 EXPERIMENT = ROOT / "experiments/E001-coverage-thinning"
+KNOWN_EMPTY_ORPHAN_IDS = {"*from__to*-42_total_0"}
 
 
 class ContractError(ValueError):
@@ -58,15 +59,21 @@ def open_text(path):
     return gzip.open(path, "rt") if path.suffix == ".gz" else path.open()
 
 
-def sequences(path):
+def sequences(path, skip_known_empty=False, excluded=None):
     seen = set()
     with open_text(path) as handle:
         require(handle.read(1) == ">", f"Not a FASTA file: {path}")
         handle.seek(0)
         for record in SeqIO.parse(handle, "fasta"):
+            seq = str(record.seq)
+            if skip_known_empty and record.id in KNOWN_EMPTY_ORPHAN_IDS and not seq:
+                if excluded is not None:
+                    excluded.append({"id": record.id, "length": 0,
+                                     "sha256": hashlib.sha256(b"").hexdigest(),
+                                     "reason": "known_empty_orphan"})
+                continue
             require(record.id and record.id not in seen, f"Duplicate/empty FASTA ID: {record.id}")
             seen.add(record.id)
-            seq = str(record.seq)
             require(seq and set(seq.upper()) <= set("ACGTRYSWKMBDHVN"), f"Invalid DNA: {record.id}")
             yield record.id, seq
     require(seen, "Empty FASTA")
@@ -198,10 +205,10 @@ def prepare_hmp(fasta, mapping, out, nodes=None):
     taxids = [r["tax_id"] for rows in mapping_rows.values() for r in rows]
     domains = domains_from_nodes(taxids, nodes) if nodes else {}
     out.mkdir(parents=True)
-    records, lengths, origins, seq_groups, seen = [], {}, {}, defaultdict(list), set()
+    records, lengths, origins, seq_groups, seen, excluded_fasta = [], {}, {}, defaultdict(list), set(), []
     # A failed conversion leaves no complete inventory marker; retain it for diagnosis.
     with (out / "canonical.fna").open("x") as handle:
-        for original, sequence in sequences(fasta):
+        for original, sequence in sequences(fasta, skip_known_empty=True, excluded=excluded_fasta):
             match = re.fullmatch(r"(.+)_from_([0-9]+)_to_([0-9]+)_total_([0-9]+)", original)
             require(match is not None, f"Unexpected HMP FASTA header: {original}")
             accession, start, end, declared = match.groups()
@@ -261,11 +268,14 @@ def prepare_hmp(fasta, mapping, out, nodes=None):
     with (out / "contigs.jsonl").open("x") as handle:
         for record in records:
             handle.write(json.dumps(record, sort_keys=True) + "\n")
+    if excluded_fasta:
+        write_json(out / "excluded-fasta.json", excluded_fasta)
     write_cami(out / "truth.tsv", lengths, origins=origins)
     population = {"lengths": lengths, "unique_origins": unique, "genomes": genomes,
                   "probe_pool": sorted(eligible), "probe_queries": queries, "gates": gates}
     write_json(out / "population.json", population)
     report = {"status": "validated" if all(gates.values()) else "blocked", "gates": gates,
+              "excluded_fasta_records": excluded_fasta,
               "coordinate_aliases": [{"canonical_id": r["id"], "source_ids": r["source_anonymous_ids"],
                                       "original_id": r["original_id"], "length": r["length"],
                                       "retained": r["retained"], "sha256": r["sha256"]}

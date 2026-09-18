@@ -220,6 +220,21 @@ class HMPTests(Files):
         self.assertFalse(report["coordinate_aliases"][0]["retained"])
         self.assertEqual(report["retained_bp"], 2600)
 
+    def test_known_empty_orphans_are_recorded_and_skipped(self):
+        fasta, mapping, nodes = self.setup_hmp()
+        fasta.write_text(fasta.read_text() + ">*from__to*-42_total_0\n\n>*from__to*-42_total_0\n\n")
+        report = prepare_hmp(fasta, mapping, self.root / "out", nodes)
+        self.assertEqual(len(report["excluded_fasta_records"]), 2)
+        self.assertEqual(report["excluded_fasta_records"][0]["reason"], "known_empty_orphan")
+        self.assertEqual(len(list(sequences(self.root / "out/canonical.fna"))), 2)
+        self.assertEqual(json.loads((self.root / "out/excluded-fasta.json").read_text()), report["excluded_fasta_records"])
+
+    def test_known_orphan_with_sequence_is_rejected(self):
+        fasta, mapping, nodes = self.setup_hmp()
+        fasta.write_text(fasta.read_text() + ">*from__to*-42_total_0\nACGT\n")
+        with self.assertRaises(ContractError):
+            prepare_hmp(fasta, mapping, self.root / "out", nodes)
+
     def test_unresolved_domain_blocks_freeze(self):
         fasta, mapping, _ = self.setup_hmp()
         result = prepare_hmp(fasta, mapping, self.root / "out")
