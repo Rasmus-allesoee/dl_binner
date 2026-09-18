@@ -4,6 +4,21 @@ set -euo pipefail
 root=${1:?Provide the absolute experiment work root}
 case "$root" in /*) ;; *) exit 2 ;; esac
 code=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
+if [[ ${2:-} == --retry-known-failure ]]; then
+    for name in failed-conversion-malformed-fasta input-preflight-v2; do
+        [[ ! -e "$root/$name" && ! -L "$root/$name" ]] || { echo "STOP: existing $name" >&2; exit 2; }
+    done
+    [[ -f "$root/conversion-alias-stage/exit-code.txt" ]] && [[ $(cat "$root/conversion-alias-stage/exit-code.txt") == 1 ]]
+    [[ -f "$root/conversion-alias-stage/stderr.txt" ]] && grep -Fq 'Invalid DNA' "$root/conversion-alias-stage/stderr.txt"
+    [[ -f "$root/conversion-alias-return.tar.gz" && -f "$root/conversion-alias-return.tar.gz.sha256" ]]
+    (cd "$root" && sha256sum --check conversion-alias-return.tar.gz.sha256)
+    mkdir "$root/failed-conversion-malformed-fasta"
+    mv "$root/conversion-alias-stage" "$root/conversion-alias-return.tar.gz" "$root/conversion-alias-return.tar.gz.sha256" "$root/failed-conversion-malformed-fasta/"
+    echo 'Preserved the failed malformed-FASTA attempt in failed-conversion-malformed-fasta/'
+elif [[ -n ${2:-} ]]; then
+    echo 'Unknown option' >&2
+    exit 2
+fi
 for name in conversion-alias-stage input-preflight-v2 conversion-alias-return.tar.gz conversion-alias-return.tar.gz.sha256; do
     [[ ! -e "$root/$name" && ! -L "$root/$name" ]] || { echo "STOP: existing $name" >&2; exit 2; }
 done

@@ -62,6 +62,32 @@ class PreflightDriverTests(unittest.TestCase):
             self.assertEqual((saved / "inventory-stage/exit-code.txt").read_text(), "127\n")
             self.assertFalse((root / "inventory").exists())
 
+    def test_conversion_recovery_preserves_known_failure(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            stage = root / "conversion-alias-stage"
+            stage.mkdir()
+            (stage / "exit-code.txt").write_text("1\n")
+            (stage / "stderr.txt").write_text("E001 check failed: Invalid DNA: orphan\n")
+            (root / "conversion-alias-return.tar.gz").write_bytes(b"return")
+            (root / "conversion-alias-return.tar.gz.sha256").write_text("fixture\n")
+            mocks = root / "mock-bin"
+            mocks.mkdir()
+            sha = mocks / "sha256sum"
+            sha.write_text("#!/bin/sh\nexit 0\n")
+            sha.chmod(0o755)
+            code = root / "code"
+            (code / "scripts").mkdir(parents=True)
+            (code / "SOURCE_COMMIT").write_text("x\n")
+            driver = Path(__file__).resolve().parents[1] / "scripts/e001_retry_conversion.sh"
+            result = subprocess.run(["bash", str(driver), str(root), "--retry-known-failure"], capture_output=True, text=True,
+                                    env={**os.environ, "PATH": str(mocks) + os.pathsep + os.environ["PATH"]})
+            self.assertNotEqual(result.returncode, 0)
+            saved = root / "failed-conversion-malformed-fasta"
+            self.assertEqual((saved / "conversion-alias-return.tar.gz").read_bytes(), b"return")
+            self.assertTrue((saved / "conversion-alias-stage").exists())
+            self.assertTrue((root / "conversion-alias-stage").exists())
+
     def test_download_failure_is_packaged_and_stops_before_install(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
