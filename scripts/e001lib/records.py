@@ -181,10 +181,20 @@ def prepare_hmp(fasta, mapping, out, nodes=None):
         require(re.fullmatch(r"PC[0-9]+", seq_id), f"Non-anonymous HMP ID: {seq_id}")
         require(seq_id not in id_keys or id_keys[seq_id] == key, f"Conflicting mapping for {seq_id}; is this the unfixed table?")
         require(key[1] >= 1 and key[2] >= key[1], "Invalid one-based inclusive coordinates")
-        require(not any(r["genome_id"] == row["genome_id"] for r in mapping_rows[key]), "Duplicate truth row")
-        require(not mapping_rows[key] or mapping_rows[key][0]["anonymous_contig_id"] == seq_id, "Coordinate maps to multiple anonymous IDs")
         mapping_rows[key].append(row)
         id_keys[seq_id] = key
+    aliases = {}
+    for key, rows in mapping_rows.items():
+        ids = sorted({r["anonymous_contig_id"] for r in rows}, key=lambda value: (int(value[2:]), value))
+        if len(ids) > 1:
+            # Publisher aliases are accepted only when every other source field agrees.
+            metadata = [{k: v for k, v in r.items() if k != "anonymous_contig_id"} for r in rows]
+            require(len(ids) == len(rows) and all(m == metadata[0] for m in metadata),
+                    f"Conflicting coordinate aliases: {key}")
+            aliases[key] = ids
+            mapping_rows[key] = [next(r for r in rows if r["anonymous_contig_id"] == ids[0])]
+        else:
+            require(len({r["genome_id"] for r in rows}) == len(rows), "Duplicate truth row")
     taxids = [r["tax_id"] for rows in mapping_rows.values() for r in rows]
     domains = domains_from_nodes(taxids, nodes) if nodes else {}
     out.mkdir(parents=True)
@@ -208,6 +218,7 @@ def prepare_hmp(fasta, mapping, out, nodes=None):
             canonical_hash = hashlib.sha256(min(upper, str(Seq(upper).reverse_complement())).encode("ascii")).hexdigest()
             retained = len(sequence) >= cfg["min_contig_bp"]
             record = {"id": seq_id, "original_id": original, "length": len(sequence), "sha256": seqhash,
+                      "source_anonymous_ids": aliases.get(key, [seq_id]),
                       "strand_invariant_sha256": canonical_hash, "origins": genomes, "domains": domain_values,
                       "taxids": sorted({r["tax_id"] for r in rows}), "retained": retained, "reasons": []}
             if retained:
@@ -255,6 +266,10 @@ def prepare_hmp(fasta, mapping, out, nodes=None):
                   "probe_pool": sorted(eligible), "probe_queries": queries, "gates": gates}
     write_json(out / "population.json", population)
     report = {"status": "validated" if all(gates.values()) else "blocked", "gates": gates,
+              "coordinate_aliases": [{"canonical_id": r["id"], "source_ids": r["source_anonymous_ids"],
+                                      "original_id": r["original_id"], "length": r["length"],
+                                      "retained": r["retained"], "sha256": r["sha256"]}
+                                     for r in records if len(r["source_anonymous_ids"]) > 1],
               "input_contigs": len(records), "retained_contigs": len(lengths), "retained_bp": sum(lengths.values()),
               "eligible_genomes": len(genomes), "short_queries": len(short),
               "excluded_retained_bp": sum(lengths[s] for s in lengths if s not in unique),

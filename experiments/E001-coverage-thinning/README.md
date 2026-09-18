@@ -1,13 +1,15 @@
 # E001: Where Does Reduced Coverage Evidence Lose Recoverable Sequence?
 
 Date: 2026-09-17. Updated: 2026-09-18
-Execution status: planned; Gate 0 implemented and portable checks passed, native Linux validation pending
+Execution status: mapping/AMBER isolated native smoke passed; GI files acquired, alias-aware coordinate conversion pending; remaining native validation and scientific execution pending
 Scientific outcome: not assessed
 Protocol: prospective v2; [config.json](config.json) owns numerical settings; scientific launch not authorized
 Questions: [Q001](../../docs/research/questions.md#q001), [Q003](../../docs/research/questions.md#q003), [Q004](../../docs/research/questions.md#q004); hypothesis [H001](../../docs/research/questions.md#h001)
 Decision: [D004](../../docs/decisions/D004-human-cpu-preflight.md), superseding D003's execution choices; evidence: [method audit](../../docs/evidence/2026-09-17-targeted-audit.md), [human/CPU audit](../../docs/evidence/2026-09-18-human-cpu-audit.md). Execution: [operations guide](OPERATIONS.md); checks: [validation record](validation.md).
 
 ## Question and limits
+
+Input-contract clarification (2026-09-18): six corrected-truth coordinate groups have two anonymous IDs but only one physical FASTA record. Accept these as aliases only when every non-ID truth field agrees; choose the numerically smallest PC ID and preserve all source IDs in provenance. Count the FASTA sequence once; leave conflicting mappings as errors and the 2,500-bp cutoff unchanged. The [validation record](validation.md) owns the observed cases and tests. This is a documented canonicalization of this development dataset, not a change to scientific endpoints or an unmodified anonymous benchmark input.
 
 On one fixed known-origin assembly, does reducing mapped read evidence cause a material recovery loss in current binners, and does the evidence point to filtering, available signal, representation, or clustering/selection?
 

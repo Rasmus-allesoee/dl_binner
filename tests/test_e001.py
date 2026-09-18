@@ -182,6 +182,44 @@ class HMPTests(Files):
         self.assertEqual(p["unique_origins"], {})
         self.assertEqual(len(p["lengths"]), 2)
 
+    def test_coordinate_aliases_preserve_one_sequence_and_all_ids(self):
+        fasta, mapping, nodes = self.setup_hmp()
+        mapping.write_text(mapping.read_text().replace("PC0\t", "PC10\t") + "PC2\tg1\t2\tref_a\t10\t3\t2602\n")
+        report = prepare_hmp(fasta, mapping, self.root / "out", nodes)
+        self.assertEqual(dict(sequences(self.root / "out/canonical.fna")), {"PC2": "A" * 2600, "PC1": "C" * 2600})
+        self.assertEqual(report["retained_bp"], 5200)
+        self.assertEqual(report["coordinate_aliases"][0]["source_ids"], ["PC2", "PC10"])
+        lines = mapping.read_text().splitlines()
+        mapping.write_text("\n".join([lines[0], *reversed(lines[1:])]) + "\n")
+        again = prepare_hmp(fasta, mapping, self.root / "reordered", nodes)
+        self.assertEqual(again["coordinate_aliases"], report["coordinate_aliases"])
+
+    def test_conflicting_alias_metadata_and_exact_duplicates_rejected(self):
+        for row in ("PC0\tg1\t2\tref_a\t10\t3\t2602\n",
+                    "PC2\tg1\t2\tref_a\t11\t3\t2602\n",
+                    "PC2\tg3\t2\tref_a\t10\t3\t2602\n",
+                    "PC2\tg1\t2157\tref_a\t10\t3\t2602\n"):
+            fasta, mapping, nodes = self.setup_hmp()
+            mapping.write_text(mapping.read_text() + row)
+            with self.assertRaises(ContractError):
+                prepare_hmp(fasta, mapping, self.root / "out", nodes)
+
+    def test_same_id_multiple_genomes_remains_ambiguous(self):
+        fasta, mapping, nodes = self.setup_hmp()
+        mapping.write_text(mapping.read_text() + "PC0\tg3\t2\tref_a\t10\t3\t2602\n")
+        report = prepare_hmp(fasta, mapping, self.root / "out", nodes)
+        self.assertEqual(report["coordinate_aliases"], [])
+        population = json.loads((self.root / "out/population.json").read_text())
+        self.assertNotIn("PC0", population["unique_origins"])
+
+    def test_alias_below_cutoff_is_recorded_but_not_retained(self):
+        fasta, mapping, nodes = self.setup_hmp()
+        fasta.write_text(fasta.read_text().replace("to_2602_total_2600", "to_2468_total_2466").replace("A" * 2600, "A" * 2466))
+        mapping.write_text(mapping.read_text().replace("\t2602", "\t2468") + "PC2\tg1\t2\tref_a\t10\t3\t2468\n")
+        report = prepare_hmp(fasta, mapping, self.root / "out", nodes)
+        self.assertFalse(report["coordinate_aliases"][0]["retained"])
+        self.assertEqual(report["retained_bp"], 2600)
+
     def test_unresolved_domain_blocks_freeze(self):
         fasta, mapping, _ = self.setup_hmp()
         result = prepare_hmp(fasta, mapping, self.root / "out")
