@@ -14,7 +14,10 @@ from Bio.Seq import Seq
 
 ROOT = Path(__file__).resolve().parents[2]
 EXPERIMENT = ROOT / "experiments/E001-coverage-thinning"
-KNOWN_EMPTY_ORPHAN_IDS = {"*from__to*-42_total_0"}
+# The source scan rendered the orphan with asterisks, while Biopython's
+# converter error exposed the same malformed record with underscores.  Keep
+# both exact observed spellings narrow; do not generalize this exception.
+KNOWN_EMPTY_ORPHAN_IDS = frozenset({"*from__to*-42_total_0", "_from__to_-42_total_0"})
 
 
 class ContractError(ValueError):

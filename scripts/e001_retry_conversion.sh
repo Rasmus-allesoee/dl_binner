@@ -5,9 +5,6 @@ root=${1:?Provide the absolute experiment work root}
 case "$root" in /*) ;; *) exit 2 ;; esac
 code=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 if [[ ${2:-} == --retry-known-failure ]]; then
-    for name in failed-conversion-malformed-fasta; do
-        [[ ! -e "$root/$name" && ! -L "$root/$name" ]] || { echo "STOP: existing $name" >&2; exit 2; }
-    done
     [[ -f "$root/conversion-alias-stage/exit-code.txt" ]] && [[ $(cat "$root/conversion-alias-stage/exit-code.txt") == 1 ]]
     [[ -f "$root/conversion-alias-stage/stderr.txt" ]] && grep -Fq 'Invalid DNA' "$root/conversion-alias-stage/stderr.txt"
     [[ -f "$root/conversion-alias-return.tar.gz" && -f "$root/conversion-alias-return.tar.gz.sha256" ]]
@@ -19,9 +16,17 @@ if [[ ${2:-} == --retry-known-failure ]]; then
     else
         partial=()
     fi
-    mkdir "$root/failed-conversion-malformed-fasta"
-    mv "$root/conversion-alias-stage" "$root/conversion-alias-return.tar.gz" "$root/conversion-alias-return.tar.gz.sha256" "${partial[@]}" "$root/failed-conversion-malformed-fasta/"
-    echo 'Preserved the failed malformed-FASTA attempt in failed-conversion-malformed-fasta/'
+    failure_dir="$root/failed-conversion-malformed-fasta"
+    if [[ -e "$failure_dir" || -L "$failure_dir" ]]; then
+        suffix=2
+        while [[ -e "${failure_dir}-${suffix}" || -L "${failure_dir}-${suffix}" ]]; do
+            suffix=$((suffix + 1))
+        done
+        failure_dir="${failure_dir}-${suffix}"
+    fi
+    mkdir "$failure_dir"
+    mv "$root/conversion-alias-stage" "$root/conversion-alias-return.tar.gz" "$root/conversion-alias-return.tar.gz.sha256" "${partial[@]}" "$failure_dir/"
+    echo "Preserved the failed malformed-FASTA attempt in ${failure_dir##*/}/"
 elif [[ -n ${2:-} ]]; then
     echo 'Unknown option' >&2
     exit 2

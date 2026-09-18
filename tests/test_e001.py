@@ -229,6 +229,13 @@ class HMPTests(Files):
         self.assertEqual(len(list(sequences(self.root / "out/canonical.fna"))), 2)
         self.assertEqual(json.loads((self.root / "out/excluded-fasta.json").read_text()), report["excluded_fasta_records"])
 
+    def test_converter_normalized_empty_orphan_is_recorded_and_skipped(self):
+        fasta, mapping, nodes = self.setup_hmp()
+        fasta.write_text(fasta.read_text() + ">_from__to_-42_total_0\n\n")
+        report = prepare_hmp(fasta, mapping, self.root / "out", nodes)
+        self.assertEqual(report["excluded_fasta_records"][0]["id"], "_from__to_-42_total_0")
+        self.assertEqual(report["excluded_fasta_records"][0]["reason"], "known_empty_orphan")
+
     def test_known_orphan_with_sequence_is_rejected(self):
         fasta, mapping, nodes = self.setup_hmp()
         fasta.write_text(fasta.read_text() + ">*from__to*-42_total_0\nACGT\n")
