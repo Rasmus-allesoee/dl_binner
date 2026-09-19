@@ -2,6 +2,40 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
+## Current review, 2026-09-19
+
+[Publisher provenance investigation](../../docs/evidence/2026-09-19-gi-provenance.md)
+resolves all 20 FASTA-only intervals through seven conflicting BAM headers.
+[D005](../../docs/decisions/D005-gi-input-derivative.md) records the derivative
+decision. The new driver validates the source-bound policy, rechecks the persistent
+environment on every job, and creates distinct attempts without moving old data.
+Legacy inventory/retry drivers are retired to avoid executing the hardcoded first
+snapshot or failing on output-name collisions.
+
+All **82 portable tests passed** locally, including full synthetic owner-driver
+execution twice with an empty system PATH, injected Python paths, alias
+canonicalization, known empty artifacts, explicit
+foreign-record quarantine, completed return/checksum verification, and prior-output
+preservation. Corrupted setup metadata and a missing persistent environment stop
+before conversion and return logs. A packaging failure returns nonzero and marks
+the retained status as failed rather than claiming success.
+Additional regressions cover policy source changes, missing/overlapping exceptions,
+wrong orphan counts, duplicate truth rows and malformed-header DNA validation.
+This does not establish a successful conversion of the real GI data or fresh-job
+Linux execution. No scientific conversion was rerun locally.
+
+The owner's newly supplied local inventory allowed a full read-only audit with
+the corrected validator. FASTA/mapping hashes matched the policy, all 20 unmatched
+keys matched its exact interval set, and the mapping contract passed (210,612
+keys, six aliases). The setup archive is absent from the supplied local folder;
+full setup/member checks will run on its existing UCloud copy.
+
+Corrections to prior interpretations: raw audit JSON establishes only the underscore
+orphan ID, not Biopython normalization of asterisks. The earlier return's absence
+of an inventory file did not prove absence of a partial output directory. The
+previous chat's claim that Gate 0 was complete was incorrect: other native baseline
+checks remain open. Older paragraphs below are dated execution history.
+
 ## Executed locally
 
 - macOS Intel, Python 3.13.2; isolated `.venv` with NumPy 2.2.6, Biopython 1.85 and pysam 0.23.3. This is the harness environment, not any native binner environment.

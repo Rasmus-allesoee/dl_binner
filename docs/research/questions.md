@@ -46,6 +46,13 @@ Availability update, 2026-09-16: the owner confirmed the original artifacts rema
 
 2026-09-18: the owner clarified that human-associated microbiomes, not environmental research, are the focus. [D004](../decisions/D004-human-cpu-preflight.md) replaces Marine with CAMI II HMP GI. Full corrected-truth/coordinate joins, historical taxonomy, sample inventory and interpretability floors remain open; prefix inspection alone does not validate them. The shared gastrooral GSA and GI-only GSA must not be conflated.
 
+2026-09-19: complete owner join audit and local publisher-header investigation
+identify 20 intervals with foreign-simulation provenance. [D005](../decisions/D005-gi-input-derivative.md)
+authorizes their exact hash-bound quarantine for the E001 development derivative.
+Both published truth tables omit them. This changes mapping competition and does
+not restore missing intended GI sequences. Corrected conversion and historical
+taxonomy remain pending; no scientific outcome has been assessed.
+
 ## Q004
 
 **What biological and computational improvement will count as success for the selected regime?**

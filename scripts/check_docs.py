@@ -14,7 +14,7 @@ from urllib.parse import unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OPTIONAL = (ROOT / "agent_context/papers", ROOT / "agent_context/tools_repo")
+OPTIONAL = (ROOT / "agent_context",)
 
 
 def optional(path):
@@ -46,7 +46,7 @@ def maintained_files():
     paths.update(path for path in (ROOT / "docs").rglob("*.md")
                  if not path.is_relative_to(ROOT / "docs/history"))
     paths.update((ROOT / "experiments").rglob("*.md"))
-    paths.update((ROOT / "agent_context/README.md", ROOT / "docs/history/README.md"))
+    paths.add(ROOT / "docs/history/README.md")
     return sorted(paths)
 
 

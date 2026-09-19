@@ -31,3 +31,15 @@ Revisit if the question register becomes difficult to navigate, multiple people 
 The owner correctly distinguishes the thesis from this new project's software: it is a prior source paper, and its full text/figures need not be vendored into the eventual public working tree. Retain citations, provenance and our interpretations regardless of source packaging. Clones and ZIP caches are both acceptable research context; only sources selected for execution require a verified runnable dependency chain.
 
 The thesis snapshot already exists in the foundation commits. Removing it from the current index or adding an ignore rule would **not** remove it from history or prevent its transfer in a first push. During this audit we therefore leave local source files/history intact and record the pre-publication choice explicitly. When publication is requested, recommend a lean current tree with source locators; decide with the owner whether retaining the existing source-containing history is acceptable or whether a separately approved history migration is needed. No remote creation, push, deletion or history rewrite is authorized by this clarification.
+
+## Local inbox clarification, 2026-09-19
+
+The owner now requests that all `agent_context/` remain a local inbox, including
+inventory uploads, prompts, logs, screenshots, papers and thesis material. Ignore
+the entire directory and remove existing entries from the current Git index,
+preserving files on disk and earlier commits. Maintained research records own
+reviewed findings and reproducibility-critical summaries/hashes. Local-context
+links are optional in a clean checkout. Historical uploads remain recoverable
+from Git; their presence in old commits still requires review before publication.
+This supersedes the earlier choice to retain context files in current tracking,
+but does not authorize deletion or history rewriting.

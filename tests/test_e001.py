@@ -159,6 +159,12 @@ class ContractTests(Files):
 
 
 class HMPTests(Files):
+    def input_policy(self, fasta, mapping, quarantine=None, empty=2, aliases=0):
+        return self.file("policy.json", json.dumps({
+            "source_sha256": {"fasta": digest(fasta), "mapping": digest(mapping)},
+            "quarantine": quarantine or [], "expected_empty_records": empty,
+            "expected_alias_groups": aliases, "expected_mapping_keys": 2}))
+
     def setup_hmp(self, duplicate=False):
         first, second = "A" * 2600, ("T" * 2600 if duplicate else "C" * 2600)
         fasta = self.file("gsa.fa", f">ref_a_from_3_to_2602_total_2600\n{first}\n>ref_b_from_1_to_2600_total_2600\n{second}\n")
@@ -222,17 +228,17 @@ class HMPTests(Files):
 
     def test_known_empty_orphans_are_recorded_and_skipped(self):
         fasta, mapping, nodes = self.setup_hmp()
-        fasta.write_text(fasta.read_text() + ">*from__to*-42_total_0\n\n>*from__to*-42_total_0\n\n")
-        report = prepare_hmp(fasta, mapping, self.root / "out", nodes)
+        fasta.write_text(fasta.read_text() + ">_from__to_-42_total_0\n\n>_from__to_-42_total_0\n\n")
+        report = prepare_hmp(fasta, mapping, self.root / "out", nodes, self.input_policy(fasta, mapping))
         self.assertEqual(len(report["excluded_fasta_records"]), 2)
         self.assertEqual(report["excluded_fasta_records"][0]["reason"], "known_empty_orphan")
         self.assertEqual(len(list(sequences(self.root / "out/canonical.fna"))), 2)
         self.assertEqual(json.loads((self.root / "out/excluded-fasta.json").read_text()), report["excluded_fasta_records"])
 
-    def test_converter_normalized_empty_orphan_is_recorded_and_skipped(self):
+    def test_raw_empty_orphan_is_recorded_and_skipped_with_policy(self):
         fasta, mapping, nodes = self.setup_hmp()
         fasta.write_text(fasta.read_text() + ">_from__to_-42_total_0\n\n")
-        report = prepare_hmp(fasta, mapping, self.root / "out", nodes)
+        report = prepare_hmp(fasta, mapping, self.root / "out", nodes, self.input_policy(fasta, mapping, empty=1))
         self.assertEqual(report["excluded_fasta_records"][0]["id"], "_from__to_-42_total_0")
         self.assertEqual(report["excluded_fasta_records"][0]["reason"], "known_empty_orphan")
 
@@ -241,6 +247,63 @@ class HMPTests(Files):
         fasta.write_text(fasta.read_text() + ">*from__to*-42_total_0\nACGT\n")
         with self.assertRaises(ContractError):
             prepare_hmp(fasta, mapping, self.root / "out", nodes)
+
+    def test_hash_bound_quarantine_preserves_truth_and_counts(self):
+        fasta, mapping, nodes = self.setup_hmp()
+        identifier = "foreign_from_1_to_2600_total_2600"
+        fasta.write_text(fasta.read_text() + ">" + identifier + "\n" + "G" * 2600 + "\n")
+        policy = self.input_policy(fasta, mapping, [{"id": identifier, "length": 2600,
+                                                    "reason": "foreign_simulation_provenance"}], empty=0)
+        with self.assertRaisesRegex(ContractError, "missing from truth"):
+            prepare_hmp(fasta, mapping, self.root / "strict", nodes)
+        report = prepare_hmp(fasta, mapping, self.root / "out", nodes, policy)
+        self.assertEqual(report["quarantined_bp"], 2600)
+        self.assertEqual(report["input_contigs"], 2)
+        self.assertEqual(report["retained_bp"], 5200)
+        self.assertEqual(report["input_policy_sha256"], digest(policy))
+        self.assertEqual(report["excluded_fasta_records"][0]["id"], identifier)
+        self.assertEqual(set(dict(sequences(self.root / "out/canonical.fna"))), {"PC0", "PC1"})
+        fasta.write_text(fasta.read_text() + "\n")
+        with self.assertRaisesRegex(ContractError, "Policy source mismatch"):
+            prepare_hmp(fasta, mapping, self.root / "changed", nodes, policy)
+        self.assertFalse((self.root / "changed").exists())
+
+    def test_quarantine_cannot_drop_truth_or_ignore_missing_exceptions(self):
+        fasta, mapping, nodes = self.setup_hmp()
+        policy = self.input_policy(fasta, mapping, [{"id": "ref_a_from_3_to_2602_total_2600",
+                                                   "length": 2600, "reason": "foreign_simulation_provenance"}], empty=0)
+        with self.assertRaisesRegex(ContractError, "overlaps truth"):
+            prepare_hmp(fasta, mapping, self.root / "overlap", nodes, policy)
+        data = json.loads(policy.read_text())
+        data["quarantine"][0]["id"] = "absent_from_1_to_2600_total_2600"
+        policy.write_text(json.dumps(data))
+        with self.assertRaisesRegex(ContractError, "missing from FASTA"):
+            prepare_hmp(fasta, mapping, self.root / "absent", nodes, policy)
+
+    def test_unapproved_empty_orphan_and_wrong_count_fail(self):
+        fasta, mapping, nodes = self.setup_hmp()
+        fasta.write_text(fasta.read_text() + ">_from__to_-42_total_0\n")
+        with self.assertRaises(ContractError):
+            prepare_hmp(fasta, mapping, self.root / "strict", nodes)
+        policy = self.input_policy(fasta, mapping)
+        with self.assertRaisesRegex(ContractError, "empty-orphan count"):
+            prepare_hmp(fasta, mapping, self.root / "count", nodes, policy)
+
+    def test_audit_rejects_duplicate_truth_rows_and_invalid_coordinates(self):
+        fasta, mapping, _ = self.setup_hmp()
+        mapping.write_text(mapping.read_text() + "PC0\tg1\t2\tref_a\t10\t3\t2602\n")
+        report = audit_hmp(fasta, mapping)
+        self.assertFalse(report["join_contract_passes"])
+        self.assertIn("Duplicate truth row", report["mapping_contract_error"])
+        mapping.write_text(mapping.read_text().replace("\t3\t2602", "\t0\t2602"))
+        self.assertGreater(audit_hmp(fasta, mapping)["mapping_invalid_coordinate_count"], 0)
+
+    def test_audit_counts_invalid_dna_even_with_malformed_header(self):
+        fasta, mapping, _ = self.setup_hmp()
+        fasta.write_text(fasta.read_text() + ">bad_header\nZZZ\n")
+        report = audit_hmp(fasta, mapping)
+        self.assertEqual(report["fasta_invalid_dna_count"], 1)
+        self.assertEqual(report["fasta_malformed_header_count"], 1)
 
     def test_unresolved_domain_blocks_freeze(self):
         fasta, mapping, _ = self.setup_hmp()

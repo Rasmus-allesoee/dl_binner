@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "decision": "D005",
+  "dataset_role": "E001 development derivative; not unmodified CAMI benchmark",
+  "source_sha256": {
+    "fasta": "67aeeeb70e5ba0e1506bf95c79bb25b06869c0486e6c0ea111763c3b060c0baf",
+    "mapping": "4353f05be6a94c0c05be083088148eac01bcf34dc05c6a061709ff5fbd61d720"
+  },
+  "original_mapping_md5": "6bed38a056082b3358c8796c97f136cf",
+  "setup_md5": "eebd129ce7f8640683eb744a0e946223",
+  "setup_member_sha256": {
+    "genome_to_id.tsv": "39c7be7475039a2a0cb95579058e97a0c4c38e56e5b9cdf7360e680eb549cfb0",
+    "metadata.tsv": "04edf1e2a10af80bebb9a00addad983ccc9d9ceffe4eb6fb83cc3984d81d13ae",
+    "config.ini": "9b7d4d52b0972141fe350be47195c27c6b1ddb7d02192ce8e1637c11eb92c4ba"
+  },
+  "expected_empty_records": 2,
+  "expected_alias_groups": 6,
+  "expected_mapping_keys": 210612,
+  "quarantine": [
+    {
+      "id": "AP012167.1_from_1_to_2395134_total_2395134",
+      "length": 2395134,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.10592.0.bam"
+    },
+    {
+      "id": "AP012168.1_from_1_to_42448_total_42448",
+      "length": 42448,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.10592.0.bam"
+    },
+    {
+      "id": "AP012169.1_from_1_to_35387_total_35387",
+      "length": 35387,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.10592.0.bam"
+    },
+    {
+      "id": "AP012170.1_from_2_to_35340_total_35339",
+      "length": 35339,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.10592.0.bam"
+    },
+    {
+      "id": "AP012171.1_from_1_to_25334_total_25334",
+      "length": 25334,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.10592.0.bam"
+    },
+    {
+      "id": "AP012172.1_from_1_to_17882_total_17882",
+      "length": 17882,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.10592.0.bam"
+    },
+    {
+      "id": "AP012173.1_from_1_to_11627_total_11627",
+      "length": 11627,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.10592.0.bam"
+    },
+    {
+      "id": "AP012174.1_from_1_to_10300_total_10300",
+      "length": 10300,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.10592.0.bam"
+    },
+    {
+      "id": "AP012175.1_from_1_to_8556_total_8556",
+      "length": 8556,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.10592.0.bam"
+    },
+    {
+      "id": "AP012176.1_from_1_to_5866_total_5866",
+      "length": 5866,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.10592.0.bam"
+    },
+    {
+      "id": "CP002039.1_from_1_to_5513886_total_5513886",
+      "length": 5513886,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.1070.0.bam"
+    },
+    {
+      "id": "CP002341.1_from_2_to_2125752_total_2125751",
+      "length": 2125751,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.2555.0.bam"
+    },
+    {
+      "id": "CP002342.1_from_1_to_6222_total_6222",
+      "length": 6222,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.2555.0.bam"
+    },
+    {
+      "id": "CP002609.1_from_3_to_1894400_total_1894398",
+      "length": 1894398,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.45053.0.bam"
+    },
+    {
+      "id": "CP002610.1_from_1_to_4541_total_4541",
+      "length": 4541,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.45053.0.bam"
+    },
+    {
+      "id": "CP002611.1_from_1_to_78145_total_78145",
+      "length": 78145,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.45053.0.bam"
+    },
+    {
+      "id": "CP009236.1_from_2_to_3237652_total_3237651",
+      "length": 3237651,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.1047.0.bam"
+    },
+    {
+      "id": "CP012580.1_from_1_to_6645476_total_6645476",
+      "length": 6645476,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.10356.0.bam"
+    },
+    {
+      "id": "CP014870.1_from_2_to_5027698_total_5027697",
+      "length": 5027697,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.2555.1.bam"
+    },
+    {
+      "id": "CP014870.1_from_5027705_to_6823534_total_1795830",
+      "length": 1795830,
+      "reason": "foreign_simulation_provenance",
+      "publisher_bam": "OTU_97.2555.1.bam"
+    }
+  ]
+}

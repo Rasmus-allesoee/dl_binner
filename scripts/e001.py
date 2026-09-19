@@ -27,6 +27,7 @@ def main():
     prepare.add_argument("--mapping", required=True, type=Path)
     prepare.add_argument("--nodes", type=Path)
     prepare.add_argument("--out", required=True, type=Path)
+    prepare.add_argument("--policy", type=Path, help="Reviewed source-hash-bound input exceptions")
     audit = sub.add_parser("audit-hmp", help="Read-only FASTA/mapping coordinate audit")
     audit.add_argument("--fasta", required=True, type=Path)
     audit.add_argument("--mapping", required=True, type=Path)
@@ -56,7 +57,7 @@ def main():
         result = archive_inventory(args.archive)
         write_json(args.out, result)
     elif args.command == "prepare-hmp":
-        result = prepare_hmp(args.fasta, args.mapping, args.out, args.nodes)
+        result = prepare_hmp(args.fasta, args.mapping, args.out, args.nodes, args.policy)
     elif args.command == "audit-hmp":
         result = audit_hmp(args.fasta, args.mapping)
         write_json(args.out, result)

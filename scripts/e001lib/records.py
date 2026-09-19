@@ -14,10 +14,9 @@ from Bio.Seq import Seq
 
 ROOT = Path(__file__).resolve().parents[2]
 EXPERIMENT = ROOT / "experiments/E001-coverage-thinning"
-# The source scan rendered the orphan with asterisks, while Biopython's
-# converter error exposed the same malformed record with underscores.  Keep
-# both exact observed spellings narrow; do not generalize this exception.
-KNOWN_EMPTY_ORPHAN_IDS = frozenset({"*from__to*-42_total_0", "_from__to_-42_total_0"})
+# Raw owner-returned JSON confirms underscores. Asterisks in chat were not
+# evidence of a second literal source identifier or Biopython normalization.
+KNOWN_EMPTY_ORPHAN_IDS = frozenset({"_from__to_-42_total_0"})
 HMP_HEADER = re.compile(r"(.+)_from_([0-9]+)_to_([0-9]+)_total_([0-9]+)")
 DNA_ALPHABET = set("ACGTRYSWKMBDHVN")
 
@@ -94,9 +93,16 @@ def audit_hmp(fasta, mapping, example_limit=20):
     columns = ("anonymous_contig_id", "genome_id", "tax_id", "contig_id",
                "number_reads", "start_position", "end_position")
     mapping_counts, mapping_signatures, mapping_invalid = Counter(), defaultdict(set), []
+    mapping_contract_error = None
+    try:
+        hmp_mapping(mapping)
+    except (ContractError, ValueError) as error:
+        mapping_contract_error = str(error)
     for row in table(mapping, columns):
         try:
             key = (row["contig_id"], int(row["start_position"]), int(row["end_position"]))
+            if key[1] < 1 or key[2] < key[1]:
+                raise ValueError("Invalid coordinates")
         except ValueError:
             mapping_invalid.append({"contig_id": row["contig_id"],
                                     "start": row["start_position"], "end": row["end_position"]})
@@ -117,6 +123,8 @@ def audit_hmp(fasta, mapping, example_limit=20):
                                  "sha256": hashlib.sha256(b"").hexdigest(),
                                  "reason": "known_empty_orphan"})
                 continue
+            if not sequence or not set(sequence.upper()) <= DNA_ALPHABET:
+                invalid.append(record.id)
             match = HMP_HEADER.fullmatch(record.id)
             if match is None:
                 malformed.append(record.id)
@@ -124,11 +132,9 @@ def audit_hmp(fasta, mapping, example_limit=20):
             accession, start, end, declared = match.groups()
             key = (accession, int(start), int(end))
             fasta_counts[key] += 1
-            if not sequence or not set(sequence.upper()) <= DNA_ALPHABET:
-                invalid.append(record.id)
             expected = int(declared)
             coordinate_length = key[2] - key[1] + 1
-            if len(sequence) != expected or expected != coordinate_length:
+            if key[1] < 1 or len(sequence) != expected or expected != coordinate_length:
                 length_mismatch.append({"id": record.id, "actual": len(sequence),
                                         "declared": expected, "coordinate": coordinate_length})
 
@@ -137,14 +143,16 @@ def audit_hmp(fasta, mapping, example_limit=20):
     mapping_conflicting = {key: signatures for key, signatures in mapping_signatures.items() if len(signatures) > 1}
     fasta_missing_mapping = Counter({key: count for key, count in fasta_counts.items() if key not in mapping_counts})
     mapping_missing_fasta = Counter({key: count for key, count in mapping_counts.items() if key not in fasta_counts})
-    duplicate_ids = {identifier: count for identifier, count in fasta_ids.items()
-                     if count > 1 and identifier not in KNOWN_EMPTY_ORPHAN_IDS}
+    checked_ids = fasta_ids - Counter(item["id"] for item in excluded)
+    duplicate_ids = {identifier: count for identifier, count in checked_ids.items() if count > 1}
     join_contract_passes = not any((mapping_invalid, malformed, invalid, length_mismatch,
                                     duplicate_ids, fasta_duplicate, mapping_conflicting,
-                                    fasta_missing_mapping, mapping_missing_fasta))
+                                    fasta_missing_mapping, mapping_missing_fasta, mapping_contract_error))
     return {
         "status": "join_audit",
         "join_contract_passes": join_contract_passes,
+        "mapping_contract_error": mapping_contract_error,
+        "scope": "Structural diagnostic only; does not approve provenance or a scientific population.",
         "fasta_records": sum(fasta_ids.values()),
         "fasta_coordinate_keys": len(fasta_counts),
         "fasta_duplicate_id_count": len(duplicate_ids),
@@ -274,15 +282,13 @@ def domains_from_nodes(taxids, nodes_path):
     return resolved
 
 
-def prepare_hmp(fasta, mapping, out, nodes=None):
-    """Join published coordinate headers to corrected anonymous IDs, never by row order."""
-    cfg = config()
-    out = Path(out)
-    require(not out.exists(), f"Output exists: {out}")
+def hmp_mapping(mapping):
+    """Validate truth identities and canonicalize equivalent coordinate aliases."""
     mapping_rows, id_keys = defaultdict(list), {}
-    for row in table(mapping, ("anonymous_contig_id", "genome_id", "tax_id", "contig_id", "start_position", "end_position")):
+    for row in table(mapping, ("anonymous_contig_id", "genome_id", "tax_id", "contig_id", "number_reads", "start_position", "end_position")):
         key = (row["contig_id"], int(row["start_position"]), int(row["end_position"]))
         seq_id = row["anonymous_contig_id"]
+        require(row["genome_id"] and row["tax_id"], "Empty genome or taxonomy ID")
         require(re.fullmatch(r"PC[0-9]+", seq_id), f"Non-anonymous HMP ID: {seq_id}")
         require(seq_id not in id_keys or id_keys[seq_id] == key, f"Conflicting mapping for {seq_id}; is this the unfixed table?")
         require(key[1] >= 1 and key[2] >= key[1], "Invalid one-based inclusive coordinates")
@@ -300,19 +306,45 @@ def prepare_hmp(fasta, mapping, out, nodes=None):
             mapping_rows[key] = [next(r for r in rows if r["anonymous_contig_id"] == ids[0])]
         else:
             require(len({r["genome_id"] for r in rows}) == len(rows), "Duplicate truth row")
+    require(mapping_rows, "Empty HMP mapping")
+    return mapping_rows, aliases
+
+
+def prepare_hmp(fasta, mapping, out, nodes=None, policy=None):
+    """Join published coordinate headers; exceptions require a hash-bound policy."""
+    cfg = config()
+    out = Path(out)
+    require(not out.exists(), f"Output exists: {out}")
+    exceptions, policy_record = {}, None
+    if policy is not None:
+        policy_record = json.loads(Path(policy).read_text())
+        for name, path in (("fasta", fasta), ("mapping", mapping)):
+            require(digest(path) == policy_record["source_sha256"][name], f"Policy source mismatch: {name}")
+        exceptions = {item["id"]: item for item in policy_record["quarantine"]}
+        require(len(exceptions) == len(policy_record["quarantine"]), "Duplicate policy quarantine ID")
+    mapping_rows, aliases = hmp_mapping(mapping)
     taxids = [r["tax_id"] for rows in mapping_rows.values() for r in rows]
     domains = domains_from_nodes(taxids, nodes) if nodes else {}
     out.mkdir(parents=True)
     records, lengths, origins, seq_groups, seen, excluded_fasta = [], {}, {}, defaultdict(list), set(), []
     # A failed conversion leaves no complete inventory marker; retain it for diagnosis.
     with (out / "canonical.fna").open("x") as handle:
-        for original, sequence in sequences(fasta, skip_known_empty=True, excluded=excluded_fasta):
+        for original, sequence in sequences(fasta, skip_known_empty=policy is not None, excluded=excluded_fasta):
             match = HMP_HEADER.fullmatch(original)
             require(match is not None, f"Unexpected HMP FASTA header: {original}")
             accession, start, end, declared = match.groups()
             key = (accession, int(start), int(end))
-            require(key in mapping_rows and key not in seen, f"Missing/duplicate coordinate join: {original}")
             require(len(sequence) == int(declared) == key[2] - key[1] + 1, f"Sequence/coordinate length mismatch: {original}")
+            require(key[1] >= 1 and key not in seen, f"Invalid/duplicate coordinate: {original}")
+            if original in exceptions:
+                require(key not in mapping_rows, f"Quarantine overlaps truth: {original}")
+                item = exceptions.pop(original)
+                require(len(sequence) == item["length"], f"Quarantine length mismatch: {original}")
+                excluded_fasta.append({"id": original, "length": len(sequence),
+                                       "sha256": hashlib.sha256(sequence.encode("ascii")).hexdigest(),
+                                       "reason": item["reason"]})
+                continue
+            require(key in mapping_rows, f"FASTA coordinate missing from truth: {original}")
             seen.add(key)
             rows = mapping_rows[key]
             seq_id = rows[0]["anonymous_contig_id"]
@@ -337,6 +369,12 @@ def prepare_hmp(fasta, mapping, out, nodes=None):
                 record["reasons"].append("below_length_threshold")
             records.append(record)
     require(seen == set(mapping_rows), "Truth rows without matching FASTA coordinates")
+    require(not exceptions, "Policy quarantine records missing from FASTA")
+    if policy_record is not None:
+        require(sum(r["reason"] == "known_empty_orphan" for r in excluded_fasta) == policy_record["expected_empty_records"],
+                "Unexpected empty-orphan count")
+        require(len(aliases) == policy_record["expected_alias_groups"], "Unexpected alias-group count")
+        require(len(records) == policy_record["expected_mapping_keys"], "Unexpected mapped-coordinate count")
     require(lengths, "No retained contigs")
     for group in seq_groups.values():
         cross_origin = len({g for r in group for g in r["origins"]}) > 1
@@ -373,6 +411,8 @@ def prepare_hmp(fasta, mapping, out, nodes=None):
                   "probe_pool": sorted(eligible), "probe_queries": queries, "gates": gates}
     write_json(out / "population.json", population)
     report = {"status": "validated" if all(gates.values()) else "blocked", "gates": gates,
+              "input_policy_sha256": digest(policy) if policy is not None else None,
+              "quarantined_bp": sum(r["length"] for r in excluded_fasta),
               "excluded_fasta_records": excluded_fasta,
               "coordinate_aliases": [{"canonical_id": r["id"], "source_ids": r["source_anonymous_ids"],
                                       "original_id": r["original_id"], "length": r["length"],

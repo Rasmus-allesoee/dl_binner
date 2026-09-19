@@ -18,6 +18,12 @@ When modifying `AGENTS.md`, preserve still-valid guidance, remove or revise rule
 
 `agent_context/` contains prior work and context, including thesis material, repositories for released binning tools, papers for released binning tools, and the initial ChatGPT planning conversation.
 
+Treat all of `agent_context/` as an ignored local inbox, including uploaded data,
+prompts, screenshots and logs. Never stage it or force-add its files. Record
+reviewed findings, small reproducibility records and source hashes in maintained
+research locations. Existing material remains recoverable in earlier Git history;
+removing tracking does not authorize deleting local files or rewriting history.
+
 #### Thesis
 
 * Local repo: `/Users/rasmusallesoeenielsen/Documents/Speciale/hadal-binning-benchmark`
@@ -206,11 +212,23 @@ NOTE: you cannot work on the HPC. I have to control and run stuff in here. So wh
 
 For owner-run execution, group commands into fail-fast scripts when later steps depend only on explicit machine-checkable success, not on scientific or operational interpretation. Pause for returned-output review at genuine assessment boundaries, not after every routine command. Explain each command group's purpose, files changed, software/data downloads, expected resource use, requested outputs, and stopping conditions in chat. The owner manages job extensions; do not repeatedly request remaining time or make it a prerequisite. Still retain available timing and allocation information for budget accounting. Keep per-tool environments inside the experiment's persistent work directory. Record actual setup and return-artifact status in the experiment guide and STATE; never infer execution from prepared commands. Storage estimates should inform provisioning, not silently change scientific design when the owner can expand storage.
 
+Owner-run commands must automatically capture terminal output to a log file.
+Request the resulting file instead of asking the owner to copy terminal text.
+
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
 Isolate Python processes inside tool environments: unset inherited `PYTHONPATH`, `PYTHONHOME` and `PYTHONUSERBASE`, and set `PYTHONNOUSERSITE=1` before installs, inventories and execution. UCloud's user-site packages were observed inside otherwise separate conda environments; distinct environment directories alone do not establish import isolation. Preserve required tool-local source imports, and verify package origins when introducing a runtime. Do not modify an already executed/transferred snapshot in place; use explicit wrappers or a new versioned transfer.
 
 Recheck container-level prerequisites on each owner-run job entry point. System packages installed outside `/work` may disappear between jobs even when experiment-local environments persist; bootstrap must not depend on the missing utility it is meant to install. Preserve failed attempts before narrowly scoped recovery, and never silently reuse partial scientific inputs.
+
+The owner confirmed that new Terminal jobs reset the container on 2026-09-19.
+Prefer absolute paths to persistent experiment-local executables and probe imports
+on each job. Do not reinstall intact environments merely because activation or a
+system utility disappeared. Use uniquely named attempt directories so retries
+preserve previous outputs without manual moves. Test complete owner-run drivers
+on synthetic inputs, including repeated invocation and failed prerequisites,
+before transfer. Diagnose whole-file input relationships before adding exceptions;
+bind dataset-specific exceptions to reviewed source hashes and record exclusions.
 
 ---
 

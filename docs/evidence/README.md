@@ -10,6 +10,7 @@ Evidence notes distinguish what a source reports, what we inspected directly, an
 | [Public benchmark audit, 2026-09-17](2026-09-17-benchmark-data.md) | CAMI II development-data contract, fresh acquisition and verified CAMI III distinctions |
 | [Tool snapshots, 2026-09-17](2026-09-17-tool-snapshots.json) | Exact selected source commits and checkout qualifications; not an executable environment lock |
 | [Human-data and CPU audit, 2026-09-18](2026-09-18-human-cpu-audit.md) | GI acquisition/ID contract, mapper alternatives, CPU-only reassessment and unresolved native feasibility |
+| [GI provenance review, 2026-09-19](2026-09-19-gi-provenance.md) | Foreign-simulation header evidence, source-bound quarantine, inventory code corrections and fresh-job handling |
 | [Assets and reuse](assets.md) | Available prior work, data availability, provenance, and unresolved reproducibility details |
 | [Context fingerprints](context-sources.sha256) | Current local fingerprints: 45 paper files, two thesis Markdown files, and 36 selected source/README files; historical versions remain in Git |
 

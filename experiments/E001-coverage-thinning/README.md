@@ -1,7 +1,7 @@
 # E001: Where Does Reduced Coverage Evidence Lose Recoverable Sequence?
 
-Date: 2026-09-17. Updated: 2026-09-18
-Execution status: mapping/AMBER isolated native smoke passed; GI files acquired, coordinate conversion blocked on 20 FASTA-only truth-join records; remaining native validation and scientific execution pending
+Date: 2026-09-17. Updated: 2026-09-19
+Execution status: mapping/AMBER isolated native smoke passed; GI provenance correction implemented under D005, owner conversion pending; other native validation and scientific execution pending
 Scientific outcome: not assessed
 Protocol: prospective v2; [config.json](config.json) owns numerical settings; scientific launch not authorized
 Questions: [Q001](../../docs/research/questions.md#q001), [Q003](../../docs/research/questions.md#q003), [Q004](../../docs/research/questions.md#q004); hypothesis [H001](../../docs/research/questions.md#h001)
@@ -19,7 +19,14 @@ An embedding is a learned numerical representation; clustering turns it into bin
 
 ## Data and fixed population
 
-Use CAMI II HMP's ten **gastrointestinal** short-read samples and body-site-specific pooled GSA, with corrected contig-origin truth. This is human-associated development data, not clinical evidence or an untouched final test. Fresh-download locators, publisher checksums and actual GI sample IDs are in the [acquisition manifest](acquisition.json). Do not use the shared gastrooral pooled reference or assume that samples 0-9 are all GI. Only tiny prefixes and metadata have been inspected; full payload joins remain a gate.
+2026-09-19 amendment: [D005](../../docs/decisions/D005-gi-input-derivative.md)
+quarantines 20 exact foreign-simulation intervals (28,917,470 bp) and two empty
+artifacts under a source-hash-bound policy. All corrected-truth coordinates remain
+subject to the same length cutoff. This supersedes the all-GSA wording below only
+for these enumerated records. E001 uses a declared development derivative;
+mapping competition changes and the intended missing GI genomes are not restored.
+
+Use CAMI II HMP's ten **gastrointestinal** short-read samples and the D005 derivative of its body-site-specific pooled GSA, with corrected contig-origin truth. This is human-associated development data, not clinical evidence or an untouched final test. Locators, publisher checksums and actual GI sample IDs are in the [acquisition manifest](acquisition.json). Do not use the shared gastrooral pooled reference or assume that samples 0-9 are all GI. Full owner join audit is complete; corrected conversion and population approval remain pending.
 
 Before any binning scores are examined:
 
@@ -127,7 +134,7 @@ Before Gate 2, commit executable code/configuration and record that pre-existing
 
 ## Attempts and results
 
-No scientific attempts have been launched. Local synthetic validation passed; native UCloud smoke, complete research-data acquisition and model training remain unexecuted. Tiny synthetic arrays and public file prefixes are not research feature tensors, benchmark scores or experimental conclusions.
+No scientific attempts have been launched. Portable checks and mapping/AMBER native smoke passed. Assembly/truth/setup acquisition and the owner join audit completed. Other native checks, corrected conversion, read acquisition, CPU feasibility and model training remain pending. Software checks are not biological results.
 
 Every later attempt gets a unique `run-NNN` entry with status, condition/seed, source/config/input hashes, logs and output locations, including crashes/timeouts. Never overwrite a previous run directory. Legal empty output is evaluated as zero recovery with undefined purity where appropriate; a crashed or truncated output is not.
 

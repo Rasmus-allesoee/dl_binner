@@ -2,41 +2,84 @@
 
 Updated: 2026-09-18. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
-## What is ready
+## Current action, 2026-09-19
 
-**Current action: resolve the complete HMP join audit before conversion.** The owner-run audit passed in ten seconds and found 20 FASTA coordinate keys absent from the corrected mapping, zero mapping-only keys, zero duplicate FASTA coordinates, six duplicate mapping-coordinate groups with no conflicting non-ID metadata, and no malformed/invalid-DNA/length-mismatch records. The six duplicate mapping groups are the already documented truth aliases. The 20 FASTA-only records may be intentionally unannotated source sequences or a corrected-mapping omission; that distinction must be established before changing the converter. Do not run conversion again. The next analysis should compare those 20 coordinates with the original mapping and setup metadata, then either document a strict explicit exclusion with provenance or repair the fixed truth table only if the source evidence supports it. No reads or scientific training are authorized.
+The publisher provenance issue is resolved in [D005](../../docs/decisions/D005-gi-input-derivative.md).
+The next owner action is a verified conversion of that declared derivative.
+Gate 0 is partially complete, Gate 1 is awaiting corrected conversion/taxonomy,
+and scientific Gate 2 has not started.
 
-**Completed diagnostic checkpoint:** the alias retry exposed a second input-contract edge: empty malformed FASTA IDs `_from__to_-42_total_0`. The owner already ran the targeted read-only count against the existing GSA; it read no network data and returned the JSON evidence below. Do not rerun that scan, conversion or acquisition as part of this checkpoint.
+Use the new committed bundle and [resume driver](../../scripts/e001_inventory_resume.py).
+The old `e001_gi_inventory.sh`, `e001_retry_conversion.sh`, and `e001_hmp_audit.sh` are retired.
+The resume driver does not acquire data or install software. It:
 
-The owner completed that scan: exactly two empty `*from__to*-42_total_0` records, no other malformed records. The corrected retry confirmed that the runtime error can expose the same artifact as `_from__to_-42_total_0`, and that a prior `failed-conversion-malformed-fasta/` directory must not block a new guarded recovery. It preserved the latest failed attempt under `failed-conversion-malformed-fasta-2/`; conversion then reached a separate coordinate-join mismatch. The audit is the next owner action. It refuses a completed or ambiguous inventory and reuses existing files only.
+1. Creates a unique `inventory-resume-...` attempt under the persistent work root.
+2. Probes `envs/mapping/bin/python`, NumPy, Biopython and pysam with isolated
+   Python paths, verifying their environment location on this new job.
+3. Verifies the original mapping and full setup archive checksums, compares
+   setup metadata-member hashes with the inspected publisher prefix, and records
+   those checks. It reads the archive without unpacking its source genomes.
+4. Runs the complete input audit and checks the exact reviewed source hashes.
+5. With `--convert`, applies the explicit policy into the attempt's `input/`.
+   Every exception, alias and mapped-coordinate count must match. Unknown
+   anomalies stop the attempt. Without the flag, it only checks and audits.
+6. Packages small logs, audit, policy, exclusion report and inventory into a
+   uniquely named return archive/checksum beside the attempt. It prints the exact
+   paths and any failure traceback. FASTA and bulk contig metadata stay on UCloud.
 
-**Current checkpoint:** acquisition succeeded after timer recovery; the owner's targeted FASTA scan and complete join audit are finished. Do not rerun recovery/acquisition. A successful taxonomy-free conversion still requires inspection before any further acquisition or scientific work. The earlier recovery instructions below are historical, not the current command.
-
-**Recovery checkpoint:** the first GI attempt failed before any acquisition because `/usr/bin/time` was absent. Replace only the uploaded supplemental inventory driver with the corrected version, verify its new checksum, and invoke `bash "$WORK/transfer/e001_gi_inventory.sh" "$WORK" --retry-missing-time`. It validates the specific exit-127 failure and absence of data, verifies and preserves the old return/stage under `failed-inventory-missing-time/`, then installs GNU time if missing and resumes the ordinary sequence. This updates the earlier statement that no software installation occurs: recovery may refresh Ubuntu package indexes and install only `time` and dependencies in the disposable container, not upgrade the system or reinstall tool environments. Installation output is saved in the new `inventory-stage/time-install.log`; no password is requested (`sudo -n`). Return the new same-named `gi-inventory-return.tar.gz` and `.sha256` plus final output. If recovery guards or installation fail, stop and return the error; do not delete prior files. Expect a small package install followed by the previously described approximately 3-GB inventory download.
-
-**Current owner action (2026-09-18): GI inventory.** The environment-review return has been inspected and accepted; the EasyBuild concern is resolved by disabling user-site access. Upload [e001_gi_inventory.sh](../../scripts/e001_gi_inventory.sh) into the existing `transfer/` directory, verify its chat-supplied hash, then run `bash "$WORK/transfer/e001_gi_inventory.sh" "$WORK"`. Keep the current 4-vCPU/12-GB allocation. The earlier bootstrap/review commands below are completed history, not instructions to rerun them.
-
-This grouped driver uses the unchanged transferred source snapshot, clears inherited Python paths and disables user-site, checks the clean mapping environment and completed review status, prints the acquisition plan, then downloads approximately 3 GB of manifest-listed assembly/truth/setup and small metadata. It verifies publisher MD5s and records local SHA-256s, safely lists the setup archive without extracting it, and runs the initial GI coordinate-to-anonymous-ID conversion without taxonomy. It never downloads sample/read archives or starts training. No new software is installed.
-
-New paths under the experiment root: `inventory/` for downloaded inputs/reports, `input-preflight/` for canonical retained FASTA, ID/provenance records and initially blocked population, and `inventory-stage/` for commands, logs, timing and executed driver. Allow at least 10 GB free including generated output; expect minutes to tens of minutes depending on the publisher/network and shared filesystem, not a measured promise. Acquisition streams data and conversion streams FASTA while retaining truth/contig metadata; the 12-GB job is a reasonable initial allocation, with actual peak RAM recorded rather than assumed proven. Stop on any failed command; partial files are retained, and retries require inspection.
-
-Return `gi-inventory-return.tar.gz` and `.sha256` plus final console lines. The archive contains only stage logs, publisher metadata, acquisition report, setup member listing and the conversion inventory, never the GSA/setup archive or large generated sequence/contig files. It is also packaged after ordinary failures; a hard-killed job may require separate log collection. A successful command can produce `status: blocked` in `input-preflight/inventory.json`: taxonomy is deliberately unresolved and scientific population approval must remain blocked until review. Inspect these returned records before selecting metadata extraction or historical taxonomy acquisition. No bulk reads are authorized.
-
-- [Configuration](config.json) owns numerical protocol/resource settings. [Acquisition manifest](acquisition.json) owns the selected URLs, GI sample IDs and publisher MD5s. Locally calculated SHA-256s are added only after download.
-- [Harness](../../scripts/e001.py) and [tests](../../tests/test_e001.py) validate FASTA/truth/prediction joins, the conservative endpoint, exact neighborhood probes, source identities, safe archive inventory, and native input/output contracts.
-- [Linux setup](../../scripts/e001_linux_setup.sh) prepares separate environments/checkouts. [Linux smoke](../../scripts/e001_linux_smoke.sh) runs synthetic checks only, with logs, exit codes and GNU time output. Neither script launches research training or downloads research data.
-- Runtime recipes are **not solved Linux locks**. They follow the audited tool requirements, including different NumPy/PyTorch versions for VAMB and COMEBin. Generated `conda-explicit.txt`, `pip-freeze.txt`, binary hashes and smoke reports must be returned and inspected. There are no verified container digests, and none are fabricated. A failed solver/import is a compatibility blocker, not permission to downgrade silently.
-
-The portable environment uses Python 3.12 or 3.13 and:
+The command template below is filled with the exact commit in chat. Upload only
+the new bundle/checksum into the existing `transfer/` directory:
 
 ```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install -r experiments/E001-coverage-thinning/requirements-portable.txt
-.venv/bin/python -m unittest discover -s tests -v
-python3 scripts/check_docs.py --check-context
+bash <<'SH'
+set -euo pipefail
+WORK=/work/Home/dl_binner/e001/e001-gate0
+LOG=$(mktemp "$WORK/transfer/e001-resume.XXXXXX.log")
+echo "Terminal log: $LOG"
+(
+BUNDLE=e001-code-<commit>
+CODE="$WORK/$BUNDLE"
+cd "$WORK/transfer"
+sha256sum --check "$BUNDLE.tar.gz.sha256"
+if test -e "$CODE" || test -L "$CODE"; then
+    echo "STOP: code directory already exists"
+    exit 1
+fi
+tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
+python3 -I "$CODE/scripts/e001_inventory_resume.py" "$WORK" --convert
+) 2>&1 | tee "$LOG"
+SH
 ```
 
-The first two commands are needed only for a new local environment. Native tests intentionally are not part of this portable pass. Pandoc is needed only for documentation checking.
+Keep 4 vCPU / 12 GB for this bounded inventory step. Expect seconds to a few minutes
+depending on filesystem speed, hashing approximately 3 GB of existing files and
+writing another retained FASTA/metadata set. Native peak RAM on the complete input
+remains to be observed. Return the two printed return files and the automatically
+captured terminal log; copying text from the terminal is unnecessary.
+Exit zero with scientific status `blocked` is expected until taxonomy is resolved.
+Stop after the command regardless of status; no read downloads or training follow.
+The driver uses Python timing/resource counters, so GNU time, sudo and micromamba
+on PATH are unnecessary. Python 3, tar and sha256sum are needed for transfer/run;
+the persistent environment is checked before conversion. A missing environment
+produces a diagnostic return, not an automatic reinstall.
+
+## New UCloud jobs
+
+The owner confirmed that a new Terminal job resets container-level software.
+Preserve and attach the same `/work/Home` mount. Downloads, versioned code,
+micromamba binary/cache and `envs/` under the experiment root persist there.
+Do not infer persistence of `/usr/bin/time` or other apt-installed utilities.
+A fresh job does not require rebuilding intact tool environments; use absolute
+paths and repeat small import/binary checks. For later native jobs that require
+GNU time, provision it in a pinned persistent environment or explicitly recheck
+and bootstrap the disposable package before using it. That later setup is not
+part of this no-install resume command.
+
+## Historical commands and setup reference
+
+Everything below describes earlier completed or superseded entry points. Use
+the current action above; retained history does not authorize rerunning bootstrap,
+acquisition, old audits or conversion-recovery scripts.
 
 ## Gate 0: Owner-run Linux smoke
 

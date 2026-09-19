@@ -1,6 +1,6 @@
 # Current Research State
 
-Updated: 2026-09-18
+Updated: 2026-09-19
 
 This is the single current handoff. Detailed evidence belongs in the linked records; this page stays short.
 
@@ -21,23 +21,23 @@ E001 is development/diagnosis, not SOTA evaluation, real-assembly validation or 
 
 ## Next session
 
-1. All inventory files downloaded and verified. The owner's targeted scan confirms exactly one FASTA sequence for each of six truth alias groups and exactly two known empty orphan records. The complete HMP join audit found 210,634 FASTA records (two known empty orphans), 20 FASTA coordinate keys absent from the corrected mapping, no mapping-only keys, no duplicate FASTA coordinates, six duplicate mapping-coordinate groups with no conflicting non-ID metadata, and no malformed, invalid-DNA or length-mismatch records. The corrected conversion must not be retried until the provenance and treatment of those 20 unmapped FASTA records are resolved. No reads or scientific training have started. The correction, recovery guard and audit tests pass 74 portable tests.
-2. Inspect the conversion return and taxonomy-free inventory before selecting historical taxonomy metadata/extraction. A blocked population status is expected until taxonomy is resolved; do not authorize science from a partial conversion.
+1. The 20 FASTA-only intervals have foreign-simulation provenance: seven publisher BAM headers name airskinurogenital sources absent from the gastrooral setup. Both truth tables omit all 20. [Evidence and code review](evidence/2026-09-19-gi-provenance.md) and [D005](decisions/D005-gi-input-derivative.md) authorize a hash-bound quarantine, totaling 28,917,470 bp, plus two empty artifacts. This creates a declared E001 development derivative. Original downloads remain intact; no research conversion has been rerun here.
+2. Transfer the new committed bundle and run its `e001_inventory_resume.py --convert` command from the [operations guide](../experiments/E001-coverage-thinning/OPERATIONS.md). It verifies the persistent mapping environment in the new job, input/setup hashes and metadata, audits the complete join, then converts into a unique attempt directory. It installs/downloads nothing and uses no GNU time or micromamba command. Inspect the returned archive before taxonomy/population approval; unresolved taxonomy should report `blocked`. No reads or training are authorized.
 3. Complete the remaining native smoke, measured CPU/full-batch and read-prefix/storage feasibility, then freeze inputs and runtimes. Only afterward implement/authorize the scientific launcher and paired pilot. If COMEBin exceeds budget, amend the scientific scope/triage prospectively rather than silently dropping it.
 
 ## Open dependencies
 
-- **HMP GI** assembly/truth/setup acquisition is complete and publisher checksums verified; read archives remain unacquired. GI sample numbers are nonconsecutive. Full coordinate conversion awaits a provenance decision for the 20 FASTA-only coordinates and an explicit input-contract update if they are intentionally excluded. See [acquisition manifest](../experiments/E001-coverage-thinning/acquisition.json).
+- **HMP GI** assembly/truth/setup acquisition and join audit are complete. The D005 correction is implemented and tested on synthetic inputs; owner execution remains pending. Native Gate 0 is only partially complete (mapping/AMBER passed); Gate 1 is awaiting corrected conversion and taxonomy; Gate 2/science has not started. See [acquisition manifest](../experiments/E001-coverage-thinning/acquisition.json).
 - HPC is owner-operated and **CPU only**: 2,100 allocated core-hours, up to 128 vCPU/384 GB RAM. Terminal / Ubuntu / Aug2026 on DeIC Interactive HPC (SDU/K8s), persistent root `/work/Home/dl_binner/e001/e001-gate0`, with per-tool environments under `envs/`. The [E001 configuration](../experiments/E001-coverage-thinning/config.json) caps this diagnostic at 800 core-hours with nested smaller preflight/preprocessing limits; affordability is not established. The owner can expand storage: 200 GB is now a provisioning review threshold, not a scientific ceiling. Do not shrink E001 to fit it.
 - Selected source commits are recorded in [tool snapshots](evidence/2026-09-17-tool-snapshots.json); runnable environments are not yet validated. GenomeFace is unversioned, McDevol has an abnormal index state, and DCVBin lacks a model payload. These optional comparisons do not block the core E001 preflight.
-- Mapping/AMBER environments and micromamba/GNU time are installed and isolated native smoke is verified. Structured conda records include package URLs/hashes; original text exports are not replayable locks, and pip wheel hashes/environment reconstruction remain later freeze work. Other native environments/normalization checks, CPU throughput, marker payloads and full data joins remain gates. Access expiry is unknown; job duration is owner-managed. Host resources and shared filesystem capacity are not job allocation or personal quota measurements.
+- Mapping/AMBER persistent environments passed isolated native smoke in the prior job. The owner started a new job; disposable packages such as GNU time cannot be assumed present. The resume driver rechecks the persistent Python environment without reinstalling it. Structured conda records include package URLs/hashes; replayable locks, other native environments/normalization checks, CPU throughput, marker payloads and taxonomy remain gates. Job duration is owner-managed; host resources are not allocation measurements.
 - Original thesis artifacts remain owner-confirmed on UCloud and optional. Final evaluation/success claims remain open in the [question register](research/questions.md); E001 has only scoped diagnostic criteria.
 
 ## Git and continuity
 
 - Local implementation branch: `e001-gate0`; based on `main` at `bc1a3c5`. Baseline commit `2b87cd9` preserves supplied context. Use Git history for subsequent commits; no research run depends on an uncommitted configuration.
 - No remote is configured; the owner clarified it has not been created. Nothing has been published or pushed.
-- Thesis source and figures need not be part of the eventual public project's working tree. They are already in local Git history; leave them intact until the separate pre-publication packaging decision in [D001](decisions/D001-research-record.md#source-packaging-clarification-2026-09-17). Do not rewrite history silently.
+- Owner clarification, 2026-09-19: all `agent_context/` is an ignored local inbox. Existing files are removed from current Git tracking while retained on disk and in historical commits. Durable reviewed findings stay in research documentation. This does not sanitize historical material for future publication; [D001](decisions/D001-research-record.md) still requires a separate history/publication review.
 - Original planning remains in [history](history/README.md), explicitly nonbinding. New superseded decisions and experiments retain their own identities and links.
 
 Update this page whenever the immediate direction, significant evidence, or execution dependencies change. Do not turn it into a chronological session log.
