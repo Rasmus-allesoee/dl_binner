@@ -2,11 +2,20 @@
 
 Updated: 2026-09-18. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
-## Current action, 2026-09-19
+## Current action, 2026-09-20
+
+The owner completed `inventory-resume-ef6z97y9` successfully with source
+`9e1f939d4585bdf191dd562787932431235ff281`. The return was verified on
+2026-09-20; see the [accepted conversion](validation.md#owner-conversion-accepted-2026-09-20).
+Do not rerun the conversion command below. The next engineering task is to
+verify the historical taxonomy source and prepare/test population completion.
+No additional owner command, read download or training is authorized yet.
+
+## Completed conversion command, 2026-09-19
 
 The publisher provenance issue is resolved in [D005](../../docs/decisions/D005-gi-input-derivative.md).
-The next owner action is a verified conversion of that declared derivative.
-Gate 0 is partially complete, Gate 1 is awaiting corrected conversion/taxonomy,
+The owner completed the verified conversion of that declared derivative.
+Gate 0 is partially complete, Gate 1 is awaiting taxonomy/population approval,
 and scientific Gate 2 has not started.
 
 Use the new committed bundle and [resume driver](../../scripts/e001_inventory_resume.py).

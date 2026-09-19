@@ -2,7 +2,46 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
-## Current review, 2026-09-19
+## Owner conversion accepted, 2026-09-20
+
+Reviewed local inbox archive `agent_context/inventory-resume-ef6z97y9-return.tar.gz`;
+SHA-256 `55705be2a9a01c7b4b43340bd61ed4e5fe4350275badc34b7439073282c73086`
+matches the supplied checksum. The archive remains untracked. Its originating
+attempt is `/work/Home/dl_binner/e001/e001-gate0/inventory-resume-ef6z97y9`.
+Source commit: `9e1f939d4585bdf191dd562787932431235ff281`; returned code hashes
+match local committed code, and the returned policy matches byte for byte.
+
+- Execution started 2026-09-19 at 21:50:41 UTC on `j-12396660-job-0`.
+  Environment, audit and conversion passed with empty stderr and exit code 0.
+  Persistent mapping Python 3.12.10 / Biopython 1.85 passed isolation checks.
+- Full setup archive/original mapping verification passed; all three setup
+  metadata member hashes match the reviewed policy. Source FASTA and corrected
+  mapping hashes match D005. The raw join audit still reports false, as expected:
+  it describes the unmodified input before the explicit quarantine policy.
+- Exactly 20 foreign-provenance intervals (28,917,470 bp), two empty artifacts
+  and six coordinate-alias groups were accounted for. No additional invalid DNA,
+  length mismatch, duplicate FASTA key or mapping-only key was reported.
+- Conversion retained **22,594 contigs / 817,438,232 bp** at the 2,500 bp cutoff
+  from 210,612 truth-joined physical contigs. Canonical FASTA SHA-256:
+  `14870c27bc9467b5897bd1b65b347d7d5e2733d8bbe48c0085cb708194966fe1`;
+  truth TSV: `f6e1b948f2fbbc6ed404ea27e73fb238bd2f34765b585e8e3fbe77f59b25c301`.
+  These are returned output hashes, not independently rehashed local outputs.
+- Elapsed 31.37 seconds; child peak RSS 614,272 KiB (about 600 MiB).
+  These process measurements do not measure total allocated job cost.
+- Population status `blocked` is expected: `nodes` is null, domains unresolved,
+  and eligible genomes/short queries are zero pending taxonomy. The reported
+  817,438,232 excluded retained bp are currently outside the scored population,
+  not removed from the canonical FASTA. Population sufficiency is not yet known.
+
+Conclusion: accept the D005 conversion and continue with the declared GI
+development derivative; no dataset switch is warranted by this return. This
+does not certify the entire publisher dataset or establish biological results.
+Next verify the historical taxonomy and resolve the scored population. The
+owner-supplied `setup-members.json` contains no taxonomy/nodes payload. No further
+UCloud files are required to start that investigation; the owner can supply
+specific files up to 10 GB if local inspection becomes useful.
+
+## Prior implementation review, 2026-09-19
 
 [Publisher provenance investigation](../../docs/evidence/2026-09-19-gi-provenance.md)
 resolves all 20 FASTA-only intervals through seven conflicting BAM headers.
