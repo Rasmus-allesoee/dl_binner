@@ -23,6 +23,10 @@ return archives contain coverage reports but not the 145 MB nodes table.
 The full-data preparation used the existing macOS environment; owner Linux
 taxonomy-aware execution remains pending. No read download or model training ran.
 
+Transfer `artifacts/e001-transfer/e001-code-64664ac6860b.tar.gz` and its checksum
+were built from committed code. The archive checksum passed and all 88 tests
+also passed from its extracted copy outside the repository (18.14 seconds).
+
 ## Owner conversion accepted, 2026-09-20
 
 Reviewed local inbox archive `agent_context/inventory-resume-ef6z97y9-return.tar.gz`;
