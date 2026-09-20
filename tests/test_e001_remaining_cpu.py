@@ -5,6 +5,7 @@ import io
 import json
 import os
 from pathlib import Path
+import subprocess
 import sys
 import tarfile
 import unittest
@@ -27,6 +28,16 @@ class RemainingTests(unittest.TestCase):
 
     def tearDown(self):
         self.fixture.tearDown()
+
+    def test_isolated_entrypoint_imports_shared_helpers(self):
+        script = Path(__file__).resolve().parents[1] / "scripts/e001_remaining_cpu.py"
+        result = subprocess.run(
+            [sys.executable, "-I", str(script), "--help"],
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("root", result.stdout)
 
     def invoke(self, args, env, stage, label, limit):
         tool = stage.name

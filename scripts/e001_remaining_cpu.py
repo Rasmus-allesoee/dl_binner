@@ -15,6 +15,13 @@ import time
 import traceback
 from types import SimpleNamespace
 
+# The owner-run command intentionally launches this file with ``python -I``.
+# Isolated mode removes the script directory from the automatic import path, so
+# add this directory explicitly before importing the shared driver helpers.
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
 from e001_vamb_cpu import invoke, require, sha
 
 TOOLS = ("metabat", "comebin")
