@@ -233,6 +233,21 @@ bind dataset-specific exceptions to reviewed source hashes and record exclusions
 ### Ask for files
 If you ever need local access to some files from ucloud, just ask the user. User can easily download files up to 10 GB and give you local access to them if this will help the quality and speed of your work.
 
+### Environment ownership and grouped execution
+
+Follow [D006](docs/decisions/D006-environment-ownership.md): retain separate,
+persistent experiment-owned tool environments. E001 reuses its original
+`e001-gate0/envs/<tool>` prefixes across later gates; do not rebuild per gate or
+introduce a shared Python base. Never relocate or silently upgrade an executed
+environment. Changed recipes need distinct version-qualified prefixes; reuse by
+another experiment must be read-only and provenance-bound.
+
+Group independent native tool setup, synthetic smoke and bounded feasibility
+checks into one owner-run task when no interpretation is required between stages.
+Failure skips dependent stages for that tool, but need not block another isolated
+tool. Preserve per-tool logs and return a combined status. Do not repeat settled
+checks without evidence of changed inputs, runtime or a relevant failure.
+
 ---
 
 ## Default interaction style

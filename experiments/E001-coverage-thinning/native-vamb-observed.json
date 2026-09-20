@@ -1,0 +1,117 @@
+{
+  "return_sha256": "01cd6239ccae05551b7882c42ac5ba2737880a24be69c837e2d5e4a0bae1f77e",
+  "review_date": "2026-09-20",
+  "accepted_scope": "VAMB native synthetic smoke and CPU optimizer feasibility; no scientific training",
+  "provenance": {
+    "source_commit": "e129cefe6f5d0eeac9c17be43b885b8b1d225129",
+    "started_utc": "2026-09-20T18:09:39Z",
+    "allocated_vcpus": 4,
+    "platform": "Linux-6.12.0-211.40.1.el10_2.x86_64-x86_64-with-glibc2.39",
+    "hostname": "j-12397090-job-0",
+    "driver_sha256": "55c0b36277ddc791e74cb8fb8748e7cc79ef239e52b92055f9b3fb289ade428d",
+    "frozen_inputs_sha256": "ce2624a4f64911a499099db142e3c64acde6e9de12aa6dbfc81fb93fdf97acd3"
+  },
+  "status": {
+    "exit_code": 0,
+    "elapsed_seconds": 170.90902469982393,
+    "allocated_vcpus": 4,
+    "driver_allocated_core_hours": 0.18989891767993364,
+    "note": "Excludes owner job time outside this driver."
+  },
+  "environment": {
+    "python": "3.12.10 | packaged by conda-forge | (main, Apr 10 2025, 22:21:13) [GCC 13.3.0]",
+    "torch": "2.6.0+cpu",
+    "numpy": "1.26.4",
+    "prefix": "/work/Home/dl_binner/e001/e001-gate0/envs/vamb"
+  },
+  "cpu": {
+    "allocated_vcpus": 4,
+    "commit": "b146fb610921aef1da8aed5d739f1ce80d21b33a",
+    "contigs": 22594,
+    "epochs": [
+      {
+        "batch_size": 256,
+        "batches_per_epoch": 88,
+        "measured_epoch_seconds": [
+          2.915746240876615,
+          3.6507061070296913
+        ],
+        "schedule_epochs": 25,
+        "warmup_seconds": 3.5500115239992738
+      },
+      {
+        "batch_size": 512,
+        "batches_per_epoch": 44,
+        "measured_epoch_seconds": [
+          2.799385445890948,
+          2.70024865004234
+        ],
+        "schedule_epochs": 50,
+        "warmup_seconds": 2.658923604991287
+      },
+      {
+        "batch_size": 1024,
+        "batches_per_epoch": 22,
+        "measured_epoch_seconds": [
+          2.4580753028858453,
+          2.50791973201558
+        ],
+        "schedule_epochs": 75,
+        "warmup_seconds": 2.327396617969498
+      },
+      {
+        "batch_size": 2048,
+        "batches_per_epoch": 11,
+        "measured_epoch_seconds": [
+          2.1958494770806283,
+          2.180142635013908
+        ],
+        "schedule_epochs": 75,
+        "warmup_seconds": 2.090690557844937
+      },
+      {
+        "batch_size": 4096,
+        "batches_per_epoch": 5,
+        "measured_epoch_seconds": [
+          1.918644875055179,
+          1.9796888169366866
+        ],
+        "schedule_epochs": 75,
+        "warmup_seconds": 2.002501944079995
+      }
+    ],
+    "limitations": "Projection excludes extraction, clustering, other tools and real-data effects; not scientific launch approval.",
+    "limits": {
+      "experiment_core_hour_ceiling": 800,
+      "gpu_count": 0,
+      "initial_scientific_ram_gb": 48,
+      "initial_scientific_vcpus": 16,
+      "max_contigs": 250000,
+      "max_fit_core_hours": 80,
+      "max_input_bp": 4000000000,
+      "owner_core_hours": 2100,
+      "owner_initial_storage_gb": 250,
+      "preflight_core_hour_ceiling": 32,
+      "preflight_ram_gb": 24,
+      "preflight_vcpus": 8,
+      "preprocessing_core_hour_ceiling": 200,
+      "working_storage_review_gb": 200
+    },
+    "maxrss": 826980,
+    "maxrss_units": "KiB",
+    "projected_fit_core_hours": 0.8138847521363964,
+    "samples": 10,
+    "scope": "Synthetic CPU timing only; no research features, labels or saved model",
+    "seed": 11,
+    "source": "/work/Home/dl_binner/e001/e001-gate0/sources/vamb",
+    "status": "measured",
+    "tool": "vamb",
+    "torch_threads": 3,
+    "twofold_margin_fit_core_hours": 1.6277695042727929
+  },
+  "smoke": {
+    "cpu_forward": "pass",
+    "status": "pass",
+    "training": "not run"
+  }
+}

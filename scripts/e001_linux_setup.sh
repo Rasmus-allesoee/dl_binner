@@ -47,14 +47,22 @@ case "$tool" in
         ;;
     comebin)
         clone_source COMEBin https://github.com/ziyewang/COMEBin.git 1b476a41fac893294c70212a869573a732560ce5
-        micromamba create -y -p "$prefix" -f "$root/sources/COMEBin/comebin_env.yaml" --strict-channel-priority
+        export CXX="$prefix/bin/x86_64-conda-linux-gnu-c++"
+        micromamba create -y -p "$prefix" -f "$root/sources/COMEBin/comebin_env.yaml" --strict-channel-priority cxx-compiler=1.9.0
         micromamba run -p "$prefix" python -m pip install torch==2.13.0 --index-url https://download.pytorch.org/whl/cpu
         micromamba run -p "$prefix" python -m pip install pysam==0.23.3
         ;;
     metabat)
         clone_source metabat https://bitbucket.org/berkeleylab/metabat.git 8eb96023ef627d1955c05e3aca348c84b8757914
         create_env python=3.12.10 pip=25.1.1 numpy=2.2.6 biopython=1.85 pysam=0.23.3 cmake=3.31.6 make=4.4.1 c-compiler=1.9.0 cxx-compiler=1.9.0 boost-cpp=1.85.0 htslib=1.24 zlib=1.3.1
-        micromamba run -p "$prefix" cmake -S "$root/sources/metabat" -B "$root/build/metabat" -DCMAKE_INSTALL_PREFIX="$prefix" -DCMAKE_PREFIX_PATH="$prefix" -DNO_TESTING=ON
+        mkdir -p "$root/build"
+        [[ ! -e "$root/build/metabat-source" ]] || { echo 'Preserve existing MetaBAT build source; inspect before retrying'; exit 2; }
+        cp -a "$root/sources/metabat" "$root/build/metabat-source"
+        patch_file="$code/experiments/E001-coverage-thinning/metabat-shared-boost.patch"
+        git -C "$root/build/metabat-source" apply "$patch_file"
+        cp "$patch_file" "$root/locks/metabat/build.patch"
+        sha256sum "$patch_file" > "$root/locks/metabat/build-patch.sha256"
+        micromamba run -p "$prefix" cmake -S "$root/build/metabat-source" -B "$root/build/metabat" -DCMAKE_INSTALL_PREFIX="$prefix" -DCMAKE_PREFIX_PATH="$prefix" -DNO_TESTING=ON
         micromamba run -p "$prefix" cmake --build "$root/build/metabat" --parallel 2
         micromamba run -p "$prefix" cmake --install "$root/build/metabat"
         sha256sum "$prefix/bin/metabat2" "$prefix/bin/jgi_summarize_bam_contig_depths" > "$root/locks/$tool/binaries.sha256"

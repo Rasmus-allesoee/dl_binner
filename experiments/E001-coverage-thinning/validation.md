@@ -2,6 +2,55 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
+## VAMB accepted and remaining tools grouped, 2026-09-20
+
+Owner return `agent_context/native-vamb-rdow5991-return.tar.gz` matches checksum
+`01cd6239ccae05551b7882c42ac5ba2737880a24be69c837e2d5e4a0bae1f77e`.
+Its driver and frozen-input hashes match the executed snapshot. Source commit
+`e129cefe6f5d0eeac9c17be43b885b8b1d225129`; run began 2026-09-20 18:09:39 UTC
+on `j-12397090-job-0`. All setup/import/pip/native-smoke/CPU stages passed.
+Setup stderr has ordinary clone/package-script notices, no reported error;
+smoke and CPU stderr are empty. Python 3.12.10, NumPy 1.26.4 and CPU PyTorch
+2.6.0+cpu are isolated at the expected VAMB prefix. Resolved locks were inspected.
+
+[Observed data](native-vamb-observed.json) preserve per-batch timings and provenance.
+Total driver 170.91 seconds / 0.190 allocated core-hours (4 vCPU); optimizer
+process peak RSS 826,980 KiB. Native normalized C0/CS composition, total abundance
+and weights match exactly; largest coverage difference is 5.96e-8.
+The 300-epoch schedule projects **0.814 core-hours per fit**, **1.628 with a twofold
+margin**. Accept VAMB native synthetic compatibility and optimizer feasibility,
+not full-pipeline cost or biological performance. Do not rerun it in the group.
+
+[D006](../../docs/decisions/D006-environment-ownership.md) retains separate
+experiment-owned environments for all five E001 tools, reused across gates.
+The grouped driver attempts MetaBAT2 and COMEBin independently, preserves partial
+failures and packages both outcomes. It leaves accepted runtimes and inputs alone.
+
+Two previously unexecuted setup recipes were hardened after source inspection:
+- COMEBin's hnswlib pip dependency may compile; add the pinned C++ compiler to
+  the environment-file solve and explicitly select its executable. The tool's
+  scientific dependency pins/source remain unchanged. Micromamba's official
+  [setup documentation](https://github.com/mamba-org/setup-micromamba) describes
+  extra create specs with environment files (not explicit lockfiles).
+- MetaBAT source `src/CMakeLists.txt` forces static Boost. Build with the pinned
+  Conda shared Boost libraries via the one-line [build patch](metabat-shared-boost.patch)
+  in a separate `build/metabat-source` copy. The original execution checkout
+  remains pristine; preserve patch/hash and binary hashes in locks. This changes
+  linkage, not binning logic, and native smoke remains required. The patch passes
+  `git apply --check` against the exact cached commit. Anaconda package metadata
+  confirms the pinned libboost/libboost-devel 1.85.0 packages; no native build is
+  claimed from metadata or patch inspection alone.
+
+All **102 portable tests passed**, including two isolated tool prefixes, repeat
+invocation without reinstall, continuing the second tool after first-tool setup
+or smoke failure, preserving partial environments, packaging failure and small
+synthetic MetaBAT generation/membership parsing, and selecting only a failed tool
+for reviewed recovery without rerunning its accepted peer. Shell syntax and documentation
+checks passed. Native grouped Linux execution remains pending. COMEBin timing
+uses its source model/InfoNCE at the full six-view batch, without changing loss,
+batch or native scientific schedule to improve the projection. MetaBAT CPU timing
+uses synthetic uniform lengths/groups and is not a real-data runtime guarantee.
+
 ## Owner population frozen and VAMB step prepared, 2026-09-20
 
 Return `agent_context/inventory-resume-6z45cola-return.tar.gz` verified SHA-256

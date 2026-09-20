@@ -1,7 +1,7 @@
 # E001: Where Does Reduced Coverage Evidence Lose Recoverable Sequence?
 
 Date: 2026-09-17. Updated: 2026-09-19
-Execution status: mapping/AMBER isolated native smoke passed; taxonomy-aware owner population accepted and frozen; VAMB CPU preflight prepared, remaining native/scientific execution pending
+Execution status: mapping/AMBER/VAMB native smoke passed; population frozen; VAMB synthetic CPU feasibility accepted; grouped COMEBin/MetaBAT2 preflight prepared, scientific execution pending
 Scientific outcome: not assessed
 Protocol: prospective v2; [config.json](config.json) owns numerical settings; scientific launch not authorized
 Questions: [Q001](../../docs/research/questions.md#q001), [Q003](../../docs/research/questions.md#q003), [Q004](../../docs/research/questions.md#q004); hypothesis [H001](../../docs/research/questions.md#h001)
@@ -134,7 +134,7 @@ Before Gate 2, commit executable code/configuration and record that pre-existing
 
 ## Attempts and results
 
-No scientific attempts have been launched. Portable checks and mapping/AMBER native smoke passed. Assembly/truth/setup acquisition, the owner join audit, D005 conversion and taxonomy/population freeze completed. VAMB CPU preflight is prepared; other native checks, read acquisition, CPU feasibility and model training remain pending. Software checks are not biological results.
+No scientific attempts have been launched. Mapping/AMBER/VAMB native smoke and VAMB synthetic CPU checks passed. Assembly/truth/setup acquisition, D005 conversion and population freeze completed. Grouped COMEBin/MetaBAT2 native and CPU checks are prepared; marker/clustering integration, read-prefix feasibility and scientific execution remain pending. Software checks are not biological results. Environment ownership follows [D006](../../docs/decisions/D006-environment-ownership.md).
 
 Every later attempt gets a unique `run-NNN` entry with status, condition/seed, source/config/input hashes, logs and output locations, including crashes/timeouts. Never overwrite a previous run directory. Legal empty output is evaluated as zero recovery with undefined purity where appropriate; a crashed or truncated output is not.
 

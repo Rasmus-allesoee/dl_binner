@@ -4,6 +4,77 @@ Updated: 2026-09-20. This is the execution guide, not a scientific result. Read 
 
 ## Current action, 2026-09-20
 
+VAMB passed; see [observed timing](native-vamb-observed.json). The frozen population
+and mapping/AMBER/VAMB checks are settled. Next run **COMEBin and MetaBAT2 together**
+using the new grouped driver. [D006](../../docs/decisions/D006-environment-ownership.md)
+retains all five separate tool environments under the existing work root. No
+environment is moved, merged, upgraded or rebuilt merely because of a new gate.
+
+Select **8 vCPU / at least 24 GB RAM, CPU only**, with the same persistent Home
+mount. The larger allocation gives headroom for COMEBin's six-view, batch-1024
+contrastive loss; do not reduce the native batch to make the preflight fit. Upload
+only the new code archive/checksum to the existing `transfer/` directory, then:
+
+```sh
+bash <<'SH'
+set -euo pipefail
+WORK=/work/Home/dl_binner/e001/e001-gate0
+LOG=$(mktemp "$WORK/transfer/e001-remaining.XXXXXX.log")
+echo "Terminal log: $LOG"
+(
+BUNDLE=e001-code-<commit>
+CODE="$WORK/$BUNDLE"
+cd "$WORK/transfer"
+sha256sum --check "$BUNDLE.tar.gz.sha256"
+if test -e "$CODE" || test -L "$CODE"; then
+    echo "STOP: code directory already exists"
+    exit 1
+fi
+tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
+python3 -I "$CODE/scripts/e001_remaining_cpu.py" "$WORK"
+) 2>&1 | tee "$LOG"
+SH
+```
+
+The driver attempts MetaBAT2 then COMEBin, each through setup, isolated imports,
+pip consistency, native synthetic smoke, and a bounded CPU check. A failed tool
+skips its dependent stages but the other independent tool still runs. Successful
+prior setups are reused; incomplete setups remain untouched and are reported.
+No separate chat checkpoint is needed between successful routine stages.
+
+Downloads are **software, source and source-bundled marker HMMs**, not reads or
+scientific datasets. Writes are separate `envs/metabat` and `envs/comebin`, their
+`sources/`, `locks/`, package caches, a MetaBAT build/source copy under `build/`,
+and a unique `native-remaining-...` attempt. Other environments, old attempts,
+frozen inputs and the reference caches are not modified. No system/root installs.
+
+MetaBAT2 receives generated FASTA/depth data matching E001's 22,594 contigs,
+817,438,232 bases and ten samples, with synthetic composition/coverage groups.
+COMEBin receives random ten-sample coverage/variance and k-mer features: six
+views, batch 1,024, source models and native InfoNCE, one warmup and two measured
+forward/backward/AdamW steps. It projects 22 batches per epoch over the 200-epoch
+ceiling, reporting a twofold margin. Neither check is scientific training; no
+research model/checkpoint is produced. These checks do not yet exercise COMEBin's
+complete marker-guided clustering grid or real BAM extraction throughput.
+
+Expect tens of minutes, with roughly 15 GB disk headroom for environments/cache,
+build and synthetic files. Each setup has 30 minutes, smoke 5 minutes and CPU
+measurement 10 minutes; import/pip checks add small limits. Total upper bound is
+about 100 minutes / 13.4 allocated core-hours plus wrapper overhead, within the
+32-core-hour preflight ceiling only insofar as earlier allocated usage leaves
+that headroom. Actual successful drivers so far are much shorter; do not equate
+their time with all owner job/idle spend. Owner manages job duration/extensions.
+
+Return the printed `native-remaining-...-return.tar.gz`, its `.sha256` and automatic
+terminal `.log`. No full synthetic FASTA or environment is included in the return.
+If no archive exists, return the log. Stop after the grouped task, regardless of
+status. Review may accept one tool and investigate the other without rerunning
+both. No bulk read downloads or scientific fits are authorized.
+
+## Completed VAMB step, 2026-09-20
+
+The following VAMB-only command is retained as executed history, not the next action.
+
 Taxonomy-aware owner output `inventory-resume-6z45cola` is accepted and the
 [input population is frozen](frozen-inputs.json). Do not rerun inventory,
 taxonomy, mapping or AMBER smoke. The next action is **VAMB CPU preflight**.
