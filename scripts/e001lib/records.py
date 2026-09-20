@@ -270,7 +270,10 @@ def domains_from_nodes(taxids, nodes_path):
     with open_text(nodes_path) as handle:
         for row in csv.reader(handle, delimiter="|"):
             require(len(row) >= 3, "Invalid NCBI nodes.dmp")
-            parents[row[0].strip()] = row[1].strip()
+            taxid, parent = row[0].strip(), row[1].strip()
+            require(taxid.isdigit() and parent.isdigit() and taxid not in parents,
+                    "Invalid or duplicate taxonomy node")
+            parents[taxid] = parent
     roots = {"2": "bacteria", "2157": "archaea", "2759": "eukaryota", "10239": "viruses"}
     resolved = {}
     for taxid in set(taxids):
@@ -278,7 +281,7 @@ def domains_from_nodes(taxids, nodes_path):
         while current not in roots and current not in visited and current in parents:
             visited.add(current)
             current = parents[current]
-        resolved[taxid] = roots.get(current, "unknown")
+        resolved[taxid] = roots.get(current, "unknown") if current in parents and taxid in parents else "unknown"
     return resolved
 
 

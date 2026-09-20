@@ -53,6 +53,13 @@ Both published truth tables omit them. This changes mapping competition and does
 not restore missing intended GI sequences. Corrected conversion and historical
 taxonomy remain pending; no scientific outcome has been assessed.
 
+2026-09-20: owner D005 conversion passed. The separate publisher-linked historical
+taxonomy is verified, and actual local preparation passes the existing population
+floors (224 genomes; 7,964 short queries across 66 genomes), with unchanged FASTA
+and truth. See [taxonomy evidence](../evidence/2026-09-20-gi-taxonomy.md). Owner
+taxonomy-aware reproduction/freeze and remaining native feasibility gates are next;
+no binning outcome or methodological conclusion follows from these input checks.
+
 ## Q004
 
 **What biological and computational improvement will count as success for the selected regime?**

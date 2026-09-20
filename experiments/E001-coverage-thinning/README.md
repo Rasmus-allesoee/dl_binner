@@ -1,7 +1,7 @@
 # E001: Where Does Reduced Coverage Evidence Lose Recoverable Sequence?
 
 Date: 2026-09-17. Updated: 2026-09-19
-Execution status: mapping/AMBER isolated native smoke and D005 owner conversion passed; taxonomy/population approval, other native validation and scientific execution pending
+Execution status: mapping/AMBER isolated native smoke and D005 owner conversion passed; taxonomy-aware population validated locally, owner reproduction/freeze and other native/scientific execution pending
 Scientific outcome: not assessed
 Protocol: prospective v2; [config.json](config.json) owns numerical settings; scientific launch not authorized
 Questions: [Q001](../../docs/research/questions.md#q001), [Q003](../../docs/research/questions.md#q003), [Q004](../../docs/research/questions.md#q004); hypothesis [H001](../../docs/research/questions.md#h001)

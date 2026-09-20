@@ -2,6 +2,27 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
+## Historical taxonomy and local population, 2026-09-20
+
+The owner's local taxonomy archive was independently verified against the live
+CAMI page and object metadata, then every member hashed. All 196 GI tax IDs resolve
+directly to Bacteria for all 259 source genomes. The actual local full-data
+`prepare-hmp --nodes` run passes all five population gates without any threshold
+change: 224 evaluation genomes and 7,964 short queries spanning 66 genomes.
+Canonical FASTA/truth hashes are unchanged from the accepted owner conversion.
+See the [evidence and requirements](../../docs/evidence/2026-09-20-gi-taxonomy.md)
+and [pinned policy](taxonomy-policy.json) for source/output identities.
+Ignored local outputs: `artifacts/e001-taxonomy-reviewed/` and
+`artifacts/e001-population-reviewed/`; no raw data or taxonomy is tracked.
+
+All **88 portable tests passed**. New tests exercise complete taxonomy-aware
+owner-driver invocation twice, invariant output checks, corrupted archive,
+wrong member hash, missing/duplicate members, wrong mapping and domain coverage,
+and missing-root/cyclic/duplicate taxonomy nodes. Failed attempts retain logs;
+return archives contain coverage reports but not the 145 MB nodes table.
+The full-data preparation used the existing macOS environment; owner Linux
+taxonomy-aware execution remains pending. No read download or model training ran.
+
 ## Owner conversion accepted, 2026-09-20
 
 Reviewed local inbox archive `agent_context/inventory-resume-ef6z97y9-return.tar.gz`;

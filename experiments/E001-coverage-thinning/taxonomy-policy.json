@@ -1,0 +1,85 @@
+{
+  "source_url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_DATABASES/taxdump_cami2_toy.tar.gz",
+  "archive_sha256": "686cc8b07b5c8248cc2626fe32ee6ce87a136b3b48977729ac5426e303948bf4",
+  "archive_bytes": 93167485,
+  "publisher_etag": "cb872dfedf4d97cd5b5c032bc5a2aa13",
+  "mapping_sha256": "4353f05be6a94c0c05be083088148eac01bcf34dc05c6a061709ff5fbd61d720",
+  "members": {
+    "citations.dmp": {
+      "size": 16463109,
+      "sha256": "b8885bd2ae189bd6bea1f99a52811d6cea1bc9a3242c4490950ad3e291400f1a"
+    },
+    "delnodes.dmp": {
+      "size": 3392680,
+      "sha256": "f17044b7fd687f332b18cd62ac334bd53795d5a0f1b96c6857b74fe329b5cf1c"
+    },
+    "division.dmp": {
+      "size": 452,
+      "sha256": "4d6b1eda4a7c2bad0f3b20687db71e359ec45140fe29daffd2654bbee247ec14"
+    },
+    "fullnamelineage.dmp": {
+      "size": 416358580,
+      "sha256": "206869bd1e66b409fe19d3eefdf1c4b38aa211c795acd3224fe184623b09521f"
+    },
+    "gencode.dmp": {
+      "size": 4575,
+      "sha256": "f997cc488622950dab7ce501d9217790608976089b494e256ac3b15b9d5568bc"
+    },
+    "host.dmp": {
+      "size": 4985105,
+      "sha256": "e18907f22a7f40b203adeb77444ce80495da45a71aee8f67806e742086eb5da7"
+    },
+    "merged.dmp": {
+      "size": 899336,
+      "sha256": "99a88f3b2ef797c30ff0573f87e1dbdf61b6056212a92a858c1a67ca63051314"
+    },
+    "names.dmp": {
+      "size": 206920814,
+      "sha256": "411f87f4a57099316f400de0d5e1467fbb925b608e79c8d63faa7b35aabf700b"
+    },
+    "nodes.dmp": {
+      "size": 145628187,
+      "sha256": "69397ef3fdaa790319f17044208fe072f33ce27290eb1dcd12825fb9627e7827"
+    },
+    "rankedlineage.dmp": {
+      "size": 207754804,
+      "sha256": "088d24084f909b17017c07d8b023bdf18d771ede2b6a9a7433e71d813142a417"
+    },
+    "taxidlineage.dmp": {
+      "size": 169946633,
+      "sha256": "f64b8e66ba0c648486eee678ef10bd9005496e121a5005b617576531eaf17351"
+    },
+    "typematerial.dmp": {
+      "size": 7186738,
+      "sha256": "ba5f6fc339e7c47a3f1795061d48c5445cdbd2e82f9d03a959d7cbaf855bd5ea"
+    },
+    "typeoftype.dmp": {
+      "size": 2911,
+      "sha256": "93b5bbd33ed708fcf26d001f6701dd6aaec20d5bb78b90dcd70fd0bebe9fe741"
+    }
+  },
+  "taxid_count": 196,
+  "genome_domains": {
+    "bacteria": 259
+  },
+  "invariant_outputs": {
+    "canonical.fna": "14870c27bc9467b5897bd1b65b347d7d5e2733d8bbe48c0085cb708194966fe1",
+    "truth.tsv": "f6e1b948f2fbbc6ed404ea27e73fb238bd2f34765b585e8e3fbe77f59b25c301"
+  },
+  "expected_population": {
+    "status": "validated",
+    "config_sha256": "1f79ab50528a393402ef736b1b547cbf9f6a370d9e8920197b92ecf5cbcbc10c",
+    "retained_contigs": 22594,
+    "retained_bp": 817438232,
+    "eligible_genomes": 224,
+    "short_queries": 7964,
+    "excluded_retained_bp": 0,
+    "outputs": {
+      "canonical.fna": "14870c27bc9467b5897bd1b65b347d7d5e2733d8bbe48c0085cb708194966fe1",
+      "contigs.jsonl": "8864e60bb8494693015946865d9d74146d0257a48d597510b1b031ac09664698",
+      "excluded-fasta.json": "69c7ad2fa828720d9e0f5da974ec6c6029d09c22403854d788062c7eab12d051",
+      "population.json": "a4616aacf343eb65d7b0d7facd531fb2e4b47ed5a1271cc7335ebc1347d02ac2",
+      "truth.tsv": "f6e1b948f2fbbc6ed404ea27e73fb238bd2f34765b585e8e3fbe77f59b25c301"
+    }
+  }
+}

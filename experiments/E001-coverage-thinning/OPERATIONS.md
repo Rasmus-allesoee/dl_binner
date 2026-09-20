@@ -7,9 +7,54 @@ Updated: 2026-09-18. This is the execution guide, not a scientific result. Read 
 The owner completed `inventory-resume-ef6z97y9` successfully with source
 `9e1f939d4585bdf191dd562787932431235ff281`. The return was verified on
 2026-09-20; see the [accepted conversion](validation.md#owner-conversion-accepted-2026-09-20).
-Do not rerun the conversion command below. The next engineering task is to
-verify the historical taxonomy source and prepare/test population completion.
-No additional owner command, read download or training is authorized yet.
+Do not rerun the old taxonomy-free conversion. Historical taxonomy and population
+now pass locally; see [evidence](../../docs/evidence/2026-09-20-gi-taxonomy.md).
+The next owner step is the new taxonomy-aware command below. No read download or
+training is authorized.
+
+Upload the new code bundle/checksum and the owner's local
+`agent_context/taxdump_cami2_toy.tar.gz` into the existing persistent directory
+`/work/Home/dl_binner/e001/e001-gate0/transfer/`, keeping their filenames.
+The taxonomy archive is 93,167,485 bytes, is not included in the code bundle,
+and must remain untracked. No upload to UCloud has been performed by the agent.
+Its SHA-256 is pinned in `taxonomy-policy.json` and verified automatically.
+
+```sh
+bash <<'SH'
+set -euo pipefail
+WORK=/work/Home/dl_binner/e001/e001-gate0
+LOG=$(mktemp "$WORK/transfer/e001-taxonomy.XXXXXX.log")
+echo "Terminal log: $LOG"
+(
+BUNDLE=e001-code-<commit>
+CODE="$WORK/$BUNDLE"
+cd "$WORK/transfer"
+sha256sum --check "$BUNDLE.tar.gz.sha256"
+if test -e "$CODE" || test -L "$CODE"; then
+    echo "STOP: code directory already exists"
+    exit 1
+fi
+tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
+python3 -I "$CODE/scripts/e001_inventory_resume.py" "$WORK" --convert \
+    --taxonomy "$WORK/transfer/taxdump_cami2_toy.tar.gz"
+) 2>&1 | tee "$LOG"
+SH
+```
+
+Use 4 vCPU / 12 GB. Expect minutes, primarily file reads, not training; reserve
+roughly 2 GB additional disk space for a new attempt and code. The command
+downloads/installs nothing. It probes the persistent environment, verifies the
+existing GI/setup inputs and taxonomy archive/all members, and writes only
+`nodes.dmp` from the taxonomy archive into the new attempt. It regenerates the
+canonical data and population in that attempt and requires unchanged canonical
+FASTA/truth hashes plus exact locally verified population/output hashes and all
+population gates. Old accepted and failed attempts remain untouched.
+
+Return the printed `inventory-resume-...-return.tar.gz`, its `.sha256`, and the
+automatic terminal `.log`; if packaging never starts, return the log alone.
+Expect scientific population status `validated`, but this is only the input
+population gate, not authorization for scientific execution. Stop after the command
+on either success or failure. A mismatch fails closed and requires review.
 
 ## Completed conversion command, 2026-09-19
 
@@ -18,7 +63,7 @@ The owner completed the verified conversion of that declared derivative.
 Gate 0 is partially complete, Gate 1 is awaiting taxonomy/population approval,
 and scientific Gate 2 has not started.
 
-Use the new committed bundle and [resume driver](../../scripts/e001_inventory_resume.py).
+This older command used the [resume driver](../../scripts/e001_inventory_resume.py).
 The old `e001_gi_inventory.sh`, `e001_retry_conversion.sh`, and `e001_hmp_audit.sh` are retired.
 The resume driver does not acquire data or install software. It:
 

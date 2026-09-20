@@ -230,6 +230,9 @@ on synthetic inputs, including repeated invocation and failed prerequisites,
 before transfer. Diagnose whole-file input relationships before adding exceptions;
 bind dataset-specific exceptions to reviewed source hashes and record exclusions.
 
+### Ask for files
+If you ever need local access to some files from ucloud, just ask the user. User can easily download files up to 10 GB and give you local access to them if this will help the quality and speed of your work.
+
 ---
 
 ## Default interaction style

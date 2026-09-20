@@ -32,7 +32,7 @@ def require(condition, message):
         raise ValueError(message)
 
 
-def run(root, code, convert=False):
+def run(root, code, convert=False, taxonomy=None):
     require(root.is_absolute() and root.is_dir(), "Existing absolute work root required")
     stage = Path(tempfile.mkdtemp(prefix="inventory-resume-", dir=root))
     started, status = time.monotonic(), 1
@@ -59,7 +59,7 @@ def run(root, code, convert=False):
             "convert_requested": convert, "started_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             "code_sha256": {str(p.relative_to(code)): digest(p) for p in
                             (code / "scripts/e001_inventory_resume.py", code / "scripts/e001.py",
-                             code / "scripts/e001lib/records.py")}}, indent=2) + "\n")
+                             code / "scripts/e001lib/records.py", code / "scripts/e001lib/taxonomy.py")}}, indent=2) + "\n")
         require(python.is_file() and os.access(python, os.X_OK), "Persistent mapping Python is missing; preserve files and return logs")
         command("environment", [python, "-I", "-c",
                 "import sys,site,json; from pathlib import Path; import Bio,numpy,pysam; "
@@ -70,6 +70,8 @@ def run(root, code, convert=False):
         policy_path = code / "experiments/E001-coverage-thinning/gi-input-policy.json"
         policy = json.loads(policy_path.read_text())
         (stage / "policy.json").write_text(policy_path.read_text())
+        taxonomy_args = []
+        taxonomy_policy = None
         inventory = root / "inventory"
         gi = inventory / "per_bodysite/gastro_bam"
         setup = inventory / "gastrooral/setup.tar.gz"
@@ -100,10 +102,26 @@ def run(root, code, convert=False):
             require(audit[field] == 0, "Unreviewed input anomaly: " + field)
         require(audit["mapping_contract_error"] is None, "Invalid truth mapping")
         require(audit["excluded_known_empty_count"] == policy["expected_empty_records"], "Unexpected empty records")
+        if taxonomy is not None:
+            require(convert, "Taxonomy requires --convert")
+            taxonomy_path = code / "experiments/E001-coverage-thinning/taxonomy-policy.json"
+            taxonomy_policy = json.loads(taxonomy_path.read_text())
+            (stage / "taxonomy-policy.json").write_text(taxonomy_path.read_text())
+            command("taxonomy", [python, "-s", "-c",
+                    "import sys; sys.path.insert(0,sys.argv[1]); from e001lib.taxonomy import prepare; "
+                    "prepare(*sys.argv[2:])", code / "scripts", taxonomy, taxonomy_path,
+                    gi / "gsa_pooled_mapping_fixed.tsv", stage / "taxonomy"])
+            taxonomy_args = ["--nodes", stage / "taxonomy/nodes.dmp"]
         if convert:
             command("conversion", [python, "-s", code / "scripts/e001.py", "prepare-hmp", *inputs,
-                                   "--policy", policy_path, "--out", stage / "input"])
+                                   "--policy", policy_path, *taxonomy_args, "--out", stage / "input"])
             report = json.loads((stage / "input/inventory.json").read_text())
+            if taxonomy_policy is not None:
+                for name, expected in taxonomy_policy["invariant_outputs"].items():
+                    require(report["outputs"][name] == expected, "Taxonomy changed input: " + name)
+                for name, expected in taxonomy_policy["expected_population"].items():
+                    require(report[name] == expected, "Population differs from local validation: " + name)
+                require(report["status"] == "validated", "Scientific population gates remain blocked")
             print("Conversion complete; scientific population status: " + report["status"], flush=True)
         status = 0
     except Exception:
@@ -127,6 +145,9 @@ def run(root, code, convert=False):
                     path = stage / "input" / name
                     if path.is_file():
                         archive.add(path, arcname=stage.name + "/input/" + name)
+                coverage = stage / "taxonomy/coverage.json"
+                if coverage.is_file():
+                    archive.add(coverage, arcname=stage.name + "/taxonomy/coverage.json")
             with Path(str(returned) + ".sha256").open("x") as handle:
                 handle.write(digest(returned) + "  " + returned.name + "\n")
             print("RETURN: " + str(returned) + " and .sha256", flush=True)
@@ -146,5 +167,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("root", type=Path)
     parser.add_argument("--convert", action="store_true")
+    parser.add_argument("--taxonomy", type=Path, help="Local pinned CAMI taxonomy archive; no download")
     args = parser.parse_args()
-    raise SystemExit(run(args.root, Path(__file__).resolve().parents[1], args.convert))
+    raise SystemExit(run(args.root, Path(__file__).resolve().parents[1], args.convert, args.taxonomy))
