@@ -22,7 +22,8 @@ from e001lib.metrics import neighbor_purity, score
 from e001lib.native import (mapping_commands, metabat_commands, run_checked, scale_comebin, scale_metabat_depth,
                             thinning_command, validate_comebin_pair, verify_source)
 from e001lib.records import ContractError, EXPERIMENT, audit_hmp, config, digest, partition, prepare_hmp, sequences, table, truth_table, validate_attempt, write_cami, write_json
-from e001lib.smoke import bam_inventory, check_interleaved, check_thinned_fixture, make_fixture
+from e001lib.smoke import (bam_inventory, check_interleaved, check_thinned_fixture, make_fixture,
+                           run_metabat_scale_check)
 
 
 class Files(unittest.TestCase):
@@ -437,6 +438,18 @@ class AdapterTests(Files):
         self.assertNotIn("--cvExt", commands[1])
         with self.assertRaises(ContractError):
             metabat_commands("ref", ["bam"], self.root, seed=0)
+
+    def test_metabat_scale_smoke_accepts_only_expected_empty_result(self):
+        logs = self.root / "logs"
+        logs.mkdir()
+
+        def expected_empty(*args):
+            write_json(logs / "metabat-CS.json", {"returncode": 1, "status": "failed"})
+            (logs / "metabat-CS.stderr").write_text("[Error!] There were no large target contigs. Cannot proceed.\n")
+            raise ContractError("Native command failed")
+
+        with patch("e001lib.smoke.run_checked", side_effect=expected_empty):
+            self.assertEqual(run_metabat_scale_check(["metabat2"], logs), "expected-empty-no-target-contigs")
 
     def test_metabat_scale_is_not_thinning(self):
         path = self.file("depth.tsv", "contigName\tcontigLen\ttotalAvgDepth\ts.bam\ts.bam-var\na\t2500\t10\t10\t4\nb\t2500\t0\t0\t0\n")

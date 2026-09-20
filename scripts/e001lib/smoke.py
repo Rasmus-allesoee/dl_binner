@@ -17,7 +17,7 @@ from Bio.SeqIO.QualityIO import FastqGeneralIterator
 from .metrics import score
 from .native import (comebin_features, mapping_commands, metabat_commands, pipeline, require_packages,
                      run_checked, scale_comebin, thinning_command, validate_comebin_pair, verify_source, vamb_features)
-from .records import config, digest, partition, require, sequences, write_cami, write_json
+from .records import ContractError, config, digest, partition, require, sequences, write_cami, write_json
 
 
 def make_fixture(out):
@@ -243,6 +243,20 @@ def feature_smoke(tool, source, fixture, mapping, out):
     write_json(out / "smoke.json", report)
 
 
+def run_metabat_scale_check(cmd, log_dir):
+    """Run the scale-control check, allowing only MetaBAT2's explicit empty result."""
+    try:
+        run_checked(cmd, log_dir, "metabat-CS")
+        return "completed"
+    except ContractError:
+        log_dir = Path(log_dir)
+        record = json.loads((log_dir / "metabat-CS.json").read_text())
+        stderr = (log_dir / "metabat-CS.stderr").read_text()
+        require(record.get("returncode") == 1 and "There were no large target contigs" in stderr,
+                "MetaBAT2 scale-control run failed for an unexpected reason; inspect metabat-CS logs")
+        return "expected-empty-no-target-contigs"
+
+
 def metabat_smoke(source, fixture, out):
     provenance = verify_source("metabat", source)
     fixture, out = Path(fixture), Path(out)
@@ -262,7 +276,8 @@ def metabat_smoke(source, fixture, out):
     scaled.mkdir()
     scale_metabat_depth(out / "depth.tsv", scaled / "depth.tsv", lengths)
     cmd = metabat_commands(fixture / "fixture.fna", sorted((fixture / "C0").glob("*.bam")), scaled)[1]
-    run_checked(cmd, out / "logs", "metabat-CS")
-    cs_assignments = partition(scaled / "bins.MemberMatrix.txt", lengths, "metabat")
+    cs_status = run_metabat_scale_check(cmd, out / "logs")
+    matrix = scaled / "bins.MemberMatrix.txt"
+    cs_assignments = partition(matrix, lengths, "metabat") if matrix.exists() else {}
     write_json(out / "smoke.json", {**provenance, "status": "pass", "assigned_contigs": len(assignments),
-               "CS_assigned_contigs": len(cs_assignments), "biological_interpretation": "none"})
+               "CS_status": cs_status, "CS_assigned_contigs": len(cs_assignments), "biological_interpretation": "none"})
