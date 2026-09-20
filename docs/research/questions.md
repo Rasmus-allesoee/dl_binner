@@ -60,6 +60,12 @@ and truth. See [taxonomy evidence](../evidence/2026-09-20-gi-taxonomy.md). Owner
 taxonomy-aware reproduction/freeze and remaining native feasibility gates are next;
 no binning outcome or methodological conclusion follows from these input checks.
 
+2026-09-20 owner follow-up: taxonomy-aware outputs match local hashes and the
+[population is frozen](../../experiments/E001-coverage-thinning/frozen-inputs.json).
+This closes the input-identity/domain/population-floor checks, not the broader
+benchmark/generalization question. Proceed to native CPU feasibility without
+repeating accepted inventory work.
+
 ## Q004
 
 **What biological and computational improvement will count as success for the selected regime?**

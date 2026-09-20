@@ -1,8 +1,72 @@
 # E001: Validation and UCloud Preflight
 
-Updated: 2026-09-18. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
+Updated: 2026-09-20. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
 ## Current action, 2026-09-20
+
+Taxonomy-aware owner output `inventory-resume-6z45cola` is accepted and the
+[input population is frozen](frozen-inputs.json). Do not rerun inventory,
+taxonomy, mapping or AMBER smoke. The next action is **VAMB CPU preflight**.
+
+Upload only the new committed code bundle and its checksum to the existing
+`/work/Home/dl_binner/e001/e001-gate0/transfer/`. No taxonomy or data reupload.
+Use the commit-specific bundle name supplied in chat:
+
+```sh
+bash <<'SH'
+set -euo pipefail
+WORK=/work/Home/dl_binner/e001/e001-gate0
+LOG=$(mktemp "$WORK/transfer/e001-vamb.XXXXXX.log")
+echo "Terminal log: $LOG"
+(
+BUNDLE=e001-code-<commit>
+CODE="$WORK/$BUNDLE"
+cd "$WORK/transfer"
+sha256sum --check "$BUNDLE.tar.gz.sha256"
+if test -e "$CODE" || test -L "$CODE"; then
+    echo "STOP: code directory already exists"
+    exit 1
+fi
+tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
+python3 -I "$CODE/scripts/e001_vamb_cpu.py" "$WORK"
+) 2>&1 | tee "$LOG"
+SH
+```
+
+Use **4 allocated vCPU / 12 GB RAM**. The CPU projection assumes this allocation.
+Expect tens of minutes for first software installation, then minutes for checks;
+allow approximately 5 GB for environment/cache/source and small synthetic outputs.
+These are provisioning estimates, not measured Linux outcomes. Stage timeouts:
+45 minutes setup, 2 minutes each environment/pip check, 10 minutes smoke and
+10 minutes synthetic timing, roughly 4.6 allocated core-hours maximum plus wrapper
+overhead. A timeout kills the command's process group and returns diagnostic logs.
+
+The driver creates a unique `native-vamb-...` attempt, checks fresh-job prerequisites,
+uses `$WORK/bin/micromamba` if installing, and keeps the environment at
+`$WORK/envs/vamb`, source at `sources/vamb`, caches under the work root and locks
+at `locks/vamb`. It downloads **software only** (pinned VAMB source and CPU
+dependencies); no research data, model weights, reference databases or read archives.
+An intact previously completed VAMB setup can be reused; partial setup is preserved
+and reported, not deleted or silently reinstalled. No system/root package installs.
+
+It then checks isolated imports/pip consistency and runs VAMB's previously prepared
+native feature/scale/zero-row smoke on existing synthetic BAMs. Finally it times
+native VAE forward/backward/optimizer epochs on generated random arrays with
+22,594 rows and ten samples, not on the scientific contigs or coverage. Each of
+256/512/1024/2048/4096 batch sizes gets one warmup and two measured epochs.
+The projection weights them by the CLI's 300-epoch schedule (25/50/75/75/75),
+uses the slower measured epoch, and reports a twofold margin. This is an optimizer
+microbenchmark, not a scientific fit, and writes no trained model.
+
+Return the printed `native-vamb-...-return.tar.gz`, its `.sha256`, and terminal
+`.log`. If no archive is produced, return the log. Stop after either success or
+failure. Returned locks, native smoke and timing require inspection; a projection
+does not approve the full experiment budget or account for extraction/clustering.
+COMEBin/MetaBAT2 native checks and read-prefix feasibility remain subsequent tasks.
+
+## Completed taxonomy step, 2026-09-20
+
+The following command is retained as execution history, not the next action.
 
 The owner completed `inventory-resume-ef6z97y9` successfully with source
 `9e1f939d4585bdf191dd562787932431235ff281`. The return was verified on

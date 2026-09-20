@@ -1,0 +1,47 @@
+{
+  "experiment": "E001",
+  "status": "frozen-input-population",
+  "accepted_date": "2026-09-20",
+  "scope": "D005 development derivative; not authorization for scientific execution",
+  "owner_input_directory": "/work/Home/dl_binner/e001/e001-gate0/inventory-resume-6z45cola/input",
+  "source_commit": "64664ac6860b75d5a92c430c222e59f3418b5909",
+  "return_sha256": "1bf9a1b442a31cd069b9d9dffcf587e9365a9627a9ad4b9107a74552fd4a8cb2",
+  "source_sha256": {
+    "fasta": "67aeeeb70e5ba0e1506bf95c79bb25b06869c0486e6c0ea111763c3b060c0baf",
+    "mapping": "4353f05be6a94c0c05be083088148eac01bcf34dc05c6a061709ff5fbd61d720",
+    "nodes": "69397ef3fdaa790319f17044208fe072f33ce27290eb1dcd12825fb9627e7827"
+  },
+  "config_sha256": "1f79ab50528a393402ef736b1b547cbf9f6a370d9e8920197b92ecf5cbcbc10c",
+  "input_policy_sha256": "c895e8a73f53c144299d92ffc3eb65e92afd4a23c4bce680c63fbdf8a34ea886",
+  "taxonomy_policy_sha256": "45a82a39c14fe87c141cdc1a07d16745ce6119ea2e316b72b998416f4053e8cb",
+  "outputs": {
+    "canonical.fna": "14870c27bc9467b5897bd1b65b347d7d5e2733d8bbe48c0085cb708194966fe1",
+    "contigs.jsonl": "8864e60bb8494693015946865d9d74146d0257a48d597510b1b031ac09664698",
+    "excluded-fasta.json": "69c7ad2fa828720d9e0f5da974ec6c6029d09c22403854d788062c7eab12d051",
+    "population.json": "a4616aacf343eb65d7b0d7facd531fb2e4b47ed5a1271cc7335ebc1347d02ac2",
+    "truth.tsv": "f6e1b948f2fbbc6ed404ea27e73fb238bd2f34765b585e8e3fbe77f59b25c301"
+  },
+  "retained_contigs": 22594,
+  "retained_bp": 817438232,
+  "eligible_genomes": 224,
+  "short_queries": 7964,
+  "samples": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    9,
+    10,
+    11,
+    12
+  ],
+  "gates": {
+    "domains_resolved": true,
+    "enough_genomes": true,
+    "enough_short_genomes": true,
+    "enough_short_queries": true,
+    "within_size_limit": true
+  }
+}

@@ -2,6 +2,44 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
+## Owner population frozen and VAMB step prepared, 2026-09-20
+
+Return `agent_context/inventory-resume-6z45cola-return.tar.gz` verified SHA-256
+`1bf9a1b442a31cd069b9d9dffcf587e9365a9627a9ad4b9107a74552fd4a8cb2`.
+Executed source `64664ac6860b75d5a92c430c222e59f3418b5909`, code hashes and
+taxonomy policy match the reviewed snapshot. All five prepared output hashes,
+population counts/gates and all taxonomy member hashes match the local validation.
+All 196 tax IDs / 259 genomes resolve as expected. All stage stderr files are
+empty; exit 0. Run began 2026-09-20 10:48:22 UTC on `j-12396906-job-0`, took
+40.06 seconds and reported child peak RSS 620,856 KiB. These are process statistics,
+not full allocated job spend. Accepted UCloud input path and immutable output
+identities are recorded in [frozen-inputs.json](frozen-inputs.json).
+
+This closes the taxonomy/population prerequisite. No new biological score exists.
+Native VAMB is selected next because its pinned CPU dependencies and simpler model
+provide a bounded first learned-baseline check. COMEBin-first could expose the
+largest compute risk sooner, but its more complex unresolved environment would
+combine additional failure sources; it remains the next learned-runtime check,
+not an optional baseline. MetaBAT2-first would not answer learned CPU feasibility.
+
+The [new driver](../../scripts/e001_vamb_cpu.py) groups installation, import/pip
+checks, existing native synthetic smoke and synthetic full-dimension CPU timing.
+Local source inspection confirms the CLI schedule is 300 epochs with doubling at
+25/75/150/225, not the different `trainmodel` Python API defaults. Use native
+`make_dataloader`, `VAE.trainepoch` and DAdaptAdam without copying model/loss code.
+No true sequences/coverage/labels enter timing and no model is saved.
+PyPI metadata checked on 2026-09-20 confirms Linux x86_64 CPython 3.12 wheels for
+vambcore 0.1.2, pycoverm 0.6.2, pyhmmer 0.10.15 and pyrodigal 3.6.3; this is not
+an installed-runtime claim. Source/dependency pins remain unchanged.
+
+All **95 portable tests passed**, including mocked complete VAMB-driver sequencing,
+repeat invocation without reinstallation, setup/partial-environment/missing-fixture
+failure returns, packaging failure and a real subprocess timeout. Projection
+arithmetic/schedule are checked. Mocked orchestration does not establish native
+Linux smoke or throughput: those are explicitly awaiting the owner run. Treat
+smoke failure as a runtime blocker; interpret measured training projection with
+the recorded per-fit and total budget limits before proceeding to science.
+
 ## Historical taxonomy and local population, 2026-09-20
 
 The owner's local taxonomy archive was independently verified against the live

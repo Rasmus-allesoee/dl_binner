@@ -26,5 +26,5 @@
     {"sample": 12, "path": "gastrooral/sample_12.tar.gz", "md5": "fd67f3823b6d7ede682c02f1586c372d"}
   ],
   "taxonomy_candidate_url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_DATABASES/taxdump_cami2_toy.tar.gz",
-  "taxonomy_status": "Verified locally 2026-09-20: publisher ETag/size match; all members hashed; 196 GI tax IDs and 259 genomes resolve to Bacteria. See taxonomy-policy.json and docs/evidence/2026-09-20-gi-taxonomy.md. Owner upload/execution pending."
+  "taxonomy_status": "Verified locally and reproduced on UCloud 2026-09-20; all 196 GI tax IDs and 259 genomes resolve to Bacteria. Population accepted and frozen in frozen-inputs.json. No reupload or conversion retry required."
 }
