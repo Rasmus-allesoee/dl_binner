@@ -54,7 +54,9 @@ case "$tool" in
         ;;
     metabat)
         clone_source metabat https://bitbucket.org/berkeleylab/metabat.git 8eb96023ef627d1955c05e3aca348c84b8757914
-        create_env python=3.12.10 pip=25.1.1 numpy=2.2.6 biopython=1.85 pysam=0.23.3 cmake=3.31.6 make=4.4.1 c-compiler=1.9.0 cxx-compiler=1.9.0 boost-cpp=1.85.0 htslib=1.24 zlib=1.3.1
+        # htslib 1.24 requires libzlib >= 1.3.2; zlib 1.3.1 makes the
+        # otherwise valid MetaBAT2 environment unsatisfiable.
+        create_env python=3.12.10 pip=25.1.1 numpy=2.2.6 biopython=1.85 pysam=0.23.3 cmake=3.31.6 make=4.4.1 c-compiler=1.9.0 cxx-compiler=1.9.0 boost-cpp=1.85.0 htslib=1.24 zlib=1.3.2
         mkdir -p "$root/build"
         [[ ! -e "$root/build/metabat-source" ]] || { echo 'Preserve existing MetaBAT build source; inspect before retrying'; exit 2; }
         cp -a "$root/sources/metabat" "$root/build/metabat-source"
