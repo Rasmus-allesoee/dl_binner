@@ -2,6 +2,52 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
+## Integration accepted and accounting corrected, 2026-09-21
+
+`native-integration-p1upv3gg-return.tar.gz` matches its supplied SHA256; source
+0855646, driver hash and frozen input identity match. [Observed record](native-integration-observed.json)
+records 128 contigs / 2,841,187 bp, both complete AMBER handoffs, 128 VAMB clusters,
+52 COMEBin marker hits / 2 seeds, and all 120 native candidates with 128 rows each.
+Native CheckM profiling and winner selection completed. Stderr contains the
+known pkg_resources deprecation and the marker HMM fallback to E=1e-5 because
+the source HMM lacks model-wide TC cutoffs; no failed commands. No biological
+quality claim is made from random embeddings.
+
+Total 105.522 seconds at owner-reported **4 vCPU / 12 GB** = **0.117 core-hours**.
+The returned driver incorrectly assumed 8; raw evidence is preserved.
+COMEBin's earlier optimizer check actually used **2 vCPU / 6 GB**, so its charged
+projection is **23.946 / 47.891 core-hours per fit** (central / twofold), and
+**143.674 / 287.348 for six fits**. These recalculate measured wall time, not a
+speedup extrapolation. [Corrections](allocation-corrections.json) and amended
+[D007](../../docs/decisions/D007-comebin-resource-envelope.md) supersede earlier
+cost conclusions; no repeat of accepted native checks is necessary. No change
+is inferred to the separate MetaBAT2/VAMB allocations.
+
+### Next mapper task and acquisition boundary
+
+On 2026-09-21 the direct Swift object's HEAD returns HTTP 200, size 5,166,013,564
+and `x-object-manifest` pointing to a segmented object. A 64 KiB Range GET still
+returns HTTP 401. This establishes that a listing/HEAD is not proof of readable
+contents; it suggests a segmented-object access issue, not a confirmed diagnosis.
+The public publisher archive remains the explicit fallback, not an authentication
+workaround. It is one 9.74 GB sample archive, with size/ETag pinned from the earlier
+probe. No such archive was downloaded locally.
+
+The new [mapper driver](../../scripts/e001_mapper_feasibility.py) requires either
+an existing sample archive or explicit `--allow-sample-archive` authorization.
+It installs Bowtie2 2.5.4 separately, extracts only the first 100,000 complete
+150-bp pairs, maps identical reads to the frozen assembly with both mappers,
+and records index cost, mapping/filter/sort time, primary alignment agreement,
+MAPQ-zero counts, BAM bytes per input pair and attempt disk size. Agreement is
+not accuracy; an input-order prefix is not a representative community sample.
+Expected runtime and network transfer speed remain unmeasured. Timeouts are stop
+limits, not expected runtimes. Actual allocation is mandatory CLI input.
+Portable tests cover extraction, mate mismatch, short/missing input, changed
+remote metadata, opt-in, grouped stage order, allocation accounting and retries.
+Native Bowtie2 solve and real-read execution remain owner-run and unvalidated.
+All 118 portable tests pass. Publisher HEAD was rechecked on 2026-09-21 and
+matches the pinned 9,738,621,091-byte size and ETag; no payload was fetched.
+
 ## COMEBin and MetaBAT2 accepted separately, 2026-09-21
 
 Both archives match their supplied SHA256 checksums. Recorded driver hashes match

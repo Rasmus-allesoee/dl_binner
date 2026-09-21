@@ -4,6 +4,60 @@ Updated: 2026-09-20. This is the execution guide, not a scientific result. Read 
 
 ## Current action, 2026-09-21
 
+Integration has passed; do not rerun it. Next is grouped mapper/storage feasibility.
+Use **4 vCPU / 12 GB** initially; this is a recommendation, not an accounting
+assumption. Set `--vcpus` and `--ram-gb` to the actual rented machine. All tool
+threads in this new task follow the explicit vCPU value.
+
+Acquisition decision: direct CAMI FASTQ payload returns 401 despite readable
+metadata. The publisher's accessible sample-0 archive is 9.74 GB. The command
+below explicitly opts into **one sample archive**, retained for reuse, not ten
+samples. Do not run it unless the owner agrees to this acquisition expansion.
+An already downloaded archive can instead be supplied with `--archive PATH`.
+
+Upload the new bundle/checksum to the existing transfer directory, then:
+
+```sh
+bash <<'SH'
+set -euo pipefail
+WORK=/work/Home/dl_binner/e001/e001-gate0
+LOG=$(mktemp "$WORK/transfer/e001-mappers.XXXXXX.log")
+echo "Terminal log: $LOG"
+(
+BUNDLE=e001-code-<commit>
+CODE="$WORK/$BUNDLE"
+cd "$WORK/transfer"
+sha256sum --check "$BUNDLE.tar.gz.sha256"
+if test -e "$CODE" || test -L "$CODE"; then
+    echo "STOP: code directory already exists"
+    exit 1
+fi
+tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
+python3 -I "$CODE/scripts/e001_mapper_feasibility.py" "$WORK" \
+    --vcpus 4 --ram-gb 12 --allow-sample-archive
+) 2>&1 | tee "$LOG"
+SH
+```
+
+Writes: new code/attempt directory and a separate `envs/bowtie2` environment;
+resolved package list, one sample archive, paired prefix FASTQs, Bowtie2 index,
+SAM/BAM files and diagnostics. Other environments and accepted inputs stay intact.
+Downloads: Bowtie2 dependencies and the single sample archive only. The archive
+is size/ETag-bound and hashed; failed partials are preserved, not silently reused.
+No training, binning scores or scientific hypothesis tests are performed.
+
+Needs 20 GB free space before fresh acquisition (8 GB with existing archive).
+The shared heavy-data location is documented in AGENTS but is not used automatically;
+if this check fails, review actual quota and location before retrying. Download
+time depends on network throughput; mapping/index time is what this task measures.
+Timeout ceilings (one hour download, 30 minutes extraction, 90 minutes mapping
+group) are deliberately separate from expected runtime, not an estimate of spend.
+Stop after completion or failure and return the printed
+`mapper-feasibility-...-return.tar.gz`, `.sha256` and terminal log. No separate
+chat turn is needed between setup, acquisition, extraction and mapping success.
+
+## Completed integration instructions (historical)
+
 COMEBin and MetaBAT2 smoke/CPU results are accepted separately; see
 [validation](validation.md). Next run native clustering, COMEBin marker-guided
 selection and AMBER handoff, not another setup or optimizer check.

@@ -57,6 +57,13 @@ The [initial landscape](2026-09-16-landscape.md) and [new audit](2026-09-17-targ
 
 ## A007: Current compute access
 
+Owner clarification 2026-09-21: allocations may be smaller than recommendations.
+COMEBin checks used 2 vCPU / 6 GB; native integration used 4 vCPU / 12 GB.
+Use actual allocation, not thread count or host capacity, for charged core-hours.
+Optional heavy-data destination `/work/RasmusAllesøeNielsen#2936/dl_binner/`
+has owner-reported 10+ TB, shared with former colleagues; use only when necessary.
+No files have been moved there. Environments remain under the E001 work root.
+
 Owner-confirmed 2026-09-18 in [prompt3](../../agent_context/prompt3_second_step.md): UCloud AMD EPYC 9535, 1-128 vCPU, 3-384 GB DDR5-6000 RAM, approximately 2,100 allocated core-hours, **no GPU**, and initially 250 GB storage. These figures supersede prior H200/2-TB-node assumptions. The [execution brief](../../agent_context/prompt4_ucloud_execution.md) confirms Terminal / Ubuntu / Aug2026 on DeIC Interactive HPC (SDU/K8s), persistent root `/work/Home/dl_binner/e001/e001-gate0`, no UCloud commands run yet, and unknown access expiry. Tool environments stay under this root's `envs/`. The owner can obtain substantially more storage and does not regard it as a current design constraint; the exact expanded quota is not claimed allocated. Installed prerequisites, mount and actual CPU/RAM await returned evidence.
 
 Budget charging is allocated vCPU count times wall-clock allocation time, not just observed process CPU time. Experiment-specific reserves/ceilings belong in [E001 configuration](../../experiments/E001-coverage-thinning/config.json). CPU support, available maximum RAM and a larger storage quota do not establish that an experiment is affordable. Initial preflight needs neither a GPU nor increased storage.

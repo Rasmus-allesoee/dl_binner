@@ -1,6 +1,21 @@
 # D007: Retain COMEBin With an Explicit Resource Amendment
 
-Status: accepted, 2026-09-20. Amends D004's per-fit ceiling for COMEBin only.
+Status: amended, 2026-09-21. The temporary 200-core-hour override is withdrawn;
+the effective COMEBin per-fit ceiling is again 80, with total 800 unchanged.
+
+## Allocation correction
+
+The owner clarified that COMEBin ran on **2 vCPU / 6 GB**, not the driver's
+assumed 8 vCPU. Preserve raw measurements and the original reasoning below as
+history. [Allocation corrections](../../experiments/E001-coverage-thinning/allocation-corrections.json)
+recalculate charged cost, not speed: **23.946 core-hours per fit**, **47.891 with
+margin**, and **143.674 / 287.348 for six fits** at that measured allocation.
+There is no longer a projected total-budget violation from these fits alone.
+Keep COMEBin, restore the original 80 limit, and proceed with mapper/preprocessing
+feasibility. Actual pilot overhead still determines execution authorization;
+no extra optimizer preflight or assumption of linear speedup is needed.
+
+## Original decision (superseded accounting)
 
 The accepted [COMEBin measurement](../../experiments/E001-coverage-thinning/native-comebin-observed.json)
 used the native 1,024-contig, six-view batch, 17,928,576 parameters and full native

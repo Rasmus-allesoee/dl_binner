@@ -76,6 +76,12 @@ Repository creation, visibility, licensing, and first publication are separate o
 
 ## Working on UCloud
 
+Owner preferences clarified 2026-09-21: use Snakemake when execution grows into
+a multi-stage research workflow, keeping tested helpers as rule implementations.
+Do not retrofit already completed preflights for ceremony. Record actual allocated
+vCPU/RAM explicitly, distinguish runtime expectations from timeout ceilings, and
+preserve raw results with dated accounting corrections rather than rewriting them.
+
 Codex does not operate UCloud. For each relevant experiment, prepare a tested local smoke check, a job command or script, configuration, expected outputs, approximate resource needs, and a collection/checksum command. The owner runs it. Do not mark a run complete until returned outputs have been inspected. Document queue failures, incomplete runs, and unavailable outputs explicitly.
 
 Use thesis assets selectively and public field benchmarks alongside custom simulations. The owner confirmed thesis availability and allows new simulations optimized for the question. Public data used for development are not an untouched final test set; clearly label changed assemblies, reference populations, read subsets or synthetic coverage. Reuse a standard evaluator where appropriate and test any supplementary metrics against explicit truth contracts. E001's current choice is recorded in [D004](decisions/D004-human-cpu-preflight.md).

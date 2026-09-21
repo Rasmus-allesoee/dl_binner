@@ -182,6 +182,15 @@ The project should remain understandable to future agents without becoming over-
 
 ## Implementation philosophy
 
+Give new scripts and nontrivial functions informative docstrings describing their
+purpose, inputs and outputs, including important side effects and scope limits.
+For larger multi-stage research workflows, prefer Snakemake (owner preference)
+over a growing collection of independently invoked scripts. Keep small tested
+helpers as rule implementations; do not migrate completed preflight checks merely
+to introduce a workflow engine. Pin workflow/tool environments and retain logs,
+provenance, resources and explicit review boundaries. Nextflow is an alternative,
+not the default.
+
 Prefer the simplest implementation that adequately tests the current scientific idea.
 
 Avoid premature framework-building, abstraction, and infrastructure.
@@ -231,6 +240,19 @@ before transfer. Diagnose whole-file input relationships before adding exception
 bind dataset-specific exceptions to reviewed source hashes and record exclusions.
 
 ### Ask for files
+
+Record the owner's actual allocation for every performance run; recommendations
+and tool thread counts are not allocated vCPUs. Future owner-run resource drivers
+must accept explicit allocation inputs and use them for thread limits and charged
+core-hour estimates. Host CPU/RAM reports may describe the whole shared node.
+Smaller allocations are allowed; extrapolate only at the measured allocation,
+not by assuming proportional speedup. Distinguish expected runtime from a timeout.
+Preserve raw returned records and append corrections when allocation was wrong.
+
+The owner offers `/work/RasmusAllesøeNielsen#2936/dl_binner/` (10+ TB, shared
+with former colleagues) for heavy data only when needed. Quote this path, do not
+touch colleagues' files, and keep environments in their established experiment
+directory. Do not automatically migrate data just because this space exists.
 If you ever need local access to some files from ucloud, just ask the user. User can easily download files up to 10 GB and give you local access to them if this will help the quality and speed of your work.
 
 ### Environment ownership and grouped execution

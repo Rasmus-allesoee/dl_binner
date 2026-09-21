@@ -1,0 +1,22 @@
+{
+  "archive": "native-integration-p1upv3gg-return.tar.gz",
+  "archive_sha256": "87cb5d04c5ae31c53c998954e3d2f728f0bbe570404c05cd8247bf2d05356387",
+  "source_commit": "0855646d8930103cecf2590a6f044c20307e3799",
+  "driver_sha256": "7b9b4515a93cfaeee8cafd5f880b0bc76503b12e17d186556f0d595202d799e4",
+  "status": "accepted",
+  "fixture_contigs": 128,
+  "fixture_bp": 2841187,
+  "vamb_clusters": 128,
+  "comebin_marker_hits": 52,
+  "comebin_seeds": 2,
+  "comebin_candidates": 120,
+  "comebin_rows_per_candidate": 128,
+  "amber_vamb_assigned_bp": 2841187,
+  "amber_comebin_assigned_bp": 2841187,
+  "elapsed_seconds": 105.5215102978982,
+  "owner_reported_vcpus": 4,
+  "owner_reported_ram_gb": 12,
+  "corrected_driver_core_hours": 0.11724612255322023,
+  "raw_driver_assumed_vcpus": 8,
+  "note": "Raw archive preserved; actual allocation clarified by owner 2026-09-21. Random embeddings: integration only, not biological results."
+}

@@ -1,7 +1,7 @@
 {
   "decision": "D007",
   "scope": "Prospective execution limits; does not change frozen scientific inputs or authorize training",
-  "fit_core_hour_overrides": {"comebin": 200},
+  "fit_core_hour_overrides": {"comebin": 80},
   "experiment_core_hour_ceiling": 800,
   "full_schedule_authorized": false,
   "requirement": "Measure actual pilot cost and preprocessing/clustering overhead before authorizing remaining paired replicates; do not select scope using biological scores"

@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-21",
+  "source": "Owner clarification in chat; raw observed JSON and return archives remain unchanged",
+  "comebin": {
+    "attempt": "native-remaining-2sf0rot9",
+    "actual_vcpus": 2,
+    "actual_ram_gb": 6,
+    "raw_assumed_vcpus": 8,
+    "projected_fit_core_hours": 23.94565195,
+    "projected_fit_core_hours_twofold_margin": 47.8913039,
+    "six_fits_core_hours": 143.6739117,
+    "six_fits_core_hours_twofold_margin": 287.3478234,
+    "scope": "Same measured elapsed time at actual allocation; excludes preprocessing/clustering, not a new speed measurement"
+  },
+  "integration": {
+    "attempt": "native-integration-p1upv3gg",
+    "actual_vcpus": 4,
+    "actual_ram_gb": 12,
+    "corrected_driver_core_hours": 0.11724612255322023
+  },
+  "other_attempts": "No allocation correction inferred for VAMB or the separate final MetaBAT2 attempt"
+}
