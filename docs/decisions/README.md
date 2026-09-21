@@ -8,6 +8,7 @@ The individual record owns its status and reasoning. [STATE](../STATE.md) identi
 - [D004: Center E001 on human gut data and CPU feasibility](D004-human-cpu-preflight.md)
 - [D005: Quarantine foreign-simulation GI intervals](D005-gi-input-derivative.md)
 - [D006: Keep separate experiment-owned tool environments](D006-environment-ownership.md)
+- [D007: Retain COMEBin with an explicit resource amendment](D007-comebin-resource-envelope.md)
 
 For a new significant decision, record the ID, date, status, problem, alternatives, decision, evidence, consequences, and revisit condition. Link affected questions and experiments. If replaced, mark the old record `superseded`, link its replacement in both directions, and retain the earlier reasoning. A rejected option is preserved with its reason; it does not imply an experiment was run.
 

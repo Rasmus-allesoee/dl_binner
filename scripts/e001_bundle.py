@@ -18,6 +18,7 @@ PATHS = (
     "scripts/e001_inventory_resume.py",
     "scripts/e001_vamb_cpu.py",
     "scripts/e001_remaining_cpu.py",
+    "scripts/e001_integration.py",
     "scripts/e001_retry_conversion.sh",
     "tests", "experiments/E001-coverage-thinning",
     "docs/evidence/2026-09-17-tool-snapshots.json",

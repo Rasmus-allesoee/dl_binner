@@ -2,7 +2,62 @@
 
 Updated: 2026-09-20. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
-## Current action, 2026-09-20
+## Current action, 2026-09-21
+
+COMEBin and MetaBAT2 smoke/CPU results are accepted separately; see
+[validation](validation.md). Next run native clustering, COMEBin marker-guided
+selection and AMBER handoff, not another setup or optimizer check.
+
+Use **8 vCPU / at least 24 GB RAM, CPU only**, with the existing persistent work
+root. Upload the new code archive/checksum to its `transfer/` directory. Run:
+
+```sh
+bash <<'SH'
+set -euo pipefail
+WORK=/work/Home/dl_binner/e001/e001-gate0
+LOG=$(mktemp "$WORK/transfer/e001-integration.XXXXXX.log")
+echo "Terminal log: $LOG"
+(
+BUNDLE=e001-code-<commit>
+CODE="$WORK/$BUNDLE"
+cd "$WORK/transfer"
+sha256sum --check "$BUNDLE.tar.gz.sha256"
+if test -e "$CODE" || test -L "$CODE"; then
+    echo "STOP: code directory already exists"
+    exit 1
+fi
+tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
+python3 -I "$CODE/scripts/e001_integration.py" "$WORK"
+) 2>&1 | tee "$LOG"
+SH
+```
+
+This creates a new code directory, log and unique `native-integration-...` attempt
+plus return archive/checksum. Existing inputs, separate tool environments and
+attempts stay intact. **No installs or downloads.** COMEBin setup already installed
+CheckM data; `CHECKM_DATA_PATH` selects that persistent copy without modifying its
+configuration. Missing prerequisites stop the affected stage and return diagnostics.
+
+The fixture is 128 frozen GI sequences, 10-100 kb each, selected by ID hash without
+truth. Random embeddings exercise VAMB clustering, COMEBin's full 120-candidate
+grid, FragGeneScan/HMM marker finding, CheckM profiling and native winner selection.
+Full labels, not quality-filtered subsets, go to AMBER. Truth is used only by the
+evaluator. These are integration checks, not training or biological results.
+Independent tools continue if the other fails; dependent stages require success.
+
+Expect minutes to tens of minutes, with stage timeouts totaling about 50 minutes /
+6.7 allocated core-hours plus packaging overhead. Allow a few GB for intermediate
+files. Return the printed `native-integration-...-return.tar.gz`, its `.sha256`
+and terminal log, including on failure. If packaging fails, retain the attempt
+and return the log. Stop for review; no bulk reads or scientific training.
+
+Then resolve bounded read-prefix access for mapping/storage feasibility. The
+direct CAMI read object returned HTTP 401 and the publisher archive starts with
+BAMs; see validation. Do not silently substitute a bulk archive download.
+
+## Completed grouped setup instructions (historical)
+
+The following records the prior setup/CPU task; it is not the next action.
 
 VAMB passed; see [observed timing](native-vamb-observed.json). The frozen population
 and mapping/AMBER/VAMB checks are settled. Next run **COMEBin and MetaBAT2 together**

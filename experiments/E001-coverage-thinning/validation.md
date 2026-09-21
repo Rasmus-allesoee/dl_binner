@@ -2,6 +2,57 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
+## COMEBin and MetaBAT2 accepted separately, 2026-09-21
+
+Both archives match their supplied SHA256 checksums. Recorded driver hashes match
+the executed Git snapshots and frozen-input identity. Intentional fixes f4cf0c0
+(isolated imports), 41d0f9d (zlib pin), and f9c983a (expected empty MetaBAT2 scale
+control) remain intact, without duplicate fixes.
+
+- **COMEBin:** `native-remaining-2sf0rot9` passes imports, pip check, native smoke
+  and full-batch CPU measurement at source f4cf0c0. Group exit 1 reflects the
+  separate MetaBAT2 failure. [Observed record](native-comebin-observed.json):
+  six views, batch 1024, 17,928,576 parameters, logits 30,720 x 6,139. Measured
+  steps 9.796/9.399 seconds project 95.783 allocated core-hours per 200-epoch fit,
+  191.565 with margin, excluding downstream work. Parent peak RSS 4,688,072 KiB.
+  All six views changed 22 mean/variance entries; CS maximum difference 2.1333e-5.
+  Setup stdout confirms CheckM database postlink download/extraction into the
+  persistent COMEBin environment. Do not download it again for integration.
+- **MetaBAT2:** `native-remaining-uvkhdn0o`, source f9c983a, passes its separate
+  rerun. [Observed record](native-metabat-observed.json) preserves the legitimate
+  expected-empty tiny CS result. At frozen population size, synthetic binning
+  assigned 21,405 of 22,594 contigs in 152.450 seconds / 0.339 allocated core-hours;
+  completed-child peak RSS 4,759,524 KiB. This excludes BAM extraction and is not
+  a real-data runtime guarantee. Whole attempt: 0.421 core-hours.
+
+[D007](../../docs/decisions/D007-comebin-resource-envelope.md) records a prospective
+COMEBin-only limit of 200 core-hours, following owner acceptance, while retaining
+the 800 total. Six conservative fits exceed that total: actual pilot cost must
+inform remaining replicate authorization, independently of biological scores.
+
+The [integration driver](../../scripts/e001_integration.py) groups VAMB/COMEBin
+clustering and AMBER handoff, including COMEBin's full grid and marker selection.
+Local portable suite: **110 tests passed**, covering repeated unique attempts,
+isolated entrypoint, independent failure handling, packaging failure and changed
+frozen inputs. Fixture preparation passed on the actual local frozen input too:
+128 contigs, 2,841,187 bp, FASTA SHA256
+`532315bd216c16daca50af6867a5dba26ea26a73286ffa5ab0196b9fcb1f5355`.
+Native Linux clustering/marker/evaluator execution is prepared, **not yet run**.
+
+### Read-prefix access observation, 2026-09-20
+
+A 65,536-byte Range request to
+`https://frl.publisso.de/data/frl%3A6425518/gastrooral/sample_0.tar.gz`
+returned HTTP 206, total 9,738,621,091 bytes, ETag
+`"2447790a3-5d68d6c44295d"`. Its tar prefix begins with
+`2017.12.04_18.45.54_sample_0/bam/`, not FASTQ. The container listing at
+`https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Gastrointestinal_tract`
+lists `short_read/2017.12.04_18.45.54_sample_0/reads/anonymous_reads.fq.gz`,
+but a Range request to that object returned HTTP 401. No read prefix was acquired
+and no bulk archive downloaded. Resolve access or explicitly choose a bounded
+alternative before mapper throughput work; this is not a reason to reopen the
+settled assembly inventory or silently authorize a 9.74 GB download.
+
 ## VAMB accepted and remaining tools grouped, 2026-09-20
 
 Owner return `agent_context/native-vamb-rdow5991-return.tar.gz` matches checksum

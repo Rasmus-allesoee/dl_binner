@@ -1,0 +1,96 @@
+{
+  "archive": "native-remaining-2sf0rot9-return.tar.gz",
+  "archive_sha256": "c9388effad45cfece59bbe777f2d0cd0a13fc837a3dd95ac99385fa9f7755941",
+  "provenance": {
+    "source_commit": "f4cf0c040b96123e667b79e478da321a43bff065",
+    "driver_sha256": "a74cb45032b3cc4d2169caeee7d1f1e6e75a11a4bbd915e4f8897e03d6e3b508",
+    "allocated_vcpus": 8,
+    "requested_ram_gb": 24,
+    "platform": "Linux-6.12.0-211.40.1.el10_2.x86_64-x86_64-with-glibc2.39",
+    "started_utc": "2026-09-20T20:09:29Z",
+    "frozen_inputs_sha256": "ce2624a4f64911a499099db142e3c64acde6e9de12aa6dbfc81fb93fdf97acd3"
+  },
+  "attempt_status": {
+    "exit_code": 1,
+    "tools": {
+      "metabat": "failed",
+      "comebin": "pass"
+    },
+    "requested_tools": [
+      "metabat",
+      "comebin"
+    ],
+    "elapsed_seconds": 282.22746620094404,
+    "driver_allocated_core_hours": 0.627172147113209,
+    "note": "Excludes owner job time outside driver."
+  },
+  "cpu": {
+    "tool": "COMEBin",
+    "commit": "1b476a41fac893294c70212a869573a732560ce5",
+    "source": "/work/Home/dl_binner/e001/e001-gate0/sources/COMEBin",
+    "status": "measured",
+    "batch_size": 1024,
+    "views": 6,
+    "coverage_dimensions": 20,
+    "seed": 11,
+    "temperature": 0.07,
+    "torch_threads": 8,
+    "allocated_vcpus": 8,
+    "logits_shape": [
+      30720,
+      6139
+    ],
+    "parameters": 17928576,
+    "warmup_seconds": 12.862292592879385,
+    "measured_batch_seconds": [
+      9.79594852682203,
+      9.39883358613588
+    ],
+    "losses": [
+      9.366015434265137,
+      8.748568534851074,
+      8.729860305786133
+    ],
+    "batches_per_epoch": 22,
+    "epoch_ceiling": 200,
+    "projected_fit_core_hours": 95.7826078178154,
+    "twofold_margin_fit_core_hours": 191.5652156356308,
+    "scope": "Random synthetic full-batch optimizer timing; no learned research model or saved checkpoint",
+    "limitations": "Excludes DataLoader, feature extraction, marker search, clustering/grid and real-data effects; no early-stop savings assumed.",
+    "parent_maxrss": 4688072,
+    "children_maxrss": 225800,
+    "children_user_seconds": 0.048952999999999997,
+    "children_system_seconds": 0.011781999999999999,
+    "maxrss_units": "KiB",
+    "memory_note": "Separate parent and completed-child peaks, not aggregate concurrent RAM."
+  },
+  "smoke": {
+    "CS_max_abs_difference": 0.000021332949472707696,
+    "changed_entries_per_view": {
+      "coverage_mean.npy": [
+        22,
+        22,
+        22,
+        22,
+        22,
+        22
+      ],
+      "coverage_var.npy": [
+        22,
+        22,
+        22,
+        22,
+        22,
+        22
+      ]
+    },
+    "cpu_forward": "pass",
+    "status": "pass",
+    "training": "not run"
+  },
+  "environment": {
+    "python": "3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]",
+    "prefix": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin"
+  },
+  "pip_check": "No broken requirements found.\n"
+}

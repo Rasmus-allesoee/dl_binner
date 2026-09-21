@@ -1,0 +1,62 @@
+{
+  "archive": "native-remaining-uvkhdn0o-return.tar.gz",
+  "archive_sha256": "4231b2e5bae1f6f50af40aab4974aade7678e444e41b25bf20ccb59cf28ea2f3",
+  "provenance": {
+    "source_commit": "f9c983a1089cb2e5d3f3531497260bda5d081078",
+    "driver_sha256": "a74cb45032b3cc4d2169caeee7d1f1e6e75a11a4bbd915e4f8897e03d6e3b508",
+    "allocated_vcpus": 8,
+    "requested_ram_gb": 24,
+    "platform": "Linux-6.12.0-211.40.1.el10_2.x86_64-x86_64-with-glibc2.39",
+    "started_utc": "2026-09-20T20:41:13Z",
+    "frozen_inputs_sha256": "ce2624a4f64911a499099db142e3c64acde6e9de12aa6dbfc81fb93fdf97acd3"
+  },
+  "attempt_status": {
+    "exit_code": 0,
+    "tools": {
+      "metabat": "pass"
+    },
+    "requested_tools": [
+      "metabat"
+    ],
+    "elapsed_seconds": 189.6587244370021,
+    "driver_allocated_core_hours": 0.4214638320822269,
+    "note": "Excludes owner job time outside driver."
+  },
+  "cpu": {
+    "tool": "metabat",
+    "commit": "8eb96023ef627d1955c05e3aca348c84b8757914",
+    "source": "/work/Home/dl_binner/e001/e001-gate0/sources/metabat",
+    "status": "measured",
+    "synthetic_contigs": 22594,
+    "synthetic_bp": 817438232,
+    "samples": 10,
+    "seed": 11,
+    "allocated_vcpus": 8,
+    "elapsed_seconds": 152.45014226413332,
+    "binning_core_hours": 0.3387780939202963,
+    "assigned_contigs": 21405,
+    "scope": "Synthetic FASTA/depth CPU smoke at frozen contig/base counts; no biological score",
+    "limitations": "Uniform lengths and 32 synthetic composition/coverage groups; excludes BAM depth extraction and is not a real-data runtime guarantee.",
+    "parent_maxrss": 47372,
+    "children_maxrss": 4759524,
+    "children_user_seconds": 292.15595,
+    "children_system_seconds": 6.653193,
+    "maxrss_units": "KiB",
+    "memory_note": "Separate parent and completed-child peaks, not aggregate concurrent RAM."
+  },
+  "smoke": {
+    "CS_assigned_contigs": 0,
+    "CS_status": "expected-empty-no-target-contigs",
+    "assigned_contigs": 0,
+    "biological_interpretation": "none",
+    "commit": "8eb96023ef627d1955c05e3aca348c84b8757914",
+    "source": "/work/Home/dl_binner/e001/e001-gate0/sources/metabat",
+    "status": "pass",
+    "tool": "metabat"
+  },
+  "environment": {
+    "python": "3.12.10 | packaged by conda-forge | (main, Apr 10 2025, 22:21:13) [GCC 13.3.0]",
+    "prefix": "/work/Home/dl_binner/e001/e001-gate0/envs/metabat"
+  },
+  "pip_check": "No broken requirements found.\n"
+}

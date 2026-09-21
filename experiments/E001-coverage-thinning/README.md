@@ -1,7 +1,7 @@
 # E001: Where Does Reduced Coverage Evidence Lose Recoverable Sequence?
 
 Date: 2026-09-17. Updated: 2026-09-19
-Execution status: mapping/AMBER/VAMB native smoke passed; population frozen; VAMB synthetic CPU feasibility accepted; grouped COMEBin/MetaBAT2 preflight prepared, scientific execution pending
+Execution status: population frozen; mapping/AMBER and all three tools' native smoke/CPU checks accepted; native clustering/marker/evaluator integration prepared; scientific execution pending
 Scientific outcome: not assessed
 Protocol: prospective v2; [config.json](config.json) owns numerical settings; scientific launch not authorized
 Questions: [Q001](../../docs/research/questions.md#q001), [Q003](../../docs/research/questions.md#q003), [Q004](../../docs/research/questions.md#q004); hypothesis [H001](../../docs/research/questions.md#h001)
@@ -120,7 +120,7 @@ Prior art comparisons with QuickBin's appropriate published/development mode, Mc
 
 ## Implementation and execution gates
 
-**Gate 0: local implementation complete; native validation pending.** The [harness](../../scripts/e001.py), [tests](../../tests/test_e001.py), native feature/output adapters and synthetic smoke jobs now implement the input/provenance checks, conservative summaries, neighborhood probes and control transformations. Established Biopython/pysam parsers and external samtools are used. The [validation record](validation.md) distinguishes portable results from unexecuted exact-native AMBER, normalization, mapping and CPU checks. No training on research data is required for these checks.
+**Gate 0: native smoke/CPU checks accepted; clustering integration pending.** The [harness](../../scripts/e001.py), [tests](../../tests/test_e001.py), native feature/output adapters and synthetic smoke jobs implement the input/provenance checks, conservative summaries, neighborhood probes and control transformations. Established Biopython/pysam parsers and external samtools are used. The [validation record](validation.md) distinguishes portable results, accepted owner checks and remaining native clustering/marker/evaluator integration. No training on research data is required for these checks.
 
 Each predicted partition must assign a contig to at most one bin; unknown IDs, duplicate rows and cross-bin duplicate assignments fail preflight. Multiple possible origins in the **truth** are different and must be retained explicitly. Export feature/embedding masks and IDs, verify every join, and account for dropped input rows as unassigned rather than removing them from evaluation. Never repair overlapping predictions by silently assigning a contig to the largest bin.
 
@@ -134,7 +134,9 @@ Before Gate 2, commit executable code/configuration and record that pre-existing
 
 ## Attempts and results
 
-No scientific attempts have been launched. Mapping/AMBER/VAMB native smoke and VAMB synthetic CPU checks passed. Assembly/truth/setup acquisition, D005 conversion and population freeze completed. Grouped COMEBin/MetaBAT2 native and CPU checks are prepared; marker/clustering integration, read-prefix feasibility and scientific execution remain pending. Software checks are not biological results. Environment ownership follows [D006](../../docs/decisions/D006-environment-ownership.md).
+No scientific attempts have been launched. Mapping/AMBER and all three tools' native smoke/CPU checks passed. Assembly/truth/setup acquisition, D005 conversion and population freeze completed. Marker/clustering integration is prepared; read-prefix feasibility and scientific execution remain pending. Software checks are not biological results. Environment ownership follows [D006](../../docs/decisions/D006-environment-ownership.md).
+
+Resource amendment: [D007](../../docs/decisions/D007-comebin-resource-envelope.md) and [compute-policy.json](compute-policy.json) prospectively override only COMEBin's per-fit limit to 200 core-hours. The frozen configuration remains unchanged for provenance; the experiment total remains 800. The complete six-fit COMEBin schedule exceeds that total under the twofold margin, so remaining replicates require measured pilot cost before authorization, independent of biological scores.
 
 Every later attempt gets a unique `run-NNN` entry with status, condition/seed, source/config/input hashes, logs and output locations, including crashes/timeouts. Never overwrite a previous run directory. Legal empty output is evaluated as zero recovery with undefined purity where appropriate; a crashed or truncated output is not.
 
