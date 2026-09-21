@@ -1,0 +1,32 @@
+"""Existing sample-0 archive to full C0 and seeded CT BAMs; no fits or scores."""
+
+PYTHON = config["mapping_python"]
+HELPER = config["helper"]
+CONFIG = config["runtime_config"]
+
+rule all:
+    input: "preprocessing-summary.json"
+
+rule extract_sample0:
+    input: archive=config["archive"]
+    output: reads="reads.fq", metadata="reads.json"
+    threads: 1
+    log: "extract.log"
+    shell:
+        "{PYTHON:q} -I {HELPER:q} --worker extract --config {CONFIG:q} > {log:q} 2>&1"
+
+rule map_full:
+    input: reads="reads.fq", metadata="reads.json", reference=config["reference"]
+    output: bam="C0/mapped.bam", index="C0/mapped.bam.bai", qc="C0/qc.json"
+    threads: config["vcpus"]
+    log: "map.log"
+    shell:
+        "{PYTHON:q} -I {HELPER:q} --worker map --config {CONFIG:q} > {log:q} 2>&1"
+
+rule thin_and_report:
+    input: bam="C0/mapped.bam", qc="C0/qc.json", reads="reads.json"
+    output: bam="CT/mapped.bam", index="CT/mapped.bam.bai", qc="CT/qc.json", summary="preprocessing-summary.json"
+    threads: 1
+    log: "thin.log"
+    shell:
+        "{PYTHON:q} -I {HELPER:q} --worker thin --config {CONFIG:q} > {log:q} 2>&1"

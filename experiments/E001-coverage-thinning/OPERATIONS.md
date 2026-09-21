@@ -1,8 +1,99 @@
 # E001: Validation and UCloud Preflight
 
-Updated: 2026-09-20. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
+Updated: 2026-09-21. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
 ## Current action, 2026-09-21
+
+Mapper/storage feasibility and subsequent local BAM/read-origin analysis are
+accepted. [D008](../../docs/decisions/D008-mapper-and-first-preprocessing-slice.md)
+retains strobealign. Next run the **Snakemake full sample-0 preprocessing slice**,
+not a repeated mapper comparison. No more BAM uploads are needed.
+
+Use **4 vCPU / 12 GB RAM** and the existing persistent root. Set the actual values
+below if different; this pipeline needs at least 3 vCPU because mapping, primary
+filtering and sorting run concurrently. Two of four CPUs are reserved for the
+samtools stages, leaving two mapper threads. The driver checks for 25 GB free.
+
+Upload the new code bundle/checksum to `transfer/`, then:
+
+```sh
+bash <<'SH'
+set -euo pipefail
+WORK=/work/Home/dl_binner/e001/e001-gate0
+LOG=$(mktemp "$WORK/transfer/e001-preprocess.XXXXXX.log")
+echo "Terminal log: $LOG"
+(
+BUNDLE=e001-code-<commit>
+CODE="$WORK/$BUNDLE"
+cd "$WORK/transfer"
+sha256sum --check "$BUNDLE.tar.gz.sha256"
+if test -e "$CODE" || test -L "$CODE"; then
+    echo "STOP: code directory already exists"
+    exit 1
+fi
+tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
+python3 -I "$CODE/scripts/e001_preprocess.py" "$WORK" --vcpus 4 --ram-gb 12
+) 2>&1 | tee "$LOG"
+SH
+```
+
+The driver creates a unique `sample0-preprocess-...` directory and installs
+Snakemake 9.13.7 in separate `envs/workflow` if absent; mapping keeps its existing
+environment. **Downloads are workflow software only, no research data.** The
+accepted archive in `mapper-feasibility-13l53afq/sample_0.tar.gz` is reused.
+Snakemake performs a dry-run then the three dependent rules: validate/extract all
+16,666,043 pairs, map/sort/index C0, and thin/index/report CT (10%, seed 1000).
+No full SAM file is stored. New FASTQ and BAMs are retained; nothing is deleted.
+
+At four vCPUs, provision roughly **30-50 minutes** based on the prefix's measured
+mapping throughput with fewer mapper threads plus extraction/sorting/QC; full
+sample composition and I/O may differ. This is an estimate to test, not a promised
+runtime. The workflow has a separate **60-minute execution timeout**, with setup
+timeouts outside it. Expected extra data are roughly 11 GB FASTQ plus 5-6 GB BAMs,
+subject to full-sample measurement. Shared storage is not used automatically.
+
+Stop after completion or failure; return the printed
+`sample0-preprocess-...-return.tar.gz`, `.sha256`, and terminal log. Partial files
+remain for inspection. Do not rerun or delete them without reviewing the result.
+No new sample acquisition, feature extraction, model training or biological
+scoring is included. Full-sample measurements determine the next acquisition/
+multi-sample workflow block without repeating accepted preflights.
+
+## Completed local diagnostic instructions (historical)
+
+All three mapper attempts are reviewed; the third passed and operational
+mapper/storage feasibility is accepted. **Do not run the historical commands below.**
+Next transfer only these existing files for local discrepancy analysis:
+
+- `/work/Home/dl_binner/e001/e001-gate0/mapper-feasibility-89gpt00u/strobealign/mapped.bam`
+  -> `agent_context/mapping/strobealign/mapped.bam` (30.7 MB, received)
+- `/work/Home/dl_binner/e001/e001-gate0/mapper-feasibility-89gpt00u/bowtie2/mapped.bam`
+  -> `agent_context/mapping/bowtie2/mapped.bam` (34.2 MB, received)
+
+No `.bai`, SAM, FASTQ, index or sample-archive transfer is needed. The BAM hashes
+are already pinned in [mapper-observed.json](mapper-observed.json); the diagnostic
+checks them and uses the frozen local contig metadata. Nothing is installed,
+downloaded from publishers, remapped or trained. Existing owner files stay intact.
+The owner need not rent a new job to do computations; use ordinary file download.
+
+Agent-side command after receiving both files (not an owner UCloud command):
+
+```sh
+.venv/bin/python scripts/e001_mapper_diagnostics.py \
+  --strobe-bam agent_context/mapping/strobealign/mapped.bam \
+  --bowtie-bam agent_context/mapping/bowtie2/mapped.bam \
+  --contigs artifacts/e001-population-reviewed/contigs.jsonl \
+  --read-truth artifacts/e001-read-truth/sample0-reads-mapping.tsv.gz \
+  --out artifacts/e001-mapper-truth-reviewed
+```
+
+Expect seconds/minutes on the local machine with modest memory and small JSON/TSV
+outputs. It refuses mismatched files and existing outputs. If files cannot be
+transferred, the same analysis can instead be wrapped for owner-run execution;
+do not default to another mapper run. See [validation](validation.md) for the
+scientific assessment boundary and next Snakemake preprocessing/pilot direction.
+
+## Completed mapper instructions (historical)
 
 Integration has passed; do not rerun it. Next is grouped mapper/storage feasibility.
 Use **4 vCPU / 12 GB** initially; this is a recommendation, not an accounting

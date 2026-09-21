@@ -108,6 +108,12 @@ Rejection/modification: the distortion disappears after preprocessing; current m
 
 2026-09-17 refinement, preserving the original claim: [E001](../../experiments/E001-coverage-thinning/README.md) tests **sampling reliability at fixed assembly**, not every mapping distortion contemplated above. Its scale-only control may eliminate a naive absolute-depth explanation, while its stage diagnostics distinguish reduced information from possible avoidable processing loss. No reliability correction or new model is being proposed yet. Degradation under thinning alone is not support; a null result in one community is not a universal rejection of H001.
 
+2026-09-21 context for H001: the E001 prefix read-origin analysis reveals extensive
+ambiguous placement, with nearly equal true-origin-compatible counts for the two
+mappers despite different MAPQ scales. [D008](../decisions/D008-mapper-and-first-preprocessing-slice.md)
+retains fixed strobealign evidence for C0/CT. This is a confound to distinguish
+from sampling reliability, not support for H001 or evidence of a novel solution.
+
 ## Closed and superseded records
 
 None in this project's active research record yet. Earlier project alternatives and staged learning plans remain in [historical planning](../history/README.md). They were not failed experiments. Close future entries in place, preserving their evidence and resolution dates.

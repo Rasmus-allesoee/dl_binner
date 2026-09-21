@@ -1,0 +1,696 @@
+{
+  "categories": {
+    "both_unmapped": 964,
+    "same_position": 98232,
+    "different_contig_disjoint_origins": 91339,
+    "strobealign_only": 305,
+    "same_contig_other_position": 8954,
+    "different_contig_shared_origin": 206
+  },
+  "same_position_different_cigar": 9370,
+  "absolute_contig_read_count_difference_sum": 32349,
+  "provenance": {
+    "accepted_archive": "mapper-feasibility-89gpt00u-return.tar.gz",
+    "bam_sha256": {
+      "strobealign": "037639cedc73982643a927acc9be2a12993a99cd576616c1ec4d839539ead395",
+      "bowtie2": "f8749641356b313d7342cbe456bf41167c108847727a17b8fbd58d5e05c5af52"
+    },
+    "contigs_sha256": "8864e60bb8494693015946865d9d74146d0257a48d597510b1b031ac09664698",
+    "script_sha256": "346ef0b3f629904476cb495c60e59dadaad884394a75aaf4fbe2442c05fdcb73"
+  },
+  "read_truth": {
+    "source_sha256": "691dc251b267fe301d8f5ef0cf3cf34333648a146539843da0b2a735106fe296",
+    "source_rows": 33332086,
+    "selected_rows": 199036,
+    "tools": {
+      "strobealign": {
+        "counts": {
+          "origin_incompatible": 93241,
+          "source_genome_absent_from_retained_reference": 2947,
+          "origin_compatible": 105795
+        },
+        "by_mapq": {
+          "0": {
+            "origin_incompatible": 91602,
+            "origin_compatible": 20039
+          },
+          "14": {
+            "origin_compatible": 756,
+            "origin_incompatible": 122
+          },
+          "60": {
+            "origin_compatible": 76935,
+            "origin_incompatible": 292
+          },
+          "10": {
+            "origin_compatible": 2350,
+            "origin_incompatible": 518
+          },
+          "15": {
+            "origin_compatible": 469,
+            "origin_incompatible": 72
+          },
+          "40": {
+            "origin_incompatible": 20,
+            "origin_compatible": 258
+          },
+          "33": {
+            "origin_compatible": 93,
+            "origin_incompatible": 2
+          },
+          "13": {
+            "origin_compatible": 93,
+            "origin_incompatible": 22
+          },
+          "12": {
+            "origin_compatible": 121,
+            "origin_incompatible": 50
+          },
+          "30": {
+            "origin_compatible": 450,
+            "origin_incompatible": 10
+          },
+          "49": {
+            "origin_compatible": 109
+          },
+          "22": {
+            "origin_compatible": 86,
+            "origin_incompatible": 10
+          },
+          "58": {
+            "origin_compatible": 157
+          },
+          "54": {
+            "origin_compatible": 62,
+            "origin_incompatible": 2
+          },
+          "35": {
+            "origin_compatible": 86,
+            "origin_incompatible": 2
+          },
+          "45": {
+            "origin_compatible": 98
+          },
+          "52": {
+            "origin_compatible": 51,
+            "origin_incompatible": 3
+          },
+          "57": {
+            "origin_compatible": 135
+          },
+          "42": {
+            "origin_compatible": 92,
+            "origin_incompatible": 20
+          },
+          "53": {
+            "origin_compatible": 53,
+            "origin_incompatible": 2
+          },
+          "31": {
+            "origin_compatible": 54,
+            "origin_incompatible": 2
+          },
+          "51": {
+            "origin_compatible": 75,
+            "origin_incompatible": 2
+          },
+          "47": {
+            "origin_compatible": 86
+          },
+          "59": {
+            "origin_compatible": 147
+          },
+          "36": {
+            "origin_compatible": 105,
+            "origin_incompatible": 2
+          },
+          "43": {
+            "origin_compatible": 81
+          },
+          "50": {
+            "origin_compatible": 216,
+            "origin_incompatible": 4
+          },
+          "56": {
+            "origin_compatible": 101
+          },
+          "37": {
+            "origin_compatible": 69,
+            "origin_incompatible": 2
+          },
+          "46": {
+            "origin_compatible": 131,
+            "origin_incompatible": 4
+          },
+          "55": {
+            "origin_compatible": 59,
+            "origin_incompatible": 2
+          },
+          "23": {
+            "origin_compatible": 116,
+            "origin_incompatible": 4
+          },
+          "9": {
+            "origin_compatible": 212,
+            "origin_incompatible": 76
+          },
+          "44": {
+            "origin_compatible": 108,
+            "origin_incompatible": 4
+          },
+          "25": {
+            "origin_compatible": 38,
+            "origin_incompatible": 4
+          },
+          "34": {
+            "origin_compatible": 116
+          },
+          "48": {
+            "origin_compatible": 114,
+            "origin_incompatible": 1
+          },
+          "24": {
+            "origin_compatible": 104,
+            "origin_incompatible": 6
+          },
+          "21": {
+            "origin_compatible": 47,
+            "origin_incompatible": 4
+          },
+          "26": {
+            "origin_compatible": 36,
+            "origin_incompatible": 8
+          },
+          "29": {
+            "origin_compatible": 60,
+            "origin_incompatible": 2
+          },
+          "38": {
+            "origin_compatible": 45
+          },
+          "20": {
+            "origin_compatible": 671,
+            "origin_incompatible": 32
+          },
+          "39": {
+            "origin_compatible": 47
+          },
+          "18": {
+            "origin_compatible": 28,
+            "origin_incompatible": 14
+          },
+          "4": {
+            "origin_compatible": 37,
+            "origin_incompatible": 65
+          },
+          "19": {
+            "origin_compatible": 76,
+            "origin_incompatible": 4
+          },
+          "32": {
+            "origin_compatible": 71,
+            "origin_incompatible": 4
+          },
+          "28": {
+            "origin_compatible": 32,
+            "origin_incompatible": 4
+          },
+          "17": {
+            "origin_compatible": 27,
+            "origin_incompatible": 2
+          },
+          "41": {
+            "origin_compatible": 34
+          },
+          "27": {
+            "origin_compatible": 21,
+            "origin_incompatible": 2
+          },
+          "3": {
+            "origin_compatible": 5,
+            "origin_incompatible": 24
+          },
+          "7": {
+            "origin_incompatible": 17,
+            "origin_compatible": 7
+          },
+          "2": {
+            "origin_incompatible": 75,
+            "origin_compatible": 10
+          },
+          "11": {
+            "origin_incompatible": 16,
+            "origin_compatible": 37
+          },
+          "5": {
+            "origin_incompatible": 51,
+            "origin_compatible": 25
+          },
+          "1": {
+            "origin_incompatible": 24,
+            "origin_compatible": 8
+          },
+          "8": {
+            "origin_compatible": 11,
+            "origin_incompatible": 11
+          },
+          "6": {
+            "origin_incompatible": 16,
+            "origin_compatible": 8
+          },
+          "16": {
+            "origin_compatible": 27,
+            "origin_incompatible": 4
+          }
+        }
+      },
+      "bowtie2": {
+        "counts": {
+          "origin_incompatible": 93034,
+          "source_genome_absent_from_retained_reference": 2770,
+          "origin_compatible": 105697
+        },
+        "by_mapq": {
+          "1": {
+            "origin_incompatible": 92266,
+            "origin_compatible": 20129
+          },
+          "6": {
+            "origin_compatible": 4890,
+            "origin_incompatible": 574
+          },
+          "7": {
+            "origin_compatible": 728,
+            "origin_incompatible": 13
+          },
+          "42": {
+            "origin_compatible": 73281,
+            "origin_incompatible": 86
+          },
+          "27": {
+            "origin_compatible": 316
+          },
+          "21": {
+            "origin_compatible": 442,
+            "origin_incompatible": 6
+          },
+          "17": {
+            "origin_compatible": 358
+          },
+          "26": {
+            "origin_compatible": 804
+          },
+          "40": {
+            "origin_compatible": 1725,
+            "origin_incompatible": 8
+          },
+          "22": {
+            "origin_compatible": 748
+          },
+          "15": {
+            "origin_compatible": 276,
+            "origin_incompatible": 6
+          },
+          "25": {
+            "origin_compatible": 618,
+            "origin_incompatible": 2
+          },
+          "18": {
+            "origin_compatible": 272
+          },
+          "12": {
+            "origin_compatible": 692,
+            "origin_incompatible": 12
+          },
+          "11": {
+            "origin_compatible": 270,
+            "origin_incompatible": 2
+          },
+          "16": {
+            "origin_compatible": 76
+          },
+          "14": {
+            "origin_compatible": 50
+          },
+          "33": {
+            "origin_compatible": 18
+          },
+          "0": {
+            "origin_incompatible": 42
+          },
+          "2": {
+            "origin_incompatible": 15,
+            "origin_compatible": 2
+          },
+          "8": {
+            "origin_incompatible": 2
+          },
+          "24": {
+            "origin_compatible": 2
+          }
+        }
+      }
+    },
+    "joint_on_mapped_union": {
+      "strobe_0_bowtie_1": 11962,
+      "strobe_1_bowtie_1": 93735,
+      "strobe_0_bowtie_0": 81279,
+      "strobe_1_bowtie_0": 12060
+    },
+    "top_source_genomes_on_mapped_union": [
+      [
+        "OTU_97.156.0",
+        30366
+      ],
+      [
+        "OTU_97.498.0",
+        26928
+      ],
+      [
+        "OTU_97.4796.0",
+        15862
+      ],
+      [
+        "OTU_97.68.0",
+        14222
+      ],
+      [
+        "OTU_97.1145.0",
+        14210
+      ],
+      [
+        "OTU_97.7000.0",
+        8086
+      ],
+      [
+        "OTU_97.44483.0",
+        7984
+      ],
+      [
+        "OTU_97.584.0",
+        6154
+      ],
+      [
+        "OTU_97.365.0",
+        5598
+      ],
+      [
+        "OTU_97.1154.0",
+        4508
+      ]
+    ],
+    "scope": "True source genome in destination origin set; wrong-source ties may be non-identifiable; prefix only"
+  },
+  "full_diagnostics_sha256": "4c33bfe075b911f2ef0a2bd369fe4ac71dc2e167af5b50328affc467f75b7ecd",
+  "mapq_by_category": {
+    "same_position": {
+      "strobealign": {
+        "60": 71414,
+        "0": 18809,
+        "10": 2262,
+        "59": 131,
+        "14": 670,
+        "11": 32,
+        "54": 53,
+        "56": 92,
+        "30": 428,
+        "50": 196,
+        "57": 116,
+        "40": 243,
+        "15": 427,
+        "20": 634,
+        "53": 47,
+        "33": 79,
+        "39": 46,
+        "27": 17,
+        "13": 83,
+        "41": 33,
+        "21": 44,
+        "22": 69,
+        "32": 58,
+        "36": 88,
+        "49": 96,
+        "47": 74,
+        "9": 155,
+        "45": 90,
+        "23": 97,
+        "42": 82,
+        "34": 103,
+        "46": 114,
+        "48": 106,
+        "51": 64,
+        "58": 139,
+        "55": 54,
+        "24": 91,
+        "5": 24,
+        "44": 94,
+        "12": 106,
+        "18": 27,
+        "43": 73,
+        "8": 10,
+        "38": 41,
+        "29": 49,
+        "37": 55,
+        "7": 3,
+        "3": 4,
+        "19": 59,
+        "4": 29,
+        "26": 31,
+        "52": 47,
+        "35": 72,
+        "25": 31,
+        "28": 29,
+        "31": 47,
+        "6": 7,
+        "1": 6,
+        "17": 22,
+        "2": 7,
+        "16": 23
+      },
+      "bowtie2": {
+        "42": 68086,
+        "6": 4727,
+        "1": 18778,
+        "40": 1370,
+        "22": 698,
+        "26": 747,
+        "25": 574,
+        "27": 309,
+        "12": 668,
+        "7": 640,
+        "18": 263,
+        "17": 341,
+        "14": 41,
+        "21": 411,
+        "15": 252,
+        "11": 238,
+        "16": 64,
+        "33": 18,
+        "0": 2,
+        "8": 1,
+        "24": 2,
+        "2": 2
+      }
+    },
+    "different_contig_disjoint_origins": {
+      "strobealign": {
+        "0": 90046,
+        "10": 454,
+        "9": 68,
+        "14": 141,
+        "22": 10,
+        "7": 16,
+        "2": 66,
+        "15": 75,
+        "5": 49,
+        "28": 4,
+        "13": 20,
+        "3": 20,
+        "6": 16,
+        "60": 64,
+        "19": 4,
+        "1": 22,
+        "4": 59,
+        "12": 53,
+        "8": 10,
+        "30": 4,
+        "25": 6,
+        "18": 14,
+        "32": 4,
+        "40": 6,
+        "11": 18,
+        "16": 6,
+        "51": 2,
+        "26": 6,
+        "20": 28,
+        "23": 4,
+        "29": 6,
+        "33": 2,
+        "44": 2,
+        "35": 4,
+        "17": 6,
+        "31": 2,
+        "55": 2,
+        "24": 5,
+        "27": 2,
+        "36": 4,
+        "21": 4,
+        "37": 5
+      },
+      "bowtie2": {
+        "1": 90894,
+        "6": 337,
+        "7": 16,
+        "2": 12,
+        "0": 36,
+        "42": 24,
+        "12": 7,
+        "40": 6,
+        "21": 2,
+        "11": 2,
+        "17": 1,
+        "15": 2
+      }
+    },
+    "strobealign_only": {
+      "strobealign": {
+        "42": 16,
+        "60": 153,
+        "0": 73,
+        "20": 2,
+        "2": 6,
+        "7": 2,
+        "40": 18,
+        "14": 3,
+        "12": 1,
+        "4": 7,
+        "26": 2,
+        "46": 3,
+        "52": 1,
+        "30": 2,
+        "53": 2,
+        "13": 2,
+        "54": 2,
+        "8": 1,
+        "3": 4,
+        "10": 2,
+        "44": 2,
+        "15": 1
+      },
+      "bowtie2": {}
+    },
+    "same_contig_other_position": {
+      "strobealign": {
+        "60": 5594,
+        "56": 9,
+        "33": 14,
+        "0": 2529,
+        "45": 8,
+        "30": 26,
+        "23": 19,
+        "11": 3,
+        "42": 14,
+        "10": 144,
+        "47": 12,
+        "50": 24,
+        "9": 62,
+        "59": 16,
+        "44": 14,
+        "48": 9,
+        "36": 15,
+        "38": 4,
+        "34": 13,
+        "35": 12,
+        "53": 6,
+        "49": 13,
+        "14": 64,
+        "12": 9,
+        "15": 38,
+        "7": 3,
+        "46": 18,
+        "13": 10,
+        "57": 19,
+        "37": 11,
+        "19": 17,
+        "25": 5,
+        "51": 11,
+        "22": 15,
+        "32": 13,
+        "43": 8,
+        "26": 5,
+        "20": 37,
+        "31": 7,
+        "18": 1,
+        "40": 11,
+        "1": 4,
+        "3": 1,
+        "21": 3,
+        "58": 18,
+        "29": 7,
+        "2": 3,
+        "4": 5,
+        "24": 14,
+        "52": 6,
+        "55": 5,
+        "54": 9,
+        "28": 3,
+        "17": 1,
+        "27": 4,
+        "8": 1,
+        "5": 3,
+        "16": 2,
+        "39": 1,
+        "41": 1,
+        "6": 1
+      },
+      "bowtie2": {
+        "42": 5257,
+        "1": 2521,
+        "27": 7,
+        "40": 357,
+        "6": 398,
+        "7": 85,
+        "26": 57,
+        "22": 50,
+        "12": 29,
+        "11": 32,
+        "21": 35,
+        "16": 12,
+        "18": 9,
+        "15": 28,
+        "14": 9,
+        "25": 46,
+        "17": 16,
+        "0": 2,
+        "8": 1,
+        "2": 3
+      }
+    },
+    "different_contig_shared_origin": {
+      "strobealign": {
+        "10": 6,
+        "0": 184,
+        "22": 2,
+        "2": 3,
+        "60": 2,
+        "20": 2,
+        "9": 3,
+        "4": 2,
+        "12": 2
+      },
+      "bowtie2": {
+        "1": 202,
+        "6": 2,
+        "0": 2
+      }
+    }
+  },
+  "bowtie_AS_equals_XS_records": 114509,
+  "read_truth_source": {
+    "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Gastrointestinal_tract/short_read/2017.12.04_18.45.54_sample_0/reads/reads_mapping.tsv.gz",
+    "bytes": 293229761,
+    "etag_and_verified_md5": "15cbaa7866defbf486043533e293faf3",
+    "date": "2026-09-21",
+    "scope": "Read-origin metadata only; no read sequences downloaded locally"
+  }
+}

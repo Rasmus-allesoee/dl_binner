@@ -2,6 +2,101 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
+## All three mapper attempts reviewed, 2026-09-21
+
+The [observed record](mapper-observed.json) preserves all three checksum-verified
+archives, exact source/driver identities, command records, allocation, prefix
+hashes and successful summary. All terminal logs and captured stdout/stderr were
+reviewed. Bowtie2's resolved package list has the same SHA256 in every attempt.
+Both corrective commits remain intact.
+
+| Attempt | Source | Outcome | Allocated core-hours |
+| --- | --- | --- | --- |
+| `13l53afq` | `601cae3` | Bowtie2 setup and sample-0 acquisition passed; wrong `.fq.gz` member stopped extraction before mapping | 0.793842 |
+| `3nyb_km0` | `dbee019` | Reused identical archive; the guessed replacement member also failed before mapping | 0.054069 |
+| `89gpt00u` | `216c896` | Verified plain anonymous FASTQ, 100,000 pairs, both mappings/filter/sort/index and summaries passed | 0.827075 |
+
+The publisher archive SHA256 is unchanged across attempts:
+`6f349a6f3299b4595f8c5acfb9ad7d8e2fc56fe657c1a451cde90e92c364f113`.
+The third attempt used the existing archive, not another download. All used
+4 vCPU / 12 GB. Combined driver accounting is 1.674986 core-hours, excluding
+job time outside the drivers. The accepted attempt took 744.37 seconds, dominated
+by Bowtie2 index construction, not read mapping.
+
+| Measurement | strobealign 0.17.0 | Bowtie2 2.5.4 |
+| --- | --- | --- |
+| Command mapping time | 17.390 s, including reference indexing | 27.300 s, excluding index build |
+| Reference indexing | 10.96 s, native log (inside mapping command) | 676.320 s, separate build command |
+| Native mapping-only time | 5.83 s, native log | Not separately reported from command |
+| Primary mapped reads / 200,000 | 199,036 (99.518%) | 198,731 (99.3655%) |
+| MAPQ-zero mapped reads | 111,641 | 42 |
+| Sorted BAM bytes | 30,684,630 | 34,158,421 |
+| BAM bytes per input pair | 306.8463 | 341.58421 |
+
+Completed-child peak RSS was 4,312,244 KiB (~4.11 GiB), a maximum across sequential
+subprocesses, not per-mapper or aggregate whole-job RAM. Successful attempt disk
+use was 1,526,832,160 bytes, excluding the retained 9.74 GB archive in the first
+attempt. For **planning only**, 16.67 million pairs/sample (5 Gbp at 2x150 bp)
+would imply ~5.11 GB strobealign BAM/sample, ~51.1 GB for ten samples. This is a
+linear prefix-based estimate, not a measured full-sample size; indexes, raw
+archives/reads, other tool features and intermediate files add storage. No need
+to move existing small artifacts to shared storage now.
+
+**Accept operational mapper/storage feasibility. Do not rerun this task.** This
+does not establish mapping accuracy or finalize the provisional mapper. Only
+98,232/200,000 reads (49.116%) have the same mapped reference/start/strand, with
+964 unmapped by both. Bowtie2 itself reports 61,799 pairs with multiple concordant
+alignments, despite only 42 MAPQ-zero records. Thus MAPQ-zero alone is not a
+cross-mapper ambiguity comparison, and mapped percentage cannot choose a winner.
+Ambiguity/tie handling is a plausible explanation, not a demonstrated one.
+
+### Local follow-through completed
+
+[e001_mapper_diagnostics.py](../../scripts/e001_mapper_diagnostics.py) analyzes
+the existing BAMs against frozen destination-contig origins. It separates exact
+placement, same-contig differences, shared-origin different contigs, disjoint-origin
+contigs and one-mapper-only assignments; records complete MAPQ/NM/AS-XS histograms,
+per-category MAPQ and per-contig read counts. Score scales are not treated as
+interchangeable, and destination-origin agreement is not read-origin truth.
+
+The owner supplied both BAMs during this session under `agent_context/mapping/`.
+Both match their accepted hashes; local analysis reproduced all earlier counts.
+91,339 reads move between disjoint destination-genome sets, 8,954 differ within
+one contig, 206 move between contigs sharing a genome origin, and 305 map only
+with strobealign. The summed absolute per-contig read-count difference is 32,349;
+this is not a base-coverage or accuracy measure. Most cross-genome disagreements
+are low-confidence under both tools: 90,046 strobealign MAPQ 0, 90,894 Bowtie2
+MAPQ 1. Bowtie2 reports equal AS/XS for 114,509 mapped reads; different confidence
+conventions explain why MAPQ-zero counts alone were misleading.
+
+Because cross-genome disagreements were substantial, local analysis continued
+directly to read-origin truth, without another owner task. Unlike the FASTQ,
+the public `reads/reads_mapping.tsv.gz` object is readable. The 293,229,761-byte
+download matches its object MD5 `15cbaa7866defbf486043533e293faf3` and SHA256
+`691dc251b267fe301d8f5ef0cf3cf34333648a146539843da0b2a735106fe296`.
+All 33,332,086 metadata rows were scanned with gzip CRC validation; all 199,036
+mates mapped by either tool joined uniquely. No read sequences were downloaded.
+[Diagnostic record](mapper-diagnostics.json) owns URL, identities and results.
+
+True-source-genome compatibility is 105,795 reads for strobealign versus 105,697
+for Bowtie2 on the same 200,000-read denominator. Both are compatible for 93,735;
+only strobealign for 12,060; only Bowtie2 for 11,962. This is not a significant
+accuracy advantage, nor does it establish that ambiguous reads are uniquely
+identifiable. [D008](../../docs/decisions/D008-mapper-and-first-preprocessing-slice.md)
+retains strobealign and no added MAPQ cutoff, with native downstream filters.
+The population is not changed and no mapping rerun is needed.
+
+The next implemented task is the [Snakemake preprocessing slice](../../workflows/e001-preprocess/Snakefile):
+full existing sample 0 only, validated interleaved FASTQ, streamed C0 mapping,
+seed-1000 10% CT and compact QC/resource reporting. Source truth establishes the
+expected 16,666,043 pairs. Snakemake 9.13.7 was installed in an isolated local
+test environment and its actual DAG dry-run passed. Portable tests exercise
+full extraction/count mismatch, overwrite protection, actual allocation, grouped
+driver order, failed prerequisites and repeated-attempt preservation.
+All **130 portable tests pass**, including the real pinned-engine DAG dry-run.
+The native Linux preprocessing execution is **prepared, not run**; remaining nine
+samples and scientific model fits are not authorized.
+
 ## Integration accepted and accounting corrected, 2026-09-21
 
 `native-integration-p1upv3gg-return.tar.gz` matches its supplied SHA256; source
