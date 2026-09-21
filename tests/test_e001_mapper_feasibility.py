@@ -16,6 +16,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import e001_mapper_feasibility as mapper
 
 
+PUBLISHER_MEMBER = "short_read/2017.12.04_18.45.54_sample_0/reads/anonymous_reads.fq.gz"
+
+
 class MapperTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
@@ -24,7 +27,7 @@ class MapperTests(unittest.TestCase):
     def tearDown(self):
         self.temp.cleanup()
 
-    def fixture(self, bad=False, member=mapper.MEMBER):
+    def fixture(self, bad=False, member=PUBLISHER_MEMBER):
         text = ""
         for i in range(3):
             for mate in (1, 2):
@@ -41,6 +44,7 @@ class MapperTests(unittest.TestCase):
     def test_prefix_stops_at_complete_pairs(self):
         result = mapper.extract_prefix(self.fixture(), self.root / "reads", pairs=2)
         self.assertEqual(result["pairs"], 2)
+        self.assertEqual(result["member"], PUBLISHER_MEMBER)
         self.assertEqual(len((self.root / "reads/R1.fq").read_text().splitlines()), 8)
 
     def test_mismatched_pairs_stop(self):

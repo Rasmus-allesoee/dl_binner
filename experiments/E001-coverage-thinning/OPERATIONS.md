@@ -46,6 +46,10 @@ Downloads: Bowtie2 dependencies and the single sample archive only. The archive
 is size/ETag-bound and hashed; failed partials are preserved, not silently reused.
 No training, binning scores or scientific hypothesis tests are performed.
 
+If a previous attempt completed the archive download but failed later, reuse its
+`sample_0.tar.gz` with `--archive <existing-archive>` instead of using
+`--allow-sample-archive`; this avoids downloading the same 9.74 GB payload again.
+
 Needs 20 GB free space before fresh acquisition (8 GB with existing archive).
 The shared heavy-data location is documented in AGENTS but is not used automatically;
 if this check fails, review actual quota and location before retrying. Download

@@ -48,6 +48,23 @@ Native Bowtie2 solve and real-read execution remain owner-run and unvalidated.
 All 118 portable tests pass. Publisher HEAD was rechecked on 2026-09-21 and
 matches the pinned 9,738,621,091-byte size and ETag; no payload was fetched.
 
+### Mapper owner attempt failed at archive-member lookup, 2026-09-21
+
+The owner ran the mapper feasibility bundle at 4 vCPU / 12 GB. The Bowtie2
+environment setup and package lock passed. The single 9,738,621,091-byte
+publisher archive was downloaded and its recorded SHA-256 is
+`6f349a6f3299b4595f8c5acfb9ad7d8e2fc56fe657c1a451cde90e92c364f113`.
+Extraction then stopped before any index build or mapper execution because the
+driver searched for
+`2017.12.04_18.45.54_sample_0/reads/anonymous_reads.fq.gz`, while the reviewed
+publisher layout places that member below
+`short_read/2017.12.04_18.45.54_sample_0/reads/anonymous_reads.fq.gz`.
+The failure is therefore a corrected archive-member path in the driver, not a
+failed download, Bowtie2 installation, or scientific result. The attempt used
+0.794 allocated core-hours and preserved the archive for reuse. The corrected
+driver must be rerun with that existing archive supplied through `--archive`,
+so the 9.74 GB download is not repeated.
+
 ## COMEBin and MetaBAT2 accepted separately, 2026-09-21
 
 Both archives match their supplied SHA256 checksums. Recorded driver hashes match

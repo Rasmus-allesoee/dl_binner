@@ -31,7 +31,10 @@ from e001_vamb_cpu import invoke, require, sha
 URL = "https://frl.publisso.de/data/frl%3A6425518/gastrooral/sample_0.tar.gz"
 ARCHIVE_BYTES = 9738621091
 ETAG = '"2447790a3-5d68d6c44295d"'
-MEMBER = "2017.12.04_18.45.54_sample_0/reads/anonymous_reads.fq.gz"
+# The publisher's outer sample archive places the FASTQ below ``short_read/``.
+# Keep the complete member path pinned: choosing an arbitrary FASTQ from this
+# archive could silently select a different read product or metadata payload.
+MEMBER = "short_read/2017.12.04_18.45.54_sample_0/reads/anonymous_reads.fq.gz"
 PAIRS = 100000
 
 
