@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import e001_mapper_feasibility as mapper
 
 
-PUBLISHER_MEMBER = "short_read/2017.12.04_18.45.54_sample_0/reads/anonymous_reads.fq.gz"
+PUBLISHER_MEMBER = "2017.12.04_18.45.54_sample_0/reads/anonymous_reads.fq"
 
 
 class MapperTests(unittest.TestCase):
@@ -34,7 +34,7 @@ class MapperTests(unittest.TestCase):
                 name = f"r{i + int(bad and mate == 2)}/{mate}"
                 text += f"@{name}\n" + "A" * 150 + "\n+\n" + "I" * 150 + "\n"
         path = self.root / "sample.tar.gz"
-        data = gzip.compress(text.encode())
+        data = gzip.compress(text.encode()) if member.endswith(".gz") else text.encode()
         with tarfile.open(path, "w:gz") as tar:
             entry = tarfile.TarInfo(member)
             entry.size = len(data)
@@ -46,6 +46,11 @@ class MapperTests(unittest.TestCase):
         self.assertEqual(result["pairs"], 2)
         self.assertEqual(result["member"], PUBLISHER_MEMBER)
         self.assertEqual(len((self.root / "reads/R1.fq").read_text().splitlines()), 8)
+
+    def test_gzipped_fastq_member_remains_supported(self):
+        with patch.object(mapper, "MEMBER", PUBLISHER_MEMBER + ".gz"):
+            result = mapper.extract_prefix(self.fixture(member=PUBLISHER_MEMBER + ".gz"), self.root / "reads", pairs=2)
+        self.assertEqual(result["pairs"], 2)
 
     def test_mismatched_pairs_stop(self):
         with self.assertRaisesRegex(ValueError, "Mismatched"):

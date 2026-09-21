@@ -31,11 +31,35 @@ from e001_vamb_cpu import invoke, require, sha
 URL = "https://frl.publisso.de/data/frl%3A6425518/gastrooral/sample_0.tar.gz"
 ARCHIVE_BYTES = 9738621091
 ETAG = '"2447790a3-5d68d6c44295d"'
-# The publisher's outer sample archive places the FASTQ below ``short_read/``.
-# Keep the complete member path pinned: choosing an arbitrary FASTQ from this
-# archive could silently select a different read product or metadata payload.
-MEMBER = "short_read/2017.12.04_18.45.54_sample_0/reads/anonymous_reads.fq.gz"
+# CAMISIM's ``anonymous_reads.fq`` is the complete anonymized read stream.
+# Keep the complete member path pinned: choosing ``subsample_0.fq`` or an
+# arbitrary FASTQ could silently change the input order or read population.
+MEMBER = "2017.12.04_18.45.54_sample_0/reads/anonymous_reads.fq"
 PAIRS = 100000
+
+
+class _MemberReader(io.RawIOBase):
+    """Adapt tarfile's non-seekable member stream for buffered text parsing."""
+
+    def __init__(self, source):
+        super().__init__()
+        self.source = source
+
+    def readable(self):
+        return True
+
+    def readinto(self, buffer):
+        data = self.source.read(len(buffer))
+        if not data:
+            return 0
+        buffer[:len(data)] = data
+        return len(data)
+
+    def close(self):
+        try:
+            self.source.close()
+        finally:
+            super().close()
 
 
 def acquire(destination):
@@ -74,7 +98,8 @@ def extract_prefix(archive, out, pairs=PAIRS):
 
     Use Biopython's FASTQ parser, validate mate identity/orientation and 150 bp
     lengths, and stop after complete pairs. Do not extract BAMs or other members.
-    The full outer archive is checked separately; the inner gzip is prefix-only.
+    The full outer archive is checked separately; the selected plain or gzip
+    FASTQ member is read only through the requested prefix.
     """
     from Bio.SeqIO.QualityIO import FastqGeneralIterator
     out.mkdir()
@@ -83,8 +108,11 @@ def extract_prefix(archive, out, pairs=PAIRS):
             if member.name.lstrip("./") != MEMBER:
                 continue
             require(member.isfile(), "Read member is not a regular file")
-            with gzip.GzipFile(fileobj=tar.extractfile(member)) as compressed, \
-                 io.TextIOWrapper(compressed, encoding="ascii") as text, \
+            raw = tar.extractfile(member)
+            require(raw is not None, "Read member could not be opened")
+            stream = (gzip.GzipFile(fileobj=raw) if member.name.endswith(".gz")
+                      else io.BufferedReader(_MemberReader(raw)))
+            with io.TextIOWrapper(stream, encoding="ascii") as text, \
                  (out / "R1.fq").open("x") as r1, (out / "R2.fq").open("x") as r2:
                 records = iter(FastqGeneralIterator(text))
                 for _ in range(pairs):
