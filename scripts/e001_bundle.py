@@ -20,6 +20,7 @@ PATHS = (
     "scripts/e001_remaining_cpu.py",
     "scripts/e001_integration.py",
     "scripts/e001_mapper_feasibility.py",
+    "scripts/e001_mapper_diagnostics.py",
     "scripts/e001_preprocess.py",
     "workflows/e001-preprocess",
     "scripts/e001_retry_conversion.sh",
