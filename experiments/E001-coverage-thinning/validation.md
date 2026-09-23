@@ -60,6 +60,17 @@ case-insensitive filesystem correctly refused colliding Linux terminfo names;
 no overwrite bypass was added. Linux binaries cannot execute on this Mac;
 native prefix/CLI/DAG checks therefore remain in the grouped owner command.
 
+Prepared code transfer: `e001-code-cccf8c7f7846.tar.gz`, source `cccf8c7f7846`,
+SHA256 `fbc9c92b9dfb873f291784f304a2b1936507b94d39b852c19d583789898ca8e9`.
+The separately transferred software snapshot is
+`e001-workflow-0fb6955cdc62.tar.gz` with the owner-archive SHA256 above; each has
+an adjacent checksum file. Neither binary archive is tracked. Native upload/run
+is pending. This package intentionally predates its documentation-only pin.
+The extracted code archive passes 156 tests with one optional older sample-0
+engine test skipped because its fixed local environment path is absent; the
+remaining-nine real-engine fixtures run. Archive checksum/source identity,
+owner-command shell syntax, documentation checks and whitespace checks pass.
+
 The previous audit below is preserved; its unresolved-child-operation status is
 superseded by these native traces.
 
