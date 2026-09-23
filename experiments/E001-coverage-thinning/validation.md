@@ -119,8 +119,12 @@ retry is still the same authorized remaining-nine acquisition;
 its data manifest, mapping, thinning seeds, concurrency and allocation do not
 change. Failure history is preserved. Focused verification passes: 32 tests
 cover plain and gzip extraction, ambiguous-member rejection, archive receipt
-reuse/mismatch stops, and the local synthetic Snakemake workflow DAG. The full
-portable suite was not rerun for this narrow correction.
+and content-mismatch stops, and the local synthetic Snakemake workflow DAG. The full
+portable suite was not rerun for this narrow correction. Source commit
+`4dd3cb9f594495fe2981af4df74a35e1d24d1ad8` was packaged as
+`e001-code-4dd3cb9f5944.tar.gz`, SHA-256
+`cc2eb1dc29a845b4496c408ca3aea483878820f62ec40563f64a07504d4a9bc6`; its
+embedded `SOURCE_COMMIT` matches and the adjacent checksum verifies.
 
 The previous audit below is preserved; its unresolved-child-operation status is
 superseded by the filesystem evidence above. The previous member-path assumption

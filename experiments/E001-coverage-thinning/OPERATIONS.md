@@ -19,6 +19,9 @@ archives, the driver reads each once to recheck both MD5 and SHA-256 against the
 publisher contract and original receipt. This is an extra local read of about
 20.42 GB, not a network transfer. It then downloads only the other seven; see the
 [member-contract correction](validation.md#remaining-nine-member-contract-correction-2026-09-23).
+Prepared code bundle: `e001-code-4dd3cb9f5944.tar.gz`, SHA-256
+`cc2eb1dc29a845b4496c408ca3aea483878820f62ec40563f64a07504d4a9bc6`.
+Upload it with its adjacent `.sha256` file.
 
 The job-local workflow-copy evidence and ownership boundary remain in the
 [filesystem-stall record](validation.md#workflow-filesystem-stall-identified-2026-09-23)
@@ -53,7 +56,7 @@ WORK=/work/Home/dl_binner/e001/e001-gate0
 LOG=$(mktemp "$WORK/transfer/e001-multisample.XXXXXX.log")
 echo "Terminal log: $LOG"
 (
-BUNDLE=REPLACEMENT_BUNDLE_PENDING
+BUNDLE=e001-code-4dd3cb9f5944
 CODE="$WORK/$BUNDLE"
 SHARED='/work/RasmusAllesøeNielsen#2936'
 if ! test -d "$SHARED"; then
