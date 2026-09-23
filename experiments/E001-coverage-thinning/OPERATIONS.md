@@ -7,13 +7,22 @@ Updated: 2026-09-23. This is the execution guide, not a scientific result. Read 
 Full sample-0 preprocessing is accepted: **42.24 minutes, 2.816 allocated
 core-hours, 15.412 GB new outputs** at 4 vCPU / 12 GB. Reuse the accepted
 `sample0-preprocess-6_gyxp5d` outputs and `envs/workflow`; do not rerun that pilot.
-The new traces identify **persistent-filesystem read stalls during imports**.
-The next grouped command stages the reviewed workflow snapshot on local `/tmp`,
-verifies its interpreter/package origins and exact sample-0 inventory, checks
-the actual CLI and DAG, then acquires/preprocesses the remaining nine libraries.
-It installs no software and preserves the original environments. See the
-[evidence and correction](validation.md#workflow-filesystem-stall-identified-2026-09-23)
-and [D006's narrow execution-copy exception](../../docs/decisions/D006-environment-ownership.md#job-local-workflow-execution-copy-2026-09-23).
+The workflow-copy run passed runtime checks and the Snakemake DAG, downloaded
+and checksummed samples 1 and 2, then failed extracting sample 2. The driver
+wrongly assumed every archive used sample 0's plain `.fq` member path. The
+dataset description allows `.fq.gz`; its exact sample-2 member name was not
+included in the compact return. The corrected resolver accepts only one full
+FASTQ beneath that sample's own dated `reads` directory, supports both plain
+and gzip forms, validates IDs/pairs to EOF and reports candidates on ambiguity.
+It will never select `subsample_0.fq`. Before hardlinking the two preserved
+archives, the driver reads each once to recheck both MD5 and SHA-256 against the
+publisher contract and original receipt. This is an extra local read of about
+20.42 GB, not a network transfer. It then downloads only the other seven; see the
+[member-contract correction](validation.md#remaining-nine-member-contract-correction-2026-09-23).
+
+The job-local workflow-copy evidence and ownership boundary remain in the
+[filesystem-stall record](validation.md#workflow-filesystem-stall-identified-2026-09-23)
+and [D006](../../docs/decisions/D006-environment-ownership.md#job-local-workflow-execution-copy-2026-09-23).
 
 Use **Terminal / Ubuntu / Aug2026, one node, 8 vCPU / 24 GB RAM**, with both
 Home and the offered shared storage mounted. Slurm cluster **No** is simplest
@@ -44,7 +53,7 @@ WORK=/work/Home/dl_binner/e001/e001-gate0
 LOG=$(mktemp "$WORK/transfer/e001-multisample.XXXXXX.log")
 echo "Terminal log: $LOG"
 (
-BUNDLE=e001-code-cccf8c7f7846
+BUNDLE=REPLACEMENT_BUNDLE_PENDING
 CODE="$WORK/$BUNDLE"
 SHARED='/work/RasmusAllesøeNielsen#2936'
 if ! test -d "$SHARED"; then
@@ -56,6 +65,11 @@ mkdir -p "$DATA"
 cd "$WORK/transfer"
 sha256sum --check "$BUNDLE.tar.gz.sha256"
 sha256sum --check e001-workflow-0fb6955cdc62.tar.gz.sha256
+OLD_ATTEMPT="$DATA/multisample-preprocess-i_e659el"
+if ! test -d "$OLD_ATTEMPT"; then
+    echo "STOP: verified prior attempt is missing; do not download blindly"
+    exit 1
+fi
 if test -e "$CODE" || test -L "$CODE"; then
     echo "STOP: code directory already exists"
     exit 1
@@ -65,15 +79,17 @@ python3 -I "$CODE/scripts/e001_multisample.py" "$WORK" \
     --data-root "$DATA" --vcpus 8 --ram-gb 24 \
     --sample-vcpus 4 --sample-ram-gb 10 --max-concurrent-samples 2 \
     --workflow-snapshot "$WORK/transfer/e001-workflow-0fb6955cdc62.tar.gz" \
+    --reuse-attempt "$OLD_ATTEMPT" \
     --allow-remaining-archives
 ) 2>&1 | tee "$LOG"
 SH
 ```
 
 Staging needs 2 GB free on local `/tmp` (about 0.75 GB retained until job end),
-plus the 267.6-MB persistent snapshot archive. It takes a sequential archive read
-and local extraction, with a 600-second fail-fast limit, not an expected duration.
-The driver then checks runtime origins, exact inventory, CLI and DAG. A failure
+plus the 267.6-MB persistent snapshot archive. It stages that snapshot once per
+job with a 600-second fail-fast limit, not an expected duration. The driver
+checks runtime origins, exact inventory, CLI and DAG; if these pass, it verifies
+and links prior archive receipts and starts the remaining downloads. A failure
 stops dependent work and returns logs; no automatic environment rebuild occurs.
 If all gates pass, the same command continues without another chat checkpoint:
 
@@ -82,14 +98,18 @@ If all gates pass, the same command continues without another chat checkpoint:
 2. Uses the verified job-local Snakemake 9.13.7 execution copy and the original
    separate mapping environment. No software installation, upgrades or changes
    to authoritative environment prefixes.
-3. Downloads **91.70 GB** in nine publisher archives for samples
-   `1,2,3,4,5,9,10,11,12`, checking size/ETag and complete publisher MD5 and
-   recording SHA256. Reads are now explicitly authorized by the command flag;
-   this is not another bounded-prefix task.
-4. Extracts/validates each complete anonymous read library, maps/filter/sorts/
-   indexes C0 with accepted strobealign settings, then thins/indexes CT for
-   replicate 0. Seeds are 1001-1009 in frozen sample order, not literal sample
-   number (sample 9 uses 1006). No added MAPQ filter or scientific-design change.
+3. Reuses sample 1 and sample 2 archives from failed attempt `i_e659el` only
+   when their receipts match the frozen sample/path/size/ETag/publisher-MD5
+   contract and on-disk MD5/SHA-256 rehashes match. The local rehash reads about
+   20.42 GB; same-filesystem hardlinks avoid a network transfer and do not
+   modify the preserved attempt. Downloads the other seven archives (about
+   71.28 GB), verifying size/ETag/complete publisher MD5 and recording SHA256.
+   Reads are authorized by the command flag; this is not a bounded-prefix task.
+4. Resolves the unique full per-sample `.fq` or `.fq.gz`, validates every
+   interleaved pair and sample ID to EOF, maps/filter/sorts/indexes C0 with the
+   accepted strobealign settings, then thins/indexes CT replicate 0. Seeds are
+   1001-1009 in frozen sample order, not literal sample number (sample 9 uses
+   1006). No added MAPQ filter or scientific-design change.
 5. Writes a ten-sample BAM manifest referencing original sample 0 plus nine new
    samples, per-rule extended benchmarks, detailed tool logs and live
    `progress.log`. Terminal shows stage messages, download/extraction counts,

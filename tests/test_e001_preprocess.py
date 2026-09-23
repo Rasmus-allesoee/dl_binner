@@ -1,6 +1,7 @@
 """Portable extraction, owner-driver and actual Snakemake DAG tests."""
 
 import contextlib
+import gzip
 import io
 import json
 from pathlib import Path
@@ -47,6 +48,42 @@ class PreprocessTests(unittest.TestCase):
     def test_full_count_not_silent_prefix(self):
         with self.assertRaisesRegex(ValueError, "More pairs"):
             prep.extract(self.archive(), self.root / "reads.fq", expected_pairs=1)
+
+    def test_unique_sample_gzip_member_fallback(self):
+        text = "".join(f"@S2R{i}/{mate}\n" + "A"*150 + "\n+\n" + "I"*150 + "\n"
+                       for i in range(2) for mate in (1, 2)).encode()
+        archive = self.root / "sample-2.tar.gz"
+        name = "short_read/2017.12.04_18.45.54_sample_2/reads/anonymous_reads.fq.gz"
+        with tarfile.open(archive, "w:gz") as tar:
+            info = tarfile.TarInfo(name)
+            payload = gzip.compress(text)
+            info.size = len(payload)
+            tar.addfile(info, io.BytesIO(payload))
+        output = self.root / "reads.fq"
+        result = prep.extract(archive, output, expected_pairs=None,
+                              member_name="2017.12.04_18.45.54_sample_2/reads/anonymous_reads.fq",
+                              sample=2, max_pairs=10)
+        self.assertEqual(result["member"], name)
+        self.assertTrue(result["nested_gzip"])
+        self.assertEqual(result["pairs"], 2)
+        self.assertTrue(output.read_text().startswith("@S2R0/1\n"))
+
+    def test_ambiguous_full_read_members_fail_before_writing(self):
+        archive = self.root / "ambiguous.tar.gz"
+        text = "".join(f"@S2R0/{mate}\n" + "A"*150 + "\n+\n" + "I"*150 + "\n"
+                       for mate in (1, 2)).encode()
+        with tarfile.open(archive, "w:gz") as tar:
+            for name in ("short_read/2017.12.04_18.45.54_sample_2/reads/anonymous_reads.fq",
+                         "copy/2017.12.04_18.45.54_sample_2/reads/anonymous_reads.fq.gz"):
+                info = tarfile.TarInfo(name)
+                info.size = len(text)
+                tar.addfile(info, io.BytesIO(text))
+        output = self.root / "reads.fq"
+        with self.assertRaisesRegex(ValueError, "observed candidates"):
+            prep.extract(archive, output, expected_pairs=None,
+                         member_name="2017.12.04_18.45.54_sample_2/reads/anonymous_reads.fq",
+                         sample=2)
+        self.assertFalse(output.exists())
 
     def test_allocation_guard(self):
         with self.assertRaisesRegex(ValueError, "three vCPUs"):

@@ -8,6 +8,7 @@ downloads, deletion of existing outputs, model fitting or biological scoring.
 """
 
 import argparse
+import gzip
 import io
 import json
 import os
@@ -29,45 +30,74 @@ EXPECTED_PAIRS = 16666043
 
 
 def extract(archive, output, expected_pairs=EXPECTED_PAIRS, member_name=MEMBER, sample=None, max_pairs=20000000):
-    """Stream a named plain FASTQ and validate every mate pair and read length.
+    """Resolve one sample-specific complete FASTQ and validate every mate pair.
 
-    Write one interleaved file and return its count/hash. Preserve partial output
-    on failure; never select another archive member or truncate to fit the count.
-    An exact truth-derived count is required for sample 0. Other samples use
-    expected_pairs=None, complete member EOF and a resource-only upper bound;
-    optional sample checks their anonymous-ID prefix, not genome-origin truth.
+    Prefer the observed exact member. If it is absent, accept one unique plain or
+    inner-gzip ``anonymous_reads.fq`` under this sample's own ``reads`` folder.
+    Never select a subsample or truncate. Other samples validate complete EOF,
+    anonymous ID prefixes and a resource-only upper bound.
     """
-    from Bio.SeqIO.QualityIO import FastqGeneralIterator
+    from pathlib import PurePosixPath
+
+    expected = PurePosixPath(member_name)
+    root_name = expected.parents[1].name
+    candidates = []
     with tarfile.open(archive, "r|gz") as tar:
         for member in tar:
-            if member.name != member_name:
-                continue
-            require(member.isfile(), "Anonymous reads must be a regular member")
-            count = 0
-            with io.TextIOWrapper(io.BufferedReader(_MemberReader(tar.extractfile(member))), encoding="ascii") as text, output.open("x") as out:
-                records = iter(FastqGeneralIterator(text))
-                for a in records:
-                    b = next(records, None)
-                    require(b is not None, "Odd number of reads")
-                    x, y = a[0].split()[0], b[0].split()[0]
-                    require(x.removesuffix("/1") == y.removesuffix("/2") and
-                            not x.endswith("/2") and not y.endswith("/1"), "Invalid mate IDs")
-                    if sample is not None:
-                        require(x.startswith(f"S{sample}R"), "Read belongs to a different sample")
-                    for record in (a, b):
-                        require(len(record[1]) == 150, "Unexpected read length")
-                        out.write(f"@{record[0]}\n{record[1]}\n+\n{record[2]}\n")
-                    count += 1
-                    require(count <= max_pairs, "Read count exceeds resource bound")
-                    if expected_pairs is not None:
-                        require(count <= expected_pairs, "More pairs than verified read truth")
-                    if count % 1000000 == 0:
-                        print(f"Validated {count:,} pairs", flush=True)
-            require(count > 0, "Empty FASTQ")
+            if member.name == member_name:
+                return _extract_member(tar, member, output, expected_pairs, sample, max_pairs)
+            parts = PurePosixPath(member.name).parts
+            sample_root_matches = parts and (
+                parts[-3] == root_name or
+                (sample is not None and parts[-3].endswith(f"sample_{sample}"))
+            ) if len(parts) >= 3 else False
+            if (member.isfile() and sample_root_matches and parts[-2] == "reads"
+                    and parts[-1] in ("anonymous_reads.fq", "anonymous_reads.fq.gz")):
+                candidates.append(member.name)
+    require(len(candidates) == 1,
+            f"Expected one full FASTQ for sample {sample} beneath {root_name!r}; "
+            f"observed candidates: {candidates[:10]!r}")
+    selected_name = candidates[0]
+    with tarfile.open(archive, "r|gz") as tar:
+        for member in tar:
+            if member.name == selected_name:
+                return _extract_member(tar, member, output, expected_pairs, sample, max_pairs)
+    raise ValueError("Resolved FASTQ member disappeared on second archive pass")
+
+
+def _extract_member(tar, member, output, expected_pairs, sample, max_pairs):
+    """Validate and interleave one selected plain or gzip-compressed tar member."""
+    from Bio.SeqIO.QualityIO import FastqGeneralIterator
+
+    require(member.isfile(), "Anonymous reads must be a regular member")
+    source = tar.extractfile(member)
+    if member.name.endswith(".gz"):
+        source = gzip.GzipFile(fileobj=source, mode="rb")
+    count = 0
+    with io.TextIOWrapper(io.BufferedReader(_MemberReader(source)), encoding="ascii") as text, output.open("x") as out:
+        records = iter(FastqGeneralIterator(text))
+        for a in records:
+            b = next(records, None)
+            require(b is not None, "Odd number of reads")
+            x, y = a[0].split()[0], b[0].split()[0]
+            require(x.removesuffix("/1") == y.removesuffix("/2") and
+                    not x.endswith("/2") and not y.endswith("/1"), "Invalid mate IDs")
+            if sample is not None:
+                require(x.startswith(f"S{sample}R"), "Read belongs to a different sample")
+            for record in (a, b):
+                require(len(record[1]) == 150, "Unexpected read length")
+                out.write(f"@{record[0]}\n{record[1]}\n+\n{record[2]}\n")
+            count += 1
+            require(count <= max_pairs, "Read count exceeds resource bound")
             if expected_pairs is not None:
-                require(count == expected_pairs, "Pair count differs from complete sample-0 truth")
-            return {"pairs": count, "member": member_name, "bytes": output.stat().st_size, "sha256": sha(output)}
-    raise ValueError("Inventoried anonymous FASTQ member missing")
+                require(count <= expected_pairs, "More pairs than verified read truth")
+            if count % 1000000 == 0:
+                print(f"Validated {count:,} pairs", flush=True)
+    require(count > 0, "Empty FASTQ")
+    if expected_pairs is not None:
+        require(count == expected_pairs, "Pair count differs from complete sample-0 truth")
+    return {"pairs": count, "member": member.name, "nested_gzip": member.name.endswith(".gz"),
+            "bytes": output.stat().st_size, "sha256": sha(output)}
 
 
 def worker(mode, config_path):

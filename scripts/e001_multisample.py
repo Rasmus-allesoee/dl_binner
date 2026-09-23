@@ -41,13 +41,32 @@ def write_json(path, value):
 def retained_bytes(stage):
     """Count existing attempt files, tolerating sort temporaries removed mid-scan."""
     total = 0
+    seen = set()
     for path in stage.rglob("*"):
         try:
             if path.is_file():
-                total += path.stat().st_size
+                stat = path.stat()
+                identity = (stat.st_dev, stat.st_ino)
+                if identity not in seen:
+                    total += stat.st_size
+                    seen.add(identity)
         except FileNotFoundError:
             continue
     return total
+
+
+def archive_digests(path):
+    """Calculate publisher MD5 and SHA-256 for one preserved archive.
+
+    Input is an existing regular archive; output contains both digests from
+    one sequential read. Used before reusing large previously downloaded data.
+    """
+    md5, strong = hashlib.md5(), hashlib.sha256()
+    with Path(path).open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            md5.update(block)
+            strong.update(block)
+    return {"md5": md5.hexdigest(), "sha256": strong.hexdigest()}
 
 
 def download(item, destination):
@@ -186,6 +205,59 @@ def accepted_sample0(root, observed):
             "reuse": "Accepted prior result; record and size checks only, no remapping or rethinning"}
 
 
+def link_verified_archives(previous, data_root, stage, samples, sources, plan, base_url):
+    """Reuse publisher-verified complete archives from one failed attempt by hardlink.
+
+    Require a direct child of the configured data root, failed prior status,
+    exact current manifest/ETag/size agreement and its successful MD5 receipt.
+    Rehash the on-disk archive before linking, so a receipt alone cannot hide
+    later corruption. The source attempt is never modified.
+    The source attempt is read-only; only same-filesystem hardlinks are created.
+    Return sample IDs reused, without re-downloading or rewriting the source.
+    """
+    previous, data_root, stage = map(Path, (previous, data_root, stage))
+    require(previous.resolve().parent == data_root.resolve()
+            and previous.name.startswith("multisample-preprocess-"),
+            "Reuse source must be an existing E001 attempt below this data root")
+    require(json.loads((previous / "status.json").read_text()).get("exit_code") == 1,
+            "Reuse is limited to a failed, preserved attempt")
+    reused = []
+    for sample in samples:
+        source_folder = previous / f"sample_{sample}"
+        archive = source_folder / "source.tar.gz"
+        receipt_path = source_folder / "acquisition.json"
+        if not archive.is_file() or not receipt_path.is_file():
+            continue
+        receipt = json.loads(receipt_path.read_text())
+        recorded_sha = receipt.get("sha256", "")
+        item = plan[sample]
+        expected = {"sample": sample, "path": sources[sample]["path"],
+                    "md5": sources[sample]["md5"], "bytes": item["bytes"],
+                    "etag": item["etag"], "directory": item["directory"],
+                    "url": base_url + sources[sample]["path"]}
+        require(all(receipt.get(key) == value for key, value in expected.items())
+                and receipt.get("publisher_md5_verified") is True
+                and len(recorded_sha) == 64
+                and all(character in "0123456789abcdef" for character in recorded_sha),
+                f"Prior archive receipt does not match the frozen publisher contract for sample {sample}")
+        source_stat = archive.lstat()
+        require(not archive.is_symlink() and source_stat.st_size == item["bytes"],
+                f"Prior archive is not a complete regular file for sample {sample}")
+        print(f"VERIFY sample {sample}: hashing preserved {source_stat.st_size / 10**9:.2f}-GB archive", flush=True)
+        digests = archive_digests(archive)
+        require(digests == {"md5": expected["md5"], "sha256": recorded_sha},
+                f"Prior archive content digest mismatch for sample {sample}")
+        print(f"PASS sample {sample}: preserved archive hashes", flush=True)
+        destination = stage / f"sample_{sample}" / "source.tar.gz"
+        require(source_stat.st_dev == destination.parent.stat().st_dev,
+                "Existing archive and new attempt must share a filesystem for zero-copy reuse")
+        os.link(archive, destination, follow_symlinks=False)
+        write_json(destination.parent / "acquisition.json", receipt)
+        reused.append({"sample": sample, "bytes": item["bytes"], "sha256": receipt["sha256"],
+                       "from": str(previous)})
+    return reused
+
+
 def aggregate(config):
     """Build ordered ten-sample BAM manifest only after all new rules succeed."""
     entries = [config["sample0"]]
@@ -310,7 +382,8 @@ def stage_runtime(root, snapshot, env, stage):
 
 
 def run(root, data_root, cpus, ram_gb, allow_downloads,
-        sample_cpus=4, sample_ram_gb=10, concurrency=1, startup_only=False, workflow_snapshot=None):
+        sample_cpus=4, sample_ram_gb=10, concurrency=1, startup_only=False,
+        workflow_snapshot=None, reuse_attempt=None):
     """Probe existing runtimes, run a bounded multi-sample DAG, package evidence.
 
     Explicit data-root prevents silent migration to shared storage. The 80
@@ -386,6 +459,10 @@ def run(root, data_root, cpus, ram_gb, allow_downloads,
             path = folder / "runtime.json"
             write_json(path, cfg)
             config["sample_configs"][str(sample)] = str(path)
+        if reuse_attempt is not None:
+            config["reused_archives"] = link_verified_archives(
+                reuse_attempt, data_root, stage, samples, sources,
+                {item["sample"]: item for item in plan["samples"]}, acquisition["base_url"])
         write_json(stage / "runtime.json", config)
         cmd = ["--snakefile", CODE / "workflows/e001-preprocess/multisample.smk",
                "--directory", stage, "--configfile", stage / "runtime.json", "--cores", cpus,
@@ -408,6 +485,7 @@ def run(root, data_root, cpus, ram_gb, allow_downloads,
         elapsed = time.monotonic() - started
         write_json(stage / "status.json", {"exit_code": status, "actual_vcpus": cpus, "actual_ram_gb": ram_gb,
             "startup_only": startup_only,
+            "reused_archives": config.get("reused_archives", []) if "config" in locals() else [],
             **resources,
             "elapsed_seconds": elapsed, "allocated_core_hours": elapsed * cpus / 3600,
             "attempt_bytes": retained_bytes(stage),
@@ -442,6 +520,7 @@ if __name__ == "__main__":
     parser.add_argument("--allow-remaining-archives", action="store_true")
     parser.add_argument("--startup-only", action="store_true", help="Capture runtime diagnostics and dry-run only; never acquire reads")
     parser.add_argument("--workflow-snapshot", type=Path, help="Use reviewed archive as a job-local execution copy; preserve persistent environment")
+    parser.add_argument("--reuse-attempt", type=Path, help="Zero-copy reuse of checksum-verified archives from one failed attempt under --data-root")
     parser.add_argument("--worker", choices=("download", "extract", "map", "thin"))
     parser.add_argument("--config", type=Path)
     parser.add_argument("--sample", type=int)
@@ -455,4 +534,4 @@ if __name__ == "__main__":
             parser.error("root, --data-root, --vcpus and --ram-gb required")
         raise SystemExit(run(args.root, args.data_root, args.vcpus, args.ram_gb, args.allow_remaining_archives,
                              args.sample_vcpus, args.sample_ram_gb, args.max_concurrent_samples, args.startup_only,
-                             args.workflow_snapshot))
+                             args.workflow_snapshot, args.reuse_attempt))

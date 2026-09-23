@@ -71,8 +71,60 @@ engine test skipped because its fixed local environment path is absent; the
 remaining-nine real-engine fixtures run. Archive checksum/source identity,
 owner-command shell syntax, documentation checks and whitespace checks pass.
 
+## Remaining-nine Member Contract Correction, 2026-09-23
+
+Owner return `multisample-preprocess-i_e659el-return.tar.gz` checksum
+`a71f6b6c82d9d520a2df41a6245a4974b74c6d5e696216244b542ecefe1aec96` matches.
+The code and workflow snapshot hashes passed at the start of the owner command.
+At 8 vCPU / 24 GB, workflow staging, mapping versions, snapshot origin checks,
+exact pip inventory, Snakemake startup and DAG all passed. The workflow then
+started; this resolves the previous environment startup block for this run.
+
+The first `download` jobs completed for samples 2 and 1. Their acquisition
+receipts confirm full publisher MD5 verification and size/ETag matches:
+sample 2 is 10,170,187,766 bytes (SHA256
+`63910aa2e4a84ecfadaab57b104b3929405bfd5f77986fca1efa26570a76cf23`), sample 1
+is 10,250,974,699 bytes (SHA256
+`083de4de9c85269b9ae2303e19a56601c1bb1ea26bd7e7dae607d3a4303cc993`). Both
+archives and receipts remain in the failed attempt under the shared data root.
+Driver elapsed time was 530.819 seconds; cost 1.179599 allocated core-hours.
+No FASTQ, C0/CT BAM, features, model fit or biological score was produced.
+
+Extraction raised `ValueError: Inventoried anonymous FASTQ member missing` for
+sample 2. The defect was our input-contract assumption: we applied sample 0's
+plain member name to each archive without confirming that member for each one.
+The dataset description allows `anonymous_reads.fq.gz`; the compact return
+does not contain sample 2's member listing, so this record does not claim that
+the actual file was gzip-compressed. The sample-specific full-read path must be
+selected from the archive, not inferred from the prefix probe or sample 0.
+
+Correction: retain the exact known sample-0 member path. For another sample,
+scan the publisher-verified tar and require exactly one regular
+`reads/anonymous_reads.fq` or `reads/anonymous_reads.fq.gz` beneath its dated
+sample folder. Parse gzip contents when selected; validate paired orientation,
+150-bp lengths, that sample's `S{sample}R` read-ID prefix, all pairs through EOF,
+and the existing 20-million-pair resource guard. Zero or multiple candidates
+fail before creating FASTQ output and include candidate paths. Subsamples and
+arbitrary FASTQs are never accepted.
+
+The next run hardlinks the sample 1 and 2 archives from this preserved failed
+attempt only after their complete acquisition receipts match frozen publisher
+path, MD5, size, ETag and sample directory, then recalculates both MD5 and
+SHA-256 over each on-disk archive in one read. A content/receipt mismatch stops
+before linking or Snakemake. This adds a local sequential read of about 20.42 GB
+but avoids repeating 20.42 GB of network downloads; the remaining seven total
+about 71.28 GB. Hardlinked bytes count once in attempt storage reporting. It
+writes new receipts in a unique attempt and leaves the originals untouched. The
+retry is still the same authorized remaining-nine acquisition;
+its data manifest, mapping, thinning seeds, concurrency and allocation do not
+change. Failure history is preserved. Focused verification passes: 32 tests
+cover plain and gzip extraction, ambiguous-member rejection, archive receipt
+reuse/mismatch stops, and the local synthetic Snakemake workflow DAG. The full
+portable suite was not rerun for this narrow correction.
+
 The previous audit below is preserved; its unresolved-child-operation status is
-superseded by these native traces.
+superseded by the filesystem evidence above. The previous member-path assumption
+is superseded by the per-archive correction here.
 
 ## Remaining-nine startup audit, 2026-09-23
 
@@ -293,12 +345,11 @@ This is operational preprocessing, not a biological result or H001 test.
 cover samples 1,2,3,4,5,9,10,11,12, in frozen order. HTTP HEAD plus 64 KiB
 range probes confirmed each archive's size, ETag and dated sample directory;
 the nine archives total **91,698,809,375 bytes**. Full payloads were not downloaded
-locally. Publisher MD5s remain in acquisition.json and will be verified during
-owner download before extraction. Select the dated directory's plain
-`reads/anonymous_reads.fq`, never a subsample or simulator BAM. The complete
-member suffix is established on sample 0 and enforced at runtime on the others;
-the prefix probes alone do not prove every member's presence. Small public
-read-origin metadata prefixes confirm `S{sample}R` anonymous IDs in each library.
+locally. Publisher MD5s are verified on owner download before extraction. Sample 0
+proved its own plain `reads/anonymous_reads.fq` member only; it did not establish
+the other nine members. The corrected per-sample resolver requires one unique
+full `anonymous_reads.fq` or `.fq.gz`, never a subsample or simulator BAM. Small
+public read-origin metadata prefixes confirm `S{sample}R` IDs in each library.
 Extraction validates every pair to EOF; other libraries are not forced to have
 sample 0's exact count. The 20-million-pair bound is a stop-for-review resource
 guard, never truncation or sample selection.

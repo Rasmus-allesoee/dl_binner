@@ -3,7 +3,7 @@
   "checked": "2026-09-21",
   "source": "acquisition.json publisher URLs and MD5s; HTTP HEAD and 65536-byte range probes for every remaining archive",
   "anonymous_id_evidence": "16384-byte HTTP 206 prefixes from https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Gastrointestinal_tract/short_read/2017.12.04_18.45.54_sample_{sample}/reads/reads_mapping.tsv.gz confirm S{sample}R0/1 and S{sample}R0/2 for all nine libraries; used only to validate sample naming, never as model input.",
-  "member_contract": "Each archive prefix confirms its dated sample directory. Select only that directory's reads/anonymous_reads.fq, as established on sample 0; validate the complete stream after publisher MD5 verification. No guessed alternate member on failure.",
+  "member_contract": "Each archive prefix confirms its dated sample directory, but sample 0 does not establish identical member names in the other archives. Under the verified per-sample reads directory require exactly one regular anonymous_reads.fq or anonymous_reads.fq.gz, then validate all interleaved pairs, 150-bp lengths, that sample's anonymous ID prefix and EOF. Never select subsample_0.fq or any arbitrary FASTQ.",
   "samples": [
     {"sample": 1, "bytes": 10250974699, "etag": "\"2630175eb-5d68eae17b47f\"", "directory": "2017.12.04_18.45.54_sample_1"},
     {"sample": 2, "bytes": 10170187766, "etag": "\"25e30bff6-5d6a2ad6ff08f\"", "directory": "2017.12.04_18.45.54_sample_2"},

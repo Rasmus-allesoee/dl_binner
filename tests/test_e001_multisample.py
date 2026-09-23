@@ -291,6 +291,81 @@ class MultiSampleTests(unittest.TestCase):
         aggregate.assert_not_called()
         self.assertTrue(json.loads(next(self.root.glob("multisample-*/status.json")).read_text())["startup_only"])
 
+    def test_reuse_only_complete_receipted_archives_from_failed_attempt(self):
+        data = self.root / "data"
+        previous = data / "multisample-preprocess-old"
+        current = data / "multisample-preprocess-new"
+        previous.mkdir(parents=True)
+        current.mkdir()
+        (previous / "status.json").write_text(json.dumps({"exit_code": 1}))
+        sources, plan = {}, {}
+        for sample in (1, 2):
+            folder = previous / f"sample_{sample}"
+            folder.mkdir()
+            payload = f"verified archive {sample}".encode()
+            archive = folder / "source.tar.gz"
+            archive.write_bytes(payload)
+            source = {"sample": sample, "path": f"gastrooral/sample_{sample}.tar.gz",
+                      "md5": hashlib.md5(payload).hexdigest()}
+            row = {"sample": sample, "bytes": len(payload), "etag": f'"etag-{sample}"',
+                   "directory": f"2017.12.04_18.45.54_sample_{sample}"}
+            sources[sample], plan[sample] = source, row
+            receipt = {**source, **row, "url": "https://fixture/" + source["path"],
+                       "sha256": hashlib.sha256(payload).hexdigest(), "publisher_md5_verified": True}
+            (folder / "acquisition.json").write_text(json.dumps(receipt))
+            (current / f"sample_{sample}").mkdir()
+        reused = multi.link_verified_archives(previous, data, current, [1, 2, 3], sources, plan, "https://fixture/")
+        self.assertEqual([item["sample"] for item in reused], [1, 2])
+        for sample in (1, 2):
+            old = previous / f"sample_{sample}/source.tar.gz"
+            new = current / f"sample_{sample}/source.tar.gz"
+            self.assertEqual(old.stat().st_ino, new.stat().st_ino)
+            self.assertEqual(old.read_bytes(), new.read_bytes())
+            self.assertTrue(json.loads((current / f"sample_{sample}/acquisition.json").read_text())["publisher_md5_verified"])
+        self.assertFalse((current / "sample_3/source.tar.gz").exists())
+
+    def test_reuse_rejects_receipt_mismatch_before_link(self):
+        data = self.root / "data"
+        previous = data / "multisample-preprocess-old"
+        current = data / "multisample-preprocess-new"
+        old = previous / "sample_2"
+        (old).mkdir(parents=True)
+        (current / "sample_2").mkdir(parents=True)
+        (previous / "status.json").write_text(json.dumps({"exit_code": 1}))
+        payload = b"archive"
+        archive = old / "source.tar.gz"
+        archive.write_bytes(payload)
+        source = {"sample": 2, "path": "gastrooral/sample_2.tar.gz", "md5": hashlib.md5(payload).hexdigest()}
+        row = {"sample": 2, "bytes": len(payload), "etag": '"e"', "directory": "dated_sample_2"}
+        (old / "acquisition.json").write_text(json.dumps({**source, **row, "url": "https://fixture/gastrooral/sample_2.tar.gz",
+            "sha256": hashlib.sha256(payload).hexdigest(), "publisher_md5_verified": True}))
+        with self.assertRaisesRegex(ValueError, "publisher contract"):
+            multi.link_verified_archives(previous, data, current, [2], {2: source},
+                                         {2: {**row, "etag": '"changed"'}}, "https://fixture/")
+        self.assertFalse((current / "sample_2/source.tar.gz").exists())
+
+    def test_reuse_rejects_archive_changed_after_receipt(self):
+        data = self.root / "data"
+        previous = data / "multisample-preprocess-old"
+        current = data / "multisample-preprocess-new"
+        old = previous / "sample_2"
+        old.mkdir(parents=True)
+        (current / "sample_2").mkdir(parents=True)
+        (previous / "status.json").write_text(json.dumps({"exit_code": 1}))
+        original = b"archive"
+        source = {"sample": 2, "path": "gastrooral/sample_2.tar.gz",
+                  "md5": hashlib.md5(original).hexdigest()}
+        row = {"sample": 2, "bytes": len(original), "etag": '"e"',
+               "directory": "dated_sample_2"}
+        (old / "source.tar.gz").write_bytes(b"changed")
+        (old / "acquisition.json").write_text(json.dumps({
+            **source, **row, "url": "https://fixture/gastrooral/sample_2.tar.gz",
+            "sha256": hashlib.sha256(original).hexdigest(), "publisher_md5_verified": True}))
+        with self.assertRaisesRegex(ValueError, "content digest mismatch"):
+            multi.link_verified_archives(previous, data, current, [2], {2: source},
+                                         {2: row}, "https://fixture/")
+        self.assertFalse((current / "sample_2/source.tar.gz").exists())
+
     def test_accepted_sample0_reuse_and_changed_record_rejected(self):
         folder = self.root / "sample0-accepted"
         folder.mkdir()
