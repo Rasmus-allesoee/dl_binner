@@ -226,6 +226,12 @@ timeout traceback. Do not bypass a failed probe or raise its timeout and call
 that a root-cause repair. Prior successful execution does not establish current
 runtime health; retain explicit unresolved status until evidence identifies it.
 
+For the reviewed E001 workflow snapshot only, D006 permits a checksum-bound
+job-local execution copy when persistent filesystem reads stall. Preserve the
+authoritative experiment-owned environment; invoke the copied Python directly,
+verify prefix/import origins and the accepted inventory, and pass native CLI/DAG
+checks before work. Do not generalize this to arbitrary Conda-prefix relocation.
+
 Isolate Python processes inside tool environments: unset inherited `PYTHONPATH`, `PYTHONHOME` and `PYTHONUSERBASE`, and set `PYTHONNOUSERSITE=1` before installs, inventories and execution. UCloud's user-site packages were observed inside otherwise separate conda environments; distinct environment directories alone do not establish import isolation. Preserve required tool-local source imports, and verify package origins when introducing a runtime. Do not modify an already executed/transferred snapshot in place; use explicit wrappers or a new versioned transfer.
 
 Recheck container-level prerequisites on each owner-run job entry point. System packages installed outside `/work` may disappear between jobs even when experiment-local environments persist; bootstrap must not depend on the missing utility it is meant to install. Preserve failed attempts before narrowly scoped recovery, and never silently reuse partial scientific inputs.

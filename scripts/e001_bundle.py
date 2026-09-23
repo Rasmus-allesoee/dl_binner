@@ -24,6 +24,7 @@ PATHS = (
     "scripts/e001_preprocess.py",
     "scripts/e001_multisample.py",
     "scripts/e001_workflow_runtime.py",
+    "scripts/e001_workflow_snapshot.py",
     "workflows/e001-preprocess",
     "scripts/e001_retry_conversion.sh",
     "tests", "experiments/E001-coverage-thinning",

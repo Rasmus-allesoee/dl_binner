@@ -2,6 +2,67 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
+## Workflow Filesystem Stall Identified, 2026-09-23
+
+Inspected `e001-multisample.FVzcBP.log` and the complete checksummed
+`multisample-preprocess-w_0dxbgy-return.tar.gz`, SHA256
+`d7f7a37bc9607a6f8c75ec0f81b081d9e08db6174fd71d8b8450c524df1fa2b4`.
+The startup-only run used 8 vCPU / 24 GB, lasted 101.452 seconds and charged
+0.225449 allocated core-hours. Mapping checks passed; no DAG/download began.
+
+**Observed proximate cause:** both workflow Python processes reached package
+imports and then waited for filesystem reads. Child stacks repeatedly show
+`importlib._bootstrap_external.get_data`; pip later reaches distribution
+metadata reads. At each timeout Linux reports `D (disk sleep)`,
+`folio_wait_bit_common`, and syscall 0 (`read`, x86-64). Different imports
+complete between dumps: this is severely delayed I/O, not evidence of a fixed
+Python deadlock, site-hook failure or Snakefile parsing error. One small storage
+plugin import takes 8.74 seconds. The pip process took another ~11 seconds to
+exit after the timeout signal, consistent with blocked kernel I/O. Timeouts are
+termination requests, not guarantees of immediate exit from uninterruptible I/O.
+The physical/provider-side reason for the storage delay remains unknown.
+
+The new driver introduced short fail-fast limits that expose this condition;
+the original unbounded version probe would appear silent. Accepted sample-0
+startup was fast in its earlier job. Neither that history nor the new stacks
+support changing mapping, thinning, sample selection or Snakemake rules.
+
+Owner-supplied `workflow.tar.gz`: 267,595,287 bytes; SHA256
+`0fb6955cdc6263079d2f8f1a32c14037c29d5c90d16c3b3be233ea257c6ab103`.
+The archive has 20,402 members (18,719 regular files, 1,683 directories),
+744,756,842 extracted bytes, no links. Python is a Linux ELF executable.
+Top-level package metadata agrees with every `==` version in accepted sample-0
+inventory; packaging retains its recorded Conda direct-origin metadata.
+Of 1,818 checked top-level wheel RECORD SHA256 entries, 1,816 match; the two
+differences are the `INSTALLER` labels for packaging and pip, not executable
+package code. This is a scoped snapshot audit, not a complete supply-chain
+attestation. Vendored package metadata is not mistaken for installed top-level
+versions. The archive is an ignored transfer asset, not committed data.
+
+**Correction:** use a fresh job-local execution copy of this exact snapshot,
+avoiding thousands of reads from the affected persistent prefix. No reinstall,
+upgrade or change to the original environment. D006 records the narrow exception
+and its portability checks. The grouped command verifies local interpreter and
+import origins, requires byte-identical pip inventory to sample 0, checks the CLI
+and constructs the real DAG before acquiring reads. Any failure stops before
+dependent work and packages evidence. No arbitrary timeout increase or probe
+bypass. Scientific commands, two sample lanes and accepted sample-0 reuse stay
+unchanged. Native efficacy of the local-copy remedy is pending the owner run;
+the storage-read blockage itself is directly observed.
+
+Local verification: **157 portable tests pass**, including corrupt-archive and
+unsafe-member rejection, repeated staging without overwrites, executable-mode
+preservation, mismatched-inventory stop before DAG, and actual pinned Snakemake
+fixture execution. The entire uploaded snapshot extracts successfully with the
+production worker on a disposable case-sensitive APFS volume: all 20,402
+members and 744,756,842 bytes. Initial extraction on the Mac's default
+case-insensitive filesystem correctly refused colliding Linux terminfo names;
+no overwrite bypass was added. Linux binaries cannot execute on this Mac;
+native prefix/CLI/DAG checks therefore remain in the grouped owner command.
+
+The previous audit below is preserved; its unresolved-child-operation status is
+superseded by these native traces.
+
 ## Remaining-nine startup audit, 2026-09-23
 
 Audit baseline: `743816624a13` and `cdb4208295fb`; audited all five subsequent

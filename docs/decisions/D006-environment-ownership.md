@@ -52,6 +52,32 @@ No such migration is required now. The remaining limitation is that pip freeze
 and Conda records are not a complete portable wheel archive; keep that distinct
 from the location decision and improve replay artifacts as runtimes stabilize.
 
+### Job-local Workflow Execution Copy, 2026-09-23
+
+Narrow exception to the no-copy rule above: E001 may execute the reviewed
+workflow snapshot on job-local `/tmp` to avoid observed persistent-filesystem
+read stalls. This is an immutable execution copy, not a replacement authoritative
+environment, shared base, changed recipe or silent relocation. The original
+`envs/workflow` and all other tool environments remain untouched under Home.
+
+The owner-supplied archive is bound to SHA256
+`0fb6955cdc6263079d2f8f1a32c14037c29d5c90d16c3b3be233ea257c6ab103`.
+The worker extracts only regular files/directories into a unique local prefix,
+records provenance persistently, and invokes **that prefix's Python directly**.
+Do not execute the copied console-script shebangs: they point to the original
+prefix. Validate the local interpreter, standard library and distribution
+origins, exact accepted sample-0 pip inventory, actual CLI, and DAG before any
+acquisition. Snakemake's local executor uses `sys.executable` for child jobs;
+mapping workers still use their explicit persistent mapping interpreter.
+
+No package installation, upgrade, prefix rewriting or deletion is authorized.
+The copy needs about 0.75 GB and is disposable at job termination; logs and
+scientific outputs remain persistent. Recreate it from the same verified archive
+in a fresh job, not from an arbitrary previous temporary directory. This is not
+general permission to copy other Conda environments: each has its own binary,
+prefix and entry-point constraints. Native validation remains a gate, not an
+assumption that every Conda prefix is portable.
+
 ## Operational Consequence
 
 COMEBin and MetaBAT2 now execute in one owner-run task. Each tool's setup must pass

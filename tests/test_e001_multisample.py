@@ -248,6 +248,34 @@ class MultiSampleTests(unittest.TestCase):
         self.assertTrue(record["packaging_failed"])
         self.assertEqual(record["exit_code"], 1)
 
+    def test_snapshot_inventory_gate_and_local_interpreter(self):
+        (self.root / "SOURCE_COMMIT").write_text("a" * 40)
+        original_sha = multi.sha
+        expected = json.loads((multi.EXPERIMENT / "sample0-preprocess-observed.json").read_text())["member_sha256"]["workflow-lock.stdout"]
+        prefix = self.root / "local-workflow"
+        for matched in (False, True):
+            calls = []
+            def digest(path):
+                if Path(path).name == "workflow-lock.stdout":
+                    return expected if matched else "wrong"
+                if Path(path).name == "canonical.fna":
+                    return "14870c27bc9467b5897bd1b65b347d7d5e2733d8bbe48c0085cb708194966fe1"
+                return original_sha(path)
+            with patch.object(multi, "CODE", self.root), \
+                 patch.object(multi, "accepted_sample0", return_value={"sample": 0}), \
+                 patch.object(multi, "stage_runtime", return_value=prefix), \
+                 patch.object(multi, "verify_mapping_versions"), patch.object(multi, "workflow_preflight"), \
+                 patch.object(multi, "sha", side_effect=digest), \
+                 patch.object(multi, "invoke", side_effect=lambda a, e, s, label, limit: calls.append((label, a))), \
+                 contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                result = multi.run(self.root, self.root, 4, 12, False,
+                                   startup_only=True, workflow_snapshot=self.root / "snapshot.tar.gz")
+            self.assertEqual(result, 0 if matched else 1)
+            self.assertEqual("dag" in [label for label, argv in calls], matched)
+            for label, argv in calls:
+                if label in ("workflow-prefix", "dag"):
+                    self.assertEqual(argv[0], prefix / "bin/python")
+
     def test_startup_only_never_acquires_or_aggregates(self):
         (self.root / "SOURCE_COMMIT").write_text("a" * 40)
         calls = []

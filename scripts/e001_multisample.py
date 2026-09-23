@@ -299,8 +299,18 @@ def workflow_preflight(workflow, env, stage):
             "Snakemake CLI differs from the required 9.13.7 pin")
 
 
+def stage_runtime(root, snapshot, env, stage):
+    """Copy the reviewed archive to local scratch using a bounded system-Python worker."""
+    require(sys.platform == "linux", "Reviewed workflow snapshot is Linux-only")
+    require(Path("/tmp").stat().st_dev != root.stat().st_dev,
+            "Job-local /tmp must not share the persistent work filesystem")
+    invoke([sys.executable, "-I", CODE / "scripts/e001_workflow_snapshot.py",
+            snapshot, stage / "workflow-snapshot.json"], env, stage, "workflow-stage", 600)
+    return Path(json.loads((stage / "workflow-snapshot.json").read_text())["prefix"])
+
+
 def run(root, data_root, cpus, ram_gb, allow_downloads,
-        sample_cpus=4, sample_ram_gb=10, concurrency=1, startup_only=False):
+        sample_cpus=4, sample_ram_gb=10, concurrency=1, startup_only=False, workflow_snapshot=None):
     """Probe existing runtimes, run a bounded multi-sample DAG, package evidence.
 
     Explicit data-root prevents silent migration to shared storage. The 80
@@ -331,6 +341,9 @@ def run(root, data_root, cpus, ram_gb, allow_downloads,
         previous = accepted_sample0(root, json.loads((EXPERIMENT / "sample0-preprocess-observed.json").read_text()))
         mapping = root / "envs/mapping/bin/python"
         workflow = root / "envs/workflow/bin/snakemake"
+        if workflow_snapshot is not None:
+            local_prefix = stage_runtime(root, workflow_snapshot, env, stage)
+            workflow = local_prefix / "bin/snakemake"
         env["PATH"] = str(workflow.parent) + os.pathsep + env.get("PATH", "")
         env["TMPDIR"] = str(stage / "tmp")
         Path(env["TMPDIR"]).mkdir()
@@ -339,7 +352,20 @@ def run(root, data_root, cpus, ram_gb, allow_downloads,
                  "assert all(Path(m.__file__).resolve().is_relative_to(p) for m in (Bio,pysam)); print(sys.version)")
         invoke([mapping, "-I", "-c", probe, mapping.parent.parent], env, stage, "mapping-environment", 60)
         verify_mapping_versions(mapping, env, stage)
+        if workflow_snapshot is not None:
+            prefix_probe = ("import sys,site,sysconfig,importlib.metadata as m; from pathlib import Path; "
+                            "p=Path(sys.argv[1]).resolve(); assert Path(sys.prefix).resolve()==p; "
+                            "assert Path(sysconfig.get_path('stdlib')).resolve().is_relative_to(p); "
+                            "assert not site.ENABLE_USER_SITE; "
+                            "assert all(Path(d.locate_file('')).resolve().is_relative_to(p) for d in m.distributions()); "
+                            "print('Verified local interpreter, standard library and distribution origins:',p)")
+            invoke([workflow.parent / "python", "-I", "-c", prefix_probe, local_prefix], env, stage,
+                   "workflow-prefix", 60)
         workflow_preflight(workflow, env, stage)
+        if workflow_snapshot is not None:
+            accepted = json.loads((EXPERIMENT / "sample0-preprocess-observed.json").read_text())
+            require(sha(stage / "workflow-lock.stdout") == accepted["member_sha256"]["workflow-lock.stdout"],
+                    "Local snapshot package inventory differs from accepted sample 0")
         config = {**plan, **resources, "stage": str(stage), "root": str(root), "samples": samples,
                   "vcpus": cpus, "ram_gb": ram_gb, "sample_configs": {}, "sample0": previous,
                   "source_commit": (CODE / "SOURCE_COMMIT").read_text().strip(),
@@ -415,6 +441,7 @@ if __name__ == "__main__":
     parser.add_argument("--max-concurrent-samples", type=int, default=1)
     parser.add_argument("--allow-remaining-archives", action="store_true")
     parser.add_argument("--startup-only", action="store_true", help="Capture runtime diagnostics and dry-run only; never acquire reads")
+    parser.add_argument("--workflow-snapshot", type=Path, help="Use reviewed archive as a job-local execution copy; preserve persistent environment")
     parser.add_argument("--worker", choices=("download", "extract", "map", "thin"))
     parser.add_argument("--config", type=Path)
     parser.add_argument("--sample", type=int)
@@ -427,4 +454,5 @@ if __name__ == "__main__":
         if any(v is None for v in (args.root, args.data_root, args.vcpus, args.ram_gb)):
             parser.error("root, --data-root, --vcpus and --ram-gb required")
         raise SystemExit(run(args.root, args.data_root, args.vcpus, args.ram_gb, args.allow_remaining_archives,
-                             args.sample_vcpus, args.sample_ram_gb, args.max_concurrent_samples, args.startup_only))
+                             args.sample_vcpus, args.sample_ram_gb, args.max_concurrent_samples, args.startup_only,
+                             args.workflow_snapshot))
