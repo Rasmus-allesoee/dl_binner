@@ -37,23 +37,56 @@ def require(ok, message):
 
 
 def invoke(args, env, stage, label, limit):
+    """Run one labelled command and preserve its streams and outcome.
+
+    Inputs: argv, an isolated child environment, an existing attempt directory,
+    a unique stage label and a wall-time limit in seconds. Outputs: a zero exit
+    status or an exception, plus exclusive stdout/stderr/command JSON records.
+    Timed-out process groups are killed and their final return code is recorded.
+    """
     print("START: " + label, flush=True)
     started = time.monotonic()
     record = {"argv": [str(a) for a in args], "timeout_seconds": limit}
+    failure = None
     try:
         with (stage / (label + ".stdout")).open("x") as out, (stage / (label + ".stderr")).open("x") as err:
-            process = subprocess.Popen(record["argv"], env=env, stdout=out, stderr=err, start_new_session=True)
+            try:
+                process = subprocess.Popen(record["argv"], env=env, stdout=out, stderr=err, start_new_session=True)
+            except OSError as exc:
+                record["launch_error"] = repr(exc)
+                raise
             try:
                 record["returncode"] = process.wait(timeout=limit)
+            except subprocess.TimeoutExpired as exc:
+                record["timed_out"] = True
+                record["timeout_error"] = f"exceeded {limit} seconds"
+                try:
+                    os.killpg(process.pid, signal.SIGKILL)
+                except ProcessLookupError:
+                    pass
+                record["returncode"] = process.wait()
+                raise subprocess.TimeoutExpired(f"{label}: {record['argv']!r}", limit) from exc
             except BaseException:
-                # Setup and DataLoader workers must not survive a timed-out parent.
-                os.killpg(process.pid, signal.SIGKILL)
-                process.wait()
+                # Child workers must not survive an interrupted parent command.
+                try:
+                    os.killpg(process.pid, signal.SIGKILL)
+                except ProcessLookupError:
+                    pass
+                record["returncode"] = process.wait()
+                record["interrupted"] = True
                 raise
-        require(record["returncode"] == 0, label + " failed; see captured stderr")
+        if record["returncode"] != 0:
+            record["failure"] = "nonzero exit status"
+            raise RuntimeError(f"{label} failed with return code {record['returncode']}; see captured stderr")
+    except BaseException as exc:
+        failure = exc
+        record.setdefault("failure", f"{type(exc).__name__}: {exc}")
+        raise
     finally:
         record["elapsed_seconds"] = time.monotonic() - started
         (stage / (label + ".command.json")).write_text(json.dumps(record, indent=2) + "\n")
+        if failure is not None:
+            print(f"FAIL: {label}: {failure}; logs and command record retained in {stage}", file=sys.stderr, flush=True)
     print("PASS: " + label, flush=True)
 
 

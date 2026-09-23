@@ -16,7 +16,6 @@ import json
 import os
 from pathlib import Path
 import shutil
-import subprocess
 import sys
 import tarfile
 import tempfile
@@ -220,6 +219,40 @@ def resource_plan(cpus, ram_gb, sample_cpus, sample_ram_gb, concurrency):
             "download_slots": 1, "executor": "local", "allocation_nodes": 1}
 
 
+def verify_runtime_versions(mapping_python, workflow, env, stage, timeout_seconds=30):
+    """Check the three native runtime versions as bounded, recorded stages.
+
+    Inputs: mapping/workflow executable paths, the child environment, a new
+    attempt directory and a per-probe timeout. Each probe writes labelled
+    stdout, stderr and command JSON through ``invoke``. Return the verified
+    version strings; stop at the first launch, timeout, exit or version failure.
+    """
+    probes = (
+        ("strobealign", Path(mapping_python).parent / "strobealign", "0.17.0", False),
+        ("samtools", Path(mapping_python).parent / "samtools", "1.24", False),
+        ("snakemake", Path(workflow), "9.13.7", True),
+    )
+    versions = {}
+    for tool, executable, expected, whole_output in probes:
+        label = tool + "-version"
+        invoke([executable, "--version"], env, stage, label, timeout_seconds)
+        stdout_path = Path(stage) / (label + ".stdout")
+        stderr_path = Path(stage) / (label + ".stderr")
+        output = stdout_path.read_text(errors="replace")
+        lines = [line.strip() for line in output.splitlines() if line.strip()]
+        observed = "\n".join(lines) if whole_output else (lines[0].split()[-1].lstrip("v") if lines else "")
+        if not observed:
+            message = f"produced no version output; inspect {stdout_path} and {stderr_path}"
+            print(f"FAIL: {label}: {message}", file=sys.stderr, flush=True)
+            require(False, f"{label} {message}")
+        if observed != expected:
+            message = f"expected {expected!r}, observed {observed!r}; inspect {stdout_path} and {stderr_path}"
+            print(f"FAIL: {label}: {message}", file=sys.stderr, flush=True)
+            require(False, f"{label} {message}")
+        versions[tool] = observed
+    return versions
+
+
 def run(root, data_root, cpus, ram_gb, allow_downloads,
         sample_cpus=4, sample_ram_gb=10, concurrency=1):
     """Probe existing runtimes, run a bounded multi-sample DAG, package evidence.
@@ -258,11 +291,7 @@ def run(root, data_root, cpus, ram_gb, allow_downloads,
                  "assert Path(sys.prefix).resolve()==p and not site.ENABLE_USER_SITE; "
                  "assert all(Path(m.__file__).resolve().is_relative_to(p) for m in (Bio,pysam)); print(sys.version)")
         invoke([mapping, "-I", "-c", probe, mapping.parent.parent], env, stage, "mapping-environment", 60)
-        for tool, expected in (("strobealign", "0.17.0"), ("samtools", "1.24")):
-            version = subprocess.check_output([mapping.parent / tool, "--version"], env=env, text=True).splitlines()[0]
-            require(version.split()[-1].lstrip("v") == expected, "Changed mapping executable: " + tool)
-        version = subprocess.check_output([workflow, "--version"], env=env, text=True).strip()
-        require(version == "9.13.7", "Missing/changed workflow environment; no reinstall")
+        verify_runtime_versions(mapping, workflow, env, stage)
         invoke([workflow.parent / "python", "-I", "-m", "pip", "freeze"], env, stage, "workflow-lock", 60)
         config = {**plan, **resources, "stage": str(stage), "root": str(root), "samples": samples,
                   "vcpus": cpus, "ram_gb": ram_gb, "sample_configs": {}, "sample0": previous,

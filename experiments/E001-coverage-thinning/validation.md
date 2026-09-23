@@ -2,6 +2,28 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
+## Runtime version-probe stall repair, 2026-09-23
+
+The owner reported the grouped preprocessing driver became silent immediately
+after `PASS: mapping-environment`. No `workflow-lock`, DAG or workflow stage was
+observed, and CPU/network activity was idle. The previous direct
+`subprocess.check_output()` calls for strobealign, samtools and Snakemake had no
+timeout or command records. This is a driver-observability failure, not evidence
+of a mapper or workflow failure; no bulk read acquisition or DAG execution was
+reported as started.
+
+The three version checks now run sequentially through the shared isolated command
+runner, each with a 30-second timeout and its own `START`/`PASS`/`FAIL` message,
+stdout, stderr and command JSON. The JSON records argv, elapsed time, timeout
+status and final return code; timeout handling kills the probe's process group.
+Nonzero exits, launch errors, absent output and unexpected versions stop before
+the next probe with an explicit failure message. Regression coverage exercises
+probe order, nonzero exit, version mismatch and a real short-lived hanging child.
+
+Version pins and the scientific workload are unchanged. The fix changes only
+bounded diagnostics and fail-fast behavior. The owner must use the replacement
+committed bundle for the grouped run; no new native execution is accepted yet.
+
 ## Parallel scheduling reassessment, 2026-09-23
 
 The owner has not run the remaining-nine command. [D009](../../docs/decisions/D009-parallel-preprocessing-terminal.md)

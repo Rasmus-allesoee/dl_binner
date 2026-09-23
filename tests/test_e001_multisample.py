@@ -9,6 +9,7 @@ import csv
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -120,23 +121,106 @@ class MultiSampleTests(unittest.TestCase):
             self.assertTrue(any(m.name.endswith("failure.json") for m in tar))
         self.assertTrue(Path(str(archive) + ".sha256").exists())
 
+    def make_executable(self, path, body):
+        path = Path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("#!/usr/bin/env python3\n" + body)
+        path.chmod(0o755)
+        return path
+
+    def test_version_probes_are_ordered_and_recorded(self):
+        mapping = self.root / "envs/mapping/bin/python"
+        workflow = self.root / "envs/workflow/bin/snakemake"
+        mapping.parent.mkdir(parents=True)
+        self.make_executable(mapping.parent / "strobealign", "import sys; print('strobealign 0.17.0'); print('native note', file=sys.stderr)\n")
+        self.make_executable(mapping.parent / "samtools", "print('samtools 1.24')\n")
+        self.make_executable(workflow, "print('9.13.7')\n")
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            versions = multi.verify_runtime_versions(mapping, workflow, dict(os.environ), self.root)
+        self.assertEqual(versions, {"strobealign": "0.17.0", "samtools": "1.24", "snakemake": "9.13.7"})
+        labels = ("strobealign-version", "samtools-version", "snakemake-version")
+        for label in labels:
+            record = json.loads((self.root / (label + ".command.json")).read_text())
+            self.assertEqual(record["returncode"], 0)
+            self.assertEqual(record["timeout_seconds"], 30)
+            self.assertTrue((self.root / (label + ".stdout")).is_file())
+            self.assertTrue((self.root / (label + ".stderr")).is_file())
+        self.assertIn("native note", (self.root / "strobealign-version.stderr").read_text())
+        events = [line for line in output.getvalue().splitlines() if line.startswith(("START:", "PASS:"))]
+        self.assertEqual(events, [event for label in labels for event in ("START: " + label, "PASS: " + label)])
+
+    def test_failed_version_probe_records_return_code_and_stops_order(self):
+        mapping = self.root / "envs/mapping/bin/python"
+        workflow = self.root / "envs/workflow/bin/snakemake"
+        mapping.parent.mkdir(parents=True)
+        self.make_executable(mapping.parent / "strobealign", "import sys; print('broken version'); print('probe failed', file=sys.stderr); sys.exit(7)\n")
+        self.make_executable(mapping.parent / "samtools", "print('samtools 1.24')\n")
+        self.make_executable(workflow, "print('9.13.7')\n")
+        errors = io.StringIO()
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(errors), \
+             self.assertRaisesRegex(RuntimeError, "strobealign-version failed with return code 7"):
+            multi.verify_runtime_versions(mapping, workflow, dict(os.environ), self.root)
+        record = json.loads((self.root / "strobealign-version.command.json").read_text())
+        self.assertEqual(record["returncode"], 7)
+        self.assertIn("probe failed", (self.root / "strobealign-version.stderr").read_text())
+        self.assertIn("FAIL: strobealign-version", errors.getvalue())
+        self.assertFalse((self.root / "samtools-version.command.json").exists())
+        self.assertFalse((self.root / "snakemake-version.command.json").exists())
+
+    def test_changed_version_is_reported_and_stops_order(self):
+        mapping = self.root / "envs/mapping/bin/python"
+        workflow = self.root / "envs/workflow/bin/snakemake"
+        mapping.parent.mkdir(parents=True)
+        self.make_executable(mapping.parent / "strobealign", "print('strobealign 0.18.0')\n")
+        self.make_executable(mapping.parent / "samtools", "print('samtools 1.24')\n")
+        self.make_executable(workflow, "print('9.13.7')\n")
+        errors = io.StringIO()
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(errors), \
+             self.assertRaisesRegex(ValueError, "expected '0.17.0', observed '0.18.0'"):
+            multi.verify_runtime_versions(mapping, workflow, dict(os.environ), self.root)
+        self.assertIn("FAIL: strobealign-version", errors.getvalue())
+        self.assertFalse((self.root / "samtools-version.command.json").exists())
+        self.assertFalse((self.root / "snakemake-version.command.json").exists())
+
+    def test_hung_version_probe_times_out_kills_and_records(self):
+        mapping = self.root / "envs/mapping/bin/python"
+        workflow = self.root / "envs/workflow/bin/snakemake"
+        mapping.parent.mkdir(parents=True)
+        self.make_executable(mapping.parent / "strobealign", "import sys,time; print('starting', flush=True); print('still working', file=sys.stderr, flush=True); time.sleep(10)\n")
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()), \
+             self.assertRaisesRegex(subprocess.TimeoutExpired, "strobealign-version"):
+            multi.verify_runtime_versions(mapping, workflow, dict(os.environ), self.root, timeout_seconds=1.5)
+        record = json.loads((self.root / "strobealign-version.command.json").read_text())
+        self.assertTrue(record["timed_out"])
+        self.assertLess(record["returncode"], 0)
+        self.assertEqual(record["timeout_seconds"], 1.5)
+        self.assertIn("starting", (self.root / "strobealign-version.stdout").read_text())
+        self.assertIn("still working", (self.root / "strobealign-version.stderr").read_text())
+        self.assertFalse((self.root / "samtools-version.command.json").exists())
+
     def test_complete_driver_order_seeds_and_repeat_preservation(self):
         (self.root / "SOURCE_COMMIT").write_text("a"*40)
         (self.root / "envs/workflow/bin").mkdir(parents=True)
-        def version(argv, **kwargs):
-            return {"snakemake": "9.13.7", "strobealign": "strobealign 0.17.0", "samtools": "samtools 1.24"}[Path(argv[0]).name]
         calls = []
         original_sha = multi.sha
+        def fake_invoke(args, env, stage, label, limit):
+            calls.append((label, args, limit))
+            versions = {"strobealign-version": "strobealign 0.17.0\n",
+                        "samtools-version": "samtools 1.24\n", "snakemake-version": "9.13.7\n"}
+            if label in versions:
+                (stage / (label + ".stdout")).write_text(versions[label])
         with patch.object(multi, "CODE", self.root), \
              patch.object(multi, "accepted_sample0", return_value={"sample": 0}), \
              patch.object(multi, "sha", side_effect=lambda p: "14870c27bc9467b5897bd1b65b347d7d5e2733d8bbe48c0085cb708194966fe1" if Path(p).name == "canonical.fna" else original_sha(p)), \
              patch.object(multi.shutil, "disk_usage", return_value=SimpleNamespace(free=400*10**9)), \
-             patch.object(multi.subprocess, "check_output", side_effect=version), \
-             patch.object(multi, "invoke", side_effect=lambda args, env, stage, label, limit: calls.append((label, args))), \
+             patch.object(multi, "invoke", side_effect=fake_invoke), \
              patch.object(multi, "aggregate") as aggregate, contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(multi.run(self.root, self.root, 4, 12, True), 0)
             self.assertEqual(multi.run(self.root, self.root, 8, 24, True, 4, 10, 2), 0)
-        self.assertEqual([c[0] for c in calls], ["mapping-environment", "workflow-lock", "dag", "workflow"]*2)
+        self.assertEqual([c[0] for c in calls], ["mapping-environment", "strobealign-version", "samtools-version",
+                                                  "snakemake-version", "workflow-lock", "dag", "workflow"]*2)
+        self.assertEqual([c[2] for c in calls if c[0].endswith("-version")], [30]*6)
         self.assertIn("--benchmark-extended", calls[-1][1])
         cfg = aggregate.call_args.args[0]
         self.assertEqual(cfg["samples"], [1, 2, 3, 4, 5, 9, 10, 11, 12])
