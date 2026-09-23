@@ -9,11 +9,12 @@ core-hours, 15.412 GB new outputs** at 4 vCPU / 12 GB. Reuse the accepted
 `sample0-preprocess-6_gyxp5d` outputs and `envs/workflow`; do not rerun that pilot.
 The next command acquires and preprocesses the remaining nine GI libraries,
 with up to two samples in flight in one Snakemake DAG. No scientific training.
-The previous owner attempt stopped silently after `PASS: mapping-environment`.
-Use the replacement bundle with the version-probe fix: each native version check
-now has a 30-second limit, visible stage messages and retained stdout/stderr and
-command records. If one fails or hangs, the driver will stop before DAG/data
-execution and package the probe evidence. See the [validation record](validation.md#runtime-version-probe-stall-repair-2026-09-23).
+The last owner attempt passed the mapping checks, but the redundant
+`snakemake --version` CLI startup timed out with empty logs. The next bundle
+checks the Snakemake pin from the captured `pip freeze` record, then invokes the
+real CLI once for its required bounded DAG dry-run before any reads are
+downloaded. Command logs and failure records remain packaged. See the
+[validation record](validation.md#snakemake-cli-version-probe-follow-up-2026-09-23).
 
 Use **Terminal / Ubuntu / Aug2026, one node, 8 vCPU / 24 GB RAM**, with both
 Home and the offered shared storage mounted. Slurm cluster **No** is simplest
@@ -43,7 +44,7 @@ WORK=/work/Home/dl_binner/e001/e001-gate0
 LOG=$(mktemp "$WORK/transfer/e001-multisample.XXXXXX.log")
 echo "Terminal log: $LOG"
 (
-BUNDLE=e001-code-fe2ae8350db4
+BUNDLE=e001-code-<commit>
 CODE="$WORK/$BUNDLE"
 SHARED='/work/RasmusAllesøeNielsen#2936'
 if ! test -d "$SHARED"; then

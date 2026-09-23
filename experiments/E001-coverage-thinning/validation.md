@@ -2,7 +2,7 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
-## Runtime version-probe stall repair, 2026-09-23
+## Initial bounded version-probe repair, 2026-09-23
 
 The owner reported the grouped preprocessing driver became silent immediately
 after `PASS: mapping-environment`. No `workflow-lock`, DAG or workflow stage was
@@ -12,17 +12,18 @@ timeout or command records. This is a driver-observability failure, not evidence
 of a mapper or workflow failure; no bulk read acquisition or DAG execution was
 reported as started.
 
-The three version checks now run sequentially through the shared isolated command
-runner, each with a 30-second timeout and its own `START`/`PASS`/`FAIL` message,
+The initial replacement ran the three version checks sequentially through the
+shared isolated command runner, each with a 30-second timeout and its own
+`START`/`PASS`/`FAIL` message,
 stdout, stderr and command JSON. The JSON records argv, elapsed time, timeout
 status and final return code; timeout handling kills the probe's process group.
 Nonzero exits, launch errors, absent output and unexpected versions stop before
 the next probe with an explicit failure message. Regression coverage exercises
 probe order, nonzero exit, version mismatch and a real short-lived hanging child.
 
-Version pins and the scientific workload are unchanged. The fix changes only
-bounded diagnostics and fail-fast behavior. The owner must use the replacement
-committed bundle for the grouped run; no new native execution is accepted yet.
+Version pins and the scientific workload were unchanged. That fix changed only
+bounded diagnostics and fail-fast behavior; the subsequent owner attempt below
+found a separate startup stall before acquisition.
 
 The replacement package was built from clean source commit
 `fe2ae8350db46576f2232992269c3e4a7c588322` as
@@ -30,13 +31,38 @@ The replacement package was built from clean source commit
 `e134b25cb88692d995c114a31cc5add2dc0bdaa18a10b9ed71f9eb247906a510`.
 Its embedded `SOURCE_COMMIT` matches, `sha256sum --check` passes, and the
 extracted archive passes all 12 targeted synthetic probe/command-runner tests.
-This is local package verification only; UCloud upload and execution are pending.
+At package time, UCloud upload and execution were pending; the subsequent owner
+attempt and outcome are documented below.
 The archive predates this package-record and owner-side bundle-pin documentation
 commit; its executable snapshot is the stated source commit.
 
+## Snakemake CLI version-probe follow-up, 2026-09-23
+
+The owner ran the `fe2ae83` bundle. The checksum-verified return
+`multisample-preprocess-rptssx2r-return.tar.gz` has SHA256
+`5c7d69041373122a0f6c5df27c22c24122008ff4bed2e3aa59c3369fead2b10b`.
+`mapping-environment`, strobealign 0.17.0 and samtools 1.24 checks passed.
+The `snakemake --version` subprocess emitted no stdout or stderr, exceeded its
+30-second limit, and was killed with return code -9. Driver elapsed time was
+31.64 seconds and allocated cost 0.0703 core-hours at 8 vCPU / 24 GB. No
+workflow-lock, DAG, read download or preprocessing stage began; no software or
+research data were downloaded. The archive preserves all command and failure
+records. This is evidence of one stalled CLI startup, not proof the persistent
+Snakemake environment is broken.
+
+The same persistent workflow environment's earlier accepted sample-0
+Snakemake DAG returned 0 in 1.52 seconds, and its recorded package inventory
+contains `snakemake==9.13.7`. To avoid paying for a duplicate CLI startup,
+the new driver checks the pin from the captured, isolated `pip freeze` record.
+The actual Snakemake CLI remains tested by the existing 120-second DAG dry-run,
+which is required and occurs before any read download. A failed dry-run will
+package evidence and stop before acquisition. Scientific inputs, workflow,
+resource allocation and mapper settings are unchanged.
+
 ## Parallel scheduling reassessment, 2026-09-23
 
-The owner has not run the remaining-nine command. [D009](../../docs/decisions/D009-parallel-preprocessing-terminal.md)
+The owner has not begun remaining-nine acquisition or preprocessing; the first
+attempt stopped during preflight. [D009](../../docs/decisions/D009-parallel-preprocessing-terminal.md)
 corrects the earlier Slurm availability inference: Terminal can initialize an
 in-app Slurm cluster, including one node. Thesis profile/workflow/config and
 all three requested documentation sources were inspected. No separate app or

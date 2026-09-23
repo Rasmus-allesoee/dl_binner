@@ -219,18 +219,17 @@ def resource_plan(cpus, ram_gb, sample_cpus, sample_ram_gb, concurrency):
             "download_slots": 1, "executor": "local", "allocation_nodes": 1}
 
 
-def verify_runtime_versions(mapping_python, workflow, env, stage, timeout_seconds=30):
-    """Check the three native runtime versions as bounded, recorded stages.
+def verify_mapping_versions(mapping_python, env, stage, timeout_seconds=30):
+    """Check mapper executable versions as bounded, recorded commands.
 
-    Inputs: mapping/workflow executable paths, the child environment, a new
-    attempt directory and a per-probe timeout. Each probe writes labelled
-    stdout, stderr and command JSON through ``invoke``. Return the verified
-    version strings; stop at the first launch, timeout, exit or version failure.
+    Inputs: the mapping-environment Python path, child environment, an attempt
+    directory and a per-probe timeout. Return verified strobealign/samtools
+    versions; each command writes labelled stdout, stderr and JSON provenance.
+    Stop at the first launch, timeout, exit or version failure.
     """
     probes = (
         ("strobealign", Path(mapping_python).parent / "strobealign", "0.17.0", False),
         ("samtools", Path(mapping_python).parent / "samtools", "1.24", False),
-        ("snakemake", Path(workflow), "9.13.7", True),
     )
     versions = {}
     for tool, executable, expected, whole_output in probes:
@@ -251,6 +250,27 @@ def verify_runtime_versions(mapping_python, workflow, env, stage, timeout_second
             require(False, f"{label} {message}")
         versions[tool] = observed
     return versions
+
+
+def verify_snakemake_version(stage, expected="9.13.7"):
+    """Validate Snakemake's installed version from the isolated pip inventory.
+
+    The full CLI version startup stalled in one owner run, while the same
+    persistent environment has an accepted fast Snakemake dry-run. Read the
+    already captured ``pip freeze`` output rather than starting the CLI twice;
+    the following bounded DAG dry-run still validates the actual executable.
+    """
+    label = "snakemake-version"
+    inventory = Path(stage) / "workflow-lock.stdout"
+    lines = [line.strip() for line in inventory.read_text(errors="replace").splitlines()]
+    matches = [line for line in lines if line.lower().startswith("snakemake==")]
+    observed = matches[0].split("==", 1)[1] if len(matches) == 1 else ""
+    if observed != expected:
+        message = f"workflow-lock must contain snakemake=={expected}; observed {matches!r}; see {inventory}"
+        print(f"FAIL: {label}: {message}", file=sys.stderr, flush=True)
+        require(False, message)
+    print(f"PASS: {label} ({observed}, from workflow-lock)", flush=True)
+    return observed
 
 
 def run(root, data_root, cpus, ram_gb, allow_downloads,
@@ -291,8 +311,9 @@ def run(root, data_root, cpus, ram_gb, allow_downloads,
                  "assert Path(sys.prefix).resolve()==p and not site.ENABLE_USER_SITE; "
                  "assert all(Path(m.__file__).resolve().is_relative_to(p) for m in (Bio,pysam)); print(sys.version)")
         invoke([mapping, "-I", "-c", probe, mapping.parent.parent], env, stage, "mapping-environment", 60)
-        verify_runtime_versions(mapping, workflow, env, stage)
+        verify_mapping_versions(mapping, env, stage)
         invoke([workflow.parent / "python", "-I", "-m", "pip", "freeze"], env, stage, "workflow-lock", 60)
+        verify_snakemake_version(stage)
         config = {**plan, **resources, "stage": str(stage), "root": str(root), "samples": samples,
                   "vcpus": cpus, "ram_gb": ram_gb, "sample_configs": {}, "sample0": previous,
                   "source_commit": (CODE / "SOURCE_COMMIT").read_text().strip(),
