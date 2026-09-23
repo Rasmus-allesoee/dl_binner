@@ -58,8 +58,8 @@ No scientific fits or additional replicates are authorized by this expansion.
 This follows the original measured-first boundary rather than repeating it.
 
 Scheduling amendment, 2026-09-23: [D009](D009-parallel-preprocessing-terminal.md)
-replaces the serial remaining-nine recommendation with three sample lanes on
-one 12-vCPU / 36-GB Terminal allocation. Mapping, thinning and retention remain
+replaces the serial remaining-nine recommendation with two sample lanes on
+one 8-vCPU / 24-GB Terminal allocation. Mapping, thinning and retention remain
 unchanged; current commands belong in operations, not the original slice below.
 
 Original bounded action (now completed): use Snakemake 9.13.7 to process

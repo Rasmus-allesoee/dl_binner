@@ -1,7 +1,8 @@
 # D009: Parallel Preprocessing Within One Terminal Allocation
 
-Status: accepted, 2026-09-23. Supersedes the serial scheduling recommendation
-from D008's follow-through, not its scientific mapping/thinning contract.
+Status: accepted, allocation amended 2026-09-23 before owner execution. Supersedes
+the serial scheduling recommendation from D008's follow-through, not its
+scientific mapping/thinning contract.
 
 ## Evidence and Correction
 
@@ -43,22 +44,24 @@ instead. No thesis file was changed, and this inspection is not a thesis rerun.
 
 ## Decision
 
-Use **one 12-vCPU / 36-GB Terminal allocation**, **three sample lanes**, with
-**4 CPUs per mapping pipeline** (2 strobealign + 1 filter + 1 sort). Download
-only one archive at a time, overlapped with compute, to avoid multiplying load
-on the publisher or assuming threefold network throughput. Each lane must
-finish its sample before starting another; at most three samples are in flight.
-The native commands, read groups, ordered thinning seeds and accepted sample-0
-reuse do not otherwise change.
+Hardware correction, 2026-09-23: the available Terminal choices are discrete;
+the owner's screenshot confirms 8 vCPU / 24 GB and 16 vCPU above it, with no
+12-vCPU option. The remaining-nine task has not run. Choose **one 8-vCPU / 24-GB
+allocation**, **two sample lanes**, and **4 CPUs per mapping pipeline** (2
+strobealign + 1 filter + 1 sort). Download only one archive at a time. Each lane
+finishes its sample before starting another, so nine libraries make four full
+two-sample waves and a final single-sample wave. The native commands, read
+groups, ordered thinning seeds and accepted sample-0 reuse do not change.
 
 Reserve 10 GB per mapping/thinning rule, 1 GB per streaming extraction and
-0.512 GB per download. Snakemake gets a global 35-GB rule budget, leaving at
-least 1 GB for coordinator/OS overhead; three mappings request only 30 GB.
+0.512 GB per download. For the chosen 24-GB machine, cap global rule memory at
+23 GB, leaving at least 1 GB for coordinator/OS overhead; two simultaneous
+mappings request 20 GB.
 These are scheduling budgets, not hard OS memory limits or measured peaks.
 The accepted full sample ran within 12 GB; prefix subprocess peak was about
-4.11 GiB. This supports the proposed headroom but does not constitute a measured
-three-way RAM bound. New per-rule benchmarks provide the next observation.
-All threads are explicitly bounded; coordinator overhead shares the allocation.
+4.11 GiB. This supports the two-worker budget but does not measure concurrent RAM.
+New per-rule benchmarks provide the next observation. All threads are explicitly
+bounded; coordinator overhead shares the allocation.
 
 **Use Snakemake's local executor for this run.** It already schedules parallel
 jobs on one node and enforces aggregate thread/memory reservations. Installing
@@ -66,17 +69,23 @@ a second executor and testing Slurm account/partition/child-job cancellation
 would add no compute capacity or necessary scheduling capability here. Select
 Slurm cluster **No** for the simplest launch; an already-enabled **Yes** setting
 is compatible, but this command does not submit Slurm jobs. Do not concurrently
-run unrelated local or Slurm workloads against the same 12-CPU allocation.
+run unrelated local or Slurm workloads against the same 8-CPU allocation.
 
 Serial 4-vCPU execution remains a supported fallback (`--max-concurrent-samples 1`),
-not the preferred owner command. Parallelism reduces waiting for nine independent
-libraries; it is not guaranteed to reduce allocated-core-hour cost. Estimated
-processing floor is 6.26/3 = **2.09 hours**, before fill/drain, shared-I/O contention
-and downloads. Plan roughly **3-4 hours / 36-48 allocated core-hours**, not a
-guaranteed 3x speedup. The unchanged 80-core-hour group ceiling becomes
-**6 h 40 min at 12 vCPU**, including in-driver waiting. Storage remains roughly
-230.4 GB retained, with 275 GB initially free and extra transient sort space
-within that headroom. No additional data or model-training scope is introduced.
+not the preferred owner command. Based on sample 0's 42-minute full preprocessing
+time, two lanes need about five waves (roughly 3.5 hours of mapping/preprocessing)
+before downloads and I/O effects. Plan roughly **4-5 hours / 32-40 allocated
+core-hours**; this is a projection, not measured parallel throughput. A 16-vCPU
+allocation could support four 4-CPU workers if the workflow concurrency cap were
+raised, but may reduce elapsed time without reducing charged core-hours: UCloud
+charges the full allocation while a partial final wave finishes, and nine samples
+do not divide evenly into four. That higher-concurrency configuration is not
+prepared for this run. We have no measured 16-vCPU run, so 8 vCPU is the more
+resource-conscious next step.
+The unchanged 80-core-hour group ceiling becomes **10 hours at 8 vCPU**, including
+in-driver waiting. Storage remains roughly 230.4 GB retained, with 275 GB initially
+free and extra transient sort space within that headroom. No additional data or
+model-training scope is introduced.
 
 ## Future Slurm Use
 

@@ -104,10 +104,10 @@ class MultiSampleTests(unittest.TestCase):
         self.assertFalse(list(self.root.glob("multisample-*")))
 
     def test_total_and_sample_resource_limits_are_separate(self):
-        plan = multi.resource_plan(12, 36, 4, 10, 3)
+        plan = multi.resource_plan(8, 24, 4, 10, 2)
         self.assertEqual(plan["sample_vcpus"], 4)
-        self.assertEqual(plan["memory_budget_mb"], 35000)
-        for args in ((8, 36, 4, 10, 3), (12, 24, 4, 10, 3), (12, 36, 4, 10, 4)):
+        self.assertEqual(plan["memory_budget_mb"], 23000)
+        for args in ((4, 24, 4, 10, 2), (8, 20, 4, 10, 2), (8, 24, 4, 10, 3)):
             with self.subTest(args=args), self.assertRaises(ValueError):
                 multi.resource_plan(*args)
 
@@ -135,7 +135,7 @@ class MultiSampleTests(unittest.TestCase):
              patch.object(multi, "invoke", side_effect=lambda args, env, stage, label, limit: calls.append((label, args))), \
              patch.object(multi, "aggregate") as aggregate, contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(multi.run(self.root, self.root, 4, 12, True), 0)
-            self.assertEqual(multi.run(self.root, self.root, 12, 36, True, 4, 10, 3), 0)
+            self.assertEqual(multi.run(self.root, self.root, 8, 24, True, 4, 10, 2), 0)
         self.assertEqual([c[0] for c in calls], ["mapping-environment", "workflow-lock", "dag", "workflow"]*2)
         self.assertIn("--benchmark-extended", calls[-1][1])
         cfg = aggregate.call_args.args[0]
@@ -143,8 +143,8 @@ class MultiSampleTests(unittest.TestCase):
         nine = json.loads(Path(cfg["sample_configs"]["9"]).read_text())
         self.assertEqual(nine["sample_index"], 6)
         self.assertEqual(nine["vcpus"], 4)
-        self.assertEqual(cfg["vcpus"], 12)
-        self.assertEqual(cfg["max_concurrent_samples"], 3)
+        self.assertEqual(cfg["vcpus"], 8)
+        self.assertEqual(cfg["max_concurrent_samples"], 2)
         self.assertEqual(len(list(self.root.glob("*-return.tar.gz"))), 2)
 
     def test_packaging_failure_cannot_report_success(self):
@@ -263,11 +263,11 @@ print('completed',a.sample,a.worker)
         parallel.mkdir()
         runtime = parallel / "runtime.json"
         runtime.write_text(json.dumps({"stage": str(parallel), "samples": [1, 2, 3, 4, 5, 9],
-            "reference": str(reference), "vcpus": 12, "sample_vcpus": 4, "sample_ram_gb": 10,
-            "max_concurrent_samples": 3, "mapping_python": sys.executable, "helper": str(helper), "runtime_config": str(runtime)}))
+            "reference": str(reference), "vcpus": 8, "sample_vcpus": 4, "sample_ram_gb": 10,
+            "max_concurrent_samples": 2, "mapping_python": sys.executable, "helper": str(helper), "runtime_config": str(runtime)}))
         command = [str(executable), "--snakefile", str(REPO / "workflows/e001-preprocess/multisample.smk"),
-                   "--directory", str(parallel), "--configfile", str(runtime), "--cores", "12", "--executor", "local",
-                   "--resources", "mem_mb=35000", "download_slots=1", "--benchmark-extended"]
+                   "--directory", str(parallel), "--configfile", str(runtime), "--cores", "8", "--executor", "local",
+                   "--resources", "mem_mb=23000", "download_slots=1", "--benchmark-extended"]
         result = subprocess.run(command, capture_output=True, text=True, timeout=120)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         events = [json.loads(p.read_text()) for p in parallel.glob("sample_*/*-events.json")]
@@ -280,8 +280,8 @@ print('completed',a.sample,a.worker)
                 maximum = max(maximum, active)
             return maximum
         self.assertEqual(peak("download"), 1)
-        self.assertEqual(peak("map"), 3)
-        for prior, following in ((1, 4), (2, 5), (3, 9)):
+        self.assertEqual(peak("map"), 2)
+        for prior, following in ((1, 3), (2, 4), (3, 5), (4, 9)):
             finish = next(e["end"] for e in events if e["sample"] == str(prior) and e["mode"] == "thin")
             start = next(e["start"] for e in events if e["sample"] == str(following) and e["mode"] == "download")
             self.assertGreaterEqual(start, finish)

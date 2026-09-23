@@ -11,28 +11,28 @@ all three requested documentation sources were inspected. No separate app or
 provider switch is required. For the present single-node workload, use the
 already installed local executor to avoid unnecessary plugin/setup work.
 
-The driver now separates **12 total vCPUs / 36 GB** from **4 vCPUs / 10 GB per
-sample**, with three sample lanes. All concurrent mapping stages together use
-at most 12 worker CPUs; three memory reservations total 30 GB. Global rule
-memory is capped at allocation minus 1 GB; these are scheduler reservations,
-not new OS-enforced memory limits. Each lane waits for its preceding sample's
-CT summary before starting another, limiting in-flight samples to three.
-Only one download runs at a time. Scientific native commands, seeds and data
-scope are unchanged; no accepted outputs or checks were repeated.
+The owner corrected the machine menu using a screenshot: available choices
+include **8 vCPU / 24 GB** and **16 vCPU**, not 12. The earlier three-lane
+recommendation was prepared but has not run. Current choice is **8 vCPU / 24 GB**,
+two 4-vCPU sample lanes, 10-GB sample memory budgets, and a 23-GB global Snakemake
+rule-memory cap. Two map workers request 20 GB, leaving 3 GB for overlapping
+work. These are scheduler budgets, not hard OS limits. Each lane waits for its
+prior sample's CT summary; download concurrency stays at one. Scientific
+commands, seeds and data scope remain fixed.
 
-The previous serial projection remains history, not the current recommendation.
-Projected parallel elapsed time is 3-4 hours / 36-48 allocated core-hours;
-shared-I/O effects and fill/drain remain unmeasured. The same 80-core-hour group
-ceiling yields 6 h 40 min at 12 vCPU. See operations for the updated command.
+At sample 0's observed 42-minute full preprocessing rate, nine samples on two
+lanes imply about 3.5 hours of sample processing before acquisition/I/O effects.
+Plan **4-5 elapsed hours / 32-40 allocated core-hours**, not measured runtime.
+The 80-core-hour group ceiling permits 10 hours at 8 vCPU. A 16-vCPU allocation
+could run more lanes, but may reduce elapsed time without reducing charged
+core-hours because the final sample can leave most of that allocation idle. We
+prefer 8 vCPU to limit charged resources; no parallel native run has established
+actual speedup or cost.
 
-All **144 portable tests pass** after this amendment. A real pinned-engine
-six-sample fixture observed exactly three overlapping map workers, never more
-than one download, and completion dependencies between successive samples in
-each lane. Extended benchmark rows record four threads per map. Driver tests
-confirm total allocation 12 remains distinct from sample allocation 4, with
-CPU/RAM oversubscription rejected and accounting based on total allocation.
-These are scheduling tests with synthetic workers, not native three-way timing
-or RAM measurements. Documentation/link and whitespace checks pass.
+The earlier portable tests passed for the three-lane scheduler implementation.
+The actual Snakemake fixture verified that concurrency mode; the updated
+8-vCPU/two-lane owner configuration has not been run on UCloud. No result here
+establishes native concurrent throughput or peak RAM.
 
 ## Full sample-0 preprocessing accepted, 2026-09-21
 
