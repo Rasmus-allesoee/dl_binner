@@ -62,8 +62,20 @@ Local checks include real pinned-engine startup and a complete tiny DAG,
 a deliberately hanging `.pth` fixture with captured child stack, probe failure
 ordering, startup-only no-acquisition behavior and the existing two-lane DAG.
 These validate diagnostics/control flow, not resolution of the UCloud hang.
-The full local portable suite passed (152 tests before the final startup-only
-regression was added); final verification is recorded with the transfer below.
+The full local portable suite passed **153 tests**. The final two-lane fixture
+also uses the production launcher, not a substitute CLI path.
+
+Transfer: `artifacts/e001-transfer/e001-code-fcd70c643628.tar.gz`, source
+`fcd70c643628`, SHA256
+`2a2a067634fdfc2437fc868f6644c0581a12c5be2ffc1640888aec3114ea0c94`.
+This new snapshot includes the runtime helper and tests; older snapshots remain
+unchanged. The archive precedes this documentation-only pin by design.
+Its checksum, safe member paths and embedded source identity pass. From the
+extracted archive outside Git, 152 tests pass and one optional older sample-0
+engine test skips (its fixed local environment path is absent). Both new runtime
+and remaining-nine real-engine tests run using the explicit test-engine path.
+Owner-command shell syntax, documentation checks and `git diff --check` pass.
+Native upload/execution is pending; no UCloud root-cause resolution is claimed.
 
 The sections below preserve earlier preparation claims and failed attempts;
 this audit supersedes their current-action and pending-execution wording.

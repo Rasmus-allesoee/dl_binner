@@ -43,7 +43,7 @@ WORK=/work/Home/dl_binner/e001/e001-gate0
 LOG=$(mktemp "$WORK/transfer/e001-multisample.XXXXXX.log")
 echo "Terminal log: $LOG"
 (
-BUNDLE=REPLACEMENT_BUNDLE_PENDING
+BUNDLE=e001-code-fcd70c643628
 CODE="$WORK/$BUNDLE"
 SHARED='/work/RasmusAllesøeNielsen#2936'
 if ! test -d "$SHARED"; then
