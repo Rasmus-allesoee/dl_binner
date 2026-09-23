@@ -228,18 +228,18 @@ def verify_mapping_versions(mapping_python, env, stage, timeout_seconds=30):
     Stop at the first launch, timeout, exit or version failure.
     """
     probes = (
-        ("strobealign", Path(mapping_python).parent / "strobealign", "0.17.0", False),
-        ("samtools", Path(mapping_python).parent / "samtools", "1.24", False),
+        ("strobealign", Path(mapping_python).parent / "strobealign", "0.17.0"),
+        ("samtools", Path(mapping_python).parent / "samtools", "1.24"),
     )
     versions = {}
-    for tool, executable, expected, whole_output in probes:
+    for tool, executable, expected in probes:
         label = tool + "-version"
         invoke([executable, "--version"], env, stage, label, timeout_seconds)
         stdout_path = Path(stage) / (label + ".stdout")
         stderr_path = Path(stage) / (label + ".stderr")
         output = stdout_path.read_text(errors="replace")
         lines = [line.strip() for line in output.splitlines() if line.strip()]
-        observed = "\n".join(lines) if whole_output else (lines[0].split()[-1].lstrip("v") if lines else "")
+        observed = lines[0].split()[-1].lstrip("v") if lines else ""
         if not observed:
             message = f"produced no version output; inspect {stdout_path} and {stderr_path}"
             print(f"FAIL: {label}: {message}", file=sys.stderr, flush=True)
@@ -255,10 +255,8 @@ def verify_mapping_versions(mapping_python, env, stage, timeout_seconds=30):
 def verify_snakemake_version(stage, expected="9.13.7"):
     """Validate Snakemake's installed version from the isolated pip inventory.
 
-    The full CLI version startup stalled in one owner run, while the same
-    persistent environment has an accepted fast Snakemake dry-run. Read the
-    already captured ``pip freeze`` output rather than starting the CLI twice;
-    the following bounded DAG dry-run still validates the actual executable.
+    This inventory check does not establish runtime health. The independent
+    startup probe and subsequent DAG dry-run must also succeed.
     """
     label = "snakemake-version"
     inventory = Path(stage) / "workflow-lock.stdout"
@@ -273,8 +271,36 @@ def verify_snakemake_version(stage, expected="9.13.7"):
     return observed
 
 
+def workflow_command(workflow, module, args, diagnostic_seconds=10):
+    """Build an isolated, pre-site-instrumented invocation in the existing prefix."""
+    diagnostics = ["-X", "importtime"] if diagnostic_seconds else []
+    return [workflow.parent / "python", "-I", "-S", *diagnostics,
+            CODE / "scripts/e001_workflow_runtime.py", str(diagnostic_seconds), module, *args]
+
+
+def workflow_preflight(workflow, env, stage):
+    """Capture both independent startup probes, stopping before the DAG on failure.
+
+    Keep pip inventory and actual CLI validation, with early-site stack capture.
+    Completing the second diagnostic after the first fails is safe: neither
+    command downloads reads, installs packages or executes workflow rules.
+    """
+    failures = []
+    for label, module, args in (("workflow-lock", "pip", ["freeze"]),
+                                ("snakemake-startup", "snakemake", ["--version"])):
+        try:
+            invoke(workflow_command(workflow, module, args), env, stage, label,
+                   60 if module == "pip" else 30)
+        except Exception as error:
+            failures.append(f"{label}: {error}")
+    require(not failures, "Workflow startup failed; both diagnostics retained: " + "; ".join(failures))
+    verify_snakemake_version(stage)
+    require((stage / "snakemake-startup.stdout").read_text().strip() == "9.13.7",
+            "Snakemake CLI differs from the required 9.13.7 pin")
+
+
 def run(root, data_root, cpus, ram_gb, allow_downloads,
-        sample_cpus=4, sample_ram_gb=10, concurrency=1):
+        sample_cpus=4, sample_ram_gb=10, concurrency=1, startup_only=False):
     """Probe existing runtimes, run a bounded multi-sample DAG, package evidence.
 
     Explicit data-root prevents silent migration to shared storage. The 80
@@ -282,7 +308,7 @@ def run(root, data_root, cpus, ram_gb, allow_downloads,
     this driver, and leaves headroom under E001's 200-hour preprocessing ceiling.
     A failure preserves completed samples and partial files for targeted recovery.
     """
-    require(allow_downloads, "Explicit --allow-remaining-archives required")
+    require(allow_downloads or startup_only, "Explicit --allow-remaining-archives required")
     require(root.is_absolute() and root.is_dir() and data_root.is_absolute() and data_root.is_dir(), "Existing absolute work/data roots required")
     require(cpus >= 3 and ram_gb >= 6, "Need at least 3 vCPU and 6 GB RAM")
     resources = resource_plan(cpus, ram_gb, sample_cpus, sample_ram_gb, concurrency)
@@ -294,7 +320,8 @@ def run(root, data_root, cpus, ram_gb, allow_downloads,
                XDG_CACHE_HOME=str(root / "cache"))
     try:
         plan = json.loads((EXPERIMENT / "multisample-plan.json").read_text())
-        require(shutil.disk_usage(stage).free >= plan["new_data_free_space_bytes"], "Need 275 GB free for retained new data; preserve existing files")
+        if not startup_only:
+            require(shutil.disk_usage(stage).free >= plan["new_data_free_space_bytes"], "Need 275 GB free for retained new data; preserve existing files")
         acquisition = json.loads((EXPERIMENT / "acquisition.json").read_text())
         sources = {i["sample"]: i for i in acquisition["read_archives_not_authorized_by_inventory"]}
         frozen = json.loads((EXPERIMENT / "frozen-inputs.json").read_text())
@@ -312,8 +339,7 @@ def run(root, data_root, cpus, ram_gb, allow_downloads,
                  "assert all(Path(m.__file__).resolve().is_relative_to(p) for m in (Bio,pysam)); print(sys.version)")
         invoke([mapping, "-I", "-c", probe, mapping.parent.parent], env, stage, "mapping-environment", 60)
         verify_mapping_versions(mapping, env, stage)
-        invoke([workflow.parent / "python", "-I", "-m", "pip", "freeze"], env, stage, "workflow-lock", 60)
-        verify_snakemake_version(stage)
+        workflow_preflight(workflow, env, stage)
         config = {**plan, **resources, "stage": str(stage), "root": str(root), "samples": samples,
                   "vcpus": cpus, "ram_gb": ram_gb, "sample_configs": {}, "sample0": previous,
                   "source_commit": (CODE / "SOURCE_COMMIT").read_text().strip(),
@@ -335,16 +361,19 @@ def run(root, data_root, cpus, ram_gb, allow_downloads,
             write_json(path, cfg)
             config["sample_configs"][str(sample)] = str(path)
         write_json(stage / "runtime.json", config)
-        cmd = [workflow, "--snakefile", CODE / "workflows/e001-preprocess/multisample.smk",
+        cmd = ["--snakefile", CODE / "workflows/e001-preprocess/multisample.smk",
                "--directory", stage, "--configfile", stage / "runtime.json", "--cores", cpus,
                "--executor", "local", "--resources", f"mem_mb={resources['memory_budget_mb']}", "download_slots=1",
                "--printshellcmds", "--keep-incomplete", "--benchmark-extended"]
-        invoke(cmd + ["--dry-run"], env, stage, "dag", 120)
-        with progress(stage):
-            remaining = plan["group_core_hour_limit"] * 3600 / cpus - (time.monotonic() - started)
-            require(remaining > 0, "Group compute ceiling exhausted")
-            invoke(cmd, env, stage, "workflow", remaining)
-        aggregate(config)
+        invoke(workflow_command(workflow, "snakemake", cmd + ["--dry-run"]), env, stage, "dag", 120)
+        if startup_only:
+            print("STARTUP ONLY: diagnostics and dry-run complete; no downloads or preprocessing", flush=True)
+        else:
+            with progress(stage):
+                remaining = plan["group_core_hour_limit"] * 3600 / cpus - (time.monotonic() - started)
+                require(remaining > 0, "Group compute ceiling exhausted")
+                invoke(workflow_command(workflow, "snakemake", cmd, diagnostic_seconds=0), env, stage, "workflow", remaining)
+            aggregate(config)
         status = 0
     except Exception:
         write_json(stage / "failure.json", {"traceback": traceback.format_exc()})
@@ -352,6 +381,7 @@ def run(root, data_root, cpus, ram_gb, allow_downloads,
     finally:
         elapsed = time.monotonic() - started
         write_json(stage / "status.json", {"exit_code": status, "actual_vcpus": cpus, "actual_ram_gb": ram_gb,
+            "startup_only": startup_only,
             **resources,
             "elapsed_seconds": elapsed, "allocated_core_hours": elapsed * cpus / 3600,
             "attempt_bytes": retained_bytes(stage),
@@ -384,6 +414,7 @@ if __name__ == "__main__":
     parser.add_argument("--sample-ram-gb", type=float, default=10)
     parser.add_argument("--max-concurrent-samples", type=int, default=1)
     parser.add_argument("--allow-remaining-archives", action="store_true")
+    parser.add_argument("--startup-only", action="store_true", help="Capture runtime diagnostics and dry-run only; never acquire reads")
     parser.add_argument("--worker", choices=("download", "extract", "map", "thin"))
     parser.add_argument("--config", type=Path)
     parser.add_argument("--sample", type=int)
@@ -396,4 +427,4 @@ if __name__ == "__main__":
         if any(v is None for v in (args.root, args.data_root, args.vcpus, args.ram_gb)):
             parser.error("root, --data-root, --vcpus and --ram-gb required")
         raise SystemExit(run(args.root, args.data_root, args.vcpus, args.ram_gb, args.allow_remaining_archives,
-                             args.sample_vcpus, args.sample_ram_gb, args.max_concurrent_samples))
+                             args.sample_vcpus, args.sample_ram_gb, args.max_concurrent_samples, args.startup_only))

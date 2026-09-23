@@ -46,7 +46,8 @@ def invoke(args, env, stage, label, limit):
     """
     print("START: " + label, flush=True)
     started = time.monotonic()
-    record = {"argv": [str(a) for a in args], "timeout_seconds": limit}
+    record = {"argv": [str(a) for a in args], "timeout_seconds": limit,
+              "cwd": os.getcwd()}
     failure = None
     try:
         with (stage / (label + ".stdout")).open("x") as out, (stage / (label + ".stderr")).open("x") as err:
@@ -56,10 +57,20 @@ def invoke(args, env, stage, label, limit):
                 record["launch_error"] = repr(exc)
                 raise
             try:
+                record["pid"] = process.pid
+                (stage / (label + ".command.json")).write_text(json.dumps(record, indent=2) + "\n")
                 record["returncode"] = process.wait(timeout=limit)
             except subprocess.TimeoutExpired as exc:
                 record["timed_out"] = True
                 record["timeout_error"] = f"exceeded {limit} seconds"
+                # Linux wait state distinguishes interpreter stalls from blocked I/O.
+                record["process_at_timeout"] = {}
+                for name in ("status", "wchan", "syscall"):
+                    try:
+                        with (Path("/proc") / str(process.pid) / name).open() as handle:
+                            record["process_at_timeout"][name] = handle.read(8192)
+                    except OSError as error:
+                        record["process_at_timeout"][name] = str(error)
                 try:
                     os.killpg(process.pid, signal.SIGKILL)
                 except ProcessLookupError:

@@ -1,7 +1,7 @@
 # E001: Where Does Reduced Coverage Evidence Lose Recoverable Sequence?
 
 Date: 2026-09-17. Updated: 2026-09-19
-Execution status: population frozen; native checks and full sample-0 preprocessing accepted; two-lane remaining-nine-sample Snakemake preprocessing prepared (D009); model fits pending
+Execution status: population frozen; native checks and full sample-0 preprocessing accepted; remaining-nine preprocessing blocked at workflow runtime startup (see OPERATIONS); model fits pending
 Scientific outcome: not assessed
 Protocol: prospective v2; [config.json](config.json) owns numerical settings; scientific launch not authorized
 Questions: [Q001](../../docs/research/questions.md#q001), [Q003](../../docs/research/questions.md#q003), [Q004](../../docs/research/questions.md#q004); hypothesis [H001](../../docs/research/questions.md#h001)

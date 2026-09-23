@@ -211,7 +211,7 @@ class MultiSampleTests(unittest.TestCase):
         def fake_invoke(args, env, stage, label, limit):
             calls.append((label, args, limit))
             versions = {"strobealign-version": "strobealign 0.17.0\n",
-                        "samtools-version": "samtools 1.24\n"}
+                        "samtools-version": "samtools 1.24\n", "snakemake-startup": "9.13.7\n"}
             if label in versions:
                 (stage / (label + ".stdout")).write_text(versions[label])
             elif label == "workflow-lock":
@@ -225,7 +225,7 @@ class MultiSampleTests(unittest.TestCase):
             self.assertEqual(multi.run(self.root, self.root, 4, 12, True), 0)
             self.assertEqual(multi.run(self.root, self.root, 8, 24, True, 4, 10, 2), 0)
         self.assertEqual([c[0] for c in calls], ["mapping-environment", "strobealign-version", "samtools-version",
-                                                  "workflow-lock", "dag", "workflow"]*2)
+                                                  "workflow-lock", "snakemake-startup", "dag", "workflow"]*2)
         self.assertEqual([c[2] for c in calls if c[0].endswith("-version")], [30]*4)
         self.assertIn("--benchmark-extended", calls[-1][1])
         cfg = aggregate.call_args.args[0]
@@ -247,6 +247,21 @@ class MultiSampleTests(unittest.TestCase):
         record = json.loads(next(self.root.glob("multisample-*/status.json")).read_text())
         self.assertTrue(record["packaging_failed"])
         self.assertEqual(record["exit_code"], 1)
+
+    def test_startup_only_never_acquires_or_aggregates(self):
+        (self.root / "SOURCE_COMMIT").write_text("a" * 40)
+        calls = []
+        original_sha = multi.sha
+        with patch.object(multi, "CODE", self.root), \
+             patch.object(multi, "accepted_sample0", return_value={"sample": 0}), \
+             patch.object(multi, "sha", side_effect=lambda p: "14870c27bc9467b5897bd1b65b347d7d5e2733d8bbe48c0085cb708194966fe1" if Path(p).name == "canonical.fna" else original_sha(p)), \
+             patch.object(multi, "verify_mapping_versions"), patch.object(multi, "workflow_preflight"), \
+             patch.object(multi, "invoke", side_effect=lambda a, e, s, label, limit: calls.append(label)), \
+             patch.object(multi, "aggregate") as aggregate, contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(multi.run(self.root, self.root, 4, 12, False, startup_only=True), 0)
+        self.assertEqual(calls, ["mapping-environment", "dag"])
+        aggregate.assert_not_called()
+        self.assertTrue(json.loads(next(self.root.glob("multisample-*/status.json")).read_text())["startup_only"])
 
     def test_accepted_sample0_reuse_and_changed_record_rejected(self):
         folder = self.root / "sample0-accepted"
@@ -310,7 +325,7 @@ class MultiSampleTests(unittest.TestCase):
             multi.aggregate(config)
 
     def test_real_snakemake_execution_and_extended_benchmarks(self):
-        executable = REPO / "artifacts/e001-snakemake-test-env/bin/snakemake"
+        executable = Path(os.environ.get("E001_TEST_SNAKEMAKE", str(REPO / "artifacts/e001-snakemake-test-env/bin/snakemake")))
         if not executable.exists():
             self.skipTest("Pinned workflow environment unavailable")
         helper = self.root / "fixture_worker.py"
@@ -335,6 +350,7 @@ print('completed',a.sample,a.worker)
             "mapping_python": sys.executable, "helper": str(helper), "runtime_config": str(runtime)}))
         command = [str(executable), "--snakefile", str(REPO / "workflows/e001-preprocess/multisample.smk"),
                    "--directory", str(self.root), "--configfile", str(runtime), "--cores", "4", "--executor", "local", "--benchmark-extended"]
+        command = [str(a) for a in multi.workflow_command(executable, "snakemake", command[1:], 0)]
         result = subprocess.run(command, capture_output=True, text=True, timeout=120)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertEqual((self.root / "order.txt").read_text().splitlines(),
@@ -358,6 +374,7 @@ print('completed',a.sample,a.worker)
         command = [str(executable), "--snakefile", str(REPO / "workflows/e001-preprocess/multisample.smk"),
                    "--directory", str(parallel), "--configfile", str(runtime), "--cores", "8", "--executor", "local",
                    "--resources", "mem_mb=23000", "download_slots=1", "--benchmark-extended"]
+        command = [str(a) for a in multi.workflow_command(executable, "snakemake", command[1:], 0)]
         result = subprocess.run(command, capture_output=True, text=True, timeout=120)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         events = [json.loads(p.read_text()) for p in parallel.glob("sample_*/*-events.json")]

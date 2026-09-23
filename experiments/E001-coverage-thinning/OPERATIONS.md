@@ -7,14 +7,13 @@ Updated: 2026-09-23. This is the execution guide, not a scientific result. Read 
 Full sample-0 preprocessing is accepted: **42.24 minutes, 2.816 allocated
 core-hours, 15.412 GB new outputs** at 4 vCPU / 12 GB. Reuse the accepted
 `sample0-preprocess-6_gyxp5d` outputs and `envs/workflow`; do not rerun that pilot.
-The next command acquires and preprocesses the remaining nine GI libraries,
-with up to two samples in flight in one Snakemake DAG. No scientific training.
-The last owner attempt passed the mapping checks, but the redundant
-`snakemake --version` CLI startup timed out with empty logs. The next bundle
-checks the Snakemake pin from the captured `pip freeze` record, then invokes the
-real CLI once for its required bounded DAG dry-run before any reads are
-downloaded. Command logs and failure records remain packaged. See the
-[validation record](validation.md#snakemake-cli-version-probe-follow-up-2026-09-23).
+The next command is **startup diagnostics and DAG dry-run only**. Both the
+Snakemake CLI and isolated `pip freeze` stalled in separate returned attempts.
+The cause is unresolved; bypassing the first failing probe merely moved the
+failure. The new launcher captures Python stacks before site initialization,
+import timings and Linux process wait state, testing both entry points in one
+return. It does not install software, alter environments or download reads.
+See the [audit](validation.md#remaining-nine-startup-audit-2026-09-23).
 
 Use **Terminal / Ubuntu / Aug2026, one node, 8 vCPU / 24 GB RAM**, with both
 Home and the offered shared storage mounted. Slurm cluster **No** is simplest
@@ -44,7 +43,7 @@ WORK=/work/Home/dl_binner/e001/e001-gate0
 LOG=$(mktemp "$WORK/transfer/e001-multisample.XXXXXX.log")
 echo "Terminal log: $LOG"
 (
-BUNDLE=e001-code-26e1c03240c2
+BUNDLE=REPLACEMENT_BUNDLE_PENDING
 CODE="$WORK/$BUNDLE"
 SHARED='/work/RasmusAllesøeNielsen#2936'
 if ! test -d "$SHARED"; then
@@ -63,12 +62,22 @@ tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
 python3 -I "$CODE/scripts/e001_multisample.py" "$WORK" \
     --data-root "$DATA" --vcpus 8 --ram-gb 24 \
     --sample-vcpus 4 --sample-ram-gb 10 --max-concurrent-samples 2 \
-    --allow-remaining-archives
+    --startup-only
 ) 2>&1 | tee "$LOG"
 SH
 ```
 
-What happens, without intermediate chat checkpoints:
+This diagnostic command creates a new small shared-storage attempt and a Home
+return archive/checksum, plus the terminal log. It reuses existing inputs and
+environments, runs bounded startup checks and (only if these pass) the real DAG
+dry-run, then stops. Expect seconds to a few minutes; diagnostic timeouts total
+210 seconds for workflow probes/DAG, not a prediction of successful runtime.
+Return all three printed files after success **or** failure. Do not remove the
+`--startup-only` flag until the return is reviewed. No 275-GB free-space check is
+needed for diagnostics; the storage requirement above applies to acquisition.
+
+After startup is resolved, the prepared full preprocessing workflow does the
+following. It is **not** executed by the command above:
 
 1. Checks accepted sample-0 small records/output presence and current runtime
    isolation/versions, without remapping or repeating native smoke checks.

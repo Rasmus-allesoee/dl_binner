@@ -2,6 +2,72 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
+## Remaining-nine startup audit, 2026-09-23
+
+Audit baseline: `743816624a13` and `cdb4208295fb`; audited all five subsequent
+commits through `5a31310`. No history was rewritten and no owner attempt removed.
+
+| Commit | Disposition |
+| --- | --- |
+| `daf516279eb5` | Retain owner-requested 8-vCPU/24-GB allocation, two lanes and matching tests/docs. No mapper/scientific change. |
+| `fe2ae8350db4` | Retain bounded mapper probes, captured streams, failure records and process-group cleanup. These fix silent waiting, not the underlying startup stall. |
+| `1b4351252954` | Historical pin to the then-current probe bundle; superseded for next execution. |
+| `26e1c03240c2` | Retain inventory pin validation, but reject the inference that bypassing the CLI version check repairs startup. Restore independent CLI validation with early diagnostics. |
+| `5a31310df6fc` | Historical package record/pin; its pending-run statements are superseded by the returned failure below. |
+
+Both terminal logs and all regular members of both returns were inspected.
+Checksums match; no unsafe paths, links or duplicate members. The original
+`daf516` hang remains owner-reported without a returned stack or command record.
+It cannot retrospectively be attributed to a specific subprocess with certainty.
+
+| Returned attempt | SHA256 | Observed outcome |
+| --- | --- | --- |
+| `multisample-preprocess-rptssx2r-return.tar.gz` | `5c7d69041373122a0f6c5df27c22c24122008ff4bed2e3aa59c3369fead2b10b` | `fe2ae83`: mapper probes passed; Snakemake version timed out after 30 s, empty streams. 31.638 s driver, 0.070307 allocated core-hours. |
+| `multisample-preprocess-xq_739jv-return.tar.gz` | `644c17ce9de742304802890a60288e9e7b4332cbe69cc6c2ee0f164a50601c65` | `26e1c03`: mapper probes passed; workflow `python -I -m pip freeze` timed out after 60 s, empty streams. 60.178 s driver, 0.133729 allocated core-hours. |
+
+Both used 8 vCPU / 24 GB and neither reached DAG construction, downloads or
+preprocessing. Parent `TimeoutExpired` tracebacks do **not** reveal the child's
+blocked operation. Earlier successful sample-0 execution does not establish
+current environment health. Shared-storage `TMPDIR`, Python startup hooks,
+imports and filesystem stalls are possible explanations, not established causes.
+No environment rebuild, speculative hook suppression or timeout increase is
+justified by these artifacts.
+
+All five existing executable bundles have matching adjacent checksums, safe
+unique members, the expected `SOURCE_COMMIT`, and byte-identical files to their
+committed source. Each contains 61 regular files including `SOURCE_COMMIT`:
+
+| Source | Bundle SHA256 |
+| --- | --- |
+| `743816624a13` | `89e0fc30e4595c4c19bd493ede9a8840ffa1c0d498dc80fb9efe6b7fc6cee0cc` |
+| `cdb4208295fb` | `2e9a3d71f755e0b120abf5a1dd5660424fced08eb126a5793713d7403efc884c` |
+| `daf516279eb5` | `fc428d8c2e351a8cd2b6de34b624971fc15a9463fab004db91f49ed0a059490c` |
+| `fe2ae8350db4` | `e134b25cb88692d995c114a31cc5add2dc0bdaa18a10b9ed71f9eb247906a510` |
+| `26e1c03240c2` | `834ecdf027c60536ccd8b8be3761d7395b4f45377e428150aab6fe26e28e0564` |
+
+The new launcher enables Python stack dumps before explicitly initializing
+`site`, retains normal prefix startup hooks, logs import timing, and executes
+pip/Snakemake in the existing isolated interpreter. Both independent probes
+are attempted in one return even if one fails. Command provenance is written
+at launch with PID/cwd, and Linux process wait state is captured before killing
+a timed-out process group. No installed environment is modified. Actual workflow
+execution disables the diagnostic timer/import trace to avoid long-run log noise.
+
+**Current boundary:** root cause remains unresolved pending native child evidence.
+Use the new `--startup-only` command: at most pip 60 s, Snakemake version 30 s,
+and a 120-s DAG dry-run, plus small input checks. It cannot execute rules or
+acquire reads. It retains the shared TMPDIR setting for comparability rather
+than silently treating an unverified storage hypothesis as a fix.
+Local checks include real pinned-engine startup and a complete tiny DAG,
+a deliberately hanging `.pth` fixture with captured child stack, probe failure
+ordering, startup-only no-acquisition behavior and the existing two-lane DAG.
+These validate diagnostics/control flow, not resolution of the UCloud hang.
+The full local portable suite passed (152 tests before the final startup-only
+regression was added); final verification is recorded with the transfer below.
+
+The sections below preserve earlier preparation claims and failed attempts;
+this audit supersedes their current-action and pending-execution wording.
+
 ## Initial bounded version-probe repair, 2026-09-23
 
 The owner reported the grouped preprocessing driver became silent immediately

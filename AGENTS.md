@@ -220,6 +220,12 @@ UCloud Terminal can create an in-app Slurm cluster via **Slurm cluster: Yes**, i
 
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
+For repeated native startup hangs, capture evidence inside the child (including
+before Python site initialization) and process wait state, not only a parent
+timeout traceback. Do not bypass a failed probe or raise its timeout and call
+that a root-cause repair. Prior successful execution does not establish current
+runtime health; retain explicit unresolved status until evidence identifies it.
+
 Isolate Python processes inside tool environments: unset inherited `PYTHONPATH`, `PYTHONHOME` and `PYTHONUSERBASE`, and set `PYTHONNOUSERSITE=1` before installs, inventories and execution. UCloud's user-site packages were observed inside otherwise separate conda environments; distinct environment directories alone do not establish import isolation. Preserve required tool-local source imports, and verify package origins when introducing a runtime. Do not modify an already executed/transferred snapshot in place; use explicit wrappers or a new versioned transfer.
 
 Recheck container-level prerequisites on each owner-run job entry point. System packages installed outside `/work` may disappear between jobs even when experiment-local environments persist; bootstrap must not depend on the missing utility it is meant to install. Preserve failed attempts before narrowly scoped recovery, and never silently reuse partial scientific inputs.
