@@ -59,6 +59,17 @@ which is required and occurs before any read download. A failed dry-run will
 package evidence and stop before acquisition. Scientific inputs, workflow,
 resource allocation and mapper settings are unchanged.
 
+The corrected bundle was built from source commit
+`26e1c03240c21ea1eff7e37a97bba1837f51973f` as
+`artifacts/e001-transfer/e001-code-26e1c03240c2.tar.gz`; SHA256 is
+`834ecdf027c60536ccd8b8be3761d7395b4f45377e428150aab6fe26e28e0564`.
+The embedded source commit matches and checksum verification passes. All 14
+targeted tests pass in the checkout. In an extracted archive, 13 pass and the
+real-engine test is skipped because that temporary copy has no pinned workflow
+environment; the same real fixture DAG passed from the checkout. UCloud upload
+and rerun are pending. This archive predates the following documentation-only
+commit that pins its filename and records its checksum.
+
 ## Parallel scheduling reassessment, 2026-09-23
 
 The owner has not begun remaining-nine acquisition or preprocessing; the first
