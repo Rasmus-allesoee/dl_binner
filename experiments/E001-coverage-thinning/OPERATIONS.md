@@ -8,10 +8,23 @@ Full sample-0 preprocessing is accepted: **42.24 minutes, 2.816 allocated
 core-hours, 15.412 GB new outputs** at 4 vCPU / 12 GB. Reuse the accepted
 `sample0-preprocess-6_gyxp5d` outputs and `envs/workflow`; do not rerun that pilot.
 The next command acquires and preprocesses the remaining nine GI libraries,
-sequentially, in one Snakemake DAG. No scientific training.
+with up to three samples in flight in one Snakemake DAG. No scientific training.
 
-Use **4 vCPU / 12 GB RAM**, with both Home and the offered shared storage mounted.
-Set actual allocation arguments if different; minimum 3 vCPU / 6 GB. The new
+Use **Terminal / Ubuntu / Aug2026, one node, 12 vCPU / 36 GB RAM**, with both
+Home and the offered shared storage mounted. Slurm cluster **No** is simplest
+for this command; an already enabled **Yes** is compatible, but this workflow
+uses the local executor and does not submit Slurm jobs. No separate app is needed.
+Do not run competing jobs within this allocation. See [D009](../../docs/decisions/D009-parallel-preprocessing-terminal.md).
+
+Total allocation and per-sample resources are distinct: three mapping pipelines
+at **4 CPUs and a 10-GB scheduling budget each**, with at least 1 GB reserved
+outside the rule budget. At 36 GB, three mappings leave 6 GB beyond their combined
+requests. Each mapping still uses two strobealign threads, one filter and one
+sort CPU. Downloads are serialized but can overlap compute. Set actual allocation
+arguments accurately; the driver rejects insufficient total CPU/RAM rather than
+silently oversubscribing or reducing requested concurrency. Serial fallback is
+4 vCPU / 12 GB with `--max-concurrent-samples 1`; do not pass the 12/36 values
+on a smaller machine. The new
 data require about **230.4 GB retained**, so shared storage is now justified.
 Have **275 GB free and available to this project** there (filesystem free space
 does not prove quota). Existing environments and sample 0 remain in Home.
@@ -42,7 +55,9 @@ if test -e "$CODE" || test -L "$CODE"; then
 fi
 tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
 python3 -I "$CODE/scripts/e001_multisample.py" "$WORK" \
-    --data-root "$DATA" --vcpus 4 --ram-gb 12 --allow-remaining-archives
+    --data-root "$DATA" --vcpus 12 --ram-gb 36 \
+    --sample-vcpus 4 --sample-ram-gb 10 --max-concurrent-samples 3 \
+    --allow-remaining-archives
 ) 2>&1 | tee "$LOG"
 SH
 ```
@@ -70,12 +85,14 @@ What happens, without intermediate chat checkpoints:
    and `.sha256`, even after an ordinary driver failure. Research data stay in
    the uniquely named shared `multisample-preprocess-.../` attempt directory.
 
-Expect roughly **7-9 hours** at the measured allocation and comparable network
-throughput (6.3 hours preprocessing alone). This is not a guaranteed duration;
-the separate group timeout is 80 allocated core-hours, 20 hours at 4 vCPU.
-Actual timing includes download waiting. Reserve/extend the job as needed.
-Do not select a larger machine just for this task; other allocations change
-throughput and must be recorded accurately. No sample-0 rerun, other body sites,
+Expect roughly **3-4 hours**, versus the prior 7-9-hour serial projection.
+Parallel throughput is not yet measured; shared storage and network contention
+can reduce speedup. Plan around **36-48 allocated core-hours**, not guaranteed
+cost savings. The unchanged 80-core-hour timeout is **6 h 40 min at 12 vCPU**.
+A six-hour initial job is reasonable; extensions are owner-managed. Driver cost
+is total allocated vCPUs times wall time, including download waiting, not the
+sum of per-rule CPU time. Existing source/data snapshots are preserved; the
+unexecuted serial bundle is superseded, not rewritten. No sample-0 rerun, other body sites,
 extra CT replicates, feature extraction, model training or biological scoring.
 
 **Stop after completion or failure**, preserve all outputs, and return the

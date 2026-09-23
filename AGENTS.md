@@ -182,14 +182,7 @@ The project should remain understandable to future agents without becoming over-
 
 ## Implementation philosophy
 
-Give new scripts and nontrivial functions informative docstrings describing their
-purpose, inputs and outputs, including important side effects and scope limits.
-For larger multi-stage research workflows, prefer Snakemake (owner preference) or Nextflow
-over a growing collection of independently invoked scripts. Keep small tested
-helpers as rule implementations; do not migrate completed preflight checks merely
-to introduce a workflow engine. Pin workflow/tool environments and retain logs,
-provenance, resources and explicit review boundaries. Nextflow is an alternative,
-not the default.
+Give new scripts and nontrivial functions informative docstrings describing their purpose, inputs and outputs, including important side effects and scope limits. For larger multi-stage research workflows, prefer Snakemake (owner preference) or Nextflow over a growing collection of independently invoked scripts. Keep small tested helpers as rule implementations; do not migrate completed preflight checks merely to introduce a workflow engine. Pin workflow/tool environments and retain logs, provenance, resources and explicit review boundaries. Nextflow is an alternative, not the default.
 
 Prefer the simplest implementation that adequately tests the current scientific idea.
 
@@ -221,17 +214,9 @@ NOTE: you cannot work on the HPC. I have to control and run stuff in here. So wh
 
 For owner-run execution, group commands into fail-fast scripts when later steps depend only on explicit machine-checkable success, not on scientific or operational interpretation. Pause for returned-output review at genuine assessment boundaries, not after every routine command. Explain each command group's purpose, files changed, software/data downloads, expected resource use, requested outputs, and stopping conditions in chat. The owner manages job extensions; do not repeatedly request remaining time or make it a prerequisite. Still retain available timing and allocation information for budget accounting. Keep per-tool environments inside the experiment's persistent work directory. Record actual setup and return-artifact status in the experiment guide and STATE; never infer execution from prepared commands. Storage estimates should inform provisioning, not silently change scientific design when the owner can expand storage.
 
-Owner-run commands must automatically capture terminal output to a log file.
-Request the resulting file instead of asking the owner to copy terminal text.
-For long native steps, also expose timestamped stage progress and periodic
-heartbeats to the terminal or a dedicated progress log. Preserve the detailed
-per-tool logs and command provenance; progress is not a replacement for them.
-Use Snakemake per-rule `benchmark:` and `--benchmark-extended` for new substantial
-rules when useful, without rerunning accepted work solely to obtain measurements.
-Keep sampled process CPU/RAM metrics distinct from charged allocated vCPU-hours.
-The current UCloud Terminal job on SDU/K8s uses Snakemake's local executor within
-the rented allocation. Do not add Slurm unless actual Slurm submission access
-and scheduler/account requirements have been established for a future provider.
+Owner-run commands must automatically capture terminal output to a log file. Request the resulting file instead of asking the owner to copy terminal text. For long native steps, also expose timestamped stage progress and periodic heartbeats to the terminal or a dedicated progress log. Preserve the detailed per-tool logs and command provenance; progress is not a replacement for them. Use Snakemake per-rule `benchmark:` and `--benchmark-extended` for new substantial rules when useful, without rerunning accepted work solely to obtain measurements. Keep sampled process CPU/RAM metrics distinct from charged allocated vCPU-hours.
+
+UCloud Terminal can create an in-app Slurm cluster via **Slurm cluster: Yes**, including on a single node; SDU/K8s does not imply Slurm is unavailable. Do not require switching to the separate Snakemake app. Distinguish this in-allocation scheduler from provider-side Slurm integration. Prefer the local executor for simple single-node parallel DAGs; use the Slurm plugin/profile when placement or scheduler-managed jobs justify it. See [D009](docs/decisions/D009-parallel-preprocessing-terminal.md) for reviewed sources, thesis profile and submission/cancellation prerequisites. Do not blindly copy historical `CLOUD`/`escience` accounts, GPU requests or resource sizes. Always separate total rented CPUs/RAM, per-rule CPU/RAM budgets and maximum sample/job concurrency. Cap aggregate resources, leave coordinator headroom, and charge total allocated vCPUs times driver wall time, not per-sample threads times wall time. Do not run competing unaccounted local/Slurm workloads in the same allocation.
 
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
@@ -239,45 +224,19 @@ Isolate Python processes inside tool environments: unset inherited `PYTHONPATH`,
 
 Recheck container-level prerequisites on each owner-run job entry point. System packages installed outside `/work` may disappear between jobs even when experiment-local environments persist; bootstrap must not depend on the missing utility it is meant to install. Preserve failed attempts before narrowly scoped recovery, and never silently reuse partial scientific inputs.
 
-The owner confirmed that new Terminal jobs reset the container on 2026-09-19.
-Prefer absolute paths to persistent experiment-local executables and probe imports
-on each job. Do not reinstall intact environments merely because activation or a
-system utility disappeared. Use uniquely named attempt directories so retries
-preserve previous outputs without manual moves. Test complete owner-run drivers
-on synthetic inputs, including repeated invocation and failed prerequisites,
-before transfer. Diagnose whole-file input relationships before adding exceptions;
-bind dataset-specific exceptions to reviewed source hashes and record exclusions.
+The owner confirmed that new Terminal jobs reset the container on 2026-09-19. Prefer absolute paths to persistent experiment-local executables and probe imports on each job. Do not reinstall intact environments merely because activation or a system utility disappeared. Use uniquely named attempt directories so retries preserve previous outputs without manual moves. Test complete owner-run drivers on synthetic inputs, including repeated invocation and failed prerequisites, before transfer. Diagnose whole-file input relationships before adding exceptions; bind dataset-specific exceptions to reviewed source hashes and record exclusions.
 
 ### Ask for files
 
-Record the owner's actual allocation for every performance run; recommendations
-and tool thread counts are not allocated vCPUs. Future owner-run resource drivers
-must accept explicit allocation inputs and use them for thread limits and charged
-core-hour estimates. Host CPU/RAM reports may describe the whole shared node.
-Smaller allocations are allowed; extrapolate only at the measured allocation,
-not by assuming proportional speedup. Distinguish expected runtime from a timeout.
-Preserve raw returned records and append corrections when allocation was wrong.
+Record the owner's actual allocation for every performance run; recommendations and tool thread counts are not allocated vCPUs. Future owner-run resource drivers must accept explicit allocation inputs and use them for thread limits and charged core-hour estimates. Host CPU/RAM reports may describe the whole shared node. Smaller allocations are allowed; extrapolate only at the measured allocation, not by assuming proportional speedup. Distinguish expected runtime from a timeout. Preserve raw returned records and append corrections when allocation was wrong.
 
-The owner offers `/work/RasmusAllesøeNielsen#2936/dl_binner/` (10+ TB, shared
-with former colleagues) for heavy data only when needed. Quote this path, do not
-touch colleagues' files, and keep environments in their established experiment
-directory. Do not automatically migrate data just because this space exists.
-If you ever need local access to some files from ucloud, just ask the user. User can easily download files up to 10 GB and give you local access to them if this will help the quality and speed of your work.
+The owner offers `/work/RasmusAllesøeNielsen#2936/dl_binner/` (10+ TB, shared with former colleagues) for heavy data only when needed. Quote this path, do not touch colleagues' files, and keep environments in their established experiment directory. Do not automatically migrate data just because this space exists. If you ever need local access to some files from ucloud, just ask the user. User can easily download files up to 10 GB and give you local access to them if this will help the quality and speed of your work.
 
 ### Environment ownership and grouped execution
 
-Follow [D006](docs/decisions/D006-environment-ownership.md): retain separate,
-persistent experiment-owned tool environments. E001 reuses its original
-`e001-gate0/envs/<tool>` prefixes across later gates; do not rebuild per gate or
-introduce a shared Python base. Never relocate or silently upgrade an executed
-environment. Changed recipes need distinct version-qualified prefixes; reuse by
-another experiment must be read-only and provenance-bound.
+Follow [D006](docs/decisions/D006-environment-ownership.md): retain separate, persistent experiment-owned tool environments. E001 reuses its original `e001-gate0/envs/<tool>` prefixes across later gates; do not rebuild per gate or introduce a shared Python base. Never relocate or silently upgrade an executed environment. Changed recipes need distinct version-qualified prefixes; reuse by another experiment must be read-only and provenance-bound.
 
-Group independent native tool setup, synthetic smoke and bounded feasibility
-checks into one owner-run task when no interpretation is required between stages.
-Failure skips dependent stages for that tool, but need not block another isolated
-tool. Preserve per-tool logs and return a combined status. Do not repeat settled
-checks without evidence of changed inputs, runtime or a relevant failure.
+Group independent native tool setup, synthetic smoke and bounded feasibility checks into one owner-run task when no interpretation is required between stages. Failure skips dependent stages for that tool, but need not block another isolated tool. Preserve per-tool logs and return a combined status. Do not repeat settled checks without evidence of changed inputs, runtime or a relevant failure.
 
 ---
 

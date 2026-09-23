@@ -103,6 +103,14 @@ class MultiSampleTests(unittest.TestCase):
             multi.run(self.root, self.root, 2, 6, True)
         self.assertFalse(list(self.root.glob("multisample-*")))
 
+    def test_total_and_sample_resource_limits_are_separate(self):
+        plan = multi.resource_plan(12, 36, 4, 10, 3)
+        self.assertEqual(plan["sample_vcpus"], 4)
+        self.assertEqual(plan["memory_budget_mb"], 35000)
+        for args in ((8, 36, 4, 10, 3), (12, 24, 4, 10, 3), (12, 36, 4, 10, 4)):
+            with self.subTest(args=args), self.assertRaises(ValueError):
+                multi.resource_plan(*args)
+
     def test_failed_prerequisite_packages_evidence(self):
         with patch.object(multi.shutil, "disk_usage", return_value=SimpleNamespace(free=0)), \
              contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
@@ -127,13 +135,16 @@ class MultiSampleTests(unittest.TestCase):
              patch.object(multi, "invoke", side_effect=lambda args, env, stage, label, limit: calls.append((label, args))), \
              patch.object(multi, "aggregate") as aggregate, contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(multi.run(self.root, self.root, 4, 12, True), 0)
-            self.assertEqual(multi.run(self.root, self.root, 4, 12, True), 0)
+            self.assertEqual(multi.run(self.root, self.root, 12, 36, True, 4, 10, 3), 0)
         self.assertEqual([c[0] for c in calls], ["mapping-environment", "workflow-lock", "dag", "workflow"]*2)
         self.assertIn("--benchmark-extended", calls[-1][1])
         cfg = aggregate.call_args.args[0]
         self.assertEqual(cfg["samples"], [1, 2, 3, 4, 5, 9, 10, 11, 12])
         nine = json.loads(Path(cfg["sample_configs"]["9"]).read_text())
         self.assertEqual(nine["sample_index"], 6)
+        self.assertEqual(nine["vcpus"], 4)
+        self.assertEqual(cfg["vcpus"], 12)
+        self.assertEqual(cfg["max_concurrent_samples"], 3)
         self.assertEqual(len(list(self.root.glob("*-return.tar.gz"))), 2)
 
     def test_packaging_failure_cannot_report_success(self):
@@ -214,14 +225,17 @@ class MultiSampleTests(unittest.TestCase):
             self.skipTest("Pinned workflow environment unavailable")
         helper = self.root / "fixture_worker.py"
         # Test real engine wiring without native tools, internet or research data.
-        helper.write_text('''import argparse,json
+        helper.write_text('''import argparse,json,time
 from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument('--worker');p.add_argument('--config');p.add_argument('--sample');a=p.parse_args()
 c=json.loads(Path(a.config).read_text()); d=Path(c['stage'])/('sample_'+a.sample);d.mkdir(exist_ok=True)
+start=time.time()
+if c.get('max_concurrent_samples',1)>1:time.sleep(1.5 if a.worker=='map' else 0.1)
 names={'download':['source.tar.gz','acquisition.json'],'extract':['reads.fq','reads.json'],'map':['C0/mapped.bam','C0/mapped.bam.bai','C0/qc.json'],'thin':['CT/mapped.bam','CT/mapped.bam.bai','CT/qc.json','preprocessing-summary.json']}[a.worker]
 with (Path(c['stage'])/'order.txt').open('a') as f:f.write(a.sample+':'+a.worker+'\\n')
 for name in names:
  out=d/name;out.parent.mkdir(exist_ok=True);out.write_text('fixture')
+(d/(a.worker+'-events.json')).write_text(json.dumps({'start':start,'end':time.time(),'sample':a.sample,'mode':a.worker}))
 print('completed',a.sample,a.worker)
 ''')
         reference = self.root / "ref.fna"
@@ -244,6 +258,36 @@ print('completed',a.sample,a.worker)
         second = subprocess.run(command, capture_output=True, text=True, timeout=120)
         self.assertEqual(second.returncode, 0, second.stdout + second.stderr)
         self.assertIn("Nothing to be done", second.stdout + second.stderr)
+
+        parallel = self.root / "parallel"
+        parallel.mkdir()
+        runtime = parallel / "runtime.json"
+        runtime.write_text(json.dumps({"stage": str(parallel), "samples": [1, 2, 3, 4, 5, 9],
+            "reference": str(reference), "vcpus": 12, "sample_vcpus": 4, "sample_ram_gb": 10,
+            "max_concurrent_samples": 3, "mapping_python": sys.executable, "helper": str(helper), "runtime_config": str(runtime)}))
+        command = [str(executable), "--snakefile", str(REPO / "workflows/e001-preprocess/multisample.smk"),
+                   "--directory", str(parallel), "--configfile", str(runtime), "--cores", "12", "--executor", "local",
+                   "--resources", "mem_mb=35000", "download_slots=1", "--benchmark-extended"]
+        result = subprocess.run(command, capture_output=True, text=True, timeout=120)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        events = [json.loads(p.read_text()) for p in parallel.glob("sample_*/*-events.json")]
+        def peak(mode):
+            points = sorted((e[k], delta) for e in events if e["mode"] == mode
+                            for k, delta in (("start", 1), ("end", -1)))
+            active = maximum = 0
+            for _, delta in points:
+                active += delta
+                maximum = max(maximum, active)
+            return maximum
+        self.assertEqual(peak("download"), 1)
+        self.assertEqual(peak("map"), 3)
+        for prior, following in ((1, 4), (2, 5), (3, 9)):
+            finish = next(e["end"] for e in events if e["sample"] == str(prior) and e["mode"] == "thin")
+            start = next(e["start"] for e in events if e["sample"] == str(following) and e["mode"] == "download")
+            self.assertGreaterEqual(start, finish)
+        with (parallel / "sample_9/benchmarks/map.tsv").open() as handle:
+            row = next(csv.DictReader(handle, delimiter="\t"))
+        self.assertEqual(int(row["threads"]), 4)
 
 
 if __name__ == "__main__":

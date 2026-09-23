@@ -18,6 +18,7 @@
   "new_data_free_space_bytes": 275000000000,
   "per_sample_minimum_free_bytes": 35000000000,
   "group_core_hour_limit": 80,
+  "recommended_execution": {"nodes": 1, "allocated_vcpus": 12, "allocated_ram_gb": 36, "sample_vcpus": 4, "sample_ram_gb": 10, "max_concurrent_samples": 3, "download_slots": 1, "executor": "local", "decision": "D009"},
   "max_pairs_per_sample": 20000000,
   "retention": "Retain archives, validated FASTQs, C0/CT BAMs and all logs; no automatic deletion. Use explicit shared data-root because measured projected total exceeds the initial Home quota after existing artifacts/environments."
 }

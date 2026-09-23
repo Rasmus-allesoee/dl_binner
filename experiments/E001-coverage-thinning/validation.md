@@ -2,6 +2,38 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
+## Parallel scheduling reassessment, 2026-09-23
+
+The owner has not run the remaining-nine command. [D009](../../docs/decisions/D009-parallel-preprocessing-terminal.md)
+corrects the earlier Slurm availability inference: Terminal can initialize an
+in-app Slurm cluster, including one node. Thesis profile/workflow/config and
+all three requested documentation sources were inspected. No separate app or
+provider switch is required. For the present single-node workload, use the
+already installed local executor to avoid unnecessary plugin/setup work.
+
+The driver now separates **12 total vCPUs / 36 GB** from **4 vCPUs / 10 GB per
+sample**, with three sample lanes. All concurrent mapping stages together use
+at most 12 worker CPUs; three memory reservations total 30 GB. Global rule
+memory is capped at allocation minus 1 GB; these are scheduler reservations,
+not new OS-enforced memory limits. Each lane waits for its preceding sample's
+CT summary before starting another, limiting in-flight samples to three.
+Only one download runs at a time. Scientific native commands, seeds and data
+scope are unchanged; no accepted outputs or checks were repeated.
+
+The previous serial projection remains history, not the current recommendation.
+Projected parallel elapsed time is 3-4 hours / 36-48 allocated core-hours;
+shared-I/O effects and fill/drain remain unmeasured. The same 80-core-hour group
+ceiling yields 6 h 40 min at 12 vCPU. See operations for the updated command.
+
+All **144 portable tests pass** after this amendment. A real pinned-engine
+six-sample fixture observed exactly three overlapping map workers, never more
+than one download, and completion dependencies between successive samples in
+each lane. Extended benchmark rows record four threads per map. Driver tests
+confirm total allocation 12 remains distinct from sample allocation 4, with
+CPU/RAM oversubscription rejected and accounting based on total allocation.
+These are scheduling tests with synthetic workers, not native three-way timing
+or RAM measurements. Documentation/link and whitespace checks pass.
+
 ## Full sample-0 preprocessing accepted, 2026-09-21
 
 Return `sample0-preprocess-6_gyxp5d-return.tar.gz` matches SHA256
@@ -83,10 +115,10 @@ are retained, with live timestamped mirroring and a 60-second progress heartbeat
 was checked alongside the locally installed **9.13.7** implementation; the live
 documentation currently describes a newer release, so the pinned engine itself
 is tested. The [Slurm executor](https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/slurm.html)
-submits to a Slurm scheduler. The actual owner environment is a Terminal job on
-DeIC Interactive HPC SDU/K8s with no established Slurm submission allocation.
-Use the local executor inside that job. Reconsider Slurm only on a real Slurm
-provider with account/partition access, not simply because this is HPC.
+submits to a Slurm scheduler. The original assessment inferred that the SDU/K8s
+Terminal setup required another provider for Slurm. **Corrected by D009:** Terminal
+can itself create the scheduler, including on one node. The local executor is
+retained for this workload's simplicity, not because Terminal lacks Slurm.
 
 Local implementation validation finalized 2026-09-23: **143 portable tests pass**.
 New coverage includes bounded/checksummed acquisition failures, partial-file

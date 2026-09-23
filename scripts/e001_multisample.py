@@ -1,7 +1,8 @@
 """Owner-run GI acquisition and Snakemake preprocessing, without model fitting.
 
 Inputs: the existing E001 work root, an explicit persistent data root and actual
-vCPU/RAM allocation. Reuse accepted sample 0 and separate tool environments.
+total vCPU/RAM allocation, separate per-sample budgets and maximum concurrency.
+Reuse accepted sample 0 and separate tool environments; local scheduling only.
 Outputs: a unique data attempt containing nine publisher archives, validated
 FASTQs, C0/CT replicate-0 BAMs, rule benchmarks and an ordered ten-sample manifest.
 Small return artifacts stay under the work root. Never delete or overwrite prior
@@ -203,8 +204,25 @@ def aggregate(config):
         "reference_sha256": config["reference_sha256"], "samples": entries})
 
 
-def run(root, data_root, cpus, ram_gb, allow_downloads):
-    """Probe existing runtimes, run one serial multi-sample DAG, package evidence.
+def resource_plan(cpus, ram_gb, sample_cpus, sample_ram_gb, concurrency):
+    """Validate total allocation versus per-sample scheduling budgets.
+
+    Return explicit local-executor limits. Memory is a scheduling reservation,
+    not an OS limit; leave at least 1 GB for the driver/engine outside workers.
+    No automatic concurrency reduction hides a misconfigured owner command.
+    """
+    require(sample_cpus >= 3 and sample_ram_gb >= 6, "Each sample needs at least 3 vCPU and 6 GB")
+    require(1 <= concurrency <= 3, "Select one to three concurrent samples")
+    require(cpus >= sample_cpus * concurrency, "Total vCPUs cannot cover requested sample concurrency")
+    require(ram_gb >= sample_ram_gb * concurrency + 1, "Total RAM must cover sample budgets plus 1 GB coordinator reserve")
+    return {"sample_vcpus": sample_cpus, "sample_ram_gb": sample_ram_gb,
+            "max_concurrent_samples": concurrency, "memory_budget_mb": int((ram_gb - 1) * 1000),
+            "download_slots": 1, "executor": "local", "allocation_nodes": 1}
+
+
+def run(root, data_root, cpus, ram_gb, allow_downloads,
+        sample_cpus=4, sample_ram_gb=10, concurrency=1):
+    """Probe existing runtimes, run a bounded multi-sample DAG, package evidence.
 
     Explicit data-root prevents silent migration to shared storage. The 80
     allocated-core-hour group ceiling includes acquisition and waiting inside
@@ -214,6 +232,7 @@ def run(root, data_root, cpus, ram_gb, allow_downloads):
     require(allow_downloads, "Explicit --allow-remaining-archives required")
     require(root.is_absolute() and root.is_dir() and data_root.is_absolute() and data_root.is_dir(), "Existing absolute work/data roots required")
     require(cpus >= 3 and ram_gb >= 6, "Need at least 3 vCPU and 6 GB RAM")
+    resources = resource_plan(cpus, ram_gb, sample_cpus, sample_ram_gb, concurrency)
     stage = Path(tempfile.mkdtemp(prefix="multisample-preprocess-", dir=data_root))
     started, status = time.monotonic(), 1
     env = {k: v for k, v in os.environ.items() if k not in ("PYTHONPATH", "PYTHONHOME", "PYTHONUSERBASE", "SNAKEMAKE_PROFILE", "SNAKEMAKE_WORKFLOW_PROFILE")}
@@ -245,7 +264,7 @@ def run(root, data_root, cpus, ram_gb, allow_downloads):
         version = subprocess.check_output([workflow, "--version"], env=env, text=True).strip()
         require(version == "9.13.7", "Missing/changed workflow environment; no reinstall")
         invoke([workflow.parent / "python", "-I", "-m", "pip", "freeze"], env, stage, "workflow-lock", 60)
-        config = {**plan, "stage": str(stage), "root": str(root), "samples": samples,
+        config = {**plan, **resources, "stage": str(stage), "root": str(root), "samples": samples,
                   "vcpus": cpus, "ram_gb": ram_gb, "sample_configs": {}, "sample0": previous,
                   "source_commit": (CODE / "SOURCE_COMMIT").read_text().strip(),
                   "reference": str(Path(frozen["owner_input_directory"]) / "canonical.fna"),
@@ -259,7 +278,7 @@ def run(root, data_root, cpus, ram_gb, allow_downloads):
             (folder / "logs").mkdir(parents=True)
             source = {**sources[sample], **item, "url": acquisition["base_url"] + sources[sample]["path"]}
             cfg = {"stage": str(folder), "root": str(root), "sample": sample,
-                   "sample_index": frozen["samples"].index(sample), "vcpus": cpus,
+                   "sample_index": frozen["samples"].index(sample), "vcpus": sample_cpus,
                    "archive": str(folder / "source.tar.gz"), "member": item["directory"] + "/reads/anonymous_reads.fq",
                    "reference": config["reference"], "reference_sha256": config["reference_sha256"], "acquisition": source}
             path = folder / "runtime.json"
@@ -268,7 +287,8 @@ def run(root, data_root, cpus, ram_gb, allow_downloads):
         write_json(stage / "runtime.json", config)
         cmd = [workflow, "--snakefile", CODE / "workflows/e001-preprocess/multisample.smk",
                "--directory", stage, "--configfile", stage / "runtime.json", "--cores", cpus,
-               "--executor", "local", "--printshellcmds", "--keep-incomplete", "--benchmark-extended"]
+               "--executor", "local", "--resources", f"mem_mb={resources['memory_budget_mb']}", "download_slots=1",
+               "--printshellcmds", "--keep-incomplete", "--benchmark-extended"]
         invoke(cmd + ["--dry-run"], env, stage, "dag", 120)
         with progress(stage):
             remaining = plan["group_core_hour_limit"] * 3600 / cpus - (time.monotonic() - started)
@@ -282,6 +302,7 @@ def run(root, data_root, cpus, ram_gb, allow_downloads):
     finally:
         elapsed = time.monotonic() - started
         write_json(stage / "status.json", {"exit_code": status, "actual_vcpus": cpus, "actual_ram_gb": ram_gb,
+            **resources,
             "elapsed_seconds": elapsed, "allocated_core_hours": elapsed * cpus / 3600,
             "attempt_bytes": retained_bytes(stage),
             "note": "Excludes prior sample 0, environments and owner idle time outside this driver"})
@@ -309,6 +330,9 @@ if __name__ == "__main__":
     parser.add_argument("--data-root", type=Path)
     parser.add_argument("--vcpus", type=int)
     parser.add_argument("--ram-gb", type=float)
+    parser.add_argument("--sample-vcpus", type=int, default=4)
+    parser.add_argument("--sample-ram-gb", type=float, default=10)
+    parser.add_argument("--max-concurrent-samples", type=int, default=1)
     parser.add_argument("--allow-remaining-archives", action="store_true")
     parser.add_argument("--worker", choices=("download", "extract", "map", "thin"))
     parser.add_argument("--config", type=Path)
@@ -321,4 +345,5 @@ if __name__ == "__main__":
     else:
         if any(v is None for v in (args.root, args.data_root, args.vcpus, args.ram_gb)):
             parser.error("root, --data-root, --vcpus and --ram-gb required")
-        raise SystemExit(run(args.root, args.data_root, args.vcpus, args.ram_gb, args.allow_remaining_archives))
+        raise SystemExit(run(args.root, args.data_root, args.vcpus, args.ram_gb, args.allow_remaining_archives,
+                             args.sample_vcpus, args.sample_ram_gb, args.max_concurrent_samples))
