@@ -24,6 +24,16 @@ Version pins and the scientific workload are unchanged. The fix changes only
 bounded diagnostics and fail-fast behavior. The owner must use the replacement
 committed bundle for the grouped run; no new native execution is accepted yet.
 
+The replacement package was built from clean source commit
+`fe2ae8350db46576f2232992269c3e4a7c588322` as
+`artifacts/e001-transfer/e001-code-fe2ae8350db4.tar.gz` with SHA256
+`e134b25cb88692d995c114a31cc5add2dc0bdaa18a10b9ed71f9eb247906a510`.
+Its embedded `SOURCE_COMMIT` matches, `sha256sum --check` passes, and the
+extracted archive passes all 12 targeted synthetic probe/command-runner tests.
+This is local package verification only; UCloud upload and execution are pending.
+The archive predates this package-record and owner-side bundle-pin documentation
+commit; its executable snapshot is the stated source commit.
+
 ## Parallel scheduling reassessment, 2026-09-23
 
 The owner has not run the remaining-nine command. [D009](../../docs/decisions/D009-parallel-preprocessing-terminal.md)
