@@ -22,6 +22,7 @@ PATHS = (
     "scripts/e001_mapper_feasibility.py",
     "scripts/e001_mapper_diagnostics.py",
     "scripts/e001_preprocess.py",
+    "scripts/e001_multisample.py",
     "workflows/e001-preprocess",
     "scripts/e001_retry_conversion.sh",
     "tests", "experiments/E001-coverage-thinning",

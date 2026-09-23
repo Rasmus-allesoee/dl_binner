@@ -28,16 +28,19 @@ ARCHIVE_SHA = "6f349a6f3299b4595f8c5acfb9ad7d8e2fc56fe657c1a451cde90e92c364f113"
 EXPECTED_PAIRS = 16666043
 
 
-def extract(archive, output, expected_pairs=EXPECTED_PAIRS):
-    """Stream the inventoried plain FASTQ, validate every pair and exact count.
+def extract(archive, output, expected_pairs=EXPECTED_PAIRS, member_name=MEMBER, sample=None, max_pairs=20000000):
+    """Stream a named plain FASTQ and validate every mate pair and read length.
 
     Write one interleaved file and return its count/hash. Preserve partial output
     on failure; never select another archive member or truncate to fit the count.
+    An exact truth-derived count is required for sample 0. Other samples use
+    expected_pairs=None, complete member EOF and a resource-only upper bound;
+    optional sample checks their anonymous-ID prefix, not genome-origin truth.
     """
     from Bio.SeqIO.QualityIO import FastqGeneralIterator
     with tarfile.open(archive, "r|gz") as tar:
         for member in tar:
-            if member.name != MEMBER:
+            if member.name != member_name:
                 continue
             require(member.isfile(), "Anonymous reads must be a regular member")
             count = 0
@@ -49,13 +52,21 @@ def extract(archive, output, expected_pairs=EXPECTED_PAIRS):
                     x, y = a[0].split()[0], b[0].split()[0]
                     require(x.removesuffix("/1") == y.removesuffix("/2") and
                             not x.endswith("/2") and not y.endswith("/1"), "Invalid mate IDs")
+                    if sample is not None:
+                        require(x.startswith(f"S{sample}R"), "Read belongs to a different sample")
                     for record in (a, b):
                         require(len(record[1]) == 150, "Unexpected read length")
                         out.write(f"@{record[0]}\n{record[1]}\n+\n{record[2]}\n")
                     count += 1
-                    require(count <= expected_pairs, "More pairs than verified read truth")
-            require(count == expected_pairs, "Pair count differs from complete sample-0 truth")
-            return {"pairs": count, "member": MEMBER, "bytes": output.stat().st_size, "sha256": sha(output)}
+                    require(count <= max_pairs, "Read count exceeds resource bound")
+                    if expected_pairs is not None:
+                        require(count <= expected_pairs, "More pairs than verified read truth")
+                    if count % 1000000 == 0:
+                        print(f"Validated {count:,} pairs", flush=True)
+            require(count > 0, "Empty FASTQ")
+            if expected_pairs is not None:
+                require(count == expected_pairs, "Pair count differs from complete sample-0 truth")
+            return {"pairs": count, "member": member_name, "bytes": output.stat().st_size, "sha256": sha(output)}
     raise ValueError("Inventoried anonymous FASTQ member missing")
 
 
@@ -69,6 +80,8 @@ def worker(mode, config_path):
     os.environ.update(env)
     start = time.monotonic()
     reference = Path(cfg["reference"])
+    sample, sample_index = cfg.get("sample", 0), cfg.get("sample_index", 0)
+    print(f"START sample {sample}: {mode}", flush=True)
     if mode == "extract":
         require(sha(Path(cfg["archive"])) == ARCHIVE_SHA, "Existing sample archive changed")
         result = extract(Path(cfg["archive"]), stage / "reads.fq")
@@ -86,11 +99,11 @@ def worker(mode, config_path):
     require(not bam.exists(), "Refusing to overwrite previous BAM")
     if mode == "map":
         # Reserve one CPU each for samtools view and single-threaded sort.
-        commands = mapping_commands(reference, stage / "reads.fq", "E001-sample0", bam,
+        commands = mapping_commands(reference, stage / "reads.fq", f"E001-sample{sample}", bam,
                                     mapper_threads=cfg["vcpus"] - 2, sort_extra_threads=0)
         pipeline(commands, out / "pipeline")
     else:
-        invoke(thinning_command(stage / "C0/mapped.bam", bam, replicate=0, sample_index=0), env, out, "thin", 1800)
+        invoke(thinning_command(stage / "C0/mapped.bam", bam, replicate=0, sample_index=sample_index), env, out, "thin", 1800)
     invoke(["samtools", "index", bam], env, out, "index", 300)
     result = bam_inventory(bam, reference)
     require(result["records"] > 0, "No mapped records")
@@ -99,10 +112,11 @@ def worker(mode, config_path):
     if mode == "thin":
         full = json.loads((stage / "C0/qc.json").read_text())
         require(result["records"] < full["records"], "Thinning did not reduce records")
-        summary = {"sample": 0, "C0": full, "CT": result, "thinning_seed": 1000,
+        summary = {"sample": sample, "C0": full, "CT": result, "thinning_seed": 1000 + sample_index,
                    "thinning_fraction": 0.1, "observed_record_fraction": result["records"] / full["records"],
-                   "scope": "Full sample-0 preprocessing pilot only; no features, training or biological scores"}
+                   "scope": "Full-sample preprocessing, replicate 0 only; no features, training or biological scores"}
         (stage / "preprocessing-summary.json").write_text(json.dumps(summary, indent=2))
+    print(f"PASS sample {sample}: {mode} ({time.monotonic() - start:.1f} seconds)", flush=True)
 
 
 def run(root, cpus, ram_gb):

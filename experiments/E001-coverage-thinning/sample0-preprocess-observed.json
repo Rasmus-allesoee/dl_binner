@@ -1,0 +1,270 @@
+{
+  "status": "accepted",
+  "reviewed": "2026-09-21",
+  "archive": "sample0-preprocess-6_gyxp5d-return.tar.gz",
+  "archive_sha256": "4e0e4e64131d11ac42450cae6460a3c7ad06a5add29a4049b3fa540a42c33a8e",
+  "terminal_log_sha256": "38ded503a3f883b80856e69a882767edd30f63ec48f87b11cf5a19bba3ddee1c",
+  "records": {
+    "runtime.json": {
+      "root": "/work/Home/dl_binner/e001/e001-gate0",
+      "stage": "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d",
+      "vcpus": 4,
+      "ram_gb": 12.0,
+      "archive": "/work/Home/dl_binner/e001/e001-gate0/mapper-feasibility-13l53afq/sample_0.tar.gz",
+      "reference": "/work/Home/dl_binner/e001/e001-gate0/inventory-resume-6z45cola/input/canonical.fna",
+      "reference_sha256": "14870c27bc9467b5897bd1b65b347d7d5e2733d8bbe48c0085cb708194966fe1",
+      "mapping_python": "/work/Home/dl_binner/e001/e001-gate0/envs/mapping/bin/python",
+      "helper": "/work/Home/dl_binner/e001/e001-gate0/e001-code-4235aa4426e2/scripts/e001_preprocess.py",
+      "runtime_config": "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d/runtime.json",
+      "source_commit": "4235aa4426e252ab8f3c8a52817a6e2dd3eeae14"
+    },
+    "status.json": {
+      "exit_code": 0,
+      "elapsed_seconds": 2534.5311685879715,
+      "actual_vcpus": 4,
+      "actual_ram_gb": 12.0,
+      "allocated_core_hours": 2.816145742875524,
+      "attempt_bytes": 15411548225
+    },
+    "workflow-lock.command.json": {
+      "argv": [
+        "/work/Home/dl_binner/e001/e001-gate0/envs/workflow/bin/python",
+        "-I",
+        "-m",
+        "pip",
+        "freeze"
+      ],
+      "timeout_seconds": 60,
+      "returncode": 0,
+      "elapsed_seconds": 0.569608204998076
+    },
+    "workflow-env.command.json": {
+      "argv": [
+        "/work/Home/dl_binner/e001/e001-gate0/bin/micromamba",
+        "create",
+        "-y",
+        "-p",
+        "/work/Home/dl_binner/e001/e001-gate0/envs/workflow",
+        "-c",
+        "conda-forge",
+        "python=3.12.10",
+        "pip=25.1.1"
+      ],
+      "timeout_seconds": 900,
+      "returncode": 0,
+      "elapsed_seconds": 13.201883964939043
+    },
+    "dag.command.json": {
+      "argv": [
+        "/work/Home/dl_binner/e001/e001-gate0/envs/workflow/bin/snakemake",
+        "--snakefile",
+        "/work/Home/dl_binner/e001/e001-gate0/e001-code-4235aa4426e2/workflows/e001-preprocess/Snakefile",
+        "--directory",
+        "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d",
+        "--configfile",
+        "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d/runtime.json",
+        "--cores",
+        "4",
+        "--printshellcmds",
+        "--keep-incomplete",
+        "--dry-run"
+      ],
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "elapsed_seconds": 1.520121042849496
+    },
+    "preprocessing-summary.json": {
+      "sample": 0,
+      "C0": {
+        "records": 33158847,
+        "mapq_zero_records": 18600764,
+        "sha256": "c18e8c2ce0336dbd5b4f9904d87d1fe2c86e7a1b782d85ebe375d51c793d9d4c",
+        "bytes": 4319070969,
+        "elapsed_seconds": 2316.828045572154
+      },
+      "CT": {
+        "records": 3314822,
+        "mapq_zero_records": 1858914,
+        "sha256": "8d711782da3d66911cf30676a6963a3c69b38bb76b60ff08009b27a3d47f975d",
+        "bytes": 478139342,
+        "elapsed_seconds": 42.38548176595941
+      },
+      "thinning_seed": 1000,
+      "thinning_fraction": 0.1,
+      "observed_record_fraction": 0.09996795123787024,
+      "scope": "Full sample-0 preprocessing pilot only; no features, training or biological scores"
+    },
+    "reads.json": {
+      "pairs": 16666043,
+      "member": "2017.12.04_18.45.54_sample_0/reads/anonymous_reads.fq",
+      "bytes": 10610713214,
+      "sha256": "990e1a599b32249a64f246b8e43b348cee20df910f6f6e91fc874b9615889470",
+      "elapsed_seconds": 141.09217081707902
+    },
+    "workflow-install.command.json": {
+      "argv": [
+        "/work/Home/dl_binner/e001/e001-gate0/envs/workflow/bin/python",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "snakemake==9.13.7"
+      ],
+      "timeout_seconds": 900,
+      "returncode": 0,
+      "elapsed_seconds": 14.163812261074781
+    },
+    "workflow.command.json": {
+      "argv": [
+        "/work/Home/dl_binner/e001/e001-gate0/envs/workflow/bin/snakemake",
+        "--snakefile",
+        "/work/Home/dl_binner/e001/e001-gate0/e001-code-4235aa4426e2/workflows/e001-preprocess/Snakefile",
+        "--directory",
+        "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d",
+        "--configfile",
+        "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d/runtime.json",
+        "--cores",
+        "4",
+        "--printshellcmds",
+        "--keep-incomplete"
+      ],
+      "timeout_seconds": 3600,
+      "returncode": 0,
+      "elapsed_seconds": 2503.92013526801
+    },
+    "C0/index.command.json": {
+      "argv": [
+        "samtools",
+        "index",
+        "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d/C0/mapped.bam"
+      ],
+      "timeout_seconds": 300,
+      "returncode": 0,
+      "elapsed_seconds": 19.554727894021198
+    },
+    "C0/qc.json": {
+      "records": 33158847,
+      "mapq_zero_records": 18600764,
+      "sha256": "c18e8c2ce0336dbd5b4f9904d87d1fe2c86e7a1b782d85ebe375d51c793d9d4c",
+      "bytes": 4319070969,
+      "elapsed_seconds": 2316.828045572154
+    },
+    "CT/index.command.json": {
+      "argv": [
+        "samtools",
+        "index",
+        "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d/CT/mapped.bam"
+      ],
+      "timeout_seconds": 300,
+      "returncode": 0,
+      "elapsed_seconds": 1.870839600916952
+    },
+    "CT/qc.json": {
+      "records": 3314822,
+      "mapq_zero_records": 1858914,
+      "sha256": "8d711782da3d66911cf30676a6963a3c69b38bb76b60ff08009b27a3d47f975d",
+      "bytes": 478139342,
+      "elapsed_seconds": 42.38548176595941
+    },
+    "CT/thin.command.json": {
+      "argv": [
+        "samtools",
+        "view",
+        "-b",
+        "--subsample",
+        "0.1",
+        "--subsample-seed",
+        "1000",
+        "-o",
+        "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d/CT/mapped.bam",
+        "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d/C0/mapped.bam"
+      ],
+      "timeout_seconds": 1800,
+      "returncode": 0,
+      "elapsed_seconds": 30.519179766997695
+    },
+    "C0/pipeline/pipeline.json": {
+      "commands": [
+        [
+          "strobealign",
+          "-t",
+          "2",
+          "-r",
+          "150",
+          "--rg-id",
+          "E001-sample0",
+          "--rg",
+          "SM:E001-sample0",
+          "/work/Home/dl_binner/e001/e001-gate0/inventory-resume-6z45cola/input/canonical.fna",
+          "--interleaved",
+          "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d/reads.fq"
+        ],
+        [
+          "samtools",
+          "view",
+          "-u",
+          "-F",
+          "2308",
+          "-"
+        ],
+        [
+          "samtools",
+          "sort",
+          "-@",
+          "0",
+          "-m",
+          "512M",
+          "-o",
+          "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d/C0/mapped.bam",
+          "-"
+        ]
+      ],
+      "returncodes": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "member_sha256": {
+    "map.log": "7f84bdfb00c5770a6c9c5e8f063828ce846fb240b7f6ef11e230a5189ed1ce90",
+    "workflow-lock.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "workflow-install.stdout": "d331f3c1e9411a7ed3955ebf359a8731d25e53c869873c50f395f4ffd6bfe6ae",
+    "workflow.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime.json": "ad579d3c82a71b4155a0ac838e75d50fe57d5301aef951559087e9aedfb5ede7",
+    "workflow-lock.stdout": "072f3408c1e935bacb431ba2c194b8359033642e4f02b1e57fcb06e06d9f2ab8",
+    "status.json": "904f96b1399e648de3e0a7ef182e590cf8e97b5a8f2c5f10a28426d31432f6a9",
+    "thin.log": "3286f63f0b32eba509e01c01e21765dfe6811948b2e6f948703f9f3ca67158cb",
+    "workflow-env.stderr": "7afe6dad40c7316ab63f879026f7f0b5006425057b24d7cb1a0ccfa596015156",
+    "workflow-lock.command.json": "ea12e6e7005a2998fcbc14a2e40728105390bdac911dd4c4ca8f5cb391784007",
+    "workflow.stderr": "6847baf489452f1b7b7015d708335b65701329a8d921ee0120c9d15469ba9ce6",
+    "dag.stdout": "60481906580f31bd3bb488e2851514aec22f9ac083d1caa6e714b8b3c6b3d7ad",
+    "extract.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "workflow-env.command.json": "a2003722ed1d3a34449436649c18e01535a8d943736151a76afb0fcb042c7f25",
+    "workflow-env.stdout": "b220dc5923a174e2bbd8383a23038d9fcdb206bcd93e3a7439ef0d661b0daba9",
+    "dag.command.json": "65a36377141731f108c04e03e17839143e02457820b0ed70d0081df71476ae08",
+    "preprocessing-summary.json": "bbd8ba9b24f881e437cb363297caff2c50424940f3095f0631897d7bf209b5fc",
+    "dag.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "workflow-install.stderr": "51db26b30fdd2a55e1107ad35fa260c6bcc5bf27d9d08ae5c31b807790503923",
+    "reads.json": "036f73858790402d2e52785d86d712408902c6099f232d86cc00f96760b01e4c",
+    "workflow-install.command.json": "70a4ce527e01c55035cfb0a1e7abc01121dec07b6249f697a927085ea8a68355",
+    "workflow.command.json": "5e64ec01d8515106c6dfe0987a7172f129b3b39820ec28c62ca0a728680b25da",
+    "C0/index.command.json": "bf970c070c0295a17afb60b9fa40e6576ae52af9e377dc7a5928a605bc1abc45",
+    "C0/index.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C0/index.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C0/qc.json": "eb8122343b656c139d1831142a55015aeeb2089f04071f1e9880d79aaa576cd2",
+    "CT/index.command.json": "e74c638859f5dee2c5f9b205dcd05380afe426d75ad19d961b581cf88c84f9ae",
+    "CT/qc.json": "29b5f6fb343a919c49f331392e621c3f0c03369a31731fb3389fc3b377ddc8cb",
+    "CT/index.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "CT/thin.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "CT/thin.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "CT/thin.command.json": "20721627c92dcf3cb0513bfdad6ebcb9cf1f61c35515dfa36ab6c4529ed319b5",
+    "CT/index.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".snakemake/log/2026-09-21T215648.146607.snakemake.log": "f1a6ef5558810e86a6ecbfbb7ab0e7d2754e3db1403369289072479405d9823d",
+    "C0/pipeline/stage-1.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C0/pipeline/pipeline.json": "ad2703c62a8f05e2f445b2c527b8495efcf1b557309ff182cbbacc075b132d8b",
+    "C0/pipeline/stage-0.stderr": "23daf22d63f8a19a66ab7787f02fc0e1be1458bdf95d4af6c5b71046f55c5755",
+    "C0/pipeline/stage-2.stderr": "2ea4c2476c0318ba3105c532d0de8fb3e0eec86c739bd9a2fc186c02723abc4e"
+  },
+  "limitations": "Operational full-sample preprocessing, not biological scores. Allocated time excludes owner idle time outside driver. No peak RAM measurement in this attempt."
+}

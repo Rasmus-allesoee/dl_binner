@@ -1,8 +1,91 @@
 # E001: Validation and UCloud Preflight
 
-Updated: 2026-09-21. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
+Updated: 2026-09-23. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
-## Current action, 2026-09-21
+## Current action, 2026-09-23
+
+Full sample-0 preprocessing is accepted: **42.24 minutes, 2.816 allocated
+core-hours, 15.412 GB new outputs** at 4 vCPU / 12 GB. Reuse the accepted
+`sample0-preprocess-6_gyxp5d` outputs and `envs/workflow`; do not rerun that pilot.
+The next command acquires and preprocesses the remaining nine GI libraries,
+sequentially, in one Snakemake DAG. No scientific training.
+
+Use **4 vCPU / 12 GB RAM**, with both Home and the offered shared storage mounted.
+Set actual allocation arguments if different; minimum 3 vCPU / 6 GB. The new
+data require about **230.4 GB retained**, so shared storage is now justified.
+Have **275 GB free and available to this project** there (filesystem free space
+does not prove quota). Existing environments and sample 0 remain in Home.
+
+Upload the new code bundle and checksum to the usual Home `transfer/`, then:
+
+```sh
+bash <<'SH'
+set -euo pipefail
+WORK=/work/Home/dl_binner/e001/e001-gate0
+LOG=$(mktemp "$WORK/transfer/e001-multisample.XXXXXX.log")
+echo "Terminal log: $LOG"
+(
+BUNDLE=e001-code-<commit>
+CODE="$WORK/$BUNDLE"
+SHARED='/work/RasmusAllesøeNielsen#2936'
+if ! test -d "$SHARED"; then
+    echo "STOP: shared storage is not mounted; do not substitute Home"
+    exit 1
+fi
+DATA="$SHARED/dl_binner/e001"
+mkdir -p "$DATA"
+cd "$WORK/transfer"
+sha256sum --check "$BUNDLE.tar.gz.sha256"
+if test -e "$CODE" || test -L "$CODE"; then
+    echo "STOP: code directory already exists"
+    exit 1
+fi
+tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
+python3 -I "$CODE/scripts/e001_multisample.py" "$WORK" \
+    --data-root "$DATA" --vcpus 4 --ram-gb 12 --allow-remaining-archives
+) 2>&1 | tee "$LOG"
+SH
+```
+
+What happens, without intermediate chat checkpoints:
+
+1. Checks accepted sample-0 small records/output presence and current runtime
+   isolation/versions, without remapping or repeating native smoke checks.
+2. Reuses Snakemake 9.13.7 and the separate mapping environment. No software
+   installation, upgrades or environment relocation.
+3. Downloads **91.70 GB** in nine publisher archives for samples
+   `1,2,3,4,5,9,10,11,12`, checking size/ETag and complete publisher MD5 and
+   recording SHA256. Reads are now explicitly authorized by the command flag;
+   this is not another bounded-prefix task.
+4. Extracts/validates each complete anonymous read library, maps/filter/sorts/
+   indexes C0 with accepted strobealign settings, then thins/indexes CT for
+   replicate 0. Seeds are 1001-1009 in frozen sample order, not literal sample
+   number (sample 9 uses 1006). No added MAPQ filter or scientific-design change.
+5. Writes a ten-sample BAM manifest referencing original sample 0 plus nine new
+   samples, per-rule extended benchmarks, detailed tool logs and live
+   `progress.log`. Terminal shows stage messages, download/extraction counts,
+   mapper logs when emitted, and one-minute heartbeats; a heartbeat is not a
+   percentage-complete estimate. Rule stdout may be quiet during native mapping.
+6. Packages compact evidence under Home as `multisample-preprocess-...-return.tar.gz`
+   and `.sha256`, even after an ordinary driver failure. Research data stay in
+   the uniquely named shared `multisample-preprocess-.../` attempt directory.
+
+Expect roughly **7-9 hours** at the measured allocation and comparable network
+throughput (6.3 hours preprocessing alone). This is not a guaranteed duration;
+the separate group timeout is 80 allocated core-hours, 20 hours at 4 vCPU.
+Actual timing includes download waiting. Reserve/extend the job as needed.
+Do not select a larger machine just for this task; other allocations change
+throughput and must be recorded accurately. No sample-0 rerun, other body sites,
+extra CT replicates, feature extraction, model training or biological scoring.
+
+**Stop after completion or failure**, preserve all outputs, and return the
+printed archive, checksum and terminal log. Do not rerun the whole group if only
+a later sample fails: completed samples are reusable after evidence review.
+Nothing deletes archives/FASTQs or touches colleagues' directories. After the
+return review, prepare native multi-sample features and resource-aware paired
+pilot orchestration; fitting still needs its own tested launch and review.
+
+## Completed sample-0 instructions (historical)
 
 Mapper/storage feasibility and subsequent local BAM/read-origin analysis are
 accepted. [D008](../../docs/decisions/D008-mapper-and-first-preprocessing-slice.md)

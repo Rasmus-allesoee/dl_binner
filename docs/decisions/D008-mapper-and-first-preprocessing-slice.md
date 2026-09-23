@@ -46,7 +46,19 @@ correctness issue or if the research claim becomes mapper-dependent.
 
 ## Next Bounded Execution
 
-Use Snakemake 9.13.7 to process **the already downloaded sample 0 only**: validate
+Follow-through, 2026-09-21: the sample-0 slice below has now passed; see
+[measured validation](../../experiments/E001-coverage-thinning/validation.md#full-sample-0-preprocessing-accepted-2026-09-21).
+It took 42.24 minutes / 2.816 allocated core-hours and created 15.412 GB at
+4 vCPU / 12 GB. Proceed to the remaining nine GI samples with unchanged mapping
+and replicate-0 thinning, reusing sample 0. The
+[bounded plan](../../experiments/E001-coverage-thinning/multisample-plan.json)
+opts into acquisition through the owner command, uses the offered shared path
+for projected 230.4 GB of new retained data, and leaves environments in Home.
+No scientific fits or additional replicates are authorized by this expansion.
+This follows the original measured-first boundary rather than repeating it.
+
+Original bounded action (now completed): use Snakemake 9.13.7 to process
+**the already downloaded sample 0 only**: validate
 all 16,666,043 pairs, stream strobealign SAM through primary filtering and sorting
 into C0, then native samtools 10% thinning with E001 replicate-0/sample-0 seed
 1000 into CT. Index both, retain reads/BAMs, return counts, hashes, measured cost
@@ -62,5 +74,5 @@ The engine's dry-run is routine and immediately followed by execution on success
 This slice measures actual full-sample preprocessing before allocating the
 remaining nine samples or the paired scientific fits. Its outcomes should decide
 data placement and acquisition scope, not alter the scientific population to fit
-a quota. The owner can use shared heavy-data storage if necessary; no migration
-or broad acquisition is authorized by this record.
+a quota. The original slice alone did not authorize migration or broad acquisition;
+the measured follow-through above now defines the next bounded scope.

@@ -1,7 +1,7 @@
 # E001: Where Does Reduced Coverage Evidence Lose Recoverable Sequence?
 
 Date: 2026-09-17. Updated: 2026-09-19
-Execution status: population frozen; native smoke/CPU, clustering/marker/evaluator and mapper/storage checks accepted; local mapper-truth analysis complete; Snakemake full sample-0 preprocessing prepared; model fits pending
+Execution status: population frozen; native checks and full sample-0 preprocessing accepted; grouped remaining-nine-sample Snakemake preprocessing prepared; model fits pending
 Scientific outcome: not assessed
 Protocol: prospective v2; [config.json](config.json) owns numerical settings; scientific launch not authorized
 Questions: [Q001](../../docs/research/questions.md#q001), [Q003](../../docs/research/questions.md#q003), [Q004](../../docs/research/questions.md#q004); hypothesis [H001](../../docs/research/questions.md#h001)
@@ -124,7 +124,7 @@ Prior art comparisons with QuickBin's appropriate published/development mode, Mc
 
 Each predicted partition must assign a contig to at most one bin; unknown IDs, duplicate rows and cross-bin duplicate assignments fail preflight. Multiple possible origins in the **truth** are different and must be retained explicitly. Export feature/embedding masks and IDs, verify every join, and account for dropped input rows as unassigned rather than removing them from evaluation. Never repair overlapping predictions by silently assigning a contig to the largest bin.
 
-The [operations guide](OPERATIONS.md) owns commands and runtime status. Core tool installations now have accepted native checks and returned dependency records; the new Snakemake environment still needs owner execution. Preserve resolved identities and inspect returned outputs before scientific fits. Do not substitute tool/PyTorch versions and call it native parity. Scientific fitting/clustering orchestration remains to be completed against the accepted native contracts.
+The [operations guide](OPERATIONS.md) owns commands and runtime status. Core tool installations and the Snakemake 9.13.7 workflow environment have accepted native execution and returned dependency records. Preserve resolved identities and inspect returned outputs before scientific fits. Do not substitute tool/PyTorch versions and call it native parity. Scientific fitting/clustering orchestration remains to be completed against the accepted native contracts.
 
 **Gate 1: acquire and inventory the public data.** The prepared acquisition command downloads only GI GSA, corrected/original truth, setup and small metadata, verifies publisher checksums, and safely inventories archives without extracting them. It cannot download read archives. Resolve historical taxonomy and full coordinate joins before freezing the population. An initial taxonomy-free inventory is explicitly blocked, not approved for science. The [operations guide](OPERATIONS.md) owns commands, storage estimates and return-artifact instructions. If data access or an input contract fails, amend rather than fabricate a path/checksum.
 
@@ -134,7 +134,7 @@ Before Gate 2, commit executable code/configuration and record that pre-existing
 
 ## Attempts and results
 
-No scientific binning fits have been launched. Assembly/truth/setup acquisition, D005 conversion, population freeze, native smoke/CPU, marker/clustering/evaluator integration and prefix mapper feasibility passed. The real prefix diagnostic is a development observation, not a binning result. First full sample-0 preprocessing (C0 and CT, seed 1000) is prepared in Snakemake; remaining nine samples and model fits remain pending. Environment ownership follows [D006](../../docs/decisions/D006-environment-ownership.md).
+No scientific binning fits have been launched. Assembly/truth/setup acquisition, D005 conversion, population freeze, native smoke/CPU, marker/clustering/evaluator integration, prefix mapper feasibility and full sample-0 preprocessing passed. The real prefix diagnostic is a development observation, not a binning result. [Sample-0 records](sample0-preprocess-observed.json) accept C0 and CT seed 1000. [The grouped plan](multisample-plan.json) prepares the remaining nine GI libraries in Snakemake, preserving native mapping/thinning semantics and frozen sample order. Only CT replicate 0 is included at this stage; no features, models or biological scores. Environment ownership follows [D006](../../docs/decisions/D006-environment-ownership.md).
 
 Resource correction, 2026-09-21: [D007](../../docs/decisions/D007-comebin-resource-envelope.md) and [compute-policy.json](compute-policy.json) restore COMEBin's 80-core-hour limit after the owner clarified actual 2-vCPU allocation. Six fits project 287.3 core-hours with margin, no longer exceeding the 800 total before overhead. Frozen configuration and raw observed records remain unchanged. Remaining replicates still require measured pilot cost before authorization, independent of biological scores.
 

@@ -184,7 +184,7 @@ The project should remain understandable to future agents without becoming over-
 
 Give new scripts and nontrivial functions informative docstrings describing their
 purpose, inputs and outputs, including important side effects and scope limits.
-For larger multi-stage research workflows, prefer Snakemake (owner preference)
+For larger multi-stage research workflows, prefer Snakemake (owner preference) or Nextflow
 over a growing collection of independently invoked scripts. Keep small tested
 helpers as rule implementations; do not migrate completed preflight checks merely
 to introduce a workflow engine. Pin workflow/tool environments and retain logs,
@@ -223,6 +223,15 @@ For owner-run execution, group commands into fail-fast scripts when later steps 
 
 Owner-run commands must automatically capture terminal output to a log file.
 Request the resulting file instead of asking the owner to copy terminal text.
+For long native steps, also expose timestamped stage progress and periodic
+heartbeats to the terminal or a dedicated progress log. Preserve the detailed
+per-tool logs and command provenance; progress is not a replacement for them.
+Use Snakemake per-rule `benchmark:` and `--benchmark-extended` for new substantial
+rules when useful, without rerunning accepted work solely to obtain measurements.
+Keep sampled process CPU/RAM metrics distinct from charged allocated vCPU-hours.
+The current UCloud Terminal job on SDU/K8s uses Snakemake's local executor within
+the rented allocation. Do not add Slurm unless actual Slurm submission access
+and scheduler/account requirements have been established for a future provider.
 
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 

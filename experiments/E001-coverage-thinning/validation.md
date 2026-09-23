@@ -2,6 +2,103 @@
 
 Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
 
+## Full sample-0 preprocessing accepted, 2026-09-21
+
+Return `sample0-preprocess-6_gyxp5d-return.tar.gz` matches SHA256
+`4e0e4e64131d11ac42450cae6460a3c7ad06a5add29a4049b3fa540a42c33a8e`.
+All 38 archive members are unique safe regular files. Terminal and detailed logs,
+all command records, runtime configuration and QC were reviewed. Source is
+`4235aa4426e252ab8f3c8a52817a6e2dd3eeae14`; reference and sample archive match
+the accepted identities. [Observed record](sample0-preprocess-observed.json)
+preserves original JSON and every member hash, plus the terminal-log hash.
+
+Workflow environment creation/install, dry-run, full extraction, streamed
+mapping/filter/sort, both indexes, thinning and complete BAM QC all passed.
+Only routine package-install warnings occurred; no failed commands. Snakemake
+9.13.7 and its returned package inventory are now native-executed, not just a recipe.
+
+| Measurement | Observed |
+| --- | --- |
+| Actual allocation | 4 vCPU / 12 GB RAM |
+| Driver wall time / allocated cost | 2,534.53 s (42.24 min) / 2.81615 core-hours |
+| Full read pairs | 16,666,043; exactly the independently counted sample-0 truth total |
+| Extraction including archive verification | 141.09 s; FASTQ 10,610,713,214 bytes |
+| Map/sort/index/QC rule | 2,316.83 s; mapper itself reports 2,013.15 s mapping |
+| C0 primary mapped records / BAM bytes | 33,158,847 / 4,319,070,969 |
+| CT records / BAM bytes | 3,314,822 / 478,139,342 |
+| CT fraction and seed | 0.0999679512 observed; 0.1 requested; seed 1000 |
+| CT thinning/index/QC rule | 42.39 s |
+| New attempt storage | 15,411,548,225 bytes (15.412 decimal GB) |
+
+Cost excludes owner idle time outside the driver. Storage excludes the original
+9.739 GB archive, existing environments and earlier attempts. No peak RAM was
+measured; successful execution within the reported allocation is the evidence.
+**Accepted: preserve and reuse sample 0; do not remap, rethin or reinstall it.**
+This is operational preprocessing, not a biological result or H001 test.
+
+### Next grouped acquisition/preprocessing
+
+[Plan](multisample-plan.json) and [workflow](../../workflows/e001-preprocess/multisample.smk)
+cover samples 1,2,3,4,5,9,10,11,12, in frozen order. HTTP HEAD plus 64 KiB
+range probes confirmed each archive's size, ETag and dated sample directory;
+the nine archives total **91,698,809,375 bytes**. Full payloads were not downloaded
+locally. Publisher MD5s remain in acquisition.json and will be verified during
+owner download before extraction. Select the dated directory's plain
+`reads/anonymous_reads.fq`, never a subsample or simulator BAM. The complete
+member suffix is established on sample 0 and enforced at runtime on the others;
+the prefix probes alone do not prove every member's presence. Small public
+read-origin metadata prefixes confirm `S{sample}R` anonymous IDs in each library.
+Extraction validates every pair to EOF; other libraries are not forced to have
+sample 0's exact count. The 20-million-pair bound is a stop-for-review resource
+guard, never truncation or sample selection.
+
+Nine times the measured 2,503.92-second workflow gives **6.26 hours / 25.04
+allocated core-hours** at the same allocation, before acquisition. Allow roughly
+7-9 hours total at comparable network/I/O throughput; this is a projection,
+not a guarantee. The driver has an **80 allocated-core-hour group ceiling**
+(20 hours at 4 vCPU), including download/wait/setup probes, within the 200-hour
+preprocessing envelope. No linear speedup assumption for other allocations.
+
+Projected new retained storage is **230.40 GB** including all nine archives,
+FASTQs and C0/CT outputs; future features/replicates add space. With existing
+data/environments this does not safely fit the initial 250 GB Home quota.
+The explicit owner command therefore uses the offered shared project directory
+for new heavy data, checks 275 GB free initially and 35 GB before each sample,
+and leaves environments/sample 0 in Home. No files are deleted or moved.
+Filesystem free space is not a project-quota measurement; the owner must mount
+the shared directory with sufficient quota. Sequential sample dependencies keep
+download/extraction/sort workspaces from overlapping. A failure stops the group,
+preserves completed outputs and packages logs for targeted continuation.
+
+### Observability and scheduler choice
+
+New rules have one-shot `benchmark:` TSVs with `--benchmark-extended`, recording
+wall time, sampled process-tree RSS/CPU/I/O and requested rule resources. No
+benchmark repeats and no sample-0 rerun. These complement, not replace, driver
+wall-time times allocated-vCPU accounting. Sampled RSS can miss short peaks and
+does not include the entire UCloud container. Detailed per-tool stderr/commands
+are retained, with live timestamped mirroring and a 60-second progress heartbeat.
+
+[Snakemake documentation](https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#benchmark-rules)
+was checked alongside the locally installed **9.13.7** implementation; the live
+documentation currently describes a newer release, so the pinned engine itself
+is tested. The [Slurm executor](https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/slurm.html)
+submits to a Slurm scheduler. The actual owner environment is a Terminal job on
+DeIC Interactive HPC SDU/K8s with no established Slurm submission allocation.
+Use the local executor inside that job. Reconsider Slurm only on a real Slurm
+provider with account/partition access, not simply because this is HPC.
+
+Local implementation validation finalized 2026-09-23: **143 portable tests pass**.
+New coverage includes bounded/checksummed acquisition failures, partial-file
+preservation, complete read/sample validation, accepted-sample reuse, explicit
+allocation/acquisition guards, grouped driver order and repeat preservation,
+packaging failure, live progress, sample-9 read group/seed, and ordered manifests.
+The actual pinned Snakemake engine executed a two-sample fixture DAG, produced
+eight extended benchmark TSVs, and reported nothing to do on a second invocation.
+This validates orchestration with a fixture worker, not a new native mapper run.
+Documentation/link checks and whitespace checks pass. Native execution of the
+remaining-nine-sample workflow is prepared, not completed; no model was trained.
+
 ## All three mapper attempts reviewed, 2026-09-21
 
 The [observed record](mapper-observed.json) preserves all three checksum-verified
@@ -94,8 +191,9 @@ test environment and its actual DAG dry-run passed. Portable tests exercise
 full extraction/count mismatch, overwrite protection, actual allocation, grouped
 driver order, failed prerequisites and repeated-attempt preservation.
 All **130 portable tests pass**, including the real pinned-engine DAG dry-run.
-The native Linux preprocessing execution is **prepared, not run**; remaining nine
-samples and scientific model fits are not authorized.
+At that checkpoint native preprocessing was **prepared, not run**. The subsequent
+accepted sample-0 return and bounded next scope are recorded above; scientific
+model fits remain unlaunched.
 
 ## Integration accepted and accounting corrected, 2026-09-21
 
