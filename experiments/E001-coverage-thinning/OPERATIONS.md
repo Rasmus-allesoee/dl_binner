@@ -1,8 +1,96 @@
 # E001: Validation and UCloud Preflight
 
-Updated: 2026-09-23. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
+Updated: 2026-09-24. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
-## Current action, 2026-09-23
+## Current action, 2026-09-24
+
+The 2026-09-24 owner run is still in progress and has **not** produced accepted
+preprocessing outputs. Snakemake did launch two mapping rules concurrently on
+the 8-vCPU allocation, but each Strobealign instance was explicitly given two
+threads; the owner observed about 398% CPU use (roughly four CPUs). The wrapper
+had subtracted two CPUs from each 4-CPU rule to reserve them for the two
+single-threaded Samtools pipeline stages. Strobealign itself supports an
+explicit `-t 4`; this was a workflow setting, not a Strobealign limitation.
+See the dated observation in [validation](validation.md#remaining-nine-thread-allocation-review-2026-09-24)
+and the revised resource choice in [D009](../../docs/decisions/D009-parallel-preprocessing-terminal.md).
+
+The next attempt uses **4 vCPU / 12 GB, one sample lane, and four Strobealign
+threads per sample**. This aims to use a smaller allocation fully. Samtools
+filtering and sorting remain single-threaded pipeline helpers and can briefly
+compete for those same CPUs; the per-rule benchmark will show whether the
+end-to-end mapping is faster. This is a resource-setting change only: samples,
+reference, filtering, seeds, and outputs remain unchanged. Sample 0 and its
+accepted environment are reused; nothing is reinstalled. The run continues to
+authorize the remaining nine read archives, with no training or scoring.
+
+The current run uses code bundle `e001-code-4dd3cb9f5944` and writes to
+`/work/RasmusAllesøeNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod`.
+Because its workflow snapshot has already been unpacked, a local code change
+cannot alter it. To switch runs, interrupt it once with Ctrl-C in Terminal and
+wait for it to exit. Its `finally` block should write `status.json` with
+`exit_code: 1` and print a return archive. Confirm that status exists before
+using it as a reuse source. If the job is forcibly stopped and no status is
+written, do not launch the reuse command; return the terminal log and inspect
+the preserved attempt first.
+
+Upload the newly prepared versioned code bundle and its `.sha256`, plus the
+unchanged `e001-workflow-0fb6955cdc62.tar.gz` and checksum, into `transfer/`.
+The new code bundle name and checksum are pinned in this guide after its
+source commit is created. Then run:
+
+```sh
+bash <<'SH'
+set -euo pipefail
+WORK=/work/Home/dl_binner/e001/e001-gate0
+LOG=$(mktemp "$WORK/transfer/e001-multisample.XXXXXX.log")
+echo "Terminal log: $LOG"
+(
+BUNDLE=e001-code-<new-source-commit-prefix>
+CODE="$WORK/$BUNDLE"
+SHARED='/work/RasmusAllesøeNielsen#2936'
+if ! test -d "$SHARED"; then
+    echo "STOP: shared storage is not mounted; do not substitute Home"
+    exit 1
+fi
+DATA="$SHARED/dl_binner/e001"
+OLD_ATTEMPT="$DATA/multisample-preprocess-rau3rfod"
+if ! test -f "$OLD_ATTEMPT/status.json"; then
+    echo "STOP: interrupted attempt has no final status; preserve it for review"
+    exit 1
+fi
+if ! python3 -I -c 'import json,sys; raise SystemExit(json.load(open(sys.argv[1]))["exit_code"] != 1)' "$OLD_ATTEMPT/status.json"; then
+    echo "STOP: prior attempt is not recorded as failed; do not reuse it"
+    exit 1
+fi
+cd "$WORK/transfer"
+sha256sum --check "$BUNDLE.tar.gz.sha256"
+sha256sum --check e001-workflow-0fb6955cdc62.tar.gz.sha256
+if test -e "$CODE" || test -L "$CODE"; then
+    echo "STOP: code directory already exists"
+    exit 1
+fi
+tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
+python3 -I "$CODE/scripts/e001_multisample.py" "$WORK" \
+    --data-root "$DATA" --vcpus 4 --ram-gb 12 \
+    --sample-vcpus 4 --sample-ram-gb 10 --max-concurrent-samples 1 \
+    --mapper-threads 4 \
+    --workflow-snapshot "$WORK/transfer/e001-workflow-0fb6955cdc62.tar.gz" \
+    --reuse-attempt "$OLD_ATTEMPT" \
+    --allow-remaining-archives
+) 2>&1 | tee "$LOG"
+SH
+```
+
+The restart verifies and hardlinks the two completed publisher archives from
+the interrupted attempt, then extracts them again into a new attempt; it does
+not reuse partial BAMs. It downloads the other seven archives. Software and
+environment installations are unchanged. Keep the shared-storage data and all
+older attempts. The 80-core-hour group ceiling allows at most 20 hours at this
+4-vCPU allocation; no wall-time estimate for the four-thread mapping has yet
+been measured. Return the printed result archive, its `.sha256`, and the
+terminal `.log` for review.
+
+## Superseded 8-vCPU plan, 2026-09-23
 
 Full sample-0 preprocessing is accepted: **42.24 minutes, 2.816 allocated
 core-hours, 15.412 GB new outputs** at 4 vCPU / 12 GB. Reuse the accepted

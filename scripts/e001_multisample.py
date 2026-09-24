@@ -275,20 +275,30 @@ def aggregate(config):
         "reference_sha256": config["reference_sha256"], "samples": entries})
 
 
-def resource_plan(cpus, ram_gb, sample_cpus, sample_ram_gb, concurrency):
+def resource_plan(cpus, ram_gb, sample_cpus, sample_ram_gb, concurrency,
+                  mapper_threads=None):
     """Validate total allocation versus per-sample scheduling budgets.
 
     Return explicit local-executor limits. Memory is a scheduling reservation,
     not an OS limit; leave at least 1 GB for the driver/engine outside workers.
-    No automatic concurrency reduction hides a misconfigured owner command.
+    `mapper_threads` controls Strobealign's `-t` value and defaults to two fewer
+    than the per-sample allocation to reserve CPUs for single-threaded Samtools
+    helpers. An explicit value can use the full per-sample allocation; the
+    streaming helpers then share those CPUs. No automatic concurrency reduction
+    hides a misconfigured owner command.
     """
     require(sample_cpus >= 3 and sample_ram_gb >= 6, "Each sample needs at least 3 vCPU and 6 GB")
     require(1 <= concurrency <= 3, "Select one to three concurrent samples")
     require(cpus >= sample_cpus * concurrency, "Total vCPUs cannot cover requested sample concurrency")
     require(ram_gb >= sample_ram_gb * concurrency + 1, "Total RAM must cover sample budgets plus 1 GB coordinator reserve")
+    if mapper_threads is None:
+        mapper_threads = sample_cpus - 2
+    require(1 <= mapper_threads <= sample_cpus,
+            "Strobealign threads must be between 1 and the per-sample CPU allocation")
     return {"sample_vcpus": sample_cpus, "sample_ram_gb": sample_ram_gb,
             "max_concurrent_samples": concurrency, "memory_budget_mb": int((ram_gb - 1) * 1000),
-            "download_slots": 1, "executor": "local", "allocation_nodes": 1}
+            "mapper_threads": mapper_threads, "download_slots": 1,
+            "executor": "local", "allocation_nodes": 1}
 
 
 def verify_mapping_versions(mapping_python, env, stage, timeout_seconds=30):
@@ -383,18 +393,21 @@ def stage_runtime(root, snapshot, env, stage):
 
 def run(root, data_root, cpus, ram_gb, allow_downloads,
         sample_cpus=4, sample_ram_gb=10, concurrency=1, startup_only=False,
-        workflow_snapshot=None, reuse_attempt=None):
+        workflow_snapshot=None, reuse_attempt=None, mapper_threads=None):
     """Probe existing runtimes, run a bounded multi-sample DAG, package evidence.
 
-    Explicit data-root prevents silent migration to shared storage. The 80
+    Explicit data-root prevents silent migration to shared storage. The optional
+    mapper-thread count is written into each sample config and passed to
+    Strobealign; it does not alter sample count, read filters or seeds. The 80
     allocated-core-hour group ceiling includes acquisition and waiting inside
-    this driver, and leaves headroom under E001's 200-hour preprocessing ceiling.
-    A failure preserves completed samples and partial files for targeted recovery.
+    this driver. A failure preserves completed samples and partial files for
+    targeted recovery.
     """
     require(allow_downloads or startup_only, "Explicit --allow-remaining-archives required")
     require(root.is_absolute() and root.is_dir() and data_root.is_absolute() and data_root.is_dir(), "Existing absolute work/data roots required")
     require(cpus >= 3 and ram_gb >= 6, "Need at least 3 vCPU and 6 GB RAM")
-    resources = resource_plan(cpus, ram_gb, sample_cpus, sample_ram_gb, concurrency)
+    resources = resource_plan(cpus, ram_gb, sample_cpus, sample_ram_gb, concurrency,
+                              mapper_threads)
     stage = Path(tempfile.mkdtemp(prefix="multisample-preprocess-", dir=data_root))
     started, status = time.monotonic(), 1
     env = {k: v for k, v in os.environ.items() if k not in ("PYTHONPATH", "PYTHONHOME", "PYTHONUSERBASE", "SNAKEMAKE_PROFILE", "SNAKEMAKE_WORKFLOW_PROFILE")}
@@ -454,6 +467,7 @@ def run(root, data_root, cpus, ram_gb, allow_downloads,
             source = {**sources[sample], **item, "url": acquisition["base_url"] + sources[sample]["path"]}
             cfg = {"stage": str(folder), "root": str(root), "sample": sample,
                    "sample_index": frozen["samples"].index(sample), "vcpus": sample_cpus,
+                   "mapper_threads": resources["mapper_threads"],
                    "archive": str(folder / "source.tar.gz"), "member": item["directory"] + "/reads/anonymous_reads.fq",
                    "reference": config["reference"], "reference_sha256": config["reference_sha256"], "acquisition": source}
             path = folder / "runtime.json"
@@ -517,6 +531,8 @@ if __name__ == "__main__":
     parser.add_argument("--sample-vcpus", type=int, default=4)
     parser.add_argument("--sample-ram-gb", type=float, default=10)
     parser.add_argument("--max-concurrent-samples", type=int, default=1)
+    parser.add_argument("--mapper-threads", type=int,
+                        help="Strobealign threads per sample (defaults to sample-vcpus minus two)")
     parser.add_argument("--allow-remaining-archives", action="store_true")
     parser.add_argument("--startup-only", action="store_true", help="Capture runtime diagnostics and dry-run only; never acquire reads")
     parser.add_argument("--workflow-snapshot", type=Path, help="Use reviewed archive as a job-local execution copy; preserve persistent environment")
@@ -534,4 +550,4 @@ if __name__ == "__main__":
             parser.error("root, --data-root, --vcpus and --ram-gb required")
         raise SystemExit(run(args.root, args.data_root, args.vcpus, args.ram_gb, args.allow_remaining_archives,
                              args.sample_vcpus, args.sample_ram_gb, args.max_concurrent_samples, args.startup_only,
-                             args.workflow_snapshot, args.reuse_attempt))
+                             args.workflow_snapshot, args.reuse_attempt, args.mapper_threads))

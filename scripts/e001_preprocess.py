@@ -101,7 +101,12 @@ def _extract_member(tar, member, output, expected_pairs, sample, max_pairs):
 
 
 def worker(mode, config_path):
-    """Execute one rule with isolated mapping tools; write QC only on success."""
+    """Execute one rule with isolated mapping tools; write QC only on success.
+
+    Mapping uses the configured Strobealign thread count when present. Its
+    absence preserves the accepted sample-0 split, reserving two CPUs for the
+    concurrent single-threaded Samtools filter/sort helpers.
+    """
     from e001lib.native import mapping_commands, pipeline, thinning_command
     from e001lib.smoke import bam_inventory
     cfg = json.loads(config_path.read_text())
@@ -128,9 +133,13 @@ def worker(mode, config_path):
     bam = out / "mapped.bam"
     require(not bam.exists(), "Refusing to overwrite previous BAM")
     if mode == "map":
-        # Reserve one CPU each for samtools view and single-threaded sort.
+        # Keep the legacy sample-0 split unless the caller supplies an explicit
+        # Strobealign thread count for the grouped multi-sample workflow.
+        mapper_threads = cfg.get("mapper_threads", cfg["vcpus"] - 2)
+        require(1 <= mapper_threads <= cfg["vcpus"],
+                "Strobealign threads must fit the sample CPU allocation")
         commands = mapping_commands(reference, stage / "reads.fq", f"E001-sample{sample}", bam,
-                                    mapper_threads=cfg["vcpus"] - 2, sort_extra_threads=0)
+                                    mapper_threads=mapper_threads, sort_extra_threads=0)
         pipeline(commands, out / "pipeline")
     else:
         invoke(thinning_command(stage / "C0/mapped.bam", bam, replicate=0, sample_index=sample_index), env, out, "thin", 1800)

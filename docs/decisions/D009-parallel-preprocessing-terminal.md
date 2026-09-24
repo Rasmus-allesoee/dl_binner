@@ -1,8 +1,9 @@
 # D009: Parallel Preprocessing Within One Terminal Allocation
 
-Status: accepted, allocation amended 2026-09-23 before owner execution. Supersedes
-the serial scheduling recommendation from D008's follow-through, not its
-scientific mapping/thinning contract.
+Status: accepted for the initial two-lane attempt and amended 2026-09-24 for the
+next owner run. The new resource choice supersedes the 8-vCPU/two-lane launch
+setting for this preprocessing retry, not the scientific mapping/thinning
+contract or the option to revisit parallel execution after measured results.
 
 ## Evidence and Correction
 
@@ -42,7 +43,7 @@ The thesis mapping pipe gives both Bowtie2 and samtools sort the rule's full
 thread count concurrently; E001 intentionally budgets the entire pipeline
 instead. No thesis file was changed, and this inspection is not a thesis rerun.
 
-## Decision
+## Initial Decision, 2026-09-23 (superseded for the current retry)
 
 Hardware correction, 2026-09-23: the available Terminal choices are discrete;
 the owner's screenshot confirms 8 vCPU / 24 GB and 16 vCPU above it, with no
@@ -86,6 +87,36 @@ The unchanged 80-core-hour group ceiling becomes **10 hours at 8 vCPU**, includi
 in-driver waiting. Storage remains roughly 230.4 GB retained, with 275 GB initially
 free and extra transient sort space within that headroom. No additional data or
 model-training scope is introduced.
+
+## Owner-run utilization review, 2026-09-24
+
+The first corrected grouped run used an 8-vCPU allocation and did start two
+mapping rules at once. Its log reports `Provided cores: 8`, `Execute 2 jobs`,
+four reserved threads for each mapping rule, and Strobealign processing each
+sample with **two threads**. The owner observed about **398% CPU utilization**
+on UCloud, or roughly four busy CPUs. The cause is explicit in the wrapper:
+`scripts/e001_preprocess.py` set mapper threads to `sample_vcpus - 2`, reserving
+one CPU apiece for the concurrently streamed Samtools view and sort stages. It
+was not a failure to launch the second sample. The local Strobealign source
+README documents `-t N` as the mapping/indexing thread count, and its mapping
+loop starts N workers; no new environment or tool installation is needed.
+
+For the next attempt, choose **4 vCPU / 12 GB, one sample at a time, with
+Strobealign explicitly set to four threads**. This uses a smaller paid
+allocation while giving Strobealign four worker threads. The two single-thread
+Samtools helpers remain concurrent in the streaming pipeline and can contend
+for CPU time; UCloud still caps total use at the four rented CPUs. The
+per-sample benchmark will measure end-to-end wall and CPU time. Do not assume
+linear scaling from two to four mapper threads. This is a reversible execution
+setting, not a change to samples, inputs, read filters, seeds, or scientific
+scope. Reuse only the two publisher-verified archives from the interrupted
+attempt after its failure status is recorded; never reuse its partial BAMs.
+
+This 4-vCPU configuration has a **20-hour maximum** under the existing
+80-allocated-core-hour group ceiling. The prior 4-5-hour/32-40-core-hour
+two-lane projection does not apply to this changed thread/concurrency setup.
+Update cost and throughput estimates from the new run's actual allocation and
+per-rule benchmarks.
 
 ## Future Slurm Use
 

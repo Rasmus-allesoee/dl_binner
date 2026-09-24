@@ -1,6 +1,43 @@
 # E001 Gate 0 Validation
 
-Date: 2026-09-18. These are software checks, not E001 scientific attempts or biological results.
+Date: 2026-09-18; appended through 2026-09-24. These are software checks, not E001 scientific attempts or biological results.
+
+## Remaining-nine Thread Allocation Review, 2026-09-24
+
+The owner-run [terminal log](../../agent_context/e001-multisample.MrU4F7.log)
+has SHA-256
+`d7b018a592ac2b8228be42e074e2f9260a58fec9283db34ee37543d18c5355a5`.
+Its source bundle is `e001-code-4dd3cb9f5944`. The log records 8 provided
+cores, two concurrent mapping rules each reserved four rule threads, and both
+Strobealign processes announcing `Processing paired-end reads using 2 threads`.
+The last captured heartbeat is at 17.2 minutes with 47.12 GB retained. The owner
+reported the live UCloud CPU graph at about 398.2%. These observations confirm
+that Snakemake launched both sample lanes; the log ends while both mappings are
+still in progress, so there is no completed C0/CT result or performance result.
+
+The exact setting was deliberate: `scripts/e001_preprocess.py` passed
+`cfg["vcpus"] - 2` to the mapper, saving one CPU each for Samtools view and
+single-threaded sort. The cloned Strobealign README says `-t N` selects the
+mapping/indexing thread count; `src/main.rs` creates N mapping workers. Thus
+Strobealign was not failing to see an allocation: it was asked to use two
+threads per sample. The inspected local source files have SHA-256
+`41c1eaa83263525096599c5747952c2de1f9b6178c24d8c7146551186e9016a5`
+(`README.md`) and
+`8d3d500175fcb9fd6a69b3d0029d3bd8c9c3b40144e49b6dd51552481e1478ce`
+(`src/main.rs`). No conda environment or software installation is needed to
+enable four.
+
+For a reversible resource retune, the grouped driver now accepts
+`--mapper-threads`; the sample-0 path keeps its original default. The next owner
+attempt is planned for 4 vCPU / 12 GB, one sample lane, and four Strobealign
+threads. Samtools' single-threaded streaming helpers remain concurrent and can
+compete for CPU time within the allocation; the E001 map-rule benchmark will
+measure end-to-end wall and CPU time. Do not assume linear scaling or call this
+a scientific result. After the current run is stopped, reuse its publisher-
+verified sample 1 and 2 archives only if its final `status.json` records
+`exit_code: 1`; partial BAMs are not reused. The other seven archives remain
+authorized for download. No population, mapping filter, seed, or scientific
+scope changed.
 
 ## Workflow Filesystem Stall Identified, 2026-09-23
 
