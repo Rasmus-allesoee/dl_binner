@@ -184,7 +184,7 @@ The project should remain understandable to future agents without becoming over-
 
 Give new scripts and nontrivial functions informative docstrings describing their purpose, inputs and outputs, including important side effects and scope limits. For larger multi-stage research workflows, prefer Snakemake (owner preference) or Nextflow over a growing collection of independently invoked scripts. Keep small tested helpers as rule implementations; do not migrate completed preflight checks merely to introduce a workflow engine. Pin workflow/tool environments and retain logs, provenance, resources and explicit review boundaries. Nextflow is an alternative, not the default.
 
-When designing retries, consider Snakemake's native resume behavior: reusing the same work directory can preserve valid completed outputs, while a fresh attempt directory may better protect isolation or provenance. Choose what best fits the workflow, and handle incomplete or stale outputs explicitly.
+When designing retries, consider Snakemake's native resume behavior and its [working-directory and rerun guidance](https://snakemake.readthedocs.io/en/stable/project_info/faq.html): reusing the same work directory can preserve valid completed outputs, while a fresh attempt directory may better protect isolation or provenance. Choose what best fits the workflow, and handle incomplete or stale outputs explicitly.
 
 Prefer the simplest implementation that adequately tests the current scientific idea.
 
