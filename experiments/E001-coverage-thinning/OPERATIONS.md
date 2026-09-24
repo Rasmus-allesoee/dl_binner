@@ -12,12 +12,18 @@ in-progress handoff and four-vCPU retry proposal. All ten C0/CT BAM pairs are
 retained under the [ordered manifest](multisample-bam-manifest.json). The original
 `4dd3cb9f5944` code completed; `069fad9` was a prepared alternative, not this run.
 
-**Retry update:** `multisample-features-z6n2qvya` passed all input checks but
-stopped before extraction because our worker rejected Snakemake-created empty
-output directories. The replacement fixes that wrapper bug and preserves
-nonempty-directory protection. Keep the failed attempt; the new attempt repeats
-only integrity checks, not preprocessing, and retains another approximately
-4.8-GB sample-0 copy. See [failure evidence](feature-startup-observed.json).
+**Targeted recovery:** `multisample-features-t8lpankx` completed VAMB and MetaBAT
+C0 depth extraction. The native MetaBAT header omits `.bam`; our validator is
+corrected. COMEBin's import timed out for an undetermined reason; an instrumented
+pre-site probe retains the same 60-second limit and captures import stacks/wait
+state. It continues to extraction only if healthy. See [reviewed receipts](feature-partial-observed.json).
+
+The command below explicitly reuses this attempt. Preserve it: its BAM aliases
+remain inputs. All reused hashes are checked; VAMB features and MetaBAT C0 depth
+are copied into the new attempt without rerunning extraction. No extra 4.8-GB
+BAM copy is made. The normal fresh-run storage/alias description below applies
+only when the optional fifth wrapper argument is omitted. No environment repair
+or successful COMEBin execution is claimed yet.
 
 **Next execution is native feature extraction only.** Use Terminal / Ubuntu /
 Aug2026 on one node, **4 vCPU / 12 GB**, with Home and the same shared storage
@@ -71,7 +77,8 @@ echo "Transfer log: $LOG"
     sha256sum --check "$BUNDLE.tar.gz.sha256"
     test ! -e "$CODE" && test ! -L "$CODE"
     tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
-    bash "$CODE/scripts/e001_features_run.sh" "$WORK" "$DATA" 4 12
+    bash "$CODE/scripts/e001_features_run.sh" "$WORK" "$DATA" 4 12 \
+        "$DATA/multisample-features-t8lpankx"
 ) 2>&1 | tee "$LOG"
 SH
 ```

@@ -2,6 +2,38 @@
 
 Date: 2026-09-18; appended through 2026-09-24. These are software checks, not E001 scientific attempts or biological results.
 
+## Partial native features and targeted recovery, 2026-09-24
+
+Return `multisample-features-t8lpankx` passed its SHA256 sidecar and input gate.
+[Reviewed receipts](feature-partial-observed.json) accept VAMB C0/CT features:
+22,594 contigs, ten ordered columns, matching paired IDs/masks and expected BAM
+hashes. Maximum normalized scale-control differences are below 2e-6. MetaBAT
+completed C0 depth extraction; all 22,594 rows/817,438,232 bases and sample columns
+validate after correcting our header expectation. Its pinned native writer
+`get_basename` removes the final extension, so emitted names omit `.bam`.
+Our validator incorrectly required that suffix. The fix follows the native
+contract and retains strict order checking. CT extraction did not start.
+
+COMEBin timed out during the 60-second isolated import probe. Both child streams
+were empty; the return cannot identify the stalled import or prove a cause.
+Do not infer filesystem failure, reinstall, relocate its environment, bypass
+the check or increase the timeout. The replacement probe installs repeated
+tracebacks before site initialization, prints each import stage, preserves
+normal site processing, and captures Linux process wait state before killing
+a timed-out child. If healthy it continues normally; otherwise return this new
+evidence. Runtime repair remains unresolved until that evidence is available.
+
+Actual failed-driver cost: 611.007 seconds / 0.678897 core-hours at 4 vCPU / 12 GB.
+Recovery uses a fresh attempt with an explicit checksum-bound `--reuse-attempt`.
+It rehashes the existing BAM aliases/indexes and VAMB artifacts, copies only
+small accepted features and the C0 depth table, and schedules missing work.
+It does not regenerate VAMB, recalculate MetaBAT C0, recopy sample-0 BAMs, remap
+or modify the preserved attempt. Source and output hashes retain original
+provenance. The old attempt must remain mounted because its BAM aliases are used.
+Local tests cover native headers, real-DAG reuse without scheduling VAMB/input
+creation, modified-artifact rejection, startup markers and timeout diagnostics.
+All 21 focused feature tests passed; documentation checks passed.
+
 ## Feature worker directory failure corrected, 2026-09-24
 
 The checksum-verified `multisample-features-z6n2qvya` return records a successful

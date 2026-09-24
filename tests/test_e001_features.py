@@ -102,7 +102,7 @@ class FeaturesTests(unittest.TestCase):
 
     def test_native_depth_contract_and_scale(self):
         from e001lib.native import scale_metabat_depth
-        p=self.root/'depth.tsv';p.write_text('contigName\tcontigLen\ttotalAvgDepth\t00.bam\t00.bam-var\t01.bam\t01.bam-var\na\t2500\t5\t10\t4\t0\t0\n')
+        p=self.root/'depth.tsv';p.write_text('contigName\tcontigLen\ttotalAvgDepth\t00\t00-var\t01\t01-var\na\t2500\t5\t10\t4\t0\t0\n')
         self.assertEqual(f.depth_report(p,{'a':2500},['00.bam','01.bam'])['zero_means_per_sample'],[0,1])
         scale_metabat_depth(p,self.root/'scaled.tsv',{'a':2500})
         self.assertIn('\t0.040000000000000008\t', (self.root/'scaled.tsv').read_text())
@@ -195,6 +195,37 @@ else:
         with self.assertRaisesRegex(ValueError,'symlinked'):f.worker('metabat',cfg)
         self.assertEqual((self.root/'vamb/partial.npy').read_bytes(),b'preserve')
 
+    def test_reuse_checks_hashes_and_real_dag_skips_accepted_work(self):
+        stage,cmd=self.fixture_dag()
+        previous=self.root/'previous';previous.mkdir();(previous/'vamb').mkdir();(previous/'metabat/C0').mkdir(parents=True)
+        reference=self.root/'ref'
+        bam=previous/'sample.bam';bam.write_bytes(b'bam');index=Path(str(bam)+'.bai');index.write_bytes(b'index')
+        inputs={'manifest_sha256':'manifest','reference':str(reference),'reference_sha256':f.sha(reference),
+                'bams':{'C0':[{'path':str(bam),'bytes':3,'sha256':f.sha(bam),'index_sha256':f.sha(index)}]}}
+        f.write(previous/'inputs.json',inputs);f.write(previous/'status.json',{'exit_code':1})
+        (previous/'vamb/feature.npy').write_bytes(b'feature')
+        f.write(previous/'vamb/result.json',{'artifacts':{'feature.npy':{'sha256':f.sha(previous/'vamb/feature.npy')}}})
+        (previous/'metabat/C0/depth.tsv').write_text('accepted table')
+        record={'directory':str(previous),'reuse_sha256':{n:f.sha(previous/n) for n in ('inputs.json','status.json','vamb/result.json','metabat/C0/depth.tsv')}}
+        exp=self.root/'exp';exp.mkdir();f.write(exp/'feature-partial-observed.json',record)
+        cfg=f.read(stage/'runtime.json');cfg['manifest_sha256']='manifest'
+        with patch.object(f,'EXP',exp):f.reuse_reviewed(stage,previous,cfg)
+        f.write(stage/'runtime.json',cfg)
+        result=subprocess.run(cmd,capture_output=True,text=True,timeout=120)
+        self.assertEqual(result.returncode,0,result.stderr)
+        self.assertEqual(set((stage/'events.txt').read_text().splitlines()),{'metabat','comebin','aggregate'})
+        self.assertEqual((previous/'vamb/feature.npy').read_bytes(),b'feature')
+        (previous/'vamb/feature.npy').write_bytes(b'changed')
+        new=self.root/'new';new.mkdir()
+        with patch.object(f,'EXP',exp),self.assertRaisesRegex(ValueError,'VAMB artifact changed'):f.reuse_reviewed(new,previous,cfg)
+        self.assertFalse((new/'inputs.json').exists())
+
+    def test_native_probe_emits_pre_site_and_import_diagnostics(self):
+        result=subprocess.run([sys.executable,'-I','-S',str(REPO/'scripts/e001_native_probe.py'),sys.prefix,'numpy'],capture_output=True,text=True,timeout=30)
+        self.assertEqual(result.returncode,0,result.stderr)
+        self.assertIn('PROBE: before site',result.stderr)
+        self.assertIn('PROBE: ready numpy',result.stderr)
+
     def test_complete_owner_driver_with_real_engine_and_fixture_workers(self):
         # Only native/runtime probes are replaced; both dry-run and actual DAG execute.
         fixture,unused=self.fixture_dag()
@@ -236,6 +267,7 @@ else:
         with self.assertRaises(subprocess.TimeoutExpired):
             f.rule_command([sys.executable,'-c','import time; time.sleep(10)'],f.isolated_env(),self.root,'timeout',.05)
         self.assertIn('error',f.read(self.root/'timeout.command.json'))
+        self.assertIn('process_at_failure',f.read(self.root/'timeout.command.json'))
 
     def test_container_git_check_and_failure_stop(self):
         with patch.object(f.shutil,'which',return_value='/usr/bin/git'),patch.object(f,'invoke') as invoke:

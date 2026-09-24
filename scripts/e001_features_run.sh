@@ -16,8 +16,11 @@ echo "Terminal log: $log"
     cat "$code/SOURCE_COMMIT"
     unset PYTHONPATH PYTHONHOME PYTHONUSERBASE
     export PYTHONNOUSERSITE=1
-    python3 -I "$code/scripts/e001_features.py" "$root" --data-root "$data" \
+    reuse=${5:-}
+    set -- python3 -I "$code/scripts/e001_features.py" "$root" --data-root "$data" \
         --manifest "$code/experiments/E001-coverage-thinning/multisample-bam-manifest.json" \
         --vcpus "$cpus" --ram-gb "$ram" \
         --workflow-snapshot "$root/transfer/e001-workflow-0fb6955cdc62.tar.gz"
+    if [[ -n "$reuse" ]]; then set -- "$@" --reuse-attempt "$reuse"; fi
+    "$@"
 ) 2>&1 | tee "$log"

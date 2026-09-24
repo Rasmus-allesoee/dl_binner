@@ -141,7 +141,7 @@ def depth_report(path, lengths, names):
         rows = list(csv.reader(handle, delimiter='\t'))
     header = rows.pop(0)
     require(header[:3] == ['contigName','contigLen','totalAvgDepth'], 'Wrong depth header')
-    require([Path(x).name for x in header[3::2]] == names, 'Depth sample order mismatch')
+    require(header[3::2] == [Path(x).stem for x in names], 'Depth sample order mismatch')
     require(all(header[i+1] == header[i]+'-var' for i in range(3,len(header),2)), 'Missing variance columns')
     require([r[0] for r in rows] == list(lengths), 'Depth contig order mismatch')
     require(all(len(r)==3+2*len(names) and int(r[1])==lengths[r[0]] for r in rows), 'Invalid depth rows')
@@ -175,7 +175,10 @@ def native_features(tool, cfg):
             print('START MetaBAT depth '+c, flush=True)
             (out/c).mkdir()
             command = native.metabat_commands(fasta,bams[c],out/c,threads=cfg['worker_vcpus'])[0]
-            native.run_checked(command,out/'logs', 'depth-'+c)
+            if c=='C0' and cfg.get('reused_metabat_depth'):
+                shutil.copyfile(cfg['reused_metabat_depth'],out/c/'depth.tsv')
+            else:
+                native.run_checked(command,out/'logs', 'depth-'+c)
             report['conditions'][c] = depth_report(out/c/'depth.tsv',lengths,names)
         (out/'CS').mkdir()
         native.scale_metabat_depth(out/'C0/depth.tsv',out/'CS/depth.tsv',lengths)
@@ -251,6 +254,12 @@ def rule_command(command, env, out, label, timeout=None):
             try:
                 record['returncode']=process.wait(timeout=timeout)
             except BaseException:
+                record['process_at_failure']={}
+                for name in ('status','wchan','syscall'):
+                    try:
+                        record['process_at_failure'][name]=(Path('/proc')/str(process.pid)/name).read_text()[:8192]
+                    except OSError as error:
+                        record['process_at_failure'][name]=str(error)
                 process.kill();record['returncode']=process.wait();raise
         require(record['returncode']==0, 'Native '+label+' failed; inspect '+str(out))
     except BaseException as error:
@@ -279,12 +288,7 @@ def worker(mode, cfg):
     env['TMPDIR'] = str(stage/'tmp')
     python=prefix/'bin/python'
     modules = ['Bio','pysam'] if tool in ('mapping','metabat') else ['numpy','torch','Bio']
-    probe = ("import sys,site,importlib; from pathlib import Path; p=Path(sys.argv[1]).resolve(); "
-             "assert Path(sys.prefix).resolve()==p and not site.ENABLE_USER_SITE; "
-             "mods=[importlib.import_module(n) for n in sys.argv[2:]]; "
-             "assert all(Path(m.__file__).resolve().is_relative_to(p) for m in mods); "
-             "print(sys.version); print([(m.__name__,m.__file__) for m in mods])")
-    rule_command([python,'-I','-c',probe,prefix,*modules],env,out,'environment',60)
+    rule_command([python,'-I','-S',CODE/'scripts/e001_native_probe.py',prefix,*modules],env,out,'environment',60)
     if tool=='comebin':
         require((prefix/'bin/bedtools').is_file(), 'Missing persistent bedtools; no automatic install')
         rule_command([prefix/'bin/bedtools','--version'],env,out,'bedtools-version',30)
@@ -347,7 +351,40 @@ def ensure_git(env, stage):
     require(shutil.which('git',path=env.get('PATH')), 'Git still unavailable after container bootstrap')
 
 
-def run(root, data_root, manifest, cpus, ram, snapshot):
+def reuse_reviewed(stage, previous, cfg):
+    """Reuse only checksum-bound outputs from the reviewed t8lpankx return.
+
+    Rehash retained BAMs/indexes and accepted VAMB artifacts, copy small features
+    and the valid MetaBAT C0 table; never modify the previous attempt or recopy
+    BAMs. Existing outputs satisfy the DAG, leaving only missing work scheduled.
+    """
+    accepted=read(EXP/'feature-partial-observed.json')
+    require(str(previous)==accepted['directory'], 'Unreviewed reuse attempt')
+    for name,digest in accepted['reuse_sha256'].items():
+        require(sha(previous/name)==digest, 'Changed reuse record: '+name)
+    inputs=read(previous/'inputs.json')
+    require(inputs['manifest_sha256']==cfg['manifest_sha256'],'Reuse manifest mismatch')
+    require(sha(inputs['reference'])==inputs['reference_sha256'],'Reference changed')
+    for entries in inputs['bams'].values():
+        for entry in entries:
+            p=Path(entry['path'])
+            require(p.stat().st_size==entry['bytes'] and sha(p)==entry['sha256'],'Reused BAM changed')
+            require(sha(Path(str(p)+'.bai'))==entry['index_sha256'],'Reused index changed')
+    result=read(previous/'vamb/result.json')
+    for name,receipt in result['artifacts'].items():
+        require(sha(previous/'vamb'/name)==receipt['sha256'],'VAMB artifact changed: '+name)
+    shutil.copyfile(previous/'inputs.json',stage/'inputs.json')
+    (stage/'vamb').mkdir()
+    for name in [*result['artifacts'],'result.json']:
+        dest=stage/'vamb'/name;dest.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(previous/'vamb'/name,dest)
+    shutil.copyfile(previous/'metabat/C0/depth.tsv',stage/'reused-metabat-depth.tsv')
+    cfg['reused_metabat_depth']=str(stage/'reused-metabat-depth.tsv')
+    write(stage/'reuse.json',{'previous':str(previous),'review_sha256':sha(EXP/'feature-partial-observed.json'),
+                            'reused':['input aliases','VAMB C0/CT/CS','MetaBAT C0 depth']})
+
+
+def run(root, data_root, manifest, cpus, ram, snapshot, reuse_attempt=None):
     """Create a unique attempt, run the real DAG, and always package failure evidence."""
     resources=resource_plan(cpus,ram)
     require(all(p.is_absolute() and p.is_dir() for p in (root,data_root)), 'Existing absolute roots required')
@@ -369,6 +406,8 @@ def run(root, data_root, manifest, cpus, ram, snapshot):
                  'reference':m['reference'],'source_commit':(CODE/'SOURCE_COMMIT').read_text().strip(),
                  'helper':str(CODE/'scripts/e001_features.py'),'driver_python':sys.executable,
                  'runtime_config':str(stage/'runtime.json')}
+            if reuse_attempt is not None:
+                reuse_reviewed(stage,reuse_attempt,cfg)
             write(stage/'runtime.json',cfg)
             prefix=stage_runtime(root,snapshot,env,stage)
             workflow=prefix/'bin/snakemake'
@@ -404,7 +443,7 @@ def run(root, data_root, manifest, cpus, ram, snapshot):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('root',type=Path,nargs='?');p.add_argument('--data-root',type=Path);p.add_argument('--manifest',type=Path)
-    p.add_argument('--vcpus',type=int);p.add_argument('--ram-gb',type=float);p.add_argument('--workflow-snapshot',type=Path)
+    p.add_argument('--vcpus',type=int);p.add_argument('--ram-gb',type=float);p.add_argument('--workflow-snapshot',type=Path);p.add_argument('--reuse-attempt',type=Path)
     p.add_argument('--worker',choices=('verify',*TOOLS,'aggregate'));p.add_argument('--native',choices=('verify',*TOOLS));p.add_argument('--config',type=Path)
     a=p.parse_args()
     if a.native or a.worker:
@@ -416,4 +455,4 @@ if __name__=='__main__':
     else:
         if any(v is None for v in (a.root,a.data_root,a.manifest,a.vcpus,a.ram_gb,a.workflow_snapshot)):
             p.error('root, --data-root, --manifest, --vcpus, --ram-gb and --workflow-snapshot required')
-        raise SystemExit(run(a.root,a.data_root,a.manifest,a.vcpus,a.ram_gb,a.workflow_snapshot))
+        raise SystemExit(run(a.root,a.data_root,a.manifest,a.vcpus,a.ram_gb,a.workflow_snapshot,a.reuse_attempt))
