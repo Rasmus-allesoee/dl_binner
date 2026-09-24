@@ -1,0 +1,14 @@
+{
+  "scope": "Native ten-sample C0/CT replicate-0 features and preprocessing-only CS; no fitting or scoring",
+  "allocated_vcpus": 4,
+  "allocated_ram_gb": 12,
+  "worker_vcpus": 3,
+  "worker_ram_gb": 10,
+  "tool_slots": 1,
+  "comebin_coverage_workers": 1,
+  "group_core_hour_limit": 40,
+  "minimum_free_bytes": 15000000000,
+  "storage_note": "Hardlink shared BAMs under ordered unique names; copy only cross-filesystem BAMs/indexes (sample 0 about 4.8 GB). Features expected below 2 GB; 15 GB is provisioning headroom, not a scientific limit.",
+  "runtime_note": "Unmeasured ten-sample native extraction, especially COMEBin bedGraph processing; 10 hours at 4 vCPU is a failure ceiling, not an expected duration.",
+  "review_boundary": "Review all feature axes, masks, zeros, CS differences, native logs and measured resource cost before paired seed-11 fitting. Keep native schedules unchanged."
+}

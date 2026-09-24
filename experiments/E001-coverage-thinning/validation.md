@@ -2,12 +2,123 @@
 
 Date: 2026-09-18; appended through 2026-09-24. These are software checks, not E001 scientific attempts or biological results.
 
+## Remaining-nine preprocessing accepted, 2026-09-24
+
+The completed `multisample-preprocess-rau3rfod-return.tar.gz` SHA256 is
+`1d143773607eeb3f515ab8359c347a988a0c514a0ff63df8bede78c660ac8a1d` and matches the supplied sidecar. The completed terminal
+log SHA256 is `713eb421a57100f8f3995d5e96ca45d33ca75e34a3453fc8a81afa4a58407a5a`. Source is
+`4dd3cb9f594495fe2981af4df74a35e1d24d1ad8`, not the subsequently prepared
+four-thread retry. The original job finished: no retry, remapping, rethinning
+or new download is needed. This supersedes the in-progress/retry handoff below;
+its earlier partial-log observations remain historical evidence.
+
+[The review script](../../scripts/e001_review_multisample.py) independently
+checks the checksum, unique returned file names, success statuses, all nine
+publisher-checksum/read receipts, mapping pipeline exits and filtering arguments,
+index exits, per-sample QC/summary equality, CT seeds/fractions and native rule
+benchmarks (download benchmarks are absent for the two legitimately reused
+archives). Terminal and workflow records show all **35/35 steps complete**.
+The exact returned [ordered BAM manifest](multisample-bam-manifest.json) is
+preserved byte-for-byte; SHA256 `72fa803ae2a556269a889f0bd55bc648bc76ef6d781722464548c1afb40af962`. It binds the original
+accepted sample 0 and all nine new samples to the frozen canonical reference.
+Per-sample BAM hashes, byte sizes and paths remain in that manifest; command
+records and all returned member hashes are in [observed evidence](multisample-preprocess-observed.json).
+
+| Sample | CT seed | C0 records | CT records | CT/C0 |
+| --- | --- | --- | --- | --- |
+| 0 | 1000 | 33,158,847 | 3,314,822 | 9.9968% |
+| 1 | 1001 | 33,132,912 | 3,310,592 | 9.9919% |
+| 2 | 1002 | 32,933,648 | 3,289,999 | 9.9898% |
+| 3 | 1003 | 33,177,597 | 3,321,496 | 10.0113% |
+| 4 | 1004 | 33,290,348 | 3,330,469 | 10.0043% |
+| 5 | 1005 | 33,331,315 | 3,332,346 | 9.9976% |
+| 9 | 1006 | 33,252,934 | 3,323,388 | 9.9943% |
+| 10 | 1007 | 33,303,665 | 3,330,935 | 10.0017% |
+| 11 | 1008 | 32,157,224 | 3,214,428 | 9.9960% |
+| 12 | 1009 | 32,602,743 | 3,255,786 | 9.9862% |
+
+Acceptance is based on the returned full-BAM QC and provenance, not a claim
+that the large BAMs were downloaded or independently inspected locally. The
+next feature input gate verifies their recorded hashes and native header/index
+contracts on UCloud, without repeating preprocessing. No model fit, biological
+score or H001 result follows from preprocessing success.
+
+Actual run settings: **8 vCPU / 24 GB**, local executor, two sample lanes with
+4-vCPU / 10-GB rule reservations, 23-GB aggregate rule-memory cap, one download
+slot, **two Strobealign threads per sample**, single-threaded Samtools filter
+and sort, 150-bp read profile, `-F 2308`, no extra MAPQ cutoff. CT is replicate
+0, 10%, with seeds based on frozen sample index, not literal sample number.
+Sources 1/2 reused publisher-verified hardlinked archives; seven were downloaded.
+
+Measured driver time is **9,107.525 seconds = 151.792 minutes**, giving
+**20.238946 allocated core-hours**. With accepted sample 0's 2.816146, these two
+successful preprocessing drivers total **23.055091 core-hours**. This subtotal
+excludes prior failed attempts, setup and owner time outside the drivers; no
+complete UCloud invoice or remaining account balance is inferred. Sampled
+process CPU/RAM in native benchmarks is separate from allocation charging.
+
+The return records **230,181,868,545 bytes (230.182 decimal GB)** retained inside
+this attempt. This is logical file size, including **20.421 GB of hardlinked
+reused archives**; it is not additional physical usage on top of the earlier
+attempt. Sample 0 contributes another 15.412 GB of retained attempt outputs,
+so the two accepted attempt-directory sizes sum to **245.593 GB**, excluding
+other attempts, the separately retained sample-0 archive, environments/caches
+and temporary job-local workflow copies. All 20 BAMs together are **47.654 GB**.
+Nothing was deleted or migrated. Preserve earlier failures and original files.
+
+## Grouped feature workflow prepared, 2026-09-24
+
+[scripts/e001_features.py](../../scripts/e001_features.py) and the
+[Snakemake DAG](../../workflows/e001-preprocess/features.smk) implement a shared
+hash/header/index gate, three independent native C0/CT/CS tool branches, and an
+aggregate receipt that requires every branch to pass. The owner [command](OPERATIONS.md#current-action-2026-09-24)
+uses persistent per-tool runtimes plus the reviewed job-local workflow snapshot.
+It captures isolated imports, inventories, commands, native streams, interval
+and output hashes, zero counts, CS differences, timing and extended benchmarks.
+No native scientific tool algorithm or frozen configuration was changed.
+
+Source inspection found that native COMEBin resolves BAM paths **before**
+sorting and records resolved basenames (`data_aug/gen_cov.py:run_gen_coverage`).
+Symlinks would produce lexically reordered paths and repeated `mapped.bam`
+identifiers. Ordered numbered hardlinks preserve the intended axis; cross-device
+sample-0 copies are verified. A synthetic regression explicitly demonstrates
+that resolving/sorting these aliases preserves the manifest order. Each native
+extractor's emitted sample/contig axes are checked, not inferred from arguments.
+This convention is now recorded in AGENTS.md.
+
+The [feature plan](feature-plan.json) uses 4 vCPU / 12 GB with one tool active,
+3 reserved worker CPUs and 10 GB worker memory. COMEBin uses one coverage worker
+plus bedtools; MetaBAT OpenMP and VAMB extraction are capped at three threads.
+15 GB additional storage covers the approximately 4.8-GB sample-0 copies,
+feature arrays and temporary margin. The 40-core-hour group deadline is a stop
+bound, not a runtime forecast. Native full-size extraction remains unexecuted.
+
+The [paired-pilot resource plan](paired-pilot-plan.json) fixes seed 11/C0/CT
+without fitting yet. First review these real features and overhead; then finish
+the fit/cluster/selection/evaluator launcher with the native full schedules,
+complete retained outputs, explicit process/memory budgets and unchanged
+80-per-fit/800-total ceilings. Alternatives were immediate fits (premature
+before feature validity/CS/resource review) or repeating synthetic preflights
+(no new needed evidence). No score has been observed or used to select scope.
+
+Local validation: **17 new focused tests**, including tiny actual BAMs,
+checksum/corruption/order failures, cross-filesystem copying, native MetaBAT
+scale-table validation, shell logging success/failure, complete driver repeated
+invocation with the real Snakemake engine and fixture workers, native command
+failure/timeout records, failure packaging, heartbeats, actual DAG success/no-op
+repeat, independent tool failure and shared-input failure. Existing native
+adapters retain their previous separate Linux smoke evidence. All **179 repository tests passed** (`.venv/bin/python -m unittest discover -s tests -v`);
+`python3 scripts/check_docs.py` passed 32 documents/358 links (ten optional legacy
+cache paths remain unavailable). Local fixture success is not a native Linux
+or scientific result.
+
 ## Remaining-nine Thread Allocation Review, 2026-09-24
 
-The owner-run [terminal log](../../agent_context/e001-multisample.MrU4F7.log)
-has SHA-256
+The earlier partial snapshot of the owner-run terminal log had SHA-256
 `d7b018a592ac2b8228be42e074e2f9260a58fec9283db34ee37543d18c5355a5`.
-Its source bundle is `e001-code-4dd3cb9f5944`. The log records 8 provided
+The same filename now contains the completed log accepted above; the earlier
+digest identifies the partial snapshot reviewed at that time. Its source bundle
+is `e001-code-4dd3cb9f5944`. That partial log records 8 provided
 cores, two concurrent mapping rules each reserved four rule threads, and both
 Strobealign processes announcing `Processing paired-end reads using 2 threads`.
 The last captured heartbeat is at 17.2 minutes with 47.12 GB retained. The owner

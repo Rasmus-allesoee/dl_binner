@@ -118,6 +118,16 @@ two-lane projection does not apply to this changed thread/concurrency setup.
 Update cost and throughput estimates from the new run's actual allocation and
 per-rule benchmarks.
 
+## Completed-run disposition, 2026-09-24
+
+The original two-lane 8-vCPU run finished successfully before the proposed
+four-vCPU retry was used. [Accepted return evidence](../../experiments/E001-coverage-thinning/multisample-preprocess-observed.json)
+records 151.792 minutes and 20.239 allocated core-hours; all remaining-nine
+preprocessing outputs and the ordered ten-sample manifest are accepted. The
+utilization observation above remains valid, but its stop/retry recommendation
+is superseded by completion. Do not repeat preprocessing to measure the unused
+four-thread setting. Continue with the feature workflow in [OPERATIONS](../../experiments/E001-coverage-thinning/OPERATIONS.md).
+
 ## Future Slurm Use
 
 Use the Terminal Slurm option when multi-node placement, scheduler-managed jobs

@@ -1,0 +1,340 @@
+{
+  "scope": "C0 and CT replicate 0 only; no scientific training or scoring",
+  "source_commit": "4dd3cb9f594495fe2981af4df74a35e1d24d1ad8",
+  "reference": "/work/Home/dl_binner/e001/e001-gate0/inventory-resume-6z45cola/input/canonical.fna",
+  "reference_sha256": "14870c27bc9467b5897bd1b65b347d7d5e2733d8bbe48c0085cb708194966fe1",
+  "samples": [
+    {
+      "sample": 0,
+      "directory": "/work/Home/dl_binner/e001/e001-gate0/sample0-preprocess-6_gyxp5d",
+      "summary": {
+        "sample": 0,
+        "C0": {
+          "records": 33158847,
+          "mapq_zero_records": 18600764,
+          "sha256": "c18e8c2ce0336dbd5b4f9904d87d1fe2c86e7a1b782d85ebe375d51c793d9d4c",
+          "bytes": 4319070969,
+          "elapsed_seconds": 2316.828045572154
+        },
+        "CT": {
+          "records": 3314822,
+          "mapq_zero_records": 1858914,
+          "sha256": "8d711782da3d66911cf30676a6963a3c69b38bb76b60ff08009b27a3d47f975d",
+          "bytes": 478139342,
+          "elapsed_seconds": 42.38548176595941
+        },
+        "thinning_seed": 1000,
+        "thinning_fraction": 0.1,
+        "observed_record_fraction": 0.09996795123787024,
+        "scope": "Full sample-0 preprocessing pilot only; no features, training or biological scores"
+      },
+      "reuse": "Accepted prior result; record and size checks only, no remapping or rethinning"
+    },
+    {
+      "sample": 1,
+      "directory": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_1",
+      "summary": {
+        "sample": 1,
+        "C0": {
+          "records": 33132912,
+          "mapq_zero_records": 11988085,
+          "sha256": "2ac69b2c2c0de79cfe30f391fc28b6d0af081fba678c1fc29ac1fb9996ab4c38",
+          "bytes": 4345628849,
+          "elapsed_seconds": 1674.9695597910322
+        },
+        "CT": {
+          "records": 3310592,
+          "mapq_zero_records": 1199655,
+          "sha256": "4488d05a135e34694a693fc759d259c81ec5e094af76a309a87703d3f460f869",
+          "bytes": 474964584,
+          "elapsed_seconds": 58.91316647990607
+        },
+        "thinning_seed": 1001,
+        "thinning_fraction": 0.1,
+        "observed_record_fraction": 0.09991853417532393,
+        "scope": "Full-sample preprocessing, replicate 0 only; no features, training or biological scores"
+      },
+      "reads": {
+        "pairs": 16666164,
+        "member": "2017.12.04_18.45.54_sample_1/reads/anonymous_reads.fq.gz",
+        "nested_gzip": true,
+        "bytes": 10610790412,
+        "sha256": "bead8ff89d4744d5219fb97b3baa5d0f2d3a4634a8e82962c773cf852c393452",
+        "archive_sha256": "083de4de9c85269b9ae2303e19a56601c1bb1ea26bd7e7dae607d3a4303cc993",
+        "elapsed_seconds": 124.11923820991069
+      }
+    },
+    {
+      "sample": 2,
+      "directory": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_2",
+      "summary": {
+        "sample": 2,
+        "C0": {
+          "records": 32933648,
+          "mapq_zero_records": 17516658,
+          "sha256": "feee98f7acbd44efd2a8f83281e776cdd5745cc3dcc35cc82b7e7e7d8594ace0",
+          "bytes": 4296543306,
+          "elapsed_seconds": 2191.8680217589717
+        },
+        "CT": {
+          "records": 3289999,
+          "mapq_zero_records": 1751650,
+          "sha256": "1fbc38600d4eaf1ef936f17c5e1170c54699d97867cbb24d6e7aef55718952e1",
+          "bytes": 473893658,
+          "elapsed_seconds": 54.986333357868716
+        },
+        "thinning_seed": 1002,
+        "thinning_fraction": 0.1,
+        "observed_record_fraction": 0.09989780057162206,
+        "scope": "Full-sample preprocessing, replicate 0 only; no features, training or biological scores"
+      },
+      "reads": {
+        "pairs": 16666291,
+        "member": "2017.12.04_18.45.54_sample_2/reads/anonymous_reads.fq.gz",
+        "nested_gzip": true,
+        "bytes": 10610871438,
+        "sha256": "4db3759fe42a53f237fd23786da293e6a5063a0e42944d617acf315ea156388d",
+        "archive_sha256": "63910aa2e4a84ecfadaab57b104b3929405bfd5f77986fca1efa26570a76cf23",
+        "elapsed_seconds": 123.48563572205603
+      }
+    },
+    {
+      "sample": 3,
+      "directory": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_3",
+      "summary": {
+        "sample": 3,
+        "C0": {
+          "records": 33177597,
+          "mapq_zero_records": 15971441,
+          "sha256": "77e06f1423abfbebbd8fade7bb74c2e7277b0127c9bf19c00216e75b2fbd88d9",
+          "bytes": 4332915612,
+          "elapsed_seconds": 1916.899082528893
+        },
+        "CT": {
+          "records": 3321496,
+          "mapq_zero_records": 1596895,
+          "sha256": "0bbdfac36b57ce4f62aee855c0d7ad51fec12192f3e07d2a23fcc724ae54066a",
+          "bytes": 483537257,
+          "elapsed_seconds": 52.74691695184447
+        },
+        "thinning_seed": 1003,
+        "thinning_fraction": 0.1,
+        "observed_record_fraction": 0.10011261514810732,
+        "scope": "Full-sample preprocessing, replicate 0 only; no features, training or biological scores"
+      },
+      "reads": {
+        "pairs": 16666172,
+        "member": "2017.12.04_18.45.54_sample_3/reads/anonymous_reads.fq.gz",
+        "nested_gzip": true,
+        "bytes": 10610795516,
+        "sha256": "488e873f7fcc0c1c1abc50c01dcfbf4c47acf29bbd09612c73f5dbabc92bf565",
+        "archive_sha256": "0d009292665915aa80a1b201ea48ce911490f45d0cff7535859ffac5c06a7801",
+        "elapsed_seconds": 125.12948707910255
+      }
+    },
+    {
+      "sample": 4,
+      "directory": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_4",
+      "summary": {
+        "sample": 4,
+        "C0": {
+          "records": 33290348,
+          "mapq_zero_records": 14935711,
+          "sha256": "862b8fba26a651538e127bd3b2f1538bd3a7fd724774a2bed8b970be9ccca521",
+          "bytes": 4289893343,
+          "elapsed_seconds": 1066.702243574895
+        },
+        "CT": {
+          "records": 3330469,
+          "mapq_zero_records": 1496115,
+          "sha256": "1abb90b97aee6041c6012667f1cedb41f8ed016b5270f49a04b2f215874dd054",
+          "bytes": 468877563,
+          "elapsed_seconds": 56.50770727917552
+        },
+        "thinning_seed": 1004,
+        "thinning_fraction": 0.1,
+        "observed_record_fraction": 0.10004308155625168,
+        "scope": "Full-sample preprocessing, replicate 0 only; no features, training or biological scores"
+      },
+      "reads": {
+        "pairs": 16665433,
+        "member": "2017.12.04_18.45.54_sample_4/reads/anonymous_reads.fq.gz",
+        "nested_gzip": true,
+        "bytes": 10610324034,
+        "sha256": "461513be2d40e96e7fd4f98f64954ef9ca5c43074a123e7055fc80c2ab6f5f67",
+        "archive_sha256": "9bf4bdbbdb6bb2a13e24d231b930202859652ff2f7f00f91b13bfb4420027160",
+        "elapsed_seconds": 125.14334220113233
+      }
+    },
+    {
+      "sample": 5,
+      "directory": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_5",
+      "summary": {
+        "sample": 5,
+        "C0": {
+          "records": 33331315,
+          "mapq_zero_records": 17201640,
+          "sha256": "e710532c93ae988e7a657bd0339f6629442e76f51e6fe8733dd15e207d577f34",
+          "bytes": 4299779883,
+          "elapsed_seconds": 1705.658080572961
+        },
+        "CT": {
+          "records": 3332346,
+          "mapq_zero_records": 1718489,
+          "sha256": "df8d4de18f889f17ed90257c1f5156de6a9269a40cd92c5d3f57a9842e83ebba",
+          "bytes": 470734719,
+          "elapsed_seconds": 50.685614557005465
+        },
+        "thinning_seed": 1005,
+        "thinning_fraction": 0.1,
+        "observed_record_fraction": 0.09997643357305284,
+        "scope": "Full-sample preprocessing, replicate 0 only; no features, training or biological scores"
+      },
+      "reads": {
+        "pairs": 16665676,
+        "member": "2017.12.04_18.45.54_sample_5/reads/anonymous_reads.fq.gz",
+        "nested_gzip": true,
+        "bytes": 10610479068,
+        "sha256": "f6140271662046e31cc4270aa5d7d490364095bd6cde997de3b521944882243f",
+        "archive_sha256": "319138ccfa33e8ec73dce15d941b7d7965be36cf05b96fe170cd8d3ef8265d62",
+        "elapsed_seconds": 127.56336966599338
+      }
+    },
+    {
+      "sample": 9,
+      "directory": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_9",
+      "summary": {
+        "sample": 9,
+        "C0": {
+          "records": 33252934,
+          "mapq_zero_records": 20675363,
+          "sha256": "8f3bc8cbdfc296a05e9dc6de9aebc5550e01b9f5af4a08456cffe06ad07d96be",
+          "bytes": 4291891492,
+          "elapsed_seconds": 1189.73316642805
+        },
+        "CT": {
+          "records": 3323388,
+          "mapq_zero_records": 2066726,
+          "sha256": "d433c569986237b30d964ba07e66f687a8abe0140c20672ff1133e9eae7e6ed5",
+          "bytes": 475073575,
+          "elapsed_seconds": 55.221446034964174
+        },
+        "thinning_seed": 1006,
+        "thinning_fraction": 0.1,
+        "observed_record_fraction": 0.09994269979304683,
+        "scope": "Full-sample preprocessing, replicate 0 only; no features, training or biological scores"
+      },
+      "reads": {
+        "pairs": 16666090,
+        "member": "2017.12.04_18.45.54_sample_9/reads/anonymous_reads.fq.gz",
+        "nested_gzip": true,
+        "bytes": 10610743200,
+        "sha256": "f3011dcf8cb938550316e603c4160c2f4b9094400840a70537d0ede0d1e48bf3",
+        "archive_sha256": "30f6f199f4659991f533e38749846a3b12c7b076c880b346ba4ea217c9a4f6d3",
+        "elapsed_seconds": 126.1197614360135
+      }
+    },
+    {
+      "sample": 10,
+      "directory": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_10",
+      "summary": {
+        "sample": 10,
+        "C0": {
+          "records": 33303665,
+          "mapq_zero_records": 16907856,
+          "sha256": "faffd260f2c0c27467794ab7094fb68272318fbbc38ce70d4b1797349597b75a",
+          "bytes": 4376984948,
+          "elapsed_seconds": 1312.0403912328184
+        },
+        "CT": {
+          "records": 3330935,
+          "mapq_zero_records": 1688979,
+          "sha256": "c8b6723772d11994ace67a08d1c7a4a1b65e8f0d3cc46be9b0d0f209439f365f",
+          "bytes": 484306105,
+          "elapsed_seconds": 50.9732810461428
+        },
+        "thinning_seed": 1007,
+        "thinning_fraction": 0.1,
+        "observed_record_fraction": 0.10001707019332556,
+        "scope": "Full-sample preprocessing, replicate 0 only; no features, training or biological scores"
+      },
+      "reads": {
+        "pairs": 16665780,
+        "member": "2017.12.04_18.45.54_sample_10/reads/anonymous_reads.fq.gz",
+        "nested_gzip": true,
+        "bytes": 10643876980,
+        "sha256": "fd931fd88a5ea645f2e4043bf3b4b185d1831e157795529de9373c2ca2a0ac87",
+        "archive_sha256": "520882ee79aaaf74a28c612fd29195112c683a2685237370b552cbf0aa697187",
+        "elapsed_seconds": 120.86714020790532
+      }
+    },
+    {
+      "sample": 11,
+      "directory": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_11",
+      "summary": {
+        "sample": 11,
+        "C0": {
+          "records": 32157224,
+          "mapq_zero_records": 10212655,
+          "sha256": "c9f02b77e17cadd80ea3a0f548cad4a64da2535ac818571661a707ba22b82959",
+          "bytes": 4186309133,
+          "elapsed_seconds": 1027.4692653450184
+        },
+        "CT": {
+          "records": 3214428,
+          "mapq_zero_records": 1019368,
+          "sha256": "fa02890e20a319114e67d454f12119670942dcc060f3ea3bbaed94a83525596c",
+          "bytes": 454196356,
+          "elapsed_seconds": 47.506600678898394
+        },
+        "thinning_seed": 1008,
+        "thinning_fraction": 0.1,
+        "observed_record_fraction": 0.09995974776927262,
+        "scope": "Full-sample preprocessing, replicate 0 only; no features, training or biological scores"
+      },
+      "reads": {
+        "pairs": 16665623,
+        "member": "2017.12.04_18.45.54_sample_11/reads/anonymous_reads.fq.gz",
+        "nested_gzip": true,
+        "bytes": 10643776500,
+        "sha256": "c99331b7b382c958779ba4d80b21eb07fd905a7e1b49cdcd2078a058306017f6",
+        "archive_sha256": "6d02412b3c554cbcd4cd7fcf7621e592bd35e6bbd0682eeec942b6326d5cd44f",
+        "elapsed_seconds": 125.17511183395982
+      }
+    },
+    {
+      "sample": 12,
+      "directory": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_12",
+      "summary": {
+        "sample": 12,
+        "C0": {
+          "records": 32602743,
+          "mapq_zero_records": 15917322,
+          "sha256": "4cb4e0a113348c87a4c75427410316d8976ec8bd334b13b269cc051428617fe5",
+          "bytes": 4189064636,
+          "elapsed_seconds": 975.3036406089086
+        },
+        "CT": {
+          "records": 3255786,
+          "mapq_zero_records": 1591285,
+          "sha256": "a2c03d860aeb61087296fd810c39d3987434dce7042474400de34b0a8c9078b9",
+          "bytes": 461975707,
+          "elapsed_seconds": 46.35095743811689
+        },
+        "thinning_seed": 1009,
+        "thinning_fraction": 0.1,
+        "observed_record_fraction": 0.09986233366928667,
+        "scope": "Full-sample preprocessing, replicate 0 only; no features, training or biological scores"
+      },
+      "reads": {
+        "pairs": 16665249,
+        "member": "2017.12.04_18.45.54_sample_12/reads/anonymous_reads.fq.gz",
+        "nested_gzip": true,
+        "bytes": 10643537140,
+        "sha256": "0fa6fc19982217606d443e59c4cbcdfdd392df435333114c441138997219b586",
+        "archive_sha256": "9ed18e2a1c92952886643062854990d4c863bcf450cd59269932352ae846aca8",
+        "elapsed_seconds": 113.95017540082335
+      }
+    }
+  ]
+}

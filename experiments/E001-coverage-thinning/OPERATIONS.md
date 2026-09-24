@@ -4,92 +4,127 @@ Updated: 2026-09-24. This is the execution guide, not a scientific result. Read 
 
 ## Current action, 2026-09-24
 
-The 2026-09-24 owner run is still in progress and has **not** produced accepted
-preprocessing outputs. Snakemake did launch two mapping rules concurrently on
-the 8-vCPU allocation, but each Strobealign instance was explicitly given two
-threads; the owner observed about 398% CPU use (roughly four CPUs). The wrapper
-had subtracted two CPUs from each 4-CPU rule to reserve them for the two
-single-threaded Samtools pipeline stages. Strobealign itself supports an
-explicit `-t 4`; this was a workflow setting, not a Strobealign limitation.
-See the dated observation in [validation](validation.md#remaining-nine-thread-allocation-review-2026-09-24)
-and the revised resource choice in [D009](../../docs/decisions/D009-parallel-preprocessing-terminal.md).
+**Accept preprocessing and do not run the old retry commands.** The checksum-bound
+`multisample-preprocess-rau3rfod` return and terminal log confirm completion on
+8 vCPU / 24 GB: 151.792 minutes, 20.239 allocated core-hours. The [review](validation.md#remaining-nine-preprocessing-accepted-2026-09-24)
+and [observed record](multisample-preprocess-observed.json) supersede the earlier
+in-progress handoff and four-vCPU retry proposal. All ten C0/CT BAM pairs are
+retained under the [ordered manifest](multisample-bam-manifest.json). The original
+`4dd3cb9f5944` code completed; `069fad9` was a prepared alternative, not this run.
 
-The next attempt uses **4 vCPU / 12 GB, one sample lane, and four Strobealign
-threads per sample**. This aims to use a smaller allocation fully. Samtools
-filtering and sorting remain single-threaded pipeline helpers and can briefly
-compete for those same CPUs; the per-rule benchmark will show whether the
-end-to-end mapping is faster. This is a resource-setting change only: samples,
-reference, filtering, seeds, and outputs remain unchanged. Sample 0 and its
-accepted environment are reused; nothing is reinstalled. The run continues to
-authorize the remaining nine read archives, with no training or scoring.
+**Next execution is native feature extraction only.** Use Terminal / Ubuntu /
+Aug2026 on one node, **4 vCPU / 12 GB**, with Home and the same shared storage
+mounted. Local Snakemake executor; Slurm is unnecessary. Do not run competing
+workloads. The command records the actual allocation, so change its two numbers
+if the rented allocation differs; at least 4 vCPU / 12 GB is required and larger
+allocations do not silently add concurrency. Per-tool work reserves three CPUs
+and 10 GB; at least one CPU and 2 GB remain for coordination. COMEBin uses one
+coverage worker plus its bedtools subprocess, avoiding an unaccounted doubling
+of runnable processes. Native BLAS pools are bounded.
 
-The current run uses code bundle `e001-code-4dd3cb9f5944` and writes to
-`/work/RasmusAllesøeNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod`.
-Because its workflow snapshot has already been unpacked, a local code change
-cannot alter it. To switch runs, interrupt it once with Ctrl-C in Terminal and
-wait for it to exit. Its `finally` block should write `status.json` with
-`exit_code: 1` and print a return archive. Confirm that status exists before
-using it as a reuse source. If the job is forcibly stopped and no status is
-written, do not launch the reuse command; return the terminal log and inspect
-the preserved attempt first.
+Provide **15 GB additional free/quota headroom** in the same shared E001 data
+root and **2 GB in job-local /tmp**. All original BAMs (47.654 GB total) remain
+in place. The driver verifies SHA256, headers and index counts and gives native
+extractors an identical ordered sample axis. COMEBin resolves and sorts paths;
+symlinks to the original `mapped.bam` names would lose order/unique IDs. Numbered
+**hardlinks** avoid that problem without copying the nine shared-storage pairs.
+Cross-filesystem links fall back to verified copies, expected only for sample 0
+(4.797 GB plus indexes). These input aliases are never modified. Keep the unique
+attempt even on failure; do not rerun automatically or delete accepted originals.
+A fresh invocation creates a new attempt. Review partial receipts before deciding
+whether to reuse completed tool bundles; a tool's internal partial bundle cannot
+be silently resumed by the native adapters.
 
-Upload the newly prepared versioned code bundle and its `.sha256`, plus the
-unchanged `e001-workflow-0fb6955cdc62.tar.gz` and checksum, into `transfer/`.
-The code bundle is `e001-code-069fad965b7c.tar.gz`, SHA-256
-`15891dc57ff325259b34e1f7a5e724c5dfe454b54d93b39e0b6480450bfe9ff8`.
-Then run:
+Expected feature storage is below roughly 2 GB, with the 15-GB provision covering
+sample-0 copies, temporary files and margin. That is an estimate, not a measured
+full-size result or a scientific storage ceiling. Native extraction time is not
+yet measured; **40 allocated core-hours / 10 hours at 4 vCPU** is the group
+failure bound, including startup and waiting, not an expected duration. See
+[feature-plan.json](feature-plan.json). Job extensions remain owner-managed.
+
+Upload `FEATURE_BUNDLE_PENDING.tar.gz` and its adjacent `.sha256` into Home
+`transfer/`. Retain the unchanged `e001-workflow-0fb6955cdc62.tar.gz` there;
+no need to upload it again if present. Then run this whole block:
 
 ```sh
 bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
-LOG=$(mktemp "$WORK/transfer/e001-multisample.XXXXXX.log")
-echo "Terminal log: $LOG"
-(
-BUNDLE=e001-code-069fad965b7c
+DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
+BUNDLE=FEATURE_BUNDLE_PENDING
 CODE="$WORK/$BUNDLE"
-SHARED='/work/RasmusAllesøeNielsen#2936'
-if ! test -d "$SHARED"; then
-    echo "STOP: shared storage is not mounted; do not substitute Home"
-    exit 1
-fi
-DATA="$SHARED/dl_binner/e001"
-OLD_ATTEMPT="$DATA/multisample-preprocess-rau3rfod"
-if ! test -f "$OLD_ATTEMPT/status.json"; then
-    echo "STOP: interrupted attempt has no final status; preserve it for review"
-    exit 1
-fi
-if ! python3 -I -c 'import json,sys; raise SystemExit(json.load(open(sys.argv[1]))["exit_code"] != 1)' "$OLD_ATTEMPT/status.json"; then
-    echo "STOP: prior attempt is not recorded as failed; do not reuse it"
-    exit 1
-fi
-cd "$WORK/transfer"
-sha256sum --check "$BUNDLE.tar.gz.sha256"
-sha256sum --check e001-workflow-0fb6955cdc62.tar.gz.sha256
-if test -e "$CODE" || test -L "$CODE"; then
-    echo "STOP: code directory already exists"
-    exit 1
-fi
-tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
-python3 -I "$CODE/scripts/e001_multisample.py" "$WORK" \
-    --data-root "$DATA" --vcpus 4 --ram-gb 12 \
-    --sample-vcpus 4 --sample-ram-gb 10 --max-concurrent-samples 1 \
-    --mapper-threads 4 \
-    --workflow-snapshot "$WORK/transfer/e001-workflow-0fb6955cdc62.tar.gz" \
-    --reuse-attempt "$OLD_ATTEMPT" \
-    --allow-remaining-archives
+LOG=$(mktemp "$WORK/transfer/e001-feature-transfer.XXXXXX.log")
+echo "Transfer log: $LOG"
+(
+    test -d "$DATA"
+    cd "$WORK/transfer"
+    sha256sum --check "$BUNDLE.tar.gz.sha256"
+    test ! -e "$CODE" && test ! -L "$CODE"
+    tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
+    bash "$CODE/scripts/e001_features_run.sh" "$WORK" "$DATA" 4 12
 ) 2>&1 | tee "$LOG"
 SH
 ```
 
-The restart verifies and hardlinks the two completed publisher archives from
-the interrupted attempt, then extracts them again into a new attempt; it does
-not reuse partial BAMs. It downloads the other seven archives. Software and
-environment installations are unchanged. Keep the shared-storage data and all
-older attempts. The 80-core-hour group ceiling allows at most 20 hours at this
-4-vCPU allocation; no wall-time estimate for the four-thread mapping has yet
-been measured. Return the printed result archive, its `.sha256`, and the
-terminal `.log` for review.
+The code bundle is a committed execution snapshot. The driver verifies the
+accepted BAM-manifest hash and frozen configuration/reference before work. It
+stages only the reviewed checksum-bound workflow snapshot onto `/tmp`, checks
+interpreter/import origins, inventory, CLI and the new DAG, and preserves all
+persistent tool environments. On a fresh container it checks Git, and installs
+**only the missing system Git package** using Ubuntu apt if needed (noninteractive
+sudo/root required; command logs and bounded timeouts retained). This may download
+OS package indexes and tens of MB of Git dependencies; no research data, model,
+Conda environment or tool package is downloaded or rebuilt. Missing/unhealthy
+tool runtimes stop their branch and return evidence rather than trigger repair.
+
+One owner task then runs these machine-checkable stages:
+
+1. Hash and inspect all 20 accepted BAMs; stage the ordered aliases, retaining
+   original paths, hashes, link/copy mode and index hashes in `inputs.json`.
+2. Extract native MetaBAT2 means/variances for C0/CT; create CS with means x0.1
+   and variances x0.01. Check row IDs, lengths and ten sample columns.
+3. Extract VAMB composition and BAM-derived abundance, normalized profile and
+   total-abundance features, masks and IDs. Check C0/CT axes and the existing
+   native CS invariance contract. `C0/normalized-CS.npz` is protocol CS; the
+   adapter's additional CT scaling check is labeled separately.
+4. Generate COMEBin's six sequence views once with seed 101, reuse the exact
+   intervals/composition for CT, recompute every view's coverage, create CS and
+   report normalized differences and zero-depth counts. No blanket COMEBin or
+   MetaBAT scale-invariance claim is made.
+5. Publish `feature-summary.json` only if all branches pass. `--keep-going`
+   lets isolated tools finish after another tool fails; a shared input failure
+   blocks all of them. Keep per-rule extended benchmarks, full native streams,
+   package inventories, input/output hashes and timestamped minute heartbeats.
+6. Package compact JSON, logs, IDs, depth tables and benchmarks in Home as
+   `multisample-features-...-return.tar.gz` and `.sha256`; bulk arrays and input
+   aliases stay on UCloud. No fits, clustering or biological evaluation occur.
+
+Return the **feature return archive, checksum and printed terminal `.log`**.
+If failure occurs before packaging, return the terminal/transfer log. No large
+BAM upload is needed. Local tests exercise synthetic BAM integrity, native depth
+contracts, actual Snakemake DAG/benchmarks, no-op repeat execution, isolated tool
+failure, shared-input failure and driver preservation. They do **not** establish
+Linux full-size feature execution; that is what this owner command measures.
+
+### First paired pilot after feature review
+
+The [paired pilot plan](paired-pilot-plan.json) fixes replicate 0, C0/CT and seed
+11 for all three tools, retaining this pair in later results regardless of score.
+Review input axes/masks, native CS differences and feature cost first. Then build
+and locally test the fit/clustering/marker/evaluator launcher against these exact
+feature receipts; do not recompute accepted features to start a fit.
+
+VAMB's measured 4-vCPU schedule projects 1.628 core-hours per fit with margin;
+COMEBin's corrected **2-vCPU / 6-GB** measurement projects 47.891 per fit with
+margin. The two learned C0/CT pairs together project **99.038 core-hours** before
+MetaBAT2, feature, clustering, evaluation and setup overhead. These are synthetic
+projections at the measured allocations, not guarantees; no linear speedup is
+assumed. COMEBin's earlier eight Torch threads ran on two allocated CPUs: the
+complete process/DataLoader thread and memory budget must be explicit in the
+pilot launcher. Retain native 300-epoch VAMB and 200-epoch maximum/early-stopping
+COMEBin schedules, six views and batch 1,024. The 80 per-fit and 800 total ceilings
+remain unchanged. Resolve feature validity or resource failures before fitting;
+launch the remaining replicates only after actual paired-pilot cost review.
 
 ## Superseded 8-vCPU plan, 2026-09-23
 

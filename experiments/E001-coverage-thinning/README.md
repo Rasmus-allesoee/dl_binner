@@ -1,7 +1,7 @@
 # E001: Where Does Reduced Coverage Evidence Lose Recoverable Sequence?
 
-Date: 2026-09-17. Updated: 2026-09-19
-Execution status: population frozen; native checks and full sample-0 preprocessing accepted; remaining-nine run reached acquisition but stopped because sample 2's archive member differed from the hard-coded sample-0 path; unique-member resolution and verified archive reuse prepared (see OPERATIONS); native rerun pending; model fits pending
+Date: 2026-09-17. Updated: 2026-09-24
+Execution status: population frozen; native checks and all ten samples C0/CT replicate-0 preprocessing accepted; grouped native feature workflow locally tested and ready for owner execution; paired seed-11 resource plan prepared, model fits pending
 Scientific outcome: not assessed
 Protocol: prospective v2; [config.json](config.json) owns numerical settings; scientific launch not authorized
 Questions: [Q001](../../docs/research/questions.md#q001), [Q003](../../docs/research/questions.md#q003), [Q004](../../docs/research/questions.md#q004); hypothesis [H001](../../docs/research/questions.md#h001)
@@ -134,7 +134,7 @@ Before Gate 2, commit executable code/configuration and record that pre-existing
 
 ## Attempts and results
 
-No scientific binning fits have been launched. Assembly/truth/setup acquisition, D005 conversion, population freeze, native smoke/CPU, marker/clustering/evaluator integration, prefix mapper feasibility and full sample-0 preprocessing passed. The real prefix diagnostic is a development observation, not a binning result. [Sample-0 records](sample0-preprocess-observed.json) accept C0 and CT seed 1000. [The grouped plan](multisample-plan.json) prepares the remaining nine GI libraries in Snakemake, preserving native mapping/thinning semantics and frozen sample order. Only CT replicate 0 is included at this stage; no features, models or biological scores. Environment ownership follows [D006](../../docs/decisions/D006-environment-ownership.md).
+No scientific binning fits have been launched. Assembly/truth/setup acquisition, D005 conversion, population freeze, native smoke/CPU, marker/clustering/evaluator integration, prefix mapper feasibility and full sample-0 preprocessing passed. The real prefix diagnostic is a development observation, not a binning result. [Sample-0 records](sample0-preprocess-observed.json) accept C0 and CT seed 1000. [The remaining-nine return](multisample-preprocess-observed.json) is accepted, with a [ten-sample ordered BAM manifest](multisample-bam-manifest.json). Only CT replicate 0 exists at this stage. The [feature workflow](../../workflows/e001-preprocess/features.smk) is locally tested and ready for owner execution under [feature-plan.json](feature-plan.json); no research-scale features, models or biological scores have yet been returned. [paired-pilot-plan.json](paired-pilot-plan.json) prepares the seed-11 pair and resource review without authorizing unattended fitting. Environment ownership follows [D006](../../docs/decisions/D006-environment-ownership.md).
 
 Resource correction, 2026-09-21: [D007](../../docs/decisions/D007-comebin-resource-envelope.md) and [compute-policy.json](compute-policy.json) restore COMEBin's 80-core-hour limit after the owner clarified actual 2-vCPU allocation. Six fits project 287.3 core-hours with margin, no longer exceeding the 800 total before overhead. Frozen configuration and raw observed records remain unchanged. Remaining replicates still require measured pilot cost before authorization, independent of biological scores.
 
