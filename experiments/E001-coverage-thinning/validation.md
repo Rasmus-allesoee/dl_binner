@@ -110,7 +110,11 @@ repeat, independent tool failure and shared-input failure. Existing native
 adapters retain their previous separate Linux smoke evidence. All **179 repository tests passed** (`.venv/bin/python -m unittest discover -s tests -v`);
 `python3 scripts/check_docs.py` passed 32 documents/358 links (ten optional legacy
 cache paths remain unavailable). Local fixture success is not a native Linux
-or scientific result.
+or scientific result. The committed transfer bundle checksum, required runtime
+files, source identity and cache/data exclusions were verified. Its extracted
+portable suite passed (17 tests, five expected skips for the unbundled local
+engine/owner return); all corresponding engine tests ran in the 179-test local
+suite above.
 
 ## Remaining-nine Thread Allocation Review, 2026-09-24
 

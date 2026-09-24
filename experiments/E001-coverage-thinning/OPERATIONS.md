@@ -42,16 +42,19 @@ yet measured; **40 allocated core-hours / 10 hours at 4 vCPU** is the group
 failure bound, including startup and waiting, not an expected duration. See
 [feature-plan.json](feature-plan.json). Job extensions remain owner-managed.
 
-Upload `FEATURE_BUNDLE_PENDING.tar.gz` and its adjacent `.sha256` into Home
+Upload `e001-code-461d7b537387.tar.gz` and its adjacent `.sha256` into Home
 `transfer/`. Retain the unchanged `e001-workflow-0fb6955cdc62.tar.gz` there;
-no need to upload it again if present. Then run this whole block:
+no need to upload it again if present. Code archive SHA256:
+`c1f05697befa0aa4f4abd30f5885ec403216ba034f613e33eb0c966c6b86dfd3`.
+The bundle contains execution commit `461d7b537387`; this later documentation
+pin changes no execution files. Then run this whole block:
 
 ```sh
 bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
 DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
-BUNDLE=FEATURE_BUNDLE_PENDING
+BUNDLE=e001-code-461d7b537387
 CODE="$WORK/$BUNDLE"
 LOG=$(mktemp "$WORK/transfer/e001-feature-transfer.XXXXXX.log")
 echo "Transfer log: $LOG"
@@ -87,6 +90,8 @@ One owner task then runs these machine-checkable stages:
    total-abundance features, masks and IDs. Check C0/CT axes and the existing
    native CS invariance contract. `C0/normalized-CS.npz` is protocol CS; the
    adapter's additional CT scaling check is labeled separately.
+   `CT/normalized-C0.npz` holds the actual CT normalization (the existing adapter
+   uses the same internal filename for each input bundle).
 4. Generate COMEBin's six sequence views once with seed 101, reuse the exact
    intervals/composition for CT, recompute every view's coverage, create CS and
    report normalized differences and zero-depth counts. No blanket COMEBin or
