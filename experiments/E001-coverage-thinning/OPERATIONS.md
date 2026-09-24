@@ -54,11 +54,11 @@ yet measured; **40 allocated core-hours / 10 hours at 4 vCPU** is the group
 failure bound, including startup and waiting, not an expected duration. See
 [feature-plan.json](feature-plan.json). Job extensions remain owner-managed.
 
-Upload `e001-code-95ab18cc8b81.tar.gz` and its adjacent `.sha256` into Home
+Upload `e001-code-86642eeaa28c.tar.gz` and its adjacent `.sha256` into Home
 `transfer/`. Retain the unchanged `e001-workflow-0fb6955cdc62.tar.gz` there;
 no need to upload it again if present. Code archive SHA256:
-`81a51508ca563096233cdaf936bf2a4654a659f1f4ca08289183608c97a08b41`.
-The bundle contains execution commit `95ab18cc8b81`; this later documentation
+`57e45b6e3660c75fdfef06c37d66e397c8e9e8b7a1abd140ad083720f0419284`.
+The bundle contains execution commit `86642eeaa28c`; this later documentation
 pin changes no execution files. Then run this whole block:
 
 ```sh
@@ -66,7 +66,7 @@ bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
 DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
-BUNDLE=e001-code-95ab18cc8b81
+BUNDLE=e001-code-86642eeaa28c
 CODE="$WORK/$BUNDLE"
 LOG=$(mktemp "$WORK/transfer/e001-feature-transfer.XXXXXX.log")
 echo "Transfer log: $LOG"
