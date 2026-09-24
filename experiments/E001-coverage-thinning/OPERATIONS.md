@@ -35,8 +35,9 @@ the preserved attempt first.
 
 Upload the newly prepared versioned code bundle and its `.sha256`, plus the
 unchanged `e001-workflow-0fb6955cdc62.tar.gz` and checksum, into `transfer/`.
-The new code bundle name and checksum are pinned in this guide after its
-source commit is created. Then run:
+The code bundle is `e001-code-069fad965b7c.tar.gz`, SHA-256
+`15891dc57ff325259b34e1f7a5e724c5dfe454b54d93b39e0b6480450bfe9ff8`.
+Then run:
 
 ```sh
 bash <<'SH'
@@ -45,7 +46,7 @@ WORK=/work/Home/dl_binner/e001/e001-gate0
 LOG=$(mktemp "$WORK/transfer/e001-multisample.XXXXXX.log")
 echo "Terminal log: $LOG"
 (
-BUNDLE=e001-code-<new-source-commit-prefix>
+BUNDLE=e001-code-069fad965b7c
 CODE="$WORK/$BUNDLE"
 SHARED='/work/RasmusAllesøeNielsen#2936'
 if ! test -d "$SHARED"; then
