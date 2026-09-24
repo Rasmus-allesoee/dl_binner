@@ -1,7 +1,7 @@
 # E001: Where Does Reduced Coverage Evidence Lose Recoverable Sequence?
 
-Date: 2026-09-17. Updated: 2026-09-24
-Execution status: population frozen; native checks and all ten samples C0/CT replicate-0 preprocessing accepted; grouped native feature workflow locally tested and ready for owner execution; paired seed-11 resource plan prepared, model fits pending
+Date: 2026-09-17. Updated: 2026-09-25
+Execution status: population frozen; native checks and all ten samples C0/CT replicate-0 preprocessing accepted; VAMB and MetaBAT native features accepted; COMEBin recovery-path defect corrected and real local raw-coverage test passed, native completion pending; paired seed-11 resource plan prepared, model fits pending
 Scientific outcome: not assessed
 Protocol: prospective v2; [config.json](config.json) owns numerical settings; scientific launch not authorized
 Questions: [Q001](../../docs/research/questions.md#q001), [Q003](../../docs/research/questions.md#q003), [Q004](../../docs/research/questions.md#q004); hypothesis [H001](../../docs/research/questions.md#h001)

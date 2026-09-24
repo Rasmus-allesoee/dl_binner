@@ -160,18 +160,40 @@ def vamb_features(source, fasta, bams, out, threads=2):
                "bam_sha256": {str(p): digest(p) for p in bams}, "fasta_sha256": digest(fasta)})
 
 
-def comebin_features(source, fasta, bamdir, out, fixed=None, threads=2):
-    provenance = verify_source("COMEBin", source)
-    require_packages({"numpy": "2.4.6", "torch": "2.13.0+cpu", "biopython": "1.87"})
+def ordered_bam_directory(bams):
+    """Resolve a native directory only if it exactly represents the ordered BAM list.
+
+    COMEBin resolves and sorts paths internally. Reject missing/extra files,
+    split directories, duplicate names and any resulting order change before
+    sequence augmentation, on fresh and recovered inputs alike.
+    """
+    paths = [Path(p).resolve() for p in bams]
+    require(paths and all(p.is_file() for p in paths), "Missing COMEBin BAM inputs")
+    directory = paths[0].parent
+    require(all(p.parent == directory for p in paths), "COMEBin BAMs need one directory")
+    observed = sorted(p.resolve() for p in directory.glob("*.bam") if p.is_file())
+    require(observed == paths and len(set(paths)) == len(paths), "COMEBin BAM directory/order differs from manifest")
+    return directory
+
+
+def comebin_raw_features(source, fasta, bamdir, out, fixed=None, threads=2):
+    """Run pinned native sequence/coverage extraction without neural normalization.
+
+    Accept an ordered manifest BAM list, or a directory for existing smoke callers.
+    This boundary permits real native coverage regression without requiring a
+    platform-specific PyTorch install. The public adapter verifies source/packages.
+    """
+    bams = sorted(Path(bamdir).glob("*.bam")) if isinstance(bamdir, (str, Path)) else bamdir
+    directory = ordered_bam_directory(bams)
     code = Path(source).resolve() / "COMEBin"
     sys.path.insert(0, str(code))
     from data_aug.generate_augfasta_and_saveindex import run_gen_augfasta
     from data_aug.gen_cov import run_gen_coverage
-    from get_augfeature import get_kmer_coverage
+    logger = logging.getLogger("E001")
     out = Path(out)
     out.mkdir(parents=True, exist_ok=False)
     args = SimpleNamespace(contig_file=str(Path(fasta).resolve()), out_augdata_path=str(out.resolve()),
-                           bam_file_path=str(Path(bamdir).resolve()), n_views=config()["comebin_views"],
+                           bam_file_path=str(directory), n_views=config()["comebin_views"],
                            contig_len=1000, num_threads=threads, seed=config()["augmentation_seed"])
     logger = logging.getLogger("E001")
     if fixed:
@@ -181,13 +203,26 @@ def comebin_features(source, fasta, bamdir, out, fixed=None, threads=2):
         require(previous["fasta_sha256"] == digest(fasta), "Changed FASTA for fixed COMEBin views")
     else:
         run_gen_augfasta(logger, args)
+    write_json(out / "augmentation-receipt.json", {"fasta_sha256": digest(fasta),
+               "files": {name: digest(out / name) for name in
+                         ("feature_manifest.json", "contig_ids.txt", "contig_lengths.npy", "augmentation_intervals.npy", "kmer_counts.npy")}})
     run_gen_coverage(logger, args)
-    views, ids, lengths, _ = get_kmer_coverage(out, n_views=args.n_views, addvars=True, vars_sqrt=True, logger=logger)
+    return directory
+
+
+def comebin_features(source, fasta, bamdir, out, fixed=None, threads=2):
+    """Extract native raw and normalized features from directory or manifest BAMs."""
+    provenance = verify_source("COMEBin", source)
+    require_packages({"numpy": "2.4.6", "torch": "2.13.0+cpu", "biopython": "1.87"})
+    directory = comebin_raw_features(source, fasta, bamdir, out, fixed, threads)
+    from get_augfeature import get_kmer_coverage
+    out = Path(out)
+    views, ids, lengths, _ = get_kmer_coverage(out, n_views=config()["comebin_views"], addvars=True, vars_sqrt=True, logger=logging.getLogger("E001"))
     np.save(out / "normalized-views.npy", np.stack([v.numpy() for v in views]), allow_pickle=False)
     require(list(ids) == [s for s, _ in sequences(fasta)], "COMEBin unexpectedly dropped/reordered canonical IDs")
     write_json(out / "native-features.json", {**provenance, "fasta_sha256": digest(fasta),
                "interval_sha256": digest(out / "augmentation_intervals.npy"),
-               "bam_sha256": {p.name: digest(p) for p in sorted(Path(bamdir).glob("*.bam"))},
+               "bam_sha256": {p.name: digest(p) for p in sorted(directory.glob("*.bam"))},
                "coverage_sha256": {name: digest(out / name) for name in ("coverage_mean.npy", "coverage_var.npy")}})
 
 

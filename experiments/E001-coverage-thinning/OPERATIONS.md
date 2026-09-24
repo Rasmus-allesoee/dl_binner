@@ -1,6 +1,6 @@
 # E001: Validation and UCloud Preflight
 
-Updated: 2026-09-24. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
+Updated: 2026-09-25. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
 ## Current action, 2026-09-24
 
@@ -12,18 +12,17 @@ in-progress handoff and four-vCPU retry proposal. All ten C0/CT BAM pairs are
 retained under the [ordered manifest](multisample-bam-manifest.json). The original
 `4dd3cb9f5944` code completed; `069fad9` was a prepared alternative, not this run.
 
-**Targeted recovery:** `multisample-features-t8lpankx` completed VAMB and MetaBAT
-C0 depth extraction. The native MetaBAT header omits `.bam`; our validator is
-corrected. COMEBin's import timed out for an undetermined reason; an instrumented
-pre-site probe retains the same 60-second limit and captures import stacks/wait
-state. It continues to extraction only if healthy. See [reviewed receipts](feature-partial-observed.json).
+**Targeted recovery, 2026-09-25:** `multisample-features-6q5yss2p` completes VAMB
+and MetaBAT features. COMEBin imports passed, then our adapter wrongly constructed
+a BAM path in the new attempt. It now follows the manifest, validated with real
+native COMEBin/bedtools coverage on fresh and recovered layouts. See [reviewed evidence](feature-recovery-observed.json).
 
-The command below explicitly reuses this attempt. Preserve it: its BAM aliases
-remain inputs. All reused hashes are checked; VAMB features and MetaBAT C0 depth
-are copied into the new attempt without rerunning extraction. No extra 4.8-GB
-BAM copy is made. The normal fresh-run storage/alias description below applies
-only when the optional fifth wrapper argument is omitted. No environment repair
-or successful COMEBin execution is claimed yet.
+The command reuses **both completed tools** and runs only COMEBin plus aggregation.
+Keep `6q5yss2p` for feature artifacts **and `t8lpankx` for its BAM aliases**.
+No extra BAM copy or completed feature extraction is performed. COMEBin's incomplete
+sequence augmentation repeats because its earlier binary hashes were not recorded;
+the corrected adapter records them before coverage. Import diagnostics and the
+60-second probe remain, without claiming a general environment repair.
 
 **Next execution is native feature extraction only.** Use Terminal / Ubuntu /
 Aug2026 on one node, **4 vCPU / 12 GB**, with Home and the same shared storage
@@ -78,7 +77,7 @@ echo "Transfer log: $LOG"
     test ! -e "$CODE" && test ! -L "$CODE"
     tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
     bash "$CODE/scripts/e001_features_run.sh" "$WORK" "$DATA" 4 12 \
-        "$DATA/multisample-features-t8lpankx"
+        "$DATA/multisample-features-6q5yss2p"
 ) 2>&1 | tee "$LOG"
 SH
 ```
@@ -94,7 +93,8 @@ OS package indexes and tens of MB of Git dependencies; no research data, model,
 Conda environment or tool package is downloaded or rebuilt. Missing/unhealthy
 tool runtimes stop their branch and return evidence rather than trigger repair.
 
-One owner task then runs these machine-checkable stages:
+For a fresh run, the stages are listed below. **The selected recovery reuses
+stages 1–3 after checksum verification and executes stages 4–6 only.**
 
 1. Hash and inspect all 20 accepted BAMs; stage the ordered aliases, retaining
    original paths, hashes, link/copy mode and index hashes in `inputs.json`.

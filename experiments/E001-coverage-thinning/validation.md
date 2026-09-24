@@ -2,6 +2,52 @@
 
 Date: 2026-09-18; appended through 2026-09-24. These are software checks, not E001 scientific attempts or biological results.
 
+## Recovery-path defect and validation correction, 2026-09-25
+
+Return `multisample-features-6q5yss2p` matches its checksum. VAMB remains accepted;
+MetaBAT C0/CT/CS now completes and all native depth rows/sample axes validate.
+[Reviewed evidence](feature-recovery-observed.json) records 249.718 seconds /
+0.277464 allocated core-hours at 4 vCPU / 12 GB. COMEBin's isolated imports
+completed within the unchanged timeout. Its diagnostic stacks show progress
+through Torch imports and metadata reads, not proof of a permanent deadlock or
+an environment repair. Keep the diagnostics; do not reinstall or relocate it.
+
+COMEBin subsequently failed because our recovery copied `inputs.json` with the
+correct old BAM paths, but the COMEBin branch still constructed `new_stage/bams`.
+That directory intentionally did not exist. This was our integration defect.
+The former recovery test replaced the actual extractor, so it proved scheduling
+only and could not detect the consumer-path mismatch. Prior blanket readiness
+claims from its passing count were too strong.
+
+The corrected adapter accepts the ordered BAM list from `inputs.json`. Before
+any augmentation it verifies existing files, a common native directory, exact
+resolved sorting, unique paths and absence of extra BAMs. Source algorithms and
+scientific settings remain unchanged. The sequence/coverage portion is exposed
+as the same production helper used by the full adapter so it can be exercised
+without a local PyTorch installation.
+
+[Native contract evidence](native-coverage-local-validation.json) records a real
+local build of bedtools 2.31.1 and the pinned COMEBin source. The regression runs
+actual sequence augmentation, native BAM parsing/bedGraph processing and all six
+coverage views on tiny real BAMs, for both fresh and recovered paths. No coverage
+extractor, bedtools process or native reader is mocked. It checks expected means,
+zero-depth contigs, dimensions, sample order, identical fresh/recovered arrays,
+fixed intervals and rejection of missing/reordered/extra BAMs before writing.
+This proves the raw path/coverage contract on macOS, not full Linux/PyTorch parity.
+Existing returned Linux smoke evidence covers normalization separately. A real
+Snakemake regression also verifies that completed VAMB and MetaBAT are not rerun.
+All **185 repository tests passed**, including this native regression.
+AGENTS.md now requires tests of changed production contracts and explicit
+mock/skip/platform limits; test counts alone cannot establish native readiness.
+
+The next command reuses accepted VAMB and complete MetaBAT features from `6q5yss2p`
+and the BAM aliases still located in `t8lpankx`. Preserve both attempts. Only
+COMEBin and the aggregate receipt remain. Its incomplete sequence augmentation
+will repeat: the previous return has no binary hashes for that incomplete bundle.
+The corrected adapter records an augmentation receipt before coverage so a later
+failure retains that provenance. No new BAM copy, mapping, VAMB or MetaBAT
+extraction is needed; source environments stay unchanged.
+
 ## Partial native features and targeted recovery, 2026-09-24
 
 Return `multisample-features-t8lpankx` passed its SHA256 sidecar and input gate.

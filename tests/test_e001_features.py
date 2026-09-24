@@ -220,6 +220,25 @@ else:
         with patch.object(f,'EXP',exp),self.assertRaisesRegex(ValueError,'VAMB artifact changed'):f.reuse_reviewed(new,previous,cfg)
         self.assertFalse((new/'inputs.json').exists())
 
+    def test_completed_tools_are_not_rescheduled_after_recovery(self):
+        stage,cmd=self.fixture_dag()
+        previous=self.root/'completed';previous.mkdir()
+        reference=self.root/'ref';f.write(previous/'inputs.json',{'manifest_sha256':'manifest','reference':str(reference),'reference_sha256':f.sha(reference),'bams':{}})
+        f.write(previous/'status.json',{'exit_code':1})
+        for tool in ('vamb','metabat'):
+            (previous/tool).mkdir();(previous/tool/'features.tsv').write_text(tool)
+            f.write(previous/tool/'result.json',{'artifacts':{'features.tsv':{'sha256':f.sha(previous/tool/'features.tsv')}}})
+        record={'directory':str(previous),'completed_tools':['vamb','metabat'],
+                'reuse_sha256':{n:f.sha(previous/n) for n in ('inputs.json','status.json','vamb/result.json','metabat/result.json')}}
+        exp=self.root/'exp';exp.mkdir();f.write(exp/'feature-recovery-observed.json',record)
+        cfg=f.read(stage/'runtime.json');cfg['manifest_sha256']='manifest'
+        with patch.object(f,'EXP',exp):f.reuse_reviewed(stage,previous,cfg)
+        f.write(stage/'runtime.json',cfg)
+        result=subprocess.run(cmd,capture_output=True,text=True,timeout=120)
+        self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+        self.assertEqual((stage/'events.txt').read_text().splitlines(),['comebin','aggregate'])
+        self.assertFalse((stage/'bams').exists())
+
     def test_native_probe_emits_pre_site_and_import_diagnostics(self):
         result=subprocess.run([sys.executable,'-I','-S',str(REPO/'scripts/e001_native_probe.py'),sys.prefix,'numpy'],capture_output=True,text=True,timeout=30)
         self.assertEqual(result.returncode,0,result.stderr)

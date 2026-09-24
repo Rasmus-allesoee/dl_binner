@@ -1,0 +1,189 @@
+{
+  "directory": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-features-6q5yss2p",
+  "source_commit": "95ab18cc8b81c966c975863819e5f01f3533d365",
+  "archive_sha256": "a84e9742247913666180c9b48f492813a04404fe4d0d969e1b41db630dd0e78b",
+  "terminal_sha256": "44fc573c15b00d736a37e93c93b498855b449e98f59bc623126b777ae4196969",
+  "status": {
+    "exit_code": 1,
+    "vcpus": 4,
+    "ram_gb": 12.0,
+    "worker_vcpus": 3,
+    "worker_mem_mb": 10000,
+    "memory_budget_mb": 11000,
+    "tool_slots": 1,
+    "elapsed_seconds": 249.71756393299438,
+    "allocated_core_hours": 0.2774639599255493,
+    "group_core_hour_limit": 40,
+    "feature_bytes": 139887363,
+    "note": "Excludes external BAMs, outside-driver idle/setup and return packaging; linked/copied BAM receipts are in inputs.json. No fitting."
+  },
+  "completed_tools": [
+    "vamb",
+    "metabat"
+  ],
+  "reuse_sha256": {
+    "status.json": "00c5855115ecf0f2b6b6ebde1f4c2d7b3a8084743879473f607ffb0113eaa1f5",
+    "inputs.json": "7cbf8c069d70937aa0c08df5e4d5218b2a13976fde4837b95245a74b275015f7",
+    "vamb/result.json": "4ce5456b2be51d786ea34f160c7117c5be0430ec19f9cdf2d44def0a0d1aa8bd",
+    "metabat/result.json": "c7676c5f217946a08ca656aa5ed51097718999568f958c0c289540a05a615048"
+  },
+  "metabat_result": {
+    "tool": "metabat",
+    "samples": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12
+    ],
+    "input_manifest_sha256": "72fa803ae2a556269a889f0bd55bc648bc76ef6d781722464548c1afb40af962",
+    "training": "not run",
+    "conditions": {
+      "C0": {
+        "contigs": 22594,
+        "samples": [
+          "00-sample-0.bam",
+          "01-sample-1.bam",
+          "02-sample-2.bam",
+          "03-sample-3.bam",
+          "04-sample-4.bam",
+          "05-sample-5.bam",
+          "06-sample-9.bam",
+          "07-sample-10.bam",
+          "08-sample-11.bam",
+          "09-sample-12.bam"
+        ],
+        "zero_means_per_sample": [
+          10236,
+          7962,
+          9262,
+          11128,
+          11862,
+          16371,
+          12673,
+          12110,
+          6899,
+          11041
+        ],
+        "sha256": "32604838a177d5fd56d60ce8de7b16ec47161e89d5fce7b816ceb1dafbd61c06"
+      },
+      "CT": {
+        "contigs": 22594,
+        "samples": [
+          "00-sample-0.bam",
+          "01-sample-1.bam",
+          "02-sample-2.bam",
+          "03-sample-3.bam",
+          "04-sample-4.bam",
+          "05-sample-5.bam",
+          "06-sample-9.bam",
+          "07-sample-10.bam",
+          "08-sample-11.bam",
+          "09-sample-12.bam"
+        ],
+        "zero_means_per_sample": [
+          12940,
+          10357,
+          13447,
+          12929,
+          14086,
+          16796,
+          16565,
+          13487,
+          12835,
+          16478
+        ],
+        "sha256": "aebaee4fc6067b850f74483edd7d58982025710debe96008d70f464287ca80ac"
+      },
+      "CS": {
+        "contigs": 22594,
+        "samples": [
+          "00-sample-0.bam",
+          "01-sample-1.bam",
+          "02-sample-2.bam",
+          "03-sample-3.bam",
+          "04-sample-4.bam",
+          "05-sample-5.bam",
+          "06-sample-9.bam",
+          "07-sample-10.bam",
+          "08-sample-11.bam",
+          "09-sample-12.bam"
+        ],
+        "zero_means_per_sample": [
+          10236,
+          7962,
+          9262,
+          11128,
+          11862,
+          16371,
+          12673,
+          12110,
+          6899,
+          11041
+        ],
+        "sha256": "ec2ee6fa8ab7aebce07c183dd21dfc937384c0a3fa167d9fb9019ccb627869e8"
+      }
+    },
+    "CS_interpretation": "Means x0.1, variances x0.01; native absolute-depth filters need not be invariant. No binning executed.",
+    "artifacts": {
+      "inventory.command.json": {
+        "sha256": "a1cbe9acb6bd7abf647a7dc558e5d8c312b27f4ccc00bd9ac0a00845c5bb5455",
+        "bytes": 628
+      },
+      "worker-started.json": {
+        "sha256": "93acc7bdda1d7bdded0b9821e666b2250129b8dff4e2328659aa73a47f398f62",
+        "bytes": 33
+      },
+      "environment.command.json": {
+        "sha256": "3a30a16b2cba07eb24a8c8712598a1720f5e91e685d667e7eaa836483b180820",
+        "bytes": 767
+      },
+      "CS/depth.tsv": {
+        "sha256": "ec2ee6fa8ab7aebce07c183dd21dfc937384c0a3fa167d9fb9019ccb627869e8",
+        "bytes": 5897724
+      },
+      "logs/depth-CT.json": {
+        "sha256": "233fc21448f3127ea9e8e487c8c6983b1bedeb687e22b22909c0f2f9173e510d",
+        "bytes": 1407
+      },
+      "C0/depth.tsv": {
+        "sha256": "32604838a177d5fd56d60ce8de7b16ec47161e89d5fce7b816ceb1dafbd61c06",
+        "bytes": 2980832
+      },
+      "CT/depth.tsv": {
+        "sha256": "aebaee4fc6067b850f74483edd7d58982025710debe96008d70f464287ca80ac",
+        "bytes": 2651222
+      }
+    }
+  },
+  "comebin_probe": {
+    "argv": [
+      "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/bin/python",
+      "-I",
+      "-S",
+      "/work/Home/dl_binner/e001/e001-gate0/e001-code-95ab18cc8b81/scripts/e001_native_probe.py",
+      "/work/Home/dl_binner/e001/e001-gate0/envs/comebin",
+      "numpy",
+      "torch",
+      "Bio"
+    ],
+    "timeout_seconds": 60,
+    "prefix_path": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/bin:/tmp/e001-workflow-ttq7qb9h/workflow/bin:/home/ucloud/.local/bin:/home/ucloud/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "threads_env": {
+      "NUMEXPR_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "GOTO_NUM_THREADS": "3",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "returncode": 0,
+    "elapsed_seconds": 53.622564516961575
+  },
+  "failure": "2026-09-24 22:12:45,572 Generate augmentation view 1/5 with seed 102.\n2026-09-24 22:12:45,573 Generate augmentation view 2/5 with seed 103.\n2026-09-24 22:12:45,573 Generate augmentation view 3/5 with seed 104.\n2026-09-24 22:12:45,573 Generate augmentation view 4/5 with seed 105.\n2026-09-24 22:12:45,573 Generate augmentation view 5/5 with seed 106.\n2026-09-24 22:13:50,817 Generated binary augmentation features: assembly_contigs=22594, assembly_n50=2870581, retained_contigs=22594, views=6, kmer_features=136.\nTraceback (most recent call last):\n  File \"/work/Home/dl_binner/e001/e001-gate0/e001-code-95ab18cc8b81/scripts/e001_features.py\", line 453, in <module>\n    elif a.native: native_features(a.native,cfg)\n                   ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^\n  File \"/work/Home/dl_binner/e001/e001-gate0/e001-code-95ab18cc8b81/scripts/e001_features.py\", line 210, in native_features\n    native.comebin_features(source,fasta,stage/'bams'/c,out/c,\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                            fixed=out/'C0' if c=='CT' else None,threads=1)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/Home/dl_binner/e001/e001-gate0/e001-code-95ab18cc8b81/scripts/e001lib/native.py\", line 184, in comebin_features\n    run_gen_coverage(logger, args)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^\n  File \"/work/Home/dl_binner/e001/e001-gate0/sources/COMEBin/COMEBin/data_aug/gen_cov.py\", line 241, in run_gen_coverage\n    raise FileNotFoundError(f'BAM directory does not exist: {bam_dir}')\nFileNotFoundError: BAM directory does not exist: /work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-features-6q5yss2p/bams/C0\n",
+  "interpretation": "COMEBin imports completed within unchanged timeout. Failure is wrong recovered BAM path in our adapter, after sequence augmentation; no coverage generated. No environment repair established."
+}

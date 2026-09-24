@@ -207,7 +207,7 @@ def native_features(tool, cfg):
         # A coverage worker also runs bedtools; one worker avoids hidden 2x CPU use.
         for c in ('C0','CT'):
             print('START COMEBin six-view features '+c, flush=True)
-            native.comebin_features(source,fasta,stage/'bams'/c,out/c,
+            native.comebin_features(source,fasta,bams[c],out/c,
                                     fixed=out/'C0' if c=='CT' else None,threads=1)
             require((out/c/'bam_ids.txt').read_text().splitlines() == names, 'COMEBin sample order mismatch')
         report['paired'] = native.validate_comebin_pair(out/'C0',out/'CT')
@@ -352,14 +352,16 @@ def ensure_git(env, stage):
 
 
 def reuse_reviewed(stage, previous, cfg):
-    """Reuse only checksum-bound outputs from the reviewed t8lpankx return.
+    """Reuse only checksum-bound outputs from an explicitly reviewed return.
 
-    Rehash retained BAMs/indexes and accepted VAMB artifacts, copy small features
-    and the valid MetaBAT C0 table; never modify the previous attempt or recopy
-    BAMs. Existing outputs satisfy the DAG, leaving only missing work scheduled.
+    Rehash retained BAMs/indexes and accepted tool artifacts, copy completed
+    feature bundles (or the earlier partial MetaBAT C0 table), and never modify
+    the previous attempt or recopy BAMs. Existing outputs satisfy the DAG, leaving only missing work scheduled.
     """
-    accepted=read(EXP/'feature-partial-observed.json')
-    require(str(previous)==accepted['directory'], 'Unreviewed reuse attempt')
+    reviews=[p for p in (EXP/'feature-recovery-observed.json',EXP/'feature-partial-observed.json') if p.exists()]
+    matches=[(p,read(p)) for p in reviews if read(p)['directory']==str(previous)]
+    require(len(matches)==1, 'Unreviewed reuse attempt')
+    review_path,accepted=matches[0]
     for name,digest in accepted['reuse_sha256'].items():
         require(sha(previous/name)==digest, 'Changed reuse record: '+name)
     inputs=read(previous/'inputs.json')
@@ -370,18 +372,22 @@ def reuse_reviewed(stage, previous, cfg):
             p=Path(entry['path'])
             require(p.stat().st_size==entry['bytes'] and sha(p)==entry['sha256'],'Reused BAM changed')
             require(sha(Path(str(p)+'.bai'))==entry['index_sha256'],'Reused index changed')
-    result=read(previous/'vamb/result.json')
-    for name,receipt in result['artifacts'].items():
-        require(sha(previous/'vamb'/name)==receipt['sha256'],'VAMB artifact changed: '+name)
+    completed=accepted.get('completed_tools',['vamb'])
+    results={tool:read(previous/tool/'result.json') for tool in completed}
+    for tool,result in results.items():
+        for name,receipt in result['artifacts'].items():
+            require(sha(previous/tool/name)==receipt['sha256'],tool.upper()+' artifact changed: '+name)
     shutil.copyfile(previous/'inputs.json',stage/'inputs.json')
-    (stage/'vamb').mkdir()
-    for name in [*result['artifacts'],'result.json']:
-        dest=stage/'vamb'/name;dest.parent.mkdir(parents=True,exist_ok=True)
-        shutil.copyfile(previous/'vamb'/name,dest)
-    shutil.copyfile(previous/'metabat/C0/depth.tsv',stage/'reused-metabat-depth.tsv')
-    cfg['reused_metabat_depth']=str(stage/'reused-metabat-depth.tsv')
-    write(stage/'reuse.json',{'previous':str(previous),'review_sha256':sha(EXP/'feature-partial-observed.json'),
-                            'reused':['input aliases','VAMB C0/CT/CS','MetaBAT C0 depth']})
+    for tool,result in results.items():
+        (stage/tool).mkdir()
+        for name in [*result['artifacts'],'result.json']:
+            dest=stage/tool/name;dest.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copyfile(previous/tool/name,dest)
+    if 'metabat' not in completed:
+        shutil.copyfile(previous/'metabat/C0/depth.tsv',stage/'reused-metabat-depth.tsv')
+        cfg['reused_metabat_depth']=str(stage/'reused-metabat-depth.tsv')
+    write(stage/'reuse.json',{'previous':str(previous),'review_sha256':sha(review_path),
+                            'completed_tools':completed,'input_aliases':'original paths retained'})
 
 
 def run(root, data_root, manifest, cpus, ram, snapshot, reuse_attempt=None):

@@ -1,0 +1,31 @@
+{
+  "reviewed": "2026-09-25",
+  "scope": "Actual local COMEBin raw augmentation and BAM coverage; fresh and recovered layouts. No mocked coverage, no PyTorch normalization, no Linux/full-scale claim.",
+  "platform": "macOS-26.1-x86_64-i386-64bit-Mach-O",
+  "python": "3.13.2 | packaged by conda-forge | (main, Feb 17 2025, 14:01:04) [Clang 18.1.8 ]",
+  "packages": {
+    "numpy": "2.2.6",
+    "biopython": "1.85",
+    "pysam": "0.23.3"
+  },
+  "comebin_commit": "1b476a41fac893294c70212a869573a732560ce5",
+  "bedtools_version": "bedtools v2.31.1",
+  "bedtools_source_url": "https://codeload.github.com/arq5x/bedtools2/tar.gz/refs/tags/v2.31.1",
+  "bedtools_archive_sha256": "79a1ba318d309f4e74bfa74258b73ef578dccb1045e270998d7fe9da9f43a50e",
+  "bedtools_binary_sha256": "1942ce5935cacfd0c2ac87644d55cd48b5c18c1fb56396296b1f2c2d30f1aeb6",
+  "build": "make -j2; local scratch only",
+  "command": ".venv/bin/python -m unittest discover -s tests -p test_e001_native_coverage.py -v",
+  "log_sha256": "799d607e90e6380c372b0eff2274f53d0c193957fb373b7682558b270f2ec89c",
+  "checks": [
+    "native sequence augmentation, fixed six views",
+    "native bedtools coverage on real BAMs",
+    "known C0 and CT mean depth, zeros and shape",
+    "identical fresh/recovered C0 arrays",
+    "manifest order, missing and extra files fail before writes"
+  ],
+  "full_suite": {
+    "tests": 185,
+    "result": "pass",
+    "log_sha256": "32c2fe1e0b3ea49705a32b58e1da79d3ef006b44b51edc49eac781151beda850"
+  }
+}

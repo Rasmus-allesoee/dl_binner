@@ -220,6 +220,16 @@ Owner-run commands must automatically capture terminal output to a log file. Req
 
 UCloud Terminal can create an in-app Slurm cluster via **Slurm cluster: Yes**, including on a single node; SDU/K8s does not imply Slurm is unavailable. Do not require switching to the separate Snakemake app. Distinguish this in-allocation scheduler from provider-side Slurm integration. Prefer the local executor for simple single-node parallel DAGs; use the Slurm plugin/profile when placement or scheduler-managed jobs justify it. See [D009](docs/decisions/D009-parallel-preprocessing-terminal.md) for reviewed sources, thesis profile and submission/cancellation prerequisites. Do not blindly copy historical `CLOUD`/`escience` accounts, GPU requests or resource sizes. Always separate total rented CPUs/RAM, per-rule CPU/RAM budgets and maximum sample/job concurrency. Cap aggregate resources, leave coordinator headroom, and charge total allocated vCPUs times driver wall time, not per-sample threads times wall time. Do not run competing unaccounted local/Slurm workloads in the same allocation.
 
+Before transferring an owner-run driver, test the changed production adapter and
+its real input/output contracts, including fresh and recovered directory layouts.
+A fixture that replaces the changed worker/extractor does not validate that path.
+Use actual native readers/writers and tiny real inputs where locally available;
+keep mocks for external dependencies outside the contract under test. Record
+which paths ran, which were mocked or skipped, and which still need Linux
+validation. Passing test counts alone are not evidence of native readiness.
+On recovery, test that completed stages are not scheduled again and that every
+remaining consumer follows the reused manifests rather than inferred paths.
+
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
 For repeated native startup hangs, capture evidence inside the child (including
