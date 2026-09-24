@@ -161,6 +161,40 @@ dest=root/paths.get(mode,mode+'/result.json');dest.parent.mkdir(exist_ok=True);d
         cmd=f.workflow_command(executable,'snakemake',['--snakefile',REPO/'workflows/e001-preprocess/features.smk','--directory',stage,'--configfile',stage/'runtime.json','--cores',4,'--resources','mem_mb=11000','tool_slots=1','--keep-going','--benchmark-extended'],0)
         return stage,[str(a) for a in cmd]
 
+    def test_real_dag_calls_actual_worker_with_engine_created_directories(self):
+        stage,cmd=self.fixture_dag()
+        cfg=f.read(stage/'runtime.json');cfg['root']=str(self.root);f.write(stage/'runtime.json',cfg)
+        bedtools=self.root/'envs/comebin/bin/bedtools';bedtools.parent.mkdir(parents=True);bedtools.write_text('fixture')
+        (self.root/'helper.py').write_text("""import argparse,json,sys
+from pathlib import Path
+sys.path.insert(0, SCRIPT_DIR)
+import e001_features as f
+p=argparse.ArgumentParser();p.add_argument('--worker');p.add_argument('--config');a=p.parse_args()
+c=f.read(a.config);stage=Path(c['stage'])
+def command(argv,env,out,label,timeout=None):
+    if label=='bedtools-version':(out/'bedtools-version.stdout').write_text('bedtools v2.31.1')
+    if label=='native':f.write(out/'result.json',{'fixture':True})
+if a.worker in f.TOOLS:
+    assert (stage/a.worker).is_dir(), 'engine should create output parent'
+    f.rule_command=command
+    f.worker(a.worker,c)
+else:
+    f.write(stage/('inputs.json' if a.worker=='verify' else 'feature-summary.json'),{})
+""".replace('SCRIPT_DIR',repr(str(REPO/'scripts'))))
+        result=subprocess.run(cmd,capture_output=True,text=True,timeout=120)
+        self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+        for tool in f.TOOLS:self.assertTrue((stage/tool/'worker-started.json').is_file())
+
+    def test_worker_rejects_previous_outputs_and_symlink(self):
+        cfg={'stage':str(self.root),'root':str(self.root),'worker_vcpus':3,'runtime_config':'fixture'}
+        (self.root/'vamb').mkdir();(self.root/'vamb/partial.npy').write_bytes(b'preserve')
+        with patch.object(f,'rule_command') as command:
+            with self.assertRaisesRegex(ValueError,'previous worker outputs'):f.worker('vamb',cfg)
+            command.assert_not_called()
+        (self.root/'metabat').symlink_to(self.root/'vamb',target_is_directory=True)
+        with self.assertRaisesRegex(ValueError,'symlinked'):f.worker('metabat',cfg)
+        self.assertEqual((self.root/'vamb/partial.npy').read_bytes(),b'preserve')
+
     def test_complete_owner_driver_with_real_engine_and_fixture_workers(self):
         # Only native/runtime probes are replaced; both dry-run and actual DAG execute.
         fixture,unused=self.fixture_dag()

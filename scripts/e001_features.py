@@ -267,7 +267,13 @@ def worker(mode, cfg):
         aggregate(cfg); return
     tool = 'mapping' if mode=='verify' else mode
     out = stage/('verify' if mode=='verify' else mode)
-    out.mkdir(exist_ok=False)
+    # Snakemake pre-creates parents of declared output files. Accept only empty
+    # directories, and claim the worker exclusively before writing any logs.
+    require(not out.is_symlink(), 'Refusing symlinked worker directory')
+    out.mkdir(exist_ok=True)
+    require(not any(out.iterdir()), 'Refusing previous worker outputs: '+str(out))
+    with (out/'worker-started.json').open('x') as handle:
+        json.dump({'mode':mode,'pid':os.getpid()},handle)
     prefix = Path(cfg['root'])/'envs'/tool
     env = isolated_env(prefix, cfg['worker_vcpus'] if tool=='metabat' else 1)
     env['TMPDIR'] = str(stage/'tmp')

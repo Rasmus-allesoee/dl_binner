@@ -12,6 +12,13 @@ in-progress handoff and four-vCPU retry proposal. All ten C0/CT BAM pairs are
 retained under the [ordered manifest](multisample-bam-manifest.json). The original
 `4dd3cb9f5944` code completed; `069fad9` was a prepared alternative, not this run.
 
+**Retry update:** `multisample-features-z6n2qvya` passed all input checks but
+stopped before extraction because our worker rejected Snakemake-created empty
+output directories. The replacement fixes that wrapper bug and preserves
+nonempty-directory protection. Keep the failed attempt; the new attempt repeats
+only integrity checks, not preprocessing, and retains another approximately
+4.8-GB sample-0 copy. See [failure evidence](feature-startup-observed.json).
+
 **Next execution is native feature extraction only.** Use Terminal / Ubuntu /
 Aug2026 on one node, **4 vCPU / 12 GB**, with Home and the same shared storage
 mounted. Local Snakemake executor; Slurm is unnecessary. Do not run competing

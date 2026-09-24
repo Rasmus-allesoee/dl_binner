@@ -2,6 +2,31 @@
 
 Date: 2026-09-18; appended through 2026-09-24. These are software checks, not E001 scientific attempts or biological results.
 
+## Feature worker directory failure corrected, 2026-09-24
+
+The checksum-verified `multisample-features-z6n2qvya` return records a successful
+20-BAM input integrity gate, followed by identical `FileExistsError` failures in
+all three tool workers. Snakemake created each declared output's parent directory
+before launching the worker; our exclusive `mkdir` rejected that empty directory.
+No tool environment probe or feature extraction began. This was a wrapper error,
+not a BAM, native tool or environment failure. [The observed record](feature-startup-observed.json)
+preserves source/checksum, exact errors, allocation and cost: 121.093 seconds,
+0.134548 allocated core-hours at 4 vCPU / 12 GB. The attempt also retains
+4,797,210,311 bytes of copied sample-0 BAMs plus indexes; all other BAMs are links.
+
+The worker now accepts empty engine-created directories, rejects symlinks and
+nonempty directories, and exclusively creates a start receipt before commands.
+A new real-Snakemake regression invokes the actual worker with only native
+commands stubbed; the earlier fixture workers had hidden this directory contract.
+Another test verifies prior partial outputs remain protected. All 19 focused
+feature tests and the maintained-document check pass.
+
+Retry in a fresh attempt with the replacement code bundle; preserve the failed
+attempt. No preprocessing, environment rebuild or native feature recomputation
+is needed. The normal input integrity gate runs again against the original BAMs
+and creates a new sample-0 copy (about 4.8 GB); the 15-GB free-space check still
+applies. Resource limits and scientific settings are unchanged.
+
 ## Remaining-nine preprocessing accepted, 2026-09-24
 
 The completed `multisample-preprocess-rau3rfod-return.tar.gz` SHA256 is

@@ -1,0 +1,30 @@
+{
+  "reviewed": "2026-09-24",
+  "attempt": "multisample-features-z6n2qvya",
+  "archive_sha256": "1746ae713d7108f68dbd953ae29ee59ed1d4ee6efa694215ebb920958fae5862",
+  "terminal_sha256": "ace08dc757455b769ea6f850ff79abf55f6aad7466981cfdae0e33aaf9c78a7e",
+  "source_commit": "461d7b5373877fe9d8873f6c9d74edb3f440d10a",
+  "status": {
+    "exit_code": 1,
+    "vcpus": 4,
+    "ram_gb": 12.0,
+    "worker_vcpus": 3,
+    "worker_mem_mb": 10000,
+    "memory_budget_mb": 11000,
+    "tool_slots": 1,
+    "elapsed_seconds": 121.09285388188437,
+    "allocated_core_hours": 0.13454761542431595,
+    "group_core_hour_limit": 40,
+    "feature_bytes": 409974,
+    "note": "Excludes external BAMs, outside-driver idle/setup and return packaging; linked/copied BAM receipts are in inputs.json. No fitting."
+  },
+  "accepted": "Input hash/header/index gate passed for all 20 BAMs in frozen order. No native feature extraction started.",
+  "cause": "Snakemake pre-created tool output parent directories; worker incorrectly required each directory to be absent.",
+  "input_receipt_sha256": "96cd81c9fbda8f835fb41c2ce8320f3c41303532f9faebb820fe142915cbb898",
+  "copied_bam_bytes": 4797210311,
+  "tool_errors": {
+    "metabat": "Traceback (most recent call last):\n  File \"/work/Home/dl_binner/e001/e001-gate0/e001-code-461d7b537387/scripts/e001_features.py\", line 409, in <module>\n    else: worker(a.worker,cfg)\n          ^^^^^^^^^^^^^^^^^^^^\n  File \"/work/Home/dl_binner/e001/e001-gate0/e001-code-461d7b537387/scripts/e001_features.py\", line 270, in worker\n    out.mkdir(exist_ok=False)\n  File \"/usr/lib/python3.12/pathlib.py\", line 1313, in mkdir\n    os.mkdir(self, mode)\nFileExistsError: [Errno 17] File exists: '/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-features-z6n2qvya/metabat'\n",
+    "vamb": "Traceback (most recent call last):\n  File \"/work/Home/dl_binner/e001/e001-gate0/e001-code-461d7b537387/scripts/e001_features.py\", line 409, in <module>\n    else: worker(a.worker,cfg)\n          ^^^^^^^^^^^^^^^^^^^^\n  File \"/work/Home/dl_binner/e001/e001-gate0/e001-code-461d7b537387/scripts/e001_features.py\", line 270, in worker\n    out.mkdir(exist_ok=False)\n  File \"/usr/lib/python3.12/pathlib.py\", line 1313, in mkdir\n    os.mkdir(self, mode)\nFileExistsError: [Errno 17] File exists: '/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-features-z6n2qvya/vamb'\n",
+    "comebin": "Traceback (most recent call last):\n  File \"/work/Home/dl_binner/e001/e001-gate0/e001-code-461d7b537387/scripts/e001_features.py\", line 409, in <module>\n    else: worker(a.worker,cfg)\n          ^^^^^^^^^^^^^^^^^^^^\n  File \"/work/Home/dl_binner/e001/e001-gate0/e001-code-461d7b537387/scripts/e001_features.py\", line 270, in worker\n    out.mkdir(exist_ok=False)\n  File \"/usr/lib/python3.12/pathlib.py\", line 1313, in mkdir\n    os.mkdir(self, mode)\nFileExistsError: [Errno 17] File exists: '/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-features-z6n2qvya/comebin'\n"
+  }
+}
