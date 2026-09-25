@@ -2,7 +2,93 @@
 
 Updated: 2026-09-25. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
-## Current action, 2026-09-24
+## Current action, 2026-09-25
+
+**Accept the successful features; no retry or preprocessing is needed.** The
+`multisample-features-69_32jz9` archive checksum and terminal completion match.
+[Reviewed evidence](features-observed.json) records 22,594 contigs and ordered
+samples 0,1,2,3,4,5,9,10,11,12, paired sequence/mask identities, six fixed COMEBin
+views, finite coverage and valid scale controls. Successful driver cost: **4.0135
+core-hours at 4 vCPU / 12 GB**, 60.203 minutes; retained new feature attempt:
+**608.310 MB decimal**, excluding external BAMs. All four feature attempts total
+5.1044 known driver core-hours. See [acceptance](validation.md#native-features-accepted-and-pilot-prepared-2026-09-25).
+
+**First owner step: MetaBAT2/VAMB seed-11 C0/CT pair.** Use the existing Terminal
+Ubuntu/Aug2026 environment, **4 allocated vCPU / 12 GB RAM**, mounted Home and
+shared E001 storage. Keep all current environments, feature attempts, BAM aliases
+and frozen input files. Provide **30 GB free shared storage** plus 2 GB job-local
+`/tmp`. The launcher reads the accepted feature directory directly, verifies
+feature and frozen-input hashes and copies no BAMs. No software/data downloads
+are expected except installation of missing container Git. It creates a new
+`paired-pilot-metabat-vamb-*` attempt and captures terminal logs automatically.
+Do not invoke it again to resume a failure: return evidence so completed work
+can be reused deliberately. Existing attempts are never overwritten.
+
+The group runs MetaBAT2 C0/CT then VAMB C0/CT serially, using three tool threads.
+VAMB retains **300 epochs** and native batch schedule/clustering; MetaBAT2 retains
+native thresholds with seed 11, full membership and unbinned outputs. Full
+assignments, model/latent arrays with IDs, command/inventory logs, per-rule extended
+benchmarks, AMBER `filter=0` tables and fixed-population R95 are retained. Empty
+partitions remain biological outcomes (R95 zero; explicitly no AMBER rows).
+Compact return archives exclude binary models and FASTA files but include their
+hashes. No truth is passed to fitting or native selection.
+
+Projected VAMB pair training with twofold margin is **3.26 core-hours**, plus
+MetaBAT2, clustering, hashing and evaluation; this is not a runtime guarantee.
+The first group's stop ceiling is **20 allocated core-hours / 5 hours** including
+driver setup. The global experiment limit remains 800; this is not a new budget.
+RAM is sampled across the process tree (Linux PSS, conservative RSS fallback),
+with 0.75 GB reserved; exceeding the ceiling stops the child tree and preserves
+failure evidence. Job extensions remain owner-managed.
+
+Upload the new code archive and adjacent checksum to Home `transfer/`; retain
+`e001-workflow-0fb6955cdc62.tar.gz`. Execution bundle: **BUNDLE_PENDING**.
+The final documentation pin supplies the checksum after committing execution code.
+
+```sh
+bash <<'SH'
+set -euo pipefail
+WORK=/work/Home/dl_binner/e001/e001-gate0
+DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
+BUNDLE=BUNDLE_PENDING
+CODE="$WORK/$BUNDLE"
+LOG=$(mktemp "$WORK/transfer/e001-pilot-transfer.XXXXXX.log")
+echo "Transfer log: $LOG"
+(
+    cd "$WORK/transfer"
+    sha256sum --check "$BUNDLE.tar.gz.sha256"
+    test ! -e "$CODE" && test ! -L "$CODE"
+    tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
+    bash "$CODE/scripts/e001_pilot_run.sh" "$WORK" "$DATA" 4 12 metabat-vamb
+) 2>&1 | tee "$LOG"
+SH
+```
+
+Return the printed `paired-pilot-metabat-vamb-*-return.tar.gz`, its `.sha256`,
+and `e001-pilot.*.log` (also transfer log if unpacking failed). Stop on any nonzero
+exit; preserve the attempt. Do not upload BAMs, models or feature tensors.
+
+**After return review:** the same snapshot implements the COMEBin pair under
+`e001_pilot_run.sh WORK DATA 2 6 comebin` in a **2-vCPU / >=6-GB** job. Its 200-epoch
+maximum, batch 1024, six views, early stopping and native temperature rule remain
+unchanged. Torch uses two threads, inter-op/BLAS one, native four DataLoader workers,
+and one Leiden worker. Prior measurement used eight torch threads on two allocated
+CPUs, so the projected **95.78 core-hours for both fits with margin** is uncertain.
+The **80-core-hour per-fit** limit and **15-core-hour clustering/selection limit per
+condition**, inside a **200-core-hour group ceiling**, stop rather than silently
+shorten work. Complete 120-candidate Leiden grids, marker tables, full winning
+labels, filtered native bins and checkpoints remain on UCloud. Full labels drive
+primary evaluation. Retained embeddings enable later neighborhood/oracle analysis;
+those interpretations and further seeds are not part of this launch.
+
+Local checks exercise the real pinned argument-parser code, child failure/timeout
+and memory handling, feature hash rejection, real Snakemake serialization/resume,
+and whole-driver success/repetition/failure packaging with synthetic workers.
+They **do not execute Linux neural training**. Accepted earlier native fit and
+clustering checks are reused; this first full paired run remains the Linux
+integration/scale validation. See [validation](validation.md#native-features-accepted-and-pilot-prepared-2026-09-25).
+
+## Completed feature extraction and recovery instructions (historical)
 
 **Accept preprocessing and do not run the old retry commands.** The checksum-bound
 `multisample-preprocess-rau3rfod` return and terminal log confirm completion on

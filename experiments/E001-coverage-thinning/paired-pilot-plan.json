@@ -1,24 +1,77 @@
 {
-  "status": "prepared resource plan; feature return review required; fits not launched",
-  "conditions": ["C0", "CT"],
+  "status": "features accepted; launcher locally tested; first MetaBAT2/VAMB group ready for owner run; no fits executed",
+  "conditions": [
+    "C0",
+    "CT"
+  ],
   "replicate": 0,
   "training_clustering_seed": 11,
-  "ct_seeds": [1000,1001,1002,1003,1004,1005,1006,1007,1008,1009],
+  "ct_seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009
+  ],
   "augmentation_seed": 101,
   "scientific_runs": 6,
   "tools": {
-    "metabat": {"proposed_vcpus":4,"proposed_ram_gb":12,"threads":3,"native_thresholds":"unchanged; saveCls and unbinned"},
-    "vamb": {"proposed_vcpus":4,"proposed_ram_gb":12,"threads":3,"epochs":300,"twofold_margin_fit_core_hours_at_measured_allocation":1.6277695042727929},
-    "comebin": {"proposed_vcpus":2,"proposed_ram_gb":6,"epochs_max":200,"batch_size":1024,"views":6,"twofold_margin_fit_core_hours_at_measured_allocation":47.8913039,"note":"Memory and complete native process/DataLoader thread budget must be checked before launcher. Prior measurement used 8 torch threads on 2 allocated CPUs; do not assume speedup or transfer throughput to another allocation."}
+    "metabat": {
+      "proposed_vcpus": 4,
+      "proposed_ram_gb": 12,
+      "threads": 3,
+      "native_thresholds": "unchanged; saveCls and unbinned"
+    },
+    "vamb": {
+      "proposed_vcpus": 4,
+      "proposed_ram_gb": 12,
+      "threads": 3,
+      "epochs": 300,
+      "twofold_margin_fit_core_hours_at_measured_allocation": 1.6277695042727929
+    },
+    "comebin": {
+      "proposed_vcpus": 2,
+      "proposed_ram_gb": 6,
+      "epochs_max": 200,
+      "batch_size": 1024,
+      "views": 6,
+      "twofold_margin_fit_core_hours_at_measured_allocation": 47.8913039,
+      "note": "Native four DataLoader workers retained; torch intra-op 2, inter-op 1, BLAS pools 1, Leiden workers 1. Sampled summed process PSS bounded to RAM minus 0.75 GB; RSS fallback is conservative. Prior timing used torch 8 on allocation 2, so throughput is not guaranteed.",
+      "threads": 2
+    }
   },
-  "learned_pair_training_projection_with_margin_core_hours":99.03814680854558,
-  "limits": {"per_fit_core_hours":80,"experiment_core_hours":800},
+  "learned_pair_training_projection_with_margin_core_hours": 99.03814680854558,
+  "limits": {
+    "per_fit_core_hours": 80,
+    "experiment_core_hours": 800
+  },
   "review_before_launch": [
-    "Accept feature checks, ordered sample axes, fixed COMEBin intervals, masks and scale-control differences.",
-    "Use actual feature cost plus all known earlier attempt charges; outside-driver billing is not measured by return status.",
-    "Implement/test native fit, clustering, marker selection, export and AMBER integration on accepted feature artifacts; retain complete native outputs and candidate grid.",
-    "Bound each tool at its chosen allocation without assuming linear speedup. Include real process/DataLoader memory and clustering overhead.",
-    "Commit execution configuration before run; retain both paired pilot outcomes regardless of biological score. Review pilot costs before replicates 1 and 2."
+    "Feature gate passed; do not repeat extraction.",
+    "First execute MetaBAT2/VAMB group; inspect complete native schedule/output/evaluation and measured costs before COMEBin group.",
+    "COMEBin full runtime/memory remain bounded empirical questions; no schedule reduction or score-dependent exclusion.",
+    "Review both groups before seeds 23/47."
   ],
-  "alternative_not_selected": "Launching all three paired tools immediately would bypass the first research-scale native feature/scale-control and overhead assessment. Repeating synthetic CPU checks or accepted preprocessing adds no needed evidence."
+  "alternative_not_selected": "One 4-vCPU job for all tools would charge COMEBin at an unmeasured allocation. Separate groups preserve measured allocation accounting; no full three-seed launch.",
+  "accepted_features": "features-observed.json",
+  "groups": {
+    "metabat-vamb": {
+      "vcpus": 4,
+      "minimum_ram_gb": 12,
+      "group_core_hour_limit": 20
+    },
+    "comebin": {
+      "vcpus": 2,
+      "minimum_ram_gb": 6,
+      "group_core_hour_limit": 200,
+      "cluster_core_hour_limit_per_condition": 15
+    }
+  },
+  "known_feature_driver_core_hours": 5.104431676,
+  "known_accepted_preprocessing_driver_core_hours": 23.05509128,
+  "accounting_scope": "Not total billed usage: earlier setup/failures and outside-driver idle time are additional. Pilot ceilings total 220, below 800 even reserving full nested preprocessing 200 and preflight 32; later seeds require measured reassessment."
 }

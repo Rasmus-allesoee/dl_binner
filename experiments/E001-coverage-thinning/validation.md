@@ -174,7 +174,7 @@ Nothing was deleted or migrated. Preserve earlier failures and original files.
 [scripts/e001_features.py](../../scripts/e001_features.py) and the
 [Snakemake DAG](../../workflows/e001-preprocess/features.smk) implement a shared
 hash/header/index gate, three independent native C0/CT/CS tool branches, and an
-aggregate receipt that requires every branch to pass. The owner [command](OPERATIONS.md#current-action-2026-09-24)
+aggregate receipt that requires every branch to pass. The owner [command](OPERATIONS.md#completed-feature-extraction-and-recovery-instructions-historical)
 uses persistent per-tool runtimes plus the reviewed job-local workflow snapshot.
 It captures isolated imports, inventories, commands, native streams, interval
 and output hashes, zero counts, CS differences, timing and extended benchmarks.
@@ -1172,3 +1172,56 @@ Local preparation checks: 64 portable tests passed, including refusal to overwri
 | Linux environment recipes | Mapping/AMBER installed and process isolation verified; structured provenance captured. Reconstructable locks and other tool recipes remain pending. |
 
 Full native training/clustering, marker payload verification, CPU throughput projection, real-read prefix mapping comparison, full data/truth/taxonomy joins and research launch remain later gates. The smoke job is deliberately not a surrogate benchmark. A failure is retained and investigated; no older PyTorch/tool substitution is allowed under the original pin.
+
+
+## Native features accepted and pilot prepared, 2026-09-25
+
+The local auditor [e001_review_features.py](../../scripts/e001_review_features.py)
+verified `multisample-features-69_32jz9-return.tar.gz` against its sidecar SHA256
+`6a8ebd182fa75fe2d6566f6182083387f5bdbf6a34272ebbe7bcfa7004711e1c`
+and `e001-features.3qiYVJ.log`. The [observed record](features-observed.json) preserves
+source `86642eeaa28c`, receipt hashes, benchmarks and complete native QC.
+Workflow exit status is zero. VAMB/MetaBAT results were reused provenance-bound;
+COMEBin and aggregation completed. Previous failed attempts remain valid negative
+operational evidence, but their retry handoffs are superseded.
+
+All 22,594 contigs (817,438,232 bp) and ordered ten-sample axes agree. C0/CT
+VAMB composition and input masks are identical; COMEBin contig lengths, k-mers and
+augmentation intervals match across C0/CT/CS. Fixed interval SHA256 is
+`8dd26d50a24f9a5e0ecfa3c8febea4dda112a3ae2ecef099f6bcb2e3647c9922`.
+Coverage tensors have shape 10 samples x 6 views x 22,594 contigs. COMEBin zero
+means increase from 739,613 to 895,405 sample/view/contig entries; every sample/view
+is nondecreasing. These are repeated view entries, not distinct contig counts.
+Native normalized CS differences are below 1e-5 (COMEBin maximum
+2.3916561531223124e-6); the pseudocount effect is numerically small and retained,
+not claimed bit-identical. Returned MetaBAT CS tables independently satisfy means
+x0.1 / variances x0.01; its absolute thresholds need not be scale-invariant.
+Bulk arrays were not returned: local acceptance combines native validation and
+hash receipts; the pilot rehashes them on UCloud before fitting.
+
+Actual allocation 4 vCPU / 12 GB, worker budget 3 threads / 10 GB, one tool at a
+time. Elapsed 3,612.171 seconds = 4.013523 allocated core-hours. Logical retained
+feature attempt is 608,309,522 bytes excluding external BAMs. Known four feature
+attempts sum to 5.104432 core-hours; accepted preprocessing drivers sum to
+23.055091. Neither subtotal includes all historical setup/failure/idle billing.
+No repeat extraction is justified. Feature/resource evidence supports a bounded
+first pilot, not a guarantee of full-scale training affordability.
+
+The new [pilot driver](../../scripts/e001_pilot.py) and
+[Snakemake DAG](../../workflows/e001-preprocess/pilot.smk) use the accepted feature
+locator, native seed-11 schedules, separate tool prefixes and serial conditions.
+The [plan](paired-pilot-plan.json) splits allocations to preserve measured cost
+assumptions. Models, full native partitions, COMEBin candidate grid/marker selection,
+AMBER filter=0 tables and frozen-population R95 are retained. No pilot was executed
+here; first-group returned-output review precedes COMEBin and additional seeds.
+
+Validation distinguishes real pinned CLI-parser execution, real subprocess timeout/
+child cleanup and memory stops, input corruption rejection, real Snakemake DAG
+execution/resume, and synthetic-worker whole-driver tests. These portable tests
+cannot validate Torch/Linux training; the local Mac Python has no compatible Torch
+runtime. Previous accepted native preflights/integration are reused without
+repeating them. Native VAMB's Python entry point is called explicitly; its import
+resets thread environment variables, which the wrapper restores before execution.
+No scientific schedule or tool source was changed.
+
+Final local results: 193 repository tests passed before adding the complete-driver test; all 9 focused pilot tests subsequently passed, including that additional test. Documentation/link and shell syntax checks are recorded with the execution commit.
