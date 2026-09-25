@@ -42,15 +42,16 @@ with 0.75 GB reserved; exceeding the ceiling stops the child tree and preserves
 failure evidence. Job extensions remain owner-managed.
 
 Upload the new code archive and adjacent checksum to Home `transfer/`; retain
-`e001-workflow-0fb6955cdc62.tar.gz`. Execution bundle: **BUNDLE_PENDING**.
-The final documentation pin supplies the checksum after committing execution code.
+`e001-workflow-0fb6955cdc62.tar.gz`. Execution bundle: **e001-code-d532c35ca05d**.
+Archive SHA256: `e56d4c90b95d2c673e374e180601e656cfa9eab18867f839cd1bfe1fffcde898`. The bundle contains execution commit
+`d532c35ca05d`; this documentation pin changes no execution files.
 
 ```sh
 bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
 DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
-BUNDLE=BUNDLE_PENDING
+BUNDLE=e001-code-d532c35ca05d
 CODE="$WORK/$BUNDLE"
 LOG=$(mktemp "$WORK/transfer/e001-pilot-transfer.XXXXXX.log")
 echo "Transfer log: $LOG"
