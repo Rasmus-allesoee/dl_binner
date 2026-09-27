@@ -1,5 +1,5 @@
 {
-  "status": "features accepted; launcher locally tested; first MetaBAT2/VAMB group ready for owner run; no fits executed",
+  "status": "features accepted; first MetaBAT2/VAMB attempt failed during VAMB IPC and is preserved; corrected fresh-attempt launcher prepared; rerun pending",
   "conditions": [
     "C0",
     "CT"
@@ -24,13 +24,17 @@
     "metabat": {
       "proposed_vcpus": 4,
       "proposed_ram_gb": 12,
-      "threads": 3,
+      "snakemake_threads": 4,
+      "metabat_threads": 4,
+      "OMP_NUM_THREADS": 4,
       "native_thresholds": "unchanged; saveCls and unbinned"
     },
     "vamb": {
       "proposed_vcpus": 4,
       "proposed_ram_gb": 12,
-      "threads": 3,
+      "pytorch_threads": 3,
+      "cpu_dataloader_workers": 1,
+      "total_cpu_budget": 4,
       "epochs": 300,
       "twofold_margin_fit_core_hours_at_measured_allocation": 1.6277695042727929
     },
@@ -52,7 +56,9 @@
   },
   "review_before_launch": [
     "Feature gate passed; do not repeat extraction.",
-    "First execute MetaBAT2/VAMB group; inspect complete native schedule/output/evaluation and measured costs before COMEBin group.",
+    "Fresh attempt runs the pinned VAMB CPU DataLoader IPC smoke under a private short /tmp path before any full fit; a failure stops before the binner workflow.",
+    "MetaBAT2 receives four Snakemake threads, -t 4 and OMP_NUM_THREADS=4; VAMB receives three PyTorch threads plus one CPU DataLoader worker.",
+    "Inspect complete native schedule/output/evaluation and measured costs before COMEBin group.",
     "COMEBin full runtime/memory remain bounded empirical questions; no schedule reduction or score-dependent exclusion.",
     "Review both groups before seeds 23/47."
   ],
@@ -73,5 +79,45 @@
   },
   "known_feature_driver_core_hours": 5.104431676,
   "known_accepted_preprocessing_driver_core_hours": 23.05509128,
-  "accounting_scope": "Not total billed usage: earlier setup/failures and outside-driver idle time are additional. Pilot ceilings total 220, below 800 even reserving full nested preprocessing 200 and preflight 32; later seeds require measured reassessment."
+  "accounting_scope": "Not total billed usage: earlier setup/failures and outside-driver idle time are additional. Pilot ceilings total 220, below 800 even reserving full nested preprocessing 200 and preflight 32; later seeds require measured reassessment.",
+  "previous_attempt": {
+    "record": "pilot-failure-observed.json",
+    "archive_sha256": "c1e0b74aac90e964f0886b29ec1acf27bf6a0770e256122177682ea27cf71bc4",
+    "terminal_sha256": "c2c2aa9c431e619d4fe3e9fa7cb66c733df966221fb699b6bdea72a59e65473b",
+    "allocated_core_hours": 1.5384979193999122,
+    "retained_bytes": 1667661833,
+    "status": "failed; preserved; new attempt is unique",
+    "metabat_native_threads_actual": 1,
+    "vamb_epochs": 0
+  },
+  "serial_tool_allocation": {
+    "rented_vcpus": 4,
+    "snakemake_rule_threads": 4,
+    "metabat_threads": 4,
+    "metabat_omp_num_threads": 4,
+    "vamb_pytorch_threads": 3,
+    "vamb_cpu_dataloader_workers": 1,
+    "sum_vamb_cpu_budget": 4,
+    "parallel_tool_jobs": 1
+  },
+  "vamb_ipc_preflight": {
+    "runs_before_any_full_fit": true,
+    "native_path": "pinned vamb.encode.make_dataloader; CPU; one worker; exhaust all batches",
+    "synthetic_contigs": 32,
+    "abundance_columns": 10,
+    "tnf_columns": 103,
+    "local_tmpdir": "unique private <40-byte directory under /tmp",
+    "timeout_seconds": 120,
+    "maximum_no_progress_seconds": 60,
+    "owner_job_required": true,
+    "reason": "Local Python 3.13 does not include PyTorch; owner job tests the retained PyTorch 2.6.0+cpu prefix before full fits."
+  },
+  "vamb_fit_guards": {
+    "fatal_stderr_markers": [
+      "OSError: AF_UNIX path too long"
+    ],
+    "native_epoch_regex": "Epoch: <integer>",
+    "maximum_epoch_silence_seconds": 600,
+    "on_failure": "kill only the fit process tree; stop Snakemake; retain the unique attempt"
+  }
 }

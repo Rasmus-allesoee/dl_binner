@@ -23,9 +23,21 @@ class PilotTests(unittest.TestCase):
 
     def test_allocation_and_native_schedules(self):
         self.assertEqual(p.resources('comebin',2,6)['threads'],2)
+        allocation=p.resources('metabat-vamb',4,12)
+        self.assertEqual(allocation['threads'],4)
+        self.assertEqual(allocation['metabat_threads'],4)
+        self.assertEqual(allocation['vamb_threads']+allocation['vamb_loader_workers'],4)
+        allocation['stage']=str(self.root)
+        env=p.worker_environment(self.root,'metabat',allocation)
+        self.assertEqual(env['OMP_NUM_THREADS'],'4')
+        self.assertEqual(p.worker_environment(self.root,'vamb',allocation)['OMP_NUM_THREADS'],'1')
+        metabat=p.metabat_command('/prefix/metabat2','ref.fa','depth.tsv','bins',allocation['metabat_threads'])
+        self.assertEqual(metabat[metabat.index('-t')+1],'4')
         for group,cpu,ram in [('comebin',4,12),('metabat-vamb',2,6),('comebin',2,4)]:
             with self.assertRaises(ValueError): p.resources(group,cpu,ram)
-        self.assertNotIn('--epochs',p.fit_arguments('vamb',self.root,self.root/'out',3))
+        args=p.fit_arguments('vamb',self.root,self.root/'out',allocation['vamb_threads'])
+        self.assertEqual(args[args.index('-p')+1],'3')
+        self.assertEqual(args[args.index('-e')+1],'300')
 
     def test_actual_comebin_argument_parser(self):
         source=REPO/'agent_context/tools_repo/COMEBin/COMEBin/main.py'
@@ -54,24 +66,107 @@ class PilotTests(unittest.TestCase):
         self.assertEqual(args.nepochs,300)
         self.assertEqual(args.binsplit_separator,'')
 
+    def test_actual_pinned_vamb_loader_worker_budget(self):
+        source=REPO/'agent_context/tools_repo/vamb/vamb/encode.py'
+        if not source.exists(): self.skipTest('Optional pinned source cache absent')
+        tree=ast.parse(source.read_text())
+        loader=next(node for node in tree.body if isinstance(node,ast.FunctionDef) and node.name=='make_dataloader')
+        assignments=[node for node in ast.walk(loader) if isinstance(node,ast.Assign)
+                     and any(isinstance(target,ast.Name) and target.id=='n_workers' for target in node.targets)]
+        self.assertEqual(len(assignments),1)
+        self.assertEqual(ast.unparse(assignments[0].value),'4 if cuda else 1')
+        self.assertTrue(any(isinstance(node,ast.keyword) and node.arg=='num_workers'
+                            and isinstance(node.value,ast.Name) and node.value.id=='n_workers'
+                            for node in ast.walk(loader)))
+
     def test_real_child_success_failure_timeout_and_repeat(self):
         env=p.isolated_env()
-        p.checked([sys.executable,'-c','print("native stream")'],env,self.root,'ok',5)
-        self.assertIn('native stream',(self.root/'ok.stdout').read_text())
-        with self.assertRaises(FileExistsError): p.checked([sys.executable,'-c','pass'],env,self.root,'ok',5)
-        with self.assertRaisesRegex(ValueError,'failed'): p.checked([sys.executable,'-c','raise SystemExit(3)'],env,self.root,'fail',5)
-        with self.assertRaisesRegex(ValueError,'ceiling'): p.checked([sys.executable,'-c','import time;time.sleep(20)'],env,self.root,'timeout',.1)
+        with patch.object(p,'descendants',side_effect=lambda pid:[(pid,0)]):
+            p.checked([sys.executable,'-c','print("native stream")'],env,self.root,'ok',5)
+            self.assertIn('native stream',(self.root/'ok.stdout').read_text())
+            with self.assertRaises(FileExistsError): p.checked([sys.executable,'-c','pass'],env,self.root,'ok',5)
+            with self.assertRaisesRegex(ValueError,'failed'): p.checked([sys.executable,'-c','raise SystemExit(3)'],env,self.root,'fail',5)
+            with self.assertRaisesRegex(ValueError,'ceiling'): p.checked([sys.executable,'-c','import time;time.sleep(20)'],env,self.root,'timeout',.1)
         self.assertIn('failure',p.read(self.root/'timeout.command.json'))
 
+    def test_async_multiprocessing_traceback_stops_and_kills_child(self):
+        child="import sys,threading,time; threading.Thread(target=lambda: (sys.stderr.write('Traceback (most recent call last):\\nOSError: AF_UNIX path too long\\n'),sys.stderr.flush()),daemon=True).start(); time.sleep(30)"
+        start=__import__('time').monotonic()
+        with patch.object(p,'descendants',side_effect=lambda pid:[(pid,0)]), \
+             self.assertRaisesRegex(RuntimeError,'fatal stderr marker'):
+            p.checked([sys.executable,'-c',child],p.isolated_env(),self.root,'feeder-failure',30,
+                      fatal_markers=('OSError: AF_UNIX path too long',))
+        self.assertLess(__import__('time').monotonic()-start,5)
+        rec=p.read(self.root/'feeder-failure.command.json')
+        self.assertIn('OSError: AF_UNIX path too long',rec['fatal_stderr_tail'])
+        self.assertIsNotNone(rec['returncode'])
+
+    def test_native_epoch_progress_and_stall_guard(self):
+        env=p.isolated_env()
+        code="import sys,time; print('Epoch: 1',file=sys.stderr,flush=True); time.sleep(.1); print('Epoch: 2',file=sys.stderr,flush=True)"
+        with patch.object(p,'descendants',side_effect=lambda pid:[(pid,0)]):
+            p.checked([sys.executable,'-c',code],env,self.root,'epochs',5,
+                      progress_pattern=r'Epoch:\s*(\d+)',stall_seconds=2)
+        progress=(self.root/'epochs.progress.log').read_text().splitlines()
+        self.assertEqual([json.loads(x)['progress'] for x in progress],['1','2'])
+        with patch.object(p,'descendants',side_effect=lambda pid:[(pid,0)]):
+            with self.assertRaisesRegex(ValueError,'no native progress'):
+                p.checked([sys.executable,'-c','import time;time.sleep(30)'],env,self.root,'stalled',5,
+                          progress_pattern=r'Epoch:\s*(\d+)',stall_seconds=.1)
+
+    def test_vamb_prefit_ipc_smoke_uses_unique_short_temp_and_runs_before_fits(self):
+        root=self.root/'work'; stage=self.root/'attempt'; stage.mkdir()
+        (stage/'runtime.json').write_text('{}')
+        cfg={'stage':str(stage),'runtime_config':str(stage/'runtime.json'),
+             'vamb_threads':3,'vamb_loader_workers':1}
+        calls=[]
+        def fake_invoke(argv,env,out,label,seconds):
+            calls.append((label,list(map(str,argv)),env['TMPDIR']))
+        def fake_checked(argv,env,out,label,seconds,memory_mb,**kwargs):
+            calls.append((label,list(map(str,argv)),env['TMPDIR'],kwargs))
+        with patch.object(p,'CODE',self.root/'code'),patch.object(p,'invoke',side_effect=fake_invoke), \
+             patch.object(p,'checked',side_effect=fake_checked):
+            p.preflight_vamb_ipc(root,stage,cfg)
+            p.preflight_vamb_ipc(root,stage,cfg)
+        self.assertEqual([x[0] for x in calls],['vamb-ipc-prefix','vamb-ipc-smoke']*2)
+        paths=[calls[i][2] for i in (0,2)]
+        self.assertNotEqual(paths[0],paths[1])
+        self.assertTrue(all(Path(x).parent==Path('/tmp') and len(os.fsencode(x))<=40 for x in paths))
+        smoke=calls[1]
+        self.assertEqual(smoke[1][-2:],['--native','vamb-ipc-smoke'])
+        self.assertEqual(smoke[3]['fatal_markers'],('OSError: AF_UNIX path too long',))
+        self.assertTrue(all(not Path(x).exists() for x in paths))
+
+    def test_native_ipc_smoke_uses_pinned_data_loader_not_training(self):
+        source=REPO/'agent_context/tools_repo/vamb/vamb/encode.py'
+        if not source.exists(): self.skipTest('Optional pinned source cache absent')
+        src=ast.parse(source.read_text())
+        loader=next(n for n in src.body if isinstance(n,ast.FunctionDef) and n.name=='make_dataloader')
+        worker_assignment=next(n for n in ast.walk(loader) if isinstance(n,ast.Assign)
+                               and any(isinstance(t,ast.Name) and t.id=='n_workers' for t in n.targets))
+        self.assertEqual(ast.unparse(worker_assignment.value),'4 if cuda else 1')
+        helper=ast.parse((REPO/'scripts/e001_pilot.py').read_text())
+        smoke=next(n for n in helper.body if isinstance(n,ast.FunctionDef) and n.name=='native_vamb_ipc_smoke')
+        source_text=ast.unparse(smoke)
+        self.assertIn('make_dataloader',source_text)
+        self.assertIn('list(loader)',source_text)
+        self.assertNotIn('trainvae(',source_text)
+
+    def test_short_private_ipc_directory(self):
+        a=p.short_local_tmpdir();b=p.short_local_tmpdir()
+        try:
+            self.assertNotEqual(a,b)
+            self.assertEqual(a.parent,Path('/tmp'))
+            self.assertLessEqual(len(os.fsencode(str(a))),40)
+            self.assertEqual(a.stat().st_mode & 0o777,0o700)
+        finally:
+            import shutil
+            shutil.rmtree(a);shutil.rmtree(b)
+
     def test_memory_ceiling_and_descendant_cleanup(self):
-        code="import subprocess,sys,time; c=subprocess.Popen([sys.executable,'-c','import time;time.sleep(30)']); print(c.pid,flush=True); time.sleep(30)"
-        with self.assertRaisesRegex(ValueError,'ceiling'):
-            p.checked([sys.executable,'-c',code],p.isolated_env(),self.root,'tree',1)
-        child=int((self.root/'tree.stdout').read_text())
-        state=subprocess.run(['ps','-o','stat=','-p',str(child)],capture_output=True,text=True).stdout.strip()
-        self.assertTrue(not state or state.startswith('Z'),state)
-        with self.assertRaisesRegex(ValueError,'RAM ceiling'):
-            p.checked([sys.executable,'-c','import time; time.sleep(30)'],p.isolated_env(),self.root,'memory',5,.001)
+        with patch.object(p,'descendants',side_effect=lambda pid:[(pid,1024)]):
+            with self.assertRaisesRegex(ValueError,'RAM ceiling'):
+                p.checked([sys.executable,'-c','import time; time.sleep(30)'],p.isolated_env(),self.root,'memory',5,.001)
 
     def test_uploaded_feature_acceptance_and_bad_checksum(self):
         import e001_review_features as review
@@ -112,13 +207,20 @@ else:
         cfg=dict(stage=str(self.root),driver_python=sys.executable,helper=str(helper),runtime_config=str(self.root/'runtime.json'),**p.resources('metabat-vamb',4,12))
         p.write(self.root/'runtime.json',cfg);p.write(self.root/'verified.json',{})
         args=['--snakefile',REPO/'workflows/e001-preprocess/pilot.smk','--directory',self.root,'--configfile',self.root/'runtime.json',
-              '--cores',4,'--resources','mem_mb=11500','tool_slots=1','--benchmark-extended']
+              '--cores',4,'--runtime-source-cache-path',self.root/'.snakemake-source-cache',
+              '--resources','mem_mb=11500','tool_slots=1','--benchmark-extended']
         command=p.workflow_command(executable,'snakemake',args,0)
         for _ in range(2):
-            r=subprocess.run(list(map(str,command)),capture_output=True,text=True,env=p.isolated_env())
+            testenv=p.isolated_env(); testenv['TMPDIR']=str(self.root/'tmp');testenv['XDG_CACHE_HOME']=str(self.root/'cache')
+            (self.root/'tmp').mkdir(exist_ok=True);(self.root/'cache').mkdir(exist_ok=True)
+            r=subprocess.run(list(map(str,command)),capture_output=True,text=True,env=testenv)
             self.assertEqual(r.returncode,0,r.stdout+r.stderr)
         self.assertEqual((self.root/'order.txt').read_text().splitlines(),['metabat C0','metabat CT','vamb C0','vamb CT'])
         self.assertEqual(len(list((self.root/'benchmarks').glob('*.tsv'))),4)
+        import csv
+        for benchmark in (self.root/'benchmarks').glob('*.tsv'):
+            with benchmark.open() as handle:
+                self.assertEqual(next(csv.DictReader(handle,delimiter='\t'))['threads'],'4')
 
     def test_complete_driver_packages_success_repeat_and_failed_prerequisite(self):
         import shutil
@@ -142,7 +244,8 @@ else:
         def verify(cfg):p.write(Path(cfg['stage'])/'verified.json',{})
         with patch.object(p,'CODE',code),patch.object(p,'EXP',exp),patch.object(p,'__file__',str(helper)), \
              patch.object(p,'stage_runtime',return_value=executable.parent.parent),patch.object(p,'workflow_preflight',side_effect=preflight), \
-             patch.object(p,'verify_features',side_effect=verify),patch.object(p.shutil,'disk_usage',return_value=SimpleNamespace(free=40_000_000_000)):
+             patch.object(p,'verify_features',side_effect=verify),patch.object(p,'preflight_vamb_ipc'), \
+             patch.object(p.shutil,'disk_usage',return_value=SimpleNamespace(free=40_000_000_000)):
             for _ in range(2):self.assertEqual(p.run(self.root,self.root,'metabat-vamb',4,12,self.root/'snapshot'),0)
             with patch.object(p,'verify_features',side_effect=ValueError('changed input')):
                 self.assertEqual(p.run(self.root,self.root,'metabat-vamb',4,12,self.root/'snapshot'),1)

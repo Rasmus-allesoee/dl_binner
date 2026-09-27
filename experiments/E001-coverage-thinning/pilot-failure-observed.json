@@ -1,0 +1,50 @@
+{
+  "status": "failed; preserved as negative operational evidence",
+  "reviewed": "2026-09-27",
+  "attempt": "paired-pilot-metabat-vamb-fvfqsea2",
+  "attempt_directory": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/paired-pilot-metabat-vamb-fvfqsea2",
+  "return_archive": "paired-pilot-metabat-vamb-fvfqsea2-return.tar.gz",
+  "return_sha256": "c1e0b74aac90e964f0886b29ec1acf27bf6a0770e256122177682ea27cf71bc4",
+  "terminal_log": "e001-pilot.jX8QIC.log",
+  "terminal_sha256": "c2c2aa9c431e619d4fe3e9fa7cb66c733df966221fb699b6bdea72a59e65473b",
+  "source_commit": "d532c35ca05dbdbc2f91b65a0ecfff0776020de4",
+  "actual_allocation": {
+    "vcpus": 4,
+    "ram_gb": 12.0,
+    "elapsed_seconds": 1384.648127459921,
+    "allocated_core_hours": 1.5384979193999122,
+    "retained_bytes": 1667661833,
+    "outside_driver_idle_and_packaging_included": false
+  },
+  "metabat": {
+    "C0": {
+      "native_command_threads": 3,
+      "snakemake_threads": 3,
+      "native_reported_threads": 1,
+      "wall_seconds": 158.69,
+      "cpu_seconds": 136.51,
+      "cpu_time_over_wall": 0.8602306383515029,
+      "assigned_contigs": 19193,
+      "evaluation_receipt": "present; pilot as a whole incomplete"
+    },
+    "CT": {
+      "native_command_threads": 3,
+      "snakemake_threads": 3,
+      "native_reported_threads": 1,
+      "wall_seconds": 15.9,
+      "cpu_seconds": 12.49,
+      "cpu_time_over_wall": 0.7855345911949686,
+      "assigned_contigs": 1827,
+      "evaluation_receipt": "present; pilot as a whole incomplete"
+    }
+  },
+  "vamb": {
+    "condition": "C0",
+    "full_fit_completed": false,
+    "epochs_observed": 0,
+    "fatal_error": "OSError: AF_UNIX path too long",
+    "cause": "Python multiprocessing resource-sharer listener path was rooted under the long shared-storage TMPDIR; its queue feeder thread failed while the VAMB parent remained alive.",
+    "ct_started": false
+  },
+  "conclusion": "The paired pilot did not complete. Preserve the attempt and both completed one-thread MetaBAT2 outputs. The corrected retry uses a fresh attempt and intentionally reruns MetaBAT2 with the corrected four-thread environment; it runs a tiny real pinned VAMB/PyTorch CPU DataLoader IPC check under short private /tmp before any full fit."
+}

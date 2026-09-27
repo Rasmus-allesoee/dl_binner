@@ -5,10 +5,12 @@ serializes complete tool/condition jobs; isolated native workers retain models,
 partitions and selection candidates, then AMBER evaluates in its own prefix.
 """
 import argparse
+from datetime import datetime, timezone
 import json
 import logging
 import os
 from pathlib import Path
+import re
 import runpy
 import shutil
 import signal
@@ -25,12 +27,26 @@ from e001_features import (CODE, EXP, read, write, isolated_env, progress, packa
 from e001_vamb_cpu import invoke, require, sha
 
 
+def worker_environment(prefix, tool, cfg):
+    """Set native thread-pool limits to the actual serial tool allocation."""
+    omp_threads = cfg['metabat_threads'] if tool == 'metabat' else 1
+    env = isolated_env(prefix, omp_threads)
+    env.update(TMPDIR=str(Path(cfg['stage'])/'tmp'),
+               CHECKM_DATA_PATH=str(Path(prefix)/'checkm_data'))
+    return env
+
+
 def resources(group, cpus, ram):
     """Use measured allocations; reject accidental host-sized resource requests."""
+    require(group in ('metabat-vamb', 'comebin'), 'Unknown pilot resource group')
     expected = 2 if group == 'comebin' else 4
     require(cpus == expected and ram >= expected * 3,
             f'{group} requires explicit {expected} allocated vCPUs and >= {expected*3} GB RAM')
-    return dict(vcpus=cpus, ram_gb=ram, threads=2 if group=='comebin' else 3,
+    return dict(vcpus=cpus, ram_gb=ram,
+                threads=2 if group=='comebin' else 4,
+                metabat_threads=4 if group=='metabat-vamb' else 0,
+                vamb_threads=3 if group=='metabat-vamb' else 0,
+                vamb_loader_workers=1 if group=='metabat-vamb' else 0,
                 worker_mem_mb=int((ram-.75)*1000), group_core_hours=200 if group=='comebin' else 20,
                 tools=['comebin'] if group=='comebin' else ['metabat','vamb'])
 
@@ -63,6 +79,90 @@ def fit_arguments(tool, feature, out, threads):
             '--num_threads',str(threads),'--seed','11','--device','cpu']
 
 
+def metabat_command(executable, fasta, depth, prefix, threads):
+    """Build the pinned MetaBAT2 command with its actual OpenMP CPU budget."""
+    return [str(executable), '-i', str(fasta), '-a', str(depth), '-o', str(prefix),
+            '-t', str(threads), '--seed', '11', '--saveCls', '--unbinned']
+
+
+def short_local_tmpdir():
+    """Create a private short path on node-local /tmp for Unix-socket IPC."""
+    root = Path('/tmp')
+    require(root.is_dir(), 'Node-local /tmp is required for VAMB IPC')
+    path = Path(tempfile.mkdtemp(prefix='e1p-', dir=root))
+    require(len(os.fsencode(str(path))) <= 40,
+            'Short VAMB IPC path exceeds the Unix-socket safety limit')
+    return path
+
+
+def native_vamb_ipc_smoke(cfg):
+    """Exercise pinned VAMB's actual one-worker CPU DataLoader before fitting.
+
+    Synthetic tensors pass through VAMB's normalization and PyTorch shared
+    tensor queue, the same multiprocessing resource-sharer path that failed in
+    the returned run. This is a software/IPC check, not a fit or data result.
+    """
+    import numpy as np
+    import torch
+    from e001lib.native import require_packages, verify_source
+
+    root = Path(cfg['root'])
+    source=root/'sources/vamb'
+    provenance = verify_source('vamb', source)
+    import vamb
+    module_path=Path(vamb.__file__).resolve()
+    require(module_path.is_relative_to(source.resolve()) or
+            module_path.is_relative_to((root/'envs/vamb').resolve()),
+            'VAMB import is outside its pinned source and experiment prefix')
+    require_packages({'numpy':'1.26.4', 'torch':'2.6.0+cpu', 'pycoverm':'0.6.2'})
+    scratch = Path(os.environ['TMPDIR']).resolve()
+    require(scratch.is_dir() and scratch == Path(tempfile.gettempdir()).resolve(),
+            'Python is not using the short private VAMB TMPDIR')
+    torch.set_num_threads(cfg['vamb_threads'])
+    torch.set_num_interop_threads(1)
+    rng = np.random.default_rng(11)
+    nseq, nsamples = 32, 10
+    abundance = rng.random((nseq, nsamples), dtype=np.float32) + np.float32(.01)
+    tnf = rng.normal(size=(nseq, 103)).astype(np.float32)
+    lengths = np.full(nseq, 10_000, dtype=np.int64)
+    loader = vamb.encode.make_dataloader(abundance, tnf, lengths,
+                                         batchsize=8, destroy=False, cuda=False)
+    require(loader.num_workers == cfg['vamb_loader_workers'] == 1,
+            'Pinned VAMB CPU DataLoader worker count changed')
+    batches = list(loader)
+    rows = sum(int(batch[0].shape[0]) for batch in batches)
+    require(rows == nseq and batches, 'Pinned VAMB DataLoader returned incomplete batches')
+    report = dict(status='passed', source=provenance, import_path=str(module_path),python=sys.version.split()[0],
+                  torch=torch.__version__, tmpdir=str(scratch), tmpdir_bytes=len(os.fsencode(str(scratch))),
+                  dataloader_workers=loader.num_workers, torch_threads=torch.get_num_threads(),
+                  torch_interop_threads=torch.get_num_interop_threads(),
+                  synthetic_contigs=nseq, batches=len(batches), rows=rows,
+                  scope='Pinned VAMB CPU DataLoader IPC only; no scientific inputs or training')
+    write(Path(cfg['stage'])/'vamb-ipc-smoke.json', report)
+    print('PASS: pinned VAMB CPU DataLoader IPC', flush=True)
+
+
+def preflight_vamb_ipc(root, stage, cfg):
+    """Run the pinned VAMB/PyTorch CPU IPC check before any full pilot rule."""
+    prefix = Path(root)/'envs/vamb'
+    local_tmp = short_local_tmpdir()
+    env = isolated_env(prefix, 1)
+    env['TMPDIR'] = str(local_tmp)
+    write(Path(stage)/'vamb-ipc-smoke-attempt.json', dict(
+        tmpdir=str(local_tmp), tmpdir_bytes=len(os.fsencode(str(local_tmp))),
+        vamb_threads=cfg['vamb_threads'], dataloader_workers=cfg['vamb_loader_workers'],
+        order='before MetaBAT2 or VAMB full fit'))
+    try:
+        invoke([prefix/'bin/python','-I','-S',CODE/'scripts/e001_native_probe.py',prefix,
+                'numpy','torch'],env,stage,'vamb-ipc-prefix',60)
+        smoke=[prefix/'bin/python','-I',CODE/'scripts/e001_pilot.py','--config',
+               Path(cfg['runtime_config']),'--native','vamb-ipc-smoke']
+        checked(smoke,env,Path(stage),'vamb-ipc-smoke',120,3000,
+                fatal_markers=('OSError: AF_UNIX path too long',),stall_seconds=60)
+    finally:
+        shutil.rmtree(local_tmp,ignore_errors=True)
+
+
 def native_fit(cfg, tool, condition):
     """Run the pinned training entry point and export full native assignments."""
     from e001lib.native import verify_source, require_packages
@@ -85,15 +185,16 @@ def native_fit(cfg, tool, condition):
     report={'source':provenance,'seed':11,'condition':condition,'feature_record_sha256':sha(EXP/'features-observed.json')}
     if tool=='metabat':
         native.mkdir()
-        command=[root/'envs/metabat/bin/metabat2','-i',fasta,'-a',feature/'depth.tsv',
-                 '-o',native/'bins','-t',str(cfg['threads']),'--seed','11','--saveCls','--unbinned']
+        command=metabat_command(root/'envs/metabat/bin/metabat2',fasta,
+                                feature/'depth.tsv',native/'bins',cfg['metabat_threads'])
         write(out/'native-command.json',list(map(str,command)))
         subprocess.run(list(map(str,command)),check=True)
         predictions=partition(native/'bins.MemberMatrix.txt',lengths,'metabat')
     else:
         import torch
         torch.set_num_interop_threads(1)
-        args=fit_arguments(tool,feature,native,cfg['threads']); write(out/'native-command.json',args)
+        threads=cfg['vamb_threads'] if tool=='vamb' else cfg['threads']
+        args=fit_arguments(tool,feature,native,threads); write(out/'native-command.json',args)
         if tool=='vamb':
             sys.path.insert(0,str(source)); sys.argv=['vamb',*args]
             from vamb.__main__ import main
@@ -197,7 +298,33 @@ def evaluate(cfg, tool, condition):
 
 
 def descendants(pid):
-    """Snapshot only this child's process tree, with sampled RSS in KiB."""
+    """Snapshot only this child's process tree and summed PSS in KiB."""
+    proc=Path('/proc')
+    if sys.platform.startswith('linux') and proc.is_dir():
+        parents={}
+        for entry in proc.iterdir():
+            if not entry.name.isdigit(): continue
+            try:
+                stat=(entry/'stat').read_text(); fields=stat[stat.rfind(')')+2:].split()
+                parents[int(entry.name)]=int(fields[1])
+            except (OSError,ValueError,IndexError): continue
+        selected={pid}
+        while True:
+            expanded=selected | {child for child,parent in parents.items() if parent in selected}
+            if expanded==selected: break
+            selected=expanded
+        page_kb=os.sysconf('SC_PAGE_SIZE')/1024
+        result=[]
+        for child in selected:
+            try:
+                lines=(proc/str(child)/'smaps_rollup').read_text().splitlines()
+                memory_kb=next(int(line.split()[1]) for line in lines if line.startswith('Pss:'))
+            except (OSError,StopIteration,ValueError):
+                try: memory_kb=int((proc/str(child)/'statm').read_text().split()[1])*page_kb
+                except (OSError,IndexError,ValueError): memory_kb=0
+            result.append((child,memory_kb))
+        return result
+
     rows=[list(map(int,line.split())) for line in subprocess.check_output(
         ['ps','-axo','pid=,ppid=,rss='],text=True).splitlines() if line.strip()]
     selected={pid}
@@ -205,19 +332,11 @@ def descendants(pid):
         expanded=selected | {p for p,parent,rss in rows if parent in selected}
         if expanded==selected: break
         selected=expanded
-    result=[]
-    for p,parent,rss in rows:
-        if p not in selected: continue
-        if sys.platform.startswith('linux'):
-            try:
-                lines=Path(f'/proc/{p}/smaps_rollup').read_text().splitlines()
-                rss=next(int(line.split()[1]) for line in lines if line.startswith('Pss:'))
-            except (OSError,StopIteration): pass
-        result.append((p,rss))
-    return result
+    return [(p,rss) for p,parent,rss in rows if p in selected]
 
 
-def checked(command, env, out, label, seconds, memory_mb=None):
+def checked(command, env, out, label, seconds, memory_mb=None, *,
+            fatal_markers=(), progress_pattern=None, stall_seconds=None):
     """Capture a bounded child in the workflow group; kill its tree on failure.
 
     Linux uses summed PSS to avoid counting shared DataLoader pages repeatedly;
@@ -225,21 +344,69 @@ def checked(command, env, out, label, seconds, memory_mb=None):
     The outer workflow deadline also kills these children because they never
     create a new session. No process outside the verified child tree is killed.
     """
-    start=time.monotonic(); record=dict(argv=list(map(str,command)),timeout_seconds=seconds,
-                                      memory_limit_mb=memory_mb,peak_tree_memory_mb=0,memory_metric='sum PSS on Linux; RSS fallback')
+    start=time.monotonic(); last_progress=start; fatal_tail=b''; progress_partial=b''; stderr_position=0
+    record=dict(argv=list(map(str,command)),timeout_seconds=seconds,
+                memory_limit_mb=memory_mb,peak_tree_memory_mb=0,
+                memory_metric='sum PSS on Linux; RSS fallback',
+                fatal_stderr_markers=list(fatal_markers),progress_pattern=progress_pattern,
+                stall_seconds=stall_seconds)
     process=None
     print('START: '+label,flush=True)
     try:
-        with (out/(label+'.stdout')).open('x') as stdout, (out/(label+'.stderr')).open('x') as stderr:
+        stderr_path=out/(label+'.stderr')
+        with (out/(label+'.stdout')).open('x') as stdout, stderr_path.open('x') as stderr:
             process=subprocess.Popen(record['argv'],env=env,stdout=stdout,stderr=stderr)
             record['pid']=process.pid
             write(out/(label+'.command.json'),record)
-            while process.poll() is None:
-                rss=sum(r for _,r in descendants(process.pid))/1024
-                record['peak_tree_memory_mb']=max(record['peak_tree_memory_mb'],rss)
-                require(memory_mb is None or rss<=memory_mb,'Process tree exceeded RAM ceiling')
-                require(time.monotonic()-start<seconds,'Native command exceeded time/cost ceiling')
-                time.sleep(.5)
+            progress_log=(out/(label+'.progress.log')).open('x') if progress_pattern else None
+            try:
+                while True:
+                    current_size=stderr_path.stat().st_size
+                    if current_size>stderr_position:
+                        with stderr_path.open('rb') as monitor:
+                            monitor.seek(stderr_position)
+                            chunk=monitor.read(current_size-stderr_position)
+                        stderr_position += len(chunk)
+                        if chunk:
+                            fatal_bytes=fatal_tail+chunk
+                            decoded=fatal_bytes.decode('utf-8',errors='replace')
+                            for marker in fatal_markers:
+                                if marker in decoded:
+                                    record['fatal_stderr']=marker
+                                    record['fatal_stderr_tail']=decoded[-2000:]
+                                    raise RuntimeError(f'{label} emitted fatal stderr marker: {marker}')
+                            fatal_tail=fatal_bytes[-4096:]
+                            if progress_pattern:
+                                progress_bytes=progress_partial+chunk
+                                lines=progress_bytes.splitlines(keepends=True)
+                                progress_partial=b''
+                                if lines and not lines[-1].endswith((b'\n',b'\r')):
+                                    progress_partial=lines.pop()
+                                for line in lines:
+                                    for match in re.finditer(progress_pattern,line.decode('utf-8',errors='replace')):
+                                        value=match.group(1) if match.groups() else match.group(0)
+                                        if value != record.get('last_native_progress'):
+                                            last_progress=time.monotonic()
+                                            record['last_native_progress']=value
+                                            progress_log.write(json.dumps(dict(
+                                                utc=datetime.now(timezone.utc).isoformat(),
+                                                elapsed_seconds=last_progress-start,progress=value))+'\n')
+                                            progress_log.flush()
+                                            print(f'PROGRESS: {label} {value}',flush=True)
+                    if process.poll() is not None:
+                        if stderr_path.stat().st_size<=stderr_position:
+                            break
+                        continue
+                    rss=sum(r for _,r in descendants(process.pid))/1024
+                    record['peak_tree_memory_mb']=max(record['peak_tree_memory_mb'],rss)
+                    require(memory_mb is None or rss<=memory_mb,'Process tree exceeded RAM ceiling')
+                    require(time.monotonic()-start<seconds,'Native command exceeded time/cost ceiling')
+                    require(stall_seconds is None or time.monotonic()-last_progress<=stall_seconds,
+                            f'{label} made no native progress for {stall_seconds} seconds')
+                    time.sleep(.5)
+            finally:
+                if progress_log and not progress_log.closed:
+                    progress_log.close()
             record['returncode']=process.returncode
             require(process.returncode==0,f'{label} failed; inspect captured stderr')
     except BaseException:
@@ -249,6 +416,7 @@ def checked(command, env, out, label, seconds, memory_mb=None):
                 try: os.kill(pid,signal.SIGKILL)
                 except ProcessLookupError: pass
             process.wait()
+            record['returncode']=process.returncode
         raise
     finally:
         record['elapsed_seconds']=time.monotonic()-start
@@ -260,14 +428,25 @@ def worker(cfg, tool, condition):
     """Run one complete condition in isolated tool/evaluator runtimes."""
     out=Path(cfg['stage'])/tool/condition; out.mkdir(parents=True,exist_ok=True)
     require(not any(out.iterdir()),'Refusing to overwrite pilot outputs')
-    root=Path(cfg['root']); prefix=root/'envs'/tool; env=isolated_env(prefix,1)
-    env.update(TMPDIR=str(Path(cfg['stage'])/'tmp'),CHECKM_DATA_PATH=str(prefix/'checkm_data'))
+    root=Path(cfg['root']); prefix=root/'envs'/tool
+    env=worker_environment(prefix,tool,cfg)
     helper=CODE/'scripts/e001_pilot.py'
     try:
         checked([prefix/'bin/python','-I','-S',CODE/'scripts/e001_native_probe.py',prefix,*(['numpy'] if tool=='metabat' else ['numpy','torch'])],env,out,'probe',60)
         checked([prefix/'bin/python','-I','-m','pip','freeze','--all'],env,out,'inventory',60)
         base=[prefix/'bin/python','-I',helper,'--config',cfg['runtime_config'],'--tool',tool,'--condition',condition]
-        checked([*base,'--native','fit'],env,out,'fit',min(80,cfg['group_core_hours'])*3600/cfg['vcpus'],cfg['worker_mem_mb'])
+        if tool=='vamb':
+            local_tmp=short_local_tmpdir(); env['TMPDIR']=str(local_tmp)
+        try:
+            checked([*base,'--native','fit'],env,out,'fit',
+                    min(80,cfg['group_core_hours'])*3600/cfg['vcpus'],cfg['worker_mem_mb'],
+                    fatal_markers=('OSError: AF_UNIX path too long',) if tool=='vamb' else (),
+                    progress_pattern=r'Epoch:\s*(\d+)' if tool=='vamb' else None,
+                    stall_seconds=600 if tool=='vamb' else None)
+        finally:
+            if tool=='vamb':
+                shutil.rmtree(local_tmp,ignore_errors=True)
+                env['TMPDIR']=str(Path(cfg['stage'])/'tmp')
         if tool=='comebin':
             checked([*base,'--native','cluster'],env,out,'cluster',15*3600/cfg['vcpus'],cfg['worker_mem_mb'])
         amber=root/'envs/amber'; amber_env=isolated_env(amber,1); amber_env['TMPDIR']=env['TMPDIR']
@@ -299,8 +478,11 @@ def run(root, data, group, cpus, ram, snapshot):
             invoke([prefix/'bin/python','-I','-S',CODE/'scripts/e001_native_probe.py',prefix,'snakemake'],env,stage,'workflow-prefix',60)
             workflow_preflight(workflow,env,stage)
             require(sha(stage/'workflow-lock.stdout')==read(EXP/'sample0-preprocess-observed.json')['member_sha256']['workflow-lock.stdout'],'Workflow inventory changed')
+            if group=='metabat-vamb':
+                preflight_vamb_ipc(root,stage,cfg)
             cmd=['--snakefile',CODE/'workflows/e001-preprocess/pilot.smk','--directory',stage,'--configfile',stage/'runtime.json',
-                 '--cores',cpus,'--executor','local','--resources',f"mem_mb={int((ram-.5)*1000)}",'tool_slots=1',
+                 '--cores',cpus,'--executor','local','--runtime-source-cache-path',stage/'.snakemake-source-cache',
+                 '--resources',f"mem_mb={int((ram-.5)*1000)}",'tool_slots=1',
                  '--keep-incomplete','--printshellcmds','--benchmark-extended']
             invoke(workflow_command(workflow,'snakemake',cmd+['--dry-run']),env,stage,'dag',120)
             remaining=res['group_core_hours']*3600/cpus-(time.monotonic()-start)
@@ -327,7 +509,7 @@ if __name__=='__main__':
     p.add_argument('--group',choices=('metabat-vamb','comebin')); p.add_argument('--vcpus',type=int); p.add_argument('--ram-gb',type=float)
     p.add_argument('--workflow-snapshot',type=Path); p.add_argument('--config',type=Path)
     p.add_argument('--tool',choices=('metabat','vamb','comebin')); p.add_argument('--condition',choices=('C0','CT'))
-    p.add_argument('--native',choices=('fit','cluster','evaluate')); p.add_argument('--worker',action='store_true'); p.add_argument('--aggregate',action='store_true')
+    p.add_argument('--native',choices=('fit','cluster','evaluate','vamb-ipc-smoke')); p.add_argument('--worker',action='store_true'); p.add_argument('--aggregate',action='store_true')
     a=p.parse_args(); logging.basicConfig(level=logging.INFO,format='%(asctime)s %(message)s')
     if a.config:
         cfg=read(a.config)
@@ -339,6 +521,7 @@ if __name__=='__main__':
         elif a.native=='fit': native_fit(cfg,a.tool,a.condition)
         elif a.native=='cluster': comebin_cluster(cfg,a.condition)
         elif a.native=='evaluate': evaluate(cfg,a.tool,a.condition)
+        elif a.native=='vamb-ipc-smoke': native_vamb_ipc_smoke(cfg)
         else: p.error('Worker mode required')
     else:
         if any(x is None for x in (a.root,a.data_root,a.group,a.vcpus,a.ram_gb,a.workflow_snapshot)): p.error('All allocation and root arguments required')

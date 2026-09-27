@@ -2,56 +2,65 @@
 
 Updated: 2026-09-25. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
-## Current action, 2026-09-25
+## Current action, 2026-09-27
 
-**Accept the successful features; no retry or preprocessing is needed.** The
-`multisample-features-69_32jz9` archive checksum and terminal completion match.
-[Reviewed evidence](features-observed.json) records 22,594 contigs and ordered
-samples 0,1,2,3,4,5,9,10,11,12, paired sequence/mask identities, six fixed COMEBin
-views, finite coverage and valid scale controls. Successful driver cost: **4.0135
-core-hours at 4 vCPU / 12 GB**, 60.203 minutes; retained new feature attempt:
-**608.310 MB decimal**, excluding external BAMs. All four feature attempts total
-5.1044 known driver core-hours. See [acceptance](validation.md#native-features-accepted-and-pilot-prepared-2026-09-25).
+**The first paired-pilot attempt failed in VAMB and is preserved.** Its checksum
+and terminal log are reviewed in [failure evidence](pilot-failure-observed.json).
+The run used 4 vCPU / 12 GB for 23.08 minutes, charging **1.5385 allocated
+core-hours**, and left **1.668 GB** in its unique attempt. Both MetaBAT2 conditions
+finished, but the pilot was incomplete. MetaBAT2 got `-t 3`, the workflow allocated
+3 threads and its worker environment set `OMP_NUM_THREADS=1`; the native log
+reported one thread and the benchmark CPU-time/wall ratios were 0.86 and 0.79.
+VAMB then hit `OSError: AF_UNIX path too long` while a multiprocessing queue feeder
+created its resource-sharer socket under the shared attempt's long `TMPDIR`. The
+traceback appeared at 1:11 after VAMB began, yet heartbeat messages continued for
+another ~19 minutes. No training epoch completed; C0 failed and CT never started.
+The socket error and the live parent process explain the apparent hang. The failed
+attempt and MetaBAT outputs remain on disk; do not remove or edit them.
 
-**First owner step: MetaBAT2/VAMB seed-11 C0/CT pair.** Use the existing Terminal
-Ubuntu/Aug2026 environment, **4 allocated vCPU / 12 GB RAM**, mounted Home and
-shared E001 storage. Keep all current environments, feature attempts, BAM aliases
-and frozen input files. Provide **30 GB free shared storage** plus 2 GB job-local
-`/tmp`. The launcher reads the accepted feature directory directly, verifies
-feature and frozen-input hashes and copies no BAMs. No software/data downloads
-are expected except installation of missing container Git. It creates a new
-`paired-pilot-metabat-vamb-*` attempt and captures terminal logs automatically.
-Do not invoke it again to resume a failure: return evidence so completed work
-can be reused deliberately. Existing attempts are never overwritten.
+**Retry with the exact same 4-vCPU / 12-GB allocation and a new attempt.** The
+revised driver creates a short private directory under node-local `/tmp` for
+VAMB IPC while writing model/output files to persistent shared storage. Before
+running either full MetaBAT2 or VAMB, it starts the existing pinned VAMB/torch
+prefix and performs a tiny CPU data-loader test: 32 synthetic contigs, 10
+abundance columns, 103 TNF columns, and the native one-worker DataLoader. It
+consumes all batches through PyTorch's multiprocessing tensor queue. This check
+runs first and stops the job on an import, socket or queue failure, so no full
+fit begins without successful IPC evidence. No biological data or model training
+is used by the smoke. Its tmp path is private, under 40 bytes and removed after
+the check; its command, status and streams are retained in the return archive.
 
-The group runs MetaBAT2 C0/CT then VAMB C0/CT serially, using three tool threads.
-VAMB retains **300 epochs** and native batch schedule/clustering; MetaBAT2 retains
-native thresholds with seed 11, full membership and unbinned outputs. Full
-assignments, model/latent arrays with IDs, command/inventory logs, per-rule extended
-benchmarks, AMBER `filter=0` tables and fixed-population R95 are retained. Empty
-partitions remain biological outcomes (R95 zero; explicitly no AMBER rows).
-Compact return archives exclude binary models and FASTA files but include their
-hashes. No truth is passed to fitting or native selection.
+The Snakemake DAG is serial on the rented four CPUs. Each MetaBAT2 run receives
+four scheduler threads, `-t 4` and `OMP_NUM_THREADS=4`. VAMB uses native `-p 3`
+(three PyTorch threads) plus its one CPU data-loader worker, filling four CPUs
+without oversubscribing them. The VAMB worker also stops immediately when the
+known AF_UNIX error reaches its stderr, and kills the failed fit's process tree.
+Its native `Epoch:` log lines are recorded; ten minutes without an epoch stops the
+fit with retained logs. Existing native schedules, seed 11, thresholds, clustering,
+full partitions, evaluation and scientific inputs are unchanged.
 
-Projected VAMB pair training with twofold margin is **3.26 core-hours**, plus
-MetaBAT2, clustering, hashing and evaluation; this is not a runtime guarantee.
-The first group's stop ceiling is **20 allocated core-hours / 5 hours** including
-driver setup. The global experiment limit remains 800; this is not a new budget.
-RAM is sampled across the process tree (Linux PSS, conservative RSS fallback),
-with 0.75 GB reserved; exceeding the ceiling stops the child tree and preserves
-failure evidence. Job extensions remain owner-managed.
+Provide **30 GB free shared storage** and **2 GB in job-local `/tmp`**. No large
+files are copied and no software or data downloads are expected except a
+container-level Git bootstrap if Git is missing. The driver verifies the accepted
+feature and frozen-input hashes. It does not modify the previous attempt, accepted
+features, BAMs or tool environments. The group stop is **20 allocated core-hours**
+(5 hours at four rented vCPU), including startup; the per-fit cap remains 80 core-
+hours. The timeout is a ceiling, not an expected runtime. Stop and preserve the
+new attempt on any failure. The job logs to a unique terminal file and prints the
+return archive, checksum and attempt path. Upload those two archive files and the
+printed terminal log before any further fit; a successful IPC smoke is not a
+successful scientific pilot.
 
-Upload the new code archive and adjacent checksum to Home `transfer/`; retain
-`e001-workflow-0fb6955cdc62.tar.gz`. Execution bundle: **e001-code-d532c35ca05d**.
-Archive SHA256: `e56d4c90b95d2c673e374e180601e656cfa9eab18867f839cd1bfe1fffcde898`. The bundle contains execution commit
-`d532c35ca05d`; this documentation pin changes no execution files.
+Upload the revised code archive and adjacent checksum to Home `transfer/`; retain
+`e001-workflow-0fb6955cdc62.tar.gz`. Execution bundle: **BUNDLE_PENDING**.
+Its checksum will be pinned after the code commit.
 
 ```sh
 bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
 DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
-BUNDLE=e001-code-d532c35ca05d
+BUNDLE=BUNDLE_PENDING
 CODE="$WORK/$BUNDLE"
 LOG=$(mktemp "$WORK/transfer/e001-pilot-transfer.XXXXXX.log")
 echo "Transfer log: $LOG"
@@ -65,29 +74,24 @@ echo "Transfer log: $LOG"
 SH
 ```
 
-Return the printed `paired-pilot-metabat-vamb-*-return.tar.gz`, its `.sha256`,
-and `e001-pilot.*.log` (also transfer log if unpacking failed). Stop on any nonzero
-exit; preserve the attempt. Do not upload BAMs, models or feature tensors.
+Upload the printed `paired-pilot-metabat-vamb-*-return.tar.gz`, adjacent
+`.sha256`, and `e001-pilot.*.log` (include the transfer log if unpacking failed).
+Do not upload BAMs, feature arrays or model files.
 
-**After return review:** the same snapshot implements the COMEBin pair under
-`e001_pilot_run.sh WORK DATA 2 6 comebin` in a **2-vCPU / >=6-GB** job. Its 200-epoch
-maximum, batch 1024, six views, early stopping and native temperature rule remain
-unchanged. Torch uses two threads, inter-op/BLAS one, native four DataLoader workers,
-and one Leiden worker. Prior measurement used eight torch threads on two allocated
-CPUs, so the projected **95.78 core-hours for both fits with margin** is uncertain.
-The **80-core-hour per-fit** limit and **15-core-hour clustering/selection limit per
-condition**, inside a **200-core-hour group ceiling**, stop rather than silently
-shorten work. Complete 120-candidate Leiden grids, marker tables, full winning
-labels, filtered native bins and checkpoints remain on UCloud. Full labels drive
-primary evaluation. Retained embeddings enable later neighborhood/oracle analysis;
-those interpretations and further seeds are not part of this launch.
+After the return is inspected, review the same snapshot's separate COMEBin group
+at **2 vCPU / >=6 GB** before launching it. Its native maximum of 200 epochs,
+batch 1024, six views, early stopping and 120-candidate selection remain fixed.
+The group remains bounded by the existing 80-core-hour per-fit, 15-core-hour
+clustering/selection per-condition and 200-core-hour group ceilings. Its allocation
+and resource measurements do not change with this MetaBAT2/VAMB repair.
 
-Local checks exercise the real pinned argument-parser code, child failure/timeout
-and memory handling, feature hash rejection, real Snakemake serialization/resume,
-and whole-driver success/repetition/failure packaging with synthetic workers.
-They **do not execute Linux neural training**. Accepted earlier native fit and
-clustering checks are reused; this first full paired run remains the Linux
-integration/scale validation. See [validation](validation.md#native-features-accepted-and-pilot-prepared-2026-09-25).
+Local checks exercise the actual pinned argument parsers and VAMB worker-count
+contract, short-temp and preflight wiring, fatal background-traceback handling,
+process cleanup, epoch progress/stall guard, and real Snakemake ordering/resume.
+The local Python has no PyTorch installation; the actual pinned VAMB/PyTorch
+DataLoader IPC path therefore runs as the first bounded step of the owner job,
+before any full fit. This limitation is recorded explicitly in the validation
+entry for 2026-09-27.
 
 ## Completed feature extraction and recovery instructions (historical)
 

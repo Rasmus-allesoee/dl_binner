@@ -48,6 +48,61 @@ The corrected adapter records an augmentation receipt before coverage so a later
 failure retains that provenance. No new BAM copy, mapping, VAMB or MetaBAT
 extraction is needed; source environments stay unchanged.
 
+## Seed-11 MetaBAT2/VAMB failure and retry correction, 2026-09-27
+
+The uploaded archive sidecar verifies for
+`paired-pilot-metabat-vamb-fvfqsea2-return.tar.gz`
+(`c1e0b74aac90e964f0886b29ec1acf27bf6a0770e256122177682ea27cf71bc4`). The
+terminal log SHA256 is `c2c2aa9c431e619d4fe3e9fa7cb66c733df966221fb699b6bdea72a59e65473b`.
+The [observed failure record](pilot-failure-observed.json) validates the archive's
+status, benchmark rows, native commands and MetaBAT assignment hashes against
+their evaluation receipts.
+
+The owner allocation was 4 vCPU / 12 GB. Driver wall time was 1,384.65 seconds
+(23.08 minutes), or **1.538498 allocated core-hours**; 1,667,661,833 bytes remained
+in the unique attempt. External idle and packaging time are excluded. MetaBAT2
+C0/CT outputs and per-condition evaluations completed, but each command and
+Snakemake rule requested three threads while the isolated worker forced
+`OMP_NUM_THREADS=1`. Both native logs said “Executing with 1 threads”; process CPU
+time was 0.86 and 0.79 of wall time. These outputs are preserved, but this failed
+pair does not replace the corrected four-thread run.
+
+VAMB C0 loaded the full 22,594-contig/10-sample feature set and began setup. Python
+3.12's multiprocessing resource-sharing queue feeder then raised
+`OSError: AF_UNIX path too long` while trying to bind its listener below the shared
+attempt `TMPDIR`. The feeder traceback was logged twice; no `Epoch:` lines appeared,
+and periodic wall-time heartbeats continued until the owner cancelled the job.
+VAMB CT never started. The process stayed alive after the feeder error, so a normal
+child-exit check alone could not fail the rule.
+
+The revised [driver](../../scripts/e001_pilot.py) creates a private `<40`-byte
+directory under `/tmp` only for VAMB IPC and restores shared TMPDIR for evaluation.
+Before the DAG launches any full fit, it imports the verified pinned VAMB runtime
+and consumes all batches from its actual CPU `make_dataloader` with one worker,
+using small synthetic abundance/TNF arrays. The smoke is bounded to 120 seconds,
+monitors the known socket-error marker and is recorded in the return. The fit
+wrapper monitors stderr for that fatal marker and kills the process tree promptly;
+it also records native `Epoch:` progress and stops after ten minutes without an
+epoch. This distinguishes heartbeat time from actual training progress.
+
+On the four-CPU serial run, Snakemake and MetaBAT2 now both receive four threads,
+and the MetaBAT2 worker gets `OMP_NUM_THREADS=4`. VAMB stays at `-p 3` because its
+pinned CPU loader uses one additional worker; three PyTorch intra-op threads plus
+that loader consume the four allocated CPUs. The native schedules/data/seed are
+unchanged. A fresh attempt reruns both MetaBAT conditions under the corrected
+resource settings and runs the DataLoader smoke before them. The prior attempt,
+features and environments remain intact.
+
+Local checks cover the actual pinned VAMB CLI parser and loader-worker contract,
+MetaBAT command/thread/environment agreement, unique short-temp dispatch, fatal
+background-thread traceback cancellation, native epoch/stall monitoring,
+process cleanup, the real Snakemake serial DAG and complete synthetic-worker
+driver packaging/repeated-invocation/failure paths. The local Python 3.13
+environment has no PyTorch, so the real pinned VAMB/PyTorch DataLoader smoke could
+not run on this Mac. It is the first bounded operation in the owner job; no
+scientific fit starts unless it passes. The full repository suite and maintained
+documentation checks are rerun for the final execution snapshot.
+
 ## Partial native features and targeted recovery, 2026-09-24
 
 Return `multisample-features-t8lpankx` passed its SHA256 sidecar and input gate.
