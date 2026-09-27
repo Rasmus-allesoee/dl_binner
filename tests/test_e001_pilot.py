@@ -22,7 +22,10 @@ class PilotTests(unittest.TestCase):
     def tearDown(self): self.temp.cleanup()
 
     def test_allocation_and_native_schedules(self):
-        self.assertEqual(p.resources('comebin',2,6)['threads'],2)
+        comebin=p.resources('comebin',8,24)
+        self.assertEqual(comebin['threads'],8)
+        self.assertEqual(comebin['comebin_threads']+comebin['comebin_loader_workers'],8)
+        self.assertEqual(comebin['leiden_workers'],8)
         allocation=p.resources('metabat-vamb',4,12)
         self.assertEqual(allocation['threads'],4)
         self.assertEqual(allocation['metabat_threads'],4)
@@ -33,7 +36,7 @@ class PilotTests(unittest.TestCase):
         self.assertEqual(p.worker_environment(self.root,'vamb',allocation)['OMP_NUM_THREADS'],'1')
         metabat=p.metabat_command('/prefix/metabat2','ref.fa','depth.tsv','bins',allocation['metabat_threads'])
         self.assertEqual(metabat[metabat.index('-t')+1],'4')
-        for group,cpu,ram in [('comebin',4,12),('metabat-vamb',2,6),('comebin',2,4)]:
+        for group,cpu,ram in [('comebin',4,12),('metabat-vamb',2,6),('comebin',8,12)]:
             with self.assertRaises(ValueError): p.resources(group,cpu,ram)
         args=p.fit_arguments('vamb',self.root,self.root/'out',allocation['vamb_threads'])
         self.assertEqual(args[args.index('-p')+1],'3')
@@ -45,11 +48,52 @@ class PilotTests(unittest.TestCase):
         tree=ast.parse(source.read_text()); fn=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='arguments')
         ns=dict(argparse=argparse,Path=Path,ver='pinned',DEFAULT_HMM_EVALUE=1e-5,DEFAULT_RANDOM_SEED=11)
         exec(compile(ast.Module(body=[fn],type_ignores=[]),str(source),'exec'),ns)
-        with patch.object(sys,'argv',['comebin',*p.fit_arguments('comebin',self.root,self.root/'out',2)]):
+        with patch.object(sys,'argv',['comebin',*p.fit_arguments('comebin',self.root,self.root/'out',p.resources('comebin',8,24)['comebin_threads'])]):
             args=ns['arguments']()
-        self.assertEqual((args.epochs,args.batch_size,args.n_views,args.num_threads),(200,1024,6,2))
+        self.assertEqual((args.epochs,args.batch_size,args.n_views,args.num_threads),(200,1024,6,4))
         self.assertTrue(args.earlystop and args.addvars and args.vars_sqrt)
         self.assertEqual(args.device,'cpu')
+
+    def test_pinned_comebin_loader_count_and_budget(self):
+        source=REPO/'agent_context/tools_repo/COMEBin/COMEBin/train_CLmodel.py'
+        if not source.exists(): self.skipTest('Optional native cache missing')
+        tree=ast.parse(source.read_text())
+        count=next(n.value.value for n in tree.body if isinstance(n,ast.Assign)
+                   and any(isinstance(t,ast.Name) and t.id=='DATALOADER_WORKERS' for t in n.targets))
+        cfg=p.resources('comebin',8,24)
+        self.assertEqual(count,cfg['comebin_loader_workers'])
+        self.assertEqual(count+cfg['comebin_threads'],cfg['threads'])
+
+    def test_comebin_worker_temp_guards_and_failed_fit_stops_cluster(self):
+        # Native executables are external here; this runs the production worker
+        # that owns IPC paths, resource budgets, guards and downstream dispatch.
+        cfg=dict(root=str(self.root),stage=str(self.root/'attempt'),runtime_config='runtime.json',
+                 **p.resources('comebin',8,24))
+        calls=[]
+        def external(argv,env,out,label,seconds,*args,**kwargs):
+            calls.append((label,env['TMPDIR'],seconds,kwargs))
+            if label=='evaluate':p.write(out/'evaluation.json',{'status':'completed'})
+        with patch.object(p,'checked',side_effect=external):p.worker(cfg,'comebin','C0')
+        fit=next(x for x in calls if x[0]=='fit'); cluster=next(x for x in calls if x[0]=='cluster')
+        self.assertEqual(fit[1],cluster[1]); self.assertEqual(Path(fit[1]).parent,Path('/tmp'))
+        self.assertFalse(Path(fit[1]).exists()); self.assertEqual(fit[2],80*3600/8)
+        self.assertEqual(fit[3]['projected_steps'],200)
+        self.assertEqual(cluster[2],15*3600/8)
+        calls.clear()
+        def failure(argv,env,out,label,seconds,*args,**kwargs):
+            external(argv,env,out,label,seconds,*args,**kwargs)
+            if label=='fit':raise RuntimeError('native worker failure')
+        with patch.object(p,'checked',side_effect=failure),self.assertRaisesRegex(RuntimeError,'native worker failure'):
+            p.worker(cfg,'comebin','CT')
+        self.assertNotIn('cluster',[x[0] for x in calls])
+        self.assertFalse(Path(calls[-1][1]).exists())
+
+    def test_full_schedule_projection_stops_unaffordable_training(self):
+        code='import sys,time; time.sleep(.2); print("NN training: epoch=3/200",file=sys.stderr,flush=True);time.sleep(30)'
+        with patch.object(p,'descendants',side_effect=lambda pid:[(pid,0)]),self.assertRaisesRegex(ValueError,'projection exceeds'):
+            p.checked([sys.executable,'-c',code],p.isolated_env(),self.root,'project',2,
+                      progress_pattern=r'NN training: epoch=(\d+)/',projected_steps=200)
+        self.assertGreater(p.read(self.root/'project.command.json')['projected_full_schedule_seconds'],2)
 
     def test_actual_vamb_argument_parser(self):
         source=REPO/'agent_context/tools_repo/vamb/vamb/__main__.py'

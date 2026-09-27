@@ -1,5 +1,5 @@
 {
-  "status": "features accepted; first MetaBAT2/VAMB attempt failed during VAMB IPC and is preserved; corrected fresh-attempt launcher prepared; rerun pending",
+  "status": "Seed-11 MetaBAT2/VAMB pair accepted; native COMEBin pair prepared at 8 vCPU / 24 GB; further seeds require review",
   "conditions": [
     "C0",
     "CT"
@@ -39,30 +39,31 @@
       "twofold_margin_fit_core_hours_at_measured_allocation": 1.6277695042727929
     },
     "comebin": {
-      "proposed_vcpus": 2,
-      "proposed_ram_gb": 6,
+      "proposed_vcpus": 8,
+      "proposed_ram_gb": 24,
       "epochs_max": 200,
       "batch_size": 1024,
       "views": 6,
-      "twofold_margin_fit_core_hours_at_measured_allocation": 47.8913039,
-      "note": "Native four DataLoader workers retained; torch intra-op 2, inter-op 1, BLAS pools 1, Leiden workers 1. Sampled summed process PSS bounded to RAM minus 0.75 GB; RSS fallback is conservative. Prior timing used torch 8 on allocation 2, so throughput is not guaranteed.",
-      "threads": 2
+      "note": "Serial C0 then CT; four native DataLoader workers plus four PyTorch threads. Inter-op and BLAS pools one. Eight independent Leiden candidate workers; deterministic HNSW construction remains serial. Prior synthetic timing at allocation two excluded DataLoader and is not an eight-vCPU prediction.",
+      "threads": 8,
+      "pytorch_threads": 4,
+      "cpu_dataloader_workers": 4,
+      "leiden_workers": 8,
+      "historical_twofold_margin_fit_core_hours_at_2_vcpus": 47.8913039
     }
   },
-  "learned_pair_training_projection_with_margin_core_hours": 99.03814680854558,
   "limits": {
     "per_fit_core_hours": 80,
     "experiment_core_hours": 800
   },
   "review_before_launch": [
-    "Feature gate passed; do not repeat extraction.",
-    "Fresh attempt runs the pinned VAMB CPU DataLoader IPC smoke under a private short /tmp path before any full fit; a failure stops before the binner workflow.",
-    "MetaBAT2 receives four Snakemake threads, -t 4 and OMP_NUM_THREADS=4; VAMB receives three PyTorch threads plus one CPU DataLoader worker.",
-    "Inspect complete native schedule/output/evaluation and measured costs before COMEBin group.",
-    "COMEBin full runtime/memory remain bounded empirical questions; no schedule reduction or score-dependent exclusion.",
-    "Review both groups before seeds 23/47."
+    "Accept MetaBAT2/VAMB and features; no repeat.",
+    "COMEBin CPU budget is four PyTorch threads plus its four native loader workers; one condition runs at a time.",
+    "Use short private /tmp for neural IPC; stop on fatal DataLoader errors, 30 minutes without an epoch, or an unaffordable projected 200-epoch schedule after at least three epochs.",
+    "Retain native 200-epoch maximum, early stopping, batch 1024, six views and all 120 clustering candidates.",
+    "Inspect COMEBin paired outputs and actual costs before seeds 23/47; no performance claim from one seed."
   ],
-  "alternative_not_selected": "One 4-vCPU job for all tools would charge COMEBin at an unmeasured allocation. Separate groups preserve measured allocation accounting; no full three-seed launch.",
+  "alternative_not_selected": "Two vCPU cannot budget four fixed native DataLoader workers plus compute. Sixteen is not selected without scaling evidence; eight budgets four compute plus four loaders. Cost parity from more CPUs is not assumed.",
   "accepted_features": "features-observed.json",
   "groups": {
     "metabat-vamb": {
@@ -71,8 +72,8 @@
       "group_core_hour_limit": 20
     },
     "comebin": {
-      "vcpus": 2,
-      "minimum_ram_gb": 6,
+      "vcpus": 8,
+      "minimum_ram_gb": 24,
       "group_core_hour_limit": 200,
       "cluster_core_hour_limit_per_condition": 15
     }
@@ -119,5 +120,14 @@
     "native_epoch_regex": "Epoch: <integer>",
     "maximum_epoch_silence_seconds": 600,
     "on_failure": "kill only the fit process tree; stop Snakemake; retain the unique attempt"
+  },
+  "accepted_metabat_vamb": "paired-pilot-observed.json",
+  "comebin_guards": {
+    "epoch_silence_seconds": 1800,
+    "project_full_epochs": 200,
+    "projection_starts_after_epoch": 3,
+    "fit_stop_core_hours": 80,
+    "cluster_stop_core_hours": 15,
+    "group_stop_core_hours": 200
   }
 }

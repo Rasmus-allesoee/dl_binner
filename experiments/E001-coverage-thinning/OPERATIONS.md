@@ -1,67 +1,59 @@
 # E001: Validation and UCloud Preflight
 
-Updated: 2026-09-25. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
+Updated: 2026-09-27. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
 ## Current action, 2026-09-27
 
-**The first paired-pilot attempt failed in VAMB and is preserved.** Its checksum
-and terminal log are reviewed in [failure evidence](pilot-failure-observed.json).
-The run used 4 vCPU / 12 GB for 23.08 minutes, charging **1.5385 allocated
-core-hours**, and left **1.668 GB** in its unique attempt. Both MetaBAT2 conditions
-finished, but the pilot was incomplete. MetaBAT2 got `-t 3`, the workflow allocated
-3 threads and its worker environment set `OMP_NUM_THREADS=1`; the native log
-reported one thread and the benchmark CPU-time/wall ratios were 0.86 and 0.79.
-VAMB then hit `OSError: AF_UNIX path too long` while a multiprocessing queue feeder
-created its resource-sharer socket under the shared attempt's long `TMPDIR`. The
-traceback appeared at 1:11 after VAMB began, yet heartbeat messages continued for
-another ~19 minutes. No training epoch completed; C0 failed and CT never started.
-The socket error and the live parent process explain the apparent hang. The failed
-attempt and MetaBAT outputs remain on disk; do not remove or edit them.
+**Accept the completed seed-11 MetaBAT2/VAMB pair; do not repeat it.** Return
+`paired-pilot-metabat-vamb-kru6t8dq` passes its SHA256, complete native schedules,
+partition export, paired embedding ID axes, retained binary receipts, and
+independent AMBER/R95 checks. [Observed record](paired-pilot-observed.json) and
+[review](validation.md#seed-11-metabat2vamb-accepted-and-comebin-prepared-2026-09-27)
+record **11.542 minutes / 0.76946 allocated core-hours at 4 vCPU / 12 GB** and
+**1,679,703,225 retained bytes**. Preserve the earlier failed attempt and accepted
+preprocessing/features. Only COMEBin runs next; seeds 23/47 remain unlaunched.
 
-**Retry with the exact same 4-vCPU / 12-GB allocation and a new attempt.** The
-revised driver creates a short private directory under node-local `/tmp` for
-VAMB IPC while writing model/output files to persistent shared storage. Before
-running either full MetaBAT2 or VAMB, it starts the existing pinned VAMB/torch
-prefix and performs a tiny CPU data-loader test: 32 synthetic contigs, 10
-abundance columns, 103 TNF columns, and the native one-worker DataLoader. It
-consumes all batches through PyTorch's multiprocessing tensor queue. This check
-runs first and stops the job on an import, socket or queue failure, so no full
-fit begins without successful IPC evidence. No biological data or model training
-is used by the smoke. Its tmp path is private, under 40 bytes and removed after
-the check; its command, status and streams are retained in the return archive.
+**Start a Terminal job with 8 vCPU / 24 GB RAM.** The previous 2-vCPU COMEBin
+recommendation undercounted its four fixed native DataLoader workers. The revised
+serial plan uses **four PyTorch threads + four loader workers**; clustering uses
+eight native Leiden workers with one-thread native pools. The same seeded
+120-candidate grid and marker selector remain fixed; deterministic HNSW building
+is necessarily serial. More CPUs do not guarantee proportional speedup or equal
+cost. [D007](../../docs/decisions/D007-comebin-resource-envelope.md#pilot-resource-clarification-2026-09-27)
+records the correction and why neither two nor sixteen CPUs is selected now.
 
-The Snakemake DAG is serial on the rented four CPUs. Each MetaBAT2 run receives
-four scheduler threads, `-t 4` and `OMP_NUM_THREADS=4`. VAMB uses native `-p 3`
-(three PyTorch threads) plus its one CPU data-loader worker, filling four CPUs
-without oversubscribing them. The VAMB worker also stops immediately when the
-known AF_UNIX error reaches its stderr, and kills the failed fit's process tree.
-Its native `Epoch:` log lines are recorded; ten minutes without an epoch stops the
-fit with retained logs. Existing native schedules, seed 11, thresholds, clustering,
-full partitions, evaluation and scientific inputs are unchanged.
+This group runs C0 then CT at seed 11, **200 maximum epochs, batch 1024, six views,
+native early stopping**, followed by native clustering/selection and AMBER/R95.
+It retains checkpoints, embeddings with IDs, all 120 candidate partitions, selected
+full labels, marker tables, evaluation, command logs and resource benchmarks.
+Scientific inputs come from the accepted feature/frozen-input manifests, without
+BAM uploads or recomputation. Environments and source checkouts remain persistent
+and unchanged. The code validates source/package identities on entry; no software
+or data download is intended except bootstrap of missing container-level Git.
 
-Provide **30 GB free shared storage** and **2 GB in job-local `/tmp`**. No large
-files are copied and no software or data downloads are expected except a
-container-level Git bootstrap if Git is missing. The driver verifies the accepted
-feature and frozen-input hashes. It does not modify the previous attempt, accepted
-features, BAMs or tool environments. The group stop is **20 allocated core-hours**
-(5 hours at four rented vCPU), including startup; the per-fit cap remains 80 core-
-hours. The timeout is a ceiling, not an expected runtime. Stop and preserve the
-new attempt on any failure. The job logs to a unique terminal file and prints the
-return archive, checksum and attempt path. Upload those two archive files and the
-printed terminal log before any further fit; a successful IPC smoke is not a
-successful scientific pilot.
+Provide **30 GB free shared storage** and **2 GB free node-local `/tmp`**. Neural
+training and clustering use a unique short private `/tmp` directory for IPC;
+results stay in the new shared attempt. Fatal loader errors stop the process tree.
+Training also stops after 30 minutes without an epoch. From epoch three onward,
+project all 200 epochs from measured elapsed time, including fit startup, and stop
+if that projection exceeds **80 allocated core-hours / 10 wall hours per fit**.
+Early-stop savings are not assumed. The separate limits remain **15 core-hours /
+1.875 hours for clustering per condition**, and **200 core-hours / 25 hours for
+the whole pair** including setup. These are ceilings, not a runtime forecast.
+Eight-vCPU throughput has not been measured. The earlier two-vCPU synthetic
+optimizer estimate excluded loaders, native clustering and real-data effects;
+it is insufficient to promise an elapsed time or identical cost.
 
-Upload the revised code archive and adjacent checksum to Home `transfer/`; retain
-`e001-workflow-0fb6955cdc62.tar.gz`. Execution bundle: **e001-code-ac7159f8d1c7**.
-Archive SHA256: `4c02dab73cded1c95a17814984e0f5ea7bed399f3edf7f157ef3f5f1dae0709f`. The archive contains execution commit
-`ac7159f8d1c7`; this documentation pin changes no execution files.
+Upload **BUNDLE_PENDING.tar.gz** and **BUNDLE_PENDING.tar.gz.sha256** to
+`/work/Home/dl_binner/e001/e001-gate0/transfer/`. Retain the existing workflow
+snapshot `e001-workflow-0fb6955cdc62.tar.gz`. Bundle checksum: **SHA_PENDING**.
 
 ```sh
 bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
 DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
-BUNDLE=e001-code-ac7159f8d1c7
+BUNDLE=BUNDLE_PENDING
 CODE="$WORK/$BUNDLE"
 LOG=$(mktemp "$WORK/transfer/e001-pilot-transfer.XXXXXX.log")
 echo "Transfer log: $LOG"
@@ -70,29 +62,33 @@ echo "Transfer log: $LOG"
     sha256sum --check "$BUNDLE.tar.gz.sha256"
     test ! -e "$CODE" && test ! -L "$CODE"
     tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
-    bash "$CODE/scripts/e001_pilot_run.sh" "$WORK" "$DATA" 4 12 metabat-vamb
+    bash "$CODE/scripts/e001_pilot_run.sh" "$WORK" "$DATA" 8 24 comebin
 ) 2>&1 | tee "$LOG"
 SH
 ```
 
-Upload the printed `paired-pilot-metabat-vamb-*-return.tar.gz`, adjacent
-`.sha256`, and `e001-pilot.*.log` (include the transfer log if unpacking failed).
-Do not upload BAMs, feature arrays or model files.
+Return the printed `paired-pilot-comebin-*-return.tar.gz`, its adjacent `.sha256`,
+and `e001-pilot.*.log`. If unpacking fails, return the transfer log. Do not upload
+BAMs, feature arrays or model files. Stop on any failure and retain the attempt;
+review the returned evidence before more seeds or a restart.
 
-After the return is inspected, review the same snapshot's separate COMEBin group
-at **2 vCPU / >=6 GB** before launching it. Its native maximum of 200 epochs,
-batch 1024, six views, early stopping and 120-candidate selection remain fixed.
-The group remains bounded by the existing 80-core-hour per-fit, 15-core-hour
-clustering/selection per-condition and 200-core-hour group ceilings. Its allocation
-and resource measurements do not change with this MetaBAT2/VAMB repair.
+Local validation: 205 tests passed, including independent acceptance of the real
+return, AMBER tamper rejection, native parser/worker-count contracts, production
+worker temp/guard dispatch, cost-projection failure and real Snakemake ordering /
+resume. Local Python lacks PyTorch and native COMEBin clustering dependencies;
+therefore full Linux COMEBin training and the eight-worker cluster execution are
+not locally validated. Worker orchestration tests mock external native programs;
+source/parser checks do not establish their runtime or performance.
 
-Local checks exercise the actual pinned argument parsers and VAMB worker-count
-contract, short-temp and preflight wiring, fatal background-traceback handling,
-process cleanup, epoch progress/stall guard, and real Snakemake ordering/resume.
-The local Python has no PyTorch installation; the actual pinned VAMB/PyTorch
-DataLoader IPC path therefore runs as the first bounded step of the owner job,
-before any full fit. This limitation is recorded explicitly in the validation
-entry for 2026-09-27.
+Following-step prompt:
+
+> Read the current guidance and E001 handoff. Verify and review the uploaded
+> seed-11 COMEBin paired-pilot archive, checksum and terminal log. Accept completed
+> work without rerunning it; check native schedules, embedding/contig axes, all
+> 120 candidate partitions and marker selection, AMBER/R95 and actual resource
+> costs. Resolve failures from retained evidence. Assess the combined seed-11
+> results and affordability before preparing the next documented step. Update
+> the research records, run relevant checks and commit.
 
 ## Completed feature extraction and recovery instructions (historical)
 

@@ -37,13 +37,16 @@ def worker_environment(prefix, tool, cfg):
 
 
 def resources(group, cpus, ram):
-    """Use measured allocations; reject accidental host-sized resource requests."""
+    """Use reviewed allocations and include native loader workers in CPU budgets."""
     require(group in ('metabat-vamb', 'comebin'), 'Unknown pilot resource group')
-    expected = 2 if group == 'comebin' else 4
+    expected = 8 if group == 'comebin' else 4
     require(cpus == expected and ram >= expected * 3,
             f'{group} requires explicit {expected} allocated vCPUs and >= {expected*3} GB RAM')
     return dict(vcpus=cpus, ram_gb=ram,
-                threads=2 if group=='comebin' else 4,
+                threads=cpus,
+                comebin_threads=4 if group=='comebin' else 0,
+                comebin_loader_workers=4 if group=='comebin' else 0,
+                leiden_workers=8 if group=='comebin' else 0,
                 metabat_threads=4 if group=='metabat-vamb' else 0,
                 vamb_threads=3 if group=='metabat-vamb' else 0,
                 vamb_loader_workers=1 if group=='metabat-vamb' else 0,
@@ -88,10 +91,10 @@ def metabat_command(executable, fasta, depth, prefix, threads):
 def short_local_tmpdir():
     """Create a private short path on node-local /tmp for Unix-socket IPC."""
     root = Path('/tmp')
-    require(root.is_dir(), 'Node-local /tmp is required for VAMB IPC')
+    require(root.is_dir(), 'Node-local /tmp is required for native IPC')
     path = Path(tempfile.mkdtemp(prefix='e1p-', dir=root))
     require(len(os.fsencode(str(path))) <= 40,
-            'Short VAMB IPC path exceeds the Unix-socket safety limit')
+            'Short native IPC path exceeds the Unix-socket safety limit')
     return path
 
 
@@ -193,7 +196,7 @@ def native_fit(cfg, tool, condition):
     else:
         import torch
         torch.set_num_interop_threads(1)
-        threads=cfg['vamb_threads'] if tool=='vamb' else cfg['threads']
+        threads=cfg['vamb_threads'] if tool=='vamb' else cfg['comebin_threads']
         args=fit_arguments(tool,feature,native,threads); write(out/'native-command.json',args)
         if tool=='vamb':
             sys.path.insert(0,str(source)); sys.argv=['vamb',*args]
@@ -213,6 +216,9 @@ def native_fit(cfg, tool, condition):
             require((native/'model.pt').is_file(),'VAMB model missing')
         else:
             sys.path.insert(0,str(source/'COMEBin')); sys.argv=['comebin',*args]
+            from train_CLmodel import DATALOADER_WORKERS
+            require(DATALOADER_WORKERS==cfg['comebin_loader_workers']==4, 'COMEBin loader worker count changed')
+            require(threads+DATALOADER_WORKERS==cfg['vcpus'], 'COMEBin CPU budget mismatch')
             runpy.run_path(str(source/'COMEBin/main.py'),run_name='__main__')
             from embedding_bundle import load_embedding_bundle
             bundle=load_embedding_bundle(native/'embeddings.npy')
@@ -251,7 +257,7 @@ def comebin_cluster(cfg, condition):
     count=gen_seed(logger,str(fasta),threads,1001,marker_name='bacar_marker',quarter='2quarter')
     args=SimpleNamespace(contig_file=str(fasta),output_path=str(native),emb_file=str(native/'embeddings.npy'),
          seed_file=str(fasta)+'.bacar_marker.2quarter_lencutoff_1001.seed',contig_len=1001,cluster_num=0,
-         not_l2normaize=False,num_threads=threads,leiden_workers=1,max_edges=100,seed=11,bac_mg_table=None,ar_mg_table=None)
+         not_l2normaize=False,num_threads=threads,leiden_workers=cfg['leiden_workers'],max_edges=100,seed=11,bac_mg_table=None,ar_mg_table=None)
     cluster(logger,args)
     names,rows=validate_leiden_output_set(native/'cluster_res',100,expected_rows=len(ids))
     require(len(names)==120,'Incomplete native candidate grid')
@@ -290,8 +296,8 @@ def evaluate(cfg, tool, condition):
         query=GenomeQuery(tool+'-'+condition,'E001',options,read_metadata((str(predictions),tool))[0])
         query.gold_standard=gold; query.compute_metrics()
         require(int(query.precision_df['total_length'].sum())==result['assigned_bp'],'AMBER assigned base mismatch')
-        query.precision_df.to_csv(out/'amber-per-bin.tsv',sep='\t',index=False)
-        query.recall_df.to_csv(out/'amber-per-genome.tsv',sep='\t',index=False)
+        query.precision_df.to_csv(out/'amber-per-bin.tsv',sep='\t',index=True,index_label='BINID')
+        query.recall_df.to_csv(out/'amber-per-genome.tsv',sep='\t',index=True,index_label='BINID')
     write(out/'evaluation.json',dict(status='completed',tool=tool,condition=condition,seed=11,
           r95=result['r95'],assigned_bp=result['assigned_bp'],amber='filter=0' if assignments else 'empty partition; no AMBER rows',
           assignment_sha256=sha(predictions),source_commit=cfg['source_commit']))
@@ -336,11 +342,13 @@ def descendants(pid):
 
 
 def checked(command, env, out, label, seconds, memory_mb=None, *,
-            fatal_markers=(), progress_pattern=None, stall_seconds=None):
+            fatal_markers=(), progress_pattern=None, stall_seconds=None, projected_steps=None):
     """Capture a bounded child in the workflow group; kill its tree on failure.
 
     Linux uses summed PSS to avoid counting shared DataLoader pages repeatedly;
-    unavailable PSS falls back to conservative RSS.
+    unavailable PSS falls back to conservative RSS. Optional projected_steps
+    stops a full native schedule whose measured epoch rate exceeds its budget,
+    starting after three completed epochs without assuming early-stop savings.
     The outer workflow deadline also kills these children because they never
     create a new session. No process outside the verified child tree is killed.
     """
@@ -388,6 +396,10 @@ def checked(command, env, out, label, seconds, memory_mb=None, *,
                                         if value != record.get('last_native_progress'):
                                             last_progress=time.monotonic()
                                             record['last_native_progress']=value
+                                            if projected_steps and int(value)>=3:
+                                                projected=(last_progress-start)*projected_steps/int(value)
+                                                record['projected_full_schedule_seconds']=projected
+                                                require(projected<=seconds, 'Measured full-schedule projection exceeds fit cost ceiling')
                                             progress_log.write(json.dumps(dict(
                                                 utc=datetime.now(timezone.utc).isoformat(),
                                                 elapsed_seconds=last_progress-start,progress=value))+'\n')
@@ -431,22 +443,19 @@ def worker(cfg, tool, condition):
     root=Path(cfg['root']); prefix=root/'envs'/tool
     env=worker_environment(prefix,tool,cfg)
     helper=CODE/'scripts/e001_pilot.py'
+    local_tmp=None
     try:
         checked([prefix/'bin/python','-I','-S',CODE/'scripts/e001_native_probe.py',prefix,*(['numpy'] if tool=='metabat' else ['numpy','torch'])],env,out,'probe',60)
         checked([prefix/'bin/python','-I','-m','pip','freeze','--all'],env,out,'inventory',60)
         base=[prefix/'bin/python','-I',helper,'--config',cfg['runtime_config'],'--tool',tool,'--condition',condition]
-        if tool=='vamb':
+        if tool in ('vamb','comebin'):
             local_tmp=short_local_tmpdir(); env['TMPDIR']=str(local_tmp)
-        try:
-            checked([*base,'--native','fit'],env,out,'fit',
-                    min(80,cfg['group_core_hours'])*3600/cfg['vcpus'],cfg['worker_mem_mb'],
-                    fatal_markers=('OSError: AF_UNIX path too long',) if tool=='vamb' else (),
-                    progress_pattern=r'Epoch:\s*(\d+)' if tool=='vamb' else None,
-                    stall_seconds=600 if tool=='vamb' else None)
-        finally:
-            if tool=='vamb':
-                shutil.rmtree(local_tmp,ignore_errors=True)
-                env['TMPDIR']=str(Path(cfg['stage'])/'tmp')
+        checked([*base,'--native','fit'],env,out,'fit',
+                min(80,cfg['group_core_hours'])*3600/cfg['vcpus'],cfg['worker_mem_mb'],
+                fatal_markers=('OSError: AF_UNIX path too long','RuntimeError: DataLoader worker','Training failed.') if tool in ('vamb','comebin') else (),
+                progress_pattern=r'Epoch:\s*(\d+)' if tool=='vamb' else r'NN training: epoch=(\d+)/' if tool=='comebin' else None,
+                stall_seconds=600 if tool=='vamb' else 1800 if tool=='comebin' else None,
+                projected_steps=200 if tool=='comebin' else None)
         if tool=='comebin':
             checked([*base,'--native','cluster'],env,out,'cluster',15*3600/cfg['vcpus'],cfg['worker_mem_mb'])
         amber=root/'envs/amber'; amber_env=isolated_env(amber,1); amber_env['TMPDIR']=env['TMPDIR']
@@ -457,6 +466,9 @@ def worker(cfg, tool, condition):
               for p in sorted(out.rglob('*')) if p.is_file()})
     except BaseException:
         write(out/'failure.json',{'traceback':traceback.format_exc()}); raise
+    finally:
+        if local_tmp is not None:
+            shutil.rmtree(local_tmp,ignore_errors=True)
 
 
 def run(root, data, group, cpus, ram, snapshot):

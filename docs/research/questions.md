@@ -1,8 +1,8 @@
 # Questions and Hypotheses
 
-Updated: 2026-09-18
+Updated: 2026-09-27
 
-This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. No hypothesis below has been experimentally tested in this project.
+This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 is under investigation in E001; its avoidability claim is not established.
 
 Question statuses: `open`, `answered`, `deferred`, `superseded`. Hypothesis statuses: `untested`, `testing`, `supported within scope`, `not supported`, `inconclusive`, `abandoned`, `superseded`. A material revision preserves the previous statement and records why it changed; use a new ID if it is a different scientific claim.
 
@@ -19,6 +19,8 @@ Needed to resolve: pinned native configurations, stage-level outputs, appropriat
 2026-09-17: [E001](../../experiments/E001-coverage-thinning/README.md) now specifies the first test, with paired thinning on a fixed public assembly and native stage outputs. The [audit](../evidence/2026-09-17-targeted-audit.md) resolves enough input/normalization questions to implement it. Still open: no performance gap or avoidable loss has been observed.
 
 2026-09-18: the Gate 0 harness and portable fixtures are implemented. Exact native checks are prepared for UCloud, not passed. [D004](../decisions/D004-human-cpu-preflight.md) changes execution choices, not the hypothesis; no scientific gap has been observed.
+
+2026-09-27: the [seed-11 MetaBAT2/VAMB pair](../../experiments/E001-coverage-thinning/paired-pilot-observed.json) is accepted. Thinning decreases MetaBAT2 R95 by 0.24793 but increases VAMB R95 by 0.02586. Native MetaBAT2 support shrinks strongly; this is a stage-localization clue, not proof of avoidable loss. Q001 stays open pending COMEBin, paired replicates and representation/selection diagnostics.
 
 ## Q002
 
@@ -96,11 +98,11 @@ Needed to resolve: connect the target biological use to accessible inputs, recor
 
 **Some avoidable binning errors arise because coverage reliability varies across contigs or samples in ways that existing preprocessing and feature integration do not adequately handle.**
 
-Status: untested. Proposed: 2026-09-16. Scope: a candidate explanation for Q001, not a novelty claim or model specification.
+Status: testing. Proposed: 2026-09-16. Scope: a candidate explanation for Q001, not a novelty claim or model specification.
 
 Motivation: reported coverage dilution and recovery differences in [the thesis](../evidence/2026-09-16-thesis.md). Caveat: absolute depth loss alone is insufficient evidence because normalization can remove scale, and workflow comparisons also change clustering populations. Adaptive weighting and uncertainty modeling already have [prior art](../evidence/2026-09-16-landscape.md).
 
-Discriminating test: hold sequences, truth, sample composition, and clustering conditions fixed while comparing valid coverage inputs with a controlled, characterized distortion; inspect actual post-normalization features. Establish whether a simple reliability treatment changes truth-based recovery at comparable contamination. Check realism separately through mapped or real data. No such experiment has been run.
+Discriminating test: hold sequences, truth, sample composition, and clustering conditions fixed while comparing valid coverage inputs with a controlled, characterized distortion; inspect actual post-normalization features. Establish whether a simple reliability treatment changes truth-based recovery at comparable contamination. Check realism separately through mapped or real data. The first paired development results are recorded below; no reliability intervention has been tested.
 
 Competing explanations: nonidentifiable shared sequence, mapping ambiguity, insufficient sequence signal, a clustering/selection issue, or incorrect baseline configuration.
 
@@ -113,6 +115,8 @@ ambiguous placement, with nearly equal true-origin-compatible counts for the two
 mappers despite different MAPQ scales. [D008](../decisions/D008-mapper-and-first-preprocessing-slice.md)
 retains fixed strobealign evidence for C0/CT. This is a confound to distinguish
 from sampling reliability, not support for H001 or evidence of a novel solution.
+
+2026-09-27: H001 enters **testing** after the first checksum-bound paired fits. The contrasting MetaBAT2/VAMB effects do not support or refute a general reliability mechanism. COMEBin-specific prospective criteria cannot yet be assessed. No method or architecture is selected.
 
 ## Closed and superseded records
 

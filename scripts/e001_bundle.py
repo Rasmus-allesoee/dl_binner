@@ -24,7 +24,7 @@ PATHS = (
     "scripts/e001_preprocess.py",
     "scripts/e001_multisample.py",
     "scripts/e001_features.py",
-    "scripts/e001_pilot.py", "scripts/e001_pilot_run.sh", "scripts/e001_review_features.py",
+    "scripts/e001_pilot.py", "scripts/e001_pilot_run.sh", "scripts/e001_review_features.py", "scripts/e001_review_pilot.py",
     "scripts/e001_native_probe.py",
     "scripts/e001_features_run.sh",
     "scripts/e001_review_multisample.py",

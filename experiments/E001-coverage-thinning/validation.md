@@ -1,6 +1,89 @@
 # E001 Gate 0 Validation
 
-Date: 2026-09-18; appended through 2026-09-24. These are software checks, not E001 scientific attempts or biological results.
+Date: 2026-09-18; appended through 2026-09-27. Software checks and reviewed scientific attempts are identified separately below.
+
+## Seed-11 MetaBAT2/VAMB accepted and COMEBin prepared, 2026-09-27
+
+The [independent reviewer](../../scripts/e001_review_pilot.py) accepts
+`paired-pilot-metabat-vamb-kru6t8dq-return.tar.gz` with SHA256
+`e1bf4b7243abd82debeb564943445d3169366421786adac2e21bf119a74d5d68` and terminal
+`e001-pilot.PkrRsg.log` SHA256
+`c614aa8cdb04f0819e3e9cd53d01c21e563d2ac81ce89a736f15190835369ee1`.
+[Observed evidence](paired-pilot-observed.json) pins execution commit
+`ac7159f8d1c7c4e94db62f301c7714d101be9214`, every returned retained-member hash,
+commands, source versions, resource measurements and per-condition results.
+The archive is successful, all four completion receipts agree, and all native
+commands exited zero. Preserve and accept it without another fit.
+
+Both VAMB conditions ran exactly epochs 1–300, batch 256 with native batchsteps
+25/75/150/225, 512/512 hidden dimensions, 32 latent dimensions, ten samples and
+seed 11 on CPU. Their embedding IDs cover the same 22,594 contigs. Native code
+validated finite embedding rows and model existence; hashes/sizes for latent.npz
+and model.pt are retained. These binaries remain on UCloud and were **not read
+locally**. Complete native assignments equal the CAMI exports with no duplicate
+or unknown IDs. MetaBAT2 reports four threads and uses -t 4. Missing/cluster-zero
+MetaBAT IDs remain unassigned in the frozen 817,438,232-bp denominator.
+
+| Tool | C0 R95 | CT R95 | CT minus C0 | Assigned contigs C0 / CT |
+| --- | ---: | ---: | ---: | ---: |
+| MetaBAT2 | 0.442944 | 0.195018 | -0.247926 | 19,193 / 1,827 |
+| VAMB | 0.461772 | 0.487635 | +0.025863 | 22,594 / 22,594 |
+
+R95 recomputes exactly for every genome on the frozen 224-genome population.
+AMBER bin totals, winning origins, purity, denominators and per-genome recovery
+independently match the full frozen 238-origin truth and unfiltered partitions.
+The historical exporter omitted its BINID index in both AMBER tables; complete
+numeric row multisets and genome identities are still auditable from retained
+native partitions. This is an export limitation, not an invalid score. The next
+export preserves BINID. No rerun is needed to establish existing metric values.
+
+MetaBAT's emitted matrix contains 22,432 C0 versus 1,949 CT IDs; respectively
+162 and 20,645 frozen IDs are omitted, plus 3,239 / 122 explicit zero labels.
+Thus native support filtering is a prominent stage-level observation, not proof
+that learned representation failed. VAMB's small gain further prevents a general
+loss claim from this seed. COMEBin, later seeds and representation/selection
+analysis remain open; no scientific thresholds have changed after seeing scores.
+
+Actual driver time is **692.5138 s / 11.5419 min**, costing **0.7694598 allocated
+core-hours at 4 vCPU / 12 GB**. Retained attempt storage is **1,679,703,225 bytes**;
+this excludes external accepted inputs. Cost excludes return packaging and
+outside-driver idle time. MetaBAT C0/CT rule CPU-time/wall ratios are **2.33 / 0.87**;
+VAMB C0/CT are **2.39 / 2.49**. Four requested CPUs are not four continuously busy
+CPUs: MetaBAT's small CT workload remains mostly serial. Sampled fit-tree peak
+PSS is approximately 4,718 / 783 MB for MetaBAT and 1,108 / 1,120 MB for VAMB.
+The failed first pilot remains a separate **1.5385 core-hour** cost; the known
+failed+successful MetaBAT2/VAMB attempts total **2.30796 core-hours**.
+
+The next COMEBin resource contract is amended in [D007](../../docs/decisions/D007-comebin-resource-envelope.md#pilot-resource-clarification-2026-09-27)
+and the [plan](paired-pilot-plan.json): **8 vCPU / 24 GB**, four PyTorch threads +
+four native loader workers, serial conditions, eight native Leiden candidate
+workers. The former two-vCPU plan undercounted workers. Short IPC paths and fatal
+loader handling now cover COMEBin as well. Native schedules, 120 candidates and
+marker selection are unchanged. Full-schedule cost is checked starting after
+three epochs; existing fit/group ceilings stay fixed. Native COMEBin scalability
+and full training remain unmeasured, so no equal-cost speedup is claimed.
+
+**Local checks:** 205 tests passed, including the returned archive audit, exact
+R95 recalculation and independent AMBER checks, corrupted-checksum and table
+rejection, actual pinned parser / worker-count contracts, production worker
+short-temp cleanup and stop-before-cluster behavior, real child-process cost
+projection termination and real Snakemake execution/resume. External native
+training/clustering is mocked only in orchestration tests; no local PyTorch or
+COMEBin clustering runtime is installed. These checks do not establish native
+Linux full-fit readiness or eight-worker clustering performance. Documentation,
+Python compilation, owner-shell syntax and transfer checks are recorded with the
+bundle handoff. An initial sandbox-only Snakemake attempt hit macOS sysctl
+permission limits; the complete suite passed with that local restriction lifted.
+
+Reproduce the acceptance without native execution:
+
+```sh
+.venv/bin/python scripts/e001_review_pilot.py \
+  agent_context/paired-pilot-metabat-vamb-kru6t8dq-return.tar.gz \
+  agent_context/paired-pilot-metabat-vamb-kru6t8dq-return.tar.gz.sha256 \
+  agent_context/e001-pilot.PkrRsg.log artifacts/e001-population-reviewed \
+  /tmp/e001-paired-pilot-review.json
+```
 
 ## Recovery-path defect and validation correction, 2026-09-25
 

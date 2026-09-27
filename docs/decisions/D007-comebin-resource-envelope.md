@@ -15,6 +15,28 @@ Keep COMEBin, restore the original 80 limit, and proceed with mapper/preprocessi
 feasibility. Actual pilot overhead still determines execution authorization;
 no extra optimizer preflight or assumption of linear speedup is needed.
 
+## Pilot resource clarification, 2026-09-27
+
+The two-vCPU allocation is a historical measurement, not a preferred full-pilot
+configuration. Source inspection confirms COMEBin starts **four fixed native
+DataLoader workers** in addition to its requested PyTorch threads. The prepared
+2-thread/2-vCPU plan therefore undercounted processes. Use **8 vCPU / 24 GB** for
+the first native pair: four compute threads plus four loader workers, serial C0
+then CT, with native BLAS/inter-op pools capped at one. Clustering can run eight
+independent native Leiden candidates while retaining the same seeded 120-grid;
+seeded HNSW construction remains serial for reproducibility.
+
+This is a resource correction after MetaBAT2/VAMB outcomes were visible, before
+any COMEBin result; it changes no scientific settings or selection criteria.
+More CPUs preserve cost only with proportional speedup. Eight-vCPU scaling is
+unmeasured; neither the old 23.946-hour estimate nor a linear extrapolation is
+claimed as current performance. Starting after epoch three, project all 200
+epochs from observed elapsed time (including startup); stop if the projection
+exceeds 80 allocated core-hours. Keep the 80 per-fit, 15 per-condition clustering
+and 200 group ceilings. Native early stopping is allowed but not assumed in the
+projection. Four vCPU would not budget native workers plus compute; sixteen
+would increase unmeasured scaling risk. Inspect this pair before further seeds.
+
 ## Original decision (superseded accounting)
 
 The accepted [COMEBin measurement](../../experiments/E001-coverage-thinning/native-comebin-observed.json)

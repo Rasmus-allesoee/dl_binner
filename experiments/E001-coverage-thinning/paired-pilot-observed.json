@@ -1,0 +1,423 @@
+{
+  "status": "accepted",
+  "directory": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/paired-pilot-metabat-vamb-kru6t8dq",
+  "source_commit": "ac7159f8d1c7c4e94db62f301c7714d101be9214",
+  "resources": {
+    "exit_code": 0,
+    "vcpus": 4,
+    "ram_gb": 12.0,
+    "threads": 4,
+    "metabat_threads": 4,
+    "vamb_threads": 3,
+    "vamb_loader_workers": 1,
+    "worker_mem_mb": 11250,
+    "group_core_hours": 20,
+    "tools": [
+      "metabat",
+      "vamb"
+    ],
+    "elapsed_seconds": 692.5138059169985,
+    "allocated_core_hours": 0.7694597843522206,
+    "retained_bytes": 1679703225,
+    "cost_scope": "Driver wall time including setup; excludes packaging and outside-driver idle time"
+  },
+  "results": {
+    "metabat": {
+      "C0": {
+        "r95": 0.4429439797670484,
+        "r95_base_weighted": 0.4561523265143686,
+        "assigned_contigs": 19193,
+        "unassigned_contigs": 3401,
+        "assigned_bp": 799502501,
+        "unassigned_bp": 17935731,
+        "inclusive_recovered_counts": {
+          "0.5": 102,
+          "0.9": 86
+        },
+        "assignment_sha256": "aa9b0d6b4dd9b21f8a689384e0fb6d47919202ba752c12b4b59b2562879a0be5",
+        "amber": {
+          "bins": 175,
+          "genomes": 238,
+          "assigned_bp": 799502501,
+          "weighted_purity": 0.6666939719804579,
+          "mean_genome_recall": 0.8989412071570997,
+          "bin_ids_in_return": false
+        },
+        "embedding": null,
+        "native_support": {
+          "matrix_rows": 22432,
+          "explicit_zero_rows": 3239,
+          "filtered_or_omitted_contigs": 162,
+          "filtered_or_omitted_bp": 684566,
+          "scope": "Every missing or cluster-zero contig remains unassigned in the frozen denominator"
+        },
+        "source": {
+          "tool": "metabat",
+          "commit": "8eb96023ef627d1955c05e3aca348c84b8757914",
+          "source": "/work/Home/dl_binner/e001/e001-gate0/sources/metabat"
+        },
+        "rule_wall_seconds": 60.05,
+        "rule_cpu_seconds": 139.64,
+        "average_rule_cpus": 2.3253955037468774,
+        "fit": {
+          "argv": [
+            "/work/Home/dl_binner/e001/e001-gate0/envs/metabat/bin/python",
+            "-I",
+            "/work/Home/dl_binner/e001/e001-gate0/e001-code-ac7159f8d1c7/scripts/e001_pilot.py",
+            "--config",
+            "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/paired-pilot-metabat-vamb-kru6t8dq/runtime.json",
+            "--tool",
+            "metabat",
+            "--condition",
+            "C0",
+            "--native",
+            "fit"
+          ],
+          "timeout_seconds": 18000.0,
+          "memory_limit_mb": 11250,
+          "peak_tree_memory_mb": 4718.380859375,
+          "memory_metric": "sum PSS on Linux; RSS fallback",
+          "fatal_stderr_markers": [],
+          "progress_pattern": null,
+          "stall_seconds": null,
+          "pid": 667,
+          "returncode": 0,
+          "elapsed_seconds": 55.31918575800955
+        }
+      },
+      "CT": {
+        "r95": 0.19501798447173826,
+        "r95_base_weighted": 0.2019564705519513,
+        "assigned_contigs": 1827,
+        "unassigned_contigs": 20767,
+        "assigned_bp": 277806492,
+        "unassigned_bp": 539631740,
+        "inclusive_recovered_counts": {
+          "0.5": 44,
+          "0.9": 43
+        },
+        "assignment_sha256": "df41206851f71b91143e532fb44c787b93b0b2ee42e5ffece75e92ba46489b88",
+        "amber": {
+          "bins": 58,
+          "genomes": 238,
+          "assigned_bp": 277806492,
+          "weighted_purity": 0.7546683970221978,
+          "mean_genome_recall": 0.30212329536624105,
+          "bin_ids_in_return": false
+        },
+        "embedding": null,
+        "native_support": {
+          "matrix_rows": 1949,
+          "explicit_zero_rows": 122,
+          "filtered_or_omitted_contigs": 20645,
+          "filtered_or_omitted_bp": 538628213,
+          "scope": "Every missing or cluster-zero contig remains unassigned in the frozen denominator"
+        },
+        "source": {
+          "tool": "metabat",
+          "commit": "8eb96023ef627d1955c05e3aca348c84b8757914",
+          "source": "/work/Home/dl_binner/e001/e001-gate0/sources/metabat"
+        },
+        "rule_wall_seconds": 13.18,
+        "rule_cpu_seconds": 11.51,
+        "average_rule_cpus": 0.8732928679817906,
+        "fit": {
+          "argv": [
+            "/work/Home/dl_binner/e001/e001-gate0/envs/metabat/bin/python",
+            "-I",
+            "/work/Home/dl_binner/e001/e001-gate0/e001-code-ac7159f8d1c7/scripts/e001_pilot.py",
+            "--config",
+            "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/paired-pilot-metabat-vamb-kru6t8dq/runtime.json",
+            "--tool",
+            "metabat",
+            "--condition",
+            "CT",
+            "--native",
+            "fit"
+          ],
+          "timeout_seconds": 18000.0,
+          "memory_limit_mb": 11250,
+          "peak_tree_memory_mb": 782.9765625,
+          "memory_metric": "sum PSS on Linux; RSS fallback",
+          "fatal_stderr_markers": [],
+          "progress_pattern": null,
+          "stall_seconds": null,
+          "pid": 916,
+          "returncode": 0,
+          "elapsed_seconds": 9.57060856395401
+        }
+      }
+    },
+    "vamb": {
+      "C0": {
+        "r95": 0.4617719588373803,
+        "r95_base_weighted": 0.47027809038698565,
+        "assigned_contigs": 22594,
+        "unassigned_contigs": 0,
+        "assigned_bp": 817438232,
+        "unassigned_bp": 0,
+        "inclusive_recovered_counts": {
+          "0.5": 105,
+          "0.9": 97
+        },
+        "assignment_sha256": "90631a9ced046d5b04210dfbb7830e7ba0b766fbb58464a940d45dda82f31cd6",
+        "amber": {
+          "bins": 694,
+          "genomes": 238,
+          "assigned_bp": 817438232,
+          "weighted_purity": 0.6538291996599445,
+          "mean_genome_recall": 0.9604294416446663,
+          "bin_ids_in_return": false
+        },
+        "embedding": {
+          "latent.npz": {
+            "bytes": 1825590,
+            "sha256": "7ee1ee8913403d2e48f1717b36ec7b4466b7306ccd9263d723fb3b7f6d755489"
+          },
+          "model.pt": {
+            "bytes": 2746678,
+            "sha256": "91affcbc6ce198e83cbbf2f208b56699af6289d207cefcd880415c11ab6d1b80"
+          },
+          "embedding-ids.json": {
+            "bytes": 298754,
+            "sha256": "17201a932b8ac515583de256cfb1da7b6b3d8161634a350f0eb99055670f077a"
+          },
+          "rows": 22594,
+          "dimensions": 32,
+          "scope": "Native finite/row validation and retained hash receipts; binary arrays/models remain on UCloud"
+        },
+        "native_support": null,
+        "source": {
+          "tool": "vamb",
+          "commit": "b146fb610921aef1da8aed5d739f1ce80d21b33a",
+          "source": "/work/Home/dl_binner/e001/e001-gate0/sources/vamb"
+        },
+        "rule_wall_seconds": 307.85,
+        "rule_cpu_seconds": 737.15,
+        "average_rule_cpus": 2.394510313464349,
+        "fit": {
+          "argv": [
+            "/work/Home/dl_binner/e001/e001-gate0/envs/vamb/bin/python",
+            "-I",
+            "/work/Home/dl_binner/e001/e001-gate0/e001-code-ac7159f8d1c7/scripts/e001_pilot.py",
+            "--config",
+            "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/paired-pilot-metabat-vamb-kru6t8dq/runtime.json",
+            "--tool",
+            "vamb",
+            "--condition",
+            "C0",
+            "--native",
+            "fit"
+          ],
+          "timeout_seconds": 18000.0,
+          "memory_limit_mb": 11250,
+          "peak_tree_memory_mb": 1108.3388671875,
+          "memory_metric": "sum PSS on Linux; RSS fallback",
+          "fatal_stderr_markers": [
+            "OSError: AF_UNIX path too long"
+          ],
+          "progress_pattern": "Epoch:\\s*(\\d+)",
+          "stall_seconds": 600,
+          "pid": 998,
+          "last_native_progress": "300",
+          "returncode": 0,
+          "elapsed_seconds": 303.70098919211887
+        }
+      },
+      "CT": {
+        "r95": 0.4876351616315997,
+        "r95_base_weighted": 0.5059539550606573,
+        "assigned_contigs": 22594,
+        "unassigned_contigs": 0,
+        "assigned_bp": 817438232,
+        "unassigned_bp": 0,
+        "inclusive_recovered_counts": {
+          "0.5": 111,
+          "0.9": 101
+        },
+        "assignment_sha256": "1915cf01992bad255b575a8213d6a582a3b3db075c195dbdf7399e8a137e9977",
+        "amber": {
+          "bins": 1552,
+          "genomes": 238,
+          "assigned_bp": 817438232,
+          "weighted_purity": 0.6744956088621018,
+          "mean_genome_recall": 0.9306783500275723,
+          "bin_ids_in_return": false
+        },
+        "embedding": {
+          "latent.npz": {
+            "bytes": 1826958,
+            "sha256": "a2eba70fc2a432ea72713ea7265f22b247e77921451290dd687dc80546cb1140"
+          },
+          "model.pt": {
+            "bytes": 2746678,
+            "sha256": "19ee5231ab89070c1e921edce6f653a71375addb0b44ec3397819061a51e9ca7"
+          },
+          "embedding-ids.json": {
+            "bytes": 298754,
+            "sha256": "17201a932b8ac515583de256cfb1da7b6b3d8161634a350f0eb99055670f077a"
+          },
+          "rows": 22594,
+          "dimensions": 32,
+          "scope": "Native finite/row validation and retained hash receipts; binary arrays/models remain on UCloud"
+        },
+        "native_support": null,
+        "source": {
+          "tool": "vamb",
+          "commit": "b146fb610921aef1da8aed5d739f1ce80d21b33a",
+          "source": "/work/Home/dl_binner/e001/e001-gate0/sources/vamb"
+        },
+        "rule_wall_seconds": 294.32,
+        "rule_cpu_seconds": 733.11,
+        "average_rule_cpus": 2.4908602881217723,
+        "fit": {
+          "argv": [
+            "/work/Home/dl_binner/e001/e001-gate0/envs/vamb/bin/python",
+            "-I",
+            "/work/Home/dl_binner/e001/e001-gate0/e001-code-ac7159f8d1c7/scripts/e001_pilot.py",
+            "--config",
+            "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/paired-pilot-metabat-vamb-kru6t8dq/runtime.json",
+            "--tool",
+            "vamb",
+            "--condition",
+            "CT",
+            "--native",
+            "fit"
+          ],
+          "timeout_seconds": 18000.0,
+          "memory_limit_mb": 11250,
+          "peak_tree_memory_mb": 1119.673828125,
+          "memory_metric": "sum PSS on Linux; RSS fallback",
+          "fatal_stderr_markers": [
+            "OSError: AF_UNIX path too long"
+          ],
+          "progress_pattern": "Epoch:\\s*(\\d+)",
+          "stall_seconds": 600,
+          "pid": 3856,
+          "last_native_progress": "300",
+          "returncode": 0,
+          "elapsed_seconds": 289.1491421801038
+        }
+      }
+    }
+  },
+  "delta_ct_minus_c0": {
+    "metabat": -0.24792599529531015,
+    "vamb": 0.025863202794219387
+  },
+  "scope": "Seed-11 development pair only; COMEBin and seeds 23/47 remain pending",
+  "verified_return_members": {
+    "metabat/C0/amber-per-bin.tsv": "91177313993c88e79dd1fe81c917aa9233593c3c7e5bef222fb9214470f5cb07",
+    "metabat/C0/amber-per-genome.tsv": "137e003670357dfef8d379cc2c090322d8d129db7fa819ef1eee5ebb285819b8",
+    "metabat/C0/amber-probe.command.json": "c70efb900244ea789b101be12b0826f06172b5f6bee40b4f515c80f988c3fe50",
+    "metabat/C0/amber-probe.stderr": "687a83d86d588cb06c04d192977c5683db7e8c58b0cf586fb5c2eace547ad55c",
+    "metabat/C0/amber-probe.stdout": "9ff44bee73b0a6ace1c6d82f4e2df83b6b99d7afe1417f3df4491307b513cb16",
+    "metabat/C0/complete.json": "29a354d74c014f6a833a91f8629d6511487d3cce0a98c686325479ebe5168fdf",
+    "metabat/C0/evaluate.command.json": "acefc7c08e953af4fc62fd452cb2c2f1ae611628b9722c53e6ed0f1ef4a1eeee",
+    "metabat/C0/evaluate.stderr": "a1d9931029e5bda5f81ab42472a9805d4f5a4ab63dcff5729792f0c657a0ea26",
+    "metabat/C0/evaluate.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "metabat/C0/evaluation.json": "29a354d74c014f6a833a91f8629d6511487d3cce0a98c686325479ebe5168fdf",
+    "metabat/C0/fit.command.json": "01f3033feb8e769f0c5b8527762f55b16c3b71024cc741aa72f34735292d87ce",
+    "metabat/C0/fit.json": "938015fb60e4898c11de5acf55329652d987b5905b9c6a06f443084e0c1ab6d6",
+    "metabat/C0/fit.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "metabat/C0/fit.stdout": "6f9a53f13db1bc3d38757f438e8deb56cc4104dc04b89212405965a7153fb8af",
+    "metabat/C0/inventory.command.json": "b41cf2d581b304797c2e2143a6d98fca04d390ace8007027b2fabd46091afb7f",
+    "metabat/C0/inventory.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "metabat/C0/inventory.stdout": "921e70f352940e5ff7bc600d3de39ea55b9df532070bb44b357e8350aff10766",
+    "metabat/C0/native/bins.BinInfo.txt": "20197c287b63cddb60cee5ac9ed82b571bc1ee3d43b678fc225f1fd93f1abf64",
+    "metabat/C0/native/bins.BinMembers.txt": "5b8020c20d968b57f8e515e262ff30a47634c469a58542f20c17b20cb8b9d693",
+    "metabat/C0/native/bins.MemberMatrix.txt": "6614afe8466d3c94461407e087a7fd25239f4458839ae9e19ceb329519e0b086",
+    "metabat/C0/native-command.json": "9aacdebb4d4179010a0c718424becb5b485da95c90c311f3789d2c971b6b6b61",
+    "metabat/C0/predictions.tsv": "aa9b0d6b4dd9b21f8a689384e0fb6d47919202ba752c12b4b59b2562879a0be5",
+    "metabat/C0/probe.command.json": "cd70c40cc29ff973237db8a8f421ccdf9b2855cbb4546b9921b298dfff18f590",
+    "metabat/C0/probe.stderr": "7b6fa01ddd1d5e9b6426f926c9bd1d3edfbc34b115e0f71d145ad6b60ac6e1ef",
+    "metabat/C0/probe.stdout": "9ff44bee73b0a6ace1c6d82f4e2df83b6b99d7afe1417f3df4491307b513cb16",
+    "metabat/C0/r95.json": "9aa9791871897fbc4dffa449f38913e0b37d9afe00ba26e2771741bfae1f507c",
+    "metabat/CT/amber-per-bin.tsv": "4dfd719ecd86575eaba11c7673bbfd6ea5544668b198f09c73dca65d57335ec2",
+    "metabat/CT/amber-per-genome.tsv": "655e8697ef887c24333b1113aa1a2113b6a6dc02d5066ebbe6a719810385a346",
+    "metabat/CT/amber-probe.command.json": "888a1dd4a188db1ec0ea0d534f98ac9f14bc3a5942782db49ab9a49ab5b0b466",
+    "metabat/CT/amber-probe.stderr": "687a83d86d588cb06c04d192977c5683db7e8c58b0cf586fb5c2eace547ad55c",
+    "metabat/CT/amber-probe.stdout": "9ff44bee73b0a6ace1c6d82f4e2df83b6b99d7afe1417f3df4491307b513cb16",
+    "metabat/CT/complete.json": "147248da2b5383729a5d260ee1917f275850eb3cdd20249b9b51df39ec0c3f1f",
+    "metabat/CT/evaluate.command.json": "af87d111e4e8dc9e28aadc229e29b9db481d4fb7faa0aa477d1c46308ccb9192",
+    "metabat/CT/evaluate.stderr": "5219c70f6acc2f414e2a204042c7722ae4cf01d267ae8f61f6f17762e57fb5e3",
+    "metabat/CT/evaluate.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "metabat/CT/evaluation.json": "147248da2b5383729a5d260ee1917f275850eb3cdd20249b9b51df39ec0c3f1f",
+    "metabat/CT/fit.command.json": "dcaaa33954b828d46173f497513989ec3c7caf9cb3b53b886f85f8722e414ba8",
+    "metabat/CT/fit.json": "e4d55add42e52081f02ca2ffe948169f6b33b8a44734593db50d2c67ec9eeef2",
+    "metabat/CT/fit.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "metabat/CT/fit.stdout": "a73ce8178fda96db244ed88caab14ae187fb901fd7a43a8d2a059e28645e62c3",
+    "metabat/CT/inventory.command.json": "997fb529768cb365a6a934baf046e3d85adab213b36f21e446b620898304e9b5",
+    "metabat/CT/inventory.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "metabat/CT/inventory.stdout": "921e70f352940e5ff7bc600d3de39ea55b9df532070bb44b357e8350aff10766",
+    "metabat/CT/native/bins.BinInfo.txt": "303bb02d295e19bdd5ea891b2ea0532ac682840afb6bb956939d229acbafa7c5",
+    "metabat/CT/native/bins.BinMembers.txt": "22e158f18b9e0e3e7140072b0bb5669ee66ae235a90c8dc5ce2ec2315742bdaf",
+    "metabat/CT/native/bins.MemberMatrix.txt": "57ab5d27d05915b200199308c990e2d202c54d1f096c0a0c834fc163c30acb57",
+    "metabat/CT/native-command.json": "3acd8287c9b9a2157b3a498c7e5877e684690c9c901247ff8f63f5c79ed06067",
+    "metabat/CT/predictions.tsv": "df41206851f71b91143e532fb44c787b93b0b2ee42e5ffece75e92ba46489b88",
+    "metabat/CT/probe.command.json": "fc3dd587222e2239c5cedefad52d2c95fd7b7e57eb93711dedd8a54f1e9c306f",
+    "metabat/CT/probe.stderr": "7b6fa01ddd1d5e9b6426f926c9bd1d3edfbc34b115e0f71d145ad6b60ac6e1ef",
+    "metabat/CT/probe.stdout": "9ff44bee73b0a6ace1c6d82f4e2df83b6b99d7afe1417f3df4491307b513cb16",
+    "metabat/CT/r95.json": "f77cfd875ad73c142001e4b2de7a59d31d4f52d472ac0bd95cf26fb6116d8c64",
+    "vamb/C0/amber-per-bin.tsv": "09d9bd286ee10b2f74d43a7f2ca63a9bd26688fd5c6f80abc108ec88c733a73c",
+    "vamb/C0/amber-per-genome.tsv": "d1c922cbe18fecc9e80a042d409b95b9220699c2ad86e152fab1b5d390ea68a2",
+    "vamb/C0/amber-probe.command.json": "c0a74b7bc2b501318bd9ac15d82c05258195594752c0255e7882d41c63a9e943",
+    "vamb/C0/amber-probe.stderr": "687a83d86d588cb06c04d192977c5683db7e8c58b0cf586fb5c2eace547ad55c",
+    "vamb/C0/amber-probe.stdout": "9ff44bee73b0a6ace1c6d82f4e2df83b6b99d7afe1417f3df4491307b513cb16",
+    "vamb/C0/complete.json": "290b843d3bccc9356d76a3c35153e08a231a70a0769d53f8ebfa03a2fb00530b",
+    "vamb/C0/evaluate.command.json": "df924e6eade7a87fa0be06219a41eaf3dc6966a2f542e55eb198695c2730ea31",
+    "vamb/C0/evaluate.stderr": "e8149a13dffd441ab880c3c3745405c7701931fd8e79af5ea161bf9a7679a918",
+    "vamb/C0/evaluate.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vamb/C0/evaluation.json": "290b843d3bccc9356d76a3c35153e08a231a70a0769d53f8ebfa03a2fb00530b",
+    "vamb/C0/fit.command.json": "8b1d8cfd4fcb7ab4e7026f65bafb869edae74d43aaac5ddfe481b641b5b68286",
+    "vamb/C0/fit.json": "2f1185fad0ef67bac8b0e131b27741a6cecd337ba1052ec2ecf8e5659643ccda",
+    "vamb/C0/fit.progress.log": "635a2a71b0b0fe2989b7031b494fb7c1c00b8d9da0ef8f341b22bdb504e7a1bb",
+    "vamb/C0/fit.stderr": "ff4a6b4019b0f48c28757a97731c85993f202d2af4c9543c8ea4f01456386fd7",
+    "vamb/C0/fit.stdout": "01e86668f8d51ca431b4890f54bab9b7264aba08b7798560b0f48c50961c508d",
+    "vamb/C0/inventory.command.json": "eee5eb9dd7214fb6460292a9539e7cc8925102efc3a34796b21f95234bb7c738",
+    "vamb/C0/inventory.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vamb/C0/inventory.stdout": "97760da0712fc77baaa822ab062e61b36a1057f958945c25af7ec226a201fad4",
+    "vamb/C0/native/embedding-ids.json": "17201a932b8ac515583de256cfb1da7b6b3d8161634a350f0eb99055670f077a",
+    "vamb/C0/native/log.txt": "ff4a6b4019b0f48c28757a97731c85993f202d2af4c9543c8ea4f01456386fd7",
+    "vamb/C0/native/vae_clusters_metadata.tsv": "352c1b52c679c82d9352d55ef6e7773dfd3a9b1144c3c226d6fd3f43acf02adf",
+    "vamb/C0/native/vae_clusters_unsplit.tsv": "33a73a01460324074fd07c1198b0dbfc99c5cb43cc7b27680fe03176d282e946",
+    "vamb/C0/native-command.json": "0c7c3123350ec9f5583b6b0e9a61e26dab883be0cde856d8b7ab73f96290fc97",
+    "vamb/C0/predictions.tsv": "90631a9ced046d5b04210dfbb7830e7ba0b766fbb58464a940d45dda82f31cd6",
+    "vamb/C0/probe.command.json": "2a58759ec9901d0457cf52b6f79b1dbf2e106aa7e7c5f294a9316c531d5ba3cd",
+    "vamb/C0/probe.stderr": "43bb871c75f68202acaf146fb73aaf66d5f6a2e1b2447dbb24bdd175876b05f0",
+    "vamb/C0/probe.stdout": "9ff44bee73b0a6ace1c6d82f4e2df83b6b99d7afe1417f3df4491307b513cb16",
+    "vamb/C0/r95.json": "fe979f5b914b0f5a29ba4e6c1a3902a76a952dace5deed0d05c1eeca9ebe3087",
+    "vamb/CT/amber-per-bin.tsv": "8c612647994cfeb88b9b9fd5cea99083506daa83f65df4fdfb00fca8ce157add",
+    "vamb/CT/amber-per-genome.tsv": "ac0f9e59e11f7d986192c780713bc5ad5273216d10e9c21e32c2b1b1829a0b39",
+    "vamb/CT/amber-probe.command.json": "721d0e95646018d2a868f2f2fc4605a0c735b9d3751abbafe541280a995ee52e",
+    "vamb/CT/amber-probe.stderr": "687a83d86d588cb06c04d192977c5683db7e8c58b0cf586fb5c2eace547ad55c",
+    "vamb/CT/amber-probe.stdout": "9ff44bee73b0a6ace1c6d82f4e2df83b6b99d7afe1417f3df4491307b513cb16",
+    "vamb/CT/complete.json": "8259b5d9b1e27fe046b9e32b6a8e075f0e3666fdd949fe6a6ca4af456cb6c7c6",
+    "vamb/CT/evaluate.command.json": "51a2057970d49ee59ac32a77321c291d251cffae0d94011fb22f7147af9fccd3",
+    "vamb/CT/evaluate.stderr": "e8bb2adbd0468e69eb2fd3aa4a0c3fa074d8593283100c57dcc34b85d80cfc90",
+    "vamb/CT/evaluate.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vamb/CT/evaluation.json": "8259b5d9b1e27fe046b9e32b6a8e075f0e3666fdd949fe6a6ca4af456cb6c7c6",
+    "vamb/CT/fit.command.json": "3bbceb1c034098e059ec34e67b5ee9f84f62e042314ab4df094b41c0347fcd75",
+    "vamb/CT/fit.json": "5559d818fcd3dc720e8e5206c5f00f617342971cb34c1b8aa3db6a9f2681a39b",
+    "vamb/CT/fit.progress.log": "fe3a0ee939013338677fe3a9f81a23481035b957f67bde84afa66135e75bdae2",
+    "vamb/CT/fit.stderr": "297023a06633bb64188c79ed2762e6f93108655da4fe337c2cd2dc2acfdb1d45",
+    "vamb/CT/fit.stdout": "01e86668f8d51ca431b4890f54bab9b7264aba08b7798560b0f48c50961c508d",
+    "vamb/CT/inventory.command.json": "0a6bdc69ed0261ccb2914b0504b64208129402bb536fafec03df909128eb839f",
+    "vamb/CT/inventory.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vamb/CT/inventory.stdout": "97760da0712fc77baaa822ab062e61b36a1057f958945c25af7ec226a201fad4",
+    "vamb/CT/native/embedding-ids.json": "17201a932b8ac515583de256cfb1da7b6b3d8161634a350f0eb99055670f077a",
+    "vamb/CT/native/log.txt": "297023a06633bb64188c79ed2762e6f93108655da4fe337c2cd2dc2acfdb1d45",
+    "vamb/CT/native/vae_clusters_metadata.tsv": "f8cf49493d08c9c4c9af57b9a1b0111dca774d8ccc4365ce3d89297368c71d49",
+    "vamb/CT/native/vae_clusters_unsplit.tsv": "6629cbda0843755e0aa885828ceab9902ed3b92909b2dcb92cc255df980adbcd",
+    "vamb/CT/native-command.json": "1deaeba4e6ff0af7e630ddef51358e4c2cb3521092cc4be81b951d36bf3c7c24",
+    "vamb/CT/predictions.tsv": "1915cf01992bad255b575a8213d6a582a3b3db075c195dbdf7399e8a137e9977",
+    "vamb/CT/probe.command.json": "e50c357efa3a8b046a7036bae61d64334e8312bd373985f29867b729afb4154a",
+    "vamb/CT/probe.stderr": "43bb871c75f68202acaf146fb73aaf66d5f6a2e1b2447dbb24bdd175876b05f0",
+    "vamb/CT/probe.stdout": "9ff44bee73b0a6ace1c6d82f4e2df83b6b99d7afe1417f3df4491307b513cb16",
+    "vamb/CT/r95.json": "c2f70f67daeeaa545d7927fc16ca7786c56449255c6a61d798f54fa68e2e6fb6"
+  },
+  "archive": "paired-pilot-metabat-vamb-kru6t8dq-return.tar.gz",
+  "archive_sha256": "e1bf4b7243abd82debeb564943445d3169366421786adac2e21bf119a74d5d68",
+  "terminal": "e001-pilot.PkrRsg.log",
+  "terminal_sha256": "c614aa8cdb04f0819e3e9cd53d01c21e563d2ac81ce89a736f15190835369ee1"
+}
