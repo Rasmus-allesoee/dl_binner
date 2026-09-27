@@ -44,16 +44,16 @@ the pair ceiling is **200 allocated core-hours / 25 hours** including setup, wit
 **15 core-hours / 1.875 hours per condition** for clustering. These are limits,
 not runtime estimates. Eight-vCPU scaling is still being measured.
 
-Upload **BUNDLE_PENDING.tar.gz** and **BUNDLE_PENDING.tar.gz.sha256** to
+Upload **e001-code-8a03ca287c05.tar.gz** and **e001-code-8a03ca287c05.tar.gz.sha256** to
 `/work/Home/dl_binner/e001/e001-gate0/transfer/`. Retain the existing workflow
-snapshot `e001-workflow-0fb6955cdc62.tar.gz`. Bundle checksum: **SHA_PENDING**.
+snapshot `e001-workflow-0fb6955cdc62.tar.gz`. Bundle checksum: **86d7aa0ce58c89a9880cfe42019ebf1433b4b1f0c1fc5c8811b7ed6df3d5ecd2**.
 
 ```sh
 bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
 DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
-BUNDLE=BUNDLE_PENDING
+BUNDLE=e001-code-8a03ca287c05
 CODE="$WORK/$BUNDLE"
 LOG=$(mktemp "$WORK/transfer/e001-pilot-transfer.XXXXXX.log")
 echo "Transfer log: $LOG"
