@@ -44,16 +44,16 @@ Eight-vCPU throughput has not been measured. The earlier two-vCPU synthetic
 optimizer estimate excluded loaders, native clustering and real-data effects;
 it is insufficient to promise an elapsed time or identical cost.
 
-Upload **BUNDLE_PENDING.tar.gz** and **BUNDLE_PENDING.tar.gz.sha256** to
+Upload **e001-code-6ba21ce1f25f.tar.gz** and **e001-code-6ba21ce1f25f.tar.gz.sha256** to
 `/work/Home/dl_binner/e001/e001-gate0/transfer/`. Retain the existing workflow
-snapshot `e001-workflow-0fb6955cdc62.tar.gz`. Bundle checksum: **SHA_PENDING**.
+snapshot `e001-workflow-0fb6955cdc62.tar.gz`. Bundle checksum: **46adc5fd9e0722a450c8bc5494d55407832c00e19f9115507a62a12450b69304**.
 
 ```sh
 bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
 DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
-BUNDLE=BUNDLE_PENDING
+BUNDLE=e001-code-6ba21ce1f25f
 CODE="$WORK/$BUNDLE"
 LOG=$(mktemp "$WORK/transfer/e001-pilot-transfer.XXXXXX.log")
 echo "Transfer log: $LOG"
