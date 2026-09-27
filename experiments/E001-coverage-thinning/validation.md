@@ -2,6 +2,43 @@
 
 Date: 2026-09-18; appended through 2026-09-27. Software checks and reviewed scientific attempts are identified separately below.
 
+## COMEBin first-pilot driver guard failure and retry, 2026-09-27
+
+The [checksum-bound failure record](comebin-pilot-failure-observed.json) reviews
+`paired-pilot-comebin-p3983hy8-return.tar.gz` SHA256
+`fa5453f078a2f9c2d07e6c7c93be21b0f48f4990efe08d0523a937d03179d35f` and terminal
+`e001-pilot.OaThZ8.log` SHA256
+`cb2781c695deb4da45b834027703bddddfdfa560a51002d5fcec1cfb08c9a35a`. Actual
+allocation was 8 vCPU / 24 GB. Driver wall time was **679.990 seconds / 11.33
+minutes**, charged **1.51109 allocated core-hours**, and retained **386,464 bytes**.
+Packaging and outside-driver idle time are not included.
+
+This is an **adapter guard failure**, not a COMEBin exception, OOM or completed
+fit. COMEBin's own log reports CPU training, `--num_threads=4` and its source-fixed
+four DataLoader workers. Its first two persisted complete epochs took 120.119 and
+121.543 seconds. The wrapper reached an epoch-three progress marker, then raised
+`Measured full-schedule projection exceeds fit cost ceiling`; its watcher estimate
+was 44,443.85 seconds against the 36,000-second / 80-core-hour limit. That estimate
+multiplied full process elapsed time (including roughly five minutes of startup
+and feature reads) by 200. The uploaded UCloud graph showed about 350% peak CPU on
+the allocated eight vCPU. Peak child-tree PSS was 6,192 MB; no memory-limit failure
+is present. No full embeddings, checkpoint, selected partition or scientific
+score was produced. Preserve this unique attempt.
+
+[The correction](../../scripts/e001_pilot.py) estimates the remaining schedule
+from native per-epoch elapsed times, counts current fit wall time once, and adds a
+25% margin. It does not assume native early stopping. The eight-vCPU worker split
+is now **seven PyTorch threads + one DataLoader worker**; the adapter overrides
+the pinned COMEBin source's fixed count at runtime, without editing the checkout.
+The training data are precomputed TensorDataset views and parent-seeded shuffling,
+so this changes queue parallelism, not scientific features or the example order.
+A bounded CPU DataLoader smoke now drains synthetic batches with the same one-worker
+queue under short private `/tmp` before every full fit. The owner log will show the
+effective resource values. No local PyTorch/COMEBin runtime is installed, so the
+actual smoke and training still require the owner-run Linux retry. Existing
+preprocessing, native features and MetaBAT2/VAMB pair remain accepted and will not
+be repeated.
+
 ## Seed-11 MetaBAT2/VAMB accepted and COMEBin prepared, 2026-09-27
 
 The [independent reviewer](../../scripts/e001_review_pilot.py) accepts

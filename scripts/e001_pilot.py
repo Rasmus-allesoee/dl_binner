@@ -44,8 +44,8 @@ def resources(group, cpus, ram):
             f'{group} requires explicit {expected} allocated vCPUs and >= {expected*3} GB RAM')
     return dict(vcpus=cpus, ram_gb=ram,
                 threads=cpus,
-                comebin_threads=4 if group=='comebin' else 0,
-                comebin_loader_workers=4 if group=='comebin' else 0,
+                comebin_threads=7 if group=='comebin' else 0,
+                comebin_loader_workers=1 if group=='comebin' else 0,
                 leiden_workers=8 if group=='comebin' else 0,
                 metabat_threads=4 if group=='metabat-vamb' else 0,
                 vamb_threads=3 if group=='metabat-vamb' else 0,
@@ -166,6 +166,50 @@ def preflight_vamb_ipc(root, stage, cfg):
         shutil.rmtree(local_tmp,ignore_errors=True)
 
 
+def native_comebin_ipc_smoke(cfg):
+    """Drain COMEBin's production TensorDataset loader at the retry worker budget.
+
+    The pinned implementation hard-codes four workers. The E001 adapter reduces
+    that queue to one worker so its native --num_threads=7 fits an eight-vCPU
+    allocation. TensorDataset returns precomputed tensors without random
+    augmentation, and the seeded main-process sampler preserves input ordering.
+    This bounded check exercises the same PyTorch multiprocessing queue first.
+    """
+    import numpy as np
+    import torch
+    from e001lib.native import require_packages, verify_source
+    root=Path(cfg['root']); source=root/'sources/COMEBin'
+    provenance=verify_source('COMEBin',source)
+    require_packages({'numpy':'2.4.6','torch':'2.13.0+cpu'})
+    sys.path.insert(0,str(source/'COMEBin'))
+    import train_CLmodel
+    require(train_CLmodel.DATALOADER_WORKERS==4,'Pinned COMEBin loader source changed')
+    require(cfg['comebin_threads']==7 and cfg['comebin_loader_workers']==1 and
+            cfg['comebin_threads']+cfg['comebin_loader_workers']==cfg['vcpus'],
+            'COMEBin CPU allocation does not fit this job')
+    scratch=Path(os.environ['TMPDIR']).resolve()
+    require(scratch.is_dir() and scratch==Path(tempfile.gettempdir()).resolve() and
+            len(os.fsencode(str(scratch)))<=40,'COMEBin IPC must use its short private /tmp')
+    torch.set_num_threads(cfg['comebin_threads']); torch.set_num_interop_threads(1)
+    views=tuple(torch.from_numpy(np.random.default_rng(11+i).normal(size=(32,156)).astype('float32'))
+                for i in range(6))
+    dataset=torch.utils.data.TensorDataset(*views)
+    generator=torch.Generator().manual_seed(11)
+    from utils import seed_data_loader_worker
+    loader=torch.utils.data.DataLoader(dataset,batch_size=8,shuffle=True,
+        num_workers=cfg['comebin_loader_workers'],drop_last=True,
+        worker_init_fn=seed_data_loader_worker,generator=generator)
+    batches=list(loader); rows=sum(int(batch[0].shape[0]) for batch in batches)
+    require(loader.num_workers==1 and len(batches)==4 and rows==32,
+            'COMEBin CPU loader IPC smoke returned incomplete batches')
+    report=dict(status='passed',source=provenance,torch=torch.__version__,tmpdir=str(scratch),
+        pytorch_threads=torch.get_num_threads(),native_loader_workers=train_CLmodel.DATALOADER_WORKERS,
+        adapter_loader_workers=loader.num_workers,synthetic_views=6,rows=rows,batches=len(batches),
+        scope='Pinned PyTorch CPU queue and production TensorDataset; no research features or training')
+    write(Path(cfg['stage'])/'comebin-ipc-smoke.json',report)
+    print('PASS: pinned COMEBin CPU DataLoader IPC',flush=True)
+
+
 def native_fit(cfg, tool, condition):
     """Run the pinned training entry point and export full native assignments."""
     from e001lib.native import verify_source, require_packages
@@ -216,9 +260,13 @@ def native_fit(cfg, tool, condition):
             require((native/'model.pt').is_file(),'VAMB model missing')
         else:
             sys.path.insert(0,str(source/'COMEBin')); sys.argv=['comebin',*args]
-            from train_CLmodel import DATALOADER_WORKERS
-            require(DATALOADER_WORKERS==cfg['comebin_loader_workers']==4, 'COMEBin loader worker count changed')
-            require(threads+DATALOADER_WORKERS==cfg['vcpus'], 'COMEBin CPU budget mismatch')
+            import train_CLmodel
+            require(train_CLmodel.DATALOADER_WORKERS==4, 'Pinned COMEBin loader source changed')
+            require(threads+cfg['comebin_loader_workers']==cfg['vcpus'], 'COMEBin CPU budget mismatch')
+            # The pinned source fixes four queue workers. Use a one-worker runtime
+            # override; TensorDataset is deterministic and training order is
+            # controlled by its seeded sampler in the parent process.
+            train_CLmodel.DATALOADER_WORKERS=cfg['comebin_loader_workers']
             runpy.run_path(str(source/'COMEBin/main.py'),run_name='__main__')
             from embedding_bundle import load_embedding_bundle
             bundle=load_embedding_bundle(native/'embeddings.npy')
@@ -342,7 +390,7 @@ def descendants(pid):
 
 
 def checked(command, env, out, label, seconds, memory_mb=None, *,
-            fatal_markers=(), progress_pattern=None, stall_seconds=None, projected_steps=None):
+            fatal_markers=(), progress_pattern=None, stall_seconds=None, projected_steps=None, projection_margin=1.25, projection_vcpus=1):
     """Capture a bounded child in the workflow group; kill its tree on failure.
 
     Linux uses summed PSS to avoid counting shared DataLoader pages repeatedly;
@@ -397,8 +445,17 @@ def checked(command, env, out, label, seconds, memory_mb=None, *,
                                             last_progress=time.monotonic()
                                             record['last_native_progress']=value
                                             if projected_steps and int(value)>=3:
-                                                projected=(last_progress-start)*projected_steps/int(value)
+                                                require(len(match.groups())>=2,
+                                                        'Schedule projection needs a native epoch-duration measurement')
+                                                samples=record.setdefault('native_epoch_seconds',[])
+                                                samples.append(float(match.group(2)))
+                                                recent=samples[-3:]
+                                                mean_epoch=sum(recent)/len(recent)
+                                                projected=(last_progress-start +
+                                                    (projected_steps-int(value))*mean_epoch*projection_margin)
                                                 record['projected_full_schedule_seconds']=projected
+                                                record['projected_full_schedule_core_hours']=projected*projection_vcpus/3600
+                                                record['projection_method']='elapsed fit startup once plus remaining epochs at mean of latest three native epoch times with 25% margin; no early-stop savings'
                                                 require(projected<=seconds, 'Measured full-schedule projection exceeds fit cost ceiling')
                                             progress_log.write(json.dumps(dict(
                                                 utc=datetime.now(timezone.utc).isoformat(),
@@ -450,12 +507,19 @@ def worker(cfg, tool, condition):
         base=[prefix/'bin/python','-I',helper,'--config',cfg['runtime_config'],'--tool',tool,'--condition',condition]
         if tool in ('vamb','comebin'):
             local_tmp=short_local_tmpdir(); env['TMPDIR']=str(local_tmp)
+        if tool=='comebin':
+            ipc=[prefix/'bin/python','-I',helper,'--config',cfg['runtime_config'],
+                 '--native','comebin-ipc-smoke']
+            checked(ipc,env,out,'comebin-ipc-smoke',120,3000,
+                    fatal_markers=('OSError: AF_UNIX path too long','RuntimeError: DataLoader worker'),
+                    stall_seconds=60)
         checked([*base,'--native','fit'],env,out,'fit',
                 min(80,cfg['group_core_hours'])*3600/cfg['vcpus'],cfg['worker_mem_mb'],
                 fatal_markers=('OSError: AF_UNIX path too long','RuntimeError: DataLoader worker','Training failed.') if tool in ('vamb','comebin') else (),
-                progress_pattern=r'Epoch:\s*(\d+)' if tool=='vamb' else r'NN training: epoch=(\d+)/' if tool=='comebin' else None,
+                progress_pattern=r'Epoch:\s*(\d+)' if tool=='vamb' else r'NN training: epoch=(\d+)/.*?elapsed=(\d+(?:\.\d+)?)s' if tool=='comebin' else None,
                 stall_seconds=600 if tool=='vamb' else 1800 if tool=='comebin' else None,
-                projected_steps=200 if tool=='comebin' else None)
+                projected_steps=200 if tool=='comebin' else None,
+                projection_vcpus=cfg['vcpus'])
         if tool=='comebin':
             checked([*base,'--native','cluster'],env,out,'cluster',15*3600/cfg['vcpus'],cfg['worker_mem_mb'])
         amber=root/'envs/amber'; amber_env=isolated_env(amber,1); amber_env['TMPDIR']=env['TMPDIR']
@@ -521,7 +585,7 @@ if __name__=='__main__':
     p.add_argument('--group',choices=('metabat-vamb','comebin')); p.add_argument('--vcpus',type=int); p.add_argument('--ram-gb',type=float)
     p.add_argument('--workflow-snapshot',type=Path); p.add_argument('--config',type=Path)
     p.add_argument('--tool',choices=('metabat','vamb','comebin')); p.add_argument('--condition',choices=('C0','CT'))
-    p.add_argument('--native',choices=('fit','cluster','evaluate','vamb-ipc-smoke')); p.add_argument('--worker',action='store_true'); p.add_argument('--aggregate',action='store_true')
+    p.add_argument('--native',choices=('fit','cluster','evaluate','vamb-ipc-smoke','comebin-ipc-smoke')); p.add_argument('--worker',action='store_true'); p.add_argument('--aggregate',action='store_true')
     a=p.parse_args(); logging.basicConfig(level=logging.INFO,format='%(asctime)s %(message)s')
     if a.config:
         cfg=read(a.config)
@@ -534,6 +598,7 @@ if __name__=='__main__':
         elif a.native=='cluster': comebin_cluster(cfg,a.condition)
         elif a.native=='evaluate': evaluate(cfg,a.tool,a.condition)
         elif a.native=='vamb-ipc-smoke': native_vamb_ipc_smoke(cfg)
+        elif a.native=='comebin-ipc-smoke': native_comebin_ipc_smoke(cfg)
         else: p.error('Worker mode required')
     else:
         if any(x is None for x in (a.root,a.data_root,a.group,a.vcpus,a.ram_gb,a.workflow_snapshot)): p.error('All allocation and root arguments required')

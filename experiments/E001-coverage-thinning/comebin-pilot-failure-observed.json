@@ -1,0 +1,40 @@
+{
+  "attempt": "paired-pilot-comebin-p3983hy8",
+  "status": "failed during the startup-multiplied schedule projection guard; no complete condition or scientific result",
+  "source_commit": "6ba21ce1f25fdca987ff10606f90ecedc4071d5a",
+  "archive_sha256": "fa5453f078a2f9c2d07e6c7c93be21b0f48f4990efe08d0523a937d03179d35f",
+  "terminal_sha256": "cb2781c695deb4da45b834027703bddddfdfa560a51002d5fcec1cfb08c9a35a",
+  "allocation": {
+    "vcpus": 8,
+    "ram_gb": 24.0
+  },
+  "driver_elapsed_seconds": 679.9897230889183,
+  "allocated_core_hours": 1.5110882735309294,
+  "retained_bytes": 386464,
+  "fit": {
+    "tool": "COMEBin",
+    "condition": "C0",
+    "status": "terminated by the adapter at its cost projection guard",
+    "native_torch_threads": 4,
+    "native_dataloader_workers": 4,
+    "source_cli_num_threads": 4,
+    "observed_owner_cpu_utilization_peak_percent": "about 350% per supplied UCloud dashboard screenshot",
+    "persisted_completed_epochs": 2,
+    "persisted_epoch_seconds": [
+      120.119,
+      121.543
+    ],
+    "watcher_last_epoch_marker": "3",
+    "false_full_schedule_projection_seconds": 44443.8524665311,
+    "fit_limit_seconds": 36000.0,
+    "guard_error": "Measured full-schedule projection exceeds fit cost ceiling",
+    "process_tree_peak_pss_mb": 6192.263671875,
+    "oom_evidence": false
+  },
+  "diagnosis": [
+    "COMEBin did not raise a native error; the adapter stopped it after multiplying process startup and feature loading by the 200-epoch schedule.",
+    "The persisted first two native epochs each took about 120 seconds. The 44,443.85-second guard estimate used total process elapsed time at epoch three and projected that startup overhead 200 times.",
+    "The logged native resource contract requested four PyTorch threads plus four fixed DataLoader workers; supplied CPU graph showed about 350% utilization on eight rented vCPUs."
+  ],
+  "recovery": "Preserve this attempt. Start a fresh unique attempt with one private IPC worker and seven PyTorch threads, after a native loader queue smoke. Recalculate schedule cost from native epoch durations, count startup once, and add 25% margin."
+}

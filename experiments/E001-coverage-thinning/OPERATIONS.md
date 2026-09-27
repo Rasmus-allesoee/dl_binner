@@ -4,56 +4,56 @@ Updated: 2026-09-27. This is the execution guide, not a scientific result. Read 
 
 ## Current action, 2026-09-27
 
-**Accept the completed seed-11 MetaBAT2/VAMB pair; do not repeat it.** Return
-`paired-pilot-metabat-vamb-kru6t8dq` passes its SHA256, complete native schedules,
-partition export, paired embedding ID axes, retained binary receipts, and
-independent AMBER/R95 checks. [Observed record](paired-pilot-observed.json) and
-[review](validation.md#seed-11-metabat2vamb-accepted-and-comebin-prepared-2026-09-27)
-record **11.542 minutes / 0.76946 allocated core-hours at 4 vCPU / 12 GB** and
-**1,679,703,225 retained bytes**. Preserve the earlier failed attempt and accepted
-preprocessing/features. Only COMEBin runs next; seeds 23/47 remain unlaunched.
+The seed-11 MetaBAT2/VAMB pair and all preprocessing/features remain accepted;
+do not repeat them. The first COMEBin command
+`paired-pilot-comebin-p3983hy8` failed in the adapter's resource guard, not in
+COMEBin. Preserve it. Its [checksum-bound failure evidence](comebin-pilot-failure-observed.json)
+records 11.33 driver minutes / **1.5111 allocated core-hours** at 8 vCPU / 24 GB,
+**386,464 retained bytes**, and no complete COMEBin condition. The training log
+persisted two complete epochs at 120.119 and 121.543 seconds each. The supplied
+CPU dashboard showed about 350% utilization. The driver had requested four
+PyTorch threads plus COMEBin's four fixed DataLoader workers.
 
-**Start a Terminal job with 8 vCPU / 24 GB RAM.** The previous 2-vCPU COMEBin
-recommendation undercounted its four fixed native DataLoader workers. The revised
-serial plan uses **four PyTorch threads + four loader workers**; clustering uses
-eight native Leiden workers with one-thread native pools. The same seeded
-120-candidate grid and marker selector remain fixed; deterministic HNSW building
-is necessarily serial. More CPUs do not guarantee proportional speedup or equal
-cost. [D007](../../docs/decisions/D007-comebin-resource-envelope.md#pilot-resource-clarification-2026-09-27)
-records the correction and why neither two nor sixteen CPUs is selected now.
+The guard multiplied the full process startup/feature loading time by 200. At its
+epoch-three marker it estimated **44,443.85 seconds** and stopped at the 10-hour
+fit ceiling. This projected one-time startup repeatedly. The next driver uses
+COMEBin's native epoch-duration entries, counts startup once, and applies a 25%
+margin to remaining epochs. The two persisted epoch timings imply about **6.7 hours
+without margin** under the old four-thread split; this is not a forecast for the new
+seven-thread split. The fresh attempt recomputes its own guarded projection after
+three completed epochs and reports core-hours; it does not assume early stopping.
 
-This group runs C0 then CT at seed 11, **200 maximum epochs, batch 1024, six views,
-native early stopping**, followed by native clustering/selection and AMBER/R95.
-It retains checkpoints, embeddings with IDs, all 120 candidate partitions, selected
-full labels, marker tables, evaluation, command logs and resource benchmarks.
-Scientific inputs come from the accepted feature/frozen-input manifests, without
-BAM uploads or recomputation. Environments and source checkouts remain persistent
-and unchanged. The code validates source/package identities on entry; no software
-or data download is intended except bootstrap of missing container-level Git.
+**Next: run a fresh seed-11 COMEBin pair in Terminal with 8 vCPU / 24 GB.** The
+serial neural-training budget is **seven PyTorch threads plus one DataLoader
+worker**. COMEBin's loader is fixed at four in the pinned source; the E001 runtime
+adapter lowers it to one. The training dataset is a `TensorDataset` of already
+computed six-view features, and the seeded parent generates the shuffled sample
+indices, so this worker adjustment changes queue handling without changing the
+training examples, schedule or seed. A short private `/tmp` smoke first exercises
+the native PyTorch TensorDataset/DataLoader queue and drains all synthetic batches.
+The actual fit is blocked unless it passes. Training logs the effective worker
+and thread counts. Clustering retains the same seeded 120 candidates and uses
+eight Leiden workers; seeded HNSW construction stays serial.
 
-Provide **30 GB free shared storage** and **2 GB free node-local `/tmp`**. Neural
-training and clustering use a unique short private `/tmp` directory for IPC;
-results stay in the new shared attempt. Fatal loader errors stop the process tree.
-Training also stops after 30 minutes without an epoch. From epoch three onward,
-project all 200 epochs from measured elapsed time, including fit startup, and stop
-if that projection exceeds **80 allocated core-hours / 10 wall hours per fit**.
-Early-stop savings are not assumed. The separate limits remain **15 core-hours /
-1.875 hours for clustering per condition**, and **200 core-hours / 25 hours for
-the whole pair** including setup. These are ceilings, not a runtime forecast.
-Eight-vCPU throughput has not been measured. The earlier two-vCPU synthetic
-optimizer estimate excluded loaders, native clustering and real-data effects;
-it is insufficient to promise an elapsed time or identical cost.
+The native schedule remains **200 maximum epochs with early stopping, batch 1024,
+six views, seed 11**, followed by the same marker-guided selection and AMBER/R95.
+Set aside **30 GB shared storage and 2 GB in `/tmp`**. No BAM or feature uploads,
+software downloads or feature regeneration are needed. Stop the fit if the
+corrected projection exceeds **80 allocated core-hours / 10 hours at eight vCPU**;
+the pair ceiling is **200 allocated core-hours / 25 hours** including setup, with
+**15 core-hours / 1.875 hours per condition** for clustering. These are limits,
+not runtime estimates. Eight-vCPU scaling is still being measured.
 
-Upload **e001-code-6ba21ce1f25f.tar.gz** and **e001-code-6ba21ce1f25f.tar.gz.sha256** to
+Upload **BUNDLE_PENDING.tar.gz** and **BUNDLE_PENDING.tar.gz.sha256** to
 `/work/Home/dl_binner/e001/e001-gate0/transfer/`. Retain the existing workflow
-snapshot `e001-workflow-0fb6955cdc62.tar.gz`. Bundle checksum: **46adc5fd9e0722a450c8bc5494d55407832c00e19f9115507a62a12450b69304**.
+snapshot `e001-workflow-0fb6955cdc62.tar.gz`. Bundle checksum: **SHA_PENDING**.
 
 ```sh
 bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
 DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
-BUNDLE=e001-code-6ba21ce1f25f
+BUNDLE=BUNDLE_PENDING
 CODE="$WORK/$BUNDLE"
 LOG=$(mktemp "$WORK/transfer/e001-pilot-transfer.XXXXXX.log")
 echo "Transfer log: $LOG"
@@ -67,28 +67,26 @@ echo "Transfer log: $LOG"
 SH
 ```
 
-Return the printed `paired-pilot-comebin-*-return.tar.gz`, its adjacent `.sha256`,
-and `e001-pilot.*.log`. If unpacking fails, return the transfer log. Do not upload
-BAMs, feature arrays or model files. Stop on any failure and retain the attempt;
-review the returned evidence before more seeds or a restart.
+Return the printed `paired-pilot-comebin-*-return.tar.gz`, adjacent `.sha256`, and
+`e001-pilot.*.log`. Include the transfer log if extraction failed. The fresh attempt
+preserves the failed directory. Stop on any error and return its archive before
+retrying. After success, inspect all native schedules, embeddings, 120 candidate
+partitions, marker selection, AMBER/R95 and measured allocated core-hours before
+seeds 23/47.
 
-Local validation: 205 tests passed, including independent acceptance of the real
-return, AMBER tamper rejection, native parser/worker-count contracts, production
-worker temp/guard dispatch, cost-projection failure and real Snakemake ordering /
-resume. Local Python lacks PyTorch and native COMEBin clustering dependencies;
-therefore full Linux COMEBin training and the eight-worker cluster execution are
-not locally validated. Worker orchestration tests mock external native programs;
-source/parser checks do not establish their runtime or performance.
+Local Python lacks PyTorch and COMEBin's clustering dependencies. The changed
+Python files compile, the entry-point exposes the IPC preflight, and the maintained
+document-link check passes; no local COMEBin runtime is claimed. The revised job
+runs the pinned native loader smoke before fitting and retains progress and cost
+guards.
 
 Following-step prompt:
 
-> Read the current guidance and E001 handoff. Verify and review the uploaded
-> seed-11 COMEBin paired-pilot archive, checksum and terminal log. Accept completed
-> work without rerunning it; check native schedules, embedding/contig axes, all
-> 120 candidate partitions and marker selection, AMBER/R95 and actual resource
-> costs. Resolve failures from retained evidence. Assess the combined seed-11
-> results and affordability before preparing the next documented step. Update
-> the research records, run relevant checks and commit.
+> Read the current project guidance and E001 records. Verify the uploaded fresh
+> seed-11 COMEBin return, checksum and terminal log. Accept successful work without
+> repeating it. Check exact schedules and effective thread counts, embedding axes,
+> all 120 candidate partitions, marker selection, AMBER/R95 and actual resources.
+> Resolve failures from retained evidence, update STATE and E001 records, and commit.
 
 ## Completed feature extraction and recovery instructions (historical)
 

@@ -1,5 +1,5 @@
 {
-  "status": "Seed-11 MetaBAT2/VAMB pair accepted; native COMEBin pair prepared at 8 vCPU / 24 GB; further seeds require review",
+  "status": "Seed-11 MetaBAT2/VAMB pair accepted; first COMEBin attempt stopped at an over-conservative driver cost guard and is preserved; corrected unique retry prepared at 8 vCPU / 24 GB",
   "conditions": [
     "C0",
     "CT"
@@ -44,10 +44,10 @@
       "epochs_max": 200,
       "batch_size": 1024,
       "views": 6,
-      "note": "Serial C0 then CT; four native DataLoader workers plus four PyTorch threads. Inter-op and BLAS pools one. Eight independent Leiden candidate workers; deterministic HNSW construction remains serial. Prior synthetic timing at allocation two excluded DataLoader and is not an eight-vCPU prediction.",
+      "note": "Serial C0 then CT on eight vCPU: seven PyTorch intra-op threads plus one CPU DataLoader worker. Inter-op and BLAS pools one. The source fixes four TensorDataset workers; E001 overrides the queue worker count at runtime. All views are precomputed and sample shuffling remains seeded in the parent. Eight Leiden candidate workers; deterministic HNSW construction remains serial.",
       "threads": 8,
-      "pytorch_threads": 4,
-      "cpu_dataloader_workers": 4,
+      "pytorch_threads": 7,
+      "cpu_dataloader_workers": 1,
       "leiden_workers": 8,
       "historical_twofold_margin_fit_core_hours_at_2_vcpus": 47.8913039
     }
@@ -57,13 +57,14 @@
     "experiment_core_hours": 800
   },
   "review_before_launch": [
-    "Accept MetaBAT2/VAMB and features; no repeat.",
-    "COMEBin CPU budget is four PyTorch threads plus its four native loader workers; one condition runs at a time.",
-    "Use short private /tmp for neural IPC; stop on fatal DataLoader errors, 30 minutes without an epoch, or an unaffordable projected 200-epoch schedule after at least three epochs.",
-    "Retain native 200-epoch maximum, early stopping, batch 1024, six views and all 120 clustering candidates.",
-    "Inspect COMEBin paired outputs and actual costs before seeds 23/47; no performance claim from one seed."
+    "Accepted preprocessing, features and MetaBAT2/VAMB results are reused without rerunning.",
+    "Preserve paired-pilot-comebin-p3983hy8; it stopped at a false startup-multiplied schedule guard before completing a condition.",
+    "The unique retry first runs the pinned one-worker COMEBin TensorDataset CPU IPC smoke in short /tmp.",
+    "Budget seven PyTorch threads plus one loader worker on eight vCPU; native training schedule and all 120 selection candidates stay fixed.",
+    "Estimate cost from native epoch durations with process startup counted once and a 25% margin; stop only if this exceeds 80 allocated core-hours.",
+    "Review training, clustering, selection, evaluation and measured cost before seeds 23/47."
   ],
-  "alternative_not_selected": "Two vCPU cannot budget four fixed native DataLoader workers plus compute. Sixteen is not selected without scaling evidence; eight budgets four compute plus four loaders. Cost parity from more CPUs is not assumed.",
+  "alternative_not_selected": "The previous four-thread/four-loader setting showed about 350% peak CPU. Eight PyTorch threads plus four fixed loaders could overcommit. Use seven PyTorch threads plus a verified runtime override to one loader worker; sixteen vCPU scaling remains unknown.",
   "accepted_features": "features-observed.json",
   "groups": {
     "metabat-vamb": {
@@ -128,6 +129,32 @@
     "projection_starts_after_epoch": 3,
     "fit_stop_core_hours": 80,
     "cluster_stop_core_hours": 15,
-    "group_stop_core_hours": 200
+    "group_stop_core_hours": 200,
+    "projection_method": "current fit wall elapsed plus remaining epochs times latest-three native epoch mean times 1.25; one-time startup counted once, no early-stop savings",
+    "minimum_projection_epochs": 3,
+    "projection_margin": 1.25,
+    "loader_smoke": "pinned CPU TensorDataset/DataLoader with one worker, all synthetic batches drained"
+  },
+  "comebin_ipc_smoke": {
+    "pinned_source_workers": 4,
+    "adapter_workers": 1,
+    "pytorch_threads": 7,
+    "synthetic_views": 6,
+    "synthetic_rows": 32,
+    "batch_size": 8,
+    "batches_drained": 4,
+    "before_every_full_fit": true,
+    "short_tmp": true
+  },
+  "previous_comebin_attempt": {
+    "record": "comebin-pilot-failure-observed.json",
+    "archive_sha256": "fa5453f078a2f9c2d07e6c7c93be21b0f48f4990efe08d0523a937d03179d35f",
+    "terminal_sha256": "cb2781c695deb4da45b834027703bddddfdfa560a51002d5fcec1cfb08c9a35a",
+    "allocated_core_hours": 1.5110882735309294,
+    "retained_bytes": 386464,
+    "status": "failed at startup-multiplied adapter projection; preserved",
+    "native_torch_threads": 4,
+    "native_dataloader_workers": 4,
+    "persisted_epochs": 2
   }
 }

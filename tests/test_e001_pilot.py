@@ -50,7 +50,7 @@ class PilotTests(unittest.TestCase):
         exec(compile(ast.Module(body=[fn],type_ignores=[]),str(source),'exec'),ns)
         with patch.object(sys,'argv',['comebin',*p.fit_arguments('comebin',self.root,self.root/'out',p.resources('comebin',8,24)['comebin_threads'])]):
             args=ns['arguments']()
-        self.assertEqual((args.epochs,args.batch_size,args.n_views,args.num_threads),(200,1024,6,4))
+        self.assertEqual((args.epochs,args.batch_size,args.n_views,args.num_threads),(200,1024,6,7))
         self.assertTrue(args.earlystop and args.addvars and args.vars_sqrt)
         self.assertEqual(args.device,'cpu')
 
@@ -61,8 +61,14 @@ class PilotTests(unittest.TestCase):
         count=next(n.value.value for n in tree.body if isinstance(n,ast.Assign)
                    and any(isinstance(t,ast.Name) and t.id=='DATALOADER_WORKERS' for t in n.targets))
         cfg=p.resources('comebin',8,24)
-        self.assertEqual(count,cfg['comebin_loader_workers'])
-        self.assertEqual(count+cfg['comebin_threads'],cfg['threads'])
+        self.assertEqual(count,4)
+        self.assertEqual(cfg['comebin_loader_workers'],1)
+        self.assertEqual(cfg['comebin_threads']+cfg['comebin_loader_workers'],cfg['threads'])
+        helper=ast.parse((REPO/'scripts/e001_pilot.py').read_text())
+        fit=next(n for n in helper.body if isinstance(n,ast.FunctionDef) and n.name=='native_fit')
+        self.assertIn('train_CLmodel.DATALOADER_WORKERS=cfg',ast.unparse(fit))
+        smoke=next(n for n in helper.body if isinstance(n,ast.FunctionDef) and n.name=='native_comebin_ipc_smoke')
+        self.assertIn('torch.utils.data.DataLoader',ast.unparse(smoke))
 
     def test_comebin_worker_temp_guards_and_failed_fit_stops_cluster(self):
         # Native executables are external here; this runs the production worker
@@ -78,7 +84,9 @@ class PilotTests(unittest.TestCase):
         self.assertEqual(fit[1],cluster[1]); self.assertEqual(Path(fit[1]).parent,Path('/tmp'))
         self.assertFalse(Path(fit[1]).exists()); self.assertEqual(fit[2],80*3600/8)
         self.assertEqual(fit[3]['projected_steps'],200)
+        self.assertEqual(fit[3]['projection_vcpus'],8)
         self.assertEqual(cluster[2],15*3600/8)
+        self.assertIn('comebin-ipc-smoke',[x[0] for x in calls])
         calls.clear()
         def failure(argv,env,out,label,seconds,*args,**kwargs):
             external(argv,env,out,label,seconds,*args,**kwargs)
@@ -88,12 +96,16 @@ class PilotTests(unittest.TestCase):
         self.assertNotIn('cluster',[x[0] for x in calls])
         self.assertFalse(Path(calls[-1][1]).exists())
 
-    def test_full_schedule_projection_stops_unaffordable_training(self):
-        code='import sys,time; time.sleep(.2); print("NN training: epoch=3/200",file=sys.stderr,flush=True);time.sleep(30)'
-        with patch.object(p,'descendants',side_effect=lambda pid:[(pid,0)]),self.assertRaisesRegex(ValueError,'projection exceeds'):
-            p.checked([sys.executable,'-c',code],p.isolated_env(),self.root,'project',2,
-                      progress_pattern=r'NN training: epoch=(\d+)/',projected_steps=200)
-        self.assertGreater(p.read(self.root/'project.command.json')['projected_full_schedule_seconds'],2)
+    def test_full_schedule_projection_counts_startup_once(self):
+        code='import sys,time; time.sleep(.4); [print(f"NN training: epoch={i}/200 elapsed=0.010s",file=sys.stderr,flush=True) for i in (1,2,3)];time.sleep(.1)'
+        with patch.object(p,'descendants',side_effect=lambda pid:[(pid,0)]):
+            p.checked([sys.executable,'-c',code],p.isolated_env(),self.root,'project',5,
+                      progress_pattern=r'NN training: epoch=(\d+)/.*?elapsed=(\d+(?:\.\d+)?)s',
+                      projected_steps=200,projection_vcpus=8)
+        rec=p.read(self.root/'project.command.json')
+        self.assertGreater(rec['projected_full_schedule_seconds'],.4)
+        self.assertLess(rec['projected_full_schedule_seconds'],5)
+        self.assertLess(rec['projected_full_schedule_core_hours'],80)
 
     def test_actual_vamb_argument_parser(self):
         source=REPO/'agent_context/tools_repo/vamb/vamb/__main__.py'
