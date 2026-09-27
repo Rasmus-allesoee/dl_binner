@@ -52,15 +52,16 @@ printed terminal log before any further fit; a successful IPC smoke is not a
 successful scientific pilot.
 
 Upload the revised code archive and adjacent checksum to Home `transfer/`; retain
-`e001-workflow-0fb6955cdc62.tar.gz`. Execution bundle: **BUNDLE_PENDING**.
-Its checksum will be pinned after the code commit.
+`e001-workflow-0fb6955cdc62.tar.gz`. Execution bundle: **e001-code-ac7159f8d1c7**.
+Archive SHA256: `4c02dab73cded1c95a17814984e0f5ea7bed399f3edf7f157ef3f5f1dae0709f`. The archive contains execution commit
+`ac7159f8d1c7`; this documentation pin changes no execution files.
 
 ```sh
 bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
 DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
-BUNDLE=BUNDLE_PENDING
+BUNDLE=e001-code-ac7159f8d1c7
 CODE="$WORK/$BUNDLE"
 LOG=$(mktemp "$WORK/transfer/e001-pilot-transfer.XXXXXX.log")
 echo "Transfer log: $LOG"
