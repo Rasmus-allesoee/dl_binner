@@ -18,12 +18,10 @@ core-hours at the recorded allocation; exact status accounting awaits the retain
 
 The driver's separate packaging step then raised `FileNotFoundError` for
 `/work/Home/dl_binner/e001/e001-gate0/paired-pilot-comebin-istuh_2t-return.tar.gz`.
-No return archive/checksum was supplied. The workflow log says the attempt remains
-under the persistent shared data root. Thus the terminal log establishes a return
-destination bug, but cannot establish why the CT worker/workflow exited. The
-attempt is not accepted, and no repeat/cleanup is authorized. A package-only path
-now creates a compact checksum-bound archive beside the retained attempt so its
-workflow/worker records can be inspected first.
+The attempt remains incomplete and is not accepted as a paired C0/CT result. At
+the time, the terminal log could not establish why CT stopped; the later
+checksum-bound return below resolves the driver-level failure evidence and
+supersedes that open diagnosis.
 
 The first package-only recovery used source commit `f1eed69` and the owner-supplied
 [terminal log](../../agent_context/e001-pilot-recover.6dU9xz.log), SHA-256
@@ -33,6 +31,41 @@ attempt; it produced no archive. This is a recovery-script assumption, not the C
 worker failure, and the log does not show that the attempt was modified. The
 revised salvage mode treats expected records as optional, reports absences, and
 packages the small logs/receipts that remain.
+
+## COMEBin CT driver failure and guarded resume, 2026-09-28
+
+The owner supplied the return archive, checksum and package-only terminal log.
+The archive checksum passed: SHA-256
+`c589a318308b467650fdff5be274c353d232056fa3bbbfbdf2d591e471f467af`; the
+package-only log SHA-256 is
+`81612a8a05774ba682df37552561ef5cf55220e463b625b433e60a352c8d9452`. It contains
+514 regular members / 785,281,998 uncompressed bytes. **418** files named
+`hmmer.analyze.txt` account for 776,570,812 bytes; these are repeated
+CheckM/HMMER per-bin diagnostics from C0 candidate marker selection. The previous
+package filter admitted every `.txt`, causing the 117-MiB compressed return.
+Future bundles omit this exact diagnostic filename; the retained attempt is
+unchanged.
+
+`logs/comebin-CT.log` shows epochs 94–100 completing normally at roughly 75
+seconds per epoch. Immediately afterward, `checked()` raised `FileNotFoundError`
+while resolving `comebin/CT/fit.stderr` by pathname. Writes of `fit.command.json`
+and `failure.json` to that same CT directory then failed. No COMEBin stack trace,
+OOM message or native fatal marker appears. The archived Snakemake shutdown log
+also reports that job-local `/work/Home/.../transfer` no longer existed when it
+tried to restore its working directory. This is consistent with UCloud job/mount
+teardown or a transient path loss; the exact Hours allocation was not included in
+the return, so the provider trigger is not proven. The driver now monitors the
+already-open stderr file descriptor and makes secondary receipt writes best-effort
+so they cannot replace the original exception.
+
+The pinned COMEBin source saves its checkpoint only after the training loop
+finishes (`agent_context/tools_repo/COMEBin/COMEBin/simclr.py`, lines 257–266),
+so epoch 100 cannot be resumed as a model checkpoint. The prepared owner runner
+rehashes every C0 retained artifact and uses the existing Snakemake work
+directory. It moves partial CT files to `recovery/`, then requires a dry-run with
+CT and paired-summary only; C0 in the DAG is a hard stop. It restarts CT from
+epoch 1 and prefers Home `transfer/` for the compact return, falling back to the
+persistent attempt if Home is unavailable. See the [current operations action](OPERATIONS.md#current-action-2026-09-28-resume-the-unfinished-comebin-condition).
 
 ## COMEBin first-pilot driver guard failure and retry, 2026-09-27
 

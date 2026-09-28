@@ -300,66 +300,115 @@ def worker(mode, cfg):
 
 
 @contextmanager
-def progress(stage, interval=1, heartbeat=60):
-    """Mirror tool logs and timestamped heartbeats without replacing originals."""
-    stop=threading.Event(); positions={}; started=time.monotonic()
-    with (stage/'progress.log').open('x') as log:
+def progress(stage, interval=1, heartbeat=60, log_name='progress.log'):
+    """Mirror new shallow tool logs and heartbeats without rescanning native outputs.
+
+    Existing log bytes are treated as history on resumed attempts. Restricting
+    the watcher to driver and condition-level logs avoids repeatedly traversing
+    COMEBin's large candidate tree.
+    """
+    stop=threading.Event(); started=time.monotonic()
+    log_path=Path(stage)/log_name
+    log_path.parent.mkdir(parents=True,exist_ok=True)
+    watched=[Path(stage)/'workflow.stdout',Path(stage)/'workflow.stderr']
+    watched.extend((Path(stage)/'logs').glob('*.log'))
+    for condition in Path(stage).glob('*/C[0T]'):
+        if not condition.is_dir(): continue
+        watched.extend(p for p in condition.iterdir() if p.is_file() and p.suffix in ('.stdout','.stderr','.log'))
+        native_log=condition/'native'/'comebin.log'
+        if native_log.is_file(): watched.append(native_log)
+    positions={}
+    for path in watched:
+        try: positions[path]=path.stat().st_size
+        except OSError: positions[path]=0
+    with log_path.open('x') as log:
         def emit(text):
             line=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())+' '+text
             print(line,flush=True); log.write(line+'\n'); log.flush()
         def watch():
             last=0
             while not stop.wait(interval):
-                paths=[p for p in stage.rglob('*') if p.is_file() and p.suffix in ('.stdout','.stderr','.log') and p.name!='progress.log']
+                paths=list(watched)
+                log_dir=Path(stage)/'logs'
+                if log_dir.is_dir():
+                    paths.extend(p for p in log_dir.glob('*.log') if p not in positions)
+                for condition in Path(stage).glob('*/C[0T]'):
+                    if not condition.is_dir(): continue
+                    try: direct=tuple(condition.iterdir())
+                    except OSError: continue
+                    paths.extend(p for p in direct if p.is_file() and p.suffix in ('.stdout','.stderr','.log') and p not in positions)
+                    native_log=condition/'native'/'comebin.log'
+                    if native_log.is_file() and native_log not in positions: paths.append(native_log)
                 for p in paths:
-                    with p.open(errors='replace') as f:
-                        f.seek(positions.get(p,0)); text=f.read(65536);positions[p]=f.tell()
+                    try:
+                        with p.open(errors='replace') as f:
+                            f.seek(positions.get(p,0)); text=f.read(65536);positions[p]=f.tell()
+                    except OSError:
+                        continue
                     for line in text.splitlines(): emit(f'[{p.relative_to(stage)}] {line}')
                 elapsed=time.monotonic()-started
                 if elapsed-last>=heartbeat:
-                    emit(f'RUNNING {elapsed/60:.1f} min; completed tools: '+','.join(t for t in TOOLS if (stage/t/'result.json').exists()));last=elapsed
+                    done=[f'{tool}/{condition}' for tool in TOOLS for condition in ('C0','CT')
+                          if (Path(stage)/tool/condition/'retained.json').is_file()]
+                    emit(f'RUNNING {elapsed/60:.1f} min; completed conditions: '+(','.join(done) or 'none'));last=elapsed
         thread=threading.Thread(target=watch,daemon=True);thread.start()
         try: yield
         finally: stop.set();thread.join()
 
 
-def package(stage):
-    """Atomically return small receipts/logs beside the persistent attempt.
+def package(stage, preferred_root=None, archive_stem=None):
+    """Atomically package compact receipts, preferring the owner's transfer folder.
 
-    The attempt directory must already live on the persistent data volume.
-    Keeping the archive beside it avoids relying on the job-local Home mount
-    during shutdown. BAM links, large arrays and symlinks are never archived.
+    If that destination is unavailable, fall back beside the persistent attempt.
+    Bulk BAMs, arrays, symlinks and COMEBin's repeated HMMER diagnostic dumps are
+    excluded; the original files remain in the attempt directory.
     """
     stage=Path(stage)
     require(stage.is_dir() and not stage.is_symlink(), 'Return source must be a real attempt directory')
-    root=stage.parent
-    archive=root/(stage.name+'-return.tar.gz')
-    checksum=Path(str(archive)+'.sha256')
-    require(not archive.exists() and not checksum.exists(), 'Refusing to overwrite an existing return')
-    fd,temporary_name=tempfile.mkstemp(prefix='.'+archive.name+'.',suffix='.partial',dir=root)
-    os.close(fd)
-    temporary=Path(temporary_name)
-    checksum_temporary=None
+    fallback=stage.parent
+    root=Path(preferred_root) if preferred_root is not None else fallback
+    if root != fallback and (not root.is_dir() or not os.access(root,os.W_OK)):
+        print('NOTICE: preferred return folder unavailable; using persistent attempt parent',flush=True)
+        root=fallback
+    def package_at(destination):
+        archive=destination/((archive_stem or stage.name)+'-return.tar.gz')
+        checksum=Path(str(archive)+'.sha256')
+        require(not archive.exists() and not checksum.exists(), 'Refusing to overwrite an existing return')
+        temporary=None; checksum_temporary=None
+        published_archive=False; published_checksum=False
+        try:
+            fd,temporary_name=tempfile.mkstemp(prefix='.'+archive.name+'.',suffix='.partial',dir=destination)
+            os.close(fd); temporary=Path(temporary_name)
+            with tarfile.open(temporary,'w:gz') as tar:
+                for p in sorted(stage.rglob('*')):
+                    if (p.is_file() and not p.is_symlink() and 'bams' not in p.relative_to(stage).parts
+                            and p.name!='hmmer.analyze.txt' and p.suffix in ('.json','.log','.stdout','.stderr','.tsv','.txt')):
+                        tar.add(p,arcname=stage.name+'/'+str(p.relative_to(stage)),recursive=False)
+            digest=sha(temporary)
+            # Same-directory hard links publish finished files without replacing
+            # earlier returns or exposing an incomplete archive.
+            os.link(temporary,archive); published_archive=True
+            fd,checksum_name=tempfile.mkstemp(prefix='.'+checksum.name+'.',suffix='.partial',dir=destination)
+            checksum_temporary=Path(checksum_name)
+            with os.fdopen(fd,'w') as handle:
+                handle.write(digest+'  '+archive.name+'\n')
+            os.link(checksum_temporary,checksum); published_checksum=True
+            print('RETURN:',archive,'and',checksum,flush=True)
+            return archive,checksum
+        except OSError:
+            if published_checksum: checksum.unlink(missing_ok=True)
+            if published_archive: archive.unlink(missing_ok=True)
+            raise
+        finally:
+            if temporary is not None: temporary.unlink(missing_ok=True)
+            if checksum_temporary is not None: checksum_temporary.unlink(missing_ok=True)
     try:
-        with tarfile.open(temporary,'w:gz') as tar:
-            for p in sorted(stage.rglob('*')):
-                if p.is_file() and not p.is_symlink() and 'bams' not in p.relative_to(stage).parts and p.suffix in ('.json','.log','.stdout','.stderr','.tsv','.txt'):
-                    tar.add(p,arcname=stage.name+'/'+str(p.relative_to(stage)),recursive=False)
-        digest=sha(temporary)
-        # Same-directory hard links publish each finished file without replacing
-        # a return from an earlier attempt or exposing an incomplete archive.
-        os.link(temporary,archive)
-        fd,checksum_name=tempfile.mkstemp(prefix='.'+checksum.name+'.',suffix='.partial',dir=root)
-        checksum_temporary=Path(checksum_name)
-        with os.fdopen(fd,'w') as handle:
-            handle.write(digest+'  '+archive.name+'\n')
-        os.link(checksum_temporary,checksum)
-        print('RETURN:',archive,'and',checksum,flush=True)
-        return archive,checksum
-    finally:
-        temporary.unlink(missing_ok=True)
-        if checksum_temporary is not None:
-            checksum_temporary.unlink(missing_ok=True)
+        return package_at(root)
+    except OSError as error:
+        if preferred_root is not None and root != fallback and error.errno not in (errno.EEXIST,):
+            print(f'NOTICE: return folder failed ({error}); retrying beside persistent attempt',flush=True)
+            return package_at(fallback)
+        raise
 
 
 def ensure_git(env, stage):
@@ -467,7 +516,7 @@ def run(root, data_root, manifest, cpus, ram, snapshot, reuse_attempt=None):
               'allocated_core_hours':elapsed*cpus/3600,'group_core_hour_limit':plan['group_core_hour_limit'],
               'feature_bytes':sum(p.stat().st_size for p in stage.rglob('*') if p.is_file() and 'bams' not in p.relative_to(stage).parts),
               'note':'Excludes external BAMs, outside-driver idle/setup and return packaging; linked/copied BAM receipts are in inputs.json. No fitting.'})
-        try: package(stage)
+        try: package(stage,root/'transfer')
         except Exception:
             status=1;record=read(stage/'status.json');record.update(exit_code=1,packaging_failed=True);write(stage/'status.json',record)
             print('Packaging failed; preserve attempt:',stage,traceback.format_exc(),file=sys.stderr)

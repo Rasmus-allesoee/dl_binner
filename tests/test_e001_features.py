@@ -132,8 +132,9 @@ class FeaturesTests(unittest.TestCase):
         self.assertFalse(list(self.root.glob('*.partial')))
 
     def test_progress(self):
-        log=self.root/'native.stdout';log.write_text('native stage\n');out=io.StringIO()
-        with contextlib.redirect_stdout(out),f.progress(self.root,interval=.01,heartbeat=.02):time.sleep(.06)
+        logs=self.root/'logs';logs.mkdir();out=io.StringIO()
+        with contextlib.redirect_stdout(out),f.progress(self.root,interval=.01,heartbeat=.02):
+            (logs/'native.log').write_text('native stage\n');time.sleep(.06)
         self.assertIn('native stage',out.getvalue());self.assertIn('RUNNING',out.getvalue())
 
     def test_actual_return_review_and_bad_checksum(self):

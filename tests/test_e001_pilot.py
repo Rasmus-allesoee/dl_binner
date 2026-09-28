@@ -1,6 +1,9 @@
 """Real native parser contracts and executable orchestration tests, not Linux fits."""
 import argparse
 import ast
+import contextlib
+import io
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -67,7 +70,9 @@ class PilotTests(unittest.TestCase):
         self.assertEqual(cfg['comebin_threads']+cfg['comebin_loader_workers'],cfg['threads'])
         helper=ast.parse((REPO/'scripts/e001_pilot.py').read_text())
         fit=next(n for n in helper.body if isinstance(n,ast.FunctionDef) and n.name=='native_fit')
-        self.assertIn('train_CLmodel.DATALOADER_WORKERS=cfg',ast.unparse(fit))
+        assignments=[n for n in ast.walk(fit) if isinstance(n,ast.Assign) and
+                     any(isinstance(t,ast.Attribute) and t.attr=='DATALOADER_WORKERS' for t in n.targets)]
+        self.assertTrue(any(ast.unparse(n.value)=="cfg['comebin_loader_workers']" for n in assignments))
         smoke=next(n for n in helper.body if isinstance(n,ast.FunctionDef) and n.name=='native_comebin_ipc_smoke')
         self.assertIn('torch.utils.data.DataLoader',ast.unparse(smoke))
 
@@ -108,6 +113,113 @@ class PilotTests(unittest.TestCase):
         self.assertLess(rec['projected_full_schedule_seconds'],5)
         self.assertLess(rec['projected_full_schedule_core_hours'],80)
 
+    def test_checked_keeps_monitoring_if_stderr_path_is_unlinked(self):
+        code=('import os,sys,time; p=sys.argv[1]; '
+              'print("NN training: epoch=1/200 elapsed=0.010s",file=sys.stderr,flush=True); '
+              'time.sleep(.7); os.unlink(p); '
+              'print("NN training: epoch=2/200 elapsed=0.010s",file=sys.stderr,flush=True)')
+        with patch.object(p,'descendants',side_effect=lambda pid:[(pid,0)]):
+            p.checked([sys.executable,'-c',code,str(self.root/'fd.stderr')],p.isolated_env(),
+                      self.root,'fd',5,progress_pattern=r'NN training: epoch=(\d+)/.*?elapsed=(\d+(?:\.\d+)?)s')
+        self.assertIn('epoch=2/200',(self.root/'fd.stderr').read_text())
+        self.assertIn('"progress": "2"',(self.root/'fd.progress.log').read_text())
+        self.assertEqual(p.read(self.root/'fd.command.json')['returncode'],0)
+
+    def test_retained_condition_receipt_and_resume_dag_gate(self):
+        out=self.root/'comebin/C0';out.mkdir(parents=True)
+        receipt={}
+        for name in ('complete.json','evaluation.json','trained.json','fit.json','predictions.tsv'):
+            path=out/name;path.write_text(name+'\n')
+            receipt[name]={'bytes':path.stat().st_size,'sha256':p.sha(path)}
+        p.write(out/'retained.json',receipt)
+        checked=p.validate_retained_condition(out)
+        self.assertEqual(checked['artifact_count'],5)
+        dag='output: comebin/CT/retained.json\noutput: paired-summary.json\n'
+        p.validate_resume_dag(dag)
+        with self.assertRaisesRegex(ValueError,'rerun accepted C0'):
+            p.validate_resume_dag(dag+'output: comebin/C0/retained.json\n')
+        (out/'fit.json').write_text('changed\n')
+        with self.assertRaisesRegex(ValueError,'Changed completed-condition artifact'):
+            p.validate_retained_condition(out)
+
+    def test_resume_feature_validation_does_not_touch_snakemake_input(self):
+        exp=self.root/'experiment';exp.mkdir();inputs=self.root/'frozen';inputs.mkdir()
+        feature=self.root/'features';(feature/'comebin/C0').mkdir(parents=True)
+        stage=self.root/'attempt';stage.mkdir()
+        config=exp/'config.json';config.write_text('{}\n')
+        reference=inputs/'canonical.fna';reference.write_text('>c\nACGT\n')
+        artifact=feature/'comebin/C0/feature.bin';artifact.write_bytes(b'feature')
+        p.write(exp/'frozen-inputs.json',{'config_sha256':p.sha(config),'owner_input_directory':str(inputs),
+               'outputs':{'canonical.fna':p.sha(reference)}})
+        p.write(exp/'features-observed.json',{'status':'accepted','directory':str(feature),
+               'results':{'comebin':{'artifacts':{'C0/feature.bin':{'sha256':p.sha(artifact)}}}}})
+        receipt={'feature_record_sha256':p.sha(exp/'features-observed.json'),
+                 'frozen_record_sha256':p.sha(exp/'frozen-inputs.json'),'feature_directory':str(feature)}
+        verified=stage/'verified.json';p.write(verified,receipt);before=verified.stat().st_mtime_ns
+        with patch.object(p,'EXP',exp):p.verify_features({'tools':['comebin'],'stage':str(stage)},publish=False)
+        self.assertEqual(verified.stat().st_mtime_ns,before)
+        with patch.object(p,'EXP',exp):p.verify_features({'tools':['comebin'],'stage':str(stage)})
+        self.assertEqual(p.read(verified),receipt)
+
+    def test_resume_reuses_c0_and_executes_only_after_safe_dry_run(self):
+        root=self.root/'work';(root/'transfer').mkdir(parents=True)
+        data=self.root/'data';data.mkdir()
+        stage=data/'paired-pilot-comebin-istuh_2t';stage.mkdir()
+        (stage/'comebin/C0').mkdir(parents=True);(stage/'comebin/CT').mkdir()
+        (stage/'logs').mkdir();(stage/'benchmarks').mkdir();(stage/'tmp').mkdir()
+        for name in ('complete.json','evaluation.json','trained.json','fit.json','predictions.tsv'):
+            (stage/'comebin/C0'/name).write_text(name+'\n')
+        receipt={name:{'bytes':(stage/'comebin/C0'/name).stat().st_size,
+                       'sha256':p.sha(stage/'comebin/C0'/name)}
+                 for name in ('complete.json','evaluation.json','trained.json','fit.json','predictions.tsv')}
+        p.write(stage/'comebin/C0/retained.json',receipt)
+        (stage/'comebin/CT/fit.stderr').write_text('partial epoch 100\n')
+        (stage/'logs/comebin-CT.log').write_text('old workflow log\n')
+        (stage/'benchmarks/comebin-CT.tsv').write_text('old benchmark\n')
+        (stage/'progress.log').write_text('old progress\n')
+        prior={**p.resources('comebin',8,24),'root':str(root),'stage':str(stage),
+               'runtime_config':str(stage/'runtime.json'),'helper':'old-helper.py',
+               'driver_python':sys.executable,'source_commit':'old-source'}
+        p.write(stage/'runtime.json',prior)
+        exp=self.root/'experiment';exp.mkdir()
+        code=self.root/'code';code.mkdir();(code/'SOURCE_COMMIT').write_text('fixture-commit\n')
+        lock='fixture workflow lock\n'
+        lock_path=self.root/'lock';lock_path.write_text(lock);lock_sha=p.sha(lock_path)
+        p.write(exp/'sample0-preprocess-observed.json',{'member_sha256':{'workflow-lock.stdout':lock_sha}})
+        commands=[]
+        def fake_invoke(command,env,out,label,limit):
+            commands.append((label,list(map(str,command))))
+            if label=='dag':
+                (out/'dag.stdout').write_text('output: comebin/CT/retained.json\noutput: paired-summary.json\n')
+                (out/'dag.stderr').write_text('')
+            elif label=='workflow':
+                (stage/'comebin/CT').mkdir()
+                (stage/'comebin/CT/retained.json').write_text('{}\n')
+                (stage/'paired-summary.json').write_text('{}\n')
+        def fake_preflight(workflow,env,out):
+            (out/'workflow-lock.stdout').write_text(lock)
+            (out/'snakemake-startup.stdout').write_text('9.13.7\n')
+        with contextlib.ExitStack() as stack:
+            stack.enter_context(patch.object(p,'EXP',exp));stack.enter_context(patch.object(p,'CODE',code))
+            stack.enter_context(patch.object(p,'ensure_git'))
+            stack.enter_context(patch.object(p,'verify_features'))
+            stack.enter_context(patch.object(p,'stage_runtime',return_value=self.root/'prefix'))
+            stack.enter_context(patch.object(p,'workflow_preflight',side_effect=fake_preflight))
+            stack.enter_context(patch.object(p,'workflow_command',side_effect=lambda workflow,module,args,diagnostic_seconds=10:['snakemake',*map(str,args)]))
+            stack.enter_context(patch.object(p,'invoke',side_effect=fake_invoke))
+            stack.enter_context(patch.object(p.shutil,'disk_usage',return_value=SimpleNamespace(free=100_000_000_000)))
+            stack.enter_context(contextlib.redirect_stdout(io.StringIO()))
+            stack.enter_context(contextlib.redirect_stderr(io.StringIO()))
+            status=p.resume_comebin(root,data,stage,8,24,self.root/'snapshot')
+        self.assertEqual(status,0)
+        self.assertEqual(p.read(stage/'comebin/C0/retained.json'),receipt)
+        self.assertEqual(len(list((stage/'recovery').glob('*/comebin-CT-partial/fit.stderr'))),1)
+        self.assertTrue((stage/'comebin/CT/retained.json').is_file())
+        dag_command=next(cmd for label,cmd in commands if label=='dag')
+        self.assertIn('--rerun-triggers',dag_command);self.assertIn('mtime',dag_command)
+        self.assertIn('workflow',[label for label,_ in commands])
+        self.assertTrue(next((root/'transfer').glob('*-return.tar.gz')).is_file())
+
     def test_package_failed_comebin_attempt_without_rerunning_or_mutating_it(self):
         stage=self.root/'paired-pilot-comebin-retained';stage.mkdir()
         (stage/'comebin/CT').mkdir(parents=True)
@@ -133,6 +245,22 @@ class PilotTests(unittest.TestCase):
         self.assertEqual(before,after)
         with self.assertRaisesRegex(ValueError,'direct child'):
             p.package_failed_attempt(stage,self.root/'elsewhere')
+
+    def test_package_prefers_transfer_and_omits_repeated_hmmer_diagnostics(self):
+        stage=self.root/'paired-pilot-comebin-test';stage.mkdir()
+        hmm=stage/'comebin/C0/native/candidate/checkm_ar/bins/0/hmmer.analyze.txt'
+        hmm.parent.mkdir(parents=True);hmm.write_text('repeated marker detail\n'*1000)
+        (stage/'comebin/C0/selection.txt').write_text('selected candidate\n')
+        transfer=self.root/'transfer';transfer.mkdir()
+        result=p.package(stage,transfer)
+        self.assertEqual(result[0].parent,transfer)
+        with tarfile.open(result[0]) as tar:
+            names=tar.getnames()
+        self.assertIn(stage.name+'/comebin/C0/selection.txt',names)
+        self.assertFalse(any(name.endswith('/hmmer.analyze.txt') for name in names))
+        fallback_stage=self.root/'paired-pilot-comebin-fallback';fallback_stage.mkdir()
+        fallback_archive,_=p.package(fallback_stage,self.root/'absent')
+        self.assertEqual(fallback_archive.parent,self.root)
 
     def test_actual_vamb_argument_parser(self):
         source=REPO/'agent_context/tools_repo/vamb/vamb/__main__.py'
@@ -252,6 +380,7 @@ class PilotTests(unittest.TestCase):
                 p.checked([sys.executable,'-c','import time; time.sleep(30)'],p.isolated_env(),self.root,'memory',5,.001)
 
     def test_uploaded_feature_acceptance_and_bad_checksum(self):
+        if importlib.util.find_spec('numpy') is None:self.skipTest('NumPy is required to review this returned feature archive')
         import e001_review_features as review
         archive=REPO/'agent_context/multisample-features-69_32jz9-return.tar.gz'
         if not archive.exists(): self.skipTest('Reviewed inbox archive not present')

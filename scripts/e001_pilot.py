@@ -54,7 +54,7 @@ def resources(group, cpus, ram):
                 tools=['comebin'] if group=='comebin' else ['metabat','vamb'])
 
 
-def verify_features(cfg):
+def verify_features(cfg, publish=True):
     """Rehash retained features and frozen inputs before any scientific fit."""
     accepted=read(EXP/'features-observed.json'); frozen=read(EXP/'frozen-inputs.json')
     require(accepted['status']=='accepted','Features not reviewed')
@@ -66,8 +66,14 @@ def verify_features(cfg):
         for name, record in accepted['results'][tool]['artifacts'].items():
             path=feature/tool/name
             require(path.is_file() and sha(path)==record['sha256'],'Changed accepted feature: '+str(path))
-    write(Path(cfg['stage'])/'verified.json',dict(feature_record_sha256=sha(EXP/'features-observed.json'),
-          frozen_record_sha256=sha(EXP/'frozen-inputs.json'), feature_directory=str(feature)))
+    receipt=dict(feature_record_sha256=sha(EXP/'features-observed.json'),
+                 frozen_record_sha256=sha(EXP/'frozen-inputs.json'),feature_directory=str(feature))
+    receipt_path=Path(cfg['stage'])/'verified.json'
+    if publish:
+        write(receipt_path,receipt)
+    else:
+        require(receipt_path.is_file() and read(receipt_path)==receipt,
+                'Existing verified.json differs; refusing to change Snakemake input timestamps during resume')
 
 
 def fit_arguments(tool, feature, out, threads):
@@ -398,7 +404,10 @@ def checked(command, env, out, label, seconds, memory_mb=None, *,
     stops a full native schedule whose measured epoch rate exceeds its budget,
     starting after three completed epochs without assuming early-stop savings.
     The outer workflow deadline also kills these children because they never
-    create a new session. No process outside the verified child tree is killed.
+    create a new session. Stderr is polled through its open descriptor so a
+    transient pathname loss does not itself stop training; missing stream files
+    are restored from that descriptor when possible. No process outside the
+    verified child tree is killed.
     """
     start=time.monotonic(); last_progress=start; fatal_tail=b''; progress_partial=b''; stderr_position=0
     record=dict(argv=list(map(str,command)),timeout_seconds=seconds,
@@ -406,22 +415,50 @@ def checked(command, env, out, label, seconds, memory_mb=None, *,
                 memory_metric='sum PSS on Linux; RSS fallback',
                 fatal_stderr_markers=list(fatal_markers),progress_pattern=progress_pattern,
                 stall_seconds=stall_seconds)
-    process=None
+    process=None; retained_fds=[]; record_published=False
+    def publish_record():
+        nonlocal record_published
+        record_published=False
+        try:
+            write(out/(label+'.command.json'),record)
+        except OSError as error:
+            record['command_record_write_error']=repr(error)
+            print(f'NOTICE: could not save {label} command receipt yet: {error}',file=sys.stderr,flush=True)
+            return
+        record_published=True
+    def restore_log(path,fd):
+        try:
+            path.stat()
+            return
+        except OSError:
+            pass
+        try:
+            size=os.fstat(fd).st_size
+            with path.open('xb',buffering=0) as restored:
+                offset=0
+                while offset<size:
+                    block=os.pread(fd,min(1024*1024,size-offset),offset)
+                    if not block: break
+                    restored.write(block); offset+=len(block)
+            print(f'NOTICE: restored {label} stream log from its open file handle',flush=True)
+        except OSError as error:
+            record[path.name.replace('.','_')+'_restore_error']=repr(error)
+            print(f'NOTICE: could not restore {label} stream log: {error}',file=sys.stderr,flush=True)
     print('START: '+label,flush=True)
     try:
         stderr_path=out/(label+'.stderr')
-        with (out/(label+'.stdout')).open('x') as stdout, stderr_path.open('x') as stderr:
+        stdout_path=out/(label+'.stdout')
+        with stdout_path.open('x+b',buffering=0) as stdout, stderr_path.open('x+b',buffering=0) as stderr:
+            retained_fds=[os.dup(stdout.fileno()),os.dup(stderr.fileno())]
             process=subprocess.Popen(record['argv'],env=env,stdout=stdout,stderr=stderr)
             record['pid']=process.pid
-            write(out/(label+'.command.json'),record)
+            publish_record()
             progress_log=(out/(label+'.progress.log')).open('x') if progress_pattern else None
             try:
                 while True:
-                    current_size=stderr_path.stat().st_size
+                    current_size=os.fstat(stderr.fileno()).st_size
                     if current_size>stderr_position:
-                        with stderr_path.open('rb') as monitor:
-                            monitor.seek(stderr_position)
-                            chunk=monitor.read(current_size-stderr_position)
+                        chunk=os.pread(stderr.fileno(),min(1024*1024,current_size-stderr_position),stderr_position)
                         stderr_position += len(chunk)
                         if chunk:
                             fatal_bytes=fatal_tail+chunk
@@ -457,13 +494,19 @@ def checked(command, env, out, label, seconds, memory_mb=None, *,
                                                 record['projected_full_schedule_core_hours']=projected*projection_vcpus/3600
                                                 record['projection_method']='elapsed fit startup once plus remaining epochs at mean of latest three native epoch times with 25% margin; no early-stop savings'
                                                 require(projected<=seconds, 'Measured full-schedule projection exceeds fit cost ceiling')
-                                            progress_log.write(json.dumps(dict(
-                                                utc=datetime.now(timezone.utc).isoformat(),
-                                                elapsed_seconds=last_progress-start,progress=value))+'\n')
-                                            progress_log.flush()
+                                            if progress_log and not progress_log.closed:
+                                                try:
+                                                    progress_log.write(json.dumps(dict(
+                                                        utc=datetime.now(timezone.utc).isoformat(),
+                                                        elapsed_seconds=last_progress-start,progress=value))+'\n')
+                                                    progress_log.flush()
+                                                except OSError as error:
+                                                    record['progress_log_write_error']=repr(error)
+                                                    print(f'NOTICE: {label} progress log unavailable: {error}',file=sys.stderr,flush=True)
+                                                    progress_log.close()
                                             print(f'PROGRESS: {label} {value}',flush=True)
                     if process.poll() is not None:
-                        if stderr_path.stat().st_size<=stderr_position:
+                        if os.fstat(stderr.fileno()).st_size<=stderr_position:
                             break
                         continue
                     rss=sum(r for _,r in descendants(process.pid))/1024
@@ -489,7 +532,13 @@ def checked(command, env, out, label, seconds, memory_mb=None, *,
         raise
     finally:
         record['elapsed_seconds']=time.monotonic()-start
-        write(out/(label+'.command.json'),record)
+        if process is not None and process.poll() is not None and len(retained_fds)==2:
+            restore_log(stdout_path,retained_fds[0]); restore_log(stderr_path,retained_fds[1])
+        publish_record()
+        for fd in retained_fds:
+            try: os.close(fd)
+            except OSError: pass
+    require(record_published,f'{label} completed but its command receipt could not be retained')
     print('PASS: '+label,flush=True)
 
 
@@ -529,7 +578,10 @@ def worker(cfg, tool, condition):
         write(out/'retained.json',{str(p.relative_to(out)):dict(bytes=p.stat().st_size,sha256=sha(p))
               for p in sorted(out.rglob('*')) if p.is_file()})
     except BaseException:
-        write(out/'failure.json',{'traceback':traceback.format_exc()}); raise
+        try: write(out/'failure.json',{'traceback':traceback.format_exc()})
+        except OSError as error:
+            print(f'NOTICE: could not save {tool}/{condition} failure receipt: {error}',file=sys.stderr,flush=True)
+        raise
     finally:
         if local_tmp is not None:
             shutil.rmtree(local_tmp,ignore_errors=True)
@@ -566,25 +618,168 @@ def run(root, data, group, cpus, ram, snapshot):
             invoke(workflow_command(workflow,'snakemake',cmd,0),env,stage,'workflow',remaining)
             require((stage/'paired-summary.json').is_file(),'Missing completed paired receipt'); status=0
     except BaseException:
-        write(stage/'failure.json',{'traceback':traceback.format_exc()}); print(traceback.format_exc(),file=sys.stderr)
+        detail=traceback.format_exc()
+        try: write(stage/'failure.json',{'traceback':detail})
+        except OSError as error: print('NOTICE: could not persist pilot failure receipt:',error,file=sys.stderr,flush=True)
+        print(detail,file=sys.stderr)
     finally:
         elapsed=time.monotonic()-start
-        write(stage/'status.json',dict(exit_code=status,**res,elapsed_seconds=elapsed,allocated_core_hours=elapsed*cpus/3600,
-              retained_bytes=sum(p.stat().st_size for p in stage.rglob('*') if p.is_file()),
-              cost_scope='Driver wall time including setup; excludes packaging and outside-driver idle time'))
-        try: package(stage)
+        try: retained=sum(p.stat().st_size for p in stage.rglob('*') if p.is_file())
+        except OSError: retained=None
+        status_record=dict(exit_code=status,**res,elapsed_seconds=elapsed,allocated_core_hours=elapsed*cpus/3600,
+              retained_bytes=retained,cost_scope='Driver wall time including setup; excludes packaging and outside-driver idle time')
+        try: write(stage/'status.json',status_record)
+        except OSError as error: print('NOTICE: could not persist pilot status receipt:',error,file=sys.stderr,flush=True)
+        try: package(stage,root/'transfer')
         except Exception:
-            status=1; record=read(stage/'status.json'); record.update(exit_code=1,packaging_failed=True); write(stage/'status.json',record)
+            status=1; status_record.update(exit_code=1,packaging_failed=True)
+            try: write(stage/'status.json',status_record)
+            except OSError as error: print('NOTICE: could not persist packaging failure status:',error,file=sys.stderr,flush=True)
             print('Packaging failed; preserve',stage,traceback.format_exc(),file=sys.stderr)
     return status
 
 
-def package_failed_attempt(stage, data_root):
+def validate_retained_condition(out):
+    """Rehash a completed condition receipt before Snakemake reuses it."""
+    out=Path(out); receipt_path=out/'retained.json'
+    require(out.is_dir() and not out.is_symlink() and receipt_path.is_file(),
+            f'Missing real completed-condition directory/receipt: {out}')
+    receipt=read(receipt_path)
+    require(isinstance(receipt,dict) and receipt,'Empty retained-condition receipt')
+    total_bytes=0
+    for relative,expected in receipt.items():
+        relative=Path(relative)
+        require(not relative.is_absolute() and '..' not in relative.parts,'Unsafe retained artifact path')
+        artifact=out/relative
+        require(artifact.resolve(strict=True).is_relative_to(out.resolve()),'Retained artifact escapes condition directory')
+        require(artifact.is_file() and artifact.stat().st_size==expected['bytes'] and sha(artifact)==expected['sha256'],
+                'Changed completed-condition artifact: '+str(relative))
+        total_bytes+=expected['bytes']
+    required={'complete.json','evaluation.json','trained.json','fit.json','predictions.tsv'}
+    require(required.issubset(receipt),'Completed condition lacks its biological result receipts')
+    return {'artifact_count':len(receipt),'artifact_bytes':total_bytes,
+            'retained_receipt_sha256':sha(receipt_path)}
+
+
+def validate_resume_dag(dag):
+    """Require the resumable DAG to contain CT and aggregation, never C0."""
+    require(re.search(r'output:\s*comebin/CT/retained\.json',dag) is not None,
+            'Resume dry-run did not schedule the incomplete CT condition')
+    require(re.search(r'output:\s*comebin/C0/retained\.json',dag) is None,
+            'Resume dry-run would rerun accepted C0; refusing execution')
+    require(re.search(r'output:\s*paired-summary\.json',dag) is not None,
+            'Resume dry-run did not schedule the paired summary')
+
+
+def resume_comebin(root, data, stage, cpus, ram, snapshot):
+    """Resume only the unfinished CT branch while protecting accepted C0 outputs.
+
+    C0 is rehashed against its native retention receipt. Incomplete CT files are
+    moved, not deleted. Snakemake's persisted work directory is retained, and
+    execution is allowed only if its dry-run schedules CT plus aggregation but
+    not C0.
+    """
+    res=resources('comebin',cpus,ram)
+    root=Path(root); data=Path(data); stage=Path(stage); snapshot=Path(snapshot)
+    require(root.is_absolute() and root.is_dir() and data.is_absolute() and data.is_dir(),
+            'Existing absolute work and persistent data roots required')
+    require(not stage.is_symlink() and stage.is_dir() and stage.parent.resolve()==data.resolve(),
+            'Resume target must be an existing direct child of the persistent data root')
+    require(stage.name=='paired-pilot-comebin-istuh_2t','Resume target is not the reviewed incomplete COMEBin attempt')
+    prior=read(stage/'runtime.json')
+    require(Path(prior['stage']).resolve()==stage.resolve() and Path(prior['root']).resolve()==root.resolve()
+            and prior['tools']==['comebin'] and prior['vcpus']==cpus and prior['ram_gb']==ram,
+            'Attempt runtime/allocation does not match this COMEBin resume')
+    c0=stage/'comebin/C0'; ct=stage/'comebin/CT'
+    c0_receipt=validate_retained_condition(c0)
+    require(ct.is_dir() and not ct.is_symlink() and not (ct/'retained.json').exists(),
+            'CT is complete or its real partial directory is missing')
+    require(not (stage/'paired-summary.json').exists(),'Paired summary already exists; do not resume a completed attempt')
+    history=stage/'recovery'; history.mkdir(exist_ok=True)
+    stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+    recovery=Path(tempfile.mkdtemp(prefix='comebin-ct-resume-'+stamp+'-',dir=history))
+    shutil.copy2(stage/'runtime.json',recovery/'runtime.before.json')
+    old_commit=prior.get('source_commit')
+    cfg=dict(prior,**res,root=str(root),stage=str(stage),runtime_config=str(stage/'runtime.json'),
+             helper=str(Path(__file__).resolve()),driver_python=sys.executable,
+             source_commit=(CODE/'SOURCE_COMMIT').read_text().strip())
+    write(stage/'runtime.json',cfg)
+    write(recovery/'resume.json',{'attempt':str(stage),'prior_source_commit':old_commit,
+          'resume_source_commit':cfg['source_commit'],'reused_condition':'COMEBin/C0',
+          'c0_validation':c0_receipt,'ct_action':'restart the incomplete CT fit from epoch 1; pinned COMEBin saves no mid-fit checkpoint',
+          'snakemake_resume':'same persistent work directory; rerun trigger limited to mtime; execute only after dry-run confirms CT and summary without C0'})
+    moved=[]
+    move_items=[(ct,recovery/'comebin-CT-partial'),
+                (stage/'logs/comebin-CT.log',recovery/'comebin-CT.previous.log'),
+                (stage/'benchmarks/comebin-CT.tsv',recovery/'comebin-CT.previous-benchmark.tsv'),
+                (stage/'progress.log',recovery/'progress.previous.log')]
+    start=time.monotonic(); status=1; execution_started=False
+    try:
+        for source,destination in move_items:
+            if source.exists():
+                destination.parent.mkdir(parents=True,exist_ok=True)
+                os.replace(source,destination); moved.append((destination,source))
+        for name in ('logs','benchmarks','tmp'): (stage/name).mkdir(exist_ok=True)
+        require(shutil.disk_usage(stage).free>=30_000_000_000,'Need 30 GB free for the remaining COMEBin branch; preserve existing work')
+        env=isolated_env(); ensure_git(env,recovery)
+        with progress(stage,log_name=str(recovery.relative_to(stage)/'progress.log')):
+            verify_features(cfg,publish=False)
+            prefix=stage_runtime(root,snapshot,env,recovery); workflow=prefix/'bin/snakemake'
+            env['PATH']=str(prefix/'bin')+os.pathsep+env.get('PATH',''); env['TMPDIR']=str(stage/'tmp')
+            invoke([prefix/'bin/python','-I','-S',CODE/'scripts/e001_native_probe.py',prefix,'snakemake'],
+                   env,recovery,'workflow-prefix',60)
+            workflow_preflight(workflow,env,recovery)
+            require(sha(recovery/'workflow-lock.stdout')==read(EXP/'sample0-preprocess-observed.json')['member_sha256']['workflow-lock.stdout'],
+                    'Workflow inventory changed')
+            cmd=['--snakefile',CODE/'workflows/e001-preprocess/pilot.smk','--directory',stage,
+                 '--configfile',stage/'runtime.json','--cores',cpus,'--executor','local',
+                 '--runtime-source-cache-path',stage/'.snakemake-source-cache',
+                 '--resources',f'mem_mb={int((ram-.5)*1000)}','tool_slots=1',
+                 '--keep-incomplete','--printshellcmds','--benchmark-extended','--rerun-triggers','mtime']
+            invoke(workflow_command(workflow,'snakemake',cmd+['--dry-run']),env,recovery,'dag',120)
+            dag=(recovery/'dag.stdout').read_text()+'\n'+(recovery/'dag.stderr').read_text()
+            validate_resume_dag(dag)
+            remaining=res['group_core_hours']*3600/cpus-(time.monotonic()-start)
+            require(remaining>0,'COMEBin resume core-hour budget exhausted')
+            execution_started=True
+            invoke(workflow_command(workflow,'snakemake',cmd),env,recovery,'workflow',remaining)
+            require((stage/'paired-summary.json').is_file(),'Missing completed paired receipt after resume')
+            status=0
+    except BaseException:
+        try: write(recovery/'failure.json',{'traceback':traceback.format_exc()})
+        except OSError as error: print('NOTICE: could not persist resume traceback:',error,file=sys.stderr,flush=True)
+        print(traceback.format_exc(),file=sys.stderr)
+        if not execution_started:
+            for saved,original in reversed(moved):
+                if saved.exists() and not original.exists():
+                    original.parent.mkdir(parents=True,exist_ok=True); os.replace(saved,original)
+            shutil.copy2(recovery/'runtime.before.json',stage/'runtime.json')
+    finally:
+        elapsed=time.monotonic()-start
+        receipt={'exit_code':status,'resume':True,'reused_condition':'COMEBin/C0',
+                 'c0_validation':c0_receipt,'elapsed_seconds':elapsed,
+                 'allocated_core_hours':elapsed*cpus/3600,'execution_started':execution_started,
+                 'return_policy':'prefer owner Home transfer folder; fall back beside persistent attempt'}
+        try: write(recovery/'status.json',receipt)
+        except OSError as error: print('NOTICE: could not persist resume status:',error,file=sys.stderr,flush=True)
+        try: write(stage/'status.json',receipt)
+        except OSError as error: print('NOTICE: could not persist attempt status:',error,file=sys.stderr,flush=True)
+        try:
+            package(stage,root/'transfer',archive_stem=stage.name+'-resume-'+recovery.name.rsplit('-',1)[-1])
+        except Exception:
+            status=1; receipt.update(exit_code=1,packaging_failed=True)
+            try: write(recovery/'status.json',receipt); write(stage/'status.json',receipt)
+            except OSError: pass
+            print('Packaging failed; preserve attempt:',stage,traceback.format_exc(),file=sys.stderr)
+    return status
+
+
+def package_failed_attempt(stage, data_root, return_dir=None):
     """Package retained COMEBin failure receipts without rerunning its DAG.
 
     The target must be the recorded failed attempt as a direct child of the
     persistent data root. This reads the attempt and writes a compact return
-    archive beside it; it does not clean or modify the retained attempt.
+    archive in return_dir when available; it does not modify the retained attempt.
     """
     stage=Path(stage)
     data_root=Path(data_root)
@@ -603,7 +798,7 @@ def package_failed_attempt(stage, data_root):
               file=sys.stderr,flush=True)
     # This is a salvage path: missing receipts are themselves evidence and
     # must not prevent returning the logs that did survive.
-    return package(stage)
+    return package(stage,return_dir)
 
 
 if __name__=='__main__':
@@ -613,12 +808,19 @@ if __name__=='__main__':
     p.add_argument('--workflow-snapshot',type=Path); p.add_argument('--config',type=Path)
     p.add_argument('--package-existing',type=Path,
                     help='package the retained failed COMEBin attempt without rerunning it')
+    p.add_argument('--return-dir',type=Path,help='preferred folder for package-only recovery output')
+    p.add_argument('--resume-existing',type=Path,
+                    help='resume the incomplete COMEBin attempt, preserving and reusing completed C0')
     p.add_argument('--tool',choices=('metabat','vamb','comebin')); p.add_argument('--condition',choices=('C0','CT'))
     p.add_argument('--native',choices=('fit','cluster','evaluate','vamb-ipc-smoke','comebin-ipc-smoke')); p.add_argument('--worker',action='store_true'); p.add_argument('--aggregate',action='store_true')
     a=p.parse_args(); logging.basicConfig(level=logging.INFO,format='%(asctime)s %(message)s')
     if a.package_existing is not None:
         if a.data_root is None: p.error('--package-existing also requires --data-root')
-        package_failed_attempt(a.package_existing,a.data_root)
+        package_failed_attempt(a.package_existing,a.data_root,a.return_dir)
+    elif a.resume_existing is not None:
+        if any(x is None for x in (a.root,a.data_root,a.vcpus,a.ram_gb,a.workflow_snapshot)):
+            p.error('--resume-existing also requires ROOT, --data-root, --vcpus, --ram-gb and --workflow-snapshot')
+        raise SystemExit(resume_comebin(a.root,a.data_root,a.resume_existing,a.vcpus,a.ram_gb,a.workflow_snapshot))
     elif a.config:
         cfg=read(a.config)
         if a.aggregate:

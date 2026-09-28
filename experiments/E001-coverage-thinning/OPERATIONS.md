@@ -1,53 +1,75 @@
 # E001: Validation and UCloud Preflight
 
-Updated: 2026-09-27. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
+Updated: 2026-09-28. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
-## Current action, 2026-09-28: recover the retained COMEBin failure evidence
+## Current action, 2026-09-28: resume the unfinished COMEBin condition
 
-The latest owner-run attempt is
-`paired-pilot-comebin-istuh_2t` under the persistent shared E001 data root. The
-uploaded terminal log shows that COMEBin C0 completed, then CT training reached
-epoch 100/200 before Snakemake returned code 1. The terminal log does not contain
-the worker's underlying error, so the scientific cause is not yet diagnosed. The
-driver then failed to create its return archive under job-local `$WORK`; no archive
-or checksum was produced. **Do not rerun or remove this attempt.** Its retained
-worker/workflow records are needed to identify why CT stopped.
+The checksum-verified return for `paired-pilot-comebin-istuh_2t` shows C0 finished
+and CT training progressed normally through epoch 100/200, averaging about 75
+seconds per epoch. The worker then failed while checking `fit.stderr` by pathname:
+the CT output directory was temporarily unavailable, and subsequent writes into
+that same directory failed too. There is no COMEBin exception, out-of-memory
+message, or training-progress failure. Snakemake also could not return to the
+job-local Home working directory during shutdown. The evidence is most consistent
+with a UCloud job/mount teardown or transient path loss; the uploaded files do not
+record the Terminal Hours setting, so the exact provider trigger is unconfirmed.
+The driver now monitors the already-open log file rather than reopening it by
+pathname, and preserves original error context if a receipt write fails.
 
-The first package-only command stopped because the attempt is missing `status.json`;
-it made no return archive and did not alter the attempt. Recovery is now tolerant
-of missing receipts and packages the small files that remain. It writes beside the
-attempt on the persistent data volume; it does not start Snakemake, training,
-downloads or environment setup, and it does not alter the attempt. No 8-vCPU
-allocation is needed. Upload the new committed code bundle and checksum named in the handoff to
-`/work/Home/dl_binner/e001/e001-gate0/transfer/`, then run:
+The return archive was **117 MiB** because the old packager included 418 files
+named `hmmer.analyze.txt` (776,570,812 uncompressed bytes), repeated CheckM/HMMER
+diagnostics from COMEBin's C0 candidate-selection grid. These remain in the
+persistent attempt but are omitted from future return archives. The package-only
+recovery code also always chose the attempt's parent on shared storage. New code
+prefers Home `transfer/` and falls back to the persistent attempt only if Home is
+unavailable. The old archive and failed attempt are preserved.
+
+There is no COMEBin mid-fit checkpoint at epoch 100, so CT must restart from epoch
+1. C0 does **not** need to repeat: the resume verifies its retained hashes, keeps
+the same Snakemake working directory, leaves C0's `verified.json` input untouched,
+and dry-runs with only the `mtime` rerun trigger. It refuses to train if the DAG
+includes C0. It moves, rather than deletes, the old partial CT files into
+`recovery/` before the retry. Use Terminal / Ubuntu,
+**8 vCPU / 24 GB RAM for 8 hours** (up to 64 allocated core-hours), with Home and
+the same shared data mounted. The 8-hour allowance covers a fresh 200-epoch CT
+fit, clustering and evaluation with headroom; no preprocessing, feature
+extraction, tool installation or bulk downloads are performed.
+
+Upload the new committed code bundle and checksum below to Home `transfer/`.
+Keep the existing `e001-workflow-0fb6955cdc62.tar.gz` and checksum there. Then run:
 
 ```sh
 bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
-DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
+SHARED='/work/RasmusAllesøeNielsen#2936'
+DATA="$SHARED/dl_binner/e001"
 BUNDLE=e001-code-<commit>
 CODE="$WORK/$BUNDLE"
 ATTEMPT="$DATA/paired-pilot-comebin-istuh_2t"
-LOG=$(mktemp "$WORK/transfer/e001-pilot-recover.XXXXXX.log")
+SNAPSHOT="$WORK/transfer/e001-workflow-0fb6955cdc62.tar.gz"
+LOG=$(mktemp "$WORK/transfer/e001-pilot-resume.XXXXXX.log")
 echo "Terminal log: $LOG"
 (
+    test -d "$SHARED" && test -d "$ATTEMPT/.snakemake"
     cd "$WORK/transfer"
     sha256sum --check "$BUNDLE.tar.gz.sha256"
+    sha256sum --check "$(basename "$SNAPSHOT").sha256"
     test ! -e "$CODE" && test ! -L "$CODE"
     tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
-    test -d "$ATTEMPT"
-    python3 -I "$CODE/scripts/e001_pilot.py" --data-root "$DATA" --package-existing "$ATTEMPT"
+    python3 -I "$CODE/scripts/e001_pilot.py" "$WORK" \
+        --data-root "$DATA" --vcpus 8 --ram-gb 24 \
+        --workflow-snapshot "$SNAPSHOT" --resume-existing "$ATTEMPT"
 ) 2>&1 | tee "$LOG"
 SH
 ```
 
-Return the printed attempt return archive, its adjacent `.sha256`, and the
-`e001-pilot-recover.*.log`. Recovery is best-effort: it packages whichever small
-records/logs remain, reports expected files that are absent, and excludes BAMs
-and large binary arrays. After inspecting the returned records, diagnose the CT
-failure and decide whether the existing C0 output can be resumed safely; do not
-repeat the fit until that review.
+The driver validates C0 and the pinned workflow runtime first. Its dry-run must
+show CT plus the paired summary and no C0 job; otherwise it stops before training
+and restores the moved partial files. On success, collect the printed uniquely
+named resume archive and `.sha256` from Home `transfer/` (or shared storage if
+Home disappeared), plus the printed terminal `.log`. No manual deletion or
+upload of the old 117-MiB archive is needed.
 
 ## Completed feature extraction and recovery instructions (historical)
 
