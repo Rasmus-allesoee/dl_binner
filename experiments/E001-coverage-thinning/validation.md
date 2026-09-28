@@ -75,7 +75,47 @@ feature packaging/progress tests, and the 32-document/381-link check passed. The
 broader pilot suite's two remaining failures come from this macOS sandbox denying
 Snakemake's `psutil` process-tree query (`sysctl`, Operation not permitted); the
 NumPy-dependent review test was skipped because NumPy is not installed locally.
-No owner-run UCloud resume has yet occurred.
+At the time this first resume bundle was prepared, no owner-run resume had yet occurred.
+
+## COMEBin resume stopped on a stale Snakemake lock, 2026-09-28
+
+The checksum-bound `paired-pilot-comebin-istuh_2t-resume-i5qfl46l-return.tar.gz`
+passes SHA-256 `10fccc949fab2592efe1fbe4ae50b66414805dbffcf60c5822e72383bc1efa06`;
+the terminal log SHA-256 is
+`9c706d17cc7d77dfaa0d7c53deb9348bdecbb305264cba3ddda09ce36bc4f791`. The 1.3-MiB
+archive has 122 members. C0 was revalidated unchanged: 5,227 artifacts,
+5,656,492,243 bytes. The driver spent 7.51 seconds (0.0167 allocated core-hours
+at eight vCPUs) and no training rule ran.
+
+Snakemake's new log ends immediately after `Building DAG of jobs...` with
+`LockException: Directory cannot be locked` for the shared attempt. Its documented
+`--unlock` operation removes a stale work-directory lock; the workflow was not
+run with `--nolock`. The returned status said `execution_started: true`, but that
+was a driver bookkeeping bug: it marked the workflow command as started before
+knowing whether Snakemake launched any rule. Consequently, the earlier CT partial
+was left under `recovery/.../comebin-CT-partial`, rather than restored to the live
+CT path. The files remain preserved in both the returned archive and UCloud
+recovery directory.
+
+Source commit `9ceeb087441d06ff69b6a639233781ddad674d58` fixes both issues. The
+resume can restore a copy of the newest retained CT partial without consuming
+that recovery evidence. It distinguishes workflow invocation from rule launch,
+restores moved files after pre-rule failures, and permits `snakemake --unlock`
+only with the explicit `--unlock-stale-snakemake-locks` owner flag and a check
+that no other workflow is active. It records pre-unlock lock hashes, then still
+requires a dry-run that schedules CT and the paired summary but not C0. No
+scientific training or UCloud execution has been performed with this fix yet.
+
+Transfer bundle `e001-code-9ceeb087441d.tar.gz` SHA-256 is
+`9df30700587eb8f9fbdbb12034e58528865e91b507a3eb7c8b47a61eb6a90eea`; its
+embedded source commit and checksum were verified. Three targeted recovery tests
+pass from the extracted bundle. A separate test-only commit
+`4f664188399aed0c9bcdaccdac3af59d496e55b6` also ran the pinned Snakemake 9.13.7
+executable's real `--unlock` against synthetic stale locks successfully; it does
+not change the execution bundle. The broader pilot suite still has the two known
+macOS sandbox failures when Snakemake/psutil queries the process tree; one
+NumPy-dependent archive-review test is skipped locally. Native UCloud behavior
+remains unverified. See the updated [owner action](OPERATIONS.md#current-action-2026-09-28-resume-the-unfinished-comebin-condition).
 
 ## COMEBin first-pilot driver guard failure and retry, 2026-09-27
 

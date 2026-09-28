@@ -24,6 +24,19 @@ recovery code also always chose the attempt's parent on shared storage. New code
 prefers Home `transfer/` and falls back to the persistent attempt only if Home is
 unavailable. The old archive and failed attempt are preserved.
 
+**Follow-up resume failure, 2026-09-28:** the next returned archive passed C0's
+5,227-artifact hash check but stopped in **7.51 seconds** before launching any
+Snakemake rule. Its log says `LockException: Directory cannot be locked` for the
+existing shared work directory. This is Snakemake's stale-lock guard, not another
+COMEBin failure; its [documented `--unlock` option](https://snakemake.readthedocs.io/en/v9.13.0/executing/cli.html)
+removes a stale working-directory lock. That retry also exposed a driver bug:
+launching Snakemake had been recorded as if a rule started, leaving CT's partial
+files only in `recovery/`. The new runner restores a working copy from that
+preserved recovery and records rule execution separately. Use its explicit
+`--unlock-stale-snakemake-locks` option only after confirming no other workflow
+is using this attempt. The returned prior command has ended; do not run two jobs
+against this work directory at once.
+
 There is no COMEBin mid-fit checkpoint at epoch 100, so CT must restart from epoch
 1. C0 does **not** need to repeat: the resume verifies its retained hashes, keeps
 the same Snakemake working directory, leaves C0's `verified.json` input untouched,
@@ -35,8 +48,8 @@ the same shared data mounted. The 8-hour allowance covers a fresh 200-epoch CT
 fit, clustering and evaluation with headroom; no preprocessing, feature
 extraction, tool installation or bulk downloads are performed.
 
-Upload `e001-code-889d76a1f234.tar.gz` and its adjacent checksum to Home
-`transfer/` (SHA-256 `36ff4861672f9863ab17ae8623eb36d679eee3dcbbc647462d0cfa8bd15311e3`).
+Upload `e001-code-9ceeb087441d.tar.gz` and its adjacent checksum to Home
+`transfer/` (SHA-256 `9df30700587eb8f9fbdbb12034e58528865e91b507a3eb7c8b47a61eb6a90eea`).
 Keep the existing `e001-workflow-0fb6955cdc62.tar.gz` and checksum there. Then run:
 
 ```sh
@@ -45,7 +58,7 @@ set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
 SHARED='/work/RasmusAllesøeNielsen#2936'
 DATA="$SHARED/dl_binner/e001"
-BUNDLE=e001-code-889d76a1f234
+BUNDLE=e001-code-9ceeb087441d
 CODE="$WORK/$BUNDLE"
 ATTEMPT="$DATA/paired-pilot-comebin-istuh_2t"
 SNAPSHOT="$WORK/transfer/e001-workflow-0fb6955cdc62.tar.gz"
@@ -60,17 +73,20 @@ echo "Terminal log: $LOG"
     tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
     python3 -I "$CODE/scripts/e001_pilot.py" "$WORK" \
         --data-root "$DATA" --vcpus 8 --ram-gb 24 \
-        --workflow-snapshot "$SNAPSHOT" --resume-existing "$ATTEMPT"
+        --workflow-snapshot "$SNAPSHOT" --resume-existing "$ATTEMPT" \
+        --unlock-stale-snakemake-locks
 ) 2>&1 | tee "$LOG"
 SH
 ```
 
-The driver validates C0 and the pinned workflow runtime first. Its dry-run must
-show CT plus the paired summary and no C0 job; otherwise it stops before training
-and restores the moved partial files. On success, collect the printed uniquely
-named resume archive and `.sha256` from Home `transfer/` (or shared storage if
-Home disappeared), plus the printed terminal `.log`. No manual deletion or
-upload of the old 117-MiB archive is needed.
+The driver validates C0 and the pinned workflow runtime first. If stale lock
+files exist, the explicit option records their hashes and asks Snakemake to
+unlock; it does not disable locking. The dry-run must then show CT plus the
+paired summary and no C0 job, or the runner stops before training and restores
+the moved partial files. CT restarts at epoch 1; C0 is reused. On success, collect
+the printed uniquely named resume archive and `.sha256` from Home `transfer/`
+(or shared storage if Home disappeared), plus the printed terminal `.log`. No
+manual deletion or upload of either previous return archive is needed.
 
 ## Completed feature extraction and recovery instructions (historical)
 

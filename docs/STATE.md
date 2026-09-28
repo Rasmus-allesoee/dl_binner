@@ -40,6 +40,13 @@ Return review update, 2026-09-28: the 117-MiB archive was inflated by 418 retain
 resume preserves the original failed CT files under the attempt's `recovery/`
 folder; it does not delete the attempt or accepted C0 artifacts.
 
+The first owner-run resume returned immediately on a stale Snakemake lock, before
+any rule ran; C0's hashes still passed and the partial CT files remain preserved.
+The current [owner command](../experiments/E001-coverage-thinning/OPERATIONS.md#current-action-2026-09-28-resume-the-unfinished-comebin-condition)
+uses source `9ceeb087441d`: it restores a CT working copy, unlocks only after the
+owner confirms no other workflow is active, and retains the dry-run guard that
+prevents rerunning C0. This fix has not yet run on UCloud.
+
 - **HMP GI** assembly/truth/taxonomy and evaluation population are accepted and frozen. Continue with this declared development derivative, not an unchanged benchmark. Native smoke/CPU, clustering/marker/evaluator, mapper/storage and all preprocessing passed. Native feature extraction is accepted in [the review](../experiments/E001-coverage-thinning/features-observed.json). The MetaBAT2/VAMB seed-11 pair is accepted. The COMEBin paired pilot remains incomplete until the owner runs the guarded CT resume. Selection and complete three-seed affordability remain open. Binary VAMB embeddings/models remain hash-bound on UCloud, not directly inspected locally. See [frozen inputs](../experiments/E001-coverage-thinning/frozen-inputs.json).
 - HPC is owner-operated and **CPU only**: 2,100 allocated core-hours, up to 128 vCPU/384 GB RAM. Terminal / Ubuntu / Aug2026 on DeIC Interactive HPC (SDU/K8s), persistent root `/work/Home/dl_binner/e001/e001-gate0`, with per-tool environments under `envs/`. The [E001 configuration](../experiments/E001-coverage-thinning/config.json) caps this diagnostic at 800 core-hours with nested smaller preflight/preprocessing limits; affordability is not established. The owner can expand storage: 200 GB is now a provisioning review threshold, not a scientific ceiling. Do not shrink E001 to fit it.
 - Selected source commits are recorded in [tool snapshots](evidence/2026-09-17-tool-snapshots.json); core E001 environments passed scoped native checks, not full scientific workflows. GenomeFace is unversioned, McDevol has an abnormal index state, and DCVBin lacks a model payload. These optional comparisons do not block the core E001 preflight.
