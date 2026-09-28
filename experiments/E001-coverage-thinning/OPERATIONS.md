@@ -13,11 +13,12 @@ driver then failed to create its return archive under job-local `$WORK`; no arch
 or checksum was produced. **Do not rerun or remove this attempt.** Its retained
 worker/workflow records are needed to identify why CT stopped.
 
-The repair changes return packaging to write beside the attempt on the persistent
-data volume and adds a package-only mode. It reads the retained attempt and writes
-a compact archive/checksum; it does not start Snakemake, training, downloads or
-environment setup, and it does not alter the attempt. No 8-vCPU allocation is
-needed. Upload the new committed code bundle and checksum named in the handoff to
+The first package-only command stopped because the attempt is missing `status.json`;
+it made no return archive and did not alter the attempt. Recovery is now tolerant
+of missing receipts and packages the small files that remain. It writes beside the
+attempt on the persistent data volume; it does not start Snakemake, training,
+downloads or environment setup, and it does not alter the attempt. No 8-vCPU
+allocation is needed. Upload the new committed code bundle and checksum named in the handoff to
 `/work/Home/dl_binner/e001/e001-gate0/transfer/`, then run:
 
 ```sh
@@ -42,11 +43,11 @@ SH
 ```
 
 Return the printed attempt return archive, its adjacent `.sha256`, and the
-`e001-pilot-recover.*.log`. The archive should include `status.json`,
-`failure.json`, Snakemake stderr/logs, and COMEBin CT's fit command record and
-stderr, while excluding BAMs and large binary arrays. After inspecting those
-receipts, diagnose the actual CT failure and decide whether the existing C0 output
-can be resumed safely; do not repeat the fit until that review.
+`e001-pilot-recover.*.log`. Recovery is best-effort: it packages whichever small
+records/logs remain, reports expected files that are absent, and excludes BAMs
+and large binary arrays. After inspecting the returned records, diagnose the CT
+failure and decide whether the existing C0 output can be resumed safely; do not
+repeat the fit until that review.
 
 ## Completed feature extraction and recovery instructions (historical)
 

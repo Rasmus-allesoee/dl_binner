@@ -25,6 +25,15 @@ attempt is not accepted, and no repeat/cleanup is authorized. A package-only pat
 now creates a compact checksum-bound archive beside the retained attempt so its
 workflow/worker records can be inspected first.
 
+The first package-only recovery used source commit `f1eed69` and the owner-supplied
+[terminal log](../../agent_context/e001-pilot-recover.6dU9xz.log), SHA-256
+`3a1982d6e32457311da58373a15c6eb6a51c3e64b2ef50f5630b72d46eb5c5e4`. The bundle
+checksum passed, but recovery stopped because `status.json` is absent from the
+attempt; it produced no archive. This is a recovery-script assumption, not the CT
+worker failure, and the log does not show that the attempt was modified. The
+revised salvage mode treats expected records as optional, reports absences, and
+packages the small logs/receipts that remain.
+
 ## COMEBin first-pilot driver guard failure and retry, 2026-09-27
 
 The [checksum-bound failure record](comebin-pilot-failure-observed.json) reviews

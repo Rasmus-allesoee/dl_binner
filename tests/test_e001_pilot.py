@@ -112,8 +112,6 @@ class PilotTests(unittest.TestCase):
         stage=self.root/'paired-pilot-comebin-retained';stage.mkdir()
         (stage/'comebin/CT').mkdir(parents=True)
         p.write(stage/'runtime.json',{'stage':str(stage),'tools':['comebin']})
-        p.write(stage/'status.json',{'exit_code':1,'packaging_failed':True})
-        p.write(stage/'failure.json',{'traceback':'workflow failed'})
         (stage/'workflow.stderr').write_text('worker failed\n')
         p.write(stage/'comebin/CT/fit.command.json',{'returncode':1})
         (stage/'comebin/CT/fit.stderr').write_text('last retained epoch\n')
@@ -122,6 +120,7 @@ class PilotTests(unittest.TestCase):
                                '--data-root',str(self.root),'--package-existing',str(stage)],
                               capture_output=True,text=True)
         self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+        self.assertIn('missing optional recovery records',result.stderr)
         archive=self.root/(stage.name+'-return.tar.gz')
         checksum=Path(str(archive)+'.sha256')
         self.assertTrue(archive.is_file());self.assertTrue(checksum.is_file())

@@ -595,13 +595,14 @@ def package_failed_attempt(stage, data_root):
     runtime=read(stage/'runtime.json')
     require(Path(runtime['stage']).resolve()==stage.resolve() and runtime['tools']==['comebin'],
             'Attempt runtime does not match the COMEBin pilot')
-    status=read(stage/'status.json')
-    require(status.get('packaging_failed') is True and (stage/'failure.json').is_file(),
-            'Attempt is not the retained workflow/package failure')
-    require((stage/'workflow.stderr').is_file() and
-            (stage/'comebin/CT/fit.command.json').is_file() and
-            (stage/'comebin/CT/fit.stderr').is_file(),
-            'Required workflow and CT fit diagnostics are missing')
+    expected=('status.json','failure.json','workflow.stderr',
+              'comebin/CT/fit.command.json','comebin/CT/fit.stderr')
+    missing=[name for name in expected if not (stage/name).is_file()]
+    if missing:
+        print('NOTICE: retained attempt is missing optional recovery records: '+', '.join(missing),
+              file=sys.stderr,flush=True)
+    # This is a salvage path: missing receipts are themselves evidence and
+    # must not prevent returning the logs that did survive.
     return package(stage)
 
 
