@@ -35,7 +35,8 @@ the same shared data mounted. The 8-hour allowance covers a fresh 200-epoch CT
 fit, clustering and evaluation with headroom; no preprocessing, feature
 extraction, tool installation or bulk downloads are performed.
 
-Upload the new committed code bundle and checksum below to Home `transfer/`.
+Upload `e001-code-889d76a1f234.tar.gz` and its adjacent checksum to Home
+`transfer/` (SHA-256 `36ff4861672f9863ab17ae8623eb36d679eee3dcbbc647462d0cfa8bd15311e3`).
 Keep the existing `e001-workflow-0fb6955cdc62.tar.gz` and checksum there. Then run:
 
 ```sh
@@ -44,7 +45,7 @@ set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
 SHARED='/work/RasmusAllesøeNielsen#2936'
 DATA="$SHARED/dl_binner/e001"
-BUNDLE=e001-code-<commit>
+BUNDLE=e001-code-889d76a1f234
 CODE="$WORK/$BUNDLE"
 ATTEMPT="$DATA/paired-pilot-comebin-istuh_2t"
 SNAPSHOT="$WORK/transfer/e001-workflow-0fb6955cdc62.tar.gz"

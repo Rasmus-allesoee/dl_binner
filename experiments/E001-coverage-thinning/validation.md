@@ -67,6 +67,16 @@ CT and paired-summary only; C0 in the DAG is a hard stop. It restarts CT from
 epoch 1 and prefers Home `transfer/` for the compact return, falling back to the
 persistent attempt if Home is unavailable. See the [current operations action](OPERATIONS.md#current-action-2026-09-28-resume-the-unfinished-comebin-condition).
 
+The repair is source commit `889d76a1f234b7ccb787cc7c37a1f5ff1f69b31b`, transferred
+as `e001-code-889d76a1f234.tar.gz`, SHA-256
+`36ff4861672f9863ab17ae8623eb36d679eee3dcbbc647462d0cfa8bd15311e3`. The checksum
+and embedded source commit were verified locally. Seven focused pilot tests, two
+feature packaging/progress tests, and the 32-document/381-link check passed. The
+broader pilot suite's two remaining failures come from this macOS sandbox denying
+Snakemake's `psutil` process-tree query (`sysctl`, Operation not permitted); the
+NumPy-dependent review test was skipped because NumPy is not installed locally.
+No owner-run UCloud resume has yet occurred.
+
 ## COMEBin first-pilot driver guard failure and retry, 2026-09-27
 
 The [checksum-bound failure record](comebin-pilot-failure-observed.json) reviews
