@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import tarfile
 import tempfile
 import unittest
 from types import SimpleNamespace
@@ -106,6 +107,33 @@ class PilotTests(unittest.TestCase):
         self.assertGreater(rec['projected_full_schedule_seconds'],.4)
         self.assertLess(rec['projected_full_schedule_seconds'],5)
         self.assertLess(rec['projected_full_schedule_core_hours'],80)
+
+    def test_package_failed_comebin_attempt_without_rerunning_or_mutating_it(self):
+        stage=self.root/'paired-pilot-comebin-retained';stage.mkdir()
+        (stage/'comebin/CT').mkdir(parents=True)
+        p.write(stage/'runtime.json',{'stage':str(stage),'tools':['comebin']})
+        p.write(stage/'status.json',{'exit_code':1,'packaging_failed':True})
+        p.write(stage/'failure.json',{'traceback':'workflow failed'})
+        (stage/'workflow.stderr').write_text('worker failed\n')
+        p.write(stage/'comebin/CT/fit.command.json',{'returncode':1})
+        (stage/'comebin/CT/fit.stderr').write_text('last retained epoch\n')
+        before={x.relative_to(stage):x.read_bytes() for x in stage.rglob('*') if x.is_file()}
+        result=subprocess.run([sys.executable,'-I',str(REPO/'scripts/e001_pilot.py'),
+                               '--data-root',str(self.root),'--package-existing',str(stage)],
+                              capture_output=True,text=True)
+        self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+        archive=self.root/(stage.name+'-return.tar.gz')
+        checksum=Path(str(archive)+'.sha256')
+        self.assertTrue(archive.is_file());self.assertTrue(checksum.is_file())
+        self.assertIn(str(archive),result.stdout)
+        self.assertIn(p.sha(archive),checksum.read_text())
+        with tarfile.open(archive) as tar:
+            self.assertIn(stage.name+'/comebin/CT/fit.stderr',tar.getnames())
+            self.assertIn(stage.name+'/workflow.stderr',tar.getnames())
+        after={x.relative_to(stage):x.read_bytes() for x in stage.rglob('*') if x.is_file()}
+        self.assertEqual(before,after)
+        with self.assertRaisesRegex(ValueError,'direct child'):
+            p.package_failed_attempt(stage,self.root/'elsewhere')
 
     def test_actual_vamb_argument_parser(self):
         source=REPO/'agent_context/tools_repo/vamb/vamb/__main__.py'

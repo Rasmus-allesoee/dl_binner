@@ -1,6 +1,29 @@
 # E001 Gate 0 Validation
 
-Date: 2026-09-18; appended through 2026-09-27. Software checks and reviewed scientific attempts are identified separately below.
+Date: 2026-09-18; appended through 2026-09-28. Software checks and reviewed scientific attempts are identified separately below.
+
+## COMEBin CT attempt stopped; return packaging failed, 2026-09-28
+
+The owner supplied a terminal log for attempt `paired-pilot-comebin-istuh_2t`,
+source commit `8a03ca287c057f24f21f09442f710a5914b32703`, at 8 vCPU / 24 GB.
+The local inbox copy is
+[e001-pilot.CBTiiZ_new.log](../../agent_context/e001-pilot.CBTiiZ_new.log),
+SHA-256 `324800dbf87a78bb511dfc4b2fb7a1ad9a1020c4bae939b7f2be2e69f912976c`.
+Snakemake recorded the C0 condition as finished. CT training logged epoch 100/200,
+then the workflow returned code 1 at about 304 minutes elapsed. The log contains
+no underlying worker exception, signal or scheduler reason, so the cause of CT's
+stop is **unresolved**. The heartbeat corresponds to about 40.5 allocated
+core-hours at the recorded allocation; exact status accounting awaits the retained
+`status.json`.
+
+The driver's separate packaging step then raised `FileNotFoundError` for
+`/work/Home/dl_binner/e001/e001-gate0/paired-pilot-comebin-istuh_2t-return.tar.gz`.
+No return archive/checksum was supplied. The workflow log says the attempt remains
+under the persistent shared data root. Thus the terminal log establishes a return
+destination bug, but cannot establish why the CT worker/workflow exited. The
+attempt is not accepted, and no repeat/cleanup is authorized. A package-only path
+now creates a compact checksum-bound archive beside the retained attempt so its
+workflow/worker records can be inspected first.
 
 ## COMEBin first-pilot driver guard failure and retry, 2026-09-27
 

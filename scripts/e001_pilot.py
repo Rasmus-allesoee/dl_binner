@@ -572,11 +572,37 @@ def run(root, data, group, cpus, ram, snapshot):
         write(stage/'status.json',dict(exit_code=status,**res,elapsed_seconds=elapsed,allocated_core_hours=elapsed*cpus/3600,
               retained_bytes=sum(p.stat().st_size for p in stage.rglob('*') if p.is_file()),
               cost_scope='Driver wall time including setup; excludes packaging and outside-driver idle time'))
-        try: package(stage,root)
+        try: package(stage)
         except Exception:
             status=1; record=read(stage/'status.json'); record.update(exit_code=1,packaging_failed=True); write(stage/'status.json',record)
             print('Packaging failed; preserve',stage,traceback.format_exc(),file=sys.stderr)
     return status
+
+
+def package_failed_attempt(stage, data_root):
+    """Package retained COMEBin failure receipts without rerunning its DAG.
+
+    The target must be the recorded failed attempt as a direct child of the
+    persistent data root. This reads the attempt and writes a compact return
+    archive beside it; it does not clean or modify the retained attempt.
+    """
+    stage=Path(stage)
+    data_root=Path(data_root)
+    require(not stage.is_symlink() and stage.is_dir(), 'Attempt must be an existing real directory')
+    require(data_root.is_dir() and stage.parent.resolve()==data_root.resolve(),
+            'Attempt must be a direct child of the supplied persistent data root')
+    require(stage.name.startswith('paired-pilot-comebin-'), 'Not a COMEBin paired-pilot attempt')
+    runtime=read(stage/'runtime.json')
+    require(Path(runtime['stage']).resolve()==stage.resolve() and runtime['tools']==['comebin'],
+            'Attempt runtime does not match the COMEBin pilot')
+    status=read(stage/'status.json')
+    require(status.get('packaging_failed') is True and (stage/'failure.json').is_file(),
+            'Attempt is not the retained workflow/package failure')
+    require((stage/'workflow.stderr').is_file() and
+            (stage/'comebin/CT/fit.command.json').is_file() and
+            (stage/'comebin/CT/fit.stderr').is_file(),
+            'Required workflow and CT fit diagnostics are missing')
+    return package(stage)
 
 
 if __name__=='__main__':
@@ -584,10 +610,15 @@ if __name__=='__main__':
     p.add_argument('root',type=Path,nargs='?'); p.add_argument('--data-root',type=Path)
     p.add_argument('--group',choices=('metabat-vamb','comebin')); p.add_argument('--vcpus',type=int); p.add_argument('--ram-gb',type=float)
     p.add_argument('--workflow-snapshot',type=Path); p.add_argument('--config',type=Path)
+    p.add_argument('--package-existing',type=Path,
+                    help='package the retained failed COMEBin attempt without rerunning it')
     p.add_argument('--tool',choices=('metabat','vamb','comebin')); p.add_argument('--condition',choices=('C0','CT'))
     p.add_argument('--native',choices=('fit','cluster','evaluate','vamb-ipc-smoke','comebin-ipc-smoke')); p.add_argument('--worker',action='store_true'); p.add_argument('--aggregate',action='store_true')
     a=p.parse_args(); logging.basicConfig(level=logging.INFO,format='%(asctime)s %(message)s')
-    if a.config:
+    if a.package_existing is not None:
+        if a.data_root is None: p.error('--package-existing also requires --data-root')
+        package_failed_attempt(a.package_existing,a.data_root)
+    elif a.config:
         cfg=read(a.config)
         if a.aggregate:
             results={t:{c:read(Path(cfg['stage'])/t/c/'complete.json') for c in ('C0','CT')} for t in cfg['tools']}

@@ -2,91 +2,51 @@
 
 Updated: 2026-09-27. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
-## Current action, 2026-09-27
+## Current action, 2026-09-28: recover the retained COMEBin failure evidence
 
-The seed-11 MetaBAT2/VAMB pair and all preprocessing/features remain accepted;
-do not repeat them. The first COMEBin command
-`paired-pilot-comebin-p3983hy8` failed in the adapter's resource guard, not in
-COMEBin. Preserve it. Its [checksum-bound failure evidence](comebin-pilot-failure-observed.json)
-records 11.33 driver minutes / **1.5111 allocated core-hours** at 8 vCPU / 24 GB,
-**386,464 retained bytes**, and no complete COMEBin condition. The training log
-persisted two complete epochs at 120.119 and 121.543 seconds each. The supplied
-CPU dashboard showed about 350% utilization. The driver had requested four
-PyTorch threads plus COMEBin's four fixed DataLoader workers.
+The latest owner-run attempt is
+`paired-pilot-comebin-istuh_2t` under the persistent shared E001 data root. The
+uploaded terminal log shows that COMEBin C0 completed, then CT training reached
+epoch 100/200 before Snakemake returned code 1. The terminal log does not contain
+the worker's underlying error, so the scientific cause is not yet diagnosed. The
+driver then failed to create its return archive under job-local `$WORK`; no archive
+or checksum was produced. **Do not rerun or remove this attempt.** Its retained
+worker/workflow records are needed to identify why CT stopped.
 
-The guard multiplied the full process startup/feature loading time by 200. At its
-epoch-three marker it estimated **44,443.85 seconds** and stopped at the 10-hour
-fit ceiling. This projected one-time startup repeatedly. The next driver uses
-COMEBin's native epoch-duration entries, counts startup once, and applies a 25%
-margin to remaining epochs. The two persisted epoch timings imply about **6.7 hours
-without margin** under the old four-thread split; this is not a forecast for the new
-seven-thread split. The fresh attempt recomputes its own guarded projection after
-three completed epochs and reports core-hours; it does not assume early stopping.
-
-**Next: run a fresh seed-11 COMEBin pair in Terminal with 8 vCPU / 24 GB.** The
-serial neural-training budget is **seven PyTorch threads plus one DataLoader
-worker**. COMEBin's loader is fixed at four in the pinned source; the E001 runtime
-adapter lowers it to one. The training dataset is a `TensorDataset` of already
-computed six-view features, and the seeded parent generates the shuffled sample
-indices, so this worker adjustment changes queue handling without changing the
-training examples, schedule or seed. A short private `/tmp` smoke first exercises
-the native PyTorch TensorDataset/DataLoader queue and drains all synthetic batches.
-The actual fit is blocked unless it passes. Training logs the effective worker
-and thread counts. Clustering retains the same seeded 120 candidates and uses
-eight Leiden workers; seeded HNSW construction stays serial.
-
-The native schedule remains **200 maximum epochs with early stopping, batch 1024,
-six views, seed 11**, followed by the same marker-guided selection and AMBER/R95.
-Set aside **30 GB shared storage and 2 GB in `/tmp`**. No BAM or feature uploads,
-software downloads or feature regeneration are needed. Stop the fit if the
-corrected projection exceeds **80 allocated core-hours / 10 hours at eight vCPU**;
-the pair ceiling is **200 allocated core-hours / 25 hours** including setup, with
-**15 core-hours / 1.875 hours per condition** for clustering. These are limits,
-not runtime estimates. Eight-vCPU scaling is still being measured.
-
-Upload **e001-code-8a03ca287c05.tar.gz** and **e001-code-8a03ca287c05.tar.gz.sha256** to
-`/work/Home/dl_binner/e001/e001-gate0/transfer/`. Retain the existing workflow
-snapshot `e001-workflow-0fb6955cdc62.tar.gz`. Bundle checksum: **86d7aa0ce58c89a9880cfe42019ebf1433b4b1f0c1fc5c8811b7ed6df3d5ecd2**.
+The repair changes return packaging to write beside the attempt on the persistent
+data volume and adds a package-only mode. It reads the retained attempt and writes
+a compact archive/checksum; it does not start Snakemake, training, downloads or
+environment setup, and it does not alter the attempt. No 8-vCPU allocation is
+needed. Upload the new committed code bundle and checksum named in the handoff to
+`/work/Home/dl_binner/e001/e001-gate0/transfer/`, then run:
 
 ```sh
 bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
 DATA='/work/RasmusAllesøeNielsen#2936/dl_binner/e001'
-BUNDLE=e001-code-8a03ca287c05
+BUNDLE=e001-code-<commit>
 CODE="$WORK/$BUNDLE"
-LOG=$(mktemp "$WORK/transfer/e001-pilot-transfer.XXXXXX.log")
-echo "Transfer log: $LOG"
+ATTEMPT="$DATA/paired-pilot-comebin-istuh_2t"
+LOG=$(mktemp "$WORK/transfer/e001-pilot-recover.XXXXXX.log")
+echo "Terminal log: $LOG"
 (
     cd "$WORK/transfer"
     sha256sum --check "$BUNDLE.tar.gz.sha256"
     test ! -e "$CODE" && test ! -L "$CODE"
     tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
-    bash "$CODE/scripts/e001_pilot_run.sh" "$WORK" "$DATA" 8 24 comebin
+    test -d "$ATTEMPT"
+    python3 -I "$CODE/scripts/e001_pilot.py" --data-root "$DATA" --package-existing "$ATTEMPT"
 ) 2>&1 | tee "$LOG"
 SH
 ```
 
-Return the printed `paired-pilot-comebin-*-return.tar.gz`, adjacent `.sha256`, and
-`e001-pilot.*.log`. Include the transfer log if extraction failed. The fresh attempt
-preserves the failed directory. Stop on any error and return its archive before
-retrying. After success, inspect all native schedules, embeddings, 120 candidate
-partitions, marker selection, AMBER/R95 and measured allocated core-hours before
-seeds 23/47.
-
-Local Python lacks PyTorch and COMEBin's clustering dependencies. The changed
-Python files compile, the entry-point exposes the IPC preflight, and the maintained
-document-link check passes; no local COMEBin runtime is claimed. The revised job
-runs the pinned native loader smoke before fitting and retains progress and cost
-guards.
-
-Following-step prompt:
-
-> Read the current project guidance and E001 records. Verify the uploaded fresh
-> seed-11 COMEBin return, checksum and terminal log. Accept successful work without
-> repeating it. Check exact schedules and effective thread counts, embedding axes,
-> all 120 candidate partitions, marker selection, AMBER/R95 and actual resources.
-> Resolve failures from retained evidence, update STATE and E001 records, and commit.
+Return the printed attempt return archive, its adjacent `.sha256`, and the
+`e001-pilot-recover.*.log`. The archive should include `status.json`,
+`failure.json`, Snakemake stderr/logs, and COMEBin CT's fit command record and
+stderr, while excluding BAMs and large binary arrays. After inspecting those
+receipts, diagnose the actual CT failure and decide whether the existing C0 output
+can be resumed safely; do not repeat the fit until that review.
 
 ## Completed feature extraction and recovery instructions (historical)
 

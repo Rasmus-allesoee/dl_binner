@@ -323,15 +323,43 @@ def progress(stage, interval=1, heartbeat=60):
         finally: stop.set();thread.join()
 
 
-def package(stage, root):
-    """Return small records/logs only; never follow BAM links into the archive."""
+def package(stage):
+    """Atomically return small receipts/logs beside the persistent attempt.
+
+    The attempt directory must already live on the persistent data volume.
+    Keeping the archive beside it avoids relying on the job-local Home mount
+    during shutdown. BAM links, large arrays and symlinks are never archived.
+    """
+    stage=Path(stage)
+    require(stage.is_dir() and not stage.is_symlink(), 'Return source must be a real attempt directory')
+    root=stage.parent
     archive=root/(stage.name+'-return.tar.gz')
-    with tarfile.open(archive,'x:gz') as tar:
-        for p in sorted(stage.rglob('*')):
-            if p.is_file() and not p.is_symlink() and 'bams' not in p.relative_to(stage).parts and p.suffix in ('.json','.log','.stdout','.stderr','.tsv','.txt'):
-                tar.add(p,arcname=stage.name+'/'+str(p.relative_to(stage)),recursive=False)
-    Path(str(archive)+'.sha256').write_text(sha(archive)+'  '+archive.name+'\n')
-    print('RETURN:',archive,'and .sha256',flush=True)
+    checksum=Path(str(archive)+'.sha256')
+    require(not archive.exists() and not checksum.exists(), 'Refusing to overwrite an existing return')
+    fd,temporary_name=tempfile.mkstemp(prefix='.'+archive.name+'.',suffix='.partial',dir=root)
+    os.close(fd)
+    temporary=Path(temporary_name)
+    checksum_temporary=None
+    try:
+        with tarfile.open(temporary,'w:gz') as tar:
+            for p in sorted(stage.rglob('*')):
+                if p.is_file() and not p.is_symlink() and 'bams' not in p.relative_to(stage).parts and p.suffix in ('.json','.log','.stdout','.stderr','.tsv','.txt'):
+                    tar.add(p,arcname=stage.name+'/'+str(p.relative_to(stage)),recursive=False)
+        digest=sha(temporary)
+        # Same-directory hard links publish each finished file without replacing
+        # a return from an earlier attempt or exposing an incomplete archive.
+        os.link(temporary,archive)
+        fd,checksum_name=tempfile.mkstemp(prefix='.'+checksum.name+'.',suffix='.partial',dir=root)
+        checksum_temporary=Path(checksum_name)
+        with os.fdopen(fd,'w') as handle:
+            handle.write(digest+'  '+archive.name+'\n')
+        os.link(checksum_temporary,checksum)
+        print('RETURN:',archive,'and',checksum,flush=True)
+        return archive,checksum
+    finally:
+        temporary.unlink(missing_ok=True)
+        if checksum_temporary is not None:
+            checksum_temporary.unlink(missing_ok=True)
 
 
 def ensure_git(env, stage):
@@ -439,7 +467,7 @@ def run(root, data_root, manifest, cpus, ram, snapshot, reuse_attempt=None):
               'allocated_core_hours':elapsed*cpus/3600,'group_core_hour_limit':plan['group_core_hour_limit'],
               'feature_bytes':sum(p.stat().st_size for p in stage.rglob('*') if p.is_file() and 'bams' not in p.relative_to(stage).parts),
               'note':'Excludes external BAMs, outside-driver idle/setup and return packaging; linked/copied BAM receipts are in inputs.json. No fitting.'})
-        try: package(stage,root)
+        try: package(stage)
         except Exception:
             status=1;record=read(stage/'status.json');record.update(exit_code=1,packaging_failed=True);write(stage/'status.json',record)
             print('Packaging failed; preserve attempt:',stage,traceback.format_exc(),file=sys.stderr)

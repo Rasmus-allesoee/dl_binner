@@ -123,8 +123,13 @@ class FeaturesTests(unittest.TestCase):
         stage=self.root/'attempt';stage.mkdir();(stage/'bams').mkdir();(stage/'bams/input.bam').write_bytes(b'bulk')
         (stage/'values.npy').write_bytes(b'bulk');f.write(stage/'result.json',{'pass':True})
         (stage/'escape.json').symlink_to(stage/'values.npy')
-        with contextlib.redirect_stdout(io.StringIO()):f.package(stage,self.root)
+        with contextlib.redirect_stdout(io.StringIO()):f.package(stage)
         with tarfile.open(self.root/'attempt-return.tar.gz') as tar:self.assertEqual(tar.getnames(),['attempt/result.json'])
+        checksum=Path(str(self.root/'attempt-return.tar.gz')+'.sha256')
+        self.assertIn(f.sha(self.root/'attempt-return.tar.gz'),checksum.read_text())
+        with self.assertRaisesRegex(ValueError,'overwrite'):
+            with contextlib.redirect_stdout(io.StringIO()):f.package(stage)
+        self.assertFalse(list(self.root.glob('*.partial')))
 
     def test_progress(self):
         log=self.root/'native.stdout';log.write_text('native stage\n');out=io.StringIO()
