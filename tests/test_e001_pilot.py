@@ -174,9 +174,17 @@ class PilotTests(unittest.TestCase):
                  for name in ('complete.json','evaluation.json','trained.json','fit.json','predictions.tsv')}
         p.write(stage/'comebin/C0/retained.json',receipt)
         (stage/'comebin/CT/fit.stderr').write_text('partial epoch 100\n')
+        (stage/'comebin/CT/fit.command.json').write_text('{"pid":1}\n')
         (stage/'logs/comebin-CT.log').write_text('old workflow log\n')
         (stage/'benchmarks/comebin-CT.tsv').write_text('old benchmark\n')
         (stage/'progress.log').write_text('old progress\n')
+        prior_partial=stage/'recovery/comebin-ct-resume-20260928T123114Z-i5qfl46l/comebin-CT-partial'
+        prior_partial.parent.mkdir(parents=True)
+        import shutil
+        shutil.copytree(stage/'comebin/CT',prior_partial)
+        shutil.rmtree(stage/'comebin/CT')
+        stale_lock=stage/'.snakemake/locks/0.output.lock';stale_lock.parent.mkdir(parents=True)
+        stale_lock.write_text('comebin/CT/retained.json\n')
         prior={**p.resources('comebin',8,24),'root':str(root),'stage':str(stage),
                'runtime_config':str(stage/'runtime.json'),'helper':'old-helper.py',
                'driver_python':sys.executable,'source_commit':'old-source'}
@@ -189,7 +197,9 @@ class PilotTests(unittest.TestCase):
         commands=[]
         def fake_invoke(command,env,out,label,limit):
             commands.append((label,list(map(str,command))))
-            if label=='dag':
+            if label=='workflow-unlock':
+                stale_lock.unlink()
+            elif label=='dag':
                 (out/'dag.stdout').write_text('output: comebin/CT/retained.json\noutput: paired-summary.json\n')
                 (out/'dag.stderr').write_text('')
             elif label=='workflow':
@@ -210,15 +220,37 @@ class PilotTests(unittest.TestCase):
             stack.enter_context(patch.object(p.shutil,'disk_usage',return_value=SimpleNamespace(free=100_000_000_000)))
             stack.enter_context(contextlib.redirect_stdout(io.StringIO()))
             stack.enter_context(contextlib.redirect_stderr(io.StringIO()))
-            status=p.resume_comebin(root,data,stage,8,24,self.root/'snapshot')
+            status=p.resume_comebin(root,data,stage,8,24,self.root/'snapshot',unlock_stale_locks=True)
         self.assertEqual(status,0)
         self.assertEqual(p.read(stage/'comebin/C0/retained.json'),receipt)
-        self.assertEqual(len(list((stage/'recovery').glob('*/comebin-CT-partial/fit.stderr'))),1)
+        self.assertEqual(len(list((stage/'recovery').glob('*/comebin-CT-partial/fit.stderr'))),2)
         self.assertTrue((stage/'comebin/CT/retained.json').is_file())
+        self.assertTrue((prior_partial/'fit.stderr').is_file())
+        self.assertFalse(stale_lock.exists())
+        labels=[label for label,_ in commands]
+        self.assertLess(labels.index('workflow-unlock'),labels.index('dag'))
+        self.assertLess(labels.index('dag'),labels.index('workflow'))
+        self.assertIn('--unlock',next(cmd for label,cmd in commands if label=='workflow-unlock'))
         dag_command=next(cmd for label,cmd in commands if label=='dag')
         self.assertIn('--rerun-triggers',dag_command);self.assertIn('mtime',dag_command)
         self.assertIn('workflow',[label for label,_ in commands])
         self.assertTrue(next((root/'transfer').glob('*-return.tar.gz')).is_file())
+
+    def test_snakemake_rule_start_detection_distinguishes_lock_failure(self):
+        stage=self.root/'attempt';stage.mkdir()
+        recovery=self.root/'recovery';recovery.mkdir()
+        (recovery/'workflow.stderr').write_text('Building DAG of jobs...\nLockException: Directory cannot be locked\n')
+        self.assertFalse(p.snakemake_rules_started(stage,recovery,set()))
+        (recovery/'workflow.stderr').write_text('Building DAG of jobs...\nExecute 1 jobs...\nlocalrule native_condition:\n')
+        self.assertTrue(p.snakemake_rules_started(stage,recovery,set()))
+
+    def test_stale_snakemake_lock_requires_explicit_no_live_workflow_confirmation(self):
+        stage=self.root/'attempt';lock=stage/'.snakemake/locks/0.output.lock'
+        lock.parent.mkdir(parents=True);lock.write_text('comebin/CT/retained.json\n')
+        recovery=self.root/'recovery';recovery.mkdir()
+        with self.assertRaisesRegex(ValueError,'Confirm no other workflow is running'):
+            p.clear_stale_snakemake_locks('/prefix/bin/snakemake',{},recovery,[],stage,False)
+        self.assertTrue(lock.is_file())
 
     def test_package_failed_comebin_attempt_without_rerunning_or_mutating_it(self):
         stage=self.root/'paired-pilot-comebin-retained';stage.mkdir()

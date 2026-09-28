@@ -671,7 +671,71 @@ def validate_resume_dag(dag):
             'Resume dry-run did not schedule the paired summary')
 
 
-def resume_comebin(root, data, stage, cpus, ram, snapshot):
+def restore_partial_ct_from_recovery(stage):
+    """Restore a working copy of the newest retained CT partial if CT is absent.
+
+    A previous interrupted resume may have moved CT into its recovery folder
+    before discovering that Snakemake could not acquire the work-directory lock.
+    Copy the retained evidence back without consuming or rewriting that recovery.
+    """
+    stage=Path(stage); ct=stage/'comebin/CT'
+    if ct.exists() or ct.is_symlink():
+        require(ct.is_dir() and not ct.is_symlink(),'CT path is not a real directory')
+        return None
+    history=stage/'recovery'
+    candidates=sorted((p for p in history.glob('comebin-ct-resume-*/comebin-CT-partial')
+                       if p.is_dir() and not p.is_symlink() and (p/'fit.command.json').is_file()),
+                      key=lambda p:p.parent.name)
+    require(candidates,'CT directory is absent and no retained incomplete CT recovery was found')
+    source=candidates[-1]
+    require(not (source/'retained.json').exists(),'Latest retained CT partial is unexpectedly complete')
+    require(not any(p.is_symlink() for p in source.rglob('*')),
+            'Refusing to restore a CT partial containing symlinks')
+    ct.parent.mkdir(parents=True,exist_ok=True)
+    shutil.copytree(source,ct)
+    return source
+
+
+def snakemake_lock_files(stage):
+    """Return real files in this work directory's Snakemake lock folder."""
+    lock_dir=Path(stage)/'.snakemake/locks'
+    if not lock_dir.exists() and not lock_dir.is_symlink(): return []
+    require(lock_dir.is_dir() and not lock_dir.is_symlink(),'Snakemake lock path is not a real directory')
+    files=sorted(lock_dir.rglob('*'))
+    require(not any(path.is_symlink() for path in files),'Snakemake lock directory contains a symlink')
+    return [path for path in files if path.is_file()]
+
+
+def clear_stale_snakemake_locks(workflow, env, recovery, cmd, stage, confirmed):
+    """Unlock only an explicitly confirmed stale lock during pilot recovery."""
+    stale_locks=snakemake_lock_files(stage)
+    if not stale_locks: return False
+    require(confirmed,
+            'Snakemake lock files remain in the shared attempt. Confirm no other workflow is running, then rerun with --unlock-stale-snakemake-locks')
+    write(Path(recovery)/'snakemake-locks-before-unlock.json',[
+        {'path':str(path.relative_to(stage)), 'bytes':path.stat().st_size, 'sha256':sha(path)}
+        for path in stale_locks])
+    invoke(workflow_command(workflow,'snakemake',cmd+['--unlock']),env,recovery,
+           'workflow-unlock',120)
+    require(not snakemake_lock_files(stage),'Snakemake --unlock returned but lock files remain')
+    return True
+
+
+def snakemake_rules_started(stage, recovery, previous_logs):
+    """Detect whether the failed workflow invocation actually launched a rule."""
+    pattern=re.compile(r'Execute\s+\d+\s+jobs?|localrule\s+\S+\s*:')
+    for path in (Path(recovery)/'workflow.stdout',Path(recovery)/'workflow.stderr'):
+        if path.is_file() and pattern.search(path.read_text(errors='replace')):
+            return True
+    log_dir=Path(stage)/'.snakemake/log'
+    if log_dir.is_dir():
+        for path in log_dir.glob('*.snakemake.log'):
+            if path.resolve() in previous_logs: continue
+            if pattern.search(path.read_text(errors='replace')): return True
+    return False
+
+
+def resume_comebin(root, data, stage, cpus, ram, snapshot, unlock_stale_locks=False):
     """Resume only the unfinished CT branch while protecting accepted C0 outputs.
 
     C0 is rehashed against its native retention receipt. Incomplete CT files are
@@ -692,10 +756,11 @@ def resume_comebin(root, data, stage, cpus, ram, snapshot):
             'Attempt runtime/allocation does not match this COMEBin resume')
     c0=stage/'comebin/C0'; ct=stage/'comebin/CT'
     c0_receipt=validate_retained_condition(c0)
+    history=stage/'recovery'; history.mkdir(exist_ok=True)
+    restored_ct_from=restore_partial_ct_from_recovery(stage)
     require(ct.is_dir() and not ct.is_symlink() and not (ct/'retained.json').exists(),
             'CT is complete or its real partial directory is missing')
     require(not (stage/'paired-summary.json').exists(),'Paired summary already exists; do not resume a completed attempt')
-    history=stage/'recovery'; history.mkdir(exist_ok=True)
     stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
     recovery=Path(tempfile.mkdtemp(prefix='comebin-ct-resume-'+stamp+'-',dir=history))
     shutil.copy2(stage/'runtime.json',recovery/'runtime.before.json')
@@ -707,13 +772,14 @@ def resume_comebin(root, data, stage, cpus, ram, snapshot):
     write(recovery/'resume.json',{'attempt':str(stage),'prior_source_commit':old_commit,
           'resume_source_commit':cfg['source_commit'],'reused_condition':'COMEBin/C0',
           'c0_validation':c0_receipt,'ct_action':'restart the incomplete CT fit from epoch 1; pinned COMEBin saves no mid-fit checkpoint',
+          'restored_partial_ct_from':str(restored_ct_from) if restored_ct_from else None,
           'snakemake_resume':'same persistent work directory; rerun trigger limited to mtime; execute only after dry-run confirms CT and summary without C0'})
     moved=[]
     move_items=[(ct,recovery/'comebin-CT-partial'),
                 (stage/'logs/comebin-CT.log',recovery/'comebin-CT.previous.log'),
                 (stage/'benchmarks/comebin-CT.tsv',recovery/'comebin-CT.previous-benchmark.tsv'),
                 (stage/'progress.log',recovery/'progress.previous.log')]
-    start=time.monotonic(); status=1; execution_started=False
+    start=time.monotonic(); status=1; execution_started=False; workflow_invoked=False
     try:
         for source,destination in move_items:
             if source.exists():
@@ -736,16 +802,21 @@ def resume_comebin(root, data, stage, cpus, ram, snapshot):
                  '--runtime-source-cache-path',stage/'.snakemake-source-cache',
                  '--resources',f'mem_mb={int((ram-.5)*1000)}','tool_slots=1',
                  '--keep-incomplete','--printshellcmds','--benchmark-extended','--rerun-triggers','mtime']
+            clear_stale_snakemake_locks(workflow,env,recovery,cmd,stage,unlock_stale_locks)
             invoke(workflow_command(workflow,'snakemake',cmd+['--dry-run']),env,recovery,'dag',120)
             dag=(recovery/'dag.stdout').read_text()+'\n'+(recovery/'dag.stderr').read_text()
             validate_resume_dag(dag)
             remaining=res['group_core_hours']*3600/cpus-(time.monotonic()-start)
             require(remaining>0,'COMEBin resume core-hour budget exhausted')
-            execution_started=True
+            previous_logs={path.resolve() for path in (stage/'.snakemake/log').glob('*.snakemake.log')}
+            workflow_invoked=True
             invoke(workflow_command(workflow,'snakemake',cmd),env,recovery,'workflow',remaining)
+            execution_started=True
             require((stage/'paired-summary.json').is_file(),'Missing completed paired receipt after resume')
             status=0
     except BaseException:
+        if workflow_invoked and not execution_started:
+            execution_started=snakemake_rules_started(stage,recovery,previous_logs)
         try: write(recovery/'failure.json',{'traceback':traceback.format_exc()})
         except OSError as error: print('NOTICE: could not persist resume traceback:',error,file=sys.stderr,flush=True)
         print(traceback.format_exc(),file=sys.stderr)
@@ -758,7 +829,8 @@ def resume_comebin(root, data, stage, cpus, ram, snapshot):
         elapsed=time.monotonic()-start
         receipt={'exit_code':status,'resume':True,'reused_condition':'COMEBin/C0',
                  'c0_validation':c0_receipt,'elapsed_seconds':elapsed,
-                 'allocated_core_hours':elapsed*cpus/3600,'execution_started':execution_started,
+                 'allocated_core_hours':elapsed*cpus/3600,'workflow_invoked':workflow_invoked,
+                 'execution_started':execution_started,
                  'return_policy':'prefer owner Home transfer folder; fall back beside persistent attempt'}
         try: write(recovery/'status.json',receipt)
         except OSError as error: print('NOTICE: could not persist resume status:',error,file=sys.stderr,flush=True)
@@ -811,6 +883,8 @@ if __name__=='__main__':
     p.add_argument('--return-dir',type=Path,help='preferred folder for package-only recovery output')
     p.add_argument('--resume-existing',type=Path,
                     help='resume the incomplete COMEBin attempt, preserving and reusing completed C0')
+    p.add_argument('--unlock-stale-snakemake-locks',action='store_true',
+                    help='during the explicit COMEBin resume only, remove stale work-directory locks after confirming no other workflow is running')
     p.add_argument('--tool',choices=('metabat','vamb','comebin')); p.add_argument('--condition',choices=('C0','CT'))
     p.add_argument('--native',choices=('fit','cluster','evaluate','vamb-ipc-smoke','comebin-ipc-smoke')); p.add_argument('--worker',action='store_true'); p.add_argument('--aggregate',action='store_true')
     a=p.parse_args(); logging.basicConfig(level=logging.INFO,format='%(asctime)s %(message)s')
@@ -820,7 +894,8 @@ if __name__=='__main__':
     elif a.resume_existing is not None:
         if any(x is None for x in (a.root,a.data_root,a.vcpus,a.ram_gb,a.workflow_snapshot)):
             p.error('--resume-existing also requires ROOT, --data-root, --vcpus, --ram-gb and --workflow-snapshot')
-        raise SystemExit(resume_comebin(a.root,a.data_root,a.resume_existing,a.vcpus,a.ram_gb,a.workflow_snapshot))
+        raise SystemExit(resume_comebin(a.root,a.data_root,a.resume_existing,a.vcpus,a.ram_gb,
+                                        a.workflow_snapshot,a.unlock_stale_snakemake_locks))
     elif a.config:
         cfg=read(a.config)
         if a.aggregate:
