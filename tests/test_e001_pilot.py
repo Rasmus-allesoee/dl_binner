@@ -252,6 +252,23 @@ class PilotTests(unittest.TestCase):
             p.clear_stale_snakemake_locks('/prefix/bin/snakemake',{},recovery,[],stage,False)
         self.assertTrue(lock.is_file())
 
+    def test_real_snakemake_unlock_clears_synthetic_stale_locks(self):
+        executable=REPO/'artifacts/e001-snakemake-test-env/bin/snakemake'
+        if not executable.exists():self.skipTest('Local Snakemake not installed')
+        stage=self.root/'workflow';stage.mkdir()
+        snakefile=stage/'Snakefile';snakefile.write_text('rule all:\n    input: []\n')
+        lock_dir=stage/'.snakemake/locks';lock_dir.mkdir(parents=True)
+        for name in ('0.input.lock','0.output.lock'):
+            (lock_dir/name).write_text('synthetic stale lock\n')
+        env=p.isolated_env();env['XDG_CACHE_HOME']=str(stage/'cache')
+        (stage/'cache').mkdir()
+        result=subprocess.run([str(executable),'--snakefile',str(snakefile),
+                               '--directory',str(stage),'--runtime-source-cache-path',
+                               str(stage/'.snakemake-source-cache'),'--unlock'],
+                              capture_output=True,text=True,env=env)
+        self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+        self.assertFalse(lock_dir.exists() and any(lock_dir.iterdir()),result.stdout+result.stderr)
+
     def test_package_failed_comebin_attempt_without_rerunning_or_mutating_it(self):
         stage=self.root/'paired-pilot-comebin-retained';stage.mkdir()
         (stage/'comebin/CT').mkdir(parents=True)
