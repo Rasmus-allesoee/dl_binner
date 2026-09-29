@@ -39,6 +39,10 @@ and recovery DAGs. The three COMEBin review and two collector tests were rerun
 successfully after final changes. Isolated system-Python collector CLI/returned
 bytes, Python compilation, exact owner-command shell syntax and docs/link checks
 passed. Native scientific fits were never run locally or remotely by the agent.
+The committed `c4d8eb2` collector bundle was extracted and compared byte-for-byte
+with Git, then its isolated CLI collected and returned a tiny real retained file.
+Archive checksum and exact owner shell syntax pass; actual UCloud path access
+remains unexecuted locally.
 
 ## COMEBin CT attempt stopped; return packaging failed, 2026-09-28
 

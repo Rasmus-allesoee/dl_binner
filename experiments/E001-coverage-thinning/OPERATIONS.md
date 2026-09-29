@@ -12,7 +12,8 @@ Seeds 23/47 are deferred. The next task only collects existing files for local
 candidate/embedding inspection and final seed-11 diagnostics.
 
 Upload **`e001-diagnostics-collect-20260929.tar.gz`** and its adjacent **`.sha256`**
-to `/work/Home/dl_binner/e001/e001-gate0/transfer/`. The archive contains only the
+to `/work/Home/dl_binner/e001/e001-gate0/transfer/`. Source commit: `c4d8eb288a90c27739802c078c3cedfde368a993`.
+Archive SHA256: `83fabeee6d7141cbdc3ae55de0bc74c64763c321a689d6a638cfe5813d2fceaf`. The archive contains only the
 standard-library collector, exact hash allowlist and source commit. No existing
 environment, executable snapshot or run directory is modified.
 
