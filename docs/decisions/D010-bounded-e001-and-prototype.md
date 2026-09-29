@@ -72,12 +72,14 @@ support. If diagnostics remain inconclusive, say so and proceed to prototype des
 
 ## Prototype decision boundary
 
-After the literature/code review, the design pass should compare a small
-sequence/coverage autoencoder or VAE and a small contrastive alternative as
-candidates, without assuming these are the only viable choices. It must choose one
-coherent end-to-end first version, explain the learning objective and input
-contract, and define a short implementation milestone with CLI input/output,
-training/inference, bins, a reproducible small evaluation and resource reporting.
+After the comprehensive literature/code review, identify a small shortlist of
+viable first-version approaches based on the evidence, intended inputs/use case,
+implementation cost and learning value. Autoencoders/VAEs, contrastive learning
+or other approaches may be considered if the review supports them; none is a
+preset candidate or preferred architecture. Choose one coherent end-to-end first
+version, explain the learning objective and input contract, and define a short
+implementation milestone with CLI input/output, training/inference, bins, a
+reproducible small evaluation and resource reporting.
 A documented wrapper around a baseline alone is not our own learned implementation;
 a new scientific contribution is not required to begin one. Advanced uncertainty,
 graphs, taxonomy and foundation models need evidence to enter the first version.
