@@ -1,15 +1,30 @@
 # E001: Validation and UCloud Preflight
 
-Updated: 2026-09-29. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
+Updated: 2026-09-30. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
-## Current action, 2026-09-29: collect retained diagnostics
+## Current action, 2026-09-30: E001 closed; no UCloud command
+
+The diagnostic collection completed and all 297 file hashes passed local review.
+All 240 COMEBin candidate partitions, marker scores and retained embeddings were
+inspected; selection, neighborhood and length diagnostics are finished.
+See [closure](closure.md), [collection receipt](diagnostic-collection-observed.json)
+and [current handoff](../../docs/STATE.md). Accepted runs must not be repeated.
+Seeds 23/47 remain deferred; H001 and the original three-seed criterion remain
+unresolved. Preserve all old attempts and retained assets.
+
+The next step is local prototype implementation under
+[D011](../../docs/decisions/D011-first-binner-prototype.md). No upload or rented
+Terminal job is needed. The collection command below is historical provenance,
+not an instruction to run it again.
+
+## Completed collection, 2026-09-29 command (accepted 2026-09-30)
 
 The latest COMEBin resume is accepted for native execution and primary evaluation.
 C0 was reused; CT completed. See [combined results and the correction sequence](seed11-assessment.md),
 [verified evidence](comebin-paired-observed.json) and [D010](../../docs/decisions/D010-bounded-e001-and-prototype.md).
 The previous CT-resume/stale-lock commands are finished and must not be repeated.
-Seeds 23/47 are deferred. The next task only collects existing files for local
-candidate/embedding inspection and final seed-11 diagnostics.
+Seeds 23/47 are deferred. This command collected existing files for local
+candidate/embedding inspection and final seed-11 diagnostics; that work is now complete.
 
 Upload **`e001-diagnostics-collect-20260929.tar.gz`** and its adjacent **`.sha256`**
 to `/work/Home/dl_binner/e001/e001-gate0/transfer/`. Source commit: `c4d8eb288a90c27739802c078c3cedfde368a993`.

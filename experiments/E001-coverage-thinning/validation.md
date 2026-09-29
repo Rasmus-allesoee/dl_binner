@@ -107,7 +107,7 @@ rehashes every C0 retained artifact and uses the existing Snakemake work
 directory. It moves partial CT files to `recovery/`, then requires a dry-run with
 CT and paired-summary only; C0 in the DAG is a hard stop. It restarts CT from
 epoch 1 and prefers Home `transfer/` for the compact return, falling back to the
-persistent attempt if Home is unavailable. See the [current operations action](OPERATIONS.md#current-action-2026-09-29-collect-retained-diagnostics).
+persistent attempt if Home is unavailable. See the [current operations action](OPERATIONS.md#completed-collection-2026-09-29-command-accepted-2026-09-30).
 
 The repair is source commit `889d76a1f234b7ccb787cc7c37a1f5ff1f69b31b`, transferred
 as `e001-code-889d76a1f234.tar.gz`, SHA-256
@@ -157,7 +157,7 @@ executable's real `--unlock` against synthetic stale locks successfully; it does
 not change the execution bundle. The broader pilot suite still has the two known
 macOS sandbox failures when Snakemake/psutil queries the process tree; one
 NumPy-dependent archive-review test is skipped locally. Native UCloud behavior
-remains unverified. See the updated [owner action](OPERATIONS.md#current-action-2026-09-29-collect-retained-diagnostics).
+remains unverified. See the updated [owner action](OPERATIONS.md#completed-collection-2026-09-29-command-accepted-2026-09-30).
 
 ## COMEBin first-pilot driver guard failure and retry, 2026-09-27
 
@@ -1557,3 +1557,36 @@ resets thread environment variables, which the wrapper restores before execution
 No scientific schedule or tool source was changed.
 
 Final local results: 193 repository tests passed before adding the complete-driver test; all 9 focused pilot tests subsequently passed, including that additional test. Documentation/link and shell syntax checks are recorded with the execution commit.
+
+## 2026-09-30: retained diagnostics and amended closure
+
+The [collection receipt](diagnostic-collection-observed.json) verifies archive,
+terminal log, status and all 297 manifest-bound files. The production
+`e001_close_diagnostics.py` ran against the real retained bytes: 240 candidate
+partitions, both marker domains, both COMEBin embedding types, VAMB embeddings,
+all six frozen primary scores and 16 exact fixed-query neighborhood probes.
+The main pass took 578.36 local seconds with four requested BLAS threads.
+Supplemental scale-control checks and per-raw-space triage used the same retained
+arrays/saved probes; no native generation or training was repeated. Detailed
+outcomes, cost and limits belong to [closure](closure.md).
+
+Seven closure tests cover independent grouped marker arithmetic, strict thresholds,
+domain choice, adjacent-gene multiplicity, zero/equal-block normalization,
+qualifying-bin recovery, fixed-denominator overlap and real retained scale controls.
+Full local regression: **226 tests passed in 80.918 seconds** using
+`.venv/bin/python -m unittest discover -s tests -p 'test_e001*.py'`.
+The first sandboxed pass failed 10 tests and errored in 2 because existing
+Snakemake/process checks lacked cache/process access; the same full suite passed
+with that local access. No production workaround or scientific rerun was needed.
+Portable workflow mocks remain mocks; actual binary/marker/probe inspection used
+real inputs and no substituted analyzer. No new Linux runtime was certified.
+
+`python3 scripts/check_docs.py --check-context` passes (84 present source
+fingerprints; 10 old optional cache paths unavailable). New source-audit file
+hashes and retained-analysis output hashes were also independently rechecked.
+`git diff --check` passes. Raw local test/analysis logs remain under ignored
+`artifacts/e001-seed11-closure/`; provenance and compact result tables are versioned.
+The completed review and bounded prototype recommendation are in
+[the design review](../../docs/evidence/2026-09-30-binner-design-review.md) and
+[D011](../../docs/decisions/D011-first-binner-prototype.md). No prototype execution
+or publication is claimed by these checks.

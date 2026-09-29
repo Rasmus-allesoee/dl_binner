@@ -17,3 +17,5 @@ The individual record owns its status and reasoning. [STATE](../STATE.md) identi
 For a new significant decision, record the ID, date, status, problem, alternatives, decision, evidence, consequences, and revisit condition. Link affected questions and experiments. If replaced, mark the old record `superseded`, link its replacement in both directions, and retain the earlier reasoning. A rejected option is preserved with its reason; it does not imply an experiment was run.
 
 The numerical decisions inside [historical planning](../history/DECISIONS.md) belong to that earlier document, not this `D` sequence. Stable goals already incorporated into PROJECT_INTENT need no duplicate decision here.
+
+- [D011: bounded first binner prototype](D011-first-binner-prototype.md)

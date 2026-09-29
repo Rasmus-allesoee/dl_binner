@@ -1,8 +1,8 @@
 # Questions and Hypotheses
 
-Updated: 2026-09-29
+Updated: 2026-09-30
 
-This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication and prioritizes a usable prototype after retained-output diagnostics.
+This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
 Question statuses: `open`, `answered`, `deferred`, `superseded`. Hypothesis statuses: `untested`, `testing`, `supported within scope`, `not supported`, `inconclusive`, `abandoned`, `superseded`. A material revision preserves the previous statement and records why it changed; use a new ID if it is a different scientific claim.
 
@@ -98,7 +98,7 @@ Needed to resolve: connect the target biological use to accessible inputs, recor
 
 **Some avoidable binning errors arise because coverage reliability varies across contigs or samples in ways that existing preprocessing and feature integration do not adequately handle.**
 
-Status: inconclusive. Proposed: 2026-09-16. Updated: 2026-09-29. Scope: a candidate explanation for Q001, not a novelty claim or model specification.
+Status: inconclusive. Proposed: 2026-09-16. Updated: 2026-09-30. Scope: a candidate explanation for Q001, not a novelty claim or model specification.
 
 Motivation: reported coverage dilution and recovery differences in [the thesis](../evidence/2026-09-16-thesis.md). Caveat: absolute depth loss alone is insufficient evidence because normalization can remove scale, and workflow comparisons also change clustering populations. Adaptive weighting and uncertainty modeling already have [prior art](../evidence/2026-09-16-landscape.md).
 
@@ -131,3 +131,20 @@ refuted. [D010](../decisions/D010-bounded-e001-and-prototype.md) defers seeds 23
 and limits remaining E001 work to diagnostics on retained outputs. A new usable
 binner is the primary goal; resolving Q002's novelty question is not an implementation
 prerequisite. Biological performance claims still require evidence.
+
+## Resolution update, 2026-09-30: E001 closure and first product
+
+[Final E001 evidence](../../experiments/E001-coverage-thinning/closure.md) closes the
+approved seed-11 scope. Q001 remains open in general: selection can account for a
+0.03862 CT oracle gap, while local representation losses overlap only part of lost
+recovery. Neither identifies a validated truth-free fix. H001 stays **inconclusive**;
+its original three-seed criterion is unresolved, and seeds 23/47 are deferred.
+No global rejection or reproducibility claim follows.
+
+Q002's novelty question is deferred as a product gate, not answered by architecture
+choice. The [current review](../evidence/2026-09-30-binner-design-review.md) covers
+relevant families, recent benchmarks and a justified source shortlist through
+2026-09-30. Q003 remains open for independent/real-assembly evaluation; E001 is
+development data. Q004's first-product acceptance is operationally bounded in
+[D011](../decisions/D011-first-binner-prototype.md), distinct from research superiority.
+The next task is implementation, not another exploratory benchmark campaign.

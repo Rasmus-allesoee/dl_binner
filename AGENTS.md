@@ -175,6 +175,9 @@ review of relevant metagenomic-binning papers, recent benchmark studies, and the
 source code of a justified shortlist of leading tools. This is a high-priority
 design input, not optional scope growth or a novelty gate; define and record its
 scope/cutoff, and do not combine methods without a concrete rationale.
+Once a scoped review and design decision are complete, reuse those records during
+implementation. Refresh specific evidence when a changed dependency or design
+question requires it; do not restart the whole review before each milestone.
 
 Do not attempt to plan the entire project in rigid detail from start to finish.
 

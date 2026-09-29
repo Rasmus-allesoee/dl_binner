@@ -1,5 +1,10 @@
 # E001 seed-11 review and bounded closure
 
+Closure update, 2026-09-30: the binary-evidence and diagnostic dependencies described
+in this September 29 assessment are now resolved in [closure](closure.md). The
+original assessment below remains a dated record of the decision before collection.
+E001 is closed at amended seed-11 scope; seeds 23/47 stay deferred.
+
 Reviewed 2026-09-29. Native execution and primary evaluation accepted; binary
 selection/representation diagnostics pending a read-only collection. This is one
 paired seed on a fixed GI development derivative, not the completed three-seed design.

@@ -1,7 +1,7 @@
 # D010: Finish E001 at a bounded pilot scope, then build a usable prototype
 
-Date: 2026-09-29. Status: accepted owner direction; diagnostic collection prepared,
-owner execution pending. Supersedes D002's requirement to establish a novel,
+Date: 2026-09-29. Status: accepted owner direction; amended seed-11 closure
+completed 2026-09-30. Supersedes D002's requirement to establish a novel,
 measurable residual failure before beginning our own implementation.
 
 ## Problem and owner intent
@@ -88,3 +88,14 @@ Keep correctness, honest limitations, leakage controls, provenance and a publica
 history/license review. A first working release does not require a paper-scale
 benchmark or competitive scores. Actual GitHub publication remains a separate
 owner action; this decision authorizes local preparation only.
+
+## Completion, 2026-09-30
+
+[Closure](../../experiments/E001-coverage-thinning/closure.md) completes the approved
+retained-output scope, including every candidate, marker selection and fixed
+neighborhood/length diagnostics. The CT oracle-selection gap is 0.03862; it is
+a research lead, not a truth-free selector or fulfillment of the three-seed rule.
+H001 stays inconclusive and seeds 23/47 deferred. The required
+[current review](../evidence/2026-09-30-binner-design-review.md) is complete at its
+declared cutoff; [D011](D011-first-binner-prototype.md) owns the resulting provisional
+first-product choice and implementation milestone.

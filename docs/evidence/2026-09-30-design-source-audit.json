@@ -1,0 +1,476 @@
+{
+  "reviewed": "2026-09-30",
+  "scope": "Read-only source audit, not runtime validation. Newer upstream files fetched separately; reference caches preserved.",
+  "local_inventory": [
+    {
+      "tool": "vamb",
+      "root": "agent_context/tools_repo/vamb",
+      "commit": "b146fb610921aef1da8aed5d739f1ce80d21b33a",
+      "status": "",
+      "remote": "https://github.com/RasmussenLab/vamb.git"
+    },
+    {
+      "tool": "COMEBin",
+      "root": "agent_context/tools_repo/COMEBin",
+      "commit": "1b476a41fac893294c70212a869573a732560ce5",
+      "status": "?? .DS_Store\n?? COMEBin/.DS_Store",
+      "remote": "https://github.com/ziyewang/COMEBin.git"
+    },
+    {
+      "tool": "SemiBin",
+      "root": "agent_context/tools_repo/SemiBin",
+      "commit": "f7c45dcbcdfa81e8fbc3e08b04c54683122e72d6",
+      "status": "?? .DS_Store\n?? SemiBin/.DS_Store\n?? test/.DS_Store",
+      "remote": "https://github.com/BigDataBiology/SemiBin.git"
+    },
+    {
+      "tool": "genomeface",
+      "root": "agent_context/tools_repo/genomeface",
+      "commit": null,
+      "status": "unversioned snapshot",
+      "remote": null
+    },
+    {
+      "tool": "CompleteBin",
+      "root": "agent_context/tools_repo/CompleteBin",
+      "commit": "07c5649270646a29dc027d6234d66b048fed6d45",
+      "status": "?? .DS_Store\n?? CompleteBin/.DS_Store",
+      "remote": "https://github.com/zoubohao/CompleteBin.git"
+    },
+    {
+      "tool": "SCGBinner",
+      "root": "agent_context/tools_repo/SCGBinner",
+      "commit": "d5ad239af9a1445f0e454c4d4aa9307b922961a9",
+      "status": "?? .DS_Store\n?? SCGBinner/.DS_Store",
+      "remote": "https://github.com/htaohan/SCGBinner.git"
+    },
+    {
+      "tool": "McDevol",
+      "root": "agent_context/tools_repo/McDevol",
+      "commit": "1fa3bad078b45c645df53fc54e6f0ff194a6965e",
+      "status": "D  .gitattributes\nD  .github/workflows/release.yml\nD  .gitignore\nD  LICENSE\nD  README.md\nD  environment.yml\nD  mcdevol/byol_model.py\nD  mcdevol/clustering.py\nD  mcdevol/dataparsing.py\nD  mcdevol/genomeface_weights/general_t2eval.m.data-00000-of-00001\nD  mcdevol/genomeface_weights/general_t2eval.m.index\nD  mcdevol/kmer_counter.cpython-39-x86_64-linux-gnu.so\nD  mcdevol/mcdevol.py\nD  mcdevol/pyproject.toml\nD  mcdevol/version.py\nD  setup.py\nD  tests/test_byol_model.py\nD  tests/test_clustering.py\nD  tests/test_dataparsing.py\nD  util/aligner2counts.cpp\nD  util/convertfasta_multi2single.cpp\nD  util/get_sequence_bybin.cpp\n?? .DS_Store\n?? .gitattributes\n?? .github/\n?? .gitignore\n?? LICENSE\n?? README.md\n?? environment.yml\n?? mcdevol/\n?? setup.py\n?? tests/\n?? util/",
+      "remote": "https://github.com/soedinglab/McDevol.git"
+    },
+    {
+      "tool": "dcvbin",
+      "root": "agent_context/tools_repo/dcvbin",
+      "commit": "732ee4257f7da200994f4c105e9dacbc74242883",
+      "status": "M DNABERT-S/.DS_Store\n D DNABERT-S/pytorch_model.bin\n?? .DS_Store\n?? marker_gene/.DS_Store\n?? marker_gene/auxiliary/.DS_Store\n?? myvae/.DS_Store",
+      "remote": "https://github.com/dengdengf/dcvbin.git"
+    },
+    {
+      "tool": "BBTools",
+      "root": "agent_context/tools_repo/BBTools",
+      "commit": "7e82985927578e9ec2da8815859859d0d7a93063",
+      "status": "?? .DS_Store\n?? current/.DS_Store\n?? pipelines/.DS_Store",
+      "remote": "https://github.com/bbushnell/BBTools.git"
+    },
+    {
+      "tool": "LorBin",
+      "root": "agent_context/tools_repo/LorBin",
+      "commit": "ee10232282c2b71ed3ce2a34d5dbd78af3dd0b0a",
+      "status": "?? .DS_Store\n?? lorbin/.DS_Store",
+      "remote": "https://github.com/LorMeBioAI/LorBin.git"
+    },
+    {
+      "tool": "CoCoBin-main",
+      "root": "agent_context/tools_repo/CoCoBin-main",
+      "commit": null,
+      "status": "unversioned snapshot",
+      "remote": null
+    }
+  ],
+  "upstream_heads_at_cutoff": [
+    {
+      "repo": "RasmussenLab/vamb",
+      "commit": "b146fb610921aef1da8aed5d739f1ce80d21b33a",
+      "date": "2026-04-27T11:08:33Z",
+      "url": "https://api.github.com/repos/RasmussenLab/vamb/commits?per_page=1&until=2026-09-30T23:59:59Z"
+    },
+    {
+      "repo": "ziyewang/COMEBin",
+      "commit": "1b476a41fac893294c70212a869573a732560ce5",
+      "date": "2026-08-23T12:40:24Z",
+      "url": "https://api.github.com/repos/ziyewang/COMEBin/commits?per_page=1&until=2026-09-30T23:59:59Z"
+    },
+    {
+      "repo": "BigDataBiology/SemiBin",
+      "commit": "04d030efe34b1da8eada17260a1b0449fa70b693",
+      "date": "2026-09-29T12:19:01Z",
+      "url": "https://api.github.com/repos/BigDataBiology/SemiBin/commits?per_page=1&until=2026-09-30T23:59:59Z"
+    },
+    {
+      "repo": "zoubohao/CompleteBin",
+      "commit": "07c5649270646a29dc027d6234d66b048fed6d45",
+      "date": "2026-08-14T15:45:40Z",
+      "url": "https://api.github.com/repos/zoubohao/CompleteBin/commits?per_page=1&until=2026-09-30T23:59:59Z"
+    },
+    {
+      "repo": "htaohan/SCGBinner",
+      "commit": "d5ad239af9a1445f0e454c4d4aa9307b922961a9",
+      "date": "2026-08-27T17:20:02Z",
+      "url": "https://api.github.com/repos/htaohan/SCGBinner/commits?per_page=1&until=2026-09-30T23:59:59Z"
+    },
+    {
+      "repo": "soedinglab/McDevol",
+      "commit": "1fa3bad078b45c645df53fc54e6f0ff194a6965e",
+      "date": "2025-02-24T08:17:51Z",
+      "url": "https://api.github.com/repos/soedinglab/McDevol/commits?per_page=1&until=2026-09-30T23:59:59Z"
+    },
+    {
+      "repo": "dengdengf/dcvbin",
+      "commit": "732ee4257f7da200994f4c105e9dacbc74242883",
+      "date": "2025-11-15T11:21:53Z",
+      "url": "https://api.github.com/repos/dengdengf/dcvbin/commits?per_page=1&until=2026-09-30T23:59:59Z"
+    },
+    {
+      "repo": "bbushnell/BBTools",
+      "commit": "6e87b3824750211cf608156835ee097bf82a6070",
+      "date": "2026-09-28T04:35:33Z",
+      "url": "https://api.github.com/repos/bbushnell/BBTools/commits?per_page=1&until=2026-09-30T23:59:59Z"
+    },
+    {
+      "repo": "MicrobialDarkMatter/GraphMB",
+      "commit": "30cb2ded07531135a92ef0890cf1bf06fd28717e",
+      "date": "2026-08-07T10:09:35Z",
+      "url": "https://api.github.com/repos/MicrobialDarkMatter/GraphMB/commits?per_page=1&until=2026-09-30T23:59:59Z"
+    },
+    {
+      "repo": "LorMeBioAI/LorBin",
+      "commit": "ee10232282c2b71ed3ce2a34d5dbd78af3dd0b0a",
+      "date": "2026-01-06T04:48:15Z",
+      "url": "https://api.github.com/repos/LorMeBioAI/LorBin/commits?per_page=1&until=2026-09-30T23:59:59Z"
+    }
+  ],
+  "inspected_local_files": [
+    {
+      "tool": "vamb",
+      "path": "agent_context/tools_repo/vamb/vamb/encode.py",
+      "bytes": 21031,
+      "sha256": "2d836eaca16526b5474c71a82dec8d6beec5f21d2c0531918ac4b2d09aa817f8"
+    },
+    {
+      "tool": "vamb",
+      "path": "agent_context/tools_repo/vamb/vamb/cluster.py",
+      "bytes": 25211,
+      "sha256": "d603712e70303761d922e21cd0949e0b81d52dd5af25ea55542f3d799acaabb5"
+    },
+    {
+      "tool": "vamb",
+      "path": "agent_context/tools_repo/vamb/vamb/taxvamb_encode.py",
+      "bytes": 38939,
+      "sha256": "bde25f826890e668e415c7637a18edde2d4881bfbb59c7eb16fc3dee2634bd73"
+    },
+    {
+      "tool": "COMEBin",
+      "path": "agent_context/tools_repo/COMEBin/COMEBin/get_augfeature.py",
+      "bytes": 6283,
+      "sha256": "145ce6afd74919a5aea7044c1d481dd17cc462eda7726bd1cceaa9ed21d5b247"
+    },
+    {
+      "tool": "COMEBin",
+      "path": "agent_context/tools_repo/COMEBin/COMEBin/simclr.py",
+      "bytes": 13574,
+      "sha256": "a8d31c1d8b6e8453653cf2836554860962e4bd88f09e700d01bb438d0b98b6fc"
+    },
+    {
+      "tool": "COMEBin",
+      "path": "agent_context/tools_repo/COMEBin/COMEBin/get_final_result.py",
+      "bytes": 11884,
+      "sha256": "a6e899d23cbfc7836eaa27968511e8b9b788daa39245a162df42ea61258d01ea"
+    },
+    {
+      "tool": "COMEBin",
+      "path": "agent_context/tools_repo/COMEBin/COMEBin/scripts/unitem_markers.py",
+      "bytes": 6578,
+      "sha256": "70d91072eefecf4237e03b0d81c670a792cff013b355018a9ebb59e4958a3e77"
+    },
+    {
+      "tool": "CompleteBin",
+      "path": "agent_context/tools_repo/CompleteBin/CompleteBin/Model/model.py",
+      "bytes": 5990,
+      "sha256": "2f066ef05e46d4f37d4fb2a9c4930ddde7d44dbb85c686a26dcdf1963a0a7320"
+    },
+    {
+      "tool": "CompleteBin",
+      "path": "agent_context/tools_repo/CompleteBin/CompleteBin/Trainer/trainer.py",
+      "bytes": 24553,
+      "sha256": "86bbe8ff64170de286271bba23822c086061e9a77420ba3df78fe1c5462dca4f"
+    },
+    {
+      "tool": "CompleteBin",
+      "path": "agent_context/tools_repo/CompleteBin/CompleteBin/Binning_steps.py",
+      "bytes": 28800,
+      "sha256": "69213361c97ff7490ac0fbe5306580b0b0f61d891a6193813ebb70911cfe864e"
+    },
+    {
+      "tool": "SCGBinner",
+      "path": "agent_context/tools_repo/SCGBinner/SCGBinner/simclr.py",
+      "bytes": 9124,
+      "sha256": "c4a13a11120547843d91d3dd2cd0d00d91bfbe4c3cf005db1be4ac02947d4b83"
+    },
+    {
+      "tool": "SCGBinner",
+      "path": "agent_context/tools_repo/SCGBinner/SCGBinner/train_CLmodel.py",
+      "bytes": 6741,
+      "sha256": "4497b23efc790f9fa1f3b868b1ad13fc05db195e349a44ebf53de8cf0ee1db72"
+    },
+    {
+      "tool": "SCGBinner",
+      "path": "agent_context/tools_repo/SCGBinner/SCGBinner/cluster.py",
+      "bytes": 16437,
+      "sha256": "2bf4e5f41bf52eae40370106abc1494dfb7b559d5faca5680805462fae7dc368"
+    },
+    {
+      "tool": "McDevol",
+      "path": "agent_context/tools_repo/McDevol/mcdevol/byol_model.py",
+      "bytes": 35440,
+      "sha256": "d0261980c49cd58045838c963519ab37aca0673f6a9fa6835d7b7eeb0506c4f5"
+    },
+    {
+      "tool": "McDevol",
+      "path": "agent_context/tools_repo/McDevol/mcdevol/clustering.py",
+      "bytes": 9910,
+      "sha256": "3c956bb62191c6aba031adb1bde36edc6c50459fa677db47680f3c8dea6ca977"
+    },
+    {
+      "tool": "dcvbin",
+      "path": "agent_context/tools_repo/dcvbin/bin/my_method.sh",
+      "bytes": 6875,
+      "sha256": "f442c72159de050c75815f15696a70730792620cf3328fabadfc1e0e3ce72360"
+    },
+    {
+      "tool": "dcvbin",
+      "path": "agent_context/tools_repo/dcvbin/myvae/mainfiles/myencode.py",
+      "bytes": 23645,
+      "sha256": "5fca0d77fc6f89c81fd767161799a3a4e31dde00d81dc3d10e489fecf9a38966"
+    },
+    {
+      "tool": "genomeface",
+      "path": "agent_context/tools_repo/genomeface/genomeface.py",
+      "bytes": 33329,
+      "sha256": "412043c8b08a5b9edb78e734868f9b0b9807eb594c741db397ee8ae5d8e25535"
+    },
+    {
+      "tool": "LorBin",
+      "path": "agent_context/tools_repo/LorBin/lorbin/lorbin.py",
+      "bytes": 14049,
+      "sha256": "4a87ecc13309109025c1ac6b0cfffa39a8c4e5e19a1a83db300a6b8bf036c470"
+    },
+    {
+      "tool": "LorBin",
+      "path": "agent_context/tools_repo/LorBin/lorbin/cluster.py",
+      "bytes": 13510,
+      "sha256": "7a2a15c760dca7f3696dc845aa7a913ab8bf18ee6bb0d72d125da630219e682e"
+    }
+  ],
+  "fetched_sources": [
+    {
+      "repo": "BigDataBiology/SemiBin",
+      "commit": "04d030efe34b1da8eada17260a1b0449fa70b693",
+      "path": "scratch/design-sources/SemiBin/SemiBin/self_supervised_model.py",
+      "upstream_file": "SemiBin/self_supervised_model.py",
+      "url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/04d030efe34b1da8eada17260a1b0449fa70b693/SemiBin/self_supervised_model.py",
+      "sha256": "49f9796c167e1e874de0071ae5b9765d993434ba6b530f56b0072d6f4c85ef4c"
+    },
+    {
+      "repo": "BigDataBiology/SemiBin",
+      "commit": "04d030efe34b1da8eada17260a1b0449fa70b693",
+      "path": "scratch/design-sources/SemiBin/SemiBin/cluster.py",
+      "upstream_file": "SemiBin/cluster.py",
+      "url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/04d030efe34b1da8eada17260a1b0449fa70b693/SemiBin/cluster.py",
+      "sha256": "473f4c488c3f2c79c54003336b96ffc2d013eee35de110947234d4d5cf639a00"
+    },
+    {
+      "repo": "BigDataBiology/SemiBin",
+      "commit": "04d030efe34b1da8eada17260a1b0449fa70b693",
+      "path": "scratch/design-sources/SemiBin/SemiBin/long_read_cluster.py",
+      "upstream_file": "SemiBin/long_read_cluster.py",
+      "url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/04d030efe34b1da8eada17260a1b0449fa70b693/SemiBin/long_read_cluster.py",
+      "sha256": "9a9507764a5892ee5f465e789f20248174688a94ca68e71f370b00e14ccc567b"
+    },
+    {
+      "repo": "BigDataBiology/SemiBin",
+      "commit": "04d030efe34b1da8eada17260a1b0449fa70b693",
+      "path": "scratch/design-sources/SemiBin/SemiBin/main.py",
+      "upstream_file": "SemiBin/main.py",
+      "url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/04d030efe34b1da8eada17260a1b0449fa70b693/SemiBin/main.py",
+      "sha256": "db2ea5df1c41c2a1e7d2512fe903293197eef4ca845d1d7af9cd4e590125b96f"
+    },
+    {
+      "repo": "BigDataBiology/SemiBin",
+      "commit": "04d030efe34b1da8eada17260a1b0449fa70b693",
+      "path": "scratch/design-sources/SemiBin/README.md",
+      "upstream_file": "README.md",
+      "url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/04d030efe34b1da8eada17260a1b0449fa70b693/README.md",
+      "sha256": "0b932df2703768b117896d5031bdbcfe57fccefeba70d379994f04b54bb5fe29"
+    },
+    {
+      "repo": "BigDataBiology/SemiBin",
+      "url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/04d030efe34b1da8eada17260a1b0449fa70b693/LICENSE",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "bbushnell/BBTools",
+      "commit": "6e87b3824750211cf608156835ee097bf82a6070",
+      "path": "scratch/design-sources/BBTools/quickbin.sh",
+      "upstream_file": "quickbin.sh",
+      "url": "https://raw.githubusercontent.com/bbushnell/BBTools/6e87b3824750211cf608156835ee097bf82a6070/quickbin.sh",
+      "sha256": "1b4f4d0e016fc2699202b208346284243a7e4117260b450e1f908308a0c39940"
+    },
+    {
+      "repo": "bbushnell/BBTools",
+      "commit": "6e87b3824750211cf608156835ee097bf82a6070",
+      "path": "scratch/design-sources/BBTools/current/bin/CovLR.java",
+      "upstream_file": "current/bin/CovLR.java",
+      "url": "https://raw.githubusercontent.com/bbushnell/BBTools/6e87b3824750211cf608156835ee097bf82a6070/current/bin/CovLR.java",
+      "sha256": "87f52edb38e7257166a4c42cf7d8b0ca90d907039c15aacf58ea3df5f88026fd"
+    },
+    {
+      "repo": "bbushnell/BBTools",
+      "commit": "6e87b3824750211cf608156835ee097bf82a6070",
+      "path": "scratch/design-sources/BBTools/current/bin/Oracle.java",
+      "upstream_file": "current/bin/Oracle.java",
+      "url": "https://raw.githubusercontent.com/bbushnell/BBTools/6e87b3824750211cf608156835ee097bf82a6070/current/bin/Oracle.java",
+      "sha256": "27e1ad9a7343683c910b502ab081e5525a9b9a2fb7b20e18c0b30255d621c476"
+    },
+    {
+      "repo": "bbushnell/BBTools",
+      "url": "https://raw.githubusercontent.com/bbushnell/BBTools/6e87b3824750211cf608156835ee097bf82a6070/current/bin/BinMap.java",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "MicrobialDarkMatter/GraphMB",
+      "commit": "30cb2ded07531135a92ef0890cf1bf06fd28717e",
+      "path": "scratch/design-sources/GraphMB/README.md",
+      "upstream_file": "README.md",
+      "url": "https://raw.githubusercontent.com/MicrobialDarkMatter/GraphMB/30cb2ded07531135a92ef0890cf1bf06fd28717e/README.md",
+      "sha256": "7c3d4c33683470902cb30d78dc18dc2c4789ea1621f6ce45ef89d3217ffc63dc"
+    },
+    {
+      "repo": "MicrobialDarkMatter/GraphMB",
+      "commit": "30cb2ded07531135a92ef0890cf1bf06fd28717e",
+      "path": "scratch/design-sources/GraphMB/src/graphmb/train_ccvae.py",
+      "upstream_file": "src/graphmb/train_ccvae.py",
+      "url": "https://raw.githubusercontent.com/MicrobialDarkMatter/GraphMB/30cb2ded07531135a92ef0890cf1bf06fd28717e/src/graphmb/train_ccvae.py",
+      "sha256": "6a0528eec4ab26e4511f85458c312ae39763353d7a97cf77e86d5251c4349a41"
+    },
+    {
+      "repo": "MicrobialDarkMatter/GraphMB",
+      "commit": "30cb2ded07531135a92ef0890cf1bf06fd28717e",
+      "path": "scratch/design-sources/GraphMB/src/graphmb/models.py",
+      "upstream_file": "src/graphmb/models.py",
+      "url": "https://raw.githubusercontent.com/MicrobialDarkMatter/GraphMB/30cb2ded07531135a92ef0890cf1bf06fd28717e/src/graphmb/models.py",
+      "sha256": "b97dafed676a86561932f383f84b84ac66b1d96f632f3af3a8951580ad4f6155"
+    },
+    {
+      "repo": "MicrobialDarkMatter/GraphMB",
+      "commit": "30cb2ded07531135a92ef0890cf1bf06fd28717e",
+      "path": "scratch/design-sources/GraphMB/src/graphmb/main.py",
+      "upstream_file": "src/graphmb/main.py",
+      "url": "https://raw.githubusercontent.com/MicrobialDarkMatter/GraphMB/30cb2ded07531135a92ef0890cf1bf06fd28717e/src/graphmb/main.py",
+      "sha256": "9c054226fbdb7091ef85f0d3fe51ea862ca3b5c3a219915425d499b664c3958b"
+    },
+    {
+      "repo": "MicrobialDarkMatter/GraphMB",
+      "commit": "30cb2ded07531135a92ef0890cf1bf06fd28717e",
+      "path": "scratch/design-sources/GraphMB/src/graphmb/gnn_models.py",
+      "upstream_file": "src/graphmb/gnn_models.py",
+      "url": "https://raw.githubusercontent.com/MicrobialDarkMatter/GraphMB/30cb2ded07531135a92ef0890cf1bf06fd28717e/src/graphmb/gnn_models.py",
+      "sha256": "7611830e6e1f20ad30ed2212fd8246c857dc7080fe5787e37eb0164feef20e7e"
+    },
+    {
+      "repo": "MicrobialDarkMatter/GraphMB",
+      "commit": "30cb2ded07531135a92ef0890cf1bf06fd28717e",
+      "path": "scratch/design-sources/GraphMB/LICENSE",
+      "upstream_file": "LICENSE",
+      "url": "https://raw.githubusercontent.com/MicrobialDarkMatter/GraphMB/30cb2ded07531135a92ef0890cf1bf06fd28717e/LICENSE",
+      "sha256": "d9b9bdb8569b419dd891bfd269253fb946c08f6fa1b5ce96250992ffae6a0f4d"
+    },
+    {
+      "repo": "bbushnell/BBTools",
+      "commit": "6e87b3824750211cf608156835ee097bf82a6070",
+      "path": "scratch/design-sources/BBTools/current/bin/binmap/BinMap.java",
+      "upstream_file": "current/bin/binmap/BinMap.java",
+      "url": "https://raw.githubusercontent.com/bbushnell/BBTools/6e87b3824750211cf608156835ee097bf82a6070/current/bin/binmap/BinMap.java",
+      "sha256": "1bd43d85b34ae3f035b63a4d782b8e1bc3c66a2543aad1beda4db0e5015cef93"
+    }
+  ],
+  "limits": [
+    "GenomeFace is an unversioned source snapshot; no current execution pin claimed.",
+    "McDevol working-tree inventory includes missing tracked files; only the hashed inspected files support observations.",
+    "DCVBin pretrained payload unavailable; published recipe parity not verified.",
+    "Source review does not establish Linux CPU runtime or published performance.",
+    "An initial BinMap URL was wrong; corrected bin/binmap/BinMap.java fetched. SemiBin LICENSE URL returned 404; reuse requires separate license verification."
+  ],
+  "local_primary_manuscripts": [
+    {
+      "path": "agent_context/papers/benchmarks/Arangasamy_2025_paper.md",
+      "sha256": "52bc21678deaee6fa9f0bd29c42cbe4a72a45ba5f222fe52c7705104221840cd"
+    },
+    {
+      "path": "agent_context/papers/benchmarks/Han_2025_paper.md",
+      "sha256": "4435ed98f400da17d3ab64bf383afab093448351490164fa706e676eeb9e71b3"
+    },
+    {
+      "path": "agent_context/papers/benchmarks/Kim_2026_paper.md",
+      "sha256": "f9f78a904dcd17218be0792811f41496823b553da26c90bde3430a8d0ee7b166"
+    },
+    {
+      "path": "agent_context/papers/benchmarks/Meyer_2022_paper.md",
+      "sha256": "579a4932678bb6a9c3c2fee2ae4f41a526f548ed2ee83e3694cf7676d2bb7dc0"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/DCVBin_2026_paper.md",
+      "sha256": "081867e66e767f5e5ed6414fc483582927b050e0f80bb0b1fd4698c30742825b"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/LorBin_paper.md",
+      "sha256": "dc87ecc704a2c06d3b2e6bd7dd1e9b875106f0a3be11d5058fdc5b0ed6582ec4"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/QuickBin_paper.md",
+      "sha256": "46232eb2c4dfd6bf11bed4ccf1d4441cb632edec9ce82cb752daca606afe79de"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/SCGBinner_paper.md",
+      "sha256": "3bc25b868cf8409d5080ae9b0aeba81f6e10ef17852cb0d8ab932fa0f8dc11a1"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/UNCERTAINGEN_paper.md",
+      "sha256": "6c3f5cb437a9d0bfa759eb7166f3c1a9ea1b9437f9b25828bdcc8dabbe8e8905"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/cocobin_paper.md",
+      "sha256": "f07263d1a6bf94821641a06f89c05cf5cb2fc018baa14880b23c0ed9292b374c"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/comebin_paper.md",
+      "sha256": "d3622dd119833c5351ee9c2cc1732b7a117ece9ff295724abea87cbf932b73b1"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/completebin_paper.md",
+      "sha256": "1f4bd8f2599ab329524c0ef1bbcca112d65f718e8a5b7157cdf12aa1f3fa6271"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/genomeface_paper.md",
+      "sha256": "a831cc08b66fa1a6315fc08f23b2490ce53156b7499c1f892d51d60dd200f784"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/semibin2_paper.md",
+      "sha256": "a56bc5bc29680aec6828ed8e137d398efa459970069e82cd5095aede1606084e"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/taxvamb_2026_paper.md",
+      "sha256": "97451cf4dc8e3a3a3e8d84ca1bb4fc3d0cf9444e5f4b6facb738e51cc12d2b43"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/vamb_paper.md",
+      "sha256": "f3d0143e847860a77630c197b7c7bab111542ce2eed23aec4198d716d3a959bc"
+    },
+    {
+      "path": "agent_context/papers/evaluation/Coleman_2026_paper.md",
+      "sha256": "58c200e4d391d9e2fcc382fc59cb432727f5bc3f0ff79799cb91f8a816481e8c"
+    }
+  ]
+}

@@ -1,76 +1,64 @@
 # Current Research State
 
-Updated: 2026-09-29. This is the single current handoff.
+Updated: 2026-09-30. This is the single current handoff.
 
-## Direction
+## Direction and completed work
 
 Build and publish a usable deep-learning metagenomic binner while learning through
-its development. A paper, novelty and SOTA performance are optional future bonuses,
-not prerequisites for the first implementation. [PROJECT_INTENT](../PROJECT_INTENT.md)
-and [D010](decisions/D010-bounded-e001-and-prototype.md) record the owner's clarification.
-Finish E001's bounded retained-output analysis, then rethink the first prototype;
-E001 closes at the explicitly amended seed-11 pilot scope. After closure, conduct
-the comprehensive literature/code review described in [PROJECT_INTENT](../PROJECT_INTENT.md)
-before fixing the first model architecture. Do not expand the experiment campaign
-automatically.
+implementation. A paper, novelty and SOTA remain optional. See
+[PROJECT_INTENT](../PROJECT_INTENT.md), [D010](decisions/D010-bounded-e001-and-prototype.md)
+and [D011](decisions/D011-first-binner-prototype.md).
 
-## Accepted evidence
+**E001 is closed at its approved amended seed-11 scope.** The diagnostic collection
+passed checksum and all 297 retained-file checks. All 240 COMEBin candidates,
+marker scores, embedding axes and fixed neighborhood/length diagnostics were
+inspected directly. [Closure](../experiments/E001-coverage-thinning/closure.md)
+owns results and limitations. The original three-seed criterion and H001 remain
+unresolved; seeds 23/47 stay deferred. No accepted preprocessing, feature extraction,
+training, clustering or collection should be repeated.
 
-- E001 uses the frozen CAMI II HMP GI development derivative: 22,594 contigs and
-  224 evaluation genomes. [D005](decisions/D005-gi-input-derivative.md) and
-  [frozen inputs](../experiments/E001-coverage-thinning/frozen-inputs.json) retain
-  provenance/exclusions. It is not an unchanged benchmark or real assembly.
-- Mapping, all ten samples' C0/CT preprocessing and native features are accepted.
-  Reuse the [BAM manifest](../experiments/E001-coverage-thinning/multisample-bam-manifest.json)
-  and [features](../experiments/E001-coverage-thinning/features-observed.json).
-  No download, remapping, rethinning or feature extraction is needed.
-- Seed-11 [MetaBAT2/VAMB](../experiments/E001-coverage-thinning/paired-pilot-observed.json)
-  remain accepted: R95 C0→CT is 0.44294→0.19502 and 0.46177→0.48764 respectively.
-- The latest checksum-bound COMEBin resume completed; its preserved C0 was reused.
-  Native early stopping at epochs 111/107, complete selected partitions and
-  independent AMBER/R95 recomputation pass. R95 is **0.83899→0.80255**.
-  [Review](../experiments/E001-coverage-thinning/comebin-paired-observed.json) accepts
-  native execution and primary evaluation, with explicit binary-evidence limits.
-- All 120 candidate receipts per condition and marker-score selection pass compact
-  checks. Candidate/embedding arrays were omitted from that return. Direct binary
-  inspection, oracle-selection gap and representation diagnostics still need the
-  retained bytes; they do not require rerunning scientific work.
+Primary R95 C0→CT: MetaBAT2 0.44294→0.19502; VAMB 0.46177→0.48764;
+COMEBin 0.83899→0.80255. COMEBin CT has a 0.03862 truth-best candidate-selection
+gap; C0 has zero. Learned short-contig neighborhoods remain better on average than
+combined raw features, although localized losses exist. These are one-community
+single-seed development observations, not a validated intervention.
+
+The required [current literature/benchmark review](evidence/2026-09-30-binner-design-review.md)
+and [source audit](evidence/2026-09-30-design-source-audit.json) are completed at the
+2026-09-30 cutoff, with depth/access limits explicit. They considered reconstruction,
+contrastive, graph, taxonomy, pretrained sequence and efficient neural merging
+before recommending a compact VAE as a provisional first-product tradeoff.
 
 ## Exact next step
 
-Run the [read-only diagnostic collection](../experiments/E001-coverage-thinning/OPERATIONS.md#current-action-2026-09-29-collect-retained-diagnostics)
-once on UCloud, using the prepared two-file transfer and printed logging command.
-It packages 297 checksum-bound files (~435 MB uncompressed), using standard-library
-Python, one CPU worker and a 20-minute stop limit. Owner returns archive, checksum,
-collection-status JSON and terminal log. No new seeds, training or clustering.
+Implement **D011 milestone one locally**: our own small VAE binner accepting FASTA
+and an explicit mean-depth matrix, with feature validation, training, saved-model
+inference, one fixed density clustering path, assignments/bin FASTAs, hashes,
+progress and resource reporting. Deliver a real tiny end-to-end run plus meaningful
+failure/round-trip checks and a raw-feature clustering control. The decision owns
+initial defaults, acceptance limits, serious alternatives and revisit conditions.
+This is not a VAMB wrapper or a claim to reproduce its scores.
 
-Then locally verify all candidate labels and embeddings, complete the existing
-selection/neighborhood/length diagnostics, and close E001 at amended seed-11 scope.
-**Seeds 23/47 are deferred**, not silently completed. No three-seed reproducibility
-claim or rejection of H001 is permitted. [Combined assessment](../experiments/E001-coverage-thinning/seed11-assessment.md)
-and [costs](../experiments/E001-coverage-thinning/seed11-cost-assessment.json) explain
-why further replication is not the next useful expense. Then complete the
-comprehensive current literature/benchmark review and targeted source-code review
-of leading candidates before choosing the first architecture. This is not a novelty
-gate; low-risk scaffolding may proceed alongside it.
+No owner upload or UCloud command is needed now. No large training run, new E001
+seed, pretrained download or new simulation is part of the first milestone.
+Once the local pipeline works, prepare a separate bounded development evaluation
+using retained E001 features and frozen evaluators; commit settings before execution.
+Do not tune against the CT oracle or silently convert E001 into an independent test.
 
 ## Resources and continuity
 
-COMEBin's successful conditions used 39.6462 allocated core-hours on 8 vCPU / 24 GB;
-the successful resume driver used 16.1518, already containing CT's rule cost.
-Known COMEBin recovery-sequence spend is at least 58.1075 core-hours, not exact
-billing or total E001 spend. Retained successful condition files sum to 11.313 GB,
-excluding recovery copies and other assets. Preserve every old attempt.
+COMEBin successful conditions used 39.6462 allocated core-hours; the known recovery
+sequence lower bound is 58.1075. MetaBAT2/VAMB pair: 0.76946. The new collection
+adds 0.002224 (1 vCPU / 4 GB, 8.0065 driver seconds). These are partial accounting,
+not exact billing or a remaining-balance estimate. Successful COMEBin condition
+files total 11.313 GB; the diagnostic archive is an additional 235.13 MB copy.
+Preserve retained assets/old attempts. No deletion is authorized.
 
-UCloud remains owner-operated and CPU-only. The dated allocation was 2,100
-core-hours with an E001 ceiling of 800; exact remaining balance is not known.
-Do not infer remaining budget from this partial accounting. Persistent tool prefixes
-remain under `e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md).
-Scientific source/config hashes stay frozen; D010 changes prospective scope only.
+UCloud remains CPU-only and owner-operated. Persistent prefixes stay under
+`e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md). Frozen E001
+source/configuration and raw observed records remain unchanged.
 
-Local branch: `e001-gate0`. No remote is configured and nothing has been pushed or
-published. `agent_context/` remains an ignored inbox. Before publication, review
-licensing and historical source packaging per [D001](decisions/D001-research-record.md).
-
-Update this handoff when immediate direction, significant evidence, or execution
-dependencies change; keep it concise and put session chronology in the owning records.
+Local branch: `e001-gate0`; no remote, push or publication. `agent_context/` is an
+ignored inbox. Before publication review licensing and historical source packaging
+per [D001](decisions/D001-research-record.md). Update this handoff when direction,
+significant evidence or execution dependencies change; details belong to their owners.

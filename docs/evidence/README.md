@@ -18,3 +18,5 @@ Evidence notes distinguish what a source reports, what we inspected directly, an
 The fingerprints are an inventory, not a claim that every file has been read. Paths are relative to the repository root. `python3 scripts/check_docs.py --check-context` checks present files and reports missing optional caches. The foundation commit `2d1b6ce` retains the original inventory; `2b1e51b` preserves the owner's updated paper fingerprints. On 2026-09-17, replaced ZIP-tool entries were retired from the current inventory and inspected clone/source paths were added. Historical notes' old local paths may therefore be unavailable; use the newer audit for current source access.
 
 Add a focused note when an investigation produces useful reasoning. Give it a date, scope, source/version locators, findings, limitations, and the questions or experiments it informs. If a later investigation changes the interpretation, link the new note from the earlier one and update the affected current question. Keep full papers separate from our notes.
+
+- [2026-09-30: current binner design review and source audit](2026-09-30-binner-design-review.md)

@@ -1,0 +1,52 @@
+{
+  "reviewed": "2026-09-30",
+  "status": "accepted",
+  "files": {
+    "e001-diagnostics.tar.gz": {
+      "bytes": 235133219,
+      "sha256": "a3132a52502289c580e25dbc26fb094f1a55c41069ad89610537e9f9aef3b824"
+    },
+    "e001-diagnostics.tar.gz.sha256": {
+      "bytes": 90,
+      "sha256": "c90cd9e352469487e94731f4a268d5f7c33f45e2f40f74b91153115de7422dc6"
+    },
+    "collection-status.json": {
+      "bytes": 430,
+      "sha256": "4766f6285320b6234b9bab1464d0efec1a8af9e135051fab291f10cedcfcdb4a"
+    },
+    "e001-diagnostic-collection.XbumnJ.log": {
+      "bytes": 925,
+      "sha256": "51b618372f946b7d2b1ee3308e8405f1555659cc7e713142d7d306bd4b913991"
+    }
+  },
+  "collection_status": {
+    "status": "completed",
+    "allocated_vcpus": 1,
+    "allocated_ram_gb": 4.0,
+    "manifest_sha256": "2667459ba8ffb6df2bb715784af8c726940260036f491842e0b364ec276b21c0",
+    "requested_files": 297,
+    "source_bytes": 434557937,
+    "archive_bytes": 235133219,
+    "archive_sha256": "a3132a52502289c580e25dbc26fb094f1a55c41069ad89610537e9f9aef3b824",
+    "elapsed_seconds": 8.006499799899757,
+    "allocated_core_hours": 0.0022240277221943767
+  },
+  "verified_files": 297,
+  "tar_members": 298,
+  "archive_member_policy": "unique regular files with relative traversal-free paths; manifest plus exactly 297 allowed files",
+  "local_extraction": "artifacts/e001-diagnostics-reviewed",
+  "local_analysis": "artifacts/e001-seed11-closure",
+  "analysis_script_sha256": "e82af40c4c263df6d016f5c680c2bf72e12beb41e26013d184c5ef7311de6222",
+  "analysis_log_sha256": "c5ad9a4514a26f8563337f9273496b2a28f6ce2a9bcf5aba93e7377f9e92a3db",
+  "analysis_command": "OPENBLAS_NUM_THREADS=4 VECLIB_MAXIMUM_THREADS=4 OMP_NUM_THREADS=4 .venv/bin/python scripts/e001_close_diagnostics.py artifacts/e001-diagnostics-reviewed artifacts/e001-population-reviewed scratch/comebin-resume-review/paired-pilot-comebin-istuh_2t scratch/pilot-review/paired-pilot-metabat-vamb-kru6t8dq agent_context/tools_repo/COMEBin artifacts/e001-seed11-closure",
+  "note": "Local full candidate/marker/probe analysis completed in 578.36s. Supplemental scale_controls() then ran against retained arrays without repeating probes. Main script now includes that check for reproduction. No native fitting/clustering repeated. Per-raw-space triage then summarized the saved exact queries; no neighborhoods recomputed. Derived TSV line endings normalized to LF and output hashes updated; numerical rows unchanged.",
+  "local_runtime": {
+    "python": "3.13.2 | packaged by conda-forge | (main, Feb 17 2025, 14:01:04) [Clang 18.1.8 ]",
+    "numpy": "2.2.6",
+    "platform": "Darwin",
+    "machine": "x86_64",
+    "requested_blas_threads": 4,
+    "ucloud_execution": false
+  },
+  "analysis_log_local": "artifacts/e001-seed11-closure/analysis.log"
+}
