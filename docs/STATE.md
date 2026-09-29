@@ -1,63 +1,68 @@
 # Current Research State
 
-Updated: 2026-09-28
+Updated: 2026-09-29. This is the single current handoff.
 
-This is the single current handoff. Detailed evidence belongs in the linked records; this page stays short.
+## Direction
 
-## Where we are
+Build and publish a usable deep-learning metagenomic binner while learning through
+its development. A paper, novelty and SOTA performance are optional future bonuses,
+not prerequisites for the first implementation. [PROJECT_INTENT](../PROJECT_INTENT.md)
+and [D010](decisions/D010-bounded-e001-and-prototype.md) record the owner's clarification.
+Finish E001's bounded retained-output analysis, then rethink the first prototype;
+do not expand the experiment campaign automatically.
 
-- The intent is defined in [PROJECT_INTENT.md](../PROJECT_INTENT.md).
-- The targeted [paper/code audit](evidence/2026-09-17-targeted-audit.md) and [public-data audit](evidence/2026-09-17-benchmark-data.md) are complete for designing the first diagnostic, building on the [initial assessment](research/2026-09-16-initial-assessment.md).
-- [E001](../experiments/E001-coverage-thinning/README.md) has its Gate 0 harness, native adapters and tests. Owner-run mapping/AMBER checks passed, including clean-environment reruns. EasyBuild exposure was traced to UCloud's user site and excluded without changing the installed environments. This clears the GI inventory prerequisite, not all Gate 0 checks or scientific launch. See the [validation record](../experiments/E001-coverage-thinning/validation.md).
-- [D004](decisions/D004-human-cpu-preflight.md) supersedes D003's dataset/mapper/resource assumptions after owner feedback and a [targeted reassessment](evidence/2026-09-18-human-cpu-audit.md). D002's diagnose-before-architecture direction and D001's research record remain valid. The first seed-11 MetaBAT2/VAMB development scores are accepted; no avoidable methodological gap or new model is established.
+## Accepted evidence
 
-## Immediate direction
+- E001 uses the frozen CAMI II HMP GI development derivative: 22,594 contigs and
+  224 evaluation genomes. [D005](decisions/D005-gi-input-derivative.md) and
+  [frozen inputs](../experiments/E001-coverage-thinning/frozen-inputs.json) retain
+  provenance/exclusions. It is not an unchanged benchmark or real assembly.
+- Mapping, all ten samples' C0/CT preprocessing and native features are accepted.
+  Reuse the [BAM manifest](../experiments/E001-coverage-thinning/multisample-bam-manifest.json)
+  and [features](../experiments/E001-coverage-thinning/features-observed.json).
+  No download, remapping, rethinning or feature extraction is needed.
+- Seed-11 [MetaBAT2/VAMB](../experiments/E001-coverage-thinning/paired-pilot-observed.json)
+  remain accepted: R95 C0→CT is 0.44294→0.19502 and 0.46177→0.48764 respectively.
+- The latest checksum-bound COMEBin resume completed; its preserved C0 was reused.
+  Native early stopping at epochs 111/107, complete selected partitions and
+  independent AMBER/R95 recomputation pass. R95 is **0.83899→0.80255**.
+  [Review](../experiments/E001-coverage-thinning/comebin-paired-observed.json) accepts
+  native execution and primary evaluation, with explicit binary-evidence limits.
+- All 120 candidate receipts per condition and marker-score selection pass compact
+  checks. Candidate/embedding arrays were omitted from that return. Direct binary
+  inspection, oracle-selection gap and representation diagnostics still need the
+  retained bytes; they do not require rerunning scientific work.
 
-Investigate **where reduced coverage evidence loses recoverable sequence**, using CAMI II HMP's **gastrointestinal** short-read GSA and native MetaBAT2, VAMB and COMEBin. Compare pair-preserving read thinning with full evidence and a preprocessing-only scale control. Native CPU and mapper execution are accepted. [D008](decisions/D008-mapper-and-first-preprocessing-slice.md) retains strobealign 0.17.0 after local read-origin analysis of both accepted BAMs; no extra MAPQ cutoff. Human-associated microbiomes are the core focus, not environmental data.
+## Exact next step
 
-The audit found live total-abundance input in current VAMB and coverage in the inspected DCVBin path, native marker/selection effects, and relevant reliability prior art in GenomeFace, UncertainGen, McDevol and QuickBin. Lower scores after removing reads alone will not support H001: we need evidence that usable signal survives but is lost downstream. AMBER is the chosen standard evaluator; portable supplementary metrics and isolated native evaluator fixtures passed. Integration with the first MetaBAT2/VAMB scientific outputs is accepted.
+Run the [read-only diagnostic collection](../experiments/E001-coverage-thinning/OPERATIONS.md#current-action-2026-09-29-collect-retained-diagnostics)
+once on UCloud, using the prepared two-file transfer and printed logging command.
+It packages 297 checksum-bound files (~435 MB uncompressed), using standard-library
+Python, one CPU worker and a 20-minute stop limit. Owner returns archive, checksum,
+collection-status JSON and terminal log. No new seeds, training or clustering.
 
-E001 is development/diagnosis, not SOTA evaluation, real-assembly validation or a demonstration of unseen-genome generalization. [H001](research/questions.md#h001) is being tested without a conclusion; architecture and the final target regime remain open.
+Then locally verify all candidate labels and embeddings, complete the existing
+selection/neighborhood/length diagnostics, and close E001 at amended seed-11 scope.
+**Seeds 23/47 are deferred**, not silently completed. No three-seed reproducibility
+claim or rejection of H001 is permitted. [Combined assessment](../experiments/E001-coverage-thinning/seed11-assessment.md)
+and [costs](../experiments/E001-coverage-thinning/seed11-cost-assessment.json) explain
+why further replication is not the next useful expense. A focused prototype design
+and implementation milestone follows; it does not require establishing a novel mechanism.
 
-## Next session
+## Resources and continuity
 
-1. The 20 FASTA-only intervals have foreign-simulation provenance: seven publisher BAM headers name airskinurogenital sources absent from the gastrooral setup. Both truth tables omit all 20. [Evidence and code review](evidence/2026-09-19-gi-provenance.md) and [D005](decisions/D005-gi-input-derivative.md) authorize a hash-bound quarantine, totaling 28,917,470 bp, plus two empty artifacts. This creates a declared E001 development derivative. Original downloads remain intact; local and owner preparation status is distinguished below.
-2. Taxonomy-aware owner return `inventory-resume-6z45cola` matches every pinned population output and is accepted. [Frozen inputs](../experiments/E001-coverage-thinning/frozen-inputs.json) fix the UCloud locator, provenance and hashes: 22,594 contigs, 224 evaluation genomes, 7,964 short queries. No more conversion/taxonomy checks are needed absent changed inputs. See [validation](../experiments/E001-coverage-thinning/validation.md).
-3. All three tools' native synthetic smoke and bounded CPU checks are accepted separately: [VAMB](../experiments/E001-coverage-thinning/native-vamb-observed.json), [COMEBin](../experiments/E001-coverage-thinning/native-comebin-observed.json), [MetaBAT2](../experiments/E001-coverage-thinning/native-metabat-observed.json). COMEBin's successful earlier attempt is not invalidated by its companion MetaBAT2 setup failure. The later MetaBAT2-only return passes. Preserve fixes f4cf0c0, 41d0f9d and f9c983a; do not repeat these checks.
-4. Owner allocation corrections: COMEBin ran at 2 vCPU / 6 GB. Corrected projection is **23.9 core-hours per fit, 47.9 with margin**, not 95.8/191.6. Six conservative fits project 287.3, below the 800 total before overhead. [D007](decisions/D007-comebin-resource-envelope.md) restores the original 80 per-fit limit; raw records are preserved with [explicit corrections](../experiments/E001-coverage-thinning/allocation-corrections.json). No repeat CPU check needed.
-5. Native clustering/marker/AMBER integration remains accepted. All **three** mapper returns have now been reviewed: two member-path failures are preserved; `89gpt00u` at commit `216c896` passed using the retained archive and plain anonymous FASTQ. [Observed records](../experiments/E001-coverage-thinning/mapper-observed.json) and [assessment](../experiments/E001-coverage-thinning/validation.md) accept operational mapper/storage feasibility. Preserve dbee019 and 216c896; no rerun, setup or download needed.
-6. Owner supplied both existing BAMs; local [diagnostics](../experiments/E001-coverage-thinning/mapper-diagnostics.json) and public read-origin metadata resolve the apparent confidence difference as predominantly low-confidence alternatives (strobealign MAPQ 0 versus Bowtie2 MAPQ 1). True-origin-compatible counts are nearly equal: 105,795 versus 105,697 / 200,000 reads. This is not a superiority or unique-alignability claim. No remapping was done; no more files are needed for that analysis.
-7. **Sample 0 accepted:** `sample0-preprocess-6_gyxp5d` at source `4235aa4` completed extraction of 16,666,043 pairs, C0 mapping and seed-1000 CT. [Observed records](../experiments/E001-coverage-thinning/sample0-preprocess-observed.json): 42.24 minutes, 2.816 allocated core-hours at 4 vCPU / 12 GB, 15.412 GB new outputs. C0 has 33,158,847 records; CT retains 9.997%. Reuse these files and the installed workflow environment; no repeat pilot.
-8. **All ten samples' preprocessing is accepted.** `multisample-preprocess-rau3rfod` completed using source `4dd3cb9f5944` at **8 vCPU / 24 GB**, two sample lanes and two Strobealign threads per lane. It did not need the proposed four-vCPU retry. The verified return records **151.792 minutes, 20.239 allocated core-hours and 230.182 GB logical retained attempt storage**. Sample 0 remains external and accepted. [Observed evidence](../experiments/E001-coverage-thinning/multisample-preprocess-observed.json) and the [ordered BAM manifest](../experiments/E001-coverage-thinning/multisample-bam-manifest.json) fix all C0/CT hashes and seeds 1000–1009. Do not redownload, remap, rethin or stop/retry this completed run.
-9. **Native multi-sample features accepted.** `multisample-features-69_32jz9` at `86642eeaa28c` passed on **4 vCPU / 12 GB**: 60.203 minutes, **4.0135 allocated core-hours**, **608,309,522 retained bytes** excluding external BAMs. The [checksum-bound review](../experiments/E001-coverage-thinning/features-observed.json) verifies sample/contig axes, paired masks and sequence features, fixed COMEBin intervals, thinning zeros and scale controls. All four feature attempts total 5.1044 known driver core-hours. No preprocessing or feature rerun is needed.
-10. **Seed-11 MetaBAT2/VAMB pair accepted.** [Reviewed return](../experiments/E001-coverage-thinning/paired-pilot-observed.json) `paired-pilot-metabat-vamb-kru6t8dq` completed both full 300-epoch VAMB fits and native MetaBAT2 conditions at 4 vCPU / 12 GB in **11.542 minutes / 0.76946 allocated core-hours**, retaining **1,679,703,225 bytes**. Full partitions, paired embedding IDs, native retention receipts, AMBER and recomputed R95 pass. C0→CT R95: MetaBAT2 **0.44294→0.19502**, VAMB **0.46177→0.48764**. One seed does not resolve H001. The previous [failed attempt](../experiments/E001-coverage-thinning/pilot-failure-observed.json) remains preserved. COMEBin attempt `paired-pilot-comebin-istuh_2t` completed C0; CT reached epoch 100/200 with normal progress before the driver lost access to its output path. The checksum-bound return contains no COMEBin exception/OOM; UCloud job/mount teardown is the leading but unconfirmed explanation. C0 remains retained; the guarded resume will rehash it before reuse. **Immediate action:** run the [guarded CT resume](../experiments/E001-coverage-thinning/OPERATIONS.md#current-action-2026-09-28-resume-the-unfinished-comebin-condition), which proceeds only if Snakemake's dry-run excludes C0 and restarts CT from epoch 1.
+COMEBin's successful conditions used 39.6462 allocated core-hours on 8 vCPU / 24 GB;
+the successful resume driver used 16.1518, already containing CT's rule cost.
+Known COMEBin recovery-sequence spend is at least 58.1075 core-hours, not exact
+billing or total E001 spend. Retained successful condition files sum to 11.313 GB,
+excluding recovery copies and other assets. Preserve every old attempt.
 
-## Open dependencies
+UCloud remains owner-operated and CPU-only. The dated allocation was 2,100
+core-hours with an E001 ceiling of 800; exact remaining balance is not known.
+Do not infer remaining budget from this partial accounting. Persistent tool prefixes
+remain under `e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md).
+Scientific source/config hashes stay frozen; D010 changes prospective scope only.
 
-Return review update, 2026-09-28: the 117-MiB archive was inflated by 418 retained
-`hmmer.analyze.txt` diagnostics. Future returns omit those files and prefer Home
-`transfer/`, falling back to the persistent attempt only when necessary. The
-resume preserves the original failed CT files under the attempt's `recovery/`
-folder; it does not delete the attempt or accepted C0 artifacts.
-
-The first owner-run resume returned immediately on a stale Snakemake lock, before
-any rule ran; C0's hashes still passed and the partial CT files remain preserved.
-The current [owner command](../experiments/E001-coverage-thinning/OPERATIONS.md#current-action-2026-09-28-resume-the-unfinished-comebin-condition)
-uses source `9ceeb087441d`: it restores a CT working copy, unlocks only after the
-owner confirms no other workflow is active, and retains the dry-run guard that
-prevents rerunning C0. This fix has not yet run on UCloud.
-
-- **HMP GI** assembly/truth/taxonomy and evaluation population are accepted and frozen. Continue with this declared development derivative, not an unchanged benchmark. Native smoke/CPU, clustering/marker/evaluator, mapper/storage and all preprocessing passed. Native feature extraction is accepted in [the review](../experiments/E001-coverage-thinning/features-observed.json). The MetaBAT2/VAMB seed-11 pair is accepted. The COMEBin paired pilot remains incomplete until the owner runs the guarded CT resume. Selection and complete three-seed affordability remain open. Binary VAMB embeddings/models remain hash-bound on UCloud, not directly inspected locally. See [frozen inputs](../experiments/E001-coverage-thinning/frozen-inputs.json).
-- HPC is owner-operated and **CPU only**: 2,100 allocated core-hours, up to 128 vCPU/384 GB RAM. Terminal / Ubuntu / Aug2026 on DeIC Interactive HPC (SDU/K8s), persistent root `/work/Home/dl_binner/e001/e001-gate0`, with per-tool environments under `envs/`. The [E001 configuration](../experiments/E001-coverage-thinning/config.json) caps this diagnostic at 800 core-hours with nested smaller preflight/preprocessing limits; affordability is not established. The owner can expand storage: 200 GB is now a provisioning review threshold, not a scientific ceiling. Do not shrink E001 to fit it.
-- Selected source commits are recorded in [tool snapshots](evidence/2026-09-17-tool-snapshots.json); core E001 environments passed scoped native checks, not full scientific workflows. GenomeFace is unversioned, McDevol has an abnormal index state, and DCVBin lacks a model payload. These optional comparisons do not block the core E001 preflight.
-- [D006](decisions/D006-environment-ownership.md) retains separate experiment-owned environments, with mapping/AMBER/VAMB reused at their accepted `e001-gate0/envs/<tool>` paths across later gates. No migration or common Python base. COMEBin and MetaBAT2 use their own prefixes there. The feature driver reuses installed tool prefixes without micromamba or GNU time; only missing container-level Git may be bootstrapped through Ubuntu apt, with logs. Job duration is owner-managed; host resources are not allocation measurements.
-- Original thesis artifacts remain owner-confirmed on UCloud and optional. Final evaluation/success claims remain open in the [question register](research/questions.md); E001 has only scoped diagnostic criteria.
-
-## Git and continuity
-
-- Local implementation branch: `e001-gate0`; based on `main` at `bc1a3c5`. Baseline commit `2b87cd9` preserves supplied context. Use Git history for subsequent commits; no research run depends on an uncommitted configuration.
-- No remote is configured; the owner clarified it has not been created. Nothing has been published or pushed.
-- Owner clarification, 2026-09-19: all `agent_context/` is an ignored local inbox. Existing files are removed from current Git tracking while retained on disk and in historical commits. Durable reviewed findings stay in research documentation. This does not sanitize historical material for future publication; [D001](decisions/D001-research-record.md) still requires a separate history/publication review.
-- Original planning remains in [history](history/README.md), explicitly nonbinding. New superseded decisions and experiments retain their own identities and links.
-
-Update this page whenever the immediate direction, significant evidence, or execution dependencies change. Do not turn it into a chronological session log.
+Local branch: `e001-gate0`. No remote is configured and nothing has been pushed or
+published. `agent_context/` remains an ignored inbox. Before publication, review
+licensing and historical source packaging per [D001](decisions/D001-research-record.md).

@@ -1,8 +1,8 @@
 # Questions and Hypotheses
 
-Updated: 2026-09-27
+Updated: 2026-09-29
 
-This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 is under investigation in E001; its avoidability claim is not established.
+This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication and prioritizes a usable prototype after retained-output diagnostics.
 
 Question statuses: `open`, `answered`, `deferred`, `superseded`. Hypothesis statuses: `untested`, `testing`, `supported within scope`, `not supported`, `inconclusive`, `abandoned`, `superseded`. A material revision preserves the previous statement and records why it changed; use a new ID if it is a different scientific claim.
 
@@ -98,7 +98,7 @@ Needed to resolve: connect the target biological use to accessible inputs, recor
 
 **Some avoidable binning errors arise because coverage reliability varies across contigs or samples in ways that existing preprocessing and feature integration do not adequately handle.**
 
-Status: testing. Proposed: 2026-09-16. Scope: a candidate explanation for Q001, not a novelty claim or model specification.
+Status: inconclusive. Proposed: 2026-09-16. Updated: 2026-09-29. Scope: a candidate explanation for Q001, not a novelty claim or model specification.
 
 Motivation: reported coverage dilution and recovery differences in [the thesis](../evidence/2026-09-16-thesis.md). Caveat: absolute depth loss alone is insufficient evidence because normalization can remove scale, and workflow comparisons also change clustering populations. Adaptive weighting and uncertainty modeling already have [prior art](../evidence/2026-09-16-landscape.md).
 
@@ -121,3 +121,13 @@ from sampling reliability, not support for H001 or evidence of a novel solution.
 ## Closed and superseded records
 
 None in this project's active research record yet. Earlier project alternatives and staged learning plans remain in [historical planning](../history/README.md). They were not failed experiments. Close future entries in place, preserving their evidence and resolution dates.
+
+
+2026-09-29 resolution of current priority (Q001/Q004/H001): all three seed-11
+native pairs are accepted in the [combined assessment](../../experiments/E001-coverage-thinning/seed11-assessment.md).
+COMEBin loses 0.03643 R95, VAMB gains 0.02586 and MetaBAT2 loses 0.24793.
+The original three-seed criterion is not evaluated; H001 is neither supported nor
+refuted. [D010](../decisions/D010-bounded-e001-and-prototype.md) defers seeds 23/47
+and limits remaining E001 work to diagnostics on retained outputs. A new usable
+binner is the primary goal; resolving Q002's novelty question is not an implementation
+prerequisite. Biological performance claims still require evidence.

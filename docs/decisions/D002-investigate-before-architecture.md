@@ -1,7 +1,7 @@
 # D002: Investigate Recoverable Failures Before Choosing an Architecture
 
 Date: 2026-09-16
-Status: accepted
+Status: superseded in its implementation gate by [D010](D010-bounded-e001-and-prototype.md), 2026-09-29; the completed evidence audit remains useful. Original status: accepted
 Scope: provisional next research block; no model or final benchmark selected
 
 Progress, 2026-09-17: the targeted audit and first protocol are complete. [D003](D003-coverage-diagnostic.md) refines the next action to E001 implementation/preflight, preserving this decision's failure-before-architecture principle. No residual error or new method has yet been demonstrated.

@@ -1,6 +1,44 @@
 # E001 Gate 0 Validation
 
-Date: 2026-09-18; appended through 2026-09-28. Software checks and reviewed scientific attempts are identified separately below.
+Date: 2026-09-18; appended through 2026-09-29. Software checks and reviewed scientific attempts are identified separately below.
+
+## Successful COMEBin CT resume accepted, 2026-09-29
+
+The [compact-return review](comebin-paired-observed.json) and
+[combined assessment](seed11-assessment.md) supersede the in-progress recovery
+handoffs below. Archive SHA256:
+`ad422e367d27f2abb4b2b5d56f9beea8da93e71c80921156542c64a79f9b363f`.
+The return and terminal log confirm successful CT-only execution under `9ceeb08`;
+C0 remains from `8a03ca2`, with its retained receipt unchanged. Contiguous native
+schedules stop legally at 111/107; complete selected partitions and AMBER/R95
+recomputation pass. All 120 candidate hash receipts and marker-score rows per
+condition pass grid/arithmetic/winner checks. Binary arrays are omitted from the
+return; direct inspection remains pending the read-only collection, not a rerun.
+
+The whole implementation/correction sequence `6ba21ce`–`07ff631` was reviewed.
+There is no outstanding native failure in this return. Historical interrupted
+CT and stale-lock failures stay under recovery and do not invalidate completion.
+[D010](../../docs/decisions/D010-bounded-e001-and-prototype.md) defers other seeds
+and sets a bounded diagnostic closure followed by prototype design.
+
+Local verification: new review tests exercise the real uploaded archive and
+reject malformed schedules/marker grids. The collector tests use real NumPy
+files and actual hashing/tar I/O across separate retained/resumed roots; repeat
+runs preserve outputs, altered/missing bytes stop, escaped paths are rejected.
+No production collection logic is mocked. The native Linux binners are not rerun;
+current UCloud files will be verified by the owner collector. The broad suite's
+first sandboxed run hit macOS cache/process-counter permissions; this is separate
+from returned UCloud scientific execution.
+
+With native cache/process access, 218/219 tests passed. The remaining feature-driver
+fixture demanded the production 15-GB free-space floor despite using tiny mocked
+native inputs; available local disk was below that floor. Only the fixture plan
+was changed to a 1-KiB requirement, leaving production limits untouched. All 22
+feature tests then passed, including its real Snakemake driver, repeated execution
+and recovery DAGs. The three COMEBin review and two collector tests were rerun
+successfully after final changes. Isolated system-Python collector CLI/returned
+bytes, Python compilation, exact owner-command shell syntax and docs/link checks
+passed. Native scientific fits were never run locally or remotely by the agent.
 
 ## COMEBin CT attempt stopped; return packaging failed, 2026-09-28
 
@@ -65,7 +103,7 @@ rehashes every C0 retained artifact and uses the existing Snakemake work
 directory. It moves partial CT files to `recovery/`, then requires a dry-run with
 CT and paired-summary only; C0 in the DAG is a hard stop. It restarts CT from
 epoch 1 and prefers Home `transfer/` for the compact return, falling back to the
-persistent attempt if Home is unavailable. See the [current operations action](OPERATIONS.md#current-action-2026-09-28-resume-the-unfinished-comebin-condition).
+persistent attempt if Home is unavailable. See the [current operations action](OPERATIONS.md#current-action-2026-09-29-collect-retained-diagnostics).
 
 The repair is source commit `889d76a1f234b7ccb787cc7c37a1f5ff1f69b31b`, transferred
 as `e001-code-889d76a1f234.tar.gz`, SHA-256
@@ -115,7 +153,7 @@ executable's real `--unlock` against synthetic stale locks successfully; it does
 not change the execution bundle. The broader pilot suite still has the two known
 macOS sandbox failures when Snakemake/psutil queries the process tree; one
 NumPy-dependent archive-review test is skipped locally. Native UCloud behavior
-remains unverified. See the updated [owner action](OPERATIONS.md#current-action-2026-09-28-resume-the-unfinished-comebin-condition).
+remains unverified. See the updated [owner action](OPERATIONS.md#current-action-2026-09-29-collect-retained-diagnostics).
 
 ## COMEBin first-pilot driver guard failure and retry, 2026-09-27
 

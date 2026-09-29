@@ -2,15 +2,21 @@
 
 ## Purpose
 
-This repository is the beginning of a long-term research project to develop, implement, and rigorously evaluate our own novel metagenomic genome-binning method.
+This project aims to build and publish a usable deep-learning metagenomic genome
+binner of our own, while learning through the full development process.
 
-The ambition is high: produce a scientifically defensible method that can compete with contemporary state-of-the-art approaches, either overall or in a clearly defined and biologically meaningful regime.
+Owner clarification, 2026-09-29: the primary success is a working, reproducible
+software product with honest evaluation and clear limitations. A paper, novel
+methodological contribution or state-of-the-art performance is an optional future
+bonus, not a prerequisite for implementing or releasing the first version.
 
-The project is not intended to be a tutorial exercise, a simple reproduction of an existing binner, or a portfolio-only demo. It should grow into a serious research and method-development effort.
+Scientific rigor should protect correctness and claims without turning preparation
+into an indefinite research program. Prefer a bounded first prototype, then improve
+it in useful increments. E001 will finish at its explicitly amended scope before a
+focused rethink of the first implementation. See [D010](docs/decisions/D010-bounded-e001-and-prototype.md).
 
-At the same time, this project is also my route into modern deep learning and AI for computational biology. I want to learn the important concepts by using them in a real research problem rather than by following a predetermined beginner curriculum.
-
-The final goal is fixed. The path is not.
+The human-associated microbiome focus and learning by doing remain. The path and
+architecture are open; progress toward a usable tool is the organizing priority.
 
 ---
 
@@ -81,7 +87,7 @@ The destination of this project is a completed metagenomic binning method of our
 
 “Completed” means more than having a model that runs.
 
-The eventual method should have:
+The eventual method should have (with evaluation depth proportionate to the claims):
 
 - a coherent scientific motivation;
 - a clearly defined problem or limitation it aims to address;
@@ -94,11 +100,11 @@ The eventual method should have:
 - honest analysis of strengths and limitations;
 - enough evidence to support whatever performance or novelty claims we make.
 
-State-of-the-art performance is an ambition, not something to assume in advance.
+State-of-the-art performance is an optional ambition, not a release requirement.
 
 A method that produces a meaningful improvement in a specific regime, exposes an important trade-off, or introduces a genuinely useful new approach can still be a successful research outcome even if it does not dominate every benchmark.
 
-However, the project should not be intentionally stopped at the “learning exercise” stage. The learning process exists to help us reach the final method.
+The first end-to-end usable version is a meaningful deliverable. Further research and improvements are optional subsequent milestones, not barriers to reaching it.
 
 ---
 
@@ -185,7 +191,7 @@ The following are deliberately **not fixed in advance**:
 - the exact benchmark design;
 - the intermediate research questions.
 
-We should first understand the current field, identify real limitations or opportunities, and let evidence guide the design. This is obviously best done by reading the most recently released benchmark and tool release papers instead of old papers.
+Use the existing field audit and targeted current sources to guide design. Resolve questions that affect the next implementation choice; do not require exhaustive literature coverage or an established novel failure mechanism before building the first version.
 
 Do not create a Frankenstein model by combining techniques simply because strong existing tools use them.
 
@@ -310,20 +316,7 @@ Current scientific decisions should be made from present evidence and reasoning.
 
 ## Long-term perspective
 
-This project is intended to be ambitious.
-
-It may take a long time.
-
-That is acceptable.
-
-The purpose is not to rush toward a superficial final model. The purpose is to build enough understanding, evidence, and technical capability to produce something genuinely strong.
-
-At the same time, avoid unnecessary work that does not contribute to the overarching goal.
-
-The central principle is:
-
-> **The goal is fixed; the path is dynamic.**
-
-Build our own scientifically defensible metagenomic binner.
-
-Let the research determine how.
+Build a usable first version, understand how it works, evaluate it honestly, and
+improve it when the next change is worth the effort. Learning and a finished tool
+are primary outcomes; stronger research claims require stronger evidence when we
+choose to pursue them. Avoid unnecessary preparation that delays those outcomes.

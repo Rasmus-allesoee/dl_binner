@@ -1,92 +1,71 @@
 # E001: Validation and UCloud Preflight
 
-Updated: 2026-09-28. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
+Updated: 2026-09-29. This is the execution guide, not a scientific result. Read the [protocol](README.md) and [choice revision](../../docs/decisions/D004-human-cpu-preflight.md) first.
 
-## Current action, 2026-09-28: resume the unfinished COMEBin condition
+## Current action, 2026-09-29: collect retained diagnostics
 
-The checksum-verified return for `paired-pilot-comebin-istuh_2t` shows C0 finished
-and CT training progressed normally through epoch 100/200, averaging about 75
-seconds per epoch. The worker then failed while checking `fit.stderr` by pathname:
-the CT output directory was temporarily unavailable, and subsequent writes into
-that same directory failed too. There is no COMEBin exception, out-of-memory
-message, or training-progress failure. Snakemake also could not return to the
-job-local Home working directory during shutdown. The evidence is most consistent
-with a UCloud job/mount teardown or transient path loss; the uploaded files do not
-record the Terminal Hours setting, so the exact provider trigger is unconfirmed.
-The driver now monitors the already-open log file rather than reopening it by
-pathname, and preserves original error context if a receipt write fails.
+The latest COMEBin resume is accepted for native execution and primary evaluation.
+C0 was reused; CT completed. See [combined results and the correction sequence](seed11-assessment.md),
+[verified evidence](comebin-paired-observed.json) and [D010](../../docs/decisions/D010-bounded-e001-and-prototype.md).
+The previous CT-resume/stale-lock commands are finished and must not be repeated.
+Seeds 23/47 are deferred. The next task only collects existing files for local
+candidate/embedding inspection and final seed-11 diagnostics.
 
-The return archive was **117 MiB** because the old packager included 418 files
-named `hmmer.analyze.txt` (776,570,812 uncompressed bytes), repeated CheckM/HMMER
-diagnostics from COMEBin's C0 candidate-selection grid. These remain in the
-persistent attempt but are omitted from future return archives. The package-only
-recovery code also always chose the attempt's parent on shared storage. New code
-prefers Home `transfer/` and falls back to the persistent attempt only if Home is
-unavailable. The old archive and failed attempt are preserved.
+Upload **`e001-diagnostics-collect-20260929.tar.gz`** and its adjacent **`.sha256`**
+to `/work/Home/dl_binner/e001/e001-gate0/transfer/`. The archive contains only the
+standard-library collector, exact hash allowlist and source commit. No existing
+environment, executable snapshot or run directory is modified.
 
-**Follow-up resume failure, 2026-09-28:** the next returned archive passed C0's
-5,227-artifact hash check but stopped in **7.51 seconds** before launching any
-Snakemake rule. Its log says `LockException: Directory cannot be locked` for the
-existing shared work directory. This is Snakemake's stale-lock guard, not another
-COMEBin failure; its [documented `--unlock` option](https://snakemake.readthedocs.io/en/v9.13.0/executing/cli.html)
-removes a stale working-directory lock. That retry also exposed a driver bug:
-launching Snakemake had been recorded as if a rule started, leaving CT's partial
-files only in `recovery/`. The new runner restores a working copy from that
-preserved recovery and records rule execution separately. Use its explicit
-`--unlock-stale-snakemake-locks` option only after confirming no other workflow
-is using this attempt. The returned prior command has ended; do not run two jobs
-against this work directory at once.
+Use Terminal / Ubuntu with Home and the same shared storage mounted. Prefer
+**1 vCPU / 4 GB**, or the smallest available allocation, with **1 GB free in Home**.
+Set the two allocation values below to what you actually rent. Collection uses a
+single streaming compression worker, no binner computation, and stops after 20
+minutes (0.333 core-hours at one CPU). Expect minutes, subject to shared storage
+speed; the limit is not a runtime prediction. No installations or downloads.
 
-There is no COMEBin mid-fit checkpoint at epoch 100, so CT must restart from epoch
-1. C0 does **not** need to repeat: the resume verifies its retained hashes, keeps
-the same Snakemake working directory, leaves C0's `verified.json` input untouched,
-and dry-runs with only the `mtime` rerun trigger. It refuses to train if the DAG
-includes C0. It moves, rather than deletes, the old partial CT files into
-`recovery/` before the retry. Use Terminal / Ubuntu,
-**8 vCPU / 24 GB RAM for 8 hours** (up to 64 allocated core-hours), with Home and
-the same shared data mounted. The 8-hour allowance covers a fresh 200-epoch CT
-fit, clustering and evaluation with headroom; no preprocessing, feature
-extraction, tool installation or bulk downloads are performed.
-
-Upload `e001-code-9ceeb087441d.tar.gz` and its adjacent checksum to Home
-`transfer/` (SHA-256 `9df30700587eb8f9fbdbb12034e58528865e91b507a3eb7c8b47a61eb6a90eea`).
-Keep the existing `e001-workflow-0fb6955cdc62.tar.gz` and checksum there. Then run:
+The allowlist contains 297 files / 434,557,937 bytes: both conditions' 120 candidate
+labels, embeddings and marker tables; accepted normalized features and VAMB
+embeddings. Every file is checked against its accepted SHA256 before and after
+copying. A mismatch stops collection and retains failure status. Repeated
+invocation makes a fresh output directory. It never retrains, reclusters, rethins,
+unlocks Snakemake, deletes old attempts or packages BAMs/checkpoints.
 
 ```sh
 bash <<'SH'
 set -euo pipefail
 WORK=/work/Home/dl_binner/e001/e001-gate0
-SHARED='/work/RasmusAllesøeNielsen#2936'
-DATA="$SHARED/dl_binner/e001"
-BUNDLE=e001-code-9ceeb087441d
-CODE="$WORK/$BUNDLE"
-ATTEMPT="$DATA/paired-pilot-comebin-istuh_2t"
-SNAPSHOT="$WORK/transfer/e001-workflow-0fb6955cdc62.tar.gz"
-LOG=$(mktemp "$WORK/transfer/e001-pilot-resume.XXXXXX.log")
+BUNDLE=e001-diagnostics-collect-20260929
+VCPUS=1
+RAM_GB=4
+LOG=$(mktemp "$WORK/transfer/e001-diagnostic-collection.XXXXXX.log")
 echo "Terminal log: $LOG"
 (
-    test -d "$SHARED" && test -d "$ATTEMPT/.snakemake"
     cd "$WORK/transfer"
     sha256sum --check "$BUNDLE.tar.gz.sha256"
-    sha256sum --check "$(basename "$SNAPSHOT").sha256"
-    test ! -e "$CODE" && test ! -L "$CODE"
-    tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$WORK"
-    python3 -I "$CODE/scripts/e001_pilot.py" "$WORK" \
-        --data-root "$DATA" --vcpus 8 --ram-gb 24 \
-        --workflow-snapshot "$SNAPSHOT" --resume-existing "$ATTEMPT" \
-        --unlock-stale-snakemake-locks
+    CODE=$(mktemp -d "$WORK/transfer/e001-collector.XXXXXX")
+    tar --keep-old-files -xzf "$BUNDLE.tar.gz" -C "$CODE"
+    unset PYTHONPATH PYTHONHOME PYTHONUSERBASE
+    export PYTHONNOUSERSITE=1
+    python3 -I "$CODE/$BUNDLE/e001_collect_diagnostics.py" \
+        "$CODE/$BUNDLE/diagnostic-collection.json" "$WORK/transfer" \
+        --vcpus "$VCPUS" --ram-gb "$RAM_GB"
 ) 2>&1 | tee "$LOG"
 SH
 ```
 
-The driver validates C0 and the pinned workflow runtime first. If stale lock
-files exist, the explicit option records their hashes and asks Snakemake to
-unlock; it does not disable locking. The dry-run must then show CT plus the
-paired summary and no C0 job, or the runner stops before training and restores
-the moved partial files. CT restarts at epoch 1; C0 is reused. On success, collect
-the printed uniquely named resume archive and `.sha256` from Home `transfer/`
-(or shared storage if Home disappeared), plus the printed terminal `.log`. No
-manual deletion or upload of either previous return archive is needed.
+Return the printed **`e001-diagnostics.tar.gz`**, its **`.sha256`**, the adjacent
+**`collection-status.json`** and the terminal **`.log`**. Status is separate so it
+can record archive creation time/cost without a self-referential archive checksum.
+On failure return status/log and preserve the partial; no automatic retry is needed.
+Local checks exercise actual NumPy file bytes, hashing, tar writing/reading,
+repeated calls, separate retained/resumed roots, missing/changed files and unsafe
+paths. No external calls are mocked inside that collection contract. Access to
+actual UCloud paths remains the owner-run validation boundary.
+
+After return: independently read all arrays and labels, compare the native marker
+choice with the truth-scored existing candidate maximum, complete the fixed-query
+neighborhood/length diagnostics, close E001 at its amended pilot scope, and select
+the first usable prototype. Do not introduce further experimental runs by default.
 
 ## Completed feature extraction and recovery instructions (historical)
 
@@ -229,7 +208,7 @@ complete process/DataLoader thread and memory budget must be explicit in the
 pilot launcher. Retain native 300-epoch VAMB and 200-epoch maximum/early-stopping
 COMEBin schedules, six views and batch 1,024. The 80 per-fit and 800 total ceilings
 remain unchanged. Resolve feature validity or resource failures before fitting;
-launch the remaining replicates only after actual paired-pilot cost review.
+remaining replicates were subsequently deferred under D010. These forecasts are historical; use the measured seed-11 assessment above.
 
 ## Superseded 8-vCPU plan, 2026-09-23
 

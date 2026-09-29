@@ -1,6 +1,6 @@
 # D007: Retain COMEBin With an Explicit Resource Amendment
 
-Status: amended, 2026-09-21 and 2026-09-28. The temporary 200-core-hour override is withdrawn;
+Status: amended, 2026-09-21, 2026-09-27 and 2026-09-29. The temporary 200-core-hour override is withdrawn;
 the effective COMEBin per-fit ceiling is again 80, with total 800 unchanged.
 
 ## Allocation correction
@@ -36,33 +36,6 @@ exceeds 80 allocated core-hours. Keep the 80 per-fit, 15 per-condition clusterin
 and 200 group ceilings. Native early stopping is allowed but not assumed in the
 projection. Four vCPU would not budget native workers plus compute; sixteen
 would increase unmeasured scaling risk. Inspect this pair before further seeds.
-
-## Failed first COMEBin launch and revised CPU split, 2026-09-28
-
-The first 8-vCPU return `paired-pilot-comebin-p3983hy8` is preserved in
-[observed failure evidence](../../experiments/E001-coverage-thinning/comebin-pilot-failure-observed.json).
-COMEBin itself did not fail. The driver killed C0 during its projection check after
-mistaking about 5 minutes of one-time setup for per-epoch work: total elapsed at
-the epoch-three marker multiplied by all 200 epochs projected 44,443.85 seconds,
-above the 36,000-second (80 core-hour) fit cap. The first two persisted epochs each
-took about 120 seconds. Count startup once, use native per-epoch elapsed values,
-and apply a 25% margin to the remaining schedule; do not assume early stopping.
-
-The same return and the owner's dashboard show about 350% peak CPU on eight vCPU.
-The source requested PyTorch intra-op 4 and its fixed loader count 4. Since the
-training input is a precomputed `TensorDataset` and shuffled indices are generated
-in the seeded parent, loader count is an operational queue setting, not a change to
-coverage, views, or training examples. Keep the pinned checkout unchanged; at
-runtime reduce its loader constant to one and request seven PyTorch threads, so the
-budget is exactly **7 + 1 = 8**. Before C0, exercise the same pinned TensorDataset
-DataLoader with one worker under short private `/tmp` and drain every batch. Log the
-effective thread/worker values. This makes use of the allocation without the
-8-thread + 4-worker oversubscription; measured throughput must still confirm it.
-
-This remains a resource-only retry of seed 11. Keep 200 maximum epochs, early
-stopping, six views, batch 1,024, seed, all 120 clustering candidates and every
-scientific threshold. The 80 per-fit, 15 per-condition clustering and 200 group
-core-hour ceilings remain. A new unique attempt preserves the terminated one.
 
 ## Follow-up after the first paired launch, 2026-09-27
 
@@ -124,3 +97,14 @@ memory/throughput and owner acceptance); expand the whole budget now (unnecessar
 before measuring overhead); assume early stopping or linear speedup from more
 cores (unsupported); reduce batch/epochs (changes the native baseline). None is
 selected. A 200-hour per-fit envelope is not a promise to spend 1,200 hours.
+
+
+## Measured paired pilot, 2026-09-29
+
+Both conditions completed with the corrected 7+1 allocation and native early
+stopping. [Actual costs](../../experiments/E001-coverage-thinning/seed11-cost-assessment.json)
+replace the old pilot forecasts for accepted work: 39.6462 core-hours for successful
+condition rules, at least 58.1075 for known recovery-sequence components. Aggregate
+sampled utilization was 4.39/4.30 CPUs; setting eight total runnable workers does
+not prove eight CPUs of useful throughput. [D010](D010-bounded-e001-and-prototype.md)
+defers further seeds on cost/value grounds; resource feasibility is not authorization.

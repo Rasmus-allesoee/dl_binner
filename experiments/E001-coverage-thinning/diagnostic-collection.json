@@ -1,0 +1,2095 @@
+{
+  "purpose": "Read-only seed-11 closure: independently inspect binary candidate/embedding contracts, then existing selection and neighborhood diagnostics; no new native fits",
+  "roots": {
+    "comebin": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/paired-pilot-comebin-istuh_2t",
+    "features": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-features-69_32jz9",
+    "vamb": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/paired-pilot-metabat-vamb-kru6t8dq"
+  },
+  "files": [
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "8896768dc32afbdcfafa0cd47ece64302e221721a302e17d6ec7ac45e9a6e8a0"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "7473ada043b097f6a9feea5286d35a2169b64ed70cec877f7e05ecb80739d173"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "808daab3bafb6dc38accf5edb9103884adfb3a230dcfc0f0f2618f942d0de313"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "908c9398c17081bcf19ac383c08e7f60a1a52ccae96c2145140dd0e544a1432a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "f51a826667e264cdc19df8614f55feae696d1edb5b1967c451ec19afa5677802"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "39de4b8e9722c315cc4f88c77fcff66d78268d909672c2d631ea41d81ea5620e"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "4b681cb5a7e25c81507f0e88a8a79fb0304bb05a340ff7f8427968dc67e68250"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "47a0c9e61ada8d3b70d539c66e8fa1a67df3f82d7a73248671fd5d66b702a15e"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "56f6c61020141f47b59d232328a32376e4c4b7e00c1ba5e05e295e14eb046bd8"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "0b7e0bc8776b83733f1ab7496243613d543e4c4a052a6e0fee7cf06d772b1d1b"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "35a630e8ba24cffc0b06ee2ccdc54d60d31b209a90609d12e7640c69dbdd9ed3"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "52f5249910d405bec136f6457ff99ed58a9930366be7a651fbf359a38d8d1123"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "bce53cf734b290a95ed5520aae544fe187b0258e53b3a02f445f9a34eb2f40c9"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "3ffc0ec43ebcc51cd493eca23a74572c508336af288b076a64c0afa1e6db4b57"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "1cd1fcb161fd4e580be488f9cf5cd3afc2dcbe21f84f87fc3af1293e09a27efe"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "796149ec8b3d5fd2b61c7f2aee2ffcd8f66cde033aae857a3b0d96e571d0bf5c"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "2934b02a2cbbf32c2eba194b39f54d2f115cbe731c4ce7be4822b84c01f55366"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "b32acc15da7a91e189ad1e0795d86a334499c3cb38f54178503223b8d5a10819"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "b6de9508ed2f990a0506a568e173c0b3d93806f1a99265da91eeca317bf732a2"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "24b82bc948299261ac9c29ecf06eded7a9be76a20fecef715d1ae8569854ca31"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "5e72b8d5a86d12892db569216a146cc013ab8fd9b1821588a7002274a20ca780"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "73b5c016182205bc5fd97615a0922ca9bd1513930139a0a7558de49d3bb5b5fd"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "0f7a35d235442277db6e0137934b8209c82345b1c9d039faee636a3456ac15a9"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "6cbecf7180dfcb7c5ab81db6af30c57825ebede8993dde213cfa42d04d03b803"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "85fc330ac646aa8d5587ff8dcf3af00c4073608227f0f3d0171075285b3d693d"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "409f2e4aa04d7957141dfb1c569f4108d02ecf03b1fa472e27aedc98267797cb"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "c5f2753d633d406472caf310f3d1ed9181354e0ee9435bde2c88a45774b49a6f"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "78c25cdb0a45edc7fe811fc21455d22fddf333e992c47f53a9259b9b4870c3ae"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "a8e3674db6341c8e3d16a95f46eaab1fdf5f323f2fe6fa538bb58c99cae96ce4"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "17bab4ab45b33b763d4fe0ae672c61ef131a3b5c886dca71a5a4d27e6f580e1b"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "b5c823322e503d7864d694905b79191622bea1707d03040d07d29e1ca743f1d2"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "9e9e4cfe2c848558b1f42b90fc41621231dd9c4fc823b70ac630ddd7ca83b545"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "3da6e03f888aa46a6e883e8f9178a9a138cef1b1511447f8a868ec01d7edd404"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "99d7fa611e79f302e45ed3fee21944456a7f1e782ae7959a6fa9cbb089b77ac3"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "db0e4ba735b8b6e65f7116df63c24feb92687bfdd1838dbe7071c179b03f9110"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "17679a23933cfa3b5c67835a71f2243ffb71bc512ddf192d84dbffced6944123"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "39fe5c8d3c98674252a95a4081f0013f4a0bac9bbd09428f7df75729ec3fe89c"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "9608742e4de19c286e5ab8250a00447d14f5745ece005f38413b8f413a2d7eee"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "05934d8ae68d2384406a41d6d4370e62eafbc473063a4843205eb4c2ce2bd5b7"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "025995889f978ad625170e05192d5848d6f96d5ed9ebcb137176247fc9d4b42d"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "e111759ae4982625ca95fc25a7ad118796dfb5a90e281b40c98e1556a1c938b8"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "078f98323e73a1715bf27461ee3f90dacc9647883ad611f080d22c8ebd194cce"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "c97a5003a52903d9f9c63bbb07943689acb50a0e680f411ae7577ada0fc5b299"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "372cbf909cbee0b194a12b579e6ed310fb0ccc88613004a7f9cb4ec3befb23d0"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "fef8ad3d52cf58df9f755e281b3de90019610404ddc6ffb52a39000b045148a7"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "631831452128b48f18d1e6888311979dbbaa31b8a7e6ca4eb15ebcb569d41100"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "e9c12a7dc7329292a921529264d9e1bb6cdb07b0df65ccfb19bda5f603010c34"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "4617bef0efa3208d7fbaddd1cbf50165385336d5cfda109c00e809592958bbf8"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "cb9164aa9b556336d4c115cea80507d16e2b21b9107f94f62ae86dc4f002deb5"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "30b5129183391708a301528b29f7fdbc5e3eba3eba9b71adf8ea05c24d46075c"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "a9228e10d901900c5a5e7b62cdbc14fb74788a8045ea453459421fe859953930"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "6c97e331ed9909cb0c0f881a9f4aab8c8b04721120c7e4eb0b5d65c94328d79f"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "2569ec78b64fc76bbfd9d8b97f94794f3b10577b925083b186dfcdcb46a57217"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "bacbc673264e3465de3a2c173d7434970b5cfbe3b9a1e595a22376ec79f1464a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "538e41ca8ef9ff65e34b8947169cac8f31ae731c5a46ab4ddf82c088c6de4135"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "ed6e0bbde83d186fc7b219ca42b4615bd6444a137bfe1285d4efb56200a83f3c"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "89de00118018b7c17ebbe8227962cb36362f8ebfd9d51ac652422b5da455f664"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "90c57db128bccfa0adabd0f8add3d163542396a839aaca4587aad2cd4e868850"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "a800bdbd3b4375aab7704b0879b8f7f1b3ca0b677bcb7baf0685efc17219cb6e"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "e4939f694e5e29acc314597be1038d4aab9c6c8cebd4bb2d4e6d0628cbfda872"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "f70dca86fcdd5e874dd608c6e4887ac02c8a3f6f8f4884be17be80346f62f3f3"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "d31110dcfc196ade7cd3a028e3eb0b0692fdcba6b672cc51783da61d98b2130e"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "e313adefcebce7e30cd843a4e45f45c9695a7adb0c25101e573de320c5d0fc0d"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "62f2f75e3837e09654528a24a4bdac31ac5f21ecd059b0305231bac69a011212"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "784469b340e6f9ee67db767e01f3ccf23e34def393b0972303572ec7bac9526e"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "c89e0c774352ca891a3d9d9108a6eb1e59e0b53f4d89d6d05692584019078fff"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "0e271f33ffd4baaa044d2f69c8ccbc2ec1acc9fa51e280312f70d8d39fdaf805"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "c254f818f3213f85b3e2048dc434596411d909d45504325a5ff75c89e0003310"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "226f9ebc81240219b8694bf17b84f1404f8d51a8739b702c6d8f6894a302c804"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "90774668656c43e913624c2830e6435faf5afdb9fea44ec3ad07d0360cd78097"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "fc8266187936a7b75d719f34aeeb35b8d2e2ed4d8823f8d0f90b54fc3ba9e896"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "4137e398f4bd94392f94c89d1bb9cb833ce9ddeca07f0726fd96d36068fe4a02"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "ed050eed9896843aa1a77410ea93d84b2d421a84464d74a5f24ea39c5f4a02aa"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "e713c8bb9eee63f8275b183f424d6e0865d3eb54e624045eec78a55d121ab5c5"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "f982b15327e747eb22f2f82437dea2265029eefe224a3cee284dbd9b41ad06e3"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "0d9f19f4219745ae388da2e65a5961bb0df4fef295bc6e3a499882b2e78e6345"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "3088995b74ffd405be9a702cdd2fa393a614b7da1e3855eca8c1b085fa6bf6a1"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "dfd059a5ef95cee5456760aeaaca80bb8c62d3b6023b38623df72725c6c221d4"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "f6fd922010d3ea4e3a6376f4e21d4551d15aee04fe056bc4409dd3d8a1d67490"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "939994fb9a0e78a5c5de26b3a8514d7b018d2d12d6b02b58c07bc0503cf5ac45"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "2ef3cc8a05dd13ab9ab8e2af2dde1d337b853eb67fecbbc3e89dbbe55a1282ca"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "77d763c252651c37615cd16919f5f0f199077e39cb280234a59b12051dd9200f"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "a2441faa7abcb19eb7d6ed092f54fa8cffc90cd8c701d93b53ac8b285366fd0c"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "61d4ee5a03ece8ef5e2aee2f4f2e16b7d93b416bef3a2619720e4c34e7418ad3"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "35dbb9f70464329d70cd37a8dab5c3ac1ee5cbfdbe18ba287d5b0774bb1fa601"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "2445c112bf7271adb6c92533e8d0ddc2dfa2c5a9d5077bec837134a5c558572d"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "afd12966aec0a94fc88b0315017c5890f4e7e56e860c5bfe0d8c9dd80565bcae"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "43c53bd9a085101d4a6f0074af26a2eae2cd8f6fc57d98267791c3b209cc555a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "0ee70d396704313e66262df48105fcab7174fbfdd0deb2622b4e4b8dd0ec1994"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "c80d20402b6c89ef395c7f72517b322f4c9c1634b7fb9578e6f83855f9141a95"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "219b1fb2b55fb8a1b981b22f990623dc027f0abbebfedf49a2dda5ca64f35f1b"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "f639f767f92595ec40353c7f4c292f33b4f0e665ddba942a9458da0e3f97751d"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "c739c2bedd39118ffd49b14bee23af7fcd6f8e71fd521672d32286f064a0f498"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "df4789e2e7f794372beb0d42476511da48117226f0236b0a07668826843134c1"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "eee1c65490987a5e54fd5fabcd135280364b37f90797427674c329abfacfcc71"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "c02faf974388a49f984e39452b5af38f9918e980d2c067a8a0f7e9793f6d5cc7"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "d82fef6eec8acee161cd81418e5f416a9d9c65d866bca234ba4ce41b493486ef"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "7d95126244ab2e764fe1d8681e8437afe3bcfc1e5fed546ed8301dff2bfeb43b"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "738982270c48fede0c56267020273517497ff0d7dcb254613e7520aaf7d7a3ae"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "82f2c11b562365264bd14c8c8223fd64ca594dd512e061f1d709de56a272ffd0"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "4c918b5b93032d4efc756d147a154898f29cbf217f87b570863b4c605d23ef27"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "ad27fd4d2c18b88e8d535550b09dfaeed938238e0a07ca4c77a622ae6ae6dcc2"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "5bfb50098a0fe59148d2b1266f309b141caf86f8181fc814100edfc5e9ae7dd1"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "7f296d8d44195a57c2058e18ed8eee5ba81b29262cfc06b1f577c9d4cb35529e"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "a789536b9c231383ae4b184960e18db434986d9db21dff38b649f88e980432cf"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "a0ef5e106bc545e04d98781c47a8246179a0675cfbc53fb846a03d1ce905e742"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "033e2597d6decb9c75b34da3f7b09a1a5322917dac2d26cab1bc111fee79b93a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "9001b8114a5e14a8399bae14846e6fe886a26dd8a9c623d84263ebe46bc4d7e1"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "393594f50252fbb839a5a135149d4b1f8a4814c242b7816eb6e57b84bd6e3bac"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "606a16b45cd06888c828df43a77f6802af91b037ed703c3e45b8f171ba47f2c3"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "07014ea415fd719733500f599b2b073de07ce11ef1b452e51049be4cedf0375a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "544e95ac8c991d4f5e46e3e4ceed43733e10268f5047f97b66383c7c9e19cd20"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "0a8ad89d3141eece45b44031f409c26166b7a0c2fed890b3fe724d4866475f76"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "0e2867a04dcf862447b66384192d28dc09ca83daa72e5000d3ca2aa8b5291558"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "94c86faba578035e0c90e206a7ac3dbdc98a889df643b6eda9a7184b8a58cfc9"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "3956254ed8dcce6f61cbc19509ffa596dee6105cfa0e82267ff0d4989b14de6a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "59bd44299340349bd9df125b58bb63de3c4cbde466f6285aeb569449b175197b"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "0f1318bc9689796dc452fa21fe320c760901d850481c3601fab1832edbcefcc9"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "7f01aeec084c813870c04cd399544f6cb95103008038c45a4029b04b865c7c31"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/C0/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "a589fb2374080cd86ae4ce2c1cb056830cb04524314e3b7f9cfad6dc27d47205"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/estimate_res.txt",
+      "member": "comebin/comebin/C0/native/cluster_res/estimate_res.txt",
+      "bytes": 13267,
+      "sha256": "a9df91e4d4b7de766d826f7a0478417ee4744a9a11e6e3f9ad3bb21f853bb8c1"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/unitem_profile/binning_methods/weight_seed_kmeans_k_209_result.labels.npy/checkm_ar/marker_gene_table.tsv",
+      "member": "comebin/comebin/C0/native/cluster_res/unitem_profile/binning_methods/weight_seed_kmeans_k_209_result.labels.npy/checkm_ar/marker_gene_table.tsv",
+      "bytes": 432403,
+      "sha256": "b96eb330a501b506d2ba224048a4448ab6b6e99a96868171e8f9e2086d475a00"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/cluster_res/unitem_profile/binning_methods/weight_seed_kmeans_k_209_result.labels.npy/checkm_bac/marker_gene_table.tsv",
+      "member": "comebin/comebin/C0/native/cluster_res/unitem_profile/binning_methods/weight_seed_kmeans_k_209_result.labels.npy/checkm_bac/marker_gene_table.tsv",
+      "bytes": 570906,
+      "sha256": "c0d33910d75e5f2852310c552db99c1ac8dc659b987fff4dc7921be41d431be7"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/covembeddings.npy",
+      "member": "comebin/comebin/C0/native/covembeddings.npy",
+      "bytes": 11568256,
+      "sha256": "3caf07d2fdcb04174e3c1e7d22068f6ed58694d6c13cc1c1dcd7782379916ecc"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/embedding_ids.txt",
+      "member": "comebin/comebin/C0/native/embedding_ids.txt",
+      "bytes": 185781,
+      "sha256": "8144665f33228e598665230289fb54155a111ae701fbaa88b9c829012fc44241"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/embedding_lengths.npy",
+      "member": "comebin/comebin/C0/native/embedding_lengths.npy",
+      "bytes": 180880,
+      "sha256": "ec334a7d2be33acd468abdeeaefa5e9d2946fa4014eb355ffba7a8a341eaa34a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/embedding_manifest.json",
+      "member": "comebin/comebin/C0/native/embedding_manifest.json",
+      "bytes": 512,
+      "sha256": "4cacb0356799a121c63369d96f3f24c029e3e3161f67072bdecec19a34f52395"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/native/embeddings.npy",
+      "member": "comebin/comebin/C0/native/embeddings.npy",
+      "bytes": 11568256,
+      "sha256": "a4e6d62f04352c88dfcf6a2807774210acb63069e97efaec3c92a0cc9746d316"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/retained.json",
+      "member": "comebin/comebin/C0/retained.json",
+      "sha256": "3d317400a71ad4ed3b9a00620924f9643997d1ba6f5a8627c8b24f1ff1ffdf45",
+      "bytes": 1254805
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/fit.json",
+      "member": "comebin/comebin/C0/fit.json",
+      "sha256": "9c01e302ee944d31d804e6c64ec9570e62c51ad42706a2b48d4bfb037a713b2e",
+      "bytes": 18990
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/C0/predictions.tsv",
+      "member": "comebin/comebin/C0/predictions.tsv",
+      "sha256": "bdb3efcb394d9fddfb3685c85ef68ab7d4366ec41117e175dd0c09cadd106123",
+      "bytes": 281446
+    },
+    {
+      "root": "vamb",
+      "path": "vamb/C0/native/latent.npz",
+      "member": "vamb/vamb/C0/native/latent.npz",
+      "bytes": 1825590,
+      "sha256": "7ee1ee8913403d2e48f1717b36ec7b4466b7306ccd9263d723fb3b7f6d755489"
+    },
+    {
+      "root": "vamb",
+      "path": "vamb/C0/native/embedding-ids.json",
+      "member": "vamb/vamb/C0/native/embedding-ids.json",
+      "bytes": 298754,
+      "sha256": "17201a932b8ac515583de256cfb1da7b6b3d8161634a350f0eb99055670f077a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "3e4f0df024085344d5d3e2f2e8667d16abfa72cb2da23072860fa0b7d6105a61"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "4b048c5e9dc47a34b28e20805129ff1e8cbd93c447e1d094f3808ce1058815f5"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "deb44aa0c58fb9a82735144b833d39317ba6ba277b49779a3638e1d7a0233260"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "3a109579016bfad2d7682a83d9c0ca5e770a2fd7991db078e93914f39e424d8f"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "7aea894e050fb12ccb25fe942487437d32f6bdc6fd7bf8abbe0f058ae4216ac6"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "b0de1c7a01360b2c90cbe3d432992b2ce7f2e37e4c791468cfd10db628ed0f17"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "ffed3ef717c9a4629c38dc8b8711dd0511229bda2b3c9d27c2cdd85e959a0814"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "2ed16e7f0743f4b2a100999ff33c27071c47dae790cde96e3f093d461a584405"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "1f87d2ec6ef45a1a608b8dcc02324da6f216c6d660c4afbab653bfa283bc7c11"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "1894e3074481fb1af93f58fea885b41b205b3e0f7f4367e1aef13df4f1845952"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "663fd922a76058adc7153029df06bac105a5d5fa8cee5a928ea4bf51acaabfb9"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "ff29ce7de728b79d36b9c6183723c76e6359a54cdf1e428b14be41e716fedd90"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "8c8be9e397880be393c1cd7a2d9233502213768d70fa678e04956812b046675b"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "bba6f153a7d58ce44737231fdc6d99430e0dc5ffae7cc6faf0822f01f05ed1a9"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "76268507ce165147d7dca9291ed9b69f63a6ab534f164053fcdcfba9b0f72461"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "37a0b5a4298f3a878bdf23226c859dc8e396566501b7b2fda034da277b4689e2"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "867af89af0e0a0f83758d780111194a78d569d677196dbdf3c4f1100e1aaa672"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "cbfee8a279b04346423dfd758c404331ecf049344df72f51f5ba9203e7241d18"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "11473eceb7230835cc4739ea9455ef16b4265eac5acdccd1947becb3e4646e7e"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "90f7edce6af3f471b6363ddd384dd869b66c0154030bdd3239361fea72b0b785"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "ce7ff7f2e0e02ccc2cc30f4078c65f36b61a3208bffec5056ad7a1e142f820a1"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "c8622c0405ed2c35b166a0cfac579738b911c3faf838b1d01ec530820a54e239"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "6369937e5d53753b9470af1de1ba4a71c12ecbcf924abe96c45ac312ab7dd568"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.05_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "f270ad5104e75538acfb3365854061eb3b3c21b92edc77ca7609c7435dd5b80d"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "8b32175d76705cd606b87e9a5f2146e791e14b27ceea9f404a5e85efc28a0303"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "b6bd9afa6391fc49885a0a7623c2c0dedd7428aa056c5c240adccaa3153f117b"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "4ec8b98e138b95489e0ad36730d5cf37ad46ce115380d2f3bd63130774dc3940"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "2b4c893a2fbe2546a21961caaa2a76c03a60817582e480e8f9ef7fae76e786ce"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "23ac85434ebc420f9a1deaf1b303efeb853e89e36b957f5991ebd60110bb565d"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "a50c16fae34048a4040b7405e6e22b7c58d9232c59f00ac4631be987e387c022"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "1fb389cdffa78ada7b9289f2068ebc3896ce62821ea58cdc6769e0c986b0a5f2"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "28aa29329e1101e63798c4a241c2746a2fc4b7983418a39ee88a77318a71619a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "3446e6873191292b0b003c62a4c48cf33107fa5a2ebc7405de3722f25d8ded6b"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "59ee33b65e023ba1fbe00bfa47a4eda72064b3acd22a30cb3cc1728ba724843a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "1576b8a954a8249871294aec888873bb2df837a9c29f8738daff9f8539beb6c3"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "8462f21c0254f4ba4144ba38ca2c334925b4f0864cf982b8d6d8dcd120750d48"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "1fc6168b41b680d41ae1465aed797b8d29656a9766746b806effdd0dfd2317c7"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "ae782c81337db537529749ecf9020e5c31154dec3d615fddd77cb2fce88d9a5a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "bb9898e4367955be8677da877f3d536d4995b475580b39227fbc35b034f876eb"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "8814aab6fe7df4af9b7efc13191b93b0c580d983d756700a01a56915b2c436d2"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "8da4edac634e12ace0249a7698173d33b48a67ab7a0c6a00daf6e915ea580acd"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "26da0ce2b662aa30178f1812af5de82213e81e60c6ce579177ea15d766bf9c6b"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "fb6ce0cb5f3102b19fa79e07309fad2a32274f002cfe17a99299698a359daf68"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "242f4248e1ac5bdcf9dc721196d6504afa2c816285ad5da5597bc2568c142b38"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "79a1daa6102904e48d549e4145d0262e9ab12ad9871d1c0315f85a775bb4612e"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "9a109f6d3022d590516ecc24bba8039d03ad19a70a02a84c1a6bfdd901dd092a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "e626e66dd7c3a952ea6a0b5f17902e08ce0c0c159adcdc7ec24fbf623ff093ca"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.15_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "ab61164adb521b706c92fb824c05d6d6b8dad29597461d443346dee15b431553"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "b6a74a8ea0bd0bdceeb97e200ef44e4dbec2b5dcf6e15141846bf2b09eaa0c64"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "e3279f544fdbff6a8029ec87dfb6d4c5a0943d3a3ef3a8c7aed374ca823a1bd9"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "0d0ed7d13247d3b34b9f2fd84214458a3fd18eb80267619ffb62528a10ceacc2"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "d721a9e0df1182ee22ebfba5e58947126ae7314f6bd7ca14c11a4a99eb9ec627"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "a71bf4ca79f6ac5acc335487717d29dc1343caf3bc32048118ade3452ce5288c"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "1f627d7d18b0a3ab8e448636fb43e5e50a3f62563cfe6d2d00b4374851c444cd"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "e43cf810d70cec16745b58e629701ad09b04133cc28d506d4c09f66f1913cdf9"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "7b76c699fd8b3c50e3888c6ee52f4dcef1706dfec480e15bed491653bbc240c3"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "5b3361089b13064ee1a053f13b5c275afb8ac05298dc936f05a2c07f7a60354f"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "bdc8cd9018a5d0ecdc1a5c72533eaff0a9e030331a275cb5fb449da5b69ae074"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "a0616dedd35b76730c3ceae18372958b29fefb8edb1ea2885f60772b077906b1"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "72c404bb2edc1f8565f6a300c4dcab6da1e7fc503ccc20c92a83d05f467cddc2"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "bfe108e78d46a7be4cf8da25e706d999226bae2e8bd490c4c799564a5b027568"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "6e8ba7ced915e4811f477e35ff52b75f5349900acb17a41ac9bd8aedf2a4cda5"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "7c2dc201f4e633977ac1f607822fb9ed054a599236366f88bc0800fa36fa54cd"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "68847489ffd40e3c7dd0b5b1ce17c58f13b08f0583af362dd8d1d18a05319c23"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "8bd2a6959963e7f54bd2b364e53c42e5f703e2495c17a45a635651c0f1a06c45"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "ad6de239e2f200eb9df2d5c759b68a9d493ca67af545eae59741beb5c574ad5f"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "a1d6a17d585143e1125bae9180ac40a5a64e1c55eb869185ae9a8f8dc8754d7a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "66cf03fd8f2ecb5070667b9625000d74399ac86569850aae579915d95a1af499"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "6dae916c4751a196f371676a4b80ced24910791693fae3365e7ac859880c6566"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "bbd8247a5db8bcb9b4fb0cc1bdbb5ae6cad7987af71ef0021a00c831d5e6be62"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "2192e79ff587a643c4e49c08010f5139f7e52352b201d2a7254792700e553853"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.1_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "e2465331a613a75b16b658a5bf183363c309461fd9b71acbd08bba04a307d319"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "d94d9af95a78db19a4189d1647cde7229ac48b5b859e53f25d7eb72f3a449f52"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "3c4f38d0abce4e3e459dad9622863018b6926d692cc9aaf10e3fcf000f13bf9f"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "14273b1ec58302537467f7abc7e65ae92249f74e36effac2c3b007067ef53a15"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "4ba1c0aee0a9fe0290ddddbd337acdd99a599ad9536092fde5a89e10d217d48f"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "63c9b8bb10aff1c82d088fb77f7b60625f81c14e4beb88109477e7094935943f"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "0f146da002df0ca232840dc43aab780742aca32aba5ab89427c95e6a5216ce69"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "8c211a398ddcb7f631341114161ea1392f5fcc72ee9bcb94729bb8c28bfd431c"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "ef091d156048343326d1da635d6507fcf219d132f3a7c6a1841e9dc3b2e2de09"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "dd5164d467f62c48e803f46eeb4136a4396517a5d2c9dab8c0a806444dcfe676"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "722dbb2cadebf2c11021f47fd765a9d7dc7ece478cbdbfd4608dd65c5009b256"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "7a683134ad5e0339cf224224c86141bb2fce58fe09f91ed84647cbc9a9d4a993"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "ad8c364831ef02a49d0ca0be8e95b8cf8e96f7b95279dd147f84d44b2d387dc7"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "8d7f8b86956b97e953cf16042bb63113cc1b72bc61ac38b371c05c4e17fd0a89"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "5021c96581908d813c2a1d14078e60ddb1c13055a0507c648e91f51f19ff4f63"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "512a55105d9d18caca0ff73f9b977cd8886bac14ee4f767f792be21e5031b37f"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "8b4e937700242b5f9a5c23b68a638d9654ae3199261bc19d3b2b9a9209bb61fa"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "4aa5a93f5d809a2c81fcb60ad4ade7d79b28891be7b2feed7ebd93c51d142878"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "d1af020508d6da81c507152460aaee6669839b9435ad0229394ac65b919fd048"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "8e38ee24c6751715f68f1eb69557858725eee5c7f5d27ebcaa649d7ee8d1fd21"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "41d75036b148a6d37919662ee6b44c89cd9927d92d1671280a24b306cea9cd88"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "7f6d40c342fd35671e161029088c194c3bf8af324b724db5d7f2f8ad307bb7a5"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "b8fac20c1f896d02940b6206c857fc022dcd6534d89f3063cf5fc31a9875f3b5"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "961da89e4beee010e20c8ee611047d8ae7ed1c0f985f2be7fc769306b79406f5"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.2_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "3dea1b4a4f277c4b1d31852d33321701704df0e0231a6d887bafffbb1f829af3"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_10_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "1f1ccf0cfde19b018d002fbd283028014f75b0f5229d7d8915dc0ce38aceb11d"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_10_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "553271120fa2bbc52aaee3f5f5bf719f95d03ead767e103849bb9c6b9b252cec"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_10_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "e7249349eeb475664bcfff947f8a1d0857420ed99731de216ce78269b64c6b8e"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_110_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "d274874b5a8cc4cac2002662272f98b1aa07288c89078313a041270da5c14a91"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_110_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "04b2e97ed4da46ef322e549de0c90e7ec8eee9d22f26a17c0a34c33b5632cbe3"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_110_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "703e4f1be576f880af811eaaf0e107e07f261cc307a5a6a19f46ddf69ef1e926"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_1_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "b4342026015d01b5acefd02d0f381fc80a8f703bc5cf2949e0fe74ae498e616f"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_1_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "7997a1ee4fc8a200a01f231ad4b61f6c912292a4094d136fd8e6b955814ebaa1"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_1_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "27de779f3d538873d265b3e2df2e48d93cd39ccc46631044349088820e4ec2e6"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_30_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "c7c2b3fb86021933b2d09972e99cd8d5f9caf7e7a6988f92d285efde0c2989c1"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_30_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "30bef4437966a5ee365cb695594949c9484b0ba9b62eb1add3b9d21738105ec7"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_30_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "5e473038e2941f54e82e201fa74cbd236d8d94f34657bc94c18e48a439c17b87"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_50_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "ce84df9162542c21565d267118a276afcb3c40b653a714707e29a8283630b306"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_50_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "07a3ee11994cb31002856dd6552445f56eb6b9da37ff3943e0c6b4c5b64eae5b"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_50_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "9fb0f1b34102b9fe37945dd64e083e473280588ab9ab6ca5291216f558d81eff"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_5_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "043cc2d43c3d292f5ade1f03510292ebe2d6136a729eba8e3493267c93e5f720"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_5_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "9d9db0caec1429c5beebb47d60a22191cc7473ed264fbdfb1d3cf25981996359"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_5_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "167e9cb94b77c1987928f2943f81f79393159f7e130a590bb0427b29d4d974a5"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_70_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "63f4ec6174ac355bf9595a34c5ce415ec1a14da6e4322a1c7a9948ade6966751"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_70_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "4f75ae80759c4be63c2acffeffd6310b7b64d88b11cb9a0009d065e68b544c8d"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_70_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "d739295a20bbd840d7ee734eaeaf7656a01523081d6dacfd343142cf3048eccb"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_90_partgraph_ratio_100.labels.npy",
+      "bytes": 90504,
+      "sha256": "5af0bbb2b35efe821083ceb56c7413e6bd45a61331be37f19065965390265b44"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_90_partgraph_ratio_50.labels.npy",
+      "bytes": 90504,
+      "sha256": "d1773e26411c19c44d0c43d66f160b56dd7bb0de14e71493763cd3e470dcccb4"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "member": "comebin/comebin/CT/native/cluster_res/Leiden_bandwidth_0.3_res_maxedges100respara_90_partgraph_ratio_80.labels.npy",
+      "bytes": 90504,
+      "sha256": "d6e71beb68c44293850666a15561078f3face8b63a0a1e70dead8568c37613a6"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/estimate_res.txt",
+      "member": "comebin/comebin/CT/native/cluster_res/estimate_res.txt",
+      "bytes": 13260,
+      "sha256": "dec4f7354a877d0dc314c6b45483090fa75fd1f0bebc9cecdf4d1cd0d0d56270"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/unitem_profile/binning_methods/weight_seed_kmeans_k_209_result.labels.npy/checkm_ar/marker_gene_table.tsv",
+      "member": "comebin/comebin/CT/native/cluster_res/unitem_profile/binning_methods/weight_seed_kmeans_k_209_result.labels.npy/checkm_ar/marker_gene_table.tsv",
+      "bytes": 432544,
+      "sha256": "5f6cc5552d5516729e1cad896eeef690d5bf4e27c96dd5312ca97a6a7b574dcf"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/cluster_res/unitem_profile/binning_methods/weight_seed_kmeans_k_209_result.labels.npy/checkm_bac/marker_gene_table.tsv",
+      "member": "comebin/comebin/CT/native/cluster_res/unitem_profile/binning_methods/weight_seed_kmeans_k_209_result.labels.npy/checkm_bac/marker_gene_table.tsv",
+      "bytes": 571086,
+      "sha256": "2f984bf434216e4596256348f8d199e958ddc0b0f88e39e4964eebe1c9a09827"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/covembeddings.npy",
+      "member": "comebin/comebin/CT/native/covembeddings.npy",
+      "bytes": 11568256,
+      "sha256": "bcbc0dbe6c08f985c638d7d04e477e6d7730fc54ddd82f382d9ce99e01cfe7be"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/embedding_ids.txt",
+      "member": "comebin/comebin/CT/native/embedding_ids.txt",
+      "bytes": 185781,
+      "sha256": "8144665f33228e598665230289fb54155a111ae701fbaa88b9c829012fc44241"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/embedding_lengths.npy",
+      "member": "comebin/comebin/CT/native/embedding_lengths.npy",
+      "bytes": 180880,
+      "sha256": "ec334a7d2be33acd468abdeeaefa5e9d2946fa4014eb355ffba7a8a341eaa34a"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/embedding_manifest.json",
+      "member": "comebin/comebin/CT/native/embedding_manifest.json",
+      "bytes": 512,
+      "sha256": "4cacb0356799a121c63369d96f3f24c029e3e3161f67072bdecec19a34f52395"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/native/embeddings.npy",
+      "member": "comebin/comebin/CT/native/embeddings.npy",
+      "bytes": 11568256,
+      "sha256": "83d47b6b6f09b9404a9bc703e07a73eb26da44b8b7a5d40b43e3320e929dc756"
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/retained.json",
+      "member": "comebin/comebin/CT/retained.json",
+      "sha256": "07e538ee1dd21917ca97a7c7c4ba3c8d204dc3a5a84d703785185bf547672bba",
+      "bytes": 1418226
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/fit.json",
+      "member": "comebin/comebin/CT/fit.json",
+      "sha256": "b5a07d43faf27b4a368d86ab87125b864a2ca93db33b5a186bfee6df8a845154",
+      "bytes": 18989
+    },
+    {
+      "root": "comebin",
+      "path": "comebin/CT/predictions.tsv",
+      "member": "comebin/comebin/CT/predictions.tsv",
+      "sha256": "c1e9158f05f261e92e01972bdad5b4a5146885168b6ebb6c9408ca9d69c51963",
+      "bytes": 294291
+    },
+    {
+      "root": "vamb",
+      "path": "vamb/CT/native/latent.npz",
+      "member": "vamb/vamb/CT/native/latent.npz",
+      "bytes": 1826958,
+      "sha256": "a2eba70fc2a432ea72713ea7265f22b247e77921451290dd687dc80546cb1140"
+    },
+    {
+      "root": "vamb",
+      "path": "vamb/CT/native/embedding-ids.json",
+      "member": "vamb/vamb/CT/native/embedding-ids.json",
+      "bytes": 298754,
+      "sha256": "17201a932b8ac515583de256cfb1da7b6b3d8161634a350f0eb99055670f077a"
+    },
+    {
+      "root": "features",
+      "path": "vamb/C0/normalized-C0.npz",
+      "member": "features/vamb/C0/normalized-C0.npz",
+      "sha256": "b055fed3d8b4c05bd1df2a10d0c5a1de29342defe63cc1cdd17a22d0abaf49ff",
+      "bytes": 8951439
+    },
+    {
+      "root": "features",
+      "path": "vamb/C0/input-mask.npy",
+      "member": "features/vamb/C0/input-mask.npy",
+      "sha256": "e4918572dbc8084a554ab39b0e466337fac45210a86dad0ec0caa558961b3d96",
+      "bytes": 22722
+    },
+    {
+      "root": "features",
+      "path": "vamb/C0/native-features.json",
+      "member": "features/vamb/C0/native-features.json",
+      "sha256": "d8a4633700d1890f0c06bf5bbdd7b8fb59ba72ac45d4b7f44780d6695e4297f3",
+      "bytes": 2226
+    },
+    {
+      "root": "features",
+      "path": "vamb/C0/ids.txt",
+      "member": "features/vamb/C0/ids.txt",
+      "sha256": "8144665f33228e598665230289fb54155a111ae701fbaa88b9c829012fc44241",
+      "bytes": 185781
+    },
+    {
+      "root": "features",
+      "path": "vamb/CT/ids.txt",
+      "member": "features/vamb/CT/ids.txt",
+      "sha256": "8144665f33228e598665230289fb54155a111ae701fbaa88b9c829012fc44241",
+      "bytes": 185781
+    },
+    {
+      "root": "features",
+      "path": "vamb/CT/normalized-C0.npz",
+      "member": "features/vamb/CT/normalized-C0.npz",
+      "sha256": "56ced47d31b5f439e9909e3e05ba59fb22dfe464ab28ffaa197ddf442e8c1de5",
+      "bytes": 8898601
+    },
+    {
+      "root": "features",
+      "path": "vamb/CT/input-mask.npy",
+      "member": "features/vamb/CT/input-mask.npy",
+      "sha256": "e4918572dbc8084a554ab39b0e466337fac45210a86dad0ec0caa558961b3d96",
+      "bytes": 22722
+    },
+    {
+      "root": "features",
+      "path": "vamb/CT/native-features.json",
+      "member": "features/vamb/CT/native-features.json",
+      "sha256": "8433d1993997a55d5b055864ac480a83d1e2a194210a1c57897a499facbc5872",
+      "bytes": 2229
+    },
+    {
+      "root": "features",
+      "path": "comebin/C0/normalized-views.npy",
+      "member": "features/comebin/C0/normalized-views.npy",
+      "sha256": "75f30684e3b5d4d3a8c24594837cbc199123fdcd3dde87e6b27db7a0163782ea",
+      "bytes": 84592064
+    },
+    {
+      "root": "features",
+      "path": "comebin/C0/contig_lengths.npy",
+      "member": "features/comebin/C0/contig_lengths.npy",
+      "sha256": "ec334a7d2be33acd468abdeeaefa5e9d2946fa4014eb355ffba7a8a341eaa34a",
+      "bytes": 180880
+    },
+    {
+      "root": "features",
+      "path": "comebin/C0/native-features.json",
+      "member": "features/comebin/C0/native-features.json",
+      "sha256": "3e054a8a2b853056bb3767e65ab283b939403b2d1a5310a30aaf41afb63fb4d1",
+      "bytes": 1470
+    },
+    {
+      "root": "features",
+      "path": "comebin/C0/contig_ids.txt",
+      "member": "features/comebin/C0/contig_ids.txt",
+      "sha256": "8144665f33228e598665230289fb54155a111ae701fbaa88b9c829012fc44241",
+      "bytes": 185781
+    },
+    {
+      "root": "features",
+      "path": "comebin/C0/coverage_mean.npy",
+      "member": "features/comebin/C0/coverage_mean.npy",
+      "sha256": "19dc1a772af87ec18720f1462eae8c347f38e0e487d92f63595bbdda0dbea923",
+      "bytes": 10845248
+    },
+    {
+      "root": "features",
+      "path": "comebin/C0/augmentation_intervals.npy",
+      "member": "features/comebin/C0/augmentation_intervals.npy",
+      "sha256": "8dd26d50a24f9a5e0ecfa3c8febea4dda112a3ae2ecef099f6bcb2e3647c9922",
+      "bytes": 2169152
+    },
+    {
+      "root": "features",
+      "path": "comebin/C0/coverage_var.npy",
+      "member": "features/comebin/C0/coverage_var.npy",
+      "sha256": "6ba4fc30c37744662ad9a4b4118a5f2a4b6e6896962095eadf21ab8459645454",
+      "bytes": 10845248
+    },
+    {
+      "root": "features",
+      "path": "comebin/CS/augmentation_intervals.npy",
+      "member": "features/comebin/CS/augmentation_intervals.npy",
+      "sha256": "8dd26d50a24f9a5e0ecfa3c8febea4dda112a3ae2ecef099f6bcb2e3647c9922",
+      "bytes": 2169152
+    },
+    {
+      "root": "features",
+      "path": "comebin/CS/contig_lengths.npy",
+      "member": "features/comebin/CS/contig_lengths.npy",
+      "sha256": "ec334a7d2be33acd468abdeeaefa5e9d2946fa4014eb355ffba7a8a341eaa34a",
+      "bytes": 180880
+    },
+    {
+      "root": "features",
+      "path": "comebin/CS/normalized-views.npy",
+      "member": "features/comebin/CS/normalized-views.npy",
+      "sha256": "6c6baac1f54f6cca3d8aee0a1f801a4d989c918c27a005786e1f3dbea4318527",
+      "bytes": 84592064
+    },
+    {
+      "root": "features",
+      "path": "comebin/CS/contig_ids.txt",
+      "member": "features/comebin/CS/contig_ids.txt",
+      "sha256": "8144665f33228e598665230289fb54155a111ae701fbaa88b9c829012fc44241",
+      "bytes": 185781
+    },
+    {
+      "root": "features",
+      "path": "comebin/CS/coverage_mean.npy",
+      "member": "features/comebin/CS/coverage_mean.npy",
+      "sha256": "ac9036ff96136432cf1bdc8a12219cc21ebbd209e3f259fe7f5b15f0813658d5",
+      "bytes": 10845248
+    },
+    {
+      "root": "features",
+      "path": "comebin/CS/coverage_var.npy",
+      "member": "features/comebin/CS/coverage_var.npy",
+      "sha256": "88eb348bdfc5db870655c95f09512494709ab781b375ba9a9f2c0d1fc784bcda",
+      "bytes": 10845248
+    },
+    {
+      "root": "features",
+      "path": "comebin/CT/contig_lengths.npy",
+      "member": "features/comebin/CT/contig_lengths.npy",
+      "sha256": "ec334a7d2be33acd468abdeeaefa5e9d2946fa4014eb355ffba7a8a341eaa34a",
+      "bytes": 180880
+    },
+    {
+      "root": "features",
+      "path": "comebin/CT/contig_ids.txt",
+      "member": "features/comebin/CT/contig_ids.txt",
+      "sha256": "8144665f33228e598665230289fb54155a111ae701fbaa88b9c829012fc44241",
+      "bytes": 185781
+    },
+    {
+      "root": "features",
+      "path": "comebin/CT/native-features.json",
+      "member": "features/comebin/CT/native-features.json",
+      "sha256": "80af833e2d1177d49a6bd2d7e0e80fbdaffebed1b10ec8bc914bac5913e9cecc",
+      "bytes": 1470
+    },
+    {
+      "root": "features",
+      "path": "comebin/CT/normalized-views.npy",
+      "member": "features/comebin/CT/normalized-views.npy",
+      "sha256": "a222771e4ddf66ae6a7db1f75e7990d47907e337a4e5a7a50962fc64fa4df740",
+      "bytes": 84592064
+    },
+    {
+      "root": "features",
+      "path": "comebin/CT/coverage_var.npy",
+      "member": "features/comebin/CT/coverage_var.npy",
+      "sha256": "8945b0fc5c4d8310cd49fe22edb4fc6d834fdb4689277e005ee2f823f463ab29",
+      "bytes": 10845248
+    },
+    {
+      "root": "features",
+      "path": "comebin/CT/augmentation_intervals.npy",
+      "member": "features/comebin/CT/augmentation_intervals.npy",
+      "sha256": "8dd26d50a24f9a5e0ecfa3c8febea4dda112a3ae2ecef099f6bcb2e3647c9922",
+      "bytes": 2169152
+    },
+    {
+      "root": "features",
+      "path": "comebin/CT/coverage_mean.npy",
+      "member": "features/comebin/CT/coverage_mean.npy",
+      "sha256": "c8c10153955b6cd1361dabe12f353830b6abf4afee2f55736ead54b2ca47a692",
+      "bytes": 10845248
+    },
+    {
+      "root": "features",
+      "path": "metabat/CS/depth.tsv",
+      "member": "features/metabat/CS/depth.tsv",
+      "sha256": "ec2ee6fa8ab7aebce07c183dd21dfc937384c0a3fa167d9fb9019ccb627869e8",
+      "bytes": 5897724
+    },
+    {
+      "root": "features",
+      "path": "metabat/C0/depth.tsv",
+      "member": "features/metabat/C0/depth.tsv",
+      "sha256": "32604838a177d5fd56d60ce8de7b16ec47161e89d5fce7b816ceb1dafbd61c06",
+      "bytes": 2980832
+    },
+    {
+      "root": "features",
+      "path": "metabat/CT/depth.tsv",
+      "member": "features/metabat/CT/depth.tsv",
+      "sha256": "aebaee4fc6067b850f74483edd7d58982025710debe96008d70f464287ca80ac",
+      "bytes": 2651222
+    }
+  ],
+  "source_records": {
+    "features-observed.json": "0d22e1ccaf75e50b8598bf3f026ba12cbff372c995a1da71dc61507649355d7e",
+    "paired-pilot-observed.json": "6bc4ea9851ad3218c76807be915e64c1121ace3f2cf924307d2c25a070af4bcf",
+    "comebin-paired-observed.json": "b6e532f3dfa448cf7de2208bba07153b3580595940042b0c25644a912c71449e"
+  },
+  "total_bytes": 434557937
+}

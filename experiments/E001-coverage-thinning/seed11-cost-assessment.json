@@ -1,0 +1,14 @@
+{
+  "reviewed": "2026-09-29",
+  "comebin_successful_condition_core_hours": 39.6462,
+  "comebin_resume_driver_core_hours": 16.15183423306172,
+  "comebin_known_recovery_sequence_core_hour_lower_bound": 58.10751782518391,
+  "interrupted_CT_completed_epochs": 100,
+  "interrupted_CT_epoch_only_core_hour_lower_bound": 16.91403777777778,
+  "accounting_scope": "C0 rule + successful CT resume driver + interrupted CT epoch times + first projection failure driver + stale-lock resume driver; no overlapping duplicate recovery copies. Missing initial-driver startup/idle, package-only recovery, packaging and outside-driver rented time prevent an exact billed total. Not total E001 spend.",
+  "retained_successful_condition_bytes": 11312653376,
+  "storage_scope": "Sum of condition retained receipts; excludes old recovery copies, BAMs, features, environments, return packages and quota/allocation effects.",
+  "additional_two_comebin_pairs_at_observed_stopping_core_hours": 79.2924,
+  "projection_scope": "Planning extrapolation at measured eight-vCPU allocation, not guaranteed runtime or authorization; new seeds can run all 200 epochs. Full-schedule planning about 167 core-hours for four fits plus clustering at slower C0 rate with retained 25% margin; new thinning/features and other tools additional.",
+  "decision": "Defer seeds 23/47. Complete retained seed-11 diagnostics once, then close E001 at amended pilot scope and choose the first usable prototype. No three-seed conclusion or H001 rejection."
+}

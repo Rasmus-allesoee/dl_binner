@@ -163,6 +163,13 @@ Use public community benchmarks alongside question-specific simulations. Keep un
 
 ## Planning philosophy
 
+Owner direction, 2026-09-29: prioritize a usable first deep-learning binner and
+learning through implementation. Publication of a paper, novelty and SOTA are
+optional outcomes, not implementation gates. Bound investigations by the concrete
+product/design decision they inform; reuse accepted evidence and avoid expanding
+experiments by default. Keep correctness, provenance and honest claim limits.
+See PROJECT_INTENT.md and D010 for the current direction.
+
 Do not attempt to plan the entire project in rigid detail from start to finish.
 
 Research is dynamic.

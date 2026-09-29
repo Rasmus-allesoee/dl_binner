@@ -1,9 +1,17 @@
 # E001: Where Does Reduced Coverage Evidence Lose Recoverable Sequence?
 
-Date: 2026-09-17. Updated: 2026-09-27
-Execution status: seed-11 MetaBAT2/VAMB pair accepted; COMEBin paired pilot prepared at 8 vCPU / 24 GB
-Scientific outcome: preliminary paired effects differ by tool; no conclusion on H001 or COMEBin-specific criteria
-Protocol: prospective v2; [config.json](config.json) owns numerical settings; only the next seed-11 COMEBin pair is prepared, not the remaining seeds
+Date: 2026-09-17. Updated: 2026-09-29
+Execution status: all seed-11 native pairs accepted; retained binary diagnostic collection prepared
+Scientific outcome: tool-specific preliminary effects; H001 remains inconclusive at single-seed scope
+Protocol: v2 frozen numerical configuration with explicit 2026-09-29 scope amendment below; seeds 23/47 deferred
+
+**Scope amendment, 2026-09-29 (outcomes already visible):** [D010](../../docs/decisions/D010-bounded-e001-and-prototype.md)
+bounds E001 to seed-11 retained-output diagnostics before prototype design.
+The original three-seed design and criteria below are preserved as the prospective
+protocol, not claimed completed. Keep `config.json` unchanged because it is bound
+to accepted input/run provenance. No more native fits are currently prepared or
+authorized. See [combined assessment](seed11-assessment.md) and [cost assessment](seed11-cost-assessment.json).
+
 Questions: [Q001](../../docs/research/questions.md#q001), [Q003](../../docs/research/questions.md#q003), [Q004](../../docs/research/questions.md#q004); hypothesis [H001](../../docs/research/questions.md#h001)
 Decision: [D004](../../docs/decisions/D004-human-cpu-preflight.md), superseding D003's execution choices; evidence: [method audit](../../docs/evidence/2026-09-17-targeted-audit.md), [human/CPU audit](../../docs/evidence/2026-09-18-human-cpu-audit.md). Execution: [operations guide](OPERATIONS.md); checks: [validation record](validation.md).
 
@@ -124,19 +132,25 @@ Prior art comparisons with QuickBin's appropriate published/development mode, Mc
 
 Each predicted partition must assign a contig to at most one bin; unknown IDs, duplicate rows and cross-bin duplicate assignments fail preflight. Multiple possible origins in the **truth** are different and must be retained explicitly. Export feature/embedding masks and IDs, verify every join, and account for dropped input rows as unassigned rather than removing them from evaluation. Never repair overlapping predictions by silently assigning a contig to the largest bin.
 
-The [operations guide](OPERATIONS.md) owns commands and runtime status. Core tool installations and the Snakemake 9.13.7 workflow environment have accepted native execution and returned dependency records. Preserve resolved identities and inspect returned outputs before scientific fits. Do not substitute tool/PyTorch versions and call it native parity. Scientific fitting/clustering orchestration completed for MetaBAT2/VAMB; COMEBin full training and selection remain owner-run validation.
+The [operations guide](OPERATIONS.md) owns commands and runtime status. Core tool installations and the Snakemake 9.13.7 workflow environment have accepted native execution and returned dependency records. Preserve resolved identities and inspect returned outputs before scientific fits. Do not substitute tool/PyTorch versions and call it native parity. Scientific fitting/clustering orchestration completed for all three tools. COMEBin binary candidate/embedding content still needs direct local inspection; compact native validation receipts are accepted.
 
 **Gate 1: acquire and inventory the public data.** The prepared acquisition command downloads only GI GSA, corrected/original truth, setup and small metadata, verifies publisher checksums, and safely inventories archives without extracting them. It cannot download read archives. Resolve historical taxonomy and full coordinate joins before freezing the population. An initial taxonomy-free inventory is explicitly blocked, not approved for science. The [operations guide](OPERATIONS.md) owns commands, storage estimates and return-artifact instructions. If data access or an input contract fails, amend rather than fabricate a path/checksum.
 
-**Gate 2: CPU feasibility, then owner-run pilot and paired runs.** Return-artifact inspection, native parity, full-batch CPU throughput, read-prefix mapping/storage checks and owner confirmation are prerequisites. The [configuration](config.json) replaces every old GPU/resource allowance: CPU only, a bounded fraction of the owner's allocation, nested preflight/preprocessing/per-fit ceilings, and storage headroom. These are stop/review limits, not measured requirements. If the full schedule or retained population exceeds a ceiling, stop and amend before scientific results. Storage exceeding the planning threshold instead triggers provisioning review: the owner can expand storage, so do not shrink the scientific design to fit the initial quota. Do not take a score-dependent subset, shorten native training or silently remove COMEBin. A COMEBin-free diagnostic cannot satisfy the current COMEBin-specific triage rule. The complete three-seed design remains intended, not promised affordable.
+**Gate 2: CPU feasibility, then owner-run pilot and paired runs.** Return-artifact inspection, native parity, full-batch CPU throughput, read-prefix mapping/storage checks and owner confirmation are prerequisites. The [configuration](config.json) replaces every old GPU/resource allowance: CPU only, a bounded fraction of the owner's allocation, nested preflight/preprocessing/per-fit ceilings, and storage headroom. These are stop/review limits, not measured requirements. If the full schedule or retained population exceeds a ceiling, stop and amend before scientific results. Storage exceeding the planning threshold instead triggers provisioning review: the owner can expand storage, so do not shrink the scientific design to fit the initial quota. Do not take a score-dependent subset, shorten native training or silently remove COMEBin. A COMEBin-free diagnostic cannot satisfy the current COMEBin-specific triage rule. The original three-seed design is deferred by D010; the original resource ceiling alone does not justify running it.
 
-Before Gate 2, commit executable code/configuration and record that pre-existing Git commit, resolved tool/dependency versions, database/model hashes, commands, inputs, seeds, hardware and environment. Numerical settings are owned by `config.json`; this document explains their scientific meaning. Runtime locks and scientific launch validation remain outstanding, not silently implied by the source pins.
+Before Gate 2, commit executable code/configuration and record that pre-existing Git commit, resolved tool/dependency versions, database/model hashes, commands, inputs, seeds, hardware and environment. Numerical settings are owned by `config.json`; this document explains their scientific meaning. Accepted runtime inventories and scientific results are linked below; future runs still require their own provenance.
 
 ## Attempts and results
 
-The seed-11 MetaBAT2/VAMB pair is accepted in [paired-pilot-observed.json](paired-pilot-observed.json). Both 300-epoch VAMB fits completed; native partitions, frozen denominators, paired embedding axes and AMBER/R95 results pass independent checks. R95 is 0.44294→0.19502 for MetaBAT2 and 0.46177→0.48764 for VAMB (C0→CT). These are single-seed development observations, not evidence that coverage thinning consistently hurts learned representation. MetaBAT2's native emitted support falls from 22,432 to 1,949 contigs; missing/zero-cluster contigs remain unassigned in the fixed evaluation population. VAMB assigns all 22,594 in both conditions. Stage diagnostics and COMEBin remain necessary.
+The seed-11 MetaBAT2/VAMB pair is accepted in [paired-pilot-observed.json](paired-pilot-observed.json). Both 300-epoch VAMB fits completed; native partitions, frozen denominators, paired embedding axes and AMBER/R95 results pass independent checks. R95 is 0.44294→0.19502 for MetaBAT2 and 0.46177→0.48764 for VAMB (C0→CT). These are single-seed development observations, not evidence that coverage thinning consistently hurts learned representation. MetaBAT2's native emitted support falls from 22,432 to 1,949 contigs; missing/zero-cluster contigs remain unassigned in the fixed evaluation population. VAMB assigns all 22,594 in both conditions. COMEBin is now accepted below; retained stage diagnostics remain.
 
-Preprocessing, [features](features-observed.json), and the seed-11 MetaBAT2/VAMB pair remain accepted; do not repeat them. COMEBin C0 completed, while CT reached epoch 100/200 before the driver hit a missing attempt-path error during log monitoring. The returned evidence shows normal native progress, not a COMEBin training/OOM exception. The prepared [resume](OPERATIONS.md#current-action-2026-09-28-resume-the-unfinished-comebin-condition) verifies and reuses C0, preserves CT's partial files, and restarts CT from epoch 1 because COMEBin did not save a mid-fit checkpoint. Snakemake dry-run must exclude C0 before execution. Environment ownership follows [D006](../../docs/decisions/D006-environment-ownership.md).
+Preprocessing, [features](features-observed.json), and all seed-11 native pairs remain
+accepted; do not repeat them. The [COMEBin review](comebin-paired-observed.json)
+confirms the CT-only guarded resume completed, preserving C0. See the
+[combined assessment](seed11-assessment.md) for the full correction sequence,
+measured resources and binary-evidence limitations. The next action is the
+[read-only collection](OPERATIONS.md#current-action-2026-09-29-collect-retained-diagnostics),
+then local diagnostic closure. Environment ownership follows [D006](../../docs/decisions/D006-environment-ownership.md).
 
 Resource correction, 2026-09-21: [D007](../../docs/decisions/D007-comebin-resource-envelope.md) and [compute-policy.json](compute-policy.json) restore COMEBin's 80-core-hour limit after the owner clarified actual 2-vCPU allocation. Six fits project 287.3 core-hours with margin, no longer exceeding the 800 total before overhead. Frozen configuration and raw observed records remain unchanged. Remaining replicates still require measured pilot cost before authorization, independent of biological scores.
 

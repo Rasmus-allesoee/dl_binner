@@ -261,6 +261,9 @@ else:
         exp=self.root/'exp';exp.mkdir()
         for name in ('feature-plan.json','config.json','frozen-inputs.json'):
             (exp/name).write_bytes((f.EXP/name).read_bytes())
+        # This driver fixture writes tiny synthetic files, not 15 GB of BAM/features.
+        plan=f.read(exp/'feature-plan.json');plan['minimum_free_bytes']=1024
+        f.write(exp/'feature-plan.json',plan)
         m=self.manifest();m['reference']=str(self.root/'ref')
         manifest=self.root/'accepted.json';f.write(manifest,m)
         f.write(exp/'multisample-preprocess-observed.json',{'manifest_sha256':f.sha(manifest)})

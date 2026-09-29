@@ -1,5 +1,5 @@
 {
-  "status": "Seed-11 MetaBAT2/VAMB pair accepted; first COMEBin attempt stopped at an over-conservative driver cost guard and is preserved; corrected unique retry prepared at 8 vCPU / 24 GB",
+  "status": "All seed-11 native pairs accepted; binary diagnostic collection prepared; seeds 23/47 deferred under D010",
   "conditions": [
     "C0",
     "CT"
@@ -57,12 +57,9 @@
     "experiment_core_hours": 800
   },
   "review_before_launch": [
-    "Accepted preprocessing, features and MetaBAT2/VAMB results are reused without rerunning.",
-    "Preserve paired-pilot-comebin-p3983hy8; it stopped at a false startup-multiplied schedule guard before completing a condition.",
-    "The unique retry first runs the pinned one-worker COMEBin TensorDataset CPU IPC smoke in short /tmp.",
-    "Budget seven PyTorch threads plus one loader worker on eight vCPU; native training schedule and all 120 selection candidates stay fixed.",
-    "Estimate cost from native epoch durations with process startup counted once and a 25% margin; stop only if this exceeds 80 allocated core-hours.",
-    "Review training, clustering, selection, evaluation and measured cost before seeds 23/47."
+    "No native launch is currently prepared: accepted work is reused.",
+    "Collect checksum-bound retained arrays for local selection/representation diagnostics.",
+    "See D010 and seed11-assessment.md before considering any further seeds."
   ],
   "alternative_not_selected": "The previous four-thread/four-loader setting showed about 350% peak CPU. Eight PyTorch threads plus four fixed loaders could overcommit. Use seven PyTorch threads plus a verified runtime override to one loader worker; sixteen vCPU scaling remains unknown.",
   "accepted_features": "features-observed.json",
@@ -156,5 +153,7 @@
     "native_torch_threads": 4,
     "native_dataloader_workers": 4,
     "persisted_epochs": 2
-  }
+  },
+  "accepted_comebin": "comebin-paired-observed.json",
+  "current_next_step": "diagnostic-collection.json"
 }
