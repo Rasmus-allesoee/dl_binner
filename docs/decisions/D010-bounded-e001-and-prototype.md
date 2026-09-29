@@ -1,6 +1,6 @@
 # D010: Finish E001 at a bounded pilot scope, then build a usable prototype
 
-Date: 2026-09-29. Status: accepted direction; diagnostic collection prepared,
+Date: 2026-09-29. Status: accepted owner direction; diagnostic collection prepared,
 owner execution pending. Supersedes D002's requirement to establish a novel,
 measurable residual failure before beginning our own implementation.
 
@@ -12,6 +12,13 @@ state-of-the-art performance are optional future outcomes. The ignored progress
 note expresses loss of momentum and burnout after repeated infrastructure repairs;
 it is not permission to abandon correctness or invent scientific claims.
 Source note SHA256: `7749aad9a1e1dcd174dc338526593c6a252154d6a0c771b9b4e24923d88798dc` (original stays in the ignored inbox).
+
+Owner confirmation, 2026-09-29: the outcome-informed amendment after seed 11 is
+accepted because the product goal takes priority over additional runs that are
+not currently expected to change the next prototype decision. Complete the
+retained-output diagnostics before closing E001. This is closure at the amended
+seed-11 pilot scope, not completion of the original three-seed protocol; H001
+remains inconclusive.
 
 ## Evidence and decision
 
@@ -29,9 +36,12 @@ cost. No new fits are necessary to finish the retained-output diagnostics.
    not completion of the original three-seed protocol. Keep the original frozen
    config and thresholds unchanged for provenance. We cannot apply its
    reproducibility criterion, establish an intervention, or reject H001 globally.
-3. Close E001 with the bounded seed-11 evidence and limitations, then conduct one
-   focused prototype design decision. Reuse the existing evidence audit and
-   evaluation infrastructure. No expanding benchmark campaign is a prerequisite.
+3. Close E001 with the bounded seed-11 evidence and limitations, then conduct a
+   comprehensive current literature/benchmark review and source-code audit of a
+   justified tool shortlist before choosing the first architecture. This is a
+   high-priority design input, not a novelty gate or a requirement for a new
+   benchmark campaign. Low-risk product scaffolding and learning can proceed
+   without locking in the model architecture.
 
 Remaining pairs appear computationally plausible within the original experiment
 ceiling, but exact billed headroom is unknown and feasibility alone is not value.
@@ -48,8 +58,12 @@ stage evidence from what already exists.
   but no guarantee it changes the first prototype; substantial owner/runtime cost.
 - Stop immediately: quickest, but would leave cheap retained selection evidence
   and already computed embeddings unexamined. One collection closes this gap.
-- Broaden the literature audit or combine several strong methods first: potentially
-  useful later, but encourages scope growth before a working implementation.
+- Conduct a comprehensive current literature and benchmark review, then inspect
+  source code for a justified shortlist: selected as high-priority input to the
+  first architecture decision, with scope and cutoff recorded.
+- Combine several strong methods immediately: not selected without evidence that
+  the combination solves a concrete problem; review components first and combine
+  only when there is a clear rationale.
 
 Reconsider additional seeds only if the retained diagnostics identify a concrete
 prototype decision that replication would change, with a bounded cost/value case.
@@ -58,9 +72,10 @@ support. If diagnostics remain inconclusive, say so and proceed to prototype des
 
 ## Prototype decision boundary
 
-The next design pass should compare a small sequence/coverage autoencoder or VAE
-with a small contrastive alternative using the already reviewed evidence. It must
-choose one end-to-end first version, explain the learning objective and input
+After the literature/code review, the design pass should compare a small
+sequence/coverage autoencoder or VAE and a small contrastive alternative as
+candidates, without assuming these are the only viable choices. It must choose one
+coherent end-to-end first version, explain the learning objective and input
 contract, and define a short implementation milestone with CLI input/output,
 training/inference, bins, a reproducible small evaluation and resource reporting.
 A documented wrapper around a baseline alone is not our own learned implementation;

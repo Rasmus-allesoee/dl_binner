@@ -9,7 +9,10 @@ its development. A paper, novelty and SOTA performance are optional future bonus
 not prerequisites for the first implementation. [PROJECT_INTENT](../PROJECT_INTENT.md)
 and [D010](decisions/D010-bounded-e001-and-prototype.md) record the owner's clarification.
 Finish E001's bounded retained-output analysis, then rethink the first prototype;
-do not expand the experiment campaign automatically.
+E001 closes at the explicitly amended seed-11 pilot scope. After closure, conduct
+the comprehensive literature/code review described in [PROJECT_INTENT](../PROJECT_INTENT.md)
+before fixing the first model architecture. Do not expand the experiment campaign
+automatically.
 
 ## Accepted evidence
 
@@ -46,8 +49,10 @@ selection/neighborhood/length diagnostics, and close E001 at amended seed-11 sco
 **Seeds 23/47 are deferred**, not silently completed. No three-seed reproducibility
 claim or rejection of H001 is permitted. [Combined assessment](../experiments/E001-coverage-thinning/seed11-assessment.md)
 and [costs](../experiments/E001-coverage-thinning/seed11-cost-assessment.json) explain
-why further replication is not the next useful expense. A focused prototype design
-and implementation milestone follows; it does not require establishing a novel mechanism.
+why further replication is not the next useful expense. Then complete the
+comprehensive current literature/benchmark review and targeted source-code review
+of leading candidates before choosing the first architecture. This is not a novelty
+gate; low-risk scaffolding may proceed alongside it.
 
 ## Resources and continuity
 
@@ -66,3 +71,6 @@ Scientific source/config hashes stay frozen; D010 changes prospective scope only
 Local branch: `e001-gate0`. No remote is configured and nothing has been pushed or
 published. `agent_context/` remains an ignored inbox. Before publication, review
 licensing and historical source packaging per [D001](decisions/D001-research-record.md).
+
+Update this handoff when immediate direction, significant evidence, or execution
+dependencies change; keep it concise and put session chronology in the owning records.

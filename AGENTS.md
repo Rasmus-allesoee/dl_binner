@@ -170,6 +170,12 @@ product/design decision they inform; reuse accepted evidence and avoid expanding
 experiments by default. Keep correctness, provenance and honest claim limits.
 See PROJECT_INTENT.md and D010 for the current direction.
 
+Before settling the first model architecture, conduct a comprehensive, current
+review of relevant metagenomic-binning papers, recent benchmark studies, and the
+source code of a justified shortlist of leading tools. This is a high-priority
+design input, not optional scope growth or a novelty gate; define and record its
+scope/cutoff, and do not combine methods without a concrete rationale.
+
 Do not attempt to plan the entire project in rigid detail from start to finish.
 
 Research is dynamic.

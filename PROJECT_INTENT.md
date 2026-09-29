@@ -191,7 +191,14 @@ The following are deliberately **not fixed in advance**:
 - the exact benchmark design;
 - the intermediate research questions.
 
-Use the existing field audit and targeted current sources to guide design. Resolve questions that affect the next implementation choice; do not require exhaustive literature coverage or an established novel failure mechanism before building the first version.
+Before settling the first model architecture, conduct a comprehensive and current
+review—exhaustive within a defined relevant scope—of leading metagenomic-binning
+methods and recent benchmark studies. Review the papers and inspect source-code
+paths for a justified shortlist; refresh rather than assume the earlier targeted
+audit is exhaustive or current. This is a high-priority design input and should
+not be skipped merely to move faster. Record the search scope/cutoff, coverage,
+findings and remaining gaps. The review informs implementation but is not a
+novelty gate or a reason to delay low-risk product scaffolding and learning.
 
 Do not create a Frankenstein model by combining techniques simply because strong existing tools use them.
 

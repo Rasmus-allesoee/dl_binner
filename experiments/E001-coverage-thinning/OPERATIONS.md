@@ -65,8 +65,11 @@ actual UCloud paths remains the owner-run validation boundary.
 
 After return: independently read all arrays and labels, compare the native marker
 choice with the truth-scored existing candidate maximum, complete the fixed-query
-neighborhood/length diagnostics, close E001 at its amended pilot scope, and select
-the first usable prototype. Do not introduce further experimental runs by default.
+neighborhood/length diagnostics, and close E001 at its amended pilot scope. Then
+complete the comprehensive current literature/benchmark review and targeted
+source-code audit described in [PROJECT_INTENT](../../PROJECT_INTENT.md) before
+choosing the first prototype architecture. Do not introduce further experimental
+runs by default or combine methods without a concrete rationale.
 
 ## Completed feature extraction and recovery instructions (historical)
 
