@@ -20,3 +20,5 @@ The fingerprints are an inventory, not a claim that every file has been read. Pa
 Add a focused note when an investigation produces useful reasoning. Give it a date, scope, source/version locators, findings, limitations, and the questions or experiments it informs. If a later investigation changes the interpretation, link the new note from the earlier one and update the affected current question. Keep full papers separate from our notes.
 
 - [2026-09-30: current binner design review and source audit](2026-09-30-binner-design-review.md)
+
+- [2026-09-30: D011 architecture reassessment, thesis and GLM tradeoffs](2026-09-30-architecture-reassessment.md)

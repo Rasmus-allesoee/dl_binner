@@ -148,3 +148,11 @@ relevant families, recent benchmarks and a justified source shortlist through
 development data. Q004's first-product acceptance is operationally bounded in
 [D011](../decisions/D011-first-binner-prototype.md), distinct from research superiority.
 The next task is implementation, not another exploratory benchmark campaign.
+
+2026-09-30 architecture reconsideration: the owner requested greater weight on
+thesis recovery and a serious GLM comparison before implementation.
+[Reassessment](../evidence/2026-09-30-architecture-reassessment.md) replaces the
+VAE-first recommendation with D011's provisional contrastive direction and one
+bounded frozen-GLM feasibility check. This answers a product-planning priority,
+not Q001/H001 or a claim of architecture superiority. Short-contig-capable methods
+remain in scope; new short-inclusive evaluation can be planned independently of E001.

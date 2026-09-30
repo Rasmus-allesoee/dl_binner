@@ -155,6 +155,11 @@ Be particularly careful about:
 
 Claims should follow evidence.
 
+An experiment's contig-length cutoff or available feature set is not a product
+constraint. Keep relevant short-contig methods in design comparisons; use separate
+prospectively defined data/evaluation for unsupported ranges without automatically
+reopening an accepted experiment.
+
 When uncertainty remains, state it.
 
 Use public community benchmarks alongside question-specific simulations. Keep unmodified benchmark results distinct from controlled derivatives, and treat data used for mechanism selection as development data. Reuse established evaluators where their contracts fit; add tested diagnostic summaries before considering a replacement framework. Audit the actual input and execution paths rather than inferring them from a paper title or README. For multi-sample features, check native emitted sample and contig axes against the frozen manifest; do not assume filesystem ordering or alias names survive native path resolution.

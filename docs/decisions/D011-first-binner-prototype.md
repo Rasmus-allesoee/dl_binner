@@ -1,130 +1,129 @@
-# D011: A compact, independently implemented first binner
+# D011: Contrastive-first prototype direction; sequence encoder provisional
 
-Date: 2026-09-30. Status: accepted provisional technical direction within the
-owner-authorized prototype planning scope; implementation is the next task.
-No UCloud execution or publication is authorized by this record.
+Date: 2026-09-30. Status: accepted revised planning direction; final encoder choice
+is provisional pending the bounded check below. This replaces the compact-VAE-first
+implementation recommendation in commit `e7d9636`. No binner has been implemented.
+The previous rationale is preserved in Git and the dated design review.
 
-## Evidence and choice
+## Why the decision changed
 
-The [current literature/benchmark/source review](../evidence/2026-09-30-binner-design-review.md)
-was completed with cutoff 2026-09-30 before this recommendation. It compares input
-modalities and learning families, including pretrained sequence, taxonomy and
-graph methods. [E001 closure](../../experiments/E001-coverage-thinning/closure.md)
-provides a measured cost/recovery tradeoff, not a universal architecture ranking.
+The owner requested an objective reconsideration before implementation, including
+thesis performance and short-contig utility. The
+[reassessment](../evidence/2026-09-30-architecture-reassessment.md) owns the comparison,
+source evidence, assumptions and limits; the
+[completed field review](../evidence/2026-09-30-binner-design-review.md) is reused.
+No review restart or additional E001 run is needed.
 
-Build one small **variational autoencoder (VAE)** binner of our own. It learns a
-compact representation by reconstructing composition and observed coverage while
-regularizing the latent distribution. Then use one fixed, conventional density
-clustering algorithm to form bins. Implement the feature contract, model, training,
-inference and exports ourselves; reuse established numerical/clustering libraries.
-Calling VAMB behind a new CLI would not satisfy this milestone. No novelty or
-baseline-parity claim is intended.
+The original recommendation over-weighted implementation simplicity and known VAMB
+cost. It did not establish likely utility for a tiny VAE with a different clusterer.
+Thesis and independent benchmark evidence make a lightweight contrastive binner a
+stronger default. E001 nevertheless shows similar VAMB/COMEBin local neighborhoods
+with very different final bins, so a VAE objective is not isolated as the cause of
+VAMB's recovery deficit. Marker/clustering, inputs and selection matter too.
 
-This is chosen for end-to-end learning value, CPU practicality and few external
-contracts. It avoids needing fragment-level coverage, artificial biological
-negative pairs, reference labels or pretrained assets for the first working path.
-It deliberately accepts a recovery risk: VAMB was much weaker than COMEBin in E001.
-A first functional release and a competitive research method are separate milestones.
+Prefer **a coherent small contrastive binner**, with the sequence representation
+still open between inexpensive composition/context features and a frozen
+species-aware genome-language-model encoder. A compact VAE is a useful low-cost
+control/fallback, not a required first model or learning curriculum. Transformer,
+contrastive objective and reference pretraining are distinct design choices; none
+wins merely through novelty or release date.
 
-## Serious alternatives
+A frozen GLM is a serious contender because it can import sequence information
+and biological priors beyond TNF without training a foundation model ourselves.
+Its CPU inference cost and short-contig benefit remain unmeasured here. Do not
+claim a highest ceiling, reject all Transformers on the cost of CompleteBin's
+whole workflow, or infer CPU inference cost from GPU pretraining cost.
 
-| Alternative | Why it is credible | Why not first; revisit condition |
-| --- | --- | --- |
-| Small SemiBin-style pair-contrastive model | Strong independent benchmarks; directly shapes neighbor geometry; few training epochs possible. | Split positives need consistent composition/coverage construction; random negatives can be same-genome. Prefer it if the first reconstruction embedding fails the modest development check despite sound inputs/training. |
-| COMEBin-style multiview encoder and selection | Best E001 recovery; complementary signals retained. | Native pair cost and 120-way candidate/marker machinery are substantial. Consider a bounded contrastive or clustering comparison after v0, without assuming every COMEBin component is required. |
-| Pretrained sequence / taxonomy / graph model | Extra biological or reference/connectivity signal; good published results in suitable regimes. | Model/database/graph contracts, overlap checks and CPU feasibility are additional dependencies. Add one only when target data and an observed failure justify it. |
-| QuickBin-style neural pair merging | CPU-oriented product design; indexed comparisons avoid dense all-pairs work. | Pair-training data, calibration and iterative merge behavior form a different sizeable implementation. Keep as a later efficiency comparator, not an ingredient to mix into v0. |
-| Non-neural or existing-tool wrapper | Fastest route to bins and useful baseline. | Does not meet the owner's goal of implementing a deep-learning binner. Use as a control, not the deliverable. |
+## Exact next milestone: one bounded GLM feasibility spike
 
-## Bounded v0 contract
+Implement and locally test **frozen DNABERT-S feature extraction**, using its
+public author checkpoint, before committing to the first sequence encoder:
 
-Target one prokaryotic assembly with measured coverage from one or more samples
-mapped to that same assembly. Human-associated microbiomes are the initial use case.
-This is transductive fitting per assembly, not a universal pretrained predictor.
-Support a FASTA plus an explicit contig-by-sample **mean-depth TSV**. Reuse E001
-features for development; an adapter reads existing mean channels and ignores
-variance explicitly. No remapping or BAM download is needed. Ordered sample IDs,
-reference/feature hashes and full contig IDs must be retained and validated.
-Missing/duplicate IDs or negative/nonfinite depths are errors, not silent joins.
+1. Resolve and pin checkpoint, tokenizer/custom-code revision, environment and
+   license. Retain hashes and import origins; keep downloaded assets ignored.
+   Use a separate local environment and preserve reference/executed caches.
+2. Test actual CPU model inference on deterministic real DNA windows spanning
+   500, 768, 1,000, 2,500 and 10,000 bp, with enough independent windows for timing
+   after warm-up. Existing canonical sequences may supply timing windows only;
+   no E001 biological result or eligibility rule changes. Synthetic fixtures are
+   contract checks, not biological or throughput evidence.
+3. Verify IDs, masking-aware pooling, batching, cache/reload equivalence, explicit
+   token limits, long-sequence chunking and strand treatment. No silent truncation,
+   padding contamination or accidental model training. Compare direct author-model
+   output where contracts are shared; modified paths must be named.
+4. Measure warm/cold time, tokenizer compression, process CPU and peak RAM. Run one
+   numerical stage at a time: at most four CPU threads, loader workers=0, effective
+   library limits reconciled. State the actual local hardware. Project cost for
+   explicitly stated assembly size and length distributions at that same allocation;
+   no assumed proportional speedup or automatic extrapolation to millions of contigs.
+5. Stop at one checkpoint/environment attempt, 8 GB working RAM or one hour of timed
+   inference after setup. Limits are prospective ceilings, not measured costs.
+   Preserve startup/dependency failures and diagnose them; do not open an indefinite
+   compatibility-fork or timeout-increase campaign. No quantization/distillation or
+   additional model search in this milestone.
 
-Initial implementation choices (defaults to freeze before measured evaluation):
+This is the next local task, with no prepared UCloud command today. Owner operates
+any later UCloud test. A checkpoint merely loading is insufficient acceptance.
+Record a concrete feasibility decision; no genome-recovery claim follows.
 
-- Canonical reverse-complement tetranucleotide frequencies; clearly handle ambiguous
-  bases, short/zero-valid-k-mer sequences and a documented minimum length. Use a
-  2,500-bp default initially to align with available E001 development evidence.
-- Relative sample-depth profile plus log total normalized depth; retain an explicit
-  zero-depth indicator/mask. Fit and save transformations on the current assembly;
-  never silently refit during saved-model inference. Empty sample columns fail.
-  Single-sample mode relies on total depth and composition, with no meaningless
-  multi-sample cross-entropy term. Zeros must not be interpreted as observed support.
-- Two hidden fully connected layers (128 units), 32-dimensional diagonal Gaussian
-  latent, mirrored decoder. Standard reconstruction plus KL objective, separate
-  composition, relative-depth and total-depth terms. Record scaling/weights rather
-  than quietly inheriting a baseline's coefficients. No added contrastive, taxonomy,
-  uncertainty-calibration or graph objective. Latent variance is a training device,
-  not claimed calibrated bin-assignment uncertainty.
-- One [scikit-learn HDBSCAN](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.HDBSCAN.html)
-  clustering of normalized posterior means, with fixed documented
-  parameters (`min_cluster_size=5`, `min_samples=5`, Euclidean metric after L2
-  normalization) for the first milestone. No truth-supplied K, marker/parameter
-  search, or rescue pass. Noise stays explicitly unassigned. Export all cluster
-  assignments; separately mark/export bins meeting a 200-kb FASTA size threshold.
-  Pin the library version during implementation, including its `min_samples`
-  self-count convention and `n_jobs` budget. These are engineering defaults, not
-  biologically optimal settings.
-- Seeded minibatch training with a finite epoch limit, finite-loss/gradient checks
-  and checkpoint/reload equivalence. Start at 50 epochs, batch 256; this is our
-  prototype schedule, not a shortened native baseline. Report reconstruction
-  components and latent variance/collapse diagnostics.
+If the frozen route is resource-infeasible or needs a broad compatibility fork,
+proceed to the inexpensive contrastive prototype and retain the reason for deferral.
+If viable, permit **one small representation comparison** on new short-inclusive
+development data before choosing frozen GLM features over TNF/context. Freeze its
+scope, population, evaluation and cost first; this is the only follow-up selection
+gate, not a new large architecture/benchmark campaign. Relevant evidence is useful
+neighborhoods and bins at tolerable end-to-end cost, not an attractive projection
+or decreasing loss alone. No full GLM pretraining/fine-tuning is planned.
 
-## First implementation milestone: one real end-to-end local command
+## First usable product after the encoder choice
 
-Implement a package and CLI with `features`, `train`, `embed`, `cluster` and `bin`
-(the grouped path), plus a minimal Snakemake workflow for reproducible evaluation.
-Freeze the exact CLI in implementation; do not present a nonexistent command as
-runnable today. The intended user experience is:
+Keep the first product coherent: our own learned embedding/head, one fixed
+clustering procedure and complete assignment/bin exports. Reuse numerical libraries
+and, if chosen, the frozen backbone; a baseline executable behind a new CLI is not
+our learned implementation. A fixed clusterer is an initial engineering control,
+not an assumption that representation quality guarantees bins. Keep masks/embeddings
+and assignments so downstream failures can be distinguished from encoder failures.
 
-```text
-dl-binner bin --fasta assembly.fna --coverage depth.tsv --out run --threads 4 --seed 11
-```
+The intended inputs remain an assembly FASTA and explicit mean-depth matrix for
+one or more samples mapped to that same assembly. Ordered contig/sample IDs,
+missing/duplicate/nonfinite-data checks, zero-evidence masks, transformation state,
+cache provenance and checkpoint inference are required. Coverage's complementary
+value must be measured, especially in single-sample mode. If GLM features enter,
+test replacing the composition representation first; do not automatically stack
+TNF, GLM, VAE, contrastive, markers and graph components. Additional fusion needs
+an explicit information rationale and a control.
 
-Deliver assignments including explicit unassigned reasons, eligible bin FASTAs,
-embeddings with IDs, checkpoint/normalization, resolved configuration, hashes,
-version inventory, training/progress logs and wall/CPU/peak-RAM report. Existing
-outputs must be protected; failure must produce nonzero exit and no success receipt.
-Saved-checkpoint inference must reproduce embeddings without training again.
+The product must handle configurable short-contig eligibility; **2,500 bp is not
+a product minimum**. No lower-length accuracy claim follows from E001 or the thesis.
+The separate evaluation must include short fragments and retain missing/unsupported
+ranges in the accounting. [The reassessment](../evidence/2026-09-30-architecture-reassessment.md)
+specifies length strata and public/simulation alternatives; final inputs/defaults
+are chosen prospectively, not to fit E001. Preserve optional unassigned outcomes
+rather than force contaminated bins. No rule requires waiting for a paper-scale
+benchmark or novelty claim before a working tool.
 
-Acceptance is a tiny **real** end-to-end run, not a mocked model: feature generation,
-backpropagation/changed weights, reload, clustering and FASTA export. Include ID
-permutation/missing-data/zero-depth/single-sample cases, failed-input behavior and
-assignment completeness. A deterministic toy with known distinct profiles checks
-plumbing; it is not biological performance evidence. Run a raw-feature clustering
-control to show the comparison exists; do not tune to beat its toy score.
+Common CLI/input validation, assignment accounting, embedding/cache manifests,
+FASTA export, progress/resource logging and a minimal Snakemake evaluation path
+can proceed alongside the spike. Avoid general plugin infrastructure. Deliver a
+real small train→save→reload→embed→cluster→export run after the encoder choice,
+with an unlearned-feature control and meaningful failure tests. Package/training
+settings must be committed before measured evaluation. No proposed CLI is called
+runnable until implemented and tested.
 
-Local acceptance envelope: at most 4 CPUs, one numerical stage at a time, loader
-workers=0 and explicit native-library limits; at most 4 GB estimated working memory
-and a 10-minute smoke-test stop limit. Measure actual use. A thread cap does not
-guarantee full utilization; choose the smallest measured efficient allocation for
-any later UCloud run. Do not create a new environment/transfer/retry system when
-ordinary local execution suffices.
+## Alternatives and revisit conditions
 
-After local acceptance, prepare one separate bounded development evaluation using
-accepted E001 features and existing truth/evaluators (unmodified native results
-reused). Commit its settings before running; compare recovery, retained support,
-raw versus learned neighbors and resources without truth-driven parameter search.
-A poor result must remain visible. Real-assembly and independent public-community
-validation belong before robustness/performance claims, not before a functioning
-local prototype. No large benchmark campaign is part of milestone one.
+- **Compact VAE:** restore as preferred only if a matched inexpensive test gives
+  worthwhile utility or the contrastive contract is unjustified. Native VAMB's
+  cheap runtime alone does not establish our prototype's bin quality.
+- **Context-TNF Transformer:** credible short-context option, supported indirectly
+  by CompleteBin; its stripped encoder's benefit is unmeasured. It may be efficient
+  with a short fixed token sequence. Do not assume every large tool component is needed.
+- **Frozen GLM:** choose if actual inference is practical and the bounded comparison
+  shows useful signal/utility at its cost. If not, keep a resource or evidence deferral.
+- **Full GLM training, taxonomy, graphs or neural merging:** reconsider with a
+  concrete failure/input/resource case, not simply because another method uses them.
 
-## Stop and reconsider
-
-Keep the design if the real pipeline is reproducible, numerically sound and cheap
-and produces nondegenerate useful bins in bounded development evaluation. Modify
-clustering first if neighborhoods are useful but bins fail; modify representation
-if it destroys available signal. If costs or quality make the chosen route unusable,
-compare one coherent contrastive alternative, not a stack of untested additions.
-A loss that decreases is not alone evidence of useful genome separation.
-
-No more E001 seeds, simulations, pretrained downloads or paper-scale evaluation
-are prerequisites. License and history review remain required before publication;
-this milestone prepares local software, not a public release.
+E001 remains closed at amended seed-11 scope; H001 and its original three-seed
+criterion remain unresolved, seeds 23/47 deferred. New short-inclusive data are
+allowed without reopening E001. Publication remains a separate owner action with
+license/history review.

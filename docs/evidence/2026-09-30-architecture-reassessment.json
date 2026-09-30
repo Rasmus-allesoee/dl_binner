@@ -1,0 +1,133 @@
+{
+  "reviewed": "2026-09-30",
+  "purpose": "Reassess D011; read existing results and targeted source paths; no new native/model execution.",
+  "sources": [
+    {
+      "path": "agent_context/thesis/MSc_RasmusAN_SDU_v5.md",
+      "bytes": 334914,
+      "sha256": "65370802ee570a4c543c76a9f15cbed3bae8f6fda0eece469f00b8bdd79c9bb9"
+    },
+    {
+      "path": "agent_context/thesis/MSc_RasmusAN_SDU_sup_final_v1.md",
+      "bytes": 59240,
+      "sha256": "f177ac1e8d883f3feffe26b7bee9c6ecac71acd61e4ff9825eaddc6396eae46c"
+    },
+    {
+      "path": "/Users/rasmusallesoeenielsen/Documents/Speciale/hadal-binning-benchmark/real_benchmark/results/summary/table_master_summary_mam.csv",
+      "bytes": 10301,
+      "sha256": "0e5c4af2d1be0261051a8be7080aad8f46dd3e5ee37690c0f0d1e2d0fd4c3a32"
+    },
+    {
+      "path": "/Users/rasmusallesoeenielsen/Documents/Speciale/hadal-binning-benchmark/real_benchmark/results/summary/table_ranking_score.csv",
+      "bytes": 3660,
+      "sha256": "557140ff01f1e30195c2b05dc9f9bca5704392e410744f50ba293723e2794a1a"
+    },
+    {
+      "path": "/Users/rasmusallesoeenielsen/Documents/Speciale/hadal-binning-benchmark/real_benchmark/profiles/slurm/config.yaml",
+      "bytes": 10983,
+      "sha256": "b03ab704efc07039cf4b7de733f571f90f9e04f053c9878ae007c19262217ca2"
+    },
+    {
+      "path": "agent_context/tools_repo/CompleteBin/CompleteBin/Model/layers.py",
+      "bytes": 17627,
+      "sha256": "6ea289dcfd4240be9e348d9c22e0718dfe0ada3f66c7155ee068a25b8d40dfc8"
+    },
+    {
+      "path": "agent_context/tools_repo/CompleteBin/CompleteBin/Model/model.py",
+      "bytes": 5990,
+      "sha256": "2f066ef05e46d4f37d4fb2a9c4930ddde7d44dbb85c686a26dcdf1963a0a7320"
+    },
+    {
+      "path": "agent_context/tools_repo/dcvbin/DNABERT-S/config.json",
+      "bytes": 1025,
+      "sha256": "d54c142114563aa34ef7c2b54ccc921d08e50cd7c3cd69c439d5e0d2bbcfcdee"
+    },
+    {
+      "path": "agent_context/tools_repo/dcvbin/DNABERT-S/bert_layers.py",
+      "bytes": 40734,
+      "sha256": "089e5d47229fa2784439d003cee93e45af6946d662dd1280b49d83dd93a58e36"
+    },
+    {
+      "path": "agent_context/tools_repo/dcvbin/scripts/featureExtract_gpu_2.py",
+      "bytes": 3239,
+      "sha256": "f0fb9982308e6a9cacaf80f7af1597877d77d030cc3f15dee47fdde0a50a9e18"
+    },
+    {
+      "path": "experiments/E001-coverage-thinning/seed11-diagnostics.json",
+      "bytes": 29198,
+      "sha256": "dfc1aeb78fa9630de9ed31f9dd163ad8ccdedea1b8e4be836e71ff3cecd20aa7"
+    }
+  ],
+  "thesis_repository_commit": "4029b810045ff9196be0035e48e7fb32ca4be792",
+  "thesis_MAM_table_rows": [
+    {
+      "Tool_Clean": "COMEBin",
+      "MQ_Count": "628",
+      "N_HQ": "134",
+      "N_NC": "45",
+      "Mean_QS_5x": "65.18179936305732",
+      "Runtime_Hours": "36.74398763888889",
+      "Peak_Memory_GB": "37.074828125"
+    },
+    {
+      "Tool_Clean": "CompleteBin",
+      "MQ_Count": "758",
+      "N_HQ": "141",
+      "N_NC": "39",
+      "Mean_QS_5x": "57.32939313984169",
+      "Runtime_Hours": "287.4951058425926",
+      "Peak_Memory_GB": "177.51215299479165"
+    },
+    {
+      "Tool_Clean": "GenomeFace",
+      "MQ_Count": "466",
+      "N_HQ": "113",
+      "N_NC": "23",
+      "Mean_QS_5x": "68.35963519313304",
+      "Runtime_Hours": "8.458528722222223",
+      "Peak_Memory_GB": "6.294488769531251"
+    },
+    {
+      "Tool_Clean": "SemiBin2",
+      "MQ_Count": "609",
+      "N_HQ": "138",
+      "N_NC": "38",
+      "Mean_QS_5x": "63.03114942528736",
+      "Runtime_Hours": "12.819821611111111",
+      "Peak_Memory_GB": "20.30474462890625"
+    },
+    {
+      "Tool_Clean": "VAMB",
+      "MQ_Count": "499",
+      "N_HQ": "130",
+      "N_NC": "31",
+      "Mean_QS_5x": "69.03521042084168",
+      "Runtime_Hours": "5.515778055555556",
+      "Peak_Memory_GB": "2.1294174804687502"
+    }
+  ],
+  "thesis_cost_limit": "Summed workflow wall hours and peak PSS, with GPU training rules; not current CPU billing or isolated encoder costs.",
+  "primary_web_sources": [
+    {
+      "url": "https://doi.org/10.1093/bioinformatics/btaf188",
+      "scope": "DNABERT-S sections1,3.3,4-5,discussion; architecture/objective/training/filter limits"
+    },
+    {
+      "url": "https://github.com/MAGICS-LAB/DNABERT_S",
+      "scope": "Author checkpoint and inference/training instructions"
+    },
+    {
+      "url": "https://huggingface.co/zhihan1996/DNABERT-S/tree/main",
+      "scope": "Model/code/payload listing, approximately469 MB repository,468 MB weights; no checkpoint downloaded or runtime claimed"
+    },
+    {
+      "url": "https://doi.org/10.1038/s41587-026-03098-0",
+      "scope": "Current VAE counterexample; reuse prior audit for detailed source behavior"
+    }
+  ],
+  "analysis_limits": [
+    "Thesis output table read, not recomputation of MAG quality or repair.",
+    "CompleteBin current token-model source is not identical to all thesis/paper settings.",
+    "CPU inference and short-contig accuracy of GLM remain open; D011 defines a bounded next check."
+  ]
+}

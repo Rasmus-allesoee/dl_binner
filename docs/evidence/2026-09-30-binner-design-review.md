@@ -2,6 +2,11 @@
 
 Opened and completed: 2026-09-30. Scope was defined before architecture selection.
 
+Interpretation update: the VAE-first synthesis below is superseded by the
+owner-requested [architecture reassessment](2026-09-30-architecture-reassessment.md)
+and revised D011. The completed source/benchmark review remains evidence; it is
+not restarted. E001's cutoff is not a product length constraint.
+
 Cutoff: publicly accessible papers, preprints, benchmark studies and source releases
 available by 2026-09-30. Emphasis: 2023–2026 methods and 2024–2026 independent
 benchmarks, with earlier foundational methods needed to interpret current designs.

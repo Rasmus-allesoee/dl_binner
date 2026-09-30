@@ -27,23 +27,34 @@ The required [current literature/benchmark review](evidence/2026-09-30-binner-de
 and [source audit](evidence/2026-09-30-design-source-audit.json) are completed at the
 2026-09-30 cutoff, with depth/access limits explicit. They considered reconstruction,
 contrastive, graph, taxonomy, pretrained sequence and efficient neural merging
-before recommending a compact VAE as a provisional first-product tradeoff.
+before the initial compact-VAE recommendation. The owner-requested
+[architecture reassessment](evidence/2026-09-30-architecture-reassessment.md) now
+replaces that recommendation: lightweight contrastive learning is the leading
+default, with sequence encoder choice provisional and frozen GLM features kept
+as a serious candidate. Thesis results and full short-contig scope receive explicit weight.
 
 ## Exact next step
 
-Implement **D011 milestone one locally**: our own small VAE binner accepting FASTA
-and an explicit mean-depth matrix, with feature validation, training, saved-model
-inference, one fixed density clustering path, assignments/bin FASTAs, hashes,
-progress and resource reporting. Deliver a real tiny end-to-end run plus meaningful
-failure/round-trip checks and a raw-feature clustering control. The decision owns
-initial defaults, acceptance limits, serious alternatives and revisit conditions.
-This is not a VAMB wrapper or a claim to reproduce its scores.
+Complete **D011's bounded local frozen-DNABERT-S feasibility spike** before locking
+the sequence encoder: pin one author checkpoint/runtime, test real CPU inference
+on deterministic short/long real-DNA windows, verify pooling/IDs/strand/chunk/cache
+contracts, and measure CPU/RAM/throughput. One checkpoint/environment attempt, at
+most four CPU threads, 8 GB working RAM and one hour timed inference after setup.
+Record failure rather than start an unbounded compatibility or model-search campaign.
+A load-only smoke or synthetic-only timing does not pass this gate.
 
-No owner upload or UCloud command is needed now. No large training run, new E001
-seed, pretrained download or new simulation is part of the first milestone.
-Once the local pipeline works, prepare a separate bounded development evaluation
-using retained E001 features and frozen evaluators; commit settings before execution.
-Do not tune against the CT oracle or silently convert E001 into an independent test.
+If infeasible, proceed with the inexpensive contrastive prototype. If feasible,
+prepare one small representation comparison on new short-inclusive development
+data with scope/cost frozen first; then choose one encoder and finish a real
+end-to-end product. The [revised D011](decisions/D011-first-binner-prototype.md) owns
+contracts, alternatives and the stop/revisit rules. Common input/export/logging
+plumbing may proceed alongside the spike; no VAE curriculum is required.
+
+No owner upload or UCloud command is needed now. No E001 run is reopened. Its
+2,500-bp cutoff and the thesis's 2,000-bp filter are not product constraints. New
+short-inclusive public/simulated development data may be used; eligibility and
+claims must be evaluated separately, not extrapolated from E001. No full GLM
+pretraining/fine-tuning or expanding benchmark campaign is the next milestone.
 
 ## Resources and continuity
 
