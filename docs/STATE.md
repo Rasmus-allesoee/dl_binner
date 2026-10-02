@@ -1,6 +1,6 @@
 # Current Research State
 
-Updated: 2026-09-30. This is the single current handoff.
+Updated: 2026-10-03. This is the single current handoff.
 
 ## Direction and completed work
 
@@ -42,6 +42,9 @@ contracts, and measure CPU/RAM/throughput. One checkpoint/environment attempt, a
 most four CPU threads, 8 GB working RAM and one hour timed inference after setup.
 Record failure rather than start an unbounded compatibility or model-search campaign.
 A load-only smoke or synthetic-only timing does not pass this gate.
+The committed [E002 protocol](../experiments/E002-dnabert-s-feasibility/README.md)
+owns the pinned checkpoint, local runtime, extraction contracts and one-attempt
+execution. Source commit and observations are recorded there after execution.
 
 If infeasible, proceed with the inexpensive contrastive prototype. If feasible,
 prepare one small representation comparison on new short-inclusive development
@@ -69,7 +72,9 @@ UCloud remains CPU-only and owner-operated. Persistent prefixes stay under
 `e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md). Frozen E001
 source/configuration and raw observed records remain unchanged.
 
-Local branch: `e001-gate0`; no remote, push or publication. `agent_context/` is an
-ignored inbox. Before publication review licensing and historical source packaging
+Local branch: `first-binner-prototype`, created from `930e6743eac1aadb93ea23b51f2a6ac617155a2e`.
+Owner-configured private GitHub origin is present; main/origin-main initially matched
+that commit. This task makes local commits only. `agent_context/` is an ignored
+inbox. Before public publication review licensing and historical source packaging
 per [D001](decisions/D001-research-record.md). Update this handoff when direction,
 significant evidence or execution dependencies change; details belong to their owners.
