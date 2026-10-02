@@ -35,23 +35,30 @@ as a serious candidate. Thesis results and full short-contig scope receive expli
 
 ## Exact next step
 
-Complete **D011's bounded local frozen-DNABERT-S feasibility spike** before locking
-the sequence encoder: pin one author checkpoint/runtime, test real CPU inference
-on deterministic short/long real-DNA windows, verify pooling/IDs/strand/chunk/cache
-contracts, and measure CPU/RAM/throughput. One checkpoint/environment attempt, at
-most four CPU threads, 8 GB working RAM and one hour timed inference after setup.
-Record failure rather than start an unbounded compatibility or model-search campaign.
-A load-only smoke or synthetic-only timing does not pass this gate.
-The committed [E002 protocol](../experiments/E002-dnabert-s-feasibility/README.md)
-owns the pinned checkpoint, local runtime, extraction contracts and one-attempt
-execution. Source commit and observations are recorded there after execution.
+**D011's frozen-DNABERT-S CPU spike is complete and accepted at local scale.**
+[E002](../experiments/E002-dnabert-s-feasibility/README.md) owns checkpoint/runtime
+pins, failures, native contracts, actual costs and projection limits. Unmodified
+author model on forty real-DNA windows: 182.852 s, peak sampled RSS 1.314 GB,
+warm CPU use 3.41–3.88 under four-thread caps. All native extraction/cache/reload
+checks passed. One input-only IUPAC validator defect was corrected before model
+loading; failed receipt retained. No accepted inference should be repeated.
 
-If infeasible, proceed with the inexpensive contrastive prototype. If feasible,
-prepare one small representation comparison on new short-inclusive development
-data with scope/cost frozen first; then choose one encoder and finish a real
-end-to-end product. The [revised D011](decisions/D011-first-binner-prototype.md) owns
-contracts, alternatives and the stop/revisit rules. Common input/export/logging
-plumbing may proceed alongside the spike; no VAE curriculum is required.
+Prepare and run **one small GLM versus inexpensive composition representation
+comparison**, at most 320 fragments on new short-inclusive human-associated
+development sources. A controlled genome-fragment panel is sufficient. Around
+1 Mb (64 windows at each tested length: 945,152 bp) projects to ~14.2 minutes
+extraction. Freeze population/accession/hash/overlap records, nonoverlapping sampling,
+metrics, fixed clustering, keep/defer criteria and cost **before scores**. Use
+≤4 threads / 8 GB; one-hour feature ceiling and two-hour total local-run ceiling.
+Keep all length strata and unassigned outcomes, without oracle K, truth selection
+or a tuning grid. Then settle one encoder and complete the small end-to-end product.
+
+Technical feasibility is not bulk affordability: explicit 29.536-Mb and 817.438-Mb
+scenarios project to 7.394 and 229.016 local wall hours, with substantial uncertainty;
+no Linux/CPU-scaling claim. Lightweight contrastive learning remains the leading
+default; GLM must justify its cost through the sole bounded comparison. The
+[updated D011](decisions/D011-first-binner-prototype.md) owns the decision. No
+full-GLM training, additional architecture campaign or VAE curriculum is planned.
 
 No owner upload or UCloud command is needed now. No E001 run is reopened. Its
 2,500-bp cutoff and the thesis's 2,000-bp filter are not product constraints. New

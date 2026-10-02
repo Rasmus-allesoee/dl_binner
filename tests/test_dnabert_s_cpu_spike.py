@@ -1,5 +1,6 @@
 """Portable D011 guard/cache/chunk tests; native model contracts run in the spike."""
 import json
+import importlib.util
 from pathlib import Path
 import sys
 import tempfile
@@ -13,6 +14,26 @@ import dnabert_s_cpu_spike as spike
 
 
 class SpikeTests(unittest.TestCase):
+    def test_actual_pinned_tokenizer_adaptive_splits(self):
+        root = Path(__file__).resolve().parents[1]
+        model = root/'artifacts/d011-dnabert-s-spike/model'
+        panel = root/'artifacts/d011-dnabert-s-spike/run-002/windows.fna'
+        if not model.exists() or not panel.exists() or importlib.util.find_spec('transformers') is None:
+            self.skipTest('Optional tokenizer runtime/assets and real-DNA panel absent')
+        from transformers import AutoTokenizer
+        tokenizer = AutoTokenizer.from_pretrained(str(model), local_files_only=True,
+                                                   trust_remote_code=True)
+        seq = list(spike.fasta(panel))[-1][1]
+        chunks = spike.bounded_chunks(seq,tokenizer,10000,64)
+        self.assertGreater(len(chunks),3)
+        self.assertEqual(chunks[-1][1],10000)
+        self.assertEqual(''.join(c[2] for c in chunks),min(seq,spike.reverse_complement(seq)))
+        for _,_,piece,n in chunks:
+            self.assertLessEqual(n,64)
+            for strand in (piece,spike.reverse_complement(piece)):
+                self.assertLessEqual(len(tokenizer(strand,truncation=False)['input_ids']),64)
+        self.assertEqual(chunks,spike.bounded_chunks(spike.reverse_complement(seq),tokenizer,10000,64))
+
     def test_chunk_coverage_strand_and_asymmetric_token_limits(self):
         def tokenizer(seq, **kwargs):
             # Stand-in tests this splitting algorithm, not the native extractor.

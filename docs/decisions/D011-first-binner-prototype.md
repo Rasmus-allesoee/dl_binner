@@ -1,7 +1,8 @@
 # D011: Contrastive-first prototype direction; sequence encoder provisional
 
-Date: 2026-09-30. Status: accepted revised planning direction; final encoder choice
-is provisional pending the bounded check below. This replaces the compact-VAE-first
+Date: 2026-09-30; feasibility update 2026-10-03. Status: accepted revised planning direction; final encoder choice
+is provisional pending the sole representation comparison below; CPU feasibility
+has passed. This replaces the compact-VAE-first
 implementation recommendation in commit `e7d9636`. No binner has been implemented.
 The previous rationale is preserved in Git and the dated design review.
 
@@ -30,11 +31,22 @@ wins merely through novelty or release date.
 
 A frozen GLM is a serious contender because it can import sequence information
 and biological priors beyond TNF without training a foundation model ourselves.
-Its CPU inference cost and short-contig benefit remain unmeasured here. Do not
+Its CPU inference cost is now measured locally in E002; short-contig benefit
+remains unmeasured here. Do not
 claim a highest ceiling, reject all Transformers on the cost of CompleteBin's
 whole workflow, or infer CPU inference cost from GPU pretraining cost.
 
-## Exact next milestone: one bounded GLM feasibility spike
+## Completed initial milestone: one bounded GLM feasibility spike
+
+The [E002 native check](../../experiments/E002-dnabert-s-feasibility/README.md)
+passed on 2026-10-03. Accept it without repeating inference. One checkpoint and
+one environment were used; an input-only IUPAC-validator failure was retained and
+corrected before any model load. Native source/weights were unmodified. The
+successful forty-window run took 182.852 seconds, peaked at 1.314 GB sampled RSS
+and used 3.41–3.88 CPUs in warm extraction under coherent four-thread limits.
+Pool/batch/ID/strand/chunk/cache/checkpoint contracts passed. This establishes
+technical feasibility at local scale, **not** bin quality or bulk affordability.
+The following original contract is preserved as the acceptance basis.
 
 Implement and locally test **frozen DNABERT-S feature extraction**, using its
 public author checkpoint, before committing to the first sequence encoder:
@@ -62,7 +74,7 @@ public author checkpoint, before committing to the first sequence encoder:
    compatibility-fork or timeout-increase campaign. No quantization/distillation or
    additional model search in this milestone.
 
-This is the next local task, with no prepared UCloud command today. Owner operates
+This was the local feasibility task, with no prepared UCloud command. Owner operates
 any later UCloud test. A checkpoint merely loading is insufficient acceptance.
 Record a concrete feasibility decision; no genome-recovery claim follows.
 
@@ -74,6 +86,31 @@ scope, population, evaluation and cost first; this is the only follow-up selecti
 gate, not a new large architecture/benchmark campaign. Relevant evidence is useful
 neighborhoods and bins at tolerable end-to-end cost, not an attractive projection
 or decreasing loss alone. No full GLM pretraining/fine-tuning is planned.
+
+## Exact next milestone after measured feasibility
+
+Keep the sequence encoder provisional and prepare/execute **one small comparison**
+on new short-inclusive human-associated development data. At most 320 fragments
+and a practical target around 1 Mb: 64 windows at each tested length total 945,152
+bp and project to 14.2 minutes of extraction on this machine. Four threads, 8 GB,
+one-hour feature ceiling and two-hour complete local-run ceiling; no automatic
+UCloud execution. Freeze the source/accession/hash population, overlap limits,
+sampling, metrics, clustering, keep/defer criteria and cost before scores.
+Use label-blind neighbors and one fixed clusterer on shared IDs, retaining all
+length strata/unassigned outcomes. No oracle K, truth-selected configuration,
+tuning grid or third architecture selection campaign. A controlled genome-fragment
+panel is allowed; it is not real-assembly or independent whole-MAG evidence.
+
+Why this remains worthwhile: the spike proves a modest comparison can run cheaply
+enough to measure the potential information gain, while full-sequence CPU cost
+is substantial. The explicit 29.536-Mb scenario projects to 7.394 hours; the
+817.438-Mb timing-only scenario to 229.016 hours, both rough local projections.
+Do not translate those into Linux performance or assumed 8/16-thread speedup.
+Do not restrict the product to the old E001 population, but do not call this a
+cheap default bulk encoder either. Lightweight contrastive learning remains the
+leading default. Choose frozen GLM only with meaningful utility and a defensible
+intended assembly-scale cost; defer it if the sole comparison does not justify
+that tradeoff. Then implement the small end-to-end learned product below.
 
 ## First usable product after the encoder choice
 

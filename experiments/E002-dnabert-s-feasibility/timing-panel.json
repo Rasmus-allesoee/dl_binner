@@ -1,0 +1,325 @@
+{
+  "rows": [
+    {
+      "bp": 500,
+      "end": 7415,
+      "id": "PC14030:6915:7415",
+      "sequence_sha256": "5de6e25c1aa467ddb68117b109c726aabc5af5ad3d9e3b950eafe95d500b43b2",
+      "source_contig": "PC14030",
+      "start": 6915
+    },
+    {
+      "bp": 500,
+      "end": 109134,
+      "id": "PC111591:108634:109134",
+      "sequence_sha256": "62035fd9fc58f08704ef32d78398cfdc082afd7c1fb08138a97e4b6a38c5fd88",
+      "source_contig": "PC111591",
+      "start": 108634
+    },
+    {
+      "bp": 500,
+      "end": 20822,
+      "id": "PC82338:20322:20822",
+      "sequence_sha256": "7074baef10fa3c5d26d8c94402f823829b760dfc87bfa171e8ab159909d58117",
+      "source_contig": "PC82338",
+      "start": 20322
+    },
+    {
+      "bp": 500,
+      "end": 7932,
+      "id": "PC188619:7432:7932",
+      "sequence_sha256": "5ae45a4dd98fa9173569dd3759bd6fe17ea040f2ded701bff453d5b534596fef",
+      "source_contig": "PC188619",
+      "start": 7432
+    },
+    {
+      "bp": 500,
+      "end": 9204,
+      "id": "PC105991:8704:9204",
+      "sequence_sha256": "f6f6fd4a09e51e6f0c10835ab89815b308ebbbde462c89c089012b3516d0dd61",
+      "source_contig": "PC105991",
+      "start": 8704
+    },
+    {
+      "bp": 500,
+      "end": 17490,
+      "id": "PC82481:16990:17490",
+      "sequence_sha256": "819f9ce42ea310d2594d9c1eb6079b340b3522830ed034bd2dc54e198eb7c36d",
+      "source_contig": "PC82481",
+      "start": 16990
+    },
+    {
+      "bp": 500,
+      "end": 78490,
+      "id": "PC47762:77990:78490",
+      "sequence_sha256": "6a3e0257ab2e174546d8fa46ed38e68a1e36c9371330e5b4e1ddb9f48d6ef066",
+      "source_contig": "PC47762",
+      "start": 77990
+    },
+    {
+      "bp": 500,
+      "end": 6884,
+      "id": "PC52993:6384:6884",
+      "sequence_sha256": "e302e26f0d86aa2372eca5443d527a618146dd45b71046624fe77753f8caae02",
+      "source_contig": "PC52993",
+      "start": 6384
+    },
+    {
+      "bp": 768,
+      "end": 19656,
+      "id": "PC96762:18888:19656",
+      "sequence_sha256": "416156bf6b0186ee6a72a9efc4f6763163a6e8394471cf688cc8f1cd540e7fda",
+      "source_contig": "PC96762",
+      "start": 18888
+    },
+    {
+      "bp": 768,
+      "end": 9859,
+      "id": "PC105668:9091:9859",
+      "sequence_sha256": "56ccbde5df6614fc7a7ca7a3a96486124cd7e5cc9c2a94bc16b81ed62683f07c",
+      "source_contig": "PC105668",
+      "start": 9091
+    },
+    {
+      "bp": 768,
+      "end": 10029,
+      "id": "PC76088:9261:10029",
+      "sequence_sha256": "5f8df3cb80bd15d11abf4bf27f64b2f6dc5dc5b8bfa4a7fa07f1b5633a865ee3",
+      "source_contig": "PC76088",
+      "start": 9261
+    },
+    {
+      "bp": 768,
+      "end": 17104,
+      "id": "PC177478:16336:17104",
+      "sequence_sha256": "513081dd2a8633371c739acda7110b149284086c2f5bc7de62d6268a92168a4a",
+      "source_contig": "PC177478",
+      "start": 16336
+    },
+    {
+      "bp": 768,
+      "end": 5546,
+      "id": "PC101851:4778:5546",
+      "sequence_sha256": "607128b39fe15be5aa16c9e3beee33b8f99277cbd02cda671eb3193b9b175e0c",
+      "source_contig": "PC101851",
+      "start": 4778
+    },
+    {
+      "bp": 768,
+      "end": 10745,
+      "id": "PC2954:9977:10745",
+      "sequence_sha256": "f81574966ae912993e6848ad5bfc1f060ef6a1f89f6d8861ba7348fcf56c88d2",
+      "source_contig": "PC2954",
+      "start": 9977
+    },
+    {
+      "bp": 768,
+      "end": 9034,
+      "id": "PC4112:8266:9034",
+      "sequence_sha256": "e73f81f55ffa48df202e3a9f402253f9c595c489af8f5d9979750f19c3bb74e5",
+      "source_contig": "PC4112",
+      "start": 8266
+    },
+    {
+      "bp": 768,
+      "end": 110011,
+      "id": "PC176288:109243:110011",
+      "sequence_sha256": "40b05ad86ddbf9f39d41101a451b69fd823dd1f691f184e2d61a4a620c22d4c7",
+      "source_contig": "PC176288",
+      "start": 109243
+    },
+    {
+      "bp": 1000,
+      "end": 18736,
+      "id": "PC106510:17736:18736",
+      "sequence_sha256": "2c625115c6392390934da3f8bb960c8ca8d30b01b0ce54f06b1ae6cc19850bb3",
+      "source_contig": "PC106510",
+      "start": 17736
+    },
+    {
+      "bp": 1000,
+      "end": 7464,
+      "id": "PC177417:6464:7464",
+      "sequence_sha256": "0da6b38d443161b98985de92fe49de3babcc9079a5e3cb87f777f4ae8d3187c0",
+      "source_contig": "PC177417",
+      "start": 6464
+    },
+    {
+      "bp": 1000,
+      "end": 7581,
+      "id": "PC146667:6581:7581",
+      "sequence_sha256": "a9472c9317fe3826f6e6e1743c7eb7f96c6024650dd994a14afc27975b103562",
+      "source_contig": "PC146667",
+      "start": 6581
+    },
+    {
+      "bp": 1000,
+      "end": 6720,
+      "id": "PC101725:5720:6720",
+      "sequence_sha256": "af25331bb9929a8782205ff47b4dff66313ded983be04d8aa0c70b43d617b1ca",
+      "source_contig": "PC101725",
+      "start": 5720
+    },
+    {
+      "bp": 1000,
+      "end": 18266,
+      "id": "PC41088:17266:18266",
+      "sequence_sha256": "4f27aa5b6f06b6f4a56fdf541b4409f039f540559f9f15cbcc0c8a8964cce687",
+      "source_contig": "PC41088",
+      "start": 17266
+    },
+    {
+      "bp": 1000,
+      "end": 2053689,
+      "id": "PC176309:2052689:2053689",
+      "sequence_sha256": "f03601512ebd9313b31871534d92b80e8b5568fd9456bd4cec322a4b0b1fd9e1",
+      "source_contig": "PC176309",
+      "start": 2052689
+    },
+    {
+      "bp": 1000,
+      "end": 11843,
+      "id": "PC117593:10843:11843",
+      "sequence_sha256": "4befff730dc7e9efc931be703bc28fc62d0410de1b4df48640e34e2d3d74a990",
+      "source_contig": "PC117593",
+      "start": 10843
+    },
+    {
+      "bp": 1000,
+      "end": 13883,
+      "id": "PC75944:12883:13883",
+      "sequence_sha256": "be223274277902d84b0112feee9ce8a2f6faff5cb790b5fe79f38338eded792f",
+      "source_contig": "PC75944",
+      "start": 12883
+    },
+    {
+      "bp": 2500,
+      "end": 9961,
+      "id": "PC14447:7461:9961",
+      "sequence_sha256": "35cac7ea581419ab54846b3f4d2615e076a04205d4d8bf303f1c349dd07c2be2",
+      "source_contig": "PC14447",
+      "start": 7461
+    },
+    {
+      "bp": 2500,
+      "end": 6976,
+      "id": "PC52182:4476:6976",
+      "sequence_sha256": "9a847636fa93524837307e94d04f4394ff11fcbf9b959cf44f6796979a630bbf",
+      "source_contig": "PC52182",
+      "start": 4476
+    },
+    {
+      "bp": 2500,
+      "end": 7214,
+      "id": "PC246:4714:7214",
+      "sequence_sha256": "b49738f21627cfc7390e309d26254e8b037f24077e4c427d7873b0cfce57572c",
+      "source_contig": "PC246",
+      "start": 4714
+    },
+    {
+      "bp": 2500,
+      "end": 7744,
+      "id": "PC178422:5244:7744",
+      "sequence_sha256": "561f0b8750d3af7f6917c3e0c58078170b43a2f70484ae6d49a2e90d898fde22",
+      "source_contig": "PC178422",
+      "start": 5244
+    },
+    {
+      "bp": 2500,
+      "end": 26712,
+      "id": "PC76091:24212:26712",
+      "sequence_sha256": "bc217b65174fa77a58295e5b1871707d9751113345b799cb31699eeb7d9a76e7",
+      "source_contig": "PC76091",
+      "start": 24212
+    },
+    {
+      "bp": 2500,
+      "end": 22206,
+      "id": "PC106451:19706:22206",
+      "sequence_sha256": "6072afa2a3b14243067214be60e2d670ac6d980a00bfd01469d895ac6cea5559",
+      "source_contig": "PC106451",
+      "start": 19706
+    },
+    {
+      "bp": 2500,
+      "end": 79417,
+      "id": "PC44092:76917:79417",
+      "sequence_sha256": "08c0287b464784879f5b161d93fde3d96110a5269d2d2a2ebb46fcdf7f392bb9",
+      "source_contig": "PC44092",
+      "start": 76917
+    },
+    {
+      "bp": 2500,
+      "end": 10243,
+      "id": "PC117490:7743:10243",
+      "sequence_sha256": "bc6e96d2c75e7475b128ffd57a1dc32892a39c928d4e55676c55a03a4e07d18b",
+      "source_contig": "PC117490",
+      "start": 7743
+    },
+    {
+      "bp": 10000,
+      "end": 17712,
+      "id": "PC105811:7712:17712",
+      "sequence_sha256": "658b490c1817cfa2dc87b8575bdf722e5231554fdf0dd62e47a7293540899b08",
+      "source_contig": "PC105811",
+      "start": 7712
+    },
+    {
+      "bp": 10000,
+      "end": 13213,
+      "id": "PC4546:3213:13213",
+      "sequence_sha256": "ddf90c9c42bbdfb16d3bfcadfbd2e580b9b338adada281d6f236dc6919e1d858",
+      "source_contig": "PC4546",
+      "start": 3213
+    },
+    {
+      "bp": 10000,
+      "end": 14810,
+      "id": "PC75926:4810:14810",
+      "sequence_sha256": "7e316686abf2c1c720fd8f9c15d1b84277f8c1656655a28030632da9ea58719f",
+      "source_contig": "PC75926",
+      "start": 4810
+    },
+    {
+      "bp": 10000,
+      "end": 11578,
+      "id": "PC88448:1578:11578",
+      "sequence_sha256": "1a506fd7048959be8e9e286c76a9b445ad636998a5d88de8862a61aac3a38bd4",
+      "source_contig": "PC88448",
+      "start": 1578
+    },
+    {
+      "bp": 10000,
+      "end": 13591,
+      "id": "PC105749:3591:13591",
+      "sequence_sha256": "b5cb2a5f6cf2421a2c3ad175b58298a05f1239adbe5a838c3a9ae89951e8ee07",
+      "source_contig": "PC105749",
+      "start": 3591
+    },
+    {
+      "bp": 10000,
+      "end": 12084,
+      "id": "PC3360:2084:12084",
+      "sequence_sha256": "36e6cec75c04bbe3bceab9b1bf90db208aceb17b5644f8e322d359a890c1b962",
+      "source_contig": "PC3360",
+      "start": 2084
+    },
+    {
+      "bp": 10000,
+      "end": 12769,
+      "id": "PC177728:2769:12769",
+      "sequence_sha256": "1102adbf3ddebfee81ff08fcd36413f7bf0e18d491f8967adc2ec08cfa17ae8b",
+      "source_contig": "PC177728",
+      "start": 2769
+    },
+    {
+      "bp": 10000,
+      "end": 14153,
+      "id": "PC106352:4153:14153",
+      "sequence_sha256": "431fed7b1b820e93ad8a28c19357e720c596d057effb477ccecfd2cfee465888",
+      "source_contig": "PC106352",
+      "start": 4153
+    }
+  ],
+  "source_sha256": "14870c27bc9467b5897bd1b65b347d7d5e2733d8bbe48c0085cb708194966fe1"
+}

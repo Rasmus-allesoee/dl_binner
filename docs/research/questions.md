@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-09-30
+Updated: 2026-10-03
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -156,3 +156,13 @@ VAE-first recommendation with D011's provisional contrastive direction and one
 bounded frozen-GLM feasibility check. This answers a product-planning priority,
 not Q001/H001 or a claim of architecture superiority. Short-contig-capable methods
 remain in scope; new short-inclusive evaluation can be planned independently of E001.
+
+2026-10-03 Q004/D011 feasibility update: [E002](../../experiments/E002-dnabert-s-feasibility/README.md)
+accepts actual frozen-DNABERT-S CPU contracts at small local scale (40 real windows,
+182.852 s, 1.314 GB sampled peak, coherent four-thread limits). The model was not
+trained and no biological utility was evaluated. An input-only IUPAC validator
+failure was corrected before model load and retained; one model/environment used.
+Bulk extraction projections are expensive and hardware-specific, so encoder choice
+remains provisional. The sole next comparison is capped at 320 new short-inclusive
+development fragments with scope/evaluation/cost frozen first. No E001 result or
+H001 status changes, no additional seeds or architecture campaign authorized.
