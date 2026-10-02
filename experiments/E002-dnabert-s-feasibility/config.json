@@ -18,7 +18,7 @@
     "loader_workers": 0
   },
   "limits": {
-    "seconds": 3600,
+    "seconds": 3560,
     "rss_bytes": 8000000000,
     "checkpoint_attempts": 1,
     "environment_attempts": 1

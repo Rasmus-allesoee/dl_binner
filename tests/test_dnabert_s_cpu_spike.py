@@ -31,6 +31,9 @@ class SpikeTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 spike.validate_dna(seq)
         self.assertEqual(spike.reverse_complement('acgtn'), 'NACGT')
+        self.assertEqual(spike.reverse_complement('ACTRYN'), 'NRYAGT')
+        iupac = 'ACGTRYSWKMBDHVN'
+        self.assertEqual(spike.reverse_complement(spike.reverse_complement(iupac)), iupac)
         with self.assertRaises(ValueError):
             spike.bounded_chunks('A', lambda x:None, 0, 4)
 

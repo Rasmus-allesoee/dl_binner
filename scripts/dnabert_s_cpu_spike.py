@@ -63,16 +63,16 @@ def fasta(path):
 
 
 def validate_dna(seq):
-    """Accept nonempty A/C/G/T/N DNA only; do not silently discard ambiguity."""
+    """Accept nonempty IUPAC DNA; preserve ambiguity rather than replacing bases."""
     seq = seq.upper()
-    if not seq or set(seq) - set('ACGTN'):
+    if not seq or set(seq) - set('ACGTRYSWKMBDHVN'):
         raise ValueError('Empty sequence or unsupported DNA alphabet')
     return seq
 
 
 def reverse_complement(seq):
-    """Return the reverse complement, preserving N as unknown evidence."""
-    return validate_dna(seq).translate(str.maketrans('ACGTN', 'TGCAN'))[::-1]
+    """Return the IUPAC reverse complement without converting unknown evidence."""
+    return validate_dna(seq).translate(str.maketrans('ACGTRYSWKMBDHVN', 'TGCAYRSWMKVHDBN'))[::-1]
 
 
 def bounded_chunks(seq, tokenizer, max_bp, max_tokens):
@@ -212,9 +212,9 @@ class Extractor:
                                     self.settings['max_tokens'])
             pieces = [strand for _, _, piece, _ in chunks
                       for strand in (piece, reverse_complement(piece))]
+            encoded = [self.tokenizer(p, truncation=False)['input_ids'] for p in pieces]
             # Reverse tokens can compress differently; split if either strand exceeds budget.
-            if any(len(self.tokenizer(p, truncation=False)['input_ids']) > self.settings['max_tokens']
-                   for p in pieces):
+            if any(len(ids) > self.settings['max_tokens'] for ids in encoded):
                 raise ValueError('Reverse-strand token budget exceeded; no truncation allowed')
             batch = self.settings['batch_size']
             embeds = np.concatenate([self.pool(pieces[i:i + batch])
@@ -223,7 +223,8 @@ class Extractor:
             vector = np.average(embeds.reshape(len(chunks), 2, 768).mean(1), axis=0, weights=weights)
             result.append(vector.astype(np.float32))
             detail.append(dict(id=name, bp=len(seq), chunks=len(chunks),
-                               tokens=[len(self.tokenizer(p, truncation=False)['input_ids']) for p in pieces],
+                               tokens=[len(ids) for ids in encoded],
+                               unknown_tokens=sum(ids.count(self.tokenizer.unk_token_id) for ids in encoded),
                                intervals=[[a, b] for a, b, _, _ in chunks]))
         return np.stack(result), detail
 
@@ -297,6 +298,7 @@ def supervise(command, directory, seconds, max_rss):
 
 def worker(config_path, output):
     """Execute native contracts and timing once, with incremental stage receipts."""
+    print(json.dumps(dict(stage='worker_entered_before_numerical_imports', pid=os.getpid())), flush=True)
     import numpy as np
     import psutil
     import torch
@@ -325,6 +327,7 @@ def worker(config_path, output):
     rows, provenance, lengths = panel(ROOT / config['source_fasta'], config['source_sha256'],
                                       config['windows_per_length'])
     write_json(output / 'panel.json', dict(source_sha256=config['source_sha256'], rows=provenance))
+    result['panel_ambiguity_bases'] = sum(sum(base not in 'ACGT' for base in seq) for _,seq in rows)
     with (output / 'windows.fna').open('w') as f:
         for name, seq in rows:
             f.write(f'>{name}\n{seq}\n')
