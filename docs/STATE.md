@@ -52,6 +52,12 @@ metrics, fixed clustering, keep/defer criteria and cost **before scores**. Use
 ≤4 threads / 8 GB; one-hour feature ceiling and two-hour total local-run ceiling.
 Keep all length strata and unassigned outcomes, without oracle K, truth selection
 or a tuning grid. Then settle one encoder and complete the small end-to-end product.
+The [E003 protocol](../experiments/E003-representation-screen/README.md) and
+source/panel manifests now fix 320 fragments / 945,152 bp from sixteen public
+human-associated reference chromosomes, with overlap limitations explicit.
+This is the final inclusion screen against raw TNF, not trained contrastive TNF
+or whole-genome recovery. No extra architecture gate follows absent a concrete
+failure; laptop runtime projections alone do not reject GLM.
 
 Technical feasibility is not bulk affordability: explicit 29.536-Mb and 817.438-Mb
 scenarios project to 7.394 and 229.016 local wall hours, with substantial uncertainty;

@@ -1,0 +1,46 @@
+"""Serial, resource-capped E003 extraction → label-blind partitions → scoring."""
+from pathlib import Path
+from snakemake.io import multiext
+
+REPO = str(Path(workflow.snakefile).resolve().parents[2])
+PYTHON = config['python']
+SCRIPT = REPO + '/scripts/e003_representation_screen.py'
+CFG = str(Path(REPO) / config['config_path'])
+
+rule all:
+    input: 'scores.json'
+
+rule composition:
+    output: multiext('tnf.features', '.npz', '.json')
+    threads: 4
+    resources: mem_mb=2000
+    log: 'tnf.log'
+    benchmark: 'tnf.benchmark.tsv'
+    shell: '{PYTHON:q} -u {SCRIPT:q} --mode tnf --config {CFG:q} --output {output[0]:q} > {log:q} 2>&1'
+
+rule frozen_glm:
+    output: multiext('glm.features', '.npz', '.json')
+    threads: 4
+    resources: mem_mb=8000
+    log: 'glm.log'
+    benchmark: 'glm.benchmark.tsv'
+    shell: '{PYTHON:q} -u {SCRIPT:q} --mode glm --config {CFG:q} --output {output[0]:q} > {log:q} 2>&1'
+
+rule partition:
+    input: multiext('{representation}.features', '.npz', '.json')
+    output: '{representation}.partition.json'
+    wildcard_constraints: representation='tnf|glm'
+    threads: 4
+    resources: mem_mb=2000
+    log: '{representation}.partition.log'
+    benchmark: '{representation}.partition.benchmark.tsv'
+    shell: '{PYTHON:q} -u {SCRIPT:q} --mode partition --config {CFG:q} --input {input[0]:q} --output {output:q} > {log:q} 2>&1'
+
+rule score:
+    input: 'tnf.partition.json', 'glm.partition.json'
+    output: 'scores.json'
+    threads: 4
+    resources: mem_mb=2000
+    log: 'score.log'
+    benchmark: 'score.benchmark.tsv'
+    shell: '{PYTHON:q} -u {SCRIPT:q} --mode score --config {CFG:q} --input . --output {output:q} > {log:q} 2>&1'

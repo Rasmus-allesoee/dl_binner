@@ -89,6 +89,15 @@ or decreasing loss alone. No full GLM pretraining/fine-tuning is planned.
 
 ## Exact next milestone after measured feasibility
 
+2026-10-03 owner clarification: this is the **final** representation screen and
+does not compare with a contrastive-trained composition encoder or prove complete
+genome recovery. E002 laptop projections are planning estimates, not a sole GLM
+rejection criterion. [E003](../../experiments/E003-representation-screen/README.md)
+now freezes the new source/panel manifests, label-blind geometry/clustering and
+joint utility criteria before scoring. After it resolves GLM inclusion, move
+directly to implementation without a further architecture gate unless a concrete
+failure requires one. This clarification also updates the durable agent guidance.
+
 Keep the sequence encoder provisional and prepare/execute **one small comparison**
 on new short-inclusive human-associated development data. At most 320 fragments
 and a practical target around 1 Mb: 64 windows at each tested length total 945,152

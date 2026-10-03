@@ -183,6 +183,12 @@ scope/cutoff, and do not combine methods without a concrete rationale.
 Once a scoped review and design decision are complete, reuse those records during
 implementation. Refresh specific evidence when a changed dependency or design
 question requires it; do not restart the whole review before each milestone.
+Once a bounded representation screen selects the first prototype's sequence route,
+move to implementation without another architecture gate unless a concrete failure
+requires one. A frozen-GLM versus raw-composition screen does not compare against a
+contrastive-trained composition encoder or prove whole-genome recovery. Treat local
+runtime projections as rough planning estimates, not the sole reason to reject a
+sequence route with useful evidence.
 
 Do not attempt to plan the entire project in rigid detail from start to finish.
 
