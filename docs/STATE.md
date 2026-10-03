@@ -28,49 +28,53 @@ and [source audit](evidence/2026-09-30-design-source-audit.json) are completed a
 2026-09-30 cutoff, with depth/access limits explicit. They considered reconstruction,
 contrastive, graph, taxonomy, pretrained sequence and efficient neural merging
 before the initial compact-VAE recommendation. The owner-requested
-[architecture reassessment](evidence/2026-09-30-architecture-reassessment.md) now
-replaces that recommendation: lightweight contrastive learning is the leading
-default, with sequence encoder choice provisional and frozen GLM features kept
-as a serious candidate. Thesis results and full short-contig scope receive explicit weight.
+[architecture reassessment](evidence/2026-09-30-architecture-reassessment.md)
+replaced that recommendation with lightweight contrastive learning and a bounded
+frozen-GLM inclusion screen. E003 now resolves the first sequence route below.
+Thesis results and full short-contig scope receive explicit weight.
 
 ## Exact next step
 
-**D011's frozen-DNABERT-S CPU spike is complete and accepted at local scale.**
-[E002](../experiments/E002-dnabert-s-feasibility/README.md) owns checkpoint/runtime
-pins, failures, native contracts, actual costs and projection limits. Unmodified
-author model on forty real-DNA windows: 182.852 s, peak sampled RSS 1.314 GB,
-warm CPU use 3.41–3.88 under four-thread caps. All native extraction/cache/reload
-checks passed. One input-only IUPAC validator defect was corrected before model
-loading; failed receipt retained. No accepted inference should be repeated.
+**E002 feasibility and E003's final representation screen are complete and
+accepted; do not repeat either inference run.**
+[E003](../experiments/E003-representation-screen/README.md) owns the precommitted
+protocol, new source/panel hashes, independent retained-output inspection and
+actual costs. Sixteen human-associated reference chromosomes supplied 320
+nonoverlapping fragments / 945,152 bp, balanced across 500/768/1,000/2,500/10,000 bp.
+Native feature axes, masks, chunks, finite arrays, neighbors and all scores passed
+inspection; completed-directory Snakemake dry-run schedules nothing.
 
-Prepare and run **one small GLM versus inexpensive composition representation
-comparison**, at most 320 fragments on new short-inclusive human-associated
-development sources. A controlled genome-fragment panel is sufficient. Around
-1 Mb (64 windows at each tested length: 945,152 bp) projects to ~14.2 minutes
-extraction. Freeze population/accession/hash/overlap records, nonoverlapping sampling,
-metrics, fixed clustering, keep/defer criteria and cost **before scores**. Use
-≤4 threads / 8 GB; one-hour feature ceiling and two-hour total local-run ceiling.
-Keep all length strata and unassigned outcomes, without oracle K, truth selection
-or a tuning grid. Then settle one encoder and complete the small end-to-end product.
-The [E003 protocol](../experiments/E003-representation-screen/README.md) and
-source/panel manifests now fix 320 fragments / 945,152 bp from sixteen public
-human-associated reference chromosomes, with overlap limitations explicit.
-This is the final inclusion screen against raw TNF, not trained contrastive TNF
-or whole-genome recovery. No extra architecture gate follows absent a concrete
-failure; laptop runtime projections alone do not reject GLM.
+Frozen GLM has **better sampled-fragment grouping**, but fails the joint keep
+criterion: short five-neighbor purity 0.45938 versus raw TNF 0.57396 (−0.11458,
+required +0.10). Longer neighbor delta +0.00469 and bp-weighted grouping F1 gain
++0.06863 pass. GLM short grouping F1 0.32558 versus 0.01978 and assigned fraction
+0.91146 versus 0.06771 are substantial positive evidence; do not describe TNF as
+universally better. All operational ceilings passed: 940.014 s total, sampled
+peak RSS 1.436 GB, four-thread budget. Deferral follows the precommitted utility
+rule, **not laptop runtime projections**. No trained-composition or whole-MAG
+comparison/generalization claim follows; pretraining overlap is not excluded.
 
-Technical feasibility is not bulk affordability: explicit 29.536-Mb and 817.438-Mb
-scenarios project to 7.394 and 229.016 local wall hours, with substantial uncertainty;
-no Linux/CPU-scaling claim. Lightweight contrastive learning remains the leading
-default; GLM must justify its cost through the sole bounded comparison. The
-[updated D011](decisions/D011-first-binner-prototype.md) owns the decision. No
-full-GLM training, additional architecture campaign or VAE curriculum is planned.
+**Implement and locally run D011's first end-to-end learned binner:** our own
+compact contrastive encoder using 136-dimensional composition, explicit optional
+mean-depth inputs, one fixed label-blind clusterer and complete assignment/bin
+exports. [D011](decisions/D011-first-binner-prototype.md#exact-next-milestone-first-learned-binner)
+fixes the initial learning settings, software contracts and acceptance boundary.
+Commit package/config/transform contracts before measured integration. Demonstrate
+train→save→reload→embed→cluster→export using accepted E003 TNF cache, alongside the
+raw-feature control, with tiny real fresh-feature checks and meaningful failure
+tests. Retain all length strata, noise, zero-depth masks and exclusion reasons;
+labels must not enter training or selection. Synthetic depth tests establish input
+contracts only. Four threads, loader zero, 8 GB and a two-hour first integration
+ceiling; separate prototype environment. No superiority requirement for software
+acceptance and no further architecture gate unless a concrete failure requires one.
 
-No owner upload or UCloud command is needed now. No E001 run is reopened. Its
-2,500-bp cutoff and the thesis's 2,000-bp filter are not product constraints. New
-short-inclusive public/simulated development data may be used; eligibility and
-claims must be evaluated separately, not extrapolated from E001. No full GLM
-pretraining/fine-tuning or expanding benchmark campaign is the next milestone.
+No owner upload or UCloud command is needed now. Frozen GLM weights/features remain
+retained, deferred from the first prototype rather than globally rejected. The
+completed 2026-09-30 review/source audit is reused. No full-GLM training, VAE
+curriculum, additional architecture campaign or E001 rerun is planned. E001's
+2,500-bp cutoff and the thesis's 2,000-bp filter are not product constraints. The
+first configurable 500-bp default is an engineering choice; independent real-
+assembly/whole-genome and unsupported-length evaluation remain future work.
 
 ## Resources and continuity
 
@@ -80,6 +84,13 @@ adds 0.002224 (1 vCPU / 4 GB, 8.0065 driver seconds). These are partial accounti
 not exact billing or a remaining-balance estimate. Successful COMEBin condition
 files total 11.313 GB; the diagnostic archive is an additional 235.13 MB copy.
 Preserve retained assets/old attempts. No deletion is authorized.
+
+E003 retains 98 local files / 41.34 MB at acceptance, with a committed hash
+inventory; no extra model/environment copy. Its 1.04446 four-thread wall hours
+are local budget accounting, not UCloud charges. Sampled CPU/RSS receipts own
+interpretation because local extended-benchmark CPU/RAM fields are incomplete.
+Source acquisition/setup and analysis are outside the scientific driver clock;
+local retained files are not a remote backup.
 
 UCloud remains CPU-only and owner-operated. Persistent prefixes stay under
 `e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md). Frozen E001

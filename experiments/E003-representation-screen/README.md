@@ -1,6 +1,8 @@
 # E003: final frozen-GLM versus composition development screen
 
-Prepared: 2026-10-03. Status: planned; sources/panel/settings are committed before
+Prepared/completed: 2026-10-03. Execution: **completed**; scientific outcome:
+**does not support GLM inclusion under the precommitted joint criterion**, with
+positive grouping results retained. Sources/panel/settings were committed before
 scores. [D011](../../docs/decisions/D011-first-binner-prototype.md) and the owner's
 current instruction authorize this **final** bounded representation screen. Reuse
 [E002](../E002-dnabert-s-feasibility/README.md); do not rerun its benchmark.
@@ -125,7 +127,9 @@ The total cap includes the coordinator; sampled CPU and four-thread wall budget
 are local observations, not billed vCPU-hours. Outputs/failed attempts remain in
 ignored `artifacts/e003-representation-screen/`; raw/model data are never staged.
 
-Commit the protocol/code/manifests before this scientific command:
+The protocol/code/manifests were frozen in source commit
+`356df725a16375a81b686d867ce5d67c6c57bc1a` before this executed scientific command
+(provenance only; **do not repeat the accepted run**):
 
 ```sh
 env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE PYTHONNOUSERSITE=1 \
@@ -137,7 +141,97 @@ env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE PYTHONNOUSERSITE=1 \
 Fresh output directory required. Native progress/resource receipts are in
 `run-001/glm-monitor/terminal.log` and `resources.jsonl`; aggregate workflow output
 is `run-001/terminal.log`. No repeated E002 benchmark or new warmup campaign.
-Snakemake should skip valid completed rules on a dry-run of the finished directory;
-do not invoke the fresh driver there again. Code source commit, config/model/input
-hashes, import origins, final scores, actual costs and retained files will be
-recorded after inspection. Accepted native extraction is not repeated for analysis.
+The completed-directory dry-run schedules nothing. Do not invoke the fresh driver
+there again. Accepted native extraction is not repeated for analysis.
+
+## Accepted run and independent review, 2026-10-03
+
+`run-001` completed without a scientific failure/retry. All five computational
+rules ran on real inputs; no worker/model/clustering/scoring path was mocked.
+[Observed record](observed.json), [all-stratum metrics](metrics.tsv) and
+[retained-file hashes](retained-files.json) bind the result to source/config/input/
+model bytes. The E002 runtime and author model were reused read-only; its accepted
+inference benchmark was not repeated. A documentation-only D011 milestone draft
+was written during execution; the scientific producer, workflow, configuration,
+sources and sampling match the committed source exactly.
+
+[Independent retained-output review](review_retained.py) verified all source
+FASTA/XML hashes, source-to-fragment coordinates and hash sampling, nonoverlap,
+opaque ordered IDs, five length points and all 320 outcomes. Arrays are finite,
+nonzero 320×136 TNF and 320×768 GLM. No evidence-zero row was dropped. Independent
+fourmer counting agrees exactly with retained TNF; independent standardization,
+cosine neighbor ordering, graph edge counts and full-denominator per-fragment/
+aggregate scoring agree within 1e−12. No new communities were fitted. GLM receipts
+verify frozen weights, four numerical threads, interop one, loader zero, contiguous
+≤4,000-bp chunks covering every fragment and token limits. Three retained ambiguity
+bases produced six unknown tokens across both strands. No truncation/exclusion.
+
+| Fixed outcome | Raw TNF | Frozen DNABERT-S | GLM−TNF |
+| --- | ---: | ---: | ---: |
+| Short five-neighbor purity | 0.57396 | 0.45938 | −0.11458 |
+| Longer five-neighbor purity | 0.64844 | 0.65313 | +0.00469 |
+| All bp-weighted grouping B-cubed F1 | 0.30801 | 0.37664 | +0.06863 |
+| Short grouping B-cubed F1 | 0.01978 | 0.32558 | +0.30580 |
+| Short assigned fraction | 0.06771 | 0.91146 | +0.84375 |
+| All unassigned fragments | 209 | 40 | — |
+| Accepted communities (count was not supplied) | 14 | 19 | — |
+
+**Interpretation:** GLM clearly improved sampled-fragment grouping and assignment
+under this fixed clusterer. Better TNF short-neighbor purity did not translate to
+better grouping: the mutual-neighbor graph stranded most short TNF fragments.
+Assignment alone is not accuracy; B-cubed penalizes mixed/incomplete groups and
+counts noise as zero. This mixed result demonstrates why neighborhoods and final
+groups must be reported separately. It does not make raw TNF a uniformly better
+binner, nor establish that contrastive training will fix its grouping deficit.
+
+The joint rule required a short-neighbor gain of +0.10; the actual −0.11458 fails.
+Long-neighbor tolerance and the +0.05 bp-weighted F1 gain both pass, as do actual
+operational ceilings. **Follow the precommitted decision: defer frozen GLM from
+the first prototype and use 136-dimensional composition for our own compact
+contrastive encoder.** This is a conservative product choice under the stated
+joint criterion, not a rejection of GLM as a family. Its grouping advantage is
+substantial counterevidence to a blanket TNF preference. Do not change thresholds
+or tune this clusterer post hoc. Cost/projection alone did not cause deferral.
+
+## Actual cost, retention and verification limits
+
+On the same Intel i5-1038NG7 / 16-GiB Intel Mac as E002, the serial four-thread
+workflow took **940.014 s (15 min 40 s)**, with **1,435,561,984-byte** sampled peak
+subtree RSS and 3.395 sampled average CPUs. GLM supervision took 933.751 s with
+1,374,109,696-byte peak and 3.270 average CPUs; the native per-fragment extraction
+clock records 920.299 s. Whole workflow four-thread wall budget: 1.04446 thread
+hours, **not billed UCloud core-hours**. No HPC execution or proportional CPU
+scaling inference follows. Setup/source acquisition/review are outside these
+scientific clocks; this is not total project labor or spend. Memory is sampled,
+not an exact high-water mark. Subtree CPU counters can miss terminated children;
+they are observations rather than exact total CPU time.
+
+Retain per-rule extended benchmarks, but their local RAM and `cpu_time` fields
+are zero/unavailable and GLM `cpu_usage` is unsuitable as a percentage. These are
+not evidence of zero usage. The independent supervisors above own resource
+interpretation; do not rerun inference merely to repair benchmark reporting.
+
+At acceptance, the ignored E003 directory holds **98 files / 41,338,995 bytes**
+(41.34 MB), including source chromosomes/XML, panel FASTA, both feature caches,
+partitions, scores, command/progress/resource logs and preflight attempts. No new
+model/environment copy was made. These are local retained files, not a remote
+backup; preserve them. Versioned source URLs/hashes support reacquisition, and the
+committed source/pins support reconstruction if loss forces it. Normal analysis
+and the next milestone must reuse accepted caches, not reconstruct them.
+
+Five focused tests passed: independent TNF/strand/ambiguity counts, label-blind
+geometry/ties/noise, full-denominator metrics, joint thresholds and safe nested
+process cleanup. The initial cleanup test had an incorrect Popen exit-status
+assertion after psutil reaped the child; it was corrected before execution and
+the prior log retained. Initial dry-run sandbox cache access was resolved before
+execution using the explicit workdir cache. Neither was a failed scientific run.
+The completed-workdir dry-run confirms all valid stages are skipped. Independent
+native retained-array review above uses no mocks. Linux runtime remains untested;
+E002's unchanged extraction contracts supply pooling/strand/cache parity evidence.
+
+This closes the final bounded screen. Pretraining overlap remains unexcluded,
+the panel is transductive development, and grouping is not whole-MAG recovery.
+No comparison with contrastive-trained TNF has occurred. Proceed to
+[D011's first end-to-end implementation](../../docs/decisions/D011-first-binner-prototype.md#exact-next-milestone-first-learned-binner),
+keeping the raw control, all short strata and noise outcomes; no further architecture
+gate unless a concrete failure requires one. E001/H001 status is unchanged.

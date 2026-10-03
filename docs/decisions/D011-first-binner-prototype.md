@@ -1,8 +1,9 @@
-# D011: Contrastive-first prototype direction; sequence encoder provisional
+# D011: Composition-based contrastive first binner; frozen GLM deferred
 
-Date: 2026-09-30; feasibility update 2026-10-03. Status: accepted revised planning direction; final encoder choice
-is provisional pending the sole representation comparison below; CPU feasibility
-has passed. This replaces the compact-VAE-first
+Date: 2026-09-30; feasibility and final screen update 2026-10-03. Status: **accepted**
+first-prototype direction: 136-dimensional composition input to our own compact
+contrastive encoder. Frozen DNABERT-S is deferred under E003's precommitted joint
+criterion, with positive grouping evidence retained. This replaces the compact-VAE-first
 implementation recommendation in commit `e7d9636`. No binner has been implemented.
 The previous rationale is preserved in Git and the dated design review.
 
@@ -22,17 +23,17 @@ stronger default. E001 nevertheless shows similar VAMB/COMEBin local neighborhoo
 with very different final bins, so a VAE objective is not isolated as the cause of
 VAMB's recovery deficit. Marker/clustering, inputs and selection matter too.
 
-Prefer **a coherent small contrastive binner**, with the sequence representation
-still open between inexpensive composition/context features and a frozen
-species-aware genome-language-model encoder. A compact VAE is a useful low-cost
+Prefer **a coherent small contrastive binner**. The reassessment left its sequence
+representation open; E003 now chooses composition for the first implementation.
+A compact VAE is a useful low-cost
 control/fallback, not a required first model or learning curriculum. Transformer,
 contrastive objective and reference pretraining are distinct design choices; none
 wins merely through novelty or release date.
 
 A frozen GLM is a serious contender because it can import sequence information
 and biological priors beyond TNF without training a foundation model ourselves.
-Its CPU inference cost is now measured locally in E002; short-contig benefit
-remains unmeasured here. Do not
+Its CPU inference cost is measured locally in E002/E003; E003's short-contig
+grouping benefit and neighbor-purity loss are both retained below. Do not
 claim a highest ceiling, reject all Transformers on the cost of CompleteBin's
 whole workflow, or infer CPU inference cost from GPU pretraining cost.
 
@@ -78,54 +79,94 @@ This was the local feasibility task, with no prepared UCloud command. Owner oper
 any later UCloud test. A checkpoint merely loading is insufficient acceptance.
 Record a concrete feasibility decision; no genome-recovery claim follows.
 
-If the frozen route is resource-infeasible or needs a broad compatibility fork,
-proceed to the inexpensive contrastive prototype and retain the reason for deferral.
-If viable, permit **one small representation comparison** on new short-inclusive
-development data before choosing frozen GLM features over TNF/context. Freeze its
-scope, population, evaluation and cost first; this is the only follow-up selection
-gate, not a new large architecture/benchmark campaign. Relevant evidence is useful
-neighborhoods and bins at tolerable end-to-end cost, not an attractive projection
+The original contract allowed a resource-infeasible route to be deferred and a
+viable route to receive **one small representation comparison** with source,
+scope/evaluation/cost frozen first. That comparison is now completed in E003
+below; it does not authorize another gate. Relevant evidence includes useful
+neighborhoods and groups at tolerable end-to-end cost, not an attractive projection
 or decreasing loss alone. No full GLM pretraining/fine-tuning is planned.
 
-## Exact next milestone after measured feasibility
+## Completed final representation screen
 
 2026-10-03 owner clarification: this is the **final** representation screen and
 does not compare with a contrastive-trained composition encoder or prove complete
 genome recovery. E002 laptop projections are planning estimates, not a sole GLM
 rejection criterion. [E003](../../experiments/E003-representation-screen/README.md)
-now freezes the new source/panel manifests, label-blind geometry/clustering and
-joint utility criteria before scoring. After it resolves GLM inclusion, move
+froze the new source/panel manifests, label-blind geometry/clustering and
+joint utility criteria before scoring. It has resolved GLM inclusion; move
 directly to implementation without a further architecture gate unless a concrete
 failure requires one. This clarification also updates the durable agent guidance.
 
-Keep the sequence encoder provisional and prepare/execute **one small comparison**
-on new short-inclusive human-associated development data. At most 320 fragments
-and a practical target around 1 Mb: 64 windows at each tested length total 945,152
-bp and project to 14.2 minutes of extraction on this machine. Four threads, 8 GB,
-one-hour feature ceiling and two-hour complete local-run ceiling; no automatic
-UCloud execution. Freeze the source/accession/hash population, overlap limits,
-sampling, metrics, clustering, keep/defer criteria and cost before scores.
-Use label-blind neighbors and one fixed clusterer on shared IDs, retaining all
-length strata/unassigned outcomes. No oracle K, truth-selected configuration,
-tuning grid or third architecture selection campaign. A controlled genome-fragment
-panel is allowed; it is not real-assembly or independent whole-MAG evidence.
+E003 completed once on sixteen new human-associated reference chromosomes:
+320 nonoverlapping fragments / 945,152 bp, balanced at 500/768/1,000/2,500/10,000 bp.
+Sources/hash/overlap/sampling/metric/cluster/decision records were committed in
+`356df725a16375a81b686d867ce5d67c6c57bc1a` before scores. All native outputs were
+independently inspected without rerunning inference. Whole workflow: 940.014 s,
+1.436-GB sampled peak, four-thread limits; all operational ceilings passed.
 
-Why this remains worthwhile: the spike proves a modest comparison can run cheaply
-enough to measure the potential information gain, while full-sequence CPU cost
-is substantial. The explicit 29.536-Mb scenario projects to 7.394 hours; the
-817.438-Mb timing-only scenario to 229.016 hours, both rough local projections.
-Do not translate those into Linux performance or assumed 8/16-thread speedup.
-Do not restrict the product to the old E001 population, but do not call this a
-cheap default bulk encoder either. Lightweight contrastive learning remains the
-leading default. Choose frozen GLM only with meaningful utility and a defensible
-intended assembly-scale cost; defer it if the sole comparison does not justify
-that tradeoff. Then implement the small end-to-end learned product below.
+**Keep the agreed decision rule and defer GLM for this prototype.** GLM short
+five-neighbor purity was 0.45938 versus TNF 0.57396 (−0.11458), failing the required
++0.10 gain. Its longer delta +0.00469 and bp-weighted grouping F1 gain +0.06863
+passed the other criteria. Crucially, GLM grouped shorts much better: short F1
+0.32558 versus 0.01978; short assigned fraction 0.91146 versus 0.06771. Its advantage
+is real within this fixed fragment screen and must not be hidden. TNF's better
+local purity did not imply better fixed-clusterer grouping. This conservative
+choice follows a joint criterion, not a claim that composition has greater bin
+utility overall or that our untested training will solve its grouping deficit.
 
-## First usable product after the encoder choice
+The [E003 result](../../experiments/E003-representation-screen/README.md#accepted-run-and-independent-review-2026-10-03)
+owns metrics, source/runtime hashes, resource/storage accounting and review limits.
+This is not a trained contrastive-composition comparison or complete-MAG recovery;
+pretraining overlap is not excluded. Do not tune to these scores or add another
+architecture gate. Laptop bulk-runtime projections are rough planning estimates
+and were **not** the reason for GLM deferral. Preserve frozen features/pins and
+their positive findings; reopen an architecture only for a concrete failure or
+new product need, not automatically for another benchmark.
+
+## Exact next milestone: first learned binner
+
+Implement and locally execute a small installable Python package with our own
+PyTorch composition-based contrastive encoder and CLI. Raw input is the selected
+136-dimensional strand-collapsed TNF, plus explicit mean depth when available.
+Freeze the package's configuration/transform/input contracts in Git before the
+measured integration run. Use the following bounded engineering settings:
+one 128-unit hidden layer, 64-dimensional normalized output, two independently
+feature-masked views of the same contig (mask probability 0.1), NT-Xent loss,
+temperature 0.2, AdamW at 0.001, batch size 64, 20 epochs and seed 11. These are
+bounded initial implementation defaults, not evidence-selected optimal values.
+Different-ID in-batch negatives can be co-genomic; name that false-negative
+assumption and preserve a raw-feature control to expose damage. Labels must not
+enter training, transforms or clustering. Do not automatically add more losses.
+
+Validate FASTA plus explicit one/multiple-sample mean-depth TSV on the same
+contig axis, and define a sequence-only mode when depth is absent rather than
+fabricating observations. Sequence information and measured abundance are
+complementary inputs with an explicit rationale; the screen tests only sequence
+information. Keep original zero-depth masks and fitted transform statistics in
+checkpoints/cache manifests. Coverage fixtures may test the software contract,
+but are synthetic and cannot establish biological coverage benefit.
+Start with a configurable 500-bp eligibility default, retaining shorter/excluded
+IDs with explicit reasons. This is an engineering default, not a product minimum
+or an accuracy claim; the fourmer path requires at least one unambiguous fourmer.
+
+Deliver train→save→reload→embed→cluster→assignment TSV/bin FASTA export in a
+minimal Snakemake integration run. Reuse the accepted E003 **TNF** feature cache for its
+development demonstration instead of repeating the screen; test the package's
+fresh feature path on a tiny real input separately. Use the same fixed initial
+cluster procedure, retaining noise and all IDs. Measure the learned output beside
+the unlearned-feature control without truth tuning or superiority requirements.
+If training destroys useful signal or export/input contracts fail, diagnose that
+specific failure during implementation, without a new architecture campaign.
+Run failure checks for duplicate/missing/nonfinite IDs/depth, reordered caches,
+zero evidence, checkpoint reload and complete assignment/FASTA accounting.
+Keep numerical work serial within four threads, loader workers zero and 8 GB RAM;
+bound the first local integration to two hours. Separate prototype environments
+from read-only E001/E002 runtimes. Linux validation/owner deployment comes after
+the local implementation, not from extrapolating this laptop's speed.
 
 Keep the first product coherent: our own learned embedding/head, one fixed
-clustering procedure and complete assignment/bin exports. Reuse numerical libraries
-and, if chosen, the frozen backbone; a baseline executable behind a new CLI is not
+clustering procedure and complete assignment/bin exports. Reuse numerical libraries;
+a baseline executable behind a new CLI is not
 our learned implementation. A fixed clusterer is an initial engineering control,
 not an assumption that representation quality guarantees bins. Keep masks/embeddings
 and assignments so downstream failures can be distinguished from encoder failures.
@@ -134,8 +175,9 @@ The intended inputs remain an assembly FASTA and explicit mean-depth matrix for
 one or more samples mapped to that same assembly. Ordered contig/sample IDs,
 missing/duplicate/nonfinite-data checks, zero-evidence masks, transformation state,
 cache provenance and checkpoint inference are required. Coverage's complementary
-value must be measured, especially in single-sample mode. If GLM features enter,
-test replacing the composition representation first; do not automatically stack
+value must be measured, especially in single-sample mode. No GLM path enters this
+first implementation. If a later concrete need justifies it, test replacing the
+composition representation first; do not automatically stack
 TNF, GLM, VAE, contrastive, markers and graph components. Additional fusion needs
 an explicit information rationale and a control.
 
@@ -148,15 +190,17 @@ are chosen prospectively, not to fit E001. Preserve optional unassigned outcomes
 rather than force contaminated bins. No rule requires waiting for a paper-scale
 benchmark or novelty claim before a working tool.
 
-Common CLI/input validation, assignment accounting, embedding/cache manifests,
-FASTA export, progress/resource logging and a minimal Snakemake evaluation path
-can proceed alongside the spike. Avoid general plugin infrastructure. Deliver a
-real small train→save→reload→embed→cluster→export run after the encoder choice,
-with an unlearned-feature control and meaningful failure tests. Package/training
-settings must be committed before measured evaluation. No proposed CLI is called
-runnable until implemented and tested.
+Avoid general plugin infrastructure. A successful milestone means the actual
+learned train→save→reload→embed→cluster→export path works on retained development
+inputs, with reproducible inference, complete accounting, a raw-feature control
+and measured costs. It need not outperform that control to count as a working
+software implementation; report any degradation honestly and diagnose concrete
+failure. No proposed CLI is called runnable until implemented and tested.
 
 ## Alternatives and revisit conditions
+
+These remain serious alternatives, not a queue of new architecture gates. Revisit
+only for a concrete implementation failure or a new owner-defined product need.
 
 - **Compact VAE:** restore as preferred only if a matched inexpensive test gives
   worthwhile utility or the contrastive contract is unjustified. Native VAMB's
@@ -164,8 +208,10 @@ runnable until implemented and tested.
 - **Context-TNF Transformer:** credible short-context option, supported indirectly
   by CompleteBin; its stripped encoder's benefit is unmeasured. It may be efficient
   with a short fixed token sequence. Do not assume every large tool component is needed.
-- **Frozen GLM:** choose if actual inference is practical and the bounded comparison
-  shows useful signal/utility at its cost. If not, keep a resource or evidence deferral.
+- **Frozen GLM:** E003 gives positive grouping evidence but fails the joint
+  short-neighbor criterion. Deferred for this first prototype, not globally
+  rejected. Reconsider only for a concrete implementation failure/new product
+  need; no automatic second screen or laptop-projection veto.
 - **Full GLM training, taxonomy, graphs or neural merging:** reconsider with a
   concrete failure/input/resource case, not simply because another method uses them.
 

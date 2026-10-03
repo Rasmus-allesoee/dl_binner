@@ -166,3 +166,17 @@ Bulk extraction projections are expensive and hardware-specific, so encoder choi
 remains provisional. The sole next comparison is capped at 320 new short-inclusive
 development fragments with scope/evaluation/cost frozen first. No E001 result or
 H001 status changes, no additional seeds or architecture campaign authorized.
+
+2026-10-03 Q004/Q005 first-sequence-route resolution:
+[E003](../../experiments/E003-representation-screen/README.md) completes the final
+bounded screen on 320 new short-inclusive development fragments. All actual
+resource limits passed. GLM improves fixed-clusterer sampled grouping but loses
+short-neighbor purity; the precommitted joint inclusion criterion fails.
+[D011](../decisions/D011-first-binner-prototype.md) selects 136-dimensional
+composition input to our own compact contrastive encoder for the first software
+milestone, while retaining GLM's grouping benefit as counterevidence to any
+universal composition preference. No trained-composition, unseen-species or
+whole-genome recovery claim follows; pretraining overlap remains unexcluded.
+Q003's independent/real-assembly evaluation remains open. No Q001/H001/E001 status
+changes or further architecture gate; implement, retaining raw-feature controls,
+short strata and unassigned outcomes, and diagnose concrete failures as they arise.
