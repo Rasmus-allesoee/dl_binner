@@ -54,28 +54,50 @@ peak RSS 1.436 GB, four-thread budget. Deferral follows the precommitted utility
 rule, **not laptop runtime projections**. No trained-composition or whole-MAG
 comparison/generalization claim follows; pretraining overlap is not excluded.
 
-**E004's first binner implementation is prepared; freeze and execute its native
-integration once.** The installable package supplies strict FASTA/optional
-mean-depth input, our own compact contrastive encoder, fitted transforms,
-checkpoint inference, the fixed clusterer and complete assignment/bin exports.
-[E004](../experiments/E004-first-binner/README.md) owns the code/configuration,
-input/transform contracts and native preflight evidence. Commit these before the
-measured run; reuse accepted E003 TNF. Four threads, loader zero, 8 GB and a two-hour
-integration ceiling. Keep raw controls, all short strata, noise/exclusions and
-zero-depth masks. Labels enter only the final evaluator. Software acceptance does
-not require superiority; report measured utility and diagnose concrete failure
-without truth tuning or another architecture gate.
+**E004's first native learned binner is complete and accepted.**
+The installable package provides FASTA/optional explicit mean-depth inputs, our own
+25,792-parameter contrastive encoder, fitted transforms, checkpoint inference,
+fixed label-blind clustering and complete assignment/bin FASTA exports.
+[E004](../experiments/E004-first-binner/README.md) owns source/config/input hashes,
+all-stratum scores, independent retained diagnostics and actual resource receipts.
+Source/contracts were committed at `7b24a6b` before the single measured run.
+Accepted E003 TNF was reused; no E002/E003 inference was repeated. Reload matched
+exactly; both export paths preserve all 320 IDs/DNA; raw control matches E003.
+Completed-workdir dry-run schedules nothing. Thirteen focused checks and the real
+fixture DAG, fatal-input/repeated-invocation/resume checks pass without worker mocks.
+
+Utility is **mixed**, not a whole-MAG claim: bp-weighted grouping F1
+0.30801→0.42455 and short F1 0.01978→0.26065, but short-neighbor purity
+0.57396→0.42604 and bp-weighted precision 0.53209→0.44150 decline. Learned output:
+17 bins, 305 assigned / 15 noise. No constant collapse; retrospective batches have
+6.0124% co-genomic negative-ID pairs, a plausible contributor with causation
+untested. No truth tuning/retraining or new architecture gate. Coverage has input/
+mask tests only, with no biological benefit measured. Native Mac only; no Linux
+or assembly-scale throughput/quality validation. Scientific driver 17.797 s,
+0.411-GB sampled peak, 1.227 average CPUs under four-thread caps; learning itself
+0.595 s / 2.401 CPUs. Startup/serial work dominates, so caps do not imply full use.
+
+**Exact next step: prepare and locally test one owner-controlled CPU/Linux smoke
+job, with a capped human-associated assembly/explicit mean-depth pilot protocol
+and established bin-quality evaluation.**
+[D011](decisions/D011-first-binner-prototype.md#next-bounded-product-validation-after-e004)
+owns the scope: freeze data/overlap/evaluation/resource contracts, retain raw
+controls, shorts/masks/noise, validate native runtime/stage costs before increasing
+input size, and prepare the checksum-bound owner command. Codex must not execute
+UCloud. These check the implemented product's untested contracts rather than add
+an architecture selection gate. No automatic E001 rerun or new seed.
 
 The owner requests a **future non-blocking** comparison of learned TNF, frozen GLM
-plus a contrastive head, and a TNF–GLM hybrid with the same objective, even if this
+plus a contrastive head, and TNF–GLM hybrid with the same objective, even if this
 prototype works. [D011](decisions/D011-first-binner-prototype.md#planned-non-blocking-learned-representation-comparison)
-records its rationale and matched bin-quality/resource requirements. It is planned
-only, not implemented/run here and not a prerequisite for a working product/release.
+records its concrete rationale and matched bin-quality/resource requirements.
+Planned only, not implemented/run in E004 and not a release prerequisite.
 
-No owner upload or UCloud command is needed now. Frozen GLM weights/features remain
+No owner upload is needed for the completed local milestone. The next owner-run
+command must be prepared and tested; no Linux command is validated yet. Frozen GLM weights/features remain
 retained, deferred from the first prototype rather than globally rejected. The
 completed 2026-09-30 review/source audit is reused. No full-GLM training, VAE
-curriculum, additional architecture campaign or E001 rerun is planned. E001's
+curriculum, automatic architecture campaign or E001 rerun is planned. E001's
 2,500-bp cutoff and the thesis's 2,000-bp filter are not product constraints. The
 first configurable 500-bp default is an engineering choice; independent real-
 assembly/whole-genome and unsupported-length evaluation remain future work.
@@ -95,6 +117,12 @@ are local budget accounting, not UCloud charges. Sampled CPU/RSS receipts own
 interpretation because local extended-benchmark CPU/RAM fields are incomplete.
 Source acquisition/setup and analysis are outside the scientific driver clock;
 local retained files are not a remote backup.
+
+E004 retains 93 run files / 2.94 MB, plus its isolated environment, package wheel
+and setup/fixture logs. Actual four-thread scientific wall budget is 0.0197744
+hours, not UCloud charges; setup/tests/review excluded. Keep all artifacts and
+accepted E001/E002/E003 snapshots. The receipt-helper path repair affects only
+post-run collection; native scientific source/functions remain frozen.
 
 UCloud remains CPU-only and owner-operated. Persistent prefixes stay under
 `e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md). Frozen E001

@@ -13,6 +13,13 @@ serial within four CPU threads. A Linux recipe must select CPU PyTorch wheels
 explicitly and pass native checks before owner execution; local installation
 does not validate that recipe.
 
+The first actual local integration is accepted in E004: a frozen installed wheel
+trained and exported bins, checkpoint reload matched exactly, and the raw control
+matched E003. Grouping improved while short-neighbor purity/precision declined.
+This is working experimental software, not an established improvement in MAG
+recovery. The measured demo used sequence only; optional depth has native contract
+tests but no biological coverage result yet.
+
 Commands are `prepare`, `train`, `embed`, `cluster`, and `export`, with `--help`
 on each. `prepare` reads assembly FASTA and optional mean-depth TSV. Its header is
 `contig_id` followed by unique ordered sample names. Every FASTA ID needs one
@@ -20,6 +27,9 @@ nonnegative finite depth row; row order may vary, but extra/missing IDs fail.
 Absent depth is explicit sequence-only mode. Zero depth remains an observation,
 with original masks retained. Sample-column order must match the checkpoint at
 inference. Full IUPAC DNA is accepted; ambiguous fourmers do not supply TNF counts.
+Matching table IDs verifies the input axis, not read-mapping provenance: depth
+must originate from this assembly, with reference/alignment hashes recorded in
+the pilot. Coverage's biological value has not been established here.
 
 The default length cutoff is configurable 500 bp. Every original ID remains in
 the outputs, including excluded short/zero-evidence contigs and cluster noise.

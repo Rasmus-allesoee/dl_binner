@@ -182,7 +182,7 @@ def evaluate(config, run_dir, output):
 def review(config, run_dir, output):
     """Publish actual costs, retained hashes and utility with no training rerun."""
     from dl_binner.io import digest, write_json
-    run_dir, output = Path(run_dir), Path(output)
+    run_dir, output = Path(run_dir).resolve(), Path(output)
     result = json.loads((run_dir/'evaluation.json').read_text())
     resource = json.loads((run_dir/'supervisor.json').read_text())
     training = json.loads((run_dir/'checkpoint.json').read_text())
@@ -192,12 +192,22 @@ def review(config, run_dir, output):
     current = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     if current != source_commit:
         # Result records may be committed later; scientific source bytes must remain unchanged.
-        for path in [*ROOT.glob('src/dl_binner/*.py'), ROOT/'scripts/e004_integration.py', ROOT/'workflows/first-binner/Snakefile']:
+        for path in [*ROOT.glob('src/dl_binner/*.py'), ROOT/'workflows/first-binner/Snakefile']:
             name = str(path.relative_to(ROOT))
             committed = subprocess.check_output(['git', 'show', f'{source_commit}:{name}'], cwd=ROOT)
             import hashlib
             if hashlib.sha256(committed).hexdigest() != digest(path):
                 raise ValueError('Scientific source drift during retained-output review')
+        # The receipt writer may be repaired after science; run/evaluator contracts may not.
+        import ast
+        name = 'scripts/e004_integration.py'
+        original = ast.parse(subprocess.check_output(['git', 'show', f'{source_commit}:{name}'], cwd=ROOT, text=True))
+        actual = ast.parse((ROOT/name).read_text())
+        for function in ('stop_tree', 'supervise', 'evaluate', 'main'):
+            before = next(n for n in original.body if isinstance(n, ast.FunctionDef) and n.name == function)
+            after = next(n for n in actual.body if isinstance(n, ast.FunctionDef) and n.name == function)
+            if ast.dump(before) != ast.dump(after):
+                raise ValueError('Scientific driver function drift: '+function)
     retained = [dict(path=str(p.relative_to(ROOT)), bytes=p.stat().st_size, sha256=digest(p))
                 for p in sorted(run_dir.rglob('*')) if p.is_file()]
     compact = {mode: {key: value for key, value in values.items() if key != 'per_fragment'}

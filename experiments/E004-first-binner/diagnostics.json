@@ -1,0 +1,74 @@
+{
+  "embeddings": {
+    "learned": {
+      "distinct_rows": 320,
+      "finite": true,
+      "nonconstant_dimensions": 64,
+      "norm_max": 1.0000000967751341,
+      "norm_min": 0.9999998861773282,
+      "shape": [
+        320,
+        64
+      ],
+      "short_neighbor_by_origin": {
+        "NC_000907.1": 0.3333333333333334,
+        "NC_002946.2": 0.3666666666666667,
+        "NC_002950.2": 0.4666666666666666,
+        "NC_002967.9": 0.5000000000000001,
+        "NC_003112.2": 0.23333333333333336,
+        "NC_003454.1": 0.5333333333333333,
+        "NC_004350.2": 0.3333333333333333,
+        "NC_006085.1": 0.8166666666666665,
+        "NC_009009.1": 0.35000000000000003,
+        "NC_009785.1": 0.2833333333333334,
+        "NC_013192.1": 0.6999999999999998,
+        "NC_013715.1": 0.6666666666666666,
+        "NC_013853.1": 0.31666666666666665,
+        "NC_014643.1": 0.35000000000000003,
+        "NC_015964.1": 0.21666666666666667,
+        "NC_016610.1": 0.35000000000000003
+      }
+    },
+    "raw": {
+      "distinct_rows": 320,
+      "finite": true,
+      "nonconstant_dimensions": 136,
+      "norm_max": 0.1743371447297466,
+      "norm_min": 0.0894473576625384,
+      "shape": [
+        320,
+        136
+      ],
+      "short_neighbor_by_origin": {
+        "NC_000907.1": 0.6,
+        "NC_002946.2": 0.41666666666666674,
+        "NC_002950.2": 0.6833333333333332,
+        "NC_002967.9": 0.5999999999999999,
+        "NC_003112.2": 0.36666666666666664,
+        "NC_003454.1": 0.9333333333333335,
+        "NC_004350.2": 0.5166666666666666,
+        "NC_006085.1": 0.9500000000000001,
+        "NC_009009.1": 0.5333333333333333,
+        "NC_009785.1": 0.3166666666666667,
+        "NC_013192.1": 0.8833333333333333,
+        "NC_013715.1": 0.8833333333333333,
+        "NC_013853.1": 0.23333333333333336,
+        "NC_014643.1": 0.46666666666666673,
+        "NC_015964.1": 0.30000000000000004,
+        "NC_016610.1": 0.5
+      }
+    }
+  },
+  "independent_neighbors_and_per_fragment_metrics": true,
+  "inputs": {
+    "learned.embeddings.npz": "c6c734f22b382f40e583ca27fa68cdc40bde7a602fc40aed8ceebfce010062a6",
+    "raw.embeddings.npz": "f818f2b57bae8ac80c6a99a99224fa002d8d1b6438f3e907656cc1210088b0a2"
+  },
+  "interpretation": "No constant-output collapse. ID-discrimination objective includes co-genomic negatives and can reduce genome neighborhoods; exposure is measured, causation untested. Grouping/recall improves while precision and short-neighbor purity fall. No retraining/tuning performed.",
+  "negative_exposure": {
+    "co_genomic_ID_pairs": 24242,
+    "fraction": 0.060124007936507934,
+    "mean_per_anchor": 3.7878125,
+    "negative_ID_pairs": 403200
+  }
+}

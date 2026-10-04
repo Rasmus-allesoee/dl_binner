@@ -5,7 +5,7 @@ first-prototype direction: 136-dimensional composition input to our own compact
 contrastive encoder. Frozen DNABERT-S is deferred under E003's precommitted joint
 criterion, with positive grouping evidence retained. This replaces the compact-VAE-first
 implementation recommendation in commit `e7d9636`. [E004](../../experiments/E004-first-binner/README.md)
-implements the first product; measured integration is pending.
+implements the first product; its native local integration is complete and accepted.
 The previous rationale is preserved in Git and the dated design review.
 
 ## Why the decision changed
@@ -125,6 +125,10 @@ their positive findings; reopen an architecture only for a concrete failure or
 new product need, not automatically for another benchmark.
 
 ## Exact next milestone: first learned binner
+
+Completed 2026-10-04 in [E004](../../experiments/E004-first-binner/README.md).
+The following contract is preserved as the acceptance basis, not a rerun request.
+Next product validation is specified below.
 
 Implement and locally execute a small installable Python package with our own
 PyTorch composition-based contrastive encoder and CLI. Raw input is the selected
@@ -252,4 +256,25 @@ time, peak RSS, storage, actual CPU use and allocated vCPU-hours on matched
 hardware/allocation. Separate fresh GLM feature cost from cache reuse/amortized
 cost, and setup from science; include backbone/dependency payload cost. Compare
 quality/resource tradeoffs, without ranking by this laptop's projections alone.
-The next concrete task remains E004 implementation and retained-output review.
+E004 is now complete; the next concrete task is product validation below.
+
+## Next bounded product validation after E004
+
+E004 accepts a real installable 25,792-parameter encoder and complete native
+train/reload/export path. Grouping F1 improves 0.30801→0.42455 (bp-weighted), but
+short-neighbor purity declines 0.57396→0.42604 and grouping precision also falls.
+Retained diagnostics exclude constant collapse and measure co-genomic negative
+exposure; they do not isolate its cause. Do not tune to those labels or mistake
+software acceptance for validated genome recovery/coverage benefit.
+
+The exact next task is to **prepare and locally test one owner-controlled CPU/Linux
+smoke job**, with a prospectively capped human-associated assembly/mean-depth
+pilot protocol and an established bin-quality evaluator. Freeze source/hash/
+overlap/input/evaluation/cost contracts; select existing assets when their
+contracts fit. Keep raw controls, configurable shorts and all noise. Bound the
+pilot before launch and validate native runtime and stage cost before increasing
+input size. Do not assume linear CPU scaling: current timing is dominated by
+startup and some feature/graph work is serial. No UCloud execution by Codex.
+Linux/assembly/coverage checks address the current product's untested contracts,
+not another architecture selection gate. A larger public benchmark, release and
+the future three-way comparison remain separate, non-blocking follow-ups.

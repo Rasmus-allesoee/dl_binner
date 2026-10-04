@@ -180,3 +180,17 @@ whole-genome recovery claim follows; pretraining overlap remains unexcluded.
 Q003's independent/real-assembly evaluation remains open. No Q001/H001/E001 status
 changes or further architecture gate; implement, retaining raw-feature controls,
 short strata and unassigned outcomes, and diagnose concrete failures as they arise.
+
+2026-10-04 Q004 software milestone completed:
+[E004](../../experiments/E004-first-binner/README.md) accepts the actual installed
+composition/contrastive train→checkpoint reload→embed→fixed cluster→export path,
+with complete ID/DNA accounting, raw control and measured costs. Grouping improves
+within this development panel while precision/short-neighbor purity decline;
+co-genomic negatives are observed but their causal role untested. This is not
+whole-genome recovery or independent biological validation. Q003 and coverage's
+biological value remain open; the next bounded product task is CPU/Linux native
+validation and an assembly/explicit-depth pilot protocol. H001/E001 are unchanged.
+The owner also requests a later **non-blocking** matched TNF/contrastive,
+frozen-GLM/contrastive-head and hybrid comparison even if the prototype works.
+[D011](../decisions/D011-first-binner-prototype.md#planned-non-blocking-learned-representation-comparison)
+owns that plan; nothing from it is implemented or run during E004.

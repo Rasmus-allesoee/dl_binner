@@ -1,6 +1,8 @@
 # E004: first composition-based learned binner
 
-Prepared: 2026-10-04. Execution: planned; biological outcome: not assessed.
+Prepared/completed: 2026-10-04. Execution: **completed**. Software outcome:
+**accepted first native implementation**. Scientific outcome: mixed development
+fragment-grouping utility; whole-genome recovery and coverage benefit unassessed.
 This is [D011](../../docs/decisions/D011-first-binner-prototype.md)'s first software
 milestone, not another encoder selection gate. The owner also requests a future
 three-way learned TNF/GLM/hybrid comparison; it is recorded in D011 and is neither
@@ -103,7 +105,9 @@ failure log remains in `setup/`. The successful new virtual environment uses
 downloaded pinned wheels; package wheel/runtime inventories are retained. No
 executed environment relocation or source-tool modification.
 
-Commit code/config/contracts before this measured command (one fresh attempt):
+Source/config/contracts were committed as
+`7b24a6b9677d8d7625d392aa0fc0a189952767cb` before this single measured command
+(provenance only; **do not repeat the accepted run**):
 
 ```sh
 env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE PYTHONNOUSERSITE=1 \
@@ -118,3 +122,86 @@ are not a remote backup. Small observed metrics, hashes and conclusions are
 committed after retained-output review. A completed-workdir dry-run must schedule
 nothing; do not invoke the fresh driver on an accepted attempt. Linux/assembly-scale
 validation and eventual publication are separate milestones; neither is claimed.
+
+## Accepted result and limitations
+
+`run-001` passed all nine native computational rules. The frozen installed wheel,
+not an editable source link or mocked baseline, performed actual training and
+checkpoint inference. All 320 eligible IDs appeared in every one of twenty
+epochs. Pre-save versus separately reloaded embeddings agree **exactly** (maximum
+absolute difference 0). Both exports preserve all 320 contig IDs and normalized
+DNA exactly once; the learned output has 17 bins, 305 assigned and 15 unassigned,
+with no length/evidence exclusions in this particular panel. Separate fixtures
+verify exclusion behavior. Native raw-control assignments/neighbors/graph/masks
+match accepted E003 exactly. The completed-workdir dry-run schedules nothing.
+
+[Observed receipt](observed.json) binds actual source/configuration, costs and
+93 retained-file hashes; [all-stratum metrics](observed.metrics.tsv) include every
+length point and noise. [Independent diagnostics](diagnose_retained.py) and
+[diagnostic result](diagnostics.json) recompute neighbor ordering and every
+per-fragment B-cubed contribution from retained arrays without training or fitting
+new communities. The receipt helper initially mixed relative and absolute paths;
+its post-run path normalization was fixed and specifically tested. Native run/
+evaluator functions and package source remain unchanged; this did not repeat
+science. Thirteen focused tests now pass (twelve native contracts plus the
+receipt-path regression), alongside the full fixture DAG/fatal/repeated/resume
+checks. No production path was mocked; Linux remains untested.
+
+| Development outcome | Raw control | Learned composition |
+| --- | ---: | ---: |
+| Overall bp-weighted grouping F1 | 0.30801 | 0.42455 |
+| Overall bp-weighted grouping precision | 0.53209 | 0.44150 |
+| Overall bp-weighted grouping recall | 0.21674 | 0.40885 |
+| Short grouping F1 | 0.01978 | 0.26065 |
+| Short five-neighbor purity | 0.57396 | 0.42604 |
+| Longer five-neighbor purity | 0.64844 | 0.63281 |
+| Unassigned fragments | 209 | 15 |
+
+**Interpretation:** learning improves grouping/coverage of the sampled fragments,
+but reduces precision and short-neighbor purity. Higher assignment is not proof
+of better bins; bp-weighted F1 improves partly through greater recall while groups
+remain mixed. The 10-kb neighbor point improves (0.70000→0.74688), while the other
+four points decline; all are retained. Do not hide these losses or apply E003's
+different inclusion criterion retroactively as a software gate. There was no
+constant-output collapse: all 320 vectors are distinct, all 64 dimensions vary,
+norms are approximately one, and outputs are finite. Loss decreases 4.04156→1.14037;
+that alone does not establish genomic signal.
+
+Retrospectively reconstructing the deterministic batches finds **6.0124%** of
+negative-ID comparisons are co-genomic, averaging **3.7878** co-genomic negative
+IDs per anchor/batch. The implemented objective discriminates contig identities
+and can push same-genome fragments apart. This measured exposure is a plausible
+explanation for neighborhood loss, **not a causal attribution or proof of the
+only cause**. No truth-based correction, extra objective, architecture gate,
+retraining or hyperparameter tuning follows. Preserve the raw control and the
+owner's future matched TNF/GLM/hybrid plan. The software milestone passes; bin
+quality still requires a bounded assembly/coverage pilot and honest evaluation.
+
+## Actual resources and retained storage
+
+The scientific driver took **17.79698 s**, peak sampled subtree RSS
+**410,550,272 bytes (0.411 GB)** and sampled average **1.227 CPUs** under the
+four-thread cap. Native learning itself: **0.59505 s**, process CPU **1.42882 s**,
+average **2.401 CPUs**, Torch intraop four/interop one, loader zero, reconciled
+four-thread library pools. The model has **25,792 parameters**. Imports/serial I/O/
+orchestration dominate this tiny run; a four-thread cap is not evidence of full
+four-core use or assembly-scale throughput. Four-thread wall budget: **0.0197744
+hours**, local accounting only. Setup/downloads/tests/review are excluded. Same
+Intel i5-1038NG7 / 16-GiB host as E002/E003; no GPU or UCloud work.
+
+Per-rule benchmarks/logs remain retained, but local extended benchmark RAM and
+`cpu_time` fields again report zero/unavailable. Use the independent supervisor
+and native training clock instead; do not rerun accepted science for those fields.
+The accepted run snapshot has **93 files / 2,944,028 bytes (2.94 MB)**, excluding
+the separately retained environment, wheel/download/setup caches and old fixtures.
+No accepted E002/E003 assets were changed or deleted. An ignored local directory
+is not a backup. Future Linux validation must use a CPU wheel recipe and retain
+effective resources, payload/setup and total allocated-cost measurements; do not
+infer linear speedup from this small local run. Fresh TNF extraction and greedy
+modularity include serial work and are not yet validated at assembly scale.
+
+Local `du -sk` at closure reports 808,332 KiB for the isolated environment
+(827.73 MB of allocated filesystem blocks) and 179,236 KiB for setup/wheel/download/
+fixture evidence (183.54 MB). These are separate from the run's logical file-byte
+inventory and do not include the shared read-only base interpreter. Preserve
+them; no cleanup is authorized or needed for this milestone.

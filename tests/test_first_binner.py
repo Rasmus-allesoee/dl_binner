@@ -16,7 +16,7 @@ from dl_binner import io, model, clustering
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'scripts'))
 from e003_representation_screen import geometry as reference_geometry
-from e004_integration import supervise
+from e004_integration import supervise, review
 
 
 def dna_fixture(folder, number=9):
@@ -215,6 +215,21 @@ class NativeBinnerTests(unittest.TestCase):
         report = supervise(command, self.folder/'guard', seconds=.4, ram_bytes=8000000000)
         self.assertEqual(report['stop_reason'], 'Time ceiling')
         self.assertLess(report['wall_seconds'], 5)
+
+    def test_receipt_writer_accepts_relative_retained_paths(self):
+        with tempfile.TemporaryDirectory(dir=ROOT/'artifacts/e004-first-binner/setup') as name:
+            folder = Path(name)
+            metrics = dict(fragments=2, bp=1000, neighbor_purity=0., b3_precision=0., b3_recall=0., b3_f1=0., assigned_fraction=0.)
+            score = {k:metrics for k in ('all','base_weighted','short','long')};score['by_length']={'500':metrics}
+            commit = subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+            (folder/'evaluation.json').write_text(json.dumps(dict(source_commit=commit,scores=dict(raw=score,learned=score),checks={},reload_max_abs=0,limits='software fixture')))
+            (folder/'supervisor.json').write_text(json.dumps(dict(exit_code=0,stop_reason=None,wall_seconds=1,peak_sampled_rss_bytes=1)))
+            (folder/'checkpoint.json').write_text('{}')
+            output = self.folder/'receipt.json'
+            review(dict(limits=dict(seconds=7200,ram_bytes=8000000000)),folder.relative_to(ROOT),output)
+            observed = json.loads(output.read_text())
+            self.assertEqual(observed['run_locator'],str(folder.relative_to(ROOT)))
+            self.assertEqual(len(observed['retained_files']),3)
 
 
 if __name__ == '__main__':
