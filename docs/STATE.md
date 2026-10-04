@@ -1,6 +1,6 @@
 # Current Research State
 
-Updated: 2026-10-03. This is the single current handoff.
+Updated: 2026-10-04. This is the single current handoff.
 
 ## Direction and completed work
 
@@ -54,19 +54,23 @@ peak RSS 1.436 GB, four-thread budget. Deferral follows the precommitted utility
 rule, **not laptop runtime projections**. No trained-composition or whole-MAG
 comparison/generalization claim follows; pretraining overlap is not excluded.
 
-**Implement and locally run D011's first end-to-end learned binner:** our own
-compact contrastive encoder using 136-dimensional composition, explicit optional
-mean-depth inputs, one fixed label-blind clusterer and complete assignment/bin
-exports. [D011](decisions/D011-first-binner-prototype.md#exact-next-milestone-first-learned-binner)
-fixes the initial learning settings, software contracts and acceptance boundary.
-Commit package/config/transform contracts before measured integration. Demonstrate
-train→save→reload→embed→cluster→export using accepted E003 TNF cache, alongside the
-raw-feature control, with tiny real fresh-feature checks and meaningful failure
-tests. Retain all length strata, noise, zero-depth masks and exclusion reasons;
-labels must not enter training or selection. Synthetic depth tests establish input
-contracts only. Four threads, loader zero, 8 GB and a two-hour first integration
-ceiling; separate prototype environment. No superiority requirement for software
-acceptance and no further architecture gate unless a concrete failure requires one.
+**E004's first binner implementation is prepared; freeze and execute its native
+integration once.** The installable package supplies strict FASTA/optional
+mean-depth input, our own compact contrastive encoder, fitted transforms,
+checkpoint inference, the fixed clusterer and complete assignment/bin exports.
+[E004](../experiments/E004-first-binner/README.md) owns the code/configuration,
+input/transform contracts and native preflight evidence. Commit these before the
+measured run; reuse accepted E003 TNF. Four threads, loader zero, 8 GB and a two-hour
+integration ceiling. Keep raw controls, all short strata, noise/exclusions and
+zero-depth masks. Labels enter only the final evaluator. Software acceptance does
+not require superiority; report measured utility and diagnose concrete failure
+without truth tuning or another architecture gate.
+
+The owner requests a **future non-blocking** comparison of learned TNF, frozen GLM
+plus a contrastive head, and a TNF–GLM hybrid with the same objective, even if this
+prototype works. [D011](decisions/D011-first-binner-prototype.md#planned-non-blocking-learned-representation-comparison)
+records its rationale and matched bin-quality/resource requirements. It is planned
+only, not implemented/run here and not a prerequisite for a working product/release.
 
 No owner upload or UCloud command is needed now. Frozen GLM weights/features remain
 retained, deferred from the first prototype rather than globally rejected. The

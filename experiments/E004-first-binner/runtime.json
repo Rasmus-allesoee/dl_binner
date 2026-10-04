@@ -1,0 +1,41 @@
+{
+  "python": "3.10.15 | packaged by conda-forge | (main, Oct 16 2024, 01:21:29) [Clang 17.0.6 ]",
+  "executable": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e004-first-binner/env-v1/bin/python",
+  "base_prefix": "/opt/miniconda3/envs/anvio-dev",
+  "site_packages_isolated": true,
+  "versions": {
+    "numpy": "1.26.4",
+    "torch": "2.2.2",
+    "networkx": "3.4.2",
+    "psutil": "6.0.0",
+    "threadpoolctl": "3.5.0",
+    "filelock": "4.0.10",
+    "typing-extensions": "4.16.0",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "jinja2": "3.1.6",
+    "MarkupSafe": "3.0.4",
+    "fsspec": "2026.9.0",
+    "setuptools": "65.5.0",
+    "wheel": "0.45.1",
+    "pip": "23.0.1",
+    "dl-binner": "0.1.0.dev0"
+  },
+  "imports": {
+    "numpy": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e004-first-binner/env-v1/lib/python3.10/site-packages/numpy/__init__.py",
+    "torch": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e004-first-binner/env-v1/lib/python3.10/site-packages/torch/__init__.py",
+    "networkx": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e004-first-binner/env-v1/lib/python3.10/site-packages/networkx/__init__.py",
+    "psutil": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e004-first-binner/env-v1/lib/python3.10/site-packages/psutil/__init__.py",
+    "threadpoolctl": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e004-first-binner/env-v1/lib/python3.10/site-packages/threadpoolctl.py",
+    "dl_binner": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e004-first-binner/env-v1/lib/python3.10/site-packages/dl_binner/__init__.py"
+  },
+  "package_code_sha256": {
+    "__init__.py": "5cf2f8ec1e3ed2d9aba9d2c75b4be6a889007683120044d3a31a294c0fe5c88a",
+    "__main__.py": "28f47a18f1a12c011b4fa92812d8f4fb10840c469d489ee5ac246bc669620144",
+    "cli.py": "5f52dc6779695c08bdaf82df79b7a40bddc6b71712da0e0dedc2bc2e311f84f0",
+    "clustering.py": "2ac715b1449287b002ef7e4a75b84ef204256c2d5f589e31a6810acfad941b66",
+    "io.py": "71b0c423c046b3c72b651141e853ea622a62742fc087afeef37fbf9c253c2307",
+    "model.py": "acc1f3c450910112cd7883cc6284139046fde6b339e73b82638d301d8e5a9948"
+  },
+  "wheel_sha256": "1e3cfe6c96c6e7453242ad95ba15657789dd8318a2403ea0ad08067546fe3a7a"
+}

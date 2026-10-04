@@ -4,7 +4,8 @@ Date: 2026-09-30; feasibility and final screen update 2026-10-03. Status: **acce
 first-prototype direction: 136-dimensional composition input to our own compact
 contrastive encoder. Frozen DNABERT-S is deferred under E003's precommitted joint
 criterion, with positive grouping evidence retained. This replaces the compact-VAE-first
-implementation recommendation in commit `e7d9636`. No binner has been implemented.
+implementation recommendation in commit `e7d9636`. [E004](../../experiments/E004-first-binner/README.md)
+implements the first product; measured integration is pending.
 The previous rationale is preserved in Git and the dated design review.
 
 ## Why the decision changed
@@ -200,7 +201,8 @@ failure. No proposed CLI is called runnable until implemented and tested.
 ## Alternatives and revisit conditions
 
 These remain serious alternatives, not a queue of new architecture gates. Revisit
-only for a concrete implementation failure or a new owner-defined product need.
+for a concrete implementation failure or an owner-defined follow-up such as the
+planned non-blocking comparison below; neither delays the first working product.
 
 - **Compact VAE:** restore as preferred only if a matched inexpensive test gives
   worthwhile utility or the contrastive contract is unjustified. Native VAMB's
@@ -210,8 +212,8 @@ only for a concrete implementation failure or a new owner-defined product need.
   with a short fixed token sequence. Do not assume every large tool component is needed.
 - **Frozen GLM:** E003 gives positive grouping evidence but fails the joint
   short-neighbor criterion. Deferred for this first prototype, not globally
-  rejected. Reconsider only for a concrete implementation failure/new product
-  need; no automatic second screen or laptop-projection veto.
+  rejected. Its learned-head/hybrid comparison is a future owner-requested
+  follow-up, not an automatic second gate or laptop-projection veto.
 - **Full GLM training, taxonomy, graphs or neural merging:** reconsider with a
   concrete failure/input/resource case, not simply because another method uses them.
 
@@ -219,3 +221,35 @@ E001 remains closed at amended seed-11 scope; H001 and its original three-seed
 criterion remain unresolved, seeds 23/47 deferred. New short-inclusive data are
 allowed without reopening E001. Publication remains a separate owner action with
 license/history review.
+
+## Planned non-blocking learned-representation comparison
+
+Owner request, 2026-10-04: record a future comparison **even if the first prototype
+works**. It is planned only; do not implement or run it during E004, and do not
+make it a prerequisite for a working prototype or release. Freeze its dataset,
+scope/cost/criteria before a later separately authorized execution.
+
+Compare (1) TNF plus contrastive learning, (2) frozen GLM features plus a
+contrastively trained head, and (3) a TNF–GLM hybrid with that same contrastive
+objective. Rationale for the hybrid is concrete: E003's TNF has better short
+local purity while GLM has better fixed grouping/support; they may provide
+complementary information. This is an untested hypothesis, not evidence for
+adding both to today's implementation. E003 compared raw representations and
+does not resolve which route learns useful bins under a matched objective.
+
+Match source/assembly/depth inputs, eligibility, head hidden/output dimensions,
+augmentation semantics, training steps/seeds and fixed truth-free clustering/
+selection. Explain any unavoidable differences such as input width/parameter
+count and modality scaling. Retain raw controls, noise, masks and length strata;
+no oracle K or truth-selected setting. Use prospective community/assembly truth
+for matched bin quality (e.g. AMBER plus purity-constrained assembled-sequence
+recovery); keep fragment grouping distinct if included as a diagnostic. Include
+short contigs, genome/reference/pretraining overlap and independent/development
+roles explicitly. Do not automatically reopen E001 or enlarge a benchmark campaign.
+
+Measure complete feature extraction + head training + clustering/evaluation wall
+time, peak RSS, storage, actual CPU use and allocated vCPU-hours on matched
+hardware/allocation. Separate fresh GLM feature cost from cache reuse/amortized
+cost, and setup from science; include backbone/dependency payload cost. Compare
+quality/resource tradeoffs, without ranking by this laptop's projections alone.
+The next concrete task remains E004 implementation and retained-output review.

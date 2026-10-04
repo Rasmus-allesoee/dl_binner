@@ -189,6 +189,9 @@ requires one. A frozen-GLM versus raw-composition screen does not compare agains
 contrastive-trained composition encoder or prove whole-genome recovery. Treat local
 runtime projections as rough planning estimates, not the sole reason to reject a
 sequence route with useful evidence.
+An explicitly owner-requested later comparison can remain a non-blocking follow-up
+even when the first prototype works. Recording that plan does not authorize its
+execution during the current milestone or create another implementation/release gate.
 
 Do not attempt to plan the entire project in rigid detail from start to finish.
 

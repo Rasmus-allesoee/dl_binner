@@ -38,3 +38,7 @@ python3 scripts/check_docs.py --check-context
 The first command validates links in maintained documents using Pandoc's Markdown parser. The second also checks the recorded local source hashes; missing optional caches are reported separately. Neither runs a scientific experiment or validates a paper's claims.
 
 The research record is maintained in Git. See [the current state](docs/STATE.md) for branch and remote status.
+
+The experimental [first binner package](docs/PROTOTYPE.md) and
+[E004 integration record](experiments/E004-first-binner/README.md) describe the
+current software implementation and its validation limits.

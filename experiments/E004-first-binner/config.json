@@ -1,0 +1,36 @@
+{
+  "config_path": "experiments/E004-first-binner/config.json",
+  "python": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e004-first-binner/env-v1/bin/python",
+  "snakemake": "/opt/miniconda3/envs/snakemake_env/bin/snakemake",
+  "fasta": "artifacts/e003-representation-screen/input/fragments.fna",
+  "tnf_cache": "artifacts/e003-representation-screen/run-001/tnf.features.npz",
+  "tnf_receipt": "artifacts/e003-representation-screen/run-001/tnf.features.json",
+  "raw_partition_reference": "artifacts/e003-representation-screen/run-001/tnf.partition.json",
+  "truth_panel": "experiments/E003-representation-screen/panel.json",
+  "training": "experiments/E004-first-binner/training.json",
+  "depth": null,
+  "limits": {
+    "threads": 4,
+    "ram_bytes": 8000000000,
+    "seconds": 7200
+  },
+  "input_hashes": {
+    "artifacts/e003-representation-screen/input/fragments.fna": "3e2df7027ba2b401629297d5217cf34b3a4e0dae19e1da5488981c8a1687b469",
+    "artifacts/e003-representation-screen/run-001/tnf.features.npz": "be30ea1d7172ebd889c5e2bc2e4dd2b40bc1fa4576798d1d465473a4c1a6c5de",
+    "artifacts/e003-representation-screen/run-001/tnf.features.json": "9c95b4402e1681b9b7742d32e69832a20c126b60f9dc51b228429d7a3b8d1716",
+    "artifacts/e003-representation-screen/run-001/tnf.partition.json": "11ce84f07e3b542795b23e4b8403f2183d2f3a8391d2c96737027c8a7a9c9720",
+    "experiments/E003-representation-screen/panel.json": "cdb7f03e817a8cb787d6f459206565777317ac10497ba43439905e3c0eb3f702",
+    "experiments/E004-first-binner/training.json": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5",
+    "experiments/E004-first-binner/runtime.json": "026afd3c2e77a7ce62188d90ff7305f7b20b364272a33f4b421fd523bc5b9093"
+  },
+  "data_role": "accepted E003 transductive development fragments; labels only in final evaluator",
+  "min_length": 500,
+  "package_code_sha256": {
+    "__init__.py": "5cf2f8ec1e3ed2d9aba9d2c75b4be6a889007683120044d3a31a294c0fe5c88a",
+    "__main__.py": "28f47a18f1a12c011b4fa92812d8f4fb10840c469d489ee5ac246bc669620144",
+    "cli.py": "5f52dc6779695c08bdaf82df79b7a40bddc6b71712da0e0dedc2bc2e311f84f0",
+    "clustering.py": "2ac715b1449287b002ef7e4a75b84ef204256c2d5f589e31a6810acfad941b66",
+    "io.py": "71b0c423c046b3c72b651141e853ea622a62742fc087afeef37fbf9c253c2307",
+    "model.py": "acc1f3c450910112cd7883cc6284139046fde6b339e73b82638d301d8e5a9948"
+  }
+}

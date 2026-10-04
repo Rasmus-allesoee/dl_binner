@@ -1,0 +1,12 @@
+{
+  "hidden": 128,
+  "output": 64,
+  "mask_probability": 0.1,
+  "temperature": 0.2,
+  "learning_rate": 0.001,
+  "weight_decay": 0.01,
+  "batch_size": 64,
+  "epochs": 20,
+  "seed": 11,
+  "inference_batch_size": 64
+}

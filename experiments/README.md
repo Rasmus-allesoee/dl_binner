@@ -9,6 +9,7 @@ reproduced result of this project.
 - [E001: Where does reduced coverage evidence lose recoverable sequence?](E001-coverage-thinning/README.md)
 - [E002: Bounded frozen DNABERT-S CPU feasibility](E002-dnabert-s-feasibility/README.md)
 - [E003: Final frozen-GLM versus composition development screen](E003-representation-screen/README.md)
+- [E004: First composition-based learned binner](E004-first-binner/README.md)
 
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 

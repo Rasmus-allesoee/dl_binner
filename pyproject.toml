@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools==65.5.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dl-binner"
+version = "0.1.0.dev0"
+description = "Experimental composition-based contrastive metagenomic binner"
+readme = "docs/PROTOTYPE.md"
+requires-python = ">=3.10,<3.13"
+dependencies = ["numpy==1.26.4", "torch==2.2.2", "networkx==3.4.2", "threadpoolctl==3.5.0"]
+
+[project.scripts]
+dl-binner = "dl_binner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
