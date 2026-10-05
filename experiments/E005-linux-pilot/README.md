@@ -71,6 +71,14 @@ then keeps **all** GSA contigs of selected genomes. Size ceilings: four genomes,
 small product test toward a tractable short-inclusive panel. No genome is chosen
 using prior binner scores; no genome count reaches the clusterer.
 
+Alternatives considered: E001's filtered input misses the shorter contracts;
+a random contig cap would leave partial-genome recovery denominators; the full
+210,612-contig GI input is unsuitable for this first exact-neighbor/graph cost
+check. A new real-assembler simulation adds acquisition/truth/setup before Linux
+deployment is established. This whole-GSA-genome subset keeps a meaningful bounded
+recovery denominator while using existing assets; real-assembler validation remains
+separate and cannot be inferred from it.
+
 This is a **controlled gold-standard assembly derivative** of the human-associated
 CAMI HMP GI simulation, not real-assembler output or a whole-community benchmark.
 AMBER and confirmed R95 will measure recovery of available assembled sequence,
@@ -126,4 +134,47 @@ The first staged driver passed real native Mac DAGs at four and one threads.
 Transfer v2 additionally retains the verified bundle manifest on failures and
 uses a parent alarm across hashing/extraction/setup, followed by evidence-only
 collection. Earlier executed v1 snapshots/failed attempts remain untouched.
-The local observed receipt will be added after final checks; **no pilot is executed**.
+## Accepted local preparation, native Linux still pending
+
+[Retained review](review_local.py) and [observed receipt](local-observed.json)
+independently verify final transfer/return checksums, every retained file hash,
+feature/sample axes, finite arrays, exact pre-save/reload equality and complete
+DNA accounting without executing training or extraction again. Nine focused
+deployment checks pass, including parent-timeout/failure provenance, the real
+upstream Python archive's filesystem layout, immutable output/path protection and
+observed-child cleanup. The complete unchanged CLI DAG ran from the extracted v2
+archive with **no worker mocks**; earlier four/one-thread runs, repeated invocation,
+completed-workdir resume and the semantic-invalid-depth DAG are retained. The latter
+fails in **3.488 s** with no checkpoint and a checksum-bound failure return.
+
+All **14 contigs / 52,235 bp** are accounted for. Cached real rows: twelve /
+51,268 bp; synthetic sentinels: two / 967 bp. Depth is synthetic throughout.
+Raw export: ten assigned, two noise, two excluded; learned export: twelve assigned,
+zero noise, two excluded. These are **software accounting**, not utility scores.
+Twenty epochs see all twelve eligible IDs; checkpoint reload max difference **0**.
+Native final training reports four numerical threads, interop one, loader zero,
+reconciled four-thread pools and 26,048 parameters (the two depth columns add inputs).
+
+Final Mac DAG: **21.785 s**, **262,209,536-B sampled peak RSS (0.262 GB)**, sampled
+average **1.073 CPUs**. Learning itself: **0.291 s / 0.845 process CPU s / 2.902 CPUs**.
+Whole driver before collection: **39.513 s**, declared four-thread wall budget
+**0.0439032 hours**. Local prefix installation lies outside that clock; these are
+not Linux timings or allocated UCloud charges. The one-thread harness also passed,
+with a shorter tiny DAG; do not infer four-core speedup or assembly throughput.
+The recommended four-vCPU smoke checks the intended four-thread deployment limits,
+not a claim that fourteen rows need four CPUs for speed.
+
+The final attempt retains **106 hash-bound files / 958,336 logical bytes** at the
+pre-collection inventory, plus its small return copy. Local disk-block reports:
+binner prefix 805,248 KiB; workflow prefix 90,576 KiB; setup/download/test evidence
+440,864 KiB; prepared ignored pilot DNA 12,828 KiB. These exclude separately retained
+transfer/extracted/old-fixture copies. Preserve them; no cleanup is authorized.
+The final upload archive is **302,178,719 bytes**, SHA256
+`289568e4d000aed8228b9fb119e4586c4c0d94598165b7f7c29a165cadf2a835`,
+from source commit `2f0b9a58bcf86f29f23b0f3bed16f31171a359f4`.
+Installed-package source remains E004's accepted snapshot. Linux CPU wheels and
+full standalone-prefix installation/loader/affinity behavior have **not** executed
+locally; real filesystem extraction and target dependency closure are separate
+checks. No Linux acceptance, pilot feature/depth/training/evaluation or three-way
+study is claimed. **Exact next step: owner runs only the v2 Linux smoke and returns
+its archive, checksum and terminal log.**

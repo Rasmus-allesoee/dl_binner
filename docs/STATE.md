@@ -77,8 +77,8 @@ or assembly-scale throughput/quality validation. Scientific driver 17.797 s,
 0.411-GB sampled peak, 1.227 average CPUs under four-thread caps; learning itself
 0.595 s / 2.401 CPUs. Startup/serial work dominates, so caps do not imply full use.
 
-**E005 prepares the next owner-controlled CPU/Linux smoke job and freezes one
-capped human-associated assembly/explicit mean-depth pilot.**
+**E005's tested CPU/Linux owner packet is prepared, and one capped human-associated
+assembly/explicit mean-depth pilot is frozen. Native Linux remains pending.**
 [D011](decisions/D011-first-binner-prototype.md#next-bounded-product-validation-after-e004)
 owns the scope: freeze data/overlap/evaluation/resource contracts, retain raw
 controls, shorts/masks/noise, validate native runtime/stage costs before increasing
@@ -88,6 +88,17 @@ smoke source, input hashes, local tests and bounded pilot protocol; its
 four-vCPU/12-GB Terminal command and return procedure. Codex must not execute
 UCloud. These check the implemented product's untested contracts rather than add
 an architecture selection gate. No automatic E001 rerun or new seed.
+
+The [local receipt](../experiments/E005-linux-pilot/local-observed.json) binds the
+final v2 transfer (302.18 MB, source `2f0b9a5`) and retained native Mac contracts.
+Nine checks plus the actual extracted-archive DAG pass: exact reload, complete
+14-row exports, cached/fresh reader agreement, two-sample zero masks and excluded/
+noise accounting. One/four-thread and repeated/resume layouts pass. Invalid depth
+fails in 3.488 s before a checkpoint and collects evidence. An old coordinator
+dependency failure was preserved; new local binner/workflow prefixes are separate,
+not a repair of accepted environments. Parent-side verification/setup now has an
+overall deadline, and verified manifests accompany failure returns. Final native
+DAG 21.785 s / 0.262-GB sampled peak; these do not validate Linux ABI or bulk speed.
 
 The owner requests a **future non-blocking** comparison of learned TNF, frozen GLM
 plus a contrastive head, and TNF–GLM hybrid with the same objective, even if this
