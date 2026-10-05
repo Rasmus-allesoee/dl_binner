@@ -513,8 +513,8 @@ def main():
     parser.add_argument('--sample', type=int)
     parser.add_argument('--mode', choices=('raw', 'learned'))
     args = parser.parse_args(); cfg = read(args.config)
-    by_sample = {s['sample']: s for s in cfg['samples']}
     if args.action in ('sample', 'map', 'depth'):
+        by_sample = {s['sample']: s for s in cfg['samples']}
         sample = by_sample[args.sample]; stem = Path('reads')/('sample_'+str(args.sample))
         fastq, bam = stem.with_suffix('.fq'), Path('mapping')/('sample_'+str(args.sample)+'.bam')
         if args.action == 'sample':

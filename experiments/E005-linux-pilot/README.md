@@ -265,3 +265,10 @@ smoke acceptance does not pre-accept the larger pilot. The owner alone executes
 its [operations command](OPERATIONS.md), with all new transfers/logs/returns below
 `/work/Home/dl_binner/e005/transfer/`. Full native source/lock/large-read Linux
 contracts remain subject to this owner return.
+
+Local v1 packet `51d203c` stopped at the native evaluator contract because the
+rule dispatcher accessed sample settings even for an evaluation-only config.
+The mapper and 71-base flag/CIGAR/depth checks had passed; no pilot training or
+scoring ran. The attempt and failure return are retained. Restrict sample lookup
+to sample/map/depth actions and prepare a separate v2 packet; never modify the
+executed v1 copy. Native adapter checks and the actual DAG remain required.
