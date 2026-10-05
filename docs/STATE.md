@@ -1,6 +1,6 @@
 # Current Research State
 
-Updated: 2026-10-04. This is the single current handoff.
+Updated: 2026-10-05. This is the single current handoff.
 
 ## Direction and completed work
 
@@ -77,13 +77,15 @@ or assembly-scale throughput/quality validation. Scientific driver 17.797 s,
 0.411-GB sampled peak, 1.227 average CPUs under four-thread caps; learning itself
 0.595 s / 2.401 CPUs. Startup/serial work dominates, so caps do not imply full use.
 
-**Exact next step: prepare and locally test one owner-controlled CPU/Linux smoke
-job, with a capped human-associated assembly/explicit mean-depth pilot protocol
-and established bin-quality evaluation.**
+**E005 prepares the next owner-controlled CPU/Linux smoke job and freezes one
+capped human-associated assembly/explicit mean-depth pilot.**
 [D011](decisions/D011-first-binner-prototype.md#next-bounded-product-validation-after-e004)
 owns the scope: freeze data/overlap/evaluation/resource contracts, retain raw
 controls, shorts/masks/noise, validate native runtime/stage costs before increasing
-input size, and prepare the checksum-bound owner command. Codex must not execute
+input size. [E005](../experiments/E005-linux-pilot/README.md) owns the offline runtime/
+smoke source, input hashes, local tests and bounded pilot protocol; its
+[operations guide](../experiments/E005-linux-pilot/OPERATIONS.md) owns the exact
+four-vCPU/12-GB Terminal command and return procedure. Codex must not execute
 UCloud. These check the implemented product's untested contracts rather than add
 an architecture selection gate. No automatic E001 rerun or new seed.
 
@@ -93,8 +95,18 @@ prototype works. [D011](decisions/D011-first-binner-prototype.md#planned-non-blo
 records its concrete rationale and matched bin-quality/resource requirements.
 Planned only, not implemented/run in E004 and not a release prerequisite.
 
-No owner upload is needed for the completed local milestone. The next owner-run
-command must be prepared and tested; no Linux command is validated yet. Frozen GLM weights/features remain
+**Exact next step: owner runs only the E005 Linux smoke and returns its archive,
+checksum and automatically captured terminal log for inspection.** Native Linux
+validation is pending; the driver cannot launch the pilot. The pilot is frozen at
+four GI GSA genomes / 5,309 contigs / 12,924,259 bp, with 1,097 below-500 contigs
+retained as exclusions in the full denominators. It overlaps E001's community and
+1,332 retained IDs, so remains a controlled development derivative. Ordered samples
+1 and 4 supply capped retained-read subsets mapped to this exact reference in a
+later tested command. Existing E001 depth has no short rows and must not be zero-
+filled. AMBER/R95 with raw controls is fixed; no mapping/feature/training/scoring
+of this pilot has run. After smoke review, implement/test only the remaining
+sampling/mapping/mean-depth/evaluation adapters and prepare its owner command.
+Frozen GLM weights/features remain
 retained, deferred from the first prototype rather than globally rejected. The
 completed 2026-09-30 review/source audit is reused. No full-GLM training, VAE
 curriculum, automatic architecture campaign or E001 rerun is planned. E001's
@@ -124,8 +136,9 @@ hours, not UCloud charges; setup/tests/review excluded. Keep all artifacts and
 accepted E001/E002/E003 snapshots. The receipt-helper path repair affects only
 post-run collection; native scientific source/functions remain frozen.
 
-UCloud remains CPU-only and owner-operated. Persistent prefixes stay under
-`e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md). Frozen E001
+UCloud remains CPU-only and owner-operated. E001's persistent prefixes stay under
+`e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md); E005 owns
+separate new CPU/workflow prefixes under its own root. Frozen E001
 source/configuration and raw observed records remain unchanged.
 
 Local branch: `first-binner-prototype`, created from `930e6743eac1aadb93ea23b51f2a6ac617155a2e`.

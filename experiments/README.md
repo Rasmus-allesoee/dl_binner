@@ -10,6 +10,7 @@ reproduced result of this project.
 - [E002: Bounded frozen DNABERT-S CPU feasibility](E002-dnabert-s-feasibility/README.md)
 - [E003: Final frozen-GLM versus composition development screen](E003-representation-screen/README.md)
 - [E004: First composition-based learned binner](E004-first-binner/README.md)
+- [E005: Linux deployment smoke and bounded GI assembly/depth pilot](E005-linux-pilot/README.md)
 
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 

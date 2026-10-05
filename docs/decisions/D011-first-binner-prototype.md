@@ -278,3 +278,13 @@ startup and some feature/graph work is serial. No UCloud execution by Codex.
 Linux/assembly/coverage checks address the current product's untested contracts,
 not another architecture selection gate. A larger public benchmark, release and
 the future three-way comparison remain separate, non-blocking follow-ups.
+
+Prepared 2026-10-05 in [E005](../../experiments/E005-linux-pilot/README.md): one
+offline checksum-bound CPU/Linux software smoke, then returned-evidence review.
+The frozen pilot uses four human-associated GI GSA genomes, 5,309 contigs / 12.92 Mb,
+including below-500 exclusions in full recovery accounting. Explicit depth requires
+new bounded read subsets mapped to this exact short-inclusive reference; E001's
+length-filtered depth is unsuitable. AMBER/confirmed R95 and matched raw controls
+remain prospectively fixed. This is development assembled-sequence recovery, not
+independent whole-MAG validation. No native Linux or scientific pilot result is
+claimed during preparation; neither E001 nor the three-way study is reopened.

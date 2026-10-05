@@ -1,0 +1,150 @@
+{
+  "accession_versions": [
+    "CP003344.1",
+    "CP010842.1",
+    "CP018156.1",
+    "HG917868.1",
+    "HG917869.1"
+  ],
+  "contig_manifest_sha256": "5d6b98c88639d5c2e92fa71608458a0971cdf80cd2239a5f12ecc3c78e0bc2b1",
+  "e001_retained_id_overlap": 1332,
+  "e003_exact_accession_overlap": [],
+  "fasta_bytes": 13134506,
+  "fasta_sha256": "64e16974cf59b0064767657e479b6e6d2a7f7e42a8fb93b340d74ee4e5b680e2",
+  "genomes": {
+    "OTU_97.20215.0": {
+      "below_500": 12,
+      "bp": 3600779,
+      "contigs": 365,
+      "eligible": 353,
+      "short": 55
+    },
+    "OTU_97.3310.0": {
+      "below_500": 521,
+      "bp": 3446991,
+      "contigs": 2243,
+      "eligible": 1722,
+      "short": 1321
+    },
+    "OTU_97.43909.0": {
+      "below_500": 14,
+      "bp": 1963474,
+      "contigs": 206,
+      "eligible": 192,
+      "short": 37
+    },
+    "OTU_97.6958.0": {
+      "below_500": 550,
+      "bp": 3913015,
+      "contigs": 2495,
+      "eligible": 1945,
+      "short": 1467
+    }
+  },
+  "input_bp": 12924259,
+  "input_contigs": 5309,
+  "length_strata": {
+    "1": {
+      "bp": 341158,
+      "contigs": 1097,
+      "upper_bp": 500
+    },
+    "1000": {
+      "bp": 2933065,
+      "contigs": 1788,
+      "upper_bp": 2500
+    },
+    "10000": {
+      "bp": 4080872,
+      "contigs": 210,
+      "upper_bp": null
+    },
+    "2500": {
+      "bp": 4759494,
+      "contigs": 1122,
+      "upper_bp": 10000
+    },
+    "500": {
+      "bp": 385633,
+      "contigs": 609,
+      "upper_bp": 768
+    },
+    "768": {
+      "bp": 424037,
+      "contigs": 483,
+      "upper_bp": 1000
+    }
+  },
+  "original_dataset_doi": "10.4126/FRL01-006425518",
+  "overlap_limit": "same GI community as E001; accession inequality does not exclude homolog/strain/sequence overlap; no GLM used",
+  "parent_all_length_records_sha256": "8864e60bb8494693015946865d9d74146d0257a48d597510b1b031ac09664698",
+  "parent_fasta_sha256": "67aeeeb70e5ba0e1506bf95c79bb25b06869c0486e6c0ea111763c3b060c0baf",
+  "policy": "accepted D005 coordinate/quarantine identities, retained unchanged",
+  "record": "E005",
+  "role": "transductive GI development GSA derivative; not independent/real assembler MAG test",
+  "selection": {
+    "eligible_genomes": 53,
+    "genomes": 4,
+    "hash_ranked": [
+      "OTU_97.20215.0",
+      "OTU_97.43909.0",
+      "OTU_97.3310.0",
+      "OTU_97.6958.0",
+      "OTU_97.15802.1",
+      "OTU_97.16318.0",
+      "OTU_97.207.0",
+      "OTU_97.29331.1",
+      "OTU_97.5374.0",
+      "OTU_97.37167.0",
+      "OTU_97.13948.1",
+      "OTU_97.43848.0",
+      "OTU_97.161.1",
+      "OTU_97.21792.1",
+      "OTU_97.13051.1",
+      "OTU_97.45365.0",
+      "OTU_97.18731.0",
+      "OTU_97.21797.1",
+      "OTU_97.38148.0",
+      "OTU_97.16573.0",
+      "OTU_97.20552.0",
+      "OTU_97.37943.0",
+      "OTU_97.44696.0",
+      "OTU_97.11107.0",
+      "OTU_97.30767.0",
+      "OTU_97.1182.1",
+      "OTU_97.18238.0",
+      "OTU_97.30580.1",
+      "OTU_97.19530.0",
+      "OTU_97.44668.0",
+      "OTU_97.40366.0",
+      "OTU_97.19208.0",
+      "OTU_97.25504.0",
+      "OTU_97.20169.0",
+      "OTU_97.27694.0",
+      "OTU_97.28409.0",
+      "OTU_97.21914.0",
+      "OTU_97.552.0",
+      "OTU_97.43129.1",
+      "OTU_97.36145.0",
+      "OTU_97.25345.0",
+      "OTU_97.29.0",
+      "OTU_97.45058.0",
+      "OTU_97.14799.0",
+      "OTU_97.18414.1",
+      "OTU_97.3473.0",
+      "OTU_97.1804.1",
+      "OTU_97.25.0",
+      "OTU_97.45053.1",
+      "OTU_97.24212.1",
+      "OTU_97.11587.1",
+      "OTU_97.33712.0",
+      "OTU_97.31256.0"
+    ],
+    "min_eligible_contigs": 10,
+    "min_genome_bp": 200000,
+    "per_genome_max_contigs": 2500,
+    "require_500_to_2499": true,
+    "require_below_500": true,
+    "salt": "E005-pilot:"
+  }
+}
