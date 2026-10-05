@@ -38,7 +38,7 @@
     "max_source_pairs": 20000000,
     "sampled_pairs_per_sample": 1000000,
     "pair_contract": "anonymous S{sample}R{n}/1 and /2, matching ID, four-line FASTQ, exactly 150 bases/qualities, no broken/odd pairs",
-    "sampling_implementation": "implemented/tested two complete sequential validation/hash passes; digest/ID/offset heap only; increasing anonymous E001 R IDs enforced; no sequences stored in heap"
+    "sampling_implementation": "implemented/tested two complete sequential validation/hash passes; digest/ID/offset heap only; duplicate IDs checked with a source-pair-bounded ID set; arbitrary source order and zero-padded names retained exactly"
   },
   "mean_depth": {
     "columns": [

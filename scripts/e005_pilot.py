@@ -58,12 +58,12 @@ def axis(fasta):
 def pairs(stream, sample, digest):
     """Yield complete anonymous 150-bp pairs and offsets, hashing every source byte.
 
-    The accepted E001 anonymous source numbers increase strictly. Enforce this
-    source-specific invariant to detect duplicate/reordered names in constant RAM.
+    Preserve arbitrary source order and exact anonymous IDs. Detect duplicates
+    with an ID set (bounded by the caller's source-pair ceiling and RSS guard).
     No filtering by mapping, genome, sequence or a biological label occurs.
     """
-    previous, ordinal = -1, 0
-    pattern = re.compile(rb'@S'+str(sample).encode()+rb'R(0|[1-9][0-9]*)/1\n')
+    seen, ordinal = set(), 0
+    pattern = re.compile(rb'@S'+str(sample).encode()+rb'R[0-9]+/1\n')
     dna_pattern = re.compile(rb'[ACGTRYSWKMBDHVNacgtryswkmbdhvn]{150}')
     quality_pattern = re.compile(rb'[!-~]{150}')
     while True:
@@ -75,20 +75,24 @@ def pairs(stream, sample, digest):
         if any(not line.endswith(b'\n') for line in lines):
             raise ValueError('Broken/odd/overlong FASTQ pair')
         match = pattern.fullmatch(first)
-        if not match or int(match[1]) <= previous:
-            raise ValueError('Wrong/duplicate/non-increasing anonymous pair ID')
+        if not match:
+            raise ValueError('Wrong anonymous pair ID')
         ident = first[1:-3]
+        if ident in seen:
+            raise ValueError('Duplicate anonymous pair ID')
+        seen.add(ident)
         if lines[4] != b'@'+ident+b'/2\n':
             raise ValueError('Mismatched mate ID')
         for start in (0, 4):
             dna, qual = lines[start+1][:-1], lines[start+3][:-1]
-            if len(dna) != 150 or len(qual) != 150 or lines[start+2] != b'+\n':
-                raise ValueError('FASTQ must have 150 bases/qualities and bare +')
+            plus = lines[start+2][:-1]
+            if (len(dna) != 150 or len(qual) != 150 or not plus.startswith(b'+')
+                    or plus[1:] not in (b'', lines[start][1:-1])):
+                raise ValueError('FASTQ must have 150 bases/qualities and valid + identifier')
             if not dna_pattern.fullmatch(dna) or not quality_pattern.fullmatch(qual):
                 raise ValueError('Invalid FASTQ DNA/quality')
         raw = b''.join(lines)
         digest.update(raw)
-        previous = int(match[1])
         ordinal += 1
         yield ordinal, ident.decode('ascii'), offset, raw
 

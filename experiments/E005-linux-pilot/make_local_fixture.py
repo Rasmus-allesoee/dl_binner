@@ -7,6 +7,7 @@ from this partial fixture are scientific pilot results or design criteria.
 """
 import argparse
 import csv
+import hashlib
 from pathlib import Path
 import sys
 
@@ -50,12 +51,15 @@ def prepare(root):
     for sample in (1, 4):
         path = root/f'sample_{sample}.fq'
         with path.open('x') as stream:
-            for index in range(1, 101):
+            order = sorted(range(1,101), key=lambda n: hashlib.sha256(f'E005-fixture-{sample}-{n}'.encode()).digest())
+            for index in order:
                 seq = dna[longs[(index+sample) % len(longs)]]
                 offset = (31*index+sample) % (len(seq)-300)
                 a, b = seq[offset:offset+150], seq[offset+150:offset+300].translate(complement)[::-1]
                 for mate, value in ((1,a), (2,b)):
-                    stream.write(f'@S{sample}R{index}/{mate}\n{value}\n+\n'+150*'I'+'\n')
+                    ident = f'S{sample}R{index:04d}/{mate}'
+                    plus = '+'+ident if index % 2 else '+'
+                    stream.write(f'@{ident}\n{value}\n{plus}\n'+150*'I'+'\n')
         samples.append(dict(sample=sample, column='GI_sample_'+str(sample), reads=str(path), sha256=sha(path)))
     write(root/'local-fixture.json', dict(fasta=str(fasta), contigs=str(table), samples=samples, sampled_pairs=32,
         max_source_pairs=200, preprocess_first=True, role='tiny partial real-DNA software fixture; no scientific utility or pilot score',

@@ -229,8 +229,10 @@ against this reference; old length-filtered E001 coverage is unsuitable.
 
 Sampling validates/hashes each entire interleaved source twice, retains at most one
 million digest/ID/offset ranks without a sequence heap, then writes selected pairs
-in original order with an auditable compressed ID/offset table. The increasing
-anonymous E001 R-number invariant catches duplicates without a 20-million-ID set.
+in original order with an auditable compressed ID/offset table. A source-pair-bounded ID set catches duplicates; source ordering and zero padding
+are preserved rather than inferred from an anonymous numeric name. The ID set and
+one-million-rank heap stay under the enforced 8-GB working cap; an estimated
+2–4 GB at the source ceiling is a planning estimate, not a bulk measurement.
 Malformed/mismatched/short/changed sources produce no successful receipt. Features
 use explicit ordered columns GI_sample_1/GI_sample_4 and actual depth zeros.
 Native full-position ID/length axes are required, including unused short references;
@@ -280,3 +282,10 @@ depth in float64; the mismatch was only 8.62e-10 and was a verifier error. Compa
 exact float64 values, retaining the same strict zero/mask/reload checks; no tolerance
 relaxation or scientific-input change. Preserve the v2 failure and use a new v3
 packet. Both local failures stopped dependent scoring and collected evidence.
+
+After the complete v3 local fixture passed, audit the source reader against
+E005's frozen pair contract: it never required increasing read-number order or
+bare plus lines. V4 removes those unsupported assumptions, accepts zero-padded
+names and valid optional plus identifiers, and still rejects duplicate/mismatched
+pairs. Sampling ranks, source hashes, output order/counts and scientific protocol
+are unchanged. New shuffled-name cases and the actual v4 packet remain required.

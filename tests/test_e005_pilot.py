@@ -51,6 +51,16 @@ class PilotTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 sample_reads(source, 1, digest, count, cap, self.root/f'bad-{count}-{cap}.fq')
 
+    def test_shuffled_zero_padded_names_and_optional_plus_ids(self):
+        source=self.root/'shuffled.fq'
+        records=[fastq(n).replace(f'S1R{n}',f'S1R{n:03d}') for n in (5,2,9,1)]
+        records=[text.replace('\n+\n','\n+'+text.splitlines()[0][1:]+'\n',1) for text in records]
+        source.write_text(''.join(records))
+        names=[text.splitlines()[0][1:-2] for text in records]
+        chosen=set(sorted(names,key=lambda n:(hashlib.sha256(('E005-S1-pairs-v1:'+n).encode()).digest(),n))[:2])
+        output=self.root/'selected.fq'; sample_reads(source,1,sha(source),2,100,output)
+        self.assertEqual(output.read_text(),''.join(text for name,text in zip(names,records) if name in chosen))
+
     def test_native_stream_missing_duplicate_reordered_negative_extra_rejected(self):
         rows = [('a', 2), ('short_zero', 1)]
         good = b'a\t1\t3\na\t2\t0\nshort_zero\t1\t0\n'

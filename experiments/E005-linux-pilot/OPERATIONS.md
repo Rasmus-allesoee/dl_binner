@@ -8,7 +8,7 @@ No E001 rerun, GLM inference/three-way study or architecture gate is included.
 ## Two upload files and organization
 
 Create `/work/Home/dl_binner/e005/transfer/` in UCloud Files if needed. Upload
-`e005-gi-pilot-v3.tar.gz` and `e005-gi-pilot-v3.tar.gz.sha256` **there**, keeping
+`e005-gi-pilot-v4.tar.gz` and `e005-gi-pilot-v4.tar.gz.sha256` **there**, keeping
 filenames. Launch copies, captured terminal logs and returned archive/checksum
 also stay there. Persistent unique attempts stay under the E005 root and accepted
 runtimes under `envs/`; earlier smoke files are preserved in place.
@@ -42,10 +42,10 @@ trap 'rc=$?; printf "\nTERMINAL_LOG=%s\nEXIT_CODE=%s\n" "$log" "$rc"; exit "$rc"
 (
   for tool in python3 tar sha256sum tee env; do command -v "$tool" >/dev/null || { echo "Missing prerequisite: $tool"; exit 2; }; done
   python3 -I -c 'import sys; assert sys.version_info >= (3,10), "Python >=3.10 required"'
-  sha256sum -c e005-gi-pilot-v3.tar.gz.sha256
-  sha256sum e005-gi-pilot-v3.tar.gz
+  sha256sum -c e005-gi-pilot-v4.tar.gz.sha256
+  sha256sum e005-gi-pilot-v4.tar.gz
   launch=$(mktemp -d "$transfer/launches/gi-pilot.XXXXXX")
-  tar -xzf "$transfer/e005-gi-pilot-v3.tar.gz" -C "$launch"
+  tar -xzf "$transfer/e005-gi-pilot-v4.tar.gz" -C "$launch"
   env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE \
     PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 \
     python3 -I -u "$launch/e005-gi-pilot/scripts/e005_pilot_owner.py" \
