@@ -272,3 +272,11 @@ The mapper and 71-base flag/CIGAR/depth checks had passed; no pilot training or
 scoring ran. The attempt and failure return are retained. Restrict sample lookup
 to sample/map/depth actions and prepare a separate v2 packet; never modify the
 executed v1 copy. Native adapter checks and the actual DAG remain required.
+
+Local v2 packet `b75e0fb` passed real native mapping/depth/AMBER contracts, then
+completed both feature/train/export paths in the fixture before its verifier
+incorrectly rounded reference depth to float32. E004 explicitly stores measured
+depth in float64; the mismatch was only 8.62e-10 and was a verifier error. Compare
+exact float64 values, retaining the same strict zero/mask/reload checks; no tolerance
+relaxation or scientific-input change. Preserve the v2 failure and use a new v3
+packet. Both local failures stopped dependent scoring and collected evidence.

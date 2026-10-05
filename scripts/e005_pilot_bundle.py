@@ -45,9 +45,9 @@ def build(destination):
     if sha(folder/'input/pilot/assembly.fna') != expected['fasta_sha256']:
         raise ValueError('Frozen pilot DNA changed')
     files = {str(p.relative_to(folder)):dict(sha256=sha(p),bytes=p.stat().st_size) for p in sorted(folder.rglob('*')) if p.is_file()}
-    write(folder/'bundle-manifest.json',dict(record='E005',kind='frozen GI pilot v2',source_commit=commit,files=files,
+    write(folder/'bundle-manifest.json',dict(record='E005',kind='frozen GI pilot v3',source_commit=commit,files=files,
         runtime_policy='read-only healthy E005 CPU/workflow and E001 mapping/AMBER; no install or accepted smoke rerun'))
-    archive = destination/'e005-gi-pilot-v2.tar.gz'
+    archive = destination/'e005-gi-pilot-v3.tar.gz'
     with archive.open('xb') as stream, tarfile.open(fileobj=stream,mode='w:gz') as tar:
         for path in sorted(folder.rglob('*')):
             if path.is_file():

@@ -341,7 +341,11 @@ def verify_outputs(cfg, output):
         depth = list(csv.reader(stream, delimiter='\t'))
     if depth[0] != ['contig_id']+cfg['columns'] or [r[0] for r in depth[1:]] != list(source):
         raise ValueError('Explicit measured depth axis mismatch')
-    np.testing.assert_array_equal(features['depth'], np.asarray([r[1:] for r in depth[1:]], dtype=np.float32))
+    # The accepted explicit depth contract preserves float64 observations. Compare
+    # their exact precision; converting this reference to float32 invents a loss.
+    if features['depth'].dtype != np.float64:
+        raise ValueError('Explicit mean-depth storage precision changed')
+    np.testing.assert_array_equal(features['depth'], np.asarray([r[1:] for r in depth[1:]], dtype=np.float64))
     np.testing.assert_array_equal(features['zero_depth'], features['depth'] == 0)
     np.testing.assert_array_equal(features['depth_evidence'], (features['depth'] > 0).any(1))
     np.testing.assert_array_equal(features['eligible'], (features['lengths'] >= 500) & (features['valid_fourmers'] > 0))
@@ -351,7 +355,8 @@ def verify_outputs(cfg, output):
         np.testing.assert_array_equal(learned[key], reference[key])
     np.testing.assert_allclose(learned['features'], reference['features'], atol=1e-7, rtol=0)
     training = read('checkpoint.json')
-    if training['config'] != read(cfg['training']) or training['numerical_threads'] != cfg['threads'] or training['loader_workers'] != 0:
+    if (training['config'] != read(cfg['training']) or training['numerical_threads'] != cfg['threads']
+            or training['loader_workers'] != 0 or training['torch_interop'] != 1):
         raise ValueError('Training schedule/CPU budget changed')
     if any(e['contigs_seen'] != int(features['eligible'].sum()) for e in training['epochs']):
         raise ValueError('Training dropped eligible IDs')
