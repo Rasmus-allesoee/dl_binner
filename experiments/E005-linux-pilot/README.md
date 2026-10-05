@@ -289,3 +289,68 @@ bare plus lines. V4 removes those unsupported assumptions, accepts zero-padded
 names and valid optional plus identifiers, and still rejects duplicate/mismatched
 pairs. Sampling ranks, source hashes, output order/counts and scientific protocol
 are unchanged. New shuffled-name cases and the actual v4 packet remain required.
+
+## Accepted local pilot adapter integration, 2026-10-06
+
+[Independent retained review](review_pilot_local.py) and
+[receipt](pilot-local-observed.json) own all four local attempts, input/return/
+source hashes, exact runtime origins, costs and limits. The **actual checksum-
+verified extracted v4 packet** from `49dc582b457e12030daab07a5f961a600772d820`
+passed the complete production DAG in `gi-pilot-wkqd9q5a`, with no replaced workers.
+The explicit local fixture skips Linux ABI/affinity, original large UCloud reads/
+E001 installed-lock comparison and the production 10-GB space provision (uses
+1 GB for this tiny fixture). Those entry/scale contracts remain pending on UCloud.
+
+The fixture contains **21 real-DNA contigs / 546,369 bp**, 19 eligible / two below
+500, and synthetic matching reads: 100 source pairs, 32 selected for each sample.
+Shuffled zero-padded names and valid plus identifiers pass actual sampling, native
+strobealign 0.17.0, samtools 1.24 mapping/sort/index/depth and ordered two-column
+merge. The separate real SAM/BAM fixture confirms **71** aligned observations,
+unused/short-reference zeros, MAPQ/BQ0, DUP/QCFAIL inclusion, 0x904 exclusion,
+overlapping mates and M/= /X versus insertion/deletion/soft-clip behavior. Actual
+AMBER API tables and exact R95 purity/recovery boundaries pass. Empty partitions,
+short full denominators, unknown IDs and E001 aggregate-score parity have focused
+checks. This narrow source/native audit does not restart architecture review.
+
+Independent inspection verifies float64 depth equality, every zero/evidence mask,
+finite ordered arrays, source DNA and all exported rows. Ten fixture rows have no
+observed depth. Twenty fixed seed-11 epochs see all 19 eligible rows; saved/reloaded
+embeddings match **exactly**. Raw: 13 assigned / six noise / two exclusions; learned:
+19 / zero / two. These are fixture **accounting**, not a scientific bin-quality
+result. The partial-DAG run finished sampling/mapping/depth first; the complete DAG
+reused **62 completed files** with identical hashes and nanosecond mtimes. Final
+completed-directory dry-run schedules nothing. The real rule guard stops fatal
+workers/time limits and retains evidence. Seven new focused tests pass, including
+unordered/padded IDs, duplicate/mismatched/malformed/changed inputs, complete depth
+positions, conservative-score boundaries/parity and failed prerequisites. The
+existing deployment tests exposed a test glob that selected a return archive as
+an attempt; selecting `*/status.json` fixes the test without changing workers.
+
+Final fixture costs: driver through collection **80.83376 s / 0.0898153 declared
+four-thread wall hours**, not UCloud spend. Native preprocessing 10.63731 s;
+remaining learned/raw/verification/evaluation DAG **22.78865 s**, sampled descendant
+peak **417,955,840 bytes**, sampled average **0.960 CPUs**. Training 0.21067 s /
+2.218 CPUs. Numerical four, interop one, loader zero remain unchanged. A cold
+AMBER import/cache stage took 30.628 s and completed under its existing ceiling;
+its child diagnostics are retained, without bypass or timeout enlargement.
+Setup/downloads/tests/review lie outside the driver clock. The complete four-
+attempt local driver budget was 0.281058 thread-wall hours; failures are included.
+These tiny costs are not source-read throughput or large-input memory evidence.
+
+The final inventory verifies **333 files / 1,947,235 logical bytes**, including
+small retained native assets; compressed local return is 728,913 bytes. Heavy
+FASTQ/SAM/BAM stay in the attempt with byte-bound inventory entries; the return
+omits those copies and includes headers/commands/depths/arrays/all exports/scores.
+Preserve all attempts, packets, prefixes and setup logs. Separate local mapping
+and AMBER environments were created; earlier accepted runtimes/reference caches
+were read-only and no E002/E003/E004 inference/demo was repeated. There is no
+scientific pilot, Linux bulk-performance or three-way comparison result here.
+
+**Final owner packet:** `e005-gi-pilot-v4.tar.gz`, **4,099,196 bytes**, SHA256
+`91bebee4f0b8f214849af1250ca31d3fbf1224d441ee59ef1a52302c9f561dee`.
+[Operations](OPERATIONS.md) supplies its exact four-vCPU/12-GB command. Upload only
+this packet and its checksum to `/work/Home/dl_binner/e005/transfer/`. Next owner
+runs the frozen pilot once and returns the archive/checksum/captured terminal log.
+Review actual assembled-recovery quality beside raw controls and measured costs
+before choosing a concrete product fix or a small release-readiness milestone.
+No requirement for superiority, extra seed/input or new architecture gate follows.

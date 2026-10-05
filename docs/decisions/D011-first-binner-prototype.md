@@ -288,6 +288,11 @@ length-filtered depth is unsuitable. AMBER/confirmed R95 and matched raw control
 remain prospectively fixed. This is development assembled-sequence recovery, not
 independent whole-MAG validation. The 2026-10-05 [native Linux receipt](../../experiments/E005-linux-pilot/linux-observed.json)
 accepts isolated runtimes, masks, reload, exports and failure/resume contracts
-without repeating the smoke. Scientific pilot results remain unrun. Next implement
-and locally test only its frozen sampling/mapping/depth/AMBER adapters and prepare
-one owner command; neither E001 nor the three-way study is reopened.
+without repeating the smoke. Scientific pilot results remain unrun. The
+[2026-10-06 local adapter receipt](../../experiments/E005-linux-pilot/pilot-local-observed.json)
+accepts actual sampling/mapping/depth/AMBER readers and the complete v4 real-DNA
+fixture with partial/full resume, masks, reload and both exports. No native worker
+was replaced. Owner now runs the frozen 4/12 GI pilot once using the
+[prepared command](../../experiments/E005-linux-pilot/OPERATIONS.md); current Linux
+entry/large-read checks and assembled-recovery utility/cost await that return.
+Neither E001 nor the three-way study is reopened; no additional architecture gate.

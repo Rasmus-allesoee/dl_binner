@@ -152,7 +152,7 @@ class DeploymentTests(unittest.TestCase):
         argv = ['owner', '--root', str(root), '--allocated-vcpus', '5', '--allocated-ram-gb', '12']
         with patch.object(e005_owner, 'BUNDLE', bundle), patch.object(sys, 'argv', argv):
             self.assertEqual(e005_owner.main(), 1)
-        attempt = next(root.glob('linux-smoke-*'))
+        attempt = next(root.glob('linux-smoke-*/status.json')).parent
         self.assertEqual(json.loads((attempt/'bundle-manifest.json').read_text())['source_commit'], '0'*40)
         self.assertEqual(json.loads((attempt/'status.json').read_text())['status'], 'failed')
         self.assertTrue(list(root.glob('*-return.tar.gz')))
@@ -165,7 +165,7 @@ class DeploymentTests(unittest.TestCase):
         with patch.object(e005_owner, 'BUNDLE', bundle), patch.object(sys, 'argv', argv), patch.object(e005_owner, 'verify_bundle', stalled_read):
             self.assertEqual(e005_owner.main(), 1)
         self.assertLess(time.monotonic()-started, 1)
-        attempt = next(root.glob('linux-smoke-*'))
+        attempt = next(root.glob('linux-smoke-*/status.json')).parent
         self.assertIn('Total owner-driver ceiling', json.loads((attempt/'status.json').read_text())['error'])
 
 

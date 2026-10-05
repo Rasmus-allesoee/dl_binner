@@ -118,3 +118,15 @@ inventory records retained attempt bytes; prefix disk/provenance is separate.
 If SIGKILL/job termination prevents collection, return the captured terminal log
 for evidence-only recovery. Successful software execution is accepted only after
 returned-output inspection; any quality degradation is a valid retained result.
+
+## Packet acceptance
+
+Use **v4**, source `49dc582b457e12030daab07a5f961a600772d820`, 4,099,196 bytes,
+SHA256 `91bebee4f0b8f214849af1250ca31d3fbf1224d441ee59ef1a52302c9f561dee`.
+[Local receipt](pilot-local-observed.json) verifies the actual extracted packet's
+complete real-DNA fixture, native mapping/depth/AMBER contracts, masks, exact
+reload, both exports and partial/full resume; no workers were mocked. Local
+harness checks do not establish native Linux bulk performance or current E001
+lock health. The entry checks retain that assessment boundary before science.
+Earlier v1/v2 failures and v3 success remain preserved and are superseded for
+upload by this packet; do not upload or run the earlier pilot packets.

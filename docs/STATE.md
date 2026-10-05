@@ -1,6 +1,6 @@
 # Current Research State
 
-Updated: 2026-10-05. This is the single current handoff.
+Updated: 2026-10-06. This is the single current handoff.
 
 ## Direction and completed work
 
@@ -113,18 +113,39 @@ fatal-input and completed-resume checks pass. No work was repeated. Actual 4/12
 allocation: 83.81135 driver seconds including setup/collection, 0.0931237 allocated
 vCPU-hours, 0.307-GB sampled worker peak. These are software checks, not bin quality.
 
-**Exact next step: implement and locally test the frozen pilot adapters and prepare
-one checksum-bound owner command.** No UCloud execution by Codex. Use
+**The frozen pilot adapters and checksum-bound owner packet are complete and
+locally tested. Exact next step: owner runs the v4 GI pilot once and returns its
+archive/checksum/captured terminal log.** No UCloud execution by Codex. Use
 `/work/Home/dl_binner/e005/transfer/` for new uploads, launch copies, terminal logs
 and return archives/checksums. The pilot is frozen at
 four GI GSA genomes / 5,309 contigs / 12,924,259 bp, with 1,097 below-500 contigs
 retained as exclusions in the full denominators. It overlaps E001's community and
 1,332 retained IDs, so remains a controlled development derivative. Ordered samples
 1 and 4 supply capped retained-read subsets mapped to this exact reference in a
-tested command being prepared. Existing E001 depth has no short rows and must not be zero-
+tested command. Existing E001 depth has no short rows and must not be zero-
 filled. AMBER/R95 with raw controls is fixed; no mapping/feature/training/scoring
-of this pilot has run. Following the accepted smoke, implement/test only the remaining
-sampling/mapping/mean-depth/evaluation adapters and prepare its owner command.
+of the full scientific pilot has run. The new
+[local receipt](../experiments/E005-linux-pilot/pilot-local-observed.json) verifies
+the actual v4 packet's real native adapters and complete small fixture: exact
+float64 depth/masks/reload, 21 DNA rows / 546,369 bp, both complete exports, native
+AMBER/R95, shuffled IDs and partial/full resume. Sixty-two completed preprocessing
+files were reused unchanged; all 333 retained hashes match. Seven focused tests
+plus deployment regression checks pass. Earlier dispatcher/verifier failures
+stopped before scoring and were preserved/fixed locally. No accepted demonstration
+was repeated. These synthetic-read fixture scores are not scientific pilot utility.
+
+Owner packet source `49dc582`, 4.10 MB, SHA256
+`91bebee4f0b8f214849af1250ca31d3fbf1224d441ee59ef1a52302c9f561dee`.
+[Operations](../experiments/E005-linux-pilot/OPERATIONS.md) owns the two uploads and
+exact 4-vCPU/12-GB command, with 8-GB working RSS, setup 30 minutes/science two
+hours/total three hours. Reprobe accepted E005 and read-only E001 mapping/AMBER
+prefixes; no installs. The small packet includes the exact 13.13-MB reference,
+while original reads stay on UCloud. Full large-read/runtime/source/lock Linux
+checks and actual costs remain pending. Final Mac fixture: 80.834 s through
+collection / 0.0898153 local four-thread wall hours, 0.418-GB sampled stage peak.
+After returned inspection, choose one concrete product fix or small release-
+readiness milestone using both arms and actual resources; superiority is not
+required for software acceptance.
 Frozen GLM weights/features remain
 retained, deferred from the first prototype rather than globally rejected. The
 completed 2026-09-30 review/source audit is reused. No full-GLM training, VAE
