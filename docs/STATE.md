@@ -77,8 +77,8 @@ or assembly-scale throughput/quality validation. Scientific driver 17.797 s,
 0.411-GB sampled peak, 1.227 average CPUs under four-thread caps; learning itself
 0.595 s / 2.401 CPUs. Startup/serial work dominates, so caps do not imply full use.
 
-**E005's tested CPU/Linux owner packet is prepared, and one capped human-associated
-assembly/explicit mean-depth pilot is frozen. Native Linux remains pending.**
+**E005's native Linux smoke is accepted, and one capped human-associated
+assembly/explicit mean-depth pilot remains frozen and unrun.**
 [D011](decisions/D011-first-binner-prototype.md#next-bounded-product-validation-after-e004)
 owns the scope: freeze data/overlap/evaluation/resource contracts, retain raw
 controls, shorts/masks/noise, validate native runtime/stage costs before increasing
@@ -106,16 +106,24 @@ prototype works. [D011](decisions/D011-first-binner-prototype.md#planned-non-blo
 records its concrete rationale and matched bin-quality/resource requirements.
 Planned only, not implemented/run in E004 and not a release prerequisite.
 
-**Exact next step: owner runs only the E005 Linux smoke and returns its archive,
-checksum and automatically captured terminal log for inspection.** Native Linux
-validation is pending; the driver cannot launch the pilot. The pilot is frozen at
+The [Linux receipt](../experiments/E005-linux-pilot/linux-observed.json) independently
+accepts the returned smoke: checksum and all 124 retained-file hashes, isolated
+CPU-only runtimes, four-CPU affinity/pools, exact reload, complete exports, masks,
+fatal-input and completed-resume checks pass. No work was repeated. Actual 4/12
+allocation: 83.81135 driver seconds including setup/collection, 0.0931237 allocated
+vCPU-hours, 0.307-GB sampled worker peak. These are software checks, not bin quality.
+
+**Exact next step: implement and locally test the frozen pilot adapters and prepare
+one checksum-bound owner command.** No UCloud execution by Codex. Use
+`/work/Home/dl_binner/e005/transfer/` for new uploads, launch copies, terminal logs
+and return archives/checksums. The pilot is frozen at
 four GI GSA genomes / 5,309 contigs / 12,924,259 bp, with 1,097 below-500 contigs
 retained as exclusions in the full denominators. It overlaps E001's community and
 1,332 retained IDs, so remains a controlled development derivative. Ordered samples
 1 and 4 supply capped retained-read subsets mapped to this exact reference in a
-later tested command. Existing E001 depth has no short rows and must not be zero-
+tested command being prepared. Existing E001 depth has no short rows and must not be zero-
 filled. AMBER/R95 with raw controls is fixed; no mapping/feature/training/scoring
-of this pilot has run. After smoke review, implement/test only the remaining
+of this pilot has run. Following the accepted smoke, implement/test only the remaining
 sampling/mapping/mean-depth/evaluation adapters and prepare its owner command.
 Frozen GLM weights/features remain
 retained, deferred from the first prototype rather than globally rejected. The

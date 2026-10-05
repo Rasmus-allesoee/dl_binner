@@ -286,5 +286,8 @@ including below-500 exclusions in full recovery accounting. Explicit depth requi
 new bounded read subsets mapped to this exact short-inclusive reference; E001's
 length-filtered depth is unsuitable. AMBER/confirmed R95 and matched raw controls
 remain prospectively fixed. This is development assembled-sequence recovery, not
-independent whole-MAG validation. No native Linux or scientific pilot result is
-claimed during preparation; neither E001 nor the three-way study is reopened.
+independent whole-MAG validation. The 2026-10-05 [native Linux receipt](../../experiments/E005-linux-pilot/linux-observed.json)
+accepts isolated runtimes, masks, reload, exports and failure/resume contracts
+without repeating the smoke. Scientific pilot results remain unrun. Next implement
+and locally test only its frozen sampling/mapping/depth/AMBER adapters and prepare
+one owner command; neither E001 nor the three-way study is reopened.

@@ -1,10 +1,10 @@
 # E005: Linux deployment smoke and bounded GI assembly/depth pilot
 
-Prepared: 2026-10-05. Execution: **prepared; native Linux pending**. Pilot scientific
+Prepared: 2026-10-05. Execution: **native Linux smoke accepted**. Pilot scientific
 outcome: **not assessed**. [D011](../../docs/decisions/D011-first-binner-prototype.md)
 requests product validation after accepted [E004](../E004-first-binner/README.md),
 not another architecture screen. No UCloud execution or three-way TNF/GLM/hybrid
-comparison is authorized here. Accepted E001/E002/E003/E004 evidence stays unchanged.
+comparison by Codex is authorized here. Accepted E001/E002/E003/E004 evidence stays unchanged.
 
 ## Deployment boundary
 
@@ -33,7 +33,7 @@ claim or provider invoice.
 [workflow lock](workflow-linux.lock) bind a fresh official standalone Python
 3.12.10 distribution and CPU-only Torch 2.2.2+cpu, with Snakemake 9.16.3. The official
 Python SHA256 was independently verified. Linux/Python target dependency metadata
-closure passes. This is a resolved binary recipe, **not executed Linux validation**.
+closure passes. The returned native Linux execution is accepted below.
 The original binary-only Snakemake resolution failed because connection_pool
 0.0.3 has no wheel. Its small pure-Python wheel was built locally and bound by hash;
 the failed resolution/build evidence is retained. No upstream scientific code or
@@ -49,7 +49,7 @@ ones are preserved and never promoted/repaired silently. This is fresh standalon
 installation, not relocation of an executed Conda prefix. The identical owner/
 harness extraction policy omits the unused bundled terminfo database; its case
 aliases caused a retained Mac extraction-test failure. Interpreter, libraries and
-licenses remain unchanged; Linux execution still awaits its native check. The driver stops on
+licenses remain unchanged; Linux execution passed its native check below. The driver stops on
 nonzero exits/time/RSS ceilings and terminates observed children, returning logs
 on failure. Before-site child progress/faulthandler distinguishes native startup
 from parent waiting. It verifies completed-workdir dry-run schedules nothing,
@@ -173,8 +173,45 @@ The final upload archive is **302,178,719 bytes**, SHA256
 `289568e4d000aed8228b9fb119e4586c4c0d94598165b7f7c29a165cadf2a835`,
 from source commit `2f0b9a58bcf86f29f23b0f3bed16f31171a359f4`.
 Installed-package source remains E004's accepted snapshot. Linux CPU wheels and
-full standalone-prefix installation/loader/affinity behavior have **not** executed
-locally; real filesystem extraction and target dependency closure are separate
-checks. No Linux acceptance, pilot feature/depth/training/evaluation or three-way
-study is claimed. **Exact next step: owner runs only the v2 Linux smoke and returns
-its archive, checksum and terminal log.**
+full standalone-prefix installation/loader/affinity behavior did not execute on
+Mac; real filesystem extraction and target dependency closure were separate
+checks. Native Linux acceptance is recorded below; the pilot and three-way study
+remain unrun.
+
+## Accepted native Linux return, 2026-10-05
+
+[Independent review](review_linux.py) inspected `linux-smoke-kc6vz1qe` without
+rerunning preparation, training or exports. [Receipt](linux-observed.json) owns
+source/return/log hashes, runtime inventories, stage costs and observations.
+Archive SHA256 `51b09e1589c584b72182c9501bea1e06508316f8f080a76eabed5d6786679773`
+matches its uploaded checksum; all **124 retained-file hashes** verify. The two
+Python 3.12.10 prefixes are independent, CPU Torch 2.2.2+cpu has no CUDA build,
+all import origins stay inside their prefix, and exact wheel inventories match.
+Pre-site child logs and pip checks pass. Affinity is `[0,1,2,3]`, numerical pools
+and CLI/Snakemake budgets are four, interop one and loader workers zero.
+
+Actual arrays preserve 14 IDs / 52,235 bp, the ordered synthetic two-sample depths,
+zeros/masks and the two explicit exclusions. Tiny fresh TNF agrees with the
+accepted cache. Twenty epochs see every eligible row; retained saved/reloaded
+embeddings match **exactly**. Raw export: 10 assigned / two noise / two excluded;
+learned export: 12 / zero / two. Every DNA string is present exactly once in each
+export. Missing-depth, corrupt-checkpoint and overwrite checks exit nonzero in
+0.256 / 1.339 / 0.049 seconds; completed-directory dry-run schedules nothing.
+Accept this software work without repeating it. No synthetic-depth bin-quality
+claim follows.
+
+Owner allocation **4 vCPUs / 12 GB**. Driver including setup and evidence collection:
+**83.81135 s / 0.0931237 allocated vCPU-hours**. Native DAG: **11.29225 s**, sampled
+descendant peak RSS **306,741,248 bytes**, sampled average **0.847 CPUs**. Training
+itself: 0.07436 s / 3.356 CPUs; startup and serial work explain lower full-DAG use.
+The hashed inventory retains 977,407 logical bytes, excluding its own and open-log
+bytes; compressed return is 703,082 bytes. Runtime/payload storage was not
+inventoried in this return, so no observed total-storage claim is possible.
+These are sampled measurements and allocation accounting, not an exact bill;
+upload/owner idle are outside the driver clock. The existence/size inventory
+confirms retained source FASTQs, GI GSA and AMBER locators, not their current bytes.
+
+**Next:** implement/test the frozen sampling, mapping, explicit mean-depth and
+AMBER/R95 adapters, then prepare one owner pilot packet. Keep all E005 uploads,
+launch copies, terminal logs and returned archive/checksum under
+`/work/Home/dl_binner/e005/transfer/`; previous smoke assets remain in place.
