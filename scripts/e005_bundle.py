@@ -96,7 +96,7 @@ def build(output):
     write(folder/'bundle-manifest.json', dict(schema=1, source_commit=commit,
           accepted_package_source_commit='7b24a6b9677d8d7625d392aa0fc0a189952767cb',
           scope='offline native CPU/Linux software smoke; no pilot execution', files=files))
-    archive = output/'e005-linux-smoke-v1.tar.gz'
+    archive = output/'e005-linux-smoke-v2.tar.gz'
     with tarfile.open(archive, 'w:gz') as tar:
         for path in sorted(folder.rglob('*')):
             if path.is_file():

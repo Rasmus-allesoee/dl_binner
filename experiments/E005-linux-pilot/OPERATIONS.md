@@ -7,7 +7,7 @@ controls and limitations; [smoke.json](smoke.json) owns resource/time ceilings.
 
 ## Files and job
 
-Upload `e005-linux-smoke-v1.tar.gz` and `e005-linux-smoke-v1.tar.gz.sha256` to
+Upload `e005-linux-smoke-v2.tar.gz` and `e005-linux-smoke-v2.tar.gz.sha256` to
 `/work/Home/`. Keep both filenames. The bundle contains all required Python/CPU/
 workflow wheels, frozen source, tiny DNA/TNF/depth inputs and the pilot protocol.
 No large source DNA/reads/BAM upload is required. Binary download/metadata checks
@@ -30,9 +30,10 @@ log=$(mktemp /work/Home/e005-linux-smoke.XXXXXX.log)
 trap 'rc=$?; printf "\nTERMINAL_LOG=%s\nEXIT_CODE=%s\n" "$log" "$rc"; exit "$rc"' EXIT
 (
   for tool in python3 tar sha256sum tee; do command -v "$tool" >/dev/null || { echo "Missing prerequisite: $tool"; exit 2; }; done
-  sha256sum -c e005-linux-smoke-v1.tar.gz.sha256
+  sha256sum -c e005-linux-smoke-v2.tar.gz.sha256
+  sha256sum e005-linux-smoke-v2.tar.gz
   launch=$(mktemp -d /work/Home/e005-launch.XXXXXX)
-  tar -xzf /work/Home/e005-linux-smoke-v1.tar.gz -C "$launch"
+  tar -xzf /work/Home/e005-linux-smoke-v2.tar.gz -C "$launch"
   env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE \
     PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 \
     python3 -I -u "$launch/e005-linux-smoke/scripts/e005_owner.py" \
@@ -63,7 +64,9 @@ save/reload parity, fresh-tiny/cached reader agreement, both exports, masks,
 exclusion/noise accounting, native fatal-input/corrupt-checkpoint/overwrite checks
 and a completed-workdir dry-run. All computational rules run serially with
 four-thread limits. Setup has a 30-minute ceiling, DAG ten minutes and whole driver
-one hour at ≤8-GB sampled subtree RSS. **Expect roughly 1–10 minutes on an intact
+one hour through verification/setup/checks at ≤8-GB sampled subtree RSS, then
+evidence-only collection. A parent alarm also covers hashing/extraction, not just
+native child stages. **Expect roughly 1–10 minutes on an intact
 normal filesystem; this is a planning estimate, not measured Linux time.** The
 one-hour ceiling allows bounded first setup but does not justify ignoring a hung
 child. Child diagnostics, 20-second heartbeats and per-stage ceilings expose hangs.
@@ -74,7 +77,7 @@ input/prerequisite failures are not interpreted as a negative binning result.
 Repeated invocation makes a new attempt and can reuse healthy environment prefixes;
 it never removes the old attempt. It does not automatically retry failed science.
 
-Successful return includes `status.json`, `runtime.json`, resolved configuration,
+Successful return includes the verified bundle manifest, `status.json`, `runtime.json`, resolved configuration,
 stage commands/logs/CPU/RSS receipts, per-rule extended benchmarks, caches/masks,
 checkpoint/reference/reloaded embeddings, both complete partitions and exports,
 verification and failure checks. A read-only existence/size inventory reports

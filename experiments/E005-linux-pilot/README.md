@@ -114,10 +114,16 @@ release and the future three-way study are later separate scopes.
 
 ## Local checks and retained evidence
 
-Local E005 binner prefix is separate from E004. It reuses cached wheel bytes
-read-only, not old site packages. The workflow coordinator is the accepted 9.16.3
-prefix referenced read-only and inventoried. All setup failures/logs remain in
+Local E005 binner and workflow prefixes are separate from earlier environments.
+The binner reuses cached wheel bytes read-only, not old site packages. An initial
+read-only coordinator preflight found a missing setuptools dependency and stopped
+before the DAG; its prefix remains unchanged. A new isolated 9.16.3 workflow prefix
+was installed with separate Mac wheels. All setup failures/logs remain in
 ignored `artifacts/e005-linux-pilot/setup/`. Source-only staging/hash/metadata and
 portable harness checks cannot prove Linux loader/ABI/native startup health.
 The [operations guide](OPERATIONS.md) owns the exact transfer/job/return procedure.
-The local observed receipt will be added after checks; **no pilot is executed**.
+The first staged driver passed real native Mac DAGs at four and one threads.
+Transfer v2 additionally retains the verified bundle manifest on failures and
+uses a parent alarm across hashing/extraction/setup, followed by evidence-only
+collection. Earlier executed v1 snapshots/failed attempts remain untouched.
+The local observed receipt will be added after final checks; **no pilot is executed**.

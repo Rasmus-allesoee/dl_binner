@@ -10,12 +10,14 @@ import tarfile
 import tempfile
 import time
 import unittest
+from unittest.mock import patch
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'scripts'))
 from e005_smoke import run, sha, write
 from e005_owner import unpack_python, verify_bundle, isolated_env
+import e005_owner
 from e005_bundle import wheel_lock
 
 
@@ -140,6 +142,31 @@ class DeploymentTests(unittest.TestCase):
         self.assertIn('--allocated-vcpus 4 --allocated-ram-gb 12', command)
         self.assertIn('set -euo pipefail', command)
         self.assertIn('tee "$log"', command)
+
+    def test_parent_budget_and_failed_prerequisite_provenance(self):
+        bundle = self.folder/'bundle'; bundle.mkdir()
+        cfg = bundle/'experiments/E005-linux-pilot/smoke.json'; cfg.parent.mkdir(parents=True)
+        cfg.write_text(json.dumps(dict(total_seconds_ceiling=.2)))
+        write(bundle/'bundle-manifest.json', dict(source_commit='0'*40, files={}))
+        root = self.folder/'invalid-allocation'
+        argv = ['owner', '--root', str(root), '--allocated-vcpus', '5', '--allocated-ram-gb', '12']
+        with patch.object(e005_owner, 'BUNDLE', bundle), patch.object(sys, 'argv', argv):
+            self.assertEqual(e005_owner.main(), 1)
+        attempt = next(root.glob('linux-smoke-*'))
+        self.assertEqual(json.loads((attempt/'bundle-manifest.json').read_text())['source_commit'], '0'*40)
+        self.assertEqual(json.loads((attempt/'status.json').read_text())['status'], 'failed')
+        self.assertTrue(list(root.glob('*-return.tar.gz')))
+        root = self.folder/'parent-timeout'
+        argv[2] = str(root)
+        def stalled_read(folder):
+            time.sleep(2)
+            return {}
+        started = time.monotonic()
+        with patch.object(e005_owner, 'BUNDLE', bundle), patch.object(sys, 'argv', argv), patch.object(e005_owner, 'verify_bundle', stalled_read):
+            self.assertEqual(e005_owner.main(), 1)
+        self.assertLess(time.monotonic()-started, 1)
+        attempt = next(root.glob('linux-smoke-*'))
+        self.assertIn('Total owner-driver ceiling', json.loads((attempt/'status.json').read_text())['error'])
 
 
 if __name__ == '__main__':

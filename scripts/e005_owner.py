@@ -285,8 +285,16 @@ def main():
             raise KeyboardInterrupt('Owner signal '+str(signum))
         for sig in handlers:
             signal.signal(sig, cancelled)
+        alarm_handler = signal.getsignal(signal.SIGALRM)
+        def budget_exceeded(signum, frame):
+            raise TimeoutError('Total owner-driver ceiling exceeded')
+        signal.signal(signal.SIGALRM, budget_exceeded)
         try:
+            # Cover parent-side verification/extraction as well as child stages.
+            limits = json.loads((BUNDLE/'experiments/E005-linux-pilot/smoke.json').read_text())
+            signal.setitimer(signal.ITIMER_REAL, limits['total_seconds_ceiling'])
             manifest = verify_bundle(BUNDLE)
+            write(attempt/'bundle-manifest.json', manifest)
             if shutil.disk_usage(args.root).free < 4*10**9:
                 raise RuntimeError('At least 4 GB free required for new smoke runtimes/evidence')
             status = execute(args, attempt, manifest)
@@ -295,6 +303,9 @@ def main():
             status = dict(status='failed', error=repr(error), pilot_launched=False)
             traceback.print_exc()
         finally:
+            # Preserve bounded evidence collection even after an execution timeout.
+            signal.setitimer(signal.ITIMER_REAL, 0)
+            signal.signal(signal.SIGALRM, alarm_handler)
             elapsed = time.monotonic()-started
             status.update(driver_seconds_before_collection=elapsed,
                           allocated_vcpus=args.allocated_vcpus, allocated_ram_gb=args.allocated_ram_gb,

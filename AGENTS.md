@@ -262,6 +262,12 @@ validation. Passing test counts alone are not evidence of native readiness.
 On recovery, test that completed stages are not scheduled again and that every
 remaining consumer follows the reused manifests rather than inferred paths.
 
+For new bounded owner-run drivers, cover parent-side verification, hashing and
+setup with the overall execution ceiling as well as timing child stages. Retain
+the verified transfer manifest in failure returns, not only successful ones.
+Evidence-only collection may follow a timeout; distinguish its cost from the
+bounded execution clock and include it in allocation accounting.
+
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
 For repeated native startup hangs, capture evidence inside the child (including
