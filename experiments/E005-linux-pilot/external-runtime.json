@@ -1,0 +1,48 @@
+{
+  "amber": {
+    "prefix": "/work/Home/dl_binner/e001/e001-gate0/envs/amber",
+    "required_versions": {
+      "biopython": "1.87",
+      "bokeh": "3.8.2",
+      "jinja2": "3.1.6",
+      "matplotlib": "3.10.8",
+      "numpy": "2.0.1",
+      "pandas": "2.2.2",
+      "pyarrow": "23.0.1",
+      "seaborn": "0.13.2"
+    },
+    "source": "/work/Home/dl_binner/e001/e001-gate0/sources/AMBER_evaluation"
+  },
+  "mapping": {
+    "prefix": "/work/Home/dl_binner/e001/e001-gate0/envs/mapping",
+    "versions": {
+      "samtools": "1.24",
+      "strobealign": "0.17.0"
+    }
+  },
+  "record": "E005",
+  "scope": "read-only E001 runtime reuse; pin audited AMBER source and declared requirements; full current inventory and original lock hashes captured on entry; no environment relocation/install",
+  "source_commit": "f8b3a601043d13fc4227d5691c13561eb4490e50",
+  "source_files": {
+    "LICENSE": "b53fc8c563c55cac57498b90b9226d489a066f292a07c680d8116e9b55300a54",
+    "cami_amber/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cami_amber/amber_html.py": "1255e9602baa46b99a55133c708b922ddc50f9cb53e5916b02e5a0d9f8a9c34c",
+    "cami_amber/binning_classes.py": "6ff193ee4679e675483c3da03723b76ae6e1e5d025dfa9893defc5384efdc780",
+    "cami_amber/evaluate.py": "0a9f0aecc6ed4e7771a3498555dea42949af74c00184cf239624e7efbf394743",
+    "cami_amber/plot_by_genome.py": "6c95b6a0b65a819a44a167c9a165f502aa221e578c7de4155cef13815df131bb",
+    "cami_amber/plots.py": "9dba639c5e5da4592ad89c0e33f6a27cc2253aceb7dd277d14ae4e2e728a558b",
+    "cami_amber/precision_recall_per_bin.py": "5c566db3cf345e34418d5cabfe4f78ecdcf8bb21a7f40a70d89109a987691cd7",
+    "cami_amber/unifrac_distance.py": "7fd31cc7189b159e3489858068d57ee841220941c9ce9a5ca56001bfe2fea243",
+    "cami_amber/utils/EMDUnifrac.py": "eb8f00e7ab70e39d831b9eeb157a4f938e1b8ace54937bed6cdac1ec857aaf93",
+    "cami_amber/utils/ProfilingTools.py": "775e4898fe5ac0bf98b938dfb08ae107f597021aada5cb0f8fb975ebe4092784",
+    "cami_amber/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cami_amber/utils/add_length_column.py": "dfd2e5e5674fe81658baf0902b9db8528ba75f2da2a9834e158caca610024362",
+    "cami_amber/utils/argparse_parents.py": "108cd06ba7fcc9e9579db2e0e1f62dd1bb44a5efa9e2f3473b7bda7e3b26c943",
+    "cami_amber/utils/convert_fasta_bins_to_biobox_format.py": "ea3502e0bf4c7b328eef6078f9e70b52424bc2bf825b86c8c1e7360430c01006",
+    "cami_amber/utils/labels.py": "59a2c230108f4a14cac42a86d0b1d222d5b3bcda302bb8f5b346c985636dc720",
+    "cami_amber/utils/load_data.py": "244e519bc9937b7facfc36f67d872c0195d448606f6ed49e5b74bf32ee382cd2",
+    "cami_amber/utils/load_ncbi_taxinfo.py": "da7194d2ece2abb5e91d983a8dda88394891801eb94e5e52eba6a0465f3a3fc7",
+    "cami_amber/version.py": "226cd8408313d16241aac58f5845efa76e21d0626ae877f34a0192104ba8c5cb",
+    "requirements.txt": "2df09e4973480e7ba3940ecd81226acd9c5182e5a4d945aef0f5bfd05ad7aba1"
+  }
+}

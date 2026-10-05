@@ -1,10 +1,14 @@
 {
   "record": "E005",
-  "status": "frozen protocol; not executed; no launch mode in smoke bundle",
+  "status": "frozen protocol; native Linux software gate accepted; owner scientific pilot not executed",
   "role": "transductive human-associated GI development GSA derivative; not an untouched public benchmark or real-assembler MAG test",
   "input_manifest": "experiments/E005-linux-pilot/pilot-inputs.json",
   "contig_manifest": "experiments/E005-linux-pilot/pilot-contigs.tsv",
-  "data_ceiling": {"genomes": 4, "contigs": 6000, "bp": 20000000},
+  "data_ceiling": {
+    "genomes": 4,
+    "contigs": 6000,
+    "bp": 20000000
+  },
   "sources": {
     "dataset_doi": "10.4126/FRL01-006425518",
     "gi_fasta_sha256": "67aeeeb70e5ba0e1506bf95c79bb25b06869c0486e6c0ea111763c3b060c0baf",
@@ -12,11 +16,21 @@
     "identity_policy": "reuse D005 coordinate/quarantine/alias provenance; new all-length subset, not an E001 rerun",
     "reference_reconstruction": "full accepted GI gsa.fa and all-length contigs.jsonl, select frozen manifest original IDs, uppercase, wrap 80 bp; verify resulting FASTA SHA256",
     "retained_source_fasta_ucloud": "/work/Home/dl_binner/e001/e001-gate0/inventory/per_bodysite/gastro_bam/gsa.fa",
-    "retained_source_fasta_locator_status": "derived inventory locator; recheck existence/hash before pilot preparation, no scientific launch on inferred paths"
+    "retained_source_fasta_locator_status": "exists in accepted Linux return; pilot packet includes exact locally reconstructed 13.13-MB derivative bound by its precommitted hash; no full source DNA upload/read required on owner run"
   },
   "samples": [
-    {"sample": 1, "column": "GI_sample_1", "reads": "/work/RasmusAllesøeNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_1/reads.fq", "sha256": "bead8ff89d4744d5219fb97b3baa5d0f2d3a4634a8e82962c773cf852c393452"},
-    {"sample": 4, "column": "GI_sample_4", "reads": "/work/RasmusAllesøeNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_4/reads.fq", "sha256": "461513be2d40e96e7fd4f98f64954ef9ca5c43074a123e7055fc80c2ab6f5f67"}
+    {
+      "sample": 1,
+      "column": "GI_sample_1",
+      "reads": "/work/RasmusAllesøeNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_1/reads.fq",
+      "sha256": "bead8ff89d4744d5219fb97b3baa5d0f2d3a4634a8e82962c773cf852c393452"
+    },
+    {
+      "sample": 4,
+      "column": "GI_sample_4",
+      "reads": "/work/RasmusAllesøeNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_4/reads.fq",
+      "sha256": "461513be2d40e96e7fd4f98f64954ef9ca5c43074a123e7055fc80c2ab6f5f67"
+    }
   ],
   "reads": {
     "source": "accepted retained interleaved 150-bp FASTQ; not a new download or BAM upload",
@@ -24,43 +38,100 @@
     "max_source_pairs": 20000000,
     "sampled_pairs_per_sample": 1000000,
     "pair_contract": "anonymous S{sample}R{n}/1 and /2, matching ID, four-line FASTQ, exactly 150 bases/qualities, no broken/odd pairs",
-    "sampling_implementation": "two sequential passes, retain digest/offset ranks rather than sequences in heap; binding input and emitted sample hashes; implement/test before pilot launch"
+    "sampling_implementation": "implemented/tested two complete sequential validation/hash passes; digest/ID/offset heap only; increasing anonymous E001 R IDs enforced; no sequences stored in heap"
   },
   "mean_depth": {
-    "columns": ["GI_sample_1", "GI_sample_4"],
+    "columns": [
+      "GI_sample_1",
+      "GI_sample_4"
+    ],
     "table_header": "contig_id followed by the frozen ordered columns; all and only pilot FASTA IDs",
     "reference": "exact byte-bound E005 pilot GSA subset, including below-500 contigs; read subset mapped here, not to E001 canonical.fna",
     "mapping": "strobealign 0.17.0, read length 150; serial SAM then samtools 1.24 sort/index (no concurrent mapper/sorter)",
     "mapper_threads": "full declared allocation, initially 4",
     "samtools_extra_threads": "allocated vCPUs minus one for threaded sort; main thread counted",
     "definition": "sum aligned M/= /X base observations over full contig length; MAPQ/baseQ minima 0; exclude UNMAP/SECONDARY/SUPPLEMENTARY (0x904); retain DUP/QCFAIL, both overlapping mates, no deletion counting or edge trim",
-    "proposed_native_reader": "samtools depth -aa -q 0 -Q 0 -g 0x600 -G 0x800; stream sums, fill native observed zero-coverage positions, divide by declared full lengths; audit flag semantics with real tiny BAM before launch",
+    "proposed_native_reader": "samtools 1.24 depth -aa -q 0 -Q 0 -g 0x600 -G 0x800 -@ 2 at four CPUs; native main+2 BGZF workers plus Python aggregator=4; actual full-position axes required, including unused references",
     "provenance": "retain reference SHA, sampled-read SHA, mapped/sorted BAM SHA, native commands/version/import origins and contig/sample axes",
     "existing_matrix": "E001 MetaBAT depth covers >=2500 only; cannot populate shorter rows or be merged with invented zero depth",
     "limitations": "small competitive reference and read subsets alter multi-mapping/coverage and abundance; no claim equivalent to full-community depth, no truth-derived read counts as features"
   },
-  "model": {"training": "experiments/E004-first-binner/training.json", "seed": 11, "min_length": 500, "loader_workers": 0, "checkpoint_policy": "train new target-specific checkpoint; same frozen E004 settings, fitted transforms saved/reloaded"},
-  "controls": ["learned TNF plus measured mean-depth", "untrained TNF plus identical log1p mean-depth; same eligibility and fixed label-blind clustering"],
-  "clustering": {"k": 5, "mutual_positive_cosine": true, "greedy_weighted_modularity_resolution": 1, "min_group_contigs": 3, "query_block": 128, "oracle_K": null, "truth_tuning": false},
+  "model": {
+    "training": "experiments/E004-first-binner/training.json",
+    "seed": 11,
+    "min_length": 500,
+    "loader_workers": 0,
+    "checkpoint_policy": "train new target-specific checkpoint; same frozen E004 settings, fitted transforms saved/reloaded"
+  },
+  "controls": [
+    "learned TNF plus measured mean-depth",
+    "untrained TNF plus identical log1p mean-depth; same eligibility and fixed label-blind clustering"
+  ],
+  "clustering": {
+    "k": 5,
+    "mutual_positive_cosine": true,
+    "greedy_weighted_modularity_resolution": 1,
+    "min_group_contigs": 3,
+    "query_block": 128,
+    "oracle_K": null,
+    "truth_tuning": false
+  },
   "evaluation": {
     "truth_access": "only after both partitions and complete exports exist; dataset construction labels never enter features/train/cluster/selection",
     "established_evaluator": "AMBER GenomeQuery/Options/read_metadata, unchanged E001 audited API and f8b3a601043d13fc4227d5691c13561eb4490e50 source",
     "environment": "E001 envs/amber and sources/AMBER_evaluation read-only, exact inventory/source reprobed and recorded before pilot; no upgrade/relocation",
-    "options": {"filter_tail_percentage": 0, "skip_heatmap": true},
+    "options": {
+      "filter_tail_percentage": 0,
+      "skip_heatmap": true
+    },
     "input": "CAMI @Version:0.9.0 / @SampleID:E005, predictions contain assigned IDs only; truth retains every pilot contig and original origins/lengths",
-    "metrics": ["native AMBER per-bin purity and per-genome completeness", "confirmed R95 macro and bp-weighted", "genomes at >=50% and >=90% assembled-sequence recovery with confirmed purity >=95%", "assigned/unassigned/excluded contigs and bp with reasons at every length stratum"],
+    "metrics": [
+      "native AMBER per-bin purity and per-genome completeness",
+      "confirmed R95 macro and bp-weighted",
+      "genomes at >=50% and >=90% assembled-sequence recovery with confirmed purity >=95%",
+      "assigned/unassigned/excluded contigs and bp with reasons at every length stratum"
+    ],
     "r95_contract": "reuse E001 confirmed purity definition: min genome confirmed assembled bp 200000, min bin bp 200000, unique non-cross-origin-identical sequence numerator, every assigned bp in bin purity denominator; one best qualifying bin per genome, ID ties; full frozen genome denominator includes excluded/noise",
     "empty_partition": "valid biological failure; record zero confirmed recovery/no AMBER prediction rows, retain all excluded/noise; never force a bin",
-    "strata_lower_bounds_bp": [1, 500, 768, 1000, 2500, 10000],
+    "strata_lower_bounds_bp": [
+      1,
+      500,
+      768,
+      1000,
+      2500,
+      10000
+    ],
     "scope": "recovery of the available GSA sequence of four selected genomes, not full genomes missing from assembly, CheckM MAG quality or independent generalization",
     "coverage_benefit_claim": "not isolated by these two arms; no biological abundance benefit claim without separately authorized sequence-only control"
   },
-  "resources": {"initial_allocated_vcpus": 4, "initial_allocated_ram_gb": 12, "working_rss_bytes_ceiling": 8000000000, "setup_seconds_ceiling": 1800, "science_seconds_ceiling": 7200, "feature_seconds_ceiling": 1800, "cluster_seconds_ceiling_per_arm": 900, "total_driver_seconds_ceiling": 10800, "maximum_allocated_vcpu_hours_at_4": 12, "new_working_storage_review_gb": 10, "max_concurrent_numerical_jobs": 1},
+  "resources": {
+    "initial_allocated_vcpus": 4,
+    "initial_allocated_ram_gb": 12,
+    "working_rss_bytes_ceiling": 8000000000,
+    "setup_seconds_ceiling": 1800,
+    "science_seconds_ceiling": 7200,
+    "feature_seconds_ceiling": 1800,
+    "cluster_seconds_ceiling_per_arm": 900,
+    "total_driver_seconds_ceiling": 10800,
+    "maximum_allocated_vcpu_hours_at_4": 12,
+    "new_working_storage_review_gb": 10,
+    "max_concurrent_numerical_jobs": 1
+  },
   "acceptance": {
     "precondition": "accept returned native Linux smoke and validate tested mapping/coverage/evaluator adapters before any owner pilot command",
     "software": "native inputs/axes/masks, checkpoint reload <=1e-7, finite features/embeddings, complete exports, no truth access before evaluation, completed resume schedules nothing, within prospective caps",
     "utility": "report both arms including degradation; superiority not required for software acceptance, no tuning or second architecture gate",
     "stop": "fatal error, missing/mismatched source/axis, resource cap, unresolved runtime/provenance; retain evidence and stop dependent stages, no larger input or extra seed",
     "next": "inspect retained pilot quality/cost; choose a concrete product fix or small release-readiness milestone; three-way TNF/GLM/hybrid study remains non-blocking and unrun"
+  },
+  "implementation": {
+    "dag": "workflows/first-binner/gi_pilot.smk",
+    "adapters": "scripts/e005_pilot.py",
+    "owner": "scripts/e005_pilot_owner.py",
+    "native_contracts": "experiments/E005-linux-pilot/native_contracts.py",
+    "external_runtime": "experiments/E005-linux-pilot/external-runtime.json",
+    "transfer_root": "/work/Home/dl_binner/e005/transfer/",
+    "cpu_plan": "serial; mapper4, sort/index main+3, depth main+2+aggregator1, numerical4/interop1/loader0; sampling and graph portions can remain serial",
+    "stop_before_science": "current isolated E005 and E001 runtime/source/lock probes plus changed native adapter contracts"
   }
 }

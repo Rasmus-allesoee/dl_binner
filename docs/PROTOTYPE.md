@@ -12,8 +12,8 @@ then `python -m pip install --no-deps --no-build-isolation .`. The executable is
 serial within four CPU threads. A Linux recipe must select CPU PyTorch wheels
 explicitly and pass native checks before owner execution; local installation
 does not validate that recipe. [E005](../experiments/E005-linux-pilot/OPERATIONS.md)
-now supplies a checksum-bound offline CPU/Linux deployment smoke; native Linux
-acceptance awaits returned-output review. Its pilot protocol preserves shorter
+has accepted the checksum-bound native CPU/Linux smoke and prepares one bounded
+GI pilot. Its protocol preserves shorter
 contigs and requires depth from that exact reference, never fabricated missing rows.
 
 The first actual local integration is accepted in E004: a frozen installed wheel

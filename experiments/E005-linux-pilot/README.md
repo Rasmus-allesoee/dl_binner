@@ -215,3 +215,53 @@ confirms retained source FASTQs, GI GSA and AMBER locators, not their current by
 AMBER/R95 adapters, then prepare one owner pilot packet. Keep all E005 uploads,
 launch copies, terminal logs and returned archive/checksum under
 `/work/Home/dl_binner/e005/transfer/`; previous smoke assets remain in place.
+
+## Frozen pilot adapters, 2026-10-06
+
+[Rule adapters](../../scripts/e005_pilot.py), [serial DAG](../../workflows/first-binner/gi_pilot.smk)
+and [owner driver](../../scripts/e005_pilot_owner.py) implement the existing protocol.
+[External runtime contract](external-runtime.json) pins audited AMBER bytes and
+read-only E001 mapping/AMBER dependencies; accepted E005 runtime inventories and
+installed package hashes are reprobed. No environment install, repair or relocation.
+The packet carries the exact 13.13-MB prepared reference derivative, so no whole
+GI source or large BAM/FASTQ upload is needed. Both sampled native BAMs are produced
+against this reference; old length-filtered E001 coverage is unsuitable.
+
+Sampling validates/hashes each entire interleaved source twice, retains at most one
+million digest/ID/offset ranks without a sequence heap, then writes selected pairs
+in original order with an auditable compressed ID/offset table. The increasing
+anonymous E001 R-number invariant catches duplicates without a 20-million-ID set.
+Malformed/mismatched/short/changed sources produce no successful receipt. Features
+use explicit ordered columns GI_sample_1/GI_sample_4 and actual depth zeros.
+Native full-position ID/length axes are required, including unused short references;
+missing positions are an error, never synthesized missing observations.
+
+Targeted primary source audit, 2026-10-06: samtools 1.24
+[depth manual](https://www.htslib.org/doc/1.24/samtools-depth.html) and
+[bam2depth.c](https://github.com/samtools/samtools/blob/1.24/bam2depth.c), plus
+[strobealign v0.17.0](https://github.com/ksahlin/strobealign/tree/v0.17.0).
+The code initializes the excluded mask to UNMAP/SECONDARY/DUP/QCFAIL; `-g 0x600`
+removes DUP/QCFAIL and `-G 0x800` adds SUPPLEMENTARY, giving 0x904. Native `-aa`
+includes unused references; omitted `-J`/`-s` preserve the frozen deletion/overlap
+semantics. This narrow adapter audit reuses the completed design review and is
+not a literature restart. Real native fixture checks must confirm these semantics
+before science. [Native contracts](native_contracts.py) use actual real-DNA mapping,
+SAM/BAM flags/CIGARs and native AMBER, not substituted workers.
+
+Numerical work is serial: mapper four; sort/index main plus three; depth main plus
+two BGZF workers plus one Python aggregator; Torch/BLAS/OpenMP four, interop one,
+loader zero. Sampling/parsing and some graph work remain serial or I/O bound.
+Rule guards enforce RSS/time and retain commands/resources; setup/science/parent
+ceilings remain the precommitted 30 minutes/two hours/three hours. The driver adds
+no model family, loss, tuning, coverage arm or seed. Both complete exports must
+pass before the only truth-consuming evaluation path runs native AMBER and exact
+confirmed R95. Recovery denominators preserve shorts/exclusions/noise and every
+assigned unconfirmed base remains in bin-purity denominators. Software success
+never requires winning against raw features.
+
+Local adapter tests and measured fixture integration are recorded after their
+source commit; they do not run or score the full frozen scientific pilot. Linux
+smoke acceptance does not pre-accept the larger pilot. The owner alone executes
+its [operations command](OPERATIONS.md), with all new transfers/logs/returns below
+`/work/Home/dl_binner/e005/transfer/`. Full native source/lock/large-read Linux
+contracts remain subject to this owner return.
