@@ -174,6 +174,8 @@ The receipt is always written, including cancellation/failed prerequisites.
     elapsed = time.monotonic()-started
     receipt = dict(command=[str(c) for c in command], exit_code=process.returncode if process else None,
                    stop_reason=reason, wall_seconds=elapsed, peak_sampled_rss_bytes=peak,
+                   seconds_ceiling=seconds, rss_bytes_ceiling=ram_bytes,
+                   launched_pid=process.pid if process else None,
                    sampled_cpu_seconds=max(0, sum(known.values())-baseline),
                    sampled_average_cpus=max(0, sum(known.values())-baseline)/elapsed,
                    scope='sampled process tree; shared pages may be counted twice; short CPU work may be missed',
