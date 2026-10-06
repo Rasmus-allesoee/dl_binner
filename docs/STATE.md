@@ -113,24 +113,53 @@ Accepted scientific stages remain valid and are not repeated. No
 full-community throughput or linear CPU-scaling claim. Retained attempt inventory
 3.297 GB; return copy 32.09 MB. Prior runtimes/read sources/attempts are separate.
 
-**Exact next step: implement the prepared bounded generic-command usability
-milestone**, with its [contract](PROTOTYPE.md#prepared-next-milestone-one-end-to-end-command)
-owned by PROTOTYPE and its [decision/alternatives](decisions/D011-first-binner-prototype.md#e005-acceptance-and-next-bounded-usability-milestone-2026-10-06)
-owned by D011. Add one installed end-to-end command and a label-free summary,
-retain the same model/clusterer and raw control, package defaults/DAG, preserve
-masks/shorts/noise and validate fresh/partial/completed resume and failures from a
-new local package environment. At most four threads/loader zero/8 GB working RSS,
-two-hour integration ceiling, ≤32-contig/0.6-Mb real-DNA fixtures. No E002–E005
-scientific rerun. This is prepared, **not implemented or Linux-validated yet**.
-Implementation contracts and the native outside-checkout test suite are now
-prepared in [E006](../experiments/E006-cli-usability/README.md); measured execution
-is pending its source commit. The owner additionally prioritizes clear help,
-actionable errors, readable progress and predictable outputs; the prototype CLI
-may evolve without a compatibility promise.
-No new UCloud command or input from the owner is needed now. Do not rerun the
-accepted v5 recipe retained in [operations](../experiments/E005-linux-pilot/OPERATIONS.md).
-New future transfers/logs/returns still belong under
-`/work/Home/dl_binner/e005/transfer/`; preserve existing attempts and prefixes.
+**E006's generic-command usability milestone is complete and accepted.**
+The installed `dl-binner run` (0.1.0.dev1) packages defaults/DAG and produces both
+arms, complete DNA exports and byte-bound label-free accounting. The
+[guide](PROTOTYPE.md#run-the-binner) owns user-facing commands/outputs/recovery;
+[E006](../experiments/E006-cli-usability/README.md) and its
+[receipt](../experiments/E006-cli-usability/observed.json) own evidence/costs.
+Source/contracts were committed at `e93132b` before native execution; the final
+validated wheel binds `e30023c` source. Scientific `io.py`, `model.py`, clustering
+and the seed-11 schedule are unchanged. No accepted E002–E005 science was repeated.
+
+Native Mac wheel checks from outside the checkout pass sequence-only/explicit
+depth, all six strata, masks, zeros, exact reload, both exports, empty valid bins,
+fresh/partial/completed resume and changed/corrupt/missing/extra artifact refusal.
+Nine focused tests and native independent CPU/global-RAM scheduling checks pass.
+Fatal worker/orphan cleanup and actual RSS/overall timeout checks validate their
+intended failure, not any nonzero exit. Parent/child logs, ten-second heartbeats
+and exit receipts persist; messages surface the native cause. CLI/journal formats
+can evolve without a compatibility commitment.
+
+The 13-contig / 42,311-bp baseline fixture and four-contig / 2,048-bp final fixture
+are software tests, not bin-quality evidence. The new accounting reader agrees
+with retained E005 raw/learned counts and depth zeros without inference or AMBER.
+Final suite: **59.722 s / 0.348-GB sampled peak**; known supervised QA attempts
+including failures: **335.212 s / 0.372458 four-thread wall hours**, local planning
+not UCloud charges. Initial pre-monitor failure, setup/build, review/debugging/
+idle time are outside that accounting. The suite remains within four threads,
+loader zero, 8 GB and two hours. Test failures identified monitor receipt, native
+error presentation and unreaped-process cleanup defects; all are retained/repaired.
+Disk exhaustion stopped v5 setup. Final v7 is a fresh lexical package prefix with
+explicit byte-verified numerical/build dependencies reused read-only from v4;
+no old prefix was relocated/upgraded/deleted. Origins/inventories and dependency
+tree hashes passed review. This local recipe is not a Linux environment transfer.
+
+**Exact next step: prepare and locally test one tiny checksum-bound owner-run
+CPU/Linux generic-command smoke**, reusing healthy UCloud workflow/assets, with a
+new version-qualified package prefix, explicit allocation/limits, raw control,
+resume/failure checks, captured logs and returned evidence. Keep ≤32 contigs /
+0.6 Mb, at most four CPU threads/loader zero/8 GB working RSS, with a prospectively
+bounded smoke ceiling. The new generic launcher is **not Linux-validated yet**;
+E005's old scientific Linux acceptance remains valid. This is an operational
+check, not an architecture/quality gate. No owner upload or UCloud run is needed
+now; the next task prepares the two-file packet and exact owner command.
+Do not rerun the accepted v5 recipe retained in
+[operations](../experiments/E005-linux-pilot/OPERATIONS.md). E005 transfers/logs/
+returns stay under `/work/Home/dl_binner/e005/transfer/`; preserve its attempts and
+prefixes. Prepare the new E006 packet/logs/returns under
+`/work/Home/dl_binner/e006/transfer/`, keeping `/work/Home` tidy.
 
 The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
 planned and unrun. No larger datasets, extra seeds, architecture gate, publication

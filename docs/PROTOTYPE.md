@@ -8,7 +8,7 @@ published release. [D011](decisions/D011-first-binner-prototype.md) owns the des
 [E005](../experiments/E005-linux-pilot/README.md#accepted-v5-native-gi-pilot-and-independent-review-2026-10-06)
 accepts native Linux and a capped GI assembly/explicit-depth development pilot.
 
-Install into a separate Python 3.10 environment with the pinned local requirements,
+Install into a separate Python 3.10–3.12 environment with the pinned requirements,
 then `python -m pip install --no-deps --no-build-isolation .`. The executable is
 `dl-binner`; `python -m dl_binner` provides the same CLI. Keep numerical stages
 serial within four CPU threads. A Linux recipe must select CPU PyTorch wheels
@@ -26,8 +26,12 @@ recovery. The measured demo used sequence only; optional depth has native contra
 tests and a development TNF+measured-depth recovery result in E005. The two arms
 share depth, so coverage's separate biological benefit is not isolated.
 
-Commands are `prepare`, `train`, `embed`, `cluster`, and `export`, with `--help`
-on each. `prepare` reads assembly FASTA and optional mean-depth TSV. Its header is
+The installed **`dl-binner run`** command now groups the complete learned path and
+matched raw control. [E006](../experiments/E006-cli-usability/README.md) accepts its
+built-wheel native Mac checks, recovery, resource enforcement and truthful
+accounting. This is an evolving prototype, not a compatibility promise. The
+individual commands `prepare`, `train`, `embed`, `cluster`, and `export` remain,
+with `--help` on each. `prepare` reads assembly FASTA and optional mean-depth TSV. Its header is
 `contig_id` followed by unique ordered sample names. Every FASTA ID needs one
 nonnegative finite depth row; row order may vary, but extra/missing IDs fail.
 Absent depth is explicit sequence-only mode. Zero depth remains an observation,
@@ -60,7 +64,9 @@ declining training loss alone does not establish useful bins.
 
 ## Prepared next milestone: one end-to-end command
 
-Prepared 2026-10-06, **not implemented yet**. E005 accepts scientific outputs and
+Prepared 2026-10-06; **completed in E006**. The following prospective contract is
+preserved as the acceptance basis, not a request to repeat implementation or
+accepted demonstrations. The current usage guide is below. E005 accepts scientific outputs and
 observed time/RAM limits and improves confirmed assembled recovery, with 51 learned bins from
 four genomes and no ≥90% recovered genome. Preserve that limitation; the next
 milestone makes the current experimental binner easier to use without tuning it
@@ -120,3 +126,83 @@ on a concrete contract failure and fix it within this scope. Retain source/input
 wheel/config hashes, logs and a small receipt; update STATE/D011 and commit. Only
 then decide whether a tiny owner-run Linux launcher check is needed. No larger
 data, extra seeds, three-way study, architecture gate, push or publication by default.
+
+## Run the binner
+
+Use the installed package in its own CPU environment, plus a **separate existing
+Snakemake 9.16.3** Python. The command installs nothing and needs no repository
+checkout, internet connection, marker database or truth labels. Defaults and DAG
+are inside the wheel. Keep interpreter paths lexical: resolving a venv's `python`
+symlink can bypass that environment.
+
+```sh
+dl-binner run --fasta assembly.fna --output result \
+  --workflow-python /absolute/workflow/bin/python --threads 4
+```
+
+Add `--depth mean-depth.tsv` for explicitly supplied mean depth on this exact
+assembly. Its `contig_id` header and ordered sample columns follow the contract
+above. Depth zeros remain observations; absent depth stays sequence-only. An
+alternative to the flag is `DL_BINNER_WORKFLOW_PYTHON=/absolute/workflow/bin/python`.
+`dl-binner run --help` shows examples, limits, output paths and recovery options.
+
+The initial defaults remain seed 11, 20 epochs, hidden 128/output 64, mask 0.1,
+NT-Xent temperature 0.2, AdamW 0.001/weight decay 0.01 and batch/inference 64.
+`--training-config` explicitly selects a JSON matching the existing contract.
+`--min-length` defaults to 500; all excluded DNA is preserved. This bounded
+version supports 1–4 numerical threads, interop one and loader zero. `--memory-gb`
+defaults to 8 GB sampled aggregate working RSS, and `--timeout` to 7,200 seconds
+per invocation, including hashing, probes and final accounting. Limits can be
+lowered. Tiny/serial stages may not saturate the requested threads.
+
+Outputs are predictable:
+
+```text
+result/
+  run-manifest.json       input, source, config, environment and budget bindings
+  run-summary.json       both arms, masks/reasons/strata and resource receipts
+  run-summary.tsv        concise status counts and bp in every length stratum
+  completion.json        summary/stage-receipt hashes
+  learned/bins/          assignments.tsv, bin_*.fna, unassigned.fna, excluded.fna
+  raw/bins/              matched raw control with the same complete exports
+  features/              original TNF/depth, ordered axes and masks
+  training/              checkpoint, transforms, epochs and pre-save embeddings
+  receipts/              successful stage output/evidence hashes
+  logs/invocation-*/     terminal.log, status.json, native logs/samples/benchmarks
+  staging/               uniquely named retained stage attempts
+```
+
+Status/progress lines name each of eight stages; long steps print ten-second
+heartbeats. The terminal log captures final exit codes (0 success/intentional
+partial stop, 1 failure, 130 cancellation). Errors name the native cause and log
+when available. Verbose traces stay in the invocation log. Resources are sampled
+process-tree estimates, not exact peaks or provider invoices; the JSON explains
+its clocks and preserves each completed stage's original resource receipt.
+
+Fresh execution refuses a populated output directory. To continue the same run,
+repeat its input/options and add `--resume`:
+
+```sh
+dl-binner run --fasta assembly.fna --output result \
+  --workflow-python /absolute/workflow/bin/python --threads 4 --resume
+```
+
+FASTA/depth/config/source/runtime/budget and every completed artifact must match.
+Finished stages are reused; completed runs schedule no scientific work. Changed,
+missing or extra published artifacts fail with evidence retained. Failed work
+uses a new staging folder on retry; unreceipted published final artifacts are
+refused, never silently repaired. `--stop-after train` makes a deliberate partial
+run; omit that flag when continuing. Wall time is per invocation. A stale
+`.run-lock` names its PID/host; verify that process has stopped before removing it.
+
+Summary assignment/bin size is **not** genome recovery, completeness,
+contamination or MAG quality. AMBER/R95 remain separate evaluation with explicit
+truth. E006's synthetic-depth/tiny-DNA fixtures establish software behavior, not
+coverage benefit or biological generalization. Accepted E005 accounting was read
+from retained outputs; no inference/clustering/evaluation was repeated.
+
+**Next bounded step:** prepare and locally test one tiny checksum-bound owner-run
+CPU/Linux generic-launcher smoke. Reuse intact UCloud workflow/assets read-only,
+keep the new package in a version-qualified prefix, capture logs/returns and stop
+for review. Do not copy the linked Mac test environment to Linux. No new dataset,
+seed, architecture gate, three-way study or publication is authorized.

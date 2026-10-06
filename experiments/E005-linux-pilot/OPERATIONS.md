@@ -6,8 +6,11 @@ The native Linux smoke **and v5 GI pilot are accepted**:
 **Do not upload or rerun the command below.** It is the executed recipe retained
 for provenance. Preserve `/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/`, its heavy
 files and the original transfers/logs/returns. No additional UCloud job is needed.
-The exact next step is local implementation of the
-[prepared generic-command milestone](../../docs/PROTOTYPE.md#prepared-next-milestone-one-end-to-end-command).
+The generic command is now implemented and locally accepted in
+[E006](../E006-cli-usability/README.md); see its
+[usage guide](../../docs/PROTOTYPE.md#run-the-binner). Next prepare a tiny owner-run
+Linux generic-launcher check. No new owner packet/command is prepared yet; follow
+[STATE](../../docs/STATE.md), not this historical recipe.
 No larger data, extra seed, three-way study, architecture gate or public release.
 
 ## Executed v5 upload files and organization

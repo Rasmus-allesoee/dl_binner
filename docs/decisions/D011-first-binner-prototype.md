@@ -347,3 +347,36 @@ native contracts; repair a concrete product failure before expanding scope.
 Neither E001/H001 nor the original three-seed criterion is resolved by E005.
 Seeds 23/47 and the planned TNF/GLM/hybrid comparison remain deferred/non-blocking.
 No architecture gate, dataset expansion, automatic UCloud job or public release.
+
+## Generic-command milestone accepted, 2026-10-06
+
+[E006](../../experiments/E006-cli-usability/README.md) completes the prepared
+milestone as an installed `dl-binner run`, packaged defaults/DAG, serial native
+stages, matched raw control, byte-bound label-free summaries and explicit
+fresh/partial/completed resume. Source/config contracts preceded execution; final
+wheel source is `e30023c`. Encoder, objective, training defaults and clusterer
+remain unchanged. Native Mac masks, zeros, exact reload/complete exports, resource
+and intended failure contracts pass. Reporting/cleanup failures were repaired
+locally and retained; no E005 science was repeated. No biological score or
+superiority is required or claimed by this usability acceptance.
+
+**Retain D011.** Nine focused tests plus actual scheduler/worker contracts pass
+outside the checkout. Final suite 59.722 s / 0.348-GB sampled peak; known supervised
+QA drivers with failures total 335.212 s / 0.372458 four-thread wall hours, not
+UCloud billing or task-total cost. Disk pressure required a fresh package prefix
+with explicitly bound read-only numerical dependencies; origins and byte trees
+are verified. No executed prefix is relocated/upgraded. That Mac recipe is not
+a Linux transfer.
+
+**Next bounded step:** prepare/test a tiny checksum-bound owner-run CPU/Linux
+check of the generic command and current supervisor/DAG. Reuse healthy UCloud
+assets with a new version-qualified package prefix; ≤32 contigs / 0.6 Mb, at most
+four threads, loader zero and 8 GB working RSS. Freeze an operational ceiling,
+capture logs/returns and stop for review. E005's old scientific CLI Linux pass
+does not validate this new launcher. The owner executes; preparation is local.
+
+This is finite compatibility work, not another architecture/utility gate.
+Clustering/dataset expansion and experiment-only read-sampling optimization
+remain deferred as previously reasoned. Whole-MAG quality, independent
+generalization, isolated depth benefit, publication and the planned non-blocking
+three-way study remain unresolved or separately authorized.

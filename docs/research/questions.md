@@ -205,3 +205,10 @@ real-assembly/whole-MAG evaluation and isolated coverage value remain open.
 [D011](../decisions/D011-first-binner-prototype.md#e005-acceptance-and-next-bounded-usability-milestone-2026-10-06)
 now prepares a bounded generic-command usability milestone, without another
 architecture gate or benchmark expansion. H001, E001 and deferred seeds are unchanged.
+
+2026-10-06 Q004 usability update: [E006](../../experiments/E006-cli-usability/README.md)
+accepts an installed learned/raw workflow, complete byte-bound label-free
+summaries and strict recovery/failure/resource contracts. Model/training/clustering
+remain unchanged; no accepted science is repeated and no biological utility is
+asserted. Next prepare a tiny owner-controlled Linux generic-launcher smoke.
+Independent quality/coverage questions and the non-blocking comparison stay open.

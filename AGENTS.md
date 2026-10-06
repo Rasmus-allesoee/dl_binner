@@ -262,6 +262,17 @@ core cap. Make aggregate RAM scope explicit and use DAG barriers for a promised
 serial workflow. Verify actual scheduling events/overlap on independent ready
 rules; a driver label or tiny fixture that happens to serialize is insufficient.
 
+For installed product workflows, test the actual built wheel outside the checkout
+and package its defaults/DAG. Preserve journaled completed outputs: use explicit
+resume only after matching source/input/config/runtime/artifact bytes; never edit
+manifests to make a retry pass. Prototype interfaces may evolve without a
+compatibility promise; current contracts belong in `docs/PROTOTYPE.md`.
+Keep parent prerequisites within the bounded clock and retain failures even
+before a child starts. Surface native causes beyond scheduler trailers. Distinguish
+exited/zombie from live processes during cleanup and verify the intended stop and
+absence of running orphans. Label-free size/assignment summaries must not imply
+genome recovery or MAG quality without a separate evaluator.
+
 Before transferring an owner-run driver, test the changed production adapter and
 its real input/output contracts, including fresh and recovered directory layouts.
 A fixture that replaces the changed worker/extractor does not validate that path.

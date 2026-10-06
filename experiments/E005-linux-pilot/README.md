@@ -570,3 +570,9 @@ could reduce idle core-hours but is unnecessary for a FASTA/depth product entry
 point and would require new operational validation. Both are deferred, not ruled
 out. The observed fragmentation stays a disclosed limitation. No new UCloud job,
 extra seeds, three-way study, architecture gate or public publication is prepared.
+
+Subsequent 2026-10-06 update: [E006](../E006-cli-usability/README.md) completes that
+generic-command milestone without repeating E005 science. Its
+[guide](../../docs/PROTOTYPE.md#run-the-binner) owns usage/recovery. The next finite
+task prepares a tiny owner-controlled Linux launcher check; v5 remains historical
+and must not be rerun.

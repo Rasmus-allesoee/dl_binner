@@ -30,8 +30,11 @@ The installable [prototype](docs/PROTOTYPE.md) provides FASTA/optional explicit
 mean-depth inputs, contrastive training, saved-checkpoint inference, fixed
 clustering and complete bin exports. [E005](experiments/E005-linux-pilot/README.md)
 accepts native Linux and capped development assembled recovery; whole-MAG quality
-and independent generalization remain unvalidated. The prepared next milestone
-makes this path convenient to run without expanding the architecture or benchmark.
+and independent generalization remain unvalidated. The installed `dl-binner run`
+now groups that path with a matched raw control, safe resume and label-free
+summaries. [Usage](docs/PROTOTYPE.md#run-the-binner) and
+[E006 validation](experiments/E006-cli-usability/README.md) describe the tested
+commands and limits. Generic-launcher Linux validation is the next bounded step.
 
 ## Check the documentation
 
