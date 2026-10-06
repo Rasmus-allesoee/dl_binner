@@ -35,3 +35,10 @@ checks: **144.066 local seconds**; the original receipt/logs/prefixes are retain
 Use a supported local Python 3.10 builder for a fresh attempt, without bypassing
 Requires-Python or expanding package support. The prepared CI builder stays 3.12.
 Known attempt clocks are summed under the original two-hour campaign ceiling.
+
+`run-002`, source **991421e**, also stopped before product tests. Its standalone
+setup and sdist rebuild passed. Direct backend calls in one Python process
+mutated `sys.argv`: the wheel landed under snapshot/sdist instead of the requested
+output directory. Inspection refused the missing expected file. Run the two
+PEP-517 build hooks in independent Python processes in the driver, guide and CI;
+validate retained artifacts before another full setup. Keep both attempts.

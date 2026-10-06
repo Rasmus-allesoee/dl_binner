@@ -89,7 +89,8 @@ snapshot=$(mktemp -d)
 git archive HEAD | tar -x -C "$snapshot"
 mkdir "$build_out"
 cd "$snapshot"
-"$builder_env/bin/python" -I -B -c 'from setuptools.build_meta import build_sdist,build_wheel; import sys; build_sdist(sys.argv[1]); build_wheel(sys.argv[1])' "$build_out"
+"$builder_env/bin/python" -I -B -c 'from setuptools.build_meta import build_sdist; import sys; build_sdist(sys.argv[1])' "$build_out"
+"$builder_env/bin/python" -I -B -c 'from setuptools.build_meta import build_wheel; import sys; build_wheel(sys.argv[1])' "$build_out"
 "$builder_env/bin/python" -I -B scripts/check_distribution.py \
   --wheel "$build_out/dl_binner-0.1.0.dev2-py3-none-any.whl" \
   --sdist "$build_out/dl_binner-0.1.0.dev2.tar.gz" --output "$build_out/inspection.json"

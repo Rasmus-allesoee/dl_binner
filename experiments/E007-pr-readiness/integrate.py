@@ -125,7 +125,8 @@ def main():
             dist=a.output/'dist';dist.mkdir();rebuild=a.output/'rebuilt';rebuild.mkdir()
             build=pythons['build'];binner=pythons['binner'];workflow=pythons['workflow']
             stage([build,'-I','-B',snapshot/'scripts/check_runtime.py','--role','build','--requirements',snapshot/'requirements/build.txt','--output',a.output/'build-runtime.json'],'build-probe')
-            stage([build,'-I','-B','-c','from setuptools.build_meta import build_sdist,build_wheel; import sys; build_sdist(sys.argv[1]); build_wheel(sys.argv[1])',dist],'build-distributions')
+            stage([build,'-I','-B','-c','from setuptools.build_meta import build_sdist; import sys; build_sdist(sys.argv[1])',dist],'build-sdist')
+            stage([build,'-I','-B','-c','from setuptools.build_meta import build_wheel; import sys; build_wheel(sys.argv[1])',dist],'build-wheel')
             wheel=dist/'dl_binner-0.1.0.dev2-py3-none-any.whl';sdist=dist/'dl_binner-0.1.0.dev2.tar.gz'
             stage([build,'-I','-B','-m','pip','--isolated','wheel','--no-index','--no-deps','--no-build-isolation','--wheel-dir',rebuild,sdist],'sdist-rebuild')
             rebuilt=rebuild/wheel.name

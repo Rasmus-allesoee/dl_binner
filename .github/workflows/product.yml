@@ -57,7 +57,8 @@ jobs:
           "$binner" -I -B -m pip --isolated install --only-binary=:all: -r requirements/binner-cpu.txt
           "$workflow" -I -B -m pip --isolated install --only-binary=:all: -r requirements/workflow.txt
           mkdir "$out/dist" "$out/rebuilt"
-          "$build" -I -B -c 'from setuptools.build_meta import build_sdist,build_wheel; import sys; build_sdist(sys.argv[1]); build_wheel(sys.argv[1])' "$out/dist"
+          "$build" -I -B -c 'from setuptools.build_meta import build_sdist; import sys; build_sdist(sys.argv[1])' "$out/dist"
+          "$build" -I -B -c 'from setuptools.build_meta import build_wheel; import sys; build_wheel(sys.argv[1])' "$out/dist"
           "$build" -I -B -m pip --isolated wheel --no-deps --no-build-isolation --wheel-dir "$out/rebuilt" "$out/dist/dl_binner-0.1.0.dev2.tar.gz"
           "$build" -I -B scripts/check_distribution.py --wheel "$out/dist/dl_binner-0.1.0.dev2-py3-none-any.whl" --sdist "$out/dist/dl_binner-0.1.0.dev2.tar.gz" --rebuilt-wheel "$out/rebuilt/dl_binner-0.1.0.dev2-py3-none-any.whl" --output "$out/inspection.json"
           "$binner" -I -B -m pip --isolated install --no-deps "$out/rebuilt/dl_binner-0.1.0.dev2-py3-none-any.whl"
