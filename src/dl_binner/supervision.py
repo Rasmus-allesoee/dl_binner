@@ -101,7 +101,7 @@ def terminate(process, members):
                     process.poll()
                     if pid==process.pid and process.returncode is not None:
                         continue
-                    state=subprocess.check_output(['ps','-p',str(pid),'-o','stat='],text=True).strip()
+                    state=subprocess.run(['ps','-p',str(pid),'-o','stat='],capture_output=True,text=True).stdout.strip()
                     if state and not state.startswith('Z'):
                         raise
         try:
