@@ -224,14 +224,19 @@ def collect(attempt, transfer):
                                                if p.name != 'terminal.log'},
           scope='open terminal and self excluded from inventory; archive checksum binds captured terminal snapshot'))
     archive = transfer/(attempt.name+'-return.tar.gz')
+    archived_bytes = 0
     with archive.open('xb') as stream, tarfile.open(fileobj=stream, mode='w:gz') as tar:
         for path in files+[attempt/'retained-files.json']:
-            tar.add(path, arcname=attempt.name+'/'+str(path.relative_to(attempt)), recursive=False)
+            member = tar.gettarinfo(path, arcname=attempt.name+'/'+str(path.relative_to(attempt)))
+            with path.open('rb') as source:
+                tar.addfile(member, source)
+            archived_bytes += member.size
     checksum = archive.with_name(archive.name+'.sha256')
     checksum.write_text(record(archive)['sha256']+'  '+archive.name+'\n')
     print('RETURN_ARCHIVE='+str(archive)+'\nRETURN_CHECKSUM='+str(checksum), flush=True)
     return dict(archive=str(archive), archive_bytes=record(archive), checksum=str(checksum),
-                retained_files=len(files)+1, retained_logical_bytes=sum(p.stat().st_size for p in files))
+                retained_files=len(files)+1, retained_logical_bytes=archived_bytes,
+                storage_scope='Exact uncompressed archive members, including inventory and captured terminal snapshot; excludes caches/runtime prefixes')
 
 
 def main():

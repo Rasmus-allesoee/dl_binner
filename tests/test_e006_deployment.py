@@ -1,5 +1,6 @@
 """Small deployment invariants; real native owner harness is recorded separately."""
 import importlib.util
+import contextlib
 import json
 from pathlib import Path
 import sys
@@ -55,6 +56,20 @@ class DeploymentContracts(unittest.TestCase):
                 self.assertEqual(json.load(tar.extractfile('attempt/status.json'))['error'],'intended prerequisite')
                 self.assertIn('attempt/bundle-manifest.json',tar.getnames())
             self.assertTrue((attempt/'terminal.log').exists())
+
+    def test_collection_storage_counts_snapshot_and_inventory_not_live_log(self):
+        with tempfile.TemporaryDirectory() as name:
+            root=Path(name);attempt=root/'attempt';transfer=root/'transfer';attempt.mkdir();transfer.mkdir()
+            terminal=attempt/'terminal.log'
+            # The owner's Tee appends return locators after the archive snapshot.
+            with terminal.open('w',buffering=1) as log, contextlib.redirect_stdout(log):
+                print('retained terminal before collection')
+                result=owner.collect(attempt,transfer)
+            with tarfile.open(result['archive']) as archive:
+                self.assertEqual(result['retained_logical_bytes'],sum(m.size for m in archive.getmembers()))
+                self.assertEqual(result['retained_files'],len(archive.getmembers()))
+                self.assertGreater(terminal.stat().st_size,archive.getmember('attempt/terminal.log').size)
+                self.assertGreater(archive.getmember('attempt/retained-files.json').size,0)
 
     def test_frozen_budget_and_accepted_wheel(self):
         spec=json.loads((ROOT/'experiments/E006-cli-usability/linux-smoke.json').read_text())
