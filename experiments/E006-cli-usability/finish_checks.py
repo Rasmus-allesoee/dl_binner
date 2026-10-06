@@ -76,6 +76,9 @@ def finish(folder, baseline, workflow):
         assert not (folder/name/'raw').exists() and not (folder/name/'learned').exists()
     cases['overall-timeout']=helpers.execute([python,'-I','-B','-m','dl_binner','run','--fasta',fasta,
         '--workflow-python',workflow,'--output',folder/'overall-timeout','--timeout','.3'],folder,'overall-timeout',1,'wall-time limit')
+    stops=list((folder/'overall-timeout/logs').glob('invocation-*/*.exit.json'))
+    assert stops and any('wall-time limit' in (json.loads(p.read_text())['stop_reason'] or '') for p in stops)
+    assert all('Cleanup failed' not in (json.loads(p.read_text())['stop_reason'] or '') for p in stops)
     for name,threads in (('cpu',4),('memory',1)):
         schedule=folder/('scheduler-'+name);schedule.mkdir()
         worker=schedule/'worker.py'

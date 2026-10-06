@@ -332,10 +332,10 @@ def run_pipeline(args):
                     print('Training needs at least two eligible contigs with different usable features. Inspect feature exclusions; changed inputs require a fresh --output.',file=sys.stderr,flush=True)
             else:
                 print(f'error: {str(error).splitlines()[0]}', file=sys.stderr, flush=True)
-                stop_log=invocation/'snakemake.exit.json'
-                if stop_log.exists():
-                    reason=json.loads(stop_log.read_text())['stop_reason']
-                    if reason: print(reason,file=sys.stderr,flush=True)
+                for stop_log in (invocation/'snakemake.exit.json',invocation/'workflow-probe.exit.json'):
+                    if stop_log.exists():
+                        reason=json.loads(stop_log.read_text())['stop_reason']
+                        if reason: print(reason,file=sys.stderr,flush=True)
             traceback.print_exc(file=log)
             progress(f'Stopped safely. Logs and failed-stage files retained: {invocation}. Resume matching inputs with --resume; no automatic repairs')
         finally:

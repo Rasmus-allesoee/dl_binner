@@ -77,6 +77,7 @@ def terminate(process, members):
     """Terminate only the launched group and observed descendants with matching IDs."""
     if process is None:
         return
+    process.poll()  # Reap an already exited leader before considering signals.
     live = {}
     try:
         process_sample(process.pid, members)
@@ -96,6 +97,13 @@ def terminate(process, members):
                     os.kill(pid, sig)
                 except ProcessLookupError:
                     pass
+                except PermissionError:
+                    process.poll()
+                    if pid==process.pid and process.returncode is not None:
+                        continue
+                    state=subprocess.check_output(['ps','-p',str(pid),'-o','stat='],text=True).strip()
+                    if state and not state.startswith('Z'):
+                        raise
         try:
             os.killpg(process.pid, sig)
         except ProcessLookupError:
@@ -103,8 +111,10 @@ def terminate(process, members):
         except PermissionError:
             # Mac can report EPERM for a vanished group. Ignore only when an
             # independent native group inventory proves it no longer exists.
-            raw=subprocess.check_output(['ps','-axo','pgid='],text=True)
-            if process.pid in {int(line) for line in raw.splitlines() if line.strip()}:
+            raw=subprocess.check_output(['ps','-axo','pgid=,stat='],text=True)
+            live_groups={int(fields[0]) for line in raw.splitlines()
+                         if len(fields:=line.split())==2 and not fields[1].startswith('Z')}
+            if process.pid in live_groups:
                 raise
         try:
             process.wait(timeout=1)
