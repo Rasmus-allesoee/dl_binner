@@ -1,0 +1,46 @@
+{
+  "__main__.py": {
+    "bytes": 103,
+    "sha256": "28f47a18f1a12c011b4fa92812d8f4fb10840c469d489ee5ac246bc669620144"
+  },
+  "accounting.py": {
+    "bytes": 6732,
+    "sha256": "2a83aad8eb36864a704ebe72faeeba33c335c86f7072205f6f19c92db9f6f117"
+  },
+  "cli.py": {
+    "bytes": 8433,
+    "sha256": "a8830a9aef39e1b380960a35bdd77a45185ef7f010b459ba0d0d1806f252c333"
+  },
+  "clustering.py": {
+    "bytes": 7880,
+    "sha256": "2ac715b1449287b002ef7e4a75b84ef204256c2d5f589e31a6810acfad941b66"
+  },
+  "contracts.py": {
+    "bytes": 1671,
+    "sha256": "0455b5a45ecbb29eb1f6c168048efa3a861279dc7ba2af36896ddb6dfcab632d"
+  },
+  "io.py": {
+    "bytes": 12016,
+    "sha256": "71b0c423c046b3c72b651141e853ea622a62742fc087afeef37fbf9c253c2307"
+  },
+  "model.py": {
+    "bytes": 13986,
+    "sha256": "acc1f3c450910112cd7883cc6284139046fde6b339e73b82638d301d8e5a9948"
+  },
+  "resources/run.smk": {
+    "bytes": 1202,
+    "sha256": "01db9ba72b2fcf4d329ca23e5f60de23cebdd14515487807d265e8506f1fa9da"
+  },
+  "resources/training.json": {
+    "bytes": 215,
+    "sha256": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5"
+  },
+  "runner.py": {
+    "bytes": 21628,
+    "sha256": "7b80037a2cbca160eb910485de5dc75e45892d23a9c61063e53782efc1a2292a"
+  },
+  "supervision.py": {
+    "bytes": 9245,
+    "sha256": "fd797a16ba383ce4a46b3c7dd015ba45a10709e5146ab4fcbed97906ace72fa7"
+  }
+}

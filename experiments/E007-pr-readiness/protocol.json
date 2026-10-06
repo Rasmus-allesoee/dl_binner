@@ -34,6 +34,13 @@
     "Public license choice"
   ],
   "package_version": "0.1.0.dev2",
+  "prepared_linux_ci_threads": 2,
+  "prospective_build_amendment": {
+    "date": "2026-10-07",
+    "prior": "setuptools 65.5.0",
+    "reason": "Before measured integration, source inspection found unconditional pkgutil.ImpImporter access in old pkg_resources; absent on Python 3.12/3.13. New build backend already imports successfully on host Python 3.13.2; standalone execution still to be measured. Runtime requirements stay accepted versions.",
+    "selected": "setuptools 78.1.1 (build environment only)"
+  },
   "role": "Private implementation PR readiness; no biological scoring",
   "scientific_changes": [],
   "setup": "Fresh independent build/binner/workflow prefixes; copied installed wheel payloads from hash-recorded read-only caches, no numerical dependency links/PYTHONPATH/system-site overlays; lexical Python paths retained.",
