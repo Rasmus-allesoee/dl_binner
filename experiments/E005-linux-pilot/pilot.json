@@ -1,6 +1,6 @@
 {
   "record": "E005",
-  "status": "frozen protocol; native Linux software gate accepted; owner scientific pilot not executed",
+  "status": "frozen protocol; native Linux smoke and v5 GI pilot accepted 2026-10-06",
   "role": "transductive human-associated GI development GSA derivative; not an untouched public benchmark or real-assembler MAG test",
   "input_manifest": "experiments/E005-linux-pilot/pilot-inputs.json",
   "contig_manifest": "experiments/E005-linux-pilot/pilot-contigs.tsv",
@@ -122,7 +122,7 @@
     "software": "native inputs/axes/masks, checkpoint reload <=1e-7, finite features/embeddings, complete exports, no truth access before evaluation, completed resume schedules nothing, within prospective caps",
     "utility": "report both arms including degradation; superiority not required for software acceptance, no tuning or second architecture gate",
     "stop": "fatal error, missing/mismatched source/axis, resource cap, unresolved runtime/provenance; retain evidence and stop dependent stages, no larger input or extra seed",
-    "next": "inspect retained pilot quality/cost; choose a concrete product fix or small release-readiness milestone; three-way TNF/GLM/hybrid study remains non-blocking and unrun"
+    "next": "bounded generic end-to-end CLI and label-free summary; prepared contract in docs/PROTOTYPE.md; no automatic larger data, seeds, architecture gate or three-way study"
   },
   "implementation": {
     "dag": "workflows/first-binner/gi_pilot.smk",
@@ -133,5 +133,6 @@
     "transfer_root": "/work/Home/dl_binner/e005/transfer/",
     "cpu_plan": "serial; mapper4, sort/index main+3, depth main+2+aggregator1, numerical4/interop1/loader0; sampling and graph portions can remain serial",
     "stop_before_science": "current isolated E005 and E001 runtime/source/lock probes plus changed native adapter contracts"
-  }
+  },
+  "observed_receipt": "experiments/E005-linux-pilot/pilot-observed.json"
 }

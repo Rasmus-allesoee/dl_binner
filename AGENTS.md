@@ -256,6 +256,11 @@ directories. Do not move or delete prior artifacts just to adopt this organizati
 UCloud Terminal can create an in-app Slurm cluster via **Slurm cluster: Yes**, including on a single node; SDU/K8s does not imply Slurm is unavailable. Do not require switching to the separate Snakemake app. Distinguish this in-allocation scheduler from provider-side Slurm integration. Prefer the local executor for simple single-node parallel DAGs; use the Slurm plugin/profile when placement or scheduler-managed jobs justify it. See [D009](docs/decisions/D009-parallel-preprocessing-terminal.md) for reviewed sources, thesis profile and submission/cancellation prerequisites. Do not blindly copy historical `CLOUD`/`escience` accounts, GPU requests or resource sizes. Always separate total rented CPUs/RAM, per-rule CPU/RAM budgets and maximum sample/job concurrency. Cap aggregate resources, leave coordinator headroom, and charge total allocated vCPUs times driver wall time, not per-sample threads times wall time. Do not run competing unaccounted local/Slurm workloads in the same allocation.
 
 For each single-node CPU run, either run tools serially at the node's full allocated CPU budget or cap concurrent tools so their summed process budgets fit the allocation. Reconcile Snakemake `threads`, each native tool's thread flag, effective OpenMP/BLAS limits and child/data-loader workers. Count those workers in the per-tool budget; do not set a native thread flag to the full allocation when it also starts CPU workers. Confirm effective use from native thread reports and per-rule CPU benchmarks, rather than assuming the requested thread count took effect.
+For a local Snakemake executor, use `--cores` without simultaneously supplying
+`--jobs`; in inspected 9.16.3 those combined arguments can disable the scheduler's
+core cap. Make aggregate RAM scope explicit and use DAG barriers for a promised
+serial workflow. Verify actual scheduling events/overlap on independent ready
+rules; a driver label or tiny fixture that happens to serialize is insufficient.
 
 Before transferring an owner-run driver, test the changed production adapter and
 its real input/output contracts, including fresh and recovered directory layouts.
@@ -290,11 +295,14 @@ authoritative experiment-owned environment; invoke the copied Python directly,
 verify prefix/import origins and the accepted inventory, and pass native CLI/DAG
 checks before work. Do not generalize this to arbitrary Conda-prefix relocation.
 
-Isolate Python processes inside tool environments: unset inherited `PYTHONPATH`, `PYTHONHOME` and `PYTHONUSERBASE`, and set `PYTHONNOUSERSITE=1` before installs, inventories and execution. UCloud's user-site packages were observed inside otherwise separate conda environments; distinct environment directories alone do not establish import isolation. Preserve required tool-local source imports, and verify package origins when introducing a runtime. Cross-experiment reuse must be read-only and validate a full distribution inventory and import origins against a clean, hash-identified prefix record; a `pip freeze` alone may include user-site entries or direct references. For read-only probes of reused environments, pass `-B` on the Python command line to prevent `.pyc` writes: `-I` implies `-E` and ignores `PYTHONDONTWRITEBYTECODE`. Do not modify an already executed/transferred snapshot in place; use explicit wrappers or a new versioned transfer.
+Isolate Python processes inside tool environments: unset inherited `PYTHONPATH`, `PYTHONHOME` and `PYTHONUSERBASE`, and set `PYTHONNOUSERSITE=1` before installs, inventories and execution. UCloud's user-site packages were observed inside otherwise separate conda environments; distinct environment directories alone do not establish import isolation. Preserve required tool-local source imports, and verify package origins when introducing a runtime. Cross-experiment reuse must be read-only and validate a full distribution inventory and import origins against a clean, hash-identified prefix record; a `pip freeze` alone may include user-site entries or direct references. For all Python children using a reused environment, including scientific rules, pass `-B` on the Python command line to prevent `.pyc` writes: `-I` implies `-E` and ignores `PYTHONDONTWRITEBYTECODE`. Do not modify an already executed/transferred snapshot in place; use explicit wrappers or a new versioned transfer.
 
 Recheck container-level prerequisites on each owner-run job entry point. System packages installed outside `/work` may disappear between jobs even when experiment-local environments persist; bootstrap must not depend on the missing utility it is meant to install. Preserve failed attempts before narrowly scoped recovery, and never silently reuse partial scientific inputs.
 
 The owner confirmed that new Terminal jobs reset the container on 2026-09-19. Prefer absolute paths to persistent experiment-local executables and probe imports on each job. Do not reinstall intact environments merely because activation or a system utility disappeared. Use uniquely named attempt directories so retries preserve previous outputs without manual moves. Test complete owner-run drivers on synthetic inputs, including repeated invocation and failed prerequisites, before transfer. Diagnose whole-file input relationships before adding exceptions; bind dataset-specific exceptions to reviewed source hashes and record exclusions.
+Preserve a virtual environment's lexical interpreter path when invoking it:
+resolving its `bin/python` symlink can bypass `pyvenv.cfg` and execute the base
+environment. Probe version/prefix before giving a harness runtime-validation credit.
 
 ### Ask for files
 
@@ -342,6 +350,9 @@ Use version control actively throughout the project so that the evolution of the
 - Do not rewrite or destroy useful shared history unless there is a clear reason and the user explicitly agrees where appropriate.
 
 Project commit subjects use a lowercase purpose prefix matching the repository's existing convention, such as `fix:`, `research:`, `ops:`, `docs:`, or `test:`. Do not create new unprefixed project commits.
+For nontrivial commits, use `what changed` and `why` sections with bullet points
+under each. Explain the concrete changes and their purpose; preserve real newlines
+when passing a prepared commit-message file to Git.
 
 ### Branches and experimental work
 

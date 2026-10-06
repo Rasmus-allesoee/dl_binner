@@ -1,11 +1,16 @@
 # E005 owner operations
 
-The native Linux smoke is **accepted**: [inspection](README.md#accepted-native-linux-return-2026-10-05),
-[receipt](linux-observed.json). Do not repeat it. This command runs only the
-prospectively frozen [GI pilot](pilot.json) and returns evidence for interpretation.
-No E001 rerun, GLM inference/three-way study or architecture gate is included.
+The native Linux smoke **and v5 GI pilot are accepted**:
+[pilot inspection](README.md#accepted-v5-native-gi-pilot-and-independent-review-2026-10-06),
+[pilot receipt](pilot-observed.json), [smoke receipt](linux-observed.json).
+**Do not upload or rerun the command below.** It is the executed recipe retained
+for provenance. Preserve `/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/`, its heavy
+files and the original transfers/logs/returns. No additional UCloud job is needed.
+The exact next step is local implementation of the
+[prepared generic-command milestone](../../docs/PROTOTYPE.md#prepared-next-milestone-one-end-to-end-command).
+No larger data, extra seed, three-way study, architecture gate or public release.
 
-## Two upload files and organization
+## Executed v5 upload files and organization
 
 Create `/work/Home/dl_binner/e005/transfer/` in UCloud Files if needed. Upload
 `e005-gi-pilot-v5.tar.gz` and `e005-gi-pilot-v5.tar.gz.sha256` **there**, keeping
@@ -19,7 +24,7 @@ DNA. It contains no whole source assembly, large FASTQs/BAMs, runtime copies or
 GLM payloads. Reads already retained on shared UCloud storage are sampled in place.
 No download, solver, compiler or environment installation runs on the node.
 
-## Job and exact command
+## Historical job and exact executed command
 
 Start a **single-node Terminal job, 4 vCPUs / 12 GB RAM, no GPU**, with Home and
 `/work/RasmusAllesøeNielsen#2936/` mounted as before. Local executor, no Slurm cluster
@@ -29,7 +34,7 @@ workflow prefixes plus E001 mapping/AMBER prefixes must remain intact. Nothing
 needs activation or sudo. System Bash, Python >=3.10, tar, sha256sum, tee, mktemp
 and env are prerequisites; errors are logged and stop dependent work.
 
-After both uploads, run:
+The owner executed this recipe after both uploads; retain it without repetition:
 
 ```bash
 bash <<'BASH'
@@ -66,7 +71,7 @@ prefix inventory. Every discovered distribution must still originate inside AMBE
 Missing or changed runtimes stop without installing or repairing them. Tiny **new adapter** tests check mapping of real DNA, native
 flag/CIGAR/zero-depth semantics and AMBER/R95 boundaries; no model smoke is repeated.
 
-The serial Snakemake DAG then validates/hashes each complete anonymous FASTQ twice,
+The recipe declared a serial Snakemake DAG which validates/hashes each complete anonymous FASTQ twice,
 selects exactly **one million pairs per sample** with the frozen label-blind hash
 rule and maps samples 1/4 to the exact E005 reference. Mapper requests all four
 threads. Sort/index main plus three extra threads fit four; they follow mapping
@@ -122,13 +127,30 @@ If SIGKILL/job termination prevents collection, return the captured terminal log
 for evidence-only recovery. Successful software execution is accepted only after
 returned-output inspection; any quality degradation is a valid retained result.
 
-## Packet acceptance
+## Packet history and final acceptance
 
-Use **v5**; its source commit, archive size and checksum are recorded in the
+The executed **v5** source commit, archive size and checksum are recorded in the
 [pilot implementation record](README.md#owner-v4-preflight-failure-and-v5-repair-2026-10-06).
 The prior v4 packet passed its local fixture ([receipt](pilot-local-observed.json))
 but its owner-run preflight stopped before adapter checks or pilot work because its
 AMBER lock comparison mishandled known user-site entries and direct references.
-Do not upload or rerun v4. V5 keeps the same pilot scope and validates the isolated
-AMBER inventory against the audited lock evidence before any scientific step.
-Earlier v1-v3 attempts remain historical; do not upload them either.
+V5 passed the unchanged pilot with the corrected isolated inventory check.
+Independent review rehashes 477 returned files and confirms every accepted output
+contract. Neither v5 nor any earlier packet should be rerun. Historical future-
+tense resource/return instructions above describe that executed recipe, not pending
+work. Heavy native hashes remain receipt-bound because those files stay on UCloud.
+
+Actual 4/12 execution through collection: 495.12096 s / 0.5501344 allocated
+vCPU-hours, sampled peak worker RSS 1.785 GB; retained attempt inventory 3.297 GB
+and return copy 32.09 MB. Prefixes/original reads/old attempts and owner idle are
+separate. The original shell EXIT trap printed outside `tee`; success is supported
+by all native exit codes and matching driver/return events. The next generic
+launcher must capture its exit status inside the log and use explicit `-I -B`
+for reused-prefix Python children. No environment rebuild or cleanup is requested.
+
+Returned scheduler events show overlapping four-thread jobs despite the serial
+label. Accepted scientific outputs and actual costs remain valid, but that
+resource-plan claim is rejected. Current future-launcher options/DAG barriers
+are locally corrected and tested; see the
+[correction](README.md#scheduling-nonconformance-and-local-correction). No corrected
+owner packet is built and no E005 rerun is requested.

@@ -1,7 +1,9 @@
 # E005: Linux deployment smoke and bounded GI assembly/depth pilot
 
-Prepared: 2026-10-05. Execution: **native Linux smoke accepted**. Pilot scientific
-outcome: **not assessed**. [D011](../../docs/decisions/D011-first-binner-prototype.md)
+Prepared: 2026-10-05. Updated: 2026-10-06. Execution: **native Linux smoke and
+v5 GI pilot accepted**. Pilot scientific outcome: **learned assembled recovery
+improves over raw, with fragmentation and slightly lower assigned-bin purity**.
+[D011](../../docs/decisions/D011-first-binner-prototype.md)
 requests product validation after accepted [E004](../E004-first-binner/README.md),
 not another architecture screen. No UCloud execution or three-way TNF/GLM/hybrid
 comparison by Codex is authorized here. Accepted E001/E002/E003/E004 evidence stays unchanged.
@@ -99,8 +101,9 @@ depth/BAM reference covers only ≥2,500 bp and cannot supply shorter coverage.
 Do not fabricate zeros or use truth-derived number_reads as features. Existing
 large FASTQs remain on UCloud; no upload/remapping of accepted E001 is requested.
 The source FASTA locator is provisional; the smoke returns a cheap read-only
-existence/size inventory. Hash acceptance and actual mapping/coverage adapter tests
-are requirements of later pilot preparation, not presumed complete now.
+existence/size inventory. At protocol freeze, hash acceptance and actual mapping/
+coverage adapter tests were requirements, not presumed complete. The accepted v5
+return below now resolves them through native receipts; bulk files stay on UCloud.
 
 Two arms only: learned TNF+measured depth and raw TNF+the same depth, fixed E004
 training settings/seed11/500-bp default and the same truth-free clusterer. Full
@@ -134,7 +137,7 @@ The first staged driver passed real native Mac DAGs at four and one threads.
 Transfer v2 additionally retains the verified bundle manifest on failures and
 uses a parent alarm across hashing/extraction/setup, followed by evidence-only
 collection. Earlier executed v1 snapshots/failed attempts remain untouched.
-## Accepted local preparation, native Linux still pending
+## Accepted local preparation, before native Linux review
 
 [Retained review](review_local.py) and [observed receipt](local-observed.json)
 independently verify final transfer/return checksums, every retained file hash,
@@ -175,8 +178,8 @@ from source commit `2f0b9a58bcf86f29f23b0f3bed16f31171a359f4`.
 Installed-package source remains E004's accepted snapshot. Linux CPU wheels and
 full standalone-prefix installation/loader/affinity behavior did not execute on
 Mac; real filesystem extraction and target dependency closure were separate
-checks. Native Linux acceptance is recorded below; the pilot and three-way study
-remain unrun.
+checks. Native Linux and pilot acceptance are recorded below; the three-way study
+remains unrun.
 
 ## Accepted native Linux return, 2026-10-05
 
@@ -266,7 +269,8 @@ source commit; they do not run or score the full frozen scientific pilot. Linux
 smoke acceptance does not pre-accept the larger pilot. The owner alone executes
 its [operations command](OPERATIONS.md), with all new transfers/logs/returns below
 `/work/Home/dl_binner/e005/transfer/`. Full native source/lock/large-read Linux
-contracts remain subject to this owner return.
+contracts were pending at this local-only preparation stage; the v5 acceptance
+below now resolves them. This earlier fixture remains software evidence only.
 
 Local v1 packet `51d203c` stopped at the native evaluator contract because the
 rule dispatcher accessed sample settings even for an evaluation-only config.
@@ -394,13 +398,175 @@ imports may have added `.pyc` cache files under the reused AMBER prefix. The ret
 does not establish whether any were written. V5 uses command-line `-B` for all
 read-only Python checks; it does not delete or alter existing prefix contents.
 
-**Current owner packet: v5.** Source commit `67c2615fcbe28072adbd6e03498a24dbb669587a`,
+**Executed owner packet: v5.** Source commit `67c2615fcbe28072adbd6e03498a24dbb669587a`,
 4,102,013 bytes, SHA256
 `11d2175cbb4fb5102c0f4c8b55c8f9a20daa6b78b1bc3758921d6b3da61ff12e`.
 [Operations](OPERATIONS.md) supplies the
-four-vCPU/12-GB command and requires upload under
-`/work/Home/dl_binner/e005/transfer/`. After v5 passes runtime and adapter checks,
-the same frozen pilot runs once. Return its archive/checksum/captured terminal log;
-then review assembled-recovery quality beside the raw control and measured costs
-before choosing a product fix or small release-readiness milestone. No superiority,
-extra seed/input or new architecture gate is required.
+four-vCPU/12-GB historical command, uploaded under
+`/work/Home/dl_binner/e005/transfer/`. That execution is accepted below. Do not
+upload or rerun v5; preserve every earlier attempt. No superiority, extra seed/input
+or new architecture gate is required.
+
+## Accepted v5 native GI pilot and independent review, 2026-10-06
+
+The owner ran `gi-pilot-b9k3j2r3` using the v5 packet at `67c2615` above.
+The return is **32,089,548 bytes**, SHA256
+`ba23309ea8bc54f8dbb02eaf1778562c9f50e698c709ce64f08f262d6f990041`, matching its
+companion. Safe extraction and all **477 returned inventory-file hashes** pass;
+487 retained entries include ten deliberately omitted FASTQ/SAM/BAM files.
+[Independent review](review_pilot.py) and [compact receipt](pilot-observed.json)
+own the checks, exact metrics, hashes and resources. Raw return/log/packet remain
+ignored, under `agent_context/` and `artifacts/e005-linux-pilot/returned/` locally.
+No accepted mapping, extraction, training, inference, clustering or evaluation
+was repeated during review. Five focused reviewer checks cover corrupted bytes,
+unsafe/unknown paths, AMBER table errors and conservative R95 boundary/tie rules.
+
+The exact original read-source SHA256 values, manifest/reference SHA256 and two
+sample identities match the precommitted protocol. Each source supplied exactly
+one million hash-selected complete pairs, from 16,666,164 S1 / 16,665,433 S4 pairs.
+All two million retained selection IDs/ranks/thresholds/order/offsets were inspected.
+The full-source two-pass validation and global bottom-hash selection are supported
+by the reviewed native code/receipts, **not** a local reread of unreturned 21.22-GB
+sources. Sampled FASTQ/SAM/BAM hashes and sizes are receipt-bound, not locally
+rehashed. No large upload is needed. The exact 13,134,506-byte reference in the
+local immutable packet matches the returned arrays and every exported DNA base.
+
+Native BAM axes and emitted float64 mean-depth tables cover all **5,309 IDs /
+12,924,259 bp**, ordered `GI_sample_1`, `GI_sample_4`. Depth integer observation
+sums are 80,559,598 and 18,733,233; zero rows per sample are 1,762 and 1,616.
+**1,353 rows** have zero evidence in both columns. Every observed zero, eligibility
+mask and exclusion reason matches the arrays. Training uses all **4,212 eligible
+rows** in each of 20 seed-11 epochs, the unchanged E004 settings, four numerical
+threads / interop one / loader zero. Pre-save versus reloaded embeddings agree
+**exactly**; both exports contain every input ID and DNA once. All **1,097 below-500
+rows / 341,158 bp** remain excluded and in full recovery denominators. Evaluation
+starts only after both exports and verification; no genome labels reach training
+or fixed clustering. Completed-directory native dry-run schedules nothing.
+
+Separate E005 binner/workflow Python 3.12.10 prefixes, CPU Torch 2.2.2+cpu,
+four-CPU affinity, import origins and exact inventories match accepted Linux
+evidence. Reused E001 strobealign 0.17.0 / samtools 1.24 / AMBER f8b3a60 source,
+28-distribution clean-prefix inventory and original lock reconciliation pass.
+The new native adapter contracts also pass. The v4 gate defect is resolved; no
+environment rebuild, scientific retry or timeout expansion occurred. Read-only
+probes use `-B`; unchanged scientific DAG imports still lack explicit `-B` and
+may write bytecode caches. The return does not establish absence of those writes;
+future launchers should pass `-B` for every reused-prefix Python child.
+
+| Retained result | Raw TNF + depth | Learned TNF + depth |
+| --- | ---: | ---: |
+| Bins | 113 | 51 |
+| Assigned contigs / bp | 798 / 4,837,013 | 3,891 / 11,831,674 |
+| Eligible noise contigs / bp | 3,414 / 7,746,088 | 321 / 751,427 |
+| Excluded contigs / bp | 1,097 / 341,158 | 1,097 / 341,158 |
+| Confirmed R95 macro | 0.1673094 | 0.4344280 |
+| Confirmed R95 bp-weighted | 0.1432904 | 0.3829541 |
+| Genomes at ≥50% / ≥90% confirmed recovery | 0 / 0 | 2 / 0 |
+| AMBER bp-weighted assigned-bin purity | 0.9804867 | 0.9742409 |
+| AMBER mean best-bin assembled completeness | 0.1809347 | 0.4344254 |
+
+These are independently recounted metrics. AMBER retains all original origins;
+confirmed R95 excludes 300 cross-origin-identical bp from its OTU_97.6958.0
+genome denominator, retaining every assigned bp in purity denominators. This
+explains their slight denominator difference, not an evaluator disagreement.
+All AMBER bin/genome counts and purity/recall values match independent integer
+overlaps, and all six length-stratum denominators/statuses/reasons/recovery match.
+
+| Genome | Raw R95 | Learned R95 | Learned winning-bin confirmed purity |
+| --- | ---: | ---: | ---: |
+| OTU_97.20215.0 | 0.2548871 | 0.5866342 | 1.0000000 |
+| OTU_97.3310.0 | 0 | 0.2108509 | 0.9892568 |
+| OTU_97.43909.0 | 0.3525211 | 0.8047741 | 1.0000000 |
+| OTU_97.6958.0 | 0.0618294 | 0.1354530 | 1.0000000 |
+
+Learned assigned fractions improve in every eligible stratum. However, assignment
+is not recovery: 1,000–2,499-bp learned assigned sequence is 2,699,258 bp, while
+only 409,838 bp reaches the four selected qualifying R95 bins. Learned bins remain
+fragmented: 4 / 6 / 1 / 9 qualifying ≥200-kb/≥95%-pure bins per genome in the table's
+order. R95 correctly chooses one, never sums fragments into a recovered genome.
+Mean bin purity also declines (0.99175→0.97079). Keep both gains and limitations.
+
+**Accept successful software and useful development assembled recovery.** This
+does not establish marker-estimated MAG quality, complete genomes missing from
+assembly, real-assembler performance or independent generalization. The four-GSA-
+genome competitive reference and read subset differ from the original community;
+E001 overlap is explicit. Two arms do not isolate coverage's benefit, the encoder
+objective alone or an architecture winner. No superiority criterion was imposed.
+
+Actual **4-vCPU / 12-GB** allocation: **495.12096 seconds / 0.5501344 allocated
+vCPU-hours through collection**, including entry checks. Before collection:
+480.02030 s / 0.5333559. Science DAG: 470.19007 s, sampled descendant peak
+**1,785,217,024 bytes**, average **1.137 CPUs**. Source sampling dominates at
+212.59750 + 195.74159 seconds / about one CPU each; requests cannot parallelize
+the implemented serial parser. Mapper native logs report four threads; complete
+map rules average 3.147 / 2.933 CPUs. Features 9.22961 s; training itself
+**1.83194 s / 3.410 CPUs**; learned/raw clustering rules 1.81710 / 1.61654 s.
+Time and sampled RSS ceilings pass; the declared serial resource plan did not
+(see the correction below). The known earlier v4 failed-preflight cost adds
+at least 0.192216 allocated vCPU-hours; combined known lower bound is 0.7423504,
+not an invoice. Outer launch/checksum/upload/owner idle and prior setup are outside
+these clocks. Sampled resources are not exact peaks.
+
+Retained attempt inventory: **3,296,904,179 logical bytes**; pre-collection live
+working count: 3,296,941,905 bytes (different collection instant). Return copy:
+32,089,548 compressed bytes / 55,106,255 unpacked bytes. Existing 21.22-GB read
+sources, environments, launch copies and old attempts are separate; no total
+storage claim or deletion is authorized. Preserve the original reads, sampled
+reads, alignments, checkpoint, both arms and all logs. The shell EXIT trap printed
+after `tee`, so its line is absent from the captured log; all native exit codes,
+`driver_end=passed`, `return_ready` and completed-resume prove successful execution.
+
+### Scheduling nonconformance and local correction
+
+The returned scheduler log reports **Execute 2 jobs** twice, and child timings
+confirm overlap: training ran beside raw embedding/clustering/export; both AMBER
+evaluators ran together. Each requested four threads and 8-GB RAM. The driver's
+`serial=true` label and `--jobs 1` did **not** establish a serial local executor.
+Affinity limited the allocation to four CPUs and the observed aggregate RSS/time
+were below their caps, but the requested simultaneous worker budgets exceeded
+the allocation. Preserve the valid deterministic outputs and actual cost; reject
+the claim that the serial scheduling contract passed. No scientific rerun is needed.
+
+The [9.16.3 CLI guidance](https://snakemake.readthedocs.io/en/v9.16.3/executing/cli.html#--cores)
+recommends `--cores` for local execution. In the inspected 9.16.3
+`cli.py:args_to_api`, `--jobs` is converted to a cores alias only when `--cores`
+is absent; supplying both passes `nodes` to `JobScheduler`, which disables its
+local core cap. This is a concrete unsafe interaction; its exact contribution to
+the Linux selection of multiple jobs is not completely reproduced locally.
+The final pinned-runtime Mac legacy fixture stayed serial. Initial harnesses
+001–003 resolved a venv interpreter symlink, invoking its unrelated base instead;
+004's added version check caught this (Snakemake 0.0.0). They are retained and
+receive no 9.16.3 validation credit. Final 005 preserves the lexical venv path,
+checks version 9.16.3 and tests the actual production helper. None is a successful
+reproduction of the original Linux context.
+
+Current future-launcher code now uses the shared production
+`local_scheduler_options`: only `--cores`, explicit local executor and global
+`mem_mb`, without `--jobs`. Both E005 entry points use it. The current GI DAG
+also has explicit data-only serialization barriers between samples, raw/learned
+branches and evaluators, so the intended serial schedule does not depend solely
+on scheduler heuristics. Scientific worker inputs/settings are unchanged; Python
+rules pass `-I -B`. Existing packets/attempts/source pins are untouched, and this
+corrected source is **not** a new owner-run packet or request to rerun E005.
+
+[Scheduler-only native check](check_scheduler.py) uses the actual changed helper
+and actual Snakemake shell rules: two four-thread rules serialize, two one-thread
+8-GB rules obey aggregate RAM, partial resume reuses the completed file unchanged,
+and completed dry-run schedules nothing. The actual changed GI DAG parses and
+has a unique topological sequence of **19 jobs / 33 edges**. Evidence is retained
+under `artifacts/e005-linux-pilot/scheduler-review-005/` and `scheduler-dag-001/`;
+the [receipt](pilot-observed.json) binds those observations and source hashes.
+These are native Mac scheduling checks, not a repeated binner demo or new Linux
+execution. The future generic launcher must inherit the corrected contracts and
+pass its own native validation. No third-party runtime/source was modified.
+
+**Decision:** prepare one bounded usability/release-readiness milestone, owned by
+[the prototype contract](../../docs/PROTOTYPE.md#prepared-next-milestone-one-end-to-end-command).
+Keep the accepted model/clusterer; implement a generic single entry point plus a
+label-free summary, with raw control, exact resume and failure evidence. Further
+truth-guided clustering changes or datasets would reopen research before users
+can conveniently run the current tool. Optimizing the experiment-only sampler
+could reduce idle core-hours but is unnecessary for a FASTA/depth product entry
+point and would require new operational validation. Both are deferred, not ruled
+out. The observed fragmentation stays a disclosed limitation. No new UCloud job,
+extra seeds, three-way study, architecture gate or public publication is prepared.

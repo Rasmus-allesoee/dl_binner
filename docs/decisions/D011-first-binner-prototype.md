@@ -1,6 +1,6 @@
 # D011: Composition-based contrastive first binner; frozen GLM deferred
 
-Date: 2026-09-30; feasibility and final screen update 2026-10-03. Status: **accepted**
+Date: 2026-09-30; latest product-validation update 2026-10-06. Status: **accepted**
 first-prototype direction: 136-dimensional composition input to our own compact
 contrastive encoder. Frozen DNABERT-S is deferred under E003's precommitted joint
 criterion, with positive grouping evidence retained. This replaces the compact-VAE-first
@@ -256,7 +256,7 @@ time, peak RSS, storage, actual CPU use and allocated vCPU-hours on matched
 hardware/allocation. Separate fresh GLM feature cost from cache reuse/amortized
 cost, and setup from science; include backbone/dependency payload cost. Compare
 quality/resource tradeoffs, without ranking by this laptop's projections alone.
-E004 is now complete; the next concrete task is product validation below.
+E004 is complete; subsequent product validation and the next bounded task are below.
 
 ## Next bounded product validation after E004
 
@@ -288,11 +288,62 @@ length-filtered depth is unsuitable. AMBER/confirmed R95 and matched raw control
 remain prospectively fixed. This is development assembled-sequence recovery, not
 independent whole-MAG validation. The 2026-10-05 [native Linux receipt](../../experiments/E005-linux-pilot/linux-observed.json)
 accepts isolated runtimes, masks, reload, exports and failure/resume contracts
-without repeating the smoke. Scientific pilot results remain unrun. The
+without repeating the smoke. At that review, scientific pilot results were unrun. The
 [2026-10-06 local adapter receipt](../../experiments/E005-linux-pilot/pilot-local-observed.json)
 accepts actual sampling/mapping/depth/AMBER readers and the complete v4 real-DNA
 fixture with partial/full resume, masks, reload and both exports. No native worker
-was replaced. Owner now runs the frozen 4/12 GI pilot once using the
-[prepared command](../../experiments/E005-linux-pilot/OPERATIONS.md); current Linux
-entry/large-read checks and assembled-recovery utility/cost await that return.
-Neither E001 nor the three-way study is reopened; no additional architecture gate.
+was replaced. The owner subsequently ran the frozen 4/12 GI pilot using v5 after
+the retained v4 inventory-preflight repair. Its return is accepted below. The
+[operations guide](../../experiments/E005-linux-pilot/OPERATIONS.md) retains the
+executed command for provenance; do not run it again.
+
+## E005 acceptance and next bounded usability milestone, 2026-10-06
+
+[E005's independent review](../../experiments/E005-linux-pilot/README.md#accepted-v5-native-gi-pilot-and-independent-review-2026-10-06)
+accepts all 477 returned-file hashes, native runtime/input/depth axes, masks,
+20-epoch schedule, exact reload, complete exports, fixed clustering and independently
+recounted AMBER/confirmed R95. No scientific stage was repeated. The v5 source
+`67c2615` correctly reconciles the original AMBER lock with its clean-prefix
+inventory; no rebuild or new scientific setting was needed.
+
+Confirmed macro R95 **0.16731→0.43443**, bp-weighted **0.14329→0.38295**;
+≥50%-recovered genomes **0→2**, ≥90% **0→0**. Learned eligible noise falls
+3,414→321, while bp-weighted assigned-bin purity declines **0.98049→0.97424**.
+All 1,097 below-500 contigs remain excluded and in full denominators. Fifty-one
+learned bins across four genomes show fragmentation, especially the two heavily
+fragmented genomes. This is useful development assembled-sequence recovery,
+not whole-MAG quality, real-assembly performance, independent generalization,
+isolated coverage benefit or proof of architecture superiority.
+
+Cost: **495.121 seconds / 0.550134 allocated vCPU-hours through collection** at
+4 vCPUs / 12 GB; sampled worker peak 1.785 GB, retained attempt 3.297 GB. Sampling
+dominates serial runtime; training itself takes 1.832 s at 3.41 CPUs. Time and sampled RSS
+ceilings pass; the serial scheduling contract failed. Returned logs show training
+overlap with the raw branch and two concurrent evaluators. Current E005 launcher
+options/DAG barriers are corrected and pass native Mac scheduling/partial+complete
+resume checks without repeating science. The tiny Mac legacy fixture did not
+reproduce the original Linux context; corrected Linux launcher execution remains
+unvalidated. This bounded pilot is affordable at the measured allocation; no
+linear/full-community scaling or claim that a larger node would be efficient.
+
+**Retain D011 and prepare one small usability/release-readiness milestone:** a
+generic end-to-end installed command plus label-free accounting summary, using
+the unchanged model and raw control. [The exact prepared contract](../PROTOTYPE.md#prepared-next-milestone-one-end-to-end-command)
+owns implementation, failure/resume and fixture/resource limits. It is not yet
+implemented and does not authorize publication. The current multi-command tool
+works on Linux and these capped inputs; removing experiment-specific launch paths
+addresses a concrete barrier to using it. Preserve the low-completeness limitation.
+
+Serious alternatives: changing clustering could address fragmentation but requires
+a prospective mechanism/evaluation contract and risks selecting against these
+four development genomes; it is not required for software acceptance. A new
+independent real-assembly benchmark would broaden quality evidence but would add
+data/setup before the accepted tool has a convenient entry point. Parallel/compiled
+read sampling could reduce idle vCPU-hours but is outside the FASTA/explicit-depth
+product and would require fresh operational testing. Defer these rather than
+turning them into gates. Keep the selected route if the generic command passes
+native contracts; repair a concrete product failure before expanding scope.
+
+Neither E001/H001 nor the original three-seed criterion is resolved by E005.
+Seeds 23/47 and the planned TNF/GLM/hybrid comparison remain deferred/non-blocking.
+No architecture gate, dataset expansion, automatic UCloud job or public release.

@@ -1,6 +1,8 @@
 # Metagenomic Binning Research
 
-Research toward an original, rigorously evaluated metagenomic genome-binning method. The ambition is a meaningful methodological advance, potentially competitive with the best contemporary methods in a clearly stated setting.
+An experimental deep-learning metagenomic binner, developed through bounded,
+reproducible research and learning by implementation. A usable tool is the primary
+goal; novelty, a paper and state-of-the-art performance are optional.
 
 See [current state](docs/STATE.md) for implementation status, completed work, and the next research step.
 
@@ -24,7 +26,12 @@ See [current state](docs/STATE.md) for implementation status, completed work, an
 | [Source context](agent_context/README.md) | Original thesis and planning material, plus local reference caches |
 | [Historical planning](docs/history/README.md) | Earlier ideas retained as history |
 
-The first experiment now has a small [validation harness and operations guide](experiments/E001-coverage-thinning/OPERATIONS.md), not a new binning model or general benchmark platform. The directory name `dl_binner` is a working name, not an architectural commitment.
+The installable [prototype](docs/PROTOTYPE.md) provides FASTA/optional explicit
+mean-depth inputs, contrastive training, saved-checkpoint inference, fixed
+clustering and complete bin exports. [E005](experiments/E005-linux-pilot/README.md)
+accepts native Linux and capped development assembled recovery; whole-MAG quality
+and independent generalization remain unvalidated. The prepared next milestone
+makes this path convenient to run without expanding the architecture or benchmark.
 
 ## Check the documentation
 

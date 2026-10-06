@@ -1,0 +1,1578 @@
+{
+  "archive": {
+    "bytes": 32089548,
+    "path": "agent_context/gi-pilot-b9k3j2r3-return.tar.gz",
+    "sha256": "ba23309ea8bc54f8dbb02eaf1778562c9f50e698c709ce64f08f262d6f990041"
+  },
+  "arms": {
+    "learned": {
+      "accounting": {
+        "assigned": 3891,
+        "excluded": 1097,
+        "unassigned": 321
+      },
+      "amber": {
+        "bins": 51,
+        "genomes": 4,
+        "mean_best_bin_completeness_bp": 0.434425433344381,
+        "mean_bin_purity_bp": 0.9707902855497114,
+        "weighted_bin_purity_bp": 0.9742409231356443
+      },
+      "bins": 51,
+      "bp_accounting": {
+        "assigned": 11831674,
+        "excluded": 341158,
+        "unassigned": 751427
+      },
+      "r95": {
+        "ambiguous_or_unscored_assigned_bp": 0,
+        "assigned_bp": 11831674,
+        "inclusive_recovered_counts": {
+          "0.5": 2,
+          "0.9": 0
+        },
+        "per_genome": {
+          "OTU_97.20215.0": {
+            "bin": "bin_000040",
+            "bin_bp": 2112340,
+            "confirmed_purity": 1.0,
+            "qualifying_bins": 4,
+            "r95": 0.5866341699948817,
+            "recovered_bp": 2112340,
+            "total_bp": 3600779
+          },
+          "OTU_97.3310.0": {
+            "bin": "bin_000021",
+            "bin_bp": 734694,
+            "confirmed_purity": 0.9892567517905414,
+            "qualifying_bins": 6,
+            "r95": 0.21085085513713264,
+            "recovered_bp": 726801,
+            "total_bp": 3446991
+          },
+          "OTU_97.43909.0": {
+            "bin": "bin_000045",
+            "bin_bp": 1580153,
+            "confirmed_purity": 1.0,
+            "qualifying_bins": 1,
+            "r95": 0.8047740891908933,
+            "recovered_bp": 1580153,
+            "total_bp": 1963474
+          },
+          "OTU_97.6958.0": {
+            "bin": "bin_000003",
+            "bin_bp": 529989,
+            "confirmed_purity": 1.0,
+            "qualifying_bins": 9,
+            "r95": 0.13545300386049072,
+            "recovered_bp": 529989,
+            "total_bp": 3912715
+          }
+        },
+        "r95": 0.4344280295458496,
+        "r95_base_weighted": 0.3829540932465044,
+        "unassigned_bp": 1092585
+      },
+      "reasons": {
+        "below_min_length": 1097,
+        "community_below_min_size": 64,
+        "isolated_graph": 257
+      },
+      "strata": [
+        {
+          "assigned_bp": 0,
+          "assigned_contigs": 0,
+          "bp": 341158,
+          "confirmed_recovered_bp": 0,
+          "confirmed_total_bp": 340858,
+          "contigs": 1097,
+          "excluded_bp": 341158,
+          "excluded_contigs": 1097,
+          "lower_bp": 1,
+          "reasons": {
+            "below_min_length": 1097
+          },
+          "unassigned_bp": 0,
+          "unassigned_contigs": 0,
+          "upper_bp": 500
+        },
+        {
+          "assigned_bp": 353534,
+          "assigned_contigs": 558,
+          "bp": 385633,
+          "confirmed_recovered_bp": 38986,
+          "confirmed_total_bp": 385633,
+          "contigs": 609,
+          "excluded_bp": 0,
+          "excluded_contigs": 0,
+          "lower_bp": 500,
+          "reasons": {
+            "community_below_min_size": 7,
+            "isolated_graph": 44
+          },
+          "unassigned_bp": 32099,
+          "unassigned_contigs": 51,
+          "upper_bp": 768
+        },
+        {
+          "assigned_bp": 387462,
+          "assigned_contigs": 442,
+          "bp": 424037,
+          "confirmed_recovered_bp": 46614,
+          "confirmed_total_bp": 424037,
+          "contigs": 483,
+          "excluded_bp": 0,
+          "excluded_contigs": 0,
+          "lower_bp": 768,
+          "reasons": {
+            "community_below_min_size": 8,
+            "isolated_graph": 33
+          },
+          "unassigned_bp": 36575,
+          "unassigned_contigs": 41,
+          "upper_bp": 1000
+        },
+        {
+          "assigned_bp": 2699258,
+          "assigned_contigs": 1645,
+          "bp": 2933065,
+          "confirmed_recovered_bp": 409838,
+          "confirmed_total_bp": 2933065,
+          "contigs": 1788,
+          "excluded_bp": 0,
+          "excluded_contigs": 0,
+          "lower_bp": 1000,
+          "reasons": {
+            "community_below_min_size": 29,
+            "isolated_graph": 114
+          },
+          "unassigned_bp": 233807,
+          "unassigned_contigs": 143,
+          "upper_bp": 2500
+        },
+        {
+          "assigned_bp": 4410447,
+          "assigned_contigs": 1043,
+          "bp": 4759494,
+          "confirmed_recovered_bp": 1500471,
+          "confirmed_total_bp": 4759494,
+          "contigs": 1122,
+          "excluded_bp": 0,
+          "excluded_contigs": 0,
+          "lower_bp": 2500,
+          "reasons": {
+            "community_below_min_size": 20,
+            "isolated_graph": 59
+          },
+          "unassigned_bp": 349047,
+          "unassigned_contigs": 79,
+          "upper_bp": 10000
+        },
+        {
+          "assigned_bp": 3980973,
+          "assigned_contigs": 203,
+          "bp": 4080872,
+          "confirmed_recovered_bp": 2953374,
+          "confirmed_total_bp": 4080872,
+          "contigs": 210,
+          "excluded_bp": 0,
+          "excluded_contigs": 0,
+          "lower_bp": 10000,
+          "reasons": {
+            "isolated_graph": 7
+          },
+          "unassigned_bp": 99899,
+          "unassigned_contigs": 7,
+          "upper_bp": null
+        }
+      ]
+    },
+    "raw": {
+      "accounting": {
+        "assigned": 798,
+        "excluded": 1097,
+        "unassigned": 3414
+      },
+      "amber": {
+        "bins": 113,
+        "genomes": 4,
+        "mean_best_bin_completeness_bp": 0.18093466627927818,
+        "mean_bin_purity_bp": 0.991751475480329,
+        "weighted_bin_purity_bp": 0.9804867177326172
+      },
+      "bins": 113,
+      "bp_accounting": {
+        "assigned": 4837013,
+        "excluded": 341158,
+        "unassigned": 7746088
+      },
+      "r95": {
+        "ambiguous_or_unscored_assigned_bp": 0,
+        "assigned_bp": 4837013,
+        "inclusive_recovered_counts": {
+          "0.5": 0,
+          "0.9": 0
+        },
+        "per_genome": {
+          "OTU_97.20215.0": {
+            "bin": "bin_000092",
+            "bin_bp": 917792,
+            "confirmed_purity": 1.0,
+            "qualifying_bins": 2,
+            "r95": 0.2548870674928953,
+            "recovered_bp": 917792,
+            "total_bp": 3600779
+          },
+          "OTU_97.3310.0": {
+            "bin": null,
+            "bin_bp": null,
+            "confirmed_purity": null,
+            "qualifying_bins": 0,
+            "r95": 0.0,
+            "recovered_bp": 0,
+            "total_bp": 3446991
+          },
+          "OTU_97.43909.0": {
+            "bin": "bin_000100",
+            "bin_bp": 692166,
+            "confirmed_purity": 1.0,
+            "qualifying_bins": 2,
+            "r95": 0.35252109271627735,
+            "recovered_bp": 692166,
+            "total_bp": 1963474
+          },
+          "OTU_97.6958.0": {
+            "bin": "bin_000002",
+            "bin_bp": 241921,
+            "confirmed_purity": 1.0,
+            "qualifying_bins": 2,
+            "r95": 0.061829445794033044,
+            "recovered_bp": 241921,
+            "total_bp": 3912715
+          }
+        },
+        "r95": 0.16730940150080142,
+        "r95_base_weighted": 0.1432903802929118,
+        "unassigned_bp": 8087246
+      },
+      "reasons": {
+        "below_min_length": 1097,
+        "community_below_min_size": 376,
+        "isolated_graph": 3038
+      },
+      "strata": [
+        {
+          "assigned_bp": 0,
+          "assigned_contigs": 0,
+          "bp": 341158,
+          "confirmed_recovered_bp": 0,
+          "confirmed_total_bp": 340858,
+          "contigs": 1097,
+          "excluded_bp": 341158,
+          "excluded_contigs": 1097,
+          "lower_bp": 1,
+          "reasons": {
+            "below_min_length": 1097
+          },
+          "unassigned_bp": 0,
+          "unassigned_contigs": 0,
+          "upper_bp": 500
+        },
+        {
+          "assigned_bp": 25105,
+          "assigned_contigs": 37,
+          "bp": 385633,
+          "confirmed_recovered_bp": 0,
+          "confirmed_total_bp": 385633,
+          "contigs": 609,
+          "excluded_bp": 0,
+          "excluded_contigs": 0,
+          "lower_bp": 500,
+          "reasons": {
+            "community_below_min_size": 41,
+            "isolated_graph": 531
+          },
+          "unassigned_bp": 360528,
+          "unassigned_contigs": 572,
+          "upper_bp": 768
+        },
+        {
+          "assigned_bp": 31968,
+          "assigned_contigs": 37,
+          "bp": 424037,
+          "confirmed_recovered_bp": 0,
+          "confirmed_total_bp": 424037,
+          "contigs": 483,
+          "excluded_bp": 0,
+          "excluded_contigs": 0,
+          "lower_bp": 768,
+          "reasons": {
+            "community_below_min_size": 27,
+            "isolated_graph": 419
+          },
+          "unassigned_bp": 392069,
+          "unassigned_contigs": 446,
+          "upper_bp": 1000
+        },
+        {
+          "assigned_bp": 401825,
+          "assigned_contigs": 224,
+          "bp": 2933065,
+          "confirmed_recovered_bp": 4417,
+          "confirmed_total_bp": 2933065,
+          "contigs": 1788,
+          "excluded_bp": 0,
+          "excluded_contigs": 0,
+          "lower_bp": 1000,
+          "reasons": {
+            "community_below_min_size": 159,
+            "isolated_graph": 1405
+          },
+          "unassigned_bp": 2531240,
+          "unassigned_contigs": 1564,
+          "upper_bp": 2500
+        },
+        {
+          "assigned_bp": 1720598,
+          "assigned_contigs": 378,
+          "bp": 4759494,
+          "confirmed_recovered_bp": 254227,
+          "confirmed_total_bp": 4759494,
+          "contigs": 1122,
+          "excluded_bp": 0,
+          "excluded_contigs": 0,
+          "lower_bp": 2500,
+          "reasons": {
+            "community_below_min_size": 131,
+            "isolated_graph": 613
+          },
+          "unassigned_bp": 3038896,
+          "unassigned_contigs": 744,
+          "upper_bp": 10000
+        },
+        {
+          "assigned_bp": 2657517,
+          "assigned_contigs": 122,
+          "bp": 4080872,
+          "confirmed_recovered_bp": 1593235,
+          "confirmed_total_bp": 4080872,
+          "contigs": 210,
+          "excluded_bp": 0,
+          "excluded_contigs": 0,
+          "lower_bp": 10000,
+          "reasons": {
+            "community_below_min_size": 18,
+            "isolated_graph": 70
+          },
+          "unassigned_bp": 1423355,
+          "unassigned_contigs": 88,
+          "upper_bp": null
+        }
+      ]
+    }
+  },
+  "date": "2026-10-06",
+  "decision": "v5 scientific outputs accepted; serial scheduling nonconformance corrected locally; prepare bounded usability milestone",
+  "reads": [
+    {
+      "policy": "full SHA256 then pair ID; original order; two complete validation/hash passes; no truth access",
+      "rank_threshold": [
+        "0f5bd946f1e7c922f1411b7a00b5ad7f14e2602466c92ed95016c4c7a0e9bc4f",
+        "S1R6256938"
+      ],
+      "salt": "E005-S1-pairs-v1:",
+      "sample": 1,
+      "sampled_bytes": 636666544,
+      "sampled_sha256": "aed863e5a283f8299e22e90db0f0196161b5c444a0345d44cb41ca8901733f7b",
+      "selected_pairs": 1000000,
+      "selection_bytes": 9795703,
+      "selection_sha256": "07f294114fdb8f0adfae8981e831a17ce920ddcdb163040d0b25661a76364ef0",
+      "source": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_1/reads.fq",
+      "source_bytes": 10610790412,
+      "source_pairs": 16666164,
+      "source_sha256": "bead8ff89d4744d5219fb97b3baa5d0f2d3a4634a8e82962c773cf852c393452",
+      "status": "completed"
+    },
+    {
+      "policy": "full SHA256 then pair ID; original order; two complete validation/hash passes; no truth access",
+      "rank_threshold": [
+        "0f5b586cbc295133678e9ada059ff350b65f8a6011d10810f841fcf78d5a12ef",
+        "S4R15666149"
+      ],
+      "salt": "E005-S4-pairs-v1:",
+      "sample": 4,
+      "sampled_bytes": 636665150,
+      "sampled_sha256": "0d04da7eafdb50165c6699cbea9b0c89dea56ba73c527d1c8b34e7104ff40c5e",
+      "selected_pairs": 1000000,
+      "selection_bytes": 9795881,
+      "selection_sha256": "eab7020897977f4c4e29b423a91d27f70e7108c23f724548d23fea149d66c3bb",
+      "source": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_4/reads.fq",
+      "source_bytes": 10610324034,
+      "source_pairs": 16665433,
+      "source_sha256": "461513be2d40e96e7fd4f98f64954ef9ca5c43074a123e7055fc80c2ab6f5f67",
+      "status": "completed"
+    }
+  ],
+  "record": "E005",
+  "reference": {
+    "bp": 12924259,
+    "contig_manifest_sha256": "5d6b98c88639d5c2e92fa71608458a0971cdf80cd2239a5f12ecc3c78e0bc2b1",
+    "contigs": 5309,
+    "eligible": 4212,
+    "excluded": 1097,
+    "samples": [
+      "GI_sample_1",
+      "GI_sample_4"
+    ],
+    "sha256": "64e16974cf59b0064767657e479b6e6d2a7f7e42a8fb93b340d74ee4e5b680e2",
+    "zero_depth_per_sample": [
+      1762,
+      1616
+    ],
+    "zero_depth_rows": 1353
+  },
+  "reload_max_abs": 0,
+  "resources": {
+    "allocation_ram_gb": 12,
+    "allocation_vcpus": 4,
+    "cost_through_collection": {
+      "allocated_vcpu_hours": 0.550134399476875,
+      "driver_seconds": 495.12095952918753,
+      "stage": "cost_through_collection",
+      "utc": "2026-10-06T10:37:25Z"
+    },
+    "driver_seconds_before_collection": 480.02029850007966,
+    "limitations": "sampled descendant RSS/CPU; not exact peak/invoice; outer launch/upload/idle and environment storage excluded",
+    "rule_resources": {
+      "combine": {
+        "allocated_vcpu_hours": 0.00046360897572918073,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_pilot.py",
+          "--config",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/resolved-config.json",
+          "combine"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 18984960,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.5032977046364091,
+        "sampled_cpu_seconds": 0.21,
+        "stop_reason": null,
+        "wall_seconds": 0.41724807815626264
+      },
+      "depth-1": {
+        "allocated_vcpu_hours": 0.006023825624336799,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_pilot.py",
+          "--config",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/resolved-config.json",
+          "depth",
+          "--sample",
+          "1"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 25092096,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 1.121472628334808,
+        "sampled_cpu_seconds": 6.08,
+        "stop_reason": null,
+        "wall_seconds": 5.421443061903119
+      },
+      "depth-4": {
+        "allocated_vcpu_hours": 0.00602354019569854,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_pilot.py",
+          "--config",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/resolved-config.json",
+          "depth",
+          "--sample",
+          "4"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 25337856,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 1.1086134666365197,
+        "sampled_cpu_seconds": 6.010000000000001,
+        "stop_reason": null,
+        "wall_seconds": 5.4211861761286855
+      },
+      "features": {
+        "allocated_vcpu_hours": 0.010255123851820827,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-m",
+          "dl_binner",
+          "--threads",
+          "4",
+          "prepare",
+          "--fasta",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/input/pilot/assembly.fna",
+          "--depth",
+          "mean-depth.tsv",
+          "--min-length",
+          "500",
+          "--output",
+          "features.npz"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 57249792,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.9967916887134656,
+        "sampled_cpu_seconds": 9.2,
+        "stop_reason": null,
+        "wall_seconds": 9.229611466638744
+      },
+      "learned-cluster": {
+        "allocated_vcpu_hours": 0.002018994747971495,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-m",
+          "dl_binner",
+          "--threads",
+          "4",
+          "cluster",
+          "--embeddings",
+          "learned.embeddings.npz",
+          "--output",
+          "learned.partition.json"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 88805376,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 2.8617101572863284,
+        "sampled_cpu_seconds": 5.2,
+        "stop_reason": null,
+        "wall_seconds": 1.8170952731743455
+      },
+      "learned-embed": {
+        "allocated_vcpu_hours": 0.0015649363377855884,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-m",
+          "dl_binner",
+          "--threads",
+          "4",
+          "embed",
+          "--features",
+          "features.npz",
+          "--checkpoint",
+          "checkpoint.pt",
+          "--output",
+          "learned.embeddings.npz"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 214323200,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 1.1218063720340834,
+        "sampled_cpu_seconds": 1.58,
+        "stop_reason": null,
+        "wall_seconds": 1.4084427040070295
+      },
+      "learned-evaluate": {
+        "allocated_vcpu_hours": 0.0013496506188271774,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e001/e001-gate0/envs/amber/bin/python",
+          "-I",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_pilot.py",
+          "--config",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/resolved-config.json",
+          "evaluate",
+          "--mode",
+          "learned"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 151207936,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.6915369950664592,
+        "sampled_cpu_seconds": 0.84,
+        "stop_reason": null,
+        "wall_seconds": 1.2146855569444597
+      },
+      "learned-export": {
+        "allocated_vcpu_hours": 0.0006740215544899304,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-m",
+          "dl_binner",
+          "--threads",
+          "4",
+          "export",
+          "--features",
+          "features.npz",
+          "--partition",
+          "learned.partition.json",
+          "--fasta",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/input/pilot/assembly.fna",
+          "--output",
+          "learned.export"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 71958528,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.9726032516150775,
+        "sampled_cpu_seconds": 0.59,
+        "stop_reason": null,
+        "wall_seconds": 0.6066193990409374
+      },
+      "map-1": {
+        "allocated_vcpu_hours": 0.017227171846768922,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_pilot.py",
+          "--config",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/resolved-config.json",
+          "map",
+          "--sample",
+          "1"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 771960832,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 3.1468375420704233,
+        "sampled_cpu_seconds": 48.79,
+        "stop_reason": null,
+        "wall_seconds": 15.50445466209203
+      },
+      "map-4": {
+        "allocated_vcpu_hours": 0.012762197858860923,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_pilot.py",
+          "--config",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/resolved-config.json",
+          "map",
+          "--sample",
+          "4"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 759664640,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 2.9331415910734364,
+        "sampled_cpu_seconds": 33.69,
+        "stop_reason": null,
+        "wall_seconds": 11.48597807297483
+      },
+      "raw-cluster": {
+        "allocated_vcpu_hours": 0.0017961520536078346,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-m",
+          "dl_binner",
+          "--threads",
+          "4",
+          "cluster",
+          "--embeddings",
+          "raw.embeddings.npz",
+          "--output",
+          "raw.partition.json"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 97329152,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 2.6723795406733504,
+        "sampled_cpu_seconds": 4.32,
+        "stop_reason": null,
+        "wall_seconds": 1.6165368482470512
+      },
+      "raw-embed": {
+        "allocated_vcpu_hours": 0.0017994267866015435,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-m",
+          "dl_binner",
+          "--threads",
+          "4",
+          "embed",
+          "--features",
+          "features.npz",
+          "--raw",
+          "--output",
+          "raw.embeddings.npz"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 200163328,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.7101026767479831,
+        "sampled_cpu_seconds": 1.15,
+        "stop_reason": null,
+        "wall_seconds": 1.619484107941389
+      },
+      "raw-evaluate": {
+        "allocated_vcpu_hours": 0.0013459852234356934,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e001/e001-gate0/envs/amber/bin/python",
+          "-I",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_pilot.py",
+          "--config",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/resolved-config.json",
+          "evaluate",
+          "--mode",
+          "raw"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 149794816,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.7264402021308615,
+        "sampled_cpu_seconds": 0.88,
+        "stop_reason": null,
+        "wall_seconds": 1.211386701092124
+      },
+      "raw-export": {
+        "allocated_vcpu_hours": 0.0017968841968104244,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-m",
+          "dl_binner",
+          "--threads",
+          "4",
+          "export",
+          "--features",
+          "features.npz",
+          "--partition",
+          "raw.partition.json",
+          "--fasta",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/input/pilot/assembly.fna",
+          "--output",
+          "raw.export"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 76034048,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.3339113344449439,
+        "sampled_cpu_seconds": 0.54,
+        "stop_reason": null,
+        "wall_seconds": 1.617195777129382
+      },
+      "sample-1": {
+        "allocated_vcpu_hours": 0.23621944653335958,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_pilot.py",
+          "--config",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/resolved-config.json",
+          "sample",
+          "--sample",
+          "1"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 1713999872,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.9888639242743327,
+        "sampled_cpu_seconds": 210.23,
+        "stop_reason": null,
+        "wall_seconds": 212.59750188002363
+      },
+      "sample-4": {
+        "allocated_vcpu_hours": 0.21749065045991706,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_pilot.py",
+          "--config",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/resolved-config.json",
+          "sample",
+          "--sample",
+          "4"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 1713610752,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.9858916774987514,
+        "sampled_cpu_seconds": 192.98,
+        "stop_reason": null,
+        "wall_seconds": 195.74158541392535
+      },
+      "train": {
+        "allocated_vcpu_hours": 0.0060496011184942395,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-m",
+          "dl_binner",
+          "--threads",
+          "4",
+          "train",
+          "--features",
+          "features.npz",
+          "--config",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/experiments/E004-first-binner/training.json",
+          "--output",
+          "checkpoint.pt"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 268906496,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 1.5464747794618527,
+        "sampled_cpu_seconds": 8.42,
+        "stop_reason": null,
+        "wall_seconds": 5.444641006644815
+      },
+      "verify": {
+        "allocated_vcpu_hours": 0.0008965463496537672,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_pilot.py",
+          "--config",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/resolved-config.json",
+          "verify"
+        ],
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 83898368,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.9418859881260531,
+        "sampled_cpu_seconds": 0.76,
+        "stop_reason": null,
+        "wall_seconds": 0.8068917146883905
+      }
+    },
+    "scheduling": {
+      "actual_serial": false,
+      "allocation_vcpus": 4,
+      "declared_rule_threads_per_parallel_batch": 8,
+      "declared_serial": true,
+      "disposition": "accept valid scientific outputs; reject serial-budget claim; local launcher/DAG correction required before new work",
+      "local_correction": {
+        "dag": {
+          "dag_sha256": "d22865690b5caa32679b755b09ba0a975797eb9000ff263366808c9835a8c41a",
+          "edges": 33,
+          "native_workers_run": false,
+          "nodes": 19,
+          "scope": "actual changed Snakemake DAG parse and dependencies; no scientific stage rerun",
+          "source_sha256": "d56040b56e20b5697c91b17c28584e20811fd7385661592a0ece003b07e48542",
+          "status": "passed",
+          "unique_topological_order": [
+            8,
+            7,
+            6,
+            11,
+            10,
+            9,
+            5,
+            4,
+            14,
+            13,
+            12,
+            3,
+            17,
+            16,
+            15,
+            2,
+            1,
+            18,
+            0
+          ]
+        },
+        "dag_receipt_sha256": "4f7080d19271669f9967080a778dd3f0a58ebde6e5f08c78728817a192574bda",
+        "native_Linux_corrected_launch": false,
+        "prior_harness_attempts": {
+          "incorrect_base_interpreter": [
+            "scheduler-review-001",
+            "scheduler-review-002",
+            "scheduler-review-003"
+          ],
+          "rejected_by_version_check": [
+            "scheduler-review-004"
+          ]
+        },
+        "receipt_sha256": "4c85174479955e595cfc379fed82b23cc82129447fe7bb2978586adf8b2a3b85",
+        "scheduler": {
+          "cases": {
+            "corrected": {
+              "command": [
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+                "-I",
+                "-B",
+                "-m",
+                "snakemake",
+                "--snakefile",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/corrected/Snakefile",
+                "--directory",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/corrected",
+                "--configfile",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/corrected/config.json",
+                "--cores",
+                "4",
+                "--executor",
+                "local",
+                "--resources",
+                "mem_mb=8000",
+                "--set-resource-scopes",
+                "mem_mb=global",
+                "--scheduler",
+                "greedy",
+                "--runtime-source-cache-path",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/corrected/source-cache"
+              ],
+              "exit_code": 0,
+              "intervals": [
+                {
+                  "end": 250451126997712,
+                  "start": 250450522473095,
+                  "threads": 4
+                },
+                {
+                  "end": 250451823829011,
+                  "start": 250451219024526,
+                  "threads": 4
+                }
+              ],
+              "log": "artifacts/e005-linux-pilot/scheduler-review-005/corrected/native.log",
+              "overlap": false,
+              "sha256": "042a8bb99b575405dbb000ca5cd08a51a40e14dd041f549b197bc42ca42dcb96"
+            },
+            "legacy": {
+              "command": [
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+                "-I",
+                "-B",
+                "-m",
+                "snakemake",
+                "--snakefile",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/legacy/Snakefile",
+                "--directory",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/legacy",
+                "--configfile",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/legacy/config.json",
+                "--cores",
+                "4",
+                "--jobs",
+                "1",
+                "--resources",
+                "mem_mb=8000",
+                "--scheduler",
+                "greedy",
+                "--runtime-source-cache-path",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/legacy/source-cache"
+              ],
+              "exit_code": 0,
+              "intervals": [
+                {
+                  "end": 250448029152506,
+                  "start": 250447424116175,
+                  "threads": 4
+                },
+                {
+                  "end": 250448697985980,
+                  "start": 250448094723033,
+                  "threads": 4
+                }
+              ],
+              "log": "artifacts/e005-linux-pilot/scheduler-review-005/legacy/native.log",
+              "overlap": false,
+              "sha256": "297df7021d2c1fe40ebdcb7a5b95a57cf193b4f46dc14cc2f740b379f42affb3"
+            },
+            "memory": {
+              "command": [
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+                "-I",
+                "-B",
+                "-m",
+                "snakemake",
+                "--snakefile",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/memory/Snakefile",
+                "--directory",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/memory",
+                "--configfile",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/memory/config.json",
+                "--cores",
+                "4",
+                "--executor",
+                "local",
+                "--resources",
+                "mem_mb=8000",
+                "--set-resource-scopes",
+                "mem_mb=global",
+                "--scheduler",
+                "greedy",
+                "--runtime-source-cache-path",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/memory/source-cache"
+              ],
+              "exit_code": 0,
+              "intervals": [
+                {
+                  "end": 250454231317417,
+                  "start": 250453630981874,
+                  "threads": 1
+                },
+                {
+                  "end": 250454911252779,
+                  "start": 250454309368130,
+                  "threads": 1
+                }
+              ],
+              "log": "artifacts/e005-linux-pilot/scheduler-review-005/memory/native.log",
+              "overlap": false,
+              "sha256": "79a48a3d0ce55f92c5a51cb432c68b24d2d9d83845978527c26be349d70fccb6"
+            }
+          },
+          "check_source_sha256": "35d7f0de59caedcaaf90f71d649f2241d4993cf017ebb0530d0c9533c9c59b46",
+          "date": "2026-10-06",
+          "legacy_limitation": "returned Linux GI DAG overlaps; tiny Mac legacy fixture does not necessarily reproduce that context",
+          "partial_resume": {
+            "complete": {
+              "command": [
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+                "-I",
+                "-B",
+                "-m",
+                "snakemake",
+                "--snakefile",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/resume/Snakefile",
+                "--directory",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/resume",
+                "--configfile",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/resume/config.json",
+                "--cores",
+                "4",
+                "--executor",
+                "local",
+                "--resources",
+                "mem_mb=8000",
+                "--set-resource-scopes",
+                "mem_mb=global",
+                "--scheduler",
+                "greedy",
+                "--runtime-source-cache-path",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/resume/source-cache"
+              ],
+              "exit_code": 0,
+              "log": "artifacts/e005-linux-pilot/scheduler-review-005/resume/native.log",
+              "sha256": "beecadfa7c747f19ed7ffdbf5330fc3175f4c3fac786d6a4b010552875e5fa34"
+            },
+            "completed_dry_run": {
+              "command": [
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+                "-I",
+                "-B",
+                "-m",
+                "snakemake",
+                "--snakefile",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/resume/Snakefile",
+                "--directory",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/resume",
+                "--configfile",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/resume/config.json",
+                "--cores",
+                "4",
+                "--executor",
+                "local",
+                "--resources",
+                "mem_mb=8000",
+                "--set-resource-scopes",
+                "mem_mb=global",
+                "--scheduler",
+                "greedy",
+                "--runtime-source-cache-path",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/resume/source-cache",
+                "--dry-run"
+              ],
+              "exit_code": 0,
+              "log": "artifacts/e005-linux-pilot/scheduler-review-005/resume/completed.log",
+              "sha256": "b99818d6a16298045bad4af66e24d77c30811035f46e349f6b247db4a003fa21"
+            },
+            "partial": {
+              "command": [
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+                "-I",
+                "-B",
+                "-m",
+                "snakemake",
+                "--snakefile",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/resume/Snakefile",
+                "--directory",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/resume",
+                "--configfile",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/resume/config.json",
+                "--cores",
+                "4",
+                "--executor",
+                "local",
+                "--resources",
+                "mem_mb=8000",
+                "--set-resource-scopes",
+                "mem_mb=global",
+                "--scheduler",
+                "greedy",
+                "--runtime-source-cache-path",
+                "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/scheduler-review-005/resume/source-cache",
+                "a.json"
+              ],
+              "exit_code": 0,
+              "log": "artifacts/e005-linux-pilot/scheduler-review-005/resume/partial.log",
+              "sha256": "e14240bbae6c43f42a931df5f8a6b0f180d80343beca56eca0b351b04972d4e4"
+            },
+            "reused": {
+              "mtime_ns": 1791286608728779000,
+              "sha256": "699d7f1d8a3f6582a16391fedf045b79fd2c7186b0939308d1dfb671a5623d51"
+            }
+          },
+          "production_helper_sha256": "9f21b3b113632a061800dd694129663982ea7649e687d9521b936ae3c764ec99",
+          "remedy": "local --cores cap without --jobs; explicit local executor and global mem_mb",
+          "scope": "native Mac Snakemake 9.16.3 scheduling only; no scientific workers or new Linux launcher execution",
+          "snakemake_version": "9.16.3",
+          "status": "passed",
+          "workflow_python": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python"
+        }
+      },
+      "observed_overlaps": [
+        [
+          "train",
+          "raw-embed"
+        ],
+        [
+          "train",
+          "raw-cluster"
+        ],
+        [
+          "train",
+          "raw-export"
+        ],
+        [
+          "raw-evaluate",
+          "learned-evaluate"
+        ]
+      ],
+      "parallel_batches": 2
+    },
+    "stage_resources": [
+      {
+        "allocated_vcpu_hours": 0.0006785762491118577,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-B",
+          "-m",
+          "pip",
+          "check"
+        ],
+        "exit_code": 0,
+        "name": "binner-pip-check",
+        "peak_sampled_rss_bytes": 27410432,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.5403470385923053,
+        "sampled_cpu_seconds": 0.33,
+        "stop_reason": null,
+        "wall_seconds": 0.6107186242006719
+      },
+      {
+        "allocated_vcpu_hours": 0.0029079842034520375,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-B",
+          "-S",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_probe.py",
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime",
+          "binner",
+          "4",
+          "linux"
+        ],
+        "exit_code": 0,
+        "name": "binner-probe",
+        "peak_sampled_rss_bytes": 203845632,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.7985676880450507,
+        "sampled_cpu_seconds": 2.09,
+        "stop_reason": null,
+        "wall_seconds": 2.6171857831068337
+      },
+      {
+        "allocated_vcpu_hours": 0.0006739575752160615,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+          "-I",
+          "-B",
+          "-m",
+          "pip",
+          "check"
+        ],
+        "exit_code": 0,
+        "name": "workflow-pip-check",
+        "peak_sampled_rss_bytes": 37904384,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.4616182420850054,
+        "sampled_cpu_seconds": 0.28,
+        "stop_reason": null,
+        "wall_seconds": 0.6065618176944554
+      },
+      {
+        "allocated_vcpu_hours": 0.00022688162668297687,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+          "-I",
+          "-B",
+          "-S",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_probe.py",
+          "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime",
+          "workflow",
+          "4",
+          "linux"
+        ],
+        "exit_code": 0,
+        "name": "workflow-probe",
+        "peak_sampled_rss_bytes": 0,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.6366511319414929,
+        "sampled_cpu_seconds": 0.13,
+        "stop_reason": null,
+        "wall_seconds": 0.2041934640146792
+      },
+      {
+        "allocated_vcpu_hours": 0.0002272915741842654,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e001/e001-gate0/envs/mapping/bin/strobealign",
+          "--version"
+        ],
+        "exit_code": 0,
+        "name": "strobealign-version",
+        "peak_sampled_rss_bytes": 0,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.0,
+        "sampled_cpu_seconds": 0,
+        "stop_reason": null,
+        "wall_seconds": 0.20456241676583886
+      },
+      {
+        "allocated_vcpu_hours": 0.00022696285974234344,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e001/e001-gate0/envs/mapping/bin/samtools",
+          "--version"
+        ],
+        "exit_code": 0,
+        "name": "samtools-version",
+        "peak_sampled_rss_bytes": 0,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.0,
+        "sampled_cpu_seconds": 0,
+        "stop_reason": null,
+        "wall_seconds": 0.20426657376810908
+      },
+      {
+        "allocated_vcpu_hours": 0.0006748017953294847,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e001/e001-gate0/envs/amber/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "pip",
+          "check"
+        ],
+        "exit_code": 0,
+        "name": "amber-pip-check",
+        "peak_sampled_rss_bytes": 35831808,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.47750646849552486,
+        "sampled_cpu_seconds": 0.29,
+        "stop_reason": null,
+        "wall_seconds": 0.6073216157965362
+      },
+      {
+        "allocated_vcpu_hours": 0.002017923545402785,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e001/e001-gate0/envs/amber/bin/python",
+          "-I",
+          "-B",
+          "-S",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/scripts/e005_external_probe.py",
+          "/work/Home/dl_binner/e001/e001-gate0/envs/amber",
+          "/work/Home/dl_binner/e001/e001-gate0/sources/AMBER_evaluation",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/experiments/E005-linux-pilot/external-runtime.json",
+          "linux"
+        ],
+        "exit_code": 0,
+        "name": "amber-probe",
+        "peak_sampled_rss_bytes": 147214336,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.682770058814477,
+        "sampled_cpu_seconds": 1.24,
+        "stop_reason": null,
+        "wall_seconds": 1.8161311908625066
+      },
+      {
+        "allocated_vcpu_hours": 0.0022437776552720204,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+          "-I",
+          "-B",
+          "-u",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/experiments/E005-linux-pilot/native_contracts.py",
+          "--mapping-prefix",
+          "/work/Home/dl_binner/e001/e001-gate0/envs/mapping",
+          "--amber-python",
+          "/work/Home/dl_binner/e001/e001-gate0/envs/amber/bin/python",
+          "--amber-source",
+          "/work/Home/dl_binner/e001/e001-gate0/sources/AMBER_evaluation",
+          "--root",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/adapter-contracts"
+        ],
+        "exit_code": 0,
+        "name": "adapter-contracts",
+        "peak_sampled_rss_bytes": 180961280,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.6536595385111178,
+        "sampled_cpu_seconds": 1.32,
+        "stop_reason": null,
+        "wall_seconds": 2.019399889744818
+      },
+      {
+        "allocated_vcpu_hours": 0.5224334117884023,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+          "-I",
+          "-m",
+          "snakemake",
+          "--snakefile",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/workflows/first-binner/gi_pilot.smk",
+          "--configfile",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/resolved-config.json",
+          "--directory",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/pilot",
+          "--cores",
+          "4",
+          "--jobs",
+          "1",
+          "--resources",
+          "mem_mb=8000",
+          "--scheduler",
+          "greedy",
+          "--benchmark-extended",
+          "--runtime-source-cache-path",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/source-cache",
+          "--keep-incomplete",
+          "--printshellcmds",
+          "--latency-wait",
+          "2"
+        ],
+        "exit_code": 0,
+        "name": "gi-pilot",
+        "peak_sampled_rss_bytes": 1785217024,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 1.1372634885861526,
+        "sampled_cpu_seconds": 534.73,
+        "stop_reason": null,
+        "wall_seconds": 470.1900706095621
+      },
+      {
+        "allocated_vcpu_hours": 0.0008983960789110926,
+        "allocated_vcpus": 4,
+        "command": [
+          "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+          "-I",
+          "-m",
+          "snakemake",
+          "--snakefile",
+          "/work/Home/dl_binner/e005/transfer/launches/gi-pilot.sZKb9N/e005-gi-pilot/workflows/first-binner/gi_pilot.smk",
+          "--configfile",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/resolved-config.json",
+          "--directory",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/pilot",
+          "--cores",
+          "4",
+          "--jobs",
+          "1",
+          "--resources",
+          "mem_mb=8000",
+          "--scheduler",
+          "greedy",
+          "--benchmark-extended",
+          "--runtime-source-cache-path",
+          "/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/source-cache",
+          "--keep-incomplete",
+          "--printshellcmds",
+          "--latency-wait",
+          "2",
+          "--dry-run"
+        ],
+        "exit_code": 0,
+        "name": "completed-resume",
+        "peak_sampled_rss_bytes": 44126208,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.3339284387389771,
+        "sampled_cpu_seconds": 0.27,
+        "stop_reason": null,
+        "wall_seconds": 0.8085564710199833
+      }
+    ]
+  },
+  "retained_locator": "artifacts/e005-linux-pilot/returned/gi-pilot-b9k3j2r3/gi-pilot-b9k3j2r3",
+  "runtime_preflight": {
+    "direct_reference_resolved_versions": {
+      "packaging": "26.3",
+      "pip": "25.1.1"
+    },
+    "excluded_outside_prefix_lock_entries": {
+      "easybuild": "5.3.1",
+      "easybuild-easyblocks": "5.3.1",
+      "easybuild-easyconfigs": "5.3.1",
+      "easybuild-framework": "5.3.1"
+    },
+    "isolated_distributions": 28,
+    "pip_freeze_sha256": "685d5ab9472fbcc5d0e212a6a09cfc3563ae4a4569cc3becf71e341faf1a1067",
+    "status": "passed",
+    "verified_inventory_member_sha256": "59df159b7c3c2823e91664e1bcb19c6a0e4cadc39f72bef4e52e443c44fb10c3"
+  },
+  "scope": {
+    "architecture_comparison_run": false,
+    "coverage_benefit_isolated": false,
+    "development": true,
+    "heavy_sources_locally_rehashed": false,
+    "independent_generalization": false,
+    "repeated_scientific_stages": [],
+    "whole_MAG_quality": false
+  },
+  "source_commit": "67c2615fcbe28072adbd6e03498a24dbb669587a",
+  "storage": {
+    "limitation": "Heavy file hashes/bytes are native receipts, not independently rehashed locally",
+    "omitted_heavy_files": [
+      {
+        "bytes": 5000,
+        "in_return": false,
+        "path": "adapter-contracts/chosen.fq",
+        "sha256": "91acb4639ed4dc03bca8dcc8e23b43cf04a2820c570d0bf7b7ef32d4aeb8712d"
+      },
+      {
+        "bytes": 531,
+        "in_return": false,
+        "path": "adapter-contracts/flags.bam",
+        "sha256": "f652c4912a4f2a4ff96c3565c19d9788c924c70cd4c57952bd5c62d5cad8b00c"
+      },
+      {
+        "bytes": 1034,
+        "in_return": false,
+        "path": "adapter-contracts/mapped.bam",
+        "sha256": "0f4d7173d1fc98426661f70784f713ae355852942d6835b5e38eed0fbf3375db"
+      },
+      {
+        "bytes": 15006,
+        "in_return": false,
+        "path": "adapter-contracts/source.fq",
+        "sha256": "415774b1a07d8331bb49a23845048a51b962bc4a62f67ee45243e8ab20eb730f"
+      },
+      {
+        "bytes": 272659696,
+        "in_return": false,
+        "path": "pilot/mapping/sample_1.bam",
+        "sha256": "b8d8b52b275127974944a05d477d29093af1bce90418c48ad76d056707b419db"
+      },
+      {
+        "bytes": 718065489,
+        "in_return": false,
+        "path": "pilot/mapping/sample_1.sam",
+        "sha256": "74355b524e87a8de4f6a8f3bf4792273e13fb61b5180c92eb72ddb60b92814ad"
+      },
+      {
+        "bytes": 275559150,
+        "in_return": false,
+        "path": "pilot/mapping/sample_4.bam",
+        "sha256": "e046d5ba40323de88a700a3666ef8ae674a91f54e39d3d6f99cba2474d67eedd"
+      },
+      {
+        "bytes": 702265942,
+        "in_return": false,
+        "path": "pilot/mapping/sample_4.sam",
+        "sha256": "d32ab5f3bbfe197e94cbc42f8b869644c669b13955ba8a6251dedd3846bf5363"
+      },
+      {
+        "bytes": 636666544,
+        "in_return": false,
+        "path": "pilot/reads/sample_1.fq",
+        "sha256": "aed863e5a283f8299e22e90db0f0196161b5c444a0345d44cb41ca8901733f7b"
+      },
+      {
+        "bytes": 636665150,
+        "in_return": false,
+        "path": "pilot/reads/sample_4.fq",
+        "sha256": "0d04da7eafdb50165c6699cbea9b0c89dea56ba73c527d1c8b34e7104ff40c5e"
+      }
+    ],
+    "retained_files": 487,
+    "retained_logical_bytes": 3296904179,
+    "returned_logical_bytes": 55106255,
+    "verified_returned_files": 477
+  },
+  "terminal": {
+    "exit_trap_line_captured": false,
+    "path": "agent_context/e005-gi-pilot.7Fr9rw.log",
+    "sha256": "bd764735d17a62ea42cc8567aaee81d7572f5c1a5e8519390d1c1b373ca51976",
+    "success_evidence": "all native stage exit codes, driver_end=passed, return_ready, completed-resume"
+  },
+  "training": {
+    "config": {
+      "batch_size": 64,
+      "epochs": 20,
+      "hidden": 128,
+      "inference_batch_size": 64,
+      "learning_rate": 0.001,
+      "mask_probability": 0.1,
+      "output": 64,
+      "seed": 11,
+      "temperature": 0.2,
+      "weight_decay": 0.01
+    },
+    "loader_workers": 0,
+    "numerical_threads": 4,
+    "parameter_count": 26048,
+    "torch_interop": 1,
+    "training_average_cpus": 3.410473018551246,
+    "training_process_cpu_seconds": 6.2477973239999995,
+    "training_wall_seconds": 1.8319445103406906
+  }
+}

@@ -22,7 +22,7 @@ import time
 import traceback
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from e005_owner import Tee, isolated_env, verify_bundle
+from e005_owner import Tee, isolated_env, local_scheduler_options, verify_bundle
 from e005_smoke import progress, run, sha, write
 
 BUNDLE = Path(__file__).resolve().parents[1]
@@ -292,9 +292,9 @@ def execute(args, attempt, manifest, started):
            '--root', attempt/'adapter-contracts'), 'adapter-contracts', 300)
     setting_up = False
     work = attempt/'pilot'; work.mkdir()
-    command = [runtime['workflow']['python'], '-I', '-m', 'snakemake', '--snakefile',
+    command = [runtime['workflow']['python'], '-I', '-B', '-m', 'snakemake', '--snakefile',
         BUNDLE/'workflows/first-binner/gi_pilot.smk', '--configfile', attempt/'resolved-config.json',
-        '--directory', work, '--cores', '4', '--jobs', '1', '--resources', 'mem_mb=8000', '--scheduler', 'greedy',
+        '--directory', work, *local_scheduler_options(4),
         '--benchmark-extended', '--runtime-source-cache-path', attempt/'source-cache',
         '--keep-incomplete', '--printshellcmds', '--latency-wait', '2']
     science_start = time.monotonic()

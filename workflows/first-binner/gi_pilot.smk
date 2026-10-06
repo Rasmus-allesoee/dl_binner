@@ -8,16 +8,30 @@ CFG, T = config['resolved_config'], config['threads']
 FASTA, TRAIN = config['fasta'], config['training']
 SAMPLES = [str(s['sample']) for s in config['samples']]
 HELPER = str(BASE/'scripts/e005_pilot.py')
-ADAPTER = quote(config['python'])+' -I -u '+quote(HELPER)+' --config '+quote(CFG)
-EVAL = quote(config['amber_python'])+' -I -u '+quote(HELPER)+' --config '+quote(CFG)
-CLI = quote(config['python'])+' -I -m dl_binner --threads '+str(T)
-GUARD = quote(config['python'])+' -I -u '+quote(str(BASE/'scripts/e005_rule.py'))+' --config '+quote(CFG)
+ADAPTER = quote(config['python'])+' -I -B -u '+quote(HELPER)+' --config '+quote(CFG)
+EVAL = quote(config['amber_python'])+' -I -B -u '+quote(HELPER)+' --config '+quote(CFG)
+CLI = quote(config['python'])+' -I -B -m dl_binner --threads '+str(T)
+GUARD = quote(config['python'])+' -I -B -u '+quote(str(BASE/'scripts/e005_rule.py'))+' --config '+quote(CFG)
+
+
+def sample_dependencies(wildcards):
+    """Serialize samples with explicit prior depth receipts, independent of scheduler caps."""
+    number = wildcards.sample
+    reads = next(s['reads'] for s in config['samples'] if str(s['sample']) == number)
+    index = SAMPLES.index(number)
+    return [reads]+([f'depth/sample_{SAMPLES[index-1]}.depth.json'] if index else [])
+
+
+def embedding_dependencies(wildcards):
+    """Finish the raw branch before learned inference; preserve numerical inputs."""
+    common = ['features.npz', 'features.json', 'checkpoint.pt', 'checkpoint.json']
+    return common+(['raw.export'] if wildcards.mode == 'learned' else [])
 
 rule all:
     input: 'raw.evaluation', 'learned.evaluation'
 
 rule sample_reads:
-    input: lambda w: next(s['reads'] for s in config['samples'] if str(s['sample']) == w.sample)
+    input: sample_dependencies
     output: 'reads/sample_{sample}.fq', 'reads/sample_{sample}.sample.json', 'reads/sample_{sample}.selection.tsv.gz'
     wildcard_constraints: sample='|'.join(SAMPLES)
     threads: T
@@ -72,7 +86,7 @@ rule train:
     shell: '{GUARD} --name train --seconds 900 -- {CLI} train --features features.npz --config {TRAIN:q} --output checkpoint.pt > {log:q} 2>&1'
 
 rule embed:
-    input: lambda w: ['features.npz', 'features.json']+(['checkpoint.pt', 'checkpoint.json'] if w.mode == 'learned' else [])
+    input: embedding_dependencies
     output: multiext('{mode}.embeddings', '.npz', '.json')
     wildcard_constraints: mode='raw|learned'
     threads: T
@@ -112,7 +126,8 @@ rule verify:
     shell: '{GUARD} --name verify --seconds 300 -- {ADAPTER} verify > {log:q} 2>&1'
 
 rule evaluate:
-    input: 'verified.json', '{mode}.export', truth=config['contigs']
+    input: 'verified.json', '{mode}.export', truth=config['contigs'],
+           serial=lambda w: ['raw.evaluation'] if w.mode == 'learned' else []
     output: directory('{mode}.evaluation')
     wildcard_constraints: mode='raw|learned'
     threads: T

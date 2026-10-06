@@ -29,6 +29,20 @@ from e005_smoke import progress, run, sha, write
 BUNDLE = Path(__file__).resolve().parents[1]
 
 
+def local_scheduler_options(threads, mem_mb=8000):
+    """Return CPU/global-RAM caps for one local node, without remote job semantics.
+
+    Snakemake 9.16.3 treats a simultaneously supplied --jobs as a node limit and
+    can disable the local core cap. Rules requesting all allocated threads then
+    serialize under --cores alone; explicit global memory applies across rules.
+    """
+    if not 1 <= threads <= 4 or mem_mb <= 0:
+        raise ValueError('Invalid local CPU/RAM scheduler budget')
+    return ['--cores', str(threads), '--executor', 'local',
+            '--resources', 'mem_mb='+str(mem_mb), '--set-resource-scopes', 'mem_mb=global',
+            '--scheduler', 'greedy']
+
+
 def verify_bundle(folder):
     """Verify every staged source/input/runtime payload against the frozen manifest."""
     manifest = json.loads((Path(folder)/'bundle-manifest.json').read_text())
@@ -222,10 +236,9 @@ def execute(args, attempt, manifest):
     write(attempt/'resolved-config.json', config)
     smoke = attempt/'smoke'
     smoke.mkdir()
-    command = [runtime['workflow']['python'], '-I', '-m', 'snakemake', '--snakefile',
+    command = [runtime['workflow']['python'], '-I', '-B', '-m', 'snakemake', '--snakefile',
                str(BUNDLE/'workflows/first-binner/linux_smoke.smk'), '--configfile', str(attempt/'resolved-config.json'),
-               '--directory', str(smoke), '--cores', str(threads), '--jobs', '1', '--resources', 'mem_mb=8000',
-               '--scheduler', 'greedy',
+               '--directory', str(smoke), *local_scheduler_options(threads),
                '--benchmark-extended', '--runtime-source-cache-path', str(attempt/'source-cache'),
                '--keep-incomplete', '--printshellcmds', '--latency-wait', '2']
     stage(command, 'native-smoke', spec['smoke_seconds_ceiling'])

@@ -77,79 +77,59 @@ or assembly-scale throughput/quality validation. Scientific driver 17.797 s,
 0.411-GB sampled peak, 1.227 average CPUs under four-thread caps; learning itself
 0.595 s / 2.401 CPUs. Startup/serial work dominates, so caps do not imply full use.
 
-**E005's native Linux smoke is accepted, and one capped human-associated
-assembly/explicit mean-depth pilot remains frozen and unrun.**
-[D011](decisions/D011-first-binner-prototype.md#next-bounded-product-validation-after-e004)
-owns the scope: freeze data/overlap/evaluation/resource contracts, retain raw
-controls, shorts/masks/noise, validate native runtime/stage costs before increasing
-input size. [E005](../experiments/E005-linux-pilot/README.md) owns the offline runtime/
-smoke source, input hashes, local tests and bounded pilot protocol; its
-[operations guide](../experiments/E005-linux-pilot/OPERATIONS.md) owns the exact
-four-vCPU/12-GB Terminal command and return procedure. Codex must not execute
-UCloud. These check the implemented product's untested contracts rather than add
-an architecture selection gate. No automatic E001 rerun or new seed.
+**E005's native Linux smoke and v5 GI assembly/depth pilot are complete and
+accepted.** [The independent pilot review](../experiments/E005-linux-pilot/README.md#accepted-v5-native-gi-pilot-and-independent-review-2026-10-06)
+and [receipt](../experiments/E005-linux-pilot/pilot-observed.json) verify checksum,
+all 477 returned-file hashes, exact source/reference/sample axes, native runtime
+isolation, masks, 20-epoch seed-11 schedule, exact reload, complete raw/learned DNA
+exports, fixed clustering, AMBER and independently recounted confirmed R95.
+No accepted scientific stage was repeated. The v4 AMBER inventory gate failure
+is preserved; v5 source `67c2615` resolves its lock comparison without a rebuild.
 
-The [local receipt](../experiments/E005-linux-pilot/local-observed.json) binds the
-final v2 transfer (302.18 MB, source `2f0b9a5`) and retained native Mac contracts.
-Nine checks plus the actual extracted-archive DAG pass: exact reload, complete
-14-row exports, cached/fresh reader agreement, two-sample zero masks and excluded/
-noise accounting. One/four-thread and repeated/resume layouts pass. Invalid depth
-fails in 3.488 s before a checkpoint and collects evidence. An old coordinator
-dependency failure was preserved; new local binner/workflow prefixes are separate,
-not a repair of accepted environments. Parent-side verification/setup now has an
-overall deadline, and verified manifests accompany failure returns. Final native
-DAG 21.785 s / 0.262-GB sampled peak; these do not validate Linux ABI or bulk speed.
+The frozen four-genome GI GSA derivative retains all 5,309 contigs / 12,924,259 bp,
+including 1,097 below-500 exclusions / 341,158 bp and 1,353 all-zero-depth rows.
+One million pairs each from retained samples 1/4 were mapped to that exact
+short-inclusive reference; E001 depth was not reused or zero-filled. Heavy original/
+sampled reads and alignments remain on UCloud and are receipt-bound, not rehashed
+locally. All two million returned selection IDs and thresholds were inspected.
 
-The owner requests a **future non-blocking** comparison of learned TNF, frozen GLM
-plus a contrastive head, and TNF–GLM hybrid with the same objective, even if this
-prototype works. [D011](decisions/D011-first-binner-prototype.md#planned-non-blocking-learned-representation-comparison)
-records its concrete rationale and matched bin-quality/resource requirements.
-Planned only, not implemented/run in E004 and not a release prerequisite.
+Confirmed macro R95 raw→learned **0.16731→0.43443**, bp-weighted **0.14329→0.38295**;
+≥50%-recovered genomes **0→2**, ≥90% **0→0**. Bins 113→51, eligible noise
+3,414→321, bp-weighted assigned-bin purity 0.98049→0.97424. Learned output is still
+fragmented. These are useful development **assembled-sequence recovery** results,
+not marker-estimated whole-MAG quality, real-assembler performance, independent
+generalization, isolated coverage benefit or architecture superiority. E001's
+community and 1,332 IDs overlap; no E001/H001/three-seed conclusion changes.
 
-The [Linux receipt](../experiments/E005-linux-pilot/linux-observed.json) independently
-accepts the returned smoke: checksum and all 124 retained-file hashes, isolated
-CPU-only runtimes, four-CPU affinity/pools, exact reload, complete exports, masks,
-fatal-input and completed-resume checks pass. No work was repeated. Actual 4/12
-allocation: 83.81135 driver seconds including setup/collection, 0.0931237 allocated
-vCPU-hours, 0.307-GB sampled worker peak. These are software checks, not bin quality.
+Actual 4-vCPU / 12-GB cost through collection: **495.121 s / 0.550134 allocated
+vCPU-hours**, sampled DAG peak 1.785 GB. Sampling accounts for 408.339 of 470.190
+DAG seconds at about one CPU; mapper rules average 2.93–3.15 CPUs and native logs
+report four threads. Training itself 1.832 s / 3.41 CPUs. Time/RSS limits pass, but the declared serial schedule overlapped training/raw
+work and both evaluators. Current future-launcher code removes simultaneous
+`--cores`/`--jobs`, sets global RAM and adds explicit serial DAG barriers; actual
+Mac scheduling/partial+completed-resume fixtures pass. The tiny Mac legacy
+fixture did not reproduce the Linux overlap; no corrected Linux run is claimed.
+Accepted scientific stages remain valid and are not repeated. No
+full-community throughput or linear CPU-scaling claim. Retained attempt inventory
+3.297 GB; return copy 32.09 MB. Prior runtimes/read sources/attempts are separate.
 
-**The frozen pilot adapters are locally tested; the v4 owner attempt stopped in
-the AMBER environment preflight before adapter checks or pilot work.** Its strict
-inventory comparison mishandled four historical user-site entries and two direct
-URL lock records. The exact evidence and v5 repair are in the
-[E005 owner record](../experiments/E005-linux-pilot/README.md#owner-v4-preflight-failure-and-v5-repair-2026-10-06).
-The replacement packet is v5. Exact next step: owner uploads and runs v5 once, then
-returns its archive/checksum/captured terminal log. No UCloud execution by Codex. Use
-`/work/Home/dl_binner/e005/transfer/` for new uploads, launch copies, terminal logs
-and return archives/checksums. The pilot is frozen at
-four GI GSA genomes / 5,309 contigs / 12,924,259 bp, with 1,097 below-500 contigs
-retained as exclusions in the full denominators. It overlaps E001's community and
-1,332 retained IDs, so remains a controlled development derivative. Ordered samples
-1 and 4 supply capped retained-read subsets mapped to this exact reference in a
-tested command. Existing E001 depth has no short rows and must not be zero-
-filled. AMBER/R95 with raw controls is fixed; no mapping/feature/training/scoring
-of the full scientific pilot has run. The new
-[local receipt](../experiments/E005-linux-pilot/pilot-local-observed.json) verifies
-the previous v4 packet's real native adapters and complete small fixture: exact
-float64 depth/masks/reload, 21 DNA rows / 546,369 bp, both complete exports, native
-AMBER/R95, shuffled IDs and partial/full resume. Sixty-two completed preprocessing
-files were reused unchanged; all 333 retained hashes match. Seven focused tests
-plus deployment regression checks pass. Earlier dispatcher/verifier failures
-stopped before scoring and were preserved/fixed locally. No accepted demonstration
-was repeated. These synthetic-read fixture scores are not scientific pilot utility.
+**Exact next step: implement the prepared bounded generic-command usability
+milestone**, with its [contract](PROTOTYPE.md#prepared-next-milestone-one-end-to-end-command)
+owned by PROTOTYPE and its [decision/alternatives](decisions/D011-first-binner-prototype.md#e005-acceptance-and-next-bounded-usability-milestone-2026-10-06)
+owned by D011. Add one installed end-to-end command and a label-free summary,
+retain the same model/clusterer and raw control, package defaults/DAG, preserve
+masks/shorts/noise and validate fresh/partial/completed resume and failures from a
+new local package environment. At most four threads/loader zero/8 GB working RSS,
+two-hour integration ceiling, ≤32-contig/0.6-Mb real-DNA fixtures. No E002–E005
+scientific rerun. This is prepared, **not implemented or Linux-validated yet**.
+No new UCloud command or input from the owner is needed now. Do not rerun the
+accepted v5 recipe retained in [operations](../experiments/E005-linux-pilot/OPERATIONS.md).
+New future transfers/logs/returns still belong under
+`/work/Home/dl_binner/e005/transfer/`; preserve existing attempts and prefixes.
 
-The current v5 packet's source commit, size and SHA256 are listed in the
-[E005 owner record](../experiments/E005-linux-pilot/README.md#owner-v4-preflight-failure-and-v5-repair-2026-10-06).
-[Operations](../experiments/E005-linux-pilot/OPERATIONS.md) owns its two uploads and
-exact 4-vCPU/12-GB command, with 8-GB working RSS, setup 30 minutes/science two
-hours/total three hours. Reprobe accepted E005 and read-only E001 mapping/AMBER
-prefixes; no installs. The small packet includes the exact 13.13-MB reference,
-while original reads stay on UCloud. Full large-read/runtime/source/lock Linux
-checks and actual costs remain pending. Final Mac fixture: 80.834 s through
-collection / 0.0898153 local four-thread wall hours, 0.418-GB sampled stage peak.
-After returned inspection, choose one concrete product fix or small release-
-readiness milestone using both arms and actual resources; superiority is not
-required for software acceptance.
+The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
+planned and unrun. No larger datasets, extra seeds, architecture gate, publication
+or push is authorized. E004's package source and accepted settings are unchanged.
 Frozen GLM weights/features remain
 retained, deferred from the first prototype rather than globally rejected. The
 completed 2026-09-30 review/source audit is reused. No full-GLM training, VAE

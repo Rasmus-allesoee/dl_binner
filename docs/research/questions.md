@@ -194,3 +194,14 @@ The owner also requests a later **non-blocking** matched TNF/contrastive,
 frozen-GLM/contrastive-head and hybrid comparison even if the prototype works.
 [D011](../decisions/D011-first-binner-prototype.md#planned-non-blocking-learned-representation-comparison)
 owns that plan; nothing from it is implemented or run during E004.
+
+
+2026-10-06 Q004 product-validation update: [E005](../../experiments/E005-linux-pilot/README.md#accepted-v5-native-gi-pilot-and-independent-review-2026-10-06)
+accepts native Linux and the bounded short-inclusive GI GSA/explicit-depth pilot.
+Learned confirmed R95 improves over raw, with lower assigned-bin purity and
+fragmentation retained; time/RSS ceilings pass. A serial scheduling deviation
+is retained and corrected locally without repeating science. Q003's independent
+real-assembly/whole-MAG evaluation and isolated coverage value remain open.
+[D011](../decisions/D011-first-binner-prototype.md#e005-acceptance-and-next-bounded-usability-milestone-2026-10-06)
+now prepares a bounded generic-command usability milestone, without another
+architecture gate or benchmark expansion. H001, E001 and deferred seeds are unchanged.
