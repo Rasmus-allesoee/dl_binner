@@ -104,3 +104,37 @@ logs and returned archive/checksum belong under `/work/Home/dl_binner/e006/trans
 Stop
 for returned review; do not execute UCloud or repeat E005. Larger data, seeds,
 the three-way study and publication remain separate owner decisions.
+
+## Generic-command Linux smoke preparation, 2026-10-06
+
+The owner requested the next finite compatibility check.
+[Linux smoke contract](linux-smoke.json) freezes **4 vCPUs / 12 GB allocated**,
+four numerical threads, interop one, loader zero, **8 GB working RSS**,
+**1,800 seconds total execution including entry verification/setup**, a
+900-second setup subset and 900-second native-contract subset. Collection has a
+separate 120-second ceiling and is included in allocation-wall accounting.
+
+Reuse the accepted 13-contig / 42,311-bp E006 software panel (twelve real GI DNA
+windows, one explicitly synthetic N-only sentinel; synthetic two-sample depth),
+not a new biological dataset. The accepted 36,310-byte wheel is unchanged. The
+[runtime baseline](runtime-baseline.json) extracts full clean-prefix inventories
+and exact lexical interpreter paths from E005's accepted Linux receipt.
+
+[Owner driver](../../scripts/e006_owner.py), [runtime probe](../../scripts/e006_runtime.py),
+[actual native contracts](../../scripts/e006_smoke.py) and
+[packet builder](../../scripts/e006_bundle.py) own execution and transfer.
+A fresh version-qualified venv owns the installed wheel. Its interpreter/stdlib
+and explicitly linked numerical dependencies remain in the accepted E005 prefix;
+that prefix must persist. No old dl_binner, system-site overlay or .pth path
+injection is used. Reused site trees are hashed before/after; complete inventories
+and import origins are checked before work. Separate accepted Snakemake 9.16.3
+is reused read-only. There are no downloads, solvers, environment upgrades,
+runtime relocation, reference data changes or E005 scientific stages.
+
+Four small deployment tests pass. The full fresh/repeated owner harness and its
+native readers/writers are pending at this source freeze. Local Mac testing
+will not establish Linux compatibility; the owner-return review is the boundary.
+No UCloud execution, data expansion, extra seeds, three-way study, architecture
+gate or publication is authorized. Uploads/logs/returns will remain under
+`/work/Home/dl_binner/e006/transfer/`; unique attempts and new prefixes stay
+under the E006 root. Failed attempts and verified manifests are retained.
