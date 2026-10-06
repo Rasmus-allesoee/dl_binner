@@ -131,10 +131,79 @@ and import origins are checked before work. Separate accepted Snakemake 9.16.3
 is reused read-only. There are no downloads, solvers, environment upgrades,
 runtime relocation, reference data changes or E005 scientific stages.
 
-Four small deployment tests pass. The full fresh/repeated owner harness and its
-native readers/writers are pending at this source freeze. Local Mac testing
+Four small deployment tests pass. At source freeze `05069f1`, the full fresh/repeated owner harness and its native readers/writers were pending; the completed local results are below. Local Mac testing
 will not establish Linux compatibility; the owner-return review is the boundary.
 No UCloud execution, data expansion, extra seeds, three-way study, architecture
 gate or publication is authorized. Uploads/logs/returns will remain under
 `/work/Home/dl_binner/e006/transfer/`; unique attempts and new prefixes stay
 under the E006 root. Failed attempts and verified manifests are retained.
+
+## Owner transfer locally accepted; Linux review pending
+
+[Preparation receipt](linux-prepared.json) owns the exact source/input/wheel/packet
+bindings, three retained full harness runs, entry failures and actual local costs.
+[Operations](OPERATIONS.md) owns the two upload filenames, paths, allocation,
+purposes, ceilings, stopping conditions, exact command and required return files.
+
+Source/contracts were committed at **05069f1** before measurement; final packet
+scripts bind **a8010cb**. The packet is **72,267 bytes**, SHA256
+`d15864bd606676991b95c3fe2bb2d4198394106e22aead022fee9b64edc08569`, retained in
+`artifacts/e006-cli-usability/transfer/v1/`. The accepted wheel and scientific
+code/defaults are unchanged. All twelve packet members, source/config bindings,
+returned file inventories and archive checksums were independently recounted.
+
+The real owner driver creates a fresh lexical version-qualified package venv,
+links only reviewed dependencies and installs the wheel offline. Full inventories,
+actual origins, wheel code/default/DAG bytes and before/after reused site-tree
+hashes pass. The complete command/driver runs from a separate entry cwd, without
+adding project source to imports. Two invocations in the same persistent root
+produce distinct preserved attempts/prefixes. Raw and learned actual readers/
+training/inference/clustering/writers run, not mocks. Both complete exports,
+13 ordered IDs / 42,311 bp, all six strata, exclusions, original zeros and exact
+reload pass. Same-panel four-contig / 2,048-bp subsets retain valid empty partitions.
+Native 20-epoch seed-11 schedule, four threads/interop one/loader zero and pools
+are confirmed. Partial resume preserves features/train bytes and mtimes and
+does not schedule those workers; completed resume schedules no science. Actual
+CPU/global-RAM ready-rule placements and all native-stage intervals serialize.
+
+**Twenty-one final native named checks pass**, plus four focused deployment tests.
+Changed FASTA/sample axes and corrupt checkpoint/export are rejected; malformed
+IUPAC, missing depth IDs and insufficient training evidence stop their dependencies
+with the intended error. Whole-command timeout, actual RSS enforcement, a fatal
+worker's orphan cleanup and ten-second heartbeat logging pass with intended
+receipts and no cleanup error. Entry fixtures deliberately fail allocation,
+full inventory, absent interpreter and packet bytes: each returns an archive,
+checksum, status and submitted manifest, before installation/science. These are
+real prerequisite/input failures; no scientific adapter is replaced.
+
+The full checksum-pinned Bash envelope also passes extraction/logging/driver/return
+checks. Native Mac revealed that suffix-after-X `mktemp` did not randomize the log
+name. Its final template ends in X, with ps explicitly checked at entry. Two
+actual bad-checksum invocations verify distinct logs, the intended cause and exit
+2 before any driver/science. The final outer watchdog also encloses checksum
+verification/extraction/startup; an actual extracted-packet inventory failure
+confirms its forwarded arguments, captured error and verified-manifest return.
+Prior successful native outputs are reused; the source-frozen driver/wheel are
+unchanged by these shell-only corrections.
+
+Final full envelope **186.669 seconds through collection**, sampled stage-tree
+peak **360,407,040 bytes (0.360 GB)**. The final direct driver is 179.638 seconds;
+initial narrower harness 151.278 seconds. Known full local harnesses total
+**517.585 seconds / 0.575095 four-thread wall hours**, including setup/hash/collection.
+These are local planning estimates, not UCloud charges or all-task cost. Negative
+entries, tiny shell failures, setup scripting/checks/review and owner idle are
+separate. Owned regular files in each new package prefix and retained/returned
+logical bytes are recorded; shared dependency storage is not duplicated or counted
+as new owned payload. No old prefix, attempt or cache is upgraded/deleted.
+
+**Prepared, not native-Linux accepted.** Mac tests use explicit local runtime
+baselines (Python 3.10.15 / workflow 3.13.12) and ps sampling. Linux Python 3.12.10,
+CPU `+cpu` build, /proc sampler, cpuset limits, venv/site behavior and reset-container
+prerequisites remain actual owner checks. The linked Mac prefix is never shipped;
+the new Linux venv depends on its retained accepted Linux base.
+
+Next the owner runs exactly one [prepared Terminal command](OPERATIONS.md) and
+returns the printed archive, checksum and terminal log. Unexpected errors stop
+without automatic retry. Review before another product action. No quality score,
+whole-MAG/generalization claim, E005 rerun, extra data/seed, three-way comparison,
+architecture gate or publication follows from these software checks.

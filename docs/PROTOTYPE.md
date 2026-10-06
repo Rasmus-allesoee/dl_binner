@@ -29,7 +29,7 @@ share depth, so coverage's separate biological benefit is not isolated.
 The installed **`dl-binner run`** command now groups the complete learned path and
 matched raw control. [E006](../experiments/E006-cli-usability/README.md) accepts its
 built-wheel native Mac checks, recovery, resource enforcement and truthful
-accounting. This is an evolving prototype, not a compatibility promise. The
+accounting. The [prepared E006 owner smoke](../experiments/E006-cli-usability/OPERATIONS.md) tests this generic command on CPU/Linux; native Linux return review remains pending. This is an evolving prototype, not a compatibility promise. The
 individual commands `prepare`, `train`, `embed`, `cluster`, and `export` remain,
 with `--help` on each. `prepare` reads assembly FASTA and optional mean-depth TSV. Its header is
 `contig_id` followed by unique ordered sample names. Every FASTA ID needs one

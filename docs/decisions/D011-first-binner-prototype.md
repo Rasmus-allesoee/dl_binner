@@ -380,3 +380,22 @@ Clustering/dataset expansion and experiment-only read-sampling optimization
 remain deferred as previously reasoned. Whole-MAG quality, independent
 generalization, isolated depth benefit, publication and the planned non-blocking
 three-way study remain unresolved or separately authorized.
+
+## Generic-command Linux smoke prepared, 2026-10-06
+
+Retain D011 and the accepted E006 model/wheel. The owner-requested finite
+compatibility job is prepared in [E006 operations](../../experiments/E006-cli-usability/OPERATIONS.md),
+with [frozen ceilings](../../experiments/E006-cli-usability/linux-smoke.json)
+committed before measurement. It reuses accepted tiny E006 DNA and healthy E005
+assets read-only; a new versioned package prefix owns only the new wheel and
+explicitly borrows dependencies from the accepted persistent Linux base.
+No Mac environment is transferred, no accepted scientific demonstration reruns,
+and no claim of Linux acceptance follows from local Mac harness checks.
+
+Next the owner executes one 4-vCPU / 12-GB Terminal smoke under the 30-minute
+execution, four-thread/loader-zero/8-GB working-RSS ceilings and returns its
+archive/checksum/log. Review real schedules, isolation, masks, reload, both
+complete exports, strict recovery, intended failures and allocation costs.
+A passing return should lead to one bounded product/release-readiness action,
+not another architecture screen or automatic benchmark/data expansion.
+Publication and the optional three-way comparison remain separate owner decisions.

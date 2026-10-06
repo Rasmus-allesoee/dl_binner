@@ -1,0 +1,472 @@
+{
+  "command": {
+    "final_optional_argv_check": {
+      "bytes": 5822,
+      "exit_code": 1,
+      "intended_error": "Complete runtime inventory mismatch",
+      "log": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/envelope-final-guards/final-argv-check.log",
+      "optional_empty_argv": "Native shell check passed; Linux default remains owner-only",
+      "sha256": "de34b0db3654a6da9d8357ee2f608461382b19c8fc57767e7c757a70eaef3407"
+    },
+    "full_envelope_result": "artifacts/e006-cli-usability/linux-smoke-preparation/owner-envelope-final",
+    "post_fix_final_shell_contracts": {
+      "bytes": 2622,
+      "sha256": "38ceb5371a77121e53a53b1167c15567fe11a1813019155d7ec713bc8c68913f"
+    },
+    "post_fix_repeated_negative_envelopes": {
+      "bytes": 905,
+      "sha256": "d2f5a50a4809db81ff588713aaf1c5c8a6f1623685081ae782e6f19b902b3053"
+    },
+    "post_test_log_fix": "BSD mktemp suffix was literal; final trailing-X template/ps guard and enclosing checksum/extraction/startup watchdog are checked through actual unique-log checksum failures and a verified-entry inventory-failure return. Native driver/scientific positives are retained unchanged.",
+    "record": {
+      "bytes": 2221,
+      "sha256": "9e05543ccc07255b18f4de0a21da3236a098cde1fd0b5406ebc101604f780b7f"
+    },
+    "source": "experiments/E006-cli-usability/owner-command.sh"
+  },
+  "harnesses": [
+    {
+      "archive": {
+        "bytes": 849824,
+        "sha256": "16a77da1e0626006ef42a3f3a61d75b2ea0adc70c206280afc63daca2e4e1bba"
+      },
+      "attempt": "artifacts/e006-cli-usability/linux-smoke-preparation/owner-harness-001/generic-linux-smoke-a351w1sv",
+      "bindings_before": {
+        "binner": {
+          "bytes": 762189518,
+          "excluded_metadata": [
+            ".DS_Store"
+          ],
+          "files": 20079,
+          "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v4/lib/python3.10/site-packages",
+          "tree_sha256": "6dffc82aed8b353636bc54a118f437105cc1a2128b1cfb0fa1223cab95574578"
+        },
+        "workflow": {
+          "bytes": 84119760,
+          "excluded_metadata": [
+            ".DS_Store"
+          ],
+          "files": 3683,
+          "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/lib/python3.13/site-packages",
+          "tree_sha256": "50ca14a34798eb46e807428e9cb2cfcc617aba2db3fd0a97beb3dd96707f6e98"
+        }
+      },
+      "collection": {
+        "allocated_vcpu_hours_through_collection": 0.16808681412444357,
+        "archive": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-harness-001/transfer/generic-linux-smoke-a351w1sv-return.tar.gz",
+        "archive_bytes": {
+          "bytes": 849824,
+          "sha256": "16a77da1e0626006ef42a3f3a61d75b2ea0adc70c206280afc63daca2e4e1bba"
+        },
+        "checksum": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-harness-001/transfer/generic-linux-smoke-a351w1sv-return.tar.gz.sha256",
+        "driver_seconds_through_collection": 151.2781327119992,
+        "exit_code": 0,
+        "retained_files": 355,
+        "retained_logical_bytes": 1531675,
+        "status": "passed"
+      },
+      "native_case_count": 19,
+      "native_case_names": [
+        "changed-input",
+        "changed-sample-axis",
+        "completed-native-dag",
+        "corrupt-checkpoint",
+        "corrupt-export",
+        "depth-completed-resume",
+        "depth-partial",
+        "depth-partial-resume",
+        "fresh-populated-refusal",
+        "installed-console-help",
+        "insufficient-evidence",
+        "invalid-fasta",
+        "overall-timeout",
+        "scheduler-cpu",
+        "scheduler-memory",
+        "sequence-fresh",
+        "supervisor-fatal",
+        "supervisor-heartbeat",
+        "supervisor-memory"
+      ],
+      "native_suite_resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-harness-001/envs/binner-run-0.1.0.dev1-v1-lkiizwxc/runtime/bin/python",
+          "-I",
+          "-B",
+          "-u",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/packet-001/e006-linux-smoke/scripts/e006_smoke.py",
+          "--output",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-harness-001/generic-linux-smoke-a351w1sv/smoke",
+          "--workflow-python",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+          "--bundle",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/packet-001/e006-linux-smoke"
+        ],
+        "exit_code": 0,
+        "launched_pid": 8761,
+        "peak_sampled_rss_bytes": 361127936,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5128663978865345,
+        "sampled_cpu_seconds": 53.70999999999972,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 900,
+        "stop_reason": null,
+        "wall_seconds": 104.72512962699966
+      },
+      "observations": {
+        "bytes": 53011,
+        "sha256": "c6401b276ceb8140b93a707a674eb9407eaf30d584b826fd020c5dd3ed3c2b75"
+      },
+      "owned_package_regular_bytes": 194966,
+      "sampled_stage_peak_rss_bytes": 361127936,
+      "source_commit": "05069f1cccb74738fe8e47dba06c59383d830d10",
+      "status": {
+        "bytes": 853,
+        "sha256": "93b9d8b5336d31f6c3d2460332f1bc9ec0c0c8eef027731e811d53dd8000e11e"
+      },
+      "verified_return_files": 342
+    },
+    {
+      "archive": {
+        "bytes": 1152837,
+        "sha256": "49e2fce268829ddd02423d34396b9f57661397b428110b8986e17fe3090fbab3"
+      },
+      "attempt": "artifacts/e006-cli-usability/linux-smoke-preparation/owner-harness-001/generic-linux-smoke-zhyynlho",
+      "bindings_before": {
+        "binner": {
+          "bytes": 762189518,
+          "excluded_metadata": [
+            ".DS_Store"
+          ],
+          "files": 20079,
+          "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v4/lib/python3.10/site-packages",
+          "tree_sha256": "6dffc82aed8b353636bc54a118f437105cc1a2128b1cfb0fa1223cab95574578"
+        },
+        "workflow": {
+          "bytes": 84119760,
+          "excluded_metadata": [
+            ".DS_Store"
+          ],
+          "files": 3683,
+          "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/lib/python3.13/site-packages",
+          "tree_sha256": "50ca14a34798eb46e807428e9cb2cfcc617aba2db3fd0a97beb3dd96707f6e98"
+        }
+      },
+      "collection": {
+        "allocated_vcpu_hours_through_collection": 0.19959815873888956,
+        "archive": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-harness-001/transfer/generic-linux-smoke-zhyynlho-return.tar.gz",
+        "archive_bytes": {
+          "bytes": 1152837,
+          "sha256": "49e2fce268829ddd02423d34396b9f57661397b428110b8986e17fe3090fbab3"
+        },
+        "checksum": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-harness-001/transfer/generic-linux-smoke-zhyynlho-return.tar.gz.sha256",
+        "driver_seconds_through_collection": 179.6383428650006,
+        "exit_code": 0,
+        "retained_files": 462,
+        "retained_logical_bytes": 2080547,
+        "status": "passed"
+      },
+      "native_case_count": 21,
+      "native_case_names": [
+        "changed-input",
+        "changed-sample-axis",
+        "completed-native-dag",
+        "corrupt-checkpoint",
+        "corrupt-export",
+        "depth-completed-resume",
+        "depth-partial",
+        "depth-partial-resume",
+        "empty-partition",
+        "fresh-populated-refusal",
+        "installed-console-help",
+        "insufficient-evidence",
+        "invalid-fasta",
+        "missing-depth-axis",
+        "overall-timeout",
+        "scheduler-cpu",
+        "scheduler-memory",
+        "sequence-fresh",
+        "supervisor-fatal",
+        "supervisor-heartbeat",
+        "supervisor-memory"
+      ],
+      "native_suite_resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-harness-001/envs/binner-run-0.1.0.dev1-v1-30wyrjbr/runtime/bin/python",
+          "-I",
+          "-B",
+          "-u",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/packet-002/e006-linux-smoke/scripts/e006_smoke.py",
+          "--output",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-harness-001/generic-linux-smoke-zhyynlho/smoke",
+          "--workflow-python",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+          "--bundle",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/packet-002/e006-linux-smoke"
+        ],
+        "exit_code": 0,
+        "launched_pid": 11523,
+        "peak_sampled_rss_bytes": 359690240,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5681821606795435,
+        "sampled_cpu_seconds": 75.41000000000058,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 900,
+        "stop_reason": null,
+        "wall_seconds": 132.7215199960001
+      },
+      "observations": {
+        "bytes": 65992,
+        "sha256": "34f20c4714f740d3098bcf0d4c529542c32acf03df7fdd23b8c72c75f968a5f8"
+      },
+      "owned_package_regular_bytes": 194966,
+      "sampled_stage_peak_rss_bytes": 359690240,
+      "source_commit": "a8010cb4b4ded237a1f2d4c0b1cfc82a385cb809",
+      "status": {
+        "bytes": 852,
+        "sha256": "7003312e49feec6b950c537c89fcd09e748414870179a7396ddd2766feb0e1aa"
+      },
+      "verified_return_files": 447
+    },
+    {
+      "archive": {
+        "bytes": 1153172,
+        "sha256": "d737ab2c3c83ebcfb1a2245c8bc09c4b0cdefaa11b9bc14fc94e211949c0ddb4"
+      },
+      "attempt": "artifacts/e006-cli-usability/linux-smoke-preparation/owner-envelope-final/generic-linux-smoke-szc_a33g",
+      "bindings_before": {
+        "binner": {
+          "bytes": 762189518,
+          "excluded_metadata": [
+            ".DS_Store"
+          ],
+          "files": 20079,
+          "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v4/lib/python3.10/site-packages",
+          "tree_sha256": "6dffc82aed8b353636bc54a118f437105cc1a2128b1cfb0fa1223cab95574578"
+        },
+        "workflow": {
+          "bytes": 84119760,
+          "excluded_metadata": [
+            ".DS_Store"
+          ],
+          "files": 3683,
+          "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/lib/python3.13/site-packages",
+          "tree_sha256": "50ca14a34798eb46e807428e9cb2cfcc617aba2db3fd0a97beb3dd96707f6e98"
+        }
+      },
+      "collection": {
+        "allocated_vcpu_hours_through_collection": 0.20740974198224144,
+        "archive": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-envelope-final/transfer/generic-linux-smoke-szc_a33g-return.tar.gz",
+        "archive_bytes": {
+          "bytes": 1153172,
+          "sha256": "d737ab2c3c83ebcfb1a2245c8bc09c4b0cdefaa11b9bc14fc94e211949c0ddb4"
+        },
+        "checksum": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-envelope-final/transfer/generic-linux-smoke-szc_a33g-return.tar.gz.sha256",
+        "driver_seconds_through_collection": 186.6687677840173,
+        "exit_code": 0,
+        "retained_files": 462,
+        "retained_logical_bytes": 2084635,
+        "status": "passed"
+      },
+      "native_case_count": 21,
+      "native_case_names": [
+        "changed-input",
+        "changed-sample-axis",
+        "completed-native-dag",
+        "corrupt-checkpoint",
+        "corrupt-export",
+        "depth-completed-resume",
+        "depth-partial",
+        "depth-partial-resume",
+        "empty-partition",
+        "fresh-populated-refusal",
+        "installed-console-help",
+        "insufficient-evidence",
+        "invalid-fasta",
+        "missing-depth-axis",
+        "overall-timeout",
+        "scheduler-cpu",
+        "scheduler-memory",
+        "sequence-fresh",
+        "supervisor-fatal",
+        "supervisor-heartbeat",
+        "supervisor-memory"
+      ],
+      "native_suite_resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-envelope-final/envs/binner-run-0.1.0.dev1-v1-gimkpd5w/runtime/bin/python",
+          "-I",
+          "-B",
+          "-u",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-envelope-final/transfer/launches/generic-smoke.sU3uNu/e006-linux-smoke/scripts/e006_smoke.py",
+          "--output",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-envelope-final/generic-linux-smoke-szc_a33g/smoke",
+          "--workflow-python",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+          "--bundle",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/owner-envelope-final/transfer/launches/generic-smoke.sU3uNu/e006-linux-smoke"
+        ],
+        "exit_code": 0,
+        "launched_pid": 14621,
+        "peak_sampled_rss_bytes": 360407040,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5290446260786719,
+        "sampled_cpu_seconds": 68.1300000000005,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 900,
+        "stop_reason": null,
+        "wall_seconds": 128.7793063979998
+      },
+      "observations": {
+        "bytes": 66192,
+        "sha256": "4682612bec4494f1b7530ee53a5616fb8ba0927c74195d948ab416287c6d28b9"
+      },
+      "owned_package_regular_bytes": 195057,
+      "sampled_stage_peak_rss_bytes": 360407040,
+      "source_commit": "a8010cb4b4ded237a1f2d4c0b1cfc82a385cb809",
+      "status": {
+        "bytes": 874,
+        "sha256": "bc8000c7fb96efa9e38068c910f8fc6095ecfd60f3615db664a77e27ea890f35"
+      },
+      "verified_return_files": 447
+    }
+  ],
+  "kind": "Prepared owner Linux smoke; native Mac testing only",
+  "known_full_harness_four_thread_wall_hours": 0.5750947148455745,
+  "known_full_harness_seconds_through_collection": 517.5852433610171,
+  "limitations": [
+    "Software fixture utility not assessed",
+    "No whole-MAG/generalization or throughput claim",
+    "Read-only linked prefix depends on retained accepted base",
+    "Sampled shared-page RSS/CPU estimates are not exact peaks or billing",
+    "Final shell log naming guard uses separate actual negative checks, scientific positives retained"
+  ],
+  "local_only_overrides": [
+    "Mac platform, ps sampler and runtime baselines (Python3.10.15/Python3.13.12); Linux /proc, CPU +cpu build, Python3.12.10 prefix/site behavior, cpuset and container prerequisites remain owner checks"
+  ],
+  "native_paths_not_mocked": [
+    "Fresh prepare/train/embed/cluster/export via installed wheel",
+    "Prefix creation/read-only dependency links/wheel install",
+    "Native scheduler placements",
+    "Fatal/timeout/RSS/orphan supervision",
+    "Owner entry/archive verification/return collection and shell extraction/logs"
+  ],
+  "negative_entry_contracts": {
+    "allocation": {
+      "archive": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/negative-contracts/allocation/owner-root/transfer/generic-linux-smoke-1nxtxxuq-return.tar.gz",
+      "archive_sha256": "730c45048a2a6cba741d56c82a5f1318ab6b39356f5f520d7cf10a3434a3fdd0",
+      "intended_error": "Frozen smoke allocation",
+      "return_manifest_present": true,
+      "scientific_work_started": false,
+      "status": {
+        "accounting": "allocation times entry-to-driver wall; setup included; idle/upload excluded",
+        "allocated_ram_gb": 12.0,
+        "allocated_vcpu_hours_before_collection": 8.262533333436295e-06,
+        "allocated_vcpus": 3,
+        "driver_seconds_before_collection": 0.009915040000123554,
+        "entry_before_python_seconds": 0,
+        "error": "ValueError('Frozen smoke allocation is exactly 4 vCPUs / 12 GB RAM')",
+        "exit_code": 1,
+        "host_cpu_count": 8,
+        "host_report_is_allocation": false,
+        "native_linux": false,
+        "status": "failed",
+        "verification_passed": true
+      }
+    },
+    "inventory": {
+      "archive": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/negative-contracts/inventory/owner-root/transfer/generic-linux-smoke-_wtvd4vj-return.tar.gz",
+      "archive_sha256": "35908dc5b755170d3870b7d3732a64bca9c138c07f29199384140f2a2bb38f06",
+      "intended_error": "Complete runtime inventory mismatch",
+      "return_manifest_present": true,
+      "scientific_work_started": false,
+      "status": {
+        "accounting": "allocation times entry-to-driver wall; setup included; idle/upload excluded",
+        "allocated_ram_gb": 12.0,
+        "allocated_vcpu_hours_before_collection": 0.000666835282222059,
+        "allocated_vcpus": 4,
+        "driver_seconds_before_collection": 0.6001517539998531,
+        "entry_before_python_seconds": 0,
+        "error": "RuntimeError('Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/negative-contracts/inventory/owner-root/generic-linux-smoke-_wtvd4vj/stages/binner-entry-probe.log\\nbefore_site /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v4/bin/python /opt/miniconda3/envs/anvio-dev\\nafter_site /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v4\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/packet-002/e006-linux-smoke/scripts/e006_runtime.py\", line 36, in <module>\\n    raise RuntimeError(\\'Complete runtime inventory mismatch: \\'+json.dumps(distributions, sort_keys=True))\\nRuntimeError: Complete runtime inventory mismatch: {\"dl-binner\": \"0.1.0.dev1\", \"filelock\": \"4.0.10\", \"fsspec\": \"2026.9.0\", \"jinja2\": \"3.1.6\", \"markupsafe\": \"3.0.4\", \"mpmath\": \"1.3.0\", \"networkx\": \"3.4.2\", \"numpy\": \"1.26.4\", \"pip\": \"23.0.1\", \"psutil\": \"6.0.0\", \"setuptools\": \"65.5.0\", \"sympy\": \"1.14.0\", \"threadpoolctl\": \"3.5.0\", \"torch\": \"2.2.2\", \"typing-extensions\": \"4.16.0\", \"wheel\": \"0.45.1\"}\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+        "exit_code": 1,
+        "host_cpu_count": 8,
+        "host_report_is_allocation": false,
+        "native_linux": false,
+        "status": "failed",
+        "verification_passed": true
+      }
+    },
+    "missing-prefix": {
+      "archive": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/negative-contracts/missing-prefix/owner-root/transfer/generic-linux-smoke-c1df5hzo-return.tar.gz",
+      "archive_sha256": "12435d11e705910a1cabd27ab8fcb923e8f1ef589e5e6f2ab1ff9f575123f861",
+      "intended_error": "FileNotFoundError",
+      "return_manifest_present": true,
+      "scientific_work_started": false,
+      "status": {
+        "accounting": "allocation times entry-to-driver wall; setup included; idle/upload excluded",
+        "allocated_ram_gb": 12.0,
+        "allocated_vcpu_hours_before_collection": 7.81073122218206e-05,
+        "allocated_vcpus": 4,
+        "driver_seconds_before_collection": 0.07029658099963854,
+        "entry_before_python_seconds": 0,
+        "error": "RuntimeError(\"Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/negative-contracts/missing-prefix/owner-root/generic-linux-smoke-c1df5hzo/stages/binner-entry-probe.log\\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/negative-contracts/missing-prefix/missing/bin/python'\")",
+        "exit_code": 1,
+        "host_cpu_count": 8,
+        "host_report_is_allocation": false,
+        "native_linux": false,
+        "status": "failed",
+        "verification_passed": true
+      }
+    },
+    "tampered-packet": {
+      "archive": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/linux-smoke-preparation/negative-contracts/tampered-packet/owner-root/transfer/generic-linux-smoke-3gmipbik-return.tar.gz",
+      "archive_sha256": "89b8ead3a29cd115a331f0ad1f5a7ff4cd763bbb345a40c72d6c03ca764d16bb",
+      "intended_error": "Packet bytes changed",
+      "return_manifest_present": true,
+      "scientific_work_started": false,
+      "status": {
+        "accounting": "allocation times entry-to-driver wall; setup included; idle/upload excluded",
+        "allocated_ram_gb": 12.0,
+        "allocated_vcpu_hours_before_collection": 4.614700000173697e-06,
+        "allocated_vcpus": 4,
+        "driver_seconds_before_collection": 0.004153230000156327,
+        "entry_before_python_seconds": 0,
+        "error": "ValueError('Packet bytes changed: input/mean-depth.tsv')",
+        "exit_code": 1,
+        "host_cpu_count": 8,
+        "host_report_is_allocation": false,
+        "native_linux": false,
+        "status": "failed",
+        "verification_passed": false
+      }
+    }
+  },
+  "out_of_scope_unrun": [
+    "UCloud",
+    "E005 science",
+    "New data/seeds",
+    "Three-way study",
+    "Architecture gate",
+    "Publication"
+  ],
+  "packet": {
+    "checksum": {
+      "bytes": 93,
+      "sha256": "89c511649a53d3eb993eb395021ba06cc238e90c2b219367c99f43f8ad5f1989"
+    },
+    "files_verified": 12,
+    "package_wheel_source": "e30023c0a9e78c255da3b7abc43ed3025571dcef",
+    "path": "artifacts/e006-cli-usability/transfer/v1/e006-linux-smoke-v1.tar.gz",
+    "record": {
+      "bytes": 72267,
+      "sha256": "d15864bd606676991b95c3fe2bb2d4198394106e22aead022fee9b64edc08569"
+    }
+  },
+  "packet_source_commit": "a8010cb4b4ded237a1f2d4c0b1cfc82a385cb809",
+  "record": "E006",
+  "resource_scope": "Local planning estimates, not provider spend; full harness entry/setup/collection included. Negative entries, setup scripting, builds/checks/review/idle separate.",
+  "source_freeze": "05069f1cccb74738fe8e47dba06c59383d830d10",
+  "status": "prepared, locally tested; owner Linux return pending"
+}

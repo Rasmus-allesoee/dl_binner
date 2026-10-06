@@ -24,6 +24,9 @@ class DeploymentContracts(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'file set'):owner.verify_bundle(root)
             (root/'extra').unlink();file.unlink();file.symlink_to(root/'bundle-manifest.json')
             with self.assertRaisesRegex(ValueError,'Linked'):owner.verify_bundle(root)
+            file.unlink();file.write_bytes(b'one')
+            nested=root/'nested';nested.mkdir();(nested/'bundle-manifest.json').write_text('{}')
+            with self.assertRaisesRegex(ValueError,'file set'):owner.verify_bundle(root)
 
     def test_dependencies_never_link_old_package_or_path_injection(self):
         with tempfile.TemporaryDirectory() as name:

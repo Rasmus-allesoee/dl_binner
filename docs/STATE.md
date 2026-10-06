@@ -146,20 +146,11 @@ explicit byte-verified numerical/build dependencies reused read-only from v4;
 no old prefix was relocated/upgraded/deleted. Origins/inventories and dependency
 tree hashes passed review. This local recipe is not a Linux environment transfer.
 
-**Exact next step: prepare and locally test one tiny checksum-bound owner-run
-CPU/Linux generic-command smoke**, reusing healthy UCloud workflow/assets, with a
-new version-qualified package prefix, explicit allocation/limits, raw control,
-resume/failure checks, captured logs and returned evidence. Keep ≤32 contigs /
-0.6 Mb, at most four CPU threads/loader zero/8 GB working RSS, with a prospectively
-bounded smoke ceiling. The new generic launcher is **not Linux-validated yet**;
-E005's old scientific Linux acceptance remains valid. This is an operational
-check, not an architecture/quality gate. No owner upload or UCloud run is needed
-now; the next task prepares the two-file packet and exact owner command.
-Do not rerun the accepted v5 recipe retained in
-[operations](../experiments/E005-linux-pilot/OPERATIONS.md). E005 transfers/logs/
-returns stay under `/work/Home/dl_binner/e005/transfer/`; preserve its attempts and
-prefixes. Prepare the new E006 packet/logs/returns under
-`/work/Home/dl_binner/e006/transfer/`, keeping `/work/Home` tidy.
+**Exact next step: the owner runs the prepared tiny E006 CPU/Linux generic-command smoke** in a single-node **4-vCPU / 12-GB Terminal job**, then returns its printed archive, checksum and terminal log for independent review. [Operations](../experiments/E006-cli-usability/OPERATIONS.md) owns the exact checksum-pinned command and two upload files; [Linux contract](../experiments/E006-cli-usability/linux-smoke.json) freezes **1,800 seconds including verification/setup**, a separate 120-second evidence-collection limit, four numerical threads/interop one/loader zero and 8 GB working RSS. The new generic launcher is **not Linux-accepted yet**. This is finite operational compatibility work, not an architecture/quality gate.
+
+The packet reuses the retained **13-contig / 42,311-bp** real-DNA software fixture and unchanged accepted wheel. Its scripts/contracts bind **a8010cb**, archive SHA256 `d15864bd606676991b95c3fe2bb2d4198394106e22aead022fee9b64edc08569` (**72,267 bytes**). Accepted E005 CPU/workflow inventories are reprobed read-only. A new versioned package venv owns the wheel and explicitly borrows Linux dependencies from the persistent accepted base; numerical/import origins and before/after site-tree bytes are checked. No Mac prefix/links, runtime copies, heavy data or accepted scientific stages are transferred or rerun.
+
+Local native owner-driver/command checks and failed-entry returns pass: **21 final native contracts, four focused deployment tests; final full envelope 186.669 s / 0.360-GB sampled peak**. [Preparation receipt](../experiments/E006-cli-usability/linux-prepared.json) records all three full harnesses (**517.585 s / 0.575095 four-thread wall hours**) and scopes. Negative entries and shell-only log-template correction are retained separately; no Linux platform/environment credit follows. The owner controls execution. Keep the two uploads, launch copies, terminal logs and returned archive/checksum under `/work/Home/dl_binner/e006/transfer/`; unique attempts and new prefixes stay under E006. E005 transfers remain under its existing `transfer/`; preserve its attempts/runtimes and do not rerun the accepted v5 recipe. Stop on unexpected failures and return retained evidence; no automatic retry or data expansion.
 
 The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
 planned and unrun. No larger datasets, extra seeds, architecture gate, publication

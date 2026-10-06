@@ -8,9 +8,10 @@ for provenance. Preserve `/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/`, its hea
 files and the original transfers/logs/returns. No additional UCloud job is needed.
 The generic command is now implemented and locally accepted in
 [E006](../E006-cli-usability/README.md); see its
-[usage guide](../../docs/PROTOTYPE.md#run-the-binner). Next prepare a tiny owner-run
-Linux generic-launcher check. No new owner packet/command is prepared yet; follow
-[STATE](../../docs/STATE.md), not this historical recipe.
+[usage guide](../../docs/PROTOTYPE.md#run-the-binner). The new tiny E006 owner packet
+and [Linux smoke command](../E006-cli-usability/OPERATIONS.md) are prepared; follow
+[STATE](../../docs/STATE.md), not this historical recipe. E006 execution does not
+rerun this accepted GI pilot.
 No larger data, extra seed, three-way study, architecture gate or public release.
 
 ## Executed v5 upload files and organization
