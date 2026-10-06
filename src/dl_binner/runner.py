@@ -164,6 +164,20 @@ def probe_workflow(python, folder, threads, deadline, memory):
     return data
 
 
+def native_failure(folder):
+    """Return the failed native stage's concise cause/log, beyond scheduler trailers."""
+    for path in sorted(Path(folder).glob('*.native.exit.json'), reverse=True):
+        data=json.loads(path.read_text())
+        if data['exit_code']==0 and data['stop_reason'] is None:
+            continue
+        log=path.with_name(path.name.replace('.exit.json','.log'))
+        lines=log.read_text().splitlines()
+        errors=[line[len('error: '):] for line in lines if line.startswith('error: ')]
+        cause=errors[-1] if errors else data['stop_reason'] or f'Native worker exited with code {data["exit_code"]}'
+        return dict(stage=path.name.split('.native')[0],cause=cause,log=str(log))
+    return None
+
+
 def finalize(root, manifest, stages, workflow_resources, started):
     """Verify checkpoint parity and both exports; publish byte-bound neutral summaries."""
     import numpy as np
@@ -306,7 +320,19 @@ def run_pipeline(args):
             status, code = 'completed', 0
         except BaseException as error:
             code = 130 if isinstance(error, KeyboardInterrupt) else 1
-            print(f'error: {error}', file=sys.stderr, flush=True)
+            failure=native_failure(invocation)
+            if failure:
+                print(f'error: {failure["stage"]} failed: {failure["cause"]}\nNative log: {failure["log"]}',file=sys.stderr,flush=True)
+                if 'IUPAC' in failure['cause']:
+                    print('Check the named FASTA record: IDs must be unique and DNA must use valid IUPAC letters. Changed inputs require a fresh --output.',file=sys.stderr,flush=True)
+                elif 'eligible' in failure['cause'] or 'nonconstant' in failure['cause']:
+                    print('Training needs at least two eligible contigs with different usable features. Inspect feature exclusions; changed inputs require a fresh --output.',file=sys.stderr,flush=True)
+            else:
+                print(f'error: {str(error).splitlines()[0]}', file=sys.stderr, flush=True)
+                stop_log=invocation/'snakemake.exit.json'
+                if stop_log.exists():
+                    reason=json.loads(stop_log.read_text())['stop_reason']
+                    if reason: print(reason,file=sys.stderr,flush=True)
             traceback.print_exc(file=log)
             progress(f'Stopped safely. Logs and failed-stage files retained: {invocation}. Resume matching inputs with --resume; no automatic repairs')
         finally:

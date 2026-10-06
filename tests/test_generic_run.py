@@ -8,7 +8,7 @@ import unittest
 
 from dl_binner.accounting import check_files, file_record, summarize_arm
 from dl_binner import clustering, io
-from dl_binner.runner import source_records
+from dl_binner.runner import native_failure, source_records
 from dl_binner.supervision import isolated_env, local_scheduler_options, supervise
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -116,6 +116,15 @@ class GenericContracts(unittest.TestCase):
             receipt=json.loads(log.with_suffix('.exit.json').read_text())
             self.assertIsNone(receipt['exit_code'])
             self.assertIn('PermissionError: ps unavailable',receipt['stop_reason'])
+
+    def test_native_cause_is_not_lost_in_scheduler_trailer(self):
+        with tempfile.TemporaryDirectory() as name:
+            root=Path(name)
+            (root/'01-features.native.exit.json').write_text(json.dumps(dict(exit_code=1,stop_reason=None)))
+            (root/'01-features.native.log').write_text('error: Empty/invalid IUPAC sequence: broken\nTraceback...\n')
+            value=native_failure(root)
+            self.assertEqual(value['cause'],'Empty/invalid IUPAC sequence: broken')
+            self.assertEqual(value['stage'],'01-features')
 
 
 if __name__=='__main__': unittest.main()
