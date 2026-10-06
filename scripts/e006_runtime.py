@@ -38,11 +38,14 @@ if sys.version.split()[0] != cfg['expected_python']:
     raise RuntimeError('Python version mismatch')
 origins = {}
 packages = ('dl_binner','numpy','torch','networkx','threadpoolctl') if cfg['role']=='binner' else ('snakemake',)
+packages = sorted(set(packages) | set(cfg.get('expected_origins',{})))
 for name in packages:
     print('before_import '+name, flush=True)
     module = importlib.import_module(name); path = Path(module.__file__).resolve()
     expected = prefix if cfg.get('own_package') and name=='dl_binner' else dependencies
     if not path.is_relative_to(expected.resolve()): raise RuntimeError('Unexpected import origin: '+str(path))
+    if name in cfg.get('expected_origins',{}) and path != Path(cfg['expected_origins'][name]).resolve():
+        raise RuntimeError('Accepted native import origin changed: '+name)
     origins[name] = str(path)
 if cfg.get('own_package'):
     import hashlib

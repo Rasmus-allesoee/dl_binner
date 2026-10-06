@@ -54,7 +54,7 @@ def verify_bundle(folder):
     for path in folder.rglob('*'):
         if path.is_symlink():
             raise ValueError('Linked packet member: '+str(path))
-        if path.is_file() and path.name != 'bundle-manifest.json':
+        if path.is_file() and path != folder/'bundle-manifest.json':
             actual.add(str(path.relative_to(folder)))
     if actual != set(data['files']):
         raise ValueError('Packet file set changed')
@@ -162,7 +162,7 @@ def execute(args, attempt, manifest, started):
         python = Path(expected['python']).absolute()  # never resolve a venv interpreter
         cfg = dict(prefix=str(python.parent.parent), dependency_prefix=str(python.parent.parent),
                    role=role, local=bool(local), expected_distributions=expected['distributions'],
-                   expected_python=expected['python_version'])
+                   expected_python=expected['python_version'], expected_origins=expected.get('origins',{}))
         path = attempt/(role+'-probe-config.json'); write(path, cfg)
         stage([python, '-I', '-B', '-S', '-u', BUNDLE/'scripts/e006_runtime.py', path], role+'-entry-probe')
         inv = json.loads(next(line.split('=',1)[1] for line in (stages/(role+'-entry-probe.log')).read_text().splitlines()

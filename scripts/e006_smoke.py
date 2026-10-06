@@ -98,6 +98,16 @@ def suite(folder, workflow, bundle):
             assert arm['reasons']['excluded']=={'below_min_length':2,'no_valid_fourmers':1}
             assert arm['masks']['all_zero_depth_contigs']==(None if name=='sequence' else 3)
         summaries[name] = dict(summary=file_record(root/'run-summary.json'), arms=summary['arms'])
+    # The same retained DNA subset exercises valid empty partitions explicitly.
+    empty_fasta=inputs/'empty-partition.fna'
+    empty_fasta.write_text(''.join(f'>{i}\n{s}\n' for i,s in (rows[0],rows[2],rows[4],rows[12])))
+    empty_root=folder/'empty partition'
+    check([python,'-I','-B','-m','dl_binner','run','--fasta',empty_fasta,'--workflow-python',workflow,
+           '--output',empty_root,'--threads','4','--timeout','300'],'empty-partition')
+    empty_summary=json.loads((empty_root/'run-summary.json').read_text())
+    assert all(v['bin_count']==0 and v['statuses']['unassigned']['contigs']==2 and
+               v['statuses']['excluded']['contigs']==2 for v in empty_summary['arms'].values())
+    summaries['empty']=dict(summary=file_record(empty_root/'run-summary.json'),arms=empty_summary['arms'])
     for name, path, change, argv, needle in (
         ('changed-input',fasta,lambda b:b+b'\n',command(dep,True),'changed'),
         ('changed-sample-axis',depth,lambda b:b.replace(b'software_S1\tsoftware_S2',b'software_S2\tsoftware_S1'),command(dep,True),'changed'),
@@ -117,6 +127,13 @@ def suite(folder, workflow, bundle):
         assert not (folder/name/'raw').exists() and not (folder/name/'learned').exists()
         native = list((folder/name/'logs').glob('invocation-*/*.native.exit.json'))
         assert native and any(json.loads(p.read_text())['exit_code']==1 for p in native)
+        assert cases[name]['receipt']['wall_seconds']<30, 'Fatal native failure did not stop promptly'
+    incomplete_depth=inputs/'missing-depth.tsv'
+    incomplete_depth.write_text('\n'.join(depth.read_text().splitlines()[:-1])+'\n')
+    check([python,'-I','-B','-m','dl_binner','run','--fasta',fasta,'--depth',incomplete_depth,
+           '--workflow-python',workflow,'--output',folder/'missing-depth','--threads','4','--timeout','300'],
+          'missing-depth-axis',1,'Missing/extra depth IDs relative to assembly')
+    assert not (folder/'missing-depth/training').exists()
     # A real CLI-wide timeout, not a generic nonzero exit or monitoring failure.
     check([python,'-I','-B','-m','dl_binner','run','--fasta',fasta,'--workflow-python',workflow,
            '--output',folder/'overall-timeout','--timeout','.3'],'overall-timeout',1,'wall-time limit')
@@ -141,7 +158,10 @@ def suite(folder, workflow, bundle):
             assert 'intended fatal worker' in log.read_text()
             result=subprocess.run(['ps','-p',pidfile.read_text(),'-o','stat='],capture_output=True,text=True)
             assert not result.stdout.strip() or result.stdout.strip().startswith('Z')
-        elif mode=='memory': assert 'MemoryError: Sampled working RSS' in value['stop_reason']
+            assert value['wall_seconds']<5
+        elif mode=='memory':
+            assert 'MemoryError: Sampled working RSS' in value['stop_reason']
+            assert value['peak_sampled_rss_bytes']>1 and value['wall_seconds']<5
         else: assert value['exit_code']==0 and value['stop_reason'] is None
         cases['supervisor-'+mode]=value
     # Ready independent rules verify actual CPU and global-memory placement.
