@@ -419,7 +419,7 @@ E005's development assembled recovery do not establish whole-MAG quality,
 independent generalization, full-community scaling or superiority. No scientific
 retrial or model change is required to prepare a private implementation PR.
 
-Prepare exactly [one packaging/regression/readiness milestone](../PROTOTYPE.md#prepared-private-pr-readiness-milestone):
+Prepare exactly [one packaging/regression/readiness milestone](../PROTOTYPE.md#private-pr-readiness-milestone):
 verified standalone CPU install guidance, wheel/sdist contents, ordinary software
 checks that work without ignored research caches, minimal prepared CI, clear
 limitations and a concrete private-PR review description. Current local tests
@@ -440,3 +440,44 @@ new branch from updated main, retaining this implementation as the stable contro
 This is not automatic data/seed expansion or today's three-way execution. Preserve
 referenced source commits and honest claim limits. E001/H001/three-seed resolution,
 newly released architecture evidence and independent quality remain separate.
+
+## Private-PR readiness accepted locally, 2026-10-07
+
+[E007](../../experiments/E007-pr-readiness/README.md) completes the bounded
+packaging/regression milestone; [receipt](../../experiments/E007-pr-readiness/observed.json)
+binds source `4c68b19` to inspected dev2 wheel/sdist, equivalent rebuilt wheel,
+fresh independent environments and native self-contained product regressions.
+All eleven scientific/generic package files, model, transforms, objective,
+training defaults and clusterer remain byte-identical to accepted E006; only
+version/readme/build metadata changes. Old dev1 wheel/source/runtimes remain
+preserved. Ordinary tests need no ignored research inputs; retained-evidence
+reviews are explicitly separate. No accepted science/native demonstration reruns.
+
+Four-thread clean-source and two-thread physically outside-repository suites each
+pass 11 tests/18 native cases without mocks/skips on 13 generated contigs / 42,311 bp.
+Exact reload, all masks/zeros/strata/reasons, both complete exports, strict resume
+and intended failure/resource/orphan/progress/placement contracts pass. Mac local
+standalone installation is accepted; minimal prepared Linux CI remains unexecuted.
+Successful full attempt 331.511 s, sampled stage peak 0.561 GB; all known measured
+attempts including two repaired packaging failures total 712.558 s / 0.742910
+local thread-budget wall hours. These are software/operational evidence, not
+biological utility, UCloud billing or task-total cost.
+
+**Retain D011; ready to open the private implementation PR.** The observed
+clean-install/test reproducibility gaps are addressed. There is no new software
+or architecture gate before opening. [The prepared description](../PR_FIRST_PROTOTYPE.md)
+sets a concrete next step: separately authorized push/private PR, successful real
+independent-install Linux CI and implementation review, then explicit owner merge
+decision. Repair concrete CI/review failures. Opening now makes this usable baseline
+reviewable; another release framework or quality study would delay that purpose
+without fixing an observed prerequisite. Immediate merge would skip the still
+pending Linux installation/review path, so is not recommended or authorized.
+
+E005's fragmented development assembled-sequence recovery does not establish
+whole-MAG quality, independent generalization, isolated depth benefit or scale.
+No superiority is required for software acceptance. E001/H001/three-seed status
+and planned non-blocking TNF/GLM-head/hybrid comparison are unchanged. After an
+authorized merge preserving source commits, start matched benchmark/architecture
+work on a new branch from updated main. Public licensing and historical-source
+packaging remain separate owner decisions; the bounded archive/history locator
+audit is not exhaustive clearance and does not authorize history rewriting.

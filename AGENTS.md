@@ -267,6 +267,15 @@ and package its defaults/DAG. Preserve journaled completed outputs: use explicit
 resume only after matching source/input/config/runtime/artifact bytes; never edit
 manifests to make a retry pass. Prototype interfaces may evolve without a
 compatibility promise; current contracts belong in `docs/PROTOTYPE.md`.
+Ordinary installed-product regressions belong in `tests/product/` and must run
+without ignored research assets or experiment helpers. Keep retained-evidence
+reviews explicitly separate; do not silently skip them and call the product
+suite scientific validation. Use the pinned standalone installation guide for
+fresh environments that own their numerical distributions. Preserve prior linked
+research runtimes as executed provenance. Inspect both wheel and sdist, including
+the rebuilt wheel's logical contents, before accepting changed packaging. Use a
+builder within the package's supported Python range and separate backend hook
+processes; CI preparation is not a successful native CI run.
 Keep parent prerequisites within the bounded clock and retain failures even
 before a child starts. Surface native causes beyond scheduler trailers. Distinguish
 exited/zombie from live processes during cleanup and verify the intended stop and

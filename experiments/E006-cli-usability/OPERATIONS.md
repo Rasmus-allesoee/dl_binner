@@ -10,8 +10,9 @@ at 4 vCPUs / 12 GB; sampled peak 0.422 GB. Archive SHA256
 Its exact uncompressed storage is 2,172,376 bytes; original collector accounting
 is preserved with a correction in the review. The new linked prefix depends on
 the retained E005 base; do not move/delete those libraries. No additional files
-or UCloud job are needed now. Next is
-[bounded private-PR readiness](../../docs/PROTOTYPE.md#prepared-private-pr-readiness-milestone).
+or UCloud job are needed now. The
+[bounded private-PR readiness milestone](../../docs/PROTOTYPE.md#private-pr-readiness-milestone)
+is completed locally in E007; next is separately authorized private PR/CI/review.
 
 The instructions below are the executed recipe, retained for provenance, not a
 current handoff. [Preparation receipt](linux-prepared.json) owns the

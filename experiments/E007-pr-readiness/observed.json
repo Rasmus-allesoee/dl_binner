@@ -1,0 +1,308 @@
+{
+  "accepted_source": "e30023c0a9e78c255da3b7abc43ed3025571dcef",
+  "accepted_wheel": {
+    "bytes": 36310,
+    "path": "artifacts/e006-cli-usability/setup/dist-v7/dl_binner-0.1.0.dev1-py3-none-any.whl",
+    "sha256": "f093261d726d4b6f42e7401c211e99cf4fdadffbc950112161262bd7fdb804d0"
+  },
+  "architecture_changed": false,
+  "artifact_only_preflight_seconds": 4.81271032800214,
+  "artifacts": {
+    "rebuilt_wheel": {
+      "bytes": 34360,
+      "path": "artifacts/e007-pr-readiness/run-003/rebuilt/dl_binner-0.1.0.dev2-py3-none-any.whl",
+      "sha256": "226a91789dac29bb0c5a3958a82f0fdcc45d756a942613d526a006dc329999ef"
+    },
+    "sdist": {
+      "bytes": 55045,
+      "path": "artifacts/e007-pr-readiness/run-003/dist/dl_binner-0.1.0.dev2.tar.gz",
+      "sha256": "0394ac7473e18f108c2c923d58ba6f66683ded0dac2557522dfa7edd5bae311c"
+    },
+    "wheel": {
+      "bytes": 34360,
+      "path": "artifacts/e007-pr-readiness/run-003/dist/dl_binner-0.1.0.dev2-py3-none-any.whl",
+      "sha256": "2ee2141d7f27a430c11b5858d1e98c1cf7021b6bafd6983dc982ac1627dd5664"
+    }
+  },
+  "attempts": {
+    "run-001": {
+      "base_libraries_unchanged": true,
+      "peak_sampled_stage_rss_bytes": 173391872,
+      "receipt": {
+        "bytes": 10471,
+        "sha256": "76d8ede0033291407bcf8857fe50312dd8ace6ceb1c5b45ef2b7ed028987751d"
+      },
+      "retained_storage": {
+        "regular_bytes": 923696202,
+        "regular_files": 25769,
+        "scope": "Closed retained files; no link target bytes, filesystem blocks or old external caches",
+        "symbolic_links": 0
+      },
+      "seconds": 144.0658561700002,
+      "source_commit": "e7a44e80d1c4d8d8ba25602a4c222a6cba177fc8",
+      "status": "failed"
+    },
+    "run-002": {
+      "base_libraries_unchanged": true,
+      "peak_sampled_stage_rss_bytes": 178712576,
+      "receipt": {
+        "bytes": 13685,
+        "sha256": "4744ab14a0d61030bc4ebc4653ed94235ed9b0210643affea60207b6e0d98194"
+      },
+      "retained_storage": {
+        "regular_bytes": 913397554,
+        "regular_files": 25772,
+        "scope": "Closed retained files; no link target bytes, filesystem blocks or old external caches",
+        "symbolic_links": 0
+      },
+      "seconds": 144.29016815000068,
+      "source_commit": "991421e8fa8fb18de50577d527c439d59e0776fc",
+      "status": "failed"
+    },
+    "run-003": {
+      "base_libraries_unchanged": true,
+      "peak_sampled_stage_rss_bytes": 560525312,
+      "receipt": {
+        "bytes": 20254,
+        "sha256": "9ae34f24b079047fd58046e4aac78f0e90f0c6ea6c0125d246a45e0bea99a901"
+      },
+      "retained_storage": {
+        "regular_bytes": 915298346,
+        "regular_files": 26156,
+        "scope": "Closed retained files; no link target bytes, filesystem blocks or old external caches",
+        "symbolic_links": 0
+      },
+      "seconds": 331.5112383379965,
+      "source_commit": "4c68b19acc95ab841b46e030a8aa00043da42900",
+      "status": "passed"
+    }
+  },
+  "before_merge": [
+    "Real Linux CI success",
+    "Implementation review",
+    "Explicit owner merge authorization"
+  ],
+  "blockers_before_opening_private_pr": [],
+  "cache_inputs": {
+    "bytes": 206444169,
+    "files": 66,
+    "receipt": {
+      "bytes": 16683,
+      "sha256": "c740f8d8cde6ebadcdcabf64909db69bbb5c680c49d90378375413d61f4d136d"
+    },
+    "scope": "Pre-existing read-only wheels; no new numerical cache copy",
+    "unchanged": true
+  },
+  "campaign_budget_hours": 0.7429098674055543,
+  "campaign_four_thread_upper_budget_hours": 0.7917308759377758,
+  "campaign_scope": "Known serial measured attempts, artifact preflight and outside test invocation. Source development, dependency acquisition, review/debug/idle and this retained review excluded. Local thread-budget wall hours, not CPU time or provider billing.",
+  "campaign_seconds": 712.5577883439983,
+  "logical_rebuild_equal": true,
+  "outside_evidence_copy_storage": {
+    "regular_bytes": 1465161,
+    "regular_files": 325,
+    "scope": "Closed retained files; no link target bytes, filesystem blocks or old external caches",
+    "symbolic_links": 0
+  },
+  "outside_two_thread_parent_seconds": 87.87781535799877,
+  "packaging_audit": {
+    "historical_context_objects": 112,
+    "historical_context_paths": 108,
+    "project_license_selected": false,
+    "scope": "Bounded tree/archive/history locator audit, not complete security/legal clearance; no history rewrite",
+    "source_commit": "4c68b19acc95ab841b46e030a8aa00043da42900",
+    "tracked_files": 270,
+    "tracked_inbox_or_heavy_artifacts": 0
+  },
+  "prepared_linux_ci": {
+    "executed": false,
+    "installation": "Standalone owned dependencies; pending real authorized CI",
+    "python": "3.12",
+    "threads": 2
+  },
+  "protocol": {
+    "bytes": 5687,
+    "sha256": "7ff477ae386cd0592766ba961cdee268d1f70b7dfb38dce52e4d4bf44d3e6a21"
+  },
+  "remote_actions_taken": false,
+  "retained_e007_storage": {
+    "regular_bytes": 2765478462,
+    "regular_files": 78340,
+    "scope": "Closed retained files; no link target bytes, filesystem blocks or old external caches",
+    "symbolic_links": 0
+  },
+  "rss_scope": "Sampled stage process trees; no exact peak or continuous between-stage parent/hash sampling",
+  "runtimes": {
+    "binner": {
+      "distributions": {
+        "dl-binner": "0.1.0.dev2",
+        "filelock": "4.0.10",
+        "fsspec": "2026.9.0",
+        "jinja2": "3.1.6",
+        "markupsafe": "3.0.4",
+        "mpmath": "1.3.0",
+        "networkx": "3.4.2",
+        "numpy": "1.26.4",
+        "pip": "25.1.1",
+        "psutil": "6.0.0",
+        "setuptools": "65.5.0",
+        "sympy": "1.14.0",
+        "threadpoolctl": "3.5.0",
+        "torch": "2.2.2",
+        "typing-extensions": "4.16.0",
+        "wheel": "0.45.1"
+      },
+      "imports_owned": true,
+      "python": "3.10.15",
+      "receipt": {
+        "bytes": 5616,
+        "sha256": "8329420d1194698b4020add3e6d0feb4623792929f89c4c617ed0dbc99581877"
+      }
+    },
+    "build": {
+      "distributions": {
+        "pip": "25.1.1",
+        "setuptools": "78.1.1",
+        "wheel": "0.45.1"
+      },
+      "imports_owned": true,
+      "python": "3.10.15",
+      "receipt": {
+        "bytes": 1485,
+        "sha256": "74ed9497637399a185128b0516eea0f482c7a08f14a2330cd4632f0c8fa4de63"
+      }
+    },
+    "workflow": {
+      "distributions": {
+        "appdirs": "1.4.4",
+        "argparse-dataclass": "2.0.0",
+        "attrs": "26.1.0",
+        "certifi": "2026.7.22",
+        "charset-normalizer": "3.5.2",
+        "conda-inject": "1.3.2",
+        "configargparse": "1.8.0",
+        "connection-pool": "0.0.3",
+        "docutils": "0.23",
+        "dpath": "2.2.0",
+        "fastjsonschema": "2.22.2",
+        "gitdb": "4.0.12",
+        "gitpython": "3.2.0",
+        "humanfriendly": "10.0",
+        "idna": "3.20",
+        "immutables": "0.21",
+        "jinja2": "3.1.6",
+        "jsonschema": "4.26.0",
+        "jsonschema-specifications": "2025.9.1",
+        "jupyter-core": "5.9.1",
+        "markupsafe": "3.0.4",
+        "nbformat": "5.11.1",
+        "packaging": "25.0",
+        "pip": "25.1.1",
+        "platformdirs": "4.12.3",
+        "psutil": "7.2.2",
+        "pulp": "3.3.2",
+        "pyyaml": "6.0.3",
+        "referencing": "0.37.0",
+        "requests": "2.34.2",
+        "reretry": "0.11.8",
+        "rpds-py": "2026.9.1",
+        "setuptools": "65.5.0",
+        "smart-open": "7.7.1",
+        "smmap": "5.0.3",
+        "snakemake": "9.16.3",
+        "snakemake-interface-common": "1.23.0",
+        "snakemake-interface-executor-plugins": "9.4.0",
+        "snakemake-interface-logger-plugins": "2.1.0",
+        "snakemake-interface-report-plugins": "1.3.0",
+        "snakemake-interface-scheduler-plugins": "2.0.2",
+        "snakemake-interface-storage-plugins": "4.4.1",
+        "tabulate": "0.10.0",
+        "tenacity": "9.1.4",
+        "throttler": "1.2.3",
+        "traitlets": "5.16.1",
+        "typing-extensions": "4.16.0",
+        "urllib3": "2.8.0",
+        "wheel": "0.45.1",
+        "wrapt": "2.5.0",
+        "yte": "1.9.4"
+      },
+      "imports_owned": true,
+      "python": "3.13.12",
+      "receipt": {
+        "bytes": 12140,
+        "sha256": "cf47fefbff4c745e17fac2ec071723f725efde78bee6b39ad8c026608fcf1d1f"
+      }
+    }
+  },
+  "science_repeated": false,
+  "scientific_quality_assessed": false,
+  "sdist_files": 35,
+  "source_commit": "4c68b19acc95ab841b46e030a8aa00043da42900",
+  "status": "accepted-local-private-pr-readiness",
+  "suites": {
+    "four-thread": {
+      "fatal_seconds": 0.9198105379982735,
+      "fixture": {
+        "bp": 42311,
+        "contigs": 13,
+        "depth": {
+          "bytes": 301,
+          "sha256": "38a7e3e5871766048bb9089ed757d8f0c63e9364722c14dca4e1ce2934ec2e60"
+        },
+        "fasta": {
+          "bytes": 42552,
+          "sha256": "20248ffbaf471de15db70b6d595da55742c6166a94617d417d8e3910a3f1c751"
+        }
+      },
+      "native_cases": 18,
+      "native_receipt": {
+        "bytes": 52246,
+        "sha256": "c629848f5fd9cc5217ce789217c13630dbe442b28cd4ba55f61d4cac38a095e7"
+      },
+      "orphan_state": "",
+      "peak_sampled_rss_bytes": 537501696,
+      "receipt": {
+        "bytes": 814,
+        "sha256": "8f0d7ee7864037a0e890bf8141a49935d6caaa7c26dc53adcb13f441a572336b"
+      },
+      "scientific_quality_assessed": false,
+      "seconds": 114.43243604700183,
+      "skipped": 0,
+      "tests": 11,
+      "threads": 4
+    },
+    "outside-two-thread": {
+      "fatal_seconds": 0.9277481870012707,
+      "fixture": {
+        "bp": 42311,
+        "contigs": 13,
+        "depth": {
+          "bytes": 301,
+          "sha256": "38a7e3e5871766048bb9089ed757d8f0c63e9364722c14dca4e1ce2934ec2e60"
+        },
+        "fasta": {
+          "bytes": 42552,
+          "sha256": "20248ffbaf471de15db70b6d595da55742c6166a94617d417d8e3910a3f1c751"
+        }
+      },
+      "native_cases": 18,
+      "native_receipt": {
+        "bytes": 50664,
+        "sha256": "199d194506aa31d2b7c6ea40c2bf9703343a170ea74c70d42245d968ee3b8812"
+      },
+      "orphan_state": "",
+      "peak_sampled_rss_bytes": 539447296,
+      "receipt": {
+        "bytes": 775,
+        "sha256": "083699abd3ef921e8326ff896574571a3e97785197db9464f4335dc3dd633f5f"
+      },
+      "scientific_quality_assessed": false,
+      "seconds": 87.72092109400182,
+      "skipped": 0,
+      "tests": 11,
+      "threads": 2
+    }
+  },
+  "unchanged_package_files": 11,
+  "wheel_members": 17
+}

@@ -1,6 +1,6 @@
 # Prepared private implementation PR
 
-Status: **draft description, not an opened PR**. Target branch `main`; source
+Status: **ready local review description, not an opened PR**. Target branch `main`; source
 `first-binner-prototype`. Title: **Add the first usable CPU metagenomic binner**.
 Do not push/open/merge/publish without the owner's next authorization.
 
@@ -32,7 +32,9 @@ Validation is separated by scope:
   and intended failure/resource/orphan handling. Successful work was not repeated.
 - [E007](../experiments/E007-pr-readiness/README.md): clean-source wheel/sdist inspection,
   standalone fresh local environments and self-contained installed-product
-  regressions. Its actual receipt owns test/build identities and resource costs;
+  regressions: 11 tests/18 native cases at both four and two threads, including a
+  physical outside-repository check. Known measured campaign 712.558 s, sampled
+  stage peak 0.561 GB. Its receipt owns exact build identities and resource costs;
   prepared Linux CI requires its first real remote run before merge acceptance.
 
 The ordinary suite uses bounded generated software DNA and owns no ignored

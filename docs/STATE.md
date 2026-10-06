@@ -170,27 +170,53 @@ owner idle/billing are not measured. Preserve all attempts, linked dependencies
 and transfer files. [Operations](../experiments/E006-cli-usability/OPERATIONS.md)
 now retains the command as executed provenance: **do not run it again**.
 
-**Current authorized task: implement the single prepared private-PR readiness milestone**
-in [PROTOTYPE](PROTOTYPE.md#prepared-private-pr-readiness-milestone), prospectively frozen in
-[E007](../experiments/E007-pr-readiness/README.md). Provide
-verified standalone CPU installation guidance, wheel/sdist content/provenance,
-ordinary product regressions from a clean snapshot without ignored research
-artifacts, minimal prepared CI and a concrete honest private-PR description.
-Current tests borrow E003/E005 caches and accepted runtimes link prior numerical
-libraries; these are concrete reproducibility gaps, not a new architecture gate.
-Keep model/training/clustering unchanged, reuse accepted real-DNA/Linux evidence,
-cap new tiny software fixtures at 32 contigs / 0.6 Mb, four threads/loader zero,
-8 GB working RSS and two hours measured integration. Preparation is local;
-no UCloud, remote push/PR/CI/merge or public release is authorized yet.
+**E007's private-PR readiness milestone is complete and accepted locally.**
+[Results/limitations](../experiments/E007-pr-readiness/README.md) and
+[byte/resource receipt](../experiments/E007-pr-readiness/observed.json) bind
+`4c68b19` source to inspected dev2 wheel/sdist and an equivalent sdist-rebuilt
+wheel. Fresh separate Mac prefixes own their dependencies; full inventories,
+imports/pools, pip checks and read-only old-runtime/cache bytes pass. All eleven
+scientific/generic package files match E006; only version/build/readme metadata
+changes. Accepted dev1/E002–E006 work remains retained, without replay.
 
-Owner direction: after bounded readiness, review/merge the first usable prototype
+Ordinary `tests/product/` is now independent of ignored research inputs/helpers.
+Four-thread clean-snapshot and two-thread physically outside-repository suites
+each pass 11 tests/18 named native cases without skips/mocks: all six strata,
+masks/zeros/reasons, exact reload, both complete exports, strict partial/full
+resume, corruption/change refusal, intended failures, orphan cleanup, heartbeats
+and actual CPU/global-RAM placement. Fixture: 13 generated contigs / 42,311 bp,
+software evidence only. [Standalone install](INSTALLATION.md) and
+[usage](PROTOTYPE.md#private-pr-readiness-milestone) state limits and frozen settings.
+
+Known serial integration clocks including two repaired packaging failures and
+artifact preflight total **712.558 s / 0.742910 local thread-budget wall hours**,
+under four threads/loader zero/8 GB/two hours. Successful full setup/check attempt
+331.511 s; sampled stage peak **0.561 GB**. E007 retains 2.765 GB including all
+failed/new prefixes and evidence, plus a 1.465-MB physical outside test copy.
+Resource sampling is approximate; source preparation/acquisition/review/idle
+are separate, and these are not UCloud costs. No accepted demonstration was
+repeated and no architecture change occurred.
+
+**Exact next step: separately authorize a private implementation PR.**
+The branch is ready to open it with [the concrete description](PR_FIRST_PROTOTYPE.md).
+Verify live branch/base/remote state, push this branch, open against main, run
+prepared CPU/Linux CI and address implementation review. No remote action has
+occurred yet. **Real standalone Linux CI and review remain before merge**, with
+explicit owner merge authorization; two-thread Mac checks do not substitute for
+Linux. No further product/architecture milestone or owner UCloud smoke is needed
+before opening. Public licensing/historical-source clearance is separate, not
+an invented license or a blocker to this private PR. No files are needed from
+the owner; only next-stage authorization.
+
+Owner direction: after the completed bounded readiness step, review/merge the
+first usable prototype
 through a separately authorized private PR, then start a **new benchmark/research
 branch from updated main**, retaining this accepted implementation as the stable
 baseline. Future architecture testing must be deliberate and matched; it does
 not delay the first prototype with another quality/architecture gate. License
 and historical-source packaging require review before public redistribution,
-not an invented license or additional science before a private PR. No files or
-new owner job are needed for the current handoff.
+not an invented license or additional science before a private PR. No new owner
+compute job is needed for the current handoff.
 
 The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
 planned and unrun. No larger datasets, extra seeds, architecture gate, publication

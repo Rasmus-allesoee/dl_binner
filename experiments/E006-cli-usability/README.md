@@ -294,6 +294,12 @@ storage. No deletion is authorized.
 software under the reviewed Linux environment, not MAG quality/generalization,
 standalone installation on an unrelated host or improved binning. E005's development
 recovery remains separate and accepted. Prepare the
-[single private-PR readiness milestone](../../docs/PROTOTYPE.md#prepared-private-pr-readiness-milestone)
+[single private-PR readiness milestone](../../docs/PROTOTYPE.md#private-pr-readiness-milestone)
 before merging a stable first prototype; defer new benchmark/architecture work
 to a separate branch from updated main after an authorized merge.
+
+The bounded readiness task is now [completed locally in E007](../E007-pr-readiness/README.md)
+(2026-10-07). Its self-contained software suite and fresh standalone Mac install
+address the clean-clone gaps; prepared independent-install Linux CI/review remain
+before merge. E006's accepted executed packet and linked-prefix evidence are
+unchanged and not replayed. The next step is a separately authorized private PR.
