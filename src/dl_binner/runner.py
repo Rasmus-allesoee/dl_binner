@@ -167,11 +167,14 @@ def probe_workflow(python, folder, threads, deadline, memory):
 def native_failure(folder):
     """Return the failed native stage's concise cause/log, beyond scheduler trailers."""
     for path in sorted(Path(folder).glob('*.native.exit.json'), reverse=True):
-        data=json.loads(path.read_text())
+        try:
+            data=json.loads(path.read_text())
+            log=path.with_name(path.name.replace('.exit.json','.log'))
+            lines=log.read_text().splitlines()
+        except (OSError, ValueError):
+            continue  # A hard cancellation may leave an unfinished receipt.
         if data['exit_code']==0 and data['stop_reason'] is None:
             continue
-        log=path.with_name(path.name.replace('.exit.json','.log'))
-        lines=log.read_text().splitlines()
         errors=[line[len('error: '):] for line in lines if line.startswith('error: ')]
         cause=errors[-1] if errors else data['stop_reason'] or f'Native worker exited with code {data["exit_code"]}'
         return dict(stage=path.name.split('.native')[0],cause=cause,log=str(log))
@@ -208,6 +211,9 @@ def finalize(root, manifest, stages, workflow_resources, started):
         current_invocation=dict(seconds_to_summary=elapsed, thread_wall_hours_to_summary=manifest['threads']*elapsed/3600,
                                 workflow=workflow_resources),
         clock_scope='Current invocation starts before input hashing/probe. Summary final serialization/exit logging excluded; final invocation status includes them. Previous stages retain their original invocation costs. Thread-wall hours are local planning, not provider charges.')
+    memory, _ = process_sample(os.getpid(), {})
+    if memory > manifest['memory_bytes']:
+        raise MemoryError('Accounting exceeded the working RSS limit')
     write_json(root/'run-summary.json', summary)
     write_summary_tsv(root/'run-summary.tsv', arms)
     write_json(root/'completion.json', dict(version=1, manifest_sha256=digest(root/'run-manifest.json'),
@@ -310,9 +316,6 @@ def run_pipeline(args):
                 status, code = 'partial', 0
                 return code
             arms = finalize(root, manifest, stages, resources, started)
-            memory, _ = process_sample(os.getpid(), {})
-            if memory > bindings['memory_bytes']:
-                raise MemoryError('Accounting exceeded the working RSS limit')
             for name, value in arms.items():
                 counts = value['statuses']
                 progress(f'{name}: {value["bin_count"]} bins; {counts["assigned"]["contigs"]} assigned, {counts["unassigned"]["contigs"]} unassigned, {counts["excluded"]["contigs"]} excluded')

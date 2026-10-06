@@ -125,6 +125,8 @@ class GenericContracts(unittest.TestCase):
             value=native_failure(root)
             self.assertEqual(value['cause'],'Empty/invalid IUPAC sequence: broken')
             self.assertEqual(value['stage'],'01-features')
+            (root/'01-features.native.exit.json').write_text('{unfinished')
+            self.assertIsNone(native_failure(root))
 
 
 if __name__=='__main__': unittest.main()
