@@ -1,6 +1,55 @@
 {
   "amber": {
     "prefix": "/work/Home/dl_binner/e001/e001-gate0/envs/amber",
+    "lock_reconciliation": {
+      "pip_freeze_sha256": "685d5ab9472fbcc5d0e212a6a09cfc3563ae4a4569cc3becf71e341faf1a1067",
+      "outside_prefix_entries": {
+        "easybuild": "5.3.1",
+        "easybuild-easyblocks": "5.3.1",
+        "easybuild-easyconfigs": "5.3.1",
+        "easybuild-framework": "5.3.1"
+      },
+      "direct_reference_versions": {
+        "packaging": "26.3",
+        "pip": "25.1.1"
+      },
+      "verified_prefix_inventory": {
+        "source_archive_sha256": "b00b14cc6665b6ff7a6c12fb8a0a284596ff75bebc5a4f923864fec64e7a6819",
+        "source_member": "environment-review/amber-clean.stdout",
+        "source_member_sha256": "59df159b7c3c2823e91664e1bcb19c6a0e4cadc39f72bef4e52e443c44fb10c3",
+        "distributions": {
+          "biopython": "1.87",
+          "bokeh": "3.8.2",
+          "contourpy": "1.4.0",
+          "cycler": "0.12.1",
+          "fonttools": "4.65.0",
+          "jinja2": "3.1.6",
+          "kiwisolver": "1.5.1",
+          "markupsafe": "3.0.3",
+          "matplotlib": "3.10.8",
+          "narwhals": "2.26.0",
+          "numpy": "2.0.1",
+          "packaging": "26.3",
+          "pandas": "2.2.2",
+          "pillow": "12.3.0",
+          "pip": "25.1.1",
+          "pyarrow": "23.0.1",
+          "pyparsing": "3.3.2",
+          "pysam": "0.23.3",
+          "python-dateutil": "2.9.0.post0",
+          "pytz": "2026.3.post1",
+          "pyyaml": "6.0.3",
+          "seaborn": "0.13.2",
+          "setuptools": "84.0.0",
+          "six": "1.17.0",
+          "tornado": "6.5.10",
+          "tzdata": "2026.4",
+          "wheel": "0.48.0",
+          "xyzservices": "2026.9.1"
+        }
+      },
+      "evidence": "E001 validation.md environment-review-resolved-2026-09-18: these four EasyBuild distributions were outside the prefix in the observed process and absent from the isolated inventory; the clean-prefix inventory records packaging 26.3 and pip 25.1.1."
+    },
     "required_versions": {
       "biopython": "1.87",
       "bokeh": "3.8.2",
@@ -21,7 +70,7 @@
     }
   },
   "record": "E005",
-  "scope": "read-only E001 runtime reuse; pin audited AMBER source and declared requirements; full current inventory and original lock hashes captured on entry; no environment relocation/install",
+  "scope": "read-only E001 runtime reuse; pin audited AMBER source, full isolated package inventory from a hash-identified clean-prefix record, and original lock hash; explicitly reconcile four historical user-site-only lock entries and two direct-reference versions; no environment relocation/install",
   "source_commit": "f8b3a601043d13fc4227d5691c13561eb4490e50",
   "source_files": {
     "LICENSE": "b53fc8c563c55cac57498b90b9226d489a066f292a07c680d8116e9b55300a54",

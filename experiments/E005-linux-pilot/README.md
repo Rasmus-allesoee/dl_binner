@@ -346,11 +346,59 @@ and AMBER environments were created; earlier accepted runtimes/reference caches
 were read-only and no E002/E003/E004 inference/demo was repeated. There is no
 scientific pilot, Linux bulk-performance or three-way comparison result here.
 
-**Final owner packet:** `e005-gi-pilot-v4.tar.gz`, **4,099,196 bytes**, SHA256
-`91bebee4f0b8f214849af1250ca31d3fbf1224d441ee59ef1a52302c9f561dee`.
-[Operations](OPERATIONS.md) supplies its exact four-vCPU/12-GB command. Upload only
-this packet and its checksum to `/work/Home/dl_binner/e005/transfer/`. Next owner
-runs the frozen pilot once and returns the archive/checksum/captured terminal log.
-Review actual assembled-recovery quality beside raw controls and measured costs
-before choosing a concrete product fix or a small release-readiness milestone.
-No requirement for superiority, extra seed/input or new architecture gate follows.
+The locally validated **v4** owner packet was 4,099,196 bytes, SHA256
+`91bebee4f0b8f214849af1250ca31d3fbf1224d441ee59ef1a52302c9f561dee`. Its
+owner-run preflight failure and replacement are recorded below; do not upload v4.
+
+## Owner v4 preflight failure and v5 repair, 2026-10-06
+
+The owner-returned v4 attempt `gi-pilot-636z_qd1` verified the transfer checksum,
+passed the E005 binner/workflow and mapper probes, passed AMBER's `pip check`, and
+successfully imported the hash-pinned AMBER source. It then stopped at the full
+AMBER-inventory comparison after **172.976 seconds / 0.192216 allocated vCPU-hours**
+on 4 vCPUs. No adapter-contract tests, read sampling/mapping, feature extraction,
+training, clustering or evaluation ran; this is an execution-gate bug, not a
+scientific result. Return archive SHA256:
+`e937fc8218adabd7946dc242b27849d8a228971a193753c7bf1e29a886a68cef`.
+
+E005 creates/owns its new binner and workflow runtimes under E005. It does not
+install or store E005 environments inside E001; it reuses the existing accepted
+E001 mapping and AMBER prefixes at their original paths, read-only, because those
+exact tools already passed their native setup/smoke checks and are unchanged inputs
+to this pilot. D006 permits this form of reuse. Moving/copying these prefixes would
+not repair the failed comparison: the problem was the lock/inventory contract, not
+the prefix location or a failed package import.
+
+The supplied E001 `pip-freeze.txt` (SHA256
+`685d5ab9472fbcc5d0e212a6a09cfc3563ae4a4569cc3becf71e341faf1a1067`) contains four
+EasyBuild 5.3.1 distributions. E001's environment review confirmed these came from
+`/home/ucloud/.local/...`, outside the AMBER prefix, and are absent from its clean
+isolated inventory ([record](../E001-coverage-thinning/validation.md#environment-review-resolved-2026-09-18)).
+The old check incorrectly required them in the isolated prefix. The same lock records
+`pip` and `packaging` as direct file URLs rather than `name==version`; the old parser
+dropped both. Their versions, 25.1.1 and 26.3, are recorded in the prior clean-prefix
+inventory. The clean baseline is `environment-review/amber-clean.stdout` (member
+SHA256 `59df159b7c3c2823e91664e1bcb19c6a0e4cadc39f72bef4e52e443c44fb10c3`) from the
+E001 environment-review archive (SHA256
+`b00b14cc6665b6ff7a6c12fb8a0a284596ff75bebc5a4f923864fec64e7a6819`). V5 records
+the complete clean-prefix distribution inventory together with these hashes, then checks the original lock
+hash, exact pinned versions, those two direct-reference resolutions, and the live
+inventory against that independent baseline. The native probe still requires every
+discovered distribution and import to remain inside AMBER. A `runtime-preflight.json`
+is returned before this comparison so a future failure preserves both the actual
+inventory and original lock.
+
+The v4 read-only Python probes used `-I` while relying on
+`PYTHONDONTWRITEBYTECODE`; isolated mode ignores that environment variable, so those
+imports may have added `.pyc` cache files under the reused AMBER prefix. The return
+does not establish whether any were written. V5 uses command-line `-B` for all
+read-only Python checks; it does not delete or alter existing prefix contents.
+
+**Current owner packet: v5.** Its exact source commit, archive size and checksum are
+recorded here after the packet is built. [Operations](OPERATIONS.md) supplies the
+four-vCPU/12-GB command and requires upload under
+`/work/Home/dl_binner/e005/transfer/`. After v5 passes runtime and adapter checks,
+the same frozen pilot runs once. Return its archive/checksum/captured terminal log;
+then review assembled-recovery quality beside the raw control and measured costs
+before choosing a product fix or small release-readiness milestone. No superiority,
+extra seed/input or new architecture gate is required.

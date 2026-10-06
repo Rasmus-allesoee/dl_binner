@@ -62,6 +62,119 @@ def inventory_from_log(path):
     return json.loads(next(l.split('=', 1)[1] for l in lines if l.startswith('INVENTORY_JSON=')))
 
 
+def normalize_distribution_name(name):
+    """Apply pip's normalized spelling for package names used in lock comparisons."""
+    return re.sub(r'[-_.]+', '-', name).lower()
+
+
+def readonly_python(python, *args):
+    """Build an isolated Python command that cannot write bytecode to reused prefixes."""
+    return [str(python), '-I', '-B', *args]
+
+
+def parse_amber_lock(text):
+    """Parse the exact-pinned and direct-reference entries in the retained pip freeze."""
+    pinned, direct = {}, {}
+    for number, raw in enumerate(text.splitlines(), 1):
+        line = raw.strip()
+        if not line or line.startswith('#'):
+            continue
+        if ' @ ' in line:
+            name, url = line.split(' @ ', 1)
+            destination = direct
+            value = url
+        elif '==' in line:
+            name, value = line.split('==', 1)
+            destination = pinned
+        else:
+            raise ValueError(f'Unsupported AMBER lock entry on line {number}: {line}')
+        name = normalize_distribution_name(name.strip())
+        value = value.strip()
+        if not name or not value or name in pinned or name in direct:
+            raise ValueError(f'Invalid or duplicate AMBER lock entry on line {number}: {line}')
+        destination[name] = value
+    return pinned, direct
+
+
+def reconcile_amber_inventory(lock_text, lock_sha256, observed, policy):
+    """Match the live prefix to a clean baseline and reconcile the noisy legacy lock.
+
+    The exact lock hash binds the original file. Its four known user-site-only
+    entries are excluded, and its direct references resolve against the complete
+    clean-prefix inventory preserved by E001's environment review.
+    """
+    expected_hash = policy['pip_freeze_sha256']
+    if lock_sha256 != expected_hash:
+        raise ValueError(f"Retained E001 AMBER lock SHA mismatch: expected {expected_hash}, observed {lock_sha256}")
+    pinned, direct = parse_amber_lock(lock_text)
+    outside = {normalize_distribution_name(k): v for k, v in policy['outside_prefix_entries'].items()}
+    direct_versions = {normalize_distribution_name(k): v
+                       for k, v in policy['direct_reference_versions'].items()}
+    if set(pinned) & set(direct):
+        raise ValueError('AMBER lock repeats a package as both a pin and direct reference')
+    if not set(outside).issubset(pinned):
+        raise ValueError('Invalid AMBER outside-prefix reconciliation policy')
+    for name, version in outside.items():
+        if pinned.get(name) != version:
+            raise ValueError(f'AMBER lock exception differs from reviewed user-site entry: {name}')
+    if set(direct) != set(direct_versions):
+        raise ValueError('AMBER lock direct-reference package names differ from the reviewed set')
+
+    inventory_record = policy['verified_prefix_inventory']
+    baseline = {}
+    for name, version in inventory_record['distributions'].items():
+        normalized = normalize_distribution_name(name)
+        if normalized in baseline:
+            raise ValueError(f'Duplicate normalized baseline AMBER distribution: {normalized}')
+        baseline[normalized] = version
+    lock_inventory = {name: version for name, version in pinned.items() if name not in outside}
+    lock_inventory.update(direct_versions)
+    lock_missing = sorted(set(baseline)-set(lock_inventory))
+    lock_unexpected = sorted(set(lock_inventory)-set(baseline))
+    lock_versions = {name: {'expected_clean_prefix': baseline[name], 'from_lock': lock_inventory[name]}
+                     for name in sorted(set(baseline) & set(lock_inventory))
+                     if baseline[name] != lock_inventory[name]}
+    if lock_missing or lock_unexpected or lock_versions:
+        raise ValueError('AMBER lock does not reconcile with the reviewed clean-prefix inventory: '+json.dumps(
+            dict(missing=lock_missing, unexpected=lock_unexpected, versions=lock_versions), sort_keys=True))
+
+    actual = {}
+    for name, version in observed.items():
+        normalized = normalize_distribution_name(name)
+        if normalized in actual:
+            raise ValueError(f'Duplicate normalized AMBER distribution name: {normalized}')
+        actual[normalized] = version
+    missing = sorted(set(baseline)-set(actual))
+    unexpected = sorted(set(actual)-set(baseline))
+    mismatched = {name: {'expected': baseline[name], 'observed': actual[name]}
+                  for name in sorted(set(baseline) & set(actual)) if baseline[name] != actual[name]}
+    if missing or unexpected or mismatched:
+        raise ValueError('AMBER isolated inventory mismatch: '+json.dumps(
+            dict(missing=missing, unexpected=unexpected, versions=mismatched), sort_keys=True))
+    return dict(status='passed', pip_freeze_sha256=lock_sha256,
+                isolated_distributions=len(actual),
+                verified_inventory_member_sha256=inventory_record['source_member_sha256'],
+                excluded_outside_prefix_lock_entries=outside,
+                direct_reference_resolved_versions=direct_versions)
+
+
+def audit_amber_inventory(attempt, lock_record, observed, policy):
+    """Persist the actual lock and inventory before validating their relationship."""
+    receipt = dict(amber=dict(inventory=observed, original_lock=lock_record,
+                              reconciliation_policy=policy))
+    path = Path(attempt)/'runtime-preflight.json'
+    write(path, receipt)
+    try:
+        result = reconcile_amber_inventory(lock_record['text'], lock_record['sha256'],
+                                           observed, policy)
+    except ValueError as error:
+        write(Path(attempt)/'runtime-preflight-check.json',
+              dict(status='failed', error=str(error)))
+        raise
+    write(Path(attempt)/'runtime-preflight-check.json', result)
+    return result
+
+
 def execute(args, attempt, manifest, started):
     """Reprobe runtimes and native contracts; run one serial prospectively capped pilot."""
     spec = json.loads((BUNDLE/EXP/'pilot.json').read_text())
@@ -94,19 +207,19 @@ def execute(args, attempt, manifest, started):
     accepted = json.loads((BUNDLE/EXP/'linux-observed.json').read_text())
     smoke = json.loads((BUNDLE/EXP/'smoke.json').read_text())
     runtime = {}
-    normalize = lambda n: re.sub(r'[-_.]+', '-', n).lower()
     for role in ('binner', 'workflow'):
         python = Path(local[role+'_python'] if local else accepted['runtime'][role]['python'])
         prefix = python.parent.parent
         if not local and not prefix.is_relative_to(args.root/'envs'):
             raise ValueError('Accepted runtime outside this E005 root')
-        stage([python, '-I', '-m', 'pip', 'check'], role+'-pip-check', 60)
-        stage([python, '-I', '-S', '-u', BUNDLE/'scripts/e005_probe.py', prefix, role, '4',
-               'local' if local else 'linux'], role+'-probe', 120)
+        stage(readonly_python(python, '-m', 'pip', 'check'), role+'-pip-check', 60)
+        stage(readonly_python(python, '-S', '-u', BUNDLE/'scripts/e005_probe.py', prefix, role, '4',
+               'local' if local else 'linux'), role+'-probe', 120)
         inv = inventory_from_log(attempt/'stages'/(role+'-probe.log'))
         if not local:
-            expected = {normalize(k): v for k, v in accepted['runtime'][role]['inventory']['distributions'].items()}
-            if {normalize(k): v for k, v in inv['distributions'].items()} != expected or inv['python'].split()[0] != '3.12.10':
+            expected = {normalize_distribution_name(k): v for k, v in accepted['runtime'][role]['inventory']['distributions'].items()}
+            actual = {normalize_distribution_name(k): v for k, v in inv['distributions'].items()}
+            if actual != expected or inv['python'].split()[0] != '3.12.10':
                 raise ValueError('Accepted runtime inventory changed')
         if role == 'binner':
             code = Path(inv['origins']['dl_binner']).parent
@@ -128,11 +241,12 @@ def execute(args, attempt, manifest, started):
             raise ValueError('Native tool version mismatch')
     amber = Path(local['amber_python'] if local else external['amber']['prefix']+'/bin/python')
     amber_source = Path(local['amber_source'] if local else external['amber']['source'])
-    stage([amber, '-I', '-m', 'pip', 'check'], 'amber-pip-check', 60)
-    stage([amber, '-I', '-S', '-u', BUNDLE/'scripts/e005_external_probe.py', amber.parent.parent, amber_source,
-           BUNDLE/EXP/'external-runtime.json', 'local' if local else 'linux'], 'amber-probe', 120)
+    stage(readonly_python(amber, '-m', 'pip', 'check'), 'amber-pip-check', 60)
+    stage(readonly_python(amber, '-S', '-u', BUNDLE/'scripts/e005_external_probe.py', amber.parent.parent, amber_source,
+           BUNDLE/EXP/'external-runtime.json', 'local' if local else 'linux'), 'amber-probe', 120)
     amber_inv = inventory_from_log(attempt/'stages/amber-probe.log')
     original_locks = {}
+    amber_lock_reconciliation = None
     if not local:
         e001 = mapping.parent.parent
         for role in ('mapping', 'amber'):
@@ -140,12 +254,14 @@ def execute(args, attempt, manifest, started):
             if not lock.is_file():
                 raise ValueError('Retained E001 provenance lock missing: '+str(lock))
             original_locks[role] = dict(path=str(lock), sha256=sha(lock), text=lock.read_text())
-        expected = {normalize(l.split('==')[0]): l.split('==')[1] for l in original_locks['amber']['text'].splitlines() if '==' in l}
-        if expected != amber_inv['distributions']:
-            raise ValueError('Current AMBER inventory differs from its original executed lock')
+        policy = external['amber']['lock_reconciliation']
+        amber_lock_reconciliation = audit_amber_inventory(
+            attempt, original_locks['amber'], amber_inv['distributions'], policy)
     runtime.update(mapping=dict(prefix=str(mapping), versions=external['mapping']['versions'],
                                 binaries={k: dict(path=str(v), sha256=sha(v)) for k, v in binaries.items()}),
-                   amber=dict(python=str(amber), inventory=amber_inv, reuse='read-only; no source or prefix writes'),
+                   amber=dict(python=str(amber), inventory=amber_inv,
+                              lock_reconciliation=amber_lock_reconciliation,
+                              reuse='read-only; no source or prefix writes'),
                    original_e001_locks=original_locks)
     write(attempt/'runtime.json', runtime)
     cfg = dict(fasta=str(BUNDLE/'input/pilot/assembly.fna'), contigs=str(BUNDLE/EXP/'pilot-contigs.tsv'),
@@ -171,9 +287,9 @@ def execute(args, attempt, manifest, started):
     write(attempt/'resolved-config.json', cfg)
     # Tiny real input/native flag/API checks address changed adapters, not a repeat
     # of the accepted Linux model smoke. A failure blocks science immediately.
-    stage([cfg['python'], '-I', '-u', BUNDLE/'experiments/E005-linux-pilot/native_contracts.py',
+    stage(readonly_python(cfg['python'], '-u', BUNDLE/'experiments/E005-linux-pilot/native_contracts.py',
            '--mapping-prefix', mapping, '--amber-python', amber, '--amber-source', amber_source,
-           '--root', attempt/'adapter-contracts'], 'adapter-contracts', 300)
+           '--root', attempt/'adapter-contracts'), 'adapter-contracts', 300)
     setting_up = False
     work = attempt/'pilot'; work.mkdir()
     command = [runtime['workflow']['python'], '-I', '-m', 'snakemake', '--snakefile',

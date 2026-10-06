@@ -126,6 +126,61 @@ class PilotTests(unittest.TestCase):
         self.assertEqual(len(list((root/'transfer').glob('*-return.tar.gz'))),1)
         self.assertFalse((attempt/'pilot/checkpoint.pt').exists())
 
+    def test_amber_lock_reconciliation_is_exact_and_retains_failure_evidence(self):
+        lock = ('biopython==1.87\n'
+                'easybuild==5.3.1\n'
+                'packaging @ file:///builder/packaging\n'
+                'pip @ file:///builder/pip\n')
+        digest = hashlib.sha256(lock.encode()).hexdigest()
+        policy = dict(pip_freeze_sha256=digest,
+            outside_prefix_entries={'easybuild':'5.3.1'},
+            direct_reference_versions={'packaging':'26.3','pip':'25.1.1'},
+            verified_prefix_inventory=dict(source_member_sha256='a'*64,
+                distributions={'biopython':'1.87','packaging':'26.3','pip':'25.1.1'}))
+        actual = {'Biopython':'1.87','packaging':'26.3','pip':'25.1.1'}
+        result = e005_pilot_owner.reconcile_amber_inventory(lock, digest, actual, policy)
+        self.assertEqual(result['status'], 'passed')
+        self.assertEqual(result['isolated_distributions'], 3)
+        self.assertEqual(result['excluded_outside_prefix_lock_entries'], {'easybuild':'5.3.1'})
+        with self.assertRaisesRegex(ValueError, 'SHA mismatch'):
+            e005_pilot_owner.reconcile_amber_inventory(lock, '0'*64, actual, policy)
+        with self.assertRaisesRegex(ValueError, 'unexpected'):
+            e005_pilot_owner.reconcile_amber_inventory(lock, digest, dict(actual,easybuild='5.3.1'), policy)
+        with self.assertRaisesRegex(ValueError, 'versions'):
+            e005_pilot_owner.reconcile_amber_inventory(lock, digest,
+                {'biopython':'1.88','packaging':'26.3','pip':'25.1.1'}, policy)
+        missing_direct = lock.replace('pip @ file:///builder/pip\n','')
+        missing_policy = dict(policy, pip_freeze_sha256=hashlib.sha256(missing_direct.encode()).hexdigest())
+        with self.assertRaisesRegex(ValueError, 'direct-reference package names'):
+            e005_pilot_owner.reconcile_amber_inventory(missing_direct,
+                missing_policy['pip_freeze_sha256'], actual, missing_policy)
+        record = dict(path='/retained/pip-freeze.txt', sha256=digest, text=lock)
+        with self.assertRaisesRegex(ValueError, 'unexpected'):
+            e005_pilot_owner.audit_amber_inventory(self.root, record,
+                dict(actual, unexpected='1'), policy)
+        receipt = json.loads((self.root/'runtime-preflight.json').read_text())
+        self.assertEqual(receipt['amber']['original_lock']['text'], lock)
+        result = json.loads((self.root/'runtime-preflight-check.json').read_text())
+        self.assertEqual(result['status'], 'failed')
+
+    def test_amber_policy_uses_complete_clean_prefix_baseline_and_narrow_exceptions(self):
+        spec = json.loads((ROOT/'experiments/E005-linux-pilot/external-runtime.json').read_text())
+        policy = spec['amber']['lock_reconciliation']
+        self.assertEqual(set(policy['outside_prefix_entries']), {
+            'easybuild','easybuild-easyblocks','easybuild-easyconfigs','easybuild-framework'})
+        self.assertEqual(policy['direct_reference_versions'], {'packaging':'26.3','pip':'25.1.1'})
+        inventory = policy['verified_prefix_inventory']
+        self.assertEqual(len(inventory['distributions']), 28)
+        self.assertNotIn('easybuild', inventory['distributions'])
+        self.assertEqual(len(inventory['source_archive_sha256']), 64)
+        self.assertEqual(len(inventory['source_member_sha256']), 64)
+
+    def test_readonly_isolated_python_uses_command_line_bytecode_guard(self):
+        command = e005_pilot_owner.readonly_python(
+            sys.executable, '-c', 'import sys; assert sys.dont_write_bytecode')
+        self.assertEqual(command[1:3], ['-I','-B'])
+        subprocess.run(command, check=True)
+
 
 if __name__ == '__main__':
     unittest.main()

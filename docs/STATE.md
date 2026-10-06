@@ -113,9 +113,13 @@ fatal-input and completed-resume checks pass. No work was repeated. Actual 4/12
 allocation: 83.81135 driver seconds including setup/collection, 0.0931237 allocated
 vCPU-hours, 0.307-GB sampled worker peak. These are software checks, not bin quality.
 
-**The frozen pilot adapters and checksum-bound owner packet are complete and
-locally tested. Exact next step: owner runs the v4 GI pilot once and returns its
-archive/checksum/captured terminal log.** No UCloud execution by Codex. Use
+**The frozen pilot adapters are locally tested; the v4 owner attempt stopped in
+the AMBER environment preflight before adapter checks or pilot work.** Its strict
+inventory comparison mishandled four historical user-site entries and two direct
+URL lock records. The exact evidence and v5 repair are in the
+[E005 owner record](../experiments/E005-linux-pilot/README.md#owner-v4-preflight-failure-and-v5-repair-2026-10-06).
+The replacement packet is v5. Exact next step: owner uploads and runs v5 once, then
+returns its archive/checksum/captured terminal log. No UCloud execution by Codex. Use
 `/work/Home/dl_binner/e005/transfer/` for new uploads, launch copies, terminal logs
 and return archives/checksums. The pilot is frozen at
 four GI GSA genomes / 5,309 contigs / 12,924,259 bp, with 1,097 below-500 contigs
@@ -126,7 +130,7 @@ tested command. Existing E001 depth has no short rows and must not be zero-
 filled. AMBER/R95 with raw controls is fixed; no mapping/feature/training/scoring
 of the full scientific pilot has run. The new
 [local receipt](../experiments/E005-linux-pilot/pilot-local-observed.json) verifies
-the actual v4 packet's real native adapters and complete small fixture: exact
+the previous v4 packet's real native adapters and complete small fixture: exact
 float64 depth/masks/reload, 21 DNA rows / 546,369 bp, both complete exports, native
 AMBER/R95, shuffled IDs and partial/full resume. Sixty-two completed preprocessing
 files were reused unchanged; all 333 retained hashes match. Seven focused tests
@@ -134,9 +138,9 @@ plus deployment regression checks pass. Earlier dispatcher/verifier failures
 stopped before scoring and were preserved/fixed locally. No accepted demonstration
 was repeated. These synthetic-read fixture scores are not scientific pilot utility.
 
-Owner packet source `49dc582`, 4.10 MB, SHA256
-`91bebee4f0b8f214849af1250ca31d3fbf1224d441ee59ef1a52302c9f561dee`.
-[Operations](../experiments/E005-linux-pilot/OPERATIONS.md) owns the two uploads and
+The current v5 packet's source commit, size and SHA256 are listed in the
+[E005 owner record](../experiments/E005-linux-pilot/README.md#owner-v4-preflight-failure-and-v5-repair-2026-10-06).
+[Operations](../experiments/E005-linux-pilot/OPERATIONS.md) owns its two uploads and
 exact 4-vCPU/12-GB command, with 8-GB working RSS, setup 30 minutes/science two
 hours/total three hours. Reprobe accepted E005 and read-only E001 mapping/AMBER
 prefixes; no installs. The small packet includes the exact 13.13-MB reference,
@@ -178,8 +182,10 @@ post-run collection; native scientific source/functions remain frozen.
 
 UCloud remains CPU-only and owner-operated. E001's persistent prefixes stay under
 `e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md); E005 owns
-separate new CPU/workflow prefixes under its own root. Frozen E001
-source/configuration and raw observed records remain unchanged.
+separate new CPU/workflow prefixes under its own root and read-only reuses E001's
+accepted mapping/AMBER prefixes. E005 v5 now checks the complete AMBER distribution
+inventory against E001's hash-identified clean-prefix review, not only `pip freeze`.
+Frozen E001 source/configuration and raw observed records remain unchanged.
 
 Local branch: `first-binner-prototype`, created from `930e6743eac1aadb93ea23b51f2a6ac617155a2e`.
 Owner-configured private GitHub origin is present; main/origin-main initially matched

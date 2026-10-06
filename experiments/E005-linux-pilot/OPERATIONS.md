@@ -8,7 +8,7 @@ No E001 rerun, GLM inference/three-way study or architecture gate is included.
 ## Two upload files and organization
 
 Create `/work/Home/dl_binner/e005/transfer/` in UCloud Files if needed. Upload
-`e005-gi-pilot-v4.tar.gz` and `e005-gi-pilot-v4.tar.gz.sha256` **there**, keeping
+`e005-gi-pilot-v5.tar.gz` and `e005-gi-pilot-v5.tar.gz.sha256` **there**, keeping
 filenames. Launch copies, captured terminal logs and returned archive/checksum
 also stay there. Persistent unique attempts stay under the E005 root and accepted
 runtimes under `envs/`; earlier smoke files are preserved in place.
@@ -42,13 +42,13 @@ trap 'rc=$?; printf "\nTERMINAL_LOG=%s\nEXIT_CODE=%s\n" "$log" "$rc"; exit "$rc"
 (
   for tool in python3 tar sha256sum tee env; do command -v "$tool" >/dev/null || { echo "Missing prerequisite: $tool"; exit 2; }; done
   python3 -I -c 'import sys; assert sys.version_info >= (3,10), "Python >=3.10 required"'
-  sha256sum -c e005-gi-pilot-v4.tar.gz.sha256
-  sha256sum e005-gi-pilot-v4.tar.gz
+  sha256sum -c e005-gi-pilot-v5.tar.gz.sha256
+  sha256sum e005-gi-pilot-v5.tar.gz
   launch=$(mktemp -d "$transfer/launches/gi-pilot.XXXXXX")
-  tar -xzf "$transfer/e005-gi-pilot-v4.tar.gz" -C "$launch"
+  tar -xzf "$transfer/e005-gi-pilot-v5.tar.gz" -C "$launch"
   env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE \
     PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 \
-    python3 -I -u "$launch/e005-gi-pilot/scripts/e005_pilot_owner.py" \
+    python3 -I -B -u "$launch/e005-gi-pilot/scripts/e005_pilot_owner.py" \
     --root /work/Home/dl_binner/e005 \
     --allocated-vcpus 4 --allocated-ram-gb 12
 ) 2>&1 | tee "$log"
@@ -57,10 +57,13 @@ BASH
 
 ## Work, resources and stop conditions
 
-Entry probes verify exact accepted E005 inventories/package code and isolation;
-E001 binaries/AMBER source and original executed dependency lock are reused
-read-only and checked. Missing or changed runtimes stop without installing or
-repairing them. Tiny **new adapter** tests check mapping of real DNA, native
+Entry probes verify exact accepted E005 inventories/package code and isolation.
+E001 binaries/AMBER source and the original dependency lock are reused read-only.
+The AMBER check compares the exact retained lock hash and isolated package inventory;
+it excludes only the four EasyBuild packages historically observed outside the
+prefix, and resolves the lock's two direct URLs to versions in the earlier clean
+prefix inventory. Every discovered distribution must still originate inside AMBER.
+Missing or changed runtimes stop without installing or repairing them. Tiny **new adapter** tests check mapping of real DNA, native
 flag/CIGAR/zero-depth semantics and AMBER/R95 boundaries; no model smoke is repeated.
 
 The serial Snakemake DAG then validates/hashes each complete anonymous FASTQ twice,
@@ -121,12 +124,11 @@ returned-output inspection; any quality degradation is a valid retained result.
 
 ## Packet acceptance
 
-Use **v4**, source `49dc582b457e12030daab07a5f961a600772d820`, 4,099,196 bytes,
-SHA256 `91bebee4f0b8f214849af1250ca31d3fbf1224d441ee59ef1a52302c9f561dee`.
-[Local receipt](pilot-local-observed.json) verifies the actual extracted packet's
-complete real-DNA fixture, native mapping/depth/AMBER contracts, masks, exact
-reload, both exports and partial/full resume; no workers were mocked. Local
-harness checks do not establish native Linux bulk performance or current E001
-lock health. The entry checks retain that assessment boundary before science.
-Earlier v1/v2 failures and v3 success remain preserved and are superseded for
-upload by this packet; do not upload or run the earlier pilot packets.
+Use **v5**; its source commit, archive size and checksum are recorded in the
+[pilot implementation record](README.md#owner-v4-preflight-failure-and-v5-repair-2026-10-06).
+The prior v4 packet passed its local fixture ([receipt](pilot-local-observed.json))
+but its owner-run preflight stopped before adapter checks or pilot work because its
+AMBER lock comparison mishandled known user-site entries and direct references.
+Do not upload or rerun v4. V5 keeps the same pilot scope and validates the isolated
+AMBER inventory against the audited lock evidence before any scientific step.
+Earlier v1-v3 attempts remain historical; do not upload them either.
