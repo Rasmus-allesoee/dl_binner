@@ -122,6 +122,11 @@ masks/shorts/noise and validate fresh/partial/completed resume and failures from
 new local package environment. At most four threads/loader zero/8 GB working RSS,
 two-hour integration ceiling, ≤32-contig/0.6-Mb real-DNA fixtures. No E002–E005
 scientific rerun. This is prepared, **not implemented or Linux-validated yet**.
+Implementation contracts and the native outside-checkout test suite are now
+prepared in [E006](../experiments/E006-cli-usability/README.md); measured execution
+is pending its source commit. The owner additionally prioritizes clear help,
+actionable errors, readable progress and predictable outputs; the prototype CLI
+may evolve without a compatibility promise.
 No new UCloud command or input from the owner is needed now. Do not rerun the
 accepted v5 recipe retained in [operations](../experiments/E005-linux-pilot/OPERATIONS.md).
 New future transfers/logs/returns still belong under
