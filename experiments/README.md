@@ -12,6 +12,7 @@ reproduced result of this project.
 - [E004: First composition-based learned binner](E004-first-binner/README.md)
 - [E005: Linux deployment smoke and bounded GI assembly/depth pilot](E005-linux-pilot/README.md)
 - [E006: Installed generic command usability](E006-cli-usability/README.md)
+- [E007: Private implementation PR readiness](E007-pr-readiness/README.md)
 
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 

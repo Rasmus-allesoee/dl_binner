@@ -1,6 +1,6 @@
 # Current Research State
 
-Updated: 2026-10-06. This is the single current handoff.
+Updated: 2026-10-07. This is the single current handoff.
 
 ## Direction and completed work
 
@@ -170,8 +170,9 @@ owner idle/billing are not measured. Preserve all attempts, linked dependencies
 and transfer files. [Operations](../experiments/E006-cli-usability/OPERATIONS.md)
 now retains the command as executed provenance: **do not run it again**.
 
-**Exact next step: implement the single prepared private-PR readiness milestone**
-in [PROTOTYPE](PROTOTYPE.md#prepared-private-pr-readiness-milestone). Provide
+**Current authorized task: implement the single prepared private-PR readiness milestone**
+in [PROTOTYPE](PROTOTYPE.md#prepared-private-pr-readiness-milestone), prospectively frozen in
+[E007](../experiments/E007-pr-readiness/README.md). Provide
 verified standalone CPU installation guidance, wheel/sdist content/provenance,
 ordinary product regressions from a clean snapshot without ignored research
 artifacts, minimal prepared CI and a concrete honest private-PR description.
