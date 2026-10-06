@@ -108,7 +108,8 @@ report four threads. Training itself 1.832 s / 3.41 CPUs. Time/RSS limits pass, 
 work and both evaluators. Current future-launcher code removes simultaneous
 `--cores`/`--jobs`, sets global RAM and adds explicit serial DAG barriers; actual
 Mac scheduling/partial+completed-resume fixtures pass. The tiny Mac legacy
-fixture did not reproduce the Linux overlap; no corrected Linux run is claimed.
+fixture did not reproduce the Linux overlap; no corrected E005 scientific-pilot
+rerun is claimed. E006 subsequently validates the generic serial launcher below.
 Accepted scientific stages remain valid and are not repeated. No
 full-community throughput or linear CPU-scaling claim. Retained attempt inventory
 3.297 GB; return copy 32.09 MB. Prior runtimes/read sources/attempts are separate.
@@ -146,11 +147,49 @@ explicit byte-verified numerical/build dependencies reused read-only from v4;
 no old prefix was relocated/upgraded/deleted. Origins/inventories and dependency
 tree hashes passed review. This local recipe is not a Linux environment transfer.
 
-**Exact next step: the owner runs the prepared tiny E006 CPU/Linux generic-command smoke** in a single-node **4-vCPU / 12-GB Terminal job**, then returns its printed archive, checksum and terminal log for independent review. [Operations](../experiments/E006-cli-usability/OPERATIONS.md) owns the exact checksum-pinned command and two upload files; [Linux contract](../experiments/E006-cli-usability/linux-smoke.json) freezes **1,800 seconds including verification/setup**, a separate 120-second evidence-collection limit, four numerical threads/interop one/loader zero and 8 GB working RSS. The new generic launcher is **not Linux-accepted yet**. This is finite operational compatibility work, not an architecture/quality gate.
+**E006's generic-command native CPU/Linux gate is now complete and accepted.**
+[Independent retained review](../experiments/E006-cli-usability/README.md#accepted-native-linux-return-and-independent-review-2026-10-06)
+and [Linux receipt](../experiments/E006-cli-usability/linux-observed.json) verify
+`generic-linux-smoke-y9xix7p9`: checksum/all 462 archive members/447 retained-file
+entries, exact inventories/import origins and unchanged dependency byte trees,
+serial native stages/independent CPU/global-RAM placement, twenty-epoch seed-11
+schedule, exact reload, complete raw/learned DNA, masks/zeros/six strata, partial
+resume only remaining six stages and completed resume no native work. All 21
+native contracts including intended failures/RSS/timeout/orphan handling pass.
+No accepted native or scientific stage was repeated. The packet binds `a8010cb`,
+unchanged wheel/source `e30023c`; new Linux prefix owns the package and borrows
+persistent E005 dependencies read-only. It is not a standalone portable environment.
 
-The packet reuses the retained **13-contig / 42,311-bp** real-DNA software fixture and unchanged accepted wheel. Its scripts/contracts bind **a8010cb**, archive SHA256 `d15864bd606676991b95c3fe2bb2d4198394106e22aead022fee9b64edc08569` (**72,267 bytes**). Accepted E005 CPU/workflow inventories are reprobed read-only. A new versioned package venv owns the wheel and explicitly borrows Linux dependencies from the persistent accepted base; numerical/import origins and before/after site-tree bytes are checked. No Mac prefix/links, runtime copies, heavy data or accepted scientific stages are transferred or rerun.
+Actual declared **4 vCPUs / 12 GB**: **214.793 s / 0.238659 allocated vCPU-hours**
+through collection, **0.422-GB sampled stage peak**. Original storage reporting
+omitted its inventory and statted an open log; the immutable return has exactly
+**2,172,376 uncompressed bytes**, plus a **1,174,633-byte archive copy**. The original
+receipt is preserved, with correction and a tested future collector fix in
+`bee512a`; no retry is needed. Full new-prefix/cache storage, exact peaks and
+owner idle/billing are not measured. Preserve all attempts, linked dependencies
+and transfer files. [Operations](../experiments/E006-cli-usability/OPERATIONS.md)
+now retains the command as executed provenance: **do not run it again**.
 
-Local native owner-driver/command checks and failed-entry returns pass: **21 final native contracts, four focused deployment tests; final full envelope 186.669 s / 0.360-GB sampled peak**. [Preparation receipt](../experiments/E006-cli-usability/linux-prepared.json) records all three full harnesses (**517.585 s / 0.575095 four-thread wall hours**) and scopes. Negative entries and shell-only log-template correction are retained separately; no Linux platform/environment credit follows. The owner controls execution. Keep the two uploads, launch copies, terminal logs and returned archive/checksum under `/work/Home/dl_binner/e006/transfer/`; unique attempts and new prefixes stay under E006. E005 transfers remain under its existing `transfer/`; preserve its attempts/runtimes and do not rerun the accepted v5 recipe. Stop on unexpected failures and return retained evidence; no automatic retry or data expansion.
+**Exact next step: implement the single prepared private-PR readiness milestone**
+in [PROTOTYPE](PROTOTYPE.md#prepared-private-pr-readiness-milestone). Provide
+verified standalone CPU installation guidance, wheel/sdist content/provenance,
+ordinary product regressions from a clean snapshot without ignored research
+artifacts, minimal prepared CI and a concrete honest private-PR description.
+Current tests borrow E003/E005 caches and accepted runtimes link prior numerical
+libraries; these are concrete reproducibility gaps, not a new architecture gate.
+Keep model/training/clustering unchanged, reuse accepted real-DNA/Linux evidence,
+cap new tiny software fixtures at 32 contigs / 0.6 Mb, four threads/loader zero,
+8 GB working RSS and two hours measured integration. Preparation is local;
+no UCloud, remote push/PR/CI/merge or public release is authorized yet.
+
+Owner direction: after bounded readiness, review/merge the first usable prototype
+through a separately authorized private PR, then start a **new benchmark/research
+branch from updated main**, retaining this accepted implementation as the stable
+baseline. Future architecture testing must be deliberate and matched; it does
+not delay the first prototype with another quality/architecture gate. License
+and historical-source packaging require review before public redistribution,
+not an invented license or additional science before a private PR. No files or
+new owner job are needed for the current handoff.
 
 The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
 planned and unrun. No larger datasets, extra seeds, architecture gate, publication

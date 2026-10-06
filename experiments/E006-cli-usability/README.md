@@ -1,6 +1,6 @@
 # E006: Installed generic command usability
 
-Prepared/completed 2026-10-06. Status: **accepted software milestone**;
+Prepared/completed 2026-10-06. Status: **accepted software milestone and native Linux generic-command smoke**;
 scientific utility is not assessed here. [Protocol](protocol.json) froze contracts
 before measurement; [observed receipt](observed.json) owns hashes, resources,
 failures and review limits. D011's model and scope are unchanged.
@@ -98,8 +98,9 @@ payload with retained v4 dependencies. An ignored cache is not a backup.
 
 **Accept D011's usability milestone; no further architecture gate.**
 [Usage](../../docs/PROTOTYPE.md#run-the-binner) owns commands/outputs/recovery.
-Next prepare one tiny checksum-bound owner-run CPU/Linux generic-launcher smoke,
-reusing healthy UCloud assets and a new version-qualified package prefix. Packet,
+The next compatibility check at Mac acceptance was to prepare one tiny owner-run
+CPU/Linux generic-launcher smoke; it is now accepted below. Preparation reused
+healthy UCloud assets and a new version-qualified package prefix. Packet,
 logs and returned archive/checksum belong under `/work/Home/dl_binner/e006/transfer/`.
 Stop
 for returned review; do not execute UCloud or repeat E005. Larger data, seeds,
@@ -138,7 +139,7 @@ gate or publication is authorized. Uploads/logs/returns will remain under
 `/work/Home/dl_binner/e006/transfer/`; unique attempts and new prefixes stay
 under the E006 root. Failed attempts and verified manifests are retained.
 
-## Owner transfer locally accepted; Linux review pending
+## Owner transfer locally accepted
 
 [Preparation receipt](linux-prepared.json) owns the exact source/input/wheel/packet
 bindings, three retained full harness runs, entry failures and actual local costs.
@@ -196,14 +197,103 @@ separate. Owned regular files in each new package prefix and retained/returned
 logical bytes are recorded; shared dependency storage is not duplicated or counted
 as new owned payload. No old prefix, attempt or cache is upgraded/deleted.
 
-**Prepared, not native-Linux accepted.** Mac tests use explicit local runtime
+**At preparation: not native-Linux accepted.** Mac tests use explicit local runtime
 baselines (Python 3.10.15 / workflow 3.13.12) and ps sampling. Linux Python 3.12.10,
 CPU `+cpu` build, /proc sampler, cpuset limits, venv/site behavior and reset-container
 prerequisites remain actual owner checks. The linked Mac prefix is never shipped;
 the new Linux venv depends on its retained accepted Linux base.
 
-Next the owner runs exactly one [prepared Terminal command](OPERATIONS.md) and
-returns the printed archive, checksum and terminal log. Unexpected errors stop
-without automatic retry. Review before another product action. No quality score,
+The prepared command was subsequently run once and accepted below. Do not repeat
+it. No quality score,
 whole-MAG/generalization claim, E005 rerun, extra data/seed, three-way comparison,
 architecture gate or publication follows from these software checks.
+
+## Accepted native Linux return and independent review, 2026-10-06
+
+**Accept `generic-linux-smoke-y9xix7p9`; do not repeat it.** The uploaded return is
+**1,174,633 bytes**, SHA256
+`949bb485bfcaeeaa6ea70678f49cf045640d019e395d61ee708e17b5b35106ad`.
+The matching checksum, external `e006-linux-smoke.log.ryn3HQ` and collection JSON
+agree with final exit zero. [Independent inspector](review_linux.py), committed
+at **bee512a**, reads retained data only and imports neither the binner nor its
+workers. [Linux receipt](linux-observed.json) binds the source uploads, all findings
+and limitations. Every one of **462 archive members** matches the extraction;
+all **447 retained-file inventory entries** pass. Other members are the inventory
+itself and terminal snapshots, bound by the archive hash. Local extraction is
+`artifacts/e006-cli-usability/linux-return-review/generic-linux-smoke-y9xix7p9/`;
+remote attempts/returns remain under the E006 root/`transfer/`.
+
+The executed packet binds **a8010cb**, the unchanged accepted wheel binds
+**e30023c**, and Python **3.12.10 / Torch 2.2.2+cpu / NumPy 1.26.4 / Snakemake
+9.16.3** are confirmed. Complete normalized inventories/import origins match
+the frozen E005 baseline. The new lexical package prefix is
+`/work/Home/dl_binner/e006/envs/binner-run-0.1.0.dev1-v1-4u1zulxo/runtime/`.
+It owns `dl_binner` and explicitly links reviewed dependency entries, excluding
+the previous binner and `.pth` injections. Dependencies resolve to the persistent
+accepted E005 base, workflow stays separate, and both before/after site-tree
+receipts match: **899,108,352 / 86,863,735 existing logical library bytes**. These
+remote libraries were not returned for local rehash. Preserve the dependency
+prefixes; the linked venv is not a standalone redistributable environment.
+Executed isolated `-I -B` probes and source-bound assertions validate package,
+defaults, DAG, CPU-only Torch, pools four/interop one/loader zero. The owner driver
+restricts Linux CPU affinity to four; host count **256** is explicitly not allocation.
+
+Independent reads verify the retained **13 IDs / 42,311 bp**, source DNA/hash/order,
+fresh finite 136-column TNF, exact two-sample depth and original zero masks,
+**10 eligible / 2 below-500 / 1 no-fourmer exclusions**, all six length strata.
+Depth has **3 all-zero rows**, with **5/7** zero observations in ordered
+`software_S1/software_S2`; sequence-only mode has zero columns and null depth
+accounting. Depth is synthetic software input, not a mapping or benefit claim.
+All three tiny completed runs retain the native **20-epoch seed-11** defaults;
+saved-reference and reload arrays match exactly, including IDs/evidence.
+Raw controls use the same feature input and fixed truth-free clustering
+(mutual positive five-neighbor graph, resolution one, minimum size three, no K).
+All raw/learned FASTA sequences, status/reason/length counts and summary source
+hashes independently agree with partitions and inputs. The empty subset retains
+**4 IDs / 2,048 bp / 2 exclusions / 2 noise / 0 bins** in both arms.
+
+Native stage receipts show **eight serial nonoverlapping stages** in each completed
+run. Independent ready-rule CPU/global-RAM fixtures also serialize using `--cores`
+without `--jobs`. Depth's partial invocation schedules only features/train,
+its continuation only the remaining six stages, and completed resume no native
+stage. Completed receipt bytes match; native assertions also confirm unchanged
+bytes/mtimes, and the retained final DAG dry-run reports **Nothing to be done**.
+
+All **21 native cases** pass, with no mocked worker. Changed input/sample order,
+corrupt checkpoint/export and populated fresh output are refused before native
+work. Invalid IUPAC, insufficient training evidence and missing depth axes retain
+their intended error and stop dependencies. The CLI's actual 0.3-second overall
+limit, sampled one-byte RSS limit and ten-second heartbeat have the intended
+receipts/terminal messages. The fatal fixture exits **7 in 0.625 seconds** and its
+native `ps` assertion proves no running orphan (absent/zombie is distinguished);
+the process-list snapshot itself was not retained, so no current remote query is
+claimed. No cleanup error appears. Five deployment tests and four retained-only
+review regressions pass locally; they do not rerun the Linux or scientific work.
+
+Actual recorded allocation **4 vCPUs / 12 GB**: **214.793 seconds / 0.238659
+allocated vCPU-hours through collection**, including entry/setup/hash/collection;
+execution before collection **213.602 seconds**, collection difference **1.191 s**.
+Sampled stage/coordinator peak **422,125,568 bytes (0.422 GB)**; native suite
+**140.140 s / 93.82 sampled CPU-seconds / 0.669 average CPUs**. Tiny process startup,
+hashing and intentional waits dominate; sequence/depth learning itself averages
+**3.53/2.53 CPUs**. Four-thread caps are effective, not a saturation or bulk-scaling
+promise. All frozen ceilings pass. Owner upload/idle/teardown and monetary billing
+are outside the receipt; stage sampling does not establish exact parent/hash peaks.
+
+**Storage correction:** the immutable archive contains **2,172,376 uncompressed
+bytes**. The original collection JSON's **2,091,897** omitted its **80,673-byte**
+inventory and included **194 later bytes** from the open parent log. Preserve that
+original report; the review appends exact member accounting. Future collector
+code now counts the snapshot and inventory, with a growing-log regression test;
+the executed packet is untouched and no retry is needed. The archive is an
+additional 1,174,633-byte copy; new-prefix/cache/full filesystem usage was not
+inventoried, and existing dependencies must not be counted as newly allocated
+storage. No deletion is authorized.
+
+**Decision:** retain D011 and close this compatibility gate. This validates usable
+software under the reviewed Linux environment, not MAG quality/generalization,
+standalone installation on an unrelated host or improved binning. E005's development
+recovery remains separate and accepted. Prepare the
+[single private-PR readiness milestone](../../docs/PROTOTYPE.md#prepared-private-pr-readiness-milestone)
+before merging a stable first prototype; defer new benchmark/architecture work
+to a separate branch from updated main after an authorized merge.

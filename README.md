@@ -34,7 +34,11 @@ and independent generalization remain unvalidated. The installed `dl-binner run`
 now groups that path with a matched raw control, safe resume and label-free
 summaries. [Usage](docs/PROTOTYPE.md#run-the-binner) and
 [E006 validation](experiments/E006-cli-usability/README.md) describe the tested
-commands and limits. Generic-launcher Linux validation is the next bounded step.
+commands and limits. E006 now accepts the generic command on native CPU/Linux,
+including strict resume, serial scheduling and bounded failures. The next task is
+[one private-PR readiness milestone](docs/PROTOTYPE.md#prepared-private-pr-readiness-milestone)
+for independent installation and clean-checkout tests; benchmark and matched
+architecture work follow a separately authorized stable-baseline merge.
 
 ## Check the documentation
 

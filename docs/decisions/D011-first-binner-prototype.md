@@ -322,15 +322,16 @@ ceilings pass; the serial scheduling contract failed. Returned logs show trainin
 overlap with the raw branch and two concurrent evaluators. Current E005 launcher
 options/DAG barriers are corrected and pass native Mac scheduling/partial+complete
 resume checks without repeating science. The tiny Mac legacy fixture did not
-reproduce the original Linux context; corrected Linux launcher execution remains
-unvalidated. This bounded pilot is affordable at the measured allocation; no
+reproduce the original Linux context; at that review corrected Linux launcher
+execution was unvalidated. E006 later accepts the generic launcher below, without
+rerunning this pilot. This bounded pilot is affordable at the measured allocation; no
 linear/full-community scaling or claim that a larger node would be efficient.
 
 **Retain D011 and prepare one small usability/release-readiness milestone:** a
 generic end-to-end installed command plus label-free accounting summary, using
 the unchanged model and raw control. [The exact prepared contract](../PROTOTYPE.md#prepared-next-milestone-one-end-to-end-command)
-owns implementation, failure/resume and fixture/resource limits. It is not yet
-implemented and does not authorize publication. The current multi-command tool
+owns implementation, failure/resume and fixture/resource limits. At that review
+it was not yet implemented; E006 completes it below. It does not authorize publication. The current multi-command tool
 works on Linux and these capped inputs; removing experiment-specific launch paths
 addresses a concrete barrier to using it. Preserve the low-completeness limitation.
 
@@ -368,7 +369,7 @@ with explicitly bound read-only numerical dependencies; origins and byte trees
 are verified. No executed prefix is relocated/upgraded. That Mac recipe is not
 a Linux transfer.
 
-**Next bounded step:** prepare/test a tiny checksum-bound owner-run CPU/Linux
+**At Mac acceptance, the next bounded step was** to prepare/test a tiny owner-run CPU/Linux
 check of the generic command and current supervisor/DAG. Reuse healthy UCloud
 assets with a new version-qualified package prefix; ≤32 contigs / 0.6 Mb, at most
 four threads, loader zero and 8 GB working RSS. Freeze an operational ceiling,
@@ -392,10 +393,50 @@ explicitly borrows dependencies from the accepted persistent Linux base.
 No Mac environment is transferred, no accepted scientific demonstration reruns,
 and no claim of Linux acceptance follows from local Mac harness checks.
 
-Next the owner executes one 4-vCPU / 12-GB Terminal smoke under the 30-minute
+The prepared next action was one 4-vCPU / 12-GB Terminal smoke under the 30-minute
 execution, four-thread/loader-zero/8-GB working-RSS ceilings and returns its
 archive/checksum/log. Review real schedules, isolation, masks, reload, both
 complete exports, strict recovery, intended failures and allocation costs.
 A passing return should lead to one bounded product/release-readiness action,
 not another architecture screen or automatic benchmark/data expansion.
 Publication and the optional three-way comparison remain separate owner decisions.
+
+## Generic-command Linux accepted; private-PR readiness, 2026-10-06
+
+[E006's independent review](../../experiments/E006-cli-usability/README.md#accepted-native-linux-return-and-independent-review-2026-10-06)
+accepts the actual Linux return without repeating native work: all 462 archive
+members/447 retained entries, complete inventories/read-only byte trees, native
+20-epoch schedule, exact reload, both complete exports, all strata/masks/zeros,
+strict partial/full resume, independent CPU/global-RAM schedules and intended
+failures pass. The 4-vCPU/12-GB allocation consumed **214.793 s / 0.238659 allocated
+vCPU-hours** through collection, sampled stage peak **0.422 GB**. A small collector
+storage-report defect is corrected from retained bytes and fixed for future use;
+the immutable executed packet and successful work remain accepted.
+
+**Retain D011 and move toward a stable first-prototype merge.** The accepted tool
+is usable under the reviewed runtimes. Native Mac/Linux software behavior and
+E005's development assembled recovery do not establish whole-MAG quality,
+independent generalization, full-community scaling or superiority. No scientific
+retrial or model change is required to prepare a private implementation PR.
+
+Prepare exactly [one packaging/regression/readiness milestone](../PROTOTYPE.md#prepared-private-pr-readiness-milestone):
+verified standalone CPU install guidance, wheel/sdist contents, ordinary software
+checks that work without ignored research caches, minimal prepared CI, clear
+limitations and a concrete private-PR review description. Current local tests
+depend on retained E003/E005 files, and accepted venvs borrow reviewed dependencies;
+these are concrete reproducibility gaps. License/publication remain owner choices,
+not a reason to invent a license or block a private PR. Do not run remote CI,
+push/open/merge the PR or publish without the relevant later authorization.
+
+Opening a private PR immediately is a reasonable alternative, but its clean clone
+would still lack reproducible routine tests/install guidance. Larger benchmarks,
+clustering repair or a release framework could be useful later, but address
+different questions. Keep the bounded readiness task if it removes those actual
+gaps; discard optional polish that does not improve correctness/usability.
+
+Owner direction now explicitly separates implementation and research: after an
+authorized PR review/merge, start benchmark and matched architecture work on a
+new branch from updated main, retaining this implementation as the stable control.
+This is not automatic data/seed expansion or today's three-way execution. Preserve
+referenced source commits and honest claim limits. E001/H001/three-seed resolution,
+newly released architecture evidence and independent quality remain separate.

@@ -29,7 +29,10 @@ share depth, so coverage's separate biological benefit is not isolated.
 The installed **`dl-binner run`** command now groups the complete learned path and
 matched raw control. [E006](../experiments/E006-cli-usability/README.md) accepts its
 built-wheel native Mac checks, recovery, resource enforcement and truthful
-accounting. The [prepared E006 owner smoke](../experiments/E006-cli-usability/OPERATIONS.md) tests this generic command on CPU/Linux; native Linux return review remains pending. This is an evolving prototype, not a compatibility promise. The
+accounting. [E006's Linux return](../experiments/E006-cli-usability/README.md#accepted-native-linux-return-and-independent-review-2026-10-06)
+now accepts that generic command, native serial placement, strict resume and
+failure/resource handling on the reviewed CPU/Linux runtime. This is an evolving
+prototype, not a compatibility promise or whole-MAG validation. The
 individual commands `prepare`, `train`, `embed`, `cluster`, and `export` remain,
 with `--help` on each. `prepare` reads assembly FASTA and optional mean-depth TSV. Its header is
 `contig_id` followed by unique ordered sample names. Every FASTA ID needs one
@@ -76,7 +79,8 @@ The E005 review also found that the declared serial schedule overlapped four-
 thread jobs. A local launcher/DAG correction is now tested on data-free native
 scheduling fixtures; incorporate those options/barriers and check actual scheduling
 events rather than a `serial` label. The scientific pilot is accepted without
-rerunning it. Corrected generic-launcher Linux execution is still future work.
+rerunning it. E006 now accepts corrected generic-launcher native Linux execution;
+the E005 scientific DAG was not rerun merely to validate its launcher correction.
 
 Implement `dl-binner run` for assembly FASTA, optional explicit mean-depth and a
 fresh output directory. Package the unchanged default training JSON and a small
@@ -201,8 +205,91 @@ truth. E006's synthetic-depth/tiny-DNA fixtures establish software behavior, not
 coverage benefit or biological generalization. Accepted E005 accounting was read
 from retained outputs; no inference/clustering/evaluation was repeated.
 
-**Next bounded step:** prepare and locally test one tiny checksum-bound owner-run
-CPU/Linux generic-launcher smoke. Reuse intact UCloud workflow/assets read-only,
-keep the new package in a version-qualified prefix, capture logs/returns and stop
-for review. Do not copy the linked Mac test environment to Linux. No new dataset,
-seed, architecture gate, three-way study or publication is authorized.
+The E006 owner smoke is accepted; do not repeat it or transfer a linked test
+environment. Its immutable wheel remains the reference for the next milestone.
+
+## Prepared private-PR readiness milestone
+
+Prepared 2026-10-06 after E006 Linux acceptance; **not implemented or a published
+release**. One bounded packaging/testing/documentation task should make this
+branch reviewable as the first usable prototype. Acceptance concerns independent
+installation and regression reproducibility, not superiority or another scientific
+gate. Then request separate authorization to push/open a private PR and, after
+review, merge. Do not silently publish or merge as part of local preparation.
+
+The concrete remaining gap is that accepted execution borrows reviewed numerical
+dependencies and several current tests require ignored E003/E005 outputs or local
+setup paths. The package runs, but a clean clone cannot reproduce its ordinary
+software checks or follow a verified independent install recipe. There is no
+checked-in CI workflow or selected project license. Those are distinct from the
+already validated input/model/export behavior.
+
+Freeze the implementation contract before any new measured software integration:
+
+1. Provide a concise product-first README and installation guide for separate
+   binner/workflow CPU environments. Commit version-pinned dependency constraints
+   and CPU-PyTorch selection using the accepted versions. Keep platform support
+   honest: Python 3.10 Mac and 3.12 CPU/Linux have native evidence; the declared
+   3.10–3.12 range is not a complete tested matrix. Install from cached dependencies
+   where healthy; use a fresh versioned prefix for a standalone recipe test, no
+   links to accepted environments. Do not upgrade/delete/rebuild old prefixes.
+2. Build wheel **and sdist** from a clean source snapshot; inspect their contents,
+   hashes and metadata/defaults/DAG. Test installation and `dl-binner run --help`
+   outside the checkout, with neither checkout imports nor ignored caches. Keep
+   accepted dev1 wheel/source hashes as immutable provenance; version a changed
+   packaging snapshot separately. Preserve model, transforms, objective, training
+   defaults and clustering exactly. Do not rewrite old resume manifests to make
+   a new version appear compatible.
+3. Separate self-contained product regressions from opt-in retained research
+   reviews. Commit tiny deterministic synthetic DNA/depth fixtures or generators
+   for ordinary reader/mask/transform/export/failure tests; they establish software
+   behavior only. Reuse E006's accepted real-DNA native return as evidence without
+   rerunning it. Ordinary targeted checks must pass from the clean snapshot with
+   no `agent_context/`, `artifacts/` or experiment-specific setup path. Keep the
+   retained E003/E005/E006 accounting/evidence checks available and explicitly
+   separate, not silently skipped and called a full scientific validation.
+4. Prepare a small CPU/Linux CI workflow that installs the built wheel and runs
+   those targeted product contracts and documentation checks. No heavy datasets,
+   model downloads, scientific demonstrations or inference benchmark. Capture
+   logs, installed origins/inventories and bounded failures; reconcile test CPU
+   limits with runner allocation. A checked-in workflow is preparation; only an
+   actual authorized remote run validates that Linux installation/CI path.
+5. Write an honest validation/limitations section and concrete private-PR review
+   description linking D011/E004–E006: what works, what was tested, what is not
+   established, failure/resume semantics and resources. Inspect current-tree and
+   historical third-party/source packaging; report any public-publication issues
+   without deleting files or rewriting history. Do not invent an owner license
+   choice. Licensing/public redistribution needs a later explicit owner decision;
+   it need not delay a private implementation PR.
+
+Use **at most four numerical threads, interop one, loader zero, 8 GB working RSS**
+and a **two-hour measured software integration ceiling**; tiny software fixtures
+remain **≤32 contigs / 0.6 Mb**. Freeze whether setup falls inside the clock and
+account it separately when excluded; capture entry/setup/test logs and exit codes.
+No training schedule change, E002–E006 scientific replay, extra seed/dataset,
+UCloud execution, three-way study, architecture gate or remote publication.
+Native tiny product regression tests are allowed; do not relabel them biological
+evidence. Stop on a concrete packaging/contract failure and fix that cause within
+scope. Native independent Linux installation remains pending until actually run;
+do not require another owner smoke by default when existing evidence/authorized
+CI can establish the relevant path.
+
+Keep this milestone if the package/tests are reproducible without local research
+artifacts. Repair a specific install or contract defect if they are not. Abandon
+optional packaging polish when it delays the private PR without fixing a real
+usability/reproducibility issue. No notebook, Docker/Conda matrix, plugin framework,
+public release automation or broad refactor is required.
+
+Alternatives considered: opening the PR immediately would already expose a usable
+tool, but leave clean-checkout tests/install instructions dependent on this workspace.
+A broad release framework or additional quality benchmark would add unrelated
+work before stabilizing the baseline. The narrow packaging/regression task addresses
+the observed gap directly and should finish before proposing the PR.
+
+After a separately authorized review/merge, use a **new branch from updated main**
+for benchmark work and deliberate matched architecture investigation. Preserve
+the accepted baseline/settings and source commits. That later stage should freeze
+scope, development/test separation, short strata, raw controls, bin-quality/resource
+metrics and overlap before executing; refresh relevant new papers/code then. The
+already requested TNF / frozen-GLM-head / hybrid study remains a serious planned
+option, not today's implementation or a reason to delay the first prototype.

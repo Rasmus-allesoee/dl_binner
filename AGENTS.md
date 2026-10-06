@@ -272,6 +272,10 @@ before a child starts. Surface native causes beyond scheduler trailers. Distingu
 exited/zombie from live processes during cleanup and verify the intended stop and
 absence of running orphans. Label-free size/assignment summaries must not imply
 genome recovery or MAG quality without a separate evaluator.
+Report retained storage from the immutable archive members, including its
+inventory and terminal snapshot. Do not sum an open log after collection and
+present that as the archived payload; retain and append corrections to older
+receipts without rewriting them.
 
 Before transferring an owner-run driver, test the changed production adapter and
 its real input/output contracts, including fresh and recovered directory layouts.
@@ -372,6 +376,14 @@ Use branches when they genuinely help isolate substantial, risky, or exploratory
 Do not create branch/process ceremony for trivial changes.
 
 Research experiments may fail. Their scientific conclusions should remain traceable even when their implementation branch is not merged. Preserve important negative results and decisions in the research documentation rather than relying on abandoned Git branches as the only record.
+
+Owner direction, 2026-10-06: bring the first usable prototype through a bounded
+private-PR readiness step, then review/merge when separately authorized. Keep
+that accepted implementation as a stable baseline on main; start subsequent
+benchmark and matched architecture work on a new branch from updated main.
+Experimental comparisons are not prerequisites for merging a correctly tested
+prototype. Preserve source commits referenced by accepted evidence; do not
+squash/rebase away their only durable provenance.
 
 ### GitHub
 

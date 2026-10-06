@@ -6,10 +6,11 @@ The native Linux smoke **and v5 GI pilot are accepted**:
 **Do not upload or rerun the command below.** It is the executed recipe retained
 for provenance. Preserve `/work/Home/dl_binner/e005/gi-pilot-b9k3j2r3/`, its heavy
 files and the original transfers/logs/returns. No additional UCloud job is needed.
-The generic command is now implemented and locally accepted in
+The generic command is now implemented and native Mac/Linux accepted in
 [E006](../E006-cli-usability/README.md); see its
 [usage guide](../../docs/PROTOTYPE.md#run-the-binner). The new tiny E006 owner packet
-and [Linux smoke command](../E006-cli-usability/OPERATIONS.md) are prepared; follow
+and [Linux smoke command](../E006-cli-usability/OPERATIONS.md) were executed and
+accepted; do not repeat that smoke. Follow
 [STATE](../../docs/STATE.md), not this historical recipe. E006 execution does not
 rerun this accepted GI pilot.
 No larger data, extra seed, three-way study, architecture gate or public release.

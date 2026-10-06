@@ -1,7 +1,21 @@
 # E006 owner operations: generic-command Linux smoke
 
-Status: **prepared and locally tested**; [receipt](linux-prepared.json) owns the
-passed native owner-driver checks and retained limits. **Linux return review remains pending.** This is a tiny compatibility job, not a biological
+Status: **executed and native Linux return accepted, 2026-10-06**. Do not run the
+command again. [Independent review](README.md#accepted-native-linux-return-and-independent-review-2026-10-06)
+and [Linux receipt](linux-observed.json) accept `generic-linux-smoke-y9xix7p9`:
+462 archive members / 447 inventory entries, all 21 native checks and resource
+ceilings pass. Cost through collection: 214.793 s / 0.238659 allocated vCPU-hours
+at 4 vCPUs / 12 GB; sampled peak 0.422 GB. Archive SHA256
+`949bb485bfcaeeaa6ea70678f49cf045640d019e395d61ee708e17b5b35106ad`.
+Its exact uncompressed storage is 2,172,376 bytes; original collector accounting
+is preserved with a correction in the review. The new linked prefix depends on
+the retained E005 base; do not move/delete those libraries. No additional files
+or UCloud job are needed now. Next is
+[bounded private-PR readiness](../../docs/PROTOTYPE.md#prepared-private-pr-readiness-milestone).
+
+The instructions below are the executed recipe, retained for provenance, not a
+current handoff. [Preparation receipt](linux-prepared.json) owns the
+passed local owner-driver checks and original limits. This was a tiny compatibility job, not a biological
 benchmark or an architecture gate. The accepted E005 scientific runs remain
 accepted and are not rerun. [E006](README.md) owns preparation evidence;
 [contract](linux-smoke.json) owns the prospectively frozen ceiling.
@@ -73,7 +87,7 @@ submitted manifest, status, provenance, native logs/exit/resource receipts and
 available outputs. Fail-fast unexpected errors stop subsequent tests. There is
 no automatic retry after an unexpected failure.
 
-## Exact owner command
+## Executed owner command — do not repeat
 
 After uploading both files, paste this in Terminal. It is the default mode of
 [the locally tested shell envelope](owner-command.sh); its explicit local harness
