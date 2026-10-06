@@ -100,6 +100,12 @@ def terminate(process, members):
             os.killpg(process.pid, sig)
         except ProcessLookupError:
             pass
+        except PermissionError:
+            # Mac can report EPERM for a vanished group. Ignore only when an
+            # independent native group inventory proves it no longer exists.
+            raw=subprocess.check_output(['ps','-axo','pgid='],text=True)
+            if process.pid in {int(line) for line in raw.splitlines() if line.strip()}:
+                raise
         try:
             process.wait(timeout=1)
         except subprocess.TimeoutExpired:
@@ -161,7 +167,10 @@ The receipt is always written, including cancellation/failed prerequisites.
             reason = f'{type(error).__name__}: {error}'
             interrupted = error if isinstance(error, (KeyboardInterrupt, SystemExit)) else None
         finally:
-            terminate(process, members)
+            try:
+                terminate(process, members)
+            except BaseException as error:
+                reason=(reason+'; ' if reason else '')+f'Cleanup failed: {type(error).__name__}: {error}'
     elapsed = time.monotonic()-started
     receipt = dict(command=[str(c) for c in command], exit_code=process.returncode if process else None,
                    stop_reason=reason, wall_seconds=elapsed, peak_sampled_rss_bytes=peak,

@@ -128,5 +128,16 @@ class GenericContracts(unittest.TestCase):
             (root/'01-features.native.exit.json').write_text('{unfinished')
             self.assertIsNone(native_failure(root))
 
+    def test_actual_memory_ceiling_is_the_intended_failure(self):
+        with tempfile.TemporaryDirectory() as name:
+            log=Path(name)/'memory.log'
+            with self.assertRaises(RuntimeError):
+                supervise([sys.executable,'-I','-B','-c','import time; time.sleep(60)'],
+                          log,10,1,isolated_env(4))
+            receipt=json.loads(log.with_suffix('.exit.json').read_text())
+            self.assertIn('MemoryError: Sampled working RSS',receipt['stop_reason'])
+            self.assertGreater(receipt['peak_sampled_rss_bytes'],1)
+            self.assertLess(receipt['wall_seconds'],5)
+
 
 if __name__=='__main__': unittest.main()
