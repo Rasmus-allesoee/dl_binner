@@ -21,9 +21,20 @@
   "fixture_bp_max": 600000,
   "fixture_contigs_max": 32,
   "id": "E007",
+  "integration_attempt_policy": "Known failed and retry attempt clocks summed; complete integration campaign remains <=7200 seconds. Retain all failed attempts and use a fresh prefix for correction.",
   "integration_seconds_max": 7200,
   "loader_workers": 0,
+  "local_python_targets": {
+    "binner": "3.10",
+    "build": "3.10",
+    "workflow": "3.13"
+  },
   "numerical_threads_max": 4,
+  "operational_amendment": {
+    "correction": "Use a supported Python 3.10 builder locally; prepared Linux builder remains Python 3.12. No --ignore-requires-python or supported-range expansion. New attempt/prefixes retain run-001.",
+    "date": "2026-10-07",
+    "failure": "run-001 built the sdist with Python 3.13, then pip wheel refused Requires-Python <3.13 before any product test"
+  },
   "ordinary_suite": "tests/product, standard-library unittest with installed numerical packages; no checkout package imports, ignored artifacts, external research helpers or silently skipped required cases",
   "out_of_scope": [
     "Accepted E002-E006 scientific/native demonstration replay",

@@ -63,19 +63,21 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--source-commit',required=True)
+    parser.add_argument('--timeout',type=float,default=7200,help='Remaining campaign seconds, positive and at most 7200')
     for role in ('build','binner','workflow'):parser.add_argument('--'+role+'-python',type=Path,required=True)
     parser.add_argument('--wheelhouse',type=Path,action='append',required=True)
     a=parser.parse_args();a.output=a.output.absolute()
+    if not 0<a.timeout<=7200:parser.error('--timeout must be positive and at most 7200')
     bases={role:getattr(a,role+'_python').absolute() for role in ('build','binner','workflow')}
     caches=[p.absolute() for p in a.wheelhouse]
     a.output.mkdir(parents=True,exist_ok=False)
-    started=time.monotonic();deadline=started+7200;status='failed';error=None
+    started=time.monotonic();deadline=started+a.timeout;status='failed';error=None
     oldout,olderr=sys.stdout,sys.stderr;resources={};before={};cache_records={}
     spec=importlib.util.spec_from_file_location('e007_supervision',PROJECT/'src/dl_binner/supervision.py')
     sup=importlib.util.module_from_spec(spec);spec.loader.exec_module(sup)
     env=sup.isolated_env(4);env.update(PIP_DISABLE_PIP_VERSION_CHECK='1',PIP_CACHE_DIR=str(a.output/'pip-cache'))
     def ceiling(signum,frame):raise TimeoutError('Frozen two-hour E007 integration ceiling')
-    old=signal.signal(signal.SIGALRM,ceiling);signal.setitimer(signal.ITIMER_REAL,7200)
+    old=signal.signal(signal.SIGALRM,ceiling);signal.setitimer(signal.ITIMER_REAL,a.timeout)
     with (a.output/'terminal.log').open('x') as log:
         sys.stdout,sys.stderr=Tee(oldout,log),Tee(olderr,log)
         try:
@@ -98,7 +100,7 @@ def main():
             with tarfile.open(archive) as source:
                 members=source.getmembers()
                 if any(not (m.isdir() or m.isfile()) or Path(m.name).is_absolute() or '..' in Path(m.name).parts for m in members):raise ValueError('Unsafe source archive')
-                source.extractall(snapshot)
+                source.extractall(snapshot,filter='data')
             if any((snapshot/name).exists() for name in ('artifacts','agent_context','.git')):raise RuntimeError('Snapshot contains local context/cache/Git')
             os.chdir(snapshot);stages=a.output/'stages';stages.mkdir();prefixes=a.output/'envs';prefixes.mkdir()
             def stage(command,name,seconds=300):
@@ -106,7 +108,11 @@ def main():
                 remaining=min(seconds,deadline-time.monotonic())
                 if remaining<=0:raise TimeoutError('Overall integration clock exhausted')
                 sup.progress('E007 '+name)
-                resources[name]=sup.supervise(command,stages/(name+'.log'),remaining,8000000000,env,sample_root=os.getpid())
+                logpath=stages/(name+'.log')
+                try:sup.supervise(command,logpath,remaining,8000000000,env,sample_root=os.getpid())
+                finally:
+                    receipt=logpath.with_suffix('.exit.json')
+                    if receipt.exists():resources[name]=json.loads(receipt.read_text())
             pythons={}
             pip_flags=['--isolated','install','--no-index','--only-binary=:all:']
             for folder in caches:pip_flags+=['--find-links',folder]

@@ -24,3 +24,14 @@ review description locally; do not push, run remote CI or open/merge/publish.
 
 Actual attempts, receipts and outcome will be recorded after inspection. Existing
 caches, runtimes, failed attempts and accepted wheels stay read-only and retained.
+
+## Retained operational attempt 001
+
+`artifacts/e007-pr-readiness/run-001/`, source **e7a44e8**, failed before any
+product test/scientific stage. Offline fresh runtime installs and the initial
+wheel/sdist build passed; pip rebuilding the sdist correctly rejected its Python
+3.13 builder against package Requires-Python <3.13. Cost including setup/byte
+checks: **144.066 local seconds**; the original receipt/logs/prefixes are retained.
+Use a supported local Python 3.10 builder for a fresh attempt, without bypassing
+Requires-Python or expanding package support. The prepared CI builder stays 3.12.
+Known attempt clocks are summed under the original two-hour campaign ceiling.
