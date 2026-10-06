@@ -18,8 +18,7 @@ import traceback
 import uuid
 
 from . import __version__
-from .accounting import check_files, file_record, summarize_arm, write_summary_tsv
-from .io import digest, load_arrays, write_json
+from .contracts import check_files, digest, file_record, write_json
 from .supervision import isolated_env, local_scheduler_options, process_sample, progress, supervise
 
 STAGES = ('features', 'train', 'raw-embed', 'raw-cluster', 'raw-export',
@@ -168,6 +167,8 @@ def probe_workflow(python, folder, threads, deadline, memory):
 def finalize(root, manifest, stages, workflow_resources, started):
     """Verify checkpoint parity and both exports; publish byte-bound neutral summaries."""
     import numpy as np
+    from .io import load_arrays
+    from .accounting import summarize_arm, write_summary_tsv
     reference, _ = load_arrays(root/'training/checkpoint.reference.npz', 'embeddings')
     reloaded, _ = load_arrays(root/'learned/embedding/embeddings.npz', 'embeddings')
     if any(not np.array_equal(reference[k], reloaded[k]) for k in ('ids', 'features', 'evidence')):

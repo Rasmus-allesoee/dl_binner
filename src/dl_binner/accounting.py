@@ -7,30 +7,10 @@ from pathlib import Path
 
 import numpy as np
 
-from .io import digest, load_arrays, read_fasta, validate_features
+from .io import load_arrays, read_fasta, validate_features
+from .contracts import check_files, digest, file_record
 
 BOUNDS = [1, 500, 768, 1000, 2500, 10000]
-
-
-def file_record(path):
-    """Bind a regular file's bytes; reject links and missing/unsafe artifacts."""
-    path = Path(path)
-    if path.is_symlink() or not path.is_file():
-        raise ValueError(f'Missing or linked artifact: {path}')
-    return dict(bytes=path.stat().st_size, sha256=digest(path))
-
-
-def check_files(folder, entries):
-    """Verify an exact relative-path inventory, rejecting escapes and linked parents."""
-    folder = Path(folder)
-    for name, expected in entries.items():
-        path = folder/name
-        relative = Path(name)
-        if relative.is_absolute() or '..' in relative.parts or not path.resolve().is_relative_to(folder.resolve()) or any(
-                (folder/Path(*relative.parts[:i])).is_symlink() for i in range(1, len(relative.parts)+1)):
-            raise ValueError(f'Unsafe artifact path: {name}')
-        if file_record(path) != expected:
-            raise ValueError(f'Artifact bytes changed: {path}')
 
 
 def summarize_arm(features_path, export_dir):

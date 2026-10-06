@@ -122,11 +122,12 @@ The receipt is always written, including cancellation/failed prerequisites.
 """
     log_path = Path(log_path)
     started, known, members, peak, reason, process = time.monotonic(), {}, {}, 0, None, None
-    baseline = process_sample(sample_root, known)[1] if sample_root else 0
+    baseline = 0
     offset, heartbeat = 0, started
     interrupted = None
     with log_path.open('x') as log, log_path.with_suffix('.samples.jsonl').open('x') as samples:
         try:
+            baseline = process_sample(sample_root, known)[1] if sample_root else 0
             process = subprocess.Popen([str(c) for c in command], stdout=log,
                                        stderr=subprocess.STDOUT, env=env, start_new_session=True)
             while True:

@@ -104,5 +104,18 @@ class GenericContracts(unittest.TestCase):
                 result=subprocess.run(['ps','-p',str(pid),'-o','stat='],capture_output=True,text=True)
                 self.assertTrue(not result.stdout.strip() or result.stdout.strip().startswith('Z'))
 
+    def test_monitor_prerequisite_failure_retains_intended_exit_receipt(self):
+        with tempfile.TemporaryDirectory() as name:
+            log=Path(name)/'missing-monitor.log'
+            env=isolated_env(4)
+            # The actual sampler is called; patch only its unavailable OS prerequisite.
+            from unittest.mock import patch
+            with patch('dl_binner.supervision.subprocess.check_output',side_effect=PermissionError('ps unavailable')):
+                with self.assertRaisesRegex(RuntimeError,'ps unavailable'):
+                    supervise([sys.executable,'-I','-B','-c','pass'],log,10,8000000000,env,sample_root=123)
+            receipt=json.loads(log.with_suffix('.exit.json').read_text())
+            self.assertIsNone(receipt['exit_code'])
+            self.assertIn('PermissionError: ps unavailable',receipt['stop_reason'])
+
 
 if __name__=='__main__': unittest.main()

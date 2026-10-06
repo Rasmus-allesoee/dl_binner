@@ -14,8 +14,7 @@ import subprocess
 import sys
 import time
 
-from dl_binner.accounting import file_record, summarize_arm
-from dl_binner.io import read_fasta, write_json
+from dl_binner.contracts import file_record, write_json
 from dl_binner.runner import STAGES, receipt_name, validate_completed
 from dl_binner.supervision import isolated_env, local_scheduler_options, progress, supervise
 
@@ -24,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def fixture(folder):
     """Publish new deterministic windows plus named synthetic mask/depth fixtures."""
+    from dl_binner.io import read_fasta
     source = ROOT/'artifacts/e005-linux-pilot/input/pilot/assembly.fna'
     original = read_fasta(source)
     candidates = sorted([(i,s) for i,s in original if len(s)>=14000])
@@ -78,6 +78,7 @@ def frozen(root):
 
 def suite(folder, workflow):
     """Exercise actual packaged DAG, recovery, accounting and meaningful failures."""
+    from dl_binner.accounting import summarize_arm
     folder=Path(folder).absolute(); workflow=Path(workflow).absolute()
     inputs=folder/'input';inputs.mkdir()
     fasta,depth,rows=fixture(inputs)
