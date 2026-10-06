@@ -14,7 +14,7 @@ class HelpFormatter(argparse.ArgumentDefaultsHelpFormatter, argparse.RawDescript
 
 def main(argv=None):
     """Dispatch a full bounded workflow or one native stage with actionable errors."""
-    parser = argparse.ArgumentParser(description='Experimental CPU metagenomic binner: composition + contrastive learning.',
+    parser = argparse.ArgumentParser(prog='dl-binner', description='Experimental CPU metagenomic binner: composition + contrastive learning.',
         formatter_class=HelpFormatter,
         epilog='Start with dl-binner run --help. Every contig remains assigned, unassigned or excluded.\nBin sizes and assignment are not genome-quality estimates. Prototype interfaces may evolve.')
     parser.add_argument('--threads', type=int, default=4, choices=range(1, 5), help='Numerical CPU threads; loader workers remain zero')

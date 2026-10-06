@@ -17,7 +17,7 @@ import time
 from dl_binner.accounting import file_record, summarize_arm
 from dl_binner.io import read_fasta, write_json
 from dl_binner.runner import STAGES, receipt_name, validate_completed
-from dl_binner.supervision import isolated_env, progress, supervise
+from dl_binner.supervision import isolated_env, local_scheduler_options, progress, supervise
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -160,6 +160,19 @@ def suite(folder, workflow):
     empty_summary=json.loads((folder/'empty-partition/run-summary.json').read_text())
     assert all(v['bin_count']==0 and v['statuses']['unassigned']['contigs']==2 for v in empty_summary['arms'].values())
     cases['overall-timeout']=execute(command(folder/'overall-timeout')+['--timeout','.3'],folder,'overall-timeout',1,'wall-time limit')
+    # Test this packaged production helper on independent ready native rules.
+    for name,threads in (('cpu',4),('memory',1)):
+        schedule=folder/('scheduler-'+name);schedule.mkdir()
+        worker=schedule/'worker.py'
+        worker.write_text('import json,time,sys\nfrom pathlib import Path\ns=time.monotonic_ns()\ntime.sleep(.6)\nPath(sys.argv[1]).write_text(json.dumps(dict(start=s,end=time.monotonic_ns())))\n')
+        snake=schedule/'Snakefile'
+        snake.write_text("rule all:\n    input: 'a.json','b.json'\nrule worker:\n    output: '{name}.json'\n    threads: "+str(threads)+"\n    resources: mem_mb=8000\n    shell: "+repr(f'{python} -I -B {worker} '+'{output:q}')+'\n')
+        cmd=[workflow,'-I','-B','-m','snakemake','--snakefile',snake,'--directory',schedule,
+             *local_scheduler_options(4,8000),'--runtime-source-cache-path',schedule/'source-cache']
+        cases['scheduler-'+name]=execute(cmd,folder,'scheduler-'+name)
+        timings=[json.loads((schedule/f'{v}.json').read_text()) for v in ('a','b')]
+        assert min(t['end'] for t in timings)<=max(t['start'] for t in timings)
+        cases['scheduler-'+name]['nonoverlapping_intervals']=timings
     # Run the new focused tests against this installed wheel, without adding src to sys.path.
     cases['contracts']=execute([python,'-I','-B',ROOT/'tests/test_generic_run.py','-v'],folder,'contracts')
     config_files=list((dep/'logs').glob('invocation-*/config.json'))

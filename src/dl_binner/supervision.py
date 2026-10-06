@@ -142,7 +142,7 @@ The receipt is always written, including cancellation/failed prerequisites.
                 samples.flush()
                 with log_path.open() as reader:
                     reader.seek(offset)
-                    for line in reader:
+                    for line in iter(reader.readline, ''):
                         if line.startswith('DLBINNER '):
                             print(line.rstrip(), flush=True)
                     offset = reader.tell()
