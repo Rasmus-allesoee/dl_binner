@@ -394,8 +394,10 @@ imports may have added `.pyc` cache files under the reused AMBER prefix. The ret
 does not establish whether any were written. V5 uses command-line `-B` for all
 read-only Python checks; it does not delete or alter existing prefix contents.
 
-**Current owner packet: v5.** Its exact source commit, archive size and checksum are
-recorded here after the packet is built. [Operations](OPERATIONS.md) supplies the
+**Current owner packet: v5.** Source commit `67c2615fcbe28072adbd6e03498a24dbb669587a`,
+4,102,013 bytes, SHA256
+`11d2175cbb4fb5102c0f4c8b55c8f9a20daa6b78b1bc3758921d6b3da61ff12e`.
+[Operations](OPERATIONS.md) supplies the
 four-vCPU/12-GB command and requires upload under
 `/work/Home/dl_binner/e005/transfer/`. After v5 passes runtime and adapter checks,
 the same frozen pilot runs once. Return its archive/checksum/captured terminal log;
