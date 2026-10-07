@@ -22,6 +22,16 @@ from fixtures import THREADS, write_fixture
 
 
 class ProductContracts(unittest.TestCase):
+    def test_large_deadline_timer_is_pulsed_without_a_product_ceiling(self):
+        """Avoid platform time_t overflow while preserving the requested deadline."""
+        from dl_binner.runner import arm_deadline
+        with patch('dl_binner.runner.signal.setitimer') as timer:
+            arm_deadline(1e100)
+            self.assertEqual(timer.call_args.args[1],86400)
+            arm_deadline(None)
+            self.assertEqual(timer.call_args.args[1],0)
+            with self.assertRaisesRegex(TimeoutError,'wall-time limit'):arm_deadline(0)
+
     def test_uncapped_cli_choices_without_large_native_execution(self):
         """Parse large user choices without allocating threads or changing science."""
         from dl_binner.cli import main

@@ -161,6 +161,16 @@ def remaining_seconds(deadline):
     return remaining
 
 
+def arm_deadline(deadline):
+    """Arm a bounded OS timer pulse without imposing a product timeout maximum.
+
+    Large finite user deadlines can exceed platform time_t. Re-arm day-sized
+    pulses until the actual deadline; None disables this invocation's timer.
+    """
+    remaining = remaining_seconds(deadline)
+    signal.setitimer(signal.ITIMER_REAL, min(remaining, 86400) if remaining is not None else 0)
+
+
 def native_failure(folder):
     """Return the failed native stage's concise cause/log, beyond scheduler trailers."""
     for path in sorted(Path(folder).glob('*.native.exit.json'), reverse=True):
@@ -246,13 +256,13 @@ def run_pipeline(args):
         sys.stdout, sys.stderr = Tee(prior_out, log), Tee(prior_err, log)
         def stop(signum, frame):
             if signum == signal.SIGALRM:
-                raise TimeoutError('Overall run wall-time limit reached')
+                arm_deadline(deadline)  # Raises only at the actual user deadline.
+                return
             raise KeyboardInterrupt('Run cancelled; completed stages can be resumed')
         for sig in handlers:
             signal.signal(sig, stop)
-        if args.timeout is not None:
-            signal.setitimer(signal.ITIMER_REAL, args.timeout)
         try:
+            arm_deadline(deadline)
             progress(f'dl-binner {__version__} | output: {root}')
             progress(f'{args.threads} CPU threads, loader workers 0; built-in serial stages; matched raw control enabled')
             progress(f'Optional safeguards: RAM={args.memory_gb} GB, time={args.timeout} seconds (None means disabled)')

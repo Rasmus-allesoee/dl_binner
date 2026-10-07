@@ -56,6 +56,10 @@ class NativeRunContracts(unittest.TestCase):
             cases[name]=dict(resources=value,log=file_record(log),intended_message=needle)
             print('PRODUCT contract passed: '+name,flush=True)
         check([console,'run','--help'],'console-help',needle='learned/bins/')
+        large=[console,'run','--fasta',fasta,'--output',root/'large-safeguards',
+               '--threads',str(THREADS),'--memory-gb','1e100','--timeout','1e100','--stop-after','features']
+        check(large,'large-native-safeguards',needle='Paused after 1/8')
+        self.assertFalse((root/'large-safeguards/.run-lock').exists())
         seq,dep=root/'sequence run',root/'depth run'
         unlimited=[console,*command(seq)[5:]]
         for flag in ('--memory-gb','--timeout'):

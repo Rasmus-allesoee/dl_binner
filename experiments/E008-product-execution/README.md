@@ -68,3 +68,14 @@ approval or bypassing review. Exact current-head checks still need refreshing
 after final record-only pushes. The owner explicitly forbids merge/publication
 in this task. Next is review and an explicit exact-head merge decision; after a
 later authorized merge, benchmark work belongs on a new branch from updated main.
+
+## Native timer boundary repair
+
+Final source inspection reproduced `OverflowError: timestamp out of range for
+platform time_t` for a valid finite `1e100` timeout. The previous timer arm was
+before the run's protected cleanup region, so this could leak the lock/log state.
+Day-sized alarm pulses now re-arm until the actual user deadline (not a product
+ceiling), with timer setup inside cleanup protection. The regression includes
+actual native feature execution at huge RAM/time safeguards, still under the
+external test CPU/RAM/time limits, plus small-timeout/unset/expired cases. Preserve
+prior accepted attempts/CI; this is a concrete operational repair, not a model gate.
