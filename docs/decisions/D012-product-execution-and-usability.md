@@ -1,6 +1,6 @@
 # D012: Product resources, serial execution and shared usability
 
-Date: 2026-10-07. Status: **accepted implementation decision; validation pending**.
+Date: 2026-10-07. Status: **accepted; local and native Linux product checks pass**.
 Owner direction extends the private-PR preparation in D011/E007. It changes
 product execution, not model selection or scientific settings.
 
@@ -60,3 +60,14 @@ future product/distribution goals. Neither is implemented or published here.
 tests and actual execution/PR records. Scientific byte hashes stay frozen.
 After real Linux CI/review, report exact-head readiness and stop without merging.
 After a later authorized merge, benchmark work uses a new branch from updated main.
+
+## Validation and current boundary
+
+E008's fresh Mac installation and actual private Linux CI pass 12 tests/18 native
+cases. Scientific byte hashes/defaults remain unchanged. The dispatcher is retained
+because it preserves the native worker, staging/receipt, resume, export and failure
+contracts while removing the second runtime. Large CLI choices are tested through
+parser-only inspection, never by allocating more than the test budget. This is
+software acceptance, not an architecture or biological performance comparison.
+The private PR is open; requested review and exact-head final checks are distinct
+from authorizing merge. No merge/publication occurs in this task.

@@ -197,17 +197,25 @@ Resource sampling is approximate; source preparation/acquisition/review/idle
 are separate, and these are not UCloud costs. No accepted demonstration was
 repeated and no architecture change occurred.
 
-**Current authorized task: E008 product execution changes, then private PR/real CI/review.**
-The owner requests positive uncapped product threads, optional uncapped RAM/time
-safeguards, a bounded orchestration decision, durable shared people/AI-agent
-usability and future GPU/Conda goals. [D012](decisions/D012-product-execution-and-usability.md)
-selects a built-in serial dispatcher reusing existing native stage/receipt logic;
-[E008](../experiments/E008-product-execution/README.md) owns frozen test budgets
-and source hashes. Keep scientific settings/results and old journals immutable.
-Prepare and test dev3 outside the checkout, then push/open the private PR against
-main, inspect real Linux CI and implementation review, repair concrete failures.
-**Do not merge or publish.** No UCloud, accepted science replay, benchmark or
-architecture work. The following merge decision remains explicitly owner-controlled.
+**E008's product changes and native Linux CI are accepted; private PR #1 is open.**
+[D012](decisions/D012-product-execution-and-usability.md) implements positive
+uncapped CPU choices, optional RAM/time safeguards and a built-in serial dispatcher
+requiring one CPU environment. Scientific byte hashes/defaults/results remain
+unchanged. GPU/Conda are future goals only; shared people/agent usability is durable
+intent. [E008](../experiments/E008-product-execution/README.md) owns source/build
+identities, tests and real CI; both fresh Mac and native Linux suites pass 12 tests/
+18 cases with complete exports, exact reload, strict resume and intended limits/
+failures/cleanup. Linux product peak 0.574 GB, 39.726 s; job wall 111 s, not exact
+billing. No accepted science or UCloud work was repeated.
+
+**Exact next step: review the private PR and authorize a merge only after current-head checks.**
+[PR #1](https://github.com/Rasmus-allesoee/dl_binner/pull/1) targets main with source
+history intact. `@codex review` was requested; no response at this record. The
+watcher reports clean CI/mergeability/no unresolved threads, not independent approval.
+Refresh checks/reviews for the final head and address concrete findings. The owner
+explicitly says **do not merge or publish in this task**. No merge commit exists.
+After separately authorized merge, start benchmark work on a new branch from
+updated main; no benchmark/architecture execution is part of this task.
 
 Owner direction: after the completed bounded readiness step, review/merge the
 first usable prototype

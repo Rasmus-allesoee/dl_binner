@@ -1,6 +1,6 @@
 # E008: Product execution and private PR validation
 
-Prepared 2026-10-07; status **local checks accepted; private PR CI/review next**, biological outcome **not assessed**.
+Prepared 2026-10-07; status **local/native Linux software accepted; private PR open, review pending**, biological outcome **not assessed**.
 [D012](../../docs/decisions/D012-product-execution-and-usability.md) owns the bounded
 execution decision; [protocol](protocol.json) freezes prospective contracts and
 software-test ceilings. Accepted E006/E007 and science remain retained. Owner
@@ -40,3 +40,31 @@ uses one runtime, Python 3.12 and two threads with bounded test/RAM/time guards,
 never the optional unbounded product setting as its own test guard. No model,
 transform, objective, training defaults, clustering, scientific result or old
 wheel/source/journal is changed. GPU and Conda remain goals only.
+
+## Accepted native Linux CI and private PR
+
+[Private PR #1](https://github.com/Rasmus-allesoee/dl_binner/pull/1) is open against
+main; source history is preserved and no merge/publication requested.
+[Actual CI](https://github.com/Rasmus-allesoee/dl_binner/actions/runs/37646636562)
+passed for `5a0d753`; [retained review receipt](linux-observed.json) binds exact
+head/build/runtime/test bytes. Ubuntu CPU/Python 3.12 uses one fresh owned prefix,
+CPU-only Torch and two numerical threads/interop one/loader zero. All **12 tests/18
+native cases** pass, including actual no-safeguard and explicit-safeguard execution,
+eight nonoverlapping stages, partial/full resume, exact reload, both complete
+exports, masks/zeros/strata, intended errors/limits, heartbeat and absent-orphan
+snapshots. No ignored research asset or biological score is used.
+
+Product checks: **39.726 s / 574,414,848-byte sampled peak (0.574 GB)**. Runner job
+wall time **111 s**, including setup/build/checks/artifact upload. Two threads is
+the explicit software-test budget; whole-job allocation/billing and exact peaks
+are not inferred from sampled product work. Full Linux logs/builds/native outputs
+and inventories are retained in `artifacts/e008-product-execution/pr/linux-001/`.
+There is no CI failure to repair on this head. The all-check watcher reports
+clean/mergeable and no unresolved review threads, but is not review approval.
+
+An implementation review was requested through `@codex review`. No review was
+returned at this record; capture/triage any later findings rather than inventing
+approval or bypassing review. Exact current-head checks still need refreshing
+after final record-only pushes. The owner explicitly forbids merge/publication
+in this task. Next is review and an explicit exact-head merge decision; after a
+later authorized merge, benchmark work belongs on a new branch from updated main.

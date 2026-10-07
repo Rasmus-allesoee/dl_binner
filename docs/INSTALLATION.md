@@ -7,8 +7,9 @@ Python/stdlib; retain that base. Invoke lexical `bin/python` paths, not resolved
 interpreter symlinks.
 
 The recommended CPU/Linux target is **x86_64 / Python 3.12** for the binner runtime.
-E006's accepted Linux execution borrowed reviewed dependencies; an independent
-install of this packaging snapshot still needs an actual CI run. E007 tested Mac x86_64 Python 3.10. E008 validates the changed product;
+E006's accepted Linux execution borrowed reviewed dependencies; E008 accepts an independent
+CPU/Linux installation and actual native product CI on the recorded head. E007
+tested Mac x86_64 Python 3.10; E008 validates the changed product;
 read its actual CI status before claiming native Linux acceptance. Neither is an
 exhaustive matrix. Binner requires 3.10–3.12. Windows is unsupported.
 

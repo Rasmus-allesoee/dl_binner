@@ -87,7 +87,8 @@ for current scope. [WORKING](docs/WORKING.md) defines record ownership;
 [decisions](docs/decisions/README.md) retain findings and failures.
 [History](docs/history/README.md) is context, not current requirements.
 
-The next deliverable is a private implementation PR, not public publication.
+The private implementation PR is open; [STATE](docs/STATE.md) owns current checks
+and review/merge status. Public publication is a separate later decision.
 No project license has been selected. Public redistribution needs an owner license
 decision and historical-source packaging review; nothing is published here.
 

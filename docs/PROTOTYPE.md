@@ -13,7 +13,7 @@ built **0.1.0.dev3** wheel and a fresh versioned CPU environment.
 The executable is `dl-binner`; `python -m dl_binner` provides the same CLI.
 The built-in dispatcher runs numerical stages serially at the selected positive
 CPU thread count; there is no product maximum. Linux selects CPU PyTorch
-explicitly; prepared independent-install CI still needs a real authorized run.
+explicitly; E008 accepts actual independent-install CPU/Linux CI on its recorded head.
 The declared Python 3.10–3.12 range is not an exhaustively tested matrix.
 [E005](../experiments/E005-linux-pilot/OPERATIONS.md)
 has accepted the checksum-bound native CPU/Linux smoke and bounded
@@ -117,7 +117,7 @@ result/
   features/              original TNF/depth, ordered axes and masks
   training/              checkpoint, transforms, epochs and pre-save embeddings
   receipts/              successful stage output/evidence hashes
-  logs/invocation-*/     terminal.log, status.json, native logs/samples/benchmarks
+  logs/invocation-*/     terminal.log, status.json, native logs/samples
   staging/               uniquely named retained stage attempts
 ```
 
@@ -206,7 +206,8 @@ required for opening this PR; repair a concrete CI/review failure if one appears
 [E008](../experiments/E008-product-execution/README.md) implements the owner-requested
 resource/orchestration change and owns its native/CI validation. Dev1/dev2 wheels,
 source hashes, runs and environment bindings remain immutable evidence. Dev3 does
-not retrofit their journals. Product installation has no Snakemake dependency;
+not retrofit their journals. Local and actual CPU/Linux checks now pass; see E008
+for exact source/build heads and review status. Product installation has no Snakemake dependency;
 existing research/HPC workflows retain it where useful.
 
 People and AI agents use the same CLI/help, explicit FASTA/depth contracts, neutral

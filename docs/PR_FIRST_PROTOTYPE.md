@@ -1,6 +1,6 @@
 # Prepared private implementation PR
 
-Status: **ready local review description, not an opened PR**. Target branch `main`; source
+Status: **private PR #1 open; this file owns its implementation description**. Target branch `main`; source
 `first-binner-prototype`. Title: **Add the first usable CPU metagenomic binner**.
 Owner authorizes push/private PR/real CI/review for E008; **do not merge or publish**.
 
@@ -37,10 +37,12 @@ Validation is separated by scope:
   regressions: 11 tests/18 native cases at both four and two threads, including a
   physical outside-repository check. Known measured campaign 712.558 s, sampled
   stage peak 0.561 GB. Its receipt owns exact build identities and resource costs;
-  E008 executes Linux CI on the updated product before merge acceptance.
+  E008 accepts actual Linux CI on the updated product; final-head checks
+  and implementation review still precede merge acceptance.
 - [E008](../experiments/E008-product-execution/README.md): owner-requested uncapped
-  product choices, optional safeguards and built-in serial dispatch; local/native
-  installed regressions and actual private-PR CI/review evidence are recorded there.
+  product choices, optional safeguards and built-in serial dispatch; local and native Linux
+  installed regressions pass 12 tests/18 native cases. Actual private PR/CI evidence
+  and the pending review request are recorded there.
 
 The ordinary suite uses bounded generated software DNA and owns no ignored
 research dependencies. Earlier evidence reviews remain explicit opt-in research

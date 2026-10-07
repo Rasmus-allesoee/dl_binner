@@ -1,0 +1,79 @@
+{
+  "accepted_science_repeated": false,
+  "artifacts": {
+    "rebuilt_wheel": {
+      "bytes": 33400,
+      "sha256": "324a3c02c76d692318889272f1c42dc39f83df8a011db05001abbe9096bd19d8"
+    },
+    "sdist": {
+      "bytes": 52054,
+      "sha256": "bb4acc36f03a6345e07c9bde5aa17b604d7bbe46dfc83e3f88b0948acdcd8f90"
+    },
+    "wheel": {
+      "bytes": 33400,
+      "sha256": "324a3c02c76d692318889272f1c42dc39f83df8a011db05001abbe9096bd19d8"
+    }
+  },
+  "ci_url": "https://github.com/Rasmus-allesoee/dl_binner/actions/runs/37646636562",
+  "distributions": {
+    "dl-binner": "0.1.0.dev3",
+    "filelock": "4.0.10",
+    "fsspec": "2026.9.0",
+    "jinja2": "3.1.6",
+    "markupsafe": "3.0.4",
+    "mpmath": "1.3.0",
+    "networkx": "3.4.2",
+    "numpy": "1.26.4",
+    "pip": "25.1.1",
+    "psutil": "6.0.0",
+    "setuptools": "65.5.0",
+    "sympy": "1.14.0",
+    "threadpoolctl": "3.5.0",
+    "torch": "2.2.2+cpu",
+    "typing-extensions": "4.16.0",
+    "wheel": "0.45.1"
+  },
+  "fixture": {
+    "bp": 42311,
+    "contigs": 13,
+    "depth": {
+      "bytes": 301,
+      "sha256": "38a7e3e5871766048bb9089ed757d8f0c63e9364722c14dca4e1ce2934ec2e60"
+    },
+    "fasta": {
+      "bytes": 42552,
+      "sha256": "20248ffbaf471de15db70b6d595da55742c6166a94617d417d8e3910a3f1c751"
+    }
+  },
+  "head": "5a0d753e6adfd56baa7bd3c570569906074f80d9",
+  "job_completed_at": "2026-10-07T15:48:05Z",
+  "job_started_at": "2026-10-07T15:46:14Z",
+  "job_wall_seconds": 111,
+  "loader_workers": 0,
+  "merged": false,
+  "native_cases": 18,
+  "owned_imports": true,
+  "pr_url": "https://github.com/Rasmus-allesoee/dl_binner/pull/1",
+  "product_peak_sampled_rss_bytes": 574414848,
+  "product_receipt": {
+    "bytes": 684,
+    "sha256": "c026837fc50ea317200bfd61b51a9d673d86aba0ed3beb12736050a4056773a7"
+  },
+  "product_seconds": 39.726343089,
+  "python": "3.12.14",
+  "retained_download_bytes": 1459822,
+  "retained_files": 227,
+  "review_request": "https://github.com/Rasmus-allesoee/dl_binner/pull/1#issuecomment-6041459711",
+  "review_status": "Requested; no review returned at this receipt",
+  "runtime_receipt": {
+    "bytes": 4241,
+    "sha256": "3472a96baa293875d31be68ff8c970a0b67d1b1d241e9c6090c768ea29f16dd9"
+  },
+  "scientific_settings_changed": false,
+  "scope": "Actual private Linux CI; independent artifact/receipt review; generated software DNA only. Runner job wall time includes setup/artifact upload. Two threads is explicit test budget, not a measured provider invoice; exact whole-job RSS/storage/billing unmeasured.",
+  "status": "accepted-native-linux-dev3",
+  "tests": 12,
+  "threads": 2,
+  "torch_cuda": null,
+  "torch_interop": 1
+}
