@@ -1,0 +1,13 @@
+include README.md pyproject.toml MANIFEST.in
+include docs/INSTALLATION.md docs/PROTOTYPE.md
+recursive-include requirements *.txt
+prune tests
+recursive-include tests/product *.py *.json
+include scripts/test_product.py scripts/check_distribution.py scripts/check_runtime.py
+recursive-include src/dl_binner *.py *.json *.smk
+global-exclude __pycache__ *.py[cod] .DS_Store
+prune agent_context
+prune artifacts
+prune runs
+prune data
+prune scratch

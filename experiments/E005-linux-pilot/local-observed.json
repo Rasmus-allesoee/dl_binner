@@ -1,0 +1,941 @@
+{
+  "attempts": [
+    {
+      "accounting": {
+        "learned": {
+          "assigned": 12,
+          "excluded": 2,
+          "unassigned": 0
+        },
+        "raw": {
+          "assigned": 10,
+          "excluded": 2,
+          "unassigned": 2
+        }
+      },
+      "actual_training": {
+        "library_pools": [
+          {
+            "architecture": "Haswell",
+            "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.23.dev"
+          },
+          {
+            "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/lib/python3.10/site-packages/functorch/.dylibs/libiomp5.dylib",
+            "internal_api": "openmp",
+            "num_threads": 4,
+            "prefix": "libiomp",
+            "user_api": "openmp",
+            "version": null
+          }
+        ],
+        "loader_workers": 0,
+        "numerical_threads": 4,
+        "parameter_count": 26048,
+        "torch_interop": 1,
+        "training_average_cpus": 2.343883257744672,
+        "training_process_cpu_seconds": 0.4536889999999998,
+        "training_wall_seconds": 0.1935629679937847
+      },
+      "bp": 52235,
+      "checkpoint_sha256": "6f8e6bde7aafe0d5b378fc83e1099b16c067a2cb27b1c9454570cb11c4f24e6c",
+      "checks": {
+        "cached_tnf_reused": true,
+        "checkpoint_reload": true,
+        "complete_exports": true,
+        "contig_sample_axes": true,
+        "depth_masks": true,
+        "native_fresh_tiny_reader": true,
+        "reload_max_abs": 0.0,
+        "scope": "native software smoke on retained real DNA plus synthetic sentinel/depth; no biological result",
+        "status": "passed"
+      },
+      "contigs": 14,
+      "declared_local_thread_budget": 4,
+      "declared_thread_wall_hours": 0.04023235853111449,
+      "driver_seconds_before_collection": 36.20912267800304,
+      "eligible": 12,
+      "failure_checks": {
+        "cases": {
+          "corrupt-checkpoint": {
+            "exit_code": 1,
+            "seconds": 1.831335817987565
+          },
+          "missing-depth": {
+            "exit_code": 1,
+            "seconds": 0.2720051539945416
+          },
+          "refuse-overwrite": {
+            "exit_code": 1,
+            "seconds": 0.06525520200375468
+          }
+        },
+        "status": "passed"
+      },
+      "locator": "artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-jzz5n5b0",
+      "native_linux": false,
+      "retained_files": 105,
+      "retained_inventory_sha256": "f7812e1217bc73c49a1795bc0fd0f1ebaec223895d52b31542fb141c15d82a47",
+      "retained_logical_bytes": 941506,
+      "return_bytes": 692313,
+      "return_sha256": "8ab707281cf36e10dfbd2e249a2db3475343b2546b55b7141a3fd3ced8c99fa3",
+      "runtime_inventory_sha256": "352bc8367494f976b9f22eecb626e04948de7afa368fafd7fe198cedfa426573",
+      "samples": [
+        "smoke_A",
+        "smoke_B"
+      ],
+      "source_commit": "da53b9ba6e869008b01e3b093fa84dbca1462df7",
+      "stages": [
+        {
+          "allocated_vcpu_hours": 0.0019499307344408912,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "name": "binner-entry-pip-check",
+          "peak_sampled_rss_bytes": 42971136,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.609708267011742,
+          "sampled_cpu_seconds": 1.07,
+          "stop_reason": null,
+          "wall_seconds": 1.7549376609968022
+        },
+        {
+          "allocated_vcpu_hours": 0.00502084105333779,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-S",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/transfer-v1/e005-linux-smoke/scripts/e005_probe.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local",
+            "binner",
+            "4",
+            "local"
+          ],
+          "exit_code": 0,
+          "name": "binner-probe",
+          "peak_sampled_rss_bytes": 180375552,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.7479933173863194,
+          "sampled_cpu_seconds": 3.38,
+          "stop_reason": null,
+          "wall_seconds": 4.518756948004011
+        },
+        {
+          "allocated_vcpu_hours": 0.0015443810488795862,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "name": "workflow-entry-pip-check",
+          "peak_sampled_rss_bytes": 36233216,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.4028942356380445,
+          "sampled_cpu_seconds": 0.56,
+          "stop_reason": null,
+          "wall_seconds": 1.3899429439916275
+        },
+        {
+          "allocated_vcpu_hours": 0.001101064036677902,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-S",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/transfer-v1/e005-linux-smoke/scripts/e005_probe.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local",
+            "workflow",
+            "4",
+            "local"
+          ],
+          "exit_code": 0,
+          "name": "workflow-probe",
+          "peak_sampled_rss_bytes": 25829376,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.26237246814501,
+          "sampled_cpu_seconds": 0.26,
+          "stop_reason": null,
+          "wall_seconds": 0.9909576330101117
+        },
+        {
+          "allocated_vcpu_hours": 0.025537248625542918,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "snakemake",
+            "--snakefile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/transfer-v1/e005-linux-smoke/workflows/first-binner/linux_smoke.smk",
+            "--configfile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-jzz5n5b0/resolved-config.json",
+            "--directory",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-jzz5n5b0/smoke",
+            "--cores",
+            "4",
+            "--jobs",
+            "1",
+            "--resources",
+            "mem_mb=8000",
+            "--scheduler",
+            "greedy",
+            "--benchmark-extended",
+            "--runtime-source-cache-path",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-jzz5n5b0/source-cache",
+            "--keep-incomplete",
+            "--printshellcmds",
+            "--latency-wait",
+            "2"
+          ],
+          "exit_code": 0,
+          "name": "native-smoke",
+          "peak_sampled_rss_bytes": 262500352,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.6404587978673774,
+          "sampled_cpu_seconds": 14.719999999999997,
+          "stop_reason": null,
+          "wall_seconds": 22.983523762988625
+        },
+        {
+          "allocated_vcpu_hours": 0.001279133595558556,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "snakemake",
+            "--snakefile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/transfer-v1/e005-linux-smoke/workflows/first-binner/linux_smoke.smk",
+            "--configfile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-jzz5n5b0/resolved-config.json",
+            "--directory",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-jzz5n5b0/smoke",
+            "--cores",
+            "4",
+            "--jobs",
+            "1",
+            "--resources",
+            "mem_mb=8000",
+            "--scheduler",
+            "greedy",
+            "--benchmark-extended",
+            "--runtime-source-cache-path",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-jzz5n5b0/source-cache",
+            "--keep-incomplete",
+            "--printshellcmds",
+            "--latency-wait",
+            "2",
+            "--dry-run"
+          ],
+          "exit_code": 0,
+          "name": "completed-resume",
+          "peak_sampled_rss_bytes": 48803840,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.6862283821061559,
+          "sampled_cpu_seconds": 0.79,
+          "stop_reason": null,
+          "wall_seconds": 1.1512202360027004
+        },
+        {
+          "allocated_vcpu_hours": 0.0029859524255476167,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/transfer-v1/e005-linux-smoke/scripts/e005_failure_checks.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/transfer-v1/e005-linux-smoke/input/smoke/assembly.fna",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/transfer-v1/e005-linux-smoke/input/smoke/mean-depth.tsv",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-jzz5n5b0/smoke/checkpoint.pt",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-jzz5n5b0/smoke/features.npz",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-jzz5n5b0/failure-checks",
+            "4"
+          ],
+          "exit_code": 0,
+          "name": "fatal-input-contracts",
+          "peak_sampled_rss_bytes": 164306944,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.9414453783856116,
+          "sampled_cpu_seconds": 2.53,
+          "stop_reason": null,
+          "wall_seconds": 2.687357182992855
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "checkpoint_created": false,
+      "declared_local_thread_budget": 4,
+      "declared_thread_wall_hours": 0.04491305933667011,
+      "driver_seconds_before_collection": 40.421753403003095,
+      "error": "RuntimeError('Stage failed: workflow-entry-pip-check; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-m2veedyj/stages/workflow-entry-pip-check.log')",
+      "locator": "artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-m2veedyj",
+      "native_linux": false,
+      "retained_files": 10,
+      "retained_inventory_sha256": "bb2070875d7560c29a49f0f19fbdffecaf2e77427714dbb858c868a12f279175",
+      "retained_logical_bytes": 10295,
+      "return_bytes": 4307,
+      "return_sha256": "596e4ba4a2e060748d7b983d554489a94c17fda1a3265dbc650eccdc37c32690",
+      "source_commit": null,
+      "status": "failed"
+    },
+    {
+      "accounting": {
+        "learned": {
+          "assigned": 12,
+          "excluded": 2,
+          "unassigned": 0
+        },
+        "raw": {
+          "assigned": 10,
+          "excluded": 2,
+          "unassigned": 2
+        }
+      },
+      "actual_training": {
+        "library_pools": [
+          {
+            "architecture": "Haswell",
+            "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.23.dev"
+          },
+          {
+            "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/lib/python3.10/site-packages/functorch/.dylibs/libiomp5.dylib",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "libiomp",
+            "user_api": "openmp",
+            "version": null
+          }
+        ],
+        "loader_workers": 0,
+        "numerical_threads": 1,
+        "parameter_count": 26048,
+        "torch_interop": 1,
+        "training_average_cpus": 0.5076664459490394,
+        "training_process_cpu_seconds": 0.09146999999999972,
+        "training_wall_seconds": 0.18017736001638696
+      },
+      "bp": 52235,
+      "checkpoint_sha256": "6f8e6bde7aafe0d5b378fc83e1099b16c067a2cb27b1c9454570cb11c4f24e6c",
+      "checks": {
+        "cached_tnf_reused": true,
+        "checkpoint_reload": true,
+        "complete_exports": true,
+        "contig_sample_axes": true,
+        "depth_masks": true,
+        "native_fresh_tiny_reader": true,
+        "reload_max_abs": 0.0,
+        "scope": "native software smoke on retained real DNA plus synthetic sentinel/depth; no biological result",
+        "status": "passed"
+      },
+      "contigs": 14,
+      "declared_local_thread_budget": 1,
+      "declared_thread_wall_hours": 0.009224928105557207,
+      "driver_seconds_before_collection": 33.20974118000595,
+      "eligible": 12,
+      "failure_checks": {
+        "cases": {
+          "corrupt-checkpoint": {
+            "exit_code": 1,
+            "seconds": 2.2381255550135393
+          },
+          "missing-depth": {
+            "exit_code": 1,
+            "seconds": 0.28631000500172377
+          },
+          "refuse-overwrite": {
+            "exit_code": 1,
+            "seconds": 0.1153895030147396
+          }
+        },
+        "status": "passed"
+      },
+      "locator": "artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-vmgxhx9f",
+      "native_linux": false,
+      "retained_files": 105,
+      "retained_inventory_sha256": "6fcbb024418fc23a443e816075b101cd38115208c22539d16494e6ab84fdab69",
+      "retained_logical_bytes": 941175,
+      "return_bytes": 692223,
+      "return_sha256": "d20c9c2c6b7c7ae34a60b206fe5facbb2a7ea7743d21b6a1a92b122a8cfebf09",
+      "runtime_inventory_sha256": "73741e8a214a0ffec0c230b3287de54473dc7add2dbd74dbc2b0082c355e41fd",
+      "samples": [
+        "smoke_A",
+        "smoke_B"
+      ],
+      "source_commit": "da53b9ba6e869008b01e3b093fa84dbca1462df7",
+      "stages": [
+        {
+          "allocated_vcpu_hours": 0.0011203033722186875,
+          "allocated_vcpus": 1,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "name": "binner-entry-pip-check",
+          "peak_sampled_rss_bytes": 43274240,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.5901179336823952,
+          "sampled_cpu_seconds": 2.38,
+          "stop_reason": null,
+          "wall_seconds": 4.033092139987275
+        },
+        {
+          "allocated_vcpu_hours": 0.001457766895554313,
+          "allocated_vcpus": 1,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-S",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v1/e005-linux-smoke/scripts/e005_probe.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local",
+            "binner",
+            "1",
+            "local"
+          ],
+          "exit_code": 0,
+          "name": "binner-probe",
+          "peak_sampled_rss_bytes": 180502528,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.7355237833237472,
+          "sampled_cpu_seconds": 3.86,
+          "stop_reason": null,
+          "wall_seconds": 5.247960823995527
+        },
+        {
+          "allocated_vcpu_hours": 0.0004212674694442992,
+          "allocated_vcpus": 1,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "name": "workflow-entry-pip-check",
+          "peak_sampled_rss_bytes": 36151296,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.40222532413424034,
+          "sampled_cpu_seconds": 0.61,
+          "stop_reason": null,
+          "wall_seconds": 1.5165628899994772
+        },
+        {
+          "allocated_vcpu_hours": 0.0002281067352790463,
+          "allocated_vcpus": 1,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-S",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v1/e005-linux-smoke/scripts/e005_probe.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local",
+            "workflow",
+            "1",
+            "local"
+          ],
+          "exit_code": 0,
+          "name": "workflow-probe",
+          "peak_sampled_rss_bytes": 25100288,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.3044383777598326,
+          "sampled_cpu_seconds": 0.25,
+          "stop_reason": null,
+          "wall_seconds": 0.8211842470045667
+        },
+        {
+          "allocated_vcpu_hours": 0.004187176516109806,
+          "allocated_vcpus": 1,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "snakemake",
+            "--snakefile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v1/e005-linux-smoke/workflows/first-binner/linux_smoke.smk",
+            "--configfile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-vmgxhx9f/resolved-config.json",
+            "--directory",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-vmgxhx9f/smoke",
+            "--cores",
+            "1",
+            "--jobs",
+            "1",
+            "--resources",
+            "mem_mb=8000",
+            "--scheduler",
+            "greedy",
+            "--benchmark-extended",
+            "--runtime-source-cache-path",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-vmgxhx9f/source-cache",
+            "--keep-incomplete",
+            "--printshellcmds",
+            "--latency-wait",
+            "2"
+          ],
+          "exit_code": 0,
+          "name": "native-smoke",
+          "peak_sampled_rss_bytes": 266711040,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.6706985775566205,
+          "sampled_cpu_seconds": 10.109999999999998,
+          "stop_reason": null,
+          "wall_seconds": 15.073835457995301
+        },
+        {
+          "allocated_vcpu_hours": 0.0004845280119479867,
+          "allocated_vcpus": 1,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "snakemake",
+            "--snakefile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v1/e005-linux-smoke/workflows/first-binner/linux_smoke.smk",
+            "--configfile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-vmgxhx9f/resolved-config.json",
+            "--directory",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-vmgxhx9f/smoke",
+            "--cores",
+            "1",
+            "--jobs",
+            "1",
+            "--resources",
+            "mem_mb=8000",
+            "--scheduler",
+            "greedy",
+            "--benchmark-extended",
+            "--runtime-source-cache-path",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-vmgxhx9f/source-cache",
+            "--keep-incomplete",
+            "--printshellcmds",
+            "--latency-wait",
+            "2",
+            "--dry-run"
+          ],
+          "exit_code": 0,
+          "name": "completed-resume",
+          "peak_sampled_rss_bytes": 46182400,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.5503637768940651,
+          "sampled_cpu_seconds": 0.96,
+          "stop_reason": null,
+          "wall_seconds": 1.744300843012752
+        },
+        {
+          "allocated_vcpu_hours": 0.0010060181463874566,
+          "allocated_vcpus": 1,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v1/e005-linux-smoke/scripts/e005_failure_checks.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v1/e005-linux-smoke/input/smoke/assembly.fna",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v1/e005-linux-smoke/input/smoke/mean-depth.tsv",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-vmgxhx9f/smoke/checkpoint.pt",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-vmgxhx9f/smoke/features.npz",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v1/linux-smoke-vmgxhx9f/failure-checks",
+            "1"
+          ],
+          "exit_code": 0,
+          "name": "fatal-input-contracts",
+          "peak_sampled_rss_bytes": 164265984,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.5908883916051161,
+          "sampled_cpu_seconds": 2.14,
+          "stop_reason": null,
+          "wall_seconds": 3.621665326994844
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "accounting": {
+        "learned": {
+          "assigned": 12,
+          "excluded": 2,
+          "unassigned": 0
+        },
+        "raw": {
+          "assigned": 10,
+          "excluded": 2,
+          "unassigned": 2
+        }
+      },
+      "actual_training": {
+        "library_pools": [
+          {
+            "architecture": "Haswell",
+            "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.23.dev"
+          },
+          {
+            "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/lib/python3.10/site-packages/functorch/.dylibs/libiomp5.dylib",
+            "internal_api": "openmp",
+            "num_threads": 4,
+            "prefix": "libiomp",
+            "user_api": "openmp",
+            "version": null
+          }
+        ],
+        "loader_workers": 0,
+        "numerical_threads": 4,
+        "parameter_count": 26048,
+        "torch_interop": 1,
+        "training_average_cpus": 2.9020807541944804,
+        "training_process_cpu_seconds": 0.8445809999999998,
+        "training_wall_seconds": 0.29102601599879563
+      },
+      "bp": 52235,
+      "checkpoint_sha256": "6f8e6bde7aafe0d5b378fc83e1099b16c067a2cb27b1c9454570cb11c4f24e6c",
+      "checks": {
+        "cached_tnf_reused": true,
+        "checkpoint_reload": true,
+        "complete_exports": true,
+        "contig_sample_axes": true,
+        "depth_masks": true,
+        "native_fresh_tiny_reader": true,
+        "reload_max_abs": 0.0,
+        "scope": "native software smoke on retained real DNA plus synthetic sentinel/depth; no biological result",
+        "status": "passed"
+      },
+      "contigs": 14,
+      "declared_local_thread_budget": 4,
+      "declared_thread_wall_hours": 0.04390317151332662,
+      "driver_seconds_before_collection": 39.51285436199396,
+      "eligible": 12,
+      "failure_checks": {
+        "cases": {
+          "corrupt-checkpoint": {
+            "exit_code": 1,
+            "seconds": 2.4787362900096923
+          },
+          "missing-depth": {
+            "exit_code": 1,
+            "seconds": 0.3596786800189875
+          },
+          "refuse-overwrite": {
+            "exit_code": 1,
+            "seconds": 0.09490155801177025
+          }
+        },
+        "status": "passed"
+      },
+      "locator": "artifacts/e005-linux-pilot/local-owner-v2/linux-smoke-2u_iuxtv",
+      "native_linux": false,
+      "retained_files": 106,
+      "retained_inventory_sha256": "323f61f2435dc2af0e999f7bde7eb79f426b8c8170d176e37ca4df7910db9dca",
+      "retained_logical_bytes": 958336,
+      "return_bytes": 697220,
+      "return_sha256": "a52ba6b654bffa5e144141ab79e67f60fa938d7fce4b41aa15879c3988c224f6",
+      "runtime_inventory_sha256": "352bc8367494f976b9f22eecb626e04948de7afa368fafd7fe198cedfa426573",
+      "samples": [
+        "smoke_A",
+        "smoke_B"
+      ],
+      "source_commit": "2f0b9a58bcf86f29f23b0f3bed16f31171a359f4",
+      "stages": [
+        {
+          "allocated_vcpu_hours": 0.002606474118882842,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "name": "binner-entry-pip-check",
+          "peak_sampled_rss_bytes": 43274240,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.5882787487606183,
+          "sampled_cpu_seconds": 1.38,
+          "stop_reason": null,
+          "wall_seconds": 2.3458267069945578
+        },
+        {
+          "allocated_vcpu_hours": 0.00706220086334118,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-S",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v2/e005-linux-smoke/scripts/e005_probe.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local",
+            "binner",
+            "4",
+            "local"
+          ],
+          "exit_code": 0,
+          "name": "binner-probe",
+          "peak_sampled_rss_bytes": 179298304,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.7394610155213781,
+          "sampled_cpu_seconds": 4.7,
+          "stop_reason": null,
+          "wall_seconds": 6.355980777007062
+        },
+        {
+          "allocated_vcpu_hours": 0.0022047295066941943,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "name": "workflow-entry-pip-check",
+          "peak_sampled_rss_bytes": 38400000,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.4737290634852076,
+          "sampled_cpu_seconds": 0.94,
+          "stop_reason": null,
+          "wall_seconds": 1.984256556024775
+        },
+        {
+          "allocated_vcpu_hours": 0.0011663015366907025,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-S",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v2/e005-linux-smoke/scripts/e005_probe.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local",
+            "workflow",
+            "4",
+            "local"
+          ],
+          "exit_code": 0,
+          "name": "workflow-probe",
+          "peak_sampled_rss_bytes": 21651456,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.2858037332945157,
+          "sampled_cpu_seconds": 0.3,
+          "stop_reason": null,
+          "wall_seconds": 1.0496713830216322
+        },
+        {
+          "allocated_vcpu_hours": 0.024205098742224637,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "snakemake",
+            "--snakefile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v2/e005-linux-smoke/workflows/first-binner/linux_smoke.smk",
+            "--configfile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v2/linux-smoke-2u_iuxtv/resolved-config.json",
+            "--directory",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v2/linux-smoke-2u_iuxtv/smoke",
+            "--cores",
+            "4",
+            "--jobs",
+            "1",
+            "--resources",
+            "mem_mb=8000",
+            "--scheduler",
+            "greedy",
+            "--benchmark-extended",
+            "--runtime-source-cache-path",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v2/linux-smoke-2u_iuxtv/source-cache",
+            "--keep-incomplete",
+            "--printshellcmds",
+            "--latency-wait",
+            "2"
+          ],
+          "exit_code": 0,
+          "name": "native-smoke",
+          "peak_sampled_rss_bytes": 262209536,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 1.073235769638105,
+          "sampled_cpu_seconds": 23.38000000000001,
+          "stop_reason": null,
+          "wall_seconds": 21.784588868002174
+        },
+        {
+          "allocated_vcpu_hours": 0.002072829860003872,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "snakemake",
+            "--snakefile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v2/e005-linux-smoke/workflows/first-binner/linux_smoke.smk",
+            "--configfile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v2/linux-smoke-2u_iuxtv/resolved-config.json",
+            "--directory",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v2/linux-smoke-2u_iuxtv/smoke",
+            "--cores",
+            "4",
+            "--jobs",
+            "1",
+            "--resources",
+            "mem_mb=8000",
+            "--scheduler",
+            "greedy",
+            "--benchmark-extended",
+            "--runtime-source-cache-path",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v2/linux-smoke-2u_iuxtv/source-cache",
+            "--keep-incomplete",
+            "--printshellcmds",
+            "--latency-wait",
+            "2",
+            "--dry-run"
+          ],
+          "exit_code": 0,
+          "name": "completed-resume",
+          "peak_sampled_rss_bytes": 48730112,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.5681979985446455,
+          "sampled_cpu_seconds": 1.06,
+          "stop_reason": null,
+          "wall_seconds": 1.8655468740034848
+        },
+        {
+          "allocated_vcpu_hours": 0.003913816433341708,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v2/e005-linux-smoke/scripts/e005_failure_checks.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v2/e005-linux-smoke/input/smoke/assembly.fna",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/extracted-v2/e005-linux-smoke/input/smoke/mean-depth.tsv",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v2/linux-smoke-2u_iuxtv/smoke/checkpoint.pt",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v2/linux-smoke-2u_iuxtv/smoke/features.npz",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-v2/linux-smoke-2u_iuxtv/failure-checks",
+            "4"
+          ],
+          "exit_code": 0,
+          "name": "fatal-input-contracts",
+          "peak_sampled_rss_bytes": 166670336,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.9595635409882968,
+          "sampled_cpu_seconds": 3.38,
+          "stop_reason": null,
+          "wall_seconds": 3.5224347900075372
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "checkpoint_created": false,
+      "declared_local_thread_budget": 4,
+      "declared_thread_wall_hours": 0.018760296788888,
+      "driver_seconds_before_collection": 16.8842671099992,
+      "error": "RuntimeError('Stage failed: native-smoke; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-fatal/linux-smoke-rjm79n0h/stages/native-smoke.log')",
+      "locator": "artifacts/e005-linux-pilot/local-owner-fatal/linux-smoke-rjm79n0h",
+      "native_linux": false,
+      "native_stage": {
+        "allocated_vcpu_hours": 0.0038752677722045012,
+        "allocated_vcpus": 4,
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+          "-I",
+          "-m",
+          "snakemake",
+          "--snakefile",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/invalid-depth-fixture/e005-linux-smoke/workflows/first-binner/linux_smoke.smk",
+          "--configfile",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-fatal/linux-smoke-rjm79n0h/resolved-config.json",
+          "--directory",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-fatal/linux-smoke-rjm79n0h/smoke",
+          "--cores",
+          "4",
+          "--jobs",
+          "1",
+          "--resources",
+          "mem_mb=8000",
+          "--scheduler",
+          "greedy",
+          "--benchmark-extended",
+          "--runtime-source-cache-path",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-owner-fatal/linux-smoke-rjm79n0h/source-cache",
+          "--keep-incomplete",
+          "--printshellcmds",
+          "--latency-wait",
+          "2"
+        ],
+        "exit_code": 1,
+        "peak_sampled_rss_bytes": 71176192,
+        "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+        "sampled_average_cpus": 0.593507374250841,
+        "sampled_cpu_seconds": 2.07,
+        "stop_reason": null,
+        "wall_seconds": 3.487740994984051
+      },
+      "retained_files": 23,
+      "retained_inventory_sha256": "a3441957841b53c2ac9474bf44790c4c612e10666fe551627a1f50866e675625",
+      "retained_logical_bytes": 44755,
+      "return_bytes": 11451,
+      "return_sha256": "66311e00496a404dc6f4dcb2a962189fe6f301eddd5a947801c2c583a024cc9f",
+      "source_commit": null,
+      "status": "failed"
+    }
+  ],
+  "date": "2026-10-05",
+  "execution": "local deployment fixtures complete; owner/Linux pending; pilot unrun",
+  "record": "E005",
+  "scope": {
+    "biology": "not assessed; synthetic depth only",
+    "costs": "local declared-thread budgets; not UCloud billing; prefix creation outside driver clock",
+    "linux_bootstrap_or_ABI_executed": false,
+    "local_platform": "Mac, isolated binner Python 3.10.15 and workflow Python 3.13.12",
+    "native_workers_mocked": [],
+    "numerical_threads_tested": [
+      1,
+      4
+    ],
+    "real_upstream_archive_filesystem_test": true,
+    "retained_old_coordinator": "read-only rejected preflight; missing setuptools; not modified",
+    "target_platform": "Linux x86_64, separate standalone Python 3.12.10 prefixes",
+    "target_wheel_dependency_closure": true
+  },
+  "transfer": {
+    "archive": "artifacts/e005-linux-pilot/transfer-v2/e005-linux-smoke-v2.tar.gz",
+    "bytes": 302178719,
+    "sha256": "289568e4d000aed8228b9fb119e4586c4c0d94598165b7f7c29a165cadf2a835",
+    "source_commit": "2f0b9a58bcf86f29f23b0f3bed16f31171a359f4"
+  }
+}

@@ -18,4 +18,5 @@ For a new significant decision, record the ID, date, status, problem, alternativ
 
 The numerical decisions inside [historical planning](../history/DECISIONS.md) belong to that earlier document, not this `D` sequence. Stable goals already incorporated into PROJECT_INTENT need no duplicate decision here.
 
-- [D011: provisional contrastive prototype and frozen-GLM feasibility](D011-first-binner-prototype.md)
+- [D011: composition-based contrastive prototype; frozen GLM deferred](D011-first-binner-prototype.md)
+- [D012: Product resources, serial execution and shared usability](D012-product-execution-and-usability.md)

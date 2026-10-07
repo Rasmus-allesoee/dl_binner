@@ -1,0 +1,394 @@
+{
+  "archive_files": 462,
+  "cases": [
+    "changed-input",
+    "changed-sample-axis",
+    "completed-native-dag",
+    "corrupt-checkpoint",
+    "corrupt-export",
+    "depth-completed-resume",
+    "depth-partial",
+    "depth-partial-resume",
+    "empty-partition",
+    "fresh-populated-refusal",
+    "installed-console-help",
+    "insufficient-evidence",
+    "invalid-fasta",
+    "missing-depth-axis",
+    "overall-timeout",
+    "scheduler-cpu",
+    "scheduler-memory",
+    "sequence-fresh",
+    "supervisor-fatal",
+    "supervisor-heartbeat",
+    "supervisor-memory"
+  ],
+  "cost": {
+    "allocated_vcpu_hours_through_collection": 0.23865888962936072,
+    "archive": "/work/Home/dl_binner/e006/transfer/generic-linux-smoke-y9xix7p9-return.tar.gz",
+    "archive_bytes": {
+      "bytes": 1174633,
+      "sha256": "949bb485bfcaeeaa6ea70678f49cf045640d019e395d61ee708e17b5b35106ad"
+    },
+    "checksum": "/work/Home/dl_binner/e006/transfer/generic-linux-smoke-y9xix7p9-return.tar.gz.sha256",
+    "driver_seconds_through_collection": 214.79300066642463,
+    "exit_code": 0,
+    "retained_files": 462,
+    "retained_logical_bytes": 2091897,
+    "status": "passed"
+  },
+  "date": "2026-10-06",
+  "dependencies_verified_read_only": true,
+  "depth_resume_invocations": {
+    "invocation-20261006T205435-81728c95": {
+      "native_logs": [
+        "01-features.native.log",
+        "02-train.native.log"
+      ],
+      "status": "partial"
+    },
+    "invocation-20261006T205453-1584f7fe": {
+      "native_logs": [
+        "03-raw-embed.native.log",
+        "04-raw-cluster.native.log",
+        "05-raw-export.native.log",
+        "06-learned-embed.native.log",
+        "07-learned-cluster.native.log",
+        "08-learned-export.native.log"
+      ],
+      "status": "completed"
+    },
+    "invocation-20261006T205514-65a5e7cc": {
+      "native_logs": [],
+      "status": "reused_complete"
+    },
+    "invocation-20261006T205530-247ca65e": {
+      "native_logs": [],
+      "status": "failed"
+    },
+    "invocation-20261006T205530-7fb312e8": {
+      "native_logs": [],
+      "status": "failed"
+    },
+    "invocation-20261006T205531-28179c37": {
+      "native_logs": [],
+      "status": "failed"
+    },
+    "invocation-20261006T205531-77389ad8": {
+      "native_logs": [],
+      "status": "failed"
+    }
+  },
+  "limitations": [
+    "No biological/MAG-quality/generalization or bulk-scaling claim",
+    "Stage /proc samples include coordinator; brief peaks/parent hashing outside stage samples not exact peaks",
+    "Runtime byte trees are native retained before/after receipts; remote libraries not returned for local rehash",
+    "Orphan absence is native suite ps assertion, not a retained process-list snapshot or current remote query",
+    "Completed bytes are independently receipt-bound; mtime preservation is native suite assertion, not archive metadata",
+    "Owned package-prefix/cache storage not inventoried in return; shared dependency bytes are pre-existing, not new storage",
+    "Allocation time excludes owner upload/idle/teardown and is not an invoice"
+  ],
+  "native_suite_resources": {
+    "command": [
+      "/work/Home/dl_binner/e006/envs/binner-run-0.1.0.dev1-v1-4u1zulxo/runtime/bin/python",
+      "-I",
+      "-B",
+      "-u",
+      "/work/Home/dl_binner/e006/transfer/launches/generic-smoke.66P1H3/e006-linux-smoke/scripts/e006_smoke.py",
+      "--output",
+      "/work/Home/dl_binner/e006/generic-linux-smoke-y9xix7p9/smoke",
+      "--workflow-python",
+      "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+      "--bundle",
+      "/work/Home/dl_binner/e006/transfer/launches/generic-smoke.66P1H3/e006-linux-smoke"
+    ],
+    "exit_code": 0,
+    "launched_pid": 926,
+    "peak_sampled_rss_bytes": 422125568,
+    "rss_bytes_ceiling": 8000000000,
+    "sample_includes_coordinator": true,
+    "sampled_average_cpus": 0.6694748170674971,
+    "sampled_cpu_seconds": 93.82,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 900,
+    "stop_reason": null,
+    "wall_seconds": 140.13969996804371
+  },
+  "native_workers_mocked": [],
+  "next_step": "One bounded private-PR readiness milestone; no science rerun, publication or architecture gate",
+  "package_prefix": "/work/Home/dl_binner/e006/envs/binner-run-0.1.0.dev1-v1-4u1zulxo/runtime",
+  "packet_sha256": "d15864bd606676991b95c3fe2bb2d4198394106e22aead022fee9b64edc08569",
+  "peak_sampled_rss_bytes": 422125568,
+  "read_only_trees": {
+    "binner": {
+      "bytes": 899108352,
+      "excluded_metadata": [
+        ".DS_Store"
+      ],
+      "files": 19555,
+      "root": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/lib/python3.12/site-packages",
+      "tree_sha256": "4609ce8f1745c485f0e56db07a34f4f1d14bcccef0991d8ced597212ee1bad1c"
+    },
+    "workflow": {
+      "bytes": 86863735,
+      "excluded_metadata": [
+        ".DS_Store"
+      ],
+      "files": 3684,
+      "root": "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/lib/python3.12/site-packages",
+      "tree_sha256": "9f889b7fa2a8b5cde66aa31f3be140a6f5a2adc338c99dc47f4d5c9879d3f423"
+    }
+  },
+  "review_source": {
+    "bytes": 22883,
+    "sha256": "bf6dc8a30bdd75835130a4b9e66e7c9bcb1459075553219348ecd7fbbfba3b55"
+  },
+  "runs": {
+    "depth run": {
+      "arms": {
+        "learned": {
+          "bin_count": 1,
+          "reasons": {
+            "assigned": {},
+            "excluded": {
+              "below_min_length": 2,
+              "no_valid_fourmers": 1
+            },
+            "unassigned": {
+              "community_below_min_size": 4
+            }
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 34766,
+              "contigs": 6
+            },
+            "excluded": {
+              "bp": 1279,
+              "contigs": 3
+            },
+            "unassigned": {
+              "bp": 6266,
+              "contigs": 4
+            }
+          }
+        },
+        "raw": {
+          "bin_count": 2,
+          "reasons": {
+            "assigned": {},
+            "excluded": {
+              "below_min_length": 2,
+              "no_valid_fourmers": 1
+            },
+            "unassigned": {
+              "community_below_min_size": 2
+            }
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 36033,
+              "contigs": 8
+            },
+            "excluded": {
+              "bp": 1279,
+              "contigs": 3
+            },
+            "unassigned": {
+              "bp": 4999,
+              "contigs": 2
+            }
+          }
+        }
+      },
+      "bp": 42311,
+      "checkpoint_reload_exact": true,
+      "contigs": 13,
+      "masks": {
+        "all_zero_depth_contigs": 3,
+        "depth_observations_present": true,
+        "eligible_contigs": 10,
+        "no_valid_fourmers": 1,
+        "zero_depth_by_sample": {
+          "software_S1": 5,
+          "software_S2": 7
+        }
+      },
+      "native_stage_count": 8,
+      "training_average_cpus": 2.529808401797126,
+      "training_seconds": 1.418115867767483
+    },
+    "empty partition": {
+      "arms": {
+        "learned": {
+          "bin_count": 0,
+          "reasons": {
+            "assigned": {},
+            "excluded": {
+              "below_min_length": 1,
+              "no_valid_fourmers": 1
+            },
+            "unassigned": {
+              "isolated_graph": 2
+            }
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 780,
+              "contigs": 2
+            },
+            "unassigned": {
+              "bp": 1268,
+              "contigs": 2
+            }
+          }
+        },
+        "raw": {
+          "bin_count": 0,
+          "reasons": {
+            "assigned": {},
+            "excluded": {
+              "below_min_length": 1,
+              "no_valid_fourmers": 1
+            },
+            "unassigned": {
+              "isolated_graph": 2
+            }
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 780,
+              "contigs": 2
+            },
+            "unassigned": {
+              "bp": 1268,
+              "contigs": 2
+            }
+          }
+        }
+      },
+      "bp": 2048,
+      "checkpoint_reload_exact": true,
+      "contigs": 4,
+      "masks": {
+        "all_zero_depth_contigs": null,
+        "depth_observations_present": false,
+        "eligible_contigs": 2,
+        "no_valid_fourmers": 1,
+        "zero_depth_by_sample": {}
+      },
+      "native_stage_count": 8,
+      "training_average_cpus": 3.7495593390988953,
+      "training_seconds": 0.024557678028941154
+    },
+    "sequence run": {
+      "arms": {
+        "learned": {
+          "bin_count": 2,
+          "reasons": {
+            "assigned": {},
+            "excluded": {
+              "below_min_length": 2,
+              "no_valid_fourmers": 1
+            },
+            "unassigned": {
+              "community_below_min_size": 2
+            }
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 37533,
+              "contigs": 8
+            },
+            "excluded": {
+              "bp": 1279,
+              "contigs": 3
+            },
+            "unassigned": {
+              "bp": 3499,
+              "contigs": 2
+            }
+          }
+        },
+        "raw": {
+          "bin_count": 2,
+          "reasons": {
+            "assigned": {},
+            "excluded": {
+              "below_min_length": 2,
+              "no_valid_fourmers": 1
+            },
+            "unassigned": {
+              "community_below_min_size": 2
+            }
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 36033,
+              "contigs": 8
+            },
+            "excluded": {
+              "bp": 1279,
+              "contigs": 3
+            },
+            "unassigned": {
+              "bp": 4999,
+              "contigs": 2
+            }
+          }
+        }
+      },
+      "bp": 42311,
+      "checkpoint_reload_exact": true,
+      "contigs": 13,
+      "masks": {
+        "all_zero_depth_contigs": null,
+        "depth_observations_present": false,
+        "eligible_contigs": 10,
+        "no_valid_fourmers": 1,
+        "zero_depth_by_sample": {}
+      },
+      "native_stage_count": 8,
+      "training_average_cpus": 3.530348843433256,
+      "training_seconds": 0.046795436181128025
+    }
+  },
+  "scope": "Native Linux generic command software contracts only",
+  "source_commit": "a8010cb4b4ded237a1f2d4c0b1cfc82a385cb809",
+  "sources": {
+    "agent_context/e006-linux-smoke.log.ryn3HQ": {
+      "bytes": 22274,
+      "sha256": "5fc476a4aa4a10a590e21914ece30878f14bf3435e1b130774548ec026b49c6a"
+    },
+    "agent_context/generic-linux-smoke-y9xix7p9-collection.json": {
+      "bytes": 555,
+      "sha256": "71534900ae51a1e6e34ec6338186490216c082e23d392a1c369bf9d8ac2c6cd7"
+    },
+    "agent_context/generic-linux-smoke-y9xix7p9-return.tar.gz": {
+      "bytes": 1174633,
+      "sha256": "949bb485bfcaeeaa6ea70678f49cf045640d019e395d61ee708e17b5b35106ad"
+    },
+    "agent_context/generic-linux-smoke-y9xix7p9-return.tar.gz.sha256": {
+      "bytes": 109,
+      "sha256": "6e17b4b1466094014fdca3bcee3abca5bd2c437068c7c6aa58472e6be58c28fa"
+    }
+  },
+  "status": "accepted",
+  "storage_correction": {
+    "archived_logical_bytes": 2172376,
+    "later_parent_log_growth_bytes": 194,
+    "omitted_inventory_bytes": 80673,
+    "reason": "Executed collector omits its own inventory and stats an open log after archive creation",
+    "reported_logical_bytes": 2091897
+  },
+  "verified_inventory_files": 447,
+  "workflow_python": "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3"
+}

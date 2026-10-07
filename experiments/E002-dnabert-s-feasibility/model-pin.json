@@ -1,0 +1,66 @@
+{
+  "model_id": "zhihan1996/DNABERT-S",
+  "revision": "00e47f96cdea35e4b6f5df89e5419cbe47d490c6",
+  "inspected_date": "2026-10-03",
+  "author_repository": "https://github.com/MAGICS-LAB/DNABERT_S",
+  "author_commit": "ac01b55e5034182e4b915d34ce5a3a323b82adb8",
+  "metadata_license": "apache-2.0",
+  "license_limits": "HF metadata apache-2.0 and model source SPDX Apache-2.0; author-root LICENSE probe 404; no redistribution",
+  "weights_lfs_sha256": "f3cfc3d0541859df64759e758cc4bc40fe1d5760799a7d098a9f9f09501c1e5f",
+  "files": {
+    "README.md": {
+      "bytes": 54,
+      "sha256": "d58d735f6173814aab198c1e7e0f620809f85e37e0af8dab1330329692075e98",
+      "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/README.md"
+    },
+    "bert_layers.py": {
+      "bytes": 40807,
+      "sha256": "cd2fe0efbb90db624fe4e25aa96bd049513e81740ba3f980163c385e894df561",
+      "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/bert_layers.py"
+    },
+    "bert_padding.py": {
+      "bytes": 6099,
+      "sha256": "44d1c68afb1f585fdc66c150d4c60f1ed44a89c006abc57d50531d71940d7421",
+      "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/bert_padding.py"
+    },
+    "config.json": {
+      "bytes": 1025,
+      "sha256": "d54c142114563aa34ef7c2b54ccc921d08e50cd7c3cd69c439d5e0d2bbcfcdee",
+      "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/config.json"
+    },
+    "configuration_bert.py": {
+      "bytes": 1017,
+      "sha256": "d030166bd279ca81e9d2304eaff9419171f2f8c69ab419e7cd37873b72f47a22",
+      "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/configuration_bert.py"
+    },
+    "flash_attn_triton.py": {
+      "bytes": 42737,
+      "sha256": "568d1ac3beca0b5e1df528a1f136aa19b6489a616fcf3784f33336a50bb1de81",
+      "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/flash_attn_triton.py"
+    },
+    "pytorch_model.bin": {
+      "bytes": 468320053,
+      "sha256": "f3cfc3d0541859df64759e758cc4bc40fe1d5760799a7d098a9f9f09501c1e5f",
+      "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/pytorch_model.bin"
+    },
+    "special_tokens_map.json": {
+      "bytes": 125,
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/special_tokens_map.json"
+    },
+    "tokenizer.json": {
+      "bytes": 168203,
+      "sha256": "667f5a0e6e9630f7052b004784dda7c7aeba395cc4ca3c01b11b02e6aa29d7b1",
+      "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/tokenizer.json"
+    },
+    "tokenizer_config.json": {
+      "bytes": 268,
+      "sha256": "f13dbe9968de35aff25b06965f18e30449ec37ed94811bd0c7f97990f3b18ebb",
+      "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/tokenizer_config.json"
+    }
+  },
+  "author_instructions": {
+    "pinned-author-README.md": "f7c991fa836497d63f1b33eccca989ee4f851f3cda8df3bebe07e01881cf25c9",
+    "pinned-author-requirements.txt": "af018b271bf3c648d1e7a99b5a0cb7ffd5d5bfc6b24cce289d6e37397b0ade09"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "acceptance": [
+    "Native import isolation, exact complete accepted inventories and installed code/default/DAG bytes",
+    "Own lexical versioned package venv, read-only byte-bound dependencies and separate workflow",
+    "Both arms, exact reload, 20-epoch seed-11 defaults, full DNA and label-free strata/masks/zero accounting",
+    "Fresh/partial/full resume, no reused-stage rescheduling, changed/corrupt input-output refusal",
+    "Intended native worker failure, whole-command timeout, real RSS enforcement and fatal orphan cleanup",
+    "Captured help/progress/heartbeats/exit receipts, real independent CPU/global RAM scheduler placement",
+    "Complete checksummed return even after verified-entry failure; actual allocation-wall accounting including setup and collection"
+  ],
+  "allocated_ram_gb": 12,
+  "allocated_vcpus": 4,
+  "evidence_collection_seconds_ceiling": 120,
+  "execution_seconds_ceiling": 1800,
+  "fixture_bp": 42311,
+  "fixture_contigs": 13,
+  "fixture_limits": {
+    "bp_max": 600000,
+    "contigs_max": 32
+  },
+  "input_files": {
+    "assembly.fna": {
+      "bytes": 42569,
+      "sha256": "a74fd3593d0570671c727632f03e09f8dfc29c9d73a53b71b62edba62d859531"
+    },
+    "inputs.json": {
+      "bytes": 3297,
+      "sha256": "73943cb5acaa38df5c773eb77a43509a8a97da73d2a18368a21fe927bce46ff1"
+    },
+    "mean-depth.tsv": {
+      "bytes": 336,
+      "sha256": "de0054d7bcdea3c8cd44b299aecb9434de670b07905a44d79d7e1549227b4b54"
+    }
+  },
+  "kind": "Generic-command native Linux software smoke",
+  "loader_workers": 0,
+  "native_workers_mocked": [],
+  "out_of_scope": [
+    "UCloud execution by agent",
+    "E005 accepted scientific rerun",
+    "New datasets/seeds",
+    "Three-way comparison",
+    "Architecture gate",
+    "Publishing"
+  ],
+  "package_version": "0.1.0.dev1",
+  "record": "E006",
+  "scientific_changes": [],
+  "setup_seconds_ceiling": 900,
+  "smoke_seconds_ceiling": 900,
+  "torch_interop": 1,
+  "wheel": "payload/dl_binner-0.1.0.dev1-py3-none-any.whl",
+  "wheel_record": {
+    "bytes": 36310,
+    "sha256": "f093261d726d4b6f42e7401c211e99cf4fdadffbc950112161262bd7fdb804d0"
+  },
+  "working_rss_bytes_ceiling": 8000000000
+}

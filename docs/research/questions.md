@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-09-30
+Updated: 2026-10-03
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -156,3 +156,59 @@ VAE-first recommendation with D011's provisional contrastive direction and one
 bounded frozen-GLM feasibility check. This answers a product-planning priority,
 not Q001/H001 or a claim of architecture superiority. Short-contig-capable methods
 remain in scope; new short-inclusive evaluation can be planned independently of E001.
+
+2026-10-03 Q004/D011 feasibility update: [E002](../../experiments/E002-dnabert-s-feasibility/README.md)
+accepts actual frozen-DNABERT-S CPU contracts at small local scale (40 real windows,
+182.852 s, 1.314 GB sampled peak, coherent four-thread limits). The model was not
+trained and no biological utility was evaluated. An input-only IUPAC validator
+failure was corrected before model load and retained; one model/environment used.
+Bulk extraction projections are expensive and hardware-specific, so encoder choice
+remains provisional. The sole next comparison is capped at 320 new short-inclusive
+development fragments with scope/evaluation/cost frozen first. No E001 result or
+H001 status changes, no additional seeds or architecture campaign authorized.
+
+2026-10-03 Q004/Q005 first-sequence-route resolution:
+[E003](../../experiments/E003-representation-screen/README.md) completes the final
+bounded screen on 320 new short-inclusive development fragments. All actual
+resource limits passed. GLM improves fixed-clusterer sampled grouping but loses
+short-neighbor purity; the precommitted joint inclusion criterion fails.
+[D011](../decisions/D011-first-binner-prototype.md) selects 136-dimensional
+composition input to our own compact contrastive encoder for the first software
+milestone, while retaining GLM's grouping benefit as counterevidence to any
+universal composition preference. No trained-composition, unseen-species or
+whole-genome recovery claim follows; pretraining overlap remains unexcluded.
+Q003's independent/real-assembly evaluation remains open. No Q001/H001/E001 status
+changes or further architecture gate; implement, retaining raw-feature controls,
+short strata and unassigned outcomes, and diagnose concrete failures as they arise.
+
+2026-10-04 Q004 software milestone completed:
+[E004](../../experiments/E004-first-binner/README.md) accepts the actual installed
+composition/contrastive train→checkpoint reload→embed→fixed cluster→export path,
+with complete ID/DNA accounting, raw control and measured costs. Grouping improves
+within this development panel while precision/short-neighbor purity decline;
+co-genomic negatives are observed but their causal role untested. This is not
+whole-genome recovery or independent biological validation. Q003 and coverage's
+biological value remain open; the next bounded product task is CPU/Linux native
+validation and an assembly/explicit-depth pilot protocol. H001/E001 are unchanged.
+The owner also requests a later **non-blocking** matched TNF/contrastive,
+frozen-GLM/contrastive-head and hybrid comparison even if the prototype works.
+[D011](../decisions/D011-first-binner-prototype.md#planned-non-blocking-learned-representation-comparison)
+owns that plan; nothing from it is implemented or run during E004.
+
+
+2026-10-06 Q004 product-validation update: [E005](../../experiments/E005-linux-pilot/README.md#accepted-v5-native-gi-pilot-and-independent-review-2026-10-06)
+accepts native Linux and the bounded short-inclusive GI GSA/explicit-depth pilot.
+Learned confirmed R95 improves over raw, with lower assigned-bin purity and
+fragmentation retained; time/RSS ceilings pass. A serial scheduling deviation
+is retained and corrected locally without repeating science. Q003's independent
+real-assembly/whole-MAG evaluation and isolated coverage value remain open.
+[D011](../decisions/D011-first-binner-prototype.md#e005-acceptance-and-next-bounded-usability-milestone-2026-10-06)
+now prepares a bounded generic-command usability milestone, without another
+architecture gate or benchmark expansion. H001, E001 and deferred seeds are unchanged.
+
+2026-10-06 Q004 usability update: [E006](../../experiments/E006-cli-usability/README.md)
+accepts an installed learned/raw workflow, complete byte-bound label-free
+summaries and strict recovery/failure/resource contracts. Model/training/clustering
+remain unchanged; no accepted science is repeated and no biological utility is
+asserted. Next prepare a tiny owner-controlled Linux generic-launcher smoke.
+Independent quality/coverage questions and the non-blocking comparison stay open.

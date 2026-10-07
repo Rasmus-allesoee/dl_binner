@@ -66,7 +66,7 @@ For a run, retain the executable source commit, actual resolved arguments, envir
 
 Use ordinary commits on `main` for small coherent documentation and maintenance work. Use a branch for a substantial hypothesis implementation, risky infrastructure change, or parallel line of work. A branch is an implementation workspace, not the only record of the idea's outcome.
 
-Commit experimental protocols and executable configurations before expensive runs, then commit outputs and conclusions after validation. Use informative subjects and explain nontrivial changes with `What changed:` and `Why:` paragraphs. Keep code, interpretation, and current state synchronized when they change together. Never rewrite completed run provenance by rebasing away its only source commit.
+Commit experimental protocols and executable configurations before expensive runs, then commit outputs and conclusions after validation. Use informative subjects and explain nontrivial changes with bullet points under `what changed` and `why` sections. Keep code, interpretation, and current state synchronized when they change together. Never rewrite completed run provenance by rebasing away its only source commit.
 
 Before finishing substantial work, inspect the diff, run appropriate checks, update affected records, commit the coherent local unit, and report the Git state. Preserve unrelated owner changes. Check what is staged; do not use broad staging to collect unreviewed data.
 

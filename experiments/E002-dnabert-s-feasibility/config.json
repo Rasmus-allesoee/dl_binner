@@ -1,0 +1,26 @@
+{
+  "model_directory": "artifacts/d011-dnabert-s-spike/model",
+  "model_pin": "experiments/E002-dnabert-s-feasibility/model-pin.json",
+  "source_fasta": "artifacts/e001-population-reviewed/canonical.fna",
+  "source_sha256": "14870c27bc9467b5897bd1b65b347d7d5e2733d8bbe48c0085cb708194966fe1",
+  "windows_per_length": 8,
+  "settings": {
+    "chunk_bp": 4000,
+    "max_tokens": 1024,
+    "batch_size": 2,
+    "pool": "attended-token mean including special tokens",
+    "strand": "canonical whole-DNA orientation, both-strand chunk mean",
+    "chunk_aggregation": "nonoverlapping, base-length-weighted mean",
+    "dtype": "float32",
+    "device": "cpu",
+    "torch_threads": 4,
+    "torch_interop_threads": 1,
+    "loader_workers": 0
+  },
+  "limits": {
+    "seconds": 3560,
+    "rss_bytes": 8000000000,
+    "checkpoint_attempts": 1,
+    "environment_attempts": 1
+  }
+}

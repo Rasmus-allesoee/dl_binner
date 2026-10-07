@@ -202,6 +202,23 @@ owns this amended next milestone.
 
 ## Validation of this reassessment
 
+2026-10-03 follow-up: [E002](../../experiments/E002-dnabert-s-feasibility/README.md)
+completes the prescribed frozen-DNABERT-S CPU check. Native contracts pass at
+small local scale; measured cost supports one capped representation comparison,
+not accepting bulk extraction as cheap. D011/STATE now point to that comparison.
+
+2026-10-03 final screen resolution: [E003](../../experiments/E003-representation-screen/README.md)
+completed at the precommitted scope. Frozen DNABERT-S improves fixed-clusterer
+fragment grouping/assignment but reduces short-fragment neighbor purity, failing
+the joint inclusion criterion. [D011](../decisions/D011-first-binner-prototype.md)
+now selects composition input for our own contrastive first implementation,
+retaining GLM's positive grouping evidence and its pins/cache. This dated
+follow-up does not turn the original review into a reproduced family comparison.
+No trained TNF or whole-MAG comparison occurred, and laptop runtime projections
+were not the rejection basis. The final architecture screen is closed; proceed
+to the end-to-end implementation without another gate absent a concrete failure.
+This does not change the dated review's original scope or claim new binning accuracy.
+
 Documentation/provenance only: `python3 scripts/check_docs.py --check-context`
 passes (38 maintained documents, 426 links, 84 present fingerprints; ten historical
 optional cache paths unavailable). All new source hashes match, and the thesis

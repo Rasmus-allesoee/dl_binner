@@ -1,0 +1,37 @@
+{
+  "id": "E006",
+  "role": "Software usability and operational contracts, not biological scoring",
+  "scientific_changes": [],
+  "accepted_training_source": "experiments/E004-first-binner/training.json",
+  "threads_max": 4,
+  "torch_interop": 1,
+  "loader_workers": 0,
+  "working_rss_bytes_max": 8000000000,
+  "timed_integration_seconds_max": 7200,
+  "fixture_contigs_max": 32,
+  "fixture_bp_max": 600000,
+  "fixture_source": "Retained E005 short-inclusive GI reference; new deterministic software windows only",
+  "fixture_roles": ["real IUPAC DNA", "synthetic mean-depth and ambiguity failure contracts"],
+  "acceptance": [
+    "Built wheel contains defaults and DAG and works outside checkout in new isolated prefix",
+    "Real feature/training/reload/cluster/export paths, matched raw control, exact checkpoint parity",
+    "Every contig/DNA once, six strata, zeros, masks, exclusion and noise reasons",
+    "Label-free summary independently matches retained E005 counts without science rerun",
+    "Serial timing and actual native scheduler evidence, CPU/global-RAM caps without --jobs",
+    "Fresh refuses populated directory; partial/full resume do not rerun completed science",
+    "Changed input/sample order/config/source/runtime and corrupt/missing/extra outputs rejected",
+    "Native invalid-input/insufficient-evidence failures stop dependencies promptly",
+    "Intended timeout/fatal failure and orphan termination verified in retained receipts",
+    "Parent/child logs, heartbeats, exit codes and cost scope retained"
+  ],
+  "resume_contract": {
+    "completed": "Strict serial prefix of stage receipts, hashes of all output/evidence bytes and parent manifests",
+    "failed": "Unique retained staging/log directories; retry only failed or never-started stages",
+    "unreceipted_published_output": "Refuse; preserve evidence and choose fresh output. No automatic repair",
+    "snakemake_metadata": "After explicit byte verification, ignore incomplete metadata and rerun on mtime only; missing receipts schedule unfinished stages",
+    "completion": "Bound summaries and all stage receipts; no scientific stages scheduled again",
+    "wall_limit": "Per invocation, including parent hashing, probes, verification and accounting; a resumed invocation has its own unchanged scientific contract"
+  },
+  "quality_criterion": "None; assigned bp and bin counts are not MAG quality or generalization",
+  "out_of_scope": ["E002–E005 science rerun", "UCloud execution", "extra datasets/seeds", "three-way comparison", "architecture gate", "publication"]
+}

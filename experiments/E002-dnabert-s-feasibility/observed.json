@@ -1,0 +1,440 @@
+{
+  "record": "E002",
+  "date": "2026-10-03",
+  "status": "accepted technical feasibility at local scale; encoder choice provisional",
+  "native_source_commit": "c9437fcd1d8ffd7e4e66b9b8422d618749a95ba1",
+  "input_only_failed_source_commit": "5267241",
+  "source_fasta_sha256": "14870c27bc9467b5897bd1b65b347d7d5e2733d8bbe48c0085cb708194966fe1",
+  "model_pin": "model-pin.json",
+  "runtime": {
+    "executable": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/env/bin/python",
+    "hardware": {
+      "cpu": "Intel(R) Core(TM) i5-1038NG7 CPU @ 2.00GHz",
+      "host_ram_bytes": "17179869184",
+      "logical_cpus": "8",
+      "physical_cores": "4"
+    },
+    "imports": {
+      "einops": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/env/lib/python3.10/site-packages/einops/__init__.py",
+      "numpy": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/env/lib/python3.10/site-packages/numpy/__init__.py",
+      "tokenizers": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/env/lib/python3.10/site-packages/tokenizers/__init__.py",
+      "torch": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/env/lib/python3.10/site-packages/torch/__init__.py",
+      "transformers": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/env/lib/python3.10/site-packages/transformers/__init__.py"
+    },
+    "library_pools": [
+      {
+        "architecture": "Haswell",
+        "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/env/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libopenblas",
+        "threading_layer": "pthreads",
+        "user_api": "blas",
+        "version": "0.3.23.dev"
+      },
+      {
+        "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/env/lib/python3.10/site-packages/functorch/.dylibs/libiomp5.dylib",
+        "internal_api": "openmp",
+        "num_threads": 4,
+        "prefix": "libiomp",
+        "user_api": "openmp",
+        "version": null
+      }
+    ],
+    "loader_workers": 0,
+    "model_class_module": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/run-002/hf-cache/modules/transformers_modules/model/bert_layers.py",
+    "model_load_seconds": 8.641267722006887,
+    "model_module_sha256": "cd2fe0efbb90db624fe4e25aa96bd049513e81740ba3f980163c385e894df561",
+    "numpy": "1.26.4",
+    "parameter_count": 117068544,
+    "platform": "macOS-26.1-x86_64-i386-64bit",
+    "python": "3.10.15 | packaged by conda-forge | (main, Oct 16 2024, 01:21:29) [Clang 17.0.6 ]",
+    "torch": "2.2.2",
+    "torch_interop": 1,
+    "torch_intraop": 4,
+    "training": false
+  },
+  "model_load_seconds": 8.641267722006887,
+  "first_500bp_extraction_seconds": 0.3638879569916753,
+  "timings": [
+    {
+      "average_cpus": 3.8616982160228086,
+      "both_strands_tokens": 1665,
+      "bp": 500,
+      "chunks": 8,
+      "process_cpu_seconds": 8.026898431999996,
+      "seconds": 2.0785928840050474,
+      "seconds_per_window": 0.2598241105006309,
+      "tokens_per_bp_including_specials": 0.208125,
+      "windows": 8
+    },
+    {
+      "average_cpus": 3.8796201117817453,
+      "both_strands_tokens": 2663,
+      "bp": 768,
+      "chunks": 8,
+      "process_cpu_seconds": 12.859048959999996,
+      "seconds": 3.3145123979920754,
+      "seconds_per_window": 0.4143140497490094,
+      "tokens_per_bp_including_specials": 0.21671549479166666,
+      "windows": 8
+    },
+    {
+      "average_cpus": 3.881379435603847,
+      "both_strands_tokens": 3416,
+      "bp": 1000,
+      "chunks": 8,
+      "process_cpu_seconds": 17.905238016,
+      "seconds": 4.613111990998732,
+      "seconds_per_window": 0.5766389988748415,
+      "tokens_per_bp_including_specials": 0.2135,
+      "windows": 8
+    },
+    {
+      "average_cpus": 3.538214736197075,
+      "both_strands_tokens": 8197,
+      "bp": 2500,
+      "chunks": 8,
+      "process_cpu_seconds": 51.48744396799998,
+      "seconds": 14.551814348989865,
+      "seconds_per_window": 1.818976793623733,
+      "tokens_per_bp_including_specials": 0.204925,
+      "windows": 8
+    },
+    {
+      "average_cpus": 3.414653137674408,
+      "both_strands_tokens": 34508,
+      "bp": 10000,
+      "chunks": 24,
+      "process_cpu_seconds": 279.71899596800006,
+      "seconds": 81.91725035899435,
+      "seconds_per_window": 10.239656294874294,
+      "tokens_per_bp_including_specials": 0.215675,
+      "windows": 8
+    }
+  ],
+  "native_contract_receipts": [
+    {
+      "author_pool_max_abs": 0.0,
+      "padded_batch_max_abs": 0.0,
+      "padding_contamination_if_naive": 0.36868172883987427,
+      "stage": "native_contracts_passed",
+      "tested_tokens_beyond_512": 841,
+      "utc": "2026-10-02T23:37:06Z"
+    },
+    {
+      "stage": "cache_and_checkpoint_reload_passed",
+      "utc": "2026-10-02T23:39:06Z"
+    },
+    {
+      "feature_sha256": "46171ad350d289bfe18cddf7f7e1d03dfe6448baa3774f47af7a8b76c7c62306",
+      "feature_shape": [
+        40,
+        768
+      ],
+      "stage": "complete",
+      "utc": "2026-10-02T23:39:06Z"
+    }
+  ],
+  "attempts": {
+    "run-001": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/env/bin/python",
+        "-u",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/dnabert_s_cpu_spike.py",
+        "--worker",
+        "--config",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E002-dnabert-s-feasibility/config.json",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/run-001"
+      ],
+      "exit_code": 1,
+      "peak_sampled_rss_bytes": 185606144,
+      "sampled_average_cpus": 0.1353460528548318,
+      "sampled_process_cpu_seconds": 4.454218624,
+      "scope": "local process accounting, not UCloud billing",
+      "stop_reason": null,
+      "thread_budget": 4,
+      "thread_budget_wall_hours": 0.036566502680006024,
+      "wall_seconds": 32.90985241200542
+    },
+    "run-002": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/env/bin/python",
+        "-u",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/dnabert_s_cpu_spike.py",
+        "--worker",
+        "--config",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E002-dnabert-s-feasibility/config.json",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/run-002"
+      ],
+      "exit_code": 0,
+      "peak_sampled_rss_bytes": 1313681408,
+      "sampled_average_cpus": 2.8965039701423008,
+      "sampled_process_cpu_seconds": 529.631379456,
+      "scope": "local process accounting, not UCloud billing",
+      "stop_reason": null,
+      "thread_budget": 4,
+      "thread_budget_wall_hours": 0.2031688257888891,
+      "wall_seconds": 182.85194321000017
+    }
+  },
+  "combined_supervised_seconds": 215.7617956220056,
+  "combined_four_thread_wall_budget_hours": 0.23973532846889511,
+  "local_process_cpu_seconds_sampled": 534.08559808,
+  "cost_limits": "Local observed process costs; no UCloud run/billing. Setup and idle time not instrumented; projection excludes setup/I/O/learning/clustering.",
+  "panel": {
+    "windows": 40,
+    "independent_parents": 40,
+    "bp": 118144,
+    "features_shape": [
+      40,
+      768
+    ],
+    "all_finite_nonzero": true,
+    "iupac_ambiguity_bases": 0,
+    "unknown_tokens": 0,
+    "max_observed_chunk_tokens": 901,
+    "selection": "SHA256-ranked distinct >=10kb parents; centered windows; no truth/feature-based selection"
+  },
+  "projections": {
+    "accepted_E001_fasta_timing_only": {
+      "bp": 817438232,
+      "contigs": 22594,
+      "four_thread_budget_hours": 916.0620908163752,
+      "groups": {
+        "1000": {
+          "bp": 0,
+          "contigs": 0,
+          "projected_seconds": 0.0
+        },
+        "10000": {
+          "bp": 775016382,
+          "contigs": 10323,
+          "projected_seconds": 793590.1374577029
+        },
+        "2500": {
+          "bp": 42421850,
+          "contigs": 12271,
+          "projected_seconds": 30865.744277034766
+        },
+        "500": {
+          "bp": 0,
+          "contigs": 0,
+          "projected_seconds": 0.0
+        },
+        "768": {
+          "bp": 0,
+          "contigs": 0,
+          "projected_seconds": 0.0
+        }
+      },
+      "projected_wall_hours": 229.0155227040938
+    },
+    "limitations": "Eight windows per length, local thermal/cache state, long-contig tails and sequence compression unmodelled; excludes setup/I/O/learning/clustering; not Linux measurements",
+    "method": "Nearest tested log-length per-base rate; both strands/chunks included; no speedup assumed",
+    "synthetic_length_distribution": {
+      "bp": 29536000,
+      "contigs": 10000,
+      "four_thread_budget_hours": 29.57646721693891,
+      "groups": {
+        "1000": {
+          "bp": 2000000,
+          "contigs": 2000,
+          "projected_seconds": 1153.277997749683
+        },
+        "10000": {
+          "bp": 20000000,
+          "contigs": 2000,
+          "projected_seconds": 20479.312589748588
+        },
+        "2500": {
+          "bp": 5000000,
+          "contigs": 2000,
+          "projected_seconds": 3637.953587247466
+        },
+        "500": {
+          "bp": 1000000,
+          "contigs": 2000,
+          "projected_seconds": 519.6482210012618
+        },
+        "768": {
+          "bp": 1536000,
+          "contigs": 2000,
+          "projected_seconds": 828.6280994980189
+        }
+      },
+      "projected_wall_hours": 7.394116804234727
+    }
+  },
+  "next_comparison_ceiling": {
+    "fragments": 320,
+    "bp_if_64_each_tested_length": 945152,
+    "warm_extraction_seconds_estimate": 851.8022558478406,
+    "cpu_threads": 4,
+    "working_ram_bytes": 8000000000,
+    "feature_extraction_stop_seconds": 3600,
+    "complete_local_run_stop_seconds": 7200,
+    "role": "new development fragments, not E001 rerun or independent whole-MAG benchmark",
+    "not_yet_frozen": "source population/accessions/hashes, overlap audit, sampling, metrics and clustering config must be committed before scoring"
+  },
+  "retained_files": [
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/alphabet-audit.json",
+      "bytes": 960,
+      "sha256": "4fa1bb36edb167f51b52716566604cf4bae09b361a1ff9ca8ce4ec9837d4f8f5"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/author-README.md",
+      "bytes": 8597,
+      "sha256": "f7c991fa836497d63f1b33eccca989ee4f851f3cda8df3bebe07e01881cf25c9"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/author-head.json",
+      "bytes": 5312,
+      "sha256": "f3d31861ea1e702d6d3624b66afa66caeaf9bb066fc0d8383454be445c2d6ef8"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/author-requirements.txt",
+      "bytes": 134,
+      "sha256": "af018b271bf3c648d1e7a99b5a0cb7ffd5d5bfc6b24cce289d6e37397b0ade09"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/checked-tests.log",
+      "bytes": 702,
+      "sha256": "97d8023d205bed2b7f95b278d05df1e690746615cfa2a90c43f536c15a3ff16a"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/docs-check.log",
+      "bytes": 727,
+      "sha256": "831c01cc9789450af329915d5114f49f284e578371cf5199ce5b848c2ff36e04"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/driver-corrected.log",
+      "bytes": 815,
+      "sha256": "7be996787b58b2725937f2bdc31907d573fea09ba631ceb46e0f81318cec5f35"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/driver.log",
+      "bytes": 813,
+      "sha256": "7eb9b803fa730a38956b45d432b7828ea8ee2b79a40af023bc13189d19df1e67"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/final-docs-check.log",
+      "bytes": 727,
+      "sha256": "59ad2c3415c928558415a33ef2a9c751107e5ab5706c0a200a7612496a9980c0"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/model-api.json",
+      "bytes": 1681,
+      "sha256": "e1eb84eb96b11b9a79e1d9531525a880388b22c24cd5b04d967f7ee2d6118435"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/model-pinned-api.json",
+      "bytes": 3271,
+      "sha256": "390abad81c59c14c15f3c14763b687018e58bf0807844ba25512fcb5f38bb75d"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/pinned-author-README.md",
+      "bytes": 8597,
+      "sha256": "f7c991fa836497d63f1b33eccca989ee4f851f3cda8df3bebe07e01881cf25c9"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/pinned-author-requirements.txt",
+      "bytes": 134,
+      "sha256": "af018b271bf3c648d1e7a99b5a0cb7ffd5d5bfc6b24cce289d6e37397b0ade09"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/pip-install.log",
+      "bytes": 6770,
+      "sha256": "21c1c0eade1b860b78091b813fbc3c95793abc7979dcd6c6f9bf5b5357f12ece"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/portable-tests-corrected.log",
+      "bytes": 612,
+      "sha256": "942039d81bdebcdd249da3f2aaddfc25fe2515c77e2aabe9f6c7e1b5043a2d9a"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/setup/portable-tests.log",
+      "bytes": 612,
+      "sha256": "1528debe505403cb4693cda1d957ccdd2c45623721b4a7912c8685acaef56822"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/run-001/resources.jsonl",
+      "bytes": 587,
+      "sha256": "851350cde5e9fa1b4731339ea5b3ebc956b9430b25f243042d1df982a82a7bc1"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/run-001/result.json",
+      "bytes": 1138,
+      "sha256": "2642a01675a0325bb2fa8c964d0855e7f0f11ca4d7ece16a0ae2a3bd75e4055c"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/run-001/supervisor.json",
+      "bytes": 813,
+      "sha256": "56514017a0ae8d2d569b5ae590eadbcfcac54a4e60f6fb48701189f47e352f95"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/run-001/terminal.log",
+      "bytes": 982,
+      "sha256": "ac576e903da9b47b341a1fd5ec6b5302194d58e8ae052d201652a55a9f3c236b"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/run-002/features.json",
+      "bytes": 9299,
+      "sha256": "703bb7e5c6d0726d3cb8bce1f9fefd5984754411b5cf4adde20449a058996560"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/run-002/features.npz",
+      "bytes": 127228,
+      "sha256": "46171ad350d289bfe18cddf7f7e1d03dfe6448baa3774f47af7a8b76c7c62306"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/run-002/panel.json",
+      "bytes": 9424,
+      "sha256": "4709f99bd3dd3d37e20b1f9aea7b6bd98f0eaee5828964238e628f31ee13c70b"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/run-002/resources.jsonl",
+      "bytes": 3100,
+      "sha256": "887b4d7d5a4e6f394112987065f86712e767d2e0c50cbf7bfa2c5a615bb78fdd"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/run-002/result.json",
+      "bytes": 21102,
+      "sha256": "549213b6754232062de76524b2c91ffa3bc1fde04ae98289d7fdf62eda43f8b0"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/run-002/supervisor.json",
+      "bytes": 815,
+      "sha256": "b90d6c130ab3f35a374e41b040d3579ecf8e2be33894da8ea9fad66e0631e9b3"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/run-002/terminal.log",
+      "bytes": 4532,
+      "sha256": "61d285e536d9960eebacb5142b46472194ba29925c065ff9f2ab1aa4edd44cb2"
+    },
+    {
+      "path": "artifacts/d011-dnabert-s-spike/run-002/windows.fna",
+      "bytes": 119007,
+      "sha256": "bd558b6deb3ecc83334757be6bdbe40ac66fe87de251deb4c1fc2daafebad9a4"
+    }
+  ],
+  "regular_file_logical_bytes_excluding_symlinks": {
+    "env": 835412906,
+    "model": 468580388,
+    "pip-cache": 196397109,
+    "setup": 40465,
+    "run-001": 3520,
+    "run-002": 439879
+  },
+  "retention": "All raw logs, assets, caches and failed attempt preserved locally under artifacts/d011-dnabert-s-spike. Model bytes recoverable via immutable model-pin URLs; environment rebuild via exact requirements and Python 3.10.15. No assets redistributed.",
+  "checks": {
+    "seven_tests": "all passed, including real-tokenizer split and guard fatal/orphan/time/RAM checks",
+    "retained_only_review": "pass: every model-file hash, feature binding/axes/finite/nonzero, 40 disjoint parent IDs, source window coordinates/bytes and complete bounded chunk intervals; no model inference repeated",
+    "docs": "39 maintained documents, 438 local links, 84 present source fingerprints; 10 historical optional caches absent; PASS",
+    "executed_script_sha256": "f9eff650f8329d674f86e3bbd74ef0422bc7805c133169b0abdfed0895004d9a",
+    "tested_file_sha256": "e9a32e40c0b5a872283560609a3a00a9104c31dd091ff3f64e0eb44092f8778b"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "experiment": "E005",
+  "input_sha256": {
+    "experiments/E004-first-binner/training.json": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5",
+    "input/smoke/assembly.fna": "e56d4bc5279b9cfe8ca4c47fdfb00f98683e682e436a78a60e86e0d1ec2dea2b",
+    "input/smoke/fresh.fna": "16b27618701a4cff078fcde2ca17d6eadb25ad1faac3aac690fbe1050905bc97",
+    "input/smoke/mean-depth.tsv": "d3462a876e99c957de63ce10974fbf45ca34e8ca8c58ef426ce7ccb6a4cb7584",
+    "input/smoke/panel.json": "7764a08d207476736ed1a8a2eaf6db5e8f1c68cdcf2c6e14b595f01624757a25",
+    "input/smoke/provenance.json": "7afc9813b8fdca5ec0df52788b9c91950a0d8cd264667ad89dcf4700d72e46b6",
+    "input/smoke/tnf.json": "918852a081c87fb9d466001810ce05dba1f374c4e246af28f3b4340af1310c40",
+    "input/smoke/tnf.npz": "f8fbc21da04491aeed0c935a28f98fa3eaa82e3a645207c7817c65d949af9fd5"
+  },
+  "installation_policy": "fresh standalone distribution; omit share/terminfo; v1",
+  "package_code_sha256": {
+    "__init__.py": "5cf2f8ec1e3ed2d9aba9d2c75b4be6a889007683120044d3a31a294c0fe5c88a",
+    "__main__.py": "28f47a18f1a12c011b4fa92812d8f4fb10840c469d489ee5ac246bc669620144",
+    "cli.py": "5f52dc6779695c08bdaf82df79b7a40bddc6b71712da0e0dedc2bc2e311f84f0",
+    "clustering.py": "2ac715b1449287b002ef7e4a75b84ef204256c2d5f589e31a6810acfad941b66",
+    "io.py": "71b0c423c046b3c72b651141e853ea622a62742fc087afeef37fbf9c253c2307",
+    "model.py": "acc1f3c450910112cd7883cc6284139046fde6b339e73b82638d301d8e5a9948"
+  },
+  "python_payload": "cpython-3.12.10+20250409-x86_64-unknown-linux-gnu-install_only.tar.gz",
+  "ram_bytes_ceiling": 8000000000,
+  "scope": "software smoke only; pilot has no launch mode",
+  "setup_seconds_ceiling": 1800,
+  "smoke_seconds_ceiling": 600,
+  "total_seconds_ceiling": 3600,
+  "workflow": {
+    "depth": "input/smoke/mean-depth.tsv",
+    "expectations": {
+      "depth": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          7,
+          14
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          22
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          13,
+          26
+        ]
+      ],
+      "eligible": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "exclusion_reason": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "below_min_length",
+        "no_valid_fourmers"
+      ],
+      "ids": [
+        "F006e3f3a6fed85a9",
+        "F0175b657db8219ba",
+        "F01ea699d9a0bcc57",
+        "F01fc5c62281224a5",
+        "F026f0aac6cb1bb8c",
+        "F02c54f0e45da67ed",
+        "F033d912b0c567838",
+        "F0441a0b4ff017dc5",
+        "F044641d4ea306990",
+        "F045c0ce9cc22d81c",
+        "F047b5f2517ef012e",
+        "F05f0b9575438d90b",
+        "SENTINEL_short_199",
+        "SENTINEL_ambiguous_768"
+      ],
+      "samples": [
+        "smoke_A",
+        "smoke_B"
+      ]
+    },
+    "fasta": "input/smoke/assembly.fna",
+    "fresh_fasta": "input/smoke/fresh.fna",
+    "tnf_cache": "input/smoke/tnf.npz",
+    "tnf_panel": "input/smoke/panel.json",
+    "tnf_receipt": "input/smoke/tnf.json",
+    "training": "experiments/E004-first-binner/training.json"
+  }
+}

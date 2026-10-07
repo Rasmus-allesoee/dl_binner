@@ -183,6 +183,15 @@ scope/cutoff, and do not combine methods without a concrete rationale.
 Once a scoped review and design decision are complete, reuse those records during
 implementation. Refresh specific evidence when a changed dependency or design
 question requires it; do not restart the whole review before each milestone.
+Once a bounded representation screen selects the first prototype's sequence route,
+move to implementation without another architecture gate unless a concrete failure
+requires one. A frozen-GLM versus raw-composition screen does not compare against a
+contrastive-trained composition encoder or prove whole-genome recovery. Treat local
+runtime projections as rough planning estimates, not the sole reason to reject a
+sequence route with useful evidence.
+An explicitly owner-requested later comparison can remain a non-blocking follow-up
+even when the first prototype works. Recording that plan does not authorize its
+execution during the current milestone or create another implementation/release gate.
 
 Do not attempt to plan the entire project in rigid detail from start to finish.
 
@@ -239,9 +248,50 @@ For owner-run execution, group commands into fail-fast scripts when later steps 
 
 Owner-run commands must automatically capture terminal output to a log file. Request the resulting file instead of asking the owner to copy terminal text. For long native steps, also expose timestamped stage progress and periodic heartbeats to the terminal or a dedicated progress log. Preserve the detailed per-tool logs and command provenance; progress is not a replacement for them. Use Snakemake per-rule `benchmark:` and `--benchmark-extended` for new substantial rules when useful, without rerunning accepted work solely to obtain measurements. Keep sampled process CPU/RAM metrics distinct from charged allocated vCPU-hours.
 
+Keep new owner uploads, launch copies, terminal logs and returned archive/checksum
+files in the experiment's persistent `transfer/` directory, rather than the
+`/work/Home` root. Keep attempts and environments in their established experiment
+directories. Do not move or delete prior artifacts just to adopt this organization.
+
 UCloud Terminal can create an in-app Slurm cluster via **Slurm cluster: Yes**, including on a single node; SDU/K8s does not imply Slurm is unavailable. Do not require switching to the separate Snakemake app. Distinguish this in-allocation scheduler from provider-side Slurm integration. Prefer the local executor for simple single-node parallel DAGs; use the Slurm plugin/profile when placement or scheduler-managed jobs justify it. See [D009](docs/decisions/D009-parallel-preprocessing-terminal.md) for reviewed sources, thesis profile and submission/cancellation prerequisites. Do not blindly copy historical `CLOUD`/`escience` accounts, GPU requests or resource sizes. Always separate total rented CPUs/RAM, per-rule CPU/RAM budgets and maximum sample/job concurrency. Cap aggregate resources, leave coordinator headroom, and charge total allocated vCPUs times driver wall time, not per-sample threads times wall time. Do not run competing unaccounted local/Slurm workloads in the same allocation.
 
 For each single-node CPU run, either run tools serially at the node's full allocated CPU budget or cap concurrent tools so their summed process budgets fit the allocation. Reconcile Snakemake `threads`, each native tool's thread flag, effective OpenMP/BLAS limits and child/data-loader workers. Count those workers in the per-tool budget; do not set a native thread flag to the full allocation when it also starts CPU workers. Confirm effective use from native thread reports and per-rule CPU benchmarks, rather than assuming the requested thread count took effect.
+For a local Snakemake executor, use `--cores` without simultaneously supplying
+`--jobs`; in inspected 9.16.3 those combined arguments can disable the scheduler's
+core cap. Make aggregate RAM scope explicit and use DAG barriers for a promised
+serial workflow. Verify actual scheduling events/overlap on independent ready
+rules; a driver label or tiny fixture that happens to serialize is insufficient.
+
+For installed product workflows, test the actual built wheel outside the checkout
+and package its defaults and any required DAG. Preserve journaled completed outputs: use explicit
+resume only after matching source/input/config/runtime/artifact bytes; never edit
+manifests to make a retry pass. Prototype interfaces may evolve without a
+compatibility promise; current contracts belong in `docs/PROTOTYPE.md`.
+Ordinary installed-product regressions belong in `tests/product/` and must run
+without ignored research assets or experiment helpers. Keep retained-evidence
+reviews explicitly separate; do not silently skip them and call the product
+suite scientific validation. Use the pinned standalone installation guide for
+fresh environments that own their numerical distributions. Preserve prior linked
+research runtimes as executed provenance. Inspect both wheel and sdist, including
+the rebuilt wheel's logical contents, before accepting changed packaging. Use a
+builder within the package's supported Python range and separate backend hook
+processes; CI preparation is not a successful native CI run.
+Ordinary product CPU counts and optional RAM/time safeguards are user choices,
+without project-imposed maxima. Keep validation/CI/resource allocations bounded
+explicitly and distinguish their ceilings from product policy. A fixed serial
+product pipeline may use the built-in dispatcher; retain workflow engines for
+research/HPC where their scheduling or DAG features help. Favor clear shared
+commands/contracts, structured outputs and actionable errors for people and AI
+agents. Future GPU/Conda goals belong in product guidance, not automatic work.
+Keep parent prerequisites within the bounded clock and retain failures even
+before a child starts. Surface native causes beyond scheduler trailers. Distinguish
+exited/zombie from live processes during cleanup and verify the intended stop and
+absence of running orphans. Label-free size/assignment summaries must not imply
+genome recovery or MAG quality without a separate evaluator.
+Report retained storage from the immutable archive members, including its
+inventory and terminal snapshot. Do not sum an open log after collection and
+present that as the archived payload; retain and append corrections to older
+receipts without rewriting them.
 
 Before transferring an owner-run driver, test the changed production adapter and
 its real input/output contracts, including fresh and recovered directory layouts.
@@ -250,8 +300,17 @@ Use actual native readers/writers and tiny real inputs where locally available;
 keep mocks for external dependencies outside the contract under test. Record
 which paths ran, which were mocked or skipped, and which still need Linux
 validation. Passing test counts alone are not evidence of native readiness.
+Failure checks must verify the intended worker error or enforced limit in retained
+evidence, not just any nonzero exit; a monitoring/prerequisite failure can otherwise
+produce a false pass.
 On recovery, test that completed stages are not scheduled again and that every
 remaining consumer follows the reused manifests rather than inferred paths.
+
+For new bounded owner-run drivers, cover parent-side verification, hashing and
+setup with the overall execution ceiling as well as timing child stages. Retain
+the verified transfer manifest in failure returns, not only successful ones.
+Evidence-only collection may follow a timeout; distinguish its cost from the
+bounded execution clock and include it in allocation accounting.
 
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
@@ -267,11 +326,14 @@ authoritative experiment-owned environment; invoke the copied Python directly,
 verify prefix/import origins and the accepted inventory, and pass native CLI/DAG
 checks before work. Do not generalize this to arbitrary Conda-prefix relocation.
 
-Isolate Python processes inside tool environments: unset inherited `PYTHONPATH`, `PYTHONHOME` and `PYTHONUSERBASE`, and set `PYTHONNOUSERSITE=1` before installs, inventories and execution. UCloud's user-site packages were observed inside otherwise separate conda environments; distinct environment directories alone do not establish import isolation. Preserve required tool-local source imports, and verify package origins when introducing a runtime. Do not modify an already executed/transferred snapshot in place; use explicit wrappers or a new versioned transfer.
+Isolate Python processes inside tool environments: unset inherited `PYTHONPATH`, `PYTHONHOME` and `PYTHONUSERBASE`, and set `PYTHONNOUSERSITE=1` before installs, inventories and execution. UCloud's user-site packages were observed inside otherwise separate conda environments; distinct environment directories alone do not establish import isolation. Preserve required tool-local source imports, and verify package origins when introducing a runtime. Cross-experiment reuse must be read-only and validate a full distribution inventory and import origins against a clean, hash-identified prefix record; a `pip freeze` alone may include user-site entries or direct references. A new package-only venv may explicitly borrow reviewed dependencies read-only, with its own installed wheel and byte-bound before/after checks. Record the dependency/base-prefix relationship, exclude the old package and path-injecting overlays, and never transfer such links as a portable environment or remove their required base. For all Python children using a reused environment, including scientific rules, pass `-B` on the Python command line to prevent `.pyc` writes: `-I` implies `-E` and ignores `PYTHONDONTWRITEBYTECODE`. Do not modify an already executed/transferred snapshot in place; use explicit wrappers or a new versioned transfer.
 
 Recheck container-level prerequisites on each owner-run job entry point. System packages installed outside `/work` may disappear between jobs even when experiment-local environments persist; bootstrap must not depend on the missing utility it is meant to install. Preserve failed attempts before narrowly scoped recovery, and never silently reuse partial scientific inputs.
 
 The owner confirmed that new Terminal jobs reset the container on 2026-09-19. Prefer absolute paths to persistent experiment-local executables and probe imports on each job. Do not reinstall intact environments merely because activation or a system utility disappeared. Use uniquely named attempt directories so retries preserve previous outputs without manual moves. Test complete owner-run drivers on synthetic inputs, including repeated invocation and failed prerequisites, before transfer. Diagnose whole-file input relationships before adding exceptions; bind dataset-specific exceptions to reviewed source hashes and record exclusions.
+Preserve a virtual environment's lexical interpreter path when invoking it:
+resolving its `bin/python` symlink can bypass `pyvenv.cfg` and execute the base
+environment. Probe version/prefix before giving a harness runtime-validation credit.
 
 ### Ask for files
 
@@ -319,6 +381,9 @@ Use version control actively throughout the project so that the evolution of the
 - Do not rewrite or destroy useful shared history unless there is a clear reason and the user explicitly agrees where appropriate.
 
 Project commit subjects use a lowercase purpose prefix matching the repository's existing convention, such as `fix:`, `research:`, `ops:`, `docs:`, or `test:`. Do not create new unprefixed project commits.
+For nontrivial commits, use `what changed` and `why` sections with bullet points
+under each. Explain the concrete changes and their purpose; preserve real newlines
+when passing a prepared commit-message file to Git.
 
 ### Branches and experimental work
 
@@ -327,6 +392,14 @@ Use branches when they genuinely help isolate substantial, risky, or exploratory
 Do not create branch/process ceremony for trivial changes.
 
 Research experiments may fail. Their scientific conclusions should remain traceable even when their implementation branch is not merged. Preserve important negative results and decisions in the research documentation rather than relying on abandoned Git branches as the only record.
+
+Owner direction, 2026-10-06: bring the first usable prototype through a bounded
+private-PR readiness step, then review/merge when separately authorized. Keep
+that accepted implementation as a stable baseline on main; start subsequent
+benchmark and matched architecture work on a new branch from updated main.
+Experimental comparisons are not prerequisites for merging a correctly tested
+prototype. Preserve source commits referenced by accepted evidence; do not
+squash/rebase away their only durable provenance.
 
 ### GitHub
 

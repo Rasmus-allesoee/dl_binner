@@ -1,0 +1,16 @@
+# Separate local CPU prototype runtime. Transitive inventory is recorded at setup.
+numpy==1.26.4
+torch==2.2.2
+networkx==3.4.2
+threadpoolctl==3.5.0
+psutil==6.0.0
+setuptools==65.5.0
+wheel==0.45.1
+# Transitive versions observed in the successful isolated local installation.
+filelock==4.0.10
+typing-extensions==4.16.0
+sympy==1.14.0
+mpmath==1.3.0
+jinja2==3.1.6
+MarkupSafe==3.0.4
+fsspec==2026.9.0

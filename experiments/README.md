@@ -1,10 +1,19 @@
 # Experiments
 
-No experiments have been run in this project. The thesis is [prior evidence](../docs/evidence/2026-09-16-thesis.md), and the current assessment is a research recommendation, not an experimental result.
+Experiment records distinguish prepared protocols from executed observations.
+The thesis remains [prior evidence](../docs/evidence/2026-09-16-thesis.md), not a
+reproduced result of this project.
 
 ## Register
 
 - [E001: Where does reduced coverage evidence lose recoverable sequence?](E001-coverage-thinning/README.md)
+- [E002: Bounded frozen DNABERT-S CPU feasibility](E002-dnabert-s-feasibility/README.md)
+- [E003: Final frozen-GLM versus composition development screen](E003-representation-screen/README.md)
+- [E004: First composition-based learned binner](E004-first-binner/README.md)
+- [E005: Linux deployment smoke and bounded GI assembly/depth pilot](E005-linux-pilot/README.md)
+- [E006: Installed generic command usability](E006-cli-usability/README.md)
+- [E007: Private implementation PR readiness](E007-pr-readiness/README.md)
+- [E008: Product execution and private PR validation](E008-product-execution/README.md)
 
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 

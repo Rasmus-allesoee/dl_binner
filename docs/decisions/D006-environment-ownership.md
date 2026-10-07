@@ -45,12 +45,15 @@ runs to it after validation. Existing E001 prefixes require no migration.
 
 Future experiments may reference an existing accepted prefix read-only, recording
 its exact provenance and retention dependency, or recreate an isolated prefix
-from preserved package/source records. They must not mutate an older experiment's
-runtime. Promote proven identical stacks to project-level immutable prefixes only
-when real multi-experiment demand makes the maintenance/storage benefit concrete.
-No such migration is required now. The remaining limitation is that pip freeze
-and Conda records are not a complete portable wheel archive; keep that distinct
-from the location decision and improve replay artifacts as runtimes stabilize.
+from preserved package/source records. Cross-experiment reuse must compare the
+full runtime inventory and import origins with a clean, hash-identified prefix
+record; a `pip freeze` alone may contain user-site packages or direct references.
+They must not mutate an older experiment's runtime. Promote proven identical
+stacks to project-level immutable prefixes only when real multi-experiment demand
+makes the maintenance/storage benefit concrete. No such migration is required now.
+The remaining limitation is that pip freeze and Conda records are not a complete
+portable wheel archive; keep that distinct from the location decision and improve
+replay artifacts as runtimes stabilize.
 
 ### Job-local Workflow Execution Copy, 2026-09-23
 

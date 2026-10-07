@@ -1,0 +1,74 @@
+{
+  "actual_large_native_safeguards": {
+    "intended_message": "Paused after 1/8",
+    "log": {
+      "bytes": 857,
+      "sha256": "364bd25462805373f08f6af8ea54d05c5bc33d415eef3e06414d25b02a46cc8c"
+    },
+    "resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e008-product-execution/run-002/envs/binner-0.1.0.dev3-v1/bin/dl-binner",
+        "run",
+        "--fasta",
+        "/private/tmp/dl-binner-e008-product-002/native-run/fixture inputs/assembly.fna",
+        "--output",
+        "/private/tmp/dl-binner-e008-product-002/native-run/large-safeguards",
+        "--threads",
+        "4",
+        "--memory-gb",
+        "1e100",
+        "--timeout",
+        "1e100",
+        "--stop-after",
+        "features"
+      ],
+      "exit_code": 0,
+      "launched_pid": 56868,
+      "peak_sampled_rss_bytes": 45228032,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.4035337982461738,
+      "sampled_cpu_seconds": 1.15,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 320,
+      "stop_reason": null,
+      "wall_seconds": 2.849823249001929
+    }
+  },
+  "artifacts": {
+    "rebuilt_wheel": {
+      "bytes": 33599,
+      "sha256": "7b4c8d813dd880bc13eda8b55770aba316de63de5e41c846307297ed44077269"
+    },
+    "sdist": {
+      "bytes": 52573,
+      "sha256": "67765a04ddb14ae76e30fc0085064ed87cc3c9b337fb0c4bfe122eee1c0e527f"
+    },
+    "wheel": {
+      "bytes": 33599,
+      "sha256": "054938da0c72ab098359ea1d319aff5a020962326f88d3fb15c46d750dc8fe64"
+    }
+  },
+  "attempt_receipt": {
+    "bytes": 16126,
+    "sha256": "1f3c058717ee43c3f1cf95f7fccf6612757aa6974694e0280e089faa0b2a8ad1"
+  },
+  "campaign_seconds": 513.8420694980014,
+  "linux_current_head": "pending post-fix CI",
+  "native_cases": 19,
+  "native_receipt": {
+    "bytes": 47818,
+    "sha256": "ffdb59294e532ca880d33a6f1615d9bcacf5c1b61d4bb9f8e8032f355e87e1d5"
+  },
+  "peak_sampled_stage_rss_bytes": 501030912,
+  "previous_evidence_preserved": true,
+  "scientific_changes": [],
+  "seconds": 261.66190013899904,
+  "source_commit": "b297019c8a3a787f67e41c8e586f8d01de8c94c4",
+  "status": "accepted-local-timer-repair",
+  "test_receipt": {
+    "bytes": 765,
+    "sha256": "5f46c703fb9cce057d76614372940ac02528feb4ec6efbbae6e4c1727c50551b"
+  },
+  "tests": 13
+}

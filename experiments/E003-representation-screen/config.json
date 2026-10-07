@@ -1,0 +1,44 @@
+{
+  "config_path": "experiments/E003-representation-screen/config.json",
+  "python": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/d011-dnabert-s-spike/env/bin/python",
+  "snakemake": "/opt/miniconda3/envs/snakemake_env/bin/snakemake",
+  "sources_manifest": "experiments/E003-representation-screen/sources.json",
+  "panel_fasta": "artifacts/e003-representation-screen/input/fragments.fna",
+  "panel_manifest": "experiments/E003-representation-screen/panel.json",
+  "panel_manifest_sha256": "cdb7f03e817a8cb787d6f459206565777317ac10497ba43439905e3c0eb3f702",
+  "model_pin": "experiments/E002-dnabert-s-feasibility/model-pin.json",
+  "model_directory": "artifacts/d011-dnabert-s-spike/model",
+  "glm_settings": {
+    "chunk_bp": 4000,
+    "max_tokens": 1024,
+    "batch_size": 2,
+    "pool": "attended-token mean including special tokens",
+    "strand": "canonical whole-DNA orientation, both-strand chunk mean",
+    "chunk_aggregation": "nonoverlapping, base-length-weighted mean",
+    "dtype": "float32",
+    "device": "cpu",
+    "torch_threads": 4,
+    "torch_interop_threads": 1,
+    "loader_workers": 0
+  },
+  "clustering": {
+    "k": 5,
+    "resolution": 1.0,
+    "min_size": 3
+  },
+  "decision": {
+    "short_neighbor_gain_min": 0.1,
+    "long_neighbor_delta_min": -0.05,
+    "base_weighted_b3_gain_min": 0.05,
+    "operational": "native extraction must complete inside actual one-hour/8-GB ceilings; no laptop projection veto"
+  },
+  "limits": {
+    "threads": 4,
+    "ram_bytes": 8000000000,
+    "feature_seconds": 3600,
+    "total_run_seconds": 7200,
+    "fragments_max": 320,
+    "bp_max": 1000000
+  },
+  "interpretation": "Final inclusion screen against raw TNF. Not a trained contrastive-composition comparison, whole-genome recovery, strain-resolution benchmark or unseen-genome validation."
+}

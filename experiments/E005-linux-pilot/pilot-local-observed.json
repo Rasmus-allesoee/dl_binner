@@ -1,0 +1,842 @@
+{
+  "attempts": [
+    {
+      "checkpoint_created": true,
+      "cost": {
+        "allocated_vcpu_hours": 0.07045153219110539,
+        "driver_seconds": 63.406378971994855,
+        "stage": "cost_through_collection",
+        "utc": "2026-10-05T22:29:29Z"
+      },
+      "declared_local_threads": 4,
+      "error": "RuntimeError('Stage failed: gi-pilot; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-00y55609/stages/gi-pilot.log')",
+      "locator": "artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-00y55609",
+      "native_linux": false,
+      "retained_bytes": 1898735,
+      "retained_files": 300,
+      "return_bytes": 720637,
+      "return_sha256": "8bc3998cd985eeec64b2b6846e85596b0e5a649d205bd1e9f8f1fbad14ce82c9",
+      "scoring_completed": false,
+      "source_commit": "b75e0fb82c7c9fe86acf425bc5c46be253f476fc",
+      "status": "failed"
+    },
+    {
+      "checkpoint_created": false,
+      "cost": {
+        "allocated_vcpu_hours": 0.04566586753887047,
+        "driver_seconds": 41.09928078498342,
+        "stage": "cost_through_collection",
+        "utc": "2026-10-05T22:24:56Z"
+      },
+      "declared_local_threads": 4,
+      "error": "RuntimeError('Stage failed: adapter-contracts; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-9wy5lg6t/stages/adapter-contracts.log')",
+      "locator": "artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-9wy5lg6t",
+      "native_linux": false,
+      "retained_bytes": 108250,
+      "retained_files": 83,
+      "return_bytes": 27672,
+      "return_sha256": "ae457a678388715419d6a6845d09d19c9fbd26f1d514adb9c75ae3940a271e2e",
+      "scoring_completed": false,
+      "source_commit": "51d203c88c54bc32631be9471b91b9f07ca39289",
+      "status": "failed"
+    },
+    {
+      "accounting": {
+        "learned": {
+          "assigned": 19,
+          "excluded": 2,
+          "unassigned": 0
+        },
+        "raw": {
+          "assigned": 13,
+          "excluded": 2,
+          "unassigned": 6
+        }
+      },
+      "below_500": 2,
+      "biology": "not assessed: partial real-DNA fixture and synthetic matching reads; numerical scores are contract outputs only",
+      "bp": 546369,
+      "contigs": 21,
+      "cost": {
+        "allocated_vcpu_hours": 0.07512486758664536,
+        "driver_seconds": 67.61238082798081,
+        "stage": "cost_through_collection",
+        "utc": "2026-10-05T22:35:25Z"
+      },
+      "declared_local_threads": 4,
+      "eligible": 19,
+      "fixture": {
+        "fasta_sha256": "1d7c6828eb1e6e07f25a8bf3a3f49cff6f800de4d546ce79693e840fb6422c1f",
+        "locator": "artifacts/e005-linux-pilot/local-pilot-input/assembly.fna",
+        "role": "tiny partial real-DNA software fixture; no scientific utility or pilot score",
+        "sampled_pairs": 32,
+        "samples": [
+          {
+            "column": "GI_sample_1",
+            "reads": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-input/sample_1.fq",
+            "sample": 1,
+            "sha256": "5cc64e03c290aef229957916f3f16c7fea9dbb9efd508b164fd7796c66a39611"
+          },
+          {
+            "column": "GI_sample_4",
+            "reads": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-input/sample_4.fq",
+            "sample": 4,
+            "sha256": "bb736eece0698508b0a3057280c9f868d92a2488b62f3d343a812217ae337684"
+          }
+        ]
+      },
+      "locator": "artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-d__nh7bk",
+      "native_contracts": {
+        "actual_mapping": true,
+        "confirmed_R95_boundary": true,
+        "flags": "exclude0x904; keepDUP/QCFAIL; overlap/BQ0/MAPQ0; no deletion/insert/softclip counting",
+        "native_AMBER": true,
+        "native_depth_base_observations": 71,
+        "real_DNA": true,
+        "sampled_pairs": 8,
+        "scope": "tiny real/native adapters and synthetic truth; no inference repeat or scientific utility claim",
+        "source_commit": "f8b3a601043d13fc4227d5691c13561eb4490e50",
+        "status": "completed",
+        "zero_unused_short_reference": true
+      },
+      "native_linux": false,
+      "reload_max_abs": 0,
+      "retained_bytes": 1944406,
+      "retained_files": 333,
+      "return_bytes": 730837,
+      "return_sha256": "ba8a55ab9898a4e8d983fb2073b3687c8a72e2397d63d21a281f14cfc025be74",
+      "reused_files": 62,
+      "samples": [
+        "GI_sample_1",
+        "GI_sample_4"
+      ],
+      "source_commit": "c217b5fa44d6a6c0851f2d4631bffc4641071808",
+      "stages": [
+        {
+          "allocated_vcpu_hours": 0.0011942273633515773,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "name": "binner-pip-check",
+          "peak_sampled_rss_bytes": 43089920,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.49311287528715053,
+          "sampled_cpu_seconds": 0.53,
+          "stop_reason": null,
+          "wall_seconds": 1.0748046270164195
+        },
+        {
+          "allocated_vcpu_hours": 0.002663662583314969,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-S",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v3/e005-gi-pilot/scripts/e005_probe.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local",
+            "binner",
+            "4",
+            "local"
+          ],
+          "exit_code": 0,
+          "name": "binner-probe",
+          "peak_sampled_rss_bytes": 173514752,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 1.0219846309641722,
+          "sampled_cpu_seconds": 2.45,
+          "stop_reason": null,
+          "wall_seconds": 2.397296324983472
+        },
+        {
+          "allocated_vcpu_hours": 0.0008683862910968148,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "name": "workflow-pip-check",
+          "peak_sampled_rss_bytes": 29646848,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.34546837401254366,
+          "sampled_cpu_seconds": 0.27,
+          "stop_reason": null,
+          "wall_seconds": 0.7815476619871333
+        },
+        {
+          "allocated_vcpu_hours": 0.0005893090755691648,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-S",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v3/e005-gi-pilot/scripts/e005_probe.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local",
+            "workflow",
+            "4",
+            "local"
+          ],
+          "exit_code": 0,
+          "name": "workflow-probe",
+          "peak_sampled_rss_bytes": 26955776,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.5090707278014595,
+          "sampled_cpu_seconds": 0.27,
+          "stop_reason": null,
+          "wall_seconds": 0.5303781680122484
+        },
+        {
+          "allocated_vcpu_hours": 0.0002491940677929152,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-mapping-local/bin/strobealign",
+            "--version"
+          ],
+          "exit_code": 0,
+          "name": "strobealign-version",
+          "peak_sampled_rss_bytes": 708608,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.04458818466073858,
+          "sampled_cpu_seconds": 0.01,
+          "stop_reason": null,
+          "wall_seconds": 0.2242746610136237
+        },
+        {
+          "allocated_vcpu_hours": 0.0003571334744143921,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-mapping-local/bin/samtools",
+            "--version"
+          ],
+          "exit_code": 0,
+          "name": "samtools-version",
+          "peak_sampled_rss_bytes": 745472,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.031111928472486384,
+          "sampled_cpu_seconds": 0.01,
+          "stop_reason": null,
+          "wall_seconds": 0.32142012697295286
+        },
+        {
+          "allocated_vcpu_hours": 0.0013182614900223498,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-amber-local/bin/python",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "name": "amber-pip-check",
+          "peak_sampled_rss_bytes": 43126784,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.6911459661130389,
+          "sampled_cpu_seconds": 0.82,
+          "stop_reason": null,
+          "wall_seconds": 1.1864353410201147
+        },
+        {
+          "allocated_vcpu_hours": 0.03163680403221709,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-amber-local/bin/python",
+            "-I",
+            "-S",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v3/e005-gi-pilot/scripts/e005_external_probe.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-amber-local",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/AMBER_evaluation",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v3/e005-gi-pilot/experiments/E005-linux-pilot/external-runtime.json",
+            "local"
+          ],
+          "exit_code": 0,
+          "name": "amber-probe",
+          "peak_sampled_rss_bytes": 173322240,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.9391312434990284,
+          "sampled_cpu_seconds": 26.740000000000002,
+          "stop_reason": null,
+          "wall_seconds": 28.47312362899538
+        },
+        {
+          "allocated_vcpu_hours": 0.002855925474432297,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v3/e005-gi-pilot/experiments/E005-linux-pilot/native_contracts.py",
+            "--mapping-prefix",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-mapping-local",
+            "--amber-python",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-amber-local/bin/python",
+            "--amber-source",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/AMBER_evaluation",
+            "--root",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-d__nh7bk/adapter-contracts"
+          ],
+          "exit_code": 0,
+          "name": "adapter-contracts",
+          "peak_sampled_rss_bytes": 134283264,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.7742187710800252,
+          "sampled_cpu_seconds": 1.99,
+          "stop_reason": null,
+          "wall_seconds": 2.5703329269890673
+        },
+        {
+          "allocated_vcpu_hours": 0.010390894192225662,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "snakemake",
+            "--snakefile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v3/e005-gi-pilot/workflows/first-binner/gi_pilot.smk",
+            "--configfile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-d__nh7bk/resolved-config.json",
+            "--directory",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-d__nh7bk/pilot",
+            "--cores",
+            "4",
+            "--jobs",
+            "1",
+            "--resources",
+            "mem_mb=8000",
+            "--scheduler",
+            "greedy",
+            "--benchmark-extended",
+            "--runtime-source-cache-path",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-d__nh7bk/source-cache",
+            "--keep-incomplete",
+            "--printshellcmds",
+            "--latency-wait",
+            "2",
+            "mean-depth.tsv"
+          ],
+          "exit_code": 0,
+          "name": "partial-preprocess",
+          "peak_sampled_rss_bytes": 84688896,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.38174449602561417,
+          "sampled_cpu_seconds": 3.57,
+          "stop_reason": null,
+          "wall_seconds": 9.351804773003096
+        },
+        {
+          "allocated_vcpu_hours": 0.019830491455569345,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "snakemake",
+            "--snakefile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v3/e005-gi-pilot/workflows/first-binner/gi_pilot.smk",
+            "--configfile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-d__nh7bk/resolved-config.json",
+            "--directory",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-d__nh7bk/pilot",
+            "--cores",
+            "4",
+            "--jobs",
+            "1",
+            "--resources",
+            "mem_mb=8000",
+            "--scheduler",
+            "greedy",
+            "--benchmark-extended",
+            "--runtime-source-cache-path",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-d__nh7bk/source-cache",
+            "--keep-incomplete",
+            "--printshellcmds",
+            "--latency-wait",
+            "2"
+          ],
+          "exit_code": 0,
+          "name": "gi-pilot",
+          "peak_sampled_rss_bytes": 422920192,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 1.1133247921385876,
+          "sampled_cpu_seconds": 19.87,
+          "stop_reason": null,
+          "wall_seconds": 17.84744231001241
+        },
+        {
+          "allocated_vcpu_hours": 0.0011962646777909766,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "snakemake",
+            "--snakefile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v3/e005-gi-pilot/workflows/first-binner/gi_pilot.smk",
+            "--configfile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-d__nh7bk/resolved-config.json",
+            "--directory",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-d__nh7bk/pilot",
+            "--cores",
+            "4",
+            "--jobs",
+            "1",
+            "--resources",
+            "mem_mb=8000",
+            "--scheduler",
+            "greedy",
+            "--benchmark-extended",
+            "--runtime-source-cache-path",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-d__nh7bk/source-cache",
+            "--keep-incomplete",
+            "--printshellcmds",
+            "--latency-wait",
+            "2",
+            "--dry-run"
+          ],
+          "exit_code": 0,
+          "name": "completed-resume",
+          "peak_sampled_rss_bytes": 42266624,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.5015612440450558,
+          "sampled_cpu_seconds": 0.54,
+          "stop_reason": null,
+          "wall_seconds": 1.076638210011879
+        }
+      ],
+      "status": "passed",
+      "training": {
+        "loader_workers": 0,
+        "numerical_threads": 4,
+        "parameter_count": 26048,
+        "torch_interop": 1,
+        "training_average_cpus": 3.1079377038373917,
+        "training_process_cpu_seconds": 0.30028900000000025,
+        "training_wall_seconds": 0.09662001900142059
+      },
+      "zero_depth_rows": 10
+    },
+    {
+      "accounting": {
+        "learned": {
+          "assigned": 19,
+          "excluded": 2,
+          "unassigned": 0
+        },
+        "raw": {
+          "assigned": 13,
+          "excluded": 2,
+          "unassigned": 6
+        }
+      },
+      "below_500": 2,
+      "biology": "not assessed: partial real-DNA fixture and synthetic matching reads; numerical scores are contract outputs only",
+      "bp": 546369,
+      "contigs": 21,
+      "cost": {
+        "allocated_vcpu_hours": 0.08981528728220534,
+        "driver_seconds": 80.83375855398481,
+        "stage": "cost_through_collection",
+        "utc": "2026-10-05T22:46:41Z"
+      },
+      "declared_local_threads": 4,
+      "eligible": 19,
+      "fixture": {
+        "fasta_sha256": "1d7c6828eb1e6e07f25a8bf3a3f49cff6f800de4d546ce79693e840fb6422c1f",
+        "locator": "artifacts/e005-linux-pilot/local-pilot-input-v4/assembly.fna",
+        "role": "tiny partial real-DNA software fixture; no scientific utility or pilot score",
+        "sampled_pairs": 32,
+        "samples": [
+          {
+            "column": "GI_sample_1",
+            "reads": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-input-v4/sample_1.fq",
+            "sample": 1,
+            "sha256": "0dcb83be530bd264ddf52160afc3102bb097090b50485235a8bb4976d89587eb"
+          },
+          {
+            "column": "GI_sample_4",
+            "reads": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-input-v4/sample_4.fq",
+            "sample": 4,
+            "sha256": "695f9c62d5d6022d4c57fe54f581822c712825ae806367fef32c82c41cfa6691"
+          }
+        ]
+      },
+      "locator": "artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-wkqd9q5a",
+      "native_contracts": {
+        "actual_mapping": true,
+        "confirmed_R95_boundary": true,
+        "flags": "exclude0x904; keepDUP/QCFAIL; overlap/BQ0/MAPQ0; no deletion/insert/softclip counting",
+        "native_AMBER": true,
+        "native_depth_base_observations": 71,
+        "real_DNA": true,
+        "sampled_pairs": 8,
+        "scope": "tiny real/native adapters and synthetic truth; no inference repeat or scientific utility claim",
+        "source_commit": "f8b3a601043d13fc4227d5691c13561eb4490e50",
+        "status": "completed",
+        "zero_unused_short_reference": true
+      },
+      "native_linux": false,
+      "reload_max_abs": 0,
+      "retained_bytes": 1947235,
+      "retained_files": 333,
+      "return_bytes": 728913,
+      "return_sha256": "c790219940c74021a257aa8c62a59294f1db8985031d6845740c49e7923f6b89",
+      "reused_files": 62,
+      "samples": [
+        "GI_sample_1",
+        "GI_sample_4"
+      ],
+      "source_commit": "49dc582b457e12030daab07a5f961a600772d820",
+      "stages": [
+        {
+          "allocated_vcpu_hours": 0.0018187805966590532,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "name": "binner-pip-check",
+          "peak_sampled_rss_bytes": 43200512,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.4826188378027464,
+          "sampled_cpu_seconds": 0.79,
+          "stop_reason": null,
+          "wall_seconds": 1.6369025369931478
+        },
+        {
+          "allocated_vcpu_hours": 0.0049406784199850845,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-S",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v4/e005-gi-pilot/scripts/e005_probe.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local",
+            "binner",
+            "4",
+            "local"
+          ],
+          "exit_code": 0,
+          "name": "binner-probe",
+          "peak_sampled_rss_bytes": 179982336,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.6656755630128257,
+          "sampled_cpu_seconds": 2.96,
+          "stop_reason": null,
+          "wall_seconds": 4.446610577986576
+        },
+        {
+          "allocated_vcpu_hours": 0.0014915425511167592,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "name": "workflow-pip-check",
+          "peak_sampled_rss_bytes": 36085760,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.3575716515321751,
+          "sampled_cpu_seconds": 0.48,
+          "stop_reason": null,
+          "wall_seconds": 1.3423882960050832
+        },
+        {
+          "allocated_vcpu_hours": 0.0008643600088867566,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-S",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v4/e005-gi-pilot/scripts/e005_probe.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local",
+            "workflow",
+            "4",
+            "local"
+          ],
+          "exit_code": 0,
+          "name": "workflow-probe",
+          "peak_sampled_rss_bytes": 26402816,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.282803972802113,
+          "sampled_cpu_seconds": 0.22,
+          "stop_reason": null,
+          "wall_seconds": 0.7779240079980809
+        },
+        {
+          "allocated_vcpu_hours": 0.0002752542111233601,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-mapping-local/bin/strobealign",
+            "--version"
+          ],
+          "exit_code": 0,
+          "name": "strobealign-version",
+          "peak_sampled_rss_bytes": 225280,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.0,
+          "sampled_cpu_seconds": 0,
+          "stop_reason": null,
+          "wall_seconds": 0.2477287900110241
+        },
+        {
+          "allocated_vcpu_hours": 0.0005898888500006352,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-mapping-local/bin/samtools",
+            "--version"
+          ],
+          "exit_code": 0,
+          "name": "samtools-version",
+          "peak_sampled_rss_bytes": 135168,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.01883594021331162,
+          "sampled_cpu_seconds": 0.01,
+          "stop_reason": null,
+          "wall_seconds": 0.5308999650005717
+        },
+        {
+          "allocated_vcpu_hours": 0.0014757395955449385,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-amber-local/bin/python",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "name": "amber-pip-check",
+          "peak_sampled_rss_bytes": 42795008,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.48186760947382656,
+          "sampled_cpu_seconds": 0.64,
+          "stop_reason": null,
+          "wall_seconds": 1.3281656359904446
+        },
+        {
+          "allocated_vcpu_hours": 0.03403100943002048,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-amber-local/bin/python",
+            "-I",
+            "-S",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v4/e005-gi-pilot/scripts/e005_external_probe.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-amber-local",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/AMBER_evaluation",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v4/e005-gi-pilot/experiments/E005-linux-pilot/external-runtime.json",
+            "local"
+          ],
+          "exit_code": 0,
+          "name": "amber-probe",
+          "peak_sampled_rss_bytes": 170291200,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.8933029172265051,
+          "sampled_cpu_seconds": 27.36,
+          "stop_reason": null,
+          "wall_seconds": 30.62790848701843
+        },
+        {
+          "allocated_vcpu_hours": 0.00386483320442494,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+            "-I",
+            "-u",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v4/e005-gi-pilot/experiments/E005-linux-pilot/native_contracts.py",
+            "--mapping-prefix",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-mapping-local",
+            "--amber-python",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-amber-local/bin/python",
+            "--amber-source",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/AMBER_evaluation",
+            "--root",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-wkqd9q5a/adapter-contracts"
+          ],
+          "exit_code": 0,
+          "name": "adapter-contracts",
+          "peak_sampled_rss_bytes": 137732096,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.7158566800500068,
+          "sampled_cpu_seconds": 2.49,
+          "stop_reason": null,
+          "wall_seconds": 3.478349883982446
+        },
+        {
+          "allocated_vcpu_hours": 0.011819238032233746,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "snakemake",
+            "--snakefile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v4/e005-gi-pilot/workflows/first-binner/gi_pilot.smk",
+            "--configfile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-wkqd9q5a/resolved-config.json",
+            "--directory",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-wkqd9q5a/pilot",
+            "--cores",
+            "4",
+            "--jobs",
+            "1",
+            "--resources",
+            "mem_mb=8000",
+            "--scheduler",
+            "greedy",
+            "--benchmark-extended",
+            "--runtime-source-cache-path",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-wkqd9q5a/source-cache",
+            "--keep-incomplete",
+            "--printshellcmds",
+            "--latency-wait",
+            "2",
+            "mean-depth.tsv"
+          ],
+          "exit_code": 0,
+          "name": "partial-preprocess",
+          "peak_sampled_rss_bytes": 84213760,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.3581731175722218,
+          "sampled_cpu_seconds": 3.81,
+          "stop_reason": null,
+          "wall_seconds": 10.637314229010371
+        },
+        {
+          "allocated_vcpu_hours": 0.025320717105577286,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "snakemake",
+            "--snakefile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v4/e005-gi-pilot/workflows/first-binner/gi_pilot.smk",
+            "--configfile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-wkqd9q5a/resolved-config.json",
+            "--directory",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-wkqd9q5a/pilot",
+            "--cores",
+            "4",
+            "--jobs",
+            "1",
+            "--resources",
+            "mem_mb=8000",
+            "--scheduler",
+            "greedy",
+            "--benchmark-extended",
+            "--runtime-source-cache-path",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-wkqd9q5a/source-cache",
+            "--keep-incomplete",
+            "--printshellcmds",
+            "--latency-wait",
+            "2"
+          ],
+          "exit_code": 0,
+          "name": "gi-pilot",
+          "peak_sampled_rss_bytes": 417955840,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.9596884597967229,
+          "sampled_cpu_seconds": 21.87,
+          "stop_reason": null,
+          "wall_seconds": 22.788645395019557
+        },
+        {
+          "allocated_vcpu_hours": 0.0012278230199849027,
+          "allocated_vcpus": 4,
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+            "-I",
+            "-m",
+            "snakemake",
+            "--snakefile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/pilot-extracted-v4/e005-gi-pilot/workflows/first-binner/gi_pilot.smk",
+            "--configfile",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-wkqd9q5a/resolved-config.json",
+            "--directory",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-wkqd9q5a/pilot",
+            "--cores",
+            "4",
+            "--jobs",
+            "1",
+            "--resources",
+            "mem_mb=8000",
+            "--scheduler",
+            "greedy",
+            "--benchmark-extended",
+            "--runtime-source-cache-path",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-wkqd9q5a/source-cache",
+            "--keep-incomplete",
+            "--printshellcmds",
+            "--latency-wait",
+            "2",
+            "--dry-run"
+          ],
+          "exit_code": 0,
+          "name": "completed-resume",
+          "peak_sampled_rss_bytes": 49397760,
+          "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+          "sampled_average_cpus": 0.7330046638244871,
+          "sampled_cpu_seconds": 0.81,
+          "stop_reason": null,
+          "wall_seconds": 1.1050407179864123
+        }
+      ],
+      "status": "passed",
+      "training": {
+        "loader_workers": 0,
+        "numerical_threads": 4,
+        "parameter_count": 26048,
+        "torch_interop": 1,
+        "training_average_cpus": 2.217574795235004,
+        "training_process_cpu_seconds": 0.4671689999999997,
+        "training_wall_seconds": 0.2106666259933263
+      },
+      "zero_depth_rows": 10
+    }
+  ],
+  "date": "2026-10-06",
+  "decision": "native pilot adapters and actual v4 local packet accepted; full owner GI pilot unrun",
+  "final_fixture": "artifacts/e005-linux-pilot/local-pilot-owner/gi-pilot-wkqd9q5a",
+  "record": "E005",
+  "scope": {
+    "Linux_validation": "accepted model smoke only; new full large-read mapping/depth/evaluation runtime/source/lock entry checks await owner run",
+    "costs": "local declared four-thread wall budget, not UCloud billing; setup/downloads/tests/review outside driver clock",
+    "local_only_skips": [
+      "Linux ABI/affinity",
+      "original large UCloud FASTQs and E001 executed-lock comparison",
+      "10-GB provisioning replaced by 1 GB for tiny fixture"
+    ],
+    "native_workers_mocked": [],
+    "platform": "native Mac mapper0.17.0/samtools1.24 and pinned AMBER source/dependencies; accepted installed binner",
+    "scientific_utility": "not measured; no full pilot extraction/training/evaluation or three-way study run"
+  },
+  "transfer": {
+    "archive": "artifacts/e005-linux-pilot/pilot-transfer-v4/e005-gi-pilot-v4.tar.gz",
+    "bytes": 4099196,
+    "sha256": "91bebee4f0b8f214849af1250ca31d3fbf1224d441ee59ef1a52302c9f561dee",
+    "source_commit": "49dc582b457e12030daab07a5f961a600772d820"
+  }
+}

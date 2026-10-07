@@ -1,0 +1,566 @@
+{
+  "accounting": {
+    "learned": {
+      "assigned": 12,
+      "excluded": 2,
+      "unassigned": 0
+    },
+    "raw": {
+      "assigned": 10,
+      "excluded": 2,
+      "unassigned": 2
+    }
+  },
+  "actual_cost": {
+    "allocated_vcpu_hours": 0.09312372305637433,
+    "driver_seconds": 83.81135075073689,
+    "stage": "cost_through_collection",
+    "utc": "2026-10-05T20:59:37Z"
+  },
+  "actual_training": {
+    "loader_workers": 0,
+    "numerical_threads": 4,
+    "parameter_count": 26048,
+    "torch_interop": 1,
+    "training_average_cpus": 3.3563403065918167,
+    "training_process_cpu_seconds": 0.24956798599999974,
+    "training_wall_seconds": 0.07435717573389411
+  },
+  "archive": {
+    "bytes": 703082,
+    "locator": "agent_context/linux-smoke-kc6vz1qe-return.tar.gz",
+    "sha256": "51b09e1589c584b72182c9501bea1e06508316f8f080a76eabed5d6786679773"
+  },
+  "bp": 52235,
+  "contigs": 14,
+  "date": "2026-10-05",
+  "decision": "native Linux software smoke accepted; do not repeat",
+  "epochs": 20,
+  "failure_checks": {
+    "cases": {
+      "corrupt-checkpoint": {
+        "exit_code": 1,
+        "seconds": 1.3389912876300514
+      },
+      "missing-depth": {
+        "exit_code": 1,
+        "seconds": 0.2561461990699172
+      },
+      "refuse-overwrite": {
+        "exit_code": 1,
+        "seconds": 0.04924750607460737
+      }
+    },
+    "status": "passed"
+  },
+  "limitations": [
+    "synthetic depth, no bin-quality result",
+    "tiny stage timing is not bulk throughput",
+    "sampled RSS/CPU are not exact peaks or invoice; owner idle/upload excluded",
+    "prefix/payload disk usage not returned; retained inventory excludes open terminal and itself"
+  ],
+  "pilot_assets": {
+    "files": {
+      "/work/Home/dl_binner/e001/e001-gate0/envs/amber/bin/python": {
+        "bytes": 31271856,
+        "exists": true
+      },
+      "/work/Home/dl_binner/e001/e001-gate0/inventory/per_bodysite/gastro_bam/gsa.fa": {
+        "bytes": 972133785,
+        "exists": true
+      },
+      "/work/Home/dl_binner/e001/e001-gate0/sources/AMBER_evaluation/cami_amber/binning_classes.py": {
+        "bytes": 49553,
+        "exists": true
+      },
+      "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_1/reads.fq": {
+        "bytes": 10610790412,
+        "exists": true
+      },
+      "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e001/multisample-preprocess-rau3rfod/sample_4/reads.fq": {
+        "bytes": 10610324034,
+        "exists": true
+      }
+    },
+    "scope": "read-only existence/size inventory, not byte acceptance or pilot execution"
+  },
+  "record": "E005",
+  "reload_max_abs": 0,
+  "retained_files": 124,
+  "retained_logical_bytes": 977407,
+  "runtime": {
+    "binner": {
+      "inventory": {
+        "affinity": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "allocation_threads": 4,
+        "base_prefix": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime",
+        "distributions": {
+          "Jinja2": "3.1.6",
+          "MarkupSafe": "3.0.4",
+          "dl-binner": "0.1.0.dev0",
+          "filelock": "4.0.10",
+          "fsspec": "2026.9.0",
+          "mpmath": "1.3.0",
+          "networkx": "3.4.2",
+          "numpy": "1.26.4",
+          "pip": "25.1.1",
+          "psutil": "6.0.0",
+          "setuptools": "65.5.0",
+          "sympy": "1.14.0",
+          "threadpoolctl": "3.5.0",
+          "torch": "2.2.2+cpu",
+          "typing_extensions": "4.16.0",
+          "wheel": "0.45.1"
+        },
+        "executable": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+        "interop": 1,
+        "loader_workers": 0,
+        "native_linux": true,
+        "origins": {
+          "dl_binner": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/lib/python3.12/site-packages/dl_binner/__init__.py",
+          "networkx": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/lib/python3.12/site-packages/networkx/__init__.py",
+          "numpy": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/lib/python3.12/site-packages/numpy/__init__.py",
+          "psutil": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/lib/python3.12/site-packages/psutil/__init__.py",
+          "threadpoolctl": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/lib/python3.12/site-packages/threadpoolctl.py",
+          "torch": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/lib/python3.12/site-packages/torch/__init__.py"
+        },
+        "platform": "linux",
+        "pools": [
+          {
+            "architecture": "Cooperlake",
+            "filepath": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.23.dev"
+          },
+          {
+            "filepath": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/lib/python3.12/site-packages/torch/lib/libgomp-a34b3233.so.1",
+            "internal_api": "openmp",
+            "num_threads": 4,
+            "prefix": "libgomp",
+            "user_api": "openmp",
+            "version": null
+          }
+        ],
+        "prefix": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime",
+        "python": "3.12.10 (main, Apr  9 2025, 04:03:51) [Clang 20.1.0 ]",
+        "torch_cuda": null,
+        "torch_threads": 4,
+        "torch_version": "2.2.2+cpu"
+      },
+      "python": "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+      "reuse": "fresh isolated offline prefix"
+    },
+    "workflow": {
+      "inventory": {
+        "affinity": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "allocation_threads": 4,
+        "base_prefix": "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime",
+        "distributions": {
+          "ConfigArgParse": "1.8.0",
+          "GitPython": "3.2.0",
+          "Jinja2": "3.1.6",
+          "MarkupSafe": "3.0.4",
+          "PuLP": "3.3.2",
+          "PyYAML": "6.0.3",
+          "appdirs": "1.4.4",
+          "argparse-dataclass": "2.0.0",
+          "attrs": "26.1.0",
+          "certifi": "2026.7.22",
+          "charset-normalizer": "3.5.2",
+          "conda-inject": "1.3.2",
+          "connection_pool": "0.0.3",
+          "docutils": "0.23",
+          "dpath": "2.2.0",
+          "fastjsonschema": "2.22.2",
+          "gitdb": "4.0.12",
+          "humanfriendly": "10.0",
+          "idna": "3.20",
+          "immutables": "0.21",
+          "jsonschema": "4.26.0",
+          "jsonschema-specifications": "2025.9.1",
+          "jupyter_core": "5.9.1",
+          "nbformat": "5.11.1",
+          "packaging": "25.0",
+          "pip": "25.1.1",
+          "platformdirs": "4.12.3",
+          "psutil": "7.2.2",
+          "referencing": "0.37.0",
+          "requests": "2.34.2",
+          "reretry": "0.11.8",
+          "rpds-py": "2026.9.1",
+          "setuptools": "65.5.0",
+          "smart_open": "7.7.1",
+          "smmap": "5.0.3",
+          "snakemake": "9.16.3",
+          "snakemake-interface-common": "1.23.0",
+          "snakemake-interface-executor-plugins": "9.4.0",
+          "snakemake-interface-logger-plugins": "2.1.0",
+          "snakemake-interface-report-plugins": "1.3.0",
+          "snakemake-interface-scheduler-plugins": "2.0.2",
+          "snakemake-interface-storage-plugins": "4.4.1",
+          "tabulate": "0.10.0",
+          "tenacity": "9.1.4",
+          "throttler": "1.2.3",
+          "traitlets": "5.16.1",
+          "typing_extensions": "4.16.0",
+          "urllib3": "2.8.0",
+          "wheel": "0.45.1",
+          "wrapt": "2.5.0",
+          "yte": "1.9.4"
+        },
+        "executable": "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+        "native_linux": true,
+        "origins": {
+          "snakemake": "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/lib/python3.12/site-packages/snakemake/__init__.py"
+        },
+        "platform": "linux",
+        "prefix": "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime",
+        "python": "3.12.10 (main, Apr  9 2025, 04:03:51) [Clang 20.1.0 ]"
+      },
+      "python": "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+      "reuse": "fresh isolated offline prefix"
+    }
+  },
+  "samples": [
+    "smoke_A",
+    "smoke_B"
+  ],
+  "source_commit": "2f0b9a58bcf86f29f23b0f3bed16f31171a359f4",
+  "stages": [
+    {
+      "allocated_vcpu_hours": 0.0002328350545010633,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+        "-I",
+        "-S",
+        "-u",
+        "-c",
+        "import sys; print(\"before_ssl\",sys.version,sys.prefix,flush=True); import ssl; print(ssl.OPENSSL_VERSION,flush=True)"
+      ],
+      "exit_code": 0,
+      "name": "binner-interpreter",
+      "peak_sampled_rss_bytes": 0,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.6203724123670769,
+      "sampled_cpu_seconds": 0.13,
+      "stop_reason": null,
+      "wall_seconds": 0.20955154905095696
+    },
+    {
+      "allocated_vcpu_hours": 0.046274850581151744,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "--require-hashes",
+        "--find-links",
+        "/work/Home/e005-launch.Mp1erW/e005-linux-smoke/payload/binner-wheels",
+        "-r",
+        "/work/Home/e005-launch.Mp1erW/e005-linux-smoke/experiments/E005-linux-pilot/binner-linux.lock"
+      ],
+      "exit_code": 0,
+      "name": "binner-install",
+      "peak_sampled_rss_bytes": 117469184,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.5520157088275716,
+      "sampled_cpu_seconds": 22.99,
+      "stop_reason": null,
+      "wall_seconds": 41.64736552303657
+    },
+    {
+      "allocated_vcpu_hours": 0.0009006796265020967,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+        "-I",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "name": "binner-pip-check",
+      "peak_sampled_rss_bytes": 31539200,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.4070999896940748,
+      "sampled_cpu_seconds": 0.33,
+      "stop_reason": null,
+      "wall_seconds": 0.810611663851887
+    },
+    {
+      "allocated_vcpu_hours": 0.00045294941144271027,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+        "-I",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "name": "binner-entry-pip-check",
+      "peak_sampled_rss_bytes": 25329664,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.7113867776003885,
+      "sampled_cpu_seconds": 0.29,
+      "stop_reason": null,
+      "wall_seconds": 0.40765447029843926
+    },
+    {
+      "allocated_vcpu_hours": 0.002915176056428916,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+        "-I",
+        "-S",
+        "-u",
+        "/work/Home/e005-launch.Mp1erW/e005-linux-smoke/scripts/e005_probe.py",
+        "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime",
+        "binner",
+        "4",
+        "linux"
+      ],
+      "exit_code": 0,
+      "name": "binner-probe",
+      "peak_sampled_rss_bytes": 205877248,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.9223761573367104,
+      "sampled_cpu_seconds": 2.42,
+      "stop_reason": null,
+      "wall_seconds": 2.6236584507860243
+    },
+    {
+      "allocated_vcpu_hours": 0.00022987096673912473,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+        "-I",
+        "-S",
+        "-u",
+        "-c",
+        "import sys; print(\"before_ssl\",sys.version,sys.prefix,flush=True); import ssl; print(ssl.OPENSSL_VERSION,flush=True)"
+      ],
+      "exit_code": 0,
+      "name": "workflow-interpreter",
+      "peak_sampled_rss_bytes": 0,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.5800355530964041,
+      "sampled_cpu_seconds": 0.12,
+      "stop_reason": null,
+      "wall_seconds": 0.20688387006521225
+    },
+    {
+      "allocated_vcpu_hours": 0.012292073601856827,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "--require-hashes",
+        "--find-links",
+        "/work/Home/e005-launch.Mp1erW/e005-linux-smoke/payload/workflow-wheels",
+        "-r",
+        "/work/Home/e005-launch.Mp1erW/e005-linux-smoke/experiments/E005-linux-pilot/workflow-linux.lock"
+      ],
+      "exit_code": 0,
+      "name": "workflow-install",
+      "peak_sampled_rss_bytes": 67850240,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.5161411044175703,
+      "sampled_cpu_seconds": 5.71,
+      "stop_reason": null,
+      "wall_seconds": 11.062866241671145
+    },
+    {
+      "allocated_vcpu_hours": 0.0008990175225254562,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+        "-I",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "name": "workflow-pip-check",
+      "peak_sampled_rss_bytes": 33763328,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.45728931951876417,
+      "sampled_cpu_seconds": 0.37,
+      "stop_reason": null,
+      "wall_seconds": 0.8091157702729106
+    },
+    {
+      "allocated_vcpu_hours": 0.0006752110686567094,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+        "-I",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "name": "workflow-entry-pip-check",
+      "peak_sampled_rss_bytes": 33722368,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.5101285515501032,
+      "sampled_cpu_seconds": 0.31,
+      "stop_reason": null,
+      "wall_seconds": 0.6076899617910385
+    },
+    {
+      "allocated_vcpu_hours": 0.0004521758455990089,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+        "-I",
+        "-S",
+        "-u",
+        "/work/Home/e005-launch.Mp1erW/e005-linux-smoke/scripts/e005_probe.py",
+        "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime",
+        "workflow",
+        "4",
+        "linux"
+      ],
+      "exit_code": 0,
+      "name": "workflow-probe",
+      "peak_sampled_rss_bytes": 23257088,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.6388861583399935,
+      "sampled_cpu_seconds": 0.26,
+      "stop_reason": null,
+      "wall_seconds": 0.40695826103910804
+    },
+    {
+      "allocated_vcpu_hours": 0.01254694159504854,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+        "-I",
+        "-m",
+        "snakemake",
+        "--snakefile",
+        "/work/Home/e005-launch.Mp1erW/e005-linux-smoke/workflows/first-binner/linux_smoke.smk",
+        "--configfile",
+        "/work/Home/dl_binner/e005/linux-smoke-kc6vz1qe/resolved-config.json",
+        "--directory",
+        "/work/Home/dl_binner/e005/linux-smoke-kc6vz1qe/smoke",
+        "--cores",
+        "4",
+        "--jobs",
+        "1",
+        "--resources",
+        "mem_mb=8000",
+        "--scheduler",
+        "greedy",
+        "--benchmark-extended",
+        "--runtime-source-cache-path",
+        "/work/Home/dl_binner/e005/linux-smoke-kc6vz1qe/source-cache",
+        "--keep-incomplete",
+        "--printshellcmds",
+        "--latency-wait",
+        "2"
+      ],
+      "exit_code": 0,
+      "name": "native-smoke",
+      "peak_sampled_rss_bytes": 306741248,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.8474840862835942,
+      "sampled_cpu_seconds": 9.57,
+      "stop_reason": null,
+      "wall_seconds": 11.292247435543686
+    },
+    {
+      "allocated_vcpu_hours": 0.0008995107644134098,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/workflow-cpu-v1-msqvth6v/runtime/bin/python3",
+        "-I",
+        "-m",
+        "snakemake",
+        "--snakefile",
+        "/work/Home/e005-launch.Mp1erW/e005-linux-smoke/workflows/first-binner/linux_smoke.smk",
+        "--configfile",
+        "/work/Home/dl_binner/e005/linux-smoke-kc6vz1qe/resolved-config.json",
+        "--directory",
+        "/work/Home/dl_binner/e005/linux-smoke-kc6vz1qe/smoke",
+        "--cores",
+        "4",
+        "--jobs",
+        "1",
+        "--resources",
+        "mem_mb=8000",
+        "--scheduler",
+        "greedy",
+        "--benchmark-extended",
+        "--runtime-source-cache-path",
+        "/work/Home/dl_binner/e005/linux-smoke-kc6vz1qe/source-cache",
+        "--keep-incomplete",
+        "--printshellcmds",
+        "--latency-wait",
+        "2",
+        "--dry-run"
+      ],
+      "exit_code": 0,
+      "name": "completed-resume",
+      "peak_sampled_rss_bytes": 35794944,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.5558577170847541,
+      "sampled_cpu_seconds": 0.45,
+      "stop_reason": null,
+      "wall_seconds": 0.8095596879720688
+    },
+    {
+      "allocated_vcpu_hours": 0.002024025299275915,
+      "allocated_vcpus": 4,
+      "command": [
+        "/work/Home/dl_binner/e005/envs/binner-cpu-v1-iz5atsis/runtime/bin/python3",
+        "-I",
+        "-u",
+        "/work/Home/e005-launch.Mp1erW/e005-linux-smoke/scripts/e005_failure_checks.py",
+        "/work/Home/e005-launch.Mp1erW/e005-linux-smoke/input/smoke/assembly.fna",
+        "/work/Home/e005-launch.Mp1erW/e005-linux-smoke/input/smoke/mean-depth.tsv",
+        "/work/Home/dl_binner/e005/linux-smoke-kc6vz1qe/smoke/checkpoint.pt",
+        "/work/Home/dl_binner/e005/linux-smoke-kc6vz1qe/smoke/features.npz",
+        "/work/Home/dl_binner/e005/linux-smoke-kc6vz1qe/failure-checks",
+        "4"
+      ],
+      "exit_code": 0,
+      "name": "fatal-input-contracts",
+      "peak_sampled_rss_bytes": 201846784,
+      "resource_scope": "sampled descendants; excludes outer driver; not provider invoice",
+      "sampled_average_cpus": 0.8948065578819727,
+      "sampled_cpu_seconds": 1.63,
+      "stop_reason": null,
+      "wall_seconds": 1.8216227693483233
+    }
+  ],
+  "terminal": {
+    "locator": "agent_context/terminal.log",
+    "sha256": "6da58f0402dd339c4e1a7b3aff7f135bc84fc2ab866175124bbfacefb2e74ca4"
+  }
+}

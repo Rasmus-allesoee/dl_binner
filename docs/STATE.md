@@ -1,6 +1,6 @@
 # Current Research State
 
-Updated: 2026-09-30. This is the single current handoff.
+Updated: 2026-10-07. This is the single current handoff.
 
 ## Direction and completed work
 
@@ -28,33 +28,221 @@ and [source audit](evidence/2026-09-30-design-source-audit.json) are completed a
 2026-09-30 cutoff, with depth/access limits explicit. They considered reconstruction,
 contrastive, graph, taxonomy, pretrained sequence and efficient neural merging
 before the initial compact-VAE recommendation. The owner-requested
-[architecture reassessment](evidence/2026-09-30-architecture-reassessment.md) now
-replaces that recommendation: lightweight contrastive learning is the leading
-default, with sequence encoder choice provisional and frozen GLM features kept
-as a serious candidate. Thesis results and full short-contig scope receive explicit weight.
+[architecture reassessment](evidence/2026-09-30-architecture-reassessment.md)
+replaced that recommendation with lightweight contrastive learning and a bounded
+frozen-GLM inclusion screen. E003 now resolves the first sequence route below.
+Thesis results and full short-contig scope receive explicit weight.
 
 ## Exact next step
 
-Complete **D011's bounded local frozen-DNABERT-S feasibility spike** before locking
-the sequence encoder: pin one author checkpoint/runtime, test real CPU inference
-on deterministic short/long real-DNA windows, verify pooling/IDs/strand/chunk/cache
-contracts, and measure CPU/RAM/throughput. One checkpoint/environment attempt, at
-most four CPU threads, 8 GB working RAM and one hour timed inference after setup.
-Record failure rather than start an unbounded compatibility or model-search campaign.
-A load-only smoke or synthetic-only timing does not pass this gate.
+**E002 feasibility and E003's final representation screen are complete and
+accepted; do not repeat either inference run.**
+[E003](../experiments/E003-representation-screen/README.md) owns the precommitted
+protocol, new source/panel hashes, independent retained-output inspection and
+actual costs. Sixteen human-associated reference chromosomes supplied 320
+nonoverlapping fragments / 945,152 bp, balanced across 500/768/1,000/2,500/10,000 bp.
+Native feature axes, masks, chunks, finite arrays, neighbors and all scores passed
+inspection; completed-directory Snakemake dry-run schedules nothing.
 
-If infeasible, proceed with the inexpensive contrastive prototype. If feasible,
-prepare one small representation comparison on new short-inclusive development
-data with scope/cost frozen first; then choose one encoder and finish a real
-end-to-end product. The [revised D011](decisions/D011-first-binner-prototype.md) owns
-contracts, alternatives and the stop/revisit rules. Common input/export/logging
-plumbing may proceed alongside the spike; no VAE curriculum is required.
+Frozen GLM has **better sampled-fragment grouping**, but fails the joint keep
+criterion: short five-neighbor purity 0.45938 versus raw TNF 0.57396 (−0.11458,
+required +0.10). Longer neighbor delta +0.00469 and bp-weighted grouping F1 gain
++0.06863 pass. GLM short grouping F1 0.32558 versus 0.01978 and assigned fraction
+0.91146 versus 0.06771 are substantial positive evidence; do not describe TNF as
+universally better. All operational ceilings passed: 940.014 s total, sampled
+peak RSS 1.436 GB, four-thread budget. Deferral follows the precommitted utility
+rule, **not laptop runtime projections**. No trained-composition or whole-MAG
+comparison/generalization claim follows; pretraining overlap is not excluded.
 
-No owner upload or UCloud command is needed now. No E001 run is reopened. Its
-2,500-bp cutoff and the thesis's 2,000-bp filter are not product constraints. New
-short-inclusive public/simulated development data may be used; eligibility and
-claims must be evaluated separately, not extrapolated from E001. No full GLM
-pretraining/fine-tuning or expanding benchmark campaign is the next milestone.
+**E004's first native learned binner is complete and accepted.**
+The installable package provides FASTA/optional explicit mean-depth inputs, our own
+25,792-parameter contrastive encoder, fitted transforms, checkpoint inference,
+fixed label-blind clustering and complete assignment/bin FASTA exports.
+[E004](../experiments/E004-first-binner/README.md) owns source/config/input hashes,
+all-stratum scores, independent retained diagnostics and actual resource receipts.
+Source/contracts were committed at `7b24a6b` before the single measured run.
+Accepted E003 TNF was reused; no E002/E003 inference was repeated. Reload matched
+exactly; both export paths preserve all 320 IDs/DNA; raw control matches E003.
+Completed-workdir dry-run schedules nothing. Thirteen focused checks and the real
+fixture DAG, fatal-input/repeated-invocation/resume checks pass without worker mocks.
+
+Utility is **mixed**, not a whole-MAG claim: bp-weighted grouping F1
+0.30801→0.42455 and short F1 0.01978→0.26065, but short-neighbor purity
+0.57396→0.42604 and bp-weighted precision 0.53209→0.44150 decline. Learned output:
+17 bins, 305 assigned / 15 noise. No constant collapse; retrospective batches have
+6.0124% co-genomic negative-ID pairs, a plausible contributor with causation
+untested. No truth tuning/retraining or new architecture gate. Coverage has input/
+mask tests only, with no biological benefit measured. Native Mac only; no Linux
+or assembly-scale throughput/quality validation. Scientific driver 17.797 s,
+0.411-GB sampled peak, 1.227 average CPUs under four-thread caps; learning itself
+0.595 s / 2.401 CPUs. Startup/serial work dominates, so caps do not imply full use.
+
+**E005's native Linux smoke and v5 GI assembly/depth pilot are complete and
+accepted.** [The independent pilot review](../experiments/E005-linux-pilot/README.md#accepted-v5-native-gi-pilot-and-independent-review-2026-10-06)
+and [receipt](../experiments/E005-linux-pilot/pilot-observed.json) verify checksum,
+all 477 returned-file hashes, exact source/reference/sample axes, native runtime
+isolation, masks, 20-epoch seed-11 schedule, exact reload, complete raw/learned DNA
+exports, fixed clustering, AMBER and independently recounted confirmed R95.
+No accepted scientific stage was repeated. The v4 AMBER inventory gate failure
+is preserved; v5 source `67c2615` resolves its lock comparison without a rebuild.
+
+The frozen four-genome GI GSA derivative retains all 5,309 contigs / 12,924,259 bp,
+including 1,097 below-500 exclusions / 341,158 bp and 1,353 all-zero-depth rows.
+One million pairs each from retained samples 1/4 were mapped to that exact
+short-inclusive reference; E001 depth was not reused or zero-filled. Heavy original/
+sampled reads and alignments remain on UCloud and are receipt-bound, not rehashed
+locally. All two million returned selection IDs and thresholds were inspected.
+
+Confirmed macro R95 raw→learned **0.16731→0.43443**, bp-weighted **0.14329→0.38295**;
+≥50%-recovered genomes **0→2**, ≥90% **0→0**. Bins 113→51, eligible noise
+3,414→321, bp-weighted assigned-bin purity 0.98049→0.97424. Learned output is still
+fragmented. These are useful development **assembled-sequence recovery** results,
+not marker-estimated whole-MAG quality, real-assembler performance, independent
+generalization, isolated coverage benefit or architecture superiority. E001's
+community and 1,332 IDs overlap; no E001/H001/three-seed conclusion changes.
+
+Actual 4-vCPU / 12-GB cost through collection: **495.121 s / 0.550134 allocated
+vCPU-hours**, sampled DAG peak 1.785 GB. Sampling accounts for 408.339 of 470.190
+DAG seconds at about one CPU; mapper rules average 2.93–3.15 CPUs and native logs
+report four threads. Training itself 1.832 s / 3.41 CPUs. Time/RSS limits pass, but the declared serial schedule overlapped training/raw
+work and both evaluators. Current future-launcher code removes simultaneous
+`--cores`/`--jobs`, sets global RAM and adds explicit serial DAG barriers; actual
+Mac scheduling/partial+completed-resume fixtures pass. The tiny Mac legacy
+fixture did not reproduce the Linux overlap; no corrected E005 scientific-pilot
+rerun is claimed. E006 subsequently validates the generic serial launcher below.
+Accepted scientific stages remain valid and are not repeated. No
+full-community throughput or linear CPU-scaling claim. Retained attempt inventory
+3.297 GB; return copy 32.09 MB. Prior runtimes/read sources/attempts are separate.
+
+**E006's generic-command usability milestone is complete and accepted.**
+The installed `dl-binner run` (0.1.0.dev1) packages defaults/DAG and produces both
+arms, complete DNA exports and byte-bound label-free accounting. The
+[guide](PROTOTYPE.md#run-the-binner) owns user-facing commands/outputs/recovery;
+[E006](../experiments/E006-cli-usability/README.md) and its
+[receipt](../experiments/E006-cli-usability/observed.json) own evidence/costs.
+Source/contracts were committed at `e93132b` before native execution; the final
+validated wheel binds `e30023c` source. Scientific `io.py`, `model.py`, clustering
+and the seed-11 schedule are unchanged. No accepted E002–E005 science was repeated.
+
+Native Mac wheel checks from outside the checkout pass sequence-only/explicit
+depth, all six strata, masks, zeros, exact reload, both exports, empty valid bins,
+fresh/partial/completed resume and changed/corrupt/missing/extra artifact refusal.
+Nine focused tests and native independent CPU/global-RAM scheduling checks pass.
+Fatal worker/orphan cleanup and actual RSS/overall timeout checks validate their
+intended failure, not any nonzero exit. Parent/child logs, ten-second heartbeats
+and exit receipts persist; messages surface the native cause. CLI/journal formats
+can evolve without a compatibility commitment.
+
+The 13-contig / 42,311-bp baseline fixture and four-contig / 2,048-bp final fixture
+are software tests, not bin-quality evidence. The new accounting reader agrees
+with retained E005 raw/learned counts and depth zeros without inference or AMBER.
+Final suite: **59.722 s / 0.348-GB sampled peak**; known supervised QA attempts
+including failures: **335.212 s / 0.372458 four-thread wall hours**, local planning
+not UCloud charges. Initial pre-monitor failure, setup/build, review/debugging/
+idle time are outside that accounting. The suite remains within four threads,
+loader zero, 8 GB and two hours. Test failures identified monitor receipt, native
+error presentation and unreaped-process cleanup defects; all are retained/repaired.
+Disk exhaustion stopped v5 setup. Final v7 is a fresh lexical package prefix with
+explicit byte-verified numerical/build dependencies reused read-only from v4;
+no old prefix was relocated/upgraded/deleted. Origins/inventories and dependency
+tree hashes passed review. This local recipe is not a Linux environment transfer.
+
+**E006's generic-command native CPU/Linux gate is now complete and accepted.**
+[Independent retained review](../experiments/E006-cli-usability/README.md#accepted-native-linux-return-and-independent-review-2026-10-06)
+and [Linux receipt](../experiments/E006-cli-usability/linux-observed.json) verify
+`generic-linux-smoke-y9xix7p9`: checksum/all 462 archive members/447 retained-file
+entries, exact inventories/import origins and unchanged dependency byte trees,
+serial native stages/independent CPU/global-RAM placement, twenty-epoch seed-11
+schedule, exact reload, complete raw/learned DNA, masks/zeros/six strata, partial
+resume only remaining six stages and completed resume no native work. All 21
+native contracts including intended failures/RSS/timeout/orphan handling pass.
+No accepted native or scientific stage was repeated. The packet binds `a8010cb`,
+unchanged wheel/source `e30023c`; new Linux prefix owns the package and borrows
+persistent E005 dependencies read-only. It is not a standalone portable environment.
+
+Actual declared **4 vCPUs / 12 GB**: **214.793 s / 0.238659 allocated vCPU-hours**
+through collection, **0.422-GB sampled stage peak**. Original storage reporting
+omitted its inventory and statted an open log; the immutable return has exactly
+**2,172,376 uncompressed bytes**, plus a **1,174,633-byte archive copy**. The original
+receipt is preserved, with correction and a tested future collector fix in
+`bee512a`; no retry is needed. Full new-prefix/cache storage, exact peaks and
+owner idle/billing are not measured. Preserve all attempts, linked dependencies
+and transfer files. [Operations](../experiments/E006-cli-usability/OPERATIONS.md)
+now retains the command as executed provenance: **do not run it again**.
+
+**E007's private-PR readiness milestone is complete and accepted locally.**
+[Results/limitations](../experiments/E007-pr-readiness/README.md) and
+[byte/resource receipt](../experiments/E007-pr-readiness/observed.json) bind
+`4c68b19` source to inspected dev2 wheel/sdist and an equivalent sdist-rebuilt
+wheel. Fresh separate Mac prefixes own their dependencies; full inventories,
+imports/pools, pip checks and read-only old-runtime/cache bytes pass. All eleven
+scientific/generic package files match E006; only version/build/readme metadata
+changes. Accepted dev1/E002–E006 work remains retained, without replay.
+
+Ordinary `tests/product/` is now independent of ignored research inputs/helpers.
+Four-thread clean-snapshot and two-thread physically outside-repository suites
+each pass 11 tests/18 named native cases without skips/mocks: all six strata,
+masks/zeros/reasons, exact reload, both complete exports, strict partial/full
+resume, corruption/change refusal, intended failures, orphan cleanup, heartbeats
+and actual CPU/global-RAM placement. Fixture: 13 generated contigs / 42,311 bp,
+software evidence only. [Standalone install](INSTALLATION.md) and
+[usage](PROTOTYPE.md#private-pr-readiness-milestone) state limits and frozen settings.
+
+Known serial integration clocks including two repaired packaging failures and
+artifact preflight total **712.558 s / 0.742910 local thread-budget wall hours**,
+under four threads/loader zero/8 GB/two hours. Successful full setup/check attempt
+331.511 s; sampled stage peak **0.561 GB**. E007 retains 2.765 GB including all
+failed/new prefixes and evidence, plus a 1.465-MB physical outside test copy.
+Resource sampling is approximate; source preparation/acquisition/review/idle
+are separate, and these are not UCloud costs. No accepted demonstration was
+repeated and no architecture change occurred.
+
+**E008's product changes and native Linux CI are accepted; private PR #1 is open.**
+[D012](decisions/D012-product-execution-and-usability.md) implements positive
+uncapped CPU choices, optional RAM/time safeguards and a built-in serial dispatcher
+requiring one CPU environment. Scientific byte hashes/defaults/results remain
+unchanged. GPU/Conda are future goals only; shared people/agent usability is durable
+intent. [E008](../experiments/E008-product-execution/README.md) owns source/build
+identities, tests and real CI; the initial Mac/native Linux suites passed 12 tests/
+18 cases. A reproduced platform timer overflow is repaired with native regression;
+post-fix local tests pass 13 tests/19 cases. The independently inspected
+[post-fix Linux receipt](../experiments/E008-product-execution/linux-timer-repair-observed.json)
+accepts all 13 tests/19 cases, complete exports, exact reload, strict resume,
+intended limits/failures/cleanup and native large optional safeguards. Linux
+product peak 0.575 GB, 36.198 s; job wall 128 s, not exact billing. Final-head
+checks are refreshed after record-only pushes. No accepted science or UCloud
+work was repeated.
+
+**Exact next step: review the private PR and authorize a merge only after current-head checks.**
+[PR #1](https://github.com/Rasmus-allesoee/dl_binner/pull/1) targets main with source
+history intact. `@codex review` was requested; no response at this record. The
+watcher reports clean CI/mergeability/no unresolved threads, not independent approval.
+Refresh checks/reviews for the final head and address concrete findings. The owner
+explicitly says **do not merge or publish in this task**. No merge commit exists.
+After separately authorized merge, start benchmark work on a new branch from
+updated main; no benchmark/architecture execution is part of this task.
+
+Owner direction: after the completed bounded readiness step, review/merge the
+first usable prototype
+through a separately authorized private PR, then start a **new benchmark/research
+branch from updated main**, retaining this accepted implementation as the stable
+baseline. Future architecture testing must be deliberate and matched; it does
+not delay the first prototype with another quality/architecture gate. License
+and historical-source packaging require review before public redistribution,
+not an invented license or additional science before a private PR. No new owner
+compute job is needed for the current handoff.
+
+The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
+planned and unrun. No larger datasets, extra seeds, architecture gate, publication
+is authorized. E008's private push/PR is authorized and completed; accepted
+scientific source and settings are unchanged.
+Frozen GLM weights/features remain
+retained, deferred from the first prototype rather than globally rejected. The
+completed 2026-09-30 review/source audit is reused. No full-GLM training, VAE
+curriculum, automatic architecture campaign or E001 rerun is planned. E001's
+2,500-bp cutoff and the thesis's 2,000-bp filter are not product constraints. The
+first configurable 500-bp default is an engineering choice; independent real-
+assembly/whole-genome and unsupported-length evaluation remain future work.
 
 ## Resources and continuity
 
@@ -65,11 +253,29 @@ not exact billing or a remaining-balance estimate. Successful COMEBin condition
 files total 11.313 GB; the diagnostic archive is an additional 235.13 MB copy.
 Preserve retained assets/old attempts. No deletion is authorized.
 
-UCloud remains CPU-only and owner-operated. Persistent prefixes stay under
-`e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md). Frozen E001
-source/configuration and raw observed records remain unchanged.
+E003 retains 98 local files / 41.34 MB at acceptance, with a committed hash
+inventory; no extra model/environment copy. Its 1.04446 four-thread wall hours
+are local budget accounting, not UCloud charges. Sampled CPU/RSS receipts own
+interpretation because local extended-benchmark CPU/RAM fields are incomplete.
+Source acquisition/setup and analysis are outside the scientific driver clock;
+local retained files are not a remote backup.
 
-Local branch: `e001-gate0`; no remote, push or publication. `agent_context/` is an
-ignored inbox. Before publication review licensing and historical source packaging
+E004 retains 93 run files / 2.94 MB, plus its isolated environment, package wheel
+and setup/fixture logs. Actual four-thread scientific wall budget is 0.0197744
+hours, not UCloud charges; setup/tests/review excluded. Keep all artifacts and
+accepted E001/E002/E003 snapshots. The receipt-helper path repair affects only
+post-run collection; native scientific source/functions remain frozen.
+
+UCloud remains CPU-only and owner-operated. E001's persistent prefixes stay under
+`e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md); E005 owns
+separate new CPU/workflow prefixes under its own root and read-only reuses E001's
+accepted mapping/AMBER prefixes. E005 v5 now checks the complete AMBER distribution
+inventory against E001's hash-identified clean-prefix review, not only `pip freeze`.
+Frozen E001 source/configuration and raw observed records remain unchanged.
+
+Local branch: `first-binner-prototype`, created from `930e6743eac1aadb93ea23b51f2a6ac617155a2e`.
+Owner-configured private GitHub origin is present; main/origin-main initially matched
+that commit. This task makes local commits only. `agent_context/` is an ignored
+inbox. Before public publication review licensing and historical source packaging
 per [D001](decisions/D001-research-record.md). Update this handoff when direction,
 significant evidence or execution dependencies change; details belong to their owners.

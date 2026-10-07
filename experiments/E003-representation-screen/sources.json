@@ -1,0 +1,810 @@
+{
+  "date": "2026-10-03",
+  "role": "newly sampled controlled development fragments from human-associated species, not a real metagenomic assembly",
+  "selection": "sixteen chromosomes chosen before features: related oral species plus mucosal/clinical and skin-associated representatives; one chromosome/species, no conspecific strain-resolution test",
+  "source_acquisition": "NCBI EFetch current RefSeq metadata then version-qualified FASTA; data bytes and timestamps retained in ignored acquisition directory",
+  "human_association_sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7739467/",
+    "https://www.ncbi.nlm.nih.gov/bioproject/13942",
+    "https://www.atcc.org/products/700825",
+    "https://doi.org/10.1126/science.1100330",
+    "https://www.dsmz.de/collection/catalogue/details/culture/DSM-16379"
+  ],
+  "human_association_limits": "host=Homo sapiens explicit for Rothia dentocariosa and Tannerella forsythia. Other hosts unavailable in retrieved source qualifiers; species association is not individual isolate provenance. C. acnes KPA171202 was a culture contaminant per DSMZ, retained as a reference for a human-associated species. This heterogeneous panel does not reproduce an ecological community.",
+  "sources": [
+    {
+      "requested_accession": "NC_013715",
+      "accession_version": "NC_013715.1",
+      "organism": "Rothia mucilaginosa DY-18",
+      "length": 2264603,
+      "sequence_sha256": "3febd31c2e6ac53e8b87db2f2a3ea56862bb637a8397b468109e2c9ff00a2dc8",
+      "fasta_sha256": "d1e681d2b9466e850bbfac1a61336a051d7553f54bd08f4dda4f11d1cc51da7e",
+      "metadata_sha256": "649510d3837f8044cfde847ef8ac015b29927c7cdc805ace0f19a3d041d18ed4",
+      "aliases": [
+        "ref|NC_013715.1|",
+        "gi|283457089"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Rothia mucilaginosa DY-18"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "DY-18"
+        ],
+        "db_xref": [
+          "taxon:680646"
+        ]
+      },
+      "source_record_date": "10-FEB-2026",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_013715.1&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_013715&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_013715.1.fna",
+      "genbank_equivalent": "AP011540.1",
+      "references": [
+        {
+          "title": "Complete Genome Sequence of Rothia mucilaginosa DY-18: A Clinical Isolate with Dense Meshwork-Like Structures from a Persistent Apical Periodontitis Lesion",
+          "pubmed": null
+        },
+        {
+          "title": "Isolation and identification of Rothia mucilaginosa from persistent apical periodontitis lesions",
+          "pubmed": null
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Rothia mucilaginosa",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_014643",
+      "accession_version": "NC_014643.1",
+      "organism": "Rothia dentocariosa ATCC 17931",
+      "length": 2506025,
+      "sequence_sha256": "6b423844d1e62e3b8075bef288419a69db64e8157c4dce79a3034f0ac0a02720",
+      "fasta_sha256": "977c651cb4b05f7fb3a7dc99b02c0f3a47f0b7914f67b4da273f846d31a13204",
+      "metadata_sha256": "4c8d97f3033eefe8deb655031044032ee57612efe7506a8a11fe8d561acfb2ef",
+      "aliases": [
+        "ref|NC_014643.1|",
+        "gi|311111670"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Rothia dentocariosa ATCC 17931"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "ATCC 17931"
+        ],
+        "host": [
+          "Homo sapiens"
+        ],
+        "culture_collection": [
+          "ATCC:17931"
+        ],
+        "type_material": [
+          "type strain of Rothia dentocariosa"
+        ],
+        "db_xref": [
+          "HMP:0733",
+          "HOMD:tax_587",
+          "taxon:762948"
+        ]
+      },
+      "source_record_date": "06-APR-2026",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_014643.1&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_014643&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_014643.1.fna",
+      "genbank_equivalent": "CP002280.1",
+      "references": [],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Rothia dentocariosa",
+      "human_host_explicit_in_source": true
+    },
+    {
+      "requested_accession": "NC_004350",
+      "accession_version": "NC_004350.2",
+      "organism": "Streptococcus mutans UA159",
+      "length": 2032925,
+      "sequence_sha256": "753a84e733d60636a854ef9a9b27bdf742412b642dc8cb800d006b578ac36627",
+      "fasta_sha256": "11f1452361eb0a1a75e5071a178eb941b665e64f098a25e1743843b8d8cbf899",
+      "metadata_sha256": "415a67db7b37e6847474592c860a6ffbc66002c40c36106b57a6b9cbcdab85e8",
+      "aliases": [
+        "ref|NC_004350.2|",
+        "gi|347750429"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Streptococcus mutans UA159"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "UA159"
+        ],
+        "db_xref": [
+          "taxon:210007"
+        ]
+      },
+      "source_record_date": "08-AUG-2026",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_004350.2&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_004350&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_004350.2.fna",
+      "genbank_equivalent": "AE014133.2",
+      "references": [
+        {
+          "title": "Genome sequence of Streptococcus mutans UA159, a cariogenic dental pathogen",
+          "pubmed": "12397186"
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Streptococcus mutans",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_009785",
+      "accession_version": "NC_009785.1",
+      "organism": "Streptococcus gordonii str. Challis substr. CH1",
+      "length": 2196662,
+      "sequence_sha256": "3d1dfa4135a2221c04b3a081c1794fe07b6824e8c1bbd7caa4e6ca08fa2825a5",
+      "fasta_sha256": "114bbcd441db396ed75ffa2a58c777fbe26aad4b7b6afc3d2197753d308e8258",
+      "metadata_sha256": "694341e2d4b0911546265e8da80606d520fca40fea2807c44dce8248d49e6a5f",
+      "aliases": [
+        "ref|NC_009785.1|",
+        "gi|157149651"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Streptococcus gordonii str. Challis substr. CH1"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "Challis"
+        ],
+        "sub_strain": [
+          "CH1"
+        ],
+        "db_xref": [
+          "taxon:467705"
+        ],
+        "note": [
+          "strain coidentity: CH1 = DL1 = V288 = ATCC 35105"
+        ]
+      },
+      "source_record_date": "01-APR-2026",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_009785.1&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_009785&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_009785.1.fna",
+      "genbank_equivalent": "CP000725.1",
+      "references": [
+        {
+          "title": "Genome-wide transcriptional changes in Streptococcus gordonii in response to competence signaling peptide",
+          "pubmed": "17720781"
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Streptococcus gordonii",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_009009",
+      "accession_version": "NC_009009.1",
+      "organism": "Streptococcus sanguinis SK36",
+      "length": 2388435,
+      "sequence_sha256": "911c6074f796114f3651fde48f4b28e5f8f95a73f282b674783bd1a98d545a42",
+      "fasta_sha256": "1d2d79246742d224e281c3af5ccd08d6e2caf2ddddde98f4245d11dbee64732f",
+      "metadata_sha256": "5cdea2cb2074036556103aa19a21ab2bc43ab876461dd02e9f6640369b1de9b9",
+      "aliases": [
+        "ref|NC_009009.1|",
+        "gi|125716887"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Streptococcus sanguinis SK36"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "SK36"
+        ],
+        "db_xref": [
+          "taxon:388919"
+        ]
+      },
+      "source_record_date": "02-APR-2026",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_009009.1&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_009009&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_009009.1.fna",
+      "genbank_equivalent": "CP000387.1",
+      "references": [
+        {
+          "title": "Genome of the opportunistic pathogen Streptococcus sanguinis",
+          "pubmed": "17277061"
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Streptococcus sanguinis",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_013853",
+      "accession_version": "NC_013853.1",
+      "organism": "Streptococcus mitis B6",
+      "length": 2146611,
+      "sequence_sha256": "ebb09c2de21e738280281cbbf5bc67743219b13c687d32463f16ee0e530dff10",
+      "fasta_sha256": "5cdf093a0334cae2430c2d288ccad6b944b1dd4ab530a2d9e599e4a0e53ea3b6",
+      "metadata_sha256": "a27435e0ea2a2bba51be4ef4f3d458f0b0014efc9b6ac3f60f941b50261cac40",
+      "aliases": [
+        "ref|NC_013853.1|",
+        "gi|289166909"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Streptococcus mitis B6"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "B6"
+        ],
+        "db_xref": [
+          "taxon:365659"
+        ],
+        "geo_loc_name": [
+          "Germany"
+        ]
+      },
+      "source_record_date": "17-MAR-2025",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_013853.1&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_013853&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_013853.1.fna",
+      "genbank_equivalent": "FN568063.1",
+      "references": [
+        {
+          "title": "The genome of Streptococcus mitis B6--what is a commensal?",
+          "pubmed": "20195536"
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Streptococcus mitis",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_002950",
+      "accession_version": "NC_002950.2",
+      "organism": "Porphyromonas gingivalis W83",
+      "length": 2343476,
+      "sequence_sha256": "07128de3e615ae1a3c8645fdb8e7b4fd67163057fb1d5ae83c15ee81a28e2edb",
+      "fasta_sha256": "c66a9fcb4172d28330b4392e5e00ddd09dabf652c2fd0ea335b2511f76540bc6",
+      "metadata_sha256": "4c4432784c50b00430384dbd4484a2f27f25ec18511f2cdb127966886ff7ceb0",
+      "aliases": [
+        "ref|NC_002950.2|",
+        "gi|34539880"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Porphyromonas gingivalis W83"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "W83"
+        ],
+        "db_xref": [
+          "taxon:242619"
+        ]
+      },
+      "source_record_date": "07-DEC-2025",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_002950.2&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_002950&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_002950.2.fna",
+      "genbank_equivalent": "AE015924.1",
+      "references": [
+        {
+          "title": "Complete genome sequence of the oral pathogenic Bacterium porphyromonas gingivalis strain W83",
+          "pubmed": "12949112"
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Porphyromonas gingivalis",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_016610",
+      "accession_version": "NC_016610.1",
+      "organism": "Tannerella forsythia 92A2",
+      "length": 3405521,
+      "sequence_sha256": "50fb6d0716a2c4df75379b39424b322ae5bd95feeb842b6503aca79cd14eaf6f",
+      "fasta_sha256": "753839ce61c75f86d5b3c50877353d7f874914839323dff952b7340eba36e0a4",
+      "metadata_sha256": "277e5efc46215be8c5f1ad27485fbb7bb0698c24f4f29171b237a057055def8d",
+      "aliases": [
+        "ref|NC_016610.1|",
+        "gi|375253814"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Tannerella forsythia 92A2"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "92A2"
+        ],
+        "isolation_source": [
+          "periodontal pocket"
+        ],
+        "host": [
+          "Homo sapiens"
+        ],
+        "db_xref": [
+          "taxon:203275"
+        ],
+        "geo_loc_name": [
+          "USA: Massachusetts"
+        ]
+      },
+      "source_record_date": "11-DEC-2025",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_016610.1&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_016610&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_016610.1.fna",
+      "genbank_equivalent": "CP003191.1",
+      "references": [],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Tannerella forsythia",
+      "human_host_explicit_in_source": true
+    },
+    {
+      "requested_accession": "NC_002967",
+      "accession_version": "NC_002967.9",
+      "organism": "Treponema denticola ATCC 35405",
+      "length": 2843201,
+      "sequence_sha256": "4909b8e8870d918be703aa9b81c84d3062fac7030cbe68a48dd7b504b5ceff97",
+      "fasta_sha256": "a5e3fba9ef818cbd5e049fe7dd14189071798d761e8331760c44a974f393a4ff",
+      "metadata_sha256": "c40c7aae255a08897c772a69cff64c144bc59fd4cb609467142e7f42e93de958",
+      "aliases": [
+        "ref|NC_002967.9|",
+        "gi|42516522"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Treponema denticola ATCC 35405"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "ATCC 35405"
+        ],
+        "type_material": [
+          "type strain of Treponema denticola"
+        ],
+        "db_xref": [
+          "ATCC:35405",
+          "taxon:243275"
+        ]
+      },
+      "source_record_date": "04-MAY-2026",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_002967.9&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_002967&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_002967.9.fna",
+      "genbank_equivalent": "AE017226.1",
+      "references": [
+        {
+          "title": "Comparison of the genome of the oral pathogen Treponema denticola with other spirochete genomes",
+          "pubmed": "15064399"
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Treponema denticola",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_003454",
+      "accession_version": "NC_003454.1",
+      "organism": "Fusobacterium nucleatum subsp. nucleatum ATCC 25586",
+      "length": 2174500,
+      "sequence_sha256": "d0552e6c59a996a7376f472f9b275e06a8c261b7a81ac865fd53c9625c33b940",
+      "fasta_sha256": "77a650854925622645dd1782ffc095cc676075b2acdfbfcb3eec9ab23d507753",
+      "metadata_sha256": "17f7411c21250b0e23039983603c2cc05962fabceb82702d6c2cac95854dde67",
+      "aliases": [
+        "ref|NC_003454.1|",
+        "gi|19703352"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Fusobacterium nucleatum subsp. nucleatum ATCC 25586"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "ATCC 25586"
+        ],
+        "type_material": [
+          "type strain of Fusobacterium nucleatum"
+        ],
+        "db_xref": [
+          "ATCC:25586",
+          "taxon:190304"
+        ]
+      },
+      "source_record_date": "02-SEP-2026",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_003454.1&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_003454&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_003454.1.fna",
+      "genbank_equivalent": "AE009951.2",
+      "references": [
+        {
+          "title": "Genome sequence and analysis of the oral bacterium Fusobacterium nucleatum strain ATCC 25586",
+          "pubmed": "11889109"
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Fusobacterium nucleatum",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_013192",
+      "accession_version": "NC_013192.1",
+      "organism": "Leptotrichia buccalis C-1013-b",
+      "length": 2465610,
+      "sequence_sha256": "a70a2d9e6c414cfe8d4b9e7d354a8d06e677080a81720907b762ead84a614f2a",
+      "fasta_sha256": "f87d953d1a7213b5f2fa22182abafa4b60ea8cb097f55b3948c88f1d337fb4c4",
+      "metadata_sha256": "052244d1ab496a90ae46df37a5105ad6b266845d6c361256fa62cc94afcbc8ef",
+      "aliases": [
+        "ref|NC_013192.1|",
+        "gi|257124814"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Leptotrichia buccalis C-1013-b"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "DSM 1135"
+        ],
+        "type_material": [
+          "type strain of Leptotrichia buccalis"
+        ],
+        "db_xref": [
+          "taxon:523794"
+        ],
+        "note": [
+          "type strain of Leptotrichia buccalis DSM 1135"
+        ]
+      },
+      "source_record_date": "02-APR-2026",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_013192.1&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_013192&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_013192.1.fna",
+      "genbank_equivalent": "CP001685.1",
+      "references": [
+        {
+          "title": "Complete genome sequence of Leptotrichia buccalis type strain (C-1013-b)",
+          "pubmed": "21304648"
+        },
+        {
+          "title": "The complete genome of Leptotrichia buccalis DSM 1135",
+          "pubmed": null
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Leptotrichia buccalis",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_015964",
+      "accession_version": "NC_015964.1",
+      "organism": "Haemophilus parainfluenzae T3T1",
+      "length": 2086875,
+      "sequence_sha256": "0add9355bd81aa4ec58d5c344fa17aff3ac5f9b1b705f92727b9b2117feaa42f",
+      "fasta_sha256": "bc30cfeb06f2bf178cfebe88ecd94078b03b01e8546245e055ca74310406be08",
+      "metadata_sha256": "a3105a40bae308c384195664a5f623357384fbff373ba19bb072d358cb2d0f8b",
+      "aliases": [
+        "ref|NC_015964.1|",
+        "gi|345428590"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Haemophilus parainfluenzae T3T1"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "T3T1"
+        ],
+        "db_xref": [
+          "taxon:862965"
+        ]
+      },
+      "source_record_date": "15-MAR-2025",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_015964.1&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_015964&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_015964.1.fna",
+      "genbank_equivalent": "FQ312002.1",
+      "references": [
+        {
+          "title": "The genome sequence of Haemophilus parainfluenzae T3T1",
+          "pubmed": null
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Haemophilus parainfluenzae",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_000907",
+      "accession_version": "NC_000907.1",
+      "organism": "Haemophilus influenzae Rd KW20",
+      "length": 1830138,
+      "sequence_sha256": "990ea2092f48d685c0064c3eb093ea5ca4b67f1f3ee51c48ca404cfc3b636a82",
+      "fasta_sha256": "5f6cc7417be0461a36fe1516114dfde608c341800e2a29f8377868023530d790",
+      "metadata_sha256": "b2b4dd92a4c2818552bf189c4f4abd3e353b4a39641e0ee72454a5eb5e7526b3",
+      "aliases": [
+        "ref|NC_000907.1|",
+        "gi|16271976"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Haemophilus influenzae Rd KW20"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "Rd KW20"
+        ],
+        "db_xref": [
+          "taxon:71421"
+        ]
+      },
+      "source_record_date": "04-APR-2020",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_000907.1&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_000907&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_000907.1.fna",
+      "genbank_equivalent": "L42023",
+      "references": [
+        {
+          "title": "Metabolism and evolution of Haemophilus influenzae deduced from a whole-genome comparison with Escherichia coli",
+          "pubmed": "8805245"
+        },
+        {
+          "title": "Whole-genome random sequencing and assembly of Haemophilus influenzae Rd",
+          "pubmed": "7542800"
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Haemophilus influenzae",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_003112",
+      "accession_version": "NC_003112.2",
+      "organism": "Neisseria meningitidis MC58",
+      "length": 2272360,
+      "sequence_sha256": "286458ff5f93f02659300ad728a185366095fb64f7bb9b23569fddb299b2ed2e",
+      "fasta_sha256": "cd46fd3dcc6f652a0ba28a897505b12db29e6613bc6b3e6013aaef03625d07d2",
+      "metadata_sha256": "4704677bdc11407a569ed834672afdcffd06d80de9d901952b724a24b247729b",
+      "aliases": [
+        "ref|NC_003112.2|",
+        "gi|77358697"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Neisseria meningitidis MC58"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "MC58"
+        ],
+        "db_xref": [
+          "taxon:122586"
+        ],
+        "serogroup": [
+          "B"
+        ]
+      },
+      "source_record_date": "06-JAN-2026",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_003112.2&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_003112&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_003112.2.fna",
+      "genbank_equivalent": "AE002098.2",
+      "references": [
+        {
+          "title": "Complete genome sequence of Neisseria meningitidis serogroup B strain MC58",
+          "pubmed": "10710307"
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Neisseria meningitidis",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_002946",
+      "accession_version": "NC_002946.2",
+      "organism": "Neisseria gonorrhoeae FA 1090",
+      "length": 2153922,
+      "sequence_sha256": "66acc89a4054ca94c71e41a0c728579939c56565c4771337e481988467ff46d6",
+      "fasta_sha256": "6fe82ccb3aa868fade24b61d5d5b954070d5f22e0b55ea9658bb9fa2f6f3a10c",
+      "metadata_sha256": "53b8bf22eb30348b5a05d99ab47cf9e00a29666a54abc27314f1d42495b99c6b",
+      "aliases": [
+        "ref|NC_002946.2|",
+        "gi|59800473"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Neisseria gonorrhoeae FA 1090"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "FA 1090"
+        ],
+        "db_xref": [
+          "taxon:242231"
+        ]
+      },
+      "source_record_date": "03-MAY-2026",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_002946.2&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_002946&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_002946.2.fna",
+      "genbank_equivalent": "AE004969.1",
+      "references": [
+        {
+          "title": "The Complete Genome Sequence of Neisseria gonorrhoeae",
+          "pubmed": null
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Neisseria gonorrhoeae",
+      "human_host_explicit_in_source": false
+    },
+    {
+      "requested_accession": "NC_006085",
+      "accession_version": "NC_006085.1",
+      "organism": "Cutibacterium acnes KPA171202",
+      "length": 2560265,
+      "sequence_sha256": "8086f168d4c7d586df8ee9abb29c2eaea0459dfb8cff84639381820c4f63ed67",
+      "fasta_sha256": "b2c119b2c865bc8e6710f919f031af8f87005964139169783c871d2c38ad8262",
+      "metadata_sha256": "25015908837c24b9075c79e7ead32746fb354104b2ce6f0affe87d7dfbe5a592",
+      "aliases": [
+        "ref|NC_006085.1|",
+        "gi|50841496"
+      ],
+      "source_qualifiers": {
+        "organism": [
+          "Cutibacterium acnes KPA171202"
+        ],
+        "mol_type": [
+          "genomic DNA"
+        ],
+        "strain": [
+          "KPA171202"
+        ],
+        "db_xref": [
+          "taxon:267747"
+        ]
+      },
+      "source_record_date": "12-APR-2026",
+      "fasta_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_006085.1&rettype=fasta&retmode=text",
+      "metadata_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_006085&rettype=gb&retmode=xml",
+      "fasta_path": "artifacts/e003-representation-screen/acquisition/NC_006085.1.fna",
+      "genbank_equivalent": "AE017283.1",
+      "references": [
+        {
+          "title": "The complete genome sequence of Propionibacterium acnes, a commensal of human skin",
+          "pubmed": "15286373"
+        }
+      ],
+      "human_association": "selected human oral/mucosal/skin-associated species; not a claim that every culture was isolated directly from a human",
+      "species_label": "Cutibacterium acnes",
+      "human_host_explicit_in_source": false
+    }
+  ],
+  "overlap": {
+    "E001_accession_alias_matches": {
+      "NC_013715.1": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_014643.1": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_004350.2": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_009785.1": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_009009.1": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_013853.1": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_002950.2": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_016610.1": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_002967.9": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_003454.1": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_013192.1": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_015964.1": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_000907.1": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_003112.2": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_002946.2": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      },
+      "NC_006085.1": {
+        "contigs": 0,
+        "origin_ids": [],
+        "exact_versions": []
+      }
+    },
+    "E001_manifest_path": "artifacts/e001-population-reviewed/contigs.jsonl",
+    "E001_manifest_sha256": "8864e60bb8494693015946865d9d74146d0257a48d597510b1b031ac09664698",
+    "audit_limits": "RefSeq/GenBank sequence-accession stem audit only; version differences, taxon-level and homologous sequence overlap are not ruled out. These are new fragments, not an independent held-out genome benchmark.",
+    "pretraining": "Not excluded. Legacy references/species can be in DNABERT-2 and/or DNABERT-S pretraining. The reviewed author repository offers large sequence-pair training archives, not an inspected accession-level exclusion manifest. No unseen-genome/species claim. Do not download a bulk training corpus for this bounded screen.",
+    "model_revision": "00e47f96cdea35e4b6f5df89e5419cbe47d490c6",
+    "author_repo_commit": "ac01b55e5034182e4b915d34ce5a3a323b82adb8"
+  }
+}

@@ -1,0 +1,88 @@
+"""Serial installed-package train → checkpoint inference → fixed bins → evaluation."""
+from pathlib import Path
+from shlex import quote
+from snakemake.io import multiext
+
+REPO = str(Path(workflow.snakefile).resolve().parents[2])
+PYTHON = config['python']
+CLI = quote(PYTHON) + ' -m dl_binner'
+CFG = str(Path(REPO)/config['config_path'])
+SCRIPT = REPO+'/scripts/e004_integration.py'
+FASTA = str(Path(REPO)/config['fasta'])
+TRAINING = str(Path(REPO)/config['training'])
+MIN_LENGTH = config['min_length']
+CACHE_ARGS = ('--tnf-cache '+quote(str(Path(REPO)/config['tnf_cache']))+
+              ' --tnf-receipt '+quote(str(Path(REPO)/config['tnf_receipt']))+
+              ' --tnf-panel '+quote(str(Path(REPO)/config['truth_panel']))) if config.get('tnf_cache') else ''
+DEPTH_ARGS = ('--depth '+quote(str(Path(REPO)/config['depth']))) if config.get('depth') else ''
+EXTRA_INPUTS = [str(Path(REPO)/config[k]) for k in ('tnf_cache', 'tnf_receipt', 'depth') if config.get(k)]
+if config.get('tnf_cache'):
+    EXTRA_INPUTS.append(str(Path(REPO)/config['truth_panel']))
+
+rule all:
+    input: 'evaluation.json'
+
+rule features:
+    input: fasta=FASTA, extra=EXTRA_INPUTS
+    output: multiext('features', '.npz', '.json')
+    threads: 4
+    resources: mem_mb=2000
+    log: 'logs/features.log'
+    benchmark: 'benchmarks/features.tsv'
+    shell: '{CLI} prepare --fasta {FASTA:q} --min-length {MIN_LENGTH} {CACHE_ARGS} {DEPTH_ARGS} --output {output[0]:q} > {log:q} 2>&1'
+
+rule train:
+    input: multiext('features', '.npz', '.json'), training=TRAINING
+    output: 'checkpoint.pt', 'checkpoint.json', 'checkpoint.reference.npz', 'checkpoint.reference.json'
+    threads: 4
+    resources: mem_mb=8000
+    log: 'logs/train.log'
+    benchmark: 'benchmarks/train.tsv'
+    shell: '{CLI} train --features features.npz --config {TRAINING:q} --output checkpoint.pt > {log:q} 2>&1'
+
+rule learned_embedding:
+    input: 'features.npz', 'features.json', 'checkpoint.pt', 'checkpoint.json'
+    output: multiext('learned.embeddings', '.npz', '.json')
+    threads: 4
+    resources: mem_mb=8000
+    log: 'logs/learned.embedding.log'
+    benchmark: 'benchmarks/learned.embedding.tsv'
+    shell: '{CLI} embed --features features.npz --checkpoint checkpoint.pt --output {output[0]:q} > {log:q} 2>&1'
+
+rule raw_embedding:
+    input: 'features.npz', 'features.json'
+    output: multiext('raw.embeddings', '.npz', '.json')
+    threads: 4
+    resources: mem_mb=2000
+    log: 'logs/raw.embedding.log'
+    benchmark: 'benchmarks/raw.embedding.tsv'
+    shell: '{CLI} embed --features features.npz --raw --output {output[0]:q} > {log:q} 2>&1'
+
+rule cluster:
+    input: multiext('{mode}.embeddings', '.npz', '.json')
+    output: '{mode}.partition.json'
+    wildcard_constraints: mode='raw|learned'
+    threads: 4
+    resources: mem_mb=2000
+    log: 'logs/{mode}.cluster.log'
+    benchmark: 'benchmarks/{mode}.cluster.tsv'
+    shell: '{CLI} cluster --embeddings {input[0]:q} --output {output:q} > {log:q} 2>&1'
+
+rule export:
+    input: 'features.npz', 'features.json', '{mode}.partition.json'
+    output: directory('{mode}.export')
+    wildcard_constraints: mode='raw|learned'
+    threads: 4
+    resources: mem_mb=2000
+    log: 'logs/{mode}.export.log'
+    benchmark: 'benchmarks/{mode}.export.tsv'
+    shell: '{CLI} export --features features.npz --partition {input[2]:q} --fasta {FASTA:q} --output {output:q} > {log:q} 2>&1'
+
+rule evaluate:
+    input: 'raw.partition.json', 'learned.partition.json', 'raw.export', 'learned.export', 'checkpoint.reference.npz', 'checkpoint.reference.json', truth=str(Path(REPO)/config['truth_panel'])
+    output: 'evaluation.json'
+    threads: 4
+    resources: mem_mb=2000
+    log: 'logs/evaluation.log'
+    benchmark: 'benchmarks/evaluation.tsv'
+    shell: '{PYTHON:q} -u {SCRIPT:q} --mode evaluate --config {CFG:q} --run-dir . --output {output:q} > {log:q} 2>&1'

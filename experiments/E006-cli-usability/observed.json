@@ -1,0 +1,756 @@
+{
+  "accepted_source_commit": "e30023c0a9e78c255da3b7abc43ed3025571dcef",
+  "cost_scope": "Known supervised local QA drivers, failures included. Initial unsupervised ps prerequisite failure, setup/build, review, debugging/idle time excluded; not provider charges or complete task cost.",
+  "date": "2026-10-06",
+  "dependency_binding_exclusions": [
+    ".DS_Store: volatile Finder metadata; no numerical/source/input bytes excluded"
+  ],
+  "dependency_origins": {
+    "dl_binner": {
+      "lexical": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v7/lib/python3.10/site-packages/dl_binner/__init__.py",
+      "physical": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v7/lib/python3.10/site-packages/dl_binner/__init__.py"
+    },
+    "numpy": {
+      "lexical": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v7/lib/python3.10/site-packages/numpy/__init__.py",
+      "physical": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v4/lib/python3.10/site-packages/numpy/__init__.py"
+    },
+    "torch": {
+      "lexical": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v7/lib/python3.10/site-packages/torch/__init__.py",
+      "physical": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v4/lib/python3.10/site-packages/torch/__init__.py"
+    }
+  },
+  "dependency_reuse": {
+    "bytes": 12107,
+    "path": "artifacts/e006-cli-usability/setup/dependency-reuse-v6.json",
+    "sha256": "a37fed023a73b311d74d28b56baa96e532cb0f1a63828928d9b7b8c8a8a38759"
+  },
+  "driver_resources": {
+    "integration-002": {
+      "bytes": 868,
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v3/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E006-cli-usability/integrate.py",
+        "--child",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/integration-002",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python"
+      ],
+      "exit_code": 1,
+      "path": "artifacts/e006-cli-usability/integration-002/integration.exit.json",
+      "peak_sampled_rss_bytes": 367599616,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.4755664457961414,
+      "sampled_cpu_seconds": 60.27000000000002,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sha256": "937c02f897a1afa3c6ff138be59032e83631a59e405274eeaead76a5b402f9ee",
+      "stop_reason": null,
+      "wall_seconds": 126.73307911600568
+    },
+    "integration-003": {
+      "bytes": 990,
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v4/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E006-cli-usability/finish_checks.py",
+        "--child",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/integration-003",
+        "--baseline",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/integration-002",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python"
+      ],
+      "exit_code": 1,
+      "path": "artifacts/e006-cli-usability/integration-003/integration.exit.json",
+      "peak_sampled_rss_bytes": 350113792,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.3927306851868068,
+      "sampled_cpu_seconds": 33.02000000000002,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sha256": "fa1c74dbd77dc2dabb7cbdabffb1c587ddca1dd414fd98a4b8855c9128c8b280",
+      "stop_reason": null,
+      "wall_seconds": 84.07797313900664
+    },
+    "integration-004": {
+      "bytes": 1077,
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v6/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E006-cli-usability/finish_checks.py",
+        "--child",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/integration-004",
+        "--baseline",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/integration-002",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python"
+      ],
+      "exit_code": 1,
+      "launched_pid": 4602,
+      "path": "artifacts/e006-cli-usability/integration-004/integration.exit.json",
+      "peak_sampled_rss_bytes": 351473664,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.5754567691306781,
+      "sampled_cpu_seconds": 37.220000000000084,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 7200,
+      "sha256": "a4b64d898c621bb51c45bd0209bb6a88c862154ea1c08dbaa44de971614d3b16",
+      "stop_reason": null,
+      "wall_seconds": 64.67905496398453
+    },
+    "integration-005": {
+      "bytes": 1064,
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/env-local-v7/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E006-cli-usability/finish_checks.py",
+        "--child",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/integration-005",
+        "--baseline",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e006-cli-usability/integration-002",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python"
+      ],
+      "exit_code": 0,
+      "launched_pid": 5843,
+      "path": "artifacts/e006-cli-usability/integration-005/integration.exit.json",
+      "peak_sampled_rss_bytes": 347578368,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.6377903268440804,
+      "sampled_cpu_seconds": 38.09,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 7200,
+      "sha256": "3179806b36e5cddd960acffe93210c3e1e7b192e2ea8a72176d1fad243e47a3f",
+      "stop_reason": null,
+      "wall_seconds": 59.72182141500525
+    }
+  },
+  "failed_attempts": {
+    "initial_ps_prerequisite": "integration-001: no scientific stage, originally no exit receipt; repaired regression passes",
+    "local_disk": "v5 setup/build hit ENOSPC; preserve failed prefix/logs. v6/v7 reuse explicit verified numerical dependencies read-only instead of another copy.",
+    "scheduler_trailer": "integration-002: successful scientific fixtures reused, native input error stopped correctly but hidden from console",
+    "unreaped_probe": "integration-003/004: strict timeout check failed; final reaping/status checks pass"
+  },
+  "final_masks_and_counts": {
+    "learned": {
+      "bin_count": 0,
+      "bin_size_bp": {
+        "max": null,
+        "median": null,
+        "min": null
+      },
+      "bins": {},
+      "bp": 2048,
+      "contigs": 4,
+      "length_strata": [
+        {
+          "bp": 180,
+          "contigs": 1,
+          "lower_bp": 1,
+          "reasons": {
+            "below_min_length": 1
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 180,
+              "contigs": 1
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 500
+        },
+        {
+          "bp": 1100,
+          "contigs": 2,
+          "lower_bp": 500,
+          "reasons": {
+            "isolated_graph": 1,
+            "no_valid_fourmers": 1
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 600,
+              "contigs": 1
+            },
+            "unassigned": {
+              "bp": 500,
+              "contigs": 1
+            }
+          },
+          "upper_bp": 768
+        },
+        {
+          "bp": 768,
+          "contigs": 1,
+          "lower_bp": 768,
+          "reasons": {
+            "isolated_graph": 1
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 768,
+              "contigs": 1
+            }
+          },
+          "upper_bp": 1000
+        },
+        {
+          "bp": 0,
+          "contigs": 0,
+          "lower_bp": 1000,
+          "reasons": {},
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 2500
+        },
+        {
+          "bp": 0,
+          "contigs": 0,
+          "lower_bp": 2500,
+          "reasons": {},
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 10000
+        },
+        {
+          "bp": 0,
+          "contigs": 0,
+          "lower_bp": 10000,
+          "reasons": {},
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": null
+        }
+      ],
+      "masks": {
+        "all_zero_depth_contigs": 2,
+        "depth_observations_present": true,
+        "eligible_contigs": 2,
+        "no_valid_fourmers": 1,
+        "zero_depth_by_sample": {
+          "software_S1": 3,
+          "software_S2": 3
+        }
+      },
+      "mode": "measured_depth",
+      "reasons": {
+        "assigned": {},
+        "excluded": {
+          "below_min_length": 1,
+          "no_valid_fourmers": 1
+        },
+        "unassigned": {
+          "isolated_graph": 2
+        }
+      },
+      "samples": [
+        "software_S1",
+        "software_S2"
+      ],
+      "statuses": {
+        "assigned": {
+          "bp": 0,
+          "contigs": 0
+        },
+        "excluded": {
+          "bp": 780,
+          "contigs": 2
+        },
+        "unassigned": {
+          "bp": 1268,
+          "contigs": 2
+        }
+      }
+    },
+    "raw": {
+      "bin_count": 0,
+      "bin_size_bp": {
+        "max": null,
+        "median": null,
+        "min": null
+      },
+      "bins": {},
+      "bp": 2048,
+      "contigs": 4,
+      "length_strata": [
+        {
+          "bp": 180,
+          "contigs": 1,
+          "lower_bp": 1,
+          "reasons": {
+            "below_min_length": 1
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 180,
+              "contigs": 1
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 500
+        },
+        {
+          "bp": 1100,
+          "contigs": 2,
+          "lower_bp": 500,
+          "reasons": {
+            "isolated_graph": 1,
+            "no_valid_fourmers": 1
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 600,
+              "contigs": 1
+            },
+            "unassigned": {
+              "bp": 500,
+              "contigs": 1
+            }
+          },
+          "upper_bp": 768
+        },
+        {
+          "bp": 768,
+          "contigs": 1,
+          "lower_bp": 768,
+          "reasons": {
+            "isolated_graph": 1
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 768,
+              "contigs": 1
+            }
+          },
+          "upper_bp": 1000
+        },
+        {
+          "bp": 0,
+          "contigs": 0,
+          "lower_bp": 1000,
+          "reasons": {},
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 2500
+        },
+        {
+          "bp": 0,
+          "contigs": 0,
+          "lower_bp": 2500,
+          "reasons": {},
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 10000
+        },
+        {
+          "bp": 0,
+          "contigs": 0,
+          "lower_bp": 10000,
+          "reasons": {},
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": null
+        }
+      ],
+      "masks": {
+        "all_zero_depth_contigs": 2,
+        "depth_observations_present": true,
+        "eligible_contigs": 2,
+        "no_valid_fourmers": 1,
+        "zero_depth_by_sample": {
+          "software_S1": 3,
+          "software_S2": 3
+        }
+      },
+      "mode": "measured_depth",
+      "reasons": {
+        "assigned": {},
+        "excluded": {
+          "below_min_length": 1,
+          "no_valid_fourmers": 1
+        },
+        "unassigned": {
+          "isolated_graph": 2
+        }
+      },
+      "samples": [
+        "software_S1",
+        "software_S2"
+      ],
+      "statuses": {
+        "assigned": {
+          "bp": 0,
+          "contigs": 0
+        },
+        "excluded": {
+          "bp": 780,
+          "contigs": 2
+        },
+        "unassigned": {
+          "bp": 1268,
+          "contigs": 2
+        }
+      }
+    }
+  },
+  "final_wheel": {
+    "bytes": 36310,
+    "path": "artifacts/e006-cli-usability/setup/dist-v7/dl_binner-0.1.0.dev1-py3-none-any.whl",
+    "sha256": "f093261d726d4b6f42e7401c211e99cf4fdadffbc950112161262bd7fdb804d0"
+  },
+  "fixture": {
+    "baseline_bp": 42311,
+    "baseline_contigs": 13,
+    "final_bp": 2048,
+    "final_contigs": 4
+  },
+  "initial_contract_commit": "e93132b",
+  "known_supervised_seconds": 335.2119286340021,
+  "known_thread_wall_hours": 0.37245769848222454,
+  "limitations": [
+    "Native Mac, not final generic Linux execution",
+    "No biological utility/whole-MAG/generalization assessment",
+    "Sampled CPU/RSS are approximate; shared pages may be counted twice",
+    "No compatibility commitment for prototype journals/CLI"
+  ],
+  "native_observation": {
+    "bytes": 41737,
+    "path": "artifacts/e006-cli-usability/integration-005/observed.json",
+    "sha256": "dc5b7f04ae05ae01500d21f33318659a84d777cac9aafdceccdc197b38a1499e"
+  },
+  "next_step": "Prepare one tiny checksum-bound owner-controlled CPU/Linux generic-command smoke; do not run it or repeat E005 science",
+  "package_prefix": "artifacts/e006-cli-usability/env-local-v7",
+  "protocol": {
+    "bytes": 2565,
+    "path": "experiments/E006-cli-usability/protocol.json",
+    "sha256": "248dc8b3b25285620b9945930b0c522aae8c8130a1272ffc531e8cb97125ba98"
+  },
+  "read_only_dependency_trees_unchanged": true,
+  "retained_e005_summary": {
+    "arms": {
+      "learned": {
+        "all_zero_depth_contigs": 1353,
+        "bins": 51,
+        "statuses": {
+          "assigned": {
+            "bp": 11831674,
+            "contigs": 3891
+          },
+          "excluded": {
+            "bp": 341158,
+            "contigs": 1097
+          },
+          "unassigned": {
+            "bp": 751427,
+            "contigs": 321
+          }
+        }
+      },
+      "raw": {
+        "all_zero_depth_contigs": 1353,
+        "bins": 113,
+        "statuses": {
+          "assigned": {
+            "bp": 4837013,
+            "contigs": 798
+          },
+          "excluded": {
+            "bp": 341158,
+            "contigs": 1097
+          },
+          "unassigned": {
+            "bp": 7746088,
+            "contigs": 3414
+          }
+        }
+      }
+    },
+    "record": {
+      "bytes": 72153,
+      "path": "artifacts/e006-cli-usability/integration-002/e005-accounting.json",
+      "sha256": "923377f4687d700b975c3a5fe7838aceea29eca262e41c909e4702ca30109fe0"
+    }
+  },
+  "retained_scientific_modules_unchanged": [
+    "io.py",
+    "model.py",
+    "clustering.py"
+  ],
+  "retained_storage": {
+    "attempts_regular_bytes": 3986431,
+    "final_prefix_owned_regular_bytes": 193826,
+    "prior_environment_logical_bytes": {
+      "env-local-v1": 762250963,
+      "env-local-v2": 762251045,
+      "env-local-v3": 762253399,
+      "env-local-v4": 762256772,
+      "env-local-v5": 97,
+      "env-local-v6": 192817
+    },
+    "scope": "Logical regular-file bytes; symlinked dependency payload belongs to retained v4. Existing wheel caches/other experiments and filesystem billing are separate."
+  },
+  "reused_passed_contracts": [
+    "console-help",
+    "sequence",
+    "fresh-refusal",
+    "completed-resume",
+    "depth",
+    "partial",
+    "partial-resume",
+    "changed-fasta",
+    "changed-sample-order",
+    "corrupt-checkpoint",
+    "corrupt-export",
+    "corrupt-snapshot",
+    "changed-config",
+    "extra-output",
+    "missing-output",
+    "changed-package"
+  ],
+  "review_source": {
+    "bytes": 7196,
+    "path": "experiments/E006-cli-usability/review.py",
+    "sha256": "202225973328645895a6e20ebfd298ee6258d4c5af6627ee9de5ce84da5e3401"
+  },
+  "role": "Software contracts only, no new bin-quality result",
+  "runtime": {
+    "bytes": 2255,
+    "path": "artifacts/e006-cli-usability/setup/runtime-v7.json",
+    "sha256": "15181f772836f268b9f61de5ef012b849485ee3083cfe706963f51475db20bde"
+  },
+  "status": "accepted",
+  "tested_contracts": {
+    "contracts": {
+      "exit_code": 0,
+      "log": {
+        "bytes": 1106,
+        "sha256": "644692ef0d8d5346c8bb900489389fe1725577eee3f0df2c18861ff49eacf103"
+      },
+      "wall_seconds": 3.8138038380420767
+    },
+    "final-changed-depth": {
+      "exit_code": 1,
+      "log": {
+        "bytes": 972,
+        "sha256": "4ac10d74c8da8ebb62a6fe9b21ffbb1d8db5019e40a0f284ffe85af8815cd246"
+      },
+      "wall_seconds": 0.18604855600278825
+    },
+    "final-completed-resume": {
+      "exit_code": 0,
+      "log": {
+        "bytes": 877,
+        "sha256": "1e57c2ab9f907ce6666c85b711fcc4566cd2966b968d3c482bbe83e3799013b3"
+      },
+      "wall_seconds": 0.9771640899707563
+    },
+    "final-console-help": {
+      "exit_code": 0,
+      "log": {
+        "bytes": 3044,
+        "sha256": "7bb4db239d745b9ea349a2ca4f9eda37c142350ab125a20b2e6d3cbef62c8f42"
+      },
+      "wall_seconds": 0.8205470039974898
+    },
+    "final-corrupt-output": {
+      "exit_code": 1,
+      "log": {
+        "bytes": 1000,
+        "sha256": "e7fd41f8604e0ce87d3df8d565f411ae30d61af4fd918f8beae2ca73afcab15c"
+      },
+      "wall_seconds": 0.18560833600349724
+    },
+    "final-fresh-refusal": {
+      "exit_code": 1,
+      "log": {
+        "bytes": 209,
+        "sha256": "0c4ffaa8e8cb0d6f4c9dadc59ca14df9ae79ffde8b6ea6943b4a728f6efaa796"
+      },
+      "wall_seconds": 0.18266304797725752
+    },
+    "final-partial": {
+      "exit_code": 0,
+      "log": {
+        "bytes": 905,
+        "sha256": "c192c860c6122c816d01ec3b30c9382f8cd9e73131c9397c43bc532395bf7183"
+      },
+      "wall_seconds": 11.06143952900311
+    },
+    "final-partial-resume": {
+      "exit_code": 0,
+      "log": {
+        "bytes": 2061,
+        "sha256": "37de9a4dc75f28dd32a9377613abcaa87db967e72f8b2b64de971f5d54168a60"
+      },
+      "wall_seconds": 15.451896327955183
+    },
+    "insufficient-evidence": {
+      "exit_code": 1,
+      "log": {
+        "bytes": 1490,
+        "sha256": "f398a206a5522ab0b5667027dec6f46c397d1aaa88d86e2d72c3c2c5e1c79144"
+      },
+      "wall_seconds": 6.150211775035132
+    },
+    "invalid-fasta": {
+      "exit_code": 1,
+      "log": {
+        "bytes": 1306,
+        "sha256": "3d38ea0653b8a5bd68579bac9887ba1ef02f200c337681ddb8b53e9708828d0a"
+      },
+      "wall_seconds": 3.5999556930037215
+    },
+    "native-completed-dag": {
+      "exit_code": 0,
+      "log": {
+        "bytes": 121,
+        "sha256": "b99818d6a16298045bad4af66e24d77c30811035f46e349f6b247db4a003fa21"
+      },
+      "wall_seconds": 0.8477880529826507
+    },
+    "overall-timeout": {
+      "exit_code": 1,
+      "log": {
+        "bytes": 1087,
+        "sha256": "e855da2552c38496c7f850116852d3d5e27f3f5dd8bbe9c157c2563813365560"
+      },
+      "wall_seconds": 0.6077215999830514
+    },
+    "scheduler-cpu": {
+      "exit_code": 0,
+      "log": {
+        "bytes": 1638,
+        "sha256": "02078cb4825210583f2972c4db8b45ffd76a776de669d421b9a03dd0fa5761a6"
+      },
+      "wall_seconds": 3.265995441004634
+    },
+    "scheduler-memory": {
+      "exit_code": 0,
+      "log": {
+        "bytes": 1611,
+        "sha256": "fc3e0112052e244e9d501d4a74d9a1ec4e116fa07e9780167a3c0730de9b6070"
+      },
+      "wall_seconds": 3.380414106999524
+    }
+  },
+  "workflow_prefix": "artifacts/e005-linux-pilot/env-workflow-local"
+}

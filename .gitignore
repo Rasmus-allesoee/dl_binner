@@ -21,3 +21,8 @@ venv/
 .env
 .env.*
 !.env.example
+
+# Python package build products, retained experiment wheels live under artifacts/.
+*.egg-info/
+/build/
+/dist/

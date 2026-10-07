@@ -1,0 +1,40 @@
+{
+  "COMEBin": {
+    "commit": "1b476a41fac893294c70212a869573a732560ce5",
+    "inspected_file": "COMEBin/main.py",
+    "local_changes": [
+      "?? .DS_Store",
+      "?? COMEBin/.DS_Store"
+    ],
+    "root": "agent_context/tools_repo/COMEBin",
+    "sha256": "72918587dbdb2b15780e84b1001aef51aec38dd34233918878310655621148e5"
+  },
+  "CompleteBin": {
+    "commit": "07c5649270646a29dc027d6234d66b048fed6d45",
+    "inspected_file": "CompleteBin/cli.py",
+    "local_changes": [
+      "?? .DS_Store",
+      "?? CompleteBin/.DS_Store"
+    ],
+    "root": "agent_context/tools_repo/CompleteBin",
+    "sha256": "121b84ea1da747312abf70810116e468eba9b7a1cecf06e8bb67b6f1c65e9d46"
+  },
+  "SemiBin": {
+    "commit": "f7c45dcbcdfa81e8fbc3e08b04c54683122e72d6",
+    "inspected_file": "SemiBin/main.py",
+    "local_changes": [
+      "?? .DS_Store",
+      "?? SemiBin/.DS_Store",
+      "?? test/.DS_Store"
+    ],
+    "root": "agent_context/tools_repo/SemiBin",
+    "sha256": "58739c01dac85989f0c0dc6a85d57ec615f3bd4fd5aa7a060a330abc587501bf"
+  },
+  "vamb": {
+    "commit": "b146fb610921aef1da8aed5d739f1ce80d21b33a",
+    "inspected_file": "vamb/__main__.py",
+    "local_changes": [],
+    "root": "agent_context/tools_repo/vamb",
+    "sha256": "6a9d5443658ff8be1b7d5f9d2ba58f070421c668d30a83e5ac48825f8d4b9e82"
+  }
+}
