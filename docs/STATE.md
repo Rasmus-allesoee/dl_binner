@@ -1,6 +1,6 @@
 # Current Research State
 
-Updated: 2026-10-07. This is the single current handoff.
+Updated: 2026-10-08. This is the single current handoff.
 
 ## Direction and completed work
 
@@ -224,32 +224,59 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**Exact next step: one bounded benchmark-planning task on a new branch from updated main.**
-Choose one independent human-associated assembly benchmark, check development/
-source overlap, and freeze input/depth/truth contracts, the accepted raw/learned
-baseline, a small justified external-tool shortlist, bin-quality/length/noise
-metrics and allocated CPU/RAM/time/storage budgets before any execution. Preserve
-short strata, exclusions and unassigned DNA. This plans useful bin-quality and
-cost assessment; one dataset cannot establish broad generalization. Reuse the
-completed review/evaluators, refreshing only evidence needed by the shortlist.
-Do not implement architecture changes or run data/benchmark/UCloud work in the
-merge task. The accepted prototype remains the stable main baseline.
+**The second-chapter benchmark plan and focused competitive study are complete.**
+[D013](decisions/D013-first-comparative-benchmark.md),
+[the dated study/provenance](evidence/2026-10-08-competitive-binner-study.md) and
+[E009's prospective protocol](../experiments/E009-competitive-benchmark/README.md)
+select CAMI III Toy Longitudinal Human Gut subject S1: one actual MEGAHIT assembly
+of short-read sample 0, with full sample 0/1 depth measured on that exact reference.
+This is a public-toy derivative, not another GSA fixture or official challenge score.
+Corrected subject pairing and small coverage metadata were inspected directly:
+the provider coverage archive is genome-level simulation truth, never input depth.
+Two read archives total 9.732 GB compressed; no large DNA/read/model payload acquired.
+Exact development-genome/pretraining overlap remains unresolved; S. mutans species
+overlap with E003 is already visible. New sample/assembly does not prove unseen-genome
+generalization, and this benchmark becomes development evidence when used for design.
+
+Preserve dev3 source `5e54538` and all accepted scientific settings. E009 specifies
+matched raw/learned TNF+two-depth and TNF-only pairs, native SemiBin2/MetaCAT-core/
+SCGBinner, with native CompleteBin conditional on pre-scoring CPU/payload feasibility.
+All seven owner-ranked tools were considered; COMEBin's measured E001/source evidence
+is reused, while its larger CPU grid, DCVBin's unresolved recipe and LorBin's
+long-read/model contracts defer execution. No native schedule shortening disguised
+as parity. Promising changes are actual sequence views/negative handling, biological
+grouping/refinement and context/frozen GLM inputs; none is selected by a tool ranking
+alone or implemented now. The TNF/GLM-head/hybrid comparison remains planned.
+
+**Exact next step: implement/local-test E009 acquisition, overlap, assembly/depth/
+real-assembly truth and native runtime adapters, then prepare a checksum-bound
+8-vCPU/24-GB ≤5-hour owner preflight.** It inventories assets and native isolated
+contracts, without full-community fits. Review its return before the subsequent
+16-vCPU/48-GB assembly/scientific command, actual input locks and native affordability
+admission. Local checks use ≤4 threads/8-GB RSS/two hours and ≤32-contig/0.6-Mb fixtures.
+The prospective entire benchmark ceiling is 500 allocated core-hours/200-GB new disk,
+not a forecast or measured spend; setup/failures/collection count, current credit is
+unknown and resource increases/retries are not automatic. Real-assembly AMBER/interval
+truth adapters still need tests; E005's GSA R95 cannot be applied unchanged.
+No executable transfer or scientific run was prepared/accepted in this planning task.
 
 License and historical-source packaging need separate owner review before public
-redistribution. No new files or owner compute job are needed to complete this
-handoff. The next planning task can identify specific asset dependencies.
+redistribution. No owner compute action is needed for this planning handoff;
+the next adapter/transfer milestone will identify specific runtime/asset dependencies.
 
 The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
-planned and unrun. No larger datasets, extra seeds, architecture gate, publication
-is authorized. E008's private push/PR/merge is authorized and completed; accepted
+planned and unrun. E009's planning/source-metadata analysis is authorized; no benchmark
+execution, extra seeds, architecture implementation or publication occurs in this task.
+E008's private push/PR/merge is authorized and completed; accepted
 scientific source and settings are unchanged.
 Frozen GLM weights/features remain
 retained, deferred from the first prototype rather than globally rejected. The
 completed 2026-09-30 review/source audit is reused. No full-GLM training, VAE
 curriculum, automatic architecture campaign or E001 rerun is planned. E001's
 2,500-bp cutoff and the thesis's 2,000-bp filter are not product constraints. The
-first configurable 500-bp default is an engineering choice; independent real-
-assembly/whole-genome and unsupported-length evaluation remain future work.
+first configurable 500-bp default is an engineering choice; E009 prepares real-
+assembly/whole-reference evaluation, with unsupported ranges and source completeness
+explicit. It does not certify formal real-sample MAG quality or universal superiority.
 
 ## Resources and continuity
 
@@ -280,9 +307,10 @@ accepted mapping/AMBER prefixes. E005 v5 now checks the complete AMBER distribut
 inventory against E001's hash-identified clean-prefix review, not only `pip freeze`.
 Frozen E001 source/configuration and raw observed records remain unchanged.
 
-Local branch: `first-binner-prototype`, created from `930e6743eac1aadb93ea23b51f2a6ac617155a2e`.
-Owner-configured private GitHub origin is present; main/origin-main initially matched
-that commit. This task makes local commits only. `agent_context/` is an ignored
+Local branch: `benchmark-planning`, created from refreshed synchronized main/origin-main
+`5e54538d1799e8d2538621729400f33fbaf017b9`; merged `first-binner-prototype` source history
+is preserved. Owner-configured private GitHub origin is present. This task makes local
+commits only; no push/PR/release. `agent_context/` is an ignored
 inbox. Before public publication review licensing and historical source packaging
 per [D001](decisions/D001-research-record.md). Update this handoff when direction,
 significant evidence or execution dependencies change; details belong to their owners.

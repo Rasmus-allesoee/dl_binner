@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-10-03
+Updated: 2026-10-08
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -212,3 +212,20 @@ summaries and strict recovery/failure/resource contracts. Model/training/cluster
 remain unchanged; no accepted science is repeated and no biological utility is
 asserted. Next prepare a tiny owner-controlled Linux generic-launcher smoke.
 Independent quality/coverage questions and the non-blocking comparison stay open.
+
+2026-10-08 Q001/Q003/Q004/Q005 comparative-planning update: the first usable
+prototype is merged and its native product evidence remains accepted.
+[D013](../decisions/D013-first-comparative-benchmark.md) and
+[E009](../../experiments/E009-competitive-benchmark/README.md) prepare a new
+sample-0 actual short-read gut assembly, paired observed depth and a bounded
+native-tool comparison with matched raw/learned and sequence/depth controls.
+Whole-reference versus assembly-conditional recovery, ambiguous DNA, all length
+strata and native cost are prospectively separated. The seven ranked tools'
+[focused source/method assessment](../evidence/2026-10-08-competitive-binner-study.md)
+identifies promising mechanism tests, not a causal architecture winner. Exact
+source/pretraining overlap and native CPU/evaluator feasibility are unresolved;
+new sample identity alone does not establish independent genome generalization.
+No benchmark or architecture comparison has executed, no accepted science is
+repeated and H001/E001 remain unchanged. E009 will be development evidence after
+its errors guide changes; broader validation stays open. The GLM/head/hybrid
+follow-up is still planned, not an implementation/release gate.

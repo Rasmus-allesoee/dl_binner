@@ -1,0 +1,214 @@
+{
+  "record": "E009",
+  "date": "2026-10-08",
+  "status": "planned",
+  "scientific_outcome": "not assessed",
+  "execution_ready": false,
+  "authorized_current_task": "analysis and local planning commit only",
+  "dataset": {
+    "name": "CAMI III Toy Longitudinal Human Gut",
+    "read_modality": "short",
+    "role": "first independent sample/assembly assessment; development after inspection, genome independence unresolved",
+    "subject": "S1",
+    "assembly_sample": 0,
+    "depth_samples": [
+      0,
+      1
+    ],
+    "ordered_depth_columns": [
+      "cami3_toy_human_gut_short_read_sample_0",
+      "cami3_toy_human_gut_short_read_sample_1"
+    ],
+    "subject_table": {
+      "path": "experiments/E009-competitive-benchmark/sample-subject-mapping.tsv",
+      "bytes": 273,
+      "sha256": "dfe7c0b65649148c48c32b38c33f63f1b0ef030ca00af49b180906954349bc04"
+    },
+    "sampling": "full published read samples; no subsampling or source-genome selection",
+    "assembly": "MEGAHIT sample 0 default recipe, explicit 200-bp emission floor; exact recipe pending native lock",
+    "assembly_hash": null,
+    "read_payload_sha256s": null,
+    "source_reference_payload_sha256": null,
+    "provider_taxonomy": "NCBI 2025-08-01 per toy dataset page"
+  },
+  "baseline": {
+    "source_commit": "5e54538d1799e8d2538621729400f33fbaf017b9",
+    "package": "0.1.0.dev3",
+    "training": {
+      "path": "src/dl_binner/resources/training.json",
+      "bytes": 215,
+      "sha256": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5"
+    },
+    "seed": 11,
+    "min_length_bp": 500,
+    "loader_workers": 0,
+    "arms": [
+      "learned_tnf_two_depth",
+      "raw_tnf_two_depth",
+      "learned_tnf_only",
+      "raw_tnf_only"
+    ],
+    "source_and_science_changed": false,
+    "clustering": {
+      "k": 5,
+      "mutual_positive_cosine": true,
+      "greedy_modularity_resolution": 1,
+      "min_community_contigs": 3,
+      "query_block": 128,
+      "oracle_K": null
+    }
+  },
+  "external_tools": {
+    "core": [
+      "SemiBin2 short-read self-supervised",
+      "MetaCAT core CPU",
+      "SCGBinner native"
+    ],
+    "conditional": [
+      "CompleteBin native CPU"
+    ],
+    "deferred": [
+      "COMEBin full larger CPU grid",
+      "DCVBin unresolved recipe/payload",
+      "LorBin long-read/models"
+    ],
+    "configs_per_tool": 1,
+    "native_schedule_shortening": false,
+    "admission_before_scoring": true,
+    "exact_runtime_payload_locks": null,
+    "replacement_on_failure": false
+  },
+  "evaluation": {
+    "truth_inputs_separate": true,
+    "alignment_identity_min": 0.99,
+    "alignment_bp_min": 200,
+    "uniquely_attributable_contig_fraction_min": 0.95,
+    "bin_confirmed_purity_min": 0.95,
+    "reference_min_bp": 200000,
+    "bin_min_bp": 200000,
+    "reference_recovery_thresholds": [
+      0.5,
+      0.9
+    ],
+    "reference_denominator": "all cellular bacterial/archaeal source genomes present in sample 0 read-origin truth with >=200kb full reference length; separately simulated plasmids/viruses/host/eukaryotes excluded only from primary recovery denominator",
+    "completeness": "unique source coordinate union in best qualifying bin / entire provided source reference length",
+    "purity": "uniquely supported query bp for genome / all exported bin bp, including unscored and non-target DNA",
+    "assembled_conditional_denominator": "unique confirmed reference union represented anywhere in full assembly",
+    "external_AMBER_view": ">=95% whole query length uniquely attributable to one genome; limited contig truth view labelled explicitly",
+    "AMBER_source_reuse": "f8b3a601043d13fc4227d5691c13561eb4490e50; verify healthy runtime read-only",
+    "filter_tail_percentage": 0,
+    "strata_lower_bounds_bp": [
+      1,
+      500,
+      768,
+      1000,
+      2500,
+      10000
+    ],
+    "diagnostic_query_cap_per_stratum": 128,
+    "neighbor_k": [
+      1,
+      5,
+      10
+    ],
+    "truth_tuning": false,
+    "marker_selection_is_not_independent_validation": true,
+    "real_assembly_adapter_status": "planned; resolve/pin actual MetaQUAST alignment command and test interval semantics before scoring",
+    "alignment_reference_universe": "all source genomes and replicons generating sample-0 reads, including non-target biology; any reference batches require global competing-hit reconciliation"
+  },
+  "resources": {
+    "stage_budgets": [
+      {
+        "stage": "asset_setup_native_preflight",
+        "allocated_vcpus": 8,
+        "allocated_ram_gb": 24,
+        "hours_ceiling": 5,
+        "allocated_core_hours_ceiling": 40
+      },
+      {
+        "stage": "assembly_mapping_source_truth",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 6,
+        "allocated_core_hours_ceiling": 96
+      },
+      {
+        "stage": "four_matched_prototype_partitions",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 3,
+        "allocated_core_hours_ceiling": 48
+      },
+      {
+        "stage": "semibin2",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 2,
+        "allocated_core_hours_ceiling": 32
+      },
+      {
+        "stage": "metacat_core",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 2,
+        "allocated_core_hours_ceiling": 32
+      },
+      {
+        "stage": "scgbinner_native",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 6,
+        "allocated_core_hours_ceiling": 96
+      },
+      {
+        "stage": "completebin_conditional",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 6,
+        "allocated_core_hours_ceiling": 96
+      },
+      {
+        "stage": "evaluation_diagnostics",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 2,
+        "allocated_core_hours_ceiling": 32
+      }
+    ],
+    "stage_sum_core_hours": 472,
+    "reserve_core_hours": 28,
+    "total_allocated_core_hours_ceiling": 500,
+    "includes_failed_attempts_setup_download_collection": true,
+    "remaining_owner_credits": null,
+    "new_storage_allowance_gb": 200,
+    "preflight_working_rss_bytes_ceiling": 20000000000,
+    "science_working_rss_bytes_ceiling": 40000000000,
+    "max_concurrent_tools": 1,
+    "eligible_contig_scale_stop": 100000,
+    "assembly_bp_scale_stop": 600000000,
+    "local_checks": {
+      "threads": 4,
+      "loader": 0,
+      "rss_bytes": 8000000000,
+      "seconds": 7200,
+      "fixture_contigs": 32,
+      "fixture_bp": 600000
+    },
+    "estimates_are_not_measurements": true,
+    "auto_increase_or_retry": false
+  },
+  "owner_paths": {
+    "root": "/work/Home/dl_binner/e009/",
+    "transfer": "/work/Home/dl_binner/e009/transfer/",
+    "data_heavy_destination": "only if needed with reviewed ownership; do not touch colleague files"
+  },
+  "next": "implement/local-test acquisition, overlap, depth/truth and runtime adapters; prepare bounded 8-vCPU/24-GB <=5-hour owner preflight, no full-community fitting",
+  "unexecuted": [
+    "UCloud",
+    "benchmark fitting/scoring",
+    "architecture changes",
+    "three-way GLM study",
+    "accepted science replay",
+    "public release"
+  ]
+}

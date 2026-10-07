@@ -155,6 +155,15 @@ Be particularly careful about:
 
 Claims should follow evidence.
 
+For comparative benchmarks, keep native whole-tool comparisons distinct from
+matched input/learning/clustering ablations. A winning tool does not identify
+which component caused its advantage. Preserve intermediate evidence, native
+eligibility and all unassigned/excluded DNA; choose one justified mechanism test
+before combining improvements. Data inspected to choose those improvements become
+development data, even when they originate from a public community benchmark.
+Preserve the accepted main implementation as the immutable comparator on a new
+research branch; do not quietly tune that baseline to the comparison's scores.
+
 An experiment's contig-length cutoff or available feature set is not a product
 constraint. Keep relevant short-contig methods in design comparisons; use separate
 prospectively defined data/evaluation for unsupported ranges without automatically

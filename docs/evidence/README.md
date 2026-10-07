@@ -22,3 +22,4 @@ Add a focused note when an investigation produces useful reasoning. Give it a da
 - [2026-09-30: current binner design review and source audit](2026-09-30-binner-design-review.md)
 
 - [2026-09-30: D011 architecture reassessment, thesis and GLM tradeoffs](2026-09-30-architecture-reassessment.md)
+- [2026-10-08: focused competitive study, CAMI data and source/overlap provenance](2026-10-08-competitive-binner-study.md)

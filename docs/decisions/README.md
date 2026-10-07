@@ -20,3 +20,4 @@ The numerical decisions inside [historical planning](../history/DECISIONS.md) be
 
 - [D011: composition-based contrastive prototype; frozen GLM deferred](D011-first-binner-prototype.md)
 - [D012: Product resources, serial execution and shared usability](D012-product-execution-and-usability.md)
+- [D013: One competitive human-gut assembly baseline before improvements](D013-first-comparative-benchmark.md)
