@@ -1,10 +1,12 @@
 # E008: Product execution and private PR validation
 
-Prepared 2026-10-07; status **local/native Linux software accepted; private PR open, review pending**, biological outcome **not assessed**.
+Prepared 2026-10-07; status **local/native Linux software accepted; private PR merged, no independent review approval**, biological outcome **not assessed**.
 [D012](../../docs/decisions/D012-product-execution-and-usability.md) owns the bounded
 execution decision; [protocol](protocol.json) freezes prospective contracts and
 software-test ceilings. Accepted E006/E007 and science remain retained. Owner
-authorizes push/private PR/real CI/review, **not merge or public publication**.
+initially authorized push/private PR/real CI/review and stopped before merge;
+the later explicit merge authorization and observed completion are recorded below.
+Public publication/release remains unauthorized.
 
 Product resource choices are independent of the four-thread/8-GB/two-hour test
 budget. Remove the fixed product maxima and make RAM/time safeguards opt-in.
@@ -44,8 +46,8 @@ wheel/source/journal is changed. GPU and Conda remain goals only.
 
 ## Accepted native Linux CI and private PR
 
-[Private PR #1](https://github.com/Rasmus-allesoee/dl_binner/pull/1) is open against
-main; source history is preserved and no merge/publication requested.
+[Private PR #1](https://github.com/Rasmus-allesoee/dl_binner/pull/1) was opened against
+main; source history was preserved and no merge/publication requested at this receipt.
 [Actual CI](https://github.com/Rasmus-allesoee/dl_binner/actions/runs/37646636562)
 passed for `5a0d753`; [retained review receipt](linux-observed.json) binds exact
 head/build/runtime/test bytes. Ubuntu CPU/Python 3.12 uses one fresh owned prefix,
@@ -66,9 +68,9 @@ clean/mergeable and no unresolved review threads, but is not review approval.
 An implementation review was requested through `@codex review`. No review was
 returned at this record; capture/triage any later findings rather than inventing
 approval or bypassing review. Exact current-head checks still need refreshing
-after final record-only pushes. The owner explicitly forbids merge/publication
-in this task. Next is review and an explicit exact-head merge decision; after a
-later authorized merge, benchmark work belongs on a new branch from updated main.
+after final record-only pushes. The owner explicitly forbade merge/publication
+in that preparation task. The next boundary was review and a merge decision;
+after an authorized merge, benchmark work belongs on a new branch from updated main.
 
 ## Native timer boundary repair
 
@@ -98,5 +100,32 @@ Product suite **36.198 s / 0.575-GB sampled peak**; full job wall **128 s**.
 These are software costs, not biological evidence or exact provider billing.
 Retained artifacts live under `artifacts/e008-product-execution/pr/linux-postfix/`;
 prior receipts/attempts remain unchanged. Review still has no returned findings
-or approval. Refresh the final head after this record-only update; no merge,
-publication, UCloud or benchmark work is authorized in this task.
+or approval at this receipt. The final head required refreshing after that
+record-only update; merge/publication/UCloud/benchmark work was not authorized
+in the preparation task. The subsequent authorization is recorded below.
+
+## Authorized private merge, 2026-10-07
+
+The owner subsequently authorized completion and normal merge without another
+approval, allowing inspected in-scope head changes. The head remained unchanged.
+[PR #1](https://github.com/Rasmus-allesoee/dl_binner/pull/1) is **merged**;
+[receipt](merge-observed.json) binds head
+`ecf6ab822df741c6f7bb092826957b6ffc4e8771` to merge commit
+`5bc824a9bf4b1ca4562acda10735a3fc6b54dc3d` and its two verified parents.
+Product/source/default bytes match the accepted head and all referenced source
+commits remain ancestors. Local main was fast-forwarded to the merge.
+
+[Final-head native Linux CI](https://github.com/Rasmus-allesoee/dl_binner/actions/runs/37651872364)
+passed 13 tests/19 cases; retained evidence was reused, not rerun. Product suite
+38.803 s / 573,874,176-byte sampled peak, software evidence only. The fresh watcher
+confirmed ready before landing and merged at the authorized head afterward. No
+review returned; no required reviewer or actionable finding/unresolved thread
+remained. This is not independent review approval. No code fix was needed in
+the merge task. The earlier stop-at-ready boundary is now superseded; prior
+receipts, including their then-current authorization, remain immutable.
+
+The repository is private; no release, publication, accepted science replay or
+UCloud/benchmark/architecture execution occurred. The updated handoff recommends
+one bounded independent human-associated benchmark **planning** task on a new
+branch from updated main, preserving this software baseline. This is neither
+execution authorization nor another architecture gate.

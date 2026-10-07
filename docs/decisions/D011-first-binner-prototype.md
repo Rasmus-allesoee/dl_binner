@@ -1,6 +1,6 @@
 # D011: Composition-based contrastive first binner; frozen GLM deferred
 
-Date: 2026-09-30; latest product-validation update 2026-10-06. Status: **accepted**
+Date: 2026-09-30; latest product-validation update 2026-10-07. Status: **accepted**
 first-prototype direction: 136-dimensional composition input to our own compact
 contrastive encoder. Frozen DNABERT-S is deferred under E003's precommitted joint
 criterion, with positive grouping evidence retained. This replaces the compact-VAE-first
@@ -490,5 +490,23 @@ RAM/time safeguards, and built-in serial dispatch without a separate workflow
 environment. Keep D011's model/transforms/defaults/clustering/results unchanged.
 Four-thread/8-GB/two-hour limits remain test/experiment budgets, not product maxima.
 GPU/Conda distribution and shared people/agent usability are product goals, with
-GPU/Conda implementation deferred. Private push/PR/real CI/review are authorized;
-merge/publication/benchmark/architecture execution are not.
+GPU/Conda implementation deferred. During preparation, private push/PR/real
+CI/review were authorized; merge/publication/benchmark/architecture execution
+were not. The later merge authorization is recorded below.
+
+## Private prototype baseline merged, 2026-10-07
+
+The owner's subsequent authorization supersedes the preparation-task merge stop.
+[E008's merge receipt](../../experiments/E008-product-execution/merge-observed.json)
+records private PR #1's normal two-parent merge and fresh exact-head CI/review
+checks. No actionable findings required another code change; requested independent
+review did not respond, so no independent approval is claimed. Keep D011 and the
+accepted scientific bytes/settings/evidence unchanged. The first usable prototype
+is now the stable baseline on main; no public release is made.
+
+Next is one bounded benchmark-planning task on a new branch from updated main:
+independent human-associated input/overlap/truth/depth contracts, matched controls
+and native baselines, bin-quality/short-stratum/noise metrics and explicit cost
+budgets. Existing evidence is reused and refreshed only where selection needs it.
+No benchmark or architecture execution occurs in this merge task; the planned
+TNF/GLM-head/hybrid comparison remains separate and non-blocking.

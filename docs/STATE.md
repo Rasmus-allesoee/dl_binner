@@ -197,7 +197,7 @@ Resource sampling is approximate; source preparation/acquisition/review/idle
 are separate, and these are not UCloud costs. No accepted demonstration was
 repeated and no architecture change occurred.
 
-**E008's product changes and native Linux CI are accepted; private PR #1 is open.**
+**E008's product changes and native Linux CI are accepted; private PR #1 is merged.**
 [D012](decisions/D012-product-execution-and-usability.md) implements positive
 uncapped CPU choices, optional RAM/time safeguards and a built-in serial dispatcher
 requiring one CPU environment. Scientific byte hashes/defaults/results remain
@@ -213,28 +213,35 @@ product peak 0.575 GB, 36.198 s; job wall 128 s, not exact billing. Final-head
 checks are refreshed after record-only pushes. No accepted science or UCloud
 work was repeated.
 
-**Exact next step: review the private PR and authorize a merge only after current-head checks.**
-[PR #1](https://github.com/Rasmus-allesoee/dl_binner/pull/1) targets main with source
-history intact. `@codex review` was requested; no response at this record. The
-watcher reports clean CI/mergeability/no unresolved threads, not independent approval.
-Refresh checks/reviews for the final head and address concrete findings. The owner
-explicitly says **do not merge or publish in this task**. No merge commit exists.
-After separately authorized merge, start benchmark work on a new branch from
-updated main; no benchmark/architecture execution is part of this task.
+**Private PR #1 was merged on 2026-10-07 under explicit owner authorization.**
+[Merge receipt](../experiments/E008-product-execution/merge-observed.json) binds
+head `ecf6ab822df741c6f7bb092826957b6ffc4e8771` to normal merge commit
+`5bc824a9bf4b1ca4562acda10735a3fc6b54dc3d`; its two parents preserve the prior
+main and all accepted source commits. Final-head Linux CI passed 13 tests/19
+native cases (38.803 s / 0.574-GB sampled product peak); docs checks pass.
+No returned independent review or approval is claimed: the requested bot did not
+respond, no reviewer was required and no actionable finding/unresolved thread
+remained. The owner's later merge authorization supersedes the preparation-task
+stop. Repository remains private, with no release/tag/package publication.
 
-Owner direction: after the completed bounded readiness step, review/merge the
-first usable prototype
-through a separately authorized private PR, then start a **new benchmark/research
-branch from updated main**, retaining this accepted implementation as the stable
-baseline. Future architecture testing must be deliberate and matched; it does
-not delay the first prototype with another quality/architecture gate. License
-and historical-source packaging require review before public redistribution,
-not an invented license or additional science before a private PR. No new owner
-compute job is needed for the current handoff.
+**Exact next step: one bounded benchmark-planning task on a new branch from updated main.**
+Choose one independent human-associated assembly benchmark, check development/
+source overlap, and freeze input/depth/truth contracts, the accepted raw/learned
+baseline, a small justified external-tool shortlist, bin-quality/length/noise
+metrics and allocated CPU/RAM/time/storage budgets before any execution. Preserve
+short strata, exclusions and unassigned DNA. This plans useful bin-quality and
+cost assessment; one dataset cannot establish broad generalization. Reuse the
+completed review/evaluators, refreshing only evidence needed by the shortlist.
+Do not implement architecture changes or run data/benchmark/UCloud work in the
+merge task. The accepted prototype remains the stable main baseline.
+
+License and historical-source packaging need separate owner review before public
+redistribution. No new files or owner compute job are needed to complete this
+handoff. The next planning task can identify specific asset dependencies.
 
 The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
 planned and unrun. No larger datasets, extra seeds, architecture gate, publication
-is authorized. E008's private push/PR is authorized and completed; accepted
+is authorized. E008's private push/PR/merge is authorized and completed; accepted
 scientific source and settings are unchanged.
 Frozen GLM weights/features remain
 retained, deferred from the first prototype rather than globally rejected. The

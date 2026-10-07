@@ -58,10 +58,11 @@ future product/distribution goals. Neither is implemented or published here.
 
 [E008](../../experiments/E008-product-execution/README.md) owns prospective contracts,
 tests and actual execution/PR records. Scientific byte hashes stay frozen.
-After real Linux CI/review, report exact-head readiness and stop without merging.
+The initial preparation task stopped after real Linux CI and review-status
+inspection; the later authorized merge is recorded below.
 After a later authorized merge, benchmark work uses a new branch from updated main.
 
-## Validation and current boundary
+## Initial validation and preparation boundary
 
 E008's fresh Mac installation and actual private Linux CI pass 12 tests/18 native
 cases. Scientific byte hashes/defaults remain unchanged. The dispatcher is retained
@@ -69,5 +70,15 @@ because it preserves the native worker, staging/receipt, resume, export and fail
 contracts while removing the second runtime. Large CLI choices are tested through
 parser-only inspection, never by allocating more than the test budget. This is
 software acceptance, not an architecture or biological performance comparison.
-The private PR is open; requested review and exact-head final checks are distinct
-from authorizing merge. No merge/publication occurs in this task.
+At that preparation boundary, the private PR remained open; requested review
+and exact-head checks were distinct from merge authorization. No merge or
+publication occurred in that task.
+
+## Private merge boundary completed, 2026-10-07
+
+Later explicit owner authorization permits normal merge without another approval.
+[E008](../../experiments/E008-product-execution/merge-observed.json) records the
+completed private merge, refreshed exact-head gates and preserved source history.
+Final native checks pass 13 tests/19 cases after the concrete large-timer repair.
+No independent review approval is claimed. Product choices/scientific settings
+are unchanged; GPU/Conda remain future goals and no public release occurs.

@@ -1,0 +1,75 @@
+{
+  "accepted_science_repeated": false,
+  "authorization": "Owner explicitly authorized completion and normal merge without another approval, including scoped head changes; no public publication or release.",
+  "checks": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-07T16:27:05Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Rasmus-allesoee/dl_binner/actions/runs/37651872364/job/112896977412",
+      "name": "product",
+      "startedAt": "2026-10-07T16:25:16Z",
+      "status": "COMPLETED",
+      "workflowName": "Installed CPU prototype"
+    }
+  ],
+  "ci_url": "https://github.com/Rasmus-allesoee/dl_binner/actions/runs/37651872364",
+  "head": "ecf6ab822df741c6f7bb092826957b6ffc4e8771",
+  "head_changed_since_previous_handoff": false,
+  "merge_commit": "5bc824a9bf4b1ca4562acda10735a3fc6b54dc3d",
+  "merge_parents": [
+    "930e6743eac1aadb93ea23b51f2a6ac617155a2e",
+    "ecf6ab822df741c6f7bb092826957b6ffc4e8771"
+  ],
+  "merged_at": "2026-10-07T19:06:33Z",
+  "method": "normal merge commit",
+  "native_cases": 19,
+  "pr_url": "https://github.com/Rasmus-allesoee/dl_binner/pull/1",
+  "product_peak_sampled_rss_bytes": 573874176,
+  "product_seconds": 38.80265968399999,
+  "product_tree_unchanged_by_merge": true,
+  "published_or_released": false,
+  "repository_private": true,
+  "retained_evidence": {
+    "completion.json": {
+      "bytes": 1791,
+      "sha256": "57e78b126ab7f0d486a6053d6dc2f5b9e2d6ab63dd402f992fd839e5105bec04"
+    },
+    "entry-pr.json": {
+      "bytes": 743,
+      "sha256": "ea76066f4aeab7a754468a0cc0b9066517a55657c81fceb5b0cbba7d15caed7b"
+    },
+    "entry-repo.json": {
+      "bytes": 125,
+      "sha256": "8a59ad5563d32503168ed9f172122465fd01e4e40b0407582950dc7bf6cdda47"
+    },
+    "merged-pr.json": {
+      "bytes": 592,
+      "sha256": "a70aee3de16a151a0ad26ef7740fc2c95c1cab439d7dc39264ec2098ad0c3b02"
+    },
+    "plan.json": {
+      "bytes": 672,
+      "sha256": "cb727eea0094beffd0f3d033d7ac72f8f6feabbc622fb6574dea784da439ae12"
+    },
+    "readiness.json": {
+      "bytes": 1629,
+      "sha256": "099e6140d2941c1093493e74fb2905d40b555f87d3955eddfbf2748509a64b1b"
+    },
+    "request.json": {
+      "bytes": 950,
+      "sha256": "5761dea2a9e3861d9c6802cc15f26f1b0bcb052fee59312874f79eee6cf67ff0"
+    }
+  },
+  "reviews": {
+    "independent_approval": false,
+    "note": "Requested automated review did not respond. No actionable findings or required approvals; not a claim of independent review approval.",
+    "required_reviewers": [],
+    "returned_reviews": 0,
+    "unresolved_threads": 0
+  },
+  "scientific_settings_changed": false,
+  "source_history_preserved": true,
+  "status": "merged-private-prototype",
+  "tests": 13,
+  "ucloud_executed": false
+}

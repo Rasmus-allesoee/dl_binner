@@ -1,8 +1,9 @@
-# Prepared private implementation PR
+# Merged private implementation PR
 
-Status: **private PR #1 open; this file owns its implementation description**. Target branch `main`; source
+Status: **private PR #1 merged; this file retains its reviewed implementation description**. Target branch `main`; source
 `first-binner-prototype`. Title: **Add the first usable CPU metagenomic binner**.
-Owner authorizes push/private PR/real CI/review for E008; **do not merge or publish**.
+The owner subsequently authorized normal merge; [E008](../experiments/E008-product-execution/merge-observed.json)
+records completion. Repository remains private; no publication/release is authorized.
 
 ## Proposed PR body
 
@@ -62,14 +63,19 @@ Review this as the stable first-prototype baseline. After a separately authorize
 merge, benchmark and matched architecture work starts on a new branch from updated
 main; experimental changes can then be compared against these accepted bytes.
 
-## Before opening and merging
+## Merge outcome and subsequent work
 
-Check the live branch/remote/base state and use the actual final head in the PR.
-Opening the private PR and running its CI are owner-authorized for this task;
-do not merge. Before merge, require successful real Linux
-CI (including native installed tests), inspect review findings, and retain the
-validated source commits. Prefer a merge preserving referenced source history;
-do not squash away the sole source commits behind accepted evidence.
+Private PR #1 merged normally at `5bc824a9bf4b1ca4562acda10735a3fc6b54dc3d`
+from head `ecf6ab822df741c6f7bb092826957b6ffc4e8771`, preserving accepted source
+history. Final-head real Linux CI passed 13 tests/19 native cases. No actionable
+review finding or required reviewer remained; requested independent automated
+review did not respond and is not represented as approval. The later owner
+authorization supersedes the preparation-task merge stop.
+
+Next: bounded benchmark planning on a new branch from updated main. Keep this
+accepted implementation as the stable control; freeze independent input/overlap,
+evaluation, matched baseline and cost contracts before execution. No scientific
+rerun, benchmark/architecture execution or public release belongs to this merge.
 
 No project license has been selected. This does not block a private implementation
 PR. Public redistribution is a separate owner choice with dependency/source
