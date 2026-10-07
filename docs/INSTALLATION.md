@@ -1,16 +1,16 @@
 # Standalone CPU installation and product checks
 
-Use a locally built **0.1.0.dev2** wheel and two fresh environments: binner and
-Snakemake. They own their dependency payloads, not links to research prefixes.
+Use a locally built **0.1.0.dev3** wheel and a fresh binner CPU environment. It owns its dependency payloads,
+not links to research prefixes. The built-in serial runner needs no Snakemake.
 Existing runtimes/wheels stay untouched. Python venvs still depend on their base
 Python/stdlib; retain that base. Invoke lexical `bin/python` paths, not resolved
 interpreter symlinks.
 
-The recommended CPU/Linux target is **x86_64 / Python 3.12** for both runtimes.
+The recommended CPU/Linux target is **x86_64 / Python 3.12** for the binner runtime.
 E006's accepted Linux execution borrowed reviewed dependencies; an independent
-install of this packaging snapshot still needs an actual CI run. E007 locally
-tests Mac x86_64, binner Python 3.10/workflow 3.13. Neither is an exhaustive matrix.
-Binner requires 3.10–3.12; workflow Python can be newer. Windows is unsupported.
+install of this packaging snapshot still needs an actual CI run. E007 tested Mac x86_64 Python 3.10. E008 validates the changed product;
+read its actual CI status before claiming native Linux acceptance. Neither is an
+exhaustive matrix. Binner requires 3.10–3.12. Windows is unsupported.
 
 ## Install a wheel
 
@@ -30,14 +30,11 @@ set -euo pipefail
 unset PYTHONPATH PYTHONHOME PYTHONUSERBASE
 export PYTHONNOUSERSITE=1
 export OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 MKL_NUM_THREADS=4 VECLIB_MAXIMUM_THREADS=4 NUMEXPR_NUM_THREADS=4
-binner_env="$PWD/.venv/binner-0.1.0.dev2-v1"
-workflow_env="$PWD/.venv/workflow-9.16.3-v1"
-wheel_path="$PWD/dist/dl_binner-0.1.0.dev2-py3-none-any.whl"
+binner_env="$PWD/.venv/binner-0.1.0.dev3-v1"
+wheel_path="$PWD/dist/dl_binner-0.1.0.dev3-py3-none-any.whl"
 test -f "$wheel_path"
 test ! -e "$binner_env"
-test ! -e "$workflow_env"
 python3.12 -I -B -m venv --copies "$binner_env"
-python3.12 -I -B -m venv --copies "$workflow_env"
 "$binner_env/bin/python" -I -B -m pip --isolated install --only-binary=:all: pip==25.1.1 setuptools==65.5.0 wheel==0.45.1
 if [[ $(uname -s) == Linux ]]; then
   "$binner_env/bin/python" -I -B -m pip --isolated install --no-deps --only-binary=:all: 'torch==2.2.2+cpu' --index-url https://download.pytorch.org/whl/cpu
@@ -45,19 +42,16 @@ elif [[ $(uname -s) != Darwin ]]; then
   echo 'Supported native systems: Linux and macOS' >&2; exit 2
 fi
 "$binner_env/bin/python" -I -B -m pip --isolated install --only-binary=:all: -r requirements/binner-cpu.txt
-"$workflow_env/bin/python" -I -B -m pip --isolated install --only-binary=:all: -r requirements/workflow.txt
 "$binner_env/bin/python" -I -B -m pip --isolated install --no-deps "$wheel_path"
 "$binner_env/bin/python" -I -B -m pip check
-"$workflow_env/bin/python" -I -B -m pip check
 "$binner_env/bin/python" -I -B -c 'import sys,torch,numpy,dl_binner; print(sys.executable,sys.prefix,dl_binner.__file__,torch.__file__,numpy.__file__); assert torch.version.cuda is None'
-"$workflow_env/bin/python" -I -B -c 'import sys,snakemake; print(sys.executable,sys.prefix,snakemake.__file__)'
 "$binner_env/bin/dl-binner" --version
 "$binner_env/bin/dl-binner" run --help
 BASH
 ```
 
-For the locally tested Mac recipe, use explicit Python 3.10 for binner and 3.13
-for workflow at the two creation lines. Keep pins; diagnose actual install errors.
+For the locally tested Mac recipe, use explicit Python 3.10 for binner/builder
+at the creation lines. Keep pins; diagnose actual install errors.
 Offline setup adds `--no-index --find-links /absolute/wheelhouse` to pip commands
 instead of the online index. It needs the full compatible Python/OS/architecture
 closure. Linux cp312 wheels cannot serve Mac cp310. E007 tests actual installation
@@ -79,7 +73,7 @@ bash <<'BASH'
 set -euo pipefail
 unset PYTHONPATH PYTHONHOME PYTHONUSERBASE
 export PYTHONNOUSERSITE=1
-builder_env="$PWD/.venv/builder-0.1.0.dev2-v1"
+builder_env="$PWD/.venv/builder-0.1.0.dev3-v1"
 build_out="$PWD/dist"
 test ! -e "$builder_env"
 test ! -e "$build_out"
@@ -92,25 +86,24 @@ cd "$snapshot"
 "$builder_env/bin/python" -I -B -c 'from setuptools.build_meta import build_sdist; import sys; build_sdist(sys.argv[1])' "$build_out"
 "$builder_env/bin/python" -I -B -c 'from setuptools.build_meta import build_wheel; import sys; build_wheel(sys.argv[1])' "$build_out"
 "$builder_env/bin/python" -I -B scripts/check_distribution.py \
-  --wheel "$build_out/dl_binner-0.1.0.dev2-py3-none-any.whl" \
-  --sdist "$build_out/dl_binner-0.1.0.dev2.tar.gz" --output "$build_out/inspection.json"
+  --wheel "$build_out/dl_binner-0.1.0.dev3-py3-none-any.whl" \
+  --sdist "$build_out/dl_binner-0.1.0.dev3.tar.gz" --output "$build_out/inspection.json"
 BASH
 ```
 
 Inspection validates wheel RECORD, metadata/CLI/dependencies, accepted unchanged
-package bytes except the version initializer, defaults/DAG, matching sdist code
+package bytes except the version initializer, defaults, matching sdist code
 and no research payload. E007 also rebuilds from the sdist, compares logical
 member bytes and tests the rebuilt wheel installation. Archive timestamps can
 change hashes; logical equivalence is checked separately. Accepted dev1 is retained.
 
 ## Run product regressions
 
-Use installed interpreters and a fresh evidence path outside the checkout:
+Use an installed binner interpreter and a fresh evidence path outside the checkout:
 
 ```sh
 python3 -I -B scripts/test_product.py \
   --python /absolute/binner/bin/python \
-  --workflow-python /absolute/workflow/bin/python \
   --threads 4 --timeout 1800 --output /absolute/new-product-check
 ```
 
@@ -123,13 +116,22 @@ standard runner. No required case is silently skipped or scientifically scored.
 
 Synthetic ≤32-contig / 0.6-Mb fixtures exercise reader/transform/train/reload/embed/
 cluster/export/accounting, all strata/masks/zeros, matched raw control, partial/full
-resume, changed/corrupt/extra outputs, fatal input, actual scheduler placement and
+resume, changed/corrupt/extra outputs, fatal input, actual serial stage placement and
 timeout/RSS/orphan handling. Preserve `product-tests.log`, `.exit.json`,
 `.samples.jsonl` and `native-run/` for failure review. Detailed logs, native causes,
-heartbeats and exits persist. Older `tests/test_*.py` and experiment reviews remain
+heartbeats and exits persist. Snakemake remains in research workflows; `requirements/workflow.txt` is their
+retained version pin file, not a product dependency. Older `tests/test_*.py` and experiment reviews remain
 separate opt-in retained-evidence checks with their original dependencies.
 
 See [PROTOTYPE](PROTOTYPE.md#run-the-binner) for use/contracts and
-[E007](../experiments/E007-pr-readiness/README.md) for measured validation and
+[E007](../experiments/E007-pr-readiness/README.md) and
+[E008](../experiments/E008-product-execution/README.md) for measured validation and
 CI/publication limits. Use old runtimes for valid resume of old journals; never
 rewrite accepted manifests to match a new package.
+
+## Future distribution
+
+Optional GPU support with CPU retained, and Conda/mamba installation, are planned
+product/distribution goals. No GPU path, Conda recipe, package-index publication
+or release automation is implemented by this task. Current version pins/clean
+builds support that future work; they do not claim distribution availability.

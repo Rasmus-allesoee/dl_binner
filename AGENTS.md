@@ -263,7 +263,7 @@ serial workflow. Verify actual scheduling events/overlap on independent ready
 rules; a driver label or tiny fixture that happens to serialize is insufficient.
 
 For installed product workflows, test the actual built wheel outside the checkout
-and package its defaults/DAG. Preserve journaled completed outputs: use explicit
+and package its defaults and any required DAG. Preserve journaled completed outputs: use explicit
 resume only after matching source/input/config/runtime/artifact bytes; never edit
 manifests to make a retry pass. Prototype interfaces may evolve without a
 compatibility promise; current contracts belong in `docs/PROTOTYPE.md`.
@@ -276,6 +276,13 @@ research runtimes as executed provenance. Inspect both wheel and sdist, includin
 the rebuilt wheel's logical contents, before accepting changed packaging. Use a
 builder within the package's supported Python range and separate backend hook
 processes; CI preparation is not a successful native CI run.
+Ordinary product CPU counts and optional RAM/time safeguards are user choices,
+without project-imposed maxima. Keep validation/CI/resource allocations bounded
+explicitly and distinguish their ceilings from product policy. A fixed serial
+product pipeline may use the built-in dispatcher; retain workflow engines for
+research/HPC where their scheduling or DAG features help. Favor clear shared
+commands/contracts, structured outputs and actionable errors for people and AI
+agents. Future GPU/Conda goals belong in product guidance, not automatic work.
 Keep parent prerequisites within the bounded clock and retain failures even
 before a child starts. Surface native causes beyond scheduler trailers. Distinguish
 exited/zombie from live processes during cleanup and verify the intended stop and

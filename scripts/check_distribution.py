@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Inspect actual wheel/sdist bytes and package provenance without installing them.
 
-Checks archive paths, wheel RECORD hashes, metadata/CLI, packaged defaults/DAG,
+Checks archive paths, wheel RECORD hashes, metadata/CLI, packaged defaults,
 the accepted unchanged code, and absence of research payloads. An optional wheel
 rebuilt from the sdist must contain equivalent package/metadata bytes. Writes an
 exclusive JSON receipt; does not publish, import the binner or run science.
@@ -33,17 +33,17 @@ def inspect_wheel(path,accepted):
         if len(names)!=len(set(names)):raise ValueError('Duplicate wheel member')
         files={name:archive.read(name) for name in names}
     if any(Path(n).is_absolute() or '..' in Path(n).parts for n in files):raise ValueError('Unsafe wheel path')
-    if any(not n.startswith(('dl_binner/','dl_binner-0.1.0.dev2.dist-info/')) for n in files):raise ValueError('Unexpected wheel payload')
-    metadata_name='dl_binner-0.1.0.dev2.dist-info/METADATA'
+    if any(not n.startswith(('dl_binner/','dl_binner-0.1.0.dev3.dist-info/')) for n in files):raise ValueError('Unexpected wheel payload')
+    metadata_name='dl_binner-0.1.0.dev3.dist-info/METADATA'
     metadata=BytesParser().parsebytes(files[metadata_name])
-    if metadata['Name']!='dl-binner' or metadata['Version']!='0.1.0.dev2':raise ValueError('Wheel version/name mismatch')
+    if metadata['Name']!='dl-binner' or metadata['Version']!='0.1.0.dev3':raise ValueError('Wheel version/name mismatch')
     if set(metadata['Requires-Python'].split(','))!={'<3.13','>=3.10'}:raise ValueError('Unsupported Python metadata')
     if set(metadata.get_all('Requires-Dist',[]))!={'numpy==1.26.4','torch==2.2.2','networkx==3.4.2','threadpoolctl==3.5.0'}:
         # Older pinned setuptools may insert whitespace before the version clause.
         if {v.replace(' ','') for v in metadata.get_all('Requires-Dist',[])}!={'numpy==1.26.4','torch==2.2.2','networkx==3.4.2','threadpoolctl==3.5.0'}:
             raise ValueError('Scientific dependency metadata changed')
-    if 'dl-binner = dl_binner.cli:main' not in files['dl_binner-0.1.0.dev2.dist-info/entry_points.txt'].decode():raise ValueError('Missing installed CLI')
-    rows=list(csv.reader(io.StringIO(files['dl_binner-0.1.0.dev2.dist-info/RECORD'].decode())))
+    if 'dl-binner = dl_binner.cli:main' not in files['dl_binner-0.1.0.dev3.dist-info/entry_points.txt'].decode():raise ValueError('Missing installed CLI')
+    rows=list(csv.reader(io.StringIO(files['dl_binner-0.1.0.dev3.dist-info/RECORD'].decode())))
     if len(rows)!=len(files) or {r[0] for r in rows}!=set(files):raise ValueError('Wheel RECORD set mismatch')
     for name,digest,size in rows:
         if name.endswith('/RECORD'):
@@ -51,11 +51,13 @@ def inspect_wheel(path,accepted):
         elif digest!='sha256='+base64.urlsafe_b64encode(hashlib.sha256(files[name]).digest()).decode().rstrip('=') or int(size)!=len(files[name]):
             raise ValueError('Wheel RECORD bytes changed: '+name)
     package={n.removeprefix('dl_binner/'):v for n,v in files.items() if n.startswith('dl_binner/')}
-    if set(package)!=set(accepted)|{'__init__.py'}:raise ValueError('Package member set changed')
+    root=Path(__file__).absolute().parents[1]/'src/dl_binner'
+    expected={str(p.relative_to(root)):p.read_bytes() for p in root.rglob('*') if p.is_file() and p.suffix in ('.py','.json')}
+    if package!=expected:raise ValueError('Wheel payload differs from this committed build source')
     for name,expected in accepted.items():
         value=package[name]
         if dict(bytes=len(value),sha256=hashlib.sha256(value).hexdigest())!=expected:raise ValueError('Accepted package bytes changed: '+name)
-    if package['__init__.py']!=b'"""Own experimental contrastive binner; no pretrained GLM or baseline executable."""\n__version__ = \'0.1.0.dev2\'\n':
+    if package['__init__.py']!=b'"""Own experimental contrastive binner; no pretrained GLM or baseline executable."""\n__version__ = \'0.1.0.dev3\'\n':
         raise ValueError('Unexpected initializer change beyond version')
     return files
 
@@ -80,7 +82,7 @@ def inspect_sdist(path,wheel):
     if not required.issubset(files):raise ValueError('sdist missing reproducibility files')
     for name,value in wheel.items():
         if name.startswith('dl_binner/') and files['src/'+name]!=value:raise ValueError('sdist/wheel package differs: '+name)
-    if files['README.md'] not in wheel['dl_binner-0.1.0.dev2.dist-info/METADATA']:raise ValueError('Product README not in wheel metadata')
+    if files['README.md'] not in wheel['dl_binner-0.1.0.dev3.dist-info/METADATA']:raise ValueError('Product README not in wheel metadata')
     return files
 
 
@@ -98,8 +100,8 @@ def main():
         if wheel!=rebuilt:raise ValueError('sdist rebuilt wheel content differs (archive timestamps may differ)')
     result=dict(status='passed',scope='Package contents and byte provenance, not runtime/science',
         wheel=dict(path=str(args.wheel),**record(args.wheel)),sdist=dict(path=str(args.sdist),**record(args.sdist)),
-        wheel_members=sorted(wheel),sdist_members=sorted(sdist),accepted_package_bytes_unchanged=True,
-        initializer_change='Version only: 0.1.0.dev1 to 0.1.0.dev2',rebuilt_wheel=dict(path=str(args.rebuilt_wheel),**record(args.rebuilt_wheel)) if args.rebuilt_wheel else None)
+        wheel_members=sorted(wheel),sdist_members=sorted(sdist),accepted_scientific_bytes_unchanged=True,
+        initializer_change='Versioned product execution change; scientific files unchanged',rebuilt_wheel=dict(path=str(args.rebuilt_wheel),**record(args.rebuilt_wheel)) if args.rebuilt_wheel else None)
     with args.output.open('x') as stream:json.dump(result,stream,sort_keys=True,indent=2);stream.write('\n')
     print(json.dumps(result,sort_keys=True))
 

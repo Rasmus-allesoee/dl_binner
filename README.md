@@ -12,15 +12,14 @@ learning through implementation are the primary goals.
 
 ## Install and run
 
-Use separate CPU environments for the binner and **Snakemake 9.16.3**. Follow the
-[pinned standalone installation guide](docs/INSTALLATION.md); 0.1.0.dev2 is built
+Use one CPU environment with built-in serial execution. Follow the
+[pinned standalone installation guide](docs/INSTALLATION.md); 0.1.0.dev3 is built
 locally, not published to a package index. Do not copy linked research environments.
 The command installs nothing and needs no database, truth labels, internet connection
 or repository checkout.
 
 ```sh
-/absolute/binner/bin/dl-binner run --fasta assembly.fna --output result \
-  --workflow-python /absolute/workflow/bin/python --threads 4
+/absolute/binner/bin/dl-binner run --fasta assembly.fna --output result --threads 4
 ```
 
 Add `--depth mean-depth.tsv` for finite nonnegative mean depth measured against
@@ -41,10 +40,11 @@ accepted older manifests are not migrated to fit a newer package.
 
 ## Validation and limits
 
-- Configurable 500-bp eligibility, 20 epochs/seed 11, four CPU threads maximum,
+- Configurable 500-bp eligibility, 20 epochs/seed 11, a positive user-selected CPU thread count,
   interop one and loader zero. Short/excluded DNA and noise are retained.
-- Default sampled working RSS limit 8 GB and overall invocation timeout two hours.
-  Sampling is approximate; tiny serial stages may not saturate the CPU budget.
+- RAM/time safeguards are optional: add `--memory-gb 32 --timeout 86400`, or
+  omit them for no product ceiling. No project maximum is imposed. Sampling is
+  approximate; tiny serial stages may not saturate the requested CPU count.
 - [E004](experiments/E004-first-binner/README.md) validates the learned path;
   [E005](experiments/E005-linux-pilot/README.md) has capped GI development
   assembled-sequence recovery evidence, with fragmentation and no >=90% recovered
@@ -64,7 +64,8 @@ and the distinction between local validation and pending CI.
 ## Software checks
 
 The ordinary [product suite](tests/product/) uses small generated synthetic inputs,
-installed packages and a separate workflow interpreter; no ignored research caches.
+installed packages; no ignored research caches or workflow environment. CI/tests
+explicitly retain bounded thread/RAM/time budgets independent of product choices.
 [Commands](docs/INSTALLATION.md#run-product-regressions) retain logs/exit/resource
 receipts outside the checkout. These tests do not measure biological utility.
 Older `tests/test_*.py` and experiment reviews remain opt-in research checks with
@@ -89,3 +90,7 @@ for current scope. [WORKING](docs/WORKING.md) defines record ownership;
 The next deliverable is a private implementation PR, not public publication.
 No project license has been selected. Public redistribution needs an owner license
 decision and historical-source packaging review; nothing is published here.
+
+Optional GPU support and Conda/mamba installation are future goals, not available
+features. The shared CLI/contracts/structured results serve people and AI agents;
+see [product execution decision](docs/decisions/D012-product-execution-and-usability.md).

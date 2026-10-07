@@ -197,16 +197,17 @@ Resource sampling is approximate; source preparation/acquisition/review/idle
 are separate, and these are not UCloud costs. No accepted demonstration was
 repeated and no architecture change occurred.
 
-**Exact next step: separately authorize a private implementation PR.**
-The branch is ready to open it with [the concrete description](PR_FIRST_PROTOTYPE.md).
-Verify live branch/base/remote state, push this branch, open against main, run
-prepared CPU/Linux CI and address implementation review. No remote action has
-occurred yet. **Real standalone Linux CI and review remain before merge**, with
-explicit owner merge authorization; two-thread Mac checks do not substitute for
-Linux. No further product/architecture milestone or owner UCloud smoke is needed
-before opening. Public licensing/historical-source clearance is separate, not
-an invented license or a blocker to this private PR. No files are needed from
-the owner; only next-stage authorization.
+**Current authorized task: E008 product execution changes, then private PR/real CI/review.**
+The owner requests positive uncapped product threads, optional uncapped RAM/time
+safeguards, a bounded orchestration decision, durable shared people/AI-agent
+usability and future GPU/Conda goals. [D012](decisions/D012-product-execution-and-usability.md)
+selects a built-in serial dispatcher reusing existing native stage/receipt logic;
+[E008](../experiments/E008-product-execution/README.md) owns frozen test budgets
+and source hashes. Keep scientific settings/results and old journals immutable.
+Prepare and test dev3 outside the checkout, then push/open the private PR against
+main, inspect real Linux CI and implementation review, repair concrete failures.
+**Do not merge or publish.** No UCloud, accepted science replay, benchmark or
+architecture work. The following merge decision remains explicitly owner-controlled.
 
 Owner direction: after the completed bounded readiness step, review/merge the
 first usable prototype

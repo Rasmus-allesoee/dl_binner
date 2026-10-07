@@ -2,7 +2,7 @@
 """Validate a fresh standalone runtime's complete inventory and owned imports.
 
 Runs inside its lexical venv Python with -I -B. Accepts only the version-pinned
-closure in requirements, plus the installed dev2 binner for that role. No
+closure in requirements, plus the installed dev3 binner for that role. No
 scientific stage runs. Reports native prefix/origins, CPU pools and inventory,
 rejecting foreign/user-site distributions or linked numerical dependencies.
 """
@@ -41,7 +41,7 @@ def main():
             if marker.strip() not in ('platform_system == "Linux"','platform_system == "Darwin"'):raise ValueError('Unsupported requirement marker')
             if marker.split('"')[1]!=platform.system():continue
         name,version=spec.strip().split('==');expected[normalize(name)]=version
-    if a.role=='binner':expected['dl-binner']='0.1.0.dev2'
+    if a.role=='binner':expected['dl-binner']='0.1.0.dev3'
     distributions={};locations={}
     for d in metadata.distributions():
         name=normalize(d.metadata['Name'])

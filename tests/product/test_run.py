@@ -1,7 +1,6 @@
 """Native installed CLI, strict resume and real scheduler/supervisor contracts.
 
-Uses only generated software DNA and the separate workflow interpreter supplied
-by DL_BINNER_WORKFLOW_PYTHON. Required paths are never skipped or mocked. Set
+Uses only generated software DNA and the built-in serial dispatcher. Required paths are never skipped or mocked. Set
 DL_BINNER_TEST_OUTPUT to retain every command's logs/receipts and fixture outputs.
 """
 import json
@@ -17,7 +16,7 @@ import numpy as np
 from dl_binner import io
 from dl_binner.contracts import file_record, write_json
 from dl_binner.runner import FOLDERS, STAGES, receipt_name, validate_completed
-from dl_binner.supervision import isolated_env, local_scheduler_options, supervise
+from dl_binner.supervision import isolated_env, supervise
 from fixtures import THREADS, write_fixture
 
 
@@ -33,10 +32,6 @@ def snapshot(root):
 
 class NativeRunContracts(unittest.TestCase):
     def test_installed_run_resume_accounting_failures_and_resource_placement(self):
-        workflow = os.environ.get('DL_BINNER_WORKFLOW_PYTHON')
-        self.assertTrue(workflow, 'Supply the separate workflow interpreter; see scripts/test_product.py --help')
-        workflow = Path(workflow).absolute()  # preserve lexical venv path
-        self.assertTrue(workflow.is_file(), str(workflow))
         retained = os.environ.get('DL_BINNER_TEST_OUTPUT')
         if retained:
             root = Path(retained)/'native-run';root.mkdir(parents=True,exist_ok=False)
@@ -45,7 +40,7 @@ class NativeRunContracts(unittest.TestCase):
             self.addCleanup(temp.cleanup);root=Path(temp.name)
         fasta,depth,rows=write_fixture(root/'fixture inputs')
         cases={};console=Path(sys.executable).parent/'dl-binner'
-        base=[sys.executable,'-I','-B','-m','dl_binner','run','--fasta',fasta,'--workflow-python',workflow,
+        base=[sys.executable,'-I','-B','-m','dl_binner','run','--fasta',fasta,
               '--threads',str(THREADS),'--memory-gb','8','--timeout','300']
         def command(output, coverage=False):
             return base+['--output',output]+(['--depth',depth] if coverage else [])
@@ -62,7 +57,13 @@ class NativeRunContracts(unittest.TestCase):
             print('PRODUCT contract passed: '+name,flush=True)
         check([console,'run','--help'],'console-help',needle='learned/bins/')
         seq,dep=root/'sequence run',root/'depth run'
-        check([console,*command(seq)[5:]],'sequence-fresh')
+        unlimited=[console,*command(seq)[5:]]
+        for flag in ('--memory-gb','--timeout'):
+            at=unlimited.index(flag); del unlimited[at:at+2]
+        check(unlimited,'sequence-fresh')
+        seq_manifest=json.loads((seq/'run-manifest.json').read_text())
+        self.assertIsNone(seq_manifest['memory_bytes'])
+        check(unlimited+['--resume'],'unlimited-completed-resume',needle='No feature extraction')
         check(command(dep,True)+['--stop-after','train'],'depth-partial',needle='Paused after 2/8')
         partial=snapshot(dep)
         check(command(dep,True)+['--resume'],'depth-resume',needle='Verified 2/8')
@@ -116,28 +117,29 @@ class NativeRunContracts(unittest.TestCase):
         finally:extra.unlink()
         self.assertEqual(frozen,snapshot(dep))
         bad=root/'invalid.fna';bad.write_text('>broken\nACGTZ\n')
-        check([*base[:5],'run','--fasta',bad,'--workflow-python',workflow,'--threads',str(THREADS),'--output',root/'invalid','--timeout','60'],
+        check([*base[:5],'run','--fasta',bad,'--threads',str(THREADS),'--output',root/'invalid','--timeout','60'],
               'invalid-native',1,'Empty/invalid IUPAC sequence: broken')
         self.assertFalse((root/'invalid/training').exists())
         self.assertLess(cases['invalid-native']['resources']['wall_seconds'],30)
-        check([*base[:5],'run','--fasta',fasta,'--workflow-python',workflow,'--threads',str(THREADS),'--output',root/'timeout','--timeout','.3'],
+        check([*base[:5],'run','--fasta',fasta,'--threads',str(THREADS),'--output',root/'timeout','--timeout','.3'],
               'overall-timeout',1,'wall-time limit')
         stops=[json.loads(p.read_text()) for p in (root/'timeout/logs').glob('invocation-*/*.exit.json')]
         self.assertTrue(any('wall-time limit' in (v['stop_reason'] or '') for v in stops))
         self.assertTrue(all('Cleanup failed' not in (v['stop_reason'] or '') for v in stops))
-        for flag,value in [('--threads','5'),('--memory-gb','9'),('--timeout','nan')]:
-            result=subprocess.run([console,'run','--fasta','unused','--output','unused','--workflow-python',workflow,flag,value],
+        for flag,value in [('--threads','0'),('--threads','-2'),('--memory-gb','0'),('--memory-gb','nan'),('--timeout','nan'),('--timeout','0')]:
+            result=subprocess.run([console,'run','--fasta','unused','--output','unused',flag,value],
                                   env=isolated_env(THREADS),capture_output=True,text=True,timeout=15)
             self.assertEqual(result.returncode,2);self.assertIn(flag,result.stderr)
-        for mode in ('fatal','memory','heartbeat'):
+        for mode in ('fatal','memory','heartbeat','unlimited'):
             log=root/(mode+'-supervisor.log');pidfile=root/(mode+'.pid')
             code='import subprocess,sys,time,os; '
             if mode=='fatal':
                 code+=f'p=subprocess.Popen([sys.executable,"-I","-B","-c","import time; time.sleep(60)"]); open({str(pidfile)!r},"w").write(str(p.pid)); time.sleep(.4); print("intended fatal worker",flush=True); os._exit(7)'
-            else:code+='time.sleep('+('10.3' if mode=='heartbeat' else '60')+')'
-            try:supervise([sys.executable,'-I','-B','-c',code],log,15,1 if mode=='memory' else 8000000000,isolated_env(THREADS))
+            else:code+='time.sleep('+('10.3' if mode=='heartbeat' else '.1' if mode=='unlimited' else '60')+')'
+            try:supervise([sys.executable,'-I','-B','-c',code],log,None if mode=='unlimited' else 15,
+                          None if mode=='unlimited' else 1 if mode=='memory' else 8000000000,isolated_env(THREADS))
             except RuntimeError:
-                if mode=='heartbeat':raise
+                if mode in ('heartbeat','unlimited'):raise
             value=json.loads(log.with_suffix('.exit.json').read_text());cases['supervisor-'+mode]=value
             self.assertNotIn('Cleanup failed',value['stop_reason'] or '')
             if mode=='fatal':
@@ -148,17 +150,10 @@ class NativeRunContracts(unittest.TestCase):
                 self.assertTrue(not state or state.startswith('Z'))
             elif mode=='memory':
                 self.assertIn('MemoryError: Sampled working RSS',value['stop_reason']);self.assertLess(value['wall_seconds'],5)
-            else:self.assertEqual(value['exit_code'],0);self.assertGreater(value['wall_seconds'],10)
-        for name,threads in [('cpu',THREADS),('memory',1)]:
-            folder=root/('scheduler-'+name);folder.mkdir()
-            worker=folder/'worker.py';worker.write_text('import json,time,sys\nfrom pathlib import Path\ns=time.monotonic_ns()\ntime.sleep(.6)\nPath(sys.argv[1]).write_text(json.dumps(dict(start=s,end=time.monotonic_ns())))\n')
-            shell=quote(sys.executable)+' -I -B '+quote(str(worker))+' {output:q}'
-            snake=folder/'Snakefile';snake.write_text("rule all:\n    input: 'a.json','b.json'\nrule worker:\n    output: '{name}.json'\n    threads: "+str(threads)+"\n    resources: mem_mb=8000\n    shell: "+repr(shell)+'\n')
-            check([workflow,'-I','-B','-m','snakemake','--snakefile',snake,'--directory',folder,
-                   *local_scheduler_options(THREADS,8000),'--runtime-source-cache-path',folder/'source-cache'],'scheduler-'+name)
-            times=[json.loads((folder/(n+'.json')).read_text()) for n in ('a','b')]
-            self.assertLessEqual(min(t['end'] for t in times),max(t['start'] for t in times))
-            cases['scheduler-'+name]['intervals']=times
+            elif mode=='heartbeat':self.assertEqual(value['exit_code'],0);self.assertGreater(value['wall_seconds'],10)
+            else:
+                self.assertEqual(value['exit_code'],0)
+                self.assertIsNone(value['seconds_ceiling']);self.assertIsNone(value['rss_bytes_ceiling'])
         write_json(root/'observed.json',dict(status='passed',scope='Synthetic software contracts only; no bin-quality result',
             fixture=dict(contigs=len(rows),bp=sum(len(s) for _,s in rows),fasta=file_record(fasta),depth=file_record(depth)),
             cases=cases,summary=summaries,completed_snapshot=frozen,workers_mocked=[]))

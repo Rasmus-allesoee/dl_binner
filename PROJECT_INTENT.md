@@ -323,6 +323,16 @@ Current scientific decisions should be made from present evidence and reasoning.
 
 ## Long-term perspective
 
+The product should be easy for both people and AI agents to discover, operate
+and debug through the same clear CLI, explicit input/output contracts, structured
+results and actionable errors. Do not build a separate agent framework without
+a concrete need. User hardware/resources are product choices; bounded experiments,
+tests and CI do not impose fixed maxima on ordinary runs.
+
+Optional GPU execution while retaining CPU, and simple Conda/mamba installation,
+are future product/distribution goals. They remain separate from current CPU
+validation and do not authorize GPU implementation, packaging or publication now.
+
 Build a usable first version, understand how it works, evaluate it honestly, and
 improve it when the next change is worth the effort. Learning and a finished tool
 are primary outcomes; stronger research claims require stronger evidence when we

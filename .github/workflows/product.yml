@@ -36,7 +36,7 @@ jobs:
         run: |
           set -euo pipefail
           unset PYTHONPATH PYTHONHOME PYTHONUSERBASE
-          out="$RUNNER_TEMP/e007-dev2"
+          out="$RUNNER_TEMP/e008-dev3"
           mkdir "$out"
           trap 'rc=$?; printf "CI_EXIT_CODE=%s\n" "$rc" | tee -a "$out/ci-terminal.log"; exit "$rc"' EXIT
           timeout --signal=TERM --kill-after=10s 3300s bash -s -- "$out" "$GITHUB_WORKSPACE" <<'RUN' 2>&1 | tee "$out/ci-terminal.log"
@@ -46,27 +46,22 @@ jobs:
           cd "$source"
           sudo apt-get update
           sudo apt-get install -y pandoc
-          python -I -B -m venv --copies "$out/builder-0.1.0.dev2-v1"
-          python -I -B -m venv --copies "$out/binner-0.1.0.dev2-v1"
-          python -I -B -m venv --copies "$out/workflow-9.16.3-v1"
-          build="$out/builder-0.1.0.dev2-v1/bin/python"
-          binner="$out/binner-0.1.0.dev2-v1/bin/python"
-          workflow="$out/workflow-9.16.3-v1/bin/python"
+          python -I -B -m venv --copies "$out/builder-0.1.0.dev3-v1"
+          python -I -B -m venv --copies "$out/binner-0.1.0.dev3-v1"
+          build="$out/builder-0.1.0.dev3-v1/bin/python"
+          binner="$out/binner-0.1.0.dev3-v1/bin/python"
           "$build" -I -B -m pip --isolated install --only-binary=:all: -r requirements/build.txt
           "$binner" -I -B -m pip --isolated install --no-deps --only-binary=:all: 'torch==2.2.2+cpu' --index-url https://download.pytorch.org/whl/cpu
           "$binner" -I -B -m pip --isolated install --only-binary=:all: -r requirements/binner-cpu.txt
-          "$workflow" -I -B -m pip --isolated install --only-binary=:all: -r requirements/workflow.txt
           mkdir "$out/dist" "$out/rebuilt"
           "$build" -I -B -c 'from setuptools.build_meta import build_sdist; import sys; build_sdist(sys.argv[1])' "$out/dist"
           "$build" -I -B -c 'from setuptools.build_meta import build_wheel; import sys; build_wheel(sys.argv[1])' "$out/dist"
-          "$build" -I -B -m pip --isolated wheel --no-deps --no-build-isolation --wheel-dir "$out/rebuilt" "$out/dist/dl_binner-0.1.0.dev2.tar.gz"
-          "$build" -I -B scripts/check_distribution.py --wheel "$out/dist/dl_binner-0.1.0.dev2-py3-none-any.whl" --sdist "$out/dist/dl_binner-0.1.0.dev2.tar.gz" --rebuilt-wheel "$out/rebuilt/dl_binner-0.1.0.dev2-py3-none-any.whl" --output "$out/inspection.json"
-          "$binner" -I -B -m pip --isolated install --no-deps "$out/rebuilt/dl_binner-0.1.0.dev2-py3-none-any.whl"
+          "$build" -I -B -m pip --isolated wheel --no-deps --no-build-isolation --wheel-dir "$out/rebuilt" "$out/dist/dl_binner-0.1.0.dev3.tar.gz"
+          "$build" -I -B scripts/check_distribution.py --wheel "$out/dist/dl_binner-0.1.0.dev3-py3-none-any.whl" --sdist "$out/dist/dl_binner-0.1.0.dev3.tar.gz" --rebuilt-wheel "$out/rebuilt/dl_binner-0.1.0.dev3-py3-none-any.whl" --output "$out/inspection.json"
+          "$binner" -I -B -m pip --isolated install --no-deps "$out/rebuilt/dl_binner-0.1.0.dev3-py3-none-any.whl"
           "$binner" -I -B -m pip check
-          "$workflow" -I -B -m pip check
           "$binner" -I -B scripts/check_runtime.py --role binner --requirements requirements/binner-cpu.txt --threads 2 --output "$out/binner-runtime.json"
-          "$workflow" -I -B scripts/check_runtime.py --role workflow --requirements requirements/workflow.txt --threads 2 --output "$out/workflow-runtime.json"
-          python -I -B scripts/test_product.py --python "$binner" --workflow-python "$workflow" --threads 2 --timeout 1800 --output "$out/product"
+          python -I -B scripts/test_product.py --python "$binner" --threads 2 --timeout 1800 --output "$out/product"
           python -I -B scripts/check_docs.py
           RUN
       - name: Retain build and test evidence even on failure
@@ -75,11 +70,11 @@ jobs:
         with:
           name: cpu-prototype-evidence
           path: |
-            ${{ runner.temp }}/e007-dev2/ci-terminal.log
-            ${{ runner.temp }}/e007-dev2/inspection.json
-            ${{ runner.temp }}/e007-dev2/*-runtime.json
-            ${{ runner.temp }}/e007-dev2/dist/
-            ${{ runner.temp }}/e007-dev2/rebuilt/
-            ${{ runner.temp }}/e007-dev2/product/
+            ${{ runner.temp }}/e008-dev3/ci-terminal.log
+            ${{ runner.temp }}/e008-dev3/inspection.json
+            ${{ runner.temp }}/e008-dev3/*-runtime.json
+            ${{ runner.temp }}/e008-dev3/dist/
+            ${{ runner.temp }}/e008-dev3/rebuilt/
+            ${{ runner.temp }}/e008-dev3/product/
           if-no-files-found: warn
           retention-days: 14

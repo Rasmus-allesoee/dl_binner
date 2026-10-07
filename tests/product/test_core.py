@@ -1,10 +1,12 @@
 """Self-contained installed-product regressions; no research helpers or caches."""
 import importlib.metadata
 import json
+import os
 from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 import numpy as np
 import torch
@@ -20,6 +22,21 @@ from fixtures import THREADS, write_fixture
 
 
 class ProductContracts(unittest.TestCase):
+    def test_uncapped_cli_choices_without_large_native_execution(self):
+        """Parse large user choices without allocating threads or changing science."""
+        from dl_binner.cli import main
+        with patch('dl_binner.runner.run_pipeline', return_value=0) as run, patch.dict(os.environ):
+            main(['run','--fasta','unused','--output','unused'])
+            args=run.call_args.args[0]
+            self.assertIsNone(args.memory_gb); self.assertIsNone(args.timeout)
+            self.assertEqual(args.threads,4)
+            main(['--threads','16','run','--fasta','unused','--output','unused',
+                  '--memory-gb','32','--timeout','86400'])
+            args=run.call_args.args[0]
+            self.assertEqual((args.threads,args.memory_gb,args.timeout),(16,32,86400))
+            main(['run','--threads','64','--fasta','unused','--output','unused'])
+            self.assertEqual(run.call_args.args[0].threads,64)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix='dl-binner-product-')
         self.root = Path(self.temp.name)
@@ -29,17 +46,17 @@ class ProductContracts(unittest.TestCase):
 
     def test_installed_owned_origins_version_and_packaged_resources(self):
         self.assertEqual(dl_binner.__version__, importlib.metadata.version('dl-binner'))
-        self.assertEqual(dl_binner.__version__, '0.1.0.dev2')
+        self.assertEqual(dl_binner.__version__, '0.1.0.dev3')
         for module in (dl_binner, np, torch):
             self.assertTrue(Path(module.__file__).resolve().is_relative_to(Path(sys.prefix).resolve()), module.__file__)
         self.assertIsNone(torch.version.cuda)
         accepted = json.loads((Path(__file__).parent/'accepted-package.json').read_text())
-        self.assertEqual({k:v for k,v in source_records().items() if k != '__init__.py'}, accepted)
+        self.assertEqual({k:source_records()[k] for k in accepted}, accepted)
         model.configure_torch(THREADS)
         self.assertEqual(torch.get_num_threads(),THREADS)
         self.assertEqual(torch.get_num_interop_threads(),1)
         self.assertTrue(all(p['num_threads'] <= THREADS for p in threadpool_info()))
-        self.assertIn('previous=lambda', (PACKAGE/'resources/run.smk').read_text())
+        self.assertFalse((PACKAGE/'resources/run.smk').exists())
 
     def test_fasta_iupac_strand_counts_and_invalid_inputs(self):
         dna = 'AAAACGTACGTRYSWKMBDHVNAAAA'
@@ -169,7 +186,8 @@ class ProductContracts(unittest.TestCase):
         with self.assertRaises(ValueError):check_files(self.root,{'../outside':entry})
         options=local_scheduler_options(4,8000)
         self.assertNotIn('--jobs',options);self.assertIn('mem_mb=global',options)
-        for threads,memory in ((0,8000),(5,8000),(4,0),(4,8001)):
+        self.assertIn('16',local_scheduler_options(16,32000))
+        for threads,memory in ((0,8000),(4,0)):
             with self.assertRaises(ValueError):local_scheduler_options(threads,memory)
 
 

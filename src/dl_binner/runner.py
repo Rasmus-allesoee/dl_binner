@@ -5,6 +5,7 @@ Only successful outputs are published from unique staging folders. Failed
 attempts remain inspectable; resume verifies completed bytes before scheduling.
 """
 import argparse
+from decimal import Decimal, ROUND_CEILING
 import importlib.metadata
 import json
 import os
@@ -19,7 +20,7 @@ import uuid
 
 from . import __version__
 from .contracts import check_files, digest, file_record, write_json
-from .supervision import isolated_env, local_scheduler_options, process_sample, progress, supervise
+from .supervision import isolated_env, process_sample, progress, supervise
 
 STAGES = ('features', 'train', 'raw-embed', 'raw-cluster', 'raw-export',
           'learned-embed', 'learned-cluster', 'learned-export')
@@ -29,12 +30,12 @@ PACKAGE = Path(__file__).parent
 
 
 def receipt_name(stage):
-    """Return the stable receipt target used by the packaged Snakemake DAG."""
+    """Return the stable receipt target used by the built-in serial dispatcher."""
     return f'receipts/{STAGES.index(stage)+1:02d}-{stage}.json'
 
 
 def source_records():
-    """Bind installed code/defaults/DAG, independent of checkout or Git availability."""
+    """Bind installed code/defaults, independent of checkout or Git availability."""
     return {str(p.relative_to(PACKAGE)): file_record(p) for p in sorted(PACKAGE.rglob('*'))
             if p.is_file() and p.suffix in ('.py', '.smk', '.json')}
 
@@ -84,7 +85,7 @@ def stage_command(root, manifest, stage, destination):
         if manifest['depth']:
             args += ['--depth', manifest['depth']]
     elif stage == 'train':
-        args = ['train', '--features', features, '--config', root/'.workflow/training.json',
+        args = ['train', '--features', features, '--config', root/'.run/training.json',
                 '--output', destination/'checkpoint.pt']
     else:
         arm, operation = stage.split('-')
@@ -120,8 +121,8 @@ def worker(config_path, stage):
     log = root/cfg['invocation']/f'{at+1:02d}-{stage}.native.log'
     started_ns = time.monotonic_ns()
     result = supervise(stage_command(root, manifest, stage, destination), log,
-                       cfg['deadline']-time.monotonic(), manifest['memory_bytes'],
-                       isolated_env(manifest['threads']))
+                       remaining_seconds(cfg['deadline']), manifest['memory_bytes'],
+                       isolated_env(manifest['threads']), sample_root=os.getpid())
     # Export creates its own fresh directory; publish that directory, not a wrapper.
     final = root/FOLDERS[at]
     final.parent.mkdir(parents=True, exist_ok=True)
@@ -150,18 +151,14 @@ class Tee:
         self.terminal.flush(); self.log.flush()
 
 
-def probe_workflow(python, folder, threads, deadline, memory):
-    """Validate the separate pinned runtime without install/repair or symlink resolution."""
-    code = 'import sys,json,importlib.metadata as m; print(json.dumps(dict(prefix=sys.prefix,python=sys.version,version=m.version("snakemake"),distributions={d.metadata["Name"]:d.version for d in m.distributions()})))'
-    log = folder/'workflow-probe.log'
-    supervise([python, '-I', '-B', '-c', code], log, min(60, deadline-time.monotonic()),
-              memory, isolated_env(threads), sample_root=os.getpid())
-    data = json.loads(log.read_text().splitlines()[0])
-    if data['version'] != '9.16.3':
-        raise ValueError(f'Expected Snakemake 9.16.3, found {data["version"]}; supply its separate environment with --workflow-python')
-    if Path(data['prefix']).absolute() == Path(sys.prefix).absolute():
-        raise ValueError('Snakemake and dl-binner must use separate environment prefixes')
-    return data
+def remaining_seconds(deadline):
+    """Return an optional remaining invocation safeguard; refuse already expired work."""
+    if deadline is None:
+        return None
+    remaining = deadline-time.monotonic()
+    if remaining <= 0:
+        raise TimeoutError('Overall run wall-time limit reached')
+    return remaining
 
 
 def native_failure(folder):
@@ -212,7 +209,7 @@ def finalize(root, manifest, stages, workflow_resources, started):
                                 workflow=workflow_resources),
         clock_scope='Current invocation starts before input hashing/probe. Summary final serialization/exit logging excluded; final invocation status includes them. Previous stages retain their original invocation costs. Thread-wall hours are local planning, not provider charges.')
     memory, _ = process_sample(os.getpid(), {})
-    if memory > manifest['memory_bytes']:
+    if manifest['memory_bytes'] is not None and memory > manifest['memory_bytes']:
         raise MemoryError('Accounting exceeded the working RSS limit')
     write_json(root/'run-summary.json', summary)
     write_summary_tsv(root/'run-summary.tsv', arms)
@@ -223,7 +220,7 @@ def finalize(root, manifest, stages, workflow_resources, started):
 
 
 def run_pipeline(args):
-    """Own one bounded invocation, logs and safe fresh/partial/completed recovery."""
+    """Own a serial invocation with optional safeguards and byte-verified recovery."""
     root = args.output.absolute()
     if args.resume:
         if not (root/'run-manifest.json').is_file():
@@ -240,7 +237,7 @@ def run_pipeline(args):
     invocation = root/'logs'/('invocation-'+time.strftime('%Y%m%dT%H%M%S', time.gmtime())+'-'+uuid.uuid4().hex[:8])
     invocation.mkdir(parents=True)
     started = time.monotonic()
-    deadline = started+args.timeout
+    deadline = started+args.timeout if args.timeout is not None else None
     prior_out, prior_err = sys.stdout, sys.stderr
     handlers = {s: signal.getsignal(s) for s in (signal.SIGINT, signal.SIGTERM, signal.SIGALRM)}
     code, status = 1, 'failed'
@@ -253,33 +250,31 @@ def run_pipeline(args):
             raise KeyboardInterrupt('Run cancelled; completed stages can be resumed')
         for sig in handlers:
             signal.signal(sig, stop)
-        signal.setitimer(signal.ITIMER_REAL, args.timeout)
+        if args.timeout is not None:
+            signal.setitimer(signal.ITIMER_REAL, args.timeout)
         try:
             progress(f'dl-binner {__version__} | output: {root}')
-            progress(f'{args.threads} CPU threads, loader workers 0, {args.memory_gb:g} GB working RSS limit; matched raw control enabled')
+            progress(f'{args.threads} CPU threads, loader workers 0; built-in serial stages; matched raw control enabled')
+            progress(f'Optional safeguards: RAM={args.memory_gb} GB, time={args.timeout} seconds (None means disabled)')
             fasta = args.fasta.resolve()
             depth = args.depth.resolve() if args.depth else None
             training = args.training_config.resolve() if args.training_config else PACKAGE/'resources/training.json'
             python = Path(sys.executable).absolute()  # Never resolve a virtual-environment interpreter.
-            workflow_python = args.workflow_python.absolute()
-            bindings = dict(version=1, package_version=__version__, source_files=source_records(),
+            bindings = dict(version=2, engine="builtin-serial", package_version=__version__, source_files=source_records(),
                 binner_python=str(python), binner_prefix=sys.prefix,
                 distributions={name: importlib.metadata.version(name) for name in ('dl-binner', 'numpy', 'torch', 'networkx', 'threadpoolctl')},
                 fasta=str(fasta), fasta_bytes=file_record(fasta), depth=str(depth) if depth else None,
                 depth_bytes=file_record(depth) if depth else None, training_bytes=file_record(training),
-                workflow_python=str(workflow_python), threads=args.threads,
-                memory_bytes=int(args.memory_gb*1e9), min_length=args.min_length)
+                runtime_inventory={d.metadata['Name']: d.version for d in importlib.metadata.distributions()},
+                threads=args.threads, memory_bytes=int((Decimal(str(args.memory_gb))*10**9).to_integral_value(rounding=ROUND_CEILING)) if args.memory_gb is not None else None,
+                min_length=args.min_length)
             if args.resume:
                 previous = json.loads((root/'run-manifest.json').read_text())
-                if bindings != {k: v for k, v in previous.items() if k != 'workflow_runtime'}:
+                if bindings != previous:
                     raise ValueError('Input/config/package/runtime/budget changed since this run. Restore the original bytes/settings or use a fresh output directory')
-                check_files(root/'.workflow', {'training.json': bindings['training_bytes'],
-                    'run.smk': bindings['source_files']['resources/run.smk']})
+                check_files(root/'.run', {'training.json': bindings['training_bytes']})
                 stages = validate_completed(root)
                 progress(f'Verified {len(stages)}/8 completed stages; they will be reused')
-                runtime = probe_workflow(workflow_python, invocation, args.threads, deadline, bindings['memory_bytes'])
-                if runtime != previous['workflow_runtime']:
-                    raise ValueError('Workflow runtime inventory changed; restore the accepted prefix or start a fresh run')
                 if (root/'completion.json').exists():
                     completion = json.loads((root/'completion.json').read_text())
                     if completion['manifest_sha256'] != digest(root/'run-manifest.json'):
@@ -291,25 +286,22 @@ def run_pipeline(args):
             if args.resume:
                 manifest = previous
             else:
-                runtime = probe_workflow(workflow_python, invocation, args.threads, deadline, bindings['memory_bytes'])
-                (root/'.workflow').mkdir()
-                shutil.copyfile(training, root/'.workflow/training.json')
-                shutil.copyfile(PACKAGE/'resources/run.smk', root/'.workflow/run.smk')
-                manifest = dict(bindings, workflow_runtime=runtime)
+                (root/'.run').mkdir()
+                shutil.copyfile(training, root/'.run/training.json')
+                manifest = bindings
                 write_json(root/'run-manifest.json', manifest)
             config = invocation/'config.json'
             write_json(config, dict(root=str(root), invocation=str(invocation.relative_to(root)),
-                                    deadline=deadline, python=str(python), threads=args.threads,
-                                    memory_mb=int(args.memory_gb*1000)))
-            command = [str(workflow_python), '-I', '-B', '-m', 'snakemake', '--snakefile', str(root/'.workflow/run.smk'),
-                '--configfile', str(config), '--directory', str(root),
-                *local_scheduler_options(args.threads, int(args.memory_gb*1000)), '--benchmark-extended',
-                '--runtime-source-cache-path', str(root/'.workflow/source-cache'), '--keep-incomplete',
-                '--ignore-incomplete', '--rerun-triggers', 'mtime', '--latency-wait', '1']
-            if args.stop_after:
-                command += [receipt_name(args.stop_after)]
-            resources = supervise(command, invocation/'snakemake.log', deadline-time.monotonic(),
-                                  bindings['memory_bytes'], isolated_env(args.threads), sample_root=os.getpid())
+                                    deadline=deadline, python=str(python), threads=args.threads))
+            # The journal already defines a strictly serial prefix; no scheduler
+            # runtime or parallel job system is needed to dispatch its remainder.
+            existing = validate_completed(root)
+            target = STAGES.index(args.stop_after)+1 if args.stop_after else len(STAGES)
+            for stage in STAGES[len(existing):target]:
+                remaining_seconds(deadline)
+                worker(config, stage)
+            resources = dict(engine='builtin-serial', stages_executed=list(STAGES[len(existing):target]),
+                             seconds=time.monotonic()-started, timeout_seconds=args.timeout)
             stages = validate_completed(root)
             if len(stages) != 8:
                 progress(f'Paused after {len(stages)}/8 stages. Continue with the same command plus --resume (omit --stop-after)')
@@ -332,10 +324,6 @@ def run_pipeline(args):
                     print('Training needs at least two eligible contigs with different usable features. Inspect feature exclusions; changed inputs require a fresh --output.',file=sys.stderr,flush=True)
             else:
                 print(f'error: {str(error).splitlines()[0]}', file=sys.stderr, flush=True)
-                for stop_log in (invocation/'snakemake.exit.json',invocation/'workflow-probe.exit.json'):
-                    if stop_log.exists():
-                        reason=json.loads(stop_log.read_text())['stop_reason']
-                        if reason: print(reason,file=sys.stderr,flush=True)
             traceback.print_exc(file=log)
             progress(f'Stopped safely. Logs and failed-stage files retained: {invocation}. Resume matching inputs with --resume; no automatic repairs')
         finally:
@@ -343,7 +331,9 @@ def run_pipeline(args):
             elapsed = time.monotonic()-started
             write_json(invocation/'status.json', dict(status=status, exit_code=code, wall_seconds=elapsed,
                 threads=args.threads, thread_wall_hours=args.threads*elapsed/3600,
-                scope='Current invocation through status; includes hashing/probe/accounting, excludes installation and final status serialization. Local planning, not a provider invoice.'))
+                engine='builtin-serial', memory_gb=args.memory_gb, timeout_seconds=args.timeout,
+                failure=native_failure(invocation),
+                scope='Current invocation through status; includes hashing/accounting, excludes installation and final status serialization. Local planning, not a provider invoice.'))
             progress(f'exit_code={code} | {status} | {elapsed:.2f}s | terminal log: {invocation/"terminal.log"}')
             for sig, handler in handlers.items():
                 signal.signal(sig, handler)
@@ -354,7 +344,7 @@ def run_pipeline(args):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Internal installed workflow stage adapter')
+    parser = argparse.ArgumentParser(description='Internal installed serial stage adapter')
     parser.add_argument('--config', type=Path, required=True)
     parser.add_argument('--stage', choices=STAGES, required=True)
     args = parser.parse_args()

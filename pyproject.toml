@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dl-binner"
-version = "0.1.0.dev2"
+version = "0.1.0.dev3"
 description = "Experimental composition-based contrastive metagenomic binner"
 readme = "README.md"
 requires-python = ">=3.10,<3.13"
@@ -17,4 +17,4 @@ dl-binner = "dl_binner.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-dl_binner = ["resources/*.json", "resources/*.smk"]
+dl_binner = ["resources/*.json"]

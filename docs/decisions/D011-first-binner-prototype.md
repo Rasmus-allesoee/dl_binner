@@ -481,3 +481,14 @@ authorized merge preserving source commits, start matched benchmark/architecture
 work on a new branch from updated main. Public licensing and historical-source
 packaging remain separate owner decisions; the bounded archive/history locator
 audit is not exhaustive clearance and does not authorize history rewriting.
+
+## Owner-requested product execution amendment, 2026-10-07
+
+[D012](D012-product-execution-and-usability.md) and [E008](../../experiments/E008-product-execution/README.md)
+change resource choices and orchestration only: uncapped positive threads, optional
+RAM/time safeguards, and built-in serial dispatch without a separate workflow
+environment. Keep D011's model/transforms/defaults/clustering/results unchanged.
+Four-thread/8-GB/two-hour limits remain test/experiment budgets, not product maxima.
+GPU/Conda distribution and shared people/agent usability are product goals, with
+GPU/Conda implementation deferred. Private push/PR/real CI/review are authorized;
+merge/publication/benchmark/architecture execution are not.

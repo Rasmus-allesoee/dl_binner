@@ -1,4 +1,4 @@
-"""Bounded CPU process supervision, adapted from accepted E005 smoke helpers.
+"""CPU process supervision with optional owner-selected safeguards, adapted from accepted E005 smoke helpers.
 
 Native /proc (Linux) or ps (Mac) samples are approximate process-tree CPU/RSS,
 not provider billing or exact peaks. Each launched group is stopped on failure,
@@ -26,8 +26,8 @@ def isolated_env(threads):
 
 def local_scheduler_options(threads, mem_mb):
     """Cap local cores and aggregate RAM, never combine --cores with --jobs."""
-    if not 1 <= threads <= 4 or not 0 < mem_mb <= 8000:
-        raise ValueError('CPU budget must be 1–4 threads; RAM budget must be 1–8000 MB')
+    if not isinstance(threads, int) or threads <= 0 or mem_mb <= 0:
+        raise ValueError('CPU and aggregate RAM budgets must be positive')
     return ['--cores', str(threads), '--executor', 'local', '--resources',
             f'mem_mb={mem_mb}', '--set-resource-scopes', 'mem_mb=global',
             '--scheduler', 'greedy']
@@ -136,6 +136,10 @@ Only DLBINNER progress lines are echoed; verbose native output stays in the log.
 When sample_root is the calling driver, aggregate RSS includes its coordinator.
 The receipt is always written, including cancellation/failed prerequisites.
 """
+    import math
+    for value in (seconds, ram_bytes):
+        if value is not None and (value <= 0 or (not isinstance(value, int) and not math.isfinite(value))):
+            raise ValueError('Safeguards must be finite and positive, or None to disable')
     log_path = Path(log_path)
     started, known, members, peak, reason, process = time.monotonic(), {}, {}, 0, None, None
     baseline = 0
@@ -163,9 +167,9 @@ The receipt is always written, including cancellation/failed prerequisites.
                         if line.startswith('DLBINNER '):
                             print(line.rstrip(), flush=True)
                     offset = reader.tell()
-                if memory > ram_bytes:
+                if ram_bytes is not None and memory > ram_bytes:
                     raise MemoryError('Sampled working RSS exceeded the configured limit')
-                if now-started >= seconds:
+                if seconds is not None and now-started >= seconds:
                     raise TimeoutError('Configured wall-time limit reached')
                 if process.poll() is not None:
                     break
