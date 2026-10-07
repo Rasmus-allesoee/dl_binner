@@ -203,8 +203,9 @@ uncapped CPU choices, optional RAM/time safeguards and a built-in serial dispatc
 requiring one CPU environment. Scientific byte hashes/defaults/results remain
 unchanged. GPU/Conda are future goals only; shared people/agent usability is durable
 intent. [E008](../experiments/E008-product-execution/README.md) owns source/build
-identities, tests and real CI; both fresh Mac and native Linux suites pass 12 tests/
-18 cases with complete exports, exact reload, strict resume and intended limits/
+identities, tests and real CI; the initial Mac/native Linux suites passed 12 tests/
+18 cases. A reproduced platform timer overflow is repaired with native regression;
+post-fix local tests pass 13 tests/19 cases and final-head Linux CI is refreshed with complete exports, exact reload, strict resume and intended limits/
 failures/cleanup. Linux product peak 0.574 GB, 39.726 s; job wall 111 s, not exact
 billing. No accepted science or UCloud work was repeated.
 

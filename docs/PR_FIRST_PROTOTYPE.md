@@ -41,7 +41,9 @@ Validation is separated by scope:
   and implementation review still precede merge acceptance.
 - [E008](../experiments/E008-product-execution/README.md): owner-requested uncapped
   product choices, optional safeguards and built-in serial dispatch; local and native Linux
-  installed regressions pass 12 tests/18 native cases. Actual private PR/CI evidence
+  initial installed regressions pass 12 tests/18 native cases. A platform timer
+  overflow was reproduced and repaired; post-fix local tests pass 13 tests/19 cases,
+  including actual large-safeguard execution. Actual private PR/CI evidence
   and the pending review request are recorded there.
 
 The ordinary suite uses bounded generated software DNA and owns no ignored

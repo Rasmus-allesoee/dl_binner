@@ -79,3 +79,11 @@ ceiling), with timer setup inside cleanup protection. The regression includes
 actual native feature execution at huge RAM/time safeguards, still under the
 external test CPU/RAM/time limits, plus small-timeout/unset/expired cases. Preserve
 prior accepted attempts/CI; this is a concrete operational repair, not a model gate.
+
+The [repair receipt](timer-repair-observed.json) accepts source `b297019` in fresh
+`run-002` prefixes: **13 tests/19 native cases**, including real large-safeguard
+feature execution and lock cleanup. Setup/build/install/all checks **261.662 s**,
+sampled stage peak **0.501 GB**. Both known local attempt clocks total **513.842 s**
+under 7,200 s; four-thread wall budget 0.570936 hours, not billing. Prior prefixes,
+wheel/source bytes, logs and CI returns remain preserved. Post-fix exact-head Linux
+CI is the final validation boundary; no scientific settings or results change.
