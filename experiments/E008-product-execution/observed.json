@@ -1,0 +1,58 @@
+{
+  "accepted_science_repeated": false,
+  "artifacts": {
+    "rebuilt_wheel": {
+      "bytes": 33400,
+      "path": "artifacts/e008-product-execution/run-001/rebuilt/dl_binner-0.1.0.dev3-py3-none-any.whl",
+      "sha256": "5d71ca98557a904ee6f3cd5a4942efe03d5e5b5aab9d6cd8746e7d669a275071"
+    },
+    "sdist": {
+      "bytes": 52124,
+      "path": "artifacts/e008-product-execution/run-001/dist/dl_binner-0.1.0.dev3.tar.gz",
+      "sha256": "42f3ecbc37708a3c7561bc4004ad7dbe381410cd5f5c2b57cae68ca934768032"
+    },
+    "wheel": {
+      "bytes": 33400,
+      "path": "artifacts/e008-product-execution/run-001/dist/dl_binner-0.1.0.dev3-py3-none-any.whl",
+      "sha256": "1f99af195d2f7f4c1370b8fd8fb617c7c84991dbf2908125dd14b30d05a01e7b"
+    }
+  },
+  "attempt_receipt": {
+    "bytes": 16140,
+    "sha256": "7d63bc47de0103a3af66ea986840147ba8bf51409b4cc15349118634402c473e"
+  },
+  "external_product_output": "/private/tmp/dl-binner-e008-product-001",
+  "fixture": {
+    "bp": 42311,
+    "contigs": 13,
+    "depth": {
+      "bytes": 301,
+      "sha256": "38a7e3e5871766048bb9089ed757d8f0c63e9364722c14dca4e1ce2934ec2e60"
+    },
+    "fasta": {
+      "bytes": 42552,
+      "sha256": "20248ffbaf471de15db70b6d595da55742c6166a94617d417d8e3910a3f1c751"
+    }
+  },
+  "linux_ci": "pending actual PR execution",
+  "loader_workers": 0,
+  "logical_rebuild_equal": true,
+  "merge_authorized": false,
+  "native_cases": 18,
+  "old_libraries_unchanged": true,
+  "parser_test_scope": "run_pipeline is mocked only to inspect arguments above the native test CPU budget; all actual native workers are real",
+  "peak_sampled_rss_bytes": 488042496,
+  "retained_regular_bytes": 811883572,
+  "retained_regular_files": 22332,
+  "scientific_changes": [],
+  "scope": "All serial measured snapshot/setup/build/install/probe/test stages; includes final read-only/hash checks. Source development/acquisition/final review and idle excluded; not UCloud billing.",
+  "seconds": 252.18016935900232,
+  "source_commit": "8da3da4af72be6d2b118e89befe45a1a043b5f67",
+  "status": "accepted-local-dev3-product",
+  "test_receipt": {
+    "bytes": 764,
+    "sha256": "edf0669bb008f8441fbfba4daab63f8fe03eea4abfb1e451b704f03b7b66d271"
+  },
+  "tests": 12,
+  "threads": 4
+}

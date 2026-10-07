@@ -2,7 +2,7 @@
 
 Status: **ready local review description, not an opened PR**. Target branch `main`; source
 `first-binner-prototype`. Title: **Add the first usable CPU metagenomic binner**.
-Do not push/open/merge/publish without the owner's next authorization.
+Owner authorizes push/private PR/real CI/review for E008; **do not merge or publish**.
 
 ## Proposed PR body
 
@@ -15,10 +15,12 @@ noise and all length strata remain visible; summaries do not claim MAG quality.
 
 The implementation follows [D011](decisions/D011-first-binner-prototype.md).
 Scientific inputs/transforms/training/clustering are frozen, while the generic
-launcher packages defaults/DAG, enforces serial CPU/RAM budgets, retains progress/
+launcher packages defaults, runs supervised native stages serially, retains progress/
 logs/exit receipts and verifies bytes before explicit partial/completed resume.
 Fresh runs refuse populated outputs; changed/corrupted artifacts stop safely.
-Version 0.1.0.dev2 changes packaging/version metadata, not accepted scientific code.
+Version 0.1.0.dev3 removes the product-only second workflow environment and fixed
+resource maxima. Users choose positive CPU counts and optional RAM/time safeguards;
+CI/tests remain explicitly bounded. Scientific source/defaults are unchanged.
 
 Validation is separated by scope:
 
@@ -35,11 +37,14 @@ Validation is separated by scope:
   regressions: 11 tests/18 native cases at both four and two threads, including a
   physical outside-repository check. Known measured campaign 712.558 s, sampled
   stage peak 0.561 GB. Its receipt owns exact build identities and resource costs;
-  prepared Linux CI requires its first real remote run before merge acceptance.
+  E008 executes Linux CI on the updated product before merge acceptance.
+- [E008](../experiments/E008-product-execution/README.md): owner-requested uncapped
+  product choices, optional safeguards and built-in serial dispatch; local/native
+  installed regressions and actual private-PR CI/review evidence are recorded there.
 
 The ordinary suite uses bounded generated software DNA and owns no ignored
 research dependencies. Earlier evidence reviews remain explicit opt-in research
-checks. CI builds/installs the CPU wheel on Linux with separate workflow Python,
+checks. CI builds/installs the CPU wheel on Linux with one environment,
 two-thread budgets and retained artifacts; no benchmark/data/GLM download or
 publication is part of the workflow. [Installation](INSTALLATION.md) and
 [usage](PROTOTYPE.md#run-the-binner) state exact contracts and limitations.
@@ -56,8 +61,8 @@ main; experimental changes can then be compared against these accepted bytes.
 ## Before opening and merging
 
 Check the live branch/remote/base state and use the actual final head in the PR.
-Opening the private PR and running its CI is the next separately authorized
-action; do not merge automatically. Before merge, require successful real Linux
+Opening the private PR and running its CI are owner-authorized for this task;
+do not merge. Before merge, require successful real Linux
 CI (including native installed tests), inspect review findings, and retain the
 validated source commits. Prefer a merge preserving referenced source history;
 do not squash away the sole source commits behind accepted evidence.
