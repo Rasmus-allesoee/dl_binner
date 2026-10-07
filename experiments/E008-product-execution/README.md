@@ -35,7 +35,8 @@ the measured clock. Existing base libraries and wheel caches remain unchanged.
 Retained attempt storage and artifacts are byte-counted in the receipt; physical
 `/private/tmp` test originals are an additional retained copy. No UCloud execution.
 
-CI/review acceptance remains pending the actual private PR. The Linux workflow
+At this initial local receipt, CI/review acceptance was pending the private PR;
+subsequent native Linux acceptance is recorded below. The Linux workflow
 uses one runtime, Python 3.12 and two threads with bounded test/RAM/time guards,
 never the optional unbounded product setting as its own test guard. No model,
 transform, objective, training defaults, clustering, scientific result or old
@@ -87,3 +88,15 @@ sampled stage peak **0.501 GB**. Both known local attempt clocks total **513.842
 under 7,200 s; four-thread wall budget 0.570936 hours, not billing. Prior prefixes,
 wheel/source bytes, logs and CI returns remain preserved. Post-fix exact-head Linux
 CI is the final validation boundary; no scientific settings or results change.
+
+[Post-fix Linux CI](https://github.com/Rasmus-allesoee/dl_binner/actions/runs/37650496218)
+passes at `0ec6934`; [independent retained review](linux-timer-repair-observed.json)
+verifies 13 tests/19 native cases, all packaged-source bytes, both complete DNA
+exports, exact reload, all six strata/masks/zeros, serial stages, strict resume,
+intended failure messages and native `1e100` safeguards with lock cleanup.
+Product suite **36.198 s / 0.575-GB sampled peak**; full job wall **128 s**.
+These are software costs, not biological evidence or exact provider billing.
+Retained artifacts live under `artifacts/e008-product-execution/pr/linux-postfix/`;
+prior receipts/attempts remain unchanged. Review still has no returned findings
+or approval. Refresh the final head after this record-only update; no merge,
+publication, UCloud or benchmark work is authorized in this task.

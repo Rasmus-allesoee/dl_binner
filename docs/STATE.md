@@ -205,9 +205,13 @@ unchanged. GPU/Conda are future goals only; shared people/agent usability is dur
 intent. [E008](../experiments/E008-product-execution/README.md) owns source/build
 identities, tests and real CI; the initial Mac/native Linux suites passed 12 tests/
 18 cases. A reproduced platform timer overflow is repaired with native regression;
-post-fix local tests pass 13 tests/19 cases and final-head Linux CI is refreshed with complete exports, exact reload, strict resume and intended limits/
-failures/cleanup. Linux product peak 0.574 GB, 39.726 s; job wall 111 s, not exact
-billing. No accepted science or UCloud work was repeated.
+post-fix local tests pass 13 tests/19 cases. The independently inspected
+[post-fix Linux receipt](../experiments/E008-product-execution/linux-timer-repair-observed.json)
+accepts all 13 tests/19 cases, complete exports, exact reload, strict resume,
+intended limits/failures/cleanup and native large optional safeguards. Linux
+product peak 0.575 GB, 36.198 s; job wall 128 s, not exact billing. Final-head
+checks are refreshed after record-only pushes. No accepted science or UCloud
+work was repeated.
 
 **Exact next step: review the private PR and authorize a merge only after current-head checks.**
 [PR #1](https://github.com/Rasmus-allesoee/dl_binner/pull/1) targets main with source
@@ -230,7 +234,8 @@ compute job is needed for the current handoff.
 
 The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
 planned and unrun. No larger datasets, extra seeds, architecture gate, publication
-or push is authorized. E004's package source and accepted settings are unchanged.
+is authorized. E008's private push/PR is authorized and completed; accepted
+scientific source and settings are unchanged.
 Frozen GLM weights/features remain
 retained, deferred from the first prototype rather than globally rejected. The
 completed 2026-09-30 review/source audit is reused. No full-GLM training, VAE
