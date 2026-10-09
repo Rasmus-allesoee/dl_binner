@@ -28,7 +28,7 @@ def portable(inputs, mapping, minimap2, megahit, threads, output, assembly_threa
         target=output/f'depth_{i}.tsv';mean_depth(mapping/'samtools',reference,bam,column,threads,target);paths.append(target)
     combine_depth(reference,columns,paths,output/'depth.tsv')
     import csv
-    matrix=list(csv.reader((output/'depth.tsv').open(),delimiter='\t'))[1:]
+    with (output/'depth.tsv').open() as stream:matrix=list(csv.reader(stream,delimiter='\t'))[1:]
     if not any(float(row[1])>float(row[2])>0 for row in matrix):
         raise ValueError('Distinct native sample values failed the ordered depth contract')
     assembly_threads=assembly_threads or threads

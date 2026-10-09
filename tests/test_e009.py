@@ -118,7 +118,7 @@ class E009Contracts(unittest.TestCase):
         ref=self.put('assembly.fa','>z\nACG\n>a\nACT\n>x\nATG\n')
         good=self.put('bin.fa','>z\nACG\n');res=partition(ref,[good],{'z','a'},self.p/'partition.tsv')
         self.assertEqual(res,{'assigned':1,'unassigned':1,'excluded':1})
-        rows=list(csv.DictReader((self.p/'partition.tsv').open(),delimiter='\t'))
+        with (self.p/'partition.tsv').open() as stream:rows=list(csv.DictReader(stream,delimiter='\t'))
         self.assertEqual([r['contig_id'] for r in rows],['z','a','x'])
         for i,text in enumerate(['>z\nATG\n','>unknown\nACG\n','>x\nATG\n']):
             with self.subTest(i=i),self.assertRaises(ValueError):partition(ref,[self.put(f'bad{i}.fa',text)],{'z','a'},self.p/f'bad{i}.tsv')
