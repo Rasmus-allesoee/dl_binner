@@ -14,11 +14,11 @@
     "AMBER_real": "actual f8b3a601 API, 5 attributable contigs/4450 bp; duplicate-safe reference union test; software labels only",
     "CompleteBin_real": "source-pinned max50 scheduler and API arguments; actual BAM writer/state-dict/CPU forward; native S/O pretraining and lower safety-cap logic",
     "SCGBinner_real": "actual patched get_kmer_coverage_aug0 reader on reordered tiny native-format CSV; same int dtype; full augmentation/training/Linux imports not locally run",
-    "COMEBin_real": "actual source gen_augfasta/gen_coverage/load_binary_feature_bundle on real tiny FASTA/BAMs; native dir and emitted resolved-basename axes validated from retained arrays after initial overly strict path assertion, without regeneration",
+    "COMEBin_real": "actual source gen_augfasta/gen_coverage/load_binary_feature_bundle on real tiny FASTA/BAMs; final adapter checks retained arrays with native >1000 boundary, resolved-basename axes, lengths/intervals/masks/zeros; no regeneration",
     "HMMER_real": "actual 3.4 Mac --cpu1 total budget translated to --cpu0 serial; native domtblout header and audit file retained",
     "source_overlap": "self-contained full-replicon/accession and opaque competitive-reference contracts; real CAMI source archive not locally acquired",
     "upstream_parser_only": "all five tool argv/API and CompleteBin50 cases; parser-only is not native full import/training",
-    "unit": "20 self-contained adapter/failure tests, including intact/changed read-only bytes and stalled cleanup after an expired parent alarm",
+    "unit": "21 self-contained adapter/failure tests, including strict native cutoff, intact/changed bytes, stalled cleanup after an expired parent alarm and intended native process limits",
     "owner_harness": "packet source freeze and actual out-of-checkout driver checks recorded in transfer.json after build"
   },
   "known_failures_preserved": [
@@ -29,7 +29,8 @@
     "COMEBin emitted basenames rather than original paths; retained writers succeed, validator corrected",
     "Linux dry solve missing glibc virtual package then unnecessary Galah/zlib conflict; narrowed recipe resolves",
     "actual v1 packet harness fresh repeat hit BSD mktemp suffix collision; portable suffix fixed and both repeated invocations pass",
-    "final v1 source review found unbounded after-timeout dependency check and collection-status clock edge; corrected before owner execution in new v2 packet"
+    "final v1 source review found unbounded after-timeout dependency check and collection-status clock edge; corrected before owner execution in new v2 packet",
+    "final retained COMEBin eligibility validator used >=1000; native writer/reader require >1000. Actual retained-array review catches it, v3 matches native behavior and a 999/1000/1001 boundary regression passes; features not repeated"
   ],
   "new_local_prefixes": "numerical-mac-v1/v2/v3/v4 and utility/megahit prefixes; old prefixes preserved; new v4 owns six and borrows v3/E005 dependencies explicitly read-only",
   "receipts": {
@@ -432,18 +433,37 @@
         "bytes": 769,
         "sha256": "c3951340cb252ccc1b4f8604b94c41a37432dda81c5a2953993e637eb43ad086"
       }
+    },
+    "comebin_final": {
+      "path": "artifacts/e009-preparation/comebin-native-api-mac-v2/final-retained-review.json",
+      "file": {
+        "bytes": 3769,
+        "sha256": "bf1a0071b9520235b35ab4551fddeb37ab7fe33e2a188311b4fd944f04cab684"
+      }
+    },
+    "comebin_boundary_failure": {
+      "path": "artifacts/e009-preparation/comebin-final-boundary-failure.json",
+      "file": {
+        "bytes": 502,
+        "sha256": "e1f2d19f112ca48075970c47e05f0ee0138b454928472efa3396d807dfb770f1"
+      }
     }
   },
   "unit_final": {
-    "tests": 20,
+    "tests": 21,
     "log": {
-      "path": "artifacts/e009-preparation/unit-v7.log",
+      "path": "artifacts/e009-preparation/unit-v8.log",
       "file": {
-        "bytes": 119,
-        "sha256": "f1b771ef7a999b4384f5c26dcce87beaf309595d33e86a7f6ee0e0274d68d5a7"
+        "bytes": 120,
+        "sha256": "60c958724be2b245027800978c7c2dfeac2820a826849809da2b4131708394bc"
       }
     },
     "status": "passed",
-    "scope": "self-contained actual adapters plus intended process and parent-clock failures; not Linux or scientific validation"
+    "scope": "self-contained adapter/length-axis and intended process/parent-clock failures; not Linux or scientific validation"
+  },
+  "approval_interruption": {
+    "action": "pending final E009 unit invocation",
+    "result": "not executed; automatic approval review could not complete because of usage limit, not an unsafe-action finding",
+    "recovery": "owner requested continuation; same reviewed escalation path succeeds after reset, final 21 tests pass"
   }
 }

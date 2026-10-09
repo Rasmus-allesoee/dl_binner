@@ -21,7 +21,7 @@ ROOT=Path(__file__).absolute().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from e009_common import acquire,binding,extract,fasta,write_json
 from e009_data import canonical_dna,combine_depth,competitive_reference,partition,source_catalog,validate_fastq_pair
-from e009_native import cpu_plan,prepare_bam_directory
+from e009_native import cpu_plan,prepare_bam_directory,validate_comebin_contigs
 from e009_hmm import budget_args
 from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after
 from e009_common import tree_binding
@@ -200,6 +200,19 @@ class E009Contracts(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'ordering'):prepare_bam_directory(self.p/'wrong',[second,first])
         duplicate=self.put('other/sample0.bam','different')
         with self.assertRaisesRegex(ValueError,'basenames'):prepare_bam_directory(self.p/'duplicate',[first,duplicate])
+
+    def test_comebin_exact_threshold_missing_order_and_length_contracts(self):
+        sequences={'below':'A'*999,'boundary':'C'*1000,'z':'G'*1001,'a':'T'*2499}
+        validate_comebin_contigs(['z','a'],[1001,2499],sequences,1000)
+        for ids,lengths,reason in [
+            (['boundary','z','a'],[1000,1001,2499],'eligibility'),
+            (['z'],[1001],'eligibility'),
+            (['a','z'],[2499,1001],'order'),
+            (['z','a'],[1001,2498],'length'),
+            (['z','a'],[1001],'length'),
+        ]:
+            with self.subTest(ids=ids,lengths=lengths),self.assertRaisesRegex(ValueError,reason):
+                validate_comebin_contigs(ids,lengths,sequences,1000)
 
     def test_collector_binds_immutable_archive_log_and_inventory(self):
         attempt=self.p/'attempt';attempt.mkdir();transfer=self.p/'transfer';transfer.mkdir()

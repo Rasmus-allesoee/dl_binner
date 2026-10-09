@@ -158,6 +158,20 @@ def prepare_bam_directory(directory,bams):
     write_json(directory/'ordered-inputs.json',{'ordered_bams':[{'path':str(p),'file':binding(p)} for p in resolved]})
 
 
+def validate_comebin_contigs(ids,lengths,sequences,threshold):
+    """Require the native strict-greater-than length rule and exact FASTA order.
+
+    COMEBin's manifest threshold 1000 excludes a 1000-bp contig. Validate emitted
+    IDs/lengths against every eligible input, so missing or reordered native rows
+    fail rather than silently changing the retained population.
+    """
+    ids,lengths=list(ids),list(lengths)
+    if ids!=[name for name,seq in sequences.items() if len(seq)>threshold]:
+        raise ValueError('COMEBin native eligibility/order differs from its declared threshold')
+    if len(ids)!=len(lengths) or any(len(sequences[name])!=int(length) for name,length in zip(ids,lengths)):
+        raise ValueError('COMEBin emitted contig axis/length differs')
+
+
 def inspect_comebin_features(source,path,bams,reference):
     """Validate native emitted basename IDs, contig axes, intervals and zero masks.
 
@@ -172,12 +186,10 @@ def inspect_comebin_features(source,path,bams,reference):
     if list(bundle.bam_ids)!=expected:raise ValueError('COMEBin native sample axis differs from manifest')
     sequences=dict(fasta(reference))
     threshold=bundle.feature_manifest['contig_length_threshold']
-    if list(bundle.contig_ids)!=[name for name,seq in sequences.items() if len(seq)>=threshold]:
-        raise ValueError('COMEBin native eligibility/order differs from its declared threshold')
-    if any(name not in sequences or len(sequences[name])!=int(length) for name,length in zip(bundle.contig_ids,bundle.contig_lengths)):
-        raise ValueError('COMEBin emitted contig axis/length differs')
+    validate_comebin_contigs(bundle.contig_ids,bundle.contig_lengths,sequences,threshold)
     if not np.isfinite(bundle.coverage_mean).all() or not np.isfinite(bundle.coverage_var).all() or np.any(bundle.coverage_mean<0) or np.any(bundle.coverage_var<0):raise ValueError('COMEBin native features nonfinite/negative')
     return {'native_contig_ids':list(bundle.contig_ids),'native_sample_ids':list(bundle.bam_ids),
+            'contig_length_threshold':threshold,'eligibility_comparison':'>',
             'ordered_bam_paths':list(map(str,bams)),'coverage_shape':list(bundle.coverage_mean.shape),
             'base_view_zero_rows_per_sample':[int((row==0).sum()) for row in bundle.coverage_mean[:,0,:]],
             'original_intervals':bundle.augmentation_intervals.tolist()}

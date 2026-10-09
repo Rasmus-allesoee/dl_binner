@@ -181,3 +181,12 @@ actual unchanged/modified dependency bytes and a stalled check after an already
 expired parent alarm. The first immutable packet, source and failed/successful
 local harness receipts are retained; no scientific result changes or Linux
 execution are inferred from this correction.
+
+A final read of the already generated native COMEBin arrays also caught a strict
+cutoff error in our validator: the native writer/reader retains lengths **>1000**,
+not ≥1000. Version 3 matches that exact rule and records its comparator. The
+999/1000/1001-bp boundary, absent rows, wrong order and wrong lengths are tested;
+the production reader accepts the existing native arrays without regeneration.
+This changes validation only, not upstream eligibility or scientific settings.
+Earlier packets remain immutable and superseded. The final unit suite passes
+21 self-contained checks; Linux acceptance remains unexecuted.
