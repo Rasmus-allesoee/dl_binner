@@ -23,6 +23,7 @@ from e009_common import acquire,binding,extract,fasta,write_json
 from e009_data import canonical_dna,combine_depth,competitive_reference,partition,source_catalog,validate_fastq_pair
 from e009_native import cpu_plan,prepare_bam_directory,validate_comebin_contigs
 from e009_hmm import budget_args
+from e009_startup import startup_argv,supervise_startup,wait_snapshot
 from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after
 from e009_common import tree_binding
 from e009_truth import construct,parse_paf,reconcile,recovery,union
@@ -267,6 +268,74 @@ else:raise AssertionError('stalled check was accepted')
         sup=supervisor();receipt=sup.supervise([sys.executable,'-B',code],self.p/'cleanup.log',5,8_000_000_000,sup.isolated_env(4))
         self.assertEqual(receipt['exit_code'],0)
         self.assertIn('PASS intended re-armed cleanup timeout',(self.p/'cleanup.log').read_text())
+
+    def startup_prefix(self):
+        """Create a fresh no-pip venv to test actual site and lexical-prefix behavior."""
+        prefix=self.p/'prefix'
+        subprocess.run([sys.executable,'-I','-B','-m','venv','--without-pip',prefix],check=True)
+        site=next((prefix/'lib').glob('python*/site-packages'))
+        return prefix,prefix/'bin/python',site
+
+    def test_startup_real_site_inventory_and_module_stdout_contract(self):
+        prefix,python,site=self.startup_prefix()
+        (site/'fixture-1.0.dist-info').mkdir()
+        (site/'fixture-1.0.dist-info/METADATA').write_text('Metadata-Version: 2.1\nName: fixture\nVersion: 1.0\n')
+        expected=self.put('expected.json','{"fixture":"1.0"}')
+        log=self.p/'healthy.log';sup=supervisor()
+        argv=startup_argv(python,ROOT/'scripts/e009_native.py',['--inventory-prefix',prefix,'--expected-distributions',expected],trace_seconds=.1)
+        self.assertEqual(argv[0],str(python))
+        original=sup.process_sample
+        receipt=supervise_startup(sup,argv,log,10,8_000_000_000,sup.isolated_env(4))
+        self.assertEqual(receipt['exit_code'],0);self.assertIs(sup.process_sample,original)
+        text=log.read_text();self.assertLess(text.index('before site'),text.index('site ready'))
+        self.assertIn('metadata ready fixture 1.0',text)
+        result=json.loads(next(line.split('=',1)[1] for line in text.splitlines() if line.startswith('INVENTORY_JSON=')))
+        self.assertEqual(Path(result['prefix']),prefix.resolve());self.assertEqual(result['python_executable_lexical'],str(python))
+        self.assertEqual(result['distributions'][0]['version'],'1.0')
+        (site/'fixture_cli.py').write_text("print('fixture==1.0')\n")
+        module_env=dict(sup.isolated_env(4),E009_STARTUP_STACK_DIR=str(self.p/'healthy.startup-stacks'))
+        module=subprocess.run(startup_argv(python,'fixture_cli',mode='module',trace_seconds=.1),env=module_env,capture_output=True,text=True,check=True)
+        self.assertEqual(module.stdout,'fixture==1.0\n');self.assertIn('site ready',module.stderr)
+        standalone=subprocess.run(startup_argv(python,'fixture_cli',mode='module'),env=sup.isolated_env(4),capture_output=True,text=True,check=True)
+        self.assertEqual(standalone.stdout,'fixture==1.0\n');self.assertIn('finished pid=',standalone.stderr)
+
+    def test_startup_site_hang_keeps_stack_timeout_and_cleanup(self):
+        prefix,python,site=self.startup_prefix()
+        (site/'stall_fixture.py').write_text('import time\ntime.sleep(60)\n')
+        (site/'stall.pth').write_text('import stall_fixture\n')
+        sup=supervisor();log=self.p/'site-stall.log';original=sup.process_sample
+        with self.assertRaisesRegex(RuntimeError,'TimeoutError'):
+            supervise_startup(sup,startup_argv(python,ROOT/'scripts/e009_native.py',['--inventory-prefix',prefix],trace_seconds=.1),log,.8,8_000_000_000,sup.isolated_env(4))
+        self.assertIs(sup.process_sample,original)
+        text=log.read_text();self.assertIn('before site',text);self.assertNotIn('site ready',text)
+        stacks=''.join(p.read_text() for p in log.with_suffix('.startup-stacks').glob('*.log'))
+        self.assertIn('stall_fixture.py',stacks);self.assertIn('addpackage',stacks)
+        receipt=json.loads(log.with_suffix('.exit.json').read_text());self.assertIn('TimeoutError',receipt['stop_reason']);self.assert_stopped(receipt['launched_pid'])
+        self.assertTrue(log.with_suffix('.process-wait.jsonl').is_file())
+
+    def test_wait_snapshot_checks_pid_identity_and_bounds_without_environs(self):
+        proc=self.p/'proc';folder=proc/'123';folder.mkdir(parents=True)
+        fields=['S']+['0']*21;fields[19]='42'
+        (folder/'stat').write_text('123 (owned fixture) '+' '.join(fields))
+        (folder/'status').write_text('State:\tS (sleeping)\nThreads:\t1\n')
+        (folder/'wchan').write_text('futex_wait_queue')
+        (folder/'cmdline').write_bytes(b'python\0probe\0')
+        (folder/'environ').write_text('SECRET=must not be read')
+        result=wait_snapshot(123,'42',proc)
+        self.assertEqual(result['observation_status'],'observed owned process');self.assertEqual(result['wchan'],'futex_wait_queue')
+        self.assertEqual(result['cmdline'],'python probe ');self.assertNotIn('environ',result)
+        self.assertIn('unavailable',result['stack'])
+        self.assertEqual(wait_snapshot(123,'wrong',proc)['observation_status'],'exited or PID reused')
+
+    def test_transfer_terminal_is_live_while_archive_snapshot_is_immutable(self):
+        attempt=self.p/'attempt';attempt.mkdir();transfer=self.p/'transfer';transfer.mkdir()
+        terminal=self.put('transfer/attempt-terminal.log','before collection\n')
+        self.put('attempt/status.json','{}\n')
+        with contextlib.redirect_stdout(io.StringIO()):result=collect(attempt,transfer,terminal)
+        terminal.write_text('before collection\nafter collection\n')
+        with tarfile.open(result['archive']) as tar:
+            self.assertEqual(tar.extractfile('attempt/terminal.log').read(),b'before collection\n')
+            self.assertEqual(sum(m.size for m in tar.getmembers()),result['retained_logical_bytes'])
 
     def assert_stopped(self,pid):
         """Require absence of live child work; an unreaped zombie is not a running orphan."""

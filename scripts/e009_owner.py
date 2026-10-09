@@ -27,6 +27,7 @@ sys.path.insert(0,str(Path(__file__).absolute().parent))
 
 from e009_common import acquire, binding, extract, tree_binding, write_json
 from e009_native import command_plan, patch_completebin, patch_scgbinner
+from e009_startup import startup_argv,supervise_startup
 
 BUNDLE=Path(__file__).absolute().parents[1]
 EXP='experiments/E009-competitive-benchmark'
@@ -74,13 +75,18 @@ def link_dependencies(source,destination):
     return links
 
 
-def collect(attempt,transfer):
+def collect(attempt,transfer,terminal_log=None):
     """Return compact immutable evidence and its inventory, including a terminal snapshot.
 
     Bulk sources/prefixes/cache are external and receipt-bound. Do not stat an open
     log after collection and call it archived storage. The archive checksum binds
     the precise captured log bytes; collection receipt accounts after-return wall.
     """
+    if terminal_log is not None:
+        # The live driver terminal is in transfer/. Archive a stable snapshot,
+        # rather than statting that live file after collection as retained bytes.
+        with Path(terminal_log).open('rb') as source,(attempt/'terminal.log').open('xb') as snapshot:
+            shutil.copyfileobj(source,snapshot)
     paths=[p for p in sorted(attempt.rglob('*')) if p.is_file() and not p.is_symlink()
            and not any(x in ('source-cache','sources','payload-cache','temporary','bootstrap') for x in p.relative_to(attempt).parts)
            and p.suffix not in ('.bam','.sam','.bai')]
@@ -171,8 +177,14 @@ def execute(args,attempt,started):
         remaining=deadline-time.monotonic()
         if remaining<=0:raise TimeoutError('Whole preflight work ceiling reached')
         sup.progress('E009 stage '+name)
-        return sup.supervise(argv,stages/(name+'.log'),min(seconds,remaining),
-                             8_000_000_000 if local else limits['working_rss_bytes'],stage_env or env,sample_root=os.getpid())
+        runner=sup.supervise
+        if '--inventory-prefix' in list(map(str,argv)):
+            # All original inventories/imports remain mandatory; trace startup
+            # before implicit site work can produce another silent timeout.
+            argv=startup_argv(argv[0],argv[3],argv[4:])
+            runner=lambda *a,**k:supervise_startup(sup,*a,**k)
+        return runner(argv,stages/(name+'.log'),min(seconds,remaining),
+                      8_000_000_000 if local else limits['working_rss_bytes'],stage_env or env,sample_root=os.getpid())
     inputs=BUNDLE/'input'
     if local:
         # Real production workers; only remote platform/assets/setup are replaced.
@@ -345,9 +357,11 @@ def main():
     signal.signal(signal.SIGALRM,alarm)
     def cancel(signum,frame):raise KeyboardInterrupt('Owner cancelled signal '+str(signum))
     signal.signal(signal.SIGINT,cancel);signal.signal(signal.SIGTERM,cancel)
-    with (attempt/'terminal.log').open('x') as log:
+    terminal_log=transfer/(attempt.name+'-terminal.log')
+    with terminal_log.open('x') as log:
         sys.stdout,sys.stderr=Tee(original[0],log),Tee(original[1],log)
         try:
+            print('TERMINAL_LOG='+str(terminal_log),flush=True)
             signal.setitimer(signal.ITIMER_REAL,max(.001,(args.local_seconds or 17400)-(time.monotonic()-started)))
             shutil.copyfile(BUNDLE/'bundle-manifest.json',attempt/'bundle-manifest.json')
             manifest=verify_bundle(BUNDLE);status['verification_passed']=True
@@ -373,7 +387,8 @@ def main():
             try:
                 remaining=(args.local_seconds or 18000)-(time.monotonic()-started)
                 signal.setitimer(signal.ITIMER_REAL,min(600,remaining) if remaining>0 else 120)
-                result=collect(attempt,transfer);elapsed=time.monotonic()-started
+                result=collect(attempt,transfer,terminal_log);elapsed=time.monotonic()-started
+                result['terminal_log']=str(terminal_log)
                 result.update(seconds_through_collection=elapsed,allocated_core_hours_through_collection=args.allocated_vcpus*elapsed/3600)
                 result['collection_after_execution_timeout']=bool(status.get('execution_timed_out')) or remaining<=0
                 write_json(transfer/(attempt.name+'-collection.json'),result)

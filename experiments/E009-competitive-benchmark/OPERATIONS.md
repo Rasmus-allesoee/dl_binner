@@ -1,6 +1,6 @@
 # E009 owner preflight operations
 
-Status: **prepared and locally tested; owner Linux execution unstarted**.
+Status: **v3 startup failed; v4 instrumented recovery prepared, owner execution pending**.
 [Protocol](README.md), [limits](preflight.json), [native payload lock](native-lock.json)
 and [Linux package lock](utilities-linux-lock.json) define this job. This is asset
 and tiny native-contract preparation, not the benchmark command.
@@ -14,12 +14,12 @@ Do not run competing workloads. No Slurm cluster is needed for this serial prefl
 
 ## Upload two files and run once
 
-Upload the source-bound `e009-preflight-v3.tar.gz` and matching `.tar.gz.sha256`
+Upload the source-bound `e009-preflight-v4.tar.gz` and matching `.tar.gz.sha256`
 from the local transfer receipt; no Mac environment, large BAM or model upload.
 Exact archive/source identities are recorded in [transfer.json](transfer.json).
-The prepared pair is in local `artifacts/e009-preparation/transfer-v3/`, bound to
-source `a12c962a85946167bcc2441597b30fcca85b209c`. It is 6,656,591 archive bytes;
-v1/v2 remain retained as superseded local preparation. Upload **v3 only**.
+The new pair belongs in local `artifacts/e009-preparation/transfer-v4/`;
+[transfer.json](transfer.json) records its final source/checksum. Preserve the failed
+v3 attempt, prior uploads and the accepted E001 runtime. Upload **v4 only**.
 Then paste this **entire block** into the Terminal:
 
 ```bash
@@ -27,14 +27,20 @@ bash <<'BASH'
 set -Eeuo pipefail
 transfer=/work/Home/dl_binner/e009/transfer
 mkdir -p "$transfer"
-terminal_log=$(mktemp "$transfer/e009-preflight.XXXXXX")
+terminal_log=$(python3 -I -B -S - "$transfer" <<'LOGPY'
+import os, sys, tempfile
+fd,path=tempfile.mkstemp(prefix='e009-preflight.',suffix='.log',dir=sys.argv[1])
+os.close(fd)
+print(path)
+LOGPY
+)
 exec > >(tee -a "$terminal_log") 2>&1
 printf 'TERMINAL_LOG=%s\n' "$terminal_log"
-python3 -I -B - "$transfer" <<'PY'
+python3 -I -B -S - "$transfer" <<'PY'
 import hashlib, os, pathlib, shutil, sys, tarfile, tempfile, time
 started=time.time()
 transfer=pathlib.Path(sys.argv[1])
-archive=transfer/'e009-preflight-v3.tar.gz'
+archive=transfer/'e009-preflight-v4.tar.gz'
 fields=(transfer/(archive.name+'.sha256')).read_text().split()
 if len(fields)!=2 or fields[1]!=archive.name or len(fields[0])!=64:
     raise ValueError('Upload the exact archive and matching printed checksum')
@@ -48,13 +54,13 @@ with tarfile.open(archive) as tar:
     if sum(m.size for m in members)>20_000_000:raise ValueError('Unexpected packet expansion')
     for member in members:
         path=pathlib.PurePosixPath(member.name)
-        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v3' or member.name in names:
+        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v4' or member.name in names:
             raise ValueError('Unsafe or duplicate packet member')
         names.add(member.name)
     for member in members:
         target=launch/member.name;target.parent.mkdir(parents=True,exist_ok=True)
         with tar.extractfile(member) as src,target.open('xb') as out:shutil.copyfileobj(src,out)
-packet=launch/'e009-preflight-v3'
+packet=launch/'e009-preflight-v4'
 env=os.environ.copy()
 for key in ('PYTHONPATH','PYTHONHOME','PYTHONUSERBASE'):env.pop(key,None)
 env.update(PYTHONNOUSERSITE='1',PYTHONUNBUFFERED='1')
@@ -71,13 +77,21 @@ BASH
 The bootstrap uses Python for checksum/path validation, avoiding a dependency on
 a missing `sha256sum` utility. Its entry time is passed into the driver, so transfer
 verification/extraction counts toward the bounded work clock. The shell captures
-output automatically; the driver additionally returns an exact terminal snapshot.
+output to a named `.log` file in transfer/. The driver also writes its live
+`<attempt>-terminal.log` there and prints its path; only a stable terminal snapshot
+is copied into the attempt/return. No live driver terminal log remains in attempt/.
 A failed outer checksum/prerequisite leaves the outer log even before a trusted
 packet can create a return. Never remove an old attempt to retry.
 
 ## What this command does and retains
 
 1. Verify every packet member; retain the manifest even if later verification fails.
+   The first mandatory COMEBin probe retains its **90-second** ceiling. Capture
+   repeated stacks before normal site initialization, metadata/import/freeze progress,
+   and owned Linux process wait/syscall/fd states before cleanup. Permission-denied
+   kernel views are explicit unavailable evidence. No prefix relocation, reinstall,
+   skipped inventory, timeout increase or claimed runtime repair. If the underlying
+   stall persists, return diagnosis and stop before downloads/new environments.
 2. Probe accepted E001 COMEBin numerical, mapping, AMBER and CheckM prefixes without
    installs; verify complete inventories/origins, accepted marker files, and byte
    trees before/after. Create new version-qualified E009 tool prefixes only.
@@ -110,8 +124,8 @@ following a timeout. Collection after a timeout is labelled, bounded and charged
 separately, not hidden inside an execution success. Actual elapsed allocation cost
 includes setup, failures and collection; owner idle/upload/provider billing are
 separate. Final read-only hashing stays bounded even after the work timer expires;
-an incomplete byte check is retained as unverified and cannot pass. Packets v1/v2 are
-retained locally as superseded preparation, never edited into v3. Heartbeats
+an incomplete byte check is retained as unverified and cannot pass. Packets v1/v2/v3 are
+retained locally, never edited into v4. Heartbeats
 appear every ten seconds; native detail is in stage/tool logs.
 Actual tools run serially. Torch phases may use eight threads/loader zero; process
 pools and HMM/BGZF child budgets include their main/coordinator. Allocation caps

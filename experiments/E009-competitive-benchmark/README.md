@@ -1,6 +1,6 @@
 # E009: first competitive human-gut assembly benchmark
 
-Opened: 2026-10-08; amended 2026-10-09. Owner preflight: **prepared locally**, not launched. Scientific outcome:
+Opened: 2026-10-08; amended 2026-10-09. Owner preflight: **v3 failed at initial runtime startup; v4 recovery prepared**, not executed. Scientific outcome:
 **not assessed**. [D013](../../docs/decisions/D013-first-comparative-benchmark.md)
 and the [focused study](../../docs/evidence/2026-10-08-competitive-binner-study.md)
 own the rationale; [protocol.json](protocol.json) owns numerical scope/budgets.
@@ -338,7 +338,7 @@ Unknown historical pretrained overlap is a claim limitation, not an automatic
 execution rejection. Scientific execution remains **not admitted**. No baseline,
 accepted science, architecture or marker-follow-up study changes here.
 
-Final source `a12c962a85946167bcc2441597b30fcca85b209c` is bound to the immutable
+V3 local preparation source `a12c962a85946167bcc2441597b30fcca85b209c` is bound to the immutable
 v3 packet: **6,656,591 bytes**, **29 payload files plus the manifest**. The actual
 documented bootstrap ran outside the checkout with explicit Mac-only runtime/
 allocation overrides: two distinct fresh attempts pass; inner/outer corruption,
@@ -367,3 +367,42 @@ S1 pairing, 311/332/355 source-name counts, object-size arithmetic and the
 472+28=500 core-hour ceiling. `git diff --check` passes; product/scientific code,
 defaults, tests, workflows, environments and PROJECT_INTENT are unchanged.
 These are planning checks, **not native adapter tests or Linux/scientific validation**.
+
+## Native v3 startup failure and v4 recovery — 2026-10-10
+
+[Verified failure receipt](linux-startup-failure-v3.json) retains archive checksum,
+all seven inventory-file hashes / nine members and **54,039 immutable retained
+bytes**, including inventory and terminal snapshot. Declared 8-vCPU /24-GB driver:
+**91.129350 seconds /0.202510 allocated core-hours** through collection, not exact
+provider billing. The first COMEBin read-only inventory/import probe exhausted its
+unchanged 90-second cap; only 1.31 sampled CPU seconds and 0.059-GB aggregate RSS
+were recorded. Its log is silent before the supervisor trailer. No downloads,
+new tool environments, native data paths, fits or scores started. Packet verification
+passed; current runtime health and unchanged dependency bytes were not established.
+
+The retained return does **not identify the blocking module or root cause**. Do
+not call this repaired by raising the timeout, skipping the probe, reinstalling or
+relocating the accepted prefix. V4 uses an instrumented startup under `-I -B -S`,
+executes normal `site.main()`, and preserves all prefix/origin/inventory/freeze
+checks. Parent-requested stacks begin before site initialization and use separate
+per-PID files, avoiding a child timer thread and contamination of inventory JSON.
+Metadata/import/pip progress and bounded Linux owned-PID wait/syscall/fd observations
+are retained before termination; denied kernel views remain explicitly unavailable.
+Each metadata object is read once instead of twice, without changing its values.
+The first gate still has 90 seconds. If the stall persists, return evidence and
+stop before dependent work. An underlying Linux runtime repair remains **unconfirmed**.
+
+Both the bootstrap log and live `<attempt>-terminal.log` now have explicit `.log`
+names directly in `transfer/`. An exclusive immutable snapshot is copied into the
+attempt/return during collection. Preserve v3 and its original receipts; upload
+only the newly bound v4 pair from Operations. No accepted science is repeated.
+
+Recovery checks: **25 self-contained tests pass**, including a real fresh venv,
+normal site processing, intentionally stalled `.pth` hook with retained stacks,
+strict lexical interpreter/origins, module stdout, PID reuse and immutable terminal
+snapshots. Actual retained Mac NumPy/Torch imports and complete instrumented vs
+ordinary `pip freeze --all` agree; all 20,132 numerical-prefix files /774,207,552
+bytes remain unchanged. This is no model inference or Linux compatibility claim.
+A local child-timer shutdown hang was retained and avoided with parent-triggered
+separate stack files. Linux `/proc` decoding uses a fixture locally; actual kernel
+wait capture and the original startup stall require the owner return.

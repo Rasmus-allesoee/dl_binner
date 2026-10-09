@@ -1,6 +1,9 @@
 {
   "record": "E009",
-  "version": 3,
+  "version": 4,
+  "startup_probe_seconds": 90,
+  "startup_diagnostics": "normal site initialization under pre-site stack tracing; unchanged complete inventories/origins/freeze; observed Linux process wait states before termination",
+  "recovery_from": "native-preflight-53ozx38q: first reused COMEBin inventory startup timed out without child diagnostics; underlying stall unresolved, no gate bypass or timeout increase",
   "scope": "source acquisition/overlap and real tiny native software contracts; no community fits/scores",
   "allocated_vcpus": 8,
   "allocated_ram_gb": 24,

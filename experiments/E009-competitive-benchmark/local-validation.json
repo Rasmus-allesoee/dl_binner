@@ -1030,5 +1030,38 @@
     "Python_and_JSON_syntax": "passed",
     "git_diff_check": "passed",
     "accepted_product_scientific_files": "git diff --exit-code 6bad5c4 -- src tests/product pyproject.toml workflows passes"
+  },
+  "recovery_2026_10_10": {
+    "scope": "startup diagnostics and transfer logging only; Linux stall still unresolved, no inference or science",
+    "unit_final": {
+      "tests": 25,
+      "status": "passed",
+      "log": {
+        "path": "artifacts/e009-preparation/unit-v13.log",
+        "file": {
+          "bytes": 1288,
+          "sha256": "e4fa786fbbd6546d4b4ce467da57db8038eaac3b9a627f1f6f1b23d699053071"
+        }
+      }
+    },
+    "native_mac": {
+      "status": "passed",
+      "receipt": {
+        "path": "artifacts/e009-preparation/startup-native-qa-v3/passed.json",
+        "file": {
+          "bytes": 6079,
+          "sha256": "865d1dd204b08a4645237ff7c1802944260d6b6bae31a6280cc3a72cd22c4a5f"
+        }
+      },
+      "scope": "actual NumPy/Torch imports, complete normal/instrumented pip freeze equality, lexical prefix/origins and all-byte read-only check; no Linux credit"
+    },
+    "preserved_failures": [
+      "unit-v9: test canonical vs lexical prefix expectation and wait-state status key collision corrected",
+      "unit-v10: child repeated timer tracer hung after target-ready in local QA; parent-triggered separate stack files replace that timer thread",
+      "startup-native-qa-v1: QA requested sklearn absent from accepted E005 Mac runtime; did not change prefix, final actual NumPy/Torch/full freeze check passes"
+    ],
+    "Linux_v3_failure_receipt": "linux-startup-failure-v3.json",
+    "native_Linux_recovery": "not executed; no root-cause repair claimed",
+    "owner_packet_harness": "pending source-bound v4 packet integration"
   }
 }

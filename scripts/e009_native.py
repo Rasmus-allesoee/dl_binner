@@ -217,20 +217,29 @@ def inventory(expected_prefix, modules, expected_freeze=None, dependency_prefix=
     if prefix!=Path(expected_prefix).resolve():raise ValueError('Wrong lexical interpreter prefix')
     allowed=[prefix]+([Path(dependency_prefix).resolve()] if dependency_prefix else [])
     distributions=[]
+    print('DLBINNER INVENTORY distribution scan begin',flush=True)
     for dist in importlib.metadata.distributions():
         origin=Path(dist.locate_file('')).resolve()
         if not any(origin.is_relative_to(p) for p in allowed):raise ValueError('Distribution outside isolated prefix/bound dependency prefix')
-        distributions.append({'name':dist.metadata['Name'],'version':dist.version,'origin':str(origin)})
+        print(f'DLBINNER INVENTORY metadata begin {getattr(dist,"_path",origin)}',flush=True)
+        metadata=dist.metadata  # One shared-filesystem read, rather than reading twice.
+        distributions.append({'name':metadata['Name'],'version':metadata['Version'],'origin':str(origin)})
+        print(f'DLBINNER INVENTORY metadata ready {metadata["Name"]} {metadata["Version"]}',flush=True)
     origins={}
     for name in modules:
+        print('DLBINNER INVENTORY import begin '+name,flush=True)
         module=__import__(name);origin=Path(module.__file__).resolve()
         if not any(origin.is_relative_to(p) for p in allowed):raise ValueError('Import outside isolated prefix/bound dependency prefix')
         origins[name]=str(origin)
+        print('DLBINNER INVENTORY import ready '+name+' '+str(origin),flush=True)
     if expected_freeze:
         import subprocess
-        actual=subprocess.check_output([sys.executable,'-I','-B','-m','pip','freeze','--all'],text=True)
+        from e009_startup import startup_argv
+        print('DLBINNER INVENTORY pip freeze begin',flush=True)
+        actual=subprocess.check_output(startup_argv(sys.executable,'pip',['freeze','--all'],mode='module'),text=True)
         if set(actual.splitlines())!=set(Path(expected_freeze).read_text().splitlines()):
             raise ValueError('Accepted complete prefix inventory changed')
+        print('DLBINNER INVENTORY pip freeze ready',flush=True)
     if expected_distributions:
         import re
         normalize=lambda s:re.sub('[-_.]+','-',s).lower()
