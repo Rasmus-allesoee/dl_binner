@@ -19,7 +19,7 @@
     "source_overlap": "self-contained full-replicon/accession and opaque competitive-reference contracts; real CAMI source archive not locally acquired",
     "upstream_parser_only": "all five tool argv/API and CompleteBin50 cases; parser-only is not native full import/training",
     "unit": "21 self-contained adapter/failure tests, including strict native cutoff, intact/changed bytes, stalled cleanup after an expired parent alarm and intended native process limits",
-    "owner_harness": "packet source freeze and actual out-of-checkout driver checks recorded in transfer.json after build"
+    "owner_harness": "actual v3 packet and documented bootstrap outside checkout; two unique fresh attempts, exact inner/outer corruption failures, missing-native cause, overall timeout, immutable file/log inventories and collection accounting pass; Linux setup/imports/full schedules unexecuted"
   },
   "known_failures_preserved": [
     "Mac MEGAHIT parallel segmentation failures",
@@ -386,8 +386,8 @@
     }
   },
   "success_peak_sampled_rss_bytes": 501436416,
-  "known_supervised_wall_seconds": 106.23972149200563,
-  "cost_scope": "local QA stage receipts including retained failures; source review/acquisition/setup/font-cache/read-only hashing/idle are separate; no UCloud cost",
+  "known_supervised_wall_seconds": 176.00947915801953,
+  "cost_scope": "serial local QA stage receipts plus owner-harness outer receipts including retained failures; nested harness stage clocks are not added again. Unit/build/retained-reader/source-review/acquisition/setup/read-only hashing/debugging/idle are separate. No UCloud cost.",
   "readonly_final": {
     "path": "artifacts/e009-preparation/readonly-final.json",
     "file": {
@@ -465,5 +465,570 @@
     "action": "pending final E009 unit invocation",
     "result": "not executed; automatic approval review could not complete because of usage limit, not an unsafe-action finding",
     "recovery": "owner requested continuation; same reviewed escalation path succeeds after reset, final 21 tests pass"
+  },
+  "known_stage_wall_seconds_before_packet_harness": 106.23972149200563,
+  "owner_harness_outer_receipts": [
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v1/fresh-0.exit.json",
+        "file": {
+          "bytes": 2867,
+          "sha256": "c61011a99113930cccebe8e4aff5aa59e29e1339a2e5a41910bbc90b4a0693ef"
+        }
+      },
+      "resource": {
+        "exit_code": 0,
+        "launched_pid": 93710,
+        "peak_sampled_rss_bytes": 128827392,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.341678700496373,
+        "sampled_cpu_seconds": 1.8800000000000001,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 5.502245230003609
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v1/fresh-1.exit.json",
+        "file": {
+          "bytes": 2871,
+          "sha256": "1daf0151ab1735f06ce694992415efe59d0fbcc3d9a47c8c5368ea5d2931cfc0"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 93831,
+        "peak_sampled_rss_bytes": 31137792,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.06609191485108387,
+        "sampled_cpu_seconds": 0.020000000000000018,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 0.3026088750048075
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v2/fresh-0.exit.json",
+        "file": {
+          "bytes": 2850,
+          "sha256": "1f0dbbf6eccd9b53452b4c9590b35758d55d798e6622afe8df662c018964a4bb"
+        }
+      },
+      "resource": {
+        "exit_code": 0,
+        "launched_pid": 93857,
+        "peak_sampled_rss_bytes": 119959552,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.3305799154468642,
+        "sampled_cpu_seconds": 1.73,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 5.233227788994554
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v2/fresh-1.exit.json",
+        "file": {
+          "bytes": 2850,
+          "sha256": "5e8c059770b7c36ef832085a036cd301f73185d02a8979935946290c88bd5808"
+        }
+      },
+      "resource": {
+        "exit_code": 0,
+        "launched_pid": 94001,
+        "peak_sampled_rss_bytes": 125288448,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.2590768621766155,
+        "sampled_cpu_seconds": 1.43,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 5.519597496997449
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v2/inner-corruption-0.exit.json",
+        "file": {
+          "bytes": 2898,
+          "sha256": "f9fe13c24a3fc718943f62498ca551da060f239775dcbfd247f2c49bd51148de"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 94124,
+        "peak_sampled_rss_bytes": 59211776,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.4257375843003199,
+        "sampled_cpu_seconds": 0.33000000000000007,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 0.7751253640017239
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v2/missing-native-0.exit.json",
+        "file": {
+          "bytes": 2892,
+          "sha256": "236655aa4dd9ce61f5bf864b7c06d08b76ab434f9b952cd3f01312a68c7af72a"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 94142,
+        "peak_sampled_rss_bytes": 88797184,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.24994567207600416,
+        "sampled_cpu_seconds": 0.8400000000000001,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 3.3607303260068875
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v2/outer-checksum-0.exit.json",
+        "file": {
+          "bytes": 2894,
+          "sha256": "6622ac22121bb7814c8adcef6419701d440e43902831635ed0251fb6ba6ed4c1"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 94331,
+        "peak_sampled_rss_bytes": 31064064,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.044430358177845804,
+        "sampled_cpu_seconds": 0.030000000000000027,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 0.675214003000292
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v2/overall-timeout-0.exit.json",
+        "file": {
+          "bytes": 2892,
+          "sha256": "663c378c160df5b0e83dbd15b8e1a25442bfb58c0d2f2024ee13f4b560ad8904"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 94214,
+        "peak_sampled_rss_bytes": 154050560,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.3826694481856365,
+        "sampled_cpu_seconds": 2.0700000000000003,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 5.409368346008705
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v3/fresh-0.exit.json",
+        "file": {
+          "bytes": 2850,
+          "sha256": "b86d67dcd171fc3e74a6a1b35d19e9e99b8a0e35dbbfa3b6354ce92329fae22a"
+        }
+      },
+      "resource": {
+        "exit_code": 0,
+        "launched_pid": 94735,
+        "peak_sampled_rss_bytes": 129560576,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.2927193338959468,
+        "sampled_cpu_seconds": 1.65,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 5.636798834020738
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v3/fresh-1.exit.json",
+        "file": {
+          "bytes": 2865,
+          "sha256": "66eebba75b843115d44e78b7ca1b6b9601de1a76f1a852416fa743586f957fb9"
+        }
+      },
+      "resource": {
+        "exit_code": 0,
+        "launched_pid": 94856,
+        "peak_sampled_rss_bytes": 128733184,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.32162676771764726,
+        "sampled_cpu_seconds": 1.8599999999999999,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 5.783100745000411
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v3/inner-corruption-0.exit.json",
+        "file": {
+          "bytes": 2898,
+          "sha256": "7ec8014e32c12052cfe269d5121d4b4d020c2ea61405333d16de2e2247e67dd8"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 94977,
+        "peak_sampled_rss_bytes": 58695680,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.3786637059531287,
+        "sampled_cpu_seconds": 0.32000000000000006,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 0.8450770300114527
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v3/missing-native-0.exit.json",
+        "file": {
+          "bytes": 2891,
+          "sha256": "0ccfb62ed2ee4ce6e5d12eec355d2071cc947764e5bc78857a63a98efd9993cc"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 94997,
+        "peak_sampled_rss_bytes": 87740416,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.2738008478106423,
+        "sampled_cpu_seconds": 0.9399999999999997,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 3.4331522620050237
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v3/outer-checksum-0.exit.json",
+        "file": {
+          "bytes": 2893,
+          "sha256": "0302133806d6f23fc95ab3b3d85139ed98af673d663fde328618e7e839aa0c5f"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 95169,
+        "peak_sampled_rss_bytes": 36225024,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.0571211079300043,
+        "sampled_cpu_seconds": 0.030000000000000027,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 0.5251998969761189
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v3/overall-timeout-0.exit.json",
+        "file": {
+          "bytes": 2879,
+          "sha256": "6f7935df2ddf1709be05e520d189c3f59f6ac5402bde6984c38e647147b587a4"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 95071,
+        "peak_sampled_rss_bytes": 107978752,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.32429283469834774,
+        "sampled_cpu_seconds": 1.66,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 5.118830335995881
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v4/fresh-0.exit.json",
+        "file": {
+          "bytes": 2865,
+          "sha256": "520d0a0678ebf430eebc9f55b63cb591cf50ae8da629ad1f9bb8a5906f1d8be6"
+        }
+      },
+      "resource": {
+        "exit_code": 0,
+        "launched_pid": 97001,
+        "peak_sampled_rss_bytes": 324231168,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.2717977525843745,
+        "sampled_cpu_seconds": 1.7199999999999998,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 6.3282348130014725
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v4/fresh-1.exit.json",
+        "file": {
+          "bytes": 2851,
+          "sha256": "352a96959ef6baed3d687d6404073db23450d866dc6117cac5ec50b497e4aaa6"
+        }
+      },
+      "resource": {
+        "exit_code": 0,
+        "launched_pid": 97131,
+        "peak_sampled_rss_bytes": 126382080,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.2707816847179466,
+        "sampled_cpu_seconds": 1.52,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 5.6133781780081335
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v4/inner-corruption-0.exit.json",
+        "file": {
+          "bytes": 2898,
+          "sha256": "f1c48b1ea169ed9b725f81b8d1328445c689c0e3e3c12864d185830d0a8866c0"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 97255,
+        "peak_sampled_rss_bytes": 32137216,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.025887348676172,
+        "sampled_cpu_seconds": 0.020000000000000018,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 0.7725781519839074
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v4/missing-native-0.exit.json",
+        "file": {
+          "bytes": 2892,
+          "sha256": "360011076f5b7dcd9a4f5ff2555996c11a57d57f33c77b7bab56ae596ade834f"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 97273,
+        "peak_sampled_rss_bytes": 90140672,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.22529401124693235,
+        "sampled_cpu_seconds": 0.8199999999999998,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 3.6396884029963985
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v4/outer-checksum-0.exit.json",
+        "file": {
+          "bytes": 2895,
+          "sha256": "98be2f3da5bc687bbcce4724542f9362f660abfc2c2576f42b0b4d2d9628681d"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 97454,
+        "peak_sampled_rss_bytes": 37838848,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.058333201678855896,
+        "sampled_cpu_seconds": 0.030000000000000027,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 0.5142868749971967
+      }
+    },
+    {
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v4/overall-timeout-0.exit.json",
+        "file": {
+          "bytes": 2879,
+          "sha256": "ff7cae0b9354535b3c5ee8e9eb67a8a715effcc7b6d262acf6b3414a60658125"
+        }
+      },
+      "resource": {
+        "exit_code": 1,
+        "launched_pid": 97350,
+        "peak_sampled_rss_bytes": 149544960,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.3660081182220081,
+        "sampled_cpu_seconds": 1.75,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 180,
+        "stop_reason": null,
+        "wall_seconds": 4.7813147109991405
+      }
+    }
+  ],
+  "owner_harness_known_wall_seconds": 69.7697576660139,
+  "four_thread_known_wall_budget_hours": 0.19556608795335503,
+  "owner_harness_final": {
+    "receipt": {
+      "path": "artifacts/e009-preparation/owner-packet-qa-v4/passed.json",
+      "file": {
+        "bytes": 23184,
+        "sha256": "1d5a76f4ba9ea7e957feb500be445a82b81c8c9dbcd5c1f99406cc53dcb2750c"
+      }
+    },
+    "packet": {
+      "bytes": 6656591,
+      "sha256": "097d64902f5b71d79b23d1d1fd74cbc30e92b7eb9157199b8a94948c786d07a8"
+    },
+    "cases": {
+      "fresh": {
+        "status": "passed software harness contract",
+        "attempts": 2,
+        "returned_archives": [
+          {
+            "file": {
+              "bytes": 47212,
+              "sha256": "442015f31859635a4f0cca7e2dfe2a73e1e5e4a8331da95b6170364b32e21655"
+            },
+            "members": 73,
+            "retained_logical_bytes": 170816,
+            "seconds_through_collection": 3.923040510271676,
+            "allocated_core_hours_through_collection": 0.004358933900301862,
+            "collection_after_execution_timeout": false
+          },
+          {
+            "file": {
+              "bytes": 47293,
+              "sha256": "f0e3cb4fd17a2c7c0da02410c3d4dfc4b07ee4d7bc3967d964ea91b447641b8d"
+            },
+            "members": 73,
+            "retained_logical_bytes": 170891,
+            "seconds_through_collection": 4.510738073120592,
+            "allocated_core_hours_through_collection": 0.005011931192356213,
+            "collection_after_execution_timeout": false
+          }
+        ]
+      },
+      "inner-corruption": {
+        "status": "passed software harness contract",
+        "attempts": 1,
+        "returned_archives": [
+          {
+            "file": {
+              "bytes": 3172,
+              "sha256": "f3cfc0f67b78513b8051f3795a2d0defe06b294ce2be5943b7c4af7e01379c59"
+            },
+            "members": 5,
+            "retained_logical_bytes": 7022,
+            "seconds_through_collection": 0.22178307859576307,
+            "allocated_core_hours_through_collection": 0.0002464256428841812,
+            "collection_after_execution_timeout": false
+          }
+        ]
+      },
+      "missing-native": {
+        "status": "passed software harness contract",
+        "attempts": 1,
+        "returned_archives": [
+          {
+            "file": {
+              "bytes": 9503,
+              "sha256": "097847f6301e7075baf3ab86a9cfd48a5339de12e8629395f924c6f4d764fd00"
+            },
+            "members": 41,
+            "retained_logical_bytes": 35305,
+            "seconds_through_collection": 2.2927987776347436,
+            "allocated_core_hours_through_collection": 0.0025475541973719374,
+            "collection_after_execution_timeout": false
+          }
+        ]
+      },
+      "outer-checksum": {
+        "status": "intended outer checksum failure",
+        "attempts": 0,
+        "returned_archives": []
+      },
+      "overall-timeout": {
+        "status": "passed software harness contract",
+        "attempts": 1,
+        "returned_archives": [
+          {
+            "file": {
+              "bytes": 621080,
+              "sha256": "b4a815232aa01af5653773def7365d7c7f91e5941fa9513897649718f94847d8"
+            },
+            "members": 62,
+            "retained_logical_bytes": 3918108,
+            "seconds_through_collection": 3.233267866395181,
+            "allocated_core_hours_through_collection": 0.003592519851550201,
+            "collection_after_execution_timeout": true
+          }
+        ]
+      }
+    }
+  },
+  "documentation_final": {
+    "command": "python3 -B scripts/check_docs.py --check-context",
+    "status": "passed",
+    "maintained_documents": 56,
+    "local_links": 677,
+    "present_fingerprints": 85,
+    "unavailable_historical_optional_caches": 10,
+    "missing_cache_status": "not verified, not silently accepted",
+    "log": {
+      "path": "artifacts/e009-preparation/docs-final-v3.log",
+      "file": {
+        "bytes": 727,
+        "sha256": "2ed2613f89d551e95357385eaae289d1acc94b19fa6a2819a1177c2496f06b5b"
+      }
+    }
+  },
+  "final_source_checks": {
+    "Python_and_JSON_syntax": "passed",
+    "git_diff_check": "passed",
+    "accepted_product_scientific_files": "git diff --exit-code 6bad5c4 -- src tests/product pyproject.toml workflows passes"
   }
 }

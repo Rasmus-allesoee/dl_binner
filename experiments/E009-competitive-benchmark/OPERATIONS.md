@@ -17,6 +17,9 @@ Do not run competing workloads. No Slurm cluster is needed for this serial prefl
 Upload the source-bound `e009-preflight-v3.tar.gz` and matching `.tar.gz.sha256`
 from the local transfer receipt; no Mac environment, large BAM or model upload.
 Exact archive/source identities are recorded in [transfer.json](transfer.json).
+The prepared pair is in local `artifacts/e009-preparation/transfer-v3/`, bound to
+source `a12c962a85946167bcc2441597b30fcca85b209c`. It is 6,656,591 archive bytes;
+v1/v2 remain retained as superseded local preparation. Upload **v3 only**.
 Then paste this **entire block** into the Terminal:
 
 ```bash

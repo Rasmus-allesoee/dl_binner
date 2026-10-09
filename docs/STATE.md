@@ -260,6 +260,15 @@ preflight must pass eight threads. No accepted science was repeated.
 
 **Exact next step:** owner runs the checksum-bound **8-vCPU / 24-GB ≤5-hour E009
 preflight** from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
+Use the **v3** pair under local `artifacts/e009-preparation/transfer-v3/`, bound to
+source `a12c962a85946167bcc2441597b30fcca85b209c`; v1/v2 are preserved and superseded.
+Twenty-one local adapter/failure checks and the actual v3 packet/bootstrap harness
+pass, including two fresh attempts, corruption, missing-native cause, timeout and
+immutable return inventories. Final COMEBin retained-array review matches native
+**>1000-bp** eligibility without regenerating features. Parent read-only verification
+remains bounded after a timeout. Known supervised local QA sums to 176.009 seconds,
+sampled successful peak 0.501 GB, with setup/review/idle separate and no UCloud cost.
+These are Mac software/native-reader checks, not Linux acceptance or E009 science.
 It creates new tool prefixes, borrows accepted E001 dependencies read-only with
 complete byte/inventory/origin checks, downloads pinned small tool/model/utility
 payloads and source DNA to owned shared storage, then exercises real tiny contracts.

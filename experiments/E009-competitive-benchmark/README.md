@@ -338,6 +338,27 @@ Unknown historical pretrained overlap is a claim limitation, not an automatic
 execution rejection. Scientific execution remains **not admitted**. No baseline,
 accepted science, architecture or marker-follow-up study changes here.
 
+Final source `a12c962a85946167bcc2441597b30fcca85b209c` is bound to the immutable
+v3 packet: **6,656,591 bytes**, **29 payload files plus the manifest**. The actual
+documented bootstrap ran outside the checkout with explicit Mac-only runtime/
+allocation overrides: two distinct fresh attempts pass; inner/outer corruption,
+missing MEGAHIT and the overall timeout fail for their intended causes. Every
+returned member hash, closed terminal snapshot and collection-size total passes
+independent inspection. Collection after work timeout is labelled explicitly.
+Linux setup/imports and five full native tool contracts remain **unexecuted**, not
+mocked as passed. Earlier packets and failed local checks are preserved.
+
+The final self-contained suite passes **21 checks**. A final production COMEBin
+reader accepts retained real native arrays using its exact **>1000-bp** eligibility,
+resolved BAM basenames, intervals/lengths and zero masks; no feature regeneration.
+Known supervised stage and outer owner-harness clocks, including retained failures,
+sum to **176.009 s / 0.195566 four-thread wall-budget hours**; sampled successful
+peak **0.501 GB**. Nested stage clocks are not added twice. Unit/build/retained-
+reader work, source review/acquisition/setup/read-only hashing/debugging/idle are
+outside this partial accounting; none are UCloud spend or scientific performance.
+See [local-validation.json](local-validation.json) and [transfer.json](transfer.json)
+for byte-bound evidence and unresolved Linux/science boundaries.
+
 2026-10-08 planning verification: `python3 scripts/check_docs.py --check-context`
 passes (54 maintained documents / 657 local links / 85 present fingerprints;
 ten unavailable historical optional caches explicitly unverified). An independent
