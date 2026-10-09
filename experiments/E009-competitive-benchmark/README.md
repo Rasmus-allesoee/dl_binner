@@ -1,6 +1,6 @@
 # E009: first competitive human-gut assembly benchmark
 
-Opened: 2026-10-08. Execution: **planned**, not launched. Scientific outcome:
+Opened: 2026-10-08; amended 2026-10-09. Owner preflight: **prepared locally**, not launched. Scientific outcome:
 **not assessed**. [D013](../../docs/decisions/D013-first-comparative-benchmark.md)
 and the [focused study](../../docs/evidence/2026-10-08-competitive-binner-study.md)
 own the rationale; [protocol.json](protocol.json) owns numerical scope/budgets.
@@ -21,8 +21,9 @@ Run one seed-11 target-specific fit with its matched raw control for each of:
 
 - TNF plus the same two explicitly observed mean-depth columns: primary product pair.
 - TNF alone: matched secondary pair, isolating the value of added depth within
-  our product. Absent depth is not fabricated zeros. This second pair addresses
-  the still-unresolved coverage question; no new architecture is involved.
+  our product. Absent depth is not fabricated zeros. These are diagnostic controls,
+  not product alternatives or a gate on learning/depth. Their cost is reported
+  separately and capped at 16 allocated core-hours within the 48-core-hour product budget.
 
 All four partitions retain the same complete input DNA, exclusions/masks and
 unassigned outcomes. Raw versus learned isolates the learning pipeline under
@@ -31,24 +32,35 @@ controlled comparison of every embedding normalization decision. Depth versus
 sequence changes the declared information contract, keeping scientific defaults.
 
 External shortlist: **SemiBin2 short-read self-supervised, MetaCAT core CPU,
-SCGBinner native**; **CompleteBin conditional fourth** if its full current native
-CPU recipe and payload fit the pre-scoring resource check. One configuration and
-one attempt per tool; native data-dependent schedule/eligibility/selection retained.
-No reduction of SCGBinner's 200-epoch maximum or CompleteBin's resolved schedule
-to rescue a failing budget and label it native parity. Early stops already built
-into a pinned tool are legitimate and recorded. CompleteBin pretraining may
-automatically switch off: report that outcome rather than forcing a desired label.
+SCGBinner, COMEBin native full 120-candidate grid** and **CompleteBin modified
+max-50**, subject to Linux and actual-scale affordability admission before fits.
+One configuration/attempt per tool. Preserve native schedules/eligibility/selection
+except the explicitly named CompleteBin cap. No replacement list or automatic retry.
 
-SCGBinner is prioritized as a biological-constraint challenger despite long-read
-emphasis; SemiBin2 is a mature short-read reference; MetaCAT adds a distinct
-CPU-oriented grouping route. CompleteBin retains the thesis's strongest tool and
-context/pretraining comparison without presuming affordable CPU execution.
-COMEBin is studied/reused as measured E001 evidence but deferred from this larger
-first execution because of its full CPU/grid cost and overlapping contrastive/
-marker role. DCVBin's unresolved payload/continued-pretraining parity and LorBin's
-long-read/model/thread contracts defer execution, not their relevant mechanisms.
-Do not automatically replace unavailable tools or add VAMB/MetaBAT2. This is a
-focused competitive baseline, not coverage of every current SOTA method.
+COMEBin's successful E001 stages cost 39.6462 allocated core-hours (known recovery
+sequence lower bound 58.1075), with high seed-11 R95; a whole-tool comparison on
+this same new assembly is valuable despite mechanism overlap. Those results and
+failed attempts remain accepted, with no replay. Reserve 192 hours for its new
+native run/grid; this is a conservative cap, not a size-scaled runtime forecast.
+
+CompleteBin's current data-dependent schedule uses a 115,000 effective-contig
+threshold, base 35 epochs (39 at N50 ≥1536), and can otherwise reach 200 epochs.
+The isolated E009 source changes only that maximum to **50**. Training loops over
+resolved epochs; it does not stop on validation-loss stabilization. The separate
+150-epoch extreme-overfit safety valve cannot increase our 50 cap. Automatic
+pretraining decisions use the capped epoch count, so this modification can also
+change that decision; retain the outcome. Leiden's adaptive convergence is a
+separate stop. This is a modified configuration, **not upstream parity**.
+
+DCVBin's official 1.657-GB continued-pretraining payload is available. Its actual
+basic wrapper selects one BAM, constructs `VAE(nsamples=1)` with unconditional
+CUDA and 200 epochs; the encoder alone has a CPU fallback and a 5,000-token cap,
+with ≥2-kb eligibility. The enhanced source also calls CUDA directly. A tested
+CPU/two-depth/continued-pretraining adaptation would be substantial extra tool
+implementation, so **DCVBin is excluded from E009**, rather than treating coverage
+as a disadvantage or claiming its weights are missing. LorBin remains deferred
+for long-read/model contracts. See the [targeted reconciliation](../../docs/evidence/2026-10-09-e009-contract-reconciliation.md)
+and [asset inspection](../../docs/evidence/2026-10-09-e009-asset-inspection.json).
 
 ## Data and immutable axes
 
@@ -61,7 +73,15 @@ artificial fragmentation. Each short-read sample is advertised as about 5 Gbp;
 two compressed archives total 9.732 GB. Keep other subjects outside this milestone;
 they are not certified unseen-genome holdouts because source overlap is unresolved.
 
-Build **one MEGAHIT read-derived sample-0 assembly**, default metagenome recipe
+The complete official sample-0 `contigs` and `gsa` archives were inspected:
+`contigs` holds anonymous/named GSA plus the simulator origin map; `gsa` holds
+per-source reference-coordinate fragments. All three DNA collections have the
+**same 665,738-record / 422,673,293-bp DNA multiset**, including 544,093 below-500
+records. CAMISIM GSA/anonymization code produces that layout; no assembler
+provenance is supplied. These are gold-standard reconstructions, not suitable
+read-derived assembly inputs for E009. The exact provider producer commit is unknown.
+
+Build **one MEGAHIT 1.2.9 read-derived sample-0 assembly**, default metagenome recipe
 with an explicit 200-bp output cutoff, pinned source/binary and native arguments.
 Keep every emitted contig and graph if readily emitted; no second assembler,
 coassembly, long-read branch or GSA accuracy arm. The GSA is not a substitute if
@@ -88,8 +108,9 @@ depth, and that difference belongs in the comparison's input accounting.
 Before fitting: verify downloaded archive SHA256s, member inventory/path safety,
 read pair/quality structure and exact source-reference/taxonomy identities.
 Freeze the unmodified reads, reference genome inventory, one assembly hash and
-all IDs/lengths/strata, ordered BAM/depth manifest and native eligibility. Current
-HEAD receipts do not verify payload integrity. Source taxonomy is the toy dataset's
+all IDs/lengths/strata, ordered BAM/depth manifest and native eligibility. The [native locks](native-lock.json) bind acquired code/model/HMM payloads.
+Bulk reads and source DNA remain provisional until their actual SHA256s and
+member inventories are reviewed; no HEAD receipt verifies payload integrity. Source taxonomy is the toy dataset's
 2025-08-01 snapshot, not the active challenge's 2026 taxonomy.
 
 Inspect source-genome accession aliases, per-replicon canonical DNA hashes and
@@ -99,7 +120,9 @@ levels; do not remove them after scores. The preliminary source filenames alread
 show S. mutans species overlap with E003, but exact overlap is **unresolved**.
 Record source assembly completeness/isolate/MAG status and chromosome/plasmid
 membership. Public-genome pretraining/database overlap is possible/unknown for
-reference-informed tools. This is new-sample/assembly evidence; no unseen-species
+reference-informed tools. Historical training inventories are not always complete;
+this limits unseen-genome claims and is not evaluation-pipeline label leakage or
+a blocker merely because a full inventory cannot be recovered. This is new-sample/assembly evidence; no unseen-species
 claim follows. After error inspection it is development data for improvements.
 
 ## Truth and evaluation contracts
@@ -117,15 +140,17 @@ source catalog for provenance/overlap checks. If alignment indexing needs batche
 merge competing hits globally before declaring unique origin; independent
 per-batch winners are not competitive truth. Resource-check this path before fits.
 
-Use established **MetaQUAST reference alignments/misassembly evidence** with
-explicit supplied source references (disable automatic reference discovery), and
-the retained pinned **AMBER** API/options (`filter_tail_percentage=0`). The next
-adapter milestone must pin/version-test the actual alignment outputs, retain
-all competing hits, test orientation/coordinates, and validate a narrow interval
-adapter before scientific execution. Do not apply GSA mappings to assembler IDs,
-force a dominant label on a chimera, or import MAG-E's isolate-only defaults into
-this source population without an audit. The unresolved adapter is an execution
-dependency, not a completed evaluator/runtime claim.
+Use pinned **minimap2 2.30** all-chain PAF/CIGAR (`-x asm5 -P -c --eqx -m
+100 -s 100 -n 2 -t N-1`) and the retained **AMBER** API/options
+(`filter_tail_percentage=0`). `-P` retains all emitted chains without primary/
+secondary pruning; this is still a heuristic aligner, not exhaustive homology.
+Convert nothing silently: PAF coordinates are zero-based half-open, reverse query
+coordinates descend while reference coordinates ascend. I/D columns are not
+aligned support. The tested adapter reconciles all competing hits globally.
+MetaQUAST can provide supplemental misassembly evidence later; its filtered
+internal matches are not our narrow truth contract. Native small DNA validates
+coordinates, orientation, gaps, competing genomes and repeats locally; native
+Linux and full-reference scale remain owner-preflight/later admission dependencies.
 
 Prospective scoring rules:
 
@@ -152,7 +177,9 @@ Prospective scoring rules:
   unmatched and non-target DNA. Completeness is the union of that genome's
   reference coordinates supported in that bin divided by its entire supplied
   reference length. Missing/unassembled/excluded/noise regions remain failures;
-  duplicates cannot inflate completeness. Best-bin ties use opaque bin IDs,
+  duplicates cannot inflate completeness. Repeated loci within one source genome
+  can establish genome purity while remaining unusable for unique-coordinate
+  completeness; cross-genome shared segments support neither. Best-bin ties use opaque bin IDs,
   not a candidate search or truth-driven export choice. Include genomes with
   no recovered bin as zero. Report macro and reference-bp-weighted values and
   counts at ≥50% and ≥90% reference completeness at ≥95% purity. Separately
@@ -217,7 +244,7 @@ separately frozen task; the three-way GLM study remains planned, not run here.
 adapter tests, output/evaluator failure tests and returned-record analysis. Use
 ≤4 threads, loader zero, 8-GB RSS, ≤2-hour local integration. The accepted E002
 machine had 4 physical cores/16 GiB RAM; do not bulk download reads or infer full
-Linux tool feasibility from it. No integration was needed in this planning task.
+Linux tool feasibility from it. Local contracts are reported separately from pending native Linux validation.
 
 **Owner UCloud:** first a separate 8-vCPU/24-GB setup/asset/runtime preflight,
 then a recommended 16-vCPU/48-GB scientific job or resumable serial jobs following
@@ -226,13 +253,13 @@ parent/setup/native children inside the overall clock. CPU-only; no GPU presumed
 Protocol ceilings are safety/budget choices, not ordinary product maxima or runtime
 forecasts. More CPUs may help some stages; no linear speedup claim is made.
 
-The [budget](protocol.json) reserves at most **500 allocated vCPU-hours**, including
+The [budget](protocol.json) reserves at most **700 allocated core-hours**, including
 failed attempts, downloads/setup, collector time and idle driver time. Stage caps
-sum to 472; 28 are a reserve, not permission for automatic retries. The dated 2,100
-core-hour access record is not today's balance; confirm available owner budget
-when preparing a job. Measured full-stage projections must fit before admitting
-SCGBinner/CompleteBin. If not, report them resource-deferred before scoring; do not
-shorten native science or spend beyond the cap to make the shortlist look complete.
+sum to **664**, with **36** reserved, not automatic retry permission. The owner's
+2026-10-09 approximate balance is **1,980**: **1,280** remain outside this ceiling.
+This adds COMEBin's 192-hour slot to the prior 472-hour stage plan. No UCloud spend
+is measured in this preparation task. Native-scale projections must fit before
+admitting full fits; resource deferral is an operational outcome, not zero quality.
 
 Tools run serially, using the full allocation **including** coordinator/loader/
 child budgets. Numerical phases may use all 16 threads with loader zero; process
@@ -245,12 +272,15 @@ tested operational adapter for loader zero/pool budgets without changing scienti
 defaults; source patches/unsupported changes require named identities and review.
 Serial/I/O/graph stages may use less CPU; record that rather than fabricate full use.
 
-Prospective new disk allowance: 200 GB including compressed reads/source (~13 GB),
-decompressed reads, alignments, environments/payloads, failures and retained exports;
-largest uncertainty is BAM/native temporary data. Inspect actual members/sizes first.
-Do not delete old E001–E008 data or migrate colleagues' files. If reviewed size exceeds
-allowance, stop before the heavy step and request a specific expansion decision.
-No reference-population or read-subset change to satisfy storage silently.
+The former **200 GB is a provisioning estimate**, not a hard experiment cap.
+Home is approximately 50–100 GB; shared storage approximately 8–10 TB. Keep code,
+new environments, transfers/logs and compact evidence in Home. Bulk sources,
+reads, BAM/SAM and heavy temporaries belong in the project's own quoted
+`/work/RasmusAllesøeNielsen#2936/dl_binner/e009/` subtree. The preflight checks
+≥6-GB free Home / ≥30-GB free shared space before creating new payloads/prefixes;
+extraction checks declared member sizes against actual free space. Inspect actual
+sizes before the heavy run; provision more owned shared storage when needed,
+without changing science, deleting old attempts or touching colleagues' files.
 
 Research DAG should use pinned Snakemake local executor `--cores` without `--jobs`,
 aggregate RAM and explicit serial barriers. Installed `dl-binner run` remains its
@@ -274,24 +304,39 @@ filter the assembly or constrain the product. Retain preparation and amend the
 prospective scale/resource plan before scores; never secretly subsample a failing
 input. Do not automatically start another community, seed or architecture gate.
 
-## Exact next milestone and acceptance boundary
+## Current prepared milestone and acceptance boundary
 
-Implement/test the E009 **acquisition, source-overlap, assembly/depth/truth and
-native runtime adapters** on tiny actual contracts; pin recipes/payloads and the
-real alignment/evaluator semantics. Prepare a checksum-bound 8-vCPU/24-GB owner
-preflight (≤5 hours including setup/collection) to inventory new assets and test
-isolated Linux native paths. It must not fit full-community binners, rerun accepted
-science or execute the GLM study. Review its return before preparing the 16-vCPU
-assembly/scientific command and freezing actual manifests/projections. A healthy
-prefix alone is insufficient full-schedule feasibility; admission also uses the
-planned assembly's actual length/contig distribution and representative native timing.
-No owner command is runnable yet: adapters, payload hashes, actual inputs and native
-limits are not resolved by this planning commit.
+The acquisition, exact-accession/canonical-sequence overlap, read-pair, assembly,
+ordered BAM/depth, competitive truth, complete partition and narrow AMBER/R95
+adapters are implemented. [Operations](OPERATIONS.md) owns the immutable packet,
+exact command and return review. [Local validation](local-validation.json) keeps
+actual native paths, failed attempts, resource receipts and unexecuted paths
+separate. The driver accepts exactly 8 vCPU / 24 GB on Linux, one tool at a time,
+20-GB sampled working RSS, 17,400 work seconds plus 600 collection seconds.
+Parent verification/setup and native children share the clock; evidence-only
+collection after a timeout is labelled and charged separately. No community fit
+or E009 score is part of the packet.
 
-Planning checks: maintained links/context hashes, recorded source-byte verification,
-subject pairing, coverage schema/counts, budget arithmetic and unchanged product/source
-tree. No product/scientific regression or inference is repeated solely for a prose plan.
-Update this record with actual attempts and results only after evidence exists.
+It borrows clean E001 numerical/mapping/AMBER/CheckM assets read-only after complete
+inventory/import and byte checks, creates five distinct E009 tool prefixes, and
+owns missing wheel additions. The Linux utility solve pins all 59 package URLs,
+SHA256/MD5 identities; solve success is not Linux execution. Native HMMER worker
+counts include the master; owned wrappers retain actual argv. SCGBinner's otherwise
+host-wide marker/selection pools and HNSW defaults are capped explicitly; its two
+removed NumPy aliases are fixed in the isolated source copy. COMEBin receives a
+native BAM directory and its resolved emitted axes are checked, not guessed from
+aliases. Local Mac MEGAHIT four-thread crashes are preserved; one-thread software
+assembly validates its writer, while Linux must pass the full eight-thread path.
+
+**Next: owner runs the prepared preflight and returns its archive, checksum and
+terminal log.** Review source catalog/overlap, all native contracts, actual limits,
+read-only bytes, payload identities and costs before preparing the bounded
+16-vCPU/48-GB acquisition/assembly/mapping/truth job. Actual read payload hashes,
+source biological classification/targets, near-overlap annotation, assembly scale
+and representative full-native-schedule costs are unresolved before science.
+Unknown historical pretrained overlap is a claim limitation, not an automatic
+execution rejection. Scientific execution remains **not admitted**. No baseline,
+accepted science, architecture or marker-follow-up study changes here.
 
 2026-10-08 planning verification: `python3 scripts/check_docs.py --check-context`
 passes (54 maintained documents / 657 local links / 85 present fingerprints;

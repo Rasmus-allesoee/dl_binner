@@ -155,6 +155,12 @@ Be particularly careful about:
 
 Claims should follow evidence.
 
+Record known and unknown pretrained/reference-database overlap as a limitation on
+unseen-genome claims. It is distinct from labels entering our feature/training
+pipeline. An unavailable complete historical training inventory alone is not an
+automatic benchmark blocker; keep the uncertainty visible in interpretation.
+
+
 For comparative benchmarks, keep native whole-tool comparisons distinct from
 matched input/learning/clustering ablations. A winning tool does not identify
 which component caused its advantage. Preserve intermediate evidence, native

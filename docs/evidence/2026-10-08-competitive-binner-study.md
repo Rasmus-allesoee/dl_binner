@@ -12,6 +12,12 @@ The ignored `benchmark_tool_study_guide.md` is advisory; its hash is in the
 [D013](../decisions/D013-first-comparative-benchmark.md) owns the decision;
 [E009](../../experiments/E009-competitive-benchmark/README.md) owns prospective execution.
 
+2026-10-09 amendment: [targeted input/runtime reconciliation](2026-10-09-e009-contract-reconciliation.md)
+resolves the supplied GSA assets, includes COMEBin, names CompleteBin max-50,
+resolves DCVBin payload availability/CPU exclusion, and revises budget/storage.
+The October 8 source interpretations below remain a dated review snapshot;
+current execution choices belong to amended D013/E009.
+
 ## Evidence reused and refreshed
 
 The earlier review covers independent CAMI, Han, Arangasamy, Kim and MAG-E

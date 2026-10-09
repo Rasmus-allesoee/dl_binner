@@ -1,0 +1,447 @@
+{
+  "record": "E009",
+  "date": "2026-10-09",
+  "status": "source/payload locks; resolved Linux dependency locks pending preflight",
+  "sources": {
+    "CompleteBin": {
+      "url": "https://codeload.github.com/zoubohao/CompleteBin/tar.gz/be0b9311f0fe4278c231010f78d995dca02b66d6",
+      "bytes": 3452543,
+      "sha256": "d9a9d408f64650f07d07ed866ec7afc39d9d18e8987eae3e07ccbf2e2be35f0c",
+      "required_payloads_and_anchors": [
+        {
+          "path": "CompleteBin/Binning_steps.py",
+          "bytes": 28800,
+          "sha256": "69213361c97ff7490ac0fbe5306580b0b0f61d891a6193813ebb70911cfe864e"
+        },
+        {
+          "path": "CompleteBin/Seqs/seq_info.py",
+          "bytes": 14920,
+          "sha256": "a7cfbec3871fe44d131f9ecbc2b8354351cf168870949754508184b8f67cc4b4"
+        },
+        {
+          "path": "build/lib/CompleteBin/Binning_steps.py",
+          "bytes": 28800,
+          "sha256": "69213361c97ff7490ac0fbe5306580b0b0f61d891a6193813ebb70911cfe864e"
+        },
+        {
+          "path": "build/lib/CompleteBin/Seqs/seq_info.py",
+          "bytes": 14920,
+          "sha256": "a7cfbec3871fe44d131f9ecbc2b8354351cf168870949754508184b8f67cc4b4"
+        },
+        {
+          "path": "dist/completebin-1.2.3.4.tar.gz",
+          "bytes": 110874,
+          "sha256": "b8c21d343aa5fee804e4310296879d1653448ad882e07b45520804bc109a5022"
+        },
+        {
+          "path": "main.py",
+          "bytes": 75,
+          "sha256": "f2e088ef3108f8e508fef4e0fd9339f606b39a52c4837e6ee216d542111fdc38"
+        }
+      ]
+    },
+    "SCGBinner": {
+      "url": "https://codeload.github.com/htaohan/SCGBinner/tar.gz/d5ad239af9a1445f0e454c4d4aa9307b922961a9",
+      "bytes": 2967252,
+      "sha256": "2ca175d78187e84eab2a78f2cd5364c25d6db154140545286d063673bb35c852",
+      "required_payloads_and_anchors": [
+        {
+          "path": "SCGBinner/main.py",
+          "bytes": 16797,
+          "sha256": "32753203d3813fbedf48b99d72d359db1b3fc006f68b096137ce5b1bd5b51bab"
+        },
+        {
+          "path": "SCGBinner/markers.hmm",
+          "bytes": 16095376,
+          "sha256": "53a5bcda0599fafd73d0f9787da26781dae52e8a5214b49b6b244de631ac7e9b"
+        },
+        {
+          "path": "SCGBinner/train_CLmodel.py",
+          "bytes": 6741,
+          "sha256": "4497b23efc790f9fa1f3b868b1ad13fc05db195e349a44ebf53de8cf0ee1db72"
+        },
+        {
+          "path": "pyproject.toml",
+          "bytes": 608,
+          "sha256": "a4849384524a5955be4c45d1c37584eaf44f1aa77b37e4ce189df0f7b49c8f12"
+        }
+      ]
+    },
+    "MetaCAT": {
+      "url": "https://codeload.github.com/liu-congcong/MetaCAT/tar.gz/5de573fbce0a6549010b07002e278620a7da22b9",
+      "bytes": 66298912,
+      "sha256": "1ac125165f6aa9c7d0b6b50bb1c21aa5b8c8405abb3aa6664b43d054758558ae",
+      "required_payloads_and_anchors": [
+        {
+          "path": "Examples/assembly.gz",
+          "bytes": 990515,
+          "sha256": "892979c44d7cfefbaec816f42b1836bedc5b91d9d533de4e57cd130af72795cb"
+        },
+        {
+          "path": "Examples/c1i1.1.fastq.gz",
+          "bytes": 1640717,
+          "sha256": "28bd4185b481dd7301ba1c93d2bb1f200a0461bf29ad9a9372c8e606392b7cbc"
+        },
+        {
+          "path": "Examples/c1i1.2.fastq.gz",
+          "bytes": 1640907,
+          "sha256": "e67f070b00953f4eefced82ca32ae003f6933d3eaea9fbdbefec552b5b4c14bf"
+        },
+        {
+          "path": "Examples/c1i2.1.fastq.gz",
+          "bytes": 1682115,
+          "sha256": "4f79939923b39a496b67e84b1cdd4091589fcaefb8d3c0bdd35cdb18cb35fe23"
+        },
+        {
+          "path": "Examples/c1i2.2.fastq.gz",
+          "bytes": 1682344,
+          "sha256": "ba03f371d0c94df2569d008d2ab142a776d8033815199c7390d80fae0fc2475e"
+        },
+        {
+          "path": "Examples/c2i1.1.fastq.gz",
+          "bytes": 1600396,
+          "sha256": "ecae2c1ae7b0c0ad3416c3c1e15eb263ead292122bfa49b15d5f411027882be8"
+        },
+        {
+          "path": "Examples/c2i1.2.fastq.gz",
+          "bytes": 1600593,
+          "sha256": "b1f1a9d4ed8fe2965a81ac98fbfe344c53bb7a6990396489245ba0ef7789928c"
+        },
+        {
+          "path": "Examples/c2i2.1.fastq.gz",
+          "bytes": 1722702,
+          "sha256": "1ed5628e4e122aa6363b4c2be8aa0555240595e0c8ced806e38aa5cd34871f23"
+        },
+        {
+          "path": "Examples/c2i2.2.fastq.gz",
+          "bytes": 1722359,
+          "sha256": "cd520b34924d72490cab934215545d53c4e38c03a91df8f696161b10bdfff839"
+        },
+        {
+          "path": "MetaCAT/bam-linux-x86_64.so",
+          "bytes": 126896,
+          "sha256": "53ecf0dedb2d5c91f5f5a28b43d32341bc9467bef69e29af6bfe3df12c29bbe2"
+        },
+        {
+          "path": "MetaCAT/color-linux-x86_64.so",
+          "bytes": 17528,
+          "sha256": "1f0d9989f24a5b5418dd647e14743e17f5633f9623899ed74f9af5406120bd0e"
+        },
+        {
+          "path": "MetaCAT/markers.gz",
+          "bytes": 3075283,
+          "sha256": "46169ef476d73e6b362bbe844acd9c33577c4f36c9129845903461acc0d5bcc8"
+        }
+      ]
+    },
+    "SemiBin": {
+      "url": "https://codeload.github.com/BigDataBiology/SemiBin/tar.gz/e92a6214be87bdc15e4197fcccdeef08b1f21f75",
+      "bytes": 48645164,
+      "sha256": "61d9b0fb038cda85ec76f5e379d454421b53ff7f3a8e46fb737b002e68f70479",
+      "required_payloads_and_anchors": [
+        {
+          "path": "SemiBin/main.py",
+          "bytes": 75582,
+          "sha256": "993f3e0d7b90b41cc62634cc1c5931dd6ea67c730be1a6cc8b051d6362c94ddf"
+        },
+        {
+          "path": "SemiBin/marker.hmm",
+          "bytes": 15929643,
+          "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9"
+        },
+        {
+          "path": "SemiBin/models/built_environment_model.pt",
+          "bytes": 3116726,
+          "sha256": "fabf030f302d8c67fcf2732ae078c4ef5fc002d5cd371ea20066fd53ab68782d"
+        },
+        {
+          "path": "SemiBin/models/cat_gut_model.pt",
+          "bytes": 3116238,
+          "sha256": "af21fa581fd58bcf4f9343fdbdc7649ecf2663fd53fb1788c75d7d8b2eb58979"
+        },
+        {
+          "path": "SemiBin/models/chicken_caecum_model.pt",
+          "bytes": 3116554,
+          "sha256": "ee85f05bb2a8ce191c7e897a419a68c75a8ff308f284f636cf39a3ed67c18893"
+        },
+        {
+          "path": "SemiBin/models/dog_gut_model.pt",
+          "bytes": 3116238,
+          "sha256": "73952da38c32663cbec28251618e0b5fde92bf39342aece1b7edae62e6cfdd29"
+        },
+        {
+          "path": "SemiBin/models/global_model.pt",
+          "bytes": 3116202,
+          "sha256": "76b8b97ca713f11f5e4484c6b7401ef4e671698d383ba97fa0abd9daa54f6173"
+        },
+        {
+          "path": "SemiBin/models/human_gut_model.pt",
+          "bytes": 3116374,
+          "sha256": "07e327836738ebd16e993f477533882a0b3d9b95299cf672d63f15d0ddf430f4"
+        },
+        {
+          "path": "SemiBin/models/human_oral_model.pt",
+          "bytes": 3116410,
+          "sha256": "69baa5893139fa4697ecfd27681e9c229314d229f8882809013f352713fbf359"
+        },
+        {
+          "path": "SemiBin/models/mouse_gut_model.pt",
+          "bytes": 3116374,
+          "sha256": "eac38d457e43422d690f95b73f5617b9392aa3f47ae4ae04e69d8cf5e7d2fae9"
+        },
+        {
+          "path": "SemiBin/models/ocean_model.pt",
+          "bytes": 3116166,
+          "sha256": "c82f22aaac1d54e66af0cc7e016a3a73392185a24fd293f7e7b4a57db6dbbcce"
+        },
+        {
+          "path": "SemiBin/models/pig_gut_model.pt",
+          "bytes": 3116238,
+          "sha256": "afa6d8a22259330e5de5bc15bbd7785aa6941358802682f8a04c06eea2507254"
+        },
+        {
+          "path": "SemiBin/models/soil_model.pt",
+          "bytes": 3116130,
+          "sha256": "bbb4c345c4e80c607bce6ef3cbad9fbded9a54c6ca4fdb26744d43acfa7c0faf"
+        },
+        {
+          "path": "SemiBin/models/wastewater_model.pt",
+          "bytes": 3116410,
+          "sha256": "0dcfbdf5218cf077da31b918004ddd00817850a11e18872f18a3e2dfe7dde153"
+        },
+        {
+          "path": "pyproject.toml",
+          "bytes": 2432,
+          "sha256": "3d9c1f8e4b09e586bdf61176ff6ab47afa9082439c1d4c4c5eb208d5d226e7d0"
+        },
+        {
+          "path": "test/bin_data/input.fasta.gz",
+          "bytes": 182297,
+          "sha256": "3ccdaa05903e8c56bd8fc9ebde0916a206c5352541b673eda17038069d816096"
+        },
+        {
+          "path": "test/bin_data/model.pt",
+          "bytes": 3114286,
+          "sha256": "8999cabc35766d5006becbd4e7018de692f972c3c1502f301bf2c002e139e701"
+        },
+        {
+          "path": "test/coassembly_sample_data/input.fasta.gz",
+          "bytes": 182297,
+          "sha256": "4f828c99254fa7134f9352c2c7c870a2db9d5b50b3822242167c1b49c039fa8d"
+        },
+        {
+          "path": "test/data/concatenated.hmmout.gz",
+          "bytes": 20349,
+          "sha256": "e37aeb8de399f920e2697b27b826bd4397dd9f37c2d52363683d3f8ac03d0e1c"
+        },
+        {
+          "path": "test/multi_samples_data/input_multi.fasta.gz",
+          "bytes": 268540,
+          "sha256": "d0408db05bacb97a7da025061fc7ab10e83afc9c57b663e64487f0070b1adf72"
+        },
+        {
+          "path": "test/single_sample_data/input.fasta.gz",
+          "bytes": 182297,
+          "sha256": "3ccdaa05903e8c56bd8fc9ebde0916a206c5352541b673eda17038069d816096"
+        },
+        {
+          "path": "test/train_data/input.fasta.gz",
+          "bytes": 182297,
+          "sha256": "3ccdaa05903e8c56bd8fc9ebde0916a206c5352541b673eda17038069d816096"
+        }
+      ]
+    },
+    "COMEBin": {
+      "url": "https://codeload.github.com/ziyewang/COMEBin/tar.gz/1b476a41fac893294c70212a869573a732560ce5",
+      "bytes": 4154163,
+      "sha256": "265878e871e3d01bd847370784c1b860e53a22c90920811bd8fefd8f3bfb305f",
+      "required_payloads_and_anchors": [
+        {
+          "path": "COMEBin/main.py",
+          "bytes": 20439,
+          "sha256": "72918587dbdb2b15780e84b1001aef51aec38dd34233918878310655621148e5"
+        },
+        {
+          "path": "COMEBin/train_CLmodel.py",
+          "bytes": 10688,
+          "sha256": "08a7612cc9fc9948b60a466f97163e1addd88e97ef05316d62f3a7c99d41d6e0"
+        },
+        {
+          "path": "auxiliary/bacar_marker.hmm",
+          "bytes": 3671082,
+          "sha256": "4eb3d7fba77eb60fd81fd910b80678c3e0259906bbe7948180ff8eb05331dcc5"
+        },
+        {
+          "path": "auxiliary/marker.hmm",
+          "bytes": 15929643,
+          "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9"
+        },
+        {
+          "path": "auxiliary/test_getmarker_2quarter.pl",
+          "bytes": 16022,
+          "sha256": "558c3f1da94f5933cfcdab851cca0e863b0db90f79aeab6a4002e34f57d1527b"
+        }
+      ]
+    },
+    "minimap2": {
+      "url": "https://github.com/lh3/minimap2/archive/refs/tags/v2.30.tar.gz",
+      "bytes": 269912,
+      "sha256": "4e5cd621be2b2685c5c88d9b9b169c7e036ab9fff2f3afe1a1d4091ae3176380",
+      "required_payloads_and_anchors": [
+        {
+          "path": "pyproject.toml",
+          "bytes": 60,
+          "sha256": "61dc68287788159afd0498fa19e9c680ccaab83d482ca38c385465fb88a8f76a"
+        },
+        {
+          "path": "tex/eval2roc.pl",
+          "bytes": 580,
+          "sha256": "5156544ceec1c88cf2b24d86c110c5b1dc54b8f2554c18d12b0f5b3418900b8d"
+        }
+      ]
+    },
+    "megahit": {
+      "url": "https://github.com/voutcn/megahit/archive/refs/tags/v1.2.9.tar.gz",
+      "bytes": 268591,
+      "sha256": "09026eb07cc4e2d24f58b0a13f7a826ae8bb73da735a47cb1cbe6e4693118852",
+      "required_payloads_and_anchors": [
+        {
+          "path": "test_data/r1.il.fa.gz",
+          "bytes": 4381,
+          "sha256": "1fad7772f6aee9dc0cf08c27b393d6d3186a58d62cd6e9d497c8fd635779551d"
+        }
+      ]
+    }
+  },
+  "payloads": {
+    "CompleteBin_DB": {
+      "url": "https://drive.usercontent.google.com/download?id=1wJMoA-JikRbxC-UjQ_L3P77AUFH41R5I&export=download&confirm=t",
+      "bytes": 155904946,
+      "sha256": "2571aa041258ea7bbc51fc440d9d72ed9a575bca8b90cbbd4d042351d04e5401",
+      "members": [
+        {
+          "path": "CompleteBin-DB-v1.2.3.3/CheckPoint/pretrain_weight_large_hidden_dim_768_layers_4.pth",
+          "bytes": 152032963,
+          "sha256": "a0cb13e48103e9fd9e101f79ecd2fca1c17500b1f81f4588a4e473a2d915e9aa"
+        },
+        {
+          "path": "CompleteBin-DB-v1.2.3.3/data/markersets.ms",
+          "bytes": 4632,
+          "sha256": "5de3fe011321ceb3c4e7a74ae753d2b032c99d98aebb0164b953f6a0615129dd"
+        },
+        {
+          "path": "CompleteBin-DB-v1.2.3.3/data/pfam_file.dat",
+          "bytes": 2392685,
+          "sha256": "efdc000ebd77c0594126909f404b0a0a4fd1ada6cdab1a1caa91c069be81ed3b"
+        },
+        {
+          "path": "CompleteBin-DB-v1.2.3.3/HMM/40_marker.hmm",
+          "bytes": 3671642,
+          "sha256": "1a4969134c6f2c0befcd683efbf5cab4fea44d8049aebc699d3007b716b4c622"
+        },
+        {
+          "path": "CompleteBin-DB-v1.2.3.3/HMM/bac_arc_hmm_model_extended.hmm",
+          "bytes": 82264540,
+          "sha256": "2a9ddbc6293a9e16b7cc46e2c2909223e9c73889db27703ca4e27c8a23a0475b"
+        },
+        {
+          "path": "CompleteBin-DB-v1.2.3.3/HMM/get_40marker.pl",
+          "bytes": 15053,
+          "sha256": "327a5a3170a42631aa395b37e3aae9843e5e24640c5311e2d333ca8071704638"
+        }
+      ]
+    },
+    "micromamba": {
+      "url": "https://micro.mamba.pm/api/micromamba/linux-64/2.3.3",
+      "bytes": 6515385,
+      "sha256": "e7274528ceb9c20d048a428d6c22d7e02e268f8ffb762c4c365422347c8b8ba2"
+    },
+    "coverages": {
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/coverages.tar.gz",
+      "bytes": 106674,
+      "sha256": "32efe0d40d080d6c5ca36320d9a204e8da5d707f0aaafe24fef5c32a994d8b0f",
+      "role": "simulation source inventory only, never depth"
+    },
+    "sample_0_reads": {
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_0_reads.tar.gz",
+      "bytes": 4866106604,
+      "sha256": null,
+      "status": "provisional owner acquisition; freeze actual SHA256 after return; no science admitted"
+    },
+    "sample_1_reads": {
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_1_reads.tar.gz",
+      "bytes": 4866087028,
+      "sha256": null,
+      "status": "provisional owner acquisition; freeze actual SHA256 after return; no science admitted"
+    },
+    "source_genomes": {
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/source_genomes.tar.gz",
+      "bytes": 3202310417,
+      "sha256": null,
+      "status": "provisional owner acquisition; freeze actual SHA256 after return; no science admitted",
+      "etag": "0e6a3c89846e95c7b952e01d3cd630e7-6"
+    }
+  },
+  "unresolved_before_science": [
+    "read/source payload actual SHA256s and member/source/taxonomy overlap receipts",
+    "resolved Linux dependencies/import origins and native writer probes",
+    "actual assembly scale, read mapping and competitive-reference sensitivity",
+    "representative full-native-schedule cost admission"
+  ],
+  "completebin_modification": {
+    "before_sha256": "69213361c97ff7490ac0fbe5306580b0b0f61d891a6193813ebb70911cfe864e",
+    "after": {
+      "bytes": 28798,
+      "sha256": "99b4c8fe9b49e4ac9157de14dddefb8b8bde1f623e92830d13d7cfec2fb0ada7"
+    },
+    "change": "200 maximum -> 50; modified E009 configuration, not native parity",
+    "automatic_pretraining_score_uses_capped_epochs": true,
+    "early_stopping": "no validation-loss early stop in contrastive training; lower native safety valve retained"
+  },
+  "scgbinner_modification": {
+    "before_sha256": "08bd7aa998912dfb1317acaab776e76c4d0c85033dadff2e107b1544f69d2f64",
+    "after": {
+      "bytes": 6143,
+      "sha256": "c2cead398dbde33213953af6593d029ab36b72fe72c2effa7aebb1a38dfbb929"
+    },
+    "change": "two np.int dtype aliases -> int; same native integer dtype, no scientific settings change"
+  },
+  "dependency_wheels": {
+    "psutil": {
+      "version": "6.1.0",
+      "filename": "psutil-6.1.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/58/4d/8245e6f76a93c98aab285a43ea71ff1b171bcd90c9d238bf81f7021fb233/psutil-6.1.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 287255,
+      "sha256": "498c6979f9c6637ebc3a73b3f87f9eb1ec24e1ce53a7c5173b8508981614a90b",
+      "metadata_url": "https://pypi.org/pypi/psutil/6.1.0/json"
+    },
+    "numexpr": {
+      "version": "2.10.2",
+      "filename": "numexpr-2.10.2-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/7e/b0/64c04c9f8b4a563218d00daa1ec4563364961b79025162c5276ab2c7c407/numexpr-2.10.2-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 403846,
+      "sha256": "9309f2e43fe6e4560699ef5c27d7a848b3ff38549b6b57194207cf0e88900527",
+      "metadata_url": "https://pypi.org/pypi/numexpr/2.10.2/json"
+    },
+    "argcomplete": {
+      "version": "3.6.3",
+      "filename": "argcomplete-3.6.3-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/74/f5/9373290775639cb67a2fce7f629a1c240dce9f12fe927bc32b2736e16dfc/argcomplete-3.6.3-py3-none-any.whl",
+      "bytes": 43846,
+      "sha256": "f5007b3a600ccac5d25bbce33089211dfd49eab4a7718da3f10e3082525a92ce",
+      "metadata_url": "https://pypi.org/pypi/argcomplete/3.6.3/json"
+    }
+  },
+  "per_tool_owned_dependencies": {
+    "completebin": [
+      "psutil"
+    ],
+    "semibin": [
+      "numexpr",
+      "argcomplete"
+    ],
+    "metacat": [],
+    "comebin": [],
+    "scgbinner": []
+  }
+}

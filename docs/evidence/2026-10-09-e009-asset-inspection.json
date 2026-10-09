@@ -1,0 +1,4722 @@
+{
+  "date": "2026-10-09",
+  "scope": "targeted E009 source/assets and adapter reconciliation; no benchmark outcomes",
+  "official_page": {
+    "url": "https://cami-challenge.org/datasets/toy-human-gut/",
+    "file": {
+      "bytes": 49833,
+      "sha256": "c312c0a68c22064a7365bef57501d8c904569ae449fcb721480a01eb3376988d"
+    }
+  },
+  "official_sample0_assets": {
+    "contigs": {
+      "archive_bytes": 289486065,
+      "archive_sha256": "b214f00f4c6259d2b451dd7c0af39ff5e6610022ca0ca975933c4b85a2774d3f",
+      "members": [
+        {
+          "name": "sample_0_contigs/gsa_mapping.tsv.gz",
+          "compressed_bytes": 11764473,
+          "uncompressed_bytes": 41220713,
+          "uncompressed_sha256": "f3dcf7cb94ecc1ba17f2740c9cb95a967eec56d096baaeb8d66e0080ff4a587f",
+          "rows": 665738,
+          "genome_ids": 309,
+          "replicons": 6408
+        },
+        {
+          "name": "sample_0_contigs/gsa.fasta.gz",
+          "compressed_bytes": 136871556,
+          "uncompressed_bytes": 456957381,
+          "uncompressed_sha256": "bf42c964324c810562c87dedf0a6d79c069513278cf8ba5086d2d23ac4331db0",
+          "contigs": 665738,
+          "bp": 422673293,
+          "min_bp": 149,
+          "max_bp": 2345868,
+          "strata": {
+            "0": 544093,
+            "1": 48935,
+            "2": 21093,
+            "5": 1962,
+            "4": 11334,
+            "3": 38321
+          }
+        },
+        {
+          "name": "sample_0_contigs/anonymous_gsa.fasta.gz",
+          "compressed_bytes": 140834609,
+          "uncompressed_bytes": 437244842,
+          "uncompressed_sha256": "a9bb5249170762434fb4a57b4af5ec589de97ce6db6257cf9a0f134d7c6c686a",
+          "contigs": 665738,
+          "bp": 422673293,
+          "min_bp": 149,
+          "max_bp": 2345868,
+          "strata": {
+            "0": 544093,
+            "1": 48935,
+            "2": 21093,
+            "3": 38321,
+            "4": 11334,
+            "5": 1962
+          }
+        }
+      ]
+    },
+    "gsa": {
+      "archive_bytes": 136958228,
+      "archive_sha256": "ef79537699f0ab9453e8e8a12f2a131e49a4b4dc8c2cdef08c4245217f90a709",
+      "members": [
+        {
+          "name": "sample_0_gsa/sample0_ASV525.6_gsa.fasta.gz",
+          "compressed_bytes": 17390,
+          "uncompressed_bytes": 57018,
+          "uncompressed_sha256": "f306810460ab172eaa396b553d5a6f13339bca78928421ad918ca4cb926061cf",
+          "contigs": 198,
+          "bp": 46408,
+          "min_bp": 150,
+          "max_bp": 299,
+          "strata": {
+            "0": 198
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV96.0_gsa.fasta.gz",
+          "compressed_bytes": 8524,
+          "uncompressed_bytes": 28699,
+          "uncompressed_sha256": "a7400ab4cc6a089375767428ec7a4c7502428ea61b8b4436171fbbaf665d5fce",
+          "contigs": 1,
+          "bp": 28656,
+          "min_bp": 28656,
+          "max_bp": 28656,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV348.5_gsa.fasta.gz",
+          "compressed_bytes": 9394,
+          "uncompressed_bytes": 29613,
+          "uncompressed_sha256": "5f15a9da8d9806e64c3b29c34d2910c6114af980d81e10a2c7ffb7ab57c240c8",
+          "contigs": 104,
+          "bp": 24449,
+          "min_bp": 150,
+          "max_bp": 300,
+          "strata": {
+            "0": 104
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV19.0_gsa.fasta.gz",
+          "compressed_bytes": 98881,
+          "uncompressed_bytes": 346349,
+          "uncompressed_sha256": "3ea0199031a8aafa1ddca21ee448ca9b92c1b15052713653686941ae8d6f1e55",
+          "contigs": 10,
+          "bp": 345886,
+          "min_bp": 5344,
+          "max_bp": 96986,
+          "strata": {
+            "4": 4,
+            "5": 6
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV513.0_gsa.fasta.gz",
+          "compressed_bytes": 19658,
+          "uncompressed_bytes": 64076,
+          "uncompressed_sha256": "0824e652b4620a2f94bfe2c6aa93115a359d2b64b89238b6bc5011b6cec51761",
+          "contigs": 220,
+          "bp": 52148,
+          "min_bp": 150,
+          "max_bp": 441,
+          "strata": {
+            "0": 220
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV491.4_gsa.fasta.gz",
+          "compressed_bytes": 156635,
+          "uncompressed_bytes": 531285,
+          "uncompressed_sha256": "84bfbe49e49a4463fff8f52b4b9318e4954252734436f7ce15ba12e61f57afda",
+          "contigs": 1699,
+          "bp": 439627,
+          "min_bp": 150,
+          "max_bp": 906,
+          "strata": {
+            "0": 1665,
+            "1": 30,
+            "2": 4
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV97.0_gsa.fasta.gz",
+          "compressed_bytes": 1732,
+          "uncompressed_bytes": 5043,
+          "uncompressed_sha256": "ed49364e9ceca9c5549a34a6f41618992a9e9c0c7c6996449ebfd6cc3765029b",
+          "contigs": 9,
+          "bp": 4669,
+          "min_bp": 238,
+          "max_bp": 1073,
+          "strata": {
+            "0": 5,
+            "3": 1,
+            "2": 1,
+            "1": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV88.2_gsa.fasta.gz",
+          "compressed_bytes": 4545,
+          "uncompressed_bytes": 14210,
+          "uncompressed_sha256": "1f50e64ac4bdf4319783cbb3cf2bdc622cf822e5eab096a6c50e4c5e599df48e",
+          "contigs": 50,
+          "bp": 11766,
+          "min_bp": 150,
+          "max_bp": 311,
+          "strata": {
+            "0": 50
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV20.0_gsa.fasta.gz",
+          "compressed_bytes": 20478,
+          "uncompressed_bytes": 70159,
+          "uncompressed_sha256": "be60fc4ac903649dfb5d1956be4ecb93da32914d6aa2fdab81733bcb750ccc2e",
+          "contigs": 1,
+          "bp": 70116,
+          "min_bp": 70116,
+          "max_bp": 70116,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV23.0_gsa.fasta.gz",
+          "compressed_bytes": 1450,
+          "uncompressed_bytes": 4017,
+          "uncompressed_sha256": "c6bf4380a3dccc8a7954cd0542e26f2cfdfd1bd5f32ae284403a59bf21153b45",
+          "contigs": 13,
+          "bp": 3449,
+          "min_bp": 203,
+          "max_bp": 328,
+          "strata": {
+            "0": 13
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV387.0_gsa.fasta.gz",
+          "compressed_bytes": 886314,
+          "uncompressed_bytes": 3069245,
+          "uncompressed_sha256": "fcaefed7629f235dd219b12d66f9cf2800066b22f47ecadc53f60e489073e9fb",
+          "contigs": 51,
+          "bp": 3066625,
+          "min_bp": 326,
+          "max_bp": 280026,
+          "strata": {
+            "5": 36,
+            "0": 1,
+            "4": 6,
+            "3": 5,
+            "2": 1,
+            "1": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV40.0_gsa.fasta.gz",
+          "compressed_bytes": 38888,
+          "uncompressed_bytes": 128977,
+          "uncompressed_sha256": "c22806d32294cb80ca8e7fb2d51d3f66fcf17b1d5bfc65e43842c6e572db7b94",
+          "contigs": 204,
+          "bp": 119865,
+          "min_bp": 150,
+          "max_bp": 2728,
+          "strata": {
+            "0": 108,
+            "1": 48,
+            "2": 17,
+            "3": 30,
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV22.0_gsa.fasta.gz",
+          "compressed_bytes": 5600,
+          "uncompressed_bytes": 17436,
+          "uncompressed_sha256": "a936ac81d5fcc9f6726aabbf46bc642c128407a5ca550ce4081262eba7ff2e82",
+          "contigs": 57,
+          "bp": 14952,
+          "min_bp": 150,
+          "max_bp": 570,
+          "strata": {
+            "0": 55,
+            "1": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV380.3_gsa.fasta.gz",
+          "compressed_bytes": 5463,
+          "uncompressed_bytes": 17017,
+          "uncompressed_sha256": "d0c8c019efcce772e8d7f066959826c891c39e126ea4c39a97b2453c14ffdaaa",
+          "contigs": 58,
+          "bp": 14065,
+          "min_bp": 150,
+          "max_bp": 300,
+          "strata": {
+            "0": 58
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV100.0_gsa.fasta.gz",
+          "compressed_bytes": 13478,
+          "uncompressed_bytes": 44168,
+          "uncompressed_sha256": "407e48d586cdf6230f5f76f103a1f89b0e8bbb82aa83a5d2cbe9da83e1fa8554",
+          "contigs": 127,
+          "bp": 38563,
+          "min_bp": 150,
+          "max_bp": 766,
+          "strata": {
+            "0": 121,
+            "1": 6
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV255.2_gsa.fasta.gz",
+          "compressed_bytes": 38877,
+          "uncompressed_bytes": 130183,
+          "uncompressed_sha256": "73754cdb067c86b7a4fc881df68182770c63b294d123942a87bfd2342bd9ce54",
+          "contigs": 446,
+          "bp": 105855,
+          "min_bp": 150,
+          "max_bp": 450,
+          "strata": {
+            "0": 446
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV7.0_gsa.fasta.gz",
+          "compressed_bytes": 43290,
+          "uncompressed_bytes": 148643,
+          "uncompressed_sha256": "c5a5ddccb4df88331befaf852e717741042a3e249a70c7f192fca502ab03b445",
+          "contigs": 1,
+          "bp": 148599,
+          "min_bp": 148599,
+          "max_bp": 148599,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV31.0_gsa.fasta.gz",
+          "compressed_bytes": 2167,
+          "uncompressed_bytes": 6461,
+          "uncompressed_sha256": "fcaf20ca2e0166bd73fab1f687ae286b2bf45d357641519b2cdbfb1908bb552f",
+          "contigs": 4,
+          "bp": 6291,
+          "min_bp": 515,
+          "max_bp": 2763,
+          "strata": {
+            "3": 2,
+            "4": 1,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV13.0_gsa.fasta.gz",
+          "compressed_bytes": 6914,
+          "uncompressed_bytes": 22274,
+          "uncompressed_sha256": "7243cdc63a0377fdd8b9a0fac15d3943516db2d978e26c8ba17820c64fba4144",
+          "contigs": 57,
+          "bp": 19799,
+          "min_bp": 150,
+          "max_bp": 1097,
+          "strata": {
+            "0": 49,
+            "1": 4,
+            "2": 3,
+            "3": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV4.0_gsa.fasta.gz",
+          "compressed_bytes": 13272,
+          "uncompressed_bytes": 44266,
+          "uncompressed_sha256": "fafbb32780c97869775154cb0f0da390b5e964d8691802ecc8425997e4d9cc6b",
+          "contigs": 1,
+          "bp": 44224,
+          "min_bp": 44224,
+          "max_bp": 44224,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV300.2_gsa.fasta.gz",
+          "compressed_bytes": 897576,
+          "uncompressed_bytes": 3107650,
+          "uncompressed_sha256": "be0523245d9762f94b7516ffae7e7284ef4e2c4c0a6a73d99896db21e45341e4",
+          "contigs": 74,
+          "bp": 3104083,
+          "min_bp": 150,
+          "max_bp": 287719,
+          "strata": {
+            "5": 41,
+            "0": 6,
+            "4": 11,
+            "3": 13,
+            "2": 1,
+            "1": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV54.0_gsa.fasta.gz",
+          "compressed_bytes": 524,
+          "uncompressed_bytes": 1239,
+          "uncompressed_sha256": "59580f7155b9d67654e327b7d0612cf13f0195d3a888fe24c7adfe8435339e67",
+          "contigs": 4,
+          "bp": 1074,
+          "min_bp": 251,
+          "max_bp": 279,
+          "strata": {
+            "0": 4
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV80.0_gsa.fasta.gz",
+          "compressed_bytes": 31729,
+          "uncompressed_bytes": 108447,
+          "uncompressed_sha256": "2bf7bc97ab974666061a7f29be2ca0d723b9e33a0e5474d84664d84fa6b716b1",
+          "contigs": 1,
+          "bp": 108402,
+          "min_bp": 108402,
+          "max_bp": 108402,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV709.10_gsa.fasta.gz",
+          "compressed_bytes": 9933,
+          "uncompressed_bytes": 31345,
+          "uncompressed_sha256": "8896b22a53e2c1a438b4947128913ec0c2e70fe1985599819a0067b7522809ef",
+          "contigs": 106,
+          "bp": 26089,
+          "min_bp": 150,
+          "max_bp": 300,
+          "strata": {
+            "0": 106
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV84.0_gsa.fasta.gz",
+          "compressed_bytes": 14723,
+          "uncompressed_bytes": 49575,
+          "uncompressed_sha256": "47870d5b9ebe554a694f165873f2ff6da269c4853d8706904a77e517b56eeee8",
+          "contigs": 4,
+          "bp": 49397,
+          "min_bp": 302,
+          "max_bp": 31308,
+          "strata": {
+            "5": 2,
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV93.0_gsa.fasta.gz",
+          "compressed_bytes": 3463,
+          "uncompressed_bytes": 10460,
+          "uncompressed_sha256": "0ee3812420131cf804425563fcae1053a389043bdcd27b65fbcf190c387b89ee",
+          "contigs": 33,
+          "bp": 9029,
+          "min_bp": 150,
+          "max_bp": 675,
+          "strata": {
+            "0": 31,
+            "1": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV406.4_gsa.fasta.gz",
+          "compressed_bytes": 981788,
+          "uncompressed_bytes": 3406250,
+          "uncompressed_sha256": "ce1b0c846b27f9a452f001802b9f03de445c4fc4bb5773aa071f7f6631d579e1",
+          "contigs": 28,
+          "bp": 3404858,
+          "min_bp": 697,
+          "max_bp": 656943,
+          "strata": {
+            "5": 23,
+            "3": 3,
+            "1": 1,
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV57.0_gsa.fasta.gz",
+          "compressed_bytes": 13370,
+          "uncompressed_bytes": 44913,
+          "uncompressed_sha256": "a453cfea8dd56eb51e5259b890cdbf6223ff3d7d46c06c6a614656143794c04d",
+          "contigs": 1,
+          "bp": 44871,
+          "min_bp": 44871,
+          "max_bp": 44871,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV41.0_gsa.fasta.gz",
+          "compressed_bytes": 2888,
+          "uncompressed_bytes": 8856,
+          "uncompressed_sha256": "83482a40f51944ab7d5293dfe2c2e773651c95da247f6272fbdb0ee5ac018233",
+          "contigs": 1,
+          "bp": 8815,
+          "min_bp": 8815,
+          "max_bp": 8815,
+          "strata": {
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV35.0_gsa.fasta.gz",
+          "compressed_bytes": 213,
+          "uncompressed_bytes": 328,
+          "uncompressed_sha256": "9807aa7a212495bfb4dd2990c95a67795ff63e65ffef40b6b804927a8dfec4b6",
+          "contigs": 1,
+          "bp": 286,
+          "min_bp": 286,
+          "max_bp": 286,
+          "strata": {
+            "0": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV10.0_gsa.fasta.gz",
+          "compressed_bytes": 11097,
+          "uncompressed_bytes": 35695,
+          "uncompressed_sha256": "4e5031962f6c9186862922e91338f4e3a1c80c3e232ec275d8c3dbc19ecebaeb",
+          "contigs": 55,
+          "bp": 33296,
+          "min_bp": 150,
+          "max_bp": 2059,
+          "strata": {
+            "0": 24,
+            "1": 16,
+            "2": 6,
+            "3": 9
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_pASV67_gsa.fasta.gz",
+          "compressed_bytes": 1335,
+          "uncompressed_bytes": 18939,
+          "uncompressed_sha256": "48e5906800ab2b57a6c9b5ecaa6bbedbe30c1261e4d21fd4f0bce62bcdb6a806",
+          "contigs": 20,
+          "bp": 18058,
+          "min_bp": 150,
+          "max_bp": 1883,
+          "strata": {
+            "3": 7,
+            "0": 5,
+            "1": 4,
+            "2": 4
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hASV1.0_gsa.fasta.gz",
+          "compressed_bytes": 24342834,
+          "uncompressed_bytes": 80304719,
+          "uncompressed_sha256": "7506433e52ca08b4d26b1ccbfe34cecdeb21cd672737ed35eefa403c35f0fd57",
+          "contigs": 276084,
+          "bp": 66376263,
+          "min_bp": 149,
+          "max_bp": 781,
+          "strata": {
+            "0": 275579,
+            "1": 503,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV20.3_gsa.fasta.gz",
+          "compressed_bytes": 8306,
+          "uncompressed_bytes": 27981,
+          "uncompressed_sha256": "f26723ecec6a1895d82bd91563ab37f2a1de33783dd5a447fcca090dbe6c937b",
+          "contigs": 1,
+          "bp": 27939,
+          "min_bp": 27939,
+          "max_bp": 27939,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV45.0_gsa.fasta.gz",
+          "compressed_bytes": 25907,
+          "uncompressed_bytes": 87928,
+          "uncompressed_sha256": "e719046be6a14626ea7b53e708b7ff2b45a39103d2726cf45e63d06f188a7ed7",
+          "contigs": 86,
+          "bp": 84131,
+          "min_bp": 150,
+          "max_bp": 4582,
+          "strata": {
+            "2": 16,
+            "0": 23,
+            "3": 32,
+            "1": 12,
+            "4": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV463.1_gsa.fasta.gz",
+          "compressed_bytes": 134328,
+          "uncompressed_bytes": 451709,
+          "uncompressed_sha256": "6d272e35d3da0312ef9f2681e5d0a3e7e776d6106f84c5154a62bc32e45af9d2",
+          "contigs": 1460,
+          "bp": 374322,
+          "min_bp": 149,
+          "max_bp": 729,
+          "strata": {
+            "0": 1434,
+            "1": 26
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV420.1_gsa.fasta.gz",
+          "compressed_bytes": 5997,
+          "uncompressed_bytes": 18928,
+          "uncompressed_sha256": "b32b9a8598dfc941bd18f03a24774c29757166d845991f0116012e81b890bff7",
+          "contigs": 67,
+          "bp": 15327,
+          "min_bp": 150,
+          "max_bp": 297,
+          "strata": {
+            "0": 67
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV687.8_gsa.fasta.gz",
+          "compressed_bytes": 1406513,
+          "uncompressed_bytes": 4765469,
+          "uncompressed_sha256": "8e24da00db557752ec81712e76da9bdeb7da574086bcd5349600428ee61f38be",
+          "contigs": 3895,
+          "bp": 4570688,
+          "min_bp": 150,
+          "max_bp": 8971,
+          "strata": {
+            "3": 1318,
+            "0": 1156,
+            "2": 420,
+            "4": 413,
+            "1": 588
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV134.7_gsa.fasta.gz",
+          "compressed_bytes": 1528420,
+          "uncompressed_bytes": 5160077,
+          "uncompressed_sha256": "857e1220ed9d8b98b94c518424f4b70e3cd1040bd6fe6dafd32d63df5af7d19b",
+          "contigs": 4311,
+          "bp": 4944534,
+          "min_bp": 150,
+          "max_bp": 9663,
+          "strata": {
+            "0": 1279,
+            "1": 714,
+            "3": 1386,
+            "4": 429,
+            "2": 503
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV33.5_gsa.fasta.gz",
+          "compressed_bytes": 615,
+          "uncompressed_bytes": 1533,
+          "uncompressed_sha256": "ecd624f8285d5e32b0e7fed1179c3533246cc004f2f4770fe6850f98560a57db",
+          "contigs": 5,
+          "bp": 1316,
+          "min_bp": 238,
+          "max_bp": 289,
+          "strata": {
+            "0": 5
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV19.14_gsa.fasta.gz",
+          "compressed_bytes": 12712,
+          "uncompressed_bytes": 41526,
+          "uncompressed_sha256": "be449bede187e76553c142175c365c24ee62f8c508c7abc28049041ba10be2ec",
+          "contigs": 141,
+          "bp": 34010,
+          "min_bp": 150,
+          "max_bp": 475,
+          "strata": {
+            "0": 141
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV73.0_gsa.fasta.gz",
+          "compressed_bytes": 2057,
+          "uncompressed_bytes": 6142,
+          "uncompressed_sha256": "d9ccf257ba46064f99afd126fc9810cdff192f0dd31576cfe21ae923a6804996",
+          "contigs": 9,
+          "bp": 5766,
+          "min_bp": 222,
+          "max_bp": 1412,
+          "strata": {
+            "0": 4,
+            "3": 1,
+            "1": 2,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV602.4_gsa.fasta.gz",
+          "compressed_bytes": 6565,
+          "uncompressed_bytes": 20475,
+          "uncompressed_sha256": "9c23476a5b1b219071f2c7228c294d145d769dbfa38f597065e8a944893e8a2c",
+          "contigs": 70,
+          "bp": 16921,
+          "min_bp": 150,
+          "max_bp": 299,
+          "strata": {
+            "0": 70
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV466.0_gsa.fasta.gz",
+          "compressed_bytes": 708924,
+          "uncompressed_bytes": 2412661,
+          "uncompressed_sha256": "b4a11991db36f5d8cb45dc402b2f49867b136f49c9c005aa10f826dfc8e70c25",
+          "contigs": 7044,
+          "bp": 2033066,
+          "min_bp": 150,
+          "max_bp": 1377,
+          "strata": {
+            "0": 6594,
+            "2": 44,
+            "1": 401,
+            "3": 5
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV38.0_gsa.fasta.gz",
+          "compressed_bytes": 3902,
+          "uncompressed_bytes": 12423,
+          "uncompressed_sha256": "124b06bea484bf2453f02dcce2cb3cc50dc39403b74224cb7da50b49c2a94e3b",
+          "contigs": 32,
+          "bp": 11043,
+          "min_bp": 150,
+          "max_bp": 918,
+          "strata": {
+            "0": 28,
+            "1": 3,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV507.3_gsa.fasta.gz",
+          "compressed_bytes": 879841,
+          "uncompressed_bytes": 3062456,
+          "uncompressed_sha256": "6ba5b1cabe9b771e9d5a474431c969045dc0d0ba23ae8202d028d4300ed75459",
+          "contigs": 93,
+          "bp": 3057723,
+          "min_bp": 390,
+          "max_bp": 404827,
+          "strata": {
+            "5": 38,
+            "3": 23,
+            "4": 9,
+            "1": 12,
+            "2": 5,
+            "0": 6
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV78.0_gsa.fasta.gz",
+          "compressed_bytes": 14538,
+          "uncompressed_bytes": 50704,
+          "uncompressed_sha256": "6e5da874696b224857fcecdb5f8b2c93bc888ffff73fa128a372dea85bbda6ec",
+          "contigs": 9,
+          "bp": 50308,
+          "min_bp": 377,
+          "max_bp": 14113,
+          "strata": {
+            "0": 1,
+            "4": 5,
+            "3": 2,
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_fASV196.1_gsa.fasta.gz",
+          "compressed_bytes": 8742032,
+          "uncompressed_bytes": 28821456,
+          "uncompressed_sha256": "8bfb68b314a7884b4b0146a311ba3d381c91435e1bbf94f9a941c0dc4b3da7df",
+          "contigs": 268,
+          "bp": 28807821,
+          "min_bp": 492,
+          "max_bp": 1105755,
+          "strata": {
+            "5": 194,
+            "4": 35,
+            "3": 19,
+            "1": 15,
+            "2": 3,
+            "0": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV385.7_gsa.fasta.gz",
+          "compressed_bytes": 22371,
+          "uncompressed_bytes": 74104,
+          "uncompressed_sha256": "73aafe4e5af9120a68c7ddd5a2e6ab35b119adf135a2c94af9e718a50dc0613b",
+          "contigs": 260,
+          "bp": 60123,
+          "min_bp": 150,
+          "max_bp": 386,
+          "strata": {
+            "0": 260
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV341.3_gsa.fasta.gz",
+          "compressed_bytes": 41456,
+          "uncompressed_bytes": 138067,
+          "uncompressed_sha256": "205e0c2b318100087a4cf8d342cfcf800f57b4ef29b2183e1fc54093e48605dd",
+          "contigs": 476,
+          "bp": 113717,
+          "min_bp": 150,
+          "max_bp": 536,
+          "strata": {
+            "0": 475,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV297.4_gsa.fasta.gz",
+          "compressed_bytes": 12077,
+          "uncompressed_bytes": 39083,
+          "uncompressed_sha256": "72b30d9bdfb84968a2bdfce5436fc547f99114c0a023d2839be2a59682e63474",
+          "contigs": 136,
+          "bp": 31811,
+          "min_bp": 150,
+          "max_bp": 453,
+          "strata": {
+            "0": 136
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV39.0_gsa.fasta.gz",
+          "compressed_bytes": 7969,
+          "uncompressed_bytes": 26348,
+          "uncompressed_sha256": "4e2b325b3036494fa9114ae1ef589fc87cc61dd31671d681bd99eff133d7b726",
+          "contigs": 17,
+          "bp": 25605,
+          "min_bp": 150,
+          "max_bp": 5355,
+          "strata": {
+            "4": 3,
+            "3": 6,
+            "0": 5,
+            "1": 1,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV34.2_gsa.fasta.gz",
+          "compressed_bytes": 312,
+          "uncompressed_bytes": 589,
+          "uncompressed_sha256": "19302c39e25d160db38f6b0686c3357bb94e5cca81798ec36464505c6ae631c2",
+          "contigs": 2,
+          "bp": 506,
+          "min_bp": 235,
+          "max_bp": 271,
+          "strata": {
+            "0": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV61.0_gsa.fasta.gz",
+          "compressed_bytes": 11555,
+          "uncompressed_bytes": 38358,
+          "uncompressed_sha256": "547c86eec4e0455d317eff609e196a16dc227599e3b75c0c51e19b25c039473e",
+          "contigs": 10,
+          "bp": 37913,
+          "min_bp": 1004,
+          "max_bp": 9648,
+          "strata": {
+            "4": 8,
+            "3": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV5.0_gsa.fasta.gz",
+          "compressed_bytes": 2156,
+          "uncompressed_bytes": 6511,
+          "uncompressed_sha256": "75caef2093a47ac9657c3fc5cca577efc1d87492b81a7ffc6f8ffd01a0d068a5",
+          "contigs": 1,
+          "bp": 6470,
+          "min_bp": 6470,
+          "max_bp": 6470,
+          "strata": {
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_pASV62_gsa.fasta.gz",
+          "compressed_bytes": 3218,
+          "uncompressed_bytes": 49728,
+          "uncompressed_sha256": "7d3063e0e2a32b63faa07634cdecb2f7a1dc89a1e6a89eba44e417d3aa3580f4",
+          "contigs": 37,
+          "bp": 48064,
+          "min_bp": 150,
+          "max_bp": 3139,
+          "strata": {
+            "3": 16,
+            "2": 4,
+            "0": 8,
+            "4": 6,
+            "1": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV21.0_gsa.fasta.gz",
+          "compressed_bytes": 681,
+          "uncompressed_bytes": 1689,
+          "uncompressed_sha256": "cde3367006c1550f9cbf37767158058572bf263dce8025fc9e9dc159eb4e3d6a",
+          "contigs": 3,
+          "bp": 1569,
+          "min_bp": 263,
+          "max_bp": 728,
+          "strata": {
+            "1": 2,
+            "0": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV73.2_gsa.fasta.gz",
+          "compressed_bytes": 731316,
+          "uncompressed_bytes": 2528048,
+          "uncompressed_sha256": "b188544b65b739898440a7adf1debd0276b3ff99ad3e2bd94d00a15626fadabd",
+          "contigs": 46,
+          "bp": 2525779,
+          "min_bp": 386,
+          "max_bp": 307790,
+          "strata": {
+            "5": 31,
+            "4": 7,
+            "0": 1,
+            "3": 5,
+            "2": 1,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_pASV66_gsa.fasta.gz",
+          "compressed_bytes": 3538,
+          "uncompressed_bytes": 51305,
+          "uncompressed_sha256": "34e1cd5f57942e471fc676c3344e28e1ba3f41c30731ec0bd64091c3aca30245",
+          "contigs": 47,
+          "bp": 49198,
+          "min_bp": 150,
+          "max_bp": 3435,
+          "strata": {
+            "0": 18,
+            "3": 16,
+            "1": 8,
+            "4": 3,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV61.4_gsa.fasta.gz",
+          "compressed_bytes": 4508,
+          "uncompressed_bytes": 14074,
+          "uncompressed_sha256": "d9895d5d18df7df2d539774e76ca060aa9ecb1dab926e7f7a49ac577f47bf826",
+          "contigs": 45,
+          "bp": 11637,
+          "min_bp": 150,
+          "max_bp": 511,
+          "strata": {
+            "0": 44,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV42.0_gsa.fasta.gz",
+          "compressed_bytes": 38082,
+          "uncompressed_bytes": 129485,
+          "uncompressed_sha256": "eb946a41916f38a0d2fddfd155275a01d80190233f7582eb7fcf4e8b7d1deef0",
+          "contigs": 1,
+          "bp": 129440,
+          "min_bp": 129440,
+          "max_bp": 129440,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV90.0_gsa.fasta.gz",
+          "compressed_bytes": 12081,
+          "uncompressed_bytes": 40825,
+          "uncompressed_sha256": "51a5ea9389177a74fd24518710c1369bcd42dcac58e98646510f827175d58339",
+          "contigs": 1,
+          "bp": 40782,
+          "min_bp": 40782,
+          "max_bp": 40782,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV287.1_gsa.fasta.gz",
+          "compressed_bytes": 63016,
+          "uncompressed_bytes": 211912,
+          "uncompressed_sha256": "eaf5e6d71f2653c8ddc35b16776a8d12f56fca714188b6115ba112227e74629d",
+          "contigs": 712,
+          "bp": 173881,
+          "min_bp": 149,
+          "max_bp": 711,
+          "strata": {
+            "0": 706,
+            "1": 6
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV102.10_gsa.fasta.gz",
+          "compressed_bytes": 1934128,
+          "uncompressed_bytes": 6655355,
+          "uncompressed_sha256": "f6244b19348cdedd1b4881b00f0169646edd965319658d7d12141d2601cc1c95",
+          "contigs": 93,
+          "bp": 6650532,
+          "min_bp": 1076,
+          "max_bp": 468006,
+          "strata": {
+            "5": 70,
+            "4": 13,
+            "3": 10
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV86.13_gsa.fasta.gz",
+          "compressed_bytes": 329627,
+          "uncompressed_bytes": 1128268,
+          "uncompressed_sha256": "6a9254b322593c5850f13600b0a0a1fdaca2387b43c7eafb393907a211d3af7e",
+          "contigs": 3411,
+          "bp": 953986,
+          "min_bp": 150,
+          "max_bp": 1333,
+          "strata": {
+            "0": 3244,
+            "1": 156,
+            "3": 2,
+            "2": 9
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV23.7_gsa.fasta.gz",
+          "compressed_bytes": 671602,
+          "uncompressed_bytes": 2281453,
+          "uncompressed_sha256": "f0a183be264c189a4dd9fa7bea6284dec0d121717df36ad300222b1c46f11e3d",
+          "contigs": 2288,
+          "bp": 2158041,
+          "min_bp": 150,
+          "max_bp": 5676,
+          "strata": {
+            "1": 405,
+            "3": 653,
+            "0": 830,
+            "4": 128,
+            "2": 272
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV88.0_gsa.fasta.gz",
+          "compressed_bytes": 3849,
+          "uncompressed_bytes": 11685,
+          "uncompressed_sha256": "e901097ad8fe00feb0422349c18d3b41ebd15ba1f63e227236fc678750e26ddf",
+          "contigs": 39,
+          "bp": 9992,
+          "min_bp": 150,
+          "max_bp": 492,
+          "strata": {
+            "0": 39
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_fASV199.4_gsa.fasta.gz",
+          "compressed_bytes": 1386216,
+          "uncompressed_bytes": 4486828,
+          "uncompressed_sha256": "0c4b80b3e1de76c4d0a8ea9ae35eed92d324fbb094732bdd809fafa1c8d02044",
+          "contigs": 14697,
+          "bp": 3728378,
+          "min_bp": 149,
+          "max_bp": 812,
+          "strata": {
+            "0": 14448,
+            "1": 247,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV83.0_gsa.fasta.gz",
+          "compressed_bytes": 6382,
+          "uncompressed_bytes": 20059,
+          "uncompressed_sha256": "8e19c4c9725b59c6ab545b3fd355a5a5179e05bbb64fed0f9b226e101228286d",
+          "contigs": 60,
+          "bp": 17437,
+          "min_bp": 150,
+          "max_bp": 570,
+          "strata": {
+            "0": 56,
+            "1": 4
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV49.2_gsa.fasta.gz",
+          "compressed_bytes": 38215,
+          "uncompressed_bytes": 127457,
+          "uncompressed_sha256": "1b7fd962a613c579aca146a1a0c3bf11068a627443ae78081fa9bfecfb04751d",
+          "contigs": 426,
+          "bp": 104534,
+          "min_bp": 150,
+          "max_bp": 498,
+          "strata": {
+            "0": 426
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV98.0_gsa.fasta.gz",
+          "compressed_bytes": 324,
+          "uncompressed_bytes": 649,
+          "uncompressed_sha256": "7fb6f974d0a0600c551378a88811d0126be6a97b4a9b356217c7f11be23a564e",
+          "contigs": 2,
+          "bp": 561,
+          "min_bp": 266,
+          "max_bp": 295,
+          "strata": {
+            "0": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV730.1_gsa.fasta.gz",
+          "compressed_bytes": 19643,
+          "uncompressed_bytes": 64060,
+          "uncompressed_sha256": "3e68134409d836d1d199532c12bd0aeb95b9df9a7ebbc15f60188620caea0f9a",
+          "contigs": 220,
+          "bp": 52133,
+          "min_bp": 150,
+          "max_bp": 368,
+          "strata": {
+            "0": 220
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV45.0_gsa.fasta.gz",
+          "compressed_bytes": 9180,
+          "uncompressed_bytes": 30572,
+          "uncompressed_sha256": "6a8617e69e3b3deb71880cb224ca0fb11f465b02a048dd253c002437890ff556",
+          "contigs": 12,
+          "bp": 30046,
+          "min_bp": 349,
+          "max_bp": 6330,
+          "strata": {
+            "3": 5,
+            "4": 5,
+            "2": 1,
+            "0": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV25.0_gsa.fasta.gz",
+          "compressed_bytes": 1988,
+          "uncompressed_bytes": 6037,
+          "uncompressed_sha256": "fe8611bb6c8da92d0ead90ad0b8f40e770cfd6c3ac7a00849d55c81446d09094",
+          "contigs": 1,
+          "bp": 5996,
+          "min_bp": 5996,
+          "max_bp": 5996,
+          "strata": {
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV95.0_gsa.fasta.gz",
+          "compressed_bytes": 8610,
+          "uncompressed_bytes": 28536,
+          "uncompressed_sha256": "9f8da1cdd7122a322f928e86860342cf5594383a222c8f644ad27480236bf752",
+          "contigs": 55,
+          "bp": 26145,
+          "min_bp": 150,
+          "max_bp": 1420,
+          "strata": {
+            "1": 13,
+            "0": 34,
+            "3": 5,
+            "2": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV426.8_gsa.fasta.gz",
+          "compressed_bytes": 821578,
+          "uncompressed_bytes": 2846941,
+          "uncompressed_sha256": "ee64feaf207bb2d810839b3b3ea439b5809e3f7a7d357324d3a44c890fb71c16",
+          "contigs": 38,
+          "bp": 2844968,
+          "min_bp": 330,
+          "max_bp": 527178,
+          "strata": {
+            "5": 27,
+            "0": 1,
+            "4": 7,
+            "3": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV329.2_gsa.fasta.gz",
+          "compressed_bytes": 741287,
+          "uncompressed_bytes": 2501428,
+          "uncompressed_sha256": "b5338d768280845b9e07f0c8ed60d42fb39d3e98a2546c6ac34b9e0a482e382d",
+          "contigs": 3398,
+          "bp": 2333470,
+          "min_bp": 150,
+          "max_bp": 4043,
+          "strata": {
+            "3": 678,
+            "0": 1628,
+            "2": 341,
+            "1": 709,
+            "4": 42
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV4.0_gsa.fasta.gz",
+          "compressed_bytes": 47,
+          "uncompressed_bytes": 0,
+          "uncompressed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "contigs": 0,
+          "bp": 0,
+          "min_bp": null,
+          "max_bp": 0,
+          "strata": {}
+        },
+        {
+          "name": "sample_0_gsa/sample0_fASV194.0_gsa.fasta.gz",
+          "compressed_bytes": 809665,
+          "uncompressed_bytes": 2603940,
+          "uncompressed_sha256": "8d414c74e3159edf27088af4e0432a83df7c914d0a6b5fac9995ca6674aa6b2f",
+          "contigs": 8243,
+          "bp": 2175136,
+          "min_bp": 150,
+          "max_bp": 998,
+          "strata": {
+            "0": 8014,
+            "1": 213,
+            "2": 16
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV470.1_gsa.fasta.gz",
+          "compressed_bytes": 956597,
+          "uncompressed_bytes": 3322023,
+          "uncompressed_sha256": "4964091eb1bc2340275b85cdad93e042add2833a2b67ff8fed32146d82452087",
+          "contigs": 123,
+          "bp": 3315738,
+          "min_bp": 338,
+          "max_bp": 140698,
+          "strata": {
+            "5": 78,
+            "4": 37,
+            "0": 1,
+            "3": 4,
+            "2": 2,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV32.0_gsa.fasta.gz",
+          "compressed_bytes": 37009,
+          "uncompressed_bytes": 131891,
+          "uncompressed_sha256": "e37b89bf7d9faca16a451771432dc003c049e1f6112c00507e52040a7872ebc3",
+          "contigs": 15,
+          "bp": 131215,
+          "min_bp": 794,
+          "max_bp": 31827,
+          "strata": {
+            "3": 1,
+            "4": 9,
+            "5": 3,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV56.0_gsa.fasta.gz",
+          "compressed_bytes": 43738,
+          "uncompressed_bytes": 149149,
+          "uncompressed_sha256": "1af7f2aa5e32dcd5aba6bc54e5d65131ce389f9e415cd307efae02b6582e588e",
+          "contigs": 8,
+          "bp": 148779,
+          "min_bp": 3513,
+          "max_bp": 44825,
+          "strata": {
+            "5": 6,
+            "4": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV511.12_gsa.fasta.gz",
+          "compressed_bytes": 16219,
+          "uncompressed_bytes": 53205,
+          "uncompressed_sha256": "f5d48c9f278e38640aa44fa013f6ed7fd9b17ca1fc205b09c1ef4405727e3431",
+          "contigs": 183,
+          "bp": 43280,
+          "min_bp": 150,
+          "max_bp": 472,
+          "strata": {
+            "0": 183
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV573.1_gsa.fasta.gz",
+          "compressed_bytes": 348908,
+          "uncompressed_bytes": 1187421,
+          "uncompressed_sha256": "bda73089b82748a8dd3942cb8ef1871927daabdce5a3df58f415cdca915e03a2",
+          "contigs": 3390,
+          "bp": 1007732,
+          "min_bp": 150,
+          "max_bp": 1303,
+          "strata": {
+            "0": 3145,
+            "1": 202,
+            "2": 34,
+            "3": 9
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV26.0_gsa.fasta.gz",
+          "compressed_bytes": 8514,
+          "uncompressed_bytes": 28435,
+          "uncompressed_sha256": "19574fcaf419b0dec3271b45eaa7f4c837f92bdf4dbcd71e12909923b7f5da4a",
+          "contigs": 5,
+          "bp": 28217,
+          "min_bp": 492,
+          "max_bp": 10326,
+          "strata": {
+            "3": 1,
+            "4": 2,
+            "5": 1,
+            "0": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV139.5_gsa.fasta.gz",
+          "compressed_bytes": 8525,
+          "uncompressed_bytes": 26954,
+          "uncompressed_sha256": "952a040d39c5f8e84d85fe3be891d29a42ece32bd95898a24dc3ecea78ebe3d5",
+          "contigs": 90,
+          "bp": 22150,
+          "min_bp": 150,
+          "max_bp": 299,
+          "strata": {
+            "0": 90
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV29.0_gsa.fasta.gz",
+          "compressed_bytes": 22751,
+          "uncompressed_bytes": 77319,
+          "uncompressed_sha256": "de8a589f26a240fe33a72e9d197d32f0906d1358b7df943f462c1bd9e6e7acd5",
+          "contigs": 1,
+          "bp": 77276,
+          "min_bp": 77276,
+          "max_bp": 77276,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV70.0_gsa.fasta.gz",
+          "compressed_bytes": 6696,
+          "uncompressed_bytes": 22302,
+          "uncompressed_sha256": "6af98cbd86ad694ec09dbeb1b1bba3c9ea19ca20ddc268ee80384851048840d0",
+          "contigs": 5,
+          "bp": 22086,
+          "min_bp": 803,
+          "max_bp": 9282,
+          "strata": {
+            "2": 1,
+            "4": 3,
+            "3": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV592.0_gsa.fasta.gz",
+          "compressed_bytes": 9252,
+          "uncompressed_bytes": 29550,
+          "uncompressed_sha256": "afe7ba383d6aa18ca12489749326a1d3827be165d157073ddd583ada6454a6eb",
+          "contigs": 101,
+          "bp": 24596,
+          "min_bp": 150,
+          "max_bp": 352,
+          "strata": {
+            "0": 101
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV12.0_gsa.fasta.gz",
+          "compressed_bytes": 15490,
+          "uncompressed_bytes": 49955,
+          "uncompressed_sha256": "c0d78a9c1448c947d6622ef7deb52a8f978d16fe3a863ba86fcabbfdae1ecdee",
+          "contigs": 155,
+          "bp": 43037,
+          "min_bp": 150,
+          "max_bp": 1065,
+          "strata": {
+            "0": 148,
+            "1": 6,
+            "3": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV156.5_gsa.fasta.gz",
+          "compressed_bytes": 53110,
+          "uncompressed_bytes": 174340,
+          "uncompressed_sha256": "1be3c3851fd5f2913311bacdfb644069c9970a7fa8e2f9edbbddf06c477c6965",
+          "contigs": 603,
+          "bp": 144444,
+          "min_bp": 150,
+          "max_bp": 574,
+          "strata": {
+            "0": 602,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV74.0_gsa.fasta.gz",
+          "compressed_bytes": 11018,
+          "uncompressed_bytes": 36825,
+          "uncompressed_sha256": "99637aedc660077ee74cd15646ac9aa2d34af72846fe75303d864e93941c1a93",
+          "contigs": 80,
+          "bp": 33339,
+          "min_bp": 150,
+          "max_bp": 1251,
+          "strata": {
+            "0": 58,
+            "3": 3,
+            "2": 5,
+            "1": 14
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV565.1_gsa.fasta.gz",
+          "compressed_bytes": 37193,
+          "uncompressed_bytes": 122204,
+          "uncompressed_sha256": "ebd6fb765cda98011d5cc2e50722d5af0f7a62b285bcf901d255576fa148d77a",
+          "contigs": 424,
+          "bp": 100985,
+          "min_bp": 150,
+          "max_bp": 452,
+          "strata": {
+            "0": 424
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_pASV68_gsa.fasta.gz",
+          "compressed_bytes": 348726,
+          "uncompressed_bytes": 1204044,
+          "uncompressed_sha256": "7557839f2b948c77585a34b2830e12925b3c66e45a638a9c1e07d888555c15a3",
+          "contigs": 891,
+          "bp": 1161587,
+          "min_bp": 150,
+          "max_bp": 7447,
+          "strata": {
+            "0": 224,
+            "2": 92,
+            "3": 308,
+            "4": 120,
+            "1": 147
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV6.0_gsa.fasta.gz",
+          "compressed_bytes": 8608,
+          "uncompressed_bytes": 28836,
+          "uncompressed_sha256": "5cef21fd5516adcdfc3a9401afe5fa50790336afee519ec63e92ce8d57ebd7e9",
+          "contigs": 1,
+          "bp": 28793,
+          "min_bp": 28793,
+          "max_bp": 28793,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV5.0_gsa.fasta.gz",
+          "compressed_bytes": 11060,
+          "uncompressed_bytes": 37237,
+          "uncompressed_sha256": "1288a94250cd512c614760f93fcb56614d4da66aa998c1e1b0d99861f128016d",
+          "contigs": 1,
+          "bp": 37195,
+          "min_bp": 37195,
+          "max_bp": 37195,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV31.0_gsa.fasta.gz",
+          "compressed_bytes": 8215,
+          "uncompressed_bytes": 26241,
+          "uncompressed_sha256": "3658c589d9f4dcc12fcd72428147cf05aebdc22a73c798a9abad697af3719d00",
+          "contigs": 45,
+          "bp": 24293,
+          "min_bp": 150,
+          "max_bp": 2063,
+          "strata": {
+            "1": 9,
+            "0": 27,
+            "2": 7,
+            "3": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV476.8_gsa.fasta.gz",
+          "compressed_bytes": 1190502,
+          "uncompressed_bytes": 4244091,
+          "uncompressed_sha256": "7ffc58c4355ac7daf7e7ca4635b39132610749a5dccba535e0458ae4f39ae52a",
+          "contigs": 63,
+          "bp": 4241096,
+          "min_bp": 510,
+          "max_bp": 490868,
+          "strata": {
+            "5": 34,
+            "4": 12,
+            "3": 6,
+            "2": 3,
+            "1": 8
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV621.12_gsa.fasta.gz",
+          "compressed_bytes": 4678,
+          "uncompressed_bytes": 14422,
+          "uncompressed_sha256": "dffe40f61f52779afe0ff73da53a7246c020a3e33f5f5d26ac5d785d02e3d8eb",
+          "contigs": 46,
+          "bp": 11960,
+          "min_bp": 150,
+          "max_bp": 299,
+          "strata": {
+            "0": 46
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV87.11_gsa.fasta.gz",
+          "compressed_bytes": 8761,
+          "uncompressed_bytes": 28160,
+          "uncompressed_sha256": "a3758a77ed2383a3ddffe07c4b6643f0c5909fb88d9dee5cc07e88bd1edc3ae4",
+          "contigs": 99,
+          "bp": 22835,
+          "min_bp": 150,
+          "max_bp": 336,
+          "strata": {
+            "0": 99
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV437.3_gsa.fasta.gz",
+          "compressed_bytes": 37110,
+          "uncompressed_bytes": 122741,
+          "uncompressed_sha256": "ae18d76cb68eae3f4d8950abee873196fcda178d8af12b6c2d4acfe865666ebf",
+          "contigs": 424,
+          "bp": 101220,
+          "min_bp": 150,
+          "max_bp": 499,
+          "strata": {
+            "0": 424
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV316.11_gsa.fasta.gz",
+          "compressed_bytes": 7227,
+          "uncompressed_bytes": 22785,
+          "uncompressed_sha256": "06ffc83923af452cff6bb37733f6542ecaa33e92591d325032a5cd82675327c9",
+          "contigs": 78,
+          "bp": 18587,
+          "min_bp": 150,
+          "max_bp": 379,
+          "strata": {
+            "0": 78
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV431.3_gsa.fasta.gz",
+          "compressed_bytes": 1008395,
+          "uncompressed_bytes": 3429260,
+          "uncompressed_sha256": "da09aadc933fd212af46cff56508233c9323a2281f1681c378bdfe66daf0cac7",
+          "contigs": 4185,
+          "bp": 3204662,
+          "min_bp": 150,
+          "max_bp": 6684,
+          "strata": {
+            "0": 1843,
+            "1": 842,
+            "3": 914,
+            "2": 487,
+            "4": 99
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV564.0_gsa.fasta.gz",
+          "compressed_bytes": 4642,
+          "uncompressed_bytes": 14550,
+          "uncompressed_sha256": "ef6eb02fe395b718c41e933c44a5505d5517e08ca982a6648470954f0fe87238",
+          "contigs": 51,
+          "bp": 11860,
+          "min_bp": 150,
+          "max_bp": 297,
+          "strata": {
+            "0": 51
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV334.1_gsa.fasta.gz",
+          "compressed_bytes": 178485,
+          "uncompressed_bytes": 603547,
+          "uncompressed_sha256": "68d5f9f1dbc6aedb8c847eaab74b72e098fa282cf723e53c3a27c91daeda8717",
+          "contigs": 1923,
+          "bp": 504742,
+          "min_bp": 150,
+          "max_bp": 776,
+          "strata": {
+            "0": 1874,
+            "1": 48,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV547.6_gsa.fasta.gz",
+          "compressed_bytes": 536931,
+          "uncompressed_bytes": 1823344,
+          "uncompressed_sha256": "6424d45164fd0ad7172222dbdbd7639897dbfff74329fa897c8f9a41671fe1cc",
+          "contigs": 4543,
+          "bp": 1583202,
+          "min_bp": 150,
+          "max_bp": 1746,
+          "strata": {
+            "0": 3791,
+            "1": 577,
+            "2": 121,
+            "3": 54
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV16.0_gsa.fasta.gz",
+          "compressed_bytes": 2472,
+          "uncompressed_bytes": 7632,
+          "uncompressed_sha256": "57b83b6f2495f24d0970c48e22b5c3451991dcd748bdad1f557290c8e56acc6f",
+          "contigs": 1,
+          "bp": 7591,
+          "min_bp": 7591,
+          "max_bp": 7591,
+          "strata": {
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV82.0_gsa.fasta.gz",
+          "compressed_bytes": 6393,
+          "uncompressed_bytes": 20033,
+          "uncompressed_sha256": "da3e2adf4237e20072d3be1362ee9c8fb8e96e058fbc9591b59fcc27d1d9a237",
+          "contigs": 67,
+          "bp": 17107,
+          "min_bp": 150,
+          "max_bp": 472,
+          "strata": {
+            "0": 67
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV43.0_gsa.fasta.gz",
+          "compressed_bytes": 39157,
+          "uncompressed_bytes": 129866,
+          "uncompressed_sha256": "a75e53f294c7d6d0c76873fb9897922a1939ecdeb1f3badd285d8cb396905cfc",
+          "contigs": 257,
+          "bp": 118374,
+          "min_bp": 150,
+          "max_bp": 2646,
+          "strata": {
+            "0": 169,
+            "1": 59,
+            "3": 13,
+            "2": 15,
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV638.12_gsa.fasta.gz",
+          "compressed_bytes": 10487,
+          "uncompressed_bytes": 33335,
+          "uncompressed_sha256": "c40c9a74b9e1405cb0bfccf53cd48d90b029f03358fc1d2df61f6839cbd57d2d",
+          "contigs": 121,
+          "bp": 27240,
+          "min_bp": 150,
+          "max_bp": 300,
+          "strata": {
+            "0": 121
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV577.0_gsa.fasta.gz",
+          "compressed_bytes": 34481,
+          "uncompressed_bytes": 112999,
+          "uncompressed_sha256": "ac52d6b2796c95eafb597f49ff85ae4224aad40a92fb304b8a9b5092346f092c",
+          "contigs": 398,
+          "bp": 93499,
+          "min_bp": 150,
+          "max_bp": 466,
+          "strata": {
+            "0": 398
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV576.1_gsa.fasta.gz",
+          "compressed_bytes": 41373,
+          "uncompressed_bytes": 139255,
+          "uncompressed_sha256": "48a114f0b1228861d4c4dc431d301240338d8f45535cb841ba7561053f487d72",
+          "contigs": 466,
+          "bp": 114345,
+          "min_bp": 150,
+          "max_bp": 527,
+          "strata": {
+            "0": 465,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV49.0_gsa.fasta.gz",
+          "compressed_bytes": 1435,
+          "uncompressed_bytes": 4404,
+          "uncompressed_sha256": "b1ceca7f542884dbc3f87f9ee652172ea024669936e75834c7421a2baddba24d",
+          "contigs": 1,
+          "bp": 4363,
+          "min_bp": 4363,
+          "max_bp": 4363,
+          "strata": {
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV173.0_gsa.fasta.gz",
+          "compressed_bytes": 17229,
+          "uncompressed_bytes": 55879,
+          "uncompressed_sha256": "0b32afa7bbd35a342d20097491466f900d0fabe28ae580904d9d0bc7dc2da38a",
+          "contigs": 187,
+          "bp": 45958,
+          "min_bp": 150,
+          "max_bp": 487,
+          "strata": {
+            "0": 187
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV12.3_gsa.fasta.gz",
+          "compressed_bytes": 16641,
+          "uncompressed_bytes": 54268,
+          "uncompressed_sha256": "9bae138643331af8abbddf3e5b822216270e90f8a35173e1f7c5483d84fa8630",
+          "contigs": 185,
+          "bp": 44743,
+          "min_bp": 150,
+          "max_bp": 423,
+          "strata": {
+            "0": 185
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV150.14_gsa.fasta.gz",
+          "compressed_bytes": 1884090,
+          "uncompressed_bytes": 6476650,
+          "uncompressed_sha256": "a034071ccaaf9a30214a8a5622932aab4c487f7fc7ef41343ffabed3cfa917ce",
+          "contigs": 98,
+          "bp": 6471583,
+          "min_bp": 984,
+          "max_bp": 300052,
+          "strata": {
+            "5": 81,
+            "4": 8,
+            "3": 8,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV59.0_gsa.fasta.gz",
+          "compressed_bytes": 83804,
+          "uncompressed_bytes": 287237,
+          "uncompressed_sha256": "7e7b3a810f76aadf60d19ae58bb4f373300175286403b5e0ea51f72c2095e82c",
+          "contigs": 88,
+          "bp": 283205,
+          "min_bp": 150,
+          "max_bp": 23397,
+          "strata": {
+            "3": 24,
+            "5": 5,
+            "4": 35,
+            "1": 5,
+            "0": 14,
+            "2": 5
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV743.6_gsa.fasta.gz",
+          "compressed_bytes": 1386664,
+          "uncompressed_bytes": 4737904,
+          "uncompressed_sha256": "e7e133c0d9e75bc97bee391a0d14530ce4ab7c19424abcee30ebe4d1b6251da4",
+          "contigs": 1771,
+          "bp": 4639859,
+          "min_bp": 150,
+          "max_bp": 18266,
+          "strata": {
+            "2": 132,
+            "3": 582,
+            "4": 651,
+            "0": 233,
+            "5": 37,
+            "1": 136
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV514.0_gsa.fasta.gz",
+          "compressed_bytes": 44110,
+          "uncompressed_bytes": 147959,
+          "uncompressed_sha256": "53f6a4aae57ce65d0d85081620a634efde3598c5b78b03d340a0a3a249f8c2ba",
+          "contigs": 498,
+          "bp": 121004,
+          "min_bp": 150,
+          "max_bp": 531,
+          "strata": {
+            "0": 497,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV429.0_gsa.fasta.gz",
+          "compressed_bytes": 1211886,
+          "uncompressed_bytes": 4133131,
+          "uncompressed_sha256": "6ad9bb889139cf5ac6355cae81cf3b0f3dbcbe06957372c304bca67fa82e1146",
+          "contigs": 10164,
+          "bp": 3580380,
+          "min_bp": 150,
+          "max_bp": 1799,
+          "strata": {
+            "0": 8429,
+            "1": 1297,
+            "2": 322,
+            "3": 116
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV9.0_gsa.fasta.gz",
+          "compressed_bytes": 13757,
+          "uncompressed_bytes": 46279,
+          "uncompressed_sha256": "6bb3744243b40266d5dd4da10028670b2ca5259929b357675702dbdbf720decd",
+          "contigs": 1,
+          "bp": 46236,
+          "min_bp": 46236,
+          "max_bp": 46236,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV509.0_gsa.fasta.gz",
+          "compressed_bytes": 159435,
+          "uncompressed_bytes": 537443,
+          "uncompressed_sha256": "062c09974292be670fcc2506bcf540a5b5e62d739887610a2bc06543cbcb9615",
+          "contigs": 1799,
+          "bp": 447445,
+          "min_bp": 150,
+          "max_bp": 734,
+          "strata": {
+            "0": 1769,
+            "1": 30
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV497.3_gsa.fasta.gz",
+          "compressed_bytes": 111098,
+          "uncompressed_bytes": 376240,
+          "uncompressed_sha256": "7c2ab8f248555584b846cf2889ad1ea7b86cdb82c2a77339dc9b7b79ca291b90",
+          "contigs": 1229,
+          "bp": 310119,
+          "min_bp": 150,
+          "max_bp": 731,
+          "strata": {
+            "0": 1212,
+            "1": 17
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV473.1_gsa.fasta.gz",
+          "compressed_bytes": 262545,
+          "uncompressed_bytes": 923403,
+          "uncompressed_sha256": "93b0209f4b76a16bb6a07be33b913383af7d7f9f8295faa9645354393e9cbfb1",
+          "contigs": 2778,
+          "bp": 770984,
+          "min_bp": 149,
+          "max_bp": 994,
+          "strata": {
+            "0": 2631,
+            "1": 140,
+            "2": 7
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV64.0_gsa.fasta.gz",
+          "compressed_bytes": 17741,
+          "uncompressed_bytes": 57510,
+          "uncompressed_sha256": "f29d521243ffe917906c339c4fa2f7c22b15db3dd2b2348b0999d88ffb013e1e",
+          "contigs": 174,
+          "bp": 49727,
+          "min_bp": 150,
+          "max_bp": 765,
+          "strata": {
+            "0": 162,
+            "1": 12
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV737.3_gsa.fasta.gz",
+          "compressed_bytes": 9844,
+          "uncompressed_bytes": 31070,
+          "uncompressed_sha256": "5d58e0a4ad76a9cd43a5f271eacc44ba38b230b6133d026c92f1b651222823e0",
+          "contigs": 108,
+          "bp": 25738,
+          "min_bp": 150,
+          "max_bp": 380,
+          "strata": {
+            "0": 108
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV305.7_gsa.fasta.gz",
+          "compressed_bytes": 8421,
+          "uncompressed_bytes": 27936,
+          "uncompressed_sha256": "36169e3ea27dc1fe950730c6a6e87703140640454b80f5cf7dd57c1f92968c48",
+          "contigs": 96,
+          "bp": 22768,
+          "min_bp": 150,
+          "max_bp": 298,
+          "strata": {
+            "0": 96
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV1.11_gsa.fasta.gz",
+          "compressed_bytes": 128839,
+          "uncompressed_bytes": 437154,
+          "uncompressed_sha256": "eb4feb5d40923cb0c18d279a300026f19d4b608a1ea909cc1a9caa566a4d1de9",
+          "contigs": 1418,
+          "bp": 362569,
+          "min_bp": 150,
+          "max_bp": 870,
+          "strata": {
+            "0": 1392,
+            "1": 25,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV582.2_gsa.fasta.gz",
+          "compressed_bytes": 17669,
+          "uncompressed_bytes": 59157,
+          "uncompressed_sha256": "09cb0fd044a568daf73148900150c5ac74d7986295fba1975f9f2c101ae8f7bd",
+          "contigs": 198,
+          "bp": 48756,
+          "min_bp": 150,
+          "max_bp": 355,
+          "strata": {
+            "0": 198
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV11.3_gsa.fasta.gz",
+          "compressed_bytes": 49493,
+          "uncompressed_bytes": 168220,
+          "uncompressed_sha256": "315ecd874ca5844f149430bf964ede544724454942cd5202e4c715cb798c36e9",
+          "contigs": 50,
+          "bp": 165932,
+          "min_bp": 150,
+          "max_bp": 13107,
+          "strata": {
+            "3": 21,
+            "4": 19,
+            "5": 2,
+            "0": 4,
+            "1": 3,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV14.0_gsa.fasta.gz",
+          "compressed_bytes": 2772,
+          "uncompressed_bytes": 8396,
+          "uncompressed_sha256": "14ba132952652365f31605f90885fb8e34abfc51f594e9daeacb511c09ba4952",
+          "contigs": 8,
+          "bp": 8061,
+          "min_bp": 244,
+          "max_bp": 3070,
+          "strata": {
+            "0": 4,
+            "4": 1,
+            "3": 2,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV18.0_gsa.fasta.gz",
+          "compressed_bytes": 13375,
+          "uncompressed_bytes": 44986,
+          "uncompressed_sha256": "9654ba9be004826a89668259cb7320787e2d706832f2823e4b41537997edd397",
+          "contigs": 1,
+          "bp": 44944,
+          "min_bp": 44944,
+          "max_bp": 44944,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV32.0_gsa.fasta.gz",
+          "compressed_bytes": 305,
+          "uncompressed_bytes": 603,
+          "uncompressed_sha256": "619e1f0cb9d55cd1c940b3ace02c1a34322bdaaebe59060d909672df5e828529",
+          "contigs": 2,
+          "bp": 522,
+          "min_bp": 257,
+          "max_bp": 265,
+          "strata": {
+            "0": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV149.0_gsa.fasta.gz",
+          "compressed_bytes": 1101317,
+          "uncompressed_bytes": 3793533,
+          "uncompressed_sha256": "5d3b940bf5c52143500bc11ab4f25f9dbca2ff569bc57e09ee255bb31e24c068",
+          "contigs": 99,
+          "bp": 3789241,
+          "min_bp": 150,
+          "max_bp": 234423,
+          "strata": {
+            "5": 47,
+            "3": 17,
+            "2": 12,
+            "1": 7,
+            "4": 15,
+            "0": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV38.7_gsa.fasta.gz",
+          "compressed_bytes": 7580,
+          "uncompressed_bytes": 23744,
+          "uncompressed_sha256": "cdeee301e17cc3957cb858a52bcd0e95ee5b921230563064cbcdabf3e85569b6",
+          "contigs": 71,
+          "bp": 20643,
+          "min_bp": 150,
+          "max_bp": 1008,
+          "strata": {
+            "0": 66,
+            "1": 4,
+            "3": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV77.0_gsa.fasta.gz",
+          "compressed_bytes": 88283,
+          "uncompressed_bytes": 301562,
+          "uncompressed_sha256": "e0bffc8d35e284a0b1ecfd9c6e69d2669fb8a700e880185eeb7b1ff0588699d7",
+          "contigs": 1,
+          "bp": 301517,
+          "min_bp": 301517,
+          "max_bp": 301517,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV471.8_gsa.fasta.gz",
+          "compressed_bytes": 110433,
+          "uncompressed_bytes": 371837,
+          "uncompressed_sha256": "994e508ddea31dacecd6e36288b15ad3f1d78a3c077f86f57a9c1444cf398328",
+          "contigs": 1236,
+          "bp": 304574,
+          "min_bp": 150,
+          "max_bp": 626,
+          "strata": {
+            "0": 1231,
+            "1": 5
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV581.18_gsa.fasta.gz",
+          "compressed_bytes": 10190,
+          "uncompressed_bytes": 32054,
+          "uncompressed_sha256": "d93895f48a7f8864a266d602744a0c60b5633e4f9de5fccd1c814f6e264dae0e",
+          "contigs": 110,
+          "bp": 26428,
+          "min_bp": 150,
+          "max_bp": 299,
+          "strata": {
+            "0": 110
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV607.0_gsa.fasta.gz",
+          "compressed_bytes": 572621,
+          "uncompressed_bytes": 1930163,
+          "uncompressed_sha256": "99606c0b099f782b78a9c347a445e600c7edde95e19f9e6b93e4a7358b785cbf",
+          "contigs": 2582,
+          "bp": 1803247,
+          "min_bp": 150,
+          "max_bp": 4679,
+          "strata": {
+            "0": 1226,
+            "2": 303,
+            "1": 503,
+            "3": 519,
+            "4": 31
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV99.3_gsa.fasta.gz",
+          "compressed_bytes": 562030,
+          "uncompressed_bytes": 1899525,
+          "uncompressed_sha256": "59b47b9fc9af08975b53f729dd6ad1ac8b809021b039a9d8a518608a3918aabb",
+          "contigs": 5795,
+          "bp": 1588887,
+          "min_bp": 150,
+          "max_bp": 1188,
+          "strata": {
+            "0": 5555,
+            "1": 219,
+            "2": 20,
+            "3": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV60.0_gsa.fasta.gz",
+          "compressed_bytes": 33699,
+          "uncompressed_bytes": 114682,
+          "uncompressed_sha256": "9b5f8e659a9ff0f3dd98f86426144defa01757e54f1f12a6226e96417d80e310",
+          "contigs": 1,
+          "bp": 114638,
+          "min_bp": 114638,
+          "max_bp": 114638,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV436.0_gsa.fasta.gz",
+          "compressed_bytes": 1099481,
+          "uncompressed_bytes": 3794997,
+          "uncompressed_sha256": "f104f729b5355575bed2b81306072f59ad3ed4b0de02239e7f6d08d24fe4af8c",
+          "contigs": 56,
+          "bp": 3792096,
+          "min_bp": 1045,
+          "max_bp": 383203,
+          "strata": {
+            "5": 40,
+            "4": 8,
+            "3": 8
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV92.0_gsa.fasta.gz",
+          "compressed_bytes": 19454,
+          "uncompressed_bytes": 66176,
+          "uncompressed_sha256": "c4d99e0f036d40eb25083109a8698d0074ffdace9caa10d70306a70e7c635e29",
+          "contigs": 1,
+          "bp": 66134,
+          "min_bp": 66134,
+          "max_bp": 66134,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV507.0_gsa.fasta.gz",
+          "compressed_bytes": 877769,
+          "uncompressed_bytes": 3054811,
+          "uncompressed_sha256": "178ab5846ee392355ad5275dc860eeaa596f9324db9cb793b848590fab15d6c2",
+          "contigs": 97,
+          "bp": 3050167,
+          "min_bp": 323,
+          "max_bp": 423430,
+          "strata": {
+            "5": 52,
+            "4": 20,
+            "3": 16,
+            "1": 2,
+            "0": 5,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV79.0_gsa.fasta.gz",
+          "compressed_bytes": 9628,
+          "uncompressed_bytes": 32120,
+          "uncompressed_sha256": "65e6a0fffc05d85bf1e2429c2a04ad46b79c5136ac8d89b82891a6873538417e",
+          "contigs": 1,
+          "bp": 32078,
+          "min_bp": 32078,
+          "max_bp": 32078,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV399.6_gsa.fasta.gz",
+          "compressed_bytes": 905442,
+          "uncompressed_bytes": 3156610,
+          "uncompressed_sha256": "d48e1d12b3b3cde52cd9eea60bf4fafeb4714fb0a1af7b49646a29305d4b6d25",
+          "contigs": 50,
+          "bp": 3154129,
+          "min_bp": 401,
+          "max_bp": 250243,
+          "strata": {
+            "5": 38,
+            "4": 7,
+            "3": 3,
+            "0": 1,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV52.0_gsa.fasta.gz",
+          "compressed_bytes": 771,
+          "uncompressed_bytes": 1955,
+          "uncompressed_sha256": "8a6cb7f5d2131d3ca97513a221a172f5dcc52840300c02bf25fda06bef163025",
+          "contigs": 7,
+          "bp": 1649,
+          "min_bp": 150,
+          "max_bp": 300,
+          "strata": {
+            "0": 7
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV50.0_gsa.fasta.gz",
+          "compressed_bytes": 9232,
+          "uncompressed_bytes": 31315,
+          "uncompressed_sha256": "00798ce93ecadfd2c15ad9722027183012ab331cf81be6305d70fedafddefd7b",
+          "contigs": 2,
+          "bp": 31227,
+          "min_bp": 4547,
+          "max_bp": 26680,
+          "strata": {
+            "5": 1,
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_pASV64_gsa.fasta.gz",
+          "compressed_bytes": 2416,
+          "uncompressed_bytes": 38790,
+          "uncompressed_sha256": "0c80097601508bc76ba6635f7721c4bb66b3ad974b1be2c8075e0dc77da91016",
+          "contigs": 30,
+          "bp": 37453,
+          "min_bp": 150,
+          "max_bp": 2940,
+          "strata": {
+            "4": 4,
+            "3": 12,
+            "0": 7,
+            "1": 5,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV6.0_gsa.fasta.gz",
+          "compressed_bytes": 1908,
+          "uncompressed_bytes": 5555,
+          "uncompressed_sha256": "d81b02356df355b5afac1dd41d718a4dff5448605226cedbeb5af6e3d81376cc",
+          "contigs": 12,
+          "bp": 5055,
+          "min_bp": 150,
+          "max_bp": 932,
+          "strata": {
+            "0": 9,
+            "1": 2,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV174.18_gsa.fasta.gz",
+          "compressed_bytes": 1508072,
+          "uncompressed_bytes": 5131538,
+          "uncompressed_sha256": "c5b70f954dbf6ad58dbe8a30d80932ace3e33d0514df3719edfb6f883e4a522c",
+          "contigs": 1989,
+          "bp": 5024997,
+          "min_bp": 150,
+          "max_bp": 19631,
+          "strata": {
+            "3": 645,
+            "0": 276,
+            "2": 142,
+            "4": 671,
+            "1": 216,
+            "5": 39
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV2.6_gsa.fasta.gz",
+          "compressed_bytes": 25477,
+          "uncompressed_bytes": 88036,
+          "uncompressed_sha256": "6223cae57726aecc41d5d048d522b138ced82df94bbd35b3d93270016720f770",
+          "contigs": 1,
+          "bp": 87994,
+          "min_bp": 87994,
+          "max_bp": 87994,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV8.13_gsa.fasta.gz",
+          "compressed_bytes": 22769,
+          "uncompressed_bytes": 77373,
+          "uncompressed_sha256": "3bcca462154c3c11c1bae692821b43f474a9f3558028acdd8e97b825b60ec7b5",
+          "contigs": 2,
+          "bp": 77284,
+          "min_bp": 27340,
+          "max_bp": 49944,
+          "strata": {
+            "5": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV85.0_gsa.fasta.gz",
+          "compressed_bytes": 11913,
+          "uncompressed_bytes": 38468,
+          "uncompressed_sha256": "38ba71db340c1b835109a105c0a29e3ea85e69d12587b42f8a7f1193d3bdd81a",
+          "contigs": 95,
+          "bp": 34321,
+          "min_bp": 150,
+          "max_bp": 1027,
+          "strata": {
+            "0": 77,
+            "1": 15,
+            "3": 1,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV551.0_gsa.fasta.gz",
+          "compressed_bytes": 663117,
+          "uncompressed_bytes": 2319714,
+          "uncompressed_sha256": "00475748bbe4c1845a173fa1824f13e3d41549ea5891ce22586ae0b0c4201189",
+          "contigs": 91,
+          "bp": 2315056,
+          "min_bp": 1108,
+          "max_bp": 111563,
+          "strata": {
+            "5": 52,
+            "4": 21,
+            "3": 18
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV51.0_gsa.fasta.gz",
+          "compressed_bytes": 7259,
+          "uncompressed_bytes": 23066,
+          "uncompressed_sha256": "96f324e7193323f9b55b5c25a120fbd3c20d1e86c186398cbf57b5b703d99f69",
+          "contigs": 78,
+          "bp": 19583,
+          "min_bp": 150,
+          "max_bp": 537,
+          "strata": {
+            "0": 75,
+            "1": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV596.11_gsa.fasta.gz",
+          "compressed_bytes": 10590,
+          "uncompressed_bytes": 34092,
+          "uncompressed_sha256": "1a361aad40afeee585df708ddf2b715b1af70e5dd67f0ccdaaacb9878c3f3325",
+          "contigs": 113,
+          "bp": 28043,
+          "min_bp": 150,
+          "max_bp": 365,
+          "strata": {
+            "0": 113
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV65.0_gsa.fasta.gz",
+          "compressed_bytes": 17725,
+          "uncompressed_bytes": 56817,
+          "uncompressed_sha256": "a94ec768a5464b0bb257417bce46730f1ab362afe83ccca7f653c2e4c4a59ef2",
+          "contigs": 189,
+          "bp": 48306,
+          "min_bp": 150,
+          "max_bp": 802,
+          "strata": {
+            "0": 186,
+            "1": 2,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV284.4_gsa.fasta.gz",
+          "compressed_bytes": 656716,
+          "uncompressed_bytes": 2262716,
+          "uncompressed_sha256": "0984d4bb3d41cacfa99bfe1a0b0cb4971693cd1218498e63b8b8fd068af03e5d",
+          "contigs": 132,
+          "bp": 2255584,
+          "min_bp": 300,
+          "max_bp": 109920,
+          "strata": {
+            "5": 74,
+            "4": 31,
+            "1": 3,
+            "3": 16,
+            "2": 5,
+            "0": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV178.5_gsa.fasta.gz",
+          "compressed_bytes": 9550,
+          "uncompressed_bytes": 30004,
+          "uncompressed_sha256": "3a353ed5adbbca49fd4d430940f5343ffaf45e4c3123f337e442cb83f071ac49",
+          "contigs": 101,
+          "bp": 24877,
+          "min_bp": 150,
+          "max_bp": 300,
+          "strata": {
+            "0": 101
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV24.0_gsa.fasta.gz",
+          "compressed_bytes": 1626,
+          "uncompressed_bytes": 4933,
+          "uncompressed_sha256": "d528991a7734e065e8be499e0b65617547080f4f7df68ddc8be4a1d5d2fea982",
+          "contigs": 1,
+          "bp": 4892,
+          "min_bp": 4892,
+          "max_bp": 4892,
+          "strata": {
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_fASV200.0_gsa.fasta.gz",
+          "compressed_bytes": 2242585,
+          "uncompressed_bytes": 7219571,
+          "uncompressed_sha256": "1b0d3063b949e97f72bf9b4844889414200907dfc592e7bcd7851916a5fbcb0e",
+          "contigs": 22311,
+          "bp": 6056563,
+          "min_bp": 150,
+          "max_bp": 1397,
+          "strata": {
+            "0": 21457,
+            "1": 795,
+            "2": 53,
+            "3": 6
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV324.5_gsa.fasta.gz",
+          "compressed_bytes": 69589,
+          "uncompressed_bytes": 234037,
+          "uncompressed_sha256": "39079db245db115b6ebe998306282be5b859e023ef73b81c6e6e764fa2641ae5",
+          "contigs": 799,
+          "bp": 191280,
+          "min_bp": 150,
+          "max_bp": 692,
+          "strata": {
+            "0": 797,
+            "1": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV81.2_gsa.fasta.gz",
+          "compressed_bytes": 4160,
+          "uncompressed_bytes": 12944,
+          "uncompressed_sha256": "489dfd1cfd27f948d6cfc4c2c9299e9abcf5a2007aa8c732e4b986b276aa2377",
+          "contigs": 46,
+          "bp": 10700,
+          "min_bp": 150,
+          "max_bp": 297,
+          "strata": {
+            "0": 46
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV44.0_gsa.fasta.gz",
+          "compressed_bytes": 9700,
+          "uncompressed_bytes": 32875,
+          "uncompressed_sha256": "c6fca8ff36b07f8aeb5ba3b30c9732590060f7ed1dbb9df46d620801320105eb",
+          "contigs": 1,
+          "bp": 32833,
+          "min_bp": 32833,
+          "max_bp": 32833,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV655.9_gsa.fasta.gz",
+          "compressed_bytes": 36883,
+          "uncompressed_bytes": 121879,
+          "uncompressed_sha256": "dfa7cb860a3970047032830d7b01e1bb0dbf4732072068f338d336327a3bf827",
+          "contigs": 406,
+          "bp": 99885,
+          "min_bp": 150,
+          "max_bp": 512,
+          "strata": {
+            "0": 405,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV72.0_gsa.fasta.gz",
+          "compressed_bytes": 26511,
+          "uncompressed_bytes": 88803,
+          "uncompressed_sha256": "eceaacad185b50f8109ca0344121910f92fd84cda998190d35009f0fa7354bbf",
+          "contigs": 134,
+          "bp": 82909,
+          "min_bp": 150,
+          "max_bp": 2878,
+          "strata": {
+            "0": 73,
+            "2": 16,
+            "1": 21,
+            "3": 23,
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV153.8_gsa.fasta.gz",
+          "compressed_bytes": 1740410,
+          "uncompressed_bytes": 5989679,
+          "uncompressed_sha256": "572a5ee9b7aaad53646d21b467d81bbe050c8e0d6d727e6c016e7ef7e3b56261",
+          "contigs": 76,
+          "bp": 5985600,
+          "min_bp": 377,
+          "max_bp": 456417,
+          "strata": {
+            "5": 58,
+            "0": 2,
+            "4": 8,
+            "3": 8
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV347.10_gsa.fasta.gz",
+          "compressed_bytes": 19079,
+          "uncompressed_bytes": 61564,
+          "uncompressed_sha256": "15287a5fecedc1fad40eaa8bc12e004e0a08ac1366dbbede5b9c42b0ba9e9581",
+          "contigs": 214,
+          "bp": 50968,
+          "min_bp": 150,
+          "max_bp": 380,
+          "strata": {
+            "0": 214
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV34.0_gsa.fasta.gz",
+          "compressed_bytes": 12758,
+          "uncompressed_bytes": 42497,
+          "uncompressed_sha256": "fbab9c3bb2c6d7616d21831c786393f38427259f316f5930badeada952678b3b",
+          "contigs": 1,
+          "bp": 42455,
+          "min_bp": 42455,
+          "max_bp": 42455,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV154.6_gsa.fasta.gz",
+          "compressed_bytes": 10161,
+          "uncompressed_bytes": 32106,
+          "uncompressed_sha256": "e8a46942514b7134c4ff27aab92ac530cb04dcfaabb2a95423169c30be1ff914",
+          "contigs": 107,
+          "bp": 26700,
+          "min_bp": 150,
+          "max_bp": 300,
+          "strata": {
+            "0": 107
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV16.0_gsa.fasta.gz",
+          "compressed_bytes": 10797,
+          "uncompressed_bytes": 37693,
+          "uncompressed_sha256": "06ed615160c30531ea79ea8a0e3550db4e89756b6012e8e22d70cb0671888704",
+          "contigs": 1,
+          "bp": 37651,
+          "min_bp": 37651,
+          "max_bp": 37651,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV2.0_gsa.fasta.gz",
+          "compressed_bytes": 9530,
+          "uncompressed_bytes": 32769,
+          "uncompressed_sha256": "a03d49720a1234ec7f5cddbc686d56597563482ea366ff6ab993451da1260cac",
+          "contigs": 1,
+          "bp": 32725,
+          "min_bp": 32725,
+          "max_bp": 32725,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV258.8_gsa.fasta.gz",
+          "compressed_bytes": 825804,
+          "uncompressed_bytes": 2840076,
+          "uncompressed_sha256": "44fa893312cdd59dcc80e8b5e70ed5bdcbf633bc0c065dff1ec3294b807df846",
+          "contigs": 551,
+          "bp": 2811471,
+          "min_bp": 150,
+          "max_bp": 35102,
+          "strata": {
+            "3": 118,
+            "0": 29,
+            "4": 269,
+            "5": 76,
+            "1": 35,
+            "2": 24
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV37.6_gsa.fasta.gz",
+          "compressed_bytes": 8375,
+          "uncompressed_bytes": 29324,
+          "uncompressed_sha256": "e1a2a9e7883123bfa5e63a515bdefd1e86e17aceb543c60b7431a0335c33269c",
+          "contigs": 1,
+          "bp": 29281,
+          "min_bp": 29281,
+          "max_bp": 29281,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV48.0_gsa.fasta.gz",
+          "compressed_bytes": 5762,
+          "uncompressed_bytes": 17738,
+          "uncompressed_sha256": "937338a5942e130579cbb1029e23b2c4ed8a9cc49beef79018c4ea3de65a7b84",
+          "contigs": 48,
+          "bp": 15654,
+          "min_bp": 150,
+          "max_bp": 761,
+          "strata": {
+            "0": 45,
+            "1": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV692.1_gsa.fasta.gz",
+          "compressed_bytes": 763733,
+          "uncompressed_bytes": 2631016,
+          "uncompressed_sha256": "b286e604f099235b398c038e083b6ac88d1e9df9bcc3e0fbd3847499a5de37db",
+          "contigs": 1349,
+          "bp": 2566537,
+          "min_bp": 150,
+          "max_bp": 10894,
+          "strata": {
+            "3": 455,
+            "0": 261,
+            "4": 356,
+            "1": 144,
+            "2": 129,
+            "5": 4
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV447.2_gsa.fasta.gz",
+          "compressed_bytes": 71407,
+          "uncompressed_bytes": 239319,
+          "uncompressed_sha256": "7de807dd01c32aa2b96033fa69ac44d62f784e8066678332ae0f6f15e02c2ab3",
+          "contigs": 818,
+          "bp": 195263,
+          "min_bp": 150,
+          "max_bp": 544,
+          "strata": {
+            "0": 815,
+            "1": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV76.0_gsa.fasta.gz",
+          "compressed_bytes": 22568,
+          "uncompressed_bytes": 75093,
+          "uncompressed_sha256": "45878ec8a10a2657af358aeda9c1a27cf35a91972cb0e54712c82d7e0e2391a5",
+          "contigs": 47,
+          "bp": 73016,
+          "min_bp": 150,
+          "max_bp": 4672,
+          "strata": {
+            "4": 12,
+            "3": 12,
+            "2": 4,
+            "0": 12,
+            "1": 7
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV486.6_gsa.fasta.gz",
+          "compressed_bytes": 43044,
+          "uncompressed_bytes": 146799,
+          "uncompressed_sha256": "38c0cde67f68fe55cef4a1507c65d32dcc8d0464491ced8c6bc2f22aa55d2c45",
+          "contigs": 503,
+          "bp": 121280,
+          "min_bp": 150,
+          "max_bp": 383,
+          "strata": {
+            "0": 503
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV54.3_gsa.fasta.gz",
+          "compressed_bytes": 9721,
+          "uncompressed_bytes": 31845,
+          "uncompressed_sha256": "e925979015d1215cfbfb781cc9bb4c31afef170ab8b2d19fa636ca6ff164b31c",
+          "contigs": 112,
+          "bp": 25813,
+          "min_bp": 150,
+          "max_bp": 469,
+          "strata": {
+            "0": 112
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_fASV201.3_gsa.fasta.gz",
+          "compressed_bytes": 9150093,
+          "uncompressed_bytes": 29717485,
+          "uncompressed_sha256": "24cf48272db52a54ae4981c2b62aa19b0e59d4ce030c6d4280bf03fd1a958452",
+          "contigs": 22088,
+          "bp": 28560354,
+          "min_bp": 150,
+          "max_bp": 11521,
+          "strata": {
+            "3": 7527,
+            "0": 5890,
+            "4": 2849,
+            "1": 3457,
+            "2": 2361,
+            "5": 4
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV89.0_gsa.fasta.gz",
+          "compressed_bytes": 6078,
+          "uncompressed_bytes": 19133,
+          "uncompressed_sha256": "4f180ae1044f25f118bfd63e3713bd1c19273929fc7d5d4a961a5bf8de7e657d",
+          "contigs": 60,
+          "bp": 16518,
+          "min_bp": 150,
+          "max_bp": 659,
+          "strata": {
+            "0": 55,
+            "1": 5
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV504.4_gsa.fasta.gz",
+          "compressed_bytes": 144217,
+          "uncompressed_bytes": 500085,
+          "uncompressed_sha256": "411f4010f60e5b02428931d03a6ee0f7afd7b499d7612a8d6b2f1e0ff6814d00",
+          "contigs": 1645,
+          "bp": 417207,
+          "min_bp": 149,
+          "max_bp": 764,
+          "strata": {
+            "0": 1625,
+            "1": 20
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV74.2_gsa.fasta.gz",
+          "compressed_bytes": 72636,
+          "uncompressed_bytes": 240089,
+          "uncompressed_sha256": "092564eeae849f9d5a7ac4f6a131420e64ad21f5a9df19a7f359c5f5af7b151d",
+          "contigs": 829,
+          "bp": 199016,
+          "min_bp": 150,
+          "max_bp": 528,
+          "strata": {
+            "0": 828,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV507.9_gsa.fasta.gz",
+          "compressed_bytes": 831685,
+          "uncompressed_bytes": 2899272,
+          "uncompressed_sha256": "2bc439ce31e9e649159a8cea22278d042558f9eb5d3e309f24e03eb2cf5103c0",
+          "contigs": 47,
+          "bp": 2897009,
+          "min_bp": 150,
+          "max_bp": 498287,
+          "strata": {
+            "5": 22,
+            "3": 5,
+            "0": 8,
+            "4": 9,
+            "2": 1,
+            "1": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV30.0_gsa.fasta.gz",
+          "compressed_bytes": 577,
+          "uncompressed_bytes": 1408,
+          "uncompressed_sha256": "b62074ff8f48f616a515b939190e7f91193ae975d722a0734377aedd484bf1a2",
+          "contigs": 3,
+          "bp": 1284,
+          "min_bp": 361,
+          "max_bp": 498,
+          "strata": {
+            "0": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV257.1_gsa.fasta.gz",
+          "compressed_bytes": 5336,
+          "uncompressed_bytes": 16940,
+          "uncompressed_sha256": "6c9568f019feda1dff7652ec1069134aa4945a0a6c80b1c9b52a0183d8b66d1c",
+          "contigs": 57,
+          "bp": 13813,
+          "min_bp": 150,
+          "max_bp": 300,
+          "strata": {
+            "0": 57
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV397.3_gsa.fasta.gz",
+          "compressed_bytes": 137460,
+          "uncompressed_bytes": 460765,
+          "uncompressed_sha256": "abb62d0cef4767907edf9cdadf7e31db4ed45f748ef11da05ff0da7c68e019e1",
+          "contigs": 1512,
+          "bp": 384343,
+          "min_bp": 150,
+          "max_bp": 712,
+          "strata": {
+            "0": 1489,
+            "1": 23
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV222.0_gsa.fasta.gz",
+          "compressed_bytes": 161321,
+          "uncompressed_bytes": 547718,
+          "uncompressed_sha256": "ce6116984126a132ba7c53fd9d7e80e5d2db346563d38e7d69f6f06fde53d604",
+          "contigs": 1706,
+          "bp": 456205,
+          "min_bp": 150,
+          "max_bp": 971,
+          "strata": {
+            "0": 1649,
+            "1": 56,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_fASV197.5_gsa.fasta.gz",
+          "compressed_bytes": 10050202,
+          "uncompressed_bytes": 32318464,
+          "uncompressed_sha256": "f7857fd2ce5e8d180b44862aeae56c0783d7e230d5fe2277922529976e417d02",
+          "contigs": 39853,
+          "bp": 30225444,
+          "min_bp": 149,
+          "max_bp": 7976,
+          "strata": {
+            "0": 17272,
+            "2": 4559,
+            "1": 8168,
+            "3": 8990,
+            "4": 864
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV371.2_gsa.fasta.gz",
+          "compressed_bytes": 232616,
+          "uncompressed_bytes": 789019,
+          "uncompressed_sha256": "d2e26c30baea6fd28f7bb2c4cab1c401868639f6703b061bcdb0777f0a8d0b2c",
+          "contigs": 2517,
+          "bp": 654974,
+          "min_bp": 149,
+          "max_bp": 845,
+          "strata": {
+            "0": 2456,
+            "1": 59,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV585.5_gsa.fasta.gz",
+          "compressed_bytes": 9332,
+          "uncompressed_bytes": 30757,
+          "uncompressed_sha256": "16ffcf67cfac32c441c909900316d7d37912dc97e1278f677c4b263bb01091f2",
+          "contigs": 106,
+          "bp": 25467,
+          "min_bp": 150,
+          "max_bp": 321,
+          "strata": {
+            "0": 106
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV300.8_gsa.fasta.gz",
+          "compressed_bytes": 976520,
+          "uncompressed_bytes": 3462549,
+          "uncompressed_sha256": "d1739c263645d5da5396fb65cf33ab2f2088546228a16d25ee790a37ccc2df7f",
+          "contigs": 96,
+          "bp": 3457636,
+          "min_bp": 994,
+          "max_bp": 216779,
+          "strata": {
+            "5": 71,
+            "4": 14,
+            "3": 9,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV98.15_gsa.fasta.gz",
+          "compressed_bytes": 8889,
+          "uncompressed_bytes": 27769,
+          "uncompressed_sha256": "567b5646fbd1dbf2f1c440c4335c4956a309921f267348728ff500a6b2cc40ca",
+          "contigs": 95,
+          "bp": 23193,
+          "min_bp": 150,
+          "max_bp": 299,
+          "strata": {
+            "0": 95
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_fASV195.4_gsa.fasta.gz",
+          "compressed_bytes": 6684963,
+          "uncompressed_bytes": 21652447,
+          "uncompressed_sha256": "29549ab57bb30130a150aa3348b531fc6d520db209bcfbed785e9b091f01bc68",
+          "contigs": 43827,
+          "bp": 19386527,
+          "min_bp": 149,
+          "max_bp": 3643,
+          "strata": {
+            "1": 8028,
+            "0": 30642,
+            "2": 2795,
+            "3": 2349,
+            "4": 13
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV69.0_gsa.fasta.gz",
+          "compressed_bytes": 9318,
+          "uncompressed_bytes": 29817,
+          "uncompressed_sha256": "222eb45aa252a345b3d41c63cb677fc26a28ce0fc6fff5e0028a64cfe8b26113",
+          "contigs": 69,
+          "bp": 26815,
+          "min_bp": 150,
+          "max_bp": 1149,
+          "strata": {
+            "0": 52,
+            "2": 3,
+            "3": 2,
+            "1": 12
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV71.10_gsa.fasta.gz",
+          "compressed_bytes": 265232,
+          "uncompressed_bytes": 898918,
+          "uncompressed_sha256": "2f0fa64944f29a020532139b2102c021513d595e9cabc5b6ca763885a68db614",
+          "contigs": 2662,
+          "bp": 768279,
+          "min_bp": 150,
+          "max_bp": 943,
+          "strata": {
+            "0": 2498,
+            "1": 147,
+            "2": 17
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV65.2_gsa.fasta.gz",
+          "compressed_bytes": 3487,
+          "uncompressed_bytes": 10905,
+          "uncompressed_sha256": "91e1379f5a767f47e57911da19df8161c998e6ff52be4033cb4d1682025887a2",
+          "contigs": 39,
+          "bp": 8861,
+          "min_bp": 150,
+          "max_bp": 296,
+          "strata": {
+            "0": 39
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV35.2_gsa.fasta.gz",
+          "compressed_bytes": 13341,
+          "uncompressed_bytes": 44876,
+          "uncompressed_sha256": "12ad11a1b935431a90d8e92dc587572e7c240e84f9d637818d7b4f07912984f2",
+          "contigs": 1,
+          "bp": 44834,
+          "min_bp": 44834,
+          "max_bp": 44834,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV11.0_gsa.fasta.gz",
+          "compressed_bytes": 610,
+          "uncompressed_bytes": 1519,
+          "uncompressed_sha256": "4491a8b4859d96988bc24f0af5fbb599516b6e5aab66c6cd21f6e74da9a8fe41",
+          "contigs": 1,
+          "bp": 1477,
+          "min_bp": 1477,
+          "max_bp": 1477,
+          "strata": {
+            "3": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV49.0_gsa.fasta.gz",
+          "compressed_bytes": 14609,
+          "uncompressed_bytes": 49698,
+          "uncompressed_sha256": "b8b96854f36480882786725e0f23488122870bb615560134dd3a07eaeda52b4b",
+          "contigs": 1,
+          "bp": 49656,
+          "min_bp": 49656,
+          "max_bp": 49656,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV8.0_gsa.fasta.gz",
+          "compressed_bytes": 20353,
+          "uncompressed_bytes": 66216,
+          "uncompressed_sha256": "513fc841f49964e60e333932d27924059e821ac3a5801e908908d3183e85d44b",
+          "contigs": 193,
+          "bp": 57579,
+          "min_bp": 150,
+          "max_bp": 958,
+          "strata": {
+            "0": 178,
+            "1": 13,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_fASV1.1_gsa.fasta.gz",
+          "compressed_bytes": 8749727,
+          "uncompressed_bytes": 28389386,
+          "uncompressed_sha256": "7f9beecaff696ba48d5a986912c4b15ec2b5f7de05e5e4ae369b89b165ca825c",
+          "contigs": 48304,
+          "bp": 25860268,
+          "min_bp": 150,
+          "max_bp": 4489,
+          "strata": {
+            "1": 9989,
+            "0": 28746,
+            "3": 5205,
+            "2": 4268,
+            "4": 96
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV487.10_gsa.fasta.gz",
+          "compressed_bytes": 1203756,
+          "uncompressed_bytes": 4165102,
+          "uncompressed_sha256": "4d218176a9af2355c2a4ff7f0ab7aab3d40b642ddb86d411601e115425ccc28a",
+          "contigs": 89,
+          "bp": 4160562,
+          "min_bp": 1003,
+          "max_bp": 288808,
+          "strata": {
+            "5": 56,
+            "4": 11,
+            "3": 22
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV245.8_gsa.fasta.gz",
+          "compressed_bytes": 88105,
+          "uncompressed_bytes": 296339,
+          "uncompressed_sha256": "ff6ca3dfb52436afd4a67827cb58dd743531074b0223ed1d447f11f719ab1325",
+          "contigs": 963,
+          "bp": 245083,
+          "min_bp": 150,
+          "max_bp": 664,
+          "strata": {
+            "0": 952,
+            "1": 11
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV481.2_gsa.fasta.gz",
+          "compressed_bytes": 143291,
+          "uncompressed_bytes": 497339,
+          "uncompressed_sha256": "80b125fd96143d87fe9b15013fa73f8b222be78c2e36c81ed63c2846585e68ba",
+          "contigs": 1604,
+          "bp": 411313,
+          "min_bp": 150,
+          "max_bp": 676,
+          "strata": {
+            "0": 1578,
+            "1": 26
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV15.0_gsa.fasta.gz",
+          "compressed_bytes": 13009,
+          "uncompressed_bytes": 43729,
+          "uncompressed_sha256": "b732457b18318b75ce037c7d07e6347fd3af092e29a4abda1d3073488041fbdd",
+          "contigs": 1,
+          "bp": 43686,
+          "min_bp": 43686,
+          "max_bp": 43686,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV36.0_gsa.fasta.gz",
+          "compressed_bytes": 1326,
+          "uncompressed_bytes": 3915,
+          "uncompressed_sha256": "05a8295c5d5a3da8fd280a650f64a3096d76df974efc9cf86391e1f28ba27ed1",
+          "contigs": 1,
+          "bp": 3874,
+          "min_bp": 3874,
+          "max_bp": 3874,
+          "strata": {
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV36.0_gsa.fasta.gz",
+          "compressed_bytes": 2238,
+          "uncompressed_bytes": 6867,
+          "uncompressed_sha256": "57e87680a68397be8a4332d3bc80b2a8f6fdd666b4cc1ee9bf3ab97633b76b6f",
+          "contigs": 1,
+          "bp": 6826,
+          "min_bp": 6826,
+          "max_bp": 6826,
+          "strata": {
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV166.0_gsa.fasta.gz",
+          "compressed_bytes": 17700,
+          "uncompressed_bytes": 58206,
+          "uncompressed_sha256": "42735ba95e5def0d6490dc3041b0d7395c61e9f8dea876ac4f9412c2caf50eb0",
+          "contigs": 202,
+          "bp": 47368,
+          "min_bp": 150,
+          "max_bp": 300,
+          "strata": {
+            "0": 202
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV265.0_gsa.fasta.gz",
+          "compressed_bytes": 26430,
+          "uncompressed_bytes": 87814,
+          "uncompressed_sha256": "0f2bb793157d80f79d8f51406341df3230eadfaa2c0539c8c86905dde0735b39",
+          "contigs": 296,
+          "bp": 72200,
+          "min_bp": 150,
+          "max_bp": 522,
+          "strata": {
+            "0": 295,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV17.0_gsa.fasta.gz",
+          "compressed_bytes": 12286,
+          "uncompressed_bytes": 39951,
+          "uncompressed_sha256": "29b6e9138fc3f23bb05bc71e03231eaf8907b0d44a61b99075fd98507615041a",
+          "contigs": 33,
+          "bp": 38501,
+          "min_bp": 193,
+          "max_bp": 7085,
+          "strata": {
+            "4": 3,
+            "0": 11,
+            "3": 10,
+            "2": 1,
+            "1": 8
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV374.3_gsa.fasta.gz",
+          "compressed_bytes": 36116,
+          "uncompressed_bytes": 120854,
+          "uncompressed_sha256": "fe2fabfe5b0689a02fbb1699cd20eed517d6b8b9e0850c45662c37febf39a7de",
+          "contigs": 400,
+          "bp": 99146,
+          "min_bp": 150,
+          "max_bp": 483,
+          "strata": {
+            "0": 400
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV519.3_gsa.fasta.gz",
+          "compressed_bytes": 528416,
+          "uncompressed_bytes": 1784673,
+          "uncompressed_sha256": "ddb3124f05f3dd7aaaf282ccd03fe1d8954ad6c7b1ef12a53e29161689fb202e",
+          "contigs": 4308,
+          "bp": 1564510,
+          "min_bp": 150,
+          "max_bp": 1550,
+          "strata": {
+            "0": 3475,
+            "3": 69,
+            "1": 629,
+            "2": 135
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV364.1_gsa.fasta.gz",
+          "compressed_bytes": 31953,
+          "uncompressed_bytes": 104563,
+          "uncompressed_sha256": "e6555fc65c9eb45bd5cc920708a5096bbe732495d37003a703cf90daf73e5171",
+          "contigs": 365,
+          "bp": 86517,
+          "min_bp": 150,
+          "max_bp": 523,
+          "strata": {
+            "0": 364,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_pASV63_gsa.fasta.gz",
+          "compressed_bytes": 5628,
+          "uncompressed_bytes": 75581,
+          "uncompressed_sha256": "8f3b9279cc88fd4ffd874897abb70a4ee0b0c4128f0261a262eaf718e48a371b",
+          "contigs": 59,
+          "bp": 72925,
+          "min_bp": 246,
+          "max_bp": 4914,
+          "strata": {
+            "0": 13,
+            "4": 5,
+            "3": 25,
+            "2": 9,
+            "1": 7
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV66.0_gsa.fasta.gz",
+          "compressed_bytes": 10795,
+          "uncompressed_bytes": 36222,
+          "uncompressed_sha256": "bc73e3c0457e63cd7503bd25efc833f306b28a8e56a55bcc1ed67ad0d6276f3a",
+          "contigs": 70,
+          "bp": 33169,
+          "min_bp": 150,
+          "max_bp": 1517,
+          "strata": {
+            "0": 49,
+            "3": 8,
+            "1": 9,
+            "2": 4
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV714.0_gsa.fasta.gz",
+          "compressed_bytes": 1099099,
+          "uncompressed_bytes": 3805891,
+          "uncompressed_sha256": "39d9437b5154c12cc9399e7bd8249d8c0ad9622ea71a1f232c2e50ca9309055c",
+          "contigs": 1263,
+          "bp": 3744917,
+          "min_bp": 150,
+          "max_bp": 22969,
+          "strata": {
+            "3": 395,
+            "0": 148,
+            "4": 505,
+            "1": 101,
+            "5": 35,
+            "2": 79
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV39.4_gsa.fasta.gz",
+          "compressed_bytes": 11881,
+          "uncompressed_bytes": 39527,
+          "uncompressed_sha256": "818d1e3657aeccde59a57ee6e63decedd395eb06a5f537c189b32b77d71b969d",
+          "contigs": 9,
+          "bp": 39128,
+          "min_bp": 533,
+          "max_bp": 10973,
+          "strata": {
+            "4": 5,
+            "1": 1,
+            "3": 1,
+            "5": 1,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV50.0_gsa.fasta.gz",
+          "compressed_bytes": 4013,
+          "uncompressed_bytes": 12569,
+          "uncompressed_sha256": "dbeadbe30886cc14642e600dab5e9f2a6f9fe7b2b69337304527dfff86264e77",
+          "contigs": 44,
+          "bp": 10159,
+          "min_bp": 150,
+          "max_bp": 299,
+          "strata": {
+            "0": 44
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV731.3_gsa.fasta.gz",
+          "compressed_bytes": 25714,
+          "uncompressed_bytes": 86107,
+          "uncompressed_sha256": "cbbfbaa6cbe74b128e6d771bd8139f52a5cc54f26871d7946d68ea0ea20d0d67",
+          "contigs": 299,
+          "bp": 70053,
+          "min_bp": 150,
+          "max_bp": 547,
+          "strata": {
+            "0": 298,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV694.7_gsa.fasta.gz",
+          "compressed_bytes": 158217,
+          "uncompressed_bytes": 533859,
+          "uncompressed_sha256": "a136da46a7eaab68c748716c304f6151430a2b755bdf3577f7f3bf1356c3fc7b",
+          "contigs": 1752,
+          "bp": 438123,
+          "min_bp": 150,
+          "max_bp": 737,
+          "strata": {
+            "0": 1736,
+            "1": 16
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV68.0_gsa.fasta.gz",
+          "compressed_bytes": 11891,
+          "uncompressed_bytes": 38042,
+          "uncompressed_sha256": "3d5cd71658c724306c340b944665748251375548fff8e4cc1bce5a77f8d7708c",
+          "contigs": 123,
+          "bp": 32529,
+          "min_bp": 150,
+          "max_bp": 630,
+          "strata": {
+            "0": 119,
+            "1": 4
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV75.0_gsa.fasta.gz",
+          "compressed_bytes": 5739,
+          "uncompressed_bytes": 18032,
+          "uncompressed_sha256": "18b9181bde0b4ff545df3268658a7e2ba51469ef8c99cc4c1e89e0b93fd02ad3",
+          "contigs": 50,
+          "bp": 15857,
+          "min_bp": 150,
+          "max_bp": 781,
+          "strata": {
+            "0": 44,
+            "1": 5,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV688.0_gsa.fasta.gz",
+          "compressed_bytes": 371356,
+          "uncompressed_bytes": 1257588,
+          "uncompressed_sha256": "411ffb05241e91dfa8c8dfb2eed23bd4dea79023aa7fd7d7bcef21c5eb215e19",
+          "contigs": 3943,
+          "bp": 1045984,
+          "min_bp": 150,
+          "max_bp": 864,
+          "strata": {
+            "0": 3815,
+            "1": 124,
+            "2": 4
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV19.0_gsa.fasta.gz",
+          "compressed_bytes": 510,
+          "uncompressed_bytes": 1187,
+          "uncompressed_sha256": "c79e73e34ae093d5f8f2784b2a8b90e3231ca65a518387b0eb70743876b4e6e1",
+          "contigs": 2,
+          "bp": 1106,
+          "min_bp": 262,
+          "max_bp": 844,
+          "strata": {
+            "2": 1,
+            "0": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV10.7_gsa.fasta.gz",
+          "compressed_bytes": 9252,
+          "uncompressed_bytes": 31116,
+          "uncompressed_sha256": "eac55e5f47628d33bca041939c543ee550aaafac760b7d7f9d6508fdd3f57a36",
+          "contigs": 2,
+          "bp": 31029,
+          "min_bp": 662,
+          "max_bp": 30367,
+          "strata": {
+            "5": 1,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV221.15_gsa.fasta.gz",
+          "compressed_bytes": 21393,
+          "uncompressed_bytes": 69241,
+          "uncompressed_sha256": "448f1fc63ee1dd80d8b3c4febe5114d64cfc948996f19883fff9a7a20a19c497",
+          "contigs": 237,
+          "bp": 57212,
+          "min_bp": 150,
+          "max_bp": 409,
+          "strata": {
+            "0": 237
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV1.0_gsa.fasta.gz",
+          "compressed_bytes": 25803,
+          "uncompressed_bytes": 87994,
+          "uncompressed_sha256": "ce78379ed47a62b10f935978869f972923efbf733728194a2498d3275427ae3d",
+          "contigs": 79,
+          "bp": 84497,
+          "min_bp": 150,
+          "max_bp": 6531,
+          "strata": {
+            "0": 24,
+            "3": 25,
+            "1": 15,
+            "4": 6,
+            "2": 9
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV99.0_gsa.fasta.gz",
+          "compressed_bytes": 13554,
+          "uncompressed_bytes": 45587,
+          "uncompressed_sha256": "ee5ec88a127ce935fe7f0f71e0efbcbb9ef329ecbe017af0274bab7a5b450057",
+          "contigs": 2,
+          "bp": 45505,
+          "min_bp": 150,
+          "max_bp": 45355,
+          "strata": {
+            "0": 1,
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_fASV198.4_gsa.fasta.gz",
+          "compressed_bytes": 4021313,
+          "uncompressed_bytes": 12836720,
+          "uncompressed_sha256": "f5e8529e6a738b3e9443af97354f2b237a839fe15dc331f965a7b9269caf925a",
+          "contigs": 4112,
+          "bp": 12625053,
+          "min_bp": 150,
+          "max_bp": 24804,
+          "strata": {
+            "4": 1714,
+            "3": 1220,
+            "2": 235,
+            "0": 498,
+            "5": 132,
+            "1": 313
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV63.0_gsa.fasta.gz",
+          "compressed_bytes": 9430,
+          "uncompressed_bytes": 31852,
+          "uncompressed_sha256": "19db40c3953784b4192a7b097d6e2a19f70b47728dd292cf705a1fcfe6f0a2e9",
+          "contigs": 1,
+          "bp": 31810,
+          "min_bp": 31810,
+          "max_bp": 31810,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV29.0_gsa.fasta.gz",
+          "compressed_bytes": 520,
+          "uncompressed_bytes": 1221,
+          "uncompressed_sha256": "899967ff8ca63d82c43f292890fbe274f7f7616df1188385f205143973481246",
+          "contigs": 3,
+          "bp": 1097,
+          "min_bp": 286,
+          "max_bp": 475,
+          "strata": {
+            "0": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV368.3_gsa.fasta.gz",
+          "compressed_bytes": 15744,
+          "uncompressed_bytes": 52189,
+          "uncompressed_sha256": "75d8c420b20ffb08f3ae1cbc5b6af2c8692aec75ed33d8eb9226e1ef1ed6d626",
+          "contigs": 178,
+          "bp": 43385,
+          "min_bp": 150,
+          "max_bp": 308,
+          "strata": {
+            "0": 178
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV676.10_gsa.fasta.gz",
+          "compressed_bytes": 25321,
+          "uncompressed_bytes": 82237,
+          "uncompressed_sha256": "a65f28728ce6426495998cbd1eb39b9666a2bea679a524000e779f7ff12a62e0",
+          "contigs": 280,
+          "bp": 68373,
+          "min_bp": 150,
+          "max_bp": 300,
+          "strata": {
+            "0": 280
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV5.11_gsa.fasta.gz",
+          "compressed_bytes": 8794,
+          "uncompressed_bytes": 28723,
+          "uncompressed_sha256": "d04ccac3f14b1a9df3776cd286cbd7f8e9051400ea3515b4e8fa9f2b07e1b5b1",
+          "contigs": 98,
+          "bp": 23435,
+          "min_bp": 150,
+          "max_bp": 300,
+          "strata": {
+            "0": 98
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_fASV192.1_gsa.fasta.gz",
+          "compressed_bytes": 249777,
+          "uncompressed_bytes": 787777,
+          "uncompressed_sha256": "2fadfaaccff1c8432c18103d883ca7b618eda11998cadb5a13b42ac0ea7d2f2a",
+          "contigs": 2700,
+          "bp": 645667,
+          "min_bp": 150,
+          "max_bp": 544,
+          "strata": {
+            "0": 2696,
+            "1": 4
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV94.0_gsa.fasta.gz",
+          "compressed_bytes": 12853,
+          "uncompressed_bytes": 43135,
+          "uncompressed_sha256": "9d4366a14e433af3873cf3ad35e1eea696d3fe517898740d9288f08517541b30",
+          "contigs": 1,
+          "bp": 43092,
+          "min_bp": 43092,
+          "max_bp": 43092,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV55.0_gsa.fasta.gz",
+          "compressed_bytes": 23378,
+          "uncompressed_bytes": 76344,
+          "uncompressed_sha256": "8e7f7dfe80163abb4912b8fd28c1a173f715644e0fe415c92bff7ff9d4a30023",
+          "contigs": 211,
+          "bp": 66916,
+          "min_bp": 150,
+          "max_bp": 1785,
+          "strata": {
+            "0": 191,
+            "1": 17,
+            "2": 2,
+            "3": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV96.0_gsa.fasta.gz",
+          "compressed_bytes": 29221,
+          "uncompressed_bytes": 96014,
+          "uncompressed_sha256": "07caf06c1755ad63efa1df0f8dce0ce58c046edf890095a873890e34e7a39fa4",
+          "contigs": 328,
+          "bp": 78399,
+          "min_bp": 150,
+          "max_bp": 513,
+          "strata": {
+            "0": 327,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV12.4_gsa.fasta.gz",
+          "compressed_bytes": 11348,
+          "uncompressed_bytes": 37191,
+          "uncompressed_sha256": "d531d34557ed107b6abef56122ce974a3b980592a9e3fe83e5af88ee4fae7fd3",
+          "contigs": 86,
+          "bp": 33437,
+          "min_bp": 150,
+          "max_bp": 1249,
+          "strata": {
+            "0": 68,
+            "1": 13,
+            "3": 2,
+            "2": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV91.0_gsa.fasta.gz",
+          "compressed_bytes": 7064,
+          "uncompressed_bytes": 22384,
+          "uncompressed_sha256": "ec789edf1458dc22b6390b1a209baa6cad1da56bd8408462507a3b3b64ead071",
+          "contigs": 62,
+          "bp": 19697,
+          "min_bp": 150,
+          "max_bp": 992,
+          "strata": {
+            "0": 56,
+            "1": 5,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV68.9_gsa.fasta.gz",
+          "compressed_bytes": 432794,
+          "uncompressed_bytes": 1488186,
+          "uncompressed_sha256": "fdb7de4668f4ecb93068c90d1e6068f78171bbec1034d85a21dc88c71c2afcec",
+          "contigs": 3441,
+          "bp": 1298849,
+          "min_bp": 150,
+          "max_bp": 1642,
+          "strata": {
+            "2": 138,
+            "0": 2714,
+            "1": 522,
+            "3": 67
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV58.0_gsa.fasta.gz",
+          "compressed_bytes": 22655,
+          "uncompressed_bytes": 76893,
+          "uncompressed_sha256": "2c2705395d684df73ef4caf075e719a09abbdac1b6667d20a7546f710167b0b3",
+          "contigs": 1,
+          "bp": 76850,
+          "min_bp": 76850,
+          "max_bp": 76850,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV227.0_gsa.fasta.gz",
+          "compressed_bytes": 19213,
+          "uncompressed_bytes": 64543,
+          "uncompressed_sha256": "b6280430cb33ab6a09e754c3a65d8f24d3224132d60c84efaa9ca1492ed5a65e",
+          "contigs": 226,
+          "bp": 52509,
+          "min_bp": 150,
+          "max_bp": 482,
+          "strata": {
+            "0": 226
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV507.11_gsa.fasta.gz",
+          "compressed_bytes": 827272,
+          "uncompressed_bytes": 2884592,
+          "uncompressed_sha256": "46599ebb7a89975315a5a2f4076415ece9182faddf1bd73a78522aa0b8c6d967",
+          "contigs": 26,
+          "bp": 2883249,
+          "min_bp": 905,
+          "max_bp": 740749,
+          "strata": {
+            "5": 17,
+            "3": 4,
+            "4": 4,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV28.0_gsa.fasta.gz",
+          "compressed_bytes": 5990,
+          "uncompressed_bytes": 18839,
+          "uncompressed_sha256": "71f0a0055ba1b459ace37ab7e01295f220c50f2f94548a6764bdc0cbbaa7fd54",
+          "contigs": 49,
+          "bp": 16719,
+          "min_bp": 150,
+          "max_bp": 965,
+          "strata": {
+            "0": 42,
+            "1": 5,
+            "2": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV37.0_gsa.fasta.gz",
+          "compressed_bytes": 3960,
+          "uncompressed_bytes": 12313,
+          "uncompressed_sha256": "6d159293593eefd99de3aeaddf8a58cd4e356f90cdd2787cb1f2766370f5636d",
+          "contigs": 35,
+          "bp": 10797,
+          "min_bp": 150,
+          "max_bp": 589,
+          "strata": {
+            "0": 33,
+            "1": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV101.4_gsa.fasta.gz",
+          "compressed_bytes": 468166,
+          "uncompressed_bytes": 1582926,
+          "uncompressed_sha256": "f246b5d78ec4ff833d3f9cdcd17c8101c6609c1ff51a36006932ac0ee1b04ffe",
+          "contigs": 4713,
+          "bp": 1330627,
+          "min_bp": 149,
+          "max_bp": 980,
+          "strata": {
+            "1": 252,
+            "0": 4442,
+            "2": 19
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV668.0_gsa.fasta.gz",
+          "compressed_bytes": 4186,
+          "uncompressed_bytes": 12897,
+          "uncompressed_sha256": "f97a4c74cfa2bd54039505239861727919bcecb6ed305e7bcc776d57a4d63ca8",
+          "contigs": 44,
+          "bp": 10753,
+          "min_bp": 150,
+          "max_bp": 299,
+          "strata": {
+            "0": 44
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV3.3_gsa.fasta.gz",
+          "compressed_bytes": 9098,
+          "uncompressed_bytes": 30290,
+          "uncompressed_sha256": "4236ae1f6e10890c45beb10fc35f9847ddd0b52340903895138203f42091c805",
+          "contigs": 13,
+          "bp": 29720,
+          "min_bp": 150,
+          "max_bp": 4909,
+          "strata": {
+            "3": 5,
+            "4": 6,
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV290.6_gsa.fasta.gz",
+          "compressed_bytes": 680706,
+          "uncompressed_bytes": 2359209,
+          "uncompressed_sha256": "a67524f45404606686d357af5b2769b9bad3d3151ecd2cde9c746d0db6c7ba9b",
+          "contigs": 56,
+          "bp": 2356314,
+          "min_bp": 914,
+          "max_bp": 226300,
+          "strata": {
+            "5": 31,
+            "4": 13,
+            "3": 9,
+            "2": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_pASV42_gsa.fasta.gz",
+          "compressed_bytes": 271627,
+          "uncompressed_bytes": 940348,
+          "uncompressed_sha256": "9e15c76cab701725c65e921106e032337d8c7d9468ce3cb1256addf542d1abab",
+          "contigs": 10,
+          "bp": 939894,
+          "min_bp": 93872,
+          "max_bp": 94030,
+          "strata": {
+            "5": 10
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV444.5_gsa.fasta.gz",
+          "compressed_bytes": 730801,
+          "uncompressed_bytes": 2470050,
+          "uncompressed_sha256": "ed43208e11606a05f8b5b6839aa9ca0cece0c0aa82605dc2a44b51efe30021aa",
+          "contigs": 4793,
+          "bp": 2233528,
+          "min_bp": 150,
+          "max_bp": 2608,
+          "strata": {
+            "0": 3220,
+            "1": 917,
+            "2": 350,
+            "3": 305,
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV66.4_gsa.fasta.gz",
+          "compressed_bytes": 4546,
+          "uncompressed_bytes": 14086,
+          "uncompressed_sha256": "91718cb0a4eec46fd633c5fb79288a3b78860db38a886a65dc1c0b29cdb8de2a",
+          "contigs": 52,
+          "bp": 11270,
+          "min_bp": 150,
+          "max_bp": 298,
+          "strata": {
+            "0": 52
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV10.0_gsa.fasta.gz",
+          "compressed_bytes": 100292,
+          "uncompressed_bytes": 348770,
+          "uncompressed_sha256": "16a3de7513f4b2aea6e77b353f65c044797b0a8901248a6fbad911a44e06550d",
+          "contigs": 1137,
+          "bp": 287636,
+          "min_bp": 150,
+          "max_bp": 924,
+          "strata": {
+            "0": 1123,
+            "1": 13,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV557.0_gsa.fasta.gz",
+          "compressed_bytes": 845808,
+          "uncompressed_bytes": 2888449,
+          "uncompressed_sha256": "2f1a3ad0c119f175dcff262940061353e90da6500efee99bd5011089150c5b9f",
+          "contigs": 5595,
+          "bp": 2607113,
+          "min_bp": 150,
+          "max_bp": 2618,
+          "strata": {
+            "2": 427,
+            "0": 3756,
+            "3": 362,
+            "1": 1047,
+            "4": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV71.0_gsa.fasta.gz",
+          "compressed_bytes": 9831,
+          "uncompressed_bytes": 32797,
+          "uncompressed_sha256": "587a1753daea71e2d4dbd4928dde8a07f34a6def0ebf5ad2d4a58743b0f39cb5",
+          "contigs": 1,
+          "bp": 32754,
+          "min_bp": 32754,
+          "max_bp": 32754,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV540.2_gsa.fasta.gz",
+          "compressed_bytes": 352298,
+          "uncompressed_bytes": 1191645,
+          "uncompressed_sha256": "18ef769fcf3876610840826d03f8c7b4d77abfe0dc7cb5427b8dfbc6d5f7e9b1",
+          "contigs": 3123,
+          "bp": 1027365,
+          "min_bp": 150,
+          "max_bp": 1713,
+          "strata": {
+            "0": 2704,
+            "1": 352,
+            "3": 20,
+            "2": 47
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV499.2_gsa.fasta.gz",
+          "compressed_bytes": 102390,
+          "uncompressed_bytes": 346079,
+          "uncompressed_sha256": "448b642404ad43e925519bed4e281697acea96c66452b391485b156b37b0d42b",
+          "contigs": 1135,
+          "bp": 285057,
+          "min_bp": 150,
+          "max_bp": 718,
+          "strata": {
+            "0": 1124,
+            "1": 11
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV520.8_gsa.fasta.gz",
+          "compressed_bytes": 26807,
+          "uncompressed_bytes": 88548,
+          "uncompressed_sha256": "01cc45d9c69924bd5a86a764d52ecb646efa473cdba30437ccd80ac564ce0fd2",
+          "contigs": 298,
+          "bp": 72739,
+          "min_bp": 150,
+          "max_bp": 476,
+          "strata": {
+            "0": 298
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV286.1_gsa.fasta.gz",
+          "compressed_bytes": 11793,
+          "uncompressed_bytes": 38292,
+          "uncompressed_sha256": "33b994d2b6a5df7b25f0654392bd1df2d423acf8b3735a94a4bcbd99c3a9bcdd",
+          "contigs": 135,
+          "bp": 31117,
+          "min_bp": 150,
+          "max_bp": 295,
+          "strata": {
+            "0": 135
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV9.0_gsa.fasta.gz",
+          "compressed_bytes": 2154,
+          "uncompressed_bytes": 6426,
+          "uncompressed_sha256": "222cf8eca7f268027802de6d6147ce846cf6e7344c4e34f1db901c770dffa2a0",
+          "contigs": 5,
+          "bp": 6215,
+          "min_bp": 367,
+          "max_bp": 2371,
+          "strata": {
+            "3": 3,
+            "0": 1,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV484.0_gsa.fasta.gz",
+          "compressed_bytes": 829207,
+          "uncompressed_bytes": 2958623,
+          "uncompressed_sha256": "7cb58025ce4a3de3739f71735a96ca589f94b1d5510cfc61f4ab3bda2224590d",
+          "contigs": 214,
+          "bp": 2947002,
+          "min_bp": 150,
+          "max_bp": 88451,
+          "strata": {
+            "4": 84,
+            "5": 95,
+            "3": 22,
+            "0": 7,
+            "1": 2,
+            "2": 4
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV699.7_gsa.fasta.gz",
+          "compressed_bytes": 9833,
+          "uncompressed_bytes": 31502,
+          "uncompressed_sha256": "69625d598dd58133fb6080474a19517349227e92374c3dd501dc652496f68dfd",
+          "contigs": 109,
+          "bp": 25625,
+          "min_bp": 150,
+          "max_bp": 298,
+          "strata": {
+            "0": 109
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV579.0_gsa.fasta.gz",
+          "compressed_bytes": 670636,
+          "uncompressed_bytes": 2345916,
+          "uncompressed_sha256": "6e99fb70d09b4039f66a3fadba7ac2b82857b7c120c6e511d5c17c1bc4ccf2f8",
+          "contigs": 1,
+          "bp": 2345868,
+          "min_bp": 2345868,
+          "max_bp": 2345868,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV81.0_gsa.fasta.gz",
+          "compressed_bytes": 47596,
+          "uncompressed_bytes": 162367,
+          "uncompressed_sha256": "48ec54eb3fb0733652d0addc55375668017e0a28738a170c7dd2106249f45a7e",
+          "contigs": 1,
+          "bp": 162323,
+          "min_bp": 162323,
+          "max_bp": 162323,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV47.0_gsa.fasta.gz",
+          "compressed_bytes": 42950,
+          "uncompressed_bytes": 143196,
+          "uncompressed_sha256": "5786089899d8ad599856fab7288c77199641722c45a75d4c98dcc8c01a95e1ae",
+          "contigs": 224,
+          "bp": 133145,
+          "min_bp": 150,
+          "max_bp": 3109,
+          "strata": {
+            "1": 47,
+            "0": 120,
+            "3": 34,
+            "2": 22,
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV124.5_gsa.fasta.gz",
+          "compressed_bytes": 828781,
+          "uncompressed_bytes": 2795975,
+          "uncompressed_sha256": "0d0c5e0edf63316c8f8a5a1dc58c645ba6d8b24177213a66b93364df58e1bbaa",
+          "contigs": 7185,
+          "bp": 2414290,
+          "min_bp": 149,
+          "max_bp": 1525,
+          "strata": {
+            "0": 6126,
+            "1": 843,
+            "2": 168,
+            "3": 48
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV46.0_gsa.fasta.gz",
+          "compressed_bytes": 1685,
+          "uncompressed_bytes": 4909,
+          "uncompressed_sha256": "7a0b151a3334eb795191f2da067640935829d2aedc52b13f16cfebdd8e951c8a",
+          "contigs": 17,
+          "bp": 4169,
+          "min_bp": 150,
+          "max_bp": 475,
+          "strata": {
+            "0": 17
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV749.3_gsa.fasta.gz",
+          "compressed_bytes": 9891,
+          "uncompressed_bytes": 31658,
+          "uncompressed_sha256": "6d014774a4d51a5c0bd9dbe412622a2f66d7f473d6a066d3a5924f72810082d1",
+          "contigs": 109,
+          "bp": 25691,
+          "min_bp": 150,
+          "max_bp": 387,
+          "strata": {
+            "0": 109
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV30.0_gsa.fasta.gz",
+          "compressed_bytes": 1048,
+          "uncompressed_bytes": 2845,
+          "uncompressed_sha256": "854d4069121d2f57c8849a1aebe52503acd76e4fcd345f2620dedc67ff0fba89",
+          "contigs": 9,
+          "bp": 2449,
+          "min_bp": 150,
+          "max_bp": 395,
+          "strata": {
+            "0": 9
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV27.0_gsa.fasta.gz",
+          "compressed_bytes": 736,
+          "uncompressed_bytes": 1928,
+          "uncompressed_sha256": "8cf86f1244047ac325677ba185741d8e65ac051741b2649c803615d1bcbabedb",
+          "contigs": 7,
+          "bp": 1622,
+          "min_bp": 150,
+          "max_bp": 292,
+          "strata": {
+            "0": 7
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV62.0_gsa.fasta.gz",
+          "compressed_bytes": 15956,
+          "uncompressed_bytes": 51909,
+          "uncompressed_sha256": "e495772e8f1dd143b9cd122584e268b71be800673d77d6cfd40dfb6cff077134",
+          "contigs": 65,
+          "bp": 49059,
+          "min_bp": 150,
+          "max_bp": 3642,
+          "strata": {
+            "0": 24,
+            "1": 19,
+            "2": 7,
+            "4": 1,
+            "3": 14
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_pASV43_gsa.fasta.gz",
+          "compressed_bytes": 255312,
+          "uncompressed_bytes": 891537,
+          "uncompressed_sha256": "4307bf13339911e231f644170fddd04571e466eb89ebe86b3f31715b41f02bb6",
+          "contigs": 10,
+          "bp": 891079,
+          "min_bp": 89078,
+          "max_bp": 89126,
+          "strata": {
+            "5": 10
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV442.4_gsa.fasta.gz",
+          "compressed_bytes": 11245,
+          "uncompressed_bytes": 36331,
+          "uncompressed_sha256": "54ea028a82adbad75da2faa43f020d5ac6622f2425eb2c987859bf0fd2347ef7",
+          "contigs": 125,
+          "bp": 30179,
+          "min_bp": 150,
+          "max_bp": 299,
+          "strata": {
+            "0": 125
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV456.0_gsa.fasta.gz",
+          "compressed_bytes": 1025686,
+          "uncompressed_bytes": 3548878,
+          "uncompressed_sha256": "00e33980c5015e5c60a9081a4343e6dcab940d15822b383f9daf6bbbaf60e64a",
+          "contigs": 94,
+          "bp": 3544210,
+          "min_bp": 150,
+          "max_bp": 292028,
+          "strata": {
+            "5": 53,
+            "1": 5,
+            "4": 14,
+            "2": 3,
+            "3": 12,
+            "0": 7
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV48.0_gsa.fasta.gz",
+          "compressed_bytes": 889,
+          "uncompressed_bytes": 2418,
+          "uncompressed_sha256": "3cb219249b5f8330e3cdfa00f0f5f4833eb8efd8a3cfe54f43a20e82f243e355",
+          "contigs": 1,
+          "bp": 2378,
+          "min_bp": 2378,
+          "max_bp": 2378,
+          "strata": {
+            "3": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV670.1_gsa.fasta.gz",
+          "compressed_bytes": 54145,
+          "uncompressed_bytes": 180384,
+          "uncompressed_sha256": "64448a8cbde09b658b0f75f1c3dd1fcaccdd58f2bd7da45a8d45611e24b6aae5",
+          "contigs": 619,
+          "bp": 149780,
+          "min_bp": 150,
+          "max_bp": 496,
+          "strata": {
+            "0": 619
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV28.8_gsa.fasta.gz",
+          "compressed_bytes": 22631,
+          "uncompressed_bytes": 76659,
+          "uncompressed_sha256": "e7dcdaa49db979efc2715d8a00932f62eedc8e6cee4a0aef6bcaa75f18ef9dd8",
+          "contigs": 1,
+          "bp": 76617,
+          "min_bp": 76617,
+          "max_bp": 76617,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV337.1_gsa.fasta.gz",
+          "compressed_bytes": 916715,
+          "uncompressed_bytes": 3164012,
+          "uncompressed_sha256": "0524259a07f7515fa9d240b37427b7b5cf4f97cee41191fc624d4e4a4d33fcad",
+          "contigs": 529,
+          "bp": 3136636,
+          "min_bp": 150,
+          "max_bp": 39908,
+          "strata": {
+            "4": 253,
+            "1": 17,
+            "5": 105,
+            "0": 35,
+            "3": 96,
+            "2": 23
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV783.5_gsa.fasta.gz",
+          "compressed_bytes": 1436133,
+          "uncompressed_bytes": 4905923,
+          "uncompressed_sha256": "16b6ed99dda98ce0776ef06d94f525d51051c30b19fd4aaa725488dbc3dd5de4",
+          "contigs": 1915,
+          "bp": 4809731,
+          "min_bp": 150,
+          "max_bp": 17206,
+          "strata": {
+            "4": 693,
+            "2": 147,
+            "3": 621,
+            "0": 261,
+            "1": 166,
+            "5": 27
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV86.0_gsa.fasta.gz",
+          "compressed_bytes": 22312,
+          "uncompressed_bytes": 75773,
+          "uncompressed_sha256": "50d9adac2b55fd840c31475ba9ab433b9029da53b588a01716df154e6c7f7003",
+          "contigs": 1,
+          "bp": 75730,
+          "min_bp": 75730,
+          "max_bp": 75730,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV33.0_gsa.fasta.gz",
+          "compressed_bytes": 14796,
+          "uncompressed_bytes": 49454,
+          "uncompressed_sha256": "d0310152a893d258eaca1b601c63056e203ce43cfebb505467d07e7140e28914",
+          "contigs": 1,
+          "bp": 49411,
+          "min_bp": 49411,
+          "max_bp": 49411,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_pASV65_gsa.fasta.gz",
+          "compressed_bytes": 202712,
+          "uncompressed_bytes": 695505,
+          "uncompressed_sha256": "cd279b3c10c43b24d3b89c5c204c1cfe0fe638ef0742dace1d4dbee59d06476e",
+          "contigs": 515,
+          "bp": 671216,
+          "min_bp": 150,
+          "max_bp": 5896,
+          "strata": {
+            "3": 197,
+            "1": 76,
+            "0": 121,
+            "4": 63,
+            "2": 58
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV440.15_gsa.fasta.gz",
+          "compressed_bytes": 75150,
+          "uncompressed_bytes": 251631,
+          "uncompressed_sha256": "0db1756563e697a81185edf45e94444787aeb6a39005caecdc66f007360611aa",
+          "contigs": 854,
+          "bp": 205857,
+          "min_bp": 150,
+          "max_bp": 514,
+          "strata": {
+            "0": 853,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV3.0_gsa.fasta.gz",
+          "compressed_bytes": 8582,
+          "uncompressed_bytes": 28761,
+          "uncompressed_sha256": "07d90db0b1d499f920d7050e57d3bd311d317290c1e987777c80f71bcd693292",
+          "contigs": 4,
+          "bp": 28586,
+          "min_bp": 3738,
+          "max_bp": 12611,
+          "strata": {
+            "4": 3,
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV40.10_gsa.fasta.gz",
+          "compressed_bytes": 14514,
+          "uncompressed_bytes": 48366,
+          "uncompressed_sha256": "4f77d260228b9a1eb3e6e0e4ab89f9d05de0982166fb3a7e13203d3cea6c2b91",
+          "contigs": 16,
+          "bp": 47659,
+          "min_bp": 226,
+          "max_bp": 11839,
+          "strata": {
+            "4": 5,
+            "3": 5,
+            "0": 3,
+            "2": 1,
+            "5": 1,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV21.0_gsa.fasta.gz",
+          "compressed_bytes": 21334,
+          "uncompressed_bytes": 71632,
+          "uncompressed_sha256": "64071a378bdba5bc7afef3fff0fc690a3665c12e0c359f0055df74bb2d0a45e8",
+          "contigs": 31,
+          "bp": 70263,
+          "min_bp": 150,
+          "max_bp": 8676,
+          "strata": {
+            "0": 8,
+            "3": 9,
+            "4": 10,
+            "2": 3,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV741.10_gsa.fasta.gz",
+          "compressed_bytes": 158105,
+          "uncompressed_bytes": 527818,
+          "uncompressed_sha256": "d046bd742a96c011f953e5c6ece5758001d9259ea38dde0395990fcd4942625e",
+          "contigs": 1754,
+          "bp": 438565,
+          "min_bp": 150,
+          "max_bp": 773,
+          "strata": {
+            "0": 1733,
+            "1": 20,
+            "2": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV729.15_gsa.fasta.gz",
+          "compressed_bytes": 1415739,
+          "uncompressed_bytes": 4805976,
+          "uncompressed_sha256": "fda3698477d9bcf28b0357948826eb8f0972a28a9ec3e5d248b0da84d187d7f4",
+          "contigs": 3620,
+          "bp": 4607404,
+          "min_bp": 150,
+          "max_bp": 8018,
+          "strata": {
+            "3": 1245,
+            "1": 548,
+            "4": 452,
+            "0": 978,
+            "2": 397
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV53.0_gsa.fasta.gz",
+          "compressed_bytes": 23999,
+          "uncompressed_bytes": 80222,
+          "uncompressed_sha256": "75d3fef1bb3f4e74dfb76bba2a519cf32e21ca31423ab77f79dff31ec02df8ec",
+          "contigs": 110,
+          "bp": 75393,
+          "min_bp": 150,
+          "max_bp": 3115,
+          "strata": {
+            "1": 30,
+            "0": 52,
+            "3": 20,
+            "2": 6,
+            "4": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV41.0_gsa.fasta.gz",
+          "compressed_bytes": 3465,
+          "uncompressed_bytes": 10411,
+          "uncompressed_sha256": "97fb2282f9c7174a65e760f2112eae18c1c76e9e31761df11dbd71c67fc0ba65",
+          "contigs": 36,
+          "bp": 8847,
+          "min_bp": 150,
+          "max_bp": 574,
+          "strata": {
+            "0": 34,
+            "1": 2
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV515.12_gsa.fasta.gz",
+          "compressed_bytes": 386057,
+          "uncompressed_bytes": 1311710,
+          "uncompressed_sha256": "c73a182ea9b87c3ff7843e77387a470d6c81db071288d62faea4e9a2f8d1610b",
+          "contigs": 3708,
+          "bp": 1113284,
+          "min_bp": 149,
+          "max_bp": 1083,
+          "strata": {
+            "0": 3403,
+            "1": 273,
+            "2": 29,
+            "3": 3
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV507.1_gsa.fasta.gz",
+          "compressed_bytes": 838891,
+          "uncompressed_bytes": 2924154,
+          "uncompressed_sha256": "c481a2a8e5d1cf48eecc0f2b1a1c974f83fb6d2c73d016e8d38d3c31e7167399",
+          "contigs": 74,
+          "bp": 2920632,
+          "min_bp": 187,
+          "max_bp": 292189,
+          "strata": {
+            "5": 39,
+            "4": 6,
+            "3": 11,
+            "0": 8,
+            "2": 2,
+            "1": 8
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV23.0_gsa.fasta.gz",
+          "compressed_bytes": 13247,
+          "uncompressed_bytes": 44209,
+          "uncompressed_sha256": "75533a59968fbb8f3fdca34de0eb851c71f01531e35b3f4c20247338bc510572",
+          "contigs": 1,
+          "bp": 44167,
+          "min_bp": 44167,
+          "max_bp": 44167,
+          "strata": {
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV67.0_gsa.fasta.gz",
+          "compressed_bytes": 1475,
+          "uncompressed_bytes": 4203,
+          "uncompressed_sha256": "5b1a7916193c6200755e2bc5cab423e9d96625d59a9f0b08e8fbf448936ce6cb",
+          "contigs": 1,
+          "bp": 4163,
+          "min_bp": 4163,
+          "max_bp": 4163,
+          "strata": {
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV24.0_gsa.fasta.gz",
+          "compressed_bytes": 6527,
+          "uncompressed_bytes": 21856,
+          "uncompressed_sha256": "e41c7f9dcc94d0a2d1f64b3f88ac048024c9461294fbdb2ea33dff22f7d19ec2",
+          "contigs": 3,
+          "bp": 21728,
+          "min_bp": 3807,
+          "max_bp": 12074,
+          "strata": {
+            "4": 2,
+            "5": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV372.2_gsa.fasta.gz",
+          "compressed_bytes": 1008151,
+          "uncompressed_bytes": 3414233,
+          "uncompressed_sha256": "bbd3da346407caebee36ee1517f4baaec3f71df1abbd2cfc89ffea528bed32f4",
+          "contigs": 6237,
+          "bp": 3076476,
+          "min_bp": 149,
+          "max_bp": 3793,
+          "strata": {
+            "0": 3971,
+            "1": 1253,
+            "2": 499,
+            "3": 508,
+            "4": 6
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_vASV87.0_gsa.fasta.gz",
+          "compressed_bytes": 47,
+          "uncompressed_bytes": 0,
+          "uncompressed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "contigs": 0,
+          "bp": 0,
+          "min_bp": null,
+          "max_bp": 0,
+          "strata": {}
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV47.0_gsa.fasta.gz",
+          "compressed_bytes": 932,
+          "uncompressed_bytes": 2564,
+          "uncompressed_sha256": "b16bf2ab70bfa3a89ca978e9c848e93729467858ef50107f7441d71edfcc0aa6",
+          "contigs": 1,
+          "bp": 2524,
+          "min_bp": 2524,
+          "max_bp": 2524,
+          "strata": {
+            "4": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV790.3_gsa.fasta.gz",
+          "compressed_bytes": 24281,
+          "uncompressed_bytes": 81382,
+          "uncompressed_sha256": "3c4d96c6811d6c8d7dc719acb3ef8988570d1ac77d7252fc49ae24fae505694b",
+          "contigs": 289,
+          "bp": 67026,
+          "min_bp": 150,
+          "max_bp": 300,
+          "strata": {
+            "0": 289
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV266.11_gsa.fasta.gz",
+          "compressed_bytes": 588809,
+          "uncompressed_bytes": 2043502,
+          "uncompressed_sha256": "4b408bad49ee9cbfe3aaa448a3bf7751ff58a4ca9d574d64e01eb5df63f2febe",
+          "contigs": 23,
+          "bp": 2042311,
+          "min_bp": 475,
+          "max_bp": 526132,
+          "strata": {
+            "5": 13,
+            "1": 1,
+            "0": 1,
+            "4": 4,
+            "3": 4
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV583.8_gsa.fasta.gz",
+          "compressed_bytes": 36429,
+          "uncompressed_bytes": 121747,
+          "uncompressed_sha256": "d584ba2fb6219d956f100cb72bc253a4a09fc933a156db12fa96f2ac1b71c8b1",
+          "contigs": 416,
+          "bp": 99611,
+          "min_bp": 150,
+          "max_bp": 517,
+          "strata": {
+            "0": 415,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV137.1_gsa.fasta.gz",
+          "compressed_bytes": 1184227,
+          "uncompressed_bytes": 4014742,
+          "uncompressed_sha256": "2200d8ba99870194d9152801c869f76a4433e3f73abb418107727790b941ef1a",
+          "contigs": 7202,
+          "bp": 3619012,
+          "min_bp": 150,
+          "max_bp": 3056,
+          "strata": {
+            "3": 622,
+            "0": 4534,
+            "1": 1442,
+            "2": 596,
+            "4": 8
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV627.1_gsa.fasta.gz",
+          "compressed_bytes": 25637,
+          "uncompressed_bytes": 87842,
+          "uncompressed_sha256": "b958b4830ce5ecb2192da5c4557dd88b8522de836eb65c469775e81446441254",
+          "contigs": 304,
+          "bp": 72932,
+          "min_bp": 150,
+          "max_bp": 462,
+          "strata": {
+            "0": 304
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV309.7_gsa.fasta.gz",
+          "compressed_bytes": 116771,
+          "uncompressed_bytes": 406069,
+          "uncompressed_sha256": "a082c1d7540ce8e5803c6da26c1269f20d20d03892d1ca702c9bb75f6505737d",
+          "contigs": 1332,
+          "bp": 334378,
+          "min_bp": 150,
+          "max_bp": 660,
+          "strata": {
+            "0": 1314,
+            "1": 18
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV373.9_gsa.fasta.gz",
+          "compressed_bytes": 70623,
+          "uncompressed_bytes": 237388,
+          "uncompressed_sha256": "bdb7880c102934764a2a2c56baf666c0c7f1417b93721891ee64f0a77774888e",
+          "contigs": 809,
+          "bp": 194243,
+          "min_bp": 150,
+          "max_bp": 526,
+          "strata": {
+            "0": 808,
+            "1": 1
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_ASV546.2_gsa.fasta.gz",
+          "compressed_bytes": 13181,
+          "uncompressed_bytes": 42989,
+          "uncompressed_sha256": "111a2fff10ca5919ea1ea794cfc3ce03e40ffae6990582235213fb42b8f9aa84",
+          "contigs": 146,
+          "bp": 35025,
+          "min_bp": 150,
+          "max_bp": 381,
+          "strata": {
+            "0": 146
+          }
+        },
+        {
+          "name": "sample_0_gsa/sample0_hvASV7.0_gsa.fasta.gz",
+          "compressed_bytes": 1746,
+          "uncompressed_bytes": 5167,
+          "uncompressed_sha256": "1f5de15660246b715973903d6e5d67955ad31ff5195649e5d3124bf931912783",
+          "contigs": 2,
+          "bp": 5083,
+          "min_bp": 1261,
+          "max_bp": 3822,
+          "strata": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ]
+    }
+  },
+  "DNA_multiset_comparison": {
+    "named": {
+      "records": 665738,
+      "bp": 422673293,
+      "sorted_DNA_sha256_multiset": "88f8813c6828ed5786e5cd6a809ff8a598696d3329f8e7ea3425d759207ea8c0"
+    },
+    "anonymous": {
+      "records": 665738,
+      "bp": 422673293,
+      "sorted_DNA_sha256_multiset": "88f8813c6828ed5786e5cd6a809ff8a598696d3329f8e7ea3425d759207ea8c0"
+    },
+    "per_genome": {
+      "records": 665738,
+      "bp": 422673293,
+      "sorted_DNA_sha256_multiset": "88f8813c6828ed5786e5cd6a809ff8a598696d3329f8e7ea3425d759207ea8c0"
+    },
+    "seconds": 23.917533856001683
+  },
+  "empty_GSA_source_members": [
+    "sample_0_gsa/sample0_hvASV4.0_gsa.fasta.gz",
+    "sample_0_gsa/sample0_vASV87.0_gsa.fasta.gz"
+  ],
+  "producer_source_observation": "CAMISIM metagenomic/sample_wise_simulation.nf runs bamToGold.pl from simulator alignments; shared/anonymization.nf copies anonymous_gsa.fasta.gz and origin mapping to contigs; exact CAMI producer commit not supplied",
+  "DCVBin": {
+    "repository": "https://github.com/dengdengf/dcvbin",
+    "runnable_basic_recipe": "bin/my_method.sh -> featureExtract_gpu_2.py -> calc_tnf_and_rpkm_2.py -> vaeTest_2.py; first BAM only; encoder CPU fallback, VAE unconditionally CUDA; CPU/pair-depth adaptation not prepared",
+    "min_contig_bp": 2000,
+    "encoder_token_limit": 5000,
+    "VAE_epochs": 200,
+    "loader_cuda_workers": 4,
+    "payload": {
+      "article": 30400258,
+      "version": 1,
+      "license": {
+        "value": 1,
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "advertised_compressed_bytes": 1656742987,
+      "files": [
+        {
+          "name": "DNABERT_S-main.tar.gz.part.aa",
+          "id": 58890022,
+          "size": 524288000,
+          "computed_md5": "c5820eb2bc1fb7353c353913aaec2b2b",
+          "download_url": "https://ndownloader.figshare.com/files/58890022"
+        },
+        {
+          "name": "DNABERT_S-main.tar.gz.part.ab",
+          "id": 58890025,
+          "size": 524288000,
+          "computed_md5": "c9488106d2a57ff4a5cdf91715e6e72f",
+          "download_url": "https://ndownloader.figshare.com/files/58890025"
+        },
+        {
+          "name": "DNABERT_S-main.tar.gz.part.ad",
+          "id": 58890028,
+          "size": 83878987,
+          "computed_md5": "b676fcf0e423d54717fa3a8d493b34d3",
+          "download_url": "https://ndownloader.figshare.com/files/58890028"
+        },
+        {
+          "name": "DNABERT_S-main.tar.gz.part.ac",
+          "id": 58890049,
+          "size": 524288000,
+          "computed_md5": "81f07d8634a35220df11ebc25342ba9c",
+          "download_url": "https://ndownloader.figshare.com/files/58890049"
+        }
+      ],
+      "local_validation": "official metadata and 8-MiB part-aa prefix inspected; full payload parts/checkpoint not acquired or SHA256 verified; inventory is not missing",
+      "enhanced_recipe": "separate DNABERT_S-main continued-pretraining (long-contig 10kb windows, >=20kb); CUDA-oriented source, runtime/paper checkpoint parity unresolved",
+      "training_source_prefix_members": {
+        "training.py": {
+          "bytes": 12437,
+          "sha256": "6e4d66d0a6f2178428a0b7007c50f930b6272698ea5a5df01d1f7fe3cf073ffb"
+        },
+        "mytraining.py": {
+          "bytes": 13638,
+          "sha256": "60ea6d5a65ce9f0a1f29ad409e5740ecf0dab9c19af518b70d5a14823efe0d0e"
+        }
+      }
+    },
+    "decision": "exclude from bounded E009 CPU shortlist; coverage is not a disadvantage",
+    "reviewed_code": {
+      "README.md": {
+        "bytes": 3929,
+        "sha256": "77d27e55865fc575b537f05e3ee891c91403f701ecc6ad2cfb7114cf2054169e"
+      },
+      "bin/my_method.sh": {
+        "bytes": 6875,
+        "sha256": "f442c72159de050c75815f15696a70730792620cf3328fabadfc1e0e3ce72360"
+      },
+      "scripts/featureExtract_gpu_2.py": {
+        "bytes": 3239,
+        "sha256": "f0fb9982308e6a9cacaf80f7af1597877d77d030cc3f15dee47fdde0a50a9e18"
+      },
+      "myvae/mainfiles/vaeTest_2.py": {
+        "bytes": 2166,
+        "sha256": "27629e8c8688f81c7f01aec6fba3a6d33ed363324a565e81c5b904eb90286066"
+      },
+      "myvae/mainfiles/myencode.py": {
+        "bytes": 23645,
+        "sha256": "5fca0d77fc6f89c81fd767161799a3a4e31dde00d81dc3d10e489fecf9a38966"
+      }
+    }
+  },
+  "scientific_execution": false,
+  "producer_source_anchors": {
+    "pipelines/metagenomic/sample_wise_simulation.nf": {
+      "bytes": 13946,
+      "sha256": "ddd20300330d18a4fd29d4e2c9dd5fdc5dfe946a31c284e24a13575071ed18d5"
+    },
+    "pipelines/shared/anonymization.nf": {
+      "bytes": 14709,
+      "sha256": "009835e78dad7c1f499f812026b77fc9d65d2d85054785de0ac50e209895a232"
+    }
+  }
+}

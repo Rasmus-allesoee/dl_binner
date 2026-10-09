@@ -1,6 +1,6 @@
 # Current Research State
 
-Updated: 2026-10-08. This is the single current handoff.
+Updated: 2026-10-09. This is the single current handoff.
 
 ## Direction and completed work
 
@@ -224,49 +224,64 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**The second-chapter benchmark plan and focused competitive study are complete.**
+**E009's targeted reconciliation/adapters are prepared locally; owner Linux execution is unstarted.**
 [D013](decisions/D013-first-comparative-benchmark.md),
-[the dated study/provenance](evidence/2026-10-08-competitive-binner-study.md) and
-[E009's prospective protocol](../experiments/E009-competitive-benchmark/README.md)
-select CAMI III Toy Longitudinal Human Gut subject S1: one actual MEGAHIT assembly
-of short-read sample 0, with full sample 0/1 depth measured on that exact reference.
-This is a public-toy derivative, not another GSA fixture or official challenge score.
-Corrected subject pairing and small coverage metadata were inspected directly:
-the provider coverage archive is genome-level simulation truth, never input depth.
-Two read archives total 9.732 GB compressed; no large DNA/read/model payload acquired.
-Exact development-genome/pretraining overlap remains unresolved; S. mutans species
-overlap with E003 is already visible. New sample/assembly does not prove unseen-genome
-generalization, and this benchmark becomes development evidence when used for design.
+[the targeted evidence](evidence/2026-10-09-e009-contract-reconciliation.md) and
+[E009](../experiments/E009-competitive-benchmark/README.md) retain subject S1:
+full short-read sample-0 MEGAHIT 1.2.9 assembly (200-bp emission) and measured
+sample-0/1 depth on that exact reference. Both official sample-0 contigs/GSA archives
+were inspected and have identical 665,738-record / 422,673,293-bp DNA multisets.
+They are reference-coordinate gold-standard reconstructions, so they cannot replace
+the read-derived assembly. The supplied simulator coverage remains source truth,
+never observed depth. Large reads remain unacquired; no community was assembled/fitted.
 
-Preserve dev3 source `5e54538` and all accepted scientific settings. E009 specifies
-matched raw/learned TNF+two-depth and TNF-only pairs, native SemiBin2/MetaCAT-core/
-SCGBinner, with native CompleteBin conditional on pre-scoring CPU/payload feasibility.
-All seven owner-ranked tools were considered; COMEBin's measured E001/source evidence
-is reused, while its larger CPU grid, DCVBin's unresolved recipe and LorBin's
-long-read/model contracts defer execution. No native schedule shortening disguised
-as parity. Promising changes are actual sequence views/negative handling, biological
-grouping/refinement and context/frozen GLM inputs; none is selected by a tool ranking
-alone or implemented now. The TNF/GLM-head/hybrid comparison remains planned.
+Preserve dev3 source `5e54538` and scientific defaults. Learned TNF + measured depth
+is primary; raw and TNF-only controls are diagnostic, capped at 16 core-hours.
+Shortlist: SemiBin2, MetaCAT core, SCGBinner, COMEBin full native grid, plus named
+CompleteBin max-50 subject to native-scale admission. DCVBin's official 1.657-GB
+payload is available; its single-depth CUDA VAE and CUDA continued-pretraining
+recipe require a substantial extra port, so it is excluded from this bounded CPU
+comparison. Coverage is not a disadvantage. Markers are a high-priority future
+fixed-encoder grouping/refinement ablation, with no baseline change or study now.
+Known/unknown pretrained overlap limits generalization; it is not evaluator label
+leakage and an unavailable historical inventory alone is not an execution blocker.
 
-**Exact next step: implement/local-test E009 acquisition, overlap, assembly/depth/
-real-assembly truth and native runtime adapters, then prepare a checksum-bound
-8-vCPU/24-GB ≤5-hour owner preflight.** It inventories assets and native isolated
-contracts, without full-community fits. Review its return before the subsequent
-16-vCPU/48-GB assembly/scientific command, actual input locks and native affordability
-admission. Local checks use ≤4 threads/8-GB RSS/two hours and ≤32-contig/0.6-Mb fixtures.
-The prospective entire benchmark ceiling is 500 allocated core-hours/200-GB new disk,
-not a forecast or measured spend; setup/failures/collection count, current credit is
-unknown and resource increases/retries are not automatic. Real-assembly AMBER/interval
-truth adapters still need tests; E005's GSA R95 cannot be applied unchanged.
-No executable transfer or scientific run was prepared/accepted in this planning task.
+Acquisition/overlap, paired-read/assembly/mapping/ordered-depth, competitive PAF/CIGAR
+truth, complete exports and narrow AMBER/R95 adapters are implemented. Actual Mac
+small-DNA mapping/depth, source truth (including competing genomes/repeats/reverse
+orientation/I-D), AMBER and CompleteBin checkpoint/forward paths pass. Operational
+SCGBinner dtype/host-pool/HNSW and native HMM master accounting are explicit.
+Real COMEBin native writers expose resolved-basename IDs; adapters verify their
+relation to ordered original BAM paths rather than guessing from aliases. Local
+checks and failures are separately retained; they do not establish full Linux
+imports/training or large-community affordability. Mac four-thread MEGAHIT crashes
+remain unresolved; the local writer check is explicitly one thread, and the Linux
+preflight must pass eight threads. No accepted science was repeated.
 
-License and historical-source packaging need separate owner review before public
-redistribution. No owner compute action is needed for this planning handoff;
-the next adapter/transfer milestone will identify specific runtime/asset dependencies.
+**Exact next step:** owner runs the checksum-bound **8-vCPU / 24-GB ≤5-hour E009
+preflight** from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
+It creates new tool prefixes, borrows accepted E001 dependencies read-only with
+complete byte/inventory/origin checks, downloads pinned small tool/model/utility
+payloads and source DNA to owned shared storage, then exercises real tiny contracts.
+Uploads/logs/returns stay under `/work/Home/dl_binner/e009/transfer/`.
+Review its archive/checksum/log before preparing the **16-vCPU / 48-GB** bounded
+bulk-read/assembly/depth/truth command. Source taxonomy/target membership and
+near-overlap, actual read hashes, assembly scale and full-native schedule projections
+remain unresolved **before science**. No E009 fitting/scoring is admitted yet.
+
+The revised prospective budget is **700 allocated core-hours** (664 stages +36
+reserve), against the owner's approximately **1,980** balance: **1,280 headroom**.
+The preflight costs at most 40 within that plan; caps are not runtime forecasts or
+automatic retry permission. No UCloud spend occurs in this preparation. The former
+200 GB is a provisioning estimate, not a hard cap. Home (50–100 GB) owns code/new
+prefixes/transfers/logs; heavy source/read/BAM/temp lives only in the project's
+shared E009 child (8–10 TB shared capacity). Colleagues' files and old attempts
+remain untouched. Exact identities/tests are in E009's maintained receipts.
 
 The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
-planned and unrun. E009's planning/source-metadata analysis is authorized; no benchmark
-execution, extra seeds, architecture implementation or publication occurs in this task.
+planned and unrun. E009's local adapters/tests/owner-preflight preparation and commits are authorized;
+no UCloud execution, community fits/scores, extra seeds, architecture implementation,
+private push/PR or publication occurs in this task.
 E008's private push/PR/merge is authorized and completed; accepted
 scientific source and settings are unchanged.
 Frozen GLM weights/features remain

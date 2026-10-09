@@ -1,7 +1,7 @@
 # D013: one bounded competitive assembly baseline before improvements
 
-Date: 2026-10-08. Status: **accepted planning decision**; execution unstarted.
-Owner authorizes analysis, a new branch and local commits; not UCloud execution,
+Date: 2026-10-08; amended 2026-10-09. Status: **accepted preparation decision**; scientific execution unstarted.
+Owner authorizes analysis, local adapters, tests, transfer preparation and commits; not UCloud execution,
 architecture implementation, private push/PR or public release in this task.
 
 ## Problem and evidence
@@ -29,7 +29,12 @@ with sample 0/1 measured depth on that same reference (verified subject S1).
 Keep the full community, short strata, native eligibility, masks, discarded/noise
 DNA and all whole-reference failures. This is a public-toy derivative, not an
 official challenge score. New samples do not establish genome/pretraining independence.
-Overlap must be inventoried before scoring and retained in claims.
+Overlap must be inventoried before scoring and retained in claims. The October 9
+[input/runtime reconciliation](../evidence/2026-10-09-e009-contract-reconciliation.md)
+directly inspects both complete sample-0 archives: `contigs` is anonymized GSA
+plus origin mapping; `gsa` contains per-genome reference-coordinate intervals.
+CAMISIM's anonymization/GSA source explains that relationship. Neither is a
+traceable de novo assembly; MEGAHIT remains necessary for the chosen question.
 
 CAMI II GI is accepted development evidence; another HMB site offers transfer
 later but shares old source populations/plumbing. Toy III offers a more current
@@ -41,19 +46,27 @@ not extra setup for a question public reads can answer. A GSA-only comparison wo
 be cheaper but would repeat the main E005 realism limitation.
 
 Preserve dev3 main as immutable baseline. Run matched raw/learned **TNF+two-depth**
-and **TNF-only** pairs with unchanged settings/seed 11. The secondary pair is a
-small justified information ablation, not a new architecture. Native external
-shortlist: **SemiBin2, MetaCAT core, SCGBinner**, plus **CompleteBin conditional on
-native CPU/payload affordability before scoring**. No unplanned replacement list.
+and **TNF-only** pairs with unchanged settings/seed 11. Learned TNF plus measured
+depth is the primary product. Raw and sequence-only runs are inexpensive diagnostic
+controls, not product alternatives or another architecture gate. Their separate
+cost ceiling is 16 core-hours. Execution shortlist: **SemiBin2, MetaCAT core,
+SCGBinner, COMEBin**, plus **CompleteBin with a modified maximum of 50 epochs**;
+all need measured Linux/scale admission before full fitting. No replacement list.
 This balances a mature short-read reference, distinct non-neural grouping and the
 owner's strongest biological-constraint interest. CompleteBin retains the thesis
 priority, with honest CPU feasibility instead of assuming that CPU availability
 or thesis GPU timing proves affordability.
 
-COMEBin's directly measured quality/source/selection evidence is reused; its full
-CPU grid was expensive even at E001 scale and largely overlaps the initial
-contrastive/marker comparison. Defer a fresh larger fit. DCVBin remains a sequence
-candidate with unresolved published-recipe/payload/coverage parity; LorBin adds
+COMEBin's directly measured E001 quality justifies a new whole-tool comparison on
+the same assembly; overlapping mechanisms do not make that comparison redundant.
+Reserve its full 120-candidate grid, without repeating E001. CompleteBin's epoch
+cap is an owner-requested scientific configuration change, not upstream parity;
+retain native automatic pretraining/eligibility decisions and any lower safety cap.
+DCVBin's payload is available, but its basic VAE runner unconditionally requests
+CUDA, takes one BAM and defaults to 200 VAE epochs; enhanced training is a separate
+GPU-oriented recipe. A CPU/pair-depth repair would be substantial additional tool
+development here, so **DCVBin does not join E009**. Coverage is useful input and
+not a disadvantage. Frozen-GLM comparison remains planned separately. LorBin adds
 long-read/quality-model dependencies. They remain studied, not globally inferior.
 VAMB/MetaBAT2 would be cheap familiar controls but add less new mechanism evidence
 than this shortlist; they do not replace the newer tools merely for convenience.
@@ -64,9 +77,14 @@ Use local Mac for small adapter/evaluator checks and returned-output analysis;
 UCloud CPU/Linux for bulk acquisition, assembly, mapping and tool fits. Plan an
 8-vCPU/24-GB bounded preflight, then 16-vCPU/48-GB serial scientific work, with
 explicit child/loader/OpenMP reconciliation and measured admission projections.
-Native schedules remain native; no shortened training disguised as parity.
-The prospective total ceiling is 500 allocated core-hours / 200-GB new storage,
-including failures/setup/collection; current remaining credit is unknown. These
+Schedules remain native except the named CompleteBin-50 modification.
+The prospective total ceiling is **700 allocated core-hours**, including
+failures/setup/collection, against the owner's approximately **1,980** balance:
+**1,280 core-hours remain outside E009's ceiling**. This replaces the 500-hour plan
+to fund the same-dataset COMEBin grid. The former 200-GB figure is a provisioning
+estimate, not an experiment cap or permission to delete/filter data. Keep Home
+code/environments/transfers/logs separate from bulk reads/BAMs/source/temporary data
+in the project's own shared-storage E009 subtree; never touch colleagues' files. These
 are experiment choices, not product maxima or a promise the runs consume the cap.
 Budget/scale failures cause evidence retention and prospective reassessment, not
 silent data filtering, quota increases or automatic repairs/retries.
@@ -74,9 +92,18 @@ silent data filtering, quota increases or automatic repairs/retries.
 Use AMBER on its validated contig truth view and alignment-supported conservative
 whole-reference recovery with all-bin purity denominators and duplicate-safe
 coordinate unions. Keep assembly-conditional recovery separate. Real-assembly
-truth adapters still require implementation/native tests; E005's GSA evaluator
-cannot be applied unchanged. Whole *provided reference* recovery is not formal
+truth adapters now pass real small-DNA local tests, with Linux/scale unvalidated; E005's GSA evaluator
+cannot be applied unchanged. Pin minimap2's all-chain PAF/CIGAR output for the
+narrow adapter instead of depending on MetaQUAST's filtered internal alignments;
+MetaQUAST remains a possible supplemental misassembly report. Whole *provided reference* recovery is not formal
 MIMAG quality or completeness of an unknown finished genome when a source is a MAG.
+
+Marker-aware grouping/refinement is a **high-priority** next product candidate:
+it directly addresses the accepted prototype's fragmented grouping, preserves the
+encoder and can reuse embeddings. Plan one fixed marker-conflict splitting/merging
+ablation against identical frozen grouping, retaining marker-negative and short
+DNA and evaluating with independent sequence truth. Marker-aware training remains
+a serious alternative, not an automatic simultaneous addition.
 
 If learning damages raw signal, prioritize one view/negative-construction change;
 if embeddings separate but bins fail, prioritize one grouping/refinement ablation;
@@ -87,9 +114,9 @@ one native-tool victory or tune to E009 and claim held-out validation.
 
 ## Boundary and exact next action
 
-E009 is prospective, with no scientific results or executable transfer accepted.
-Implement/test acquisition/overlap/assembly/depth/truth and runtime adapters,
-then prepare one checksum-bound **8-vCPU/24-GB ≤5-hour owner preflight**.
+E009 is prospective, with no scientific results. Preparation does not authorize a job.
+Implemented/local-tested acquisition/overlap/assembly/depth/truth and runtime
+adapters now prepare one checksum-bound **8-vCPU/24-GB ≤5-hour owner preflight**.
 The owner runs UCloud; Codex reviews returned evidence before scientific admission
 and the subsequent 16-vCPU command. Freeze actual sources/manifests/native settings
 and code before scores. No accepted science is rerun, no architecture comparison

@@ -229,3 +229,15 @@ No benchmark or architecture comparison has executed, no accepted science is
 repeated and H001/E001 remain unchanged. E009 will be development evidence after
 its errors guide changes; broader validation stays open. The GLM/head/hybrid
 follow-up is still planned, not an implementation/release gate.
+
+
+2026-10-09 E009 reconciliation: learned TNF plus measured depth remains the primary
+product; raw/sequence-only runs are capped diagnostics, not product/architecture
+gates. Supplied sample-0 contigs are verified GSA, so the read-derived MEGAHIT plan
+remains. COMEBin joins the bounded comparison, CompleteBin is explicitly max-50,
+and DCVBin is excluded for its unadapted CUDA/single-depth/CPT recipe, not missing
+weights or coverage use. Markers are a high-priority grouping/refinement candidate
+with one controlled follow-up recorded in the [targeted review](../evidence/2026-10-09-e009-contract-reconciliation.md).
+No quality scores or causal mechanism finding follow from adapter tests; Q001/Q003
+remain open and H001/E001 are unchanged. Unknown pretrained overlap limits
+unseen-genome claims without becoming evaluation-pipeline label leakage.

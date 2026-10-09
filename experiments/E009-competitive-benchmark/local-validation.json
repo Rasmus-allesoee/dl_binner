@@ -1,0 +1,446 @@
+{
+  "record": "E009",
+  "date": "2026-10-09",
+  "scope": "new tiny software contracts, no E009 fits/scores, no inference replay",
+  "native_linux_validated": false,
+  "thread_budget": 4,
+  "loader_workers": 0,
+  "rss_ceiling": 8000000000,
+  "integration_ceiling_seconds": 7200,
+  "fixture": "fixture.json",
+  "checks": {
+    "portable_real": "actual map/sort/index, ordered 740/370 reads and all-position mean-depth, zeros, complete 11-contig axes; native minimap2 all-chain competitive PAF with gaps/reverse/repeats",
+    "assembly_real": "MEGAHIT 1.2.9 actual writer at one thread on Mac; four-thread old/new builds both crash, not repaired; Linux eight-thread mandatory",
+    "AMBER_real": "actual f8b3a601 API, 5 attributable contigs/4450 bp; duplicate-safe reference union test; software labels only",
+    "CompleteBin_real": "source-pinned max50 scheduler and API arguments; actual BAM writer/state-dict/CPU forward; native S/O pretraining and lower safety-cap logic",
+    "SCGBinner_real": "actual patched get_kmer_coverage_aug0 reader on reordered tiny native-format CSV; same int dtype; full augmentation/training/Linux imports not locally run",
+    "COMEBin_real": "actual source gen_augfasta/gen_coverage/load_binary_feature_bundle on real tiny FASTA/BAMs; native dir and emitted resolved-basename axes validated from retained arrays after initial overly strict path assertion, without regeneration",
+    "HMMER_real": "actual 3.4 Mac --cpu1 total budget translated to --cpu0 serial; native domtblout header and audit file retained",
+    "source_overlap": "self-contained full-replicon/accession and opaque competitive-reference contracts; real CAMI source archive not locally acquired",
+    "upstream_parser_only": "all five tool argv/API and CompleteBin50 cases; parser-only is not native full import/training",
+    "unit": "18 self-contained adapter/failure tests; final rerun receipt recorded after source freeze",
+    "owner_harness": "packet source freeze and actual out-of-checkout driver checks recorded in transfer.json after build"
+  },
+  "known_failures_preserved": [
+    "Mac MEGAHIT parallel segmentation failures",
+    "sandbox process-table denial before intended worker in local-contract-v1",
+    "incomplete local reader dependency attempts v1-v3 (Bio/Pandas/six); final v4 full pip check passes",
+    "local COMEBin parser harness missing version label; corrected",
+    "COMEBin emitted basenames rather than original paths; retained writers succeed, validator corrected",
+    "Linux dry solve missing glibc virtual package then unnecessary Galah/zlib conflict; narrowed recipe resolves"
+  ],
+  "new_local_prefixes": "numerical-mac-v1/v2/v3/v4 and utility/megahit prefixes; old prefixes preserved; new v4 owns six and borrows v3/E005 dependencies explicitly read-only",
+  "receipts": {
+    "artifacts/e009-preparation/local-contract-v2/scg-reader.exit.json": {
+      "file": {
+        "bytes": 687,
+        "sha256": "7d19d2ce6abf4f03a3ab3775fcf039c8dc72ea817c647b968c4148eb2f257131"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/native-numerical-mac-v1/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/scg-reader-qa-v1.py"
+        ],
+        "exit_code": 1,
+        "launched_pid": 91497,
+        "peak_sampled_rss_bytes": 199364608,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5979424483217717,
+        "sampled_cpu_seconds": 3.36,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 120,
+        "stop_reason": null,
+        "wall_seconds": 5.619269897011691
+      }
+    },
+    "artifacts/e009-preparation/local-contract-v2/scg-reader-v4.exit.json": {
+      "file": {
+        "bytes": 687,
+        "sha256": "a1def1ce2c003bad726f011dd1c858bc58c1f0d99f1b0326efeed15e50ad9951"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/native-numerical-mac-v4/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/scg-reader-qa-v4.py"
+        ],
+        "exit_code": 0,
+        "launched_pid": 92100,
+        "peak_sampled_rss_bytes": 248594432,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.2869972568625281,
+        "sampled_cpu_seconds": 6.64,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 120,
+        "stop_reason": null,
+        "wall_seconds": 23.13610963599058
+      }
+    },
+    "artifacts/e009-preparation/local-contract-v2/amber.exit.json": {
+      "file": {
+        "bytes": 1173,
+        "sha256": "5f139101475ee0eec1a36d37c5098c756032910a20692a2317ff5d5a1533e933"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-amber-local/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e009_contracts.py",
+          "--inputs",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/input-v1",
+          "--output",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/local-contract-v2/AMBER",
+          "--threads",
+          "4",
+          "--amber-source",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/AMBER_evaluation",
+          "--truth",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/local-contract-v2/portable/truth/truth.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 90734,
+        "peak_sampled_rss_bytes": 202100736,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.8651314043607149,
+        "sampled_cpu_seconds": 29.92,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 120,
+        "stop_reason": null,
+        "wall_seconds": 34.58434158000455
+      }
+    },
+    "artifacts/e009-preparation/local-contract-v2/scg-reader-v2.exit.json": {
+      "file": {
+        "bytes": 687,
+        "sha256": "4e4404d3dbc9f7bb71b23cc360410adad3309b3220c079ed32fde514055d3524"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/native-numerical-mac-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/scg-reader-qa-v2.py"
+        ],
+        "exit_code": 1,
+        "launched_pid": 91731,
+        "peak_sampled_rss_bytes": 203288576,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5748034115902407,
+        "sampled_cpu_seconds": 3.54,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 120,
+        "stop_reason": null,
+        "wall_seconds": 6.158627330005402
+      }
+    },
+    "artifacts/e009-preparation/local-contract-v2/portable.exit.json": {
+      "file": {
+        "bytes": 1345,
+        "sha256": "955dee0a7831080f5a775bd3914ae1bfd03dc9661ae9236eea755cde44c0f999"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/native-numerical-mac-v1/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e009_contracts.py",
+          "--inputs",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/input-v1",
+          "--output",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/local-contract-v2/portable",
+          "--threads",
+          "4",
+          "--assembly-threads",
+          "1",
+          "--mapping-bin",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-mapping-local/bin",
+          "--minimap2",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-preparation/sources/minimap2/minimap2",
+          "--megahit",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/megahit-mac-v1/bin/megahit"
+        ],
+        "exit_code": 0,
+        "launched_pid": 90668,
+        "peak_sampled_rss_bytes": 325218304,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.33598903840631267,
+        "sampled_cpu_seconds": 1.46,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 300,
+        "stop_reason": null,
+        "wall_seconds": 4.345379858001252
+      }
+    },
+    "artifacts/e009-preparation/local-contract-v2/complete.exit.json": {
+      "file": {
+        "bytes": 1324,
+        "sha256": "63f9bb508eb97201b61256b9db46c324f5d26f21b589e3f47b216631fad5735a"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/native-numerical-mac-v1/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e009_contracts.py",
+          "--inputs",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/input-v1",
+          "--output",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/complete-mac-003",
+          "--threads",
+          "4",
+          "--completebin-source",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-preparation/sources/CompleteBin",
+          "--completebin-db",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/db-v1",
+          "--bam",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/local-contract-v2/portable/mapping_0/sample_0.sorted.bam"
+        ],
+        "exit_code": 0,
+        "launched_pid": 91568,
+        "peak_sampled_rss_bytes": 501436416,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.1386186846371185,
+        "sampled_cpu_seconds": 6.279999999999999,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 120,
+        "stop_reason": null,
+        "wall_seconds": 5.515454897002201
+      }
+    },
+    "artifacts/e009-preparation/local-contract-v2/scg-reader-v3.exit.json": {
+      "file": {
+        "bytes": 702,
+        "sha256": "e7e5780520027ecad4e2610d0d2b4f3c34682acc03b1b22a17ba4e8a90699f8c"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/native-numerical-mac-v3/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/scg-reader-qa-v3.py"
+        ],
+        "exit_code": 1,
+        "launched_pid": 91890,
+        "peak_sampled_rss_bytes": 211853312,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.3134525970538389,
+        "sampled_cpu_seconds": 4.1899999999999995,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 120,
+        "stop_reason": null,
+        "wall_seconds": 13.367252462994657
+      }
+    },
+    "artifacts/e009-preparation/local-contract-v3/comebin.exit.json": {
+      "file": {
+        "bytes": 696,
+        "sha256": "9114056681181c19eeff655788f18b09211fede4a7636dfca51b43578cbc9e87"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/native-numerical-mac-v4/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/comebin-native-api-qa-v1.py"
+        ],
+        "exit_code": 1,
+        "launched_pid": 92385,
+        "peak_sampled_rss_bytes": 58646528,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.33115461834466947,
+        "sampled_cpu_seconds": 0.36,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 300,
+        "stop_reason": null,
+        "wall_seconds": 1.0871054790040944
+      }
+    },
+    "artifacts/e009-preparation/local-contract-v3/hmm.exit.json": {
+      "file": {
+        "bytes": 686,
+        "sha256": "95ab2b14f4822a50bab90a7ed7ea756d5b6bea5ba9d04df6dfd6e096db0a7fcf"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/native-numerical-mac-v4/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/hmm-native-qa-v1.py"
+        ],
+        "exit_code": 0,
+        "launched_pid": 92688,
+        "peak_sampled_rss_bytes": 52158464,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.14339831881133974,
+        "sampled_cpu_seconds": 0.37,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 120,
+        "stop_reason": null,
+        "wall_seconds": 2.58022550799069
+      }
+    },
+    "artifacts/e009-preparation/local-contract-v3/comebin-retained.exit.json": {
+      "file": {
+        "bytes": 692,
+        "sha256": "d109cd1da83bebf0204f50a899186539e881aa0253f21d022f91b334520e2b41"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/native-numerical-mac-v4/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/comebin-retained-qa-v1.py"
+        ],
+        "exit_code": 0,
+        "launched_pid": 92762,
+        "peak_sampled_rss_bytes": 59080704,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.280866480555957,
+        "sampled_cpu_seconds": 0.76,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 120,
+        "stop_reason": null,
+        "wall_seconds": 0.5933483400003752
+      }
+    },
+    "artifacts/e009-preparation/local-contract-v3/comebin-v2.exit.json": {
+      "file": {
+        "bytes": 695,
+        "sha256": "ed8c3813437ba19aff44721c560e4935531a4ffcc7a6449afcdf7f44f79ae8d1"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/native-numerical-mac-v4/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/comebin-native-api-qa-v2.py"
+        ],
+        "exit_code": 1,
+        "launched_pid": 92556,
+        "peak_sampled_rss_bytes": 98119680,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.35685388786414834,
+        "sampled_cpu_seconds": 1.49,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 300,
+        "stop_reason": null,
+        "wall_seconds": 4.175378357002046
+      }
+    },
+    "artifacts/e009-preparation/local-contract-v3/portable.exit.json": {
+      "file": {
+        "bytes": 1345,
+        "sha256": "157030097a5094ec4b1717ca2b5c540306acfa7a095175f233a4c4e9828dd3dc"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/native-numerical-mac-v4/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e009_contracts.py",
+          "--inputs",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/input-v2",
+          "--output",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/local-contract-v3/portable",
+          "--threads",
+          "4",
+          "--assembly-threads",
+          "1",
+          "--mapping-bin",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-mapping-local/bin",
+          "--minimap2",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-preparation/sources/minimap2/minimap2",
+          "--megahit",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/megahit-mac-v1/bin/megahit"
+        ],
+        "exit_code": 0,
+        "launched_pid": 92319,
+        "peak_sampled_rss_bytes": 300720128,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.25013648456016024,
+        "sampled_cpu_seconds": 1.27,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 300,
+        "stop_reason": null,
+        "wall_seconds": 5.077228146998095
+      }
+    }
+  },
+  "success_peak_sampled_rss_bytes": 501436416,
+  "known_supervised_wall_seconds": 106.23972149200563,
+  "cost_scope": "local QA stage receipts including retained failures; source review/acquisition/setup/font-cache/read-only hashing/idle are separate; no UCloud cost",
+  "readonly_final": {
+    "path": "artifacts/e009-preparation/readonly-final.json",
+    "file": {
+      "bytes": 523,
+      "sha256": "9fa9743fe9c22604c98576eb383911181edfafe236211da5e02db19dbd032f71"
+    },
+    "unchanged": true
+  },
+  "unexecuted": [
+    "UCloud",
+    "bulk read/source download on Mac",
+    "full-community assembly/fits",
+    "native tool candidate grids",
+    "E009 biological scores",
+    "architecture comparisons",
+    "accepted scientific inference"
+  ],
+  "receipt_boundaries": {
+    "complete": {
+      "path": "artifacts/e009-preparation/complete-mac-003/passed.json",
+      "file": {
+        "bytes": 341,
+        "sha256": "db0bbe58199ce878e3b3fa11d78765750ac58b730d5424a1068e8d5c47791816"
+      }
+    },
+    "comebin": {
+      "path": "artifacts/e009-preparation/comebin-native-api-mac-v2/retained-passed.json",
+      "file": {
+        "bytes": 3677,
+        "sha256": "8160940612d44311fefff00fea7baa5000054bd2fbe2945255faa8bc25909f8e"
+      }
+    },
+    "scgbinner": {
+      "path": "artifacts/e009-preparation/scg-reader-mac-v4/passed.json",
+      "file": {
+        "bytes": 1047,
+        "sha256": "9ddd1f677509090aa0bb857c104c3d7e08da133b8259865527533fd3a10c781e"
+      }
+    },
+    "HMM": {
+      "path": "artifacts/e009-preparation/hmm-mac-v1/passed.json",
+      "file": {
+        "bytes": 769,
+        "sha256": "c3951340cb252ccc1b4f8604b94c41a37432dda81c5a2953993e637eb43ad086"
+      }
+    }
+  },
+  "unit_final": {
+    "tests": 18,
+    "log": {
+      "path": "artifacts/e009-preparation/unit-v5.log",
+      "file": {
+        "bytes": 507,
+        "sha256": "c3eba42301d1df62507ba4431ef0a6821eb3df88ad4a3e2ceeaaf8f1a9a6a0fd"
+      }
+    },
+    "status": "passed"
+  }
+}
