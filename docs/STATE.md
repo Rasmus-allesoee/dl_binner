@@ -260,7 +260,8 @@ preflight must pass eight threads. No accepted science was repeated.
 
 **Exact next step:** owner runs the checksum-bound **8-vCPU / 24-GB ≤5-hour E009
 preflight** from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
-Use the new **v4** pair under local `artifacts/e009-preparation/transfer-v4/`;
+Use the new **v4** pair under local `artifacts/e009-preparation/transfer-v4/`,
+bound to source `2027436c54b6ff016a5ed4e75232f0256bc7e568`;
 [verified v3 failure](../experiments/E009-competitive-benchmark/linux-startup-failure-v3.json)
 records the first mandatory COMEBin inventory/import probe's 90-second timeout.
 The child emitted no phase diagnostics, so the underlying stall is unresolved;
@@ -272,7 +273,9 @@ owned Linux process wait states, preserving the same 90-second gate and complete
 checks. No timeout increase, gate bypass, prefix relocation or reinstall.
 Both live terminal logs are named `.log` files in transfer/; the return gets an
 immutable snapshot. Local fresh-site/stalled-site and actual read-only Mac numeric
-inventory checks are separate from unexecuted Linux recovery validation.
+inventory checks and the exact packet/bootstrap harness pass, including 25 focused
+checks, fresh attempts and intended corruption/timeout failures. These are separate
+from unexecuted Linux recovery validation.
 Preserve v1/v2/v3 packets and the failed attempt. Review the v4 return before science.
 It creates new tool prefixes, borrows accepted E001 dependencies read-only with
 complete byte/inventory/origin checks, downloads pinned small tool/model/utility

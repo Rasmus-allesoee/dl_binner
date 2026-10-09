@@ -1062,6 +1062,203 @@
     ],
     "Linux_v3_failure_receipt": "linux-startup-failure-v3.json",
     "native_Linux_recovery": "not executed; no root-cause repair claimed",
-    "owner_packet_harness": "pending source-bound v4 packet integration"
+    "owner_packet_harness": {
+      "status": "passed",
+      "source_packet": {
+        "bytes": 6659467,
+        "sha256": "b7c3491dd1455da4d1f15d2dc1de13620574fed38abccae6e5cc198fb336c8d5"
+      },
+      "receipt": {
+        "path": "artifacts/e009-preparation/owner-packet-qa-v5/passed.json",
+        "file": {
+          "bytes": 23918,
+          "sha256": "88c507ae14fb7cb68c96413b82591f5a343a99ef73b3c69f742a2be97bf450e8"
+        }
+      },
+      "cases": {
+        "fresh": {
+          "status": "passed software harness contract",
+          "attempts": 2,
+          "returns": [
+            {
+              "file": {
+                "bytes": 47335,
+                "sha256": "a000f0a1b6222e5eb4c532d019329d363d20bb1a619cb6c751f564bd0f175fc1"
+              },
+              "path": "/private/tmp/e009-owner-packet-bxeg2b98/fresh/transfer/native-preflight-6vsm90qc-return.tar.gz"
+            },
+            {
+              "file": {
+                "bytes": 47366,
+                "sha256": "d5d69d3030dab9b77486e50bcf6d546cd11181956bac87dd8ca4883e3d84b52a"
+              },
+              "path": "/private/tmp/e009-owner-packet-bxeg2b98/fresh/transfer/native-preflight-sro0bn4g-return.tar.gz"
+            }
+          ]
+        },
+        "inner-corruption": {
+          "status": "passed software harness contract",
+          "attempts": 1,
+          "returns": [
+            {
+              "file": {
+                "bytes": 3266,
+                "sha256": "7228d91a8eb8329f7779a7be30db6380087b3ec3b3ff8ec12ec9398a27a5de3c"
+              },
+              "path": "/private/tmp/e009-owner-packet-bxeg2b98/inner-corruption/transfer/native-preflight-ebsgjij8-return.tar.gz"
+            }
+          ]
+        },
+        "missing-native": {
+          "status": "passed software harness contract",
+          "attempts": 1,
+          "returns": [
+            {
+              "file": {
+                "bytes": 9565,
+                "sha256": "c77caff34aeac1149ace1a5ef80815cb865fe0b2a2ef67222d2aacafc439da15"
+              },
+              "path": "/private/tmp/e009-owner-packet-bxeg2b98/missing-native/transfer/native-preflight-62ykh4gq-return.tar.gz"
+            }
+          ]
+        },
+        "outer-checksum": {
+          "status": "intended outer checksum failure",
+          "attempts": 0,
+          "returns": []
+        },
+        "overall-timeout": {
+          "status": "passed software harness contract",
+          "attempts": 1,
+          "returns": [
+            {
+              "file": {
+                "bytes": 813361,
+                "sha256": "af1973596b530bc78900ef788388898e15b4f368cabd1a5cdc9814ba1ff9d3e4"
+              },
+              "path": "/private/tmp/e009-owner-packet-bxeg2b98/overall-timeout/transfer/native-preflight-2mry52ms-return.tar.gz"
+            }
+          ]
+        }
+      },
+      "scope": "two fresh attempts, corruption/missing-native/timeout intended causes, both live terminal logs in transfer and exact immutable snapshots/inventories; remote Linux setup not exercised"
+    },
+    "startup_resource_receipts": {
+      "artifacts/e009-preparation/startup-native-qa-v1/instrumented.exit.json": {
+        "file": {
+          "bytes": 1081,
+          "sha256": "e107a45e8b32f90a1e74304c118b133cbc39c9c2007b48a7f0ad70c167916a6f"
+        },
+        "resource": {
+          "exit_code": 1,
+          "launched_pid": 13404,
+          "peak_sampled_rss_bytes": 215908352,
+          "rss_bytes_ceiling": 8000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.9551712068560316,
+          "sampled_cpu_seconds": 2.79,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 90,
+          "stop_reason": null,
+          "wall_seconds": 2.920942319004098
+        }
+      },
+      "artifacts/e009-preparation/startup-native-qa-v1/normal-freeze.exit.json": {
+        "file": {
+          "bytes": 627,
+          "sha256": "31249e96d39be052e084dea305e0a8e319788b5e568fb289c54ad6c0817e36d9"
+        },
+        "resource": {
+          "exit_code": 0,
+          "launched_pid": 13392,
+          "peak_sampled_rss_bytes": 89812992,
+          "rss_bytes_ceiling": 8000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.46804272586437684,
+          "sampled_cpu_seconds": 0.6200000000000001,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 60,
+          "stop_reason": null,
+          "wall_seconds": 1.3246653900132515
+        }
+      },
+      "artifacts/e009-preparation/startup-native-qa-v2/instrumented.exit.json": {
+        "file": {
+          "bytes": 1081,
+          "sha256": "199a242d8f73fdf900e5a510254ba819fe1c1eba6b0258813bd8de9bb7709e7c"
+        },
+        "resource": {
+          "exit_code": 0,
+          "launched_pid": 13667,
+          "peak_sampled_rss_bytes": 232902656,
+          "rss_bytes_ceiling": 8000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.8798030215140642,
+          "sampled_cpu_seconds": 2.8200000000000003,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 90,
+          "stop_reason": null,
+          "wall_seconds": 3.2052629179961514
+        }
+      },
+      "artifacts/e009-preparation/startup-native-qa-v2/normal-freeze.exit.json": {
+        "file": {
+          "bytes": 626,
+          "sha256": "5e35085c184095b69bde0f28cd9885b70ab98df209d8b65053a8350f06e19ca7"
+        },
+        "resource": {
+          "exit_code": 0,
+          "launched_pid": 13654,
+          "peak_sampled_rss_bytes": 80764928,
+          "rss_bytes_ceiling": 8000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.3291495847998341,
+          "sampled_cpu_seconds": 0.4200000000000008,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 60,
+          "stop_reason": null,
+          "wall_seconds": 1.2760155849973671
+        }
+      },
+      "artifacts/e009-preparation/startup-native-qa-v3/instrumented.exit.json": {
+        "file": {
+          "bytes": 1080,
+          "sha256": "155ac3ab68f92a85478fdbf975ce08e36113fa4e75d48647c5b5522a839a3602"
+        },
+        "resource": {
+          "exit_code": 0,
+          "launched_pid": 14039,
+          "peak_sampled_rss_bytes": 248492032,
+          "rss_bytes_ceiling": 8000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.9202291258707156,
+          "sampled_cpu_seconds": 2.960000000000001,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 90,
+          "stop_reason": null,
+          "wall_seconds": 3.2165902130072936
+        }
+      },
+      "artifacts/e009-preparation/startup-native-qa-v3/normal-freeze.exit.json": {
+        "file": {
+          "bytes": 627,
+          "sha256": "d43f81952b3ebca3ad9288fdafe6d353dc1d3f5ee68b91909c8fb8c6de3a2c45"
+        },
+        "resource": {
+          "exit_code": 0,
+          "launched_pid": 14027,
+          "peak_sampled_rss_bytes": 88674304,
+          "rss_bytes_ceiling": 8000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.40935909414058375,
+          "sampled_cpu_seconds": 0.5100000000000007,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 60,
+          "stop_reason": null,
+          "wall_seconds": 1.2458499329804908
+        }
+      }
+    },
+    "scope_note": "Mac actual module/freeze checks and changed production startup/logging paths; no native Linux wait-state or environment repair established"
   }
 }

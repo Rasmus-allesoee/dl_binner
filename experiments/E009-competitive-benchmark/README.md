@@ -406,3 +406,11 @@ bytes remain unchanged. This is no model inference or Linux compatibility claim.
 A local child-timer shutdown hang was retained and avoided with parent-triggered
 separate stack files. Linux `/proc` decoding uses a fixture locally; actual kernel
 wait capture and the original startup stall require the owner return.
+
+The exact v4 packet/bootstrap passes an out-of-checkout Mac harness: two fresh
+attempts, intended inner/outer checksum corruption, missing native executable and
+overall timeout, with all returned file hashes and storage totals checked. Both
+bootstrap and driver live `.log` files reside in transfer/; immutable snapshots
+exclude later return-print output. Source `2027436c54b6ff016a5ed4e75232f0256bc7e568`,
+30 payload files plus manifest, 6,659,467-byte archive. This is locally tested
+recovery preparation, not repaired Linux startup or admitted scientific execution.
