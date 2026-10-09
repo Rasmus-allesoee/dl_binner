@@ -170,3 +170,14 @@ shared E009 subtree. The former 200 GB is provisioning, not a hard cap. Actual s
 archive SHA and biological classification/near-overlap, bulk-read hashes, assembly
 scale and full-schedule affordability still require returned/later evidence before
 science. Review results before preparing the next bounded assembly command.
+
+Final review found a parent-clock edge case in the unexecuted v1 packet: the
+final read-only hash could continue without an alarm after the work timer fired,
+and collection was labelled by the total clock rather than work-timeout status.
+Version 2 bounds that verification within the remaining clock (at most 120 seconds
+of remaining reserve after a timeout), retains incomplete verification explicitly,
+and labels collection after a work timeout. Two additional regressions check
+actual unchanged/modified dependency bytes and a stalled check after an already
+expired parent alarm. The first immutable packet, source and failed/successful
+local harness receipts are retained; no scientific result changes or Linux
+execution are inferred from this correction.

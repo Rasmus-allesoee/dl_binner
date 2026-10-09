@@ -117,6 +117,31 @@ def storage_snapshot(root):
             'scope':'owned filesystem snapshot before collection, distinct from exact archive-member retained bytes'}
 
 
+def verify_readonly_after(roots,before,attempt,work_deadline,overall_deadline):
+    """Bound the final dependency-byte check even after the work alarm has fired.
+
+    Ordinary verification stays within the work clock. Following a timeout, at
+    most 120 seconds of the remaining collection reserve can verify read-only
+    bytes. A blocked/failed check is retained as unverified, never accepted as
+    unchanged. Restore any still-live parent alarm when leaving this check.
+    """
+    started=time.monotonic();previous=signal.getitimer(signal.ITIMER_REAL)
+    remaining=work_deadline-started
+    seconds=min(remaining if remaining>0 else 120,overall_deadline-started)
+    try:
+        if seconds<=0:raise TimeoutError('No bounded time remains for read-only verification')
+        signal.setitimer(signal.ITIMER_REAL,seconds)
+        after={name:tree_binding(path) for name,path in roots.items()}
+        write_json(attempt/'readonly-after.json',{'bindings':after,'unchanged':after==before})
+        if after!=before:raise ValueError('Read-only dependency bytes changed; preserve evidence')
+    except BaseException as error:
+        write_json(attempt/'readonly-after-failure.json',{'error':repr(error),
+                   'unchanged':None,'scope':'final byte verification incomplete or failed; no read-only acceptance'})
+        raise
+    finally:
+        signal.setitimer(signal.ITIMER_REAL,max(0,previous[0]-(time.monotonic()-started)) if previous[0] else 0,previous[1])
+
+
 def execute(args,attempt,started):
     """Perform only prospective asset acquisition and real tiny native contracts."""
     limits=json.loads((BUNDLE/EXP/'preflight.json').read_text());sup=supervisor()
@@ -182,9 +207,9 @@ def execute(args,attempt,started):
     stage([amber/'bin/python','-I','-B',BUNDLE/'scripts/e009_native.py','--inventory-prefix',amber,
            '--expected-distributions',expected_amber,'--modules','numpy','pandas','matplotlib','Bio'],
           'readonly-amber-probe',90)
-    bindings={'numerical':tree_binding(site),'mapping':tree_binding(mapping),
-              'amber':tree_binding(amber),'amber_source':tree_binding(amber_source),
-              'checkm_data':tree_binding(checkm_data),'base_executables':tree_binding(base/'bin')}
+    readonly_roots={'numerical':site,'mapping':mapping,'amber':amber,'amber_source':amber_source,
+                    'checkm_data':checkm_data,'base_executables':base/'bin'}
+    bindings={name:tree_binding(path) for name,path in readonly_roots.items()}
     write_json(attempt/'readonly-before.json',bindings)
     try:
         for tool,argv in [('strobealign',['--version']),('samtools',['--version'])]:
@@ -290,11 +315,8 @@ def execute(args,attempt,started):
         write_json(attempt/'source-acquisition.json',{'archive':str(sourcearchive),'file':binding(sourcearchive),'shared_source_folder':str(sourcefolder),
                    'source_catalog':binding(attempt/'source-catalog.json'),'admitted_scientific_input':False})
     finally:
-        after={'numerical':tree_binding(site),'mapping':tree_binding(mapping),
-               'amber':tree_binding(amber),'amber_source':tree_binding(amber_source),
-               'checkm_data':tree_binding(checkm_data),'base_executables':tree_binding(base/'bin')}
-        write_json(attempt/'readonly-after.json',{'bindings':after,'unchanged':after==bindings})
-        if after!=bindings:raise ValueError('Read-only dependency bytes changed; preserve evidence')
+        verify_readonly_after(readonly_roots,bindings,attempt,deadline,
+                              started+limits['overall_seconds_ceiling'])
     failed=[t for t,v in results.items() if v['status']!='passed']
     return {'status':'failed' if failed else 'passed','native_linux':True,'tools':results,'failed_tools':failed,
             'scope':'asset/source-overlap and tiny native CPU contracts only; no full-community fits or E009 scores',
@@ -317,6 +339,7 @@ def main():
     args.root.mkdir(parents=True,exist_ok=True);transfer=args.root/'transfer';transfer.mkdir(exist_ok=True)
     attempt=Path(tempfile.mkdtemp(prefix='native-preflight-',dir=args.root));started=time.monotonic()-max(0,time.time()-(args.entry_start_epoch or time.time()))
     status={'status':'failed','verification_passed':False};code=1;original=sys.stdout,sys.stderr
+    work_seconds=args.local_seconds or 17400
     def alarm(signum,frame):raise TimeoutError('Overall E009 preflight ceiling reached')
     old_handlers={s:signal.getsignal(s) for s in (signal.SIGALRM,signal.SIGINT,signal.SIGTERM)}
     signal.signal(signal.SIGALRM,alarm)
@@ -332,7 +355,8 @@ def main():
             status=execute(args,attempt,started);status['verification_passed']=True
             code=0 if status['status']=='passed' else 1
         except BaseException as error:
-            status.update(error=repr(error));traceback.print_exc()
+            status.update(error=repr(error),execution_timed_out=isinstance(error,TimeoutError) or time.monotonic()-started>=work_seconds)
+            traceback.print_exc()
         finally:
             signal.setitimer(signal.ITIMER_REAL,0)
             try:
@@ -351,7 +375,7 @@ def main():
                 signal.setitimer(signal.ITIMER_REAL,min(600,remaining) if remaining>0 else 120)
                 result=collect(attempt,transfer);elapsed=time.monotonic()-started
                 result.update(seconds_through_collection=elapsed,allocated_core_hours_through_collection=args.allocated_vcpus*elapsed/3600)
-                result['collection_after_execution_timeout']=remaining<=0
+                result['collection_after_execution_timeout']=bool(status.get('execution_timed_out')) or remaining<=0
                 write_json(transfer/(attempt.name+'-collection.json'),result)
             except BaseException:traceback.print_exc();code=1
             signal.setitimer(signal.ITIMER_REAL,0)

@@ -18,7 +18,7 @@
     "HMMER_real": "actual 3.4 Mac --cpu1 total budget translated to --cpu0 serial; native domtblout header and audit file retained",
     "source_overlap": "self-contained full-replicon/accession and opaque competitive-reference contracts; real CAMI source archive not locally acquired",
     "upstream_parser_only": "all five tool argv/API and CompleteBin50 cases; parser-only is not native full import/training",
-    "unit": "18 self-contained adapter/failure tests; final rerun receipt recorded after source freeze",
+    "unit": "20 self-contained adapter/failure tests, including intact/changed read-only bytes and stalled cleanup after an expired parent alarm",
     "owner_harness": "packet source freeze and actual out-of-checkout driver checks recorded in transfer.json after build"
   },
   "known_failures_preserved": [
@@ -27,7 +27,9 @@
     "incomplete local reader dependency attempts v1-v3 (Bio/Pandas/six); final v4 full pip check passes",
     "local COMEBin parser harness missing version label; corrected",
     "COMEBin emitted basenames rather than original paths; retained writers succeed, validator corrected",
-    "Linux dry solve missing glibc virtual package then unnecessary Galah/zlib conflict; narrowed recipe resolves"
+    "Linux dry solve missing glibc virtual package then unnecessary Galah/zlib conflict; narrowed recipe resolves",
+    "actual v1 packet harness fresh repeat hit BSD mktemp suffix collision; portable suffix fixed and both repeated invocations pass",
+    "final v1 source review found unbounded after-timeout dependency check and collection-status clock edge; corrected before owner execution in new v2 packet"
   ],
   "new_local_prefixes": "numerical-mac-v1/v2/v3/v4 and utility/megahit prefixes; old prefixes preserved; new v4 owns six and borrows v3/E005 dependencies explicitly read-only",
   "receipts": {
@@ -433,14 +435,15 @@
     }
   },
   "unit_final": {
-    "tests": 18,
+    "tests": 20,
     "log": {
-      "path": "artifacts/e009-preparation/unit-v5.log",
+      "path": "artifacts/e009-preparation/unit-v7.log",
       "file": {
-        "bytes": 507,
-        "sha256": "c3eba42301d1df62507ba4431ef0a6821eb3df88ad4a3e2ceeaaf8f1a9a6a0fd"
+        "bytes": 119,
+        "sha256": "f1b771ef7a999b4384f5c26dcce87beaf309595d33e86a7f6ee0e0274d68d5a7"
       }
     },
-    "status": "passed"
+    "status": "passed",
+    "scope": "self-contained actual adapters plus intended process and parent-clock failures; not Linux or scientific validation"
   }
 }

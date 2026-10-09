@@ -23,7 +23,8 @@ from e009_common import acquire,binding,extract,fasta,write_json
 from e009_data import canonical_dna,combine_depth,competitive_reference,partition,source_catalog,validate_fastq_pair
 from e009_native import cpu_plan,prepare_bam_directory
 from e009_hmm import budget_args
-from e009_owner import collect,supervisor,verify_bundle
+from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after
+from e009_common import tree_binding
 from e009_truth import construct,parse_paf,reconcile,recovery,union
 
 
@@ -209,6 +210,50 @@ class E009Contracts(unittest.TestCase):
             self.assertEqual(archive.extractfile('attempt/terminal.log').read(),b'exact snapshot\n')
             self.assertIn('attempt/retained-files.json',[m.name for m in members])
         self.assertEqual(binding(receipt['archive']),receipt['file'])
+
+    def test_final_readonly_bytes_are_checked_and_changed_bytes_fail(self):
+        root=self.p/'dependency';root.mkdir();self.put('dependency/native','unchanged')
+        before={'dependency':tree_binding(root)}
+        for name,changed in [('intact',False),('changed',True)]:
+            attempt=self.p/name;attempt.mkdir()
+            if changed:self.put('dependency/native','changed')
+            now=time.monotonic()
+            if changed:
+                with self.assertRaisesRegex(ValueError,'Read-only dependency bytes changed'):
+                    verify_readonly_after({'dependency':root},before,attempt,now+10,now+20)
+                self.assertIsNone(json.loads((attempt/'readonly-after-failure.json').read_text())['unchanged'])
+            else:verify_readonly_after({'dependency':root},before,attempt,now+10,now+20)
+            self.assertEqual(json.loads((attempt/'readonly-after.json').read_text())['unchanged'],not changed)
+
+    def test_expired_parent_alarm_cannot_leave_readonly_cleanup_unbounded(self):
+        # Inject a stalled filesystem check, outside the actual hashing contract.
+        # The production guard must re-arm an expired parent timer and retain
+        # the intended timeout before returning; an outer failure is not a pass.
+        code=self.put('cleanup.py',f"""import json,signal,sys,time
+from pathlib import Path
+sys.path.insert(0,{str(ROOT/'scripts')!r})
+import e009_owner as owner
+def alarm(signum,frame):raise TimeoutError('intended cleanup clock')
+signal.signal(signal.SIGALRM,alarm)
+signal.setitimer(signal.ITIMER_REAL,.02)
+try:time.sleep(1)
+except TimeoutError:pass
+assert signal.getitimer(signal.ITIMER_REAL)[0]==0
+def blocked(path):time.sleep(60)
+owner.tree_binding=blocked
+attempt=Path({str(self.p/'cleanup')!r});attempt.mkdir()
+now=time.monotonic()
+try:owner.verify_readonly_after({{'blocked':attempt}},{{}},attempt,now-1,now+.15)
+except TimeoutError:
+    result=json.loads((attempt/'readonly-after-failure.json').read_text())
+    assert result['unchanged'] is None and 'intended cleanup clock' in result['error']
+    assert time.monotonic()-now<2
+    print('PASS intended re-armed cleanup timeout',flush=True)
+else:raise AssertionError('stalled check was accepted')
+""")
+        sup=supervisor();receipt=sup.supervise([sys.executable,'-B',code],self.p/'cleanup.log',5,8_000_000_000,sup.isolated_env(4))
+        self.assertEqual(receipt['exit_code'],0)
+        self.assertIn('PASS intended re-armed cleanup timeout',(self.p/'cleanup.log').read_text())
 
     def assert_stopped(self,pid):
         """Require absence of live child work; an unreaped zombie is not a running orphan."""

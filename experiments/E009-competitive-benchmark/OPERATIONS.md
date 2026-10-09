@@ -14,7 +14,7 @@ Do not run competing workloads. No Slurm cluster is needed for this serial prefl
 
 ## Upload two files and run once
 
-Upload the source-bound `e009-preflight-v1.tar.gz` and matching `.tar.gz.sha256`
+Upload the source-bound `e009-preflight-v2.tar.gz` and matching `.tar.gz.sha256`
 from the local transfer receipt; no Mac environment, large BAM or model upload.
 Exact archive/source identities are recorded in [transfer.json](transfer.json).
 Then paste this **entire block** into the Terminal:
@@ -24,14 +24,14 @@ bash <<'BASH'
 set -Eeuo pipefail
 transfer=/work/Home/dl_binner/e009/transfer
 mkdir -p "$transfer"
-terminal_log=$(mktemp "$transfer/e009-preflight.XXXXXX.log")
+terminal_log=$(mktemp "$transfer/e009-preflight.XXXXXX")
 exec > >(tee -a "$terminal_log") 2>&1
 printf 'TERMINAL_LOG=%s\n' "$terminal_log"
 python3 -I -B - "$transfer" <<'PY'
 import hashlib, os, pathlib, shutil, sys, tarfile, tempfile, time
 started=time.time()
 transfer=pathlib.Path(sys.argv[1])
-archive=transfer/'e009-preflight-v1.tar.gz'
+archive=transfer/'e009-preflight-v2.tar.gz'
 fields=(transfer/(archive.name+'.sha256')).read_text().split()
 if len(fields)!=2 or fields[1]!=archive.name or len(fields[0])!=64:
     raise ValueError('Upload the exact archive and matching printed checksum')
@@ -45,13 +45,13 @@ with tarfile.open(archive) as tar:
     if sum(m.size for m in members)>20_000_000:raise ValueError('Unexpected packet expansion')
     for member in members:
         path=pathlib.PurePosixPath(member.name)
-        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v1' or member.name in names:
+        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v2' or member.name in names:
             raise ValueError('Unsafe or duplicate packet member')
         names.add(member.name)
     for member in members:
         target=launch/member.name;target.parent.mkdir(parents=True,exist_ok=True)
         with tar.extractfile(member) as src,target.open('xb') as out:shutil.copyfileobj(src,out)
-packet=launch/'e009-preflight-v1'
+packet=launch/'e009-preflight-v2'
 env=os.environ.copy()
 for key in ('PYTHONPATH','PYTHONHOME','PYTHONUSERBASE'):env.pop(key,None)
 env.update(PYTHONNOUSERSITE='1',PYTHONUNBUFFERED='1')
@@ -106,7 +106,10 @@ seconds**, at most **40 allocated core-hours** before optional evidence collecti
 following a timeout. Collection after a timeout is labelled, bounded and charged
 separately, not hidden inside an execution success. Actual elapsed allocation cost
 includes setup, failures and collection; owner idle/upload/provider billing are
-separate. Heartbeats appear every ten seconds; native detail is in stage/tool logs.
+separate. Final read-only hashing stays bounded even after the work timer expires;
+an incomplete byte check is retained as unverified and cannot pass. Packet v1 is
+retained locally as superseded preparation, never edited into v2. Heartbeats
+appear every ten seconds; native detail is in stage/tool logs.
 Actual tools run serially. Torch phases may use eight threads/loader zero; process
 pools and HMM/BGZF child budgets include their main/coordinator. Allocation caps
 are not a promise that small or serial phases saturate eight CPUs.

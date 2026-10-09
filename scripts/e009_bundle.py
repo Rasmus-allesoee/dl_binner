@@ -21,7 +21,7 @@ ROOT=Path(__file__).absolute().parents[1]
 EXP='experiments/E009-competitive-benchmark'
 
 
-def build(destination,bootstrap,version='v1'):
+def build(destination,bootstrap,version='v2'):
     """Require committed transfer inputs and return the exact two owner upload paths."""
     destination,bootstrap=Path(destination).absolute(),Path(bootstrap).absolute()
     if not version.isalnum():raise ValueError('Simple version name required')
@@ -67,5 +67,5 @@ def build(destination,bootstrap,version='v1'):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--destination',type=Path,required=True)
-    p.add_argument('--bootstrap',type=Path,required=True);p.add_argument('--version',default='v1')
+    p.add_argument('--bootstrap',type=Path,required=True);p.add_argument('--version',default='v2')
     args=p.parse_args();print(json.dumps(build(args.destination,args.bootstrap,args.version),indent=2))
