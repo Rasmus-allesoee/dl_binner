@@ -261,7 +261,11 @@ preflight must pass eight threads. No accepted science was repeated.
 **Exact next step:** owner runs the **1-vCPU /4-GB recovery-only job**, at most
 five minutes work plus 30 seconds normal collection, from
 [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
-Upload only the new v6 pair under local `artifacts/e009-preparation/transfer-v6/`.
+Upload only the new 51,348-byte v6 pair under local
+`artifacts/e009-preparation/transfer-v6/`, bound to source
+`76c5012e9f9981d89a3ac3c4d6773205cf1dee2b`. Thirty local tests, the actual Mac recovery
+worker and exact source-bound bootstrap/return/failure harness pass. Native Linux
+effectiveness remains unexecuted.
 [Verified v5 return](../experiments/E009-competitive-benchmark/linux-startup-failure-v5.json)
 shows 175 slow file reads, 162 on `.pyc`, plus library/source/metadata waits.
 Only 10.51 CPU seconds were used in 900.223 seconds; another longer import limit

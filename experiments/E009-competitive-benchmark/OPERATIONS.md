@@ -16,7 +16,8 @@ There are no installs, environment moves/copies, payload downloads or binning.
 
 Upload the new `e009-preflight-v6.tar.gz` and its matching `.tar.gz.sha256` into
 `/work/Home/dl_binner/e009/transfer/`. Local pair: `artifacts/e009-preparation/transfer-v6/`.
-[transfer.json](transfer.json) binds the final source/archive/command. This small
+[transfer.json](transfer.json) binds source `76c5012e9f9981d89a3ac3c4d6773205cf1dee2b`,
+51,348 archive bytes and the exact command. This small
 recovery packet contains no micromamba, DNA fixture, model or Mac environment.
 Preserve every older packet, failed attempt and environment. Paste this entire block:
 

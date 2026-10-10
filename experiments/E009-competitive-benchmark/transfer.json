@@ -1,1 +1,188 @@
-{"record":"E009","version":"v6","status":"source freeze before recovery-only packet integration","native_Linux_recovery":"unexecuted; full preflight suspended","v5_failure_receipt":"linux-startup-failure-v5.json"}
+{
+  "record": "E009",
+  "version": "v6",
+  "date": "2026-10-10",
+  "status": "prepared and locally tested cheap source-cache recovery; full native preflight suspended",
+  "source_commit": "76c5012e9f9981d89a3ac3c4d6773205cf1dee2b",
+  "archive": {
+    "path": "artifacts/e009-preparation/transfer-v6/e009-preflight-v6.tar.gz",
+    "file": {
+      "bytes": 51348,
+      "sha256": "cc6effd945833ae520d59d474aaa2fae0aab0c0977bfbd6d4c61a925c4b61ec8"
+    }
+  },
+  "checksum": {
+    "path": "artifacts/e009-preparation/transfer-v6/e009-preflight-v6.tar.gz.sha256",
+    "file": {
+      "bytes": 91,
+      "sha256": "d315a46d04021dcea3089270f231513ee660d17cedfa96150fd434a3b76251b3"
+    }
+  },
+  "manifest": {
+    "bytes": 2618,
+    "sha256": "a503a672cfc28c104ee759c75613c30ee0cd43ca150e4228fbb5ad6da407b474"
+  },
+  "payload_files": 16,
+  "all_packet_hashes_verified": true,
+  "recovery_only": true,
+  "bootstrap_DNA_model_Mac_environment_included": false,
+  "build_receipt": {
+    "path": "artifacts/e009-preparation/transfer-v6/transfer-receipt.json",
+    "file": {
+      "bytes": 653,
+      "sha256": "79487ec528d15ddc77862e4408661ea2de2554d4c9f8203f2c79373c9780ccea"
+    }
+  },
+  "operations": "OPERATIONS.md",
+  "operations_command": {
+    "bytes": 2355,
+    "sha256": "f21520fc8a7f89672fc8f54d8e099ec3ccf1a845931fe1d1e438344b91966498"
+  },
+  "owner_allocation": {
+    "vcpus": 1,
+    "ram_gb": 4,
+    "working_rss_bytes": 3000000000,
+    "work_seconds": 300,
+    "overall_seconds_normal": 330,
+    "source_cache_read_seconds": 15,
+    "inventory_seconds": 180,
+    "idle_seconds": 45
+  },
+  "previous_native_failure": "linux-startup-failure-v5.json",
+  "limits": "175 retained file waits, 162 caches. Other waits mean cache bypass is not a confirmed Linux/provider repair.",
+  "local_checks": {
+    "unit_tests": 30,
+    "unit_log": {
+      "path": "artifacts/e009-preparation/unit-v21.log",
+      "file": {
+        "bytes": 6426,
+        "sha256": "cb4b7645b56319a2bfd4ad70b82221f99b43d5a4caa80dec9ace60b99e2ee4a1"
+      }
+    },
+    "actual_Mac_worker": {
+      "path": "artifacts/e009-preparation/source-cache-native-qa-v2/passed.json",
+      "file": {
+        "bytes": 1341,
+        "sha256": "587fb8030c33f5b1cda48c826777735601a7804f6a99f453cb69a2f92933fa29"
+      }
+    },
+    "owner_packet_harness": {
+      "path": "artifacts/e009-preparation/cache-owner-packet-qa-v1/passed.json",
+      "file": {
+        "bytes": 18990,
+        "sha256": "82f48603598cb5ac8c3af0e2d90febc8748f6956577678fd56f4cffb1ffd66a4"
+      }
+    },
+    "harness_script": {
+      "path": "artifacts/e009-preparation/cache-owner-packet-qa-v1.py",
+      "file": {
+        "bytes": 6672,
+        "sha256": "dc1fc3c2f369bcd29c25c494624873ff70bcc96d1373fdc0fea76f3fc1a71c30"
+      }
+    },
+    "harness_terminal": {
+      "path": "artifacts/e009-preparation/cache-owner-packet-qa-v1-terminal.log",
+      "file": {
+        "bytes": 22136,
+        "sha256": "d74504372a6f075096ade1ef606099cc252694ffb562112df9588ad49e8e05e7"
+      }
+    },
+    "cases": {
+      "fresh": {
+        "status": "passed intended recovery contract",
+        "attempts": 2
+      },
+      "inner-corruption": {
+        "status": "passed intended recovery contract",
+        "attempts": 1
+      },
+      "missing-source": {
+        "status": "passed intended recovery contract",
+        "attempts": 1
+      },
+      "outer-checksum": {
+        "status": "intended outer SHA failure",
+        "attempts": 0
+      },
+      "overall-timeout": {
+        "status": "passed intended recovery contract",
+        "attempts": 1
+      },
+      "wrong-inventory": {
+        "status": "passed intended recovery contract",
+        "attempts": 1
+      }
+    },
+    "retained_prefix_full_binding": {
+      "bytes": 774207552,
+      "files": 20132,
+      "tree_sha256": "935d2d6968f5ddc8b6b7aebbb030db7aab2ac1e5bd240eb7152885db5d98508f"
+    },
+    "scope": "actual FIFO blocked-cache repair; Mac source/cache readers, NumPy/Torch imports, full freeze/cache audit and exact entry/packet/inventory/source failures/timeout/returns. Linux requires all ten imports and actual source speed; no native Linux effectiveness claim."
+  },
+  "native_Linux_recovery_executed": false,
+  "full_native_preflight_enabled": false,
+  "scientific_execution_admitted": false,
+  "preserved_packets": [
+    {
+      "version": "v1",
+      "source_commit": "c2004ae096b6ccac826591e8e822079e419978a5",
+      "archive": {
+        "path": "artifacts/e009-preparation/transfer-v1/e009-preflight-v1.tar.gz",
+        "file": {
+          "bytes": 6655953,
+          "sha256": "30477f2e38f24c50688084ac3c6e433cbdd86b642ea165962b67bdd49c57503a"
+        }
+      },
+      "status": "immutable and superseded for new launch"
+    },
+    {
+      "version": "v2",
+      "source_commit": "a1ca7bc34b37d96c2a17d6c30b836fa42802601e",
+      "archive": {
+        "path": "artifacts/e009-preparation/transfer-v2/e009-preflight-v2.tar.gz",
+        "file": {
+          "bytes": 6656385,
+          "sha256": "958de5eb5159129776507bc17771a5fde8a361de9b260264afe2dc2e52801a9e"
+        }
+      },
+      "status": "immutable and superseded for new launch"
+    },
+    {
+      "version": "v3",
+      "source_commit": "a12c962a85946167bcc2441597b30fcca85b209c",
+      "archive": {
+        "path": "artifacts/e009-preparation/transfer-v3/e009-preflight-v3.tar.gz",
+        "file": {
+          "bytes": 6656591,
+          "sha256": "097d64902f5b71d79b23d1d1fd74cbc30e92b7eb9157199b8a94948c786d07a8"
+        }
+      },
+      "status": "immutable and superseded for new launch"
+    },
+    {
+      "version": "v4",
+      "source_commit": "2027436c54b6ff016a5ed4e75232f0256bc7e568",
+      "archive": {
+        "path": "artifacts/e009-preparation/transfer-v4/e009-preflight-v4.tar.gz",
+        "file": {
+          "bytes": 6659467,
+          "sha256": "b7c3491dd1455da4d1f15d2dc1de13620574fed38abccae6e5cc198fb336c8d5"
+        }
+      },
+      "status": "immutable failed Linux startup, superseded for new launch"
+    },
+    {
+      "version": "v5",
+      "source_commit": "01837619230458e830fba7f54755c04d6c8c7604",
+      "archive": {
+        "path": "artifacts/e009-preparation/transfer-v5/e009-preflight-v5.tar.gz",
+        "file": {
+          "bytes": 6660645,
+          "sha256": "600a3ea2cf1172e03fbed8387b62535fc995c796d69c10980c40986f8a030422"
+        }
+      },
+      "status": "immutable verified native failure; superseded for new launch"
+    }
+  ]
+}

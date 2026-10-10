@@ -513,3 +513,13 @@ cache pairs, loads NumPy/Torch, matches full normal pip freeze and leaves the en
 seconds /0.288-GB sampled peak, with 474/923 source-open audit events in pip/parent
 and zero persistent-cache attempts. This is a Mac path/contract check, not timing
 for Linux's ten-module probe or proof of repaired storage.
+
+The immutable v6 packet is 51,348 bytes, 16 payload files plus manifest, with all
+archive member hashes verified. Source `76c5012e9f9981d89a3ac3c4d6773205cf1dee2b`. The exact
+owner bootstrap passes outside-checkout Mac recovery: two fresh attempts, intended
+inner/outer corruption, unavailable source, changed full inventory and overall
+timeout, immutable return hashes/storage/log placement and unchanged retained
+prefix bytes. This is genuine local worker execution with explicit Mac
+platform/root/numerical-prefix/module-list and shortened test-clock overrides.
+Review the cheap owner return before any full allocation; [transfer.json](transfer.json)
+owns final identities and observed scope.
