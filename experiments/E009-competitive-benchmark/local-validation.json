@@ -1262,7 +1262,7 @@
     "scope_note": "Mac actual module/freeze checks and changed production startup/logging paths; no native Linux wait-state or environment repair established"
   },
   "cold_start_recovery_v5": {
-    "status": "28 focused checks and actual read-only Mac inventory/import/freeze dispatcher pass; immutable packet integration pending",
+    "status": "passed scoped local validation; native Linux recovery unexecuted",
     "Linux_failure": "linux-startup-failure-v4.json",
     "diagnosis": "90-second cold-import wall clock killed progress through Home file reads; storage latency itself not repaired",
     "policy": {
@@ -1333,6 +1333,42 @@
       "seconds_ceiling": 90,
       "stop_reason": null,
       "wall_seconds": 3.715002493991051
+    },
+    "owner_packet_harness": {
+      "path": "artifacts/e009-preparation/owner-packet-qa-v6/passed.json",
+      "file": {
+        "bytes": 23929,
+        "sha256": "138e9e2502437289bf17ac45b2b02722a8634b1931e3527f2879ec32a131ad35"
+      }
+    },
+    "harness_cases": {
+      "fresh": {
+        "status": "passed software harness contract",
+        "attempts": 2
+      },
+      "inner-corruption": {
+        "status": "passed software harness contract",
+        "attempts": 1
+      },
+      "missing-native": {
+        "status": "passed software harness contract",
+        "attempts": 1
+      },
+      "outer-checksum": {
+        "status": "intended outer checksum failure",
+        "attempts": 0
+      },
+      "overall-timeout": {
+        "status": "passed software harness contract",
+        "attempts": 1
+      }
+    },
+    "retained_Linux_trace_replay": {
+      "path": "artifacts/e009-preparation/v4-trace-replay.json",
+      "file": {
+        "bytes": 286,
+        "sha256": "ce71cfd137797d509d74d84badddc9bd43cf20478b388b70c47c1fcfc9863619"
+      }
     }
   }
 }

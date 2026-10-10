@@ -260,7 +260,8 @@ preflight must pass eight threads. No accepted science was repeated.
 
 **Exact next step:** owner runs the checksum-bound **8-vCPU / 24-GB ≤5-hour E009
 preflight** from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
-Use the new **v5** pair under local `artifacts/e009-preparation/transfer-v5/`;
+Use the new **v5** pair under local `artifacts/e009-preparation/transfer-v5/`,
+bound to source `01837619230458e830fba7f54755c04d6c8c7604`;
 [verified v4 evidence](../experiments/E009-competitive-benchmark/linux-startup-failure-v4.json)
 shows changing NumPy/Torch bytecode/library reads in `folio_wait_bit_common`.
 NumPy finished around 60 seconds; the fixed 90-second total gate killed continuing
@@ -274,7 +275,9 @@ movement and prompt fatal-traceback cleanup. Identical trace dumps/CPU/heartbeat
 cannot reset idle time; absolute RSS/overall clocks remain. Normal site and full
 inventories/origins/freeze are mandatory; no copy, relocation, reinstall or bypass.
 Both live terminal logs remain `.log` files in transfer/ with immutable snapshots.
-Local cold-progress/idle/fatal checks are separate from unexecuted Linux validation.
+Twenty-eight local checks, actual read-only Mac inventory/freeze and the exact
+packet/bootstrap harness pass. Cold-progress/idle/fatal and trace replay checks
+are separate from unexecuted Linux validation.
 Preserve all prior packets and failed attempts; review v5 before science.
 It creates new tool prefixes, borrows accepted E001 dependencies read-only with
 complete byte/inventory/origin checks, downloads pinned small tool/model/utility

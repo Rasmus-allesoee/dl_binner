@@ -453,3 +453,12 @@ inventory adapter with eight delayed module imports, idle/fatal-descendant clean
 and absolute timeout despite progress. The unchanged native Mac numeric prefix
 passes full freeze/origin checks with identical before/after bytes: 3.715 seconds,
 0.242-GB sampled process-tree peak. Native Linux recovery remains unexecuted.
+
+The exact immutable v5 packet and documented bootstrap pass the outside-checkout
+Mac harness: two fresh attempts, intended inner/outer checksum corruption, missing
+native executable and overall timeout, with return hashes/storage snapshots and
+transfer log placement checked. All 30 packet payload hashes verify. Retained
+Linux trace replay keeps all 18 moving-file snapshots alive under the idle policy,
+then rejects an unchanged final signature; this is analysis, not native execution.
+V5 source `01837619230458e830fba7f54755c04d6c8c7604`; see [transfer receipt](transfer.json)
+for byte identities. The owner must return Linux evidence before admission.

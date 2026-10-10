@@ -1,1 +1,170 @@
-{"record":"E009","version":"v5","status":"source freeze before final packet integration","native_Linux_recovery":"unexecuted; progressing cold import needs corrected budget validation","v4_failure_receipt":"linux-startup-failure-v4.json"}
+{
+  "record": "E009",
+  "version": "v5",
+  "date": "2026-10-10",
+  "status": "prepared and locally tested cold-start timing correction; owner Linux validation pending",
+  "source_commit": "01837619230458e830fba7f54755c04d6c8c7604",
+  "archive": {
+    "path": "artifacts/e009-preparation/transfer-v5/e009-preflight-v5.tar.gz",
+    "file": {
+      "bytes": 6660645,
+      "sha256": "600a3ea2cf1172e03fbed8387b62535fc995c796d69c10980c40986f8a030422"
+    }
+  },
+  "checksum": {
+    "path": "artifacts/e009-preparation/transfer-v5/e009-preflight-v5.tar.gz.sha256",
+    "file": {
+      "bytes": 91,
+      "sha256": "3981c6c9c1a9f370f3479837cd2d444bfb07231788273e64047fa06236c2fe2f"
+    }
+  },
+  "manifest": {
+    "bytes": 4882,
+    "sha256": "51b42f0c290732ee9d8c2a17fa51b82c030dea36e35a450f51a399b0f778bc31"
+  },
+  "payload_files": 30,
+  "manifest_and_all_payload_hashes_verified": true,
+  "build_receipt": {
+    "path": "artifacts/e009-preparation/transfer-v5/transfer-receipt.json",
+    "file": {
+      "bytes": 630,
+      "sha256": "47b31269fa5278d046b364264c30f15365b9ad47377d8b63caecf4d2a30f844c"
+    }
+  },
+  "operations": "OPERATIONS.md",
+  "operations_command": {
+    "bytes": 2324,
+    "sha256": "7448717859741b8e4306966906d8c926af9e58e72da5fc69dfd565bac0a71dd8"
+  },
+  "owner_allocation": {
+    "vcpus": 8,
+    "ram_gb": 24,
+    "working_rss_bytes": 20000000000,
+    "work_seconds": 17400,
+    "overall_seconds": 18000,
+    "startup_probe_seconds": 900,
+    "startup_idle_seconds": 90
+  },
+  "previous_native_failure": "linux-startup-failure-v4.json",
+  "diagnosis": "Fixed 90-second total inventory budget killed observed forward progress through cold persistent-file reads; no filesystem repair claimed",
+  "local_checks": {
+    "unit_tests": 28,
+    "unit_log": {
+      "path": "artifacts/e009-preparation/unit-v19.log",
+      "file": {
+        "bytes": 5256,
+        "sha256": "6a2ec3f34357e8d23302d55cc3540bdf45bfa88d5c27b4fa85d9dc3392aa08ad"
+      }
+    },
+    "actual_Mac_runtime": {
+      "path": "artifacts/e009-preparation/startup-native-qa-v4/passed.json",
+      "file": {
+        "bytes": 6065,
+        "sha256": "7f35e6662927f3cd0f470e73e38dde2aeb4c42dbf3dcd1791cb013e9fbc452ed"
+      }
+    },
+    "owner_packet_harness": {
+      "path": "artifacts/e009-preparation/owner-packet-qa-v6/passed.json",
+      "file": {
+        "bytes": 23929,
+        "sha256": "138e9e2502437289bf17ac45b2b02722a8634b1931e3527f2879ec32a131ad35"
+      }
+    },
+    "harness_script": {
+      "path": "artifacts/e009-preparation/owner-packet-qa-v6.py",
+      "file": {
+        "bytes": 6865,
+        "sha256": "e462d0c1bb81cb6a6e5ede8206322a325d582ddb113013a542fa1b8b65a42c11"
+      }
+    },
+    "harness_terminal": {
+      "path": "artifacts/e009-preparation/owner-packet-qa-v6-terminal.log",
+      "file": {
+        "bytes": 401,
+        "sha256": "b22807c06c8cebdd1ca9faaa4167f01f82e2aab6f781cfe6d1ad9ab63f0879be"
+      }
+    },
+    "retained_Linux_trace_replay": {
+      "path": "artifacts/e009-preparation/v4-trace-replay.json",
+      "file": {
+        "bytes": 286,
+        "sha256": "ce71cfd137797d509d74d84badddc9bd43cf20478b388b70c47c1fcfc9863619"
+      }
+    },
+    "cases": {
+      "fresh": {
+        "status": "passed software harness contract",
+        "attempts": 2
+      },
+      "inner-corruption": {
+        "status": "passed software harness contract",
+        "attempts": 1
+      },
+      "missing-native": {
+        "status": "passed software harness contract",
+        "attempts": 1
+      },
+      "outer-checksum": {
+        "status": "intended outer checksum failure",
+        "attempts": 0
+      },
+      "overall-timeout": {
+        "status": "passed software harness contract",
+        "attempts": 1
+      }
+    },
+    "scope": "Mac actual delayed inventory/dispatcher/import/freeze and owner bootstrap/return checks; retained Linux trace replay is analysis, not a native recovery run"
+  },
+  "native_Linux_recovery_executed": false,
+  "scientific_execution_admitted": false,
+  "preserved_packets": [
+    {
+      "version": "v1",
+      "source_commit": "c2004ae096b6ccac826591e8e822079e419978a5",
+      "archive": {
+        "path": "artifacts/e009-preparation/transfer-v1/e009-preflight-v1.tar.gz",
+        "file": {
+          "bytes": 6655953,
+          "sha256": "30477f2e38f24c50688084ac3c6e433cbdd86b642ea165962b67bdd49c57503a"
+        }
+      },
+      "status": "immutable and superseded for new launch"
+    },
+    {
+      "version": "v2",
+      "source_commit": "a1ca7bc34b37d96c2a17d6c30b836fa42802601e",
+      "archive": {
+        "path": "artifacts/e009-preparation/transfer-v2/e009-preflight-v2.tar.gz",
+        "file": {
+          "bytes": 6656385,
+          "sha256": "958de5eb5159129776507bc17771a5fde8a361de9b260264afe2dc2e52801a9e"
+        }
+      },
+      "status": "immutable and superseded for new launch"
+    },
+    {
+      "version": "v3",
+      "source_commit": "a12c962a85946167bcc2441597b30fcca85b209c",
+      "archive": {
+        "path": "artifacts/e009-preparation/transfer-v3/e009-preflight-v3.tar.gz",
+        "file": {
+          "bytes": 6656591,
+          "sha256": "097d64902f5b71d79b23d1d1fd74cbc30e92b7eb9157199b8a94948c786d07a8"
+        }
+      },
+      "status": "immutable and superseded for new launch"
+    },
+    {
+      "version": "v4",
+      "source_commit": "2027436c54b6ff016a5ed4e75232f0256bc7e568",
+      "archive": {
+        "path": "artifacts/e009-preparation/transfer-v4/e009-preflight-v4.tar.gz",
+        "file": {
+          "bytes": 6659467,
+          "sha256": "b7c3491dd1455da4d1f15d2dc1de13620574fed38abccae6e5cc198fb336c8d5"
+        }
+      },
+      "status": "immutable failed Linux startup, superseded for new launch"
+    }
+  ]
+}

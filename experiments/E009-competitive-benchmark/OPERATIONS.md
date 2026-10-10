@@ -18,6 +18,7 @@ Upload the source-bound `e009-preflight-v5.tar.gz` and matching `.tar.gz.sha256`
 from the local transfer receipt; no Mac environment, large BAM or model upload.
 Exact archive/source identities are recorded in [transfer.json](transfer.json).
 The new pair belongs in local `artifacts/e009-preparation/transfer-v5/`;
+source `01837619230458e830fba7f54755c04d6c8c7604`, archive 6,660,645 bytes.
 [transfer.json](transfer.json) records its final source/checksum. Preserve the failed
 v3/v4 attempts, prior uploads and the accepted E001 runtime. Upload **v5 only**.
 Then paste this **entire block** into the Terminal:
