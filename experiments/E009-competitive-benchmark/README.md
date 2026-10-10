@@ -735,7 +735,7 @@ No accepted science repeated. [transfer.json](transfer.json) binds complete logs
 command/archive/source and explicit Linux omissions; previous packets stay intact.
 
 
-## Accepted v10 stages and two-path v12 recovery, 2026-10-10
+## Accepted v10 stages and two-path v13 recovery, 2026-10-10
 
 [Independent return review](linux-preflight-v10.json) verifies SHA256/all 340
 archive members and 338 retained hashes /39,835,306 immutable logical bytes.
@@ -765,7 +765,7 @@ Returned canonical/accession comparisons find zero exact development matches;
 this does not establish unseen-pretraining or near-genome independence. Heavy
 source bytes remain remotely receipt-bound and are not redownloaded/rehashed.
 
-V12 schedules only SCGBinner/COMEBin native contracts, reusing exact tiny ordered
+V13 schedules only SCGBinner/COMEBin native contracts, reusing exact tiny ordered
 BAMs, pinned source archives and the accepted utility prefix. The other three tools,
 assembly/mapping/truth/evaluator/source download/catalog are not scheduled. New
 uniquely named corrected prefixes and attempts preserve old outputs. Proposed
@@ -788,3 +788,10 @@ A local observer test also found a queued shutdown SIGUSR1 race; retain its fail
 log and fix the signal restoration, with active hang dumps still required.
 Final local native results and unchanged-receipt checks belong in transfer.json;
 new Linux installs/native dependencies remain pending owner evidence.
+
+The v12 local packet passed SCGBinner's actual full help, augmentation writer and
+reader, finite features, seeded initializer and HNSW limit. Its COMEBin path then
+exposed CheckM1.2.3's unsupported top-level --help (exit2); this was caught locally
+and never handed to the owner. V13 probes lineage_wf -h instead, with the complete
+owned package. The Linux retry also checks owned HMMER/Prodigal/pplacer entry
+points without a fit; those platform-specific checks remain pending locally.

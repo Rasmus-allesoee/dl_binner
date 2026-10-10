@@ -1,6 +1,6 @@
 {
   "record": "E009",
-  "version": 12,
+  "version": 13,
   "startup_probe_seconds": null,
   "startup_diagnostics": "All stages share owner-selected overall clock and existing productive-work/CPU/IO/startup guards. Native package probes prove compatibility, not directory-name isolation.",
   "recovery_from": "v10 completed all other checks; fresh independent SCGBinner and complete CheckM recipes address concrete import/content failures",

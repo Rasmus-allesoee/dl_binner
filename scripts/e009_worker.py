@@ -120,7 +120,10 @@ def tool_contract(args):
         write_json(out/'features.json',{'shapes':[list(v.shape) for v in values],'ids':list(map(str,values[-1])),
                    'model_training':'not run; max200 native schedule retained'})
     else:
-        run_native([shutil.which('checkm') or 'checkm','--help'],out/'checkm-readonly-help.log',timeout=60)
+        run_native([shutil.which('checkm') or 'checkm','lineage_wf','-h'],out/'checkm-readonly-help.log',timeout=60)
+        help_text=(out/'checkm-readonly-help.log').read_text()
+        if 'lineage_wf' not in help_text or '--pplacer_threads' not in help_text:
+            raise ValueError('Owned CheckM lineage help contract differs')
         if reused:
             write_json(out/'augmentation-api.json',comebin_native_augmentation(args.source,plan['stages'][0],args.threads))
         else:run_native(own+plan['stages'][0],out/'augmentation.log',timeout=300)

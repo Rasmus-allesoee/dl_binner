@@ -150,6 +150,16 @@ def retry(args, attempt, bundle, env, stage, deadline, limits, local=None):
             modules=['numpy','torch','pandas','scipy','sklearn'] if kind=='scgbinner' else ['numpy','scipy','matplotlib','pysam','dendropy','checkm.test.test_ecoli']
             stage([prefix/'bin/python','-I','-B',bundle/'scripts/e009_native.py','--inventory-prefix',prefix,
                    '--required-distributions',expected,'--modules',*modules],kind+'-owned-isolated-probe',toolenv)
+            if kind=='checkm':
+                # A complete CheckM package also needs working native entry points;
+                # help/version checks run no lineage placement or community fit.
+                commands=[('hmmsearch',['-h']),('prodigal',['-v']),('pplacer',['--help'])]
+                if not local:
+                    for binary,flags in commands:
+                        stage([prefix/'bin'/binary,*flags],'checkm-owned-'+binary+'-entry',toolenv)
+                write_json(attempt/'checkm-native-entry-scope.json',{'owned_prefix':str(prefix),
+                    'commands':commands,'executed':not bool(local),
+                    'scope':'Linux owned native entry points only; no placement/lineage fit. Mac validation lacks the pinned Linux pplacer package.'})
             if tool=='scgbinner':
                 python=prefix/'bin/python'
             else:
