@@ -140,7 +140,7 @@ Final suite: **59.722 s / 0.348-GB sampled peak**; known supervised QA attempts
 including failures: **335.212 s / 0.372458 four-thread wall hours**, local planning
 not UCloud charges. Initial pre-monitor failure, setup/build, review/debugging/
 idle time are outside that accounting. The suite remains within four threads,
-loader zero, 8 GB and two hours. Test failures identified monitor receipt, native
+loader zero, 8 GB and three hours. Test failures identified monitor receipt, native
 error presentation and unreaped-process cleanup defects; all are retained/repaired.
 Disk exhaustion stopped v5 setup. Final v7 is a fresh lexical package prefix with
 explicit byte-verified numerical/build dependencies reused read-only from v4;
@@ -190,7 +190,7 @@ software evidence only. [Standalone install](INSTALLATION.md) and
 
 Known serial integration clocks including two repaired packaging failures and
 artifact preflight total **712.558 s / 0.742910 local thread-budget wall hours**,
-under four threads/loader zero/8 GB/two hours. Successful full setup/check attempt
+under four threads/loader zero/8 GB/three hours. Successful full setup/check attempt
 331.511 s; sampled stage peak **0.561 GB**. E007 retains 2.765 GB including all
 failed/new prefixes and evidence, plus a 1.465-MB physical outside test copy.
 Resource sampling is approximate; source preparation/acquisition/review/idle
@@ -224,7 +224,7 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**E009 v10 accepts all other stages/three tool contracts; v13 retries only SCGBinner and COMEBin.**
+**E009 v10 accepts all other stages/three tool contracts; v14 retries only SCGBinner and COMEBin.**
 [D013](decisions/D013-first-comparative-benchmark.md),
 [the targeted evidence](evidence/2026-10-09-e009-contract-reconciliation.md) and
 [E009](../experiments/E009-competitive-benchmark/README.md) retain subject S1:
@@ -255,8 +255,8 @@ Real COMEBin native writers expose resolved-basename IDs; adapters verify their
 relation to ordered original BAM paths rather than guessing from aliases. Local
 checks and failures are separately retained; they do not establish full Linux
 imports/training or large-community affordability. Mac four-thread MEGAHIT crashes
-remain unresolved; the local writer check is explicitly one thread, and the Linux
-preflight must pass eight threads. No accepted science was repeated.
+remain unresolved; the local writer check is explicitly one thread; v10 independently passes
+eight-thread native Linux assembly. No accepted science was repeated.
 
 **E009 v10 completed; two native tool contracts failed.**
 [Independent review](../experiments/E009-competitive-benchmark/linux-preflight-v10.json)
@@ -271,21 +271,23 @@ with near/pretraining independence not established. Preserve all accepted eviden
 
 SCGBinner's shared sklearn1.9.0 lacks stable_cumsum; COMEBin's own help passed,
 CheckM imports a pruned checkm.test module. **Exact next step:** owner runs the
-**v13 two-path retry, 8 vCPU/24 GB, two-hour allocation**, from
+**v14 two-path retry, 8 vCPU/24 GB, three-hour allocation**, from
 [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md). Upload pair
-under `artifacts/e009-preparation/transfer-v13-final/`; [transfer.json](../experiments/E009-competitive-benchmark/transfer.json)
+under `artifacts/e009-preparation/transfer-v14-final/`; [transfer.json](../experiments/E009-competitive-benchmark/transfer.json)
 binds final source/command/packet/tests. Install independently owned compatible
 SCGBinner and complete CheckM Conda stacks; retain COMEBin's accepted numerical
 recipe and use separate CheckM interpreter/libraries. [D006](decisions/D006-environment-ownership.md)
 records the concrete failures triggering this scoped ownership amendment.
-The first local mixed Conda/pip recipe failed and is retained; v13 replaces it
+The first local mixed Conda/pip recipe failed and is retained; v14 replaces it
 with all-Conda CPU Torch and reuses accepted Linux COMEBin help while checking
 the unchanged native augmentation API. A second local packet passed SCGBinner
-but exposed CheckM's unsupported global --help; v13 uses actual lineage_wf -h
+but exposed CheckM's unsupported global --help; v14 uses actual lineage_wf -h
 and checks owned Linux native entry points without fitting. Only the two failed native contracts execute; retained tiny BAMs, acquired sources
 and utility prefix are reused. Passed tools, source download/catalog and all
 assembler/mapping/evaluator checks stay accepted, unscheduled. Original E001,
-v8 snapshot/151 chunks, old attempts/packets/data/prefixes remain untouched. Linux
+v8 snapshot/151 chunks, old attempts/packets/data/prefixes remain untouched. The final three-hour clock and10-GB Home floor follow actual Linux package
+inventories (94,327 cache/prefix payload paths; old copy-rate comparison~105min
+before overhead), rather than the much faster Mac run. Linux
 corrected-runtime compatibility and native contracts remain unverified until return.
 No scientific design/defaults/results change and no full fit/score is admitted.
 

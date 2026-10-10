@@ -284,7 +284,7 @@ def execute(args,attempt,started):
         os.sched_setaffinity(0,cpus[:8])
     elif args.allocated_vcpus>4 or args.allocated_ram_gb>8:
         raise ValueError('Local harness is bounded at four CPU threads / 8 GB working RAM')
-    deadline=started+(args.local_seconds or args.work_seconds or (6600 if args.failed_native_only else limits['work_seconds_ceiling']))
+    deadline=started+(args.local_seconds or args.work_seconds or (10200 if args.failed_native_only else limits['work_seconds_ceiling']))
     limits.update(startup_probe_seconds=deadline-started,startup_idle_seconds=args.stall_seconds,native_activity=True)
     env=sup.isolated_env(args.allocated_vcpus)
     for key in ('CONDA_PREFIX','CONDA_DEFAULT_ENV','CONDA_PROMPT_MODIFIER','CONDA_PYTHON_EXE','PERL5LIB','PERL_LOCAL_LIB_ROOT','PERL_MB_OPT','PERL_MM_OPT'):
@@ -494,7 +494,7 @@ def main():
     args.root.mkdir(parents=True,exist_ok=True);transfer=args.root/'transfer';transfer.mkdir(exist_ok=True)
     attempt=Path(tempfile.mkdtemp(prefix='native-preflight-',dir=args.root));started=time.monotonic()-max(0,time.time()-(args.entry_start_epoch or time.time()))
     status={'status':'failed','verification_passed':False};code=1;original=sys.stdout,sys.stderr
-    work_seconds=args.local_seconds or args.work_seconds or (5400 if args.runtime_recovery_only else 6600 if args.failed_native_only else 17400)
+    work_seconds=args.local_seconds or args.work_seconds or (5400 if args.runtime_recovery_only else 10200 if args.failed_native_only else 17400)
     overall_seconds=work_seconds+(120 if args.runtime_recovery_only else 600)
     def alarm(signum,frame):raise TimeoutError('Overall E009 preflight ceiling reached')
     old_handlers={s:signal.getsignal(s) for s in (signal.SIGALRM,signal.SIGINT,signal.SIGTERM)}

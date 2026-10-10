@@ -1,6 +1,6 @@
 {
   "record": "E009",
-  "version": 13,
+  "version": 14,
   "startup_probe_seconds": null,
   "startup_diagnostics": "All stages share owner-selected overall clock and existing productive-work/CPU/IO/startup guards. Native package probes prove compatibility, not directory-name isolation.",
   "recovery_from": "v10 completed all other checks; fresh independent SCGBinner and complete CheckM recipes address concrete import/content failures",
@@ -8,11 +8,11 @@
   "allocated_vcpus": 8,
   "allocated_ram_gb": 24,
   "working_rss_bytes": 20000000000,
-  "work_seconds_ceiling": 6600,
+  "work_seconds_ceiling": 10200,
   "collection_reserve_seconds": 600,
-  "overall_seconds_ceiling": 7200,
-  "allocated_core_hours_ceiling": 16,
-  "home_free_bytes_min": 8000000000,
+  "overall_seconds_ceiling": 10800,
+  "allocated_core_hours_ceiling": 24,
+  "home_free_bytes_min": 10000000000,
   "shared_free_bytes_min": 30000000000,
   "utility_conda_specs": [
     "python=3.12.10",

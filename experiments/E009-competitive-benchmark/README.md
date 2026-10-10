@@ -23,7 +23,7 @@ Run one seed-11 target-specific fit with its matched raw control for each of:
 - TNF alone: matched secondary pair, isolating the value of added depth within
   our product. Absent depth is not fabricated zeros. These are diagnostic controls,
   not product alternatives or a gate on learning/depth. Their cost is reported
-  separately and capped at 16 allocated core-hours within the 48-core-hour product budget.
+  separately and capped at 24 allocated core-hours within the 48-core-hour product budget.
 
 All four partitions retain the same complete input DNA, exclusions/masks and
 unassigned outcomes. Raw versus learned isolates the learning pipeline under
@@ -735,7 +735,7 @@ No accepted science repeated. [transfer.json](transfer.json) binds complete logs
 command/archive/source and explicit Linux omissions; previous packets stay intact.
 
 
-## Accepted v10 stages and two-path v13 recovery, 2026-10-10
+## Accepted v10 stages and two-path v14 recovery, 2026-10-10
 
 [Independent return review](linux-preflight-v10.json) verifies SHA256/all 340
 archive members and 338 retained hashes /39,835,306 immutable logical bytes.
@@ -765,11 +765,11 @@ Returned canonical/accession comparisons find zero exact development matches;
 this does not establish unseen-pretraining or near-genome independence. Heavy
 source bytes remain remotely receipt-bound and are not redownloaded/rehashed.
 
-V13 schedules only SCGBinner/COMEBin native contracts, reusing exact tiny ordered
+V14 schedules only SCGBinner/COMEBin native contracts, reusing exact tiny ordered
 BAMs, pinned source archives and the accepted utility prefix. The other three tools,
 assembly/mapping/truth/evaluator/source download/catalog are not scheduled. New
 uniquely named corrected prefixes and attempts preserve old outputs. Proposed
-8-vCPU/24-GB two-hour allocation, 6,600 seconds work +600 collection, sampled
+8-vCPU/24-GB three-hour allocation, 10,200 seconds work +600 collection, sampled
 20-GB RSS, no lower stage caps; cold Linux timing remains unknown. Local tests
 and transfer identities belong to [transfer.json](transfer.json); exact owner
 command and Linux limitations belong to [Operations](OPERATIONS.md).
@@ -792,6 +792,17 @@ new Linux installs/native dependencies remain pending owner evidence.
 The v12 local packet passed SCGBinner's actual full help, augmentation writer and
 reader, finite features, seeded initializer and HNSW limit. Its COMEBin path then
 exposed CheckM1.2.3's unsupported top-level --help (exit2); this was caught locally
-and never handed to the owner. V13 probes lineage_wf -h instead, with the complete
+and never handed to the owner. V14 probes lineage_wf -h instead, with the complete
 owned package. The Linux retry also checks owned HMMER/Prodigal/pplacer entry
 points without a fit; those platform-specific checks remain pending locally.
+
+The v13 exact packet/owner command passed both corrected native contracts locally
+(137.380 s through collection, outer harness157.293 s /642.630 MB sampled peak;
+Mac platform/install substitutions remain explicit). Preserve that positive packet.
+Final v14 increases only the cold-install allocation to three hours and free Home
+floor to10 GB after inspecting actual Linux payloads: 94,327 cache/prefix payload
+paths, 497.171 MB deduplicated download and >=7.45 GB cache/prefix/compressed bytes.
+The old filesystem copy-rate comparison alone is ~105 min, with Conda throughput
+unmeasured. [linux-package-inventory-v14.json](linux-package-inventory-v14.json)
+owns that provisioning evidence; there is no new stage timeout or native/scientific
+algorithm change. Final packet/harness provenance belongs in transfer.json.

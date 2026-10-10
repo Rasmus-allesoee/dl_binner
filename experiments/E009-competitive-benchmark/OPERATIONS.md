@@ -9,8 +9,8 @@ E001 environments and all 151 accepted v8 chunks.
 ## Next owner job
 
 Use **8-vCPU /24-GB CPU/Linux x86-64 Terminal**, glibc>=2.28, no competing work.
-Choose **two hours**. V13 selects **6,600 seconds total work +600 collection**,
-20-GB sampled working RSS and eight-CPU affinity. At most **16 allocated core-hours**;
+Choose **three hours**. V14 selects **10,200 seconds total work +600 collection**,
+20-GB sampled working RSS and eight-CPU affinity. At most **24 allocated core-hours**;
 this is a conservative cold-install ceiling, not an expected runtime. Acquisitions
 are network-bound; native tools execute serially with phase budgets including
 N-1 pools/coordinator and loader zero. Existing 300-second no-progress/startup/
@@ -22,7 +22,7 @@ only for COMEBin's unchanged dependency recipe, with zero original recopy. Insta
 **new independent complete SCGBinner and CheckM Conda prefixes** from exact locked
 payloads, offline/no solver, including CPU Torch for SCGBinner.
 Approximately **577.1 MB** compressed dependency payloads before cache deduplication;
-allow >=8 GB free Home plus ~2.2 GB temporary restore space. CheckM alone calls
+allow >=10 GB free Home plus ~2.2 GB temporary restore space. CheckM alone calls
 its own interpreter/library/native-binary stack; frozen E001 marker data remains read-only.
 No new environment snapshot, pruning, blanket prefix hashes or old-prefix install.
 
@@ -35,8 +35,8 @@ A combined failed status is not admission for science.
 
 ## Upload and one grouped command
 
-Upload `e009-preflight-v13.tar.gz` and its matching `.tar.gz.sha256` from
-`artifacts/e009-preparation/transfer-v13-final/` to
+Upload `e009-preflight-v14.tar.gz` and its matching `.tar.gz.sha256` from
+`artifacts/e009-preparation/transfer-v14-final/` to
 `/work/Home/dl_binner/e009/transfer/`. [transfer.json](transfer.json) binds final
 source, exact packet/command and local checks. Old packets remain unchanged.
 
@@ -58,7 +58,7 @@ python3 -I -B -S - "$transfer" <<'PY'
 import hashlib, os, pathlib, shutil, sys, tarfile, tempfile, time
 started=time.time()
 transfer=pathlib.Path(sys.argv[1])
-archive=transfer/'e009-preflight-v13.tar.gz'
+archive=transfer/'e009-preflight-v14.tar.gz'
 fields=(transfer/(archive.name+'.sha256')).read_text().split()
 if len(fields)!=2 or fields[1]!=archive.name or len(fields[0])!=64:
     raise ValueError('Upload the exact archive and matching printed checksum')
@@ -72,13 +72,13 @@ with tarfile.open(archive) as tar:
     if sum(m.size for m in members)>20_000_000:raise ValueError('Unexpected packet expansion')
     for member in members:
         path=pathlib.PurePosixPath(member.name)
-        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v13' or member.name in names:
+        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v14' or member.name in names:
             raise ValueError('Unsafe or duplicate packet member')
         names.add(member.name)
     for member in members:
         target=launch/member.name;target.parent.mkdir(parents=True,exist_ok=True)
         with tar.extractfile(member) as src,target.open('xb') as out:shutil.copyfileobj(src,out)
-packet=launch/'e009-preflight-v13'
+packet=launch/'e009-preflight-v14'
 env=os.environ.copy()
 for key in ('PYTHONPATH','PYTHONHOME','PYTHONUSERBASE'):env.pop(key,None)
 env.update(PYTHONNOUSERSITE='1',PYTHONUNBUFFERED='1')
@@ -86,7 +86,7 @@ argv=[sys.executable,'-I','-B',str(packet/'scripts/e009_owner.py'),
       '--root','/work/Home/dl_binner/e009',
       '--shared-root','/work/RasmusAllesøeNielsen#2936/dl_binner/e009',
       '--allocated-vcpus','8','--allocated-ram-gb','24',
-      '--failed-native-only','--work-seconds','6600','--stall-seconds','300',
+      '--failed-native-only','--work-seconds','10200','--stall-seconds','300',
       '--entry-start-epoch',str(started)]
 os.execve(sys.executable,argv,env)
 PY
@@ -122,7 +122,7 @@ full fits, new seeds, architecture comparison or UCloud execution by Codex.
 The first proposed local v11 packet was rejected before owner transfer: a mixed
 Conda/pip Torch2.0 stack crashed at CPU thread setup, and the older Mac COMEBin
 runtime lacks modern training AMP imports. Preserve that packet, its failed local
-attempt and prefixes. V13 uses one all-Conda CPU SCGBinner stack (four-thread
+attempt and prefixes. V14 uses one all-Conda CPU SCGBinner stack (four-thread
 setup passes locally) and reuses already accepted Linux full-help evidence while
 checking the unchanged native feature API. A local probe-observer shutdown race
 also reproduced: a late SIGUSR1 could kill a finished interpreter. Restoring an
@@ -131,8 +131,25 @@ without suppressing active stack dumps or relaxing failure/resource guards.
 
 The second local packet (v12) passed the complete SCGBinner contract but rejected
 CheckM's top-level `--help`: its actual 1.2.3 parser disables global help and has
-an upstream list/string comparison bug. V13 uses `lineage_wf -h`, exercising the
+an upstream list/string comparison bug. V14 uses `lineage_wf -h`, exercising the
 relevant native command's parser without a fit. The complete CheckM wrapper passes
 locally with this invocation. Linux additionally checks its own HMMER, Prodigal
 and pplacer entry points; Mac lacks the pinned Linux pplacer and grants no credit
 for those Linux checks or lineage placement. Preserve the v12 packet/failed return.
+
+### Final cold-install allowance
+
+[Actual Linux/noarch payload inventories](linux-package-inventory-v14.json) were
+hash-verified locally: 36,207 SCGBinner +16,866 CheckM paths, and 41,254 paths in
+151 shared-cache packages. Cache extraction plus the two copied prefixes means
+**94,327 payload path materializations**, excluding metadata/directories/generated
+bytecode. Deduplicated download is **497,171,498 bytes**; the two-lock sum is
+577,118,190. Cache, both prefixes and two compressed copies require at least
+7.45 GB before overhead: provision >=10 GB free Home plus ~2.2 GB temporary restore.
+At the old observed 17,989 copies/1,200 seconds, just the payload path comparison
+is ~105 minutes. This is not Conda throughput evidence, but it makes the initial
+two-hour proposal too tight. Final owner allocation is **three hours /24 core-hour
+maximum**, 10,200 seconds shared work +600 collection, with no shorter stage caps.
+New Linux install throughput is still unknown; end the allocation after return.
+The passed local v13 packet remains immutable; v14 changes only operational clock/
+space defaults and packaging version, with the scientific/native adapters unchanged.

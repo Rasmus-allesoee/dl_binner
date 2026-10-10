@@ -297,7 +297,7 @@ Local integration rejected the first mixed Conda/pip SCGBinner Torch2.0 recipe:
 CPU thread setup crashed despite successful imports. The all-Conda CPU Torch2.0
 build104 stack passes four-thread setup locally. Preserve the rejected v11 packet,
 failed logs/prefixes and source a6e88c3; do not extrapolate its Mac crash to Linux.
-Use the coherent all-Conda recipe in v13. COMEBin's already accepted full Linux
+Use the coherent all-Conda recipe in v14. COMEBin's already accepted full Linux
 help is reused; its unchanged feature API and real parser/defaults execute without
 training-only AMP imports on the older Mac validation stack. This limits the
 local contract to native features, not training or Linux CheckM/pplacer execution.
@@ -305,6 +305,6 @@ local contract to native features, not training or Linux CheckM/pplacer executio
 The next local packet (v12) passed SCGBinner's full feature/initializer/HNSW
 contract, then exposed CheckM1.2.3's unsupported top-level --help. Use the actual
 lineage_wf -h parser (passes on the complete local package), retaining that failed
-attempt. V13 also verifies its owned Linux HMMER/Prodigal/pplacer entry points;
+attempt. V14 also verifies its owned Linux HMMER/Prodigal/pplacer entry points;
 Mac has no pinned pplacer build, so Linux checks and lineage placement receive no
 local acceptance. No native implementation/algorithm is patched for this CLI fix.

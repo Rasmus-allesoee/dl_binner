@@ -2418,12 +2418,12 @@
     }
   },
   "recipe_interpretation": "SCGBinner README requests Python3.9/NumPy1.19/pandas1.4 together with sklearn>=1.6 and Torch2.0.0. Use named CPU compatibility recipe Python3.10.15/NumPy1.26.4/pandas1.5.3/sklearn1.6.1 and all-Conda CPU Torch2.0.0, retaining the accepted int-dtype source repair; no new source/algorithm patch. Its package metadata lists only numpy/pandas, so not a sufficient complete installation recipe. CheckM complete Bioconda1.2.3 package follows COMEBin requirement and owns all dependencies, with setuptools80.9.0 for pkg_resources.",
-  "work_seconds": 6600,
+  "work_seconds": 10200,
   "collection_reserve_seconds": 600,
   "allocated_vcpus": 8,
   "allocated_ram_gb": 24,
   "working_rss_bytes": 20000000000,
-  "limit_rationale": "At most two hours/16 allocated core-hours for locked all-Conda payload acquisition/offline installation and two tiny native contracts. No lower stage wall caps; productive progress/CPU/IO is monitored against the owner-selected clock. Cold independent-prefix timing remains unmeasured on UCloud.",
+  "limit_rationale": "94327 cache+prefix payload paths project to about105min at the observed old copy rate, before setup/verification overhead. Choose three hours including ten-minute collection reserve, without shorter productive-stage caps. Actual Conda install throughput remains unverified.",
   "source_evidence": {
     "SCGBinner_source_commit": "d5ad239af9a1445f0e454c4d4aa9307b922961a9",
     "SCGBinner_requirements": "pinned README source-install block and pyproject dependencies; native cluster.py line16",

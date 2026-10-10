@@ -115,7 +115,7 @@ def retry(args, attempt, bundle, env, stage, deadline, limits, local=None):
              for t in review['accepted_tools']}
     prefixes={}
     if not local:
-        if shutil.disk_usage(args.root).free<8_000_000_000:raise ValueError('Need >=8 GB free Home for the two owned runtimes/cache/evidence')
+        if shutil.disk_usage(args.root).free<10_000_000_000:raise ValueError('Need >=10 GB free Home for the two owned runtimes/cache/evidence')
         bootstrap=attempt/'bootstrap';extract(bundle/'payload/micromamba-linux.tar.bz2',bootstrap)
         mamba=bootstrap/'bin/micromamba'
     for tool in ['scgbinner','comebin']:
