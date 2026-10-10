@@ -65,9 +65,11 @@ class E009Contracts(unittest.TestCase):
         for i in range(300):self.put(f'prefix/lib/module-{i:04}.py',f'value={i}\n')
         before=tree_binding(self.p/'prefix');state=self.p/'state'
         first=materialize(self.p/'prefix',self.p/'first',state,self.p/'selection.json')
+        receipt_before=(state/'snapshot.json').read_bytes()
         self.assertEqual(first['source_copied_entries'],300);self.assertEqual(len(first['shards']),3)
         second=materialize(self.p/'prefix',self.p/'second',state,self.p/'selection2.json')
         self.assertEqual(second['source_copied_entries'],0);self.assertEqual(second['restored_entries'],300)
+        self.assertEqual((state/'snapshot.json').read_bytes(),receipt_before)
         self.assertEqual(tree_binding(self.p/'prefix'),before)
         archive=state/first['shards'][0]['archive']['name']
         with archive.open('r+b') as f:f.seek(-1,2);f.write(b'X')
@@ -113,6 +115,33 @@ class E009Contracts(unittest.TestCase):
                 with self.assertRaisesRegex(RuntimeError,'no completed byte/entry progress'):
                     supervise_work(sup,[sys.executable,'-I','-B',worker],log,8,1_000_000_000,sup.isolated_env(1),idle_seconds=1.25)
                 record=json.loads(log.with_suffix('.exit.json').read_text());self.assert_stopped(record['launched_pid'])
+
+    @unittest.skipIf(os.geteuid()==0,'Permission failure needs an ordinary user')
+    def test_actual_chunk_reader_error_stops_and_preserves_previously_sealed_work(self):
+        for i in range(512):self.put(f'prefix/lib/module-{i:04}.py',f'value={i}\n')
+        (self.p/'prefix/lib/module-0300.py').chmod(0)
+        state=self.p/'state';log=self.p/'chunk-reader-error.log';sup=supervisor()
+        with self.assertRaisesRegex(RuntimeError,'PermissionError'):
+            sup.supervise([sys.executable,'-I','-B',ROOT/'scripts/e009_materialize.py',
+                '--source',self.p/'prefix','--destination',self.p/'partial','--state',state,
+                '--summary',self.p/'selection.json'],log,8,1_000_000_000,sup.isolated_env(1))
+        record=json.loads(log.with_suffix('.exit.json').read_text())
+        self.assertEqual(record['exit_code'],1);self.assertIsNone(record['stop_reason'])
+        self.assertIn('module-0300.py',log.read_text());self.assert_stopped(record['launched_pid'])
+        self.assertEqual(len(list(state.glob('chunk-*.json'))),2)
+        self.assertFalse((state/'snapshot.json').exists())
+
+    def test_concurrent_chunk_writer_refuses_without_changing_seals(self):
+        import fcntl
+        self.put('prefix/lib/module.py','value=1');state=self.p/'state';state.mkdir()
+        log=self.p/'concurrent.log';sup=supervisor()
+        with (state/'writer.lock').open('a') as lock:
+            fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+            with self.assertRaisesRegex(RuntimeError,'BlockingIOError'):
+                sup.supervise([sys.executable,'-I','-B',ROOT/'scripts/e009_materialize.py',
+                    '--source',self.p/'prefix','--destination',self.p/'local','--state',state,
+                    '--summary',self.p/'selection.json'],log,5,1_000_000_000,sup.isolated_env(1))
+        self.assertFalse((state/'plan.json').exists());self.assertFalse((self.p/'local').exists())
 
     def test_snapshot_real_bytes_internal_links_reuse_and_corruption(self):
         source=self.p/'prefix';self.put('prefix/lib/module.py','value=42\n')

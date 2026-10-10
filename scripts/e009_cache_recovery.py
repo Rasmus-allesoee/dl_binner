@@ -91,12 +91,13 @@ def recover(args,attempt,started,bundle,sup):
          '--destination',local_prefix,'--state',state,'--summary',attempt/'selection-observed.json'],
         'snapshot-materialize')
     snapshot=json.loads(receipt.read_text())
+    operation=json.loads((attempt/'selection-observed.json').read_text())
     if snapshot['source_prefix']!=str(prefix.absolute()):raise ValueError('Snapshot belongs to a different original prefix')
     write_json(attempt/'snapshot-bound.json',{'receipt':str(receipt),'receipt_file':__import__('e009_common').binding(receipt),
         'state':str(state),'shards':snapshot['shards'],
         'retained_archive_bytes':sum(x['archive']['bytes'] for x in snapshot['shards']),
         'logical_bytes':snapshot['logical_bytes'],'files':len(snapshot['files']),
-        'source_copied_entries':snapshot['source_copied_entries'],'restored_entries':snapshot['restored_entries'],
+        'source_copied_entries':operation['source_copied_entries'],'restored_entries':operation['restored_entries'],
         'source_prefix':snapshot['source_prefix'],'local_prefix':str(local_prefix),
         'excluded':snapshot['excluded'],'scientific_execution_admitted':False})
     prefix=local_prefix;python=prefix/'bin/python'

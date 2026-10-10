@@ -219,14 +219,18 @@ def materialize(source, destination, state, summary, readers=8, progress=None):
         else:
             if list(state.glob('chunk-*.json')):raise ValueError('Chunk receipts without a source plan')
             atomic_json(plan_path,current)
+        batches=list(groups(current['files']))
+        missing=[names for i,names in enumerate(batches) if not (state/f'chunk-{i:05}.json').exists()]
+        missing_entries=sum(len(x) for x in missing)
         brief={k:v for k,v in current.items() if k not in ('files','omitted')}
         brief.update(plan_sha256=anchor,state=str(state),
             measured_v7_entries_per_second=17989/1200.067715,
             rough_copy_seconds_at_v7_rate=current['selected_entries']/(17989/1200.067715),
+            candidate_sealed_entries=current['selected_entries']-missing_entries,
+            missing_entries=missing_entries,
+            rough_remaining_copy_seconds_at_v7_rate=missing_entries/(17989/1200.067715),
             forecast_scope='rough entry-count projection only; large-file throughput, exclusions and chunk persistence change costs')
         atomic_json(summary,brief);print('DLBINNER SNAPSHOT_PLAN_JSON='+json.dumps(brief),flush=True)
-        batches=list(groups(current['files']))
-        missing=[names for i,names in enumerate(batches) if not (state/f'chunk-{i:05}.json').exists()]
         missing_bytes=sum(current['files'][n].get('bytes',0) for names in missing for n in names)
         # Restore needs local space for the complete runtime; persistent storage
         # needs only missing chunks, tar headers and new manifests, not a second
@@ -262,12 +266,17 @@ def materialize(source, destination, state, summary, readers=8, progress=None):
         manifest=dict(format='e009-runtime-chunks-v8',source_prefix=str(source),plan_sha256=anchor,
             state=str(state),files=dict(sorted(all_files.items())),shards=shards,
             logical_bytes=current['logical_bytes'],excluded=current['omitted_counts'],
-            source_copied_entries=copied,restored_entries=restored,scientific_execution_admitted=False)
+            scientific_execution_admitted=False)
         verify(destination,manifest,progress=lambda n:progress.advance('verify local bytes',n))
-        atomic_json(state/'snapshot.json',manifest)
+        final=state/'snapshot.json'
+        if final.exists():
+            if json.loads(final.read_text())!=manifest:raise ValueError('Existing final snapshot receipt changed')
+        else:atomic_json(final,manifest)
+        brief.update(source_copied_entries=copied,restored_entries=restored,sealed_chunks=len(shards),complete=True)
+        atomic_json(summary,brief)
         print('DLBINNER SNAPSHOT_READY_JSON='+json.dumps(dict(receipt=str(state/'snapshot.json'),
               copied=copied,restored=restored,chunks=len(shards))),flush=True)
-        return manifest
+        return dict(manifest,source_copied_entries=copied,restored_entries=restored)
 
 
 if __name__=='__main__':
