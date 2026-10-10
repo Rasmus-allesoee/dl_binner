@@ -672,3 +672,25 @@ CompleteBin max-50, operational SCGBinner dtype and scientific defaults stay fro
 Native assembly/mapping/evaluator and native five-tool feature/checkpoint contracts,
 source-acquisition overlap, utility identity/health and full-scale affordability
 remain unresolved until returned evidence. See [Operations](OPERATIONS.md).
+
+
+Final v9 source `d57536746e47d2b3e82d5190ef90d0ae4c3308cc`, 6,698,794-byte
+packet under `artifacts/e009-preparation/transfer-v9-reviewed/`. Forty-six checks
+pass (45-suite plus actual local HTTP acquisition). The final exact packet/Bash/
+driver outside checkout restores 9,509 retained Mac entries /75 chunks /zero
+original source copies, creates its own venv/full inventory/origin probe and
+executes tiny real native mapping/assembly/depth/competitive truth contracts.
+Final driver 63.622 s, outer sampled peak 158,851,072 bytes. Persistent state is
+unchanged. This is not native Linux throughput or eight-thread assembly evidence.
+
+Earlier source `ff213c0` passed two identical consumer launches (65.723 /55.270 s,
+<=319,401,984-byte sampled peak), actual own-wheel install/wrapper, post-install
+numerical hash checks and retained failure/return contracts. Only acquisition
+byte reports and their activity consumer changed in the final packet; all owner,
+materializer, native and input bytes are identical. The new actual HTTP transfer
+and advancing/repeated counter tests cover those changes; repeated driver/native
+checks were limited to the changed final packet. The harness JSON-trailer parsing
+error was corrected from retained successful stages. Initial sandbox ps failures
+have no validation credit. Full logs/scopes/hashes are in [transfer.json](transfer.json).
+Linux utility/tool/AMBER paths were not mocked and called passed; they remain
+pending in the owner v9 preflight. No accepted science was repeated.

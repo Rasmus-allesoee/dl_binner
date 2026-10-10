@@ -32,7 +32,8 @@ scientific input until its new SHA/source overlap is reviewed. No reads download
 All Python inventories, install/import/feature workers and nested native commands
 use the remaining overall clock, **without shorter stage wall caps**. Restore/
 hashing watches advancing completed bytes/entries. Other native workers use a
-300-second no-activity guard based on launched-tree CPU and physical I/O; quiet
+300-second no-activity guard based on launched-tree CPU/physical I/O plus actual
+acquired-byte reports; quiet
 compute is activity, parent heartbeats are not. Import probes retain phase/stack/
 file observations. Five-minute stalls preserve causes/waits and stop the owned
 process group; the guard has local failure tests, not measured full native timings.
@@ -43,9 +44,11 @@ value, but an extension requires consistent Terminal time plus collection reserv
 ## Upload and exact command
 
 Upload only `e009-preflight-v9.tar.gz` and matching `.tar.gz.sha256` from
-`artifacts/e009-preparation/transfer-v9-final/` to
+`artifacts/e009-preparation/transfer-v9-reviewed/` to
 `/work/Home/dl_binner/e009/transfer/`. [transfer.json](transfer.json) binds the final
-packet/source, command and tests. Old v1-v8 uploads remain preserved and superseded
+packet/source, command and tests. Final source `d57536746e47d2b3e82d5190ef90d0ae4c3308cc`,
+6,698,794 archive bytes, SHA256
+`17faebceab9a7324c0930ade40d0cfb0c5027fd1a7c2fd5a64f79caa1d3b0f4b`. Old v1-v8 uploads remain preserved and superseded
 for this next native preflight. Paste the entire locally tested block:
 
 ```bash
@@ -160,3 +163,24 @@ community quality, assembly-scale affordability or near-genome independence.
 After the return, accept successful stages and inspect failures before preparing
 the bulk assembly/depth/truth step. Resolve the documented two-sample scope before
 that scientific job. No UCloud execution by Codex, fits/scores or architectures.
+
+
+Local final validation: 46 checks pass (45-suite plus one actual HTTP contract) with actual process inspection. The
+exact final packet/Bash/driver outside checkout uses retained real Mac chunks,
+restores 9,509 entries with zero source copies in two distinct jobs, creates its
+own venv/full distribution/origin probe and passes actual tiny native contracts
+(65.723 and 55.270 seconds before collection; <=0.320-GB outer sampled peak).
+An actual own-wheel install and lexical wrapper leave the restored runtime's
+accepted bytes intact; a final read-only restore preserves the persistent state.
+Corruption/missing-record/overall-stop causes and return inventories pass.
+The harness's trailer JSON parsing error was corrected from retained successful
+stages; no driver/native stages were rerun for it. Mac identity/assembly overrides,
+Linux omissions and all logs are explicit in [transfer.json](transfer.json).
+
+Final owner source/packet also passes an exact new launch outside checkout, restoring
+9,509 entries /zero source copies, with new venv/full inventory and actual tiny
+native contracts. Only acquisition progress and its activity consumer differ from
+the earlier tested packet; all owner/materializer/native consumer bytes are equal.
+Actual HTTP transfer verifies the reporter/hash contract; progressing/repeated
+reports and cleanup are tested. Earlier wheel/wrapper/failure evidence remains
+valid for unchanged consumers. No full Linux utility/tool run is claimed.

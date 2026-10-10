@@ -258,7 +258,7 @@ imports/training or large-community affordability. Mac four-thread MEGAHIT crash
 remain unresolved; the local writer check is explicitly one thread, and the Linux
 preflight must pass eight threads. No accepted science was repeated.
 
-**V8 numerical runtime recovery is accepted; prepare/test the v9 native preflight.**
+**V8 numerical runtime recovery is accepted; v9 native preflight is tested/prepared.**
 [Independent return review](../experiments/E009-competitive-benchmark/linux-runtime-recovery-v8.json)
 verifies 24 archive members/22 hashes, full Python 3.13.14 /86-distribution inventory,
 ten imports, job-local stdlib/mapped libraries and NumPy/Torch arithmetic.
@@ -268,9 +268,15 @@ at actual declared 1 vCPU /4 GB; /proc affinity 0, sampled peak 0.461 GB. No fit
 score. After-collection/idle/billed cost is not known from the uploaded files.
 Native resume was not executed; bulk chunks were retained remotely, not uploaded.
 
-**Exact next step:** locally test and bind the **v9 8-vCPU /24-GB native preflight**
-from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md), then
-owner runs it. Restore-only consumption binds the accepted v8 receipt/seals and
+**Exact next step:** owner runs the tested **v9 8-vCPU /24-GB native preflight**
+from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
+Upload pair: `artifacts/e009-preparation/transfer-v9-reviewed/`, source `d57536746e47d2b3e82d5190ef90d0ae4c3308cc`.
+Forty-six checks (45-suite plus actual HTTP transfer) and exact packet/Bash/driver on retained real Mac chunks
+pass: the final packet restores 9,509 entries /zero source copies in 63.622 s;
+actual venv/inventory and tiny native contracts run. Earlier byte-identical consumer
+checks retain own-wheel/wrapper and failure evidence. Persistent state and
+restored numerical bytes remain unchanged. Local limits/omissions/retained failures
+are explicit in the [transfer receipt](../experiments/E009-competitive-benchmark/transfer.json). Restore-only consumption binds the accepted v8 receipt/seals and
 never recopies or enumerates the original numerical prefix. Per-tool v2 execution
 venvs explicitly borrow this job-local runtime; retained paths need fresh bindings
 following job reset. CheckM console source is separately byte-bound; original
