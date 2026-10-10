@@ -1,160 +1,177 @@
 {
   "record": "E009",
-  "version": "v10",
+  "version": "v14",
   "date": "2026-10-10",
-  "status": "v8 accepted; v9 restore/AMBER target observed then owner cancelled; v10 scoped-verification retry locally tested, Linux continuation pending",
-  "source_commit": "5a780e411f0b4c1b78409db7270338b45ac80039",
+  "status": "exact packet and grouped command passed local native contracts; Linux two-path retry prepared, not executed",
+  "source_commit": "9c86c276a0d45f124c7cdcaed7f2cb387ebbca62",
   "archive": {
-    "path": "artifacts/e009-preparation/transfer-v10-final/e009-preflight-v10.tar.gz",
+    "path": "artifacts/e009-preparation/transfer-v14-final/e009-preflight-v14.tar.gz",
     "file": {
-      "bytes": 6699717,
-      "sha256": "25b9a12492329041fca6bd126fe2daf3e45b079c6b6963aaac8390c76663103c"
+      "bytes": 6730975,
+      "sha256": "c051c8df435841a97e781d1fc00e2410ed16f4a07d66d9185add046704d810bc"
     }
   },
   "checksum": {
-    "path": "artifacts/e009-preparation/transfer-v10-final/e009-preflight-v10.tar.gz.sha256",
+    "path": "artifacts/e009-preparation/transfer-v14-final/e009-preflight-v14.tar.gz.sha256",
     "file": {
       "bytes": 92,
-      "sha256": "423de79813af0cb639a37f741ab110f8a2f9c7373702a1f5cb3b1661b315b641"
+      "sha256": "4d6bd1101dca074367c9eea1312b00482c9125de9dbfd7de063e3b5663af6621"
     }
   },
   "manifest": {
-    "bytes": 5520,
-    "sha256": "0f895a25b95d3dd8460d62687f96c53d6cc28b2f658ece71f2c8ecedc94ae185"
+    "bytes": 6031,
+    "sha256": "3bbdaf725f787f05b827ce2a5f3bf117088c7d3848d2ea891bf24642cda2e08a"
   },
-  "payload_files": 34,
+  "payload_files": 37,
   "all_packet_hashes_verified": true,
   "build_receipt": {
-    "path": "artifacts/e009-preparation/transfer-v10-final/transfer-receipt.json",
+    "path": "artifacts/e009-preparation/transfer-v14-final/transfer-receipt.json",
     "file": {
       "bytes": 672,
-      "sha256": "06e0536b52e146822cfa28320af1f433929ac6b515fb630196dc9562eb2d7031"
+      "sha256": "3dfc4ed49091ca1d8b1fb9fce62800f55c4c89e0bd24ff8f7dece102b4d77ea8"
     }
   },
   "operations": "OPERATIONS.md",
   "operations_command": {
-    "bytes": 2383,
-    "sha256": "be6e559353f28310a57937b53df5088b7b0a63dbb84468aefe54dc89294de4b7"
+    "bytes": 2406,
+    "sha256": "daf33b20c7c49d93f6178620f20238c136945e186f0fe98ee9eb9281f8eca221"
   },
+  "accepted_v10": "linux-preflight-v10.json",
   "accepted_native_runtime": "linux-runtime-recovery-v8.json",
-  "cancelled_attempt_review": "linux-cancellation-v9.json",
-  "restored_payload": {
-    "state": "/work/Home/dl_binner/e009/runtime-snapshots/comebin-runtime-v8",
-    "receipt_file": {
-      "bytes": 3377589,
-      "sha256": "54b705503ff540746f853875ee2e97e5c2461797fcb70a24ab2adea6e3c70bfa"
-    },
-    "shards": 151,
-    "files": 18977,
-    "logical_bytes": 1682401752,
-    "archive_bytes": 1716981760,
-    "mode": "accepted restore-only; missing/corrupt receipt/seal/archive/member bytes fail; no source fallback"
-  },
+  "local_validation": "local-failed-paths-v14.json",
+  "only_remaining_contracts": [
+    "scgbinner",
+    "comebin/checkm"
+  ],
+  "failed_runtime_lock": "failed-paths-lock.json",
   "owner_allocation": {
     "vcpus": 8,
     "ram_gb": 24,
     "working_rss_bytes": 20000000000,
-    "work_seconds": 17400,
+    "work_seconds": 10200,
     "collection_seconds": 600,
-    "max_normal_allocated_core_hours": 40,
+    "max_normal_allocated_core_hours": 24,
     "stage_wall_caps": null,
     "stall_seconds": 300,
-    "native_tools_serial": true,
-    "loader_workers": 0,
-    "progress_policy": "advancing completed byte/entry counters for restore; native launched-tree CPU/physical IO plus actual acquired-byte reports; no progress credit from repeated counters or parent heartbeats"
+    "scope": "Serial native phase budgets use full eight-CPU allowance, loader zero; pool phases seven workers plus coordinator. Acquisitions/initial imports are not eight-core performance demonstrations."
   },
-  "original_numerical_source_recopy": false,
-  "runtime_recovery_only": false,
-  "verification_scope": {
-    "whole_prefix_hashes": false,
-    "explicit_external_files": 26,
-    "numerical_members": "all verified during accepted restore only",
-    "external_files": "two mapping binaries, one CheckM console source, three pinned marker files, twenty pinned AMBER source/licence files; before/after lexical/resolved path and byte identities",
-    "not_claimed": "whole-prefix non-mutation or hash identity of every AMBER/mapping library",
-    "storage": "current attempt and immutable returned members; external acquired payload receipts, no blanket old-root scans"
+  "storage": {
+    "locked_conda_compressed_bytes_before_dedup": 577118190,
+    "minimum_free_home_bytes": 10000000000,
+    "temporary_restore_bytes_allowance": 2200000000,
+    "scope": "New two-prefix/cache/evidence provisioning estimate; no shared source DNA read/write/download or old environment walk",
+    "deduplicated_linux_compressed_bytes": 497171498,
+    "cache_and_prefix_payload_paths": 94327,
+    "cache_prefix_and_two_compressed_copies_bytes_lower_bound": 7447121721
   },
-  "local_checks": {
-    "unit_tests": 49,
-    "unit_log": {
-      "path": "artifacts/e009-preparation/unit-v10-final.log",
-      "file": {
-        "bytes": 33353,
-        "sha256": "5866fcbd03e3ff213119fd034154120ca133ece87902768ae19df98848ce041d"
-      }
-    },
-    "docs_log": {
-      "path": "artifacts/e009-preparation/docs-v10-final.log",
-      "file": {
-        "bytes": 727,
-        "sha256": "b9e9acb563b6d2103efe96dfc194202039e991603572cadc2714101b42636216"
-      }
-    },
-    "harness_script": {
-      "path": "artifacts/e009-preparation/restored-owner-final-v10.py",
-      "file": {
-        "bytes": 4949,
-        "sha256": "003ccb19dc02b24613c31291171aeed4ac50ff8d5d17fc405cd6e7ffc2c7bd76"
-      }
-    },
-    "harness_terminal": {
-      "path": "artifacts/e009-preparation/restored-owner-final-v10-terminal.log",
-      "file": {
-        "bytes": 59156,
-        "sha256": "9dae911506819eb69feecd160afaccbc520e81de0d75fa5cb6a9787a33ebc0ce"
-      }
-    },
-    "harness_result": {
-      "path": "artifacts/e009-preparation/restored-owner-final-v10/passed.json",
-      "file": {
-        "bytes": 7327,
-        "sha256": "7c4f73208b085f48b9ae81a351befcece0f905d37931318e6004f71cf5a14e44"
-      }
-    },
-    "scoped_binding_log": {
-      "path": "artifacts/e009-preparation/restored-owner-final-v10/scoped-binding.log",
-      "file": {
-        "bytes": 25265,
-        "sha256": "6cbe7622b154bac6b9c6b8f006ea1ea07332c5204350f823138a3b68768dd662"
-      }
-    },
-    "scope": "Exact v10 packet/Bash/driver outside checkout with retained Mac chunk restore, real new venv/full inventories and tiny native assembly/mapping/depth/truth contracts. Actual transferred scoped hash helper separately runs all 26 inputs with real mapping binaries and pinned AMBER sources, synthetic CheckM hashing inputs. Remote platform/setup and Mac one-thread assembly explicitly substituted; native Linux tool/evaluator/utility and CheckM readers remain pending. No changed hashing worker mocked; accepted science not repeated.",
-    "native_worker_mocks": false,
-    "mac_assembly_threads": 1,
-    "measurements": {
-      "driver_seconds_through_collection": 69.39498413397814,
-      "outer_seconds": 77.28197982002166,
-      "outer_peak_sampled_rss_bytes": 366776320,
-      "scoped_helper_seconds": 0.6331780269974843,
-      "scoped_helper_peak_sampled_rss_bytes": 27860992
-    },
-    "preserved_accepted_state_unchanged": true,
-    "fresh_job_restore": "9509 real Mac entries /75 retained chunks, zero original copies; new venv/full distribution+origin probe and tiny native mapping/assembly/depth/truth checks passed",
-    "failures_covered": "real file corruption, missing files, changed symlink targets, no unrelated-tree enumeration, actual-byte progress; previous startup/clock/CPU/stall/fatal-worker/orphan and chunk corruption tests also pass",
-    "not_validated": "full Linux native branch on UCloud, Linux eight-thread MEGAHIT, native utility/tool/evaluator/CheckM readers, source download/catalog and community-scale affordability"
-  },
-  "previous_packet_preserved": {
-    "version": "v9",
-    "source_commit": "d57536746e47d2b3e82d5190ef90d0ae4c3308cc",
+  "preserved_prior_transfer": {
+    "version": "v13",
+    "source_commit": "254a99601b9ed2e2ff8de93dcbc9c6539352dfec",
     "archive": {
-      "path": "artifacts/e009-preparation/transfer-v9-reviewed/e009-preflight-v9.tar.gz",
+      "path": "artifacts/e009-preparation/transfer-v13-final/e009-preflight-v13.tar.gz",
       "file": {
-        "bytes": 6698794,
-        "sha256": "17faebceab9a7324c0930ade40d0cfb0c5027fd1a7c2fd5a64f79caa1d3b0f4b"
+        "bytes": 6730979,
+        "sha256": "191b79c7e1367aa0db9b62d768b7d363fa0871e56fdc8a46319064e5869a9960"
       }
     },
     "checksum": {
-      "path": "artifacts/e009-preparation/transfer-v9-reviewed/e009-preflight-v9.tar.gz.sha256",
+      "path": "artifacts/e009-preparation/transfer-v13-final/e009-preflight-v13.tar.gz.sha256",
       "file": {
-        "bytes": 91,
-        "sha256": "9a47c80d69d23836b83634a97957ac97349f2423e748d4c933717b6a19a62578"
+        "bytes": 92,
+        "sha256": "b96d4e28f74a805bff9cdd1ccc1ac21c9f88dc5105d3ebe732bf12fe93ddfa55"
       }
     },
     "manifest": {
-      "bytes": 5519,
-      "sha256": "8255c8fe82c0c6e8e25f9216311a61440601454f7c5a96b8cdfb639066c01c22"
+      "bytes": 6031,
+      "sha256": "f41bb05cd505e860024a814d222d1e18cbaf7cb8d045301f397e452b5dfeb592"
+    },
+    "accepted_previous_v10_transfer": {
+      "version": "v10",
+      "source_commit": "5a780e411f0b4c1b78409db7270338b45ac80039",
+      "archive": {
+        "path": "artifacts/e009-preparation/transfer-v10-final/e009-preflight-v10.tar.gz",
+        "file": {
+          "bytes": 6699717,
+          "sha256": "25b9a12492329041fca6bd126fe2daf3e45b079c6b6963aaac8390c76663103c"
+        }
+      },
+      "checksum": {
+        "path": "artifacts/e009-preparation/transfer-v10-final/e009-preflight-v10.tar.gz.sha256",
+        "file": {
+          "bytes": 92,
+          "sha256": "423de79813af0cb639a37f741ab110f8a2f9c7373702a1f5cb3b1661b315b641"
+        }
+      },
+      "manifest": {
+        "bytes": 5520,
+        "sha256": "0f895a25b95d3dd8460d62687f96c53d6cc28b2f658ece71f2c8ecedc94ae185"
+      }
     }
   },
-  "scientific_execution_admitted": false,
-  "science_changed": false,
-  "remote_execution_by_codex": false
+  "preserved_rejected_local_packets": [
+    {
+      "packet": {
+        "path": "artifacts/e009-preparation/transfer-v11-final/e009-preflight-v11.tar.gz",
+        "file": {
+          "bytes": 6728460,
+          "sha256": "71af51f526dfd3d441f1cdf388e458610fdc642fbf9f720166d18a474f331187"
+        }
+      },
+      "status": {
+        "path": "/private/tmp/e009-v11-hzbpz4jc/owner/native-preflight-2jjrselw/status.json",
+        "file": {
+          "bytes": 3209,
+          "sha256": "11a768061e96767918b0daf1a040241b6d34c965ce88fc789a3685053bfd6a69"
+        }
+      },
+      "scope": "local native harness failure, preserved; not owner-run Linux or scientific evidence",
+      "failure": "SCGBinner mixed-stack native exit-11; old Mac COMEBin training AMP import unavailable",
+      "return": {
+        "path": "/private/tmp/e009-v11-hzbpz4jc/owner/transfer/native-preflight-2jjrselw-return.tar.gz",
+        "file": {
+          "bytes": 31639,
+          "sha256": "2028974a2959c1e934ef21e9f34a3d74d07714dfaa4558f138f84ab27010e0f6"
+        }
+      }
+    },
+    {
+      "packet": {
+        "path": "artifacts/e009-preparation/transfer-v12-final/e009-preflight-v12.tar.gz",
+        "file": {
+          "bytes": 6730716,
+          "sha256": "d65f48bfa0f67ffeee8baa4734b9d7ec00f88e03f0ae0c6801556bf05fdb84f2"
+        }
+      },
+      "status": {
+        "path": "/private/tmp/e009-v12-cp6q1qzz/owner/native-preflight-v5bsc3vz/status.json",
+        "file": {
+          "bytes": 3292,
+          "sha256": "81e79e7ad871950395baa2e01e6963008fa0386cc9f938cf5e18eabd2b4873e3"
+        }
+      },
+      "scope": "local native harness failure, preserved; not owner-run Linux or scientific evidence",
+      "failure": "SCGBinner passed; complete CheckM unsupported global --help exited2",
+      "return": {
+        "path": "/private/tmp/e009-v12-cp6q1qzz/owner/transfer/native-preflight-v5bsc3vz-return.tar.gz",
+        "file": {
+          "bytes": 135507,
+          "sha256": "490603baa747f2588b3cec51df3c86270fa51be0aec285e62d3f57f7d4e1a4bc"
+        }
+      }
+    }
+  ],
+  "scientific_execution_authorized": false,
+  "return_contract": [
+    "printed RETURN_ARCHIVE",
+    "printed RETURN_CHECKSUM",
+    "last TERMINAL_LOG"
+  ],
+  "not_executed": [
+    "Full independent Linux SCGBinner/CheckM Conda install",
+    "Owned Linux HMMER/Prodigal/pplacer entry points",
+    "Eight-CPU native features and Linux complete CheckM wrapper",
+    "New COMEBin binding to accepted restored numerical chunks"
+  ],
+  "next_boundary": "Owner runs only two remaining contracts. Review return; assess retained source/sample scope before preparing bounded bulk read/assembly/depth/truth. No fits or scores automatically.",
+  "linux_package_inventory": "linux-package-inventory-v14.json"
 }

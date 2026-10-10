@@ -290,6 +290,11 @@ inventories (94,327 cache/prefix payload paths; old copy-rate comparison~105min
 before overhead), rather than the much faster Mac run. Linux
 corrected-runtime compatibility and native contracts remain unverified until return.
 No scientific design/defaults/results change and no full fit/score is admitted.
+[Final local evidence](../experiments/E009-competitive-benchmark/local-failed-paths-v14.json)
+accepts the exact v14 archive/Bash on real tiny inputs: both native contracts pass,
+old receipts unchanged, passed stages unscheduled; 128.946s through collection,
+145.042s outer harness, 665.940MB sampled peak. All53 regressions/docs pass.
+Local platform substitutes remain explicit; no Linux cold-install/fit credit.
 
 After native preflight admission and source/sample-count review, prepare the
 bounded bulk-read/assembly/depth/truth step. No community fits/scores/architecture

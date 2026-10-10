@@ -153,3 +153,10 @@ maximum**, 10,200 seconds shared work +600 collection, with no shorter stage cap
 New Linux install throughput is still unknown; end the allocation after return.
 The passed local v13 packet remains immutable; v14 changes only operational clock/
 space defaults and packaging version, with the scientific/native adapters unchanged.
+
+The final exact v14 packet/command passes local integration: real SCGBinner full
+help/augmentation/reader/initializer/HNSW and complete CheckM lineage help followed
+by COMEBin native augmentation/axis validation. Only the two failed contracts run;
+prior accepted receipts remain unchanged. [Local evidence](local-failed-paths-v14.json)
+records actual paths, platform substitutions, preserved negative packets, timings,
+immutable returns and Linux omissions. Final53 regressions/docs checks pass.

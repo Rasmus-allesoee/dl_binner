@@ -797,6 +797,10 @@
   },
   "lock_record": "failed-paths-lock.json",
   "acquisition_log": {
-    "path": "artifacts/e009-preparation/failed-paths-v13/linux-payload-acquisition-v2.log"
+    "path": "artifacts/e009-preparation/failed-paths-v13/linux-payload-acquisition-v2.log",
+    "file": {
+      "bytes": 49954,
+      "sha256": "07c2a67a66712aa6baa25ea94b65f9633dbaf2a22c5338c8bc0af13f71c70ba5"
+    }
   }
 }

@@ -806,3 +806,16 @@ The old filesystem copy-rate comparison alone is ~105 min, with Conda throughput
 unmeasured. [linux-package-inventory-v14.json](linux-package-inventory-v14.json)
 owns that provisioning evidence; there is no new stage timeout or native/scientific
 algorithm change. Final packet/harness provenance belongs in transfer.json.
+
+### Final v14 local acceptance
+
+[Local evidence](local-failed-paths-v14.json) binds the exact final archive and
+Bash command, real tiny FASTA/BAM contracts, own-prefix inventories, native writer/
+reader outputs and all122 immutable return members. Both corrected contracts
+pass; prior accepted receipts are byte-identical, and all three passed tools plus
+assembly/mapping/truth/AMBER/source catalog remain unscheduled. Actual Mac driver
+through collection128.946 s, outer harness145.042 s, outer sampled peak665,939,968
+bytes; sampled CPU146.11 s. These are local warm-runtime measurements, not Linux
+cold-install forecasts or UCloud spend. All53 E009 regression tests and documentation
+checks pass. The final Linux install/new binding/native entry/eight-CPU checks still
+require the owner return. No full community fits, E009 scores or scientific changes.
