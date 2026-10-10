@@ -1,44 +1,52 @@
-# E009 progress-aware runtime recovery operations
+# E009 native preflight after accepted v8 runtime recovery
 
-Status: **v7 progressing copy killed by its premature inner cap; no native runtime
-admission**. [Verified return](linux-startup-failure-v7.json): 17,989/44,770 entries
-at 1,200.068 seconds, 22.53 sampled CPU seconds. Overall 1,800-second ceiling had
-not expired. All nine members/seven inventory hashes verify; immutable returned
-payload 602,809 logical bytes. Declared one-CPU /4-GB driver cost before collection:
-1,200.179870 seconds /0.333383 allocated core-hours. No imports/setup/science began.
+The [v8 return](linux-runtime-recovery-v8.json) passes the **specific numerical
+runtime gate**: Linux Python 3.13.14, all 86 accepted distributions, ten module
+origins, local stdlib/shared libraries and NumPy/Torch compatibility arithmetic.
+Selected 18,977/44,770 entries /1,682,401,752 logical bytes; 151 sealed chunks /
+1,716,981,760 archive bytes. Fresh copy used 143.613 s; imports 13.670 s;
+verification 3.867 s. Driver before collection: 161.307 s at declared 1 vCPU /4 GB,
+0.0448074 allocated core-hours, peak sampled RSS 460,787,712 bytes. /proc confirms
+CPU affinity 0. All 24 archive members /22 inventory hashes pass; immutable
+payload 1,036,210 logical bytes. Exact after-collection allocation cost is unknown
+because its separate receipt was not uploaded. No community was fitted/scored.
 
-## Next owner job: reduced runtime, sealed chunks and one overall clock
+Native **fresh creation**, not native restore, was executed. The returned chunk
+receipts/hashes are worker evidence; bulk chunks/final inventory stayed on UCloud
+and cannot be independently rehashed on Mac. V9 binds their exact final receipt,
+all 151 seals, tar hashes/member hashes and population during read-only restore.
+The original E001 numerical environment is never recounted or recopied.
 
-Use **CPU/Linux x86-64, 1 vCPU /4 GB**, Home mounted, no competing work/Slurm.
-Provision a **two-hour Terminal allocation**; the command explicitly chooses
-**90 minutes total work plus up to 120 seconds normal collection**, covering parent
-verification/setup, selection, copy, hash, chunk packing/persistence, restore,
-local verification and imports. This is a ceiling, not a runtime forecast.
-There is **no separate stage wall-time cap**, including no 1,200-second copy limit
-or 180-second import limit. Five minutes without observed work triggers the stall
-guard. Actual CPU/RAM allocation is declared independently; sampled RSS ceiling
-is 75% of declared RAM (3 GB at 4 GB). Native affinity bounds the whole tree to the
-declared CPU count; eight storage readers share that budget, loader zero.
+## Next owner job: tiny native contracts, no community fits
 
-At the observed ~15 entries/second, all 44,770 entries project to ~49.8 minutes
-before other work; 90 minutes leaves ~40 minutes for variability, byte throughput,
-metadata, chunk writes/hashes, verification and imports. Pruning reduces entries,
-but **native selected count/bytes and new-path throughput are not yet measured**.
-The initial returned selection receipt reports actual counts, bytes, omission
-reasons and a rough projection at the measured rate. No laptop timing or assumed
-linear CPU speedup determines this clock. The 300-second stall allowance is about
-60 times the worker's normal five-second report interval; large files also report
-completed bytes. Parent heartbeats, repeated counters and mere phase labels do
-not count as work. The owner can select another positive `--work-seconds` value;
-all children follow the remaining clock, without hidden lower stage caps.
+Use **CPU/Linux x86-64, 8 vCPU /24 GB**, glibc >=2.28, Home and project shared
+storage mounted; no competing work/Slurm. Choose **five hours** as the allocation
+ceiling. V9 selects **17,400 seconds overall work +600 seconds collection** and
+20-GB sampled working RSS. The whole tree has eight-CPU affinity; tools execute
+serially. This remains the prospectively bounded <=40-core-hour preflight, not a
+runtime forecast. It includes cold utility setup and a 3.2-GB source download;
+no native timings yet justify a tighter ceiling. End the allocation after return
+collection. Source-genome acquisition is preparatory and is not admitted as
+scientific input until its new SHA/source overlap is reviewed. No reads download.
 
-Upload **only the new v8 pair**, `e009-preflight-v8.tar.gz` and its matching
-`.tar.gz.sha256`, into `/work/Home/dl_binner/e009/transfer/`. Local pair:
-`artifacts/e009-preparation/transfer-v8-final/`. [transfer.json](transfer.json) owns the
-final source `bd7addb6e3e646a80bab57deadf9e847e3f02858`, 61,445 archive bytes,
-SHA256 `32c3a9f23cc101982bef8b4d3dc318bc76718cce63f79bee52741eca411888ca`.
-Never launch the v7 pair or the local-only provisional v8 packet.
-Paste the entire tested block:
+All Python inventories, install/import/feature workers and nested native commands
+use the remaining overall clock, **without shorter stage wall caps**. Restore/
+hashing watches advancing completed bytes/entries. Other native workers use a
+300-second no-activity guard based on launched-tree CPU and physical I/O; quiet
+compute is activity, parent heartbeats are not. Import probes retain phase/stack/
+file observations. Five-minute stalls preserve causes/waits and stop the owned
+process group; the guard has local failure tests, not measured full native timings.
+Network connection/socket inactivity remains separately bounded by the existing
+60-second transport timeout. The owner can choose another overall `--work-seconds`
+value, but an extension requires consistent Terminal time plus collection reserve.
+
+## Upload and exact command
+
+Upload only `e009-preflight-v9.tar.gz` and matching `.tar.gz.sha256` from
+`artifacts/e009-preparation/transfer-v9-final/` to
+`/work/Home/dl_binner/e009/transfer/`. [transfer.json](transfer.json) binds the final
+packet/source, command and tests. Old v1-v8 uploads remain preserved and superseded
+for this next native preflight. Paste the entire locally tested block:
 
 ```bash
 bash <<'BASH'
@@ -47,7 +55,7 @@ transfer=/work/Home/dl_binner/e009/transfer
 mkdir -p "$transfer"
 terminal_log=$(python3 -I -B -S - "$transfer" <<'LOGPY'
 import os, sys, tempfile
-fd,path=tempfile.mkstemp(prefix='e009-recovery.',suffix='.log',dir=sys.argv[1])
+fd,path=tempfile.mkstemp(prefix='e009-preflight.',suffix='.log',dir=sys.argv[1])
 os.close(fd)
 print(path)
 LOGPY
@@ -58,7 +66,7 @@ python3 -I -B -S - "$transfer" <<'PY'
 import hashlib, os, pathlib, shutil, sys, tarfile, tempfile, time
 started=time.time()
 transfer=pathlib.Path(sys.argv[1])
-archive=transfer/'e009-preflight-v8.tar.gz'
+archive=transfer/'e009-preflight-v9.tar.gz'
 fields=(transfer/(archive.name+'.sha256')).read_text().split()
 if len(fields)!=2 or fields[1]!=archive.name or len(fields[0])!=64:
     raise ValueError('Upload the exact archive and matching printed checksum')
@@ -72,90 +80,83 @@ with tarfile.open(archive) as tar:
     if sum(m.size for m in members)>20_000_000:raise ValueError('Unexpected packet expansion')
     for member in members:
         path=pathlib.PurePosixPath(member.name)
-        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v8' or member.name in names:
+        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v9' or member.name in names:
             raise ValueError('Unsafe or duplicate packet member')
         names.add(member.name)
     for member in members:
         target=launch/member.name;target.parent.mkdir(parents=True,exist_ok=True)
         with tar.extractfile(member) as src,target.open('xb') as out:shutil.copyfileobj(src,out)
-packet=launch/'e009-preflight-v8'
+packet=launch/'e009-preflight-v9'
 env=os.environ.copy()
 for key in ('PYTHONPATH','PYTHONHOME','PYTHONUSERBASE'):env.pop(key,None)
 env.update(PYTHONNOUSERSITE='1',PYTHONUNBUFFERED='1')
 argv=[sys.executable,'-I','-B',str(packet/'scripts/e009_owner.py'),
       '--root','/work/Home/dl_binner/e009',
       '--shared-root','/work/RasmusAllesøeNielsen#2936/dl_binner/e009',
-      '--allocated-vcpus','1','--allocated-ram-gb','4',
-      '--runtime-recovery-only',
-      '--snapshot-state','/work/Home/dl_binner/e009/runtime-snapshots/comebin-runtime-v8',
-      '--work-seconds','5400','--stall-seconds','300',
+      '--allocated-vcpus','8','--allocated-ram-gb','24',
+      '--work-seconds','17400','--stall-seconds','300',
       '--entry-start-epoch',str(started)]
 os.execve(sys.executable,argv,env)
 PY
 BASH
 ```
 
-Both live terminal logs, launch copies and returns remain in transfer/. Request
-the printed return archive/checksum and **last printed `TERMINAL_LOG`**; end the
-allocation after collection. Maximum normal declared-one-CPU work/collection cost
-is 1.533333 core-hours, excluding owner idle/upload and provider billing differences.
-Failed stages/collection are measured, not equated with process CPU seconds.
+Return the printed archive, matching checksum and **last printed `TERMINAL_LOG`**.
+Keep the printed `COLLECTION_RECEIPT` too (optional upload); its allocation cost
+is now also printed in the live log. Return payload bytes come from the immutable
+archive, not a log that continues growing after collection. Provider billing/
+owner idle is distinct from process CPU or driver allocation estimates.
 
-## Selection, verification and resume contract
+## What this changes and reuses
 
-- Retain Python executables, the standard library, numerical/package shared
-  libraries, all remaining package sources/resources/models/databases, distribution
-  metadata/licences and Conda provenance. Keep public `testing`/`_testing` helpers.
-- Omit recorded bundled `test`/`tests` suites, compiler/header trees, static `.a`/
-  `.la` libraries, compiler/build metadata, non-Python CLI tools and other
-  non-numerical top-level payloads, plus regenerable bytecode. Internal symlink
-  targets are included transitively even when the filter would otherwise omit them.
-  This is a **numerical execution runtime**, not a whole environment distribution
-  or a compiler/pytest/test-data installation. Separate pinned utility tools remain
-  required in the later full preflight. No source bytes/versions/science are edited.
-- The completed inventory receipt stays byte-identical on resume; operation counts
-  belong to the attempt summary. The full source/selection plan and copied hashes
-  live under the explicit
-  persistent `runtime-snapshots/comebin-runtime-v8/` state. Plans use portable size/
-  mtime/mode/link identities across job mounts; within each original read, device/
-  inode and stat identities are checked too. Source changes refuse resume.
-- Up to 128 members /roughly 128 MB form a chunk; a larger single library is streamed
-  as its own chunk. Copy/hash original bytes once to fresh job-local storage, then
-  immediately seal a tar and checksum-bound member receipt in Home. The worker
-  reports source and persisted-byte progress. Partial/unsealed tar/JSON files are
-  retained but ignored. Concurrent writers are rejected by a process-lifetime lock.
-- **Rerunning this same v8 command is an explicit resume request for this state**:
-  it verifies/restores sealed chunks and only copies missing source contents. Each
-  attempt/local prefix/log/return remains uniquely named. Receipt/archive/member
-  corruption fails; do not edit receipts to accept it. A changed selection policy
-  needs a new versioned state. No valid completed native/scientific step is repeated.
-- Finish full local hash verification, then the accepted complete freeze/version/
-  distribution/module/stdlib origins, no original-prefix Linux mapped libraries and
-  small NumPy/Torch arithmetic. Reverify all local bytes afterward. Copied console
-  scripts are never used. This admits only the numerical runtime, not full native
-  binner/fixture/scale readiness. See [D006](../../docs/decisions/D006-environment-ownership.md).
+- Restore the accepted **comebin-runtime-v8** chunks into a fresh job-local prefix.
+  The name/state stays v8; v9 is the consumer packet. Missing/corrupt seals or bytes
+  fail; there is no fallback to original source copying or new materialization.
+  The persistent state stays unchanged and is protected by a shared read lock.
+  Job-local free space must cover 1.68 GB plus 500 MB overhead.
+- Reuse the accepted numerical inventory by restored bytes; a cheap per-job probe
+  verifies lexical Python/version/stdlib. New source-only venvs receive explicit
+  dependency links to this restored prefix. Full per-tool distributions/origins
+  and no original-prefix mapped libraries are checked before their native paths.
+  Every Python child uses `-I -B` and the job-local cache namespace.
+- Use **new `source-v2`/`utilities-v2` prefixes**. Tool venvs and wrapper paths bind
+  this attempt's job-local restored runtime; they are retained provenance, **not
+  portable environments or ready-to-reuse interpreters after /tmp resets**.
+  Future jobs must restore and create explicitly bound execution environments;
+  never edit an executed binding in place or delete its required source evidence.
+- Invoke the tiny original CheckM console **source** via the restored lexical
+  interpreter, bound before/after. Do not invoke its old shebang; omitted numerical
+  console scripts stay omitted. Its actual source hash is returned for review.
+  CheckM markers remain hash-bound read-only under E001. Native CheckM help is
+  pending; this does not generalize snapshot permission to other prefixes.
+- Keep original mapping/AMBER prefixes and AMBER source read-only, with actual
+  versions/inventories/source hashes and before/after bindings. AMBER receives
+  its own library path. The v8 numerical pass does not validate their cold startup.
+- Acquire pinned sources, CompleteBin database (155.9 MB), 59 explicit Linux utility
+  packages (228 MB compressed), and per-tool extra wheels. Compile minimap2 in an
+  E009 copy; retain setup logs/resolved package identities. No reference cache edit.
+  CompleteBin remains **modified max-50**, SCGBinner's operational dtype fix is
+  unchanged. Sources/models/defaults/training/clustering are otherwise unchanged.
+- Exercise tiny real 11-contig /59,232-bp fixtures: Linux eight-thread MEGAHIT,
+  mapping/ordered depth, competitive coordinates/truth, AMBER/confirmed R95
+  software contracts; five native tool CLI/features and CompleteBin checkpoint/
+  forward. **No native model fit, learned embeddings, candidate grid or E009 score.**
+  One tool failure skips its dependent stages and remains a failed combined gate;
+  another isolated tool may proceed. No automatic retry or failure bypass.
 
-A whole prefix is unnecessary for this scope: v7 copied compiler sources, headers
-and NumPy/Pandas/SciPy test data while numerical dependencies had not all arrived.
-A ten-module-only dependency closure would be more fragile; keeping ordinary
-package sources/data/metadata plus shared libraries is the conservative reduction.
-Native imports/real tool contracts still must demonstrate that nothing needed was
-omitted. Original E001 prefix and all failed attempts remain unchanged.
+Home owns code, caches/prefixes/transfers/logs (>=6 GB free). Only the owned shared
+`/work/RasmusAllesøeNielsen#2936/dl_binner/e009/source-preflight-v1/` receives the
+3.2-GB source archive/unpacked catalog (>=30 GB free). Quote this path; do not touch
+colleagues' files. Original environments/failed attempts/chunks remain unchanged.
+Provisioning estimates are separate from scientific design and actual receipts.
 
-## What survives and what remains unverified
+## Acceptance boundary
 
-Persistent sealed chunks survive Terminal resets. Job-local `/tmp` trees do not.
-The failed v7 `/tmp/e009-cache-recovery-ttr51i74/prefix`, if still present, has no
-per-file hashes/chunk seals and is not silently admitted or reused; preserve it.
-Code/source history, original env and immutable failure return remain recoverable.
-The new state needs space for only missing chunk bytes/tar headers on resume;
-local `/tmp` needs the complete selected runtime. Initial selection reports bytes
-and the worker checks free space before copying. No shared colleagues' files move.
-
-Linux reduced selection completeness, native library portability, fresh/resumed
-throughput, chunk-lock/filesystem semantics, all ten imports/Torch arithmetic and
-cost remain pending. Local cardinality/recovery tests cannot certify these. The
-provider filesystem cause remains unidentified. Full eight-CPU preflight stays
-disabled until returned native recovery evidence is reviewed; after a pass prepare
-its sealed-chunk restore and audit dependent interpreter/shell/tool paths.
-No UCloud execution by Codex, community fits/scores or architecture work.
+Local actual reader/writer/restore/venv-wrapper/clock/cleanup checks are required
+before transfer; native Linux validation remains pending for restored consumers,
+AMBER/mapping/utility bindings, tool feature axes/checkpoint and eight-thread
+assembly. A local fixture does not prove all runtime imports, full native schedules,
+community quality, assembly-scale affordability or near-genome independence.
+After the return, accept successful stages and inspect failures before preparing
+the bulk assembly/depth/truth step. Resolve the documented two-sample scope before
+that scientific job. No UCloud execution by Codex, fits/scores or architectures.

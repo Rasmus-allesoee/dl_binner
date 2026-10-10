@@ -629,3 +629,46 @@ Native Linux mapping/locking, all ten modules/Torch and actual filtered workload
 throughput are still unverified. Native affinity is not available on Mac; local
 copy CPU can exceed one while remaining a small software check. No UCloud cost
 or proportional CPU speedup claim follows from these timings.
+
+
+## Accepted v8 numerical runtime and restored native consumers, 2026-10-10
+
+[Return review](linux-runtime-recovery-v8.json) verifies the successful Linux gate,
+not a scientific result. All 86 accepted distributions, ten imports, local stdlib/
+shared libraries, NumPy matmul and Torch backward pass; no original-prefix binary
+was mapped, and no persistent bytecode was accessed/written. All 24 return members
+/22 inventory hashes pass (1,036,210 immutable logical bytes /88,477 compressed).
+The fresh numerical selection contains 18,977 of 44,770 entries /1,682,401,752 bytes;
+25,793 entries /2,826,138,072 bytes were explicitly omitted. 151 retained chunks
+contain 1,716,981,760 tar bytes plus final receipt/plan/member seals. Exact total
+persistent storage was not returned. The original prefix was not edited.
+
+Driver before collection: 161.307 s at declared 1 vCPU /4 GB /0.0448074 allocated
+core-hours; /proc CPU affinity 0, sampled peak 460,787,712 bytes. Copy 143.613 s /
+24.07 sampled CPU s; imports 13.670 s /7.95 CPU s; final byte verification 3.867 s /
+3.61 CPU s. These are observed phase timings, not community affordability or linear
+CPU scaling. After-collection/provider/idle costs are unknown; collection receipt
+was not uploaded. V9 prints through-collection accounting in the live terminal.
+
+The native attempt created all chunks; it did **not** test native restored resume.
+Bulk chunks/final file inventory were not attached, so independent local review
+verifies returned seals/receipts and executed worker checks, not remote content.
+V9 must verify their exact final receipt, every seal/archive/member and complete
+population while restoring, with no fallback to original source reads/copies.
+The accepted inventory is reused; only per-job lexical identity and each tool's
+new dependencies/origins are checked. Original scientific stages remain unrun.
+
+The prepared v9 native preflight preserves the original eight-CPU /24-GB /
+17,400-second work +600-second collection ceiling. It removes old arbitrary
+substage caps for imports/features/install/help; real CPU/I-O or completed-byte/
+entry activity guards coexist with the one overall clock. Quiet compute stays
+active; parent heartbeats do not constitute progress. All children and parent
+setup remain bounded. Original AMBER/mapping are still direct read-only bindings;
+no portability/health credit follows from the numerical snapshot. New tool
+execution venvs explicitly bind the job-local runtime and require new bindings
+following job reset. Tiny CheckM console source is separately bound and invoked
+through lexical Python; no old shebang/console PATH is used. Sources, modified
+CompleteBin max-50, operational SCGBinner dtype and scientific defaults stay frozen.
+Native assembly/mapping/evaluator and native five-tool feature/checkpoint contracts,
+source-acquisition overlap, utility identity/health and full-scale affordability
+remain unresolved until returned evidence. See [Operations](OPERATIONS.md).

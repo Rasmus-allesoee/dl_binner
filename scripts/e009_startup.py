@@ -243,4 +243,51 @@ def supervise_work(sup,command,log,seconds,ram_bytes,env,sample_root=None,idle_s
         finally:sup.process_sample=original
 
 
+def supervise_activity(sup,command,log,seconds,ram_bytes,env,sample_root=None,idle_seconds=300):
+    """Watch native work by launched-tree CPU, I/O and output, using only the overall clock.
+
+    Quiet compute remains live while CPU advances. Linux I/O includes nested
+    download/output files; log growth alone is deliberately not activity. Retain
+    wait states, fatal causes and cleanup. Mac lacks /proc I/O and has CPU-only
+    activity evidence. Repeated heartbeats cannot refresh the activity clock.
+    """
+    import json,os,re,time
+    from pathlib import Path
+    original=sup.process_sample;tracker=StartupProgress(idle_seconds,time.monotonic())
+    disabled=False;last=0;cpu_max=0;io_max={};native=Path('/proc/self/stat').is_file()
+    with Path(log).with_suffix('.activity.jsonl').open('x') as output:
+        def observed(root,known):
+            nonlocal disabled,last,cpu_max
+            value=original(root,known);now=time.monotonic()
+            if disabled or root is None or root==os.getpid() or now-last<1:return value
+            try:
+                last=now;cpu_max=max(cpu_max,value[1]);rows=[]
+                if Path(log).exists():
+                    with Path(log).open('rb') as reader:
+                        reader.seek(0,2);reader.seek(max(0,reader.tell()-131072));tail=reader.read()
+                    if b'Traceback (most recent call last):' in tail or b'Fatal Python error:' in tail:
+                        raise RuntimeError('Fatal native worker traceback; see child log')
+                if native:
+                    rows=[wait_snapshot(pid,start) for pid,start in list(known)[:64]]
+                    for row in rows:
+                        io=row.get('io','')
+                        if isinstance(io,str):
+                            key=(row['pid'],row['start_identity'])
+                            total=sum(int(n) for n in re.findall(r'^(?:read_bytes|write_bytes):\s*(\d+)$',io,re.M))
+                            io_max[key]=max(io_max.get(key,0),total)
+                # Actual physical I/O rather than rchar/wchar: a heartbeat writes
+                # to an already buffered page and must not keep a sleeper alive.
+                signature=(int(cpu_max*10),sum(io_max.values()))
+                tracker.observe(signature,now)
+                output.write(json.dumps(dict(monotonic_seconds=now,activity=signature,
+                    idle_seconds_ceiling=idle_seconds,processes=rows,
+                    scope='owned native CPU/physical-I/O activity; not acceptance'))+'\n');output.flush()
+            except BaseException:
+                disabled=True;raise
+            return value
+        sup.process_sample=observed
+        try:return sup.supervise(command,log,seconds,ram_bytes,env,sample_root=sample_root)
+        finally:sup.process_sample=original
+
+
 if __name__=='__main__':probe()

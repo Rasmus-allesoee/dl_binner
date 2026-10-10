@@ -260,7 +260,7 @@ def inventory(expected_prefix, modules, expected_freeze=None, dependency_prefix=
             if not torch.equal(x.grad,2*x.detach()):raise ValueError('Snapshot Torch backward failed')
         import sysconfig
         stdlib=Path(sysconfig.get_path('stdlib')).resolve()
-        if not stdlib.is_relative_to(prefix):raise ValueError('Snapshot uses original standard library')
+        if not any(stdlib.is_relative_to(p) for p in allowed):raise ValueError('Snapshot uses unbound standard library')
         forbidden=str(Path(forbidden_prefix).resolve())+'/'
         mapped=[]
         if Path('/proc/self/maps').exists():

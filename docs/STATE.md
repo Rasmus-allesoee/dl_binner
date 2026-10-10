@@ -224,7 +224,7 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**E009's v5 proves direct Home imports remain impractical; full preflight is suspended and v6 source-cache recovery is prepared.**
+**E009's v8 numerical recovery passes; v9 native contracts are the next bounded step.**
 [D013](decisions/D013-first-comparative-benchmark.md),
 [the targeted evidence](evidence/2026-10-09-e009-contract-reconciliation.md) and
 [E009](../experiments/E009-competitive-benchmark/README.md) retain subject S1:
@@ -258,38 +258,28 @@ imports/training or large-community affordability. Mac four-thread MEGAHIT crash
 remain unresolved; the local writer check is explicitly one thread, and the Linux
 preflight must pass eight threads. No accepted science was repeated.
 
-**Exact next step:** owner runs the tested **v8 reduced, resumable numerical runtime
-recovery** using **1 vCPU /4 GB**, explicitly 90 minutes overall work
-plus 120 seconds normal collection, from
-[Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
-[Verified v7 return](../experiments/E009-competitive-benchmark/linux-startup-failure-v7.json)
-shows a progressing 17,989/44,770-entry copy killed by its 1,200-second stage cap,
-not the overall 1,800-second clock. Copy used only 22.53 CPU seconds; full entry-
-count projection is ~49.8 minutes before verify/pack. Mac's 13,829-entry fixture
-did not justify that cap. Archive/all seven inventory hashes pass; nine members
-retain 602,809 immutable logical bytes. Declared 1/4 driver: 1,200.179870 seconds /
-0.333383 core-hours before collection. No imports/setup/native science began.
+**V8 numerical runtime recovery is accepted; prepare/test the v9 native preflight.**
+[Independent return review](../experiments/E009-competitive-benchmark/linux-runtime-recovery-v8.json)
+verifies 24 archive members/22 hashes, full Python 3.13.14 /86-distribution inventory,
+ten imports, job-local stdlib/mapped libraries and NumPy/Torch arithmetic.
+Selected 18,977 entries /1.68 GB; 151 sealed chunks /1.717 GB. Fresh copy 143.613 s,
+imports 13.670 s, reverify 3.867 s; driver 161.307 s /0.0448074 allocated core-hours
+at actual declared 1 vCPU /4 GB; /proc affinity 0, sampled peak 0.461 GB. No fit or
+score. After-collection/idle/billed cost is not known from the uploaded files.
+Native resume was not executed; bulk chunks were retained remotely, not uploaded.
 
-[D006](decisions/D006-environment-ownership.md) now permits the precise runtime
-selection and checksum-bound persistent chunks. Omit unnecessary test/compiler/
-static payloads; keep ordinary package code/resources/models/metadata/licences,
-shared libraries and internal-link closure. Sealed chunks resume across jobs;
-unsealed v7 /tmp contents have no accepted journal and are not silently reused.
-Copy, hash, restore, pack, verify and import consumers share the owner-selected
-clock with real-work stall detection, without arbitrary shorter stage wall caps.
-Final upload pair: `artifacts/e009-preparation/transfer-v8-final/`, source
-`bd7addb6e3e646a80bab57deadf9e847e3f02858`, 61,445 archive bytes. Thirty-nine
-regressions, the 44,770-entry actual-file scale/reuse test, and exact final
-Bash/packet/driver with real standalone Mac Conda pass. An intentional stop retains
-47 sealed chunks; resume restores 6,016 entries and copies only 3,493 missing ones.
-Completed reuse copies none, and its final inventory receipt stays byte-identical.
-Original full runtime hash stays unchanged. Logs/returns/failure causes and scope
-are in the [transfer receipt](../experiments/E009-competitive-benchmark/transfer.json).
-Local tiny file cardinality is not UCloud payload size/latency evidence.
-Native selected size/throughput, locking, ABI/origins and all ten imports/Torch
-arithmetic remain unverified. Old prefixes/attempts and accepted science stay
-unchanged. Full eight-CPU preflight remains disabled pending returned recovery
-review and dependent interpreter/shell/tool contract preparation.
+**Exact next step:** locally test and bind the **v9 8-vCPU /24-GB native preflight**
+from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md), then
+owner runs it. Restore-only consumption binds the accepted v8 receipt/seals and
+never recopies or enumerates the original numerical prefix. Per-tool v2 execution
+venvs explicitly borrow this job-local runtime; retained paths need fresh bindings
+following job reset. CheckM console source is separately byte-bound; original
+mapping/AMBER prefixes/markers remain read-only and still need native validation.
+All native consumers share the explicit 17,400-second work /600-second collection
+clock, with completed-byte/entry or CPU/I-O activity guards and no lower stage caps.
+No accepted scientific settings/results or old attempts/prefixes/chunks change.
+Native restored consumers, utility setup/tool feature/checkpoint/evaluation and
+eight-thread Linux assembly remain pending. No community schedule is admitted.
 
 After native preflight admission and source/sample-count review, prepare the
 bounded bulk-read/assembly/depth/truth step. No community fits/scores/architecture

@@ -189,3 +189,32 @@ sealed progress; it does not authorize automatic retries or accepted-science rer
 Local tests must cover native-size metadata cardinality, actual readers/writers,
 interrupted and complete resume, corruption, drifting sources, productive work
 past former subcaps, genuine stalls and cleanup. Operations own the command.
+
+
+## Accepted E009 numerical runtime and restore-only consumers, 2026-10-10
+
+[The v8 Linux return](../../experiments/E009-competitive-benchmark/linux-runtime-recovery-v8.json)
+passes the scoped full inventory/origin/ABI/arithmetic gate for the reduced
+numerical runtime. It does not admit the other environments, native tool feature
+contracts, compiler capability or community-scale training. All 151 chunks and
+final inventory stay authoritative/unchanged; v9 binds their reviewed receipt and
+seal/archive/member hashes and restores read-only. Missing/corrupt retained bytes
+fail explicitly, without falling back to fresh source copying. The fresh native
+v8 attempt did not execute restore; restored consumers remain a native test.
+
+Tool execution venvs bind the restored job-local prefix explicitly; preserve their
+lexical interpreter paths. Their retained /tmp-dependent bindings are executed
+provenance, not portable/reusable environments after job reset. Future jobs create
+new bindings after restore rather than mutate an accepted one. The separately
+bound CheckM console source is invoked through isolated Python, never its old
+shebang; external marker payloads remain pinned/read-only. Original AMBER/mapping
+prefixes still require their own native health and byte/origin checks.
+
+Every native import/install/help/extractor and nested process now shares the
+owner-selected overall clock, with no lower stage wall caps. Completed bytes/
+entries guard restore; launched-tree CPU/physical I/O guards native computation/
+transport, and startup phase/stack/file movement guards cold imports. Heartbeats
+are not accepted work. Bound CI/local fixtures separately; a quiet CPU computation
+must not be killed merely because it emits no log output. V9's five-hour ceiling
+is the existing bounded cold-setup/source/native-contract allocation, not a
+performance projection from the 161-second recovery. Native timings remain pending.

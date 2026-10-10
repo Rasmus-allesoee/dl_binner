@@ -279,16 +279,69 @@ def materialize(source, destination, state, summary, readers=8, progress=None):
         return dict(manifest,source_copied_entries=copied,restored_entries=restored)
 
 
+def restore_accepted(accepted, destination, summary, progress=None):
+    """Restore an accepted complete runtime read-only, with no original-source access.
+
+    The reviewed record binds the final receipt and every sealed chunk. Verify
+    seals, archive and member bytes before use; missing/corrupt state fails rather
+    than triggering a new copy. A fresh job-local destination is mandatory.
+    """
+    from e009_common import binding
+    anchor=accepted['snapshot'];state=Path(anchor['state']);destination=Path(destination).absolute()
+    if state.is_symlink() or destination.exists() or destination.is_symlink():
+        raise ValueError('Unlinked retained state and fresh restore destination required')
+    progress=progress or Progress();progress.advance('bind accepted snapshot',force=True)
+    receipt=state/'snapshot.json'
+    if binding(receipt)!=anchor['receipt_file']:raise ValueError('Accepted snapshot receipt bytes changed')
+    manifest=json.loads(receipt.read_text())
+    if manifest['format']!='e009-runtime-chunks-v8' or manifest['source_prefix']!=anchor['source_prefix'] or manifest['state']!=str(state) or manifest['shards']!=anchor['shards']:
+        raise ValueError('Accepted snapshot identity changed')
+    if len(manifest['files'])!=anchor['files'] or manifest['logical_bytes']!=anchor['logical_bytes']:
+        raise ValueError('Accepted snapshot population changed')
+    if shutil.disk_usage(destination.parent).free<manifest['logical_bytes']+500_000_000:
+        raise ValueError('Provision local temporary space for retained runtime')
+    # Lock an already existing inode read-only; do not create/change persistent state.
+    with (state/'writer.lock').open('r') as lock:
+        fcntl.flock(lock,fcntl.LOCK_SH|fcntl.LOCK_NB)
+        destination.mkdir();seen={}
+        for index,shard in enumerate(manifest['shards']):
+            if shard['receipt']!=f'chunk-{index:05}.json':raise ValueError('Accepted chunk locator changed')
+            seal=state/shard['receipt']
+            if seal.is_symlink():raise ValueError('Linked chunk receipt refused')
+            sealed=json.loads(seal.read_text())
+            if digest_json(sealed)!=shard['receipt_sha256'] or sealed['index']!=index or sealed['plan_sha256']!=manifest['plan_sha256'] or sealed['archive']!=shard['archive']:
+                raise ValueError('Accepted chunk seal changed')
+            if (state/sealed['archive']['name']).is_symlink():raise ValueError('Linked chunk archive refused')
+            for name,record in sealed['files'].items():
+                if name in seen or manifest['files'].get(name)!=record:raise ValueError('Accepted chunk member population changed')
+                seen[name]=record
+            restore_chunk(state,sealed,list(sealed['files']),destination,progress)
+            progress.advance('accepted chunk restored',force=True,restored=len(seen),sealed_chunks=index+1)
+        if seen!=manifest['files']:raise ValueError('Incomplete accepted chunk population')
+        verify(destination,manifest,progress=lambda n:progress.advance('verify restored bytes',n))
+    write=dict(state=str(state),receipt_file=anchor['receipt_file'],local_prefix=str(destination),
+        source_copied_entries=0,restored_entries=len(seen),sealed_chunks=len(manifest['shards']),
+        logical_bytes=manifest['logical_bytes'],complete=True,original_source_accessed=False)
+    atomic_json(summary,write);print('DLBINNER SNAPSHOT_READY_JSON='+json.dumps(write),flush=True)
+    return manifest
+
+
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--source',type=Path,required=True);p.add_argument('--destination',type=Path,required=True)
-    p.add_argument('--state',type=Path,required=True);p.add_argument('--summary',type=Path,required=True)
+    p.add_argument('--source',type=Path);p.add_argument('--destination',type=Path,required=True)
+    p.add_argument('--state',type=Path);p.add_argument('--summary',type=Path,required=True)
+    p.add_argument('--accepted-record',type=Path,help='Restore-only reviewed snapshot; never copies original contents')
     p.add_argument('--verify-receipt',type=Path);a=p.parse_args()
     try:
-        if a.verify_receipt:
+        if a.accepted_record:
+            if a.source or a.state or a.verify_receipt:raise ValueError('Accepted restore cannot also copy or select another state')
+            restore_accepted(json.loads(a.accepted_record.read_text()),a.destination,a.summary)
+        elif a.verify_receipt:
             progress=Progress();verify(a.destination,json.loads(a.verify_receipt.read_text()),
                 progress=lambda n:progress.advance('verify local bytes',n))
-        else:materialize(a.source,a.destination,a.state,a.summary)
+        else:
+            if not a.source or not a.state:raise ValueError('Materialization needs source and state')
+            materialize(a.source,a.destination,a.state,a.summary)
     except BaseException:
         import sys,traceback
         traceback.print_exc();sys.stdout.flush();sys.stderr.flush();os._exit(1)

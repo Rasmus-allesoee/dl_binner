@@ -320,6 +320,11 @@ evidence, not just any nonzero exit; a monitoring/prerequisite failure can other
 produce a false pass.
 On recovery, test that completed stages are not scheduled again and that every
 remaining consumer follows the reused manifests rather than inferred paths.
+For an accepted hash-bound runtime payload, prepare a restore-only consumer that
+verifies retained receipts, archives and member bytes without rereading original
+source contents. Missing/corrupt retained payloads must fail explicitly rather
+than silently trigger a fresh copy. Treat job-local dependency bindings as
+provenance with an explicit lifetime; they are not portable environments.
 
 For new bounded owner-run drivers, cover parent-side verification, hashing and
 setup with the overall execution ceiling as well as timing child stages. Retain

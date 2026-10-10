@@ -24,11 +24,11 @@ from e009_data import canonical_dna,combine_depth,competitive_reference,partitio
 from e009_native import cpu_plan,prepare_bam_directory,validate_comebin_contigs
 from e009_hmm import budget_args
 from e009_startup import startup_argv,supervise_startup,wait_snapshot,StartupProgress,progress_signature,source_cache_argv
-from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after,run_stage
+from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after,run_stage,python_wrapper
 from e009_common import tree_binding
 from e009_truth import construct,parse_paf,reconcile,recovery,union
 from e009_snapshot import create as create_snapshot, restore as restore_snapshot, verify as verify_snapshot
-from e009_materialize import materialize,plan as runtime_plan
+from e009_materialize import materialize,plan as runtime_plan,restore_accepted,digest_json
 from e009_startup import supervise_work
 
 
@@ -41,6 +41,71 @@ class E009Contracts(unittest.TestCase):
     def put(self,name,text):
         """Write one new fixture file and return its explicit path."""
         path=self.p/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(text);return path
+
+    def accepted_fixture(self):
+        """Create actual sealed bytes and the reviewed-acceptance anchor for restore tests."""
+        self.put('original/lib/module.py','retained source\n')
+        m=materialize(self.p/'original',self.p/'first',self.p/'state',self.p/'first.json')
+        return {'snapshot':{'state':str(self.p/'state'),'receipt_file':binding(self.p/'state/snapshot.json'),
+            'source_prefix':m['source_prefix'],'shards':m['shards'],'files':len(m['files']),
+            'logical_bytes':m['logical_bytes']}}
+
+    def test_accepted_restore_never_accesses_original_and_keeps_state_immutable(self):
+        anchor=self.accepted_fixture();before=tree_binding(self.p/'state')
+        (self.p/'original').rename(self.p/'original-unavailable')
+        restore_accepted(anchor,self.p/'restored',self.p/'restored.json')
+        obs=json.loads((self.p/'restored.json').read_text())
+        self.assertEqual(obs['source_copied_entries'],0);self.assertEqual(obs['restored_entries'],1)
+        self.assertFalse(obs['original_source_accessed']);self.assertEqual(tree_binding(self.p/'state'),before)
+        self.assertEqual((self.p/'restored/lib/module.py').read_bytes(),(self.p/'first/lib/module.py').read_bytes())
+
+    def test_accepted_restore_refuses_receipt_seal_missing_chunk_and_corruption(self):
+        for case in ('receipt','seal','missing','corrupt'):
+            with self.subTest(case=case):
+                import shutil
+                for name in ('original','first','state'):
+                    if (self.p/name).exists():shutil.rmtree(self.p/name)
+                if (self.p/'first.json').exists():(self.p/'first.json').unlink()
+                a=self.accepted_fixture();shard=a['snapshot']['shards'][0]
+                if case=='receipt':(self.p/'state/snapshot.json').write_text('{}')
+                elif case=='seal':(self.p/'state'/shard['receipt']).write_text('{}')
+                elif case=='missing':(self.p/'state'/shard['archive']['name']).unlink()
+                else:
+                    with (self.p/'state'/shard['archive']['name']).open('r+b') as f:f.seek(-1,2);f.write(b'X')
+                with self.assertRaises((ValueError,KeyError,FileNotFoundError)):
+                    restore_accepted(a,self.p/('restore-'+case),self.p/(case+'.json'))
+
+    def test_python_wrapper_keeps_lexical_venv_cache_policy_and_forwarded_args(self):
+        import venv
+        venv.EnvBuilder(with_pip=False).create(self.p/'venv')
+        python=self.p/'venv/bin/python';script=self.put('probe.py',
+            "import json,sys;print(json.dumps({'prefix':sys.prefix,'lexical':sys.executable,'cache':sys.pycache_prefix,'no_writes':sys.dont_write_bytecode,'args':sys.argv[1:]}))\n")
+        wrapper=self.p/'wrapper';python_wrapper(wrapper,python,script,['fixed'],{'E009_SOURCE_CACHE_ROOT':str(self.p/'cache')})
+        r=json.loads(subprocess.check_output([wrapper,'forwarded with space'],text=True))
+        self.assertEqual(r['prefix'],str(self.p/'venv'));self.assertEqual(r['lexical'],str(python))
+        self.assertEqual(r['cache'],str(self.p/'cache'));self.assertTrue(r['no_writes'])
+        self.assertEqual(r['args'],['fixed','forwarded with space'])
+
+    def test_native_activity_ignores_short_stage_cap_and_stops_sleeper_or_fatal(self):
+        sup=supervisor();env=sup.isolated_env(1);policy={'native_activity':True,'startup_idle_seconds':.5}
+        busy=self.put('busy.py','import time\nend=time.monotonic()+1.3\nwhile time.monotonic()<end: x=sum(range(1000))\n')
+        run_stage(sup,[sys.executable,'-I','-B',busy],self.p/'busy.log',.1,4,4_000_000_000,env,policy)
+        for name,code,cause in [('sleep','import time;time.sleep(30)','no observed'),
+                                ('fatal',"import time;print('Traceback (most recent call last):',flush=True);time.sleep(30)",'Fatal native worker')]:
+            with self.subTest(name=name):
+                script=self.put(name+'.py',code);log=self.p/(name+'.log')
+                with self.assertRaises(RuntimeError):run_stage(sup,[sys.executable,'-I','-B',script],log,.1,5,4_000_000_000,env,policy)
+                receipt=json.loads(log.with_suffix('.exit.json').read_text())
+                self.assertIn(cause,receipt['stop_reason']);self.assert_stopped(receipt['launched_pid'])
+
+    def test_native_child_uses_parent_clock_without_short_inner_cap(self):
+        from unittest.mock import patch
+        from e009_data import run_native
+        with patch.dict(os.environ,{'E009_PARENT_DEADLINE':str(time.monotonic()+3)}):
+            run_native([sys.executable,'-I','-B','-c','import time;time.sleep(.2)'],self.p/'inner.log',timeout=.01)
+        with patch.dict(os.environ,{'E009_PARENT_DEADLINE':str(time.monotonic()-1)}):
+            with self.assertRaisesRegex(TimeoutError,'Owner overall'):
+                run_native([sys.executable,'-c','pass'],self.p/'expired.log',timeout=60)
 
     def test_runtime_selection_preserves_data_metadata_testing_and_internal_link_targets(self):
         for n in ['bin/python3.13','lib/python3.13/os.py','lib/libblas.so',

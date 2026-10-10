@@ -28,6 +28,11 @@ def run_native(argv, log, stdout=None, timeout=None, cwd=None):
     Parent owner supervision enforces the whole clock/RSS and cleans the inherited
     process group. This inner watcher detects a traceback even if the tool hangs.
     """
+    import os
+    inherited=os.environ.get('E009_PARENT_DEADLINE')
+    if inherited:
+        timeout=float(inherited)-time.monotonic()
+        if timeout<=0:raise TimeoutError('Owner overall native work ceiling reached')
     argv=source_cache_argv(argv)
     log = Path(log); log.parent.mkdir(parents=True, exist_ok=True)
     process = None; started = time.monotonic(); error = None
