@@ -69,6 +69,20 @@ class E009Contracts(unittest.TestCase):
         (source/'blocked').unlink();(self.p/'local').mkdir()
         with self.assertRaisesRegex(ValueError,'fresh'):create_snapshot(source,self.p/'local',self.p/'a.tar',self.p/'a.json')
 
+    @unittest.skipIf(os.geteuid()==0,'Root can read mode-zero files; permission failure needs an ordinary user')
+    def test_snapshot_actual_copy_reader_failure_exits_and_retains_cause(self):
+        source=self.p/'prefix';bad=self.put('prefix/unreadable.py','original bytes');bad.chmod(0)
+        for i in range(20):self.put(f'prefix/other-{i}.py','unchanged')
+        log=self.p/'reader-failure.log';sup=supervisor()
+        with self.assertRaisesRegex(RuntimeError,'PermissionError'):
+            sup.supervise([sys.executable,'-I','-B',ROOT/'scripts/e009_snapshot.py',
+                '--source',source,'--destination',self.p/'copy','--archive',self.p/'a.tar',
+                '--receipt',self.p/'receipt.json'],log,5,1_000_000_000,sup.isolated_env(1))
+        record=json.loads(log.with_suffix('.exit.json').read_text())
+        self.assertEqual(record['exit_code'],1);self.assertIsNone(record['stop_reason'])
+        self.assertIn('unreadable.py',log.read_text());self.assert_stopped(record['launched_pid'])
+        self.assertFalse((self.p/'receipt.json').exists());self.assertFalse((self.p/'a.tar').exists())
+
     def archive(self,name,members):
         """Create a tiny archive with explicit member types for extraction checks."""
         path=self.p/name

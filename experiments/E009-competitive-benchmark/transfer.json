@@ -1,124 +1,256 @@
 {
   "record": "E009",
-  "version": "v6",
+  "version": "v7",
   "date": "2026-10-10",
-  "status": "prepared and locally tested cheap source-cache recovery; full native preflight suspended",
-  "source_commit": "76c5012e9f9981d89a3ac3c4d6773205cf1dee2b",
+  "status": "prepared/tested immutable local numerical runtime snapshot; native Linux pending; full preflight disabled",
+  "source_commit": "4068297c2ec18d941b56c463abcc31aad61f6d8b",
   "archive": {
-    "path": "artifacts/e009-preparation/transfer-v6/e009-preflight-v6.tar.gz",
+    "path": "artifacts/e009-preparation/transfer-v7-final/e009-preflight-v7.tar.gz",
     "file": {
-      "bytes": 51348,
-      "sha256": "cc6effd945833ae520d59d474aaa2fae0aab0c0977bfbd6d4c61a925c4b61ec8"
+      "bytes": 54472,
+      "sha256": "594bcdabb14018df77aef07bb09b619190cdc6c44d5d79738c9717e19a383e3f"
     }
   },
   "checksum": {
-    "path": "artifacts/e009-preparation/transfer-v6/e009-preflight-v6.tar.gz.sha256",
+    "path": "artifacts/e009-preparation/transfer-v7-final/e009-preflight-v7.tar.gz.sha256",
     "file": {
       "bytes": 91,
-      "sha256": "d315a46d04021dcea3089270f231513ee660d17cedfa96150fd434a3b76251b3"
+      "sha256": "25d35cb89912c1ffa126e556b786d1cf6ffa3ba90a5bf803225802a0cd51d315"
     }
   },
   "manifest": {
-    "bytes": 2618,
-    "sha256": "a503a672cfc28c104ee759c75613c30ee0cd43ca150e4228fbb5ad6da407b474"
+    "bytes": 2767,
+    "sha256": "2b5b802faecd34e3af5201de73d5aad618efbec90638dfd78e71c135be481496"
   },
-  "payload_files": 16,
+  "payload_files": 17,
   "all_packet_hashes_verified": true,
   "recovery_only": true,
   "bootstrap_DNA_model_Mac_environment_included": false,
   "build_receipt": {
-    "path": "artifacts/e009-preparation/transfer-v6/transfer-receipt.json",
+    "path": "artifacts/e009-preparation/transfer-v7-final/transfer-receipt.json",
     "file": {
-      "bytes": 653,
-      "sha256": "79487ec528d15ddc77862e4408661ea2de2554d4c9f8203f2c79373c9780ccea"
+      "bytes": 665,
+      "sha256": "3510500ef4b209b9512955c9717898f8e3afcd5f06ecec1ac98821b405afae28"
     }
   },
   "operations": "OPERATIONS.md",
   "operations_command": {
     "bytes": 2355,
-    "sha256": "f21520fc8a7f89672fc8f54d8e099ec3ccf1a845931fe1d1e438344b91966498"
+    "sha256": "0a83b64eec3843fe3efbef12e670585cb4a82c67a0d5f245899f8f9a0c1b90bf"
   },
   "owner_allocation": {
     "vcpus": 1,
     "ram_gb": 4,
     "working_rss_bytes": 3000000000,
-    "work_seconds": 300,
-    "overall_seconds_normal": 330,
-    "source_cache_read_seconds": 15,
+    "work_seconds": 1800,
+    "overall_seconds_normal": 1830,
+    "copy_seconds": 1200,
     "inventory_seconds": 180,
-    "idle_seconds": 45
+    "idle_seconds": 45,
+    "io_readers": 8
   },
-  "previous_native_failure": "linux-startup-failure-v5.json",
-  "limits": "175 retained file waits, 162 caches. Other waits mean cache bypass is not a confirmed Linux/provider repair.",
+  "previous_native_failure": "linux-startup-failure-v6.json",
+  "limits": "Kernel/provider cause unidentified. New execution storage path tested locally; no Linux compatibility/performance admission. Import cap unchanged; copy/pack ceiling distinct.",
   "local_checks": {
-    "unit_tests": 30,
+    "unit_tests": 33,
     "unit_log": {
-      "path": "artifacts/e009-preparation/unit-v21.log",
+      "path": "artifacts/e009-preparation/unit-v26.log",
       "file": {
-        "bytes": 6426,
-        "sha256": "cb4b7645b56319a2bfd4ad70b82221f99b43d5a4caa80dec9ace60b99e2ee4a1"
-      }
-    },
-    "actual_Mac_worker": {
-      "path": "artifacts/e009-preparation/source-cache-native-qa-v2/passed.json",
-      "file": {
-        "bytes": 1341,
-        "sha256": "587fb8030c33f5b1cda48c826777735601a7804f6a99f453cb69a2f92933fa29"
+        "bytes": 7366,
+        "sha256": "f48f3fbd1ed88a222daaa1a8ea881ecd32a75ec3b9075a3aed15dfa28c7de7b1"
       }
     },
     "owner_packet_harness": {
-      "path": "artifacts/e009-preparation/cache-owner-packet-qa-v1/passed.json",
+      "path": "artifacts/e009-preparation/snapshot-owner-qa-v1/passed.json",
       "file": {
-        "bytes": 18990,
-        "sha256": "82f48603598cb5ac8c3af0e2d90febc8748f6956577678fd56f4cffb1ffd66a4"
+        "bytes": 32559,
+        "sha256": "7702fda2acf6c15c69af0447369330694edd9f69e29d9dc06dedbd24524caf1e"
       }
     },
     "harness_script": {
-      "path": "artifacts/e009-preparation/cache-owner-packet-qa-v1.py",
+      "path": "artifacts/e009-preparation/snapshot-owner-qa-v1.py",
       "file": {
-        "bytes": 6672,
-        "sha256": "dc1fc3c2f369bcd29c25c494624873ff70bcc96d1373fdc0fea76f3fc1a71c30"
+        "bytes": 7803,
+        "sha256": "02fced6f6504fc17795d97affb1e54ae28846aeab196a4abd1ea67cda39e9880"
       }
     },
     "harness_terminal": {
-      "path": "artifacts/e009-preparation/cache-owner-packet-qa-v1-terminal.log",
+      "path": "artifacts/e009-preparation/snapshot-owner-qa-v1-terminal.log",
       "file": {
-        "bytes": 22136,
-        "sha256": "d74504372a6f075096ade1ef606099cc252694ffb562112df9588ad49e8e05e7"
+        "bytes": 57230,
+        "sha256": "01f4cb244be460450160f4a9170c462012a71f3ad525e42ec0e17a78ba9aaf1f"
+      }
+    },
+    "actual_prefix_before_after_unchanged": true,
+    "original_prefix_binding": {
+      "bytes": 1058026394,
+      "files": 19311,
+      "tree_sha256": "5e86a66b1200cbd0f0731638295bcb86ff0211c62f1e43b0b80ef8b7010a5699"
+    },
+    "Mac_python_version": "3.13.12",
+    "Mac_modules": [
+      "numpy",
+      "pandas"
+    ],
+    "full_original_freeze_matched": true,
+    "fresh_copy": {
+      "command": [
+        "/opt/miniconda3/bin/python3",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-cache-recovery-uyuc4quf/unused-bytecode",
+        "/private/tmp/e009-snapshot-qa-84g17chw/fresh/transfer/launch-ell5helm/e009-preflight-v7/scripts/e009_snapshot.py",
+        "--source",
+        "/opt/miniconda3/envs/snakemake_env",
+        "--destination",
+        "/tmp/e009-cache-recovery-uyuc4quf/prefix",
+        "--archive",
+        "/private/tmp/e009-snapshot-qa-84g17chw/fresh/runtime-snapshots/native-preflight-db5eplpb/comebin-runtime.tar",
+        "--receipt",
+        "/private/tmp/e009-snapshot-qa-84g17chw/fresh/runtime-snapshots/native-preflight-db5eplpb/snapshot.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 27062,
+      "peak_sampled_rss_bytes": 111104000,
+      "rss_bytes_ceiling": 3000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 1.5405068611923147,
+      "sampled_cpu_seconds": 24.87,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 179.77198019466596,
+      "stop_reason": null,
+      "wall_seconds": 16.144037152000237
+    },
+    "fresh_inventory": {
+      "command": [
+        "/tmp/e009-cache-recovery-uyuc4quf/prefix/bin/python",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-cache-recovery-uyuc4quf/unused-bytecode",
+        "-S",
+        "/private/tmp/e009-snapshot-qa-84g17chw/fresh/transfer/launch-ell5helm/e009-preflight-v7/scripts/e009_startup.py",
+        "10",
+        "file",
+        "/private/tmp/e009-snapshot-qa-84g17chw/fresh/transfer/launch-ell5helm/e009-preflight-v7/scripts/e009_native.py",
+        "--inventory-prefix",
+        "/tmp/e009-cache-recovery-uyuc4quf/prefix",
+        "--expected-freeze",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/snapshot-owner-qa-v1/expected-freeze.txt",
+        "--forbidden-prefix",
+        "/opt/miniconda3/envs/snakemake_env",
+        "--modules",
+        "numpy",
+        "pandas"
+      ],
+      "exit_code": 0,
+      "launched_pid": 27257,
+      "peak_sampled_rss_bytes": 185303040,
+      "rss_bytes_ceiling": 3000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.129239759026111,
+      "sampled_cpu_seconds": 7.46,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 163.5929764266766,
+      "stop_reason": null,
+      "wall_seconds": 57.722175097005675
+    },
+    "reuse_restore": {
+      "command": [
+        "/opt/miniconda3/bin/python3",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-cache-recovery-k6rx7sa4/unused-bytecode",
+        "/private/tmp/e009-snapshot-qa-84g17chw/reuse/transfer/launch-_rtoc_o3/e009-preflight-v7/scripts/e009_snapshot.py",
+        "--restore",
+        "--receipt",
+        "/private/tmp/e009-snapshot-qa-84g17chw/fresh/runtime-snapshots/native-preflight-db5eplpb/snapshot.json",
+        "--destination",
+        "/tmp/e009-cache-recovery-k6rx7sa4/prefix"
+      ],
+      "exit_code": 0,
+      "launched_pid": 28125,
+      "peak_sampled_rss_bytes": 92381184,
+      "rss_bytes_ceiling": 3000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.8881571945420244,
+      "sampled_cpu_seconds": 11.57,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 179.74234377627727,
+      "stop_reason": null,
+      "wall_seconds": 13.026973233005265
+    },
+    "snapshot": {
+      "files": 13829,
+      "logical_bytes": 276167151,
+      "archive": {
+        "bytes": 300646400,
+        "path": "/private/tmp/e009-snapshot-qa-84g17chw/fresh/runtime-snapshots/native-preflight-db5eplpb/comebin-runtime.tar",
+        "sha256": "5c8794eda9bd4ab787b7eab6fdcdb4abbba9c4975ae539cbc02d6a4d788df828"
+      },
+      "manifest": {
+        "path": "artifacts/e009-preparation/snapshot-owner-qa-v1/retained-snapshot-manifest.json",
+        "file": {
+          "bytes": 2836658,
+          "sha256": "5b4c320a99052d4287dda47c17df5cc081bdd4def25c18f804cf0411e9a14b6a"
+        }
       }
     },
     "cases": {
+      "corrupt-runtime": {
+        "status": "failed",
+        "seconds_before_collection": 1.1188606230425648,
+        "outer_wall_seconds": 1.9916090359911323
+      },
       "fresh": {
-        "status": "passed intended recovery contract",
-        "attempts": 2
+        "status": "passed",
+        "seconds_before_collection": 78.92855577834416,
+        "outer_wall_seconds": 84.40022504498484
       },
       "inner-corruption": {
-        "status": "passed intended recovery contract",
-        "attempts": 1
+        "status": "failed",
+        "seconds_before_collection": 0.16948310370207764,
+        "outer_wall_seconds": 0.6372139279847033
       },
-      "missing-source": {
-        "status": "passed intended recovery contract",
-        "attempts": 1
+      "missing-prefix": {
+        "status": "failed",
+        "seconds_before_collection": 0.8253695165913086,
+        "outer_wall_seconds": 1.8202977600158192
       },
-      "outer-checksum": {
-        "status": "intended outer SHA failure",
-        "attempts": 0
+      "outer-corruption": {
+        "status": null,
+        "seconds_before_collection": null,
+        "outer_wall_seconds": null
       },
       "overall-timeout": {
-        "status": "passed intended recovery contract",
-        "attempts": 1
+        "status": "failed",
+        "seconds_before_collection": 2.272462539229309,
+        "outer_wall_seconds": 3.35302294100984
+      },
+      "reuse": {
+        "status": "passed",
+        "seconds_before_collection": 63.09834341172245,
+        "outer_wall_seconds": 66.57964356799494
       },
       "wrong-inventory": {
-        "status": "passed intended recovery contract",
-        "attempts": 1
+        "status": "failed",
+        "seconds_before_collection": 60.17014150568866,
+        "outer_wall_seconds": 66.47251678499742
       }
     },
-    "retained_prefix_full_binding": {
-      "bytes": 774207552,
-      "files": 20132,
-      "tree_sha256": "935d2d6968f5ddc8b6b7aebbb030db7aab2ac1e5bd240eb7152885db5d98508f"
-    },
-    "scope": "actual FIFO blocked-cache repair; Mac source/cache readers, NumPy/Torch imports, full freeze/cache audit and exact entry/packet/inventory/source failures/timeout/returns. Linux requires all ten imports and actual source speed; no native Linux effectiveness claim."
+    "scope": "actual committed Bash/bootstrap/driver outside checkout; standalone Mac Conda Python3.13, complete freeze, NumPy/Pandas, actual copy/restore/read-only hashes/returns/failures. No Linux library mapping, Linux ten-module or Torch snapshot validation credit.",
+    "additional_reader_failure": "real mode-zero file raises PermissionError in the production reader; exits 1 without timeout or receipt; stopped process checked by unit suite",
+    "retained_evidence": "compact stage evidence and original returned member checks copied under snapshot-owner-qa-v1/retained-*; bulky Mac snapshot/archive are regenerable and not a portable transfer",
+    "docs_check": {
+      "path": "artifacts/e009-preparation/docs-v7-final.log",
+      "file": {
+        "bytes": 727,
+        "sha256": "5d356898e6d8a8f30b08b616feb148dc7c74bee36184e8d75911cee30b956efb"
+      },
+      "status": "passed --check-context; optional missing historical caches reported separately"
+    }
   },
   "native_Linux_recovery_executed": false,
   "full_native_preflight_enabled": false,
@@ -183,6 +315,18 @@
         }
       },
       "status": "immutable verified native failure; superseded for new launch"
+    },
+    {
+      "version": "v6",
+      "source_commit": "76c5012e9f9981d89a3ac3c4d6773205cf1dee2b",
+      "archive": {
+        "path": "artifacts/e009-preparation/transfer-v6/e009-preflight-v6.tar.gz",
+        "file": {
+          "bytes": 51348,
+          "sha256": "cc6effd945833ae520d59d474aaa2fae0aab0c0977bfbd6d4c61a925c4b61ec8"
+        }
+      },
+      "status": "immutable verified native source-read failure; superseded for new launch"
     }
   ]
 }

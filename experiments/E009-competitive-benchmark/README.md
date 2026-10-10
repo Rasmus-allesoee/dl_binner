@@ -547,3 +547,26 @@ Thirty minutes work, 30 seconds normal collection, one CPU /4 GB, sampled RSS
 import timeout, dependency gate bypass, package installation or changed science.
 See [Operations](OPERATIONS.md) for the next owner command and exact acceptance
 boundary. Local tests and native Linux validation remain separate.
+
+V7 final packet is bound to committed source `4068297c2ec18d941b56c463abcc31aad61f6d8b`:
+54,472 bytes /17 payload files plus manifest. Thirty-three local checks pass. The
+exact Bash bootstrap/driver ran outside the checkout on a real standalone Mac
+Conda Python 3.13.12 runtime, full freeze matched, NumPy/Pandas imported, and
+NumPy arithmetic passed. Original complete prefix binding stayed unchanged.
+Copy/verify/pack: 16.144 seconds; first inventory: 57.722 seconds /7.46 sampled
+CPU seconds /185,303,040-byte peak RSS. Snapshot: 13,829 file/link entries,
+276,167,151 regular bytes, 300,646,400-byte archive. Fresh and explicit reuse
+passed; reuse scheduled restore, never a new source copy. Actual outer/inner
+packet corruption, missing-prefix failure, wrong freeze, runtime archive corruption
+and overall timeout produced their intended retained causes. A production reader
+permission error exited promptly without receipt/archive acceptance.
+
+These are software/portability contract checks, not UCloud cost or Linux validation.
+Mac lacks the `/proc` mapped-library check; its fixture checks NumPy/Pandas, not
+all ten Linux modules or a Torch snapshot. Local copy CPU averaged 1.54 because
+Mac has no Linux affinity binding; native recovery binds the whole process tree
+to one CPU. No proportional runtime prediction follows.
+[transfer.json](transfer.json) binds logs, full compact metrics and return evidence;
+failed sandbox `ps` checks and the corrected macOS parent-path alias regression
+remain retained locally. All old packets/environments and scientific settings
+are preserved. The provider storage cause remains unidentified.

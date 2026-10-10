@@ -108,5 +108,7 @@
     ".py": 34
   },
   "interpretation": "Linux file-read latency affects original Python source and libraries too; no Bash syntax error or fatal Python exception. Source-cache bypass is superseded. Kernel/provider storage cause remains unidentified.",
-  "scientific_stages_started": false
+  "scientific_stages_started": false,
+  "source_commit": "76c5012e9f9981d89a3ac3c4d6773205cf1dee2b",
+  "verified_bundle_manifest_sha256": "a503a672cfc28c104ee759c75613c30ee0cd43ca150e4228fbb5ad6da407b474"
 }

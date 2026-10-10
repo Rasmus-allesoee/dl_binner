@@ -276,6 +276,13 @@ E009. Full original freeze/import/origin checks, local library mapping and small
 numerical operations must pass natively. The import cap is unchanged (180 seconds);
 the new ceiling covers copying/packing, not longer Home imports. A native pass is
 pending; local tests cannot establish UCloud storage performance or portability.
+V7 final upload pair is under `artifacts/e009-preparation/transfer-v7-final/`,
+bound to source `4068297c2ec18d941b56c463abcc31aad61f6d8b`; 54,472 archive bytes.
+Thirty-three regressions and the exact Bash/packet/driver on standalone Mac Conda
+pass, including byte-preserving copy, full freeze/NumPy/Pandas, unchanged original
+prefix, explicit archive reuse, corruption/failure/timeout causes and return/log
+contracts. Mac tests do not validate Linux mapped libraries or all ten native
+modules/Torch; see the [transfer receipt](../experiments/E009-competitive-benchmark/transfer.json).
 Full eight-CPU preflight stays disabled until reviewed Linux numerical recovery
 and all later dependent runtime/child contracts are prepared. No scientific
 settings, benchmark source/data/shortlist or accepted evidence change.

@@ -13,8 +13,10 @@ Use **CPU/Linux x86-64, 1 vCPU /4 GB**, Home mounted, no competing workload or
 Slurm. Do not rent eight CPUs for this storage recovery. Upload the new
 `e009-preflight-v7.tar.gz` and `.tar.gz.sha256` to
 `/work/Home/dl_binner/e009/transfer/`; local pair is
-`artifacts/e009-preparation/transfer-v7/`. [transfer.json](transfer.json) owns the
-final committed source/hash identities. Preserve all older packets and attempts.
+`artifacts/e009-preparation/transfer-v7-final/`. [transfer.json](transfer.json) owns the
+source `4068297c2ec18d941b56c463abcc31aad61f6d8b`, 54,472 archive bytes,
+SHA256 `594bcdabb14018df77aef07bb09b619190cdc6c44d5d79738c9717e19a383e3f`.
+Preserve all older packets and attempts.
 The bundle contains only reviewed code/records; no Mac environment or DNA/model.
 
 ```bash
