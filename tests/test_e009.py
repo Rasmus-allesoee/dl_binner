@@ -107,6 +107,36 @@ class E009Contracts(unittest.TestCase):
             with self.assertRaisesRegex(TimeoutError,'Owner overall'):
                 run_native([sys.executable,'-c','pass'],self.p/'expired.log',timeout=60)
 
+    def test_native_download_work_reports_advance_without_heartbeat_credit(self):
+        sup=supervisor();env=sup.isolated_env(1);policy={'native_activity':True,'startup_idle_seconds':1.1}
+        for moving in (True,False):
+            script=self.put('reports-'+str(moving)+'.py',
+                "import json,time\nfor n in range(35):\n print('DLBINNER WORK_PROGRESS_JSON='+json.dumps({'work_key':'software-download','completed_bytes':n if "+str(moving)+" else 0}),flush=True)\n time.sleep(.1)\n")
+            log=self.p/('reports-'+str(moving)+'.log')
+            if moving:run_stage(sup,[sys.executable,'-I','-B',script],log,.1,6,4_000_000_000,env,policy)
+            else:
+                with self.assertRaisesRegex(RuntimeError,'no observed'):
+                    run_stage(sup,[sys.executable,'-I','-B',script],log,.1,6,4_000_000_000,env,policy)
+                self.assert_stopped(json.loads(log.with_suffix('.exit.json').read_text())['launched_pid'])
+
+    def test_actual_http_acquisition_reports_completed_bytes_and_verifies_payload(self):
+        import functools,hashlib,http.server,threading
+        payload=self.put('http/payload.bin','bounded software payload\n'*4096)
+        class Quiet(http.server.SimpleHTTPRequestHandler):
+            def log_message(self,*args):pass
+        server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Quiet,directory=str(payload.parent)))
+        worker=threading.Thread(target=server.serve_forever,daemon=True);worker.start()
+        try:
+            destination=self.p/'downloaded.bin';text=io.StringIO()
+            with contextlib.redirect_stdout(text):
+                receipt=acquire({'url':f'http://127.0.0.1:{server.server_port}/payload.bin',
+                    'bytes':payload.stat().st_size,'sha256':hashlib.sha256(payload.read_bytes()).hexdigest()},destination)
+            rows=[json.loads(line.split('=',1)[1]) for line in text.getvalue().splitlines() if line.startswith('DLBINNER WORK_PROGRESS_JSON=')]
+            self.assertEqual(rows[0]['completed_bytes'],0);self.assertEqual(rows[-1]['completed_bytes'],payload.stat().st_size)
+            self.assertTrue(all(row['work_key']==str(destination) for row in rows))
+            self.assertTrue(receipt['publisher_checksum_verified']);self.assertEqual(destination.read_bytes(),payload.read_bytes())
+        finally:server.shutdown();server.server_close();worker.join(timeout=2)
+
     def test_runtime_selection_preserves_data_metadata_testing_and_internal_link_targets(self):
         for n in ['bin/python3.13','lib/python3.13/os.py','lib/libblas.so',
                   'lib/python3.13/site-packages/torch/testing/_comparison.py',

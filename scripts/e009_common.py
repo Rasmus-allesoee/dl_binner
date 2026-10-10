@@ -10,6 +10,7 @@ import os
 from pathlib import Path, PurePosixPath
 import shutil
 import tarfile
+import time
 import urllib.request
 import zipfile
 
@@ -140,12 +141,17 @@ def acquire(spec, destination, resume=False):
         observed_headers = dict(response.headers)
         if spec.get('etag') and response.headers.get('ETag', '').strip('"') != spec['etag'].strip('"'):
             raise ValueError('Remote object identity changed')
-        size = 0
+        size = 0; last_report = time.monotonic()
+        print('DLBINNER WORK_PROGRESS_JSON='+json.dumps({'work_key':str(destination),'completed_bytes':0}),flush=True)
         for chunk in iter(lambda: response.read(1024 * 1024), b''):
             size += len(chunk)
             if size > spec.get('max_bytes', spec.get('bytes') or 10_000_000_000):
                 raise ValueError('Download exceeds declared provisioning allowance')
             out.write(chunk)
+            if time.monotonic()-last_report>=5:
+                print('DLBINNER WORK_PROGRESS_JSON='+json.dumps({'work_key':str(destination),'completed_bytes':size}),flush=True)
+                last_report=time.monotonic()
+        print('DLBINNER WORK_PROGRESS_JSON='+json.dumps({'work_key':str(destination),'completed_bytes':size}),flush=True)
     actual = binding(partial)
     if spec.get('bytes') is not None and actual['bytes'] != spec['bytes']:
         raise ValueError('Downloaded size differs')

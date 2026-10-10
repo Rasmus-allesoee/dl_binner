@@ -254,7 +254,7 @@ def supervise_activity(sup,command,log,seconds,ram_bytes,env,sample_root=None,id
     import json,os,re,time
     from pathlib import Path
     original=sup.process_sample;tracker=StartupProgress(idle_seconds,time.monotonic())
-    disabled=False;last=0;cpu_max=0;io_max={};native=Path('/proc/self/stat').is_file()
+    disabled=False;last=0;cpu_max=0;io_max={};reported_work={};native=Path('/proc/self/stat').is_file()
     with Path(log).with_suffix('.activity.jsonl').open('x') as output:
         def observed(root,known):
             nonlocal disabled,last,cpu_max
@@ -267,6 +267,12 @@ def supervise_activity(sup,command,log,seconds,ram_bytes,env,sample_root=None,id
                         reader.seek(0,2);reader.seek(max(0,reader.tell()-131072));tail=reader.read()
                     if b'Traceback (most recent call last):' in tail or b'Fatal Python error:' in tail:
                         raise RuntimeError('Fatal native worker traceback; see child log')
+                    for line in tail.decode(errors='replace').splitlines():
+                        if line.startswith('DLBINNER WORK_PROGRESS_JSON='):
+                            report=json.loads(line.split('=',1)[1]);key=report['work_key'];completed=report['completed_bytes']
+                            if not isinstance(key,str) or not isinstance(completed,int) or completed<0:
+                                raise ValueError('Invalid native completed-work report')
+                            reported_work[key]=max(reported_work.get(key,0),completed)
                 if native:
                     rows=[wait_snapshot(pid,start) for pid,start in list(known)[:64]]
                     for row in rows:
@@ -277,7 +283,7 @@ def supervise_activity(sup,command,log,seconds,ram_bytes,env,sample_root=None,id
                             io_max[key]=max(io_max.get(key,0),total)
                 # Actual physical I/O rather than rchar/wchar: a heartbeat writes
                 # to an already buffered page and must not keep a sleeper alive.
-                signature=(int(cpu_max*10),sum(io_max.values()))
+                signature=(int(cpu_max*10),sum(io_max.values()),sum(reported_work.values()))
                 tracker.observe(signature,now)
                 output.write(json.dumps(dict(monotonic_seconds=now,activity=signature,
                     idle_seconds_ceiling=idle_seconds,processes=rows,
