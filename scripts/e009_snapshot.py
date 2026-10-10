@@ -73,7 +73,7 @@ def create(source, destination, archive, receipt):
     archive=Path(archive);receipt=Path(receipt)
     if destination.exists() or archive.exists() or receipt.exists():raise ValueError('Use fresh snapshot destinations')
     if destination.is_relative_to(source):raise ValueError('Snapshot cannot be inside source prefix')
-    print('SNAPSHOT enumerate '+str(source),flush=True)
+    print('DLBINNER SNAPSHOT enumerate '+str(source),flush=True)
     before=entries(source);total=sum(r.get('bytes',0) for r in before.values())
     for parent in (destination.parent,archive.parent):
         if shutil.disk_usage(parent).free<total+500_000_000:raise ValueError('Provision snapshot space: '+str(total)+' bytes plus 500 MB reserve at '+str(parent))
@@ -88,19 +88,24 @@ def create(source, destination, archive, receipt):
         q.chmod(record['mode'])
         r={k:v for k,v in record.items() if k!='identity'};r['sha256']=digest.hexdigest()
         return rel,r
-    with ThreadPoolExecutor(max_workers=8) as pool:
+    pool=ThreadPoolExecutor(max_workers=8)
+    try:
         futures=[pool.submit(copy,rel,r) for rel,r in before.items()]
         for future in as_completed(futures):
             rel,r=future.result();records[rel]=r;done+=1
             if time.monotonic()-last>=5:
-                print(f'SNAPSHOT copied {done}/{len(before)} members; latest={rel}',flush=True);last=time.monotonic()
+                print(f'DLBINNER SNAPSHOT copied {done}/{len(before)} members; latest={rel}',flush=True);last=time.monotonic()
+    except BaseException:
+        pool.shutdown(wait=False,cancel_futures=True)
+        raise
+    else:pool.shutdown(wait=True)
     if entries(source)!=before:raise ValueError('Original prefix changed during copy')
     manifest={'source_prefix':str(source),'files':dict(sorted(records.items())),
               'logical_bytes':total,'excluded':'__pycache__, .pyc and .pyo only',
               'identity_scope':'copied source bytes, not equality to historical full-prefix hash',
               'io_readers':8,'scientific_execution_admitted':False}
-    print('SNAPSHOT verify local bytes',flush=True);verify(destination,manifest)
-    print('SNAPSHOT pack immutable archive',flush=True)
+    print('DLBINNER SNAPSHOT verify local bytes',flush=True);verify(destination,manifest)
+    print('DLBINNER SNAPSHOT pack immutable archive',flush=True)
     partial=archive.with_name(archive.name+'.partial')
     with tarfile.open(partial,'x') as tar:
         for rel in manifest['files']:tar.add(destination/rel,arcname='prefix/'+rel,recursive=False)
@@ -148,7 +153,13 @@ if __name__=='__main__':
     p.add_argument('--source',type=Path);p.add_argument('--destination',type=Path,required=True)
     p.add_argument('--archive',type=Path);p.add_argument('--receipt',type=Path,required=True)
     p.add_argument('--restore',action='store_true');a=p.parse_args()
-    if a.restore:restore(a.receipt,a.destination)
-    else:
-        if not a.source or not a.archive:p.error('Creation needs --source and --archive')
-        create(a.source,a.destination,a.archive,a.receipt)
+    try:
+        if a.restore:restore(a.receipt,a.destination)
+        else:
+            if not a.source or not a.archive:p.error('Creation needs --source and --archive')
+            create(a.source,a.destination,a.archive,a.receipt)
+    except BaseException:
+        # Do not let a fatal copy error wait for other readers blocked in kernel I/O
+        # during ThreadPoolExecutor's interpreter-exit join. No child processes here.
+        import sys, traceback
+        traceback.print_exc();sys.stdout.flush();sys.stderr.flush();os._exit(1)
