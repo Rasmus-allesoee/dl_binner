@@ -11,7 +11,9 @@ CPU affinity 0. All 24 archive members /22 inventory hashes pass; immutable
 payload 1,036,210 logical bytes. Exact after-collection allocation cost is unknown
 because its separate receipt was not uploaded. No community was fitted/scored.
 
-Native **fresh creation**, not native restore, was executed. The returned chunk
+The v8 attempt executed fresh creation. The cancelled v9 terminal subsequently
+observes complete restore of all 151 chunks with zero original-source access,
+and AMBER target completion. Its stage exit receipts were not uploaded. Chunk
 receipts/hashes are worker evidence; bulk chunks/final inventory stayed on UCloud
 and cannot be independently rehashed on Mac. V10 binds their exact final receipt,
 all 151 seals, tar hashes/member hashes and population during read-only restore.
@@ -189,3 +191,14 @@ Linux path, native tools/evaluator, eight-thread assembly and source catalog sti
 need owner validation. Local regression and exact packet checks are separately
 bound in [transfer.json](transfer.json). Return the archive, its checksum and the
 **last printed TERMINAL_LOG** even on failure; do not discard old attempts.
+
+Local v10 acceptance: **49 regressions** and documentation checks pass. Exact
+built packet/Bash/driver outside checkout passes real retained Mac restore,
+new venv/full inventory and tiny native mapping/assembly/depth/truth: **69.395 s
+through collection**, outer sampled peak **366,776,320 bytes**. The transferred
+scoped helper separately binds all 26 files in **0.633 s**, using real mapping
+binaries and pinned AMBER sources; CheckM console/marker contents are synthetic
+hashing fixtures, not native CheckM-reader validation. No hashing helper or
+native tiny-contract worker is replaced. Mac assembly is explicitly one thread;
+remote Linux setup/platform/tool/evaluator paths remain unexecuted. All hashes
+and preservation/failure scope are in [transfer.json](transfer.json).

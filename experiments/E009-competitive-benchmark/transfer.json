@@ -1,44 +1,55 @@
 {
   "record": "E009",
-  "version": "v9",
+  "version": "v10",
   "date": "2026-10-10",
-  "status": "accepted v8 Linux numerical runtime; prepared/tested v9 native-consumer preflight, Linux v9 pending",
-  "source_commit": "d57536746e47d2b3e82d5190ef90d0ae4c3308cc",
+  "status": "v8 accepted; v9 restore/AMBER target observed then owner cancelled; v10 scoped-verification retry locally tested, Linux continuation pending",
+  "source_commit": "5a780e411f0b4c1b78409db7270338b45ac80039",
   "archive": {
-    "path": "artifacts/e009-preparation/transfer-v9-reviewed/e009-preflight-v9.tar.gz",
+    "path": "artifacts/e009-preparation/transfer-v10-final/e009-preflight-v10.tar.gz",
     "file": {
-      "bytes": 6698794,
-      "sha256": "17faebceab9a7324c0930ade40d0cfb0c5027fd1a7c2fd5a64f79caa1d3b0f4b"
+      "bytes": 6699717,
+      "sha256": "25b9a12492329041fca6bd126fe2daf3e45b079c6b6963aaac8390c76663103c"
     }
   },
   "checksum": {
-    "path": "artifacts/e009-preparation/transfer-v9-reviewed/e009-preflight-v9.tar.gz.sha256",
+    "path": "artifacts/e009-preparation/transfer-v10-final/e009-preflight-v10.tar.gz.sha256",
     "file": {
-      "bytes": 91,
-      "sha256": "9a47c80d69d23836b83634a97957ac97349f2423e748d4c933717b6a19a62578"
+      "bytes": 92,
+      "sha256": "423de79813af0cb639a37f741ab110f8a2f9c7373702a1f5cb3b1661b315b641"
     }
   },
   "manifest": {
-    "bytes": 5519,
-    "sha256": "8255c8fe82c0c6e8e25f9216311a61440601454f7c5a96b8cdfb639066c01c22"
+    "bytes": 5520,
+    "sha256": "0f895a25b95d3dd8460d62687f96c53d6cc28b2f658ece71f2c8ecedc94ae185"
   },
   "payload_files": 34,
   "all_packet_hashes_verified": true,
   "build_receipt": {
-    "path": "artifacts/e009-preparation/transfer-v9-reviewed/transfer-receipt.json",
+    "path": "artifacts/e009-preparation/transfer-v10-final/transfer-receipt.json",
     "file": {
-      "bytes": 674,
-      "sha256": "23d3844f2fc4413c867acfbefba98786a9fbe94c9a84146f6c2541404c3d6e56"
+      "bytes": 672,
+      "sha256": "06e0536b52e146822cfa28320af1f433929ac6b515fb630196dc9562eb2d7031"
     }
   },
   "operations": "OPERATIONS.md",
   "operations_command": {
-    "bytes": 2380,
-    "sha256": "7e06d4c01e47dfb9fd2780c07929cde74f94432769ab6796ead2e33e2a6fa614"
+    "bytes": 2383,
+    "sha256": "be6e559353f28310a57937b53df5088b7b0a63dbb84468aefe54dc89294de4b7"
   },
   "accepted_native_runtime": "linux-runtime-recovery-v8.json",
-  "runtime_recovery_only": false,
-  "original_numerical_source_recopy": false,
+  "cancelled_attempt_review": "linux-cancellation-v9.json",
+  "restored_payload": {
+    "state": "/work/Home/dl_binner/e009/runtime-snapshots/comebin-runtime-v8",
+    "receipt_file": {
+      "bytes": 3377589,
+      "sha256": "54b705503ff540746f853875ee2e97e5c2461797fcb70a24ab2adea6e3c70bfa"
+    },
+    "shards": 151,
+    "files": 18977,
+    "logical_bytes": 1682401752,
+    "archive_bytes": 1716981760,
+    "mode": "accepted restore-only; missing/corrupt receipt/seal/archive/member bytes fail; no source fallback"
+  },
   "owner_allocation": {
     "vcpus": 8,
     "ram_gb": 24,
@@ -52,368 +63,98 @@
     "loader_workers": 0,
     "progress_policy": "advancing completed byte/entry counters for restore; native launched-tree CPU/physical IO plus actual acquired-byte reports; no progress credit from repeated counters or parent heartbeats"
   },
-  "restored_payload": {
-    "state": "/work/Home/dl_binner/e009/runtime-snapshots/comebin-runtime-v8",
-    "receipt_file": {
-      "bytes": 3377589,
-      "sha256": "54b705503ff540746f853875ee2e97e5c2461797fcb70a24ab2adea6e3c70bfa"
-    },
-    "shards": 151,
-    "files": 18977,
-    "logical_bytes": 1682401752,
-    "archive_bytes": 1716981760,
-    "mode": "accepted restore-only; missing/corrupt receipt/seal/archive/member bytes fail; no source fallback"
+  "original_numerical_source_recopy": false,
+  "runtime_recovery_only": false,
+  "verification_scope": {
+    "whole_prefix_hashes": false,
+    "explicit_external_files": 26,
+    "numerical_members": "all verified during accepted restore only",
+    "external_files": "two mapping binaries, one CheckM console source, three pinned marker files, twenty pinned AMBER source/licence files; before/after lexical/resolved path and byte identities",
+    "not_claimed": "whole-prefix non-mutation or hash identity of every AMBER/mapping library",
+    "storage": "current attempt and immutable returned members; external acquired payload receipts, no blanket old-root scans"
   },
   "local_checks": {
-    "unit_tests": 46,
+    "unit_tests": 49,
     "unit_log": {
-      "path": "artifacts/e009-preparation/unit-v9-003.log",
+      "path": "artifacts/e009-preparation/unit-v10-final.log",
       "file": {
-        "bytes": 36517,
-        "sha256": "60098cc0c11f897d57df6cf53aadb95ac88fb4c4ca0aa85f0fef3bef81972868"
+        "bytes": 33353,
+        "sha256": "5866fcbd03e3ff213119fd034154120ca133ece87902768ae19df98848ce041d"
       }
     },
-    "initial_sandbox_test": "unit-v9-001.log retained: ps inspection denied, no validation credit; rerun with real process inspection passes",
-    "harness_script": {
-      "path": "artifacts/e009-preparation/restored-owner-qa-v1.py",
+    "docs_log": {
+      "path": "artifacts/e009-preparation/docs-v10-final.log",
       "file": {
-        "bytes": 9119,
-        "sha256": "89d059365007e0bdba8e7b10f8e871694a191c608be1517ea72f06115fe07615"
+        "bytes": 727,
+        "sha256": "b9e9acb563b6d2103efe96dfc194202039e991603572cadc2714101b42636216"
+      }
+    },
+    "harness_script": {
+      "path": "artifacts/e009-preparation/restored-owner-final-v10.py",
+      "file": {
+        "bytes": 4949,
+        "sha256": "003ccb19dc02b24613c31291171aeed4ac50ff8d5d17fc405cd6e7ffc2c7bd76"
       }
     },
     "harness_terminal": {
-      "path": "artifacts/e009-preparation/restored-owner-qa-v1-terminal.log",
+      "path": "artifacts/e009-preparation/restored-owner-final-v10-terminal.log",
       "file": {
-        "bytes": 67331,
-        "sha256": "1caac225b9b93a565eb71edc4ec9f375a2547c78e52403283d90e87007393543"
+        "bytes": 59156,
+        "sha256": "9dae911506819eb69feecd160afaccbc520e81de0d75fa5cb6a9787a33ebc0ce"
       }
     },
-    "finalization_script": {
-      "path": "artifacts/e009-preparation/restored-owner-qa-v1-finalize.py",
+    "harness_result": {
+      "path": "artifacts/e009-preparation/restored-owner-final-v10/passed.json",
       "file": {
-        "bytes": 4789,
-        "sha256": "463d4fb72bef88ee9a39391c9600adc8d1efb386e1c840e0411f1c83725db382"
+        "bytes": 7327,
+        "sha256": "7c4f73208b085f48b9ae81a351befcece0f905d37931318e6004f71cf5a14e44"
       }
     },
-    "finalization_log": {
-      "path": "artifacts/e009-preparation/restored-owner-qa-v1-finalize.log",
+    "scoped_binding_log": {
+      "path": "artifacts/e009-preparation/restored-owner-final-v10/scoped-binding.log",
       "file": {
-        "bytes": 10650,
-        "sha256": "624d8d83d0ee5581badbf793b3f2defc00299ecf17a3ea357f1b91072943feff"
+        "bytes": 25265,
+        "sha256": "6cbe7622b154bac6b9c6b8f006ea1ea07332c5204350f823138a3b68768dd662"
       }
     },
-    "initial_harness_failure": "JSONDecodeError from parsing a whole wrapper log including the supervisor trailer. Worker/install/driver stages passed; corrected parser consumes the actual JSON line. Initial log retained; no driver/native stage repeated.",
-    "persistent_state_unchanged": true,
-    "restored_runtime_matches_accepted_bytes_after_owned_install": true,
-    "scope": "Earlier source ff213c0 retained tests: Exact final packet/Bash/driver outside checkout; real existing Mac sealed chunks and standalone numerical runtime, own venv/full inventory/NumPy/Pandas, own wheel and wrapper, tiny native DNA mapping/assembly/depth/truth, failure/collection contracts. No mocks replace changed restore/bind/install/readers. Remote identity/setup and Linux-only five-tool/AMBER/utility paths not executed. Mac assembly explicitly one writer thread; Linux requires eight.",
-    "unit_scope": "45 full-suite cases + one subsequently added actual local HTTP acquisition check; same final production source",
-    "http_acquisition": {
-      "path": "artifacts/e009-preparation/http-acquisition-v9.log",
-      "file": {
-        "bytes": 278,
-        "sha256": "20ba23db185a885a67190a37c8efa4f8638540b9f6c67af847d4806da7f046d5"
-      }
+    "scope": "Exact v10 packet/Bash/driver outside checkout with retained Mac chunk restore, real new venv/full inventories and tiny native assembly/mapping/depth/truth contracts. Actual transferred scoped hash helper separately runs all 26 inputs with real mapping binaries and pinned AMBER sources, synthetic CheckM hashing inputs. Remote platform/setup and Mac one-thread assembly explicitly substituted; native Linux tool/evaluator/utility and CheckM readers remain pending. No changed hashing worker mocked; accepted science not repeated.",
+    "native_worker_mocks": false,
+    "mac_assembly_threads": 1,
+    "measurements": {
+      "driver_seconds_through_collection": 69.39498413397814,
+      "outer_seconds": 77.28197982002166,
+      "outer_peak_sampled_rss_bytes": 366776320,
+      "scoped_helper_seconds": 0.6331780269974843,
+      "scoped_helper_peak_sampled_rss_bytes": 27860992
     },
-    "earlier_packet_harness": {
-      "path": "artifacts/e009-preparation/restored-owner-qa-v1/passed.json",
-      "file": {
-        "bytes": 31523,
-        "sha256": "85f07f9149b445d47c194d2bfdadab671eee7979ebfe4a4374b6eaf6b7397c30"
-      }
-    },
-    "earlier_driver_cases": {
-      "another-job": {
-        "status": "passed",
-        "seconds_before_collection": 55.26974205474835,
-        "seconds_through_collection": 55.38364213175373,
-        "peak_sampled_outer_rss_bytes": 319401984,
-        "source_copied_entries": 0,
-        "restored_entries": 9509,
-        "intended_failure": false
-      },
-      "fresh": {
-        "status": "passed",
-        "seconds_before_collection": 65.72250258858548,
-        "seconds_through_collection": 65.83558849059045,
-        "peak_sampled_outer_rss_bytes": 310673408,
-        "source_copied_entries": 0,
-        "restored_entries": 9509,
-        "intended_failure": false
-      },
-      "inner-corruption": {
-        "status": "failed",
-        "seconds_before_collection": 0.24731141244410537,
-        "seconds_through_collection": 0.25461286143399775,
-        "peak_sampled_outer_rss_bytes": 53096448,
-        "source_copied_entries": null,
-        "restored_entries": null,
-        "intended_failure": true
-      },
-      "missing-record": {
-        "status": "failed",
-        "seconds_before_collection": 0.2511646313359961,
-        "seconds_through_collection": 0.25938588834833354,
-        "peak_sampled_outer_rss_bytes": 53821440,
-        "source_copied_entries": null,
-        "restored_entries": null,
-        "intended_failure": true
-      },
-      "outer-corruption": {
-        "status": null,
-        "seconds_before_collection": null,
-        "seconds_through_collection": null,
-        "peak_sampled_outer_rss_bytes": 26935296,
-        "source_copied_entries": null,
-        "restored_entries": null,
-        "intended_failure": true
-      },
-      "overall-stop": {
-        "status": "failed",
-        "seconds_before_collection": 0.22565191102330573,
-        "seconds_through_collection": 0.23366429802263156,
-        "peak_sampled_outer_rss_bytes": 54362112,
-        "source_copied_entries": null,
-        "restored_entries": null,
-        "intended_failure": true
-      }
-    },
-    "earlier_source_commit": "ff213c05be03764aa833c4700a198f63705744ef",
-    "owner_packet_harness": {
-      "path": "artifacts/e009-preparation/restored-owner-final-v9/passed.json",
-      "file": {
-        "bytes": 6451,
-        "sha256": "5f7081b5b045c81a798cb8b272986da89dec5899c05ff88172c9134f328dfffe"
-      }
-    },
-    "final_harness_script": {
-      "path": "artifacts/e009-preparation/restored-owner-final-v9.py",
-      "file": {
-        "bytes": 3079,
-        "sha256": "5dbe0c11fbbd01c96dc7918c66cb8cb933e30a05dd3dea92a8b612d9a3d4d219"
-      }
-    },
-    "final_harness_terminal": {
-      "path": "artifacts/e009-preparation/restored-owner-final-v9-terminal.log",
-      "file": {
-        "bytes": 33257,
-        "sha256": "0d4e84369051405f5826f00a54d3b27f8598bd1229d6646ff4f2fbf6aae0818c"
-      }
-    },
-    "final_scope": "Final exact packet/Bash/driver outside checkout with actual retained Mac chunk restore, new venv/full inventory/origins and tiny native contracts; no worker mocks. Only remote identity/setup and Mac one-thread assembler overridden. Original environment contents not accessed/copied. Native Linux five-tool/utility/AMBER/8-thread assembly and source acquisition remain pending. Earlier failure/wheel/wrapper checks retained on byte-identical owner/materializer/native consumers; new byte-report changes have 45-suite plus actual HTTP test.",
-    "changed_from_earlier_packet": [
-      "scripts/e009_common.py",
-      "scripts/e009_startup.py"
-    ],
-    "final_driver_case": {
-      "record": {
-        "command": [
-          "bash",
-          "-c",
-          "bash <<'BASH'\nset -Eeuo pipefail\ntransfer=/private/tmp/e009-final-v9-cqziq7ik/fresh/transfer\nmkdir -p \"$transfer\"\nterminal_log=$(python3 -I -B -S - \"$transfer\" <<'LOGPY'\nimport os, sys, tempfile\nfd,path=tempfile.mkstemp(prefix='e009-preflight.',suffix='.log',dir=sys.argv[1])\nos.close(fd)\nprint(path)\nLOGPY\n)\nexec > >(tee -a \"$terminal_log\") 2>&1\nprintf 'TERMINAL_LOG=%s\\n' \"$terminal_log\"\npython3 -I -B -S - \"$transfer\" <<'PY'\nimport hashlib, os, pathlib, shutil, sys, tarfile, tempfile, time\nstarted=time.time()\ntransfer=pathlib.Path(sys.argv[1])\narchive=transfer/'e009-preflight-v9.tar.gz'\nfields=(transfer/(archive.name+'.sha256')).read_text().split()\nif len(fields)!=2 or fields[1]!=archive.name or len(fields[0])!=64:\n    raise ValueError('Upload the exact archive and matching printed checksum')\nwith archive.open('rb') as src:\n    digest=hashlib.sha256()\n    for block in iter(lambda:src.read(1024*1024),b''):digest.update(block)\nif digest.hexdigest()!=fields[0]:raise ValueError('Transfer SHA256 mismatch; preserve files and return terminal log')\nlaunch=pathlib.Path(tempfile.mkdtemp(prefix='launch-',dir=transfer))\nwith tarfile.open(archive) as tar:\n    members=tar.getmembers();names=set()\n    if sum(m.size for m in members)>20_000_000:raise ValueError('Unexpected packet expansion')\n    for member in members:\n        path=pathlib.PurePosixPath(member.name)\n        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v9' or member.name in names:\n            raise ValueError('Unsafe or duplicate packet member')\n        names.add(member.name)\n    for member in members:\n        target=launch/member.name;target.parent.mkdir(parents=True,exist_ok=True)\n        with tar.extractfile(member) as src,target.open('xb') as out:shutil.copyfileobj(src,out)\npacket=launch/'e009-preflight-v9'\nenv=os.environ.copy()\nfor key in ('PYTHONPATH','PYTHONHOME','PYTHONUSERBASE'):env.pop(key,None)\nenv.update(PYTHONNOUSERSITE='1',PYTHONUNBUFFERED='1')\nargv=[sys.executable,'-I','-B',str(packet/'scripts/e009_owner.py'),\n      '--root','/private/tmp/e009-final-v9-cqziq7ik/fresh',\n      '--shared-root','/private/tmp/e009-final-v9-cqziq7ik/unused-shared',\n      '--allocated-vcpus','4','--allocated-ram-gb','8',\n      '--work-seconds','17400','--stall-seconds','300',\n      '--entry-start-epoch',str(started),'--local-runtimes','/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/restored-owner-final-v9/fresh-runtime.json','--local-seconds','240']\nos.execve(sys.executable,argv,env)\nPY\nBASH"
-        ],
-        "exit_code": 0,
-        "launched_pid": 49661,
-        "peak_sampled_rss_bytes": 158851072,
-        "rss_bytes_ceiling": 8000000000,
-        "sample_includes_coordinator": true,
-        "sampled_average_cpus": 0.2556309838436895,
-        "sampled_cpu_seconds": 18.25,
-        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
-        "seconds_ceiling": 360,
-        "stop_reason": null,
-        "wall_seconds": 71.39197183999931
-      },
-      "status": {
-        "accounting": "declared allocation times entry-to-driver wall; includes setup/failures; excludes owner idle/upload",
-        "allocated_core_hours_before_collection": 0.070691554765217,
-        "allocated_ram_gb": 8,
-        "allocated_vcpus": 4,
-        "exit_code": 0,
-        "native_linux": false,
-        "scope": "Mac real adapters/owner harness; remote setup and other tool runtimes unexecuted",
-        "seconds_before_collection": 63.622399288695306,
-        "status": "passed",
-        "verification_passed": true
-      },
-      "collection": {
-        "allocated_core_hours_through_collection": 0.07082393568410124,
-        "archive": "/private/tmp/e009-final-v9-cqziq7ik/fresh/transfer/native-preflight-9y5cddzj-return.tar.gz",
-        "checksum": "/private/tmp/e009-final-v9-cqziq7ik/fresh/transfer/native-preflight-9y5cddzj-return.tar.gz.sha256",
-        "collection_after_execution_timeout": false,
-        "file": {
-          "bytes": 67739,
-          "sha256": "d10c9df5a70eaadbd11c132d5c9b568942341e04d4cabd8a01cdfd00299b0c46"
-        },
-        "members": 94,
-        "retained_logical_bytes": 319004,
-        "seconds_through_collection": 63.74154211569112,
-        "terminal_log": "/private/tmp/e009-final-v9-cqziq7ik/fresh/transfer/native-preflight-9y5cddzj-terminal.log"
-      },
-      "restored": {
-        "complete": true,
-        "local_prefix": "/tmp/e009-cfzei3ul/numerical-runtime",
-        "logical_bytes": 232021851,
-        "original_source_accessed": false,
-        "receipt_file": {
-          "bytes": 1593708,
-          "sha256": "79748d168016d848389ae74434c90be4635b76a19dc389829135183f4ea212e0"
-        },
-        "restored_entries": 9509,
-        "sealed_chunks": 75,
-        "source_copied_entries": 0,
-        "state": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/chunk-owner-qa-v2/persistent-state"
-      },
-      "return_file": {
-        "bytes": 67739,
-        "sha256": "d10c9df5a70eaadbd11c132d5c9b568942341e04d4cabd8a01cdfd00299b0c46"
-      }
-    },
-    "documentation_check": {
-      "path": "artifacts/e009-preparation/docs-v9-final-reviewed-confirm.log",
-      "file": {
-        "bytes": 727,
-        "sha256": "35c4a0200cfadcc3d7e9cb5a53f65494193b0a50333455170195e6369e0fc82f"
-      },
-      "status": "passed; optional historical source caches unavailable are explicit"
-    }
+    "preserved_accepted_state_unchanged": true,
+    "fresh_job_restore": "9509 real Mac entries /75 retained chunks, zero original copies; new venv/full distribution+origin probe and tiny native mapping/assembly/depth/truth checks passed",
+    "failures_covered": "real file corruption, missing files, changed symlink targets, no unrelated-tree enumeration, actual-byte progress; previous startup/clock/CPU/stall/fatal-worker/orphan and chunk corruption tests also pass",
+    "not_validated": "full Linux native branch on UCloud, Linux eight-thread MEGAHIT, native utility/tool/evaluator/CheckM readers, source download/catalog and community-scale affordability"
   },
-  "review_script": {
-    "path": "artifacts/e009-preparation/review-v8.py",
-    "file": {
-      "bytes": 5731,
-      "sha256": "0c7d7a1281920d9e89e643b2b8864aad4c462ddbfe5dafa677097a48733928aa"
-    }
-  },
-  "native_v9_executed": false,
-  "full_community_fit_or_E009_scores_authorized": false,
-  "remaining_native_contracts": [
-    "accepted chunks restore/read-only locking across job reset",
-    "new utility package/executable/compilation health",
-    "fresh tool venv/owned-wheel/platform bindings and CheckM entry hash/help",
-    "AMBER/mapping direct-prefix cold startup and actual before/after bytes",
-    "five native CLI/feature/checkpoint contracts",
-    "eight-thread Linux MEGAHIT; no Mac parallel assembly credit",
-    "source archive SHA/taxonomy/replicon/overlap interpretation and prospective two-sample scope",
-    "full-scale training and affordability not established by preflight"
-  ],
-  "preserved_packets": [
-    {
-      "version": "v1",
-      "source_commit": "c2004ae096b6ccac826591e8e822079e419978a5",
-      "archive": {
-        "path": "artifacts/e009-preparation/transfer-v1/e009-preflight-v1.tar.gz",
-        "file": {
-          "bytes": 6655953,
-          "sha256": "30477f2e38f24c50688084ac3c6e433cbdd86b642ea165962b67bdd49c57503a"
-        }
-      },
-      "status": "immutable and superseded for new launch"
-    },
-    {
-      "version": "v2",
-      "source_commit": "a1ca7bc34b37d96c2a17d6c30b836fa42802601e",
-      "archive": {
-        "path": "artifacts/e009-preparation/transfer-v2/e009-preflight-v2.tar.gz",
-        "file": {
-          "bytes": 6656385,
-          "sha256": "958de5eb5159129776507bc17771a5fde8a361de9b260264afe2dc2e52801a9e"
-        }
-      },
-      "status": "immutable and superseded for new launch"
-    },
-    {
-      "version": "v3",
-      "source_commit": "a12c962a85946167bcc2441597b30fcca85b209c",
-      "archive": {
-        "path": "artifacts/e009-preparation/transfer-v3/e009-preflight-v3.tar.gz",
-        "file": {
-          "bytes": 6656591,
-          "sha256": "097d64902f5b71d79b23d1d1fd74cbc30e92b7eb9157199b8a94948c786d07a8"
-        }
-      },
-      "status": "immutable and superseded for new launch"
-    },
-    {
-      "version": "v4",
-      "source_commit": "2027436c54b6ff016a5ed4e75232f0256bc7e568",
-      "archive": {
-        "path": "artifacts/e009-preparation/transfer-v4/e009-preflight-v4.tar.gz",
-        "file": {
-          "bytes": 6659467,
-          "sha256": "b7c3491dd1455da4d1f15d2dc1de13620574fed38abccae6e5cc198fb336c8d5"
-        }
-      },
-      "status": "immutable failed Linux startup, superseded for new launch"
-    },
-    {
-      "version": "v5",
-      "source_commit": "01837619230458e830fba7f54755c04d6c8c7604",
-      "archive": {
-        "path": "artifacts/e009-preparation/transfer-v5/e009-preflight-v5.tar.gz",
-        "file": {
-          "bytes": 6660645,
-          "sha256": "600a3ea2cf1172e03fbed8387b62535fc995c796d69c10980c40986f8a030422"
-        }
-      },
-      "status": "immutable verified native failure; superseded for new launch"
-    },
-    {
-      "version": "v6",
-      "source_commit": "76c5012e9f9981d89a3ac3c4d6773205cf1dee2b",
-      "archive": {
-        "path": "artifacts/e009-preparation/transfer-v6/e009-preflight-v6.tar.gz",
-        "file": {
-          "bytes": 51348,
-          "sha256": "cc6effd945833ae520d59d474aaa2fae0aab0c0977bfbd6d4c61a925c4b61ec8"
-        }
-      },
-      "status": "immutable verified native source-read failure; superseded for new launch"
-    },
-    {
-      "version": "v7",
-      "source_commit": "4068297c2ec18d941b56c463abcc31aad61f6d8b",
-      "archive": {
-        "path": "artifacts/e009-preparation/transfer-v7-final/e009-preflight-v7.tar.gz",
-        "file": {
-          "bytes": 54472,
-          "sha256": "594bcdabb14018df77aef07bb09b619190cdc6c44d5d79738c9717e19a383e3f"
-        }
-      },
-      "status": "immutable verified native premature copy timeout; never launch again"
-    },
-    {
-      "version": "v8",
-      "source_commit": "bd7addb6e3e646a80bab57deadf9e847e3f02858",
-      "archive": {
-        "path": "artifacts/e009-preparation/transfer-v8-final/e009-preflight-v8.tar.gz",
-        "file": {
-          "bytes": 61445,
-          "sha256": "32c3a9f23cc101982bef8b4d3dc318bc76718cce63f79bee52741eca411888ca"
-        }
-      },
-      "status": "accepted native numerical recovery; immutable and superseded only for next native-consumer launch"
-    }
-  ],
-  "preserved_local_provisional_v8": {
-    "source_commit": "ab9cfda4a946acc747b068a4167e12fe05fa6e2a",
+  "previous_packet_preserved": {
+    "version": "v9",
+    "source_commit": "d57536746e47d2b3e82d5190ef90d0ae4c3308cc",
     "archive": {
-      "path": "artifacts/e009-preparation/transfer-v8/e009-preflight-v8.tar.gz",
+      "path": "artifacts/e009-preparation/transfer-v9-reviewed/e009-preflight-v9.tar.gz",
       "file": {
-        "bytes": 61324,
-        "sha256": "18ccc170715699b41c0a3deef168695bc3ad54cd1f595825eaae979eededa18d"
+        "bytes": 6698794,
+        "sha256": "17faebceab9a7324c0930ade40d0cfb0c5027fd1a7c2fd5a64f79caa1d3b0f4b"
       }
     },
-    "status": "local-only preliminary testing; superseded by final immutable-receipt packet, not owner upload"
+    "checksum": {
+      "path": "artifacts/e009-preparation/transfer-v9-reviewed/e009-preflight-v9.tar.gz.sha256",
+      "file": {
+        "bytes": 91,
+        "sha256": "9a47c80d69d23836b83634a97957ac97349f2423e748d4c933717b6a19a62578"
+      }
+    },
+    "manifest": {
+      "bytes": 5519,
+      "sha256": "8255c8fe82c0c6e8e25f9216311a61440601454f7c5a96b8cdfb639066c01c22"
+    }
   },
-  "preserved_local_preliminary_v9": {
-    "source_commit": "ff213c05be03764aa833c4700a198f63705744ef",
-    "archive": {
-      "path": "artifacts/e009-preparation/transfer-v9-final/e009-preflight-v9.tar.gz",
-      "file": {
-        "bytes": 6698581,
-        "sha256": "397f566c87fc3627fd4a5d4e0f2cab629df5fb98396c622f839a55d6372df583"
-      }
-    },
-    "status": "locally passed initial native consumer packet; preserved and superseded only by download byte-report safeguard, not owner upload"
-  }
+  "scientific_execution_admitted": false,
+  "science_changed": false,
+  "remote_execution_by_codex": false
 }

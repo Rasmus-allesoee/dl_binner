@@ -720,3 +720,16 @@ why simplified reuse is the bounded choice over five new numerical Conda builds.
 Scientific design and all accepted science remain unchanged. The corrected packet
 and exact command are owned by [Operations](OPERATIONS.md) and
 [transfer.json](transfer.json). Linux continuation beyond AMBER remains unverified.
+
+Final v10 packet binds source `5a780e411f0b4c1b78409db7270338b45ac80039`,
+6,699,717 bytes, SHA256 `25b9a12492329041fca6bd126fe2daf3e45b079c6b6963aaac8390c76663103c`.
+All 49 regressions pass (40.197 s). Exact packet/Bash/driver restores 9,509
+real Mac entries /75 retained chunks, creates its own bound venv, verifies complete
+inventories/origins and passes real tiny native mapping/one-thread assembly/depth/
+truth contracts; 69.395 s through collection, outer sampled peak 366,776,320 bytes.
+The actual transferred scoped-binding helper reads all 26 declared inputs in
+0.633 s, real mapping binaries/pinned AMBER sources plus synthetic CheckM hashing
+inputs. Before/after file/path identities pass; original Mac state is unchanged.
+Fixture/hash contracts do not establish native CheckM or full Linux execution.
+No accepted science repeated. [transfer.json](transfer.json) binds complete logs,
+command/archive/source and explicit Linux omissions; previous packets stay intact.

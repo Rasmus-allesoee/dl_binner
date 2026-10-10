@@ -272,7 +272,11 @@ remain intact; working tree was clean at inspection.
 from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md), upload
 pair under `artifacts/e009-preparation/transfer-v10-final/`.
 [Transfer receipt](../experiments/E009-competitive-benchmark/transfer.json) owns
-source/archive/command/test identities. Remove blanket environment hashes, bind
+source/archive/command/test identities. Source `5a780e4`; 49 regressions and
+exact packet/Bash/driver outside checkout pass (69.395 s through collection,
+0.367-GB outer sampled peak). Actual transferred scoped helper uses real mapping
+binaries/AMBER sources; CheckM hash inputs are synthetic, native reader pending.
+Remove blanket environment hashes, bind
 only 26 explicit external files with byte progress, announce successful stage exits,
 and enumerate only this attempt for collection storage. Accepted numerical members
 are verified during restore; full tool inventories/origins remain. This does not
