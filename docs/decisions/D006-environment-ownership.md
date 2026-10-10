@@ -250,3 +250,45 @@ compatibility is known. Choose simplified reuse for this retry, rather than add
 another setup project. Revisit a fresh per-tool recipe only upon a concrete
 compatibility or persistent-runtime failure; never modify the E001 environment.
 Benchmark shortlist, sources, models and scientific settings remain unchanged.
+
+
+## E009 failed-path ownership amendment, 2026-10-10
+
+[The v10 return](../../experiments/E009-competitive-benchmark/linux-preflight-v10.json)
+passes three tool contracts, Linux eight-thread assembly/mapping/evaluator, source
+acquisition and the 26 scoped read-only checks. It exposes two concrete problems:
+SCGBinner imports sklearn's internal `stable_cumsum`, absent in shared 1.9.0;
+CheckM imports `checkm.test.test_ecoli`, excluded by the runtime pruning policy.
+A venv linked to one base neither owns independent dependency versions nor repairs
+missing contents. The earlier simplified-reuse choice is therefore amended for
+**these failed paths only**; no reason exists to rebuild the three passed paths.
+
+Choose independent E009-owned Conda stacks for SCGBinner and CheckM, pinned by
+[the complete explicit Linux payload lock](../../experiments/E009-competitive-benchmark/failed-paths-lock.json).
+SCGBinner's README combines Python3.9/NumPy1.19/pandas1.4 with sklearn>=1.6;
+package metadata declares only numpy/pandas. Do not mechanically treat either as
+a validated complete recipe. The named CPU compatibility stack uses Python3.10.15,
+NumPy1.26.4, pandas1.5.3, sklearn1.6.1 and Torch2.0.0+cpu (the upstream Torch version,
+CPU build). This version exports the needed private imports. The existing int
+alias repair stays; no new cluster/model/training patch. Omit unused torchvision/
+torchaudio CUDA installation; actual source imports and CPU native tests gate use.
+
+COMEBin retains its accepted numerical stack and uses **complete CheckM1.2.3 in a
+separate owned Conda prefix**, with its own NumPy/SciPy and setuptools80.9.0 for
+`pkg_resources`. Its wrapper replaces inherited numerical LD_LIBRARY_PATH and uses
+that prefix's lexical isolated Python. The full package retains test_ecoli and
+native dependencies (including Linux pplacer); the import and actual CheckM help
+must pass, followed by COMEBin's real augmentation writer/reader. Do not install
+CheckM into an accepted snapshot or restore stub test modules. Frozen marker data
+stays read-only at E001. This is deliberate separate-tool execution, not a claim
+that COMEBin's main numerical stack is independent of its accepted snapshot.
+
+Linux recipes are solved against glibc>=2.28 with exact package URL/size/hash/build
+identities; no remote dependency solve occurs in the owner command. Total locked
+compressed bytes before shared-cache deduplication: 476,746,139. New prefixes use
+complete package contents and copies, with full import-origin/required-version and
+Conda identity checks. No whole-environment hashes, new snapshots or pruning.
+The corrected Linux recipes remain unexecuted until owner return. On Mac,
+CheckM's pinned Linux pplacer build is unavailable; local CheckM validation uses
+matched Python dependencies and the complete official 1.2.3 wheel. This tests its
+missing-module/CLI contract, not native Linux pplacer or lineage fitting.

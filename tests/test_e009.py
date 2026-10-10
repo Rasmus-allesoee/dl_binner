@@ -26,6 +26,7 @@ from e009_hmm import budget_args
 from e009_startup import startup_argv,supervise_startup,wait_snapshot,StartupProgress,progress_signature,source_cache_argv
 from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after,run_stage,python_wrapper,readonly_inputs,bind_readonly_files
 from e009_common import tree_binding
+from e009_retry import verify_reused_inputs,verify_conda_identity,checkm_wrapper
 from e009_truth import construct,parse_paf,reconcile,recovery,union
 from e009_snapshot import create as create_snapshot, restore as restore_snapshot, verify as verify_snapshot
 from e009_materialize import materialize,plan as runtime_plan,restore_accepted,digest_json
@@ -516,6 +517,40 @@ class E009Contracts(unittest.TestCase):
             verify_readonly_after(files,before,attempt,now+10,now+20)
         link.unlink()
         with self.assertRaises(FileNotFoundError):bind_readonly_files(files)
+
+    def test_retry_binds_old_receipts_and_ordered_inputs_without_tree_scans(self):
+        from unittest.mock import patch
+        prior=self.p/'old';prior.mkdir()
+        receipt=self.put('old/native-contract-status.json',json.dumps({'semibin':{'status':'passed'}}))
+        reference=self.put('reference','DNA fixture');a=self.put('a.bam','first');b=self.put('b.bam','second')
+        review={'required_retained_evidence':{'native-contract-status.json':binding(receipt)},
+            'accepted_tools':['semibin'],'fixture':{'reference':binding(reference),'ordered_bams':[
+            {'path':str(a),'file':binding(a)},{'path':str(b),'file':binding(b)}]}}
+        with patch.object(Path,'rglob',side_effect=AssertionError('unrelated traversal')):
+            self.assertEqual(verify_reused_inputs(review,prior,reference),[a,b])
+        a.write_text('changed')
+        with self.assertRaisesRegex(ValueError,'BAM bytes changed'):verify_reused_inputs(review,prior,reference)
+        reference.write_text('changed reference')
+        with self.assertRaisesRegex(ValueError,'reference changed'):verify_reused_inputs(review,prior,reference)
+
+    def test_owned_conda_requires_exact_package_identity_set(self):
+        self.put('prefix/conda-meta/numpy.json',json.dumps({'name':'numpy','version':'1.26.4','build':'pinned'}))
+        lock={'packages':[{'name':'numpy','version':'1.26.4','build':'pinned'}]}
+        self.assertTrue(verify_conda_identity(self.p/'prefix',lock)['identity_set_matches'])
+        self.put('prefix/conda-meta/extra.json',json.dumps({'name':'extra','version':'1','build':'other'}))
+        with self.assertRaisesRegex(ValueError,'identity set differs'):verify_conda_identity(self.p/'prefix',lock)
+
+    def test_checkm_wrapper_isolates_its_own_lexical_interpreter_and_libraries(self):
+        prefix=self.p/'checkm-own'
+        subprocess.run([sys.executable,'-I','-B','-m','venv','--without-pip',prefix],check=True,capture_output=True)
+        script=self.put('console.py','import sys,os,json;print(json.dumps({"prefix":sys.prefix,"python":sys.executable,"argv":sys.argv[1:],"lib":os.environ["LD_LIBRARY_PATH"],"isolated":sys.flags.isolated,"no_bytecode":sys.dont_write_bytecode}))')
+        wrapper=self.p/'checkm';cache=self.p/'cache'
+        checkm_wrapper(wrapper,prefix/'bin/python',script,cache)
+        env=dict(os.environ,PYTHONPATH='/bad',PYTHONHOME='/bad',PYTHONUSERBASE='/bad',LD_LIBRARY_PATH='/wrong/numerical')
+        r=subprocess.run([wrapper,'--help'],env=env,check=True,capture_output=True,text=True)
+        result=json.loads(r.stdout);self.assertEqual(result['prefix'],str(prefix));self.assertEqual(result['python'],str(prefix/'bin/python'))
+        self.assertEqual(result['lib'],str(prefix/'lib'));self.assertEqual(result['argv'],['--help'])
+        self.assertEqual(result['isolated'],1);self.assertTrue(result['no_bytecode'])
 
     def test_binding_progress_reports_actual_byte_counts(self):
         data=self.p/'stream';data.write_bytes(b'x'*(2*1024*1024+17));counts=[]

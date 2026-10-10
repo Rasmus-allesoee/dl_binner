@@ -1,0 +1,169 @@
+{
+  "record": "E009",
+  "date": "2026-10-10",
+  "status": "completed preflight, two failed tool contracts; other completed stages accepted",
+  "return": {
+    "path": "agent_context/native-preflight-95psvpr9-return.tar.gz",
+    "file": {
+      "bytes": 5414925,
+      "sha256": "5b15237bd94f78fc4385877304f4cfd72580b9690a8bc17efe01e66ee512ed1e"
+    },
+    "checksum": {
+      "bytes": 106,
+      "sha256": "cdc011c11f21bc0a3e47851f85ad5015fef99c5adc1aac7c966d82001acda56f"
+    },
+    "members": 340,
+    "inventory_hashes_verified": 338,
+    "immutable_logical_bytes": 39835306
+  },
+  "input_terminal": {
+    "path": "agent_context/e009-preflight.rjdu_p4y.log",
+    "file": {
+      "bytes": 194386,
+      "sha256": "e3c205d5393fe2d63ea90b629781d8e1e83f0b425d8602b8b073107903074cc8"
+    }
+  },
+  "attempt": "/work/Home/dl_binner/e009/native-preflight-95psvpr9",
+  "source_commit": "5a780e411f0b4c1b78409db7270338b45ac80039",
+  "accepted_tools": [
+    "semibin",
+    "metacat",
+    "completebin"
+  ],
+  "failed_tools": [
+    "scgbinner",
+    "comebin"
+  ],
+  "accepted_stages": [
+    "restore all 151 v8 chunks, no original recopy/access",
+    "lexical numerical interpreter and all tool inventory/origin probes",
+    "mapping/native utility/compiler setup",
+    "eight-thread Linux MEGAHIT, mapping, ordered depth and competitive coordinate/orientation/gap truth software contracts",
+    "AMBER/confirmed R95 software fixture",
+    "pinned sources/databases/dependency extras acquired; source max50/dtype patches verified",
+    "COMEBin own full import/help",
+    "source-genome acquisition/catalog",
+    "26 explicit external read-only inputs unchanged"
+  ],
+  "failures": {
+    "scgbinner": "upstream cluster.py imports stable_cumsum from sklearn.cluster._kmeans; shared sklearn1.9.0 does not expose it",
+    "comebin": "CheckM main.py imports checkm.test.test_ecoli, removed by the reduced numerical snapshot; own COMEBin help passed"
+  },
+  "fixture": {
+    "reference": {
+      "bytes": 59298,
+      "sha256": "7c36e9dae451d73a44025054900ddee31377b2b973c36a4881f6d57b0e6631bb"
+    },
+    "ordered_bams": [
+      {
+        "path": "/work/Home/dl_binner/e009/native-preflight-95psvpr9/portable/mapping_0/sample_0.sorted.bam",
+        "file": {
+          "bytes": 32630,
+          "sha256": "f12af34a0837a2d6458cc60643559eb761618619ba50079804f0b1fc307ff169"
+        }
+      },
+      {
+        "path": "/work/Home/dl_binner/e009/native-preflight-95psvpr9/portable/mapping_1/sample_1.sorted.bam",
+        "file": {
+          "bytes": 21105,
+          "sha256": "4c7b549e6e56bd229b0011893eee6f10e30b22b2e717898ec6b35fb3f3d2efc6"
+        }
+      }
+    ]
+  },
+  "required_retained_evidence": {
+    "bundle-manifest.json": {
+      "bytes": 5520,
+      "sha256": "0f895a25b95d3dd8460d62687f96c53d6cc28b2f658ece71f2c8ecedc94ae185"
+    },
+    "status.json": {
+      "bytes": 2847,
+      "sha256": "7a85d53a7c3ddaa01f8eb6d0123593e474e493bcabbd470add47f0877f1ad88e"
+    },
+    "native-contract-status.json": {
+      "bytes": 1972,
+      "sha256": "05cc19e0a1d61a4ea105d5af9c3d052b1fb91d4c220241bb9e1466ac55895842"
+    },
+    "readonly-after.json": {
+      "bytes": 10619,
+      "sha256": "ca6800092d87bbf285f451dd40f456652b53db8d5b731fe25505880b2f889430"
+    },
+    "portable/passed.json": {
+      "bytes": 1578,
+      "sha256": "d247a1fc0e7934f1e8285e6fa116a9b377e03eae75297246b4f9a03bf12fd0e4"
+    },
+    "amber-contract/contract.json": {
+      "bytes": 851,
+      "sha256": "29e40ba1ba953827b0c4f754ef486d6e91115062de9ebb1957322b00f59e9047"
+    },
+    "source-acquisition.json": {
+      "bytes": 528,
+      "sha256": "742e1e1fe90388775f13bd3c60c42352a21111c4e522e3fa4a03bc1e995a0d6b"
+    },
+    "stages/utilities-resolved-lock.log": {
+      "bytes": 5142,
+      "sha256": "1c7ca191ebf51419d2800a8bdc4dae039938311343314e8d5aba01ef666efbf2"
+    },
+    "semibin-contract/passed.json": {
+      "bytes": 1992,
+      "sha256": "8885cb6a735c65befebf0bcadfddbb7eff12dc24b5763fe328e29df49c7438a3"
+    },
+    "metacat-contract/passed.json": {
+      "bytes": 2771,
+      "sha256": "0507801ecb7b110aa598df03301b9bcac24dc060592f9edfb8c4d4a6599caf04"
+    },
+    "completebin-contract/passed.json": {
+      "bytes": 2378,
+      "sha256": "6601bac2f5d5b3ab01aa48c8d1b2838f675d18bef0222069a2a803b8d0bdc632"
+    }
+  },
+  "utility_prefix": "/work/Home/dl_binner/e009/envs/utilities-v2-native-preflight-95psvpr9",
+  "checkm_data": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/checkm_data",
+  "source_acquisition": {
+    "admitted_scientific_input": false,
+    "archive": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e009/source-preflight-v1/source_genomes.tar.gz",
+    "file": {
+      "bytes": 3202310417,
+      "sha256": "9a0373b6a42f7322583b1c091059b513d8d62bd5be2e57244ac19b50b1f4f69a"
+    },
+    "shared_source_folder": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e009/source-preflight-v1/unpacked-9a0373b6a42f",
+    "source_catalog": {
+      "bytes": 36184369,
+      "sha256": "79f2308d7444008683db120f395bc541c8caa4b604fc6419c392a143e8daed76"
+    }
+  },
+  "source_catalog_summary": {
+    "source_files": 2078,
+    "replicons": 65571,
+    "bp": 10251869096,
+    "exact_development_matches": 0,
+    "accession_matching_replicons": 0,
+    "claim_limit": "worker-bound source bytes and returned catalog inspected; bulk source files not uploaded/rehashed locally; roles/near-overlap assessment not expanded in this repair"
+  },
+  "cost": {
+    "seconds_through_collection": 456.27766517479904,
+    "allocated_core_hours_through_collection": 1.0139503670551089,
+    "retained_logical_bytes": 39835306,
+    "allocated_vcpus": 8,
+    "allocated_ram_gb": 24,
+    "peak_stage_sampled_rss_bytes": 1363578880,
+    "provider_billing_and_idle": "unknown"
+  },
+  "storage": {
+    "attempt_precollection": {
+      "home": {
+        "files": 1637,
+        "links_excluding_targets": 2,
+        "logical_file_bytes": 381481737,
+        "scope": "owned filesystem snapshot before collection, distinct from exact archive-member retained bytes",
+        "unique_inode_physical_bytes_estimate": 385089536
+      },
+      "scope": "this attempt only; no recursive scans of prior attempts, environments, chunks or shared sources",
+      "shared": null
+    },
+    "scope": "does not include separately retained environments/cache/source DNA; immutable archive counts above"
+  },
+  "no_full_fits_or_e009_scores": true,
+  "scientific_execution_admitted": false,
+  "retry_scope": "Only SCGBinner and COMEBin native contracts. Reuse tiny ordered BAMs and acquired archives/utility prefix. Preserve all passed evidence, source catalog/data, v8 chunks, E001 and v10 attempt."
+}

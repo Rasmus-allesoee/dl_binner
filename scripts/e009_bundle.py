@@ -21,7 +21,7 @@ ROOT=Path(__file__).absolute().parents[1]
 EXP='experiments/E009-competitive-benchmark'
 
 
-def build(destination,bootstrap=None,version='v10',recovery_only=False):
+def build(destination,bootstrap=None,version='v11',recovery_only=False):
     """Require committed transfer inputs and return the exact two owner upload paths."""
     destination=Path(destination).absolute()
     if not version.isalnum():raise ValueError('Simple version name required')
@@ -29,7 +29,8 @@ def build(destination,bootstrap=None,version='v10',recovery_only=False):
     scripts=sorted((ROOT/'scripts').glob('e009_*.py'))
     record_names=['preflight.json','runtime-baseline.json','comebin-base-freeze.txt'] if recovery_only else [
              'protocol.json','preflight.json','fixture.json','native-lock.json','development-overlap.json',
-             'runtime-baseline.json','comebin-base-freeze.txt','utilities-linux-lock.json','linux-runtime-recovery-v8.json']
+             'runtime-baseline.json','comebin-base-freeze.txt','utilities-linux-lock.json','linux-runtime-recovery-v8.json',
+             'linux-preflight-v10.json','failed-paths-lock.json']
     records=[ROOT/EXP/name for name in record_names]
     if not recovery_only:
         if bootstrap is None:raise ValueError('Full preflight needs pinned Linux bootstrap')
@@ -74,6 +75,6 @@ def build(destination,bootstrap=None,version='v10',recovery_only=False):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--destination',type=Path,required=True)
-    p.add_argument('--bootstrap',type=Path);p.add_argument('--version',default='v10')
+    p.add_argument('--bootstrap',type=Path);p.add_argument('--version',default='v11')
     p.add_argument('--recovery-only',action='store_true')
     args=p.parse_args();print(json.dumps(build(args.destination,args.bootstrap,args.version,args.recovery_only),indent=2))

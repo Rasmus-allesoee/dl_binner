@@ -206,7 +206,7 @@ def limit_hnsw(threads):
     hnswlib.Index=BoundedIndex
 
 
-def inventory(expected_prefix, modules, expected_freeze=None, dependency_prefix=None, expected_distributions=None, forbidden_prefix=None):
+def inventory(expected_prefix, modules, expected_freeze=None, dependency_prefix=None, expected_distributions=None, forbidden_prefix=None, required_distributions=None):
     """Probe complete installed distributions/origins and optional accepted full freeze.
 
     Invoke lexical Python -I -B. Full origins exclude inherited/user-site modules;
@@ -228,7 +228,7 @@ def inventory(expected_prefix, modules, expected_freeze=None, dependency_prefix=
     origins={}
     for name in modules:
         print('DLBINNER INVENTORY import begin '+name,flush=True)
-        module=__import__(name);origin=Path(module.__file__).resolve()
+        module=importlib.import_module(name);origin=Path(module.__file__).resolve()
         if not any(origin.is_relative_to(p) for p in allowed):raise ValueError('Import outside isolated prefix/bound dependency prefix')
         origins[name]=str(origin)
         print('DLBINNER INVENTORY import ready '+name+' '+str(origin),flush=True)
@@ -246,6 +246,15 @@ def inventory(expected_prefix, modules, expected_freeze=None, dependency_prefix=
         actual={normalize(d['name']):d['version'] for d in distributions}
         expected={normalize(k):v for k,v in expected_distributions.items()}
         if len(actual)!=len(distributions) or actual!=expected:raise ValueError('Complete clean distribution inventory differs')
+    if required_distributions:
+        import re
+        normalize=lambda s:re.sub('[-_.]+','-',s).lower()
+        actual={normalize(d['name']):d['version'] for d in distributions}
+        if any(actual.get(normalize(k))!=v for k,v in required_distributions.items()):
+            raise ValueError('Required owned-runtime dependency version differs')
+        if 'torch' in modules:
+            import torch
+            if torch.version.cuda is not None:raise ValueError('Owned SCGBinner recipe must use CPU PyTorch')
     execution_check=None
     if forbidden_prefix:
         # This is compatibility arithmetic, not training, inference on DNA or scores.
@@ -318,10 +327,12 @@ if __name__=='__main__':
     parser.add_argument('--dependency-prefix')
     parser.add_argument('--forbidden-prefix')
     parser.add_argument('--expected-distributions',type=Path)
+    parser.add_argument('--required-distributions',type=Path)
     parser.add_argument('--tool');parser.add_argument('--source',type=Path);parser.add_argument('--threads',type=int)
     parser.add_argument('native_args',nargs=argparse.REMAINDER)
     args=parser.parse_args()
     if args.inventory_prefix:
         print('INVENTORY_JSON='+json.dumps(inventory(args.inventory_prefix,args.modules,args.expected_freeze,
-              args.dependency_prefix,json.loads(args.expected_distributions.read_text()) if args.expected_distributions else None,args.forbidden_prefix)),flush=True)
+              args.dependency_prefix,json.loads(args.expected_distributions.read_text()) if args.expected_distributions else None,args.forbidden_prefix,
+              json.loads(args.required_distributions.read_text()) if args.required_distributions else None)),flush=True)
     else:invoke(args.tool,args.source,args.native_args[1:] if args.native_args[:1]==['--'] else args.native_args,args.threads)

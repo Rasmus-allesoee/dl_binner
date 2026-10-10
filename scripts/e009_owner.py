@@ -270,7 +270,7 @@ def execute(args,attempt,started):
         from e009_cache_recovery import recover
         return recover(args,attempt,started,BUNDLE,sup)
     local=json.loads(args.local_runtimes.read_text()) if args.local_runtimes else None
-    if not local and not limits.get('full_native_preflight_enabled',True):
+    if not local and not args.failed_native_only and not limits.get('full_native_preflight_enabled',True):
         raise ValueError('Full native preflight is not enabled by this packet; review its current handoff')
     os.chdir(attempt)  # Keep incidental native files within this unique owned attempt.
     resource.setrlimit(resource.RLIMIT_CORE,(0,0))
@@ -284,7 +284,7 @@ def execute(args,attempt,started):
         os.sched_setaffinity(0,cpus[:8])
     elif args.allocated_vcpus>4 or args.allocated_ram_gb>8:
         raise ValueError('Local harness is bounded at four CPU threads / 8 GB working RAM')
-    deadline=started+(args.local_seconds or args.work_seconds or limits['work_seconds_ceiling'])
+    deadline=started+(args.local_seconds or args.work_seconds or (6600 if args.failed_native_only else limits['work_seconds_ceiling']))
     limits.update(startup_probe_seconds=deadline-started,startup_idle_seconds=args.stall_seconds,native_activity=True)
     env=sup.isolated_env(args.allocated_vcpus)
     for key in ('CONDA_PREFIX','CONDA_DEFAULT_ENV','CONDA_PROMPT_MODIFIER','CONDA_PYTHON_EXE','PERL5LIB','PERL_LOCAL_LIB_ROOT','PERL_MB_OPT','PERL_MM_OPT'):
@@ -306,6 +306,9 @@ def execute(args,attempt,started):
         sup.progress('E009 stage finished '+name+' (exit '+str(receipt['exit_code'])+')')
         return receipt
     inputs=BUNDLE/'input'
+    if args.failed_native_only:
+        from e009_retry import retry
+        return retry(args,attempt,BUNDLE,env,stage,deadline,limits,local)
     if local:
         # Local accepted-record injection changes only the remote runtime identity.
         # The production restore, lexical venv bindings and inventory run unchanged.
@@ -473,12 +476,14 @@ def main():
     p.add_argument('--allocated-vcpus',type=int,required=True);p.add_argument('--allocated-ram-gb',type=int,required=True)
     p.add_argument('--entry-start-epoch',type=float);p.add_argument('--local-runtimes',type=Path)
     p.add_argument('--local-seconds',type=float)
+    p.add_argument('--failed-native-only',action='store_true',help='Reuse accepted v10 evidence/assets and execute only failed SCGBinner/COMEBin contracts with independent corrected runtimes')
     p.add_argument('--runtime-recovery-only',action='store_true',help='Byte-bound job-local runtime snapshot and compatibility checks only; no installs/downloads/science')
     p.add_argument('--runtime-snapshot',type=Path,help='Explicit retained E009 snapshot receipt for verified archive reuse')
     p.add_argument('--snapshot-state',type=Path,help='Persistent v8 sealed-chunk state; explicit resume validates source plan and all reused bytes')
     p.add_argument('--work-seconds',type=float,help='Owner-selected overall work ceiling covering setup and all native consumers')
     p.add_argument('--stall-seconds',type=float,default=300,help='Stop after this long without observed real work (default 300s)')
     args=p.parse_args()
+    if args.failed_native_only and args.runtime_recovery_only:p.error('Choose one recovery mode')
     if args.local_seconds is not None and (not args.local_runtimes or not math.isfinite(args.local_seconds) or not 0<args.local_seconds<=7200):
         p.error('--local-seconds is only a positive <=7200-second local-harness limit')
     if args.allocated_vcpus<=0 or args.allocated_ram_gb<=0:p.error('Allocation values must be positive')
@@ -489,7 +494,7 @@ def main():
     args.root.mkdir(parents=True,exist_ok=True);transfer=args.root/'transfer';transfer.mkdir(exist_ok=True)
     attempt=Path(tempfile.mkdtemp(prefix='native-preflight-',dir=args.root));started=time.monotonic()-max(0,time.time()-(args.entry_start_epoch or time.time()))
     status={'status':'failed','verification_passed':False};code=1;original=sys.stdout,sys.stderr
-    work_seconds=args.local_seconds or args.work_seconds or (5400 if args.runtime_recovery_only else 17400)
+    work_seconds=args.local_seconds or args.work_seconds or (5400 if args.runtime_recovery_only else 6600 if args.failed_native_only else 17400)
     overall_seconds=work_seconds+(120 if args.runtime_recovery_only else 600)
     def alarm(signum,frame):raise TimeoutError('Overall E009 preflight ceiling reached')
     old_handlers={s:signal.getsignal(s) for s in (signal.SIGALRM,signal.SIGINT,signal.SIGTERM)}

@@ -224,7 +224,7 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**E009's v8 recovery is accepted; v9 was cancelled and v10 removes redundant silent verification.**
+**E009 v10 accepts all other stages/three tool contracts; v11 retries only SCGBinner and COMEBin.**
 [D013](decisions/D013-first-comparative-benchmark.md),
 [the targeted evidence](evidence/2026-10-09-e009-contract-reconciliation.md) and
 [E009](../experiments/E009-competitive-benchmark/README.md) retain subject S1:
@@ -258,33 +258,32 @@ imports/training or large-community affordability. Mac four-thread MEGAHIT crash
 remain unresolved; the local writer check is explicitly one thread, and the Linux
 preflight must pass eight threads. No accepted science was repeated.
 
-**V8 numerical runtime recovery remains accepted; v9 was owner-cancelled before science.**
-[The cancelled-log review](../experiments/E009-competitive-benchmark/linux-cancellation-v9.json)
-observes complete read-only restore of 151 chunks /18,977 entries in approximately
-nine seconds, zero original numerical source access, and AMBER target completion.
-The next code path silently hashes five whole directories. Exact parent file/exit
-status and cancellation cost are unknown without the attempt return. Terminal
-span alone is >=349 seconds /0.77556 allocated core-hours at 8 vCPU; owner reports
-about five further silent minutes. Original log/attempt/E001 prefixes/v8 state
-remain intact; working tree was clean at inspection.
+**E009 v10 completed; two native tool contracts failed.**
+[Independent review](../experiments/E009-competitive-benchmark/linux-preflight-v10.json)
+verifies checksum/all 340 members /338 hashes. Accept SemiBin, MetaCAT, CompleteBin,
+eight-thread Linux assembly, ordered mapping/depth, competitive truth, AMBER/R95
+software tests, runtime/utility/source/database setup, source acquisition/catalog
+and scoped read-only identities. No full fits/E009 scores. Actual 456.278 seconds
+through collection /1.01395 allocated core-hours at 8 vCPU/24 GB, peak sampled
+stage RSS 1.364 GB. Acquired 3.2-GB source archive/catalog remains retained; source
+catalog 2,078 files /65,571 records /10.252 Gbp, zero exact development matches,
+with near/pretraining independence not established. Preserve all accepted evidence.
 
-**Exact next step:** owner runs the corrected **v10 8-vCPU /24-GB native preflight**
-from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md), upload
-pair under `artifacts/e009-preparation/transfer-v10-final/`.
-[Transfer receipt](../experiments/E009-competitive-benchmark/transfer.json) owns
-source/archive/command/test identities. Source `5a780e4`; 49 regressions and
-exact packet/Bash/driver outside checkout pass (69.395 s through collection,
-0.367-GB outer sampled peak). Actual transferred scoped helper uses real mapping
-binaries/AMBER sources; CheckM hash inputs are synthetic, native reader pending.
-Remove blanket environment hashes, bind
-only 26 explicit external files with byte progress, announce successful stage exits,
-and enumerate only this attempt for collection storage. Accepted numerical members
-are verified during restore; full tool inventories/origins remain. This does not
-prove every byte in original AMBER/mapping prefixes unchanged. Simplified reuse
-is selected over rebuilding five numerical Conda stacks; [D006](decisions/D006-environment-ownership.md)
-records the alternatives. Native continuation, utility/tool/evaluator contracts,
-eight-thread assembly and source acquisition remain pending. No new setup gate,
-scientific change, original source recopy or scientific execution occurs.
+SCGBinner's shared sklearn1.9.0 lacks stable_cumsum; COMEBin's own help passed,
+CheckM imports a pruned checkm.test module. **Exact next step:** owner runs the
+**v11 two-path retry, 8 vCPU/24 GB, two-hour allocation**, from
+[Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md). Upload pair
+under `artifacts/e009-preparation/transfer-v11-final/`; [transfer.json](../experiments/E009-competitive-benchmark/transfer.json)
+binds final source/command/packet/tests. Install independently owned compatible
+SCGBinner and complete CheckM Conda stacks; retain COMEBin's accepted numerical
+recipe and use separate CheckM interpreter/libraries. [D006](decisions/D006-environment-ownership.md)
+records the concrete failures triggering this scoped ownership amendment.
+Only the two failed native contracts execute; retained tiny BAMs, acquired sources
+and utility prefix are reused. Passed tools, source download/catalog and all
+assembler/mapping/evaluator checks stay accepted, unscheduled. Original E001,
+v8 snapshot/151 chunks, old attempts/packets/data/prefixes remain untouched. Linux
+corrected-runtime compatibility and native contracts remain unverified until return.
+No scientific design/defaults/results change and no full fit/score is admitted.
 
 After native preflight admission and source/sample-count review, prepare the
 bounded bulk-read/assembly/depth/truth step. No community fits/scores/architecture

@@ -733,3 +733,43 @@ inputs. Before/after file/path identities pass; original Mac state is unchanged.
 Fixture/hash contracts do not establish native CheckM or full Linux execution.
 No accepted science repeated. [transfer.json](transfer.json) binds complete logs,
 command/archive/source and explicit Linux omissions; previous packets stay intact.
+
+
+## Accepted v10 stages and two-path v11 recovery, 2026-10-10
+
+[Independent return review](linux-preflight-v10.json) verifies SHA256/all 340
+archive members and 338 retained hashes /39,835,306 immutable logical bytes.
+SemiBin, MetaCAT and CompleteBin contracts pass; eight-thread Linux MEGAHIT,
+ordered mapping/depth, competitive truth and AMBER/confirmed R95 software tests
+pass. Runtime restores all accepted v8 chunks; numerical/per-tool inventories
+and 26 explicit external before/after identities pass. CompleteBin remains max-50;
+SCGBinner's accepted dtype patch remains. **No community fit or E009 score ran.**
+
+SCGBinner fails at shared sklearn1.9.0's missing private stable_cumsum import;
+COMEBin's own full help passes, but CheckM lacks pruned checkm.test. Preserve both
+failures and all passed stages. New independent SCGBinner/CheckM Conda recipes
+are selected for only those failed paths, with actual compatibility probes rather
+than assuming environment creation fixes them. [D006](../../docs/decisions/D006-environment-ownership.md)
+records requirements/alternatives and [failed-paths-lock.json](failed-paths-lock.json)
+binds 110 SCGBinner/98 CheckM Linux packages plus official CPU Torch (476.7 MB
+compressed before deduplication). COMEBin's main numerical recipe stays unchanged;
+complete CheckM runs under its own interpreter/libraries. No E001/v8/v10 mutation.
+
+Actual cost through collection: **456.278 s /1.01395 allocated core-hours at 8 vCPU
+/24 GB**, peak stage sampled RSS **1,363,578,880 bytes**. Provider billing/idle is
+unknown. Attempt precollection files are 381.482 MB, return compressed 5.415 MB;
+separate prefixes/caches/source data are outside that attempt storage scope.
+Source genome acquisition SHA is 9a0373b6a42f7322583b1c091059b513d8d62bd5be2e57244ac19b50b1f4f69a,
+3,202,310,417 bytes, catalog 2,078 source files /65,571 records /10,251,869,096 bp.
+Returned canonical/accession comparisons find zero exact development matches;
+this does not establish unseen-pretraining or near-genome independence. Heavy
+source bytes remain remotely receipt-bound and are not redownloaded/rehashed.
+
+V11 schedules only SCGBinner/COMEBin native contracts, reusing exact tiny ordered
+BAMs, pinned source archives and the accepted utility prefix. The other three tools,
+assembly/mapping/truth/evaluator/source download/catalog are not scheduled. New
+uniquely named corrected prefixes and attempts preserve old outputs. Proposed
+8-vCPU/24-GB two-hour allocation, 6,600 seconds work +600 collection, sampled
+20-GB RSS, no lower stage caps; cold Linux timing remains unknown. Local tests
+and transfer identities belong to [transfer.json](transfer.json); exact owner
+command and Linux limitations belong to [Operations](OPERATIONS.md).

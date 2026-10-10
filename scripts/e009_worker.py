@@ -53,6 +53,14 @@ def tool_contract(args):
                    'cluster':'not run; native full import/argv verified only'})
     elif args.tool=='scgbinner':
         run_native(own+plan['stages'][0],out/'augmentation.log',timeout=300)
+        # Execute the upstream initializer that actually calls stable_cumsum,
+        # without a community clustering fit or truth-based K selection.
+        sys.path.insert(0,str(args.source));from SCGBinner.cluster import partial_seed_init
+        import numpy as np
+        probe=np.arange(24,dtype=np.float64).reshape(8,3)
+        centers=partial_seed_init(probe,3,11,[0])
+        if centers.shape!=(3,3) or not np.isfinite(centers).all():
+            raise ValueError('SCGBinner native seeded initializer contract failed')
         # Exercise the dtype patch in the actual reader on native emitted data.
         sys.path.insert(0,str(args.source));from SCGBinner.utils import get_kmer_coverage_aug0
         values=get_kmer_coverage_aug0(str(out/'native/data_augmentation')+'/')
@@ -81,7 +89,7 @@ def tool_contract(args):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);subs=p.add_subparsers(dest='operation',required=True)
     a=subs.add_parser('acquire');a.add_argument('--spec-json',required=True);a.add_argument('--destination',type=Path,required=True)
-    many=subs.add_parser('acquire-utilities');many.add_argument('--lock',type=Path,required=True);many.add_argument('--destination',type=Path,required=True);many.add_argument('--explicit',type=Path,required=True)
+    many=subs.add_parser('acquire-utilities',aliases=['acquire-conda']);many.add_argument('--lock',type=Path,required=True);many.add_argument('--destination',type=Path,required=True);many.add_argument('--explicit',type=Path,required=True)
     c=subs.add_parser('source-catalog');c.add_argument('--source',type=Path,required=True);c.add_argument('--development',type=Path,required=True);c.add_argument('--output',type=Path,required=True)
     t=subs.add_parser('tool-contract')
     for name in ['source','inputs','output','db']:t.add_argument('--'+name,type=Path,required=True)
@@ -90,13 +98,13 @@ if __name__=='__main__':
     args=p.parse_args()
     if args.operation=='acquire':
         print(json.dumps(acquire(json.loads(args.spec_json),args.destination,resume=True)),flush=True)
-    elif args.operation=='acquire-utilities':
+    elif args.operation in ('acquire-utilities','acquire-conda'):
         packages=json.loads(args.lock.read_text())['packages'];args.destination.mkdir(parents=True,exist_ok=True)
         with args.explicit.open('x') as out:
             out.write('@EXPLICIT\n')
             for spec in packages:
                 target=args.destination/spec['fn']
-                print('DLBINNER pinned utility acquisition: '+spec['fn'],flush=True)
+                print('DLBINNER pinned Conda acquisition: '+spec['fn'],flush=True)
                 acquire({'url':spec['url'],'bytes':spec['size'],'sha256':spec['sha256']},target,resume=True)
                 out.write(target.absolute().as_uri()+'#'+spec['md5']+'\n')
     elif args.operation=='source-catalog':

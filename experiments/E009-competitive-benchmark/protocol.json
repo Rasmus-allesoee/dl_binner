@@ -1,7 +1,7 @@
 {
   "record": "E009",
   "date": "2026-10-09",
-  "status": "local adapters tested; checksum-bound owner preflight prepared; native Linux unexecuted",
+  "status": "v10 other native stages and three tools accepted; two failed runtime contracts under v11 recovery; scientific execution unstarted",
   "scientific_outcome": "not assessed",
   "execution_ready": false,
   "authorized_current_task": "local adapters/tests and checksum-bound owner preflight preparation; no UCloud or benchmark execution",
@@ -259,5 +259,15 @@
     "public release"
   ],
   "owner_preflight_prepared": true,
-  "scientific_execution_ready": false
+  "scientific_execution_ready": false,
+  "failed_native_runtime_recovery": {
+    "receipt": "linux-preflight-v10.json",
+    "locked_recipes": "failed-paths-lock.json",
+    "tools": [
+      "SCGBinner",
+      "COMEBin CheckM path"
+    ],
+    "source_model_training_and_clustering_unchanged": true,
+    "scientific_execution_admitted": false
+  }
 }
