@@ -7,7 +7,7 @@
       "bytes": 2504,
       "sha256": "6f1340afa1267746f4df80706c96b1a76429957847f98a72d0f051fadb53ab5d"
     },
-    "evidence": "accepted E001 CT resume -I full inventory and native origin probe; new full distribution/origin and before/after byte checks mandatory"
+    "evidence": "Accepted v8 exact numerical bytes/inventory reused by restore-only consumer; full per-tool distribution/origin probes and explicit external-input before/after hashes, without repeated whole-environment scans"
   },
   "mapping": {
     "prefix": "/work/Home/dl_binner/e001/e001-gate0/envs/mapping",

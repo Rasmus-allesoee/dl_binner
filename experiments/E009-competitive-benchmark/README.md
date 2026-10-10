@@ -694,3 +694,29 @@ error was corrected from retained successful stages. Initial sandbox ps failures
 have no validation credit. Full logs/scopes/hashes are in [transfer.json](transfer.json).
 Linux utility/tool/AMBER paths were not mocked and called passed; they remain
 pending in the owner v9 preflight. No accepted science was repeated.
+
+
+## Cancelled v9 and focused v10 repair, 2026-10-10
+
+The [cancellation receipt](linux-cancellation-v9.json) binds the only uploaded
+terminal log. All 151 chunks /18,977 entries were restored with zero original
+source access, approximately nine seconds between stage announcements. AMBER's
+four imports and inventory target reached `target ready` /`finished pid=644`;
+the next code path silently hashes numerical/mapping/AMBER/source/marker directory
+trees. The terminal alone does not prove which file was being hashed, supervisor
+exit status, exact cancellation time or total cost. Timestamp span is at least
+349 seconds /0.77556 allocated core-hours at 8 vCPU; the owner reports about five
+additional silent minutes. No scientific work began. The working tree was clean
+at inspection; no in-progress changes were lost. Original attempt/log/v9 packet,
+E001 environment and accepted v8 chunks stay intact.
+
+V10 removes those blanket before/after scans, retaining accepted member checks,
+full inventory/origin probes and only 26 explicit external file bindings with
+visible start/end and advancing byte reports. Successful child stages now announce
+exit status before the next stage. Collection enumerates only this attempt rather
+than all prior environments/chunks/shared sources. It honestly reports the narrower
+assurance scope. [D006](../../docs/decisions/D006-environment-ownership.md) explains
+why simplified reuse is the bounded choice over five new numerical Conda builds.
+Scientific design and all accepted science remain unchanged. The corrected packet
+and exact command are owned by [Operations](OPERATIONS.md) and
+[transfer.json](transfer.json). Linux continuation beyond AMBER remains unverified.

@@ -218,3 +218,35 @@ are not accepted work. Bound CI/local fixtures separately; a quiet CPU computati
 must not be killed merely because it emits no log output. V9's five-hour ceiling
 is the existing bounded cold-setup/source/native-contract allocation, not a
 performance projection from the 161-second recovery. Native timings remain pending.
+
+
+## E009 scoped reuse amendment, 2026-10-10
+
+The [cancelled v9 review](../../experiments/E009-competitive-benchmark/linux-cancellation-v9.json)
+shows complete restore of all 151 accepted chunks in approximately nine seconds,
+then completed AMBER target validation after slow persistent-storage imports.
+The next parent path silently hashes five entire directory trees. Remove this
+redundant blanket operation; it is not necessary to protect original data.
+
+V10 verifies the accepted numerical members once during read-only restore,
+retains full per-tool inventories/origins, isolated no-cache-write Python and
+separate owned installation targets. Bind **26 explicitly declared external
+files** before/after: two mapping binaries, CheckM console source, three pinned
+marker inputs and twenty pinned AMBER source/licence files. Report lexical and
+resolved paths, hashes and advancing byte counts. This assurance does not claim
+whole-prefix non-mutation or cryptographic identity of all AMBER/mapping libraries.
+Do not recursively scan old environments, snapshots or shared data for a storage
+summary; report this attempt, immutable returned members and explicit payload
+receipts instead. The accepted v8 receipt/chunks and old attempts remain intact.
+
+Fresh separate E009 Conda stacks are practical in principle and preferable when
+an incompatible dependency requires a distinct recipe. They do not directly fix
+an unnecessary recursive verification call: the same code would scan new stacks,
+and Home-based installs could retain the observed cold-read latency. Current
+records include numerical inventories but not a complete replayable explicit
+Linux payload lock for five independent numerical stacks. Rebuilding would add
+network/solver/payload verification and duplicate storage before native tool
+compatibility is known. Choose simplified reuse for this retry, rather than add
+another setup project. Revisit a fresh per-tool recipe only upon a concrete
+compatibility or persistent-runtime failure; never modify the E001 environment.
+Benchmark shortlist, sources, models and scientific settings remain unchanged.

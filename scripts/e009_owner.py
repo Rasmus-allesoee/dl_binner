@@ -25,7 +25,7 @@ import time
 import traceback
 sys.path.insert(0,str(Path(__file__).absolute().parent))
 
-from e009_common import acquire, binding, extract, tree_binding, write_json
+from e009_common import acquire, binding, extract, write_json
 from e009_native import command_plan, patch_completebin, patch_scgbinner
 from e009_startup import startup_argv,supervise_startup,source_cache_argv,supervise_work,supervise_activity
 
@@ -193,22 +193,67 @@ def storage_snapshot(root):
             'scope':'owned filesystem snapshot before collection, distinct from exact archive-member retained bytes'}
 
 
-def verify_readonly_after(roots,before,attempt,work_deadline,overall_deadline):
-    """Bound the final dependency-byte check even after the work alarm has fired.
+def readonly_inputs(baseline):
+    """Select only explicit external executables, evaluator sources and marker inputs.
+
+    The numerical runtime is already verified member-by-member during restore.
+    This list never traverses an environment or database directory; unused tests,
+    headers and unrelated resources are outside its before/after assurance scope.
+    """
+    original=Path(baseline['comebin_dependencies']['prefix'])
+    files={'checkm_entry':original/'bin/checkm'}
+    files.update({'mapping/'+name:Path(baseline['mapping']['prefix'])/'bin'/name
+                  for name in baseline['mapping']['versions']})
+    files.update({'amber_source/'+name:Path(baseline['amber']['source'])/name
+                  for name in baseline['amber_source_files']})
+    files.update({'checkm_data/'+name:original/'checkm_data'/name
+                  for name in baseline['checkm_payloads']})
+    expected={'amber_source/'+name:digest for name,digest in baseline['amber_source_files'].items()}
+    expected.update({'checkm_data/'+name:digest for name,digest in baseline['checkm_payloads'].items()})
+    return files,expected
+
+
+def bind_readonly_files(files,expected=None):
+    """Hash the declared files with visible real-byte progress, never tree enumeration.
+
+    Record lexical and resolved paths so changed symlink targets also fail review.
+    Return the precise file table, not a claim that entire prefixes are unchanged.
+    The owner-selected overall clock covers these parent-side operations.
+    """
+    records={}
+    for name,path in files.items():
+        path=Path(path)
+        print('DLBINNER READONLY_FILE begin '+name+' '+str(path),flush=True)
+        resolved=path.resolve(strict=True)
+        def progress(completed):
+            print('DLBINNER WORK_PROGRESS_JSON='+json.dumps(
+                {'work_key':'readonly/'+name,'completed_bytes':completed}),flush=True)
+        value=binding(resolved,progress=progress)
+        if expected and name in expected and value['sha256']!=expected[name]:
+            raise ValueError('Accepted read-only input changed: '+name)
+        records[name]={'path':str(path),'resolved_path':str(resolved),'file':value}
+        print('DLBINNER READONLY_FILE finished '+name,flush=True)
+    print('DLBINNER READONLY_FILES finished '+str(len(records))+' explicit files',flush=True)
+    return records
+
+
+def verify_readonly_after(files,before,attempt,work_deadline,overall_deadline):
+    """Bound the final explicit-file check even after the work alarm has fired.
 
     Ordinary verification stays within the work clock. Following a timeout, at
-    most 120 seconds of the remaining collection reserve can verify read-only
+    most the remaining collection reserve can verify these explicit input
     bytes. A blocked/failed check is retained as unverified, never accepted as
     unchanged. Restore any still-live parent alarm when leaving this check.
     """
     started=time.monotonic();previous=signal.getitimer(signal.ITIMER_REAL)
     remaining=work_deadline-started
-    seconds=min(remaining if remaining>0 else 120,overall_deadline-started)
+    seconds=min(remaining,overall_deadline-started) if remaining>0 else overall_deadline-started
     try:
         if seconds<=0:raise TimeoutError('No bounded time remains for read-only verification')
         signal.setitimer(signal.ITIMER_REAL,seconds)
-        after={name:tree_binding(path) for name,path in roots.items()}
-        write_json(attempt/'readonly-after.json',{'bindings':after,'unchanged':after==before})
+        after=bind_readonly_files(files)
+        write_json(attempt/'readonly-after.json',{'bindings':after,'unchanged':after==before,
+            'scope':'explicit external files only; no whole-environment mutation claim'})
         if after!=before:raise ValueError('Read-only dependency bytes changed; preserve evidence')
     except BaseException as error:
         write_json(attempt/'readonly-after-failure.json',{'error':repr(error),
@@ -255,9 +300,11 @@ def execute(args,attempt,started):
         remaining=deadline-time.monotonic()
         if remaining<=0:raise TimeoutError('Whole preflight work ceiling reached')
         sup.progress('E009 stage '+name)
-        return run_stage(sup,argv,stages/(name+'.log'),remaining,remaining,
+        receipt=run_stage(sup,argv,stages/(name+'.log'),remaining,remaining,
                          8_000_000_000 if local else limits['working_rss_bytes'],
                          stage_env or env,limits,sample_root=os.getpid())
+        sup.progress('E009 stage finished '+name+' (exit '+str(receipt['exit_code'])+')')
+        return receipt
     inputs=BUNDLE/'input'
     if local:
         # Local accepted-record injection changes only the remote runtime identity.
@@ -301,20 +348,16 @@ def execute(args,attempt,started):
         'source_file':binding(original_base/'bin/checkm'),'copy_file':binding(checkm_entry)})
     if binding(checkm_entry)!=binding(original_base/'bin/checkm'):raise ValueError('CheckM entry copy differs')
     checkm_data=original_base/'checkm_data';env['CHECKM_DATA_PATH']=str(checkm_data)
-    for name,digest in baseline['checkm_payloads'].items():
-        if binding(checkm_data/name)['sha256']!=digest:raise ValueError('Accepted CheckM marker payload changed: '+name)
     amber=Path(baseline['amber']['prefix']);amber_source=Path(baseline['amber']['source'])
-    for name,digest in baseline['amber_source_files'].items():
-        if binding(amber_source/name)['sha256']!=digest:raise ValueError('Accepted AMBER source changed: '+name)
+    readonly_files,expected=readonly_inputs(baseline)
+    bindings=bind_readonly_files(readonly_files,expected)
+    write_json(attempt/'readonly-before.json',{'bindings':bindings,
+        'scope':'explicit external files only; numerical members already verified at restore'})
     expected_amber=attempt/'amber-expected-inventory.json'
     write_json(expected_amber,baseline['amber']['lock_reconciliation']['verified_prefix_inventory']['distributions'])
     stage([amber/'bin/python','-I','-B',BUNDLE/'scripts/e009_native.py','--inventory-prefix',amber,
            '--expected-distributions',expected_amber,'--modules','numpy','pandas','matplotlib','Bio'],
           'readonly-amber-probe',dict(env,LD_LIBRARY_PATH=str(amber/'lib')))
-    readonly_roots={'numerical':base,'mapping':mapping,'amber':amber,'amber_source':amber_source,
-                    'checkm_data':checkm_data}
-    bindings={name:tree_binding(path) for name,path in readonly_roots.items()}
-    write_json(attempt/'readonly-before.json',bindings)
     try:
         for tool,argv in [('strobealign',['--version']),('samtools',['--version'])]:
             stage([mapping/'bin'/tool,*argv],tool+'-version')
@@ -414,7 +457,7 @@ def execute(args,attempt,started):
                    'source_catalog':binding(attempt/'source-catalog.json'),'admitted_scientific_input':False})
     finally:
         if binding(original_base/'bin/checkm')!=binding(checkm_entry):raise ValueError('Original CheckM entry changed')
-        verify_readonly_after(readonly_roots,bindings,attempt,deadline,
+        verify_readonly_after(readonly_files,bindings,attempt,deadline,
                               deadline+limits['collection_reserve_seconds'])
     failed=[t for t,v in results.items() if v['status']!='passed']
     return {'status':'failed' if failed else 'passed','native_linux':True,'tools':results,'failed_tools':failed,
@@ -470,10 +513,12 @@ def main():
         finally:
             signal.setitimer(signal.ITIMER_REAL,0)
             try:
-                signal.setitimer(signal.ITIMER_REAL,30)
-                write_json(attempt/'storage-before-collection.json',{'home':storage_snapshot(attempt if args.runtime_recovery_only else args.root),
-                    'shared':storage_snapshot(args.shared_root) if not args.runtime_recovery_only and args.shared_root.is_dir() else None,
-                    'scope':'this recovery attempt only' if args.runtime_recovery_only else 'owned experiment roots'})
+                signal.setitimer(signal.ITIMER_REAL,max(.001,overall_seconds-(time.monotonic()-started)))
+                print('DLBINNER STORAGE begin this attempt only',flush=True)
+                write_json(attempt/'storage-before-collection.json',{'home':storage_snapshot(attempt),
+                    'shared':None,
+                    'scope':'this attempt only; no recursive scans of prior attempts, environments, chunks or shared sources'})
+                print('DLBINNER STORAGE finished',flush=True)
             except BaseException as error:print('STORAGE_SNAPSHOT_UNAVAILABLE='+repr(error),flush=True)
             signal.setitimer(signal.ITIMER_REAL,0)
             elapsed=time.monotonic()-started

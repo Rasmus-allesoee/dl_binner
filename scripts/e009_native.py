@@ -210,8 +210,8 @@ def inventory(expected_prefix, modules, expected_freeze=None, dependency_prefix=
     """Probe complete installed distributions/origins and optional accepted full freeze.
 
     Invoke lexical Python -I -B. Full origins exclude inherited/user-site modules;
-    freeze alone is insufficient. Tree bindings outside this child verify read-only
-    bytes before and after use. No install/upgrade runs in a reused prefix.
+    freeze alone is insufficient. Explicit external inputs are bound before/after;
+    restored numerical bytes are verified once by the chunk consumer. No install/upgrade runs in a reused prefix.
     """
     prefix=Path(sys.prefix).resolve()
     if prefix!=Path(expected_prefix).resolve():raise ValueError('Wrong lexical interpreter prefix')

@@ -224,7 +224,7 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**E009's v8 numerical recovery passes; v9 native contracts are the next bounded step.**
+**E009's v8 recovery is accepted; v9 was cancelled and v10 removes redundant silent verification.**
 [D013](decisions/D013-first-comparative-benchmark.md),
 [the targeted evidence](evidence/2026-10-09-e009-contract-reconciliation.md) and
 [E009](../experiments/E009-competitive-benchmark/README.md) retain subject S1:
@@ -258,34 +258,29 @@ imports/training or large-community affordability. Mac four-thread MEGAHIT crash
 remain unresolved; the local writer check is explicitly one thread, and the Linux
 preflight must pass eight threads. No accepted science was repeated.
 
-**V8 numerical runtime recovery is accepted; v9 native preflight is tested/prepared.**
-[Independent return review](../experiments/E009-competitive-benchmark/linux-runtime-recovery-v8.json)
-verifies 24 archive members/22 hashes, full Python 3.13.14 /86-distribution inventory,
-ten imports, job-local stdlib/mapped libraries and NumPy/Torch arithmetic.
-Selected 18,977 entries /1.68 GB; 151 sealed chunks /1.717 GB. Fresh copy 143.613 s,
-imports 13.670 s, reverify 3.867 s; driver 161.307 s /0.0448074 allocated core-hours
-at actual declared 1 vCPU /4 GB; /proc affinity 0, sampled peak 0.461 GB. No fit or
-score. After-collection/idle/billed cost is not known from the uploaded files.
-Native resume was not executed; bulk chunks were retained remotely, not uploaded.
+**V8 numerical runtime recovery remains accepted; v9 was owner-cancelled before science.**
+[The cancelled-log review](../experiments/E009-competitive-benchmark/linux-cancellation-v9.json)
+observes complete read-only restore of 151 chunks /18,977 entries in approximately
+nine seconds, zero original numerical source access, and AMBER target completion.
+The next code path silently hashes five whole directories. Exact parent file/exit
+status and cancellation cost are unknown without the attempt return. Terminal
+span alone is >=349 seconds /0.77556 allocated core-hours at 8 vCPU; owner reports
+about five further silent minutes. Original log/attempt/E001 prefixes/v8 state
+remain intact; working tree was clean at inspection.
 
-**Exact next step:** owner runs the tested **v9 8-vCPU /24-GB native preflight**
-from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
-Upload pair: `artifacts/e009-preparation/transfer-v9-reviewed/`, source `d57536746e47d2b3e82d5190ef90d0ae4c3308cc`.
-Forty-six checks (45-suite plus actual HTTP transfer) and exact packet/Bash/driver on retained real Mac chunks
-pass: the final packet restores 9,509 entries /zero source copies in 63.622 s;
-actual venv/inventory and tiny native contracts run. Earlier byte-identical consumer
-checks retain own-wheel/wrapper and failure evidence. Persistent state and
-restored numerical bytes remain unchanged. Local limits/omissions/retained failures
-are explicit in the [transfer receipt](../experiments/E009-competitive-benchmark/transfer.json). Restore-only consumption binds the accepted v8 receipt/seals and
-never recopies or enumerates the original numerical prefix. Per-tool v2 execution
-venvs explicitly borrow this job-local runtime; retained paths need fresh bindings
-following job reset. CheckM console source is separately byte-bound; original
-mapping/AMBER prefixes/markers remain read-only and still need native validation.
-All native consumers share the explicit 17,400-second work /600-second collection
-clock, with completed-byte/entry or CPU/I-O activity guards and no lower stage caps.
-No accepted scientific settings/results or old attempts/prefixes/chunks change.
-Native restored consumers, utility setup/tool feature/checkpoint/evaluation and
-eight-thread Linux assembly remain pending. No community schedule is admitted.
+**Exact next step:** owner runs the corrected **v10 8-vCPU /24-GB native preflight**
+from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md), upload
+pair under `artifacts/e009-preparation/transfer-v10-final/`.
+[Transfer receipt](../experiments/E009-competitive-benchmark/transfer.json) owns
+source/archive/command/test identities. Remove blanket environment hashes, bind
+only 26 explicit external files with byte progress, announce successful stage exits,
+and enumerate only this attempt for collection storage. Accepted numerical members
+are verified during restore; full tool inventories/origins remain. This does not
+prove every byte in original AMBER/mapping prefixes unchanged. Simplified reuse
+is selected over rebuilding five numerical Conda stacks; [D006](decisions/D006-environment-ownership.md)
+records the alternatives. Native continuation, utility/tool/evaluator contracts,
+eight-thread assembly and source acquisition remain pending. No new setup gate,
+scientific change, original source recopy or scientific execution occurs.
 
 After native preflight admission and source/sample-count review, prepare the
 bounded bulk-read/assembly/depth/truth step. No community fits/scores/architecture

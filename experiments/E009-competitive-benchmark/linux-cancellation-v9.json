@@ -1,0 +1,55 @@
+{
+  "record": "E009",
+  "date": "2026-10-10",
+  "status": "owner cancelled v9 during uninstrumented parent verification; no scientific execution",
+  "input_log": {
+    "path": "agent_context/e009-preflight.3i7fjj8r.log",
+    "bytes": 33137,
+    "sha256": "3c1ff39c98be530f979b06a99b4059c857a2c42868ccfef7ae0bb1fc1f65a6f8"
+  },
+  "source_commit": "d57536746e47d2b3e82d5190ef90d0ae4c3308cc",
+  "attempt": "/work/Home/dl_binner/e009/native-preflight-hjc6vbt4",
+  "working_tree_at_inspection": "clean at 8cd05333132fc000e10a91f6a45a2fa66b32239e; no uncommitted work to overwrite",
+  "observed": {
+    "restore": {
+      "state": "/work/Home/dl_binner/e009/runtime-snapshots/comebin-runtime-v8",
+      "receipt_file": {
+        "bytes": 3377589,
+        "sha256": "54b705503ff540746f853875ee2e97e5c2461797fcb70a24ab2adea6e3c70bfa"
+      },
+      "local_prefix": "/tmp/e009-hrsjbblu/numerical-runtime",
+      "source_copied_entries": 0,
+      "restored_entries": 18977,
+      "sealed_chunks": 151,
+      "logical_bytes": 1682401752,
+      "complete": true,
+      "original_source_accessed": false
+    },
+    "first_timestamp_utc": "2026-10-10 19:02:37",
+    "last_timestamp_utc": "2026-10-10 19:08:26",
+    "amber_probe_pid": 644,
+    "target_ready": true,
+    "probe_finished": true,
+    "traceback_in_terminal": false,
+    "amber_modules_ready": [
+      "numpy",
+      "pandas",
+      "matplotlib",
+      "Bio"
+    ],
+    "next_stage_announced": false
+  },
+  "code_observation": "After successful AMBER supervision, v9 builds readonly_roots and silently tree_binding() hashes numerical, mapping, amber, amber_source and checkm_data before announcing strobealign-version. Each tree recursively enumerates and hashes all regular files; an equally broad after-use check follows.",
+  "interpretation": "AMBER target completed its inventory/origin validation. The next code path is silent whole-tree hashing, the likely source of the owner-reported five-minute silence. No stage exit receipt/parent stack/cancelled return was uploaded, so the exact file, completion of the supervisor cleanup, cancellation time and whether readonly-before.json was written cannot be independently established.",
+  "cost": {
+    "allocated_vcpus": 8,
+    "allocated_ram_gb": 24,
+    "timestamp_span_lower_bound_seconds": 349,
+    "allocated_core_hours_lower_bound": 0.7755555555555556,
+    "owner_report": "about five additional minutes without terminal output; not a precise allocation receipt",
+    "exact_total_and_billing": "unknown"
+  },
+  "accepted_scope": "Retain v8 acceptance and logged complete restore/AMBER target observations; this is not completion of native preflight or scientific admission.",
+  "preservation": "Original E001 prefixes, v8 state/151 chunks, v9 packet, original terminal log and cancelled attempt remain untouched. No local working-tree changes were discarded.",
+  "fix": "v10 removes whole-prefix scans, verifies only 26 declared external input files with before/after SHA/path identities and byte progress, retains complete accepted chunk verification and distribution/origin checks, announces stage exits, and scopes storage enumeration to the current attempt."
+}

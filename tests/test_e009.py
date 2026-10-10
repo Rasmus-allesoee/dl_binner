@@ -24,7 +24,7 @@ from e009_data import canonical_dna,combine_depth,competitive_reference,partitio
 from e009_native import cpu_plan,prepare_bam_directory,validate_comebin_contigs
 from e009_hmm import budget_args
 from e009_startup import startup_argv,supervise_startup,wait_snapshot,StartupProgress,progress_signature,source_cache_argv
-from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after,run_stage,python_wrapper
+from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after,run_stage,python_wrapper,readonly_inputs,bind_readonly_files
 from e009_common import tree_binding
 from e009_truth import construct,parse_paf,reconcile,recovery,union
 from e009_snapshot import create as create_snapshot, restore as restore_snapshot, verify as verify_snapshot
@@ -469,17 +469,58 @@ class E009Contracts(unittest.TestCase):
 
     def test_final_readonly_bytes_are_checked_and_changed_bytes_fail(self):
         root=self.p/'dependency';root.mkdir();self.put('dependency/native','unchanged')
-        before={'dependency':tree_binding(root)}
+        files={'dependency':root/'native'}
+        before=bind_readonly_files(files)
         for name,changed in [('intact',False),('changed',True)]:
             attempt=self.p/name;attempt.mkdir()
             if changed:self.put('dependency/native','changed')
             now=time.monotonic()
             if changed:
                 with self.assertRaisesRegex(ValueError,'Read-only dependency bytes changed'):
-                    verify_readonly_after({'dependency':root},before,attempt,now+10,now+20)
+                    verify_readonly_after(files,before,attempt,now+10,now+20)
                 self.assertIsNone(json.loads((attempt/'readonly-after-failure.json').read_text())['unchanged'])
-            else:verify_readonly_after({'dependency':root},before,attempt,now+10,now+20)
+            else:verify_readonly_after(files,before,attempt,now+10,now+20)
             self.assertEqual(json.loads((attempt/'readonly-after.json').read_text())['unchanged'],not changed)
+
+    def test_readonly_selection_never_enumerates_unrelated_trees(self):
+        from unittest.mock import patch
+        baseline={'comebin_dependencies':{'prefix':str(self.p/'old')},
+            'mapping':{'prefix':str(self.p/'mapping'),'versions':{'samtools':'1','strobealign':'1'}},
+            'amber':{'source':str(self.p/'amber')},'amber_source_files':{},'checkm_payloads':{}}
+        src=self.put('amber/evaluate.py','real evaluator input')
+        marker=self.put('old/checkm_data/hmms/checkm.hmm','real marker input')
+        baseline['amber_source_files']['evaluate.py']=binding(src)['sha256']
+        baseline['checkm_payloads']['hmms/checkm.hmm']=binding(marker)['sha256']
+        self.put('old/bin/checkm','console source');self.put('mapping/bin/samtools','native binary')
+        self.put('mapping/bin/strobealign','native mapper')
+        self.put('old/tests/unrelated','not an input');self.put('mapping/lib/unrelated','not an input')
+        files,expected=readonly_inputs(baseline)
+        with patch.object(Path,'rglob',side_effect=AssertionError('whole-tree traversal forbidden')):
+            with contextlib.redirect_stdout(io.StringIO()) as output:
+                before=bind_readonly_files(files,expected)
+                self.put('old/tests/unrelated','unrelated file change')
+                self.assertEqual(bind_readonly_files(files),before)
+        self.assertEqual(len(before),5)
+        self.assertIn('READONLY_FILE begin',output.getvalue())
+        self.assertIn('completed_bytes',output.getvalue())
+        marker.write_text('corrupted marker')
+        with self.assertRaisesRegex(ValueError,'Accepted read-only input changed: checkm_data'):
+            bind_readonly_files(files,expected)
+
+    def test_readonly_file_target_changes_and_missing_files_fail(self):
+        a=self.put('a','same bytes');b=self.put('b','same bytes');link=self.p/'link';link.symlink_to(a)
+        files={'native':link};before=bind_readonly_files(files)
+        link.unlink();link.symlink_to(b)
+        attempt=self.p/'after';attempt.mkdir();now=time.monotonic()
+        with self.assertRaisesRegex(ValueError,'Read-only dependency bytes changed'):
+            verify_readonly_after(files,before,attempt,now+10,now+20)
+        link.unlink()
+        with self.assertRaises(FileNotFoundError):bind_readonly_files(files)
+
+    def test_binding_progress_reports_actual_byte_counts(self):
+        data=self.p/'stream';data.write_bytes(b'x'*(2*1024*1024+17));counts=[]
+        original=binding(data);self.assertEqual(binding(data,progress=counts.append),original)
+        self.assertEqual(counts[0],0);self.assertEqual(counts[-1],original['bytes'])
 
     def test_expired_parent_alarm_cannot_leave_readonly_cleanup_unbounded(self):
         # Inject a stalled filesystem check, outside the actual hashing contract.
@@ -496,7 +537,7 @@ try:time.sleep(1)
 except TimeoutError:pass
 assert signal.getitimer(signal.ITIMER_REAL)[0]==0
 def blocked(path):time.sleep(60)
-owner.tree_binding=blocked
+owner.bind_readonly_files=blocked
 attempt=Path({str(self.p/'cleanup')!r});attempt.mkdir()
 now=time.monotonic()
 try:owner.verify_readonly_after({{'blocked':attempt}},{{}},attempt,now-1,now+.15)

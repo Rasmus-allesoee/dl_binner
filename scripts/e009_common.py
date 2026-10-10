@@ -15,15 +15,19 @@ import urllib.request
 import zipfile
 
 
-def binding(path):
-    """Return size/SHA256 of one regular file, streaming its original bytes."""
+def binding(path, progress=None):
+    """Stream size/SHA256; optionally report actual bytes before, during and after reads."""
     path = Path(path)
     if path.is_symlink() or not path.is_file():
         raise ValueError(f'Missing or linked regular file: {path}')
-    digest = hashlib.sha256()
+    digest = hashlib.sha256(); completed = 0; last_report = time.monotonic()
+    if progress: progress(0)
     with path.open('rb') as stream:
         for chunk in iter(lambda: stream.read(1024 * 1024), b''):
-            digest.update(chunk)
+            digest.update(chunk); completed += len(chunk)
+            if progress and time.monotonic()-last_report >= 5:
+                progress(completed); last_report = time.monotonic()
+    if progress: progress(completed)
     return {'bytes': path.stat().st_size, 'sha256': digest.hexdigest()}
 
 

@@ -13,7 +13,7 @@ because its separate receipt was not uploaded. No community was fitted/scored.
 
 Native **fresh creation**, not native restore, was executed. The returned chunk
 receipts/hashes are worker evidence; bulk chunks/final inventory stayed on UCloud
-and cannot be independently rehashed on Mac. V9 binds their exact final receipt,
+and cannot be independently rehashed on Mac. V10 binds their exact final receipt,
 all 151 seals, tar hashes/member hashes and population during read-only restore.
 The original E001 numerical environment is never recounted or recopied.
 
@@ -21,7 +21,7 @@ The original E001 numerical environment is never recounted or recopied.
 
 Use **CPU/Linux x86-64, 8 vCPU /24 GB**, glibc >=2.28, Home and project shared
 storage mounted; no competing work/Slurm. Choose **five hours** as the allocation
-ceiling. V9 selects **17,400 seconds overall work +600 seconds collection** and
+ceiling. V10 selects **17,400 seconds overall work +600 seconds collection** and
 20-GB sampled working RSS. The whole tree has eight-CPU affinity; tools execute
 serially. This remains the prospectively bounded <=40-core-hour preflight, not a
 runtime forecast. It includes cold utility setup and a 3.2-GB source download;
@@ -30,8 +30,8 @@ collection. Source-genome acquisition is preparatory and is not admitted as
 scientific input until its new SHA/source overlap is reviewed. No reads download.
 
 All Python inventories, install/import/feature workers and nested native commands
-use the remaining overall clock, **without shorter stage wall caps**. Restore/
-hashing watches advancing completed bytes/entries. Other native workers use a
+use the remaining overall clock, **without shorter stage wall caps**. Restore watches advancing completed bytes/entries. Explicit external-file
+hashes print each path and advancing byte counts; no whole-environment hashing runs. Other native workers use a
 300-second no-activity guard based on launched-tree CPU/physical I/O plus actual
 acquired-byte reports; quiet
 compute is activity, parent heartbeats are not. Import probes retain phase/stack/
@@ -43,13 +43,10 @@ value, but an extension requires consistent Terminal time plus collection reserv
 
 ## Upload and exact command
 
-Upload only `e009-preflight-v9.tar.gz` and matching `.tar.gz.sha256` from
-`artifacts/e009-preparation/transfer-v9-reviewed/` to
+Upload only `e009-preflight-v10.tar.gz` and matching `.tar.gz.sha256` from
+`artifacts/e009-preparation/transfer-v10-final/` to
 `/work/Home/dl_binner/e009/transfer/`. [transfer.json](transfer.json) binds the final
-packet/source, command and tests. Final source `d57536746e47d2b3e82d5190ef90d0ae4c3308cc`,
-6,698,794 archive bytes, SHA256
-`17faebceab9a7324c0930ade40d0cfb0c5027fd1a7c2fd5a64f79caa1d3b0f4b`. Old v1-v8 uploads remain preserved and superseded
-for this next native preflight. Paste the entire locally tested block:
+packet/source, command and tests. The v10 source/archive identities and tests are recorded in [transfer.json](transfer.json). Old v1–v9 packets remain preserved and superseded for this retry. Paste the entire locally tested block:
 
 ```bash
 bash <<'BASH'
@@ -69,7 +66,7 @@ python3 -I -B -S - "$transfer" <<'PY'
 import hashlib, os, pathlib, shutil, sys, tarfile, tempfile, time
 started=time.time()
 transfer=pathlib.Path(sys.argv[1])
-archive=transfer/'e009-preflight-v9.tar.gz'
+archive=transfer/'e009-preflight-v10.tar.gz'
 fields=(transfer/(archive.name+'.sha256')).read_text().split()
 if len(fields)!=2 or fields[1]!=archive.name or len(fields[0])!=64:
     raise ValueError('Upload the exact archive and matching printed checksum')
@@ -83,13 +80,13 @@ with tarfile.open(archive) as tar:
     if sum(m.size for m in members)>20_000_000:raise ValueError('Unexpected packet expansion')
     for member in members:
         path=pathlib.PurePosixPath(member.name)
-        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v9' or member.name in names:
+        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v10' or member.name in names:
             raise ValueError('Unsafe or duplicate packet member')
         names.add(member.name)
     for member in members:
         target=launch/member.name;target.parent.mkdir(parents=True,exist_ok=True)
         with tar.extractfile(member) as src,target.open('xb') as out:shutil.copyfileobj(src,out)
-packet=launch/'e009-preflight-v9'
+packet=launch/'e009-preflight-v10'
 env=os.environ.copy()
 for key in ('PYTHONPATH','PYTHONHOME','PYTHONUSERBASE'):env.pop(key,None)
 env.update(PYTHONNOUSERSITE='1',PYTHONUNBUFFERED='1')
@@ -113,7 +110,7 @@ owner idle is distinct from process CPU or driver allocation estimates.
 ## What this changes and reuses
 
 - Restore the accepted **comebin-runtime-v8** chunks into a fresh job-local prefix.
-  The name/state stays v8; v9 is the consumer packet. Missing/corrupt seals or bytes
+  The name/state stays v8; v10 is the consumer packet. Missing/corrupt seals or bytes
   fail; there is no fallback to original source copying or new materialization.
   The persistent state stays unchanged and is protected by a shared read lock.
   Job-local free space must cover 1.68 GB plus 500 MB overhead.
@@ -133,7 +130,8 @@ owner idle is distinct from process CPU or driver allocation estimates.
   CheckM markers remain hash-bound read-only under E001. Native CheckM help is
   pending; this does not generalize snapshot permission to other prefixes.
 - Keep original mapping/AMBER prefixes and AMBER source read-only, with actual
-  versions/inventories/source hashes and before/after bindings. AMBER receives
+  versions/inventories/source hashes and scoped before/after bindings of the declared external files, not all prefix
+  bytes. AMBER receives
   its own library path. The v8 numerical pass does not validate their cold startup.
 - Acquire pinned sources, CompleteBin database (155.9 MB), 59 explicit Linux utility
   packages (228 MB compressed), and per-tool extra wheels. Compile minimap2 in an
@@ -165,24 +163,29 @@ the bulk assembly/depth/truth step. Resolve the documented two-sample scope befo
 that scientific job. No UCloud execution by Codex, fits/scores or architectures.
 
 
-Local validation: 46 checks pass (45-suite plus one actual HTTP contract) with
-actual process inspection. Earlier source `ff213c0` runs the exact packet/Bash/
-driver outside checkout on retained real Mac chunks,
-restores 9,509 entries with zero source copies in two distinct jobs, creates its
-own venv/full distribution/origin probe and passes actual tiny native contracts
-(65.723 and 55.270 seconds before collection; <=0.320-GB outer sampled peak).
-An actual own-wheel install and lexical wrapper leave the restored runtime's
-accepted bytes intact; a final read-only restore preserves the persistent state.
-Corruption/missing-record/overall-stop causes and return inventories pass.
-The harness's trailer JSON parsing error was corrected from retained successful
-stages; no driver/native stages were rerun for it. Mac identity/assembly overrides,
-Linux omissions and all logs are explicit in [transfer.json](transfer.json).
+## V9 cancellation and verification scope
 
-Final owner source/packet also passes an exact new launch outside checkout, restoring
-9,509 entries /zero source copies, with new venv/full inventory and actual tiny
-native contracts (63.622 s; outer sampled peak 158,851,072 bytes). Only acquisition
-progress and its activity consumer differ from
-the earlier tested packet; all owner/materializer/native consumer bytes are equal.
-Actual HTTP transfer verifies the reporter/hash contract; progressing/repeated
-reports and cleanup are tested. Earlier wheel/wrapper/failure evidence remains
-valid for unchanged consumers. No full Linux utility/tool run is claimed.
+[The retained review](linux-cancellation-v9.json) confirms complete 151-chunk
+restore and AMBER target completion. The silent parent whole-directory hash was
+unnecessary and is removed. V10 uses 26 explicit external source/binary/marker
+files with visible progress before/after, keeping accepted numerical member
+verification and full inventories/origins. Immediately after AMBER, expect
+`E009 stage finished readonly-amber-probe`, then `E009 stage strobealign-version`.
+No new setup gate or numerical environment rebuild is added. A new job restores
+already accepted chunks into its new /tmp prefix; it never recopies E001 bytes.
+
+The original cancelled attempt `native-preflight-hjc6vbt4`, accepted 151 chunks,
+original prefixes and all older packets stay untouched. Source/data/tool contracts
+remain frozen. New writes are uniquely named E009 attempts/environments, caches,
+transfer logs/returns and the owned shared source-preflight folder. No bulk reads,
+community training or E009 score. Storage reporting covers this attempt and exact
+archive members; external payload receipts cover separate retained assets.
+
+Allow the unchanged five-hour allocation ceiling (at most 40 allocated core-hours,
+not an expected duration). Restore took about nine seconds; AMBER imports about
+six minutes in the cancelled job. Remaining utility acquisition/build/tool native
+contracts and source download have no reliable native timing yet. The changed
+Linux path, native tools/evaluator, eight-thread assembly and source catalog still
+need owner validation. Local regression and exact packet checks are separately
+bound in [transfer.json](transfer.json). Return the archive, its checksum and the
+**last printed TERMINAL_LOG** even on failure; do not discard old attempts.

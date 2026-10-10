@@ -1,9 +1,9 @@
 {
   "record": "E009",
-  "version": 9,
+  "version": 10,
   "startup_probe_seconds": null,
   "startup_diagnostics": "Accepted v8 numerical runtime restored from exact receipt/seals without original source copying; per-job lexical probe and explicit tool bindings. All native consumers use remaining overall clock and CPU/I-O stall detection, no lower stage wall caps.",
-  "recovery_from": "v8 Linux runtime recovery accepted: 151 chunks /18977 entries /1.68GB runtime; native restored consumers pending",
+  "recovery_from": "v8 accepted; v9 log verifies complete 151-chunk restore with zero original-source access; owner cancelled during likely whole-tree binding",
   "scope": "Asset/source-overlap and tiny native reader/writer/checkpoint/evaluator contracts; no full-community fits or E009 scores",
   "allocated_vcpus": 8,
   "allocated_ram_gb": 24,
@@ -35,7 +35,7 @@
     "source metadata/domain/replicon classification and near-overlap interpretation require actual archive",
     "Linux utility package identities resolved without execution; native/binary and borrowed-dependency compatibility await actual Linux checks",
     "actual assembly-scale CPU/RAM and full native schedules not established by tiny forward passes",
-    "AMBER/mapping prefixes remain direct persistent read-only bindings; numerical snapshot does not admit their cold startup, new Linux utility/tool bindings, or native restored chunk consumer"
+    "AMBER target inventory/imports completed in v9 terminal; new-job health and actual AMBER/mapping/utility/tool native contracts and eight-thread assembly remain pending"
   ],
   "galah": "not required for this exact-accession/sequence catalog; source-overlap interpretation/ANI remains separately reviewed",
   "utility_package_lock": "utilities-linux-lock.json",
@@ -57,5 +57,6 @@
     "resume_scope": "sealed chunks only; v7 unjournaled /tmp partial is preserved but not admitted"
   },
   "stage_wall_caps": null,
-  "accepted_runtime_record": "linux-runtime-recovery-v8.json"
+  "accepted_runtime_record": "linux-runtime-recovery-v8.json",
+  "readonly_verification": "Accepted restored members verified once during restore; 26 explicit external executable/source/marker files hash-bound before/after, with visible file/byte progress. No whole-prefix or historical storage tree scans."
 }
