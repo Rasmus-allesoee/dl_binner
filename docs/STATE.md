@@ -258,34 +258,27 @@ imports/training or large-community affordability. Mac four-thread MEGAHIT crash
 remain unresolved; the local writer check is explicitly one thread, and the Linux
 preflight must pass eight threads. No accepted science was repeated.
 
-**Exact next step:** owner runs the **1-vCPU /4-GB recovery-only job**, at most
-five minutes work plus 30 seconds normal collection, from
-[Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
-Upload only the new 51,348-byte v6 pair under local
-`artifacts/e009-preparation/transfer-v6/`, bound to source
-`76c5012e9f9981d89a3ac3c4d6773205cf1dee2b`. Thirty local tests, the actual Mac recovery
-worker and exact source-bound bootstrap/return/failure harness pass. Native Linux
-effectiveness remains unexecuted.
-[Verified v5 return](../experiments/E009-competitive-benchmark/linux-startup-failure-v5.json)
-shows 175 slow file reads, 162 on `.pyc`, plus library/source/metadata waits.
-Only 10.51 CPU seconds were used in 900.223 seconds; another longer import limit
-would not repair this execution strategy. All 11 members/nine file hashes verify.
-Reported 8/24 allocation: 901.425973 seconds /2.003169 core-hours before collection.
-No downloads/new prefixes/native contracts/fits/scores started.
+**Exact next step:** owner runs the new **v7 1-vCPU /4-GB job-local runtime
+snapshot recovery**, at most 30 minutes work plus 30 seconds normal collection,
+from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
+The [verified v6 return](../experiments/E009-competitive-benchmark/linux-startup-failure-v6.json)
+passes checksum/all 22 inventory hashes but fails inventory at 180.170 seconds,
+with only 2.94 CPU seconds. All 34 captured file waits were original Python source;
+cache bypass did not repair Home latency. Driver: 183.213927 seconds /0.050893
+allocated core-hours before collection at declared 1/4. All 24 members total
+326,016 logical bytes. No native binner/download/setup/fit/score began.
 
-V6 changes actual cache lookup: explicit `-X pycache_prefix` and `-B` ignore old
-bytecode and read unchanged source, with no environment copy/relocation/reinstall.
-The cache-blocking path is reproduced and repaired locally using CPython's real
-loader and a FIFO; actual source speed and effectiveness on Linux remain unknown.
-The cheap job measures source/cache reads before full inventory/import/freeze and
-checks cache isolation, sampled source bytes, resource costs and cleanup. Both
-live logs and compact returns remain under the experiment transfer folder.
-Full native preflight is disabled until this return is reviewed; do not rent eight
-CPUs for another long initial import. If source/library I/O still fails, reassess
-packed job-local execution or a separately pinned environment without changing
-benchmark science. Whole-prefix/source/binary binding and all shell/Python child
-contracts must be prepared before the later full eight-CPU preflight is restored.
-No full native admission or repaired provider filesystem is claimed here.
+[D006](decisions/D006-environment-ownership.md) now permits a narrow immutable
+execution snapshot of unchanged original COMEBin Conda bytes on `/tmp`, preserving
+the authoritative E001 environment. Eight CPU-capped I/O readers overlap reads;
+local hashes/internal links are verified, and a reusable archive retained under
+E009. Full original freeze/import/origin checks, local library mapping and small
+numerical operations must pass natively. The import cap is unchanged (180 seconds);
+the new ceiling covers copying/packing, not longer Home imports. A native pass is
+pending; local tests cannot establish UCloud storage performance or portability.
+Full eight-CPU preflight stays disabled until reviewed Linux numerical recovery
+and all later dependent runtime/child contracts are prepared. No scientific
+settings, benchmark source/data/shortlist or accepted evidence change.
 
 After native preflight admission and source/sample-count review, prepare the
 bounded bulk-read/assembly/depth/truth step. No community fits/scores/architecture

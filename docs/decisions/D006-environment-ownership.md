@@ -109,3 +109,40 @@ bytecode; it must label that scope and retain actual executable source/binary
 bytes. This recovery only binds sample source bytes. Packed-prefix execution or a
 changed pinned runtime needs its own reviewed identities/portability checks;
 this amendment does not extend E001's snapshot relocation exception automatically.
+
+## E009 numerical execution snapshot, 2026-10-10
+
+The [v6 return](../../experiments/E009-competitive-benchmark/linux-startup-failure-v6.json)
+supersedes direct Home imports and the cache-only workaround: all 34 observed
+file-read waits were on source files. The unchanged ten-module inventory consumed
+2.94 sampled CPU seconds in 180.170 seconds. This is an execution-storage problem,
+not evidence against the selected tools or a reason to increase import deadlines.
+
+Permit this **specific E009 COMEBin numerical prefix** to have an immutable
+job-local execution snapshot. The original authoritative prefix remains under
+E001 and untouched. Copy regular files byte-for-byte and modes unchanged; omit
+only regenerable bytecode. Reject venvs, external symlinks and special files;
+normalize internal symlinks to equivalent relative targets. Do not activate or
+run copied console scripts, whose shebangs can refer to the old prefix. Invoke
+the snapshot's lexical Python directly with isolated imports and no cache writes.
+
+The worker hashes original bytes while copying, verifies the complete source file
+set/stat identities remained unchanged, and checks every local hash. It retains a
+hash-bound, uncompressed archive and inventory under E009 for explicit reuse,
+including on an import failure; partial copies are never admitted. Eight I/O
+readers overlap filesystem latency under a one-CPU affinity; this is not eight
+CPU workers or permission to overcommit numerical threads. No original files,
+embedded binary prefixes, package versions or scientific settings are rewritten.
+
+Portability remains conditional, as [Conda-pack](https://conda.github.io/conda-pack/)
+documents. A real Linux pass must establish exact Python version, full accepted
+freeze, distribution/module/standard-library origins, no old-prefix mapped
+libraries, and small NumPy/Torch forward/backward arithmetic. Local copying alone
+does not meet this gate. The 180-second import cap is unchanged; the new bounded
+30-minute clock covers the one-time copy/pack operation too (copy cap 20 minutes).
+This is a ceiling, not a runtime forecast. Full tool preflight remains disabled.
+
+Alternative: rebuild pinned environments from original package payloads. That
+would add network/solver/version risk before demonstrating that current bytes
+can run from local storage. Use it only if snapshot compatibility fails concretely.
+No general relocation permission for other experiment prefixes is introduced.

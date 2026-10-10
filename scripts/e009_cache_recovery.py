@@ -1,10 +1,10 @@
-"""Cheap E009 source-versus-bytecode recovery, not benchmark or tool execution.
+"""E009 job-local runtime recovery, not benchmark or tool execution.
 
-Read two concrete source/cache pairs under individual short limits, then test the
-unchanged complete numerical inventory with isolated cache lookup. No downloads,
-installs, copied/relocated environments or science. Native owner mode uses one
-vCPU / 4 GB; parent setup and execution share a five-minute ceiling. Mac tests
-use explicit local prefixes and receive no Linux validation credit.
+Snapshot unchanged standalone Conda bytes once, archive persistently, and test the
+job-local interpreter/inventory/imports/arithmetic without Home imports. No
+downloads, installs, prefix rewriting or science. Original prefix remains intact.
+Native owner mode uses one vCPU / 4 GB and a thirty-minute execution ceiling.
+Mac tests use explicit local prefixes and receive no Linux validation credit.
 """
 import argparse
 import hashlib
@@ -34,11 +34,10 @@ def read_file(path):
 
 
 def recover(args,attempt,started,bundle,sup):
-    """Run actual cache/source readers and full prefix checks within a cheap clock.
+    """Run byte-bound snapshot creation/reuse and native compatibility checks.
 
-    Bytecode read timeouts are diagnostic outcomes; source and isolated-import
-    failures stop promptly. A pass accepts only this runtime/import workaround,
-    not unchanged whole-prefix bytes, other environments or native-tool readiness.
+    A pass accepts only this numerical runtime snapshot, not other environments,
+    native binner readiness or full-scale affordability. No original bytes change.
     """
     from e009_owner import run_stage
     local=json.loads(args.local_runtimes.read_text()) if args.local_runtimes else None
@@ -55,8 +54,6 @@ def recover(args,attempt,started,bundle,sup):
     prefix=Path(spec['prefix']);python=prefix/'bin/python'
     freeze=Path(spec['expected_freeze']) if local else bundle/spec['freeze_path']
     version=spec.get('python_version',baseline['comebin_dependencies']['python_version'])
-    site=prefix/'lib'/('python'+'.'.join(version.split('.')[:2]))/'site-packages'
-    tag='cpython-'+''.join(version.split('.')[:2])
     env=sup.isolated_env(1)
     for key in ('CONDA_PREFIX','CONDA_DEFAULT_ENV','CONDA_PROMPT_MODIFIER','CONDA_PYTHON_EXE',
                 'PERL5LIB','PERL_LOCAL_LIB_ROOT','PERL_MB_OPT','PERL_MM_OPT'):
@@ -65,35 +62,42 @@ def recover(args,attempt,started,bundle,sup):
     env.update(TMPDIR=str(scratch),E009_SOURCE_CACHE_ROOT=str(scratch/'unused-bytecode'),
                MPLCONFIGDIR=str(scratch/'mpl'),XDG_CACHE_HOME=str(scratch/'cache'),
                PIP_DISABLE_PIP_VERSION_CHECK='1',CUDA_VISIBLE_DEVICES='')
-    stages=attempt/'stages';stages.mkdir();readings=[]
-    pairs=spec.get('source_pairs',['numpy/__init__.py','torch/utils/weak.py'])
-    deadline=started+(args.local_seconds or 300)
+    stages=attempt/'stages';stages.mkdir()
+    deadline=started+(args.local_seconds or 1800)
     policy={'startup_probe_seconds':180,'startup_idle_seconds':45}
     def run(argv,name,seconds):
         sup.progress('E009 runtime-only '+name)
         return run_stage(sup,argv,stages/(name+'.log'),seconds,deadline-time.monotonic(),
                          3_000_000_000,env,policy,sample_root=os.getpid())
-    for i,rel in enumerate(pairs):
-        source=site/rel
-        if not source.is_relative_to(site) or '..' in Path(rel).parts:raise ValueError('Unsafe source probe path')
-        cache=source.parent/'__pycache__'/(source.stem+'.'+tag+'.pyc')
-        for kind,path in [('source',source),('bytecode',cache)]:
-            name=f'read-{i}-{kind}'
-            try:
-                run([sys.executable,'-I','-B',Path(__file__),'--read-file',path],name,15)
-                data=json.loads(next(line.split('=',1)[1] for line in (stages/(name+'.log')).read_text().splitlines() if line.startswith('FILE_READ_JSON=')))
-                readings.append(dict(kind=kind,status='read',**data))
-            except RuntimeError:
-                receipt=json.loads((stages/(name+'.exit.json')).read_text())
-                readings.append({'kind':kind,'path':str(path),'status':'unavailable or timed out','exit':receipt})
-                write_json(attempt/(name+'-failure.json'),readings[-1])
-                if kind=='source':
-                    raise RuntimeError('Original Python source is also unreadable/too slow; source-cache workaround not established')
-    write_json(attempt/'source-cache-readings.json',readings)
+    local_prefix=scratch/'prefix'
+    receipt=getattr(args,'runtime_snapshot',None)
+    if receipt:
+        receipt=Path(receipt)
+        if not local and not receipt.absolute().is_relative_to(args.root/'runtime-snapshots'):
+            raise ValueError('Snapshot receipt must be under the owned E009 runtime-snapshots directory')
+        run([sys.executable,'-I','-B',bundle/'scripts/e009_snapshot.py','--restore',
+             '--receipt',receipt,'--destination',local_prefix],'snapshot-restore',1200)
+    else:
+        retained=args.root/'runtime-snapshots'/attempt.name;retained.mkdir(parents=True)
+        receipt=retained/'snapshot.json'
+        run([sys.executable,'-I','-B',bundle/'scripts/e009_snapshot.py','--source',prefix,
+             '--destination',local_prefix,'--archive',retained/'comebin-runtime.tar',
+             '--receipt',receipt],'snapshot-create',1200)
+    snapshot=json.loads(receipt.read_text())
+    if snapshot['source_prefix']!=str(prefix.absolute()):raise ValueError('Snapshot belongs to a different original prefix')
+    # Do not put the large file inventory or archive in the compact return.
+    write_json(attempt/'snapshot-bound.json',{'receipt':str(receipt),'receipt_file':__import__('e009_common').binding(receipt),
+        'archive':snapshot['archive'],'logical_bytes':snapshot['logical_bytes'],'files':len(snapshot['files']),
+        'source_prefix':snapshot['source_prefix'],'local_prefix':str(local_prefix),
+        'excluded':snapshot['excluded'],'scientific_execution_admitted':False})
+    prefix=local_prefix;python=prefix/'bin/python'
+    env['LD_LIBRARY_PATH']=str(prefix/'lib')
+    env['PATH']=str(prefix/'bin')+os.pathsep+os.defpath
     run([python,'-I','-B',bundle/'scripts/e009_native.py','--inventory-prefix',prefix,
-         '--expected-freeze',freeze,'--modules',*spec.get('modules',['numpy','torch','pandas','scipy','sklearn','pysam','Bio','hnswlib','igraph','leidenalg'])],
-        'source-only-full-inventory',180)
-    text=(stages/'source-only-full-inventory.log').read_text()
+         '--expected-freeze',freeze,'--forbidden-prefix',spec['prefix'],
+         '--modules',*spec.get('modules',['numpy','torch','pandas','scipy','sklearn','pysam','Bio','hnswlib','igraph','leidenalg'])],
+        'local-snapshot-full-inventory',180)
+    text=(stages/'local-snapshot-full-inventory.log').read_text()
     inventory=json.loads(next(line.split('=',1)[1] for line in text.splitlines() if line.startswith('INVENTORY_JSON=')))
     audits=[json.loads(line.split('=',1)[1]) for line in text.splitlines() if line.startswith('CACHE_POLICY_JSON=')]
     if not audits or any(a['persistent_bytecode_attempts'] or not a['writes_disabled'] for a in audits):
@@ -101,19 +105,14 @@ def recover(args,attempt,started,bundle,sup):
     if inventory['bytecode_policy']['pycache_prefix']!=env['E009_SOURCE_CACHE_ROOT']:
         raise ValueError('Inventory did not use reviewed source-cache policy')
     if inventory['python'].split()[0]!=version:raise ValueError('Accepted interpreter version changed')
-    after=[]
-    for i,rel in enumerate(pairs):
-        run([sys.executable,'-I','-B',Path(__file__),'--read-file',site/rel],f'after-{i}-source',15)
-        data=json.loads(next(line.split('=',1)[1] for line in (stages/f'after-{i}-source.log').read_text().splitlines() if line.startswith('FILE_READ_JSON=')))
-        old=next(row for row in readings if row['kind']=='source' and row['path']==data['path'])
-        if (data['bytes'],data['sha256'])!=(old['bytes'],old['sha256']):raise ValueError('Probe source bytes changed')
-        after.append(data)
+    from e009_snapshot import verify
+    verify(local_prefix,snapshot)
     if list((scratch/'unused-bytecode').rglob('*.pyc')):raise ValueError('Source-only recovery wrote bytecode')
     write_json(attempt/'recovery-observed.json',{'inventory':inventory,'cache_audits':audits,
-        'source_samples_before_after_unchanged':True,'source_samples_after':after,
-        'scope':'full imports/origins/freeze and sampled source bytes; no entire-prefix byte comparison or native-tool admission'})
+        'snapshot_bytes_after_unchanged':True,'snapshot_receipt':str(receipt),
+        'scope':'byte-bound job-local runtime, full imports/origins/freeze and compatibility arithmetic; no native-tool admission'})
     return {'status':'passed','native_linux':not bool(local),'runtime_recovery_only':True,
-            'scope':'source cache lookup workaround only; no installs/downloads/native tools/fits/scores',
+            'scope':'job-local snapshot only; no installs/downloads/native tools/fits/scores',
             'scientific_execution_admitted':False}
 
 

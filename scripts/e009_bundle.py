@@ -21,7 +21,7 @@ ROOT=Path(__file__).absolute().parents[1]
 EXP='experiments/E009-competitive-benchmark'
 
 
-def build(destination,bootstrap=None,version='v6',recovery_only=False):
+def build(destination,bootstrap=None,version='v7',recovery_only=False):
     """Require committed transfer inputs and return the exact two owner upload paths."""
     destination=Path(destination).absolute()
     if not version.isalnum():raise ValueError('Simple version name required')
@@ -55,7 +55,7 @@ def build(destination,bootstrap=None,version='v6',recovery_only=False):
             if binding(packet/'input'/name)!=expected:raise ValueError('Expanded fixture bytes changed')
     files={str(p.relative_to(packet)):binding(p) for p in sorted(packet.rglob('*')) if p.is_file()}
     write_json(packet/'bundle-manifest.json',{'record':'E009','version':version,'source_commit':head,'files':files,
-               'scope':'runtime cache recovery only' if recovery_only else 'asset/native preflight only; no full-community fit, benchmark score or architecture comparison',
+               'scope':'job-local runtime recovery only' if recovery_only else 'asset/native preflight only; no full-community fit, benchmark score or architecture comparison',
                'scientific_execution_authorized':False})
     verify_bundle(packet)
     archive=destination/(packet.name+'.tar.gz')
@@ -74,6 +74,6 @@ def build(destination,bootstrap=None,version='v6',recovery_only=False):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--destination',type=Path,required=True)
-    p.add_argument('--bootstrap',type=Path);p.add_argument('--version',default='v6')
+    p.add_argument('--bootstrap',type=Path);p.add_argument('--version',default='v7')
     p.add_argument('--recovery-only',action='store_true')
     args=p.parse_args();print(json.dumps(build(args.destination,args.bootstrap,args.version,args.recovery_only),indent=2))

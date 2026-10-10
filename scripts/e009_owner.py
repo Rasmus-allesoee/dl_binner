@@ -362,7 +362,8 @@ def main():
     p.add_argument('--allocated-vcpus',type=int,required=True);p.add_argument('--allocated-ram-gb',type=int,required=True)
     p.add_argument('--entry-start-epoch',type=float);p.add_argument('--local-runtimes',type=Path)
     p.add_argument('--local-seconds',type=float)
-    p.add_argument('--runtime-recovery-only',action='store_true',help='Only test source loading versus retained bytecode; no setup, downloads or native science')
+    p.add_argument('--runtime-recovery-only',action='store_true',help='Byte-bound job-local runtime snapshot and compatibility checks only; no installs/downloads/science')
+    p.add_argument('--runtime-snapshot',type=Path,help='Explicit retained E009 snapshot receipt for verified archive reuse')
     args=p.parse_args()
     if args.local_seconds is not None and (not args.local_runtimes or not math.isfinite(args.local_seconds) or not 0<args.local_seconds<=7200):
         p.error('--local-seconds is only a positive <=7200-second local-harness limit')
@@ -371,8 +372,8 @@ def main():
     args.root.mkdir(parents=True,exist_ok=True);transfer=args.root/'transfer';transfer.mkdir(exist_ok=True)
     attempt=Path(tempfile.mkdtemp(prefix='native-preflight-',dir=args.root));started=time.monotonic()-max(0,time.time()-(args.entry_start_epoch or time.time()))
     status={'status':'failed','verification_passed':False};code=1;original=sys.stdout,sys.stderr
-    work_seconds=args.local_seconds or (300 if args.runtime_recovery_only else 17400)
-    overall_seconds=args.local_seconds or (330 if args.runtime_recovery_only else 18000)
+    work_seconds=args.local_seconds or (1800 if args.runtime_recovery_only else 17400)
+    overall_seconds=args.local_seconds or (1830 if args.runtime_recovery_only else 18000)
     def alarm(signum,frame):raise TimeoutError('Overall E009 preflight ceiling reached')
     old_handlers={s:signal.getsignal(s) for s in (signal.SIGALRM,signal.SIGINT,signal.SIGTERM)}
     signal.signal(signal.SIGALRM,alarm)

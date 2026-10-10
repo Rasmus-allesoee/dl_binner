@@ -345,6 +345,12 @@ isolation needs explicit -X flags under -I, verified child propagation and no
 scientific-setting changes. Keep failed attempts and distinguish a locally repaired
 cache-loader reproduction from actual storage/runtime acceptance.
 
+When changing an observed storage execution path, distinguish one-time materialization
+from repeated native imports. Bind snapshot bytes and internal links, retain a
+reusable artifact, and validate interpreter, library origins and actual numerical
+operations before admission. CPU-capped I/O concurrency may overlap storage
+latency; it does not authorize extra numerical workers or silent relocation.
+
 For the reviewed E001 workflow snapshot only, D006 permits a checksum-bound
 job-local execution copy when persistent filesystem reads stall. Preserve the
 authoritative experiment-owned environment; invoke the copied Python directly,

@@ -523,3 +523,27 @@ prefix bytes. This is genuine local worker execution with explicit Mac
 platform/root/numerical-prefix/module-list and shortened test-clock overrides.
 Review the cheap owner return before any full allocation; [transfer.json](transfer.json)
 owns final identities and observed scope.
+
+## V6 source-read failure and v7 local snapshot, 2026-10-10
+
+[Verified return](linux-startup-failure-v6.json): checksum and all 22 inventory
+files pass; 24 regular archive members /326,016 logical bytes including immutable
+terminal and inventory. Full inventory stopped at 180.170 seconds /2.94 sampled
+CPU seconds /203,976,704-byte sampled peak RSS during Torch import. All 34 captured
+`folio_wait_bit_common` samples have original `.py` files open. The two sampled
+source reads took 0.567/0.638 seconds versus 0.000632/0.000530 seconds for their
+bytecode. Cache bypass did not repair slow Home reads. The kernel/provider cause
+is unidentified; no Bash syntax failure, scientific stage or new installation.
+Declared 1-vCPU /4-GB driver cost: 183.213927 seconds /0.050893 allocated core-hours
+before collection, not exact provider billing.
+
+[D006](../../docs/decisions/D006-environment-ownership.md) now permits this narrow
+byte-verified job-local numerical snapshot. V7 replaces direct Home imports with
+one-time parallel I/O copy and immutable archive retention, preserving original
+bytes/versions and recording internal-link normalization. Full native preflight
+remains disabled; a native numerical compatibility pass is still required.
+Thirty minutes work, 30 seconds normal collection, one CPU /4 GB, sampled RSS
+3 GB. The copy/pack cap is 20 minutes; the import cap stays 180 seconds. No larger
+import timeout, dependency gate bypass, package installation or changed science.
+See [Operations](OPERATIONS.md) for the next owner command and exact acceptance
+boundary. Local tests and native Linux validation remain separate.

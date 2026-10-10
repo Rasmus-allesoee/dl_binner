@@ -27,6 +27,7 @@ from e009_startup import startup_argv,supervise_startup,wait_snapshot,StartupPro
 from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after,run_stage
 from e009_common import tree_binding
 from e009_truth import construct,parse_paf,reconcile,recovery,union
+from e009_snapshot import create as create_snapshot, restore as restore_snapshot, verify as verify_snapshot
 
 
 class E009Contracts(unittest.TestCase):
@@ -38,6 +39,35 @@ class E009Contracts(unittest.TestCase):
     def put(self,name,text):
         """Write one new fixture file and return its explicit path."""
         path=self.p/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(text);return path
+
+    def test_snapshot_real_bytes_internal_links_reuse_and_corruption(self):
+        source=self.p/'prefix';self.put('prefix/lib/module.py','value=42\n')
+        executable=self.put('prefix/bin/python3','executable-bytes');executable.chmod(0o755)
+        (source/'bin/python').symlink_to(executable.absolute())
+        self.put('prefix/lib/__pycache__/module.pyc','ignored')
+        before=tree_binding(source)
+        archive=self.p/'snapshot.tar';receipt=self.p/'snapshot.json'
+        manifest=create_snapshot(source,self.p/'local',archive,receipt)
+        self.assertEqual(tree_binding(source),before)
+        self.assertEqual(len(manifest['files']),3)
+        self.assertEqual((self.p/'local/bin/python').readlink(),Path('python3'))
+        restore_snapshot(receipt,self.p/'reused')
+        verify_snapshot(self.p/'reused',manifest)
+        (self.p/'reused/lib/module.py').write_text('changed')
+        with self.assertRaisesRegex(ValueError,'bytes changed'):verify_snapshot(self.p/'reused',manifest)
+        with archive.open('r+b') as f:f.write(b'broken')
+        with self.assertRaisesRegex(ValueError,'archive bytes changed'):restore_snapshot(receipt,self.p/'bad')
+
+    def test_snapshot_rejects_external_links_venvs_special_files_and_existing_dest(self):
+        source=self.p/'prefix';self.put('prefix/data','bytes')
+        external=self.put('outside','outside');(source/'external').symlink_to(external)
+        with self.assertRaisesRegex(ValueError,'External'):create_snapshot(source,self.p/'local',self.p/'a.tar',self.p/'a.json')
+        (source/'external').unlink();self.put('prefix/pyvenv.cfg','home = /outside')
+        with self.assertRaisesRegex(ValueError,'venv'):create_snapshot(source,self.p/'local',self.p/'a.tar',self.p/'a.json')
+        (source/'pyvenv.cfg').unlink();os.mkfifo(source/'blocked')
+        with self.assertRaisesRegex(ValueError,'Nonregular'):create_snapshot(source,self.p/'local',self.p/'a.tar',self.p/'a.json')
+        (source/'blocked').unlink();(self.p/'local').mkdir()
+        with self.assertRaisesRegex(ValueError,'fresh'):create_snapshot(source,self.p/'local',self.p/'a.tar',self.p/'a.json')
 
     def archive(self,name,members):
         """Create a tiny archive with explicit member types for extraction checks."""

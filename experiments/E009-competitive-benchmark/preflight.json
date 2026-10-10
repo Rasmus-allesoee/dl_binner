@@ -1,9 +1,9 @@
 {
   "record": "E009",
-  "version": 6,
+  "version": 7,
   "startup_probe_seconds": 180,
-  "startup_diagnostics": "Recovery-only source/cache timing plus explicit -X pycache_prefix/-B cache audit, full inventory/origins/freeze and Linux process wait evidence; full preflight disabled",
-  "recovery_from": "native-preflight-mxmhmoyw: 900-second import spent 10.51 CPU seconds; 176 file-wait samples on persistent bytecode. Full preflight suspended pending source-cache bypass validation.",
+  "startup_diagnostics": "Job-local byte-bound numerical snapshot; native inventory/import/freeze/library-origin and arithmetic validation; full native preflight disabled",
+  "recovery_from": "v6 wwzk44m8: 34 captured source-file waits, 2.94 CPU seconds in 180.170 seconds. Cache bypass insufficient; direct Home imports superseded.",
   "scope": "Current command: cheap runtime recovery only. Original asset/native preflight settings retained but disabled pending review. No full-community fits/scores.",
   "allocated_vcpus": 8,
   "allocated_ram_gb": 24,
@@ -28,7 +28,7 @@
     "prodigal=2.6.3",
     "perl=5.32.1"
   ],
-  "dependency_policy": "Original prefixes/packages/versions preserved read-only. Explicit empty job-local -X pycache_prefix with -B avoids original bytecode; no prefix relocation or reinstall. Cheap recovery only, not full native admission.",
+  "dependency_policy": "Original standalone Conda prefix stays read-only. Byte-identical regular files copied to job-local storage; regenerable bytecode omitted, internal symlinks normalized. No installs/rewrites/upgrades. Native snapshot admission required.",
   "scientific_admission": false,
   "unknown_contracts_before_job": [
     "bulk read/source SHA256s not yet acquired; source acquisition receipt returned for review",
@@ -44,9 +44,11 @@
     "allocated_vcpus": 1,
     "allocated_ram_gb": 4,
     "working_rss_bytes": 3000000000,
-    "work_seconds": 300,
-    "overall_seconds": 330,
+    "work_seconds": 1800,
+    "overall_seconds": 1830,
     "inventory_seconds": 180,
-    "idle_seconds": 45
+    "idle_seconds": 45,
+    "copy_seconds": 1200,
+    "io_readers": 8
   }
 }

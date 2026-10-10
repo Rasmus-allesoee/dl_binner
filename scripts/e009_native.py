@@ -206,7 +206,7 @@ def limit_hnsw(threads):
     hnswlib.Index=BoundedIndex
 
 
-def inventory(expected_prefix, modules, expected_freeze=None, dependency_prefix=None, expected_distributions=None):
+def inventory(expected_prefix, modules, expected_freeze=None, dependency_prefix=None, expected_distributions=None, forbidden_prefix=None):
     """Probe complete installed distributions/origins and optional accepted full freeze.
 
     Invoke lexical Python -I -B. Full origins exclude inherited/user-site modules;
@@ -246,8 +246,33 @@ def inventory(expected_prefix, modules, expected_freeze=None, dependency_prefix=
         actual={normalize(d['name']):d['version'] for d in distributions}
         expected={normalize(k):v for k,v in expected_distributions.items()}
         if len(actual)!=len(distributions) or actual!=expected:raise ValueError('Complete clean distribution inventory differs')
+    execution_check=None
+    if forbidden_prefix:
+        # This is compatibility arithmetic, not training, inference on DNA or scores.
+        import numpy as np
+        a=np.arange(12,dtype=np.float64).reshape(3,4)
+        if float((a@a.T).sum())!=1134:raise ValueError('Snapshot NumPy arithmetic failed')
+        if 'torch' in modules:
+            import torch
+            torch.set_num_threads(1);torch.set_num_interop_threads(1)
+            x=torch.arange(4,dtype=torch.float32,requires_grad=True)
+            (x*x).sum().backward()
+            if not torch.equal(x.grad,2*x.detach()):raise ValueError('Snapshot Torch backward failed')
+        import sysconfig
+        stdlib=Path(sysconfig.get_path('stdlib')).resolve()
+        if not stdlib.is_relative_to(prefix):raise ValueError('Snapshot uses original standard library')
+        forbidden=str(Path(forbidden_prefix).resolve())+'/'
+        mapped=[]
+        if Path('/proc/self/maps').exists():
+            mapped=[line.split()[-1] for line in Path('/proc/self/maps').read_text().splitlines() if '/' in line]
+            if any(forbidden in path for path in mapped):raise ValueError('Snapshot loads original-prefix binary')
+        execution_check={'numpy_matmul':True,'torch_backward':'torch' in modules,
+                         'stdlib':str(stdlib),'mapped_files':sorted(set(mapped)),
+                         'original_prefix_not_mapped':bool(mapped),
+                         'native_mapping_check_available':bool(mapped)}
     return {'prefix':str(prefix),'python':sys.version,'distributions':distributions,'origins':origins,
             'python_executable_lexical':sys.executable,'user_site_isolated':True,
+            'snapshot_execution_check':execution_check,
             'bytecode_policy':{'pycache_prefix':sys.pycache_prefix,'writes_disabled':sys.dont_write_bytecode}}
 
 
@@ -291,11 +316,12 @@ if __name__=='__main__':
     parser.add_argument('--inventory-prefix');parser.add_argument('--modules',nargs='*',default=[])
     parser.add_argument('--expected-freeze')
     parser.add_argument('--dependency-prefix')
+    parser.add_argument('--forbidden-prefix')
     parser.add_argument('--expected-distributions',type=Path)
     parser.add_argument('--tool');parser.add_argument('--source',type=Path);parser.add_argument('--threads',type=int)
     parser.add_argument('native_args',nargs=argparse.REMAINDER)
     args=parser.parse_args()
     if args.inventory_prefix:
         print('INVENTORY_JSON='+json.dumps(inventory(args.inventory_prefix,args.modules,args.expected_freeze,
-              args.dependency_prefix,json.loads(args.expected_distributions.read_text()) if args.expected_distributions else None)),flush=True)
+              args.dependency_prefix,json.loads(args.expected_distributions.read_text()) if args.expected_distributions else None,args.forbidden_prefix)),flush=True)
     else:invoke(args.tool,args.source,args.native_args[1:] if args.native_args[:1]==['--'] else args.native_args,args.threads)
