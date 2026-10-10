@@ -165,8 +165,9 @@ the bulk assembly/depth/truth step. Resolve the documented two-sample scope befo
 that scientific job. No UCloud execution by Codex, fits/scores or architectures.
 
 
-Local final validation: 46 checks pass (45-suite plus one actual HTTP contract) with actual process inspection. The
-exact final packet/Bash/driver outside checkout uses retained real Mac chunks,
+Local validation: 46 checks pass (45-suite plus one actual HTTP contract) with
+actual process inspection. Earlier source `ff213c0` runs the exact packet/Bash/
+driver outside checkout on retained real Mac chunks,
 restores 9,509 entries with zero source copies in two distinct jobs, creates its
 own venv/full distribution/origin probe and passes actual tiny native contracts
 (65.723 and 55.270 seconds before collection; <=0.320-GB outer sampled peak).
@@ -179,7 +180,8 @@ Linux omissions and all logs are explicit in [transfer.json](transfer.json).
 
 Final owner source/packet also passes an exact new launch outside checkout, restoring
 9,509 entries /zero source copies, with new venv/full inventory and actual tiny
-native contracts. Only acquisition progress and its activity consumer differ from
+native contracts (63.622 s; outer sampled peak 158,851,072 bytes). Only acquisition
+progress and its activity consumer differ from
 the earlier tested packet; all owner/materializer/native consumer bytes are equal.
 Actual HTTP transfer verifies the reporter/hash contract; progressing/repeated
 reports and cleanup are tested. Earlier wheel/wrapper/failure evidence remains
