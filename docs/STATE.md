@@ -258,34 +258,29 @@ imports/training or large-community affordability. Mac four-thread MEGAHIT crash
 remain unresolved; the local writer check is explicitly one thread, and the Linux
 preflight must pass eight threads. No accepted science was repeated.
 
-**Exact next step:** owner runs the new **v7 1-vCPU /4-GB job-local runtime
-snapshot recovery**, at most 30 minutes work plus 30 seconds normal collection,
-from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
-The [verified v6 return](../experiments/E009-competitive-benchmark/linux-startup-failure-v6.json)
-passes checksum/all 22 inventory hashes but fails inventory at 180.170 seconds,
-with only 2.94 CPU seconds. All 34 captured file waits were original Python source;
-cache bypass did not repair Home latency. Driver: 183.213927 seconds /0.050893
-allocated core-hours before collection at declared 1/4. All 24 members total
-326,016 logical bytes. No native binner/download/setup/fit/score began.
+**Exact next step:** prepare/test the new **v8 reduced, resumable numerical runtime
+recovery**, then owner uses **1 vCPU /4 GB**, explicitly 90 minutes overall work
+plus 120 seconds normal collection, from
+[Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
+[Verified v7 return](../experiments/E009-competitive-benchmark/linux-startup-failure-v7.json)
+shows a progressing 17,989/44,770-entry copy killed by its 1,200-second stage cap,
+not the overall 1,800-second clock. Copy used only 22.53 CPU seconds; full entry-
+count projection is ~49.8 minutes before verify/pack. Mac's 13,829-entry fixture
+did not justify that cap. Archive/all seven inventory hashes pass; nine members
+retain 602,809 immutable logical bytes. Declared 1/4 driver: 1,200.179870 seconds /
+0.333383 core-hours before collection. No imports/setup/native science began.
 
-[D006](decisions/D006-environment-ownership.md) now permits a narrow immutable
-execution snapshot of unchanged original COMEBin Conda bytes on `/tmp`, preserving
-the authoritative E001 environment. Eight CPU-capped I/O readers overlap reads;
-local hashes/internal links are verified, and a reusable archive retained under
-E009. Full original freeze/import/origin checks, local library mapping and small
-numerical operations must pass natively. The import cap is unchanged (180 seconds);
-the new ceiling covers copying/packing, not longer Home imports. A native pass is
-pending; local tests cannot establish UCloud storage performance or portability.
-V7 final upload pair is under `artifacts/e009-preparation/transfer-v7-final/`,
-bound to source `4068297c2ec18d941b56c463abcc31aad61f6d8b`; 54,472 archive bytes.
-Thirty-three regressions and the exact Bash/packet/driver on standalone Mac Conda
-pass, including byte-preserving copy, full freeze/NumPy/Pandas, unchanged original
-prefix, explicit archive reuse, corruption/failure/timeout causes and return/log
-contracts. Mac tests do not validate Linux mapped libraries or all ten native
-modules/Torch; see the [transfer receipt](../experiments/E009-competitive-benchmark/transfer.json).
-Full eight-CPU preflight stays disabled until reviewed Linux numerical recovery
-and all later dependent runtime/child contracts are prepared. No scientific
-settings, benchmark source/data/shortlist or accepted evidence change.
+[D006](decisions/D006-environment-ownership.md) now permits the precise runtime
+selection and checksum-bound persistent chunks. Omit unnecessary test/compiler/
+static payloads; keep ordinary package code/resources/models/metadata/licences,
+shared libraries and internal-link closure. Sealed chunks resume across jobs;
+unsealed v7 /tmp contents have no accepted journal and are not silently reused.
+Copy, hash, restore, pack, verify and import consumers share the owner-selected
+clock with real-work stall detection, without arbitrary shorter stage wall caps.
+Native selected size/throughput, locking, ABI/origins and all ten imports/Torch
+arithmetic remain unverified. Old prefixes/attempts and accepted science stay
+unchanged. Full eight-CPU preflight remains disabled pending returned recovery
+review and dependent interpreter/shell/tool contract preparation.
 
 After native preflight admission and source/sample-count review, prepare the
 bounded bulk-read/assembly/depth/truth step. No community fits/scores/architecture

@@ -1,9 +1,9 @@
 {
   "record": "E009",
-  "version": 7,
+  "version": 8,
   "startup_probe_seconds": 180,
-  "startup_diagnostics": "Job-local byte-bound numerical snapshot; native inventory/import/freeze/library-origin and arithmetic validation; full native preflight disabled",
-  "recovery_from": "v6 wwzk44m8: 34 captured source-file waits, 2.94 CPU seconds in 180.170 seconds. Cache bypass insufficient; direct Home imports superseded.",
+  "startup_diagnostics": "Reduced runtime selection, sealed persistent chunks, real-byte/entry progress and owned-process waits; no per-stage wall caps. Native Linux still pending.",
+  "recovery_from": "v7 bpv029w1: 17989/44770 entries copied steadily in 1200.068 seconds; inner stage cap expired before the 1800-second overall clock. Full-prefix projection ~2986.7 seconds plus verify/pack. Mac cardinality insufficient for timing.",
   "scope": "Current command: cheap runtime recovery only. Original asset/native preflight settings retained but disabled pending review. No full-community fits/scores.",
   "allocated_vcpus": 8,
   "allocated_ram_gb": 24,
@@ -28,7 +28,7 @@
     "prodigal=2.6.3",
     "perl=5.32.1"
   ],
-  "dependency_policy": "Original standalone Conda prefix stays read-only. Byte-identical regular files copied to job-local storage; regenerable bytecode omitted, internal symlinks normalized. No installs/rewrites/upgrades. Native snapshot admission required.",
+  "dependency_policy": "Original E001 prefix untouched. Runtime-only regular bytes, all package metadata/resources/public testing helpers and internal-link targets retained; explicit test/compiler/static omissions recorded. Sealed hash-bound chunks resume across jobs; no new dependency recipe or scientific setting change.",
   "scientific_admission": false,
   "unknown_contracts_before_job": [
     "bulk read/source SHA256s not yet acquired; source acquisition receipt returned for review",
@@ -41,14 +41,18 @@
   "startup_idle_seconds": 45,
   "full_native_preflight_enabled": false,
   "runtime_recovery_only": {
-    "allocated_vcpus": 1,
-    "allocated_ram_gb": 4,
-    "working_rss_bytes": 3000000000,
-    "work_seconds": 1800,
-    "overall_seconds": 1830,
-    "inventory_seconds": 180,
-    "idle_seconds": 45,
-    "copy_seconds": 1200,
-    "io_readers": 8
+    "recommended_vcpus": 1,
+    "recommended_ram_gb": 4,
+    "working_rss_fraction_of_declared_ram": 0.75,
+    "recommended_work_seconds": 5400,
+    "normal_collection_reserve_seconds": 120,
+    "stall_seconds": 300,
+    "stage_wall_caps": null,
+    "io_readers": 8,
+    "chunk_members": 128,
+    "chunk_target_bytes": 128000000,
+    "limit_rationale": "At measured one-CPU v7 average, even the unfiltered 44770-entry copy projects to ~50 minutes. 90 minutes overall gives ~40 minutes for variation, metadata, chunk persistence, restore/hash, verification and imports; runtime pruning should reduce work but native selected count/byte throughput remain unknown. Owner may choose a different positive overall ceiling. Five-minute stall threshold is ~60 times the normal five-second work report interval; counter advances on actual bytes/entries, not heartbeats.",
+    "snapshot_state": "/work/Home/dl_binner/e009/runtime-snapshots/comebin-runtime-v8",
+    "resume_scope": "sealed chunks only; v7 unjournaled /tmp partial is preserved but not admitted"
   }
 }

@@ -138,11 +138,53 @@ Portability remains conditional, as [Conda-pack](https://conda.github.io/conda-p
 documents. A real Linux pass must establish exact Python version, full accepted
 freeze, distribution/module/standard-library origins, no old-prefix mapped
 libraries, and small NumPy/Torch forward/backward arithmetic. Local copying alone
-does not meet this gate. The 180-second import cap is unchanged; the new bounded
-30-minute clock covers the one-time copy/pack operation too (copy cap 20 minutes).
-This is a ceiling, not a runtime forecast. Full tool preflight remains disabled.
+does not meet this gate. The initial v7 180-second import /20-minute copy caps and 30-minute overall
+clock were superseded by the measured-workload amendment below. Preserve the
+executed v7 source/packet and its failed return; full tool preflight remains disabled.
 
 Alternative: rebuild pinned environments from original package payloads. That
 would add network/solver/version risk before demonstrating that current bytes
 can run from local storage. Use it only if snapshot compatibility fails concretely.
 No general relocation permission for other experiment prefixes is introduced.
+
+## E009 reduced, resumable runtime amendment, 2026-10-10
+
+[V7 evidence](../../experiments/E009-competitive-benchmark/linux-startup-failure-v7.json)
+shows 44,770 entries versus the local 13,829-entry fixture and a steady copy killed
+at 1,200 seconds. Full entry-count projection is ~49.8 minutes plus verification/
+packing; the local fixture did not justify the cap. Reject that cap/packet for new
+execution. Preserve the failed attempt and original E001 prefix.
+
+The snapshot need not reproduce a compiler/tool/test installation. V8 retains
+ordinary Python/package sources/resources/models, full distribution metadata and
+licences, runtime shared libraries and required internal-link targets. Record
+explicit omissions of bundled test suites, compiler/header/build/static payloads,
+non-Python executables and other non-numerical top-level files. Preserve public
+`testing`/`_testing` helpers. This changes the execution payload, not package
+versions, the model, transforms, scientific settings or accepted results. Native
+complete inventory/ABI/import/arithmetic checks still gate acceptance; subsequent
+real tool/fixture checks must show that the reduced runtime serves their paths.
+Do not infer general portability or support for compiling/testing these packages.
+
+Choose persistent checksum-bound chunks instead of one final monolithic archive:
+seal every <=128-member /approximately 128-MB group (large single files stream as
+individual groups), so interruption preserves completed work across job resets.
+Explicit resume validates the source/selection plan, restores verified sealed
+bytes, and schedules only missing source copies. No seal means no acceptance;
+corrupt/changed inputs or outputs fail, and unsealed partials remain evidence.
+Portable source stat identities exclude mount-local device/inode numbers across
+jobs; within each copy those numbers and size/mtime are checked. Copied content
+hashes and source plan bind the retained payload, not a historical whole-prefix
+cryptographic identity that we do not possess. Original files remain untouched.
+
+Use actual completed byte/entry progress with a justified stall guard and one
+owner-selected overall ceiling. No arbitrary lower copy/verification/pack/import
+caps. The proposed one-CPU 90-minute ceiling uses v7's ~50-minute entry projection
+plus ~40 minutes for variability and remaining operations; new native selection/
+byte throughput is unmeasured. Five-minute stall allowance exceeds the normal
+five-second reports by ~60 times. These are planning choices, not validated Linux
+runtimes. Parent setup and all consumers use the same clock. A budget stop retains
+sealed progress; it does not authorize automatic retries or accepted-science reruns.
+Local tests must cover native-size metadata cardinality, actual readers/writers,
+interrupted and complete resume, corruption, drifting sources, productive work
+past former subcaps, genuine stalls and cleanup. Operations own the command.

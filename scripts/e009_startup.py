@@ -200,4 +200,47 @@ def supervise_startup(sup,command,log,seconds,ram_bytes,env,sample_root=None,idl
         finally:sup.process_sample=original
 
 
+def supervise_work(sup,command,log,seconds,ram_bytes,env,sample_root=None,idle_seconds=300):
+    """Supervise materialization by increasing work units and one overall clock.
+
+    Copy, hash, restore and pack operations report real completed bytes/entries.
+    Repeated progress text or parent heartbeats cannot reset the stall timer.
+    Linux owned-process wait evidence is retained; no stage-specific wall cap.
+    Restore the sampler after success/failure and disable it during cleanup.
+    """
+    import json,os,time
+    from pathlib import Path
+    original=sup.process_sample;tracker=StartupProgress(idle_seconds,time.monotonic())
+    disabled=False;last=0;units=None;native=Path('/proc/self/stat').is_file()
+    with Path(log).with_suffix('.process-wait.jsonl').open('x') as output:
+        def observed(root,known):
+            nonlocal disabled,last,units
+            value=original(root,known);now=time.monotonic()
+            if disabled or root is None or root==os.getpid() or now-last<1:return value
+            last=now
+            try:
+                if Path(log).exists():
+                    with Path(log).open('rb') as stream:
+                        stream.seek(0,2);size=stream.tell();stream.seek(max(0,size-131072));tail=stream.read().decode(errors='replace')
+                    for line in tail.splitlines():
+                        if line.startswith('DLBINNER SNAPSHOT_PROGRESS_JSON='):
+                            observed_units=json.loads(line.split('=',1)[1])['work_units']
+                            if units is None or observed_units>units:units=observed_units
+                    if 'Traceback (most recent call last):' in tail:raise RuntimeError('Fatal materialization worker traceback; see child log')
+                try:tracker.observe(units,now)
+                except TimeoutError as error:
+                    raise TimeoutError(f'Materialization made no completed byte/entry progress for {idle_seconds:g} seconds') from error
+                rows=[wait_snapshot(pid,start) for pid,start in list(known)[:16]] if native else []
+                output.write(json.dumps(dict(monotonic_seconds=now,work_units=units,
+                    idle_seconds_ceiling=idle_seconds,processes=rows,
+                    scope='owned-process wait state and actual work counter; Linux state unavailable on Mac' if not native else 'owned-process wait state and actual work counter'))+'\n')
+                output.flush()
+            except BaseException:
+                disabled=True;raise
+            return value
+        sup.process_sample=observed
+        try:return sup.supervise(command,log,seconds,ram_bytes,env,sample_root=sample_root)
+        finally:sup.process_sample=original
+
+
 if __name__=='__main__':probe()

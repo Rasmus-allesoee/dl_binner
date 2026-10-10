@@ -27,7 +27,7 @@ sys.path.insert(0,str(Path(__file__).absolute().parent))
 
 from e009_common import acquire, binding, extract, tree_binding, write_json
 from e009_native import command_plan, patch_completebin, patch_scgbinner
-from e009_startup import startup_argv,supervise_startup,source_cache_argv
+from e009_startup import startup_argv,supervise_startup,source_cache_argv,supervise_work
 
 BUNDLE=Path(__file__).absolute().parents[1]
 EXP='experiments/E009-competitive-benchmark'
@@ -56,6 +56,9 @@ def run_stage(sup,argv,log,seconds,remaining,ram_bytes,env,limits,sample_root=No
         argv=startup_argv(argv[0],argv[3],argv[4:],env=env)
         return supervise_startup(sup,argv,log,min(limits['startup_probe_seconds'],remaining),
             ram_bytes,env,sample_root=sample_root,idle_seconds=limits['startup_idle_seconds'])
+    if limits.get('materialization_progress'):
+        return supervise_work(sup,source_cache_argv(argv,env),log,remaining,ram_bytes,env,
+            sample_root=sample_root,idle_seconds=limits['startup_idle_seconds'])
     return sup.supervise(source_cache_argv(argv,env),log,min(seconds,remaining),ram_bytes,env,sample_root=sample_root)
 
 
@@ -364,16 +367,22 @@ def main():
     p.add_argument('--local-seconds',type=float)
     p.add_argument('--runtime-recovery-only',action='store_true',help='Byte-bound job-local runtime snapshot and compatibility checks only; no installs/downloads/science')
     p.add_argument('--runtime-snapshot',type=Path,help='Explicit retained E009 snapshot receipt for verified archive reuse')
+    p.add_argument('--snapshot-state',type=Path,help='Persistent v8 sealed-chunk state; explicit resume validates source plan and all reused bytes')
+    p.add_argument('--work-seconds',type=float,help='Owner-selected overall recovery ceiling covering setup, copy, hash, pack and imports')
+    p.add_argument('--stall-seconds',type=float,default=300,help='Stop after this long without observed real work (default 300s)')
     args=p.parse_args()
     if args.local_seconds is not None and (not args.local_runtimes or not math.isfinite(args.local_seconds) or not 0<args.local_seconds<=7200):
         p.error('--local-seconds is only a positive <=7200-second local-harness limit')
     if args.allocated_vcpus<=0 or args.allocated_ram_gb<=0:p.error('Allocation values must be positive')
+    if args.work_seconds is not None and (not args.runtime_recovery_only or not math.isfinite(args.work_seconds) or args.work_seconds<=0):
+        p.error('--work-seconds requires recovery mode and a positive finite ceiling')
+    if not math.isfinite(args.stall_seconds) or args.stall_seconds<=0:p.error('Positive finite --stall-seconds required')
     if not args.root.is_absolute() or not args.shared_root.is_absolute() or args.root.is_symlink():p.error('Explicit absolute owned unlinked paths required')
     args.root.mkdir(parents=True,exist_ok=True);transfer=args.root/'transfer';transfer.mkdir(exist_ok=True)
     attempt=Path(tempfile.mkdtemp(prefix='native-preflight-',dir=args.root));started=time.monotonic()-max(0,time.time()-(args.entry_start_epoch or time.time()))
     status={'status':'failed','verification_passed':False};code=1;original=sys.stdout,sys.stderr
-    work_seconds=args.local_seconds or (1800 if args.runtime_recovery_only else 17400)
-    overall_seconds=args.local_seconds or (1830 if args.runtime_recovery_only else 18000)
+    work_seconds=args.local_seconds or args.work_seconds or (5400 if args.runtime_recovery_only else 17400)
+    overall_seconds=work_seconds+120 if args.runtime_recovery_only else (args.local_seconds or 18000)
     def alarm(signum,frame):raise TimeoutError('Overall E009 preflight ceiling reached')
     old_handlers={s:signal.getsignal(s) for s in (signal.SIGALRM,signal.SIGINT,signal.SIGTERM)}
     signal.signal(signal.SIGALRM,alarm)

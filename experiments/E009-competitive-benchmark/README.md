@@ -570,3 +570,29 @@ to one CPU. No proportional runtime prediction follows.
 failed sandbox `ps` checks and the corrected macOS parent-path alias regression
 remain retained locally. All old packets/environments and scientific settings
 are preserved. The provider storage cause remains unidentified.
+
+## V7 measured workload correction and resumable v8, 2026-10-10
+
+[Verified v7 return](linux-startup-failure-v7.json) has nine members/seven verified
+inventory files and 602,809 immutable logical bytes. The 1,200-second copy cap
+terminated steady progress at 17,989/44,770 entries; overall 1,800 seconds had not
+expired. Copy: 1,200.067715 seconds /22.53 CPU seconds /193,208,320-byte sampled peak
+RSS. Declared 1/4 driver: 1,200.179870 seconds /0.333383 core-hours before collection.
+No runtime import or native/scientific work started. Preserve the failed attempt,
+original prefix and unjournaled v7 /tmp partial if the job remains live.
+
+V8 selects a conservative numerical runtime, omitting compiler/static/test payloads
+and retaining package metadata/resources/public testing helpers and link closure.
+Persist small verified chunks, then resume by restoring seals and copying only
+missing original contents. No final monolithic packing step is needed. Failed/
+partial chunks are not admitted. The old source bytes/versions and benchmark
+settings stay unchanged. [D006](../../docs/decisions/D006-environment-ownership.md)
+and [Operations](OPERATIONS.md) own the changed contract and limits.
+
+Measured v7 rate (~15 entries/sec) projects full 44,770-entry copy to ~49.8 minutes
+before other work. Proposed owner-selected ceiling: 90 minutes work +120 seconds
+normal collection at 1 CPU /4 GB. Copy/hash/restore/pack/import stages have no
+independent wall caps; a five-minute no-work guard watches advancing byte/entry
+counters. Initial selection reports native counts/bytes and a rough measured-rate
+projection. Local timing/cardinality is not UCloud performance or compatibility.
+Full native preflight remains disabled. No accepted science is repeated.

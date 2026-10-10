@@ -20,7 +20,7 @@ import tarfile
 import time
 
 
-def entries(prefix):
+def entries(prefix, progress=None):
     """Inventory lstat identities without following directories through symlinks."""
     prefix=Path(prefix).absolute()
     if prefix.is_symlink() or not prefix.is_dir() or (prefix/'pyvenv.cfg').exists():
@@ -41,12 +41,13 @@ def entries(prefix):
                 result[rel]={'type':'file','mode':mode,'bytes':info.st_size,
                              'identity':[info.st_dev,info.st_ino,info.st_mtime_ns,info.st_size]}
             elif not stat.S_ISDIR(info.st_mode):raise ValueError('Nonregular prefix member: '+rel)
+            if progress:progress(1)
     return result
 
 
-def verify(prefix, manifest):
+def verify(prefix, manifest, progress=None):
     """Check exact local file/link set, modes and content hashes against the copy."""
-    actual=entries(prefix);expected=manifest['files']
+    actual=entries(prefix,progress=progress);expected=manifest['files']
     if set(actual)!=set(expected):raise ValueError('Snapshot file set changed')
     for rel,record in expected.items():
         a=actual[rel]
@@ -56,9 +57,12 @@ def verify(prefix, manifest):
         else:
             h=hashlib.sha256()
             with (Path(prefix)/rel).open('rb') as f:
-                for block in iter(lambda:f.read(1024*1024),b''):h.update(block)
+                for block in iter(lambda:f.read(1024*1024),b''):
+                    h.update(block)
+                    if progress:progress(len(block))
             if a['bytes']!=record['bytes'] or h.hexdigest()!=record['sha256']:
                 raise ValueError('Snapshot bytes changed: '+rel)
+        if progress:progress(1)
 
 
 def create(source, destination, archive, receipt):

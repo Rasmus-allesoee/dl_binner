@@ -345,6 +345,17 @@ isolation needs explicit -X flags under -I, verified child propagation and no
 scientific-setting changes. Keep failed attempts and distinguish a locally repaired
 cache-loader reproduction from actual storage/runtime acceptance.
 
+For long owner-run preparation, prefer progress-aware stall detection and one
+explicit owner-selected overall cost ceiling over arbitrary short per-stage wall
+caps. Completed bytes/files/checkpoints are progress; parent heartbeats alone are
+not. Justify stall intervals and any hard ceilings from retained workload/rate,
+allocation and uncertainty, including copy, verification and packing. Test the
+observed workload cardinality and recovery path, not just a smaller convenient
+fixture. Local throughput remains distinct from native performance. Persist
+checksum-bound completed work across job resets where useful; make resume reject
+source/config/output drift and ignore unsealed partials without deleting them.
+Before handoff, reconcile every nested timeout with the advertised command budget.
+
 When changing an observed storage execution path, distinguish one-time materialization
 from repeated native imports. Bind snapshot bytes and internal links, retain a
 reusable artifact, and validate interpreter, library origins and actual numerical

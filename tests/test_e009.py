@@ -28,6 +28,8 @@ from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after,ru
 from e009_common import tree_binding
 from e009_truth import construct,parse_paf,reconcile,recovery,union
 from e009_snapshot import create as create_snapshot, restore as restore_snapshot, verify as verify_snapshot
+from e009_materialize import materialize,plan as runtime_plan
+from e009_startup import supervise_work
 
 
 class E009Contracts(unittest.TestCase):
@@ -39,6 +41,78 @@ class E009Contracts(unittest.TestCase):
     def put(self,name,text):
         """Write one new fixture file and return its explicit path."""
         path=self.p/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(text);return path
+
+    def test_runtime_selection_preserves_data_metadata_testing_and_internal_link_targets(self):
+        for n in ['bin/python3.13','lib/python3.13/os.py','lib/libblas.so',
+                  'lib/python3.13/site-packages/torch/testing/_comparison.py',
+                  'lib/python3.13/site-packages/example/data/model.bin',
+                  'lib/python3.13/site-packages/example-1.dist-info/RECORD',
+                  'lib/python3.13/site-packages/example-1.dist-info/licenses/LICENSE']:
+            self.put('prefix/'+n,'retained')
+        for n in ['bin/gcc','include/python.h','lib/gcc/header.h','lib/libblas.a',
+                  'lib/python3.13/test/test_os.py','lib/python3.13/site-packages/pandas/tests/test_a.py',
+                  'lib/python3.13/site-packages/torch/include/header.h']:
+            self.put('prefix/'+n,'excluded')
+        target=self.put('prefix/share/licences/extra','required link target')
+        (self.p/'prefix/lib/licence-link').symlink_to(target)
+        result=runtime_plan(self.p/'prefix')
+        self.assertEqual(result['selected_entries'],9)
+        self.assertEqual(len(result['omitted']),7)
+        self.assertIn('share/licences/extra',result['files'])
+        self.assertIn('lib/python3.13/site-packages/torch/testing/_comparison.py',result['files'])
+
+    def test_chunk_materialization_full_reuse_and_corrupted_archive(self):
+        for i in range(300):self.put(f'prefix/lib/module-{i:04}.py',f'value={i}\n')
+        before=tree_binding(self.p/'prefix');state=self.p/'state'
+        first=materialize(self.p/'prefix',self.p/'first',state,self.p/'selection.json')
+        self.assertEqual(first['source_copied_entries'],300);self.assertEqual(len(first['shards']),3)
+        second=materialize(self.p/'prefix',self.p/'second',state,self.p/'selection2.json')
+        self.assertEqual(second['source_copied_entries'],0);self.assertEqual(second['restored_entries'],300)
+        self.assertEqual(tree_binding(self.p/'prefix'),before)
+        archive=state/first['shards'][0]['archive']['name']
+        with archive.open('r+b') as f:f.seek(-1,2);f.write(b'X')
+        with self.assertRaisesRegex(ValueError,'Chunk archive bytes changed'):
+            materialize(self.p/'prefix',self.p/'corrupt',state,self.p/'selection3.json')
+
+    def test_real_interrupted_chunk_worker_resumes_sealed_outputs_and_source_drift_refuses(self):
+        for i in range(512):self.put(f'prefix/lib/module-{i:04}.py',f'value={i}\n')
+        state=self.p/'state';command=[str(sys.executable),'-I','-B',str(ROOT/'scripts/e009_materialize.py'),
+            '--source',str(self.p/'prefix'),'--destination',str(self.p/'partial'),
+            '--state',str(state),'--summary',str(self.p/'selection.json')]
+        child=subprocess.Popen(command,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,start_new_session=True)
+        captured=[]
+        try:
+            for line in child.stdout:
+                captured.append(line)
+                if '"sealed_chunks": 1' in line:
+                    child.terminate();break
+            child.wait(timeout=5)
+        finally:
+            if child.poll() is None:child.kill();child.wait()
+            child.stdout.close()
+        self.assertNotEqual(child.returncode,0);self.assertTrue(list(state.glob('chunk-*.json')))
+        resumed=materialize(self.p/'prefix',self.p/'resumed',state,self.p/'selection2.json')
+        self.assertGreaterEqual(resumed['restored_entries'],128)
+        self.assertEqual(resumed['restored_entries']+resumed['source_copied_entries'],512)
+        self.assertLessEqual(resumed['source_copied_entries'],384)
+        (self.p/'prefix/lib/module-0000.py').write_text('changed input')
+        with self.assertRaisesRegex(ValueError,'Source/selection plan changed'):
+            materialize(self.p/'prefix',self.p/'drift',state,self.p/'selection3.json')
+
+    def test_progressing_work_has_only_overall_clock_and_identical_heartbeats_stall(self):
+        sup=supervisor()
+        for name,script,success in [
+            ('moving',"import time,json\nfor i in range(12):\n print('DLBINNER SNAPSHOT_PROGRESS_JSON='+json.dumps({'work_units':i+1}),flush=True);time.sleep(.25)\n",True),
+            ('stalled',"import time,json\nfor i in range(100):\n print('DLBINNER SNAPSHOT_PROGRESS_JSON='+json.dumps({'work_units':0}),flush=True);time.sleep(.1)\n",False),
+        ]:
+            worker=self.put(name+'.py',script);log=self.p/(name+'.log')
+            if success:
+                record=supervise_work(sup,[sys.executable,'-I','-B',worker],log,8,1_000_000_000,sup.isolated_env(1),idle_seconds=1.25)
+                self.assertGreater(record['wall_seconds'],3);self.assertEqual(record['exit_code'],0)
+            else:
+                with self.assertRaisesRegex(RuntimeError,'no completed byte/entry progress'):
+                    supervise_work(sup,[sys.executable,'-I','-B',worker],log,8,1_000_000_000,sup.isolated_env(1),idle_seconds=1.25)
+                record=json.loads(log.with_suffix('.exit.json').read_text());self.assert_stopped(record['launched_pid'])
 
     def test_snapshot_real_bytes_internal_links_reuse_and_corruption(self):
         source=self.p/'prefix';self.put('prefix/lib/module.py','value=42\n')
