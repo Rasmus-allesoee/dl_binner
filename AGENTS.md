@@ -334,6 +334,10 @@ before Python site initialization) and process wait state, not only a parent
 timeout traceback. Do not bypass a failed probe or raise its timeout and call
 that a root-cause repair. Prior successful execution does not establish current
 runtime health; retain explicit unresolved status until evidence identifies it.
+When retained traces establish forward progress through cold persistent-file reads,
+correct a prematurely short startup budget prospectively, with an absolute clock
+and an idle-progress limit. Distinguish that wrapper correction from repairing
+filesystem latency or accepting an uncompleted runtime probe.
 
 For the reviewed E001 workflow snapshot only, D006 permits a checksum-bound
 job-local execution copy when persistent filesystem reads stall. Preserve the

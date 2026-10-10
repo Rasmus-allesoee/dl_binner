@@ -23,8 +23,8 @@ from e009_common import acquire,binding,extract,fasta,write_json
 from e009_data import canonical_dna,combine_depth,competitive_reference,partition,source_catalog,validate_fastq_pair
 from e009_native import cpu_plan,prepare_bam_directory,validate_comebin_contigs
 from e009_hmm import budget_args
-from e009_startup import startup_argv,supervise_startup,wait_snapshot
-from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after
+from e009_startup import startup_argv,supervise_startup,wait_snapshot,StartupProgress,progress_signature
+from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after,run_stage
 from e009_common import tree_binding
 from e009_truth import construct,parse_paf,reconcile,recovery,union
 
@@ -312,6 +312,58 @@ else:raise AssertionError('stalled check was accepted')
         self.assertIn('stall_fixture.py',stacks);self.assertIn('addpackage',stacks)
         receipt=json.loads(log.with_suffix('.exit.json').read_text());self.assertIn('TimeoutError',receipt['stop_reason']);self.assert_stopped(receipt['launched_pid'])
         self.assertTrue(log.with_suffix('.process-wait.jsonl').is_file())
+
+    def test_slow_actual_inventory_keeps_all_import_checks(self):
+        prefix,python,site=self.startup_prefix()
+        modules=[]
+        for i in range(8):
+            name='slow_import_'+str(i);modules.append(name)
+            (site/(name+'.py')).write_text('import time\ntime.sleep(.2)\n')
+        expected=self.put('slow-expected.json','{}')
+        args=['--inventory-prefix',prefix,'--expected-distributions',expected,'--modules',*modules]
+        log=self.p/'slow-inventory.log';sup=supervisor()
+        receipt=run_stage(sup,[python,'-I','-B',ROOT/'scripts/e009_native.py',*args],log,.8,10,8_000_000_000,sup.isolated_env(4),{'startup_probe_seconds':8,'startup_idle_seconds':.8})
+        self.assertEqual(receipt['seconds_ceiling'],8)
+        self.assertEqual(receipt['exit_code'],0);self.assertGreater(receipt['wall_seconds'],.8)
+        text=log.read_text();inventory=json.loads(next(line.split('=',1)[1] for line in text.splitlines() if line.startswith('INVENTORY_JSON=')))
+        self.assertEqual(set(inventory['origins']),set(modules))
+        for name in modules:self.assertIn('import ready '+name,text)
+
+    def test_startup_progress_ignores_duplicate_dumps_and_kernel_counters(self):
+        tracker=StartupProgress(2,0)
+        first=progress_signature('phase',('Current thread same\nread file A',))
+        self.assertTrue(tracker.observe(first,0))
+        repeat=progress_signature('phase',('Current thread same\nread file ACurrent thread same\nread file A',))
+        self.assertFalse(tracker.observe(repeat,1))
+        with self.assertRaisesRegex(TimeoutError,'no observed'):tracker.observe(repeat,2)
+        changed=progress_signature('phase',('Current thread same\nread file B',))
+        self.assertTrue(tracker.observe(changed,3))
+        row={'pid':123,'observation_status':'observed owned process','fd_targets':{'4':'file A'},'wchan':'read_wait','io':'10'}
+        original=progress_signature('',processes=[row])
+        row.update(wchan='running',io='20')
+        self.assertEqual(original,progress_signature('',processes=[row]))
+        row['fd_targets']['4']='file B'
+        self.assertNotEqual(original,progress_signature('',processes=[row]))
+
+    def test_startup_slow_progress_and_idle_fatal_cleanup(self):
+        sup=supervisor()
+        for name,code,ok,cause in [
+            ('moving',"import time\nfor i in range(8):\n print('phase',i,flush=True)\n time.sleep(.2)\n",True,None),
+            ('idle',"import time\ntime.sleep(60)\n",False,'no observed'),
+            ('absolute',"import time\nfor i in range(200):\n print('phase',i,flush=True)\n time.sleep(.1)\n",False,'Configured wall-time limit'),
+            ('fatal',"import time,subprocess,sys\nfrom pathlib import Path\np=subprocess.Popen([sys.executable,'-c','import time;time.sleep(60)'])\nPath(__file__).with_suffix('.pid').write_text(str(p.pid))\nprint('Traceback (most recent call last):',flush=True)\nprint('ValueError: intended startup failure',flush=True)\ntime.sleep(60)\n",False,'Fatal Python traceback')]:
+            log=self.p/(name+'.log');native=self.put(name+'.py',code)
+            with self.subTest(name=name):
+                def run():return supervise_startup(sup,startup_argv(sys.executable,native,trace_seconds=.1),log,2 if name=='absolute' else 5,8_000_000_000,sup.isolated_env(4),idle_seconds=.7)
+                if ok:
+                    self.assertEqual(run()['exit_code'],0)
+                    self.assertGreater(json.loads(log.with_suffix('.exit.json').read_text())['wall_seconds'],.7)
+                else:
+                    with self.assertRaisesRegex(RuntimeError,cause):run()
+                    receipt=json.loads(log.with_suffix('.exit.json').read_text())
+                    self.assertIn(cause,receipt['stop_reason']);self.assertNotIn('Cleanup failed',receipt['stop_reason'])
+                    self.assertLess(receipt['wall_seconds'],5);self.assert_stopped(receipt['launched_pid'])
+                    if name=='fatal':self.assert_stopped(int(native.with_suffix('.pid').read_text()))
 
     def test_wait_snapshot_checks_pid_identity_and_bounds_without_environs(self):
         proc=self.p/'proc';folder=proc/'123';folder.mkdir(parents=True)

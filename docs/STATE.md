@@ -224,7 +224,7 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**E009's v3 Linux preflight failed at initial runtime startup; v4 instrumented recovery is prepared, not executed.**
+**E009's v4 traces diagnose slow, progressing cold-file imports; v5 budget recovery is prepared, not executed.**
 [D013](decisions/D013-first-comparative-benchmark.md),
 [the targeted evidence](evidence/2026-10-09-e009-contract-reconciliation.md) and
 [E009](../experiments/E009-competitive-benchmark/README.md) retain subject S1:
@@ -260,23 +260,22 @@ preflight must pass eight threads. No accepted science was repeated.
 
 **Exact next step:** owner runs the checksum-bound **8-vCPU / 24-GB ≤5-hour E009
 preflight** from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
-Use the new **v4** pair under local `artifacts/e009-preparation/transfer-v4/`,
-bound to source `2027436c54b6ff016a5ed4e75232f0256bc7e568`;
-[verified v3 failure](../experiments/E009-competitive-benchmark/linux-startup-failure-v3.json)
-records the first mandatory COMEBin inventory/import probe's 90-second timeout.
-The child emitted no phase diagnostics, so the underlying stall is unresolved;
-no downloads, new tool prefixes, native data contracts or science started.
-Checksum/all nine members verify. Declared 8/24: 91.129350 seconds /0.202510
-allocated core-hours through collection, distinct from provider idle/billing.
-V4 traces before normal site initialization, metadata/import/freeze phases and
-owned Linux process wait states, preserving the same 90-second gate and complete
-checks. No timeout increase, gate bypass, prefix relocation or reinstall.
-Both live terminal logs are named `.log` files in transfer/; the return gets an
-immutable snapshot. Local fresh-site/stalled-site and actual read-only Mac numeric
-inventory checks and the exact packet/bootstrap harness pass, including 25 focused
-checks, fresh attempts and intended corruption/timeout failures. These are separate
-from unexecuted Linux recovery validation.
-Preserve v1/v2/v3 packets and the failed attempt. Review the v4 return before science.
+Use the new **v5** pair under local `artifacts/e009-preparation/transfer-v5/`;
+[verified v4 evidence](../experiments/E009-competitive-benchmark/linux-startup-failure-v4.json)
+shows changing NumPy/Torch bytecode/library reads in `folio_wait_bit_common`.
+NumPy finished around 60 seconds; the fixed 90-second total gate killed continuing
+Torch progress. This is not an established deadlock or a repaired filesystem.
+All 11 members/9 inventory hashes verify. Declared 8/24 driver clock before
+collection: 91.233606 seconds /0.202741 allocated core-hours, distinct from billing.
+No downloads/new prefixes/native contracts/science started. Full freeze/imports
+and read-only tree acceptance remain unresolved.
+V5 permits 900 seconds per inventory, with 90 seconds without phase/stack/open-file
+movement and prompt fatal-traceback cleanup. Identical trace dumps/CPU/heartbeats
+cannot reset idle time; absolute RSS/overall clocks remain. Normal site and full
+inventories/origins/freeze are mandatory; no copy, relocation, reinstall or bypass.
+Both live terminal logs remain `.log` files in transfer/ with immutable snapshots.
+Local cold-progress/idle/fatal checks are separate from unexecuted Linux validation.
+Preserve all prior packets and failed attempts; review v5 before science.
 It creates new tool prefixes, borrows accepted E001 dependencies read-only with
 complete byte/inventory/origin checks, downloads pinned small tool/model/utility
 payloads and source DNA to owned shared storage, then exercises real tiny contracts.

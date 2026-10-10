@@ -1,9 +1,9 @@
 {
   "record": "E009",
-  "version": 4,
-  "startup_probe_seconds": 90,
-  "startup_diagnostics": "normal site initialization under pre-site stack tracing; unchanged complete inventories/origins/freeze; observed Linux process wait states before termination",
-  "recovery_from": "native-preflight-53ozx38q: first reused COMEBin inventory startup timed out without child diagnostics; underlying stall unresolved, no gate bypass or timeout increase",
+  "version": 5,
+  "startup_probe_seconds": 900,
+  "startup_diagnostics": "Cold shared-file imports: 900-second absolute inventory ceiling, 90 seconds without observed phase/stack/open-file movement; full normal site, inventory/origin/freeze checks and Linux wait diagnostics remain mandatory",
+  "recovery_from": "native-preflight-qupkkakx: imports progressed while blocked in read(2)/folio_wait_bit_common on changing NumPy/PyTorch files; v4 fixed 90-second total budget killed a progressing cold import, not an established deadlock",
   "scope": "source acquisition/overlap and real tiny native software contracts; no community fits/scores",
   "allocated_vcpus": 8,
   "allocated_ram_gb": 24,
@@ -37,5 +37,6 @@
     "actual assembly-scale CPU/RAM and full native schedules not established by tiny forward passes"
   ],
   "galah": "not required for this exact-accession/sequence catalog; source-overlap interpretation/ANI remains separately reviewed",
-  "utility_package_lock": "utilities-linux-lock.json"
+  "utility_package_lock": "utilities-linux-lock.json",
+  "startup_idle_seconds": 90
 }

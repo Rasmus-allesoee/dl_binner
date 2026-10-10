@@ -414,3 +414,42 @@ bootstrap and driver live `.log` files reside in transfer/; immutable snapshots
 exclude later return-print output. Source `2027436c54b6ff016a5ed4e75232f0256bc7e568`,
 30 payload files plus manifest, 6,659,467-byte archive. This is locally tested
 recovery preparation, not repaired Linux startup or admitted scientific execution.
+
+
+## V4 Linux cold-import timeout diagnosed, 2026-10-10
+
+[The verified v4 receipt](linux-startup-failure-v4.json) binds all 11 members,
+9 inventory files and 177,168 immutable uncompressed bytes. The first COMEBin
+probe again stopped at 90 seconds, but its new traces establish progress:
+NumPy imports finish around 60 seconds, then Torch advances through libraries and
+Python modules. Seventeen `/proc` observations show `read(2)` waiting in
+`folio_wait_bit_common` on changing bytecode/shared-library paths under Home.
+Sampled CPU is 1.89 seconds over 90.044 seconds, consistent with storage waits.
+This is a prematurely terminated cold import, not an established Python deadlock
+or evidence of a corrupt package. The storage/provider reason remains unknown.
+See the [Linux page-cache documentation](https://docs.kernel.org/filesystems/vfs.html)
+for the kernel mechanism; the diagnosis itself follows retained local evidence.
+
+All 73 explicitly versioned metadata entries match the accepted freeze; the 13
+direct-reference entries and full pip freeze remain unvalidated. No downloads,
+new prefixes, tiny native contracts, fitting or scoring started. Reported driver
+clock before collection: 91.233606 seconds /0.202741 allocated core-hours at the
+declared 8-vCPU/24-GB allocation. Provider idle/billing and collection are separate.
+The command correctly saved bootstrap and driver logs under transfer/.
+
+**V5 corrects the cold-start budget:** every complete inventory probe allows at
+most 900 seconds, while 90 seconds without observed child phase, latest stack or
+open-file movement stops it. Repeated identical stack dumps, sampled CPU and
+parent heartbeats do not count as progress. Fatal tracebacks stop promptly; the
+absolute stage/overall/RSS limits remain enforced. No originals are copied,
+relocated, reinstalled or altered, and all normal site/import/origin/freeze checks
+remain mandatory. This repairs premature wrapper termination; native runtime
+health and storage throughput still need the owner's return. It does not claim
+that a longer budget fixes filesystem latency. All other preflight scope/settings
+and the five-hour/40-core-hour ceiling remain unchanged.
+
+Local v5 source checks pass 28 tests, including the actual owner `run_stage` and
+inventory adapter with eight delayed module imports, idle/fatal-descendant cleanup
+and absolute timeout despite progress. The unchanged native Mac numeric prefix
+passes full freeze/origin checks with identical before/after bytes: 3.715 seconds,
+0.242-GB sampled process-tree peak. Native Linux recovery remains unexecuted.

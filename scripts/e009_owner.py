@@ -41,6 +41,24 @@ def supervisor():
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);return module
 
 
+def run_stage(sup,argv,log,seconds,remaining,ram_bytes,env,limits,sample_root=None):
+    """Dispatch actual owner stages with one clock and cold-import progress policy.
+
+    Inventory argv must retain lexical Python -I -B and all original arguments.
+    Extend only its total startup allowance; unchanged progress, fatal tracebacks,
+    RAM and the caller's remaining overall work time remain bounded. Other stages
+    use the accepted supervisor unchanged.
+    """
+    if remaining<=0:raise TimeoutError('Whole preflight work ceiling reached')
+    if '--inventory-prefix' in list(map(str,argv)):
+        if list(map(str,argv[1:3]))!=['-I','-B']:
+            raise ValueError('Inventory stage needs lexical Python -I -B')
+        argv=startup_argv(argv[0],argv[3],argv[4:])
+        return supervise_startup(sup,argv,log,min(limits['startup_probe_seconds'],remaining),
+            ram_bytes,env,sample_root=sample_root,idle_seconds=limits['startup_idle_seconds'])
+    return sup.supervise(argv,log,min(seconds,remaining),ram_bytes,env,sample_root=sample_root)
+
+
 def verify_bundle(folder):
     """Verify every submitted byte and exact file set; reject links/extras before work."""
     folder=Path(folder);manifest=json.loads((folder/'bundle-manifest.json').read_text())
@@ -177,14 +195,9 @@ def execute(args,attempt,started):
         remaining=deadline-time.monotonic()
         if remaining<=0:raise TimeoutError('Whole preflight work ceiling reached')
         sup.progress('E009 stage '+name)
-        runner=sup.supervise
-        if '--inventory-prefix' in list(map(str,argv)):
-            # All original inventories/imports remain mandatory; trace startup
-            # before implicit site work can produce another silent timeout.
-            argv=startup_argv(argv[0],argv[3],argv[4:])
-            runner=lambda *a,**k:supervise_startup(sup,*a,**k)
-        return runner(argv,stages/(name+'.log'),min(seconds,remaining),
-                      8_000_000_000 if local else limits['working_rss_bytes'],stage_env or env,sample_root=os.getpid())
+        return run_stage(sup,argv,stages/(name+'.log'),seconds,remaining,
+                         8_000_000_000 if local else limits['working_rss_bytes'],
+                         stage_env or env,limits,sample_root=os.getpid())
     inputs=BUNDLE/'input'
     if local:
         # Real production workers; only remote platform/assets/setup are replaced.

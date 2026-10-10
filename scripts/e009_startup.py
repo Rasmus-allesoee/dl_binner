@@ -72,7 +72,38 @@ def wait_snapshot(pid,start,proc_root='/proc'):
     return result
 
 
-def supervise_startup(sup,command,log,seconds,ram_bytes,env,sample_root=None):
+def progress_signature(text,stack_texts=(),processes=()):
+    """Describe observed startup movement without counting CPU time or heartbeats.
+
+    A changed child phase, latest Python stack or open file target is evidence of
+    movement, not proof of health. Repeated dumps of an identical stack do not
+    refresh the idle clock. Kernel addresses/counters and parent log growth are
+    deliberately absent. The absolute wall ceiling still applies.
+    """
+    lines=[line for line in text.splitlines() if line.strip()]
+    stacks=tuple(raw.rsplit('Current thread',1)[-1] for raw in stack_texts)
+    files=tuple(sorted((row['pid'],tuple(sorted(row.get('fd_targets',{}).items())))
+                       for row in processes if row.get('observation_status')=='observed owned process'
+                       and all(isinstance(v,str) for v in row.get('fd_targets',{}).values())))
+    return (lines[-1] if lines else '',stacks,files)
+
+
+class StartupProgress:
+    """Bound idle startup separately from total elapsed cold-file/import time."""
+    def __init__(self,seconds,now):
+        if seconds<=0:raise ValueError('Positive startup idle ceiling required')
+        self.seconds,self.changed,self.signature=seconds,now,None
+
+    def observe(self,signature,now):
+        """Return whether startup moved; raise on repeated unchanged evidence."""
+        moved=signature!=self.signature
+        if moved:self.signature,self.changed=signature,now
+        if now-self.changed>=self.seconds:
+            raise TimeoutError(f'Startup made no observed phase/stack/file progress for {self.seconds:g} seconds')
+        return moved
+
+
+def supervise_startup(sup,command,log,seconds,ram_bytes,env,sample_root=None,idle_seconds=None):
     """Add scoped wait-state observations to unchanged timeout/RSS/group cleanup.
 
     The accepted supervisor already identifies the launched process and its
@@ -89,12 +120,15 @@ def supervise_startup(sup,command,log,seconds,ram_bytes,env,sample_root=None):
     native=Path('/proc/self/stat').is_file()
     stacks=Path(log).with_suffix('.startup-stacks');stacks.mkdir()
     env=dict(env,E009_STARTUP_STACK_DIR=str(stacks));requested={}
+    tracker=StartupProgress(idle_seconds,time.monotonic()) if idle_seconds else None
+    disabled=False;rows=[]
     with path.open('x') as output:
         if not native:
             output.write(json.dumps({'scope':'Linux /proc wait-state unavailable on this platform; no Linux validation credit'})+'\n');output.flush()
         def observed(root,known):
-            nonlocal last
+            nonlocal last,disabled,rows
             value=original(root,known);now=time.monotonic()
+            if disabled:return value
             if root is not None and root!=os.getpid():
                 text=Path(log).read_text()
                 ready={int(pid):float(interval) for pid,interval in re.findall(r'DLBINNER PROBE trace ready pid=(\d+) seconds=([\d.]+)',text)}
@@ -111,6 +145,20 @@ def supervise_startup(sup,command,log,seconds,ram_bytes,env,sample_root=None):
             if native and root is not None and root!=os.getpid() and now-last>=5:
                 rows=[wait_snapshot(pid,start) for pid,start in list(known)[:32]]
                 output.write(json.dumps({'monotonic_seconds':now,'scope':'observed launched tree only; no process environment captured','processes':rows})+'\n');output.flush();last=now
+            if tracker and root is not None and root!=os.getpid():
+                stack_texts=[p.read_text() for p in sorted(stacks.glob('*.log'))]
+                try:
+                    moved=tracker.observe(progress_signature(Path(log).read_text(),stack_texts,rows),now)
+                    if 'Traceback (most recent call last):' in Path(log).read_text():
+                        raise RuntimeError('Fatal Python traceback during startup; see child log')
+                except BaseException:
+                    # Cleanup uses the same sampler. It must never re-raise the
+                    # idle/fatal failure and prevent process-group termination.
+                    disabled=True
+                    raise
+                if moved:
+                    output.write(json.dumps({'monotonic_seconds':now,'observed_startup_progress':True,
+                        'idle_seconds_ceiling':idle_seconds,'scope':'phase/stack/open-file movement, not runtime acceptance'})+'\n');output.flush()
             return value
         sup.process_sample=observed
         try:return sup.supervise(command,log,seconds,ram_bytes,env,sample_root=sample_root)

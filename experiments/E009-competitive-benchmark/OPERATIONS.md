@@ -1,6 +1,6 @@
 # E009 owner preflight operations
 
-Status: **v3 startup failed; v4 instrumented recovery prepared, owner execution pending**.
+Status: **v4 cold-file imports diagnosed; v5 progress-aware recovery prepared, owner execution pending**.
 [Protocol](README.md), [limits](preflight.json), [native payload lock](native-lock.json)
 and [Linux package lock](utilities-linux-lock.json) define this job. This is asset
 and tiny native-contract preparation, not the benchmark command.
@@ -14,13 +14,12 @@ Do not run competing workloads. No Slurm cluster is needed for this serial prefl
 
 ## Upload two files and run once
 
-Upload the source-bound `e009-preflight-v4.tar.gz` and matching `.tar.gz.sha256`
+Upload the source-bound `e009-preflight-v5.tar.gz` and matching `.tar.gz.sha256`
 from the local transfer receipt; no Mac environment, large BAM or model upload.
 Exact archive/source identities are recorded in [transfer.json](transfer.json).
-The new pair belongs in local `artifacts/e009-preparation/transfer-v4/`;
-source `2027436c54b6ff016a5ed4e75232f0256bc7e568`, archive 6,659,467 bytes.
+The new pair belongs in local `artifacts/e009-preparation/transfer-v5/`;
 [transfer.json](transfer.json) records its final source/checksum. Preserve the failed
-v3 attempt, prior uploads and the accepted E001 runtime. Upload **v4 only**.
+v3/v4 attempts, prior uploads and the accepted E001 runtime. Upload **v5 only**.
 Then paste this **entire block** into the Terminal:
 
 ```bash
@@ -41,7 +40,7 @@ python3 -I -B -S - "$transfer" <<'PY'
 import hashlib, os, pathlib, shutil, sys, tarfile, tempfile, time
 started=time.time()
 transfer=pathlib.Path(sys.argv[1])
-archive=transfer/'e009-preflight-v4.tar.gz'
+archive=transfer/'e009-preflight-v5.tar.gz'
 fields=(transfer/(archive.name+'.sha256')).read_text().split()
 if len(fields)!=2 or fields[1]!=archive.name or len(fields[0])!=64:
     raise ValueError('Upload the exact archive and matching printed checksum')
@@ -55,13 +54,13 @@ with tarfile.open(archive) as tar:
     if sum(m.size for m in members)>20_000_000:raise ValueError('Unexpected packet expansion')
     for member in members:
         path=pathlib.PurePosixPath(member.name)
-        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v4' or member.name in names:
+        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v5' or member.name in names:
             raise ValueError('Unsafe or duplicate packet member')
         names.add(member.name)
     for member in members:
         target=launch/member.name;target.parent.mkdir(parents=True,exist_ok=True)
         with tar.extractfile(member) as src,target.open('xb') as out:shutil.copyfileobj(src,out)
-packet=launch/'e009-preflight-v4'
+packet=launch/'e009-preflight-v5'
 env=os.environ.copy()
 for key in ('PYTHONPATH','PYTHONHOME','PYTHONUSERBASE'):env.pop(key,None)
 env.update(PYTHONNOUSERSITE='1',PYTHONUNBUFFERED='1')
@@ -87,12 +86,16 @@ packet can create a return. Never remove an old attempt to retry.
 ## What this command does and retains
 
 1. Verify every packet member; retain the manifest even if later verification fails.
-   The first mandatory COMEBin probe retains its **90-second** ceiling. Capture
+   Inventory probes allow **900 seconds total**, with a **90-second idle ceiling**
+   on unchanged phase/stack/open-file evidence. V4 proves movement through cold
+   Home reads; the former 90-second total ceiling killed that progress. Capture
    repeated stacks before normal site initialization, metadata/import/freeze progress,
    and owned Linux process wait/syscall/fd states before cleanup. Permission-denied
    kernel views are explicit unavailable evidence. No prefix relocation, reinstall,
-   skipped inventory, timeout increase or claimed runtime repair. If the underlying
-   stall persists, return diagnosis and stop before downloads/new environments.
+   skipped inventory or claimed storage repair. The new allowance is a deliberate
+   cold-start budget correction, not proof of runtime health. Fatal tracebacks,
+   unchanged evidence for 90 seconds or 900 elapsed seconds stop before downloads.
+   Actual imports/full freeze/origins must pass before any new environments.
 2. Probe accepted E001 COMEBin numerical, mapping, AMBER and CheckM prefixes without
    installs; verify complete inventories/origins, accepted marker files, and byte
    trees before/after. Create new version-qualified E009 tool prefixes only.
@@ -125,8 +128,8 @@ following a timeout. Collection after a timeout is labelled, bounded and charged
 separately, not hidden inside an execution success. Actual elapsed allocation cost
 includes setup, failures and collection; owner idle/upload/provider billing are
 separate. Final read-only hashing stays bounded even after the work timer expires;
-an incomplete byte check is retained as unverified and cannot pass. Packets v1/v2/v3 are
-retained locally, never edited into v4. Heartbeats
+an incomplete byte check is retained as unverified and cannot pass. Packets v1/v2/v3/v4 are
+retained locally, never edited into v5. Heartbeats
 appear every ten seconds; native detail is in stage/tool logs.
 Actual tools run serially. Torch phases may use eight threads/loader zero; process
 pools and HMM/BGZF child budgets include their main/coordinator. Allocation caps
