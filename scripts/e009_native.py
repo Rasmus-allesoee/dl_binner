@@ -247,7 +247,8 @@ def inventory(expected_prefix, modules, expected_freeze=None, dependency_prefix=
         expected={normalize(k):v for k,v in expected_distributions.items()}
         if len(actual)!=len(distributions) or actual!=expected:raise ValueError('Complete clean distribution inventory differs')
     return {'prefix':str(prefix),'python':sys.version,'distributions':distributions,'origins':origins,
-            'python_executable_lexical':sys.executable,'user_site_isolated':True}
+            'python_executable_lexical':sys.executable,'user_site_isolated':True,
+            'bytecode_policy':{'pycache_prefix':sys.pycache_prefix,'writes_disabled':sys.dont_write_bytecode}}
 
 
 def invoke(tool, source, argv, threads):

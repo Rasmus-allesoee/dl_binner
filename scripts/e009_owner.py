@@ -27,7 +27,7 @@ sys.path.insert(0,str(Path(__file__).absolute().parent))
 
 from e009_common import acquire, binding, extract, tree_binding, write_json
 from e009_native import command_plan, patch_completebin, patch_scgbinner
-from e009_startup import startup_argv,supervise_startup
+from e009_startup import startup_argv,supervise_startup,source_cache_argv
 
 BUNDLE=Path(__file__).absolute().parents[1]
 EXP='experiments/E009-competitive-benchmark'
@@ -53,10 +53,10 @@ def run_stage(sup,argv,log,seconds,remaining,ram_bytes,env,limits,sample_root=No
     if '--inventory-prefix' in list(map(str,argv)):
         if list(map(str,argv[1:3]))!=['-I','-B']:
             raise ValueError('Inventory stage needs lexical Python -I -B')
-        argv=startup_argv(argv[0],argv[3],argv[4:])
+        argv=startup_argv(argv[0],argv[3],argv[4:],env=env)
         return supervise_startup(sup,argv,log,min(limits['startup_probe_seconds'],remaining),
             ram_bytes,env,sample_root=sample_root,idle_seconds=limits['startup_idle_seconds'])
-    return sup.supervise(argv,log,min(seconds,remaining),ram_bytes,env,sample_root=sample_root)
+    return sup.supervise(source_cache_argv(argv,env),log,min(seconds,remaining),ram_bytes,env,sample_root=sample_root)
 
 
 def verify_bundle(folder):
@@ -169,7 +169,12 @@ def verify_readonly_after(roots,before,attempt,work_deadline,overall_deadline):
 def execute(args,attempt,started):
     """Perform only prospective asset acquisition and real tiny native contracts."""
     limits=json.loads((BUNDLE/EXP/'preflight.json').read_text());sup=supervisor()
+    if args.runtime_recovery_only:
+        from e009_cache_recovery import recover
+        return recover(args,attempt,started,BUNDLE,sup)
     local=json.loads(args.local_runtimes.read_text()) if args.local_runtimes else None
+    if not local and not limits.get('full_native_preflight_enabled',True):
+        raise ValueError('Full native preflight is suspended after v5 storage failure; use --runtime-recovery-only at 1 vCPU / 4 GB')
     os.chdir(attempt)  # Keep incidental native files within this unique owned attempt.
     resource.setrlimit(resource.RLIMIT_CORE,(0,0))
     if not local:
@@ -190,6 +195,7 @@ def execute(args,attempt,started):
                MPLCONFIGDIR=str(attempt/'mpl-cache'),XDG_CACHE_HOME=str(attempt/'cache'),
                TORCH_HOME=str(attempt/'cache/torch'),HF_HOME=str(attempt/'cache/huggingface'),
                PIP_DISABLE_PIP_VERSION_CHECK='1',PYTHONHASHSEED='0')
+    env['E009_SOURCE_CACHE_ROOT']=str(Path(env['TMPDIR'])/'unused-bytecode')
     stages=attempt/'stages';stages.mkdir();results={}
     def stage(argv,name,seconds=1200,stage_env=None):
         remaining=deadline-time.monotonic()
@@ -356,6 +362,7 @@ def main():
     p.add_argument('--allocated-vcpus',type=int,required=True);p.add_argument('--allocated-ram-gb',type=int,required=True)
     p.add_argument('--entry-start-epoch',type=float);p.add_argument('--local-runtimes',type=Path)
     p.add_argument('--local-seconds',type=float)
+    p.add_argument('--runtime-recovery-only',action='store_true',help='Only test source loading versus retained bytecode; no setup, downloads or native science')
     args=p.parse_args()
     if args.local_seconds is not None and (not args.local_runtimes or not math.isfinite(args.local_seconds) or not 0<args.local_seconds<=7200):
         p.error('--local-seconds is only a positive <=7200-second local-harness limit')
@@ -364,7 +371,8 @@ def main():
     args.root.mkdir(parents=True,exist_ok=True);transfer=args.root/'transfer';transfer.mkdir(exist_ok=True)
     attempt=Path(tempfile.mkdtemp(prefix='native-preflight-',dir=args.root));started=time.monotonic()-max(0,time.time()-(args.entry_start_epoch or time.time()))
     status={'status':'failed','verification_passed':False};code=1;original=sys.stdout,sys.stderr
-    work_seconds=args.local_seconds or 17400
+    work_seconds=args.local_seconds or (300 if args.runtime_recovery_only else 17400)
+    overall_seconds=args.local_seconds or (330 if args.runtime_recovery_only else 18000)
     def alarm(signum,frame):raise TimeoutError('Overall E009 preflight ceiling reached')
     old_handlers={s:signal.getsignal(s) for s in (signal.SIGALRM,signal.SIGINT,signal.SIGTERM)}
     signal.signal(signal.SIGALRM,alarm)
@@ -375,7 +383,7 @@ def main():
         sys.stdout,sys.stderr=Tee(original[0],log),Tee(original[1],log)
         try:
             print('TERMINAL_LOG='+str(terminal_log),flush=True)
-            signal.setitimer(signal.ITIMER_REAL,max(.001,(args.local_seconds or 17400)-(time.monotonic()-started)))
+            signal.setitimer(signal.ITIMER_REAL,max(.001,work_seconds-(time.monotonic()-started)))
             shutil.copyfile(BUNDLE/'bundle-manifest.json',attempt/'bundle-manifest.json')
             manifest=verify_bundle(BUNDLE);status['verification_passed']=True
             write_json(attempt/'verification.json',{'passed':True,'source_commit':manifest['source_commit']})
@@ -388,8 +396,9 @@ def main():
             signal.setitimer(signal.ITIMER_REAL,0)
             try:
                 signal.setitimer(signal.ITIMER_REAL,30)
-                write_json(attempt/'storage-before-collection.json',{'home':storage_snapshot(args.root),
-                    'shared':storage_snapshot(args.shared_root) if args.shared_root.is_dir() else None})
+                write_json(attempt/'storage-before-collection.json',{'home':storage_snapshot(attempt if args.runtime_recovery_only else args.root),
+                    'shared':storage_snapshot(args.shared_root) if not args.runtime_recovery_only and args.shared_root.is_dir() else None,
+                    'scope':'this recovery attempt only' if args.runtime_recovery_only else 'owned experiment roots'})
             except BaseException as error:print('STORAGE_SNAPSHOT_UNAVAILABLE='+repr(error),flush=True)
             signal.setitimer(signal.ITIMER_REAL,0)
             elapsed=time.monotonic()-started
@@ -398,7 +407,7 @@ def main():
                           accounting='declared allocation times entry-to-driver wall; includes setup/failures; excludes owner idle/upload')
             write_json(attempt/'status.json',status);print('PREFLIGHT_STATUS='+json.dumps(status),flush=True)
             try:
-                remaining=(args.local_seconds or 18000)-(time.monotonic()-started)
+                remaining=overall_seconds-(time.monotonic()-started)
                 signal.setitimer(signal.ITIMER_REAL,min(600,remaining) if remaining>0 else 120)
                 result=collect(attempt,transfer,terminal_log);elapsed=time.monotonic()-started
                 result['terminal_log']=str(terminal_log)

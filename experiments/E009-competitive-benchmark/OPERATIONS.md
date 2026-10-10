@@ -1,27 +1,24 @@
-# E009 owner preflight operations
+# E009 runtime recovery operations
 
-Status: **v4 cold-file imports diagnosed; v5 progress-aware recovery prepared, owner execution pending**.
-[Protocol](README.md), [limits](preflight.json), [native payload lock](native-lock.json)
-and [Linux package lock](utilities-linux-lock.json) define this job. This is asset
-and tiny native-contract preparation, not the benchmark command.
+Status: **v5 persistent-file read failure verified; full native preflight suspended**.
+[The v5 receipt](linux-startup-failure-v5.json) records 175 read waits: 162 bytecode,
+8 shared-library, 2 source and 3 metadata files. Fifteen minutes consumed only
+10.51 sampled CPU seconds; increasing the timeout did not make reuse practical.
+No tool/data setup, downloads, native contracts, fits or scores started.
 
-Use a CPU/Linux x86-64 Terminal job with **8 vCPUs / 24 GB**, at least five hours
-available. Mount Home and the project's shared storage. Keep all owner uploads,
-launch copies, terminal logs and returned archives/checksums under
-`/work/Home/dl_binner/e009/transfer/`. Shared bulk data is written only below
-`/work/RasmusAllesøeNielsen#2936/dl_binner/e009/`; the parent must already be mounted.
-Do not run competing workloads. No Slurm cluster is needed for this serial preflight.
+## Next owner job: cheap source-cache recovery only
 
-## Upload two files and run once
+Use **CPU/Linux x86-64, 1 vCPU / 4 GB**, Home mounted, no competing workload or
+Slurm needed. This job does **not** run the eight-vCPU preflight. It compares actual
+source/cache reads, then tests the accepted COMEBin prefix's complete inventory,
+origins, full freeze and all ten imports while bypassing old bytecode caches.
+There are no installs, environment moves/copies, payload downloads or binning.
 
-Upload the source-bound `e009-preflight-v5.tar.gz` and matching `.tar.gz.sha256`
-from the local transfer receipt; no Mac environment, large BAM or model upload.
-Exact archive/source identities are recorded in [transfer.json](transfer.json).
-The new pair belongs in local `artifacts/e009-preparation/transfer-v5/`;
-source `01837619230458e830fba7f54755c04d6c8c7604`, archive 6,660,645 bytes.
-[transfer.json](transfer.json) records its final source/checksum. Preserve the failed
-v3/v4 attempts, prior uploads and the accepted E001 runtime. Upload **v5 only**.
-Then paste this **entire block** into the Terminal:
+Upload the new `e009-preflight-v6.tar.gz` and its matching `.tar.gz.sha256` into
+`/work/Home/dl_binner/e009/transfer/`. Local pair: `artifacts/e009-preparation/transfer-v6/`.
+[transfer.json](transfer.json) binds the final source/archive/command. This small
+recovery packet contains no micromamba, DNA fixture, model or Mac environment.
+Preserve every older packet, failed attempt and environment. Paste this entire block:
 
 ```bash
 bash <<'BASH'
@@ -30,7 +27,7 @@ transfer=/work/Home/dl_binner/e009/transfer
 mkdir -p "$transfer"
 terminal_log=$(python3 -I -B -S - "$transfer" <<'LOGPY'
 import os, sys, tempfile
-fd,path=tempfile.mkstemp(prefix='e009-preflight.',suffix='.log',dir=sys.argv[1])
+fd,path=tempfile.mkstemp(prefix='e009-recovery.',suffix='.log',dir=sys.argv[1])
 os.close(fd)
 print(path)
 LOGPY
@@ -41,7 +38,7 @@ python3 -I -B -S - "$transfer" <<'PY'
 import hashlib, os, pathlib, shutil, sys, tarfile, tempfile, time
 started=time.time()
 transfer=pathlib.Path(sys.argv[1])
-archive=transfer/'e009-preflight-v5.tar.gz'
+archive=transfer/'e009-preflight-v6.tar.gz'
 fields=(transfer/(archive.name+'.sha256')).read_text().split()
 if len(fields)!=2 or fields[1]!=archive.name or len(fields[0])!=64:
     raise ValueError('Upload the exact archive and matching printed checksum')
@@ -55,112 +52,74 @@ with tarfile.open(archive) as tar:
     if sum(m.size for m in members)>20_000_000:raise ValueError('Unexpected packet expansion')
     for member in members:
         path=pathlib.PurePosixPath(member.name)
-        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v5' or member.name in names:
+        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v6' or member.name in names:
             raise ValueError('Unsafe or duplicate packet member')
         names.add(member.name)
     for member in members:
         target=launch/member.name;target.parent.mkdir(parents=True,exist_ok=True)
         with tar.extractfile(member) as src,target.open('xb') as out:shutil.copyfileobj(src,out)
-packet=launch/'e009-preflight-v5'
+packet=launch/'e009-preflight-v6'
 env=os.environ.copy()
 for key in ('PYTHONPATH','PYTHONHOME','PYTHONUSERBASE'):env.pop(key,None)
 env.update(PYTHONNOUSERSITE='1',PYTHONUNBUFFERED='1')
 argv=[sys.executable,'-I','-B',str(packet/'scripts/e009_owner.py'),
       '--root','/work/Home/dl_binner/e009',
       '--shared-root','/work/RasmusAllesøeNielsen#2936/dl_binner/e009',
-      '--allocated-vcpus','8','--allocated-ram-gb','24',
+      '--allocated-vcpus','1','--allocated-ram-gb','4',
+      '--runtime-recovery-only',
       '--entry-start-epoch',str(started)]
 os.execve(sys.executable,argv,env)
 PY
 BASH
 ```
 
-The bootstrap uses Python for checksum/path validation, avoiding a dependency on
-a missing `sha256sum` utility. Its entry time is passed into the driver, so transfer
-verification/extraction counts toward the bounded work clock. The shell captures
-output to a named `.log` file in transfer/. The driver also writes its live
-`<attempt>-terminal.log` there and prints its path; only a stable terminal snapshot
-is copied into the attempt/return. No live driver terminal log remains in attempt/.
-A failed outer checksum/prerequisite leaves the outer log even before a trusted
-packet can create a return. Never remove an old attempt to retry.
+The bootstrap and canonical driver terminal `.log` files, launch copies and
+archive/checksum/collection receipt remain in transfer/. An immutable snapshot
+of the canonical log is included in the return. The whole clock starts before
+upload verification/extraction; failures preserve the verified packet manifest.
 
-## What this command does and retains
+## Work and stopping conditions
 
-1. Verify every packet member; retain the manifest even if later verification fails.
-   Inventory probes allow **900 seconds total**, with a **90-second idle ceiling**
-   on unchanged phase/stack/open-file evidence. V4 proves movement through cold
-   Home reads; the former 90-second total ceiling killed that progress. Capture
-   repeated stacks before normal site initialization, metadata/import/freeze progress,
-   and owned Linux process wait/syscall/fd states before cleanup. Permission-denied
-   kernel views are explicit unavailable evidence. No prefix relocation, reinstall,
-   skipped inventory or claimed storage repair. The new allowance is a deliberate
-   cold-start budget correction, not proof of runtime health. Fatal tracebacks,
-   unchanged evidence for 90 seconds or 900 elapsed seconds stop before downloads.
-   Actual imports/full freeze/origins must pass before any new environments.
-2. Probe accepted E001 COMEBin numerical, mapping, AMBER and CheckM prefixes without
-   installs; verify complete inventories/origins, accepted marker files, and byte
-   trees before/after. Create new version-qualified E009 tool prefixes only.
-3. Acquire exact selected source archives (~129 MB), CompleteBin DB (~156 MB),
-   three small extra wheels, and 59 checksum-pinned Linux utility packages (~228 MB).
-   The ~6.5-MB micromamba bootstrap is already in the packet. Native package identity
-   locks are exact; local cross-platform solve is not a successful Linux install.
-4. Test the 22-FASTA-contig / 407,631-total-DNA-bp software panel: real 740/370 paired
-   reads, map/sort/index/depth, full eight-thread tiny MEGAHIT, all-chain truth and
-   native AMBER; native tool feature readers/writers, markers, CPU plans and
-   CompleteBin's actual 152-MB checkpoint/BAM reader/forward. No model fit/grid or
-   biological E009 scores. Native defaults/schedules are prepared, not admitted.
-5. Acquire the ~3.202-GB source-genome archive provisionally into owned shared
-   storage, return its actual SHA256/member catalog and exact development overlap.
-   Bulk reads (~9.732 GB compressed) are **not** acquired here. Source classification,
-   near-overlap and actual-scale affordability remain later review work.
-6. Keep new prefixes/cache/source DNA for subsequent reuse. Return compact logs,
-   commands, inventories, input/output receipts, masks/axes, sampled CPU/RSS, failures
-   and storage accounting. Large source/prefix/cache/BAM files remain on UCloud;
-   their receipts/paths are returned. No colleagues' files or old attempts are touched.
+1. Stream two exact source/cache pairs (`numpy/__init__.py`, `torch/utils/weak.py`)
+   read-only, reporting actual hash/bytes/read time. Each read has a 15-second
+   limit. Unavailable/slow bytecode is a diagnostic result. A failed source read
+   stops the recovery, rather than assuming that ignoring caches fixes storage.
+2. Run normal site initialization and **all original inventory/import/origin/full
+   freeze checks** with `-I -B -X pycache_prefix=<empty job-local namespace>`.
+   Python's `-B` forbids cache writes but does not forbid cache reads. Explicit
+   `-X` ignores old `__pycache__` directories, loading the same original source;
+   an environment variable alone would be ignored by `-I`. Audit cache accesses
+   in the inventory and its pip child. Neither original nor temporary caches are
+   written. See [Python's cache-prefix contract](https://docs.python.org/3.13/library/sys.html#sys.pycache_prefix).
+3. Re-read the sampled source files and verify unchanged bytes. This is a sampled
+   read-only check, not acceptance of the whole old prefix's bytes. Whole native
+   admission, other prefixes and all tool contracts remain unresolved.
 
-Home must have ≥6 GB free; shared storage ≥30 GB free for this preflight. The older
-200-GB estimate is future provisioning, not a hard cap or a request to provision
-Home to 200 GB. Local byte-bound fixtures and new prefixes live in Home; heavy
-sources live in the shared E009 child. Preserve the quoted Unicode/# path.
+**300 seconds work, 30 seconds normal collection reserve; 3-GB sampled working
+RSS, one CPU/loader zero.** Inventory cap: 180 seconds; idle cap: 45 seconds
+without observed phase/stack/open-file movement. Fatal causes stop promptly with
+owned-process cleanup. The driver snapshots only this small recovery attempt,
+not every previous prefix/shared file. Evidence collection after a timeout is
+separately bounded/accounted, never presented as execution success. Allocation
+cost is declared CPUs times driver wall, including setup/failures/collection,
+distinct from sampled CPU time or provider/owner idle. Maximum normal clock is
+0.091667 allocated core-hours; post-timeout evidence collection can add up to 120
+seconds (0.033333 core-hours). This is not an exact billing prediction.
 
-The job has **20-GB sampled working RSS**, **17,400 work seconds +600 collection
-seconds**, at most **40 allocated core-hours** before optional evidence collection
-following a timeout. Collection after a timeout is labelled, bounded and charged
-separately, not hidden inside an execution success. Actual elapsed allocation cost
-includes setup, failures and collection; owner idle/upload/provider billing are
-separate. Final read-only hashing stays bounded even after the work timer expires;
-an incomplete byte check is retained as unverified and cannot pass. Packets v1/v2/v3/v4 are
-retained locally, never edited into v5. Heartbeats
-appear every ten seconds; native detail is in stage/tool logs.
-Actual tools run serially. Torch phases may use eight threads/loader zero; process
-pools and HMM/BGZF child budgets include their main/coordinator. Allocation caps
-are not a promise that small or serial phases saturate eight CPUs.
+## Return and subsequent boundary
 
-Global prerequisite/verification/portable/evaluator failures stop dependent work.
-An isolated tool contract failure is retained and skips that tool's dependent work;
-other isolated contracts may finish. Overall status remains failed if any chosen
-tool fails. Fatal Python tracebacks, live-worker hangs, clocks/RSS and cancellation
-stop the supervised process groups promptly. No automatic fit, repair or retry.
-The Mac four-thread MEGAHIT issue is **not repaired** by testing it serially: this
-Linux job must pass its real eight-thread assembly contract.
+Return the printed archive/checksum and the **last printed `TERMINAL_LOG` file**.
+Review source-versus-cache timings, full distributions/freeze/origins, zero old
+bytecode access, no writes, sampled unchanged source bytes, limits/cleanup and
+actual allocation costs. A Linux pass establishes this import workaround only;
+it does not admit full-scale tools or certify all persistent storage as healthy.
 
-## Return review and next boundary
-
-Return the printed `RETURN_ARCHIVE`, `RETURN_CHECKSUM` and the `TERMINAL_LOG` file.
-The driver also writes a compact collection receipt beside them. Logs remain in
-transfer/ and attempt/. Preserve all created prefixes and shared source files.
-
-Review checksums/member inventory; source SHA/catalog/development matches;
-full isolated distributions/imports and unchanged read-only trees; actual effective
-CPU/loader/HMM child limits; complete finite native axes/masks/zeros; CompleteBin
-patch/checkpoint; competitive truth/repeats/orientation; AMBER length denominators;
-failures/cleanup; actual wall/RSS/allocated cost and immutable return storage.
-A preflight pass admits its tested software paths only. It does not certify native
-full-community affordability or independent whole-MAG quality.
-
-Only after returned review prepare the bounded **16-vCPU / 48-GB** acquisition,
-sample-0 MEGAHIT, two-sample mapping/depth and full-reference truth job. Freeze
-actual read/source hashes, biological target membership, assembly axes/strata,
-ordered native BAM manifests and representative full-schedule projections before
-any community fit or scores. Keep the modified CompleteBin-50 label. Do not launch
-extra communities/seeds, marker interventions or the GLM/hybrid study automatically.
+After a pass, prepare the original eight-vCPU native preflight using the validated
+cache policy, with source/library byte binding that avoids treating ignored,
+regenerable bytecode as executed input. Audit every native Python child (including
+shell wrappers/spawned workers) before that transfer. Do not rerun accepted science.
+If source/binary reads remain slow, retain the read evidence and replace the direct
+Home runtime strategy: evaluate an immutable packed job-local execution snapshot
+or a separately pinned runtime. Neither automatic arbitrary Conda relocation nor
+unrecorded dependency changes is allowed. Do not launch another prolonged import
+on eight CPUs or change the benchmark shortlist/data just to avoid this failure.

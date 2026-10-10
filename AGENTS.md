@@ -338,6 +338,12 @@ When retained traces establish forward progress through cold persistent-file rea
 correct a prematurely short startup budget prospectively, with an absolute clock
 and an idle-progress limit. Distinguish that wrapper correction from repairing
 filesystem latency or accepting an uncompleted runtime probe.
+If that bounded correction still spends mostly wall time waiting on persistent
+files, stop repeating the full allocation and change the observed read path in
+a cheap native recovery. Python -B forbids bytecode writes, not reads; source-cache
+isolation needs explicit -X flags under -I, verified child propagation and no
+scientific-setting changes. Keep failed attempts and distinguish a locally repaired
+cache-loader reproduction from actual storage/runtime acceptance.
 
 For the reviewed E001 workflow snapshot only, D006 permits a checksum-bound
 job-local execution copy when persistent filesystem reads stall. Preserve the

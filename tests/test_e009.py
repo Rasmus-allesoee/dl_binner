@@ -23,7 +23,7 @@ from e009_common import acquire,binding,extract,fasta,write_json
 from e009_data import canonical_dna,combine_depth,competitive_reference,partition,source_catalog,validate_fastq_pair
 from e009_native import cpu_plan,prepare_bam_directory,validate_comebin_contigs
 from e009_hmm import budget_args
-from e009_startup import startup_argv,supervise_startup,wait_snapshot,StartupProgress,progress_signature
+from e009_startup import startup_argv,supervise_startup,wait_snapshot,StartupProgress,progress_signature,source_cache_argv
 from e009_owner import collect,supervisor,verify_bundle,verify_readonly_after,run_stage
 from e009_common import tree_binding
 from e009_truth import construct,parse_paf,reconcile,recovery,union
@@ -299,6 +299,41 @@ else:raise AssertionError('stalled check was accepted')
         standalone=subprocess.run(startup_argv(python,'fixture_cli',mode='module'),env=sup.isolated_env(4),capture_output=True,text=True,check=True)
         self.assertEqual(standalone.stdout,'fixture==1.0\n');self.assertIn('finished pid=',standalone.stderr)
 
+    def test_actual_blocked_bytecode_read_is_avoided_without_prefix_writes(self):
+        """Reproduce get_data/read on a cache FIFO; actual source import must succeed."""
+        import importlib.util
+        import py_compile
+        prefix,python,site=self.startup_prefix()
+        module=site/'blocked_cache.py';module.write_text('VALUE=731\n')
+        before=binding(module);cache=Path(importlib.util.cache_from_source(str(module)))
+        py_compile.compile(str(module),cfile=str(cache),doraise=True)
+        cache.unlink();os.mkfifo(cache)
+        fd=os.open(cache,os.O_RDWR|os.O_NONBLOCK);self.addCleanup(os.close,fd)
+        target=self.put('cache-target.py',"import blocked_cache\nprint('VALUE='+str(blocked_cache.VALUE),flush=True)\n")
+        sup=supervisor();old=self.p/'cache-blocked.log';env=sup.isolated_env(1)
+        with self.assertRaisesRegex(RuntimeError,'Configured wall-time limit'):
+            supervise_startup(sup,startup_argv(python,target,trace_seconds=.1),old,.8,4_000_000_000,env)
+        stacks=''.join(p.read_text() for p in old.with_suffix('.startup-stacks').glob('*.log'))
+        self.assertIn('get_data',stacks)
+        self.assert_stopped(json.loads(old.with_suffix('.exit.json').read_text())['launched_pid'])
+        env=dict(env,E009_SOURCE_CACHE_ROOT=str(self.p/'empty-cache-namespace'))
+        fixed=self.p/'cache-source.log'
+        receipt=supervise_startup(sup,startup_argv(python,target,trace_seconds=.1,env=env),fixed,5,4_000_000_000,env)
+        self.assertEqual(receipt['exit_code'],0);self.assertIn('VALUE=731',fixed.read_text())
+        audit=json.loads(next(l.split('=',1)[1] for l in fixed.read_text().splitlines() if l.startswith('CACHE_POLICY_JSON=')))
+        self.assertEqual(audit['persistent_bytecode_attempts'],0);self.assertGreater(audit['source_opens'],0)
+        self.assertTrue(audit['writes_disabled']);self.assertEqual(binding(module),before)
+        self.assertFalse((self.p/'empty-cache-namespace').exists());self.assertTrue(cache.is_fifo())
+
+    def test_source_cache_flags_are_explicit_idempotent_and_only_for_python(self):
+        env={'E009_SOURCE_CACHE_ROOT':str(self.p/'empty-cache')}
+        argv=['/lexical/venv/bin/python','-I','-B','-m','pip','freeze','--all']
+        adjusted=source_cache_argv(argv,env)
+        self.assertEqual(adjusted[0],argv[0]);self.assertEqual(adjusted[3:5],['-X','pycache_prefix='+env['E009_SOURCE_CACHE_ROOT']])
+        self.assertEqual(source_cache_argv(adjusted,env),adjusted)
+        self.assertEqual(source_cache_argv(['/tool','--version'],env),['/tool','--version'])
+        with self.assertRaisesRegex(ValueError,'Absolute'):source_cache_argv(argv,{'E009_SOURCE_CACHE_ROOT':'relative'})
+
     def test_startup_site_hang_keeps_stack_timeout_and_cleanup(self):
         prefix,python,site=self.startup_prefix()
         (site/'stall_fixture.py').write_text('import time\ntime.sleep(60)\n')
@@ -362,7 +397,7 @@ else:raise AssertionError('stalled check was accepted')
                     with self.assertRaisesRegex(RuntimeError,cause):run()
                     receipt=json.loads(log.with_suffix('.exit.json').read_text())
                     self.assertIn(cause,receipt['stop_reason']);self.assertNotIn('Cleanup failed',receipt['stop_reason'])
-                    self.assertLess(receipt['wall_seconds'],5);self.assert_stopped(receipt['launched_pid'])
+                    self.assertLess(receipt['wall_seconds'],8);self.assert_stopped(receipt['launched_pid'])
                     if name=='fatal':self.assert_stopped(int(native.with_suffix('.pid').read_text()))
 
     def test_wait_snapshot_checks_pid_identity_and_bounds_without_environs(self):

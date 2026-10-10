@@ -1370,5 +1370,72 @@
         "sha256": "ce71cfd137797d509d74d84badddc9bd43cf20478b388b70c47c1fcfc9863619"
       }
     }
+  },
+  "source_cache_recovery_v6": {
+    "status": "30 checks and finalized production recovery worker pass; committed packet/owner bootstrap pending",
+    "Linux_failure": "linux-startup-failure-v5.json",
+    "source_cache_mechanism": "explicit -X pycache_prefix with -B bypasses original caches, no source/prefix/package changes",
+    "local_reproduction": "CPython get_data blocked in read on a real cache FIFO; same source imports successfully with new cache namespace, no writes",
+    "unit_tests": 30,
+    "unit_log": {
+      "path": "artifacts/e009-preparation/unit-v21.log",
+      "file": {
+        "bytes": 6426,
+        "sha256": "cb4b7645b56319a2bfd4ad70b82221f99b43d5a4caa80dec9ace60b99e2ee4a1"
+      }
+    },
+    "preserved_test_failure": {
+      "path": "artifacts/e009-preparation/unit-v20.log",
+      "cause": "test compared total receipt wall including native process cleanup against execution-only cap; intended idle stop was correct, assertion corrected to cover bounded cleanup"
+    },
+    "Linux_effectiveness": "not measured; source/library waits also observed; not a confirmed provider/runtime repair",
+    "owner_mode": "1 vCPU /4 GB, <=300-second work plus 30-second normal collection; no tool/data setup/downloads/science",
+    "actual_production_worker_v1": {
+      "path": "artifacts/e009-preparation/source-cache-native-qa-v1/passed.json",
+      "file": {
+        "bytes": 1341,
+        "sha256": "54b1771ab50c780e54c97bc57a6ef1a724bb6290b12d7c26eac0894fc2e5eef0"
+      }
+    },
+    "actual_production_worker_final": {
+      "path": "artifacts/e009-preparation/source-cache-native-qa-v2/passed.json",
+      "file": {
+        "bytes": 1341,
+        "sha256": "587fb8030c33f5b1cda48c826777735601a7804f6a99f453cb69a2f92933fa29"
+      }
+    },
+    "actual_inventory_resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local/bin/python",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-cache-recovery-o1jfwgo0/unused-bytecode",
+        "-S",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e009_startup.py",
+        "10",
+        "file",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e009_native.py",
+        "--inventory-prefix",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-local",
+        "--expected-freeze",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/source-cache-native-qa-v2/expected-freeze.txt",
+        "--modules",
+        "numpy",
+        "torch"
+      ],
+      "exit_code": 0,
+      "launched_pid": 23857,
+      "peak_sampled_rss_bytes": 287993856,
+      "rss_bytes_ceiling": 3000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.7387796387356863,
+      "sampled_cpu_seconds": 6.630000000000001,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 180,
+      "stop_reason": null,
+      "wall_seconds": 8.974259241018444
+    },
+    "local_scope": "actual cache FIFO loader reproduction + finalized recovery reader/inventory/pip audit; actual Mac NumPy/Torch, full freeze and complete retained-prefix before/after binding unchanged. Linux has ten modules, source speed unknown; no Linux validation claim"
   }
 }

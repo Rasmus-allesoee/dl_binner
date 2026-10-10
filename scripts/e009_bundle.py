@@ -21,34 +21,41 @@ ROOT=Path(__file__).absolute().parents[1]
 EXP='experiments/E009-competitive-benchmark'
 
 
-def build(destination,bootstrap,version='v5'):
+def build(destination,bootstrap=None,version='v6',recovery_only=False):
     """Require committed transfer inputs and return the exact two owner upload paths."""
-    destination,bootstrap=Path(destination).absolute(),Path(bootstrap).absolute()
+    destination=Path(destination).absolute()
     if not version.isalnum():raise ValueError('Simple version name required')
     if destination.exists():raise ValueError('Use a fresh versioned transfer directory')
     scripts=sorted((ROOT/'scripts').glob('e009_*.py'))
-    records=[ROOT/EXP/name for name in ['protocol.json','preflight.json','fixture.json','native-lock.json',
-             'development-overlap.json','runtime-baseline.json','comebin-base-freeze.txt','utilities-linux-lock.json']]
-    fixture=json.loads((ROOT/EXP/'fixture.json').read_text());fixture_path=ROOT/fixture['fixture_archive']['path']
-    inputs=scripts+records+[ROOT/'src/dl_binner/supervision.py',fixture_path]
+    record_names=['preflight.json','runtime-baseline.json','comebin-base-freeze.txt'] if recovery_only else [
+             'protocol.json','preflight.json','fixture.json','native-lock.json','development-overlap.json',
+             'runtime-baseline.json','comebin-base-freeze.txt','utilities-linux-lock.json']
+    records=[ROOT/EXP/name for name in record_names]
+    if not recovery_only:
+        if bootstrap is None:raise ValueError('Full preflight needs pinned Linux bootstrap')
+        bootstrap=Path(bootstrap).absolute()
+        fixture=json.loads((ROOT/EXP/'fixture.json').read_text());fixture_path=ROOT/fixture['fixture_archive']['path']
+    inputs=scripts+records+[ROOT/'src/dl_binner/supervision.py']+([] if recovery_only else [fixture_path])
     names=[str(p.relative_to(ROOT)) for p in inputs]
     tracked=subprocess.check_output(['git','ls-files','--',*names],cwd=ROOT,text=True).splitlines()
     if set(tracked)!=set(names):raise ValueError('Commit all packet source/config/fixture inputs before building')
     subprocess.run(['git','diff','--exit-code','HEAD','--',*names],cwd=ROOT,check=True,capture_output=True)
     head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
-    lock=json.loads((ROOT/EXP/'native-lock.json').read_text());expected=lock['payloads']['micromamba']
-    if binding(bootstrap)!={k:expected[k] for k in ('bytes','sha256')}:raise ValueError('Linux bootstrap bytes changed')
-    if binding(fixture_path)!={k:fixture['fixture_archive'][k] for k in ('bytes','sha256')}:raise ValueError('Tiny fixture archive changed')
+    if not recovery_only:
+        lock=json.loads((ROOT/EXP/'native-lock.json').read_text());expected=lock['payloads']['micromamba']
+        if binding(bootstrap)!={k:expected[k] for k in ('bytes','sha256')}:raise ValueError('Linux bootstrap bytes changed')
+        if binding(fixture_path)!={k:fixture['fixture_archive'][k] for k in ('bytes','sha256')}:raise ValueError('Tiny fixture archive changed')
     destination.mkdir(parents=True);packet=destination/('e009-preflight-'+version);packet.mkdir()
     for path in scripts+records:
         target=packet/path.relative_to(ROOT);target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(path,target)
     (packet/'payload').mkdir();shutil.copyfile(ROOT/'src/dl_binner/supervision.py',packet/'payload/supervision.py')
-    shutil.copyfile(bootstrap,packet/'payload/micromamba-linux.tar.bz2');extract(fixture_path,packet/'input')
-    for name,expected in fixture['files'].items():
-        if binding(packet/'input'/name)!=expected:raise ValueError('Expanded fixture bytes changed')
+    if not recovery_only:
+        shutil.copyfile(bootstrap,packet/'payload/micromamba-linux.tar.bz2');extract(fixture_path,packet/'input')
+        for name,expected in fixture['files'].items():
+            if binding(packet/'input'/name)!=expected:raise ValueError('Expanded fixture bytes changed')
     files={str(p.relative_to(packet)):binding(p) for p in sorted(packet.rglob('*')) if p.is_file()}
     write_json(packet/'bundle-manifest.json',{'record':'E009','version':version,'source_commit':head,'files':files,
-               'scope':'asset/native preflight only; no full-community fit, benchmark score or architecture comparison',
+               'scope':'runtime cache recovery only' if recovery_only else 'asset/native preflight only; no full-community fit, benchmark score or architecture comparison',
                'scientific_execution_authorized':False})
     verify_bundle(packet)
     archive=destination/(packet.name+'.tar.gz')
@@ -61,11 +68,12 @@ def build(destination,bootstrap,version='v5'):
     checksum=archive.with_name(archive.name+'.sha256')
     checksum.write_text(binding(archive)['sha256']+'  '+archive.name+'\n')
     receipt={'source_commit':head,'archive':str(archive),'file':binding(archive),'checksum':str(checksum),
-             'manifest':binding(packet/'bundle-manifest.json'),'files':len(files),'linux_validation':'not yet executed'}
+             'manifest':binding(packet/'bundle-manifest.json'),'files':len(files),'recovery_only':recovery_only,'linux_validation':'not yet executed'}
     write_json(destination/'transfer-receipt.json',receipt);return receipt
 
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--destination',type=Path,required=True)
-    p.add_argument('--bootstrap',type=Path,required=True);p.add_argument('--version',default='v5')
-    args=p.parse_args();print(json.dumps(build(args.destination,args.bootstrap,args.version),indent=2))
+    p.add_argument('--bootstrap',type=Path);p.add_argument('--version',default='v6')
+    p.add_argument('--recovery-only',action='store_true')
+    args=p.parse_args();print(json.dumps(build(args.destination,args.bootstrap,args.version,args.recovery_only),indent=2))

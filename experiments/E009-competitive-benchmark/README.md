@@ -462,3 +462,54 @@ Linux trace replay keeps all 18 moving-file snapshots alive under the idle polic
 then rejects an unchanged final signature; this is analysis, not native execution.
 V5 source `01837619230458e830fba7f54755c04d6c8c7604`; see [transfer receipt](transfer.json)
 for byte identities. The owner must return Linux evidence before admission.
+
+
+## V5 storage failure and targeted source-cache recovery, 2026-10-10
+
+[Verified v5 evidence](linux-startup-failure-v5.json) binds all 11 members, nine
+inventory files and 1,544,852 immutable retained bytes. The initial inventory
+again reached its absolute cap: 900.223 seconds, 10.51 sampled CPU seconds,
+0.288-GB sampled peak, 901.425973 driver seconds before collection /2.003169
+allocated core-hours at declared 8/24. NumPy/Torch/Pandas/SciPy imported; sklearn
+and complete pip freeze did not finish. No payload/native/scientific work began.
+V3/v4/v5 failure costs are retained separately; provider idle/billing are unknown.
+
+All 177 wait snapshots were inspected. There are 175 `folio_wait_bit_common`
+read waits: **162 existing `.pyc`**, eight libraries, two `.py` and three metadata
+files. The earlier excerpt-based chat estimate of 176 cache waits was incorrect;
+the complete recount here supersedes it. The dominant read path is bytecode, but
+other file types also wait. Therefore cache bypass alone is **not yet a proven
+Linux repair**. The exact filesystem/provider cause remains unknown.
+
+The old read-only `-B` policy stops writes but continues reading caches. Explicit
+`-X pycache_prefix=<empty job-local namespace>` with `-B` makes CPython ignore
+old cache trees and compile unchanged original sources in memory. It preserves
+interpreter/prefix, versions, imports and scientific configuration. The same
+explicit policy reaches pip/native Python children; `-I` would ignore the usual
+PYTHONPYCACHEPREFIX environment variable. These semantics are documented by
+[Python](https://docs.python.org/3.13/library/sys.html#sys.pycache_prefix).
+
+**V6 suspends the full preflight.** Its next owner job is **one vCPU /4 GB, five
+minutes work plus 30 seconds normal collection**: actual source/cache read pairs,
+all ten prefix imports/full inventory/freeze/origins, audit of zero old cache
+access, sampled source rehash and safe cleanup. It has no downloads, installations,
+new environments, tool fixtures, science or inferred native-scale readiness.
+This is an inexpensive test of a concrete workaround, not another timeout increase.
+The code repairs an actual locally reproduced import blocked reading cache bytes:
+a real cache FIFO stalls CPython `get_data`, while isolated cache lookup imports
+that same source successfully without writes. Native Linux effectiveness remains
+pending; source/library waits may still require a packed execution snapshot or
+separately pinned runtime. No shortlist/dataset/scientific setting is discarded.
+
+Review v6 before restoring the original resource-aware full preflight. Its
+whole-prefix byte checks must explicitly distinguish original source/binaries
+from ignored regenerable caches, and every Python/shell child needs the policy.
+Those subsequent admission changes are not claimed completed by this recovery.
+
+Thirty local checks pass, including blocked-cache reproduction and zero old-cache
+access without writes. The finalized real Mac recovery worker reads both source/
+cache pairs, loads NumPy/Torch, matches full normal pip freeze and leaves the entire
+20,132-file /774,207,552-byte prefix binding unchanged. Its inventory is 8.974
+seconds /0.288-GB sampled peak, with 474/923 source-open audit events in pip/parent
+and zero persistent-cache attempts. This is a Mac path/contract check, not timing
+for Linux's ten-module probe or proof of repaired storage.

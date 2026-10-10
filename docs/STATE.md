@@ -224,7 +224,7 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**E009's v4 traces diagnose slow, progressing cold-file imports; v5 budget recovery is prepared, not executed.**
+**E009's v5 proves direct Home imports remain impractical; full preflight is suspended and v6 source-cache recovery is prepared.**
 [D013](decisions/D013-first-comparative-benchmark.md),
 [the targeted evidence](evidence/2026-10-09-e009-contract-reconciliation.md) and
 [E009](../experiments/E009-competitive-benchmark/README.md) retain subject S1:
@@ -258,35 +258,35 @@ imports/training or large-community affordability. Mac four-thread MEGAHIT crash
 remain unresolved; the local writer check is explicitly one thread, and the Linux
 preflight must pass eight threads. No accepted science was repeated.
 
-**Exact next step:** owner runs the checksum-bound **8-vCPU / 24-GB ≤5-hour E009
-preflight** from [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
-Use the new **v5** pair under local `artifacts/e009-preparation/transfer-v5/`,
-bound to source `01837619230458e830fba7f54755c04d6c8c7604`;
-[verified v4 evidence](../experiments/E009-competitive-benchmark/linux-startup-failure-v4.json)
-shows changing NumPy/Torch bytecode/library reads in `folio_wait_bit_common`.
-NumPy finished around 60 seconds; the fixed 90-second total gate killed continuing
-Torch progress. This is not an established deadlock or a repaired filesystem.
-All 11 members/9 inventory hashes verify. Declared 8/24 driver clock before
-collection: 91.233606 seconds /0.202741 allocated core-hours, distinct from billing.
-No downloads/new prefixes/native contracts/science started. Full freeze/imports
-and read-only tree acceptance remain unresolved.
-V5 permits 900 seconds per inventory, with 90 seconds without phase/stack/open-file
-movement and prompt fatal-traceback cleanup. Identical trace dumps/CPU/heartbeats
-cannot reset idle time; absolute RSS/overall clocks remain. Normal site and full
-inventories/origins/freeze are mandatory; no copy, relocation, reinstall or bypass.
-Both live terminal logs remain `.log` files in transfer/ with immutable snapshots.
-Twenty-eight local checks, actual read-only Mac inventory/freeze and the exact
-packet/bootstrap harness pass. Cold-progress/idle/fatal and trace replay checks
-are separate from unexecuted Linux validation.
-Preserve all prior packets and failed attempts; review v5 before science.
-It creates new tool prefixes, borrows accepted E001 dependencies read-only with
-complete byte/inventory/origin checks, downloads pinned small tool/model/utility
-payloads and source DNA to owned shared storage, then exercises real tiny contracts.
-Uploads/logs/returns stay under `/work/Home/dl_binner/e009/transfer/`.
-Review its archive/checksum/log before preparing the **16-vCPU / 48-GB** bounded
-bulk-read/assembly/depth/truth command. Source taxonomy/target membership and
-near-overlap, actual read hashes, assembly scale and full-native schedule projections
-remain unresolved **before science**. No E009 fitting/scoring is admitted yet.
+**Exact next step:** owner runs the **1-vCPU /4-GB recovery-only job**, at most
+five minutes work plus 30 seconds normal collection, from
+[Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
+Upload only the new v6 pair under local `artifacts/e009-preparation/transfer-v6/`.
+[Verified v5 return](../experiments/E009-competitive-benchmark/linux-startup-failure-v5.json)
+shows 175 slow file reads, 162 on `.pyc`, plus library/source/metadata waits.
+Only 10.51 CPU seconds were used in 900.223 seconds; another longer import limit
+would not repair this execution strategy. All 11 members/nine file hashes verify.
+Reported 8/24 allocation: 901.425973 seconds /2.003169 core-hours before collection.
+No downloads/new prefixes/native contracts/fits/scores started.
+
+V6 changes actual cache lookup: explicit `-X pycache_prefix` and `-B` ignore old
+bytecode and read unchanged source, with no environment copy/relocation/reinstall.
+The cache-blocking path is reproduced and repaired locally using CPython's real
+loader and a FIFO; actual source speed and effectiveness on Linux remain unknown.
+The cheap job measures source/cache reads before full inventory/import/freeze and
+checks cache isolation, sampled source bytes, resource costs and cleanup. Both
+live logs and compact returns remain under the experiment transfer folder.
+Full native preflight is disabled until this return is reviewed; do not rent eight
+CPUs for another long initial import. If source/library I/O still fails, reassess
+packed job-local execution or a separately pinned environment without changing
+benchmark science. Whole-prefix/source/binary binding and all shell/Python child
+contracts must be prepared before the later full eight-CPU preflight is restored.
+No full native admission or repaired provider filesystem is claimed here.
+
+After native preflight admission and source/sample-count review, prepare the
+bounded bulk-read/assembly/depth/truth step. No community fits/scores/architecture
+comparisons, source-history rewrite, remote push or UCloud execution by Codex.
+All old packets/attempts and accepted scientific evidence remain preserved.
 
 The revised prospective budget is **700 allocated core-hours** (664 stages +36
 reserve), against the owner's approximately **1,980** balance: **1,280 headroom**.

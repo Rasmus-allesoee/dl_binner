@@ -17,6 +17,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).absolute().parent))
 
 from e009_common import binding, fasta, write_json
+from e009_startup import source_cache_argv
 
 STRATA = (1,500,768,1000,2500,10000)
 
@@ -27,6 +28,7 @@ def run_native(argv, log, stdout=None, timeout=None, cwd=None):
     Parent owner supervision enforces the whole clock/RSS and cleans the inherited
     process group. This inner watcher detects a traceback even if the tool hangs.
     """
+    argv=source_cache_argv(argv)
     log = Path(log); log.parent.mkdir(parents=True, exist_ok=True)
     process = None; started = time.monotonic(); error = None
     output = Path(stdout).open('xb') if stdout else None

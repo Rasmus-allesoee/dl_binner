@@ -15,6 +15,20 @@ def probe():
     import faulthandler
     import os
     import _signal
+    import json
+    cache_root=os.environ.get('E009_SOURCE_CACHE_ROOT')
+    if cache_root and (sys.pycache_prefix!=cache_root or not sys.dont_write_bytecode):
+        raise ValueError('Source-loading policy must enter via -X pycache_prefix and -B')
+    audit={'source_opens':0,'persistent_bytecode_attempts':0,'persistent_bytecode_examples':[],
+           'cache_prefix':sys.pycache_prefix,'writes_disabled':sys.dont_write_bytecode}
+    def opened(event,args):
+        if event!='open' or not args or not isinstance(args[0],str):return
+        path=args[0]
+        if path.endswith('.py'):audit['source_opens']+=1
+        if cache_root and path.endswith(('.pyc','.pyo')) and not os.path.abspath(path).startswith(cache_root+os.sep):
+            audit['persistent_bytecode_attempts']+=1
+            if len(audit['persistent_bytecode_examples'])<20:audit['persistent_bytecode_examples'].append(path)
+    sys.addaudithook(opened)
     seconds=float(sys.argv[1])
     if not 0<seconds<=10:raise ValueError('Trace interval must be positive and <=10 seconds')
     mode,target=sys.argv[2:4]
@@ -38,13 +52,34 @@ def probe():
         if mode=='file':runpy.run_path(target,run_name='__main__')
         else:runpy.run_module(target,run_name='__main__',alter_sys=True)
         print('DLBINNER PROBE target ready',file=sys.stderr,flush=True)
-    finally:print(f'DLBINNER PROBE finished pid={os.getpid()}',file=sys.stderr,flush=True)
+        if cache_root and audit['persistent_bytecode_attempts']:
+            raise ValueError('Persistent bytecode was accessed despite source-loading policy')
+    finally:
+        print('CACHE_POLICY_JSON='+json.dumps(audit),file=sys.stderr,flush=True)
+        print(f'DLBINNER PROBE finished pid={os.getpid()}',file=sys.stderr,flush=True)
 
 
-def startup_argv(python,target,args=(),mode='file',trace_seconds=10):
+def source_cache_argv(argv,env=None):
+    """Ignore persistent bytecode caches, compiling original source without writes.
+
+    The job owns an empty temporary cache namespace. -B remains mandatory: this
+    changes cache lookup only, never packages, source paths or scientific settings.
+    Explicit -X is needed because isolated Python ignores PYTHONPYCACHEPREFIX.
+    Non-Python commands are left untouched. Children must inherit the same policy.
+    """
+    import os
+    command=list(map(str,argv));root=(env or os.environ).get('E009_SOURCE_CACHE_ROOT')
+    if root and command[1:3]==['-I','-B']:
+        if not os.path.isabs(root):raise ValueError('Absolute job-owned source-cache namespace required')
+        if command[3:5]==['-X','pycache_prefix='+root]:return command
+        return command[:3]+['-X','pycache_prefix='+root]+command[3:]
+    return command
+
+
+def startup_argv(python,target,args=(),mode='file',trace_seconds=10,env=None):
     """Preserve the lexical venv interpreter and target argv; instrument before site."""
     from pathlib import Path
-    return [str(python),'-I','-B','-S',str(Path(__file__).absolute()),str(trace_seconds),mode,str(target),*map(str,args)]
+    return source_cache_argv([str(python),'-I','-B','-S',str(Path(__file__).absolute()),str(trace_seconds),mode,str(target),*map(str,args)],env)
 
 
 def wait_snapshot(pid,start,proc_root='/proc'):

@@ -1,10 +1,10 @@
 {
   "record": "E009",
-  "version": 5,
-  "startup_probe_seconds": 900,
-  "startup_diagnostics": "Cold shared-file imports: 900-second absolute inventory ceiling, 90 seconds without observed phase/stack/open-file movement; full normal site, inventory/origin/freeze checks and Linux wait diagnostics remain mandatory",
-  "recovery_from": "native-preflight-qupkkakx: imports progressed while blocked in read(2)/folio_wait_bit_common on changing NumPy/PyTorch files; v4 fixed 90-second total budget killed a progressing cold import, not an established deadlock",
-  "scope": "source acquisition/overlap and real tiny native software contracts; no community fits/scores",
+  "version": 6,
+  "startup_probe_seconds": 180,
+  "startup_diagnostics": "Recovery-only source/cache timing plus explicit -X pycache_prefix/-B cache audit, full inventory/origins/freeze and Linux process wait evidence; full preflight disabled",
+  "recovery_from": "native-preflight-mxmhmoyw: 900-second import spent 10.51 CPU seconds; 176 file-wait samples on persistent bytecode. Full preflight suspended pending source-cache bypass validation.",
+  "scope": "Current command: cheap runtime recovery only. Original asset/native preflight settings retained but disabled pending review. No full-community fits/scores.",
   "allocated_vcpus": 8,
   "allocated_ram_gb": 24,
   "working_rss_bytes": 20000000000,
@@ -28,7 +28,7 @@
     "prodigal=2.6.3",
     "perl=5.32.1"
   ],
-  "dependency_policy": "read-only full-inventory/origin/byte-bound E001 dependencies; five new distinct versioned venvs; native imports/writers must pass",
+  "dependency_policy": "Original prefixes/packages/versions preserved read-only. Explicit empty job-local -X pycache_prefix with -B avoids original bytecode; no prefix relocation or reinstall. Cheap recovery only, not full native admission.",
   "scientific_admission": false,
   "unknown_contracts_before_job": [
     "bulk read/source SHA256s not yet acquired; source acquisition receipt returned for review",
@@ -38,5 +38,15 @@
   ],
   "galah": "not required for this exact-accession/sequence catalog; source-overlap interpretation/ANI remains separately reviewed",
   "utility_package_lock": "utilities-linux-lock.json",
-  "startup_idle_seconds": 90
+  "startup_idle_seconds": 45,
+  "full_native_preflight_enabled": false,
+  "runtime_recovery_only": {
+    "allocated_vcpus": 1,
+    "allocated_ram_gb": 4,
+    "working_rss_bytes": 3000000000,
+    "work_seconds": 300,
+    "overall_seconds": 330,
+    "inventory_seconds": 180,
+    "idle_seconds": 45
+  }
 }

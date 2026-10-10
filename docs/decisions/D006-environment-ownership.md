@@ -88,3 +88,24 @@ before its smoke, and smoke before its CPU check. An ordinary tool failure skips
 only its dependent stages; the other isolated tool proceeds. Global prerequisite
 failure stops both. Return one archive with per-tool outcomes for review. Do not
 repeat settled mapping, AMBER, VAMB or input-population checks in this task.
+
+
+## E009 cache-read isolation, 2026-10-10
+
+The reviewed [v5 return](../../experiments/E009-competitive-benchmark/linux-startup-failure-v5.json)
+shows 162 bytecode waits among 175 file waits. The original read-only prefix policy
+remains: no installs, upgrades or arbitrary relocation. `-B` does not disable
+reading existing caches. E009 may use explicit `-X pycache_prefix` pointing to an
+empty job-owned temporary namespace together with `-B`, loading the same source
+without cache writes. This is cache lookup isolation, not a new dependency recipe
+or a moved authoritative prefix. [Operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md)
+freeze a cheap actual-read/import recovery before returning to the full allocation.
+
+Do not claim that this repairs all filesystem waits: the same return includes
+source/native-library/metadata waits. A Linux pass, full inventories/origins,
+child propagation and original source/library byte binding are required before
+full native admission. A later binding may explicitly omit ignored, regenerable
+bytecode; it must label that scope and retain actual executable source/binary
+bytes. This recovery only binds sample source bytes. Packed-prefix execution or a
+changed pinned runtime needs its own reviewed identities/portability checks;
+this amendment does not extend E001's snapshot relocation exception automatically.
