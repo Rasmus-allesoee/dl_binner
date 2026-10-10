@@ -170,7 +170,8 @@ Choose persistent checksum-bound chunks instead of one final monolithic archive:
 seal every <=128-member /approximately 128-MB group (large single files stream as
 individual groups), so interruption preserves completed work across job resets.
 Explicit resume validates the source/selection plan, restores verified sealed
-bytes, and schedules only missing source copies. No seal means no acceptance;
+bytes, and schedules only missing source copies. Keep the completed inventory
+receipt immutable; per-attempt operation counts belong to attempt summaries. No seal means no acceptance;
 corrupt/changed inputs or outputs fail, and unsealed partials remain evidence.
 Portable source stat identities exclude mount-local device/inode numbers across
 jobs; within each copy those numbers and size/mtime are checked. Copied content

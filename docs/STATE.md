@@ -258,8 +258,8 @@ imports/training or large-community affordability. Mac four-thread MEGAHIT crash
 remain unresolved; the local writer check is explicitly one thread, and the Linux
 preflight must pass eight threads. No accepted science was repeated.
 
-**Exact next step:** prepare/test the new **v8 reduced, resumable numerical runtime
-recovery**, then owner uses **1 vCPU /4 GB**, explicitly 90 minutes overall work
+**Exact next step:** owner runs the tested **v8 reduced, resumable numerical runtime
+recovery** using **1 vCPU /4 GB**, explicitly 90 minutes overall work
 plus 120 seconds normal collection, from
 [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md).
 [Verified v7 return](../experiments/E009-competitive-benchmark/linux-startup-failure-v7.json)
@@ -277,6 +277,15 @@ shared libraries and internal-link closure. Sealed chunks resume across jobs;
 unsealed v7 /tmp contents have no accepted journal and are not silently reused.
 Copy, hash, restore, pack, verify and import consumers share the owner-selected
 clock with real-work stall detection, without arbitrary shorter stage wall caps.
+Final upload pair: `artifacts/e009-preparation/transfer-v8-final/`, source
+`bd7addb6e3e646a80bab57deadf9e847e3f02858`, 61,445 archive bytes. Thirty-nine
+regressions, the 44,770-entry actual-file scale/reuse test, and exact final
+Bash/packet/driver with real standalone Mac Conda pass. An intentional stop retains
+47 sealed chunks; resume restores 6,016 entries and copies only 3,493 missing ones.
+Completed reuse copies none, and its final inventory receipt stays byte-identical.
+Original full runtime hash stays unchanged. Logs/returns/failure causes and scope
+are in the [transfer receipt](../experiments/E009-competitive-benchmark/transfer.json).
+Local tiny file cardinality is not UCloud payload size/latency evidence.
 Native selected size/throughput, locking, ABI/origins and all ten imports/Torch
 arithmetic remain unverified. Old prefixes/attempts and accepted science stay
 unchanged. Full eight-CPU preflight remains disabled pending returned recovery

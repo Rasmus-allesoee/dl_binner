@@ -1,84 +1,108 @@
 {
   "record": "E009",
-  "version": "v7",
+  "version": "v8",
   "date": "2026-10-10",
-  "status": "prepared/tested immutable local numerical runtime snapshot; native Linux pending; full preflight disabled",
-  "source_commit": "4068297c2ec18d941b56c463abcc31aad61f6d8b",
+  "status": "prepared/tested reduced resumable runtime materialization; Linux pending; full preflight disabled",
+  "source_commit": "bd7addb6e3e646a80bab57deadf9e847e3f02858",
   "archive": {
-    "path": "artifacts/e009-preparation/transfer-v7-final/e009-preflight-v7.tar.gz",
+    "path": "artifacts/e009-preparation/transfer-v8-final/e009-preflight-v8.tar.gz",
     "file": {
-      "bytes": 54472,
-      "sha256": "594bcdabb14018df77aef07bb09b619190cdc6c44d5d79738c9717e19a383e3f"
+      "bytes": 61445,
+      "sha256": "32c3a9f23cc101982bef8b4d3dc318bc76718cce63f79bee52741eca411888ca"
     }
   },
   "checksum": {
-    "path": "artifacts/e009-preparation/transfer-v7-final/e009-preflight-v7.tar.gz.sha256",
+    "path": "artifacts/e009-preparation/transfer-v8-final/e009-preflight-v8.tar.gz.sha256",
     "file": {
       "bytes": 91,
-      "sha256": "25d35cb89912c1ffa126e556b786d1cf6ffa3ba90a5bf803225802a0cd51d315"
+      "sha256": "5336a4dc7e06260f62018e235a3cdd10938eff148e84ffaf40fc37b06dcddbdd"
     }
   },
   "manifest": {
-    "bytes": 2767,
-    "sha256": "2b5b802faecd34e3af5201de73d5aad618efbec90638dfd78e71c135be481496"
+    "bytes": 2916,
+    "sha256": "d10790bc50679a834f6674277b9e637f2608c55ce3facb822fd5dade5638df39"
   },
-  "payload_files": 17,
+  "payload_files": 18,
   "all_packet_hashes_verified": true,
   "recovery_only": true,
   "bootstrap_DNA_model_Mac_environment_included": false,
   "build_receipt": {
-    "path": "artifacts/e009-preparation/transfer-v7-final/transfer-receipt.json",
+    "path": "artifacts/e009-preparation/transfer-v8-final/transfer-receipt.json",
     "file": {
       "bytes": 665,
-      "sha256": "3510500ef4b209b9512955c9717898f8e3afcd5f06ecec1ac98821b405afae28"
+      "sha256": "c780bb6ceeb5fefda77d3011a34ae35ade6efbaa462cec715e8d9855e0acd420"
     }
   },
   "operations": "OPERATIONS.md",
   "operations_command": {
-    "bytes": 2355,
-    "sha256": "0a83b64eec3843fe3efbef12e670585cb4a82c67a0d5f245899f8f9a0c1b90bf"
+    "bytes": 2501,
+    "sha256": "67f8d549bbce91f9978dda18c7f22671d4785fad358c2e468ef300d70b07b421"
   },
   "owner_allocation": {
-    "vcpus": 1,
-    "ram_gb": 4,
-    "working_rss_bytes": 3000000000,
-    "work_seconds": 1800,
-    "overall_seconds_normal": 1830,
-    "copy_seconds": 1200,
-    "inventory_seconds": 180,
-    "idle_seconds": 45,
-    "io_readers": 8
+    "recommended_vcpus": 1,
+    "recommended_ram_gb": 4,
+    "working_rss_fraction": 0.75,
+    "work_seconds": 5400,
+    "normal_collection_seconds": 120,
+    "stage_wall_caps": null,
+    "stall_seconds": 300,
+    "io_readers": 8,
+    "chunk_members": 128,
+    "chunk_target_bytes": 128000000,
+    "snapshot_state": "/work/Home/dl_binner/e009/runtime-snapshots/comebin-runtime-v8"
   },
-  "previous_native_failure": "linux-startup-failure-v6.json",
-  "limits": "Kernel/provider cause unidentified. New execution storage path tested locally; no Linux compatibility/performance admission. Import cap unchanged; copy/pack ceiling distinct.",
+  "limit_rationale": "Measured v7 one-CPU rate projects even unfiltered 44770-entry copy to 49.8 minutes; 90-minute owner-selected overall clock adds about 40 minutes for metadata, persistence, restore/hash, verification/imports and variation. Native selected bytes/count/throughput remain unknown. Five-minute idle is ~60 normal report intervals and uses real advancing work, not heartbeats.",
+  "previous_native_failure": "linux-startup-failure-v7.json",
+  "limits": "No active 1200-second copy/180-second import cap. V8 handles sealed chunks across jobs; unjournaled v7 /tmp partial not admitted. Native numerical/library/mount locking and all ten modules/Torch remain pending.",
   "local_checks": {
-    "unit_tests": 33,
+    "unit_tests": 39,
     "unit_log": {
-      "path": "artifacts/e009-preparation/unit-v26.log",
+      "path": "artifacts/e009-preparation/unit-v29.log",
       "file": {
-        "bytes": 7366,
-        "sha256": "f48f3fbd1ed88a222daaa1a8ea881ecd32a75ec3b9075a3aed15dfa28c7de7b1"
+        "bytes": 16525,
+        "sha256": "ac1ced0818b8d098c713e042ee2fc7fb064db3a3b8622004a97c68b5e9df88d7"
       }
     },
     "owner_packet_harness": {
-      "path": "artifacts/e009-preparation/snapshot-owner-qa-v1/passed.json",
+      "path": "artifacts/e009-preparation/chunk-owner-qa-v2/passed.json",
       "file": {
-        "bytes": 32559,
-        "sha256": "7702fda2acf6c15c69af0447369330694edd9f69e29d9dc06dedbd24524caf1e"
+        "bytes": 98525,
+        "sha256": "c9f470504760925e45dc8b44c555ec8827aeda6fe2e23f18cac1e31a8bce007c"
       }
     },
     "harness_script": {
-      "path": "artifacts/e009-preparation/snapshot-owner-qa-v1.py",
+      "path": "artifacts/e009-preparation/chunk-owner-qa-v2.py",
       "file": {
-        "bytes": 7803,
-        "sha256": "02fced6f6504fc17795d97affb1e54ae28846aeab196a4abd1ea67cda39e9880"
+        "bytes": 8157,
+        "sha256": "f27851e373dc9d505b0551181fb587971eaf5a28a8c5b59675cfe7094ab83e2f"
       }
     },
     "harness_terminal": {
-      "path": "artifacts/e009-preparation/snapshot-owner-qa-v1-terminal.log",
+      "path": "artifacts/e009-preparation/chunk-owner-qa-v2-terminal.log",
       "file": {
-        "bytes": 57230,
-        "sha256": "01f4cb244be460450160f4a9170c462012a71f3ad525e42ec0e17a78ba9aaf1f"
+        "bytes": 118659,
+        "sha256": "4557387e8923438f4eca7109cc2624c3e9f76d236b36594287b1acc738965659"
+      }
+    },
+    "cardinality_harness": {
+      "path": "artifacts/e009-preparation/chunk-scale-qa-v2/passed.json",
+      "file": {
+        "bytes": 6065,
+        "sha256": "894b7b8ea9a46cc7089d543cc728891a09fa927feefbc1bb418c576b0b77a494"
+      }
+    },
+    "cardinality_script": {
+      "path": "artifacts/e009-preparation/chunk-scale-qa-v2.py",
+      "file": {
+        "bytes": 2068,
+        "sha256": "1581e7e420ec90054fa70fc3f06481aebb4ef2f10eebb357a303ea192b07aa44"
+      }
+    },
+    "cardinality_terminal": {
+      "path": "artifacts/e009-preparation/chunk-scale-qa-v2-terminal.log",
+      "file": {
+        "bytes": 72339,
+        "sha256": "0d14fb3ea0a03563d8c700639e791f5e0d42746de12e645cea76c7dc434515bc"
       }
     },
     "actual_prefix_before_after_unchanged": true,
@@ -93,163 +117,245 @@
       "pandas"
     ],
     "full_original_freeze_matched": true,
-    "fresh_copy": {
-      "command": [
-        "/opt/miniconda3/bin/python3",
-        "-I",
-        "-B",
-        "-X",
-        "pycache_prefix=/tmp/e009-cache-recovery-uyuc4quf/unused-bytecode",
-        "/private/tmp/e009-snapshot-qa-84g17chw/fresh/transfer/launch-ell5helm/e009-preflight-v7/scripts/e009_snapshot.py",
-        "--source",
-        "/opt/miniconda3/envs/snakemake_env",
-        "--destination",
-        "/tmp/e009-cache-recovery-uyuc4quf/prefix",
-        "--archive",
-        "/private/tmp/e009-snapshot-qa-84g17chw/fresh/runtime-snapshots/native-preflight-db5eplpb/comebin-runtime.tar",
-        "--receipt",
-        "/private/tmp/e009-snapshot-qa-84g17chw/fresh/runtime-snapshots/native-preflight-db5eplpb/snapshot.json"
-      ],
-      "exit_code": 0,
-      "launched_pid": 27062,
-      "peak_sampled_rss_bytes": 111104000,
-      "rss_bytes_ceiling": 3000000000,
-      "sample_includes_coordinator": true,
-      "sampled_average_cpus": 1.5405068611923147,
-      "sampled_cpu_seconds": 24.87,
-      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
-      "seconds_ceiling": 179.77198019466596,
-      "stop_reason": null,
-      "wall_seconds": 16.144037152000237
-    },
-    "fresh_inventory": {
-      "command": [
-        "/tmp/e009-cache-recovery-uyuc4quf/prefix/bin/python",
-        "-I",
-        "-B",
-        "-X",
-        "pycache_prefix=/tmp/e009-cache-recovery-uyuc4quf/unused-bytecode",
-        "-S",
-        "/private/tmp/e009-snapshot-qa-84g17chw/fresh/transfer/launch-ell5helm/e009-preflight-v7/scripts/e009_startup.py",
-        "10",
-        "file",
-        "/private/tmp/e009-snapshot-qa-84g17chw/fresh/transfer/launch-ell5helm/e009-preflight-v7/scripts/e009_native.py",
-        "--inventory-prefix",
-        "/tmp/e009-cache-recovery-uyuc4quf/prefix",
-        "--expected-freeze",
-        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/snapshot-owner-qa-v1/expected-freeze.txt",
-        "--forbidden-prefix",
-        "/opt/miniconda3/envs/snakemake_env",
-        "--modules",
-        "numpy",
-        "pandas"
-      ],
-      "exit_code": 0,
-      "launched_pid": 27257,
-      "peak_sampled_rss_bytes": 185303040,
-      "rss_bytes_ceiling": 3000000000,
-      "sample_includes_coordinator": true,
-      "sampled_average_cpus": 0.129239759026111,
-      "sampled_cpu_seconds": 7.46,
-      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
-      "seconds_ceiling": 163.5929764266766,
-      "stop_reason": null,
-      "wall_seconds": 57.722175097005675
-    },
-    "reuse_restore": {
-      "command": [
-        "/opt/miniconda3/bin/python3",
-        "-I",
-        "-B",
-        "-X",
-        "pycache_prefix=/tmp/e009-cache-recovery-k6rx7sa4/unused-bytecode",
-        "/private/tmp/e009-snapshot-qa-84g17chw/reuse/transfer/launch-_rtoc_o3/e009-preflight-v7/scripts/e009_snapshot.py",
-        "--restore",
-        "--receipt",
-        "/private/tmp/e009-snapshot-qa-84g17chw/fresh/runtime-snapshots/native-preflight-db5eplpb/snapshot.json",
-        "--destination",
-        "/tmp/e009-cache-recovery-k6rx7sa4/prefix"
-      ],
-      "exit_code": 0,
-      "launched_pid": 28125,
-      "peak_sampled_rss_bytes": 92381184,
-      "rss_bytes_ceiling": 3000000000,
-      "sample_includes_coordinator": true,
-      "sampled_average_cpus": 0.8881571945420244,
-      "sampled_cpu_seconds": 11.57,
-      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
-      "seconds_ceiling": 179.74234377627727,
-      "stop_reason": null,
-      "wall_seconds": 13.026973233005265
-    },
-    "snapshot": {
-      "files": 13829,
-      "logical_bytes": 276167151,
-      "archive": {
-        "bytes": 300646400,
-        "path": "/private/tmp/e009-snapshot-qa-84g17chw/fresh/runtime-snapshots/native-preflight-db5eplpb/comebin-runtime.tar",
-        "sha256": "5c8794eda9bd4ab787b7eab6fdcdb4abbba9c4975ae539cbc02d6a4d788df828"
+    "partial_chunks_retained": 47,
+    "final_receipt_immutable_on_complete_resume": true,
+    "Mac_selection": {
+      "bytecode_omission": "__pycache__, .pyc, .pyo",
+      "candidate_sealed_entries": 6016,
+      "chunk_members": 128,
+      "chunk_target_bytes": 128000000,
+      "complete": true,
+      "forecast_scope": "rough entry-count projection only; large-file throughput, exclusions and chunk persistence change costs",
+      "logical_bytes": 232021851,
+      "measured_v7_entries_per_second": 14.989987460832577,
+      "missing_entries": 3493,
+      "omitted_bytes": 44145300,
+      "omitted_counts": {
+        "bundled test suite": 1689,
+        "compiler/build metadata": 41,
+        "non-Python executable": 77,
+        "non-numerical top-level payload": 2471,
+        "package compiler headers/sources": 29,
+        "static build library": 13
       },
-      "manifest": {
-        "path": "artifacts/e009-preparation/snapshot-owner-qa-v1/retained-snapshot-manifest.json",
-        "file": {
-          "bytes": 2836658,
-          "sha256": "5b4c320a99052d4287dda47c17df5cc081bdd4def25c18f804cf0411e9a14b6a"
-        }
-      }
+      "original_non_bytecode_entries": 13829,
+      "plan_sha256": "d37fa4872a3ccfa81accd21789f29e2a0f468105ab8e39173a1e6a9918181215",
+      "policy": "e009-numerical-runtime-v8",
+      "restored_entries": 6016,
+      "rough_copy_seconds_at_v7_rate": 634.3567681324697,
+      "rough_remaining_copy_seconds_at_v7_rate": 233.02220960003334,
+      "sealed_chunks": 75,
+      "selected_entries": 9509,
+      "source_copied_entries": 3493,
+      "source_prefix": "/opt/miniconda3/envs/snakemake_env",
+      "state": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/chunk-owner-qa-v2/persistent-state"
     },
     "cases": {
-      "corrupt-runtime": {
-        "status": "failed",
-        "seconds_before_collection": 1.1188606230425648,
-        "outer_wall_seconds": 1.9916090359911323
-      },
-      "fresh": {
+      "complete-resume": {
         "status": "passed",
-        "seconds_before_collection": 78.92855577834416,
-        "outer_wall_seconds": 84.40022504498484
+        "seconds_before_collection": 90.8193418016599,
+        "outer_wall_seconds": 98.9037035240035,
+        "source_copied_entries": 0,
+        "restored_entries": 9509
+      },
+      "corrupt-chunk": {
+        "status": "failed",
+        "seconds_before_collection": 8.449443352321396,
+        "outer_wall_seconds": 11.162068871984957,
+        "source_copied_entries": null,
+        "restored_entries": null
       },
       "inner-corruption": {
         "status": "failed",
-        "seconds_before_collection": 0.16948310370207764,
-        "outer_wall_seconds": 0.6372139279847033
+        "seconds_before_collection": 0.2378039588802494,
+        "outer_wall_seconds": 0.9528453369857743,
+        "source_copied_entries": null,
+        "restored_entries": null
       },
       "missing-prefix": {
         "status": "failed",
-        "seconds_before_collection": 0.8253695165913086,
-        "outer_wall_seconds": 1.8202977600158192
+        "seconds_before_collection": 1.3393239614379127,
+        "outer_wall_seconds": 2.35434280501795,
+        "source_copied_entries": null,
+        "restored_entries": null
       },
       "outer-corruption": {
         "status": null,
         "seconds_before_collection": null,
-        "outer_wall_seconds": null
+        "outer_wall_seconds": null,
+        "source_copied_entries": null,
+        "restored_entries": null
       },
-      "overall-timeout": {
+      "partial": {
         "status": "failed",
-        "seconds_before_collection": 2.272462539229309,
-        "outer_wall_seconds": 3.35302294100984
+        "seconds_before_collection": 12.378868265048368,
+        "outer_wall_seconds": 14.407747883989941,
+        "source_copied_entries": null,
+        "restored_entries": null
       },
-      "reuse": {
+      "partial-resume": {
         "status": "passed",
-        "seconds_before_collection": 63.09834341172245,
-        "outer_wall_seconds": 66.57964356799494
+        "seconds_before_collection": 103.07187200005865,
+        "outer_wall_seconds": 116.13153747300385,
+        "source_copied_entries": 3493,
+        "restored_entries": 6016
       },
       "wrong-inventory": {
         "status": "failed",
-        "seconds_before_collection": 60.17014150568866,
-        "outer_wall_seconds": 66.47251678499742
+        "seconds_before_collection": 94.16137237465591,
+        "outer_wall_seconds": 104.72678068798268,
+        "source_copied_entries": null,
+        "restored_entries": null
       }
     },
-    "scope": "actual committed Bash/bootstrap/driver outside checkout; standalone Mac Conda Python3.13, complete freeze, NumPy/Pandas, actual copy/restore/read-only hashes/returns/failures. No Linux library mapping, Linux ten-module or Torch snapshot validation credit.",
-    "additional_reader_failure": "real mode-zero file raises PermissionError in the production reader; exits 1 without timeout or receipt; stopped process checked by unit suite",
-    "retained_evidence": "compact stage evidence and original returned member checks copied under snapshot-owner-qa-v1/retained-*; bulky Mac snapshot/archive are regenerable and not a portable transfer",
-    "docs_check": {
-      "path": "artifacts/e009-preparation/docs-v7-final.log",
+    "cardinality": {
+      "original_entries": 44770,
+      "selected_entries": 24770,
+      "excluded_entries": 20000,
+      "chunks": 194,
+      "fresh": {
+        "receipt_file": {
+          "bytes": 4589013,
+          "sha256": "165ca4551eb885408691a7c51ceac77163b84e9696e34224e92af980e47b8451"
+        },
+        "record": {
+          "command": [
+            "/opt/miniconda3/bin/python3",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e009_materialize.py",
+            "--source",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/chunk-scale-qa-v1/source",
+            "--destination",
+            "/private/tmp/e009-scale-4rt54zsj/prefix",
+            "--state",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/chunk-scale-qa-v2/state",
+            "--summary",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/chunk-scale-qa-v2/fresh-selection.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 40618,
+          "peak_sampled_rss_bytes": 147496960,
+          "rss_bytes_ceiling": 3000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.385512781529848,
+          "sampled_cpu_seconds": 56.660000000000004,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 240,
+          "stop_reason": null,
+          "wall_seconds": 40.894606499001384
+        },
+        "seconds": 40.95309242801159,
+        "selection": {
+          "bytecode_omission": "__pycache__, .pyc, .pyo",
+          "candidate_sealed_entries": 0,
+          "chunk_members": 128,
+          "chunk_target_bytes": 128000000,
+          "complete": true,
+          "forecast_scope": "rough entry-count projection only; large-file throughput, exclusions and chunk persistence change costs",
+          "logical_bytes": 286130,
+          "measured_v7_entries_per_second": 14.989987460832577,
+          "missing_entries": 24770,
+          "omitted_bytes": 240000,
+          "omitted_counts": {
+            "bundled test suite": 12000,
+            "non-numerical top-level payload": 8000
+          },
+          "original_non_bytecode_entries": 44770,
+          "plan_sha256": "7704dad9d2a8eb52de4223473289cb68e6c731115c95dda830f9324356bb91b7",
+          "policy": "e009-numerical-runtime-v8",
+          "restored_entries": 0,
+          "rough_copy_seconds_at_v7_rate": 1652.4363389043301,
+          "rough_remaining_copy_seconds_at_v7_rate": 1652.4363389043301,
+          "sealed_chunks": 194,
+          "selected_entries": 24770,
+          "source_copied_entries": 24770,
+          "source_prefix": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/chunk-scale-qa-v1/source",
+          "state": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/chunk-scale-qa-v2/state"
+        }
+      },
+      "resume": {
+        "receipt_file": {
+          "bytes": 4589013,
+          "sha256": "165ca4551eb885408691a7c51ceac77163b84e9696e34224e92af980e47b8451"
+        },
+        "record": {
+          "command": [
+            "/opt/miniconda3/bin/python3",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e009_materialize.py",
+            "--source",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/chunk-scale-qa-v1/source",
+            "--destination",
+            "/private/tmp/e009-scale-mqju1oyl/prefix",
+            "--state",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/chunk-scale-qa-v2/state",
+            "--summary",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/chunk-scale-qa-v2/resume-selection.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 40833,
+          "peak_sampled_rss_bytes": 159289344,
+          "rss_bytes_ceiling": 3000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.9058125983708636,
+          "sampled_cpu_seconds": 35.970000000000006,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 240,
+          "stop_reason": null,
+          "wall_seconds": 39.71020061400486
+        },
+        "seconds": 39.77719068399165,
+        "selection": {
+          "bytecode_omission": "__pycache__, .pyc, .pyo",
+          "candidate_sealed_entries": 24770,
+          "chunk_members": 128,
+          "chunk_target_bytes": 128000000,
+          "complete": true,
+          "forecast_scope": "rough entry-count projection only; large-file throughput, exclusions and chunk persistence change costs",
+          "logical_bytes": 286130,
+          "measured_v7_entries_per_second": 14.989987460832577,
+          "missing_entries": 0,
+          "omitted_bytes": 240000,
+          "omitted_counts": {
+            "bundled test suite": 12000,
+            "non-numerical top-level payload": 8000
+          },
+          "original_non_bytecode_entries": 44770,
+          "plan_sha256": "7704dad9d2a8eb52de4223473289cb68e6c731115c95dda830f9324356bb91b7",
+          "policy": "e009-numerical-runtime-v8",
+          "restored_entries": 24770,
+          "rough_copy_seconds_at_v7_rate": 1652.4363389043301,
+          "rough_remaining_copy_seconds_at_v7_rate": 0.0,
+          "sealed_chunks": 194,
+          "selected_entries": 24770,
+          "source_copied_entries": 0,
+          "source_prefix": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/chunk-scale-qa-v1/source",
+          "state": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/chunk-scale-qa-v2/state"
+        }
+      },
+      "input_binding": {
+        "bytes": 526130,
+        "files": 44770,
+        "tree_sha256": "78bacc07c1015c652a503542feb429f49d0a165d11b191088cdf513da0b47674"
+      },
+      "scope": "44770 actual regular files, 24770 selected, 20000 explicit test/header exclusions. Full real reader/writer/chunk/restore/hash path, tiny software bytes; not UCloud data/latency/throughput or a Conda import test."
+    },
+    "scope": "exact committed owner Bash/packet/driver outside checkout; actual reduced standalone Mac Conda with full freeze, NumPy/Pandas/arithmetic and partial/complete sealed resume. Full hashes/returns/failures verified; not native Linux ten-module/Torch/locking/performance validation.",
+    "other_failure_cases": "actual interrupted chunk worker; source-plan drift; real permission error after two seals; conflicting writer; progressing work survives former substage window; unchanged counters/heartbeats stall and stopped PID verified",
+    "retained_evidence": "actual stage/return inventories and collection receipts under chunk-owner-qa-v2/retained-*; immutable numerical inventory and persistent chunks retained in ignored local persistent-state",
+    "documentation_check": {
+      "path": "artifacts/e009-preparation/docs-v8-final.log",
       "file": {
         "bytes": 727,
-        "sha256": "5d356898e6d8a8f30b08b616feb148dc7c74bee36184e8d75911cee30b956efb"
+        "sha256": "8e889d8f2855ce543f9cd8ce48202377abb0d09efc43087c03d9fd70c3bc2a3c"
       },
-      "status": "passed --check-context; optional missing historical caches reported separately"
+      "maintained_documents": 56,
+      "local_links": 695,
+      "present_source_fingerprints": 85,
+      "optional_missing_cache_sources": 10,
+      "status": "passed"
     }
   },
   "native_Linux_recovery_executed": false,
@@ -327,6 +433,29 @@
         }
       },
       "status": "immutable verified native source-read failure; superseded for new launch"
+    },
+    {
+      "version": "v7",
+      "source_commit": "4068297c2ec18d941b56c463abcc31aad61f6d8b",
+      "archive": {
+        "path": "artifacts/e009-preparation/transfer-v7-final/e009-preflight-v7.tar.gz",
+        "file": {
+          "bytes": 54472,
+          "sha256": "594bcdabb14018df77aef07bb09b619190cdc6c44d5d79738c9717e19a383e3f"
+        }
+      },
+      "status": "immutable verified native premature copy timeout; never launch again"
     }
-  ]
+  ],
+  "preserved_local_provisional_v8": {
+    "source_commit": "ab9cfda4a946acc747b068a4167e12fe05fa6e2a",
+    "archive": {
+      "path": "artifacts/e009-preparation/transfer-v8/e009-preflight-v8.tar.gz",
+      "file": {
+        "bytes": 61324,
+        "sha256": "18ccc170715699b41c0a3deef168695bc3ad54cd1f595825eaae979eededa18d"
+      }
+    },
+    "status": "local-only preliminary testing; superseded by final immutable-receipt packet, not owner upload"
+  }
 }

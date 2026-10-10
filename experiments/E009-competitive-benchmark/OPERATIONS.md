@@ -34,8 +34,10 @@ all children follow the remaining clock, without hidden lower stage caps.
 
 Upload **only the new v8 pair**, `e009-preflight-v8.tar.gz` and its matching
 `.tar.gz.sha256`, into `/work/Home/dl_binner/e009/transfer/`. Local pair:
-`artifacts/e009-preparation/transfer-v8/`. [transfer.json](transfer.json) owns the
-final source/packet/checksum identities. Never launch the v7 pair again.
+`artifacts/e009-preparation/transfer-v8-final/`. [transfer.json](transfer.json) owns the
+final source `bd7addb6e3e646a80bab57deadf9e847e3f02858`, 61,445 archive bytes,
+SHA256 `32c3a9f23cc101982bef8b4d3dc318bc76718cce63f79bee52741eca411888ca`.
+Never launch the v7 pair or the local-only provisional v8 packet.
 Paste the entire tested block:
 
 ```bash
@@ -111,7 +113,9 @@ Failed stages/collection are measured, not equated with process CPU seconds.
   This is a **numerical execution runtime**, not a whole environment distribution
   or a compiler/pytest/test-data installation. Separate pinned utility tools remain
   required in the later full preflight. No source bytes/versions/science are edited.
-- The full source/selection plan and per-file copied hashes live under the explicit
+- The completed inventory receipt stays byte-identical on resume; operation counts
+  belong to the attempt summary. The full source/selection plan and copied hashes
+  live under the explicit
   persistent `runtime-snapshots/comebin-runtime-v8/` state. Plans use portable size/
   mtime/mode/link identities across job mounts; within each original read, device/
   inode and stat identities are checked too. Source changes refuse resume.

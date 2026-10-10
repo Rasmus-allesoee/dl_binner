@@ -304,7 +304,7 @@ filter the assembly or constrain the product. Retain preparation and amend the
 prospective scale/resource plan before scores; never secretly subsample a failing
 input. Do not automatically start another community, seed or architecture gate.
 
-## Current prepared milestone and acceptance boundary
+## Initial prepared milestone and acceptance boundary (superseded by v8 recovery)
 
 The acquisition, exact-accession/canonical-sequence overlap, read-pair, assembly,
 ordered BAM/depth, competitive truth, complete partition and narrow AMBER/R95
@@ -596,3 +596,36 @@ independent wall caps; a five-minute no-work guard watches advancing byte/entry
 counters. Initial selection reports native counts/bytes and a rough measured-rate
 projection. Local timing/cardinality is not UCloud performance or compatibility.
 Full native preflight remains disabled. No accepted science is repeated.
+
+V8 final source is `bd7addb6e3e646a80bab57deadf9e847e3f02858`; upload only the
+61,445-byte final pair under `artifacts/e009-preparation/transfer-v8-final/`.
+The provisional locally executed v8 packet remains retained, with its source and
+negative/positive tests, but is not the owner transfer. Final byte/command/log
+identities and detailed checks are in [transfer.json](transfer.json).
+
+Thirty-nine E009 regressions pass. Real permission failure stops the chunk reader
+with its cause after preserving two earlier seals; source drift, conflicting writers,
+archive corruption and stalls refuse admission. A moving worker runs beyond the
+former short substage window; repeated identical counters/heartbeats cannot keep
+it alive. An actual interrupted worker resumes previously sealed chunks. No mocks
+replace the materializer, tar writers/readers, hashing or numerical imports.
+
+Final-scale fixture: 44,770 actual regular files /24,770 selected /20,000 explicit
+header/test omissions, 194 sealed chunks. Fresh: 40.953 s /56.66 sampled CPU s /
+147,496,960-byte peak RSS; complete restore: 39.777 s /35.97 CPU s /159,289,344-byte
+peak. Both keep the original hashes, and the completed 4,589,013-byte inventory
+receipt has exactly the same SHA on reuse. Tiny software file contents and local
+filesystem performance are **not** native package sizes or UCloud throughput.
+
+The exact final Bash/packet/driver also runs outside the checkout on the unchanged
+standalone Mac Conda Python 3.13.12 runtime. Its selection is 9,509 of 13,829 entries,
+with full accepted freeze/NumPy/Pandas and compatibility arithmetic passing. An
+intentional overall 12-second stop retains 47 chunks /6,016 entries; the next attempt
+restores those and copies only 3,493 missing entries. Completed resume copies zero
+source contents; its final inventory receipt stays unchanged. Outer/inner checksum,
+missing prefix, wrong freeze and corrupted chunk failures preserve intended causes,
+logs/returns/resource receipts. Original full prefix tree binding remains unchanged.
+Native Linux mapping/locking, all ten modules/Torch and actual filtered workload/
+throughput are still unverified. Native affinity is not available on Mac; local
+copy CPU can exceed one while remaining a small software check. No UCloud cost
+or proportional CPU speedup claim follows from these timings.
