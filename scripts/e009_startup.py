@@ -41,6 +41,9 @@ def probe():
     directory=os.environ.get('E009_STARTUP_STACK_DIR')
     _stack_file=open(os.path.join(directory,str(os.getpid())+'.log'),'x') if directory else sys.stderr
     faulthandler.enable(file=_stack_file)
+    # Restore ignore at interpreter shutdown, so a queued observer dump cannot
+    # kill a successfully finished probe after faulthandler unregisters itself.
+    _signal.signal(_signal.SIGUSR1,_signal.SIG_IGN)
     faulthandler.register(_signal.SIGUSR1,file=_stack_file,all_threads=True)
     print(f'DLBINNER PROBE trace ready pid={os.getpid()} seconds={seconds}',file=sys.stderr,flush=True)
     try:

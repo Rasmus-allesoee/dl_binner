@@ -735,7 +735,7 @@ No accepted science repeated. [transfer.json](transfer.json) binds complete logs
 command/archive/source and explicit Linux omissions; previous packets stay intact.
 
 
-## Accepted v10 stages and two-path v11 recovery, 2026-10-10
+## Accepted v10 stages and two-path v12 recovery, 2026-10-10
 
 [Independent return review](linux-preflight-v10.json) verifies SHA256/all 340
 archive members and 338 retained hashes /39,835,306 immutable logical bytes.
@@ -751,7 +751,7 @@ failures and all passed stages. New independent SCGBinner/CheckM Conda recipes
 are selected for only those failed paths, with actual compatibility probes rather
 than assuming environment creation fixes them. [D006](../../docs/decisions/D006-environment-ownership.md)
 records requirements/alternatives and [failed-paths-lock.json](failed-paths-lock.json)
-binds 110 SCGBinner/98 CheckM Linux packages plus official CPU Torch (476.7 MB
+binds 118 SCGBinner/98 CheckM Linux packages including all-Conda CPU Torch (577.1 MB
 compressed before deduplication). COMEBin's main numerical recipe stays unchanged;
 complete CheckM runs under its own interpreter/libraries. No E001/v8/v10 mutation.
 
@@ -765,7 +765,7 @@ Returned canonical/accession comparisons find zero exact development matches;
 this does not establish unseen-pretraining or near-genome independence. Heavy
 source bytes remain remotely receipt-bound and are not redownloaded/rehashed.
 
-V11 schedules only SCGBinner/COMEBin native contracts, reusing exact tiny ordered
+V12 schedules only SCGBinner/COMEBin native contracts, reusing exact tiny ordered
 BAMs, pinned source archives and the accepted utility prefix. The other three tools,
 assembly/mapping/truth/evaluator/source download/catalog are not scheduled. New
 uniquely named corrected prefixes and attempts preserve old outputs. Proposed
@@ -773,3 +773,18 @@ uniquely named corrected prefixes and attempts preserve old outputs. Proposed
 20-GB RSS, no lower stage caps; cold Linux timing remains unknown. Local tests
 and transfer identities belong to [transfer.json](transfer.json); exact owner
 command and Linux limitations belong to [Operations](OPERATIONS.md).
+
+### Local recipe correction before transfer
+
+Preserve source a6e88c3 and the rejected v11 packet/local attempt. The first mixed
+Conda/pip Torch2.0 Mac recipe imported but crashed during native thread setup;
+this does not establish the lower-level cause or Linux failure. The corrected
+all-Conda CPU Torch2.0 build104 stack successfully sets four threads, with CUDA
+absent. Exact Conda identities and executed distribution versions are both bound
+(the Torch Python distribution is 2.0.0.post104). COMEBin's old Mac Torch2.2 cannot
+import its modern training AMP entry point; reuse accepted v10 full Linux help and
+execute the identical augmentation API/default parser rather than patch training.
+A local observer test also found a queued shutdown SIGUSR1 race; retain its failed
+log and fix the signal restoration, with active hang dumps still required.
+Final local native results and unchanged-receipt checks belong in transfer.json;
+new Linux installs/native dependencies remain pending owner evidence.

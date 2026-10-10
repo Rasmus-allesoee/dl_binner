@@ -543,13 +543,13 @@ class E009Contracts(unittest.TestCase):
     def test_checkm_wrapper_isolates_its_own_lexical_interpreter_and_libraries(self):
         prefix=self.p/'checkm-own'
         subprocess.run([sys.executable,'-I','-B','-m','venv','--without-pip',prefix],check=True,capture_output=True)
-        script=self.put('console.py','import sys,os,json;print(json.dumps({"prefix":sys.prefix,"python":sys.executable,"argv":sys.argv[1:],"lib":os.environ["LD_LIBRARY_PATH"],"isolated":sys.flags.isolated,"no_bytecode":sys.dont_write_bytecode}))')
+        script=self.put('console.py','import sys,os,json;print(json.dumps({"prefix":sys.prefix,"python":sys.executable,"argv":sys.argv[1:],"lib":os.environ["LD_LIBRARY_PATH"],"path":os.environ["PATH"],"isolated":sys.flags.isolated,"no_bytecode":sys.dont_write_bytecode}))')
         wrapper=self.p/'checkm';cache=self.p/'cache'
         checkm_wrapper(wrapper,prefix/'bin/python',script,cache)
         env=dict(os.environ,PYTHONPATH='/bad',PYTHONHOME='/bad',PYTHONUSERBASE='/bad',LD_LIBRARY_PATH='/wrong/numerical')
         r=subprocess.run([wrapper,'--help'],env=env,check=True,capture_output=True,text=True)
         result=json.loads(r.stdout);self.assertEqual(result['prefix'],str(prefix));self.assertEqual(result['python'],str(prefix/'bin/python'))
-        self.assertEqual(result['lib'],str(prefix/'lib'));self.assertEqual(result['argv'],['--help'])
+        self.assertTrue(result['path'].startswith(str(prefix/'bin')+':'));self.assertEqual(result['lib'],str(prefix/'lib'));self.assertEqual(result['argv'],['--help'])
         self.assertEqual(result['isolated'],1);self.assertTrue(result['no_bytecode'])
 
     def test_binding_progress_reports_actual_byte_counts(self):
@@ -616,6 +616,16 @@ else:raise AssertionError('stalled check was accepted')
         self.assertEqual(module.stdout,'fixture==1.0\n');self.assertIn('site ready',module.stderr)
         standalone=subprocess.run(startup_argv(python,'fixture_cli',mode='module'),env=sup.isolated_env(4),capture_output=True,text=True,check=True)
         self.assertEqual(standalone.stdout,'fixture==1.0\n');self.assertIn('finished pid=',standalone.stderr)
+
+    def test_startup_late_observer_signal_after_handler_teardown(self):
+        """A queued dump after faulthandler teardown must not kill a finished probe."""
+        prefix,python,site=self.startup_prefix()
+        target=self.put('handler-teardown.py',"import faulthandler,os,signal\nfaulthandler.unregister(signal.SIGUSR1)\nos.kill(os.getpid(),signal.SIGUSR1)\nprint('late dump ignored')\n")
+        sup=supervisor()
+        result=subprocess.run(startup_argv(python,target,trace_seconds=.1),
+            env=sup.isolated_env(4),capture_output=True,text=True,check=True)
+        self.assertIn('late dump ignored',result.stdout)
+        self.assertIn('finished pid=',result.stderr)
 
     def test_actual_blocked_bytecode_read_is_avoided_without_prefix_writes(self):
         """Reproduce get_data/read on a cache FIFO; actual source import must succeed."""

@@ -4,6 +4,8 @@ Native feature readers/writers execute on tiny byte-bound real DNA. Parser tests
 remain explicitly distinct from full imports, feature extraction and training.
 """
 import argparse
+import ast
+import logging
 import csv
 import gzip
 import json
@@ -19,6 +21,44 @@ from e009_data import run_native, source_catalog
 from e009_native import command_plan,limit_hnsw,prepare_bam_directory,inspect_comebin_features
 
 
+def comebin_native_augmentation(source, argv, threads):
+    """Call the exact native augmentation API/default parser without training imports.
+
+    The pinned main.generate_aug_data branch calls these same two functions.
+    Its full Linux help/import already passed v10. Reuse that evidence explicitly;
+    do not patch training AMP imports to run a feature-only preflight on Mac.
+    Read native parser AST with real version/seed/HMM constants, preserve output
+    resolution and RNG setup, then execute actual writers (no worker replacement).
+    """
+    source=Path(source);sys.path.insert(0,str(source/'COMEBin'))
+    import torch
+    torch.set_num_threads(threads);torch.set_num_interop_threads(1)
+    from comebin_version import __version__
+    from utils import DEFAULT_RANDOM_SEED,DEFAULT_HMM_EVALUE,configure_reproducibility
+    from data_aug.generate_augfasta_and_saveindex import run_gen_augfasta
+    from data_aug.gen_cov import run_gen_coverage
+    path=source/'COMEBin/main.py'
+    node=next(n for n in ast.parse(path.read_text()).body if isinstance(n,ast.FunctionDef) and n.name=='arguments')
+    ns={'argparse':argparse,'ver':__version__,'DEFAULT_RANDOM_SEED':DEFAULT_RANDOM_SEED,'DEFAULT_HMM_EVALUE':DEFAULT_HMM_EVALUE}
+    exec(compile(ast.Module(body=[node],type_ignores=[]),str(path),'exec'),ns)
+    previous=sys.argv
+    try:
+        sys.argv=[str(path),*map(str,argv)];args=ns['arguments']()
+    finally:sys.argv=previous
+    if args.subcmd!='generate_aug_data':raise ValueError('Native API preflight permits augmentation only')
+    args.output_path=str(Path(args.out_augdata_path).expanduser().resolve())
+    Path(args.output_path).mkdir(parents=True,exist_ok=True)
+    logger=logging.getLogger('COMEBin\t'+__version__);logger.setLevel(logging.INFO)
+    handler=logging.FileHandler(Path(args.output_path)/'comebin.log')
+    handler.setFormatter(logging.Formatter('%(asctime)s - %(message)s'));logger.addHandler(handler)
+    try:
+        if args.seed is not None:configure_reproducibility(args.seed)
+        run_gen_augfasta(logger,args);run_gen_coverage(logger,args)
+    finally:logger.removeHandler(handler);handler.close()
+    return {'native_functions':['run_gen_augfasta','run_gen_coverage'],'parser':'actual pinned arguments AST with real constants',
+            'seed':args.seed,'n_views':args.n_views,'pool_workers':args.num_threads,'model_training':False}
+
+
 def tool_contract(args):
     """Exercise real production adapters/readers without shortened community fitting."""
     out=args.output;out.mkdir(parents=True,exist_ok=False)
@@ -29,7 +69,13 @@ def tool_contract(args):
     write_json(out/'parser-contract.json',parser_contract(args.tool,args.source,plan))
     own=[sys.executable,'-I','-B',str(Path(__file__).with_name('e009_native.py')),'--tool',args.tool,
          '--source',str(args.source),'--threads',str(args.threads),'--']
-    run_native(own+['--help'],out/'native-full-import-help.log',timeout=60)
+    reused=getattr(args,'reused_help',None)
+    if reused:
+        if args.tool!='comebin':raise ValueError('Only accepted COMEBin help can be reused')
+        shutil.copyfile(reused,out/'native-full-import-help-reused.log')
+        write_json(out/'native-help-reused.json',{'source':str(reused),'file':binding(reused),
+                   'scope':'accepted v10 full Linux CLI/import; not rescheduled'})
+    else:run_native(own+['--help'],out/'native-full-import-help.log',timeout=60)
     if args.tool=='completebin':
         # CompleteBin has an API path; its real checkpoint/coverage path is the contract.
         complete_contract(args.source,args.db,reference,args.bams[0],args.threads,out/'complete')
@@ -75,7 +121,9 @@ def tool_contract(args):
                    'model_training':'not run; max200 native schedule retained'})
     else:
         run_native([shutil.which('checkm') or 'checkm','--help'],out/'checkm-readonly-help.log',timeout=60)
-        run_native(own+plan['stages'][0],out/'augmentation.log',timeout=300)
+        if reused:
+            write_json(out/'augmentation-api.json',comebin_native_augmentation(args.source,plan['stages'][0],args.threads))
+        else:run_native(own+plan['stages'][0],out/'augmentation.log',timeout=300)
         root=out/'native/augmentation';files=list(root.rglob('*.tsv'))+list(root.rglob('*.npy'))+list(root.rglob('*.csv'))
         if not files:raise ValueError('COMEBin native augmentation artifacts missing')
         axes=inspect_comebin_features(args.source,root,args.bams,reference)
@@ -94,6 +142,7 @@ if __name__=='__main__':
     t=subs.add_parser('tool-contract')
     for name in ['source','inputs','output','db']:t.add_argument('--'+name,type=Path,required=True)
     t.add_argument('--tool',choices=['semibin','metacat','scgbinner','comebin','completebin'],required=True)
+    t.add_argument('--reused-help',type=Path,help='Exact previously accepted COMEBin Linux help; supplied only by verified retry adapter')
     t.add_argument('--bams',nargs=2,type=Path,required=True);t.add_argument('--threads',type=int,required=True)
     args=p.parse_args()
     if args.operation=='acquire':

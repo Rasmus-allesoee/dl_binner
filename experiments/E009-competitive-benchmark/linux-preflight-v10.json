@@ -115,6 +115,10 @@
     "completebin-contract/passed.json": {
       "bytes": 2378,
       "sha256": "6601bac2f5d5b3ab01aa48c8d1b2838f675d18bef0222069a2a803b8d0bdc632"
+    },
+    "comebin-contract/native-full-import-help.log": {
+      "bytes": 905,
+      "sha256": "fc32c323846e7ab9055a596117654867345ccbe4671afc991336f92083cedfd9"
     }
   },
   "utility_prefix": "/work/Home/dl_binner/e009/envs/utilities-v2-native-preflight-95psvpr9",

@@ -9,7 +9,7 @@ E001 environments and all 151 accepted v8 chunks.
 ## Next owner job
 
 Use **8-vCPU /24-GB CPU/Linux x86-64 Terminal**, glibc>=2.28, no competing work.
-Choose **two hours**. V11 selects **6,600 seconds total work +600 collection**,
+Choose **two hours**. V12 selects **6,600 seconds total work +600 collection**,
 20-GB sampled working RSS and eight-CPU affinity. At most **16 allocated core-hours**;
 this is a conservative cold-install ceiling, not an expected runtime. Acquisitions
 are network-bound; native tools execute serially with phase budgets including
@@ -20,10 +20,10 @@ Read existing tiny ordered BAMs at the v10 attempt, acquired pinned SCGBinner/
 COMEBin archives and retained utility prefix. Restore accepted numerical chunks
 only for COMEBin's unchanged dependency recipe, with zero original recopy. Install
 **new independent complete SCGBinner and CheckM Conda prefixes** from exact locked
-payloads, offline/no solver, plus the official CPU Torch wheel for SCGBinner.
-Approximately **476.7 MB** compressed dependency payloads before cache deduplication;
-allow >=6 GB free Home plus ~2.2 GB temporary restore space. CheckM alone calls
-its own interpreter/library stack; frozen E001 marker data remains read-only.
+payloads, offline/no solver, including CPU Torch for SCGBinner.
+Approximately **577.1 MB** compressed dependency payloads before cache deduplication;
+allow >=8 GB free Home plus ~2.2 GB temporary restore space. CheckM alone calls
+its own interpreter/library/native-binary stack; frozen E001 marker data remains read-only.
 No new environment snapshot, pruning, blanket prefix hashes or old-prefix install.
 
 Writes: new uniquely named E009 attempt, corrected version-qualified prefixes,
@@ -35,8 +35,8 @@ A combined failed status is not admission for science.
 
 ## Upload and one grouped command
 
-Upload `e009-preflight-v11.tar.gz` and its matching `.tar.gz.sha256` from
-`artifacts/e009-preparation/transfer-v11-final/` to
+Upload `e009-preflight-v12.tar.gz` and its matching `.tar.gz.sha256` from
+`artifacts/e009-preparation/transfer-v12-final/` to
 `/work/Home/dl_binner/e009/transfer/`. [transfer.json](transfer.json) binds final
 source, exact packet/command and local checks. Old packets remain unchanged.
 
@@ -58,7 +58,7 @@ python3 -I -B -S - "$transfer" <<'PY'
 import hashlib, os, pathlib, shutil, sys, tarfile, tempfile, time
 started=time.time()
 transfer=pathlib.Path(sys.argv[1])
-archive=transfer/'e009-preflight-v11.tar.gz'
+archive=transfer/'e009-preflight-v12.tar.gz'
 fields=(transfer/(archive.name+'.sha256')).read_text().split()
 if len(fields)!=2 or fields[1]!=archive.name or len(fields[0])!=64:
     raise ValueError('Upload the exact archive and matching printed checksum')
@@ -72,13 +72,13 @@ with tarfile.open(archive) as tar:
     if sum(m.size for m in members)>20_000_000:raise ValueError('Unexpected packet expansion')
     for member in members:
         path=pathlib.PurePosixPath(member.name)
-        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v11' or member.name in names:
+        if not member.isfile() or path.is_absolute() or '..' in path.parts or not path.parts or path.parts[0]!='e009-preflight-v12' or member.name in names:
             raise ValueError('Unsafe or duplicate packet member')
         names.add(member.name)
     for member in members:
         target=launch/member.name;target.parent.mkdir(parents=True,exist_ok=True)
         with tar.extractfile(member) as src,target.open('xb') as out:shutil.copyfileobj(src,out)
-packet=launch/'e009-preflight-v11'
+packet=launch/'e009-preflight-v12'
 env=os.environ.copy()
 for key in ('PYTHONPATH','PYTHONHOME','PYTHONUSERBASE'):env.pop(key,None)
 env.update(PYTHONNOUSERSITE='1',PYTHONUNBUFFERED='1')
@@ -100,12 +100,15 @@ Exact immutable archive bytes differ from the growing live log or provider billi
 
 ## Local versus Linux validation
 
-SCGBinner's actual requirements/private imports select sklearn1.6.1, Torch2.0.0+cpu
+SCGBinner's actual requirements/private imports select sklearn1.6.1, all-Conda CPU Torch2.0.0 (distribution2.0.0.post104)
 and the explicitly named Python3.10/NumPy1.26/pandas1.5 CPU compatibility recipe.
 CheckM's complete Linux Bioconda1.2.3 payload retains checkm.test. Local Mac checks
 use fresh owned Conda dependencies and the official complete CheckM wheel; pinned
 Linux pplacer is unavailable on Mac. No Linux install or lineage-fit credit follows
-from that local help test. The retry calls actual augmentation writers/readers,
+from that local help test. COMEBin’s accepted full Linux help is receipt-bound and not repeated. Its feature
+probe invokes the exact pinned native augmentation functions with the actual
+parser/defaults, avoiding unrelated training-only AMP imports on the older Mac
+validation runtime. The retry calls actual augmentation writers/readers,
 SCGBinner's seeded initializer/HNSW and CheckM help, without full fits or truth K.
 Mac overrides/negative checks and final packet checks are explicit in the transfer
 receipt. Corrected Linux installs, eight-CPU feature workers and complete CheckM
@@ -115,3 +118,13 @@ training affordability or scientific quality.
 After returned review, accept successful remaining checks, assess source/sample
 scope and prepare the bounded bulk read/assembly/depth/truth step. No automatic
 full fits, new seeds, architecture comparison or UCloud execution by Codex.
+
+The first proposed local v11 packet was rejected before owner transfer: a mixed
+Conda/pip Torch2.0 stack crashed at CPU thread setup, and the older Mac COMEBin
+runtime lacks modern training AMP imports. Preserve that packet, its failed local
+attempt and prefixes. V12 uses one all-Conda CPU SCGBinner stack (four-thread
+setup passes locally) and reuses already accepted Linux full-help evidence while
+checking the unchanged native feature API. A local probe-observer shutdown race
+also reproduced: a late SIGUSR1 could kill a finished interpreter. Restoring an
+ignored signal disposition before registering faulthandler fixes that race,
+without suppressing active stack dumps or relaxing failure/resource guards.

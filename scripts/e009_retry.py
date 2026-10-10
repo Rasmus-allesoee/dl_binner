@@ -44,7 +44,7 @@ def verify_conda_identity(prefix, lock):
 
     Payload SHA256/MD5 verification occurs before offline installation. Python
     inventory/origin/native probes separately establish the executed import path.
-    Pip adds only the explicitly bound CPU Torch wheel to the SCGBinner prefix.
+    The SCGBinner stack, including CPU Torch, is entirely Conda-owned.
     """
     actual={}
     for path in (Path(prefix)/'conda-meta').glob('*.json'):
@@ -57,7 +57,7 @@ def verify_conda_identity(prefix, lock):
             'scope':'exact Conda name/version/build records; payloads verified preinstall, no blanket postinstall file hashes'}
 
 
-def checkm_wrapper(path, python, script, cache_root):
+def checkm_wrapper(path, python, script, cache_root, native_wrappers=None):
     """Invoke owned CheckM with its own libraries and isolated lexical Python.
 
     A COMEBin worker inherits its numerical LD_LIBRARY_PATH; explicitly replace it
@@ -66,8 +66,10 @@ def checkm_wrapper(path, python, script, cache_root):
     """
     python,script=Path(python),Path(script)
     argv=[python,'-I','-B','-X','pycache_prefix='+str(cache_root),script]
+    own_bin=python.parent
+    native_path=(str(native_wrappers)+':' if native_wrappers else '')+str(own_bin)
     Path(path).write_text('#!/bin/sh\nunset PYTHONPATH PYTHONHOME PYTHONUSERBASE\n'
-        'export PYTHONNOUSERSITE=1\nexport LD_LIBRARY_PATH='+shlex.quote(str(python.parent.parent/'lib'))+'\n'
+        'export PYTHONNOUSERSITE=1\nexport PATH='+shlex.quote(native_path)+':"$PATH"\nexport LD_LIBRARY_PATH='+shlex.quote(str(python.parent.parent/'lib'))+'\n'
         'exec '+' '.join(shlex.quote(str(a)) for a in argv)+' "$@"\n')
     Path(path).chmod(0o755)
     return binding(path)
@@ -96,7 +98,7 @@ def retry(args, attempt, bundle, env, stage, deadline, limits, local=None):
         'scientific_execution_admitted':False,'scope':'completed stages reused, not scheduled'})
     utility=Path(local['utility_prefix']) if local else Path(review['utility_prefix'])
     if not (utility/'bin/bedtools').is_file():raise ValueError('Retained utility bedtools missing; preserve v10 and return failure')
-    cache=args.root/'cache'/('failed-paths-v3-'+attempt.name);cache.mkdir(parents=True)
+    cache=args.root/'cache'/('failed-paths-v4-'+attempt.name);cache.mkdir(parents=True)
     sources={}
     for tool,name in [('scgbinner','SCGBinner'),('comebin','COMEBin')]:
         spec=native['sources'][name]
@@ -113,7 +115,7 @@ def retry(args, attempt, bundle, env, stage, deadline, limits, local=None):
              for t in review['accepted_tools']}
     prefixes={}
     if not local:
-        if shutil.disk_usage(args.root).free<6_000_000_000:raise ValueError('Need >=6 GB free Home for the two owned runtimes/cache/evidence')
+        if shutil.disk_usage(args.root).free<8_000_000_000:raise ValueError('Need >=8 GB free Home for the two owned runtimes/cache/evidence')
         bootstrap=attempt/'bootstrap';extract(bundle/'payload/micromamba-linux.tar.bz2',bootstrap)
         mamba=bootstrap/'bin/micromamba'
     for tool in ['scgbinner','comebin']:
@@ -126,7 +128,7 @@ def retry(args, attempt, bundle, env, stage, deadline, limits, local=None):
                 # production prefix/probe/wrapper/native reader paths run below.
                 own_lock=json.loads(Path(local[kind+'_lock']).read_text())
             else:
-                prefix=args.root/'envs'/(kind+'-cpu-v3-'+attempt.name)
+                prefix=args.root/'envs'/(kind+'-cpu-v4-'+attempt.name)
                 if prefix.exists():raise ValueError('Corrected runtime prefix must be fresh')
                 lockfile=attempt/(kind+'-conda-lock.json');write_json(lockfile,lock)
                 explicit=attempt/(kind+'-conda-explicit.txt')
@@ -136,17 +138,12 @@ def retry(args, attempt, bundle, env, stage, deadline, limits, local=None):
                 setupenv.pop('LD_LIBRARY_PATH',None)
                 stage([mamba,'--no-rc','create','-y','--offline','--always-copy','-p',prefix,'--file',explicit],kind+'-owned-conda-install',setupenv)
                 own_lock=lock
-                if tool=='scgbinner':
-                    spec=recipes['scgbinner_torch'];wheel=cache/spec['filename']
-                    stage([sys.executable,'-I','-B',bundle/'scripts/e009_worker.py','acquire','--spec-json',json.dumps(spec),'--destination',wheel],'scgbinner-cpu-torch-acquisition')
-                    installenv=dict(env,LD_LIBRARY_PATH=str(prefix/'lib'))
-                    stage([prefix/'bin/python','-I','-B','-m','pip','install','--no-deps','--no-compile','--no-index',wheel],'scgbinner-cpu-torch-install',installenv)
             write_json(attempt/(kind+'-conda-identity.json'),verify_conda_identity(prefix,own_lock))
             prefixes[kind]=str(prefix)
             required=dict(recipes['required_distributions'][kind])
             if local:
-                # The official Intel Mac Torch wheel has no +cpu version suffix.
-                if kind=='scgbinner':required['torch']='2.0.0'
+                # Both platforms use the all-Conda CPU Torch release.
+                if kind=='scgbinner':required['torch']='2.0.0.post104'
             expected=attempt/(kind+'-required-inventory.json');write_json(expected,required)
             toolenv=dict(env,LD_LIBRARY_PATH=str(prefix/'lib'),PATH=str(prefix/'bin')+':'+str(utility/'bin')+':'+env.get('PATH',''))
             for key in ('OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):toolenv[key]='1'
@@ -161,7 +158,7 @@ def retry(args, attempt, bundle, env, stage, deadline, limits, local=None):
                     python=Path(local['comebin_python'])
                 else:
                     base,inv=restored_runtime(bundle/EXP/'linux-runtime-recovery-v8.json',attempt,env,stage)
-                    execution=args.root/'envs'/('comebin-source-v3-'+attempt.name)
+                    execution=args.root/'envs'/('comebin-source-v4-'+attempt.name)
                     links=tool_environment(base,inv,execution,stage)
                     write_json(attempt/'comebin-dependency-links.json',{'prefix':str(execution),'base_prefix':str(base),'links':links})
                     python=execution/'bin/python';toolenv=dict(env,LD_LIBRARY_PATH=str(base/'lib'))
@@ -174,17 +171,20 @@ def retry(args, attempt, bundle, env, stage, deadline, limits, local=None):
                         '--modules','numpy','torch','pandas','scipy','sklearn'],'comebin-new-binding-probe',toolenv)
                 wrapperdir=attempt/'wrappers';wrapperdir.mkdir()
                 write_json(attempt/'checkm-wrapper-bound.json',{'owned_prefix':str(prefix),
-                    'wrapper':checkm_wrapper(wrapperdir/'checkm',checkm_python,prefix/'bin/checkm',env['E009_SOURCE_CACHE_ROOT'])})
+                    'wrapper':checkm_wrapper(wrapperdir/'checkm',checkm_python,prefix/'bin/checkm',env['E009_SOURCE_CACHE_ROOT'],attempt/'comebin-wrappers')})
                 toolenv.update(PATH=str(wrapperdir)+':'+str(utility/'bin')+':'+env.get('PATH',''),CHECKM_DATA_PATH=review['checkm_data'])
             for key in ('OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):toolenv[key]='1'
             # Existing HMM master accounting is available without altering any
             # installed binary or accepted utility environment.
             wrappers=attempt/(tool+'-wrappers');wrappers.mkdir()
-            python_wrapper(wrappers/'hmmsearch',python,bundle/'scripts/e009_hmm.py',['--native',utility/'bin/hmmsearch','--'],env)
+            hmm_python=checkm_python if tool=='comebin' else python
+            hmm_native=prefix/'bin/hmmsearch' if tool=='comebin' and not local else utility/'bin/hmmsearch'
+            python_wrapper(wrappers/'hmmsearch',hmm_python,bundle/'scripts/e009_hmm.py',['--native',hmm_native,'--'],env)
             toolenv['PATH']=str(wrappers)+':'+toolenv['PATH'];toolenv['E009_HMM_AUDIT']=str(attempt/(tool+'-hmm-budget.jsonl'))
             stage([python,'-I','-B',bundle/'scripts/e009_worker.py','tool-contract','--tool',tool,'--source',sources[tool],
                 '--inputs',bundle/'input','--bams',*bams,'--output',attempt/(tool+'-contract'),'--db',attempt/'unused-database',
-                '--threads',str(args.allocated_vcpus)],tool+'-native-contract',toolenv)
+                '--threads',str(args.allocated_vcpus),
+                *(['--reused-help',previous/'comebin-contract/native-full-import-help.log'] if tool=='comebin' else [])],tool+'-native-contract',toolenv)
             results[tool]={'status':'passed','executed_this_attempt':True,'python':str(python),
                           'owned_runtime':str(prefix),'full_community_fit':False}
         except Exception as error:

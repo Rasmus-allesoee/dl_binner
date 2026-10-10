@@ -268,7 +268,7 @@ Choose independent E009-owned Conda stacks for SCGBinner and CheckM, pinned by
 SCGBinner's README combines Python3.9/NumPy1.19/pandas1.4 with sklearn>=1.6;
 package metadata declares only numpy/pandas. Do not mechanically treat either as
 a validated complete recipe. The named CPU compatibility stack uses Python3.10.15,
-NumPy1.26.4, pandas1.5.3, sklearn1.6.1 and Torch2.0.0+cpu (the upstream Torch version,
+NumPy1.26.4, pandas1.5.3, sklearn1.6.1 and all-Conda CPU Torch2.0.0 (distribution2.0.0.post104) (the upstream Torch version,
 CPU build). This version exports the needed private imports. The existing int
 alias repair stays; no new cluster/model/training patch. Omit unused torchvision/
 torchaudio CUDA installation; actual source imports and CPU native tests gate use.
@@ -285,10 +285,19 @@ that COMEBin's main numerical stack is independent of its accepted snapshot.
 
 Linux recipes are solved against glibc>=2.28 with exact package URL/size/hash/build
 identities; no remote dependency solve occurs in the owner command. Total locked
-compressed bytes before shared-cache deduplication: 476,746,139. New prefixes use
+compressed bytes before shared-cache deduplication: 577,118,190. New prefixes use
 complete package contents and copies, with full import-origin/required-version and
 Conda identity checks. No whole-environment hashes, new snapshots or pruning.
 The corrected Linux recipes remain unexecuted until owner return. On Mac,
 CheckM's pinned Linux pplacer build is unavailable; local CheckM validation uses
 matched Python dependencies and the complete official 1.2.3 wheel. This tests its
 missing-module/CLI contract, not native Linux pplacer or lineage fitting.
+
+Local integration rejected the first mixed Conda/pip SCGBinner Torch2.0 recipe:
+CPU thread setup crashed despite successful imports. The all-Conda CPU Torch2.0
+build104 stack passes four-thread setup locally. Preserve the rejected v11 packet,
+failed logs/prefixes and source a6e88c3; do not extrapolate its Mac crash to Linux.
+Use the coherent all-Conda recipe in v12. COMEBin's already accepted full Linux
+help is reused; its unchanged feature API and real parser/defaults execute without
+training-only AMP imports on the older Mac validation stack. This limits the
+local contract to native features, not training or Linux CheckM/pplacer execution.

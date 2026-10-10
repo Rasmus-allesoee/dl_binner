@@ -224,7 +224,7 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**E009 v10 accepts all other stages/three tool contracts; v11 retries only SCGBinner and COMEBin.**
+**E009 v10 accepts all other stages/three tool contracts; v12 retries only SCGBinner and COMEBin.**
 [D013](decisions/D013-first-comparative-benchmark.md),
 [the targeted evidence](evidence/2026-10-09-e009-contract-reconciliation.md) and
 [E009](../experiments/E009-competitive-benchmark/README.md) retain subject S1:
@@ -271,14 +271,16 @@ with near/pretraining independence not established. Preserve all accepted eviden
 
 SCGBinner's shared sklearn1.9.0 lacks stable_cumsum; COMEBin's own help passed,
 CheckM imports a pruned checkm.test module. **Exact next step:** owner runs the
-**v11 two-path retry, 8 vCPU/24 GB, two-hour allocation**, from
+**v12 two-path retry, 8 vCPU/24 GB, two-hour allocation**, from
 [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md). Upload pair
-under `artifacts/e009-preparation/transfer-v11-final/`; [transfer.json](../experiments/E009-competitive-benchmark/transfer.json)
+under `artifacts/e009-preparation/transfer-v12-final/`; [transfer.json](../experiments/E009-competitive-benchmark/transfer.json)
 binds final source/command/packet/tests. Install independently owned compatible
 SCGBinner and complete CheckM Conda stacks; retain COMEBin's accepted numerical
 recipe and use separate CheckM interpreter/libraries. [D006](decisions/D006-environment-ownership.md)
 records the concrete failures triggering this scoped ownership amendment.
-Only the two failed native contracts execute; retained tiny BAMs, acquired sources
+The first local mixed Conda/pip recipe failed and is retained; v12 replaces it
+with all-Conda CPU Torch and reuses accepted Linux COMEBin help while checking
+the unchanged native augmentation API. Only the two failed native contracts execute; retained tiny BAMs, acquired sources
 and utility prefix are reused. Passed tools, source download/catalog and all
 assembler/mapping/evaluator checks stay accepted, unscheduled. Original E001,
 v8 snapshot/151 chunks, old attempts/packets/data/prefixes remain untouched. Linux

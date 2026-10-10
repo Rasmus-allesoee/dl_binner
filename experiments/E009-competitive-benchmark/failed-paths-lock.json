@@ -5,9 +5,6 @@
   "scope": "Only independent SCGBinner numerical dependencies and complete CheckM for COMEBin; COMEBin numerical runtime unchanged",
   "scgbinner": {
     "platform": "linux-64",
-    "resolved_on": "2026-10-10",
-    "cross_platform_glibc_floor": "2.28",
-    "solver_source": "scgbinner-linux-solve.json",
     "packages": [
       {
         "name": "ca-certificates",
@@ -21,17 +18,6 @@
         "size": 131780
       },
       {
-        "name": "libgomp",
-        "version": "16.2.0",
-        "build": "he0feb66_7",
-        "subdir": "linux-64",
-        "url": "https://conda.anaconda.org/conda-forge/linux-64/libgomp-16.2.0-he0feb66_7.conda",
-        "fn": "libgomp-16.2.0-he0feb66_7.conda",
-        "sha256": "92a0bb350c7be6a4eedcb4e111c60aefd176018e6b1c009a6e025dbe9bbcd758",
-        "md5": "d904c7ddd95e026254b4b80808ee9e12",
-        "size": 640566
-      },
-      {
         "name": "libzlib",
         "version": "1.3.2",
         "build": "h25fd6f3_3",
@@ -41,6 +27,17 @@
         "sha256": "eb8a0db0aa570124f7d2a93d7c7f596e3390df5e047818d873baad32985fc736",
         "md5": "0de0122d9570a8ab637c6b73db268389",
         "size": 63713
+      },
+      {
+        "name": "llvm-openmp",
+        "version": "23.1.3",
+        "build": "h7148c6a_0",
+        "subdir": "linux-64",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/llvm-openmp-23.1.3-h7148c6a_0.conda",
+        "fn": "llvm-openmp-23.1.3-h7148c6a_0.conda",
+        "sha256": "684b08c8a127ed0c45e6ab137df7ee5c8fc76643099b62d97fc1575de6f4e29e",
+        "md5": "373b64bc33e184b56f4f168bd7c2b733",
+        "size": 6125613
       },
       {
         "name": "python_abi",
@@ -67,13 +64,13 @@
       {
         "name": "_openmp_mutex",
         "version": "4.5",
-        "build": "20_gnu",
+        "build": "8_kmp_llvm",
         "subdir": "linux-64",
-        "url": "https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-20_gnu.conda",
-        "fn": "_openmp_mutex-4.5-20_gnu.conda",
-        "sha256": "1dd3fffd892081df9726d7eb7e0dea6198962ba775bd88842135a4ddb4deb3c9",
-        "md5": "a9f577daf3de00bca7c3c76c0ecbd1de",
-        "size": 28948
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-8_kmp_llvm.conda",
+        "fn": "_openmp_mutex-4.5-8_kmp_llvm.conda",
+        "sha256": "b8de006376660eb12c7fc40803c97e1480bf4bc1253f0d59694b12f81b52fe14",
+        "md5": "b4d1b93dd1dab4eea23395fd5e5b357d",
+        "size": 8050
       },
       {
         "name": "zstd",
@@ -261,6 +258,17 @@
         "sha256": "f34b8d1de9a2bf62476d8608057d9b8a918d97444236dc53a47128f2fae79041",
         "md5": "54a948337e66706380ff24d6b5fde63f",
         "size": 34442
+      },
+      {
+        "name": "libuv",
+        "version": "1.52.1",
+        "build": "h280c20c_1",
+        "subdir": "linux-64",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/libuv-1.52.1-h280c20c_1.conda",
+        "fn": "libuv-1.52.1-h280c20c_1.conda",
+        "sha256": "67761d0206f84140047a367eaf9befe03a7e157a29ee25aee0047b40801cc6b6",
+        "md5": "01c4ed87826af55996768af6dbc936b4",
+        "size": 420040
       },
       {
         "name": "libwebp-base",
@@ -483,6 +491,17 @@
         "size": 348899
       },
       {
+        "name": "sleef",
+        "version": "3.9.0",
+        "build": "ha0421bc_0",
+        "subdir": "linux-64",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/sleef-3.9.0-ha0421bc_0.conda",
+        "fn": "sleef-3.9.0-ha0421bc_0.conda",
+        "sha256": "57afc2ab5bdb24cf979964018dddbc5dfaee130b415e6863765e45aed2175ee4",
+        "md5": "e8a0b4f5e82ecacffaa5e805020473cb",
+        "size": 1951720
+      },
+      {
         "name": "xz-gpl-tools",
         "version": "5.8.3",
         "build": "ha02ee65_1",
@@ -536,6 +555,17 @@
         "sha256": "0e19c61198ae9e188c43064414a40101f5df09970d4a2c483c0c46a6b1538966",
         "md5": "efc4b0c33bdf47312ad5a8a0587fa653",
         "size": 1047292
+      },
+      {
+        "name": "libabseil",
+        "version": "20230802.1",
+        "build": "cxx17_h59595ed_0",
+        "subdir": "linux-64",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/libabseil-20230802.1-cxx17_h59595ed_0.conda",
+        "fn": "libabseil-20230802.1-cxx17_h59595ed_0.conda",
+        "sha256": "8729021a93e67bb93b4e73ef0a132499db516accfea11561b667635bcd0507e7",
+        "md5": "2785ddf4cb0e7e743477991d64353947",
+        "size": 1263396
       },
       {
         "name": "libfreetype",
@@ -648,6 +678,17 @@
         "size": 254292
       },
       {
+        "name": "libhwloc",
+        "version": "2.15.0",
+        "build": "default_hd7c4d0c_1001",
+        "subdir": "linux-64",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/libhwloc-2.15.0-default_hd7c4d0c_1001.conda",
+        "fn": "libhwloc-2.15.0-default_hd7c4d0c_1001.conda",
+        "sha256": "a140f8b94caad6ea27e9deba66a74ae2566976591db8a867677c652add6ee5a0",
+        "md5": "66c755b3bd9ec82308fa6ec7674f473f",
+        "size": 2456090
+      },
+      {
         "name": "libopenblas",
         "version": "0.3.25",
         "build": "pthreads_h413a1c8_0",
@@ -657,6 +698,17 @@
         "sha256": "628564517895ee1b09cf72c817548bd80ef1acce6a8214a8520d9f7b44c4cfaf",
         "md5": "d172b34a443b95f86089e8229ddc9a17",
         "size": 5545169
+      },
+      {
+        "name": "libprotobuf",
+        "version": "4.24.4",
+        "build": "hf27288f_0",
+        "subdir": "linux-64",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/libprotobuf-4.24.4-hf27288f_0.conda",
+        "fn": "libprotobuf-4.24.4-hf27288f_0.conda",
+        "sha256": "3e0f6454190abb27edd2aeb724688ee440de133edb02cbb17d5609ba36aa8be0",
+        "md5": "1a0287ab734591ad63603734f923016b",
+        "size": 2568098
       },
       {
         "name": "libxml2-devel",
@@ -912,6 +964,17 @@
         "size": 18455
       },
       {
+        "name": "tbb",
+        "version": "2021.13.0",
+        "build": "h7148c6a_8",
+        "subdir": "linux-64",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/tbb-2021.13.0-h7148c6a_8.conda",
+        "fn": "tbb-2021.13.0-h7148c6a_8.conda",
+        "sha256": "2988dc735291efb8fcb6ddcac87df8a3424ae2b337cb2c7cd920c7c2f6d43d50",
+        "md5": "c895b795e55808c0f0c3554d8272bdf7",
+        "size": 170600
+      },
+      {
         "name": "texttable",
         "version": "1.7.0",
         "build": "pyhd8ed1ab_1",
@@ -1009,6 +1072,17 @@
         "sha256": "ad7745b8d0f2ccb9c3ba7aaa7167d62fc9f02e45eb67172ae5f0dfb5a3b1a2cc",
         "md5": "6fabc51f5e647d09cc010c40061557e0",
         "size": 14350
+      },
+      {
+        "name": "mkl",
+        "version": "2022.2.1",
+        "build": "h6508926_16999",
+        "subdir": "linux-64",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/mkl-2022.2.1-h6508926_16999.tar.bz2",
+        "fn": "mkl-2022.2.1-h6508926_16999.tar.bz2",
+        "sha256": "50e4a5bad6228f73c57d94145c5f3c7faa1be605a7704a801fcc3106e7512798",
+        "md5": "0bc81ce33d4d943c76b5145d8503fe21",
+        "size": 211244924
       },
       {
         "name": "python-dateutil",
@@ -1143,6 +1217,17 @@
         "size": 12005697
       },
       {
+        "name": "pytorch",
+        "version": "2.0.0",
+        "build": "cpu_mkl_py310h6d3c8b7_104",
+        "subdir": "linux-64",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/pytorch-2.0.0-cpu_mkl_py310h6d3c8b7_104.conda",
+        "fn": "pytorch-2.0.0-cpu_mkl_py310h6d3c8b7_104.conda",
+        "sha256": "cc2f68acf747a766f1dbb3afd3b08bebf3bde0ecfcbbbe1241461519caa517ad",
+        "md5": "5c3732e5af531abb66f0fc30fc1e54e8",
+        "size": 70245836
+      },
+      {
         "name": "scipy",
         "version": "1.11.4",
         "build": "py310hb13e2d6_0",
@@ -1220,7 +1305,8 @@
         "size": 81216
       }
     ],
-    "compressed_bytes": 133453090
+    "compressed_bytes": 429237943,
+    "solver_source": "scgbinner-conda-torch-linux-solve.json"
   },
   "checkm": {
     "platform": "linux-64",
@@ -2309,21 +2395,13 @@
     ],
     "compressed_bytes": 147880247
   },
-  "scgbinner_torch": {
-    "url": "https://download.pytorch.org/whl/cpu/torch-2.0.0%2Bcpu-cp310-cp310-linux_x86_64.whl",
-    "filename": "torch-2.0.0+cpu-cp310-cp310-linux_x86_64.whl",
-    "bytes": 195412802,
-    "sha256": "7c9e668462cd0813fc4baaeaa137efce2516e73cf381120846edf45d4ec21174",
-    "name": "torch",
-    "version": "2.0.0+cpu"
-  },
   "required_distributions": {
     "scgbinner": {
       "numpy": "1.26.4",
       "scipy": "1.11.4",
       "pandas": "1.5.3",
       "scikit-learn": "1.6.1",
-      "torch": "2.0.0+cpu",
+      "torch": "2.0.0.post104",
       "biopython": "1.85",
       "igraph": "0.11.9",
       "leidenalg": "0.10.2",
@@ -2339,18 +2417,19 @@
       "dendropy": "4.6.1"
     }
   },
-  "recipe_interpretation": "SCGBinner README requests Python3.9/NumPy1.19/pandas1.4 together with sklearn>=1.6 and Torch2.0.0. Use named CPU compatibility recipe Python3.10.15/NumPy1.26.4/pandas1.5.3/sklearn1.6.1 and exact Torch2.0.0+cpu, retaining the accepted int-dtype source repair; no new source/algorithm patch. Its package metadata lists only numpy/pandas, so not a sufficient complete installation recipe. CheckM complete Bioconda1.2.3 package follows COMEBin requirement and owns all dependencies, with setuptools80.9.0 for pkg_resources.",
+  "recipe_interpretation": "SCGBinner README requests Python3.9/NumPy1.19/pandas1.4 together with sklearn>=1.6 and Torch2.0.0. Use named CPU compatibility recipe Python3.10.15/NumPy1.26.4/pandas1.5.3/sklearn1.6.1 and all-Conda CPU Torch2.0.0, retaining the accepted int-dtype source repair; no new source/algorithm patch. Its package metadata lists only numpy/pandas, so not a sufficient complete installation recipe. CheckM complete Bioconda1.2.3 package follows COMEBin requirement and owns all dependencies, with setuptools80.9.0 for pkg_resources.",
   "work_seconds": 6600,
   "collection_reserve_seconds": 600,
   "allocated_vcpus": 8,
   "allocated_ram_gb": 24,
   "working_rss_bytes": 20000000000,
-  "limit_rationale": "At most two hours/16 allocated core-hours for 476.7 MB locked dependency acquisition plus explicit offline installs and two tiny contracts. No lower stage wall caps; productive progress/CPU/IO is monitored against the owner-selected clock. Cold independent-prefix timing remains unmeasured on UCloud.",
+  "limit_rationale": "At most two hours/16 allocated core-hours for locked all-Conda payload acquisition/offline installation and two tiny native contracts. No lower stage wall caps; productive progress/CPU/IO is monitored against the owner-selected clock. Cold independent-prefix timing remains unmeasured on UCloud.",
   "source_evidence": {
     "SCGBinner_source_commit": "d5ad239af9a1445f0e454c4d4aa9307b922961a9",
     "SCGBinner_requirements": "pinned README source-install block and pyproject dependencies; native cluster.py line16",
     "sklearn_private_import_source": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/1.6.1/sklearn/cluster/_kmeans.py",
     "checkm_runtime_import_source": "https://raw.githubusercontent.com/Ecogenomics/CheckM/v1.2.3/checkm/main.py",
     "complete_checkm_package": "checkm-genome-1.2.3-pyhdfd78af_1.tar.bz2 contains site-packages/checkm/test/test_ecoli.py; bytes identical to official1.2.3 wheel tested on Mac"
-  }
+  },
+  "local_negative_evidence": "Mixed pip/Conda Torch2.0 Mac CPU thread setup crashed (-11); superseded by an all-Conda CPU Torch recipe. Legacy Mac COMEBin Torch2.2 lacks torch.amp.GradScaler; preserve Linux v10 full help and call identical native augmentation functions directly rather than modify scientific source."
 }
