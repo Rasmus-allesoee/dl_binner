@@ -1,6 +1,57 @@
 # Current Research State
 
-Updated: 2026-10-10. This is the single current handoff.
+Updated: 2026-10-13. This is the single current handoff.
+
+## Exact next step
+
+**SDU/UCloud is inaccessible as of 2026-10-13.** The owner reports files still
+exist, but their login is deactivated. Google Cloud is the selected main compute
+provider under [D014](decisions/D014-google-cloud-workspace.md); [CLOUD](CLOUD.md)
+owns setup, actual access and cost details. Old UCloud [guidance](history/UCLOUD_OPERATIONS.md)
+and [v14 command](history/E009_UCLOUD_OPERATIONS.md) are historical provenance,
+not runnable current instructions. All original evidence/history remains preserved.
+
+**Phase 1 is not established yet.** Live private GitHub inspection confirms a clean
+`benchmark-planning` branch at entry `2109998a230a0757be424e6f55c3a1bf17971ebe`,
+private origin and main `5e54538d1799e8d2538621729400f33fbaf017b9`. The benchmark
+branch was not remote at entry. The owner now authorizes normal commit/push and
+clone of that exact commit onto GCP; no force push, merge or publication.
+Official Google CLI 589.0.0 is checksum-verified and working locally in ignored
+`artifacts/gcp-workspace/tools/`; owner completed Google login. Read-only API checks verify an open billing account,
+billing-enabled My First Project and owner IAM role; Compute/IAP are not enabled.
+The browser tool still exposes zero connected browsers after owner enabled access
+and a session reset. Dedicated Browser plugin diagnostics identify a stale
+`26.930.61225` loader path while `26.1007.30912` is installed; no vendor fix/cookie
+workaround was attempted. Owner supplied the live display: **kr1,973 remaining,
+none used, expires 2027-01-12**. Billing API confirms DKK currency, account open
+and project billing enabled; the paid upgrade is owner-reported.
+No service/API activation, cloud provisioning, independent browser credit review, VM clone,
+SSH/app connection or private backup readback is claimed.
+
+Owner-reported paid billing, expected USD300 remaining, credit expiry 2027-01-12
+and budget alert are distinguished from independent API checks in the receipt.
+The owner approved the concrete recurring-storage plan and expiry review
+**by 2027-01-10**. Paid billing cannot guarantee a credit-only stop; additional
+services/spend remain subject to the original credit-only authorization. The proposed modest CPU
+VM/disks/private bucket/SSH and running/stopped/transfer rates are in CLOUD; stop
+and ask for unclear/uncovered/beyond-credit spending. A budget alert is not a cap.
+Old ~1,980 UCloud credits/storage are unavailable, not a GCP funding allocation.
+
+**Exact next action:** commit/push the approved setup contracts; agent verifies
+covered services/quotas/image/costs through the working Google CLI,
+sets up the bounded CPU VM/private archive and actual Codex SSH remote project,
+normal-pushes/syncs the exact working commit, and records a harmless Linux command
+plus backup readback and stopped state. [Cloud receipt](evidence/gcp-workspace.json)
+will distinguish prepared, provisioned, SSH-tested and app-tested state.
+
+**Do not inspect E009 v14 returns or acquire data during phase 1.** The owner has
+reported a completed v14; this repository's independent review is still pending.
+Accept verified success in the following phase without rerunning it. Then decide
+**10 versus 20 read samples** using storage/cost and coverage representativeness
+for one sample-0 assembly; published multi-assembly gains do not settle that
+choice. Freeze the resulting axes/protocol/USD budget before bulk acquisition,
+assembly, depth and truth directly on the connected GCP VM. No automatic full
+fits/scores, seeds or architecture comparisons. Colab/Kaggle are deferred options.
 
 ## Direction and completed work
 
@@ -33,7 +84,7 @@ replaced that recommendation with lightweight contrastive learning and a bounded
 frozen-GLM inclusion screen. E003 now resolves the first sequence route below.
 Thesis results and full short-contig scope receive explicit weight.
 
-## Exact next step
+## Accepted prototype evidence
 
 **E002 feasibility and E003's final representation screen are complete and
 accepted; do not repeat either inference run.**
@@ -270,13 +321,14 @@ catalog 2,078 files /65,571 records /10.252 Gbp, zero exact development matches,
 with near/pretraining independence not established. Preserve all accepted evidence.
 
 SCGBinner's shared sklearn1.9.0 lacks stable_cumsum; COMEBin's own help passed,
-CheckM imports a pruned checkm.test module. **Exact next step:** owner runs the
-**v14 two-path retry, 8 vCPU/24 GB, three-hour allocation**, from
-[Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md). Upload pair
-under `artifacts/e009-preparation/transfer-v14-final/`; [transfer.json](../experiments/E009-competitive-benchmark/transfer.json)
-binds final source/command/packet/tests. Install independently owned compatible
-SCGBinner and complete CheckM Conda stacks; retain COMEBin's accepted numerical
-recipe and use separate CheckM interpreter/libraries. [D006](decisions/D006-environment-ownership.md)
+CheckM imports a pruned checkm.test module. The former **v14 two-path retry,
+8 vCPU/24 GB, three-hour allocation** is archived in
+[historical operations](history/E009_UCLOUD_OPERATIONS.md). Do not run it again:
+owner reports completion; independent return review is reserved for phase 2. The
+prepared upload pair remains under `artifacts/e009-preparation/transfer-v14-final/`; [transfer.json](../experiments/E009-competitive-benchmark/transfer.json)
+binds final source/command/packet/tests. The packet specified independently owned
+compatible SCGBinner and complete CheckM Conda stacks; it retained COMEBin's accepted numerical recipe with separate CheckM
+interpreter/libraries. This is the prior retry design, not GCP setup work. [D006](decisions/D006-environment-ownership.md)
 records the concrete failures triggering this scoped ownership amendment.
 The first local mixed Conda/pip recipe failed and is retained; v14 replaces it
 with all-Conda CPU Torch and reuses accepted Linux COMEBin help while checking
@@ -287,8 +339,8 @@ and utility prefix are reused. Passed tools, source download/catalog and all
 assembler/mapping/evaluator checks stay accepted, unscheduled. Original E001,
 v8 snapshot/151 chunks, old attempts/packets/data/prefixes remain untouched. The final three-hour clock and10-GB Home floor follow actual Linux package
 inventories (94,327 cache/prefix payload paths; old copy-rate comparison~105min
-before overhead), rather than the much faster Mac run. Linux
-corrected-runtime compatibility and native contracts remain unverified until return.
+before overhead), rather than the much faster Mac run. Corrected native contracts remain unaccepted in the maintained record until
+phase-2 return review; no v14 archive was opened in this setup phase.
 No scientific design/defaults/results change and no full fit/score is admitted.
 [Final local evidence](../experiments/E009-competitive-benchmark/local-failed-paths-v14.json)
 accepts the exact v14 archive/Bash on real tiny inputs: both native contracts pass,
@@ -296,24 +348,23 @@ old receipts unchanged, passed stages unscheduled; 128.946s through collection,
 145.042s outer harness, 665.940MB sampled peak. All53 regressions/docs pass.
 Local platform substitutes remain explicit; no Linux cold-install/fit credit.
 
-After native preflight admission and source/sample-count review, prepare the
-bounded bulk-read/assembly/depth/truth step. No community fits/scores/architecture
-comparisons, source-history rewrite, remote push or UCloud execution by Codex.
-All old packets/attempts and accepted scientific evidence remain preserved.
+After GCP setup and independent v14 admission, settle 10/20 coverage sources and
+prepare the bounded GCP bulk-read/assembly/depth/truth step. No community fits/scores/
+architecture comparisons or source-history rewrite. Current phase authorizes normal
+private branch push, not bulk execution. Old evidence remains preserved.
 
-The revised prospective budget is **700 allocated core-hours** (664 stages +36
-reserve), against the owner's approximately **1,980** balance: **1,280 headroom**.
-The preflight costs at most 40 within that plan; caps are not runtime forecasts or
-automatic retry permission. No UCloud spend occurs in this preparation. The former
-200 GB is a provisioning estimate, not a hard cap. Home (50–100 GB) owns code/new
-prefixes/transfers/logs; heavy source/read/BAM/temp lives only in the project's
-shared E009 child (8–10 TB shared capacity). Colleagues' files and old attempts
-remain untouched. Exact identities/tests are in E009's maintained receipts.
+The previous UCloud plan was **700 allocated core-hours** (664 stages +36 reserve)
+against about 1,980 credits. This is historical workload planning, **not accessible
+funding or a current GCP authorization**. The former 200-GB provisioning estimate
+and 8–10-TB shared capacity are not GCP entitlements. Price/reassess the 10/20-sample
+variant before working-disk growth and bulk work; no data are acquired now.
+The scientific protocol/source/eligibility/evaluation contracts remain unchanged
+until that explicit next-phase sample-axis amendment. Never touch colleagues' files.
 
 The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
-planned and unrun. E009's local adapters/tests/owner-preflight preparation and commits are authorized;
-no UCloud execution, community fits/scores, extra seeds, architecture implementation,
-private push/PR or publication occurs in this task.
+planned and unrun. Current authorization covers phase-1 GCP setup/documentation/normal private branch
+push only, with billing/access gates. It excludes v14 review, data acquisition,
+community fits/scores, extra seeds, architecture implementation, PR/merge/publication.
 E008's private push/PR/merge is authorized and completed; accepted
 scientific source and settings are unchanged.
 Frozen GLM weights/features remain
@@ -332,7 +383,9 @@ sequence lower bound is 58.1075. MetaBAT2/VAMB pair: 0.76946. The new collection
 adds 0.002224 (1 vCPU / 4 GB, 8.0065 driver seconds). These are partial accounting,
 not exact billing or a remaining-balance estimate. Successful COMEBin condition
 files total 11.313 GB; the diagnostic archive is an additional 235.13 MB copy.
-Preserve retained assets/old attempts. No deletion is authorized.
+Preserve accepted/irreplaceable evidence and old UCloud files. For future obsolete
+failures, retain compact diagnostics/provenance before pruning regenerable bulk
+under the new storage policy; no existing files are deleted in phase 1.
 
 E003 retains 98 local files / 41.34 MB at acceptance, with a committed hash
 inventory; no extra model/environment copy. Its 1.04446 four-thread wall hours
@@ -347,7 +400,8 @@ hours, not UCloud charges; setup/tests/review excluded. Keep all artifacts and
 accepted E001/E002/E003 snapshots. The receipt-helper path repair affects only
 post-run collection; native scientific source/functions remain frozen.
 
-UCloud remains CPU-only and owner-operated. E001's persistent prefixes stay under
+UCloud was CPU-only and owner-operated; it is now inaccessible. Recorded paths
+below remain historical dependencies, not remotely available runtimes. E001's persistent prefixes stay under
 `e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md); E005 owns
 separate new CPU/workflow prefixes under its own root and read-only reuses E001's
 accepted mapping/AMBER prefixes. E005 v5 now checks the complete AMBER distribution
@@ -356,8 +410,9 @@ Frozen E001 source/configuration and raw observed records remain unchanged.
 
 Local branch: `benchmark-planning`, created from refreshed synchronized main/origin-main
 `5e54538d1799e8d2538621729400f33fbaf017b9`; merged `first-binner-prototype` source history
-is preserved. Owner-configured private GitHub origin is present. This task makes local
-commits only; no push/PR/release. `agent_context/` is an ignored
+is preserved. Owner-configured private GitHub origin is present. Local commits and
+normal private branch push are now authorized for GCP setup; no main merge,
+PR/release or visibility change. `agent_context/` is an ignored
 inbox. Before public publication review licensing and historical source packaging
 per [D001](decisions/D001-research-record.md). Update this handoff when direction,
 significant evidence or execution dependencies change; details belong to their owners.

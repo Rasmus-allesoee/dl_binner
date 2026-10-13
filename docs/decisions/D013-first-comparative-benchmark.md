@@ -1,8 +1,15 @@
 # D013: one bounded competitive assembly baseline before improvements
 
 Date: 2026-10-08; amended 2026-10-09. Status: **accepted preparation decision**; scientific execution unstarted.
-Owner authorizes analysis, local adapters, tests, transfer preparation and commits; not UCloud execution,
-architecture implementation, private push/PR or public release in this task.
+The original authorization was preparation only. On 2026-10-13 the owner selected
+GCP after SDU access deactivation and authorized phase-1 workspace setup plus
+normal private branch push; [D014](D014-google-cloud-workspace.md) owns that change.
+No benchmark scientific execution or v14 return review is authorized in that
+phase. Old UCloud budgets/paths are historical. After setup/return admission,
+resolve **10 versus 20 read samples** for the one-assembly design and amend ordered
+axes/costs before bulk acquisition. The original two-source protocol remains
+source history, not the final expanded-sample choice. No scientific baseline,
+architecture, eligibility or evaluator is changed here.
 
 ## Problem and evidence
 

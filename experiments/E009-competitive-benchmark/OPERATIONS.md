@@ -1,3 +1,25 @@
+# E009 operations: GCP migration and current stop boundary
+
+Updated: 2026-10-13. **UCloud is inaccessible; do not run the old owner command.**
+The current operational entry point is [Google Cloud operations](../../docs/CLOUD.md),
+with [STATE](../../docs/STATE.md) and [D014](../../docs/decisions/D014-google-cloud-workspace.md).
+The full former handoff is [archived](../../docs/history/E009_UCLOUD_OPERATIONS.md);
+the text below remains original prepared-command provenance, not a next job.
+
+Phase 1 establishes billing-verified CPU Linux/SSH/Codex/private-archive access;
+it excludes v14 archive review, data acquisition, fitting and scoring. After
+that passes, independently inspect the already returned v14 evidence, accept
+success without replay and resolve 10 versus 20 read samples on one sample-0
+assembly with costs/representativeness/peak storage. Freeze protocol/ordered axes
+before direct GCP bulk acquisition/assembly/depth/truth. A tiny UCloud runtime
+contract does not prove the new GCP runtime or community-scale affordability.
+Accepted scientific evidence remains accepted; old prefixes/source/data/chunks
+are preserved but inaccessible. No GCP commands have yet been executed.
+
+---
+
+## Historical original handoff (do not execute)
+
 # E009: two remaining native contracts after accepted v10 stages
 
 [The reviewed v10 return](linux-preflight-v10.json) accepts SemiBin, MetaCAT,

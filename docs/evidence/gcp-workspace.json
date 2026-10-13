@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "phase": "GCP workspace setup only",
+  "status": "approved_initial_layout;provisioning_not_started",
+  "owner_reports": {
+    "ucloud_login_deactivated": true,
+    "ucloud_files_still_exist_inaccessible": true,
+    "paid_billing": true,
+    "expected_welcome_credit_usd": 300,
+    "credit_expiry": "2027-01-12",
+    "budget_alert_set": true
+  },
+  "live_observations": {
+    "entry_source_commit": "2109998a230a0757be424e6f55c3a1bf17971ebe",
+    "branch": "benchmark-planning",
+    "entry_working_tree_clean": true,
+    "github_repo": "Rasmus-allesoee/dl_binner",
+    "github_private_verified": true,
+    "remote_main": "5e54538d1799e8d2538621729400f33fbaf017b9",
+    "remote_benchmark_branch_absent_at_entry": true,
+    "gcloud_active_account_count": 1,
+    "connected_browser_count": 0,
+    "connected_native_app_count": 0,
+    "owner_google_login_completed": true,
+    "billing_account_open": true,
+    "selected_project_billing_enabled": true,
+    "selected_project_owner_role_verified": true,
+    "compute_api_enabled_at_entry": false,
+    "iap_api_enabled_at_entry": false,
+    "existing_bucket_count_in_selected_project": 0,
+    "other_projects_not_modified": true,
+    "readonly_cloud_log_directory": "artifacts/gcp-workspace/logs (private account IDs not committed)"
+  },
+  "local_cli": {
+    "version": "589.0.0",
+    "source": "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-darwin-x86_64.tar.gz",
+    "bytes": 54268176,
+    "sha256": "b49e8cb9d348267d46fade7b9c916a1aed7ce0ec07e142ce41cc0d24a95a9651",
+    "official_install_page": "https://docs.cloud.google.com/sdk/docs/install-sdk",
+    "verified_commands": [
+      "gcloud version",
+      "gcloud auth list status (empty)",
+      "gcloud compute instances create --help"
+    ],
+    "local_prefix": "artifacts/gcp-workspace/tools/google-cloud-sdk",
+    "private_configuration": "artifacts/gcp-workspace/private-gcloud-config (mode0700, ignored, never archive)"
+  },
+  "background_attachment": {
+    "path": "agent_context/ucloud_blocked_now_google_cloud.md",
+    "sha256": "2f7844251f1961fa00f987a776f9257a980398b158d258a55067bc884faece97",
+    "role": "background only; not cloud account proof or execution authority"
+  },
+  "proposal": {
+    "region": "us-central1",
+    "zone_pending_quota_capacity": "us-central1-a",
+    "vm": "e2-standard-4",
+    "vcpus": 4,
+    "ram_gib": 16,
+    "os": "non-Pro Ubuntu24.04LTS x86_64; exact image pending",
+    "boot_disk_gib": 30,
+    "boot_disk_type": "pd-standard",
+    "work_disk_gib": 50,
+    "work_disk_type": "pd-balanced",
+    "workspace_mount": "/srv/dl_binner",
+    "bucket": "private regional STANDARD; name pending live project",
+    "ssh": "IAP-only tcp22; OSLogin; no public app-server",
+    "outbound_ip": "ephemeral IPv4 STANDARD tier",
+    "setup_max_run_duration_seconds": 14400,
+    "termination_action": "STOP; preserve disks",
+    "gpu": false
+  },
+  "official_usd_list_prices_consulted": {
+    "date": "2026-10-13",
+    "e2_standard_4_per_hour": 0.13402284,
+    "e2_standard_8_per_hour": 0.26804568,
+    "ephemeral_ip_per_running_hour": 0.005,
+    "pd_standard_per_gib_month": 0.04,
+    "pd_balanced_per_gib_month": 0.1,
+    "standard_bucket_per_gib_month": 0.02,
+    "vm_plus_ip_per_hour": 0.13902284,
+    "gross_stopped_disks_per_month": 6.2,
+    "freetier_discounts_not_assumed": true,
+    "setup_4_hour_vm_ip_ceiling_usd": 0.55609136,
+    "scope": "list-price planning only, not account costs/tax/billing acceptance",
+    "compute_page_sha256": "3664816d023602f24bbe95a0cdd008f90151b16c1d9ea77ffd42819df449921c",
+    "sources": [
+      "https://cloud.google.com/products/compute/pricing/general-purpose",
+      "https://cloud.google.com/compute/disks-image-pricing",
+      "https://cloud.google.com/storage/pricing",
+      "https://cloud.google.com/vpc/network-pricing",
+      "https://cloud.google.com/iap/pricing",
+      "https://docs.cloud.google.com/free/docs/free-cloud-features"
+    ]
+  },
+  "verified_cloud_credit_balance": {
+    "remaining_value": 1973,
+    "currency": "DKK",
+    "used_value": 0,
+    "end_date": "2027-01-12",
+    "source": "owner read current Billing display 2026-10-13; browser inspection unavailable",
+    "independently_read_by_agent": false
+  },
+  "verified_cloud_paid_status": {
+    "owner_reports_paid_upgrade": true,
+    "api_account_open": true,
+    "api_project_billing_enabled": true,
+    "api_currency": "DKK",
+    "console_paid_label_not_read_by_agent": true
+  },
+  "verified_cloud_credit_scope": null,
+  "project": "project-d17bd588-df31-488f-b16",
+  "cloud_services_enabled_by_agent": [],
+  "cloud_resources_created_by_agent": [],
+  "normal_branch_push": null,
+  "vm_repository_exact_head": null,
+  "ssh_linux_check": null,
+  "codex_app_remote_check": null,
+  "private_archive_readback": null,
+  "cloud_actual_costs": null,
+  "phase_exclusions": [
+    "E009v14 return inspection",
+    "data acquisition",
+    "binner fits/scores",
+    "architecture comparison",
+    "UCloud mutations",
+    "main merge or visibility/publication changes"
+  ],
+  "next_action": "freeze/commit/push approved setup; enable only required eligible APIs; inspect quota/image; create bounded CPU VM/disks/privatearchive and verify SSH/remoteCodex",
+  "future_phase": "independently review v14; choose10/20 coverage sources for one assembly; freeze axes/peak storage/USD budget before direct GCP bulk execution",
+  "future_alternatives_not_configured": [
+    "Google Colab",
+    "Kaggle Kernels"
+  ],
+  "retention": "compact accepted/irreplaceable evidence and useful failed diagnostics; no old UCloud deletion; no credentials/backups of prefixes; no files deleted in phase1",
+  "browser_issue": {
+    "owner_reports_chrome_connected": true,
+    "cua_browser_inventory": [],
+    "dedicated_browser_loader_error": "Cannot find module browser/26.930.61225/scripts/browser-service.mjs from trusted-worker.js",
+    "installed_browser_plugin_version": "26.1007.30912",
+    "supported_node_reset_and_retry": "same error",
+    "vendor_files_modified": false,
+    "credentials_cookies_or_raw_cdp_workaround": false,
+    "chrome_running": true,
+    "chrome_extension_installed_enabled": true,
+    "native_host_manifest_correct": true
+  },
+  "owner_resource_approval": {
+    "date": "2026-10-13",
+    "answer": "Approve layout and expiry review",
+    "scope": "Iowa4vCPU/16GiB, four-hour auto-stop,30GiBstandardboot+50GiBbalancedwork,compactprivatearchive",
+    "expiry_review_by": "2027-01-10",
+    "does_not_authorize_extra_compute_gpu_or_benchmark": true
+  }
+}

@@ -247,28 +247,52 @@ Do not optimize software architecture before the research question requires it.
 
 ---
 
-## HPC
+## Cloud compute and resource discipline
 
-The owner's current UCloud access is CPU-only (clarified 2026-09-18). Do not assume H200/GPU access or the old large-memory allocation. The dated capabilities/budget are recorded in [assets](docs/evidence/assets.md#a007-current-compute-access); experiment-specific ceilings belong in the experiment configuration.
+As of 2026-10-13 the owner cannot access SDU/UCloud; its files are reported to
+still exist but are inaccessible. Google Cloud is the selected main compute
+provider. [Cloud operations](docs/CLOUD.md) and [STATE](docs/STATE.md) own actual
+setup/access status; provider selection is not proof of a connected VM. Historical
+Terminal/Slurm/transfer instructions are archived in
+[UCloud operations](docs/history/UCLOUD_OPERATIONS.md). Preserve all UCloud data,
+source history, receipts and locators; do not try old paths on a different provider.
 
-This access may be temporary.
+Verify live paid billing, displayed credit balance/expiry/scope, relevant SKU
+eligibility, quotas, existing resources and full compute/storage/network costs
+before provisioning or enabling services. The owner's current authorization is
+for products covered by the remaining Free Trial credits only. Stop and ask if
+eligibility/cost is unclear or spending could fall outside those credits. Budget
+alerts are notifications, not spending caps. Account for running idle time and
+storage while stopped; stop compute when unused and review credit expiry before
+retaining chargeable storage. No GPU infrastructure is implied by paid billing.
 
-Use it when the research benefits from it, after cheap local checks and measured CPU/storage feasibility. Native CPU support is not proof that a full training schedule is affordable. Account for charged allocated vCPU-hours, including idle/setup time, rather than equating process CPU time with the owner's spend.
-
-Do not use expensive resources for tasks that can be validated cheaply first.
-
-NOTE: you cannot work on the HPC. I have to control and run stuff in here. So whenever we use the HPC, you have to guide the user on what to do.
+Use local development for cheap checks; use a verified SSH-connected GCP repository
+and shell for authorized Linux/cloud phases. Agents may operate that VM within the
+current task's explicit execution boundary; an infrastructure task does not
+implicitly authorize acquisition, scientific fits or benchmark scores. Owner login,
+app connection and IAM/quota approvals may need owner action. Never claim remote
+app access from a plain SSH test or local harness alone. Keep SSH/auth credentials
+outside Git and backups; prefer narrowly scoped access without public app-server
+listeners. Native CPU support is not full-schedule affordability. Record actual
+machine/allocation, elapsed time, process usage and estimated monetary spend
+separately; allocated core-hours remain useful comparisons, not GCP prices.
 
 For owner-run execution, group commands into fail-fast scripts when later steps depend only on explicit machine-checkable success, not on scientific or operational interpretation. Pause for returned-output review at genuine assessment boundaries, not after every routine command. Explain each command group's purpose, files changed, software/data downloads, expected resource use, requested outputs, and stopping conditions in chat. The owner manages job extensions; do not repeatedly request remaining time or make it a prerequisite. Still retain available timing and allocation information for budget accounting. Keep per-tool environments inside the experiment's persistent work directory. Record actual setup and return-artifact status in the experiment guide and STATE; never infer execution from prepared commands. Storage estimates should inform provisioning, not silently change scientific design when the owner can expand storage.
 
-Owner-run commands must automatically capture terminal output to a log file. Request the resulting file instead of asking the owner to copy terminal text. For long native steps, also expose timestamped stage progress and periodic heartbeats to the terminal or a dedicated progress log. Preserve the detailed per-tool logs and command provenance; progress is not a replacement for them. Use Snakemake per-rule `benchmark:` and `--benchmark-extended` for new substantial rules when useful, without rerunning accepted work solely to obtain measurements. Keep sampled process CPU/RAM metrics distinct from charged allocated vCPU-hours.
+Remote scientific commands, including direct SSH runs, must automatically capture
+terminal output to a log file; this also applies to any remaining owner-run command. Request the resulting file instead of asking the owner to copy terminal text. For long native steps, also expose timestamped stage progress and periodic heartbeats to the terminal or a dedicated progress log. Preserve the detailed per-tool logs and command provenance; progress is not a replacement for them. Use Snakemake per-rule `benchmark:` and `--benchmark-extended` for new substantial rules when useful, without rerunning accepted work solely to obtain measurements. Keep sampled process CPU/RAM metrics distinct from charged allocated vCPU-hours.
 
-Keep new owner uploads, launch copies, terminal logs and returned archive/checksum
-files in the experiment's persistent `transfer/` directory, rather than the
-`/work/Home` root. Keep attempts and environments in their established experiment
+When an owner transfer is needed, keep uploads, launch copies, terminal logs and
+returned archive/checksum files in that experiment's persistent `transfer/`
+directory. Direct connected-VM work still uses persistent per-experiment logs
+and records; it need not produce transfer packets for every step. Keep attempts and environments in their established experiment
 directories. Do not move or delete prior artifacts just to adopt this organization.
 
-UCloud Terminal can create an in-app Slurm cluster via **Slurm cluster: Yes**, including on a single node; SDU/K8s does not imply Slurm is unavailable. Do not require switching to the separate Snakemake app. Distinguish this in-allocation scheduler from provider-side Slurm integration. Prefer the local executor for simple single-node parallel DAGs; use the Slurm plugin/profile when placement or scheduler-managed jobs justify it. See [D009](docs/decisions/D009-parallel-preprocessing-terminal.md) for reviewed sources, thesis profile and submission/cancellation prerequisites. Do not blindly copy historical `CLOUD`/`escience` accounts, GPU requests or resource sizes. Always separate total rented CPUs/RAM, per-rule CPU/RAM budgets and maximum sample/job concurrency. Cap aggregate resources, leave coordinator headroom, and charge total allocated vCPUs times driver wall time, not per-sample threads times wall time. Do not run competing unaccounted local/Slurm workloads in the same allocation.
+For simple single-node research DAGs, use the local workflow executor. Add a
+scheduler only when placement/concurrency needs justify it; do not copy old UCloud
+accounts, Slurm profiles or GPU/node requests. Separate node CPUs/RAM, per-rule
+budgets and maximum concurrency, leaving coordinator headroom. Do not run competing
+unaccounted workloads in the same allocation.
 
 For each single-node CPU run, either run tools serially at the node's full allocated CPU budget or cap concurrent tools so their summed process budgets fit the allocation. Reconcile Snakemake `threads`, each native tool's thread flag, effective OpenMP/BLAS limits and child/data-loader workers. Count those workers in the per-tool budget; do not set a native thread flag to the full allocation when it also starts CPU workers. Confirm effective use from native thread reports and per-rule CPU benchmarks, rather than assuming the requested thread count took effect.
 For a local Snakemake executor, use `--cores` without simultaneously supplying
@@ -369,17 +393,20 @@ reusable artifact, and validate interpreter, library origins and actual numerica
 operations before admission. CPU-capped I/O concurrency may overlap storage
 latency; it does not authorize extra numerical workers or silent relocation.
 
-For the reviewed E001 workflow snapshot only, D006 permits a checksum-bound
-job-local execution copy when persistent filesystem reads stall. Preserve the
-authoritative experiment-owned environment; invoke the copied Python directly,
-verify prefix/import origins and the accepted inventory, and pass native CLI/DAG
-checks before work. Do not generalize this to arbitrary Conda-prefix relocation.
+D006's old E001 job-local-copy exception is historical provenance; it does not
+authorize relocating old prefixes onto GCP. Recreate complete independently owned
+compatible runtimes from accepted version/source records where inaccessible bases
+prevent reuse. Linux compatibility must be tested on the new host when relevant;
+accepted scientific stages stay accepted and are not replayed merely to migrate.
 
 Isolate Python processes inside tool environments: unset inherited `PYTHONPATH`, `PYTHONHOME` and `PYTHONUSERBASE`, and set `PYTHONNOUSERSITE=1` before installs, inventories and execution. UCloud's user-site packages were observed inside otherwise separate conda environments; distinct environment directories alone do not establish import isolation. Preserve required tool-local source imports, and verify package origins when introducing a runtime. Cross-experiment reuse must be read-only and validate a full distribution inventory and import origins against a clean, hash-identified prefix record; a `pip freeze` alone may include user-site entries or direct references. A new package-only venv may explicitly borrow reviewed dependencies read-only, with its own installed wheel and byte-bound before/after checks. Scope byte verification to the actual execution contract: accepted sealed runtime members need no repeated whole-prefix hash, and explicit external source/binary/model inputs can be bound before/after. Do not recursively hash unused tests, headers or unrelated databases merely to demonstrate non-mutation. Label the verification scope honestly; this is not proof that every file in a prefix stayed unchanged. Expose real file/byte progress for substantial verification. Record the dependency/base-prefix relationship, exclude the old package and path-injecting overlays, and never transfer such links as a portable environment or remove their required base. For all Python children using a reused environment, including scientific rules, pass `-B` on the Python command line to prevent `.pyc` writes: `-I` implies `-E` and ignores `PYTHONDONTWRITEBYTECODE`. Do not modify an already executed/transferred snapshot in place; use explicit wrappers or a new versioned transfer.
 
-Recheck container-level prerequisites on each owner-run job entry point. System packages installed outside `/work` may disappear between jobs even when experiment-local environments persist; bootstrap must not depend on the missing utility it is meant to install. Preserve failed attempts before narrowly scoped recovery, and never silently reuse partial scientific inputs.
-
-The owner confirmed that new Terminal jobs reset the container on 2026-09-19. Prefer absolute paths to persistent experiment-local executables and probe imports on each job. Do not reinstall intact environments merely because activation or a system utility disappeared. Use uniquely named attempt directories so retries preserve previous outputs without manual moves. Test complete owner-run drivers on synthetic inputs, including repeated invocation and failed prerequisites, before transfer. Diagnose whole-file input relationships before adding exceptions; bind dataset-specific exceptions to reviewed source hashes and record exclusions.
+Recheck actual OS/mount/runtime prerequisites before a cloud phase. A stopped GCP
+persistent-disk VM normally preserves its OS and packages; do not reinstall healthy
+prefixes because the old UCloud container reset between jobs. A replacement VM
+still needs an explicit mount and source/runtime identity check. Preserve useful
+failed-attempt diagnostics, never silently consume partial scientific inputs, and
+test changed production adapters on real tiny contracts before costly work.
 Preserve a virtual environment's lexical interpreter path when invoking it:
 resolving its `bin/python` symlink can bypass `pyvenv.cfg` and execute the base
 environment. Probe version/prefix before giving a harness runtime-validation credit.
@@ -388,11 +415,18 @@ environment. Probe version/prefix before giving a harness runtime-validation cre
 
 Record the owner's actual allocation for every performance run; recommendations and tool thread counts are not allocated vCPUs. Future owner-run resource drivers must accept explicit allocation inputs and use them for thread limits and charged core-hour estimates. Host CPU/RAM reports may describe the whole shared node. Smaller allocations are allowed; extrapolate only at the measured allocation, not by assuming proportional speedup. Distinguish expected runtime from a timeout. Preserve raw returned records and append corrections when allocation was wrong.
 
-The owner offers `/work/RasmusAllesøeNielsen#2936/dl_binner/` (10+ TB, shared with former colleagues) for heavy data only when needed. Quote this path, do not touch colleagues' files, and keep environments in their established experiment directory. Do not automatically migrate data just because this space exists. If you ever need local access to some files from ucloud, just ask the user. User can easily download files up to 10 GB and give you local access to them if this will help the quality and speed of your work.
+UCloud's former shared-storage quota is inaccessible and is not a GCP entitlement.
+Size provisioned working storage from the authorized sample count and peak live
+intermediates, then grow it only when useful. Keep code and compact provenance in
+Git, accepted/irreplaceable evidence in a private checksum-bound archive, and bulk
+regenerable intermediates on the working disk. After capturing useful diagnostics,
+record removals and prune obsolete failed-run bulk when no longer needed; do not
+retain tens of GB merely for a failure status. Never delete irreplaceable inputs,
+accepted evidence or old UCloud files under this general cleanup convention.
 
 ### Environment ownership and grouped execution
 
-Follow [D006](docs/decisions/D006-environment-ownership.md): retain separate, persistent experiment-owned tool environments. E001 reuses its original `e001-gate0/envs/<tool>` prefixes across later gates; do not rebuild per gate or introduce a shared Python base. Never relocate or silently upgrade an executed environment. Changed recipes need distinct version-qualified prefixes; reuse by another experiment must be read-only and provenance-bound.
+Follow [D006](docs/decisions/D006-environment-ownership.md): retain separate, persistent experiment-owned tool environments. E001's original prefixes remain historical provenance and inaccessible on UCloud; fresh GCP tool recipes must own complete independent dependencies rather than borrow that unavailable base. Never relocate or silently upgrade an executed environment. Changed recipes need distinct version-qualified prefixes; reuse by another experiment must be read-only and provenance-bound.
 
 Group independent native tool setup, synthetic smoke and bounded feasibility checks into one owner-run task when no interpretation is required between stages. Failure skips dependent stages for that tool, but need not block another isolated tool. Preserve per-tool logs and return a combined status. Do not repeat settled checks without evidence of changed inputs, runtime or a relevant failure.
 

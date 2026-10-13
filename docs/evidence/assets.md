@@ -57,6 +57,18 @@ The [initial landscape](2026-09-16-landscape.md) and [new audit](2026-09-17-targ
 
 ## A007: Current compute access
 
+**2026-10-13 access change:** owner reports SDU account deactivated. All old UCloud
+files still exist but are inaccessible; no deletion or restored access is claimed.
+The capacities/balances below are historical, not current usable entitlements.
+GCP is the selected main compute environment under [D014](../decisions/D014-google-cloud-workspace.md).
+Owner reports paid billing, expected USD300 Welcome credit and expiry 2027-01-12;
+live verification is pending. [Cloud guide](../CLOUD.md) and
+[setup receipt](gcp-workspace.json) own actual state/costs. Initial modest CPU,
+separate working disk and private same-region Standard backup are proposed,
+not provisioned. No GPU or cloud scientific execution occurs in this phase.
+
+### Historical UCloud availability
+
 Owner clarification 2026-09-21: allocations may be smaller than recommendations.
 COMEBin checks used 2 vCPU / 6 GB; native integration used 4 vCPU / 12 GB.
 Use actual allocation, not thread count or host capacity, for charged core-hours.
@@ -72,4 +84,6 @@ Budget charging is allocated vCPU count times wall-clock allocation time, not ju
 
 Create a small input manifest alongside the experiment containing source/accession, immutable version or checksum, sample/genome/contig IDs, preprocessing, storage/retrieval instructions, and split role. Check joins by identifiers and lengths rather than relying on row order. State what is unavailable or uncertain. A recorded UCloud path must not become a hard-coded assumption in reusable code.
 
-A development dataset and E001 protocol are selected; final evaluation datasets are not. Current owner-reported resources are in A007. Actual native runtimes, data identities and measured CPU/storage feasibility remain to be established before scientific launch.
+A development dataset and E001 protocol are selected; final evaluation datasets are not. Current owner-reported resources are in A007. Consult current experiment receipts for completed native/data evidence; new-host
+compatibility and actual-scale feasibility still need the relevant contracts before
+scientific launch. Old UCloud locations are inaccessible and must not be guessed.

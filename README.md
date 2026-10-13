@@ -87,7 +87,7 @@ for current scope. [WORKING](docs/WORKING.md) defines record ownership;
 [decisions](docs/decisions/README.md) retain findings and failures.
 [History](docs/history/README.md) is context, not current requirements.
 
-The private implementation PR is open; [STATE](docs/STATE.md) owns current checks
+The private implementation PR is merged; [STATE](docs/STATE.md) owns current checks
 and review/merge status. Public publication is a separate later decision.
 No project license has been selected. Public redistribution needs an owner license
 decision and historical-source packaging review; nothing is published here.
@@ -95,3 +95,6 @@ decision and historical-source packaging review; nothing is published here.
 Optional GPU support and Conda/mamba installation are future goals, not available
 features. The shared CLI/contracts/structured results serve people and AI agents;
 see [product execution decision](docs/decisions/D012-product-execution-and-usability.md).
+
+Current cloud operations: [Google Cloud workspace](docs/CLOUD.md). UCloud access
+is deactivated; old commands/evidence are historical and preserved.

@@ -260,19 +260,23 @@ The new repository should develop its own clean identity around method research 
 
 ## Practical compute context
 
-I currently still have access to SDU/UCloud HPC resources.
+As of 2026-10-13 my SDU login is deactivated. UCloud files still exist but are
+inaccessible. Google Cloud is the main compute environment going forward; its
+actual access, resources and billing verification belong in the dated
+[asset record](docs/evidence/assets.md#a007-current-compute-access) and
+[cloud operations](docs/CLOUD.md), not assumptions about old HPC capacity.
 
-The current access is CPU-only, as clarified on 2026-09-18. Earlier expectations of H200 GPUs and very large-memory nodes are superseded. Current capabilities and budget belong in the dated [asset record](docs/evidence/assets.md#a007-current-compute-access), with operational limits in each experiment's configuration. Do not assume GPU access will return.
+Use a secure connected Linux workspace for expensive work when its scientific
+value and cost justify it. Start with CPU; no GPU infrastructure is needed for
+the current setup phase. Local development remains on macOS. Prefer cheap local
+checks for development and real native contracts before costly execution. Choose
+resources to serve the experiment, preserve accepted evidence, and minimize bulky
+regenerable storage. Paid billing is enabled: use only verified credit-covered
+products within the owner's approved scope and ask about uncovered/unclear costs.
+A budget alert does not prevent spending.
 
-This access may eventually disappear.
-
-Use the allocation strategically while it remains available, without letting the available hardware prescribe the scientific method.
-
-At the same time, do not waste HPC resources merely because they exist.
-
-Prefer cheap local experiments for debugging and small-scale validation, and scale to UCloud when the experiment genuinely benefits from it.
-
-Local development is on macOS.
+Google Colab and Kaggle Kernels are possible future alternatives if GCP credits
+run out. They are not configured now and do not imply a current migration.
 
 ---
 

@@ -1,11 +1,22 @@
 # E009: first competitive human-gut assembly benchmark
 
-Opened: 2026-10-08; amended 2026-10-09. Owner preflight: **v3 failed at initial runtime startup; v4 recovery prepared**, not executed. Scientific outcome:
-**not assessed**. [D013](../../docs/decisions/D013-first-comparative-benchmark.md)
-and the [focused study](../../docs/evidence/2026-10-08-competitive-binner-study.md)
-own the rationale; [protocol.json](protocol.json) owns numerical scope/budgets.
-The source/metadata [provenance](../../docs/evidence/2026-10-08-competitive-study-provenance.json)
-is a reviewed planning snapshot, not an input/environment lock.
+Opened: 2026-10-08; current access amendment:2026-10-13. Scientific outcome:
+**not assessed**. V10 accepted three tool/native utility/data contracts; v14 is
+owner-reported completed but its return is **not independently reviewed yet**.
+UCloud is inaccessible. [D014](../../docs/decisions/D014-google-cloud-workspace.md)
+and [Google Cloud operations](../../docs/CLOUD.md) own the current phase-1 setup;
+no v14 review, acquisition/fits/scores occurs now. [Former UCloud handoff](../../docs/history/E009_UCLOUD_OPERATIONS.md)
+is preserved, not runnable. After setup: review v14, then settle 10/20 read samples
+for one assembly with resource/coverage reasoning before bulk work on GCP.
+
+[D013](../../docs/decisions/D013-first-comparative-benchmark.md) and the
+[focused study](../../docs/evidence/2026-10-08-competitive-binner-study.md) own the
+scientific rationale; [protocol.json](protocol.json) preserves the original
+numerical scope, axes and old UCloud workload budget. Its historical credits and
+Home/shared paths are not current funding/storage. No sample count or scientific
+contract was changed by infrastructure setup. Source/metadata
+[provenance](../../docs/evidence/2026-10-08-competitive-study-provenance.json)
+remains a reviewed planning snapshot, not an input/environment lock.
 
 ## Question and informative comparisons
 
