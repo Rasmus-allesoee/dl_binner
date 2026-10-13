@@ -1,6 +1,6 @@
 # D014: Google Cloud as the connected Linux research workspace
 
-Date: 2026-10-13. Status: **accepted provider/durable workflow choice; initial layout/recurring storage approved by owner; provisioning not started**.
+Date: 2026-10-13. Status: **accepted provider/durable workflow choice; initial infrastructure/SSH/private backup verified; owner Codex app test pending**.
 
 ## Problem and decision
 
@@ -14,8 +14,10 @@ explicitly authorized phase. Keep macOS for cheap local work.
 [Cloud operations](../CLOUD.md) owns the concrete staged setup/cost/retention guide.
 Phase 1 excludes E009 v14 return review, acquisition, all binner installs/fits and
 scores. Paid billing and expected USD300/2027-01-12 credit expiry are owner reports,
-not verified balance. Check displayed scope/remaining/expiry, existing billing
-and resources before any provisioning. Use only verified trial-credit-covered
+distinct from the later owner-read kr1,973 remaining/kr0 used display. API billing
+status/currency, quota and resources were independently checked before provisioning;
+this session could not read the browser display because of a stale plugin loader.
+Use only verified trial-credit-covered
 products; stop and ask about ambiguous/uncovered/beyond-credit costs.
 
 Owner-approved initial layout: Iowa e2-standard-4 /16 GiB with small separate boot/balanced working disks,
@@ -58,8 +60,11 @@ charge the card or automatically delete important data.
 
 ## Revisit and next action
 
-First verify billing/credits and access, establish exact pushed commit/SSH/app
-Linux command/private archive readback and stop the VM with costs recorded.
+Billing/approved layout, strict SSH, exact pushed source-freeze clone, complete
+pinned Linux Codex PATH/help and private archive readback pass. ChatGPT
+authentication is independently verified; owner must finish the actual
+desktop remote-project Linux command test.
+Then finish receipt sync and stop unused compute with costs recorded.
 Then independently review v14 and choose 10/20 depth sources for one assembly,
 with representativeness, actual quotas, storage and monetary budget together.
 Revisit size/provider after measured workflow needs or credit constraints, not as

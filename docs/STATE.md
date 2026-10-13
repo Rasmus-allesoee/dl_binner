@@ -1,57 +1,56 @@
 # Current Research State
 
-Updated: 2026-10-13. This is the single current handoff.
+Updated: 2026-10-14. This is the single current handoff.
 
 ## Exact next step
 
-**SDU/UCloud is inaccessible as of 2026-10-13.** The owner reports files still
-exist, but their login is deactivated. Google Cloud is the selected main compute
-provider under [D014](decisions/D014-google-cloud-workspace.md); [CLOUD](CLOUD.md)
-owns setup, actual access and cost details. Old UCloud [guidance](history/UCLOUD_OPERATIONS.md)
-and [v14 command](history/E009_UCLOUD_OPERATIONS.md) are historical provenance,
-not runnable current instructions. All original evidence/history remains preserved.
+**SDU/UCloud is inaccessible.** Owner reports files intact but login deactivated.
+[D014](decisions/D014-google-cloud-workspace.md) selects Google Cloud; old
+[UCloud guidance](history/UCLOUD_OPERATIONS.md) and [E009 command](history/E009_UCLOUD_OPERATIONS.md)
+are archived provenance. No old evidence or UCloud files were deleted.
 
-**Phase 1 is not established yet.** Live private GitHub inspection confirms a clean
-`benchmark-planning` branch at entry `2109998a230a0757be424e6f55c3a1bf17971ebe`,
-private origin and main `5e54538d1799e8d2538621729400f33fbaf017b9`. The benchmark
-branch was not remote at entry. The owner now authorizes normal commit/push and
-clone of that exact commit onto GCP; no force push, merge or publication.
-Official Google CLI 589.0.0 is checksum-verified and working locally in ignored
-`artifacts/gcp-workspace/tools/`; owner completed Google login. Read-only API checks verify an open billing account,
-billing-enabled My First Project and owner IAM role; Compute/IAP are not enabled.
-The browser tool still exposes zero connected browsers after owner enabled access
-and a session reset. Dedicated Browser plugin diagnostics identify a stale
-`26.930.61225` loader path while `26.1007.30912` is installed; no vendor fix/cookie
-workaround was attempted. Owner supplied the live display: **kr1,973 remaining,
-none used, expires 2027-01-12**. Billing API confirms DKK currency, account open
-and project billing enabled; the paid upgrade is owner-reported.
-No service/API activation, cloud provisioning, independent browser credit review, VM clone,
-SSH/app connection or private backup readback is claimed.
+**Phase 1 infrastructure passes; ChatGPT login passes; desktop app test is pending.**
+[CLOUD](CLOUD.md) owns exact access/operation commands and costs;
+[the receipt](evidence/gcp-workspace.json) binds live observations. The approved
+Iowa workspace is provisioned: regular `dl-binner-cpu`, 4 vCPU /16 GiB, pinned non-Pro
+Ubuntu 24.04, preserved 30-GiB standard boot +50-GiB balanced work mounted at
+`/srv/dl_binner`, four-hour provider STOP per start, private Standard archive,
+OS Login and IAP-only SSH. Strict `ssh dl-binner-gcp` passes from the Mac;
+Linux reports four CPUs. Complete pinned Codex 0.160.1 is on the remote login PATH and authenticates with
+the owner's ChatGPT account; no API key is used.
+Private native-service-account upload/readback of 6,126 bytes passes byte/SHA256
+comparison; no credentials or scientific data were archived.
 
-Owner-reported paid billing, expected USD300 remaining, credit expiry 2027-01-12
-and budget alert are distinguished from independent API checks in the receipt.
-The owner approved the concrete recurring-storage plan and expiry review
-**by 2027-01-10**. Paid billing cannot guarantee a credit-only stop; additional
-services/spend remain subject to the original credit-only authorization. The proposed modest CPU
-VM/disks/private bucket/SSH and running/stopped/transfer rates are in CLOUD; stop
-and ask for unclear/uncovered/beyond-credit spending. A budget alert is not a cap.
-Old ~1,980 UCloud credits/storage are unavailable, not a GCP funding allocation.
+Source-freeze **`440911904e8342c2f3a27254f95caa51871cf706`** was normally pushed to
+private `benchmark-planning` and cloned at that exact clean HEAD under
+`/srv/dl_binner/repo`. Main remains `5e54538d1799e8d2538621729400f33fbaf017b9`.
+Only a repository-scoped read-only deploy key is installed on Linux; later push
+rights are a separate choice. Final setup receipts will be normally pushed/synced
+without self-referential HEAD claims in their own JSON.
 
-**Exact next action:** commit/push the approved setup contracts; agent verifies
-covered services/quotas/image/costs through the working Google CLI,
-sets up the bounded CPU VM/private archive and actual Codex SSH remote project,
-normal-pushes/syncs the exact working commit, and records a harmless Linux command
-plus backup readback and stopped state. [Cloud receipt](evidence/gcp-workspace.json)
-will distinguish prepared, provisioned, SSH-tested and app-tested state.
+Owner supplied the live billing display on 2026-10-13: **kr1,973 remaining, kr0 used,
+expires 2027-01-12**, reported paid upgrade; APIs verify DKK/open billing and billed
+project. This session's stale Browser loader prevents independent display review;
+Google CLI and strict SSH work. Owner approved recurring storage and expiry review
+**by 2027-01-10**. Running VM/IP is about $0.139/hour; stopped disks remain $6.20/month
+gross, plus actual bucket bytes. Alerts are not caps. Future extra/unclear/uncovered
+or beyond-credit spending still requires approval; the unavailable old UCloud
+balance is not GCP funding.
 
-**Do not inspect E009 v14 returns or acquire data during phase 1.** The owner has
-reported a completed v14; this repository's independent review is still pending.
-Accept verified success in the following phase without rerunning it. Then decide
-**10 versus 20 read samples** using storage/cost and coverage representativeness
-for one sample-0 assembly; published multi-assembly gains do not settle that
-choice. Freeze the resulting axes/protocol/USD budget before bulk acquisition,
-assembly, depth and truth directly on the connected GCP VM. No automatic full
-fits/scores, seeds or architecture comparisons. Colab/Kaggle are deferred options.
+**Exact next action:** owner completes CLOUD's desktop SSH project
+step, then runs harmless `pwd`/HEAD/status/`uname` in a remote-project chat. Ordinary
+SSH and CLI help are not this app-workflow proof. Agent records that observation,
+finishes source sync, stops unused compute and records elapsed/cost/stopped state.
+No binner/runtime/scientific tests are repeated for setup.
+
+**Do not inspect E009 v14 or acquire data during phase 1.** After actual connection:
+independently review the owner-reported successful v14 return without rerunning
+accepted contracts; settle **10 versus 20 read samples** for one sample-0 assembly
+using representation, peak storage and monetary cost. Published multi-assembly
+results do not fix this choice. Freeze ordered axes/protocol/resources before a
+separately authorized bulk phase directly on GCP. No fits/scores, architecture
+comparisons, new seeds, main merge or publication follow automatically.
+Colab/Kaggle remain possible future options, not configured now.
 
 ## Direction and completed work
 

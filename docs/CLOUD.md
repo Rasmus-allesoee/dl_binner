@@ -1,13 +1,13 @@
 # Google Cloud workspace operations
 
-Updated: 2026-10-13. [D014](decisions/D014-google-cloud-workspace.md) owns the
-provider choice. [STATE](STATE.md) owns the next action; this guide owns setup,
-access, cost and retention. **Preparation only: no GCP resources or authenticated remote session exist yet.**
-Google CLI login and read-only project/billing checks pass. Owner confirmed the
-current display: **kr1,973 remaining, kr0 used, expiry 2027-01-12**. This is an
-owner-read display, not agent browser inspection. The owner approved the concrete layout and expiry review on 2026-10-13;
-provisioning has not started yet. Do not treat the proposed names or costs as
-allocated resources.
+Updated: 2026-10-14 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
+[D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
+[STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
+**Infrastructure established: strict IAP SSH, exact private repository clone,
+pinned Linux Codex CLI and private archive upload/readback pass. ChatGPT
+authentication now passes;
+an actual desktop remote-project chat is still pending.** See the
+[structured receipt](evidence/gcp-workspace.json) for observations and hashes.
 
 ## Phase boundary and account verification
 
@@ -51,23 +51,28 @@ Official rules: [credit/upgrade terms](https://docs.cloud.google.com/free/docs/f
 [budget behavior](https://docs.cloud.google.com/billing/docs/how-to/budgets).
 No credit amount is inferred from account upgrade or absence of known jobs.
 
-## Proposed initial layout and costs
+## Established initial layout and costs
 
-Choose `us-central1` (Iowa), provisionally `us-central1-a`, subject to live quota
-and capacity. CPU work on public simulated DNA does not presently need an EU-only
+The workspace uses `us-central1` (Iowa), zone `us-central1-a`. Live quota and
+capacity checks passed: 12 global CPUs and 24 regional E2 CPUs available at entry.
+CPU work on public simulated DNA does not presently need an EU-only
 location. Iowa offers low E2 pricing and small US Free Tier storage allowances;
 EU locations reduce interactive latency but raise costs/lose these allowances.
 Co-locate VM and bucket to avoid cross-region transfers. This is not a data-residency
 choice for future private clinical data.
 
-Initial proposal: regular **e2-standard-4, 4 vCPU /16 GiB**, Ubuntu 24.04 LTS
-(non-Pro, x86-64), **30-GiB pd-standard boot**, **50-GiB pd-balanced working disk**
-mounted at `/srv/dl_binner`. This fits code/setup/small checks now, not bulk E009.
+Created **`dl-binner-cpu`, regular e2-standard-4, 4 vCPU /16 GiB**, with pinned
+non-Pro x86-64 image `ubuntu-2404-noble-amd64-v20261009`, **30-GiB pd-standard boot**
+(`dl-binner-cpu`) and **50-GiB pd-balanced working disk** (`dl-binner-work`), mounted
+at `/srv/dl_binner`. Native Linux reports four CPUs; the UUID-based persistent
+mount configuration passed verification after systemd reload. This fits code/setup
+and small checks now, not bulk E009.
 Balanced working storage provides better small-file/random-I/O behavior than a
 tiny standard disk; the large UCloud copy problem is not a reason to recreate
-snapshots here. Resolve/pin the actual Ubuntu image before creating the VM.
-Record actual image/disk/machine descriptions afterward. Enable Shielded VM
-features and preserve both disks on VM deletion. No GPU, local SSD or Spot
+snapshots here. Exact image/VM/disk descriptions are recorded in the receipt.
+Secure Boot, vTPM
+and integrity monitoring are enabled; both disks have `autoDelete=false`.
+No GPU, local SSD or Spot
 interruption risk. Grow working storage only after sample-count/peak-space review;
 resize the stopped CPU VM for the next phase when its measured needs justify it.
 
@@ -83,9 +88,11 @@ Official USD list prices fetched 2026-10-13 (730-hour month for comparisons):
 | Same-region Standard bucket | $0.020/GiB-month gross; small US allowance up to 5 GB-month subject to aggregate limits | Stored/soft-deleted bytes continue accruing |
 | Basic IAP to GCP | No IAP service fee | No IAP service fee |
 
-Thus VM+IP is about **$0.139/hour**. A proposed four-hour setup auto-stop bounds
-compute/IP to **$0.557**, with about **$0.034** gross provisioned-disk cost over
-those four hours. Stopped disks are **$6.20/month gross**, or about $5 if the
+Thus VM+IP is about **$0.139/hour**. The verified four-hour setup STOP policy
+targets about **$0.56** compute/IP per start, plus about **$0.034** gross disk cost
+over four hours. Provider termination can begin up to 30 seconds after the target
+and stopping takes time; this is not a billing or remaining-credit hard cap.
+Stopped disks are **$6.20/month gross**, or about $5 if the
 boot-disk allowance is available; 5 GiB compact archive is $0.10/month gross.
 Do not assume allowances are unused until the account inventory is checked.
 Leaving this VM running for a 730-hour month is about **$101.49** compute/IP,
@@ -102,8 +109,9 @@ scientific-stage timeout. Set a deliberate future duration for real jobs.
 [IAP pricing](https://cloud.google.com/iap/pricing),
 [provider-side auto-stop](https://docs.cloud.google.com/compute/docs/instances/limit-vm-runtime).
 Disk is charged by provisioned capacity, bucket by actual live/noncurrent/soft-deleted
-storage. Prices exclude tax/currency conversion and any unrelated account usage;
-recheck the actual console estimate/billing currency before provisioning.
+storage. Prices exclude tax/currency conversion and any unrelated account usage.
+The API verifies DKK billing currency; the USD list-price estimates are not a
+DKK invoice or a fresh console estimate.
 
 Inbound public downloads have no GCP ingress charge. Same-region bucket↔VM data
 transfer has no transfer fee, while requests still have operation charges.
@@ -136,8 +144,9 @@ CLOUDSDK_CONFIG="$PWD/artifacts/gcp-workspace/private-gcloud-config" \
 ```
 
 The owner completed this login and CLI auth now passes. Read-only APIs verify an
-open billing account, billed My First Project and owner IAM role. Compute/IAP
-APIs are not enabled; no mutation has occurred. Browser access remains unavailable
+open billing account, billed My First Project and owner IAM role. Compute, IAP,
+IAM and OS Login were subsequently enabled for the approved layout. Browser access
+remains unavailable
 to the tool even after owner enabled it/reset, so actual credit fields were supplied by the owner. The dedicated Browser tool
 identified a concrete loader mismatch: it imports absent plugin
 `26.930.61225/scripts/browser-service.mjs`, whereas installed plugin is
@@ -151,13 +160,14 @@ needed on the Mac. Do not replace credentials merely because a sandboxed GitHub
 network probe failed: the authorized network probe verified the existing private
 GitHub login successfully.
 
-After account/cost verification, use a dedicated custom VPC/subnet with only
-IAP's `35.235.240.0/20` allowed to port22 on the designated VM tag, private Google
-access, and no public SSH/HTTP rule. The ephemeral external IP permits outbound
-apt/Git/CAMI access without NAT; it does not open inbound SSH. Use OS Login with
-owner-specific access and a local private key outside Git. Enable guest attributes
-before first boot and retrieve the actual host public keys over the authenticated
-Compute API to seed/verify a dedicated known-hosts file;
+The dedicated `dl-binner` VPC / `dl-binner-us-central1` subnet (`10.50.0.0/24`)
+allows only IAP's `35.235.240.0/20` to tcp22 on the `dl-binner-iap` VM tag. Private
+Google access is enabled; there is no public SSH/HTTP rule. The project's default
+network is unchanged. The ephemeral external IP permits outbound
+apt/Git/CAMI access without NAT; it does not open inbound SSH. OS Login uses the
+owner's dedicated Mac key outside Git. Guest attributes were
+enabled before first boot, and authenticated Compute API host keys seed a dedicated
+known-hosts file;
 [Google's host-key guidance](https://docs.cloud.google.com/solutions/connecting-securely)
 explains the trusted back channel. Verify host keys
 through a trusted cloud/serial identity, not `StrictHostKeyChecking=no`. Prefer
@@ -166,12 +176,12 @@ Editor service account: if backup access needs an attached service account, gran
 only bucket-specific object access and no key file. Do not grant project-wide
 Storage Admin merely to copy archives.
 
-Use `gcloud compute ssh --tunnel-through-iap` first; test OpenSSH from the Mac.
-A concrete alias in `~/.ssh/config` can use a `gcloud compute start-iap-tunnel
-... --listen-on-stdin` ProxyCommand (absolute CLI path and isolated config),
-so the Codex app uses ordinary SSH without a public app-server port. Verify the
-actual alias, user, key and host fingerprint rather than publishing placeholders
-as a tested command. Disable agent forwarding/password/root SSH. Do not start an
+The concrete **`dl-binner-gcp`** alias in the Mac's `~/.ssh/config` uses an absolute
+`gcloud compute start-iap-tunnel ... --listen-on-stdin` ProxyCommand and the ignored
+Google login configuration. `ssh dl-binner-gcp` passed with strict pinned host keys,
+OS Login user `rasmus_allesoee_gmail_com` and a dedicated key. The host's Ed25519
+fingerprint is `SHA256:EnphGEWw80eNITGEQcbIFyhdXS2dvuz1NhtW85x7h/4`. Disable agent
+forwarding/password/root SSH. Do not start an
 unauthenticated WebSocket app-server on the VM's public interface.
 
 ## Git and Codex app acceptance
@@ -182,25 +192,46 @@ The initial clean branch is `benchmark-planning` at
 `5e54538d1799e8d2538621729400f33fbaf017b9`, and the benchmark branch was not remote
 at entry. The owner authorizes a normal push of this working branch, preserving
 all accepted commits; no force push, merge, visibility change or release.
-After documented checks/commit, push with upstream and verify the remote SHA.
+Source-freeze commit **`440911904e8342c2f3a27254f95caa51871cf706`** was normally
+pushed with upstream and cloned byte-identically onto the VM. Main remains
+unchanged. Subsequent setup receipts must be normally pushed and synced before
+handoff; the final verified Git state is reported in chat without a self-referential
+commit hash inside its own committed receipt.
 
-On the VM, prefer a repo-specific **read-only deploy key** for cloning/fetching,
-not a copy of the Mac's general GitHub token. Clone `benchmark-planning` under
-`/srv/dl_binner/repo`; verify clean Git state and the exact pushed SHA. Later push
-rights require a separate scoped choice. Keep environments under
+The VM uses a repo-specific **read-only deploy key** for cloning/fetching; no Mac
+GitHub token was copied. Repo-local commit identity matches the existing Mac project. `/srv/dl_binner/repo` is a clean `benchmark-planning` clone
+at the exact source-freeze SHA. Repo-local `core.sshCommand` pins GitHub host keys
+and this key. Linux push rights are not configured; later authorization can use
+a separately scoped choice. Keep environments under
 `/srv/dl_binner/experiments/e009/envs/`, data/tmp/runs separately from the checkout,
 and compact archives under `/srv/dl_binner/archive/`. Do not forge UCloud paths
 or copy linked Mac environments to Linux.
 
-Install a pinned official Codex CLI on Linux, make it available in the user's
-**login shell PATH**, and authenticate with the existing ChatGPT account/plan.
-Use documented device login or an SSH-forwarded localhost login callback; do not
+Official **Codex 0.160.1** complete Linux package is installed at
+`/srv/dl_binner/tools/codex-0.160.1`; `~/.local/bin/codex` is a wrapper preserving
+that package's resource paths. Actual login-shell PATH, version and app-server help
+pass. The 160,785,122-byte release archive passed SHA256
+`340801565906a7028f6baaa9ab6853addaef221f0016a1417a7c1ffdd96c21f0`; its regenerable
+download was removed after installation. Native image-supplied Google CLI is
+588.0.0. Authenticate with the existing ChatGPT plan through device login or an
+SSH-forwarded localhost callback; do not
 silently switch to metered OpenAI API billing or copy a general auth cache to
 Git/backup. App-server must remain SSH-managed/private.
 
-In the ChatGPT desktop app: **Settings → Connections → SSH → add/enable the
-concrete host alias**, then choose `/srv/dl_binner/repo`. Owner interaction may
-be required because native app control is unavailable in this session.
+**Authentication command** (owner completed it; status independently reports
+`Logged in using ChatGPT`; no tokens/login codes in chat):
+
+```bash
+ssh -t dl-binner-gcp 'bash -lc "codex login --device-auth"'
+```
+
+For a future fresh login, complete the browser flow with the existing ChatGPT account. If device login is
+blocked by an account setting, return the non-secret error; do not switch to a
+metered API key. In the desktop app: **Settings → Connections → SSH → enable/add
+`dl-binner-gcp`**, then choose `/srv/dl_binner/repo`. Start a chat there and run only
+`pwd`, `git rev-parse HEAD`, `git status --short --branch`, and `uname -s`. Native
+app controls are unavailable in this session, so this final acceptance observation
+needs owner interaction.
 [Official SSH workflow](https://learn.chatgpt.com/docs/remote-connections#connect-to-an-ssh-host),
 [login](https://learn.chatgpt.com/docs/auth#login-on-headless-devices).
 
@@ -213,8 +244,8 @@ The next phase starts only after this actual connection and billing gate pass.
 
 ## Private archive and retention
 
-Use a single regional **Standard** bucket in `us-central1`, uniform bucket-level
-access and **public access prevention enforced**. No public ACL/link, versioning,
+The created bucket is **`gs://dl-binner-archive-167650584170/`**, regional Standard
+in `us-central1`, uniform bucket-level access and **public access prevention enforced**. No public ACL/link, versioning,
 Autoclass, Archive/Nearline minimum-duration fee, bucket lock or paid intelligence
 feature. Keep default short soft-delete protection visible in stored-byte costs.
 Use append-only uniquely named compact checksum-bound archives of accepted outputs
@@ -227,21 +258,53 @@ GitHub tokens, machine credentials, inbox/history caches or numerical environmen
 Upload it, read it back and compare SHA256/byte count; verify bucket IAM and public
 access prevention. A future archive is not a backup until its readback succeeds.
 
+The VM's own `dl-binner-archive` service account uploaded and read back the seven-member
+setup archive at `workspace/20261013T220405Z/`: **6,126 bytes** compressed /15,748
+logical archived bytes, SHA256 `2d88d5c0f1c2cf648f359b487135589e98d77556b1b918f8f3ea03b603a5295b`.
+`cmp` and SHA256 pass; the checksum is the second object. The account has only
+bucket-scoped Object Creator/Viewer, no project-wide role or JSON key.
+Default soft delete is seven days; no public principals, versioning or Autoclass.
+This backs up phase-1 setup evidence, not scientific outputs or authenticated app
+state. Source history is on private GitHub; existing scientific assets were not migrated.
+
 For accepted science retain final partitions/required checkpoints/evaluation,
 axes/masks/exclusions, compact logs/metrics/provenance and exact regeneration input
 identities. For obsolete failures retain exit causes/useful native diagnostic
 snippets/config/hashes, then record and remove bulky regenerable outputs after
 review. Do not delete accepted/irreplaceable evidence or old inaccessible UCloud
-files. Do not retain all scratch/temp/failed BAMs by default. No files are being
-deleted in this setup phase.
+files. Do not retain all scratch/temp/failed BAMs by default. Only the newly
+downloaded Codex installer was removed; no original research files were deleted.
+Installed tools are about 447 MB logical, checkout 34.5 MB and the work disk has
+about 461 MiB used, leaving its rest available; bulk E009 will need a new space review.
 
-## Stop and next phase
+## VM start, stop and cost control
 
-Stop the VM when setup/app checks are finished and independently verify its stopped
-state. Record actual running elapsed time and projected compute/IP/disk/bucket cost;
+From the Mac checkout, use the isolated authenticated CLI. Start only for an
+explicit task; each start recomputes the verified four-hour automatic STOP.
+Both disks, source and login state persist. IAP uses the instance identity, so
+an external IP change does not require replacing the SSH alias or host keys.
+
+```bash
+cd /Users/rasmusallesoeenielsen/Documents/dl_binner
+CLOUDSDK_CONFIG="$PWD/artifacts/gcp-workspace/private-gcloud-config" \
+  "$PWD/artifacts/gcp-workspace/tools/google-cloud-sdk/bin/gcloud" \
+  compute instances start dl-binner-cpu \
+  --project=project-d17bd588-df31-488f-b16 --zone=us-central1-a
+```
+
+After the job, use the same command with `stop` instead of `start`; inspect with
+`compute instances describe dl-binner-cpu --project=... --zone=us-central1-a
+--format='value(status)'` (the exact project is above). `TERMINATED` means stopped
+in Compute Engine; the VM and disks have not been deleted. A stopped VM cannot
+accept SSH; start it before the desktop remote project. Changing the four-hour
+policy or CPU/storage allocation is a separate workload/cost decision.
+
+Record actual running elapsed time and projected compute/IP/disk/bucket cost;
 reported billing can lag and must be checked separately. Confirm what remains
-billable while stopped. Set a credit-expiry review before the displayed deadline;
+billable while stopped. The approved credit-expiry review is **by 2027-01-10**;
 no automatic billing-disable/data-destruction mechanism is assumed safe.
+
+## Next phase
 
 After phase 1 passes: inspect E009 v14 archive/checksum/terminal evidence, accept
 success without replay, then decide **10 versus 20 read samples** using coverage
