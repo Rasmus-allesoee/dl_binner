@@ -273,7 +273,10 @@ implicitly authorize acquisition, scientific fits or benchmark scores. Owner log
 app connection and IAM/quota approvals may need owner action. Never claim remote
 app access from a plain SSH test or local harness alone. Keep SSH/auth credentials
 outside Git and backups; prefer narrowly scoped access without public app-server
-listeners. Native CPU support is not full-schedule affordability. Record actual
+listeners. Install the documented Linux sandbox prerequisites when the host needs
+them; prefer the distro's scoped Bubblewrap/AppArmor profile and retain global
+kernel protections. [Cloud operations](docs/CLOUD.md) records the tested path.
+Native CPU support is not full-schedule affordability. Record actual
 machine/allocation, elapsed time, process usage and estimated monetary spend
 separately; allocated core-hours remain useful comparisons, not GCP prices.
 

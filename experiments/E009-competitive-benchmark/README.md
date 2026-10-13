@@ -4,9 +4,10 @@ Opened: 2026-10-08; current access amendment:2026-10-13. Scientific outcome:
 **not assessed**. V10 accepted three tool/native utility/data contracts; v14 is
 owner-reported completed but its return is **not independently reviewed yet**.
 UCloud is inaccessible. [D014](../../docs/decisions/D014-google-cloud-workspace.md)
-and [Google Cloud operations](../../docs/CLOUD.md) own the current phase-1 setup;
-no v14 review, acquisition/fits/scores occurs now. [Former UCloud handoff](../../docs/history/E009_UCLOUD_OPERATIONS.md)
-is preserved, not runnable. After setup: review v14, then settle 10/20 read samples
+and [Google Cloud operations](../../docs/CLOUD.md) own the accepted phase-1 setup
+and actual desktop SSH project verification (2026-10-14). No v14 review or
+acquisition/fits/scores ran during setup. [Former UCloud handoff](../../docs/history/E009_UCLOUD_OPERATIONS.md)
+is preserved, not runnable. Next: review v14, then settle 10/20 read samples
 for one assembly with resource/coverage reasoning before bulk work on GCP.
 
 [D013](../../docs/decisions/D013-first-comparative-benchmark.md) and the

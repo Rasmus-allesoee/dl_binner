@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-10-13",
   "phase": "GCP workspace setup only",
-  "status": "provisioned;SSH_archive_and_ChatGPT_auth_pass;owner_desktop_remote_project_test_pending",
+  "status": "phase1_accepted;actual_Codex_Desktop_remote_project_verified;normal_Linux_sandbox_repaired;setup_VM_stop_verified",
   "owner_reports": {
     "ucloud_login_deactivated": true,
     "ucloud_files_still_exist_inaccessible": true,
@@ -72,7 +72,8 @@
     "outbound_ip": "ephemeral IPv4 STANDARD tier",
     "setup_max_run_duration_seconds": 14400,
     "termination_action": "STOP; preserve disks",
-    "gpu": false
+    "gpu": false,
+    "scope": "original pre-provisioning proposal, preserved; actual image/resources are recorded separately"
   },
   "official_usd_list_prices_consulted": {
     "date": "2026-10-13",
@@ -204,9 +205,9 @@
       },
       "created": "2026-10-13T14:55:18.624-07:00",
       "started": "2026-10-13T14:55:39.448-07:00",
-      "status_at_inspection": "RUNNING",
+      "status_at_inspection": "TERMINATED",
       "outbound_ip": "ephemeral STANDARD; no public SSH rule",
-      "automatic_stop_target_at_inspection_utc": "2026-10-14T01:55:21.896658Z"
+      "last_stop_at_inspection": "2026-10-13T15:39:43.273-07:00"
     }
   ],
   "normal_branch_push": {
@@ -214,7 +215,8 @@
     "commit": "440911904e8342c2f3a27254f95caa51871cf706",
     "private_remote_verified": true,
     "normal_new_branch_push": true,
-    "main_unchanged": "5e54538d1799e8d2538621729400f33fbaf017b9"
+    "main_unchanged": "5e54538d1799e8d2538621729400f33fbaf017b9",
+    "scope": "initial source-freeze push; subsequent accepted setup commit is in source_history_and_sync"
   },
   "vm_repository_exact_head": {
     "path": "/srv/dl_binner/repo",
@@ -226,7 +228,8 @@
       "read_only": true,
       "fingerprint": "SHA256:GZmnyL45qj6I3GWDM1fQb2sRcYczbWPxcrpVwKShfJM"
     },
-    "log_sha256": "ff5f7114b449e574c5049405b790bea46cb49343f44f48a4d6a59223483267a4"
+    "log_sha256": "ff5f7114b449e574c5049405b790bea46cb49343f44f48a4d6a59223483267a4",
+    "scope": "initial source-freeze clone; desktop-tested successor is in codex_app_remote_check"
   },
   "ssh_linux_check": {
     "passed": true,
@@ -241,7 +244,36 @@
     "reported_memory_bytes": 16762118144,
     "no_public_app_listener": true
   },
-  "codex_app_remote_check": null,
+  "codex_app_remote_check": {
+    "passed": true,
+    "owner_returned_commands": true,
+    "independently_inspected_native_session": true,
+    "session_id": "01a1375d-5efb-7a10-a4a2-ed7062b29939",
+    "session_timestamp_utc": "2026-10-13T22:23:48.484Z",
+    "originator": "Codex Desktop",
+    "cli_version": "0.160.1",
+    "cwd": "/srv/dl_binner/repo",
+    "head": "bde9fbf49c035286cae713799d48d7d55a3d87a5",
+    "branch": "benchmark-planning",
+    "status": "## benchmark-planning...origin/benchmark-planning",
+    "uname": "Linux",
+    "working_tree_clean": true,
+    "commands": [
+      "pwd",
+      "git rev-parse HEAD",
+      "git status --short --branch",
+      "uname -s"
+    ],
+    "initial_sandbox_failure": "bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted",
+    "desktop_retry_succeeded_with_escalation": true,
+    "normal_CLI_sandbox_passed_after_host_repair": true,
+    "desktop_default_sandbox_after_repair_not_directly_retested": true,
+    "session_bytes_at_inspection": 220342,
+    "session_sha256_at_inspection": "0806a15049680b34cddb9a23a1ae9b27a472ea85f1c3a63d211b718542867611",
+    "session_metadata_log_sha256": "66c9d52718103a1b43f02246a458d1d25e264ddd079c85864c75cabaecae1c86",
+    "allowlisted_outputs_log_sha256": "9f77c33ed767cd05f8a816bd6a680a5fb64e55a4585022bae2c8b8af6e115a50",
+    "chat_messages_or_auth_cache_collected": false
+  },
   "private_archive_readback": {
     "passed": true,
     "object": "gs://dl-binner-archive-167650584170/workspace/20261013T220405Z/workspace-20261013T220405Z-setup.tar.gz",
@@ -257,7 +289,24 @@
     "scope": "phase1 setup/SSH evidence before owner Codex app authentication; no scientific backup/acceptance",
     "log_sha256": "73c69e5daa6a3e34c29fd9e72739d9c2bc733acc007e2050a3d65768e6cc0cc3"
   },
-  "cloud_actual_costs": null,
+  "cloud_actual_costs": {
+    "scope": "first setup session at verified stop; a brief final source-sync start is accounted separately",
+    "provider_start": "2026-10-13T14:55:39.448-07:00",
+    "provider_stop": "2026-10-13T15:39:43.273-07:00",
+    "running_elapsed_seconds": 2643.825,
+    "allocated_vcpu_hours": 2.93758333,
+    "vm_ip_estimated_usd": 0.10209779,
+    "gross_disks_same_elapsed_estimated_usd": 0.00623733,
+    "stopped_status": "TERMINATED",
+    "ephemeral_external_ip_present": false,
+    "stopped_compute_ip_usd_per_hour": 0,
+    "gross_retained_disks_usd_per_month": 6.2,
+    "invoice_or_fresh_credit_balance_not_available": true,
+    "method": "provider timestamp elapsed at current USD list prices; gross 730-hour disk comparison, no tax/FX/allowance discount; not invoice",
+    "stop_description_sha256": "893e1aa5cb5fc365211a1335e94cc467ff3289293bea98a57c87f7993b548065",
+    "final_source_sync_and_stop_receipt": "gs://dl-binner-archive-167650584170/workspace/20261013T223943Z-acceptance/final-sync-stop.json",
+    "final_source_sync_and_stop_receipt_contract": "Separate immutable receipt written and read back after final Git sync/stop; contains final source SHA and aggregate allocation estimates without self-reference."
+  },
   "phase_exclusions": [
     "E009v14 return inspection",
     "data acquisition",
@@ -266,7 +315,7 @@
     "UCloud mutations",
     "main merge or visibility/publication changes"
   ],
-  "next_action": "Owner verifies actual desktop SSH project; then finish final sync, stop VM early and record elapsed/cost/stopped state. No E009 work in phase1.",
+  "next_action": "Phase1 accepted. Following phase: independently review E009v14 retained return, then choose10/20 samples and freeze GCP resource/storage/budget plan before bulk work. No scientific work ran in setup.",
   "future_phase": "independently review v14; choose10/20 coverage sources for one assembly; freeze axes/peak storage/USD budget before direct GCP bulk execution",
   "future_alternatives_not_configured": [
     "Google Colab",
@@ -329,6 +378,22 @@
       "exit_code": 0,
       "raw_auth_cache_read_or_copied": false,
       "log_sha256": "60822835541cfa8b03f1d25a74d2e524eef01afd54b57a4b0e1778902af9bcbd"
+    },
+    "sandbox_prerequisite": {
+      "cause": "Ubuntu24.04 AppArmor user namespace restriction denied bundled bwrap namespace setup",
+      "evidence": "retained initial desktop outputs and matching native kernel AppArmor denials",
+      "system_bubblewrap": "0.9.0-1ubuntu0.3",
+      "apparmor_profiles_and_utils": "4.0.1really4.0.1-0ubuntu0.24.04.8",
+      "distro_profile_source": "/usr/share/apparmor/extra-profiles/bwrap-userns-restrict",
+      "loaded_profile": "/etc/apparmor.d/bwrap-userns-restrict",
+      "global_apparmor_restrict_unprivileged_userns": 1,
+      "global_sandbox_restriction_disabled": false,
+      "native_installed_cli_command": "codex sandbox -- /bin/bash -c [four harmless repo commands]",
+      "native_exit_code": 0,
+      "prerequisite_log_sha256": "f26f7d9f038f4f5cf1fac0198bc964c6f16eafb5c162d4ed080d435f7ff2b817",
+      "repaired_log_sha256": "bfe9275b523e710d1e6b484347a435a179d8b575e91908b28a58b8f6b71000ac",
+      "official_docs": "https://learn.chatgpt.com/docs/sandboxing",
+      "versioned_implementation": "https://github.com/openai/codex/blob/rust-v0.160.1/codex-rs/linux-sandbox/README.md"
     }
   },
   "provisioning_rejection": {
@@ -344,6 +409,29 @@
     "private_archive_payload_bytes": 15748,
     "no_scientific_data_present": true,
     "regenerable_codex_download_removed_bytes": 160785122,
-    "original_ucloud_and_research_evidence_deleted": false
+    "original_ucloud_and_research_evidence_deleted": false,
+    "scope": "initial setup checkpoint, before final record sync; no scientific data"
+  },
+  "source_history_and_sync": {
+    "normally_pushed_commits": [
+      "440911904e8342c2f3a27254f95caa51871cf706",
+      "bde9fbf49c035286cae713799d48d7d55a3d87a5"
+    ],
+    "desktop_tested_and_cleanly_synced_head": "bde9fbf49c035286cae713799d48d7d55a3d87a5",
+    "main_unchanged": "5e54538d1799e8d2538621729400f33fbaf017b9",
+    "final_record_commit": "reported after normal push and VM sync; its receipt cannot contain its own Git SHA"
+  },
+  "private_acceptance_archive_readback": {
+    "object": "gs://dl-binner-archive-167650584170/workspace/20261013T223943Z-acceptance/workspace-20261013T223943Z-acceptance.tar.gz",
+    "bytes": 5858,
+    "sha256": "d6fc40d656b855e018091452faf433e4774ee2088a76c5760c2e06c9d9c9d0ca",
+    "members": 8,
+    "logical_archived_payload_bytes": 19836,
+    "passed": true,
+    "generation": "1791931356449777",
+    "byte_comparison_and_sha256_pass": true,
+    "uploaded_from_Mac_after_VM_stop": true,
+    "scope": "actual desktop remote-project commands, native Ubuntu sandbox repair and first verified setup stop; no credentials/scientific data; final sync stop recorded separately",
+    "checksum_file_bytes": 111
   }
 }

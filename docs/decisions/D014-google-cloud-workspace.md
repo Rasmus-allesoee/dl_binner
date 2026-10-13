@@ -1,6 +1,6 @@
 # D014: Google Cloud as the connected Linux research workspace
 
-Date: 2026-10-13. Status: **accepted provider/durable workflow choice; initial infrastructure/SSH/private backup verified; owner Codex app test pending**.
+Date: 2026-10-13; acceptance: 2026-10-14 Copenhagen. Status: **accepted; phase-1 infrastructure, private backup and actual Codex desktop SSH project verified**.
 
 ## Problem and decision
 
@@ -62,10 +62,16 @@ charge the card or automatically delete important data.
 
 Billing/approved layout, strict SSH, exact pushed source-freeze clone, complete
 pinned Linux Codex PATH/help and private archive readback pass. ChatGPT
-authentication is independently verified; owner must finish the actual
-desktop remote-project Linux command test.
-Then finish receipt sync and stop unused compute with costs recorded.
-Then independently review v14 and choose 10/20 depth sources for one assembly,
+authentication and the actual desktop remote-project Linux command test pass.
+Owner-returned output agrees with independently inspected native session metadata
+and the four allowlisted command outputs at clean commit
+`bde9fbf49c035286cae713799d48d7d55a3d87a5`. An initial AppArmor/Bubblewrap failure is
+retained; the official Ubuntu prerequisite repaired the normal CLI sandbox while
+leaving global kernel protections enabled. CLOUD/receipt distinguish desktop
+retry proof from the subsequent native CLI check. Final records are normally
+pushed/synced; unused compute is stopped, preserving both disks and login state.
+
+Next independently review v14 and choose 10/20 depth sources for one assembly,
 with representativeness, actual quotas, storage and monetary budget together.
 Revisit size/provider after measured workflow needs or credit constraints, not as
 an architecture gate. No accepted science is repeated to migrate infrastructure.

@@ -3,10 +3,10 @@
 Updated: 2026-10-14 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**Infrastructure established: strict IAP SSH, exact private repository clone,
-pinned Linux Codex CLI and private archive upload/readback pass. ChatGPT
-authentication now passes;
-an actual desktop remote-project chat is still pending.** See the
+**Phase 1 accepted: strict IAP SSH, exact private repository clone, pinned Linux
+Codex CLI, ChatGPT authentication, actual desktop remote-project commands and
+private archive upload/readback pass. The Ubuntu sandbox prerequisite was repaired
+and the normal installed CLI sandbox passes.** See the
 [structured receipt](evidence/gcp-workspace.json) for observations and hashes.
 
 ## Phase boundary and account verification
@@ -199,8 +199,10 @@ handoff; the final verified Git state is reported in chat without a self-referen
 commit hash inside its own committed receipt.
 
 The VM uses a repo-specific **read-only deploy key** for cloning/fetching; no Mac
-GitHub token was copied. Repo-local commit identity matches the existing Mac project. `/srv/dl_binner/repo` is a clean `benchmark-planning` clone
-at the exact source-freeze SHA. Repo-local `core.sshCommand` pins GitHub host keys
+GitHub token was copied. Repo-local commit identity matches the existing Mac project.
+`/srv/dl_binner/repo` was cloned at the source-freeze SHA and subsequently synced
+cleanly to `bde9fbf49c035286cae713799d48d7d55a3d87a5` for desktop acceptance.
+Repo-local `core.sshCommand` pins GitHub host keys
 and this key. Linux push rights are not configured; later authorization can use
 a separately scoped choice. Keep environments under
 `/srv/dl_binner/experiments/e009/envs/`, data/tmp/runs separately from the checkout,
@@ -230,8 +232,7 @@ blocked by an account setting, return the non-secret error; do not switch to a
 metered API key. In the desktop app: **Settings → Connections → SSH → enable/add
 `dl-binner-gcp`**, then choose `/srv/dl_binner/repo`. Start a chat there and run only
 `pwd`, `git rev-parse HEAD`, `git status --short --branch`, and `uname -s`. Native
-app controls are unavailable in this session, so this final acceptance observation
-needs owner interaction.
+app controls are unavailable in this session, so the owner performed this app action.
 [Official SSH workflow](https://learn.chatgpt.com/docs/remote-connections#connect-to-an-ssh-host),
 [login](https://learn.chatgpt.com/docs/auth#login-on-headless-devices).
 
@@ -241,6 +242,44 @@ harmless shell command on Linux, and (2) a chat on the saved remote project runs
 A locally executed `ssh ...` or remote CLI `--version` alone is not verified app
 workflow. Record raw small outputs/commit/runtime identity; no scientific test.
 The next phase starts only after this actual connection and billing gate pass.
+
+**Observed acceptance, 2026-10-14 Copenhagen:** the owner returned
+`/srv/dl_binner/repo`, exact HEAD `bde9fbf49c035286cae713799d48d7d55a3d87a5`, clean
+`benchmark-planning...origin/benchmark-planning` and `Linux`. Independently inspected
+native session metadata identifies `Codex Desktop`, CLI 0.160.1 and that remote
+directory; the allowlisted four-command outputs agree. No chat messages or auth
+cache were collected. The first sandboxed calls failed with
+`bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted`; the desktop retry
+succeeded with escalation. Keep both observations: desktop access passed, while
+ordinary sandbox operation needed a host prerequisite repair.
+
+### Ubuntu sandbox prerequisite
+
+The native kernel log attributes the failure to Ubuntu 24.04's AppArmor user-namespace
+restriction. The official Codex documentation prescribes a system Bubblewrap and
+the distro's scoped `bwrap-userns-restrict` profile. This host now has
+`bubblewrap 0.9.0-1ubuntu0.3` and AppArmor tools/profiles
+`4.0.1really4.0.1-0ubuntu0.24.04.8`. The following OS setup ran once; reuse the healthy
+installation, and inspect any existing custom profile before changing it:
+
+```bash
+sudo apt-get update
+sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+  bubblewrap apparmor-profiles apparmor-utils
+sudo install -m 0644 /usr/share/apparmor/extra-profiles/bwrap-userns-restrict \
+  /etc/apparmor.d/bwrap-userns-restrict
+sudo apparmor_parser -r /etc/apparmor.d/bwrap-userns-restrict
+```
+
+The installed CLI's actual 0.160.1 contract is `codex sandbox -- COMMAND`, with no
+`linux` subcommand. Its normal sandbox ran the same harmless four commands with
+exit zero after this repair. `kernel.apparmor_restrict_unprivileged_userns` remains
+**1**; no global sandbox/kernel restriction was disabled. This is native CLI proof
+after repair, separate from the earlier actual desktop retry. The final sync
+restarts the host, clearing the previous app-server's helper selection.
+[Official Ubuntu prerequisite](https://learn.chatgpt.com/docs/sandboxing) and
+[installed-version sandbox implementation](https://github.com/openai/codex/blob/rust-v0.160.1/codex-rs/linux-sandbox/README.md)
+explain the system-helper selection and scoped profile.
 
 ## Private archive and retention
 
@@ -266,6 +305,14 @@ bucket-scoped Object Creator/Viewer, no project-wide role or JSON key.
 Default soft delete is seven days; no public principals, versioning or Autoclass.
 This backs up phase-1 setup evidence, not scientific outputs or authenticated app
 state. Source history is on private GitHub; existing scientific assets were not migrated.
+
+The separate acceptance checkpoint at `workspace/20261013T223943Z-acceptance/`
+is **5,858 bytes** compressed /19,836 logical archived bytes, eight allowlisted
+members, SHA256 `d6fc40d656b855e018091452faf433e4774ee2088a76c5760c2e06c9d9c9d0ca`.
+Mac upload and byte/SHA256 readback pass while the VM is stopped. It retains the
+actual desktop command metadata/outputs, repaired sandbox output, scoped OS
+prerequisite and the first provider stop/cost checkpoint. The full live Codex
+session, auth state and inbox are excluded. The initial archive is preserved.
 
 For accepted science retain final partitions/required checkpoints/evaluation,
 axes/masks/exclusions, compact logs/metrics/provenance and exact regeneration input
@@ -303,6 +350,25 @@ Record actual running elapsed time and projected compute/IP/disk/bucket cost;
 reported billing can lag and must be checked separately. Confirm what remains
 billable while stopped. The approved credit-expiry review is **by 2027-01-10**;
 no automatic billing-disable/data-destruction mechanism is assumed safe.
+
+**Recorded setup checkpoint:** the first provider-confirmed stop is
+2026-10-13 22:39:43.273 UTC (2026-10-14 Copenhagen); status `TERMINATED`, no external
+IP. Start-to-stop elapsed is **2,643.825 seconds /44.064 minutes**, or **2.93758
+allocated vCPU-hours**. At the consulted rates this is **$0.10210 VM/IP** plus
+about **$0.00624 gross disks over the same elapsed period**, excluding tax/FX,
+requests and any allowance discount. This is measured allocation priced at list
+rates, not an invoice or a newly displayed remaining-credit balance. Disk billing
+also continues during stopped time. A brief additional start synchronizes the
+final records and verifies persistence; its provider timestamps and aggregate
+allocation estimate are retained separately in the checksum-bound private
+`workspace/20261013T223943Z-acceptance/final-sync-stop.json` receipt, reported after
+the final stop. This avoids a committed record claiming its own Git hash.
+
+The installed sandbox prerequisite and UUID mount configuration are persistent
+OS settings. The source-sync restart checks the mount, exact clean Git HEAD,
+ChatGPT login status and normal CLI sandbox; it does not repeat a scientific
+runtime test. New GCP binner environments/native-scale execution remain unverified
+and belong to the authorized scientific phase.
 
 ## Next phase
 

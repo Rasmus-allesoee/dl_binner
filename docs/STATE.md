@@ -9,7 +9,7 @@ Updated: 2026-10-14. This is the single current handoff.
 [UCloud guidance](history/UCLOUD_OPERATIONS.md) and [E009 command](history/E009_UCLOUD_OPERATIONS.md)
 are archived provenance. No old evidence or UCloud files were deleted.
 
-**Phase 1 infrastructure passes; ChatGPT login passes; desktop app test is pending.**
+**Phase 1 accepted, including the actual desktop SSH project.**
 [CLOUD](CLOUD.md) owns exact access/operation commands and costs;
 [the receipt](evidence/gcp-workspace.json) binds live observations. The approved
 Iowa workspace is provisioned: regular `dl-binner-cpu`, 4 vCPU /16 GiB, pinned non-Pro
@@ -17,7 +17,12 @@ Ubuntu 24.04, preserved 30-GiB standard boot +50-GiB balanced work mounted at
 `/srv/dl_binner`, four-hour provider STOP per start, private Standard archive,
 OS Login and IAP-only SSH. Strict `ssh dl-binner-gcp` passes from the Mac;
 Linux reports four CPUs. Complete pinned Codex 0.160.1 is on the remote login PATH and authenticates with
-the owner's ChatGPT account; no API key is used.
+the owner's ChatGPT account; no API key is used. The owner-returned desktop commands
+and independently inspected native session outputs agree on `/srv/dl_binner/repo`,
+clean `benchmark-planning`, HEAD `bde9fbf49c035286cae713799d48d7d55a3d87a5` and Linux.
+The initial Ubuntu AppArmor/Bubblewrap failure is retained; documented OS
+prerequisites repaired the ordinary CLI sandbox with global protections still
+enabled. This distinguishes the desktop retry from the subsequent native CLI check.
 Private native-service-account upload/readback of 6,126 bytes passes byte/SHA256
 comparison; no credentials or scientific data were archived.
 
@@ -25,8 +30,9 @@ Source-freeze **`440911904e8342c2f3a27254f95caa51871cf706`** was normally pushed
 private `benchmark-planning` and cloned at that exact clean HEAD under
 `/srv/dl_binner/repo`. Main remains `5e54538d1799e8d2538621729400f33fbaf017b9`.
 Only a repository-scoped read-only deploy key is installed on Linux; later push
-rights are a separate choice. Final setup receipts will be normally pushed/synced
-without self-referential HEAD claims in their own JSON.
+rights are a separate choice. Final setup receipts are normally pushed/synced
+without self-referential HEAD claims in their own JSON; the exact final synchronized
+commit and stopped-state check are reported in chat.
 
 Owner supplied the live billing display on 2026-10-13: **kr1,973 remaining, kr0 used,
 expires 2027-01-12**, reported paid upgrade; APIs verify DKK/open billing and billed
@@ -37,20 +43,17 @@ gross, plus actual bucket bytes. Alerts are not caps. Future extra/unclear/uncov
 or beyond-credit spending still requires approval; the unavailable old UCloud
 balance is not GCP funding.
 
-**Exact next action:** owner completes CLOUD's desktop SSH project
-step, then runs harmless `pwd`/HEAD/status/`uname` in a remote-project chat. Ordinary
-SSH and CLI help are not this app-workflow proof. Agent records that observation,
-finishes source sync, stops unused compute and records elapsed/cost/stopped state.
-No binner/runtime/scientific tests are repeated for setup.
-
-**Do not inspect E009 v14 or acquire data during phase 1.** After actual connection:
-independently review the owner-reported successful v14 return without rerunning
+**Exact next action, in the following phase:** independently review the
+owner-reported successful E009 v14 return without rerunning
 accepted contracts; settle **10 versus 20 read samples** for one sample-0 assembly
 using representation, peak storage and monetary cost. Published multi-assembly
-results do not fix this choice. Freeze ordered axes/protocol/resources before a
+results do not fix this choice. The local ignored inbox still owns that return;
+it has not been inspected or migrated during phase 1. Freeze ordered
+axes/protocol/resources before a
 separately authorized bulk phase directly on GCP. No fits/scores, architecture
 comparisons, new seeds, main merge or publication follow automatically.
-Colab/Kaggle remain possible future options, not configured now.
+Start the stopped VM using CLOUD only when it is needed. No binner/runtime/scientific
+tests were repeated for setup. Colab/Kaggle remain possible future options, not configured now.
 
 ## Direction and completed work
 
