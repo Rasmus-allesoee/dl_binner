@@ -340,3 +340,67 @@ They are ceilings/planning history, not evidence of expenditure or authorization
   ]
 }
 ```
+
+## Superseded mandatory comparison planning, 2026-10-14
+
+The following E009 README text at `5fec4e1` preserved the older two-depth control
+wording and UCloud allocation-hour reservations. It is historical planning, not
+a current GCP budget or an authorized tool schedule. The later owner clarification
+changes E009 to reusable data and selectively justified improvement evidence;
+CompleteBin/COMEBin/SCGBinner full runs are deferred. Current [D013](../decisions/D013-first-comparative-benchmark.md)
+and [operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md) own that scope.
+
+## Question and informative comparisons
+
+How useful are our accepted raw and learned bins on a real read-derived
+human-associated assembly, compared with a small native-tool shortlist, and
+does the main deficit concern information, learned geometry or grouping?
+No prior result establishes a globally poor or strong binner. Measure the gap.
+
+Freeze our stable main source at `5e54538d1799e8d2538621729400f33fbaf017b9`
+(dev3; normal prototype merge `5bc824a9bf4b1ca4562acda10735a3fc6b54dc3d`).
+No model, fitted-transform procedure, training default or clusterer changes.
+Run one seed-11 target-specific fit with its matched raw control for each of:
+
+- TNF plus the same two explicitly observed mean-depth columns: primary product pair.
+- TNF alone: matched secondary pair, isolating the value of added depth within
+  our product. Absent depth is not fabricated zeros. These are diagnostic controls,
+  not product alternatives or a gate on learning/depth. Their cost is reported
+  separately and capped at 24 allocated core-hours within the 48-core-hour product budget.
+
+All four partitions retain the same complete input DNA, exclusions/masks and
+unassigned outcomes. Raw versus learned isolates the learning pipeline under
+fixed inputs/geometry/clustering, including its saved transforms; it is not a
+controlled comparison of every embedding normalization decision. Depth versus
+sequence changes the declared information contract, keeping scientific defaults.
+
+External shortlist: **SemiBin2 short-read self-supervised, MetaCAT core CPU,
+SCGBinner, COMEBin native full 120-candidate grid** and **CompleteBin modified
+max-50**, subject to Linux and actual-scale affordability admission before fits.
+One configuration/attempt per tool. Preserve native schedules/eligibility/selection
+except the explicitly named CompleteBin cap. No replacement list or automatic retry.
+
+COMEBin's successful E001 stages cost 39.6462 allocated core-hours (known recovery
+sequence lower bound 58.1075), with high seed-11 R95; a whole-tool comparison on
+this same new assembly is valuable despite mechanism overlap. Those results and
+failed attempts remain accepted, with no replay. Reserve 192 hours for its new
+native run/grid; this is a conservative cap, not a size-scaled runtime forecast.
+
+CompleteBin's current data-dependent schedule uses a 115,000 effective-contig
+threshold, base 35 epochs (39 at N50 ≥1536), and can otherwise reach 200 epochs.
+The isolated E009 source changes only that maximum to **50**. Training loops over
+resolved epochs; it does not stop on validation-loss stabilization. The separate
+150-epoch extreme-overfit safety valve cannot increase our 50 cap. Automatic
+pretraining decisions use the capped epoch count, so this modification can also
+change that decision; retain the outcome. Leiden's adaptive convergence is a
+separate stop. This is a modified configuration, **not upstream parity**.
+
+DCVBin's official 1.657-GB continued-pretraining payload is available. Its actual
+basic wrapper selects one BAM, constructs `VAE(nsamples=1)` with unconditional
+CUDA and 200 epochs; the encoder alone has a CPU fallback and a 5,000-token cap,
+with ≥2-kb eligibility. The enhanced source also calls CUDA directly. A tested
+CPU/multi-depth/continued-pretraining adaptation would be substantial extra tool
+implementation, so **DCVBin is excluded from E009**, rather than treating coverage
+as a disadvantage or claiming its weights are missing. LorBin remains deferred
+for long-read/model contracts. See the [targeted reconciliation](../../docs/evidence/2026-10-09-e009-contract-reconciliation.md)
+and [asset inspection](../../docs/evidence/2026-10-09-e009-asset-inspection.json).

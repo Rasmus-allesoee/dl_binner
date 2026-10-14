@@ -250,3 +250,19 @@ prospective representation/storage tradeoff, not proof of an optimal sample coun
 The locally tested GCP data stage and [storage audit](../evidence/2026-10-14-completebin-storage.md)
 are preparation only. Data/truth population, new-host scale/cost and all full-fit
 quality questions remain open; Q001/Q003 and H001/E001 outcomes are unchanged.
+
+2026-10-14 later owner clarification: [PROJECT_INTENT](../../PROJECT_INTENT.md)
+now prioritizes improving our own high-performing, potentially SOTA binner;
+software acceptance of the simple prototype is a milestone, not competitive
+success. [D013](../decisions/D013-first-comparative-benchmark.md) records why an
+expensive expected ranking adds little architecture evidence, and replaces the
+mandatory five-tool campaign with reusable full assembly/ten-depth data, selective
+native references and one prospectively justified mechanism test. CompleteBin,
+COMEBin's full grid and SCGBinner full runs are deferred; SemiBin2 is a later first
+candidate and MetaCAT core conditional on a grouping question. No fit/score is
+authorized in the [data-only phase](../../experiments/E009-competitive-benchmark/gcp-data-observed.json).
+Data/results inspected to choose changes remain development evidence; one weak
+prototype/dataset cannot decide depth/sequence/taxonomy product membership.
+Additional prospectively selected data are needed to confirm improvements, with
+separate untouched evaluation for broad/SOTA claims. Q001/Q003/Q004/Q005 and
+H001/E001 outcomes remain unchanged; no architecture is selected in this phase.

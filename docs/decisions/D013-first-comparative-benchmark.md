@@ -1,12 +1,14 @@
-# D013: one bounded competitive assembly baseline before improvements
+# D013: reusable assembly data and comparisons that inform improvements
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
-Status: **accepted preparation decision**; community scientific execution unstarted.
+Status: **accepted, amended by the owner's performance/cost clarification**.
 [D014](D014-google-cloud-workspace.md) selects GCP after SDU access deactivation.
 V10/v14 tiny UCloud contracts are accepted; no successful work is repeated.
-The 2026-10-14 owner task authorizes local preparation/checks and a commit only.
-It supersedes the two-depth choice with **ten coverage samples for one assembly**;
-no start/provisioning/bulk work, fits/scores or publication is authorized now.
+The later 2026-10-14 owner message authorizes the prepared **data-only phase at
+5fec4e1d1700c64c4bdd9945bad4e116ade73c57**, subject to live credit/price/quota checks.
+It supersedes the all-shortlist execution plan: **no binner fits or E009 scores
+are authorized**. CompleteBin's full run is deferred. The ten-coverage, one-assembly
+choice and immutable prototype source remain.
 [Operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md) owns exact
 axes/resources/costs and the following execution prompt.
 
@@ -15,8 +17,18 @@ axes/resources/costs and the following execution prompt.
 The usable first CPU prototype is merged and tested, but E003/E004 are controlled
 development fragments and E005 is a four-genome development GSA derivative.
 Independent read-derived whole-reference/binning quality and assembly-scale costs
-remain unknown. We need a useful native-tool gap assessment before attributing
-performance to fashionable architectures or copying a complex pipeline.
+remain unknown. The owner wants a high-performing, potentially SOTA binner, and
+describes the current implementation as a poor prototype. That is a development
+assessment, not a newly measured universal ranking. Software acceptance is a
+completed milestone; competitive binning performance remains the goal.
+
+The concern about paying to establish an expected mature-tool advantage is valid.
+Thesis results, published benchmarks and reviewed source already establish credible
+alternatives. An expensive ranking alone would supply little causal architecture
+evidence. E009 must add **assembly-specific, reusable data and diagnostic evidence
+that can change an improvement decision**, without becoming final evaluation or
+a compulsory tool campaign before development. Reusable reads/assembly/BAMs/depth
+are valuable even when some or all external fits are deferred.
 
 Reuse the completed review/source audit and accepted E001–E008 records.
 [The October focused study](../evidence/2026-10-08-competitive-binner-study.md)
@@ -24,8 +36,10 @@ separates inputs/pretraining, learning objective, network architecture and
 grouping/refinement for all seven owner-ranked tools. It identifies actual sequence
 views/negative handling, biological grouping and sequence context as serious
 alternatives, with source and evidence limits explicit. A tool ranking is not a
-causal component experiment. Our binner's inferiority is a hypothesis to measure,
-not a software acceptance finding or universal family conclusion.
+causal component experiment. The owner expects a mature-tool advantage over the
+prototype; quantifying it is useful only when retained diagnostics can change an
+improvement decision. Software acceptance and one comparison do not establish
+competitive performance or a universal architecture/feature-family conclusion.
 
 ## Choice and alternatives
 
@@ -55,31 +69,37 @@ CAMISIM remains a targeted mechanism instrument after a real observed deficit,
 not extra setup for a question public reads can answer. A GSA-only comparison would
 be cheaper but would repeat the main E005 realism limitation.
 
-Preserve dev3 main as immutable baseline. Run matched raw/learned **TNF+ten-depth**
-and **TNF-only** pairs with unchanged settings/seed 11. Learned TNF plus measured
-depth is the primary product. Raw and sequence-only runs are inexpensive diagnostic
-controls, not product alternatives or another architecture gate. Their separate
-cost ceiling is 16 core-hours. Execution shortlist: **SemiBin2, MetaCAT core,
-SCGBinner, COMEBin**, plus **CompleteBin with a modified maximum of 50 epochs**;
-all need measured Linux/scale admission before full fitting. No replacement list.
-This balances a mature short-read reference, distinct non-neural grouping and the
-owner's strongest biological-constraint interest. CompleteBin retains the thesis
-priority, with honest CPU feasibility instead of assuming that CPU availability
-or thesis GPU timing proves affordability.
+Preserve dev3 main as the immutable comparator. After data/truth admission and
+separate budget approval, the first useful fits are unchanged seed-11 raw/learned
+**TNF+ten-depth** and **TNF-only** controls. They can reveal loss introduced by this
+prototype's learning/normalization/grouping, fragmentation despite locally useful
+features, and the contribution of these ten coverage columns **in this setting**.
+They cannot decide whether depth, sequence or taxonomy belongs in future versions.
+Keep full short/noise/excluded DNA and per-length/per-origin diagnostics.
 
-COMEBin's directly measured E001 quality justifies a new whole-tool comparison on
-the same assembly; overlapping mechanisms do not make that comparison redundant.
-Reserve its full 120-candidate grid, without repeating E001. CompleteBin's epoch
-cap is an owner-requested scientific configuration change, not upstream parity;
-retain native automatic pretraining/eligibility decisions and any lower safety cap.
+Later native runs are **recommendations, not an execution entitlement**:
+
+| Later run | Incremental evidence and decision it can inform | Priority / cost boundary |
+| --- | --- | --- |
+| SemiBin2, native short-read self-supervised | One credible practical reference on the identical read-derived assembly/BAMs; retain whole/split features, embeddings and pre/post-reclustering outputs where emitted. Shows which genomes/lengths a mature pipeline can recover that our fixed prototype misses; useful for choosing a targeted view or grouping investigation. A win alone does not identify its cause. | First external candidate, after native full-schedule cost admission; one configuration/seed, no optional taxonomy workflow. Defer if the affordable useful evidence can already be obtained from our diagnostics. |
+| MetaCAT core CPU | Marker-seeded, probabilistic grouping without a neural contig encoder. Retained seed availability, affinities and partitions can test whether a substantial gap persists despite the same composition/depth information, making grouping a concrete next candidate. | Conditional second candidate if fragmented/mixed grouping is the observed decision and a full-core budget fits. No CheckM2/GTDB-Tk/host-association extras. Prefer one matched fixed-encoder marker-refinement test when it answers the question more directly. |
+| SCGBinner | Biologically motivated hard-negative training, six fragment views and downstream marker selection. Marker availability on a short-read assembly is an important prerequisite; its full result changes several components together. | Defer full 200-epoch run until a specific negative-construction question survives cheaper marker/source diagnostics and a matched test. Do not run merely because its tiny contract passed. |
+| COMEBin native 120-candidate grid | New-assembly recovery patterns and retained feature/embedding/selection evidence, if a multiview-versus-grouping uncertainty cannot be resolved with accepted E001 evidence or a bounded own-method ablation. | Defer the full grid now. E001 already establishes relevant recovery/representation/selection tradeoffs; its old 192-core-hour reservation is not a GCP budget. No automatic cheaper grid or schedule substitution. |
+| CompleteBin | Context-TNF, optional taxonomy-pretrained information, false-negative handling and staged refinement remain valuable design ideas; source studies and matched components can explore them without reproducing its dense storage footprint. | **Defer the full max-50 run** until our method is more promising or a precise missing observation justifies it, with separately measured CPU/RAM/peak-storage admission. Fifty epochs do not solve preprocessing/candidate storage. |
+
+The earlier five-tool shortlist is preserved in Git history at `5fec4e1` and the
+dated source reviews; it is superseded as a compulsory execution plan. Its source/
+payload locks and accepted tiny receipts remain valid provenance. CompleteBin's
+stored max-50 patch is retained as a named modified configuration, not native parity
+or authorization to execute. No new native tool is silently substituted on failure.
 DCVBin's payload is available, but its basic VAE runner unconditionally requests
 CUDA, takes one BAM and defaults to 200 VAE epochs; enhanced training is a separate
 GPU-oriented recipe. A CPU/multi-depth repair would be substantial additional tool
 development here, so **DCVBin does not join E009**. Coverage is useful input and
 not a disadvantage. Frozen-GLM comparison remains planned separately. LorBin adds
 long-read/quality-model dependencies. They remain studied, not globally inferior.
-VAMB/MetaBAT2 would be cheap familiar controls but add less new mechanism evidence
-than this shortlist; they do not replace the newer tools merely for convenience.
+VAMB/MetaBAT2 remain familiar prior controls. Do not pay to repeat their known
+ranking unless an actual input/cost decision makes an inexpensive new anchor useful.
 
 ## Cost and decision limits
 
@@ -131,12 +151,20 @@ accepted without replay. The new acquisition/assembly/ten-sample depth/provision
 alignment-truth DAG is locally tested on actual tiny DNA/native binaries, with
 partial/completed resume and byte-drift refusal. That does not certify the newly
 solved GCP runtime, full workload, genome grouping or cellular truth population.
-Commit code/protocol first; the owner must approve the prospective resource/
-retention cost and credit check before direct VM execution. Data evidence/truth
-review is the next assessment boundary; no full fits, scores, new seeds or
-architecture comparison follows automatically. Main remains the immutable control.
+The executable prepared source is already committed and the owner has authorized
+its bounded data phase. Live credit/price/resource admission and an effective disk
+quota remain prerequisites; [operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md)
+owns the actual attempt status. Data evidence/truth review is the next assessment
+boundary; no full fits, scores, new seeds or architecture change follows
+automatically. Main remains the immutable control.
 
 Owner direction enters a second development chapter: the stable prototype is
-the control; comparative evidence should select incremental improvements. Data
-inspected for those choices become development data. Later independent validation,
+the control; comparative evidence should select incremental improvements. There is
+no mandatory "finish E009" gate before implementation. Require a prospective
+mechanism question and keep/modify/abandon criteria, then test the one changed
+component against unchanged inputs, learning/grouping where applicable. Do not
+choose several changes from a native win. E009 is development data after inspection;
+confirm useful changes on prospectively selected additional communities/assemblies
+and preserve separate, untouched final validation for broad performance/SOTA claims.
+No architecture or feature family is rejected from this one prototype/dataset.
 GPU/Conda distribution and publication remain separate tasks.

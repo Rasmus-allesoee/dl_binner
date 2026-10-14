@@ -1,14 +1,14 @@
 {
   "record": "E009",
   "date": "2026-10-14",
-  "status": "v10/v14 tiny UCloud contracts accepted; ten-sample GCP data stage prepared locally; community science unstarted",
+  "status": "data-only GCP phase authorized and launched at prepared commit; binner fits/scores unapproved",
   "scientific_outcome": "not assessed",
   "execution_ready": false,
-  "authorized_current_task": "preparation, local fixture tests, read-only cloud metadata and commit only; no VM start/provisioning/bulk execution",
+  "authorized_current_task": "credit/price/quota checks; existing VM8/32 and work300GiB/STOP25h; serial full ten-sample data phase at 5fec4e1; no binner fit/score/architecture change or automatic retry",
   "dataset": {
     "name": "CAMI III Toy Longitudinal Human Gut",
     "read_modality": "short",
-    "role": "first independent sample/assembly assessment; development after inspection, genome independence unresolved",
+    "role": "read-derived reusable development assembly with cross-subject coverage; no final evaluation or independent-genome claim",
     "subject": "S1",
     "assembly_sample": 0,
     "depth_samples": [
@@ -80,24 +80,35 @@
     "diagnostics_are_product_alternatives": false
   },
   "external_tools": {
-    "core": [
-      "SemiBin2 short-read self-supervised",
-      "MetaCAT core CPU",
-      "SCGBinner native",
-      "COMEBin native 120-candidate grid"
-    ],
-    "conditional": [
-      "CompleteBin E009 max-50 modified configuration"
-    ],
+    "core": [],
+    "conditional": [],
     "deferred": [
       "DCVBin CPU/CPT/pair-depth adaptation exceeds bounded preparation",
-      "LorBin long-read/models"
+      "LorBin long-read/models",
+      "CompleteBin full E009 max-50: performance/cost value of information does not justify current full run",
+      "COMEBin native 120-candidate grid: reuse E001/source evidence unless a new-assembly decision justifies full cost",
+      "SCGBinner full 200 epochs: first establish short-read marker availability and a hard-negative question"
     ],
     "configs_per_tool": 1,
-    "native_schedule_shortening": "CompleteBin maximum 50 epochs only; named modified configuration",
+    "native_schedule_shortening": "none executed; CompleteBin max-50 patch retained only as deferred locked provenance",
     "admission_before_scoring": true,
     "exact_runtime_payload_locks": "native-lock.json, runtime-baseline.json, utilities-linux-lock.json",
-    "replacement_on_failure": false
+    "replacement_on_failure": false,
+    "superseded_20261014_shortlist": {
+      "core": [
+        "SemiBin2 short-read self-supervised",
+        "MetaCAT core CPU",
+        "SCGBinner native",
+        "COMEBin native 120-candidate grid"
+      ],
+      "conditional": [
+        "CompleteBin E009 max-50 modified configuration"
+      ],
+      "source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57"
+    },
+    "recommended_later_first": "SemiBin2 native short-read self-supervised, only after a decision-specific full-schedule cost approval",
+    "recommended_later_conditional": "MetaCAT core CPU if retained seed/affinity/grouping evidence can change a specific refinement decision; prefer matched own-method test when more direct",
+    "owner_authorized_fits": []
   },
   "evaluation": {
     "truth_inputs_separate": true,
@@ -180,14 +191,17 @@
       "phase_spend_envelope_usd_proposed": 20,
       "budget_assumptions": "25h VM/IP plus <=7d 300GiB work/30GiB boot retention (~$14.01 total), compact archive/operations/reserve; no allowances/tax/FX included; localized credit quote required",
       "includes_setup_hashing_failures_and_child_work": true,
-      "approved_for_execution": false,
+      "approved_for_execution": true,
       "required_quota_increase": {
         "SSD_TOTAL_GB": {
           "current": 250,
           "needed": 300,
-          "submitted": false
+          "submitted": true,
+          "granted": 300,
+          "case_id": "a11cf91a-b76b-4c95-9f79-7dc7538f3611"
         }
-      }
+      },
+      "provider": "GCP Iowa regular e2-standard-8; credit/price gate passed"
     },
     "fit_or_score_monetary_budget": "unapproved; reassess after measured data-stage outputs, CompleteBin storage/RAM and full-schedule affordability",
     "eligible_contig_scale_stop": 100000,
@@ -204,7 +218,7 @@
     "auto_increase_or_retry": false,
     "historical_ucloud_budget": "docs/history/E009_UCLOUD_OPERATIONS.md#superseded-two-depth-resource-protocol"
   },
-  "next": "owner review of prospective resource/retention spend and fresh trial-credit eligibility; explicit later direct GCP acquisition/assembly/depth/provisional-truth phase only",
+  "next": "collect and independently review bounded data-phase outputs/costs; no fits/scores; D013 owns selective later tool recommendations",
   "unexecuted": [
     "GCP data runtime/native-scale execution",
     "bulk reads/acquisition/assembly/depth/truth",
@@ -240,6 +254,17 @@
       "exact positive sample-0 read-origin/source grouping",
       "cellular taxonomy and complete-reference target denominator",
       "new host runtime, actual scale/resources and ordered native BAM/depth axes"
-    ]
+    ],
+    "executed_source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+    "actual_receipt": "gcp-data-observed.json"
+  },
+  "value_of_information": {
+    "purpose": "improve our own high-performing, potentially SOTA binner",
+    "current_implementation": "accepted simple software prototype and immutable comparator; competitive performance not established",
+    "data_reusable_independently_of_native_fits": true,
+    "complete_shortlist_is_implementation_gate": false,
+    "one_dataset_cannot_select_or_reject_product_feature_families": true,
+    "mechanism_tests": "one prospectively justified component, matched immutable comparator and additional prospectively selected development/validation data",
+    "decision": "docs/decisions/D013-first-comparative-benchmark.md"
   }
 }

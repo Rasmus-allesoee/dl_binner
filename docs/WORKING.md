@@ -95,6 +95,14 @@ exit status, byte identities and monetary/allocation accounting. Use progress-aw
 stall detection; one agreed overall cost ceiling must match measured workload.
 A snapshot/copy is not needed merely because UCloud needed one.
 
+Use the owner's current high-performance purpose in PROJECT_INTENT. The accepted
+prototype is a comparator, not a completed quality target. A native tool campaign
+needs incremental evidence for a named improvement decision, beyond retained
+thesis/papers/code; a tool win is not a causal component test. Keep reusable data
+preparation, every later fit and final evaluation as separate scopes. One inspected
+assembly cannot determine product membership of depth/sequence/taxonomy; retain
+additional prospective data to confirm improvements and independent broad claims.
+
 Use public benchmarks and selectively reused thesis assets. Mark development data
 and controlled derivatives honestly; standard evaluators need tested truth/axis
 contracts. Portable fixtures, native runtime smoke and biological experiments

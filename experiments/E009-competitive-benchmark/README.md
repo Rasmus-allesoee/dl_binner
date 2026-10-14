@@ -9,65 +9,48 @@ The current design uses **one full sample-0 assembly and ten full coverage sourc
 first listed sample of every corrected subject: 0,2,3,4,6,9,10,11,14,17.
 [GCP operations](OPERATIONS.md) owns the prepared data-only DAG, cost/retention
 proposal, remaining truth-population admission and exact following prompt.
-No VM start/provisioning/bulk execution is authorized by this preparation.
+The later owner message authorizes the data-only phase at `5fec4e1`, subject to
+verified credits/prices and effective quota. [The phase receipt](gcp-data-observed.json)
+owns what actually ran; all fits/scores remain unapproved.
 [D014](../../docs/decisions/D014-google-cloud-workspace.md) supersedes UCloud
 operating paths/budgets; the [old handoff](../../docs/history/E009_UCLOUD_OPERATIONS.md)
 retains their history. Old attempt records are provenance, not current commands.
 
 ## Question and informative comparisons
 
-How useful are our accepted raw and learned bins on a real read-derived
-human-associated assembly, compared with a small native-tool shortlist, and
-does the main deficit concern information, learned geometry or grouping?
-No prior result establishes a globally poor or strong binner. Measure the gap.
+What does a full read-derived human-gut assembly reveal about actionable failures
+in our simple prototype, and which bounded change could improve our own method?
+E009 is development evidence and reusable data, not final product evaluation.
+[D013](../../docs/decisions/D013-first-comparative-benchmark.md) records the owner's
+performance/cost concern, prior evidence, serious alternatives and the revised
+value-of-information decisions. Expensive confirmation of an expected mature-tool
+advantage is insufficient justification for a campaign.
 
 Freeze our stable main source at `5e54538d1799e8d2538621729400f33fbaf017b9`
 (dev3; normal prototype merge `5bc824a9bf4b1ca4562acda10735a3fc6b54dc3d`).
-No model, fitted-transform procedure, training default or clusterer changes.
-Run one seed-11 target-specific fit with its matched raw control for each of:
+This phase changes no model, transforms, training defaults, clusterer or seed.
+After admitted data/truth and separate cost approval, unchanged seed-11 learned/raw
+TNF+ten-depth and TNF-only pairs are useful diagnostic controls. Retain complete
+DNA, short/excluded/noise outcomes and stage intermediates. Their results apply
+to these representations/objective/grouping/data, not every possible use of depth,
+sequence or future taxonomy. A whole-tool result cannot isolate its causal component.
 
-- TNF plus the same two explicitly observed mean-depth columns: primary product pair.
-- TNF alone: matched secondary pair, isolating the value of added depth within
-  our product. Absent depth is not fabricated zeros. These are diagnostic controls,
-  not product alternatives or a gate on learning/depth. Their cost is reported
-  separately and capped at 24 allocated core-hours within the 48-core-hour product budget.
+Recommend at most **SemiBin2** as the first later external native reference, after
+cost admission, with useful intermediate evidence. **MetaCAT core CPU** is a
+conditional second reference if marker-seeded grouping is the concrete unresolved
+decision; a matched own-method grouping test may be more informative. **Defer full
+SCGBinner, COMEBin's 120-candidate grid and CompleteBin**, retaining their accepted
+tiny contracts, code/architecture evidence and payload locks. CompleteBin's max-50
+configuration remains stored provenance; its full run needs a specific future
+question and separate CPU/RAM/storage/spending approval. No binner run is authorized
+by this data phase, and no entire shortlist must finish before improvements.
 
-All four partitions retain the same complete input DNA, exclusions/masks and
-unassigned outcomes. Raw versus learned isolates the learning pipeline under
-fixed inputs/geometry/clustering, including its saved transforms; it is not a
-controlled comparison of every embedding normalization decision. Depth versus
-sequence changes the declared information contract, keeping scientific defaults.
-
-External shortlist: **SemiBin2 short-read self-supervised, MetaCAT core CPU,
-SCGBinner, COMEBin native full 120-candidate grid** and **CompleteBin modified
-max-50**, subject to Linux and actual-scale affordability admission before fits.
-One configuration/attempt per tool. Preserve native schedules/eligibility/selection
-except the explicitly named CompleteBin cap. No replacement list or automatic retry.
-
-COMEBin's successful E001 stages cost 39.6462 allocated core-hours (known recovery
-sequence lower bound 58.1075), with high seed-11 R95; a whole-tool comparison on
-this same new assembly is valuable despite mechanism overlap. Those results and
-failed attempts remain accepted, with no replay. Reserve 192 hours for its new
-native run/grid; this is a conservative cap, not a size-scaled runtime forecast.
-
-CompleteBin's current data-dependent schedule uses a 115,000 effective-contig
-threshold, base 35 epochs (39 at N50 ≥1536), and can otherwise reach 200 epochs.
-The isolated E009 source changes only that maximum to **50**. Training loops over
-resolved epochs; it does not stop on validation-loss stabilization. The separate
-150-epoch extreme-overfit safety valve cannot increase our 50 cap. Automatic
-pretraining decisions use the capped epoch count, so this modification can also
-change that decision; retain the outcome. Leiden's adaptive convergence is a
-separate stop. This is a modified configuration, **not upstream parity**.
-
-DCVBin's official 1.657-GB continued-pretraining payload is available. Its actual
-basic wrapper selects one BAM, constructs `VAE(nsamples=1)` with unconditional
-CUDA and 200 epochs; the encoder alone has a CPU fallback and a 5,000-token cap,
-with ≥2-kb eligibility. The enhanced source also calls CUDA directly. A tested
-CPU/multi-depth/continued-pretraining adaptation would be substantial extra tool
-implementation, so **DCVBin is excluded from E009**, rather than treating coverage
-as a disadvantage or claiming its weights are missing. LorBin remains deferred
-for long-read/model contracts. See the [targeted reconciliation](../../docs/evidence/2026-10-09-e009-contract-reconciliation.md)
-and [asset inspection](../../docs/evidence/2026-10-09-e009-asset-inspection.json).
+The older mandatory shortlist, two-depth wording and allocation-hour reservations
+are [historical](../../docs/history/E009_UCLOUD_OPERATIONS.md#superseded-mandatory-comparison-planning-2026-10-14).
+Keep source/payload/runtime receipts unchanged; accepting a contract is not an
+entitlement to fit that tool on this assembly. Select one mechanism with prospective
+keep/modify/abandon criteria, preserve the immutable control, and confirm promising
+changes on prospectively chosen additional data before broad/SOTA claims.
 
 ## Data and immutable axes
 
@@ -240,9 +223,9 @@ observed rate and ambiguous-pair status. Do not interpret correlation as causati
 | --- | --- | --- |
 | Learning loses to matched raw, with lower neighbor quality | Actual sequence-view positives or one false-negative treatment, keeping grouping fixed | Native grouping rescues both equally; apparent gain only increases contamination |
 | Good same-origin neighborhoods, mixed/fragmented native bins or large assembly-conditional loss | One marker-guided grouping/refinement ablation on retained embeddings | Source ambiguity/assembly loss dominates; no truth-free selector can recover the gap |
-| Sequence-only poor, both depth arms materially better | Retain/develop explicit abundance integration and assess its cost | Depth zeros/ambiguity explain effects; two time points do not supply useful separation |
+| Sequence-only poor, both depth arms materially better | Investigate this representation's use of the ten cross-subject coverage columns; preserve other depth designs as alternatives | Depth zeros/mapping ambiguity or prototype transforms explain effects; these columns may not provide separation |
 | Short-contig sequence gap persists while long contigs work | Planned frozen GLM/head versus TNF/head versus hybrid comparison on matched inputs/objective | Gains disappear under common grouping or come only from reference overlap |
-| CompleteBin/SCGBinner succeeds while matched controls fail | Inspect its actual pretraining/marker/view/selection behavior, then isolate one plausible component | Native recipe changed inputs, eligibility or refinement; a tool win alone does not identify its cause |
+| A later, separately justified native tool succeeds where matched controls fail | Inspect retained input/embedding/marker/selection evidence, then isolate one plausible component | Native recipe changed inputs, eligibility or refinement; a tool win alone does not identify its cause |
 
 Rank candidate changes by confirmed recovery at fixed purity, harm to other length
 strata, avoidable error coverage and measured resource cost. Do not tune to E009
@@ -252,8 +235,8 @@ separately frozen task; the three-way GLM study remains planned, not run here.
 ## CPU, storage, execution and stopping
 
 Current resources/costs/credit checks and commands live in [Operations](OPERATIONS.md)
-and [CLOUD](../../docs/CLOUD.md), with a proposed 8-vCPU/32-GiB, 300-GiB disk,
-24-hour cumulative data-stage clock and separate approval. The retired 700-hour
+and [CLOUD](../../docs/CLOUD.md), with owner-authorized 8-vCPU/32-GiB, 300-GiB disk,
+24-hour cumulative data-stage clock subject to credit/quota admission. The retired 700-hour
 UCloud plan, 1,980 old balance, Home/shared quota and 16/48 allocation are
 [historical](../../docs/history/E009_UCLOUD_OPERATIONS.md#superseded-two-depth-resource-protocol),
 not GCP funding or authorization. No full-fit monetary schedule is approved.

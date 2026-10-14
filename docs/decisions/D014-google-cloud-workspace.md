@@ -1,6 +1,6 @@
 # D014: Google Cloud as the connected Linux research workspace
 
-Date: 2026-10-13; preparation amendment: 2026-10-14; acceptance: 2026-10-14 Copenhagen. Status: **accepted; phase-1 infrastructure, private backup and actual Codex desktop SSH project verified**.
+Date: 2026-10-13; preparation/data-phase amendments: 2026-10-14. Status: **accepted; phase-1 infrastructure verified, later bounded data phase authorized**.
 
 ## Problem and decision
 
@@ -88,4 +88,38 @@ Revisit size/provider after measured workflow needs or credit constraints, not a
 an architecture gate. No accepted science is repeated to migrate infrastructure.
 
 Owner-approved storage/cost exposure on 2026-10-13 includes an expiry review by
-2027-01-10; no extra scientific/GPU/cloud service spend is authorized by it.
+2027-01-10; that original setup did not authorize science.
+
+## Later data-phase authorization and resource admission, 2026-10-14
+
+The later owner message authorizes the exact prepared `5fec4e1` data-only phase,
+with one full sample-0 assembly/ten BAMs/depth/provisional truth. It explicitly
+excludes binner fits, E009 scores and model changes, and asks that comparisons
+serve improvement of our high-performing binner rather than a final ranking of
+the weak prototype. [D013](D013-first-comparative-benchmark.md) defers CompleteBin
+and selects later runs by incremental decision value, without a mandatory campaign.
+
+Live supported Chrome/API admission in [CLOUD](../CLOUD.md#live-data-phase-credit-gate-2026-10-14)
+now verifies paid billing, DKK1,972.04 available upgraded Free Trial credit through
+2027-01-12, current DKK SKUs, ordinary resource eligibility and explicit billing
+lag. Only this project is linked; existing CPU usage was zero. The requested
+SSD-backed disk quota **250→300 GiB** is effective in the API, case
+`a11cf91a-b76b-4c95-9f79-7dc7538f3611`. No extra service/CPU quota was needed.
+
+Reuse the same Iowa VM at **8 CPU/32 GiB**, work disk **300 GiB** and existing ext4
+expanded without formatting; set **25-hour STOP before start**. The original
+**24-hour cumulative setup/QA/data clock**, **25-GiB reserve** and **$20 gross
+run/seven-day envelope** remain. The 300-GiB estimate contains no CompleteBin
+files: full read/archive/BAM/source data and serial scratch plus reserve justify
+it; 250 would save only ~$1.15 in seven days. Ongoing stopped boot/work is
+$31.20/month gross (~DKK205.24 at the fresh quote); review by **2026-10-21**.
+No automatic growth, retry, extension, filtering, unsafe shrinking or card billing.
+
+The prepared Mac branch was normally pushed and the VM clone stays clean at exact
+5fec4e1 with its read-only key. A complete independent pinned data runtime and
+the actual tiny changed-driver/DAG Linux contracts passed; setup/QA time counts
+in the cumulative allowance. No accepted five-binner/scientific stage was replayed.
+[The actual phase receipt](../../experiments/E009-competitive-benchmark/gcp-data-observed.json)
+owns final execution/status/cost/storage; this decision does not infer completion
+or admitted truth from a launch. Stop compute after collection and preserve compact
+checksum/readback evidence. Full-fit admission remains a separate future choice.

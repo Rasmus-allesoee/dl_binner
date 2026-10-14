@@ -183,12 +183,22 @@ Use public community benchmarks alongside question-specific simulations. Keep un
 
 ## Planning philosophy
 
-Owner direction, 2026-09-29: prioritize a usable first deep-learning binner and
-learning through implementation. Publication of a paper, novelty and SOTA are
-optional outcomes, not implementation gates. Bound investigations by the concrete
-product/design decision they inform; reuse accepted evidence and avoid expanding
-experiments by default. Keep correctness, provenance and honest claim limits.
-See PROJECT_INTENT.md and D010 for the current direction.
+Owner direction, 2026-10-14: improve our own binner toward high performance,
+potentially SOTA. The accepted simple prototype is a software milestone and
+immutable comparator, not the completed performance goal. D010 preserves the
+earlier bounded first-product direction. Publication/novelty and a SOTA claim
+remain optional and need evidence. Bound investigations by the improvement
+decision they inform; reuse thesis, benchmark, source-review and accepted project
+evidence. Do not require a complete mature-tool campaign before improving our
+method. Data preparation and each later fit are separate authorization scopes.
+See PROJECT_INTENT.md and D013 for the current direction.
+
+Before an expensive comparison, name its incremental evidence and the decision it
+can change; consider cheaper diagnostics or a matched mechanism test. Preserve
+intermediate evidence needed to distinguish information, representation and
+grouping failures. One weak prototype and one assembly cannot rule depth, sequence
+or taxonomy into/out of the product. Data used to choose improvements are
+development data; confirm improvements on prospectively defined additional data.
 
 The required first-architecture review and first prototype are already accepted;
 STATE points to their scoped records. For a new unresolved design decision, use a
@@ -419,7 +429,9 @@ Be willing to say that an old idea is no longer good.
 
 The objective is not to satisfy old plans.
 
-The objective is a usable, reproducible metagenomic binner with scientifically defensible claims. Further quality, novelty and publication are optional improvements.
+The objective is our own high-performing, usable and reproducible metagenomic
+binner with scientifically defensible claims. The current prototype is a starting
+point; novelty/publication and a SOTA claim are separate evidence-dependent goals.
 
 ## Git and GitHub
 

@@ -12,10 +12,14 @@ and the normal installed CLI sandbox passes.** See the
 ## Phase boundary and account verification
 
 The completed phase 1 established a CPU Linux workspace, private backup and actual
-Codex SSH access; it excluded v14 review and science. The 2026-10-14 follow-up
-authorizes **local v14/data-stage preparation and a commit only**. V14 is now
-accepted; no VM start/provisioning, bulk acquisition, fit or quality score is
-authorized by the current task. The owner's SDU login is deactivated;
+Codex SSH access; it excluded v14 review and science. The first 2026-10-14 follow-up
+accepted v14 and prepared the data stage locally. The **later owner message
+authorizes the data-only phase at `5fec4e1`**, conditional on live credit/price/quota
+admission: one full sample-0 assembly and ten ordered coverage sources. No binner
+fit, score or architecture change is authorized. [D013](decisions/D013-first-comparative-benchmark.md)
+replaces the mandatory shortlist with decisions that improve our own binner and
+defers CompleteBin. [The phase receipt](../experiments/E009-competitive-benchmark/gcp-data-observed.json)
+owns actual resource/execution outcomes. The owner's SDU login is deactivated;
 UCloud files are reported intact but inaccessible. Do not delete them or rerun its
 old transfer command. [The archived UCloud guide](history/UCLOUD_OPERATIONS.md)
 and [E009 command](history/E009_UCLOUD_OPERATIONS.md) preserve that provenance.
@@ -52,6 +56,51 @@ Official rules: [credit/upgrade terms](https://docs.cloud.google.com/free/docs/f
 [displayed credit fields](https://docs.cloud.google.com/billing/docs/how-to/resolve-issues#viewing_promotional_credits),
 [budget behavior](https://docs.cloud.google.com/billing/docs/how-to/budgets).
 No credit amount is inferred from account upgrade or absence of known jobs.
+
+### Live data-phase credit gate, 2026-10-14
+
+The supported Chrome connection now reads the console; the earlier loader failure
+is historical. Billing Overview shows **Paid account**. Credits shows the upgraded
+Free Trial credit **Available**, **DKK1,972.04 remaining of DKK1,973.43**, starting
+2026-10-13, ending **2027-01-12**, scope “Certain usage; see the terms for free trial”,
+net-pricing application. The pre-upgrade row expired on 2026-10-13 and is not extra
+credit. Overview reports DKK1.15 usage/DKK1.15 savings/DKK0 net for October 1–14;
+credit consumption is DKK1.39. The UI explicitly warns costs may lag more than
+24 hours: pending usage is not zero or precisely observable. Only this project is
+linked to this billing account; the API found no running CPU allocation before
+the phase, the existing 30/50-GiB disks and compact regional bucket. The known
+small setup/storage exposure plus the bounded phase leaves ample credit margin.
+
+Fresh official terms retain remaining Welcome credit after paid upgrade for the
+original 90 days. Ordinary E2/non-premium Ubuntu/Persistent Disk/Standard Storage
+and VPC/IP are eligible; no GPU, Marketplace, partner model, NAT or premium image
+is needed. The existing Billing Catalog API was queried read-only with the existing
+login, without creating an API key or enabling a service. Current DKK SKUs price
+E2 core at **0.143478820/hour**, RAM **0.019231272/GiB-hour**, balanced disk
+**0.657809999/GiB-month** and standard disk **0.263123999/GiB-month** beyond its
+allowance. Account Pricing displays list prices in DKK, updated 2026-10-14.
+Its quoted conversion is 6.5781 DKK/USD. IPv4's non-free rate is DKK0.032890499/hour;
+current allowance tiers are not assumed available in the gross envelope.
+
+At 8 CPU/32 GiB with 300-GiB work/30-GiB boot, the conservative 25-hour compute/IP
+plus seven-day disk subtotal is about **USD14.01 /DKK92.13**, leaving the rest of
+the **USD20 /DKK131.56** envelope for compact archive/operations/rounding. List
+estimates are not invoices; current credits and allowances can reduce them.
+The ongoing disks cost **USD31.20 /DKK205.24 per 730-hour month gross while stopped**.
+That cost continues after day seven: review retention then; stopping alone does
+not shrink capacity. Copy/restore to a smaller disk and deletion of accepted
+evidence are separate decisions. Keep the 2027-01-10 expiry review.
+
+The **300-GiB quota request is granted in the Compute API** (`SSD_TOTAL_GB=300`,
+50 used before growth), case `a11cf91a-b76b-4c95-9f79-7dc7538f3611`. No extra service
+or CPU quota was needed. The 300-GiB estimate excludes CompleteBin: the data-only
+upper planning components are 232.29 GiB plus 25-GiB free reserve and filesystem
+overhead. Reducing to 250 would save about USD1.15 over seven days while weakening
+the reserve. Retain 300 and the complete data; no cost-driven DNA filtering.
+
+[Official credit coverage](https://docs.cloud.google.com/free/docs/free-cloud-features?gclsrc=aw.ds),
+[VPC prices/credit coverage](https://cloud.google.com/vpc/network-pricing?hl=en),
+[localized public SKU method](https://docs.cloud.google.com/billing/v1/how-tos/catalog-api).
 
 ## Established initial layout and costs
 
@@ -147,17 +196,16 @@ CLOUDSDK_CONFIG="$PWD/artifacts/gcp-workspace/private-gcloud-config" \
 
 The owner completed this login and CLI auth now passes. Read-only APIs verify an
 open billing account, billed My First Project and owner IAM role. Compute, IAP,
-IAM and OS Login were subsequently enabled for the approved layout. Browser access
-remains unavailable
-to the tool even after owner enabled it/reset, so actual credit fields were supplied by the owner. The dedicated Browser tool
-identified a concrete loader mismatch: it imports absent plugin
+IAM and OS Login were subsequently enabled for the approved layout. At that
+initial setup browser access remained unavailable despite the owner enabling it,
+so credit fields were supplied by the owner. The old Browser tool identified a
+concrete loader mismatch: it imported absent plugin
 `26.930.61225/scripts/browser-service.mjs`, whereas installed plugin is
 `26.1007.30912`. A supported Node reset/retry produced the same error. Vendor diagnostics confirm
 Chrome running, extension installed/enabled and native-host manifest correct;
-the failing chat-specific loader remains the concrete issue. Do not
-modify vendor/native-host files or use raw cookies/CDP as a workaround; restart
-ChatGPT/start a fresh chat with Chrome, or reinstall Browser through the app UI
-if a fresh session still has the mismatch. This is distinct from Google login. No API key/JSON service-account key is
+That loader failure was distinct from Google login; current supported Chrome
+access succeeds in the data phase. Do not modify vendor/native-host files or use
+raw cookies/CDP to recover a future browser failure. No API key/JSON service-account key is
 needed on the Mac. Do not replace credentials merely because a sandboxed GitHub
 network probe failed: the authorized network probe verified the existing private
 GitHub login successfully.
@@ -366,7 +414,10 @@ about 461 MiB used, leaving its rest available; bulk E009 will need a new space 
 ## VM start, stop and cost control
 
 From the Mac checkout, use the isolated authenticated CLI. Start only for an
-explicit task; each start recomputes the verified four-hour automatic STOP.
+explicit task and verify its approved allocation/runtime policy first. The initial
+setup used four hours; the authorized data phase uses **25-hour automatic STOP**.
+Each start recomputes the current policy; do not assume that 25 hours is the
+approved duration of a future small task.
 Both disks, source and login state persist. IAP uses the instance identity, so
 an external IP change does not require replacing the SSH alias or host keys.
 
@@ -382,8 +433,8 @@ After the job, use the same command with `stop` instead of `start`; inspect with
 `compute instances describe dl-binner-cpu --project=... --zone=us-central1-a
 --format='value(status)'` (the exact project is above). `TERMINATED` means stopped
 in Compute Engine; the VM and disks have not been deleted. A stopped VM cannot
-accept SSH; start it before the desktop remote project. Changing the four-hour
-policy or CPU/storage allocation is a separate workload/cost decision.
+accept SSH; start it before the desktop remote project. Changing the policy or
+CPU/storage allocation is a separate workload/cost decision.
 
 Record actual running elapsed time and projected compute/IP/disk/bucket cost;
 reported billing can lag and must be checked separately. Confirm what remains
@@ -409,41 +460,45 @@ ChatGPT login status and normal CLI sandbox; it does not repeat a scientific
 runtime test. New GCP binner environments/native-scale execution remain unverified
 and belong to the authorized scientific phase.
 
-## Next phase
+## Data-phase resources and later scope
 
-V14 is independently accepted and E009's selected ordered sources are
-**0,2,3,4,6,9,10,11,14,17**: ten corrected subjects, one sample-0 assembly.
-[E009 operations](../experiments/E009-competitive-benchmark/OPERATIONS.md) owns the
-locally tested data-only driver, exact following prompt, resource/retention cost
-proposal and remaining positive-origin/source-grouping/cellular-truth review.
-[Current API evidence](../experiments/E009-competitive-benchmark/gcp-preparation.json)
-confirms stopped/unchanged 4 CPU/16 GiB and 30/50-GiB disks; global CPU quota 12,
-regional E2 24 and balanced/SSD quota 250 GiB. Do not use the old 16/48 UCloud plan.
+V14 remains accepted without replay. The later owner message authorizes exact
+prepared commit **5fec4e1d1700c64c4bdd9945bad4e116ade73c57**, normally pushed from
+the Mac and cleanly fetched/fast-forwarded by the VM's read-only GitHub key.
+[The phase receipt](../experiments/E009-competitive-benchmark/gcp-data-observed.json)
+owns actual native/data status, provider timestamps, disk changes and costs;
+[operations](../experiments/E009-competitive-benchmark/OPERATIONS.md) owns commands
+and review boundaries. The older [preparation API snapshot](../experiments/E009-competitive-benchmark/gcp-preparation.json)
+remains dated evidence of the initial 4 CPU/16 GiB, 30/50-GiB disks and 250-GiB quota.
 
-Proposed later approval: same VM **e2-standard-8/32 GiB**, work disk **300 GiB**,
-**25-hour provider STOP**, **24-hour cumulative data-driver ceiling**, >=25-GiB
-free reserve and **$20 gross run/seven-day storage envelope**. A balanced/SSD quota increase from 250 to >=300 GiB is needed; no new service is needed. $0.27304568/hour VM/IP; 25h about $6.83;
-retained boot+work $31.20/month gross, seven days about $7.18. Check actual start
-availability, displayed localized quote/credit scope/balance/expiry and pending
-usage before spending. The owner's 2026-10-13 credit display remains historical.
+Live credit/price admission and effective **SSD_TOTAL_GB=300** passed. The existing
+Iowa VM was changed to **e2-standard-8/32 GiB**, existing work disk grown **50→300
+GiB**, and existing ext4 filesystem expanded with `resize2fs`, **without formatting**.
+Provider STOP was set to **25 hours before start**. SSH verifies eight CPUs,
+33,646,948,352 memory bytes, glibc/architecture, the same UUID-backed mount and
+clean exact source. No additional VM, GPU, service or GitHub write credential was
+created. Full samples **0,2,3,4,6,9,10,11,14,17** use one full sample-0 assembly.
+The complete independently owned pinned Linux data runtime and real tiny changed-
+driver fixture pass. Runtime/fixture time is counted in the cumulative 24-hour
+production allowance; 25-GiB free reserve and existing activity/RAM guards remain.
+No new capacity, automatic retry, clock extension or data filtering is permitted.
 
-Growth cannot simply be shrunk back; review retained capacity within seven days
-of growth, as well as the accepted expiry review by 2027-01-10. Smaller-disk
-replacement requires an approved copy/restore/retention decision. The existing
-four-hour STOP must be changed **before start** for an approved longer phase;
-otherwise it will interrupt the data work. Do not start merely to prepare commands.
-No new GPU, Marketplace, NAT, paid service or all-binner install is proposed.
+Stopping compute preserves **USD31.20 /DKK205.24 per 730-hour month** of provisioned
+boot/work disks, less any available allowances, plus actual bucket storage.
+Review grown retention **by 2026-10-21**, then before **2027-01-10** credit expiry
+review. Disk capacity cannot simply be shrunk. An approved smaller replacement
+requires verified copy/restore and an explicit decision about accepted evidence.
+No unapproved payment-card billing or automatic important-data deletion follows.
 
-CompleteBin fits may later justify 400–500-GiB disk and 64/128-GiB CPU RAM.
-Balanced-disk quota must then rise beyond 250; 16 CPU/128 GiB needs global CPU
-quota >=16. The consulted official 2026-10-13 Iowa sheet priced e2-highmem-8
-at $0.36159864/hour and e2-highmem-16 at $0.72319728/hour, plus $0.005 running
-IPv4; refresh exact localized prices before a later approval. Work disk at
-400/500 GiB is $40/$50 per month, plus boot/bucket. These remain estimates and
-unapproved options, not a fit admission or credit entitlement. Actual assembly,
-CompleteBin eligibility/CPU behavior and the [storage audit](evidence/2026-10-14-completebin-storage.md)
-will determine whether they are needed. An owned healthy GCP runtime persists
-when stopped; do not reinstall it because UCloud once reset between jobs.
+No binner fits/scores are authorized. [D013's later recommendations](decisions/D013-first-comparative-benchmark.md)
+prioritize our unchanged diagnostic controls and at most one resource-admitted
+SemiBin2 reference; MetaCAT core is conditional on a useful grouping question.
+SCGBinner/COMEBin full runs and **CompleteBin are deferred**, with architecture
+ideas and accepted contracts preserved. A future CompleteBin run could require
+400–500-GiB work/64–128-GiB RAM, but that is an unapproved source-derived possibility,
+not the next provisioning step. Reassess measured input/peak costs and live prices
+only when its incremental evidence justifies a run. Native CPU availability and
+50 epochs do not imply affordability. Healthy GCP prefixes persist while stopped.
 
 If credits run out, assess Colab/Kaggle as future alternatives; neither is
 configured or used. Do not silently charge the card or delete accepted evidence.

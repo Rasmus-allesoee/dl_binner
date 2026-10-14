@@ -4,58 +4,62 @@ Updated: 2026-10-14. This is the single current handoff.
 
 ## Exact next step
 
-**E009 preparation is complete; owner approval is needed for the data-only GCP phase.**
-[D013](decisions/D013-first-comparative-benchmark.md) now chooses **ten ordered
-full coverage samples 0,2,3,4,6,9,10,11,14,17**, one per corrected subject, with
-one sample-0 MEGAHIT assembly. [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md)
-owns exact commands, axes, estimates, remaining truth admission and the next prompt.
-[V14](../experiments/E009-competitive-benchmark/linux-preflight-v14.json) is
-independently accepted: all 174 archive members /172 hashes, terminal/arrays/native
-exits and owned runtime origins pass. Successful contracts were not repeated;
-no full community fit or E009 quality score ran.
+**The authorized E009 data-only phase is running on GCP; collect and review its
+result before any new execution.** [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md)
+and the [actual phase receipt](../experiments/E009-competitive-benchmark/gcp-data-observed.json)
+own progress/output/cost evidence. The clean execution source is exactly
+**5fec4e1d1700c64c4bdd9945bad4e116ade73c57**, normally pushed from the Mac and
+fast-forwarded on the read-only VM clone. Keep that source unchanged while its
+journals remain active; no binner fit, E009 score or architecture change is authorized.
 
-The real serial acquisition/assembly/ten-depth/provisional-alignment-truth DAG and
-complete independent Linux data recipe are prepared and locally tested, including
-fresh/partial/completed resume and drift/resource refusal. Mac fixture assembly
-uses one thread. [Local evidence](../experiments/E009-competitive-benchmark/gcp-local-validation.json)
-does not claim GCP runtime/throughput or a frozen cellular truth population.
-Positive-origin/source grouping and cellular taxonomy still need review before
-fits/scores. Main's dev3 implementation remains immutable.
+The later 2026-10-14 owner clarification makes **our own high-performing,
+potentially SOTA binner** the purpose. The accepted software is a simple prototype
+and immutable comparator, not a completed performance goal. [PROJECT_INTENT](../PROJECT_INTENT.md)
+and [D013](decisions/D013-first-comparative-benchmark.md) now require useful
+improvement evidence, reuse thesis/papers/code and accepted science, and separate
+reusable data from an expensive shortlist campaign. One assembly/prototype cannot
+decide whether depth, sequence or future taxonomy belongs in the product.
 
-**The VM remains stopped and unchanged.** [Read-only APIs](../experiments/E009-competitive-benchmark/gcp-preparation.json)
-verify e2-standard-4/16 GiB, 30-GiB standard boot +50-GiB balanced work, four-hour
-STOP; total CPU quota 12, E2 regional 24, balanced-disk quota 250 GiB. Phase-1
-strict IAP SSH, persistent mount, private archive/readback, pinned Codex/ChatGPT
-and actual desktop SSH project remain accepted in [CLOUD](CLOUD.md)/[D014](decisions/D014-google-cloud-workspace.md).
-SDU/UCloud is inaccessible; all old data/receipts/locators remain protected.
+Full samples **0,2,3,4,6,9,10,11,14,17** support **one full sample-0 MEGAHIT assembly**.
+Live browser/API checks verify paid billing, **DKK1,972.04 Available Free Trial
+credit through 2027-01-12**, eligible ordinary CPU/disk/Storage/VPC and current DKK
+prices. Billing lag is explicit. The requested balanced/SSD quota is now **300 GiB**;
+the existing VM is **8 CPU/32 GiB**, boot/work **30/300 GiB**, existing ext4 expanded
+without formatting, and **25-hour provider STOP** set before start. Keep the
+**$20 gross run/seven-day envelope**, **24-hour cumulative setup/QA/driver clock**
+and **25-GiB free reserve**, with no automatic extra resource/clock/retry/filtering.
+The data-only 300-GiB estimate excludes CompleteBin; reserve/scratch argues against
+250 for a seven-day saving of only ~$1.15. Stopped disks continue at **$31.20/month
+(~DKK205.24)** gross. Review retention by **2026-10-21**, and expiry by 2027-01-10.
 
-Propose the same VM at **8 CPU/32 GiB**, work disk **300 GiB**, driver clock
-**24 hours cumulatively** and provider STOP **25 hours**. Approximately $6.83
-compute/IP plus seven-day disk retention gives a proposed **$20 gross phase
-envelope**. Retained boot/work becomes $31.20/month gross even stopped. CPU quota fits; balanced-disk quota must rise from 250 to 300 GiB. No change is authorized now. Refresh actual displayed credit scope/
-balance/expiry, pending usage and localized quote before approval/spending.
-Kr1,973/2027-01-12 is the owner's 2026-10-13 display, not a current API balance.
-Review grown storage within seven days and retained important storage by 2027-01-10.
+The complete pinned independent Linux data environment and tiny actual 14-rule
+changed-driver fixture passed on this host, including native ten-axis depth,
+cross-batch ambiguity and fresh/partial/completed resume. Runtime/QA used 42.501 s,
+counted in the original cumulative budget. This is not full-scale admission or
+truth-population validation. [V10/v14](../experiments/E009-competitive-benchmark/linux-preflight-v14.json)
+five-tool contracts remain accepted without replay; no old science/prefix moved.
 
-[CompleteBin audit](evidence/2026-10-14-completebin-storage.md) identifies per-base
-coverage/training duplication and retained 105/36 candidate grids. One assembly
-still has ten BAMs; 50 epochs do not bound preprocessing/candidate storage. Its
-later fit may need 400–500-GiB disk/64–128-GiB RAM, with quota/credit/owner approval
-then. Ten-sample outer coverage process budgets are prospectively corrected;
-no binner fit/runtime admission is claimed.
+Review closed read/source/assembly/BAM/depth bytes and native axes, **exact positive
+sample-0 origins, genome/replicon grouping and cellular taxonomy** before admitting
+truth. Keep unresolved truth provisional and all source/short/ambiguous DNA. Main's
+dev3 remains unchanged. Stop/verify the VM after collection; preserve logs, compact
+private checksum/readback evidence and measured allocation versus priced uptime.
 
-Keep the current read-only GitHub deploy key for the next data phase. If direct
-VM push is desired later, [CLOUD's recommendation](CLOUD.md#github-write-access-recommendation)
-prefers a separate expiring single-repository Contents-write token; a write deploy
-key is simpler but permanent/broader. No key/token permission changed. This task
-commits locally only; remote source synchronization requires a normally authorized
-push before the later VM launch. No fits/scores, extra seeds, architecture study,
-main merge or publication follows automatically.
+**Defer full CompleteBin**, retaining its architecture/storage study. Also defer
+COMEBin's full grid and SCGBinner until a precise improvement question justifies
+cost. Later, after separate approval, prioritize our unchanged diagnostic controls
+and at most one resource-admitted **SemiBin2** reference; **MetaCAT core** is
+conditional on a useful grouping decision. Prefer a matched mechanism test when
+it answers that decision more directly. CompleteBin's stored max-50 recipe and all
+accepted locks remain provenance, not a run entitlement. Broader prospectively
+untouched data are needed to confirm improvements and support strong/SOTA claims.
+Keep read-only GitHub access; no credential changes/main merge/publication.
 
 ## Direction and completed work
 
-Build and publish a usable deep-learning metagenomic binner while learning through
-implementation. A paper, novelty and SOTA remain optional. See
+Improve our own deep-learning metagenomic binner toward high performance,
+potentially SOTA, while learning through implementation. Usability/reproducibility
+remain essential; paper/novelty and strong claims require separate evidence. See
 [PROJECT_INTENT](../PROJECT_INTENT.md), [D010](decisions/D010-bounded-e001-and-prototype.md)
 and [D011](decisions/D011-first-binner-prototype.md).
 
@@ -274,7 +278,7 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**E009 v10/v14 tiny native evidence is accepted; community science is unstarted.**
+**E009 v10/v14 tiny native evidence is accepted; community fits/scores are unstarted.**
 [E009](../experiments/E009-competitive-benchmark/README.md) owns the chronological
 attempts and limitations. V10 accepts SemiBin/MetaCAT/CompleteBin, eight-thread
 Linux utility/assembly/mapping/depth/competitive truth/AMBER contracts, source
@@ -289,8 +293,9 @@ exact accession/full-replicon development comparisons found no match, with near/
 pretraining independence unresolved. Its inaccessible UCloud archive has an
 accepted SHA for new-host reacquisition, not a GCP acquisition receipt.
 
-The shortlist remains SemiBin2, MetaCAT core, SCGBinner, COMEBin native grid and
-named CompleteBin max-50. DCVBin's payload exists but its CUDA/single-BAM port is
+The old mandatory five-tool shortlist is superseded by D013. CompleteBin max-50,
+COMEBin full grid and SCGBinner are deferred; SemiBin2 is a later first candidate,
+MetaCAT core conditional, with no fits approved. DCVBin's payload exists but its CUDA/single-BAM port is
 outside this bounded CPU comparison; LorBin is deferred. Marker-guided fixed-
 encoder grouping remains a high-priority controlled follow-up, not an automatic
 change. A whole-tool win cannot identify the responsible component.
@@ -298,7 +303,7 @@ change. A whole-tool win cannot identify the responsible component.
 Current input/resource amendment is one sample-0 assembly with ten cross-subject
 depth sources and unchanged raw/learned/sequence-only controls. Old two-depth
 700-hour UCloud budgets/commands are [history](history/E009_UCLOUD_OPERATIONS.md),
-not current entitlements. The prepared data-only GCP stage stops for actual
+not current entitlements. The authorized data-only GCP stage stops for actual
 source/truth/resource review; no full-fit monetary budget is approved.
 
 The future learned-TNF/frozen-GLM-head/hybrid study is planned and unrun; frozen
@@ -342,8 +347,9 @@ Frozen E001 source/configuration and raw observed records remain unchanged.
 
 Local branch: `benchmark-planning`, created from refreshed synchronized main/origin-main
 `5e54538d1799e8d2538621729400f33fbaf017b9`; merged `first-binner-prototype` source history
-is preserved. Owner-configured private GitHub origin is present. The phase-1 normal private push is completed; this task authorizes a local commit only.
-A later source-sync push needs its explicit phase authorization; no main merge,
+is preserved. Owner-configured private GitHub origin is present. The owner-authorized normal
+prepared-branch push through 5fec4e1 and exact VM sync are completed. This phase
+requests a local result/decision commit; no main merge,
 PR/release or visibility change. `agent_context/` is an ignored
 inbox. Before public publication review licensing and historical source packaging
 per [D001](decisions/D001-research-record.md). Update this handoff when direction,

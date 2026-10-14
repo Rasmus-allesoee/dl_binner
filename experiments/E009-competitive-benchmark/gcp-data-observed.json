@@ -1,0 +1,440 @@
+{
+  "record": "E009",
+  "date": "2026-10-14",
+  "status": "running; no data-stage completion claimed",
+  "scientific_outcome": "not assessed",
+  "executed_source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+  "source_sync": "normal Mac push and clean read-only VM fetch/fast-forward; main unchanged",
+  "credit_and_cost_admission": {
+    "observed_utc": "2026-10-14T20:12:54.872879+00:00",
+    "source_commit_authorized": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+    "browser_credit_observation": {
+      "account": "01DD71-3C7861-1E59DF",
+      "billing_type": "Paid account",
+      "currency": "DKK",
+      "credit_name": "Free Trial",
+      "active_credit_id_prefix": "FreeTrialUpgrade:CreditId-FreeTrial",
+      "status": "Available",
+      "remaining": 1972.04,
+      "original": 1973.43,
+      "start": "2026-10-13",
+      "expiry": "2027-01-12",
+      "scope": "Certain usage; see the terms for free trial.",
+      "application": "Net pricing",
+      "expired_pre_upgrade_row_not_additional_credit": true
+    },
+    "reported_account_usage": {
+      "period": "2026-10-01 through 2026-10-14",
+      "cost_dkk": 1.15,
+      "savings_dkk": 1.15,
+      "net_dkk": 0,
+      "latency_disclaimer": "Costs take a few hours to show up, and might take longer than 24 hours.",
+      "pending_usage_is_not_zero_or_fully_observable": true,
+      "only_one_billing_linked_project": true,
+      "all_regional_CPU_usage_zero": true,
+      "pending_usage_bound_basis": "Only existing stopped VM and 30/50GiB disks plus compact private bucket; 0.7094 USD (~4.67 DKK) conservative two-day setup/disk allowance, no other linked project. Live billed credits used 1.39 DKK; display/report timing differ."
+    },
+    "eligible_products": [
+      "ordinary E2 CPU",
+      "nonpremium Ubuntu",
+      "zonal pd-standard/pd-balanced",
+      "same-region private Standard Cloud Storage",
+      "VM ephemeral IPv4 and ordinary VPC transfers"
+    ],
+    "excluded": [
+      "GPU",
+      "Marketplace",
+      "partner AI APIs",
+      "Cloud NAT",
+      "premium image",
+      "new paid service"
+    ],
+    "references": [
+      "https://docs.cloud.google.com/free/docs/free-cloud-features?gclsrc=aw.ds",
+      "https://cloud.google.com/vpc/network-pricing?hl=en",
+      "https://cloud.google.com/compute/disks-image-pricing",
+      "https://docs.cloud.google.com/billing/v1/how-tos/catalog-api"
+    ],
+    "dkk_prices": {
+      "core_per_hour": 0.14347882,
+      "ram_per_gib_hour": 0.019231272,
+      "balanced_per_gib_month": 0.657809999,
+      "standard_per_gib_month_above_free_tier": 0.263123999,
+      "ip_per_hour_above_free_tier": 0.032890499,
+      "regional_standard_storage_per_gib_month_above_free_tier": 0.131561999,
+      "catalog_usd_to_dkk_conversion": 6.5781,
+      "catalog_day": "2026-10-14",
+      "nonnegotiated_account_console_List_price_DKK_observed": true
+    },
+    "budget": {
+      "gross_ceiling_usd": 20,
+      "gross_ceiling_dkk": 131.562,
+      "compute_ip_25h_usd": 6.826142,
+      "disk_7d_usd": 7.180273972602739,
+      "gross_base_total_usd": 14.006415972602738,
+      "disk_ongoing_usd_per_730h": 31.2,
+      "disk_ongoing_dkk_per_730h": 205.23671967,
+      "reserve_includes_compact_archive_operations_and_invoice_rounding": "more than USD5 before any allowances; no bulk internet export",
+      "retention_review_days": 7,
+      "credit_expiry_review": "2027-01-10",
+      "credit_gate": "passed for authorized ordinary data-phase resources; recheck if quota approval delayed or execution changes"
+    },
+    "disk_decision": {
+      "gib": 300,
+      "data_only_components_upper_gib": 232.29,
+      "free_reserve_gib": 25,
+      "completebin_included_in_data_estimate": false,
+      "reason": "Retain full reads, assembly, ten BAMs and source/truth plus serial mapping scratch; 250GiB lacks conservative reserve."
+    },
+    "no_extra_authorization_for_fits": true
+  },
+  "quota_request": {
+    "submitted_utc": "2026-10-14T20:13:42.814351+00:00",
+    "project": "project-d17bd588-df31-488f-b16",
+    "service": "compute.googleapis.com",
+    "metric": "SSD_TOTAL_GB",
+    "region": "us-central1",
+    "old": 250,
+    "requested": 300,
+    "case_id": "a11cf91a-b76b-4c95-9f79-7dc7538f3611",
+    "observed_status": "effective API quota now 300 GiB; approval admitted",
+    "quota_approval_is_not_resource_resize": true,
+    "no_cost_bearing_resource_changes": true,
+    "api_quota": {
+      "limit": 300.0,
+      "metric": "SSD_TOTAL_GB",
+      "usage": 50.0
+    },
+    "api_checked_utc": "2026-10-14T20:19:59.147142+00:00"
+  },
+  "resources": {
+    "vm": "dl-binner-cpu",
+    "zone": "us-central1-a",
+    "machine": "e2-standard-8",
+    "allocated_vcpus": 8,
+    "allocated_ram_gib": 32,
+    "actual_physical_memory_bytes": 33646948352,
+    "boot_disk_gib": 30,
+    "boot_type": "pd-standard",
+    "work_disk_gib": 300,
+    "work_type": "pd-balanced",
+    "same_existing_work_disk": true,
+    "filesystem": "existing ext4 expanded with resize2fs, no formatting",
+    "max_run_seconds": 90000,
+    "provider_action": "STOP",
+    "provider_started": "2026-10-14T13:21:34.621-07:00",
+    "provider_stopped": null,
+    "driver_clock_hours_cumulative": 24,
+    "free_disk_gib_floor": 25,
+    "no_added_services": true,
+    "retention_review_by": "2026-10-21"
+  },
+  "new_host_data_runtime": {
+    "allocated_ram_gib": 32,
+    "allocated_vcpu_hours": 0.09444740154666668,
+    "allocated_vcpus": 8,
+    "closed_terminal": {
+      "bytes": 158705,
+      "sha256": "e1d4cb60656c45bde5e52eda82568e83136dd8736b45d4188defc3e73625f198"
+    },
+    "elapsed_seconds": 42.50133069600001,
+    "fixture": "/srv/dl_binner/experiments/e009/gcp-phase-20261014/native-fixture-v1/passed.json",
+    "fixture_receipt": {
+      "bytes": 1976,
+      "sha256": "3cedeb68fac25f4ecc7efca101db5f30af2129633ff6d12ff00f6c4e12014940"
+    },
+    "native_fixture_supervision": {
+      "command": [
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e009_gcp_fixture.py",
+        "--output",
+        "/srv/dl_binner/experiments/e009/gcp-phase-20261014/native-fixture-v1",
+        "--python",
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+        "--samtools",
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/samtools",
+        "--strobealign",
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/strobealign",
+        "--minimap2",
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+        "--megahit",
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/megahit"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2266,
+      "peak_sampled_rss_bytes": 229302272,
+      "rss_bytes_ceiling": 28174985461,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.450892978406613,
+      "sampled_cpu_seconds": 8.26,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 86375.818790468,
+      "stop_reason": null,
+      "wall_seconds": 18.319202993999994
+    },
+    "no_bulk_reads_no_fits": true,
+    "runtime": {
+      "megahit": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/megahit",
+      "minimap2": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+      "python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+      "samtools": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/samtools",
+      "strobealign": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/strobealign"
+    },
+    "source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+    "stage": "new-host complete data runtime plus tiny changed-driver contract",
+    "status": "passed"
+  },
+  "native_runtime_identities": {
+    "interpreter": {
+      "prefix": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315",
+      "python": "3.12.10 | packaged by conda-forge | (main, Apr 10 2025, 22:21:13) [GCC 13.3.0]",
+      "snakemake": "9.16.3",
+      "snakemake_origin": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/lib/python3.12/site-packages/snakemake/__init__.py"
+    },
+    "megahit": {
+      "file": {
+        "bytes": 38467,
+        "sha256": "d70208755eada7b7c3a3d62e337b2823c5c427796b1343e68ae16ca1ff9fd61c"
+      },
+      "path": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/megahit",
+      "version": "1.2.9"
+    },
+    "minimap2": {
+      "file": {
+        "bytes": 1232336,
+        "sha256": "5ef4a631a6318c66d1184007f87bedc55f712c27472d141da4d35e80df82e3cc"
+      },
+      "path": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+      "version": "2.30"
+    },
+    "python": {
+      "file": {
+        "bytes": 31271856,
+        "sha256": "e3d174225ca76e5b744bf44e8b7fe8d76214cec517e16c11dfb03e4bcfd41ea7"
+      },
+      "lexical": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python"
+    },
+    "samtools": {
+      "file": {
+        "bytes": 895984,
+        "sha256": "aa484d95148f4c8ddb6e2031ee2eaec94c69ffff8c13e5f1630c15f5c656cbe2"
+      },
+      "path": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/samtools",
+      "version": "1.24"
+    },
+    "strobealign": {
+      "file": {
+        "bytes": 785448,
+        "sha256": "6e978de17927e78c9f0f97b551dc901ebeccb06c4328e9e84cb611c30d34aaf1"
+      },
+      "path": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/strobealign",
+      "version": "0.17.0"
+    }
+  },
+  "fixture_interpretation": {
+    "platform": "actual Ubuntu Linux x86_64 host",
+    "contract": "same frozen tiny data workers/DAG, 14 rules and ordered ten depth values; partial/completed verified resume, cross-batch competing references remain ambiguous",
+    "limits": "portable fixture factory retains its historical Mac/no-native-scale label and forces assembly_threads=1; actual host provenance proves these exercised Linux contracts, not 8-thread assembly-scale performance or admitted biological truth",
+    "five_binner_contracts_repeated": false
+  },
+  "data_result": {
+    "status": "running",
+    "ordered_samples": [
+      0,
+      2,
+      3,
+      4,
+      6,
+      9,
+      10,
+      11,
+      14,
+      17
+    ],
+    "assembly_sample": 0,
+    "keeps_full_assembly": true,
+    "no_binner_fit_or_score": true,
+    "truth_admitted": false,
+    "review_dependencies": [
+      "closed byte-bound native output review",
+      "exact sample-0 positive read-origin ID/source joins",
+      "source genome/replicon grouping and cellular taxonomy",
+      "actual storage/clock/monetary accounting"
+    ],
+    "source_archive_acquisition": {
+      "admitted_scientific_input": false,
+      "file": {
+        "bytes": 3202310417,
+        "sha256": "9a0373b6a42f7322583b1c091059b513d8d62bd5be2e57244ac19b50b1f4f69a"
+      },
+      "headers": {
+        "accept-ranges": "bytes",
+        "connection": "close",
+        "content-length": "3202310417",
+        "content-type": "application/octet-stream",
+        "date": "Wed, 14 Oct 2026 20:24:50 GMT",
+        "etag": "0e6a3c89846e95c7b952e01d3cd630e7-6",
+        "last-modified": "Fri, 03 Jul 2026 05:18:51 GMT",
+        "server": "Ceph Object Gateway (squid)",
+        "x-openstack-request-id": "tx000003c838affce27ef5e-006acfe511-2843896412-default",
+        "x-timestamp": "1783055931.66787",
+        "x-trans-id": "tx000003c838affce27ef5e-006acfe511-2843896412-default"
+      },
+      "publisher_checksum_verified": true,
+      "spec": {
+        "bytes": 3202310417,
+        "etag": "0e6a3c89846e95c7b952e01d3cd630e7-6",
+        "sha256": "9a0373b6a42f7322583b1c091059b513d8d62bd5be2e57244ac19b50b1f4f69a",
+        "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/source_genomes.tar.gz"
+      }
+    },
+    "source_stage": {
+      "sealed": true,
+      "manifest": {
+        "bytes": 449930,
+        "sha256": "4eab3a83716bb6e375f9c4d761b5ac3f27dbdbedc02cd8e4ed83debeaa255ab4"
+      },
+      "sealed_files": 2094,
+      "logical_bytes": 21558031163,
+      "full_catalog_files": 2078,
+      "full_catalog_replicons": 65571,
+      "full_catalog_bp": 10251869096,
+      "catalog_semantic_bytes_match_accepted_v10": true,
+      "provisional_selected_source_files": 311,
+      "provisional_reference_replicons": 7688,
+      "provisional_reference_bp": 3946890689,
+      "source_grouping_and_target_taxonomy_admitted": false
+    }
+  },
+  "remote_root": "/srv/dl_binner/experiments/e009/data-stage-v1",
+  "remote_phase_logs": "/srv/dl_binner/experiments/e009/gcp-phase-20261014",
+  "local_evidence": "artifacts/e009-gcp-data/20261014",
+  "later_tool_scope_decision": "docs/decisions/D013-first-comparative-benchmark.md",
+  "limitations": [
+    "no SOTA claim",
+    "one development assembly cannot settle depth/sequence/taxonomy product choices",
+    "no whole-tool win can isolate a component",
+    "new source/assembly does not establish genome/pretraining independence"
+  ],
+  "private_archive": null,
+  "checks": null,
+  "additional_evaluator_metadata": {
+    "scope": "local read-only provider metadata; no feature/model access or additional VM workload",
+    "dataset_page": {
+      "path": "artifacts/e009-gcp-data/20261014/preflight/toy-data-page.html",
+      "bytes": 49833,
+      "sha256": "c312c0a68c22064a7365bef57501d8c904569ae449fcb721480a01eb3376988d"
+    },
+    "taxonomic_profile_archive": {
+      "path": "artifacts/e009-gcp-data/20261014/preflight/taxonomic_profiles.tar.gz",
+      "bytes": 1846760,
+      "sha256": "cbc87a0a01d05fc9a27947f8533337f6ce211dd4f116ba7e26057d1401deb9f8"
+    },
+    "sample0_profile": {
+      "path": "artifacts/e009-gcp-data/20261014/preflight/sample0-taxonomy-profile.txt",
+      "bytes": 757747,
+      "sha256": "2a0d014a32a551ce6cd9122afce88454deaa9ba087153d957dd3d99053f904d3"
+    },
+    "provider_taxonomy_snapshot_url": "https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2025-08-01.zip",
+    "taxonomy_zip_head_bytes": 70311865,
+    "taxonomy_zip_not_downloaded": true,
+    "profile_genome_rows": 2022,
+    "positive_rounded_percentage_rows": 309,
+    "positive_rounded_row_classes": {
+      "bacterial": 154,
+      "viral": 135,
+      "other": 9,
+      "eukaryotic": 11
+    },
+    "provider_reported_percentages": {
+      "bacteria": 48.665,
+      "viruses": 48.2066,
+      "eukaryotes": 0.9932,
+      "other_entries": 2.1352
+    },
+    "important_fields": [
+      "TAXPATH",
+      "TAXPATHSN",
+      "_CAMI_genomeID",
+      "HOST"
+    ],
+    "claim_limits": [
+      "Provider synthetic strain tax IDs have decimal suffixes; do not treat them as plain NCBI node IDs",
+      "Rounded-zero profile entries are not proof of absent reads; actual positive read-origin counts still required",
+      "Full source/header-to-genome joins and permuted-reference meaning remain unresolved until actual source/origin review",
+      "Large viral abundance is a provider report, not measured DNA/base fractions or a reason to filter or generalize feature conclusions"
+    ],
+    "concrete_replica_plasmid_review": {
+      "genome_profile_row": {
+        "TAXID": "817.9",
+        "RANK": "strain",
+        "TAXPATH": "131567|2|3379134|976|200643|171549|815|816|817|817.9",
+        "TAXPATHSN": "cellular organisms|Bacteria|Pseudomonadati|Bacteroidota|Bacteroidia|Bacteroidales|Bacteroidaceae|Bacteroides|Bacteroides fragilis|Bacteroides fragilis strain",
+        "PERCENTAGE": "0.1206",
+        "_CAMI_genomeID": "ASV134.7",
+        "_CAMI_OTU": "171549",
+        "HOST": ""
+      },
+      "source_file": "ASV134.7__Bacteroides_fragilis_GUT04_strain_genomic__NZ_CP043609.1.permuted.fna",
+      "source_records": 10,
+      "per_record_bp": 89141,
+      "file_summed_bp": 891410,
+      "NCBI_accession": "CP043609.1",
+      "NCBI_record_title": "Bacteroides fragilis strain GUT04 plasmid unnamed1, complete sequence",
+      "NCBI_record_bp": 89141,
+      "NCBI_summary": {
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=nuccore&id=CP043609.1&retmode=json",
+        "bytes": 888,
+        "sha256": "cee54880ed36546c09fbd7212d842a5d591fbc6ef8db1f6cbdc3e9ce8a370d4f"
+      },
+      "implication": "A bacterial taxonomy and sum of ten source records above 200kb do not prove a cellular genome. Review standalone plasmid origin and permutation/copy semantics before freezing target membership or a whole-genome denominator; keep all competitive DNA. No truth admission or exclusion follows this exemplar alone."
+    },
+    "CAMISIM_read_ID_format_evidence": {
+      "source_commit": "7ce6013c6d5a0fac8ba8a80e52a03560d3546fa6",
+      "root_verified_separate_repository": true,
+      "tracked_source_clean": true,
+      "untracked_Finder_DS_Store_ignored_for_source_identity": true,
+      "actual_dataset_producer_commit_unknown": true,
+      "observations": [
+        "paired anonymizer creates complete S0R0..S0R(N-1) /1,/2",
+        "goldstandard writer sorts anonymous IDs lexically, not FASTQ sequence order",
+        "ART source record is read_id.rsplit(hyphen,1)[0]; WGSIM uses five final underscore fields",
+        "source cleanup renames colliding headers; actual retained catalog has globally unique 65571 original record IDs"
+      ],
+      "files": {
+        "agent_context/tools_repo/CAMISIM/pipelines/shared/scripts/anonymizer.py": {
+          "bytes": 5865,
+          "sha256": "a8d2030a1bd6c1ebfe3216a487abc2b88eabc4d6c1c9146a2ee33dab4fe7a5ea"
+        },
+        "agent_context/tools_repo/CAMISIM/pipelines/shared/scripts/goldstandardfileformat.py": {
+          "bytes": 33408,
+          "sha256": "847e736c6c6aa0062fd4cef0d796a1525e5085ff455e4e6369798815996d8ab4"
+        },
+        "agent_context/tools_repo/CAMISIM/pipelines/metagenomic/scripts/clean_up_sequences.py": {
+          "bytes": 6020,
+          "sha256": "f9818046ddcb619ff803ecb9f2decf8e966f848de66caada6944c236540dbe45"
+        }
+      },
+      "interpretation": "Review helper must verify actual set/source membership rather than assume producer parity; no simulator was run."
+    }
+  },
+  "prepared_exact_data_review": {
+    "script": "scripts/e009_data_review.py",
+    "script_bytes": 10742,
+    "script_sha256": "083ca40bbd1c1ff63e23e903cd65f6cc954fa4abcaa310e45a323fc3f756be57",
+    "status": "locally tested, not yet run on actual community data",
+    "tests": 4,
+    "test_log": "artifacts/e009-gcp-data/20261014/data-review-tests.log",
+    "tested_paths": [
+      "real gzip FASTQ/origin files and actual sealed input manifests",
+      "unordered complete mate IDs, late duplicates, missing/noncanonical/out-of-range IDs",
+      "exact ART/WGSIM source joins and ambiguous membership refusal",
+      "synthetic taxonomy preservation and wrong lineage ID/name refusal",
+      "multiple-genome source-file ambiguity retained, scientific admission false",
+      "intended consumed-input byte drift refusal"
+    ],
+    "no_native_DAG_or_model_change": true
+  }
+}

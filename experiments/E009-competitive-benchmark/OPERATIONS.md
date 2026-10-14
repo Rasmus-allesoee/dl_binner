@@ -1,6 +1,9 @@
-# E009 operations: prepared GCP data stage
+# E009 operations: authorized data-only GCP phase
 
-Updated: 2026-10-14. **Preparation only; execution/provisioning unapproved.**
+Updated: 2026-10-14. **Later owner authorization: prepared data-only phase at
+5fec4e1; no binner fits/scores/model changes or automatic retries.**
+[Actual phase receipt](gcp-data-observed.json) owns execution/outcome/cost.
+Keep the clean VM source at that exact SHA while its journals remain active.
 [CLOUD](../../docs/CLOUD.md) owns VM/access/credit operations;
 [D013](../../docs/decisions/D013-first-comparative-benchmark.md) owns the comparison;
 [D014](../../docs/decisions/D014-google-cloud-workspace.md) owns the provider.
@@ -31,22 +34,27 @@ abundance or scores. These are now development coverage, not certified holdouts;
 Build **one sample-0 MEGAHIT assembly**, 200-bp emission, and map those ten full
 samples to its exact reference. No second assembly/coassembly. One assembly does
 not mean one BAM. Primary/raw controls now use TNF+ten-depth; the two sequence-only
-controls remain. Product source/seed/training/clustering, shortlist and named
-CompleteBin max-50 stay unchanged. [Depth axes](depth-samples.tsv),
+controls remain prospective diagnostics. Product source/seed/training/clustering
+stay unchanged. D013 supersedes the mandatory shortlist: CompleteBin, COMEBin
+full grid and SCGBinner fits are deferred. The stored max-50 patch stays provenance. [Depth axes](depth-samples.tsv),
 [protocol](protocol.json) and [data plan](gcp-data-plan.json) own this amendment.
 Padded actual BAM paths preserve numerical order under COMEBin's real-path sort.
 
-## Resource and cost proposal
+## Authorized resources, costs and storage rationale
 
-[Read-only API evidence](gcp-preparation.json), 2026-10-14: VM `TERMINATED`,
+The earlier [read-only preparation snapshot](gcp-preparation.json), 2026-10-14: VM `TERMINATED`,
 e2-standard-4/16 GiB, 30-GiB standard boot +50-GiB balanced work, four-hour STOP.
 Global CPU quota **12**, regional E2 **24**, balanced/SSD **250 GiB** (50 used).
 Compute/IAP/IAM/OS Login/Storage services are enabled. No cloud mutation ran.
 
-Propose the same stopped VM as **e2-standard-8/32 GiB**, grow its existing balanced
-work disk to **300 GiB**, then expand/verify the existing filesystem without
-formatting. CPU quota fits; balanced/SSD quota must first rise from 250 to >=300 GiB. Quota increase has no standalone usage charge, but grants capacity for billable disk growth; no request was submitted. Start-time capacity still needs checking.
-Set **25-hour provider STOP before start**, replacing the setup-only four hours.
+The later owner authorized the same VM as **e2-standard-8/32 GiB**, existing
+balanced work disk **300 GiB**, existing ext4 expansion without formatting and
+**25-hour provider STOP before start**, replacing the setup-only four hours.
+Fresh credit/price admission passed; quota request case
+`a11cf91a-b76b-4c95-9f79-7dc7538f3611` is effective at **300 GiB** in the API.
+The stopped VM/disk were changed, mounted/expanded, and source synced cleanly to
+exact 5fec4e1 before execution. CPU quota fits; no extra service/CPU quota/GitHub
+write credential was needed. The phase receipt records actual timing/status.
 Driver: **24-hour cumulative phase clock**, including setup, parent hashing,
 failed attempts and work; resume cannot reset it. The extra provider hour covers
 connection/assessment/collection, not an automatic retry.
@@ -66,7 +74,9 @@ GCP reacquisition replaces inaccessible UCloud bytes, without scientific replay.
 | Sources/catalog/reference batches | 19–22 | Full catalog 10.25 Gbp; conservative sample-0 universe 3.95 Gbp includes non-target/human DNA |
 | Assembly intermediates, runtime, truth/logs | 15–35 | No all-binner installs/checkpoints in this phase |
 
-The upper component estimate is 232.29 GiB; adding the 25-GiB reserve exceeds the current 250-GiB quota. The selected 300-GiB proposal adds about 43 GiB beyond that estimate/reserve. Monitor a **25-GiB free reserve**, actual
+This estimate contains **no CompleteBin files**. Deferring its fit does not
+remove the common read/BAM/source/scratch footprint. The upper component estimate
+is 232.29 GiB; adding the 25-GiB reserve exceeds the current 250-GiB quota. The selected 300-GiB proposal adds about 43 GiB beyond that estimate/reserve. Monitor a **25-GiB free reserve**, actual
 growth and stop/flush latency. This is a provisioning estimate, not a scientific
 data cap or instantaneous hard write quota. Failure retains evidence and stops;
 no automatic growth, filtering or deletion. Twenty samples would likely need
@@ -75,7 +85,7 @@ assembly/truth work does not double. Neither peak nor runtime is measured.
 
 Iowa list rates: $0.26804568/hour VM +$0.005 IPv4 = **$0.27304568/hour**;
 25 hours **$6.83** compute/IP. Boot+300-GiB work is **$31.20/month gross**, even
-stopped, versus today's $6.20. Seven days is about **$7.18**. Propose a **$20 gross
+stopped, versus today's $6.20. Seven days is about **$7.18**. The owner approved a **$20 gross
 phase envelope** for that run, <=seven-day storage and small compact-archive/
 operations reserve. A roughly 8–20-hour data run is an unmeasured planning range;
 24 hours is a ceiling. No allocation core-hour figure is substituted for money.
@@ -84,13 +94,17 @@ Ordinary CPU Compute Engine, Persistent Disk, Standard Storage and outbound IPv4
 are the intended Welcome-credit-covered products; basic IAP has no service fee.
 Ingress and same-region bucket/VM transfer have no transfer charge; operations
 and stored/soft-deleted bytes still accrue. No GPU, premium image, NAT, Marketplace
-or new paid service. Refresh displayed **DKK balance/expiry/scope**, pending usage,
-eligible SKUs and localized quote before approval/start. Kr1,973/2027-01-12 is the
-owner's 2026-10-13 observation, not a fresh API balance. Estimates exclude unused
+or new paid service. The live console now verifies **DKK1,972.04 Available upgraded Free Trial credit
+through 2027-01-12**, paid billing and the restricted ordinary-usage scope. Current
+DKK SKUs and pending/reporting lag were checked before mutations; see
+[CLOUD](../../docs/CLOUD.md#live-data-phase-credit-gate-2026-10-14) and the phase receipt.
+The earlier owner DKK1,973 display remains dated history. Estimates exclude unused
 Free Tier discounts, tax/FX and unrelated usage.
 
-Disk growth cannot simply be shrunk back. Review retention **within seven days
-of growth** and by 2027-01-10. A smaller replacement needs a separately reviewed
+Disk growth cannot simply be shrunk back. Review retention **by 2026-10-21**
+and by 2027-01-10. After seven days the provisioned disks still cost **$31.20/month
+(~DKK205.24 at the current quote)** gross while stopped; a 250-GiB alternative
+would save only ~$1.15 in seven days while weakening the conservative reserve. A smaller replacement needs a separately reviewed
 copy/restore plan and verified important evidence. No destructive/card-billing
 action follows automatically. [Compute prices](https://cloud.google.com/products/compute/pricing/general-purpose),
 [disk](https://cloud.google.com/compute/disks-image-pricing),
@@ -107,12 +121,19 @@ MEGAHIT/strobealign/samtools/minimap2; no scientific worker is mocked.
 [Independent Linux lock](gcp-data-linux-lock.json): 120 packages /146,456,191 download
 bytes, including Python3.12.10, Snakemake9.16.3, samtools1.24, strobealign0.17.0,
 MEGAHIT1.2.9, minimap2 2.30; declared package constraints require glibc >=2.34
-(the local solver used virtual glibc2.35). Cross-platform solve only; no GCP installation yet.
+(the local solver used virtual glibc2.35). The complete independently owned recipe installed on the VM and its actual
+Python/native origins, versions and tiny 14-rule changed-driver contracts passed.
+Runtime/QA took 42.501 s and is recorded as a setup attempt in the data root, so
+the production launcher subtracts it from the original 24-hour clock. The portable
+fixture factory retains its historical Mac/no-scale label and one-thread assembly;
+actual host provenance proves the exercised Linux contracts, not full-scale
+assembly or biological truth admission.
 
 Use clean reviewed `/srv/dl_binner/repo`, persistent data
 `/srv/dl_binner/experiments/e009/data-stage-v1`, and sibling lock-named owned
 `envs/` and `cache/`. No five-binner install or inaccessible UCloud/Mac dependency
-borrowing. New-host runtime identity/health remains to be verified.
+borrowing. New-host data-runtime identity/health passed; full data/truth acceptance remains
+separate. No accepted five-binner contract was repeated.
 
 Retain terminal/stage/native-error logs, actual byte progress, CPU/RSS/physical-I/O
 activity, commands, per-rule extended benchmarks and attempt allocation receipts.
@@ -138,6 +159,18 @@ counts/provider tax IDs, not an exact read-ID join/domain classification. Do not
 guess bacteria from filenames or invent a whole-genome denominator. Retain PAFs
 for reviewed regrouping without blindly repeating alignments.
 
+The independent [read/source review helper](../../scripts/e009_data_review.py) is
+locally tested with actual gzip files/manifests, late-ID duplicates, byte drift,
+taxonomy mismatch and ambiguous source formats. After the production driver exits,
+run it under the **remaining original clock/resource envelope**, with the provider's
+explicit sample-0 profile, without changing the clean 5fec4e1 execution checkout.
+It verifies full FASTQ/origin-ID sets and exact original-record/genome/lineage joins.
+It cannot by itself admit chromosome/plasmid identity, permuted-copy meaning or a
+whole-genome denominator, and never opens bins/scores or edits stage journals.
+The [phase receipt](gcp-data-observed.json) retains the provider profile and an
+actual plasmid/copy example requiring that review. Do not infer absent genomes
+from rounded-zero abundance or bacterial cellular genomes from taxonomy alone.
+
 Stop on source/ETag/hash drift, malformed archives/mates, assembly >100,000 eligible
 >=500-bp contigs or >600 Mb, native/axis error or RAM/clock/stall/disk limit. No
 automatic extension, retry, DNA filtering or native schedule change. Review actual
@@ -146,22 +179,22 @@ data/truth and costs before the separate fit phase.
 why this 300-GiB/32-GiB layout is not its fit admission: later 400–500-GiB disk and
 64/128-GiB RAM may be needed, with quota, credit and owner approval then.
 
-## Commands and exact following prompt
+## Recorded launch and next review boundary
 
-Safe local inspection now:
+Safe local inspection (no writes/downloads):
 
 ```bash
 python3 -I -B scripts/e009_gcp_run.py
 ```
 
-After separate owner approval, normally push the reviewed Mac branch, fetch/
-fast-forward the read-only VM clone, verify clean exact SHA/mount/allocation,
-and set the approved STOP policy before start. On that VM:
+The owner-approved normal Mac push/read-only VM sync, quota/resource/mount
+checks and STOP change are complete. The following is **launch provenance**;
+do not invoke it again while the current driver is active. On the clean VM:
 
 ```bash
 cd /srv/dl_binner/repo
 python3 -I -B scripts/e009_gcp_run.py \
-  --source-commit "$(git rev-parse HEAD)" \
+  --source-commit 5fec4e1d1700c64c4bdd9945bad4e116ade73c57 \
   --allocated-vcpus 8 --allocated-ram-gib 32 \
   --hours 24 --free-gib 25 --stall-seconds 1800 --execute
 ```
@@ -171,16 +204,7 @@ Return persistent log/attempt paths or compact archive/checksum, not terminal
 copy-paste. Direct VM work needs no UCloud transfer packet. Stop/verify the VM
 after collection, preserving disks and accepted outputs.
 
-Following prompt (grant only when its resource/cost proposal is acceptable):
-
-```text
-Read AGENTS.md, PROJECT_INTENT.md, STATE, WORKING, CLOUD, D013/D014, current E009 OPERATIONS/protocol/data-plan/locks and accepted v10/v14/local data-stage receipts. Preserve successful contracts and immutable main.
-
-I authorize the next data-only GCP phase: ten ordered full samples 0,2,3,4,6,9,10,11,14,17 and one sample-0 MEGAHIT assembly. First refresh displayed Welcome-credit balance/expiry/scope, pending usage, localized costs, quotas and existing resources. Proceed only with sufficient verified credit coverage for ordinary CPU/disk/IPv4/private Standard archive; otherwise stop before spending and explain the missing approval.
-
-Subject to that check, I approve requesting balanced/SSD quota >=300 GiB, the existing Iowa VM as e2-standard-8/32 GiB, its existing balanced work disk grown to 300 GiB without formatting, provider STOP at 25 hours, and a $20 gross envelope including at most seven days of that storage before review. Normally push benchmark-planning from the Mac and fast-forward the VM's read-only clone to the exact clean prepared commit. No force push, main merge, publication or GitHub credential change.
-
-Verify persistent mount/OS/allocation. Install/reuse only the complete pinned independent E009 data runtime; test the changed driver on tiny native GCP inputs as needed for this new host, without repeating accepted unchanged five-binner contracts. Run the prepared serial acquisition/assembly/ten-sample mapping/depth/provisional-truth DAG directly under the cumulative 24-hour setup/hash/work ceiling, 25-GiB reserve and CPU/RAM/stall guards. Preserve hashes, logs, benchmarks, ordered native axes, full DNA/zeros and failures. Resume only intact completed stages within the original remaining budget. No automatic extension, filtering, extra quota/disk/service provision or retry after a failure/limit needing assessment.
-
-Independently review/freeze actual data and resolve positive-origin joins, source genome/replicon grouping and cellular target taxonomy before claiming admitted truth. If extra evidence is outside this phase, preserve provisional outputs and report the dependency. Do not install all binners, fit/score E009, alter architecture or run new seeds. Archive only compact irreplaceable evidence with checksum/readback to the existing private same-region bucket. Stop/verify the VM after collection; report provider uptime/list-price cost separately from sampled process resources and driver allocation. Update records/checks and commit; report admission and the next separately approved fit/storage budget.
-```
+The prepared prompt at Git commit `5fec4e1` is historical. The actual owner
+message authorized this data phase and superseded the compulsory tool shortlist.
+The next prompt will be updated here after independently reviewing the complete
+or partial result. No fit phase, resource extension or retry follows a launch.
