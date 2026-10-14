@@ -1,10 +1,10 @@
 {
   "record": "E009",
-  "date": "2026-10-09",
-  "status": "v10 other native stages and three tools accepted; two failed runtime contracts under v11 recovery; scientific execution unstarted",
+  "date": "2026-10-14",
+  "status": "v10/v14 tiny UCloud contracts accepted; ten-sample GCP data stage prepared locally; community science unstarted",
   "scientific_outcome": "not assessed",
   "execution_ready": false,
-  "authorized_current_task": "local adapters/tests and checksum-bound owner preflight preparation; no UCloud or benchmark execution",
+  "authorized_current_task": "preparation, local fixture tests, read-only cloud metadata and commit only; no VM start/provisioning/bulk execution",
   "dataset": {
     "name": "CAMI III Toy Longitudinal Human Gut",
     "read_modality": "short",
@@ -13,11 +13,27 @@
     "assembly_sample": 0,
     "depth_samples": [
       0,
-      1
+      2,
+      3,
+      4,
+      6,
+      9,
+      10,
+      11,
+      14,
+      17
     ],
     "ordered_depth_columns": [
       "cami3_toy_human_gut_short_read_sample_0",
-      "cami3_toy_human_gut_short_read_sample_1"
+      "cami3_toy_human_gut_short_read_sample_2",
+      "cami3_toy_human_gut_short_read_sample_3",
+      "cami3_toy_human_gut_short_read_sample_4",
+      "cami3_toy_human_gut_short_read_sample_6",
+      "cami3_toy_human_gut_short_read_sample_9",
+      "cami3_toy_human_gut_short_read_sample_10",
+      "cami3_toy_human_gut_short_read_sample_11",
+      "cami3_toy_human_gut_short_read_sample_14",
+      "cami3_toy_human_gut_short_read_sample_17"
     ],
     "subject_table": {
       "path": "experiments/E009-competitive-benchmark/sample-subject-mapping.tsv",
@@ -28,8 +44,11 @@
     "assembly": "MEGAHIT 1.2.9 sample 0 default metagenome recipe; --min-contig-len 200; supplied contigs/gsa both verified gold-standard reconstructions",
     "assembly_hash": null,
     "read_payload_sha256s": null,
-    "source_reference_payload_sha256": null,
-    "provider_taxonomy": "NCBI 2025-08-01 per toy dataset page"
+    "source_reference_payload_sha256": "9a0373b6a42f7322583b1c091059b513d8d62bd5be2e57244ac19b50b1f4f69a",
+    "provider_taxonomy": "NCBI 2025-08-01 per toy dataset page",
+    "depth_selection": "first listed sample of each of ten corrected subjects, chosen from identifiers only: 0,2,3,4,6,9,10,11,14,17; chronological time point not asserted",
+    "depth_axes_manifest": "experiments/E009-competitive-benchmark/depth-samples.tsv",
+    "scope_limit": "one S1 sample-0 assembly with cross-subject depth; no second assembly, coassembly, longitudinal-pair ablation or donor generalization claim"
   },
   "baseline": {
     "source_commit": "5e54538d1799e8d2538621729400f33fbaf017b9",
@@ -43,8 +62,8 @@
     "min_length_bp": 500,
     "loader_workers": 0,
     "arms": [
-      "learned_tnf_two_depth",
-      "raw_tnf_two_depth",
+      "learned_tnf_ten_depth",
+      "raw_tnf_ten_depth",
       "learned_tnf_only",
       "raw_tnf_only"
     ],
@@ -57,7 +76,7 @@
       "query_block": 128,
       "oracle_K": null
     },
-    "primary": "learned_tnf_two_depth",
+    "primary": "learned_tnf_ten_depth",
     "diagnostics_are_product_alternatives": false
   },
   "external_tools": {
@@ -115,8 +134,8 @@
     ],
     "truth_tuning": false,
     "marker_selection_is_not_independent_validation": true,
-    "real_assembly_adapter_status": "native small-DNA PAF/CIGAR and AMBER locally tested; Linux/full-scale unexecuted",
-    "alignment_reference_universe": "all source genomes and replicons generating sample-0 reads, including non-target biology; any reference batches require global competing-hit reconciliation",
+    "real_assembly_adapter_status": "v10 tiny Linux PAF/CIGAR/AMBER contracts accepted; new serial data DAG locally tested on real tiny DNA; GCP runtime/scale and truth population admission pending",
+    "alignment_reference_universe": "prospective conservative 311-file retained sample-0 metadata universe, all 7688 released replicon records; globally reconcile <=500Mb reference batches; independently reconcile positive read origins, source grouping and cellular target taxonomy before fitting/scoring",
     "alignment_command_contract": [
       "minimap2",
       "-x",
@@ -137,83 +156,40 @@
     ],
     "alignment_sensitivity_limit": "heuristic aligner; all emitted qualifying competing chains retained, not proof of exhaustive homology",
     "reference_repeat_ambiguity": "unique genome query support may count toward purity; ambiguous source-coordinate mapping cannot inflate completeness",
-    "aligner_cpu_accounting": "minimap2 -t N-1 plus its one I/O thread; default indexing at most three threads; no -2"
+    "aligner_cpu_accounting": "minimap2 -t N-1 plus its one I/O thread; default indexing at most three threads; no -2",
+    "reference_grouping_and_target_taxonomy_admitted": false
   },
   "resources": {
-    "stage_budgets": [
-      {
-        "stage": "asset_setup_native_preflight",
-        "allocated_vcpus": 8,
-        "allocated_ram_gb": 24,
-        "hours_ceiling": 5,
-        "allocated_core_hours_ceiling": 40
-      },
-      {
-        "stage": "assembly_mapping_source_truth",
-        "allocated_vcpus": 16,
-        "allocated_ram_gb": 48,
-        "hours_ceiling": 6,
-        "allocated_core_hours_ceiling": 96
-      },
-      {
-        "stage": "primary_product_and_bounded_diagnostic_controls",
-        "allocated_vcpus": 16,
-        "allocated_ram_gb": 48,
-        "hours_ceiling": 3,
-        "allocated_core_hours_ceiling": 48,
-        "diagnostic_core_hours_ceiling": 16
-      },
-      {
-        "stage": "semibin2",
-        "allocated_vcpus": 16,
-        "allocated_ram_gb": 48,
-        "hours_ceiling": 2,
-        "allocated_core_hours_ceiling": 32
-      },
-      {
-        "stage": "metacat_core",
-        "allocated_vcpus": 16,
-        "allocated_ram_gb": 48,
-        "hours_ceiling": 2,
-        "allocated_core_hours_ceiling": 32
-      },
-      {
-        "stage": "scgbinner_native",
-        "allocated_vcpus": 16,
-        "allocated_ram_gb": 48,
-        "hours_ceiling": 6,
-        "allocated_core_hours_ceiling": 96
-      },
-      {
-        "stage": "completebin_modified_max50",
-        "allocated_vcpus": 16,
-        "allocated_ram_gb": 48,
-        "hours_ceiling": 6,
-        "allocated_core_hours_ceiling": 96
-      },
-      {
-        "stage": "comebin_native_grid",
-        "allocated_vcpus": 16,
-        "allocated_ram_gb": 48,
-        "hours_ceiling": 12,
-        "allocated_core_hours_ceiling": 192
-      },
-      {
-        "stage": "evaluation_diagnostics",
-        "allocated_vcpus": 16,
-        "allocated_ram_gb": 48,
-        "hours_ceiling": 2,
-        "allocated_core_hours_ceiling": 32
+    "provider": "GCP Iowa regular CPU VM; prospective only",
+    "data_stage": {
+      "machine_type": "e2-standard-8",
+      "allocated_vcpus": 8,
+      "allocated_ram_gib": 32,
+      "cumulative_driver_hours_ceiling": 24,
+      "provider_max_run_hours_proposed": 25,
+      "stall_seconds": 1800,
+      "working_rss_fraction": 0.82,
+      "megahit_memory_fraction": 0.75,
+      "free_disk_reserve_gib": 25,
+      "max_concurrent_tools": 1,
+      "proposed_work_disk_gib": 300,
+      "proposed_gross_vm_plus_ip_usd_per_hour": 0.27304568,
+      "gross_compute_ip_ceiling_usd": 6.826142,
+      "gross_boot_plus_work_usd_per_730h_month": 31.2,
+      "storage_review_days_after_growth": 7,
+      "phase_spend_envelope_usd_proposed": 20,
+      "budget_assumptions": "25h VM/IP plus <=7d 300GiB work/30GiB boot retention (~$14.01 total), compact archive/operations/reserve; no allowances/tax/FX included; localized credit quote required",
+      "includes_setup_hashing_failures_and_child_work": true,
+      "approved_for_execution": false,
+      "required_quota_increase": {
+        "SSD_TOTAL_GB": {
+          "current": 250,
+          "needed": 300,
+          "submitted": false
+        }
       }
-    ],
-    "stage_sum_core_hours": 664,
-    "reserve_core_hours": 36,
-    "total_allocated_core_hours_ceiling": 700,
-    "includes_failed_attempts_setup_download_collection": true,
-    "remaining_owner_credits": 1980,
-    "preflight_working_rss_bytes_ceiling": 20000000000,
-    "science_working_rss_bytes_ceiling": 40000000000,
-    "max_concurrent_tools": 1,
+    },
+    "fit_or_score_monetary_budget": "unapproved; reassess after measured data-stage outputs, CompleteBin storage/RAM and full-schedule affordability",
     "eligible_contig_scale_stop": 100000,
     "assembly_bp_scale_stop": 600000000,
     "local_checks": {
@@ -226,48 +202,44 @@
     },
     "estimates_are_not_measurements": true,
     "auto_increase_or_retry": false,
-    "balance_date": "2026-10-09 owner approximately",
-    "headroom_core_hours": 1280,
-    "storage": {
-      "provisioning_estimate_gb": 200,
-      "hard_experiment_cap": false,
-      "home_capacity_owner_gb": [
-        50,
-        100
-      ],
-      "shared_capacity_owner_tb": [
-        8,
-        10
-      ],
-      "home_contents": "code, versioned environments, transfers, logs, compact evidence",
-      "shared_contents": "own e009 subtree: reads, source references, BAM/SAM and heavy temporary/native products",
-      "free_space_checked_before_writes": true
-    }
+    "historical_ucloud_budget": "docs/history/E009_UCLOUD_OPERATIONS.md#superseded-two-depth-resource-protocol"
   },
-  "owner_paths": {
-    "root": "/work/Home/dl_binner/e009/",
-    "transfer": "/work/Home/dl_binner/e009/transfer/",
-    "data_heavy_destination": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e009/"
-  },
-  "next": "finish local contract checks and prepare 8-vCPU/24-GB <=5-hour owner preflight; review native return before scientific launch",
+  "next": "owner review of prospective resource/retention spend and fresh trial-credit eligibility; explicit later direct GCP acquisition/assembly/depth/provisional-truth phase only",
   "unexecuted": [
-    "UCloud",
-    "benchmark fitting/scoring",
-    "architecture changes",
-    "three-way GLM study",
-    "accepted science replay",
-    "public release"
+    "GCP data runtime/native-scale execution",
+    "bulk reads/acquisition/assembly/depth/truth",
+    "community binner fits and E009 quality scores",
+    "architecture studies/new seeds",
+    "main merge/publication"
   ],
-  "owner_preflight_prepared": true,
+  "owner_preflight_prepared": "historical v14 completed and accepted; do not run retired owner packet",
   "scientific_execution_ready": false,
   "failed_native_runtime_recovery": {
-    "receipt": "linux-preflight-v10.json",
-    "locked_recipes": "failed-paths-lock.json",
-    "tools": [
-      "SCGBinner",
-      "COMEBin CheckM path"
+    "receipts": [
+      "linux-preflight-v10.json",
+      "linux-preflight-v14.json"
     ],
-    "source_model_training_and_clustering_unchanged": true,
-    "scientific_execution_admitted": false
+    "locked_recipes": "failed-paths-lock.json",
+    "status": "all five tiny native contracts accepted on UCloud without replay",
+    "scientific_execution_admitted": false,
+    "gcp_runtime_admitted": false
+  },
+  "gcp_paths": {
+    "repo": "/srv/dl_binner/repo",
+    "data_stage": "/srv/dl_binner/experiments/e009/data-stage-v1",
+    "envs": "/srv/dl_binner/experiments/e009/envs",
+    "archive": "/srv/dl_binner/archive"
+  },
+  "gcp_data_stage": {
+    "plan": "gcp-data-plan.json",
+    "lock": "gcp-data-linux-lock.json",
+    "workflow": "workflows/e009-data/Snakefile",
+    "launcher": "scripts/e009_gcp_run.py",
+    "local_receipt": "gcp-local-validation.json",
+    "truth_review_dependencies": [
+      "exact positive sample-0 read-origin/source grouping",
+      "cellular taxonomy and complete-reference target denominator",
+      "new host runtime, actual scale/resources and ordered native BAM/depth axes"
+    ]
   }
 }

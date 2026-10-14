@@ -1,6 +1,6 @@
 # D014: Google Cloud as the connected Linux research workspace
 
-Date: 2026-10-13; acceptance: 2026-10-14 Copenhagen. Status: **accepted; phase-1 infrastructure, private backup and actual Codex desktop SSH project verified**.
+Date: 2026-10-13; preparation amendment: 2026-10-14; acceptance: 2026-10-14 Copenhagen. Status: **accepted; phase-1 infrastructure, private backup and actual Codex desktop SSH project verified**.
 
 ## Problem and decision
 
@@ -32,7 +32,7 @@ whole-environment snapshot or automatic paid-cloud spending is implied.
 - Browser-only Cloud Shell: its small home disk/ephemeral compute is unsuitable as
   the persistent scientific workspace; CLI/browser login can still aid setup.
 - Large VM/GPU/terabyte disk now: not justified by setup or the unsettled E009
-  10/20-sample scope; provision based on the next actual peak/work budget.
+  then-unsettled 10/20-sample scope; provision based on the next actual peak/work budget.
 - No external IP plus NAT: secure but adds a paid gateway and complexity just for
   package/public-read downloads. IAP-restricted inbound plus ephemeral outbound IP
   is simpler; no public SSH firewall is created.
@@ -71,8 +71,19 @@ leaving global kernel protections enabled. CLOUD/receipt distinguish desktop
 retry proof from the subsequent native CLI check. Final records are normally
 pushed/synced; unused compute is stopped, preserving both disks and login state.
 
-Next independently review v14 and choose 10/20 depth sources for one assembly,
-with representativeness, actual quotas, storage and monetary budget together.
+The 2026-10-14 preparation independently accepts v14 without replay and chooses
+ten first-listed subject samples 0,2,3,4,6,9,10,11,14,17 for one sample-0 assembly.
+[E009 operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md) owns
+the locally tested data stage and proposed 8 CPU/32 GiB, 300-GiB work disk,
+24-hour driver/25-hour provider STOP, $20 run plus seven-day storage envelope.
+Current quotas (12 total CPU, 24 E2 regional, 250-GiB balanced/SSD) permit the CPU change but require disk quota >=300 GiB; no
+VM/start/provisioning/service mutation or bulk data/scientific work ran now.
+Displayed credit scope/balance/pending usage and owner resource/retention approval
+remain mandatory before execution. Existing read-only GitHub access suffices;
+CLOUD records a separate expiring Contents-write credential as the later direct-
+push preference, with permanent write deploy key/App alternatives. No permission
+changed. Old UCloud command/budget details now live only in history; durable
+storage/startup lessons stay available without requiring GCP snapshots.
 Revisit size/provider after measured workflow needs or credit constraints, not as
 an architecture gate. No accepted science is repeated to migrate infrastructure.
 

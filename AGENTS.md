@@ -177,7 +177,7 @@ reopening an accepted experiment.
 
 When uncertainty remains, state it.
 
-Use public community benchmarks alongside question-specific simulations. Keep unmodified benchmark results distinct from controlled derivatives, and treat data used for mechanism selection as development data. Reuse established evaluators where their contracts fit; add tested diagnostic summaries before considering a replacement framework. Audit the actual input and execution paths rather than inferring them from a paper title or README. For multi-sample features, check native emitted sample and contig axes against the frozen manifest; do not assume filesystem ordering or alias names survive native path resolution.
+Use public community benchmarks alongside question-specific simulations. Keep unmodified benchmark results distinct from controlled derivatives, and treat data used for mechanism selection as development data. Reuse established evaluators where their contracts fit; add tested diagnostic summaries before considering a replacement framework. Audit the actual input and execution paths rather than inferring them from a paper title or README. For multi-sample features, check native emitted sample and contig axes against the frozen manifest; do not assume filesystem ordering or alias names survive native path resolution. One assembly can still use many read/BAM samples: per-base coverage storage scales with covered assembly bases times BAM count, while multiple assemblies multiply whole run directories. Audit persistent candidates, checkpoints and temporary coexistence before claiming that a smaller epoch count bounds peak disk use.
 
 ---
 
@@ -190,11 +190,12 @@ product/design decision they inform; reuse accepted evidence and avoid expanding
 experiments by default. Keep correctness, provenance and honest claim limits.
 See PROJECT_INTENT.md and D010 for the current direction.
 
-Before settling the first model architecture, conduct a comprehensive, current
-review of relevant metagenomic-binning papers, recent benchmark studies, and the
-source code of a justified shortlist of leading tools. This is a high-priority
-design input, not optional scope growth or a novelty gate; define and record its
-scope/cutoff, and do not combine methods without a concrete rationale.
+The required first-architecture review and first prototype are already accepted;
+STATE points to their scoped records. For a new unresolved design decision, use a
+current review of relevant papers/benchmarks and the source of a justified shortlist.
+Define its scope/cutoff and concrete design purpose; it informs implementation,
+without becoming another novelty or release gate. Do not restart the initial
+review or combine methods without a concrete rationale.
 Once a scoped review and design decision are complete, reuse those records during
 implementation. Refresh specific evidence when a changed dependency or design
 question requires it; do not restart the whole review before each milestone.
@@ -280,7 +281,7 @@ Native CPU support is not full-schedule affordability. Record actual
 machine/allocation, elapsed time, process usage and estimated monetary spend
 separately; allocated core-hours remain useful comparisons, not GCP prices.
 
-For owner-run execution, group commands into fail-fast scripts when later steps depend only on explicit machine-checkable success, not on scientific or operational interpretation. Pause for returned-output review at genuine assessment boundaries, not after every routine command. Explain each command group's purpose, files changed, software/data downloads, expected resource use, requested outputs, and stopping conditions in chat. The owner manages job extensions; do not repeatedly request remaining time or make it a prerequisite. Still retain available timing and allocation information for budget accounting. Keep per-tool environments inside the experiment's persistent work directory. Record actual setup and return-artifact status in the experiment guide and STATE; never infer execution from prepared commands. Storage estimates should inform provisioning, not silently change scientific design when the owner can expand storage.
+For owner-run execution, group commands into fail-fast scripts when later steps depend only on explicit machine-checkable success, not on scientific or operational interpretation. Pause for returned-output review at genuine assessment boundaries, not after every routine command. Explain each command group's purpose, files changed, software/data downloads, expected resource use, requested outputs, and stopping conditions in chat. For owner-run jobs, the owner manages extensions; do not repeatedly request remaining time. Direct connected-VM work needs persistent logs and review at real assessment boundaries, without an artificial upload/return round trip. Retain actual VM uptime, allocation and costs separately from child timing. Keep per-tool environments inside the experiment's persistent work directory. Record actual setup and return-artifact status in the experiment guide and STATE; never infer execution from prepared commands. Storage estimates should inform provisioning, not silently change scientific design when the owner can expand storage.
 
 Remote scientific commands, including direct SSH runs, must automatically capture
 terminal output to a log file; this also applies to any remaining owner-run command. Request the resulting file instead of asking the owner to copy terminal text. For long native steps, also expose timestamped stage progress and periodic heartbeats to the terminal or a dedicated progress log. Preserve the detailed per-tool logs and command provenance; progress is not a replacement for them. Use Snakemake per-rule `benchmark:` and `--benchmark-extended` for new substantial rules when useful, without rerunning accepted work solely to obtain measurements. Keep sampled process CPU/RAM metrics distinct from charged allocated vCPU-hours.
@@ -363,44 +364,15 @@ A reduced runtime smoke establishes only its exercised imports; directories name
 
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
-For repeated native startup hangs, capture evidence inside the child (including
-before Python site initialization) and process wait state, not only a parent
-timeout traceback. Do not bypass a failed probe or raise its timeout and call
-that a root-cause repair. Prior successful execution does not establish current
-runtime health; retain explicit unresolved status until evidence identifies it.
-When retained traces establish forward progress through cold persistent-file reads,
-correct a prematurely short startup budget prospectively, with an absolute clock
-and an idle-progress limit. Distinguish that wrapper correction from repairing
-filesystem latency or accepting an uncompleted runtime probe.
-If that bounded correction still spends mostly wall time waiting on persistent
-files, stop repeating the full allocation and change the observed read path in
-a cheap native recovery. Python -B forbids bytecode writes, not reads; source-cache
-isolation needs explicit -X flags under -I, verified child propagation and no
-scientific-setting changes. Keep failed attempts and distinguish a locally repaired
-cache-loader reproduction from actual storage/runtime acceptance.
-
-For long owner-run preparation, prefer progress-aware stall detection and one
-explicit owner-selected overall cost ceiling over arbitrary short per-stage wall
-caps. Completed bytes/files/checkpoints are progress; parent heartbeats alone are
-not. Justify stall intervals and any hard ceilings from retained workload/rate,
-allocation and uncertainty, including copy, verification and packing. Test the
-observed workload cardinality and recovery path, not just a smaller convenient
-fixture. Local throughput remains distinct from native performance. Persist
-checksum-bound completed work across job resets where useful; make resume reject
-source/config/output drift and ignore unsealed partials without deleting them.
-Before handoff, reconcile every nested timeout with the advertised command budget.
-
-When changing an observed storage execution path, distinguish one-time materialization
-from repeated native imports. Bind snapshot bytes and internal links, retain a
-reusable artifact, and validate interpreter, library origins and actual numerical
-operations before admission. CPU-capped I/O concurrency may overlap storage
-latency; it does not authorize extra numerical workers or silent relocation.
-
-D006's old E001 job-local-copy exception is historical provenance; it does not
-authorize relocating old prefixes onto GCP. Recreate complete independently owned
-compatible runtimes from accepted version/source records where inaccessible bases
-prevent reuse. Linux compatibility must be tested on the new host when relevant;
-accepted scientific stages stay accepted and are not replayed merely to migrate.
+For native startup hangs, retain child-side traces and process wait state before
+changing budgets or storage paths. Real file/byte/checkpoint movement is progress;
+parent heartbeats are not. Use one prospective overall cost/clock limit plus a
+justified stall interval, and reconcile nested limits before launch. A source-cache
+or snapshot repair needs explicit byte/link/interpreter/library verification;
+`-B` prevents bytecode writes, not reads. Reuse accepted sealed work without
+original recopy and refuse corruption or drift. Do not apply UCloud's slow-storage
+snapshot workaround to a healthy persistent GCP prefix by default. The detailed
+case history is in [E009 UCloud operations](docs/history/E009_UCLOUD_OPERATIONS.md).
 
 Isolate Python processes inside tool environments: unset inherited `PYTHONPATH`, `PYTHONHOME` and `PYTHONUSERBASE`, and set `PYTHONNOUSERSITE=1` before installs, inventories and execution. UCloud's user-site packages were observed inside otherwise separate conda environments; distinct environment directories alone do not establish import isolation. Preserve required tool-local source imports, and verify package origins when introducing a runtime. Cross-experiment reuse must be read-only and validate a full distribution inventory and import origins against a clean, hash-identified prefix record; a `pip freeze` alone may include user-site entries or direct references. A new package-only venv may explicitly borrow reviewed dependencies read-only, with its own installed wheel and byte-bound before/after checks. Scope byte verification to the actual execution contract: accepted sealed runtime members need no repeated whole-prefix hash, and explicit external source/binary/model inputs can be bound before/after. Do not recursively hash unused tests, headers or unrelated databases merely to demonstrate non-mutation. Label the verification scope honestly; this is not proof that every file in a prefix stayed unchanged. Expose real file/byte progress for substantial verification. Record the dependency/base-prefix relationship, exclude the old package and path-injecting overlays, and never transfer such links as a portable environment or remove their required base. For all Python children using a reused environment, including scientific rules, pass `-B` on the Python command line to prevent `.pyc` writes: `-I` implies `-E` and ignores `PYTHONDONTWRITEBYTECODE`. Do not modify an already executed/transferred snapshot in place; use explicit wrappers or a new versioned transfer.
 
@@ -414,7 +386,7 @@ Preserve a virtual environment's lexical interpreter path when invoking it:
 resolving its `bin/python` symlink can bypass `pyvenv.cfg` and execute the base
 environment. Probe version/prefix before giving a harness runtime-validation credit.
 
-### Ask for files
+### Allocation and storage records
 
 Record the owner's actual allocation for every performance run; recommendations and tool thread counts are not allocated vCPUs. Future owner-run resource drivers must accept explicit allocation inputs and use them for thread limits and charged core-hour estimates. Host CPU/RAM reports may describe the whole shared node. Smaller allocations are allowed; extrapolate only at the measured allocation, not by assuming proportional speedup. Distinguish expected runtime from a timeout. Preserve raw returned records and append corrections when allocation was wrong.
 
@@ -431,7 +403,7 @@ accepted evidence or old UCloud files under this general cleanup convention.
 
 Follow [D006](docs/decisions/D006-environment-ownership.md): retain separate, persistent experiment-owned tool environments. E001's original prefixes remain historical provenance and inaccessible on UCloud; fresh GCP tool recipes must own complete independent dependencies rather than borrow that unavailable base. Never relocate or silently upgrade an executed environment. Changed recipes need distinct version-qualified prefixes; reuse by another experiment must be read-only and provenance-bound.
 
-Group independent native tool setup, synthetic smoke and bounded feasibility checks into one owner-run task when no interpretation is required between stages. Failure skips dependent stages for that tool, but need not block another isolated tool. Preserve per-tool logs and return a combined status. Do not repeat settled checks without evidence of changed inputs, runtime or a relevant failure.
+Group independent native tool setup, synthetic smoke and bounded feasibility checks into one authorized task or direct-VM phase when no interpretation is required between stages. Failure skips dependent stages for that tool, but need not block another isolated tool. Preserve per-tool logs and return a combined status. Do not repeat settled checks without evidence of changed inputs, runtime or a relevant failure.
 
 ---
 
@@ -447,7 +419,7 @@ Be willing to say that an old idea is no longer good.
 
 The objective is not to satisfy old plans.
 
-The objective is to build the strongest scientifically defensible metagenomic binning method we can.
+The objective is a usable, reproducible metagenomic binner with scientifically defensible claims. Further quality, novelty and publication are optional improvements.
 
 ## Git and GitHub
 

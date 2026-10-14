@@ -4,56 +4,53 @@ Updated: 2026-10-14. This is the single current handoff.
 
 ## Exact next step
 
-**SDU/UCloud is inaccessible.** Owner reports files intact but login deactivated.
-[D014](decisions/D014-google-cloud-workspace.md) selects Google Cloud; old
-[UCloud guidance](history/UCLOUD_OPERATIONS.md) and [E009 command](history/E009_UCLOUD_OPERATIONS.md)
-are archived provenance. No old evidence or UCloud files were deleted.
+**E009 preparation is complete; owner approval is needed for the data-only GCP phase.**
+[D013](decisions/D013-first-comparative-benchmark.md) now chooses **ten ordered
+full coverage samples 0,2,3,4,6,9,10,11,14,17**, one per corrected subject, with
+one sample-0 MEGAHIT assembly. [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md)
+owns exact commands, axes, estimates, remaining truth admission and the next prompt.
+[V14](../experiments/E009-competitive-benchmark/linux-preflight-v14.json) is
+independently accepted: all 174 archive members /172 hashes, terminal/arrays/native
+exits and owned runtime origins pass. Successful contracts were not repeated;
+no full community fit or E009 quality score ran.
 
-**Phase 1 accepted, including the actual desktop SSH project.**
-[CLOUD](CLOUD.md) owns exact access/operation commands and costs;
-[the receipt](evidence/gcp-workspace.json) binds live observations. The approved
-Iowa workspace is provisioned: regular `dl-binner-cpu`, 4 vCPU /16 GiB, pinned non-Pro
-Ubuntu 24.04, preserved 30-GiB standard boot +50-GiB balanced work mounted at
-`/srv/dl_binner`, four-hour provider STOP per start, private Standard archive,
-OS Login and IAP-only SSH. Strict `ssh dl-binner-gcp` passes from the Mac;
-Linux reports four CPUs. Complete pinned Codex 0.160.1 is on the remote login PATH and authenticates with
-the owner's ChatGPT account; no API key is used. The owner-returned desktop commands
-and independently inspected native session outputs agree on `/srv/dl_binner/repo`,
-clean `benchmark-planning`, HEAD `bde9fbf49c035286cae713799d48d7d55a3d87a5` and Linux.
-The initial Ubuntu AppArmor/Bubblewrap failure is retained; documented OS
-prerequisites repaired the ordinary CLI sandbox with global protections still
-enabled. This distinguishes the desktop retry from the subsequent native CLI check.
-Private native-service-account upload/readback of 6,126 bytes passes byte/SHA256
-comparison; no credentials or scientific data were archived.
+The real serial acquisition/assembly/ten-depth/provisional-alignment-truth DAG and
+complete independent Linux data recipe are prepared and locally tested, including
+fresh/partial/completed resume and drift/resource refusal. Mac fixture assembly
+uses one thread. [Local evidence](../experiments/E009-competitive-benchmark/gcp-local-validation.json)
+does not claim GCP runtime/throughput or a frozen cellular truth population.
+Positive-origin/source grouping and cellular taxonomy still need review before
+fits/scores. Main's dev3 implementation remains immutable.
 
-Source-freeze **`440911904e8342c2f3a27254f95caa51871cf706`** was normally pushed to
-private `benchmark-planning` and cloned at that exact clean HEAD under
-`/srv/dl_binner/repo`. Main remains `5e54538d1799e8d2538621729400f33fbaf017b9`.
-Only a repository-scoped read-only deploy key is installed on Linux; later push
-rights are a separate choice. Final setup receipts are normally pushed/synced
-without self-referential HEAD claims in their own JSON; the exact final synchronized
-commit and stopped-state check are reported in chat.
+**The VM remains stopped and unchanged.** [Read-only APIs](../experiments/E009-competitive-benchmark/gcp-preparation.json)
+verify e2-standard-4/16 GiB, 30-GiB standard boot +50-GiB balanced work, four-hour
+STOP; total CPU quota 12, E2 regional 24, balanced-disk quota 250 GiB. Phase-1
+strict IAP SSH, persistent mount, private archive/readback, pinned Codex/ChatGPT
+and actual desktop SSH project remain accepted in [CLOUD](CLOUD.md)/[D014](decisions/D014-google-cloud-workspace.md).
+SDU/UCloud is inaccessible; all old data/receipts/locators remain protected.
 
-Owner supplied the live billing display on 2026-10-13: **kr1,973 remaining, kr0 used,
-expires 2027-01-12**, reported paid upgrade; APIs verify DKK/open billing and billed
-project. This session's stale Browser loader prevents independent display review;
-Google CLI and strict SSH work. Owner approved recurring storage and expiry review
-**by 2027-01-10**. Running VM/IP is about $0.139/hour; stopped disks remain $6.20/month
-gross, plus actual bucket bytes. Alerts are not caps. Future extra/unclear/uncovered
-or beyond-credit spending still requires approval; the unavailable old UCloud
-balance is not GCP funding.
+Propose the same VM at **8 CPU/32 GiB**, work disk **300 GiB**, driver clock
+**24 hours cumulatively** and provider STOP **25 hours**. Approximately $6.83
+compute/IP plus seven-day disk retention gives a proposed **$20 gross phase
+envelope**. Retained boot/work becomes $31.20/month gross even stopped. CPU quota fits; balanced-disk quota must rise from 250 to 300 GiB. No change is authorized now. Refresh actual displayed credit scope/
+balance/expiry, pending usage and localized quote before approval/spending.
+Kr1,973/2027-01-12 is the owner's 2026-10-13 display, not a current API balance.
+Review grown storage within seven days and retained important storage by 2027-01-10.
 
-**Exact next action, in the following phase:** independently review the
-owner-reported successful E009 v14 return without rerunning
-accepted contracts; settle **10 versus 20 read samples** for one sample-0 assembly
-using representation, peak storage and monetary cost. Published multi-assembly
-results do not fix this choice. The local ignored inbox still owns that return;
-it has not been inspected or migrated during phase 1. Freeze ordered
-axes/protocol/resources before a
-separately authorized bulk phase directly on GCP. No fits/scores, architecture
-comparisons, new seeds, main merge or publication follow automatically.
-Start the stopped VM using CLOUD only when it is needed. No binner/runtime/scientific
-tests were repeated for setup. Colab/Kaggle remain possible future options, not configured now.
+[CompleteBin audit](evidence/2026-10-14-completebin-storage.md) identifies per-base
+coverage/training duplication and retained 105/36 candidate grids. One assembly
+still has ten BAMs; 50 epochs do not bound preprocessing/candidate storage. Its
+later fit may need 400–500-GiB disk/64–128-GiB RAM, with quota/credit/owner approval
+then. Ten-sample outer coverage process budgets are prospectively corrected;
+no binner fit/runtime admission is claimed.
+
+Keep the current read-only GitHub deploy key for the next data phase. If direct
+VM push is desired later, [CLOUD's recommendation](CLOUD.md#github-write-access-recommendation)
+prefers a separate expiring single-repository Contents-write token; a write deploy
+key is simpler but permanent/broader. No key/token permission changed. This task
+commits locally only; remote source synchronization requires a normally authorized
+push before the later VM launch. No fits/scores, extra seeds, architecture study,
+main merge or publication follows automatically.
 
 ## Direction and completed work
 
@@ -277,106 +274,39 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**E009 v10 accepts all other stages/three tool contracts; v14 retries only SCGBinner and COMEBin.**
-[D013](decisions/D013-first-comparative-benchmark.md),
-[the targeted evidence](evidence/2026-10-09-e009-contract-reconciliation.md) and
-[E009](../experiments/E009-competitive-benchmark/README.md) retain subject S1:
-full short-read sample-0 MEGAHIT 1.2.9 assembly (200-bp emission) and measured
-sample-0/1 depth on that exact reference. Both official sample-0 contigs/GSA archives
-were inspected and have identical 665,738-record / 422,673,293-bp DNA multisets.
-They are reference-coordinate gold-standard reconstructions, so they cannot replace
-the read-derived assembly. The supplied simulator coverage remains source truth,
-never observed depth. Large reads remain unacquired; no community was assembled/fitted.
+**E009 v10/v14 tiny native evidence is accepted; community science is unstarted.**
+[E009](../experiments/E009-competitive-benchmark/README.md) owns the chronological
+attempts and limitations. V10 accepts SemiBin/MetaCAT/CompleteBin, eight-thread
+Linux utility/assembly/mapping/depth/competitive truth/AMBER contracts, source
+acquisition/catalog and scoped immutable identities. V14 repairs only independent
+SCGBinner and complete CheckM/COMEBin paths; all other stages remain unscheduled.
+No old prefix/source/chunk or scientific output was modified/replayed.
 
-Preserve dev3 source `5e54538` and scientific defaults. Learned TNF + measured depth
-is primary; raw and TNF-only controls are diagnostic, capped at 16 core-hours.
-Shortlist: SemiBin2, MetaCAT core, SCGBinner, COMEBin full native grid, plus named
-CompleteBin max-50 subject to native-scale admission. DCVBin's official 1.657-GB
-payload is available; its single-depth CUDA VAE and CUDA continued-pretraining
-recipe require a substantial extra port, so it is excluded from this bounded CPU
-comparison. Coverage is not a disadvantage. Markers are a high-priority future
-fixed-encoder grouping/refinement ablation, with no baseline change or study now.
-Known/unknown pretrained overlap limits generalization; it is not evaluator label
-leakage and an unavailable historical inventory alone is not an execution blocker.
+Official sample-0 contigs/GSA share the 665,738-record /422,673,293-bp DNA multiset
+and are reference-coordinate reconstructions, not a traceable de novo assembly.
+The full released source catalog has 2,078 files /65,571 records /10,251,869,096 bp;
+exact accession/full-replicon development comparisons found no match, with near/
+pretraining independence unresolved. Its inaccessible UCloud archive has an
+accepted SHA for new-host reacquisition, not a GCP acquisition receipt.
 
-Acquisition/overlap, paired-read/assembly/mapping/ordered-depth, competitive PAF/CIGAR
-truth, complete exports and narrow AMBER/R95 adapters are implemented. Actual Mac
-small-DNA mapping/depth, source truth (including competing genomes/repeats/reverse
-orientation/I-D), AMBER and CompleteBin checkpoint/forward paths pass. Operational
-SCGBinner dtype/host-pool/HNSW and native HMM master accounting are explicit.
-Real COMEBin native writers expose resolved-basename IDs; adapters verify their
-relation to ordered original BAM paths rather than guessing from aliases. Local
-checks and failures are separately retained; they do not establish full Linux
-imports/training or large-community affordability. Mac four-thread MEGAHIT crashes
-remain unresolved; the local writer check is explicitly one thread; v10 independently passes
-eight-thread native Linux assembly. No accepted science was repeated.
+The shortlist remains SemiBin2, MetaCAT core, SCGBinner, COMEBin native grid and
+named CompleteBin max-50. DCVBin's payload exists but its CUDA/single-BAM port is
+outside this bounded CPU comparison; LorBin is deferred. Marker-guided fixed-
+encoder grouping remains a high-priority controlled follow-up, not an automatic
+change. A whole-tool win cannot identify the responsible component.
 
-**E009 v10 completed; two native tool contracts failed.**
-[Independent review](../experiments/E009-competitive-benchmark/linux-preflight-v10.json)
-verifies checksum/all 340 members /338 hashes. Accept SemiBin, MetaCAT, CompleteBin,
-eight-thread Linux assembly, ordered mapping/depth, competitive truth, AMBER/R95
-software tests, runtime/utility/source/database setup, source acquisition/catalog
-and scoped read-only identities. No full fits/E009 scores. Actual 456.278 seconds
-through collection /1.01395 allocated core-hours at 8 vCPU/24 GB, peak sampled
-stage RSS 1.364 GB. Acquired 3.2-GB source archive/catalog remains retained; source
-catalog 2,078 files /65,571 records /10.252 Gbp, zero exact development matches,
-with near/pretraining independence not established. Preserve all accepted evidence.
+Current input/resource amendment is one sample-0 assembly with ten cross-subject
+depth sources and unchanged raw/learned/sequence-only controls. Old two-depth
+700-hour UCloud budgets/commands are [history](history/E009_UCLOUD_OPERATIONS.md),
+not current entitlements. The prepared data-only GCP stage stops for actual
+source/truth/resource review; no full-fit monetary budget is approved.
 
-SCGBinner's shared sklearn1.9.0 lacks stable_cumsum; COMEBin's own help passed,
-CheckM imports a pruned checkm.test module. The former **v14 two-path retry,
-8 vCPU/24 GB, three-hour allocation** is archived in
-[historical operations](history/E009_UCLOUD_OPERATIONS.md). Do not run it again:
-owner reports completion; independent return review is reserved for phase 2. The
-prepared upload pair remains under `artifacts/e009-preparation/transfer-v14-final/`; [transfer.json](../experiments/E009-competitive-benchmark/transfer.json)
-binds final source/command/packet/tests. The packet specified independently owned
-compatible SCGBinner and complete CheckM Conda stacks; it retained COMEBin's accepted numerical recipe with separate CheckM
-interpreter/libraries. This is the prior retry design, not GCP setup work. [D006](decisions/D006-environment-ownership.md)
-records the concrete failures triggering this scoped ownership amendment.
-The first local mixed Conda/pip recipe failed and is retained; v14 replaces it
-with all-Conda CPU Torch and reuses accepted Linux COMEBin help while checking
-the unchanged native augmentation API. A second local packet passed SCGBinner
-but exposed CheckM's unsupported global --help; v14 uses actual lineage_wf -h
-and checks owned Linux native entry points without fitting. Only the two failed native contracts execute; retained tiny BAMs, acquired sources
-and utility prefix are reused. Passed tools, source download/catalog and all
-assembler/mapping/evaluator checks stay accepted, unscheduled. Original E001,
-v8 snapshot/151 chunks, old attempts/packets/data/prefixes remain untouched. The final three-hour clock and10-GB Home floor follow actual Linux package
-inventories (94,327 cache/prefix payload paths; old copy-rate comparison~105min
-before overhead), rather than the much faster Mac run. Corrected native contracts remain unaccepted in the maintained record until
-phase-2 return review; no v14 archive was opened in this setup phase.
-No scientific design/defaults/results change and no full fit/score is admitted.
-[Final local evidence](../experiments/E009-competitive-benchmark/local-failed-paths-v14.json)
-accepts the exact v14 archive/Bash on real tiny inputs: both native contracts pass,
-old receipts unchanged, passed stages unscheduled; 128.946s through collection,
-145.042s outer harness, 665.940MB sampled peak. All53 regressions/docs pass.
-Local platform substitutes remain explicit; no Linux cold-install/fit credit.
-
-After GCP setup and independent v14 admission, settle 10/20 coverage sources and
-prepare the bounded GCP bulk-read/assembly/depth/truth step. No community fits/scores/
-architecture comparisons or source-history rewrite. Current phase authorizes normal
-private branch push, not bulk execution. Old evidence remains preserved.
-
-The previous UCloud plan was **700 allocated core-hours** (664 stages +36 reserve)
-against about 1,980 credits. This is historical workload planning, **not accessible
-funding or a current GCP authorization**. The former 200-GB provisioning estimate
-and 8–10-TB shared capacity are not GCP entitlements. Price/reassess the 10/20-sample
-variant before working-disk growth and bulk work; no data are acquired now.
-The scientific protocol/source/eligibility/evaluation contracts remain unchanged
-until that explicit next-phase sample-axis amendment. Never touch colleagues' files.
-
-The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
-planned and unrun. Current authorization covers phase-1 GCP setup/documentation/normal private branch
-push only, with billing/access gates. It excludes v14 review, data acquisition,
-community fits/scores, extra seeds, architecture implementation, PR/merge/publication.
-E008's private push/PR/merge is authorized and completed; accepted
-scientific source and settings are unchanged.
-Frozen GLM weights/features remain
-retained, deferred from the first prototype rather than globally rejected. The
-completed 2026-09-30 review/source audit is reused. No full-GLM training, VAE
-curriculum, automatic architecture campaign or E001 rerun is planned. E001's
-2,500-bp cutoff and the thesis's 2,000-bp filter are not product constraints. The
-first configurable 500-bp default is an engineering choice; E009 prepares real-
-assembly/whole-reference evaluation, with unsupported ranges and source completeness
-explicit. It does not certify formal real-sample MAG quality or universal superiority.
+The future learned-TNF/frozen-GLM-head/hybrid study is planned and unrun; frozen
+GLM evidence remains accepted and deferred, not globally rejected. Reuse the
+completed review/source audit and accepted E001–E008 science. No new architecture
+or release gate, inferred whole-MAG quality, unseen-genome claim, E001 rerun,
+VAE curriculum, full-GLM training or automatic comparison campaign follows.
+The configurable 500-bp default is a prototype choice, not a product restriction.
 
 ## Resources and continuity
 
@@ -412,8 +342,8 @@ Frozen E001 source/configuration and raw observed records remain unchanged.
 
 Local branch: `benchmark-planning`, created from refreshed synchronized main/origin-main
 `5e54538d1799e8d2538621729400f33fbaf017b9`; merged `first-binner-prototype` source history
-is preserved. Owner-configured private GitHub origin is present. Local commits and
-normal private branch push are now authorized for GCP setup; no main merge,
+is preserved. Owner-configured private GitHub origin is present. The phase-1 normal private push is completed; this task authorizes a local commit only.
+A later source-sync push needs its explicit phase authorization; no main merge,
 PR/release or visibility change. `agent_context/` is an ignored
 inbox. Before public publication review licensing and historical source packaging
 per [D001](decisions/D001-research-record.md). Update this handoff when direction,

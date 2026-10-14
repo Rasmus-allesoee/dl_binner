@@ -241,3 +241,12 @@ with one controlled follow-up recorded in the [targeted review](../evidence/2026
 No quality scores or causal mechanism finding follow from adapter tests; Q001/Q003
 remain open and H001/E001 are unchanged. Unknown pretrained overlap limits
 unseen-genome claims without becoming evaluation-pipeline label leakage.
+
+2026-10-14 E009 operational/input amendment: v10/v14 tiny native contracts are
+independently accepted without replay, not bin-quality evidence.
+[D013](../decisions/D013-first-comparative-benchmark.md) now uses one sample-0
+assembly and ten first-listed corrected-subject coverage samples; this is a
+prospective representation/storage tradeoff, not proof of an optimal sample count.
+The locally tested GCP data stage and [storage audit](../evidence/2026-10-14-completebin-storage.md)
+are preparation only. Data/truth population, new-host scale/cost and all full-fit
+quality questions remain open; Q001/Q003 and H001/E001 outcomes are unchanged.

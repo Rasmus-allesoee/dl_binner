@@ -1,0 +1,980 @@
+{
+  "record": "E009",
+  "review_date": "2026-10-14",
+  "archive": {
+    "locator": "agent_context/native-preflight-vkb_he0f-return.tar.gz",
+    "file": {
+      "bytes": 488677,
+      "sha256": "c6f2c4df856c7e80031cb84b47e7f82297f0d56c924d57b86d53d9696c673ff3"
+    }
+  },
+  "checksum_file": {
+    "bytes": 106,
+    "sha256": "09445545bf7b0c768d8b7caaeb511c58bd2cfee0fa5bf0cad8e72a7d123172e3"
+  },
+  "terminal_evidence": {
+    "locator": "agent_context/e009-preflight.vi37mpqk.log",
+    "file": {
+      "bytes": 135917,
+      "sha256": "debdf4af7556232636ec4270dfa567564cd67a517a9dfc619ef2713e4fb6c4da"
+    },
+    "printed_status_matches_archived_status": true,
+    "collection": {
+      "seconds_through_collection": 211.42199491662905,
+      "allocated_core_hours_through_collection": 0.4698266553702868,
+      "retained_logical_bytes": 8352269
+    }
+  },
+  "independent_checks": {
+    "safe_regular_members": 174,
+    "retained_hash_entries_checked": 172,
+    "all_hashes_match": true,
+    "archived_logical_bytes": 8352269,
+    "terminal_snapshot": {
+      "bytes": 135387,
+      "sha256": "a60ba08947d31e676f613e1c66be7d5c7fcc7e74a7750b1ec2d74d2c3551eff2"
+    },
+    "terminal_snapshot_not_in_self_hash_inventory": true,
+    "native_stage_exit_receipts": 15,
+    "all_native_exits_zero": true,
+    "v10_fixture_and_bam_receipts_match": true,
+    "v10_three_tools_not_rescheduled": true
+  },
+  "source_commit": "9c86c276a0d45f124c7cdcaed7f2cb387ebbca62",
+  "accepted_tools": [
+    "comebin",
+    "completebin",
+    "metacat",
+    "scgbinner",
+    "semibin"
+  ],
+  "new_contracts": [
+    "SCGBinner full import/help, actual augmentation/reader, initializer/HNSW and CPU limits",
+    "complete CheckM1.2.3 import including checkm.test, lineage_wf help, owned HMMER/Prodigal/pplacer entries",
+    "COMEBin actual native augmentation and ordered feature reader, full help reused from v10"
+  ],
+  "inventories": {
+    "scgbinner": {
+      "python": "3.10.15 | packaged by conda-forge | (main, Oct 16 2024, 01:24:24) [GCC 13.3.0]",
+      "prefix": "/work/Home/dl_binner/e009/envs/scgbinner-cpu-v4-native-preflight-vkb_he0f",
+      "python_executable_lexical": "/work/Home/dl_binner/e009/envs/scgbinner-cpu-v4-native-preflight-vkb_he0f/bin/python",
+      "origins": {
+        "numpy": "/work/Home/dl_binner/e009/envs/scgbinner-cpu-v4-native-preflight-vkb_he0f/lib/python3.10/site-packages/numpy/__init__.py",
+        "torch": "/work/Home/dl_binner/e009/envs/scgbinner-cpu-v4-native-preflight-vkb_he0f/lib/python3.10/site-packages/torch/__init__.py",
+        "pandas": "/work/Home/dl_binner/e009/envs/scgbinner-cpu-v4-native-preflight-vkb_he0f/lib/python3.10/site-packages/pandas/__init__.py",
+        "scipy": "/work/Home/dl_binner/e009/envs/scgbinner-cpu-v4-native-preflight-vkb_he0f/lib/python3.10/site-packages/scipy/__init__.py",
+        "sklearn": "/work/Home/dl_binner/e009/envs/scgbinner-cpu-v4-native-preflight-vkb_he0f/lib/python3.10/site-packages/sklearn/__init__.py"
+      },
+      "distributions": {
+        "python-dateutil": "2.9.0.post0",
+        "kiwisolver": "1.5.1",
+        "typing_extensions": "4.16.0",
+        "cycler": "0.12.1",
+        "numpy": "1.26.4",
+        "scikit-learn": "1.6.1",
+        "munkres": "1.1.4",
+        "biolib": "0.1.9",
+        "wheel": "0.48.0",
+        "leidenalg": "0.10.2",
+        "six": "1.17.0",
+        "setuptools": "80.9.0",
+        "PyYAML": "6.0.2",
+        "SciPy": "1.11.4",
+        "packaging": "26.3",
+        "torch": "2.0.0.post104",
+        "mpmath": "1.4.1",
+        "filelock": "3.32.5",
+        "biopython": "1.85",
+        "unicodedata2": "17.0.1",
+        "pip": "25.1.1",
+        "colorama": "0.4.6",
+        "threadpoolctl": "3.6.0",
+        "igraph": "0.11.9",
+        "texttable": "1.7.0",
+        "networkx": "3.4",
+        "contourpy": "1.3.2",
+        "atomicwrites": "1.4.1",
+        "tqdm": "4.67.1",
+        "joblib": "1.5.1",
+        "hnswlib": "0.8.0",
+        "matplotlib": "3.10.9",
+        "gmpy2": "2.3.1",
+        "pyparsing": "3.3.2",
+        "Jinja2": "3.1.6",
+        "fonttools": "4.63.0",
+        "pytz": "2026.3.post1",
+        "pandas": "1.5.3",
+        "sympy": "1.14.0",
+        "pillow": "12.3.0",
+        "MarkupSafe": "3.0.3"
+      },
+      "user_site_isolated": true,
+      "bytecode_writes_disabled": true
+    },
+    "checkm": {
+      "python": "3.10.15 | packaged by conda-forge | (main, Oct 16 2024, 01:24:24) [GCC 13.3.0]",
+      "prefix": "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f",
+      "python_executable_lexical": "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f/bin/python",
+      "origins": {
+        "numpy": "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f/lib/python3.10/site-packages/numpy/__init__.py",
+        "scipy": "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f/lib/python3.10/site-packages/scipy/__init__.py",
+        "matplotlib": "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f/lib/python3.10/site-packages/matplotlib/__init__.py",
+        "pysam": "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f/lib/python3.10/site-packages/pysam/__init__.py",
+        "dendropy": "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f/lib/python3.10/site-packages/dendropy/__init__.py",
+        "checkm.test.test_ecoli": "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f/lib/python3.10/site-packages/checkm/test/test_ecoli.py"
+      },
+      "distributions": {
+        "munkres": "1.1.4",
+        "setuptools": "80.9.0",
+        "contourpy": "1.3.2",
+        "pillow": "12.3.0",
+        "certifi": "2026.7.22",
+        "fonttools": "4.63.0",
+        "wheel": "0.48.0",
+        "pysam": "0.22.1",
+        "packaging": "26.3",
+        "kiwisolver": "1.5.1",
+        "six": "1.17.0",
+        "pip": "25.1.1",
+        "SciPy": "1.11.4",
+        "matplotlib": "3.8.4",
+        "unicodedata2": "17.0.1",
+        "pyparsing": "3.3.2",
+        "checkm-genome": "1.2.3",
+        "DendroPy": "4.6.1",
+        "numpy": "1.26.4",
+        "cycler": "0.12.1",
+        "python-dateutil": "2.9.0.post0"
+      },
+      "user_site_isolated": true,
+      "bytecode_writes_disabled": true
+    },
+    "comebin": {
+      "python": "3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]",
+      "prefix": "/work/Home/dl_binner/e009/envs/comebin-source-v4-native-preflight-vkb_he0f",
+      "python_executable_lexical": "/work/Home/dl_binner/e009/envs/comebin-source-v4-native-preflight-vkb_he0f/bin/python",
+      "origins": {
+        "numpy": "/tmp/e009-pt98py9v/numerical-runtime/lib/python3.13/site-packages/numpy/__init__.py",
+        "torch": "/tmp/e009-pt98py9v/numerical-runtime/lib/python3.13/site-packages/torch/__init__.py",
+        "pandas": "/tmp/e009-pt98py9v/numerical-runtime/lib/python3.13/site-packages/pandas/__init__.py",
+        "scipy": "/tmp/e009-pt98py9v/numerical-runtime/lib/python3.13/site-packages/scipy/__init__.py",
+        "sklearn": "/tmp/e009-pt98py9v/numerical-runtime/lib/python3.13/site-packages/sklearn/__init__.py"
+      },
+      "distributions": {
+        "seaborn": "0.13.2",
+        "grpcio": "1.84.0",
+        "google-crc32c": "1.8.0",
+        "llvmlite": "0.48.0",
+        "beautifulsoup4": "4.15.0",
+        "igraph": "1.0.0",
+        "numba": "0.66.0",
+        "pydantic": "2.13.5",
+        "pydantic-settings": "2.15.0",
+        "h5py": "3.16.0",
+        "click": "8.4.2",
+        "ruamel.yaml": "0.19.1",
+        "PySocks": "1.7.1",
+        "leidenalg": "0.12.0",
+        "checkm-genome": "1.2.3",
+        "threadpoolctl": "3.7.0",
+        "array-api-compat": "1.15.0",
+        "Jinja2": "3.1.6",
+        "statsmodels": "0.14.6",
+        "kiwisolver": "1.5.1",
+        "six": "1.17.0",
+        "tensorboard": "2.21.0",
+        "gdown": "6.1.0",
+        "msgspec": "0.21.1",
+        "packaging": "26.3",
+        "filelock": "4.0.1",
+        "patsy": "1.0.3",
+        "natsort": "8.4.0",
+        "requests": "2.34.2",
+        "numcodecs": "0.17.0",
+        "PyYAML": "6.0.3",
+        "pyparsing": "3.3.2",
+        "typing_extensions": "4.16.0",
+        "joblib": "1.5.3",
+        "soupsieve": "2.9.2",
+        "charset-normalizer": "3.5.1",
+        "typing-inspection": "0.4.4",
+        "fsspec": "2026.7.0",
+        "scverse-misc": "0.1.6",
+        "scanpy": "1.12.2",
+        "setuptools": "80.9.0",
+        "absl-py": "2.5.0",
+        "biopython": "1.87",
+        "pandas": "3.0.3",
+        "tensorboard-data-server": "0.7.2",
+        "DendroPy": "5.1.0",
+        "Werkzeug": "3.1.8",
+        "fast-array-utils": "1.5.1",
+        "session-info2": "0.4.2",
+        "torch": "2.13.0+cpu",
+        "certifi": "2026.7.22",
+        "pillow": "12.3.0",
+        "networkx": "3.6.1",
+        "annotated-types": "0.8.0",
+        "hnswlib": "0.8.0",
+        "fonttools": "4.65.0",
+        "protobuf": "7.36.2",
+        "donfig": "0.8.1.post1",
+        "matplotlib": "3.10.9",
+        "pynndescent": "0.6.0",
+        "narwhals": "2.26.0",
+        "tqdm": "4.68.4",
+        "biolib": "0.1.9",
+        "pip": "26.1.2",
+        "umap-learn": "0.5.12",
+        "legacy-api-wrap": "1.5",
+        "mpmath": "1.3.0",
+        "atomicwrites": "1.4.1",
+        "zarr": "3.4.0",
+        "idna": "3.20",
+        "Markdown": "3.10.3",
+        "scikit-learn": "1.9.0",
+        "numpy": "2.4.6",
+        "texttable": "1.7.0",
+        "munkres": "1.1.4",
+        "pysam": "0.23.3",
+        "anndata": "0.13.4",
+        "cycler": "0.12.1",
+        "urllib3": "2.8.0",
+        "contourpy": "1.4.0",
+        "python-dotenv": "1.2.3",
+        "sympy": "1.14.0",
+        "scipy": "1.18.0",
+        "MarkupSafe": "3.0.3",
+        "pydantic_core": "2.46.5",
+        "python-dateutil": "2.9.0.post0"
+      },
+      "user_site_isolated": true,
+      "bytecode_writes_disabled": true
+    }
+  },
+  "contracts": {
+    "scgbinner": {
+      "config": {
+        "ordered_bams": [
+          "/work/Home/dl_binner/e009/native-preflight-95psvpr9/portable/mapping_0/sample_0.sorted.bam",
+          "/work/Home/dl_binner/e009/native-preflight-95psvpr9/portable/mapping_1/sample_1.sorted.bam"
+        ],
+        "output": "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/scgbinner-contract/native",
+        "reference": "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/input/assembly.fna",
+        "resource_plan": {
+          "blas_threads": 1,
+          "loader_workers": 0,
+          "pool_workers": 7,
+          "torch_threads": 8
+        },
+        "scientific_execution_authorized": false,
+        "source": "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/sources/SCGBinner",
+        "stages": [
+          [
+            "generate_aug_data",
+            "--contig_file",
+            "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/input/assembly.fna",
+            "--out_augdata_path",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/scgbinner-contract/native/data_augmentation",
+            "--n_views",
+            "6",
+            "--bam_file_path",
+            "/work/Home/dl_binner/e009/native-preflight-95psvpr9/portable/mapping_0/sample_0.sorted.bam /work/Home/dl_binner/e009/native-preflight-95psvpr9/portable/mapping_1/sample_1.sorted.bam",
+            "--num_threads",
+            "7"
+          ],
+          [
+            "train",
+            "--data",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/scgbinner-contract/native/data_augmentation",
+            "--contig_file",
+            "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/input/assembly.fna",
+            "--temperature",
+            "0.07",
+            "--emb_szs_forcov",
+            "2048",
+            "--emb_szs",
+            "2048",
+            "--batch_size",
+            "11",
+            "--n_views",
+            "6",
+            "--add_model_for_coverage",
+            "--remove_single_copy",
+            "128",
+            "--scg_batch_size",
+            "0",
+            "--output_path",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/scgbinner-contract/native/scgbinner_res",
+            "--earlystop",
+            "--addvars",
+            "--vars_sqrt",
+            "--num_threads",
+            "8",
+            "--workers",
+            "0",
+            "--epochs",
+            "200"
+          ],
+          [
+            "bin",
+            "--contig_file",
+            "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/input/assembly.fna",
+            "--emb_file",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/scgbinner-contract/native/scgbinner_res/embeddings.tsv",
+            "--output_path",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/scgbinner-contract/native/scgbinner_res",
+            "--num_threads",
+            "7"
+          ],
+          [
+            "get_result",
+            "--contig_file",
+            "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/input/assembly.fna",
+            "--output_path",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/scgbinner-contract/native/scgbinner_res",
+            "--num_threads",
+            "7"
+          ]
+        ],
+        "tool": "scgbinner",
+        "truth_inputs": []
+      },
+      "full_community_fit": false,
+      "inputs": {
+        "bytes": 59298,
+        "sha256": "7c36e9dae451d73a44025054900ddee31377b2b973c36a4881f6d57b0e6631bb"
+      },
+      "native_readers_writers": true,
+      "ordered_bams": [
+        {
+          "bytes": 32630,
+          "sha256": "f12af34a0837a2d6458cc60643559eb761618619ba50079804f0b1fc307ff169"
+        },
+        {
+          "bytes": 21105,
+          "sha256": "4c7b549e6e56bd229b0011893eee6f10e30b22b2e717898ec6b35fb3f3d2efc6"
+        }
+      ],
+      "tool": "scgbinner"
+    },
+    "comebin": {
+      "config": {
+        "bam_directory": "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/comebin-contract/native/bam-input",
+        "ordered_bams": [
+          "/work/Home/dl_binner/e009/native-preflight-95psvpr9/portable/mapping_0/sample_0.sorted.bam",
+          "/work/Home/dl_binner/e009/native-preflight-95psvpr9/portable/mapping_1/sample_1.sorted.bam"
+        ],
+        "output": "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/comebin-contract/native",
+        "reference": "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/input/assembly.fna",
+        "resource_plan": {
+          "blas_threads": 1,
+          "loader_workers": 0,
+          "phase_note": "HNSW numerical phase N; Leiden N-1 workers plus coordinator; HMM master included",
+          "pool_workers": 7,
+          "torch_threads": 8
+        },
+        "scientific_execution_authorized": false,
+        "source": "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/sources/COMEBin",
+        "stages": [
+          [
+            "generate_aug_data",
+            "--contig_file",
+            "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/input/assembly.fna",
+            "--out_augdata_path",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/comebin-contract/native/augmentation",
+            "--n_views",
+            "6",
+            "--bam_file_path",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/comebin-contract/native/bam-input",
+            "--num_threads",
+            "7"
+          ],
+          [
+            "train",
+            "--data",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/comebin-contract/native/augmentation",
+            "--output_path",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/comebin-contract/native/native",
+            "--epochs",
+            "200",
+            "--batch_size",
+            "1024",
+            "--n_views",
+            "6",
+            "--addvars",
+            "--vars_sqrt",
+            "--earlystop",
+            "--device",
+            "cpu",
+            "--num_threads",
+            "8"
+          ],
+          [
+            "bin",
+            "--contig_file",
+            "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/input/assembly.fna",
+            "--emb_file",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/comebin-contract/native/native/embeddings.npy",
+            "--output_path",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/comebin-contract/native/native",
+            "--num_threads",
+            "8",
+            "--leiden_workers",
+            "7"
+          ],
+          [
+            "get_result",
+            "--contig_file",
+            "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/input/assembly.fna",
+            "--emb_file",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/comebin-contract/native/native/embeddings.npy",
+            "--output_path",
+            "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/comebin-contract/native/native",
+            "--num_threads",
+            "7"
+          ]
+        ],
+        "tool": "comebin",
+        "truth_inputs": []
+      },
+      "full_community_fit": false,
+      "inputs": {
+        "bytes": 59298,
+        "sha256": "7c36e9dae451d73a44025054900ddee31377b2b973c36a4881f6d57b0e6631bb"
+      },
+      "native_readers_writers": true,
+      "ordered_bams": [
+        {
+          "bytes": 32630,
+          "sha256": "f12af34a0837a2d6458cc60643559eb761618619ba50079804f0b1fc307ff169"
+        },
+        {
+          "bytes": 21105,
+          "sha256": "4c7b549e6e56bd229b0011893eee6f10e30b22b2e717898ec6b35fb3f3d2efc6"
+        }
+      ],
+      "tool": "comebin"
+    }
+  },
+  "stage_exits": {
+    "stages/accepted-runtime-restore.exit.json": {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-pt98py9v/unused-bytecode",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/scripts/e009_materialize.py",
+        "--accepted-record",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/experiments/E009-competitive-benchmark/linux-runtime-recovery-v8.json",
+        "--destination",
+        "/tmp/e009-pt98py9v/numerical-runtime",
+        "--summary",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/accepted-restore.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 3085,
+      "peak_sampled_rss_bytes": 109260800,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.9706512271275357,
+      "sampled_cpu_seconds": 10.609999999999998,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10012.33624581946,
+      "stop_reason": null,
+      "wall_seconds": 10.93080573482439
+    },
+    "stages/checkm-locked-acquisition.exit.json": {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-pt98py9v/unused-bytecode",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/scripts/e009_worker.py",
+        "acquire-conda",
+        "--lock",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/checkm-conda-lock.json",
+        "--destination",
+        "/work/Home/dl_binner/e009/cache/failed-paths-v4-native-preflight-vkb_he0f/conda",
+        "--explicit",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/checkm-conda-explicit.txt"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2480,
+      "peak_sampled_rss_bytes": 75341824,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.26133825366304947,
+      "sampled_cpu_seconds": 0.8999999999999995,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10082.257836724166,
+      "stop_reason": null,
+      "wall_seconds": 3.4438127116300166
+    },
+    "stages/checkm-owned-conda-install.exit.json": {
+      "command": [
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/bootstrap/bin/micromamba",
+        "--no-rc",
+        "create",
+        "-y",
+        "--offline",
+        "--always-copy",
+        "-p",
+        "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f",
+        "--file",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/checkm-conda-explicit.txt"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2509,
+      "peak_sampled_rss_bytes": 3228962816,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.3901986220439801,
+      "sampled_cpu_seconds": 25.04,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10078.81168463733,
+      "stop_reason": null,
+      "wall_seconds": 64.1724459938705
+    },
+    "stages/checkm-owned-hmmsearch-entry.exit.json": {
+      "command": [
+        "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f/bin/hmmsearch",
+        "-h"
+      ],
+      "exit_code": 0,
+      "launched_pid": 3082,
+      "peak_sampled_rss_bytes": 39555072,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.04836539405313897,
+      "sampled_cpu_seconds": 0.009999999999999787,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10012.963904226199,
+      "stop_reason": null,
+      "wall_seconds": 0.20675940299406648
+    },
+    "stages/checkm-owned-isolated-probe.exit.json": {
+      "command": [
+        "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f/bin/python",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-pt98py9v/unused-bytecode",
+        "-S",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/scripts/e009_startup.py",
+        "10",
+        "file",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/scripts/e009_native.py",
+        "--inventory-prefix",
+        "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f",
+        "--required-distributions",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/checkm-required-inventory.json",
+        "--modules",
+        "numpy",
+        "scipy",
+        "matplotlib",
+        "pysam",
+        "dendropy",
+        "checkm.test.test_ecoli"
+      ],
+      "exit_code": 0,
+      "launched_pid": 3081,
+      "peak_sampled_rss_bytes": 104759296,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.7851980899444836,
+      "sampled_cpu_seconds": 1.2799999999999994,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10014.59730471205,
+      "stop_reason": null,
+      "wall_seconds": 1.6301618870347738
+    },
+    "stages/checkm-owned-pplacer-entry.exit.json": {
+      "command": [
+        "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f/bin/pplacer",
+        "--help"
+      ],
+      "exit_code": 0,
+      "launched_pid": 3084,
+      "peak_sampled_rss_bytes": 41705472,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.0,
+      "sampled_cpu_seconds": 0,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10012.547083566431,
+      "stop_reason": null,
+      "wall_seconds": 0.20707139279693365
+    },
+    "stages/checkm-owned-prodigal-entry.exit.json": {
+      "command": [
+        "/work/Home/dl_binner/e009/envs/checkm-cpu-v4-native-preflight-vkb_he0f/bin/prodigal",
+        "-v"
+      ],
+      "exit_code": 0,
+      "launched_pid": 3083,
+      "peak_sampled_rss_bytes": 39555072,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.0,
+      "sampled_cpu_seconds": 0,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10012.755159812048,
+      "stop_reason": null,
+      "wall_seconds": 0.20616706972941756
+    },
+    "stages/comebin-native-contract.exit.json": {
+      "command": [
+        "/work/Home/dl_binner/e009/envs/comebin-source-v4-native-preflight-vkb_he0f/bin/python",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-pt98py9v/unused-bytecode",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/scripts/e009_worker.py",
+        "tool-contract",
+        "--tool",
+        "comebin",
+        "--source",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/sources/COMEBin",
+        "--inputs",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/input",
+        "--bams",
+        "/work/Home/dl_binner/e009/native-preflight-95psvpr9/portable/mapping_0/sample_0.sorted.bam",
+        "/work/Home/dl_binner/e009/native-preflight-95psvpr9/portable/mapping_1/sample_1.sorted.bam",
+        "--output",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/comebin-contract",
+        "--db",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/unused-database",
+        "--threads",
+        "8",
+        "--reused-help",
+        "/work/Home/dl_binner/e009/native-preflight-95psvpr9/comebin-contract/native-full-import-help.log"
+      ],
+      "exit_code": 0,
+      "launched_pid": 3159,
+      "peak_sampled_rss_bytes": 272883712,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.9141129694289573,
+      "sampled_cpu_seconds": 5.1800000000000015,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 9994.573695442174,
+      "stop_reason": null,
+      "wall_seconds": 5.666695663705468
+    },
+    "stages/comebin-new-binding-probe.exit.json": {
+      "command": [
+        "/work/Home/dl_binner/e009/envs/comebin-source-v4-native-preflight-vkb_he0f/bin/python",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-pt98py9v/unused-bytecode",
+        "-S",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/scripts/e009_startup.py",
+        "10",
+        "file",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/scripts/e009_native.py",
+        "--inventory-prefix",
+        "/work/Home/dl_binner/e009/envs/comebin-source-v4-native-preflight-vkb_he0f",
+        "--dependency-prefix",
+        "/tmp/e009-pt98py9v/numerical-runtime",
+        "--expected-distributions",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/comebin-expected-inventory.json",
+        "--forbidden-prefix",
+        "/work/Home/dl_binner/e001/e001-gate0/envs/comebin",
+        "--modules",
+        "numpy",
+        "torch",
+        "pandas",
+        "scipy",
+        "sklearn"
+      ],
+      "exit_code": 0,
+      "launched_pid": 3144,
+      "peak_sampled_rss_bytes": 384946176,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 1.1596284445010436,
+      "sampled_cpu_seconds": 7.289999999999999,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10000.870208465029,
+      "stop_reason": null,
+      "wall_seconds": 6.286496364045888
+    },
+    "stages/comebin-source-v4-native-preflight-vkb_he0f-venv.exit.json": {
+      "command": [
+        "/tmp/e009-pt98py9v/numerical-runtime/bin/python",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-pt98py9v/unused-bytecode",
+        "-m",
+        "venv",
+        "--without-pip",
+        "/work/Home/dl_binner/e009/envs/comebin-source-v4-native-preflight-vkb_he0f"
+      ],
+      "exit_code": 0,
+      "launched_pid": 3143,
+      "peak_sampled_rss_bytes": 39555072,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.7718044144040033,
+      "sampled_cpu_seconds": 0.16000000000000014,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10001.193779529072,
+      "stop_reason": null,
+      "wall_seconds": 0.2073064069263637
+    },
+    "stages/restored-runtime-entry.exit.json": {
+      "command": [
+        "/tmp/e009-pt98py9v/numerical-runtime/bin/python",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-pt98py9v/unused-bytecode",
+        "-c",
+        "import sys,sysconfig,json;from pathlib import Path;assert Path(sys.prefix)==Path(sys.argv[1]);assert sys.version.split()[0]==sys.argv[2];assert Path(sysconfig.get_path(\"stdlib\")).is_relative_to(Path(sys.argv[1]));print(json.dumps({\"prefix\":sys.prefix,\"python\":sys.version.split()[0]}))",
+        "/tmp/e009-pt98py9v/numerical-runtime",
+        "3.13.14"
+      ],
+      "exit_code": 0,
+      "launched_pid": 3142,
+      "peak_sampled_rss_bytes": 39555072,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.4840536398990943,
+      "sampled_cpu_seconds": 0.09999999999999964,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10001.40257340623,
+      "stop_reason": null,
+      "wall_seconds": 0.20658867480233312
+    },
+    "stages/scgbinner-locked-acquisition.exit.json": {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-pt98py9v/unused-bytecode",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/scripts/e009_worker.py",
+        "acquire-conda",
+        "--lock",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/scgbinner-conda-lock.json",
+        "--destination",
+        "/work/Home/dl_binner/e009/cache/failed-paths-v4-native-preflight-vkb_he0f/conda",
+        "--explicit",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/scgbinner-conda-explicit.txt"
+      ],
+      "exit_code": 0,
+      "launched_pid": 613,
+      "peak_sampled_rss_bytes": 65986560,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.18312587422666665,
+      "sampled_cpu_seconds": 2.2599999999999993,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10197.75857116934,
+      "stop_reason": null,
+      "wall_seconds": 12.341238012071699
+    },
+    "stages/scgbinner-native-contract.exit.json": {
+      "command": [
+        "/work/Home/dl_binner/e009/envs/scgbinner-cpu-v4-native-preflight-vkb_he0f/bin/python",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-pt98py9v/unused-bytecode",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/scripts/e009_worker.py",
+        "tool-contract",
+        "--tool",
+        "scgbinner",
+        "--source",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/sources/SCGBinner",
+        "--inputs",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/input",
+        "--bams",
+        "/work/Home/dl_binner/e009/native-preflight-95psvpr9/portable/mapping_0/sample_0.sorted.bam",
+        "/work/Home/dl_binner/e009/native-preflight-95psvpr9/portable/mapping_1/sample_1.sorted.bam",
+        "--output",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/scgbinner-contract",
+        "--db",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/unused-database",
+        "--threads",
+        "8"
+      ],
+      "exit_code": 0,
+      "launched_pid": 1504,
+      "peak_sampled_rss_bytes": 2123423744,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 1.097339930531195,
+      "sampled_cpu_seconds": 27.599999999999998,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10107.414044728037,
+      "stop_reason": null,
+      "wall_seconds": 25.151732140686363
+    },
+    "stages/scgbinner-owned-conda-install.exit.json": {
+      "command": [
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/bootstrap/bin/micromamba",
+        "--no-rc",
+        "create",
+        "-y",
+        "--offline",
+        "--always-copy",
+        "-p",
+        "/work/Home/dl_binner/e009/envs/scgbinner-cpu-v4-native-preflight-vkb_he0f",
+        "--file",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/scgbinner-conda-explicit.txt"
+      ],
+      "exit_code": 0,
+      "launched_pid": 643,
+      "peak_sampled_rss_bytes": 3724357632,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.7041503380421128,
+      "sampled_cpu_seconds": 50.599999999999994,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10185.41436188016,
+      "stop_reason": null,
+      "wall_seconds": 71.85965448897332
+    },
+    "stages/scgbinner-owned-isolated-probe.exit.json": {
+      "command": [
+        "/work/Home/dl_binner/e009/envs/scgbinner-cpu-v4-native-preflight-vkb_he0f/bin/python",
+        "-I",
+        "-B",
+        "-X",
+        "pycache_prefix=/tmp/e009-pt98py9v/unused-bytecode",
+        "-S",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/scripts/e009_startup.py",
+        "10",
+        "file",
+        "/work/Home/dl_binner/e009/transfer/launch-gklq1ecv/e009-preflight-v14/scripts/e009_native.py",
+        "--inventory-prefix",
+        "/work/Home/dl_binner/e009/envs/scgbinner-cpu-v4-native-preflight-vkb_he0f",
+        "--required-distributions",
+        "/work/Home/dl_binner/e009/native-preflight-vkb_he0f/scgbinner-required-inventory.json",
+        "--modules",
+        "numpy",
+        "torch",
+        "pandas",
+        "scipy",
+        "sklearn"
+      ],
+      "exit_code": 0,
+      "launched_pid": 1474,
+      "peak_sampled_rss_bytes": 340111360,
+      "rss_bytes_ceiling": 20000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.8732833347736031,
+      "sampled_cpu_seconds": 5.310000000000001,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 10113.499812514056,
+      "stop_reason": null,
+      "wall_seconds": 6.080500782001764
+    }
+  },
+  "runtime_restore": {
+    "complete": true,
+    "local_prefix": "/tmp/e009-pt98py9v/numerical-runtime",
+    "logical_bytes": 1682401752,
+    "original_source_accessed": false,
+    "receipt_file": {
+      "bytes": 3377589,
+      "sha256": "54b705503ff540746f853875ee2e97e5c2461797fcb70a24ab2adea6e3c70bfa"
+    },
+    "restored_entries": 18977,
+    "sealed_chunks": 151,
+    "source_copied_entries": 0,
+    "state": "/work/Home/dl_binner/e009/runtime-snapshots/comebin-runtime-v8"
+  },
+  "cost": {
+    "seconds_through_collection": 211.42199491662905,
+    "allocated_core_hours_through_collection": 0.4698266553702868,
+    "retained_logical_bytes": 8352269,
+    "allocated_vcpus": 8,
+    "allocated_ram_gb": 24,
+    "peak_stage_sampled_rss_bytes": 3724357632,
+    "provider_cost_and_idle": "unknown; UCloud allocation, not a GCP bill"
+  },
+  "storage_before_collection": {
+    "home": {
+      "files": 301,
+      "links_excluding_targets": 2,
+      "logical_file_bytes": 62276326,
+      "scope": "owned filesystem snapshot before collection, distinct from exact archive-member retained bytes",
+      "unique_inode_physical_bytes_estimate": 63070208
+    },
+    "scope": "this attempt only; no recursive scans of prior attempts, environments, chunks or shared sources",
+    "shared": null
+  },
+  "scientific_execution_admitted": false,
+  "limits": [
+    "tiny software contracts only; no full fit/grid/lineage placement or E009 quality score",
+    "accepted UCloud prefixes/source/chunks are inaccessible; this does not certify GCP runtime health or 10-sample/full-scale affordability",
+    "storage counts are immutable archive members; growing live terminal and separate environments/caches are excluded"
+  ],
+  "accepted_without_reexecution": true,
+  "independent_array_inspection": {
+    "arrays": {
+      "comebin-contract/native/augmentation/augmentation_intervals.npy": {
+        "shape": [
+          5,
+          6,
+          2
+        ],
+        "dtype": "int64",
+        "finite": true
+      },
+      "comebin-contract/native/augmentation/contig_lengths.npy": {
+        "shape": [
+          5
+        ],
+        "dtype": "int64",
+        "finite": true
+      },
+      "comebin-contract/native/augmentation/coverage_mean.npy": {
+        "shape": [
+          2,
+          6,
+          5
+        ],
+        "dtype": "float64",
+        "finite": true
+      },
+      "comebin-contract/native/augmentation/coverage_var.npy": {
+        "shape": [
+          2,
+          6,
+          5
+        ],
+        "dtype": "float64",
+        "finite": true
+      },
+      "comebin-contract/native/augmentation/kmer_counts.npy": {
+        "shape": [
+          5,
+          6,
+          136
+        ],
+        "dtype": "uint32",
+        "finite": true
+      }
+    },
+    "contig_ids": [
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10"
+    ],
+    "native_sample_ids": [
+      "sample_0.sorted.bam",
+      "sample_1.sorted.bam"
+    ],
+    "native_input_cutoff_gt1000_checked": true
+  }
+}

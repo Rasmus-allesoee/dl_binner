@@ -68,14 +68,20 @@ def resolved_epochs(source, n50, num_contigs, base_epoch=35):
     return namespace['train_epoch']
 
 
-def cpu_plan(tool, threads):
+def cpu_plan(tool, threads, samples=2):
     """Declare active process/thread budgets, including loaders and native extra workers."""
     if threads<4:raise ValueError('E009 native adapters require >=4 CPUs; owner preflight is eight')
     if tool=='comebin':return {'torch_threads':threads,'loader_workers':0,'pool_workers':threads-1,'blas_threads':1,
             'phase_note':'HNSW numerical phase N; Leiden N-1 workers plus coordinator; HMM master included'}
     if tool=='scgbinner':return {'torch_threads':threads,'loader_workers':0,'pool_workers':threads-1,'blas_threads':1}
-    if tool=='completebin':return {'torch_threads':threads,'loader_workers':0,'pool_workers':threads-2,'blas_threads':1,
-            'phase_note':'two BAMs use one coverage process, BGZF N-2 + its main + coordinator; HMM N-2 workers + master/coordinator'}
+    if tool=='completebin':
+        outer=2 if samples>2 else 1
+        workers=threads-2 if outer==1 else (threads-2)//2-1
+        if workers<1:
+            raise ValueError('Multi-BAM CompleteBin needs >=6 CPUs in this adapter; smaller allocations need a reviewed serial coverage adapter')
+        return {'torch_threads':threads,'loader_workers':0,'pool_workers':workers,'blas_threads':1,
+                'coverage_outer_processes':outer,
+                'phase_note':'one BAM process at S<=2; otherwise two, each with capped BGZF plus main; coordinator headroom; loader zero'}
     if tool=='metacat':return {'torch_threads':0,'loader_workers':0,'pool_workers':threads-1,'blas_threads':1,
             'phase_note':'affinity completes before LP tasks; scoring waits LP.join; five score workers; waiting pools not concurrent CPU phases'}
     if tool=='semibin':return {'torch_threads':threads,'loader_workers':0,'pool_workers':threads-1,'blas_threads':1,
@@ -90,8 +96,8 @@ def command_plan(tool, source, reference, bams, output, threads, db=None):
     convenience wrappers are avoided where their unquoted paths/default workers
     fail the declared contract. Inputs still use native readers/extractors.
     """
-    source,output=Path(source),Path(output);plan=cpu_plan(tool,threads)
-    if len(bams)!=2 or len(set(map(str,bams)))!=2:raise ValueError('Two distinct ordered BAM samples required')
+    source,output=Path(source),Path(output);plan=cpu_plan(tool,threads,len(bams))
+    if len(bams)<2 or len(set(map(str,bams)))!=len(bams):raise ValueError('Distinct ordered BAM samples required')
     if any(any(c.isspace() for c in str(p)) for p in bams):
         raise ValueError('COMEBin/SCGBinner native BAM-list parser requires paths without whitespace')
     shared={'tool':tool,'source':str(source),'reference':str(reference),'ordered_bams':list(map(str,bams)),
@@ -151,10 +157,12 @@ def prepare_bam_directory(directory,bams):
     ordering. Refuse it before extraction and bind the original ordered BAM bytes.
     """
     directory=Path(directory);resolved=[Path(p).resolve() for p in bams]
-    if resolved!=sorted(resolved) or len(set(resolved))!=2:raise ValueError('COMEBin resolved sample ordering differs from manifest')
-    if len({p.name for p in resolved})!=2:raise ValueError('COMEBin emits real BAM basenames; samples need distinct basenames')
+    if resolved!=sorted(resolved) or len(set(resolved))!=len(bams):raise ValueError('COMEBin resolved sample ordering differs from manifest')
+    if len({p.name for p in resolved})!=len(bams):raise ValueError('COMEBin emits real BAM basenames; samples need distinct basenames')
     directory.mkdir(parents=True,exist_ok=False)
-    for i,path in enumerate(resolved):(directory/f'sample_{i}.bam').symlink_to(path)
+    for i,path in enumerate(resolved):
+        alias=f'sample_{i}.bam' if len(bams)==2 else f'sample_{i:04d}.bam'
+        (directory/alias).symlink_to(path)
     write_json(directory/'ordered-inputs.json',{'ordered_bams':[{'path':str(p),'file':binding(p)} for p in resolved]})
 
 

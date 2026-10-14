@@ -203,11 +203,14 @@ def bam_axis(samtools, bam, reference, log):
     return rows
 
 
-def map_sample(strobealign, samtools, reference, first, second, sample, column, threads, output):
+def map_sample(strobealign, samtools, reference, first, second, sample, column, threads, output,
+               bam_name=None, cleanup_sam=False):
     """Map then sort/index serially, binding sample and reference rather than basename guesses."""
     output=Path(output);output.mkdir(parents=True,exist_ok=False)
     reads=validate_fastq_pair(first,second)
-    sam=output/'alignment.sam';bam=output/f'sample_{sample}.sorted.bam'
+    sam=output/'alignment.sam';bam=output/(bam_name or f'sample_{sample}.sorted.bam')
+    if bam.parent != output or not bam.name.endswith('.bam'):
+        raise ValueError('BAM name must be a single filename ending in .bam')
     command=[strobealign,'-t',threads]
     if second is None:command+=['--interleaved']
     command+=[reference,first]+([second] if second else [])
@@ -215,9 +218,18 @@ def map_sample(strobealign, samtools, reference, first, second, sample, column, 
     # samtools -@ is EXTRA threads; include its main thread in the allocation.
     run_native([samtools,'sort','-@',threads-1,'-m','256M','-o',bam,sam],output/'sort.log')
     run_native([samtools,'index','-@',threads-1,bam],output/'index.log')
+    run_native([samtools,'quickcheck','-v',bam],output/'quickcheck.log')
     bam_axis(samtools,bam,reference,output/'axis.log')
     receipt={'sample':sample,'column':column,'reference':binding(reference),'reads':reads,'bam':binding(bam)}
-    write_json(bam.with_suffix('.mapped.json'),receipt);return bam
+    if cleanup_sam:
+        # Only the new regenerable SAM is removed, after native BAM admission.
+        receipt['removed_regenerable_sam']={'path':str(sam),'file':binding(sam),
+            'reason':'sorted BAM passed quickcheck and exact reference-axis validation'}
+        write_json(bam.with_suffix('.mapped.json'),receipt)
+        sam.unlink()
+    else:
+        write_json(bam.with_suffix('.mapped.json'),receipt)
+    return bam
 
 
 def mean_depth(samtools, reference, bam, column, threads, output):

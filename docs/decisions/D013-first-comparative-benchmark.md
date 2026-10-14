@@ -1,15 +1,14 @@
 # D013: one bounded competitive assembly baseline before improvements
 
-Date: 2026-10-08; amended 2026-10-09. Status: **accepted preparation decision**; scientific execution unstarted.
-The original authorization was preparation only. On 2026-10-13 the owner selected
-GCP after SDU access deactivation and authorized phase-1 workspace setup plus
-normal private branch push; [D014](D014-google-cloud-workspace.md) owns that change.
-No benchmark scientific execution or v14 return review is authorized in that
-phase. Old UCloud budgets/paths are historical. After setup/return admission,
-resolve **10 versus 20 read samples** for the one-assembly design and amend ordered
-axes/costs before bulk acquisition. The original two-source protocol remains
-source history, not the final expanded-sample choice. No scientific baseline,
-architecture, eligibility or evaluator is changed here.
+Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
+Status: **accepted preparation decision**; community scientific execution unstarted.
+[D014](D014-google-cloud-workspace.md) selects GCP after SDU access deactivation.
+V10/v14 tiny UCloud contracts are accepted; no successful work is repeated.
+The 2026-10-14 owner task authorizes local preparation/checks and a commit only.
+It supersedes the two-depth choice with **ten coverage samples for one assembly**;
+no start/provisioning/bulk work, fits/scores or publication is authorized now.
+[Operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md) owns exact
+axes/resources/costs and the following execution prompt.
 
 ## Problem and evidence
 
@@ -32,7 +31,11 @@ not a software acceptance finding or universal family conclusion.
 
 Prepare [E009](../../experiments/E009-competitive-benchmark/README.md): one actual
 MEGAHIT assembly from **CAMI III Toy Longitudinal Human Gut short-read sample 0**,
-with sample 0/1 measured depth on that same reference (verified subject S1).
+with measured depth from **0,2,3,4,6,9,10,11,14,17** on that reference.
+These are the first listed samples of each of the ten corrected subjects;
+assembly sample 0 remains S1. Twenty retains paired temporal information, but
+ten covers all subjects at roughly half the sample workload. This is a prospective
+representation/cost tradeoff, not evidence that ten is biologically optimal.
 Keep the full community, short strata, native eligibility, masks, discarded/noise
 DNA and all whole-reference failures. This is a public-toy derivative, not an
 official challenge score. New samples do not establish genome/pretraining independence.
@@ -45,14 +48,14 @@ traceable de novo assembly; MEGAHIT remains necessary for the chosen question.
 
 CAMI II GI is accepted development evidence; another HMB site offers transfer
 later but shares old source populations/plumbing. Toy III offers a more current
-gut community without active-challenge restrictions. The active III challenge has
-no verified public local truth/assembled input at this cutoff, scheduled assemblies
+gut community without active-challenge restrictions. At the October-9 review, the active III challenge had
+no verified public local truth/assembled input, scheduled assemblies
 on October 15 and restricted pre-release participation terms; defer it. Custom
 CAMISIM remains a targeted mechanism instrument after a real observed deficit,
 not extra setup for a question public reads can answer. A GSA-only comparison would
 be cheaper but would repeat the main E005 realism limitation.
 
-Preserve dev3 main as immutable baseline. Run matched raw/learned **TNF+two-depth**
+Preserve dev3 main as immutable baseline. Run matched raw/learned **TNF+ten-depth**
 and **TNF-only** pairs with unchanged settings/seed 11. Learned TNF plus measured
 depth is the primary product. Raw and sequence-only runs are inexpensive diagnostic
 controls, not product alternatives or another architecture gate. Their separate
@@ -71,7 +74,7 @@ cap is an owner-requested scientific configuration change, not upstream parity;
 retain native automatic pretraining/eligibility decisions and any lower safety cap.
 DCVBin's payload is available, but its basic VAE runner unconditionally requests
 CUDA, takes one BAM and defaults to 200 VAE epochs; enhanced training is a separate
-GPU-oriented recipe. A CPU/pair-depth repair would be substantial additional tool
+GPU-oriented recipe. A CPU/multi-depth repair would be substantial additional tool
 development here, so **DCVBin does not join E009**. Coverage is useful input and
 not a disadvantage. Frozen-GLM comparison remains planned separately. LorBin adds
 long-read/quality-model dependencies. They remain studied, not globally inferior.
@@ -80,21 +83,23 @@ than this shortlist; they do not replace the newer tools merely for convenience.
 
 ## Cost and decision limits
 
-Use local Mac for small adapter/evaluator checks and returned-output analysis;
-UCloud CPU/Linux for bulk acquisition, assembly, mapping and tool fits. Plan an
-8-vCPU/24-GB bounded preflight, then 16-vCPU/48-GB serial scientific work, with
-explicit child/loader/OpenMP reconciliation and measured admission projections.
-Schedules remain native except the named CompleteBin-50 modification.
-The prospective total ceiling is **700 allocated core-hours**, including
-failures/setup/collection, against the owner's approximately **1,980** balance:
-**1,280 core-hours remain outside E009's ceiling**. This replaces the 500-hour plan
-to fund the same-dataset COMEBin grid. The former 200-GB figure is a provisioning
-estimate, not an experiment cap or permission to delete/filter data. Keep Home
-code/environments/transfers/logs separate from bulk reads/BAMs/source/temporary data
-in the project's own shared-storage E009 subtree; never touch colleagues' files. These
-are experiment choices, not product maxima or a promise the runs consume the cap.
-Budget/scale failures cause evidence retention and prospective reassessment, not
-silent data filtering, quota increases or automatic repairs/retries.
+Use local Mac for cheap adapter checks and returned-output analysis; direct
+verified GCP for separately authorized bulk work. The old 700 UCloud core-hour
+plan/balance, Home/shared paths and 16/48 allocation are
+[archived planning](../history/E009_UCLOUD_OPERATIONS.md#superseded-two-depth-resource-protocol),
+not monetary GCP credits. Propose an 8-vCPU/32-GiB serial data stage, 300-GiB
+working disk and 24-hour cumulative driver clock/25-hour provider STOP, with a
+$20 gross run plus seven-day retention envelope. Current CPU quota fits; request balanced/SSD quota >=300 GiB before growth;
+full fits need a separate measured monetary/storage/RAM admission. Ordinary
+trial-credit eligibility, localized costs and fresh displayed balance/scope must
+be checked before spending; no growth/retry follows a failure automatically.
+
+CompleteBin's per-base coverage/training duplication and retained 105/36
+clustering grids need explicit peak accounting. One assembly avoids twenty run
+directories but still uses ten BAMs; max-50 reduces checkpoints/time, not coverage
+or candidate storage. [The audit](../evidence/2026-10-14-completebin-storage.md)
+retains source evidence and a later 400–500-GiB/64–128-GiB possibility, not a new
+provisioning order or hidden change to its scientific schedule.
 
 Use AMBER on its validated contig truth view and alignment-supported conservative
 whole-reference recovery with all-bin purity denominators and duplicate-safe
@@ -121,13 +126,15 @@ one native-tool victory or tune to E009 and claim held-out validation.
 
 ## Boundary and exact next action
 
-E009 is prospective, with no scientific results. Preparation does not authorize a job.
-Implemented/local-tested acquisition/overlap/assembly/depth/truth and runtime
-adapters now prepare one checksum-bound **8-vCPU/24-GB ≤5-hour owner preflight**.
-The owner runs UCloud; Codex reviews returned evidence before scientific admission
-and the subsequent 16-vCPU command. Freeze actual sources/manifests/native settings
-and code before scores. No accepted science is rerun, no architecture comparison
-executes, and this is not another gate on the already merged product.
+E009 has no community fits/quality scores. V10/v14 native tiny contracts stay
+accepted without replay. The new acquisition/assembly/ten-sample depth/provisional
+alignment-truth DAG is locally tested on actual tiny DNA/native binaries, with
+partial/completed resume and byte-drift refusal. That does not certify the newly
+solved GCP runtime, full workload, genome grouping or cellular truth population.
+Commit code/protocol first; the owner must approve the prospective resource/
+retention cost and credit check before direct VM execution. Data evidence/truth
+review is the next assessment boundary; no full fits, scores, new seeds or
+architecture comparison follows automatically. Main remains the immutable control.
 
 Owner direction enters a second development chapter: the stable prototype is
 the control; comparative evidence should select incremental improvements. Data

@@ -1,7 +1,7 @@
 # Historical E009 UCloud v14 handoff
 
 Archived: 2026-10-13 from `2109998a230a0757be424e6f55c3a1bf17971ebe`.
-**Do not execute: UCloud is inaccessible. The returned v14 evidence has not been reviewed in this phase.**
+**Do not execute: UCloud is inaccessible. V14 was independently accepted on 2026-10-14; its successful contracts are not a new job.**
 Preserved as prepared/executed provenance, not a Google Cloud command.
 Current entry points: [STATE](../STATE.md), [Google Cloud operations](../CLOUD.md).
 
@@ -167,3 +167,176 @@ by COMEBin native augmentation/axis validation. Only the two failed contracts ru
 prior accepted receipts remain unchanged. [Local evidence](../../experiments/E009-competitive-benchmark/local-failed-paths-v14.json)
 records actual paths, platform substitutions, preserved negative packets, timings,
 immutable returns and Linux omissions. Final53 regressions/docs checks pass.
+
+## Retained storage/startup lessons from the UCloud recovery
+
+Archived from AGENTS.md on 2026-10-14. These preserve the failure-specific
+reasoning; they do not require snapshots or old UCloud paths on a healthy GCP VM.
+The v14 return is now independently accepted in E009/linux-preflight-v14.json.
+
+For repeated native startup hangs, capture evidence inside the child (including
+before Python site initialization) and process wait state, not only a parent
+timeout traceback. Do not bypass a failed probe or raise its timeout and call
+that a root-cause repair. Prior successful execution does not establish current
+runtime health; retain explicit unresolved status until evidence identifies it.
+When retained traces establish forward progress through cold persistent-file reads,
+correct a prematurely short startup budget prospectively, with an absolute clock
+and an idle-progress limit. Distinguish that wrapper correction from repairing
+filesystem latency or accepting an uncompleted runtime probe.
+If that bounded correction still spends mostly wall time waiting on persistent
+files, stop repeating the full allocation and change the observed read path in
+a cheap native recovery. Python -B forbids bytecode writes, not reads; source-cache
+isolation needs explicit -X flags under -I, verified child propagation and no
+scientific-setting changes. Keep failed attempts and distinguish a locally repaired
+cache-loader reproduction from actual storage/runtime acceptance.
+
+For long owner-run preparation, prefer progress-aware stall detection and one
+explicit owner-selected overall cost ceiling over arbitrary short per-stage wall
+caps. Completed bytes/files/checkpoints are progress; parent heartbeats alone are
+not. Justify stall intervals and any hard ceilings from retained workload/rate,
+allocation and uncertainty, including copy, verification and packing. Test the
+observed workload cardinality and recovery path, not just a smaller convenient
+fixture. Local throughput remains distinct from native performance. Persist
+checksum-bound completed work across job resets where useful; make resume reject
+source/config/output drift and ignore unsealed partials without deleting them.
+Before handoff, reconcile every nested timeout with the advertised command budget.
+
+When changing an observed storage execution path, distinguish one-time materialization
+from repeated native imports. Bind snapshot bytes and internal links, retain a
+reusable artifact, and validate interpreter, library origins and actual numerical
+operations before admission. CPU-capped I/O concurrency may overlap storage
+latency; it does not authorize extra numerical workers or silent relocation.
+
+D006's old E001 job-local-copy exception is historical provenance; it does not
+authorize relocating old prefixes onto GCP. Recreate complete independently owned
+compatible runtimes from accepted version/source records where inaccessible bases
+prevent reuse. Linux compatibility must be tested on the new host when relevant;
+accepted scientific stages stay accepted and are not replayed merely to migrate.
+
+Isolate Python processes inside tool environments: unset inherited `PYTHONPATH`, `PYTHONHOME` and `PYTHONUSERBASE`, and set `PYTHONNOUSERSITE=1` before installs, inventories and execution. UCloud's user-site packages were observed inside otherwise separate conda environments; distinct environment directories alone do not establish import isolation. Preserve required tool-local source imports, and verify package origins when introducing a runtime. Cross-experiment reuse must be read-only and validate a full distribution inventory and import origins against a clean, hash-identified prefix record; a `pip freeze` alone may include user-site entries or direct references. A new package-only venv may explicitly borrow reviewed dependencies read-only, with its own installed wheel and byte-bound before/after checks. Scope byte verification to the actual execution contract: accepted sealed runtime members need no repeated whole-prefix hash, and explicit external source/binary/model inputs can be bound before/after. Do not recursively hash unused tests, headers or unrelated databases merely to demonstrate non-mutation. Label the verification scope honestly; this is not proof that every file in a prefix stayed unchanged. Expose real file/byte progress for substantial verification. Record the dependency/base-prefix relationship, exclude the old package and path-injecting overlays, and never transfer such links as a portable environment or remove their required base. For all Python children using a reused environment, including scientific rules, pass `-B` on the Python command line to prevent `.pyc` writes: `-I` implies `-E` and ignores `PYTHONDONTWRITEBYTECODE`. Do not modify an already executed/transferred snapshot in place; use explicit wrappers or a new versioned transfer.
+
+
+## Superseded two-depth resource protocol
+
+The following 2026-10-09 prospective resources/paths were archived on 2026-10-14.
+The old 700 allocated core-hours and 1,980 UCloud balance are not GCP credits.
+They are ceilings/planning history, not evidence of expenditure or authorization.
+
+```json
+{
+  "resources": {
+    "stage_budgets": [
+      {
+        "stage": "asset_setup_native_preflight",
+        "allocated_vcpus": 8,
+        "allocated_ram_gb": 24,
+        "hours_ceiling": 5,
+        "allocated_core_hours_ceiling": 40
+      },
+      {
+        "stage": "assembly_mapping_source_truth",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 6,
+        "allocated_core_hours_ceiling": 96
+      },
+      {
+        "stage": "primary_product_and_bounded_diagnostic_controls",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 3,
+        "allocated_core_hours_ceiling": 48,
+        "diagnostic_core_hours_ceiling": 16
+      },
+      {
+        "stage": "semibin2",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 2,
+        "allocated_core_hours_ceiling": 32
+      },
+      {
+        "stage": "metacat_core",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 2,
+        "allocated_core_hours_ceiling": 32
+      },
+      {
+        "stage": "scgbinner_native",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 6,
+        "allocated_core_hours_ceiling": 96
+      },
+      {
+        "stage": "completebin_modified_max50",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 6,
+        "allocated_core_hours_ceiling": 96
+      },
+      {
+        "stage": "comebin_native_grid",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 12,
+        "allocated_core_hours_ceiling": 192
+      },
+      {
+        "stage": "evaluation_diagnostics",
+        "allocated_vcpus": 16,
+        "allocated_ram_gb": 48,
+        "hours_ceiling": 2,
+        "allocated_core_hours_ceiling": 32
+      }
+    ],
+    "stage_sum_core_hours": 664,
+    "reserve_core_hours": 36,
+    "total_allocated_core_hours_ceiling": 700,
+    "includes_failed_attempts_setup_download_collection": true,
+    "remaining_owner_credits": 1980,
+    "preflight_working_rss_bytes_ceiling": 20000000000,
+    "science_working_rss_bytes_ceiling": 40000000000,
+    "max_concurrent_tools": 1,
+    "eligible_contig_scale_stop": 100000,
+    "assembly_bp_scale_stop": 600000000,
+    "local_checks": {
+      "threads": 4,
+      "loader": 0,
+      "rss_bytes": 8000000000,
+      "seconds": 7200,
+      "fixture_contigs": 32,
+      "fixture_bp": 600000
+    },
+    "estimates_are_not_measurements": true,
+    "auto_increase_or_retry": false,
+    "balance_date": "2026-10-09 owner approximately",
+    "headroom_core_hours": 1280,
+    "storage": {
+      "provisioning_estimate_gb": 200,
+      "hard_experiment_cap": false,
+      "home_capacity_owner_gb": [
+        50,
+        100
+      ],
+      "shared_capacity_owner_tb": [
+        8,
+        10
+      ],
+      "home_contents": "code, versioned environments, transfers, logs, compact evidence",
+      "shared_contents": "own e009 subtree: reads, source references, BAM/SAM and heavy temporary/native products",
+      "free_space_checked_before_writes": true
+    }
+  },
+  "owner_paths": {
+    "root": "/work/Home/dl_binner/e009/",
+    "transfer": "/work/Home/dl_binner/e009/transfer/",
+    "data_heavy_destination": "/work/RasmusAlles\u00f8eNielsen#2936/dl_binner/e009/"
+  },
+  "depth_samples": [
+    0,
+    1
+  ]
+}
+```

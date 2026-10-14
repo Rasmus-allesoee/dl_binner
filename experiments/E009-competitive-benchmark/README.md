@@ -1,23 +1,18 @@
 # E009: first competitive human-gut assembly benchmark
 
-Opened: 2026-10-08; current access amendment:2026-10-13. Scientific outcome:
-**not assessed**. V10 accepted three tool/native utility/data contracts; v14 is
-owner-reported completed but its return is **not independently reviewed yet**.
-UCloud is inaccessible. [D014](../../docs/decisions/D014-google-cloud-workspace.md)
-and [Google Cloud operations](../../docs/CLOUD.md) own the accepted phase-1 setup
-and actual desktop SSH project verification (2026-10-14). No v14 review or
-acquisition/fits/scores ran during setup. [Former UCloud handoff](../../docs/history/E009_UCLOUD_OPERATIONS.md)
-is preserved, not runnable. Next: review v14, then settle 10/20 read samples
-for one assembly with resource/coverage reasoning before bulk work on GCP.
+Opened 2026-10-08; amended 2026-10-14. Scientific outcome **not assessed**.
+All five tiny UCloud native contracts are accepted through v10/v14; no full
+community fit or E009 quality score ran. The independently reviewed
+[v14 receipt](linux-preflight-v14.json) is accepted without replay.
 
-[D013](../../docs/decisions/D013-first-comparative-benchmark.md) and the
-[focused study](../../docs/evidence/2026-10-08-competitive-binner-study.md) own the
-scientific rationale; [protocol.json](protocol.json) preserves the original
-numerical scope, axes and old UCloud workload budget. Its historical credits and
-Home/shared paths are not current funding/storage. No sample count or scientific
-contract was changed by infrastructure setup. Source/metadata
-[provenance](../../docs/evidence/2026-10-08-competitive-study-provenance.json)
-remains a reviewed planning snapshot, not an input/environment lock.
+The current design uses **one full sample-0 assembly and ten full coverage sources**,
+first listed sample of every corrected subject: 0,2,3,4,6,9,10,11,14,17.
+[GCP operations](OPERATIONS.md) owns the prepared data-only DAG, cost/retention
+proposal, remaining truth-population admission and exact following prompt.
+No VM start/provisioning/bulk execution is authorized by this preparation.
+[D014](../../docs/decisions/D014-google-cloud-workspace.md) supersedes UCloud
+operating paths/budgets; the [old handoff](../../docs/history/E009_UCLOUD_OPERATIONS.md)
+retains their history. Old attempt records are provenance, not current commands.
 
 ## Question and informative comparisons
 
@@ -68,7 +63,7 @@ DCVBin's official 1.657-GB continued-pretraining payload is available. Its actua
 basic wrapper selects one BAM, constructs `VAE(nsamples=1)` with unconditional
 CUDA and 200 epochs; the encoder alone has a CPU fallback and a 5,000-token cap,
 with ≥2-kb eligibility. The enhanced source also calls CUDA directly. A tested
-CPU/two-depth/continued-pretraining adaptation would be substantial extra tool
+CPU/multi-depth/continued-pretraining adaptation would be substantial extra tool
 implementation, so **DCVBin is excluded from E009**, rather than treating coverage
 as a disadvantage or claiming its weights are missing. LorBin remains deferred
 for long-read/model contracts. See the [targeted reconciliation](../../docs/evidence/2026-10-09-e009-contract-reconciliation.md)
@@ -76,14 +71,17 @@ and [asset inspection](../../docs/evidence/2026-10-09-e009-asset-inspection.json
 
 ## Data and immutable axes
 
-Choose **CAMI III Toy Longitudinal Human Gut, short-read sample 0** as the single
-assembly target. **Sample 1** is its second-time-point depth source from subject S1.
-The downloaded corrected subject table verifies this pairing. Subject selection
-uses the first listed subject, not genome abundance, quality or anticipated rank.
-Use full published reads, no truth-selected read subset, genome filtering or
-artificial fragmentation. Each short-read sample is advertised as about 5 Gbp;
-two compressed archives total 9.732 GB. Keep other subjects outside this milestone;
-they are not certified unseen-genome holdouts because source overlap is unresolved.
+Use **CAMI III Toy Longitudinal Human Gut short-read sample 0**, subject S1,
+as the only assembly target. Ten selected full depth samples cover all ten
+subjects, using the first listed ID from each corrected subject table group:
+**0,2,3,4,6,9,10,11,14,17**. This includes cross-subject coverage and sacrifices
+paired temporal depth relative to all twenty; its optimality is unmeasured.
+The selection is label/score-blind and the first-ten numeric IDs would cover only
+six subjects. All selected samples are development coverage after inspection;
+none supplies a certified unseen-genome/donor holdout. Full reads, no truth-selected
+subsets, source filtering or artificial fragmentation. About 5 Gbp/sample;
+current HEAD archive sum is 48.63 decimal GB (45.29 GiB), versus 97.28 GB for all
+20. Actual SHA256/member identities remain acquisition dependencies.
 
 The complete official sample-0 `contigs` and `gsa` archives were inspected:
 `contigs` holds anonymous/named GSA plus the simulator origin map; `gsa` holds
@@ -100,14 +98,15 @@ coassembly, long-read branch or GSA accuracy arm. The GSA is not a substitute if
 this contract fails. This is a documented derivative of public toy data, not an
 official 20-sample CAMI score or human-donor generalization study.
 
-Map full sample 0 and sample 1 competitively to this exact assembly with the
-reviewed strobealign/samtools contract where it fits. Serial mapper then sorter;
-no three full-thread commands in a pipe. Both sorted BAM reference-name/length
-axes must exactly match the FASTA. Simulator BAMs mapped to original genomes are
-truth assets, never the depth input. Mean-depth header order:
-`contig_id`, `cami3_toy_human_gut_short_read_sample_0`,
-`cami3_toy_human_gut_short_read_sample_1`. Retain all rows and true zero masks;
-no inferred filename ordering, synthetic missing depths or GSA depth joins.
+Map all ten full selected samples competitively to that same exact assembly
+with the reviewed strobealign/samtools definition, serial mapper then sorter.
+Every BAM reference-name/length axis matches the FASTA. Simulator source BAMs
+are evaluator assets, never observed depth. The immutable
+[ordered axes](depth-samples.tsv) and [data plan](gcp-data-plan.json) define
+`contig_id` followed by columns for 0,2,3,4,6,9,10,11,14,17 in that order.
+Padded *actual* BAM paths, not aliases alone, preserve native resolved-path order.
+Retain all rows, true zeros/masks and short DNA. No filename-order guesses,
+synthetic missing depths or GSA depth joins.
 
 Use E005's tested mean-depth definition: aligned M/= /X observations divided by
 full contig length; MAPQ/baseQ minima zero; exclude unmapped, secondary and
@@ -252,69 +251,33 @@ separately frozen task; the three-way GLM study remains planned, not run here.
 
 ## CPU, storage, execution and stopping
 
-**Local Mac:** documentation, source review, ≤32-contig/0.6-Mb real-DNA native
-adapter tests, output/evaluator failure tests and returned-record analysis. Use
-≤4 threads, loader zero, 8-GB RSS, ≤2-hour local integration. The accepted E002
-machine had 4 physical cores/16 GiB RAM; do not bulk download reads or infer full
-Linux tool feasibility from it. Local contracts are reported separately from pending native Linux validation.
+Current resources/costs/credit checks and commands live in [Operations](OPERATIONS.md)
+and [CLOUD](../../docs/CLOUD.md), with a proposed 8-vCPU/32-GiB, 300-GiB disk,
+24-hour cumulative data-stage clock and separate approval. The retired 700-hour
+UCloud plan, 1,980 old balance, Home/shared quota and 16/48 allocation are
+[historical](../../docs/history/E009_UCLOUD_OPERATIONS.md#superseded-two-depth-resource-protocol),
+not GCP funding or authorization. No full-fit monetary schedule is approved.
 
-**Owner UCloud:** first a separate 8-vCPU/24-GB setup/asset/runtime preflight,
-then a recommended 16-vCPU/48-GB scientific job or resumable serial jobs following
-returned preflight review. Working RSS ceilings are 20/40 GB respectively, with
-parent/setup/native children inside the overall clock. CPU-only; no GPU presumed.
-Protocol ceilings are safety/budget choices, not ordinary product maxima or runtime
-forecasts. More CPUs may help some stages; no linear speedup claim is made.
+Use cheap <=4-thread, <=8-GB, tiny real-DNA local checks; the Mac assembler path
+remains one thread. Local timings are not Linux/scale projections. Data/native
+phases run serially with explicit child/loader/OpenMP/BLAS/BGZF/I/O accounting,
+actual native reports and extended rule benchmarks. No `--cores` plus `--jobs`.
+CompleteBin starts **two** coverage processes for >2 BAMs; the expanded prepared
+plan divides their BGZF budgets rather than give each the old N-2 allowance.
+This new multi-BAM plan is locally checked, not full-fit admission.
 
-The [budget](protocol.json) reserves at most **700 allocated core-hours**, including
-failed attempts, downloads/setup, collector time and idle driver time. Stage caps
-sum to **664**, with **36** reserved, not automatic retry permission. The owner's
-2026-10-09 approximate balance is **1,980**: **1,280** remain outside this ceiling.
-This adds COMEBin's 192-hour slot to the prior 472-hour stage plan. No UCloud spend
-is measured in this preparation task. Native-scale projections must fit before
-admitting full fits; resource deferral is an operational outcome, not zero quality.
+Keep persistent closed logs/manifests, checksums, failure causes, timing/allocation
+and monetary/provider uptime separately. Byte-bound explicit resume must preserve
+completed stages and fail on drift/unsealed outputs. Keep native exclusions/noise
+and all emitted DNA. Stop before fits if the real assembly exceeds 100,000 >=500-bp
+eligible contigs or 600 Mb, or on resource/native/axis failures; prospectively
+reassess rather than filter/subsample or shorten schedules. CompleteBin's separate
+[storage audit](../../docs/evidence/2026-10-14-completebin-storage.md) requires actual
+eligibility, candidate/checkpoint coexistence and RAM review after the data stage.
 
-Tools run serially, using the full allocation **including** coordinator/loader/
-child budgets. Numerical phases may use all 16 threads with loader zero; process
-pools need per-worker BLAS=1 and explicit aggregate placement. Audit native flags,
-OMP/BLAS/PyTorch/Infomap/HMM/child limits and actual CPU reports per phase. MetaCAT
-has affinity/label-propagation pools plus five score workers; CompleteBin's API
-defaults to 32 loader workers and its CLI does not expose that setting; SCGBinner's
-train parser defaults to five. A top-level `-t 16` alone is insufficient. Use a
-tested operational adapter for loader zero/pool budgets without changing scientific
-defaults; source patches/unsupported changes require named identities and review.
-Serial/I/O/graph stages may use less CPU; record that rather than fabricate full use.
-
-The former **200 GB is a provisioning estimate**, not a hard experiment cap.
-Home is approximately 50–100 GB; shared storage approximately 8–10 TB. Keep code,
-new environments, transfers/logs and compact evidence in Home. Bulk sources,
-reads, BAM/SAM and heavy temporaries belong in the project's own quoted
-`/work/RasmusAllesøeNielsen#2936/dl_binner/e009/` subtree. The preflight checks
-≥6-GB free Home / ≥30-GB free shared space before creating new payloads/prefixes;
-extraction checks declared member sizes against actual free space. Inspect actual
-sizes before the heavy run; provision more owned shared storage when needed,
-without changing science, deleting old attempts or touching colleagues' files.
-
-Research DAG should use pinned Snakemake local executor `--cores` without `--jobs`,
-aggregate RAM and explicit serial barriers. Installed `dl-binner run` remains its
-built-in dispatcher. Use new version-qualified E009 prefixes where needed; healthy
-accepted UCloud dependencies may be borrowed read-only after full inventory/import/
-byte validation, never upgraded/relocated. Keep lexical venv Python and isolated
-`-B` children. Transfers/logs/returns belong under
-`/work/Home/dl_binner/e009/transfer/`; unique attempts under E009's persistent root.
-
-Retain terminal/per-tool logs, timestamps, heartbeats, native schedules, sampled
-tree CPU/RSS, exit status, source/config/runtime hashes and collection inventory.
-Report allocated vCPUs × total driver wall time separately from CPU seconds;
-charge setup and failed attempts, distinguish resumable reused stages from new work.
-No expected cost is a measured cost. On fatal workers/time/RSS stop promptly and
-verify no running orphans; return checksum-bound evidence even on early failure.
-
-Stop before fits if assembly exceeds 100,000 ≥500-bp eligible contigs or 600 Mb
-total emitted DNA, source/truth axes are unresolved, or projected native work
-exceeds caps. Those caps protect this first exact-neighbor baseline; they do not
-filter the assembly or constrain the product. Retain preparation and amend the
-prospective scale/resource plan before scores; never secretly subsample a failing
-input. Do not automatically start another community, seed or architecture gate.
+The dated attempt sections below preserve their original preparation/failure
+state. They are superseded by the accepted v14/current GCP section at the end;
+only OPERATIONS supplies current commands. No historical imperative authorizes replay.
 
 ## Initial prepared milestone and acceptance boundary (superseded by v8 recovery)
 
@@ -831,3 +794,38 @@ bytes; sampled CPU146.11 s. These are local warm-runtime measurements, not Linux
 cold-install forecasts or UCloud spend. All53 E009 regression tests and documentation
 checks pass. The final Linux install/new binding/native entry/eight-CPU checks still
 require the owner return. No full community fits, E009 scores or scientific changes.
+
+## Accepted v14 return and current GCP preparation — 2026-10-14
+
+[V14 independent receipt](linux-preflight-v14.json) verifies SHA256
+`c6f2c4df856c7e80031cb84b47e7f82297f0d56c924d57b86d53d9696c673ff3`,
+all 174 regular archive members, 172 retained hashes, source freeze/locked recipes,
+terminal status/collection and zero exits for all 16 actual stages. The terminal
+snapshot and inventory are bound separately; archived payload is 8,352,269 bytes,
+not the growing external log. Actual finite COMEBin arrays/contig/sample axes were
+read independently; original v10 reference/BAM identities match exactly.
+
+SCGBinner's complete owned Python3.10/NumPy1.26.4/pandas1.5.3/sklearn1.6.1/CPU
+Torch2.0.0.post104 imports, full help, actual augmentation/reader/initializer/HNSW
+pass. Complete owned CheckM1.2.3 imports `checkm.test.test_ecoli`; lineage help and
+HMMER/Prodigal/pplacer entry points pass. COMEBin's real augmentation and feature
+reader pass on the unchanged bound numerical recipe; full help is reused.
+All three formerly passed tools and utility/assembly/depth/truth/AMBER/source
+contracts stay unscheduled/accepted. Restore uses 151 sealed chunks, zero original
+recopy/access. Eight CPUs, loader zero and isolated actual import origins remain
+explicit. These are tiny software contracts, not training, grid, lineage placement,
+GCP runtime health or scientific results.
+
+Actual cost through collection: 211.421995 s /0.469826655 allocated vCPU-hours,
+8-vCPU/24-GB allocation, peak sampled stage RSS 3,724,357,632 bytes. Precollection
+attempt snapshot: 62,276,326 logical file bytes. Separate prefixes/caches/source
+DNA/provider idle are outside that scope; no GCP bill is inferred.
+
+The ten-source protocol, serial real-worker DAG and complete independent data
+recipe are now prepared for separately approved direct GCP execution. Local
+[validation](gcp-local-validation.json) owns native fixture paths, preserved
+failures, resume/axis contracts and precise omissions. Reconcile positive read
+origins, genome/replicon grouping and cellular target taxonomy before final truth
+admission; provisional alignment truth is not a frozen scoring denominator.
+No VM start, provision, scientific acquisition/assembly/mapping/truth, binner fit,
+quality score, architecture change or accepted science replay ran in this task.

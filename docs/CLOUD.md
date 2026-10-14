@@ -11,9 +11,11 @@ and the normal installed CLI sandbox passes.** See the
 
 ## Phase boundary and account verification
 
-Phase 1 establishes a CPU Linux workspace, private backup and actual Codex SSH
-access. **Do not inspect the E009 v14 return, acquire data, install all binners,
-fit tools or score E009 in this phase.** The owner's SDU login is deactivated;
+The completed phase 1 established a CPU Linux workspace, private backup and actual
+Codex SSH access; it excluded v14 review and science. The 2026-10-14 follow-up
+authorizes **local v14/data-stage preparation and a commit only**. V14 is now
+accepted; no VM start/provisioning, bulk acquisition, fit or quality score is
+authorized by the current task. The owner's SDU login is deactivated;
 UCloud files are reported intact but inaccessible. Do not delete them or rerun its
 old transfer command. [The archived UCloud guide](history/UCLOUD_OPERATIONS.md)
 and [E009 command](history/E009_UCLOUD_OPERATIONS.md) preserve that provenance.
@@ -281,6 +283,43 @@ restarts the host, clearing the previous app-server's helper selection.
 [installed-version sandbox implementation](https://github.com/openai/codex/blob/rust-v0.160.1/codex-rs/linux-sandbox/README.md)
 explain the system-helper selection and scoped profile.
 
+## GitHub write-access recommendation
+
+The VM's existing **read-only deploy key is sufficient for the next data phase**:
+fetch the normally pushed source commit, run data work and retain outputs/logs on
+the VM. No repository permission is changed in this preparation. ChatGPT/Codex
+login and GCP OS Login do not confer GitHub push rights. Keep credentials outside
+Git, research archives and terminal output.
+
+If the owner wants direct VM pushes later, prefer a **separate fine-grained PAT**
+limited to `Rasmus-allesoee/dl_binner`, Contents read/write +required Metadata read,
+with an explicit short expiry (e.g. 30 days). Keep the current SSH key for fetch;
+configure a separate HTTPS push transport and an owner-only memory/secure credential
+helper. The owner creates/enters the token in a protected interactive session;
+never paste it into chat, a Git remote URL or a logged shell command. Workflow
+permission is a separate grant only if changing workflow files is actually needed.
+Token presence is capability, not authorization to push/merge/publish on every task.
+
+A **separate write-enabled deploy key** is a reasonable simple single-repository
+alternative, and safer to revoke independently than converting the current read
+key. It has no automatic expiry and grants repository write. Neither this key nor a
+Contents-write PAT is branch-specific by itself; branch protections/rulesets
+govern allowed pushes. A compromised VM/private key can exercise those rights.
+GitHub explicitly recommends Apps for finer control; a private App's one-hour
+installation tokens suit ongoing automation but require app/key/token-refresh
+setup that this single-owner workspace does not presently need. SSH agent forwarding
+would expose the owner's existing authority to the remote session and remains
+disabled. A broad classic PAT or copied Mac authentication cache is unnecessary.
+
+Recommendation now: **retain read-only**. Optional later direct-push choice:
+**short-lived single-repo Contents-write PAT**, or a separate write deploy key if
+its simplicity is preferred after accepting non-expiring write scope. Owner action
+is choosing/creating that credential and approving its exact scope/revocation;
+no action is required for read-only data execution itself. Do not create/register
+keys, tokens, an App or an extra cloud secret service without that later direction.
+[GitHub deploy-key comparison](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys),
+[fine-grained PAT permissions/expiry](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+
 ## Private archive and retention
 
 The created bucket is **`gs://dl-binner-archive-167650584170/`**, regional Standard
@@ -372,13 +411,39 @@ and belong to the authorized scientific phase.
 
 ## Next phase
 
-After phase 1 passes: inspect E009 v14 archive/checksum/terminal evidence, accept
-success without replay, then decide **10 versus 20 read samples** using coverage
-representativeness for the one-assembly design, peak working storage and USD cost.
-Published multi-assembly/multi-sample gains do not determine the optimum here.
-Freeze axes/protocol/cost before bulk acquisition/assembly/depth/truth, which will
-run directly on the connected GCP VM under a separately authorized phase.
-No full fits/scores or architecture comparison follows automatically.
+V14 is independently accepted and E009's selected ordered sources are
+**0,2,3,4,6,9,10,11,14,17**: ten corrected subjects, one sample-0 assembly.
+[E009 operations](../experiments/E009-competitive-benchmark/OPERATIONS.md) owns the
+locally tested data-only driver, exact following prompt, resource/retention cost
+proposal and remaining positive-origin/source-grouping/cellular-truth review.
+[Current API evidence](../experiments/E009-competitive-benchmark/gcp-preparation.json)
+confirms stopped/unchanged 4 CPU/16 GiB and 30/50-GiB disks; global CPU quota 12,
+regional E2 24 and balanced/SSD quota 250 GiB. Do not use the old 16/48 UCloud plan.
 
-If credits run out, assess **Google Colab** and **Kaggle Kernels** as possible future
-compute options; neither is configured, enabled or used now.
+Proposed later approval: same VM **e2-standard-8/32 GiB**, work disk **300 GiB**,
+**25-hour provider STOP**, **24-hour cumulative data-driver ceiling**, >=25-GiB
+free reserve and **$20 gross run/seven-day storage envelope**. A balanced/SSD quota increase from 250 to >=300 GiB is needed; no new service is needed. $0.27304568/hour VM/IP; 25h about $6.83;
+retained boot+work $31.20/month gross, seven days about $7.18. Check actual start
+availability, displayed localized quote/credit scope/balance/expiry and pending
+usage before spending. The owner's 2026-10-13 credit display remains historical.
+
+Growth cannot simply be shrunk back; review retained capacity within seven days
+of growth, as well as the accepted expiry review by 2027-01-10. Smaller-disk
+replacement requires an approved copy/restore/retention decision. The existing
+four-hour STOP must be changed **before start** for an approved longer phase;
+otherwise it will interrupt the data work. Do not start merely to prepare commands.
+No new GPU, Marketplace, NAT, paid service or all-binner install is proposed.
+
+CompleteBin fits may later justify 400–500-GiB disk and 64/128-GiB CPU RAM.
+Balanced-disk quota must then rise beyond 250; 16 CPU/128 GiB needs global CPU
+quota >=16. The consulted official 2026-10-13 Iowa sheet priced e2-highmem-8
+at $0.36159864/hour and e2-highmem-16 at $0.72319728/hour, plus $0.005 running
+IPv4; refresh exact localized prices before a later approval. Work disk at
+400/500 GiB is $40/$50 per month, plus boot/bucket. These remain estimates and
+unapproved options, not a fit admission or credit entitlement. Actual assembly,
+CompleteBin eligibility/CPU behavior and the [storage audit](evidence/2026-10-14-completebin-storage.md)
+will determine whether they are needed. An owned healthy GCP runtime persists
+when stopped; do not reinstall it because UCloud once reset between jobs.
+
+If credits run out, assess Colab/Kaggle as future alternatives; neither is
+configured or used. Do not silently charge the card or delete accepted evidence.
