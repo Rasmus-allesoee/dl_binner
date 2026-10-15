@@ -68,16 +68,20 @@ def source_id(read_id,records):
     return next(iter(found))
 
 
-def profiles(path):
-    """Read explicit provider genome IDs and full lineages, retaining zero entries."""
+def profiles(path, include_taxa=False):
+    """Read provider lineages and optional exact-taxon rows, retaining zero entries.
+
+    The actual profile omits genome IDs on some existing NCBI taxon rows. Such a
+    row can classify an observed origin taxon but is not a genome-ID inventory or
+    evidence that two origin genomes should merge. Preserve both join modes.
+    """
     with Path(path).open() as stream:lines=stream.read().splitlines()
     if '@SampleID:0' not in lines:raise ValueError('Need the provider sample-0 profile')
     start=next(i for i,line in enumerate(lines)if line.startswith('@@'))
-    rows=csv.DictReader(io.StringIO('\n'.join(lines[start:])[2:]),delimiter='\t');result={}
+    rows=csv.DictReader(io.StringIO('\n'.join(lines[start:])[2:]),delimiter='\t');result={};taxa=defaultdict(list)
     for row in rows:
         gid=row['_CAMI_genomeID']
-        if not gid:continue
-        if gid in result:raise ValueError('Duplicate provider genome ID')
+        if gid and gid in result:raise ValueError('Duplicate provider genome ID')
         path_ids=row['TAXPATH'].split('|');path_names=row['TAXPATHSN'].split('|')
         if len(path_ids)!=len(path_names):raise ValueError('Provider lineage axes differ')
         lineage=dict(zip(path_ids,path_names));kind='other'
@@ -87,9 +91,26 @@ def profiles(path):
                 if lineage[ident]!=name:raise ValueError('Provider lineage ID/name mismatch')
                 if kind!='other':raise ValueError('Conflicting cellular/acellular lineage')
                 kind=label
-        result[gid]={**row,'lineage_class':kind}
+        item={**row,'lineage_class':kind};taxa[row['TAXID']].append(item)
+        if gid:result[gid]=item
     if not result:raise ValueError('No provider genome rows')
-    return result
+    return (result,taxa)if include_taxa else result
+
+
+def resolve_profile(gid, tax, provider, taxa):
+    """Join an explicit genome row or one exact origin-taxon row with no genome ID.
+
+    A taxon-only join supplies lineage, not inferred genome identity. Never match
+    a species-name substring, substitute another genome's row or merge genomes.
+    """
+    if gid in provider:
+        row=provider[gid];mode='explicit_provider_genome_id'
+        if tax not in row['TAXPATH'].split('|'):raise ValueError('Origin tax ID not on explicit provider lineage')
+    else:
+        candidates=[row for row in taxa.get(tax,[])if not row['_CAMI_genomeID']]
+        if len(candidates)!=1:raise ValueError('Missing/ambiguous exact provider origin-taxon row: '+gid+' '+tax)
+        row=candidates[0];mode='exact_origin_taxon_without_provider_genome_id'
+    return row,mode
 
 
 def fastq_ids(path):
@@ -130,7 +151,7 @@ def review(root,profile_path,output):
             if rid in records:raise ValueError('Nonunique source catalog record ID')
             records[rid]={'file':item['name'],'length':record['length']}
     reference_ids={v['original_replicon_id']for v in axis['reference_axis'].values()}
-    provider=profiles(profile_path);checked[str(profile_path)]=bind(profile_path)
+    provider,taxa=profiles(profile_path,include_taxa=True);checked[str(profile_path)]=bind(profile_path)
     payload=read_done['payload'];pairs=payload['validation']['pairs'];reads=ReadIDs(pairs)
     for path in [payload['first'],payload['second']]:
         if path is None:continue
@@ -146,13 +167,12 @@ def review(root,profile_path,output):
         if rows.fieldnames!=['#anonymous_read_id','genome_id','tax_id','read_id']:raise ValueError('Origin fields changed')
         for row in rows:
             origins.add(row['#anonymous_read_id']);gid=row['genome_id'];tax=row['tax_id']
-            if gid not in provider:raise ValueError('Positive origin absent from provider profile: '+gid)
-            p=provider[gid]
-            if tax not in p['TAXPATH'].split('|'):raise ValueError('Origin tax ID not on explicit provider lineage')
+            p,join_mode=resolve_profile(gid,tax,provider,taxa)
             rid=source_id(row['read_id'],records)
             if rid not in reference_ids:raise ValueError('Positive source record absent from competitive universe: '+rid)
             item=genomes.setdefault(gid,{'tax_id':tax,'read_records':0,'lineage_class':p['lineage_class'],
-                'provider_strain_tax_id':p['TAXID'],'HOST':p['HOST'],'profile_percentage':p['PERCENTAGE']})
+                'provider_strain_tax_id':p['TAXID'],'HOST':p['HOST'],'profile_percentage':p['PERCENTAGE'],
+                'taxonomy_join_mode':join_mode})
             if item['tax_id']!=tax:raise ValueError('Positive origin genome/taxon relation changed')
             item['read_records']+=1;by_record[rid].add(gid);by_file[records[rid]['file']].add(gid)
             if origins.count%1000000==0:print('REVIEW_ORIGIN_IDS='+str(origins.count),flush=True)
@@ -163,6 +183,8 @@ def review(root,profile_path,output):
         'consumed_files':checked,'source_stage_manifest':bind(source_folder/'done.json'),'read_stage_manifest':bind(read_folder/'done.json'),
         'fastq_IDs':read_check,'origin_IDs':origin_check,'sets_equal':True,'positive_genomes':genomes,
         'read_records_by_lineage':dict(classes),'positive_genomes_by_lineage':dict(class_genomes),
+        'taxonomy_join_mode_genomes':dict(Counter(v['taxonomy_join_mode']for v in genomes.values())),
+        'taxon_only_rows_do_not_establish_genome_grouping':True,
         'source_record_to_observed_genomes':{k:sorted(v)for k,v in by_record.items()},
         'source_file_to_observed_genomes':{k:sorted(v)for k,v in by_file.items()},
         'unobserved_competitive_records':sorted(reference_ids-by_record.keys()),

@@ -66,5 +66,18 @@ class DataReviewTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'Consumed sealed bytes changed'):
                 mod.review(root,profile,Path(tmp)/'drift-review')
 
+    def test_actual_missing_genome_id_uses_exact_taxonomy_without_merging(self):
+        row={'_CAMI_genomeID':'','TAXID':'762982','TAXPATH':'131567|2|762982','lineage_class':'bacterial'}
+        taxa={'762982':[row]}
+        for gid in ['ASV149.0','a_distinct_observed_genome']:
+            result,mode=mod.resolve_profile(gid,'762982',{},taxa)
+            self.assertEqual(result['TAXID'],'762982');self.assertEqual(mode,'exact_origin_taxon_without_provider_genome_id')
+        with self.assertRaisesRegex(ValueError,'Missing/ambiguous'):
+            mod.resolve_profile('ASV149.0','762983',{},taxa)
+        with self.assertRaisesRegex(ValueError,'Missing/ambiguous'):
+            mod.resolve_profile('ASV149.0','762982',{}, {'762982':[row,row]})
+        with self.assertRaisesRegex(ValueError,'Missing/ambiguous'):
+            mod.resolve_profile('ASV149.0','762982',{}, {'762982':[{**row,'_CAMI_genomeID':'another'}]})
+
 
 if __name__=='__main__':unittest.main()
