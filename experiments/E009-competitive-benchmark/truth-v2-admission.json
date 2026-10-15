@@ -1,0 +1,339 @@
+{
+  "record": "E009",
+  "version": "e009-truth-v2",
+  "admitted": true,
+  "scope": "conservative supplied-reference alignment truth for development diagnostics; not bin recovery, MAG quality or independent generalization",
+  "derivation_source_commit": "e60d1e3",
+  "artifact_manifest": {
+    "bytes": 4388,
+    "sha256": "6bb3f1a07276c44c17ec16c7d2663ecfa5c4ce3c0eda6ed3a3dc579b3868eed1"
+  },
+  "artifact_files": {
+    "AMBER-truth.tsv": {
+      "bytes": 3126486,
+      "sha256": "065354cd62f43d2747e41aae8b9bf54bd098955a96f29639f5e0aff56505bcec"
+    },
+    "derivation.json": {
+      "bytes": 759,
+      "sha256": "b7a1850c11ade0b18508c65b1edc586b908e929a82e882dc4f6b058a99be2731"
+    },
+    "reference-map.json": {
+      "bytes": 3271444,
+      "sha256": "93a76a04993bdfca258930faafbef03543d28b3f7fafbf44d3f7323b1981614d"
+    },
+    "targets.json": {
+      "bytes": 12867,
+      "sha256": "8c73c6e96e09a48fba37e113ed26598aa681cd2ddfe6cc3d8b87c9f619f57618"
+    },
+    "truth.json": {
+      "bytes": 69647928,
+      "sha256": "348c63d04a201171302ef9b120f38cb01fb175adea93276d0918611713ddd5b8"
+    }
+  },
+  "assembly": {
+    "bytes": 237732361,
+    "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+  },
+  "policy": {
+    "bytes": 2362,
+    "sha256": "a256cc6d00c9be66c2082ab3ae5109a7cfca8e3cdbd245b9ee19ed6cbb132ba0"
+  },
+  "frozen_inputs": {
+    "bytes": 3497,
+    "sha256": "974999a045164253c8461c10b89dab9151e0363aeefaf5fb1269acf0c91abfeb"
+  },
+  "local_artifact_root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-truth-v2/20261015/attempt-local-v2/truth-v2",
+  "derivation": {
+    "AMBER_labelled_bp": 165477813,
+    "AMBER_labelled_contigs": 125848,
+    "alias_records": 7688,
+    "alignment_rows": {
+      "clean_qualifying_rows": 191351,
+      "nn_positive_rows": 459,
+      "paf_rows": 300499,
+      "qualifying_rows": 191509,
+      "quarantined_rows": 158
+    },
+    "assembly_bp": 231678157,
+    "canonical_references": 7607,
+    "confirmed_query_bp": 178135884,
+    "contigs": 145702,
+    "full_provided_primary_bp": 554661890,
+    "no_fits_or_scores": true,
+    "positive_genomes": 309,
+    "primary_targets": 156,
+    "query_bp": {
+      "ambiguous_query_bp": 42402631,
+      "nn_quarantined_query_bp": 7653205,
+      "repeat_locus_query_bp": 449938,
+      "unsupported_query_bp": 3486437
+    },
+    "scientific_truth_admitted": false,
+    "wall_seconds": 44.629135373048484
+  },
+  "independent_review": {
+    "AMBER_labelled_bp": 165477813,
+    "AMBER_labelled_contigs": 125848,
+    "admission_is_separate_owner_record": true,
+    "all_nn_or_circular_queries_reviewed": 348,
+    "artifact_manifest": {
+      "bytes": 4388,
+      "sha256": "6bb3f1a07276c44c17ec16c7d2663ecfa5c4ce3c0eda6ed3a3dc579b3868eed1"
+    },
+    "canonical_references": 7607,
+    "circular_alias_records": 90,
+    "competitive_alias_records": 7688,
+    "deterministic_SHA256_sample_queries": 128,
+    "full_assembly_axis": 145702,
+    "full_primary_provided_bp": 554661890,
+    "full_query_bp": 231678157,
+    "independent_oracle_queries": 476,
+    "native_row_recount": {
+      "nn_rows": 459,
+      "qualifying_rows": 191509,
+      "rows": 300499
+    },
+    "no_binner_fits_scores_or_alignment": true,
+    "positive_genomes": 309,
+    "primary_targets": 156,
+    "query_bp": {
+      "ambiguous": 42402631,
+      "confirmed": 178135884,
+      "nn_quarantined": 7653205,
+      "unsupported": 3486437
+    },
+    "status": "PASS",
+    "zero_origin_competitors": 2
+  },
+  "independent_review_binding": {
+    "bytes": 968,
+    "sha256": "5205ce021777725087c12f7166e27492e569ac74560f0651b5121dd924155f6f"
+  },
+  "local_execution": {
+    "python": "3.13.2 | packaged by conda-forge | (main, Feb 17 2025, 14:01:04) [Clang 18.1.8 ]",
+    "derivation_supervision": {
+      "command": [
+        "/opt/miniconda3/bin/python3",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e009_truth_v2.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-gcp-review/20261015/returned",
+        "--audit",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-gcp-review/20261015/returned/gcp-review-20261015/read-origin-review-v3/review.json",
+        "--population",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E009-competitive-benchmark/truth-population-review.json",
+        "--policy",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E009-competitive-benchmark/truth-v2-policy.json",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-truth-v2/20261015/attempt-local-v2/truth-v2",
+        "--input-manifest",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E009-competitive-benchmark/truth-v2-inputs.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 88508,
+      "peak_sampled_rss_bytes": 494112768,
+      "rss_bytes_ceiling": 4000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.8028132634099637,
+      "sampled_cpu_seconds": 36.44,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1800,
+      "stop_reason": null,
+      "wall_seconds": 45.390381127013825
+    },
+    "final_review_supervision": {
+      "command": [
+        "/opt/miniconda3/bin/python3",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e009_truth_review.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-gcp-review/20261015/returned",
+        "--artifact",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-truth-v2/20261015/attempt-local-v2/truth-v2",
+        "--population",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E009-competitive-benchmark/truth-population-review.json",
+        "--input-manifest",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E009-competitive-benchmark/truth-v2-inputs.json",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-truth-v2/20261015/independent-review-final.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 89734,
+      "peak_sampled_rss_bytes": 1219538944,
+      "rss_bytes_ceiling": 4000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.7461179571280694,
+      "sampled_cpu_seconds": 39.5,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1800,
+      "stop_reason": null,
+      "wall_seconds": 52.94069070799742
+    },
+    "initial_review_supervision": {
+      "command": [
+        "/opt/miniconda3/bin/python3",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e009_truth_review.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-gcp-review/20261015/returned",
+        "--artifact",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-truth-v2/20261015/attempt-local-v2/truth-v2",
+        "--population",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E009-competitive-benchmark/truth-population-review.json",
+        "--input-manifest",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E009-competitive-benchmark/truth-v2-inputs.json",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-truth-v2/20261015/independent-review.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 89259,
+      "peak_sampled_rss_bytes": 1243488256,
+      "rss_bytes_ceiling": 4000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.9263303740325238,
+      "sampled_cpu_seconds": 33.05,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1800,
+      "stop_reason": null,
+      "wall_seconds": 35.67841552698519
+    },
+    "failed_first_supervision": {
+      "command": [
+        "/opt/miniconda3/bin/python3",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e009_truth_v2.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-gcp-review/20261015/returned",
+        "--audit",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-gcp-review/20261015/returned/gcp-review-20261015/read-origin-review-v3/review.json",
+        "--population",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E009-competitive-benchmark/truth-population-review.json",
+        "--policy",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E009-competitive-benchmark/truth-v2-policy.json",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-truth-v2/20261015/truth-v2",
+        "--input-manifest",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E009-competitive-benchmark/truth-v2-inputs.json"
+      ],
+      "exit_code": -15,
+      "launched_pid": 88495,
+      "peak_sampled_rss_bytes": 0,
+      "rss_bytes_ceiling": 4000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.0,
+      "sampled_cpu_seconds": 0,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1800,
+      "stop_reason": "PermissionError: [Errno 1] Operation not permitted: 'ps'",
+      "wall_seconds": 0.021934870979748666
+    },
+    "failure_interpretation": "macOS sandbox denied ps after launch; child was terminated in 0.022s, no truth directory/result created; distinct supervised local attempt passed with process permissions",
+    "GCP_VM_started": false,
+    "native_alignment_replayed": false,
+    "binner_fits_or_scores": false
+  },
+  "population_contract": {
+    "positive_genomes": 309,
+    "primary_bacterial_targets": 156,
+    "archaeal_targets": 0,
+    "primary_provided_reference_bp": 554661890,
+    "all_provided_unobserved_records_retained": 1280,
+    "zero_origin_competitor_files": 2,
+    "canonical_reference_records": 7607,
+    "PAF_alias_records": 7688,
+    "circular_aliases": 90,
+    "canonical_circular_molecules": 9,
+    "HOST_is_not_genome_identity": true
+  },
+  "limitations": [
+    "all emitted qualifying chains from a heuristic aligner, not exhaustive homology",
+    "conservative whole-span nn quarantine can reduce attributable support",
+    "provided MAG/scaffold lengths are not finished-genome completeness or formal MAG quality",
+    "no near-genome or pretraining independence established",
+    "truth labels are evaluator inputs only and must never enter feature/training paths",
+    "NN whole-span quarantine affects 7653205 bp /3.3034% of assembly; fixed prospectively before any binner result",
+    "Independent raw-chain oracle reviews all 348 nn/circular queries and 128 SHA256-selected queries; other queries have complete serialized invariants and tested common reader, not a second full raw-chain derivation",
+    "Typed nn/NM/cg =XID writer-specific contract; fixtures include source-supported N:N behavior, no new native tiny aligner invocation",
+    "Artifact scientific_truth_admitted:false remains immutable derivation provenance; this separate checksum-bound record owns subsequent admission"
+  ],
+  "old_data_DAG_status": "FAILED; unchanged failed final journal remains unsealed",
+  "cost": {
+    "new_GCP_compute_hours": 0,
+    "new_GCP_compute_cost_usd": 0,
+    "new_provisioning_or_resize": false,
+    "previous_compute_ip_gross_usd": 3.728833463099644,
+    "seven_day_disk_gross_exposure_usd": 7.180273972602739,
+    "original_data_clock_remaining_conservative_hours": 10.343554444444447,
+    "ongoing_disk_gross_usd_month": 31.2,
+    "storage_review_due": "2026-10-21",
+    "new_fit_budget_approved": false
+  },
+  "current_VM_control_plane": {
+    "status": "TERMINATED",
+    "lastStartTimestamp": "2026-10-15T05:51:17.410-07:00",
+    "lastStopTimestamp": "2026-10-15T06:19:53.611-07:00",
+    "machineType": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/machineTypes/e2-standard-8",
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "3600"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "checked_utc": "2026-10-15T16:50:30.479371+00:00",
+    "disks": [
+      {
+        "diskSizeGb": "30",
+        "autoDelete": false,
+        "deviceName": "dl-binner-boot"
+      },
+      {
+        "diskSizeGb": "300",
+        "autoDelete": false,
+        "deviceName": "dl-binner-work"
+      }
+    ],
+    "external_ip_present": false
+  },
+  "next": "Separate $2 approval for bounded unchanged diagnostic controls; no external binner; fresh live credit gate before any wake",
+  "source_bindings": {
+    "scripts/e009_truth_v2.py": {
+      "bytes": 17911,
+      "sha256": "5c9d49fe80431adf4caefed111a81f3abdfddfc6a4db6e477614123028a57fe5"
+    },
+    "scripts/e009_truth_review.py": {
+      "bytes": 12560,
+      "sha256": "e07a21f6acaf071887d0ba6deececd9ee9c86417a6fb8607bef3eaae77e65d32"
+    },
+    "scripts/e009_common.py": {
+      "bytes": 9410,
+      "sha256": "5ce8580922799bbed20b89a0f823b70f147ad97351952b2f03225509f40e1102"
+    },
+    "scripts/e009_truth.py": {
+      "bytes": 10174,
+      "sha256": "0d6cfef49c7ae89e712533f042e5cec032ac870041843df6af3decb6e82957d8"
+    },
+    "scripts/e009_controls.py": {
+      "bytes": 16875,
+      "sha256": "2ad898996df287a38a406d9d1891b6438f9d8fab0415c48c09155903af17a5b4"
+    }
+  },
+  "checks": {
+    "new_truth_tests": 6,
+    "bounded_control_tests": 8,
+    "origin_review_regressions": 6,
+    "feature_acceptance_regressions": 2,
+    "test_fit_execution": false,
+    "control_children": "native inert fixture programs; only disk growth sensor mocked",
+    "distribution": "retained actual 33599-byte dev3 wheel matches all eleven immutable source/default files",
+    "native_Linux_control_setup_or_fits": "not run; future approved phase probes setup before fitting"
+  }
+}

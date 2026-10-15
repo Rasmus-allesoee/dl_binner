@@ -3113,5 +3113,12 @@
     "completebin": "deferred",
     "prompt": "OPERATIONS.md#exact-following-step-prompt"
   },
-  "checksum_provenance_note": "Source archive SHA is the accepted v10 hash, independently matched on GCP; the generic native acquisition field publisher_checksum_verified means an expected SHA was supplied, not that a separately published supplier checksum was found. Read archives have observed SHAs and verified ETags/length/mates, without supplier SHA claims."
+  "checksum_provenance_note": "Source archive SHA is the accepted v10 hash, independently matched on GCP; the generic native acquisition field publisher_checksum_verified means an expected SHA was supplied, not that a separately published supplier checksum was found. Read archives have observed SHAs and verified ETags/length/mates, without supplier SHA claims.",
+  "subsequent_truth_v2": {
+    "record": "truth-v2-admission.json",
+    "admitted": true,
+    "scope": "conservative supplied-reference alignment truth for development diagnostics; not bin recovery, MAG quality or independent generalization",
+    "original_DAG_status_unchanged": true,
+    "GCP_wake": false
+  }
 }

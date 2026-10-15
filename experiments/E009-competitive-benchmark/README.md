@@ -8,7 +8,7 @@ community fit or E009 quality score ran. The independently reviewed
 The current design uses **one full sample-0 assembly and ten full coverage sources**,
 first listed sample of every corrected subject: 0,2,3,4,6,9,10,11,14,17.
 [GCP operations](OPERATIONS.md) owns the prepared data-only DAG, cost/retention
-proposal, remaining truth-population admission and exact following prompt.
+records, truth-v2 admission, separate control approval and exact following prompt.
 The later owner message authorizes the data-only phase at `5fec4e1`, subject to
 verified credits/prices and effective quota. [The phase receipt](gcp-data-observed.json)
 owns what actually ran; all fits/scores remain unapproved.
@@ -30,13 +30,17 @@ The completed [origin/population review](truth-population-review.json) verifies
 all 33,267,026 sample-0 mate IDs and 309 positive simulator genomes: 156 bacterial,
 133 viral, 11 eukaryotic and nine separately simulated plasmids. All nine permuted
 files are exact circular rotations; host-like filenames do **not** make them host
-genomes. Full coordinate truth remains **unadmitted** pending the tested parser,
-simulator-ID/circular-coordinate derivation and denominator/ambiguity validation.
-[Operations](OPERATIONS.md#verified-data-outcome-and-next-boundary-2026-10-15)
+genomes. Fresh [truth v2 is admitted](truth-v2-admission.json) after local derivation
+and independent raw-chain review, preserving all 7,688 competitive aliases as
+7,607 canonical records, actual simulator genome IDs and full provided-reference
+denominators. Its fixed conservative N policy leaves 7,653,205 bp /3.3034% unknown.
+The old failed DAG/journals are unchanged. No new aligner or VM wake was needed.
+[Operations](OPERATIONS.md#earlier-data-review-and-failed-dag-evidence-2026-10-15)
 owns actual cost/storage/shutdown evidence and the exact next prompt. The next
-step is truth repair/admission and preparation, with no immediate external fit;
+step is separate $2 approval for the unchanged controls, with no external fit;
 [the unchanged diagnostic proposal](diagnostic-controls-plan.json) requires a
-separate fit budget and native-launcher validation.
+separate fit budget. The parent passes local inert-child safety tests; fresh Linux
+runtime setup/probe and assembly-scale affordability remain unmeasured.
 
 ## Question and informative comparisons
 

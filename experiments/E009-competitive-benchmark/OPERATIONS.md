@@ -1,4 +1,4 @@
-# E009 operations: reviewed data outputs and provisional truth
+# E009 operations: admitted truth v2 and unapproved diagnostic controls
 
 Updated: 2026-10-15. **Later owner authorization: prepared data-only phase at
 5fec4e1; no binner fits/scores/model changes or automatic retries.**
@@ -11,7 +11,90 @@ Old Terminal/Slurm/Home/shared-storage commands and their budgets are exclusivel
 [historical](../../docs/history/E009_UCLOUD_OPERATIONS.md). Old receipts/prefix
 locators are preserved provenance, never GCP runtime paths.
 
-## Verified data outcome and next boundary, 2026-10-15
+## Admitted truth v2 and current next boundary, 2026-10-15
+
+**Truth repair succeeded locally; no fit, score, new alignment or VM wake ran.**
+[The admission](truth-v2-admission.json) binds the new immutable artifact separately
+from the original failed data DAG, which remains failed/unsealed. Accepted assembly,
+BAMs, depth, source freeze, origin audits and all earlier evidence stay intact.
+The predeclared [policy](truth-v2-policy.json), committed with the reader/tests at
+`e60d1e3` before community derivation, keeps identity .99, paired bp >=200 and
+contig attribution .95. All 300,499 rows are validated before filtering, including
+required typed `cg/nn/NM`, exact axes/endpoints and minimap2 2.30's `blen+nn`
+accounting. `=` can encode N:N while matches exclude it; the old equality test is
+not retained. No malformed low-quality row is silently accepted.
+
+Since PAF alone does not localize every ambiguous base, each **qualifying** nn>0
+query span is globally unknown, even where a clean chain overlaps. This preserves
+competition rather than dropping a chain to manufacture uniqueness. Of 191,509
+qualifying rows, 158 are quarantined: **7,653,205 unique query bp /3.3034% of all
+assembly DNA**. This is a prospective conservative uncertainty policy, not tuning
+to a binner's result. Nonqualifying rows remain outside support by the frozen
+thresholds. Gaps supply no paired support. Cross-genome overlaps remain ambiguous;
+same-genome genuine multi-locus matches supply genome purity support only.
+
+The actual 309 positive simulator genome IDs remain distinct. All nine separately
+simulated pASV plasmids keep their HOST metadata; host-like filenames never merge
+them into bacterial genomes. All ninety circular aliases are catalog-byte/DNA
+verified exact unique forward rotations, normalized modulo molecule length with
+wraps split on either query strand. They count as **nine physical molecules**,
+not ninety repeated loci. All **7,688 competitive PAF aliases /7,607 canonical
+records**, two zero-origin files and 1,280 unobserved replicons remain. The 156
+bacterial primary targets retain **554,661,890 provided reference bp**, including
+unassembled/unobserved DNA. Viral/eukaryotic/plasmid/zero-origin DNA remains in
+competition and future all-bin purity denominators, outside primary recovery.
+
+Whole-assembly accounting: 178,135,884 genome-confirmed bp; 42,402,631 cross-genome
+ambiguous bp; 7,653,205 quarantined bp; 3,486,437 other unsupported bp. Within genome
+support, 449,938 bp have unresolved repeated loci. The restricted AMBER truth view
+has 125,848 contigs /165,477,813 bp (including non-target lineages); none is labelled
+to a zero-origin genome. These are truth coverage counts, **not binner scores**.
+
+The stdlib [new reader](../../scripts/e009_truth_v2.py) ran once successfully on
+the Mac: **45.390 s**, sampled peak **0.494 GB**. An initial 0.022-s attempt failed
+on sandbox permission for `ps` after launch and left no truth result; its failure
+receipt is preserved. [The independent reader](../../scripts/e009_truth_review.py)
+uses direct interval clipping and an independent raw-PAF oracle, not the production
+parser/splitter/sweep. It verifies all serialized contigs/denominators and recounts
+all 300,499 native rows; oracle results agree for **all 348 queries involving nn or
+circular aliases plus 128 fixed SHA256-selected queries**, 476 total. Final review
+52.941 s /1.220-GB sampled peak passes; its preceding review is also retained.
+Six local truth tests cover real native failure bytes, source-supported N in
+I/D/X/=, malformed rows, circular/reverse repeats, HOST/zero-origin/full-length
+population and a random independent per-base oracle. No fresh tiny aligner was
+invoked: actual retained native rows are the exercised writer evidence.
+
+This admits **conservative supplied-reference alignment truth** only. Aligner
+sensitivity, whole-span N uncertainty, MAG/scaffold provided-reference meaning,
+near-genome/pretraining overlap and development-data status remain limitations.
+No biological performance, final-evaluation independence or SOTA claim follows.
+The raw artifact retains `scientific_truth_admitted:false` as derivation provenance;
+the separate reviewed admission owns the later acceptance. Never edit the old
+stage journal, original axes or frozen parser to make them appear successful.
+
+The VM is still **TERMINATED**, without an external IP, disks 30/300 GiB and current
+one-hour STOP. New cloud compute spend is **$0**; prior compute/IP ~$3.7288 and
+seven-day disk planning exposure ~$7.1803 are unchanged, not a final invoice.
+Stopped disks remain ~$31.20/month gross; retention review remains **October 21**.
+No original data-clock time was consumed on GCP in this task (about 10.34 hours
+conservatively remain). No capacity, service, key or quota change was made.
+A fresh Console read timed out; no cloud write/spending was attempted. The last
+credit display below is historical, not a newly verified balance. The checksum-
+bound new evidence archive is retained locally; a private Cloud Storage copy/readback
+can follow a successful fresh credit gate in the next approved phase.
+The [new local evidence receipt](truth-v2-retained-evidence.json) binds
+**5,218,978 compressed bytes /112 regular members /76,654,870 logical bytes**,
+SHA256 `699cede72476a165bb3712d5368bd65ce1d9d543cc997b7604ff653d6c6dd761`.
+All 111 non-inventory member hashes pass; the inventory is the remaining member.
+It contains the admitted truth, closed reviews/failures/test receipts, source/policy
+snapshots and the frozen wheel. Original assembly/PAF/depth inputs remain bound to
+the earlier private archive instead of being duplicated. These source snapshots
+precede adding this locator paragraph; the immutable artifact/admission bytes match.
+
+## Earlier data review and failed DAG evidence, 2026-10-15
+
+This section records the pre-v2 review. Its provisional truth boundary is resolved
+by the separate v2 admission above; the original data DAG failure is unchanged.
 
 **The complete data DAG failed; reusable assembly/BAM/depth data are accepted.**
 The original driver records exit 1 after **47,025.069 s /104.500153 allocated
@@ -95,7 +178,7 @@ viral and 0.69% other/plasmid**. These differ markedly from the provider's repor
 profile percentages; do not substitute profile percentages for read/DNA fractions
 or infer product feature choices from either one-community composition.
 
-**Truth remains provisional.** Next derive a fresh simulator-genome reference axis,
+**At this preceding review truth was provisional.** The then-required work was a fresh simulator-genome reference axis,
 normalize exact circular coordinates and validate full provided-reference lengths,
 non-target/zero-origin competitors and global chain ambiguity. Repair/test the
 ambiguous-base PAF/CIGAR contract against the pinned source and tiny actual native
@@ -151,74 +234,63 @@ SHA256 readback passed. Archive-only storage is about **$0.0046/month gross**.
 The phase receipt records the bucket locator, Mac verification and exact member
 inventory; an open log was not substituted for this immutable payload.
 
-### Strongest next step and later fit approval
+### Strongest next step and separate fit approval
 
-**Do truth repair/admission and control preparation next; no immediate external
-tool execution.** It is the prerequisite for useful recovery diagnostics and can
-reuse the expensive accepted data. Paying for a mature-tool win now cannot fix
-this evaluator or distinguish feature, representation and grouping failures.
+The truth prerequisite is resolved. Recommend **only the unchanged four diagnostic
+controls**, after a new **$2 incremental gross approval**. Two serial product calls
+use immutable dev3 `5e54538`, seed 11, 20 epochs, cutoff 500 and fixed grouping.
+They can distinguish raw-feature geometry, loss in this encoder and loss in fixed
+grouping, with ten-depth versus sequence-only context. They do not determine the
+product membership of depth/sequence/taxonomy. An external tool is still unnecessary.
+Choose one matched mechanism after diagnostics; confirm on prospectively defined data.
 
-[The prospective diagnostic plan](diagnostic-controls-plan.json) preserves dev3
-`5e54538`, seed 11, 20 epochs, cutoff 500, fixed transforms/clusterer and all DNA:
-two serial paired product invocations give raw/learned TNF+ten-depth and TNF-only.
-It is a configuration/command proposal, **not an execution-ready native launcher**.
-A complete independent owned CPU environment and bounded parent remain to be
-prepared/validated. Existing tiny UCloud/E008 Linux acceptance is not this full
-89,041-contig runtime/cost measurement. Exact kNN/sorting and graph grouping can
-dominate, so the proposed four-hour cap is not a finish-time promise.
+[The bounded parent](../../scripts/e009_controls.py) is prepared and default-plan
+only. It owns a fresh complete CPU env, exact package/default/distribution checks,
+two serial runs and compact collection within four hours. It enforces 25-GiB free
+reserve and 20-GiB growth allowance, stops/reaps children on failure and never
+implicitly resumes. [Feature locks](diagnostic-feature-inputs.json) bind the
+accepted full FASTA/matrix and ordered columns; [package locks](diagnostic-package-lock.json)
+bind the actual 33,599-byte retained wheel and all eleven immutable source/default
+files. Truth admission is verified separately and no labels enter binner argv.
 
-Propose a separately approved **$2 incremental gross fit envelope**, existing
-8 CPU/32 GiB and 300-GiB disk, **four-hour cumulative setup/verification/fit/
-collection clock**, **4.25-hour provider STOP**, 25-GiB reserve and **10-GiB expected /
-20-GiB conservative extra disk**. Compute/IP ceiling is about **$1.16**, with the
-rest for small archive/transfer/rounding; retained disks stay within their existing
-seven-day approval. No resize or retention extension. An exhausted cap means
-retain partials and reassess, without changing schedules/eligibility or rejecting
-a method family. This fit money cannot be taken silently from the data-only $20.
+Eight local safety tests pass with real **inert** children: serial placement,
+shared setup/child/parent clocks, explicit approval/default refusal, intended
+failure/timeout, reserve/growth sensors, and killed/reaped live child/orphan. Disk
+growth sensor input is mocked; alarm delivery and process cleanup are native.
+These are not Linux package installation, native scientific fit or scale/cost
+validation. The exact retained wheel verification passes. Linux setup/import/CLI
+probe must pass before the first fit within the new budget; it is not authorized
+now. No GPU/runtime borrowing or whole product-contract replay is needed.
 
-These controls can show whether the fixed encoder damages useful raw geometry,
-whether useful geometry is lost by grouping, and how these ten columns behave in
-this setting. If learned geometry degrades, investigate one view/objective change;
-if geometry helps but bins fragment/mix, prefer one fixed-encoder grouping test.
-Neither outcome universally selects/rejects depth, sequence or taxonomy. Confirm
-improvements on prospectively defined additional data. Keep **SemiBin2** as at most
-one conditional later reference, only if retained feature/embedding/reclustering
-evidence changes an unresolved decision; measure its full schedule before a new
-budget. Defer MetaCAT pending that decision, and keep CompleteBin/COMEBin full grid/
-SCGBinner deferred. No whole-tool ranking is a required gate.
+Proposed existing 8 CPU/32-GiB/300-GiB layout, four-hour phase/4.25-hour provider
+STOP costs at most **$1.16045 gross compute/IP** at the last verified same-day
+$0.27304568/h rate. This leaves the rest of $2 for compact archive/transfer/rounding.
+10 GiB expected /20 GiB conservative additional disk is a ceiling, not a forecast;
+exact kNN/sorting and graph grouping on 89,041 eligible contigs remain unmeasured.
+Keep retention within the original October-21 review; no new ongoing capacity is
+needed. Fresh prices/credits/headroom and the current approved commit are mandatory
+before a wake; do not fund fits from the original data-only $20. A cap failure
+preserves partials and triggers reassessment, not schedule or eligibility changes.
 
-Conditional fit approval text, **for a later request after admitted truth**:
-
-> After the versioned E009 truth and unchanged diagnostic launcher are admitted,
-> I authorize only the four frozen dev3 raw/learned TNF+ten-depth/TNF-only controls
-> under a new $2 incremental gross ceiling, existing 8 CPU/32-GiB VM and 300-GiB
-> disk, four-hour cumulative setup/verification/fit/collection clock and 4.25-hour
-> provider STOP. First verify current credit coverage, prices and storage headroom.
-> Preserve all assembly DNA, the fixed seed/schedule/clusterer and exact input axes.
-> No external binner, model change, extra resources, retry, automatic extension or
-> retention extension. Stop after success/failure and retain checksum-bound evidence.
+The launcher performs **no scoring**. The separate following prompt can authorize
+bounded local diagnostic evaluation after accepted outputs/shutdown using tested
+contracts, without another VM wake. Native AMBER runtime availability remains an
+explicit check; do not install external binners or invent scores from partitions.
+The [approval template](diagnostic-approval-template.json) is explicitly unapproved;
+copy/populate it only after the human grants the following execution request and
+the live credit/STOP/watchdog checks pass. Do not edit its `approved:false` now.
 
 ## Exact following-step prompt
 
-> Read AGENTS.md, PROJECT_INTENT.md, STATE, CLOUD, D013/D014 and the reviewed E009
-> receipts, population and failure example. Repair and locally test a fresh E009
-> truth derivation from the retained minimap2 2.30 PAFs, including ambiguous-base
-> accounting, observed simulator genome IDs, separate pASV/HOST relationships,
-> exact circular-coordinate normalization, full provided-reference denominators
-> and non-target/zero-origin competitive DNA. Preserve malformed-input refusal and
-> predeclare ambiguity/identity semantics; do not silently weaken checks. Keep the
-> old failed journals, source freeze and accepted data intact. Do not rerun the data
-> DAG, acquisition, assembly, mapping, depth or aligners. If native truth-only
-> derivation is needed, first assess current credits/prices and remaining original
-> $20 data-only/24-hour allowance; use only the existing VM/disks with at most a
-> one-hour provider STOP, capture logs and stop afterward. Do not provision, resize,
-> retry or extend automatically; stop before unclear/uncovered spending. Review the
-> new truth independently and admit it only if its population, coordinates and
-> ambiguity contracts pass. Prepare/test the bounded unchanged diagnostic-control
-> launcher and its separate $2 approval request; do not fit or score any binner or
-> change model architecture in this step. Keep external tools, including CompleteBin,
-> deferred. Update records, check and commit; report truth status, cost and the next
-> exact approval prompt.
+> Our goal is to improve our own high-performing binner. E009 is development evidence, and an expected mature-tool win is not enough reason to spend. Keep external tools, including CompleteBin, deferred.
+>
+> Read AGENTS.md, PROJECT_INTENT.md, STATE, CLOUD, D013/D014, E009 operations, the v2 truth admission and diagnostic-control locks. I authorize only the four unchanged dev3 raw/learned TNF+ten-depth and TNF-only controls under a NEW $2 incremental gross ceiling. Use the existing e2-standard-8/32-GiB VM and 300-GiB work disk, a four-hour cumulative setup/verification/fit/collection clock, provider STOP at 4.25 hours, 25-GiB free reserve and 20-GiB maximum extra working-space allowance. No provisioning, resize, retention extension, external binner, new seed/schedule, model change, automatic retry or extension.
+>
+> First verify live Welcome-credit balance/scope/expiry, pending usage, current prices and coverage, remaining storage approval and actual headroom. Stop before unclear/uncovered spending or a required resource increase. Normally push the prepared branch from the Mac and sync the VM to that exact clean commit with its read-only GitHub key. Verify the local truth evidence archive and restore only its admitted artifact into a fresh VM directory; preserve original data/journals. After the credit gate, upload/read back the compact truth evidence to the existing private archive.
+>
+> Use the prepared bounded launcher and exact frozen dev3 wheel/source/default/feature locks. Create its complete independent Python3.12 CPU environment and pass native inventory/import/source/CLI checks within the same clock before fitting. Preserve all assembly DNA and ordered ten depth columns; keep truth outside feature/training paths. Arm and verify a fresh boot/process-bound exit watchdog before releasing the launcher, and retain the provider STOP fallback. On failure or limit, collect bounded evidence, stop and report without retry. Stop the VM after collection and independently confirm TERMINATED.
+>
+> After shutdown, inspect retained controls and perform bounded local diagnostic evaluation with admitted v2 and tested evaluator contracts, without refitting, tuning or new cloud compute. Report any missing runtime/contract before claiming quality. Use raw/learned geometry, grouping and length/origin diagnostics to recommend at most one next mechanism test; do not decide product feature families from one prototype/assembly. Update records, run relevant checks and commit. Report actual costs/storage, control completion, diagnostic limits, next decision and exact following prompt.
 
 ## Evidence and sample choice
 

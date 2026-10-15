@@ -1,6 +1,6 @@
 {
   "record": "E009",
-  "status": "prospective preparation only; no fit authorization or execution-ready native launcher",
+  "status": "prepared bounded parent and local safety tests passed; not authorized; Linux setup/probe and full-scale fit affordability unmeasured",
   "decision": "repair/admit truth from retained evidence first; then diagnose the unchanged prototype before an external reference",
   "baseline_source_commit": "5e54538d1799e8d2538621729400f33fbaf017b9",
   "baseline_package": "0.1.0.dev3",
@@ -98,7 +98,8 @@
     "retention": "within existing seven-day storage window; no retention extension implied",
     "not_a_runtime_forecast": true,
     "complete_independent_runtime_required": "fresh owned CPU env from accepted Python3.12/numpy1.26.4/torch2.2.2+cpu/networkx3.4.2 recipe, installed immutable dev3 wheel; no borrowed UCloud prefix",
-    "full_scale_CPU_RSS_affordability_unmeasured": true
+    "full_scale_CPU_RSS_affordability_unmeasured": true,
+    "no_scores_in_cloud_launcher": true
   },
   "questions": [
     "Does this fixed encoder/normalization preserve or damage locally useful raw TNF/depth geometry?",
@@ -108,11 +109,16 @@
   "keep_modify_abandon": "Use raw/learned and length/origin diagnostics to choose one representation/view change if learned signal worsens; one fixed-encoder grouping test if geometry is useful but bins fragment/mix. A depth-arm result does not settle depth as a product feature. Do not tune to one assembly.",
   "external_scope": "No external run in the immediate next step. At most SemiBin2 later if its retained feature/embedding/reclustering evidence changes a concrete unresolved decision; separate full-schedule cost admission. CompleteBin/SCGBinner/COMEBin remain deferred.",
   "requirements_before_execution": [
-    "admitted versioned truth and genome/replicon/cellular target axis",
+    "admitted versioned truth is complete; verify exact truth-v2-admission.json binding and accepted feature hashes",
     "explicit new fit-budget approval",
     "installed frozen package and native runtime/tiny safety contracts",
-    "bounded serial parent launcher sharing setup/verification/fit/collection clock, stop on failure without retry",
+    "bounded serial parent locally tested with native inert children; fresh Linux runtime setup/probe and exact installed source check before any community fit",
     "fresh credit and price gate, process/disk/progress controls, end-of-run watchdog",
     "retained labels kept outside feature/training paths; no expected genome count used"
-  ]
+  ],
+  "launcher": "scripts/e009_controls.py",
+  "package_lock": "diagnostic-package-lock.json",
+  "feature_inputs": "diagnostic-feature-inputs.json",
+  "truth_admission": "truth-v2-admission.json",
+  "new_fit_budget_approved": false
 }

@@ -9,6 +9,13 @@ installation and verification](../experiments/E009-competitive-benchmark/OPERATI
 own its scope; it is not armed for future boots. Check provider state before any
 restart. The current provider maximum is **one hour /STOP**, set for review; do not
 reuse an old 25-hour launch policy as authorization for a future phase.
+The subsequent E009 truth repair/admission ran **locally from retained PAFs**:
+[the receipt](../experiments/E009-competitive-benchmark/truth-v2-admission.json)
+records zero new VM hours/$0 compute, no provisioning/resizing and unchanged
+TERMINATED state. Existing disk retention/costs below continue. The proposed $2
+control phase is **unapproved**; its 4.25-hour STOP is prospective, not current.
+Fresh credit/price verification, a new boot/process-bound watchdog and native
+runtime probe are required before that separate phase. Keep read-only GitHub.
 **Phase 1 accepted: strict IAP SSH, exact private repository clone, pinned Linux
 Codex CLI, ChatGPT authentication, actual desktop remote-project commands and
 private archive upload/readback pass. The Ubuntu sandbox prerequisite was repaired
@@ -502,8 +509,10 @@ The original E009 data driver failed only in final PAF parsing after all assembl
 ten BAM/depth stages completed. Its watchdog snapshot requested shutdown at
 **09:29:52 UTC**; the control plane confirms **TERMINATED at 09:32:21.624 UTC /
 11:32 Copenhagen**. First provider uptime was **13.179723 h**. A stop is not success;
-[the reviewed experiment](../experiments/E009-competitive-benchmark/OPERATIONS.md#verified-data-outcome-and-next-boundary-2026-10-15)
-and its receipts distinguish accepted feature data from unadmitted truth.
+[the reviewed experiment](../experiments/E009-competitive-benchmark/OPERATIONS.md#earlier-data-review-and-failed-dag-evidence-2026-10-15)
+and its original receipts distinguish accepted feature data from then-unadmitted
+truth. The separate [v2 admission](../experiments/E009-competitive-benchmark/truth-v2-admission.json)
+now resolves that boundary locally without a new wake.
 
 The owner's review request needed evidence on that stopped disk. Before wake,
 current console/API checks verified **DKK1,952.79 available**, expiry **2027-01-12**,

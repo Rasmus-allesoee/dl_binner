@@ -280,3 +280,13 @@ no fit/score runs and no external tool belongs in the immediate next step. This
 supplies reusable development data, not a mechanism or performance answer;
 Q001/Q003/Q004/Q005 and H001/E001 scientific outcomes remain unchanged. D013's
 one-mechanism decision rule and prospective additional-data confirmation remain.
+
+2026-10-15 E009 truth repair: [v2](../../experiments/E009-competitive-benchmark/truth-v2-admission.json)
+is admitted as conservative supplied-reference alignment truth, derived from
+retained PAFs on the Mac with no new aligner or VM wake. Observed genome IDs,
+separate plasmid/HOST, exact circular coordinates, full provided lengths and all
+competitors pass review. Fixed qualifying-N span quarantine leaves 3.3034% of
+query DNA unknown; this is an evaluator limitation, not binner performance.
+The unchanged-control launcher is prepared and locally safety-tested, with a
+separate $2 approval still required. No fit, score, mechanism result or scientific
+question resolution follows from this repair; the above question statuses remain.

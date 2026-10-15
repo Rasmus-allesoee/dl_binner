@@ -179,6 +179,10 @@ Keep simulator genome IDs, source files/replicons, molecule type, host relations
 and taxonomic nodes separate. A profile may omit genome IDs or use synthetic
 taxon labels; record the actual join evidence. Verify separately simulated plasmids
 and circular aliases before defining coordinate unions or genome denominators.
+Validate native alignment counters against the pinned writer, including ambiguous
+bases in gaps or equal CIGAR operations. An unlocalized ambiguity must not create
+unique support by silently discarding a competitor. Admit a repaired truth artifact
+in a separate review record; never rewrite a failed execution journal as successful.
 
 When uncertainty remains, state it.
 

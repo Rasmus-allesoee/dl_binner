@@ -1,10 +1,10 @@
 {
   "record": "E009",
   "date": "2026-10-15",
-  "status": "data DAG failed final truth parser; full assembly and ten BAM/depth feature inputs accepted by independent review; truth provisional; no fits/scores",
+  "status": "original data DAG failed; reusable features accepted; fresh conservative v2 truth independently admitted; no fits/scores",
   "scientific_outcome": "not assessed by a binner",
   "execution_ready": false,
-  "authorized_current_task": "credit/price/quota checks; existing VM8/32 and work300GiB/STOP25h; serial full ten-sample data phase at 5fec4e1; no binner fit/score/architecture change or automatic retry",
+  "authorized_current_task": "local truth-only repair/review and bounded diagnostic launcher preparation; no data or alignment replay, fits/scores or architecture change",
   "dataset": {
     "name": "CAMI III Toy Longitudinal Human Gut",
     "read_modality": "short",
@@ -145,7 +145,7 @@
     ],
     "truth_tuning": false,
     "marker_selection_is_not_independent_validation": true,
-    "real_assembly_adapter_status": "tiny v10 accepted; actual community native PAF parsing failed on ambiguous-base block accounting; no admitted truth",
+    "real_assembly_adapter_status": "e009-truth-v2 conservative supplied-reference truth admitted from retained native PAFs after independent local review",
     "alignment_reference_universe": "prospective conservative 311-file retained sample-0 metadata universe, all 7688 released replicon records; globally reconcile <=500Mb reference batches; independently reconcile positive read origins, source grouping and cellular target taxonomy before fitting/scoring",
     "alignment_command_contract": [
       "minimap2",
@@ -168,7 +168,11 @@
     "alignment_sensitivity_limit": "heuristic aligner; all emitted qualifying competing chains retained, not proof of exhaustive homology",
     "reference_repeat_ambiguity": "unique genome query support may count toward purity; ambiguous source-coordinate mapping cannot inflate completeness",
     "aligner_cpu_accounting": "minimap2 -t N-1 plus its one I/O thread; default indexing at most three threads; no -2",
-    "reference_grouping_and_target_taxonomy_admitted": false
+    "reference_grouping_and_target_taxonomy_admitted": true,
+    "truth_version": "e009-truth-v2",
+    "truth_admission": "truth-v2-admission.json",
+    "ambiguous_base_policy": "truth-v2-policy.json; qualifying nn>0 query spans globally quarantined; identity thresholds unchanged",
+    "canonical_reference_axis": "7607 canonical molecules/records from all 7688 competitive PAF aliases; circular copies counted once; actual observed simulator genome IDs, separate pASV/HOST and zero-origin competitors"
   },
   "resources": {
     "provider": "GCP Iowa regular CPU VM; prospective only",
@@ -218,9 +222,8 @@
     "auto_increase_or_retry": false,
     "historical_ucloud_budget": "docs/history/E009_UCLOUD_OPERATIONS.md#superseded-two-depth-resource-protocol"
   },
-  "next": "repair/test versioned truth from retained PAFs and reviewed population; then prepare unchanged controls for separate fit approval; no native data/alignment replay",
+  "next": "request separate $2 bounded unchanged-control approval; no external reference now",
   "unexecuted": [
-    "admitted complete coordinate truth derivation",
     "all community binner fits and E009 quality scores",
     "architecture/feature changes and new seeds",
     "main merge/publication"
@@ -268,6 +271,7 @@
     "complete_shortlist_is_implementation_gate": false,
     "one_dataset_cannot_select_or_reject_product_feature_families": true,
     "mechanism_tests": "one prospectively justified component, matched immutable comparator and additional prospectively selected development/validation data",
-    "decision": "docs/decisions/D013-first-comparative-benchmark.md"
+    "decision": "docs/decisions/D013-first-comparative-benchmark.md",
+    "next_after_data": "separately approved unchanged controls, then one mechanism test; no immediate external tool"
   }
 }

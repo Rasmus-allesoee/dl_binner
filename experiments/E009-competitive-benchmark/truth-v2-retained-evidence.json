@@ -1,0 +1,17 @@
+{
+  "archive": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-truth-v2/e009-truth-v2-20261015-evidence-v1.tar.gz",
+  "binding": {
+    "bytes": 5218978,
+    "sha256": "699cede72476a165bb3712d5368bd65ce1d9d543cc997b7604ff653d6c6dd761"
+  },
+  "regular_members": 112,
+  "logical_member_bytes": 76654870,
+  "inventory": {
+    "bytes": 21398,
+    "sha256": "9b495ea891fa1d1d60a49ccebbbb1fe8238a3b589713bb63806fa5286daa0387"
+  },
+  "all_data_member_hashes_verified": 111,
+  "archive_SHA_verified": true,
+  "private_cloud_copy": "not uploaded; fresh Console credit read timed out; no cloud spend attempted",
+  "local_archive_only": true
+}

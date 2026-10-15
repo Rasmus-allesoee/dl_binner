@@ -4,8 +4,10 @@ Updated: 2026-10-15. This is the single current handoff.
 
 ## Exact next step
 
-**Repair and test a fresh E009 truth derivation from retained PAFs; do not rerun
-acquisition, assembly, mapping, depth or alignment, and do not fit/score a binner.**
+**Request separate $2 approval for the unchanged E009 diagnostic controls.**
+Truth v2 is independently admitted and the bounded parent is locally safety-tested;
+no binner has been fitted/scored. Do not start the VM or a fit without that approval
+and a fresh credit/cost/STOP/watchdog gate. No external tool belongs in this step.
 [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md) owns the exact
 following prompt, budgets and records. [D013](decisions/D013-first-comparative-benchmark.md)
 keeps improvement evidence as the purpose; the unchanged prototype is the control.
@@ -37,18 +39,32 @@ All nine permuted files are ten exact circular rotations of separately simulated
 with host genomes. Two zero-origin source files and 1,280 unobserved replicons stay
 in the competitive universe. No rounded profile percentage determines presence.
 
-**Truth is not admitted.** Repair the ambiguous-base parser contract, derive a
-versioned simulator-genome axis and circular-coordinate map, then validate full
-provided-reference denominators, cellular targets and global competing-chain
-ambiguity. Preserve originals, failed journals and all DNA. No MAG-quality,
-independent-genome/pretraining or bin-recovery claim follows from this review.
+**Fresh conservative supplied-reference truth v2 is admitted.** The separate
+[admission](../experiments/E009-competitive-benchmark/truth-v2-admission.json) binds
+all 300,499 retained native PAF rows, actual simulator genome IDs, separate pASV/HOST,
+exact circular coordinates and 156 primary targets /554,661,890 full provided bp.
+All 7,688 competitive aliases become 7,607 canonical records; no non-target,
+zero-origin file or unobserved reference is discarded. Thresholds remain .99/200 bp
+and .95 attribution. Qualifying `nn>0` alignments quarantine their whole query span
+globally: **7,653,205 bp /3.3034%** remains unknown rather than falsely supported.
+This conservative limit is fixed before any binner outcome. Every contig's DNA
+accounting passes; an independent raw-PAF oracle agrees on all 348 nn/circular
+queries plus 128 fixed SHA256-selected queries. The original failed DAG stays failed.
+No new aligner, data replay, VM wake, fit or score was needed. This is provided-
+reference alignment truth, not MAG quality or independent-genome/pretraining proof.
+The new [retained evidence](../experiments/E009-competitive-benchmark/truth-v2-retained-evidence.json)
+is a **5,218,978-byte local archive**, 112 regular members /76,654,870 logical bytes;
+all 111 non-inventory hashes pass. Its cloud copy is pending a fresh credit gate;
+the original input archive remains privately backed up. No cloud write was attempted.
 
-After admitted truth, the prepared [diagnostic proposal](../experiments/E009-competitive-benchmark/diagnostic-controls-plan.json)
+The prepared [diagnostic proposal](../experiments/E009-competitive-benchmark/diagnostic-controls-plan.json)
 keeps dev3 source **5e54538d1799e8d2538621729400f33fbaf017b9**, seed 11, 20 epochs and
 fixed grouping: raw/learned TNF+ten-depth and TNF-only. A proposed **new $2
 incremental fit budget**, four-hour cumulative phase/4.25-hour provider STOP on the
-existing 8 CPU/32-GiB VM, needs explicit approval and a validated native launcher;
-it is a ceiling, not measured affordability. **No external tool is recommended in
+existing 8 CPU/32-GiB VM, needs explicit approval. The new parent passes eight Mac
+safety contracts with inert native children and verifies the exact retained wheel;
+fresh Linux setup/runtime probe remains before the first fit within that clock.
+This is a ceiling, not measured affordability. **No external tool is recommended in
 the immediate next step.** SemiBin2 remains at most one later conditional reference;
 CompleteBin/COMEBin full grid/SCGBinner remain deferred. Select one mechanism only
 after diagnostics and confirm improvements on prospectively chosen additional data.

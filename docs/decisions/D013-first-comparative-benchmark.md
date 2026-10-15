@@ -173,9 +173,25 @@ GPU/Conda distribution and publication remain separate tasks.
 
 ## Verified data review and next decision, 2026-10-15
 
-The strongest next step is **repair/test and independently admit a new truth
-derivation from retained alignments**, followed by preparation of unchanged
-diagnostic controls. Do not repeat accepted data stages or minimap2. The actual
+**Subsequent truth repair:** the [v2 admission](../../experiments/E009-competitive-benchmark/truth-v2-admission.json)
+now resolves this section's truth prerequisite using the retained PAFs on the Mac,
+without any VM wake or data/alignment replay. It preserves numerical thresholds,
+all competitors and full provided-reference denominators, canonicalizes circular
+aliases and globally quarantines qualifying ambiguous-base spans. The independent
+oracle and whole-population accounting pass; 3.3034% query DNA remains conservatively
+unknown. This does not change a biological question or establish binner performance.
+
+The strongest next step is now the separately proposed **$2 unchanged-control
+execution**, after fresh credit and native runtime admission. The prepared parent
+has local native inert-child tests and exact wheel/default byte checks; native
+Linux setup and full-scale affordability remain to be observed. No fit or score is
+authorized by this repair. Keep external tools deferred and choose one mechanism
+only from retained control diagnostics, then confirm on prospectively defined data.
+The paragraphs below retain the preceding data-review reasoning.
+
+The preceding review selected **repair/test and independent admission of a new
+truth derivation from retained alignments**, followed by preparation of unchanged
+diagnostic controls. Accepted data stages and minimap2 must not be repeated. The actual
 ambiguous-base failure, positive origin/source joins and nine separately simulated
 circular plasmids make this an evaluator correctness task, not an architecture
 choice or a reason for an expensive external fit.

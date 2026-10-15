@@ -148,3 +148,12 @@ copy, expand quota or delete accepted data automatically. Provider selection doe
 not authorize a new fit budget: D013 now prioritizes truth repair/admission and
 unchanged diagnostic preparation, with no immediate external tool. CompleteBin
 stays deferred and read-only GitHub access remains adequate.
+
+The next owner-authorized truth repair was completed locally from the private
+retained archive; [truth v2](../../experiments/E009-competitive-benchmark/truth-v2-admission.json)
+is independently admitted. The VM was **not woken**, no resources/services changed
+and new VM compute spend is **$0**. Current control-plane evidence still shows
+TERMINATED, no external IP, 30/300-GiB retained disks and one-hour STOP policy.
+Do not apply the proposed 4.25-hour control STOP until a separate $2 fit approval
+and fresh live credit/cost gate. The new launcher is locally safety-tested, without
+claiming Linux setup or full-scale fit feasibility. D013 keeps external fits deferred.

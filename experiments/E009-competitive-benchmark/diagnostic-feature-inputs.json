@@ -1,0 +1,38 @@
+{
+  "fasta": {
+    "bytes": 237732361,
+    "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+  },
+  "depth": {
+    "bytes": 24197403,
+    "sha256": "48e49f4bb2ec1892f4be1f4db7dbf8616709889c36148f3d14473f52fd1b7aec"
+  },
+  "coverage_samples": [
+    0,
+    2,
+    3,
+    4,
+    6,
+    9,
+    10,
+    11,
+    14,
+    17
+  ],
+  "ordered_columns": [
+    "cami3_toy_human_gut_short_read_sample_0",
+    "cami3_toy_human_gut_short_read_sample_2",
+    "cami3_toy_human_gut_short_read_sample_3",
+    "cami3_toy_human_gut_short_read_sample_4",
+    "cami3_toy_human_gut_short_read_sample_6",
+    "cami3_toy_human_gut_short_read_sample_9",
+    "cami3_toy_human_gut_short_read_sample_10",
+    "cami3_toy_human_gut_short_read_sample_11",
+    "cami3_toy_human_gut_short_read_sample_14",
+    "cami3_toy_human_gut_short_read_sample_17"
+  ],
+  "feature_acceptance_receipt": {
+    "bytes": 33410,
+    "sha256": "b58fe8c74a27034a3d4f6dfb2d093f51db255fed58da8c3a5fbe99fa6ab78587"
+  }
+}

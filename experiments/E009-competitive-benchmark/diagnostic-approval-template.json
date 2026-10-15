@@ -1,0 +1,10 @@
+{
+  "approved": false,
+  "scope": "e009-unchanged-controls-v1",
+  "new_budget_usd": 2,
+  "truth_admission_sha256": "65b3ee7fc1a7b9cbe9e5e6ababdba606a85d0708c0f60bbcda2c25a7aaa25aed",
+  "credit_gate_passed": false,
+  "provider_stop_seconds": 15300,
+  "watchdog_verified": false,
+  "note": "NOT approval. Copy only after explicit owner approval; record current UTC, credit evidence, exact commit/provider policy and boot/PID/watchdog identity in the actual execution record. Do not edit this template into approval during preparation."
+}
