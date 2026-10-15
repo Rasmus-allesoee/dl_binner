@@ -1,0 +1,69 @@
+{
+  "archive_sha256": "f1616f08533b57609c2e09d212cc40aade068e51e968ee554735a5b8e21f9312",
+  "files": {
+    "data-stage-v1/parts/assembly/megahit/final.contigs.fa": {
+      "bytes": 237732361,
+      "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+    },
+    "data-stage-v1/parts/final/all_competing_chains.paf": {
+      "bytes": 59706817,
+      "sha256": "96c5f239b117a6c1e4f42cdb52936da00e2752ae71929925a092cd79776bb9c1"
+    },
+    "data-stage-v1/parts/sources/catalog.json": {
+      "bytes": 36132419,
+      "sha256": "e93d25c3028a596b36828fb0b01c5545a8ed462612718696cdb596a85e810cca"
+    },
+    "data-stage-v1/parts/sources/reference.fna.axis.json": {
+      "bytes": 1420134,
+      "sha256": "3c7a3cad1cc6d297f826849c18ddbaa76ef98175af25c363e697c18dab8ada30"
+    },
+    "data-stage-v1/parts/sources/unpacked/source_genomes/ASV134.7__Bacteroides_fragilis_GUT04_strain_genomic__NZ_CP043609.1.permuted.fna": {
+      "bytes": 906430,
+      "sha256": "6244d7c9db6e0847fdd1abb607df097ed19e73d5a3fed4cb1847d5f802707761"
+    },
+    "data-stage-v1/parts/sources/unpacked/source_genomes/ASV687.8__Salmonella_enterica_subsp_enterica_serovar_Typhimurium_DA34827_genomic__NZ_CP029594.1.permuted.fna": {
+      "bytes": 956180,
+      "sha256": "dfb43e355c3d68c6ceb74a1e13efab4665f9dd72b7f3dfce0d6526bd93817d90"
+    },
+    "data-stage-v1/parts/sources/unpacked/source_genomes/ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123336.1.permuted.fna": {
+      "bytes": 1256690,
+      "sha256": "7b261b8489b75684c7d09699869e3262083d8bcdc10593b8e2690f06693af9ff"
+    },
+    "data-stage-v1/parts/sources/unpacked/source_genomes/ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123337.1.permuted.fna": {
+      "bytes": 731030,
+      "sha256": "be5e4c11ca4961d54ce5d2c88ad9f9e63e640abbd5af5b5f8e9a9ffa02e6b7bc"
+    },
+    "data-stage-v1/parts/sources/unpacked/source_genomes/ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123338.1.permuted.fna": {
+      "bytes": 80880,
+      "sha256": "5ee5cfd0cdf06a90f072cc6ea3900512b773b0d8ae4ac2e1d1c44469c214e3d3"
+    },
+    "data-stage-v1/parts/sources/unpacked/source_genomes/ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123339.1.permuted.fna": {
+      "bytes": 55370,
+      "sha256": "6f7f460a095157cf1031a6b92dddceed86e4bbdbd8eea0156659728f047a6c02"
+    },
+    "data-stage-v1/parts/sources/unpacked/source_genomes/ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123340.1.permuted.fna": {
+      "bytes": 52690,
+      "sha256": "c14253412c051ac5bf465b5ee6020c61c4719f0d0efc42e6d0fe86ffdb552c30"
+    },
+    "data-stage-v1/parts/sources/unpacked/source_genomes/ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123341.1.permuted.fna": {
+      "bytes": 41570,
+      "sha256": "af655e71df3254f75ac3e8f27b2cc8ef053256d45440707fb2b5d6621e755005"
+    },
+    "data-stage-v1/parts/sources/unpacked/source_genomes/ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123342.1.permuted.fna": {
+      "bytes": 21280,
+      "sha256": "d0082ccedbf80190a84d36ecf480f64235e3c26d53e6d334c4846be57104d9b2"
+    },
+    "$audit": {
+      "bytes": 488878,
+      "sha256": "65a40c5d1f8f88e74fcabe63cb5b492eb49a10d93c36dcb0f8f1109c30e6d503"
+    },
+    "$population": {
+      "bytes": 154311,
+      "sha256": "bdcb0dacffea51d111f48ab282f35d31a9ddf14e55a8dd772556b97e3fd78e1b"
+    },
+    "$policy": {
+      "bytes": 2362,
+      "sha256": "a256cc6d00c9be66c2082ab3ae5109a7cfca8e3cdbd245b9ee19ed6cbb132ba0"
+    }
+  }
+}
