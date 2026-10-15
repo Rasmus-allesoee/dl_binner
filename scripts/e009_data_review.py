@@ -105,7 +105,11 @@ def resolve_profile(gid, tax, provider, taxa):
     """
     if gid in provider:
         row=provider[gid];mode='explicit_provider_genome_id'
-        if tax not in row['TAXPATH'].split('|'):raise ValueError('Origin tax ID not on explicit provider lineage')
+        if tax not in row['TAXPATH'].split('|'):
+            synthetic=re.fullmatch(r'([0-9]+)\.([0-9]+)',row['TAXID'])
+            if synthetic and synthetic[1]==tax and row['TAXPATH'].split('|')[-1]==row['TAXID']:
+                mode='explicit_genome_id_with_synthetic_origin_taxon_suffix'
+            else:raise ValueError('Origin tax ID not on explicit provider lineage')
     else:
         candidates=[row for row in taxa.get(tax,[])if not row['_CAMI_genomeID']]
         if len(candidates)!=1:raise ValueError('Missing/ambiguous exact provider origin-taxon row: '+gid+' '+tax)
@@ -162,29 +166,43 @@ def review(root,profile_path,output):
     read_check=reads.finish();del reads
     origins=ReadIDs(pairs);origin_path=sealed(read_folder/'evaluator-inputs/reads_mapping.tsv.gz',read_folder,read_done)
     genomes={};by_record=defaultdict(set);by_file=defaultdict(set)
+    unresolved_taxonomy={};unresolved_sources=Counter();outside_universe=Counter();profile_cache={}
     with gzip.open(origin_path,'rt') as stream:
         rows=csv.DictReader(stream,delimiter='\t')
         if rows.fieldnames!=['#anonymous_read_id','genome_id','tax_id','read_id']:raise ValueError('Origin fields changed')
         for row in rows:
             origins.add(row['#anonymous_read_id']);gid=row['genome_id'];tax=row['tax_id']
-            p,join_mode=resolve_profile(gid,tax,provider,taxa)
-            rid=source_id(row['read_id'],records)
-            if rid not in reference_ids:raise ValueError('Positive source record absent from competitive universe: '+rid)
+            if gid not in profile_cache:
+                try:profile_cache[gid]=resolve_profile(gid,tax,provider,taxa)
+                except ValueError as exc:
+                    unresolved_taxonomy[gid]={'tax_id':tax,'error':str(exc),'provider_row':provider.get(gid)}
+                    profile_cache[gid]=({'lineage_class':'unresolved','TAXID':'','HOST':'','PERCENTAGE':''},'unresolved')
+            p,join_mode=profile_cache[gid]
+            try:rid=source_id(row['read_id'],records)
+            except ValueError:rid=None;unresolved_sources[row['read_id']]+=1
+            if rid is not None and rid not in reference_ids:outside_universe[rid]+=1
             item=genomes.setdefault(gid,{'tax_id':tax,'read_records':0,'lineage_class':p['lineage_class'],
                 'provider_strain_tax_id':p['TAXID'],'HOST':p['HOST'],'profile_percentage':p['PERCENTAGE'],
                 'taxonomy_join_mode':join_mode})
             if item['tax_id']!=tax:raise ValueError('Positive origin genome/taxon relation changed')
-            item['read_records']+=1;by_record[rid].add(gid);by_file[records[rid]['file']].add(gid)
+            item['read_records']+=1
+            if rid is not None:by_record[rid].add(gid);by_file[records[rid]['file']].add(gid)
             if origins.count%1000000==0:print('REVIEW_ORIGIN_IDS='+str(origins.count),flush=True)
     origin_check=origins.finish()
     classes=Counter();class_genomes=Counter()
     for item in genomes.values():classes[item['lineage_class']]+=item['read_records'];class_genomes[item['lineage_class']]+=1
-    result={'status':'exact read/origin/source/profile joins passed; truth denominator remains provisional',
+    joins_complete=not(unresolved_taxonomy or unresolved_sources or outside_universe)
+    result={'status':('exact read/origin/source/profile joins passed'if joins_complete else
+                     'exact read/origin ID sets checked; unresolved metadata/source joins retained')+'; truth denominator remains provisional',
         'consumed_files':checked,'source_stage_manifest':bind(source_folder/'done.json'),'read_stage_manifest':bind(read_folder/'done.json'),
         'fastq_IDs':read_check,'origin_IDs':origin_check,'sets_equal':True,'positive_genomes':genomes,
         'read_records_by_lineage':dict(classes),'positive_genomes_by_lineage':dict(class_genomes),
         'taxonomy_join_mode_genomes':dict(Counter(v['taxonomy_join_mode']for v in genomes.values())),
         'taxon_only_rows_do_not_establish_genome_grouping':True,
+        'all_origin_source_taxonomy_joins_resolved':joins_complete,
+        'unresolved_genome_taxonomy':unresolved_taxonomy,
+        'unresolved_source_read_ids':dict(unresolved_sources),
+        'positive_records_outside_competitive_universe':dict(outside_universe),
         'source_record_to_observed_genomes':{k:sorted(v)for k,v in by_record.items()},
         'source_file_to_observed_genomes':{k:sorted(v)for k,v in by_file.items()},
         'unobserved_competitive_records':sorted(reference_ids-by_record.keys()),

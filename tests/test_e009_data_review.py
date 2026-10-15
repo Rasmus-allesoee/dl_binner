@@ -65,6 +65,12 @@ class DataReviewTests(unittest.TestCase):
             catalog.write_text(catalog.read_text()+' ')
             with self.assertRaisesRegex(ValueError,'Consumed sealed bytes changed'):
                 mod.review(root,profile,Path(tmp)/'drift-review')
+            catalog.write_text(catalog.read_text().rstrip())
+            profile.write_text(profile.read_text().replace('131567|2|817|817.1','131567|2|999|999.1'))
+            incomplete=mod.review(root,profile,Path(tmp)/'unresolved-review')
+            self.assertTrue(incomplete['sets_equal']);self.assertFalse(incomplete['all_origin_source_taxonomy_joins_resolved'])
+            self.assertEqual(set(incomplete['unresolved_genome_taxonomy']),{'ASV1'})
+            self.assertFalse(incomplete['scientific_truth_admitted'])
 
     def test_actual_missing_genome_id_uses_exact_taxonomy_without_merging(self):
         row={'_CAMI_genomeID':'','TAXID':'762982','TAXPATH':'131567|2|762982','lineage_class':'bacterial'}
@@ -78,6 +84,14 @@ class DataReviewTests(unittest.TestCase):
             mod.resolve_profile('ASV149.0','762982',{}, {'762982':[row,row]})
         with self.assertRaisesRegex(ValueError,'Missing/ambiguous'):
             mod.resolve_profile('ASV149.0','762982',{}, {'762982':[{**row,'_CAMI_genomeID':'another'}]})
+
+    def test_explicit_viral_genome_retains_synthetic_strain_taxon(self):
+        row={'TAXID':'1636564.1','TAXPATH':'10239|2845444|1636564.1'}
+        result,mode=mod.resolve_profile('vASV6.0','1636564',{'vASV6.0':row},{})
+        self.assertEqual(result['TAXID'],'1636564.1')
+        self.assertEqual(mode,'explicit_genome_id_with_synthetic_origin_taxon_suffix')
+        with self.assertRaisesRegex(ValueError,'not on explicit'):
+            mod.resolve_profile('vASV6.0','1636565',{'vASV6.0':row},{})
 
 
 if __name__=='__main__':unittest.main()
