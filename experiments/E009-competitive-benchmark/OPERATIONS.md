@@ -1,9 +1,11 @@
 # E009 operations: admitted truth v2 and unapproved diagnostic controls
 
-Updated: 2026-10-15. **Later owner authorization: prepared data-only phase at
-5fec4e1; no binner fits/scores/model changes or automatic retries.**
-[Actual phase receipt](gcp-data-observed.json) owns execution/outcome/cost.
-The data DAG has exited; keep its source/journals/outputs bound to that exact SHA.
+Updated: 2026-10-15. **The later owner message authorizes the four unchanged
+controls under a new $2 envelope; the phase is running under verified supervision.**
+[Control receipt](controls-observed.json) owns that actual launch and pending result.
+[Data receipt](gcp-data-observed.json) retains the original failed data-only DAG at
+5fec4e1; keep its source/journals/accepted outputs intact. No external binner,
+architecture change, resource growth, retry or automatic extension is authorized.
 [CLOUD](../../docs/CLOUD.md) owns VM/access/credit operations;
 [D013](../../docs/decisions/D013-first-comparative-benchmark.md) owns the comparison;
 [D014](../../docs/decisions/D014-google-cloud-workspace.md) owns the provider.
@@ -11,37 +13,64 @@ Old Terminal/Slurm/Home/shared-storage commands and their budgets are exclusivel
 [historical](../../docs/history/E009_UCLOUD_OPERATIONS.md). Old receipts/prefix
 locators are preserved provenance, never GCP runtime paths.
 
-## Authorized unchanged-control execution, 2026-10-15
+## Running unchanged-control phase, 2026-10-15
 
-The latest owner message **authorizes the four unchanged controls in this task if
-the stated gates pass**, under a new $2 incremental gross ceiling. This supersedes
-older unapproved-fit wording below. [The control receipt](controls-observed.json)
-owns exact source, credit/cost/native gates, live status and artifact locators.
-Keep dev3/seed11/20 epochs/cutoff500/grouping and accepted inputs unchanged.
-No external binner, new model, resource, retry or retention extension is allowed.
+**The four unchanged controls are launched once and left supervised per the owner's
+explicit instruction.** [The actual control receipt](controls-observed.json) owns
+full gates, source, environment, process/watchdog identity, current observations
+and later result pointers. At **23:20 Copenhagen**, the ten-depth pair is preparing
+features (native PID2260, ~100% of one CPU, 178s sampled process CPU); TNF-only is
+queued. This finite Python TNF stage is serial despite the eight-thread setting.
+Parent heartbeats alone are not credited as scientific progress. No operational
+failure or competing scientific workload is observed; no control completion,
+recovery score or feature-family conclusion is claimed.
 
-Live paid billing shows **DKK1,942.67 Available Welcome credit**, original1,973.43,
-expiry2027-01-12, certain-usage/net-pricing scope. October1–15 cost/savings are both
-DKK27.89, net0; issued-credit consumption30.76. Billing lag can exceed24h and pending
-usage is not observable precisely. Current DKK Catalog prices/ordinary E2, PD, IP
-and Standard Storage eligibility pass; maximum 4.25h compute/IP remains ~$1.16045.
-Storage retention is still approved only to the October21 review. No new capacity
-or service is needed; actual filesystem headroom is checked immediately after wake.
+VM start **21:10:04.207 UTC**, unchanged e2-standard8/32GiB and30/300GiB disks;
+initial filesystem free148,207,960,064B, later146,857,697,280B. Fresh live paid-account
+Welcome credit **DKK1,942.67 Available**, expiry2027-01-12, certain-usage/net-pricing
+scope. October1–15 cost/savings27.89/net0, issued-credit consumption30.76; billing
+lag and unobserved pending usage remain explicit. Current DKK SKUs/ordinary E2,
+PD/IP/Standard Storage eligibility pass. Compute/IP max4.25h is **$1.16045 gross**
+inside the new **$2**; no extra resources/services or retention are introduced.
+Actual priced uptime to observation is in the receipt, not a final invoice.
 
-The added [held parent](../../scripts/e009_controls_phase.py) retains its own PID
-while the unchanged launcher runs once. It subtracts preparation since VM boot
-from four hours, reserves180s for collection and keeps the same 25-GiB reserve/
-20-GiB growth allowance. A fresh systemd exit watcher must be pinned and verified
-before its release file is written. Provider STOP remains the independent fallback.
-It uploads/readbacks finished artifacts and compact closure/status to the existing
-private bucket, then exits for shutdown. Three local boundary tests pass without
-any fit; current-boot watchdog live/normal/crash verification remains before release.
+Mac normal push and VM clean source **cf7bf2a17eab0c5a2f70999d04e766af1e14f98a**
+pass; GitHub access stays read-only. The admitted truth archive and exact dev3 wheel
+have byte-verified restore into a fresh phase directory. Private truth upload and
+SHA256 readback pass. Original data, DAG journals and truth artifact remain intact.
+Fresh complete owned Python3.12 CPU env, all16 distribution versions/import origins,
+all11 installed code/default hashes, pip check and actual CLI checks pass before
+community work. No tiny binner fit or earlier scientific contract was replayed.
 
-Owner steering: if the released launcher is still healthy/running after verification,
-finish the response with its current stage/logs and following inspection prompt.
-Do not repeatedly poll until completion. If already finished, confirm shutdown and
-review retained controls locally under admitted v2 without refitting or new cloud
-compute. Preserve failures/partials and do not retry or silently shorten schedules.
+Parent service `e009-controls-20261015T211004Z.service` is PID1975, boot/start/command
+bound. Root timer `e009-controls-watchdog-20261015.timer` is active, checks every30s
+and requests clean shutdown after60s absence. Current Linux live/normal0/crash7
+contracts and actual held-parent matching pass before release at21:16:42.882UTC.
+The held parent retains identity while its one child launcher runs. Runtime/cgroup
+cleanup and outer budget include time since boot; phase end **October16 03:10
+Copenhagen**, independent providerSTOP **03:25**, automaticRestart=false. No restart,
+retry or limit extension. The existing 25-GiB reserve and20-GiB growth allowance
+remain, including a conservative1-GiB preparation charge before the first baseline.
+
+Logs on `dl-binner-gcp`:
+
+- `/srv/dl_binner/experiments/e009/controls-phase-20261015T211004Z/logs/parent-terminal.log`
+- `/srv/dl_binner/experiments/e009/controls-phase-20261015T211004Z/logs/launcher.log`
+- `/srv/dl_binner/experiments/e009/controls-v1-20261015T211004Z/09-ten-depth.log`
+- Native stage logs under `/srv/dl_binner/experiments/e009/controls-v1-20261015T211004Z/ten-depth/logs/`.
+
+The parent plans private `controls-evidence.tar.gz`, checksum, closure and completion
+under `gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/`,
+with readback verification before normal exit. It also best-effort publishes
+compact status to the already-enabled guest attribute `e009-controls/status`.
+A missing/failed collection must not be inferred successful from VM STOP. Inspect
+actual receipts/checksums and budget before exporting bulk. Local-only diagnostic
+evaluation follows accepted outputs and shutdown, with no new cloud compute.
+
+Owner steering: **finish the response once this healthy supervised launch is
+verified; do not repeatedly poll until completion**. The exact following inspection
+prompt below supersedes the earlier launch prompt; no further execution approval
+is needed merely to let this already-approved phase continue.
 
 ## Admitted truth v2 and current next boundary, 2026-10-15
 
@@ -314,15 +343,11 @@ the live credit/STOP/watchdog checks pass. Do not edit its `approved:false` now.
 
 ## Exact following-step prompt
 
-> Our goal is to improve our own high-performing binner. E009 is development evidence, and an expected mature-tool win is not enough reason to spend. Keep external tools, including CompleteBin, deferred.
+> Read AGENTS.md, PROJECT_INTENT.md, STATE, CLOUD, D013/D014 and E009 controls-observed.json. Inspect phase controls-20261015T211004Z-cf7bf2a without starting another job, changing resources, extending limits or retrying. Check GCP control-plane state, the e009-controls/status guest attribute and private completion.json under gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/. Do not infer success from shutdown. If it is still healthy and running, report the current stage and leave the verified watchdog/provider STOP intact; do not poll until completion.
 >
-> Read AGENTS.md, PROJECT_INTENT.md, STATE, CLOUD, D013/D014, E009 operations, the v2 truth admission and diagnostic-control locks. I authorize only the four unchanged dev3 raw/learned TNF+ten-depth and TNF-only controls under a NEW $2 incremental gross ceiling. Use the existing e2-standard-8/32-GiB VM and 300-GiB work disk, a four-hour cumulative setup/verification/fit/collection clock, provider STOP at 4.25 hours, 25-GiB free reserve and 20-GiB maximum extra working-space allowance. No provisioning, resize, retention extension, external binner, new seed/schedule, model change, automatic retry or extension.
+> After verified shutdown, establish each control's actual exit/stage status from receipts and retained logs. Price measured VM uptime and storage separately from sampled CPU. Respect the existing new $2 ceiling and credit coverage; assess export cost before downloading archives. Verify archive and every retained member checksum. Do not wake the VM if evidence is missing; report the missing evidence/cost approval needed.
 >
-> First verify live Welcome-credit balance/scope/expiry, pending usage, current prices and coverage, remaining storage approval and actual headroom. Stop before unclear/uncovered spending or a required resource increase. Normally push the prepared branch from the Mac and sync the VM to that exact clean commit with its read-only GitHub key. Verify the local truth evidence archive and restore only its admitted artifact into a fresh VM directory; preserve original data/journals. After the credit gate, upload/read back the compact truth evidence to the existing private archive.
->
-> Use the prepared bounded launcher and exact frozen dev3 wheel/source/default/feature locks. Create its complete independent Python3.12 CPU environment and pass native inventory/import/source/CLI checks within the same clock before fitting. Preserve all assembly DNA and ordered ten depth columns; keep truth outside feature/training paths. Arm and verify a fresh boot/process-bound exit watchdog before releasing the launcher, and retain the provider STOP fallback. On failure or limit, collect bounded evidence, stop and report without retry. Stop the VM after collection and independently confirm TERMINATED.
->
-> After shutdown, inspect retained controls and perform bounded local diagnostic evaluation with admitted v2 and tested evaluator contracts, without refitting, tuning or new cloud compute. Report any missing runtime/contract before claiming quality. Use raw/learned geometry, grouping and length/origin diagnostics to recommend at most one next mechanism test; do not decide product feature families from one prototype/assembly. Update records, run relevant checks and commit. Report actual costs/storage, control completion, diagnostic limits, next decision and exact following prompt.
+> If all four controls completed, independently review their full contig/sample axes, frozen seed/schedule/source, reload, complete raw/learned DNA accounting and actual resources. Use admitted conservative truth v2 and tested evaluator contracts for bounded local raw/learned geometry, grouping, length/origin and recovery diagnostics. Preserve all short/noise/excluded/non-target DNA and the 3.3034% N-quarantine limitation. Report any missing runtime/contract before claiming quality. Do not refit, tune, run an external binner, change architecture or decide product feature families from this one prototype/assembly. Recommend at most one next mechanism test and prospectively defined additional-data confirmation. Preserve failure evidence without automatic recovery. Update records, run relevant checks and commit; report costs, conclusions/limits and the exact next prompt.
 
 ## Evidence and sample choice
 

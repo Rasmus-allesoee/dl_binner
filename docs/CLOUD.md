@@ -3,21 +3,17 @@
 Updated: 2026-10-15 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-E009's exit watchdog correctly stopped the failed data driver, preserving disks
-and logs. A subsequent bounded review wake is also stopped. The [experiment's
-installation and verification](../experiments/E009-competitive-benchmark/OPERATIONS.md#overnight-exit-watchdog-record-2026-10-15-completed)
-own its scope; it is not armed for future boots. Check provider state before any
-restart. The current provider maximum is **one hour /STOP**, set for review; do not
-reuse an old 25-hour launch policy as authorization for a future phase.
-The subsequent E009 truth repair/admission ran **locally from retained PAFs**:
-[the receipt](../experiments/E009-competitive-benchmark/truth-v2-admission.json)
-records zero new VM hours/$0 compute, no provisioning/resizing and unchanged
-TERMINATED state. Existing disk retention/costs below continue. The subsequent $2
-control phase is now explicitly **owner-authorized subject to live gates**; the
-[control receipt](../experiments/E009-competitive-benchmark/controls-observed.json)
-owns actual policy/state. Its 4.25-hour STOP must be verified before start.
-Fresh credit/price verification, a new boot/process-bound watchdog and native
-runtime probe are required before that separate phase. Keep read-only GitHub.
+**E009's owner-authorized unchanged-control phase is RUNNING on the existing VM.**
+[The current control receipt](../experiments/E009-competitive-benchmark/controls-observed.json)
+owns the exact source, live gates, current boot/PID and observations. The parent
+is protected by a verified root exit watcher and a boot-relative four-hour bound;
+provider **4.25-hour /STOP** is verified, automaticRestart=false. No resource or
+service was added. The earlier failed data driver and bounded review were stopped;
+their one-hour/25-hour policies below are historical, not current instructions.
+The admitted truth repair ran locally. Current controls use a separate owner-
+approved **$2** phase after fresh credit/price/headroom/runtime/watchdog admission.
+Keep read-only GitHub access and do not update the running VM's source or poll until
+completion. See the current phase section below for actual clock and retention.
 **Phase 1 accepted: strict IAP SSH, exact private repository clone, pinned Linux
 Codex CLI, ChatGPT authentication, actual desktop remote-project commands and
 private archive upload/readback pass. The Ubuntu sandbox prerequisite was repaired
@@ -567,3 +563,33 @@ only when its incremental evidence justifies a run. Native CPU availability and
 
 If credits run out, assess Colab/Kaggle as future alternatives; neither is
 configured or used. Do not silently charge the card or delete accepted evidence.
+
+## Current unchanged-control phase, 2026-10-15
+
+The existing eight-CPU VM started at **21:10:04.207 UTC**, with 30/300-GiB disks
+and no resize/provisioning/service/IAM changes. Fresh paid-account credit check
+shows **DKK1,942.67 Available through2027-01-12**; reported usage/savings27.89, net0,
+with pending usage not assumed zero. Fresh SKUs price gross compute/IP at
+**$0.273045676/h**, max4.25h **$1.160444124**, within the separate approved **$2**.
+Existing storage remains within its October21 retention review, ~$31.20/month gross.
+The truth evidence archive now has a private upload and verified SHA256 readback.
+
+The VM is clean at **cf7bf2a17eab0c5a2f70999d04e766af1e14f98a**; its GitHub key
+remains read-only. Initial IAP connection preceded SSH readiness; serial boot
+completion was checked before connecting, and no scientific command was retried.
+Native mount/8CPU/basePython3.12 and148.2-GB free-space checks pass. Fresh control
+env owns its numeric dependencies; actual source/default/inventory/import/CLI gates
+pass. Latest snapshot is live ten-depth feature preparation with ~1CPU native
+work and no failure. It is not a completed fit or a quality result.
+
+The root systemd watcher pins boot63cf3041-14ae-4ce2-82f8-5a1df18e8abc /PID1975,
+start tick27468 and exact command hash, every30s with60s exit grace. Live/normal0/
+crash7 native detection tests pass without host shutdown. Its timer is active only
+for this boot. The service also has a boot-relative four-hour cgroup runtime bound;
+provider4.25h STOP/automaticRestart=false remains independent. Hard phase/provider
+ends are **October16 01:10/01:25 UTC =03:10/03:25 Copenhagen**. The held parent was
+released only after actual watcher verification. It archives/readbacks completed
+results and compact status, then exits to trigger shutdown. Do not stop active
+science merely because this chat ends. Do not wait/poll until completion; owner
+will request inspection later. Guest attribute `e009-controls/status` and private
+completion URI are pointers, not substitutes for actual stage/artifact review.

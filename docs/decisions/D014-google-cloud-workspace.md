@@ -157,3 +157,10 @@ TERMINATED, no external IP, 30/300-GiB retained disks and one-hour STOP policy.
 Do not apply the proposed 4.25-hour control STOP until a separate $2 fit approval
 and fresh live credit/cost gate. The new launcher is locally safety-tested, without
 claiming Linux setup or full-scale fit feasibility. D013 keeps external fits deferred.
+
+The owner's subsequent new $2 control phase is now running on the same VM/disks
+at clean cf7bf2a after fresh credit, actual headroom, source and native-runtime
+gates. [The control receipt](../../experiments/E009-competitive-benchmark/controls-observed.json)
+records the current boot/PID watchdog and4.25h STOP. No resize, provisioning, IAM,
+new service or external binner is involved. Leave the healthy run supervised;
+inspect completion/shutdown later without another VM wake or automatic retry.

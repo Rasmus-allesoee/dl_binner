@@ -4,13 +4,17 @@ Updated: 2026-10-15. This is the single current handoff.
 
 ## Exact next step
 
-**Execute the owner-authorized unchanged E009 diagnostic controls if live gates pass.**
-The latest message explicitly approves the new $2 ceiling, existing resources and
-four-hour phase/4.25-hour STOP. [The control receipt](../experiments/E009-competitive-benchmark/controls-observed.json)
-owns current gates, source and actual outcome. No external binner/model change,
-retry, resource or retention extension is authorized. Once a healthy launcher and
-its watchdog are verified, leave it supervised and finish the response; do not poll
-to completion. Local diagnostics follow accepted outputs and shutdown.
+**Leave the healthy E009 control phase running under its verified watchdog.**
+[The control receipt](../experiments/E009-competitive-benchmark/controls-observed.json)
+records clean source `cf7bf2a`, the new $2 budget and all live gates. At 2026-10-15
+23:20 Copenhagen the ten-depth pair is preparing features; TNF-only is queued.
+Fresh Python3.12/CPU dependencies, exact installed dev3 bytes and CLI checks pass.
+The current-boot parent PID1975 is watched every30s; normal exit/crash detection is
+natively tested. Boot-relative phase limit ends **October16 03:10 Copenhagen**;
+provider STOP is **03:25**. No completed control or quality result is claimed.
+Per owner instruction, do not poll until completion. Next inspect control-plane,
+private completion receipts/checksums and shutdown, then review results locally.
+No VM wake/refit/retry, resource/model change or external binner is authorized.
 [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md) owns the exact
 following prompt, budgets and records. [D013](decisions/D013-first-comparative-benchmark.md)
 keeps improvement evidence as the purpose; the unchanged prototype is the control.
