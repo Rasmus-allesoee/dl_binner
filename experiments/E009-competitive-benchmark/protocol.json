@@ -1,8 +1,8 @@
 {
   "record": "E009",
-  "date": "2026-10-14",
-  "status": "data-only GCP phase authorized and launched at prepared commit; binner fits/scores unapproved",
-  "scientific_outcome": "not assessed",
+  "date": "2026-10-15",
+  "status": "data DAG failed final truth parser; full assembly and ten BAM/depth feature inputs accepted by independent review; truth provisional; no fits/scores",
+  "scientific_outcome": "not assessed by a binner",
   "execution_ready": false,
   "authorized_current_task": "credit/price/quota checks; existing VM8/32 and work300GiB/STOP25h; serial full ten-sample data phase at 5fec4e1; no binner fit/score/architecture change or automatic retry",
   "dataset": {
@@ -145,7 +145,7 @@
     ],
     "truth_tuning": false,
     "marker_selection_is_not_independent_validation": true,
-    "real_assembly_adapter_status": "v10 tiny Linux PAF/CIGAR/AMBER contracts accepted; new serial data DAG locally tested on real tiny DNA; GCP runtime/scale and truth population admission pending",
+    "real_assembly_adapter_status": "tiny v10 accepted; actual community native PAF parsing failed on ambiguous-base block accounting; no admitted truth",
     "alignment_reference_universe": "prospective conservative 311-file retained sample-0 metadata universe, all 7688 released replicon records; globally reconcile <=500Mb reference batches; independently reconcile positive read origins, source grouping and cellular target taxonomy before fitting/scoring",
     "alignment_command_contract": [
       "minimap2",
@@ -218,12 +218,11 @@
     "auto_increase_or_retry": false,
     "historical_ucloud_budget": "docs/history/E009_UCLOUD_OPERATIONS.md#superseded-two-depth-resource-protocol"
   },
-  "next": "collect and independently review bounded data-phase outputs/costs; no fits/scores; D013 owns selective later tool recommendations",
+  "next": "repair/test versioned truth from retained PAFs and reviewed population; then prepare unchanged controls for separate fit approval; no native data/alignment replay",
   "unexecuted": [
-    "GCP data runtime/native-scale execution",
-    "bulk reads/acquisition/assembly/depth/truth",
-    "community binner fits and E009 quality scores",
-    "architecture studies/new seeds",
+    "admitted complete coordinate truth derivation",
+    "all community binner fits and E009 quality scores",
+    "architecture/feature changes and new seeds",
     "main merge/publication"
   ],
   "owner_preflight_prepared": "historical v14 completed and accepted; do not run retired owner packet",
@@ -251,12 +250,16 @@
     "launcher": "scripts/e009_gcp_run.py",
     "local_receipt": "gcp-local-validation.json",
     "truth_review_dependencies": [
-      "exact positive sample-0 read-origin/source grouping",
-      "cellular taxonomy and complete-reference target denominator",
-      "new host runtime, actual scale/resources and ordered native BAM/depth axes"
+      "minimap2 2.30 ambiguous-base CIGAR/block contract repair",
+      "fresh simulator-genome/circular-molecule coordinate derivation",
+      "full provided-reference denominator, cellular target and competitor/ambiguity validation"
     ],
     "executed_source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
-    "actual_receipt": "gcp-data-observed.json"
+    "actual_receipt": "gcp-data-observed.json",
+    "actual_outcome": "failed final PAF parser, accepted reusable feature data",
+    "population_review": "truth-population-review.json",
+    "next_diagnostic_proposal": "diagnostic-controls-plan.json",
+    "no_fits_authorized": true
   },
   "value_of_information": {
     "purpose": "improve our own high-performing, potentially SOTA binner",

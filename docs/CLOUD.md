@@ -3,11 +3,12 @@
 Updated: 2026-10-15 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-The active E009 run now has a verified host-local exit watchdog in addition to
-its provider STOP; [the experiment's exact installation and verification](../experiments/E009-competitive-benchmark/OPERATIONS.md#overnight-exit-watchdog-2026-10-15)
-own its scope. It stops after the current driver exits, independently of chat/SSH,
-preserving disks and logs. It is not armed for future boots. Check provider state
-before attempting SSH or any restart; a completed run may already be stopped.
+E009's exit watchdog correctly stopped the failed data driver, preserving disks
+and logs. A subsequent bounded review wake is also stopped. The [experiment's
+installation and verification](../experiments/E009-competitive-benchmark/OPERATIONS.md#overnight-exit-watchdog-record-2026-10-15-completed)
+own its scope; it is not armed for future boots. Check provider state before any
+restart. The current provider maximum is **one hour /STOP**, set for review; do not
+reuse an old 25-hour launch policy as authorization for a future phase.
 **Phase 1 accepted: strict IAP SSH, exact private repository clone, pinned Linux
 Codex CLI, ChatGPT authentication, actual desktop remote-project commands and
 private archive upload/readback pass. The Ubuntu sandbox prerequisite was repaired
@@ -494,6 +495,54 @@ Review grown retention **by 2026-10-21**, then before **2027-01-10** credit expi
 review. Disk capacity cannot simply be shrunk. An approved smaller replacement
 requires verified copy/restore and an explicit decision about accepted evidence.
 No unapproved payment-card billing or automatic important-data deletion follows.
+
+## Verified data exit and bounded review, 2026-10-15
+
+The original E009 data driver failed only in final PAF parsing after all assembly/
+ten BAM/depth stages completed. Its watchdog snapshot requested shutdown at
+**09:29:52 UTC**; the control plane confirms **TERMINATED at 09:32:21.624 UTC /
+11:32 Copenhagen**. First provider uptime was **13.179723 h**. A stop is not success;
+[the reviewed experiment](../experiments/E009-competitive-benchmark/OPERATIONS.md#verified-data-outcome-and-next-boundary-2026-10-15)
+and its receipts distinguish accepted feature data from unadmitted truth.
+
+The owner's review request needed evidence on that stopped disk. Before wake,
+current console/API checks verified **DKK1,952.79 available**, expiry **2027-01-12**,
+paid billing, billing enabled, ordinary eligible resources and unchanged DKK SKU
+rates. Reported October cost/savings were **DKK5.16/DKK5.16, net DKK0**; issued-credit
+use was DKK20.64. These displays lag and are not a reconciled invoice or zero
+pending usage. No extra service, IAM grant, quota, VM or disk was created.
+
+The same 8-CPU/32-GiB VM was set to **one-hour STOP before wake**. The bounded
+review ran **12:51:17.410–13:19:53.611 UTC /14:51–15:19 Copenhagen**, **0.4767225 h**,
+without resizing, reinstalling or replaying the data DAG. Current API state is
+**TERMINATED**, external IP absent, both **30/300-GiB** disks preserved with
+`autoDelete=false`; its current provider maximum remains **3,600 seconds /STOP**.
+The old boot-bound watchdog is not active on a new boot. Re-arm a suitable end-of-
+phase stop only for an authorized future phase; never reuse the old PID binding.
+
+Measured priced uptime gives **$3.5987 original +$0.1302 review = $3.7288 gross
+compute/IP** before allowances/credits. Both running intervals total **13.656446 h /
+109.251564 allocated vCPU-hours**; sampled native CPU is a different quantity.
+Seven-day provisioned boot/work planning cost remains **$7.1803** at the conservative
+730-hour conversion. The run/review plus seven-day disk subtotal is **$10.9091**,
+before small archive/operations/export and well inside the **$20 data-only** cap.
+Seven days is planned retention exposure, not all already-spent cash. The actual
+phase invoice remains unavailable while billing catches up.
+
+The exact private 246,936,673-byte archive has verified native upload/readback and
+all member hashes independently verified on the Mac. Its ~0.230-GiB regional
+Standard storage is **~$0.0046/month gross**. Raw reads, BAMs and environments stay
+on working storage. The original production filesystem peak was **170.66 GiB**,
+minimum sampled free **124.52 GiB**; the 25-GiB guard was not approached. A future
+225–250-GiB data disk may suffice, but shrinking requires a new approved copy/
+verification/capacity plan; no resource change or bulk-data deletion ran here.
+
+Stopped provisioned disks still cost **$31.20/month gross**. Review retention by
+**2026-10-21** and credit expiry by 2027-01-10. No retention extension or post-credit
+card spending is authorized. A later proposed **$2 diagnostic-fit ceiling** is
+separate from the data-only $20 and remains unapproved; no external fit is the
+immediate next step. CLOUD does not authorize any scientific action from a low
+monetary estimate alone.
 
 No binner fits/scores are authorized. [D013's later recommendations](decisions/D013-first-comparative-benchmark.md)
 prioritize our unchanged diagnostic controls and at most one resource-admitted

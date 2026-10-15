@@ -1,6 +1,6 @@
 # E009: first competitive human-gut assembly benchmark
 
-Opened 2026-10-08; amended 2026-10-14. Scientific outcome **not assessed**.
+Opened 2026-10-08; amended 2026-10-15. Bin-quality outcome **not assessed**.
 All five tiny UCloud native contracts are accepted through v10/v14; no full
 community fit or E009 quality score ran. The independently reviewed
 [v14 receipt](linux-preflight-v14.json) is accepted without replay.
@@ -15,6 +15,28 @@ owns what actually ran; all fits/scores remain unapproved.
 [D014](../../docs/decisions/D014-google-cloud-workspace.md) supersedes UCloud
 operating paths/budgets; the [old handoff](../../docs/history/E009_UCLOUD_OPERATIONS.md)
 retains their history. Old attempt records are provenance, not current commands.
+
+**Verified data outcome, 2026-10-15:** the DAG failed in the final alignment-truth
+parser. Sources, full sample-0 assembly and all ten BAM/depth stages are sealed;
+independent critical-byte/native-header/axis review accepts those outputs and the
+closed combined matrix separately, without sealing the failed final stage.
+The full assembly is **145,702 contigs /231,678,157 bp**; the ten-column matrix
+has **1,457,020 checked cells** and preserves 13 all-zero rows. All ten minimap2
+batches exited 0 and their PAFs are retained. The first parser failure is reproduced
+in [the exact example](truth-failure-example.json); ambiguous-base accounting
+explains it. No data/alignment stage was replayed and no binner ran.
+
+The completed [origin/population review](truth-population-review.json) verifies
+all 33,267,026 sample-0 mate IDs and 309 positive simulator genomes: 156 bacterial,
+133 viral, 11 eukaryotic and nine separately simulated plasmids. All nine permuted
+files are exact circular rotations; host-like filenames do **not** make them host
+genomes. Full coordinate truth remains **unadmitted** pending the tested parser,
+simulator-ID/circular-coordinate derivation and denominator/ambiguity validation.
+[Operations](OPERATIONS.md#verified-data-outcome-and-next-boundary-2026-10-15)
+owns actual cost/storage/shutdown evidence and the exact next prompt. The next
+step is truth repair/admission and preparation, with no immediate external fit;
+[the unchanged diagnostic proposal](diagnostic-controls-plan.json) requires a
+separate fit budget and native-launcher validation.
 
 ## Question and informative comparisons
 

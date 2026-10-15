@@ -1,15 +1,224 @@
-# E009 operations: authorized data-only GCP phase
+# E009 operations: reviewed data outputs and provisional truth
 
 Updated: 2026-10-15. **Later owner authorization: prepared data-only phase at
 5fec4e1; no binner fits/scores/model changes or automatic retries.**
 [Actual phase receipt](gcp-data-observed.json) owns execution/outcome/cost.
-Keep the clean VM source at that exact SHA while its journals remain active.
+The data DAG has exited; keep its source/journals/outputs bound to that exact SHA.
 [CLOUD](../../docs/CLOUD.md) owns VM/access/credit operations;
 [D013](../../docs/decisions/D013-first-comparative-benchmark.md) owns the comparison;
 [D014](../../docs/decisions/D014-google-cloud-workspace.md) owns the provider.
 Old Terminal/Slurm/Home/shared-storage commands and their budgets are exclusively
 [historical](../../docs/history/E009_UCLOUD_OPERATIONS.md). Old receipts/prefix
 locators are preserved provenance, never GCP runtime paths.
+
+## Verified data outcome and next boundary, 2026-10-15
+
+**The complete data DAG failed; reusable assembly/BAM/depth data are accepted.**
+The original driver records exit 1 after **47,025.069 s /104.500153 allocated
+vCPU-hours** at 8 CPU/32 GiB. The failure is in `e009_truth.parse_paf`, not acquisition,
+assembly, mapping, measured depth or minimap2. All ten aligner batches have exit-0
+receipts; no retry or native stage replay occurred. The watchdog's closed snapshot
+contains the failed attempt and stage seals. GCP independently reports the first
+stop at **2026-10-15T09:32:21.624Z /11:32 Copenhagen**, after **13.179723 provider
+hours**, distinct from driver wall time and sampled process CPU.
+
+The full assembly remains **145,702 contigs /231,678,157 bp**, SHA256
+`d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33`.
+Exactly **89,041 contigs >=500 bp** are eligible for the prospective unchanged
+prototype; the other 56,661 contigs /22,035,454 bp are retained. No cost-based
+subsampling, extra cutoff, coassembly or model change occurred.
+
+Independent [feature acceptance](../../scripts/e009_data_acceptance.py), source
+`9409f1a`, verified actual critical hashes against the sealed/watchdog manifests,
+all ten native BAM `quickcheck`/ordered SQ axes, all per-sample depth axes/zeros,
+and **every one of 1,457,020 combined-matrix cells**. Ordered samples are exactly
+**0,2,3,4,6,9,10,11,14,17**, with columns from [the frozen manifest](depth-samples.tsv).
+All BAMs are coordinate-sorted and indexed. Thirteen all-zero matrix rows remain;
+there is no imputation or removal. The combined matrix in `parts/final/depth.tsv`
+was closed and byte-bound before the parser failed; its independent acceptance
+does **not** create `parts/final/done.json` or authorize a consumer to infer missing
+outputs. Future consumers must use the reviewed acceptance/manifest bindings.
+Bulk read archives/unused intermediates were not rehashed merely for this review;
+sample-0 FASTQ/origins and all consumed feature bytes were explicitly verified.
+
+The first failing PAF row is retained in [the failure example](truth-failure-example.json).
+Both coordinate consumptions agree, but its 2,948 CIGAR columns differ from PAF
+block 2,947 by `nn:i:1`. Minimap2 2.30's
+[actual writer](https://github.com/lh3/minimap2/blob/v2.30/format.c) emits its stored
+`blen`; [its alignment accounting](https://github.com/lh3/minimap2/blob/v2.30/align.c#L242)
+subtracts ambiguous bases from that value and emits their count separately.
+All **300,499 retained PAF rows** pass exact axes, strands, coordinate bounds and
+CIGAR endpoint consumption; **459 rows** have ambiguous bases, and every block
+difference equals its `nn` count. Our equality check is therefore too strict for a
+valid native row. The exact
+exception is reproduced locally; a heuristic aligner failure, exhausted budget,
+RAM failure or bad BAM is not inferred from the scheduler trailer. No parser fix,
+truth regeneration, binning or scoring ran during this review.
+
+### Origin, genome and taxonomy review
+
+[The final audit](../../scripts/e009_data_review.py), source `b9a5289`, independently
+checks full canonical FASTQ and simulator-origin ID sets: **33,267,026 mate records /
+16,633,513 pairs**, identical sets without relying on order. Every positive origin
+joins an exact unique source record in the frozen 311-file universe. There are no
+unknown source IDs, multiple genome assignments per source record/file or positive
+records outside that universe. Two selected files have zero origins; 1,280 full
+reference replicons are unobserved and remain competitive references.
+
+[The reviewed population](truth-population-review.json) contains **309 positive
+simulator genome IDs**: **156 bacterial, zero archaeal, 133 viral, 11 eukaryotic and
+nine separately simulated plasmids**. Each positive genome maps to one source file.
+The 156 bacterial genomes meet the prospectively fixed >=200-kb provided-reference
+length criterion; these are reviewed candidate targets, not completed recovery
+truth or finished-MAG quality. The source catalog reports zero exact/accession
+development matches, without excluding near-genome or pretrained-reference overlap.
+
+Two first audit attempts are preserved: v1 rejected an origin whose provider
+genome-ID cell is blank; v2 exposed synthetic viral strain nodes absent as literal
+integer lineage nodes. The tested v3 uses **197 explicit genome joins, 110 explicit
+genome joins with the exact synthetic origin-taxon suffix, and two exact taxon-only
+rows**. It retains original and synthetic IDs separately; taxon-only joins supply
+lineage and never merge genomes. All observed relationships resolve; arbitrary
+unknown/ambiguous joins are retained as unresolved evidence, never admitted truth.
+V1/v2 outputs and timing are preserved. These were separate versioned review
+consumers; the failed scientific data DAG was not retried.
+
+All nine `.permuted.fna` files are ten exact forward circular rotations, confirmed
+against their native catalog file hashes: **4,033,410 literal bp /403,341 one-copy
+molecule bp**. Actual origins assign them to `pASV42`, `pASV43`, `pASV62`–`pASV68`;
+their `HOST` values are the three bacterial host IDs. In particular the filename
+beginning `ASV134.7` is **pASV43**, separately simulated from host ASV134.7. Preserve
+that distinction; neither filename prefixes nor HOST fields authorize merging.
+
+Measured mate-record fractions are **83.32% bacterial, 14.42% eukaryotic, 1.57%
+viral and 0.69% other/plasmid**. These differ markedly from the provider's reported
+profile percentages; do not substitute profile percentages for read/DNA fractions
+or infer product feature choices from either one-community composition.
+
+**Truth remains provisional.** Next derive a fresh simulator-genome reference axis,
+normalize exact circular coordinates and validate full provided-reference lengths,
+non-target/zero-origin competitors and global chain ambiguity. Repair/test the
+ambiguous-base PAF/CIGAR contract against the pinned source and tiny actual native
+N-containing alignments, preserving malformed-row refusal and a stated ambiguity/
+identity policy. Reuse the retained PAFs: no minimap2/assembly/mapping/depth replay.
+Do not edit old stage manifests to make a resume pass or call the failed DAG
+successful. An admitted versioned truth artifact must precede any quality score.
+
+### Cost, storage and retained evidence
+
+The owner's review request authorizes necessary evidence access within the
+remaining **$20 data-only** envelope. Before waking the stopped VM, fresh console/API
+checks found **DKK1,952.79 Available Welcome credit, expiry 2027-01-12**, paid billing,
+billing enabled and unchanged ordinary E2/disk/Storage/IP SKU eligibility/prices.
+Reported October usage was DKK5.16, savings DKK5.16, net DKK0; issued-credit
+consumption was DKK20.64. These lagged views are not a reconciled phase invoice.
+Unreported usage is not assumed zero.
+
+The same existing 8 CPU/32-GiB VM and 30/300-GiB disks were reused, with **one-hour
+provider STOP before wake**, no new service, provisioning, resize, runtime install
+or scientific DAG. Review, hashing and collection fit within that cap and the
+remaining original cumulative data allowance. The actual second uptime/stop and
+price calculation are in [the receipt](gcp-data-observed.json). First-run compute/IP
+is **$3.5987 gross** from measured uptime; the review's one-hour maximum was **$0.2731**. Actual review uptime was **0.4767225 h**,
+priced at **$0.1302 gross**, and the VM is again **TERMINATED**, IP absent, at
+**13:19:53.611 UTC /15:19 Copenhagen**, with both disks preserved. Total measured
+priced compute/IP is **$3.7288 gross**; adding seven-day disk exposure gives
+**$10.9091** before the small archive/operations/export reserve.
+Seven-day provisioned disks are **$7.1803**, leaving ample room below $20 for the
+compact archive/operations and small export. Seven-day storage is future exposure,
+not already-spent cash; list-cost accounting is distinct from a delayed invoice.
+
+Production sampled peak working-filesystem use was **170.66 GiB**, minimum sampled
+free **124.52 GiB**; sampling can miss a transient peak. About 156.4 GiB were used
+after the data run. The original 300-GiB disk was conservative; measured data-only
+use suggests 225–250 GiB could serve a similar future run with reserve. The disk
+cannot shrink in place: a smaller replacement needs an approved copy/verification
+and simultaneous-capacity/quota/cost plan. Savings at 250 GiB are only $5/month.
+This is a capacity estimate, not a claim of unchanged disk performance. A 225–250-GiB
+replacement copied alongside the original 300-GiB disk would require temporary
+balanced/SSD quota of 525–550 GiB plus a separately approved copy/wake cost.
+No migration/deletion is performed. Current stopped disks remain **$31.20/month
+gross**, review by **2026-10-21**; an explicit retention decision is still needed.
+
+The private checksum/readback archive contains **554 regular members /
+1,362,258,256 logical bytes**, **246,936,673 compressed bytes**, SHA256
+`f1616f08533b57609c2e09d212cc40aade068e51e968ee554735a5b8e21f9312`.
+It retains exact closed inventory/terminal/log/receipt bytes, full assembly,
+depths, all emitted PAFs, source catalog/axes, tiny circular sources and review
+code/results. It excludes raw reads, BAMs, environments and credentials; those
+bulk working files remain on disk. Same-region private Standard Storage upload and
+SHA256 readback passed. Archive-only storage is about **$0.0046/month gross**.
+The phase receipt records the bucket locator, Mac verification and exact member
+inventory; an open log was not substituted for this immutable payload.
+
+### Strongest next step and later fit approval
+
+**Do truth repair/admission and control preparation next; no immediate external
+tool execution.** It is the prerequisite for useful recovery diagnostics and can
+reuse the expensive accepted data. Paying for a mature-tool win now cannot fix
+this evaluator or distinguish feature, representation and grouping failures.
+
+[The prospective diagnostic plan](diagnostic-controls-plan.json) preserves dev3
+`5e54538`, seed 11, 20 epochs, cutoff 500, fixed transforms/clusterer and all DNA:
+two serial paired product invocations give raw/learned TNF+ten-depth and TNF-only.
+It is a configuration/command proposal, **not an execution-ready native launcher**.
+A complete independent owned CPU environment and bounded parent remain to be
+prepared/validated. Existing tiny UCloud/E008 Linux acceptance is not this full
+89,041-contig runtime/cost measurement. Exact kNN/sorting and graph grouping can
+dominate, so the proposed four-hour cap is not a finish-time promise.
+
+Propose a separately approved **$2 incremental gross fit envelope**, existing
+8 CPU/32 GiB and 300-GiB disk, **four-hour cumulative setup/verification/fit/
+collection clock**, **4.25-hour provider STOP**, 25-GiB reserve and **10-GiB expected /
+20-GiB conservative extra disk**. Compute/IP ceiling is about **$1.16**, with the
+rest for small archive/transfer/rounding; retained disks stay within their existing
+seven-day approval. No resize or retention extension. An exhausted cap means
+retain partials and reassess, without changing schedules/eligibility or rejecting
+a method family. This fit money cannot be taken silently from the data-only $20.
+
+These controls can show whether the fixed encoder damages useful raw geometry,
+whether useful geometry is lost by grouping, and how these ten columns behave in
+this setting. If learned geometry degrades, investigate one view/objective change;
+if geometry helps but bins fragment/mix, prefer one fixed-encoder grouping test.
+Neither outcome universally selects/rejects depth, sequence or taxonomy. Confirm
+improvements on prospectively defined additional data. Keep **SemiBin2** as at most
+one conditional later reference, only if retained feature/embedding/reclustering
+evidence changes an unresolved decision; measure its full schedule before a new
+budget. Defer MetaCAT pending that decision, and keep CompleteBin/COMEBin full grid/
+SCGBinner deferred. No whole-tool ranking is a required gate.
+
+Conditional fit approval text, **for a later request after admitted truth**:
+
+> After the versioned E009 truth and unchanged diagnostic launcher are admitted,
+> I authorize only the four frozen dev3 raw/learned TNF+ten-depth/TNF-only controls
+> under a new $2 incremental gross ceiling, existing 8 CPU/32-GiB VM and 300-GiB
+> disk, four-hour cumulative setup/verification/fit/collection clock and 4.25-hour
+> provider STOP. First verify current credit coverage, prices and storage headroom.
+> Preserve all assembly DNA, the fixed seed/schedule/clusterer and exact input axes.
+> No external binner, model change, extra resources, retry, automatic extension or
+> retention extension. Stop after success/failure and retain checksum-bound evidence.
+
+## Exact following-step prompt
+
+> Read AGENTS.md, PROJECT_INTENT.md, STATE, CLOUD, D013/D014 and the reviewed E009
+> receipts, population and failure example. Repair and locally test a fresh E009
+> truth derivation from the retained minimap2 2.30 PAFs, including ambiguous-base
+> accounting, observed simulator genome IDs, separate pASV/HOST relationships,
+> exact circular-coordinate normalization, full provided-reference denominators
+> and non-target/zero-origin competitive DNA. Preserve malformed-input refusal and
+> predeclare ambiguity/identity semantics; do not silently weaken checks. Keep the
+> old failed journals, source freeze and accepted data intact. Do not rerun the data
+> DAG, acquisition, assembly, mapping, depth or aligners. If native truth-only
+> derivation is needed, first assess current credits/prices and remaining original
+> $20 data-only/24-hour allowance; use only the existing VM/disks with at most a
+> one-hour provider STOP, capture logs and stop afterward. Do not provision, resize,
+> retry or extend automatically; stop before unclear/uncovered spending. Review the
+> new truth independently and admit it only if its population, coordinates and
+> ambiguity contracts pass. Prepare/test the bounded unchanged diagnostic-control
+> launcher and its separate $2 approval request; do not fit or score any binner or
+> change model architecture in this step. Keep external tools, including CompleteBin,
+> deferred. Update records, check and commit; report truth status, cost and the next
+> exact approval prompt.
 
 ## Evidence and sample choice
 
@@ -40,7 +249,7 @@ full grid and SCGBinner fits are deferred. The stored max-50 patch stays provena
 [protocol](protocol.json) and [data plan](gcp-data-plan.json) own this amendment.
 Padded actual BAM paths preserve numerical order under COMEBin's real-path sort.
 
-## Authorized resources, costs and storage rationale
+## Original data-phase resource admission and planning estimates
 
 The earlier [read-only preparation snapshot](gcp-preparation.json), 2026-10-14: VM `TERMINATED`,
 e2-standard-4/16 GiB, 30-GiB standard boot +50-GiB balanced work, four-hour STOP.
@@ -111,7 +320,7 @@ action follows automatically. [Compute prices](https://cloud.google.com/products
 [network](https://cloud.google.com/vpc/network-pricing),
 [credit rules](https://docs.cloud.google.com/free/docs/free-cloud-features).
 
-## Prepared workflow and admission
+## Executed workflow contract and original admission boundary
 
 [Launcher](../../scripts/e009_gcp_run.py) defaults to plan-only inspection.
 [DAG](../../workflows/e009-data/Snakefile): sources →reads 0 →assembly →ordered
@@ -161,12 +370,13 @@ for reviewed regrouping without blindly repeating alignments.
 
 The independent [read/source review helper](../../scripts/e009_data_review.py) is
 locally tested with actual gzip files/manifests, late-ID duplicates, byte drift,
-taxonomy mismatch and ambiguous source formats. After the production driver exits,
-run it under the **remaining original clock/resource envelope**, with the provider's
-explicit sample-0 profile, without changing the clean 5fec4e1 execution checkout.
-It verifies full FASTQ/origin-ID sets and exact original-record/genome/lineage joins.
-It cannot by itself admit chromosome/plasmid identity, permuted-copy meaning or a
-whole-genome denominator, and never opens bins/scores or edits stage journals.
+taxonomy mismatch and ambiguous source formats. This was the original post-driver
+review plan; the versioned native v1/v2/v3 attempts and final complete audit are
+recorded above. Do not repeat them merely to follow this earlier handoff. The final
+helper verifies full FASTQ/origin-ID sets and exact original-record/genome/lineage
+joins, with explicit synthetic/taxon-only modes and unresolved evidence. It cannot
+by itself admit coordinate truth or a whole-genome denominator, and never opens
+bins/scores or edits stage journals.
 The [phase receipt](gcp-data-observed.json) retains the provider profile and an
 actual plasmid/copy example requiring that review. Do not infer absent genomes
 from rounded-zero abundance or bacterial cellular genomes from taxonomy alone.
@@ -179,7 +389,7 @@ data/truth and costs before the separate fit phase.
 why this 300-GiB/32-GiB layout is not its fit admission: later 400–500-GiB disk and
 64/128-GiB RAM may be needed, with quota, credit and owner approval then.
 
-## Recorded launch and next review boundary
+## Closed data-stage launch provenance (do not relaunch)
 
 Safe local inspection (no writes/downloads):
 
@@ -206,10 +416,10 @@ after collection, preserving disks and accepted outputs.
 
 The prepared prompt at Git commit `5fec4e1` is historical. The actual owner
 message authorized this data phase and superseded the compulsory tool shortlist.
-The next prompt will be updated here after independently reviewing the complete
-or partial result. No fit phase, resource extension or retry follows a launch.
+The reviewed partial result and current exact following prompt are at the top of
+this guide. No fit phase, resource extension or retry follows this closed launch.
 
-## Overnight exit watchdog, 2026-10-15
+## Overnight exit watchdog record, 2026-10-15 (completed)
 
 The owner reported chat cancellation at the five-hour usage limit and requested
 verified autonomous shutdown after the current workflow completes or crashes.
@@ -231,7 +441,7 @@ different boot cannot masquerade as this live driver. It runs independently of
 SSH/the user's login/chat, at idle I/O priority, nice 19, 5% of one CPU and 96-MiB
 memory cap. It does not inspect model scores, change data or run the deferred audit.
 
-The timer is **active/waiting**, polling every 30 seconds. Once the pinned driver
+At installation the timer was **active/waiting**, polling every 30 seconds. Once the pinned driver
 is absent for 60 seconds, it records stage-manifest hashes, closed attempt records
 if present and short log tails at `/var/lib/e009-exit-watchdog/exit-snapshot.json`,
 mirrored to the persistent phase `watchdog/exit-snapshot.json`. It then syncs disks
@@ -260,12 +470,13 @@ Guest shutdown is a supported [GCE stop method](https://docs.cloud.google.com/co
 No new GCP service/IAM grant/capacity or budget extension was required. Stopped
 disks still cost ~$31.20/month gross; the October-21 retention review remains.
 
-This owner amendment prioritizes prompt automatic stop over keeping compute idle
-for interactive analysis. The exact read-origin audit, biological truth admission,
-complete return review and private checksum/readback archive are **pending**, not
-unattended jobs. Keep truth provisional, preserve the disks and accepted stages.
+This owner amendment prioritized prompt automatic stop over keeping compute idle
+for interactive analysis. The exact read-origin audit and archive were pending at
+shutdown; they were completed in the later bounded review above. Biological
+coordinate truth remains provisional. The snapshot proves the watchdog stopped
+after a failed driver; the current review boot did not activate that old timer.
 
-Next prompt after waking:
+Historical prompt after waking (superseded by the current prompt above):
 
 > Read AGENTS.md, PROJECT_INTENT.md, docs/STATE.md, docs/CLOUD.md and E009 operations
 > and receipts. Inspect the VM's control-plane status and overnight shutdown first.

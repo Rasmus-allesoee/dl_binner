@@ -266,3 +266,17 @@ prototype/dataset cannot decide depth/sequence/taxonomy product membership.
 Additional prospectively selected data are needed to confirm improvements, with
 separate untouched evaluation for broad/SOTA claims. Q001/Q003/Q004/Q005 and
 H001/E001 outcomes remain unchanged; no architecture is selected in this phase.
+
+2026-10-15 E009 data-review update: full sample-0 assembly and all ten BAM/depth
+axes are independently accepted; the complete DAG failed in final truth parsing.
+[The retained native failure](../../experiments/E009-competitive-benchmark/truth-failure-example.json)
+is explained by minimap2 ambiguous-base accounting. The complete sample-0 read/
+source audit verifies 309 positive genome IDs and separate plasmid/host identities;
+[the population review](../../experiments/E009-competitive-benchmark/truth-population-review.json)
+does not admit coordinate truth. Repair/test a fresh truth derivation from retained
+PAFs, then prepare unchanged raw/learned TNF+ten-depth/TNF-only diagnostics under
+a separately proposed $2 fit cap. No native data stage or alignment is replayed,
+no fit/score runs and no external tool belongs in the immediate next step. This
+supplies reusable development data, not a mechanism or performance answer;
+Q001/Q003/Q004/Q005 and H001/E001 scientific outcomes remain unchanged. D013's
+one-mechanism decision rule and prospective additional-data confirmation remain.

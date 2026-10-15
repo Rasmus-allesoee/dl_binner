@@ -1,0 +1,47 @@
+{
+  "line": 1453,
+  "paf": "k141_73461\t2792\t0\t2792\t+\tG000644R000085\t58312\t47656\t50604\t2792\t2947\t0\tNM:i:156\tms:i:2731\tAS:i:2555\tnn:i:1\ttp:A:S\tcm:i:279\ts1:i:2731\tde:f:0.0004\trl:i:0\tcg:Z:1859=156D933=",
+  "cigar_query": 2792,
+  "paf_query": 2792,
+  "cigar_target": 2948,
+  "paf_target": 2948,
+  "cigar_columns": 2948,
+  "paf_block": 2947,
+  "tags": [
+    "NM:i:156",
+    "ms:i:2731",
+    "AS:i:2555",
+    "nn:i:1",
+    "tp:A:S",
+    "cm:i:279",
+    "s1:i:2731",
+    "de:f:0.0004",
+    "rl:i:0",
+    "cg:Z:1859=156D933="
+  ],
+  "source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+  "minimap2_version": "2.30",
+  "primary_source_bindings": [
+    {
+      "url": "https://raw.githubusercontent.com/lh3/minimap2/v2.30/align.c",
+      "bytes": 42485,
+      "sha256": "8abb12d446f372afe11a511bf0fc12da47ed077600543851d4b6ad6282a51389"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lh3/minimap2/v2.30/format.c",
+      "bytes": 23578,
+      "sha256": "81ed67e5d34daddea7ee39104c7500627775815856025bdb706f937df59f7c8e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lh3/minimap2/v2.30/minimap2.1",
+      "bytes": 23271,
+      "sha256": "0bb78d5390345b519982a1e8b7e0603dd87bf67574469657c8212e6858cc2667"
+    }
+  ],
+  "reproduction": {
+    "intended_cause_reproduced": true,
+    "error": "CIGAR/endpoints/block length disagree"
+  },
+  "interpretation": "Query and target endpoints agree with CIGAR. Minimap2 excludes ambiguous bases from blen; CIGAR columns minus PAF block equals nn:i:1. The adapter wrongly requires equality even before its identity filter. No parser repair, truth reconstruction or alignment rerun was executed.",
+  "next_contract": "Validate coordinates and ambiguous-base accounting against exact v2.30 source and actual tiny N-containing native alignments; retain malformed-row rejection and prospective ambiguity/identity policy."
+}

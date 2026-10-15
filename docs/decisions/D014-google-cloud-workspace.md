@@ -1,6 +1,6 @@
 # D014: Google Cloud as the connected Linux research workspace
 
-Date: 2026-10-13; preparation/data-phase amendments: 2026-10-14. Status: **accepted; phase-1 infrastructure verified, later bounded data phase authorized**.
+Date: 2026-10-13; preparation/data/review amendments: 2026-10-14–15. Status: **accepted; infrastructure verified, reusable data accepted after final truth-parser failure**.
 
 ## Problem and decision
 
@@ -123,3 +123,28 @@ in the cumulative allowance. No accepted five-binner/scientific stage was replay
 owns final execution/status/cost/storage; this decision does not infer completion
 or admitted truth from a launch. Stop compute after collection and preserve compact
 checksum/readback evidence. Full-fit admission remains a separate future choice.
+
+## Verified partial data result and review access, 2026-10-15
+
+E009's first live GCP data phase completed acquisition, full assembly, ten BAMs and
+measured depths, then failed in the provisional-truth parser. The exit watchdog
+stopped it correctly; GCP status and the failed driver receipt agree. The separately
+authorized evidence review assessed credit coverage and the remaining $20 budget,
+reused the same VM/disks under a one-hour provider STOP and stopped again after
+**0.4767225 h**, without any provisioning, resize, data/alignment replay or fit.
+
+[CLOUD](../CLOUD.md#verified-data-exit-and-bounded-review-2026-10-15) owns exact
+start/stop/balance/price evidence. Both intervals total **13.656446 provider hours**,
+about **$3.7288 gross compute/IP**; seven-day disk planning exposure is **$7.1803**.
+This remains inside $20 with compact private archive/transfer reserve. A delayed
+invoice is not replaced with allocated core-hours or a credit-display subtraction.
+The private archive/readback and independent Mac member verification pass.
+Current VM is **TERMINATED**, IP released, disks **30/300 GiB**, one-hour STOP policy.
+The original data-phase 25-hour setting is historical, not current authorization.
+
+The measured 170.66-GiB filesystem peak makes smaller future working storage
+plausible. Retain this disk through the approved October-21 review; do not shrink,
+copy, expand quota or delete accepted data automatically. Provider selection does
+not authorize a new fit budget: D013 now prioritizes truth repair/admission and
+unchanged diagnostic preparation, with no immediate external tool. CompleteBin
+stays deferred and read-only GitHub access remains adequate.

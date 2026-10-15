@@ -4,77 +4,64 @@ Updated: 2026-10-15. This is the single current handoff.
 
 ## Exact next step
 
-**The authorized E009 data-only phase is running on GCP; collect and review its
-result before any new execution.** [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md)
-and the [actual phase receipt](../experiments/E009-competitive-benchmark/gcp-data-observed.json)
-own progress/output/cost evidence. The clean execution source is exactly
-**5fec4e1d1700c64c4bdd9945bad4e116ade73c57**, normally pushed from the Mac and
-fast-forwarded on the read-only VM clone. Keep that source unchanged while its
-journals remain active; no binner fit, E009 score or architecture change is authorized.
+**Repair and test a fresh E009 truth derivation from retained PAFs; do not rerun
+acquisition, assembly, mapping, depth or alignment, and do not fit/score a binner.**
+[Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md) owns the exact
+following prompt, budgets and records. [D013](decisions/D013-first-comparative-benchmark.md)
+keeps improvement evidence as the purpose; the unchanged prototype is the control.
 
-**Overnight follow-up, 2026-10-15 02:46 Copenhagen:** the run survived the chat's
-usage-limit cancellation. Sources, sample-0 reads, the complete assembly and
-sample-0 BAM/depth are sealed; sample 2 is acquiring. Assembly: **145,702 contigs /
-231,678,157 bp**, including **89,041 >=500-bp contigs**; it passes the frozen scale
-guard without filtering. About **251 GiB free** remains at the latest snapshot.
-No full-stage result/truth admission is claimed.
+The data-only DAG at **5fec4e1d1700c64c4bdd9945bad4e116ade73c57 failed in its final
+truth parser** (`CIGAR/endpoints/block length disagree`). Ten minimap2 invocations
+exited 0; the retained first failing row has 2,948 CIGAR columns, PAF block 2,947
+and `nn:i:1`, consistent with minimap2 2.30 excluding ambiguous bases from its block
+count. This is an adapter failure, not a biological result or a reason to repeat
+native alignment. The watchdog correctly observed the failed driver and stopped
+the VM at **2026-10-15 11:32 Copenhagen**, independently verified in GCP.
 
-At the owner's request a **root systemd exit watchdog is installed and active**,
-independent of Mac/SSH/Codex. It checks this boot's exact driver PID/birth tick/
-command hash every 30 seconds and, after 60 seconds of absence, records an exit
-snapshot, syncs and requests clean guest shutdown. Native Linux/systemd fixtures
-exercise success and crash with a harmless substituted shutdown action; repeated
-real automatic ticks correctly leave the running experiment alone. The provider
-STOP remains **2026-10-15 23:21 Copenhagen** as the independent fallback. No new
-service, capacity, execution retry or credit envelope was added. It deliberately
-does not auto-arm on a future boot. See [operations](../experiments/E009-competitive-benchmark/OPERATIONS.md#overnight-exit-watchdog-2026-10-15).
-The independent read/source audit, truth admission and compact private result
-archive remain pending review after wake-up; they are not queued after the driver.
-Check control-plane state before connecting/restarting. Do not relaunch the DAG.
+**Accepted reusable feature data:** the complete sample-0 assembly, **145,702
+contigs /231,678,157 bp** (89,041 >=500 bp); all ten full read samples
+**0,2,3,4,6,9,10,11,14,17**, coordinate-sorted/indexed BAMs and measured depths.
+Independent byte/header/axis review passes all **1,457,020 matrix cells**, retaining
+13 all-zero rows and all short DNA. The closed combined matrix inside the failed
+final stage has an explicit separate acceptance receipt; its parent stage remains
+unsealed. [Actual phase/review receipt](../experiments/E009-competitive-benchmark/gcp-data-observed.json)
+owns bindings, verification scope, costs, private archive and stop proof.
 
-The later 2026-10-14 owner clarification makes **our own high-performing,
-potentially SOTA binner** the purpose. The accepted software is a simple prototype
-and immutable comparator, not a completed performance goal. [PROJECT_INTENT](../PROJECT_INTENT.md)
-and [D013](decisions/D013-first-comparative-benchmark.md) now require useful
-improvement evidence, reuse thesis/papers/code and accepted science, and separate
-reusable data from an expensive shortlist campaign. One assembly/prototype cannot
-decide whether depth, sequence or future taxonomy belongs in the product.
+The completed read/source audit proves identical full **33,267,026 mate-ID sets**
+and exact source joins. [Population review](../experiments/E009-competitive-benchmark/truth-population-review.json):
+309 positive simulator genomes, **156 bacterial /0 archaeal /133 viral /11
+eukaryotic /9 separately simulated plasmids**. Two taxonomy joins use exact taxon
+rows without a provider genome ID; 110 preserve synthetic strain identifiers.
+All nine permuted files are ten exact circular rotations of separately simulated
+`pASV` plasmids. Their filename host IDs and `HOST` relationships do not merge them
+with host genomes. Two zero-origin source files and 1,280 unobserved replicons stay
+in the competitive universe. No rounded profile percentage determines presence.
 
-Full samples **0,2,3,4,6,9,10,11,14,17** support **one full sample-0 MEGAHIT assembly**.
-Live browser/API checks verify paid billing, **DKK1,972.04 Available Free Trial
-credit through 2027-01-12**, eligible ordinary CPU/disk/Storage/VPC and current DKK
-prices. Billing lag is explicit. The requested balanced/SSD quota is now **300 GiB**;
-the existing VM is **8 CPU/32 GiB**, boot/work **30/300 GiB**, existing ext4 expanded
-without formatting, and **25-hour provider STOP** set before start. Keep the
-**$20 gross run/seven-day envelope**, **24-hour cumulative setup/QA/driver clock**
-and **25-GiB free reserve**, with no automatic extra resource/clock/retry/filtering.
-The data-only 300-GiB estimate excludes CompleteBin; reserve/scratch argues against
-250 for a seven-day saving of only ~$1.15. Stopped disks continue at **$31.20/month
-(~DKK205.24)** gross. Review retention by **2026-10-21**, and expiry by 2027-01-10.
+**Truth is not admitted.** Repair the ambiguous-base parser contract, derive a
+versioned simulator-genome axis and circular-coordinate map, then validate full
+provided-reference denominators, cellular targets and global competing-chain
+ambiguity. Preserve originals, failed journals and all DNA. No MAG-quality,
+independent-genome/pretraining or bin-recovery claim follows from this review.
 
-The complete pinned independent Linux data environment and tiny actual 14-rule
-changed-driver fixture passed on this host, including native ten-axis depth,
-cross-batch ambiguity and fresh/partial/completed resume. Runtime/QA used 42.501 s,
-counted in the original cumulative budget. This is not full-scale admission or
-truth-population validation. [V10/v14](../experiments/E009-competitive-benchmark/linux-preflight-v14.json)
-five-tool contracts remain accepted without replay; no old science/prefix moved.
+After admitted truth, the prepared [diagnostic proposal](../experiments/E009-competitive-benchmark/diagnostic-controls-plan.json)
+keeps dev3 source **5e54538d1799e8d2538621729400f33fbaf017b9**, seed 11, 20 epochs and
+fixed grouping: raw/learned TNF+ten-depth and TNF-only. A proposed **new $2
+incremental fit budget**, four-hour cumulative phase/4.25-hour provider STOP on the
+existing 8 CPU/32-GiB VM, needs explicit approval and a validated native launcher;
+it is a ceiling, not measured affordability. **No external tool is recommended in
+the immediate next step.** SemiBin2 remains at most one later conditional reference;
+CompleteBin/COMEBin full grid/SCGBinner remain deferred. Select one mechanism only
+after diagnostics and confirm improvements on prospectively chosen additional data.
 
-Review closed read/source/assembly/BAM/depth bytes and native axes, **exact positive
-sample-0 origins, genome/replicon grouping and cellular taxonomy** before admitting
-truth. Keep unresolved truth provisional and all source/short/ambiguous DNA. Main's
-dev3 remains unchanged. The overnight watchdog now stops the VM before interactive
-collection/review; preserve the on-disk logs and later capture compact private
-checksum/readback evidence and measured allocation versus priced uptime.
-
-**Defer full CompleteBin**, retaining its architecture/storage study. Also defer
-COMEBin's full grid and SCGBinner until a precise improvement question justifies
-cost. Later, after separate approval, prioritize our unchanged diagnostic controls
-and at most one resource-admitted **SemiBin2** reference; **MetaCAT core** is
-conditional on a useful grouping decision. Prefer a matched mechanism test when
-it answers that decision more directly. CompleteBin's stored max-50 recipe and all
-accepted locks remain provenance, not a run entitlement. Broader prospectively
-untouched data are needed to confirm improvements and support strong/SOTA claims.
-Keep read-only GitHub access; no credential changes/main merge/publication.
+The bounded review reused the existing VM/disks with a **one-hour provider STOP**,
+without provisioning/resizing or DAG/fit execution. Its stop and priced uptime are
+in the receipt. Keep the **$20 data-only/seven-day envelope**, original cumulative
+24-hour data clock and 25-GiB reserve. Measured production peak filesystem use was
+**170.66 GiB**, minimum sampled free **124.52 GiB**. The existing 300-GiB work disk
+cannot be shrunk in place. Stopped boot/work disks remain **$31.20/month gross**;
+review retention by **2026-10-21** and credit expiry by 2027-01-10. No storage
+migration, deletion, new capacity or retention extension is authorized. Keep the
+read-only GitHub key, immutable baseline and old UCloud evidence.
 
 ## Direction and completed work
 

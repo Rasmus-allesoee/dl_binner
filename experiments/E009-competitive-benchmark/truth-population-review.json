@@ -1,0 +1,4701 @@
+{
+  "record": "E009",
+  "status": "positive origin population and source-file grouping reviewed; alignment truth remains unadmitted",
+  "origin_audit_sha256": "65a40c5d1f8f88e74fcabe63cb5b492eb49a10d93c36dcb0f8f1109c30e6d503",
+  "exact_mate_records": 33267026,
+  "positive_genomes": 309,
+  "positive_genomes_by_lineage": {
+    "bacterial": 156,
+    "eukaryotic": 11,
+    "other": 9,
+    "viral": 133
+  },
+  "read_record_fractions": {
+    "bacterial": 0.8332369716487431,
+    "eukaryotic": 0.14416924434423445,
+    "other": 0.0068530321886903865,
+    "viral": 0.015740751818332063
+  },
+  "multiple_positive_genomes_per_file": {},
+  "multiple_files_per_positive_genome": {},
+  "selected_source_files_without_positive_origins": [
+    "NC_001420_2_Genome_of_phage_G4_coliphage_genomic.fna",
+    "NC_019026_1_Astrovirus_VA3_isolate_VA3_human_Vellore_28054_2005_complete_genome_genomic.fna"
+  ],
+  "unobserved_competitive_replicons": 1280,
+  "primary_candidates": 156,
+  "genomes": {
+    "ASV1.11": {
+      "source_files": [
+        "Bifidobacterium_longum_1001271st1_H8_1001271B_151109_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "216816",
+      "provider_tax_id": "216816.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 2900,
+      "HOST": "",
+      "literal_provided_bp": 2471506,
+      "one_copy_provided_bp": 2471506,
+      "primary_candidate": true,
+      "provided_replicons": 63
+    },
+    "ASV10.0": {
+      "source_files": [
+        "Actinomyces_urogenitalis_BSD2780061687b_171204_D11_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "103621",
+      "provider_tax_id": "103621.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 2280,
+      "HOST": "",
+      "literal_provided_bp": 2617421,
+      "one_copy_provided_bp": 2617421,
+      "primary_candidate": true,
+      "provided_replicons": 29
+    },
+    "ASV101.4": {
+      "source_files": [
+        "Bacteroides_uniformis_1001283st1_F2_1001285H_161024_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "820",
+      "provider_tax_id": "820.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 11676,
+      "HOST": "",
+      "literal_provided_bp": 4666200,
+      "one_copy_provided_bp": 4666200,
+      "primary_candidate": true,
+      "provided_replicons": 69
+    },
+    "ASV102.10": {
+      "source_files": [
+        "Bacteroides_thetaiotaomicron_1001095st1_D10_1001095H_141210_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "818",
+      "provider_tax_id": "818.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1432884,
+      "HOST": "",
+      "literal_provided_bp": 6653351,
+      "one_copy_provided_bp": 6653351,
+      "primary_candidate": true,
+      "provided_replicons": 83
+    },
+    "ASV12.3": {
+      "source_files": [
+        "Bifidobacterium_pseudocatenulatum_TM07_3AT_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "28026",
+      "provider_tax_id": "28026.25",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 336,
+      "HOST": "",
+      "literal_provided_bp": 2242522,
+      "one_copy_provided_bp": 2242522,
+      "primary_candidate": true,
+      "provided_replicons": 10
+    },
+    "ASV124.5": {
+      "source_files": [
+        "Phocaeicola_vulgatus_RTP21277st1_D3_RTP21277_210401_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "821",
+      "provider_tax_id": "821.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 24320,
+      "HOST": "",
+      "literal_provided_bp": 5133377,
+      "one_copy_provided_bp": 5133377,
+      "primary_candidate": true,
+      "provided_replicons": 86
+    },
+    "ASV134.7": {
+      "source_files": [
+        "Bacteroides_fragilis_GUT04_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "817",
+      "provider_tax_id": "817.9",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 104128,
+      "HOST": "",
+      "literal_provided_bp": 5330584,
+      "one_copy_provided_bp": 5330584,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV137.1": {
+      "source_files": [
+        "Butyricimonas_synergistica_AF67_12_b12A_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "544644",
+      "provider_tax_id": "544644.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 49300,
+      "HOST": "",
+      "literal_provided_bp": 4870983,
+      "one_copy_provided_bp": 4870983,
+      "primary_candidate": true,
+      "provided_replicons": 22
+    },
+    "ASV139.5": {
+      "source_files": [
+        "Odoribacter_splanchnicus_D59st1_E11_D59t2_181005_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "28118",
+      "provider_tax_id": "28118.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 166,
+      "HOST": "",
+      "literal_provided_bp": 4239635,
+      "one_copy_provided_bp": 4239635,
+      "primary_candidate": true,
+      "provided_replicons": 68
+    },
+    "ASV149.0": {
+      "source_files": [
+        "Paraprevotella_xylaniphila_YIT_11841_YIT_11841_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "762982",
+      "provider_tax_id": "762982",
+      "taxonomy_join_mode": "exact_origin_taxon_without_provider_genome_id",
+      "positive_read_records": 8834646,
+      "HOST": "",
+      "literal_provided_bp": 3789812,
+      "one_copy_provided_bp": 3789812,
+      "primary_candidate": true,
+      "provided_replicons": 87
+    },
+    "ASV150.14": {
+      "source_files": [
+        "Bacteroides_ovatus_D52t1_170925_C3_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "28116",
+      "provider_tax_id": "28116.19",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1154044,
+      "HOST": "",
+      "literal_provided_bp": 6474050,
+      "one_copy_provided_bp": 6474050,
+      "primary_candidate": true,
+      "provided_replicons": 93
+    },
+    "ASV153.8": {
+      "source_files": [
+        "Bacteroides_thetaiotaomicron_E8_m1001262Bd2_200113_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "818",
+      "provider_tax_id": "818.15",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 437894,
+      "HOST": "",
+      "literal_provided_bp": 5991840,
+      "one_copy_provided_bp": 5991840,
+      "primary_candidate": true,
+      "provided_replicons": 44
+    },
+    "ASV154.6": {
+      "source_files": [
+        "Parabacteroides_sp_OF04_13BH_OF04_13BH_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2293124",
+      "provider_tax_id": "2293124.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 200,
+      "HOST": "",
+      "literal_provided_bp": 5386382,
+      "one_copy_provided_bp": 5386382,
+      "primary_candidate": true,
+      "provided_replicons": 79
+    },
+    "ASV156.5": {
+      "source_files": [
+        "Bacteroides_intestinalis_APC919_174_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "329854",
+      "provider_tax_id": "329854.3",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1094,
+      "HOST": "",
+      "literal_provided_bp": 5785761,
+      "one_copy_provided_bp": 5785761,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV166.0": {
+      "source_files": [
+        "Alistipes_onderdonkii_1001283st1_H2_1001283B150304_161114_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "328813",
+      "provider_tax_id": "328813.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 358,
+      "HOST": "",
+      "literal_provided_bp": 3291693,
+      "one_copy_provided_bp": 3291693,
+      "primary_candidate": true,
+      "provided_replicons": 53
+    },
+    "ASV173.0": {
+      "source_files": [
+        "Parabacteroides_merdae_RTP21484st1_A8_RTP21484_190118_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "46503",
+      "provider_tax_id": "46503.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 344,
+      "HOST": "",
+      "literal_provided_bp": 4424479,
+      "one_copy_provided_bp": 4424479,
+      "primary_candidate": true,
+      "provided_replicons": 66
+    },
+    "ASV174.18": {
+      "source_files": [
+        "Parabacteroides_distasonis_D41st1_G7_D41t1_190614_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "823",
+      "provider_tax_id": "823.6",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 141618,
+      "HOST": "",
+      "literal_provided_bp": 5165509,
+      "one_copy_provided_bp": 5165509,
+      "primary_candidate": true,
+      "provided_replicons": 94
+    },
+    "ASV178.5": {
+      "source_files": [
+        "Bacteroides_uniformis_BIOML_A31_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "820",
+      "provider_tax_id": "820.11",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 190,
+      "HOST": "",
+      "literal_provided_bp": 4888543,
+      "one_copy_provided_bp": 4888543,
+      "primary_candidate": true,
+      "provided_replicons": 73
+    },
+    "ASV19.14": {
+      "source_files": [
+        "Bifidobacterium_adolescentis_RTP21358st1_B3_RTP21358_211008_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1680",
+      "provider_tax_id": "1680.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 254,
+      "HOST": "",
+      "literal_provided_bp": 2282191,
+      "one_copy_provided_bp": 2282191,
+      "primary_candidate": true,
+      "provided_replicons": 37
+    },
+    "ASV221.15": {
+      "source_files": [
+        "Vibrio_cholerae_36KI_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "666",
+      "provider_tax_id": "666.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 436,
+      "HOST": "",
+      "literal_provided_bp": 4020592,
+      "one_copy_provided_bp": 4020592,
+      "primary_candidate": true,
+      "provided_replicons": 57
+    },
+    "ASV222.0": {
+      "source_files": [
+        "Streptococcus_mutans_RTP21428st1_B11_RTP21428_210409_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1309",
+      "provider_tax_id": "1309.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 3808,
+      "HOST": "",
+      "literal_provided_bp": 2008196,
+      "one_copy_provided_bp": 2008196,
+      "primary_candidate": true,
+      "provided_replicons": 17
+    },
+    "ASV227.0": {
+      "source_files": [
+        "Gemella_morbillorum_1033st1_C5_1033SCRN_220408_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "29391",
+      "provider_tax_id": "29391.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 394,
+      "HOST": "",
+      "literal_provided_bp": 1755381,
+      "one_copy_provided_bp": 1755381,
+      "primary_candidate": true,
+      "provided_replicons": 32
+    },
+    "ASV23.7": {
+      "source_files": [
+        "Bifidobacterium_breve_BSD2780061687st1_C6_BSD2780061687_150420_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1685",
+      "provider_tax_id": "1685.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 41680,
+      "HOST": "",
+      "literal_provided_bp": 2390835,
+      "one_copy_provided_bp": 2390835,
+      "primary_candidate": true,
+      "provided_replicons": 28
+    },
+    "ASV245.8": {
+      "source_files": [
+        "Streptococcus_parasanguinis_D53t1_180928_H2_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1318",
+      "provider_tax_id": "1318.3",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1956,
+      "HOST": "",
+      "literal_provided_bp": 2071204,
+      "one_copy_provided_bp": 2071204,
+      "primary_candidate": true,
+      "provided_replicons": 23
+    },
+    "ASV255.2": {
+      "source_files": [
+        "Enterococcus_faecalis_4928STDY7071248_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1351",
+      "provider_tax_id": "1351.24",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 794,
+      "HOST": "",
+      "literal_provided_bp": 2983284,
+      "one_copy_provided_bp": 2983284,
+      "primary_candidate": true,
+      "provided_replicons": 19
+    },
+    "ASV257.1": {
+      "source_files": [
+        "Enterococcus_faecalis_4928STDY7071697_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1351",
+      "provider_tax_id": "1351.14",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 104,
+      "HOST": "",
+      "literal_provided_bp": 2658923,
+      "one_copy_provided_bp": 2658923,
+      "primary_candidate": true,
+      "provided_replicons": 21
+    },
+    "ASV258.8": {
+      "source_files": [
+        "Enterococcus_hirae_BIOML_A69_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1354",
+      "provider_tax_id": "1354.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 97122,
+      "HOST": "",
+      "literal_provided_bp": 2840135,
+      "one_copy_provided_bp": 2840135,
+      "primary_candidate": true,
+      "provided_replicons": 18
+    },
+    "ASV265.0": {
+      "source_files": [
+        "Lactobacillus_delbrueckii_AM60_1pH4A_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1584",
+      "provider_tax_id": "1584.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 538,
+      "HOST": "",
+      "literal_provided_bp": 2023155,
+      "one_copy_provided_bp": 2023155,
+      "primary_candidate": true,
+      "provided_replicons": 64
+    },
+    "ASV266.11": {
+      "source_files": [
+        "Lactobacillus_sp_RTP31084st1_D4_RTP31084_210423_RTP31084st1_D4_RTP31084_210423_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "3143214",
+      "provider_tax_id": "3143214.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 769598,
+      "HOST": "",
+      "literal_provided_bp": 2042984,
+      "one_copy_provided_bp": 2042984,
+      "primary_candidate": true,
+      "provided_replicons": 17
+    },
+    "ASV284.4": {
+      "source_files": [
+        "Weissella_confusa_1001271B_151109_G12_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1583",
+      "provider_tax_id": "1583.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 108396,
+      "HOST": "",
+      "literal_provided_bp": 2262214,
+      "one_copy_provided_bp": 2262214,
+      "primary_candidate": true,
+      "provided_replicons": 31
+    },
+    "ASV286.1": {
+      "source_files": [
+        "Streptococcus_salivarius_D55t1_190419_H2_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1304",
+      "provider_tax_id": "1304.7",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 234,
+      "HOST": "",
+      "literal_provided_bp": 2187798,
+      "one_copy_provided_bp": 2187798,
+      "primary_candidate": true,
+      "provided_replicons": 37
+    },
+    "ASV287.1": {
+      "source_files": [
+        "Lactococcus_petauri_AM102_100_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1940789",
+      "provider_tax_id": "1940789.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1366,
+      "HOST": "",
+      "literal_provided_bp": 1993492,
+      "one_copy_provided_bp": 1993492,
+      "primary_candidate": true,
+      "provided_replicons": 31
+    },
+    "ASV290.6": {
+      "source_files": [
+        "Streptococcus_salivarius_1001095IJ_161003_D10_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1304",
+      "provider_tax_id": "1304.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 234316,
+      "HOST": "",
+      "literal_provided_bp": 2359616,
+      "one_copy_provided_bp": 2359616,
+      "primary_candidate": true,
+      "provided_replicons": 45
+    },
+    "ASV297.4": {
+      "source_files": [
+        "Ligaoa_zhengdingensis_1033st1_H6_1033SCRN_220408_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2763658",
+      "provider_tax_id": "2763658.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 236,
+      "HOST": "",
+      "literal_provided_bp": 3033087,
+      "one_copy_provided_bp": 3033087,
+      "primary_candidate": true,
+      "provided_replicons": 46
+    },
+    "ASV300.2": {
+      "source_files": [
+        "Clostridium_sp_AF37_5_AF37_5_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2293016",
+      "provider_tax_id": "2293016.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 297736,
+      "HOST": "",
+      "literal_provided_bp": 3107801,
+      "one_copy_provided_bp": 3107801,
+      "primary_candidate": true,
+      "provided_replicons": 64
+    },
+    "ASV300.8": {
+      "source_files": [
+        "Clostridium_paraputrificum_J1100102_180507_D7_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "29363",
+      "provider_tax_id": "29363.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 773386,
+      "HOST": "",
+      "literal_provided_bp": 3460293,
+      "one_copy_provided_bp": 3460293,
+      "primary_candidate": true,
+      "provided_replicons": 89
+    },
+    "ASV305.7": {
+      "source_files": [
+        "Clostridioides_difficile_Cdif_IE22_3706_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1496",
+      "provider_tax_id": "1496.29",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 170,
+      "HOST": "",
+      "literal_provided_bp": 4495809,
+      "one_copy_provided_bp": 4495809,
+      "primary_candidate": true,
+      "provided_replicons": 96
+    },
+    "ASV309.7": {
+      "source_files": [
+        "Clostridioides_difficile_Cdif_IE22_2222_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1496",
+      "provider_tax_id": "1496.34",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 2586,
+      "HOST": "",
+      "literal_provided_bp": 4280910,
+      "one_copy_provided_bp": 4280910,
+      "primary_candidate": true,
+      "provided_replicons": 72
+    },
+    "ASV316.11": {
+      "source_files": [
+        "Enterococcus_casseliflavus_4928STDY7071326_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "37734",
+      "provider_tax_id": "37734.8",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 140,
+      "HOST": "",
+      "literal_provided_bp": 3588789,
+      "one_copy_provided_bp": 3588789,
+      "primary_candidate": true,
+      "provided_replicons": 48
+    },
+    "ASV324.5": {
+      "source_files": [
+        "Intestinimonas_butyriciproducens_1033st1_A11_1033SCRN_220408_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1297617",
+      "provider_tax_id": "1297617.3",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1448,
+      "HOST": "",
+      "literal_provided_bp": 3856853,
+      "one_copy_provided_bp": 3856853,
+      "primary_candidate": true,
+      "provided_replicons": 54
+    },
+    "ASV329.2": {
+      "source_files": [
+        "Christensenella_minuta_CIP_112229_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "626937",
+      "provider_tax_id": "626937.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 38576,
+      "HOST": "",
+      "literal_provided_bp": 2770539,
+      "one_copy_provided_bp": 2770539,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV334.1": {
+      "source_files": [
+        "Clostridium_sp_OM05_9_OM05_9_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2293045",
+      "provider_tax_id": "2293045.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 4150,
+      "HOST": "",
+      "literal_provided_bp": 2881652,
+      "one_copy_provided_bp": 2881652,
+      "primary_candidate": true,
+      "provided_replicons": 16
+    },
+    "ASV337.1": {
+      "source_files": [
+        "Butyricicoccus_sp_AM05_1_AM05_1_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2292004",
+      "provider_tax_id": "2292004.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 114354,
+      "HOST": "",
+      "literal_provided_bp": 3164285,
+      "one_copy_provided_bp": 3164285,
+      "primary_candidate": true,
+      "provided_replicons": 33
+    },
+    "ASV341.3": {
+      "source_files": [
+        "Clostridium_sp_AF17_2_AF17_2_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2293000",
+      "provider_tax_id": "2293000.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 860,
+      "HOST": "",
+      "literal_provided_bp": 2805580,
+      "one_copy_provided_bp": 2805580,
+      "primary_candidate": true,
+      "provided_replicons": 12
+    },
+    "ASV347.10": {
+      "source_files": [
+        "Escherichia_coli_O2_K2_H1_C_237_04_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2990469",
+      "provider_tax_id": "2990469.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 388,
+      "HOST": "",
+      "literal_provided_bp": 4918902,
+      "one_copy_provided_bp": 4918902,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV348.5": {
+      "source_files": [
+        "Escherichia_coli_2017_17_01CC_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "562",
+      "provider_tax_id": "562.85",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 184,
+      "HOST": "",
+      "literal_provided_bp": 4674031,
+      "one_copy_provided_bp": 4674031,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV364.1": {
+      "source_files": [
+        "Emergencia_timonensis_CE91_St48_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1776384",
+      "provider_tax_id": "1776384.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 654,
+      "HOST": "",
+      "literal_provided_bp": 4364341,
+      "one_copy_provided_bp": 4364341,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV368.3": {
+      "source_files": [
+        "Clostridioides_difficile_Cd18_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1496",
+      "provider_tax_id": "1496.30",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 328,
+      "HOST": "",
+      "literal_provided_bp": 4162950,
+      "one_copy_provided_bp": 4162950,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV371.2": {
+      "source_files": [
+        "Laedolimicola_ammoniilytica_Sanger_04_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2981771",
+      "provider_tax_id": "2981771.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 5386,
+      "HOST": "",
+      "literal_provided_bp": 3561714,
+      "one_copy_provided_bp": 3561714,
+      "primary_candidate": true,
+      "provided_replicons": 67
+    },
+    "ASV372.2": {
+      "source_files": [
+        "Eubacterium_maltosivorans_BSD2780120874b_170522_C8_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2041044",
+      "provider_tax_id": "2041044.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 41554,
+      "HOST": "",
+      "literal_provided_bp": 4171777,
+      "one_copy_provided_bp": 4171777,
+      "primary_candidate": true,
+      "provided_replicons": 58
+    },
+    "ASV373.9": {
+      "source_files": [
+        "Klebsiella_variicola_Esso8_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "244366",
+      "provider_tax_id": "244366.3",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1476,
+      "HOST": "",
+      "literal_provided_bp": 5534824,
+      "one_copy_provided_bp": 5534824,
+      "primary_candidate": true,
+      "provided_replicons": 85
+    },
+    "ASV374.3": {
+      "source_files": [
+        "Enterococcus_faecalis_4928STDY7387783_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1351",
+      "provider_tax_id": "1351.80",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 762,
+      "HOST": "",
+      "literal_provided_bp": 2849996,
+      "one_copy_provided_bp": 2849996,
+      "primary_candidate": true,
+      "provided_replicons": 22
+    },
+    "ASV380.3": {
+      "source_files": [
+        "Eubacterium_sp_AF34_35BH_AF34_35BH_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2293107",
+      "provider_tax_id": "2293107.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 106,
+      "HOST": "",
+      "literal_provided_bp": 2669882,
+      "one_copy_provided_bp": 2669882,
+      "primary_candidate": true,
+      "provided_replicons": 23
+    },
+    "ASV385.7": {
+      "source_files": [
+        "Enterococcus_faecalis_4928STDY7387728_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1351",
+      "provider_tax_id": "1351.67",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 450,
+      "HOST": "",
+      "literal_provided_bp": 3065129,
+      "one_copy_provided_bp": 3065129,
+      "primary_candidate": true,
+      "provided_replicons": 82
+    },
+    "ASV387.0": {
+      "source_files": [
+        "Faecalimonas_umbilicata_AM75_29pH10TA_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1912855",
+      "provider_tax_id": "1912855.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1766260,
+      "HOST": "",
+      "literal_provided_bp": 3067081,
+      "one_copy_provided_bp": 3067081,
+      "primary_candidate": true,
+      "provided_replicons": 45
+    },
+    "ASV397.3": {
+      "source_files": [
+        "Agathobacter_rectalis_AM42_17AT_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "39491",
+      "provider_tax_id": "39491.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 3048,
+      "HOST": "",
+      "literal_provided_bp": 3361628,
+      "one_copy_provided_bp": 3361628,
+      "primary_candidate": true,
+      "provided_replicons": 43
+    },
+    "ASV399.6": {
+      "source_files": [
+        "Anaerostipes_hadrus_2789STDY5834959_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "649756",
+      "provider_tax_id": "649756.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 240164,
+      "HOST": "",
+      "literal_provided_bp": 3159004,
+      "one_copy_provided_bp": 3159004,
+      "primary_candidate": true,
+      "provided_replicons": 37
+    },
+    "ASV406.4": {
+      "source_files": [
+        "Blautia_obeum_AM37_4AC_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "40520",
+      "provider_tax_id": "40520.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1053872,
+      "HOST": "",
+      "literal_provided_bp": 3405233,
+      "one_copy_provided_bp": 3405233,
+      "primary_candidate": true,
+      "provided_replicons": 22
+    },
+    "ASV420.1": {
+      "source_files": [
+        "Enterococcus_faecalis_4928STDY7387826_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1351",
+      "provider_tax_id": "1351.71",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 114,
+      "HOST": "",
+      "literal_provided_bp": 3085836,
+      "one_copy_provided_bp": 3085836,
+      "primary_candidate": true,
+      "provided_replicons": 47
+    },
+    "ASV426.8": {
+      "source_files": [
+        "Dorea_longicatena_RTP21102st1_A12_RTP21102_210122_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "88431",
+      "provider_tax_id": "88431.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 321990,
+      "HOST": "",
+      "literal_provided_bp": 2846531,
+      "one_copy_provided_bp": 2846531,
+      "primary_candidate": true,
+      "provided_replicons": 35
+    },
+    "ASV429.0": {
+      "source_files": [
+        "Eisenbergiella_porci_AF73_11pH9TA_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2652274",
+      "provider_tax_id": "2652274.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 38166,
+      "HOST": "",
+      "literal_provided_bp": 6850744,
+      "one_copy_provided_bp": 6850744,
+      "primary_candidate": true,
+      "provided_replicons": 39
+    },
+    "ASV431.3": {
+      "source_files": [
+        "Fusicatenibacter_saccharivorans_BSD3178071175st1_C1_BSD3178071175_160912_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1150298",
+      "provider_tax_id": "1150298.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 55538,
+      "HOST": "",
+      "literal_provided_bp": 3704208,
+      "one_copy_provided_bp": 3704208,
+      "primary_candidate": true,
+      "provided_replicons": 66
+    },
+    "ASV436.0": {
+      "source_files": [
+        "hylemonae_BSD2780061688b_171218_A6_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "89153",
+      "provider_tax_id": "89153.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 412630,
+      "HOST": "",
+      "literal_provided_bp": 3794810,
+      "one_copy_provided_bp": 3794810,
+      "primary_candidate": true,
+      "provided_replicons": 51
+    },
+    "ASV437.3": {
+      "source_files": [
+        "Enterococcus_hirae_BIOML_A80_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1354",
+      "provider_tax_id": "1354.9",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 760,
+      "HOST": "",
+      "literal_provided_bp": 2840491,
+      "one_copy_provided_bp": 2840491,
+      "primary_candidate": true,
+      "provided_replicons": 27
+    },
+    "ASV440.15": {
+      "source_files": [
+        "Escherichia_coli_BSD2780061687st1_B7_BSD2780061687_150420_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "562",
+      "provider_tax_id": "562.77",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1558,
+      "HOST": "",
+      "literal_provided_bp": 5093249,
+      "one_copy_provided_bp": 5093249,
+      "primary_candidate": true,
+      "provided_replicons": 65
+    },
+    "ASV442.4": {
+      "source_files": [
+        "Lachnoanaerobaculum_sp_OBRC5_5_OBRC5_5_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "936595",
+      "provider_tax_id": "936595.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 226,
+      "HOST": "",
+      "literal_provided_bp": 2932121,
+      "one_copy_provided_bp": 2932121,
+      "primary_candidate": true,
+      "provided_replicons": 7
+    },
+    "ASV444.5": {
+      "source_files": [
+        "Mediterraneibacter_gnavus_unnamed_26_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "33038",
+      "provider_tax_id": "33038.18",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 28894,
+      "HOST": "",
+      "literal_provided_bp": 3174825,
+      "one_copy_provided_bp": 3174825,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV447.2": {
+      "source_files": [
+        "Enterocloster_bolteae_1001302B_160321_D9_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "208479",
+      "provider_tax_id": "208479.6",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1478,
+      "HOST": "",
+      "literal_provided_bp": 6496001,
+      "one_copy_provided_bp": 6496001,
+      "primary_candidate": true,
+      "provided_replicons": 77
+    },
+    "ASV456.0": {
+      "source_files": [
+        "Roseburia_hominis_AF22_12AC_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "301301",
+      "provider_tax_id": "301301.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 229548,
+      "HOST": "",
+      "literal_provided_bp": 3549767,
+      "one_copy_provided_bp": 3549767,
+      "primary_candidate": true,
+      "provided_replicons": 54
+    },
+    "ASV463.1": {
+      "source_files": [
+        "Lacticaseibacillus_rhamnosus_1001216B_150713_B1_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "47715",
+      "provider_tax_id": "47715.5",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 2968,
+      "HOST": "",
+      "literal_provided_bp": 2903257,
+      "one_copy_provided_bp": 2903257,
+      "primary_candidate": true,
+      "provided_replicons": 81
+    },
+    "ASV466.0": {
+      "source_files": [
+        "Enterocloster_bolteae_D40t1_170626_F8_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "208479",
+      "provider_tax_id": "208479.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 18080,
+      "HOST": "",
+      "literal_provided_bp": 6453494,
+      "one_copy_provided_bp": 6453494,
+      "primary_candidate": true,
+      "provided_replicons": 66
+    },
+    "ASV470.1": {
+      "source_files": [
+        "Oscillibacter_sp_PEA192_PEA192_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2109687",
+      "provider_tax_id": "2109687.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 164886,
+      "HOST": "",
+      "literal_provided_bp": 3320462,
+      "one_copy_provided_bp": 3320462,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV471.8": {
+      "source_files": [
+        "Salmonella_enterica_subsp_enterica_serovar_Enteritidis_SMJ2553_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "149539",
+      "provider_tax_id": "149539.12",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 2354,
+      "HOST": "",
+      "literal_provided_bp": 4747724,
+      "one_copy_provided_bp": 4747724,
+      "primary_candidate": true,
+      "provided_replicons": 24
+    },
+    "ASV473.1": {
+      "source_files": [
+        "Clostridium_baratii_OF25_3pH9A_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1561",
+      "provider_tax_id": "1561.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 6634,
+      "HOST": "",
+      "literal_provided_bp": 3123682,
+      "one_copy_provided_bp": 3123682,
+      "primary_candidate": true,
+      "provided_replicons": 22
+    },
+    "ASV476.8": {
+      "source_files": [
+        "Clostridioides_difficile_2_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1496",
+      "provider_tax_id": "1496.7",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 733672,
+      "HOST": "",
+      "literal_provided_bp": 4242385,
+      "one_copy_provided_bp": 4242385,
+      "primary_candidate": true,
+      "provided_replicons": 61
+    },
+    "ASV481.2": {
+      "source_files": [
+        "Intestinibacter_bartlettii_1033st1_H9_1033SCRN_220408_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "261299",
+      "provider_tax_id": "261299.5",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 3314,
+      "HOST": "",
+      "literal_provided_bp": 3012096,
+      "one_copy_provided_bp": 3012096,
+      "primary_candidate": true,
+      "provided_replicons": 35
+    },
+    "ASV484.0": {
+      "source_files": [
+        "Romboutsia_sp_1001216sp1_1001216st1_D7_1001216B_150713_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2986997",
+      "provider_tax_id": "2986997.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 133342,
+      "HOST": "",
+      "literal_provided_bp": 2957579,
+      "one_copy_provided_bp": 2957579,
+      "primary_candidate": true,
+      "provided_replicons": 42
+    },
+    "ASV486.6": {
+      "source_files": [
+        "Clostridioides_difficile_GV1152_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1496",
+      "provider_tax_id": "1496.16",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 924,
+      "HOST": "",
+      "literal_provided_bp": 4055778,
+      "one_copy_provided_bp": 4055778,
+      "primary_candidate": true,
+      "provided_replicons": 68
+    },
+    "ASV487.10": {
+      "source_files": [
+        "Ruminococcus_sp_1001136B_160425_D2_1001136B_160425_D2_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2787121",
+      "provider_tax_id": "2787121.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1860424,
+      "HOST": "",
+      "literal_provided_bp": 4161664,
+      "one_copy_provided_bp": 4161664,
+      "primary_candidate": true,
+      "provided_replicons": 85
+    },
+    "ASV49.2": {
+      "source_files": [
+        "Bifidobacterium_breve_BSD2780061687_150420_F12_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1685",
+      "provider_tax_id": "1685.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 810,
+      "HOST": "",
+      "literal_provided_bp": 2398304,
+      "one_copy_provided_bp": 2398304,
+      "primary_candidate": true,
+      "provided_replicons": 30
+    },
+    "ASV491.4": {
+      "source_files": [
+        "Enterococcus_faecalis_4928STDY7071652_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1351",
+      "provider_tax_id": "1351.69",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 3530,
+      "HOST": "",
+      "literal_provided_bp": 2914289,
+      "one_copy_provided_bp": 2914289,
+      "primary_candidate": true,
+      "provided_replicons": 38
+    },
+    "ASV497.3": {
+      "source_files": [
+        "Enterococcus_faecalis_4928STDY7387899_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1351",
+      "provider_tax_id": "1351.97",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 2446,
+      "HOST": "",
+      "literal_provided_bp": 2931587,
+      "one_copy_provided_bp": 2931587,
+      "primary_candidate": true,
+      "provided_replicons": 32
+    },
+    "ASV499.2": {
+      "source_files": [
+        "Anaerotruncus_colihominis_1001302B_160321_A9_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "169435",
+      "provider_tax_id": "169435.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 2240,
+      "HOST": "",
+      "literal_provided_bp": 3461905,
+      "one_copy_provided_bp": 3461905,
+      "primary_candidate": true,
+      "provided_replicons": 32
+    },
+    "ASV5.11": {
+      "source_files": [
+        "Bifidobacterium_bifidum_AF11_44_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1681",
+      "provider_tax_id": "1681.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 174,
+      "HOST": "",
+      "literal_provided_bp": 2233714,
+      "one_copy_provided_bp": 2233714,
+      "primary_candidate": true,
+      "provided_replicons": 17
+    },
+    "ASV50.0": {
+      "source_files": [
+        "Bifidobacterium_angulatum_RTP21484st1_B11_RTP21484_190118_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1683",
+      "provider_tax_id": "1683.3",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 76,
+      "HOST": "",
+      "literal_provided_bp": 2000612,
+      "one_copy_provided_bp": 2000612,
+      "primary_candidate": true,
+      "provided_replicons": 7
+    },
+    "ASV504.4": {
+      "source_files": [
+        "Clostridium_perfringens_AF30_3_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1502",
+      "provider_tax_id": "1502.9",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 3326,
+      "HOST": "",
+      "literal_provided_bp": 3402500,
+      "one_copy_provided_bp": 3402500,
+      "primary_candidate": true,
+      "provided_replicons": 49
+    },
+    "ASV507.0": {
+      "source_files": [
+        "Faecalibacterium_prausnitzii_2789STDY5834970_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "853",
+      "provider_tax_id": "853.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 593842,
+      "HOST": "",
+      "literal_provided_bp": 3054197,
+      "one_copy_provided_bp": 3054197,
+      "primary_candidate": true,
+      "provided_replicons": 86
+    },
+    "ASV507.1": {
+      "source_files": [
+        "Faecalibacterium_prausnitzii_AM37_13AC_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "853",
+      "provider_tax_id": "853.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 960068,
+      "HOST": "",
+      "literal_provided_bp": 2921966,
+      "one_copy_provided_bp": 2921966,
+      "primary_candidate": true,
+      "provided_replicons": 61
+    },
+    "ASV507.11": {
+      "source_files": [
+        "Faecalibacterium_sp_Marseille_Q4896_Marseille_Q4896_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2817018",
+      "provider_tax_id": "2817018.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1125958,
+      "HOST": "",
+      "literal_provided_bp": 2884496,
+      "one_copy_provided_bp": 2884496,
+      "primary_candidate": true,
+      "provided_replicons": 23
+    },
+    "ASV507.3": {
+      "source_files": [
+        "Faecalibacterium_prausnitzii_AM100_B16A_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "853",
+      "provider_tax_id": "853.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 407460,
+      "HOST": "",
+      "literal_provided_bp": 3060682,
+      "one_copy_provided_bp": 3060682,
+      "primary_candidate": true,
+      "provided_replicons": 74
+    },
+    "ASV507.9": {
+      "source_files": [
+        "Faecalibacterium_sp_AF10_46_AF10_46_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2302955",
+      "provider_tax_id": "2302955.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 733372,
+      "HOST": "",
+      "literal_provided_bp": 2898008,
+      "one_copy_provided_bp": 2898008,
+      "primary_candidate": true,
+      "provided_replicons": 36
+    },
+    "ASV509.0": {
+      "source_files": [
+        "Flavonifractor_plautii_1001175st1_C9_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "292800",
+      "provider_tax_id": "292800.3",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 3518,
+      "HOST": "",
+      "literal_provided_bp": 4011075,
+      "one_copy_provided_bp": 4011075,
+      "primary_candidate": true,
+      "provided_replicons": 87
+    },
+    "ASV511.12": {
+      "source_files": [
+        "Bifidobacterium_pseudocatenulatum_AM63_10A_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "28026",
+      "provider_tax_id": "28026.31",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 326,
+      "HOST": "",
+      "literal_provided_bp": 2192647,
+      "one_copy_provided_bp": 2192647,
+      "primary_candidate": true,
+      "provided_replicons": 14
+    },
+    "ASV513.0": {
+      "source_files": [
+        "Vibrio_parahaemolyticus_S1598_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "670",
+      "provider_tax_id": "670.11",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 392,
+      "HOST": "",
+      "literal_provided_bp": 5100030,
+      "one_copy_provided_bp": 5100030,
+      "primary_candidate": true,
+      "provided_replicons": 38
+    },
+    "ASV514.0": {
+      "source_files": [
+        "Enterococcus_faecalis_4928STDY7071659_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1351",
+      "provider_tax_id": "1351.102",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 912,
+      "HOST": "",
+      "literal_provided_bp": 2989388,
+      "one_copy_provided_bp": 2989388,
+      "primary_candidate": true,
+      "provided_replicons": 28
+    },
+    "ASV515.12": {
+      "source_files": [
+        "Enterococcus_faecalis_4928STDY7071592_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1351",
+      "provider_tax_id": "1351.21",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 10316,
+      "HOST": "",
+      "literal_provided_bp": 3172197,
+      "one_copy_provided_bp": 3172197,
+      "primary_candidate": true,
+      "provided_replicons": 54
+    },
+    "ASV519.3": {
+      "source_files": [
+        "Enterococcus_hirae_BIOML_A56_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1354",
+      "provider_tax_id": "1354.6",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 17122,
+      "HOST": "",
+      "literal_provided_bp": 2842487,
+      "one_copy_provided_bp": 2842487,
+      "primary_candidate": true,
+      "provided_replicons": 15
+    },
+    "ASV520.8": {
+      "source_files": [
+        "Enterococcus_faecalis_BSD2780061687b_171204_D2_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1351",
+      "provider_tax_id": "1351.77",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 546,
+      "HOST": "",
+      "literal_provided_bp": 2914876,
+      "one_copy_provided_bp": 2914876,
+      "primary_candidate": true,
+      "provided_replicons": 60
+    },
+    "ASV525.6": {
+      "source_files": [
+        "Ruminococcus_sp_1001136sp1_1001713st3_A12_1001713B170214_170313_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2986996",
+      "provider_tax_id": "2986996.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 344,
+      "HOST": "",
+      "literal_provided_bp": 4479269,
+      "one_copy_provided_bp": 4479269,
+      "primary_candidate": true,
+      "provided_replicons": 75
+    },
+    "ASV54.3": {
+      "source_files": [
+        "Cutibacterium_avidum_RTP21102st1_H11_RTP21102_210122_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "33010",
+      "provider_tax_id": "33010.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 192,
+      "HOST": "",
+      "literal_provided_bp": 2539164,
+      "one_copy_provided_bp": 2539164,
+      "primary_candidate": true,
+      "provided_replicons": 32
+    },
+    "ASV540.2": {
+      "source_files": [
+        "Streptococcus_anginosus_RTP21230st1_E7_RTP21230_210325_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1328",
+      "provider_tax_id": "1328.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 10340,
+      "HOST": "",
+      "literal_provided_bp": 2234706,
+      "one_copy_provided_bp": 2234706,
+      "primary_candidate": true,
+      "provided_replicons": 70
+    },
+    "ASV546.2": {
+      "source_files": [
+        "Streptococcus_constellatus_1001254J_160919_C10_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "76860",
+      "provider_tax_id": "76860.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 260,
+      "HOST": "",
+      "literal_provided_bp": 1755446,
+      "one_copy_provided_bp": 1755446,
+      "primary_candidate": true,
+      "provided_replicons": 6
+    },
+    "ASV547.6": {
+      "source_files": [
+        "Longicatena_caecimuris_D55t1_190419_F3_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1796635",
+      "provider_tax_id": "1796635.3",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 16550,
+      "HOST": "",
+      "literal_provided_bp": 3076392,
+      "one_copy_provided_bp": 3076392,
+      "primary_candidate": true,
+      "provided_replicons": 79
+    },
+    "ASV551.0": {
+      "source_files": [
+        "Catenibacterium_mitsuokai_D31t1_170403_C4_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "100886",
+      "provider_tax_id": "100886.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 228346,
+      "HOST": "",
+      "literal_provided_bp": 2318719,
+      "one_copy_provided_bp": 2318719,
+      "primary_candidate": true,
+      "provided_replicons": 85
+    },
+    "ASV557.0": {
+      "source_files": [
+        "Thomasclavelia_ramosa_OF04_4AC_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1547",
+      "provider_tax_id": "1547.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 33636,
+      "HOST": "",
+      "literal_provided_bp": 3703302,
+      "one_copy_provided_bp": 3703302,
+      "primary_candidate": true,
+      "provided_replicons": 68
+    },
+    "ASV564.0": {
+      "source_files": [
+        "Holdemanella_biformis_AF54_25A_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1735",
+      "provider_tax_id": "1735.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 90,
+      "HOST": "",
+      "literal_provided_bp": 2240375,
+      "one_copy_provided_bp": 2240375,
+      "primary_candidate": true,
+      "provided_replicons": 66
+    },
+    "ASV565.1": {
+      "source_files": [
+        "Holdemania_massiliensis_BIOML_A4_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1468449",
+      "provider_tax_id": "1468449.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 772,
+      "HOST": "",
+      "literal_provided_bp": 4127204,
+      "one_copy_provided_bp": 4127204,
+      "primary_candidate": true,
+      "provided_replicons": 81
+    },
+    "ASV573.1": {
+      "source_files": [
+        "Turicibacter_sanguinis_BSD2780120874b_170522_G1_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "154288",
+      "provider_tax_id": "154288.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 9200,
+      "HOST": "",
+      "literal_provided_bp": 2929763,
+      "one_copy_provided_bp": 2929763,
+      "primary_candidate": true,
+      "provided_replicons": 68
+    },
+    "ASV576.1": {
+      "source_files": [
+        "Lactobacillus_gasseri_1001285st1_E1_RTP21277_210401_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1596",
+      "provider_tax_id": "1596.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 878,
+      "HOST": "",
+      "literal_provided_bp": 1921766,
+      "one_copy_provided_bp": 1921766,
+      "primary_candidate": true,
+      "provided_replicons": 25
+    },
+    "ASV577.0": {
+      "source_files": [
+        "Acidaminococcus_intestini_D21_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "187327",
+      "provider_tax_id": "187327.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 708,
+      "HOST": "",
+      "literal_provided_bp": 2305309,
+      "one_copy_provided_bp": 2305309,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV579.0": {
+      "source_files": [
+        "Phascolarctobacterium_succinatutens_NB2A_12_FMU_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "626940",
+      "provider_tax_id": "626940.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 763090,
+      "HOST": "",
+      "literal_provided_bp": 2345971,
+      "one_copy_provided_bp": 2345971,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV581.18": {
+      "source_files": [
+        "Vibrio_parahaemolyticus_HZ16_290_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "670",
+      "provider_tax_id": "670.13",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 200,
+      "HOST": "",
+      "literal_provided_bp": 5092272,
+      "one_copy_provided_bp": 5092272,
+      "primary_candidate": true,
+      "provided_replicons": 87
+    },
+    "ASV582.2": {
+      "source_files": [
+        "Megamonas_funiformis_OF24_2_b12A_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "437897",
+      "provider_tax_id": "437897.3",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 368,
+      "HOST": "",
+      "literal_provided_bp": 2433751,
+      "one_copy_provided_bp": 2433751,
+      "primary_candidate": true,
+      "provided_replicons": 86
+    },
+    "ASV583.8": {
+      "source_files": [
+        "Enterococcus_faecalis_RTP21484st1_A7_RTP21489_200313_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1351",
+      "provider_tax_id": "1351.43",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 752,
+      "HOST": "",
+      "literal_provided_bp": 2822822,
+      "one_copy_provided_bp": 2822822,
+      "primary_candidate": true,
+      "provided_replicons": 42
+    },
+    "ASV585.5": {
+      "source_files": [
+        "Campylobacter_jejuni_BJ_CJD120_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "197",
+      "provider_tax_id": "197.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 194,
+      "HOST": "",
+      "literal_provided_bp": 1737582,
+      "one_copy_provided_bp": 1737582,
+      "primary_candidate": true,
+      "provided_replicons": 31
+    },
+    "ASV592.0": {
+      "source_files": [
+        "Megasphaera_elsdenii_i33_0019_1i4_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "907",
+      "provider_tax_id": "907.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 188,
+      "HOST": "",
+      "literal_provided_bp": 2387327,
+      "one_copy_provided_bp": 2387327,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV596.11": {
+      "source_files": [
+        "Streptococcus_anginosus_1010st1_D3_1010SCRN_200918_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1328",
+      "provider_tax_id": "1328.5",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 212,
+      "HOST": "",
+      "literal_provided_bp": 1946110,
+      "one_copy_provided_bp": 1946110,
+      "primary_candidate": true,
+      "provided_replicons": 40
+    },
+    "ASV602.4": {
+      "source_files": [
+        "Enterococcus_mundtii_CGB1038_1_S1_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "53346",
+      "provider_tax_id": "53346.8",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 128,
+      "HOST": "",
+      "literal_provided_bp": 3325234,
+      "one_copy_provided_bp": 3325234,
+      "primary_candidate": true,
+      "provided_replicons": 51
+    },
+    "ASV607.0": {
+      "source_files": [
+        "Veillonella_parvula_NCTC11810_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "29466",
+      "provider_tax_id": "29466.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 29434,
+      "HOST": "",
+      "literal_provided_bp": 2132142,
+      "one_copy_provided_bp": 2132142,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV61.4": {
+      "source_files": [
+        "Bifidobacterium_bifidum_OM06_6BHA_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1681",
+      "provider_tax_id": "1681.10",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 88,
+      "HOST": "",
+      "literal_provided_bp": 2208897,
+      "one_copy_provided_bp": 2208897,
+      "primary_candidate": true,
+      "provided_replicons": 14
+    },
+    "ASV621.12": {
+      "source_files": [
+        "Streptococcus_salivarius_2227st1_D10_2227SCRN_220401_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1304",
+      "provider_tax_id": "1304.26",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 88,
+      "HOST": "",
+      "literal_provided_bp": 2303380,
+      "one_copy_provided_bp": 2303380,
+      "primary_candidate": true,
+      "provided_replicons": 28
+    },
+    "ASV627.1": {
+      "source_files": [
+        "Fusobacterium_polymorphum_SB004_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "76857",
+      "provider_tax_id": "76857.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 546,
+      "HOST": "",
+      "literal_provided_bp": 2391664,
+      "one_copy_provided_bp": 2391664,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV638.12": {
+      "source_files": [
+        "Salmonella_enterica_subsp_enterica_serovar_Weltevreden_CNGD2015006_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "57743",
+      "provider_tax_id": "57743.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 200,
+      "HOST": "",
+      "literal_provided_bp": 5021885,
+      "one_copy_provided_bp": 5021885,
+      "primary_candidate": true,
+      "provided_replicons": 62
+    },
+    "ASV65.2": {
+      "source_files": [
+        "Parolsenella_catena_1033st1_G7_1033SCRN_220408_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2003188",
+      "provider_tax_id": "2003188.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 66,
+      "HOST": "",
+      "literal_provided_bp": 1747988,
+      "one_copy_provided_bp": 1747988,
+      "primary_candidate": true,
+      "provided_replicons": 47
+    },
+    "ASV655.9": {
+      "source_files": [
+        "Vibrio_parahaemolyticus_S0468_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "670",
+      "provider_tax_id": "670.6",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 756,
+      "HOST": "",
+      "literal_provided_bp": 5112736,
+      "one_copy_provided_bp": 5112736,
+      "primary_candidate": true,
+      "provided_replicons": 41
+    },
+    "ASV66.4": {
+      "source_files": [
+        "Bifidobacterium_pseudocatenulatum_1001285H_161024_F4_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "28026",
+      "provider_tax_id": "28026.19",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 84,
+      "HOST": "",
+      "literal_provided_bp": 2153040,
+      "one_copy_provided_bp": 2153040,
+      "primary_candidate": true,
+      "provided_replicons": 14
+    },
+    "ASV668.0": {
+      "source_files": [
+        "Kingella_kingae_ATCC_23332_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "504",
+      "provider_tax_id": "504.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 82,
+      "HOST": "",
+      "literal_provided_bp": 2058531,
+      "one_copy_provided_bp": 2058531,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV670.1": {
+      "source_files": [
+        "Comamonas_kerstersii_3132976_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "225992",
+      "provider_tax_id": "225992.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1136,
+      "HOST": "",
+      "literal_provided_bp": 3698404,
+      "one_copy_provided_bp": 3698404,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV676.10": {
+      "source_files": [
+        "Salmonella_enterica_1473_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "28901",
+      "provider_tax_id": "28901.5",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 512,
+      "HOST": "",
+      "literal_provided_bp": 4647432,
+      "one_copy_provided_bp": 4647432,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV68.9": {
+      "source_files": [
+        "Bifidobacterium_bifidum_J1101312st1_C7_J1101312_190322_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1681",
+      "provider_tax_id": "1681.21",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 14632,
+      "HOST": "",
+      "literal_provided_bp": 2205137,
+      "one_copy_provided_bp": 2205137,
+      "primary_candidate": true,
+      "provided_replicons": 8
+    },
+    "ASV687.8": {
+      "source_files": [
+        "Salmonella_enterica_subsp_enterica_serovar_Typhimurium_DA34827_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "90371",
+      "provider_tax_id": "90371.3",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 95244,
+      "HOST": "",
+      "literal_provided_bp": 4933577,
+      "one_copy_provided_bp": 4933577,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV688.0": {
+      "source_files": [
+        "Escherichia_coli_1001713B170207_170306_A4_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "562",
+      "provider_tax_id": "562.42",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 8652,
+      "HOST": "",
+      "literal_provided_bp": 5064371,
+      "one_copy_provided_bp": 5064371,
+      "primary_candidate": true,
+      "provided_replicons": 87
+    },
+    "ASV692.1": {
+      "source_files": [
+        "Sutterella_wadsworthensis_2_1_59BFAA_2_1_59BFAA_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "742823",
+      "provider_tax_id": "742823",
+      "taxonomy_join_mode": "exact_origin_taxon_without_provider_genome_id",
+      "positive_read_records": 66530,
+      "HOST": "",
+      "literal_provided_bp": 2725870,
+      "one_copy_provided_bp": 2725870,
+      "primary_candidate": true,
+      "provided_replicons": 11
+    },
+    "ASV694.7": {
+      "source_files": [
+        "Salmonella_enterica_subsp_enterica_serovar_Kentucky_HUA_9_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "192955",
+      "provider_tax_id": "192955.2",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 3438,
+      "HOST": "",
+      "literal_provided_bp": 4822123,
+      "one_copy_provided_bp": 4822123,
+      "primary_candidate": true,
+      "provided_replicons": 63
+    },
+    "ASV699.7": {
+      "source_files": [
+        "Enterobacter_hormaechei_ZJ_189_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "158836",
+      "provider_tax_id": "158836.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 188,
+      "HOST": "",
+      "literal_provided_bp": 4863209,
+      "one_copy_provided_bp": 4863209,
+      "primary_candidate": true,
+      "provided_replicons": 73
+    },
+    "ASV709.10": {
+      "source_files": [
+        "Escherichia_coli_RSM8751_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "562",
+      "provider_tax_id": "562.23",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 194,
+      "HOST": "",
+      "literal_provided_bp": 4962943,
+      "one_copy_provided_bp": 4962943,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV71.10": {
+      "source_files": [
+        "Bifidobacterium_bifidum_Bg41221_3D10_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "1681",
+      "provider_tax_id": "1681.13",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 6846,
+      "HOST": "",
+      "literal_provided_bp": 2503841,
+      "one_copy_provided_bp": 2503841,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV714.0": {
+      "source_files": [
+        "Desulfovibrio_sp_6_1_46AFAA_6_1_46AFAA_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "665942",
+      "provider_tax_id": "665942.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 113152,
+      "HOST": "",
+      "literal_provided_bp": 3847181,
+      "one_copy_provided_bp": 3847181,
+      "primary_candidate": true,
+      "provided_replicons": 20
+    },
+    "ASV729.15": {
+      "source_files": [
+        "Citrobacter_braakii_4928STDY7071494_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "57706",
+      "provider_tax_id": "57706.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 101572,
+      "HOST": "",
+      "literal_provided_bp": 4914869,
+      "one_copy_provided_bp": 4914869,
+      "primary_candidate": true,
+      "provided_replicons": 39
+    },
+    "ASV73.2": {
+      "source_files": [
+        "Collinsella_tanakaei_TF08_14_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "626935",
+      "provider_tax_id": "626935.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 218254,
+      "HOST": "",
+      "literal_provided_bp": 2527722,
+      "one_copy_provided_bp": 2527722,
+      "primary_candidate": true,
+      "provided_replicons": 33
+    },
+    "ASV730.1": {
+      "source_files": [
+        "Vibrio_parahaemolyticus_S2722_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "670",
+      "provider_tax_id": "670.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 394,
+      "HOST": "",
+      "literal_provided_bp": 5108076,
+      "one_copy_provided_bp": 5108076,
+      "primary_candidate": true,
+      "provided_replicons": 40
+    },
+    "ASV731.3": {
+      "source_files": [
+        "Aeromonas_genomosp_paramedia_3925_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "3086176",
+      "provider_tax_id": "3086176.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 524,
+      "HOST": "",
+      "literal_provided_bp": 4783135,
+      "one_copy_provided_bp": 4783135,
+      "primary_candidate": true,
+      "provided_replicons": 84
+    },
+    "ASV737.3": {
+      "source_files": [
+        "Escherichia_coli_2015C_3905_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "562",
+      "provider_tax_id": "562.32",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 194,
+      "HOST": "",
+      "literal_provided_bp": 4901620,
+      "one_copy_provided_bp": 4901620,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV74.2": {
+      "source_files": [
+        "Salmonella_enterica_sg1722_2_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "28901",
+      "provider_tax_id": "28901.9",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1516,
+      "HOST": "",
+      "literal_provided_bp": 4934155,
+      "one_copy_provided_bp": 4934155,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV741.10": {
+      "source_files": [
+        "Escherichia_coli_402696_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "562",
+      "provider_tax_id": "562.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 3462,
+      "HOST": "",
+      "literal_provided_bp": 4842913,
+      "one_copy_provided_bp": 4842913,
+      "primary_candidate": true,
+      "provided_replicons": 60
+    },
+    "ASV743.6": {
+      "source_files": [
+        "Salmonella_sp_32020509201800068SM_32020509201800068SM_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2819760",
+      "provider_tax_id": "2819760.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 132554,
+      "HOST": "",
+      "literal_provided_bp": 4761945,
+      "one_copy_provided_bp": 4761945,
+      "primary_candidate": true,
+      "provided_replicons": 22
+    },
+    "ASV749.3": {
+      "source_files": [
+        "Enterobacter_ludwigii_HURS_212964_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "299767",
+      "provider_tax_id": "299767.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 194,
+      "HOST": "",
+      "literal_provided_bp": 4821824,
+      "one_copy_provided_bp": 4821824,
+      "primary_candidate": true,
+      "provided_replicons": 42
+    },
+    "ASV783.5": {
+      "source_files": [
+        "Escherichia_coli_AREA_492_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "562",
+      "provider_tax_id": "562.22",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 137208,
+      "HOST": "",
+      "literal_provided_bp": 4934235,
+      "one_copy_provided_bp": 4934235,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV790.3": {
+      "source_files": [
+        "Pseudomonas_aeruginosa_Tongji_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "287",
+      "provider_tax_id": "287.3",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 502,
+      "HOST": "",
+      "literal_provided_bp": 6369381,
+      "one_copy_provided_bp": 6369381,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV81.2": {
+      "source_files": [
+        "Slackia_exigua_SB208_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "84109",
+      "provider_tax_id": "84109.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 78,
+      "HOST": "",
+      "literal_provided_bp": 1987822,
+      "one_copy_provided_bp": 1987822,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV86.13": {
+      "source_files": [
+        "Eggerthella_sp_BIOML_A1_BIOML_A1_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2584638",
+      "provider_tax_id": "2584638.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 8352,
+      "HOST": "",
+      "literal_provided_bp": 3285945,
+      "one_copy_provided_bp": 3285945,
+      "primary_candidate": true,
+      "provided_replicons": 35
+    },
+    "ASV87.11": {
+      "source_files": [
+        "Bifidobacterium_pseudocatenulatum_AM113_151_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "28026",
+      "provider_tax_id": "28026.28",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 170,
+      "HOST": "",
+      "literal_provided_bp": 2206142,
+      "one_copy_provided_bp": 2206142,
+      "primary_candidate": true,
+      "provided_replicons": 22
+    },
+    "ASV88.2": {
+      "source_files": [
+        "Bifidobacterium_sp_TKU_TKU_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "2922858",
+      "provider_tax_id": "2922858.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 88,
+      "HOST": "",
+      "literal_provided_bp": 2245497,
+      "one_copy_provided_bp": 2245497,
+      "primary_candidate": true,
+      "provided_replicons": 1
+    },
+    "ASV96.0": {
+      "source_files": [
+        "Parabacteroides_distasonis_1001275B_160808_C1_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "823",
+      "provider_tax_id": "823.8",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 594,
+      "HOST": "",
+      "literal_provided_bp": 5453961,
+      "one_copy_provided_bp": 5453961,
+      "primary_candidate": true,
+      "provided_replicons": 69
+    },
+    "ASV98.15": {
+      "source_files": [
+        "Bacteroides_sp_D20_D20_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "585543",
+      "provider_tax_id": "585543.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 172,
+      "HOST": "",
+      "literal_provided_bp": 4487454,
+      "one_copy_provided_bp": 4487454,
+      "primary_candidate": true,
+      "provided_replicons": 15
+    },
+    "ASV99.3": {
+      "source_files": [
+        "Bacteroides_thetaiotaomicron_D52t1_170925_B7_strain_genomic.fna"
+      ],
+      "lineage_class": "bacterial",
+      "origin_tax_id": "818",
+      "provider_tax_id": "818.6",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 13590,
+      "HOST": "",
+      "literal_provided_bp": 6520957,
+      "one_copy_provided_bp": 6520957,
+      "primary_candidate": true,
+      "provided_replicons": 85
+    },
+    "fASV1.1": {
+      "source_files": [
+        "Talaromyces_amestolkiae_X1601_strain_genomic.fna"
+      ],
+      "lineage_class": "eukaryotic",
+      "origin_tax_id": "1196081",
+      "provider_tax_id": "1196081.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 365170,
+      "HOST": "",
+      "literal_provided_bp": 33824912,
+      "one_copy_provided_bp": 33824912,
+      "primary_candidate": false,
+      "provided_replicons": 180
+    },
+    "fASV192.1": {
+      "source_files": [
+        "Cutaneotrichosporon_dermatis_M4303A_strain_genomic.fna"
+      ],
+      "lineage_class": "eukaryotic",
+      "origin_tax_id": "129132",
+      "provider_tax_id": "129132.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 4880,
+      "HOST": "",
+      "literal_provided_bp": 23304742,
+      "one_copy_provided_bp": 23304742,
+      "primary_candidate": false,
+      "provided_replicons": 24
+    },
+    "fASV194.0": {
+      "source_files": [
+        "Clavispora_lusitaniae_P1110B_strain_genomic.fna"
+      ],
+      "lineage_class": "eukaryotic",
+      "origin_tax_id": "36911",
+      "provider_tax_id": "36911.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 17910,
+      "HOST": "",
+      "literal_provided_bp": 12025625,
+      "one_copy_provided_bp": 12025625,
+      "primary_candidate": false,
+      "provided_replicons": 28
+    },
+    "fASV195.4": {
+      "source_files": [
+        "Aspergillus_fumigatus_R4201_strain_genomic.fna"
+      ],
+      "lineage_class": "eukaryotic",
+      "origin_tax_id": "746128",
+      "provider_tax_id": "746128.4",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 241582,
+      "HOST": "",
+      "literal_provided_bp": 28569636,
+      "one_copy_provided_bp": 28569636,
+      "primary_candidate": false,
+      "provided_replicons": 142
+    },
+    "fASV196.1": {
+      "source_files": [
+        "Aspergillus_fumigatus_PB4205_strain_genomic.fna"
+      ],
+      "lineage_class": "eukaryotic",
+      "origin_tax_id": "746128",
+      "provider_tax_id": "746128.9",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 2045422,
+      "HOST": "",
+      "literal_provided_bp": 28822604,
+      "one_copy_provided_bp": 28822604,
+      "primary_candidate": false,
+      "provided_replicons": 146
+    },
+    "fASV197.5": {
+      "source_files": [
+        "Aspergillus_niger_Y2007_strain_genomic.fna"
+      ],
+      "lineage_class": "eukaryotic",
+      "origin_tax_id": "5061",
+      "provider_tax_id": "5061.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 519986,
+      "HOST": "",
+      "literal_provided_bp": 34997975,
+      "one_copy_provided_bp": 34997975,
+      "primary_candidate": false,
+      "provided_replicons": 120
+    },
+    "fASV198.4": {
+      "source_files": [
+        "Candida_parapsilosis_PF3403_strain_genomic.fna"
+      ],
+      "lineage_class": "eukaryotic",
+      "origin_tax_id": "5480",
+      "provider_tax_id": "5480.3",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 386294,
+      "HOST": "",
+      "literal_provided_bp": 12911856,
+      "one_copy_provided_bp": 12911856,
+      "primary_candidate": false,
+      "provided_replicons": 124
+    },
+    "fASV199.4": {
+      "source_files": [
+        "Penicillium_solitum_S2401_strain_genomic.fna"
+      ],
+      "lineage_class": "eukaryotic",
+      "origin_tax_id": "60172",
+      "provider_tax_id": "60172.2",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 29546,
+      "HOST": "",
+      "literal_provided_bp": 31115313,
+      "one_copy_provided_bp": 31115313,
+      "primary_candidate": false,
+      "provided_replicons": 175
+    },
+    "fASV200.0": {
+      "source_files": [
+        "Exophiala_dermatitidis_PF4406_strain_genomic.fna"
+      ],
+      "lineage_class": "eukaryotic",
+      "origin_tax_id": "5970",
+      "provider_tax_id": "5970.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 51300,
+      "HOST": "",
+      "literal_provided_bp": 26627860,
+      "one_copy_provided_bp": 26627860,
+      "primary_candidate": false,
+      "provided_replicons": 39
+    },
+    "fASV201.3": {
+      "source_files": [
+        "Penicillium_chrysogenum_Y3303_strain_genomic.fna"
+      ],
+      "lineage_class": "eukaryotic",
+      "origin_tax_id": "5076",
+      "provider_tax_id": "5076.3",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 632684,
+      "HOST": "",
+      "literal_provided_bp": 30486376,
+      "one_copy_provided_bp": 30486376,
+      "primary_candidate": false,
+      "provided_replicons": 185
+    },
+    "hASV1.0": {
+      "source_files": [
+        "T2T_mitochondrion.fna"
+      ],
+      "lineage_class": "eukaryotic",
+      "origin_tax_id": "9606",
+      "provider_tax_id": "9606.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 501308,
+      "HOST": "",
+      "literal_provided_bp": 3117292070,
+      "one_copy_provided_bp": 3117292070,
+      "primary_candidate": false,
+      "provided_replicons": 25
+    },
+    "hvASV10.7": {
+      "source_files": [
+        "NC_049411_1_Lactococcus_phage_79201_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2029672",
+      "provider_tax_id": "2029672.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1858,
+      "HOST": "",
+      "literal_provided_bp": 31123,
+      "one_copy_provided_bp": 31123,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV11.0": {
+      "source_files": [
+        "NC_038392_1_Human_stool_associated_circular_virus_NG13_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "3052121",
+      "provider_tax_id": "3052121.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 44,
+      "HOST": "",
+      "literal_provided_bp": 1699,
+      "one_copy_provided_bp": 1699,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV12.4": {
+      "source_files": [
+        "NC_024214_1_Lactococcus_phage_P162_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1476889",
+      "provider_tax_id": "1476889.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 400,
+      "HOST": "",
+      "literal_provided_bp": 55584,
+      "one_copy_provided_bp": 55584,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV16.0": {
+      "source_files": [
+        "NC_012800_1_Cosavirus_A_strain_HCoSV_A1_polyprotein_gene_complete_cds_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "3428094",
+      "provider_tax_id": "3428094.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 970,
+      "HOST": "",
+      "literal_provided_bp": 7632,
+      "one_copy_provided_bp": 7632,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV19.0": {
+      "source_files": [
+        "NC_036877_1_Cyclovirus_PK5006_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "3047960",
+      "provider_tax_id": "3047960.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 20,
+      "HOST": "",
+      "literal_provided_bp": 1723,
+      "one_copy_provided_bp": 1723,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV2.6": {
+      "source_files": [
+        "NC_027293_1_Citrobacter_phage_Moogle_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1540094",
+      "provider_tax_id": "1540094.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 25686,
+      "HOST": "",
+      "literal_provided_bp": 87999,
+      "one_copy_provided_bp": 87999,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV20.3": {
+      "source_files": [
+        "NC_049401_1_Lactococcus_phage_38503_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2029662",
+      "provider_tax_id": "2029662.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 7282,
+      "HOST": "",
+      "literal_provided_bp": 27948,
+      "one_copy_provided_bp": 27948,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV21.0": {
+      "source_files": [
+        "NC_038413_1_Cyclovirus_PK5222_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "3047961",
+      "provider_tax_id": "3047961.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 18,
+      "HOST": "",
+      "literal_provided_bp": 1740,
+      "one_copy_provided_bp": 1740,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV23.0": {
+      "source_files": [
+        "NC_070984_1_Escherichia_phage_ES17_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2662277",
+      "provider_tax_id": "2662277.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 30,
+      "HOST": "",
+      "literal_provided_bp": 75007,
+      "one_copy_provided_bp": 75007,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV24.0": {
+      "source_files": [
+        "NC_018102_1_MW_polyomavirus_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1208309",
+      "provider_tax_id": "1208309.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 224,
+      "HOST": "",
+      "literal_provided_bp": 4927,
+      "one_copy_provided_bp": 4927,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV28.8": {
+      "source_files": [
+        "NC_070980_1_Escherichia_phage_vB_EcoP_SU7_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2849626",
+      "provider_tax_id": "2849626.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 12066,
+      "HOST": "",
+      "literal_provided_bp": 76626,
+      "one_copy_provided_bp": 76626,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV29.0": {
+      "source_files": [
+        "NC_022789_1_Gyrovirus_Tu789_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2844803",
+      "provider_tax_id": "2844803.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 10,
+      "HOST": "",
+      "literal_provided_bp": 2282,
+      "one_copy_provided_bp": 2282,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV3.3": {
+      "source_files": [
+        "NC_049348_1_Lactococcus_lactis_phage_p272_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "213777",
+      "provider_tax_id": "213777.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 866,
+      "HOST": "",
+      "literal_provided_bp": 30778,
+      "one_copy_provided_bp": 30778,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV30.0": {
+      "source_files": [
+        "NC_022788_1_Gyrovirus_Tu243_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2844805",
+      "provider_tax_id": "2844805.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 16,
+      "HOST": "",
+      "literal_provided_bp": 2020,
+      "one_copy_provided_bp": 2020,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV31.0": {
+      "source_files": [
+        "NC_013443_1_HMO_Astrovirus_A_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "682382",
+      "provider_tax_id": "682382.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 116,
+      "HOST": "",
+      "literal_provided_bp": 6534,
+      "one_copy_provided_bp": 6534,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV32.0": {
+      "source_files": [
+        "NC_035475_1_Hudisavirus_sp_isolate_P22_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2021738",
+      "provider_tax_id": "2021738.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 4,
+      "HOST": "",
+      "literal_provided_bp": 2585,
+      "one_copy_provided_bp": 2585,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV33.5": {
+      "source_files": [
+        "NC_049400_1_Lactococcus_phage_37201_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2029661",
+      "provider_tax_id": "2029661.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 10,
+      "HOST": "",
+      "literal_provided_bp": 30989,
+      "one_copy_provided_bp": 30989,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV34.2": {
+      "source_files": [
+        "NC_026252_1_Human_smacovirus_1_isolate_France_12_2008_3454_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1595998",
+      "provider_tax_id": "1595998.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 4,
+      "HOST": "",
+      "literal_provided_bp": 2460,
+      "one_copy_provided_bp": 2460,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV35.2": {
+      "source_files": [
+        "NC_073080_1_Escherichia_phage_EC115_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2936906",
+      "provider_tax_id": "2936906.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 10018,
+      "HOST": "",
+      "literal_provided_bp": 44849,
+      "one_copy_provided_bp": 44849,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV36.0": {
+      "source_files": [
+        "NC_035212_1_Human_fecal_virus_Jorvi2_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2017081",
+      "provider_tax_id": "2017081.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 466,
+      "HOST": "",
+      "literal_provided_bp": 3925,
+      "one_copy_provided_bp": 3925,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV37.6": {
+      "source_files": [
+        "NC_049413_1_Lactococcus_phage_96401_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2029674",
+      "provider_tax_id": "2029674.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1682,
+      "HOST": "",
+      "literal_provided_bp": 29306,
+      "one_copy_provided_bp": 29306,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV38.7": {
+      "source_files": [
+        "NC_018835_1_Enterobacteria_phage_NJ01_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1237159",
+      "provider_tax_id": "1237159.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 180,
+      "HOST": "",
+      "literal_provided_bp": 77448,
+      "one_copy_provided_bp": 77448,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV39.4": {
+      "source_files": [
+        "NC_047808_1_Escherichia_phage_vB_EcoP_F_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1933110",
+      "provider_tax_id": "1933110.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1342,
+      "HOST": "",
+      "literal_provided_bp": 39300,
+      "one_copy_provided_bp": 39300,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV40.10": {
+      "source_files": [
+        "NC_054895_1_Escherichia_phage_vB_Eco_SLUR29_genome_assembly_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2585737",
+      "provider_tax_id": "2585737.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1338,
+      "HOST": "",
+      "literal_provided_bp": 48466,
+      "one_copy_provided_bp": 48466,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV41.0": {
+      "source_files": [
+        "NC_032480_1_Husavirus_sp_isolate_16370_59_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1930509",
+      "provider_tax_id": "1930509.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 502,
+      "HOST": "",
+      "literal_provided_bp": 8856,
+      "one_copy_provided_bp": 8856,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV45.0": {
+      "source_files": [
+        "NC_062773_1_Uncultured_phage_cr44_1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2986405",
+      "provider_tax_id": "2986405.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1628,
+      "HOST": "",
+      "literal_provided_bp": 93564,
+      "one_copy_provided_bp": 93564,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV47.0": {
+      "source_files": [
+        "NC_035474_1_Human_feces_smacovirus_3_isolate_P21_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2845899",
+      "provider_tax_id": "2845899.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 176,
+      "HOST": "",
+      "literal_provided_bp": 2560,
+      "one_copy_provided_bp": 2560,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV48.0": {
+      "source_files": [
+        "NC_076235_1_Human_associated_porprismacovirus_3_isolate_16806x66_213_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2845900",
+      "provider_tax_id": "2845900.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 68,
+      "HOST": "",
+      "literal_provided_bp": 2388,
+      "one_copy_provided_bp": 2388,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV49.0": {
+      "source_files": [
+        "NC_039050_1_Cutavirus_strain_BR_337_NS1_putative_VP1_hypothetical_protein_VP2_and_hypothetical_protein_genes_complete_cds_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "3052716",
+      "provider_tax_id": "3052716.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 162,
+      "HOST": "",
+      "literal_provided_bp": 4456,
+      "one_copy_provided_bp": 4456,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV5.0": {
+      "source_files": [
+        "NC_019027_1_Astrovirus_VA4_isolate_VA4_human_Nepal_s5363_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1247113",
+      "provider_tax_id": "1247113.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 896,
+      "HOST": "",
+      "literal_provided_bp": 6518,
+      "one_copy_provided_bp": 6518,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV6.0": {
+      "source_files": [
+        "NC_024070_1_Rosavirus_2_strain_GA7403_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "3432189",
+      "provider_tax_id": "3432189.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 62,
+      "HOST": "",
+      "literal_provided_bp": 8931,
+      "one_copy_provided_bp": 8931,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV7.0": {
+      "source_files": [
+        "NC_012042_1_Human_bocavirus_2c_PK_isolate_PK_5510_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "3052041",
+      "provider_tax_id": "3052041.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 252,
+      "HOST": "",
+      "literal_provided_bp": 5196,
+      "one_copy_provided_bp": 5196,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV8.13": {
+      "source_files": [
+        "NC_070989_1_Escherichia_phage_vB_EcoP_CHD5UKE1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2865805",
+      "provider_tax_id": "2865805.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 3774,
+      "HOST": "",
+      "literal_provided_bp": 77359,
+      "one_copy_provided_bp": 77359,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "hvASV9.0": {
+      "source_files": [
+        "NC_024472_1_Human_astrovirus_BF34_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1518574",
+      "provider_tax_id": "1518574.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 116,
+      "HOST": "",
+      "literal_provided_bp": 6577,
+      "one_copy_provided_bp": 6577,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "pASV42": {
+      "source_files": [
+        "ASV687.8__Salmonella_enterica_subsp_enterica_serovar_Typhimurium_DA34827_genomic__NZ_CP029594.1.permuted.fna"
+      ],
+      "lineage_class": "other",
+      "origin_tax_id": "45202",
+      "provider_tax_id": "45202.43",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 88880,
+      "HOST": "ASV687.8",
+      "literal_provided_bp": 940340,
+      "one_copy_provided_bp": 94034,
+      "primary_candidate": false,
+      "provided_replicons": 10
+    },
+    "pASV43": {
+      "source_files": [
+        "ASV134.7__Bacteroides_fragilis_GUT04_strain_genomic__NZ_CP043609.1.permuted.fna"
+      ],
+      "lineage_class": "other",
+      "origin_tax_id": "45202",
+      "provider_tax_id": "45202.44",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 93100,
+      "HOST": "ASV134.7",
+      "literal_provided_bp": 891410,
+      "one_copy_provided_bp": 89141,
+      "primary_candidate": false,
+      "provided_replicons": 10
+    },
+    "pASV62": {
+      "source_files": [
+        "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123340.1.permuted.fna"
+      ],
+      "lineage_class": "other",
+      "origin_tax_id": "45202",
+      "provider_tax_id": "45202.63",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1060,
+      "HOST": "ASV783.5",
+      "literal_provided_bp": 51660,
+      "one_copy_provided_bp": 5166,
+      "primary_candidate": false,
+      "provided_replicons": 10
+    },
+    "pASV63": {
+      "source_files": [
+        "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123338.1.permuted.fna"
+      ],
+      "lineage_class": "other",
+      "origin_tax_id": "45202",
+      "provider_tax_id": "45202.64",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1640,
+      "HOST": "ASV783.5",
+      "literal_provided_bp": 79390,
+      "one_copy_provided_bp": 7939,
+      "primary_candidate": false,
+      "provided_replicons": 10
+    },
+    "pASV64": {
+      "source_files": [
+        "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123341.1.permuted.fna"
+      ],
+      "lineage_class": "other",
+      "origin_tax_id": "45202",
+      "provider_tax_id": "45202.65",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 840,
+      "HOST": "ASV783.5",
+      "literal_provided_bp": 40730,
+      "one_copy_provided_bp": 4073,
+      "primary_candidate": false,
+      "provided_replicons": 10
+    },
+    "pASV65": {
+      "source_files": [
+        "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123337.1.permuted.fna"
+      ],
+      "lineage_class": "other",
+      "origin_tax_id": "45202",
+      "provider_tax_id": "45202.66",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 15080,
+      "HOST": "ASV783.5",
+      "literal_provided_bp": 718880,
+      "one_copy_provided_bp": 71888,
+      "primary_candidate": false,
+      "provided_replicons": 10
+    },
+    "pASV66": {
+      "source_files": [
+        "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123339.1.permuted.fna"
+      ],
+      "lineage_class": "other",
+      "origin_tax_id": "45202",
+      "provider_tax_id": "45202.67",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1140,
+      "HOST": "ASV783.5",
+      "literal_provided_bp": 54300,
+      "one_copy_provided_bp": 5430,
+      "primary_candidate": false,
+      "provided_replicons": 10
+    },
+    "pASV67": {
+      "source_files": [
+        "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123342.1.permuted.fna"
+      ],
+      "lineage_class": "other",
+      "origin_tax_id": "45202",
+      "provider_tax_id": "45202.68",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 400,
+      "HOST": "ASV783.5",
+      "literal_provided_bp": 20770,
+      "one_copy_provided_bp": 2077,
+      "primary_candidate": false,
+      "provided_replicons": 10
+    },
+    "pASV68": {
+      "source_files": [
+        "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123336.1.permuted.fna"
+      ],
+      "lineage_class": "other",
+      "origin_tax_id": "45202",
+      "provider_tax_id": "45202.69",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 25840,
+      "HOST": "ASV783.5",
+      "literal_provided_bp": 1235930,
+      "one_copy_provided_bp": 123593,
+      "primary_candidate": false,
+      "provided_replicons": 10
+    },
+    "vASV1.0": {
+      "source_files": [
+        "NC_062780_1_Uncultured_phage_cr13_1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2986396",
+      "provider_tax_id": "2986396.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1634,
+      "HOST": "",
+      "literal_provided_bp": 92132,
+      "one_copy_provided_bp": 92132,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV10.0": {
+      "source_files": [
+        "NC_002167_1_Enterobacteria_phage_HK97_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2681617",
+      "provider_tax_id": "2681617.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 542,
+      "HOST": "",
+      "literal_provided_bp": 39732,
+      "one_copy_provided_bp": 39732,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV100.0": {
+      "source_files": [
+        "NC_049856_1_Lactococcus_phage_AM4_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1965472",
+      "provider_tax_id": "1965472.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 338,
+      "HOST": "",
+      "literal_provided_bp": 132949,
+      "one_copy_provided_bp": 132949,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV11.3": {
+      "source_files": [
+        "NC_054944_1_Yersinia_phage_PYPS2T_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2321390",
+      "provider_tax_id": "2321390.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 4820,
+      "HOST": "",
+      "literal_provided_bp": 169604,
+      "one_copy_provided_bp": 169604,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV12.0": {
+      "source_files": [
+        "NC_027331_1_Citrobacter_phage_Moon_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1540095",
+      "provider_tax_id": "1540095.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 370,
+      "HOST": "",
+      "literal_provided_bp": 170341,
+      "one_copy_provided_bp": 170341,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV13.0": {
+      "source_files": [
+        "NC_049368_1_Lactococcus_phage_936_group_phage_PhiM1127_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1636586",
+      "provider_tax_id": "1636586.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 216,
+      "HOST": "",
+      "literal_provided_bp": 32682,
+      "one_copy_provided_bp": 32682,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV14.0": {
+      "source_files": [
+        "NC_001954_1_Enterobacteria_phage_If1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "10868",
+      "provider_tax_id": "10868.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 208,
+      "HOST": "",
+      "literal_provided_bp": 8454,
+      "one_copy_provided_bp": 8454,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV15.0": {
+      "source_files": [
+        "NC_019403_1_Enterobacteria_phage_vB_EcoP_ACG_C91_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1141139",
+      "provider_tax_id": "1141139.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 3216,
+      "HOST": "",
+      "literal_provided_bp": 43731,
+      "one_copy_provided_bp": 43731,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV16.0": {
+      "source_files": [
+        "NC_015262_1_Clostridium_phage_phiCD6356_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "864178",
+      "provider_tax_id": "864178.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 5314,
+      "HOST": "",
+      "literal_provided_bp": 37664,
+      "one_copy_provided_bp": 37664,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV17.0": {
+      "source_files": [
+        "NC_027994_1_Escherichia_phage_K1H_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "698487",
+      "provider_tax_id": "698487.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 804,
+      "HOST": "",
+      "literal_provided_bp": 41632,
+      "one_copy_provided_bp": 41632,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV18.0": {
+      "source_files": [
+        "NC_073054_1_Escherichia_phage_JLBYU37_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2894747",
+      "provider_tax_id": "2894747.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 3068,
+      "HOST": "",
+      "literal_provided_bp": 45011,
+      "one_copy_provided_bp": 45011,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV19.0": {
+      "source_files": [
+        "NC_027399_1_Klebsiella_phage_K64_1_DNA_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1439894",
+      "provider_tax_id": "1439894.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 38082,
+      "HOST": "",
+      "literal_provided_bp": 346602,
+      "one_copy_provided_bp": 346602,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV2.0": {
+      "source_files": [
+        "NC_028951_1_Clostridium_phage_phiCD481_1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1582153",
+      "provider_tax_id": "1582153.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1892,
+      "HOST": "",
+      "literal_provided_bp": 32846,
+      "one_copy_provided_bp": 32846,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV20.0": {
+      "source_files": [
+        "NC_008720_1_Enterobacteria_phage_N4_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2886925",
+      "provider_tax_id": "2886925.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 5276,
+      "HOST": "",
+      "literal_provided_bp": 70153,
+      "one_copy_provided_bp": 70153,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV21.0": {
+      "source_files": [
+        "NC_024790_1_Escherichia_phage_vB_EcoP_PhAPEC7_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1391223",
+      "provider_tax_id": "1391223.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1948,
+      "HOST": "",
+      "literal_provided_bp": 71778,
+      "one_copy_provided_bp": 71778,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV22.0": {
+      "source_files": [
+        "NC_049830_1_Escherichia_phage_PGN590_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2714735",
+      "provider_tax_id": "2714735.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 124,
+      "HOST": "",
+      "literal_provided_bp": 49043,
+      "one_copy_provided_bp": 49043,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV23.0": {
+      "source_files": [
+        "NC_047812_1_Escherichia_phage_vB_Ecos_CEB_EC3a_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1933774",
+      "provider_tax_id": "1933774.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 2830,
+      "HOST": "",
+      "literal_provided_bp": 44234,
+      "one_copy_provided_bp": 44234,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV24.0": {
+      "source_files": [
+        "NC_055005_1_Lactococcus_phage_vB_Llc_bIBB94p4_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2305483",
+      "provider_tax_id": "2305483.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 912,
+      "HOST": "",
+      "literal_provided_bp": 21834,
+      "one_copy_provided_bp": 21834,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV25.0": {
+      "source_files": [
+        "NC_007819_1_Coliphage_ID32_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "338102",
+      "provider_tax_id": "338102.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 334,
+      "HOST": "",
+      "literal_provided_bp": 6071,
+      "one_copy_provided_bp": 6071,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV26.0": {
+      "source_files": [
+        "NC_001835_1_Lactococcus_phage_sk1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2905675",
+      "provider_tax_id": "2905675.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1160,
+      "HOST": "",
+      "literal_provided_bp": 28451,
+      "one_copy_provided_bp": 28451,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV27.0": {
+      "source_files": [
+        "NC_062774_1_Uncultured_phage_cr54_1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2986398",
+      "provider_tax_id": "2986398.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 12,
+      "HOST": "",
+      "literal_provided_bp": 97536,
+      "one_copy_provided_bp": 97536,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV28.0": {
+      "source_files": [
+        "NC_070902_1_Escherichia_phage_11W_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2915325",
+      "provider_tax_id": "2915325.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 178,
+      "HOST": "",
+      "literal_provided_bp": 31564,
+      "one_copy_provided_bp": 31564,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV29.0": {
+      "source_files": [
+        "NC_018859_1_Escherichia_phage_ECBP2_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1604355",
+      "provider_tax_id": "1604355.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 12354,
+      "HOST": "",
+      "literal_provided_bp": 77315,
+      "one_copy_provided_bp": 77315,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV3.0": {
+      "source_files": [
+        "NC_049410_1_Lactococcus_phage_66901_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2029671",
+      "provider_tax_id": "2029671.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1156,
+      "HOST": "",
+      "literal_provided_bp": 28917,
+      "one_copy_provided_bp": 28917,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV30.0": {
+      "source_files": [
+        "NC_073064_1_Escherichia_phage_vB_EcoS_PTXU06_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2508185",
+      "provider_tax_id": "2508185.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 20,
+      "HOST": "",
+      "literal_provided_bp": 45904,
+      "one_copy_provided_bp": 45904,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV31.0": {
+      "source_files": [
+        "NC_001317_1_Escherichia_phage_186_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2681630",
+      "provider_tax_id": "2681630.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 340,
+      "HOST": "",
+      "literal_provided_bp": 30624,
+      "one_copy_provided_bp": 30624,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV32.0": {
+      "source_files": [
+        "NC_029048_2_Clostridium_phage_phiCD211_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1582152",
+      "provider_tax_id": "1582152.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 5338,
+      "HOST": "",
+      "literal_provided_bp": 131704,
+      "one_copy_provided_bp": 131704,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV33.0": {
+      "source_files": [
+        "NC_071137_1_Klebsiella_phage_vB_KpnM_IME346_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2562174",
+      "provider_tax_id": "2562174.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 3112,
+      "HOST": "",
+      "literal_provided_bp": 49482,
+      "one_copy_provided_bp": 49482,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV34.0": {
+      "source_files": [
+        "NC_073320_1_Escherichia_phage_26_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2873413",
+      "provider_tax_id": "2873413.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 5416,
+      "HOST": "",
+      "literal_provided_bp": 42462,
+      "one_copy_provided_bp": 42462,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV35.0": {
+      "source_files": [
+        "NC_011042_1_Enterobacteria_phage_EcoDS1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "532075",
+      "provider_tax_id": "532075.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 2,
+      "HOST": "",
+      "literal_provided_bp": 39252,
+      "one_copy_provided_bp": 39252,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV36.0": {
+      "source_files": [
+        "NC_010429_1_Stenotrophomonas_phage_PSH1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2011087",
+      "provider_tax_id": "2011087.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 550,
+      "HOST": "",
+      "literal_provided_bp": 6867,
+      "one_copy_provided_bp": 6867,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV37.0": {
+      "source_files": [
+        "NC_049376_1_Lactococcus_phage_3R16S_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1874589",
+      "provider_tax_id": "1874589.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 102,
+      "HOST": "",
+      "literal_provided_bp": 30446,
+      "one_copy_provided_bp": 30446,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV38.0": {
+      "source_files": [
+        "NC_028838_1_Clostridium_phage_phiCD506_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1582155",
+      "provider_tax_id": "1582155.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 100,
+      "HOST": "",
+      "literal_provided_bp": 33274,
+      "one_copy_provided_bp": 33274,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV39.0": {
+      "source_files": [
+        "NC_049414_1_Lactococcus_phage_96403_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2029675",
+      "provider_tax_id": "2029675.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 690,
+      "HOST": "",
+      "literal_provided_bp": 26874,
+      "one_copy_provided_bp": 26874,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV4.0": {
+      "source_files": [
+        "NC_073318_1_Escherichia_phage_NTEC3_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2885687",
+      "provider_tax_id": "2885687.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 6064,
+      "HOST": "",
+      "literal_provided_bp": 44240,
+      "one_copy_provided_bp": 44240,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV40.0": {
+      "source_files": [
+        "NC_048196_1_Escherichia_phage_vB_EcoM_Schickermooser_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2508195",
+      "provider_tax_id": "2508195.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1772,
+      "HOST": "",
+      "literal_provided_bp": 151194,
+      "one_copy_provided_bp": 151194,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV41.0": {
+      "source_files": [
+        "NC_019714_1_Enterobacteria_phage_HK446_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1147145",
+      "provider_tax_id": "1147145.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 70,
+      "HOST": "",
+      "literal_provided_bp": 39026,
+      "one_copy_provided_bp": 39026,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV42.0": {
+      "source_files": [
+        "NC_041937_1_Escherichia_phage_V18_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1981500",
+      "provider_tax_id": "1981500.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 30414,
+      "HOST": "",
+      "literal_provided_bp": 129454,
+      "one_copy_provided_bp": 129454,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV43.0": {
+      "source_files": [
+        "NC_014660_1_Acinetobacter_phage_Ac42_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "762660",
+      "provider_tax_id": "762660.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 1530,
+      "HOST": "",
+      "literal_provided_bp": 167716,
+      "one_copy_provided_bp": 167716,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV44.0": {
+      "source_files": [
+        "NC_049397_1_Lactococcus_phage_05601_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2029658",
+      "provider_tax_id": "2029658.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 3490,
+      "HOST": "",
+      "literal_provided_bp": 32895,
+      "one_copy_provided_bp": 32895,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV45.0": {
+      "source_files": [
+        "NC_049349_1_Lactococcus_lactis_phage_P475_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "213774",
+      "provider_tax_id": "213774.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 804,
+      "HOST": "",
+      "literal_provided_bp": 30961,
+      "one_copy_provided_bp": 30961,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV46.0": {
+      "source_files": [
+        "NC_008370_1_Lactococcus_phage_712_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2892346",
+      "provider_tax_id": "2892346.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 36,
+      "HOST": "",
+      "literal_provided_bp": 30510,
+      "one_copy_provided_bp": 30510,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV47.0": {
+      "source_files": [
+        "NC_054922_1_Escherichia_phage_vB_EcoM_KAW1E185_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2508180",
+      "provider_tax_id": "2508180.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1990,
+      "HOST": "",
+      "literal_provided_bp": 164987,
+      "one_copy_provided_bp": 164987,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV48.0": {
+      "source_files": [
+        "NC_002730_1_Enterobacteria_phage_HK620_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "155148",
+      "provider_tax_id": "155148.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 154,
+      "HOST": "",
+      "literal_provided_bp": 38297,
+      "one_copy_provided_bp": 38297,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV49.0": {
+      "source_files": [
+        "NC_048065_1_Citrobacter_phage_Sazh_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2315629",
+      "provider_tax_id": "2315629.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 4780,
+      "HOST": "",
+      "literal_provided_bp": 49665,
+      "one_copy_provided_bp": 49665,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV5.0": {
+      "source_files": [
+        "NC_013594_1_Escherichia_phage_D108_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "665033",
+      "provider_tax_id": "665033.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 3574,
+      "HOST": "",
+      "literal_provided_bp": 37235,
+      "one_copy_provided_bp": 37235,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV50.0": {
+      "source_files": [
+        "NC_049447_1_Lactococcus_phage_MV10L_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2500819",
+      "provider_tax_id": "2500819.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1414,
+      "HOST": "",
+      "literal_provided_bp": 31374,
+      "one_copy_provided_bp": 31374,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV51.0": {
+      "source_files": [
+        "NC_024125_2_Escherichia_phage_e11_2_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1495285",
+      "provider_tax_id": "1495285.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 154,
+      "HOST": "",
+      "literal_provided_bp": 168470,
+      "one_copy_provided_bp": 168470,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV52.0": {
+      "source_files": [
+        "NC_031050_1_Enterobacteria_phage_vB_EcoS_NBD2_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1852563",
+      "provider_tax_id": "1852563.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 12,
+      "HOST": "",
+      "literal_provided_bp": 51802,
+      "one_copy_provided_bp": 51802,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV53.0": {
+      "source_files": [
+        "NC_041977_1_Citrobacter_phage_Mordin_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1701846",
+      "provider_tax_id": "1701846.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1256,
+      "HOST": "",
+      "literal_provided_bp": 89596,
+      "one_copy_provided_bp": 89596,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV54.0": {
+      "source_files": [
+        "NC_007823_1_Coliphage_NC28_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "338106",
+      "provider_tax_id": "338106.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 8,
+      "HOST": "",
+      "literal_provided_bp": 6065,
+      "one_copy_provided_bp": 6065,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV55.0": {
+      "source_files": [
+        "NC_028857_1_Citrobacter_phage_Merlin_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1675602",
+      "provider_tax_id": "1675602.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 648,
+      "HOST": "",
+      "literal_provided_bp": 172733,
+      "one_copy_provided_bp": 172733,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV56.0": {
+      "source_files": [
+        "NC_047776_2_Escherichia_phage_ESCO5_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1897495",
+      "provider_tax_id": "1897495.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 6666,
+      "HOST": "",
+      "literal_provided_bp": 149268,
+      "one_copy_provided_bp": 149268,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV57.0": {
+      "source_files": [
+        "NC_073081_1_Escherichia_phage_vB_EcoS_Sponge_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2836105",
+      "provider_tax_id": "2836105.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 17620,
+      "HOST": "",
+      "literal_provided_bp": 44887,
+      "one_copy_provided_bp": 44887,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV58.0": {
+      "source_files": [
+        "NC_070987_1_Escherichia_phage_MN05_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2711185",
+      "provider_tax_id": "2711185.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 8326,
+      "HOST": "",
+      "literal_provided_bp": 76899,
+      "one_copy_provided_bp": 76899,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV59.0": {
+      "source_files": [
+        "NC_071039_1_Pseudomonas_phage_vB_PaeM_PA5oct_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2163605",
+      "provider_tax_id": "2163605.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 8758,
+      "HOST": "",
+      "literal_provided_bp": 286783,
+      "one_copy_provided_bp": 286783,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV6.0": {
+      "source_files": [
+        "NC_049356_1_Lactococcus_phage_936_group_phage_Phi19_3_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1636564",
+      "provider_tax_id": "1636564.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 13674,
+      "HOST": "",
+      "literal_provided_bp": 28811,
+      "one_copy_provided_bp": 28811,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV60.0": {
+      "source_files": [
+        "NC_133255_1_Escherichia_phage_vB_EcoS_26175I_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2576478",
+      "provider_tax_id": "2576478.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 35164,
+      "HOST": "",
+      "literal_provided_bp": 114649,
+      "one_copy_provided_bp": 114649,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV61.0": {
+      "source_files": [
+        "NC_031937_1_Escherichia_phage_LM33_P1_genome_assembly_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1788294",
+      "provider_tax_id": "1788294.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1124,
+      "HOST": "",
+      "literal_provided_bp": 38979,
+      "one_copy_provided_bp": 38979,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV62.0": {
+      "source_files": [
+        "NC_027378_1_Escherichia_phage_Seurat_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1540098",
+      "provider_tax_id": "1540098.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 804,
+      "HOST": "",
+      "literal_provided_bp": 56776,
+      "one_copy_provided_bp": 56776,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV63.0": {
+      "source_files": [
+        "NC_049406_1_Lactococcus_phage_57001_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2029667",
+      "provider_tax_id": "2029667.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 4340,
+      "HOST": "",
+      "literal_provided_bp": 31819,
+      "one_copy_provided_bp": 31819,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV64.0": {
+      "source_files": [
+        "NC_042138_1_Klebsiella_phage_PMBT1_genome_assembly_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1880822",
+      "provider_tax_id": "1880822.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 444,
+      "HOST": "",
+      "literal_provided_bp": 175206,
+      "one_copy_provided_bp": 175206,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV65.0": {
+      "source_files": [
+        "NC_070650_1_Klebsiella_phage_vB_KvM_Eowyn_genome_assembly_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2762819",
+      "provider_tax_id": "2762819.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 404,
+      "HOST": "",
+      "literal_provided_bp": 265389,
+      "one_copy_provided_bp": 265389,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV66.0": {
+      "source_files": [
+        "NC_069751_1_Stenotrophomonas_phage_vB_SmaS_DLP_1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1642588",
+      "provider_tax_id": "1642588.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 436,
+      "HOST": "",
+      "literal_provided_bp": 42887,
+      "one_copy_provided_bp": 42887,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV67.0": {
+      "source_files": [
+        "NC_001890_1_Enterobacteria_phage_Qbeta_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2789016",
+      "provider_tax_id": "2789016.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 348,
+      "HOST": "",
+      "literal_provided_bp": 4215,
+      "one_copy_provided_bp": 4215,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV68.0": {
+      "source_files": [
+        "NC_025414_1_Citrobacter_phage_Miller_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1527524",
+      "provider_tax_id": "1527524.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 266,
+      "HOST": "",
+      "literal_provided_bp": 178171,
+      "one_copy_provided_bp": 178171,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV69.0": {
+      "source_files": [
+        "NC_073063_1_Escherichia_phage_vB_EcoS_PNS1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2488596",
+      "provider_tax_id": "2488596.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 300,
+      "HOST": "",
+      "literal_provided_bp": 43945,
+      "one_copy_provided_bp": 43945,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV7.0": {
+      "source_files": [
+        "NC_023693_1_Enterobacteria_phage_phi92_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "948870",
+      "provider_tax_id": "948870.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 15752,
+      "HOST": "",
+      "literal_provided_bp": 148612,
+      "one_copy_provided_bp": 148612,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV70.0": {
+      "source_files": [
+        "NC_054990_1_Lactococcus_phage_05802_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2024334",
+      "provider_tax_id": "2024334.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 898,
+      "HOST": "",
+      "literal_provided_bp": 22434,
+      "one_copy_provided_bp": 22434,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV71.0": {
+      "source_files": [
+        "NC_049390_1_Escherichia_virus_P2_4A7b_genome_assembly_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2844219",
+      "provider_tax_id": "2844219.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 4552,
+      "HOST": "",
+      "literal_provided_bp": 32848,
+      "one_copy_provided_bp": 32848,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV72.0": {
+      "source_files": [
+        "NC_062765_1_Uncultured_phage_cr30_1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2986411",
+      "provider_tax_id": "2986411.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1296,
+      "HOST": "",
+      "literal_provided_bp": 99984,
+      "one_copy_provided_bp": 99984,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV73.0": {
+      "source_files": [
+        "NC_043029_1_Stenotrophomonas_phage_phiSMA6_proviral_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1346893",
+      "provider_tax_id": "1346893.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 82,
+      "HOST": "",
+      "literal_provided_bp": 7648,
+      "one_copy_provided_bp": 7648,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV74.0": {
+      "source_files": [
+        "NC_019421_1_Clostridium_phage_phiMMP02_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1204534",
+      "provider_tax_id": "1204534.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 408,
+      "HOST": "",
+      "literal_provided_bp": 48396,
+      "one_copy_provided_bp": 48396,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV75.0": {
+      "source_files": [
+        "NC_015719_1_Enterobacteria_phage_K30_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1041524",
+      "provider_tax_id": "1041524.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 142,
+      "HOST": "",
+      "literal_provided_bp": 40940,
+      "one_copy_provided_bp": 40940,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV76.0": {
+      "source_files": [
+        "NC_070983_1_Escherichia_phage_IME267_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2860374",
+      "provider_tax_id": "2860374.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1868,
+      "HOST": "",
+      "literal_provided_bp": 76631,
+      "one_copy_provided_bp": 76631,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV77.0": {
+      "source_files": [
+        "NC_070882_1_Pseudomonas_phage_vB_PaeM_PS119XW_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2601632",
+      "provider_tax_id": "2601632.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 61810,
+      "HOST": "",
+      "literal_provided_bp": 301543,
+      "one_copy_provided_bp": 301543,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV78.0": {
+      "source_files": [
+        "NC_048643_1_Clostridium_phage_CDKM15_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1868595",
+      "provider_tax_id": "1868595.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1758,
+      "HOST": "",
+      "literal_provided_bp": 50605,
+      "one_copy_provided_bp": 50605,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV79.0": {
+      "source_files": [
+        "NC_049387_1_Escherichia_virus_P2_4B2_genome_assembly_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2844220",
+      "provider_tax_id": "2844220.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 3300,
+      "HOST": "",
+      "literal_provided_bp": 32118,
+      "one_copy_provided_bp": 32118,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV8.0": {
+      "source_files": [
+        "NC_028925_1_Enterobacteria_phage_vB_EcoM_VR25_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1567028",
+      "provider_tax_id": "1567028.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 524,
+      "HOST": "",
+      "literal_provided_bp": 170822,
+      "one_copy_provided_bp": 170822,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV80.0": {
+      "source_files": [
+        "NC_047749_1_Enterobacteria_phage_DT571_2_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1567007",
+      "provider_tax_id": "1567007.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 9862,
+      "HOST": "",
+      "literal_provided_bp": 108418,
+      "one_copy_provided_bp": 108418,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV81.0": {
+      "source_files": [
+        "NC_029000_1_Stenotrophomonas_phage_IME13_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1211280",
+      "provider_tax_id": "1211280.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 49280,
+      "HOST": "",
+      "literal_provided_bp": 162327,
+      "one_copy_provided_bp": 162327,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV82.0": {
+      "source_files": [
+        "NC_048195_1_Escherichia_phage_vB_EcoM_WFC_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2508193",
+      "provider_tax_id": "2508193.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 140,
+      "HOST": "",
+      "literal_provided_bp": 72472,
+      "one_copy_provided_bp": 72472,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV83.0": {
+      "source_files": [
+        "NC_079180_1_Escherichia_phage_SKA49_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2910155",
+      "provider_tax_id": "2910155.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 156,
+      "HOST": "",
+      "literal_provided_bp": 51548,
+      "one_copy_provided_bp": 51548,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV84.0": {
+      "source_files": [
+        "NC_054894_1_Escherichia_phage_Henu7_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2589652",
+      "provider_tax_id": "2589652.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 2382,
+      "HOST": "",
+      "literal_provided_bp": 49526,
+      "one_copy_provided_bp": 49526,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV85.0": {
+      "source_files": [
+        "NC_018854_1_Escherichia_phage_ECBP1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1604356",
+      "provider_tax_id": "1604356.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 348,
+      "HOST": "",
+      "literal_provided_bp": 69855,
+      "one_copy_provided_bp": 69855,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV86.0": {
+      "source_files": [
+        "NC_070982_1_Escherichia_phage_vB_EcoP_101114UKE3_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2865794",
+      "provider_tax_id": "2865794.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 7980,
+      "HOST": "",
+      "literal_provided_bp": 75747,
+      "one_copy_provided_bp": 75747,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV88.0": {
+      "source_files": [
+        "NC_019708_1_Enterobacteria_phage_mEp235_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1147150",
+      "provider_tax_id": "1147150.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 84,
+      "HOST": "",
+      "literal_provided_bp": 37595,
+      "one_copy_provided_bp": 37595,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV89.0": {
+      "source_files": [
+        "NC_070872_1_Escherichia_phage_U1G_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2853091",
+      "provider_tax_id": "2853091.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 140,
+      "HOST": "",
+      "literal_provided_bp": 73275,
+      "one_copy_provided_bp": 73275,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV9.0": {
+      "source_files": [
+        "NC_049950_1_Escherichia_virus_Lambda_2H10_genome_assembly_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2847058",
+      "provider_tax_id": "2847058.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 4168,
+      "HOST": "",
+      "literal_provided_bp": 46288,
+      "one_copy_provided_bp": 46288,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV90.0": {
+      "source_files": [
+        "NC_028822_1_Escherichia_phage_P483_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1572753",
+      "provider_tax_id": "1572753.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 2928,
+      "HOST": "",
+      "literal_provided_bp": 40829,
+      "one_copy_provided_bp": 40829,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV91.0": {
+      "source_files": [
+        "NC_027387_1_Escherichia_phage_CICC_80001_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1527506",
+      "provider_tax_id": "1527506.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 200,
+      "HOST": "",
+      "literal_provided_bp": 38810,
+      "one_copy_provided_bp": 38810,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV92.0": {
+      "source_files": [
+        "NC_011703_1_Pseudomonas_phage_14_1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "581037",
+      "provider_tax_id": "581037.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 5216,
+      "HOST": "",
+      "literal_provided_bp": 66235,
+      "one_copy_provided_bp": 66235,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV93.0": {
+      "source_files": [
+        "NC_026014_1_Enterobacteria_phage_P88_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1567486",
+      "provider_tax_id": "1567486.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 80,
+      "HOST": "",
+      "literal_provided_bp": 35814,
+      "one_copy_provided_bp": 35814,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV94.0": {
+      "source_files": [
+        "NC_003157_5_Streptococcus_phage_phiNIH1_1_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "173707",
+      "provider_tax_id": "173707.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 11934,
+      "HOST": "",
+      "literal_provided_bp": 43106,
+      "one_copy_provided_bp": 43106,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV95.0": {
+      "source_files": [
+        "NC_029116_1_Clostridium_phage_phiCDHM13_complete_genome_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1437363",
+      "provider_tax_id": "1437363.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 390,
+      "HOST": "",
+      "literal_provided_bp": 33596,
+      "one_copy_provided_bp": 33596,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV96.0": {
+      "source_files": [
+        "NC_049398_1_Lactococcus_phage_16802_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2029659",
+      "provider_tax_id": "2029659.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 1796,
+      "HOST": "",
+      "literal_provided_bp": 28721,
+      "one_copy_provided_bp": 28721,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV97.0": {
+      "source_files": [
+        "NC_026013_1_Microviridae_IME_16_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "1544364",
+      "provider_tax_id": "1544364.1",
+      "taxonomy_join_mode": "explicit_provider_genome_id",
+      "positive_read_records": 60,
+      "HOST": "",
+      "literal_provided_bp": 5755,
+      "one_copy_provided_bp": 5755,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV98.0": {
+      "source_files": [
+        "NC_073052_1_Escherichia_phage_JLBYU60_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2894753",
+      "provider_tax_id": "2894753.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 4,
+      "HOST": "",
+      "literal_provided_bp": 44804,
+      "one_copy_provided_bp": 44804,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    },
+    "vASV99.0": {
+      "source_files": [
+        "NC_073058_1_Escherichia_phage_vB_EcoS_WFI_genomic.fna"
+      ],
+      "lineage_class": "viral",
+      "origin_tax_id": "2508187",
+      "provider_tax_id": "2508187.1",
+      "taxonomy_join_mode": "explicit_genome_id_with_synthetic_origin_taxon_suffix",
+      "positive_read_records": 2522,
+      "HOST": "",
+      "literal_provided_bp": 45536,
+      "one_copy_provided_bp": 45536,
+      "primary_candidate": false,
+      "provided_replicons": 1
+    }
+  },
+  "circular_plasmid_summary": {
+    "files": 9,
+    "literal_bp": 4033410,
+    "one_copy_bp": 403341,
+    "all_exact_forward_rotations": true,
+    "all_native_catalog_hashes_match": true,
+    "separate_simulator_plasmid_ids": [
+      "pASV42",
+      "pASV43",
+      "pASV62",
+      "pASV63",
+      "pASV64",
+      "pASV65",
+      "pASV66",
+      "pASV67",
+      "pASV68"
+    ],
+    "HOST_is_not_genome_identity": true,
+    "host_genome_ids": [
+      "ASV134.7",
+      "ASV687.8",
+      "ASV783.5"
+    ]
+  },
+  "truth_admitted": false,
+  "remaining": [
+    "Repair/test minimap2 2.30 ambiguous-base PAF/CIGAR contract without weakening malformed-row rejection",
+    "Derive a fresh truth axis using observed simulator genome IDs; preserve non-target and zero-origin competitive references",
+    "Map all exact circular rotations to canonical molecule coordinates before repeat/recovery unions",
+    "Freeze/validate full provided-reference denominators, target exclusions and competing-chain ambiguity in the new derivation; do not equate provided MAG reference length with finished-genome completeness"
+  ],
+  "claim_limits": [
+    "Taxon-only rows classify two observed genome IDs without claiming a separate provider genome-ID inventory",
+    "110 synthetic strain taxon joins retain both original integer taxon and dotted provider identifier",
+    "No pretrained/near-genome independence, biological quality, bin recovery or SOTA claim",
+    "Provider profile percentages are not measured read fractions; do not substitute them"
+  ]
+}

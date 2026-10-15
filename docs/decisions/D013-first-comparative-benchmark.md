@@ -107,9 +107,9 @@ Use local Mac for cheap adapter checks and returned-output analysis; direct
 verified GCP for separately authorized bulk work. The old 700 UCloud core-hour
 plan/balance, Home/shared paths and 16/48 allocation are
 [archived planning](../history/E009_UCLOUD_OPERATIONS.md#superseded-two-depth-resource-protocol),
-not monetary GCP credits. Propose an 8-vCPU/32-GiB serial data stage, 300-GiB
+not monetary GCP credits. The data phase used an 8-vCPU/32-GiB serial stage, 300-GiB
 working disk and 24-hour cumulative driver clock/25-hour provider STOP, with a
-$20 gross run plus seven-day retention envelope. Current CPU quota fits; request balanced/SSD quota >=300 GiB before growth;
+$20 gross run plus seven-day retention envelope. The 300-GiB quota was granted before growth;
 full fits need a separate measured monetary/storage/RAM admission. Ordinary
 trial-credit eligibility, localized costs and fresh displayed balance/scope must
 be checked before spending; no growth/retry follows a failure automatically.
@@ -148,15 +148,17 @@ one native-tool victory or tune to E009 and claim held-out validation.
 
 E009 has no community fits/quality scores. V10/v14 native tiny contracts stay
 accepted without replay. The new acquisition/assembly/ten-sample depth/provisional
-alignment-truth DAG is locally tested on actual tiny DNA/native binaries, with
-partial/completed resume and byte-drift refusal. That does not certify the newly
-solved GCP runtime, full workload, genome grouping or cellular truth population.
+alignment-truth DAG passed actual tiny DNA/native contracts, partial/completed
+resume and byte-drift refusal. Those checks alone did not certify community scale;
+the subsequent GCP execution and independent data/population review below supply
+that evidence while leaving coordinate truth unadmitted.
 The executable prepared source is already committed and the owner has authorized
-its bounded data phase. Live credit/price/resource admission and an effective disk
-quota remain prerequisites; [operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md)
-owns the actual attempt status. Data evidence/truth review is the next assessment
-boundary; no full fits, scores, new seeds or architecture change follows
-automatically. Main remains the immutable control.
+its bounded data phase. The subsequent live credit/price/quota admission and actual
+partial result are in [operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md).
+Acquisition, full assembly and ten BAM/depth stages are independently accepted;
+the final PAF parser failed. The completed read/source/population review does not
+admit coordinate truth. No full fits, scores, new seeds or architecture change
+follows automatically. Main remains the immutable control.
 
 Owner direction enters a second development chapter: the stable prototype is
 the control; comparative evidence should select incremental improvements. There is
@@ -168,3 +170,30 @@ confirm useful changes on prospectively selected additional communities/assembli
 and preserve separate, untouched final validation for broad performance/SOTA claims.
 No architecture or feature family is rejected from this one prototype/dataset.
 GPU/Conda distribution and publication remain separate tasks.
+
+## Verified data review and next decision, 2026-10-15
+
+The strongest next step is **repair/test and independently admit a new truth
+derivation from retained alignments**, followed by preparation of unchanged
+diagnostic controls. Do not repeat accepted data stages or minimap2. The actual
+ambiguous-base failure, positive origin/source joins and nine separately simulated
+circular plasmids make this an evaluator correctness task, not an architecture
+choice or a reason for an expensive external fit.
+
+[The frozen four-arm proposal](../../experiments/E009-competitive-benchmark/diagnostic-controls-plan.json)
+retains dev3, seed 11, 20 epochs and fixed grouping on 89,041 eligible contigs while
+preserving all 145,702 assembly IDs. After admitted truth and a validated bounded
+native launcher, propose **a new $2 incremental gross fit ceiling**, existing
+8 CPU/32-GiB/300-GiB layout, four-hour cumulative phase and 4.25-hour provider STOP,
+with 10–20 GiB additional working-space allowance. That is an affordability bound,
+not a measured completion forecast or authorization from the data-only $20.
+Environment setup, verification and collection count within it. No new resources,
+retention extension or automatic retry follows a limit.
+
+No external binner belongs in the immediate next execution. First locate losses
+in raw versus learned geometry and fixed grouping using those unchanged controls.
+Then choose one targeted mechanism test; request SemiBin2 only if its retained
+intermediates supply a missing decision-changing observation. MetaCAT remains
+conditional; CompleteBin/COMEBin full grid/SCGBinner remain deferred. The expected
+ranking concern is not resolved by spending the small remaining data budget on
+fits; its scope stays separate even if a future fit is inexpensive.

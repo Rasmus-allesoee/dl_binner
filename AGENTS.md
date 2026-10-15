@@ -175,6 +175,11 @@ constraint. Keep relevant short-contig methods in design comparisons; use separa
 prospectively defined data/evaluation for unsupported ranges without automatically
 reopening an accepted experiment.
 
+Keep simulator genome IDs, source files/replicons, molecule type, host relationships
+and taxonomic nodes separate. A profile may omit genome IDs or use synthetic
+taxon labels; record the actual join evidence. Verify separately simulated plasmids
+and circular aliases before defining coordinate unions or genome denominators.
+
 When uncertainty remains, state it.
 
 Use public community benchmarks alongside question-specific simulations. Keep unmodified benchmark results distinct from controlled derivatives, and treat data used for mechanism selection as development data. Reuse established evaluators where their contracts fit; add tested diagnostic summaries before considering a replacement framework. Audit the actual input and execution paths rather than inferring them from a paper title or README. For multi-sample features, check native emitted sample and contig axes against the frozen manifest; do not assume filesystem ordering or alias names survive native path resolution. One assembly can still use many read/BAM samples: per-base coverage storage scales with covered assembly bases times BAM count, while multiple assemblies multiply whole run directories. Audit persistent candidates, checkpoints and temporary coexistence before claiming that a smaller epoch count bounds peak disk use.
