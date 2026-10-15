@@ -1,0 +1,10 @@
+[Unit]
+Description=Observe this boot's E009 driver independently of SSH and Codex
+
+[Timer]
+OnActiveSec=1s
+OnUnitInactiveSec=30s
+AccuracySec=1s
+Unit=e009-exit-watchdog.service
+
+# Intentionally started for this running task; not enabled for future boots.

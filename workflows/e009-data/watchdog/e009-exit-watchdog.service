@@ -1,0 +1,17 @@
+[Unit]
+Description=Stop the VM after the pinned E009 data workflow exits
+ConditionPathExists=/etc/e009-exit-watchdog/current.json
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I -B /usr/local/sbin/e009-exit-watchdog.py --evidence /srv/dl_binner/experiments/e009/gcp-phase-20261014/watchdog
+StateDirectory=e009-exit-watchdog
+StateDirectoryMode=0755
+TimeoutStartSec=120
+Nice=19
+IOSchedulingClass=idle
+CPUQuota=5%
+MemoryMax=96M
+NoNewPrivileges=yes
+ProtectHome=yes
+ProtectSystem=full
