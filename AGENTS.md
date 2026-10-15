@@ -277,6 +277,12 @@ alerts are notifications, not spending caps. Account for running idle time and
 storage while stopped; stop compute when unused and review credit expiry before
 retaining chargeable storage. No GPU infrastructure is implied by paid billing.
 
+For authorized unattended VM work, make end-of-run shutdown independent of the
+chat/SSH connection and bind it to the intended run's process identity. Test live,
+normal-exit and crash detection without stopping active science, and retain the
+provider's maximum-runtime fallback. A shutdown watcher is not a scientific
+progress monitor or permission to retry, extend or start another stage.
+
 Use local development for cheap checks; use a verified SSH-connected GCP repository
 and shell for authorized Linux/cloud phases. Agents may operate that VM within the
 current task's explicit execution boundary; an infrastructure task does not

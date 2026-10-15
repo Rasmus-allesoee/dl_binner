@@ -1,6 +1,6 @@
 # E009 operations: authorized data-only GCP phase
 
-Updated: 2026-10-14. **Later owner authorization: prepared data-only phase at
+Updated: 2026-10-15. **Later owner authorization: prepared data-only phase at
 5fec4e1; no binner fits/scores/model changes or automatic retries.**
 [Actual phase receipt](gcp-data-observed.json) owns execution/outcome/cost.
 Keep the clean VM source at that exact SHA while its journals remain active.
@@ -208,3 +208,70 @@ The prepared prompt at Git commit `5fec4e1` is historical. The actual owner
 message authorized this data phase and superseded the compulsory tool shortlist.
 The next prompt will be updated here after independently reviewing the complete
 or partial result. No fit phase, resource extension or retry follows a launch.
+
+## Overnight exit watchdog, 2026-10-15
+
+The owner reported chat cancellation at the five-hour usage limit and requested
+verified autonomous shutdown after the current workflow completes or crashes.
+Read-only inspection at 00:41–00:46 UTC confirms the original driver survived:
+sources/reads-0/assembly/map-0 are sealed and map-2 is acquiring. The full assembly
+is **145,702 contigs /231,678,157 bp**, **89,041 >=500 bp**, FASTA SHA256
+`d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33`.
+No scale failure, truncation, retry or changed execution checkout occurred.
+00:46 UTC free space is **269,894,918,144 bytes /251.36 GiB**; the reserve remains 25 GiB.
+
+[The watcher](../../scripts/e009_exit_watchdog.py), source commit `a6e351f`, is
+installed root-owned at `/usr/local/sbin/e009-exit-watchdog.py` with the reviewed
+[service](../../workflows/e009-data/watchdog/e009-exit-watchdog.service) and
+[timer](../../workflows/e009-data/watchdog/e009-exit-watchdog.timer) in
+`/etc/systemd/system/`. Root configuration `/etc/e009-exit-watchdog/current.json`
+pins boot `e6cb1c71-5bd3-4c87-8e2e-f0de8b3b1cc1`, driver PID **3167**, birth tick
+**18291**, command SHA256 and the original data root. PID reuse, zombies and a
+different boot cannot masquerade as this live driver. It runs independently of
+SSH/the user's login/chat, at idle I/O priority, nice 19, 5% of one CPU and 96-MiB
+memory cap. It does not inspect model scores, change data or run the deferred audit.
+
+The timer is **active/waiting**, polling every 30 seconds. Once the pinned driver
+is absent for 60 seconds, it records stage-manifest hashes, closed attempt records
+if present and short log tails at `/var/lib/e009-exit-watchdog/exit-snapshot.json`,
+mirrored to the persistent phase `watchdog/exit-snapshot.json`. It then syncs disks
+and invokes `/usr/sbin/shutdown -h now`. Typical detection/grace is 60–90 seconds,
+plus small snapshot/OS shutdown time. Missing optional logs do not block shutdown.
+The timer retries a failed shutdown command on its next tick; it never retries the
+experiment. No disk or evidence deletion follows. Both disks remain persistent.
+The timer is started for this boot, **not enabled for future boots**, and the boot
+identity is an additional safeguard. Re-arm explicitly for a later authorized run.
+
+Verification: local decision tests pass; actual Linux `/proc` and root systemd
+fixtures pass for exit 0 and exit 7, with a harmless substituted shutdown action.
+No real power-off test was performed because it would interrupt the active run.
+`systemd-analyze verify` passes; production service returns success and repeated
+timer-triggered journal/status timestamps show the exact live process and
+`shutdown:false`. Code/config/install/test/activation/tick evidence is retained in
+`artifacts/e009-gcp-data/20261015-watchdog` on the Mac and the versioned installer
+folder under the persistent phase. The actual receipt binds these small records.
+
+The independently verified GCP policy still has `automaticRestart=false`,
+`maxRunDuration=90000`, action `STOP`; API effective deadline is
+**2026-10-15T21:21:21.686843Z /23:21 Copenhagen**. This covers a failed watcher or
+unresponsive guest without depending on local code. It is a maximum, not an
+eight-hour completion forecast or proof the workflow will finish successfully.
+Guest shutdown is a supported [GCE stop method](https://docs.cloud.google.com/compute/docs/instances/stop-start-instance).
+No new GCP service/IAM grant/capacity or budget extension was required. Stopped
+disks still cost ~$31.20/month gross; the October-21 retention review remains.
+
+This owner amendment prioritizes prompt automatic stop over keeping compute idle
+for interactive analysis. The exact read-origin audit, biological truth admission,
+complete return review and private checksum/readback archive are **pending**, not
+unattended jobs. Keep truth provisional, preserve the disks and accepted stages.
+
+Next prompt after waking:
+
+> Read AGENTS.md, PROJECT_INTENT.md, docs/STATE.md, docs/CLOUD.md and E009 operations
+> and receipts. Inspect the VM's control-plane status and overnight shutdown first.
+> If it is still running, inspect the existing driver/watchdog without disrupting
+> or relaunching it. If stopped, do not start or provision anything yet. Review
+> locally retained evidence, report the outcome and any bounded restart/access
+> needed to collect and review the completed or partial result. Preserve accepted
+> stages and provisional truth. No retries, binner fits, E009 scores, architecture
+> changes or extra resources; retain CompleteBin's deferral.

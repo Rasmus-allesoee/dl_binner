@@ -1,7 +1,7 @@
 {
   "record": "E009",
-  "date": "2026-10-14",
-  "status": "running; no data-stage completion claimed",
+  "date": "2026-10-15",
+  "status": "running unattended with verified process-bound exit watchdog; no full result claimed",
   "scientific_outcome": "not assessed",
   "executed_source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
   "source_sync": "normal Mac push and clean read-only VM fetch/fast-forward; main unchanged",
@@ -306,6 +306,50 @@
       "provisional_reference_replicons": 7688,
       "provisional_reference_bp": 3946890689,
       "source_grouping_and_target_taxonomy_admitted": false
+    },
+    "sample0_archive_acquisition": {
+      "admitted_scientific_input": false,
+      "file": {
+        "bytes": 4866106604,
+        "sha256": "3aaa3265e826bf5f7956156494b7f67efc2f536a424007979f65d1b98e56201e"
+      },
+      "headers": {
+        "accept-ranges": "bytes",
+        "connection": "close",
+        "content-length": "4866106604",
+        "content-type": "application/octet-stream",
+        "date": "Wed, 14 Oct 2026 20:57:16 GMT",
+        "etag": "1279c383f2cec0cbf6ebd3b0ae56b38f-9",
+        "last-modified": "Fri, 03 Jul 2026 05:20:59 GMT",
+        "server": "Ceph Object Gateway (squid)",
+        "x-openstack-request-id": "tx000005f2bed587d284d4c-006acfecac-2843896412-default",
+        "x-timestamp": "1783056059.26004",
+        "x-trans-id": "tx000005f2bed587d284d4c-006acfecac-2843896412-default"
+      },
+      "publisher_checksum_verified": false,
+      "spec": {
+        "bytes": 4866106604,
+        "etag": "1279c383f2cec0cbf6ebd3b0ae56b38f-9",
+        "sha256": null,
+        "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_0_reads.tar.gz"
+      }
+    },
+    "sample0_reads": {
+      "sealed": true,
+      "validation": {
+        "bp": 4990053900,
+        "files": [
+          {
+            "bytes": 4605656272,
+            "sha256": "dbd2c2eeab4292764002ebbfd82582286f724d852888061a518fc36a74f4757f"
+          }
+        ],
+        "mate_identity_unspecified_pairs": 0,
+        "pairs": 16633513
+      },
+      "logical_bytes": 9734696028,
+      "files": 6,
+      "publisher_read_SHA_supplied": false
     }
   },
   "remote_root": "/srv/dl_binner/experiments/e009/data-stage-v1",
@@ -319,7 +363,13 @@
     "new source/assembly does not establish genome/pretraining independence"
   ],
   "private_archive": null,
-  "checks": null,
+  "checks": {
+    "watchdog_local": "decision test passed; Linux /proc test explicitly skipped on Mac",
+    "watchdog_native": "2 tests passed in real root systemd fixture; real timer ticks observed",
+    "scope": "no accepted native binner contracts or scientific stages repeated",
+    "docs": "check_docs.py PASS; preserved ten previously optional unavailable source-cache links",
+    "whitespace": "git diff --check PASS"
+  },
   "additional_evaluator_metadata": {
     "scope": "local read-only provider metadata; no feature/model access or additional VM workload",
     "dataset_page": {
@@ -389,7 +439,87 @@
         "bytes": 888,
         "sha256": "cee54880ed36546c09fbd7212d842a5d591fbc6ef8db1f6cbdc3e9ce8a370d4f"
       },
-      "implication": "A bacterial taxonomy and sum of ten source records above 200kb do not prove a cellular genome. Review standalone plasmid origin and permutation/copy semantics before freezing target membership or a whole-genome denominator; keep all competitive DNA. No truth admission or exclusion follows this exemplar alone."
+      "implication": "All ten records are exact forward circular rotations of one 89141-bp plasmid. Summing to 891410 bp and treating rotation aliases as independent loci would bias the genome denominator/repeat ambiguity. Review all permuted sources and normalize source coordinates in a separately versioned truth derivation before scores; keep the original PAFs and all competitive DNA.",
+      "circular_copy_check": {
+        "source": {
+          "bytes": 906430,
+          "sha256": "6244d7c9db6e0847fdd1abb607df097ed19e73d5a3fed4cb1847d5f802707761"
+        },
+        "records": [
+          {
+            "id": "0NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 0,
+            "same_base_counts": true
+          },
+          {
+            "id": "1NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 8914,
+            "same_base_counts": true
+          },
+          {
+            "id": "2NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 17828,
+            "same_base_counts": true
+          },
+          {
+            "id": "3NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 26742,
+            "same_base_counts": true
+          },
+          {
+            "id": "4NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 35656,
+            "same_base_counts": true
+          },
+          {
+            "id": "5NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 44570,
+            "same_base_counts": true
+          },
+          {
+            "id": "6NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 53484,
+            "same_base_counts": true
+          },
+          {
+            "id": "7NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 62398,
+            "same_base_counts": true
+          },
+          {
+            "id": "8NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 71312,
+            "same_base_counts": true
+          },
+          {
+            "id": "9NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 80226,
+            "same_base_counts": true
+          }
+        ],
+        "all_exact_circular_rotations": true,
+        "claim_limit": "one source file only; independent read origins and full molecule/genome grouping still required"
+      },
+      "related_chromosome_source": {
+        "file": "Bacteroides_fragilis_GUT04_strain_genomic.fna",
+        "records": [
+          [
+            "NZ_CP043610.1",
+            5330584
+          ]
+        ],
+        "positive_genome_join_not_yet_verified": true
+      }
     },
     "CAMISIM_read_ID_format_evidence": {
       "source_commit": "7ce6013c6d5a0fac8ba8a80e52a03560d3546fa6",
@@ -435,6 +565,244 @@
       "multiple-genome source-file ambiguity retained, scientific admission false",
       "intended consumed-input byte drift refusal"
     ],
-    "no_native_DAG_or_model_change": true
+    "no_native_DAG_or_model_change": true,
+    "source_commit": "b51c85a9f686e7e880ba8efa8d7ad867679b8eb6"
+  },
+  "latest_observation": {
+    "checked_utc": "2026-10-15T00:46:30.150217+00:00",
+    "stages_sealed": {
+      "assembly": true,
+      "map_0000": true,
+      "map_0002": false,
+      "reads_0000": true,
+      "sources": true
+    },
+    "assembly": {
+      "bp": 231678157,
+      "contigs": 145702,
+      "eligible_500": 89041,
+      "fasta": {
+        "bytes": 237732361,
+        "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+      },
+      "strata": {
+        "1": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "1000": {
+          "bp": 40505273,
+          "contigs": 27307
+        },
+        "10000": {
+          "bp": 100186114,
+          "contigs": 2084
+        },
+        "2500": {
+          "bp": 32866110,
+          "contigs": 7728
+        },
+        "500": {
+          "bp": 22098500,
+          "contigs": 35898
+        },
+        "768": {
+          "bp": 13986706,
+          "contigs": 16024
+        }
+      }
+    },
+    "filesystem": {
+      "free_bytes": 269894918144,
+      "used_bytes": 46821957632
+    },
+    "health": "driver alive; source/read/assembly/map-0 sealed, map-2 acquiring; no closed production failure receipt",
+    "source_checkout": "clean exact 5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+    "full_data_complete": false,
+    "truth_admitted": false
+  },
+  "exit_watchdog": {
+    "owner_authorization": "2026-10-15 after chat usage-limit cancellation; stop on current workflow success or crash",
+    "watchdog_source_commit": "a6e351f1bd0b29ee5ce68eb91ec02c708e59a108",
+    "installed_config": {
+      "armed_utc": "2026-10-15T00:46:03.914985+00:00",
+      "boot_id": "e6cb1c71-5bd3-4c87-8e2e-f0de8b3b1cc1",
+      "execution_source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+      "exit_grace_seconds": 60,
+      "process": {
+        "command_sha256": "56ef38544f80cec96c8b95146073fe09a36355f9364f182e58b7ae73a24dbb96",
+        "pid": 3167,
+        "start_ticks": 18291
+      },
+      "scope": "current boot and current pinned data driver only; no future run entitlement",
+      "watchdog_script_sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f",
+      "watchdog_source_commit": "a6e351f",
+      "workflow_root": "/srv/dl_binner/experiments/e009/data-stage-v1"
+    },
+    "status": "installed, active timer; repeated independent automatic ticks passed",
+    "poll_seconds": 30,
+    "exit_grace_seconds": 60,
+    "guest_action": "/usr/sbin/shutdown -h now after compact exit snapshot and os.sync",
+    "no_scientific_retries_or_extension": true,
+    "not_enabled_for_future_boots": true,
+    "native_linux_root_systemd_tests": {
+      "tests": 2,
+      "normal_exit": 0,
+      "crash_exit": 7,
+      "status": "passed",
+      "shutdown_substitution": "harmless callback; production power-off deliberately not exercised on live experiment",
+      "runtime_seconds": 0.752,
+      "cpu_seconds": 0.164,
+      "peak_memory_report": "3.7M"
+    },
+    "provider_backstop": {
+      "status": "RUNNING",
+      "lastStartTimestamp": "2026-10-14T13:21:34.621-07:00",
+      "machineType": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/machineTypes/e2-standard-8",
+      "scheduling": {
+        "automaticRestart": false,
+        "instanceTerminationAction": "STOP",
+        "maxRunDuration": {
+          "nanos": 0,
+          "seconds": "90000"
+        },
+        "onHostMaintenance": "MIGRATE",
+        "preemptible": false,
+        "provisioningModel": "STANDARD"
+      },
+      "effective_scheduling": {
+        "terminationTimestamp": "2026-10-15T21:21:21.686843Z"
+      },
+      "disks": [
+        {
+          "deviceName": "dl-binner-boot",
+          "diskSizeGb": "30",
+          "autoDelete": false
+        },
+        {
+          "deviceName": "dl-binner-work",
+          "diskSizeGb": "300",
+          "autoDelete": false
+        }
+      ]
+    },
+    "evidence": {
+      "artifacts/e009-gcp-data/20261015-watchdog/activation.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/activation.stdout.log": {
+        "bytes": 1633,
+        "sha256": "838afd3ba32f328fefc62a5d67ccde8628fd6c5c91b9730bef07d4d50b3f03f3"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/automatic-tick-verification.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/automatic-tick-verification.stdout.log": {
+        "bytes": 4118,
+        "sha256": "de9faec0bf3696e3524a01b73f233359582e0e3436b4fc04b8ce8edf7228930c"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/commit-code-message.txt": {
+        "bytes": 422,
+        "sha256": "116c137a6b4d96d7ee228cdeb7ff3582327c2294a68f934a0680c71d84398eae"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-code.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-code.stdout.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-service.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-service.stdout.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-test.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-test.stdout.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-timer.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-timer.stdout.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/health-and-watchdog.json": {
+        "bytes": 5014,
+        "sha256": "436b68dda0b6ae0b5f515ee0fa57e81137a12a424f25eea711c48e517c90043f"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/health-and-watchdog.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/install-watchdog.sh": {
+        "bytes": 2526,
+        "sha256": "5e4f943a1aae175dd9cfa4c91a299fd70c9e1ce60a21cb4887154b700194b0fb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/mac-tests.log": {
+        "bytes": 455,
+        "sha256": "84e4f6314b6cbcf6f39ab7cae32d8eb5e9f137e3111b8a56eaf36d0f8ea5b58f"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/native-systemd-selftest.stderr.log": {
+        "bytes": 885,
+        "sha256": "3b8b0a01fbcf2f5c6483e0a801e181e63ce285962a8ec0a1a1d06e1b9230747b"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/native-systemd-selftest.stdout.log": {
+        "bytes": 2636,
+        "sha256": "0777e9272a98a77e68eb68b70355f0d64994f126e20a29d0de5fae97bf00c2cf"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/provider-policy.json": {
+        "bytes": 810,
+        "sha256": "007fa64c74d0478cdc64d794ca98055d5e7cc713449e406d771c5113c95b8043"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/provider.stderr.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/stage-folders.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/stage-folders.stdout.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "remote_exit_snapshot": "/var/lib/e009-exit-watchdog/exit-snapshot.json",
+    "persistent_exit_snapshot": "/srv/dl_binner/experiments/e009/gcp-phase-20261014/watchdog/exit-snapshot.json",
+    "new_cloud_services_or_capacity": false,
+    "ongoing_stopped_disks_gross_usd_month": 31.2,
+    "pending": [
+      "full data-stage outcome",
+      "independent exact read/source audit",
+      "genome/replicon/circular-copy taxonomy/truth admission",
+      "compact private checksum/readback result archive",
+      "actual stopped state and full priced uptime; reporting is not invoice"
+    ],
+    "private_evidence_archive": {
+      "scope": "watchdog evidence only; full E009 result archive still pending",
+      "uri": "gs://dl-binner-archive-167650584170/e009/20261015-watchdog-a6e351f/watchdog-evidence-a6e351f.tar.gz",
+      "checksum_uri": "gs://dl-binner-archive-167650584170/e009/20261015-watchdog-a6e351f/watchdog-evidence-a6e351f.tar.gz.sha256",
+      "bytes": 9864,
+      "sha256": "624c85c67ae30f052cab31d9004344ef604c07d0cd47df60bd26470d791da906",
+      "readback_sha256_matched": true,
+      "regular_members": 29,
+      "inventory_file_count_excludes_itself": 28,
+      "snapshot_logical_member_bytes": 36038,
+      "no_credentials_or_bulk_data": true,
+      "verified_utc": "2026-10-15T00:49:38.493965+00:00"
+    }
   }
 }

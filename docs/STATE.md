@@ -1,6 +1,6 @@
 # Current Research State
 
-Updated: 2026-10-14. This is the single current handoff.
+Updated: 2026-10-15. This is the single current handoff.
 
 ## Exact next step
 
@@ -11,6 +11,26 @@ own progress/output/cost evidence. The clean execution source is exactly
 **5fec4e1d1700c64c4bdd9945bad4e116ade73c57**, normally pushed from the Mac and
 fast-forwarded on the read-only VM clone. Keep that source unchanged while its
 journals remain active; no binner fit, E009 score or architecture change is authorized.
+
+**Overnight follow-up, 2026-10-15 02:46 Copenhagen:** the run survived the chat's
+usage-limit cancellation. Sources, sample-0 reads, the complete assembly and
+sample-0 BAM/depth are sealed; sample 2 is acquiring. Assembly: **145,702 contigs /
+231,678,157 bp**, including **89,041 >=500-bp contigs**; it passes the frozen scale
+guard without filtering. About **251 GiB free** remains at the latest snapshot.
+No full-stage result/truth admission is claimed.
+
+At the owner's request a **root systemd exit watchdog is installed and active**,
+independent of Mac/SSH/Codex. It checks this boot's exact driver PID/birth tick/
+command hash every 30 seconds and, after 60 seconds of absence, records an exit
+snapshot, syncs and requests clean guest shutdown. Native Linux/systemd fixtures
+exercise success and crash with a harmless substituted shutdown action; repeated
+real automatic ticks correctly leave the running experiment alone. The provider
+STOP remains **2026-10-15 23:21 Copenhagen** as the independent fallback. No new
+service, capacity, execution retry or credit envelope was added. It deliberately
+does not auto-arm on a future boot. See [operations](../experiments/E009-competitive-benchmark/OPERATIONS.md#overnight-exit-watchdog-2026-10-15).
+The independent read/source audit, truth admission and compact private result
+archive remain pending review after wake-up; they are not queued after the driver.
+Check control-plane state before connecting/restarting. Do not relaunch the DAG.
 
 The later 2026-10-14 owner clarification makes **our own high-performing,
 potentially SOTA binner** the purpose. The accepted software is a simple prototype
@@ -42,8 +62,9 @@ five-tool contracts remain accepted without replay; no old science/prefix moved.
 Review closed read/source/assembly/BAM/depth bytes and native axes, **exact positive
 sample-0 origins, genome/replicon grouping and cellular taxonomy** before admitting
 truth. Keep unresolved truth provisional and all source/short/ambiguous DNA. Main's
-dev3 remains unchanged. Stop/verify the VM after collection; preserve logs, compact
-private checksum/readback evidence and measured allocation versus priced uptime.
+dev3 remains unchanged. The overnight watchdog now stops the VM before interactive
+collection/review; preserve the on-disk logs and later capture compact private
+checksum/readback evidence and measured allocation versus priced uptime.
 
 **Defer full CompleteBin**, retaining its architecture/storage study. Also defer
 COMEBin's full grid and SCGBinner until a precise improvement question justifies

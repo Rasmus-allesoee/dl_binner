@@ -1,8 +1,13 @@
 # Google Cloud workspace operations
 
-Updated: 2026-10-14 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
+Updated: 2026-10-15 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
+The active E009 run now has a verified host-local exit watchdog in addition to
+its provider STOP; [the experiment's exact installation and verification](../experiments/E009-competitive-benchmark/OPERATIONS.md#overnight-exit-watchdog-2026-10-15)
+own its scope. It stops after the current driver exits, independently of chat/SSH,
+preserving disks and logs. It is not armed for future boots. Check provider state
+before attempting SSH or any restart; a completed run may already be stopped.
 **Phase 1 accepted: strict IAP SSH, exact private repository clone, pinned Linux
 Codex CLI, ChatGPT authentication, actual desktop remote-project commands and
 private archive upload/readback pass. The Ubuntu sandbox prerequisite was repaired
