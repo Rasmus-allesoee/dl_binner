@@ -13,5 +13,14 @@
   "all_data_member_hashes_verified": 111,
   "archive_SHA_verified": true,
   "private_cloud_copy": "not uploaded; fresh Console credit read timed out; no cloud spend attempted",
-  "local_archive_only": true
+  "local_archive_only": false,
+  "subsequent_private_cloud_copy": {
+    "uri": "gs://dl-binner-archive-167650584170/e009/truth-v2-20261015-control-preparation-v1/e009-truth-v2-20261015-evidence-v1.tar.gz",
+    "sha256": "699cede72476a165bb3712d5368bd65ce1d9d543cc997b7604ff653d6c6dd761",
+    "bytes": 5218978,
+    "readback_verified": true,
+    "verified_utc": "2026-10-15T21:07:48.046559+00:00",
+    "upload_credit_gate": "cost-credit-admission.json",
+    "monthly_gross_storage_USD": 9.721104055643081e-05
+  }
 }

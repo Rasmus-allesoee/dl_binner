@@ -4,10 +4,13 @@ Updated: 2026-10-15. This is the single current handoff.
 
 ## Exact next step
 
-**Request separate $2 approval for the unchanged E009 diagnostic controls.**
-Truth v2 is independently admitted and the bounded parent is locally safety-tested;
-no binner has been fitted/scored. Do not start the VM or a fit without that approval
-and a fresh credit/cost/STOP/watchdog gate. No external tool belongs in this step.
+**Execute the owner-authorized unchanged E009 diagnostic controls if live gates pass.**
+The latest message explicitly approves the new $2 ceiling, existing resources and
+four-hour phase/4.25-hour STOP. [The control receipt](../experiments/E009-competitive-benchmark/controls-observed.json)
+owns current gates, source and actual outcome. No external binner/model change,
+retry, resource or retention extension is authorized. Once a healthy launcher and
+its watchdog are verified, leave it supervised and finish the response; do not poll
+to completion. Local diagnostics follow accepted outputs and shutdown.
 [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md) owns the exact
 following prompt, budgets and records. [D013](decisions/D013-first-comparative-benchmark.md)
 keeps improvement evidence as the purpose; the unchanged prototype is the control.
@@ -54,14 +57,15 @@ No new aligner, data replay, VM wake, fit or score was needed. This is provided-
 reference alignment truth, not MAG quality or independent-genome/pretraining proof.
 The new [retained evidence](../experiments/E009-competitive-benchmark/truth-v2-retained-evidence.json)
 is a **5,218,978-byte local archive**, 112 regular members /76,654,870 logical bytes;
-all 111 non-inventory hashes pass. Its cloud copy is pending a fresh credit gate;
-the original input archive remains privately backed up. No cloud write was attempted.
+all 111 non-inventory hashes pass. The later control-phase credit gate passed and
+its private cloud upload/readback now verifies; the original input archive is also
+privately backed up. The truth derivation itself used no VM compute.
 
 The prepared [diagnostic proposal](../experiments/E009-competitive-benchmark/diagnostic-controls-plan.json)
 keeps dev3 source **5e54538d1799e8d2538621729400f33fbaf017b9**, seed 11, 20 epochs and
 fixed grouping: raw/learned TNF+ten-depth and TNF-only. A proposed **new $2
 incremental fit budget**, four-hour cumulative phase/4.25-hour provider STOP on the
-existing 8 CPU/32-GiB VM, needs explicit approval. The new parent passes eight Mac
+existing 8 CPU/32-GiB VM, is now explicitly owner-approved subject to live gates. The new parent passes eight Mac
 safety contracts with inert native children and verifies the exact retained wheel;
 fresh Linux setup/runtime probe remains before the first fit within that clock.
 This is a ceiling, not measured affordability. **No external tool is recommended in

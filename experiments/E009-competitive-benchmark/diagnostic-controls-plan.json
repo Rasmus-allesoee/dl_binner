@@ -1,6 +1,6 @@
 {
   "record": "E009",
-  "status": "prepared bounded parent and local safety tests passed; not authorized; Linux setup/probe and full-scale fit affordability unmeasured",
+  "status": "owner-authorized conditional control execution; see controls-observed.json",
   "decision": "repair/admit truth from retained evidence first; then diagnose the unchanged prototype before an external reference",
   "baseline_source_commit": "5e54538d1799e8d2538621729400f33fbaf017b9",
   "baseline_package": "0.1.0.dev3",
@@ -85,7 +85,7 @@
     }
   ],
   "prospective_budget": {
-    "new_incremental_approval_required": true,
+    "new_incremental_approval_required": false,
     "proposed_gross_ceiling_usd": 2,
     "existing_machine": "e2-standard-8 /32GiB",
     "work_disk_gib": 300,
@@ -120,5 +120,6 @@
   "package_lock": "diagnostic-package-lock.json",
   "feature_inputs": "diagnostic-feature-inputs.json",
   "truth_admission": "truth-v2-admission.json",
-  "new_fit_budget_approved": false
+  "new_fit_budget_approved": true,
+  "phase_parent": "scripts/e009_controls_phase.py"
 }

@@ -12,8 +12,10 @@ reuse an old 25-hour launch policy as authorization for a future phase.
 The subsequent E009 truth repair/admission ran **locally from retained PAFs**:
 [the receipt](../experiments/E009-competitive-benchmark/truth-v2-admission.json)
 records zero new VM hours/$0 compute, no provisioning/resizing and unchanged
-TERMINATED state. Existing disk retention/costs below continue. The proposed $2
-control phase is **unapproved**; its 4.25-hour STOP is prospective, not current.
+TERMINATED state. Existing disk retention/costs below continue. The subsequent $2
+control phase is now explicitly **owner-authorized subject to live gates**; the
+[control receipt](../experiments/E009-competitive-benchmark/controls-observed.json)
+owns actual policy/state. Its 4.25-hour STOP must be verified before start.
 Fresh credit/price verification, a new boot/process-bound watchdog and native
 runtime probe are required before that separate phase. Keep read-only GitHub.
 **Phase 1 accepted: strict IAP SSH, exact private repository clone, pinned Linux

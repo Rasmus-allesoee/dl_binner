@@ -1,0 +1,73 @@
+{
+  "record": "E009",
+  "phase": "unchanged-controls-v1",
+  "status": "owner-authorized; live credit/price/local byte gates pass; VM not yet started",
+  "owner_authorization": "current user message explicitly authorizes four unchanged controls under new $2 if stated gates pass; no polling to completion required after healthy supervised launch",
+  "budget": {
+    "incremental_gross_ceiling_USD": 2,
+    "phase_clock_seconds": 14400,
+    "provider_STOP_seconds": 15300,
+    "free_reserve_GiB": 25,
+    "growth_max_GiB": 20,
+    "resources": "existing e2-standard-8/32GiB, work300GiB and boot30GiB",
+    "no_resize_provision_retry_or_retention_extension": true
+  },
+  "credit_price_gate": {
+    "checked_utc": "2026-10-15T21:02:33.528541+00:00",
+    "paid_billing": true,
+    "credit_available_dkk": 1942.67,
+    "credit_original_dkk": 1973.43,
+    "credit_status": "Available",
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; see terms for free trial; Net pricing",
+    "overview_reported_cost_dkk": 27.89,
+    "overview_savings_dkk": 27.89,
+    "overview_net_dkk": 0,
+    "reported_credit_consumption_dkk": 30.76,
+    "pending_usage": "billing may lag >24h; no precise pending total available, never treated as zero",
+    "remaining_known_usage_margin": "known existing project only, bounded new $2 plus existing seven-day storage far below remaining credit",
+    "hourly_gross_USD": 0.2730456762592465,
+    "max_4_25h_compute_IP_USD": 1.1604441241017975,
+    "new_gross_ceiling_USD": 2,
+    "ordinary_E2_PD_IP_Standard_Storage_covered": true,
+    "services_or_resources_added": false,
+    "disk_retention_due": "2026-10-21",
+    "prices_DKK": {
+      "4AF8-7C1F-39C4": 0.016445249,
+      "6AE1-525F-8B80": 0.657809999,
+      "C054-7F72-A02E": 0.032890499,
+      "CF4E-A0C7-E3BF": 0.14347882,
+      "D973-5D65-BAB2": 0.263123999,
+      "F449-33EC-A5EF": 0.019231272
+    },
+    "DKK_per_USD": 6.578099999996525,
+    "gates_passed_before_VM_wake": true
+  },
+  "baseline": "5e54538d1799e8d2538621729400f33fbaf017b9 /0.1.0.dev3 /seed11 /20 epochs /cutoff500 /fixed grouping",
+  "source_launcher_unchanged": true,
+  "data_truth_unchanged": true,
+  "arms": [
+    "raw_tnf_ten_depth",
+    "learned_tnf_ten_depth",
+    "raw_tnf_only",
+    "learned_tnf_only"
+  ],
+  "external_binners": [],
+  "new_parent": "scripts/e009_controls_phase.py retains stable hold PID, boot-relative outer clock and private artifact/status collection; actual watchdog verifies before release",
+  "local_parent_checks": {
+    "tests_pass": 3,
+    "child_program_and_GCS_calls": "substituted external boundaries; no fit executed",
+    "real_paths": "hold/release checks, clock refusal, failed launcher record, real JSON/tar readers/writers and checksum comparisons"
+  },
+  "native_watchdog_checks": "pending current boot; preserve successful prior scientific contracts without replay",
+  "latest": "pending VM wake and actual headroom/source/runtime/watchdog gates",
+  "truth_cloud_copy": {
+    "uri": "gs://dl-binner-archive-167650584170/e009/truth-v2-20261015-control-preparation-v1/e009-truth-v2-20261015-evidence-v1.tar.gz",
+    "sha256": "699cede72476a165bb3712d5368bd65ce1d9d543cc997b7604ff653d6c6dd761",
+    "bytes": 5218978,
+    "readback_verified": true,
+    "verified_utc": "2026-10-15T21:07:48.046559+00:00",
+    "upload_credit_gate": "cost-credit-admission.json",
+    "monthly_gross_storage_USD": 9.721104055643081e-05
+  }
+}

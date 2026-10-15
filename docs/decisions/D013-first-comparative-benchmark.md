@@ -213,3 +213,13 @@ intermediates supply a missing decision-changing observation. MetaCAT remains
 conditional; CompleteBin/COMEBin full grid/SCGBinner remain deferred. The expected
 ranking concern is not resolved by spending the small remaining data budget on
 fits; its scope stays separate even if a future fit is inexpensive.
+
+## Conditional unchanged-control authorization, 2026-10-15
+
+The latest owner message approves the four unchanged controls under a **new $2**
+ceiling if live credit/cost/storage/native/watchdog gates pass. This is the bounded
+next diagnostic step above, not external-tool authorization. [Actual control records](../../experiments/E009-competitive-benchmark/controls-observed.json)
+retain execution, failures and costs. Once healthy under its verified watchdog,
+leave a running launcher supervised and return to the owner without waiting for
+completion. Inspect accepted returned outputs after shutdown; select one mechanism
+from diagnostics, retaining development-data and one-assembly limits.

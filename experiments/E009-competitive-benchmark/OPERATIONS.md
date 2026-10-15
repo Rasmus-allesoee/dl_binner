@@ -11,6 +11,38 @@ Old Terminal/Slurm/Home/shared-storage commands and their budgets are exclusivel
 [historical](../../docs/history/E009_UCLOUD_OPERATIONS.md). Old receipts/prefix
 locators are preserved provenance, never GCP runtime paths.
 
+## Authorized unchanged-control execution, 2026-10-15
+
+The latest owner message **authorizes the four unchanged controls in this task if
+the stated gates pass**, under a new $2 incremental gross ceiling. This supersedes
+older unapproved-fit wording below. [The control receipt](controls-observed.json)
+owns exact source, credit/cost/native gates, live status and artifact locators.
+Keep dev3/seed11/20 epochs/cutoff500/grouping and accepted inputs unchanged.
+No external binner, new model, resource, retry or retention extension is allowed.
+
+Live paid billing shows **DKK1,942.67 Available Welcome credit**, original1,973.43,
+expiry2027-01-12, certain-usage/net-pricing scope. October1–15 cost/savings are both
+DKK27.89, net0; issued-credit consumption30.76. Billing lag can exceed24h and pending
+usage is not observable precisely. Current DKK Catalog prices/ordinary E2, PD, IP
+and Standard Storage eligibility pass; maximum 4.25h compute/IP remains ~$1.16045.
+Storage retention is still approved only to the October21 review. No new capacity
+or service is needed; actual filesystem headroom is checked immediately after wake.
+
+The added [held parent](../../scripts/e009_controls_phase.py) retains its own PID
+while the unchanged launcher runs once. It subtracts preparation since VM boot
+from four hours, reserves180s for collection and keeps the same 25-GiB reserve/
+20-GiB growth allowance. A fresh systemd exit watcher must be pinned and verified
+before its release file is written. Provider STOP remains the independent fallback.
+It uploads/readbacks finished artifacts and compact closure/status to the existing
+private bucket, then exits for shutdown. Three local boundary tests pass without
+any fit; current-boot watchdog live/normal/crash verification remains before release.
+
+Owner steering: if the released launcher is still healthy/running after verification,
+finish the response with its current stage/logs and following inspection prompt.
+Do not repeatedly poll until completion. If already finished, confirm shutdown and
+review retained controls locally under admitted v2 without refitting or new cloud
+compute. Preserve failures/partials and do not retry or silently shorten schedules.
+
 ## Admitted truth v2 and current next boundary, 2026-10-15
 
 **Truth repair succeeded locally; no fit, score, new alignment or VM wake ran.**
