@@ -146,7 +146,14 @@ ordinary product suite has no ignored research assets/helpers or mocked workers.
 existing VM/disks, 4-hour cumulative clock, 4.25-hour STOP, 25-GiB reserve and
 20-GiB extra cap), selective bundle/pre-post diagnostics and exact approval prompt.
 No new cloud spending was initiated; existing provisioned-disk billing continues.
-See `local-observed.json` for byte/resource evidence and the local archive locator;
+See [local-observed.json](local-observed.json) for byte/resource evidence and the local archive locator;
 that local archive is not a remote backup. Native Linux and community quality are
 not inferred from these local checks.
+
+Implementation source is frozen at `d15c95a30c219b64a32a280e248bf167423629e2`.
+The local evidence archive is **6,189,207 bytes**, SHA256
+`938fade66110686fb39b808d921652aeb53ce506b905d8687bdf0c9cf0b51176`;
+all **1,405 regular members /13,947,258 logical bytes**, including its inventory,
+verify. It excludes numerical/build prefixes (about **3.4 GiB** rounded local
+allocated disk). Existing accepted E009 evidence is not repackaged or modified.
 

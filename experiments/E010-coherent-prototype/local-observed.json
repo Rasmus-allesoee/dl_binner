@@ -38,6 +38,7 @@
       "sha256": "12daa27e11791aba19e954d585e25bbc3de08fdd1e989a78eb08ba48769817e6"
     }
   },
+  "execution_source_note": "Engineering checks ran from the captured installed wheel/source snapshots before this commit; all 18 package/default bytes are verified equal to this committed implementation. No clean-commit scientific run is claimed.",
   "failures_preserved": [
     "PR contract pass initially blocked by sandbox ps; crash-interrupted native pass preserved; final 91 passed/one Linux-only skip",
     "Initial product wheel leaked old run.smk from stale build directory; native str translation mismatch; failed wheel/env/logs retained",
@@ -529,6 +530,7 @@
     "tests": 21,
     "wall_seconds": 167.98312900500605
   },
+  "implementation_source_commit": "d15c95a30c219b64a32a280e248bf167423629e2",
   "incremental_cloud_compute_cost_usd": 0,
   "launcher_tests": {
     "log": {
@@ -538,6 +540,23 @@
     "passed": true,
     "scope": "Native inert children and file/archive/readback contracts; external GCS transport/status publication and disk-capacity sensor substituted, not cloud proof",
     "tests": 6
+  },
+  "local_evidence_archive": {
+    "all_members_verified": true,
+    "archive": {
+      "bytes": 6189207,
+      "sha256": "938fade66110686fb39b808d921652aeb53ce506b905d8687bdf0c9cf0b51176"
+    },
+    "collector_log_scope": "All native validation logs closed. The collector own redirected log is an empty prefix member; immutable member sizes, not its later live size, determine the reported archive payload.",
+    "inventory": {
+      "bytes": 279905,
+      "sha256": "64518b2772a59ea5fc036b4d097cabdf0b14a65790634df957a63934caa307d1"
+    },
+    "locator": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/e010-local-evidence-v1.tar.gz",
+    "logical_member_bytes": 13947258,
+    "regular_members": 1405,
+    "remote_backup": false,
+    "scope": "Engineering evidence only; environments excluded"
   },
   "merged_benchmark_PR": {
     "CI": "product Linux passed on benchmark head",
@@ -663,6 +682,33 @@
     "stop_reason": null,
     "tests": 8,
     "wall_seconds": 77.57606539898552
+  },
+  "retained_local_environment_storage": {
+    "base_interpreter": "/opt/miniconda3/envs/anvio-dev; lexical venv paths retained; numerical imports owned",
+    "numerical_environments_excluded_from_archive": true,
+    "prefixes": {
+      ".DS_Store": {
+        "logical_regular_bytes": 0,
+        "regular_files": 0
+      },
+      "builder-dev4-v1": {
+        "logical_regular_bytes": 29427730,
+        "regular_files": 1809
+      },
+      "candidate-dev4-v1": {
+        "logical_regular_bytes": 1136259294,
+        "regular_files": 26096
+      },
+      "candidate-dev4-v2": {
+        "logical_regular_bytes": 1136260324,
+        "regular_files": 26096
+      },
+      "candidate-dev4-v3": {
+        "logical_regular_bytes": 1136263347,
+        "regular_files": 26096
+      }
+    },
+    "reported_allocated_disk_du": "3.4G across candidate v1/v2/v3 and builder prefixes; rounded du, not a peak"
   },
   "runtime": {
     "base_prefix": "/opt/miniconda3/envs/anvio-dev",
