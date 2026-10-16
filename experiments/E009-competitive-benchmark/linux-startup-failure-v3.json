@@ -1,0 +1,121 @@
+{
+  "record": "E009",
+  "date": "2026-10-10",
+  "attempt": "native-preflight-53ozx38q",
+  "status": "startup failed; no tool/data/scientific stage accepted",
+  "archive": {
+    "path": "agent_context/native-preflight-53ozx38q-return.tar.gz",
+    "file": {
+      "bytes": 10461,
+      "sha256": "59ce20bff94addc60d8619ace06867e6bdd640a2a59dee015db1f5092f4945a0"
+    }
+  },
+  "checksum": {
+    "path": "agent_context/native-preflight-53ozx38q-return.tar.gz.sha256",
+    "file": {
+      "bytes": 106,
+      "sha256": "2462638c8ceb73b420e5cee0a9f265147298a88e094e5e3ffece3d5a460831f0"
+    }
+  },
+  "uploaded_terminal": {
+    "path": "agent_context/terminal.log",
+    "file": {
+      "bytes": 3352,
+      "sha256": "ffb560660902c47cdfe27363a7fa8018e8c8f29974b832e846f24a749b92e2c3"
+    }
+  },
+  "checksum_and_all_inventory_hashes_verified": true,
+  "inventory_files": 7,
+  "archive_members": 9,
+  "immutable_retained_logical_bytes": 54039,
+  "terminal_snapshot": {
+    "bytes": 3164,
+    "sha256": "cd752db03a2fe67cb8e343369232fee65506017deef8e4ddfd2f2d44ae49192c"
+  },
+  "source_commit": "a12c962a85946167bcc2441597b30fcca85b209c",
+  "status_receipt": {
+    "accounting": "declared allocation times entry-to-driver wall; includes setup/failures; excludes owner idle/upload",
+    "allocated_core_hours_before_collection": 0.20249213296195698,
+    "allocated_ram_gb": 24,
+    "allocated_vcpus": 8,
+    "error": "RuntimeError('Command failed; see /work/Home/dl_binner/e009/native-preflight-53ozx38q/stages/readonly-comebin-base-probe.log\\nTimeoutError: Configured wall-time limit reached')",
+    "execution_timed_out": false,
+    "exit_code": 1,
+    "seconds_before_collection": 91.12145983288065,
+    "status": "failed",
+    "verification_passed": true
+  },
+  "probe_exit_receipt": {
+    "command": [
+      "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/bin/python",
+      "-I",
+      "-B",
+      "/work/Home/dl_binner/e009/transfer/launch-rm8hb_h0/e009-preflight-v3/scripts/e009_native.py",
+      "--inventory-prefix",
+      "/work/Home/dl_binner/e001/e001-gate0/envs/comebin",
+      "--expected-freeze",
+      "/work/Home/dl_binner/e009/transfer/launch-rm8hb_h0/e009-preflight-v3/experiments/E009-competitive-benchmark/comebin-base-freeze.txt",
+      "--modules",
+      "numpy",
+      "torch",
+      "pandas",
+      "scipy",
+      "sklearn",
+      "pysam",
+      "Bio",
+      "hnswlib",
+      "igraph",
+      "leidenalg"
+    ],
+    "exit_code": -15,
+    "launched_pid": 4279,
+    "peak_sampled_rss_bytes": 59056128,
+    "rss_bytes_ceiling": 20000000000,
+    "sample_includes_coordinator": true,
+    "sampled_average_cpus": 0.014530878879905678,
+    "sampled_cpu_seconds": 1.31,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 90,
+    "stop_reason": "TimeoutError: Configured wall-time limit reached",
+    "wall_seconds": 90.1528400881216
+  },
+  "collection_receipt": {
+    "allocated_core_hours_through_collection": 0.20250966611939172,
+    "archive": "/work/Home/dl_binner/e009/transfer/native-preflight-53ozx38q-return.tar.gz",
+    "checksum": "/work/Home/dl_binner/e009/transfer/native-preflight-53ozx38q-return.tar.gz.sha256",
+    "collection_after_execution_timeout": false,
+    "file": {
+      "bytes": 10461,
+      "sha256": "59ce20bff94addc60d8619ace06867e6bdd640a2a59dee015db1f5092f4945a0"
+    },
+    "members": 9,
+    "retained_logical_bytes": 54039,
+    "seconds_through_collection": 91.12934975372627
+  },
+  "owned_storage_snapshot": {
+    "home": {
+      "files": 83,
+      "links_excluding_targets": 0,
+      "logical_file_bytes": 21771135,
+      "scope": "owned filesystem snapshot before collection, distinct from exact archive-member retained bytes",
+      "unique_inode_physical_bytes_estimate": 21987328
+    },
+    "shared": {
+      "files": 0,
+      "links_excluding_targets": 0,
+      "logical_file_bytes": 0,
+      "scope": "owned filesystem snapshot before collection, distinct from exact archive-member retained bytes",
+      "unique_inode_physical_bytes_estimate": 0
+    }
+  },
+  "observed_failure": "first mandatory reused COMEBin inventory/import child timed out at 90 seconds; child log contains only supervisor exit trailer, no module/site diagnostics",
+  "cause_status": "underlying startup stall unresolved; retained evidence cannot locate whether loader/site/metadata/import/freeze blocked",
+  "accepted": "source-bound packet verification and failure/collection contracts only; no healthy runtime or read-only-tree acceptance",
+  "unexecuted": [
+    "source/data downloads",
+    "new tool environments",
+    "native reader/writer contracts",
+    "community fits/scores"
+  ],
+  "recovery": "instrument before normal site startup; module/metadata/freeze progress and Linux owned-process wait state; keep 90-second gate, no bypass/relocation/reinstall; new v4 and terminal files in transfer/"
+}

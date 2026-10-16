@@ -1,0 +1,34 @@
+"""One source acquisition, one assembly, serial ordered mapping/depth, then truth.
+
+All substantial rules record extended native benchmarks. Explicit predecessor
+edges serialize independent downloads as well as mappings. The launcher bounds
+setup, parent hashing and this complete local-executor DAG with the same clock.
+"""
+import json
+import shlex
+from pathlib import Path
+
+CFG=json.loads(Path(config['stage_config']).read_text())
+ROOT=Path(CFG['root'])
+STAGES=['sources','reads_0000','assembly',*[f'map_{s["sample"]:04d}' for s in CFG['plan']['samples']],'final']
+PREVIOUS=dict(zip(STAGES[1:],STAGES[:-1]))
+WORKER=Path(CFG['repo'])/'scripts/e009_gcp_stage.py'
+
+rule all:
+    input: str(ROOT/'parts/final/done.json')
+
+rule data_stage:
+    input:
+        previous=lambda w: str(ROOT/'parts'/PREVIOUS[w.stage]/'done.json') if w.stage in PREVIOUS else [],
+        config=config['stage_config']
+    output: str(ROOT/'parts/{stage}/done.json')
+    wildcard_constraints:
+        stage='|'.join(STAGES)
+    threads: CFG['threads']
+    resources: mem_mb=CFG['working_rss_bytes']//1000000
+    log: str(ROOT/'logs/{stage}.log')
+    benchmark: str(ROOT/'benchmarks/{stage}.tsv')
+    params:
+        command=lambda w: ' '.join(shlex.quote(str(x)) for x in
+            [CFG['runtime']['python'],'-I','-B',WORKER,'--config',config['stage_config'],'--stage',w.stage])
+    shell: '{params.command} > {log:q} 2>&1'

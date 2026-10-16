@@ -1,0 +1,126 @@
+{
+  "record": "E009",
+  "status": "Executed once under separate owner $2 approval; all four accepted in controls-review.json",
+  "decision": "repair/admit truth from retained evidence first; then diagnose the unchanged prototype before an external reference",
+  "baseline_source_commit": "5e54538d1799e8d2538621729400f33fbaf017b9",
+  "baseline_package": "0.1.0.dev3",
+  "training": {
+    "path": "src/dl_binner/resources/training.json",
+    "bytes": 215,
+    "sha256": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5"
+  },
+  "seed": 11,
+  "min_length_bp": 500,
+  "model_or_grouping_changes": false,
+  "input_acceptance": "gcp-data-observed.json#independent_feature_acceptance",
+  "assembly_sample": 0,
+  "coverage_samples": [
+    0,
+    2,
+    3,
+    4,
+    6,
+    9,
+    10,
+    11,
+    14,
+    17
+  ],
+  "eligible_contigs": 89041,
+  "preserve_all_145702_contigs": true,
+  "arms": [
+    "learned_tnf_ten_depth",
+    "raw_tnf_ten_depth",
+    "learned_tnf_only",
+    "raw_tnf_only"
+  ],
+  "paired_commands": [
+    {
+      "pair": "ten-depth",
+      "argv_template": [
+        "PYTHON_IN_FRESH_DEV3_CPU_ENV",
+        "-I",
+        "-B",
+        "-m",
+        "dl_binner",
+        "run",
+        "--fasta",
+        "ACCEPTED_FULL_ASSEMBLY",
+        "--depth",
+        "ACCEPTED_TEN_COLUMN_MATRIX",
+        "--output",
+        "NEW_PAIRED_TEN_DEPTH_ROOT",
+        "--threads",
+        "8",
+        "--min-length",
+        "500",
+        "--memory-gb",
+        "26",
+        "--timeout",
+        "REMAINING_SECONDS_IN_SHARED_PHASE_CLOCK"
+      ]
+    },
+    {
+      "pair": "tnf-only",
+      "argv_template": [
+        "PYTHON_IN_FRESH_DEV3_CPU_ENV",
+        "-I",
+        "-B",
+        "-m",
+        "dl_binner",
+        "run",
+        "--fasta",
+        "ACCEPTED_FULL_ASSEMBLY",
+        "--output",
+        "NEW_PAIRED_TNF_ONLY_ROOT",
+        "--threads",
+        "8",
+        "--min-length",
+        "500",
+        "--memory-gb",
+        "26",
+        "--timeout",
+        "REMAINING_SECONDS_IN_SHARED_PHASE_CLOCK"
+      ]
+    }
+  ],
+  "prospective_budget": {
+    "new_incremental_approval_required": false,
+    "proposed_gross_ceiling_usd": 2,
+    "existing_machine": "e2-standard-8 /32GiB",
+    "work_disk_gib": 300,
+    "extra_disk_estimate_gib": 10,
+    "extra_disk_conservative_allowance_gib": 20,
+    "free_reserve_gib": 25,
+    "cumulative_setup_verification_fit_collection_hours": 4,
+    "provider_stop_hours": 4.25,
+    "compute_ip_max_usd": 1.16044414,
+    "retention": "within existing seven-day storage window; no retention extension implied",
+    "not_a_runtime_forecast": true,
+    "complete_independent_runtime_required": "fresh owned CPU env from accepted Python3.12/numpy1.26.4/torch2.2.2+cpu/networkx3.4.2 recipe, installed immutable dev3 wheel; no borrowed UCloud prefix",
+    "full_scale_CPU_RSS_affordability_unmeasured": false,
+    "no_scores_in_cloud_launcher": true
+  },
+  "questions": [
+    "Does this fixed encoder/normalization preserve or damage locally useful raw TNF/depth geometry?",
+    "Are errors primarily feature/embedding separation or fragmentation/mixing in fixed grouping?",
+    "What is the contribution of these ten measured depth columns in this development setting?"
+  ],
+  "keep_modify_abandon": "Use raw/learned and length/origin diagnostics to choose one representation/view change if learned signal worsens; one fixed-encoder grouping test if geometry is useful but bins fragment/mix. A depth-arm result does not settle depth as a product feature. Do not tune to one assembly.",
+  "external_scope": "No external run in the immediate next step. At most SemiBin2 later if its retained feature/embedding/reclustering evidence changes a concrete unresolved decision; separate full-schedule cost admission. CompleteBin/SCGBinner/COMEBin remain deferred.",
+  "requirements_before_execution": [
+    "admitted versioned truth is complete; verify exact truth-v2-admission.json binding and accepted feature hashes",
+    "explicit new fit-budget approval",
+    "installed frozen package and native runtime/tiny safety contracts",
+    "bounded serial parent locally tested with native inert children; fresh Linux runtime setup/probe and exact installed source check before any community fit",
+    "fresh credit and price gate, process/disk/progress controls, end-of-run watchdog",
+    "retained labels kept outside feature/training paths; no expected genome count used"
+  ],
+  "launcher": "scripts/e009_controls.py",
+  "package_lock": "diagnostic-package-lock.json",
+  "feature_inputs": "diagnostic-feature-inputs.json",
+  "truth_admission": "truth-v2-admission.json",
+  "new_fit_budget_approved": true,
+  "phase_parent": "scripts/e009_controls_phase.py",
+  "execution_result": "controls-review.json"
+}

@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-10-03
+Updated: 2026-10-08
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -212,3 +212,103 @@ summaries and strict recovery/failure/resource contracts. Model/training/cluster
 remain unchanged; no accepted science is repeated and no biological utility is
 asserted. Next prepare a tiny owner-controlled Linux generic-launcher smoke.
 Independent quality/coverage questions and the non-blocking comparison stay open.
+
+2026-10-08 Q001/Q003/Q004/Q005 comparative-planning update: the first usable
+prototype is merged and its native product evidence remains accepted.
+[D013](../decisions/D013-first-comparative-benchmark.md) and
+[E009](../../experiments/E009-competitive-benchmark/README.md) prepare a new
+sample-0 actual short-read gut assembly, paired observed depth and a bounded
+native-tool comparison with matched raw/learned and sequence/depth controls.
+Whole-reference versus assembly-conditional recovery, ambiguous DNA, all length
+strata and native cost are prospectively separated. The seven ranked tools'
+[focused source/method assessment](../evidence/2026-10-08-competitive-binner-study.md)
+identifies promising mechanism tests, not a causal architecture winner. Exact
+source/pretraining overlap and native CPU/evaluator feasibility are unresolved;
+new sample identity alone does not establish independent genome generalization.
+No benchmark or architecture comparison has executed, no accepted science is
+repeated and H001/E001 remain unchanged. E009 will be development evidence after
+its errors guide changes; broader validation stays open. The GLM/head/hybrid
+follow-up is still planned, not an implementation/release gate.
+
+
+2026-10-09 E009 reconciliation: learned TNF plus measured depth remains the primary
+product; raw/sequence-only runs are capped diagnostics, not product/architecture
+gates. Supplied sample-0 contigs are verified GSA, so the read-derived MEGAHIT plan
+remains. COMEBin joins the bounded comparison, CompleteBin is explicitly max-50,
+and DCVBin is excluded for its unadapted CUDA/single-depth/CPT recipe, not missing
+weights or coverage use. Markers are a high-priority grouping/refinement candidate
+with one controlled follow-up recorded in the [targeted review](../evidence/2026-10-09-e009-contract-reconciliation.md).
+No quality scores or causal mechanism finding follow from adapter tests; Q001/Q003
+remain open and H001/E001 are unchanged. Unknown pretrained overlap limits
+unseen-genome claims without becoming evaluation-pipeline label leakage.
+
+2026-10-14 E009 operational/input amendment: v10/v14 tiny native contracts are
+independently accepted without replay, not bin-quality evidence.
+[D013](../decisions/D013-first-comparative-benchmark.md) now uses one sample-0
+assembly and ten first-listed corrected-subject coverage samples; this is a
+prospective representation/storage tradeoff, not proof of an optimal sample count.
+The locally tested GCP data stage and [storage audit](../evidence/2026-10-14-completebin-storage.md)
+are preparation only. Data/truth population, new-host scale/cost and all full-fit
+quality questions remain open; Q001/Q003 and H001/E001 outcomes are unchanged.
+
+2026-10-14 later owner clarification: [PROJECT_INTENT](../../PROJECT_INTENT.md)
+now prioritizes improving our own high-performing, potentially SOTA binner;
+software acceptance of the simple prototype is a milestone, not competitive
+success. [D013](../decisions/D013-first-comparative-benchmark.md) records why an
+expensive expected ranking adds little architecture evidence, and replaces the
+mandatory five-tool campaign with reusable full assembly/ten-depth data, selective
+native references and one prospectively justified mechanism test. CompleteBin,
+COMEBin's full grid and SCGBinner full runs are deferred; SemiBin2 is a later first
+candidate and MetaCAT core conditional on a grouping question. No fit/score is
+authorized in the [data-only phase](../../experiments/E009-competitive-benchmark/gcp-data-observed.json).
+Data/results inspected to choose changes remain development evidence; one weak
+prototype/dataset cannot decide depth/sequence/taxonomy product membership.
+Additional prospectively selected data are needed to confirm improvements, with
+separate untouched evaluation for broad/SOTA claims. Q001/Q003/Q004/Q005 and
+H001/E001 outcomes remain unchanged; no architecture is selected in this phase.
+
+2026-10-15 E009 data-review update: full sample-0 assembly and all ten BAM/depth
+axes are independently accepted; the complete DAG failed in final truth parsing.
+[The retained native failure](../../experiments/E009-competitive-benchmark/truth-failure-example.json)
+is explained by minimap2 ambiguous-base accounting. The complete sample-0 read/
+source audit verifies 309 positive genome IDs and separate plasmid/host identities;
+[the population review](../../experiments/E009-competitive-benchmark/truth-population-review.json)
+does not admit coordinate truth. Repair/test a fresh truth derivation from retained
+PAFs, then prepare unchanged raw/learned TNF+ten-depth/TNF-only diagnostics under
+a separately proposed $2 fit cap. No native data stage or alignment is replayed,
+no fit/score runs and no external tool belongs in the immediate next step. This
+supplies reusable development data, not a mechanism or performance answer;
+Q001/Q003/Q004/Q005 and H001/E001 scientific outcomes remain unchanged. D013's
+one-mechanism decision rule and prospective additional-data confirmation remain.
+
+2026-10-15 E009 truth repair: [v2](../../experiments/E009-competitive-benchmark/truth-v2-admission.json)
+is admitted as conservative supplied-reference alignment truth, derived from
+retained PAFs on the Mac with no new aligner or VM wake. Observed genome IDs,
+separate plasmid/HOST, exact circular coordinates, full provided lengths and all
+competitors pass review. Fixed qualifying-N span quarantine leaves 3.3034% of
+query DNA unknown; this is an evaluator limitation, not binner performance.
+The unchanged-control launcher is prepared and locally safety-tested, with a
+separate $2 approval still required. No fit, score, mechanism result or scientific
+question resolution follows from this repair; the above question statuses remain.
+
+2026-10-16 E009 control review: [four unchanged controls](../../experiments/E009-competitive-benchmark/controls-review.json)
+completed successfully and the VM stopped within the separate $2. Learned ten-depth
+improves weighted conservative reference recovery4.5765→5.3911%, with full bacterial
+source availability only18.5321%. Overall neighbor gain is driven by non-target
+queries; bacterial neighbors worsen modestly. Grouping recall rises but mixed bins
+remain. [D013](../decisions/D013-first-comparative-benchmark.md) selects preparation
+of one fixed-encoder marker-conflict splitting test, subject to marker availability
+and a prospective second-community confirmation protocol. No marker benefit,
+mechanism causation, feature-family rejection or broad performance result is yet
+established; scientific question statuses remain open. No external binner or new
+fit is authorized by this review.
+
+2026-10-16 subsequent development-pace reassessment: the owner asked whether the
+standalone marker split is too narrow and serial feature trials too slow.
+[D015](../decisions/D015-coherent-prototype-upgrade.md) recommends one integrated
+next prototype using biological views, composition/depth learning and marker-informed
+grouping/refinement, with selective decision-driven ablations. This supersedes the
+marker-split-first recommendation, not E009's accepted measurements or scientific
+question status. Existing evidence can justify implementation without first proving
+every ingredient separately; an integrated gain alone would not identify causal
+components. No new marker preparation, product code, fit, score or cloud work ran.

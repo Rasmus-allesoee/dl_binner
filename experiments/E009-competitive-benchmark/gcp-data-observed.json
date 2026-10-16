@@ -1,0 +1,3124 @@
+{
+  "record": "E009",
+  "date": "2026-10-15",
+  "status": "data DAG failed in final truth parser; reusable feature data independently accepted; bounded review complete and VM stopped",
+  "scientific_outcome": "no binner fits or scores; coordinate truth not admitted",
+  "executed_source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+  "source_sync": "normal Mac push and clean read-only VM fetch/fast-forward; main unchanged",
+  "credit_and_cost_admission": {
+    "observed_utc": "2026-10-14T20:12:54.872879+00:00",
+    "source_commit_authorized": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+    "browser_credit_observation": {
+      "account": "01DD71-3C7861-1E59DF",
+      "billing_type": "Paid account",
+      "currency": "DKK",
+      "credit_name": "Free Trial",
+      "active_credit_id_prefix": "FreeTrialUpgrade:CreditId-FreeTrial",
+      "status": "Available",
+      "remaining": 1972.04,
+      "original": 1973.43,
+      "start": "2026-10-13",
+      "expiry": "2027-01-12",
+      "scope": "Certain usage; see the terms for free trial.",
+      "application": "Net pricing",
+      "expired_pre_upgrade_row_not_additional_credit": true
+    },
+    "reported_account_usage": {
+      "period": "2026-10-01 through 2026-10-14",
+      "cost_dkk": 1.15,
+      "savings_dkk": 1.15,
+      "net_dkk": 0,
+      "latency_disclaimer": "Costs take a few hours to show up, and might take longer than 24 hours.",
+      "pending_usage_is_not_zero_or_fully_observable": true,
+      "only_one_billing_linked_project": true,
+      "all_regional_CPU_usage_zero": true,
+      "pending_usage_bound_basis": "Only existing stopped VM and 30/50GiB disks plus compact private bucket; 0.7094 USD (~4.67 DKK) conservative two-day setup/disk allowance, no other linked project. Live billed credits used 1.39 DKK; display/report timing differ."
+    },
+    "eligible_products": [
+      "ordinary E2 CPU",
+      "nonpremium Ubuntu",
+      "zonal pd-standard/pd-balanced",
+      "same-region private Standard Cloud Storage",
+      "VM ephemeral IPv4 and ordinary VPC transfers"
+    ],
+    "excluded": [
+      "GPU",
+      "Marketplace",
+      "partner AI APIs",
+      "Cloud NAT",
+      "premium image",
+      "new paid service"
+    ],
+    "references": [
+      "https://docs.cloud.google.com/free/docs/free-cloud-features?gclsrc=aw.ds",
+      "https://cloud.google.com/vpc/network-pricing?hl=en",
+      "https://cloud.google.com/compute/disks-image-pricing",
+      "https://docs.cloud.google.com/billing/v1/how-tos/catalog-api"
+    ],
+    "dkk_prices": {
+      "core_per_hour": 0.14347882,
+      "ram_per_gib_hour": 0.019231272,
+      "balanced_per_gib_month": 0.657809999,
+      "standard_per_gib_month_above_free_tier": 0.263123999,
+      "ip_per_hour_above_free_tier": 0.032890499,
+      "regional_standard_storage_per_gib_month_above_free_tier": 0.131561999,
+      "catalog_usd_to_dkk_conversion": 6.5781,
+      "catalog_day": "2026-10-14",
+      "nonnegotiated_account_console_List_price_DKK_observed": true
+    },
+    "budget": {
+      "gross_ceiling_usd": 20,
+      "gross_ceiling_dkk": 131.562,
+      "compute_ip_25h_usd": 6.826142,
+      "disk_7d_usd": 7.180273972602739,
+      "gross_base_total_usd": 14.006415972602738,
+      "disk_ongoing_usd_per_730h": 31.2,
+      "disk_ongoing_dkk_per_730h": 205.23671967,
+      "reserve_includes_compact_archive_operations_and_invoice_rounding": "more than USD5 before any allowances; no bulk internet export",
+      "retention_review_days": 7,
+      "credit_expiry_review": "2027-01-10",
+      "credit_gate": "passed for authorized ordinary data-phase resources; recheck if quota approval delayed or execution changes"
+    },
+    "disk_decision": {
+      "gib": 300,
+      "data_only_components_upper_gib": 232.29,
+      "free_reserve_gib": 25,
+      "completebin_included_in_data_estimate": false,
+      "reason": "Retain full reads, assembly, ten BAMs and source/truth plus serial mapping scratch; 250GiB lacks conservative reserve."
+    },
+    "no_extra_authorization_for_fits": true
+  },
+  "quota_request": {
+    "submitted_utc": "2026-10-14T20:13:42.814351+00:00",
+    "project": "project-d17bd588-df31-488f-b16",
+    "service": "compute.googleapis.com",
+    "metric": "SSD_TOTAL_GB",
+    "region": "us-central1",
+    "old": 250,
+    "requested": 300,
+    "case_id": "a11cf91a-b76b-4c95-9f79-7dc7538f3611",
+    "observed_status": "effective API quota now 300 GiB; approval admitted",
+    "quota_approval_is_not_resource_resize": true,
+    "no_cost_bearing_resource_changes": true,
+    "api_quota": {
+      "limit": 300.0,
+      "metric": "SSD_TOTAL_GB",
+      "usage": 50.0
+    },
+    "api_checked_utc": "2026-10-14T20:19:59.147142+00:00"
+  },
+  "resources": {
+    "vm": "dl-binner-cpu",
+    "zone": "us-central1-a",
+    "machine": "e2-standard-8",
+    "allocated_vcpus": 8,
+    "allocated_ram_gib": 32,
+    "actual_physical_memory_bytes": 33646948352,
+    "boot_disk_gib": 30,
+    "boot_type": "pd-standard",
+    "work_disk_gib": 300,
+    "work_type": "pd-balanced",
+    "same_existing_work_disk": true,
+    "filesystem": "existing ext4 expanded with resize2fs, no formatting",
+    "max_run_seconds": 90000,
+    "provider_action": "STOP",
+    "provider_started": "2026-10-14T13:21:34.621-07:00",
+    "provider_stopped": "2026-10-15T02:32:21.624-07:00",
+    "driver_clock_hours_cumulative": 24,
+    "free_disk_gib_floor": 25,
+    "no_added_services": true,
+    "retention_review_by": "2026-10-21",
+    "scope": "original data-phase resource/start/stop record; later review has a separate 1h STOP"
+  },
+  "new_host_data_runtime": {
+    "allocated_ram_gib": 32,
+    "allocated_vcpu_hours": 0.09444740154666668,
+    "allocated_vcpus": 8,
+    "closed_terminal": {
+      "bytes": 158705,
+      "sha256": "e1d4cb60656c45bde5e52eda82568e83136dd8736b45d4188defc3e73625f198"
+    },
+    "elapsed_seconds": 42.50133069600001,
+    "fixture": "/srv/dl_binner/experiments/e009/gcp-phase-20261014/native-fixture-v1/passed.json",
+    "fixture_receipt": {
+      "bytes": 1976,
+      "sha256": "3cedeb68fac25f4ecc7efca101db5f30af2129633ff6d12ff00f6c4e12014940"
+    },
+    "native_fixture_supervision": {
+      "command": [
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e009_gcp_fixture.py",
+        "--output",
+        "/srv/dl_binner/experiments/e009/gcp-phase-20261014/native-fixture-v1",
+        "--python",
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+        "--samtools",
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/samtools",
+        "--strobealign",
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/strobealign",
+        "--minimap2",
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+        "--megahit",
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/megahit"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2266,
+      "peak_sampled_rss_bytes": 229302272,
+      "rss_bytes_ceiling": 28174985461,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.450892978406613,
+      "sampled_cpu_seconds": 8.26,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 86375.818790468,
+      "stop_reason": null,
+      "wall_seconds": 18.319202993999994
+    },
+    "no_bulk_reads_no_fits": true,
+    "runtime": {
+      "megahit": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/megahit",
+      "minimap2": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+      "python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+      "samtools": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/samtools",
+      "strobealign": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/strobealign"
+    },
+    "source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+    "stage": "new-host complete data runtime plus tiny changed-driver contract",
+    "status": "passed"
+  },
+  "native_runtime_identities": {
+    "interpreter": {
+      "prefix": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315",
+      "python": "3.12.10 | packaged by conda-forge | (main, Apr 10 2025, 22:21:13) [GCC 13.3.0]",
+      "snakemake": "9.16.3",
+      "snakemake_origin": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/lib/python3.12/site-packages/snakemake/__init__.py"
+    },
+    "megahit": {
+      "file": {
+        "bytes": 38467,
+        "sha256": "d70208755eada7b7c3a3d62e337b2823c5c427796b1343e68ae16ca1ff9fd61c"
+      },
+      "path": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/megahit",
+      "version": "1.2.9"
+    },
+    "minimap2": {
+      "file": {
+        "bytes": 1232336,
+        "sha256": "5ef4a631a6318c66d1184007f87bedc55f712c27472d141da4d35e80df82e3cc"
+      },
+      "path": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+      "version": "2.30"
+    },
+    "python": {
+      "file": {
+        "bytes": 31271856,
+        "sha256": "e3d174225ca76e5b744bf44e8b7fe8d76214cec517e16c11dfb03e4bcfd41ea7"
+      },
+      "lexical": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python"
+    },
+    "samtools": {
+      "file": {
+        "bytes": 895984,
+        "sha256": "aa484d95148f4c8ddb6e2031ee2eaec94c69ffff8c13e5f1630c15f5c656cbe2"
+      },
+      "path": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/samtools",
+      "version": "1.24"
+    },
+    "strobealign": {
+      "file": {
+        "bytes": 785448,
+        "sha256": "6e978de17927e78c9f0f97b551dc901ebeccb06c4328e9e84cb611c30d34aaf1"
+      },
+      "path": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/strobealign",
+      "version": "0.17.0"
+    }
+  },
+  "fixture_interpretation": {
+    "platform": "actual Ubuntu Linux x86_64 host",
+    "contract": "same frozen tiny data workers/DAG, 14 rules and ordered ten depth values; partial/completed verified resume, cross-batch competing references remain ambiguous",
+    "limits": "portable fixture factory retains its historical Mac/no-native-scale label and forces assembly_threads=1; actual host provenance proves these exercised Linux contracts, not 8-thread assembly-scale performance or admitted biological truth",
+    "five_binner_contracts_repeated": false
+  },
+  "data_result": {
+    "status": "running",
+    "ordered_samples": [
+      0,
+      2,
+      3,
+      4,
+      6,
+      9,
+      10,
+      11,
+      14,
+      17
+    ],
+    "assembly_sample": 0,
+    "keeps_full_assembly": true,
+    "no_binner_fit_or_score": true,
+    "truth_admitted": false,
+    "review_dependencies": [
+      "closed byte-bound native output review",
+      "exact sample-0 positive read-origin ID/source joins",
+      "source genome/replicon grouping and cellular taxonomy",
+      "actual storage/clock/monetary accounting"
+    ],
+    "source_archive_acquisition": {
+      "admitted_scientific_input": false,
+      "file": {
+        "bytes": 3202310417,
+        "sha256": "9a0373b6a42f7322583b1c091059b513d8d62bd5be2e57244ac19b50b1f4f69a"
+      },
+      "headers": {
+        "accept-ranges": "bytes",
+        "connection": "close",
+        "content-length": "3202310417",
+        "content-type": "application/octet-stream",
+        "date": "Wed, 14 Oct 2026 20:24:50 GMT",
+        "etag": "0e6a3c89846e95c7b952e01d3cd630e7-6",
+        "last-modified": "Fri, 03 Jul 2026 05:18:51 GMT",
+        "server": "Ceph Object Gateway (squid)",
+        "x-openstack-request-id": "tx000003c838affce27ef5e-006acfe511-2843896412-default",
+        "x-timestamp": "1783055931.66787",
+        "x-trans-id": "tx000003c838affce27ef5e-006acfe511-2843896412-default"
+      },
+      "publisher_checksum_verified": true,
+      "spec": {
+        "bytes": 3202310417,
+        "etag": "0e6a3c89846e95c7b952e01d3cd630e7-6",
+        "sha256": "9a0373b6a42f7322583b1c091059b513d8d62bd5be2e57244ac19b50b1f4f69a",
+        "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/source_genomes.tar.gz"
+      }
+    },
+    "source_stage": {
+      "sealed": true,
+      "manifest": {
+        "bytes": 449930,
+        "sha256": "4eab3a83716bb6e375f9c4d761b5ac3f27dbdbedc02cd8e4ed83debeaa255ab4"
+      },
+      "sealed_files": 2094,
+      "logical_bytes": 21558031163,
+      "full_catalog_files": 2078,
+      "full_catalog_replicons": 65571,
+      "full_catalog_bp": 10251869096,
+      "catalog_semantic_bytes_match_accepted_v10": true,
+      "provisional_selected_source_files": 311,
+      "provisional_reference_replicons": 7688,
+      "provisional_reference_bp": 3946890689,
+      "source_grouping_and_target_taxonomy_admitted": false
+    },
+    "sample0_archive_acquisition": {
+      "admitted_scientific_input": false,
+      "file": {
+        "bytes": 4866106604,
+        "sha256": "3aaa3265e826bf5f7956156494b7f67efc2f536a424007979f65d1b98e56201e"
+      },
+      "headers": {
+        "accept-ranges": "bytes",
+        "connection": "close",
+        "content-length": "4866106604",
+        "content-type": "application/octet-stream",
+        "date": "Wed, 14 Oct 2026 20:57:16 GMT",
+        "etag": "1279c383f2cec0cbf6ebd3b0ae56b38f-9",
+        "last-modified": "Fri, 03 Jul 2026 05:20:59 GMT",
+        "server": "Ceph Object Gateway (squid)",
+        "x-openstack-request-id": "tx000005f2bed587d284d4c-006acfecac-2843896412-default",
+        "x-timestamp": "1783056059.26004",
+        "x-trans-id": "tx000005f2bed587d284d4c-006acfecac-2843896412-default"
+      },
+      "publisher_checksum_verified": false,
+      "spec": {
+        "bytes": 4866106604,
+        "etag": "1279c383f2cec0cbf6ebd3b0ae56b38f-9",
+        "sha256": null,
+        "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_0_reads.tar.gz"
+      }
+    },
+    "sample0_reads": {
+      "sealed": true,
+      "validation": {
+        "bp": 4990053900,
+        "files": [
+          {
+            "bytes": 4605656272,
+            "sha256": "dbd2c2eeab4292764002ebbfd82582286f724d852888061a518fc36a74f4757f"
+          }
+        ],
+        "mate_identity_unspecified_pairs": 0,
+        "pairs": 16633513
+      },
+      "logical_bytes": 9734696028,
+      "files": 6,
+      "publisher_read_SHA_supplied": false
+    }
+  },
+  "remote_root": "/srv/dl_binner/experiments/e009/data-stage-v1",
+  "remote_phase_logs": "/srv/dl_binner/experiments/e009/gcp-phase-20261014",
+  "local_evidence": "artifacts/e009-gcp-data/20261014",
+  "later_tool_scope_decision": "docs/decisions/D013-first-comparative-benchmark.md",
+  "limitations": [
+    "no SOTA claim",
+    "one development assembly cannot settle depth/sequence/taxonomy product choices",
+    "no whole-tool win can isolate a component",
+    "new source/assembly does not establish genome/pretraining independence"
+  ],
+  "private_archive": {
+    "archive": "/srv/dl_binner/experiments/e009/gcp-review-20261015/e009-data-review-20261015-v1.tar.gz",
+    "binding": {
+      "bytes": 246936673,
+      "sha256": "f1616f08533b57609c2e09d212cc40aade068e51e968ee554735a5b8e21f9312"
+    },
+    "regular_members": 554,
+    "inventory_member": "inventory.json",
+    "logical_member_bytes": 1362258256,
+    "scope": "exact closed allowlisted data/review/terminal snapshot; no bulk FASTQ/read archive/BAM/env/credentials",
+    "pack_elapsed_seconds": 27.69140143300001,
+    "uri": "gs://dl-binner-archive-167650584170/e009/data-phase-5fec4e1-20261015-review-v1/e009-data-review-20261015-v1.tar.gz",
+    "checksum_uri": "gs://dl-binner-archive-167650584170/e009/data-phase-5fec4e1-20261015-review-v1/e009-data-review-20261015-v1.tar.gz.sha256",
+    "readback_sha256_matched": true,
+    "verified_utc": "2026-10-15T13:17:26.275245+00:00",
+    "monthly_archive_gross_usd": 0.00459955396130681,
+    "mac_independent_member_verification": {
+      "archive_sha256": "f1616f08533b57609c2e09d212cc40aade068e51e968ee554735a5b8e21f9312",
+      "all_regular_data_member_hashes_verified": true,
+      "bound_data_members": 553,
+      "inventory_member_excluded_from_own_hashes": true,
+      "scope": "one streaming pass over every immutable member; selected useful data/metadata extracted, raw activity retained inside archive"
+    },
+    "local_copy": "artifacts/e009-gcp-review/20261015/e009-data-review-20261015-v1.tar.gz",
+    "important_boundary": "bulk reads/BAM/envs stay on persistent disk; private archive contains accepted assembly/depth/PAFs and compact evidence, not whole working storage",
+    "post_stop_addendum": {
+      "uri": "gs://dl-binner-archive-167650584170/e009/data-phase-5fec4e1-20261015-review-v1/e009-review-closure-20261015-v1.tar.gz",
+      "checksum_uri": "gs://dl-binner-archive-167650584170/e009/data-phase-5fec4e1-20261015-review-v1/e009-review-closure-20261015-v1.tar.gz.sha256",
+      "bytes": 106654,
+      "sha256": "0b684e7a91f726816032386ef917bbf61672b93bbb3377adf1c5a09a982f3996",
+      "regular_members": 25,
+      "logical_member_bytes": 469414,
+      "readback_sha256_matched": true,
+      "scope": "post-stop closure addendum, distinct from immutable native evidence archive"
+    }
+  },
+  "checks": {
+    "new_feature_reader_local_tests": {
+      "passed": 2
+    },
+    "origin_reader_local_tests": {
+      "passed": 6
+    },
+    "native_feature_review": "passed on actual full retained FASTA/BAM/depth using recorded lexical native samtools; critical bytes/hash/SQ/zeros/all cells verified",
+    "native_origin_audit_v3": "complete exact ID/source/profile census passed, with v1/v2 failures preserved",
+    "retained_PAF_failure": "intended old-parser exception reproduced; all 300499 axes/endpoints match, all 459 ambiguous block differences equal nn",
+    "archive": "native readback and Mac archive SHA/all 553 bound member hashes passed; inventory is 554th regular member",
+    "docs": "check_docs.py PASS: 59 maintained documents, 799 links; ten optional unavailable source caches not verified",
+    "whitespace": "git diff --check PASS",
+    "product_science_unchanged": true,
+    "no_claim_of_full_truth_or_fit_validation": true,
+    "optional_pre_stop_process_filter": "rg unavailable on VM; no verification credit assigned"
+  },
+  "additional_evaluator_metadata": {
+    "scope": "local read-only provider metadata; no feature/model access or additional VM workload",
+    "dataset_page": {
+      "path": "artifacts/e009-gcp-data/20261014/preflight/toy-data-page.html",
+      "bytes": 49833,
+      "sha256": "c312c0a68c22064a7365bef57501d8c904569ae449fcb721480a01eb3376988d"
+    },
+    "taxonomic_profile_archive": {
+      "path": "artifacts/e009-gcp-data/20261014/preflight/taxonomic_profiles.tar.gz",
+      "bytes": 1846760,
+      "sha256": "cbc87a0a01d05fc9a27947f8533337f6ce211dd4f116ba7e26057d1401deb9f8"
+    },
+    "sample0_profile": {
+      "path": "artifacts/e009-gcp-data/20261014/preflight/sample0-taxonomy-profile.txt",
+      "bytes": 757747,
+      "sha256": "2a0d014a32a551ce6cd9122afce88454deaa9ba087153d957dd3d99053f904d3"
+    },
+    "provider_taxonomy_snapshot_url": "https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2025-08-01.zip",
+    "taxonomy_zip_head_bytes": 70311865,
+    "taxonomy_zip_not_downloaded": true,
+    "profile_genome_rows": 2022,
+    "positive_rounded_percentage_rows": 309,
+    "positive_rounded_row_classes": {
+      "bacterial": 154,
+      "viral": 135,
+      "other": 9,
+      "eukaryotic": 11
+    },
+    "provider_reported_percentages": {
+      "bacteria": 48.665,
+      "viruses": 48.2066,
+      "eukaryotes": 0.9932,
+      "other_entries": 2.1352
+    },
+    "important_fields": [
+      "TAXPATH",
+      "TAXPATHSN",
+      "_CAMI_genomeID",
+      "HOST"
+    ],
+    "claim_limits": [
+      "Provider synthetic strain tax IDs have decimal suffixes; do not treat them as plain NCBI node IDs",
+      "Rounded-zero profile entries are not proof of absent reads; actual positive read-origin counts still required",
+      "Full source/header-to-genome joins and permuted-reference meaning remain unresolved until actual source/origin review",
+      "Large viral abundance is a provider report, not measured DNA/base fractions or a reason to filter or generalize feature conclusions"
+    ],
+    "concrete_replica_plasmid_review": {
+      "genome_profile_row": {
+        "TAXID": "817.9",
+        "RANK": "strain",
+        "TAXPATH": "131567|2|3379134|976|200643|171549|815|816|817|817.9",
+        "TAXPATHSN": "cellular organisms|Bacteria|Pseudomonadati|Bacteroidota|Bacteroidia|Bacteroidales|Bacteroidaceae|Bacteroides|Bacteroides fragilis|Bacteroides fragilis strain",
+        "PERCENTAGE": "0.1206",
+        "_CAMI_genomeID": "ASV134.7",
+        "_CAMI_OTU": "171549",
+        "HOST": ""
+      },
+      "source_file": "ASV134.7__Bacteroides_fragilis_GUT04_strain_genomic__NZ_CP043609.1.permuted.fna",
+      "source_records": 10,
+      "per_record_bp": 89141,
+      "file_summed_bp": 891410,
+      "NCBI_accession": "CP043609.1",
+      "NCBI_record_title": "Bacteroides fragilis strain GUT04 plasmid unnamed1, complete sequence",
+      "NCBI_record_bp": 89141,
+      "NCBI_summary": {
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=nuccore&id=CP043609.1&retmode=json",
+        "bytes": 888,
+        "sha256": "cee54880ed36546c09fbd7212d842a5d591fbc6ef8db1f6cbdc3e9ce8a370d4f"
+      },
+      "implication": "All ten records are exact forward circular rotations of one 89141-bp plasmid. Summing to 891410 bp and treating rotation aliases as independent loci would bias the genome denominator/repeat ambiguity. Review all permuted sources and normalize source coordinates in a separately versioned truth derivation before scores; keep the original PAFs and all competitive DNA.",
+      "circular_copy_check": {
+        "source": {
+          "bytes": 906430,
+          "sha256": "6244d7c9db6e0847fdd1abb607df097ed19e73d5a3fed4cb1847d5f802707761"
+        },
+        "records": [
+          {
+            "id": "0NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 0,
+            "same_base_counts": true
+          },
+          {
+            "id": "1NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 8914,
+            "same_base_counts": true
+          },
+          {
+            "id": "2NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 17828,
+            "same_base_counts": true
+          },
+          {
+            "id": "3NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 26742,
+            "same_base_counts": true
+          },
+          {
+            "id": "4NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 35656,
+            "same_base_counts": true
+          },
+          {
+            "id": "5NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 44570,
+            "same_base_counts": true
+          },
+          {
+            "id": "6NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 53484,
+            "same_base_counts": true
+          },
+          {
+            "id": "7NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 62398,
+            "same_base_counts": true
+          },
+          {
+            "id": "8NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 71312,
+            "same_base_counts": true
+          },
+          {
+            "id": "9NZ_CP043609.1",
+            "bp": 89141,
+            "exact_forward_circular_rotation_offset": 80226,
+            "same_base_counts": true
+          }
+        ],
+        "all_exact_circular_rotations": true,
+        "claim_limit": "one source file only; independent read origins and full molecule/genome grouping still required"
+      },
+      "related_chromosome_source": {
+        "file": "Bacteroides_fragilis_GUT04_strain_genomic.fna",
+        "records": [
+          [
+            "NZ_CP043610.1",
+            5330584
+          ]
+        ],
+        "positive_genome_join_not_yet_verified": true
+      },
+      "actual_identity_after_full_origin_review": {
+        "simulator_genome": "pASV43",
+        "HOST": "ASV134.7",
+        "separately_simulated_from_host": true,
+        "filename_prefix_is_not_genome_identity": true
+      }
+    },
+    "CAMISIM_read_ID_format_evidence": {
+      "source_commit": "7ce6013c6d5a0fac8ba8a80e52a03560d3546fa6",
+      "root_verified_separate_repository": true,
+      "tracked_source_clean": true,
+      "untracked_Finder_DS_Store_ignored_for_source_identity": true,
+      "actual_dataset_producer_commit_unknown": true,
+      "observations": [
+        "paired anonymizer creates complete S0R0..S0R(N-1) /1,/2",
+        "goldstandard writer sorts anonymous IDs lexically, not FASTQ sequence order",
+        "ART source record is read_id.rsplit(hyphen,1)[0]; WGSIM uses five final underscore fields",
+        "source cleanup renames colliding headers; actual retained catalog has globally unique 65571 original record IDs"
+      ],
+      "files": {
+        "agent_context/tools_repo/CAMISIM/pipelines/shared/scripts/anonymizer.py": {
+          "bytes": 5865,
+          "sha256": "a8d2030a1bd6c1ebfe3216a487abc2b88eabc4d6c1c9146a2ee33dab4fe7a5ea"
+        },
+        "agent_context/tools_repo/CAMISIM/pipelines/shared/scripts/goldstandardfileformat.py": {
+          "bytes": 33408,
+          "sha256": "847e736c6c6aa0062fd4cef0d796a1525e5085ff455e4e6369798815996d8ab4"
+        },
+        "agent_context/tools_repo/CAMISIM/pipelines/metagenomic/scripts/clean_up_sequences.py": {
+          "bytes": 6020,
+          "sha256": "f9818046ddcb619ff803ecb9f2decf8e966f848de66caada6944c236540dbe45"
+        }
+      },
+      "interpretation": "Review helper must verify actual set/source membership rather than assume producer parity; no simulator was run."
+    },
+    "actual_origin_review_supersedes_profile_as_population": "The final full origin census, not rounded provider percentages or explicit profile genome-ID rows, defines positive presence. Actual read fractions and cellular/plasmid classification are recorded in independent_origin_review and truth-population-review.json."
+  },
+  "prepared_exact_data_review": {
+    "script": "scripts/e009_data_review.py",
+    "script_bytes": 10742,
+    "script_sha256": "083ca40bbd1c1ff63e23e903cd65f6cc954fa4abcaa310e45a323fc3f756be57",
+    "status": "locally tested, not yet run on actual community data",
+    "tests": 4,
+    "test_log": "artifacts/e009-gcp-data/20261014/data-review-tests.log",
+    "tested_paths": [
+      "real gzip FASTQ/origin files and actual sealed input manifests",
+      "unordered complete mate IDs, late duplicates, missing/noncanonical/out-of-range IDs",
+      "exact ART/WGSIM source joins and ambiguous membership refusal",
+      "synthetic taxonomy preservation and wrong lineage ID/name refusal",
+      "multiple-genome source-file ambiguity retained, scientific admission false",
+      "intended consumed-input byte drift refusal"
+    ],
+    "no_native_DAG_or_model_change": true,
+    "source_commit": "b51c85a9f686e7e880ba8efa8d7ad867679b8eb6"
+  },
+  "latest_observation": {
+    "status": "post-review TERMINATED; no external IP; 30/300GiB disks preserved",
+    "control_plane": {
+      "status": "TERMINATED",
+      "lastStartTimestamp": "2026-10-15T05:51:17.410-07:00",
+      "lastStopTimestamp": "2026-10-15T06:19:53.611-07:00",
+      "machine": "e2-standard-8",
+      "disks": [
+        {
+          "deviceName": "dl-binner-boot",
+          "diskSizeGb": "30",
+          "autoDelete": false
+        },
+        {
+          "deviceName": "dl-binner-work",
+          "diskSizeGb": "300",
+          "autoDelete": false
+        }
+      ],
+      "external_ip_addresses": [],
+      "scheduling": {
+        "automaticRestart": false,
+        "instanceTerminationAction": "STOP",
+        "maxRunDuration": {
+          "nanos": 0,
+          "seconds": "3600"
+        },
+        "onHostMaintenance": "MIGRATE",
+        "preemptible": false,
+        "provisioningModel": "STANDARD"
+      }
+    },
+    "accepted_assembly_contigs": 145702,
+    "accepted_assembly_bp": 231678157,
+    "accepted_depth_samples": [
+      0,
+      2,
+      3,
+      4,
+      6,
+      9,
+      10,
+      11,
+      14,
+      17
+    ],
+    "all_ten_BAM_depth_stages_sealed": true,
+    "failed_final_stage_unsealed": true,
+    "closed_matrix_independently_accepted": true,
+    "truth_admitted": false
+  },
+  "exit_watchdog": {
+    "owner_authorization": "2026-10-15 after chat usage-limit cancellation; stop on current workflow success or crash",
+    "watchdog_source_commit": "a6e351f1bd0b29ee5ce68eb91ec02c708e59a108",
+    "installed_config": {
+      "armed_utc": "2026-10-15T00:46:03.914985+00:00",
+      "boot_id": "e6cb1c71-5bd3-4c87-8e2e-f0de8b3b1cc1",
+      "execution_source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+      "exit_grace_seconds": 60,
+      "process": {
+        "command_sha256": "56ef38544f80cec96c8b95146073fe09a36355f9364f182e58b7ae73a24dbb96",
+        "pid": 3167,
+        "start_ticks": 18291
+      },
+      "scope": "current boot and current pinned data driver only; no future run entitlement",
+      "watchdog_script_sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f",
+      "watchdog_source_commit": "a6e351f",
+      "workflow_root": "/srv/dl_binner/experiments/e009/data-stage-v1"
+    },
+    "status": "triggered on failed original driver; not active/armed on the later review boot",
+    "poll_seconds": 30,
+    "exit_grace_seconds": 60,
+    "guest_action": "/usr/sbin/shutdown -h now after compact exit snapshot and os.sync",
+    "no_scientific_retries_or_extension": true,
+    "not_enabled_for_future_boots": true,
+    "native_linux_root_systemd_tests": {
+      "tests": 2,
+      "normal_exit": 0,
+      "crash_exit": 7,
+      "status": "passed",
+      "shutdown_substitution": "harmless callback; production power-off deliberately not exercised on live experiment",
+      "runtime_seconds": 0.752,
+      "cpu_seconds": 0.164,
+      "peak_memory_report": "3.7M"
+    },
+    "provider_backstop": {
+      "status": "RUNNING",
+      "lastStartTimestamp": "2026-10-14T13:21:34.621-07:00",
+      "machineType": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/machineTypes/e2-standard-8",
+      "scheduling": {
+        "automaticRestart": false,
+        "instanceTerminationAction": "STOP",
+        "maxRunDuration": {
+          "nanos": 0,
+          "seconds": "90000"
+        },
+        "onHostMaintenance": "MIGRATE",
+        "preemptible": false,
+        "provisioningModel": "STANDARD"
+      },
+      "effective_scheduling": {
+        "terminationTimestamp": "2026-10-15T21:21:21.686843Z"
+      },
+      "disks": [
+        {
+          "deviceName": "dl-binner-boot",
+          "diskSizeGb": "30",
+          "autoDelete": false
+        },
+        {
+          "deviceName": "dl-binner-work",
+          "diskSizeGb": "300",
+          "autoDelete": false
+        }
+      ]
+    },
+    "evidence": {
+      "artifacts/e009-gcp-data/20261015-watchdog/activation.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/activation.stdout.log": {
+        "bytes": 1633,
+        "sha256": "838afd3ba32f328fefc62a5d67ccde8628fd6c5c91b9730bef07d4d50b3f03f3"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/automatic-tick-verification.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/automatic-tick-verification.stdout.log": {
+        "bytes": 4118,
+        "sha256": "de9faec0bf3696e3524a01b73f233359582e0e3436b4fc04b8ce8edf7228930c"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/commit-code-message.txt": {
+        "bytes": 422,
+        "sha256": "116c137a6b4d96d7ee228cdeb7ff3582327c2294a68f934a0680c71d84398eae"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-code.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-code.stdout.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-service.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-service.stdout.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-test.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-test.stdout.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-timer.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/copy-timer.stdout.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/health-and-watchdog.json": {
+        "bytes": 5014,
+        "sha256": "436b68dda0b6ae0b5f515ee0fa57e81137a12a424f25eea711c48e517c90043f"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/health-and-watchdog.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/install-watchdog.sh": {
+        "bytes": 2526,
+        "sha256": "5e4f943a1aae175dd9cfa4c91a299fd70c9e1ce60a21cb4887154b700194b0fb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/mac-tests.log": {
+        "bytes": 455,
+        "sha256": "84e4f6314b6cbcf6f39ab7cae32d8eb5e9f137e3111b8a56eaf36d0f8ea5b58f"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/native-systemd-selftest.stderr.log": {
+        "bytes": 885,
+        "sha256": "3b8b0a01fbcf2f5c6483e0a801e181e63ce285962a8ec0a1a1d06e1b9230747b"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/native-systemd-selftest.stdout.log": {
+        "bytes": 2636,
+        "sha256": "0777e9272a98a77e68eb68b70355f0d64994f126e20a29d0de5fae97bf00c2cf"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/provider-policy.json": {
+        "bytes": 810,
+        "sha256": "007fa64c74d0478cdc64d794ca98055d5e7cc713449e406d771c5113c95b8043"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/provider.stderr.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/stage-folders.stderr.log": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      },
+      "artifacts/e009-gcp-data/20261015-watchdog/stage-folders.stdout.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "remote_exit_snapshot": "/var/lib/e009-exit-watchdog/exit-snapshot.json",
+    "persistent_exit_snapshot": "/srv/dl_binner/experiments/e009/gcp-phase-20261014/watchdog/exit-snapshot.json",
+    "new_cloud_services_or_capacity": false,
+    "ongoing_stopped_disks_gross_usd_month": 31.2,
+    "pending": [
+      "versioned coordinate truth repair/admission",
+      "future fit-budget and validated native-launcher approval",
+      "October-21 retention decision"
+    ],
+    "private_evidence_archive": {
+      "scope": "watchdog evidence only; full E009 result archive still pending",
+      "uri": "gs://dl-binner-archive-167650584170/e009/20261015-watchdog-a6e351f/watchdog-evidence-a6e351f.tar.gz",
+      "checksum_uri": "gs://dl-binner-archive-167650584170/e009/20261015-watchdog-a6e351f/watchdog-evidence-a6e351f.tar.gz.sha256",
+      "bytes": 9864,
+      "sha256": "624c85c67ae30f052cab31d9004344ef604c07d0cd47df60bd26470d791da906",
+      "readback_sha256_matched": true,
+      "regular_members": 29,
+      "inventory_file_count_excludes_itself": 28,
+      "snapshot_logical_member_bytes": 36038,
+      "no_credentials_or_bulk_data": true,
+      "verified_utc": "2026-10-15T00:49:38.493965+00:00"
+    },
+    "actual_exit_snapshot": {
+      "action": "clean guest shutdown requested; no retry or deletion",
+      "boot_id": "e6cb1c71-5bd3-4c87-8e2e-f0de8b3b1cc1",
+      "checked_utc": "2026-10-15T09:29:52.562839+00:00",
+      "decision": "workflow exited",
+      "expected_process": {
+        "command_sha256": "56ef38544f80cec96c8b95146073fe09a36355f9364f182e58b7ae73a24dbb96",
+        "pid": 3167,
+        "start_ticks": 18291
+      },
+      "first_missing_monotonic": 47223.404353741,
+      "missing_seconds": 64.57603660199675,
+      "observed_process": null,
+      "shutdown": true,
+      "workflow_root": "/srv/dl_binner/experiments/e009/data-stage-v1"
+    },
+    "first_confirmed_provider_stop": "2026-10-15T02:32:21.624-07:00"
+  },
+  "production_outcome": {
+    "status": "failed",
+    "source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+    "driver": {
+      "allocated_ram_gib": 32.0,
+      "allocated_vcpu_hours": 104.50015255327334,
+      "allocated_vcpus": 8,
+      "closed_terminal": {
+        "bytes": 841925,
+        "sha256": "9af001861f1f544a73bed9a6d981b22a83345de5c3228964b6973584b235a273"
+      },
+      "elapsed_seconds": 47025.068648973,
+      "error": "RuntimeError('Command failed; see /srv/dl_binner/experiments/e009/data-stage-v1/logs/dag-20261014T202447-1792009487619436725.log\\nr/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage final > /srv/dl_binner/experiments/e009/data-stage-v1/logs/final.log 2>&1\\nRuleException:\\nCalledProcessError in file \"/srv/dl_binner/repo/workflows/e009-data/Snakefile\", line 34:\\nCommand \\'set -euo pipefail;  /srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage final > /srv/dl_binner/experiments/e009/data-stage-v1/logs/final.log 2>&1\\' returned non-zero exit status 1.\\n[Thu Oct 15 09:28:30 2026]\\nError in rule data_stage:\\n    message: None\\n    jobid: 1\\n    input: /srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/done.json, /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json\\n    output: /srv/dl_binner/experiments/e009/data-stage-v1/parts/final/done.json\\n    log: /srv/dl_binner/experiments/e009/data-stage-v1/logs/final.log (check log file(s) for error details)\\n    shell:\\n        /srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage final > /srv/dl_binner/experiments/e009/data-stage-v1/logs/final.log 2>&1\\n        (command exited with non-zero exit code)\\nShutting down, this might take some time.\\nExiting because a job execution failed. Look below for error messages\\n[Thu Oct 15 09:28:30 2026]\\nError in rule data_stage:\\n    message: None\\n    jobid: 1\\n    input: /srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/done.json, /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json\\n    output: /srv/dl_binner/experiments/e009/data-stage-v1/parts/final/done.json\\n    log: /srv/dl_binner/experiments/e009/data-stage-v1/logs/final.log (check log file(s) for error details)\\n    shell:\\n        /srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage final > /srv/dl_binner/experiments/e009/data-stage-v1/logs/final.log 2>&1\\n        (command exited with non-zero exit code)\\nComplete log(s): /srv/dl_binner/experiments/e009/data-stage-v1/.snakemake/log/2026-10-14T202448.600834.snakemake.log\\nWorkflowError:\\nAt least one job did not complete successfully.\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+      "fixture": false,
+      "hostname": "dl-binner-cpu",
+      "phase": "data only; no fits or quality scores",
+      "platform": "Linux-7.0.0-1014-gcp-x86_64-with-glibc2.39",
+      "status": "failed",
+      "terminal_log": "/srv/dl_binner/experiments/e009/data-stage-v1/logs/terminal-20261014T202447-1792009487619436725.log"
+    },
+    "native_dag": {
+      "command": [
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "snakemake",
+        "--snakefile",
+        "/srv/dl_binner/repo/workflows/e009-data/Snakefile",
+        "--directory",
+        "/srv/dl_binner/experiments/e009/data-stage-v1",
+        "--cores",
+        "8",
+        "--executor",
+        "local",
+        "--resources",
+        "mem_mb=28174",
+        "--set-resource-scopes",
+        "mem_mb=global",
+        "--scheduler",
+        "greedy",
+        "--benchmark-extended",
+        "--printshellcmds",
+        "--config",
+        "stage_config=/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json"
+      ],
+      "exit_code": 1,
+      "launched_pid": 3199,
+      "peak_sampled_rss_bytes": 6024581120,
+      "rss_bytes_ceiling": 28174985461,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 1.81298991615342,
+      "sampled_cpu_seconds": 85254.73,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 86356.81829787299,
+      "stop_reason": null,
+      "wall_seconds": 47024.381790761996
+    },
+    "failed_stage": "final",
+    "native_error": "ValueError: CIGAR/endpoints/block length disagree",
+    "all_ten_minimap2_batches_exit_zero": true,
+    "final_stage_sealed": false,
+    "no_DAG_or_native_science_retry": true,
+    "failed_example": "truth-failure-example.json",
+    "paf_structural_review": {
+      "scope": "read-only structural census of all retained PAF rows; no truth labels, reconstruction, bins or scoring",
+      "input": {
+        "bytes": 59706817,
+        "sha256": "96c5f239b117a6c1e4f42cdb52936da00e2752ae71929925a092cd79776bb9c1"
+      },
+      "counts": {
+        "rows": 300499,
+        "query_endpoint_agrees": 300499,
+        "target_endpoint_agrees": 300499,
+        "CIGAR_columns_equal_PAF_block_plus_nn": 300499,
+        "rows_with_nn": 459,
+        "rows_rejected_by_old_column_equality": 459,
+        "eqx_match_count_agrees": 300499,
+        "exact_axis_lengths_strands_coordinates_valid": 300499
+      },
+      "examples": [
+        {
+          "row": 1453,
+          "nn": 1,
+          "difference": 1
+        },
+        {
+          "row": 1957,
+          "nn": 10,
+          "difference": 10
+        },
+        {
+          "row": 1959,
+          "nn": 1,
+          "difference": 1
+        }
+      ]
+    }
+  },
+  "independent_feature_acceptance": {
+    "source_commit": "9409f1a",
+    "receipt": {
+      "bytes": 33410,
+      "sha256": "b58fe8c74a27034a3d4f6dfb2d093f51db255fed58da8c3a5fbe99fa6ab78587"
+    },
+    "report": {
+      "all_zero_rows": 13,
+      "assembly": {
+        "bp": 231678157,
+        "contigs": 145702,
+        "eligible_500": 89041,
+        "fasta": {
+          "bytes": 237732361,
+          "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+        },
+        "strata": {
+          "1": {
+            "bp": 22035454,
+            "contigs": 56661
+          },
+          "1000": {
+            "bp": 40505273,
+            "contigs": 27307
+          },
+          "10000": {
+            "bp": 100186114,
+            "contigs": 2084
+          },
+          "2500": {
+            "bp": 32866110,
+            "contigs": 7728
+          },
+          "500": {
+            "bp": 22098500,
+            "contigs": 35898
+          },
+          "768": {
+            "bp": 13986706,
+            "contigs": 16024
+          }
+        }
+      },
+      "checked_inputs": {
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/done.json": {
+          "bytes": 30467731,
+          "sha256": "e56e77989e419717f55c2b7a8e409e67844e9621be199423080c77d65a42f338"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa": {
+          "bytes": 237732361,
+          "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/final/depth.tsv": {
+          "bytes": 24197403,
+          "sha256": "48e49f4bb2ec1892f4be1f4db7dbf8616709889c36148f3d14473f52fd1b7aec"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/final/depth.tsv.manifest.json": {
+          "bytes": 1977,
+          "sha256": "20cbc684f97f5700688c367b70dcf3448778e8e0ac98707f70d2492148a50577"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/depth.axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "e73bc2f3cc2b607500efc99ece468e987e400ebb3947d02c0e6067b4528e388e"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/depth.receipt.json": {
+          "bytes": 860,
+          "sha256": "48120d4933d2d8d92c041f1ee8c2e1ebf7947cda9f77ea05ef263978a92965eb"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/depth.tsv": {
+          "bytes": 4367975,
+          "sha256": "41659faeb99187fbc0b2b757b0f5ec020f219967db4229bc8ba9ff7c50fc594d"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/done.json": {
+          "bytes": 3856,
+          "sha256": "b4c7e6e12a8833a73459453b209c8b7bee0659a1c39681e41689550af58ff50b"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "8b26c11fecd8737006e2ca4c1dab424eb129af293e7da03676cf5907707fd679"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/index.log.exit.json": {
+          "bytes": 315,
+          "sha256": "bf71165ae018ba6746b2e9672494fa22a1b675eded34147169f30478fdff7a56"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/map.log.exit.json": {
+          "bytes": 418,
+          "sha256": "eaaeca7f29404300b8dc96e0e79e1f3e0d134fd7688b0f49bf34c53e04975556"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/quickcheck.log.exit.json": {
+          "bytes": 312,
+          "sha256": "9c6aec7140e95cc6099191e5b591bad08cfaa06d05ac6afa1e5ae1fe8862a423"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/sample_0000.sorted.bam": {
+          "bytes": 3781565849,
+          "sha256": "11bc0c875cbdff23a0a3909a6b4478998dd610c98b45dbe7c6fd135f580fc4a9"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/sample_0000.sorted.bam.bai": {
+          "bytes": 11891008,
+          "sha256": "43351a9d059021f54333491edf282d8f2bf9e4443244cd9a636520a08d142ffe"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/sample_0000.sorted.mapped.json": {
+          "bytes": 925,
+          "sha256": "b8a8071a453d891480693c0d5821ed0d53c00256615973a2fcbaafd420522697"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/sort.log.exit.json": {
+          "bytes": 435,
+          "sha256": "e69f751b7a0d25e566c29ad60ef9e56f861d9d4cb533e36134803a6513e592b0"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/depth.axis.log.exit.json": {
+          "bytes": 305,
+          "sha256": "786d9b059437caccb37fadd916d018209cce07249ecf9e447b84d14ed9a9e280"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/depth.receipt.json": {
+          "bytes": 863,
+          "sha256": "adee269ea43a9fbcb76f91882c9d448d1c8106fe08d7af7009dfe2202b16ab22"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/depth.tsv": {
+          "bytes": 3838841,
+          "sha256": "2cd9f44e7bbbd8631746ee73d5b2828b9c985901454a1f512ddb5ff545f9deaa"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/done.json": {
+          "bytes": 4428,
+          "sha256": "58e504a1006304c28c19719cc14789c6c88bfb7c9f4534c206b63f8e2adf2844"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "6327f4bf31fcdde6b2b754dcbaefd1ec57660235c99e8cdc70a3ad574d7c0379"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/index.log.exit.json": {
+          "bytes": 314,
+          "sha256": "035221cb70c8495cbca31a10f3ca7caff919674f952f2d297c2c9d8b4b358e78"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/map.log.exit.json": {
+          "bytes": 416,
+          "sha256": "823b98e607ac2c5d3799e2608cecb1c655b2a2e6ca12a3d09fba7324f2de7e0e"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/quickcheck.log.exit.json": {
+          "bytes": 312,
+          "sha256": "a7a1c61237653a9a6901f3ff9aee74e109672e92a8f5d5df5009cf07a388e625"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/sample_0002.sorted.bam": {
+          "bytes": 4139872212,
+          "sha256": "782de3bf3b7b61d6e96d08f4e4cebd1c405f43e1eefdeeb0fb1a2c136e9ad03f"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/sample_0002.sorted.bam.bai": {
+          "bytes": 9227496,
+          "sha256": "75c314aa2e1337c0cd51c91481902f66421591ab9aaa0fb4a341d5edf06b8658"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/sample_0002.sorted.mapped.json": {
+          "bytes": 925,
+          "sha256": "728fa8c97811d1b32118ace38b4beb639d02fd88671a48fe2ab6c2ee8028fbb5"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/sort.log.exit.json": {
+          "bytes": 435,
+          "sha256": "1a5563bc2e3187b16f75239d47a479350cb7c76b98296afbdf083c6bb0030152"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/depth.axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "9911059217e004cb15af4b3687d7677c7cbaff948d6e7d61678f7cd717e56643"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/depth.receipt.json": {
+          "bytes": 863,
+          "sha256": "dac72fca04d98d7e7229ebe1737f3d90ece6858775a04ec54478e43a9f63d788"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/depth.tsv": {
+          "bytes": 4021160,
+          "sha256": "b2903104d9428ecea125567bacd5ba82e66edb4d9c00d6dc5181917853ca31cd"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/done.json": {
+          "bytes": 4429,
+          "sha256": "30d8427d5a1e1b47fa151f941dbbbc25f26be8633807819edf005cfd1a142fc2"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "f57d59ab608de8443fa1befbf736785cd990d97ed5789b08701473ba45c1c654"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/index.log.exit.json": {
+          "bytes": 314,
+          "sha256": "1ab621dd1dd055aaf405aabe1d82e980a70f76ba8829f47d258edf1aad95923d"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/map.log.exit.json": {
+          "bytes": 416,
+          "sha256": "fa3df204552da579430f817be77bd81f3c64c1d848dc4f0dcd9af3f2d75273b6"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/quickcheck.log.exit.json": {
+          "bytes": 311,
+          "sha256": "1bd6f177b8fd068657014aeddbac3c08af33255fbea9ab65cdcf03134a3f2ed4"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/sample_0003.sorted.bam": {
+          "bytes": 4096193878,
+          "sha256": "57238109a0c1920b15c48954bd98c51bf4bae6d28d021baab3857d4c59e887ab"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/sample_0003.sorted.bam.bai": {
+          "bytes": 10094248,
+          "sha256": "9fc5eb09bad4f0258da5ff2bb652a8be4532f0b940e58b2cbdbdc7db5e4e76d6"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/sample_0003.sorted.mapped.json": {
+          "bytes": 925,
+          "sha256": "4833d8fc1d7c96fd9a55df9494add69198aab73f34ebf080dfe5ae9ff3a61c25"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/sort.log.exit.json": {
+          "bytes": 435,
+          "sha256": "e61aa91fb052566460f90bfaf395d56f1d645f08c44404896da76466db1b3fde"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/depth.axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "40dba8aaa2d78ed7d50ad49ae511849881e05f6a502e82ea7dac193de87bd75b"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/depth.receipt.json": {
+          "bytes": 863,
+          "sha256": "42274cf1580b2fb4d2a206ae625cd22065c6ed3060d05ccac155692c3b5a96f7"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/depth.tsv": {
+          "bytes": 3909371,
+          "sha256": "9dedc329719783bbd16e5f6b485b59e05c9c376e742e62c93ea7e28a86c3528c"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/done.json": {
+          "bytes": 4428,
+          "sha256": "f42106d2c1876256e4d53161da7555877d5a5247efc88b4907165f572c28d51d"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/axis.log.exit.json": {
+          "bytes": 305,
+          "sha256": "00892eaaa7ba27a32cc5a28340a219042a0ba53ae5d67bdedfe1ed2234213070"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/index.log.exit.json": {
+          "bytes": 314,
+          "sha256": "5bd27ac7b4573fee779ec9a06d1743730d1833f1b1d95e8250c81af9e1bc5e95"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/map.log.exit.json": {
+          "bytes": 416,
+          "sha256": "6caad92025ea03f51df010eee33abc72adc0a75a7334d894e1b79f0fe270d106"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/quickcheck.log.exit.json": {
+          "bytes": 312,
+          "sha256": "74953b73895abf0167be8ead9d4ea1efa02da9ba0c0cfdb39f6cfbd169cc8339"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/sample_0004.sorted.bam": {
+          "bytes": 4233074143,
+          "sha256": "d1ff473dcc0d047acc81ce16bb0844da0b41d69f9b4f050340f33159b0f5cb88"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/sample_0004.sorted.bam.bai": {
+          "bytes": 9649608,
+          "sha256": "4a370c75478e1f738ca59c1dbdff8a52ce4a96f17c41416ca30caaaea336b299"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/sample_0004.sorted.mapped.json": {
+          "bytes": 925,
+          "sha256": "69ad9177d20196e4ee5116da8fbb00f6c1f659c774db5e74cef1e781804c5558"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/sort.log.exit.json": {
+          "bytes": 435,
+          "sha256": "035c3542876772b3415a18601257f0168506b103b5ea179df85bd9d49829a1ba"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/depth.axis.log.exit.json": {
+          "bytes": 305,
+          "sha256": "42c23d0dda7989419d9ccb243a46a071940501fca03b0feb3e77d5e2a2b44074"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/depth.receipt.json": {
+          "bytes": 863,
+          "sha256": "cfb6deece1867cccdcb5954ec5c6f4de903eab033d0a291ca87d48ba6ec69806"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/depth.tsv": {
+          "bytes": 3798540,
+          "sha256": "a94413f3d7f70514af33070bf4b3da36ed85d59ef1967a5cff27dab0088310dd"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/done.json": {
+          "bytes": 4428,
+          "sha256": "25fe7113c4a5e28f5a97d510e1bb946ed5d1f932519c351035a6247bfd629f6c"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/axis.log.exit.json": {
+          "bytes": 305,
+          "sha256": "73f1c02e27e80fe8ac52fa40af38d82e064abcc85d2fade479b4edb2b1b9d01d"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/index.log.exit.json": {
+          "bytes": 314,
+          "sha256": "da7a1204fb61ea186ed05a603c44a4a009a33e148442f326f8b79aed59dcc17e"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/map.log.exit.json": {
+          "bytes": 416,
+          "sha256": "f01d5eff731253766621f6b02b656c8444de38d8e70aeb4fdc95cad403831ac4"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/quickcheck.log.exit.json": {
+          "bytes": 312,
+          "sha256": "8df8e9a4d2d6ef338f1e7bdeeb1fdccd4c14dc56af903c4027e2d54d648d05b4"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/sample_0006.sorted.bam": {
+          "bytes": 4081898122,
+          "sha256": "66ed3a4c50aff0b3e7b49340747296ada7506f1d89a2fb17d6d3c00804e4f3b3"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/sample_0006.sorted.bam.bai": {
+          "bytes": 9154488,
+          "sha256": "ccd00acf44f0ad5388921bc07a189a6b50a1cbad1b09a2743aa3103540912b99"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/sample_0006.sorted.mapped.json": {
+          "bytes": 925,
+          "sha256": "383a0fef966c496c19b645c447f9feee10618054c639f4e173764c588505e36b"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/sort.log.exit.json": {
+          "bytes": 434,
+          "sha256": "e25ed6196a3d26bc09906b9397177bb71101df3302ab94f1e45352577eb11fa0"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/depth.axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "6168e8ee0ff75c58fa3d297e8c3a36349135bb757fcfd12465b421947ba7ced4"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/depth.receipt.json": {
+          "bytes": 863,
+          "sha256": "54e053ec6950fe909a537648e17b9496d7c0bf2aafce1b17ce4041da465fb9f3"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/depth.tsv": {
+          "bytes": 3949641,
+          "sha256": "44f6d1a697cd8311c67ad4f154518488aa1b3c31ca6c1f94482ceb8757cdaf13"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/done.json": {
+          "bytes": 4428,
+          "sha256": "c6fe18e3e58bcfb85f1a20926771805978e354454deee315ec2f045d66439a0b"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "d475714614fed83e3e43245150f4ff0886ea2bb05c7e09a21246aae08a8a1947"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/index.log.exit.json": {
+          "bytes": 314,
+          "sha256": "1165fe27b6a86300ec240bf2588da75c0cdc1b3d08f813c71b4d45b44da2543d"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/map.log.exit.json": {
+          "bytes": 416,
+          "sha256": "e8ce67c49b8d6430bc340a4d23f23470b42423af9fe14d372bd2ee937f632821"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/quickcheck.log.exit.json": {
+          "bytes": 312,
+          "sha256": "bbcb3b5369623f0646c2270768964aaebea2f01f15c122e20b85f33c6d58c6f1"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/sample_0009.sorted.bam": {
+          "bytes": 4189258550,
+          "sha256": "e1477de062386c7aa3d6b1fd4900ed8f0d536ae4eba03ab751aeb2fdfb7fc368"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/sample_0009.sorted.bam.bai": {
+          "bytes": 9780224,
+          "sha256": "154ad5ab406b404ac9f1dca5ca39ffed24267271e076e1d8daacf46edbb51df4"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/sample_0009.sorted.mapped.json": {
+          "bytes": 925,
+          "sha256": "205fa5d3b866682c16a388dc2113a7583a2686e340aa60490c7e32892b797d05"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/sort.log.exit.json": {
+          "bytes": 435,
+          "sha256": "0bdf12e934c4b30667111cc75d5a18fd0d128d665d220310c15e883091bba34b"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/depth.axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "779f6273d806c348b05188f1e4008fa934d7c59925cbc66d154e604d3d2ec5e6"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/depth.receipt.json": {
+          "bytes": 864,
+          "sha256": "1b5d205f7c7344404a3f256e0cab2a59522c1ae0d1da449e8c204d53e8232969"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/depth.tsv": {
+          "bytes": 3838917,
+          "sha256": "258bd4ffc6e1a16a9c0cb8b6a06b8291862aebd3cf5dcc7d01d482f5397aee32"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/done.json": {
+          "bytes": 4430,
+          "sha256": "d88c8cfb53b58b4d565ac15d17187d2e5d198c326102dda3ffe3e5322c8d27b8"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "5f3e5a40b40b131eb938e050f9c6a420b94347b75fbd338c00c961d2d8617de3"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/index.log.exit.json": {
+          "bytes": 314,
+          "sha256": "6775d75f395276ffc21da49819e8f80e36eafe95f5c6ee5abd5c87c1b09695fa"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/map.log.exit.json": {
+          "bytes": 415,
+          "sha256": "cf83a9ca7dd68b0193b4b705e5f372748adaed061bfff34e804d6c19aea08cb4"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/quickcheck.log.exit.json": {
+          "bytes": 311,
+          "sha256": "a655d3b1d6f43c89003ff7df07da9a06169276bbd41f304a00908eb1eb91dc03"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/sample_0010.sorted.bam": {
+          "bytes": 4136949462,
+          "sha256": "750ea876c0f32a1c704ba0ae21a4404c1d1d4d9e35e9db09a13be12e7408d3d9"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/sample_0010.sorted.bam.bai": {
+          "bytes": 9312736,
+          "sha256": "3a0c433b1f81c4b42d59b66c5e9b4cead9b987d64a7a11ba5747c8cdaba8da85"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/sample_0010.sorted.mapped.json": {
+          "bytes": 927,
+          "sha256": "e42727c94f2f90c43aece1f21115da61265d2821bf5602398007676ead4f62cf"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/sort.log.exit.json": {
+          "bytes": 434,
+          "sha256": "5ddc4ba4c71bc454963eca3d1667cebbd8b46921b086173bbca53b2c29389636"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/depth.axis.log.exit.json": {
+          "bytes": 305,
+          "sha256": "d54bbbf7d1de05dce1bbab41356ba10e07ad48f3d7ae47b18dc44ff5572a2bb9"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/depth.receipt.json": {
+          "bytes": 864,
+          "sha256": "f663bf039bc40ed68ab3fcbb8661cbd216defbf762a59d560ee57b44cde8bae8"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/depth.tsv": {
+          "bytes": 3533220,
+          "sha256": "175ed8464970db544554dd7d9dcc4e211bbc408422d46c97146cc0fd079cbb8e"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/done.json": {
+          "bytes": 4430,
+          "sha256": "21543ae430a4f815b39218a55b0ef1a4e3aac2cf5e10f676f718275d897dbf9a"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "b6a599d1e7468f3f1de1ec66427619c06b2f95fb24b6a84e745bf676420237d0"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/index.log.exit.json": {
+          "bytes": 315,
+          "sha256": "e1a2dff87156c165f6146a7f6d48a1bcbbdd82196db585422d3565ce6f457330"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/map.log.exit.json": {
+          "bytes": 416,
+          "sha256": "c525087199dd318821cbed629fde3c5d8fc90c411dacf9afd6b1f6cc55d3de98"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/quickcheck.log.exit.json": {
+          "bytes": 312,
+          "sha256": "93197c8642e185337f98aac28289713ebc515bd6ffb8fa3c0ab7bc813211fd97"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/sample_0011.sorted.bam": {
+          "bytes": 4099177939,
+          "sha256": "a3164903ce48512727bc1afb6f1e26fb1f87dc2b8ca9f322bd9561c94b2f8f39"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/sample_0011.sorted.bam.bai": {
+          "bytes": 8024112,
+          "sha256": "5fe5a182224a969f4fc2a6e093e160d557fa4223e684a3da6fc6fe5492bb0cc7"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/sample_0011.sorted.mapped.json": {
+          "bytes": 927,
+          "sha256": "f543d6e6459d209a75b31328db1f10adc188543a6a03bdaae2b96b4077178a68"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/sort.log.exit.json": {
+          "bytes": 435,
+          "sha256": "e12ddc959a8d8c38ed3956574ca0a9af90c5eccd3e9a258786483e290cf39c9a"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/depth.axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "e1a303da766b672a00ef6f53567492f4e985ed302e64d777651f4d8de9ce6fe0"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/depth.receipt.json": {
+          "bytes": 864,
+          "sha256": "baa8ca6408d9518b59d13b00d8e3f854f7c9f8b4c8ac0eb5d9b51d71a6d1d892"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/depth.tsv": {
+          "bytes": 3820232,
+          "sha256": "5c781d485d56128bf4d688bcef96d5975220a1f2c355ac1eddc326e12b782986"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/done.json": {
+          "bytes": 4430,
+          "sha256": "20c0728c272666dcd5316de6a1f8f8e21eb568f0e74866071518693d56f90a91"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "2d9dfcc789537b2dd0fd583893859b13b752ed00c9a3a69cab2d0736981d0474"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/index.log.exit.json": {
+          "bytes": 314,
+          "sha256": "bf70810d76fcf3159b655e30af298c2af16cb7378b39bc78ba4568a989878eea"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/map.log.exit.json": {
+          "bytes": 415,
+          "sha256": "5cea1e0a3308d1414d4f090b27fbf350482337f2f498f64f555474a70a493f67"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/quickcheck.log.exit.json": {
+          "bytes": 312,
+          "sha256": "50b954f81a80adf5591a297acaab70e7157c184c6ce81e26af0adb4dfb3e61c4"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/sample_0014.sorted.bam": {
+          "bytes": 4161072973,
+          "sha256": "dc52f3a03a935f5dcf2931ec53447ba0412e6990d38cfb849e1e9dd41d585d0e"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/sample_0014.sorted.bam.bai": {
+          "bytes": 9227112,
+          "sha256": "1b63974468c036cedf331a91ba3caadd552029a03b9e43123f9e1ddb66119cb8"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/sample_0014.sorted.mapped.json": {
+          "bytes": 927,
+          "sha256": "7f046f0f2405ab2e57a96f973faf36d4c249534611018c4a248488b606aa81bc"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/sort.log.exit.json": {
+          "bytes": 434,
+          "sha256": "2c4bae1ca7acd5eb559640d3678820230e199e4c494a3e681e2e440e692ab976"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/depth.axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "0c91d38f2da89bd3722f6e2e0958ab34debadec46fe1ed16d76a816a106fe2a0"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/depth.receipt.json": {
+          "bytes": 864,
+          "sha256": "bdc758473067c080c81c70890c3bb1d8427ddb8320056d5af8a70ca6d4cd0ebd"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/depth.tsv": {
+          "bytes": 3860318,
+          "sha256": "c19919a2d3320f7d8ddf21e246f0a720fe0ff0b575374a10ce22988035df8d63"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/done.json": {
+          "bytes": 4430,
+          "sha256": "81ed9135d08d17427209ae72563d8a500bfe218aef4addddb0e994e1400c2484"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/axis.log.exit.json": {
+          "bytes": 306,
+          "sha256": "6002b050886db9fe3da373cecaf7963af00ea91a4a6a244ec6615e402385b20e"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/index.log.exit.json": {
+          "bytes": 314,
+          "sha256": "5dd492937186ca4cb651661d41e39bcc138e4d48515d3f3cf08d47f0077a56c4"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/map.log.exit.json": {
+          "bytes": 415,
+          "sha256": "092590b7d633ba75892063c049f050f187bf392ea7a268ecca7bfe8994058d6d"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/quickcheck.log.exit.json": {
+          "bytes": 312,
+          "sha256": "0ff3026ebe8dd7af9415e9e6781708804140f1bc521dc1d39a9c8a7f8a611580"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/sample_0017.sorted.bam": {
+          "bytes": 4186238920,
+          "sha256": "0861589ca06c90c7e92148f4c1d475b3c1b45f389c634124e05743e6bd6bd386"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/sample_0017.sorted.bam.bai": {
+          "bytes": 9478960,
+          "sha256": "557bfa7ab7f612decc173c871f3ef011f8179bfbf17ec65c2b6aa3219b5ee678"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/sample_0017.sorted.mapped.json": {
+          "bytes": 927,
+          "sha256": "5769b5a21ed16c449c973bde82323fa23d3d9dcd1cc24649ae95726bc52bd67c"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/sort.log.exit.json": {
+          "bytes": 436,
+          "sha256": "0344aded563c6a81b70832105f7316ca725bfb534080bde896b3108eb8a20138"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/reads_0000/done.json": {
+          "bytes": 1414,
+          "sha256": "32c58a92d50df9418a67a8d9103f55a915cdfb1f9d4ac21a7ebe6d954a81ecd6"
+        },
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts/sources/done.json": {
+          "bytes": 449930,
+          "sha256": "4eab3a83716bb6e375f9c4d761b5ac3f27dbdbedc02cd8e4ed83debeaa255ab4"
+        }
+      },
+      "failed_final_stage_sealed": false,
+      "full_DAG_succeeded": false,
+      "matrix_cells_verified": 1457020,
+      "matrix_rows": 145702,
+      "native_samtools": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/samtools",
+      "ordered_columns": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ],
+      "samples": [
+        {
+          "actual_SQ_axis_matches": true,
+          "bam": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/sample_0000.sorted.bam",
+          "bam_binding": {
+            "bytes": 3781565849,
+            "sha256": "11bc0c875cbdff23a0a3909a6b4478998dd610c98b45dbe7c6fd135f580fc4a9"
+          },
+          "column": "cami3_toy_human_gut_short_read_sample_0",
+          "native_exit_receipts_checked": 6,
+          "positive_depth_contigs": 145627,
+          "read_bp": 4990053900,
+          "read_pairs": 16633513,
+          "sample": 0,
+          "zero_depth_contigs": 75
+        },
+        {
+          "actual_SQ_axis_matches": true,
+          "bam": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/sample_0002.sorted.bam",
+          "bam_binding": {
+            "bytes": 4139872212,
+            "sha256": "782de3bf3b7b61d6e96d08f4e4cebd1c405f43e1eefdeeb0fb1a2c136e9ad03f"
+          },
+          "column": "cami3_toy_human_gut_short_read_sample_2",
+          "native_exit_receipts_checked": 6,
+          "positive_depth_contigs": 109753,
+          "read_bp": 4990192800,
+          "read_pairs": 16633976,
+          "sample": 2,
+          "zero_depth_contigs": 35949
+        },
+        {
+          "actual_SQ_axis_matches": true,
+          "bam": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/sample_0003.sorted.bam",
+          "bam_binding": {
+            "bytes": 4096193878,
+            "sha256": "57238109a0c1920b15c48954bd98c51bf4bae6d28d021baab3857d4c59e887ab"
+          },
+          "column": "cami3_toy_human_gut_short_read_sample_3",
+          "native_exit_receipts_checked": 6,
+          "positive_depth_contigs": 122222,
+          "read_bp": 4994116200,
+          "read_pairs": 16647054,
+          "sample": 3,
+          "zero_depth_contigs": 23480
+        },
+        {
+          "actual_SQ_axis_matches": true,
+          "bam": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/sample_0004.sorted.bam",
+          "bam_binding": {
+            "bytes": 4233074143,
+            "sha256": "d1ff473dcc0d047acc81ce16bb0844da0b41d69f9b4f050340f33159b0f5cb88"
+          },
+          "column": "cami3_toy_human_gut_short_read_sample_4",
+          "native_exit_receipts_checked": 6,
+          "positive_depth_contigs": 115896,
+          "read_bp": 4992879600,
+          "read_pairs": 16642932,
+          "sample": 4,
+          "zero_depth_contigs": 29806
+        },
+        {
+          "actual_SQ_axis_matches": true,
+          "bam": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/sample_0006.sorted.bam",
+          "bam_binding": {
+            "bytes": 4081898122,
+            "sha256": "66ed3a4c50aff0b3e7b49340747296ada7506f1d89a2fb17d6d3c00804e4f3b3"
+          },
+          "column": "cami3_toy_human_gut_short_read_sample_6",
+          "native_exit_receipts_checked": 6,
+          "positive_depth_contigs": 108465,
+          "read_bp": 4991031000,
+          "read_pairs": 16636770,
+          "sample": 6,
+          "zero_depth_contigs": 37237
+        },
+        {
+          "actual_SQ_axis_matches": true,
+          "bam": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/sample_0009.sorted.bam",
+          "bam_binding": {
+            "bytes": 4189258550,
+            "sha256": "e1477de062386c7aa3d6b1fd4900ed8f0d536ae4eba03ab751aeb2fdfb7fc368"
+          },
+          "column": "cami3_toy_human_gut_short_read_sample_9",
+          "native_exit_receipts_checked": 6,
+          "positive_depth_contigs": 117865,
+          "read_bp": 4992648900,
+          "read_pairs": 16642163,
+          "sample": 9,
+          "zero_depth_contigs": 27837
+        },
+        {
+          "actual_SQ_axis_matches": true,
+          "bam": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/sample_0010.sorted.bam",
+          "bam_binding": {
+            "bytes": 4136949462,
+            "sha256": "750ea876c0f32a1c704ba0ae21a4404c1d1d4d9e35e9db09a13be12e7408d3d9"
+          },
+          "column": "cami3_toy_human_gut_short_read_sample_10",
+          "native_exit_receipts_checked": 6,
+          "positive_depth_contigs": 110562,
+          "read_bp": 4993251000,
+          "read_pairs": 16644170,
+          "sample": 10,
+          "zero_depth_contigs": 35140
+        },
+        {
+          "actual_SQ_axis_matches": true,
+          "bam": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/sample_0011.sorted.bam",
+          "bam_binding": {
+            "bytes": 4099177939,
+            "sha256": "a3164903ce48512727bc1afb6f1e26fb1f87dc2b8ca9f322bd9561c94b2f8f39"
+          },
+          "column": "cami3_toy_human_gut_short_read_sample_11",
+          "native_exit_receipts_checked": 6,
+          "positive_depth_contigs": 92554,
+          "read_bp": 4993525500,
+          "read_pairs": 16645085,
+          "sample": 11,
+          "zero_depth_contigs": 53148
+        },
+        {
+          "actual_SQ_axis_matches": true,
+          "bam": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/sample_0014.sorted.bam",
+          "bam_binding": {
+            "bytes": 4161072973,
+            "sha256": "dc52f3a03a935f5dcf2931ec53447ba0412e6990d38cfb849e1e9dd41d585d0e"
+          },
+          "column": "cami3_toy_human_gut_short_read_sample_14",
+          "native_exit_receipts_checked": 6,
+          "positive_depth_contigs": 110188,
+          "read_bp": 4993357500,
+          "read_pairs": 16644525,
+          "sample": 14,
+          "zero_depth_contigs": 35514
+        },
+        {
+          "actual_SQ_axis_matches": true,
+          "bam": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/sample_0017.sorted.bam",
+          "bam_binding": {
+            "bytes": 4186238920,
+            "sha256": "0861589ca06c90c7e92148f4c1d475b3c1b45f389c634124e05743e6bd6bd386"
+          },
+          "column": "cami3_toy_human_gut_short_read_sample_17",
+          "native_exit_receipts_checked": 6,
+          "positive_depth_contigs": 113275,
+          "read_bp": 4983913500,
+          "read_pairs": 16613045,
+          "sample": 17,
+          "zero_depth_contigs": 32427
+        }
+      ],
+      "status": "retained assembly, ten BAM/depths and closed combined feature matrix verified",
+      "truth_admitted": false,
+      "verification_scope": "critical consumed feature bytes, watchdog/stage seals, actual native BAM headers/quickcheck; bulk read archives/sources and unused intermediates not rehashed"
+    },
+    "native_status": {
+      "allocated_ram_gib": 32,
+      "allocated_vcpus": 8,
+      "closed_terminal": {
+        "bytes": 4210,
+        "sha256": "024a7b8a978c708b21b4805c12d6599c535ab88c3667074ef2772314bce131e8"
+      },
+      "elapsed_seconds": 200.51580173399998,
+      "result_binding": {
+        "bytes": 33410,
+        "sha256": "b58fe8c74a27034a3d4f6dfb2d093f51db255fed58da8c3a5fbe99fa6ab78587"
+      },
+      "review_cpu_budget": 2,
+      "scope": "independent read-only feature acceptance; no data DAG, fits or scores",
+      "source_commit": "9409f1a",
+      "status": "passed",
+      "supervision": {
+        "command": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/experiments/e009/gcp-review-20261015/e009_data_acceptance.py",
+          "--root",
+          "/srv/dl_binner/experiments/e009/data-stage-v1",
+          "--output",
+          "/srv/dl_binner/experiments/e009/gcp-review-20261015/feature-review-v1",
+          "--snapshot",
+          "/srv/dl_binner/experiments/e009/gcp-phase-20261014/watchdog/exit-snapshot.json",
+          "--samtools",
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/samtools"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2292,
+        "peak_sampled_rss_bytes": 278990848,
+        "rss_bytes_ceiling": 2147483648,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.35913634912984715,
+        "sampled_cpu_seconds": 72.01,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2699.99428639,
+        "stop_reason": null,
+        "wall_seconds": 200.50880445400003
+      }
+    }
+  },
+  "independent_origin_review": {
+    "source_commit": "b9a528933b01f4e25de9d4bde2b4aa24c863c05c",
+    "receipt": {
+      "bytes": 488878,
+      "sha256": "65a40c5d1f8f88e74fcabe63cb5b492eb49a10d93c36dcb0f8f1109c30e6d503"
+    },
+    "status": "exact read/origin/source/profile joins passed; truth denominator remains provisional",
+    "native_status": {
+      "allocated_ram_gib": 32,
+      "allocated_vcpu_hours": 0.8165037098911112,
+      "allocated_vcpus": 8,
+      "audit_process_budget_cpus": 2,
+      "audit_source_commit": "b9a528933b01f4e25de9d4bde2b4aa24c863c05c",
+      "closed_terminal": {
+        "bytes": 7293,
+        "sha256": "fe5279f6152b1094e81ce76941cef94de2cb1fbea6aa2bf45acbb43a0ccdf7b9"
+      },
+      "elapsed_seconds": 367.42666945100007,
+      "no_fit_or_score": true,
+      "production_source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+      "review": "/srv/dl_binner/experiments/e009/gcp-review-20261015/read-origin-review-v3/review.json",
+      "review_binding": {
+        "bytes": 488878,
+        "sha256": "65a40c5d1f8f88e74fcabe63cb5b492eb49a10d93c36dcb0f8f1109c30e6d503"
+      },
+      "scientific_truth_admitted": false,
+      "stage": "independent actual read/origin/source/provider-profile review",
+      "status": "passed",
+      "supervision": {
+        "command": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/experiments/e009/gcp-review-20261015/e009_data_review_v3.py",
+          "--root",
+          "/srv/dl_binner/experiments/e009/data-stage-v1",
+          "--profile",
+          "/srv/dl_binner/experiments/e009/gcp-phase-20261014/sample0-taxonomy-profile.txt",
+          "--output",
+          "/srv/dl_binner/experiments/e009/gcp-review-20261015/read-origin-review-v3"
+        ],
+        "exit_code": 0,
+        "launched_pid": 3174,
+        "peak_sampled_rss_bytes": 145854464,
+        "rss_bytes_ceiling": 2147483648,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.035045649676892,
+        "sampled_cpu_seconds": 380.26,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1799.9598386819998,
+        "stop_reason": null,
+        "wall_seconds": 367.3847623229999
+      }
+    },
+    "exact_mate_IDs": {
+      "complete_canonical_ID_set": true,
+      "pairs": 16633513,
+      "records": 33267026
+    },
+    "all_source_taxonomy_joins_resolved": true,
+    "positive_genomes_by_lineage": {
+      "bacterial": 156,
+      "eukaryotic": 11,
+      "other": 9,
+      "viral": 133
+    },
+    "read_records_by_lineage": {
+      "bacterial": 27719316,
+      "eukaryotic": 4796082,
+      "other": 227980,
+      "viral": 523648
+    },
+    "taxonomy_join_modes": {
+      "exact_origin_taxon_without_provider_genome_id": 2,
+      "explicit_genome_id_with_synthetic_origin_taxon_suffix": 110,
+      "explicit_provider_genome_id": 197
+    },
+    "unresolved_taxonomy_genomes": {},
+    "unresolved_source_IDs": {},
+    "positive_records_outside_universe": {},
+    "preserved_first_failed_audit": {
+      "allocated_ram_gib": 32,
+      "allocated_vcpu_hours": 0.39438218746444437,
+      "allocated_vcpus": 8,
+      "audit_process_budget_cpus": 2,
+      "audit_source_commit": "b51c85a9f686e7e880ba8efa8d7ad867679b8eb6",
+      "closed_terminal": {
+        "bytes": 4309,
+        "sha256": "9b22aecf4801304be77fcd695d835fd60ede92177d0816aae6b109b0613b5fce"
+      },
+      "elapsed_seconds": 177.47198435899998,
+      "error": "RuntimeError('Command failed; see /srv/dl_binner/experiments/e009/gcp-phase-20261014/read-origin-audit.log\\nRuntimeError: Fatal native worker traceback; see child log')",
+      "no_fit_or_score": true,
+      "production_source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+      "stage": "independent actual read/origin/source/provider-profile review",
+      "status": "failed"
+    },
+    "preserved_second_failed_audit": {
+      "allocated_ram_gib": 32,
+      "allocated_vcpu_hours": 0.3777404074444444,
+      "allocated_vcpus": 8,
+      "audit_process_budget_cpus": 2,
+      "audit_source_commit": "8571737cf0f3c4dd4214b754be3e62f6c0611658",
+      "closed_terminal": {
+        "bytes": 3781,
+        "sha256": "bf2414a9db7e03ad9f283bf9c7f1f5952b958875f7365a621cdbe98e8e7f0414"
+      },
+      "elapsed_seconds": 169.98318335,
+      "error": "RuntimeError('Command failed; see /srv/dl_binner/experiments/e009/gcp-review-20261015/read-origin-audit.log\\nRuntimeError: Fatal native worker traceback; see child log')",
+      "no_fit_or_score": true,
+      "production_source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+      "stage": "independent actual read/origin/source/provider-profile review",
+      "status": "failed"
+    },
+    "population_record": "truth-population-review.json",
+    "circular_review": {
+      "source": "nine retained selected .permuted.fna files, copied byte-identically for review",
+      "files": [
+        {
+          "file": "ASV134.7__Bacteroides_fragilis_GUT04_strain_genomic__NZ_CP043609.1.permuted.fna",
+          "source_bytes": 906430,
+          "source_sha256": "6244d7c9db6e0847fdd1abb607df097ed19e73d5a3fed4cb1847d5f802707761",
+          "records": [
+            {
+              "id": "0NZ_CP043609.1",
+              "offset": 0,
+              "length": 89141
+            },
+            {
+              "id": "1NZ_CP043609.1",
+              "offset": 8914,
+              "length": 89141
+            },
+            {
+              "id": "2NZ_CP043609.1",
+              "offset": 17828,
+              "length": 89141
+            },
+            {
+              "id": "3NZ_CP043609.1",
+              "offset": 26742,
+              "length": 89141
+            },
+            {
+              "id": "4NZ_CP043609.1",
+              "offset": 35656,
+              "length": 89141
+            },
+            {
+              "id": "5NZ_CP043609.1",
+              "offset": 44570,
+              "length": 89141
+            },
+            {
+              "id": "6NZ_CP043609.1",
+              "offset": 53484,
+              "length": 89141
+            },
+            {
+              "id": "7NZ_CP043609.1",
+              "offset": 62398,
+              "length": 89141
+            },
+            {
+              "id": "8NZ_CP043609.1",
+              "offset": 71312,
+              "length": 89141
+            },
+            {
+              "id": "9NZ_CP043609.1",
+              "offset": 80226,
+              "length": 89141
+            }
+          ],
+          "one_molecule_bp": 89141,
+          "file_summed_bp": 891410,
+          "all_exact_forward_rotations": true
+        },
+        {
+          "file": "ASV687.8__Salmonella_enterica_subsp_enterica_serovar_Typhimurium_DA34827_genomic__NZ_CP029594.1.permuted.fna",
+          "source_bytes": 956180,
+          "source_sha256": "dfb43e355c3d68c6ceb74a1e13efab4665f9dd72b7f3dfce0d6526bd93817d90",
+          "records": [
+            {
+              "id": "0NZ_CP029594.1",
+              "offset": 0,
+              "length": 94034
+            },
+            {
+              "id": "1NZ_CP029594.1",
+              "offset": 9403,
+              "length": 94034
+            },
+            {
+              "id": "2NZ_CP029594.1",
+              "offset": 18806,
+              "length": 94034
+            },
+            {
+              "id": "3NZ_CP029594.1",
+              "offset": 28209,
+              "length": 94034
+            },
+            {
+              "id": "4NZ_CP029594.1",
+              "offset": 37612,
+              "length": 94034
+            },
+            {
+              "id": "5NZ_CP029594.1",
+              "offset": 47015,
+              "length": 94034
+            },
+            {
+              "id": "6NZ_CP029594.1",
+              "offset": 56418,
+              "length": 94034
+            },
+            {
+              "id": "7NZ_CP029594.1",
+              "offset": 65821,
+              "length": 94034
+            },
+            {
+              "id": "8NZ_CP029594.1",
+              "offset": 75224,
+              "length": 94034
+            },
+            {
+              "id": "9NZ_CP029594.1",
+              "offset": 84627,
+              "length": 94034
+            }
+          ],
+          "one_molecule_bp": 94034,
+          "file_summed_bp": 940340,
+          "all_exact_forward_rotations": true
+        },
+        {
+          "file": "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123336.1.permuted.fna",
+          "source_bytes": 1256690,
+          "source_sha256": "7b261b8489b75684c7d09699869e3262083d8bcdc10593b8e2690f06693af9ff",
+          "records": [
+            {
+              "id": "0NZ_CP123336.1",
+              "offset": 0,
+              "length": 123593
+            },
+            {
+              "id": "1NZ_CP123336.1",
+              "offset": 12359,
+              "length": 123593
+            },
+            {
+              "id": "2NZ_CP123336.1",
+              "offset": 24718,
+              "length": 123593
+            },
+            {
+              "id": "3NZ_CP123336.1",
+              "offset": 37077,
+              "length": 123593
+            },
+            {
+              "id": "4NZ_CP123336.1",
+              "offset": 49436,
+              "length": 123593
+            },
+            {
+              "id": "5NZ_CP123336.1",
+              "offset": 61795,
+              "length": 123593
+            },
+            {
+              "id": "6NZ_CP123336.1",
+              "offset": 74154,
+              "length": 123593
+            },
+            {
+              "id": "7NZ_CP123336.1",
+              "offset": 86513,
+              "length": 123593
+            },
+            {
+              "id": "8NZ_CP123336.1",
+              "offset": 98872,
+              "length": 123593
+            },
+            {
+              "id": "9NZ_CP123336.1",
+              "offset": 111231,
+              "length": 123593
+            }
+          ],
+          "one_molecule_bp": 123593,
+          "file_summed_bp": 1235930,
+          "all_exact_forward_rotations": true
+        },
+        {
+          "file": "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123337.1.permuted.fna",
+          "source_bytes": 731030,
+          "source_sha256": "be5e4c11ca4961d54ce5d2c88ad9f9e63e640abbd5af5b5f8e9a9ffa02e6b7bc",
+          "records": [
+            {
+              "id": "0NZ_CP123337.1",
+              "offset": 0,
+              "length": 71888
+            },
+            {
+              "id": "1NZ_CP123337.1",
+              "offset": 7188,
+              "length": 71888
+            },
+            {
+              "id": "2NZ_CP123337.1",
+              "offset": 14376,
+              "length": 71888
+            },
+            {
+              "id": "3NZ_CP123337.1",
+              "offset": 21564,
+              "length": 71888
+            },
+            {
+              "id": "4NZ_CP123337.1",
+              "offset": 28752,
+              "length": 71888
+            },
+            {
+              "id": "5NZ_CP123337.1",
+              "offset": 35940,
+              "length": 71888
+            },
+            {
+              "id": "6NZ_CP123337.1",
+              "offset": 43128,
+              "length": 71888
+            },
+            {
+              "id": "7NZ_CP123337.1",
+              "offset": 50316,
+              "length": 71888
+            },
+            {
+              "id": "8NZ_CP123337.1",
+              "offset": 57504,
+              "length": 71888
+            },
+            {
+              "id": "9NZ_CP123337.1",
+              "offset": 64692,
+              "length": 71888
+            }
+          ],
+          "one_molecule_bp": 71888,
+          "file_summed_bp": 718880,
+          "all_exact_forward_rotations": true
+        },
+        {
+          "file": "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123338.1.permuted.fna",
+          "source_bytes": 80880,
+          "source_sha256": "5ee5cfd0cdf06a90f072cc6ea3900512b773b0d8ae4ac2e1d1c44469c214e3d3",
+          "records": [
+            {
+              "id": "0NZ_CP123338.1",
+              "offset": 0,
+              "length": 7939
+            },
+            {
+              "id": "1NZ_CP123338.1",
+              "offset": 793,
+              "length": 7939
+            },
+            {
+              "id": "2NZ_CP123338.1",
+              "offset": 1586,
+              "length": 7939
+            },
+            {
+              "id": "3NZ_CP123338.1",
+              "offset": 2379,
+              "length": 7939
+            },
+            {
+              "id": "4NZ_CP123338.1",
+              "offset": 3172,
+              "length": 7939
+            },
+            {
+              "id": "5NZ_CP123338.1",
+              "offset": 3965,
+              "length": 7939
+            },
+            {
+              "id": "6NZ_CP123338.1",
+              "offset": 4758,
+              "length": 7939
+            },
+            {
+              "id": "7NZ_CP123338.1",
+              "offset": 5551,
+              "length": 7939
+            },
+            {
+              "id": "8NZ_CP123338.1",
+              "offset": 6344,
+              "length": 7939
+            },
+            {
+              "id": "9NZ_CP123338.1",
+              "offset": 7137,
+              "length": 7939
+            }
+          ],
+          "one_molecule_bp": 7939,
+          "file_summed_bp": 79390,
+          "all_exact_forward_rotations": true
+        },
+        {
+          "file": "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123339.1.permuted.fna",
+          "source_bytes": 55370,
+          "source_sha256": "6f7f460a095157cf1031a6b92dddceed86e4bbdbd8eea0156659728f047a6c02",
+          "records": [
+            {
+              "id": "0NZ_CP123339.1",
+              "offset": 0,
+              "length": 5430
+            },
+            {
+              "id": "1NZ_CP123339.1",
+              "offset": 543,
+              "length": 5430
+            },
+            {
+              "id": "2NZ_CP123339.1",
+              "offset": 1086,
+              "length": 5430
+            },
+            {
+              "id": "3NZ_CP123339.1",
+              "offset": 1629,
+              "length": 5430
+            },
+            {
+              "id": "4NZ_CP123339.1",
+              "offset": 2172,
+              "length": 5430
+            },
+            {
+              "id": "5NZ_CP123339.1",
+              "offset": 2715,
+              "length": 5430
+            },
+            {
+              "id": "6NZ_CP123339.1",
+              "offset": 3258,
+              "length": 5430
+            },
+            {
+              "id": "7NZ_CP123339.1",
+              "offset": 3801,
+              "length": 5430
+            },
+            {
+              "id": "8NZ_CP123339.1",
+              "offset": 4344,
+              "length": 5430
+            },
+            {
+              "id": "9NZ_CP123339.1",
+              "offset": 4887,
+              "length": 5430
+            }
+          ],
+          "one_molecule_bp": 5430,
+          "file_summed_bp": 54300,
+          "all_exact_forward_rotations": true
+        },
+        {
+          "file": "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123340.1.permuted.fna",
+          "source_bytes": 52690,
+          "source_sha256": "c14253412c051ac5bf465b5ee6020c61c4719f0d0efc42e6d0fe86ffdb552c30",
+          "records": [
+            {
+              "id": "0NZ_CP123340.1",
+              "offset": 0,
+              "length": 5166
+            },
+            {
+              "id": "1NZ_CP123340.1",
+              "offset": 516,
+              "length": 5166
+            },
+            {
+              "id": "2NZ_CP123340.1",
+              "offset": 1032,
+              "length": 5166
+            },
+            {
+              "id": "3NZ_CP123340.1",
+              "offset": 1548,
+              "length": 5166
+            },
+            {
+              "id": "4NZ_CP123340.1",
+              "offset": 2064,
+              "length": 5166
+            },
+            {
+              "id": "5NZ_CP123340.1",
+              "offset": 2580,
+              "length": 5166
+            },
+            {
+              "id": "6NZ_CP123340.1",
+              "offset": 3096,
+              "length": 5166
+            },
+            {
+              "id": "7NZ_CP123340.1",
+              "offset": 3612,
+              "length": 5166
+            },
+            {
+              "id": "8NZ_CP123340.1",
+              "offset": 4128,
+              "length": 5166
+            },
+            {
+              "id": "9NZ_CP123340.1",
+              "offset": 4644,
+              "length": 5166
+            }
+          ],
+          "one_molecule_bp": 5166,
+          "file_summed_bp": 51660,
+          "all_exact_forward_rotations": true
+        },
+        {
+          "file": "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123341.1.permuted.fna",
+          "source_bytes": 41570,
+          "source_sha256": "af655e71df3254f75ac3e8f27b2cc8ef053256d45440707fb2b5d6621e755005",
+          "records": [
+            {
+              "id": "0NZ_CP123341.1",
+              "offset": 0,
+              "length": 4073
+            },
+            {
+              "id": "1NZ_CP123341.1",
+              "offset": 407,
+              "length": 4073
+            },
+            {
+              "id": "2NZ_CP123341.1",
+              "offset": 814,
+              "length": 4073
+            },
+            {
+              "id": "3NZ_CP123341.1",
+              "offset": 1221,
+              "length": 4073
+            },
+            {
+              "id": "4NZ_CP123341.1",
+              "offset": 1628,
+              "length": 4073
+            },
+            {
+              "id": "5NZ_CP123341.1",
+              "offset": 2035,
+              "length": 4073
+            },
+            {
+              "id": "6NZ_CP123341.1",
+              "offset": 2442,
+              "length": 4073
+            },
+            {
+              "id": "7NZ_CP123341.1",
+              "offset": 2849,
+              "length": 4073
+            },
+            {
+              "id": "8NZ_CP123341.1",
+              "offset": 3256,
+              "length": 4073
+            },
+            {
+              "id": "9NZ_CP123341.1",
+              "offset": 3663,
+              "length": 4073
+            }
+          ],
+          "one_molecule_bp": 4073,
+          "file_summed_bp": 40730,
+          "all_exact_forward_rotations": true
+        },
+        {
+          "file": "ASV783.5__Escherichia_coli_AREA_492_strain_genomic__NZ_CP123342.1.permuted.fna",
+          "source_bytes": 21280,
+          "source_sha256": "d0082ccedbf80190a84d36ecf480f64235e3c26d53e6d334c4846be57104d9b2",
+          "records": [
+            {
+              "id": "0NZ_CP123342.1",
+              "offset": 0,
+              "length": 2077
+            },
+            {
+              "id": "1NZ_CP123342.1",
+              "offset": 207,
+              "length": 2077
+            },
+            {
+              "id": "2NZ_CP123342.1",
+              "offset": 414,
+              "length": 2077
+            },
+            {
+              "id": "3NZ_CP123342.1",
+              "offset": 621,
+              "length": 2077
+            },
+            {
+              "id": "4NZ_CP123342.1",
+              "offset": 828,
+              "length": 2077
+            },
+            {
+              "id": "5NZ_CP123342.1",
+              "offset": 1035,
+              "length": 2077
+            },
+            {
+              "id": "6NZ_CP123342.1",
+              "offset": 1242,
+              "length": 2077
+            },
+            {
+              "id": "7NZ_CP123342.1",
+              "offset": 1449,
+              "length": 2077
+            },
+            {
+              "id": "8NZ_CP123342.1",
+              "offset": 1656,
+              "length": 2077
+            },
+            {
+              "id": "9NZ_CP123342.1",
+              "offset": 1863,
+              "length": 2077
+            }
+          ],
+          "one_molecule_bp": 2077,
+          "file_summed_bp": 20770,
+          "all_exact_forward_rotations": true
+        }
+      ],
+      "literal_summed_bp": 4033410,
+      "one_copy_each_bp": 403341,
+      "genome_identity_from_read_origin_join_required": true,
+      "all_file_hashes_match_native_sealed_catalog": true
+    },
+    "truth_admitted": false
+  },
+  "truth_status": {
+    "population_reviewed": true,
+    "coordinate_truth_admitted": false,
+    "primary_candidate_genomes": 156,
+    "remaining": [
+      "Repair/test minimap2 2.30 ambiguous-base PAF/CIGAR contract without weakening malformed-row rejection",
+      "Derive a fresh truth axis using observed simulator genome IDs; preserve non-target and zero-origin competitive references",
+      "Map all exact circular rotations to canonical molecule coordinates before repeat/recovery unions",
+      "Freeze/validate full provided-reference denominators, target exclusions and competing-chain ambiguity in the new derivation; do not equate provided MAG reference length with finished-genome completeness"
+    ],
+    "do_not_merge_plasmid_HOST_into_genome": true,
+    "retain_zero_origin_competitors_and_unobserved_full_reference_loci": true
+  },
+  "review_wake": {
+    "admission": {
+      "checked_utc": "2026-10-15T12:50:35.401218+00:00",
+      "credit_remaining_dkk": 1952.79,
+      "credit_expiry": "2027-01-12",
+      "ordinary_credit_eligibility_rechecked": true,
+      "first_provider_uptime_hours": 13.179723055555554,
+      "first_compute_ip_gross_usd": 3.5986664439158442,
+      "review_max_hours": 1,
+      "review_compute_ip_gross_usd": 0.27304568,
+      "seven_day_disks_gross_usd": 7.180273972602739,
+      "combined_run_review_seven_day_disk_base_usd": 11.051986096518583,
+      "ceiling_usd": 20,
+      "unreported_usage_lag": "may exceed24h; not assumed zero",
+      "review_scope": "existing VM only; no resize/provision/DAG/fit/score; audit plus compact evidence collection then stop"
+    },
+    "final_state": {
+      "status": "TERMINATED",
+      "lastStartTimestamp": "2026-10-15T05:51:17.410-07:00",
+      "lastStopTimestamp": "2026-10-15T06:19:53.611-07:00",
+      "machine": "e2-standard-8",
+      "disks": [
+        {
+          "deviceName": "dl-binner-boot",
+          "diskSizeGb": "30",
+          "autoDelete": false
+        },
+        {
+          "deviceName": "dl-binner-work",
+          "diskSizeGb": "300",
+          "autoDelete": false
+        }
+      ],
+      "external_ip_addresses": [],
+      "scheduling": {
+        "automaticRestart": false,
+        "instanceTerminationAction": "STOP",
+        "maxRunDuration": {
+          "nanos": 0,
+          "seconds": "3600"
+        },
+        "onHostMaintenance": "MIGRATE",
+        "preemptible": false,
+        "provisioningModel": "STANDARD"
+      }
+    },
+    "no_resize_provision_install_DAG_fit_or_score": true,
+    "fixed_VM_source_unchanged": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+    "pre_stop_orphans": "The optional pre-stop rg process filter was unavailable (retained stderr), so it is not credited as an orphan check. Review supervisors record exited/reaped children; final GCP TERMINATED state confirms no processes remain running on this VM.",
+    "provider_ceiling_seconds": 3600,
+    "local_evidence": "artifacts/e009-gcp-review/20261015"
+  },
+  "actual_cost_accounting": {
+    "first_uptime_hours": 13.179723055555554,
+    "review_uptime_hours": 0.4767225,
+    "total_VM_running_hours": 13.656445555555553,
+    "allocated_vm_vcpu_hours": 109.25156444444443,
+    "first_compute_ip_list_usd": 3.5986664439158442,
+    "review_compute_ip_list_usd": 0.1301670191838,
+    "total_compute_ip_list_usd": 3.728833463099644,
+    "disk_retention_7d_list_usd": 7.180273972602739,
+    "run_review_and_7d_disk_list_base_usd": 10.909107435702383,
+    "ongoing_disk_month_list_usd": 31.2,
+    "usd_to_dkk_catalog": 6.5781,
+    "data_only_authorized_ceiling_usd": 20,
+    "provider_stop_current_seconds": 3600,
+    "actual_invoiced_phase_amount": "unavailable; billing display lags and allowances/credits differ from gross list usage",
+    "conservative_active_phase_clock_hours": 13.656445555555553,
+    "original_data_clock_hours": 24,
+    "credit_remaining_at_review_admission_dkk": 1952.79,
+    "reported_account_cost_dkk": 5.16,
+    "reported_account_savings_dkk": 5.16,
+    "reported_account_net_dkk": 0,
+    "reported_issued_credit_consumption_dkk": 20.64
+  },
+  "storage_observed": {
+    "observed_utc": "2026-10-15T13:02:50.858149+00:00",
+    "parts": {
+      "sources": {
+        "files": 2095,
+        "logical_bytes": 21558481093,
+        "physical_bytes_estimate": 21562814464
+      },
+      "assembly": {
+        "files": 90,
+        "logical_bytes": 7515316868,
+        "physical_bytes_estimate": 7515578368
+      },
+      "final": {
+        "files": 34,
+        "logical_bytes": 143626973,
+        "physical_bytes_estimate": 143720448
+      },
+      "map_0002": {
+        "files": 26,
+        "logical_bytes": 13625148097,
+        "physical_bytes_estimate": 13625221120
+      },
+      "map_0014": {
+        "files": 26,
+        "logical_bytes": 13654747314,
+        "physical_bytes_estimate": 13654818816
+      },
+      "reads_0000": {
+        "files": 7,
+        "logical_bytes": 9734697442,
+        "physical_bytes_estimate": 9734725632
+      },
+      "map_0011": {
+        "files": 26,
+        "logical_bytes": 13594532368,
+        "physical_bytes_estimate": 13594607616
+      },
+      "map_0010": {
+        "files": 26,
+        "logical_bytes": 13634679739,
+        "physical_bytes_estimate": 13634752512
+      },
+      "map_0006": {
+        "files": 26,
+        "logical_bytes": 13570174466,
+        "physical_bytes_estimate": 13570248704
+      },
+      "map_0003": {
+        "files": 26,
+        "logical_bytes": 13590232770,
+        "physical_bytes_estimate": 13590306816
+      },
+      "map_0000": {
+        "files": 22,
+        "logical_bytes": 3805269568,
+        "physical_bytes_estimate": 3805323264
+      },
+      "map_0017": {
+        "files": 26,
+        "logical_bytes": 13661389878,
+        "physical_bytes_estimate": 13661466624
+      },
+      "map_0004": {
+        "files": 26,
+        "logical_bytes": 13724916320,
+        "physical_bytes_estimate": 13724991488
+      },
+      "map_0009": {
+        "files": 26,
+        "logical_bytes": 13681905126,
+        "physical_bytes_estimate": 13681983488
+      }
+    },
+    "working_filesystem": {
+      "total": 316733652992,
+      "used": 168012034048,
+      "free": 148704841728
+    },
+    "production_peak_sampled_filesystem_used_bytes": 183240183808,
+    "production_min_sampled_free_bytes": 133699387392,
+    "sampling_scope": "whole working filesystem; two-second sampling, ten-second records; transient unsampled peaks possible",
+    "benchmarks": {
+      "map_0003.tsv": [
+        {
+          "s": "3881.44",
+          "h:m:s": "1:04:41",
+          "max_rss": "4989.54",
+          "max_vms": "6189.69",
+          "max_uss": "4979.22",
+          "max_pss": "4984.61",
+          "io_in": "6059.32",
+          "io_out": "27780.09",
+          "mean_load": "75.24",
+          "cpu_time": "2938.73",
+          "jobid": "9",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'map_0003'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage map_0003'}",
+          "threads": "8",
+          "cpu_usage": "292049.61",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/done.json': 0.004222869873046875, '/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ],
+      "map_0011.tsv": [
+        {
+          "s": "3356.59",
+          "h:m:s": "0:55:56",
+          "max_rss": "5131.12",
+          "max_vms": "6190.96",
+          "max_uss": "5126.95",
+          "max_pss": "5129.08",
+          "io_in": "12633.13",
+          "io_out": "27869.62",
+          "mean_load": "95.08",
+          "cpu_time": "3302.34",
+          "jobid": "4",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'map_0011'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage map_0011'}",
+          "threads": "8",
+          "cpu_usage": "319151.54",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/done.json': 0.0042247772216796875, '/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ],
+      "map_0009.tsv": [
+        {
+          "s": "3403.20",
+          "h:m:s": "0:56:43",
+          "max_rss": "4816.50",
+          "max_vms": "6189.08",
+          "max_uss": "4799.55",
+          "max_pss": "4800.92",
+          "io_in": "5777.55",
+          "io_out": "27805.74",
+          "mean_load": "89.91",
+          "cpu_time": "3153.20",
+          "jobid": "6",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'map_0009'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage map_0009'}",
+          "threads": "8",
+          "cpu_usage": "305984.26",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/done.json': 0.004222869873046875, '/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ],
+      "map_0004.tsv": [
+        {
+          "s": "4165.88",
+          "h:m:s": "1:09:25",
+          "max_rss": "5559.22",
+          "max_vms": "6188.50",
+          "max_uss": "5554.31",
+          "max_pss": "5559.42",
+          "io_in": "9908.91",
+          "io_out": "27809.95",
+          "mean_load": "75.03",
+          "cpu_time": "3251.19",
+          "jobid": "8",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'map_0004'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage map_0004'}",
+          "threads": "8",
+          "cpu_usage": "312557.24",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/done.json': 0.004223823547363281, '/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ],
+      "reads_0000.tsv": [
+        {
+          "s": "3122.77",
+          "h:m:s": "0:52:02",
+          "max_rss": "34.86",
+          "max_vms": "47.03",
+          "max_uss": "19.71",
+          "max_pss": "25.14",
+          "io_in": "870.11",
+          "io_out": "9284.11",
+          "mean_load": "20.22",
+          "cpu_time": "631.35",
+          "jobid": "13",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'reads_0000'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage reads_0000'}",
+          "threads": "8",
+          "cpu_usage": "63127.27",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/parts/sources/done.json': 0.42908668518066406, '/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ],
+      "map_0000.tsv": [
+        {
+          "s": "957.82",
+          "h:m:s": "0:15:57",
+          "max_rss": "5335.40",
+          "max_vms": "6184.52",
+          "max_uss": "5314.89",
+          "max_pss": "5320.20",
+          "io_in": "4626.52",
+          "io_out": "18700.44",
+          "mean_load": "234.25",
+          "cpu_time": "2362.66",
+          "jobid": "11",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'map_0000'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage map_0000'}",
+          "threads": "8",
+          "cpu_usage": "224367.93",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/done.json': 29.05629253387451, '/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ],
+      "map_0010.tsv": [
+        {
+          "s": "3311.18",
+          "h:m:s": "0:55:11",
+          "max_rss": "5506.72",
+          "max_vms": "6191.66",
+          "max_uss": "5491.06",
+          "max_pss": "5493.21",
+          "io_in": "16315.48",
+          "io_out": "27855.34",
+          "mean_load": "94.23",
+          "cpu_time": "3227.15",
+          "jobid": "5",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'map_0010'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage map_0010'}",
+          "threads": "8",
+          "cpu_usage": "312010.29",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/done.json': 0.004222869873046875, '/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ],
+      "sources.tsv": [
+        {
+          "s": "1945.91",
+          "h:m:s": "0:32:25",
+          "max_rss": "957.95",
+          "max_vms": "1072.02",
+          "max_uss": "937.40",
+          "max_pss": "942.76",
+          "io_in": "4016.06",
+          "io_out": "20563.66",
+          "mean_load": "29.04",
+          "cpu_time": "565.04",
+          "jobid": "14",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'sources'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage sources'}",
+          "threads": "8",
+          "cpu_usage": "56504.00",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ],
+      "map_0017.tsv": [
+        {
+          "s": "3008.47",
+          "h:m:s": "0:50:08",
+          "max_rss": "5078.36",
+          "max_vms": "6181.80",
+          "max_uss": "5069.78",
+          "max_pss": "5071.91",
+          "io_in": "39084.13",
+          "io_out": "27799.56",
+          "mean_load": "107.95",
+          "cpu_time": "3388.55",
+          "jobid": "2",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'map_0017'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage map_0017'}",
+          "threads": "8",
+          "cpu_usage": "324768.69",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/done.json': 0.0042247772216796875, '/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ],
+      "map_0014.tsv": [
+        {
+          "s": "2852.43",
+          "h:m:s": "0:47:32",
+          "max_rss": "5146.21",
+          "max_vms": "6188.44",
+          "max_uss": "5135.68",
+          "max_pss": "5137.80",
+          "io_in": "27057.14",
+          "io_out": "27768.81",
+          "mean_load": "104.79",
+          "cpu_time": "3188.81",
+          "jobid": "3",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'map_0014'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage map_0014'}",
+          "threads": "8",
+          "cpu_usage": "298904.84",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/done.json': 0.0042247772216796875, '/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ],
+      "assembly.tsv": [
+        {
+          "s": "9493.70",
+          "h:m:s": "2:38:13",
+          "max_rss": "4009.55",
+          "max_vms": "4088.39",
+          "max_uss": "3984.43",
+          "max_pss": "3991.34",
+          "io_in": "13904.43",
+          "io_out": "18040.55",
+          "mean_load": "409.86",
+          "cpu_time": "41162.19",
+          "jobid": "12",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'assembly'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage assembly'}",
+          "threads": "8",
+          "cpu_usage": "3891122.50",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/parts/reads_0000/done.json': 0.0013484954833984375, '/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ],
+      "map_0002.tsv": [
+        {
+          "s": "3420.95",
+          "h:m:s": "0:57:00",
+          "max_rss": "5303.53",
+          "max_vms": "6185.73",
+          "max_uss": "5282.47",
+          "max_pss": "5287.84",
+          "io_in": "16610.00",
+          "io_out": "27787.75",
+          "mean_load": "94.60",
+          "cpu_time": "3289.44",
+          "jobid": "10",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'map_0002'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage map_0002'}",
+          "threads": "8",
+          "cpu_usage": "323617.40",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/done.json': 0.0036773681640625, '/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ],
+      "map_0006.tsv": [
+        {
+          "s": "3872.49",
+          "h:m:s": "1:04:32",
+          "max_rss": "5414.36",
+          "max_vms": "6186.61",
+          "max_uss": "5404.19",
+          "max_pss": "5405.53",
+          "io_in": "10116.41",
+          "io_out": "27769.67",
+          "mean_load": "84.15",
+          "cpu_time": "3460.49",
+          "jobid": "7",
+          "rule_name": "data_stage",
+          "wildcards": "{'stage': 'map_0006'}",
+          "params": "{'command': '/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python -I -B /srv/dl_binner/repo/scripts/e009_gcp_stage.py --config /srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json --stage map_0006'}",
+          "threads": "8",
+          "cpu_usage": "325864.03",
+          "resources": "{'tmpdir': '/tmp', '_nodes': 1, 'mem_mb': 28174, 'mem': '28.17 GB', 'mem_mib': 26869, '_cores': 8}",
+          "input_size_mb": "{'/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/done.json': 0.004222869873046875, '/srv/dl_binner/experiments/e009/data-stage-v1/stage-config.json': 0.00914764404296875}"
+        }
+      ]
+    },
+    "truth_aligners": {
+      "truth_0009.log.exit.json": {
+        "argv": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+          "-x",
+          "asm5",
+          "-P",
+          "-c",
+          "--eqx",
+          "-m",
+          "100",
+          "-s",
+          "100",
+          "-n",
+          "2",
+          "-t",
+          "7",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/sources/reference_0009.fna",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa"
+        ],
+        "cwd": null,
+        "error": null,
+        "exit_code": 0,
+        "seconds": 7.629658425998059
+      },
+      "truth_0005.log.exit.json": {
+        "argv": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+          "-x",
+          "asm5",
+          "-P",
+          "-c",
+          "--eqx",
+          "-m",
+          "100",
+          "-s",
+          "100",
+          "-n",
+          "2",
+          "-t",
+          "7",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/sources/reference_0005.fna",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa"
+        ],
+        "cwd": null,
+        "error": null,
+        "exit_code": 0,
+        "seconds": 14.355388361000223
+      },
+      "truth_0001.log.exit.json": {
+        "argv": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+          "-x",
+          "asm5",
+          "-P",
+          "-c",
+          "--eqx",
+          "-m",
+          "100",
+          "-s",
+          "100",
+          "-n",
+          "2",
+          "-t",
+          "7",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/sources/reference_0001.fna",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa"
+        ],
+        "cwd": null,
+        "error": null,
+        "exit_code": 0,
+        "seconds": 42.86312959100178
+      },
+      "truth_0007.log.exit.json": {
+        "argv": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+          "-x",
+          "asm5",
+          "-P",
+          "-c",
+          "--eqx",
+          "-m",
+          "100",
+          "-s",
+          "100",
+          "-n",
+          "2",
+          "-t",
+          "7",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/sources/reference_0007.fna",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa"
+        ],
+        "cwd": null,
+        "error": null,
+        "exit_code": 0,
+        "seconds": 15.05988516099751
+      },
+      "truth_0006.log.exit.json": {
+        "argv": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+          "-x",
+          "asm5",
+          "-P",
+          "-c",
+          "--eqx",
+          "-m",
+          "100",
+          "-s",
+          "100",
+          "-n",
+          "2",
+          "-t",
+          "7",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/sources/reference_0006.fna",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa"
+        ],
+        "cwd": null,
+        "error": null,
+        "exit_code": 0,
+        "seconds": 12.548960020998493
+      },
+      "truth_0003.log.exit.json": {
+        "argv": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+          "-x",
+          "asm5",
+          "-P",
+          "-c",
+          "--eqx",
+          "-m",
+          "100",
+          "-s",
+          "100",
+          "-n",
+          "2",
+          "-t",
+          "7",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/sources/reference_0003.fna",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa"
+        ],
+        "cwd": null,
+        "error": null,
+        "exit_code": 0,
+        "seconds": 13.351481858000625
+      },
+      "truth_0002.log.exit.json": {
+        "argv": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+          "-x",
+          "asm5",
+          "-P",
+          "-c",
+          "--eqx",
+          "-m",
+          "100",
+          "-s",
+          "100",
+          "-n",
+          "2",
+          "-t",
+          "7",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/sources/reference_0002.fna",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa"
+        ],
+        "cwd": null,
+        "error": null,
+        "exit_code": 0,
+        "seconds": 19.88192858500406
+      },
+      "truth_0000.log.exit.json": {
+        "argv": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+          "-x",
+          "asm5",
+          "-P",
+          "-c",
+          "--eqx",
+          "-m",
+          "100",
+          "-s",
+          "100",
+          "-n",
+          "2",
+          "-t",
+          "7",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/sources/reference_0000.fna",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa"
+        ],
+        "cwd": null,
+        "error": null,
+        "exit_code": 0,
+        "seconds": 62.869273973003146
+      },
+      "truth_0008.log.exit.json": {
+        "argv": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+          "-x",
+          "asm5",
+          "-P",
+          "-c",
+          "--eqx",
+          "-m",
+          "100",
+          "-s",
+          "100",
+          "-n",
+          "2",
+          "-t",
+          "7",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/sources/reference_0008.fna",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa"
+        ],
+        "cwd": null,
+        "error": null,
+        "exit_code": 0,
+        "seconds": 16.76881221200165
+      },
+      "truth_0004.log.exit.json": {
+        "argv": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/minimap2",
+          "-x",
+          "asm5",
+          "-P",
+          "-c",
+          "--eqx",
+          "-m",
+          "100",
+          "-s",
+          "100",
+          "-n",
+          "2",
+          "-t",
+          "7",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/sources/reference_0004.fna",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa"
+        ],
+        "cwd": null,
+        "error": null,
+        "exit_code": 0,
+        "seconds": 12.044669053000689
+      }
+    }
+  },
+  "next_step": {
+    "immediate": "repair/test and admit fresh versioned truth from retained PAFs; prepare unchanged controls, no immediate external fit",
+    "diagnostics_proposal": "diagnostic-controls-plan.json",
+    "new_fit_budget_approved": false,
+    "proposed_new_fit_ceiling_usd": 2,
+    "external_immediate_scope": [],
+    "completebin": "deferred",
+    "prompt": "OPERATIONS.md#exact-following-step-prompt"
+  },
+  "checksum_provenance_note": "Source archive SHA is the accepted v10 hash, independently matched on GCP; the generic native acquisition field publisher_checksum_verified means an expected SHA was supplied, not that a separately published supplier checksum was found. Read archives have observed SHAs and verified ETags/length/mates, without supplier SHA claims.",
+  "subsequent_truth_v2": {
+    "record": "truth-v2-admission.json",
+    "admitted": true,
+    "scope": "conservative supplied-reference alignment truth for development diagnostics; not bin recovery, MAG quality or independent generalization",
+    "original_DAG_status_unchanged": true,
+    "GCP_wake": false
+  }
+}

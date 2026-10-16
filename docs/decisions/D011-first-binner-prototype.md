@@ -510,3 +510,20 @@ and native baselines, bin-quality/short-stratum/noise metrics and explicit cost
 budgets. Existing evidence is reused and refreshed only where selection needs it.
 No benchmark or architecture execution occurs in this merge task; the planned
 TNF/GLM-head/hybrid comparison remains separate and non-blocking.
+
+## Competitive development chapter prepared, 2026-10-08
+
+[D013](D013-first-comparative-benchmark.md) and
+[E009](../../experiments/E009-competitive-benchmark/README.md) complete the
+authorized next planning block on `benchmark-planning` from synchronized main
+`5e54538`. They preserve this accepted encoder/settings as the immutable control,
+select one actual short-read toy-III gut assembly with paired explicit depth,
+matched raw/learned sequence/depth controls and a justified native-tool shortlist.
+The focused source study treats biological training constraints, grouping/refinement
+and context/pretraining separately; no architecture winner or new model is chosen.
+The future three-way TNF/GLM-head/hybrid comparison remains explicitly planned,
+with matched objective/bin-quality/resource measures, not executed as part of E009
+planning. Source overlap, actual Linux runtime/payload affordability and alignment
+truth adapters must be resolved before scores; a new sample is not unseen-genome
+proof. Next implement/test those adapters and prepare one bounded owner preflight.
+No accepted science, E002/E003 inference or product setting is repeated/changed.

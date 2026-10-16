@@ -1,0 +1,234 @@
+{
+  "record": "E009",
+  "reviewed": "2026-10-10",
+  "status": "verified v5 failure: persistent-file reads make direct runtime reuse unusable",
+  "archive": {
+    "path": "agent_context/native-preflight-mxmhmoyw-return.tar.gz",
+    "file": {
+      "bytes": 93214,
+      "sha256": "80ab822eb39741292c8f7ec7c99528068066780599599e6007ea0045c6cbcfc3"
+    }
+  },
+  "checksum_verified": true,
+  "terminal": {
+    "path": "agent_context/e009-preflight.95jljkdk.log",
+    "file": {
+      "bytes": 35650,
+      "sha256": "65f9b0d2df01f99c732eca73f2dc3e4324587f05114ad89ed899d8e0da6715c6"
+    }
+  },
+  "source_commit": "01837619230458e830fba7f54755c04d6c8c7604",
+  "members": 11,
+  "inventory_files": 9,
+  "all_inventory_hashes_verified": true,
+  "retained_logical_bytes": 1544852,
+  "probe_exit": {
+    "command": [
+      "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/bin/python",
+      "-I",
+      "-B",
+      "-S",
+      "/work/Home/dl_binner/e009/transfer/launch-ozyrm88t/e009-preflight-v5/scripts/e009_startup.py",
+      "10",
+      "file",
+      "/work/Home/dl_binner/e009/transfer/launch-ozyrm88t/e009-preflight-v5/scripts/e009_native.py",
+      "--inventory-prefix",
+      "/work/Home/dl_binner/e001/e001-gate0/envs/comebin",
+      "--expected-freeze",
+      "/work/Home/dl_binner/e009/transfer/launch-ozyrm88t/e009-preflight-v5/experiments/E009-competitive-benchmark/comebin-base-freeze.txt",
+      "--modules",
+      "numpy",
+      "torch",
+      "pandas",
+      "scipy",
+      "sklearn",
+      "pysam",
+      "Bio",
+      "hnswlib",
+      "igraph",
+      "leidenalg"
+    ],
+    "exit_code": -15,
+    "launched_pid": 924,
+    "peak_sampled_rss_bytes": 287637504,
+    "rss_bytes_ceiling": 20000000000,
+    "sample_includes_coordinator": true,
+    "sampled_average_cpus": 0.01167488313856758,
+    "sampled_cpu_seconds": 10.509999999999998,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 900,
+    "stop_reason": "TimeoutError: Configured wall-time limit reached",
+    "wall_seconds": 900.2231435859576
+  },
+  "driver_status": {
+    "accounting": "declared allocation times entry-to-driver wall; includes setup/failures; excludes owner idle/upload",
+    "allocated_core_hours_before_collection": 2.0031688282773312,
+    "allocated_ram_gb": 24,
+    "allocated_vcpus": 8,
+    "error": "RuntimeError('Command failed; see /work/Home/dl_binner/e009/native-preflight-mxmhmoyw/stages/readonly-comebin-base-probe.log\\nTimeoutError: Configured wall-time limit reached')",
+    "execution_timed_out": false,
+    "exit_code": 1,
+    "seconds_before_collection": 901.4259727247991,
+    "status": "failed",
+    "verification_passed": true
+  },
+  "wait_observations": 175,
+  "wait_file_types": {
+    ".pyc": 162,
+    ".py": 2,
+    ".so": 8,
+    ".txt": 3
+  },
+  "wait_samples": [
+    {
+      "time": 1646765.376235221,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/concurrent/__pycache__/__init__.cpython-313.pyc",
+      "syscall": "0 0x4 0x7fbf9133e570 0x87 0x7 0x0 0x0 0x7ffef91b7ac0 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1646866.85060418,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/package/__pycache__/__init__.cpython-313.pyc",
+      "syscall": "0 0x4 0x55d3b7b88b60 0x2bc 0x7 0x0 0x0 0x7ffef91b5750 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1646968.535990504,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/distributions/__pycache__/logistic_normal.cpython-313.pyc",
+      "syscall": "0 0x4 0x55d3b7e7f1a0 0xce2 0x1 0x0 0x0 0x7ffef91b8af0 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1647070.383404803,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/optim/__pycache__/_adafactor.cpython-313.pyc",
+      "syscall": "0 0x4 0x55d3b81e38b0 0x722a 0x1 0x0 0x0 0x7ffef91b8af0 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1647177.289339035,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/export/__pycache__/__init__.cpython-313.pyc",
+      "syscall": "0 0x4 0x55d3b83b2820 0x4b24 0x1 0x0 0x0 0x7ffef91b9280 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1647279.093362455,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/_native/ops/__pycache__/__init__.cpython-313.pyc",
+      "syscall": "0 0x4 0x7fbf8f87bb40 0x147 0x7 0x0 0x0 0x7ffef91b8af0 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1647380.92737626,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/pandas/core/array_algos/__pycache__/masked_reductions.cpython-313.pyc",
+      "syscall": "0 0x4 0x55d3b91b7510 0x19f8 0x1 0x0 0x0 0x7ffef91b6cb0 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1647482.757218253,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/pandas/io/json/__pycache__/_table_schema.cpython-313.pyc",
+      "syscall": "0 0x4 0x55d3b9618f00 0x380a 0x1 0x0 0x0 0x7ffef91b6b30 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1647584.642678761,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/scipy/_external/array_api_compat/numpy/__pycache__/linalg.cpython-313.pyc",
+      "syscall": "0 0x4 0x55d3b9922690 0x1766 0x1 0x0 0x0 0x7ffef91b41c0 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1646882.059763233,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/nn/functional.py",
+      "syscall": "0 0x4 0x55d3b7c97470 0x1000 0x7fbf90b359c0 0x0 0x0 0x7ffef91b67b0 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1647004.151337533,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/lib-dynload/_multiprocessing.cpython-313-x86_64-linux-gnu.so",
+      "syscall": "0 0x4 0x7ffef91b7018 0x340 0x0 0x7ffef91b6ff7 0x1 0x7ffef91b6f48 0x7fbfbf947be8\n"
+    },
+    {
+      "time": 1647258.733479162,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/compiler/config.py",
+      "syscall": "0 0x4 0x55d3b86abe10 0x1000 0x7fbf8f345540 0x0 0x0 0x7ffef91b8320 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1647263.834170321,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/natsort-8.4.0.dist-info/entry_points.txt",
+      "syscall": "0 0x4 0x7fbf8ef16930 0x34 0x7 0x0 0x0 0x7ffef91b9770 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1647268.927472797,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/fast_array_utils-1.5.1.dist-info/entry_points.txt",
+      "syscall": "0 0x4 0x7fbf8ef169f0 0x3f 0x7 0x0 0x0 0x7ffef91b9770 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1647274.01355353,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/fonttools-4.65.0.dist-info/entry_points.txt",
+      "syscall": "0 0x4 0x7fbf8f345850 0x94 0x7 0x0 0x0 0x7ffef91b9770 0x7fbfbf721bca\n"
+    },
+    {
+      "time": 1647304.55865857,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/random/_common.cpython-313-x86_64-linux-gnu.so",
+      "syscall": "0 0x4 0x7ffef91b4ed8 0x340 0x0 0x7ffef91b4eb7 0x1 0x7ffef91b4e08 0x7fbfbf947be8\n"
+    },
+    {
+      "time": 1647309.645526414,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/random/_philox.cpython-313-x86_64-linux-gnu.so",
+      "syscall": "0 0x4 0x7ffef91b59f8 0x340 0x0 0x7ffef91b59d7 0x1 0x7ffef91b5928 0x7fbfbf947be8\n"
+    },
+    {
+      "time": 1647319.827883569,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/pandas/_libs/tslibs/ccalendar.cpython-313-x86_64-linux-gnu.so",
+      "syscall": "0 0x4 0x7ffef91afcf8 0x340 0x0 0x7ffef91afcd7 0x1 0x7ffef91afc28 0x7fbfbf947be8\n"
+    },
+    {
+      "time": 1647324.931284335,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/pandas/_libs/tslibs/timestamps.cpython-313-x86_64-linux-gnu.so",
+      "syscall": "0 0x4 0x7ffef91af8e8 0x340 0x0 0x7ffef91af8c7 0x1 0x7ffef91af818 0x7fbfbf947be8\n"
+    },
+    {
+      "time": 1647340.200583797,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/lib-dynload/_decimal.cpython-313-x86_64-linux-gnu.so",
+      "syscall": "0 0x4 0x7ffef91aefc8 0x340 0x0 0x7ffef91aefa7 0x1 0x7ffef91aeef8 0x7fbfbf947be8\n"
+    },
+    {
+      "time": 1647345.292851725,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/pandas/_libs/tslibs/strptime.cpython-313-x86_64-linux-gnu.so",
+      "syscall": "0 0x4 0x7ffef91af758 0x340 0x0 0x7ffef91af737 0x1 0x7ffef91af688 0x7fbfbf947be8\n"
+    },
+    {
+      "time": 1647569.367251349,
+      "pid": 924,
+      "file": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/lib-dynload/_multibytecodec.cpython-313-x86_64-linux-gnu.so",
+      "syscall": "0 0x4 0x7ffef91adc48 0x340 0x0 0x7ffef91adc27 0x1 0x7ffef91adb78 0x7fbfbf947be8\n"
+    }
+  ],
+  "completed_imports": [
+    "numpy",
+    "torch",
+    "pandas",
+    "scipy"
+  ],
+  "incomplete_import": "sklearn",
+  "full_inventory_freeze_acceptance": false,
+  "diagnosis": "10.51 sampled CPU seconds over 900.223 wall seconds; 162/175 retained folio_wait_bit_common/read(2) observations point to .pyc files, plus 2 source/8 library/3 metadata reads. Increasing time did not make direct imports usable. -B disables writes, not cache reads. Source speed and effectiveness of bypassing caches are unmeasured on Linux; provider/filesystem cause remains unknown.",
+  "correction": "Explicit empty job-local -X pycache_prefix plus -B loads unchanged original source while ignoring old bytecode. Reproduce blocked cache locally; test actual source/cache reads and complete isolated inventory in a 1-vCPU/4-GB recovery-only job before full preflight.",
+  "claim_limits": [
+    "Cache-read workaround repaired the local FIFO reproduction, not proven to fix all Linux filesystem waits",
+    "No environment deleted/copied/relocated/reinstalled; no scientific settings or shortlist changed",
+    "No payload downloads/new prefixes/native contracts/fits/scores started",
+    "Full prefix-byte acceptance unresolved; sampled source bytes/full inventory are distinct scopes"
+  ],
+  "budget": "Full eight-vCPU preflight suspended. Recovery work <=300 seconds plus 30-second normal collection; timeout evidence collection separately bounded/accounted.",
+  "prior_failure": "linux-startup-failure-v4.json"
+}

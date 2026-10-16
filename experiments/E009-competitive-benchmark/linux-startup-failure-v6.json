@@ -1,0 +1,114 @@
+{
+  "record": "E009",
+  "reviewed": "2026-10-10",
+  "status": "verified v6 failure: source-cache bypass does not repair Home reads",
+  "archive": {
+    "path": "agent_context/native-preflight-wwzk44m8-return.tar.gz",
+    "bytes": 29821,
+    "sha256": "80896c6eb0b63954c8c1c0a716eb05272ee1e088cac8eb34231d7d0c20c5a8b4"
+  },
+  "checksum_verified": true,
+  "terminal": {
+    "path": "agent_context/e009-recovery.3438tj96.log",
+    "bytes": 23822,
+    "sha256": "e777e5e5e35379baabe4e3fde9850c9e968726ac29b3d641017d4cce16d411bd"
+  },
+  "members": 24,
+  "inventory_files": 22,
+  "all_inventory_hashes_verified": true,
+  "retained_logical_bytes": 326016,
+  "allocation": {
+    "accounting": "declared allocation times entry-to-driver wall; includes setup/failures; excludes owner idle/upload",
+    "allocated_core_hours_before_collection": 0.050892757508877874,
+    "allocated_ram_gb": 4,
+    "allocated_vcpus": 1,
+    "error": "RuntimeError('Command failed; see /work/Home/dl_binner/e009/native-preflight-wwzk44m8/stages/source-only-full-inventory.log\\nTimeoutError: Configured wall-time limit reached')",
+    "execution_timed_out": false,
+    "exit_code": 1,
+    "seconds_before_collection": 183.21392703196034,
+    "status": "failed",
+    "verification_passed": true
+  },
+  "probe_exit": {
+    "command": [
+      "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/bin/python",
+      "-I",
+      "-B",
+      "-X",
+      "pycache_prefix=/tmp/e009-cache-recovery-9yqw6uea/unused-bytecode",
+      "-S",
+      "/work/Home/dl_binner/e009/transfer/launch-0gom7q_5/e009-preflight-v6/scripts/e009_startup.py",
+      "10",
+      "file",
+      "/work/Home/dl_binner/e009/transfer/launch-0gom7q_5/e009-preflight-v6/scripts/e009_native.py",
+      "--inventory-prefix",
+      "/work/Home/dl_binner/e001/e001-gate0/envs/comebin",
+      "--expected-freeze",
+      "/work/Home/dl_binner/e009/transfer/launch-0gom7q_5/e009-preflight-v6/experiments/E009-competitive-benchmark/comebin-base-freeze.txt",
+      "--modules",
+      "numpy",
+      "torch",
+      "pandas",
+      "scipy",
+      "sklearn",
+      "pysam",
+      "Bio",
+      "hnswlib",
+      "igraph",
+      "leidenalg"
+    ],
+    "exit_code": -15,
+    "launched_pid": 527,
+    "peak_sampled_rss_bytes": 203976704,
+    "rss_bytes_ceiling": 3000000000,
+    "sample_includes_coordinator": true,
+    "sampled_average_cpus": 0.01631795413819892,
+    "sampled_cpu_seconds": 2.94,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 180,
+    "stop_reason": "TimeoutError: Configured wall-time limit reached",
+    "wall_seconds": 180.1696447422728
+  },
+  "readings": [
+    {
+      "bytes": 26277,
+      "kind": "source",
+      "path": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/__init__.py",
+      "seconds": 0.56657595327124,
+      "sha256": "92a46f791e453926d3292af2582b89995a289475f0eaaea71a949823200b838a",
+      "status": "read"
+    },
+    {
+      "bytes": 28311,
+      "kind": "bytecode",
+      "path": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/__pycache__/__init__.cpython-313.pyc",
+      "seconds": 0.0006319447420537472,
+      "sha256": "8f6f0c2fae294c1ac7c96e66c6a45377dd30dfb2ae164f806318c86a1e6e38f4",
+      "status": "read"
+    },
+    {
+      "bytes": 12227,
+      "kind": "source",
+      "path": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/utils/weak.py",
+      "seconds": 0.6384770241566002,
+      "sha256": "dfb90817f0d79dab07130cff3afb9382e65a78b1517245d5e4691fd63cfb9b63",
+      "status": "read"
+    },
+    {
+      "bytes": 15000,
+      "kind": "bytecode",
+      "path": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/utils/__pycache__/weak.cpython-313.pyc",
+      "seconds": 0.0005301311612129211,
+      "sha256": "6ca202c5c3299b2a767c188ea7c305943f7ebdf9b050c03a637271514e90122e",
+      "status": "read"
+    }
+  ],
+  "file_wait_samples": 34,
+  "wait_open_file_suffix_counts": {
+    ".py": 34
+  },
+  "interpretation": "Linux file-read latency affects original Python source and libraries too; no Bash syntax error or fatal Python exception. Source-cache bypass is superseded. Kernel/provider storage cause remains unidentified.",
+  "scientific_stages_started": false,
+  "source_commit": "76c5012e9f9981d89a3ac3c4d6773205cf1dee2b",
+  "verified_bundle_manifest_sha256": "a503a672cfc28c104ee759c75613c30ee0cd43ca150e4228fbb5ad6da407b474"
+}

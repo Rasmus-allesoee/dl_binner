@@ -1,0 +1,212 @@
+{
+  "record": "E009",
+  "reviewed": "2026-10-10",
+  "status": "verified failure; progressing cold-file imports terminated by fixed 90-second wall ceiling",
+  "archive": {
+    "path": "agent_context/native-preflight-qupkkakx-return.tar.gz",
+    "file": {
+      "bytes": 19170,
+      "sha256": "bac742521c323d5c86007f1010c58aa01db6e2f5f9ecb2f9dac5863ca9bdd3ba"
+    }
+  },
+  "checksum_verified": true,
+  "terminal": {
+    "path": "agent_context/e009-preflight.3zbn9mia.log",
+    "file": {
+      "bytes": 21134,
+      "sha256": "15e050b0e4ca4932d30c1af3ecbef1a1087722665ed27f6165ef34cf9e53ff06"
+    }
+  },
+  "source_commit": "2027436c54b6ff016a5ed4e75232f0256bc7e568",
+  "members": 11,
+  "inventory_files": 9,
+  "all_inventory_hashes_verified": true,
+  "retained_logical_bytes": 177168,
+  "driver_status": {
+    "accounting": "declared allocation times entry-to-driver wall; includes setup/failures; excludes owner idle/upload",
+    "allocated_core_hours_before_collection": 0.20274134617298842,
+    "allocated_ram_gb": 24,
+    "allocated_vcpus": 8,
+    "error": "RuntimeError('Command failed; see /work/Home/dl_binner/e009/native-preflight-qupkkakx/stages/readonly-comebin-base-probe.log\\nTimeoutError: Configured wall-time limit reached')",
+    "execution_timed_out": false,
+    "exit_code": 1,
+    "seconds_before_collection": 91.23360577784479,
+    "status": "failed",
+    "verification_passed": true
+  },
+  "probe_exit": {
+    "command": [
+      "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/bin/python",
+      "-I",
+      "-B",
+      "-S",
+      "/work/Home/dl_binner/e009/transfer/launch-yrkhu5ft/e009-preflight-v4/scripts/e009_startup.py",
+      "10",
+      "file",
+      "/work/Home/dl_binner/e009/transfer/launch-yrkhu5ft/e009-preflight-v4/scripts/e009_native.py",
+      "--inventory-prefix",
+      "/work/Home/dl_binner/e001/e001-gate0/envs/comebin",
+      "--expected-freeze",
+      "/work/Home/dl_binner/e009/transfer/launch-yrkhu5ft/e009-preflight-v4/experiments/E009-competitive-benchmark/comebin-base-freeze.txt",
+      "--modules",
+      "numpy",
+      "torch",
+      "pandas",
+      "scipy",
+      "sklearn",
+      "pysam",
+      "Bio",
+      "hnswlib",
+      "igraph",
+      "leidenalg"
+    ],
+    "exit_code": -15,
+    "launched_pid": 640,
+    "peak_sampled_rss_bytes": 187293696,
+    "rss_bytes_ceiling": 20000000000,
+    "sample_includes_coordinator": true,
+    "sampled_average_cpus": 0.020989654068440364,
+    "sampled_cpu_seconds": 1.89,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 90,
+    "stop_reason": "TimeoutError: Configured wall-time limit reached",
+    "wall_seconds": 90.04436156200245
+  },
+  "metadata_distribution_count": 86,
+  "explicit_freeze_versions_match": 73,
+  "direct_reference_metadata_versions_not_reconciled": 13,
+  "native_runtime_acceptance": false,
+  "numpy_import_completed": true,
+  "torch_import_completed": false,
+  "pip_freeze_not_reached": true,
+  "observations": [
+    {
+      "monotonic_seconds": 3053858.896249172,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c234cdacc0 0x2c8f 0x1 0x0 0x0 0x7ffd407cee50 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/_core/__pycache__/_methods.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053863.949620551,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c234d0f1d0 0x9694 0x1 0x0 0x0 0x7ffd407d1dd0 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/_core/__pycache__/records.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053869.001349165,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c234d4fb50 0xdf5 0x1 0x0 0x0 0x7ffd407d0a60 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/ctypes/__pycache__/_endian.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053874.048093189,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c234d7d7a0 0x91d 0x1 0x0 0x0 0x7ffd407cfef0 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/linalg/__pycache__/__init__.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053879.098247211,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c234d8e110 0x1baf 0x1 0x0 0x0 0x7ffd407ce3f0 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/_typing/__pycache__/_char_codes.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053884.143787582,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c234db5e90 0x7f2 0x1 0x0 0x0 0x7ffd407ce3f0 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/lib/__pycache__/_array_utils_impl.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053889.191891104,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c234dcd840 0x2469 0x1 0x0 0x0 0x7ffd407d2180 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/lib/__pycache__/_arrayterator_impl.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053894.238578553,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c234e31670 0x8509 0x1 0x0 0x0 0x7ffd407d19f0 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/lib/__pycache__/_iotools.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053899.285201565,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c234e53f20 0xc6a 0x1 0x0 0x0 0x7ffd407d2180 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/lib/__pycache__/introspect.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053904.329989613,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x7f1aee3605d0 0x137 0x0 0x0 0x0 0x7ffd407d2180 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/numpy/lib/__pycache__/stride_tricks.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053909.379516289,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c234e8e780 0x17093 0x1 0x0 0x0 0x7ffd407d2a80 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/logging/__pycache__/__init__.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053914.420641849,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c234eae9c0 0x3b92 0x1 0x0 0x0 0x7ffd407d22f0 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/_strobelight/__pycache__/cli_function_profiler.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053919.463648803,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x7ffd407d2b68 0x340 0x0 0x7ffd407d2b47 0x1 0x7ffd407d2a98 0x7f1b060aabe8\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/lib/libtorch_global_deps.so"
+    },
+    {
+      "monotonic_seconds": 3053924.502370751,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x7ffd407d1f38 0x340 0x0 0x7ffd407d1f17 0x0 0x7ffd407d1c68 0x7f1b060aabe8\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/lib/libtorch_cpu.so"
+    },
+    {
+      "monotonic_seconds": 3053929.542110553,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c238409820 0x5e42 0x1 0x0 0x0 0x7ffd407d2630 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/amp/__pycache__/autocast_mode.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053934.580679822,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c238426980 0x1685 0x1 0x0 0x0 0x7ffd407d2630 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/__pycache__/_sources.cpython-313.pyc"
+    },
+    {
+      "monotonic_seconds": 3053939.62671626,
+      "pid": 640,
+      "wchan": "folio_wait_bit_common",
+      "syscall": "0 0x4 0x55c23858bd70 0xa429 0x1 0x0 0x0 0x7ffd407d26a0 0x7f1b05e84bca\n",
+      "read_fd_4": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin/lib/python3.13/site-packages/torch/cuda/__pycache__/graphs.cpython-313.pyc"
+    }
+  ],
+  "diagnosis": "Repeated read(2) / folio_wait_bit_common waits on changing NumPy/PyTorch bytecode/shared-library files under Home. Stack snapshots move through import code; NumPy finishes around 60 seconds. No deadlock or corrupt package is demonstrated. Fixed 90-second combined inventory/import/freeze budget prematurely terminates observed progress.",
+  "limitations": [
+    "Underlying storage/provider reason not identified; this is not a claim to repair filesystem latency",
+    "Full imports/freeze/read-only tree comparison not completed; no runtime or scientific admission",
+    "No downloads/new prefixes/fixtures/fits/scores started"
+  ],
+  "correction": "900-second absolute inventory probe cap plus 90 seconds without phase/stack/open-file movement, full original checks and 5-hour overall/resource ceiling; no copy/relocation/reinstall/bypass",
+  "cost_scope": "Declared eight-vCPU allocation through reported driver clock; collection/owner idle/provider billing separate",
+  "prior_failure": "linux-startup-failure-v3.json"
+}

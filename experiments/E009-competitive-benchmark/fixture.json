@@ -1,0 +1,63 @@
+{
+  "source": {
+    "path": "artifacts/e003-representation-screen/acquisition/NC_004350.2.fna",
+    "record": "NC_004350.2",
+    "bytes": 2062027,
+    "sha256": "11f1452361eb0a1a75e5071a178eb941b665e64f098a25e1743843b8d8cbf899"
+  },
+  "software_fixture_only": true,
+  "assembly_contigs": 11,
+  "assembly_bp": 59232,
+  "source_intervals_start": 10000,
+  "inter_record_gap_bp": 1000,
+  "files": {
+    "sample1_reads_1.fq": {
+      "bytes": 116495,
+      "sha256": "79c490fe50b063112ce062f84cf920ba56266029cb9028b8d4562c04f23c2307"
+    },
+    "truth-reference-axis.json": {
+      "bytes": 171,
+      "sha256": "4ec6e404a40670f593d00ad4442a4a059ef54a80041044684fa71dac8d9486e9"
+    },
+    "reads_2.fq": {
+      "bytes": 232990,
+      "sha256": "ae928c77988bd64d80a4fb1a26eb9d9715d3265015cb0dfc31a1da43dcf26b80"
+    },
+    "truth-query.fna": {
+      "bytes": 6472,
+      "sha256": "7651c18dc6a411610dbc719e16ba8f1a1376e4f4c2bde638772e5a66ca1150b4"
+    },
+    "reads_1.fq": {
+      "bytes": 232990,
+      "sha256": "2fa787fadb95d7449eb21eb94fe05d9e0d001a53ec881a9ffe46d13701bcc48e"
+    },
+    "truth-expectations.json": {
+      "bytes": 580,
+      "sha256": "f71619ac028b5a7770d5dfbd69ea50e432257e6cd0a9183b0688511abf5f16b9"
+    },
+    "assembly.fna": {
+      "bytes": 59298,
+      "sha256": "7c36e9dae451d73a44025054900ddee31377b2b973c36a4881f6d57b0e6631bb"
+    },
+    "truth-reference.fna": {
+      "bytes": 9024,
+      "sha256": "392166acda1d80053fb4d03031abb806fdd792627dcafa434479cc0a94e5cb2d"
+    },
+    "sample1_reads_2.fq": {
+      "bytes": 116495,
+      "sha256": "cf1d29c59028a0bd8ca8f585963747d3504625b0159049a914a8f1b3d64deb07"
+    }
+  },
+  "fixture_archive": {
+    "path": "tests/fixtures/e009-native-inputs-v2.zip",
+    "bytes": 80370,
+    "sha256": "938de0dd7cdaac4d9466aa9231025937a6dce6b5a1d3bade156a71cecebdacfe"
+  },
+  "total_software_DNA_bp_including_reads": 407631,
+  "total_fasta_contigs": 22,
+  "reuse_scope": "source DNA reused for new software contracts; no E003 feature inference or accepted science replay",
+  "sample_pair_counts": [
+    740,
+    370
+  ]
+}

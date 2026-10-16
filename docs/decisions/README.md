@@ -20,3 +20,8 @@ The numerical decisions inside [historical planning](../history/DECISIONS.md) be
 
 - [D011: composition-based contrastive prototype; frozen GLM deferred](D011-first-binner-prototype.md)
 - [D012: Product resources, serial execution and shared usability](D012-product-execution-and-usability.md)
+- [D013: Reusable assembly data and comparisons that inform improvements](D013-first-comparative-benchmark.md)
+
+- [D014: Google Cloud connected Linux workspace and bounded credit use](D014-google-cloud-workspace.md)
+
+- [D015: A coherent prototype upgrade with selective ablations](D015-coherent-prototype-upgrade.md)

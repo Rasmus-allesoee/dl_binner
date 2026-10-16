@@ -1,0 +1,478 @@
+{
+  "record": "E009",
+  "date": "2026-10-14",
+  "scope": "exact new serial data-worker/DAG software contracts; no binner fit/quality score, accepted science replay or GCP execution",
+  "source_parent_commit": "a15ba5d32e622838c2519460489453d9c46fbc76",
+  "tested_worktree_code": {
+    "scripts/e009_common.py": {
+      "bytes": 9410,
+      "sha256": "5ce8580922799bbed20b89a0f823b70f147ad97351952b2f03225509f40e1102"
+    },
+    "scripts/e009_data.py": {
+      "bytes": 18175,
+      "sha256": "77074e1206ca45c18142671e96656d283e08678d87c6bcdd79e1495cada1206f"
+    },
+    "scripts/e009_gcp_run.py": {
+      "bytes": 18034,
+      "sha256": "707b96e916e33534038d68dec8712a10219a0f398091e196f84b7d592857d479"
+    },
+    "scripts/e009_gcp_stage.py": {
+      "bytes": 13675,
+      "sha256": "12a1ecd37b8c5dbd1b1db9f3df60550cd971d8312cb2b9e47c4e200f3d2469c9"
+    },
+    "scripts/e009_native.py": {
+      "bytes": 22089,
+      "sha256": "1bcad6fbf0dcc792c7d3e5e1a6480eed314837b5d1573dc534e12aa7dbc22ed9"
+    },
+    "scripts/e009_owner.py": {
+      "bytes": 39523,
+      "sha256": "ef8bd0f802284ad460f7220cac69104a0fa0483a9b25676004bbbefd90ad8863"
+    },
+    "scripts/e009_retry.py": {
+      "bytes": 14673,
+      "sha256": "c16cf8e1efe1e6b0c86b399e8a40417b93c12acaec5f483fd9487c7f2b752afc"
+    },
+    "scripts/e009_startup.py": {
+      "bytes": 17673,
+      "sha256": "6787b2a7d8e625b1ffd17cc1220fabb657c12b0af9a188cd8c9b1b7f26c0012d"
+    },
+    "scripts/e009_truth.py": {
+      "bytes": 10174,
+      "sha256": "0d6cfef49c7ae89e712533f042e5cec032ac870041843df6af3decb6e82957d8"
+    },
+    "src/dl_binner/supervision.py": {
+      "bytes": 9575,
+      "sha256": "8ee9bd7d5f05a8e487a8691f7ab8152cca627f9f55ad27d48c6ece61cbd9a8a9"
+    },
+    "workflows/e009-data/Snakefile": {
+      "bytes": 1400,
+      "sha256": "ae52ad6e388aad8b2fd129da26c26dd09a4176b68813589d9fa3aea2321c835f"
+    }
+  },
+  "linux_data_lock": {
+    "bytes": 52025,
+    "sha256": "ae654b4423156c6de6be6d2f3f0a0d5c98cad4b07ed69d7607c81d2c03acfb8e"
+  },
+  "fixture_source": {
+    "bytes": 80370,
+    "sha256": "938de0dd7cdaac4d9466aa9231025937a6dce6b5a1d3bade156a71cecebdacfe"
+  },
+  "fixture_receipt": {
+    "allocated_vcpus": 4,
+    "benchmark_rules": 14,
+    "completed_stage_bytes_unchanged": true,
+    "counts": {
+      "0": 740,
+      "2": 730,
+      "3": 720,
+      "4": 710,
+      "6": 700,
+      "9": 690,
+      "10": 680,
+      "11": 670,
+      "14": 660,
+      "17": 650
+    },
+    "cross_batch_competing_genomes_remain_ambiguous": true,
+    "distinct_native_depth_values": true,
+    "mac_assembly_threads": 1,
+    "matrix_rows": 1,
+    "native_linux_or_scale_validated": false,
+    "ordered_sample_ids": [
+      0,
+      2,
+      3,
+      4,
+      6,
+      9,
+      10,
+      11,
+      14,
+      17
+    ],
+    "positive_depth_observed": true,
+    "results": [
+      {
+        "exit_code": 0,
+        "file": {
+          "bytes": 2077,
+          "sha256": "74bf22d3a15be178c1086cf9f97c90c7f512a951f64a8e819441760ece8de225"
+        },
+        "label": "fresh-partial",
+        "log": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/fresh-partial.log"
+      },
+      {
+        "exit_code": 0,
+        "file": {
+          "bytes": 26193,
+          "sha256": "100fffa8b0e3f7307777ccdeaa22e56be03e8bde65f0ed72fff059b56d869e36"
+        },
+        "label": "recovered",
+        "log": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/recovered.log"
+      },
+      {
+        "exit_code": 0,
+        "file": {
+          "bytes": 152428,
+          "sha256": "bf9eb7f3b1b4404a7afe4f5f4f86891a44ed0461aa643790a660ec6f2edbe64a"
+        },
+        "label": "completed",
+        "log": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/completed.log"
+      },
+      {
+        "exit_code": 1,
+        "file": {
+          "bytes": 707,
+          "sha256": "2973089402916f796dbef06ff3718af681fc6c5d77afa080d9c18736186832ac"
+        },
+        "label": "changed-plan-refused",
+        "log": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/changed-plan-refused.log"
+      }
+    ],
+    "scope": "actual new data DAG; tiny loopback archives; no worker/extractor mocks or binner fits",
+    "source_grouping_and_cellular_taxonomy_not_admitted": true,
+    "locator": "artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/passed.json",
+    "file": {
+      "bytes": 2200,
+      "sha256": "44bed1ba9c2606dc19f498db4d8e9d4701602a8ce84bc4c34a8747e26b16c49f"
+    }
+  },
+  "native_attempts": [
+    {
+      "allocated_ram_gib": 8.0,
+      "allocated_vcpu_hours": 0.00571150572776484,
+      "allocated_vcpus": 4,
+      "closed_terminal": {
+        "bytes": 2077,
+        "sha256": "74bf22d3a15be178c1086cf9f97c90c7f512a951f64a8e819441760ece8de225"
+      },
+      "elapsed_seconds": 5.140355154988356,
+      "final_manifest": null,
+      "fixture": true,
+      "fixture_until": "assembly",
+      "hostname": "MacBook-Pro.bbsyd.net",
+      "native_dag_receipt": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "snakemake",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/parts/assembly/done.json",
+          "--snakefile",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/workflows/e009-data/Snakefile",
+          "--directory",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work",
+          "--cores",
+          "4",
+          "--executor",
+          "local",
+          "--resources",
+          "mem_mb=7043",
+          "--set-resource-scopes",
+          "mem_mb=global",
+          "--scheduler",
+          "greedy",
+          "--benchmark-extended",
+          "--printshellcmds",
+          "--config",
+          "stage_config=/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/stage-config.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 34543,
+        "peak_sampled_rss_bytes": 142610432,
+        "rss_bytes_ceiling": 7043746365,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5653436872287734,
+        "sampled_cpu_seconds": 2.25,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 898.841062660038,
+        "stop_reason": null,
+        "wall_seconds": 3.9798799399868585
+      },
+      "peak_sampled_filesystem_used_bytes": 481973624832,
+      "phase": "data only; no fits or quality scores",
+      "platform": "macOS-26.1-x86_64-i386-64bit-Mach-O",
+      "scientific_scoring_admitted": false,
+      "source_commit": "a15ba5d32e622838c2519460489453d9c46fbc76",
+      "status": "passed",
+      "terminal_log": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/logs/terminal-20261014T155710-1791993430860666000.log"
+    },
+    {
+      "allocated_ram_gib": 8.0,
+      "allocated_vcpu_hours": 0.01801548063774438,
+      "allocated_vcpus": 4,
+      "closed_terminal": {
+        "bytes": 26193,
+        "sha256": "100fffa8b0e3f7307777ccdeaa22e56be03e8bde65f0ed72fff059b56d869e36"
+      },
+      "elapsed_seconds": 16.21393257396994,
+      "final_manifest": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/parts/final/done.json",
+      "fixture": true,
+      "fixture_until": null,
+      "hostname": "MacBook-Pro.bbsyd.net",
+      "native_dag_receipt": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "snakemake",
+          "--snakefile",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/workflows/e009-data/Snakefile",
+          "--directory",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work",
+          "--cores",
+          "4",
+          "--executor",
+          "local",
+          "--resources",
+          "mem_mb=7043",
+          "--set-resource-scopes",
+          "mem_mb=global",
+          "--scheduler",
+          "greedy",
+          "--benchmark-extended",
+          "--printshellcmds",
+          "--config",
+          "stage_config=/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/stage-config.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 34615,
+        "peak_sampled_rss_bytes": 128503808,
+        "rss_bytes_ceiling": 7043746365,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.3195910988555101,
+        "sampled_cpu_seconds": 4.91,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 894.0104299920495,
+        "stop_reason": null,
+        "wall_seconds": 15.36338157596765
+      },
+      "peak_sampled_filesystem_used_bytes": 481970130944,
+      "phase": "data only; no fits or quality scores",
+      "platform": "macOS-26.1-x86_64-i386-64bit-Mach-O",
+      "scientific_scoring_admitted": false,
+      "source_commit": "a15ba5d32e622838c2519460489453d9c46fbc76",
+      "status": "passed",
+      "terminal_log": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/logs/terminal-20261014T155716-1791993436203995000.log"
+    },
+    {
+      "allocated_ram_gib": 8.0,
+      "allocated_vcpu_hours": 0.0020650053566916744,
+      "allocated_vcpus": 4,
+      "closed_terminal": {
+        "bytes": 152428,
+        "sha256": "bf9eb7f3b1b4404a7afe4f5f4f86891a44ed0461aa643790a660ec6f2edbe64a"
+      },
+      "elapsed_seconds": 1.8585048210225068,
+      "final_manifest": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/parts/final/done.json",
+      "fixture": true,
+      "fixture_until": null,
+      "hostname": "MacBook-Pro.bbsyd.net",
+      "native_dag_receipt": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "snakemake",
+          "--snakefile",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/workflows/e009-data/Snakefile",
+          "--directory",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work",
+          "--cores",
+          "4",
+          "--executor",
+          "local",
+          "--resources",
+          "mem_mb=7043",
+          "--set-resource-scopes",
+          "mem_mb=global",
+          "--scheduler",
+          "greedy",
+          "--benchmark-extended",
+          "--printshellcmds",
+          "--config",
+          "stage_config=/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/stage-config.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 34861,
+        "peak_sampled_rss_bytes": 77312000,
+        "rss_bytes_ceiling": 7043746365,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.7273255023221082,
+        "sampled_cpu_seconds": 0.6799999999999999,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 877.7238398670452,
+        "stop_reason": null,
+        "wall_seconds": 0.9349321560002863
+      },
+      "peak_sampled_filesystem_used_bytes": 0,
+      "phase": "data only; no fits or quality scores",
+      "platform": "macOS-26.1-x86_64-i386-64bit-Mach-O",
+      "scientific_scoring_admitted": false,
+      "source_commit": "a15ba5d32e622838c2519460489453d9c46fbc76",
+      "status": "passed",
+      "terminal_log": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/logs/terminal-20261014T155732-1791993452723204000.log"
+    },
+    {
+      "allocated_ram_gib": 8.0,
+      "allocated_vcpu_hours": 0.0009176088344409234,
+      "allocated_vcpus": 4,
+      "closed_terminal": {
+        "bytes": 707,
+        "sha256": "2973089402916f796dbef06ff3718af681fc6c5d77afa080d9c18736186832ac"
+      },
+      "elapsed_seconds": 0.8258479509968311,
+      "error": "ValueError('Explicit resume needs identical source/config/runtime bytes')",
+      "fixture": true,
+      "hostname": "MacBook-Pro.bbsyd.net",
+      "phase": "data only; no fits or quality scores",
+      "platform": "macOS-26.1-x86_64-i386-64bit-Mach-O",
+      "status": "failed",
+      "terminal_log": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/logs/terminal-20261014T155734-1791993454780753000.log"
+    }
+  ],
+  "self_contained_regressions": {
+    "tests": 60,
+    "passed": true,
+    "log": "artifacts/e009-preparation/gcp-preparation-20261014/all-contracts-final.log",
+    "file": {
+      "bytes": 31459,
+      "sha256": "dd64493ca6492d9ab99e06d207973157122ffc494197734171a3907ea2e7ac35"
+    },
+    "temp_root": "/private/tmp canonical lexical paths; actual macOS ps supervision allowed"
+  },
+  "preserved_preliminary_failures": [
+    {
+      "locator": "artifacts/e009-preparation/gcp-preparation-20261014/regressions.log",
+      "file": {
+        "bytes": 42786,
+        "sha256": "7caff1d0c59c5d1a34316b47ce9ab4cfc95bba029a89aa290a1b5b788ace7cfd"
+      }
+    },
+    {
+      "locator": "artifacts/e009-preparation/gcp-preparation-20261014/regressions-unsandboxed.log",
+      "file": {
+        "bytes": 37825,
+        "sha256": "a5dc085a82a6bac89eea63bc41a0b98da32634f6a6ed53050ef0b252c8ac9f4d"
+      }
+    },
+    {
+      "locator": "artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v1.log",
+      "file": {
+        "bytes": 462,
+        "sha256": "f99a3f1b2ce74db43ce0ebf3c24efba37fa2f33dc6179f074e535cd4a1bbdc68"
+      }
+    },
+    {
+      "locator": "artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v2.log",
+      "file": {
+        "bytes": 936,
+        "sha256": "efb856a3f5fc842cb32ed03f4ad25d9330a4da34babe1d83b4cc346309ab42da"
+      }
+    }
+  ],
+  "failure_interpretation": [
+    "sandbox disallowed ps: intended-limit tests refused that monitoring failure rather than falsely passing",
+    "canonical /private/tmp avoids macOS /var-to-/private/var lexical prefix alias mismatch",
+    "legacy two-BAM aliases restored; new >2-BAM aliases padded",
+    "fixture HTTP module shadowing corrected",
+    "Snakemake precreates empty output parents: allow empty parent, write started marker, refuse nonempty/unsealed stages"
+  ],
+  "actual_paths": [
+    "tiny loopback HTTP acquisition and full actual tar reader; paired plain FASTQ and nested compressed interleaved input",
+    "actual source catalog and opaque reference batches",
+    "real MEGAHIT1.2.9 one-thread Mac writer",
+    "ten real strobealign/samtools map/sort/index/quickcheck/ordered-depth workers; retained SAM identities before removal",
+    "actual global competing minimap2 PAF/CIGAR truth writer, ten-column matrix and provider-origin count audit",
+    "partial resume preserves sources/read0/assembly bytes; completed resume no native rule work",
+    "changed plan refuses intended config/runtime mismatch; unit tests reject output drift/unsealed dirs and verify parent clock/disk causes",
+    "actual fourteen rule benchmarks and disk/CPU/RAM/command/terminal evidence",
+    "actual identical competing genomes in separate reference batches remain ambiguous after global PAF reconciliation"
+  ],
+  "omissions": [
+    "no GCP/Ubuntu execution or complete Linux environment installation; cross-platform solve only",
+    "one tiny emitted assembly contig; no community-scale throughput/peak-space/biology claim",
+    "Mac assembler remains one thread; native eight-CPU behavior remains historical v10 evidence and requires new-host admission as appropriate",
+    "no five-tool fit or ten-sample native training/clustering admission",
+    "exact positive-origin joins/genome grouping/cellular taxonomy and final scientific truth population remain review dependencies",
+    "no VM start/provision/quota/service mutations, bulk downloads, remote push or spending"
+  ],
+  "preserved_prior_positive_fixture": {
+    "locator": "artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v4-final/passed.json",
+    "file": {
+      "bytes": 2142,
+      "sha256": "a40d6328ca7747a139c25a71a128dc03be6969125a5183227bc9e9a379464622"
+    },
+    "reason": "final ABI metadata correction to >=2.34 required rebinding the locked data recipe; no Linux execution was claimed"
+  },
+  "linux_solve_virtual_glibc": "2.35",
+  "linux_recipe_declared_glibc_minimum": "2.34",
+  "fixture_factory": {
+    "path": "scripts/e009_gcp_fixture.py",
+    "file": {
+      "bytes": 8249,
+      "sha256": "783ced82ebe585b2dbf1efbb58b47aef19dd739348203eb41eb769eea0db4bf1"
+    }
+  },
+  "actual_scheduler_evidence": [
+    {
+      "path": "artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/logs/dag-20261014T155710-1791993430860666000.log",
+      "file": {
+        "bytes": 6448,
+        "sha256": "be87c61ea35d274bfa9788ba2b25bcfa62ebf5ec1d7858834d10cdd8ba7045c1"
+      },
+      "scheduler_execute_events": [
+        "Execute 1 jobs...",
+        "Execute 1 jobs...",
+        "Execute 1 jobs..."
+      ],
+      "nothing_to_do": false
+    },
+    {
+      "path": "artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/logs/dag-20261014T155716-1791993436203995000.log",
+      "file": {
+        "bytes": 23815,
+        "sha256": "4577b426b6cafb7330b89c6163902cf82414e870e4fca5d6254363d168955d79"
+      },
+      "scheduler_execute_events": [
+        "Execute 1 jobs...",
+        "Execute 1 jobs...",
+        "Execute 1 jobs...",
+        "Execute 1 jobs...",
+        "Execute 1 jobs...",
+        "Execute 1 jobs...",
+        "Execute 1 jobs...",
+        "Execute 1 jobs...",
+        "Execute 1 jobs...",
+        "Execute 1 jobs...",
+        "Execute 1 jobs...",
+        "Execute 1 jobs..."
+      ],
+      "nothing_to_do": false
+    },
+    {
+      "path": "artifacts/e009-preparation/gcp-preparation-20261014/native-fixture-v6-final/work/logs/dag-20261014T155732-1791993452723204000.log",
+      "file": {
+        "bytes": 207,
+        "sha256": "3ec706d5eaf0f2d8a32dceb2e758050f8d66aef6d4ad6d465af1f225280061c8"
+      },
+      "scheduler_execute_events": [],
+      "nothing_to_do": true
+    }
+  ],
+  "documentation_check": {
+    "command": "python3 -B scripts/check_docs.py --check-context",
+    "last_pass": {
+      "bytes": 727,
+      "sha256": "2f1016c79b85b1eb39b96e04828784d07c62e0e294120a25b8f72070287f279f"
+    },
+    "checked_documents": 59,
+    "checked_local_links": 767,
+    "verified_present_source_fingerprints": 85,
+    "optional_old_cache_paths_unavailable": 10,
+    "not_native_CI": true
+  }
+}

@@ -1,0 +1,1292 @@
+{
+  "date": "2026-10-08",
+  "cutoff": "available at inspection on 2026-10-08; commit queries bounded at 23:59:59 UTC",
+  "scope": "focused read-only update of completed review; not runtime or benchmark evidence",
+  "stable_main": "5e54538d1799e8d2538621729400f33fbaf017b9",
+  "branch": "benchmark-planning",
+  "reused_records": [
+    {
+      "path": "docs/evidence/2026-09-30-binner-design-review.md",
+      "bytes": 22771,
+      "sha256": "6ac0509fa086a044659913a7e928985d39bbc939e06ce3ab48a490d418a418cb"
+    },
+    {
+      "path": "docs/evidence/2026-09-30-design-source-audit.json",
+      "bytes": 21317,
+      "sha256": "9384c96e9933eb0335dc760e9ee12f7d732104c9bedd0ae3d98ef8fb7c5c6c9b"
+    },
+    {
+      "path": "docs/evidence/2026-09-30-architecture-reassessment.md",
+      "bytes": 18037,
+      "sha256": "49938378c86f3628cdb86ad9f9529a3bdba398719f551f1bbaaecf50e1a24cd1"
+    },
+    {
+      "path": "experiments/E001-coverage-thinning/closure.md",
+      "bytes": 9965,
+      "sha256": "d117e3be0078a31334bbd6ea61d647129feaf267e42af99e6ca8f842e9a6af53"
+    },
+    {
+      "path": "experiments/E002-dnabert-s-feasibility/model-pin.json",
+      "bytes": 3417,
+      "sha256": "1c1d7ff4d934ca54429be56608b22f3214c96198362c2f506761a39daa703529"
+    },
+    {
+      "path": "experiments/E003-representation-screen/sources.json",
+      "bytes": 31886,
+      "sha256": "ff066a8d5c364df48ef97af9531c131db4d597fea536187bf44ddbb8c74d74fc"
+    },
+    {
+      "path": "experiments/E005-linux-pilot/pilot-inputs.json",
+      "bytes": 3695,
+      "sha256": "4435f399c7a7f53f84e3d24083ca5084aabbd6e1b6189803f6049cdb931fce1b"
+    },
+    {
+      "path": "experiments/E008-product-execution/merge-observed.json",
+      "bytes": 2742,
+      "sha256": "3b77f49b728c54b8d2d1fabb2c754986adee4bf870b9b2fb851bf5657cbfbd6f"
+    },
+    {
+      "path": "agent_context/benchmark_tool_study_guide.md",
+      "bytes": 6633,
+      "sha256": "75ce8498d60f63397c00ce8467360bb907fad55cf4de6c5db5c3c9738fbaecf3"
+    }
+  ],
+  "primary_papers": [
+    {
+      "path": "agent_context/papers/bin_tools/SCGBinner_paper.md",
+      "bytes": 74779,
+      "sha256": "3bc25b868cf8409d5080ae9b0aeba81f6e10ef17852cb0d8ab932fa0f8dc11a1"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/completebin_paper.md",
+      "bytes": 75770,
+      "sha256": "1f4bd8f2599ab329524c0ef1bbcca112d65f718e8a5b7157cdf12aa1f3fa6271"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/DCVBin_2026_paper.md",
+      "bytes": 62467,
+      "sha256": "081867e66e767f5e5ed6414fc483582927b050e0f80bb0b1fd4698c30742825b"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/LorBin_paper.md",
+      "bytes": 103461,
+      "sha256": "dc87ecc704a2c06d3b2e6bd7dd1e9b875106f0a3be11d5058fdc5b0ed6582ec4"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/comebin_paper.md",
+      "bytes": 81525,
+      "sha256": "d3622dd119833c5351ee9c2cc1732b7a117ece9ff295724abea87cbf932b73b1"
+    },
+    {
+      "path": "agent_context/papers/bin_tools/semibin2_paper.md",
+      "bytes": 64538,
+      "sha256": "a56bc5bc29680aec6828ed8e137d398efa459970069e82cd5095aede1606084e"
+    }
+  ],
+  "local_source_inventory": [
+    {
+      "tool": "SCGBinner",
+      "root": "agent_context/tools_repo/SCGBinner",
+      "commit": "d5ad239af9a1445f0e454c4d4aa9307b922961a9",
+      "status": "?? .DS_Store\n?? SCGBinner/.DS_Store",
+      "remote": "https://github.com/htaohan/SCGBinner.git",
+      "inspected_files": [
+        {
+          "path": "agent_context/tools_repo/SCGBinner/README.md",
+          "bytes": 7222,
+          "sha256": "3e52889b2aa415f7f7d027882b77f1eb5585fb87bf3ce5d03ade023d195611ab"
+        },
+        {
+          "path": "agent_context/tools_repo/SCGBinner/SCGBinner/simclr.py",
+          "bytes": 9124,
+          "sha256": "c4a13a11120547843d91d3dd2cd0d00d91bfbe4c3cf005db1be4ac02947d4b83"
+        },
+        {
+          "path": "agent_context/tools_repo/SCGBinner/SCGBinner/train_CLmodel.py",
+          "bytes": 6741,
+          "sha256": "4497b23efc790f9fa1f3b868b1ad13fc05db195e349a44ebf53de8cf0ee1db72"
+        },
+        {
+          "path": "agent_context/tools_repo/SCGBinner/SCGBinner/main.py",
+          "bytes": 16797,
+          "sha256": "32753203d3813fbedf48b99d72d359db1b3fc006f68b096137ce5b1bd5b51bab"
+        },
+        {
+          "path": "agent_context/tools_repo/SCGBinner/SCGBinner/run_scgbinner.sh",
+          "bytes": 9889,
+          "sha256": "2d0936be6164f5089ff9bad393f937b68b2ebbfdb91737faa533319691f36371"
+        }
+      ]
+    },
+    {
+      "tool": "CompleteBin",
+      "root": "agent_context/tools_repo/CompleteBin",
+      "commit": "07c5649270646a29dc027d6234d66b048fed6d45",
+      "status": "?? .DS_Store\n?? CompleteBin/.DS_Store",
+      "remote": "https://github.com/zoubohao/CompleteBin.git",
+      "inspected_files": [
+        {
+          "path": "agent_context/tools_repo/CompleteBin/CompleteBin/Trainer/debiased_loss.py",
+          "bytes": 8379,
+          "sha256": "f0bb993c43058acac328d4eca97820577801160059c70bad5bf25dfb0a11d300"
+        },
+        {
+          "path": "agent_context/tools_repo/CompleteBin/CompleteBin/Trainer/optimized_debiased_loss.py",
+          "bytes": 6222,
+          "sha256": "bea7490b867b116c284a811b218061507ef71cf7375e18b422d4bc4e0b21e43f"
+        }
+      ]
+    },
+    {
+      "tool": "dcvbin",
+      "root": "agent_context/tools_repo/dcvbin",
+      "commit": "732ee4257f7da200994f4c105e9dacbc74242883",
+      "status": "M DNABERT-S/.DS_Store\n D DNABERT-S/pytorch_model.bin\n?? .DS_Store\n?? marker_gene/.DS_Store\n?? marker_gene/auxiliary/.DS_Store\n?? myvae/.DS_Store",
+      "remote": "https://github.com/dengdengf/dcvbin.git",
+      "inspected_files": [
+        {
+          "path": "agent_context/tools_repo/dcvbin/README.md",
+          "bytes": 3929,
+          "sha256": "77d27e55865fc575b537f05e3ee891c91403f701ecc6ad2cfb7114cf2054169e"
+        },
+        {
+          "path": "agent_context/tools_repo/dcvbin/bin/my_method.sh",
+          "bytes": 6875,
+          "sha256": "f442c72159de050c75815f15696a70730792620cf3328fabadfc1e0e3ce72360"
+        },
+        {
+          "path": "agent_context/tools_repo/dcvbin/scripts/featureExtract_gpu_2.py",
+          "bytes": 3239,
+          "sha256": "f0fb9982308e6a9cacaf80f7af1597877d77d030cc3f15dee47fdde0a50a9e18"
+        },
+        {
+          "path": "agent_context/tools_repo/dcvbin/scripts/myCluster_2.py",
+          "bytes": 5084,
+          "sha256": "e006d36b1fa3bf13a15294703d40fef056f09daf8ef5e204554b017c1e06e0bb"
+        },
+        {
+          "path": "agent_context/tools_repo/dcvbin/myvae/mainfiles/myencode.py",
+          "bytes": 23645,
+          "sha256": "5fca0d77fc6f89c81fd767161799a3a4e31dde00d81dc3d10e489fecf9a38966"
+        }
+      ]
+    },
+    {
+      "tool": "MetaCAT",
+      "root": "agent_context/tools_repo/MetaCAT",
+      "commit": "5de573fbce0a6549010b07002e278620a7da22b9",
+      "status": "?? .DS_Store",
+      "remote": "https://github.com/liu-congcong/MetaCAT.git",
+      "inspected_files": [
+        {
+          "path": "agent_context/tools_repo/MetaCAT/README.md",
+          "bytes": 8486,
+          "sha256": "7b19ef4fc535aa801bd86c3bd658e4a2f5abbdf28bd0f0e6a26b8e1e79fd7f5e"
+        },
+        {
+          "path": "agent_context/tools_repo/MetaCAT/Documentation/README.md",
+          "bytes": 40775,
+          "sha256": "25200fbcbddfb0387a3591403f317700af02feade796e226662eb8dd2cd3bec6"
+        },
+        {
+          "path": "agent_context/tools_repo/MetaCAT/LICENSE",
+          "bytes": 35149,
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        {
+          "path": "agent_context/tools_repo/MetaCAT/MetaCAT/cluster.py",
+          "bytes": 13587,
+          "sha256": "6a6aeb9c65a7adefd0fe06caf388a04d592175e19ec04dc57cd34a01830d856d"
+        },
+        {
+          "path": "agent_context/tools_repo/MetaCAT/MetaCAT/semi_supervised_model.py",
+          "bytes": 3342,
+          "sha256": "e51d2526ded5c2f01ece890b5c58f93a399c30cfa8fea658d761cc00c5e6e4b9"
+        },
+        {
+          "path": "agent_context/tools_repo/MetaCAT/MetaCAT/score_model.py",
+          "bytes": 7356,
+          "sha256": "5399be2866d9c2afb568da31cdda5fdb31c864a7d577628cc198c56993a37f31"
+        },
+        {
+          "path": "agent_context/tools_repo/MetaCAT/MetaCAT/coverage.py",
+          "bytes": 4216,
+          "sha256": "5dbd5350138c43f8218600cf95bfabfe5519ebb421a3a712f47d19d1a9ac01a7"
+        },
+        {
+          "path": "agent_context/tools_repo/MetaCAT/MetaCAT/kmer_frequency_model.py",
+          "bytes": 2459,
+          "sha256": "a395a75dd889405401a2a165cc9c608506128ada431ada9de868730a2fd93b9d"
+        },
+        {
+          "path": "agent_context/tools_repo/MetaCAT/MetaCAT/coverage_model.py",
+          "bytes": 3425,
+          "sha256": "6813a1223b8c5ccd0223d24ee3207296c17c5937ec06fdbaf89a8e13323e7893"
+        }
+      ]
+    },
+    {
+      "tool": "COMEBin",
+      "root": "agent_context/tools_repo/COMEBin",
+      "commit": "1b476a41fac893294c70212a869573a732560ce5",
+      "status": "?? .DS_Store\n?? COMEBin/.DS_Store",
+      "remote": "https://github.com/ziyewang/COMEBin.git",
+      "inspected_files": [
+        {
+          "path": "agent_context/tools_repo/COMEBin/COMEBin/get_augfeature.py",
+          "bytes": 6283,
+          "sha256": "145ce6afd74919a5aea7044c1d481dd17cc462eda7726bd1cceaa9ed21d5b247"
+        },
+        {
+          "path": "agent_context/tools_repo/COMEBin/COMEBin/simclr.py",
+          "bytes": 13574,
+          "sha256": "a8d31c1d8b6e8453653cf2836554860962e4bd88f09e700d01bb438d0b98b6fc"
+        },
+        {
+          "path": "agent_context/tools_repo/COMEBin/COMEBin/get_final_result.py",
+          "bytes": 11884,
+          "sha256": "a6e899d23cbfc7836eaa27968511e8b9b788daa39245a162df42ea61258d01ea"
+        },
+        {
+          "path": "agent_context/tools_repo/COMEBin/COMEBin/scripts/unitem_markers.py",
+          "bytes": 6578,
+          "sha256": "70d91072eefecf4237e03b0d81c670a792cff013b355018a9ebb59e4958a3e77"
+        }
+      ]
+    },
+    {
+      "tool": "SemiBin",
+      "root": "agent_context/tools_repo/SemiBin",
+      "commit": "f7c45dcbcdfa81e8fbc3e08b04c54683122e72d6",
+      "status": "?? .DS_Store\n?? SemiBin/.DS_Store\n?? test/.DS_Store",
+      "remote": "https://github.com/BigDataBiology/SemiBin.git",
+      "inspected_files": []
+    },
+    {
+      "tool": "LorBin",
+      "root": "agent_context/tools_repo/LorBin",
+      "commit": "ee10232282c2b71ed3ce2a34d5dbd78af3dd0b0a",
+      "status": "?? .DS_Store\n?? lorbin/.DS_Store",
+      "remote": "https://github.com/LorMeBioAI/LorBin.git",
+      "inspected_files": [
+        {
+          "path": "agent_context/tools_repo/LorBin/lorbin/cluster.py",
+          "bytes": 13510,
+          "sha256": "7a2a15c760dca7f3696dc845aa7a913ab8bf18ee6bb0d72d125da630219e682e"
+        }
+      ]
+    }
+  ],
+  "upstream_at_cutoff": [
+    {
+      "url": "https://github.com/BigDataBiology/SemiBin/commit/e92a6214be87bdc15e4197fcccdeef08b1f21f75",
+      "commit": "e92a6214be87bdc15e4197fcccdeef08b1f21f75",
+      "date": "2026-09-30T00:38:28Z",
+      "summary": "ENH+DOC Split out semibin_arg_parser() and document shtab completion scripts",
+      "receipt": {
+        "path": "scratch/e009-review/BigDataBiology-SemiBin.json",
+        "bytes": 3603,
+        "sha256": "c139c3ebf3c00ee5e179feb53fab16e3b4949527b19deb3514e621fba73e24c0"
+      }
+    },
+    {
+      "url": "https://github.com/CAMI-challenge/CAMISIM/commit/7ce6013c6d5a0fac8ba8a80e52a03560d3546fa6",
+      "commit": "7ce6013c6d5a0fac8ba8a80e52a03560d3546fa6",
+      "date": "2026-03-23T13:35:14Z",
+      "summary": "Merge branch 'dev'",
+      "receipt": {
+        "path": "scratch/e009-review/CAMI-challenge-CAMISIM.json",
+        "bytes": 3666,
+        "sha256": "d85f2f68ca1975caadcaeee2d42fd0c9338c5eab41e26c6f1efe4c029734fc12"
+      }
+    },
+    {
+      "url": "https://github.com/LorMeBioAI/LorBin/commit/ee10232282c2b71ed3ce2a34d5dbd78af3dd0b0a",
+      "commit": "ee10232282c2b71ed3ce2a34d5dbd78af3dd0b0a",
+      "date": "2026-01-06T04:48:15Z",
+      "summary": "Fix bugs and enhance argument parsing in lorbin.py",
+      "receipt": {
+        "path": "scratch/e009-review/LorMeBioAI-LorBin.json",
+        "bytes": 4420,
+        "sha256": "9bdac553959c3b3be1afa2ff96e8bdb8fddef7eaa6f3992525599f8dd11ecc90"
+      }
+    },
+    {
+      "url": "https://github.com/dengdengf/dcvbin/commit/732ee4257f7da200994f4c105e9dacbc74242883",
+      "commit": "732ee4257f7da200994f4c105e9dacbc74242883",
+      "date": "2025-11-15T11:21:53Z",
+      "summary": "Update script commands in README for input paths",
+      "receipt": {
+        "path": "scratch/e009-review/dengdengf-dcvbin.json",
+        "bytes": 4341,
+        "sha256": "e269a8383a95f55e99d3a33bcf17828bbdee5d35537329cc4c9af1f456426244"
+      }
+    },
+    {
+      "url": "https://github.com/htaohan/SCGBinner/commit/d5ad239af9a1445f0e454c4d4aa9307b922961a9",
+      "commit": "d5ad239af9a1445f0e454c4d4aa9307b922961a9",
+      "date": "2026-08-27T17:20:02Z",
+      "summary": "Modify installation instructions in README.md",
+      "receipt": {
+        "path": "scratch/e009-review/htaohan-SCGBinner.json",
+        "bytes": 4542,
+        "sha256": "9367e1ad9b797b2d21651c887311c160b337db0317983fd4571efd868aca1377"
+      }
+    },
+    {
+      "url": "https://github.com/liu-congcong/MetaCAT/commit/5de573fbce0a6549010b07002e278620a7da22b9",
+      "commit": "5de573fbce0a6549010b07002e278620a7da22b9",
+      "date": "2026-09-22T10:12:41Z",
+      "summary": "Merge branch 'main' of github.com:liu-congcong/MetaCAT",
+      "receipt": {
+        "path": "scratch/e009-review/liu-congcong-MetaCAT.json",
+        "bytes": 3656,
+        "sha256": "534e2b202f4288729d4a54515745dce598117972aec96e8254510f46882f0f1d"
+      }
+    },
+    {
+      "url": "https://github.com/ziyewang/COMEBin/commit/1b476a41fac893294c70212a869573a732560ce5",
+      "commit": "1b476a41fac893294c70212a869573a732560ce5",
+      "date": "2026-08-23T12:40:24Z",
+      "summary": "Clarify PyTorch installation options",
+      "receipt": {
+        "path": "scratch/e009-review/ziyewang-COMEBin.json",
+        "bytes": 1381,
+        "sha256": "a69e312ca4d0ddf23675efc82b915371e201169787fc2284b68357e970b53bd5"
+      }
+    },
+    {
+      "url": "https://github.com/zoubohao/CompleteBin/commit/be0b9311f0fe4278c231010f78d995dca02b66d6",
+      "commit": "be0b9311f0fe4278c231010f78d995dca02b66d6",
+      "date": "2026-10-01T07:42:50Z",
+      "summary": "Update README.md",
+      "receipt": {
+        "path": "scratch/e009-review/zoubohao-CompleteBin.json",
+        "bytes": 4311,
+        "sha256": "713e9974549da6c396f394105bd2f02747173d351a951d8f6e0c9965fc4bee2a"
+      }
+    }
+  ],
+  "refreshed_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/README.md",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/README.md",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/sources/CompleteBin/README.md",
+      "bytes": 8178,
+      "sha256": "8739098ba109bdfd7b2af1edaaf8692dd5705e2a84c28974c221b2f9b0528bc1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/CompleteBin/cli.py",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/CompleteBin/cli.py",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/sources/CompleteBin/CompleteBin/cli.py",
+      "bytes": 9598,
+      "sha256": "121b84ea1da747312abf70810116e468eba9b7a1cecf06e8bb67b6f1c65e9d46"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/CompleteBin/Model/model.py",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/CompleteBin/Model/model.py",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/sources/CompleteBin/CompleteBin/Model/model.py",
+      "bytes": 5990,
+      "sha256": "2f066ef05e46d4f37d4fb2a9c4930ddde7d44dbb85c686a26dcdf1963a0a7320"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/CompleteBin/Trainer/trainer.py",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/CompleteBin/Trainer/trainer.py",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/sources/CompleteBin/CompleteBin/Trainer/trainer.py",
+      "bytes": 24553,
+      "sha256": "86bbe8ff64170de286271bba23822c086061e9a77420ba3df78fe1c5462dca4f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/CompleteBin/Binning_steps.py",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/CompleteBin/Binning_steps.py",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/sources/CompleteBin/CompleteBin/Binning_steps.py",
+      "bytes": 28800,
+      "sha256": "69213361c97ff7490ac0fbe5306580b0b0f61d891a6193813ebb70911cfe864e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/e92a6214be87bdc15e4197fcccdeef08b1f21f75/README.md",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/e92a6214be87bdc15e4197fcccdeef08b1f21f75/README.md",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/sources/SemiBin/README.md",
+      "bytes": 10383,
+      "sha256": "0b932df2703768b117896d5031bdbcfe57fccefeba70d379994f04b54bb5fe29"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/e92a6214be87bdc15e4197fcccdeef08b1f21f75/SemiBin/main.py",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/e92a6214be87bdc15e4197fcccdeef08b1f21f75/SemiBin/main.py",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/sources/SemiBin/SemiBin/main.py",
+      "bytes": 75582,
+      "sha256": "993f3e0d7b90b41cc62634cc1c5931dd6ea67c730be1a6cc8b051d6362c94ddf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/e92a6214be87bdc15e4197fcccdeef08b1f21f75/SemiBin/self_supervised_model.py",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/e92a6214be87bdc15e4197fcccdeef08b1f21f75/SemiBin/self_supervised_model.py",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/sources/SemiBin/SemiBin/self_supervised_model.py",
+      "bytes": 5888,
+      "sha256": "49f9796c167e1e874de0071ae5b9765d993434ba6b530f56b0072d6f4c85ef4c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/e92a6214be87bdc15e4197fcccdeef08b1f21f75/SemiBin/cluster.py",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/BigDataBiology/SemiBin/e92a6214be87bdc15e4197fcccdeef08b1f21f75/SemiBin/cluster.py",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/sources/SemiBin/SemiBin/cluster.py",
+      "bytes": 13700,
+      "sha256": "473f4c488c3f2c79c54003336b96ffc2d013eee35de110947234d4d5cf639a00"
+    },
+    {
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/coverages.tar.gz",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/coverages.tar.gz",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/coverages.tar.gz",
+      "bytes": 106674,
+      "sha256": "32efe0d40d080d6c5ca36320d9a204e8da5d707f0aaafe24fef5c32a994d8b0f"
+    }
+  ],
+  "official_pages": [
+    {
+      "url": "https://cami-challenge.org/datasets/toy-human-gut/",
+      "path": "scratch/e009-review/cami3-toy.html",
+      "bytes": 49833,
+      "sha256": "c312c0a68c22064a7365bef57501d8c904569ae449fcb721480a01eb3376988d"
+    },
+    {
+      "url": "https://cami-challenge.org/datasets/human-gut/",
+      "path": "scratch/e009-review/cami3-challenge.html",
+      "bytes": 21270,
+      "sha256": "56e0e564390d72b725cbf6ff1d56b76df599a8a59c36934c04cd810e606c157b"
+    },
+    {
+      "url": "https://cami-challenge.org/datasets/toy-human-microbiome-project/",
+      "path": "scratch/e009-review/cami2-hmb.html",
+      "bytes": 21074,
+      "sha256": "ce184e1853ed088297ba8dc8e6766d0353f57f3f768fa39cebf1157bb1569464"
+    },
+    {
+      "url": "https://cami-challenge.org/faq/",
+      "path": "scratch/e009-review/faq.html",
+      "bytes": 36380,
+      "sha256": "f80ab20363cfd465d05c140b87cc9a017a52c9dea472f7abc3f21db83e4be361"
+    }
+  ],
+  "metadata_receipts": [
+    {
+      "url": "https://api.github.com/repos/htaohan/SCGBinner/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/htaohan/SCGBinner/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/htaohan-SCGBinner.json",
+      "bytes": 4542,
+      "sha256": "9367e1ad9b797b2d21651c887311c160b337db0317983fd4571efd868aca1377"
+    },
+    {
+      "url": "https://api.github.com/repos/zoubohao/CompleteBin/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/zoubohao/CompleteBin/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/zoubohao-CompleteBin.json",
+      "bytes": 4311,
+      "sha256": "713e9974549da6c396f394105bd2f02747173d351a951d8f6e0c9965fc4bee2a"
+    },
+    {
+      "url": "https://api.github.com/repos/dengdengf/dcvbin/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/dengdengf/dcvbin/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/dengdengf-dcvbin.json",
+      "bytes": 4341,
+      "sha256": "e269a8383a95f55e99d3a33bcf17828bbdee5d35537329cc4c9af1f456426244"
+    },
+    {
+      "url": "https://api.github.com/repos/liu-congcong/MetaCAT/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/liu-congcong/MetaCAT/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/liu-congcong-MetaCAT.json",
+      "bytes": 3656,
+      "sha256": "534e2b202f4288729d4a54515745dce598117972aec96e8254510f46882f0f1d"
+    },
+    {
+      "url": "https://api.github.com/repos/ziyewang/COMEBin/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/ziyewang/COMEBin/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/ziyewang-COMEBin.json",
+      "bytes": 1381,
+      "sha256": "a69e312ca4d0ddf23675efc82b915371e201169787fc2284b68357e970b53bd5"
+    },
+    {
+      "url": "https://api.github.com/repos/BigDataBiology/SemiBin/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/BigDataBiology/SemiBin/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/BigDataBiology-SemiBin.json",
+      "bytes": 3603,
+      "sha256": "c139c3ebf3c00ee5e179feb53fab16e3b4949527b19deb3514e621fba73e24c0"
+    },
+    {
+      "url": "https://api.github.com/repos/LorMeBioAI/LorBin/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/LorMeBioAI/LorBin/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/LorMeBioAI-LorBin.json",
+      "bytes": 4420,
+      "sha256": "9bdac553959c3b3be1afa2ff96e8bdb8fddef7eaa6f3992525599f8dd11ecc90"
+    },
+    {
+      "url": "https://api.github.com/repos/CAMI-challenge/CAMISIM/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/CAMI-challenge/CAMISIM/commits?per_page=1&until=2026-10-08T23:59:59Z",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/CAMI-challenge-CAMISIM.json",
+      "bytes": 3666,
+      "sha256": "d85f2f68ca1975caadcaeee2d42fd0c9338c5eab41e26c6f1efe4c029734fc12"
+    },
+    {
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/sample_subject_mapping.tsv",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/sample_subject_mapping.tsv",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/subject-mapping.tsv",
+      "bytes": 273,
+      "sha256": "dfe7c0b65649148c48c32b38c33f63f1b0ef030ca00af49b180906954349bc04"
+    },
+    {
+      "url": "https://cami-challenge.org/static/CAMI3_toy_dataset_download.list",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://cami-challenge.org/static/CAMI3_toy_dataset_download.list",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/download.list",
+      "bytes": 7577,
+      "sha256": "619c7a33389a388a5570daaa3163184a9be8c1e8fb14ded5b09b3cff1dd24f14"
+    },
+    {
+      "url": "https://cami-challenge.org/faq/",
+      "method": "GET",
+      "status": 200,
+      "resolved_url": "https://cami-challenge.org/faq/",
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/scratch/e009-review/faq.html",
+      "bytes": 36380,
+      "sha256": "f80ab20363cfd465d05c140b87cc9a017a52c9dea472f7abc3f21db83e4be361"
+    }
+  ],
+  "object_metadata": [
+    {
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_0_reads.tar.gz",
+      "status": 200,
+      "compressed_bytes": 4866106604,
+      "last_modified": "Fri, 03 Jul 2026 05:20:59 GMT",
+      "etag": "1279c383f2cec0cbf6ebd3b0ae56b38f-9",
+      "integrity": "HEAD metadata only; no local payload hash verified"
+    },
+    {
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_1_reads.tar.gz",
+      "status": 200,
+      "compressed_bytes": 4866087028,
+      "last_modified": "Fri, 03 Jul 2026 05:20:57 GMT",
+      "etag": "e322c9ec22c6ba5d4428260baf310eb7-9",
+      "integrity": "HEAD metadata only; no local payload hash verified"
+    },
+    {
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_0_contigs.tar.gz",
+      "status": 200,
+      "compressed_bytes": 289486065,
+      "last_modified": "Fri, 03 Jul 2026 05:12:54 GMT",
+      "etag": "143c93bee949432fbf0c5a522ef5d267-1",
+      "integrity": "HEAD metadata only; no local payload hash verified"
+    },
+    {
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/source_genomes.tar.gz",
+      "status": 200,
+      "compressed_bytes": 3202310417,
+      "last_modified": "Fri, 03 Jul 2026 05:18:51 GMT",
+      "etag": "0e6a3c89846e95c7b952e01d3cd630e7-6",
+      "integrity": "HEAD metadata only; no local payload hash verified"
+    },
+    {
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/coverages.tar.gz",
+      "status": 200,
+      "compressed_bytes": 106674,
+      "last_modified": "Fri, 03 Jul 2026 05:11:48 GMT",
+      "etag": "21b1de2e64b5c282669cdfae86a76b08",
+      "integrity": "HEAD metadata only; no local payload hash verified"
+    },
+    {
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/anonymous_gsa_pooled.fasta.gz",
+      "status": 200,
+      "compressed_bytes": 1308005894,
+      "last_modified": "Fri, 03 Jul 2026 05:15:07 GMT",
+      "etag": "518856b5f42852465dc770b86e1b3c23-3",
+      "integrity": "HEAD metadata only; no local payload hash verified"
+    }
+  ],
+  "coverage_archive": {
+    "path": "scratch/e009-review/coverages.tar.gz",
+    "bytes": 106674,
+    "sha256": "32efe0d40d080d6c5ca36320d9a204e8da5d707f0aaafe24fef5c32a994d8b0f",
+    "schema": "source genome filename and simulation coverage; not observed contig depth",
+    "file_members": [
+      {
+        "name": "coverages/coverage_1.tsv",
+        "bytes": 25154,
+        "sha256": "f90f4039b78b74ec19a09264caae111aaca59996f79d8ab16d6cc3b0e82b5c86",
+        "rows": 332
+      },
+      {
+        "name": "coverages/coverage_7.tsv",
+        "bytes": 22164,
+        "sha256": "ac3701580ca0e66f35d01132f6af01801811dc42239d02e8e793ad89a6a46ffa",
+        "rows": 291
+      },
+      {
+        "name": "coverages/coverage_19.tsv",
+        "bytes": 32273,
+        "sha256": "c7dd7b4c6ec796672e6fd02035bea381d4247fe61c2ed690f94b4f70cfbdc594",
+        "rows": 424
+      },
+      {
+        "name": "coverages/coverage_14.tsv",
+        "bytes": 25512,
+        "sha256": "fda5121270026b9cbabea3a91bdb7c89301355079ff33b57aec97a15d63b994c",
+        "rows": 337
+      },
+      {
+        "name": "coverages/coverage_2.tsv",
+        "bytes": 24555,
+        "sha256": "c10f2ebad104ed4ad59376780f2fa4a93e711e373661a68abb3cef3d567c861b",
+        "rows": 324
+      },
+      {
+        "name": "coverages/coverage_11.tsv",
+        "bytes": 20705,
+        "sha256": "278a529b54956933f57f97d437922a9847726e72ed895dcf7e85e0d4bc1a1895",
+        "rows": 271
+      },
+      {
+        "name": "coverages/coverage_12.tsv",
+        "bytes": 23825,
+        "sha256": "9c1555743e699fc7e97e844fbe4fca73c025fdd10f22bac3fff19f19cf5315aa",
+        "rows": 312
+      },
+      {
+        "name": "coverages/coverage_10.tsv",
+        "bytes": 26553,
+        "sha256": "5dd3fd360419653cca72cd32c0ec5cfc7c59d2a9f0bca234e7c557ce95580a0b",
+        "rows": 348
+      },
+      {
+        "name": "coverages/coverage_4.tsv",
+        "bytes": 22419,
+        "sha256": "2c4015e46fb82c31c08b455952eaf3fc23e8763682d6a74e75a6a4bcc5238cb9",
+        "rows": 296
+      },
+      {
+        "name": "coverages/coverage_17.tsv",
+        "bytes": 24349,
+        "sha256": "f6fd7c4b31dd13b60ba95d9f1ebcc6bb5656b3e99a6af91b18af719ec3057bc7",
+        "rows": 323
+      },
+      {
+        "name": "coverages/coverage_3.tsv",
+        "bytes": 25093,
+        "sha256": "b63605c097c0ed02d9a7cb9a686632324cdc3d8eb51e03dde9af9306bfa89fb4",
+        "rows": 331
+      },
+      {
+        "name": "coverages/coverage_8.tsv",
+        "bytes": 24792,
+        "sha256": "981660841b5d18d4d1a7b9231be65f2638f56a2f06f742cf75906f253550d11e",
+        "rows": 325
+      },
+      {
+        "name": "coverages/coverage_0.tsv",
+        "bytes": 23307,
+        "sha256": "624697702c0e3ac59e8d86f2bc513fc241c9b5466aeff0f1f01cd2a70095c9a0",
+        "rows": 311
+      },
+      {
+        "name": "coverages/coverage_18.tsv",
+        "bytes": 25837,
+        "sha256": "5812255b2dedbdd0f73d424ab610de8854c1cda9a0b9c5c2a78338f4e784d545",
+        "rows": 339
+      },
+      {
+        "name": "coverages/coverage_15.tsv",
+        "bytes": 23987,
+        "sha256": "65eb0037e1f49a8f37bfb1536f69a52f7d86019b752a9d2b1dc5c826adfdf96f",
+        "rows": 315
+      },
+      {
+        "name": "coverages/coverage_16.tsv",
+        "bytes": 26363,
+        "sha256": "d97d3e9b9f08f518b0cdcb173208dcbb7a58e903e4306381b2bcf221a945f5ec",
+        "rows": 345
+      },
+      {
+        "name": "coverages/coverage_13.tsv",
+        "bytes": 22982,
+        "sha256": "1cad1372bf268df433f6462e2c43bcef06dbd29a98c25782e6af283d74bc3d84",
+        "rows": 301
+      },
+      {
+        "name": "coverages/coverage_6.tsv",
+        "bytes": 29486,
+        "sha256": "bf62715e4fe00c5d5a614b4a39def30da61d12947dde280f3ed2780d7abdaed6",
+        "rows": 383
+      },
+      {
+        "name": "coverages/coverage_9.tsv",
+        "bytes": 24961,
+        "sha256": "f3450c2a3f5b94ba969ff13cef828be3c8b2ede429b1b52d718a5b3004218fa4",
+        "rows": 328
+      },
+      {
+        "name": "coverages/coverage_5.tsv",
+        "bytes": 23024,
+        "sha256": "f37df460bc18f68a694ed719b3d1fd5eee24ffa92f77b0b9d8991b59d417eb06",
+        "rows": 303
+      }
+    ],
+    "samples": 20,
+    "sample_0_names": 311,
+    "sample_1_names": 332,
+    "selected_union_names": 355,
+    "all_sample_union_names": 2078,
+    "output_inventory": {
+      "path": "experiments/E009-competitive-benchmark/source-name-inventory.tsv",
+      "bytes": 21874,
+      "sha256": "3d3c285abf76a93a4650bea2b0c238ef68655c723b94f8e9008631b3f385527b"
+    }
+  },
+  "overlap": {
+    "status": "pending exact accession/sequence and near-genome comparison; species overlap observed",
+    "e001_all_length_origin_manifest": {
+      "path": "artifacts/e001-population-reviewed/contigs.jsonl",
+      "bytes": 92453780,
+      "sha256": "8864e60bb8494693015946865d9d74146d0257a48d597510b1b031ac09664698"
+    },
+    "e001_accession_universe": [
+      "AE001437.1",
+      "AE001438.3",
+      "AE015928.1",
+      "AE017285.1",
+      "AE017286.1",
+      "AM412317.1",
+      "AM412318.1",
+      "AM902716.1",
+      "AP003515.1",
+      "AP006841.1",
+      "AP006842.1",
+      "AP008230.1",
+      "AP009049.1",
+      "AP009050.1",
+      "AP009240.1",
+      "AP009241.1",
+      "AP009242.1",
+      "AP009243.1",
+      "AP009244.1",
+      "AP009245.1",
+      "AP009246.1",
+      "AP009256.1",
+      "AP009385.1",
+      "AP009386.1",
+      "AP009387.1",
+      "AP009388.1",
+      "AP012027.1",
+      "AP012202.1",
+      "AP012209.1",
+      "AP012210.1",
+      "AP012211.1",
+      "AP012212.1",
+      "AP012331.1",
+      "AP014658.1",
+      "AP014925.1",
+      "AP014926.1",
+      "AY171301.1",
+      "BA000016.3",
+      "BX470248.1",
+      "BX470250.1",
+      "CP000112.1",
+      "CP000139.1",
+      "CP000140.1",
+      "CP000246.1",
+      "CP000312.1",
+      "CP000313.1",
+      "CP000314.1",
+      "CP000315.1",
+      "CP000382.1",
+      "CP000468.1",
+      "CP000527.1",
+      "CP000528.1",
+      "CP000568.1",
+      "CP000673.1",
+      "CP000674.1",
+      "CP000721.1",
+      "CP000724.1",
+      "CP000726.1",
+      "CP000727.1",
+      "CP000728.1",
+      "CP000729.1",
+      "CP000853.1",
+      "CP000885.1",
+      "CP000939.1",
+      "CP000940.1",
+      "CP001056.1",
+      "CP001057.1",
+      "CP001071.1",
+      "CP001078.1",
+      "CP001081.1",
+      "CP001082.1",
+      "CP001083.1",
+      "CP001104.1",
+      "CP001105.1",
+      "CP001106.1",
+      "CP001107.1",
+      "CP001197.1",
+      "CP001348.1",
+      "CP001358.1",
+      "CP001581.1",
+      "CP001649.1",
+      "CP001666.1",
+      "CP001682.1",
+      "CP001684.1",
+      "CP001726.1",
+      "CP001810.1",
+      "CP001811.1",
+      "CP001812.1",
+      "CP001813.1",
+      "CP001850.2",
+      "CP001998.1",
+      "CP002011.1",
+      "CP002012.1",
+      "CP002109.1",
+      "CP002118.1",
+      "CP002119.1",
+      "CP002122.1",
+      "CP002123.1",
+      "CP002160.1",
+      "CP002220.1",
+      "CP002273.2",
+      "CP002297.1",
+      "CP002298.1",
+      "CP002352.1",
+      "CP002400.1",
+      "CP002403.1",
+      "CP002404.1",
+      "CP002405.1",
+      "CP002406.1",
+      "CP002407.1",
+      "CP002410.1",
+      "CP002411.1",
+      "CP002412.1",
+      "CP002413.1",
+      "CP002414.1",
+      "CP002415.1",
+      "CP002416.1",
+      "CP002456.1",
+      "CP002530.1",
+      "CP002531.1",
+      "CP002532.1",
+      "CP002533.1",
+      "CP002544.1",
+      "CP002582.1",
+      "CP002589.1",
+      "CP002628.1",
+      "CP002640.1",
+      "CP002660.1",
+      "CP002661.1",
+      "CP002662.1",
+      "CP002695.1",
+      "CP002770.1",
+      "CP002780.1",
+      "CP003040.1",
+      "CP003065.1",
+      "CP003259.1",
+      "CP003261.1",
+      "CP003262.1",
+      "CP003274.1",
+      "CP003344.1",
+      "CP003502.1",
+      "CP003503.1",
+      "CP003666.1",
+      "CP003667.1",
+      "CP003725.1",
+      "CP003857.1",
+      "CP003919.1",
+      "CP003992.2",
+      "CP004029.1",
+      "CP004030.1",
+      "CP004031.1",
+      "CP004032.1",
+      "CP004044.1",
+      "CP004121.1",
+      "CP004122.1",
+      "CP004406.1",
+      "CP004407.1",
+      "CP004408.1",
+      "CP005079.1",
+      "CP006721.1",
+      "CP006777.1",
+      "CP006903.1",
+      "CP006904.1",
+      "CP006905.1",
+      "CP006906.1",
+      "CP006907.1",
+      "CP006908.1",
+      "CP006909.1",
+      "CP007158.1",
+      "CP007159.1",
+      "CP007494.1",
+      "CP007619.1",
+      "CP007755.1",
+      "CP008713.1",
+      "CP008741.1",
+      "CP008885.1",
+      "CP009057.1",
+      "CP009083.1",
+      "CP009086.1",
+      "CP009225.1",
+      "CP009240.1",
+      "CP009268.1",
+      "CP009297.1",
+      "CP009298.1",
+      "CP009302.1",
+      "CP009557.1",
+      "CP009558.1",
+      "CP009687.1",
+      "CP009688.1",
+      "CP009751.1",
+      "CP010086.2",
+      "CP010251.1",
+      "CP010252.1",
+      "CP010253.1",
+      "CP010254.1",
+      "CP010256.1",
+      "CP010262.1",
+      "CP010266.1",
+      "CP010341.1",
+      "CP010413.1",
+      "CP010414.1",
+      "CP010521.1",
+      "CP010840.1",
+      "CP010841.1",
+      "CP010842.1",
+      "CP010843.1",
+      "CP010846.1",
+      "CP010962.1",
+      "CP010963.1",
+      "CP010964.1",
+      "CP010965.1",
+      "CP010993.1",
+      "CP010994.1",
+      "CP011073.1",
+      "CP011255.1",
+      "CP011319.1",
+      "CP011400.1",
+      "CP011440.1",
+      "CP011442.1",
+      "CP011444.1",
+      "CP011446.1",
+      "CP011531.1",
+      "CP011663.1",
+      "CP011803.1",
+      "CP011804.1",
+      "CP011914.1",
+      "CP011966.1",
+      "CP012046.1",
+      "CP012128.1",
+      "CP012252.1",
+      "CP012288.1",
+      "CP012289.1",
+      "CP012290.1",
+      "CP012291.1",
+      "CP012292.1",
+      "CP012293.1",
+      "CP012334.1",
+      "CP012395.1",
+      "CP012706.1",
+      "CP012743.1",
+      "CP012801.1",
+      "CP012937.1",
+      "CP012938.1",
+      "CP013018.1",
+      "CP013019.1",
+      "CP013038.1",
+      "CP013039.1",
+      "CP013040.1",
+      "CP013041.1",
+      "CP013042.1",
+      "CP013043.1",
+      "CP013044.1",
+      "CP013045.1",
+      "CP013101.1",
+      "CP013213.1",
+      "CP013214.1",
+      "CP013232.1",
+      "CP013238.1",
+      "CP013239.1",
+      "CP013240.1",
+      "CP013243.1",
+      "CP013246.1",
+      "CP013247.1",
+      "CP013252.1",
+      "CP013352.1",
+      "CP013353.1",
+      "CP013354.1",
+      "CP013477.1",
+      "CP013489.1",
+      "CP013615.1",
+      "CP013828.1",
+      "CP013939.1",
+      "CP014028.1",
+      "CP014065.1",
+      "CP014066.1",
+      "CP014146.1",
+      "CP014147.1",
+      "CP014148.1",
+      "CP014153.1",
+      "CP014170.1",
+      "CP014171.1",
+      "CP014672.1",
+      "CP014673.1",
+      "CP014704.1",
+      "CP014705.1",
+      "CP014706.1",
+      "CP014861.1",
+      "CP015020.1",
+      "CP015021.1",
+      "CP015185.1",
+      "CP015400.1",
+      "CP015401.1",
+      "CP015402.1",
+      "CP015404.1",
+      "CP015405.1",
+      "CP015409.1",
+      "CP015427.1",
+      "CP015434.1",
+      "CP015756.1",
+      "CP015757.1",
+      "CP015763.1",
+      "CP015764.1",
+      "CP015765.1",
+      "CP015767.1",
+      "CP015768.1",
+      "CP015769.1",
+      "CP015770.1",
+      "CP015771.1",
+      "CP016170.1",
+      "CP016172.1",
+      "CP016173.1",
+      "CP016280.1",
+      "CP016281.1",
+      "CP016332.1",
+      "CP016333.1",
+      "CP016334.1",
+      "CP016338.1",
+      "CP016341.1",
+      "CP016342.1",
+      "CP016440.1",
+      "CP016441.1",
+      "CP016502.1",
+      "CP016757.1",
+      "CP017037.1",
+      "CP017116.1",
+      "CP017151.1",
+      "CP017253.1",
+      "CP017254.1",
+      "CP017255.1",
+      "CP017256.1",
+      "CP017269.1",
+      "CP017270.1",
+      "CP017402.1",
+      "CP017403.1",
+      "CP017405.1",
+      "CP017603.1",
+      "CP017830.1",
+      "CP017831.1",
+      "CP017832.1",
+      "CP017833.1",
+      "CP018156.1",
+      "CP018335.1",
+      "CP018336.1",
+      "CP019302.1",
+      "CP019303.1",
+      "CR626927.1",
+      "CR626928.1",
+      "DQ381420.1",
+      "DQ517526.1",
+      "FQ312004.1",
+      "FR745875.1",
+      "FR745876.1",
+      "FR773526.1",
+      "HE965803.1",
+      "HE965804.1",
+      "HE965805.1",
+      "HE965807.1",
+      "HF545616.1",
+      "HF545617.1",
+      "HG530135.1",
+      "HG530136.1",
+      "HG738867.1",
+      "HG917868.1",
+      "HG917869.1",
+      "HG934468.1",
+      "LM995447.1",
+      "LM997412.1",
+      "LN515532.1",
+      "LN849008.1",
+      "LN877293.1",
+      "LT546645.1",
+      "LT546646.1",
+      "LT608328.1",
+      "LT622246.1",
+      "LT629973.1",
+      "LT630450.1",
+      "LT635479.1"
+    ],
+    "e002_context": "E001-derived timing DNA; not an independent development genome universe",
+    "e003_sources": [
+      {
+        "accession": "NC_013715.1",
+        "genbank": "AP011540.1",
+        "organism": "Rothia mucilaginosa DY-18",
+        "sequence_sha256": "3febd31c2e6ac53e8b87db2f2a3ea56862bb637a8397b468109e2c9ff00a2dc8"
+      },
+      {
+        "accession": "NC_014643.1",
+        "genbank": "CP002280.1",
+        "organism": "Rothia dentocariosa ATCC 17931",
+        "sequence_sha256": "6b423844d1e62e3b8075bef288419a69db64e8157c4dce79a3034f0ac0a02720"
+      },
+      {
+        "accession": "NC_004350.2",
+        "genbank": "AE014133.2",
+        "organism": "Streptococcus mutans UA159",
+        "sequence_sha256": "753a84e733d60636a854ef9a9b27bdf742412b642dc8cb800d006b578ac36627"
+      },
+      {
+        "accession": "NC_009785.1",
+        "genbank": "CP000725.1",
+        "organism": "Streptococcus gordonii str. Challis substr. CH1",
+        "sequence_sha256": "3d1dfa4135a2221c04b3a081c1794fe07b6824e8c1bbd7caa4e6ca08fa2825a5"
+      },
+      {
+        "accession": "NC_009009.1",
+        "genbank": "CP000387.1",
+        "organism": "Streptococcus sanguinis SK36",
+        "sequence_sha256": "911c6074f796114f3651fde48f4b28e5f8f95a73f282b674783bd1a98d545a42"
+      },
+      {
+        "accession": "NC_013853.1",
+        "genbank": "FN568063.1",
+        "organism": "Streptococcus mitis B6",
+        "sequence_sha256": "ebb09c2de21e738280281cbbf5bc67743219b13c687d32463f16ee0e530dff10"
+      },
+      {
+        "accession": "NC_002950.2",
+        "genbank": "AE015924.1",
+        "organism": "Porphyromonas gingivalis W83",
+        "sequence_sha256": "07128de3e615ae1a3c8645fdb8e7b4fd67163057fb1d5ae83c15ee81a28e2edb"
+      },
+      {
+        "accession": "NC_016610.1",
+        "genbank": "CP003191.1",
+        "organism": "Tannerella forsythia 92A2",
+        "sequence_sha256": "50fb6d0716a2c4df75379b39424b322ae5bd95feeb842b6503aca79cd14eaf6f"
+      },
+      {
+        "accession": "NC_002967.9",
+        "genbank": "AE017226.1",
+        "organism": "Treponema denticola ATCC 35405",
+        "sequence_sha256": "4909b8e8870d918be703aa9b81c84d3062fac7030cbe68a48dd7b504b5ceff97"
+      },
+      {
+        "accession": "NC_003454.1",
+        "genbank": "AE009951.2",
+        "organism": "Fusobacterium nucleatum subsp. nucleatum ATCC 25586",
+        "sequence_sha256": "d0552e6c59a996a7376f472f9b275e06a8c261b7a81ac865fd53c9625c33b940"
+      },
+      {
+        "accession": "NC_013192.1",
+        "genbank": "CP001685.1",
+        "organism": "Leptotrichia buccalis C-1013-b",
+        "sequence_sha256": "a70a2d9e6c414cfe8d4b9e7d354a8d06e677080a81720907b762ead84a614f2a"
+      },
+      {
+        "accession": "NC_015964.1",
+        "genbank": "FQ312002.1",
+        "organism": "Haemophilus parainfluenzae T3T1",
+        "sequence_sha256": "0add9355bd81aa4ec58d5c344fa17aff3ac5f9b1b705f92727b9b2117feaa42f"
+      },
+      {
+        "accession": "NC_000907.1",
+        "genbank": "L42023",
+        "organism": "Haemophilus influenzae Rd KW20",
+        "sequence_sha256": "990ea2092f48d685c0064c3eb093ea5ca4b67f1f3ee51c48ca404cfc3b636a82"
+      },
+      {
+        "accession": "NC_003112.2",
+        "genbank": "AE002098.2",
+        "organism": "Neisseria meningitidis MC58",
+        "sequence_sha256": "286458ff5f93f02659300ad728a185366095fb64f7bb9b23569fddb299b2ed2e"
+      },
+      {
+        "accession": "NC_002946.2",
+        "genbank": "AE004969.1",
+        "organism": "Neisseria gonorrhoeae FA 1090",
+        "sequence_sha256": "66acc89a4054ca94c71e41a0c728579939c56565c4771337e481988467ff46d6"
+      },
+      {
+        "accession": "NC_006085.1",
+        "genbank": "AE017283.1",
+        "organism": "Cutibacterium acnes KPA171202",
+        "sequence_sha256": "8086f168d4c7d586df8ee9abb29c2eaea0459dfb8cff84639381820c4f63ed67"
+      }
+    ],
+    "e004_context": "E003 development panel plus small software inputs; include actual smoke DNA hashes at acquisition",
+    "e005_accessions": [
+      "CP003344.1",
+      "CP010842.1",
+      "CP018156.1",
+      "HG917868.1",
+      "HG917869.1"
+    ],
+    "e005_genome_ids": [
+      "OTU_97.20215.0",
+      "OTU_97.3310.0",
+      "OTU_97.43909.0",
+      "OTU_97.6958.0"
+    ],
+    "e005_reference_sha256": "64e16974cf59b0064767657e479b6e6d2a7f7e42a8fb93b340d74ee4e5b680e2",
+    "observed_species_overlap": {
+      "species": "Streptococcus mutans",
+      "development_strain": "UA159",
+      "candidate": "Streptococcus_mutans_RTP21428st1_B11_RTP21428_210409_genomic.fna",
+      "exact_sequence_match": "not established"
+    },
+    "pretraining_database_overlap": "possible/unknown; no claim of unseen genomes or absence of homologs"
+  },
+  "limits": [
+    "Full MetaCAT paper blocked; source/documentation and journal abstract inspected.",
+    "HEAD multipart ETags are not payload checksums.",
+    "Source names and simulated coverages are not accession-level identities or input features.",
+    "Reference caches unchanged; inspected source is not an execution environment.",
+    "No large DNA/read/model/database payloads acquired, no scientific or native tool work repeated."
+  ]
+}

@@ -156,9 +156,10 @@ environment. Its immutable wheel remains the reference for the next milestone.
 
 Completed locally on 2026-10-07 in [E007](../experiments/E007-pr-readiness/README.md),
 under its [prospectively frozen contract](../experiments/E007-pr-readiness/protocol.json).
-This branch is ready to open a private implementation PR. Real independent-install
-Linux CI and review are still required before merge; no PR, push or publication
-has occurred. The [prepared PR description](PR_FIRST_PROTOTYPE.md) owns that review.
+This paragraph records E007's historical local readiness. E008 subsequently
+passed real independent-install Linux CI and private PR #1 was merged under owner
+authorization on 2026-10-07. The [PR record](PR_FIRST_PROTOTYPE.md) owns the exact
+head/merge/review evidence; no public publication has occurred.
 
 The locally built **0.1.0.dev2** wheel and sdist are inspected, the sdist rebuild
 has identical logical wheel contents, and fresh versioned environments own their

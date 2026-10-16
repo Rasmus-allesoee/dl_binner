@@ -1,0 +1,806 @@
+{
+  "summary": {
+    "scgbinner": {
+      "packages": 118,
+      "payload_paths": 36207,
+      "known_payload_logical_bytes": 2630961904,
+      "packages_without_byte_sizes": 0
+    },
+    "checkm": {
+      "packages": 98,
+      "payload_paths": 16866,
+      "known_payload_logical_bytes": 841005570,
+      "packages_without_byte_sizes": 0
+    },
+    "shared_cache": {
+      "packages": 151,
+      "payload_paths": 41254,
+      "compressed_bytes": 497171498,
+      "payload_logical_bytes": 2980811251
+    },
+    "cache_plus_two_prefixes_payload_paths": 94327,
+    "scope": "Hash-verified actual linux-64/noarch payload metadata. Counts are lower-bound path materializations; add package metadata, directories and generated pyc. Not measured Linux install throughput.",
+    "cache_prefix_and_two_compressed_copies_bytes_lower_bound": 7447121721
+  },
+  "packages": {
+    "ca-certificates-2026.7.22-hbd8a1cb_0.conda": {
+      "paths": 2,
+      "logical_bytes": 480432,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libzlib-1.3.2-h25fd6f3_3.conda": {
+      "paths": 2,
+      "logical_bytes": 234336,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "llvm-openmp-23.1.3-h7148c6a_0.conda": {
+      "paths": 11,
+      "logical_bytes": 23753653,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "python_abi-3.10-9_cp310.conda": {
+      "paths": 0,
+      "logical_bytes": 0,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "tzdata-2026c-h151e31d_0.conda": {
+      "paths": 606,
+      "logical_bytes": 509706,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "_openmp_mutex-4.5-8_kmp_llvm.conda": {
+      "paths": 1,
+      "logical_bytes": 0,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "zstd-1.5.7-hb78ec9c_7.conda": {
+      "paths": 18,
+      "logical_bytes": 1645584,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "ld_impl_linux-64-2.46.1-default_hbd61a6d_103.conda": {
+      "paths": 2,
+      "logical_bytes": 5933728,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libgcc-16.2.0-ha9f2e26_7.conda": {
+      "paths": 15,
+      "logical_bytes": 7923473,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "bzip2-1.0.8-hda65f42_10.conda": {
+      "paths": 24,
+      "logical_bytes": 2014052,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libbrotlicommon-1.2.0-h39a168f_4.conda": {
+      "paths": 9,
+      "logical_bytes": 482725,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libdeflate-1.25-hd45a770_1.conda": {
+      "paths": 10,
+      "logical_bytes": 291841,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libffi-3.7.0-h81df57d_1.conda": {
+      "paths": 12,
+      "logical_bytes": 352123,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libgcc-ng-16.2.0-h69a702a_7.conda": {
+      "paths": 0,
+      "logical_bytes": 0,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libgfortran5-16.2.0-h6b99dfc_7.conda": {
+      "paths": 4,
+      "logical_bytes": 34601292,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libiconv-1.18-h0cb94f2_3.conda": {
+      "paths": 51,
+      "logical_bytes": 5180991,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libjpeg-turbo-3.2.0-hb03c661_1.conda": {
+      "paths": 39,
+      "logical_bytes": 7918513,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "liblzma-5.8.3-hb03c661_1.conda": {
+      "paths": 2,
+      "logical_bytes": 445424,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libnsl-2.0.1-hb9d3cd8_1.conda": {
+      "paths": 11,
+      "logical_bytes": 134593,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libpng-1.6.59-h922cc85_0.conda": {
+      "paths": 21,
+      "logical_bytes": 1246308,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libsqlite-3.54.0-h0737f62_101.conda": {
+      "paths": 6,
+      "logical_bytes": 6112655,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libstdcxx-16.2.0-h934c35e_7.conda": {
+      "paths": 4,
+      "logical_bytes": 71626956,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libuuid-2.42.4-hcfc3c73_0.conda": {
+      "paths": 5,
+      "logical_bytes": 46298,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libuv-1.52.1-h280c20c_1.conda": {
+      "paths": 10,
+      "logical_bytes": 1077682,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libwebp-base-1.6.0-hd42ef1d_1.conda": {
+      "paths": 32,
+      "logical_bytes": 4283830,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libxcrypt-4.4.38-h280c20c_0.conda": {
+      "paths": 16,
+      "logical_bytes": 236531,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "ncurses-6.6-hdb14827_1.conda": {
+      "paths": 3014,
+      "logical_bytes": 9490852,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "openssl-3.6.5-h781a0a9_0.conda": {
+      "paths": 161,
+      "logical_bytes": 20352755,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "pthread-stubs-0.4-h7cc23a3_1004.conda": {
+      "paths": 1,
+      "logical_bytes": 490,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "tk-8.6.13-noxft_h1df4ec4_4.conda": {
+      "paths": 520,
+      "logical_bytes": 11448207,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "xorg-libxau-1.0.12-h7cc23a3_2.conda": {
+      "paths": 5,
+      "logical_bytes": 56890,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "xorg-libxdmcp-1.1.5-h7cc23a3_2.conda": {
+      "paths": 5,
+      "logical_bytes": 99458,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "yaml-0.2.5-hebe6cf0_3.conda": {
+      "paths": 6,
+      "logical_bytes": 370074,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "gmp-6.3.0-hfd2156b_3.conda": {
+      "paths": 14,
+      "logical_bytes": 1541303,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "lerc-4.2.0-hdb68285_0.conda": {
+      "paths": 5,
+      "logical_bytes": 1777374,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libbrotlidec-1.2.0-ha411449_4.conda": {
+      "paths": 4,
+      "logical_bytes": 180091,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libbrotlienc-1.2.0-h018ffa1_4.conda": {
+      "paths": 4,
+      "logical_bytes": 2330419,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libfreetype6-2.14.3-h5e6c136_2.conda": {
+      "paths": 2,
+      "logical_bytes": 1748976,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libgfortran-16.2.0-h69a702a_7.conda": {
+      "paths": 0,
+      "logical_bytes": 0,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "liblzma-devel-5.8.3-hb03c661_1.conda": {
+      "paths": 264,
+      "logical_bytes": 7835624,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libstdcxx-ng-16.2.0-hdf11a46_7.conda": {
+      "paths": 0,
+      "logical_bytes": 0,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libxcb-1.17.0-hb83e432_2.conda": {
+      "paths": 135,
+      "logical_bytes": 6407306,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libxml2-16-2.15.4-hbdfff7e_1.conda": {
+      "paths": 3,
+      "logical_bytes": 2898200,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "readline-8.3-hd6e31c0_1.conda": {
+      "paths": 27,
+      "logical_bytes": 2935375,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "sleef-3.9.0-ha0421bc_0.conda": {
+      "paths": 19,
+      "logical_bytes": 17549672,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "xz-gpl-tools-5.8.3-ha02ee65_1.conda": {
+      "paths": 29,
+      "logical_bytes": 147142,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "xz-tools-5.8.3-hb03c661_1.conda": {
+      "paths": 19,
+      "logical_bytes": 1248153,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "zlib-ng-2.3.3-hce19668_1.conda": {
+      "paths": 11,
+      "logical_bytes": 685221,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "brotli-bin-1.2.0-h9908984_4.conda": {
+      "paths": 1,
+      "logical_bytes": 38896,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "glpk-5.0-h445213a_0.tar.bz2": {
+      "paths": 6,
+      "logical_bytes": 5443669,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libabseil-20230802.1-cxx17_h59595ed_0.conda": {
+      "paths": 729,
+      "logical_bytes": 9706411,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libfreetype-2.14.3-ha770c72_2.conda": {
+      "paths": 0,
+      "logical_bytes": 0,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libgfortran-ng-16.2.0-h69a702a_7.conda": {
+      "paths": 0,
+      "logical_bytes": 0,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libtiff-4.7.2-hcc2c06a_1.conda": {
+      "paths": 30,
+      "logical_bytes": 2966578,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libxml2-2.15.4-ha7a5771_1.conda": {
+      "paths": 2,
+      "logical_bytes": 122768,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "mpfr-4.2.2-ha2cb11d_1.conda": {
+      "paths": 21,
+      "logical_bytes": 5212186,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "qhull-2020.2-h434a139_5.conda": {
+      "paths": 109,
+      "logical_bytes": 3328331,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "xz-5.8.3-ha02ee65_1.conda": {
+      "paths": 0,
+      "logical_bytes": 0,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "brotli-1.2.0-h505cf86_4.conda": {
+      "paths": 5,
+      "logical_bytes": 54606,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "freetype-2.14.3-ha770c72_2.conda": {
+      "paths": 60,
+      "logical_bytes": 1770746,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "lcms2-2.19.1-h9073bf1_3.conda": {
+      "paths": 16,
+      "logical_bytes": 1816062,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libhwloc-2.15.0-default_hd7c4d0c_1001.conda": {
+      "paths": 556,
+      "logical_bytes": 5617951,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libopenblas-0.3.25-pthreads_h413a1c8_0.conda": {
+      "paths": 2,
+      "logical_bytes": 72901360,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libprotobuf-4.24.4-hf27288f_0.conda": {
+      "paths": 252,
+      "logical_bytes": 21524538,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libxml2-devel-2.15.4-ha7a5771_1.conda": {
+      "paths": 49,
+      "logical_bytes": 1845365,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "mpc-1.4.0-ha2cb11d_1.conda": {
+      "paths": 6,
+      "logical_bytes": 615033,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "openjpeg-2.5.4-heb1ab33_2.conda": {
+      "paths": 15,
+      "logical_bytes": 1589220,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "python-3.10.15-h4a871b0_2_cpython.conda": {
+      "paths": 2063,
+      "logical_bytes": 150498540,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "atomicwrites-1.4.1-pyhd8ed1ab_1.conda": {
+      "paths": 9,
+      "logical_bytes": 15017,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "colorama-0.4.6-pyhd8ed1ab_1.conda": {
+      "paths": 20,
+      "logical_bytes": 78749,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "cpython-3.10.22-py310hd8ed1ab_0.conda": {
+      "paths": 0,
+      "logical_bytes": 0,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "cycler-0.12.1-pyhcf101f3_2.conda": {
+      "paths": 10,
+      "logical_bytes": 23086,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "filelock-3.32.5-pyhd8ed1ab_0.conda": {
+      "paths": 29,
+      "logical_bytes": 356273,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "gmpy2-2.3.1-py310haf1ad51_0.conda": {
+      "paths": 30,
+      "logical_bytes": 1148368,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "kiwisolver-1.5.1-py310he417ec5_0.conda": {
+      "paths": 15,
+      "logical_bytes": 210536,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libblas-3.9.0-20_linux64_openblas.conda": {
+      "paths": 2,
+      "logical_bytes": 72901360,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "markupsafe-3.0.3-py310h3406613_1.conda": {
+      "paths": 16,
+      "logical_bytes": 55018,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "mpmath-1.4.1-pyhd8ed1ab_0.conda": {
+      "paths": 103,
+      "logical_bytes": 2090563,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "munkres-1.1.4-pyhd8ed1ab_1.conda": {
+      "paths": 5,
+      "logical_bytes": 20823,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "networkx-3.4-pyhd8ed1ab_0.conda": {
+      "paths": 585,
+      "logical_bytes": 6468893,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "packaging-26.3-pyhc364b38_0.conda": {
+      "paths": 32,
+      "logical_bytes": 500711,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "pillow-12.3.0-py310h5a73078_0.conda": {
+      "paths": 219,
+      "logical_bytes": 3080956,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "pyparsing-3.3.2-pyhcf101f3_0.conda": {
+      "paths": 26,
+      "logical_bytes": 465356,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "pytz-2026.3.post1-pyhcf101f3_0.conda": {
+      "paths": 623,
+      "logical_bytes": 1067846,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "pyyaml-6.0.2-py310h89163eb_2.conda": {
+      "paths": 45,
+      "logical_bytes": 646756,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "setuptools-80.9.0-pyhff2d567_0.conda": {
+      "paths": 512,
+      "logical_bytes": 4116214,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "six-1.17.0-pyhe01879c_1.conda": {
+      "paths": 9,
+      "logical_bytes": 38586,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "tbb-2021.13.0-h7148c6a_8.conda": {
+      "paths": 6,
+      "logical_bytes": 1117840,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "texttable-1.7.0-pyhd8ed1ab_1.conda": {
+      "paths": 9,
+      "logical_bytes": 34748,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "threadpoolctl-3.6.0-pyhecae5ae_0.conda": {
+      "paths": 8,
+      "logical_bytes": 67009,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "typing_extensions-4.16.0-pyhcf101f3_0.conda": {
+      "paths": 8,
+      "logical_bytes": 183260,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "unicodedata2-17.0.1-py310h7c4b9e2_0.conda": {
+      "paths": 9,
+      "logical_bytes": 1473637,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "fonttools-4.63.0-py310h3406613_0.conda": {
+      "paths": 703,
+      "logical_bytes": 14613039,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "jinja2-3.1.6-pyhcf101f3_1.conda": {
+      "paths": 34,
+      "logical_bytes": 498476,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "joblib-1.5.1-pyhd8ed1ab_0.conda": {
+      "paths": 146,
+      "logical_bytes": 933426,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libcblas-3.9.0-20_linux64_openblas.conda": {
+      "paths": 2,
+      "logical_bytes": 72901360,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "liblapack-3.9.0-20_linux64_openblas.conda": {
+      "paths": 2,
+      "logical_bytes": 72901360,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "mkl-2022.2.1-h6508926_16999.tar.bz2": {
+      "paths": 51,
+      "logical_bytes": 1177477670,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "python-dateutil-2.9.0.post0-pyhe01879c_2.conda": {
+      "paths": 28,
+      "logical_bytes": 443360,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "sympy-1.14.0-pyh2585a3b_106.conda": {
+      "paths": 1573,
+      "logical_bytes": 26942356,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "tqdm-4.67.1-pyhd8ed1ab_1.conda": {
+      "paths": 43,
+      "logical_bytes": 227773,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "wheel-0.48.0-pyhd8ed1ab_0.conda": {
+      "paths": 20,
+      "logical_bytes": 97012,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "arpack-3.9.1-nompi_hf03ea27_102.conda": {
+      "paths": 20,
+      "logical_bytes": 1090800,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "numpy-1.26.4-py310hb13e2d6_0.conda": {
+      "paths": 1404,
+      "logical_bytes": 32752860,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "pip-25.1.1-pyh8b19718_0.conda": {
+      "paths": 443,
+      "logical_bytes": 5734794,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "biopython-1.85-py310h7c4b9e2_2.conda": {
+      "paths": 1012,
+      "logical_bytes": 16658392,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "contourpy-1.3.2-py310h3788b33_0.conda": {
+      "paths": 44,
+      "logical_bytes": 982926,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "hnswlib-0.8.0-py310hc563356_1.conda": {
+      "paths": 9,
+      "logical_bytes": 551084,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "igraph-0.10.16-hfe3e89f_1.conda": {
+      "paths": 95,
+      "logical_bytes": 10111828,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "pandas-1.5.3-py310h9b08913_1.conda": {
+      "paths": 2893,
+      "logical_bytes": 56107402,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "pytorch-2.0.0-cpu_mkl_py310h6d3c8b7_104.conda": {
+      "paths": 12563,
+      "logical_bytes": 354574915,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "scipy-1.11.4-py310hb13e2d6_0.conda": {
+      "paths": 1110,
+      "logical_bytes": 60715601,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libleidenalg-0.11.1-h00ab1b0_0.conda": {
+      "paths": 19,
+      "logical_bytes": 597498,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "matplotlib-base-3.10.9-py310hfde16b3_0.conda": {
+      "paths": 884,
+      "logical_bytes": 26366527,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "python-igraph-0.11.9-py310hea6c23e_3.conda": {
+      "paths": 160,
+      "logical_bytes": 2418831,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "scikit-learn-1.6.1-py310h27f47ee_0.conda": {
+      "paths": 1466,
+      "logical_bytes": 47737658,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "biolib-0.1.9-py_0.tar.bz2": {
+      "paths": 48,
+      "logical_bytes": 295268,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "leidenalg-0.10.2-py310hea6c23e_1.conda": {
+      "paths": 22,
+      "logical_bytes": 379515,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libgomp-16.2.0-he0feb66_7.conda": {
+      "paths": 3,
+      "logical_bytes": 3352556,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "mpi-1.0-openmpi.tar.bz2": {
+      "paths": 0,
+      "logical_bytes": 0,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "pplacer-1.1.alpha19-h9ee0642_2.tar.bz2": {
+      "paths": 3,
+      "logical_bytes": 25851600,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "_openmp_mutex-4.5-20_gnu.conda": {
+      "paths": 1,
+      "logical_bytes": 1475480,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "zlib-1.3.2-h25fd6f3_3.conda": {
+      "paths": 5,
+      "logical_bytes": 396460,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "blis-2.0-pthreads_h64f13e8_4.conda": {
+      "paths": 103,
+      "logical_bytes": 21799779,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "c-ares-1.34.8-hebe6cf0_2.conda": {
+      "paths": 169,
+      "logical_bytes": 745917,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "keyutils-1.6.3-h7cc23a3_1.conda": {
+      "paths": 60,
+      "logical_bytes": 575145,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libev-4.33-h280c20c_3.conda": {
+      "paths": 5,
+      "logical_bytes": 119930,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "prodigal-2.6.3-h577a1d6_11.tar.bz2": {
+      "paths": 1,
+      "logical_bytes": 12232952,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "icu-78.3-py310h44b86e0_2.conda": {
+      "paths": 263,
+      "logical_bytes": 47793056,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libblas-3.11.0-11_h91f140b_blis.conda": {
+      "paths": 2,
+      "logical_bytes": 15474000,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libedit-3.1.20260512-pl5321h373387f_0.conda": {
+      "paths": 49,
+      "logical_bytes": 348328,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libnghttp2-1.68.1-h74cf4be_1.conda": {
+      "paths": 9,
+      "logical_bytes": 2664736,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libssh2-1.11.1-h6154650_1.conda": {
+      "paths": 207,
+      "logical_bytes": 1743643,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libunistring-0.9.10-h7f98852_0.tar.bz2": {
+      "paths": 48,
+      "logical_bytes": 8581710,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "pcre2-10.47-h8b3dc9c_1.conda": {
+      "paths": 239,
+      "logical_bytes": 10169209,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "krb5-1.22.2-hbc21106_2.conda": {
+      "paths": 162,
+      "logical_bytes": 10227573,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libcblas-3.11.0-11_h3c44731_blis.conda": {
+      "paths": 2,
+      "logical_bytes": 15474000,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libidn2-2.3.8-hfac485b_1.conda": {
+      "paths": 6,
+      "logical_bytes": 1119877,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "liblapack-3.11.0-10_he2a6e96_netlib.conda": {
+      "paths": 8,
+      "logical_bytes": 24515380,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libpsl-0.23.1-hd9e3e90_1.conda": {
+      "paths": 5,
+      "logical_bytes": 93874,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libsqlite-3.54.0-h13e7031_1.conda": {
+      "paths": 6,
+      "logical_bytes": 6141840,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "gsl-2.7-he838d99_0.tar.bz2": {
+      "paths": 284,
+      "logical_bytes": 22379182,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "libcurl-8.22.0-ha042cf0_0.conda": {
+      "paths": 17,
+      "logical_bytes": 3681817,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "openmpi-4.1.6-hc5af2df_101.conda": {
+      "paths": 1082,
+      "logical_bytes": 29368892,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "wget-1.25.0-h653f8fd_1.conda": {
+      "paths": 84,
+      "logical_bytes": 3736428,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "certifi-2026.7.22-pyhd8ed1ab_0.conda": {
+      "paths": 15,
+      "logical_bytes": 249554,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "dendropy-4.6.1-pyhdfd78af_0.tar.bz2": {
+      "paths": 124,
+      "logical_bytes": 2086600,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "hmmer-3.4-h7d74f8d_5.conda": {
+      "paths": 614,
+      "logical_bytes": 33260750,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "pysam-0.22.1-py310h64e62c9_3.tar.bz2": {
+      "paths": 501,
+      "logical_bytes": 19699716,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "matplotlib-base-3.8.4-py310hef631a5_2.conda": {
+      "paths": 902,
+      "logical_bytes": 23835325,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    },
+    "checkm-genome-1.2.3-pyhdfd78af_1.tar.bz2": {
+      "paths": 68,
+      "logical_bytes": 654038,
+      "scope": "actual package info/paths.json; includes links, excludes package metadata/generated pyc"
+    }
+  },
+  "planning": {
+    "observed_v7_snapshot_copy": {
+      "entries": 17989,
+      "seconds": 1200
+    },
+    "payload_materialization_comparison_seconds": 6292.311968425149,
+    "scope": "Comparison with prior copy rate is rough planning, not measured Conda throughput. Includes neither extra package metadata/directories/generated pyc nor network, numerical chunk restore, probes or packing.",
+    "owner_vcpus": 8,
+    "owner_ram_gb": 24,
+    "work_seconds": 10200,
+    "collection_seconds": 600,
+    "maximum_allocated_core_hours": 24,
+    "minimum_free_home_bytes": 10000000000,
+    "temporary_restore_space_allowance_bytes": 2200000000,
+    "rationale": "94327 cache+prefix payload paths project to about105min at the observed old copy rate, before setup/verification overhead. Choose three hours including ten-minute collection reserve, without shorter productive-stage caps. Actual Conda install throughput remains unverified."
+  },
+  "lock_record": "failed-paths-lock.json",
+  "acquisition_log": {
+    "path": "artifacts/e009-preparation/failed-paths-v13/linux-payload-acquisition-v2.log",
+    "file": {
+      "bytes": 49954,
+      "sha256": "07c2a67a66712aa6baa25ea94b65f9633dbaf2a22c5338c8bc0af13f71c70ba5"
+    }
+  }
+}

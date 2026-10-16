@@ -2,21 +2,28 @@
 
 ## Purpose
 
-This project aims to build and publish a usable deep-learning metagenomic genome
-binner of our own, while learning through the full development process.
+This project aims to build our own **high-performing deep-learning metagenomic
+genome binner**, potentially reaching state-of-the-art performance, while learning
+through development. Reproducibility, usability and honest claims are essential;
+making a program run is a first milestone, not the final performance goal.
 
-Owner clarification, 2026-09-29: the primary success is a working, reproducible
-software product with honest evaluation and clear limitations. A paper, novel
-methodological contribution or state-of-the-art performance is an optional future
-bonus, not a prerequisite for implementing or releasing the first version.
+Owner clarification, 2026-10-14: the accepted implementation is a simple, weak
+prototype and an immutable development comparator. Its software acceptance does
+not establish competitive recovery. Spend research effort and compute on decisions
+that can improve our method's architecture, features, objective or grouping.
+Reuse thesis results, published benchmarks and reviewed code before paying to
+confirm an already expected mature-tool advantage. SOTA is an ambition requiring
+appropriate evidence, not a claim, prescribed architecture or release gate.
 
-Scientific rigor should protect correctness and claims without turning preparation
-into an indefinite research program. Prefer a bounded first prototype, then improve
-it in useful increments. E001 will finish at its explicitly amended scope before a
-focused rethink of the first implementation. See [D010](docs/decisions/D010-bounded-e001-and-prototype.md).
+The 2026-09-29 direction bounded E001 and delivered the first usable prototype;
+[D010](docs/decisions/D010-bounded-e001-and-prototype.md) preserves that milestone's
+reasoning. E001 and the first implementation are complete. Subsequent development
+is performance-led, in useful increments; a paper and methodological novelty
+remain optional. [D013](docs/decisions/D013-first-comparative-benchmark.md) separates
+reusable data preparation from selectively justified tool runs and mechanism tests.
 
 The human-associated microbiome focus and learning by doing remain. The path and
-architecture are open; progress toward a usable tool is the organizing priority.
+architecture stay open. Do not optimize the product to one inspected assembly.
 
 ---
 
@@ -104,7 +111,9 @@ State-of-the-art performance is an optional ambition, not a release requirement.
 
 A method that produces a meaningful improvement in a specific regime, exposes an important trade-off, or introduces a genuinely useful new approach can still be a successful research outcome even if it does not dominate every benchmark.
 
-The first end-to-end usable version is a meaningful deliverable. Further research and improvements are optional subsequent milestones, not barriers to reaching it.
+The first end-to-end usable version is an accepted initial deliverable. Improving
+its binning performance is the current development purpose; expensive comparison
+campaigns and publication remain separately justified choices.
 
 ---
 
@@ -191,18 +200,27 @@ The following are deliberately **not fixed in advance**:
 - the exact benchmark design;
 - the intermediate research questions.
 
-Before settling the first model architecture, conduct a comprehensive and current
-review—exhaustive within a defined relevant scope—of leading metagenomic-binning
-methods and recent benchmark studies. Review the papers and inspect source-code
-paths for a justified shortlist; refresh rather than assume the earlier targeted
-audit is exhaustive or current. This is a high-priority design input and should
-not be skipped merely to move faster. Record the search scope/cutoff, coverage,
-findings and remaining gaps. The review informs implementation but is not a
-novelty gate or a reason to delay low-risk product scaffolding and learning.
+The scoped first-design review and first prototype are complete. Reuse their
+paper, benchmark and source-code evidence; refresh specific gaps when a new design
+decision needs it. A proposed native run should state what additional observation
+it supplies, which decision it can change and why cheaper retained evidence or a
+matched mechanism test is insufficient. A mature whole-tool win does not identify
+its useful component. One prototype/dataset result cannot decide whether depth,
+sequence information or future taxonomy belongs in the eventual product.
 
 Do not create a Frankenstein model by combining techniques simply because strong existing tools use them.
 
 Every major component and their combination should have a reason to exist.
+
+Working clarification, 2026-10-16: development should move in substantial, coherent
+prototype upgrades when existing literature, source and project evidence support
+the combination. Do not default to a separate biological experiment for each
+ingredient before implementation. Build and test related modules together, then
+use selective ablations where uncertainty can change the design or a causal claim
+needs support. An integrated improvement is initially evidence for the package of
+changes. This permits faster development without prescribing a large network or
+declaring commonly used features universally mandatory. [D015](docs/decisions/D015-coherent-prototype-upgrade.md)
+records the next-prototype recommendation; dev3 and accepted results stay preserved.
 
 A useful pattern is:
 
@@ -260,19 +278,23 @@ The new repository should develop its own clean identity around method research 
 
 ## Practical compute context
 
-I currently still have access to SDU/UCloud HPC resources.
+As of 2026-10-13 my SDU login is deactivated. UCloud files still exist but are
+inaccessible. Google Cloud is the main compute environment going forward; its
+actual access, resources and billing verification belong in the dated
+[asset record](docs/evidence/assets.md#a007-current-compute-access) and
+[cloud operations](docs/CLOUD.md), not assumptions about old HPC capacity.
 
-The current access is CPU-only, as clarified on 2026-09-18. Earlier expectations of H200 GPUs and very large-memory nodes are superseded. Current capabilities and budget belong in the dated [asset record](docs/evidence/assets.md#a007-current-compute-access), with operational limits in each experiment's configuration. Do not assume GPU access will return.
+Use a secure connected Linux workspace for expensive work when its scientific
+value and cost justify it. Start with CPU; no GPU infrastructure is needed for
+the current setup phase. Local development remains on macOS. Prefer cheap local
+checks for development and real native contracts before costly execution. Choose
+resources to serve the experiment, preserve accepted evidence, and minimize bulky
+regenerable storage. Paid billing is enabled: use only verified credit-covered
+products within the owner's approved scope and ask about uncovered/unclear costs.
+A budget alert does not prevent spending.
 
-This access may eventually disappear.
-
-Use the allocation strategically while it remains available, without letting the available hardware prescribe the scientific method.
-
-At the same time, do not waste HPC resources merely because they exist.
-
-Prefer cheap local experiments for debugging and small-scale validation, and scale to UCloud when the experiment genuinely benefits from it.
-
-Local development is on macOS.
+Google Colab and Kaggle Kernels are possible future alternatives if GCP credits
+run out. They are not configured now and do not imply a current migration.
 
 ---
 
@@ -333,7 +355,7 @@ Optional GPU execution while retaining CPU, and simple Conda/mamba installation,
 are future product/distribution goals. They remain separate from current CPU
 validation and do not authorize GPU implementation, packaging or publication now.
 
-Build a usable first version, understand how it works, evaluate it honestly, and
-improve it when the next change is worth the effort. Learning and a finished tool
-are primary outcomes; stronger research claims require stronger evidence when we
-choose to pursue them. Avoid unnecessary preparation that delays those outcomes.
+Improve our accepted prototype toward a high-performing binner, understand why
+changes help and evaluate them honestly. Use bounded development experiments and
+prospectively untouched, broader validation before strong generalization or SOTA
+claims. Avoid preparation and tool campaigns that do not inform an improvement.

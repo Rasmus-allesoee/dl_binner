@@ -1,0 +1,321 @@
+{
+  "record": "E009",
+  "phase": "unchanged-controls-v1",
+  "status": "COMPLETED SUCCESS; all four controls independently reviewed locally; VM TERMINATED",
+  "owner_authorization": "current user message explicitly authorizes four unchanged controls under new $2 if stated gates pass; no polling to completion required after healthy supervised launch",
+  "budget": {
+    "incremental_gross_ceiling_USD": 2,
+    "phase_clock_seconds": 14400,
+    "provider_STOP_seconds": 15300,
+    "free_reserve_GiB": 25,
+    "growth_max_GiB": 20,
+    "resources": "existing e2-standard-8/32GiB, work300GiB and boot30GiB",
+    "no_resize_provision_retry_or_retention_extension": true
+  },
+  "credit_price_gate": {
+    "checked_utc": "2026-10-15T21:02:33.528541+00:00",
+    "paid_billing": true,
+    "credit_available_dkk": 1942.67,
+    "credit_original_dkk": 1973.43,
+    "credit_status": "Available",
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; see terms for free trial; Net pricing",
+    "overview_reported_cost_dkk": 27.89,
+    "overview_savings_dkk": 27.89,
+    "overview_net_dkk": 0,
+    "reported_credit_consumption_dkk": 30.76,
+    "pending_usage": "billing may lag >24h; no precise pending total available, never treated as zero",
+    "remaining_known_usage_margin": "known existing project only, bounded new $2 plus existing seven-day storage far below remaining credit",
+    "hourly_gross_USD": 0.2730456762592465,
+    "max_4_25h_compute_IP_USD": 1.1604441241017975,
+    "new_gross_ceiling_USD": 2,
+    "ordinary_E2_PD_IP_Standard_Storage_covered": true,
+    "services_or_resources_added": false,
+    "disk_retention_due": "2026-10-21",
+    "prices_DKK": {
+      "4AF8-7C1F-39C4": 0.016445249,
+      "6AE1-525F-8B80": 0.657809999,
+      "C054-7F72-A02E": 0.032890499,
+      "CF4E-A0C7-E3BF": 0.14347882,
+      "D973-5D65-BAB2": 0.263123999,
+      "F449-33EC-A5EF": 0.019231272
+    },
+    "DKK_per_USD": 6.578099999996525,
+    "gates_passed_before_VM_wake": true
+  },
+  "baseline": "5e54538d1799e8d2538621729400f33fbaf017b9 /0.1.0.dev3 /seed11 /20 epochs /cutoff500 /fixed grouping",
+  "source_launcher_unchanged": true,
+  "data_truth_unchanged": true,
+  "arms": [
+    "raw_tnf_ten_depth",
+    "learned_tnf_ten_depth",
+    "raw_tnf_only",
+    "learned_tnf_only"
+  ],
+  "external_binners": [],
+  "new_parent": "scripts/e009_controls_phase.py retains stable hold PID, boot-relative outer clock and private artifact/status collection; actual watchdog verifies before release",
+  "local_parent_checks": {
+    "tests_pass": 3,
+    "child_program_and_GCS_calls": "substituted external boundaries; no fit executed",
+    "real_paths": "hold/release checks, clock refusal, failed launcher record, real JSON/tar readers/writers and checksum comparisons"
+  },
+  "native_watchdog_checks": {
+    "tests_passed": 2,
+    "cases": "actual Linux /proc live, normal0 and crash7 fixtures; shutdown boundary substituted; no host halt during tests",
+    "held_parent_real_live_check_passed": true
+  },
+  "truth_cloud_copy": {
+    "uri": "gs://dl-binner-archive-167650584170/e009/truth-v2-20261015-control-preparation-v1/e009-truth-v2-20261015-evidence-v1.tar.gz",
+    "sha256": "699cede72476a165bb3712d5368bd65ce1d9d543cc997b7604ff653d6c6dd761",
+    "bytes": 5218978,
+    "readback_verified": true,
+    "verified_utc": "2026-10-15T21:07:48.046559+00:00",
+    "upload_credit_gate": "cost-credit-admission.json",
+    "monthly_gross_storage_USD": 9.721104055643081e-05
+  },
+  "execution_source_commit": "cf7bf2a17eab0c5a2f70999d04e766af1e14f98a",
+  "source_sync": {
+    "Mac_normal_push": true,
+    "VM_clean_exact_commit": "cf7bf2a17eab0c5a2f70999d04e766af1e14f98a",
+    "VM_read_only_GitHub_key_unchanged": true,
+    "do_not_update_running_VM_source": true
+  },
+  "VM_start": "2026-10-15T14:10:04.207-07:00",
+  "VM_provider_policy": {
+    "automaticRestart": false,
+    "instanceTerminationAction": "STOP",
+    "maxRunDuration": {
+      "nanos": 0,
+      "seconds": "15300"
+    },
+    "onHostMaintenance": "MIGRATE",
+    "preemptible": false,
+    "provisioningModel": "STANDARD"
+  },
+  "actual_host_preflight": {
+    "CPUs": 8,
+    "RAM_bytes": 33646944256,
+    "filesystem_total_bytes": 316733652992,
+    "filesystem_free_bytes": 148207960064,
+    "filesystem_used_bytes": 168508915712,
+    "post_restore_free_bytes": 148126588928
+  },
+  "native_runtime_gate": {
+    "passed": true,
+    "complete_independent_numerical_distributions": {
+      "dl-binner": "0.1.0.dev3",
+      "filelock": "4.0.10",
+      "fsspec": "2026.9.0",
+      "jinja2": "3.1.6",
+      "markupsafe": "3.0.4",
+      "mpmath": "1.3.0",
+      "networkx": "3.4.2",
+      "numpy": "1.26.4",
+      "pip": "25.1.1",
+      "psutil": "6.0.0",
+      "setuptools": "65.5.0",
+      "sympy": "1.14.0",
+      "threadpoolctl": "3.5.0",
+      "torch": "2.2.2+cpu",
+      "typing-extensions": "4.16.0",
+      "wheel": "0.45.1"
+    },
+    "prefix": "/srv/dl_binner/experiments/e009/controls-v1-20261015T211004Z/env",
+    "base_python_stdlib_prefix": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315",
+    "numeric_imports_all_owned": {
+      "dl_binner": "/srv/dl_binner/experiments/e009/controls-v1-20261015T211004Z/env/lib/python3.12/site-packages/dl_binner/__init__.py",
+      "networkx": "/srv/dl_binner/experiments/e009/controls-v1-20261015T211004Z/env/lib/python3.12/site-packages/networkx/__init__.py",
+      "numpy": "/srv/dl_binner/experiments/e009/controls-v1-20261015T211004Z/env/lib/python3.12/site-packages/numpy/__init__.py",
+      "threadpoolctl": "/srv/dl_binner/experiments/e009/controls-v1-20261015T211004Z/env/lib/python3.12/site-packages/threadpoolctl.py",
+      "torch": "/srv/dl_binner/experiments/e009/controls-v1-20261015T211004Z/env/lib/python3.12/site-packages/torch/__init__.py"
+    },
+    "all_11_dev3_code_default_hashes_match": true,
+    "actual_runtime_record": {
+      "bytes": 2888,
+      "sha256": "d622311214bb9a092e3c27a3abffe5b6c844514a4f22ad6b7dd8608cd8620f98"
+    },
+    "pip_check_and_CLI_help_exit0": true,
+    "no_extra_scientific_smoke_or_fit_before_authorized_controls": true
+  },
+  "native_parent_checks": {
+    "tests_passed": 3,
+    "actual_json_tar_contracts": true,
+    "child_and_GCS_boundaries_substituted": true
+  },
+  "release": {
+    "phase_config": {
+      "bytes": 1610,
+      "sha256": "bcc4473953f6fd364fc351067421285af5d56918a562f12d8208b32f54a58543"
+    },
+    "released_utc": "2026-10-15T21:16:42.882495+00:00",
+    "watchdog_pid": 1975
+  },
+  "watchdog": {
+    "config": {
+      "process": {
+        "pid": 1975,
+        "start_ticks": 27468,
+        "command_sha256": "b84ae92f727b1fd714f4a34e1e9ebb04f20f2a2513606644bcf489a6381cf570"
+      },
+      "boot_id": "63cf3041-14ae-4ce2-82f8-5a1df18e8abc",
+      "workflow_root": "/srv/dl_binner/experiments/e009/controls-phase-20261015T211004Z",
+      "exit_grace_seconds": 60
+    },
+    "current_alive_observation": {
+      "boot_id": "63cf3041-14ae-4ce2-82f8-5a1df18e8abc",
+      "checked_utc": "2026-10-15T21:20:09.471450+00:00",
+      "decision": "workflow alive",
+      "expected_process": {
+        "command_sha256": "b84ae92f727b1fd714f4a34e1e9ebb04f20f2a2513606644bcf489a6381cf570",
+        "pid": 1975,
+        "start_ticks": 27468
+      },
+      "observed_process": {
+        "command_sha256": "b84ae92f727b1fd714f4a34e1e9ebb04f20f2a2513606644bcf489a6381cf570",
+        "pid": 1975,
+        "start_ticks": 27468
+      },
+      "shutdown": false,
+      "workflow_root": "/srv/dl_binner/experiments/e009/controls-phase-20261015T211004Z"
+    },
+    "systemd_timer": "e009-controls-watchdog-20261015.timer",
+    "timer_active": true,
+    "interval_seconds": 30,
+    "exit_grace_seconds": 60,
+    "not_enabled_for_future_boots": true,
+    "parent_service": "e009-controls-20261015T211004Z.service",
+    "parent_service_Restart": "no",
+    "parent_KillMode": "control-group",
+    "parent_KillSignal": "SIGINT",
+    "parent_systemd_RuntimeMax": "boot-relative four hours",
+    "source_restored_root_owned": true
+  },
+  "paths": {
+    "phase_root": "/srv/dl_binner/experiments/e009/controls-phase-20261015T211004Z",
+    "controls_root": "/srv/dl_binner/experiments/e009/controls-v1-20261015T211004Z",
+    "parent_log": "/srv/dl_binner/experiments/e009/controls-phase-20261015T211004Z/logs/parent-terminal.log",
+    "launcher_log": "/srv/dl_binner/experiments/e009/controls-phase-20261015T211004Z/logs/launcher.log",
+    "paired_log": "/srv/dl_binner/experiments/e009/controls-v1-20261015T211004Z/09-ten-depth.log",
+    "native_progress_log": "/srv/dl_binner/experiments/e009/controls-v1-20261015T211004Z/ten-depth/logs/invocation-20261015T211715-a33a0baf/01-features.native.log",
+    "private_archive_prefix": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z",
+    "completion_receipt_uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/completion.json",
+    "guest_attribute_query": "e009-controls/status"
+  },
+  "clock": {
+    "vm_boot_included_in_four_hours": true,
+    "preparation_GiB_charged_conservatively": 1,
+    "phase_clock_end_utc": "2026-10-16T01:10:04.207000+00:00",
+    "provider_STOP_latest_utc": "2026-10-16T01:25:04.207000+00:00",
+    "child_to_parent_collection_reserve_seconds": 180
+  },
+  "cost_to_observation": {
+    "status": "RUNNING",
+    "lastStartTimestamp": "2026-10-15T14:10:04.207-07:00",
+    "lastStopTimestamp": "2026-10-15T06:19:53.611-07:00",
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "15300"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "observed_utc": "2026-10-15T21:21:55.599122+00:00",
+    "priced_running_hours_to_observation": 0.19760892277777778,
+    "estimated_compute_IP_gross_USD_to_observation": 0.053956261954719545,
+    "phase_clock_end_utc": "2026-10-16T01:10:04.207000+00:00",
+    "provider_STOP_latest_utc": "2026-10-16T01:25:04.207000+00:00",
+    "not_final_invoice": true
+  },
+  "native_metadata_archive": {
+    "bytes": 6511,
+    "sha256": "ef2c9e2d22455ab3e68b9afb1ed3316b0759ad24ca9979cbf4f405994650f9e5",
+    "uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/startup-metadata.tar.gz",
+    "readback_verified": true
+  },
+  "early_connection": {
+    "first_IAP_attempt": "backend port22 not yet ready during boot; no remote commands ran",
+    "resolution": "serial log confirmed completed boot, then connected; no scientific stage retried"
+  },
+  "completed_controls_at_observation": 0,
+  "bin_quality_outcome": "bounded supplied-reference development diagnostics in controls-review.json; not MAG quality/final evaluation",
+  "next": "Prepare one fixed-encoder marker-conflict splitting test; no new execution or external tool",
+  "launch_observation": {
+    "observed_utc": "2026-10-15T21:20:13.981184+00:00",
+    "stage": "CONTROL_STAGE 09-ten-depth",
+    "native_step": "ten-depth 1/8 features; both partition outputs pending, TNF-only invocation queued",
+    "failure_reported": false,
+    "native_feature_PID": 2260,
+    "native_feature_CPU_time_seconds": 178,
+    "native_feature_CPU_percent_snapshot": 100,
+    "native_feature_RSS_KiB": 399212,
+    "interpretation": "CPU-active serial Python TNF feature preparation, not a blocked startup; 8 configured threads do not imply 8 CPUs here. No output-completion claim from parent heartbeat. No competing scientific workload observed.",
+    "filesystem_free_bytes": 146857697280,
+    "phase_result_present": false,
+    "outer_attempt_finished": false
+  },
+  "latest": {
+    "reviewed_utc": "2026-10-16T09:53:43.636743+00:00",
+    "provider_state": "TERMINATED",
+    "four_controls_accepted": true,
+    "review": "controls-review.json"
+  },
+  "completed_controls": 4,
+  "verified_completion": {
+    "closure_archive": {
+      "bytes": 447655,
+      "readback_verified": true,
+      "sha256": "50bd9ffda5a3fc4c01bf23e9d8a8065d9b97b9e2a86b76239e47699594b48725",
+      "uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/closure.tar.gz"
+    },
+    "cloud_collection_verified": true,
+    "control_archive": {
+      "bytes": 484269399,
+      "readback_verified": true,
+      "sha256": "3b3f50ba91f6552fb7c8b7b1b83d3d1a5ddec7f8771631e2dec95cd45e7199c3",
+      "uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/controls-evidence.tar.gz"
+    },
+    "control_checksum": {
+      "bytes": 91,
+      "readback_verified": true,
+      "sha256": "1fd0c7229c041e82cc98aa15a8c528181a094e19c7846715358d627b0b3e8d52",
+      "uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/controls-evidence.tar.gz.sha256"
+    },
+    "elapsed_since_VM_start_seconds": 6098.258437871933,
+    "four_arms_completed": true,
+    "launcher_result": {
+      "bytes": 382425,
+      "sha256": "037b46c7cc70c3d3f5024a2840219bd755dc78a3513cc0787089bbc73b4185e4"
+    },
+    "launcher_status": {
+      "collection": {
+        "archive": {
+          "bytes": 484269399,
+          "sha256": "3b3f50ba91f6552fb7c8b7b1b83d3d1a5ddec7f8771631e2dec95cd45e7199c3"
+        },
+        "filename": "controls-evidence.tar.gz",
+        "inventory": {
+          "bytes": 1249815,
+          "sha256": "96590021933f884171e771c9862a2dcc33fa4b54590ba0aae6c284539c4c1ed1"
+        },
+        "logical_member_bytes": 1249401871,
+        "regular_members": 8067
+      },
+      "four_arms_completed": true,
+      "status": "SUCCESS",
+      "wall_seconds": 5684.669387903
+    },
+    "phase_id": "controls-20261015T211004Z-cf7bf2a",
+    "source_commit": "cf7bf2a17eab0c5a2f70999d04e766af1e14f98a",
+    "status": "SUCCESS"
+  },
+  "shutdown": {
+    "lastStopTimestamp": "2026-10-15T15:55:19.426-07:00",
+    "status": "TERMINATED",
+    "no_new_VM_wake": true,
+    "post_exit_snapshot_not_exported": true
+  }
+}

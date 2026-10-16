@@ -1,0 +1,11 @@
+axis_index	sample_id	subject_id	depth_column	assembly_input
+0	sample_0	S1	cami3_toy_human_gut_short_read_sample_0	1
+1	sample_2	S2	cami3_toy_human_gut_short_read_sample_2	0
+2	sample_3	S3	cami3_toy_human_gut_short_read_sample_3	0
+3	sample_4	S4	cami3_toy_human_gut_short_read_sample_4	0
+4	sample_6	S5	cami3_toy_human_gut_short_read_sample_6	0
+5	sample_9	S6	cami3_toy_human_gut_short_read_sample_9	0
+6	sample_10	S7	cami3_toy_human_gut_short_read_sample_10	0
+7	sample_11	S8	cami3_toy_human_gut_short_read_sample_11	0
+8	sample_14	S9	cami3_toy_human_gut_short_read_sample_14	0
+9	sample_17	S10	cami3_toy_human_gut_short_read_sample_17	0

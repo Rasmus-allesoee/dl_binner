@@ -1,0 +1,109 @@
+{
+  "comebin_dependencies": {
+    "prefix": "/work/Home/dl_binner/e001/e001-gate0/envs/comebin",
+    "python_version": "3.13.14",
+    "freeze_path": "experiments/E009-competitive-benchmark/comebin-base-freeze.txt",
+    "freeze": {
+      "bytes": 2504,
+      "sha256": "6f1340afa1267746f4df80706c96b1a76429957847f98a72d0f051fadb53ab5d"
+    },
+    "evidence": "Accepted v8 exact numerical bytes/inventory reused by restore-only consumer; full per-tool distribution/origin probes and explicit external-input before/after hashes, without repeated whole-environment scans"
+  },
+  "mapping": {
+    "prefix": "/work/Home/dl_binner/e001/e001-gate0/envs/mapping",
+    "versions": {
+      "samtools": "1.24",
+      "strobealign": "0.17.0"
+    }
+  },
+  "amber": {
+    "prefix": "/work/Home/dl_binner/e001/e001-gate0/envs/amber",
+    "lock_reconciliation": {
+      "pip_freeze_sha256": "685d5ab9472fbcc5d0e212a6a09cfc3563ae4a4569cc3becf71e341faf1a1067",
+      "outside_prefix_entries": {
+        "easybuild": "5.3.1",
+        "easybuild-easyblocks": "5.3.1",
+        "easybuild-easyconfigs": "5.3.1",
+        "easybuild-framework": "5.3.1"
+      },
+      "direct_reference_versions": {
+        "packaging": "26.3",
+        "pip": "25.1.1"
+      },
+      "verified_prefix_inventory": {
+        "source_archive_sha256": "b00b14cc6665b6ff7a6c12fb8a0a284596ff75bebc5a4f923864fec64e7a6819",
+        "source_member": "environment-review/amber-clean.stdout",
+        "source_member_sha256": "59df159b7c3c2823e91664e1bcb19c6a0e4cadc39f72bef4e52e443c44fb10c3",
+        "distributions": {
+          "biopython": "1.87",
+          "bokeh": "3.8.2",
+          "contourpy": "1.4.0",
+          "cycler": "0.12.1",
+          "fonttools": "4.65.0",
+          "jinja2": "3.1.6",
+          "kiwisolver": "1.5.1",
+          "markupsafe": "3.0.3",
+          "matplotlib": "3.10.8",
+          "narwhals": "2.26.0",
+          "numpy": "2.0.1",
+          "packaging": "26.3",
+          "pandas": "2.2.2",
+          "pillow": "12.3.0",
+          "pip": "25.1.1",
+          "pyarrow": "23.0.1",
+          "pyparsing": "3.3.2",
+          "pysam": "0.23.3",
+          "python-dateutil": "2.9.0.post0",
+          "pytz": "2026.3.post1",
+          "pyyaml": "6.0.3",
+          "seaborn": "0.13.2",
+          "setuptools": "84.0.0",
+          "six": "1.17.0",
+          "tornado": "6.5.10",
+          "tzdata": "2026.4",
+          "wheel": "0.48.0",
+          "xyzservices": "2026.9.1"
+        }
+      },
+      "evidence": "E001 validation.md environment-review-resolved-2026-09-18: these four EasyBuild distributions were outside the prefix in the observed process and absent from the isolated inventory; the clean-prefix inventory records packaging 26.3 and pip 25.1.1."
+    },
+    "required_versions": {
+      "biopython": "1.87",
+      "bokeh": "3.8.2",
+      "jinja2": "3.1.6",
+      "matplotlib": "3.10.8",
+      "numpy": "2.0.1",
+      "pandas": "2.2.2",
+      "pyarrow": "23.0.1",
+      "seaborn": "0.13.2"
+    },
+    "source": "/work/Home/dl_binner/e001/e001-gate0/sources/AMBER_evaluation"
+  },
+  "amber_source_files": {
+    "LICENSE": "b53fc8c563c55cac57498b90b9226d489a066f292a07c680d8116e9b55300a54",
+    "cami_amber/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cami_amber/amber_html.py": "1255e9602baa46b99a55133c708b922ddc50f9cb53e5916b02e5a0d9f8a9c34c",
+    "cami_amber/binning_classes.py": "6ff193ee4679e675483c3da03723b76ae6e1e5d025dfa9893defc5384efdc780",
+    "cami_amber/evaluate.py": "0a9f0aecc6ed4e7771a3498555dea42949af74c00184cf239624e7efbf394743",
+    "cami_amber/plot_by_genome.py": "6c95b6a0b65a819a44a167c9a165f502aa221e578c7de4155cef13815df131bb",
+    "cami_amber/plots.py": "9dba639c5e5da4592ad89c0e33f6a27cc2253aceb7dd277d14ae4e2e728a558b",
+    "cami_amber/precision_recall_per_bin.py": "5c566db3cf345e34418d5cabfe4f78ecdcf8bb21a7f40a70d89109a987691cd7",
+    "cami_amber/unifrac_distance.py": "7fd31cc7189b159e3489858068d57ee841220941c9ce9a5ca56001bfe2fea243",
+    "cami_amber/utils/EMDUnifrac.py": "eb8f00e7ab70e39d831b9eeb157a4f938e1b8ace54937bed6cdac1ec857aaf93",
+    "cami_amber/utils/ProfilingTools.py": "775e4898fe5ac0bf98b938dfb08ae107f597021aada5cb0f8fb975ebe4092784",
+    "cami_amber/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cami_amber/utils/add_length_column.py": "dfd2e5e5674fe81658baf0902b9db8528ba75f2da2a9834e158caca610024362",
+    "cami_amber/utils/argparse_parents.py": "108cd06ba7fcc9e9579db2e0e1f62dd1bb44a5efa9e2f3473b7bda7e3b26c943",
+    "cami_amber/utils/convert_fasta_bins_to_biobox_format.py": "ea3502e0bf4c7b328eef6078f9e70b52424bc2bf825b86c8c1e7360430c01006",
+    "cami_amber/utils/labels.py": "59a2c230108f4a14cac42a86d0b1d222d5b3bcda302bb8f5b346c985636dc720",
+    "cami_amber/utils/load_data.py": "244e519bc9937b7facfc36f67d872c0195d448606f6ed49e5b74bf32ee382cd2",
+    "cami_amber/utils/load_ncbi_taxinfo.py": "da7194d2ece2abb5e91d983a8dda88394891801eb94e5e52eba6a0465f3a3fc7",
+    "cami_amber/version.py": "226cd8408313d16241aac58f5845efa76e21d0626ae877f34a0192104ba8c5cb",
+    "requirements.txt": "2df09e4973480e7ba3940ecd81226acd9c5182e5a4d945aef0f5bfd05ad7aba1"
+  },
+  "checkm_payloads": {
+    "hmms/checkm.hmm": "415f44e98f678db56f68d6c787d0efc8681e6158d9fd5ee54dbdbbc6f8a82541",
+    "pfam/Pfam-A.hmm.dat": "efdc000ebd77c0594126909f404b0a0a4fd1ada6cdab1a1caa91c069be81ed3b",
+    "pfam/tigrfam2pfam.tsv": "6bde12aaa124e0c9ded823edcf01255486419402224ffaffc02b6443eeaee55f"
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "record": "E009",
+  "date": "2026-10-16",
+  "status": "Four unchanged controls completed and reviewed; original data DAG remains failed with separately accepted data/truth",
+  "scientific_outcome": "development diagnostic results in controls-review.json; no product-feature-family or SOTA conclusion",
+  "execution_ready": false,
+  "authorized_current_task": "completed-control inspection and bounded local evaluation only; no refit, retry, VM wake or external binner",
+  "dataset": {
+    "name": "CAMI III Toy Longitudinal Human Gut",
+    "read_modality": "short",
+    "role": "read-derived reusable development assembly with cross-subject coverage; no final evaluation or independent-genome claim",
+    "subject": "S1",
+    "assembly_sample": 0,
+    "depth_samples": [
+      0,
+      2,
+      3,
+      4,
+      6,
+      9,
+      10,
+      11,
+      14,
+      17
+    ],
+    "ordered_depth_columns": [
+      "cami3_toy_human_gut_short_read_sample_0",
+      "cami3_toy_human_gut_short_read_sample_2",
+      "cami3_toy_human_gut_short_read_sample_3",
+      "cami3_toy_human_gut_short_read_sample_4",
+      "cami3_toy_human_gut_short_read_sample_6",
+      "cami3_toy_human_gut_short_read_sample_9",
+      "cami3_toy_human_gut_short_read_sample_10",
+      "cami3_toy_human_gut_short_read_sample_11",
+      "cami3_toy_human_gut_short_read_sample_14",
+      "cami3_toy_human_gut_short_read_sample_17"
+    ],
+    "subject_table": {
+      "path": "experiments/E009-competitive-benchmark/sample-subject-mapping.tsv",
+      "bytes": 273,
+      "sha256": "dfe7c0b65649148c48c32b38c33f63f1b0ef030ca00af49b180906954349bc04"
+    },
+    "sampling": "full published read samples; no subsampling or source-genome selection",
+    "assembly": "MEGAHIT 1.2.9 sample 0 default metagenome recipe; --min-contig-len 200; supplied contigs/gsa both verified gold-standard reconstructions",
+    "assembly_hash": null,
+    "read_payload_sha256s": null,
+    "source_reference_payload_sha256": "9a0373b6a42f7322583b1c091059b513d8d62bd5be2e57244ac19b50b1f4f69a",
+    "provider_taxonomy": "NCBI 2025-08-01 per toy dataset page",
+    "depth_selection": "first listed sample of each of ten corrected subjects, chosen from identifiers only: 0,2,3,4,6,9,10,11,14,17; chronological time point not asserted",
+    "depth_axes_manifest": "experiments/E009-competitive-benchmark/depth-samples.tsv",
+    "scope_limit": "one S1 sample-0 assembly with cross-subject depth; no second assembly, coassembly, longitudinal-pair ablation or donor generalization claim"
+  },
+  "baseline": {
+    "source_commit": "5e54538d1799e8d2538621729400f33fbaf017b9",
+    "package": "0.1.0.dev3",
+    "training": {
+      "path": "src/dl_binner/resources/training.json",
+      "bytes": 215,
+      "sha256": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5"
+    },
+    "seed": 11,
+    "min_length_bp": 500,
+    "loader_workers": 0,
+    "arms": [
+      "learned_tnf_ten_depth",
+      "raw_tnf_ten_depth",
+      "learned_tnf_only",
+      "raw_tnf_only"
+    ],
+    "source_and_science_changed": false,
+    "clustering": {
+      "k": 5,
+      "mutual_positive_cosine": true,
+      "greedy_modularity_resolution": 1,
+      "min_community_contigs": 3,
+      "query_block": 128,
+      "oracle_K": null
+    },
+    "primary": "learned_tnf_ten_depth",
+    "diagnostics_are_product_alternatives": false
+  },
+  "external_tools": {
+    "core": [],
+    "conditional": [],
+    "deferred": [
+      "DCVBin CPU/CPT/pair-depth adaptation exceeds bounded preparation",
+      "LorBin long-read/models",
+      "CompleteBin full E009 max-50: performance/cost value of information does not justify current full run",
+      "COMEBin native 120-candidate grid: reuse E001/source evidence unless a new-assembly decision justifies full cost",
+      "SCGBinner full 200 epochs: first establish short-read marker availability and a hard-negative question"
+    ],
+    "configs_per_tool": 1,
+    "native_schedule_shortening": "none executed; CompleteBin max-50 patch retained only as deferred locked provenance",
+    "admission_before_scoring": true,
+    "exact_runtime_payload_locks": "native-lock.json, runtime-baseline.json, utilities-linux-lock.json",
+    "replacement_on_failure": false,
+    "superseded_20261014_shortlist": {
+      "core": [
+        "SemiBin2 short-read self-supervised",
+        "MetaCAT core CPU",
+        "SCGBinner native",
+        "COMEBin native 120-candidate grid"
+      ],
+      "conditional": [
+        "CompleteBin E009 max-50 modified configuration"
+      ],
+      "source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57"
+    },
+    "recommended_later_first": "SemiBin2 native short-read self-supervised, only after a decision-specific full-schedule cost approval",
+    "recommended_later_conditional": "MetaCAT core CPU if retained seed/affinity/grouping evidence can change a specific refinement decision; prefer matched own-method test when more direct",
+    "owner_authorized_fits": []
+  },
+  "evaluation": {
+    "truth_inputs_separate": true,
+    "alignment_identity_min": 0.99,
+    "alignment_bp_min": 200,
+    "uniquely_attributable_contig_fraction_min": 0.95,
+    "bin_confirmed_purity_min": 0.95,
+    "reference_min_bp": 200000,
+    "bin_min_bp": 200000,
+    "reference_recovery_thresholds": [
+      0.5,
+      0.9
+    ],
+    "reference_denominator": "all cellular bacterial/archaeal source genomes present in sample 0 read-origin truth with >=200kb full reference length; separately simulated plasmids/viruses/host/eukaryotes excluded only from primary recovery denominator",
+    "completeness": "unique source coordinate union in best qualifying bin / entire provided source reference length",
+    "purity": "uniquely supported query bp for genome / all exported bin bp, including unscored and non-target DNA",
+    "assembled_conditional_denominator": "unique confirmed reference union represented anywhere in full assembly",
+    "external_AMBER_view": ">=95% whole query length uniquely attributable to one genome; limited contig truth view labelled explicitly",
+    "AMBER_source_reuse": "f8b3a601043d13fc4227d5691c13561eb4490e50; verify healthy runtime read-only",
+    "filter_tail_percentage": 0,
+    "strata_lower_bounds_bp": [
+      1,
+      500,
+      768,
+      1000,
+      2500,
+      10000
+    ],
+    "diagnostic_query_cap_per_stratum": 128,
+    "neighbor_k": [
+      1,
+      5,
+      10
+    ],
+    "truth_tuning": false,
+    "marker_selection_is_not_independent_validation": true,
+    "real_assembly_adapter_status": "e009-truth-v2 conservative supplied-reference truth admitted from retained native PAFs after independent local review",
+    "alignment_reference_universe": "prospective conservative 311-file retained sample-0 metadata universe, all 7688 released replicon records; globally reconcile <=500Mb reference batches; independently reconcile positive read origins, source grouping and cellular target taxonomy before fitting/scoring",
+    "alignment_command_contract": [
+      "minimap2",
+      "-x",
+      "asm5",
+      "-P",
+      "-c",
+      "--eqx",
+      "-m",
+      "100",
+      "-s",
+      "100",
+      "-n",
+      "2",
+      "-t",
+      "ALLOCATION_MINUS_ONE",
+      "ALL_SOURCE_REFERENCES",
+      "ASSEMBLY"
+    ],
+    "alignment_sensitivity_limit": "heuristic aligner; all emitted qualifying competing chains retained, not proof of exhaustive homology",
+    "reference_repeat_ambiguity": "unique genome query support may count toward purity; ambiguous source-coordinate mapping cannot inflate completeness",
+    "aligner_cpu_accounting": "minimap2 -t N-1 plus its one I/O thread; default indexing at most three threads; no -2",
+    "reference_grouping_and_target_taxonomy_admitted": true,
+    "truth_version": "e009-truth-v2",
+    "truth_admission": "truth-v2-admission.json",
+    "ambiguous_base_policy": "truth-v2-policy.json; qualifying nn>0 query spans globally quarantined; identity thresholds unchanged",
+    "canonical_reference_axis": "7607 canonical molecules/records from all 7688 competitive PAF aliases; circular copies counted once; actual observed simulator genome IDs, separate pASV/HOST and zero-origin competitors"
+  },
+  "resources": {
+    "provider": "GCP Iowa regular CPU VM; prospective only",
+    "data_stage": {
+      "machine_type": "e2-standard-8",
+      "allocated_vcpus": 8,
+      "allocated_ram_gib": 32,
+      "cumulative_driver_hours_ceiling": 24,
+      "provider_max_run_hours_proposed": 25,
+      "stall_seconds": 1800,
+      "working_rss_fraction": 0.82,
+      "megahit_memory_fraction": 0.75,
+      "free_disk_reserve_gib": 25,
+      "max_concurrent_tools": 1,
+      "proposed_work_disk_gib": 300,
+      "proposed_gross_vm_plus_ip_usd_per_hour": 0.27304568,
+      "gross_compute_ip_ceiling_usd": 6.826142,
+      "gross_boot_plus_work_usd_per_730h_month": 31.2,
+      "storage_review_days_after_growth": 7,
+      "phase_spend_envelope_usd_proposed": 20,
+      "budget_assumptions": "25h VM/IP plus <=7d 300GiB work/30GiB boot retention (~$14.01 total), compact archive/operations/reserve; no allowances/tax/FX included; localized credit quote required",
+      "includes_setup_hashing_failures_and_child_work": true,
+      "approved_for_execution": true,
+      "required_quota_increase": {
+        "SSD_TOTAL_GB": {
+          "current": 250,
+          "needed": 300,
+          "submitted": true,
+          "granted": 300,
+          "case_id": "a11cf91a-b76b-4c95-9f79-7dc7538f3611"
+        }
+      },
+      "provider": "GCP Iowa regular e2-standard-8; credit/price gate passed"
+    },
+    "fit_or_score_monetary_budget": "unapproved; reassess after measured data-stage outputs, CompleteBin storage/RAM and full-schedule affordability",
+    "eligible_contig_scale_stop": 100000,
+    "assembly_bp_scale_stop": 600000000,
+    "local_checks": {
+      "threads": 4,
+      "loader": 0,
+      "rss_bytes": 8000000000,
+      "seconds": 7200,
+      "fixture_contigs": 32,
+      "fixture_bp": 600000
+    },
+    "estimates_are_not_measurements": true,
+    "auto_increase_or_retry": false,
+    "historical_ucloud_budget": "docs/history/E009_UCLOUD_OPERATIONS.md#superseded-two-depth-resource-protocol"
+  },
+  "next": "inspect current control completion and shutdown, then retained local diagnostics; no retry/refit/new VM spending",
+  "unexecuted": [
+    "all community binner fits and E009 quality scores",
+    "architecture/feature changes and new seeds",
+    "main merge/publication"
+  ],
+  "owner_preflight_prepared": "historical v14 completed and accepted; do not run retired owner packet",
+  "scientific_execution_ready": false,
+  "failed_native_runtime_recovery": {
+    "receipts": [
+      "linux-preflight-v10.json",
+      "linux-preflight-v14.json"
+    ],
+    "locked_recipes": "failed-paths-lock.json",
+    "status": "all five tiny native contracts accepted on UCloud without replay",
+    "scientific_execution_admitted": false,
+    "gcp_runtime_admitted": false
+  },
+  "gcp_paths": {
+    "repo": "/srv/dl_binner/repo",
+    "data_stage": "/srv/dl_binner/experiments/e009/data-stage-v1",
+    "envs": "/srv/dl_binner/experiments/e009/envs",
+    "archive": "/srv/dl_binner/archive"
+  },
+  "gcp_data_stage": {
+    "plan": "gcp-data-plan.json",
+    "lock": "gcp-data-linux-lock.json",
+    "workflow": "workflows/e009-data/Snakefile",
+    "launcher": "scripts/e009_gcp_run.py",
+    "local_receipt": "gcp-local-validation.json",
+    "truth_review_dependencies": [
+      "minimap2 2.30 ambiguous-base CIGAR/block contract repair",
+      "fresh simulator-genome/circular-molecule coordinate derivation",
+      "full provided-reference denominator, cellular target and competitor/ambiguity validation"
+    ],
+    "executed_source_commit": "5fec4e1d1700c64c4bdd9945bad4e116ade73c57",
+    "actual_receipt": "gcp-data-observed.json",
+    "actual_outcome": "failed final PAF parser, accepted reusable feature data",
+    "population_review": "truth-population-review.json",
+    "next_diagnostic_proposal": "diagnostic-controls-plan.json",
+    "no_fits_authorized": true
+  },
+  "value_of_information": {
+    "purpose": "improve our own high-performing, potentially SOTA binner",
+    "current_implementation": "accepted simple software prototype and immutable comparator; competitive performance not established",
+    "data_reusable_independently_of_native_fits": true,
+    "complete_shortlist_is_implementation_gate": false,
+    "one_dataset_cannot_select_or_reject_product_feature_families": true,
+    "mechanism_tests": "one prospectively justified component, matched immutable comparator and additional prospectively selected development/validation data",
+    "decision": "docs/decisions/D013-first-comparative-benchmark.md",
+    "next_after_data": "separately approved unchanged controls, then one mechanism test; no immediate external tool"
+  }
+}

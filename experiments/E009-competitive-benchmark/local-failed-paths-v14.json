@@ -1,0 +1,308 @@
+{
+  "record": "E009",
+  "date": "2026-10-10",
+  "status": "corrected failed-path native Mac contracts passed; corrected Linux installs/entry points pending",
+  "source_commit": "9c86c276a0d45f124c7cdcaed7f2cb387ebbca62",
+  "exact_packet": {
+    "bytes": 6730975,
+    "sha256": "c051c8df435841a97e781d1fc00e2410ed16f4a07d66d9185add046704d810bc"
+  },
+  "command_sha256": "daf33b20c7c49d93f6178620f20238c136945e186f0fe98ee9eb9281f8eca221",
+  "fixture": {
+    "contigs": 11,
+    "bp": 59232,
+    "reference": {
+      "path": "artifacts/e009-preparation/transfer-v14-final/e009-preflight-v14/input/assembly.fna",
+      "file": {
+        "bytes": 59298,
+        "sha256": "7c36e9dae451d73a44025054900ddee31377b2b973c36a4881f6d57b0e6631bb"
+      }
+    }
+  },
+  "positive_checks": {
+    "exact_owner_packet_and_bash": {
+      "path": "artifacts/e009-preparation/failed-paths-v14/owner-qa/passed.json",
+      "file": {
+        "bytes": 7899,
+        "sha256": "2acd428d1a0af320094243e42a0f33fb10bcf1e8300706391e80bf486e15f6f4"
+      }
+    },
+    "harness": {
+      "path": "artifacts/e009-preparation/failed-paths-v14/owner-qa.py",
+      "file": {
+        "bytes": 6036,
+        "sha256": "78bade47d7f4e379c18cc02a5bcf2cecdb1b279205709f27a2fdb9c9bece2a93"
+      }
+    },
+    "terminal": {
+      "path": "artifacts/e009-preparation/failed-paths-v14/owner-qa-terminal.log",
+      "file": {
+        "bytes": 24439,
+        "sha256": "217db383996ba40233f3e16231e47eef90eeae9baf949f2acf567f3e1d5c4b1b"
+      }
+    },
+    "scgbinner": {
+      "path": "artifacts/e009-preparation/failed-paths-v14/owner-qa/retained-attempt/scgbinner-contract/passed.json",
+      "file": {
+        "bytes": 3861,
+        "sha256": "0fe68d7de8a4bd64ee5a0e390d0a8edccd98473667d091da9e784a89d23a02fe"
+      }
+    },
+    "scgbinner_features": {
+      "ids": [
+        "c10",
+        "c06",
+        "c07",
+        "c08",
+        "c09"
+      ],
+      "model_training": "not run; max200 native schedule retained",
+      "shapes": [
+        [
+          5,
+          138
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          136
+        ],
+        [
+          5
+        ]
+      ]
+    },
+    "comebin": {
+      "path": "artifacts/e009-preparation/failed-paths-v14/owner-qa/retained-attempt/comebin-contract/passed.json",
+      "file": {
+        "bytes": 3663,
+        "sha256": "28b8700e61f5fff110cc3542211f500928e40671e7e12ece30056121b876b8cb"
+      }
+    },
+    "comebin_axes": {
+      "path": "artifacts/e009-preparation/failed-paths-v14/owner-qa/retained-attempt/comebin-contract/features.json",
+      "file": {
+        "bytes": 3222,
+        "sha256": "e5bcf6284748b4012d3975e3b7620a34b3ef957cc847654debcf6b4f16c2ba5b"
+      }
+    },
+    "checkm_help": {
+      "path": "artifacts/e009-preparation/failed-paths-v14/owner-qa/retained-attempt/comebin-contract/checkm-readonly-help.log",
+      "file": {
+        "bytes": 3640,
+        "sha256": "fc8b13140573991532e0c1bd4e1b8c9602554855091883d92fbdf4b88c054e09"
+      }
+    },
+    "checkm_help_exit": {
+      "argv": [
+        "/private/tmp/e009-v14-uqnzym51/owner/native-preflight-wc_j_5ax/wrappers/checkm",
+        "lineage_wf",
+        "-h"
+      ],
+      "cwd": null,
+      "error": null,
+      "exit_code": 0,
+      "seconds": 3.75877232599305
+    },
+    "conda_identity": {
+      "scgbinner": {
+        "identity_set_matches": true,
+        "packages": 111,
+        "prefix": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/scgbinner-cpu-mac-v4",
+        "scope": "exact Conda name/version/build records; payloads verified preinstall, no blanket postinstall file hashes"
+      },
+      "checkm": {
+        "identity_set_matches": true,
+        "packages": 76,
+        "prefix": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-preparation/envs/checkm-cpu-mac-v3-final",
+        "scope": "exact Conda name/version/build records; payloads verified preinstall, no blanket postinstall file hashes"
+      }
+    },
+    "independent_python_origins": {
+      "scgbinner": {
+        "path": "artifacts/e009-preparation/failed-paths-v14/owner-qa/retained-attempt/stages/scgbinner-owned-isolated-probe.log",
+        "file": {
+          "bytes": 21021,
+          "sha256": "2ad7c43e45150a7deafb6795d733c2a1c578af52c63e1b31dd14174edb2782b4"
+        }
+      },
+      "checkm": {
+        "path": "artifacts/e009-preparation/failed-paths-v14/owner-qa/retained-attempt/stages/checkm-owned-isolated-probe.log",
+        "file": {
+          "bytes": 13598,
+          "sha256": "370eeebe052f0744343d1820e522b2b4cab6203035d8626aa6e550d5ee3d4b03"
+        }
+      }
+    },
+    "native_augmentation_api": {
+      "model_training": false,
+      "n_views": 6,
+      "native_functions": [
+        "run_gen_augfasta",
+        "run_gen_coverage"
+      ],
+      "parser": "actual pinned arguments AST with real constants",
+      "pool_workers": 3,
+      "seed": null
+    },
+    "same_linux_checkm_cli_body": {
+      "linux_conda_cli_member": "python-scripts/checkm",
+      "bytes": 56599,
+      "sha256": "fdaed3caed31609322c8ca42166cabfc20d97202683739f99e8a54596e1e73d8",
+      "same_body_as_installed_mac_wheel": true,
+      "global_help_disabled": true,
+      "lineage_command_help_default": true
+    },
+    "all_conda_torch_thread_probe": {
+      "path": "artifacts/e009-preparation/failed-paths-v11/scg-all-conda-thread-probe.log",
+      "file": {
+        "bytes": 49,
+        "sha256": "c900b74ff5e8483ccebd8e40909ec5789d1b3f5dc091e5fe489e76423c08daec"
+      }
+    },
+    "unit_suite": {
+      "tests": 53,
+      "seconds": 39.033,
+      "log": {
+        "path": "artifacts/e009-preparation/failed-paths-v13/unit-operational.log",
+        "file": {
+          "bytes": 32517,
+          "sha256": "378a9615d6576304c2b87e61e10ced57b45ef9a11b2193405e2558e8eb90f2b7"
+        }
+      }
+    },
+    "docs_check": {
+      "path": "artifacts/e009-preparation/failed-paths-v13/docs-operational.log",
+      "file": {
+        "bytes": 727,
+        "sha256": "b41504a928b88662fa9ac80014a7f6685f68f89642635b82f43369f38442e4a1"
+      }
+    }
+  },
+  "limits": {
+    "cpu_threads": 4,
+    "loader_workers": 0,
+    "rss_bytes": 8000000000,
+    "work_seconds": 1800,
+    "outer_harness_seconds": 2100
+  },
+  "actual": {
+    "driver_seconds_through_collection": 128.94645460220636,
+    "outer_harness_seconds": 145.0418140120164,
+    "outer_peak_sampled_rss_bytes": 665939968,
+    "outer_sampled_cpu_seconds": 146.11,
+    "retained_logical_bytes": 738967,
+    "members": 122,
+    "scope": "Mac local harness measurements; no UCloud cost or Linux cold-install projection",
+    "return_archive": {
+      "bytes": 136064,
+      "sha256": "edb0d63daf2c03cbbd5fd4c924fb98dc7b9c497024ca2d5d5537393fc1868dfe"
+    }
+  },
+  "preservation": {
+    "prior_receipts_unchanged": true,
+    "only_two_failed_contracts_executed": true,
+    "not_scheduled": [
+      "semibin",
+      "metacat",
+      "completebin",
+      "assembly",
+      "mapping",
+      "truth",
+      "AMBER/R95",
+      "source_genome_acquisition/catalog",
+      "community_fit/scoring"
+    ]
+  },
+  "rejected_local_packets": [
+    {
+      "packet": {
+        "path": "artifacts/e009-preparation/transfer-v11-final/e009-preflight-v11.tar.gz",
+        "file": {
+          "bytes": 6728460,
+          "sha256": "71af51f526dfd3d441f1cdf388e458610fdc642fbf9f720166d18a474f331187"
+        }
+      },
+      "status": {
+        "path": "/private/tmp/e009-v11-hzbpz4jc/owner/native-preflight-2jjrselw/status.json",
+        "file": {
+          "bytes": 3209,
+          "sha256": "11a768061e96767918b0daf1a040241b6d34c965ce88fc789a3685053bfd6a69"
+        }
+      },
+      "scope": "local native harness failure, preserved; not owner-run Linux or scientific evidence",
+      "failure": "SCGBinner mixed-stack native exit-11; old Mac COMEBin training AMP import unavailable",
+      "return": {
+        "path": "/private/tmp/e009-v11-hzbpz4jc/owner/transfer/native-preflight-2jjrselw-return.tar.gz",
+        "file": {
+          "bytes": 31639,
+          "sha256": "2028974a2959c1e934ef21e9f34a3d74d07714dfaa4558f138f84ab27010e0f6"
+        }
+      }
+    },
+    {
+      "packet": {
+        "path": "artifacts/e009-preparation/transfer-v12-final/e009-preflight-v12.tar.gz",
+        "file": {
+          "bytes": 6730716,
+          "sha256": "d65f48bfa0f67ffeee8baa4734b9d7ec00f88e03f0ae0c6801556bf05fdb84f2"
+        }
+      },
+      "status": {
+        "path": "/private/tmp/e009-v12-cp6q1qzz/owner/native-preflight-v5bsc3vz/status.json",
+        "file": {
+          "bytes": 3292,
+          "sha256": "81e79e7ad871950395baa2e01e6963008fa0386cc9f938cf5e18eabd2b4873e3"
+        }
+      },
+      "scope": "local native harness failure, preserved; not owner-run Linux or scientific evidence",
+      "failure": "SCGBinner passed; complete CheckM unsupported global --help exited2",
+      "return": {
+        "path": "/private/tmp/e009-v12-cp6q1qzz/owner/transfer/native-preflight-v5bsc3vz-return.tar.gz",
+        "file": {
+          "bytes": 135507,
+          "sha256": "490603baa747f2588b3cec51df3c86270fa51be0aec285e62d3f57f7d4e1a4bc"
+        }
+      }
+    }
+  ],
+  "observer_regression": {
+    "negative_log": {
+      "path": "artifacts/e009-preparation/failed-paths-v11/unit-second.log",
+      "file": {
+        "bytes": 36279,
+        "sha256": "60b3e989fe39fba0adf01b6bf2bf1ef34be2462f2f5b76784dc32b1fbb4a4a91"
+      }
+    },
+    "cause": "Late SIGUSR1 after faulthandler teardown killed an otherwise completed probe (-30). Restore ignore before registration; actual signal-restoration plus active hang dumps pass in final53 tests."
+  },
+  "explicit_local_substitutions": [
+    "Owned Intel Mac Conda SCGBinner package lock instead of Linux packages; actual offline/copy installer tested separately",
+    "Complete official CheckM1.2.3 wheel on owned matched Mac Conda Python dependencies; Linux noarch CLI body and missing-module bytes inspected and identical",
+    "Retained real Mac BAM byte identities override compression/header differences; exact reference bytes unchanged",
+    "Healthy lexical Mac COMEBin Torch2.2 dependency runtime; accepted v10 Linux full help reused, actual feature API/parser executed"
+  ],
+  "linux_unverified": [
+    "Full independent Linux SCGBinner/CheckM Conda install",
+    "Owned Linux HMMER/Prodigal/pplacer entry points",
+    "Eight-CPU native features and Linux complete CheckM wrapper",
+    "New COMEBin binding to accepted restored numerical chunks"
+  ],
+  "not_claimed": [
+    "pplacer/lineage fit",
+    "full-community training/120-candidate E009 affordability",
+    "E009 bin quality/scores",
+    "near-genome or unseen-pretraining generalization"
+  ],
+  "previous_positive_v13": {
+    "path": "artifacts/e009-preparation/failed-paths-v13/maintained-local-review-draft.json",
+    "file": {
+      "bytes": 10660,
+      "sha256": "b21aea911581eeddee5a542299496d12863a3efa07950582a5e11900cc7f8b7c"
+    }
+  },
+  "linux_package_inventory": "linux-package-inventory-v14.json"
+}

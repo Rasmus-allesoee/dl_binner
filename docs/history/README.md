@@ -28,3 +28,11 @@ Agent behavior and document interpretation are defined in:
 The project is research-driven and intentionally dynamic. Current research plans and decisions should evolve as evidence accumulates.
 
 If a historical document conflicts with newer project guidance or with research evidence, prefer the newer guidance and evidence.
+
+## Archived cloud operations
+
+- [UCloud agent/research operating guidance](UCLOUD_OPERATIONS.md): archived 2026-10-13 after SDU access deactivation.
+- [E009 UCloud v14 command](E009_UCLOUD_OPERATIONS.md): prepared/executed provenance, not an active entry point.
+
+Provider-specific instructions can be archived here while experiment records and
+accepted receipts retain their canonical locations and source history.

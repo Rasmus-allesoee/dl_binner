@@ -1,6 +1,6 @@
 # Working with the Research Record
 
-Established: 2026-09-16. Updated: 2026-09-18. This is the operating convention; [D001](decisions/D001-research-record.md) records its rationale.
+Established: 2026-09-16. Updated: 2026-10-14. This is the operating convention; [D001](decisions/D001-research-record.md) records its rationale.
 
 ## Sources of truth
 
@@ -58,8 +58,8 @@ For a run, retain the executable source commit, actual resolved arguments, envir
 
 - Track code, protocols, actual small configurations/manifests, analysis scripts, compact result tables/figures, decisions, and conclusions.
 - Keep raw sequences, alignments, checkpoints, bulk embeddings, and temporary run outputs in external storage or ignored `data/raw/`, `data/processed/`, `artifacts/`, `runs/`, and `scratch/` locations. These directories need not exist before use.
-- Give retained external artifacts a locator, checksum, owner/storage location, and recovery method. An ignore rule is not a backup. Preserve irreplaceable artifacts before temporary UCloud access ends.
-- Before removing a large intermediate, record whether it is regenerable and what evidence would be lost. Keep enough output to recheck negative conclusions as well as positive ones. Removing raw data or irreplaceable outputs is an owner decision.
+- Give retained external artifacts a locator, checksum, owner/storage location, and recovery method. An ignore rule is not a backup. Preserve irreplaceable artifacts before cloud access or credits expire; old UCloud locators are now inaccessible, not deleted.
+- Before removing a large intermediate, record its identity/size, whether it is regenerable and what evidence would be lost. Keep compact diagnostic logs, metrics, exit causes and provenance for failures, then prune obsolete regenerable bulk when no longer useful under the owner's storage-minimization direction. Accepted final evidence and irreplaceable inputs remain protected; removing them is an owner decision. No old UCloud files may be deleted.
 - Keep local paper/tool caches under `agent_context/`. Our interpretation and provenance are versioned; downloads are not vendored as project software. Replace an inspected cache only after recording its identity.
 
 ## Git and GitHub
@@ -72,21 +72,50 @@ Before finishing substantial work, inspect the diff, run appropriate checks, upd
 
 When a GitHub remote is established, use issues for bounded work or unresolved implementation problems, and PRs for substantial reviewable changes. Link `Q`/`H`/`D`/`E` identifiers. Close issues with a link to the durable record, including negative outcomes. Use milestones only for actual deliverables, tags for verified reproducible states, and releases plus an appropriate archive for material supporting a paper. Introduce automated checks when there is a remote and a useful check to run; do not require elaborate labels or project boards now.
 
-Repository creation, visibility, licensing, and first publication are separate owner choices when publication is requested. Local work continues without them. No remote, public repository, CI service, or publication was created during foundation setup. Before first push, review source-paper/thesis packaging and the full history: an ignore rule or `git rm --cached` does not remove files from earlier commits. See [D001's clarification](decisions/D001-research-record.md#source-packaging-clarification-2026-09-17); do not rewrite history without owner agreement.
+Repository creation, visibility, licensing, and first publication are separate owner choices when publication is requested. Local work continues without them. That no-remote/CI statement describes foundation setup only; the current private GitHub/CI and GCP workspace are already established in STATE/D014. Do not repeat repository setup or accepted tests merely to adopt a new provider. Before first push, review source-paper/thesis packaging and the full history: an ignore rule or `git rm --cached` does not remove files from earlier commits. See [D001's clarification](decisions/D001-research-record.md#source-packaging-clarification-2026-09-17); do not rewrite history without owner agreement.
 
-## Working on UCloud
+## Working on cloud compute
 
-Owner preferences clarified 2026-09-21: use Snakemake when execution grows into
-a multi-stage research workflow, keeping tested helpers as rule implementations.
-Do not retrofit already completed preflights for ceremony. Record actual allocated
-vCPU/RAM explicitly, distinguish runtime expectations from timeout ceilings, and
-preserve raw results with dated accounting corrections rather than rewriting them.
+The owner selected GCP on 2026-10-13 because SDU/UCloud is inaccessible. Current
+setup and access are in [CLOUD](CLOUD.md); old Terminal/Slurm/transfer guidance is
+in [historical operations](history/UCLOUD_OPERATIONS.md). Old experiment operations,
+commands and receipts retain historical meaning, not authorization to rerun.
 
-Codex does not operate UCloud. For each relevant experiment, prepare a tested local smoke check, a job command or script, configuration, expected outputs, approximate resource needs, and a collection/checksum command. The owner runs it. Do not mark a run complete until returned outputs have been inspected. Document queue failures, incomplete runs, and unavailable outputs explicitly.
+Verify billing/credits/eligible products and full resource costs before cloud
+mutations. Paid billing and alerts do not guarantee a credit-only bill. An agent
+can operate a verified SSH-connected Linux workspace within the authorized phase;
+owner authentication and app setup may require exact owner actions. Record what
+actually ran locally, over SSH and through the Codex app separately. Infrastructure
+setup is not scientific execution or benchmark admission.
 
-Use thesis assets selectively and public field benchmarks alongside custom simulations. The owner confirmed thesis availability and allows new simulations optimized for the question. Public data used for development are not an untouched final test set; clearly label changed assemblies, reference populations, read subsets or synthetic coverage. Reuse a standard evaluator where appropriate and test any supplementary metrics against explicit truth contracts. E001's current choice is recorded in [D004](decisions/D004-human-cpu-preflight.md).
+For substantial multi-stage research work, prefer Snakemake with tested helpers.
+Do not add a workflow engine to settled small preflights for ceremony. Keep actual
+CPUs/RAM, effective tool/pool/loader budgets, stage logs, native errors, progress,
+exit status, byte identities and monetary/allocation accounting. Use progress-aware
+stall detection; one agreed overall cost ceiling must match measured workload.
+A snapshot/copy is not needed merely because UCloud needed one.
 
-Portable software fixtures and native compatibility smoke checks are recorded separately from scientific `run-NNN` attempts; they do not test the biological hypothesis. Record actual allocated vCPU-hours as well as process resource measurements. Do not treat a version-pinned recipe as a resolved environment lock or a tiny smoke as proof that full training fits the budget.
+Use the owner's current high-performance purpose in PROJECT_INTENT. The accepted
+prototype is a comparator, not a completed quality target. A native tool campaign
+needs incremental evidence for a named improvement decision, beyond retained
+thesis/papers/code; a tool win is not a causal component test. Keep reusable data
+preparation, every later fit and final evaluation as separate scopes. One inspected
+assembly cannot determine product membership of depth/sequence/taxonomy; retain
+additional prospective data to confirm improvements and independent broad claims.
+
+Use public benchmarks and selectively reused thesis assets. Mark development data
+and controlled derivatives honestly; standard evaluators need tested truth/axis
+contracts. Portable fixtures, native runtime smoke and biological experiments
+are separate evidence. A pinned recipe or tiny smoke does not certify full-scale
+fit affordability. Accept settled scientific stages without replaying them.
+
+Keep code/small records in private Git and compact important archives in private
+Cloud Storage with checksums and a tested readback. Backups do not include keys,
+auth caches or numerical environments. Keep working data/environments on a
+persistent working disk with separate temporary and accepted-result locations;
+stopping compute does not stop provisioned-disk billing. Preserve failure evidence
+without retaining all regenerable bulk indefinitely. Source/credit expiry and
+restore requirements must remain visible. Colab/Kaggle are deferred alternatives.
 
 ## End-of-task check
 

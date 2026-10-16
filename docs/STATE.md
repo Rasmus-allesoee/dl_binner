@@ -1,11 +1,114 @@
 # Current Research State
 
-Updated: 2026-10-07. This is the single current handoff.
+Updated: 2026-10-16. This is the single current handoff.
+
+## Exact next step
+
+**Recommend one coherent next-prototype implementation, with selective ablations.**
+[D015](decisions/D015-coherent-prototype-upgrade.md) reassesses the owner's concern
+about slow serial feature tests. Incorporate marker-conflict handling into a
+broader upgrade of real sequence views, composition/depth learning, consistent
+geometry and genome-scale grouping/refinement. The standalone dev3 marker split
+is an optional diagnostic, **not the required next milestone**. The exact local
+implementation prompt is in [operations](../experiments/E009-competitive-benchmark/OPERATIONS.md#exact-following-step-prompt).
+This reassessment changes guidance only; implementation begins with that next
+owner prompt. No marker preparation, product code change or scientific run occurred.
+
+Existing reviews justify building these related modules together; they do not
+prove every ingredient mandatory or require a larger network. Preserve intermediate
+outputs and use ablations only for decision-relevant uncertainty or causal claims.
+Initially place markers in grouping/refinement; do not automatically add marker
+training, taxonomy, GLM/context attention or an ensemble. Choose/freeze additional
+confirmation data before changed community scores, in parallel with implementation.
+E009/E005 remain development evidence and immutable dev3 remains the comparator.
+
+**E009 controls remain accepted and unchanged.** [The review](../experiments/E009-competitive-benchmark/controls-review.json)
+binds all four completed controls, full DNA/sample axes and shutdown. Learned
+versus raw ten-depth weighted R95 is 5.3911% versus 4.5765%; bacterial neighbor
+agreement instead falls 68.63→67.05%, while primary restricted grouping recall
+rises 18.48→37.61%. This supports addressing representation and grouping together,
+without isolating either as the sole cause. Confirmed unique bacterial source
+availability is 18.5321% of the full provided reference denominator; the 3.3034%
+N-quarantine and lineage/length limitations remain. No feature-family conclusion.
+
+The last verified GCP state is TERMINATED, with no wake in this reassessment.
+The separate $2 control phase cost ~$0.479 compute/IP plus ~$0.0542 export and small
+operations; it is not a budget for the upgrade. Existing 30/300-GiB disks remain
+~$31.20/month while stopped; retention review **October 21**, no extension. Any
+later cloud work needs fresh credits/prices and explicit execution scope. All
+external binners, including CompleteBin, remain deferred. [D013](decisions/D013-first-comparative-benchmark.md)
+retains the experiment's value-of-information rationale and historical decisions.
+
+The data-only DAG at **5fec4e1d1700c64c4bdd9945bad4e116ade73c57 failed in its final
+truth parser** (`CIGAR/endpoints/block length disagree`). Ten minimap2 invocations
+exited 0; the retained first failing row has 2,948 CIGAR columns, PAF block 2,947
+and `nn:i:1`, consistent with minimap2 2.30 excluding ambiguous bases from its block
+count. This is an adapter failure, not a biological result or a reason to repeat
+native alignment. The watchdog correctly observed the failed driver and stopped
+the VM at **2026-10-15 11:32 Copenhagen**, independently verified in GCP.
+
+**Accepted reusable feature data:** the complete sample-0 assembly, **145,702
+contigs /231,678,157 bp** (89,041 >=500 bp); all ten full read samples
+**0,2,3,4,6,9,10,11,14,17**, coordinate-sorted/indexed BAMs and measured depths.
+Independent byte/header/axis review passes all **1,457,020 matrix cells**, retaining
+13 all-zero rows and all short DNA. The closed combined matrix inside the failed
+final stage has an explicit separate acceptance receipt; its parent stage remains
+unsealed. [Actual phase/review receipt](../experiments/E009-competitive-benchmark/gcp-data-observed.json)
+owns bindings, verification scope, costs, private archive and stop proof.
+
+The completed read/source audit proves identical full **33,267,026 mate-ID sets**
+and exact source joins. [Population review](../experiments/E009-competitive-benchmark/truth-population-review.json):
+309 positive simulator genomes, **156 bacterial /0 archaeal /133 viral /11
+eukaryotic /9 separately simulated plasmids**. Two taxonomy joins use exact taxon
+rows without a provider genome ID; 110 preserve synthetic strain identifiers.
+All nine permuted files are ten exact circular rotations of separately simulated
+`pASV` plasmids. Their filename host IDs and `HOST` relationships do not merge them
+with host genomes. Two zero-origin source files and 1,280 unobserved replicons stay
+in the competitive universe. No rounded profile percentage determines presence.
+
+**Fresh conservative supplied-reference truth v2 is admitted.** The separate
+[admission](../experiments/E009-competitive-benchmark/truth-v2-admission.json) binds
+all 300,499 retained native PAF rows, actual simulator genome IDs, separate pASV/HOST,
+exact circular coordinates and 156 primary targets /554,661,890 full provided bp.
+All 7,688 competitive aliases become 7,607 canonical records; no non-target,
+zero-origin file or unobserved reference is discarded. Thresholds remain .99/200 bp
+and .95 attribution. Qualifying `nn>0` alignments quarantine their whole query span
+globally: **7,653,205 bp /3.3034%** remains unknown rather than falsely supported.
+This conservative limit is fixed before any binner outcome. Every contig's DNA
+accounting passes; an independent raw-PAF oracle agrees on all 348 nn/circular
+queries plus 128 fixed SHA256-selected queries. The original failed DAG stays failed.
+No new aligner, data replay, VM wake, fit or score was needed. This is provided-
+reference alignment truth, not MAG quality or independent-genome/pretraining proof.
+The new [retained evidence](../experiments/E009-competitive-benchmark/truth-v2-retained-evidence.json)
+is a **5,218,978-byte local archive**, 112 regular members /76,654,870 logical bytes;
+all 111 non-inventory hashes pass. The later control-phase credit gate passed and
+its private cloud upload/readback now verifies; the original input archive is also
+privately backed up. The truth derivation itself used no VM compute.
+
+The [diagnostic controls](../experiments/E009-competitive-benchmark/diagnostic-controls-plan.json)
+kept dev3 source **5e54538d1799e8d2538621729400f33fbaf017b9**, seed 11, 20 epochs
+and fixed grouping. Their separate **$2** authorization, fresh Linux setup and
+assembly-scale execution are now complete, within the four-hour phase and
+4.25-hour provider STOP. [The reviewed result](../experiments/E009-competitive-benchmark/controls-review.json)
+owns actual affordability and diagnostics. No further fit is authorized. External
+tools remain deferred; D015 now recommends an integrated prototype with selective
+ablations, followed by confirmation on prospectively chosen additional data.
+
+The bounded review reused the existing VM/disks with a **one-hour provider STOP**,
+without provisioning/resizing or DAG/fit execution. Its stop and priced uptime are
+in the receipt. Keep the **$20 data-only/seven-day envelope**, original cumulative
+24-hour data clock and 25-GiB reserve. Measured production peak filesystem use was
+**170.66 GiB**, minimum sampled free **124.52 GiB**. The existing 300-GiB work disk
+cannot be shrunk in place. Stopped boot/work disks remain **$31.20/month gross**;
+review retention by **2026-10-21** and credit expiry by 2027-01-10. No storage
+migration, deletion, new capacity or retention extension is authorized. Keep the
+read-only GitHub key, immutable baseline and old UCloud evidence.
 
 ## Direction and completed work
 
-Build and publish a usable deep-learning metagenomic binner while learning through
-implementation. A paper, novelty and SOTA remain optional. See
+Improve our own deep-learning metagenomic binner toward high performance,
+potentially SOTA, while learning through implementation. Usability/reproducibility
+remain essential; paper/novelty and strong claims require separate evidence. See
 [PROJECT_INTENT](../PROJECT_INTENT.md), [D010](decisions/D010-bounded-e001-and-prototype.md)
 and [D011](decisions/D011-first-binner-prototype.md).
 
@@ -33,7 +136,7 @@ replaced that recommendation with lightweight contrastive learning and a bounded
 frozen-GLM inclusion screen. E003 now resolves the first sequence route below.
 Thesis results and full short-contig scope receive explicit weight.
 
-## Exact next step
+## Accepted prototype evidence
 
 **E002 feasibility and E003's final representation screen are complete and
 accepted; do not repeat either inference run.**
@@ -140,7 +243,7 @@ Final suite: **59.722 s / 0.348-GB sampled peak**; known supervised QA attempts
 including failures: **335.212 s / 0.372458 four-thread wall hours**, local planning
 not UCloud charges. Initial pre-monitor failure, setup/build, review/debugging/
 idle time are outside that accounting. The suite remains within four threads,
-loader zero, 8 GB and two hours. Test failures identified monitor receipt, native
+loader zero, 8 GB and three hours. Test failures identified monitor receipt, native
 error presentation and unreaped-process cleanup defects; all are retained/repaired.
 Disk exhaustion stopped v5 setup. Final v7 is a fresh lexical package prefix with
 explicit byte-verified numerical/build dependencies reused read-only from v4;
@@ -190,7 +293,7 @@ software evidence only. [Standalone install](INSTALLATION.md) and
 
 Known serial integration clocks including two repaired packaging failures and
 artifact preflight total **712.558 s / 0.742910 local thread-budget wall hours**,
-under four threads/loader zero/8 GB/two hours. Successful full setup/check attempt
+under four threads/loader zero/8 GB/three hours. Successful full setup/check attempt
 331.511 s; sampled stage peak **0.561 GB**. E007 retains 2.765 GB including all
 failed/new prefixes and evidence, plus a 1.465-MB physical outside test copy.
 Resource sampling is approximate; source preparation/acquisition/review/idle
@@ -224,32 +327,40 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**Exact next step: one bounded benchmark-planning task on a new branch from updated main.**
-Choose one independent human-associated assembly benchmark, check development/
-source overlap, and freeze input/depth/truth contracts, the accepted raw/learned
-baseline, a small justified external-tool shortlist, bin-quality/length/noise
-metrics and allocated CPU/RAM/time/storage budgets before any execution. Preserve
-short strata, exclusions and unassigned DNA. This plans useful bin-quality and
-cost assessment; one dataset cannot establish broad generalization. Reuse the
-completed review/evaluators, refreshing only evidence needed by the shortlist.
-Do not implement architecture changes or run data/benchmark/UCloud work in the
-merge task. The accepted prototype remains the stable main baseline.
+**E009 v10/v14 tiny native evidence is accepted; community fits/scores are unstarted.**
+[E009](../experiments/E009-competitive-benchmark/README.md) owns the chronological
+attempts and limitations. V10 accepts SemiBin/MetaCAT/CompleteBin, eight-thread
+Linux utility/assembly/mapping/depth/competitive truth/AMBER contracts, source
+acquisition/catalog and scoped immutable identities. V14 repairs only independent
+SCGBinner and complete CheckM/COMEBin paths; all other stages remain unscheduled.
+No old prefix/source/chunk or scientific output was modified/replayed.
 
-License and historical-source packaging need separate owner review before public
-redistribution. No new files or owner compute job are needed to complete this
-handoff. The next planning task can identify specific asset dependencies.
+Official sample-0 contigs/GSA share the 665,738-record /422,673,293-bp DNA multiset
+and are reference-coordinate reconstructions, not a traceable de novo assembly.
+The full released source catalog has 2,078 files /65,571 records /10,251,869,096 bp;
+exact accession/full-replicon development comparisons found no match, with near/
+pretraining independence unresolved. Its inaccessible UCloud archive has an
+accepted SHA for new-host reacquisition, not a GCP acquisition receipt.
 
-The future non-blocking learned TNF / frozen-GLM-head / hybrid comparison remains
-planned and unrun. No larger datasets, extra seeds, architecture gate, publication
-is authorized. E008's private push/PR/merge is authorized and completed; accepted
-scientific source and settings are unchanged.
-Frozen GLM weights/features remain
-retained, deferred from the first prototype rather than globally rejected. The
-completed 2026-09-30 review/source audit is reused. No full-GLM training, VAE
-curriculum, automatic architecture campaign or E001 rerun is planned. E001's
-2,500-bp cutoff and the thesis's 2,000-bp filter are not product constraints. The
-first configurable 500-bp default is an engineering choice; independent real-
-assembly/whole-genome and unsupported-length evaluation remain future work.
+The old mandatory five-tool shortlist is superseded by D013. CompleteBin max-50,
+COMEBin full grid and SCGBinner are deferred; SemiBin2 is a later first candidate,
+MetaCAT core conditional, with no fits approved. DCVBin's payload exists but its CUDA/single-BAM port is
+outside this bounded CPU comparison; LorBin is deferred. Marker-guided fixed-
+encoder grouping remains a high-priority controlled follow-up, not an automatic
+change. A whole-tool win cannot identify the responsible component.
+
+Current input/resource amendment is one sample-0 assembly with ten cross-subject
+depth sources and unchanged raw/learned/sequence-only controls. Old two-depth
+700-hour UCloud budgets/commands are [history](history/E009_UCLOUD_OPERATIONS.md),
+not current entitlements. The authorized data-only GCP stage stops for actual
+source/truth/resource review; no full-fit monetary budget is approved.
+
+The future learned-TNF/frozen-GLM-head/hybrid study is planned and unrun; frozen
+GLM evidence remains accepted and deferred, not globally rejected. Reuse the
+completed review/source audit and accepted E001–E008 science. No new architecture
+or release gate, inferred whole-MAG quality, unseen-genome claim, E001 rerun,
+VAE curriculum, full-GLM training or automatic comparison campaign follows.
+The configurable 500-bp default is a prototype choice, not a product restriction.
 
 ## Resources and continuity
 
@@ -258,7 +369,9 @@ sequence lower bound is 58.1075. MetaBAT2/VAMB pair: 0.76946. The new collection
 adds 0.002224 (1 vCPU / 4 GB, 8.0065 driver seconds). These are partial accounting,
 not exact billing or a remaining-balance estimate. Successful COMEBin condition
 files total 11.313 GB; the diagnostic archive is an additional 235.13 MB copy.
-Preserve retained assets/old attempts. No deletion is authorized.
+Preserve accepted/irreplaceable evidence and old UCloud files. For future obsolete
+failures, retain compact diagnostics/provenance before pruning regenerable bulk
+under the new storage policy; no existing files are deleted in phase 1.
 
 E003 retains 98 local files / 41.34 MB at acceptance, with a committed hash
 inventory; no extra model/environment copy. Its 1.04446 four-thread wall hours
@@ -273,16 +386,20 @@ hours, not UCloud charges; setup/tests/review excluded. Keep all artifacts and
 accepted E001/E002/E003 snapshots. The receipt-helper path repair affects only
 post-run collection; native scientific source/functions remain frozen.
 
-UCloud remains CPU-only and owner-operated. E001's persistent prefixes stay under
+UCloud was CPU-only and owner-operated; it is now inaccessible. Recorded paths
+below remain historical dependencies, not remotely available runtimes. E001's persistent prefixes stay under
 `e001-gate0/envs/` per [D006](decisions/D006-environment-ownership.md); E005 owns
 separate new CPU/workflow prefixes under its own root and read-only reuses E001's
 accepted mapping/AMBER prefixes. E005 v5 now checks the complete AMBER distribution
 inventory against E001's hash-identified clean-prefix review, not only `pip freeze`.
 Frozen E001 source/configuration and raw observed records remain unchanged.
 
-Local branch: `first-binner-prototype`, created from `930e6743eac1aadb93ea23b51f2a6ac617155a2e`.
-Owner-configured private GitHub origin is present; main/origin-main initially matched
-that commit. This task makes local commits only. `agent_context/` is an ignored
+Local branch: `benchmark-planning`, created from refreshed synchronized main/origin-main
+`5e54538d1799e8d2538621729400f33fbaf017b9`; merged `first-binner-prototype` source history
+is preserved. Owner-configured private GitHub origin is present. The owner-authorized normal
+prepared-branch push through 5fec4e1 and exact VM sync are completed. This phase
+requests a local result/decision commit; no main merge,
+PR/release or visibility change. `agent_context/` is an ignored
 inbox. Before public publication review licensing and historical source packaging
 per [D001](decisions/D001-research-record.md). Update this handoff when direction,
 significant evidence or execution dependencies change; details belong to their owners.

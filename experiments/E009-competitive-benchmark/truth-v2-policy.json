@@ -1,0 +1,25 @@
+{
+  "version": "e009-truth-v2",
+  "declared_before_community_derivation": true,
+  "purpose": "supplied-reference alignment truth on inspected development data; no fits or scores",
+  "identity_min": 0.99,
+  "aligned_query_bp_min": 200,
+  "contig_attribution_min": 0.95,
+  "primary_reference_bp_min": 200000,
+  "identity_definition": "native minimap2 2.30 mlen/blen; threshold unchanged; not matches/CIGAR columns",
+  "native_validation": "all rows before filtering: exact axes, endpoints, =XID CIGAR, columns=blen+nn, 0<=equal-mlen<=nn, remaining nn<=X+I+D, NM=columns-mlen; typed unique cg/nn/NM tags required",
+  "ambiguous_base_policy": "a qualifying nn>0 alignment vetoes its whole query span globally, even against clean support; no base in that span supplies purity, a contig label or reference recovery; exact nn localization is unavailable from PAF alone",
+  "nonqualifying_rows": "validated completely; supply no support or veto under the unchanged identity/aligned-bp thresholds",
+  "query_support": "qualifying nn=0 =/X paired bases only, excluding insertions, deletions, vetoed spans and cross-genome ambiguity",
+  "locus_support": "unique canonical molecule-coordinate mapping after global competition; same-genome multiple loci count for genome purity only",
+  "circular_policy": "verify catalog file and sequence hashes; require each alias to be an exact unique forward rotation of the first record; normalize modulo length and split wrap intervals on either query strand; keep distinct actual genomic repeats unresolved",
+  "genome_identity": "exact accepted positive origin genome ID by source-file join; HOST is metadata only; zero-origin files get distinct zero_origin:: names and remain competitors",
+  "denominator": "all provided records of every positive bacterial/archaeal genome >=200kb, including unobserved records; count circular aliases once; retain non-target and zero-origin DNA as competitors",
+  "limitations": [
+    "all emitted qualifying chains from a heuristic aligner, not exhaustive homology",
+    "conservative whole-span nn quarantine can reduce attributable support",
+    "provided MAG/scaffold lengths are not finished-genome completeness or formal MAG quality",
+    "no near-genome or pretraining independence established",
+    "truth labels are evaluator inputs only and must never enter feature/training paths"
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "record": "E009",
+  "read_only_review_date": "2026-10-14",
+  "project": "project-d17bd588-df31-488f-b16",
+  "vm": {
+    "name": "dl-binner-cpu",
+    "status": "TERMINATED",
+    "machine_type": "e2-standard-4",
+    "max_run_seconds": 14400,
+    "termination_action": "STOP",
+    "external_ip_present": false
+  },
+  "disks": [
+    {
+      "name": "dl-binner-cpu",
+      "gib": 30,
+      "type": "pd-standard"
+    },
+    {
+      "name": "dl-binner-work",
+      "gib": 50,
+      "type": "pd-balanced"
+    }
+  ],
+  "regional_quotas": [
+    {
+      "limit": 200.0,
+      "metric": "CPUS",
+      "usage": 0.0
+    },
+    {
+      "limit": 2048.0,
+      "metric": "DISKS_TOTAL_GB",
+      "usage": 30.0
+    },
+    {
+      "limit": 8.0,
+      "metric": "IN_USE_ADDRESSES",
+      "usage": 0.0
+    },
+    {
+      "limit": 250.0,
+      "metric": "SSD_TOTAL_GB",
+      "usage": 50.0
+    },
+    {
+      "limit": 24.0,
+      "metric": "E2_CPUS",
+      "usage": 0.0
+    }
+  ],
+  "global_quotas": [
+    {
+      "limit": 12.0,
+      "metric": "CPUS_ALL_REGIONS",
+      "usage": 0.0
+    }
+  ],
+  "project_billing_enabled": true,
+  "required_services_enabled": [
+    "compute.googleapis.com",
+    "iam.googleapis.com",
+    "iap.googleapis.com",
+    "oslogin.googleapis.com",
+    "storage.googleapis.com"
+  ],
+  "displayed_credit_balance": {
+    "source": "owner-read display on 2026-10-13, not independently refreshed in this preparation",
+    "remaining_dkk": 1973,
+    "expires": "2027-01-12",
+    "paid_upgrade": "owner-reported",
+    "current_balance_scope_and_pending_usage": "must refresh before spending"
+  },
+  "observed_read_objects": [
+    {
+      "sample": 0,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_0_reads.tar.gz",
+      "bytes": 4866106604,
+      "etag": "1279c383f2cec0cbf6ebd3b0ae56b38f-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:59 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 1,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_1_reads.tar.gz",
+      "bytes": 4866087028,
+      "etag": "e322c9ec22c6ba5d4428260baf310eb7-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:57 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 2,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_2_reads.tar.gz",
+      "bytes": 4860373339,
+      "etag": "6332061335b17e5b574bca3adda4f89e-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:50 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 3,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_3_reads.tar.gz",
+      "bytes": 4863883846,
+      "etag": "0c1984e6b260baee2babae03bbc9c932-9",
+      "last_modified": "Fri, 03 Jul 2026 05:21:00 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 4,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_4_reads.tar.gz",
+      "bytes": 4863463730,
+      "etag": "aa60163526d6781fcfd582f1057ed2b9-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:58 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 5,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_5_reads.tar.gz",
+      "bytes": 4862881531,
+      "etag": "ec2271c702b7896232df0abea1889309-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:58 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 6,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_6_reads.tar.gz",
+      "bytes": 4862499556,
+      "etag": "2d5408349cc269718cb1b0816cedb68e-9",
+      "last_modified": "Fri, 03 Jul 2026 05:21:09 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 7,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_7_reads.tar.gz",
+      "bytes": 4859164002,
+      "etag": "463d2db2c64bcb3e4e49246d8daf168c-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:58 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 8,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_8_reads.tar.gz",
+      "bytes": 4859654595,
+      "etag": "f8f3c35c3fe7062b3f3def7e6edb58b8-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:57 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 9,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_9_reads.tar.gz",
+      "bytes": 4863476238,
+      "etag": "6e9d9f364a8f989a730bfdd89e1ebff6-9",
+      "last_modified": "Fri, 03 Jul 2026 05:21:01 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 10,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_10_reads.tar.gz",
+      "bytes": 4866543540,
+      "etag": "176abcb7001a84c1a55884be844e5f3e-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:59 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 11,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_11_reads.tar.gz",
+      "bytes": 4866420199,
+      "etag": "cdc4241a17992032e487a0b1085e8f9a-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:58 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 12,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_12_reads.tar.gz",
+      "bytes": 4864982492,
+      "etag": "412845208413312b4235fd7eae73bc1f-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:58 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 13,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_13_reads.tar.gz",
+      "bytes": 4867414680,
+      "etag": "9dd807edb867bfe21b67f386b065a283-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:59 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 14,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_14_reads.tar.gz",
+      "bytes": 4865958539,
+      "etag": "772fd7e85da0a328ce39c4fd3ef10eca-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:58 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 15,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_15_reads.tar.gz",
+      "bytes": 4866095056,
+      "etag": "8c4c6c6147df2110c48d54ac9e8addbd-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:58 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 16,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_16_reads.tar.gz",
+      "bytes": 4867232301,
+      "etag": "039003a1c700c29dbaa4fab0a50711d5-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:59 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 17,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_17_reads.tar.gz",
+      "bytes": 4854117298,
+      "etag": "84dd3bcb0bcb18cbd34d0d251a9a3873-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:58 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 18,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_18_reads.tar.gz",
+      "bytes": 4857482310,
+      "etag": "61e2d6ffcb0cc810aa446577e2413ec7-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:55 GMT",
+      "sha256": null
+    },
+    {
+      "sample": 19,
+      "url": "https://s3.bi.denbi.de/swift/v1/cami3__human-gut-toy/short/sample_19_reads.tar.gz",
+      "bytes": 4874457817,
+      "etag": "e902ac170564d7465d6fa7601b2c469d-9",
+      "last_modified": "Fri, 03 Jul 2026 05:20:58 GMT",
+      "sha256": null
+    }
+  ],
+  "cloud_mutations_this_task": []
+}
