@@ -4,40 +4,40 @@ Updated: 2026-10-16. This is the single current handoff.
 
 ## Exact next step
 
-**Prepare one fixed-encoder marker-conflict splitting experiment; no execution yet.**
-The four unchanged E009 controls completed successfully and are independently
-reviewed in [the result](../experiments/E009-competitive-benchmark/controls-review.json).
-GCP confirms **TERMINATED at October 16 00:55 Copenhagen**; successful native stage
-receipts, private completion and all archive/member checks agree. No VM wake,
-refit, tuning, retry or external tool ran in this inspection.
+**Recommend one coherent next-prototype implementation, with selective ablations.**
+[D015](decisions/D015-coherent-prototype-upgrade.md) reassesses the owner's concern
+about slow serial feature tests. Incorporate marker-conflict handling into a
+broader upgrade of real sequence views, composition/depth learning, consistent
+geometry and genome-scale grouping/refinement. The standalone dev3 marker split
+is an optional diagnostic, **not the required next milestone**. The exact local
+implementation prompt is in [operations](../experiments/E009-competitive-benchmark/OPERATIONS.md#exact-following-step-prompt).
+This reassessment changes guidance only; implementation begins with that next
+owner prompt. No marker preparation, product code change or scientific run occurred.
 
-Learned ten-depth R95 is **5.3911% bp-weighted /6.0264% macro**, versus raw
-4.5765% /4.9838%; targets >=50% recovered rise **6→13**, >=90% stays **1**.
-These use all 156 bacterial targets /554,661,890 full provided bp and all-bin purity.
-Confirmed unique bacterial loci present in this assembly cover only **18.5321%**
-of that denominator; 38 targets have none. Native AMBER uses a separate restricted
-population. All full 145,702 contigs /231,678,157 bp and short/noise/non-target DNA pass
-independent export accounting; the **3.3034% N-quarantine** remains unchanged.
+Existing reviews justify building these related modules together; they do not
+prove every ingredient mandatory or require a larger network. Preserve intermediate
+outputs and use ablations only for decision-relevant uncertainty or causal claims.
+Initially place markers in grouping/refinement; do not automatically add marker
+training, taxonomy, GLM/context attention or an ensemble. Choose/freeze additional
+confirmation data before changed community scores, in parallel with implementation.
+E009/E005 remain development evidence and immutable dev3 remains the comparator.
 
-The aggregate neighbor gain is not a bacterial improvement: eukaryotic queries
-outnumber bacterial queries, 49,520 versus 25,543. Bacterial ten-depth neighbor agreement
-falls 68.63→67.05% (bp weighted 81.76→79.62%), while primary restricted grouping recall
-rises 18.48→37.61%. Mixed learned bins remain a concrete loss (e.g. 5.14 Mb/53 supported
-genomes, 22.64% dominant support). A fixed-encoder marker-conflict **splitting-only**
-test can ask whether independent biological evidence repairs that loss. New views/
-negative handling remains a serious alternative; do not combine them now. Audit
-marker availability and predeclare the test first; no changed partition or fit is
-authorized. Freeze a second community/assembly and confirmation protocol before
-any changed-run outcome. One prototype/assembly cannot decide feature families.
+**E009 controls remain accepted and unchanged.** [The review](../experiments/E009-competitive-benchmark/controls-review.json)
+binds all four completed controls, full DNA/sample axes and shutdown. Learned
+versus raw ten-depth weighted R95 is 5.3911% versus 4.5765%; bacterial neighbor
+agreement instead falls 68.63→67.05%, while primary restricted grouping recall
+rises 18.48→37.61%. This supports addressing representation and grouping together,
+without isolating either as the sole cause. Confirmed unique bacterial source
+availability is 18.5321% of the full provided reference denominator; the 3.3034%
+N-quarantine and lineage/length limitations remain. No feature-family conclusion.
 
-Measured uptime 1.7542275 h costs **~$0.479 gross compute/IP**, plus **<=~$0.0542** export
-and small storage/operations, within the new $2. Refreshed credit DKK1,936.57/expiry
-2027-01-12; invoice/pending usage still lag. Disks remain 30/300 GiB, **$31.20/month**
-while stopped; retention review **October 21**, no extension. The current provider
-policy remains 4.25 h STOP but grants no next start. [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md)
-owns detailed scope, costs, limitations and the exact next preparation prompt.
-CompleteBin and every external fit remain deferred. [D013](decisions/D013-first-comparative-benchmark.md)
-owns this mechanism recommendation; the immutable dev3 control remains unchanged.
+The last verified GCP state is TERMINATED, with no wake in this reassessment.
+The separate $2 control phase cost ~$0.479 compute/IP plus ~$0.0542 export and small
+operations; it is not a budget for the upgrade. Existing 30/300-GiB disks remain
+~$31.20/month while stopped; retention review **October 21**, no extension. Any
+later cloud work needs fresh credits/prices and explicit execution scope. All
+external binners, including CompleteBin, remain deferred. [D013](decisions/D013-first-comparative-benchmark.md)
+retains the experiment's value-of-information rationale and historical decisions.
 
 The data-only DAG at **5fec4e1d1700c64c4bdd9945bad4e116ade73c57 failed in its final
 truth parser** (`CIGAR/endpoints/block length disagree`). Ten minimap2 invocations
@@ -91,8 +91,8 @@ and fixed grouping. Their separate **$2** authorization, fresh Linux setup and
 assembly-scale execution are now complete, within the four-hour phase and
 4.25-hour provider STOP. [The reviewed result](../experiments/E009-competitive-benchmark/controls-review.json)
 owns actual affordability and diagnostics. No further fit is authorized. External
-tools remain deferred; prepare only the one mechanism above, then confirm any
-useful change on prospectively chosen additional data.
+tools remain deferred; D015 now recommends an integrated prototype with selective
+ablations, followed by confirmation on prospectively chosen additional data.
 
 The bounded review reused the existing VM/disks with a **one-hour provider STOP**,
 without provisioning/resizing or DAG/fit execution. Its stop and priced uptime are

@@ -13,6 +13,12 @@ choice and immutable prototype source remain.
 [Operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md) owns exact
 axes/resources/costs and the following execution prompt.
 
+**Next-development reassessment, 2026-10-16:** [D015](D015-coherent-prototype-upgrade.md)
+supersedes the standalone marker-splitting-first recommendation below as a required
+next step. Recommend an integrated next prototype with selective ablations. E009's
+data/protocol, admitted truth, executed controls, metrics and cost records remain
+unchanged; no new fit or external execution is authorized by this reassessment.
+
 ## Problem and evidence
 
 The usable first CPU prototype is merged and tested, but E003/E004 are controlled
@@ -131,19 +137,18 @@ narrow adapter instead of depending on MetaQUAST's filtered internal alignments;
 MetaQUAST remains a possible supplemental misassembly report. Whole *provided reference* recovery is not formal
 MIMAG quality or completeness of an unknown finished genome when a source is a MAG.
 
-Marker-aware grouping/refinement is a **high-priority** next product candidate:
-it directly addresses the accepted prototype's fragmented grouping, preserves the
-encoder and can reuse embeddings. Plan one fixed marker-conflict splitting/merging
-ablation against identical frozen grouping, retaining marker-negative and short
-DNA and evaluating with independent sequence truth. Marker-aware training remains
-a serious alternative, not an automatic simultaneous addition.
+Marker-aware grouping/refinement remains a **high-priority** product component.
+Under [D015](D015-coherent-prototype-upgrade.md), incorporate it into a coherent
+upgrade of biological views, composition/depth learning and genome-scale grouping.
+The earlier frozen-encoder split is an optional diagnostic, not a prerequisite.
+Retain marker-negative/short DNA and independent sequence evaluation; do not infer
+that every marker training/grouping/selection role is mandatory.
 
-If learning damages raw signal, prioritize one view/negative-construction change;
-if embeddings separate but bins fail, prioritize one grouping/refinement ablation;
-if short-sequence information remains limiting, the planned matched TNF/GLM-head/
-hybrid comparison is a strong next candidate. Its complementary-information
-rationale is retained, not assumed proven. Do not adopt several mechanisms from
-one native-tool victory or tune to E009 and claim held-out validation.
+Use geometry, grouping and length/origin evidence to choose related improvements
+and the few uncertainties that need matched tests. These are not mutually
+exclusive branches of a rule requiring one component at a time. Preserve the
+planned GLM comparison as a separately justified option, not a blocker. A combined
+gain does not identify individual causal effects, and E009 remains development data.
 
 ## Data-stage boundary retained as history (superseded October 16)
 
@@ -225,7 +230,11 @@ leave a running launcher supervised and return to the owner without waiting for
 completion. Inspect accepted returned outputs after shutdown; select one mechanism
 from diagnostics, retaining development-data and one-assembly limits.
 
-## Reviewed unchanged controls and one next mechanism, 2026-10-16
+## Reviewed controls and earlier narrow recommendation, 2026-10-16
+
+The measured results below remain accepted. The marker-split-first recommendation
+is superseded by the subsequent owner-requested reassessment in D015; it is retained
+here to explain the earlier Exact following prompt, not as current instructions.
 
 [The independent review](../../experiments/E009-competitive-benchmark/controls-review.json)
 accepts all four unchanged controls, exact native reload, all DNA/ordered axes,
@@ -264,3 +273,22 @@ supply a decision-changing question, without paying for an expected ranking.
 AGENTS now requires explicit lineage/origin and length denominators beside community
 aggregates; this durable interpretation rule follows the observed non-target
 dominance and preserves all unknown/non-target DNA.
+
+## Subsequent development-pace reassessment, 2026-10-16
+
+The owner raised concern that serial small changes could delay a substantially
+stronger binner, while explicitly asking for judgment rather than a mandatory
+large architecture. [D015](D015-coherent-prototype-upgrade.md) recommends one coherent
+next prototype, integrating biological sequence views, explicit modality learning
+and marker-informed grouping/refinement. Markers remain important, but splitting
+the old bins alone is no longer the proposed product milestone. No component is
+declared universally necessary from mature-tool rankings or this one assembly.
+
+Implement the related modules together after the next implementation prompt.
+Retain pre/post-refinement outputs and select further ablations only when they can
+change a design decision; do not require an isolated win for every ingredient.
+Compare the integrated candidate with preserved dev3, then confirm useful changes
+on prospectively chosen additional data. Existing reviews supply the prior evidence;
+there is no new complete-review or full mature-tool campaign gate. Current work is
+reassessment/documentation only, with no marker preparation, code change or cloud
+spending. All external binners remain deferred and execution budgets stay separate.

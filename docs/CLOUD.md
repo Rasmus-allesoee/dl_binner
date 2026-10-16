@@ -13,8 +13,9 @@ policy remains 4.25 h/STOP/automaticRestart=false, but no next start is authoriz
 Current Welcome credit **DKK1,936.57 Available through 2027-01-12**; reported
 cost/savings 31.92/net0 still lag actual usage. Disks remain 30/300 GiB and cost
 **$31.20/month while stopped**; retention review **October 21**, no extension.
-Prepare one fixed-encoder marker-conflict splitting test, with separate cost and
-execution approval if needed. Read-only GitHub access stays unchanged. Earlier
+[D015](decisions/D015-coherent-prototype-upgrade.md) recommends a coherent next
+prototype, with separate approval before implementation/paid execution. No cloud
+action occurred in that reassessment; previous live values above are dated checks. Read-only GitHub access stays unchanged. Earlier
 launch/one-hour/25-hour observations below are dated history, not active work.
 **Phase 1 accepted: strict IAP SSH, exact private repository clone, pinned Linux
 Codex CLI, ChatGPT authentication, actual desktop remote-project commands and

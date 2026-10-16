@@ -40,8 +40,10 @@ denominators. Its fixed conservative N policy leaves 7,653,205 bp /3.3034% unkno
 The old failed DAG/journals are unchanged. No new aligner or VM wake was needed.
 [Operations](OPERATIONS.md#earlier-data-review-and-failed-dag-evidence-2026-10-15)
 owns actual cost/storage/shutdown evidence and the exact next prompt. The next
-step is preparation of one fixed-encoder marker-conflict splitting test, with
-no execution yet. [The unchanged controls](diagnostic-controls-plan.json) are now
+step is a coherent next-prototype recommendation in
+[D015](../../docs/decisions/D015-coherent-prototype-upgrade.md), with local implementation
+only after the next owner prompt. The prior standalone marker split is optional.
+[The unchanged controls](diagnostic-controls-plan.json) are now
 complete under their separate $2 approval. Actual runtime, outputs and costs are
 reviewed; original failure/truth histories remain unchanged.
 
@@ -77,7 +79,8 @@ by this data phase, and no entire shortlist must finish before improvements.
 The older mandatory shortlist, two-depth wording and allocation-hour reservations
 are [historical](../../docs/history/E009_UCLOUD_OPERATIONS.md#superseded-mandatory-comparison-planning-2026-10-14).
 Keep source/payload/runtime receipts unchanged; accepting a contract is not an
-entitlement to fit that tool on this assembly. Select one mechanism with prospective
+entitlement to fit that tool on this assembly. D015 supersedes a mandatory single-
+mechanism-first workflow; use selective matched tests with prospective
 keep/modify/abandon criteria, preserve the immutable control, and confirm promising
 changes on prospectively chosen additional data before broad/SOTA claims.
 
@@ -237,6 +240,13 @@ downloads or a reason to grow this first benchmark. Truth-based ≥90/95 recover
 must not be labelled validated real-sample MAG quality or formal HQ MIMAG status.
 
 ## Focused diagnostics and decisions
+
+The table retains the earlier experiment-specific options.
+[D015](../../docs/decisions/D015-coherent-prototype-upgrade.md) now recommends a
+coherent prototype upgrade; these are diagnostic/ablation choices, not a mandatory
+sequence of isolated experiments before implementation. Scientific measurements
+and dev3 source remain unchanged.
+
 
 Retain our raw/learned embeddings, checkpoints, reload comparison, complete
 partitions and native intermediate/final partitions/marker decisions where emitted.

@@ -212,6 +212,16 @@ Do not create a Frankenstein model by combining techniques simply because strong
 
 Every major component and their combination should have a reason to exist.
 
+Working clarification, 2026-10-16: development should move in substantial, coherent
+prototype upgrades when existing literature, source and project evidence support
+the combination. Do not default to a separate biological experiment for each
+ingredient before implementation. Build and test related modules together, then
+use selective ablations where uncertainty can change the design or a causal claim
+needs support. An integrated improvement is initially evidence for the package of
+changes. This permits faster development without prescribing a large network or
+declaring commonly used features universally mandatory. [D015](docs/decisions/D015-coherent-prototype-upgrade.md)
+records the next-prototype recommendation; dev3 and accepted results stay preserved.
+
 A useful pattern is:
 
 > observation/problem → hypothesis → experiment → evidence → updated hypothesis/design

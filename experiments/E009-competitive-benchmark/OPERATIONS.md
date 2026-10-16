@@ -1,4 +1,4 @@
-# E009 operations: reviewed controls and one proposed grouping test
+# E009 operations: reviewed controls and next-prototype handoff
 
 Updated: 2026-10-16. **All four owner-approved unchanged controls completed and are
 reviewed; the VM is TERMINATED.** [The execution receipt](controls-observed.json)
@@ -63,20 +63,21 @@ runtime/contract remains missing. The old unexecuted evaluator's column mismatch
 exports. A failed local checker attempt used zero-based bin names; its log remains,
 and the corrected +1 export check passes in a fresh local review. No science retry.
 
-**Recommendation: prepare one fixed-encoder marker-conflict splitting test.**
-Learning groups more source DNA but leaves mixing: learned ten-depth has 52/81
->=200kb bins below95% confirmed dominant support; one 5.14 Mb bacterial-dominant bin
-contains support from 53 genomes with22.64% dominant support. Its largest 19.52 Mb
-bin is eukaryotic, not a bacterial MAG. The modest bacterial geometry loss makes
-new biological views/negative handling a credible alternative, but grouping-only
-splitting reuses embeddings and directly probes a visible loss without changing
-learning at the same time. No merge stage, new encoder, external reference or
-changed scientific partition runs in this review. First audit marker availability,
-freeze one label-blind algorithm and keep/abandon criteria, then separately approve
-any needed execution. Marker-negative/short/non-target DNA must remain accounted
-for. Freeze a second human-associated community/assembly plus overlap limits before
-any changed-run result; E009/E005 remain development evidence. No feature family or
-product change is decided here; CompleteBin and all external binners stay deferred.
+**Subsequent owner-requested reassessment, 2026-10-16:**
+[D015](../../docs/decisions/D015-coherent-prototype-upgrade.md) recommends incorporating
+marker-conflict handling into a coherent next prototype alongside better sequence
+views, modality learning and grouping. The frozen-encoder marker split is no longer
+a required standalone milestone. The earlier narrow recommendation stays in the
+immutable [review snapshot](controls-review.json) as its dated interpretation;
+all measurements, source bindings and accepted artifacts remain unchanged.
+
+Both modest bacterial geometry damage and mixed/fragmented grouping motivate a
+broader candidate; this does not establish either as the sole cause. Reuse completed
+reviews to implement related modules in one block, retain intermediates and choose
+selective ablations where they can change the design. A bundle-level gain does
+not prove individual ingredients necessary. No marker preparation, new code, fit,
+score or cloud action occurred in this strategic reassessment. External binners
+remain deferred; the next prompt authorizes local implementation only when used.
 
 ### Shutdown, retained evidence, costs and storage
 
@@ -468,11 +469,13 @@ the live credit/STOP/watchdog checks pass. Do not edit its `approved:false` now.
 
 ## Exact following-step prompt
 
-> Our goal is our own high-performing binner; E009 is development evidence, and expected mature-tool wins do not justify spending. Read AGENTS.md, PROJECT_INTENT.md, STATE, CLOUD, D013/D014, E009 operations and controls-review.json. Planning and bounded local tests only: prepare one fixed-encoder marker-conflict splitting experiment for the retained learned ten-depth output. Keep dev3, its features/embeddings, original partitions, seed/schedule, accepted data and admitted v2 truth immutable. No encoder fit, automatic merging, external binner, changed partition scoring, VM wake, provisioning, resize, retention extension or paid execution in this task.
+> Our goal is a substantially stronger binner, using coherent prototype upgrades and selective ablations. Read AGENTS.md, PROJECT_INTENT.md, docs/STATE.md, D013/D015, the completed literature/source/thesis reviews, and E009 controls-review.json. Implement the recommended next prototype locally on a new codex/ research branch, preserving immutable dev3 and all accepted E009 inputs, truth, outputs and journals.
 >
-> Audit the reviewed marker sources, licenses, versions, detection costs and availability on these contig lengths. Define one label-blind splitting algorithm; truth and taxonomy labels must not enter it and marker-negative/short/noise/non-target DNA must remain accounted for. Test actual tiny marker/output contracts locally when the runtime is available. Predeclare keep/modify/abandon criteria using fixed-purity full provided-reference recovery, grouping and length/origin diagnostics, not only aggregate neighbor purity. Account for the modest bacterial geometry loss, eukaryotic dominance of contig-weighted summaries, 18.5321% conservative bacterial source-availability ceiling and 3.3034% N-quarantine. Do not combine representation/view or merging changes with this test. If marker conflicts are too sparse or unsuitable, stop and recommend reassessment without substituting another mechanism automatically.
+> Use the existing evidence to record a concise prospective design and proceed directly to implementation in the same task. Build real DNA-window training views, explicit composition/depth encoders and fusion, consistent training/inference/grouping geometry, and one scalable grouping path with cached marker evidence and conservative marker-informed refinement. Resolve precise algorithms/defaults using judgment and targeted source checks; do not require a separate performance study for every ingredient. Keep short and marker-negative contigs, unknown/non-target DNA and optional unassigned outcomes fully accounted for. Distinguish parent-contig depth from measured window coverage; do not invent coverage variance or silently remap reads. Marker-aware training, taxonomy, GLM/context-attention and ensembles are not automatic additions.
 >
-> Before any changed-run outcome, prospectively select and freeze a second human-associated read-derived community/assembly and its confirmation protocol, recording sample/genome overlap and development versus independent-evaluation limits. Do not relabel E009 or E005 as held out. Prepare a bounded restore-only launcher that consumes accepted artifacts without refitting/replaying them, estimates complete setup/marker/splitting/collection compute, RAM, disk, GCP price and credit eligibility, and gives an exact separate approval request if cloud execution is needed. Review storage retention before October 21; do not extend or delete accepted evidence automatically. Update records, run relevant local checks and commit; report readiness, unresolved contracts/costs and the exact execution-approval prompt. Keep all external binners, including CompleteBin, deferred.
+> Run meaningful unit/integration and bounded tiny training/reload/marker/export contracts; report actual versus mocked or unavailable native paths. Retain features, embeddings and pre/post-refinement partitions, allowing a cheap refinement comparison and further decision-driven ablations without a compulsory factorial campaign. Freeze additional confirmation data/protocol before changed community scores, in parallel with implementation rather than as a gate to coding. Treat E009 as development evidence and use independent sequence truth for later evaluation.
+>
+> This prompt authorizes local implementation and tiny engineering checks only. Do not run community fits, new E009 scoring, bulk acquisition/assembly/mapping, external binners, paid cloud work, VM starts, resource changes or retention extensions. Keep CompleteBin deferred. Prepare the first bounded candidate-versus-preserved-dev3 execution, with complete runtime/compute/RAM/peak-disk/cost estimates, fresh-credit prerequisites and a separate exact approval request; prior budgets do not carry over. Keep the October 21 storage review visible. Update records, run relevant checks and commit. Report what works, unresolved contracts, selective evaluation scope, resources and the next exact execution prompt.
 
 ## Evidence and sample choice
 

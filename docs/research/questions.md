@@ -302,3 +302,13 @@ and a prospective second-community confirmation protocol. No marker benefit,
 mechanism causation, feature-family rejection or broad performance result is yet
 established; scientific question statuses remain open. No external binner or new
 fit is authorized by this review.
+
+2026-10-16 subsequent development-pace reassessment: the owner asked whether the
+standalone marker split is too narrow and serial feature trials too slow.
+[D015](../decisions/D015-coherent-prototype-upgrade.md) recommends one integrated
+next prototype using biological views, composition/depth learning and marker-informed
+grouping/refinement, with selective decision-driven ablations. This supersedes the
+marker-split-first recommendation, not E009's accepted measurements or scientific
+question status. Existing evidence can justify implementation without first proving
+every ingredient separately; an integrated gain alone would not identify causal
+components. No new marker preparation, product code, fit, score or cloud work ran.

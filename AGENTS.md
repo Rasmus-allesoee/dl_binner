@@ -164,9 +164,14 @@ automatic benchmark blocker; keep the uncertainty visible in interpretation.
 For comparative benchmarks, keep native whole-tool comparisons distinct from
 matched input/learning/clustering ablations. A winning tool does not identify
 which component caused its advantage. Preserve intermediate evidence, native
-eligibility and all unassigned/excluded DNA; choose one justified mechanism test
-before combining improvements. Data inspected to choose those improvements become
-development data, even when they originate from a public community benchmark.
+eligibility and all unassigned/excluded DNA. Existing literature, source reviews
+and project evidence can justify a coherent upgrade with several related changes.
+Use selective matched ablations for uncertainties that can change the design or
+for component-level causal claims; do not require an isolated performance win for
+every ingredient before implementation. An integrated upgrade establishes a bundle
+result unless further controls isolate its causes. Data inspected to choose
+improvements become development data, even when they originate from a public
+community benchmark.
 Preserve the accepted main implementation as the immutable comparator on a new
 research branch; do not quietly tune that baseline to the comparison's scores.
 
@@ -213,6 +218,14 @@ intermediate evidence needed to distinguish information, representation and
 grouping failures. One weak prototype and one assembly cannot rule depth, sequence
 or taxonomy into/out of the product. Data used to choose improvements are
 development data; confirm improvements on prospectively defined additional data.
+
+Owner clarification, 2026-10-16: prefer substantial, coherent prototype upgrades
+over a default sequence of tiny feature experiments. Reuse completed reviews to
+implement related modules in one bounded development block, with engineering
+contracts and selective ablations. This does not prescribe a large network or a
+checklist of mandatory SOTA ingredients. Keep the immutable comparator, distinguish
+whole-system gains from causal component claims, and obtain separate authorization
+for paid/community runs. D015 records the current recommendation.
 
 The required first-architecture review and first prototype are already accepted;
 STATE points to their scoped records. For a new unresolved design decision, use a
