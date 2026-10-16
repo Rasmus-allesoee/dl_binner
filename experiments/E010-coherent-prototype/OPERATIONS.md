@@ -1,9 +1,64 @@
-# E010 bounded candidate execution proposal
+# E010 bounded candidate execution and inspection
 
-Status: **prepared locally, not authorized or executed**. No VM/billing check or
-cloud action occurred during implementation. The old E009 $20/$2 approvals are
-closed scopes. [Design/contracts](README.md), [confirmation freeze](confirmation-plan.json)
-and [candidate lock](candidate-lock.json) bind the next proposal.
+Status: **one frozen phase authorized and launched on 2026-10-16**.
+[Native receipt](native-observed.json) owns actual gates, progress and costs for
+`candidate-20261016T212549Z-6917c3f`. The source is clean commit
+`6917c3f027bb975db43e771e979fecda0ab6c415` on **`dev4-coherent-prototype`**, renamed
+and normally pushed at the owner's request, preserving all commits. The VM fetched
+that branch with its existing read-only key. The old local-only outcome remains
+in [local evidence](local-observed.json); no historical receipt/lock was rewritten.
+The owner's new $2 covers this phase only; no external binner or repeat follows.
+
+VM start **October 16 21:25:49.946 UTC /23:25 Copenhagen**. Four-hour phase end
+**October 17 01:25:49 UTC /03:25 Copenhagen**; provider STOP **01:40:49 UTC
+/03:40 Copenhagen**. Fresh root timer checks the held parent every 30 seconds,
+bound to boot `67044576-acf4-48bb-8c4d-a5a4df3891b1`, PID 2188, start tick 11639
+and command hash. Native live/normal exit 0/crash 7 tests and the actual timer's
+live identity were verified before release at **21:28:12 UTC**. Phase cgroup
+restart=no, KillMode=control-group and boot-relative runtime bound remain alongside
+provider STOP. This shutdown supervision is independent of chat and SSH.
+
+Fresh paid-account credit: **DKK1,933.15 Available through January 12, 2027**,
+original DKK1,973.43, certain Free Trial usage/net pricing. Overview cost/savings
+DKK38.35/net0 is delayed; pending usage remains unknown. The sole linked project
+has this existing VM/disks/bucket. The gate reserves $30 for unreconciled prior
+exposure and $5 remaining approved disk retention before this new $2; that is a
+conservative credit-margin assessment, not an invoice or permission to spend it.
+Fresh ordinary E2/PD/IP/Standard Storage coverage and DKK catalog rates pass.
+Conservative phase estimate **$1.66**, including full fallback uptime, disk interval,
+2-GiB export and asset-readback/storage/operations reserves. Existing disks remain
+**$31.20/month** while stopped; **October 21** review, no retention extension.
+
+All 1,405 local engineering archive members /13,947,258 logical bytes, frozen wheel,
+18 package/default members, seven recipes, full accepted 145,702 contigs /
+231,678,157 bp, ordered 1,457,020 depth cells and 13 zero rows verify. Actual
+pre-install headroom **134.69 GiB**. The locked 15,929,643-byte marker profile,
+wheel, local evidence and compact admission were uploaded/read back in the existing
+private bucket under `e010/assets-6917c3f-20261016/`; no external binner ran.
+A fresh Python 3.12 CPU prefix owns its complete numerical distributions. Native
+runtime/source/marker/product checks passed before the community workflow began:
+28 owned distributions, all 18 installed package/default members, the real
+production-profile positive and all **21 product tests** on Linux Python 3.12.10.
+The supervised product suite took **66.708 s**, sampled peak **763,248,640 bytes**;
+its unittest clock was 64.402 s. These are tiny software contracts, not community
+quality. Full-data feature preparation completed at 21:30:37 UTC, retaining 13,554
+training parents and every assembly/depth row. At **21:34:27 UTC**, the same pinned
+parent and timer remain healthy; gene calling advanced from 18,000 to 52,000 contigs
+(106,827 genes) during the requested few-minute check. No errors observed. Current
+free space **133.21 GiB**; charged growth **2.48 GiB**, including the conservative
+1-GiB early-preparation charge. Priced VM uptime so far 517.160s: compute/IP
+**$0.0392**, disk interval **$0.00614**; compact asset readback upper **$0.00248**
+plus small operations. Final charged uptime/cost is unknown until provider stop.
+Final seven-stage acceptance still requires the closed archive/receipts review.
+
+Current logs are under
+`/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/`:
+`logs/parent-terminal.log`, `logs/setup.log`, `candidate-run/terminal.log` and
+`candidate-run/candidate/logs/`. Private completion will be
+`gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/completion.json`;
+guest attribute `e010-candidate/status` publishes the compact final outcome.
+These are expected locators, not proof that completion exists. A healthy launcher
+is left supervised after bounded progress verification, without polling to finish.
 
 ## Value and selective scope
 
@@ -29,9 +84,9 @@ fit; no fabricated depth or OTU-to-genome substitution. No confirmation data was
 acquired here. Concordant useful recovery supports the bundle; discordance calls
 for one decision-driven diagnosis, not a tuned E009 feature campaign.
 
-## Proposed resources and financial envelope
+## Approved resources and pre-run financial envelope
 
-Request a **new $2 incremental gross ceiling**, on the existing Iowa
+The owner approved a **new $2 incremental gross ceiling**, on the existing Iowa
 `e2-standard-8` /8 vCPU /32 GiB with the existing 300-GiB balanced work disk and
 30-GiB boot disk. No resize, new service/quota/disk/GPU or retention extension.
 Serial stages, zero data-loader workers, explicit Torch/BLAS/Numba/HMM CPU budgets;
@@ -96,7 +151,7 @@ The primary [Compute billing rules](https://cloud.google.com/products/compute/pr
    Only then write the checksum-bound release. No old watchdog configuration is
    proof that this new process is supervised.
 4. `scripts/e010_candidate.py` is read-only by default. Explicit execution requires
-   a fresh human approval/credit/storage/watchdog receipt, Linux/Python3.12/8-CPU
+   a fresh human approval/credit/storage/watchdog receipt, Linux/Python 3.12/8-CPU
    mount, exact clean source, the locked wheel/installed source/defaults, all
    accepted inputs, complete native runtime and tiny installed contracts. These
    native Linux gates run **before the one community fit** within the $2 clock.
@@ -119,38 +174,36 @@ stage/log locations and finish the response; do not poll to completion.
 ## Exact following-step prompt
 
 Our goal is a substantially stronger binner. Read AGENTS.md, PROJECT_INTENT.md,
-STATE/CLOUD, D013/D015, E010's design, local evidence, candidate lock, confirmation
-plan and operations. Keep dev3 and all accepted E009 data/truth/results immutable.
-I authorize the first frozen E010 candidate-versus-preserved-dev3 development run
-under a NEW $2 incremental gross ceiling, only if the stated gates pass. External
-binners, including CompleteBin, remain deferred.
+STATE/CLOUD, D013/D015 and E010's design, candidate lock, native-observed.json and
+operations. Inspect phase `candidate-20261016T212549Z-6917c3f` without starting a
+job, waking the VM, changing resources/limits, extending retention or retrying.
+Keep dev3 and all accepted E009 inputs/truth/results immutable; external binners
+remain deferred. The original new $2 covers this phase only.
 
-First verify live Welcome-credit balance/scope/expiry, delayed usage, applicable
-prices/coverage, original storage approval and headroom. Stop before unclear or
-uncovered spending. Use only the existing e2-standard-8/32-GiB VM and 300-GiB work
-disk, at most four cumulative hours from VM start including setup/verification/
-fit/collection/upload, provider STOP at 4.25 hours, 25-GiB free reserve, 20-GiB
-maximum extra space and 2-GiB maximum compressed export. No provisioning, resize,
-retention extension, new seed/grid/model change, automatic retry or extension.
-The October 21 storage review remains; stop if the original approval no longer
-covers this phase. Normally push the exact clean prepared branch from Mac and
-sync the VM read-only to that commit.
+Check GCP control-plane state, `e010-candidate/status` and private
+`gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/completion.json`.
+Do not infer success from shutdown. If still healthy and running, report current
+stage/progress and leave the verified watchdog/provider STOP intact; do not poll
+to completion. If evidence is missing after stop, do not wake the VM; identify
+what is missing and any cost/approval needed.
 
-Verify the locked wheel/source/defaults/marker asset and complete accepted assembly
-and ordered ten-depth input axes. Create a fresh complete independent Python3.12
-CPU environment. Run inventory/import/source, native tiny marker/train/reload/
-graph/export and launcher checks within the same clock before the community fit.
-Arm and verify a fresh boot/process-bound held-parent exit watchdog and provider
-STOP before release. Run the prepared phase/launcher once with captured logs.
-Preserve all DNA and cache/features/embeddings/pre/post partitions; keep truth out
-of training. Reuse accepted dev3 outputs, without refitting them.
+After independently verified shutdown, establish actual exits for setup/native
+gates and all seven candidate stages from receipts/logs. Price measured VM uptime,
+disk/storage/transfer separately from sampled CPU. Refresh credit/price coverage
+and assess bounded export against the remaining original $2 before downloading;
+verify archive and every retained member. Keep the October 21 storage review.
 
-If still healthy after supervision/progress verification, report its stage/logs
-and finish rather than polling to completion. Otherwise collect bounded evidence,
-stop and independently verify TERMINATED; no recovery/extra spending. After
-shutdown, verify archive/member bytes and perform bounded local sequence-truth-v2
-diagnostics, respecting candidate unit geometry, all length/origin strata, full
-denominators and N-quarantine. Report actual costs/resources, bundle and paired
-refinement results/limits, and at most one decision-driven follow-up. Do not tune
-or run confirmation data in this phase. Update records, check, commit and give the
-next exact prompt.
+If the frozen fit completed, verify full contig/sample axes, exact source/defaults/
+seed/schedule, independent reload, unit-vector geometry, native neighbor audit,
+marker availability/ambiguity/cache and complete pre/post DNA accounting. Perform
+bounded local diagnostics against preserved dev3 outputs and admitted conservative
+sequence truth v2: raw/learned geometry, grouping, length/origin and full-reference
+recovery. Keep unknown/non-target/short/noise/excluded DNA, full denominators and
+3.3034% N-quarantine visible; do not apply dev3's post-learning z-score to candidate
+vectors. Report missing runtime/evaluator contracts before claiming quality.
+
+No refit, tuning, new cloud compute, architecture change or confirmation-data run.
+Preserve failure evidence without recovery. Report bundle and paired refinement
+results/limits, actual costs/storage and at most one decision-driven follow-up with
+prospective additional-data confirmation. Update records, run relevant checks,
+commit and provide the next exact prompt.

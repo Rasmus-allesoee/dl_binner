@@ -4,7 +4,26 @@ Updated: 2026-10-16. This is the single current handoff.
 
 ## Exact next step
 
-**The integrated dev4 candidate is implemented; the next step needs a new execution approval.**
+**The first frozen E010 candidate phase is running under its new $2 authorization.**
+[The native receipt](../experiments/E010-coherent-prototype/native-observed.json)
+owns phase `candidate-20261016T212549Z-6917c3f`, current progress and verification.
+The existing VM started at **2026-10-16 21:25:49.946 UTC**. Its four-hour clock ends
+**October 17 01:25:49 UTC /03:25 Copenhagen**; provider STOP is **01:40:49 UTC
+/03:40 Copenhagen**. A fresh root watchdog pins this boot and held parent PID 2188,
+birth tick 11639 and command hash, checks every 30s and stops after 60s exit grace.
+Native live/normal 0/crash 7 detection tests pass; the actual timer and provider
+fallback were verified before release. No automatic retry or extension.
+
+The owner-requested branch rename to **`dev4-coherent-prototype`** preserves all
+commits. Mac push and the clean read-only VM sync verify exact source
+**`6917c3f027bb975db43e771e979fecda0ab6c415`**. Full accepted DNA/depth, all ten ordered
+columns, 13 all-zero rows, frozen wheel/defaults/marker and recipes verify; actual
+pre-install free space was **134.69 GiB**. A fresh complete owned Python 3.12 CPU
+environment is used. Linux Python 3.12.10 inventory/import/source, the production
+marker positive and all 21 installed product tests pass. The feature stage is
+complete; marker gene calling is progressing. The receipt owns the timestamped
+snapshot. Do not infer completion/quality from a running process
+or later shutdown. The next task is bounded inspection, not another launch.
 [E010](../experiments/E010-coherent-prototype/README.md) owns the prospective
 algorithms, local engineering evidence, pinned marker asset and bounded launcher.
 It combines real disjoint windows, explicit composition/depth encoders and fusion,
@@ -14,19 +33,24 @@ retained. Short/marker-negative/unknown DNA remains accounted; parent-contig mea
 depth is explicitly conditioning, not measured window coverage or variance.
 
 [D015](decisions/D015-coherent-prototype-upgrade.md) is accepted for this coherent
-implementation. No community fit, changed E009 score, external binner, cloud action
-or new spending occurred. Native Mac tiny software contracts do not establish
-stronger recovery or the new Linux runtime. Fresh Linux inventory/import/source/
-CLI and tiny native contracts must pass inside the next bounded phase before a
-community fit. Keep immutable dev3 source/wheel and all E009 evidence unchanged.
+implementation. No changed E009 score or external binner follows from the launch.
+Native software checks do not establish stronger recovery. Fresh Linux inventory/
+import/source/CLI and tiny contracts must pass inside this bounded phase before
+its community fit. Keep immutable dev3 source/wheel and all E009 evidence unchanged.
 
-The [next exact approval prompt](../experiments/E010-coherent-prototype/OPERATIONS.md#exact-following-step-prompt)
-requests **new $2 gross**, one candidate fit versus preserved dev3 outputs, four
+The [next exact inspection prompt](../experiments/E010-coherent-prototype/OPERATIONS.md#exact-following-step-prompt)
+does not authorize another job. The approved **new $2 gross** covers one candidate
+fit versus preserved dev3 outputs, four
 cumulative VM hours/4.25-hour provider STOP, existing 8-vCPU/32-GiB/300-GiB resources,
 25-GiB free reserve/20-GiB extra-space cap and <=2-GiB export. Estimated 1–2.5 hours,
 3–8-GiB RAM/4–8-GiB extra disk; these are planning estimates, not full-scale
 measurements. All fresh credit, pending-usage, price, storage/headroom and watchdog
-checks precede spending/fit. No automatic retry/extension. Existing disk retention
+checks precede spending/fit. Live Welcome credit is **DKK1,933.15 Available through
+2027-01-12**; reported cost/savings 38.35/net 0 is delayed, not an invoice. Fresh
+ordinary-resource prices give a conservative phase envelope **~$1.66** including
+fallback uptime, disk interval, export and small storage/operation reserves. The
+receipt prices actual uptime so far separately; final cost needs provider stop.
+No automatic retry/extension. Existing disk retention
 review **October 21** remains; ~**$31.20/month** while stopped, no extension.
 
 A [prospective confirmation choice/protocol](../experiments/E010-coherent-prototype/confirmation-plan.json)
@@ -46,7 +70,8 @@ without isolating either as the sole cause. Confirmed unique bacterial source
 availability is 18.5321% of the full provided reference denominator; the 3.3034%
 N-quarantine and lineage/length limitations remain. No feature-family conclusion.
 
-The last verified GCP state is TERMINATED, with no wake in this reassessment.
+The preceding E009 review verified TERMINATED; E010's later authorized wake above
+supersedes that current-state observation.
 The separate $2 control phase cost ~$0.479 compute/IP plus ~$0.0542 export and small
 operations; it is not a budget for the upgrade. Existing 30/300-GiB disks remain
 ~$31.20/month while stopped; retention review **October 21**, no extension. Any
@@ -368,7 +393,7 @@ Current input/resource amendment is one sample-0 assembly with ten cross-subject
 depth sources and unchanged raw/learned/sequence-only controls. Old two-depth
 700-hour UCloud budgets/commands are [history](history/E009_UCLOUD_OPERATIONS.md),
 not current entitlements. The data-only scope excluded fits; the later four
-unchanged controls ran under a separate $2 approval. The proposed E010 candidate
+unchanged controls ran under a separate $2 approval. The separately approved E010 candidate
 has another separate scope.
 
 The future learned-TNF/frozen-GLM-head/hybrid study is planned and unrun; frozen
@@ -410,7 +435,8 @@ accepted mapping/AMBER prefixes. E005 v5 now checks the complete AMBER distribut
 inventory against E001's hash-identified clean-prefix review, not only `pip freeze`.
 Frozen E001 source/configuration and raw observed records remain unchanged.
 
-Local branch: `codex/coherent-prototype`, created from updated main after the
+Local branch: `dev4-coherent-prototype`, renamed from `codex/coherent-prototype`
+without rewriting commits, created from updated main after the
 owner-authorized normal [PR #2 merge](https://github.com/Rasmus-allesoee/dl_binner/pull/2).
 Merge `5bd59d774306f586c22b23a2f6ee36d64947d052` preserves dev3 main
 `5e54538d1799e8d2538621729400f33fbaf017b9` and benchmark head

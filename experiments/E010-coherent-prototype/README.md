@@ -1,7 +1,8 @@
 # E010: an integrated window/depth/marker prototype
 
-Opened 2026-10-16. Status: **implemented; native Mac engineering contracts pass**. No community
-fit, changed E009 score or paid/cloud action authorized by this record**.
+Opened 2026-10-16. Status: **implemented; the first frozen native phase is running
+under the owner's new $2 approval**. [Native receipt](native-observed.json) owns
+actual progress/gates/costs; no result is inferred from launch or later stop.
 [D015](../../docs/decisions/D015-coherent-prototype-upgrade.md) owns the rationale.
 
 ## Prospective design, fixed before implementation/results
@@ -11,7 +12,9 @@ defaults, wheel and all E009 evidence. PR #2 merged benchmark-planning head
 `bd902f4721aa780338fe961feba4ed15e4d96141` into main at
 `5bd59d774306f586c22b23a2f6ee36d64947d052`, whose parents are the unchanged dev3
 main `5e54538d1799e8d2538621729400f33fbaf017b9` and that research head. New branch:
-`codex/coherent-prototype`. Product Linux CI passed; local E009 contracts passed
+`codex/coherent-prototype`, subsequently renamed to `dev4-coherent-prototype`
+without rewriting commits at the owner's request. The latter is the pushed/VM
+branch. Product Linux CI passed; local E009 contracts passed
 91 tests (one Linux /proc test explicitly unavailable on Mac). Local technical
 review found no actionable issues; no independent approval/bot reply is claimed.
 
@@ -137,9 +140,9 @@ dev3 environments, E009 inputs/truth/results and failed journals stay unchanged.
 **Six launcher/phase tests pass** with real inert native children, serial failure
 handling and archive/member readback checks. Only Cloud Storage transport, guest
 status publishing and the local disk-capacity sensor are substituted in the phase
-fixture; no cloud verification or scientific execution is claimed. The E010
-Linux/Python3.12 environment, mount/RAM checks, live held-process/watchdog/STOP,
-credit/headroom gates and full-scale fit remain unexecuted prerequisites. The
+fixture; no cloud verification or scientific execution is claimed. At that local-only cutoff, the E010 Linux/Python3.12 environment, mount/RAM,
+live held-process/watchdog/STOP and credit/headroom gates were unexecuted
+prerequisites; the later native phase below owns new observations. The
 ordinary product suite has no ignored research assets/helpers or mocked workers.
 
 [Operations](OPERATIONS.md) owns the new **$2** proposal (estimated 1–2.5 hours,
@@ -157,3 +160,14 @@ all **1,405 regular members /13,947,258 logical bytes**, including its inventory
 verify. It excludes numerical/build prefixes (about **3.4 GiB** rounded local
 allocated disk). Existing accepted E009 evidence is not repackaged or modified.
 
+## First native phase, 2026-10-16
+
+The owner subsequently authorized one frozen candidate under a **new $2 gross**
+ceiling. [The native receipt](native-observed.json) and [operations](OPERATIONS.md)
+own the actual conditional credit admission, exact source/branch sync, full input
+verification, fresh independent Python 3.12 runtime, native gates, boot/process-bound
+watchdog and provider STOP. Existing VM/disks only; no resize/provisioning, external
+binner, refit of dev3, acquisition/mapping/truth replay or retention extension.
+The healthy launcher may outlast this task; its launch observation is not accepted
+community output or a new E009 score. Final cost needs independent provider stop.
+The original local evidence above remains a dated engineering result.

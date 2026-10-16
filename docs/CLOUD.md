@@ -3,19 +3,42 @@
 Updated: 2026-10-16 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**E009's four unchanged controls completed; last verified GCP state was TERMINATED.**
+**E010's separately authorized $2 phase is running on the unchanged existing VM.**
+[Native observation](../experiments/E010-coherent-prototype/native-observed.json)
+binds phase `candidate-20261016T212549Z-6917c3f`, exact clean source 6917c3f on
+`dev4-coherent-prototype`, current progress, gates and costs. Start 21:25:49.946 UTC
+October 16; four-hour phase ends 01:25:49 UTC October 17 /03:25 Copenhagen, provider
+STOP 01:40:49 UTC /03:40 Copenhagen. Fresh current-boot/process watchdog PID 2188,
+birth 11639, normal/crash tests, live timer and 4.25-hour STOP were verified before release.
+No new resource/service/IAM/quota, resize, retry or retention extension. Pre-install
+free 134.69 GiB. The complete native Python 3.12 setup and gates share this clock;
+the inventory/import/source, production marker positive and all 21 installed
+product tests pass on Linux Python 3.12.10. Full-data feature preparation completed;
+marker gene calling is progressing. Do not infer scientific completion from stop.
+
+Fresh paid-account Welcome credit **DKK1,933.15 Available through 2027-01-12**;
+reported October 1–16 cost/savings 38.35/net 0 remains lagged. Pending usage is not
+zero; the receipt reserves prior exposure and remaining approved retention.
+Unchanged DKK catalog prices give ~$.273045676/VM-hour including non-free IPv4;
+conservative new-phase total ~$1.66 includes the 4.25-hour fallback, disk interval,
+2-GiB export
+and small storage/operations. Actual uptime pricing remains provisional until stop.
+Existing 30/300-GiB disks remain $31.20/month while stopped; **October 21** review stays.
+
+**E009's four unchanged controls completed; the preceding reviewed VM state was TERMINATED.**
 [The reviewed result](../experiments/E009-competitive-benchmark/controls-review.json)
 binds actual stage exits, archive/member checks, local diagnostics and costs.
 Provider stop was **2026-10-15 22:55:19.426 UTC /October 16 00:55 Copenhagen**,
 after 1.7542275 h; gross compute/IP~$0.479, export~$0.0542, under the separate $2.
 No VM wake/resource change/retry/external tool ran in the local review. The current
-policy remains 4.25 h/STOP/automaticRestart=false, but no next start is authorized.
-Last checked Welcome credit **DKK1,936.57 Available through 2027-01-12**; reported
+policy remains 4.25 h/STOP/automaticRestart=false. That prior approval did not
+authorize E010; the later owner message separately did. Previously checked Welcome
+credit **DKK1,936.57 Available through 2027-01-12**; reported
 cost/savings 31.92/net0 still lag actual usage. Disks remain 30/300 GiB and cost
 **$31.20/month while stopped**; retention review **October 21**, no extension.
 [D015](decisions/D015-coherent-prototype-upgrade.md) is implemented locally in
 [E010](../experiments/E010-coherent-prototype/README.md); its separate $2 execution
-proposal is not approved. No cloud action occurred during implementation; values
+was subsequently approved. No cloud action occurred during implementation; values
 above are dated checks, not a fresh credit/control-plane refresh. Read-only GitHub access stays unchanged. Earlier
 launch/one-hour/25-hour observations below are dated history, not active work.
 **Phase 1 accepted: strict IAP SSH, exact private repository clone, pinned Linux

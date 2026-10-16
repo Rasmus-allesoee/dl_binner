@@ -1,0 +1,832 @@
+{
+  "authorization": {
+    "cumulative_seconds_from_VM_start": 14400,
+    "existing_resources_only": true,
+    "external_binners": false,
+    "max_compressed_export_GiB": 2,
+    "max_extra_GiB": 20,
+    "new_incremental_gross_ceiling_usd": 2,
+    "no_extension": true,
+    "no_retry": true,
+    "provider_stop_seconds": 15300,
+    "reserve_GiB": 25
+  },
+  "branch": "dev4-coherent-prototype",
+  "branch_rename": {
+    "VM_exact_clean_commit_verified": true,
+    "commits_preserved": true,
+    "from_name": "codex/coherent-prototype",
+    "normal_push_verified": true
+  },
+  "compact_evidence": {
+    "api-check.log": {
+      "bytes": 123,
+      "sha256": "a9673ce3e6f47242ca2cb30c0bc7ef90c8dc0e1664c84cd92c39371ce175a12d"
+    },
+    "api-check.py": {
+      "bytes": 1528,
+      "sha256": "ab2c2ebf42f930a86498f96145366e9f023ad47fe733cf5080bcca5c35cc2146"
+    },
+    "billing.json": {
+      "bytes": 179,
+      "sha256": "c7bf1056535088a8e2d1772bf0e9bd2d63f00cdf91b1a1dff113dd4de19b88da"
+    },
+    "bucket.json": {
+      "bytes": 922,
+      "sha256": "2750ac393aa246e2edcd3517f2fd0cd5cd5a01c26279d0cea4a1fedee617bb5e"
+    },
+    "catalog-quote.py": {
+      "bytes": 1479,
+      "sha256": "c9540120a3a4f3714bffa57beb811f3e32c2d230b89fe6da9fa852ac0bd82f11"
+    },
+    "catalog.log": {
+      "bytes": 1050,
+      "sha256": "9ab87cfc6ed606e8478405f8a341f8cf2dbb33600b837c410f56fe317d7456ee"
+    },
+    "cloud-assets.json": {
+      "bytes": 1369,
+      "sha256": "3fa4e96d67dc2043d0815d89c68f0441a23d587c63b5c2eb9c64bc81b930975c"
+    },
+    "cost-credit-admission.json": {
+      "bytes": 3449,
+      "sha256": "76052c86b9ba58d59ccced7dd2bc6daf47d377e848984872c1dafc8670c82445"
+    },
+    "current-sku-quote.json": {
+      "bytes": 9190,
+      "sha256": "d511bbccacb640d41a263e53de3344d5f37d1bd66899e1af1a6874a85d76b2f6"
+    },
+    "disks.json": {
+      "bytes": 3300,
+      "sha256": "b4554cf3385ac149293e0c777c9043c689adffc7ee5936d2ec42a598a37e80b7"
+    },
+    "docs-launch-final.log": {
+      "bytes": 687,
+      "sha256": "618bfc50932e15451bdc51cd2777f12c4dad810012b85daee3db59f83ca7703c"
+    },
+    "docs-launch.log": {
+      "bytes": 687,
+      "sha256": "618bfc50932e15451bdc51cd2777f12c4dad810012b85daee3db59f83ca7703c"
+    },
+    "docs-prelaunch.log": {
+      "bytes": 687,
+      "sha256": "f7618264af12417ef6ee609f9aa42a7d3242b68bfd9e6d26632e4388ebdb13b9"
+    },
+    "final-progress-terminal.log": {
+      "bytes": 26104,
+      "sha256": "0fee148434ed5705d6c09110fcd74c4cc74b42eaa1a29e02842c80f018c5e0c4"
+    },
+    "generate-arm.py": {
+      "bytes": 6232,
+      "sha256": "60803a6b7dd050b6edf292b63f1845fd59c9192c6422f8210cc313a3f2c9add3"
+    },
+    "generate-observe.py": {
+      "bytes": 2621,
+      "sha256": "5f5c7c57a704c16d8f126915883a8e53857268169208984e69a28273c30d4dae"
+    },
+    "generate-phase.py": {
+      "bytes": 4950,
+      "sha256": "29d6c3924d704b301fac575a475e03e1ad19e846022219ff793c388c54dccc31"
+    },
+    "generate-preflight.py": {
+      "bytes": 5052,
+      "sha256": "a2eb42c40aa64aac8f6db8e1c20def96f949dcd0544d165a8072e882969bf43f"
+    },
+    "host-preflight.json": {
+      "bytes": 350,
+      "sha256": "9befd6e1e57c7447b116378f162e0c802949d21c99d0a086cc984b339d646b72"
+    },
+    "identity.json": {
+      "bytes": 380,
+      "sha256": "7172a3c9c3eca919e250a104baf091ddd54ec321ea1a656013afb047f7d65ece"
+    },
+    "input-verification.json": {
+      "bytes": 1402,
+      "sha256": "8bfcf98383d82c339209f3f523d37f092ed6b555a4ef70cf40444007326e785f"
+    },
+    "instances.json": {
+      "bytes": 74118,
+      "sha256": "11aa60cf02704d247c620bd1c9bb257b563da59c73814288b5de9cdd89883839"
+    },
+    "linked-projects.json": {
+      "bytes": 288,
+      "sha256": "27f5f0d277cbf9bc54ca5d612fcd353bcb386d2bb8201259e3b6583d64dc410c"
+    },
+    "local-verify.json": {
+      "bytes": 492,
+      "sha256": "98bdbf9075f3e8a08d9087006e7331fb737666ebc6167e600a85911fb332247c"
+    },
+    "objects.json": {
+      "bytes": 25278,
+      "sha256": "3178a466c9e67b594cec5e45001445465c6cc1d8d562d25c736545139a82a9f0"
+    },
+    "observation-final.json": {
+      "bytes": 26381,
+      "sha256": "dffddc4d7afd7b5fe9f093ffed36ed09c0f7fae4bfb02d80a983841f36eb22d3"
+    },
+    "observation-first.json": {
+      "bytes": 7712,
+      "sha256": "040cfd9144bab2dd881fd942a6052c2f459e9be98d44358e0dc62d05da59cd37"
+    },
+    "observation-proof.json": {
+      "bytes": 24290,
+      "sha256": "52afb89506d914c6e237c2c34c184e1e9d56caec3f4305098c67852067fa87a2"
+    },
+    "policy-before-start.json": {
+      "bytes": 230,
+      "sha256": "4d319c6d91e2afe9d2af72713bdd7cedac3289e5a88e1fe36e61ced29b44e478"
+    },
+    "policy-readback.log": {
+      "bytes": 33010,
+      "sha256": "d0266c9ef38488d3ef2080d73b321a13bcdba9c4261c2d1996f4dea3b85ef91c"
+    },
+    "project-billing.json": {
+      "bytes": 207,
+      "sha256": "d17b1d996a5c84429db68fff27b4bc76e6e4c6451f38098ff6f5dae7a7d23937"
+    },
+    "provider-before-release.json": {
+      "bytes": 33118,
+      "sha256": "a09f6a0294a88f883d3d54a5d90aff01cb0cd6e5c770e6935f545da72d2dadd8"
+    },
+    "provider-stop-policy.log": {
+      "bytes": 133,
+      "sha256": "10da7dd4ea6a3c8f545cf76e81bdc7b5ba75be4b6d1859671bd2a3ac51dfea72"
+    },
+    "release.json": {
+      "bytes": 331,
+      "sha256": "405607b43a0545eda494bcf6140645fc23bd4becefd6fac3a145f144350ba466"
+    },
+    "remote-arm.sh": {
+      "bytes": 4009,
+      "sha256": "be6baf8f1352dc995ad3e5ec0b76218eb28315f7c1d581bed77ce0558b8ea092"
+    },
+    "remote-arm.terminal.log": {
+      "bytes": 1681,
+      "sha256": "6cd802d4834c905cc906eac4a51587f632f2e1b3a6be738ef68295d1750d9fbc"
+    },
+    "remote-configure.sh": {
+      "bytes": 4605,
+      "sha256": "73a9b226af0157fafa72ccf2dc3bac5799dc1e730b317499733d19284cee2298"
+    },
+    "remote-configure.terminal.log": {
+      "bytes": 1006,
+      "sha256": "e0b72470a52e9d2902a6f21f5708d1592cb068341de497bf06eda70eeb1cd18c"
+    },
+    "remote-final-progress.sh": {
+      "bytes": 3170,
+      "sha256": "d2ffa4b6161aa266af68ef1c63271d0767cb1eec000e2195ec4384eb95ed5c15"
+    },
+    "remote-final-progress.terminal.log": {
+      "bytes": 26071,
+      "sha256": "827793ed9bee4564151c7c85cef02139209ca1a37b2992c77fb4ad0e4ad83c09"
+    },
+    "remote-observe-first.terminal.log": {
+      "bytes": 8226,
+      "sha256": "186652c2af91af27950dbebdf470512e0c94a6e2862ea3730a33ec5c7d99c010"
+    },
+    "remote-observe.sh": {
+      "bytes": 2427,
+      "sha256": "bfc2188f914194418665d3613805fd85943447384a3beddd4ce84fe3d62bd427"
+    },
+    "remote-observe.terminal.log": {
+      "bytes": 8226,
+      "sha256": "186652c2af91af27950dbebdf470512e0c94a6e2862ea3730a33ec5c7d99c010"
+    },
+    "remote-preflight.sh": {
+      "bytes": 4203,
+      "sha256": "5f2d994a204d90c6f330992bd7d1f001a00dc1903094e3fc7cafef79553c99d2"
+    },
+    "remote-preflight.terminal.log": {
+      "bytes": 9568,
+      "sha256": "1fe1496f37883b8d987982dcd579af5b26b1f57c1f89e06a6e4f04f002a8ed30"
+    },
+    "remote-proof.sh": {
+      "bytes": 3170,
+      "sha256": "1fa70870e23d4068519b763bf4de3e5086b5b534777a9ff59e0723ea18b905fe"
+    },
+    "remote-proof.terminal.log": {
+      "bytes": 23980,
+      "sha256": "ed3471a6b88340375355d61494099f9317c6ecc361028b0d8c16c80980e39b85"
+    },
+    "remote-release.sh": {
+      "bytes": 2666,
+      "sha256": "c0c36e108fb63568e09f877bb638d31a3fa74fce884b7eca317231f608d236cb"
+    },
+    "remote-release.terminal.log": {
+      "bytes": 535,
+      "sha256": "ec9e626903cb166a8f3b76a91d86221db7f87155af0b439595fb7eb63acd86ea"
+    },
+    "remote.py": {
+      "bytes": 733,
+      "sha256": "a946be360e51bb7b1b922d32ab04ced3d766dd38a651db28f24637c24010c9fa"
+    },
+    "serial-before-ssh.log": {
+      "bytes": 831,
+      "sha256": "9ef1b354e82299394b650e095419788fb142c8a55e21e1c6259e6d60bb91baa0"
+    },
+    "setup-and-launch.sh": {
+      "bytes": 2106,
+      "sha256": "88fe89765404ec7bc017cd37ab5a526b7039e6c7260acb1720cd6eb4e128e6d3"
+    },
+    "start-existing.py": {
+      "bytes": 1896,
+      "sha256": "56d8dea4e76eeb163cdf5a8f8ccd00b2a53d5dc8c1d5f258ed27f1ae96b30546"
+    },
+    "start.log": {
+      "bytes": 303,
+      "sha256": "f81cb8fe75a7a3ba4b4c7a63cfd474fbe2204cef29a39dcee10453dbe55600d0"
+    },
+    "started-describe.log": {
+      "bytes": 33118,
+      "sha256": "a09f6a0294a88f883d3d54a5d90aff01cb0cd6e5c770e6935f545da72d2dadd8"
+    },
+    "started.json": {
+      "bytes": 605,
+      "sha256": "1e2737220644785fa7e51407bff5b02d30def568fbf9c08d860de83737fbcc25"
+    },
+    "update-guides.py": {
+      "bytes": 9591,
+      "sha256": "c74716edeb46e5c582a2791531c330fb0a8ffa3936093e7c02d72276defbaf8e"
+    },
+    "update-records.py": {
+      "bytes": 4260,
+      "sha256": "216bcb1329f16696e2127daa88f489bb9e772a9024e3c7b918e1cebb43fc6331"
+    },
+    "upload-cost-credit-admission.json.log": {
+      "bytes": 202,
+      "sha256": "25968ba519cecb30e6ff7e50e3de1689572a335d92c7d8ae9a85b64ffad99bf3"
+    },
+    "upload-dl_binner-0.1.0.dev4-py3-none-any.whl.log": {
+      "bytes": 228,
+      "sha256": "645e1a84adcfb831e4939f77b5b9992708de90e95cf8d8d54b669f98c5dfa574"
+    },
+    "upload-e010-local-evidence-v1.tar.gz.log": {
+      "bytes": 202,
+      "sha256": "77f05d06682793e57f57d42cd7a8afd90651f8a9cd64440fc561e4fbb6f4b84d"
+    },
+    "upload-marker-asset.json.log": {
+      "bytes": 173,
+      "sha256": "71c366b65e0dae90f2d34bdaf85d1f7878e913f7aec8c0f8888ceda0145654ee"
+    },
+    "upload-marker.hmm.log": {
+      "bytes": 175,
+      "sha256": "9568077b9810048ac65b53d5dfb23d5881ad8e75d25bf8298f5a0423f26e6450"
+    },
+    "watchdog-config.json": {
+      "bytes": 630,
+      "sha256": "2ba42bc907087dcc2caa54e6bcbf4bfe6c8377101d18a7b462b8bfd6e706f734"
+    }
+  },
+  "complete_inputs": {
+    "accepted_originals_unmodified": true,
+    "all_zero_rows": 13,
+    "bp": 231678157,
+    "contigs": 145702,
+    "depth_cells": 1457020,
+    "depth_columns": [
+      "cami3_toy_human_gut_short_read_sample_0",
+      "cami3_toy_human_gut_short_read_sample_2",
+      "cami3_toy_human_gut_short_read_sample_3",
+      "cami3_toy_human_gut_short_read_sample_4",
+      "cami3_toy_human_gut_short_read_sample_6",
+      "cami3_toy_human_gut_short_read_sample_9",
+      "cami3_toy_human_gut_short_read_sample_10",
+      "cami3_toy_human_gut_short_read_sample_11",
+      "cami3_toy_human_gut_short_read_sample_14",
+      "cami3_toy_human_gut_short_read_sample_17"
+    ],
+    "depth_rows": 145702,
+    "inputs": {
+      "depth": {
+        "bytes": 24197403,
+        "sha256": "48e49f4bb2ec1892f4be1f4db7dbf8616709889c36148f3d14473f52fd1b7aec"
+      },
+      "fasta": {
+        "bytes": 237732361,
+        "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+      },
+      "marker_hmm": {
+        "bytes": 15929643,
+        "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9"
+      },
+      "marker_manifest": {
+        "bytes": 4655,
+        "sha256": "d1898ef92fa992881103cd19de2be6066db38917cb3be2e3ece86d35035692b3"
+      }
+    },
+    "package_files_verified": 18,
+    "recipes_verified": 7,
+    "status": "PASS",
+    "wheel": {
+      "bytes": 54811,
+      "sha256": "5f4a8a41fd10ca4eab13e35c32f0759c3ee35526723affff48f26022f680f58a"
+    }
+  },
+  "cost_to_observation": {
+    "asset_readback_export_bytes": 22181765,
+    "asset_readback_gross_upper_usd": 0.002479005418717861,
+    "existing_disk_interval_gross_usd": 0.006139794884424775,
+    "final_cost": "pending actual provider stop; sampled child CPU is not charged uptime",
+    "measured_VM_uptime_seconds": 517.1596460342407,
+    "priced_compute_ipv4_gross_usd": 0.039224501489987657
+  },
+  "credit_cost_admission": {
+    "billing": {
+      "conservative_unreconciled_prior_usage_reserve_usd": 30,
+      "credit_application": "Net pricing",
+      "credit_margin_assessment": "1933.15 DKK exceeds (30 prior reserve + 5 existing remaining disk retention + 2 new phase)*6.5781 DKK by >1690 DKK",
+      "credit_original": 1973.43,
+      "credit_remaining": 1933.15,
+      "currency": "DKK",
+      "exact_pending_usage": "not directly observable; billing is delayed; never inferred zero",
+      "expires": "2027-01-12",
+      "open": true,
+      "paid_account_visible": true,
+      "period": "2026-10-01 to 2026-10-16",
+      "prior_reserve_reason": "Exceeds prior USD20 data-only envelope plus setup and USD2 controls; sole linked project; only VM now stopped; does not authorize more prior work",
+      "project_billing_enabled": true,
+      "remaining_approved_disk_retention_reserve_usd": 5,
+      "reported_cost": 38.35,
+      "reported_net": 0,
+      "reported_savings": 38.35,
+      "scope": "Certain usage; see the terms for free trial",
+      "starts": "2026-10-13",
+      "status": "Available"
+    },
+    "branch": "dev4-coherent-prototype",
+    "cost": {
+      "asset_readback_and_ssh_network_reserve": 0.02,
+      "compute_ipv4_4_25h": 1.1604441247472674,
+      "compute_ipv4_usd_per_hour": 0.27304567641112176,
+      "existing_disks_4_25h": 0.18164383561643835,
+      "existing_disks_usd_per_month": 31.2,
+      "max_2GiB_export": 0.24,
+      "new_object_storage_to_Oct21": 0.01,
+      "operations_reserve": 0.02,
+      "other_rounding_reserve": 0.025,
+      "phase_conservative_total_usd": 1.6570879603637059
+    },
+    "coverage": {
+      "compute": "ordinary E2 CPU/non-premium Ubuntu; eligible",
+      "disk": "ordinary Persistent Disk; eligible",
+      "network": "VPC/IP + same-region transfer and compact internet export; eligible",
+      "operations": "ordinary Cloud Storage operations/IAP no service fee; eligible",
+      "storage": "private same-region Standard Cloud Storage; eligible"
+    },
+    "dk_price_quote": "current-sku-quote.json",
+    "experiment": "E010",
+    "external_binners": false,
+    "fit_or_new_score_so_far": false,
+    "gate": "PASS for one existing-VM start; actual mount/headroom and native gates still required before fit",
+    "observed_utc": "2026-10-16T21:24:04.138127+00:00",
+    "owner_authorization": "2026-10-16 latest direct message; NEW incremental gross USD2; four hours cumulative from VM start; no retry/extension/resource/retention change",
+    "provider": {
+      "RAM_GiB": 32,
+      "action": "STOP",
+      "automaticRestart": false,
+      "cpus": 8,
+      "disks_GiB": [
+        30,
+        300
+      ],
+      "machine": "e2-standard-8",
+      "provider_stop_seconds": 15300,
+      "state": "TERMINATED"
+    },
+    "recorded_dkk_per_usd": 6.5781,
+    "source_commit": "6917c3f027bb975db43e771e979fecda0ab6c415",
+    "sources": [
+      "https://console.cloud.google.com/billing/01DD71-3C7861-1E59DF/credits/all",
+      "https://console.cloud.google.com/billing/01DD71-3C7861-1E59DF",
+      "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "https://cloud.google.com/vpc/network-pricing?hl=en",
+      "https://cloud.google.com/storage/pricing"
+    ],
+    "storage": {
+      "actual_stopped_filesystem_free": "not queryable without boot; immediately verify >=45GiB before installation/fit; startup is included within new USD2",
+      "extension": false,
+      "free_reserve_GiB": 25,
+      "last_measured_free_bytes": 148200000000,
+      "max_growth_GiB": 20,
+      "original_approval_covers_this_phase": true,
+      "review": "2026-10-21"
+    }
+  },
+  "experiment": "E010",
+  "healthy_progress_check": "After ~3 minutes: native marker gene calls 18000/37390 -> 52000/106827 contigs/genes; same live pinned parent and active timer; no scientific failure observed. No polling until completion.",
+  "host": {
+    "CPUs": 8,
+    "RAM_bytes": 33646948352,
+    "boot_id": "67044576-acf4-48bb-8c4d-a5a4df3891b1",
+    "checked_utc": "2026-10-16T21:26:40.261491+00:00",
+    "disk_free": 144619024384,
+    "disk_total": 316733652992,
+    "disk_used": 172097851392,
+    "mount": true,
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "uptime": "39.86 246.04\n"
+  },
+  "identity": {
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z",
+    "phase_id": "candidate-20261016T212549Z-6917c3f",
+    "phase_root": "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f",
+    "source_commit": "6917c3f027bb975db43e771e979fecda0ab6c415",
+    "unit": "e010-candidate-20261016t212549z",
+    "vm_start_epoch": 1792185949.946
+  },
+  "latest_observation": {
+    "boot_id": "67044576-acf4-48bb-8c4d-a5a4df3891b1",
+    "charged_growth": 2659663872,
+    "disk_free": 143033102336,
+    "disk_used": 173683773440,
+    "elapsed_since_VM_start_seconds": 517.1596460342407,
+    "logs": {
+      "candidate-run/candidate/logs/invocation-7f989670ffda/features.native.log": {
+        "bytes": 9084,
+        "mtime": 1792186237.5607085,
+        "tail": ": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:24Z\", \"completed_contigs\": 112000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:25Z\", \"completed_contigs\": 114000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:25Z\", \"completed_contigs\": 116000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:25Z\", \"completed_contigs\": 118000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:25Z\", \"completed_contigs\": 120000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:25Z\", \"completed_contigs\": 122000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:25Z\", \"completed_contigs\": 124000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:25Z\", \"completed_contigs\": 126000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:26Z\", \"completed_contigs\": 128000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:26Z\", \"completed_contigs\": 130000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:26Z\", \"completed_contigs\": 132000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:26Z\", \"completed_contigs\": 134000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:26Z\", \"completed_contigs\": 136000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:26Z\", \"completed_contigs\": 138000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:26Z\", \"completed_contigs\": 140000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:27Z\", \"completed_contigs\": 142000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_features\", \"utc\": \"2026-10-16T21:30:27Z\", \"completed_contigs\": 144000, \"total_contigs\": 145702}\n{\"stage\": \"candidate_views_complete\", \"utc\": \"2026-10-16T21:30:37Z\", \"parents\": 145702, \"training_parents\": 13554, \"samples\": [\"cami3_toy_human_gut_short_read_sample_0\", \"cami3_toy_human_gut_short_read_sample_2\", \"cami3_toy_human_gut_short_read_sample_3\", \"cami3_toy_human_gut_short_read_sample_4\", \"cami3_toy_human_gut_short_read_sample_6\", \"cami3_toy_human_gut_short_read_sample_9\", \"cami3_toy_human_gut_short_read_sample_10\", \"cami3_toy_human_gut_short_read_sample_11\", \"cami3_toy_human_gut_short_read_sample_14\", \"cami3_toy_human_gut_short_read_sample_17\"]}\n\nDLBINNER exit_code=0 stop_reason=None\n"
+      },
+      "candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log": {
+        "bytes": 3606,
+        "mtime": 1792186456.9971254,
+        "tail": "s\": 14000, \"genes\": 29567, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:31:26Z\", \"completed_contigs\": 16000, \"genes\": 33396, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:31:33Z\", \"completed_contigs\": 18000, \"genes\": 37390, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:31:44Z\", \"completed_contigs\": 20000, \"genes\": 42396, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:31:52Z\", \"completed_contigs\": 22000, \"genes\": 46873, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:31:58Z\", \"completed_contigs\": 24000, \"genes\": 50227, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:32:04Z\", \"completed_contigs\": 26000, \"genes\": 54369, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:32:10Z\", \"completed_contigs\": 28000, \"genes\": 58124, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:32:20Z\", \"completed_contigs\": 30000, \"genes\": 62441, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:32:28Z\", \"completed_contigs\": 32000, \"genes\": 66177, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:32:37Z\", \"completed_contigs\": 34000, \"genes\": 70592, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:32:43Z\", \"completed_contigs\": 36000, \"genes\": 74304, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:32:58Z\", \"completed_contigs\": 38000, \"genes\": 79038, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:33:08Z\", \"completed_contigs\": 40000, \"genes\": 83185, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:33:19Z\", \"completed_contigs\": 42000, \"genes\": 87213, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:33:29Z\", \"completed_contigs\": 44000, \"genes\": 91463, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:33:39Z\", \"completed_contigs\": 46000, \"genes\": 95230, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:33:55Z\", \"completed_contigs\": 48000, \"genes\": 99260, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:34:06Z\", \"completed_contigs\": 50000, \"genes\": 103007, \"total_contigs\": 145702}\n{\"stage\": \"candidate_gene_calls\", \"utc\": \"2026-10-16T21:34:16Z\", \"completed_contigs\": 52000, \"genes\": 106827, \"total_contigs\": 145702}\n"
+      },
+      "candidate-run/candidate/logs/invocation-7f989670ffda/terminal.log": {
+        "bytes": 5411,
+        "mtime": 1792186460.0611174,
+        "tail": "-16 21:32:29 UTC | Still running (111s, sampled RSS 0.44 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:32:39 UTC | Still running (122s, sampled RSS 0.44 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:32:49 UTC | Still running (132s, sampled RSS 0.44 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:32:59 UTC | Still running (142s, sampled RSS 0.44 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:09 UTC | Still running (152s, sampled RSS 0.44 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:19 UTC | Still running (162s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:29 UTC | Still running (172s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:39 UTC | Still running (182s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:49 UTC | Still running (192s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:59 UTC | Still running (202s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:34:10 UTC | Still running (212s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:34:20 UTC | Still running (222s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\n"
+      },
+      "candidate-run/native-contracts/product-tests.log": {
+        "bytes": 24391,
+        "mtime": 1792186211.5819523,
+        "tail": " extra-output\nDLBINNER 2026-10-16 21:29:57 UTC | dl-binner 0.1.0.dev4 | output: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/native-contracts/native-run/invalid\nDLBINNER 2026-10-16 21:29:57 UTC | 2 CPU threads, loader workers 0; built-in serial stages; matched raw control enabled\nDLBINNER 2026-10-16 21:29:57 UTC | Optional safeguards: RAM=None GB, time=60.0 seconds (None means disabled)\nDLBINNER 2026-10-16 21:29:57 UTC | 1/8 features: starting\nDLBINNER 2026-10-16 21:29:58 UTC | Stopped safely. Logs and failed-stage files retained: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/native-contracts/native-run/invalid/logs/invocation-20261016T212957-5e55ee15. Resume matching inputs with --resume; no automatic repairs\nDLBINNER 2026-10-16 21:29:58 UTC | exit_code=1 | failed | 0.29s | terminal log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/native-contracts/native-run/invalid/logs/invocation-20261016T212957-5e55ee15/terminal.log\nPRODUCT contract passed: invalid-native\nDLBINNER 2026-10-16 21:29:58 UTC | dl-binner 0.1.0.dev4 | output: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/native-contracts/native-run/timeout\nDLBINNER 2026-10-16 21:29:58 UTC | 2 CPU threads, loader workers 0; built-in serial stages; matched raw control enabled\nDLBINNER 2026-10-16 21:29:58 UTC | Optional safeguards: RAM=None GB, time=0.3 seconds (None means disabled)\nDLBINNER 2026-10-16 21:29:58 UTC | 1/8 features: starting\nDLBINNER 2026-10-16 21:29:58 UTC | 1/8 features: complete (0.3s)\nDLBINNER 2026-10-16 21:29:58 UTC | 2/8 train: starting\nDLBINNER 2026-10-16 21:29:58 UTC | Stopped safely. Logs and failed-stage files retained: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/native-contracts/native-run/timeout/logs/invocation-20261016T212958-d08db2bd. Resume matching inputs with --resume; no automatic repairs\nDLBINNER 2026-10-16 21:29:58 UTC | exit_code=1 | failed | 0.35s | terminal log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/native-contracts/native-run/timeout/logs/invocation-20261016T212958-d08db2bd/terminal.log\nPRODUCT contract passed: overall-timeout\nDLBINNER 2026-10-16 21:30:09 UTC | Still running (10s, sampled RSS 0.01 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/native-contracts/native-run/heartbeat-supervisor.log\nok\n\n----------------------------------------------------------------------\nRan 21 tests in 64.402s\n\nOK\n\nDLBINNER exit_code=0 stop_reason=None\n"
+      },
+      "candidate-run/terminal.log": {
+        "bytes": 27704,
+        "mtime": 1792186465.0451047,
+        "tail": "f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:24 UTC | Still running (192s, sampled RSS 0.47 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:33:29 UTC | Still running (172s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:34 UTC | Still running (203s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:33:39 UTC | Still running (182s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:44 UTC | Still running (213s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:33:49 UTC | Still running (192s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:54 UTC | Still running (223s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:33:59 UTC | Still running (202s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:34:04 UTC | Still running (233s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:34:10 UTC | Still running (212s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:34:15 UTC | Still running (243s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:34:20 UTC | Still running (222s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:34:25 UTC | Still running (253s, sampled RSS 0.49 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\n"
+      },
+      "logs/parent-terminal.log": {
+        "bytes": 33667,
+        "mtime": 1792186466.6301007,
+        "tail": "ation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:44 UTC | Still running (213s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:33:46 UTC | Still running (334s, sampled RSS 0.51 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/logs/launcher.log\nDLBINNER 2026-10-16 21:33:49 UTC | Still running (192s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:54 UTC | Still running (223s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:33:56 UTC | Still running (344s, sampled RSS 0.51 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/logs/launcher.log\nDLBINNER 2026-10-16 21:33:59 UTC | Still running (202s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:34:04 UTC | Still running (233s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:34:06 UTC | Still running (354s, sampled RSS 0.51 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/logs/launcher.log\nDLBINNER 2026-10-16 21:34:10 UTC | Still running (212s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:34:15 UTC | Still running (243s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:34:16 UTC | Still running (364s, sampled RSS 0.51 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/logs/launcher.log\nDLBINNER 2026-10-16 21:34:20 UTC | Still running (222s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:34:25 UTC | Still running (253s, sampled RSS 0.49 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:34:26 UTC | Still running (374s, sampled RSS 0.52 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/logs/launcher.log\n"
+      },
+      "logs/setup.log": {
+        "bytes": 39740,
+        "mtime": 1792186465.0451047,
+        "tail": "f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:24 UTC | Still running (192s, sampled RSS 0.47 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:33:29 UTC | Still running (172s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:34 UTC | Still running (203s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:33:39 UTC | Still running (182s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:44 UTC | Still running (213s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:33:49 UTC | Still running (192s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:33:54 UTC | Still running (223s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:33:59 UTC | Still running (202s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:34:04 UTC | Still running (233s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:34:10 UTC | Still running (212s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:34:15 UTC | Still running (243s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\nDLBINNER 2026-10-16 21:34:20 UTC | Still running (222s, sampled RSS 0.45 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/logs/invocation-7f989670ffda/markers.native.log\nDLBINNER 2026-10-16 21:34:25 UTC | Still running (253s, sampled RSS 0.49 GB); log: /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate.log\n"
+      }
+    },
+    "native_gate_receipts": {
+      "installed.json": {
+        "package_files": 18
+      },
+      "marker-contract/observed.json": {
+        "DNA": {
+          "bytes": 1572,
+          "sha256": "434a00641a24772591d69df489e466221db65d93c2a7f1c057c3f3bb57a5340b"
+        },
+        "cache": {
+          "bytes": 1811,
+          "sha256": "85415d0e1aa136713a348ae9e516d74e6c58da4280f50393a6d4ea6787351251"
+        },
+        "canonical_families": 107,
+        "domains": 1,
+        "genes": 3,
+        "kind": "production_profile_positive_software_contract",
+        "manifest": {
+          "bytes": 4655,
+          "sha256": "d1898ef92fa992881103cd19de2be6066db38917cb3be2e3ece86d35035692b3"
+        },
+        "profile": {
+          "bytes": 15929643,
+          "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9"
+        },
+        "profile_count": 111,
+        "scientific_quality_assessed": false,
+        "scope": "Own-consensus generated software positive; unchanged trusted cutoffs/.5 coverage, no genome recovery claim",
+        "source": {
+          "bytes": 2551,
+          "sha256": "b1153b07da8f9e809c56034e4b3619ffbf24240c4c07181d0c39d0d980a450b6"
+        },
+        "status": "passed"
+      },
+      "native-contracts/product-tests.exit.json": {
+        "command": [
+          "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/native-contracts/tests",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2578,
+        "peak_sampled_rss_bytes": 763248640,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.9303174522269217,
+        "sampled_cpu_seconds": 62.06,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 599.986956056,
+        "stop_reason": null,
+        "wall_seconds": 66.708412114
+      },
+      "runtime.json": {
+        "base_prefix": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315",
+        "distributions": {
+          "archspec": "0.2.6",
+          "dl-binner": "0.1.0.dev4",
+          "filelock": "4.0.10",
+          "fsspec": "2026.9.0",
+          "igraph": "0.11.8",
+          "jinja2": "3.1.6",
+          "joblib": "1.4.2",
+          "leidenalg": "0.10.2",
+          "llvmlite": "0.43.0",
+          "markupsafe": "3.0.4",
+          "mpmath": "1.3.0",
+          "networkx": "3.4.2",
+          "numba": "0.60.0",
+          "numpy": "1.26.4",
+          "pip": "25.1.1",
+          "psutil": "6.0.0",
+          "pyhmmer": "0.11.0",
+          "pynndescent": "0.5.13",
+          "pyrodigal": "3.6.3",
+          "scikit-learn": "1.5.2",
+          "scipy": "1.13.1",
+          "setuptools": "65.5.0",
+          "sympy": "1.14.0",
+          "texttable": "1.7.0",
+          "threadpoolctl": "3.5.0",
+          "torch": "2.2.2+cpu",
+          "typing-extensions": "4.16.0",
+          "wheel": "0.45.1"
+        },
+        "prefix": "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f",
+        "python_version": "3.12.10",
+        "role": "candidate",
+        "status": "passed",
+        "system": "Linux",
+        "threads": 8,
+        "user_site_enabled": false
+      }
+    },
+    "observed_utc": "2026-10-16T21:34:27.105616+00:00",
+    "phase_result": null,
+    "process_tree": [
+      {
+        "command": "/usr/bin/python3 -I -B /srv/dl_binner/repo/scripts/e010_phase.py --config /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/phase-config.json ",
+        "cpu_ticks": 3771,
+        "pid": 2188,
+        "ppid": 1,
+        "rss_bytes": 27557888,
+        "state": "S"
+      },
+      {
+        "command": "/bin/bash /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/logs/setup-and-launch.sh ",
+        "cpu_ticks": 0,
+        "pid": 2329,
+        "ppid": 2188,
+        "rss_bytes": 3555328,
+        "state": "S"
+      },
+      {
+        "command": "tee /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/logs/setup.log ",
+        "cpu_ticks": 1,
+        "pid": 2330,
+        "ppid": 2329,
+        "rss_bytes": 1708032,
+        "state": "S"
+      },
+      {
+        "command": "/usr/bin/python3 -I -B scripts/e010_candidate.py --execute --approval /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/approval.json --python /srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python --wheel /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/dl_binner-0.1.0.dev4-py3-none-any.whl --fasta /srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa --depth /srv/dl_binner/experiments/e009/data-stage-v1/parts/final/depth.tsv --marker-hmm /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/marker.hmm --output /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run ",
+        "cpu_ticks": 3466,
+        "pid": 2448,
+        "ppid": 2329,
+        "rss_bytes": 27824128,
+        "state": "S"
+      },
+      {
+        "command": "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python -I -B -m dl_binner candidate --fasta /srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa --depth /srv/dl_binner/experiments/e009/data-stage-v1/parts/final/depth.tsv --marker-hmm /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/marker.hmm --marker-manifest /srv/dl_binner/repo/experiments/E010-coherent-prototype/marker-asset.json --output /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate --threads 8 --memory-gb 26 --timeout 13837.658614009964 ",
+        "cpu_ticks": 2663,
+        "pid": 2824,
+        "ppid": 2448,
+        "rss_bytes": 48939008,
+        "state": "S"
+      },
+      {
+        "command": "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python -I -B -m dl_binner.candidate.runner --root /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate --stage markers --output /srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/candidate/staging/markers-780a4714 ",
+        "cpu_ticks": 23025,
+        "pid": 2841,
+        "ppid": 2824,
+        "rss_bytes": 410972160,
+        "state": "R"
+      }
+    ],
+    "receipts": [
+      "features"
+    ]
+  },
+  "launch_evidence_archive": {
+    "bytes": 146882,
+    "collector_log_note": "archive-launch-terminal.log is the immutable empty collector-log prefix captured at archive creation; later collector output is outside the archive. Reported logical bytes use immutable member sizes.",
+    "every_member_verified": true,
+    "inventory": {
+      "bytes": 9912,
+      "sha256": "d728ed7cd2ea7425c7293dfc47233f1b7bc68bc04670ce73495bb2561514f373"
+    },
+    "logical_member_bytes": 518936,
+    "network_readback_gross_upper_usd": 1.6415342688560486e-05,
+    "private_readback_verified": true,
+    "regular_members": 70,
+    "sha256": "6c120df90e5cabab7ad79291c66323d70405994546bd6527c6e9978d6657abe5",
+    "uri": "gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/launch-evidence.tar.gz"
+  },
+  "local_archive_verification": {
+    "archive": {
+      "bytes": 6189207,
+      "sha256": "938fade66110686fb39b808d921652aeb53ce506b905d8687bdf0c9cf0b51176"
+    },
+    "hmm": {
+      "bytes": 15929643,
+      "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9"
+    },
+    "logical_member_bytes": 13947258,
+    "package_files": 18,
+    "recipe_files": 7,
+    "regular_members": 1405,
+    "status": "PASS",
+    "wheel": {
+      "bytes": 54811,
+      "sha256": "5f4a8a41fd10ca4eab13e35c32f0759c3ee35526723affff48f26022f680f58a"
+    }
+  },
+  "native_gates": {
+    "full_installed_tests": {
+      "command": [
+        "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run/native-contracts/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2578,
+      "peak_sampled_rss_bytes": 763248640,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.9303174522269217,
+      "sampled_cpu_seconds": 62.06,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 599.986956056,
+      "stop_reason": null,
+      "wall_seconds": 66.708412114
+    },
+    "installed_runtime": "PASS native Linux Python3.12.10; complete 28-distribution owned CPU inventory, isolated native groups, all18 installed source/default members, production 111-profile positive, all21 installed native product tests; no substituted product workers",
+    "launcher_six_tests_passed": true,
+    "watchdog_two_native_tests_passed": true
+  },
+  "phase_id": "candidate-20261016T212549Z-6917c3f",
+  "private_assets": {
+    "cost-credit-admission.json": {
+      "bytes": 3449,
+      "readback_verified": true,
+      "sha256": "76052c86b9ba58d59ccced7dd2bc6daf47d377e848984872c1dafc8670c82445",
+      "uri": "gs://dl-binner-archive-167650584170/e010/assets-6917c3f-20261016/cost-credit-admission.json"
+    },
+    "dl_binner-0.1.0.dev4-py3-none-any.whl": {
+      "bytes": 54811,
+      "readback_verified": true,
+      "sha256": "5f4a8a41fd10ca4eab13e35c32f0759c3ee35526723affff48f26022f680f58a",
+      "uri": "gs://dl-binner-archive-167650584170/e010/assets-6917c3f-20261016/dl_binner-0.1.0.dev4-py3-none-any.whl"
+    },
+    "e010-local-evidence-v1.tar.gz": {
+      "bytes": 6189207,
+      "readback_verified": true,
+      "sha256": "938fade66110686fb39b808d921652aeb53ce506b905d8687bdf0c9cf0b51176",
+      "uri": "gs://dl-binner-archive-167650584170/e010/assets-6917c3f-20261016/e010-local-evidence-v1.tar.gz"
+    },
+    "marker-asset.json": {
+      "bytes": 4655,
+      "readback_verified": true,
+      "sha256": "d1898ef92fa992881103cd19de2be6066db38917cb3be2e3ece86d35035692b3",
+      "uri": "gs://dl-binner-archive-167650584170/e010/assets-6917c3f-20261016/marker-asset.json"
+    },
+    "marker.hmm": {
+      "bytes": 15929643,
+      "readback_verified": true,
+      "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9",
+      "uri": "gs://dl-binner-archive-167650584170/e010/assets-6917c3f-20261016/marker.hmm"
+    }
+  },
+  "provider_fallback": {
+    "action": "STOP",
+    "automaticRestart": false,
+    "hard_phase_end_UTC": "2026-10-17T01:25:49.946000+00:00",
+    "max_run_seconds": 15300,
+    "provider_STOP_target_UTC": "2026-10-17T01:40:49.946000+00:00",
+    "restart_policy": "no"
+  },
+  "provider_final_readback": {
+    "lastStartTimestamp": "2026-10-16T14:25:49.946-07:00",
+    "observed_file_utc": "2026-10-16T21:35:07.368094+00:00",
+    "record": {
+      "bytes": 551,
+      "sha256": "8ea5c8f99243b96eacf9a0e30833b1531c4c767b994e6056e7aa0f60c1679e0d"
+    },
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "15300"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "status": "RUNNING"
+  },
+  "record": "one frozen candidate development phase; partial launch observation, not biological acceptance",
+  "release": {
+    "phase_config": {
+      "bytes": 824,
+      "sha256": "0009f46439b03370f613a37f8edde2b7348ca50757f898cce1d44c321450603a"
+    },
+    "released_utc": "2026-10-16T21:28:12.228819+00:00",
+    "setup_adapter": {
+      "bytes": 2106,
+      "sha256": "88fe89765404ec7bc017cd37ab5a526b7039e6c7260acb1720cd6eb4e128e6d3"
+    },
+    "watchdog_pid": 2188
+  },
+  "scientific_acceptance": {
+    "candidate_completed": false,
+    "confirmation": "prospective plan unchanged; no acquisition or fit",
+    "dev3_and_E009_immutable": true,
+    "new_scores": false,
+    "truth": "admitted conservative sequence truth v2 unchanged, outside training; later full-denominator diagnostics retain 3.3034% N quarantine"
+  },
+  "source_commit": "6917c3f027bb975db43e771e979fecda0ab6c415",
+  "status": "RUNNING_UNDER_VERIFIED_SUPERVISION",
+  "storage": {
+    "charged_growth_note": "whole-filesystem change, includes conservative 1GiB early-preparation allowance; not exact artifact attribution",
+    "existing_disks_GiB": [
+      30,
+      300
+    ],
+    "extension": false,
+    "gross_monthly_usd": 31.2,
+    "observed_charged_growth_GiB": 2.4770050048828125,
+    "observed_free_GiB": 133.20995712280273,
+    "retention_review": "2026-10-21"
+  },
+  "updated_utc": "2026-10-16T21:34:41.121469+00:00",
+  "version": 1,
+  "watchdog": {
+    "armed_utc": "2026-10-16T21:27:56.911568+00:00",
+    "boot_id": "67044576-acf4-48bb-8c4d-a5a4df3891b1",
+    "execution_source_commit": "6917c3f027bb975db43e771e979fecda0ab6c415",
+    "exit_grace_seconds": 60,
+    "process": {
+      "command_sha256": "6ed7d009199d470ec59af1853d999b15acf77392e692fffe1a31c07be7f8b9c9",
+      "pid": 2188,
+      "start_ticks": 11639
+    },
+    "scope": "this boot and pinned held E010 parent only",
+    "watchdog_source": {
+      "bytes": 5959,
+      "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+    },
+    "workflow_root": "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f"
+  },
+  "watchdog_final_status": {
+    "boot_id": "67044576-acf4-48bb-8c4d-a5a4df3891b1",
+    "checked_utc": "2026-10-16T21:34:20.254751+00:00",
+    "decision": "workflow alive",
+    "expected_process": {
+      "command_sha256": "6ed7d009199d470ec59af1853d999b15acf77392e692fffe1a31c07be7f8b9c9",
+      "pid": 2188,
+      "start_ticks": 11639
+    },
+    "observed_process": {
+      "command_sha256": "6ed7d009199d470ec59af1853d999b15acf77392e692fffe1a31c07be7f8b9c9",
+      "pid": 2188,
+      "start_ticks": 11639
+    },
+    "shutdown": false,
+    "workflow_root": "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f"
+  }
+}
