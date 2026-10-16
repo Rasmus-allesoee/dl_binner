@@ -3,19 +3,20 @@
 Updated: 2026-10-16 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**E009's four unchanged controls completed; GCP is TERMINATED.**
+**E009's four unchanged controls completed; last verified GCP state was TERMINATED.**
 [The reviewed result](../experiments/E009-competitive-benchmark/controls-review.json)
 binds actual stage exits, archive/member checks, local diagnostics and costs.
 Provider stop was **2026-10-15 22:55:19.426 UTC /October 16 00:55 Copenhagen**,
 after 1.7542275 h; gross compute/IP~$0.479, export~$0.0542, under the separate $2.
 No VM wake/resource change/retry/external tool ran in the local review. The current
 policy remains 4.25 h/STOP/automaticRestart=false, but no next start is authorized.
-Current Welcome credit **DKK1,936.57 Available through 2027-01-12**; reported
+Last checked Welcome credit **DKK1,936.57 Available through 2027-01-12**; reported
 cost/savings 31.92/net0 still lag actual usage. Disks remain 30/300 GiB and cost
 **$31.20/month while stopped**; retention review **October 21**, no extension.
-[D015](decisions/D015-coherent-prototype-upgrade.md) recommends a coherent next
-prototype, with separate approval before implementation/paid execution. No cloud
-action occurred in that reassessment; previous live values above are dated checks. Read-only GitHub access stays unchanged. Earlier
+[D015](decisions/D015-coherent-prototype-upgrade.md) is implemented locally in
+[E010](../experiments/E010-coherent-prototype/README.md); its separate $2 execution
+proposal is not approved. No cloud action occurred during implementation; values
+above are dated checks, not a fresh credit/control-plane refresh. Read-only GitHub access stays unchanged. Earlier
 launch/one-hour/25-hour observations below are dated history, not active work.
 **Phase 1 accepted: strict IAP SSH, exact private repository clone, pinned Linux
 Codex CLI, ChatGPT authentication, actual desktop remote-project commands and
@@ -596,3 +597,14 @@ results and compact status, then exits to trigger shutdown. Do not stop active
 science merely because this chat ends. Do not wait/poll until completion; owner
 will request inspection later. Guest attribute `e009-controls/status` and private
 completion URI are pointers, not substitutes for actual stage/artifact review.
+
+## E010 preparation boundary, 2026-10-16
+
+The integrated candidate is implemented locally on `codex/coherent-prototype`
+after normal PR #2 merge. [E010 operations](../experiments/E010-coherent-prototype/OPERATIONS.md)
+own the new proposed $2 phase, native gates, four-hour cumulative clock/4.25-hour
+STOP, estimates and exact approval prompt. No VM, credit refresh, resource change
+or spending occurred during implementation. Last observed TERMINATED is dated
+E009 evidence, not a new control-plane check. Existing stopped-disk charges and
+October 21 retention review remain; no extension. Main/VM scientific data stay
+immutable and the VM GitHub key stays read-only.

@@ -24,6 +24,8 @@ def main():
     parser.add_argument('--output',type=Path,required=True,help='Fresh evidence directory; never overwritten')
     parser.add_argument('--timeout',type=float,default=1800,help='Overall software-test seconds, maximum 7200')
     parser.add_argument('--threads',type=int,choices=range(1,5),default=4,help='Explicit test CPU budget, 1–4 (prepared Linux CI uses 2)')
+    parser.add_argument('--pattern',choices=('test_*.py','test_candidate.py'),default='test_*.py',
+                        help='Full product suite, or only candidate contracts after a candidate-specific change')
     args=parser.parse_args()
     if not 0 < args.timeout <= 7200:parser.error('--timeout must be positive and at most 7200')
     root=Path(__file__).absolute().parents[1]
@@ -41,7 +43,7 @@ def main():
         tests=out/'tests';shutil.copytree(root/'tests/product',tests,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
         os.chdir(out)
         module.progress(f'Installed product regressions: {args.threads} threads / loader zero / 8 GB; '+str(out))
-        module.supervise([python,'-I','-B','-m','unittest','discover','-s',tests,'-p','test_*.py','-v'],
+        module.supervise([python,'-I','-B','-m','unittest','discover','-s',tests,'-p',args.pattern,'-v'],
                          out/'product-tests.log',args.timeout-(time.monotonic()-started),8000000000,env,sample_root=os.getpid())
         print('PRODUCT_TEST_OUTPUT='+str(out),flush=True)
     except BaseException:

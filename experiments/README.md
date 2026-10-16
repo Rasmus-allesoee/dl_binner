@@ -33,3 +33,5 @@ Use execution states `planned`, `running`, `completed`, `failed`, or `cancelled`
 Track small results and the code that produced them. Keep large outputs externally with locators and checksums. Retain unsuccessful runs and negative conclusions in this same record, and link them to the affected question/decision before an implementation branch is removed.
 
 For HPC, Codex prepares the protocol, scripts, smoke checks, resource estimate, and return-artifact instructions. The owner executes. A submitted job is not a completed experiment; inspect returned outputs before interpreting it.
+
+- [E010: coherent window/depth/marker prototype](E010-coherent-prototype/README.md)

@@ -1,0 +1,787 @@
+{
+  "Linux_candidate_runtime_validated": false,
+  "baseline_and_E009_science_unchanged": true,
+  "candidate_lock": {
+    "bytes": 6654,
+    "sha256": "4b9d27e42a9e8427d66cac4ec3a612742401a6a34cf5aa0b4ccf851a1c6ec83e"
+  },
+  "cloud_action_initiated": false,
+  "community_fit_executed": false,
+  "cost_limits": "Local software timings are not GCP charges; no exact overall setup/review/compiler peak measured. Existing stopped disks continue ~$31.20/month until original review/approval.",
+  "evidence": {
+    "build-v3/inspection.json": {
+      "bytes": 3491,
+      "sha256": "d3a641c7792b508d087ce638f2bd90a448938eb8e288729403909b88c664614f"
+    },
+    "build-v5/inspection.json": {
+      "bytes": 3491,
+      "sha256": "733f734fd40a10abe0b901065a396b48ffc44a063c8d39fbcbb0c3207af75251"
+    },
+    "docs-checked.log": {
+      "bytes": 727,
+      "sha256": "71546ef9b0f492ce066859051d4c3b35078890ecfccc2df452950958eb00795e"
+    },
+    "implementation-source.json": {
+      "bytes": 15268,
+      "sha256": "3aa156a40345f6c55fa7e99e461e43343b0f61175c1244b43da1988ed93087bd"
+    },
+    "launcher-final.log": {
+      "bytes": 3511,
+      "sha256": "b22cdecc09564f2f1d8c8f19795a201bb2d168c508d57fb8887f3e1751c911f1"
+    },
+    "production-marker-contract-final/observed.json": {
+      "bytes": 926,
+      "sha256": "4d74e462442898a2f2af4b6bfcc81aa21306e1a4708893a3b4fde9fedafdf225"
+    },
+    "retained-review.json": {
+      "bytes": 22142,
+      "sha256": "12daa27e11791aba19e954d585e25bbc3de08fdd1e989a78eb08ba48769817e6"
+    }
+  },
+  "failures_preserved": [
+    "PR contract pass initially blocked by sandbox ps; crash-interrupted native pass preserved; final 91 passed/one Linux-only skip",
+    "Initial product wheel leaked old run.smk from stale build directory; native str translation mismatch; failed wheel/env/logs retained",
+    "Mixed Intel/LLVM OpenMP warning in initial co-import inventory; replaced by process isolation, no warning suppression",
+    "Original 59-kB production-profile fixture had zero qualifying hits; its positive assertion failed; generated consensus fixture used with unchanged cutoffs"
+  ],
+  "fixture_review": {
+    "reports": {
+      "accepted-candidate": {
+        "both_exports_complete": true,
+        "bp": 37312,
+        "contigs": 15,
+        "dimensions": 8,
+        "epochs": 2,
+        "graph_audit": {
+          "audit_queries": 12,
+          "guarantee": "fixed sampled queries only; no unqueried recall guarantee",
+          "k": 11,
+          "mean_tie_aware_recall": 1.0,
+          "metric": "Euclidean on unit vectors; exact cosine rerank",
+          "min_query_recall": 1.0,
+          "mode": "bounded_exact",
+          "query_ids": [
+            "contig_opaque_4",
+            "contig_opaque_10",
+            "contig_opaque_8",
+            "contig_opaque_2",
+            "contig_opaque_11",
+            "contig_opaque_5",
+            "contig_opaque_3",
+            "contig_opaque_12",
+            "contig_opaque_9",
+            "contig_opaque_7",
+            "partial_ambiguity",
+            "contig_opaque_6"
+          ],
+          "threads": 2,
+          "threshold": 0.9
+        },
+        "markers_reduced_from_retained_records": true,
+        "native_stage_resources": {
+          "embed": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run",
+              "--stage",
+              "embed",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run/staging/embed-c21fb894"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54408,
+            "peak_sampled_rss_bytes": 205770752,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.9146199046568885,
+            "sampled_cpu_seconds": 2.5599999999999987,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 232.9467854630202,
+            "stop_reason": null,
+            "wall_seconds": 2.798976915946696
+          },
+          "export": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run",
+              "--stage",
+              "export",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run/staging/export-34919949"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54468,
+            "peak_sampled_rss_bytes": 75882496,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.7680999260095243,
+            "sampled_cpu_seconds": 0.75,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 228.6848378329887,
+            "stop_reason": null,
+            "wall_seconds": 0.9764354540384375
+          },
+          "features": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run",
+              "--stage",
+              "features",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run/staging/features-c6874386"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54224,
+            "peak_sampled_rss_bytes": 61366272,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.4015960076604623,
+            "sampled_cpu_seconds": 0.3700000000000001,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 239.51467435696395,
+            "stop_reason": null,
+            "wall_seconds": 0.9213238999946043
+          },
+          "group": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run",
+              "--stage",
+              "group",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run/staging/group-2cf082ee"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54444,
+            "peak_sampled_rss_bytes": 64765952,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.5925285901642988,
+            "sampled_cpu_seconds": 0.4700000000000001,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 230.1440815840033,
+            "stop_reason": null,
+            "wall_seconds": 0.7932106700027362
+          },
+          "markers": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run",
+              "--stage",
+              "markers",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run/staging/markers-0b08c0d5"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54244,
+            "peak_sampled_rss_bytes": 402968576,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.6110245267281932,
+            "sampled_cpu_seconds": 1.13,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 238.58992795698578,
+            "stop_reason": null,
+            "wall_seconds": 1.8493529319530353
+          },
+          "refine": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run",
+              "--stage",
+              "refine",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run/staging/refine-ce5abeab"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54457,
+            "peak_sampled_rss_bytes": 38514688,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.07642035257109325,
+            "sampled_cpu_seconds": 0.050000000000000044,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 229.34274521499174,
+            "stop_reason": null,
+            "wall_seconds": 0.6542759659932926
+          },
+          "train": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run",
+              "--stage",
+              "train",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/run/staging/train-08de4776"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54296,
+            "peak_sampled_rss_bytes": 249393152,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.7093363596521187,
+            "sampled_cpu_seconds": 4.809999999999997,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 239.73251906002406,
+            "stop_reason": null,
+            "wall_seconds": 6.780986107012723
+          }
+        },
+        "ordered_depth": [
+          "Z-last",
+          "A-first"
+        ],
+        "real_window_coordinates_verified": true,
+        "reload_exact": true,
+        "seed": 11,
+        "stage_receipts": 7,
+        "training_parents": 12
+      },
+      "packaged-defaults": {
+        "both_exports_complete": true,
+        "bp": 37312,
+        "contigs": 15,
+        "dimensions": 64,
+        "epochs": 20,
+        "graph_audit": {
+          "audit_queries": 12,
+          "guarantee": "fixed sampled queries only; no unqueried recall guarantee",
+          "k": 11,
+          "mean_tie_aware_recall": 1.0,
+          "metric": "Euclidean on unit vectors; exact cosine rerank",
+          "min_query_recall": 1.0,
+          "mode": "bounded_exact",
+          "query_ids": [
+            "contig_opaque_4",
+            "contig_opaque_10",
+            "contig_opaque_8",
+            "contig_opaque_2",
+            "contig_opaque_11",
+            "contig_opaque_5",
+            "contig_opaque_3",
+            "contig_opaque_12",
+            "contig_opaque_9",
+            "contig_opaque_7",
+            "partial_ambiguity",
+            "contig_opaque_6"
+          ],
+          "threads": 2,
+          "threshold": 0.9
+        },
+        "markers_reduced_from_retained_records": true,
+        "native_stage_resources": {
+          "embed": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults",
+              "--stage",
+              "embed",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults/staging/embed-2d0f64cb"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54600,
+            "peak_sampled_rss_bytes": 199233536,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.7392951938464336,
+            "sampled_cpu_seconds": 2.479999999999998,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 232.95372769795358,
+            "stop_reason": null,
+            "wall_seconds": 3.354546357993968
+          },
+          "export": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults",
+              "--stage",
+              "export",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults/staging/export-31b9351d"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54674,
+            "peak_sampled_rss_bytes": 71610368,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.39369819445125315,
+            "sampled_cpu_seconds": 0.6600000000000001,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 226.9901470109471,
+            "stop_reason": null,
+            "wall_seconds": 1.6764110410003923
+          },
+          "features": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults",
+              "--stage",
+              "features",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults/staging/features-75869bbd"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54493,
+            "peak_sampled_rss_bytes": 37781504,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.05977611266193144,
+            "sampled_cpu_seconds": 0.03999999999999998,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 239.78196147695417,
+            "stop_reason": null,
+            "wall_seconds": 0.6691636210307479
+          },
+          "group": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults",
+              "--stage",
+              "group",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults/staging/group-20002054"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54640,
+            "peak_sampled_rss_bytes": 57118720,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.29933189632745405,
+            "sampled_cpu_seconds": 0.38,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 229.58830540796043,
+            "stop_reason": null,
+            "wall_seconds": 1.2694938450003974
+          },
+          "markers": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults",
+              "--stage",
+              "markers",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults/staging/markers-0e693e85"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54504,
+            "peak_sampled_rss_bytes": 431759360,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.6488398424175934,
+            "sampled_cpu_seconds": 1.1500000000000001,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 239.10532614897238,
+            "stop_reason": null,
+            "wall_seconds": 1.7723942409502342
+          },
+          "refine": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults",
+              "--stage",
+              "refine",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults/staging/refine-04fa92b0"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54656,
+            "peak_sampled_rss_bytes": 57839616,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.3130351292661261,
+            "sampled_cpu_seconds": 0.41000000000000014,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 228.30543582199607,
+            "stop_reason": null,
+            "wall_seconds": 1.309757153969258
+          },
+          "train": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "-m",
+              "dl_binner.candidate.runner",
+              "--root",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults",
+              "--stage",
+              "train",
+              "--output",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/candidate-contracts/test_installed_pipeline_native_train_reload_export_resume_and_failure/packaged-defaults/staging/train-bf3155ed"
+            ],
+            "exit_code": 0,
+            "launched_pid": 54532,
+            "peak_sampled_rss_bytes": 252141568,
+            "rss_bytes_ceiling": 6000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.9940821344512222,
+            "sampled_cpu_seconds": 4.339999999999998,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 237.32785608695121,
+            "stop_reason": null,
+            "wall_seconds": 4.365836433018558
+          }
+        },
+        "ordered_depth": [
+          "Z-last",
+          "A-first"
+        ],
+        "real_window_coordinates_verified": true,
+        "reload_exact": true,
+        "seed": 11,
+        "stage_receipts": 7,
+        "training_parents": 6
+      }
+    },
+    "scope": "Tiny retained software artifacts only; no quality claim",
+    "status": "passed"
+  },
+  "full_installed_tests": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+      "-I",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/build-v3/product/tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "launched_pid": 51632,
+    "peak_sampled_rss_bytes": 646209536,
+    "rss_bytes_ceiling": 8000000000,
+    "sample_includes_coordinator": true,
+    "sampled_average_cpus": 0.6392308598847446,
+    "sampled_cpu_seconds": 107.38,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 1799.956861906976,
+    "stop_reason": null,
+    "tests": 21,
+    "wall_seconds": 167.98312900500605
+  },
+  "incremental_cloud_compute_cost_usd": 0,
+  "launcher_tests": {
+    "log": {
+      "bytes": 3511,
+      "sha256": "b22cdecc09564f2f1d8c8f19795a201bb2d168c508d57fb8887f3e1751c911f1"
+    },
+    "passed": true,
+    "scope": "Native inert children and file/archive/readback contracts; external GCS transport/status publication and disk-capacity sensor substituted, not cloud proof",
+    "tests": 6
+  },
+  "merged_benchmark_PR": {
+    "CI": "product Linux passed on benchmark head",
+    "head": "bd902f4721aa780338fe961feba4ed15e4d96141",
+    "history_preserved": true,
+    "merge": "5bd59d774306f586c22b23a2f6ee36d64947d052",
+    "parents": [
+      "5e54538d1799e8d2538621729400f33fbaf017b9",
+      "bd902f4721aa780338fe961feba4ed15e4d96141"
+    ],
+    "review": "Local technical review passed; no independent approval or bot response claimed",
+    "url": "https://github.com/Rasmus-allesoee/dl_binner/pull/2"
+  },
+  "new_E009_scoring": false,
+  "next_proposal": {
+    "RAM_planning_GiB": [
+      3,
+      8
+    ],
+    "VM": "existing e2-standard-8/32GiB",
+    "authorized_now": false,
+    "cumulative_seconds": 14400,
+    "expected_VM_hours": [
+      1,
+      2.5
+    ],
+    "expected_upper_conservative_gross_usd": 1.6,
+    "export_cap_GiB": 2,
+    "extra_peak_disk_GiB": [
+      4,
+      8
+    ],
+    "free_reserve_GiB": 25,
+    "fresh_credit_price_storage_gates_required": true,
+    "incremental_gross_ceiling_usd": 2,
+    "max_extra_GiB": 20,
+    "provider_STOP_seconds": 15300,
+    "retention_review": "2026-10-21",
+    "work_disk_GiB": 300
+  },
+  "production_marker_contract_resources": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+      "-I",
+      "-B",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e010_marker_contract.py",
+      "--profile",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/SemiBin/SemiBin/marker.hmm",
+      "--manifest",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E010-coherent-prototype/marker-asset.json",
+      "--threads",
+      "2",
+      "--output",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/production-marker-contract-final"
+    ],
+    "exit_code": 0,
+    "launched_pid": 55224,
+    "peak_sampled_rss_bytes": 117686272,
+    "rss_bytes_ceiling": 2000000000,
+    "sample_includes_coordinator": true,
+    "sampled_average_cpus": 0.5038823310519607,
+    "sampled_cpu_seconds": 0.86,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 120,
+    "stop_reason": null,
+    "wall_seconds": 1.7067476809606887
+  },
+  "production_profile_contract": {
+    "DNA": {
+      "bytes": 1572,
+      "sha256": "434a00641a24772591d69df489e466221db65d93c2a7f1c057c3f3bb57a5340b"
+    },
+    "cache": {
+      "bytes": 1811,
+      "sha256": "9310ce137fc5e65ce0b60b690d558adbe68e41fbca728b56f112855a3a5540f1"
+    },
+    "canonical_families": 107,
+    "domains": 1,
+    "genes": 3,
+    "kind": "production_profile_positive_software_contract",
+    "manifest": {
+      "bytes": 4655,
+      "sha256": "d1898ef92fa992881103cd19de2be6066db38917cb3be2e3ece86d35035692b3"
+    },
+    "profile": {
+      "bytes": 15929643,
+      "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9"
+    },
+    "profile_count": 111,
+    "scientific_quality_assessed": false,
+    "scope": "Own-consensus generated software positive; unchanged trusted cutoffs/.5 coverage, no genome recovery claim",
+    "source": {
+      "bytes": 2551,
+      "sha256": "b1153b07da8f9e809c56034e4b3619ffbf24240c4c07181d0c39d0d980a450b6"
+    },
+    "status": "passed"
+  },
+  "prospective_design_commit": "e0ff20f",
+  "record": "E010 local engineering acceptance; no biological quality result",
+  "retained_focused_tests": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+      "-I",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/retained-candidate-contracts/tests",
+      "-p",
+      "test_candidate.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "launched_pid": 54180,
+    "peak_sampled_rss_bytes": 516485120,
+    "rss_bytes_ceiling": 8000000000,
+    "sample_includes_coordinator": true,
+    "sampled_average_cpus": 0.7561610620273493,
+    "sampled_cpu_seconds": 58.66,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 599.954781376,
+    "stop_reason": null,
+    "tests": 8,
+    "wall_seconds": 77.57606539898552
+  },
+  "runtime": {
+    "base_prefix": "/opt/miniconda3/envs/anvio-dev",
+    "complete_owned_distributions": {
+      "archspec": "0.2.6",
+      "dl-binner": "0.1.0.dev4",
+      "filelock": "4.0.10",
+      "fsspec": "2026.9.0",
+      "igraph": "0.11.8",
+      "jinja2": "3.1.6",
+      "joblib": "1.4.2",
+      "leidenalg": "0.10.2",
+      "llvmlite": "0.43.0",
+      "markupsafe": "3.0.4",
+      "mpmath": "1.3.0",
+      "networkx": "3.4.2",
+      "numba": "0.60.0",
+      "numpy": "1.26.4",
+      "pip": "25.1.1",
+      "psutil": "6.0.0",
+      "pyhmmer": "0.11.0",
+      "pynndescent": "0.5.13",
+      "pyrodigal": "3.6.3",
+      "scikit-learn": "1.5.2",
+      "scipy": "1.13.1",
+      "setuptools": "65.5.0",
+      "sympy": "1.14.0",
+      "texttable": "1.7.0",
+      "threadpoolctl": "3.5.0",
+      "torch": "2.2.2",
+      "typing-extensions": "4.16.0",
+      "wheel": "0.45.1"
+    },
+    "isolated_native_groups": {
+      "graph": {
+        "origins": {
+          "igraph": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/igraph/__init__.py",
+          "leidenalg": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/leidenalg/__init__.py",
+          "numba": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/numba/__init__.py",
+          "pynndescent": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/pynndescent/__init__.py",
+          "scipy": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/scipy/__init__.py",
+          "sklearn": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/sklearn/__init__.py"
+        },
+        "pools": [
+          {
+            "architecture": "Haswell",
+            "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+            "internal_api": "openblas",
+            "num_threads": 2,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.23.dev"
+          },
+          {
+            "architecture": "SkylakeX",
+            "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/scipy/.dylibs/libopenblas.0.dylib",
+            "internal_api": "openblas",
+            "num_threads": 2,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.27"
+          },
+          {
+            "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/sklearn/.dylibs/libomp.dylib",
+            "internal_api": "openmp",
+            "num_threads": 2,
+            "prefix": "libomp",
+            "user_api": "openmp",
+            "version": null
+          }
+        ]
+      },
+      "markers": {
+        "origins": {
+          "archspec": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/archspec/__init__.py",
+          "pyhmmer": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/pyhmmer/__init__.py",
+          "pyrodigal": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/pyrodigal/__init__.py"
+        },
+        "pools": []
+      },
+      "tensor": {
+        "origins": {
+          "dl_binner": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/dl_binner/__init__.py",
+          "numpy": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/numpy/__init__.py",
+          "threadpoolctl": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/threadpoolctl.py",
+          "torch": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/torch/__init__.py"
+        },
+        "pools": [
+          {
+            "architecture": "Haswell",
+            "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+            "internal_api": "openblas",
+            "num_threads": 2,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.23.dev"
+          },
+          {
+            "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/lib/python3.10/site-packages/functorch/.dylibs/libiomp5.dylib",
+            "internal_api": "openmp",
+            "num_threads": 2,
+            "prefix": "libiomp",
+            "user_api": "openmp",
+            "version": null
+          }
+        ]
+      }
+    },
+    "prefix": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3",
+    "python_version": "3.10.15",
+    "receipt": {
+      "bytes": 10909,
+      "sha256": "c8e9a813dc5baa154ac2ddb4a69401cdedd033d2da02343bbd47cf8524e10975"
+    },
+    "system": "Darwin"
+  },
+  "status": "accepted within local engineering scope",
+  "version": 1
+}

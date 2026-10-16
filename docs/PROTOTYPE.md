@@ -1,4 +1,65 @@
-# First binner prototype
+# Binner prototypes and current contracts
+
+## Integrated dev4 candidate
+
+`dl-binner candidate` implements [D015](decisions/D015-coherent-prototype-upgrade.md)
+and [E010](../experiments/E010-coherent-prototype/README.md). It has native tiny
+software validation on Mac; community performance and the new Linux runtime are
+not yet established. Preserve immutable dev3 at
+`5e54538d1799e8d2538621729400f33fbaf017b9` and its accepted E009 outputs.
+
+```sh
+/absolute/candidate/bin/dl-binner candidate --fasta assembly.fna \
+  --depth mean-depth.tsv --marker-hmm markers.hmm \
+  --marker-manifest marker-asset.json --output candidate-result --threads 8
+```
+
+Omit `--depth` for explicit sequence-only mode; one/multiple sample columns are
+supported without inventing variance or missing values. The full ordered depth
+schema below applies. Marker assets must be supplied locally with their exact
+hash, canonical-family map, source/version and license. No payload downloads at
+runtime. `--marker-cache cache-directory` instead verifies complete cached genes,
+domain hits and evidence without a new scan or needing the original HMM. Drift,
+corruption and malformed cached evidence fail; no automatic rescan.
+
+The seven serial stages are features, markers, train, embed, group, refine and
+export. Separate embedding/graph processes avoid conflicting numerical libraries.
+Actual disjoint DNA windows train the model; 500–1,999-bp contigs enter inference,
+and every short/no-evidence contig is still exported with its reason. Windows
+carry their parent's **measured mean depth**, not measured window coverage.
+The auxiliary composition loss reduces an exclusively depth-based shortcut; it
+does not resolve false negatives or chimeric-positive assumptions.
+
+Saved unit vectors pass unchanged into one sparse kNN/Leiden graph. A fixed
+sampled exact neighbor audit must pass; it is not a search over graph settings.
+Marker refinement requires two repeated clean SCG families, checks compatible
+assignments, and can leave ambiguous DNA unassigned. Multicopy/ambiguous hits do
+not silently become trusted constraints. Marker-negative contigs retain a real
+assignment path. Some conflicts may remain explicitly unresolved.
+
+Outputs retain `features/features.npz`, real `views.npz` and coordinates/hashes;
+all genes/domains and marker cache; `train/checkpoint.pt` and pre-save inference;
+`embed/embeddings.npz` with exact reload parity; `group/graph.npz` and pre-partition;
+`refine/partition.json`; and **both** `export/pre/` and `export/post/` with complete
+assignments and assigned/unassigned/excluded DNA. `export/accounting.json` has no
+biological quality claims. Independent sequence truth belongs only in later
+evaluation. Retain pre/post partitions for a cheap paired refinement comparison.
+
+Use optional `--memory-gb`/`--timeout` safeguards, explicit `--resume` with matching
+bytes/runtime/config, and `--stop-after STAGE` for inspectable boundaries. Parent
+hash/setup/collection and native child work share the invocation clock. Failed
+staging directories/logs remain; no retry, repair or limit extension is automatic.
+Product defaults are in `resources/candidate.json`; the experiment owns its
+approved ceilings, input locks and interpretation. See the
+[current installation guide](INSTALLATION.md) and
+[separate execution request](../experiments/E010-coherent-prototype/OPERATIONS.md).
+
+## Preserved dev3 algorithm route
+
+The `run`, `prepare`, `train`, `embed`, `cluster` and `export` commands below retain
+the original scientific implementation/defaults. Dev4's metadata/CLI/journals are
+new; replaying accepted dev3 evidence still requires its original wheel/source,
+not a claim that the whole new package is identical.
 
 This experimental package implements our own composition-based contrastive
 encoder, checkpoint inference, fixed clustering and complete FASTA/assignment

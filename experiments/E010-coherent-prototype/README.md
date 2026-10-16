@@ -1,6 +1,6 @@
 # E010: an integrated window/depth/marker prototype
 
-Opened 2026-10-16. Status: implementation and engineering contracts; **no community
+Opened 2026-10-16. Status: **implemented; native Mac engineering contracts pass**. No community
 fit, changed E009 score or paid/cloud action authorized by this record**.
 [D015](../../docs/decisions/D015-coherent-prototype-upgrade.md) owns the rationale.
 
@@ -39,7 +39,8 @@ review found no actionable issues; no independent approval/bot reply is claimed.
    learning. Build one sparse 30-neighbor graph with PyNNDescent, exact candidate
    reranking, symmetric positive locally scaled weights; small <=2,048-row
    contracts use bounded exact neighbors. Fixed SHA-selected exact audit queries
-   must achieve tie-aware recall >=.90, otherwise fail without a new search/retry.
+   must achieve mean tie-aware recall >=.90 across the fixed query panel; retain
+   its minimum query recall too. Otherwise fail without a new search/retry.
    Leiden RB configuration partition, resolution 1, seed 11, two iterations;
    no truth K, candidate grid or marker-selected score. Groups below two contigs
    or 10 kb stay accounted unassigned. Preserve native neighbors and sparse graph.
@@ -81,4 +82,71 @@ their development/source overlap limitations. No data acquisition in this task.
 Resource/cost bounds and the exact future approval prompt will be added after
 local engineering checks. Prior $20/$2 authorizations do not carry over.
 Existing cloud storage retention review remains **2026-10-21**; no extension.
+
+## Local engineering outcome and limits
+
+The prospective design was committed as `e0ff20f` before implementation. Dev4 is
+the new `candidate` CLI; original scientific dev3 files/defaults remain byte
+identical. [The candidate lock](candidate-lock.json) binds all 18 package/default
+members, the tested 54,811-byte wheel, full accepted E009 DNA/depth and ordered ten
+sample columns, the 111-profile/107-canonical-family marker asset, runtime recipes
+and prospective confirmation protocol. The final rebuilt wheel has identical
+logical contents to the actual tested wheel; source-only metadata/tests updates
+are separately inspected in the final sdist. No accepted stage was replayed.
+
+Final installed suite: **21 tests pass**, native Mac x86_64/Python3.10, owned
+independent CPU closure, two numerical threads/loader zero, 8-GB test safeguard.
+Outer measured suite clock **167.983 s**, sampled peak **646,209,536 bytes**;
+the unittest-internal clock is 147.179 s. Setup/import/build/review are separate,
+not an exact end-to-end task or provider cost. A further focused eight-test pass
+retains inspectable tiny artifacts after adding retention/snapshot contracts:
+**77.576 s /516,485,120-byte sampled peak**. These are software fixtures, not
+assembly-scale forecasts. Complete owned numerical inventories/import origins
+and separate tensor/graph/marker runtime probes pass; no borrowed dependencies.
+
+Independent retained-artifact review verifies **15 contigs /37,312 bp**, six length
+strata, actual DNA-window coordinates/hashes, ordered depth/zero masks, seven serial
+stage receipts, exact pre-save/reloaded arrays and both complete DNA exports.
+Both reduced 2-epoch/8-D and **packaged default 20-epoch/64-D** paths pass; default
+training uses six real-window parents, leaving short DNA in inference/export.
+One/no-depth fusion has native finite-loss/gradient and zero-branch contracts.
+The native 512-row approximate-index fixture passes fixed 24-query tie-aware
+recall 1.0; full-community recall/throughput remain unmeasured. Hand-counted
+refinement fixtures cover two-family splits, marker-negative assignments,
+ambiguous noise, insufficient evidence, multicopy/alias/ambiguous protein calls.
+
+The real production-profile adapter reads all 111 trusted-cutoff models, detects
+the generated PGK-consensus software positive and re-derives its cache from raw
+gene/domain records. This is not an empirical marker-availability result. The
+earlier retained 59-kB fixture produced no qualifying hits and its positive-hit
+assertion failed; that failure is preserved, not reclassified as success or used
+to relax cutoffs. The generated positive is an explicit replacement *fixture*,
+with unchanged production trusted cutoffs and >=.5 model coverage. Full E009 marker
+availability/multicopy behavior must be reported in the next run before claiming
+that refinement helped. `scripts/e010_marker_contract.py` prepares the same real
+native production-profile gate for the future Linux runtime.
+
+The initial failed wheel/str-translation contracts, sandbox-denied PR tests,
+crash-interrupted log, obsolete build-tree leakage and mixed-OpenMP inventory
+warning are retained. Repairs use the native string API, fresh build snapshots
+and process isolation, not placeholder dependencies or suppressed library errors.
+No executed prefix was upgraded: three independent version-qualified candidate
+prefixes and a separate builder remain local. The protected source/tool caches,
+dev3 environments, E009 inputs/truth/results and failed journals stay unchanged.
+
+**Six launcher/phase tests pass** with real inert native children, serial failure
+handling and archive/member readback checks. Only Cloud Storage transport, guest
+status publishing and the local disk-capacity sensor are substituted in the phase
+fixture; no cloud verification or scientific execution is claimed. The E010
+Linux/Python3.12 environment, mount/RAM checks, live held-process/watchdog/STOP,
+credit/headroom gates and full-scale fit remain unexecuted prerequisites. The
+ordinary product suite has no ignored research assets/helpers or mocked workers.
+
+[Operations](OPERATIONS.md) owns the new **$2** proposal (estimated 1–2.5 hours,
+existing VM/disks, 4-hour cumulative clock, 4.25-hour STOP, 25-GiB reserve and
+20-GiB extra cap), selective bundle/pre-post diagnostics and exact approval prompt.
+No new cloud spending was initiated; existing provisioned-disk billing continues.
+See `local-observed.json` for byte/resource evidence and the local archive locator;
+that local archive is not a remote backup. Native Linux and community quality are
+not inferred from these local checks.
 

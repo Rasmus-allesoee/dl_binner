@@ -292,3 +292,13 @@ on prospectively chosen additional data. Existing reviews supply the prior evide
 there is no new complete-review or full mature-tool campaign gate. Current work is
 reassessment/documentation only, with no marker preparation, code change or cloud
 spending. All external binners remain deferred and execution budgets stay separate.
+
+## 2026-10-16 implementation handoff
+
+The owner authorized local implementation after the D015 reassessment and normal
+PR #2 merge. [E010](../../experiments/E010-coherent-prototype/README.md) implements
+one coherent real-window/modality/graph/marker candidate; dev3 and E009 scientific
+records stay immutable. This is engineering evidence, with a separate proposed
+$2 development-fit scope. No mature-tool campaign or isolated marker-split gate
+returns. A publisher-bound oral GSA confirmation protocol was frozen prospectively,
+without acquiring data or claiming multi-depth/unseen-genome validation.

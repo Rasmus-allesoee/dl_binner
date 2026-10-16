@@ -7,6 +7,12 @@ next preparation boundary. No external binner ran. All five tiny UCloud contract
 remain accepted through v10/v14 without replay; [v14](linux-preflight-v14.json)
 remains distinct from these native GCP prototype controls.
 
+The later local-implementation prompt is now completed in
+[E010](../E010-coherent-prototype/README.md). Its integrated candidate and new $2
+execution proposal preserve all E009 science here. The current next request is in
+[E010 operations](../E010-coherent-prototype/OPERATIONS.md#exact-following-step-prompt),
+not a replay of the data DAG/controls or standalone marker-split gate.
+
 The current design uses **one full sample-0 assembly and ten full coverage sources**,
 first listed sample of every corrected subject: 0,2,3,4,6,9,10,11,14,17.
 [GCP operations](OPERATIONS.md) owns the prepared data-only DAG, cost/retention

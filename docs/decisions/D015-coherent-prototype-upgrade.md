@@ -1,9 +1,11 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Date: 2026-10-16. Status: **proposed; current next-development recommendation**.
-The owner requested this reassessment before carrying out the earlier marker-only
-prompt. This record recommends the next block; it does not authorize implementation,
-community fits, a VM wake or spending in this reassessment.
+Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
+The owner subsequently authorized local implementation/engineering checks and
+the normal benchmark-planning PR merge. [E010](../../experiments/E010-coherent-prototype/README.md)
+owns the prospective algorithms/defaults, implementation, contracts and separate
+future execution request. Community fits, VM wake/spending and retention extension
+were not needed for implementation and have not occurred.
 
 ## Decision and why it changes
 
@@ -142,9 +144,10 @@ If the integrated version fails to improve useful recovery at controlled impurit
 diagnose the retained stages and select the ablation that can change a decision.
 Do not explain away a failed result with ever more components or tuned E009 scores.
 
-This task changes guidance only. Local implementation/tiny contracts require the
-next owner prompt. Community fits, bulk acquisition/assembly/mapping, paid cloud
-compute, new resources and retention extensions remain separately authorized.
+The original reassessment changed guidance only; the later owner prompt authorized
+the local implementation now recorded in E010. Community fits, bulk acquisition/
+assembly/mapping, paid cloud compute, new resources and retention extensions remain
+separate scopes; the first bounded candidate run has its own proposed approval.
 The prior $20 data and $2 control ceilings are not an open budget for the upgrade.
 The October 21 disk-retention review is unchanged. [STATE](../STATE.md) and
 [E009 operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md#exact-following-step-prompt)

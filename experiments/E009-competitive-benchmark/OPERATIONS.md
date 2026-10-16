@@ -469,13 +469,13 @@ the live credit/STOP/watchdog checks pass. Do not edit its `approved:false` now.
 
 ## Exact following-step prompt
 
-> Our goal is a substantially stronger binner, using coherent prototype upgrades and selective ablations. Read AGENTS.md, PROJECT_INTENT.md, docs/STATE.md, D013/D015, the completed literature/source/thesis reviews, and E009 controls-review.json. Implement the recommended next prototype locally on a new codex/ research branch, preserving immutable dev3 and all accepted E009 inputs, truth, outputs and journals.
->
-> Use the existing evidence to record a concise prospective design and proceed directly to implementation in the same task. Build real DNA-window training views, explicit composition/depth encoders and fusion, consistent training/inference/grouping geometry, and one scalable grouping path with cached marker evidence and conservative marker-informed refinement. Resolve precise algorithms/defaults using judgment and targeted source checks; do not require a separate performance study for every ingredient. Keep short and marker-negative contigs, unknown/non-target DNA and optional unassigned outcomes fully accounted for. Distinguish parent-contig depth from measured window coverage; do not invent coverage variance or silently remap reads. Marker-aware training, taxonomy, GLM/context-attention and ensembles are not automatic additions.
->
-> Run meaningful unit/integration and bounded tiny training/reload/marker/export contracts; report actual versus mocked or unavailable native paths. Retain features, embeddings and pre/post-refinement partitions, allowing a cheap refinement comparison and further decision-driven ablations without a compulsory factorial campaign. Freeze additional confirmation data/protocol before changed community scores, in parallel with implementation rather than as a gate to coding. Treat E009 as development evidence and use independent sequence truth for later evaluation.
->
-> This prompt authorizes local implementation and tiny engineering checks only. Do not run community fits, new E009 scoring, bulk acquisition/assembly/mapping, external binners, paid cloud work, VM starts, resource changes or retention extensions. Keep CompleteBin deferred. Prepare the first bounded candidate-versus-preserved-dev3 execution, with complete runtime/compute/RAM/peak-disk/cost estimates, fresh-credit prerequisites and a separate exact approval request; prior budgets do not carry over. Keep the October 21 storage review visible. Update records, run relevant checks and commit. Report what works, unresolved contracts, selective evaluation scope, resources and the next exact execution prompt.
+The owner executed the prior local-implementation prompt on October 16. Dev4 now
+belongs to [E010](../E010-coherent-prototype/README.md); its
+[exact next execution approval request](../E010-coherent-prototype/OPERATIONS.md#exact-following-step-prompt)
+is current. It proposes one separately budgeted candidate fit and reuses accepted
+dev3 outputs, with no baseline refit or external binner. The earlier implementation
+prompt remains in Git history; no accepted E009 result, lock, truth or journal is
+rewritten by this handoff. Existing storage review remains October 21.
 
 ## Evidence and sample choice
 

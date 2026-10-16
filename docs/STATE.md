@@ -4,23 +4,38 @@ Updated: 2026-10-16. This is the single current handoff.
 
 ## Exact next step
 
-**Recommend one coherent next-prototype implementation, with selective ablations.**
-[D015](decisions/D015-coherent-prototype-upgrade.md) reassesses the owner's concern
-about slow serial feature tests. Incorporate marker-conflict handling into a
-broader upgrade of real sequence views, composition/depth learning, consistent
-geometry and genome-scale grouping/refinement. The standalone dev3 marker split
-is an optional diagnostic, **not the required next milestone**. The exact local
-implementation prompt is in [operations](../experiments/E009-competitive-benchmark/OPERATIONS.md#exact-following-step-prompt).
-This reassessment changes guidance only; implementation begins with that next
-owner prompt. No marker preparation, product code change or scientific run occurred.
+**The integrated dev4 candidate is implemented; the next step needs a new execution approval.**
+[E010](../experiments/E010-coherent-prototype/README.md) owns the prospective
+algorithms, local engineering evidence, pinned marker asset and bounded launcher.
+It combines real disjoint windows, explicit composition/depth encoders and fusion,
+consistent unit-sphere geometry, one audited sparse kNN/Leiden graph and conservative
+marker-informed refinement. Both pre/post partitions and complete DNA exports are
+retained. Short/marker-negative/unknown DNA remains accounted; parent-contig mean
+depth is explicitly conditioning, not measured window coverage or variance.
 
-Existing reviews justify building these related modules together; they do not
-prove every ingredient mandatory or require a larger network. Preserve intermediate
-outputs and use ablations only for decision-relevant uncertainty or causal claims.
-Initially place markers in grouping/refinement; do not automatically add marker
-training, taxonomy, GLM/context attention or an ensemble. Choose/freeze additional
-confirmation data before changed community scores, in parallel with implementation.
-E009/E005 remain development evidence and immutable dev3 remains the comparator.
+[D015](decisions/D015-coherent-prototype-upgrade.md) is accepted for this coherent
+implementation. No community fit, changed E009 score, external binner, cloud action
+or new spending occurred. Native Mac tiny software contracts do not establish
+stronger recovery or the new Linux runtime. Fresh Linux inventory/import/source/
+CLI and tiny native contracts must pass inside the next bounded phase before a
+community fit. Keep immutable dev3 source/wheel and all E009 evidence unchanged.
+
+The [next exact approval prompt](../experiments/E010-coherent-prototype/OPERATIONS.md#exact-following-step-prompt)
+requests **new $2 gross**, one candidate fit versus preserved dev3 outputs, four
+cumulative VM hours/4.25-hour provider STOP, existing 8-vCPU/32-GiB/300-GiB resources,
+25-GiB free reserve/20-GiB extra-space cap and <=2-GiB export. Estimated 1–2.5 hours,
+3–8-GiB RAM/4–8-GiB extra disk; these are planning estimates, not full-scale
+measurements. All fresh credit, pending-usage, price, storage/headroom and watchdog
+checks precede spending/fit. No automatic retry/extension. Existing disk retention
+review **October 21** remains; ~**$31.20/month** while stopped, no extension.
+
+A [prospective confirmation choice/protocol](../experiments/E010-coherent-prototype/confirmation-plan.json)
+is frozen before changed community scores: CAMI II Toy HMB oral pooled GSA,
+sequence-only, publisher MD5-bound complete DNA/truth files. No bulk acquisition
+occurred; truth/population/overlap admission is a separate gate. This complements
+E009 with another domain/length population, without claiming unseen genomes,
+read-derived assembly or multi-depth confirmation. Use selective ablations; no
+mandatory one-feature campaign. CompleteBin and all external binners stay deferred.
 
 **E009 controls remain accepted and unchanged.** [The review](../experiments/E009-competitive-benchmark/controls-review.json)
 binds all four completed controls, full DNA/sample axes and shutdown. Learned
@@ -327,7 +342,7 @@ respond, no reviewer was required and no actionable finding/unresolved thread
 remained. The owner's later merge authorization supersedes the preparation-task
 stop. Repository remains private, with no release/tag/package publication.
 
-**E009 v10/v14 tiny native evidence is accepted; community fits/scores are unstarted.**
+**E009 v10/v14 tiny native evidence is accepted; external community fits remain unrun.**
 [E009](../experiments/E009-competitive-benchmark/README.md) owns the chronological
 attempts and limitations. V10 accepts SemiBin/MetaCAT/CompleteBin, eight-thread
 Linux utility/assembly/mapping/depth/competitive truth/AMBER contracts, source
@@ -342,18 +357,19 @@ exact accession/full-replicon development comparisons found no match, with near/
 pretraining independence unresolved. Its inaccessible UCloud archive has an
 accepted SHA for new-host reacquisition, not a GCP acquisition receipt.
 
-The old mandatory five-tool shortlist is superseded by D013. CompleteBin max-50,
-COMEBin full grid and SCGBinner are deferred; SemiBin2 is a later first candidate,
-MetaCAT core conditional, with no fits approved. DCVBin's payload exists but its CUDA/single-BAM port is
-outside this bounded CPU comparison; LorBin is deferred. Marker-guided fixed-
-encoder grouping remains a high-priority controlled follow-up, not an automatic
-change. A whole-tool win cannot identify the responsible component.
+The old mandatory five-tool shortlist is superseded by D013/D015. All external
+binners remain deferred, including CompleteBin, COMEBin, SCGBinner, SemiBin2,
+MetaCAT, DCVBin and LorBin. Their source/runtime observations are retained, not
+next-fit instructions. E010 integrates marker refinement into our next candidate;
+standalone fixed-dev3 marker splitting is optional. A whole-tool or integrated
+bundle win cannot identify the responsible component.
 
 Current input/resource amendment is one sample-0 assembly with ten cross-subject
 depth sources and unchanged raw/learned/sequence-only controls. Old two-depth
 700-hour UCloud budgets/commands are [history](history/E009_UCLOUD_OPERATIONS.md),
-not current entitlements. The authorized data-only GCP stage stops for actual
-source/truth/resource review; no full-fit monetary budget is approved.
+not current entitlements. The data-only scope excluded fits; the later four
+unchanged controls ran under a separate $2 approval. The proposed E010 candidate
+has another separate scope.
 
 The future learned-TNF/frozen-GLM-head/hybrid study is planned and unrun; frozen
 GLM evidence remains accepted and deferred, not globally rejected. Reuse the
@@ -394,12 +410,14 @@ accepted mapping/AMBER prefixes. E005 v5 now checks the complete AMBER distribut
 inventory against E001's hash-identified clean-prefix review, not only `pip freeze`.
 Frozen E001 source/configuration and raw observed records remain unchanged.
 
-Local branch: `benchmark-planning`, created from refreshed synchronized main/origin-main
-`5e54538d1799e8d2538621729400f33fbaf017b9`; merged `first-binner-prototype` source history
-is preserved. Owner-configured private GitHub origin is present. The owner-authorized normal
-prepared-branch push through 5fec4e1 and exact VM sync are completed. This phase
-requests a local result/decision commit; no main merge,
-PR/release or visibility change. `agent_context/` is an ignored
-inbox. Before public publication review licensing and historical source packaging
-per [D001](decisions/D001-research-record.md). Update this handoff when direction,
-significant evidence or execution dependencies change; details belong to their owners.
+Local branch: `codex/coherent-prototype`, created from updated main after the
+owner-authorized normal [PR #2 merge](https://github.com/Rasmus-allesoee/dl_binner/pull/2).
+Merge `5bd59d774306f586c22b23a2f6ee36d64947d052` preserves dev3 main
+`5e54538d1799e8d2538621729400f33fbaf017b9` and benchmark head
+`bd902f4721aa780338fe961feba4ed15e4d96141` as its parents. Linux dev3 product CI
+and local E009 contracts passed; local technical review found no actionable
+findings. The requested review bot did not respond; no independent approval is
+claimed. Main contains the accepted evidence; implementation stays on the new
+research branch for review, with no merge/release/visibility change implied.
+`agent_context/` remains an ignored inbox. Before public publication, review
+licensing and historical source packaging per [D001](decisions/D001-research-record.md).

@@ -1,10 +1,11 @@
 # dl-binner
 
-An experimental CPU metagenomic binner with our own composition-based contrastive
-encoder. One command trains, saves/reloads the checkpoint, embeds, clusters and
-exports bins alongside a matched raw-feature control. Optional explicit mean depth
-can accompany the assembly. Every contig is retained as assigned, unassigned or
-excluded, with its DNA, masks and reason.
+An experimental CPU metagenomic binner. The integrated dev4 candidate learns from
+real DNA windows with composition/depth encoders, then uses a sparse graph and
+conservative marker-informed refinement. It retains features, embeddings and both
+pre/post-refinement partitions. Every contig remains assigned, unassigned or
+excluded, with its DNA, masks and reason. The earlier dev3 route remains available
+as preserved development evidence.
 
 This is a usable **development prototype**, not validated whole-MAG recovery,
 independent generalization or a state-of-the-art claim. A reproducible tool and
@@ -13,13 +14,16 @@ learning through implementation are the primary goals.
 ## Install and run
 
 Use one CPU environment with built-in serial execution. Follow the
-[pinned standalone installation guide](docs/INSTALLATION.md); 0.1.0.dev3 is built
+[pinned standalone installation guide](docs/INSTALLATION.md); 0.1.0.dev4 is built
 locally, not published to a package index. Do not copy linked research environments.
-The command installs nothing and needs no database, truth labels, internet connection
-or repository checkout.
+The candidate requires a supplied hash-bound marker profile/manifest or verified
+cache; it installs/downloads nothing at runtime. It needs no truth labels, internet
+connection or checkout. Full-community performance is untested; native tiny
+engineering checks do not establish stronger recovery.
 
 ```sh
-/absolute/binner/bin/dl-binner run --fasta assembly.fna --output result --threads 4
+/absolute/binner/bin/dl-binner candidate --fasta assembly.fna --output result \
+  --marker-hmm markers.hmm --marker-manifest marker-asset.json --threads 4
 ```
 
 Add `--depth mean-depth.tsv` for finite nonnegative mean depth measured against
@@ -27,11 +31,13 @@ this exact assembly. Header: `contig_id` followed by ordered unique sample names
 every FASTA ID needs exactly one row. Missing data are refused, never filled
 with zeros. Absent depth means sequence-only mode.
 
-Outputs include `learned/bins/`, `raw/bins/`, complete `assignments.tsv` and FASTAs,
-`run-summary.json`/TSV, checkpoints, features, logs and resource receipts.
-The summary reports assignment/size, **not** completeness or contamination.
-`dl-binner run --help` explains options. [Usage and contracts](docs/PROTOTYPE.md#run-the-binner)
-cover predictable outputs and recovery.
+Candidate exports are in `export/pre/` and `export/post/`, including complete
+`assignments.tsv` and FASTAs. It retains checkpoint, window, feature, marker, graph,
+log and resource contracts. Summaries report assignment/size and marker conflicts,
+**not** independent completeness/contamination. `dl-binner candidate --help` and
+[usage/contracts](docs/PROTOTYPE.md#integrated-dev4-candidate) explain the pipeline.
+`dl-binner run` retains the earlier dev3 algorithm with learned/raw exports; accepted
+E009 comparisons reuse their original outputs rather than refitting that baseline.
 
 To continue a matching partial run, repeat the command with `--resume`. Completed
 stages are verified and reused; changed inputs/settings/runtime/outputs are refused.

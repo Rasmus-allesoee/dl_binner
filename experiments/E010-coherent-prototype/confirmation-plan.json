@@ -1,0 +1,67 @@
+{
+  "base_url": "https://frl.publisso.de/data/frl%3A6425518/",
+  "body_site_samples": [
+    6,
+    7,
+    8,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "coverage_limit": "This confirms sequence/grouping/refinement transfer, not ten-depth feature benefit. A later read-derived multi-depth community is required before general claims about depth-enabled performance.",
+  "dataset": "CAMI II Toy HMB oral pooled GSA",
+  "decision_rule": "Keep a bundle only with useful recovery at controlled impurity and affordable full runs; primary directional improvement on both E009 development and this prospective confirmation supports continued development. Discordance or no useful gain triggers one retained-stage diagnosis, not post-score tuning. Geometry is diagnostic, not a veto on every component.",
+  "doi": "10.4126/FRL01-006425518",
+  "execution": "Not authorized now; separate acquisition/runtime/cost approval. No external binner.",
+  "freeze_rule": "Candidate source/config and this protocol must be fixed before E009 changed community scores; same frozen candidate then used here without tuning. Repeated inspection makes these data development data; future generalization requires new prospective data.",
+  "frozen_date": "2026-10-16",
+  "input_admission_gate": "Verify full GSA/truth IDs, sample/source/genome/replicon/taxonomy joins and exact/near source overlap before fitting; fail if truth/population cannot be admitted. Never silently substitute OTU/taxon IDs for genome identity.",
+  "inputs": "All pooled oral GSA DNA; preserve all length/origin strata and unknown/non-targets; sequence-only mode. No bulk reads or BAMs needed for this complementary confirmation.",
+  "metadata_bindings": {
+    "hmb-md5sums": {
+      "bytes": 709793,
+      "sha256": "c29dc3e08f059941118e2a77d9445d6b768bcd1f624e41b3876d602ef3af1b14"
+    },
+    "hmb-readme": {
+      "bytes": 741,
+      "sha256": "439f07256df8589b5ced24c21d8e98b862ddacfa8fd01fcfb7aa7fbab9963286"
+    }
+  },
+  "methods": [
+    "immutable dev3 seed11/20 epochs and fixed grouping, new output/environment",
+    "frozen integrated candidate seed11/20 epochs and paired pre/post refinement, depth absent explicitly"
+  ],
+  "primary": "Independent genome/source sequence truth with full supplied-reference cellular denominators and duplicate-safe loci; R95 bins>=200kb, purity>=.95 including all bin DNA; no marker-only quality claims.",
+  "publisher_files": {
+    "per_bodysite/oral_bam/gsa.fa": {
+      "md5": "0f2c77508ba269b044409661b512d003",
+      "sha256": "must verify on later separately authorized acquisition; publisher MD5 freezes selection now"
+    },
+    "per_bodysite/oral_bam/gsa.tsv.gz": {
+      "md5": "8c7f03a7bfc26dafc6542f21284917fc",
+      "sha256": "must verify on later separately authorized acquisition; publisher MD5 freezes selection now"
+    },
+    "per_bodysite/oral_bam/gsa_pooled_mapping.tsv": {
+      "md5": "dae4cda38548d0a01b04c9d4e205723e",
+      "sha256": "must verify on later separately authorized acquisition; publisher MD5 freezes selection now"
+    },
+    "per_bodysite/oral_bam/gsa_pooled_mapping_fixed.tsv": {
+      "md5": "3c2d78f6f833d97867ca14bea2e866ba",
+      "sha256": "must verify on later separately authorized acquisition; publisher MD5 freezes selection now"
+    }
+  },
+  "role": "Additional community/domain and length confirmation; GSA has no assembly errors. No unseen-genome/pretraining-independent or end-to-end read-assembly claim.",
+  "secondary": [
+    "same-population geometry at5",
+    "bp weighted grouping precision/recall",
+    "all length and lineage strata",
+    "available-source ceiling and short/unassigned/unknown/non-target accounting",
+    "actual elapsed CPU RAM peak disk compute/storage/network separately"
+  ],
+  "status": "prospective input choice/protocol frozen before any changed community score; not acquired/admitted",
+  "version": 1
+}

@@ -4,6 +4,7 @@ recursive-include requirements *.txt
 prune tests
 recursive-include tests/product *.py *.json
 include scripts/test_product.py scripts/check_distribution.py scripts/check_runtime.py
+include scripts/build_candidate.py
 recursive-include src/dl_binner *.py *.json *.smk
 global-exclude __pycache__ *.py[cod] .DS_Store
 prune agent_context

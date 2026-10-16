@@ -405,6 +405,12 @@ bounded execution clock and include it in allocation accounting.
 
 A reduced runtime smoke establishes only its exercised imports; directories named test can be runtime dependencies. When a tool fails on incompatible versions or missing package contents, prefer a complete independently owned compatible recipe for that failed path when practical. Do not apply placeholder modules or assume that a new prefix alone proves compatibility; test the actual import/CLI/readers. Preserve passed tool contracts instead of rebuilding them alongside failed paths.
 
+Keep incompatible native library families in separate processes, including
+inventory probes. A single environment can contain libraries that must not be
+loaded together (for example conflicting OpenMP runtimes); do not suppress that
+conflict with global duplicate-library workarounds. Build changed distributions
+from a fresh source/build directory so stale generated files cannot enter a wheel.
+
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
 For native startup hangs, retain child-side traces and process wait state before

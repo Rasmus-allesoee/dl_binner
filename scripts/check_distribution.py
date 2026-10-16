@@ -14,8 +14,13 @@ import hashlib
 import io
 import json
 from pathlib import Path
+import re
 import tarfile
 import zipfile
+
+ROOT = Path(__file__).absolute().parents[1]
+VERSION = re.search(r"__version__ = '([^']+)'", (ROOT/'src/dl_binner/__init__.py').read_text()).group(1)
+DIST = 'dl_binner-'+VERSION+'.dist-info/'
 
 
 def record(path):
@@ -33,17 +38,20 @@ def inspect_wheel(path,accepted):
         if len(names)!=len(set(names)):raise ValueError('Duplicate wheel member')
         files={name:archive.read(name) for name in names}
     if any(Path(n).is_absolute() or '..' in Path(n).parts for n in files):raise ValueError('Unsafe wheel path')
-    if any(not n.startswith(('dl_binner/','dl_binner-0.1.0.dev3.dist-info/')) for n in files):raise ValueError('Unexpected wheel payload')
-    metadata_name='dl_binner-0.1.0.dev3.dist-info/METADATA'
+    if any(not n.startswith(('dl_binner/',DIST)) for n in files):raise ValueError('Unexpected wheel payload')
+    metadata_name=DIST+'METADATA'
     metadata=BytesParser().parsebytes(files[metadata_name])
-    if metadata['Name']!='dl-binner' or metadata['Version']!='0.1.0.dev3':raise ValueError('Wheel version/name mismatch')
+    if metadata['Name']!='dl-binner' or metadata['Version']!=VERSION:raise ValueError('Wheel version/name mismatch')
     if set(metadata['Requires-Python'].split(','))!={'<3.13','>=3.10'}:raise ValueError('Unsupported Python metadata')
-    if set(metadata.get_all('Requires-Dist',[]))!={'numpy==1.26.4','torch==2.2.2','networkx==3.4.2','threadpoolctl==3.5.0'}:
-        # Older pinned setuptools may insert whitespace before the version clause.
-        if {v.replace(' ','') for v in metadata.get_all('Requires-Dist',[])}!={'numpy==1.26.4','torch==2.2.2','networkx==3.4.2','threadpoolctl==3.5.0'}:
-            raise ValueError('Scientific dependency metadata changed')
-    if 'dl-binner = dl_binner.cli:main' not in files['dl_binner-0.1.0.dev3.dist-info/entry_points.txt'].decode():raise ValueError('Missing installed CLI')
-    rows=list(csv.reader(io.StringIO(files['dl_binner-0.1.0.dev3.dist-info/RECORD'].decode())))
+    dependencies = [v.replace(' ','') for v in metadata.get_all('Requires-Dist',[])]
+    if {v for v in dependencies if ';' not in v}!={'numpy==1.26.4','torch==2.2.2','networkx==3.4.2','threadpoolctl==3.5.0'}:
+        raise ValueError('Preserved base dependency metadata changed')
+    candidate = {v.strip() for v in (ROOT/'requirements/candidate-cpu.txt').read_text().splitlines() if '==' in v}
+    if {v.split(';')[0] for v in dependencies if ';' in v} != candidate or any(
+            v.split(';')[1] != 'extra=="candidate"' for v in dependencies if ';' in v):
+        raise ValueError('Candidate optional dependency metadata changed')
+    if 'dl-binner = dl_binner.cli:main' not in files[DIST+'entry_points.txt'].decode():raise ValueError('Missing installed CLI')
+    rows=list(csv.reader(io.StringIO(files[DIST+'RECORD'].decode())))
     if len(rows)!=len(files) or {r[0] for r in rows}!=set(files):raise ValueError('Wheel RECORD set mismatch')
     for name,digest,size in rows:
         if name.endswith('/RECORD'):
@@ -57,8 +65,6 @@ def inspect_wheel(path,accepted):
     for name,expected in accepted.items():
         value=package[name]
         if dict(bytes=len(value),sha256=hashlib.sha256(value).hexdigest())!=expected:raise ValueError('Accepted package bytes changed: '+name)
-    if package['__init__.py']!=b'"""Own experimental contrastive binner; no pretrained GLM or baseline executable."""\n__version__ = \'0.1.0.dev3\'\n':
-        raise ValueError('Unexpected initializer change beyond version')
     return files
 
 
@@ -74,7 +80,7 @@ def inspect_sdist(path,wheel):
         files={str(Path(m.name).relative_to(root)):archive.extractfile(m).read() for m in members if m.isfile()}
     allowed=('src/dl_binner/','src/dl_binner.egg-info/','tests/product/','requirements/')
     top={'README.md','pyproject.toml','MANIFEST.in','PKG-INFO','setup.cfg','docs/INSTALLATION.md','docs/PROTOTYPE.md',
-         'scripts/test_product.py','scripts/check_distribution.py','scripts/check_runtime.py'}
+         'scripts/test_product.py','scripts/check_distribution.py','scripts/check_runtime.py','scripts/build_candidate.py'}
     if any(n not in top and not n.startswith(allowed) for n in files):raise ValueError('Unexpected sdist research payload')
     required={'README.md','pyproject.toml','requirements/binner-cpu.txt','requirements/workflow.txt','requirements/build.txt',
               'tests/product/accepted-package.json','tests/product/test_core.py','tests/product/test_run.py',
@@ -82,7 +88,7 @@ def inspect_sdist(path,wheel):
     if not required.issubset(files):raise ValueError('sdist missing reproducibility files')
     for name,value in wheel.items():
         if name.startswith('dl_binner/') and files['src/'+name]!=value:raise ValueError('sdist/wheel package differs: '+name)
-    if files['README.md'] not in wheel['dl_binner-0.1.0.dev3.dist-info/METADATA']:raise ValueError('Product README not in wheel metadata')
+    if files['README.md'] not in wheel[DIST+'METADATA']:raise ValueError('Product README not in wheel metadata')
     return files
 
 

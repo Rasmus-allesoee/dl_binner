@@ -20,6 +20,22 @@ def main(argv=None):
     parser.add_argument('--threads', type=int, default=4, help='Numerical CPU threads; loader workers remain zero')
     parser.add_argument('--version', action='version', version='dl-binner '+__version__)
     commands = parser.add_subparsers(dest='command', required=True)
+    candidate = commands.add_parser('candidate', help='Integrated real-window/depth/marker candidate (dev4)',
+        description='Serial native window features, marker cache, train/reload, sparse graph, refinement and both complete exports.',
+        formatter_class=HelpFormatter,
+        epilog='No runtime software/data downloads. Supply a hash-bound marker HMM/asset manifest, or a verified cache.\nParent mean depth conditions windows; no measured window depth or variance is inferred.\nNo truth/labels accepted. Geometry/refinement summaries are not genome quality.')
+    candidate.add_argument('--fasta', type=Path, required=True)
+    candidate.add_argument('--depth', type=Path)
+    candidate.add_argument('--output', type=Path, required=True)
+    candidate.add_argument('--config', type=Path, help='Strict candidate configuration; default is packaged candidate.json')
+    marker_choice = candidate.add_mutually_exclusive_group(required=True)
+    marker_choice.add_argument('--marker-cache', type=Path, help='Complete hash-bound native evidence cache; no scan on reuse')
+    marker_choice.add_argument('--marker-hmm', type=Path, help='Pinned SCG HMM profile (not downloaded automatically)')
+    candidate.add_argument('--marker-manifest', type=Path, help='Required with --marker-hmm: asset hash/families/source/license JSON')
+    candidate.add_argument('--memory-gb', type=float, help='Optional sampled working process-tree RAM safeguard')
+    candidate.add_argument('--timeout', type=float, help='Optional overall setup/hash/stage/collection wall seconds')
+    candidate.add_argument('--resume', action='store_true', help='Explicit verification and reuse of identical completed stages')
+    candidate.add_argument('--stop-after', choices=('features','markers','train','embed','group','refine','export'))
     running = commands.add_parser('run', help='Run the complete learned binner and matched raw control',
         description='Validate FASTA/depth, train, reload, cluster and export both arms in serial.\nCompleted stages can be explicitly resumed; changed or corrupted bytes are refused.',
         formatter_class=HelpFormatter,
@@ -66,20 +82,25 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if args.threads <= 0:
         parser.error('--threads must be a positive integer')
-    if args.command == 'run':
+    if args.command in ('run', 'candidate'):
         import math
         for name in ('memory_gb', 'timeout'):
             value = getattr(args, name)
             if value is not None and (not math.isfinite(value) or value <= 0):
                 parser.error('--'+name.replace('_','-')+' must be finite and greater than zero when supplied')
-        if args.min_length < 4:
+        if args.command == 'run' and args.min_length < 4:
             parser.error('--min-length must be at least 4; shorter contigs still appear as exclusions')
+    if args.command == 'candidate' and bool(args.marker_hmm) != bool(args.marker_manifest):
+        parser.error('--marker-hmm requires --marker-manifest; a supplied cache needs neither')
     for name in ('PYTHONPATH', 'PYTHONHOME', 'PYTHONUSERBASE'):
         os.environ.pop(name, None)
     os.environ['PYTHONNOUSERSITE'] = '1'
     for name in ('OMP_NUM_THREADS', 'MKL_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS'):
         os.environ[name] = str(args.threads)
     try:
+        if args.command == 'candidate':
+            from .candidate.runner import run
+            return run(args)
         if args.command == 'run':
             from .runner import run_pipeline
             return run_pipeline(args)
@@ -107,7 +128,7 @@ def main(argv=None):
         return 0
     except BaseException as error:
         print(f'error: {error}', file=sys.stderr, flush=True)
-        if args.command == 'run':
+        if args.command in ('run', 'candidate'):
             return 130 if isinstance(error, KeyboardInterrupt) else 1
         traceback.print_exc()
         sys.stdout.flush()

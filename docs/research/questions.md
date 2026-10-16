@@ -312,3 +312,10 @@ marker-split-first recommendation, not E009's accepted measurements or scientifi
 question status. Existing evidence can justify implementation without first proving
 every ingredient separately; an integrated gain alone would not identify causal
 components. No new marker preparation, product code, fit, score or cloud work ran.
+
+2026-10-16 implementation update: [E010](../../experiments/E010-coherent-prototype/README.md)
+implements the accepted D015 bundle locally with retained real-window, modality,
+geometry and marker/refinement interfaces. Tiny native software checks are not
+biological resolution of Q001/Q003/Q005 or H001. The first candidate development
+fit and frozen additional oral-GSA confirmation remain unrun/separate approvals.
+A bundle gain would not establish each ingredient's causal contribution.

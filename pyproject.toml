@@ -4,11 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dl-binner"
-version = "0.1.0.dev3"
-description = "Experimental composition-based contrastive metagenomic binner"
+version = "0.1.0.dev4"
+description = "Experimental window/depth contrastive metagenomic binner with marker refinement"
 readme = "README.md"
 requires-python = ">=3.10,<3.13"
 dependencies = ["numpy==1.26.4", "torch==2.2.2", "networkx==3.4.2", "threadpoolctl==3.5.0"]
+
+[project.optional-dependencies]
+candidate = ["scipy==1.13.1", "scikit-learn==1.5.2", "joblib==1.4.2", "numba==0.60.0", "llvmlite==0.43.0", "pynndescent==0.5.13", "igraph==0.11.8", "leidenalg==0.10.2", "texttable==1.7.0", "pyrodigal==3.6.3", "pyhmmer==0.11.0", "archspec==0.2.6"]
 
 [project.scripts]
 dl-binner = "dl_binner.cli:main"
