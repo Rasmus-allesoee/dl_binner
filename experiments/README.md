@@ -15,6 +15,7 @@ reproduced result of this project.
 - [E007: Private implementation PR readiness](E007-pr-readiness/README.md)
 - [E008: Product execution and private PR validation](E008-product-execution/README.md)
 - [E009: First competitive human-gut read-derived assembly benchmark](E009-competitive-benchmark/README.md)
+- [E010: coherent window/depth/marker prototype](E010-coherent-prototype/README.md)
 
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 
@@ -32,6 +33,7 @@ Use execution states `planned`, `running`, `completed`, `failed`, or `cancelled`
 
 Track small results and the code that produced them. Keep large outputs externally with locators and checksums. Retain unsuccessful runs and negative conclusions in this same record, and link them to the affected question/decision before an implementation branch is removed.
 
-For HPC, Codex prepares the protocol, scripts, smoke checks, resource estimate, and return-artifact instructions. The owner executes. A submitted job is not a completed experiment; inspect returned outputs before interpreting it.
-
-- [E010: coherent window/depth/marker prototype](E010-coherent-prototype/README.md)
+For cloud/HPC work, Codex prepares the protocol, real contracts, resource estimate
+and persistent evidence. Execute directly on a verified connected host only within
+the owner-authorized scope, or prepare an owner-run packet when needed. A submitted
+or stopped job is not a successful experiment; inspect its receipts and outputs.

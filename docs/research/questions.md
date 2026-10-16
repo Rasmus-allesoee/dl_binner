@@ -319,3 +319,15 @@ geometry and marker/refinement interfaces. Tiny native software checks are not
 biological resolution of Q001/Q003/Q005 or H001. The first candidate development
 fit and frozen additional oral-GSA confirmation remain unrun/separate approvals.
 A bundle gain would not establish each ingredient's causal contribution.
+
+2026-10-17 E010 reviewed outcome: the frozen integrated workflow completes and all
+native output contracts pass, with a separately retained Mac numerical-portability
+limitation. Weighted conservative R95 pre 1.8763% /post 4.2909% remains below dev3
+learned ten-depth 5.3911%; short bacterial neighbors improve while long/bp-weighted
+geometry and coarse/mixed grouping remain concerns. The paired refinement helps
+but adds 20.50 Mb unassigned. [Review](../../experiments/E010-coherent-prototype/review.json)
+and [D015](../decisions/D015-coherent-prototype-upgrade.md) select preparation of one
+cached CPM-versus-RB grouping-objective control, not another encoder/external fit.
+Q001/Q003/Q005 remain open generally; this does not decide product feature families,
+novelty or generalization. H001/E001 are unchanged. Oral-GSA confirmation stays
+prospectively fixed and unacquired; next execution needs its own budget/credit gate.

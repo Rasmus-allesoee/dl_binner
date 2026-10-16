@@ -1,8 +1,10 @@
 # E010: an integrated window/depth/marker prototype
 
-Opened 2026-10-16. Status: **implemented; the first frozen native phase is running
-under the owner's new $2 approval**. [Native receipt](native-observed.json) owns
-actual progress/gates/costs; no result is inferred from launch or later stop.
+Opened 2026-10-16. Status: **completed and independently reviewed on 2026-10-17**.
+The native workflow succeeds; the whole candidate's conservative recovery is
+below preserved dev3. [Review](review.json) owns acceptance, limitations, costs
+and the one proposed next control. [Launch](native-observed.json) remains the
+historical running observation, not current state.
 [D015](../../docs/decisions/D015-coherent-prototype-upgrade.md) owns the rationale.
 
 ## Prospective design, fixed before implementation/results
@@ -171,3 +173,117 @@ binner, refit of dev3, acquisition/mapping/truth replay or retention extension.
 The healthy launcher may outlast this task; its launch observation is not accepted
 community output or a new E009 score. Final cost needs independent provider stop.
 The original local evidence above remains a dated engineering result.
+
+## Completed native result and independent review, 2026-10-17
+
+All seven stages completed at source 6917c3f, seed 11/20 epochs, on the unchanged
+8-vCPU/32-GiB VM. GCP stop **October 16 21:47:33.061 UTC /23:47 Copenhagen** is
+independent of matching guest/private SUCCESS receipts. Private science archive
+**335,636,093 bytes**, SHA256 `3ec883477ce6c9e070632200508be8b707e84a11938f51e6221089eb94d165a3`;
+all **692 members /763,504,773 logical bytes** verify against the bound inventory
+and archive, including the inventory itself. Closure
+archive 99,386 bytes /32 members is checksum-bound and independently inventoried.
+No VM wake, original-data replay, new fit or external binner ran in this review.
+
+The compact independent review is also privately archived and readback-verified:
+`gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/review-20261017/review-evidence-v1.tar.gz`,
+2,275,305 bytes, SHA256 `bf04bb1a3bb945b8ed28493d85f5dad06f2d6d8f73eab0d5ada3aa48e7e79c63`.
+All 140 members /11,348,764 logical bytes verify, including failed review journals,
+executed source versions, raw diagnostics, closed logs and a pre-archive snapshot
+of [the review receipt](review.json). The final receipt binds its archive locator
+without a self-referential checksum. Numerical environments/auth caches/native
+bulk and the collector's open terminal log are excluded.
+
+The reader verifies full 145,702 IDs /231,678,157 bp, all 1,457,020 ordered ten-depth
+cells, 13 zero rows, baseline-identical parent TNF/eligibility and every **54,216
+actual window** hash/coordinate from 13,554 training parents. Parent mean depth
+remains conditioning, not window coverage. All 18 native installed source/default
+members, pinned runtime, 20-epoch histories and seven serial receipt chains pass.
+Native pre-save and independently reloaded arrays are bitwise equal. All 1,821,900
+sparse weights independently match unit-cosine/local-scale arithmetic (max absolute
+error 4.84e-14); the native 64-query audit and independent 128-query audit have mean
+recall 1.0, with no unqueried-recall guarantee. There is no post-learning z-score.
+
+The strict Mac inference check **did fail** unchanged rtol1e-5/atol2e-6 at four of
+9,324,928 coordinates (maximum 3.135e-6, evidence masks identical). Disabling MKLDNN
+did not explain it. Preserve that portability limitation and failed v1 reader;
+we did not widen tolerance, refit or substitute vectors. Subsequent diagnostics
+explicitly consume original Linux artifacts, with independently passing native
+input/output/reload/geometry contracts. A separate reader-v2 failure assumed
+ascending numeric edge indices; the writer actually sorts opaque IDs then maps
+to FASTA rows. The adapter was corrected and tested on unsorted IDs/refusals;
+no native output changed. Failed source snapshots match their pre-run hashes.
+
+Five new reader/diagnostic contracts, reused diagnostic/truth-evaluator contracts
+and the actual pinned AMBER API pass. The main local retained review took 59.137 s,
+sampled peak 1.526 GB under 4 threads/8 GB/15 min; AMBER 47.906 s /0.554 GB in its separate
+unchanged environment. No workers were mocked in the retained review or evaluation.
+
+The primary endpoint below uses >=200 kb bins at >=95% confirmed source support,
+all-bin DNA purity and full provided bacterial references (156 targets /
+554,661,890 bp), with duplicate-safe loci. It is conservative provided-reference
+recovery, not formal MIMAG quality. Available confirmed source union is 18.5321%;
+3.3034% N-quarantined DNA and all unknown/non-target/zero-origin competitors remain.
+Accepted dev3 values are reused, without refitting/rescoring its outputs.
+
+| Frozen output | Weighted R95 | Macro R95 | Targets >=50% | Targets >=90% |
+| --- | ---: | ---: | ---: | ---: |
+| dev3 raw TNF+ten depth | 4.5765% | 4.9838% | 6 | 1 |
+| dev3 learned TNF+ten depth | **5.3911%** | **6.0264%** | **13** | 1 |
+| dev3 raw TNF only | 3.9312% | 4.5794% | 5 | 1 |
+| dev3 learned TNF only | 4.5597% | 5.5352% | 11 | 1 |
+| dev4 pre-refinement | 1.8763% | 2.1214% | 3 | 1 |
+| dev4 post-refinement | 4.2909% | 4.2787% | 6 | **2** |
+
+**The integrated candidate does not establish a stronger whole binner.**
+Refinement improves its fixed representation by 2.4146 percentage points, but the
+bundle remains 1.1002 points below learned dev3. Post versus pre improves recovered
+bp for 6 targets and worsens 1; versus dev3 improves 10 and worsens 13. Do not select
+only the two >=90% targets or better geometry to claim a win.
+
+Bacterial 5-NN agreement on the identical 25,543-query population rises 67.05→72.59%,
+but bp-weighted agreement falls 79.62→78.73%. The >=10 kb stratum falls 81.79→79.40%,
+while 500–767 bp rises 63.27→71.65%. Overall 88.18% neighbor agreement is not a primary
+cellular target result. Bacterial restricted B3 precision/recall are 41.41/70.92%
+pre, 63.50/49.52% post, versus dev3's 62.29/37.61%; restricted attribution excludes
+unknown bin DNA, whereas R95 purity includes it. Native AMBER assigned restricted
+bp-purity 69.55→86.89% also must not replace the full-bin denominator.
+
+Before refinement, 35 bins assign 89,041 contigs /209,642,703 bp. Afterward, 73 bins
+assign 80,186 /189,143,689 bp, with 8,855 /20,499,014 bp newly unassigned and the same
+56,661 /22,035,454 bp below 500 excluded. Every DNA record survives both exports.
+The dropped DNA includes 8,485,927 confirmed bacterial bp and 169 >=10kb contigs /
+7,190,680 bp. Marker-negative dropped contigs 8,615 are retained, not discarded.
+
+Native cache: 298,955 genes /3,462 domains; 111 profiles /107 canonical families;
+1,631 clean-marker contigs, including 86 below 500. Separately, 38 same-contig
+multicopy-family cases are unreliable; no multi-family proteins were reported.
+All retained gene coordinates, coverage >=.5 and trusted domain score thresholds
+verify without redetection.
+Marker-bearing eligible contigs are only 1,545/89,041. Eighteen of 22 recorded split
+attempts are adopted; four bins retain single-family unresolved conflicts.
+A previously 95%-pure source grouping can still lose recovery: ASV399.6 drops
+1,288,186 recovered bp after refinement. Markers are evidence with failure modes.
+
+A 35.103 Mb bacterial-dominant pre-bin contains 107 supported genomes and 17.18%
+dominant support. Even after refinement, 45/57 large bacterial-dominant bins are
+below 95% confirmed purity. This supports **one cheap cached grouping-objective
+control**, not proof that grouping is the only problem. Prepare a fixed
+CPM-versus-current-RB objective on the same graph/weights, with encoder and marker
+refinement unchanged. CPM's density parameter has a different meaning from RB's
+resolution; freeze one label-free rule using [the primary API/formula](https://leidenalg.readthedocs.io/en/stable/reference.html#cpmvertexpartition),
+not a truth-score grid. Long-contig representation and refinement losses remain
+serious alternatives. No changed partition or new execution occurs here. A later
+useful fixed mechanism must be confirmed on the prospectively frozen oral GSA,
+after separate source/truth/overlap and cost admission. No feature-family/SOTA claim.
+
+Actual VM uptime 1,303.115 s costs ~$0.09884 compute/IP; disk interval ~$0.01547;
+335.7 MB compact export upper~$0.03752; prior asset readbacks~$0.00250 plus small
+storage/operations. Total~$0.1543 before small charges,<$0.19 with reserve, within
+$2; delayed net 0 is not an invoice. Candidate 777.832 s, largest sampled phase
+RSS 2.694 GB. Markers 575.741 s dominate; training itself 18.265 s. Allocated uptime
+prices are separate from sampled CPU. Sampled candidate/collection filesystem
+peak 162.69 GiB /minimum free 132.28 GiB, charged growth 3.41 GiB including early 1 GiB
+padding; later outer readback adds 335.6 MB outside persisted sample scope. No new
+capacity is needed. Existing disks cost $31.20/month while stopped; **October 21**
+review and original retention approval remain, without extension.

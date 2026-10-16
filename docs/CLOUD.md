@@ -1,29 +1,35 @@
 # Google Cloud workspace operations
 
-Updated: 2026-10-16 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
+Updated: 2026-10-17 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**E010's separately authorized $2 phase is running on the unchanged existing VM.**
-[Native observation](../experiments/E010-coherent-prototype/native-observed.json)
-binds phase `candidate-20261016T212549Z-6917c3f`, exact clean source 6917c3f on
-`dev4-coherent-prototype`, current progress, gates and costs. Start 21:25:49.946 UTC
-October 16; four-hour phase ends 01:25:49 UTC October 17 /03:25 Copenhagen, provider
-STOP 01:40:49 UTC /03:40 Copenhagen. Fresh current-boot/process watchdog PID 2188,
-birth 11639, normal/crash tests, live timer and 4.25-hour STOP were verified before release.
-No new resource/service/IAM/quota, resize, retry or retention extension. Pre-install
-free 134.69 GiB. The complete native Python 3.12 setup and gates share this clock;
-the inventory/import/source, production marker positive and all 21 installed
-product tests pass on Linux Python 3.12.10. Full-data feature preparation completed;
-marker gene calling is progressing. Do not infer scientific completion from stop.
+**E010 is complete and the VM is independently TERMINATED.**
+[The completed review](../experiments/E010-coherent-prototype/review.json) binds
+GCP status, matching guest/private completion, the verified 335,636,093-byte science
+archive/all 692 members and all seven successful native stages at frozen source
+6917c3f. Start October 16 21:25:49.946 UTC; stop 21:47:33.061 UTC /23:47 Copenhagen.
+Measured uptime 1,303.115 s /0.361976 h; no wake/resource/service/IAM/quota changes,
+retry or retention extension occurred in this review. The verified watchdog and
+4.25-hour STOP were retained; its post-exit snapshot remains on stopped disk and was
+not fetched by waking the VM. Scientific success follows receipts, not shutdown.
 
 Fresh paid-account Welcome credit **DKK1,933.15 Available through 2027-01-12**;
-reported October 1–16 cost/savings 38.35/net 0 remains lagged. Pending usage is not
-zero; the receipt reserves prior exposure and remaining approved retention.
-Unchanged DKK catalog prices give ~$.273045676/VM-hour including non-free IPv4;
-conservative new-phase total ~$1.66 includes the 4.25-hour fallback, disk interval,
-2-GiB export
-and small storage/operations. Actual uptime pricing remains provisional until stop.
-Existing 30/300-GiB disks remain $31.20/month while stopped; **October 21** review stays.
+reported October 1–17 cost/savings 38.35/net 0 is delayed and pending usage unknown.
+Fresh DKK SKUs remain unchanged. Measured compute/IP~**$0.09884**, disk interval
+~**$0.01547**, actual bounded archive export upper ~**$0.03752**, prior asset readbacks
+~$0.00250 plus small object storage/operations: ~$0.1543 before small charges,
+**<$0.19 including reserve**, inside the original $2. These are measured-uptime/list
+price estimates, not a reconciled invoice or credit-display subtraction.
+
+Existing 30/300 GiB disks still cost **$31.20/month while stopped**. Native sampled
+candidate/collection filesystem peak 162.69 GiB, minimum free 132.28 GiB; later outer
+readback's 335.6 MB copy is outside that persisted sample scope. No new capacity is
+needed. Review retention **October 21**, without extension, migration or deletion.
+The complete prefix/data survive on the existing work disk; compact native outputs
+are privately archived/readback-verified. Keep GitHub access read-only; branch is
+`dev4-coherent-prototype`, frozen VM source 6917c3f. A proposed cached grouping
+control needs its own prepared protocol, fresh credit/retention gate and separate
+budget; unused $2 authorization does not carry over.
 
 **E009's four unchanged controls completed; the preceding reviewed VM state was TERMINATED.**
 [The reviewed result](../experiments/E009-competitive-benchmark/controls-review.json)
@@ -597,7 +603,7 @@ The existing eight-CPU VM started at **21:10:04.207 UTC**, with 30/300-GiB disks
 and no resize/provisioning/service/IAM changes. Fresh paid-account credit check
 shows **DKK1,942.67 Available through 2027-01-12**; reported usage/savings27.89, net0,
 with pending usage not assumed zero. Fresh SKUs price gross compute/IP at
-**$0.273045676/h**, max4.25h **$1.160444124**, within the separate approved **$2**.
+**$0.273045676/h**, max4.25 h **$1.160444124**, within the separate approved **$2**.
 Existing storage remains within its October 21 retention review, ~$31.20/month gross.
 The truth evidence archive now has a private upload and verified SHA256 readback.
 
@@ -610,10 +616,10 @@ pass. Latest snapshot is live ten-depth feature preparation with ~1 CPU native
 work and no failure. It is not a completed fit or a quality result.
 
 The root systemd watcher pins boot63cf3041-14ae-4ce2-82f8-5a1df18e8abc /PID1975,
-start tick27468 and exact command hash, every30s with60s exit grace. Live/normal0/
+start tick27468 and exact command hash, every30 s with60 s exit grace. Live/normal0/
 crash7 native detection tests pass without host shutdown. Its timer is active only
 for this boot. The service also has a boot-relative four-hour cgroup runtime bound;
-provider4.25h STOP/automaticRestart=false remains independent. Hard phase/provider
+provider4.25 h STOP/automaticRestart=false remains independent. Hard phase/provider
 ends are **October 16 01:10/01:25 UTC =03:10/03:25 Copenhagen**. The held parent was
 released only after actual watcher verification. It archives/readbacks completed
 results and compact status, then exits to trigger shutdown. Do not stop active

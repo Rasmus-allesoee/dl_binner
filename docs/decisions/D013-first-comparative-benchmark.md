@@ -302,3 +302,21 @@ records stay immutable. This is engineering evidence, with a separate proposed
 $2 development-fit scope. No mature-tool campaign or isolated marker-split gate
 returns. A publisher-bound oral GSA confirmation protocol was frozen prospectively,
 without acquiring data or claiming multi-depth/unseen-genome validation.
+
+## Reviewed first integrated candidate, 2026-10-17
+
+[E010](../../experiments/E010-coherent-prototype/review.json) completed its separately
+approved frozen run for about $0.1543 gross before small object/operation charges
+(<$0.19 with reserve). The native workflow and complete outputs pass review;
+the whole bundle does not beat dev3 on conservative weighted R95: post 4.2909%
+versus 5.3911%, despite better short bacterial neighborhoods. Paired refinement
+improves pre 1.8763% but leaves mixing and adds unassigned DNA. A small failed Mac
+inference-tolerance check remains explicit; original native outputs alone are scored.
+
+This supplies useful development evidence beyond an expected mature-tool ranking:
+better local neighborhoods can coexist with large mixed groups and worse
+fixed-purity recovery. D015 recommends one cached grouping-objective control as
+the next preparation, with no encoder fit, external tool or automatic campaign.
+No product feature family is selected or rejected. Additional confirmation data
+remain prospectively frozen but unacquired; no SOTA/generalization claim follows.
+Existing storage review stays October 21; the original $2 is not a future budget.

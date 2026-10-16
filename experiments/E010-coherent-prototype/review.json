@@ -1,0 +1,2944 @@
+{
+  "acceptance": {
+    "all_1821900_graph_weights_independently_checked": {
+      "all_graph_weights_checked": 1821900,
+      "gene_coordinates_verified": 298955,
+      "max_weight_absolute_error": 4.8405723873656825e-14,
+      "models": 111,
+      "native_receipt_and_checkpoint_bindings": true,
+      "raw_domains_coverage_and_trusted_domain_thresholds_verified": 3462,
+      "scope": "retained metadata/sequence-model cutoffs and graph arithmetic only; no HMM search, aligner, graph index or grouping",
+      "source": {
+        "bytes": 3686,
+        "sha256": "3e5b7adb2f42342e329e7b6920a547041b36c53bdfe8ab5e1fd63696d2c61595"
+      },
+      "status": "PASS",
+      "wall_seconds": 5.030678536975756,
+      "weight_tolerance": {
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    "all_actual_DNA_window_hashes_checked": 54216,
+    "all_parent_DNA_and_TNF_equal_accepted_inputs": true,
+    "all_pre_post_export_DNA_and_accounting": true,
+    "config": {
+      "audit_queries": 64,
+      "batch_size": 512,
+      "depth_hidden": 64,
+      "epochs": 20,
+      "exact_threshold": 2048,
+      "fusion_hidden": 128,
+      "inference_batch_size": 2048,
+      "learning_rate": 0.001,
+      "leiden_iterations": 2,
+      "min_bin_bp": 10000,
+      "min_bin_contigs": 2,
+      "min_length": 500,
+      "min_neighbor_recall": 0.9,
+      "neighbors": 30,
+      "output": 64,
+      "refinement_iterations": 10,
+      "refinement_margin": 0.05,
+      "refinement_min_cosine": 0.2,
+      "resolution": 1.0,
+      "seed": 11,
+      "sequence_hidden": 256,
+      "sequence_loss_weight": 0.5,
+      "sequence_output": 128,
+      "temperature": 0.2,
+      "weight_decay": 1e-05,
+      "window_max": 10000,
+      "window_min": 1000,
+      "window_pairs": 2
+    },
+    "cross_platform_reload": {
+      "coordinates_outside_tolerance": 4,
+      "evidence_mask_equal": true,
+      "max_absolute_error": 3.1348317861557007e-06,
+      "passed": false,
+      "scope": "Mac inference diagnostic; native Linux pre-save/reload parity is a separate exact contract",
+      "tolerance": {
+        "atol": 2e-06,
+        "rtol": 1e-05
+      },
+      "total_coordinates": 9324928
+    },
+    "depth_cells": 1457020,
+    "full_bp": 231678157,
+    "full_contig_axes": 145702,
+    "full_seven_stage_serial_receipt_chain": true,
+    "independent_neighbor_queries": 128,
+    "marker_cache_raw_reduction_and_coordinates": true,
+    "mean_recall_30": 1.0,
+    "mean_recall_5": 1.0,
+    "native_64_query_gate": "mean/min tie-aware recall1.0; sampled only, no global guarantee",
+    "native_artifact_scope": "Evaluate original verified Linux outputs only; the unchanged Mac allclose tolerance remains failed, not reclassified as passing",
+    "native_inventory_source_marker_and_21_product_tests_passed": true,
+    "native_reload_exact": true,
+    "no_grouping_training_marker_detection_or_alignment_in_review": true,
+    "ordered_depth_columns": [
+      "cami3_toy_human_gut_short_read_sample_0",
+      "cami3_toy_human_gut_short_read_sample_2",
+      "cami3_toy_human_gut_short_read_sample_3",
+      "cami3_toy_human_gut_short_read_sample_4",
+      "cami3_toy_human_gut_short_read_sample_6",
+      "cami3_toy_human_gut_short_read_sample_9",
+      "cami3_toy_human_gut_short_read_sample_10",
+      "cami3_toy_human_gut_short_read_sample_11",
+      "cami3_toy_human_gut_short_read_sample_14",
+      "cami3_toy_human_gut_short_read_sample_17"
+    ],
+    "parent_measured_depth_semantics_preserved": true,
+    "training_parents": 13554,
+    "unit_geometry_native_rows_checked": 89041,
+    "zero_depth_rows": 13
+  },
+  "all_accepted_E009_evidence_unchanged": true,
+  "analysis_bindings": {
+    "archive-verification.json": {
+      "bytes": 157377,
+      "sha256": "581c02432790162a901d7af877d36875a87c918bb51e6b89e26290a5997df8c3"
+    },
+    "collector-console.log": {
+      "bytes": 316,
+      "sha256": "fd9d5889e671c345e8d557dba078059178b97e1a453db604b37a530463e80ae2"
+    },
+    "diagnostic-contracts.log": {
+      "bytes": 379,
+      "sha256": "67e6fe7f5d1b06ba164a0f46d64d9150fad2faf66069257ecdd40deb98076e3f"
+    },
+    "docs-final-context.log": {
+      "bytes": 727,
+      "sha256": "91f089d9f60684899662ecd56e9ab8b408b08f20ab1240ba3c772f26da35086b"
+    },
+    "docs-final.log": {
+      "bytes": 727,
+      "sha256": "76a49f76a84c510b38031735efc1d208c36fb6b66ceded48455499da014babeb"
+    },
+    "evaluations.json": {
+      "bytes": 100285,
+      "sha256": "26092bf9f232b0da1e1a4ecd2691e4f77d79471db398dd3db7748caa92eb038a"
+    },
+    "final-local-checks.json": {
+      "bytes": 1744,
+      "sha256": "c44f68656cbbdd4dae6171a0553283069b23db0d8159eae352bdb69e6d0f8e09"
+    },
+    "final-reader-contracts-complete.log": {
+      "bytes": 702,
+      "sha256": "a9a057ed7a007b51084be9e5646ecd1e6459722465ce313d9a42adb7ee52e67a"
+    },
+    "final-reader-contracts.log": {
+      "bytes": 702,
+      "sha256": "3bbeae56815acc41a6cd481c0bb260988418159aa2472c789e270dc4896c64d2"
+    },
+    "grouping-diagnostics.json": {
+      "bytes": 143965,
+      "sha256": "622438af79d08e7e3e19c0233dd2ffaa398ad85fde7d852840728857976e4fcd"
+    },
+    "local-review-v3/review.json": {
+      "bytes": 210541,
+      "sha256": "f778de2ca18a5c7d39714bf6bb1f5f95f4650e1cbee115ec3fcf4c287517897f"
+    },
+    "local-runtime.json": {
+      "bytes": 10909,
+      "sha256": "d1330516ae3a076efa20fab6bfe69ea655263c40ef689ee4adb76a4852dec60a"
+    },
+    "native-extra-contracts.json": {
+      "bytes": 647,
+      "sha256": "f80368479b39d896d03bf1e1c26d1aa66389d0c3c25bcc34a70bc26b5f79fc63"
+    },
+    "reload-diagnostic.json": {
+      "bytes": 1135,
+      "sha256": "0cc24545858bff956fc2505950a0e1656ad53ae0735105d5ce347e72df384378"
+    },
+    "review-archive-local.json": {
+      "bytes": 22311,
+      "sha256": "74464e4082007fa0e028c38574e40498e57671bd4aa4ba85eee1277608fecfb6"
+    },
+    "review-upload.json": {
+      "bytes": 1038,
+      "sha256": "93e85c2e7c483afbc1a1372a29b831a8fae66d16df3b89222ac54bf677466460"
+    },
+    "review-upload.log": {
+      "bytes": 120,
+      "sha256": "2f38586b25b09a8cd6f2843eec725f1c92ee15bf80741c186648a068b49dac2b"
+    },
+    "truth-evaluator-contracts.log": {
+      "bytes": 339,
+      "sha256": "d9bef4007b9a178bf5b937781cfe2a370e87ded77b1aa4dccb43d8d498b00fdf"
+    }
+  },
+  "analysis_code": {
+    "experiments/E010-coherent-prototype/review_diagnostics.py": {
+      "bytes": 5994,
+      "sha256": "8af42a3b70f713aa08fdf7d22bd1e060c8146f516344b232ae1058fe9d89c8af"
+    },
+    "scripts/e009_controls_review.py": {
+      "bytes": 15674,
+      "sha256": "ceb8ffdeb44395674cf2d313cb9c881bc942fc16e4230693a7234fa90cb4dda6"
+    },
+    "scripts/e009_evaluate.py": {
+      "bytes": 5678,
+      "sha256": "bca67ab8e1e8440be1c974237b24dbfb30eaf5231964f2830576e9363681e3a1"
+    },
+    "scripts/e009_truth.py": {
+      "bytes": 10174,
+      "sha256": "0d6cfef49c7ae89e712533f042e5cec032ac870041843df6af3decb6e82957d8"
+    },
+    "scripts/e010_review.py": {
+      "bytes": 20161,
+      "sha256": "aa0455cd7d1d1f679e4f483586094a8d170bdc93d512fac0749442be9128522a"
+    },
+    "tests/test_e010_review.py": {
+      "bytes": 5308,
+      "sha256": "ad8fd195d73664f3fe075ef43986261ae108f4f6549e96e3742b59e0ed71ccf6"
+    }
+  },
+  "archives": {
+    "candidate": {
+      "archive": {
+        "bytes": 335636093,
+        "sha256": "3ec883477ce6c9e070632200508be8b707e84a11938f51e6221089eb94d165a3"
+      },
+      "every_member_hashed": true,
+      "expected_member_manifest_verified": true,
+      "inventory_note": "Science uses the pre-transfer inventory; closure members are bound by the verified archive hash and inventoried individually",
+      "logical_member_bytes": 763504773,
+      "regular_members": 692,
+      "uri": "gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/candidate-run-evidence.tar.gz"
+    },
+    "closure": {
+      "archive": {
+        "bytes": 99386,
+        "sha256": "67e39a5de563344a39974064f54e4863fa130f0085649a8d4f1dfd50aa027cf6"
+      },
+      "every_member_hashed": true,
+      "expected_member_manifest_verified": false,
+      "inventory_note": "Science uses the pre-transfer inventory; closure members are bound by the verified archive hash and inventoried individually",
+      "logical_member_bytes": 634501,
+      "regular_members": 32,
+      "uri": "gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/closure.tar.gz"
+    }
+  },
+  "arms": {
+    "dev3-ten-depth-learned": {
+      "bins": 952,
+      "geometry_by_lineage": {
+        "bacterial": {
+          "attributable_bp": 94606287,
+          "b3_precision": 0.622864062388502,
+          "b3_precision_sum": 58926856.248312525,
+          "b3_recall": 0.3760684401884991,
+          "b3_recall_sum": 35578438.78411548,
+          "nn_purity": 0.6705242140703911,
+          "nn_purity_bp_weighted": 0.7961543472415374,
+          "queries": 25543,
+          "query_bp": 88261843,
+          "same": 85636,
+          "same_weighted_sum": 70270050.00000006
+        },
+        "eukaryotic": {
+          "attributable_bp": 67037217,
+          "b3_precision": 0.6302023145726008,
+          "b3_precision_sum": 42247009.3159057,
+          "b3_recall": 0.24454653317946548,
+          "b3_recall_sum": 16393719.011349527,
+          "nn_purity": 0.903707592891761,
+          "nn_purity_bp_weighted": 0.8908125239517064,
+          "queries": 49520,
+          "query_bp": 54129752,
+          "same": 223758,
+          "same_weighted_sum": 48219460.999999925
+        },
+        "other": {
+          "attributable_bp": 214249,
+          "b3_precision": 0.046185795099858935,
+          "b3_precision_sum": 9895.260414349677,
+          "b3_recall": 0.8696510809124118,
+          "b3_recall_sum": 186321.87443440332,
+          "nn_purity": 0.04,
+          "nn_purity_bp_weighted": 0.0045791252085563,
+          "queries": 15,
+          "query_bp": 213971,
+          "same": 3,
+          "same_weighted_sum": 979.8
+        },
+        "viral": {
+          "attributable_bp": 3620060,
+          "b3_precision": 0.30538437060155044,
+          "b3_precision_sum": 1105509.7446398486,
+          "b3_recall": 0.6290117702361057,
+          "b3_recall_sum": 2277060.3489609165,
+          "nn_purity": 0.3517167381974249,
+          "nn_purity_bp_weighted": 0.3298530914256273,
+          "queries": 932,
+          "query_bp": 3435470,
+          "same": 1639,
+          "same_weighted_sum": 1133200.4
+        }
+      },
+      "length_geometry_by_lineage": {
+        "bacterial": {
+          "1": {
+            "attributable_bp": 6344444,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 11286563,
+            "nn_purity": 0.691395132331427,
+            "queries": 7519,
+            "same": 25993
+          },
+          "10000": {
+            "attributable_bp": 54376116,
+            "nn_purity": 0.8178743961352657,
+            "queries": 1242,
+            "same": 5079
+          },
+          "2500": {
+            "attributable_bp": 12922309,
+            "nn_purity": 0.6939894551845343,
+            "queries": 2845,
+            "same": 9872
+          },
+          "500": {
+            "attributable_bp": 5937015,
+            "nn_purity": 0.6327152180669222,
+            "queries": 9653,
+            "same": 30538
+          },
+          "768": {
+            "attributable_bp": 3739840,
+            "nn_purity": 0.6607843137254902,
+            "queries": 4284,
+            "same": 14154
+          }
+        },
+        "eukaryotic": {
+          "1": {
+            "attributable_bp": 12907465,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 22058451,
+            "nn_purity": 0.9240817399303503,
+            "queries": 15219,
+            "same": 70318
+          },
+          "10000": {
+            "attributable_bp": 1598996,
+            "nn_purity": 0.2787878787878788,
+            "queries": 33,
+            "same": 46
+          },
+          "2500": {
+            "attributable_bp": 8232449,
+            "nn_purity": 0.9477072310405644,
+            "queries": 2268,
+            "same": 10747
+          },
+          "500": {
+            "attributable_bp": 13617821,
+            "nn_purity": 0.8852982408537964,
+            "queries": 22113,
+            "same": 97883
+          },
+          "768": {
+            "attributable_bp": 8622035,
+            "nn_purity": 0.905512288864165,
+            "queries": 9887,
+            "same": 44764
+          }
+        },
+        "other": {
+          "1": {
+            "attributable_bp": 278,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 13948,
+            "nn_purity": 0.075,
+            "queries": 8,
+            "same": 3
+          },
+          "10000": {
+            "attributable_bp": 171492,
+            "nn_purity": 0.0,
+            "queries": 2,
+            "same": 0
+          },
+          "2500": {
+            "attributable_bp": 27707,
+            "nn_purity": 0.0,
+            "queries": 4,
+            "same": 0
+          },
+          "768": {
+            "attributable_bp": 824,
+            "nn_purity": 0.0,
+            "queries": 1,
+            "same": 0
+          }
+        },
+        "viral": {
+          "1": {
+            "attributable_bp": 184590,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 426664,
+            "nn_purity": 0.38571428571428573,
+            "queries": 280,
+            "same": 540
+          },
+          "10000": {
+            "attributable_bp": 1920492,
+            "nn_purity": 0.3422222222222222,
+            "queries": 45,
+            "same": 77
+          },
+          "2500": {
+            "attributable_bp": 786264,
+            "nn_purity": 0.5269662921348315,
+            "queries": 178,
+            "same": 469
+          },
+          "500": {
+            "attributable_bp": 178915,
+            "nn_purity": 0.24636678200692042,
+            "queries": 289,
+            "same": 356
+          },
+          "768": {
+            "attributable_bp": 123135,
+            "nn_purity": 0.2814285714285714,
+            "queries": 140,
+            "same": 197
+          }
+        }
+      },
+      "neighbor_geometry": {
+        "attributable_eligible_queries": 76010,
+        "nn_purity": 0.8184081041968162,
+        "nn_purity_bp_weighted": 0.8191101246364765,
+        "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+      },
+      "recovery": {
+        "at_least_50_percent": 13,
+        "at_least_90_percent": 1,
+        "bp_weighted_R95": 0.05391142881657148,
+        "macro_R95": 0.06026422988076384,
+        "targets": 156,
+        "targets_with_any_passing_bin": 18
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.42940301235790224,
+        "precision": 0.6181449265906885,
+        "recall": 0.32895975014403,
+        "scope": "bp-weighted attributable contigs only; noise/excluded zero, unknown bin DNA not in this restricted denominator"
+      },
+      "statuses": {
+        "assigned": {
+          "bp": 180934322,
+          "contigs": 77269
+        },
+        "excluded": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "bp": 28708381,
+          "contigs": 11772
+        }
+      }
+    },
+    "dev3-ten-depth-raw": {
+      "bins": 2947,
+      "geometry_by_lineage": {
+        "bacterial": {
+          "attributable_bp": 94606287,
+          "b3_precision": 0.47899338993805535,
+          "b3_precision_sum": 45315786.11958258,
+          "b3_recall": 0.18475766501853053,
+          "b3_recall_sum": 17479236.68219296,
+          "nn_purity": 0.6863015307520651,
+          "nn_purity_bp_weighted": 0.8175817493409916,
+          "queries": 25543,
+          "query_bp": 88261843,
+          "same": 87651,
+          "same_weighted_sum": 72161271.99999996
+        },
+        "eukaryotic": {
+          "attributable_bp": 67037217,
+          "b3_precision": 0.303817452477963,
+          "b3_precision_sum": 20367076.490152393,
+          "b3_recall": 0.007590832291030826,
+          "b3_recall_sum": 508868.27150444064,
+          "nn_purity": 0.8224232633279484,
+          "nn_purity_bp_weighted": 0.8406673875025327,
+          "queries": 49520,
+          "query_bp": 54129752,
+          "same": 203632,
+          "same_weighted_sum": 45505117.199999996
+        },
+        "other": {
+          "attributable_bp": 214249,
+          "b3_precision": 0.15694922466694,
+          "b3_precision_sum": 33626.21443566723,
+          "b3_recall": 0.36483725665690114,
+          "b3_recall_sum": 78166.01740148441,
+          "nn_purity": 0.04,
+          "nn_purity_bp_weighted": 0.011474452145384187,
+          "queries": 15,
+          "query_bp": 213971,
+          "same": 3,
+          "same_weighted_sum": 2455.2
+        },
+        "viral": {
+          "attributable_bp": 3620060,
+          "b3_precision": 0.42401305934654293,
+          "b3_precision_sum": 1534952.7156180462,
+          "b3_recall": 0.4717439628438031,
+          "b3_recall_sum": 1707741.4501323379,
+          "nn_purity": 0.4330472103004292,
+          "nn_purity_bp_weighted": 0.3999188466206953,
+          "queries": 932,
+          "query_bp": 3435470,
+          "same": 2018,
+          "same_weighted_sum": 1373909.2000000002
+        }
+      },
+      "length_geometry_by_lineage": {
+        "bacterial": {
+          "1": {
+            "attributable_bp": 6344444,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 11286563,
+            "nn_purity": 0.7093496475595159,
+            "queries": 7519,
+            "same": 26668
+          },
+          "10000": {
+            "attributable_bp": 54376116,
+            "nn_purity": 0.8537842190016103,
+            "queries": 1242,
+            "same": 5302
+          },
+          "2500": {
+            "attributable_bp": 12922309,
+            "nn_purity": 0.7476274165202109,
+            "queries": 2845,
+            "same": 10635
+          },
+          "500": {
+            "attributable_bp": 5937015,
+            "nn_purity": 0.637708484408992,
+            "queries": 9653,
+            "same": 30779
+          },
+          "768": {
+            "attributable_bp": 3739840,
+            "nn_purity": 0.6660597572362278,
+            "queries": 4284,
+            "same": 14267
+          }
+        },
+        "eukaryotic": {
+          "1": {
+            "attributable_bp": 12907465,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 22058451,
+            "nn_purity": 0.9004402391747158,
+            "queries": 15219,
+            "same": 68519
+          },
+          "10000": {
+            "attributable_bp": 1598996,
+            "nn_purity": 0.2909090909090909,
+            "queries": 33,
+            "same": 48
+          },
+          "2500": {
+            "attributable_bp": 8232449,
+            "nn_purity": 0.9567901234567902,
+            "queries": 2268,
+            "same": 10850
+          },
+          "500": {
+            "attributable_bp": 13617821,
+            "nn_purity": 0.7535929091484647,
+            "queries": 22113,
+            "same": 83321
+          },
+          "768": {
+            "attributable_bp": 8622035,
+            "nn_purity": 0.8272276727015273,
+            "queries": 9887,
+            "same": 40894
+          }
+        },
+        "other": {
+          "1": {
+            "attributable_bp": 278,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 13948,
+            "nn_purity": 0.05,
+            "queries": 8,
+            "same": 2
+          },
+          "10000": {
+            "attributable_bp": 171492,
+            "nn_purity": 0.0,
+            "queries": 2,
+            "same": 0
+          },
+          "2500": {
+            "attributable_bp": 27707,
+            "nn_purity": 0.05,
+            "queries": 4,
+            "same": 1
+          },
+          "768": {
+            "attributable_bp": 824,
+            "nn_purity": 0.0,
+            "queries": 1,
+            "same": 0
+          }
+        },
+        "viral": {
+          "1": {
+            "attributable_bp": 184590,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 426664,
+            "nn_purity": 0.4742857142857143,
+            "queries": 280,
+            "same": 664
+          },
+          "10000": {
+            "attributable_bp": 1920492,
+            "nn_purity": 0.4444444444444444,
+            "queries": 45,
+            "same": 100
+          },
+          "2500": {
+            "attributable_bp": 786264,
+            "nn_purity": 0.6269662921348315,
+            "queries": 178,
+            "same": 558
+          },
+          "500": {
+            "attributable_bp": 178915,
+            "nn_purity": 0.32041522491349483,
+            "queries": 289,
+            "same": 463
+          },
+          "768": {
+            "attributable_bp": 123135,
+            "nn_purity": 0.33285714285714285,
+            "queries": 140,
+            "same": 233
+          }
+        }
+      },
+      "neighbor_geometry": {
+        "attributable_eligible_queries": 76010,
+        "nn_purity": 0.7717510853835021,
+        "nn_purity_bp_weighted": 0.8151322180431528,
+        "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+      },
+      "recovery": {
+        "at_least_50_percent": 6,
+        "at_least_90_percent": 1,
+        "bp_weighted_R95": 0.045764970439919714,
+        "macro_R95": 0.04983822979153326,
+        "targets": 156,
+        "targets_with_any_passing_bin": 21
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.18468870081051117,
+        "precision": 0.4064076042616601,
+        "recall": 0.11949645733613372,
+        "scope": "bp-weighted attributable contigs only; noise/excluded zero, unknown bin DNA not in this restricted denominator"
+      },
+      "statuses": {
+        "assigned": {
+          "bp": 109487277,
+          "contigs": 32202
+        },
+        "excluded": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "bp": 100155426,
+          "contigs": 56839
+        }
+      }
+    },
+    "dev3-tnf-only-learned": {
+      "bins": 801,
+      "geometry_by_lineage": {
+        "bacterial": {
+          "attributable_bp": 94606287,
+          "b3_precision": 0.5367973509478585,
+          "b3_precision_sum": 50784404.24461283,
+          "b3_recall": 0.39280686920754576,
+          "b3_recall_sum": 37161999.40382054,
+          "nn_purity": 0.5107465841913635,
+          "nn_purity_bp_weighted": 0.7261095986858122,
+          "queries": 25543,
+          "query_bp": 88261843,
+          "same": 65230,
+          "same_weighted_sum": 64087771.400000155
+        },
+        "eukaryotic": {
+          "attributable_bp": 67037217,
+          "b3_precision": 0.3643695027847339,
+          "b3_precision_sum": 24426317.42636231,
+          "b3_recall": 0.13300192208762868,
+          "b3_recall_sum": 8916078.712405456,
+          "nn_purity": 0.5138045234248788,
+          "nn_purity_bp_weighted": 0.5631384455631727,
+          "queries": 49520,
+          "query_bp": 54129752,
+          "same": 127218,
+          "same_weighted_sum": 30482544.40000004
+        },
+        "other": {
+          "attributable_bp": 214249,
+          "b3_precision": 0.055030568091644146,
+          "b3_precision_sum": 11790.244183066667,
+          "b3_recall": 0.8864556914092313,
+          "b3_recall_sum": 189922.2454287364,
+          "nn_purity": 0.0,
+          "nn_purity_bp_weighted": 0.0,
+          "queries": 15,
+          "query_bp": 213971,
+          "same": 0,
+          "same_weighted_sum": 0.0
+        },
+        "viral": {
+          "attributable_bp": 3620060,
+          "b3_precision": 0.11076332529416355,
+          "b3_precision_sum": 400969.8833643897,
+          "b3_recall": 0.626256597352566,
+          "b3_recall_sum": 2267086.45781213,
+          "nn_purity": 0.2517167381974249,
+          "nn_purity_bp_weighted": 0.27725859926007207,
+          "queries": 932,
+          "query_bp": 3435470,
+          "same": 1173,
+          "same_weighted_sum": 952513.5999999999
+        }
+      },
+      "length_geometry_by_lineage": {
+        "bacterial": {
+          "1": {
+            "attributable_bp": 6344444,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 11286563,
+            "nn_purity": 0.5380768719244581,
+            "queries": 7519,
+            "same": 20229
+          },
+          "10000": {
+            "attributable_bp": 54376116,
+            "nn_purity": 0.7789049919484702,
+            "queries": 1242,
+            "same": 4837
+          },
+          "2500": {
+            "attributable_bp": 12922309,
+            "nn_purity": 0.6156063268892794,
+            "queries": 2845,
+            "same": 8757
+          },
+          "500": {
+            "attributable_bp": 5937015,
+            "nn_purity": 0.4397596602092614,
+            "queries": 9653,
+            "same": 21225
+          },
+          "768": {
+            "attributable_bp": 3739840,
+            "nn_purity": 0.4753501400560224,
+            "queries": 4284,
+            "same": 10182
+          }
+        },
+        "eukaryotic": {
+          "1": {
+            "attributable_bp": 12907465,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 22058451,
+            "nn_purity": 0.5790656416321703,
+            "queries": 15219,
+            "same": 44064
+          },
+          "10000": {
+            "attributable_bp": 1598996,
+            "nn_purity": 0.2727272727272727,
+            "queries": 33,
+            "same": 45
+          },
+          "2500": {
+            "attributable_bp": 8232449,
+            "nn_purity": 0.8084656084656084,
+            "queries": 2268,
+            "same": 9168
+          },
+          "500": {
+            "attributable_bp": 13617821,
+            "nn_purity": 0.4473115362004251,
+            "queries": 22113,
+            "same": 49457
+          },
+          "768": {
+            "attributable_bp": 8622035,
+            "nn_purity": 0.49527662587235766,
+            "queries": 9887,
+            "same": 24484
+          }
+        },
+        "other": {
+          "1": {
+            "attributable_bp": 278,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 13948,
+            "nn_purity": 0.0,
+            "queries": 8,
+            "same": 0
+          },
+          "10000": {
+            "attributable_bp": 171492,
+            "nn_purity": 0.0,
+            "queries": 2,
+            "same": 0
+          },
+          "2500": {
+            "attributable_bp": 27707,
+            "nn_purity": 0.0,
+            "queries": 4,
+            "same": 0
+          },
+          "768": {
+            "attributable_bp": 824,
+            "nn_purity": 0.0,
+            "queries": 1,
+            "same": 0
+          }
+        },
+        "viral": {
+          "1": {
+            "attributable_bp": 184590,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 426664,
+            "nn_purity": 0.27714285714285714,
+            "queries": 280,
+            "same": 388
+          },
+          "10000": {
+            "attributable_bp": 1920492,
+            "nn_purity": 0.32,
+            "queries": 45,
+            "same": 72
+          },
+          "2500": {
+            "attributable_bp": 786264,
+            "nn_purity": 0.41123595505617977,
+            "queries": 178,
+            "same": 366
+          },
+          "500": {
+            "attributable_bp": 178915,
+            "nn_purity": 0.14878892733564014,
+            "queries": 289,
+            "same": 215
+          },
+          "768": {
+            "attributable_bp": 123135,
+            "nn_purity": 0.18857142857142858,
+            "queries": 140,
+            "same": 132
+          }
+        }
+      },
+      "neighbor_geometry": {
+        "attributable_eligible_queries": 76010,
+        "nn_purity": 0.5094619129061966,
+        "nn_purity_bp_weighted": 0.6540821129206459,
+        "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+      },
+      "recovery": {
+        "at_least_50_percent": 11,
+        "at_least_90_percent": 1,
+        "bp_weighted_R95": 0.045596927526425156,
+        "macro_R95": 0.05535197936062609,
+        "targets": 156,
+        "targets_with_any_passing_bin": 14
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.35729423250518305,
+        "precision": 0.4570007327720878,
+        "recall": 0.29330268475005206,
+        "scope": "bp-weighted attributable contigs only; noise/excluded zero, unknown bin DNA not in this restricted denominator"
+      },
+      "statuses": {
+        "assigned": {
+          "bp": 183977452,
+          "contigs": 78327
+        },
+        "excluded": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "bp": 25665251,
+          "contigs": 10714
+        }
+      }
+    },
+    "dev3-tnf-only-raw": {
+      "bins": 3213,
+      "geometry_by_lineage": {
+        "bacterial": {
+          "attributable_bp": 94606287,
+          "b3_precision": 0.4399983957715269,
+          "b3_precision_sum": 41626614.50990066,
+          "b3_recall": 0.17591106264746112,
+          "b3_recall_sum": 16642292.479300687,
+          "nn_purity": 0.43069334064127157,
+          "nn_purity_bp_weighted": 0.7176998785307485,
+          "queries": 25543,
+          "query_bp": 88261843,
+          "same": 55006,
+          "same_weighted_sum": 63345513.99999999
+        },
+        "eukaryotic": {
+          "attributable_bp": 67037217,
+          "b3_precision": 0.17016283984580036,
+          "b3_precision_sum": 11407243.220079165,
+          "b3_recall": 0.0026913574253739614,
+          "b3_recall_sum": 180421.11174935556,
+          "nn_purity": 0.453889337641357,
+          "nn_purity_bp_weighted": 0.5049486167976538,
+          "queries": 49520,
+          "query_bp": 54129752,
+          "same": 112383,
+          "same_weighted_sum": 27332743.400000036
+        },
+        "other": {
+          "attributable_bp": 214249,
+          "b3_precision": 0.31728067819010275,
+          "b3_precision_sum": 67977.06802155133,
+          "b3_recall": 0.7759150372011313,
+          "b3_recall_sum": 166239.0208053052,
+          "nn_purity": 0.0,
+          "nn_purity_bp_weighted": 0.0,
+          "queries": 15,
+          "query_bp": 213971,
+          "same": 0,
+          "same_weighted_sum": 0.0
+        },
+        "viral": {
+          "attributable_bp": 3620060,
+          "b3_precision": 0.31404021691914014,
+          "b3_precision_sum": 1136844.4276603025,
+          "b3_recall": 0.40137693243899,
+          "b3_recall_sum": 1453008.57804509,
+          "nn_purity": 0.2796137339055794,
+          "nn_purity_bp_weighted": 0.2889651779814699,
+          "queries": 932,
+          "query_bp": 3435470,
+          "same": 1303,
+          "same_weighted_sum": 992731.2000000005
+        }
+      },
+      "length_geometry_by_lineage": {
+        "bacterial": {
+          "1": {
+            "attributable_bp": 6344444,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 11286563,
+            "nn_purity": 0.4419736667109988,
+            "queries": 7519,
+            "same": 16616
+          },
+          "10000": {
+            "attributable_bp": 54376116,
+            "nn_purity": 0.8048309178743961,
+            "queries": 1242,
+            "same": 4998
+          },
+          "2500": {
+            "attributable_bp": 12922309,
+            "nn_purity": 0.624182776801406,
+            "queries": 2845,
+            "same": 8879
+          },
+          "500": {
+            "attributable_bp": 5937015,
+            "nn_purity": 0.3437894954936289,
+            "queries": 9653,
+            "same": 16593
+          },
+          "768": {
+            "attributable_bp": 3739840,
+            "nn_purity": 0.3697478991596639,
+            "queries": 4284,
+            "same": 7920
+          }
+        },
+        "eukaryotic": {
+          "1": {
+            "attributable_bp": 12907465,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 22058451,
+            "nn_purity": 0.5162494250607793,
+            "queries": 15219,
+            "same": 39284
+          },
+          "10000": {
+            "attributable_bp": 1598996,
+            "nn_purity": 0.23636363636363636,
+            "queries": 33,
+            "same": 39
+          },
+          "2500": {
+            "attributable_bp": 8232449,
+            "nn_purity": 0.7591710758377425,
+            "queries": 2268,
+            "same": 8609
+          },
+          "500": {
+            "attributable_bp": 13617821,
+            "nn_purity": 0.3881698548365215,
+            "queries": 22113,
+            "same": 42918
+          },
+          "768": {
+            "attributable_bp": 8622035,
+            "nn_purity": 0.43558207747547284,
+            "queries": 9887,
+            "same": 21533
+          }
+        },
+        "other": {
+          "1": {
+            "attributable_bp": 278,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 13948,
+            "nn_purity": 0.0,
+            "queries": 8,
+            "same": 0
+          },
+          "10000": {
+            "attributable_bp": 171492,
+            "nn_purity": 0.0,
+            "queries": 2,
+            "same": 0
+          },
+          "2500": {
+            "attributable_bp": 27707,
+            "nn_purity": 0.0,
+            "queries": 4,
+            "same": 0
+          },
+          "768": {
+            "attributable_bp": 824,
+            "nn_purity": 0.0,
+            "queries": 1,
+            "same": 0
+          }
+        },
+        "viral": {
+          "1": {
+            "attributable_bp": 184590,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 426664,
+            "nn_purity": 0.3242857142857143,
+            "queries": 280,
+            "same": 454
+          },
+          "10000": {
+            "attributable_bp": 1920492,
+            "nn_purity": 0.3333333333333333,
+            "queries": 45,
+            "same": 75
+          },
+          "2500": {
+            "attributable_bp": 786264,
+            "nn_purity": 0.449438202247191,
+            "queries": 178,
+            "same": 400
+          },
+          "500": {
+            "attributable_bp": 178915,
+            "nn_purity": 0.16608996539792387,
+            "queries": 289,
+            "same": 240
+          },
+          "768": {
+            "attributable_bp": 123135,
+            "nn_purity": 0.19142857142857142,
+            "queries": 140,
+            "same": 134
+          }
+        }
+      },
+      "neighbor_geometry": {
+        "attributable_eligible_queries": 76010,
+        "nn_purity": 0.44386791211682675,
+        "nn_purity_bp_weighted": 0.6277070548855873,
+        "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+      },
+      "recovery": {
+        "at_least_50_percent": 5,
+        "at_least_90_percent": 1,
+        "bp_weighted_R95": 0.039311745395018936,
+        "macro_R95": 0.04579362468813616,
+        "targets": 156,
+        "targets_with_any_passing_bin": 18
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.16633654901539088,
+        "precision": 0.3277700994613794,
+        "recall": 0.11144673026286868,
+        "scope": "bp-weighted attributable contigs only; noise/excluded zero, unknown bin DNA not in this restricted denominator"
+      },
+      "statuses": {
+        "assigned": {
+          "bp": 99909686,
+          "contigs": 25507
+        },
+        "excluded": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "bp": 109733017,
+          "contigs": 63534
+        }
+      }
+    },
+    "dev4-post": {
+      "AMBER": {
+        "bp_weighted_assigned_purity": 0.8688545305869453,
+        "full_R95_matches_separate_review": true,
+        "macro_bin_purity": 0.7595082635577285,
+        "view": {
+          "claim_limit": "restricted alignment-supported contig population; not whole-reference recovery",
+          "native_api_executed": true,
+          "predicted_contigs": 68613,
+          "scorable_bp": 165477813,
+          "scorable_contigs": 125848,
+          "unscored_contigs": 19854
+        }
+      },
+      "bins": 73,
+      "geometry_by_lineage": {
+        "bacterial": {
+          "attributable_bp": 94606287,
+          "b3_precision": 0.635010484489904,
+          "b3_precision_sum": 60075984.14366091,
+          "b3_recall": 0.4951765023256142,
+          "b3_recall_sum": 46846810.29467323,
+          "nn_purity": 0.7258818462983988,
+          "nn_purity_bp_weighted": 0.7873362762207466,
+          "queries": 25543,
+          "query_bp": 88261843,
+          "same": 92706,
+          "same_weighted_sum": 69491750.80000018
+        },
+        "eukaryotic": {
+          "attributable_bp": 67037217,
+          "b3_precision": 0.6624663017029174,
+          "b3_precision_sum": 44409897.22244594,
+          "b3_recall": 0.22012627853043643,
+          "b3_recall_sum": 14756653.101247307,
+          "nn_purity": 0.9674555735056543,
+          "nn_purity_bp_weighted": 0.9436008574360351,
+          "queries": 49520,
+          "query_bp": 54129752,
+          "same": 239542,
+          "same_weighted_sum": 51076880.39999993
+        },
+        "other": {
+          "attributable_bp": 214249,
+          "b3_precision": 0.05957909359843842,
+          "b3_precision_sum": 12764.761224371834,
+          "b3_recall": 0.9336718423965655,
+          "b3_recall_sum": 200038.25856162177,
+          "nn_purity": 0.04,
+          "nn_purity_bp_weighted": 0.07735534254641983,
+          "queries": 15,
+          "query_bp": 213971,
+          "same": 3,
+          "same_weighted_sum": 16551.8
+        },
+        "viral": {
+          "attributable_bp": 3620060,
+          "b3_precision": 0.12340617559058091,
+          "b3_precision_sum": 446737.7600084383,
+          "b3_recall": 0.5910957584306533,
+          "b3_recall_sum": 2139802.111264471,
+          "nn_purity": 0.6152360515021459,
+          "nn_purity_bp_weighted": 0.4853256177466258,
+          "queries": 932,
+          "query_bp": 3435470,
+          "same": 2867,
+          "same_weighted_sum": 1667321.6000000006
+        }
+      },
+      "length_accounting": [
+        {
+          "bp": 22035454,
+          "contigs": 56661,
+          "lower_bp": 1,
+          "reasons": {
+            "below_min_length": 56661
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 22035454,
+              "contigs": 56661
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 500
+        },
+        {
+          "bp": 22098500,
+          "contigs": 35898,
+          "lower_bp": 500,
+          "reasons": {
+            "refinement_ambiguous_affinity": 2564
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 20503132,
+              "contigs": 33334
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 1595368,
+              "contigs": 2564
+            }
+          },
+          "upper_bp": 768
+        },
+        {
+          "bp": 13986706,
+          "contigs": 16024,
+          "lower_bp": 768,
+          "reasons": {
+            "refinement_ambiguous_affinity": 1434
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 12730572,
+              "contigs": 14590
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 1256134,
+              "contigs": 1434
+            }
+          },
+          "upper_bp": 1000
+        },
+        {
+          "bp": 40505273,
+          "contigs": 27307,
+          "lower_bp": 1000,
+          "reasons": {
+            "refinement_ambiguous_affinity": 3448
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 35181230,
+              "contigs": 23859
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 5324043,
+              "contigs": 3448
+            }
+          },
+          "upper_bp": 2500
+        },
+        {
+          "bp": 32866110,
+          "contigs": 7728,
+          "lower_bp": 2500,
+          "reasons": {
+            "refinement_ambiguous_affinity": 1240
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 27733321,
+              "contigs": 6488
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 5132789,
+              "contigs": 1240
+            }
+          },
+          "upper_bp": 10000
+        },
+        {
+          "bp": 100186114,
+          "contigs": 2084,
+          "lower_bp": 10000,
+          "reasons": {
+            "refinement_ambiguous_affinity": 169
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 92995434,
+              "contigs": 1915
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 7190680,
+              "contigs": 169
+            }
+          },
+          "upper_bp": null
+        }
+      ],
+      "length_geometry_by_lineage": {
+        "bacterial": {
+          "1": {
+            "attributable_bp": 6344444,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 11286563,
+            "nn_purity": 0.7300704880968214,
+            "queries": 7519,
+            "same": 27447
+          },
+          "10000": {
+            "attributable_bp": 54376116,
+            "nn_purity": 0.7940418679549114,
+            "queries": 1242,
+            "same": 4931
+          },
+          "2500": {
+            "attributable_bp": 12922309,
+            "nn_purity": 0.7197891036906854,
+            "queries": 2845,
+            "same": 10239
+          },
+          "500": {
+            "attributable_bp": 5937015,
+            "nn_purity": 0.7164612037708484,
+            "queries": 9653,
+            "same": 34580
+          },
+          "768": {
+            "attributable_bp": 3739840,
+            "nn_purity": 0.7240429505135387,
+            "queries": 4284,
+            "same": 15509
+          }
+        },
+        "eukaryotic": {
+          "1": {
+            "attributable_bp": 12907465,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 22058451,
+            "nn_purity": 0.9685393258426966,
+            "queries": 15219,
+            "same": 73701
+          },
+          "10000": {
+            "attributable_bp": 1598996,
+            "nn_purity": 0.47878787878787876,
+            "queries": 33,
+            "same": 79
+          },
+          "2500": {
+            "attributable_bp": 8232449,
+            "nn_purity": 0.9598765432098766,
+            "queries": 2268,
+            "same": 10885
+          },
+          "500": {
+            "attributable_bp": 13617821,
+            "nn_purity": 0.9672862117306562,
+            "queries": 22113,
+            "same": 106948
+          },
+          "768": {
+            "attributable_bp": 8622035,
+            "nn_purity": 0.9695357540204309,
+            "queries": 9887,
+            "same": 47929
+          }
+        },
+        "other": {
+          "1": {
+            "attributable_bp": 278,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 13948,
+            "nn_purity": 0.05,
+            "queries": 8,
+            "same": 2
+          },
+          "10000": {
+            "attributable_bp": 171492,
+            "nn_purity": 0.1,
+            "queries": 2,
+            "same": 1
+          },
+          "2500": {
+            "attributable_bp": 27707,
+            "nn_purity": 0.0,
+            "queries": 4,
+            "same": 0
+          },
+          "768": {
+            "attributable_bp": 824,
+            "nn_purity": 0.0,
+            "queries": 1,
+            "same": 0
+          }
+        },
+        "viral": {
+          "1": {
+            "attributable_bp": 184590,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 426664,
+            "nn_purity": 0.6071428571428571,
+            "queries": 280,
+            "same": 850
+          },
+          "10000": {
+            "attributable_bp": 1920492,
+            "nn_purity": 0.5288888888888889,
+            "queries": 45,
+            "same": 119
+          },
+          "2500": {
+            "attributable_bp": 786264,
+            "nn_purity": 0.751685393258427,
+            "queries": 178,
+            "same": 669
+          },
+          "500": {
+            "attributable_bp": 178915,
+            "nn_purity": 0.5522491349480969,
+            "queries": 289,
+            "same": 798
+          },
+          "768": {
+            "attributable_bp": 123135,
+            "nn_purity": 0.6157142857142858,
+            "queries": 140,
+            "same": 431
+          }
+        }
+      },
+      "neighbor_geometry": {
+        "attributable_eligible_queries": 76010,
+        "nn_purity": 0.8817734508617288,
+        "nn_purity_bp_weighted": 0.8371106364926092,
+        "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+      },
+      "origin_by_status": {
+        "assigned": {
+          "all_bp": 189143689.0,
+          "ambiguous_query_bp": 38327328.0,
+          "bacterial_confirmed_bp": 88526218.0,
+          "eukaryotic_confirmed_bp": 49388118.0,
+          "nn_quarantined_query_bp": 7342126.0,
+          "other_confirmed_bp": 253507.0,
+          "unsupported_query_bp": 2559595.0,
+          "viral_confirmed_bp": 2746797.0
+        },
+        "excluded": {
+          "all_bp": 22035454.0,
+          "ambiguous_query_bp": 1476971.0,
+          "bacterial_confirmed_bp": 6490495.0,
+          "eukaryotic_confirmed_bp": 13281397.0,
+          "nn_quarantined_query_bp": 4987.0,
+          "other_confirmed_bp": 418.0,
+          "unsupported_query_bp": 585103.0,
+          "viral_confirmed_bp": 196083.0
+        },
+        "unassigned": {
+          "all_bp": 20499014.0,
+          "ambiguous_query_bp": 2598332.0,
+          "bacterial_confirmed_bp": 8485927.0,
+          "eukaryotic_confirmed_bp": 7585220.0,
+          "nn_quarantined_query_bp": 306092.0,
+          "other_confirmed_bp": 34514.0,
+          "unsupported_query_bp": 341739.0,
+          "viral_confirmed_bp": 1147190.0
+        }
+      },
+      "recovery": {
+        "at_least_50_percent": 6,
+        "at_least_90_percent": 2,
+        "bp_weighted_R95": 0.042909427218805314,
+        "macro_R95": 0.04278732611448995,
+        "targets": 156,
+        "targets_with_any_passing_bin": 11
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.48022865862739733,
+        "precision": 0.6341961014878791,
+        "recall": 0.38641617632296454,
+        "scope": "bp-weighted attributable contigs only; noise/excluded zero, unknown bin DNA not in this restricted denominator"
+      },
+      "statuses": {
+        "assigned": {
+          "bp": 189143689,
+          "contigs": 80186
+        },
+        "excluded": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "bp": 20499014,
+          "contigs": 8855
+        }
+      }
+    },
+    "dev4-pre": {
+      "AMBER": {
+        "bp_weighted_assigned_purity": 0.695533952525508,
+        "full_R95_matches_separate_review": true,
+        "macro_bin_purity": 0.7676827845458006,
+        "view": {
+          "claim_limit": "restricted alignment-supported contig population; not whole-reference recovery",
+          "native_api_executed": true,
+          "predicted_contigs": 76010,
+          "scorable_bp": 165477813,
+          "scorable_contigs": 125848,
+          "unscored_contigs": 19854
+        }
+      },
+      "bins": 35,
+      "geometry_by_lineage": {
+        "bacterial": {
+          "attributable_bp": 94606287,
+          "b3_precision": 0.4141107545716756,
+          "b3_precision_sum": 39177480.896794505,
+          "b3_recall": 0.7091513126610967,
+          "b3_recall_sum": 67090172.61204244,
+          "nn_purity": 0.7258818462983988,
+          "nn_purity_bp_weighted": 0.7873362762207466,
+          "queries": 25543,
+          "query_bp": 88261843,
+          "same": 92706,
+          "same_weighted_sum": 69491750.80000018
+        },
+        "eukaryotic": {
+          "attributable_bp": 67037217,
+          "b3_precision": 0.7562108484940663,
+          "b3_precision_sum": 50694270.74825084,
+          "b3_recall": 0.4585502652368376,
+          "b3_recall_sum": 30739933.63608944,
+          "nn_purity": 0.9674555735056543,
+          "nn_purity_bp_weighted": 0.9436008574360351,
+          "queries": 49520,
+          "query_bp": 54129752,
+          "same": 239542,
+          "same_weighted_sum": 51076880.39999993
+        },
+        "other": {
+          "attributable_bp": 214249,
+          "b3_precision": 0.004159985419680183,
+          "b3_precision_sum": 891.2727161810595,
+          "b3_recall": 0.9880347534101411,
+          "b3_recall_sum": 211685.45788336932,
+          "nn_purity": 0.04,
+          "nn_purity_bp_weighted": 0.07735534254641983,
+          "queries": 15,
+          "query_bp": 213971,
+          "same": 3,
+          "same_weighted_sum": 16551.8
+        },
+        "viral": {
+          "attributable_bp": 3620060,
+          "b3_precision": 0.08849615895621343,
+          "b3_precision_sum": 320361.40519103,
+          "b3_recall": 0.8579308216055151,
+          "b3_recall_sum": 3105761.0500612613,
+          "nn_purity": 0.6152360515021459,
+          "nn_purity_bp_weighted": 0.4853256177466258,
+          "queries": 932,
+          "query_bp": 3435470,
+          "same": 2867,
+          "same_weighted_sum": 1667321.6000000006
+        }
+      },
+      "length_accounting": [
+        {
+          "bp": 22035454,
+          "contigs": 56661,
+          "lower_bp": 1,
+          "reasons": {
+            "below_min_length": 56661
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 22035454,
+              "contigs": 56661
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 500
+        },
+        {
+          "bp": 22098500,
+          "contigs": 35898,
+          "lower_bp": 500,
+          "reasons": {},
+          "statuses": {
+            "assigned": {
+              "bp": 22098500,
+              "contigs": 35898
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 768
+        },
+        {
+          "bp": 13986706,
+          "contigs": 16024,
+          "lower_bp": 768,
+          "reasons": {},
+          "statuses": {
+            "assigned": {
+              "bp": 13986706,
+              "contigs": 16024
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 1000
+        },
+        {
+          "bp": 40505273,
+          "contigs": 27307,
+          "lower_bp": 1000,
+          "reasons": {},
+          "statuses": {
+            "assigned": {
+              "bp": 40505273,
+              "contigs": 27307
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 2500
+        },
+        {
+          "bp": 32866110,
+          "contigs": 7728,
+          "lower_bp": 2500,
+          "reasons": {},
+          "statuses": {
+            "assigned": {
+              "bp": 32866110,
+              "contigs": 7728
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 10000
+        },
+        {
+          "bp": 100186114,
+          "contigs": 2084,
+          "lower_bp": 10000,
+          "reasons": {},
+          "statuses": {
+            "assigned": {
+              "bp": 100186114,
+              "contigs": 2084
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": null
+        }
+      ],
+      "length_geometry_by_lineage": {
+        "bacterial": {
+          "1": {
+            "attributable_bp": 6344444,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 11286563,
+            "nn_purity": 0.7300704880968214,
+            "queries": 7519,
+            "same": 27447
+          },
+          "10000": {
+            "attributable_bp": 54376116,
+            "nn_purity": 0.7940418679549114,
+            "queries": 1242,
+            "same": 4931
+          },
+          "2500": {
+            "attributable_bp": 12922309,
+            "nn_purity": 0.7197891036906854,
+            "queries": 2845,
+            "same": 10239
+          },
+          "500": {
+            "attributable_bp": 5937015,
+            "nn_purity": 0.7164612037708484,
+            "queries": 9653,
+            "same": 34580
+          },
+          "768": {
+            "attributable_bp": 3739840,
+            "nn_purity": 0.7240429505135387,
+            "queries": 4284,
+            "same": 15509
+          }
+        },
+        "eukaryotic": {
+          "1": {
+            "attributable_bp": 12907465,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 22058451,
+            "nn_purity": 0.9685393258426966,
+            "queries": 15219,
+            "same": 73701
+          },
+          "10000": {
+            "attributable_bp": 1598996,
+            "nn_purity": 0.47878787878787876,
+            "queries": 33,
+            "same": 79
+          },
+          "2500": {
+            "attributable_bp": 8232449,
+            "nn_purity": 0.9598765432098766,
+            "queries": 2268,
+            "same": 10885
+          },
+          "500": {
+            "attributable_bp": 13617821,
+            "nn_purity": 0.9672862117306562,
+            "queries": 22113,
+            "same": 106948
+          },
+          "768": {
+            "attributable_bp": 8622035,
+            "nn_purity": 0.9695357540204309,
+            "queries": 9887,
+            "same": 47929
+          }
+        },
+        "other": {
+          "1": {
+            "attributable_bp": 278,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 13948,
+            "nn_purity": 0.05,
+            "queries": 8,
+            "same": 2
+          },
+          "10000": {
+            "attributable_bp": 171492,
+            "nn_purity": 0.1,
+            "queries": 2,
+            "same": 1
+          },
+          "2500": {
+            "attributable_bp": 27707,
+            "nn_purity": 0.0,
+            "queries": 4,
+            "same": 0
+          },
+          "768": {
+            "attributable_bp": 824,
+            "nn_purity": 0.0,
+            "queries": 1,
+            "same": 0
+          }
+        },
+        "viral": {
+          "1": {
+            "attributable_bp": 184590,
+            "nn_purity": null
+          },
+          "1000": {
+            "attributable_bp": 426664,
+            "nn_purity": 0.6071428571428571,
+            "queries": 280,
+            "same": 850
+          },
+          "10000": {
+            "attributable_bp": 1920492,
+            "nn_purity": 0.5288888888888889,
+            "queries": 45,
+            "same": 119
+          },
+          "2500": {
+            "attributable_bp": 786264,
+            "nn_purity": 0.751685393258427,
+            "queries": 178,
+            "same": 669
+          },
+          "500": {
+            "attributable_bp": 178915,
+            "nn_purity": 0.5522491349480969,
+            "queries": 289,
+            "same": 798
+          },
+          "768": {
+            "attributable_bp": 123135,
+            "nn_purity": 0.6157142857142858,
+            "queries": 140,
+            "same": 431
+          }
+        }
+      },
+      "neighbor_geometry": {
+        "attributable_eligible_queries": 76010,
+        "nn_purity": 0.8817734508617288,
+        "nn_purity_bp_weighted": 0.8371106364926092,
+        "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+      },
+      "origin_by_status": {
+        "assigned": {
+          "all_bp": 209642703.0,
+          "ambiguous_query_bp": 40925660.0,
+          "bacterial_confirmed_bp": 97012145.0,
+          "eukaryotic_confirmed_bp": 56973338.0,
+          "nn_quarantined_query_bp": 7648218.0,
+          "other_confirmed_bp": 288021.0,
+          "unsupported_query_bp": 2901334.0,
+          "viral_confirmed_bp": 3893987.0
+        },
+        "excluded": {
+          "all_bp": 22035454.0,
+          "ambiguous_query_bp": 1476971.0,
+          "bacterial_confirmed_bp": 6490495.0,
+          "eukaryotic_confirmed_bp": 13281397.0,
+          "nn_quarantined_query_bp": 4987.0,
+          "other_confirmed_bp": 418.0,
+          "unsupported_query_bp": 585103.0,
+          "viral_confirmed_bp": 196083.0
+        }
+      },
+      "recovery": {
+        "at_least_50_percent": 3,
+        "at_least_90_percent": 1,
+        "bp_weighted_R95": 0.018762951245848168,
+        "macro_R95": 0.021214309661029714,
+        "targets": 156,
+        "targets_with_any_passing_bin": 5
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.5762506418838529,
+        "precision": 0.5450459048727719,
+        "recall": 0.6112454045792629,
+        "scope": "bp-weighted attributable contigs only; noise/excluded zero, unknown bin DNA not in this restricted denominator"
+      },
+      "statuses": {
+        "assigned": {
+          "bp": 209642703,
+          "contigs": 89041
+        },
+        "excluded": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "bp": 0,
+          "contigs": 0
+        }
+      }
+    }
+  },
+  "bin_diagnostics": {
+    "post": {
+      "large_bacterial_dominant_below_95pct": 45,
+      "large_bacterial_dominant_bins": 57,
+      "large_bins_at_least_200kb": 70,
+      "large_bins_below_95pct_purity": 52,
+      "largest_bacterial_dominant_bins": [
+        {
+          "bin_id": "bin_000059",
+          "bp": 4649582,
+          "confirmed_purity": 0.9854182591037216,
+          "dominant_confirmed_bp": 4581783,
+          "dominant_genome": "ASV150.14",
+          "dominant_lineage": "bacterial",
+          "supported_genomes": 7,
+          "unconfirmed_bp": 16724
+        },
+        {
+          "bin_id": "bin_000034",
+          "bp": 4133943,
+          "confirmed_purity": 0.7917182215623195,
+          "dominant_confirmed_bp": 3272918,
+          "dominant_genome": "ASV487.10",
+          "dominant_lineage": "bacterial",
+          "supported_genomes": 26,
+          "unconfirmed_bp": 511148
+        },
+        {
+          "bin_id": "bin_000020",
+          "bp": 3928052,
+          "confirmed_purity": 0.7682767437905608,
+          "dominant_confirmed_bp": 3017831,
+          "dominant_genome": "ASV714.0",
+          "dominant_lineage": "bacterial",
+          "supported_genomes": 41,
+          "unconfirmed_bp": 225220
+        }
+      ],
+      "largest_bins": [
+        {
+          "bin_id": "bin_000001",
+          "bp": 28828975,
+          "confirmed_purity": 0.12062270684268171,
+          "dominant_confirmed_bp": 3477429,
+          "dominant_genome": "fASV196.1",
+          "dominant_lineage": "eukaryotic",
+          "supported_genomes": 24,
+          "unconfirmed_bp": 24835942
+        },
+        {
+          "bin_id": "bin_000007",
+          "bp": 8200520,
+          "confirmed_purity": 0.9124100666786984,
+          "dominant_confirmed_bp": 7482237,
+          "dominant_genome": "fASV201.3",
+          "dominant_lineage": "eukaryotic",
+          "supported_genomes": 43,
+          "unconfirmed_bp": 354622
+        },
+        {
+          "bin_id": "bin_000009",
+          "bp": 7315746,
+          "confirmed_purity": 0.9790081558326382,
+          "dominant_confirmed_bp": 7162175,
+          "dominant_genome": "fASV1.1",
+          "dominant_lineage": "eukaryotic",
+          "supported_genomes": 16,
+          "unconfirmed_bp": 81828
+        }
+      ],
+      "targets_best_source_bin_below_95pct": 88
+    },
+    "pre": {
+      "large_bacterial_dominant_below_95pct": 20,
+      "large_bacterial_dominant_bins": 25,
+      "large_bins_at_least_200kb": 34,
+      "large_bins_below_95pct_purity": 25,
+      "largest_bacterial_dominant_bins": [
+        {
+          "bin_id": "bin_000021",
+          "bp": 35103103,
+          "confirmed_purity": 0.17179267599220502,
+          "dominant_confirmed_bp": 6030456,
+          "dominant_genome": "ASV150.14",
+          "dominant_lineage": "bacterial",
+          "supported_genomes": 107,
+          "unconfirmed_bp": 5679983
+        },
+        {
+          "bin_id": "bin_000022",
+          "bp": 16983908,
+          "confirmed_purity": 0.19675200784177588,
+          "dominant_confirmed_bp": 3341618,
+          "dominant_genome": "ASV300.8",
+          "dominant_lineage": "bacterial",
+          "supported_genomes": 53,
+          "unconfirmed_bp": 1170360
+        },
+        {
+          "bin_id": "bin_000015",
+          "bp": 6910628,
+          "confirmed_purity": 0.3918798696732048,
+          "dominant_confirmed_bp": 2708136,
+          "dominant_genome": "ASV484.0",
+          "dominant_lineage": "bacterial",
+          "supported_genomes": 50,
+          "unconfirmed_bp": 2295335
+        }
+      ],
+      "largest_bins": [
+        {
+          "bin_id": "bin_000021",
+          "bp": 35103103,
+          "confirmed_purity": 0.17179267599220502,
+          "dominant_confirmed_bp": 6030456,
+          "dominant_genome": "ASV150.14",
+          "dominant_lineage": "bacterial",
+          "supported_genomes": 107,
+          "unconfirmed_bp": 5679983
+        },
+        {
+          "bin_id": "bin_000001",
+          "bp": 28828975,
+          "confirmed_purity": 0.12062270684268171,
+          "dominant_confirmed_bp": 3477429,
+          "dominant_genome": "fASV196.1",
+          "dominant_lineage": "eukaryotic",
+          "supported_genomes": 24,
+          "unconfirmed_bp": 24835942
+        },
+        {
+          "bin_id": "bin_000022",
+          "bp": 16983908,
+          "confirmed_purity": 0.19675200784177588,
+          "dominant_confirmed_bp": 3341618,
+          "dominant_genome": "ASV300.8",
+          "dominant_lineage": "bacterial",
+          "supported_genomes": 53,
+          "unconfirmed_bp": 1170360
+        }
+      ],
+      "targets_best_source_bin_below_95pct": 98
+    }
+  },
+  "branch": "dev4-coherent-prototype",
+  "checks": {
+    "checked_utc": "2026-10-16T22:41:35.779426+00:00",
+    "docs": {
+      "command": "python3 scripts/check_docs.py --check-context",
+      "local_links": 882,
+      "log": {
+        "bytes": 727,
+        "sha256": "76a49f76a84c510b38031735efc1d208c36fb6b66ceded48455499da014babeb"
+      },
+      "maintained_documents": 62,
+      "optional_local_source_cache_files_not_verified": 10,
+      "present_source_fingerprints": 85,
+      "result": "PASS"
+    },
+    "existing_geometry_contracts": {
+      "log": {
+        "bytes": 379,
+        "sha256": "67e6fe7f5d1b06ba164a0f46d64d9150fad2faf66069257ecdd40deb98076e3f"
+      },
+      "result": "PASS",
+      "tests": 2
+    },
+    "existing_truth_evaluator_contracts": {
+      "log": {
+        "bytes": 339,
+        "sha256": "d9bef4007b9a178bf5b937781cfe2a370e87ded77b1aa4dccb43d8d498b00fdf"
+      },
+      "result": "PASS",
+      "tests": 2
+    },
+    "final_stricter_refinement_axis_guard": "PASS on actual full pre/post partition; no training/regrouping or repeated diagnostic scoring",
+    "git_diff_whitespace": "PASS",
+    "immutable_tracked_science_sources_locks_and_E009_records": "PASS; unchanged from entry commit 11d786a",
+    "new_review_contracts": {
+      "log": {
+        "bytes": 702,
+        "sha256": "a9a057ed7a007b51084be9e5646ecd1e6459722465ce313d9a42adb7ee52e67a"
+      },
+      "result": "PASS",
+      "tests": 5
+    },
+    "source_bindings": {
+      "experiments/E010-coherent-prototype/review_diagnostics.py": {
+        "bytes": 5994,
+        "sha256": "8af42a3b70f713aa08fdf7d22bd1e060c8146f516344b232ae1058fe9d89c8af"
+      },
+      "scripts/e010_review.py": {
+        "bytes": 20161,
+        "sha256": "aa0455cd7d1d1f679e4f483586094a8d170bdc93d512fac0749442be9128522a"
+      },
+      "tests/test_e010_review.py": {
+        "bytes": 5308,
+        "sha256": "ad8fd195d73664f3fe075ef43986261ae108f4f6549e96e3742b59e0ed71ccf6"
+      }
+    },
+    "syntax": "PASS; compiled in memory, no bytecode writes"
+  },
+  "compact_review_evidence": {
+    "actual_readback_bytes": 2275397,
+    "all_140_member_bytes_independently_verified": true,
+    "archive": {
+      "bytes": 2275305,
+      "sha256": "bf04bb1a3bb945b8ed28493d85f5dad06f2d6d8f73eab0d5ada3aa48e7e79c63"
+    },
+    "checked_utc": "2026-10-16T22:42:35.282212+00:00",
+    "conservative_phase_total_including_reserve_USD": 0.1845781535887073,
+    "every_member_verified": true,
+    "inventory_binding": {
+      "bytes": 22265,
+      "sha256": "78dbb416321a6c7ef129516e39339c35c34eb2e1309405a303819381a34cd011"
+    },
+    "logical_member_bytes": 11348764,
+    "new_budget_or_retention_extension": false,
+    "no_VM_wake": true,
+    "objects": {
+      "review-evidence-v1.tar.gz": {
+        "bytes": 2275305,
+        "cloud_readback_verified": true,
+        "generation": "1792190552954256",
+        "sha256": "bf04bb1a3bb945b8ed28493d85f5dad06f2d6d8f73eab0d5ada3aa48e7e79c63",
+        "uri": "gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/review-20261017/review-evidence-v1.tar.gz"
+      },
+      "review-evidence-v1.tar.gz.sha256": {
+        "bytes": 92,
+        "cloud_readback_verified": true,
+        "generation": "1792190554998210",
+        "sha256": "c781db3bf9f9ab9bb6de1c9427c0230457df932d522aaf1c39255538c75b3eea",
+        "uri": "gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/review-20261017/review-evidence-v1.tar.gz.sha256"
+      }
+    },
+    "readback_gross_USD_upper": 0.00025429543107748033,
+    "regular_members": 140,
+    "snapshot_scope": "Included canonical review snapshot predates this archive-locator field; no self-referential hash. Native bulk stays at separately verified original locators. Final upload verification is recorded here."
+  },
+  "completion": {
+    "candidate_archive": {
+      "bytes": 335636093,
+      "readback_verified": true,
+      "sha256": "3ec883477ce6c9e070632200508be8b707e84a11938f51e6221089eb94d165a3",
+      "uri": "gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/candidate-run-evidence.tar.gz"
+    },
+    "candidate_checksum": {
+      "bytes": 96,
+      "readback_verified": true,
+      "sha256": "9f30a05feef24793f34aec2ee50c4a7549319242f3dcf12215263b303a5c9d47",
+      "uri": "gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/candidate-run-evidence.tar.gz.sha256"
+    },
+    "closure_archive": {
+      "bytes": 99386,
+      "readback_verified": true,
+      "sha256": "67e39a5de563344a39974064f54e4863fa130f0085649a8d4f1dfd50aa027cf6",
+      "uri": "gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/closure.tar.gz"
+    },
+    "cloud_collection_verified": true,
+    "elapsed_since_VM_start_seconds": 1072.8212311267853,
+    "fit_completed": true,
+    "launcher_result": {
+      "bytes": 57053,
+      "sha256": "05cd5cf86ff800bceffc7f2badc34de981c4415d8fd72b8d25f1269ea8887d2c"
+    },
+    "launcher_status": {
+      "collection": {
+        "archive": {
+          "bytes": 335636093,
+          "sha256": "3ec883477ce6c9e070632200508be8b707e84a11938f51e6221089eb94d165a3"
+        },
+        "inventory": {
+          "bytes": 145891,
+          "sha256": "fee4157ca1b47f05573e5c5d6748674fb0c6f48e72a0a94f254ef79fd5d1383a"
+        },
+        "logical_member_bytes": 763504773,
+        "members": 692,
+        "path": "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run-evidence.tar.gz"
+      },
+      "fit_completed": true,
+      "status": "SUCCESS",
+      "wall_seconds": 858.977722455
+    },
+    "phase_id": "candidate-20261016T212549Z-6917c3f",
+    "source_commit": "6917c3f027bb975db43e771e979fecda0ab6c415",
+    "status": "SUCCESS"
+  },
+  "cost": {
+    "VM_compute_IP_USD": 0.09883608789399444,
+    "VM_compute_IP_rate_USD_per_hour": 0.2730456762591022,
+    "VM_disk_interval_USD": 0.015470771689497717,
+    "actual_export_including_review_bytes": 338012792,
+    "checked_utc": "2026-10-16T22:12:49.378863+00:00",
+    "conservative_total_USD": 0.1845781535887073,
+    "credit_coverage": "ordinary E2/PD/non-premium Ubuntu/IP/Standard Storage plus requests and internet transfer remain eligible; no new products",
+    "credit_expiry": "2027-01-12",
+    "credit_gate_passed": true,
+    "credit_original_DKK": 1973.43,
+    "credit_remaining_DKK": 1933.15,
+    "credit_scope": "Certain usage; see Free Trial terms; Net pricing",
+    "credit_status": "Available",
+    "existing_storage_reserve_USD": 5,
+    "measured_VM_seconds": 1303.115,
+    "measured_uptime_and_export_priced_subtotal_before_small_storage_operations_USD": 0.1545781535887073,
+    "new_bucket_storage_and_operations_reserve_USD": 0.03,
+    "old_budget_USD": 2,
+    "paid_account": true,
+    "pending_usage": "unknown/delayed; not zero; same displayed value as launch",
+    "prior_asset_readback_USD_upper": 0.0024954207614064213,
+    "prior_usage_reserve_USD": 30,
+    "proposed_export_USD_upper": 0.037521577812731265,
+    "proposed_export_bytes": 335737395,
+    "record_scope": "Gross current-list-rate estimates from actual allocated VM uptime and transferred bytes; not a reconciled invoice, sampled CPU cost or credit-display subtraction. The retained gate itself is immutable.",
+    "reported_cost_DKK": 38.35,
+    "reported_net_DKK": 0,
+    "reported_savings_DKK": 38.35,
+    "retention_extended": false,
+    "retention_review": "2026-10-21",
+    "review_evidence_readback_USD_upper": 0.00025429543107748033
+  },
+  "executed_review_versions": {
+    "final_reader_change_after_full_review": "Only added explicit length/type/range refusal in refinement_membership; five current tests plus actual full pre/post axis/membership check pass. No repeated evaluation/refit was needed. Current analysis_code binding differs from v3 by that guard.",
+    "full_retained_review_v3": {
+      "binding": {
+        "bytes": 19849,
+        "sha256": "bf016d490299f573fc099fb155681f5266e3f9c2dc18a7a53e8978ae4a5664ad"
+      },
+      "pre_execution_source_receipt": {
+        "bytes": 3606,
+        "sha256": "b7ce08cd7f305434d54b3370cfba52b4e4aea64b9a9844ba2d9d568eb7aade02"
+      },
+      "source_snapshot": "e010_review-v3-executed.py",
+      "status": "PASS under explicit original-native-artifact scope; portability remains false"
+    }
+  },
+  "failed_local_reviews": [
+    {
+      "executed_source": {
+        "bytes": 17822,
+        "sha256": "ed454d8417b011740139586cd9e31972900c7d713ff7d79d2a66d38ba566a505"
+      },
+      "name": "v1",
+      "reason": "Mac cross-platform allclose exceeded unchanged rtol1e-5/atol2e-6 at four coordinates; masks equal, max absolute difference3.1348e-6. Native pre-save/reload remains exact.",
+      "receipt": {
+        "bytes": 1509,
+        "sha256": "1bddfa0c1eaa574c92c2dd6e72c5e232f53b67c9ac6dfd436490e12d6d863818"
+      }
+    },
+    {
+      "executed_source": {
+        "bytes": 19004,
+        "sha256": "3c73b6c73812ed35b50fc874897b69cb87d0efc6337020daeeaa10fcdebcaaa8"
+      },
+      "name": "v2",
+      "reason": "New reviewer incorrectly assumed ascending numeric edge endpoints; pinned writer orders opaque IDs then maps to original FASTA rows. Reader corrected and real unsorted-ID/refusal contract added; no native file changed.",
+      "receipt": {
+        "bytes": 1547,
+        "sha256": "88242ac326cbe21b354c52e3321b362740c3950a6dd42bab5d08a908422078f2"
+      }
+    }
+  ],
+  "immutable_dev3_source": "5e54538d1799e8d2538621729400f33fbaf017b9",
+  "interpretation": {
+    "bundle": "Weighted R95 post4.2909% vs dev3 learned ten-depth5.3911%; six vs thirteen >=50%-recovered targets. Do not promote the whole bundle as improved.",
+    "geometry": "Bacterial neighbor agreement67.05->72.59%, but bp-weighted79.62->78.73% and >=10kb81.79->79.40%; short gains, long limitation. Same query populations; overall88.18% is not a primary-target substitute.",
+    "grouping": "35 pre-bins include a35.103Mb bacterial-dominant bin with107 supported genomes and17.18% dominant support.45/57 large bacterial-dominant post-bins remain below95%; coarse grouping is a justified hypothesis, not proven sole cause.",
+    "refinement": "Pre1.8763->post4.2909% weighted R95: useful paired gain but20.499Mb newly unassigned, including8.486Mb confirmed bacterial support; one previously recovered source loses1.288Mb."
+  },
+  "limits": [
+    "One read-derived development assembly and one seed; no SOTA/generalization or product feature-family conclusion",
+    "Integrated bundle changes several components; only the paired fixed-encoder refinement operation is isolated here",
+    "3.3034% N quarantine, low18.5321% source availability and full provided-reference denominators remain",
+    "Marker-negative/short/unknown/non-target DNA preserved; marker presence is not taxonomy/genome identity",
+    "Strict Mac portability comparison is unresolved; no tolerance relaxation or replacement of native embeddings",
+    "No VM wake, resource/retention change, new fit, alignment, external binner or confirmation run during review"
+  ],
+  "local_resources": {
+    "in_process_review": {
+      "peak_own_RSS_native_units": 1670504448,
+      "platform": "darwin",
+      "process_CPU_seconds": 54.540217,
+      "scope": "read-only validation, reload inference and diagnostics; no fitting/marker detection/grouping",
+      "threads": 4,
+      "wall_seconds": 55.244042053003795
+    },
+    "native_AMBER": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-amber-local/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/review-20261017/amber-two.py"
+      ],
+      "exit_code": 0,
+      "launched_pid": 71883,
+      "peak_sampled_rss_bytes": 553947136,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.8493689208851604,
+      "sampled_cpu_seconds": 40.69,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 900,
+      "stop_reason": null,
+      "wall_seconds": 47.906155970005784
+    },
+    "retained_review": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e010_review.py",
+        "--native-artifact-diagnostics",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/review-20261017/candidate",
+        "--truth",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-truth-v2/20261015/attempt-local-v2/truth-v2",
+        "--fasta",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-gcp-review/20261015/returned/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+        "--depth",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-gcp-review/20261015/returned/data-stage-v1/parts/final/depth.tsv",
+        "--baseline",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-controls/20261016-review/.controls",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/review-20261017/local-review-v3"
+      ],
+      "exit_code": 0,
+      "launched_pid": 71482,
+      "peak_sampled_rss_bytes": 1525506048,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.9833034998766211,
+      "sampled_cpu_seconds": 58.15,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 900,
+      "stop_reason": null,
+      "wall_seconds": 59.13738739595283
+    }
+  },
+  "markers": {
+    "ambiguous_proteins": 0,
+    "by_length": {
+      "1": {
+        "all_bp": 22035454,
+        "all_contigs": 56661,
+        "clean_family_calls": 87,
+        "clean_marker_bp": 34564,
+        "clean_marker_contigs": 86
+      },
+      "1000": {
+        "all_bp": 40505273,
+        "all_contigs": 27307,
+        "clean_family_calls": 402,
+        "clean_marker_bp": 499431,
+        "clean_marker_contigs": 312
+      },
+      "10000": {
+        "all_bp": 100186114,
+        "all_contigs": 2084,
+        "clean_family_calls": 2040,
+        "clean_marker_bp": 43490980,
+        "clean_marker_contigs": 612
+      },
+      "2500": {
+        "all_bp": 32866110,
+        "all_contigs": 7728,
+        "clean_family_calls": 586,
+        "clean_marker_bp": 1939446,
+        "clean_marker_contigs": 372
+      },
+      "500": {
+        "all_bp": 22098500,
+        "all_contigs": 35898,
+        "clean_family_calls": 160,
+        "clean_marker_bp": 93882,
+        "clean_marker_contigs": 150
+      },
+      "768": {
+        "all_bp": 13986706,
+        "all_contigs": 16024,
+        "clean_family_calls": 111,
+        "clean_marker_bp": 86735,
+        "clean_marker_contigs": 99
+      }
+    },
+    "by_lineage": {
+      "bacterial": {
+        "all_bp": 94606287,
+        "all_contigs": 41911,
+        "clean_family_calls": 2453,
+        "clean_marker_bp": 33913827,
+        "clean_marker_contigs": 1043
+      },
+      "eukaryotic": {
+        "all_bp": 67037217,
+        "all_contigs": 82509,
+        "clean_family_calls": 76,
+        "clean_marker_bp": 180992,
+        "clean_marker_contigs": 72
+      },
+      "not_attributable": {
+        "all_bp": 66200344,
+        "all_contigs": 19854,
+        "clean_family_calls": 854,
+        "clean_marker_bp": 11650335,
+        "clean_marker_contigs": 513
+      },
+      "other": {
+        "all_bp": 214249,
+        "all_contigs": 16,
+        "clean_family_calls": 0,
+        "clean_marker_bp": 0,
+        "clean_marker_contigs": 0
+      },
+      "viral": {
+        "all_bp": 3620060,
+        "all_contigs": 1412,
+        "clean_family_calls": 3,
+        "clean_marker_bp": 399884,
+        "clean_marker_contigs": 3
+      }
+    },
+    "canonical_families": 107,
+    "clean_contigs": 1631,
+    "clean_family_calls": 3386,
+    "domains": 3462,
+    "genes": 298955,
+    "multicopy_contig_families": 38,
+    "profiles": 111,
+    "raw_cache_reduction_verified": true
+  },
+  "native_resources": {
+    "community_candidate_seconds": 777.8317122609999,
+    "launcher_peak_sampled_process_tree_RSS_bytes": 2694012928,
+    "launcher_sampled_CPU_seconds": 1504.58,
+    "launcher_through_setup_fit_collection_seconds": 918.4324435049999,
+    "sampled_CPU_not_GCP_price": true,
+    "stages": {
+      "embed": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 1022816256,
+        "sampled_average_cpus": 1.7473519036925496,
+        "sampled_cpu_seconds": 7.579999999999998,
+        "stop_reason": null,
+        "wall_seconds": 4.337992812999914
+      },
+      "export": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 676909056,
+        "sampled_average_cpus": 1.1065378810119233,
+        "sampled_cpu_seconds": 19.450000000000003,
+        "stop_reason": null,
+        "wall_seconds": 17.577346726000087
+      },
+      "features": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 785379328,
+        "sampled_average_cpus": 1.1021765104896244,
+        "sampled_cpu_seconds": 27.4,
+        "stop_reason": null,
+        "wall_seconds": 24.859901965999967
+      },
+      "group": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 2635595776,
+        "sampled_average_cpus": 1.6396294474436601,
+        "sampled_cpu_seconds": 191.82,
+        "stop_reason": null,
+        "wall_seconds": 116.989848102
+      },
+      "markers": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 1141952512,
+        "sampled_average_cpus": 1.3899306935206994,
+        "sampled_cpu_seconds": 800.24,
+        "stop_reason": null,
+        "wall_seconds": 575.740937106
+      },
+      "refine": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 543363072,
+        "sampled_average_cpus": 1.1579053677693654,
+        "sampled_cpu_seconds": 8.710000000000008,
+        "stop_reason": null,
+        "wall_seconds": 7.522203664000017
+      },
+      "train": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 2275479552,
+        "sampled_average_cpus": 5.413596371087638,
+        "sampled_cpu_seconds": 151.43,
+        "stop_reason": null,
+        "wall_seconds": 27.972162980000007
+      }
+    },
+    "training_inner_model_seconds": 18.264735890999987
+  },
+  "phase_id": "candidate-20261016T212549Z-6917c3f",
+  "provider": {
+    "RAM_GiB": 32,
+    "allocated_vCPUs": 8,
+    "disks_GiB": [
+      30,
+      300
+    ],
+    "final_control_plane_readback": {
+      "bytes": 33097,
+      "sha256": "66a30ae3b3dcff1d50763c32cd4182302fe548326b739e91d29c8a96360d2938"
+    },
+    "guest_and_private_completion_agree": true,
+    "machine": "e2-standard-8",
+    "readback": {
+      "bytes": 31206,
+      "sha256": "f7839859daa815de804f5c0ae904003318cd85f9e67232b650aa2833b41b6853"
+    },
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "15300"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "start": "2026-10-16T14:25:49.946-07:00",
+    "status": "TERMINATED",
+    "stop": "2026-10-16T14:47:33.061-07:00",
+    "wake_in_this_review": false,
+    "watchdog_exit_snapshot": "not exported; remains on stopped work disk; not claimed inspected; no wake justified"
+  },
+  "recommendation": {
+    "alternatives": "Changing long-contig representation/objective or spherical refinement remains credible; a cheap cached objective control addresses an identifiable grouping uncertainty first. No feature family is decided.",
+    "confirmation": "CAMI II Toy HMB oral pooled GSA protocol remains prospectively frozen and unacquired. Confirm a later useful frozen mechanism after source/genome/replicon/taxonomy/overlap/truth admission under separate budget; no depth-transfer/unseen-genome claim.",
+    "decision": "Can a graph-local density objective reduce coarse mixed communities and improve fixed-purity recovery without excessive fragmentation/unassignment? CPM has an explicit density parameter; freeze one label-free setting before changed scores, never a truth-tuned grid.",
+    "execution_now": false,
+    "keep_or_abandon": "Keep only useful fixed-purity full-reference gains over existing controls at affordable resource cost; record fragmentation/assignment and all targets. A failure calls for retained-stage reassessment, not parameter search.",
+    "next": "Prepare one cached CPM-versus-RB grouping-objective control, with existing embeddings/graph weights/marker cache and unchanged marker refinement; no encoder refit or new neighbor index.",
+    "planning_only": {
+      "RAM_GiB": 32,
+      "approval": "Not requested yet; next task prepares concrete launcher/native contracts and exact separate approval. Prior USD2 is not carried over.",
+      "conservative_gross_USD": 0.55,
+      "cumulative_minutes": 30,
+      "existing_vCPU": 8,
+      "expected_RAM_GiB": [
+        2,
+        6
+      ],
+      "expected_extra_disk_GiB": [
+        1,
+        3
+      ],
+      "expected_minutes": [
+        3,
+        15
+      ],
+      "free_reserve_GiB": 25,
+      "max_compressed_export_GiB": 2,
+      "max_extra_GiB": 20,
+      "proposed_new_ceiling_USD": 1,
+      "provider_STOP_minutes": 45
+    },
+    "primary_source": "https://leidenalg.readthedocs.io/en/stable/reference.html#cpmvertexpartition"
+  },
+  "record": "E010 first frozen candidate completion and independent native-artifact diagnostic review",
+  "refinement": {
+    "adopted": 18,
+    "attempts": 22,
+    "membership": {
+      "assigned_to_noise": 8855,
+      "remains_assigned": 80186,
+      "remains_noise_or_excluded": 56661
+    },
+    "newly_unassigned": {
+      "by_length": {
+        "1000": {
+          "ambiguous_query_bp": 569328,
+          "bp": 5324043,
+          "clean_marker_bp": 97353,
+          "clean_marker_contigs": 63,
+          "contigs": 3448,
+          "nn_quarantined_query_bp": 324,
+          "unsupported_query_bp": 79283
+        },
+        "10000": {
+          "ambiguous_query_bp": 761097,
+          "bp": 7190680,
+          "clean_marker_bp": 4270640,
+          "clean_marker_contigs": 59,
+          "contigs": 169,
+          "nn_quarantined_query_bp": 304713,
+          "unsupported_query_bp": 72655
+        },
+        "2500": {
+          "ambiguous_query_bp": 1036072,
+          "bp": 5132789,
+          "clean_marker_bp": 416300,
+          "clean_marker_contigs": 76,
+          "contigs": 1240,
+          "nn_quarantined_query_bp": 227,
+          "unsupported_query_bp": 123911
+        },
+        "500": {
+          "ambiguous_query_bp": 116975,
+          "bp": 1595368,
+          "clean_marker_bp": 15016,
+          "clean_marker_contigs": 24,
+          "contigs": 2564,
+          "nn_quarantined_query_bp": 828,
+          "unsupported_query_bp": 45816
+        },
+        "768": {
+          "ambiguous_query_bp": 114860,
+          "bp": 1256134,
+          "clean_marker_bp": 15414,
+          "clean_marker_contigs": 18,
+          "contigs": 1434,
+          "nn_quarantined_query_bp": 0,
+          "unsupported_query_bp": 20074
+        }
+      },
+      "by_lineage": {
+        "bacterial": {
+          "ambiguous_query_bp": 7801,
+          "bp": 7442918,
+          "clean_marker_bp": 3334993,
+          "clean_marker_contigs": 123,
+          "contigs": 1745,
+          "nn_quarantined_query_bp": 0,
+          "unsupported_query_bp": 3151
+        },
+        "eukaryotic": {
+          "ambiguous_query_bp": 0,
+          "bp": 7474327,
+          "clean_marker_bp": 64190,
+          "clean_marker_contigs": 23,
+          "contigs": 5487,
+          "nn_quarantined_query_bp": 0,
+          "unsupported_query_bp": 3370
+        },
+        "not_attributable": {
+          "ambiguous_query_bp": 2589982,
+          "bp": 4659342,
+          "clean_marker_bp": 1114040,
+          "clean_marker_contigs": 93,
+          "contigs": 1458,
+          "nn_quarantined_query_bp": 306092,
+          "unsupported_query_bp": 334257
+        },
+        "other": {
+          "ambiguous_query_bp": 0,
+          "bp": 8593,
+          "clean_marker_bp": 0,
+          "clean_marker_contigs": 0,
+          "contigs": 3,
+          "nn_quarantined_query_bp": 0,
+          "unsupported_query_bp": 0
+        },
+        "viral": {
+          "ambiguous_query_bp": 549,
+          "bp": 913834,
+          "clean_marker_bp": 301500,
+          "clean_marker_contigs": 1,
+          "contigs": 162,
+          "nn_quarantined_query_bp": 0,
+          "unsupported_query_bp": 961
+        }
+      },
+      "total": {
+        "ambiguous_query_bp": 2598332,
+        "bacterial_confirmed_bp": 8485927,
+        "bp": 20499014,
+        "clean_marker_bp": 4814723,
+        "clean_marker_contigs": 240,
+        "contigs": 8855,
+        "eukaryotic_confirmed_bp": 7585220,
+        "nn_quarantined_query_bp": 306092,
+        "other_confirmed_bp": 34514,
+        "unsupported_query_bp": 341739,
+        "viral_confirmed_bp": 1147190
+      }
+    },
+    "paired_target_deltas": {
+      "dev3_learned_ten_depth": {
+        "improved": 10,
+        "largest_gains": [
+          {
+            "assembly_confirmed_bp": 3322985,
+            "dev3_learned_ten_depth_recovered_bp": 0,
+            "genome": "ASV456.0",
+            "post_minus_dev3_bp": 2514950,
+            "post_minus_pre_bp": 2514950,
+            "post_recovered_bp": 2514950,
+            "pre_recovered_bp": 0,
+            "reference_bp": 3549767
+          },
+          {
+            "assembly_confirmed_bp": 3671792,
+            "dev3_learned_ten_depth_recovered_bp": 0,
+            "genome": "ASV134.7",
+            "post_minus_dev3_bp": 1596344,
+            "post_minus_pre_bp": 1596344,
+            "post_recovered_bp": 1596344,
+            "pre_recovered_bp": 0,
+            "reference_bp": 5330584
+          },
+          {
+            "assembly_confirmed_bp": 2911965,
+            "dev3_learned_ten_depth_recovered_bp": 0,
+            "genome": "ASV337.1",
+            "post_minus_dev3_bp": 1154220,
+            "post_minus_pre_bp": 1154220,
+            "post_recovered_bp": 1154220,
+            "pre_recovered_bp": 0,
+            "reference_bp": 3164285
+          }
+        ],
+        "largest_losses": [
+          {
+            "assembly_confirmed_bp": 3361302,
+            "dev3_learned_ten_depth_recovered_bp": 2488958,
+            "genome": "ASV300.8",
+            "post_minus_dev3_bp": -2488958,
+            "post_minus_pre_bp": 0,
+            "post_recovered_bp": 0,
+            "pre_recovered_bp": 0,
+            "reference_bp": 3460293
+          },
+          {
+            "assembly_confirmed_bp": 3007225,
+            "dev3_learned_ten_depth_recovered_bp": 2041337,
+            "genome": "ASV300.2",
+            "post_minus_dev3_bp": -2041337,
+            "post_minus_pre_bp": 0,
+            "post_recovered_bp": 0,
+            "pre_recovered_bp": 0,
+            "reference_bp": 3107801
+          },
+          {
+            "assembly_confirmed_bp": 3392237,
+            "dev3_learned_ten_depth_recovered_bp": 2012844,
+            "genome": "ASV714.0",
+            "post_minus_dev3_bp": -2012844,
+            "post_minus_pre_bp": 0,
+            "post_recovered_bp": 0,
+            "pre_recovered_bp": 0,
+            "reference_bp": 3847181
+          }
+        ],
+        "negative_recovered_bp": -17654124,
+        "positive_recovered_bp": 11551733,
+        "unchanged": 133,
+        "worsened": 13
+      },
+      "pre": {
+        "improved": 6,
+        "largest_gains": [
+          {
+            "assembly_confirmed_bp": 6143984,
+            "dev3_learned_ten_depth_recovered_bp": 3559814,
+            "genome": "ASV150.14",
+            "post_minus_dev3_bp": 1020632,
+            "post_minus_pre_bp": 4580446,
+            "post_recovered_bp": 4580446,
+            "pre_recovered_bp": 0,
+            "reference_bp": 6474050
+          },
+          {
+            "assembly_confirmed_bp": 3322985,
+            "dev3_learned_ten_depth_recovered_bp": 0,
+            "genome": "ASV456.0",
+            "post_minus_dev3_bp": 2514950,
+            "post_minus_pre_bp": 2514950,
+            "post_recovered_bp": 2514950,
+            "pre_recovered_bp": 0,
+            "reference_bp": 3549767
+          },
+          {
+            "assembly_confirmed_bp": 2521728,
+            "dev3_learned_ten_depth_recovered_bp": 1726306,
+            "genome": "ASV73.2",
+            "post_minus_dev3_bp": 779962,
+            "post_minus_pre_bp": 2506268,
+            "post_recovered_bp": 2506268,
+            "pre_recovered_bp": 0,
+            "reference_bp": 2527722
+          }
+        ],
+        "largest_losses": [
+          {
+            "assembly_confirmed_bp": 3106904,
+            "dev3_learned_ten_depth_recovered_bp": 1637110,
+            "genome": "ASV399.6",
+            "post_minus_dev3_bp": -204193,
+            "post_minus_pre_bp": -1288186,
+            "post_recovered_bp": 1432917,
+            "pre_recovered_bp": 2721103,
+            "reference_bp": 3159004
+          },
+          {
+            "assembly_confirmed_bp": 8151,
+            "dev3_learned_ten_depth_recovered_bp": 0,
+            "genome": "ASV1.11",
+            "post_minus_dev3_bp": 0,
+            "post_minus_pre_bp": 0,
+            "post_recovered_bp": 0,
+            "pre_recovered_bp": 0,
+            "reference_bp": 2471506
+          },
+          {
+            "assembly_confirmed_bp": 2531,
+            "dev3_learned_ten_depth_recovered_bp": 0,
+            "genome": "ASV10.0",
+            "post_minus_dev3_bp": 0,
+            "post_minus_pre_bp": 0,
+            "post_recovered_bp": 0,
+            "pre_recovered_bp": 0,
+            "reference_bp": 2617421
+          }
+        ],
+        "negative_recovered_bp": -1288186,
+        "positive_recovered_bp": 14681316,
+        "unchanged": 149,
+        "worsened": 1
+      }
+    },
+    "unresolved": {
+      "0": {
+        "TIGR00392": 2
+      },
+      "22": {
+        "TIGR00061": 3
+      },
+      "40": {
+        "TIGR00043": 2
+      },
+      "70": {
+        "TIGR00115": 3
+      }
+    }
+  },
+  "reviewed_local_date": "2026-10-17",
+  "reviewed_utc": "2026-10-16T22:32:16.374582+00:00",
+  "scientific_outcome": "does not support a stronger whole-pipeline R95 result than preserved dev3 on this development assembly",
+  "source_commit": "6917c3f027bb975db43e771e979fecda0ab6c415",
+  "status": "completed; native outputs accepted with explicit Mac portability limitation",
+  "storage": {
+    "additional_later_readback_archive_bytes": 335636093,
+    "existing_disk_monthly_gross_USD": 31.2,
+    "guard_sampling_seconds": 0.2,
+    "minimum_sampled_filesystem_free_bytes": 142032781312,
+    "no_new_resources_or_quota": true,
+    "peak_chargeable_growth_from_conservative_phase_baseline_bytes": 3659984896,
+    "peak_sampled_filesystem_used_bytes": 174684094464,
+    "persisted_sampling_seconds": 2,
+    "retention_extension": false,
+    "retention_review": "2026-10-21",
+    "sampling_scope": "439 persisted samples across candidate verification/fit/collection; later outer-phase upload/readback not fully persisted",
+    "whole_phase_disk_guard_passed": true
+  },
+  "truth": {
+    "admission": {
+      "bytes": 14364,
+      "sha256": "65b3ee7fc1a7b9cbe9e5e6ababdba606a85d0708c0f60bbcda2c25a7aaa25aed"
+    },
+    "archaeal_positive_origins": 0,
+    "confirmed_available_source_fraction": 0.185321,
+    "full_provided_bacterial_reference_bp": 554661890,
+    "manifest": {
+      "bytes": 4388,
+      "sha256": "6bb3f1a07276c44c17ec16c7d2663ecfa5c4ce3c0eda6ed3a3dc579b3868eed1"
+    },
+    "nn_quarantine_percent": 3.3034,
+    "nn_quarantined_query_bp": 7653205,
+    "primary_bacterial_targets": 156,
+    "semantics": "R95>=200kb bin, >=95% confirmed source support over all bin DNA; full provided references; duplicate-safe loci; unknown/non-target/zero-origin competitors retained; separate pASV/HOST; not MIMAG quality"
+  }
+}

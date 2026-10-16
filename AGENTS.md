@@ -413,6 +413,12 @@ from a fresh source/build directory so stale generated files cannot enter a whee
 
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
+Keep exact same-runtime checkpoint reload checks separate from cross-platform
+numerical comparisons. Preserve failed numerical tolerances without widening them
+after inspection. A separately admitted review of original native artifacts needs
+passing input/output/geometry contracts and must state any unresolved portability
+limitation; it does not make the failed portability contract pass.
+
 For native startup hangs, retain child-side traces and process wait state before
 changing budgets or storage paths. Real file/byte/checkpoint movement is progress;
 parent heartbeats are not. Use one prospective overall cost/clock limit plus a

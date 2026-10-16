@@ -5,7 +5,8 @@ The owner subsequently authorized local implementation/engineering checks and
 the normal benchmark-planning PR merge. [E010](../../experiments/E010-coherent-prototype/README.md)
 owns the prospective algorithms/defaults, implementation, contracts and separate
 future execution request. Community fits, VM wake/spending and retention extension
-were not needed for implementation and have not occurred.
+were not needed for implementation. The later separately approved native run and
+its reviewed outcome are recorded below; no retention extension followed.
 
 ## Decision and why it changes
 
@@ -152,3 +153,39 @@ The prior $20 data and $2 control ceilings are not an open budget for the upgrad
 The October 21 disk-retention review is unchanged. [STATE](../STATE.md) and
 [E009 operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md#exact-following-step-prompt)
 own the current handoff and exact implementation prompt.
+
+## First native bundle result, 2026-10-17
+
+[E010's independent review](../../experiments/E010-coherent-prototype/review.json)
+accepts the completed native workflow and all retained DNA, with an explicit
+unresolved Mac inference-tolerance limitation. The scientific outcome is mixed:
+weighted full-reference R95 is 1.8763% before refinement, 4.2909% after, versus
+preserved dev3 learned ten-depth 5.3911%. The bundle does not establish a stronger
+whole binner; implementation acceptance is separate from product-quality adoption.
+
+The new view/modality/unit-geometry bundle improves short bacterial neighbors,
+but long/bp-weighted geometry remains weaker and global graph communities are
+coarse. One 35.10-Mb bacterial-dominant pre-bin contains 107 supported genomes;
+45/57 large bacterial-dominant post-bins remain below 95% confirmed purity.
+Refinement has a useful paired recovery effect but newly unassigns 20.50 Mb,
+including 8.49 Mb of confirmed bacterial support, and harms one previously
+recovered target. No single component is proved solely responsible.
+
+Recommend one cheap **cached CPM-versus-RB grouping-objective control**, keeping
+encoder, graph/weights, marker cache and existing refinement fixed. Its incremental
+decision is whether a different local-density objective can convert useful
+neighborhoods into purer groups without excessive fragmentation. Freeze one
+label-free setting before changed scores, rather than a truth-tuned grid. CPM's
+density meaning differs from RB's graph-wide configuration model; the dated
+[primary API formulas](https://leidenalg.readthedocs.io/en/stable/reference.html#cpmvertexpartition)
+support the alternative, not a claim that it will fix this assembly. Changing
+long-contig learning or refinement remains a serious alternative if this control
+fails. This is a decision-driven selective test, not a return to mandatory isolated
+experiments for every ingredient.
+
+The next task prepares that control locally; no new partition, fit, score, VM wake
+or budget is authorized here. A later useful frozen mechanism needs the already
+prospective oral-GSA confirmation, after source/truth/overlap admission. Keep all
+external binners deferred and October 21 retention visible. AGENTS now distinguishes
+exact native reload from cross-platform numerical portability; the failed tolerance
+is preserved while native-byte diagnostics have their own explicit admission scope.

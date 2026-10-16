@@ -1,57 +1,57 @@
 # Current Research State
 
-Updated: 2026-10-16. This is the single current handoff.
+Updated: 2026-10-17. This is the single current handoff.
 
 ## Exact next step
 
-**The first frozen E010 candidate phase is running under its new $2 authorization.**
-[The native receipt](../experiments/E010-coherent-prototype/native-observed.json)
-owns phase `candidate-20261016T212549Z-6917c3f`, current progress and verification.
-The existing VM started at **2026-10-16 21:25:49.946 UTC**. Its four-hour clock ends
-**October 17 01:25:49 UTC /03:25 Copenhagen**; provider STOP is **01:40:49 UTC
-/03:40 Copenhagen**. A fresh root watchdog pins this boot and held parent PID 2188,
-birth tick 11639 and command hash, checks every 30s and stops after 60s exit grace.
-Native live/normal 0/crash 7 detection tests pass; the actual timer and provider
-fallback were verified before release. No automatic retry or extension.
+**E010 completed successfully; the integrated candidate does not beat dev3 on
+conservative full-reference recovery.** [The independent review](../experiments/E010-coherent-prototype/review.json)
+verifies private completion, all 692 scientific members, all seven serial stages,
+full 145,702 contigs /231,678,157 bp, ordered ten-depth axes, real windows, exact
+native reload, sparse graph/marker cache and complete pre/post DNA exports.
+GCP independently confirms **TERMINATED**, stop **October 16 21:47:33.061 UTC /
+23:47 Copenhagen**, after **1,303.115 s /0.361976 h**. No wake/resource change,
+refit, external binner or confirmation acquisition occurred during review.
 
-The owner-requested branch rename to **`dev4-coherent-prototype`** preserves all
-commits. Mac push and the clean read-only VM sync verify exact source
-**`6917c3f027bb975db43e771e979fecda0ab6c415`**. Full accepted DNA/depth, all ten ordered
-columns, 13 all-zero rows, frozen wheel/defaults/marker and recipes verify; actual
-pre-install free space was **134.69 GiB**. A fresh complete owned Python 3.12 CPU
-environment is used. Linux Python 3.12.10 inventory/import/source, the production
-marker positive and all 21 installed product tests pass. The feature stage is
-complete; marker gene calling is progressing. The receipt owns the timestamped
-snapshot. Do not infer completion/quality from a running process
-or later shutdown. The next task is bounded inspection, not another launch.
-[E010](../experiments/E010-coherent-prototype/README.md) owns the prospective
-algorithms, local engineering evidence, pinned marker asset and bounded launcher.
-It combines real disjoint windows, explicit composition/depth encoders and fusion,
-consistent unit-sphere geometry, one audited sparse kNN/Leiden graph and conservative
-marker-informed refinement. Both pre/post partitions and complete DNA exports are
-retained. Short/marker-negative/unknown DNA remains accounted; parent-contig mean
-depth is explicitly conditioning, not measured window coverage or variance.
+Weighted conservative R95 (>=200 kb bins, >=95% confirmed purity, full provided
+bacterial references): **dev3 learned ten-depth 5.3911%; dev4 pre 1.8763%; post 4.2909%**.
+Targets >=50%-recovered: **13→3→6**; >=90%: 1→1→2. Refinement helps its fixed
+embedding, but the whole bundle does not pass the performance goal. Do not promote
+it as stronger from improved neighbor agreement alone. Bacterial 5-NN 67.05→72.59%,
+while bp-weighted 79.62→78.73% and >=10 kb 81.79→79.40%; identical query populations.
+One 35.10 Mb bacterial-dominant pre-bin contains 107 supported genomes; 45/57 large
+bacterial-dominant post-bins remain below 95% purity. Refinement newly unassigns
+20.50 Mb, including 8.49 Mb confirmed bacterial support, with all DNA retained.
 
-[D015](decisions/D015-coherent-prototype-upgrade.md) is accepted for this coherent
-implementation. No changed E009 score or external binner follows from the launch.
-Native software checks do not establish stronger recovery. Fresh Linux inventory/
-import/source/CLI and tiny contracts must pass inside this bounded phase before
-its community fit. Keep immutable dev3 source/wheel and all E009 evidence unchanged.
+**Next: locally prepare one cached CPM-versus-RB grouping-objective control.**
+Keep the dev4 encoder, unit vectors, graph/weights, marker cache and current
+refinement fixed. Freeze one justified label-free density setting before changed
+scores; no truth K, score grid or automatic retries. This tests a coarse-grouping
+hypothesis cheaply; long-contig representation/refinement losses remain alternative
+explanations. [Operations](../experiments/E010-coherent-prototype/OPERATIONS.md#exact-following-step-prompt)
+owns the exact preparation prompt and prospective new $1 request. No next community
+partition, score, fit or cloud execution is authorized by this review. Use selective
+ablations and preserve dev3, dev4 and all accepted E009 evidence.
 
-The [next exact inspection prompt](../experiments/E010-coherent-prototype/OPERATIONS.md#exact-following-step-prompt)
-does not authorize another job. The approved **new $2 gross** covers one candidate
-fit versus preserved dev3 outputs, four
-cumulative VM hours/4.25-hour provider STOP, existing 8-vCPU/32-GiB/300-GiB resources,
-25-GiB free reserve/20-GiB extra-space cap and <=2-GiB export. Estimated 1–2.5 hours,
-3–8-GiB RAM/4–8-GiB extra disk; these are planning estimates, not full-scale
-measurements. All fresh credit, pending-usage, price, storage/headroom and watchdog
-checks precede spending/fit. Live Welcome credit is **DKK1,933.15 Available through
-2027-01-12**; reported cost/savings 38.35/net 0 is delayed, not an invoice. Fresh
-ordinary-resource prices give a conservative phase envelope **~$1.66** including
-fallback uptime, disk interval, export and small storage/operation reserves. The
-receipt prices actual uptime so far separately; final cost needs provider stop.
-No automatic retry/extension. Existing disk retention
-review **October 21** remains; ~**$31.20/month** while stopped, no extension.
+Native Linux checkpoint reload is bitwise exact. The independent Mac inference
+comparison **fails its unchanged rtol1e-5/atol2e-6 at four coordinates**, maximum 3.135e-6;
+evidence masks match. The failed review is retained. Diagnostics use original
+verified Linux bytes under an explicit limited scope; Mac portability is **not**
+passed and no tolerance/embedding was changed. All five new reader contracts,
+existing diagnostic/evaluator contracts and native AMBER pass. No quality claim
+extends beyond this one development assembly/source-truth convention.
+
+Priced gross compute/IP **$0.09884**, disk interval **$0.01547**, scientific export
+upper **$0.03752**, prior asset readback~$0.00250, plus small object/operation costs:
+~$0.1543 before those small charges, **<$0.19 with reserve**, inside the original $2.
+Fresh Welcome credit **DKK1,933.15 Available through 2027-01-12**; reported
+cost/savings 38.35/net 0 remains delayed, not an invoice. Sampled candidate/collection
+filesystem peak 162.69 GiB, free 132.28 GiB; outer readback adds a 335.6 MB copy beyond
+that persisted sample scope. No new capacity is needed. Existing 30/300 GiB disks
+remain **$31.20/month while stopped**; **October 21** review remains, no extension.
+Branch **`dev4-coherent-prototype`** preserves all commits; executed source stays
+**6917c3f**. [The launch receipt](../experiments/E010-coherent-prototype/native-observed.json)
+is preserved as the earlier running observation; it is not current VM status.
 
 A [prospective confirmation choice/protocol](../experiments/E010-coherent-prototype/confirmation-plan.json)
 is frozen before changed community scores: CAMI II Toy HMB oral pooled GSA,
@@ -70,8 +70,8 @@ without isolating either as the sole cause. Confirmed unique bacterial source
 availability is 18.5321% of the full provided reference denominator; the 3.3034%
 N-quarantine and lineage/length limitations remain. No feature-family conclusion.
 
-The preceding E009 review verified TERMINATED; E010's later authorized wake above
-supersedes that current-state observation.
+The preceding E009 review and the later completed E010 phase both independently
+verify TERMINATED; the reviewed E010 stop above is the current observation.
 The separate $2 control phase cost ~$0.479 compute/IP plus ~$0.0542 export and small
 operations; it is not a budget for the upgrade. Existing 30/300-GiB disks remain
 ~$31.20/month while stopped; retention review **October 21**, no extension. Any

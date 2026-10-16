@@ -1,6 +1,9 @@
 # E010 bounded candidate execution and inspection
 
-Status: **one frozen phase authorized and launched on 2026-10-16**.
+Status: **completed and reviewed on 2026-10-17; VM independently TERMINATED**.
+[Completed review](review.json) owns the seven-stage acceptance, mixed/negative
+bundle result, portability exception, actual costs and next preparation boundary.
+The launch details below are dated execution provenance.
 [Native receipt](native-observed.json) owns actual gates, progress and costs for
 `candidate-20261016T212549Z-6917c3f`. The source is clean commit
 `6917c3f027bb975db43e771e979fecda0ab6c415` on **`dev4-coherent-prototype`**, renamed
@@ -46,19 +49,21 @@ training parents and every assembly/depth row. At **21:34:27 UTC**, the same pin
 parent and timer remain healthy; gene calling advanced from 18,000 to 52,000 contigs
 (106,827 genes) during the requested few-minute check. No errors observed. Current
 free space **133.21 GiB**; charged growth **2.48 GiB**, including the conservative
-1-GiB early-preparation charge. Priced VM uptime so far 517.160s: compute/IP
+1-GiB early-preparation charge. Priced VM uptime so far 517.160 s: compute/IP
 **$0.0392**, disk interval **$0.00614**; compact asset readback upper **$0.00248**
 plus small operations. Final charged uptime/cost is unknown until provider stop.
 Final seven-stage acceptance still requires the closed archive/receipts review.
 
-Current logs are under
+Retained logs on the stopped disk are under
 `/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/`:
 `logs/parent-terminal.log`, `logs/setup.log`, `candidate-run/terminal.log` and
 `candidate-run/candidate/logs/`. Private completion will be
 `gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/completion.json`;
 guest attribute `e010-candidate/status` publishes the compact final outcome.
-These are expected locators, not proof that completion exists. A healthy launcher
-is left supervised after bounded progress verification, without polling to finish.
+These were expected locators at launch. The later private SUCCESS completion,
+science/closure archives and all member bytes now independently verify; no wake
+was needed. The post-exit watcher snapshot itself was not exported and is not
+claimed inspected. The original running native-observed receipt stays unchanged.
 
 ## Value and selective scope
 
@@ -171,39 +176,67 @@ certify native E010 Linux/cloud execution. Report the actual runtime gate before
 claiming acceptance. If a healthy supervised fit outlasts the launch task, report
 stage/log locations and finish the response; do not poll to completion.
 
+## Completed review and next decision
+
+The original run succeeded within its clock/budget; [review](review.json) and the
+[README result](README.md#completed-native-result-and-independent-review-2026-10-17)
+own full evidence and limits. Weighted R95 pre 1.8763%, post 4.2909%, dev3 learned
+ten-depth 5.3911%; the coherent bundle is not adopted as a stronger binner.
+Refinement helps but unassigns 20.50 Mb and harms one previously recovered source;
+long bacterial geometry also declines. Do not infer a pure grouping-only cause.
+
+Recommend **preparation of one cached CPM-versus-RB grouping-objective control**,
+leaving encoder, unit vectors, graph/weights, seed and marker refinement fixed.
+The current global RB partition has giant mixed communities despite better short
+neighbors. CPM's density objective is a justified alternative, not a guaranteed
+fix or permission for a resolution grid. Fix one label-free rule before any new
+community partition/score; retain all fragments/noise/unknown DNA. If it fails or
+merely overfragments, use the retained evidence to revisit representation/refinement
+rather than tune repeatedly on E009. Keep external binners deferred.
+
+Planning only: existing 8 CPU/32 GiB/300 GiB, likely 3–15 min /2–6 GiB RAM /1–3 GiB extra
+work; proposed 30 min cumulative phase/45 min provider STOP, 25 GiB free/20 GiB extra
+cap and <=2 GiB export. At current prices, 45 min compute/IP ~$.205 + disk ~$.032 + max
+export $.24 + small object/operations totals ~$.55. Prepare a **new $1** request after
+the concrete runtime/restore/launcher contracts pass. Do not provision, resize or
+carry unused $2 forward. Any later run needs fresh credit/pending usage/prices,
+actual headroom and original retention coverage; **October 21** remains.
+
 ## Exact following-step prompt
 
-Our goal is a substantially stronger binner. Read AGENTS.md, PROJECT_INTENT.md,
-STATE/CLOUD, D013/D015 and E010's design, candidate lock, native-observed.json and
-operations. Inspect phase `candidate-20261016T212549Z-6917c3f` without starting a
-job, waking the VM, changing resources/limits, extending retention or retrying.
-Keep dev3 and all accepted E009 inputs/truth/results immutable; external binners
-remain deferred. The original new $2 covers this phase only.
+Our goal is a substantially stronger binner. E010 ran successfully, but post-refinement
+full-reference weighted R95 was 4.2909% versus preserved dev3's 5.3911%, despite
+better short bacterial neighborhoods. Read AGENTS.md, PROJECT_INTENT.md, STATE,
+CLOUD, D013/D015 and E010's reviewed results, grouping diagnostics, locks,
+confirmation plan and operations. Preserve immutable dev3, frozen dev4 and all
+accepted E009/E010 evidence, including failed local portability/reviewer journals.
 
-Check GCP control-plane state, `e010-candidate/status` and private
-`gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/completion.json`.
-Do not infer success from shutdown. If still healthy and running, report current
-stage/progress and leave the verified watchdog/provider STOP intact; do not poll
-to completion. If evidence is missing after stop, do not wake the VM; identify
-what is missing and any cost/approval needed.
+Prepare and locally test **one cached CPM-versus-RB grouping-objective control**
+on a new research branch. Keep the dev4 encoder/embeddings, unit-sphere geometry,
+retained kNN graph/weights, seed and existing marker-refinement policy fixed.
+Use judgment and targeted primary-source checks to freeze one justified label-free
+CPM density setting/rule before changed community outcomes. Do not use truth K,
+a resolution/score grid, native benchmark labels or post-score tuning. Keep all
+short, marker-negative, unknown/non-target DNA and optional unassigned outcomes.
 
-After independently verified shutdown, establish actual exits for setup/native
-gates and all seven candidate stages from receipts/logs. Price measured VM uptime,
-disk/storage/transfer separately from sampled CPU. Refresh credit/price coverage
-and assess bounded export against the remaining original $2 before downloading;
-verify archive and every retained member. Keep the October 21 storage review.
+Implement a restore-only consumer and bounded launcher using the verified native
+archive/cache. Test actual sparse-graph readers, opaque-ID/FASTA index mapping,
+fixed objective/refinement interfaces and complete pre/post export contracts on
+tiny real fixtures. Preserve the original Mac allclose failure explicitly; do not
+relax its tolerance or alter native vectors. Do not retrain, redetect markers,
+rebuild the neighbor index or repeat accepted setup/science unnecessarily.
 
-If the frozen fit completed, verify full contig/sample axes, exact source/defaults/
-seed/schedule, independent reload, unit-vector geometry, native neighbor audit,
-marker availability/ambiguity/cache and complete pre/post DNA accounting. Perform
-bounded local diagnostics against preserved dev3 outputs and admitted conservative
-sequence truth v2: raw/learned geometry, grouping, length/origin and full-reference
-recovery. Keep unknown/non-target/short/noise/excluded DNA, full denominators and
-3.3034% N-quarantine visible; do not apply dev3's post-learning z-score to candidate
-vectors. Report missing runtime/evaluator contracts before claiming quality.
+This task authorizes local preparation/engineering checks only: no changed community
+partition or score, fit, acquisition/assembly/mapping/alignment, external binner,
+paid cloud work, VM start, resource change or retention extension. Prepare a
+concrete separate new $1 cached-run approval request with fresh-credit prerequisites,
+complete runtime/CPU/RAM/peak-disk/export/cost estimates, proposed 30 min cumulative
+clock/45 min provider STOP and the existing 25 GiB reserve/20 GiB extra-space cap.
+Prior $2 is closed and does not carry over. Keep the October 21 storage review.
 
-No refit, tuning, new cloud compute, architecture change or confirmation-data run.
-Preserve failure evidence without recovery. Report bundle and paired refinement
-results/limits, actual costs/storage and at most one decision-driven follow-up with
-prospective additional-data confirmation. Update records, run relevant checks,
-commit and provide the next exact prompt.
+Predeclare keep/modify/abandon criteria using independent sequence truth and full
+provided denominators/3.3034% N-quarantine, with all length/origin populations.
+Retain the already frozen oral-GSA additional-data confirmation choice; require
+source/genome/replicon/taxonomy/overlap/truth and separate cost admission before a
+later confirmation. Update records, run relevant checks, commit and give the next
+exact execution-approval prompt. Do not execute the mechanism in this preparation.
