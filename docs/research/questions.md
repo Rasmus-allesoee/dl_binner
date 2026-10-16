@@ -290,3 +290,15 @@ query DNA unknown; this is an evaluator limitation, not binner performance.
 The unchanged-control launcher is prepared and locally safety-tested, with a
 separate $2 approval still required. No fit, score, mechanism result or scientific
 question resolution follows from this repair; the above question statuses remain.
+
+2026-10-16 E009 control review: [four unchanged controls](../../experiments/E009-competitive-benchmark/controls-review.json)
+completed successfully and the VM stopped within the separate $2. Learned ten-depth
+improves weighted conservative reference recovery4.5765→5.3911%, with full bacterial
+source availability only18.5321%. Overall neighbor gain is driven by non-target
+queries; bacterial neighbors worsen modestly. Grouping recall rises but mixed bins
+remain. [D013](../decisions/D013-first-comparative-benchmark.md) selects preparation
+of one fixed-encoder marker-conflict splitting test, subject to marker availability
+and a prospective second-community confirmation protocol. No marker benefit,
+mechanism causation, feature-family rejection or broad performance result is yet
+established; scientific question statuses remain open. No external binner or new
+fit is authorized by this review.

@@ -1,9 +1,11 @@
 # E009: first competitive human-gut assembly benchmark
 
-Opened 2026-10-08; amended 2026-10-15. Bin-quality outcome **not assessed**.
-All five tiny UCloud native contracts are accepted through v10/v14; no full
-community fit or E009 quality score ran. The independently reviewed
-[v14 receipt](linux-preflight-v14.json) is accepted without replay.
+Opened 2026-10-08; updated 2026-10-16. **Four unchanged controls completed and reviewed;
+VM stopped.** [The result](controls-review.json) owns acceptance, bounded development
+diagnostics, costs and limitations; [operations](OPERATIONS.md) owns the current
+next preparation boundary. No external binner ran. All five tiny UCloud contracts
+remain accepted through v10/v14 without replay; [v14](linux-preflight-v14.json)
+remains distinct from these native GCP prototype controls.
 
 The current design uses **one full sample-0 assembly and ten full coverage sources**,
 first listed sample of every corrected subject: 0,2,3,4,6,9,10,11,14,17.
@@ -11,7 +13,8 @@ first listed sample of every corrected subject: 0,2,3,4,6,9,10,11,14,17.
 records, truth-v2 admission, separate control approval and exact following prompt.
 The later owner message authorizes the data-only phase at `5fec4e1`, subject to
 verified credits/prices and effective quota. [The phase receipt](gcp-data-observed.json)
-owns what actually ran; all fits/scores remain unapproved.
+owns the earlier data phase. The later separate $2 authorization executed only
+the four unchanged prototype controls; no further fit is authorized.
 [D014](../../docs/decisions/D014-google-cloud-workspace.md) supersedes UCloud
 operating paths/budgets; the [old handoff](../../docs/history/E009_UCLOUD_OPERATIONS.md)
 retains their history. Old attempt records are provenance, not current commands.
@@ -37,10 +40,10 @@ denominators. Its fixed conservative N policy leaves 7,653,205 bp /3.3034% unkno
 The old failed DAG/journals are unchanged. No new aligner or VM wake was needed.
 [Operations](OPERATIONS.md#earlier-data-review-and-failed-dag-evidence-2026-10-15)
 owns actual cost/storage/shutdown evidence and the exact next prompt. The next
-step is separate $2 approval for the unchanged controls, with no external fit;
-[the unchanged diagnostic proposal](diagnostic-controls-plan.json) requires a
-separate fit budget. The parent passes local inert-child safety tests; fresh Linux
-runtime setup/probe and assembly-scale affordability remain unmeasured.
+step is preparation of one fixed-encoder marker-conflict splitting test, with
+no execution yet. [The unchanged controls](diagnostic-controls-plan.json) are now
+complete under their separate $2 approval. Actual runtime, outputs and costs are
+reviewed; original failure/truth histories remain unchanged.
 
 ## Question and informative comparisons
 
@@ -795,7 +798,7 @@ algorithm change. Final packet/harness provenance belongs in transfer.json.
 
 [Local evidence](local-failed-paths-v14.json) binds the exact final archive and
 Bash command, real tiny FASTA/BAM contracts, own-prefix inventories, native writer/
-reader outputs and all122 immutable return members. Both corrected contracts
+reader outputs and all 122 immutable return members. Both corrected contracts
 pass; prior accepted receipts are byte-identical, and all three passed tools plus
 assembly/mapping/truth/AMBER/source catalog remain unscheduled. Actual Mac driver
 through collection128.946 s, outer harness145.042 s, outer sampled peak665,939,968

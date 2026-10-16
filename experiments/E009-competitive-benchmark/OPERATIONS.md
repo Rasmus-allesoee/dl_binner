@@ -1,19 +1,144 @@
-# E009 operations: admitted truth v2 and unapproved diagnostic controls
+# E009 operations: reviewed controls and one proposed grouping test
 
-Updated: 2026-10-15. **The later owner message authorizes the four unchanged
-controls under a new $2 envelope; the phase is running under verified supervision.**
-[Control receipt](controls-observed.json) owns that actual launch and pending result.
-[Data receipt](gcp-data-observed.json) retains the original failed data-only DAG at
-5fec4e1; keep its source/journals/accepted outputs intact. No external binner,
-architecture change, resource growth, retry or automatic extension is authorized.
-[CLOUD](../../docs/CLOUD.md) owns VM/access/credit operations;
-[D013](../../docs/decisions/D013-first-comparative-benchmark.md) owns the comparison;
-[D014](../../docs/decisions/D014-google-cloud-workspace.md) owns the provider.
-Old Terminal/Slurm/Home/shared-storage commands and their budgets are exclusively
-[historical](../../docs/history/E009_UCLOUD_OPERATIONS.md). Old receipts/prefix
-locators are preserved provenance, never GCP runtime paths.
+Updated: 2026-10-16. **All four owner-approved unchanged controls completed and are
+reviewed; the VM is TERMINATED.** [The execution receipt](controls-observed.json)
+preserves launch observations; [the independent review](controls-review.json) owns
+completion, acceptance, diagnostics, costs and limitations. No refit, retry, new
+resources, VM wake, external binner or retention extension occurred in this review.
+[CLOUD](../../docs/CLOUD.md) owns access/cost/retention; [D013](../../docs/decisions/D013-first-comparative-benchmark.md)
+owns the improvement decision and [D014](../../docs/decisions/D014-google-cloud-workspace.md)
+the provider. The failed original data DAG/source/journals remain intact; truth v2
+and accepted reusable data are separately admitted. Old UCloud commands remain in
+[history](../../docs/history/E009_UCLOUD_OPERATIONS.md).
 
-## Running unchanged-control phase, 2026-10-15
+## Accepted controls and local diagnostics, 2026-10-16
+
+Phase `controls-20261015T211004Z-cf7bf2a` completed at source
+`cf7bf2a17eab0c5a2f70999d04e766af1e14f98a`, immutable dev3/seed11/20epochs/cutoff500
+and fixed grouping. All 10 launcher stages, both paired commands and all 16 product
+stages exit0; no retry/resume. Independent receipt-chain/output/evidence checks,
+full DNA accounting and all 1,457,020 depth cells pass. All 11 product/default bytes,
+ordered samples 0,2,3,4,6,9,10,11,14,17 and both TNF matrices agree with locks.
+Native exact reload passes both pairs; Mac inference-only full-row replay differs
+by at most8.94e-8 (predeclared2e-6absolute/1e-5relative platform tolerance). No feature
+extraction, fit or reclustering ran locally. All native neighbor lists are retained;
+128 fixed label-blind ID-hash queries/arm independently match exact cosine/tie order.
+
+| Arm | Bins | Assigned bp | Bacterial 5-NN agreement | Whole-reference R95, bp weighted | Targets >=50% / >=90% |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| raw ten-depth | 2,947 | 109,487,277 | 68.630% | 4.5765% | 6 /1 |
+| learned ten-depth | 952 | 180,934,322 | 67.052% | 5.3911% | 13 /1 |
+| raw TNF-only | 3,213 | 99,909,686 | 43.069% | 3.9312% | 5 /1 |
+| learned TNF-only | 801 | 183,977,452 | 51.075% | 4.5597% | 11 /1 |
+
+All four retain 56,661 below500 contigs /22,035,454 bp as excluded, and every
+unassigned base. Geometry uses 25,543 attributable eligible bacterial queries;
+unknown neighbors stay unconfirmed in the five-neighbor denominator. Bacterial
+bp-weighted agreement is81.76→79.62% with depth,71.77→72.61% without. Overall
+unweighted77.18→81.84% with depth is driven by49,520 eukaryotic queries versus 25,543
+bacterial; it cannot be reported as a bacterial representation gain. Bacterial
+agreement falls in every ten-depth length stratum, most in2500–9999 bp. Primary
+restricted B3 recall nevertheless rises 18.48→37.61% with depth; that restricted
+quantity counts excluded/noise as zero and is separate from all-bin R95 purity.
+
+Frozen conservative R95 uses >=200kb bins, >=95% confirmed support, full 156 bacterial
+provided-reference denominators554,661,890 bp and duplicate-safe coordinate unions.
+Macro raw/learned: ten-depth4.9838→6.0264%, TNF-only4.5794→5.5352%. Only 102,790,342
+unique bacterial source bp are confirmed in the full assembly: **18.5321% weighted /
+19.2155% macro** source-availability ceiling; 38 targets have none,29 reach50%
+availability and17 reach90%. This truth-supported ceiling is not biological
+completeness or a guarantee that available bases can form a pure bin. N-quarantine
+7,653,205 bp /3.3034% and cross-genome ambiguity42,402,631 bp remain unassigned support.
+Whole provided MAG/scaffold lengths do not establish formal MIMAG quality.
+
+Actual pinned AMBER API executes in the existing E005 local runtime after an actual
+tiny native-export contract; all 20 f8b3a601 source-file hashes match before/after.
+It scores 125,848 attributable contigs/165,477,813 bp, including non-target lineages;
+19,854 contigs remain outside that view. Assigned-bin weighted purity in this
+restricted view falls91.80→85.41% with depth,84.21→66.31% without. These are not
+whole-DNA purity or whole-reference recovery. All 624 R95 genome records agree across
+the native-AMBER evaluator path and separate retained-output review. No required
+runtime/contract remains missing. The old unexecuted evaluator's column mismatch
+(`exclusion_reason` versus native `reason`) was repaired/tested without editing
+exports. A failed local checker attempt used zero-based bin names; its log remains,
+and the corrected +1 export check passes in a fresh local review. No science retry.
+
+**Recommendation: prepare one fixed-encoder marker-conflict splitting test.**
+Learning groups more source DNA but leaves mixing: learned ten-depth has 52/81
+>=200kb bins below95% confirmed dominant support; one 5.14 Mb bacterial-dominant bin
+contains support from 53 genomes with22.64% dominant support. Its largest 19.52 Mb
+bin is eukaryotic, not a bacterial MAG. The modest bacterial geometry loss makes
+new biological views/negative handling a credible alternative, but grouping-only
+splitting reuses embeddings and directly probes a visible loss without changing
+learning at the same time. No merge stage, new encoder, external reference or
+changed scientific partition runs in this review. First audit marker availability,
+freeze one label-blind algorithm and keep/abandon criteria, then separately approve
+any needed execution. Marker-negative/short/non-target DNA must remain accounted
+for. Freeze a second human-associated community/assembly plus overlap limits before
+any changed-run result; E009/E005 remain development evidence. No feature family or
+product change is decided here; CompleteBin and all external binners stay deferred.
+
+### Shutdown, retained evidence, costs and storage
+
+GCP independently confirms **TERMINATED**, start 21:10:04.207 UTC and
+stop 22:55:19.426 UTC October 15 (**00:55 October 16 Copenhagen**), no external IP,
+unchanged 8 CPU/32 GiB and 30/300 GiB disks. Guest `e009-controls/status` and private
+`completion.json` reportSUCCESS; closure binds actual launcher exit0 and result.
+Provider STOP fallback was 01:25 UTC October 16, so stop occurred well before it.
+The post-exit watcher snapshot remains only on the stopped disk; this collector
+had closed/uploaded before watcher exit detection. Serial-output API refuses the
+stopped instance. We do not claim a directly reviewed final watcher snapshot or
+wake the VM merely to obtain one; success comes from stage evidence, not shutdown.
+
+Private prefix `gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/`:
+control archive **484,269,399B**, SHA256
+`3b3f50ba91f6552fb7c8b7b1b83d3d1a5ddec7f8771631e2dec95cd45e7199c3`,
+**8,067 regular members /1,249,401,871 logical bytes**; all 8,066 inventory hashes pass.
+Closure **447,655B**, SHA256
+`50bd9ffda5a3fc4c01bf23e9d8a8065d9b97b9e2a86b76239e47699594b48725`,24members /
+3,240,687logical bytes; every extracted member matches the checksum-bound tar.
+Finder-created local .DS_Store files were absent from the tar and removed only
+from this fresh extraction before review. Original cloud/native evidence untouched.
+The native collection/readback and independent Mac checksum/member checks agree.
+
+The new local review is also privately backed up under the same prefix at
+`review-20261016/e009-controls-reviewed-20261016-v1.tar.gz`: **484,012B /77 regular
+members /2,632,002 logical bytes**, SHA256
+`aca28fbbc415576353e428f5a21ec6061100faf15e8be49db300f4f473fac764`. Upload/readback
+and every inventory member hash pass. It retains closed diagnostics, code, failure
+logs, local runtime and billing gates; no bulk DNA, credentials or environments.
+
+Measured provider uptime **1.7542275h /14.03382 allocated vCPUh**, gross
+**$0.478984 compute/IP** at freshly rechecked DKK E2 rates. Conservative export
+<=484,725,419B at $0.12/GiB is **$0.054172**; small operations/rounding reserve$0.05
+keeps the new phase under**$0.584**, below$2. Review used**$0 new VM compute**.
+The existing disks add~$0.07497 during that uptime, separately within original
+seven-day storage approval; do not double-charge a new provisioned disk. Welcome
+credit now **DKK1,936.57 Available through 2027-01-12**. Overview cost/savings 31.92/net0;
+credit-use 36.86 and unobserved pending usage are not a final phase invoice. Export
+was admitted before download; no free-tier allowance was assumed in gross prices.
+[Storage/export price](https://cloud.google.com/storage/pricing),
+[credit coverage](https://docs.cloud.google.com/free/docs/free-cloud-features).
+
+Inner launcher sampled minimum free**135.18 GiB**, maximum growth**2.78 GiB** through
+collection, against 25 GiB reserve/20 GiB growth. Outer guard also included conservative
+1.08 GiB preparation charge and private readbacks; final outer disk observations
+were not exported, so exact stopped-disk occupancy is not claimed. Largest native
+stage sampled process-tree RSS~1.06 GB; launcher tree~1.12 GB. Training uses ~7.53–7.54
+CPUs for94–98s; fixed clustering~2.00–2.34CPUs for1002–1191s; features~1.06 CPU for
+237–240s. These sampled process figures differ from charged8 vCPU uptime. Do not
+assume proportional speedup or a smaller-node forecast. Local inference/accounting
+review 118.91s/2.107 GB peak own RSS, native AMBER28.11s/0.585 GB; no training locally.
+
+Retained controls cost~**$0.00903/month** regional Standard object storage. Existing
+boot/work disks stay **$31.20/month gross even while stopped**. Retention review is
+**October 21**, not extended by this review; no cleanup, new capacity or automatic
+post-credit billing is authorized. Git holds compact summaries/code; bulk outputs,
+checkpoints and archives remain private/ignored. Current budget does not authorize
+the proposed next mechanism.
+
+## Launch observation retained as history, 2026-10-15
+
 
 **The four unchanged controls are launched once and left supervised per the owner's
 explicit instruction.** [The actual control receipt](controls-observed.json) owns
@@ -25,7 +150,7 @@ Parent heartbeats alone are not credited as scientific progress. No operational
 failure or competing scientific workload is observed; no control completion,
 recovery score or feature-family conclusion is claimed.
 
-VM start **21:10:04.207 UTC**, unchanged e2-standard8/32GiB and30/300GiB disks;
+VM start **21:10:04.207 UTC**, unchanged e2-standard8/32 GiB and 30/300 GiB disks;
 initial filesystem free148,207,960,064B, later146,857,697,280B. Fresh live paid-account
 Welcome credit **DKK1,942.67 Available**, expiry2027-01-12, certain-usage/net-pricing
 scope. October1–15 cost/savings27.89/net0, issued-credit consumption30.76; billing
@@ -38,16 +163,16 @@ Mac normal push and VM clean source **cf7bf2a17eab0c5a2f70999d04e766af1e14f98a**
 pass; GitHub access stays read-only. The admitted truth archive and exact dev3 wheel
 have byte-verified restore into a fresh phase directory. Private truth upload and
 SHA256 readback pass. Original data, DAG journals and truth artifact remain intact.
-Fresh complete owned Python3.12 CPU env, all16 distribution versions/import origins,
-all11 installed code/default hashes, pip check and actual CLI checks pass before
+Fresh complete owned Python3.12 CPU env, all 16 distribution versions/import origins,
+all 11 installed code/default hashes, pip check and actual CLI checks pass before
 community work. No tiny binner fit or earlier scientific contract was replayed.
 
 Parent service `e009-controls-20261015T211004Z.service` is PID1975, boot/start/command
 bound. Root timer `e009-controls-watchdog-20261015.timer` is active, checks every30s
 and requests clean shutdown after60s absence. Current Linux live/normal0/crash7
-contracts and actual held-parent matching pass before release at21:16:42.882UTC.
+contracts and actual held-parent matching pass before release at 21:16:42.882 UTC.
 The held parent retains identity while its one child launcher runs. Runtime/cgroup
-cleanup and outer budget include time since boot; phase end **October16 03:10
+cleanup and outer budget include time since boot; phase end **October 16 03:10
 Copenhagen**, independent providerSTOP **03:25**, automaticRestart=false. No restart,
 retry or limit extension. The existing 25-GiB reserve and20-GiB growth allowance
 remain, including a conservative1-GiB preparation charge before the first baseline.
@@ -72,7 +197,7 @@ verified; do not repeatedly poll until completion**. The exact following inspect
 prompt below supersedes the earlier launch prompt; no further execution approval
 is needed merely to let this already-approved phase continue.
 
-## Admitted truth v2 and current next boundary, 2026-10-15
+## Truth-v2 admission and then-prepared control boundary, 2026-10-15
 
 **Truth repair succeeded locally; no fit, score, new alignment or VM wake ran.**
 [The admission](truth-v2-admission.json) binds the new immutable artifact separately
@@ -295,7 +420,7 @@ SHA256 readback passed. Archive-only storage is about **$0.0046/month gross**.
 The phase receipt records the bucket locator, Mac verification and exact member
 inventory; an open log was not substituted for this immutable payload.
 
-### Strongest next step and separate fit approval
+### Earlier control proposal (executed once under later approval)
 
 The truth prerequisite is resolved. Recommend **only the unchanged four diagnostic
 controls**, after a new **$2 incremental gross approval**. Two serial product calls
@@ -343,11 +468,11 @@ the live credit/STOP/watchdog checks pass. Do not edit its `approved:false` now.
 
 ## Exact following-step prompt
 
-> Read AGENTS.md, PROJECT_INTENT.md, STATE, CLOUD, D013/D014 and E009 controls-observed.json. Inspect phase controls-20261015T211004Z-cf7bf2a without starting another job, changing resources, extending limits or retrying. Check GCP control-plane state, the e009-controls/status guest attribute and private completion.json under gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/. Do not infer success from shutdown. If it is still healthy and running, report the current stage and leave the verified watchdog/provider STOP intact; do not poll until completion.
+> Our goal is our own high-performing binner; E009 is development evidence, and expected mature-tool wins do not justify spending. Read AGENTS.md, PROJECT_INTENT.md, STATE, CLOUD, D013/D014, E009 operations and controls-review.json. Planning and bounded local tests only: prepare one fixed-encoder marker-conflict splitting experiment for the retained learned ten-depth output. Keep dev3, its features/embeddings, original partitions, seed/schedule, accepted data and admitted v2 truth immutable. No encoder fit, automatic merging, external binner, changed partition scoring, VM wake, provisioning, resize, retention extension or paid execution in this task.
 >
-> After verified shutdown, establish each control's actual exit/stage status from receipts and retained logs. Price measured VM uptime and storage separately from sampled CPU. Respect the existing new $2 ceiling and credit coverage; assess export cost before downloading archives. Verify archive and every retained member checksum. Do not wake the VM if evidence is missing; report the missing evidence/cost approval needed.
+> Audit the reviewed marker sources, licenses, versions, detection costs and availability on these contig lengths. Define one label-blind splitting algorithm; truth and taxonomy labels must not enter it and marker-negative/short/noise/non-target DNA must remain accounted for. Test actual tiny marker/output contracts locally when the runtime is available. Predeclare keep/modify/abandon criteria using fixed-purity full provided-reference recovery, grouping and length/origin diagnostics, not only aggregate neighbor purity. Account for the modest bacterial geometry loss, eukaryotic dominance of contig-weighted summaries, 18.5321% conservative bacterial source-availability ceiling and 3.3034% N-quarantine. Do not combine representation/view or merging changes with this test. If marker conflicts are too sparse or unsuitable, stop and recommend reassessment without substituting another mechanism automatically.
 >
-> If all four controls completed, independently review their full contig/sample axes, frozen seed/schedule/source, reload, complete raw/learned DNA accounting and actual resources. Use admitted conservative truth v2 and tested evaluator contracts for bounded local raw/learned geometry, grouping, length/origin and recovery diagnostics. Preserve all short/noise/excluded/non-target DNA and the 3.3034% N-quarantine limitation. Report any missing runtime/contract before claiming quality. Do not refit, tune, run an external binner, change architecture or decide product feature families from this one prototype/assembly. Recommend at most one next mechanism test and prospectively defined additional-data confirmation. Preserve failure evidence without automatic recovery. Update records, run relevant checks and commit; report costs, conclusions/limits and the exact next prompt.
+> Before any changed-run outcome, prospectively select and freeze a second human-associated read-derived community/assembly and its confirmation protocol, recording sample/genome overlap and development versus independent-evaluation limits. Do not relabel E009 or E005 as held out. Prepare a bounded restore-only launcher that consumes accepted artifacts without refitting/replaying them, estimates complete setup/marker/splitting/collection compute, RAM, disk, GCP price and credit eligibility, and gives an exact separate approval request if cloud execution is needed. Review storage retention before October 21; do not extend or delete accepted evidence automatically. Update records, run relevant local checks and commit; report readiness, unresolved contracts/costs and the exact execution-approval prompt. Keep all external binners, including CompleteBin, deferred.
 
 ## Evidence and sample choice
 

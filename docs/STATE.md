@@ -1,23 +1,43 @@
 # Current Research State
 
-Updated: 2026-10-15. This is the single current handoff.
+Updated: 2026-10-16. This is the single current handoff.
 
 ## Exact next step
 
-**Leave the healthy E009 control phase running under its verified watchdog.**
-[The control receipt](../experiments/E009-competitive-benchmark/controls-observed.json)
-records clean source `cf7bf2a`, the new $2 budget and all live gates. At 2026-10-15
-23:20 Copenhagen the ten-depth pair is preparing features; TNF-only is queued.
-Fresh Python3.12/CPU dependencies, exact installed dev3 bytes and CLI checks pass.
-The current-boot parent PID1975 is watched every30s; normal exit/crash detection is
-natively tested. Boot-relative phase limit ends **October16 03:10 Copenhagen**;
-provider STOP is **03:25**. No completed control or quality result is claimed.
-Per owner instruction, do not poll until completion. Next inspect control-plane,
-private completion receipts/checksums and shutdown, then review results locally.
-No VM wake/refit/retry, resource/model change or external binner is authorized.
-[Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md) owns the exact
-following prompt, budgets and records. [D013](decisions/D013-first-comparative-benchmark.md)
-keeps improvement evidence as the purpose; the unchanged prototype is the control.
+**Prepare one fixed-encoder marker-conflict splitting experiment; no execution yet.**
+The four unchanged E009 controls completed successfully and are independently
+reviewed in [the result](../experiments/E009-competitive-benchmark/controls-review.json).
+GCP confirms **TERMINATED at October 16 00:55 Copenhagen**; successful native stage
+receipts, private completion and all archive/member checks agree. No VM wake,
+refit, tuning, retry or external tool ran in this inspection.
+
+Learned ten-depth R95 is **5.3911% bp-weighted /6.0264% macro**, versus raw
+4.5765% /4.9838%; targets >=50% recovered rise **6→13**, >=90% stays **1**.
+These use all 156 bacterial targets /554,661,890 full provided bp and all-bin purity.
+Confirmed unique bacterial loci present in this assembly cover only **18.5321%**
+of that denominator; 38 targets have none. Native AMBER uses a separate restricted
+population. All full 145,702 contigs /231,678,157 bp and short/noise/non-target DNA pass
+independent export accounting; the **3.3034% N-quarantine** remains unchanged.
+
+The aggregate neighbor gain is not a bacterial improvement: eukaryotic queries
+outnumber bacterial queries, 49,520 versus 25,543. Bacterial ten-depth neighbor agreement
+falls 68.63→67.05% (bp weighted 81.76→79.62%), while primary restricted grouping recall
+rises 18.48→37.61%. Mixed learned bins remain a concrete loss (e.g. 5.14 Mb/53 supported
+genomes, 22.64% dominant support). A fixed-encoder marker-conflict **splitting-only**
+test can ask whether independent biological evidence repairs that loss. New views/
+negative handling remains a serious alternative; do not combine them now. Audit
+marker availability and predeclare the test first; no changed partition or fit is
+authorized. Freeze a second community/assembly and confirmation protocol before
+any changed-run outcome. One prototype/assembly cannot decide feature families.
+
+Measured uptime 1.7542275 h costs **~$0.479 gross compute/IP**, plus **<=~$0.0542** export
+and small storage/operations, within the new $2. Refreshed credit DKK1,936.57/expiry
+2027-01-12; invoice/pending usage still lag. Disks remain 30/300 GiB, **$31.20/month**
+while stopped; retention review **October 21**, no extension. The current provider
+policy remains 4.25 h STOP but grants no next start. [Operations](../experiments/E009-competitive-benchmark/OPERATIONS.md)
+owns detailed scope, costs, limitations and the exact next preparation prompt.
+CompleteBin and every external fit remain deferred. [D013](decisions/D013-first-comparative-benchmark.md)
+owns this mechanism recommendation; the immutable dev3 control remains unchanged.
 
 The data-only DAG at **5fec4e1d1700c64c4bdd9945bad4e116ade73c57 failed in its final
 truth parser** (`CIGAR/endpoints/block length disagree`). Ten minimap2 invocations
@@ -65,17 +85,14 @@ all 111 non-inventory hashes pass. The later control-phase credit gate passed an
 its private cloud upload/readback now verifies; the original input archive is also
 privately backed up. The truth derivation itself used no VM compute.
 
-The prepared [diagnostic proposal](../experiments/E009-competitive-benchmark/diagnostic-controls-plan.json)
-keeps dev3 source **5e54538d1799e8d2538621729400f33fbaf017b9**, seed 11, 20 epochs and
-fixed grouping: raw/learned TNF+ten-depth and TNF-only. A proposed **new $2
-incremental fit budget**, four-hour cumulative phase/4.25-hour provider STOP on the
-existing 8 CPU/32-GiB VM, is now explicitly owner-approved subject to live gates. The new parent passes eight Mac
-safety contracts with inert native children and verifies the exact retained wheel;
-fresh Linux setup/runtime probe remains before the first fit within that clock.
-This is a ceiling, not measured affordability. **No external tool is recommended in
-the immediate next step.** SemiBin2 remains at most one later conditional reference;
-CompleteBin/COMEBin full grid/SCGBinner remain deferred. Select one mechanism only
-after diagnostics and confirm improvements on prospectively chosen additional data.
+The [diagnostic controls](../experiments/E009-competitive-benchmark/diagnostic-controls-plan.json)
+kept dev3 source **5e54538d1799e8d2538621729400f33fbaf017b9**, seed 11, 20 epochs
+and fixed grouping. Their separate **$2** authorization, fresh Linux setup and
+assembly-scale execution are now complete, within the four-hour phase and
+4.25-hour provider STOP. [The reviewed result](../experiments/E009-competitive-benchmark/controls-review.json)
+owns actual affordability and diagnostics. No further fit is authorized. External
+tools remain deferred; prepare only the one mechanism above, then confirm any
+useful change on prospectively chosen additional data.
 
 The bounded review reused the existing VM/disks with a **one-hour provider STOP**,
 without provisioning/resizing or DAG/fit execution. Its stop and priced uptime are

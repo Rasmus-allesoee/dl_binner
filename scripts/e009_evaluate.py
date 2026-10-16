@@ -16,6 +16,36 @@ from e009_common import binding, write_json
 from e009_truth import recovery
 
 
+def read_partition(path, truth):
+    """Read the complete native dev3 export, refusing schema/state/axis drift.
+
+    Dev3 calls its exclusion/noise explanation ``reason``. An earlier unexecuted
+    E009 adapter incorrectly required ``exclusion_reason``. Keep exports intact;
+    validate the actual frozen product schema instead of rewriting the evidence.
+    """
+    with Path(path).open() as stream:
+        reader=csv.DictReader(stream,delimiter='\t')
+        if reader.fieldnames!=['contig_id','length','bin_id','status','reason']:
+            raise ValueError('Native dev3 assignment schema mismatch')
+        rows=list(reader)
+    if [r['contig_id'] for r in rows]!=truth['ordered_contig_ids']:
+        raise ValueError('Partition/truth axis mismatch')
+    assignments={}
+    for r in rows:
+        if None in r or any(v is None for v in r.values()):
+            raise ValueError('Malformed native assignment row')
+        if r['status'] not in ('assigned','unassigned','excluded'):
+            raise ValueError('Unknown assignment outcome')
+        if bool(r['bin_id'])!=(r['status']=='assigned'):
+            raise ValueError('Assignment state/bin mismatch')
+        if int(r['length'])!=truth['contigs'][r['contig_id']]['length']:
+            raise ValueError('Partition/truth length mismatch')
+        if bool(r['reason'])!=(r['status']!='assigned'):
+            raise ValueError('Assignment reason/state mismatch')
+        assignments[r['contig_id']]=r['bin_id'] or None
+    return rows,assignments
+
+
 def amber_view(contigs, assignments, source, output):
     """Use the pinned AMBER API on only attributable contigs, reporting its denominator."""
     output=Path(output);output.mkdir(parents=True,exist_ok=False)
@@ -51,15 +81,7 @@ def evaluate(truth_path, partition_path, targets_path, amber_source, output):
     """Evaluate one complete immutable partition with declared source taxonomy targets."""
     output=Path(output);output.mkdir(parents=True,exist_ok=False)
     truth=json.loads(Path(truth_path).read_text());targets=json.loads(Path(targets_path).read_text())
-    with Path(partition_path).open() as stream:rows=list(csv.DictReader(stream,delimiter='\t'))
-    if [row['contig_id'] for row in rows]!=truth['ordered_contig_ids']:raise ValueError('Partition/truth axis mismatch')
-    assignments={}
-    for row in rows:
-        if row['status'] not in ('assigned','unassigned','excluded'):raise ValueError('Unknown assignment outcome')
-        if bool(row['bin_id'])!=(row['status']=='assigned'):raise ValueError('Assignment state/bin mismatch')
-        if int(row['length'])!=truth['contigs'][row['contig_id']]['length']:raise ValueError('Partition/truth length mismatch')
-        if bool(row['exclusion_reason'])!=(row['status']=='excluded'):raise ValueError('Assignment exclusion reason mismatch')
-        assignments[row['contig_id']]=row['bin_id'] or None
+    _,assignments=read_partition(partition_path,truth)
     metric=recovery(truth['contigs'],assignments,truth['reference_axis'],targets['genome_lengths'],targets['targets'])
     amber=amber_view(truth['contigs'],assignments,amber_source,output/'AMBER')
     value={'truth':binding(truth_path),'partition':binding(partition_path),'targets':binding(targets_path),

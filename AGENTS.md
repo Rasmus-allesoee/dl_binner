@@ -170,6 +170,11 @@ development data, even when they originate from a public community benchmark.
 Preserve the accepted main implementation as the immutable comparator on a new
 research branch; do not quietly tune that baseline to the comparison's scores.
 
+Report lineage/origin and length denominators alongside community-wide diagnostic
+aggregates. A representation gain driven by non-target organisms is not evidence
+of improvement for the primary cellular targets. Compare the same query populations
+and retain unknown/non-target DNA in the appropriate full-population denominators.
+
 An experiment's contig-length cutoff or available feature set is not a product
 constraint. Keep relevant short-contig methods in design comparisons; use separate
 prospectively defined data/evaluation for unsupported ranges without automatically

@@ -1,10 +1,10 @@
 {
   "record": "E009",
-  "date": "2026-10-15",
-  "status": "unchanged controls RUNNING under new owner-approved $2 phase; v2 truth admitted; no quality result yet",
-  "scientific_outcome": "not assessed by a binner",
+  "date": "2026-10-16",
+  "status": "Four unchanged controls completed and reviewed; original data DAG remains failed with separately accepted data/truth",
+  "scientific_outcome": "development diagnostic results in controls-review.json; no product-feature-family or SOTA conclusion",
   "execution_ready": false,
-  "authorized_current_task": "one four-arm unchanged-control execution with verified credit/source/runtime/watchdog gates; leave healthy launcher supervised; local diagnostic evaluation after verified shutdown",
+  "authorized_current_task": "completed-control inspection and bounded local evaluation only; no refit, retry, VM wake or external binner",
   "dataset": {
     "name": "CAMI III Toy Longitudinal Human Gut",
     "read_modality": "short",

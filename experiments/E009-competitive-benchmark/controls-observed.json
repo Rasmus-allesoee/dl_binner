@@ -1,7 +1,7 @@
 {
   "record": "E009",
   "phase": "unchanged-controls-v1",
-  "status": "RUNNING: unchanged ten-depth pair preparing features under verified current-boot watchdog; no completed controls or quality result claimed",
+  "status": "COMPLETED SUCCESS; all four controls independently reviewed locally; VM TERMINATED",
   "owner_authorization": "current user message explicitly authorizes four unchanged controls under new $2 if stated gates pass; no polling to completion required after healthy supervised launch",
   "budget": {
     "incremental_gross_ceiling_USD": 2,
@@ -63,20 +63,6 @@
     "tests_passed": 2,
     "cases": "actual Linux /proc live, normal0 and crash7 fixtures; shutdown boundary substituted; no host halt during tests",
     "held_parent_real_live_check_passed": true
-  },
-  "latest": {
-    "observed_utc": "2026-10-15T21:20:13.981184+00:00",
-    "stage": "CONTROL_STAGE 09-ten-depth",
-    "native_step": "ten-depth 1/8 features; both partition outputs pending, TNF-only invocation queued",
-    "failure_reported": false,
-    "native_feature_PID": 2260,
-    "native_feature_CPU_time_seconds": 178,
-    "native_feature_CPU_percent_snapshot": 100,
-    "native_feature_RSS_KiB": 399212,
-    "interpretation": "CPU-active serial Python TNF feature preparation, not a blocked startup; 8 configured threads do not imply 8 CPUs here. No output-completion claim from parent heartbeat. No competing scientific workload observed.",
-    "filesystem_free_bytes": 146857697280,
-    "phase_result_present": false,
-    "outer_attempt_finished": false
   },
   "truth_cloud_copy": {
     "uri": "gs://dl-binner-archive-167650584170/e009/truth-v2-20261015-control-preparation-v1/e009-truth-v2-20261015-evidence-v1.tar.gz",
@@ -255,6 +241,81 @@
     "resolution": "serial log confirmed completed boot, then connected; no scientific stage retried"
   },
   "completed_controls_at_observation": 0,
-  "bin_quality_outcome": "not assessed; results must await completion/verified shutdown and independent local review",
-  "next": "leave healthy run supervised per owner; inspect provider/guest status and checksum-bound private completion artifacts after exit; no new fit, VM wake, resource change or automatic retry"
+  "bin_quality_outcome": "bounded supplied-reference development diagnostics in controls-review.json; not MAG quality/final evaluation",
+  "next": "Prepare one fixed-encoder marker-conflict splitting test; no new execution or external tool",
+  "launch_observation": {
+    "observed_utc": "2026-10-15T21:20:13.981184+00:00",
+    "stage": "CONTROL_STAGE 09-ten-depth",
+    "native_step": "ten-depth 1/8 features; both partition outputs pending, TNF-only invocation queued",
+    "failure_reported": false,
+    "native_feature_PID": 2260,
+    "native_feature_CPU_time_seconds": 178,
+    "native_feature_CPU_percent_snapshot": 100,
+    "native_feature_RSS_KiB": 399212,
+    "interpretation": "CPU-active serial Python TNF feature preparation, not a blocked startup; 8 configured threads do not imply 8 CPUs here. No output-completion claim from parent heartbeat. No competing scientific workload observed.",
+    "filesystem_free_bytes": 146857697280,
+    "phase_result_present": false,
+    "outer_attempt_finished": false
+  },
+  "latest": {
+    "reviewed_utc": "2026-10-16T09:53:43.636743+00:00",
+    "provider_state": "TERMINATED",
+    "four_controls_accepted": true,
+    "review": "controls-review.json"
+  },
+  "completed_controls": 4,
+  "verified_completion": {
+    "closure_archive": {
+      "bytes": 447655,
+      "readback_verified": true,
+      "sha256": "50bd9ffda5a3fc4c01bf23e9d8a8065d9b97b9e2a86b76239e47699594b48725",
+      "uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/closure.tar.gz"
+    },
+    "cloud_collection_verified": true,
+    "control_archive": {
+      "bytes": 484269399,
+      "readback_verified": true,
+      "sha256": "3b3f50ba91f6552fb7c8b7b1b83d3d1a5ddec7f8771631e2dec95cd45e7199c3",
+      "uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/controls-evidence.tar.gz"
+    },
+    "control_checksum": {
+      "bytes": 91,
+      "readback_verified": true,
+      "sha256": "1fd0c7229c041e82cc98aa15a8c528181a094e19c7846715358d627b0b3e8d52",
+      "uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/controls-evidence.tar.gz.sha256"
+    },
+    "elapsed_since_VM_start_seconds": 6098.258437871933,
+    "four_arms_completed": true,
+    "launcher_result": {
+      "bytes": 382425,
+      "sha256": "037b46c7cc70c3d3f5024a2840219bd755dc78a3513cc0787089bbc73b4185e4"
+    },
+    "launcher_status": {
+      "collection": {
+        "archive": {
+          "bytes": 484269399,
+          "sha256": "3b3f50ba91f6552fb7c8b7b1b83d3d1a5ddec7f8771631e2dec95cd45e7199c3"
+        },
+        "filename": "controls-evidence.tar.gz",
+        "inventory": {
+          "bytes": 1249815,
+          "sha256": "96590021933f884171e771c9862a2dcc33fa4b54590ba0aae6c284539c4c1ed1"
+        },
+        "logical_member_bytes": 1249401871,
+        "regular_members": 8067
+      },
+      "four_arms_completed": true,
+      "status": "SUCCESS",
+      "wall_seconds": 5684.669387903
+    },
+    "phase_id": "controls-20261015T211004Z-cf7bf2a",
+    "source_commit": "cf7bf2a17eab0c5a2f70999d04e766af1e14f98a",
+    "status": "SUCCESS"
+  },
+  "shutdown": {
+    "lastStopTimestamp": "2026-10-15T15:55:19.426-07:00",
+    "status": "TERMINATED",
+    "no_new_VM_wake": true,
+    "post_exit_snapshot_not_exported": true
+  }
 }

@@ -6,8 +6,9 @@ Status: **accepted, amended by the owner's performance/cost clarification**.
 V10/v14 tiny UCloud contracts are accepted; no successful work is repeated.
 The later 2026-10-14 owner message authorizes the prepared **data-only phase at
 5fec4e1d1700c64c4bdd9945bad4e116ade73c57**, subject to live credit/price/quota checks.
-It supersedes the all-shortlist execution plan: **no binner fits or E009 scores
-are authorized**. CompleteBin's full run is deferred. The ten-coverage, one-assembly
+It superseded the all-shortlist execution plan and excluded fits/scores from that
+data-only scope. A later separate $2 authorization executed only the four unchanged
+controls, now reviewed; no external run is authorized. CompleteBin's full run is deferred. The ten-coverage, one-assembly
 choice and immutable prototype source remain.
 [Operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md) owns exact
 axes/resources/costs and the following execution prompt.
@@ -144,7 +145,7 @@ hybrid comparison is a strong next candidate. Its complementary-information
 rationale is retained, not assumed proven. Do not adopt several mechanisms from
 one native-tool victory or tune to E009 and claim held-out validation.
 
-## Boundary and exact next action
+## Data-stage boundary retained as history (superseded October 16)
 
 E009 has no community fits/quality scores. V10/v14 native tiny contracts stay
 accepted without replay. The new acquisition/assembly/ten-sample depth/provisional
@@ -223,3 +224,43 @@ retain execution, failures and costs. Once healthy under its verified watchdog,
 leave a running launcher supervised and return to the owner without waiting for
 completion. Inspect accepted returned outputs after shutdown; select one mechanism
 from diagnostics, retaining development-data and one-assembly limits.
+
+## Reviewed unchanged controls and one next mechanism, 2026-10-16
+
+[The independent review](../../experiments/E009-competitive-benchmark/controls-review.json)
+accepts all four unchanged controls, exact native reload, all DNA/ordered axes,
+stage receipts and private checksum-bound evidence. The VM is independently stopped;
+measured compute/IP+conservative export~$0.5332 stays under the separate $2. The
+original data-only DAG remains failed, with separately admitted inputs/truth.
+
+Ten-depth learned improves full-denominator weighted R95 from 4.5765→5.3911% and
+>=50%-recovered bacterial targets6→13; only18.5321% of full provided bacterial
+reference bases have confirmed unique loci in this assembly. Overall geometry
+77.18→81.84% is eukaryotic-query dominated; bacterial agreement instead declines
+68.63→67.05% (bp weighted 81.76→79.62%). Thus neither a representation victory nor a
+pure grouping explanation follows. Learning increases primary restricted grouping
+recall 18.48→37.61%, while large mixed bins remain, including a 5.14 Mb bacterial-
+dominant bin with 53 supported genomes and 22.64% dominant support. Native restricted
+AMBER purity and full-reference purity/recovery remain separate.
+
+Choose **preparation of one fixed-encoder marker-conflict splitting test** first:
+independent biological conflicts could repair observed mixing without confounding
+a new encoder with new grouping. Audit marker availability before committing to
+execution; retain every marker-negative/short/noise/non-target base. No automatic
+merging, new views/negatives or encoder fit in this test. New biological views/
+negative construction remains a serious alternative because bacterial local
+geometry worsens modestly; no feature family is rejected. If markers are too
+sparse or a controlled split cannot improve fixed-purity full-denominator recovery,
+reassess rather than add mechanisms to rescue this one. This review does not claim
+that markers already help or authorize detection/splitting on the VM.
+
+Freeze a second human-associated read-derived community/assembly and overlap-aware
+confirmation protocol before any changed-run outcome; existing E009/E005 are
+already development evidence. Confirm a useful mechanism there before product
+adoption or broader claims. Keep main/dev3 immutable. All external binners,
+including SemiBin2 and CompleteBin, remain deferred: these diagnostics already
+supply a decision-changing question, without paying for an expected ranking.
+
+AGENTS now requires explicit lineage/origin and length denominators beside community
+aggregates; this durable interpretation rule follows the observed non-target
+dominance and preserves all unknown/non-target DNA.

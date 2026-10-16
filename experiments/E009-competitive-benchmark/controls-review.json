@@ -1,0 +1,2633 @@
+{
+  "record": "E009",
+  "phase_id": "controls-20261015T211004Z-cf7bf2a",
+  "reviewed_utc": "2026-10-16T09:53:43.636743+00:00",
+  "status": "ACCEPTED four unchanged controls; bounded local development diagnostics complete",
+  "execution_source_commit": "cf7bf2a17eab0c5a2f70999d04e766af1e14f98a",
+  "product_baseline": "5e54538d1799e8d2538621729400f33fbaf017b9 /0.1.0.dev3",
+  "provider": {
+    "status": "TERMINATED",
+    "lastStartTimestamp": "2026-10-15T14:10:04.207-07:00",
+    "lastStopTimestamp": "2026-10-15T15:55:19.426-07:00",
+    "maxRunDuration_seconds": 15300,
+    "no_external_IP": true,
+    "resources": "existing e2-standard-8/32GiB; existing30/300GiB disks",
+    "final_control_plane_recheck": "TERMINATED; unchanged start/stop/policy; no new wake",
+    "final_control_plane_receipt": {
+      "bytes": 409,
+      "sha256": "bbc882e53abfb742f31f10ab9ed9e377df33b37d0f7b4c6be0682d6e5447d0ab"
+    }
+  },
+  "completion": {
+    "closure_archive": {
+      "bytes": 447655,
+      "readback_verified": true,
+      "sha256": "50bd9ffda5a3fc4c01bf23e9d8a8065d9b97b9e2a86b76239e47699594b48725",
+      "uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/closure.tar.gz"
+    },
+    "cloud_collection_verified": true,
+    "control_archive": {
+      "bytes": 484269399,
+      "readback_verified": true,
+      "sha256": "3b3f50ba91f6552fb7c8b7b1b83d3d1a5ddec7f8771631e2dec95cd45e7199c3",
+      "uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/controls-evidence.tar.gz"
+    },
+    "control_checksum": {
+      "bytes": 91,
+      "readback_verified": true,
+      "sha256": "1fd0c7229c041e82cc98aa15a8c528181a094e19c7846715358d627b0b3e8d52",
+      "uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/controls-evidence.tar.gz.sha256"
+    },
+    "elapsed_since_VM_start_seconds": 6098.258437871933,
+    "four_arms_completed": true,
+    "launcher_result": {
+      "bytes": 382425,
+      "sha256": "037b46c7cc70c3d3f5024a2840219bd755dc78a3513cc0787089bbc73b4185e4"
+    },
+    "launcher_status": {
+      "collection": {
+        "archive": {
+          "bytes": 484269399,
+          "sha256": "3b3f50ba91f6552fb7c8b7b1b83d3d1a5ddec7f8771631e2dec95cd45e7199c3"
+        },
+        "filename": "controls-evidence.tar.gz",
+        "inventory": {
+          "bytes": 1249815,
+          "sha256": "96590021933f884171e771c9862a2dcc33fa4b54590ba0aae6c284539c4c1ed1"
+        },
+        "logical_member_bytes": 1249401871,
+        "regular_members": 8067
+      },
+      "four_arms_completed": true,
+      "status": "SUCCESS",
+      "wall_seconds": 5684.669387903
+    },
+    "phase_id": "controls-20261015T211004Z-cf7bf2a",
+    "source_commit": "cf7bf2a17eab0c5a2f70999d04e766af1e14f98a",
+    "status": "SUCCESS"
+  },
+  "archives": {
+    "control_archive": {
+      "bytes": 484269399,
+      "sha256": "3b3f50ba91f6552fb7c8b7b1b83d3d1a5ddec7f8771631e2dec95cd45e7199c3",
+      "regular_members": 8067,
+      "logical_bytes": 1249401871,
+      "every_extracted_member_matches_tar": true
+    },
+    "closure_archive": {
+      "bytes": 447655,
+      "sha256": "50bd9ffda5a3fc4c01bf23e9d8a8065d9b97b9e2a86b76239e47699594b48725",
+      "regular_members": 24,
+      "logical_bytes": 3240687,
+      "every_extracted_member_matches_tar": true
+    },
+    "local_unarchived_Finder_metadata_removed": [
+      ".DS_Store",
+      "ten-depth/.DS_Store",
+      "ten-depth/raw/.DS_Store",
+      "tnf-only/.DS_Store",
+      "tnf-only/raw/.DS_Store"
+    ],
+    "inventory_hashes_verified": 8066
+  },
+  "all_original_science_preserved": true,
+  "acceptance": {
+    "controls": 4,
+    "product_stage_receipts": 16,
+    "all_exit0": true,
+    "all_receipt_chains_and_evidence_hashes_match": true,
+    "full_contigs": 145702,
+    "full_bp": 231678157,
+    "eligible": 89041,
+    "coverage_samples": [
+      0,
+      2,
+      3,
+      4,
+      6,
+      9,
+      10,
+      11,
+      14,
+      17
+    ],
+    "matrix_cells_independently_equal": 1457020,
+    "same_TNF_bytes_both_pairs": true,
+    "exact_native_reload_both_pairs": true,
+    "local_all_row_checkpoint_inference": "inference only, CPU torch2.2.2/numpy1.26.4; max8.94e-8 versus native; predeclared atol2e-6/rtol1e-5",
+    "native_neighbors_complete": true,
+    "independent_exact_neighbors": 512,
+    "no_refit_recluster_or_feature_extraction": true,
+    "truth_outside_native_training": true
+  },
+  "native_resources": {
+    "ten-depth": {
+      "all_DNA_axis_hashes_match": true,
+      "all_depth_cells_match": true,
+      "config": {
+        "batch_size": 64,
+        "epochs": 20,
+        "hidden": 128,
+        "inference_batch_size": 64,
+        "learning_rate": 0.001,
+        "mask_probability": 0.1,
+        "output": 64,
+        "seed": 11,
+        "temperature": 0.2,
+        "weight_decay": 0.01
+      },
+      "native_reload_exact": true,
+      "stages": {
+        "features": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 520642560,
+          "sampled_average_cpus": 1.069214894451259,
+          "sampled_cpu_seconds": 253.46,
+          "stop_reason": null,
+          "wall_seconds": 237.05244036100004
+        },
+        "learned-cluster": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 827338752,
+          "sampled_average_cpus": 2.0045264488424652,
+          "sampled_cpu_seconds": 2386.7400000000002,
+          "stop_reason": null,
+          "wall_seconds": 1190.675234731
+        },
+        "learned-embed": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 823713792,
+          "sampled_average_cpus": 1.8395041800433054,
+          "sampled_cpu_seconds": 7.159999999999997,
+          "stop_reason": null,
+          "wall_seconds": 3.89235321000001
+        },
+        "learned-export": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 662413312,
+          "sampled_average_cpus": 1.1989261134633427,
+          "sampled_cpu_seconds": 6.409999999999997,
+          "stop_reason": null,
+          "wall_seconds": 5.346451235000131
+        },
+        "raw-cluster": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 1061666816,
+          "sampled_average_cpus": 2.339923215333431,
+          "sampled_cpu_seconds": 2361.41,
+          "stop_reason": null,
+          "wall_seconds": 1009.18268793
+        },
+        "raw-embed": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 548974592,
+          "sampled_average_cpus": 1.2095178703856562,
+          "sampled_cpu_seconds": 5.199999999999999,
+          "stop_reason": null,
+          "wall_seconds": 4.299233709000077
+        },
+        "raw-export": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 659480576,
+          "sampled_average_cpus": 1.17758309667597,
+          "sampled_cpu_seconds": 5.790000000000006,
+          "stop_reason": null,
+          "wall_seconds": 4.916850467999893
+        },
+        "train": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 880009216,
+          "sampled_average_cpus": 7.5298450069133525,
+          "sampled_cpu_seconds": 740.2199999999999,
+          "stop_reason": null,
+          "wall_seconds": 98.30481229299994
+        }
+      }
+    },
+    "tnf-only": {
+      "all_DNA_axis_hashes_match": true,
+      "all_depth_cells_match": false,
+      "config": {
+        "batch_size": 64,
+        "epochs": 20,
+        "hidden": 128,
+        "inference_batch_size": 64,
+        "learning_rate": 0.001,
+        "mask_probability": 0.1,
+        "output": 64,
+        "seed": 11,
+        "temperature": 0.2,
+        "weight_decay": 0.01
+      },
+      "native_reload_exact": true,
+      "stages": {
+        "features": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 495706112,
+          "sampled_average_cpus": 1.0618592754002607,
+          "sampled_cpu_seconds": 254.67999999999998,
+          "stop_reason": null,
+          "wall_seconds": 239.84345750900002
+        },
+        "learned-cluster": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 832360448,
+          "sampled_average_cpus": 2.0764959999862542,
+          "sampled_cpu_seconds": 2304.65,
+          "stop_reason": null,
+          "wall_seconds": 1109.8745193899995
+        },
+        "learned-embed": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 907632640,
+          "sampled_average_cpus": 1.860061766226783,
+          "sampled_cpu_seconds": 6.8500000000000085,
+          "stop_reason": null,
+          "wall_seconds": 3.6826734059995943
+        },
+        "learned-export": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 647766016,
+          "sampled_average_cpus": 1.1934989792335122,
+          "sampled_cpu_seconds": 6.389999999999986,
+          "stop_reason": null,
+          "wall_seconds": 5.354005416999826
+        },
+        "raw-cluster": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 1034375168,
+          "sampled_average_cpus": 2.327809569214465,
+          "sampled_cpu_seconds": 2331.71,
+          "stop_reason": null,
+          "wall_seconds": 1001.67557984
+        },
+        "raw-embed": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 597614592,
+          "sampled_average_cpus": 1.209046972940576,
+          "sampled_cpu_seconds": 4.920000000000002,
+          "stop_reason": null,
+          "wall_seconds": 4.069320803999744
+        },
+        "raw-export": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 647168000,
+          "sampled_average_cpus": 1.1799748672502535,
+          "sampled_cpu_seconds": 5.810000000000002,
+          "stop_reason": null,
+          "wall_seconds": 4.923833685999853
+        },
+        "train": {
+          "exit_code": 0,
+          "peak_sampled_rss_bytes": 758362112,
+          "sampled_average_cpus": 7.541903300617103,
+          "sampled_cpu_seconds": 706.5699999999999,
+          "stop_reason": null,
+          "wall_seconds": 93.68590020800002
+        }
+      }
+    }
+  },
+  "local_resources": {
+    "inference_only_no_fit_or_recluster": true,
+    "peak_own_RSS_bytes": 2106597376,
+    "platform": "darwin",
+    "process_CPU_seconds": 120.66252899999999,
+    "threads": 4,
+    "wall_seconds": 118.90998413402122
+  },
+  "AMBER_local_resources": {
+    "peak_own_RSS_bytes": 585437184,
+    "process_CPU_seconds": 21.6057,
+    "source": {
+      "bytes": 5554,
+      "sha256": "3877a759246e22165181a1a2565399eee4b3de2ccbdab2794827ead5c055a487"
+    },
+    "wall_seconds": 28.111217179044615
+  },
+  "local_runtime": {
+    "review": "existing E004 env-v1 Python3.10 /torch2.2.2/numpy1.26.4/networkx3.4.2; explicit source path only after all11 immutable package/default hashes pass; no install",
+    "AMBER": "existing E005 env-amber-local Python3.10 /numpy2.0.1/pandas2.2.2; real API imports and tiny actual native-export contract pass; all20 f8b3a601 source files match before/after",
+    "missing_required_runtime_or_contract": null
+  },
+  "assembly_ceiling": {
+    "primary_targets": 156,
+    "provided_reference_bp": 554661890,
+    "confirmed_unique_source_bp": 102790342,
+    "bp_weighted_confirmed_source_fraction": 0.18532072214299777,
+    "macro_confirmed_source_fraction": 0.19215509574629105,
+    "targets_without_confirmed_unique_loci": 38,
+    "targets_at_least50pct_available": 29,
+    "targets_at_least90pct_available": 17,
+    "scope": "conservative unique-locus availability in this assembled/truth-supported DNA; not biological completeness or attainable purity guarantee"
+  },
+  "arms": {
+    "ten-depth-learned": {
+      "assignments": {
+        "bytes": 5758651,
+        "sha256": "1b5035a00ee1668bdc80ee2edde485f2fdc982ae30708c8c439a57cd39bff0e5"
+      },
+      "partition": {
+        "bytes": 18446914,
+        "sha256": "f468381036b1802cf7291142369da00817a7f1a684f2a82cbf53d22cfdfbba38"
+      },
+      "bins": 952,
+      "statuses": {
+        "assigned": {
+          "bp": 180934322,
+          "contigs": 77269
+        },
+        "excluded": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "bp": 28708381,
+          "contigs": 11772
+        }
+      },
+      "length_accounting": [
+        {
+          "bp": 22035454,
+          "contigs": 56661,
+          "lower_bp": 1,
+          "reasons": {
+            "below_min_length": 56661
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 22035454,
+              "contigs": 56661
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 500
+        },
+        {
+          "bp": 22098500,
+          "contigs": 35898,
+          "lower_bp": 500,
+          "reasons": {
+            "community_below_min_size": 1216,
+            "isolated_graph": 3976
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 18917184,
+              "contigs": 30706
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 3181316,
+              "contigs": 5192
+            }
+          },
+          "upper_bp": 768
+        },
+        {
+          "bp": 13986706,
+          "contigs": 16024,
+          "lower_bp": 768,
+          "reasons": {
+            "community_below_min_size": 451,
+            "isolated_graph": 1551
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 12247693,
+              "contigs": 14022
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 1739013,
+              "contigs": 2002
+            }
+          },
+          "upper_bp": 1000
+        },
+        {
+          "bp": 40505273,
+          "contigs": 27307,
+          "lower_bp": 1000,
+          "reasons": {
+            "community_below_min_size": 806,
+            "isolated_graph": 2429
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 35732124,
+              "contigs": 24072
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 4773149,
+              "contigs": 3235
+            }
+          },
+          "upper_bp": 2500
+        },
+        {
+          "bp": 32866110,
+          "contigs": 7728,
+          "lower_bp": 2500,
+          "reasons": {
+            "community_below_min_size": 237,
+            "isolated_graph": 725
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 28664552,
+              "contigs": 6766
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 4201558,
+              "contigs": 962
+            }
+          },
+          "upper_bp": 10000
+        },
+        {
+          "bp": 100186114,
+          "contigs": 2084,
+          "lower_bp": 10000,
+          "reasons": {
+            "community_below_min_size": 104,
+            "isolated_graph": 277
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 85372769,
+              "contigs": 1703
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 14813345,
+              "contigs": 381
+            }
+          },
+          "upper_bp": null
+        }
+      ],
+      "neighbor_geometry": {
+        "attributable_eligible_queries": 76010,
+        "nn_purity": 0.8184081041968162,
+        "nn_purity_bp_weighted": 0.8191101246364765,
+        "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+      },
+      "geometry_by_lineage": {
+        "bacterial": {
+          "attributable_bp": 94606287,
+          "b3_precision": 0.622864062388502,
+          "b3_precision_sum": 58926856.248312525,
+          "b3_recall": 0.3760684401884991,
+          "b3_recall_sum": 35578438.78411548,
+          "nn_purity": 0.6705242140703911,
+          "nn_purity_bp_weighted": 0.7961543472415374,
+          "queries": 25543,
+          "query_bp": 88261843,
+          "same": 85636,
+          "same_weighted_sum": 70270050.00000006
+        },
+        "eukaryotic": {
+          "attributable_bp": 67037217,
+          "b3_precision": 0.6302023145726008,
+          "b3_precision_sum": 42247009.3159057,
+          "b3_recall": 0.24454653317946548,
+          "b3_recall_sum": 16393719.011349527,
+          "nn_purity": 0.903707592891761,
+          "nn_purity_bp_weighted": 0.8908125239517064,
+          "queries": 49520,
+          "query_bp": 54129752,
+          "same": 223758,
+          "same_weighted_sum": 48219460.999999925
+        },
+        "other": {
+          "attributable_bp": 214249,
+          "b3_precision": 0.046185795099858935,
+          "b3_precision_sum": 9895.260414349677,
+          "b3_recall": 0.8696510809124118,
+          "b3_recall_sum": 186321.87443440332,
+          "nn_purity": 0.04,
+          "nn_purity_bp_weighted": 0.0045791252085563,
+          "queries": 15,
+          "query_bp": 213971,
+          "same": 3,
+          "same_weighted_sum": 979.8
+        },
+        "viral": {
+          "attributable_bp": 3620060,
+          "b3_precision": 0.30538437060155044,
+          "b3_precision_sum": 1105509.7446398486,
+          "b3_recall": 0.6290117702361057,
+          "b3_recall_sum": 2277060.3489609165,
+          "nn_purity": 0.3517167381974249,
+          "nn_purity_bp_weighted": 0.3298530914256273,
+          "queries": 932,
+          "query_bp": 3435470,
+          "same": 1639,
+          "same_weighted_sum": 1133200.4
+        }
+      },
+      "length_geometry_by_lineage": {
+        "bacterial": {
+          "1": {
+            "attributable_bp": 6344444,
+            "nn_purity": null
+          },
+          "500": {
+            "attributable_bp": 5937015,
+            "nn_purity": 0.6327152180669222,
+            "queries": 9653,
+            "same": 30538
+          },
+          "768": {
+            "attributable_bp": 3739840,
+            "nn_purity": 0.6607843137254902,
+            "queries": 4284,
+            "same": 14154
+          },
+          "1000": {
+            "attributable_bp": 11286563,
+            "nn_purity": 0.691395132331427,
+            "queries": 7519,
+            "same": 25993
+          },
+          "2500": {
+            "attributable_bp": 12922309,
+            "nn_purity": 0.6939894551845343,
+            "queries": 2845,
+            "same": 9872
+          },
+          "10000": {
+            "attributable_bp": 54376116,
+            "nn_purity": 0.8178743961352657,
+            "queries": 1242,
+            "same": 5079
+          }
+        },
+        "eukaryotic": {
+          "1": {
+            "attributable_bp": 12907465,
+            "nn_purity": null
+          },
+          "500": {
+            "attributable_bp": 13617821,
+            "nn_purity": 0.8852982408537964,
+            "queries": 22113,
+            "same": 97883
+          },
+          "768": {
+            "attributable_bp": 8622035,
+            "nn_purity": 0.905512288864165,
+            "queries": 9887,
+            "same": 44764
+          },
+          "1000": {
+            "attributable_bp": 22058451,
+            "nn_purity": 0.9240817399303503,
+            "queries": 15219,
+            "same": 70318
+          },
+          "2500": {
+            "attributable_bp": 8232449,
+            "nn_purity": 0.9477072310405644,
+            "queries": 2268,
+            "same": 10747
+          },
+          "10000": {
+            "attributable_bp": 1598996,
+            "nn_purity": 0.2787878787878788,
+            "queries": 33,
+            "same": 46
+          }
+        },
+        "other": {
+          "1": {
+            "attributable_bp": 278,
+            "nn_purity": null
+          },
+          "768": {
+            "attributable_bp": 824,
+            "nn_purity": 0.0,
+            "queries": 1,
+            "same": 0
+          },
+          "1000": {
+            "attributable_bp": 13948,
+            "nn_purity": 0.075,
+            "queries": 8,
+            "same": 3
+          },
+          "2500": {
+            "attributable_bp": 27707,
+            "nn_purity": 0.0,
+            "queries": 4,
+            "same": 0
+          },
+          "10000": {
+            "attributable_bp": 171492,
+            "nn_purity": 0.0,
+            "queries": 2,
+            "same": 0
+          }
+        },
+        "viral": {
+          "1": {
+            "attributable_bp": 184590,
+            "nn_purity": null
+          },
+          "500": {
+            "attributable_bp": 178915,
+            "nn_purity": 0.24636678200692042,
+            "queries": 289,
+            "same": 356
+          },
+          "768": {
+            "attributable_bp": 123135,
+            "nn_purity": 0.2814285714285714,
+            "queries": 140,
+            "same": 197
+          },
+          "1000": {
+            "attributable_bp": 426664,
+            "nn_purity": 0.38571428571428573,
+            "queries": 280,
+            "same": 540
+          },
+          "2500": {
+            "attributable_bp": 786264,
+            "nn_purity": 0.5269662921348315,
+            "queries": 178,
+            "same": 469
+          },
+          "10000": {
+            "attributable_bp": 1920492,
+            "nn_purity": 0.3422222222222222,
+            "queries": 45,
+            "same": 77
+          }
+        }
+      },
+      "origin_bp_by_status": {
+        "assigned": {
+          "all_bp": 180934322.0,
+          "ambiguous_query_bp": 32778115.0,
+          "bacterial_confirmed_bp": 82891287.0,
+          "eukaryotic_confirmed_bp": 52478256.0,
+          "nn_quarantined_query_bp": 6515841.0,
+          "other_confirmed_bp": 269507.0,
+          "unsupported_query_bp": 2612671.0,
+          "viral_confirmed_bp": 3388645.0
+        },
+        "excluded": {
+          "all_bp": 22035454.0,
+          "ambiguous_query_bp": 1476971.0,
+          "bacterial_confirmed_bp": 6490495.0,
+          "eukaryotic_confirmed_bp": 13281397.0,
+          "nn_quarantined_query_bp": 4987.0,
+          "other_confirmed_bp": 418.0,
+          "unsupported_query_bp": 585103.0,
+          "viral_confirmed_bp": 196083.0
+        },
+        "unassigned": {
+          "all_bp": 28708381.0,
+          "ambiguous_query_bp": 8147545.0,
+          "bacterial_confirmed_bp": 14120858.0,
+          "eukaryotic_confirmed_bp": 4495082.0,
+          "nn_quarantined_query_bp": 1132377.0,
+          "other_confirmed_bp": 18514.0,
+          "unsupported_query_bp": 288663.0,
+          "viral_confirmed_bp": 505342.0
+        }
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.42940301235790224,
+        "precision": 0.6181449265906885,
+        "recall": 0.32895975014403,
+        "scope": "bp-weighted attributable contigs only; noise/excluded zero, unknown bin DNA not in this restricted denominator"
+      },
+      "recovery": {
+        "at_least_50_percent": 13,
+        "at_least_90_percent": 1,
+        "bp_weighted_R95": 0.05391142881657148,
+        "macro_R95": 0.06026422988076384,
+        "targets": 156,
+        "targets_with_any_passing_bin": 18
+      },
+      "AMBER": {
+        "claim_limit": "restricted alignment-supported contig population; not whole-reference recovery",
+        "native_api_executed": true,
+        "predicted_contigs": 66763,
+        "scorable_bp": 165477813,
+        "scorable_contigs": 125848,
+        "unscored_contigs": 19854,
+        "assigned_bp": 128582532,
+        "bp_weighted_assigned_bin_purity": 0.8540652551467878
+      },
+      "geometry_oracle": {
+        "selection": "first128 SHA256(contigID), label blind",
+        "verified_queries": 128,
+        "whole_geometry_refit_or_recluster": false
+      },
+      "cross_platform_reload_max_absolute_error": 8.940696716308594e-08,
+      "grouping_diagnostics": {
+        "largest_bins": [
+          {
+            "bin_id": "bin_000080",
+            "bp": 19517797,
+            "dominant_genome": "fASV196.1",
+            "dominant_confirmed_bp": 2502851,
+            "confirmed_purity": 0.12823429816387577,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 5
+          },
+          {
+            "bin_id": "bin_000002",
+            "bp": 9044265,
+            "dominant_genome": "fASV201.3",
+            "dominant_confirmed_bp": 7833663,
+            "confirmed_purity": 0.8661470003366775,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 40
+          },
+          {
+            "bin_id": "bin_000001",
+            "bp": 8143615,
+            "dominant_genome": "fASV198.4",
+            "dominant_confirmed_bp": 8004403,
+            "confirmed_purity": 0.9829053804729226,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 15
+          },
+          {
+            "bin_id": "bin_000005",
+            "bp": 7794366,
+            "dominant_genome": "fASV201.3",
+            "dominant_confirmed_bp": 6692961,
+            "confirmed_purity": 0.8586921630316051,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 37
+          },
+          {
+            "bin_id": "bin_000007",
+            "bp": 6489725,
+            "dominant_genome": "fASV1.1",
+            "dominant_confirmed_bp": 5719611,
+            "confirmed_purity": 0.8813333384696578,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 54
+          },
+          {
+            "bin_id": "bin_000019",
+            "bp": 5940391,
+            "dominant_genome": "fASV197.5",
+            "dominant_confirmed_bp": 5582227,
+            "confirmed_purity": 0.9397069990847404,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 23
+          },
+          {
+            "bin_id": "bin_000017",
+            "bp": 5144663,
+            "dominant_genome": "ASV406.4",
+            "dominant_confirmed_bp": 1164770,
+            "confirmed_purity": 0.2264035564622989,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 53
+          },
+          {
+            "bin_id": "bin_000009",
+            "bp": 4598605,
+            "dominant_genome": "fASV197.5",
+            "dominant_confirmed_bp": 4374014,
+            "confirmed_purity": 0.9511610586253875,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 25
+          },
+          {
+            "bin_id": "bin_000023",
+            "bp": 3945388,
+            "dominant_genome": "ASV507.1",
+            "dominant_confirmed_bp": 1235571,
+            "confirmed_purity": 0.3131684386934821,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 16
+          },
+          {
+            "bin_id": "bin_000013",
+            "bp": 3928219,
+            "dominant_genome": "ASV729.15",
+            "dominant_confirmed_bp": 2350139,
+            "confirmed_purity": 0.5982708703358952,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 50
+          }
+        ],
+        "bins_at_least_200kb": 81,
+        "large_bins_below_95pct_confirmed_purity": 52,
+        "large_bins_primary_bacterial_dominant": 55,
+        "targets_best_source_bin_below_95pct": 82
+      }
+    },
+    "ten-depth-raw": {
+      "assignments": {
+        "bytes": 6098773,
+        "sha256": "807a9425a5db7879157e467ff53df6a8c258e0dfff985228cdf18c696f3457de"
+      },
+      "partition": {
+        "bytes": 19210701,
+        "sha256": "9ad6c9cf400030a1bcbe3212facfc7ecdd7b9969ce92ef235a066f54c1771b85"
+      },
+      "bins": 2947,
+      "statuses": {
+        "assigned": {
+          "bp": 109487277,
+          "contigs": 32202
+        },
+        "excluded": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "bp": 100155426,
+          "contigs": 56839
+        }
+      },
+      "length_accounting": [
+        {
+          "bp": 22035454,
+          "contigs": 56661,
+          "lower_bp": 1,
+          "reasons": {
+            "below_min_length": 56661
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 22035454,
+              "contigs": 56661
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 500
+        },
+        {
+          "bp": 22098500,
+          "contigs": 35898,
+          "lower_bp": 500,
+          "reasons": {
+            "community_below_min_size": 4164,
+            "isolated_graph": 20377
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 7038877,
+              "contigs": 11357
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 15059623,
+              "contigs": 24541
+            }
+          },
+          "upper_bp": 768
+        },
+        {
+          "bp": 13986706,
+          "contigs": 16024,
+          "lower_bp": 768,
+          "reasons": {
+            "community_below_min_size": 1851,
+            "isolated_graph": 8252
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 5174022,
+              "contigs": 5921
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 8812684,
+              "contigs": 10103
+            }
+          },
+          "upper_bp": 1000
+        },
+        {
+          "bp": 40505273,
+          "contigs": 27307,
+          "lower_bp": 1000,
+          "reasons": {
+            "community_below_min_size": 2941,
+            "isolated_graph": 13542
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 15988323,
+              "contigs": 10824
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 24516950,
+              "contigs": 16483
+            }
+          },
+          "upper_bp": 2500
+        },
+        {
+          "bp": 32866110,
+          "contigs": 7728,
+          "lower_bp": 2500,
+          "reasons": {
+            "community_below_min_size": 686,
+            "isolated_graph": 4112
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 12734408,
+              "contigs": 2930
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 20131702,
+              "contigs": 4798
+            }
+          },
+          "upper_bp": 10000
+        },
+        {
+          "bp": 100186114,
+          "contigs": 2084,
+          "lower_bp": 10000,
+          "reasons": {
+            "community_below_min_size": 144,
+            "isolated_graph": 770
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 68551647,
+              "contigs": 1170
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 31634467,
+              "contigs": 914
+            }
+          },
+          "upper_bp": null
+        }
+      ],
+      "neighbor_geometry": {
+        "attributable_eligible_queries": 76010,
+        "nn_purity": 0.7717510853835021,
+        "nn_purity_bp_weighted": 0.8151322180431528,
+        "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+      },
+      "geometry_by_lineage": {
+        "bacterial": {
+          "attributable_bp": 94606287,
+          "b3_precision": 0.47899338993805535,
+          "b3_precision_sum": 45315786.11958258,
+          "b3_recall": 0.18475766501853053,
+          "b3_recall_sum": 17479236.68219296,
+          "nn_purity": 0.6863015307520651,
+          "nn_purity_bp_weighted": 0.8175817493409916,
+          "queries": 25543,
+          "query_bp": 88261843,
+          "same": 87651,
+          "same_weighted_sum": 72161271.99999996
+        },
+        "eukaryotic": {
+          "attributable_bp": 67037217,
+          "b3_precision": 0.303817452477963,
+          "b3_precision_sum": 20367076.490152393,
+          "b3_recall": 0.007590832291030826,
+          "b3_recall_sum": 508868.27150444064,
+          "nn_purity": 0.8224232633279484,
+          "nn_purity_bp_weighted": 0.8406673875025327,
+          "queries": 49520,
+          "query_bp": 54129752,
+          "same": 203632,
+          "same_weighted_sum": 45505117.199999996
+        },
+        "other": {
+          "attributable_bp": 214249,
+          "b3_precision": 0.15694922466694,
+          "b3_precision_sum": 33626.21443566723,
+          "b3_recall": 0.36483725665690114,
+          "b3_recall_sum": 78166.01740148441,
+          "nn_purity": 0.04,
+          "nn_purity_bp_weighted": 0.011474452145384187,
+          "queries": 15,
+          "query_bp": 213971,
+          "same": 3,
+          "same_weighted_sum": 2455.2
+        },
+        "viral": {
+          "attributable_bp": 3620060,
+          "b3_precision": 0.42401305934654293,
+          "b3_precision_sum": 1534952.7156180462,
+          "b3_recall": 0.4717439628438031,
+          "b3_recall_sum": 1707741.4501323379,
+          "nn_purity": 0.4330472103004292,
+          "nn_purity_bp_weighted": 0.3999188466206953,
+          "queries": 932,
+          "query_bp": 3435470,
+          "same": 2018,
+          "same_weighted_sum": 1373909.2000000002
+        }
+      },
+      "length_geometry_by_lineage": {
+        "bacterial": {
+          "1": {
+            "attributable_bp": 6344444,
+            "nn_purity": null
+          },
+          "500": {
+            "attributable_bp": 5937015,
+            "nn_purity": 0.637708484408992,
+            "queries": 9653,
+            "same": 30779
+          },
+          "768": {
+            "attributable_bp": 3739840,
+            "nn_purity": 0.6660597572362278,
+            "queries": 4284,
+            "same": 14267
+          },
+          "1000": {
+            "attributable_bp": 11286563,
+            "nn_purity": 0.7093496475595159,
+            "queries": 7519,
+            "same": 26668
+          },
+          "2500": {
+            "attributable_bp": 12922309,
+            "nn_purity": 0.7476274165202109,
+            "queries": 2845,
+            "same": 10635
+          },
+          "10000": {
+            "attributable_bp": 54376116,
+            "nn_purity": 0.8537842190016103,
+            "queries": 1242,
+            "same": 5302
+          }
+        },
+        "eukaryotic": {
+          "1": {
+            "attributable_bp": 12907465,
+            "nn_purity": null
+          },
+          "500": {
+            "attributable_bp": 13617821,
+            "nn_purity": 0.7535929091484647,
+            "queries": 22113,
+            "same": 83321
+          },
+          "768": {
+            "attributable_bp": 8622035,
+            "nn_purity": 0.8272276727015273,
+            "queries": 9887,
+            "same": 40894
+          },
+          "1000": {
+            "attributable_bp": 22058451,
+            "nn_purity": 0.9004402391747158,
+            "queries": 15219,
+            "same": 68519
+          },
+          "2500": {
+            "attributable_bp": 8232449,
+            "nn_purity": 0.9567901234567902,
+            "queries": 2268,
+            "same": 10850
+          },
+          "10000": {
+            "attributable_bp": 1598996,
+            "nn_purity": 0.2909090909090909,
+            "queries": 33,
+            "same": 48
+          }
+        },
+        "other": {
+          "1": {
+            "attributable_bp": 278,
+            "nn_purity": null
+          },
+          "768": {
+            "attributable_bp": 824,
+            "nn_purity": 0.0,
+            "queries": 1,
+            "same": 0
+          },
+          "1000": {
+            "attributable_bp": 13948,
+            "nn_purity": 0.05,
+            "queries": 8,
+            "same": 2
+          },
+          "2500": {
+            "attributable_bp": 27707,
+            "nn_purity": 0.05,
+            "queries": 4,
+            "same": 1
+          },
+          "10000": {
+            "attributable_bp": 171492,
+            "nn_purity": 0.0,
+            "queries": 2,
+            "same": 0
+          }
+        },
+        "viral": {
+          "1": {
+            "attributable_bp": 184590,
+            "nn_purity": null
+          },
+          "500": {
+            "attributable_bp": 178915,
+            "nn_purity": 0.32041522491349483,
+            "queries": 289,
+            "same": 463
+          },
+          "768": {
+            "attributable_bp": 123135,
+            "nn_purity": 0.33285714285714285,
+            "queries": 140,
+            "same": 233
+          },
+          "1000": {
+            "attributable_bp": 426664,
+            "nn_purity": 0.4742857142857143,
+            "queries": 280,
+            "same": 664
+          },
+          "2500": {
+            "attributable_bp": 786264,
+            "nn_purity": 0.6269662921348315,
+            "queries": 178,
+            "same": 558
+          },
+          "10000": {
+            "attributable_bp": 1920492,
+            "nn_purity": 0.4444444444444444,
+            "queries": 45,
+            "same": 100
+          }
+        }
+      },
+      "origin_bp_by_status": {
+        "assigned": {
+          "all_bp": 109487277.0,
+          "ambiguous_query_bp": 18648279.0,
+          "bacterial_confirmed_bp": 53654326.0,
+          "eukaryotic_confirmed_bp": 27220081.0,
+          "nn_quarantined_query_bp": 5936316.0,
+          "other_confirmed_bp": 145027.0,
+          "unsupported_query_bp": 1427660.0,
+          "viral_confirmed_bp": 2455588.0
+        },
+        "excluded": {
+          "all_bp": 22035454.0,
+          "ambiguous_query_bp": 1476971.0,
+          "bacterial_confirmed_bp": 6490495.0,
+          "eukaryotic_confirmed_bp": 13281397.0,
+          "nn_quarantined_query_bp": 4987.0,
+          "other_confirmed_bp": 418.0,
+          "unsupported_query_bp": 585103.0,
+          "viral_confirmed_bp": 196083.0
+        },
+        "unassigned": {
+          "all_bp": 100155426.0,
+          "ambiguous_query_bp": 22277381.0,
+          "bacterial_confirmed_bp": 43357819.0,
+          "eukaryotic_confirmed_bp": 29753257.0,
+          "nn_quarantined_query_bp": 1711902.0,
+          "other_confirmed_bp": 142994.0,
+          "unsupported_query_bp": 1473674.0,
+          "viral_confirmed_bp": 1438399.0
+        }
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.18468870081051117,
+        "precision": 0.4064076042616601,
+        "recall": 0.11949645733613372,
+        "scope": "bp-weighted attributable contigs only; noise/excluded zero, unknown bin DNA not in this restricted denominator"
+      },
+      "recovery": {
+        "at_least_50_percent": 6,
+        "at_least_90_percent": 1,
+        "bp_weighted_R95": 0.045764970439919714,
+        "macro_R95": 0.04983822979153326,
+        "targets": 156,
+        "targets_with_any_passing_bin": 21
+      },
+      "AMBER": {
+        "claim_limit": "restricted alignment-supported contig population; not whole-reference recovery",
+        "native_api_executed": true,
+        "predicted_contigs": 28631,
+        "scorable_bp": 165477813,
+        "scorable_contigs": 125848,
+        "unscored_contigs": 19854,
+        "assigned_bp": 75700004,
+        "bp_weighted_assigned_bin_purity": 0.918004231545351
+      },
+      "geometry_oracle": {
+        "selection": "first128 SHA256(contigID), label blind",
+        "verified_queries": 128,
+        "whole_geometry_refit_or_recluster": false
+      },
+      "cross_platform_reload_max_absolute_error": 0.0,
+      "grouping_diagnostics": {
+        "largest_bins": [
+          {
+            "bin_id": "bin_000376",
+            "bp": 10522227,
+            "dominant_genome": "fASV196.1",
+            "dominant_confirmed_bp": 1038155,
+            "confirmed_purity": 0.09866304918150882,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 3
+          },
+          {
+            "bin_id": "bin_000153",
+            "bp": 3771136,
+            "dominant_genome": "ASV150.14",
+            "dominant_confirmed_bp": 3769095,
+            "confirmed_purity": 0.9994587837723169,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 2
+          },
+          {
+            "bin_id": "bin_000158",
+            "bp": 3517666,
+            "dominant_genome": "ASV102.10",
+            "dominant_confirmed_bp": 978230,
+            "confirmed_purity": 0.2780906430570725,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 3
+          },
+          {
+            "bin_id": "bin_000801",
+            "bp": 2776666,
+            "dominant_genome": "ASV476.8",
+            "dominant_confirmed_bp": 2066819,
+            "confirmed_purity": 0.7443527597485617,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 1
+          },
+          {
+            "bin_id": "bin_000378",
+            "bp": 2439243,
+            "dominant_genome": "ASV436.0",
+            "dominant_confirmed_bp": 2439243,
+            "confirmed_purity": 1.0,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 1
+          },
+          {
+            "bin_id": "bin_000125",
+            "bp": 2269284,
+            "dominant_genome": "ASV399.6",
+            "dominant_confirmed_bp": 2252476,
+            "confirmed_purity": 0.9925932584903432,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 4
+          },
+          {
+            "bin_id": "bin_000478",
+            "bp": 2135650,
+            "dominant_genome": "ASV149.0",
+            "dominant_confirmed_bp": 1816123,
+            "confirmed_purity": 0.8503841921663194,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 2
+          },
+          {
+            "bin_id": "bin_000466",
+            "bp": 1915501,
+            "dominant_genome": "fASV196.1",
+            "dominant_confirmed_bp": 594586,
+            "confirmed_purity": 0.3104075643917701,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 2
+          },
+          {
+            "bin_id": "bin_001604",
+            "bp": 1885682,
+            "dominant_genome": "ASV266.11",
+            "dominant_confirmed_bp": 1878376,
+            "confirmed_purity": 0.9961255397251498,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 2
+          },
+          {
+            "bin_id": "bin_001003",
+            "bp": 1736872,
+            "dominant_genome": "ASV426.8",
+            "dominant_confirmed_bp": 1735271,
+            "confirmed_purity": 0.9990782279868637,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 1
+          }
+        ],
+        "bins_at_least_200kb": 98,
+        "large_bins_below_95pct_confirmed_purity": 64,
+        "large_bins_primary_bacterial_dominant": 58,
+        "targets_best_source_bin_below_95pct": 55
+      }
+    },
+    "tnf-only-learned": {
+      "assignments": {
+        "bytes": 5748983,
+        "sha256": "9182041f6e99757826546a30728b774bd8425a3c67ac58e17e796bfe7bb293f2"
+      },
+      "partition": {
+        "bytes": 18441299,
+        "sha256": "5b662ec44031919757f2f8d3bbf6ca87b2bdfa97e04649054da3d5054acc070d"
+      },
+      "bins": 801,
+      "statuses": {
+        "assigned": {
+          "bp": 183977452,
+          "contigs": 78327
+        },
+        "excluded": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "bp": 25665251,
+          "contigs": 10714
+        }
+      },
+      "length_accounting": [
+        {
+          "bp": 22035454,
+          "contigs": 56661,
+          "lower_bp": 1,
+          "reasons": {
+            "below_min_length": 56661
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 22035454,
+              "contigs": 56661
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 500
+        },
+        {
+          "bp": 22098500,
+          "contigs": 35898,
+          "lower_bp": 500,
+          "reasons": {
+            "community_below_min_size": 1023,
+            "isolated_graph": 3576
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 19281928,
+              "contigs": 31299
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 2816572,
+              "contigs": 4599
+            }
+          },
+          "upper_bp": 768
+        },
+        {
+          "bp": 13986706,
+          "contigs": 16024,
+          "lower_bp": 768,
+          "reasons": {
+            "community_below_min_size": 416,
+            "isolated_graph": 1493
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 12323960,
+              "contigs": 14115
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 1662746,
+              "contigs": 1909
+            }
+          },
+          "upper_bp": 1000
+        },
+        {
+          "bp": 40505273,
+          "contigs": 27307,
+          "lower_bp": 1000,
+          "reasons": {
+            "community_below_min_size": 704,
+            "isolated_graph": 2279
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 36085375,
+              "contigs": 24324
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 4419898,
+              "contigs": 2983
+            }
+          },
+          "upper_bp": 2500
+        },
+        {
+          "bp": 32866110,
+          "contigs": 7728,
+          "lower_bp": 2500,
+          "reasons": {
+            "community_below_min_size": 255,
+            "isolated_graph": 627
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 28937145,
+              "contigs": 6846
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 3928965,
+              "contigs": 882
+            }
+          },
+          "upper_bp": 10000
+        },
+        {
+          "bp": 100186114,
+          "contigs": 2084,
+          "lower_bp": 10000,
+          "reasons": {
+            "community_below_min_size": 84,
+            "isolated_graph": 257
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 87349044,
+              "contigs": 1743
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 12837070,
+              "contigs": 341
+            }
+          },
+          "upper_bp": null
+        }
+      ],
+      "neighbor_geometry": {
+        "attributable_eligible_queries": 76010,
+        "nn_purity": 0.5094619129061966,
+        "nn_purity_bp_weighted": 0.6540821129206459,
+        "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+      },
+      "geometry_by_lineage": {
+        "bacterial": {
+          "attributable_bp": 94606287,
+          "b3_precision": 0.5367973509478585,
+          "b3_precision_sum": 50784404.24461283,
+          "b3_recall": 0.39280686920754576,
+          "b3_recall_sum": 37161999.40382054,
+          "nn_purity": 0.5107465841913635,
+          "nn_purity_bp_weighted": 0.7261095986858122,
+          "queries": 25543,
+          "query_bp": 88261843,
+          "same": 65230,
+          "same_weighted_sum": 64087771.400000155
+        },
+        "eukaryotic": {
+          "attributable_bp": 67037217,
+          "b3_precision": 0.3643695027847339,
+          "b3_precision_sum": 24426317.42636231,
+          "b3_recall": 0.13300192208762868,
+          "b3_recall_sum": 8916078.712405456,
+          "nn_purity": 0.5138045234248788,
+          "nn_purity_bp_weighted": 0.5631384455631727,
+          "queries": 49520,
+          "query_bp": 54129752,
+          "same": 127218,
+          "same_weighted_sum": 30482544.40000004
+        },
+        "other": {
+          "attributable_bp": 214249,
+          "b3_precision": 0.055030568091644146,
+          "b3_precision_sum": 11790.244183066667,
+          "b3_recall": 0.8864556914092313,
+          "b3_recall_sum": 189922.2454287364,
+          "nn_purity": 0.0,
+          "nn_purity_bp_weighted": 0.0,
+          "queries": 15,
+          "query_bp": 213971,
+          "same": 0,
+          "same_weighted_sum": 0.0
+        },
+        "viral": {
+          "attributable_bp": 3620060,
+          "b3_precision": 0.11076332529416355,
+          "b3_precision_sum": 400969.8833643897,
+          "b3_recall": 0.626256597352566,
+          "b3_recall_sum": 2267086.45781213,
+          "nn_purity": 0.2517167381974249,
+          "nn_purity_bp_weighted": 0.27725859926007207,
+          "queries": 932,
+          "query_bp": 3435470,
+          "same": 1173,
+          "same_weighted_sum": 952513.5999999999
+        }
+      },
+      "length_geometry_by_lineage": {
+        "bacterial": {
+          "1": {
+            "attributable_bp": 6344444,
+            "nn_purity": null
+          },
+          "500": {
+            "attributable_bp": 5937015,
+            "nn_purity": 0.4397596602092614,
+            "queries": 9653,
+            "same": 21225
+          },
+          "768": {
+            "attributable_bp": 3739840,
+            "nn_purity": 0.4753501400560224,
+            "queries": 4284,
+            "same": 10182
+          },
+          "1000": {
+            "attributable_bp": 11286563,
+            "nn_purity": 0.5380768719244581,
+            "queries": 7519,
+            "same": 20229
+          },
+          "2500": {
+            "attributable_bp": 12922309,
+            "nn_purity": 0.6156063268892794,
+            "queries": 2845,
+            "same": 8757
+          },
+          "10000": {
+            "attributable_bp": 54376116,
+            "nn_purity": 0.7789049919484702,
+            "queries": 1242,
+            "same": 4837
+          }
+        },
+        "eukaryotic": {
+          "1": {
+            "attributable_bp": 12907465,
+            "nn_purity": null
+          },
+          "500": {
+            "attributable_bp": 13617821,
+            "nn_purity": 0.4473115362004251,
+            "queries": 22113,
+            "same": 49457
+          },
+          "768": {
+            "attributable_bp": 8622035,
+            "nn_purity": 0.49527662587235766,
+            "queries": 9887,
+            "same": 24484
+          },
+          "1000": {
+            "attributable_bp": 22058451,
+            "nn_purity": 0.5790656416321703,
+            "queries": 15219,
+            "same": 44064
+          },
+          "2500": {
+            "attributable_bp": 8232449,
+            "nn_purity": 0.8084656084656084,
+            "queries": 2268,
+            "same": 9168
+          },
+          "10000": {
+            "attributable_bp": 1598996,
+            "nn_purity": 0.2727272727272727,
+            "queries": 33,
+            "same": 45
+          }
+        },
+        "other": {
+          "1": {
+            "attributable_bp": 278,
+            "nn_purity": null
+          },
+          "768": {
+            "attributable_bp": 824,
+            "nn_purity": 0.0,
+            "queries": 1,
+            "same": 0
+          },
+          "1000": {
+            "attributable_bp": 13948,
+            "nn_purity": 0.0,
+            "queries": 8,
+            "same": 0
+          },
+          "2500": {
+            "attributable_bp": 27707,
+            "nn_purity": 0.0,
+            "queries": 4,
+            "same": 0
+          },
+          "10000": {
+            "attributable_bp": 171492,
+            "nn_purity": 0.0,
+            "queries": 2,
+            "same": 0
+          }
+        },
+        "viral": {
+          "1": {
+            "attributable_bp": 184590,
+            "nn_purity": null
+          },
+          "500": {
+            "attributable_bp": 178915,
+            "nn_purity": 0.14878892733564014,
+            "queries": 289,
+            "same": 215
+          },
+          "768": {
+            "attributable_bp": 123135,
+            "nn_purity": 0.18857142857142858,
+            "queries": 140,
+            "same": 132
+          },
+          "1000": {
+            "attributable_bp": 426664,
+            "nn_purity": 0.27714285714285714,
+            "queries": 280,
+            "same": 388
+          },
+          "2500": {
+            "attributable_bp": 786264,
+            "nn_purity": 0.41123595505617977,
+            "queries": 178,
+            "same": 366
+          },
+          "10000": {
+            "attributable_bp": 1920492,
+            "nn_purity": 0.32,
+            "queries": 45,
+            "same": 72
+          }
+        }
+      },
+      "origin_bp_by_status": {
+        "assigned": {
+          "all_bp": 183977452.0,
+          "ambiguous_query_bp": 34077560.0,
+          "bacterial_confirmed_bp": 83867806.0,
+          "eukaryotic_confirmed_bp": 52590617.0,
+          "nn_quarantined_query_bp": 7081946.0,
+          "other_confirmed_bp": 288021.0,
+          "unsupported_query_bp": 2567848.0,
+          "viral_confirmed_bp": 3503654.0
+        },
+        "excluded": {
+          "all_bp": 22035454.0,
+          "ambiguous_query_bp": 1476971.0,
+          "bacterial_confirmed_bp": 6490495.0,
+          "eukaryotic_confirmed_bp": 13281397.0,
+          "nn_quarantined_query_bp": 4987.0,
+          "other_confirmed_bp": 418.0,
+          "unsupported_query_bp": 585103.0,
+          "viral_confirmed_bp": 196083.0
+        },
+        "unassigned": {
+          "all_bp": 25665251.0,
+          "ambiguous_query_bp": 6848100.0,
+          "bacterial_confirmed_bp": 13144339.0,
+          "eukaryotic_confirmed_bp": 4382721.0,
+          "nn_quarantined_query_bp": 566272.0,
+          "unsupported_query_bp": 333486.0,
+          "viral_confirmed_bp": 390333.0
+        }
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.35729423250518305,
+        "precision": 0.4570007327720878,
+        "recall": 0.29330268475005206,
+        "scope": "bp-weighted attributable contigs only; noise/excluded zero, unknown bin DNA not in this restricted denominator"
+      },
+      "recovery": {
+        "at_least_50_percent": 11,
+        "at_least_90_percent": 1,
+        "bp_weighted_R95": 0.045596927526425156,
+        "macro_R95": 0.05535197936062609,
+        "targets": 156,
+        "targets_with_any_passing_bin": 14
+      },
+      "AMBER": {
+        "claim_limit": "restricted alignment-supported contig population; not whole-reference recovery",
+        "native_api_executed": true,
+        "predicted_contigs": 67212,
+        "scorable_bp": 165477813,
+        "scorable_contigs": 125848,
+        "unscored_contigs": 19854,
+        "assigned_bp": 129375947,
+        "bp_weighted_assigned_bin_purity": 0.6631335034788189
+      },
+      "geometry_oracle": {
+        "selection": "first128 SHA256(contigID), label blind",
+        "verified_queries": 128,
+        "whole_geometry_refit_or_recluster": false
+      },
+      "cross_platform_reload_max_absolute_error": 8.940696716308594e-08,
+      "grouping_diagnostics": {
+        "largest_bins": [
+          {
+            "bin_id": "bin_000076",
+            "bp": 17858728,
+            "dominant_genome": "fASV196.1",
+            "dominant_confirmed_bp": 2497039,
+            "confirmed_purity": 0.13982177230091639,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 5
+          },
+          {
+            "bin_id": "bin_000002",
+            "bp": 8851933,
+            "dominant_genome": "fASV198.4",
+            "dominant_confirmed_bp": 8419614,
+            "confirmed_purity": 0.9511610627870771,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 35
+          },
+          {
+            "bin_id": "bin_000085",
+            "bp": 7401865,
+            "dominant_genome": "ASV150.14",
+            "dominant_confirmed_bp": 3785137,
+            "confirmed_purity": 0.5113761193969357,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 5
+          },
+          {
+            "bin_id": "bin_000095",
+            "bp": 7106141,
+            "dominant_genome": "ASV487.10",
+            "dominant_confirmed_bp": 2813103,
+            "confirmed_purity": 0.39586929108217805,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 22
+          },
+          {
+            "bin_id": "bin_000011",
+            "bp": 6338916,
+            "dominant_genome": "ASV729.15",
+            "dominant_confirmed_bp": 1889787,
+            "confirmed_purity": 0.2981246320348779,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 57
+          },
+          {
+            "bin_id": "bin_000024",
+            "bp": 6163614,
+            "dominant_genome": "ASV507.11",
+            "dominant_confirmed_bp": 1451072,
+            "confirmed_purity": 0.23542551496573277,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 18
+          },
+          {
+            "bin_id": "bin_000003",
+            "bp": 5237388,
+            "dominant_genome": "fASV201.3",
+            "dominant_confirmed_bp": 2133482,
+            "confirmed_purity": 0.40735610957217605,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 33
+          },
+          {
+            "bin_id": "bin_000007",
+            "bp": 4891276,
+            "dominant_genome": "fASV201.3",
+            "dominant_confirmed_bp": 2304572,
+            "confirmed_purity": 0.4711596728542818,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 54
+          },
+          {
+            "bin_id": "bin_000001",
+            "bp": 4840588,
+            "dominant_genome": "fASV201.3",
+            "dominant_confirmed_bp": 2181270,
+            "confirmed_purity": 0.4506208749846093,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 41
+          },
+          {
+            "bin_id": "bin_000025",
+            "bp": 4787128,
+            "dominant_genome": "fASV201.3",
+            "dominant_confirmed_bp": 2448072,
+            "confirmed_purity": 0.5113863677762533,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 35
+          }
+        ],
+        "bins_at_least_200kb": 83,
+        "large_bins_below_95pct_confirmed_purity": 65,
+        "large_bins_primary_bacterial_dominant": 44,
+        "targets_best_source_bin_below_95pct": 86
+      }
+    },
+    "tnf-only-raw": {
+      "assignments": {
+        "bytes": 6149083,
+        "sha256": "cfe62c9716ab5d7e78922d385d11f016a69f29ed4a8fef3d78e3177725bce07a"
+      },
+      "partition": {
+        "bytes": 19316611,
+        "sha256": "01b250ef312c84d1dfe0abaf90fa824a6f473a07980414253f3832a4bfaecbaa"
+      },
+      "bins": 3213,
+      "statuses": {
+        "assigned": {
+          "bp": 99909686,
+          "contigs": 25507
+        },
+        "excluded": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "bp": 109733017,
+          "contigs": 63534
+        }
+      },
+      "length_accounting": [
+        {
+          "bp": 22035454,
+          "contigs": 56661,
+          "lower_bp": 1,
+          "reasons": {
+            "below_min_length": 56661
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "excluded": {
+              "bp": 22035454,
+              "contigs": 56661
+            },
+            "unassigned": {
+              "bp": 0,
+              "contigs": 0
+            }
+          },
+          "upper_bp": 500
+        },
+        {
+          "bp": 22098500,
+          "contigs": 35898,
+          "lower_bp": 500,
+          "reasons": {
+            "community_below_min_size": 4504,
+            "isolated_graph": 21926
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 5854678,
+              "contigs": 9468
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 16243822,
+              "contigs": 26430
+            }
+          },
+          "upper_bp": 768
+        },
+        {
+          "bp": 13986706,
+          "contigs": 16024,
+          "lower_bp": 768,
+          "reasons": {
+            "community_below_min_size": 1933,
+            "isolated_graph": 9485
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 4024450,
+              "contigs": 4606
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 9962256,
+              "contigs": 11418
+            }
+          },
+          "upper_bp": 1000
+        },
+        {
+          "bp": 40505273,
+          "contigs": 27307,
+          "lower_bp": 1000,
+          "reasons": {
+            "community_below_min_size": 3390,
+            "isolated_graph": 16019
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 11633327,
+              "contigs": 7898
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 28871946,
+              "contigs": 19409
+            }
+          },
+          "upper_bp": 2500
+        },
+        {
+          "bp": 32866110,
+          "contigs": 7728,
+          "lower_bp": 2500,
+          "reasons": {
+            "community_below_min_size": 825,
+            "isolated_graph": 4479
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 10733657,
+              "contigs": 2424
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 22132453,
+              "contigs": 5304
+            }
+          },
+          "upper_bp": 10000
+        },
+        {
+          "bp": 100186114,
+          "contigs": 2084,
+          "lower_bp": 10000,
+          "reasons": {
+            "community_below_min_size": 148,
+            "isolated_graph": 825
+          },
+          "statuses": {
+            "assigned": {
+              "bp": 67663574,
+              "contigs": 1111
+            },
+            "excluded": {
+              "bp": 0,
+              "contigs": 0
+            },
+            "unassigned": {
+              "bp": 32522540,
+              "contigs": 973
+            }
+          },
+          "upper_bp": null
+        }
+      ],
+      "neighbor_geometry": {
+        "attributable_eligible_queries": 76010,
+        "nn_purity": 0.44386791211682675,
+        "nn_purity_bp_weighted": 0.6277070548855873,
+        "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+      },
+      "geometry_by_lineage": {
+        "bacterial": {
+          "attributable_bp": 94606287,
+          "b3_precision": 0.4399983957715269,
+          "b3_precision_sum": 41626614.50990066,
+          "b3_recall": 0.17591106264746112,
+          "b3_recall_sum": 16642292.479300687,
+          "nn_purity": 0.43069334064127157,
+          "nn_purity_bp_weighted": 0.7176998785307485,
+          "queries": 25543,
+          "query_bp": 88261843,
+          "same": 55006,
+          "same_weighted_sum": 63345513.99999999
+        },
+        "eukaryotic": {
+          "attributable_bp": 67037217,
+          "b3_precision": 0.17016283984580036,
+          "b3_precision_sum": 11407243.220079165,
+          "b3_recall": 0.0026913574253739614,
+          "b3_recall_sum": 180421.11174935556,
+          "nn_purity": 0.453889337641357,
+          "nn_purity_bp_weighted": 0.5049486167976538,
+          "queries": 49520,
+          "query_bp": 54129752,
+          "same": 112383,
+          "same_weighted_sum": 27332743.400000036
+        },
+        "other": {
+          "attributable_bp": 214249,
+          "b3_precision": 0.31728067819010275,
+          "b3_precision_sum": 67977.06802155133,
+          "b3_recall": 0.7759150372011313,
+          "b3_recall_sum": 166239.0208053052,
+          "nn_purity": 0.0,
+          "nn_purity_bp_weighted": 0.0,
+          "queries": 15,
+          "query_bp": 213971,
+          "same": 0,
+          "same_weighted_sum": 0.0
+        },
+        "viral": {
+          "attributable_bp": 3620060,
+          "b3_precision": 0.31404021691914014,
+          "b3_precision_sum": 1136844.4276603025,
+          "b3_recall": 0.40137693243899,
+          "b3_recall_sum": 1453008.57804509,
+          "nn_purity": 0.2796137339055794,
+          "nn_purity_bp_weighted": 0.2889651779814699,
+          "queries": 932,
+          "query_bp": 3435470,
+          "same": 1303,
+          "same_weighted_sum": 992731.2000000005
+        }
+      },
+      "length_geometry_by_lineage": {
+        "bacterial": {
+          "1": {
+            "attributable_bp": 6344444,
+            "nn_purity": null
+          },
+          "500": {
+            "attributable_bp": 5937015,
+            "nn_purity": 0.3437894954936289,
+            "queries": 9653,
+            "same": 16593
+          },
+          "768": {
+            "attributable_bp": 3739840,
+            "nn_purity": 0.3697478991596639,
+            "queries": 4284,
+            "same": 7920
+          },
+          "1000": {
+            "attributable_bp": 11286563,
+            "nn_purity": 0.4419736667109988,
+            "queries": 7519,
+            "same": 16616
+          },
+          "2500": {
+            "attributable_bp": 12922309,
+            "nn_purity": 0.624182776801406,
+            "queries": 2845,
+            "same": 8879
+          },
+          "10000": {
+            "attributable_bp": 54376116,
+            "nn_purity": 0.8048309178743961,
+            "queries": 1242,
+            "same": 4998
+          }
+        },
+        "eukaryotic": {
+          "1": {
+            "attributable_bp": 12907465,
+            "nn_purity": null
+          },
+          "500": {
+            "attributable_bp": 13617821,
+            "nn_purity": 0.3881698548365215,
+            "queries": 22113,
+            "same": 42918
+          },
+          "768": {
+            "attributable_bp": 8622035,
+            "nn_purity": 0.43558207747547284,
+            "queries": 9887,
+            "same": 21533
+          },
+          "1000": {
+            "attributable_bp": 22058451,
+            "nn_purity": 0.5162494250607793,
+            "queries": 15219,
+            "same": 39284
+          },
+          "2500": {
+            "attributable_bp": 8232449,
+            "nn_purity": 0.7591710758377425,
+            "queries": 2268,
+            "same": 8609
+          },
+          "10000": {
+            "attributable_bp": 1598996,
+            "nn_purity": 0.23636363636363636,
+            "queries": 33,
+            "same": 39
+          }
+        },
+        "other": {
+          "1": {
+            "attributable_bp": 278,
+            "nn_purity": null
+          },
+          "768": {
+            "attributable_bp": 824,
+            "nn_purity": 0.0,
+            "queries": 1,
+            "same": 0
+          },
+          "1000": {
+            "attributable_bp": 13948,
+            "nn_purity": 0.0,
+            "queries": 8,
+            "same": 0
+          },
+          "2500": {
+            "attributable_bp": 27707,
+            "nn_purity": 0.0,
+            "queries": 4,
+            "same": 0
+          },
+          "10000": {
+            "attributable_bp": 171492,
+            "nn_purity": 0.0,
+            "queries": 2,
+            "same": 0
+          }
+        },
+        "viral": {
+          "1": {
+            "attributable_bp": 184590,
+            "nn_purity": null
+          },
+          "500": {
+            "attributable_bp": 178915,
+            "nn_purity": 0.16608996539792387,
+            "queries": 289,
+            "same": 240
+          },
+          "768": {
+            "attributable_bp": 123135,
+            "nn_purity": 0.19142857142857142,
+            "queries": 140,
+            "same": 134
+          },
+          "1000": {
+            "attributable_bp": 426664,
+            "nn_purity": 0.3242857142857143,
+            "queries": 280,
+            "same": 454
+          },
+          "2500": {
+            "attributable_bp": 786264,
+            "nn_purity": 0.449438202247191,
+            "queries": 178,
+            "same": 400
+          },
+          "10000": {
+            "attributable_bp": 1920492,
+            "nn_purity": 0.3333333333333333,
+            "queries": 45,
+            "same": 75
+          }
+        }
+      },
+      "origin_bp_by_status": {
+        "assigned": {
+          "all_bp": 99909686.0,
+          "ambiguous_query_bp": 18047633.0,
+          "bacterial_confirmed_bp": 51229641.0,
+          "eukaryotic_confirmed_bp": 20958203.0,
+          "nn_quarantined_query_bp": 5788846.0,
+          "other_confirmed_bp": 247030.0,
+          "unsupported_query_bp": 1296930.0,
+          "viral_confirmed_bp": 2341403.0
+        },
+        "excluded": {
+          "all_bp": 22035454.0,
+          "ambiguous_query_bp": 1476971.0,
+          "bacterial_confirmed_bp": 6490495.0,
+          "eukaryotic_confirmed_bp": 13281397.0,
+          "nn_quarantined_query_bp": 4987.0,
+          "other_confirmed_bp": 418.0,
+          "unsupported_query_bp": 585103.0,
+          "viral_confirmed_bp": 196083.0
+        },
+        "unassigned": {
+          "all_bp": 109733017.0,
+          "ambiguous_query_bp": 22878027.0,
+          "bacterial_confirmed_bp": 45782504.0,
+          "eukaryotic_confirmed_bp": 36015135.0,
+          "nn_quarantined_query_bp": 1859372.0,
+          "other_confirmed_bp": 40991.0,
+          "unsupported_query_bp": 1604404.0,
+          "viral_confirmed_bp": 1552584.0
+        }
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.16633654901539088,
+        "precision": 0.3277700994613794,
+        "recall": 0.11144673026286868,
+        "scope": "bp-weighted attributable contigs only; noise/excluded zero, unknown bin DNA not in this restricted denominator"
+      },
+      "recovery": {
+        "at_least_50_percent": 5,
+        "at_least_90_percent": 1,
+        "bp_weighted_R95": 0.039311745395018936,
+        "macro_R95": 0.04579362468813616,
+        "targets": 156,
+        "targets_with_any_passing_bin": 18
+      },
+      "AMBER": {
+        "claim_limit": "restricted alignment-supported contig population; not whole-reference recovery",
+        "native_api_executed": true,
+        "predicted_contigs": 22119,
+        "scorable_bp": 165477813,
+        "scorable_contigs": 125848,
+        "unscored_contigs": 19854,
+        "assigned_bp": 67311956,
+        "bp_weighted_assigned_bin_purity": 0.8420843542267588
+      },
+      "geometry_oracle": {
+        "selection": "first128 SHA256(contigID), label blind",
+        "verified_queries": 128,
+        "whole_geometry_refit_or_recluster": false
+      },
+      "cross_platform_reload_max_absolute_error": 0.0,
+      "grouping_diagnostics": {
+        "largest_bins": [
+          {
+            "bin_id": "bin_000451",
+            "bp": 12259641,
+            "dominant_genome": "fASV196.1",
+            "dominant_confirmed_bp": 1325957,
+            "confirmed_purity": 0.10815626656604382,
+            "dominant_lineage": "eukaryotic",
+            "source_genomes": 3
+          },
+          {
+            "bin_id": "bin_000248",
+            "bp": 2857431,
+            "dominant_genome": "ASV149.0",
+            "dominant_confirmed_bp": 2461082,
+            "confirmed_purity": 0.8612918387180653,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 3
+          },
+          {
+            "bin_id": "bin_000812",
+            "bp": 2817214,
+            "dominant_genome": "ASV476.8",
+            "dominant_confirmed_bp": 2085978,
+            "confirmed_purity": 0.7404400233706065,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 1
+          },
+          {
+            "bin_id": "bin_000350",
+            "bp": 2439243,
+            "dominant_genome": "ASV436.0",
+            "dominant_confirmed_bp": 2439243,
+            "confirmed_purity": 1.0,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 1
+          },
+          {
+            "bin_id": "bin_001034",
+            "bp": 2026102,
+            "dominant_genome": "ASV387.0",
+            "dominant_confirmed_bp": 2023464,
+            "confirmed_purity": 0.998697992499884,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 4
+          },
+          {
+            "bin_id": "bin_000223",
+            "bp": 2010186,
+            "dominant_genome": "ASV487.10",
+            "dominant_confirmed_bp": 1821662,
+            "confirmed_purity": 0.906215643726501,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 2
+          },
+          {
+            "bin_id": "bin_001704",
+            "bp": 1885682,
+            "dominant_genome": "ASV266.11",
+            "dominant_confirmed_bp": 1878376,
+            "confirmed_purity": 0.9961255397251498,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 2
+          },
+          {
+            "bin_id": "bin_000133",
+            "bp": 1749665,
+            "dominant_genome": "ASV102.10",
+            "dominant_confirmed_bp": 491438,
+            "confirmed_purity": 0.2808754818779595,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 3
+          },
+          {
+            "bin_id": "bin_001012",
+            "bp": 1733553,
+            "dominant_genome": "ASV73.2",
+            "dominant_confirmed_bp": 1733553,
+            "confirmed_purity": 1.0,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 1
+          },
+          {
+            "bin_id": "bin_000129",
+            "bp": 1681567,
+            "dominant_genome": "ASV150.14",
+            "dominant_confirmed_bp": 1681567,
+            "confirmed_purity": 1.0,
+            "dominant_lineage": "bacterial",
+            "source_genomes": 1
+          }
+        ],
+        "bins_at_least_200kb": 76,
+        "large_bins_below_95pct_confirmed_purity": 48,
+        "large_bins_primary_bacterial_dominant": 49,
+        "targets_best_source_bin_below_95pct": 54
+      }
+    }
+  },
+  "cost": {
+    "checked_utc": "2026-10-16T09:37:28.408508+00:00",
+    "provider_status": "TERMINATED",
+    "uptime_hours": 1.7542275,
+    "allocated_vCPU_hours": 14.03382,
+    "compute_IP_gross_USD": 0.4789842340500673,
+    "export_bytes_upper": 484725419,
+    "internet_export_rate_USD_per_GiB": 0.12,
+    "export_gross_USD_upper": 0.05417228702455759,
+    "credit_DKK_available": 1936.57,
+    "expiry": "2027-01-12",
+    "scope": "Available FreeTrialUpgrade / ordinary eligible compute, storage, Internet data transfer; no excluded SKU",
+    "pending_usage": "Not zero; exact total unavailable; known bounded costs far below balance",
+    "existing_storage_monthly_USD": 31.2,
+    "retention_review": "2026-10-21",
+    "incremental_ceiling_USD": 2,
+    "compute_plus_export_USD": 0.5331565210746249,
+    "decision": "PASS export within existing $2; no VM wake or resource change; $0.05 additional operations/rounding allowance; disks existing separate seven-day envelope",
+    "pricing_sources": [
+      "https://cloud.google.com/storage/pricing",
+      "https://docs.cloud.google.com/free/docs/free-cloud-features"
+    ],
+    "compute_quote": "20261015/current-sku-quote.json retained billing catalog quote DKK; same current E2 list price",
+    "current_quote": {
+      "bytes": 9190,
+      "sha256": "08c75ff8e29fe5705e9be3eb14b991d72acab34077077087ee18e6a6c3cb8acf"
+    },
+    "current_catalog_rates_equal_admission": true,
+    "reported_cost_DKK": 31.92,
+    "reported_savings_DKK": 31.92,
+    "reported_net_DKK": 0,
+    "credit_consumption_DKK": 36.86,
+    "uptime_start": "2026-10-15T14:10:04.207-07:00",
+    "uptime_stop": "2026-10-15T15:55:19.426-07:00",
+    "VM_stopped_no_new_compute": true,
+    "existing_disks_cost_during_this_uptime_USD": 0.07497520273972602,
+    "review_VM_compute_USD": 0,
+    "control_archive_Standard_storage_USD_per_month": 0.00902022046968341,
+    "invoice_limit": "Measured provider duration priced at current list SKUs, not reconciled invoice; credit balance change is not phase cost",
+    "review_archive_reserve_USD": 0.001
+  },
+  "storage": {
+    "launcher_samples": 2839,
+    "sampled_minimum_free_bytes": 145144524800,
+    "sampled_launcher_maximum_growth_bytes": 2982019072,
+    "preparation_charge_bytes": 1155112960,
+    "peak_scope": "filesystem-wide sampled through launcher collection; post-launcher private readbacks not sampled by this inner guard; outer20GiB guard also active but its final observation history not exported. Additional main archive readback484269399B. Do not claim exact final disk occupancy.",
+    "no_delete_or_extension": true,
+    "review_due": "2026-10-21",
+    "monthly_disks_USD": 31.2
+  },
+  "review_corrections": {
+    "evaluation_adapter": "Unexecuted evaluator expected exclusion_reason; frozen native dev3 uses reason for noise and exclusions. Exact native schema now validated; malformed row/state/axis/length refused. Original partitions untouched.",
+    "local_review_v1": "Preserved failed local verification log: checker initially formatted native zero-based cluster IDs without export +1. Corrected against frozen production writer; new local-review-v2 passed. No science retry.",
+    "local_archive_verification": "Finder inserted five .DS_Store files after extraction. Verified exact immutable tar membership and every checksum, removed only those unarchived local files and hid extracted root; original archives unchanged.",
+    "unneeded_dependency_probe": "An exploratory scipy import failed; scipy is not required for the accepted actual AMBER API path, which passes natively."
+  },
+  "limits": [
+    "E009 inspected development assembly; one seed/schedule, not final benchmark or SOTA evidence",
+    "3.3034% query DNA N-quarantine remains unknown; 42.4Mb cross-genome ambiguity is not assigned as unique support",
+    "Full156 bacterial target denominators include unassembled/unobserved DNA; no archaeal target",
+    "AMBER/B3 use restricted125848 contigs/165477813bp and include non-target lineages; native bin purity is conditional on that population",
+    "Overall unweighted geometry is dominated by49520 attributable eligible eukaryotic versus25543 bacterial queries; bacterial geometry falls slightly after ten-depth learning",
+    "Macro and bp-weighted R95 distinct; full provided references may be MAG/scaffold sets, not finished genomes or formal MIMAG quality",
+    "No near-genome/pretraining independence established; depth/sequence/taxonomy product membership not decided",
+    "Post-exit watchdog snapshot remains on stopped VM and was not exported by this collector. Provider TERMINATED and successful guest/private stage receipts verified; serial API refused stopped instance. No wake to obtain redundant shutdown evidence."
+  ],
+  "recommendation": {
+    "next": "Prepare one fixed-encoder marker-conflict splitting test on learned ten-depth bins; no execution in this review",
+    "question": "Can independently detected single-copy marker conflicts guide label-blind splitting of mixed learned bins while preserving useful within-genome grouping and all DNA?",
+    "why_first": "Bacterial local geometry is imperfect and mildly worsens, but learning approximately doubles primary restricted grouping recall and increases recovered sources; mixed bins remain a specific testable loss. Grouping-only test reuses embeddings and does not confound new learning with refinement.",
+    "alternatives": "New biological sequence views/negative handling remains credible because primary long-stratum neighbors worsen; not combined with this grouping test. External whole-tool win supplies less causal evidence now.",
+    "fixed": "dev3 comparator, both immutable embeddings, seed/schedule/feature transforms, sample axes, truth policy, native original partitions",
+    "preparation_gate": "Audit marker source/license/version, detection availability by length/origin and conflicts; no taxonomy/truth labels or expected genome count for splitting; no automatic merging or new encoder fit; declare algorithm and keep/abandon criteria before changed partitions",
+    "abandon_or_modify": "Too few usable independent marker conflicts, or a controlled split without full-denominator R95 improvement/purity and DNA-preservation evidence; do not rescue with simultaneous encoder/merging changes",
+    "additional_data": "Before any changed-run result, prospectively select and freeze a second human-associated read-derived community/assembly with explicit sample/genome overlap limits; never relabel E009/E005 as held out. Confirm a useful mechanism there before product adoption/broad claims. Dataset selection and input/cost admission remain preparation work.",
+    "execution_authorization": "None for this mechanism; estimate full setup/marker scanning/splitting/storage/cost and ask separately if cloud execution is needed; no new spend or VM wake now",
+    "external_binners": "All deferred, including CompleteBin and SemiBin2"
+  },
+  "retained_local_root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-controls/20261016-review",
+  "analysis_bindings": {
+    "local-review-v2/review.json": {
+      "bytes": 261695,
+      "sha256": "5f8bea0a6eb290dc9a1b1cfe457544845ee1d96119dc470d769d3dc9bf9fe5c5"
+    },
+    "evaluations.json": {
+      "bytes": 198701,
+      "sha256": "c89c6ea64f83f4238ec6ffcd77acc75b8ee0b979cb538264283eb9ca0e1c25c2"
+    },
+    "origin-diagnostics-final.json": {
+      "bytes": 240269,
+      "sha256": "bce55a39ead6b849815c3ae5ee95f956be1dfc01fa43831978cc78c41039ef2e"
+    },
+    "grouping-losses.json": {
+      "bytes": 174240,
+      "sha256": "1e8f926e75d1bde8838156fc4f34a93441e489e3ef834acb16b58c87536c82ce"
+    },
+    "review-cost-gate.json": {
+      "bytes": 1192,
+      "sha256": "2d0431462c4664e7ee97ba696d654809a81eea460d32ceca253f42ba7a48a68a"
+    },
+    "archive-verification.json": {
+      "bytes": 701,
+      "sha256": "3f3ed913e218c872dd25e62f732bc156f706d251308ebf06b380d1867e918c7e"
+    },
+    "grouping-analysis.py": {
+      "bytes": 2894,
+      "sha256": "087d1ecfe0a01b1c9d96ab99750aba6c81c8e01c309d72896bbed7c4fb109ad4"
+    },
+    "origin-diagnostics-final.py": {
+      "bytes": 1078,
+      "sha256": "0726b9d38c31a810defc41cec4d70f096921b3a9831f6ada14dd84d79e9866a7"
+    }
+  },
+  "checks": {
+    "new_evaluator_tests": 2,
+    "new_diagnostic_tests": 2,
+    "truth_regressions": 6,
+    "actual_native_AMBER_tiny_contract": "PASS",
+    "all_four_native_AMBER_evaluations": "PASS",
+    "independent_DNA_axes_depth_receipts_and_reload": "PASS",
+    "retained_source_union_decomposition_reproduction": "PASS",
+    "quality_not_inferred_from_test_counts": true
+  },
+  "analysis_code_bindings": {
+    "scripts/e009_evaluate.py": {
+      "bytes": 5678,
+      "sha256": "bca67ab8e1e8440be1c974237b24dbfb30eaf5231964f2830576e9363681e3a1"
+    },
+    "scripts/e009_controls_review.py": {
+      "bytes": 15674,
+      "sha256": "ceb8ffdeb44395674cf2d313cb9c881bc942fc16e4230693a7234fa90cb4dda6"
+    },
+    "tests/test_e009_evaluate.py": {
+      "bytes": 2970,
+      "sha256": "b38d6f715750210e9881bc08cbcc250687ebab9ca4e7bb0f24e2c5defa89464a"
+    },
+    "tests/test_e009_controls_review.py": {
+      "bytes": 2928,
+      "sha256": "2628b698b26779476c6c3a43f56fcdd05d53535c46665bda8db4e9efb1e1699e"
+    }
+  },
+  "executed_code_bindings": {
+    "review-source-v2-executed.py": {
+      "bytes": 14504,
+      "sha256": "8e4079142be75998199c2ad17ed662721494ec1f40e3d0b11e9c77830405177c"
+    },
+    "evaluator-source-executed.py": {
+      "bytes": 5554,
+      "sha256": "3877a759246e22165181a1a2565399eee4b3de2ccbdab2794827ead5c055a487"
+    },
+    "grouping-analysis.py": {
+      "bytes": 2894,
+      "sha256": "087d1ecfe0a01b1c9d96ab99750aba6c81c8e01c309d72896bbed7c4fb109ad4"
+    },
+    "origin-diagnostics-final.py": {
+      "bytes": 1078,
+      "sha256": "0726b9d38c31a810defc41cec4d70f096921b3a9831f6ada14dd84d79e9866a7"
+    },
+    "local-runtime-probe.py": {
+      "bytes": 610,
+      "sha256": "b01ea6fd75a974c2ee417430ed0fc8a350d37a85a5c189cb62648df6fec12bf5"
+    }
+  },
+  "runtime_receipts": {
+    "local-review-runtime.json": {
+      "bytes": 1441,
+      "sha256": "d83abf84aff12fbca359c60f8de180157a105968d3de21fa09a218a6feb4538b"
+    },
+    "local-amber-runtime.json": {
+      "bytes": 1582,
+      "sha256": "ef1909acc2055d339250f8573563f72e65b4dd264ec2eeb3330726b2f00209c9"
+    }
+  },
+  "review_evidence_archive": {
+    "bytes": 484012,
+    "sha256": "aca28fbbc415576353e428f5a21ec6061100faf15e8be49db300f4f473fac764",
+    "regular_members": 77,
+    "logical_bytes": 2632002,
+    "inventory_sha256": "194f3b870eefc6204ac828061168f235f4a0e62e3bc1e2bb01302d8d301608cf",
+    "uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/review-20261016/e009-controls-reviewed-20261016-v1.tar.gz",
+    "readback_verified": true,
+    "all_inventory_members_verified": true
+  }
+}

@@ -1,6 +1,6 @@
 # D014: Google Cloud as the connected Linux research workspace
 
-Date: 2026-10-13; preparation/data/review amendments: 2026-10-14–15. Status: **accepted; infrastructure verified, reusable data accepted after final truth-parser failure**.
+Date: 2026-10-13; preparation/data/review amendments: 2026-10-14–15. Status: **accepted; infrastructure, separate truth v2 and unchanged controls reviewed; original data-DAG failure preserved**.
 
 ## Problem and decision
 
@@ -164,3 +164,23 @@ gates. [The control receipt](../../experiments/E009-competitive-benchmark/contro
 records the current boot/PID watchdog and4.25h STOP. No resize, provisioning, IAM,
 new service or external binner is involved. Leave the healthy run supervised;
 inspect completion/shutdown later without another VM wake or automatic retry.
+
+## Control completion and stopped review, 2026-10-16
+
+All four separately approved unchanged controls completed and passed independent
+local review in [the result](../../experiments/E009-competitive-benchmark/controls-review.json).
+GCP confirms TERMINATED at 22:55:19.426 UTC October 15 /00:55 October 16 Copenhagen.
+No new VM wake or resource/service/IAM change followed. The4.25hSTOP policy remains
+configured, not authorization for another run. Measured 1.7542275h costs~$0.479
+compute/IP; conservative private evidence export~$0.0542, within$2. Refreshed
+Welcome credit DKK1,936.57/expiry2027-01-12 and unchanged DKK SKUs admit the export;
+reported net0 is lagged billing, not a reconciled phase invoice.
+
+The compact scientific evidence is privately retained/readback-verified and all
+archive/member bytes independently checked. Post-exit watcher snapshot is only
+on stopped disk; stage/private completion evidence establishes success separately
+from shutdown. No wake is justified merely to retrieve that redundant stop detail.
+Existing30/300 GiB disks still cost$31.20/month; review byOctober 21, no retention
+extension. The strongest next step is local preparation of D013's one grouping
+mechanism, with full resource/credit admission and separate authorization before
+any later execution. Read-only GitHub remains adequate; no credential change.

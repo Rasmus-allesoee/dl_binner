@@ -1,6 +1,6 @@
 {
   "record": "E009",
-  "status": "owner-authorized conditional control execution; see controls-observed.json",
+  "status": "Executed once under separate owner $2 approval; all four accepted in controls-review.json",
   "decision": "repair/admit truth from retained evidence first; then diagnose the unchanged prototype before an external reference",
   "baseline_source_commit": "5e54538d1799e8d2538621729400f33fbaf017b9",
   "baseline_package": "0.1.0.dev3",
@@ -98,7 +98,7 @@
     "retention": "within existing seven-day storage window; no retention extension implied",
     "not_a_runtime_forecast": true,
     "complete_independent_runtime_required": "fresh owned CPU env from accepted Python3.12/numpy1.26.4/torch2.2.2+cpu/networkx3.4.2 recipe, installed immutable dev3 wheel; no borrowed UCloud prefix",
-    "full_scale_CPU_RSS_affordability_unmeasured": true,
+    "full_scale_CPU_RSS_affordability_unmeasured": false,
     "no_scores_in_cloud_launcher": true
   },
   "questions": [
@@ -121,5 +121,6 @@
   "feature_inputs": "diagnostic-feature-inputs.json",
   "truth_admission": "truth-v2-admission.json",
   "new_fit_budget_approved": true,
-  "phase_parent": "scripts/e009_controls_phase.py"
+  "phase_parent": "scripts/e009_controls_phase.py",
+  "execution_result": "controls-review.json"
 }
