@@ -344,3 +344,62 @@ source/genome/replicon/taxonomy/overlap/truth and separate acquisition/cost admi
 Additional read-depth assemblies may later be valuable, but mapping ten samples
 to one assembly is not ten independent assembly tests. No such new work or paid
 resource/retention change is authorized in this block. October 21 review remains.
+
+## E013 outcome and next training/data block, 2026-10-17
+
+The [completed E013 comparison](../../experiments/E013-marker-quality/review.json)
+passes its prospectively frozen directional criteria: full-reference weighted R95
+**5.7388%** versus protected CPM **5.3990%**, 9 versus 8 targets >=50%, one target
+gain and no loss. It selects five retained splits, preserves the four formerly
+harmed parents and admits the useful ASV300.2 split. All accepted splits reduce
+the fixed CPM objective. This is evidence against a universal graph-gain veto,
+within this inspected community; it does not invalidate graph information.
+
+**Keep E013 provisionally as the research refiner around CPM.** The quality score
+separates candidates here; all twelve retained alternatives pass context signs.
+There is no supported new median-seeded community proposal, so that route has
+engineering coverage without a demonstrated recovery contribution. Panel/lineage
+proxies are not calibrated MAG estimates. The bundle adds 424,264 unassigned bp,
+including 342,037 confirmed bacterial bp, and slightly lowers restricted B3
+recall/F1. Dev3 still has more >=50%-recovered targets, MetaBAT's accepted single
+reference remains higher, and mixing/fragmentation persist. Preserve the rule and
+all alternatives rather than tuning away those trade-offs after seeing truth.
+
+**Do not perfect refinement/grouping on E009 before improving training.** The
+modest single-target gain is the protocol's reason to broaden evidence. The
+strongest next block is prospectively chosen additional-community admission and
+coherent training implementation in parallel. This builds on existing reviews
+rather than restarting a field review or a tiny-feature campaign. The accepted
+[E011 window audit](../../experiments/E011-cached-grouping-reference/audit.json)
+already found that 91.02% of 13,554 training parents have coincident fixed-pair
+coordinates and that only 15.22% of eligible parents train. Correct real-window
+sampling can still offer limited augmentation/exposure. It is not an implementation
+bug or proof of the dominant causal bottleneck. The accepted E010 inner training
+loop's 18.265 s/20 epochs makes a cached later training test plausible, but is not
+an affordability guarantee for larger data or evidence of inadequate learning.
+
+Prioritize a **reconstruction-regularized multiview composition/depth candidate**
+with more varied DNA positives and use of available positive views. Reconstruction
+can require an embedding to retain input information beyond pair agreement;
+different fragment exposure addresses the narrow fixed view set. It can also
+preserve nuisance/lineage-independent variation or strengthen depth shortcuts,
+so the precise targets, normalization, weights and depth-absent behavior must be
+declared/tested before new scores. Use one coherent implementation and at most
+one selective loss/view control that could change the design. Positive-only/teacher
+objectives, false-negative handling, pretrained/context representations and
+residual grouping/merging are serious alternatives, not automatic additions.
+Marker-aware training, taxonomy and ensembles remain unjustified in this block.
+
+Retain the original oral-GSA choice. Planning-only HEADs find four frozen files
+totaling 2,445,246,434 bytes; no bodies were downloaded and no truth admitted.
+Source/reference payload beyond these is unknown. A future local block can admit
+checksums, sample/source/genome/replicon/molecule/taxonomy joins, overlap, coordinates
+and duplicate-safe full-reference denominators with streaming/indexed readers,
+while implementing/tiny-testing the training candidate. Do not fit/score a community
+until its truth/resources and the frozen candidate/protocol pass their admissions.
+Oral GSA tests sequence-only transfer without assembly errors; it cannot establish
+depth benefit or pretraining-independent generalization. Data inspected for design
+become development data, requiring later prospective confirmation for broader claims.
+E013's [following prompt](../../experiments/E013-marker-quality/OPERATIONS.md#exact-following-prompt)
+owns the proposed local block. Existing storage review is still October 21;
+no cloud action, paid work or retention extension follows from this recommendation.

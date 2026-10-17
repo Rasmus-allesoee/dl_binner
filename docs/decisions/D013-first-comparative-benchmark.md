@@ -414,3 +414,25 @@ mapping supports distinct provided loci and identifies partial/overlapping calls
 biological specificity and reference purity remain uncertain. [D015](D015-coherent-prototype-upgrade.md#e012-observed-protection-and-next-coherent-upgrade-2026-10-17)
 owns the next design decision. Accepted dev3/dev4, truth, all populations and failed
 journals stay immutable; oral-GSA unacquired, October 21 review unchanged.
+
+## E013 value obtained and broader development, 2026-10-17
+
+The [coherent cached refinement comparison](../../experiments/E013-marker-quality/review.json)
+completes locally for $0 new cloud cost. Its frozen label-free quality/context
+rule raises weighted full-reference R95 from protected CPM's 5.3990% to 5.7388%,
+with one target gain/no loss; it preserves the four parents harmed by old
+refinement. Five old proposals survive, no supported new median proposal, and
+unassigned DNA increases while restricted grouping recall/F1 decline slightly.
+The result meets its declared directional criteria and supports provisional
+retention, not a stronger-binner or component-causal claim. Full populations,
+denominators/N-quarantine, original vectors and failures remain.
+
+The next value comes from broader evidence and a coherent training improvement,
+not another mature-tool ranking or refinement threshold search on E009. [D015](D015-coherent-prototype-upgrade.md#e013-outcome-and-next-trainingdata-block-2026-10-17)
+selects additional oral-GSA admission plus local reconstruction-regularized
+multiview implementation/tiny contracts in parallel. Existing limited training
+view/exposure evidence motivates that candidate without proving it is the main
+bottleneck. Oral-GSA remains frozen/unacquired; HEAD-only size assessment is not
+source/truth admission. A later community execution needs its own frozen candidate,
+data/truth/resource/cost admission and authorization. No cloud starts, fits or
+retention change occurred here; October 21 review remains.

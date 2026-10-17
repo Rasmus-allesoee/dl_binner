@@ -3,12 +3,16 @@
 Updated: 2026-10-17 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**E012 completed entirely locally, with $0 new cloud work.** Its
-[review](../experiments/E012-marker-acceptance/review.json) binds all-DNA cached
-selection and marker/truth diagnostics; no VM/API/start/upload/resource or
-retention action. The following E011 observation remains the last verified live
-provider state, rather than a new E012 control-plane/billing check. **October 21
-storage review remains; no extension.**
+**E013 and preceding E012 completed entirely locally, with $0 new cloud work.**
+The [E013 review](../experiments/E013-marker-quality/review.json) binds cached
+marker-quality/context refinement, full-DNA evaluation and a 4,176,382-byte local
+archive with every-member readback. There was no VM/API/start/upload/resource or
+retention action. Planning-only oral-GSA HEAD checks downloaded zero body bytes;
+that community remains unacquired/unadmitted. The following E011 observation
+remains the last verified live provider state, rather than a new control-plane/
+billing check. **October 21 storage review remains; no extension.** Proposed local
+additional-data/training engineering has no implicit cloud authorization; a later
+cloud execution needs fresh credit/price/retention/cost admission.
 
 **E011 recovery completed; VM independently TERMINATED.**
 [Recovery receipt](../experiments/E011-cached-grouping-reference/recovery-observed.json)

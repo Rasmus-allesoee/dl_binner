@@ -387,3 +387,17 @@ then use the bounded local outcome to choose additional-data admission and the
 next reviewed training/representation block, without requiring perfect refinement.
 [Protocol](../../experiments/E013-marker-quality/protocol.json) owns exact criteria;
 oral-GSA remains frozen/unacquired, October 21 review unchanged.
+
+2026-10-17 E013 completed: [the frozen coherent refiner](../../experiments/E013-marker-quality/review.json)
+selects five retained CPM proposals, raises weighted full-reference R95
+5.3990→5.7388% with one target gain/no loss and protects the four formerly harmed
+parents. More DNA becomes unassigned and restricted grouping recall/F1 fall
+slightly; no new supported median proposal. Keep this provisional bundle rather
+than declaring markers solved or disproved. Q001/Q003/Q005 remain open generally;
+mixing, fragmentation and representation/objective limits remain unresolved.
+[D015](../decisions/D015-coherent-prototype-upgrade.md#e013-outcome-and-next-trainingdata-block-2026-10-17)
+chooses broader-data admission plus coherent multiview/reconstruction training
+engineering as the next block, without requiring perfect refinement first.
+Oral-GSA stays unacquired/unadmitted; no community fit, source-truth admission or
+generalization claim follows. All accepted evidence/failures and October 21
+storage review remain.

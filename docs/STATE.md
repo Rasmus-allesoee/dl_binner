@@ -4,76 +4,82 @@ Updated: 2026-10-17. This is the single current handoff.
 
 ## Exact next step
 
-**E013 authorized current block: coherent marker-quality refinement, locally.**
-On `e013-marker-quality-refinement`, the prospective [design/protocol](../experiments/E013-marker-quality/README.md)
-combines weighted call reliability, median-family seeding, soft spherical proposals
-and whole-parent/child quality plus composition/depth-context selection. The
-encoder, native vectors, retained graph/weights, seed and CPM parent remain fixed.
-Real tiny production reader/refiner/export/reload and resource-limit contracts
-precede a clean source freeze and one bounded local matched comparison. No new
-community outcomes yet; no cloud, external tool or confirmation acquisition.
-Four numerical threads, 8 GB sampled RSS, original 30-minute cumulative execution
-clock and 2 GiB attributed working space, including collection/readback.
-The owner asks to retain marker refinement across communities and to revisit
-training/architecture after this bounded block without requiring perfect grouping
-on E009. Oral-GSA remains frozen/unacquired and October 21 storage review remains.
+**E013 completed locally; keep its refiner provisionally and broaden development.**
+On `e013-marker-quality-refinement`, clean source **6d06560** froze one coherent
+call-reliability/median-proposal/quality-context rule before changed outcomes.
+The retained CPM parent, encoder, original native unit vectors, graph/weights,
+seed and ten-depth inputs remain fixed. Refiner/reviewer/collection all succeed;
+[review](../experiments/E013-marker-quality/review.json) and
+[results](../experiments/E013-marker-quality/README.md#completed-local-comparison)
+bind full-DNA contracts, independent evaluation, resources and evidence.
 
-**E012 completed locally; no cloud action or spending.** On branch
-`e012-marker-acceptance-control`, clean source **a90a8d8** froze the sole graph
-CPM-gain gate before changed outcomes. The three primary stages and descriptive
-four-case context audit exited zero. [Review](../experiments/E012-marker-acceptance/review.json)
-binds exact inputs/outputs, all-DNA exports, markers, 156 target pairs and costs.
-No training/inference, new split, marker detection, optimizer, neighbor rebuild,
-alignment, external tool, acquisition or confirmation ran.
+| Comparison | Weighted full-reference R95 | Targets >=50% /90% |
+| --- | ---: | ---: |
+| E012 protected CPM /native parent | 5.3990% | 8 /2 |
+| Old CPM refinement | 4.6171% | 6 /2 |
+| **E013 quality/context selection** | **5.7388%** | **9 /2** |
+| Preserved dev3 learned ten-depth | 5.3911% | 13 /1 |
+| Previously accepted sole MetaBAT2 reference | 8.5493% | 16 /5 |
 
-| Retained context | Parent weighted R95 | Old children | Guarded selection | Accepted splits |
-| --- | ---: | ---: | ---: | ---: |
-| RB | 1.8763% | 4.2909% | **4.5232%** | 16 /18 |
-| CPM | 5.3990% | 4.6171% | **5.3990%** | 0 /12 |
+Five retained splits survive; no new supported median proposal. ASV300.2 gains
+1,885,026 bp versus protected CPM, with no target loss; the four parents harmed
+by old refinement remain protected. The frozen directional keep criteria pass.
+All twelve old candidates pass context signs here; marker-quality gain separates
+five from seven. No causal win for each ingredient or median proposal is proven.
+All five selected splits have negative fixed-graph gain, so it is appropriately
+not a universal veto. The proxy remains panel/lineage-dependent, not MAG quality.
 
-CPM selected assignments/reasons/validity/neighbors exactly equal its native
-parent. Four harmed targets regain 6,221,970 bp, while the old ASV300.2 gain of
-1,885,026 bp is lost: net +4,336,944 bp. RB regains 1,288,186 bp for ASV399.6 with
-no target loss versus old children. CPM has 8 /2 targets >=50% /90%, versus dev3's
-13 /1 and nearly equal aggregate 5.3911%. This is protection, not demonstrated
-additional CPM marker recovery, generalization or a stronger-binner claim.
+All 145,702 contigs /231,678,157 bp survive, across 846 bins: 88,960 assigned,
+81 unassigned and 56,661 excluded-short. Additional unassigned DNA is 45 contigs
+/424,264 bp, including 342,037 confirmed bacterial bp and seven marker-bearing
+contigs /317,944 bp. Restricted grouping recall/F1 decline slightly despite
+primary recovery gain. All ten ordered axes, 13 all-zero rows, full 156-target
+/554,661,890-bp reference denominators, short/unknown/non-target DNA and **3.3034%
+N-quarantine** remain. Mixing and fragmentation persist. Keep the gain as one
+community's development evidence, not a uniformly stronger-product claim.
 
-The all-adopted-seed audit projects 74 genes through 840 existing competing PAF
-rows. All four harmful seed pairs uniquely localize gene/domain spans to distinct
-provided records within the same simulator genome. The all-conflict-family audit
-in those four cases finds eight distinct-record pairs and one overlapping-locus
-pair with a partial call; another trigger includes a barely passing HMM score.
-Draft reference records are not proven biological replicons. Functional paralogy,
-family specificity and source-assembly redundancy/contamination remain unresolved.
-These observations support changing marker reliability/context policy, not a
-truth-derived family blacklist or ruling marker information out. Highest versus
-second marker count cannot explain the four k=2 cases.
+**Next block, proposed rather than executed/authorized by this completion:** admit
+the already frozen oral-GSA community and implement one coherent training upgrade
+locally in parallel. Do not tune markers further on E009 now or require perfect
+grouping first. Prior [E011 audit](../experiments/E011-cached-grouping-reference/audit.json)
+found 12,337/13,554 training parents (91.02%) with coincident fixed-pair coordinates
+and only 15.22% of eligible parents exposed to training. This is correct but
+limited augmentation, not a new bug or proof that neural learning is the sole
+bottleneck. Prefer reconstruction-regularized multiview composition/depth learning
+with more varied real DNA positives as the next coherent implementation candidate;
+retain grouping, false-negative/teacher and pretrained/context alternatives.
+[D015](decisions/D015-coherent-prototype-upgrade.md#e013-outcome-and-next-trainingdata-block-2026-10-17)
+records the decision. One future selective control can resolve a design-changing
+uncertainty; no compulsory grid/factorial campaign.
 
-**Next decision:** keep CPM as the provisional working grouping direction and
-implement one coherent confidence/quality-aware marker refinement upgrade.
-Retain E012's guard as a safety comparison, while allowing independent marker/
-composition/measured-parent-depth evidence to support useful splits that reduce
-graph quality. Parent alternatives and full DNA must survive. [Operations](../experiments/E012-marker-acceptance/OPERATIONS.md#exact-following-prompt)
-owns the exact next local implementation/comparison prompt; no paid run is needed.
-The original E011 +0.5-point post-refinement criterion remains failed. D015 revises
-the earlier over-rigid recommendation; that threshold was not a biological law.
-RB is a historical diagnostic context, not a recommended return path. No grid,
-marker-aware training, taxonomy addition or feature-family verdict follows.
+[Operations](../experiments/E013-marker-quality/OPERATIONS.md#exact-following-prompt)
+owns the exact next local admission/engineering prompt. Oral-GSA is still
+**unacquired/unadmitted**: planning-only HEADs find four locked files totaling
+2,445,246,434 bytes, zero body bytes downloaded. Additional source-reference needs
+are unknown. Verify publisher/new checksums, source/genome/replicon/taxonomy/overlap,
+coordinates and full denominators before truth admission; no community fit/score
+yet. GSA is sequence-only with no assembly errors and cannot confirm depth benefit.
+A later community/cloud execution needs its own frozen source, admission, resource/
+cost estimate and authorization. No budget or retention extension carries over.
 
-All 145,702 contigs /231,678,157 bp, ten ordered depths, 89,041 eligible rows,
-13 all-zero depth rows, all short/unknown/non-target populations and **3.3034%
-N-quarantine** remain. The old strict Mac allclose failure remains unresolved;
-original native vectors and accepted Linux reload remain unchanged. Oral-GSA
-confirmation stays frozen/unacquired, with independent source/genome/replicon/
-taxonomy/overlap/truth and separate cost admission before execution.
+E013's bounded driver including collection/readback took **79.120 s**, sampled CPU
+78.36 s, RSS peak **1.496 GB**, working files peak **0.2484 GiB**, within four-thread
+/8-GB/30-minute/2-GiB limits. Its **4,176,382-byte archive /29 members** and retained
+closed sources independently verify. Full exported DNA remains locally with
+archived manifest hashes, without a cloud backup. Seven new and 28 related tiny
+engineering contracts passed. No new fit/inference/detector/neighbors/aligner,
+external tool, cloud API/start/upload or cost; no new Linux/product-CLI claim.
+The original failed Mac allclose and all old failed journals/source freezes remain.
 
-Local execution/context **197.803 s**, sampled CPU 196.38 s, sampled peak tree RSS
-**1.257 GB**; retained output before compact collection **0.4822 GiB**. The
-**7,042,851-byte local archive /51 members** passed every-member readback. No cloud
-upload/backup or resource/retention change. Eight new tiny contracts and 21 related
-contracts passed; docs checks are recorded in the review.
+E012 remains accepted: the local graph-gain safety control selected 0/12 CPM and
+16/18 RB splits. Its [marker-locus/call audit](../experiments/E012-marker-acceptance/review.json)
+distinguishes distinct provided loci and partial/overlapping/marginal calls,
+without proving universal single-copy biology. E013 supersedes its prospective
+next instruction, not its evidence. The original E011 practical +0.5-point
+criterion remains failed; CPM is the provisional working direction, RB a retained
+historical control. Immutable dev3/dev4 and E009–E012 science are unchanged.
 
-**Last live cloud observation is E011, not a new E012 query:** independently
+**Last live cloud observation is E011, not a new E012/E013 query:** independently
 TERMINATED **2026-10-17 08:13:23.285 UTC** after successful phase
 `cached-20261017T080610Z-7a43eb6` /twelve native stages and 1,905 verified members.
 [E011 receipt](../experiments/E011-cached-grouping-reference/recovery-observed.json)

@@ -1,0 +1,814 @@
+{
+  "branch": "e013-marker-quality-refinement",
+  "clock_contents": {
+    "seconds": 1800,
+    "started_epoch": 1792261233.1036448
+  },
+  "collection": {
+    "archive": {
+      "bytes": 4176382,
+      "sha256": "a4ca2466d0d9a6cbdc7947a5f1890a009ce51e4177d021aaad3ae78cbf10bfc7"
+    },
+    "cloud_upload": false,
+    "every_member_readback": true,
+    "full_DNA_retained_locally": true,
+    "inventory": {
+      "bytes": 4346,
+      "sha256": "80920248f8b07aca5f3e00662532a7619aa6e712a18c328d83feb6eec01c0ba2"
+    },
+    "local_path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e013-marker-quality/evidence-attempt-001-6d06560.tar.gz",
+    "logical_member_bytes": 29025463,
+    "regular_members": 29
+  },
+  "cost": {
+    "cloud_APIs_VM_upload_resize_provision_retention_actions": false,
+    "existing_cloud_storage": "Unchanged earlier approval; last E011 quote $31.20/month while stopped, not refreshed here. October21 review, no extension.",
+    "last_live_VM_state": "E011 independently TERMINATED 2026-10-17T08:13:23.285Z; no fresh E013 query.",
+    "local_electricity_not_priced": true,
+    "new_cloud_compute_storage_network_usd": 0
+  },
+  "date": "2026-10-17",
+  "diagnostics": {
+    "candidate_restricted_B3": {
+      "attributable_bp": 165477813,
+      "f1": 0.41966118095709637,
+      "precision": 0.7620156222641202,
+      "recall": 0.28956632065254856
+    },
+    "full_cells_locator": "artifacts/e013-marker-quality/attempt-001-6d06560/review/review.json",
+    "origin_by_status": {
+      "assigned": {
+        "all_bp": 209181564,
+        "ambiguous_query_bp": 40876997,
+        "bacterial_confirmed_bp": 96648800,
+        "eukaryotic_confirmed_bp": 56931266,
+        "nn_quarantined_query_bp": 7645499,
+        "other_confirmed_bp": 288021,
+        "unsupported_query_bp": 2898166,
+        "viral_confirmed_bp": 3892815
+      },
+      "excluded": {
+        "all_bp": 22035454,
+        "ambiguous_query_bp": 1476971,
+        "bacterial_confirmed_bp": 6490495,
+        "eukaryotic_confirmed_bp": 13281397,
+        "nn_quarantined_query_bp": 4987,
+        "other_confirmed_bp": 418,
+        "unsupported_query_bp": 585103,
+        "viral_confirmed_bp": 196083
+      },
+      "unassigned": {
+        "all_bp": 461139,
+        "ambiguous_query_bp": 48663,
+        "bacterial_confirmed_bp": 363345,
+        "eukaryotic_confirmed_bp": 42072,
+        "nn_quarantined_query_bp": 2719,
+        "unsupported_query_bp": 3168,
+        "viral_confirmed_bp": 1172
+      }
+    },
+    "population_axes": [
+      "lower_bp",
+      "attributable_lineage",
+      "candidate_eligibility",
+      "status",
+      "clean_marker"
+    ],
+    "population_cell_count": 67,
+    "protected_CPM_restricted_B3": {
+      "attributable_bp": 165477813,
+      "f1": 0.42307772517047443,
+      "precision": 0.7608508454242253,
+      "recall": 0.2930020233788229
+    },
+    "protected_source_bin_summary": {
+      "large_bins_at_least_200kb": 191,
+      "large_bins_below_95pct_purity": 136,
+      "semantics": "all bin DNA denominator; best-source bin ignores size/purity for diagnosis only",
+      "targets_best_source_bin_below_95pct": 85
+    },
+    "restricted_limit": "165477813 attributable bp, not full-reference primary recovery; non-target lineages retained. Slight recall/F1 loss is a real trade-off.",
+    "source_bin_summary": {
+      "large_bins_at_least_200kb": 193,
+      "large_bins_below_95pct_purity": 137,
+      "semantics": "all bin DNA denominator; best-source bin ignores size/purity for diagnosis only",
+      "targets_best_source_bin_below_95pct": 84
+    },
+    "unchanged_native_geometry": {
+      "attributable_eligible_queries": 76010,
+      "nn_purity": 0.8817734508617288,
+      "nn_purity_bp_weighted": 0.8371106364926092,
+      "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+    },
+    "whole_alternative_review": {
+      "complete_alternatives_checked": 841,
+      "no_merge_or_new_assignment": true
+    }
+  },
+  "engineering": {
+    "binding": {
+      "bytes": 2327,
+      "sha256": "335a4db7e5de3386ad690e2f923f4140333da697957cd394cd3f9d58489b9a3c"
+    },
+    "native_paths": "Actual PyHMMER profile reader/writer, sparse cache/opaque FASTA mapping, refiner/selection/export/reload, independent accounting; explicit tiny genes/domains/vectors as fixtures, no mocks.",
+    "new_tests": 7,
+    "record": "local-checks.json",
+    "related_contracts": 28,
+    "unrun": "No marker detector, neural fit/reload, new inference, native Linux or changed package CLI. Original Mac allclose remains failed and native vectors untouched."
+  },
+  "final_checks": {
+    "JSON_parse_files": 5,
+    "Python_AST_files": 5,
+    "docs": {
+      "command": "python3 scripts/check_docs.py",
+      "local_links": 968,
+      "maintained_documents": 68,
+      "optional_historical_cache_files_unavailable": 10,
+      "status": "PASS"
+    },
+    "engineering_tests_reused": "Seven new /28 related passed before freeze; scientific code unchanged, no redundant community execution.",
+    "git_diff_check": "PASS",
+    "scientific_sources_unchanged_after_execution": true
+  },
+  "full_DNA": {
+    "bin_count": 846,
+    "bin_size_bp": {
+      "max": 11624575,
+      "median": 115908.0,
+      "min": 10454
+    },
+    "bp": 231678157,
+    "contigs": 145702,
+    "length_strata": [
+      {
+        "bp": 22035454,
+        "contigs": 56661,
+        "lower_bp": 1,
+        "reasons": {
+          "below_min_length": 56661
+        },
+        "statuses": {
+          "assigned": {
+            "bp": 0,
+            "contigs": 0
+          },
+          "excluded": {
+            "bp": 22035454,
+            "contigs": 56661
+          },
+          "unassigned": {
+            "bp": 0,
+            "contigs": 0
+          }
+        },
+        "upper_bp": 500
+      },
+      {
+        "bp": 22098500,
+        "contigs": 35898,
+        "lower_bp": 500,
+        "reasons": {
+          "group_below_support": 18,
+          "refinement_ambiguous_affinity": 4
+        },
+        "statuses": {
+          "assigned": {
+            "bp": 22085242,
+            "contigs": 35876
+          },
+          "excluded": {
+            "bp": 0,
+            "contigs": 0
+          },
+          "unassigned": {
+            "bp": 13258,
+            "contigs": 22
+          }
+        },
+        "upper_bp": 768
+      },
+      {
+        "bp": 13986706,
+        "contigs": 16024,
+        "lower_bp": 768,
+        "reasons": {
+          "group_below_support": 4,
+          "refinement_ambiguous_affinity": 4
+        },
+        "statuses": {
+          "assigned": {
+            "bp": 13979727,
+            "contigs": 16016
+          },
+          "excluded": {
+            "bp": 0,
+            "contigs": 0
+          },
+          "unassigned": {
+            "bp": 6979,
+            "contigs": 8
+          }
+        },
+        "upper_bp": 1000
+      },
+      {
+        "bp": 40505273,
+        "contigs": 27307,
+        "lower_bp": 1000,
+        "reasons": {
+          "group_below_support": 12,
+          "refinement_ambiguous_affinity": 21
+        },
+        "statuses": {
+          "assigned": {
+            "bp": 40453055,
+            "contigs": 27274
+          },
+          "excluded": {
+            "bp": 0,
+            "contigs": 0
+          },
+          "unassigned": {
+            "bp": 52218,
+            "contigs": 33
+          }
+        },
+        "upper_bp": 2500
+      },
+      {
+        "bp": 32866110,
+        "contigs": 7728,
+        "lower_bp": 2500,
+        "reasons": {
+          "group_below_support": 2,
+          "refinement_ambiguous_affinity": 10
+        },
+        "statuses": {
+          "assigned": {
+            "bp": 32823334,
+            "contigs": 7716
+          },
+          "excluded": {
+            "bp": 0,
+            "contigs": 0
+          },
+          "unassigned": {
+            "bp": 42776,
+            "contigs": 12
+          }
+        },
+        "upper_bp": 10000
+      },
+      {
+        "bp": 100186114,
+        "contigs": 2084,
+        "lower_bp": 10000,
+        "reasons": {
+          "marker_conflict_no_compatible_group": 1,
+          "refinement_ambiguous_affinity": 5
+        },
+        "statuses": {
+          "assigned": {
+            "bp": 99840206,
+            "contigs": 2078
+          },
+          "excluded": {
+            "bp": 0,
+            "contigs": 0
+          },
+          "unassigned": {
+            "bp": 345908,
+            "contigs": 6
+          }
+        },
+        "upper_bp": null
+      }
+    ],
+    "masks": {
+      "all_zero_depth_contigs": 13,
+      "depth_observations_present": true,
+      "eligible_contigs": 89041,
+      "no_valid_fourmers": 0,
+      "zero_depth_by_sample": {
+        "cami3_toy_human_gut_short_read_sample_0": 75,
+        "cami3_toy_human_gut_short_read_sample_10": 35140,
+        "cami3_toy_human_gut_short_read_sample_11": 53148,
+        "cami3_toy_human_gut_short_read_sample_14": 35514,
+        "cami3_toy_human_gut_short_read_sample_17": 32427,
+        "cami3_toy_human_gut_short_read_sample_2": 35949,
+        "cami3_toy_human_gut_short_read_sample_3": 23480,
+        "cami3_toy_human_gut_short_read_sample_4": 29806,
+        "cami3_toy_human_gut_short_read_sample_6": 37237,
+        "cami3_toy_human_gut_short_read_sample_9": 27837
+      }
+    },
+    "mode": "candidate_measured_parent_depth",
+    "reasons": {
+      "assigned": {},
+      "excluded": {
+        "below_min_length": 56661
+      },
+      "unassigned": {
+        "group_below_support": 36,
+        "marker_conflict_no_compatible_group": 1,
+        "refinement_ambiguous_affinity": 44
+      }
+    },
+    "samples": [
+      "cami3_toy_human_gut_short_read_sample_0",
+      "cami3_toy_human_gut_short_read_sample_2",
+      "cami3_toy_human_gut_short_read_sample_3",
+      "cami3_toy_human_gut_short_read_sample_4",
+      "cami3_toy_human_gut_short_read_sample_6",
+      "cami3_toy_human_gut_short_read_sample_9",
+      "cami3_toy_human_gut_short_read_sample_10",
+      "cami3_toy_human_gut_short_read_sample_11",
+      "cami3_toy_human_gut_short_read_sample_14",
+      "cami3_toy_human_gut_short_read_sample_17"
+    ],
+    "statuses": {
+      "assigned": {
+        "bp": 209181564,
+        "contigs": 88960
+      },
+      "excluded": {
+        "bp": 22035454,
+        "contigs": 56661
+      },
+      "unassigned": {
+        "bp": 461139,
+        "contigs": 81
+      }
+    }
+  },
+  "integrity": {
+    "accepted_prior_code_records_unchanged": true,
+    "archive": {
+      "bytes": 4176382,
+      "sha256": "a4ca2466d0d9a6cbdc7947a5f1890a009ce51e4177d021aaad3ae78cbf10bfc7"
+    },
+    "clock_unchanged": true,
+    "every_member_and_retained_closed_source_verified": true,
+    "inventory": {
+      "bytes": 4346,
+      "sha256": "80920248f8b07aca5f3e00662532a7619aa6e712a18c328d83feb6eec01c0ba2"
+    },
+    "kind": "independent postcollection integrity check; no refiner/evaluator rerun",
+    "logical_member_bytes": 29025463,
+    "regular_members": 29,
+    "source_commit": "6d0656009e8f1fd3a3d1a6e8f430a785452ac081",
+    "source_protocol_locks_exact": true,
+    "status": "PASS",
+    "successful_stages": [
+      "control",
+      "review"
+    ],
+    "wall_seconds": 0.39379223296418786
+  },
+  "limits": [
+    "one development assembly; no generalization, optimality or product feature-family verdict",
+    "3.3034% N-quarantine; full provided reference denominators and all-bin DNA purity; not MAG quality",
+    "panel/lineage-dependent marker proxies are not calibrated completeness/contamination",
+    "no new AMBER, inference, detector, neighbors, aligner, external tool or cloud phase",
+    "original strict Mac allclose failure preserved; original native vectors unchanged",
+    "All old and new failures/source freezes preserved. New selectors cannot merge different CPM parents; fragmentation and mixing remain.",
+    "9 >=50% targets versus dev3 13 and MetaBAT16; weighted gain does not establish uniformly superior recovery.",
+    "Additional unassigned DNA includes seven marker-bearing contigs; full exported DNA is retained, excluded short DNA remains in denominator.",
+    "No additional-community or unseen-genome confirmation yet; oral-GSA is sequence-only and has no assembly errors."
+  ],
+  "marker_evidence": {
+    "ambiguous_genes": 0,
+    "limits": "Heuristic weights and lineage-dependent 107-family Q, not probabilities or calibrated MAG completeness/contamination. Distinct provided loci can be paralogs, source redundancy or biological copies; source audit is not universal single-copy proof. Native cached calls already reduced; overlap consolidation tested tiny, no native consolidation here.",
+    "overlap_consolidations": 0,
+    "panel_families": 107,
+    "partial_loci": 615,
+    "physical_weighted_loci": 3462,
+    "reliability_at_least_half": 3223
+  },
+  "next_block": {
+    "October21_storage_review": "Unchanged. Additional-data admission does not extend existing disks or authorize VM starts.",
+    "exact_prompt": {
+      "boundary": "proposed next owner prompt; no acquisition/training implementation or community execution carried out in E013",
+      "bytes": 3524,
+      "copyable_local_file": "artifacts/e013-marker-quality/prompt_e013_followup.md",
+      "maintained": "experiments/E013-marker-quality/OPERATIONS.md#exact-following-prompt",
+      "sha256": "ca2e3f3e0d73d68dfb6f446310e3d4e9f7b22e8a9c5ca69e8835a60aa6337467"
+    },
+    "oral_GSA_admission_planning": {
+      "binding": {
+        "bytes": 3898,
+        "sha256": "73962986614d043495ac939456ad5b35e0afc968985a892005c4317701dc0a16"
+      },
+      "body_bytes_downloaded": 0,
+      "confirmation_plan": "experiments/E010-coherent-prototype/confirmation-plan.json",
+      "files": [
+        {
+          "admitted": false,
+          "head_bytes": 1729496090,
+          "path": "per_bodysite/oral_bam/gsa.fa",
+          "publisher_md5": "0f2c77508ba269b044409661b512d003",
+          "url": "https://frl.publisso.de/data/frl%3A6425518/per_bodysite/oral_bam/gsa.fa"
+        },
+        {
+          "admitted": false,
+          "head_bytes": 482371982,
+          "path": "per_bodysite/oral_bam/gsa.tsv.gz",
+          "publisher_md5": "8c7f03a7bfc26dafc6542f21284917fc",
+          "url": "https://frl.publisso.de/data/frl%3A6425518/per_bodysite/oral_bam/gsa.tsv.gz"
+        },
+        {
+          "admitted": false,
+          "head_bytes": 77792819,
+          "path": "per_bodysite/oral_bam/gsa_pooled_mapping_fixed.tsv",
+          "publisher_md5": "3c2d78f6f833d97867ca14bea2e866ba",
+          "url": "https://frl.publisso.de/data/frl%3A6425518/per_bodysite/oral_bam/gsa_pooled_mapping_fixed.tsv"
+        },
+        {
+          "admitted": false,
+          "head_bytes": 155585543,
+          "path": "per_bodysite/oral_bam/gsa_pooled_mapping.tsv",
+          "publisher_md5": "dae4cda38548d0a01b04c9d4e205723e",
+          "url": "https://frl.publisso.de/data/frl%3A6425518/per_bodysite/oral_bam/gsa_pooled_mapping.tsv"
+        }
+      ],
+      "future_local_envelope_proposal": "Four locked public files 2445246434bytes, plus small metadata and bounded streaming index; propose <=10GiB extra storage /4numerical threads /8GB sampled RSS. No GCP cost, fit, aligner, new reads/BAMs or confirmation score authorized by E013. Fresh later cloud price/credit/cost admission if needed.",
+      "required": "Verify publisher MD5 and new SHA256; audit source/sample/genome/replicon/molecule/taxonomy joins, duplicate-safe full-reference denominators, exact/near overlap and independent sequence truth. Quantify missing source/reference payload before acquiring beyond the four locked files; keep truth provisional on unresolved contracts. Stream gzip/index joins to avoid unbounded expansion.",
+      "scope": "CAMI II Toy HMB pooled oral GSA samples6,7,8,13,14,15,16,17,18,19; sequence-only, full DNA; complements E009 rather than confirming ten-depth benefit.",
+      "status": "UNACQUIRED_UNADMITTED; HEAD size assessment only, not checksum verification",
+      "total_HEAD_bytes": 2445246434
+    },
+    "recommendation": "Keep E013 as provisional CPM research refinement. Admit the prospectively frozen oral-GSA community and implement a coherent reconstruction-regularized multiview training candidate locally in parallel; no further E009 marker tuning now. Prepare later frozen matched runs only after truth/resource admission.",
+    "training_rationale": {
+      "accepted_E010_training_review": {
+        "binding": {
+          "bytes": 210541,
+          "sha256": "f778de2ca18a5c7d39714bf6bb1f5f95f4650e1cbee115ec3fcf4c287517897f"
+        },
+        "epochs": 20,
+        "inner_model_wall_seconds": 18.264735890999987,
+        "path": "artifacts/e010-coherent-prototype/review-20261017/local-review-v3/review.json",
+        "training_parents": 13554
+      },
+      "accepted_E011_audit": {
+        "binding": {
+          "bytes": 11561,
+          "sha256": "9623f4bfe6b3f1642f724fb468ed8b0d21ef18f22db67dde6bd4af37bc8c5702"
+        },
+        "path": "experiments/E011-cached-grouping-reference/audit.json",
+        "windows": {
+          "eligible_parents": 89041,
+          "explanation": "For parents <=20000bp, each capped window fills its half; two seeded draws therefore coincide. Correct sampling, limited augmentation diversity.",
+          "identical_two_pair_coordinates": 12337,
+          "independent_pair_coordinates": 1217,
+          "inference_only_eligible_parents": 75487,
+          "real_windows": 54216,
+          "trainable_parents": 13554,
+          "training_bp": 141391731
+        }
+      },
+      "alternatives": "Residual graph fragmentation/merging, false-negative-aware or positive-only teacher objectives, pretrained/context models; no automatic taxonomy/marker-training/GLM/ensemble addition or grid.",
+      "candidate": "More diverse real-DNA positive views and use of available positives, reconstruction-regularized composition/depth encoders; predeclare context/short/depth-absence semantics and weights before scores. Resolve details in implementation with reviewed primary sources.",
+      "eligible_parent_training_fraction": 0.15222201008524164,
+      "identical_pair_parent_fraction": 0.9102110078205696,
+      "interpretation": "Correct real-DNA sampling, limited fixed augmentation and long-only exposure; this is accepted E011 evidence, not a new bug or proof training is the main bottleneck. Multiple mechanisms remain plausible.",
+      "selective_control": "Preserve frozen dev4/E013 comparator and at most one decision-changing loss/view ablation if justified; not a compulsory factorial campaign."
+    }
+  },
+  "outcome": {
+    "all_old_candidates_passing_context_sign": 12,
+    "assessed_parents": 14,
+    "attribution_limit": "Five retained splits selected; Q sign distinguishes five from seven here, all twelve old candidates pass context signs. No isolated causal benefit of reliability/context weighting; no new supported median proposal, so that route has tiny-contract evidence only.",
+    "candidate": {
+      "at_least_50_percent": 9,
+      "at_least_90_percent": 2,
+      "bp_weighted_R95": 0.05738822979166641,
+      "macro_R95": 0.05839801924213946,
+      "reference_bp": 554661890,
+      "targets": 156
+    },
+    "changed_targets": [
+      {
+        "candidate_bp": 5559851,
+        "delta_vs_old_bp": 2861385,
+        "delta_vs_protected_bp": 0,
+        "genome": "ASV150.14",
+        "old_refinement_bp": 2698466,
+        "protected_CPM_bp": 5559851,
+        "reference_bp": 6474050
+      },
+      {
+        "candidate_bp": 1885026,
+        "delta_vs_old_bp": 0,
+        "delta_vs_protected_bp": 1885026,
+        "genome": "ASV300.2",
+        "old_refinement_bp": 1885026,
+        "protected_CPM_bp": 0,
+        "reference_bp": 3107801
+      },
+      {
+        "candidate_bp": 2721103,
+        "delta_vs_old_bp": 1288186,
+        "delta_vs_protected_bp": 0,
+        "genome": "ASV399.6",
+        "old_refinement_bp": 1432917,
+        "protected_CPM_bp": 2721103,
+        "reference_bp": 3159004
+      },
+      {
+        "candidate_bp": 3050041,
+        "delta_vs_old_bp": 667301,
+        "delta_vs_protected_bp": 0,
+        "genome": "ASV406.4",
+        "old_refinement_bp": 2382740,
+        "protected_CPM_bp": 3050041,
+        "reference_bp": 3405233
+      },
+      {
+        "candidate_bp": 3024550,
+        "delta_vs_old_bp": 1405098,
+        "delta_vs_protected_bp": 0,
+        "genome": "ASV456.0",
+        "old_refinement_bp": 1619452,
+        "protected_CPM_bp": 3024550,
+        "reference_bp": 3549767
+      }
+    ],
+    "criteria": "KEEP as provisional research refiner under frozen directional criteria; NOT general validation or a stronger-product/SOTA claim",
+    "criteria_application": {
+      "additional_data_trigger": "Move to additional-community admission and coherent training engineering; no more E009 refinement tuning now.",
+      "engineering_and_full_DNA": "PASS",
+      "gain_is_small_single_target": true,
+      "paired_target_loss_vs_protected": 0,
+      "targets_50_at_least_protected_CPM": true,
+      "weighted_R95_at_least_protected_CPM": true
+    },
+    "new_supported_median_proposals": 0,
+    "old_candidates_assessed": 12,
+    "paired": {
+      "gained_vs_old": 4,
+      "gained_vs_protected": 1,
+      "lost_vs_old": 0,
+      "lost_vs_protected": 0,
+      "total_delta_vs_old_bp": 6221970,
+      "total_delta_vs_protected_bp": 1885026
+    },
+    "parents": 841,
+    "percentage_point_change_vs_old_CPM_refinement": 1.1217590593793993,
+    "percentage_point_change_vs_protected_CPM": 0.33985136422478923,
+    "reused_comparators": {
+      "RB-post": {
+        "at_least_50_percent": 6,
+        "at_least_90_percent": 2,
+        "bp_weighted_R95": 0.042909427218805314
+      },
+      "RB-pre": {
+        "at_least_50_percent": 3,
+        "at_least_90_percent": 1,
+        "bp_weighted_R95": 0.018762951245848168
+      },
+      "cpm-post": {
+        "at_least_50_percent": 6,
+        "at_least_90_percent": 2,
+        "bp_weighted_R95": 0.04617063919787242
+      },
+      "cpm-pre": {
+        "at_least_50_percent": 8,
+        "at_least_90_percent": 2,
+        "bp_weighted_R95": 0.05398971614941852
+      },
+      "dev3-learned-ten": {
+        "at_least_50_percent": 13,
+        "at_least_90_percent": 1,
+        "bp_weighted_R95": 0.05391142881657148
+      },
+      "metabat": {
+        "at_least_50_percent": 16,
+        "at_least_90_percent": 5,
+        "bp_weighted_R95": 0.08549276749480661
+      }
+    },
+    "selected_graph_gains_negative": 5,
+    "selected_retained_parent_ids": [
+      116,
+      314,
+      450,
+      546,
+      790
+    ],
+    "selection": {
+      "parent": 9,
+      "retained": 5
+    }
+  },
+  "paired_accounting": {
+    "additional_unassigned_bacterial_confirmed_bp": 342037,
+    "additional_unassigned_bp": 424264,
+    "additional_unassigned_contigs": 45,
+    "candidate_clean_marker_by_status": {
+      "clean_marker": {
+        "assigned_bp": 45792530,
+        "assigned_contigs": 1538,
+        "excluded_bp": 34564,
+        "excluded_contigs": 86,
+        "unassigned_bp": 317944,
+        "unassigned_contigs": 7
+      },
+      "no_clean_marker": {
+        "assigned_bp": 163389034,
+        "assigned_contigs": 87422,
+        "excluded_bp": 22000890,
+        "excluded_contigs": 56575,
+        "unassigned_bp": 143195,
+        "unassigned_contigs": 74
+      }
+    },
+    "protected_CPM_statuses": {
+      "assigned": {
+        "bp": 209605828,
+        "contigs": 89005
+      },
+      "excluded": {
+        "bp": 22035454,
+        "contigs": 56661
+      },
+      "unassigned": {
+        "bp": 36875,
+        "contigs": 36
+      }
+    },
+    "protected_clean_marker_by_status": {
+      "clean_marker": {
+        "assigned_bp": 46110474,
+        "assigned_contigs": 1545,
+        "excluded_bp": 34564,
+        "excluded_contigs": 86
+      },
+      "no_clean_marker": {
+        "assigned_bp": 163495354,
+        "assigned_contigs": 87460,
+        "excluded_bp": 22000890,
+        "excluded_contigs": 56575,
+        "unassigned_bp": 36875,
+        "unassigned_contigs": 36
+      }
+    }
+  },
+  "prospective_protocol": {
+    "bytes": 6216,
+    "sha256": "dc4ea1fe1539fd7fb006b1442bb30cba805bb349b0a7a0a18fd1ec31f1f88f70"
+  },
+  "record": "E013",
+  "resources": {
+    "actual": {
+      "bounded_driver_wall_seconds": 79.11950300401077,
+      "peak_sampled_tree_RSS_bytes": 1495650304,
+      "peak_sampled_working_bytes": 266744230,
+      "sampled_CPU_seconds": 78.36,
+      "stage_receipts": [
+        {
+          "receipt": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e013_control.py",
+              "--output",
+              "artifacts/e013-marker-quality/attempt-001-6d06560/control"
+            ],
+            "exit_code": 0,
+            "launched_pid": 26640,
+            "peak_sampled_rss_bytes": 1495650304,
+            "rss_bytes_ceiling": 8000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 1.014941135179973,
+            "sampled_cpu_seconds": 58.3,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 1799.9637718200684,
+            "stop_reason": null,
+            "wall_seconds": 57.44175497395918
+          },
+          "stage": "control"
+        },
+        {
+          "receipt": {
+            "command": [
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+              "-I",
+              "-B",
+              "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e013_review.py",
+              "--root",
+              "artifacts/e013-marker-quality/attempt-001-6d06560/control",
+              "--output",
+              "artifacts/e013-marker-quality/attempt-001-6d06560/review"
+            ],
+            "exit_code": 0,
+            "launched_pid": 27059,
+            "peak_sampled_rss_bytes": 1034084352,
+            "rss_bytes_ceiling": 8000000000,
+            "sample_includes_coordinator": true,
+            "sampled_average_cpus": 0.984435898254316,
+            "sampled_cpu_seconds": 20.060000000000002,
+            "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+            "seconds_ceiling": 1742.522338628769,
+            "stop_reason": null,
+            "wall_seconds": 20.377152068074793
+          },
+          "stage": "review"
+        }
+      ]
+    },
+    "host": "Existing Intel macOS, 8 logical CPUs /16 GiB RAM; owned Python3.10.15 dev4 I/O runtime, isolated four numerical threads; no new Linux validation.",
+    "limits": {
+      "cumulative_seconds": 1800,
+      "expected_extra_disk_bytes": 500000000,
+      "expected_peak_RSS_bytes": 2000000000,
+      "expected_seconds": "2-6 minutes refinement/verification/review; timeout is not prediction",
+      "extra_working_bytes": 2147483648,
+      "new_cloud_cost_usd": 0,
+      "ram_bytes": 8000000000,
+      "threads": 4
+    },
+    "sampling_limits": "Process tree shared pages may be counted twice and short peaks missed; attributed disk is sampled, not all filesystem allocation. Four numerical threads are a cap, not four fully busy CPUs. Driver clock includes verification/control/review/collection/readback; later documentation and engineering integrity checks are separate."
+  },
+  "retained_files": {
+    "artifacts/e013-marker-quality/attempt-001-6d06560/attempt.json": {
+      "bytes": 2866,
+      "sha256": "6b38e8c6c10d0c087428a732ee485b4d22f93aeee393041a4b87b85a4b4c814b"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/collection.json": {
+      "bytes": 538,
+      "sha256": "1345a546283fc14e62a09bdc014559800e9d832f36a3695d7d5687239d21723a"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/control.exit.json": {
+      "bytes": 761,
+      "sha256": "36e9bbc517084594aa61ab4378021f8424b7cfb235301aa60fb0c24c1d184b5a"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/control/alternatives.json": {
+      "bytes": 69614,
+      "sha256": "2f0004673ffbacdfb319b90306edebc5216239c96cdbc0b336d92778c6936917"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/control/completed.json": {
+      "bytes": 71298,
+      "sha256": "8e28860baed60190e86f1ea671e875826a762607396ccf51f2899b69afcc5c9f"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/control/context-transforms.json": {
+      "bytes": 566,
+      "sha256": "a3155389b45c4c89b6f312c0585879443b459faab6c26330cfddca6e9818a5e9"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/control/decisions.json": {
+      "bytes": 19062,
+      "sha256": "c6cf89e2a88003f238aa20131acabc11dc220eca3a94d052f73e809a2c2e2134"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/control/partition.json": {
+      "bytes": 18360940,
+      "sha256": "8ae61f26f8433d0443c3c2f857caa162f6ad2974f676ae521d267ab69284f142"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/control/quality-evidence.json": {
+      "bytes": 3959274,
+      "sha256": "ca9a215c4ca4479369b60aa0d2a0d200f7c944df8bb0cc35b53ba4cebc476d26"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/control/selected-graph-audit.json": {
+      "bytes": 1741,
+      "sha256": "5760c3fbc52ce4511ce27ea5692f58402fb80d612713b51071c273d28cff9fb9"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/review.exit.json": {
+      "bytes": 852,
+      "sha256": "e09ada936890468f2035c5a1cb2fe784c2c888afae5afa77dfb9475b9d50deed"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/review/review.json": {
+      "bytes": 662800,
+      "sha256": "45e08899ec4730a08f2814cade28f5be0cadbf093a84b66922b0a927b33fe5c5"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/science-completed.json": {
+      "bytes": 2273,
+      "sha256": "72f151b7b0d9aaad58f60b2986cb7d7d2c50d3eb50e54519647226424a754536"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/source.json": {
+      "bytes": 1010,
+      "sha256": "959b84130b0b8675636581bace03c8598f12207438d56dabebb314cf95f199c9"
+    },
+    "artifacts/e013-marker-quality/clock.json": {
+      "bytes": 61,
+      "sha256": "8b53a95f6e3c4b0b10a9cf4955ce5ba8519611636cd04b3c45bfc55f7b907418"
+    },
+    "artifacts/e013-marker-quality/launch-001-6d06560.log": {
+      "bytes": 900,
+      "sha256": "50677515425b03f374bbca0f96cc1d03fa6590787387ff0da82d8bd81b9c6480"
+    },
+    "artifacts/e013-marker-quality/planning/integrity-v1.json": {
+      "bytes": 748,
+      "sha256": "2ddc7147d3f338a83f6fd31b03397a3ee690c8f25fce100eb6a60915d30c5670"
+    },
+    "artifacts/e013-marker-quality/planning/oral-GSA-head-v1.json": {
+      "bytes": 1471,
+      "sha256": "748c297c0bc261737e2bdf250918c403143a2b05de64bacec3e03e5b610bcb4b"
+    },
+    "artifacts/e013-marker-quality/planning/oral-GSA-raw-mapping-head.json": {
+      "bytes": 406,
+      "sha256": "feaa0f5fed7a1eff96ef0f0b48d33f376738bbd72b84509c01654e6e2308496c"
+    }
+  },
+  "rule_summary": "Confidence-weighted physical marker loci, conservative median-seeded proposals, whole-parent versus child Q=breadth-5*excess plus native/composition/measured-parent-depth context; graph delta diagnostic only. Exact rule frozen before selection.",
+  "source_commit": "6d0656009e8f1fd3a3d1a6e8f430a785452ac081",
+  "status": "COMPLETED_LOCAL_REVIEWED"
+}
