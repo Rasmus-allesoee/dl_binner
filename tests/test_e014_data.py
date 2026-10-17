@@ -5,12 +5,34 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
+import threading
 
 spec=importlib.util.spec_from_file_location('e014_acquire',Path(__file__).parents[1]/'scripts/e014_acquire.py')
 acq=importlib.util.module_from_spec(spec);spec.loader.exec_module(acq)
 
 
 class AcquisitionContracts(unittest.TestCase):
+    def test_actual_HTTP_range_recovery_keeps_prefix_and_original_clock(self):
+        payload=b'known byte-bound payload'
+        class Handler(BaseHTTPRequestHandler):
+            def do_GET(self):
+                a,b=map(int,self.headers['Range'].removeprefix('bytes=').split('-'))
+                self.send_response(206);self.send_header('Content-Range',f'bytes {a}-{b}/{len(payload)}')
+                self.send_header('Content-Length',str(b-a+1));self.end_headers();self.wfile.write(payload[a:b+1])
+            def log_message(self,*_):pass
+        server=ThreadingHTTPServer(('127.0.0.1',0),Handler);thread=threading.Thread(target=server.serve_forever);thread.start()
+        try:
+            with tempfile.TemporaryDirectory() as d:
+                root=Path(d);(root/'oral').mkdir();(root/'oral/a.partial').write_bytes(payload[:5])
+                plan=dict(base_url=f'http://127.0.0.1:{server.server_port}/',files=[dict(path='a',bytes=len(payload),md5=hashlib.md5(payload).hexdigest())])
+                with self.assertRaisesRegex(ValueError,'explicit repair'):acq.acquire(root,plan)
+                original=(root/'acquisition-clock.json').read_bytes()
+                acq.acquire(root,plan,resume_partial=True)
+                self.assertEqual((root/'oral/a').read_bytes(),payload)
+                self.assertEqual((root/'acquisition-clock.json').read_bytes(),original)
+        finally:server.shutdown();thread.join();server.server_close()
+
     def test_real_stream_readback_verified_reuse_and_corruption_refusal(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d);source=p/'a.fa';source.write_bytes(b'>opaque\nACGT\n')

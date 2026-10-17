@@ -42,7 +42,7 @@ def guard(root, clock):
     return total
 
 
-def acquire(root=ROOT, plan=None):
+def acquire(root=ROOT, plan=None, resume_partial=False):
     """Download the fixed files once; seal receipts after exact size/hash readback."""
     root=Path(root); root.mkdir(parents=True, exist_ok=True)
     plan=plan or json.loads((REPO/'experiments/E014-multiview-reconstruction/acquisition-lock.json').read_text())
@@ -64,19 +64,23 @@ def acquire(root=ROOT, plan=None):
         sha, md5, size=hashlib.sha256(),hashlib.md5(),0
         # Explicit repair can resume partial transport bytes, never accepted science.
         if partial.exists():
-            if not plan.get('resume_partial',False): raise ValueError('Partial exists; explicit repair/resume required')
+            if not resume_partial: raise ValueError('Partial exists; explicit repair/resume required')
             with partial.open('rb') as f:
                 for b in iter(lambda:f.read(1024**2),b''):sha.update(b);md5.update(b);size+=len(b)
         if size>item['bytes']: raise ValueError('Oversized partial transfer refused')
-        headers={'Range':f'bytes={size}-'} if size else {}
-        req=urllib.request.Request(plan['base_url']+item['path'],headers=headers)
         then=time.monotonic()
-        with urllib.request.urlopen(req,timeout=45) as response:
-            if size and (response.status!=206 or not response.headers.get('Content-Range','').startswith(f'bytes {size}-')):
-                raise ValueError('Server did not honor explicit partial resume')
-            if int(response.headers['Content-Length']) != item['bytes']-size:
-                raise ValueError('Publisher length differs from frozen HEAD')
-            with partial.open('ab' if size else 'xb') as stream:
+        url=plan['base_url']+item['path']
+        # Bounded independent range requests avoid a server's long-transfer
+        # disconnect; this is transport, with one final whole-file checksum.
+        while size<item['bytes']:
+            ranged=url.startswith(('http://','https://'))
+            end=min(item['bytes'],size+16*1024**2)-1 if ranged else item['bytes']-1
+            headers={'Range':f'bytes={size}-{end}'} if ranged else {}
+            req=urllib.request.Request(url,headers=headers);begin=size
+            with urllib.request.urlopen(req,timeout=45) as response, partial.open('ab' if partial.exists() else 'xb') as stream:
+                if ranged and (response.status!=206 or not response.headers.get('Content-Range','').startswith(f'bytes {size}-{end}/')):
+                    raise ValueError('Server did not honor bounded transfer range')
+                if int(response.headers['Content-Length']) != end-size+1:raise ValueError('Publisher range length differs')
                 for block in iter(lambda:response.read(1024**2),b''):
                     size+=len(block)
                     if size>item['bytes']:raise ValueError('Oversized response refused')
@@ -84,11 +88,12 @@ def acquire(root=ROOT, plan=None):
                     if time.monotonic()-then>=5:
                         stream.flush();peak=max(peak,guard(root,clock));then=time.monotonic()
                         print(json.dumps(dict(stage='download',file=target.name,bytes=size,total=item['bytes'],epoch=time.time())),flush=True)
+            if size!=end+1:raise ValueError(f'Short transport range: {begin}-{end}, received through {size-1}')
         actual=dict(bytes=size,sha256=sha.hexdigest(),md5=md5.hexdigest())
         if actual['md5']!=item['md5'] or size!=item['bytes']:raise ValueError('Publisher checksum/size mismatch: '+target.name)
         partial.rename(target)
         if hashes(target)!=actual:raise ValueError('Independent acquisition readback mismatch')
-        rec=dict(path=str(target),url=req.full_url,hashes=actual,completed_epoch=time.time())
+        rec=dict(path=str(target),url=url,hashes=actual,completed_epoch=time.time())
         receipt.write_text(json.dumps(rec,indent=2,sort_keys=True)+'\n');receipts.append(rec)
         peak=max(peak,guard(root,clock));print('ACQUIRED',target.name,actual,flush=True)
     result=dict(status='SUCCESS',files=receipts,seconds=time.monotonic()-start,clock=clock,
@@ -98,8 +103,10 @@ def acquire(root=ROOT, plan=None):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',type=Path,default=ROOT);a=p.parse_args()
-    try:acquire(a.root)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',type=Path,default=ROOT)
+    p.add_argument('--resume-partial',action='store_true',help='Explicit verified-prefix transport recovery; original clock stays')
+    a=p.parse_args()
+    try:acquire(a.root,resume_partial=a.resume_partial)
     except BaseException as exc:
         fail=a.root/('acquisition-failure-'+str(time.time_ns())+'.json')
         fail.write_text(json.dumps(dict(error=repr(exc),epoch=time.time()),indent=2)+'\n')
