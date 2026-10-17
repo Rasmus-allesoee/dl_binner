@@ -1,25 +1,28 @@
 # dl-binner
 
-An experimental CPU metagenomic binner. The integrated dev4 candidate learns from
-real DNA windows with composition/depth encoders, then uses a sparse graph and
-conservative marker-informed refinement. It retains features, embeddings and both
+An experimental CPU metagenomic binner. The dev5 research candidate adds multiview
+DNA learning and reconstruction, with explicit composition/depth encoders, CPM
+grouping and quality-aware marker refinement. It retains features, embeddings and both
 pre/post-refinement partitions. Every contig remains assigned, unassigned or
 excluded, with its DNA, masks and reason. The earlier dev3 route remains available
 as preserved development evidence.
 
 This is a usable **development prototype**, not validated whole-MAG recovery,
 independent generalization or a state-of-the-art claim. A reproducible tool and
-learning through implementation are the primary goals.
+learning through implementation support the goal of a substantially stronger binner.
 
 ## Install and run
 
 Use one CPU environment with built-in serial execution. Follow the
-[pinned standalone installation guide](docs/INSTALLATION.md); 0.1.0.dev4 is built
+[pinned standalone installation guide](docs/INSTALLATION.md); 0.1.0.dev5 is built
 locally, not published to a package index. Do not copy linked research environments.
 The candidate requires a supplied hash-bound marker profile/manifest or verified
 cache; it installs/downloads nothing at runtime. It needs no truth labels, internet
-connection or checkout. Full-community performance is untested; native tiny
-engineering checks do not establish stronger recovery.
+connection or checkout. Dev5 community performance is untested; native tiny
+engineering checks do not establish stronger recovery. The serial `candidate`
+command below retains dev4's original algorithms. The new experimental
+[multiview stage interface](docs/PROTOTYPE.md#multiview-reconstruction-candidate-dev5)
+belongs to E014's bounded research workflow.
 
 ```sh
 /absolute/binner/bin/dl-binner candidate --fasta assembly.fna --output result \

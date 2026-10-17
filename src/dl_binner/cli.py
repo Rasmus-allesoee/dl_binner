@@ -45,6 +45,12 @@ def main(argv=None):
     running.add_argument('--output', type=Path, required=True, help='Fresh output directory; reused only with --resume')
     running.add_argument('--min-length', type=int, default=500, help='Eligibility cutoff; shorter IDs are retained as exclusions')
     running.add_argument('--training-config', type=Path, help='Explicit training JSON; default is the packaged accepted seed-11 schedule')
+    multi = commands.add_parser('multiview-stage', help='Experimental multiview/reconstruction stage (dev5)',
+        description='One explicit stage for a serial research DAG. No labels, downloads or automatic retries.')
+    multi.add_argument('--stage',choices=('features','markers','train','embed','group','refine','export'),required=True)
+    multi.add_argument('--output',type=Path,required=True)
+    for name in ('fasta','depth','features','views','checkpoint','embeddings','parent','marker-cache','marker-hmm','marker-manifest','config','parent-features'):
+        multi.add_argument('--'+name,type=Path)
     running.add_argument('--memory-gb', type=float, help='Optional sampled working process-tree RSS safeguard in GB; positive, no maximum')
     running.add_argument('--timeout', type=float, help='Optional overall invocation wall-time safeguard in seconds; positive, no maximum')
     running.add_argument('--resume', action='store_true', help='Verify matching inputs/source/config/runtime and reuse completed stages')
@@ -104,6 +110,10 @@ def main(argv=None):
         if args.command == 'run':
             from .runner import run_pipeline
             return run_pipeline(args)
+        if args.command == 'multiview-stage':
+            from .multiview.stage import run
+            run(args)
+            return 0
         if args.output.exists():
             raise FileExistsError(f'Fresh output path required: {args.output}. Choose a new path; no files were overwritten')
         from .io import emit

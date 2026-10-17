@@ -1,11 +1,55 @@
 # Binner prototypes and current contracts
 
+## Multiview reconstruction candidate, dev5
+
+The experimental [E014 design](../experiments/E014-multiview-reconstruction/design.md)
+adds a four-crop variable-length DNA bank, full-parent exposure, all-available
+positive contrastive loss, small reconstruction heads and measured-depth branch
+dropout. It retains the dev4 encoder widths and unit geometry. `multiview-stage`
+provides explicit `features`, `markers`, `train`, `embed`, `group`, `refine` and
+`export` commands for the bounded research DAG. These are separate processes;
+there is no new automatic download/retry or claim to resume an old dev4 journal.
+`candidate` below intentionally retains its original dev4 algorithms, including
+RB/old refinement. Reproducing frozen evidence still requires its original runtime.
+
+```sh
+python -I -B -m dl_binner multiview-stage --stage features --threads 4 \
+  --fasta assembly.fa --depth depth.tsv --output new-features
+python -I -B -m dl_binner multiview-stage --stage train --threads 4 \
+  --features new-features/features.npz --views new-features/views.npz --output new-train
+python -I -B -m dl_binner multiview-stage --stage embed --threads 4 \
+  --features new-features/features.npz --checkpoint new-train/checkpoint.pt --output new-units.npz
+```
+
+`--config` supplies the strict packaged `resources/multiview.json` schema. Omit
+depth for explicit zero-column sequence-only mode. Optional `--parent-features`
+in feature preparation verifies and reuses sealed full-parent input arrays, not
+old crop banks. Every parent stays assigned/unassigned/excluded, including DNA
+too short for crop positives. Crops carry coordinates/hash/distinctness masks and
+the parent's measured mean, never measured crop depth/variance. All available
+positives are used; the bank is fixed, not fresh per epoch. Other contigs may still
+be co-genomic negatives. Inference restores original observed depth.
+
+Group builds the preserved weighted sparse graph and directly applies the sole
+CPM density rule. Refine requires `--features`, `--embeddings`, `--parent`,
+`--marker-cache`, `--fasta` and `--marker-hmm`; it verifies the native cache and
+uses the unchanged E013 quality/context selector, retaining all alternatives,
+old/selected partitions and full DNA exports. It is not the old destructive
+duplicate-marker policy. Marker weights remain panel-dependent proxies, not MAG
+quality. Truth is absent from all stage APIs and belongs in a separate evaluator.
+
+Mac installed-wheel tiny native training/reload/markers/CPM/refinement/export
+contracts pass. New community results and dev5 Linux support remain gated by
+E014 admission; native dev4 acceptance cannot establish them. The preserved Mac
+cross-platform allclose failure is unchanged. This is a research candidate with
+explicit stage commands, not a newly validated high-performing product release.
+
 ## Integrated dev4 candidate
 
 `dl-binner candidate` implements [D015](decisions/D015-coherent-prototype-upgrade.md)
-and [E010](../experiments/E010-coherent-prototype/README.md). It has native tiny
-software validation on Mac; community performance and the new Linux runtime are
-not yet established. Preserve immutable dev3 at
+and [E010](../experiments/E010-coherent-prototype/README.md). Native Linux and the
+development comparison completed; later CPM/refinement controls are in E011–E013.
+Those results do not establish generally strong performance. Preserve immutable dev3 at
 `5e54538d1799e8d2538621729400f33fbaf017b9` and its accepted E009 outputs.
 
 ```sh
