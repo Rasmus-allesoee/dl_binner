@@ -4,6 +4,20 @@ Updated: 2026-10-17. This is the single current handoff.
 
 ## Exact next step
 
+**E013 authorized current block: coherent marker-quality refinement, locally.**
+On `e013-marker-quality-refinement`, the prospective [design/protocol](../experiments/E013-marker-quality/README.md)
+combines weighted call reliability, median-family seeding, soft spherical proposals
+and whole-parent/child quality plus composition/depth-context selection. The
+encoder, native vectors, retained graph/weights, seed and CPM parent remain fixed.
+Real tiny production reader/refiner/export/reload and resource-limit contracts
+precede a clean source freeze and one bounded local matched comparison. No new
+community outcomes yet; no cloud, external tool or confirmation acquisition.
+Four numerical threads, 8 GB sampled RSS, original 30-minute cumulative execution
+clock and 2 GiB attributed working space, including collection/readback.
+The owner asks to retain marker refinement across communities and to revisit
+training/architecture after this bounded block without requiring perfect grouping
+on E009. Oral-GSA remains frozen/unacquired and October 21 storage review remains.
+
 **E012 completed locally; no cloud action or spending.** On branch
 `e012-marker-acceptance-control`, clean source **a90a8d8** froze the sole graph
 CPM-gain gate before changed outcomes. The three primary stages and descriptive

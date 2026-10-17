@@ -1,0 +1,69 @@
+{
+  "E012_raw_review": {
+    "bytes": 981582,
+    "sha256": "5e0b7ad0a50edfe83de4c744f8a5cab6c1c49b9520bbea351ce999f0bbafa11e"
+  },
+  "E012_raw_review_path": "artifacts/e012-marker-acceptance/attempt-001-a90a8d8/review/review.json",
+  "E012_review": {
+    "bytes": 34826,
+    "sha256": "2c2d422d047f56deaa72714afab984d684936c17f3463ff05d43d676b8b0a2ed"
+  },
+  "baseline_files": {
+    "grouping-diagnostics-v2.json": {
+      "bytes": 129805,
+      "sha256": "3c10523c28ccb5e0a6193c2fd8f3017196a82edd63e17d339e1a117ca5f03e6f"
+    },
+    "local-review-v3/review.json": {
+      "bytes": 1513442,
+      "sha256": "66c5cc6b50967087bd0204845a866b2e8d7ffae33c1cb964acbec1fe6983bc17"
+    }
+  },
+  "baseline_root": "artifacts/e011-cached-grouping-reference/recovery-20261017",
+  "confirmation_plan": {
+    "bytes": 3898,
+    "sha256": "73962986614d043495ac939456ad5b35e0afc968985a892005c4317701dc0a16"
+  },
+  "hmm_path": "artifacts/e010-coherent-prototype/gcp-20261016/readback-marker.hmm",
+  "manifest": {
+    "bytes": 4388,
+    "sha256": "6bb3f1a07276c44c17ec16c7d2663ecfa5c4ce3c0eda6ed3a3dc579b3868eed1"
+  },
+  "paf": {
+    "bytes": 59706817,
+    "sha256": "96c5f239b117a6c1e4f42cdb52936da00e2752ae71929925a092cd79776bb9c1"
+  },
+  "paf_path": "artifacts/e009-gcp-review/20261015/returned/data-stage-v1/parts/final/all_competing_chains.paf",
+  "policy": {
+    "bytes": 2362,
+    "sha256": "a256cc6d00c9be66c2082ab3ae5109a7cfca8e3cdbd245b9ee19ed6cbb132ba0"
+  },
+  "policy_path": "experiments/E009-competitive-benchmark/truth-v2-policy.json",
+  "population": {
+    "bytes": 154311,
+    "sha256": "bdcb0dacffea51d111f48ab282f35d31a9ddf14e55a8dd772556b97e3fd78e1b"
+  },
+  "population_path": "experiments/E009-competitive-benchmark/truth-population-review.json",
+  "truth_files": {
+    "AMBER-truth.tsv": {
+      "bytes": 3126486,
+      "sha256": "065354cd62f43d2747e41aae8b9bf54bd098955a96f29639f5e0aff56505bcec"
+    },
+    "derivation.json": {
+      "bytes": 759,
+      "sha256": "b7a1850c11ade0b18508c65b1edc586b908e929a82e882dc4f6b058a99be2731"
+    },
+    "reference-map.json": {
+      "bytes": 3271444,
+      "sha256": "93a76a04993bdfca258930faafbef03543d28b3f7fafbf44d3f7323b1981614d"
+    },
+    "targets.json": {
+      "bytes": 12867,
+      "sha256": "8c73c6e96e09a48fba37e113ed26598aa681cd2ddfe6cc3d8b87c9f619f57618"
+    },
+    "truth.json": {
+      "bytes": 69647928,
+      "sha256": "348c63d04a201171302ef9b120f38cb01fb175adea93276d0918611713ddd5b8"
+    }
+  },
+  "truth_root": "artifacts/e009-truth-v2/20261015/attempt-local-v2/truth-v2"
+}

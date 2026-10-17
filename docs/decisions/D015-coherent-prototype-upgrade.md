@@ -309,3 +309,38 @@ comparison; no default factorial campaign, new architecture or external expansio
 The [following prompt](../../experiments/E012-marker-acceptance/OPERATIONS.md#exact-following-prompt)
 permits local implementation and one prospectively frozen cached comparison.
 Oral-GSA and its independent admission stay separate; October 21 review unchanged.
+
+
+## E013 authorized coherent refinement and development breadth, 2026-10-17
+
+The owner authorizes one local [E013 implementation/comparison](../../experiments/E013-marker-quality/README.md)
+on retained CPM parents. It combines call reliability/physical-locus handling,
+conservative median-family seeding, supported soft spherical proposals and a
+whole-parent quality/context comparison. No family is blacklisted from truth,
+no graph/objective/seed or encoder changes, no new marker search or data acquisition.
+The frozen protocol owns exact algorithms/defaults and directional keep/modify
+criteria before changed outcomes; the two preserved CPM refinement controls stay.
+This is a coherent refinement bundle, not another compulsory per-ingredient study.
+
+Owner concern is recorded as a hypothesis, not a verdict: refinement could help
+other communities even if E009 gains are absent; the neural training/objective may
+also limit performance. Do not perfect grouping on this assembly indefinitely or
+require that perfection before justified representation/training work. Existing
+reviews support more varied/all-positive real-window learning, explicit
+composition/abundance reconstruction, false-negative caution, positive-only
+teacher methods and sequence-context models as serious later candidates.
+A reconstruction-regularized multiview composition/depth objective is the first
+training upgrade to assess for preparation: it complements the current contrastive
+loss and real-window encoders without treating markers as unquestioned hard
+negatives or requiring a large pretrained backbone. It is not implemented or
+established causal here. Revisit this ranking after E013 and wider-data admission;
+retain GLM/context-attention and teacher approaches as alternatives rather than
+automatic additions or a factorial campaign.
+
+If this single inspected community limits the decision, move to prospective
+additional-data admission alongside a coherent training design. Keep oral-GSA
+fixed, including its sequence-only/depth-absent limitation; require independent
+source/genome/replicon/taxonomy/overlap/truth and separate acquisition/cost admission.
+Additional read-depth assemblies may later be valuable, but mapping ten samples
+to one assembly is not ten independent assembly tests. No such new work or paid
+resource/retention change is authorized in this block. October 21 review remains.

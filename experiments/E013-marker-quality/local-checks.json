@@ -1,0 +1,67 @@
+{
+  "actual": [
+    "real end-to-end sealed cached consumer on tiny NPZ/FASTA/cache/partition payload",
+    "native PyHMMER HMM writer/reader with own synthetic profiles",
+    "real reliability/median-seeded refiner, graph-negative accepted selection, cached state reload",
+    "native product full-DNA exporter and independent accounting",
+    "whole saved-alternative independent reviewer",
+    "missing/corrupt/existing refusal, singleton/collapse/no-depth/marginal/partial/overlap cases",
+    "actual parent clock/output-space cap stops with intended failure and retained bytes",
+    "compact archive and every-member readback"
+  ],
+  "code": {
+    "e013_control.py": {
+      "bytes": 7590,
+      "sha256": "7e3d42be907f246abf07f37b29cd611c9eaf84d43ce632bc9172fef28581596f"
+    },
+    "e013_local.py": {
+      "bytes": 10292,
+      "sha256": "6208307e6ce5695078decbc84aa42bd7c4198972c0691508cffb767efcd987ee"
+    },
+    "e013_refinement.py": {
+      "bytes": 16783,
+      "sha256": "0c1bae1f0fd5e8873cc30e68218e6796e87bf43b7d9262d2ec42fd781a51b8c0"
+    },
+    "e013_review.py": {
+      "bytes": 9462,
+      "sha256": "172ed5ddabb9452f7a1fe785dae1c058e2b3906a9f0d1cd35b5ad0fe9d5864cc"
+    }
+  },
+  "docs": {
+    "documents": 67,
+    "links": 950,
+    "optional_historical_caches_unavailable": 10,
+    "status": "PASS"
+  },
+  "hand_authored": [
+    "tiny gene/domain annotations, fixed unit vectors and pre/post sparse-graph partitions"
+  ],
+  "logs": {
+    "docs-v1.log": {
+      "bytes": 687,
+      "sha256": "67c285bd6cfc850b232bc9c66ab638b24e32acf1a56244a5743a9f258e2ec81b"
+    },
+    "related-contracts-v1.log": {
+      "bytes": 2156,
+      "sha256": "d989ef463ca8a43762e0efe98cb1a78fc52c8868fad49984b302c6d7ca621e17"
+    },
+    "tests-v1.log": {
+      "bytes": 922,
+      "sha256": "cfe7221f084c563ecde173589f3b974500f35b384d5fc11dfd2e8ebcbdb4944c"
+    },
+    "tests-v2.log": {
+      "bytes": 924,
+      "sha256": "4a48b265c2a47e3ce91d076bc3927a4669aadb21b4318ca81279a8843d076b92"
+    }
+  },
+  "mocks": [],
+  "new_tests": 7,
+  "not_claimed": [
+    "native detector or neural training/reload in this step",
+    "new Linux/runtime installation or packaged CLI release",
+    "new community result before source freeze",
+    "calibrated lineage-specific marker quality"
+  ],
+  "related_contracts": 28,
+  "status": "PASS"
+}

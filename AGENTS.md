@@ -233,6 +233,12 @@ checklist of mandatory SOTA ingredients. Keep the immutable comparator, distingu
 whole-system gains from causal component claims, and obtain separate authorization
 for paid/community runs. D015 records the current recommendation.
 
+When one development assembly limits a mechanism decision, preserve the method
+and admit prospectively chosen additional data. Perfecting grouping/refinement on
+that assembly is not a prerequisite for a justified training/representation
+upgrade. A weak or null result here does not establish the mechanism's value in
+other communities; source evidence and independent evaluation still matter.
+
 The required first-architecture review and first prototype are already accepted;
 STATE points to their scoped records. For a new unresolved design decision, use a
 current review of relevant papers/benchmarks and the source of a justified shortlist.

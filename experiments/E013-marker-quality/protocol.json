@@ -1,0 +1,100 @@
+{
+  "authorization": "2026-10-17 owner: local coherent refinement implementation and one bounded cached comparison; no cloud",
+  "candidate_config": {
+    "audit_queries": 64,
+    "batch_size": 512,
+    "depth_hidden": 64,
+    "epochs": 20,
+    "exact_threshold": 2048,
+    "fusion_hidden": 128,
+    "inference_batch_size": 2048,
+    "learning_rate": 0.001,
+    "leiden_iterations": 2,
+    "min_bin_bp": 10000,
+    "min_bin_contigs": 2,
+    "min_length": 500,
+    "min_neighbor_recall": 0.9,
+    "neighbors": 30,
+    "output": 64,
+    "refinement_iterations": 10,
+    "refinement_margin": 0.05,
+    "refinement_min_cosine": 0.2,
+    "resolution": 1.0,
+    "seed": 11,
+    "sequence_hidden": 256,
+    "sequence_loss_weight": 0.5,
+    "sequence_output": 128,
+    "temperature": 0.2,
+    "weight_decay": 1e-05,
+    "window_max": 10000,
+    "window_min": 1000,
+    "window_pairs": 2
+  },
+  "confirmation": "oral-GSA unchanged/unacquired; source/genome/replicon/taxonomy/overlap/truth and separate cost admission before later acquisition/execution; October21 storage review unchanged",
+  "criteria": {
+    "abandon": "reject current selection policy if it systematically harms recovery/full-DNA accounting; never discard marker information or a feature family from one sample",
+    "keep": "Engineering/full-DNA contracts pass, weighted full-reference R95 >= protected CPM and targets>=50% >= protected CPM; report every target loss and N/length/origin trade-off. Equality supports safety only, not a performance gain.",
+    "modify": "Any protected-CPM recovery or >=50%-target decline keeps the rule experimental; preserve losses and inspect proxy limitations without changing this run. A mixed trade-off needs an explicit later decision, not post-score tuning.",
+    "saturation": "a small/null/inconsistent gain should trigger additional-data admission and a reviewed training/representation decision rather than indefinite tuning to E009"
+  },
+  "declared_before_changed_community_outcomes": true,
+  "evaluation": {
+    "N_quarantine": "7653205bp /3.3034%, unchanged",
+    "controls": "E012 protected CPM (exact native parent) and E011 old CPM refinement, preserved dev3 contextual only; no repeat fit/scoring of immutable controls",
+    "denominators": "145702 contigs /231678157bp; 156 primary targets /554661890 provided bp; all short/marker-negative/non-target/unknown populations",
+    "metrics": [
+      "full-reference weighted/macro R95 at 200kb/95% all-bin purity",
+      ">=50%/90% recovery, paired target changes",
+      "full DNA/status/length/origin/eligibility/marker population cells",
+      "restricted B3, unchanged native neighbor diagnostics",
+      "call reliability, proposals/quality/context/graph delta ledgers"
+    ],
+    "truth": "admitted conservative E009 v2, separate process after selected outputs seal"
+  },
+  "question": "Can call reliability, conservative median seeding and quality/context selection retain useful marker refinements without destructive duplicate-count splits?",
+  "record": "E013",
+  "refinement": {
+    "context_epsilon": 1.4210854715202004e-14,
+    "excess_penalty": 5.0,
+    "lloyd_iterations": 10,
+    "min_seed_families": 2,
+    "physical_overlap_fraction": 0.5,
+    "seed": 11,
+    "seed_reliability": 0.5
+  },
+  "resources": {
+    "cumulative_seconds": 1800,
+    "expected_extra_disk_bytes": 500000000,
+    "expected_peak_RSS_bytes": 2000000000,
+    "expected_seconds": "2-6 minutes refinement/verification/review; timeout is not prediction",
+    "extra_working_bytes": 2147483648,
+    "new_cloud_cost_usd": 0,
+    "ram_bytes": 8000000000,
+    "threads": 4
+  },
+  "rule": {
+    "acceptance": "full-parent-bp-weighted child marker-quality strictly improves parent beyond eight ULP; unassigned DNA contributes its unchanged parent quality. Require positive native cosine leave-one-out centroid silhouette and positive composition OR available depth context, each beyond 64 machine eps",
+    "alternatives": "whole CPM parent, exact retained adopted old children/noise, and at most one new supported median-seeded candidate per parent; no grid",
+    "call_weights": "coverage * (1 - 2**(-max(0, domain_bits - trusted_domain_cutoff))); partial gene calls multiply another coverage factor; heuristic, not probability",
+    "context": "bp-weighted leave-one-out centroid silhouettes, full-parent bp denominator; unassigned=-1, missing information=0; composition sqrt TNF, depth log1p measured parent means divided by global eligible column std, constant columns/all-zero rows no support; not per-base/window coverage variance",
+    "data_boundary": "selector has no truth/reference genome/taxon/K input; profile trusted model scores only",
+    "graph": "unchanged, graph objective change recorded after selection only; no universal veto",
+    "marker_quality": "100/panel_size * (sum_f max(r_i) - 5*sum_f(sum(r_i)-max(r_i))); no lineage calibration or MAG quality threshold",
+    "new_proposal": "upper-median count over all observed reliable families (including singletons), >=2 families supporting K; single-copy-per-contig seed loci r>=.5; family with median count/highest mean reliability then lexical tie; longest opaque-ID order seeds; 10 deterministic sqrt-length-weighted spherical Lloyd iterations, no cannot-links/anchors/forced noise/reseeding",
+    "physical_loci": "same-contig genomic overlap >=.5*shorter span consolidated at max reliability; ambiguous multi-family genes remain recorded but unused; separate contigs never collapsed merely by matching family/protein",
+    "selection": "highest eligible weighted quality; numerical ties prefer more assigned bp then fewer children then retained route. Parent on no strict gain"
+  },
+  "samples": [
+    "cami3_toy_human_gut_short_read_sample_0",
+    "cami3_toy_human_gut_short_read_sample_2",
+    "cami3_toy_human_gut_short_read_sample_3",
+    "cami3_toy_human_gut_short_read_sample_4",
+    "cami3_toy_human_gut_short_read_sample_6",
+    "cami3_toy_human_gut_short_read_sample_9",
+    "cami3_toy_human_gut_short_read_sample_10",
+    "cami3_toy_human_gut_short_read_sample_11",
+    "cami3_toy_human_gut_short_read_sample_14",
+    "cami3_toy_human_gut_short_read_sample_17"
+  ],
+  "status": "planned"
+}

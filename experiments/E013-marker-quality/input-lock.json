@@ -1,0 +1,53 @@
+{
+  "cache": "artifacts/e011-cached-grouping-reference/restore-local",
+  "contexts": {
+    "CPM": [
+      "artifacts/e011-cached-grouping-reference/recovery-20261017/members/cpm/pre.json",
+      "artifacts/e011-cached-grouping-reference/recovery-20261017/members/cpm/post.json"
+    ],
+    "RB": [
+      "artifacts/e011-cached-grouping-reference/restore-local/candidate/group/partition.json",
+      "artifacts/e011-cached-grouping-reference/restore-local/candidate/refine/partition.json"
+    ]
+  },
+  "depth": "artifacts/e009-gcp-review/20261015/returned/data-stage-v1/parts/final/depth.tsv",
+  "e010_archive": {
+    "bytes": 335636093,
+    "sha256": "3ec883477ce6c9e070632200508be8b707e84a11938f51e6221089eb94d165a3"
+  },
+  "e011_archive": {
+    "bytes": 327025885,
+    "sha256": "e248953630c0953b67f78972099d95cc7ea0c9a7f598149f36806bab0a32cea2"
+  },
+  "e011_archive_path": "artifacts/e011-cached-grouping-reference/recovery-20261017/run-evidence.tar.gz",
+  "e011_inventory": {
+    "bytes": 277719,
+    "sha256": "074a719b73de6aae3e4b7e8740ccff137a1226de3965f41ae76e05b1aae48ed1"
+  },
+  "fasta": "artifacts/e009-gcp-review/20261015/returned/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+  "files": {
+    "artifacts/e009-gcp-review/20261015/returned/data-stage-v1/parts/assembly/megahit/final.contigs.fa": {
+      "bytes": 237732361,
+      "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+    },
+    "artifacts/e009-gcp-review/20261015/returned/data-stage-v1/parts/final/depth.tsv": {
+      "bytes": 24197403,
+      "sha256": "48e49f4bb2ec1892f4be1f4db7dbf8616709889c36148f3d14473f52fd1b7aec"
+    },
+    "artifacts/e010-coherent-prototype/gcp-20261016/readback-marker.hmm": {
+      "bytes": 15929643,
+      "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9"
+    }
+  },
+  "hmm_path": "artifacts/e010-coherent-prototype/gcp-20261016/readback-marker.hmm",
+  "native_members": [
+    "cpm/pre.json",
+    "cpm/post.json",
+    "cpm/completed.json"
+  ],
+  "native_return": "artifacts/e011-cached-grouping-reference/recovery-20261017/members",
+  "restore_manifest": {
+    "bytes": 3028,
+    "sha256": "4d19d958d48aa6cdb6f8a76a30076de75f8f1df351a6ae97f471fd2912b04c6a"
+  }
+}

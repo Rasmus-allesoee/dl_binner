@@ -377,3 +377,13 @@ retains CPM and recommends one coherent marker-quality/context refinement upgrad
 Q001/Q003/Q005 remain open generally; no product feature-family, optimality or
 SOTA conclusion. Source freezes/failures remain, oral-GSA unacquired and October 21
 storage review unchanged.
+
+
+2026-10-17 prospective E013: one coherent call-quality/proposal/context refinement
+bundle on frozen CPM parents, with preserved E012 guard and old refinement controls.
+The owner highlights marker value across communities and possible training limits;
+neither is settled by this single assembly. Freeze the rule before changed scores,
+then use the bounded local outcome to choose additional-data admission and the
+next reviewed training/representation block, without requiring perfect refinement.
+[Protocol](../../experiments/E013-marker-quality/protocol.json) owns exact criteria;
+oral-GSA remains frozen/unacquired, October 21 review unchanged.
