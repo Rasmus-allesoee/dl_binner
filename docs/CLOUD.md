@@ -3,31 +3,45 @@
 Updated: 2026-10-17 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**October 17 owner clarification: E011 operational repair/retry is authorized in
-the current task.** Reuse passed cache/installation after strict checks, retain
-failed journals and fresh per-attempt financial/boot/process/STOP safeguards.
-The old no-retry handoff is superseded; the first failed attempt remains immutable.
-No new resources or retention extension are planned. Follow a short run through
-shutdown and local diagnostics. [E011 operations](../experiments/E011-cached-grouping-reference/OPERATIONS.md)
-owns the concrete execution; credit-only coverage and October 21 review remain.
+**E011 recovery completed; VM independently TERMINATED.**
+[Recovery receipt](../experiments/E011-cached-grouping-reference/recovery-observed.json)
+binds phase `cached-20261017T080610Z-7a43eb6`, clean pushed source, strict cache/
+installation reuse, all twelve successful native stages and the 327,025,885-byte
+archive. All 1,905 members/997,707,722 logical bytes verify locally. Private/guest
+SUCCESS agree; scientific success is established by exits/contracts, not the stop.
+Start October 17 **08:06:10.549 UTC**; stop **08:13:23.285 UTC /10:13 Copenhagen**;
+measured 432.736 s. The boot/process watcher recorded exit and shutdown request at
+08:11:59 UTC; an explicit provider stop was also issued after collection. Do not
+attribute final shutdown solely to the watcher. Fresh held/live/normal/crash
+checks passed; 45-minute STOP remained armed. Initial SSH boot-banner timeout was
+retried successfully on the same boot. No science/setup replay, provisioning,
+resize, new service or retention extension.
 
-**E011 failed its native library-provenance gate; VM independently TERMINATED.**
-[Native receipt](../experiments/E011-cached-grouping-reference/native-observed.json)
-binds phase `cached-20261017T005141Z-ab80312`, exact source ab80312, successful
-restore/runtime/MetaBAT installation, and the normal-library-symlink refusal before
-both community consumers. Private/guest FAILED and all 28 archive members verify.
-Stop October 17 00:58:26.197 UTC /02:58 Copenhagen; allocated uptime 404.884 s.
-Compute/IP~$0.03071, disk interval~$0.00481, asset readback~$0.00745, tiny export
-plus small operations/storage: ~$0.043 before small charges, <$0.063 with reserve,
-inside $1. The watcher uploaded its exit/shutdown-request snapshot; provider stop
-was also explicit. No final stop actor is inferred solely from the snapshot.
+Compute/IP **$0.03282**, disk interval **$0.00514**, assessed native export upper
+**$0.03655** plus tiny compact-review export and small storage/operations: ~$0.075,
+**<$0.105 including reserve**, below the retained $1 recovery envelope. The owner
+permitted reasonable operational expansion/retries, but no expansion was needed.
+These are measured-uptime/current-SKU estimates, not reconciled billing. Native
+sampled child CPU 208.5 s is distinct from billed uptime/allocated 0.961636 vCPUh.
+Initial free 131.09 GiB /minimum sampled 129.55 GiB; sampled increase 1.543 GiB.
+The source/clock/25 GiB reserve/20 GiB extra/2 GiB export contracts passed.
 
-The local repair and verified cache/installation reuse are prepared; native Linux
-repaired gates and both community runs remain pending. The newly authorized
-recovery needs fresh credit,
-price/pending-usage/headroom/retention and boot/process/STOP gates. Last verified
-Welcome credit DKK1,933.15 through 2027-01-12, reported cost/savings 38.94/net0 delayed.
-Existing disks remain **$31.20/month while stopped**; **October 21** review remains.
+Fresh paid-account Welcome credit **DKK 1,929.71 Available**, original 1,973.43,
+Certain usage/Free Trial terms/net pricing, through **2027-01-12**. Overview
+October 1–17 cost/savings 41.58/net 0 is delayed; pending usage is unknown, with $30
+prior exposure and $5 approved-storage reserves. Catalog rates/eligible ordinary
+E2/Ubuntu/PD/IP/Iowa Standard Storage/network/operations were refreshed before
+start; no new product. **Existing disks still cost $31.20/month while stopped.**
+Native E011 return adds ~$0.0061/month object storage; **October 21 review remains**.
+No new cloud compute is needed for the recommended local cached-selector control.
+
+The [first failed native journal](../experiments/E011-cached-grouping-reference/native-observed.json)
+remains unchanged: libz loader-alias refusal before either community consumer,
+404.884 s/~$0.043 before small charges. Operational recovery now proceeds inside
+an authorized connected task with verified reuse and preserved failures; it must
+not become another approval/upload handoff. Scientific tuning/extra campaigns
+remain a different scope. The later local reviewer ASLR-text/schema failures are
+also retained, without changing native outputs or the strict Mac tolerance.
 
 **E010 is complete and the VM is independently TERMINATED.**
 [The completed review](../experiments/E010-coherent-prototype/review.json) binds

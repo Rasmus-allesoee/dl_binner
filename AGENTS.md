@@ -458,7 +458,9 @@ environment. Probe version/prefix before giving a harness runtime-validation cre
 For native dependency provenance, retain the dynamic loader's reported alias and
 hash its resolved regular target, including any direct link destination. This is
 content verification, not a replacement invocation path. Keep scientific artifact
-link refusal separate from normal operating-system library aliases.
+link refusal separate from normal operating-system library aliases. Compare stable loader file identities and content hashes, not randomized load
+addresses in raw `ldd` text. Validate the schema the frozen writer actually emits
+when reviewing retained outputs; do not rewrite evidence to fit a new reader.
 
 ### Allocation and storage records
 

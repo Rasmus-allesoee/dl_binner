@@ -1,0 +1,1203 @@
+{
+  "acceptance": {
+    "all_twelve_native_stage_exits_zero": true,
+    "archive_and_all_1905_members": true,
+    "complete_assembly_bp": 231678157,
+    "complete_assembly_contigs": 145702,
+    "depth_cells": 1457020,
+    "marker_cache_reused_without_detection": true,
+    "native_AMBER_API_all_three_arms": true,
+    "no_retrain_index_or_alignment": true,
+    "ordered_depth_columns": [
+      "cami3_toy_human_gut_short_read_sample_0",
+      "cami3_toy_human_gut_short_read_sample_2",
+      "cami3_toy_human_gut_short_read_sample_3",
+      "cami3_toy_human_gut_short_read_sample_4",
+      "cami3_toy_human_gut_short_read_sample_6",
+      "cami3_toy_human_gut_short_read_sample_9",
+      "cami3_toy_human_gut_short_read_sample_10",
+      "cami3_toy_human_gut_short_read_sample_11",
+      "cami3_toy_human_gut_short_read_sample_14",
+      "cami3_toy_human_gut_short_read_sample_17"
+    ],
+    "original_dev3_dev4_E009_E010_and_failed_journals_preserved": true,
+    "truth_outside_training": true,
+    "unchanged_unit_vectors_graph_weights_neighbors_source_schedule": true,
+    "zero_depth_rows": 13
+  },
+  "analysis_bindings": {
+    "current-sku-quote.json": {
+      "bytes": 9190,
+      "sha256": "5b81f7a53bac32b39b6fa25aedeced3b05416a9d442b44ccd27d94cd3b771633"
+    },
+    "evaluations.json": {
+      "bytes": 150607,
+      "sha256": "771695071090453b876ce81aecef48dfbd239f0664638d894f02a52998c96c1e"
+    },
+    "export-cost-admission.json": {
+      "bytes": 2318,
+      "sha256": "2826854d98cafb09b29908a91a784b4f63f8d9ca6e242c70520386be9734c0de"
+    },
+    "final-contracts.log": {
+      "bytes": 6747,
+      "sha256": "df86f831acc9258016ef545b015cebad0ca3d2290c70ab3868d6237f95b6bdb9"
+    },
+    "grouping-diagnostics-v2.json": {
+      "bytes": 129805,
+      "sha256": "3c10523c28ccb5e0a6193c2fd8f3017196a82edd63e17d339e1a117ca5f03e6f"
+    },
+    "local-checks-v2.json": {
+      "bytes": 1311,
+      "sha256": "aaea7c7b5b8059e74bd1bb5453fc9d8d6fbb3f809ba04bfadd9a1fdfd2783a40"
+    },
+    "local-checks-v3.json": {
+      "bytes": 3166,
+      "sha256": "763d4f4fe7523ad521043a95e33d51673b738d159b436cc13f0dc1b406425574"
+    },
+    "local-checks.json": {
+      "bytes": 2732,
+      "sha256": "5fb0371d6ba0c4fc7366a87383990ca0733677b40126cbea01b5d7bd05d7c790"
+    },
+    "local-review-v3/review.json": {
+      "bytes": 1513442,
+      "sha256": "66c5cc6b50967087bd0204845a866b2e8d7ffae33c1cb964acbec1fe6983bc17"
+    },
+    "member-verification.json": {
+      "bytes": 349,
+      "sha256": "d2b16549b944e47db43fcb1337d23dcd94bee6bdf48a965007e9b1b19d32af28"
+    },
+    "native-amber-resources.json": {
+      "bytes": 702,
+      "sha256": "a491e485d19fb74b15a4e3e08333b5590501e229cceea0c141690b6ee2c2aa4c"
+    },
+    "native-completion.json": {
+      "bytes": 27472,
+      "sha256": "171ed2926343b8a1148ac1e1459be813763c52cf78e2c982df84608ad0af38d6"
+    }
+  },
+  "analysis_code": {
+    "experiments/E011-cached-grouping-reference/review_diagnostics.py": {
+      "bytes": 11417,
+      "sha256": "7910a4e8156db003905bc03462ee790c5e61c3a483314ae397ff8bf85395a356"
+    },
+    "scripts/e009_controls_review.py": {
+      "bytes": 15674,
+      "sha256": "ceb8ffdeb44395674cf2d313cb9c881bc942fc16e4230693a7234fa90cb4dda6"
+    },
+    "scripts/e009_evaluate.py": {
+      "bytes": 5678,
+      "sha256": "bca67ab8e1e8440be1c974237b24dbfb30eaf5231964f2830576e9363681e3a1"
+    },
+    "scripts/e009_truth.py": {
+      "bytes": 10174,
+      "sha256": "0d6cfef49c7ae89e712533f042e5cec032ac870041843df6af3decb6e82957d8"
+    },
+    "scripts/e011_review.py": {
+      "bytes": 19847,
+      "sha256": "87ee1afb38b9fad05830983085679c9f89b0e5c0f20642d64174d3ae5cb60955"
+    },
+    "tests/test_e011_review.py": {
+      "bytes": 7372,
+      "sha256": "a9a73532c66b2493f070f3011926d82df8507e02e8a47cdb1f65f963426b269a"
+    }
+  },
+  "arms": {
+    "cpm-post": {
+      "AMBER": {
+        "claim_limit": "restricted alignment-supported contig population; not whole-reference recovery",
+        "native_api_executed": true,
+        "predicted_contigs": 75919,
+        "scorable_bp": 165477813,
+        "scorable_contigs": 125848,
+        "unscored_contigs": 19854
+      },
+      "bins": 853,
+      "geometry": "Exact retained dev4 neighbors/vectors, unchanged",
+      "large_bins": 200,
+      "large_bins_below95": 141,
+      "length_strata": {
+        "1": {
+          "attributable_bp": 19436777,
+          "b3_precision": 0.0,
+          "b3_recall": 0.0,
+          "bp": 22035454,
+          "contigs": 56661,
+          "excluded_bp": 22035454,
+          "excluded_contigs": 56661
+        },
+        "1000": {
+          "assigned_bp": 40441565,
+          "assigned_contigs": 27266,
+          "attributable_bp": 33785626,
+          "b3_precision": 0.8712310966476978,
+          "b3_precision_sum": 29435087.990908973,
+          "b3_recall": 0.03715429444104033,
+          "b3_recall_sum": 1255281.0962788675,
+          "bp": 40505273,
+          "contigs": 27307,
+          "unassigned_bp": 63708,
+          "unassigned_contigs": 41
+        },
+        "10000": {
+          "assigned_bp": 98605985,
+          "assigned_contigs": 2055,
+          "attributable_bp": 58067096,
+          "b3_precision": 0.859496225358758,
+          "b3_precision_sum": 49908449.82954463,
+          "b3_recall": 0.5947945036436243,
+          "b3_recall_sum": 34537989.54334668,
+          "bp": 100186114,
+          "contigs": 2084,
+          "unassigned_bp": 1580129,
+          "unassigned_contigs": 29
+        },
+        "2500": {
+          "assigned_bp": 32771540,
+          "assigned_contigs": 7706,
+          "attributable_bp": 21968729,
+          "b3_precision": 0.817464410668769,
+          "b3_precision_sum": 17958654.105126895,
+          "b3_recall": 0.14128549437259025,
+          "b3_recall_sum": 3103862.7375024604,
+          "bp": 32866110,
+          "contigs": 7728,
+          "unassigned_bp": 94570,
+          "unassigned_contigs": 22
+        },
+        "500": {
+          "assigned_bp": 22081651,
+          "assigned_contigs": 35870,
+          "attributable_bp": 19733751,
+          "b3_precision": 0.8698954574834409,
+          "b3_precision_sum": 17166300.354009308,
+          "b3_recall": 0.029653707060160364,
+          "b3_recall_sum": 585178.8713521466,
+          "bp": 22098500,
+          "contigs": 35898,
+          "unassigned_bp": 16849,
+          "unassigned_contigs": 28
+        },
+        "768": {
+          "assigned_bp": 13975298,
+          "assigned_contigs": 16011,
+          "attributable_bp": 12485834,
+          "b3_precision": 0.8779075036575523,
+          "b3_precision_sum": 10961407.358022591,
+          "b3_recall": 0.02951233973587772,
+          "b3_recall_sum": 368486.17489377304,
+          "bp": 13986706,
+          "contigs": 16024,
+          "unassigned_bp": 11408,
+          "unassigned_contigs": 13
+        }
+      },
+      "marker_by_status": {
+        "clean_marker": {
+          "assigned_bp": 45029436,
+          "assigned_contigs": 1522,
+          "excluded_bp": 34564,
+          "excluded_contigs": 86,
+          "unassigned_bp": 1081038,
+          "unassigned_contigs": 23
+        },
+        "no_clean_marker": {
+          "assigned_bp": 162846603,
+          "assigned_contigs": 87386,
+          "excluded_bp": 22000890,
+          "excluded_contigs": 56575,
+          "unassigned_bp": 685626,
+          "unassigned_contigs": 110
+        }
+      },
+      "origin_by_status": {
+        "assigned": {
+          "all_bp": 207876039,
+          "ambiguous_query_bp": 40792267,
+          "bacterial_confirmed_bp": 95434135,
+          "eukaryotic_confirmed_bp": 56929733,
+          "nn_quarantined_query_bp": 7645499,
+          "other_confirmed_bp": 288021,
+          "unsupported_query_bp": 2895396,
+          "viral_confirmed_bp": 3890988
+        },
+        "excluded": {
+          "all_bp": 22035454,
+          "ambiguous_query_bp": 1476971,
+          "bacterial_confirmed_bp": 6490495,
+          "eukaryotic_confirmed_bp": 13281397,
+          "nn_quarantined_query_bp": 4987,
+          "other_confirmed_bp": 418,
+          "unsupported_query_bp": 585103,
+          "viral_confirmed_bp": 196083
+        },
+        "unassigned": {
+          "all_bp": 1766664,
+          "ambiguous_query_bp": 133393,
+          "bacterial_confirmed_bp": 1578010,
+          "eukaryotic_confirmed_bp": 43605,
+          "nn_quarantined_query_bp": 2719,
+          "unsupported_query_bp": 5938,
+          "viral_confirmed_bp": 2999
+        }
+      },
+      "recovery": {
+        "at_least_50_percent": 6,
+        "at_least_90_percent": 2,
+        "bp_weighted_R95": 0.04617063919787242,
+        "macro_R95": 0.04915730426588215,
+        "reference_bp": 554661890,
+        "targets": 156
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.36551582675602157,
+        "precision": 0.7579862059067187,
+        "recall": 0.240822607580474
+      },
+      "statuses": {
+        "assigned": {
+          "all_bp": 207876039,
+          "contigs": 88908
+        },
+        "excluded": {
+          "all_bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "all_bp": 1766664,
+          "contigs": 133
+        }
+      }
+    },
+    "cpm-pre": {
+      "AMBER": {
+        "claim_limit": "restricted alignment-supported contig population; not whole-reference recovery",
+        "native_api_executed": true,
+        "predicted_contigs": 75982,
+        "scorable_bp": 165477813,
+        "scorable_contigs": 125848,
+        "unscored_contigs": 19854
+      },
+      "bins": 841,
+      "geometry": "Exact retained dev4 neighbors/vectors, unchanged",
+      "large_bins": 191,
+      "large_bins_below95": 136,
+      "length_strata": {
+        "1": {
+          "attributable_bp": 19436777,
+          "b3_precision": 0.0,
+          "b3_recall": 0.0,
+          "bp": 22035454,
+          "contigs": 56661,
+          "excluded_bp": 22035454,
+          "excluded_contigs": 56661
+        },
+        "1000": {
+          "assigned_bp": 40488113,
+          "assigned_contigs": 27295,
+          "attributable_bp": 33785626,
+          "b3_precision": 0.8714453851833376,
+          "b3_precision_sum": 29442327.863230184,
+          "b3_recall": 0.0377689510046606,
+          "b3_recall_sum": 1276047.6530557873,
+          "bp": 40505273,
+          "contigs": 27307,
+          "unassigned_bp": 17160,
+          "unassigned_contigs": 12
+        },
+        "10000": {
+          "assigned_bp": 100186114,
+          "assigned_contigs": 2084,
+          "attributable_bp": 58067096,
+          "b3_precision": 0.8677475927070647,
+          "b3_precision_sum": 50387582.769490026,
+          "b3_recall": 0.7386847610527241,
+          "b3_recall_sum": 42893278.93378559,
+          "bp": 100186114,
+          "contigs": 2084
+        },
+        "2500": {
+          "assigned_bp": 32860759,
+          "assigned_contigs": 7726,
+          "attributable_bp": 21968729,
+          "b3_precision": 0.8168842408372936,
+          "b3_precision_sum": 17945908.511325236,
+          "b3_recall": 0.15269983200340242,
+          "b3_recall_sum": 3354621.227628275,
+          "bp": 32866110,
+          "contigs": 7728,
+          "unassigned_bp": 5351,
+          "unassigned_contigs": 2
+        },
+        "500": {
+          "assigned_bp": 22087678,
+          "assigned_contigs": 35880,
+          "attributable_bp": 19733751,
+          "b3_precision": 0.8698619458949891,
+          "b3_precision_sum": 17165639.044667188,
+          "b3_recall": 0.0298708404485384,
+          "b3_recall_sum": 589463.7275721851,
+          "bp": 22098500,
+          "contigs": 35898,
+          "unassigned_bp": 10822,
+          "unassigned_contigs": 18
+        },
+        "768": {
+          "assigned_bp": 13983164,
+          "assigned_contigs": 16020,
+          "attributable_bp": 12485834,
+          "b3_precision": 0.8779930704901296,
+          "b3_precision_sum": 10962475.731290057,
+          "b3_recall": 0.02978755694333366,
+          "b3_recall_sum": 371922.4912600115,
+          "bp": 13986706,
+          "contigs": 16024,
+          "unassigned_bp": 3542,
+          "unassigned_contigs": 4
+        }
+      },
+      "marker_by_status": {
+        "clean_marker": {
+          "assigned_bp": 46110474,
+          "assigned_contigs": 1545,
+          "excluded_bp": 34564,
+          "excluded_contigs": 86
+        },
+        "no_clean_marker": {
+          "assigned_bp": 163495354,
+          "assigned_contigs": 87460,
+          "excluded_bp": 22000890,
+          "excluded_contigs": 56575,
+          "unassigned_bp": 36875,
+          "unassigned_contigs": 36
+        }
+      },
+      "origin_by_status": {
+        "assigned": {
+          "all_bp": 209605828,
+          "ambiguous_query_bp": 40919908,
+          "bacterial_confirmed_bp": 96990837,
+          "eukaryotic_confirmed_bp": 56963626,
+          "nn_quarantined_query_bp": 7648218,
+          "other_confirmed_bp": 288021,
+          "unsupported_query_bp": 2901231,
+          "viral_confirmed_bp": 3893987
+        },
+        "excluded": {
+          "all_bp": 22035454,
+          "ambiguous_query_bp": 1476971,
+          "bacterial_confirmed_bp": 6490495,
+          "eukaryotic_confirmed_bp": 13281397,
+          "nn_quarantined_query_bp": 4987,
+          "other_confirmed_bp": 418,
+          "unsupported_query_bp": 585103,
+          "viral_confirmed_bp": 196083
+        },
+        "unassigned": {
+          "all_bp": 36875,
+          "ambiguous_query_bp": 5752,
+          "bacterial_confirmed_bp": 21308,
+          "eukaryotic_confirmed_bp": 9712,
+          "nn_quarantined_query_bp": 0,
+          "unsupported_query_bp": 103
+        }
+      },
+      "recovery": {
+        "at_least_50_percent": 8,
+        "at_least_90_percent": 2,
+        "bp_weighted_R95": 0.05398971614941852,
+        "macro_R95": 0.05450990027956753,
+        "reference_bp": 554661890,
+        "targets": 156
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.42307772517047443,
+        "precision": 0.7608508454242253,
+        "recall": 0.2930020233788229
+      },
+      "statuses": {
+        "assigned": {
+          "all_bp": 209605828,
+          "contigs": 89005
+        },
+        "excluded": {
+          "all_bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "all_bp": 36875,
+          "contigs": 36
+        }
+      }
+    },
+    "metabat": {
+      "AMBER": {
+        "claim_limit": "restricted alignment-supported contig population; not whole-reference recovery",
+        "native_api_executed": true,
+        "predicted_contigs": 5019,
+        "scorable_bp": 165477813,
+        "scorable_contigs": 125848,
+        "unscored_contigs": 19854
+      },
+      "bins": 43,
+      "geometry": "Not applicable; no comparable learned geometry",
+      "large_bins": 43,
+      "large_bins_below95": 16,
+      "length_strata": {
+        "1": {
+          "attributable_bp": 19436777,
+          "b3_precision": 0.0,
+          "b3_recall": 0.0,
+          "bp": 22035454,
+          "contigs": 56661,
+          "excluded_bp": 22035454,
+          "excluded_contigs": 56661
+        },
+        "1000": {
+          "assigned_bp": 102650,
+          "assigned_contigs": 60,
+          "attributable_bp": 33785626,
+          "b3_precision": 0.0029169983965213458,
+          "b3_precision_sum": 98552.61686746989,
+          "b3_recall": 0.0014468590243926919,
+          "b3_recall_sum": 48883.03787285637,
+          "bp": 40505273,
+          "contigs": 27307,
+          "unassigned_bp": 40402623,
+          "unassigned_contigs": 27247
+        },
+        "10000": {
+          "assigned_bp": 90590197,
+          "assigned_contigs": 1711,
+          "attributable_bp": 58067096,
+          "b3_precision": 0.8747592164291695,
+          "b3_precision_sum": 50794727.39727736,
+          "b3_recall": 0.7816905287444416,
+          "b3_recall_sum": 45390498.97489425,
+          "bp": 100186114,
+          "contigs": 2084,
+          "unassigned_bp": 9595917,
+          "unassigned_contigs": 373
+        },
+        "2500": {
+          "assigned_bp": 23301188,
+          "assigned_contigs": 5422,
+          "attributable_bp": 21968729,
+          "b3_precision": 0.7229664380746655,
+          "b3_precision_sum": 15882653.75415761,
+          "b3_recall": 0.3411341483642332,
+          "b3_recall_sum": 7494283.658059632,
+          "bp": 32866110,
+          "contigs": 7728,
+          "unassigned_bp": 9564922,
+          "unassigned_contigs": 2306
+        },
+        "500": {
+          "attributable_bp": 19733751,
+          "b3_precision": 0.0,
+          "b3_recall": 0.0,
+          "bp": 22098500,
+          "contigs": 35898,
+          "excluded_bp": 22098500,
+          "excluded_contigs": 35898
+        },
+        "768": {
+          "attributable_bp": 12485834,
+          "b3_precision": 0.0,
+          "b3_recall": 0.0,
+          "bp": 13986706,
+          "contigs": 16024,
+          "excluded_bp": 13986706,
+          "excluded_contigs": 16024
+        }
+      },
+      "marker_by_status": {
+        "clean_marker": {
+          "assigned_bp": 43353904,
+          "assigned_contigs": 855,
+          "excluded_bp": 215181,
+          "excluded_contigs": 335,
+          "unassigned_bp": 2575953,
+          "unassigned_contigs": 441
+        },
+        "no_clean_marker": {
+          "assigned_bp": 70640131,
+          "assigned_contigs": 6338,
+          "excluded_bp": 57905479,
+          "excluded_contigs": 108248,
+          "unassigned_bp": 56987509,
+          "unassigned_contigs": 29485
+        }
+      },
+      "origin_by_status": {
+        "assigned": {
+          "all_bp": 113994035,
+          "ambiguous_query_bp": 30820085,
+          "bacterial_confirmed_bp": 63408043,
+          "eukaryotic_confirmed_bp": 10841688,
+          "nn_quarantined_query_bp": 7479740,
+          "other_confirmed_bp": 87981,
+          "unsupported_query_bp": 572095,
+          "viral_confirmed_bp": 784403
+        },
+        "excluded": {
+          "all_bp": 58120660,
+          "ambiguous_query_bp": 3890319,
+          "bacterial_confirmed_bp": 16464165,
+          "eukaryotic_confirmed_bp": 35958657,
+          "nn_quarantined_query_bp": 11247,
+          "other_confirmed_bp": 1686,
+          "unsupported_query_bp": 1270114,
+          "viral_confirmed_bp": 524472
+        },
+        "unassigned": {
+          "all_bp": 59563462,
+          "ambiguous_query_bp": 7692227,
+          "bacterial_confirmed_bp": 23630432,
+          "eukaryotic_confirmed_bp": 23454390,
+          "nn_quarantined_query_bp": 162218,
+          "other_confirmed_bp": 198772,
+          "unsupported_query_bp": 1644228,
+          "viral_confirmed_bp": 2781195
+        }
+      },
+      "recovery": {
+        "at_least_50_percent": 16,
+        "at_least_90_percent": 5,
+        "bp_weighted_R95": 0.08549276749480661,
+        "macro_R95": 0.0958174007886,
+        "reference_bp": 554661890,
+        "targets": 156
+      },
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.35687258389340115,
+        "precision": 0.4035340602930405,
+        "recall": 0.3198837639389562
+      },
+      "statuses": {
+        "assigned": {
+          "all_bp": 113994035,
+          "contigs": 7193
+        },
+        "excluded": {
+          "all_bp": 58120660,
+          "contigs": 108583
+        },
+        "unassigned": {
+          "all_bp": 59563462,
+          "contigs": 29926
+        }
+      }
+    }
+  },
+  "audit": {
+    "bytes": 11561,
+    "sha256": "9623f4bfe6b3f1642f724fb468ed8b0d21ef18f22db67dde6bd4af37bc8c5702"
+  },
+  "checks": {
+    "local_tests": 15,
+    "native_launcher_tests": 10,
+    "native_watchdog_tests": 2,
+    "no_missing_required_runtime_for_reported_diagnostics": true,
+    "original_Mac_allclose_failure_preserved": true
+  },
+  "compact_review_evidence": {
+    "additional_readback_USD_upper": 5.6542083621025084e-05,
+    "all_member_readback_verified": true,
+    "archive": {
+      "bytes": 505830,
+      "sha256": "488c356b98a1a2222cc3aa781959f98f29abe081d6edeec02c93f2b38102b00f"
+    },
+    "checked_utc": "2026-10-17T08:33:20.151279+00:00",
+    "every_member_verified": true,
+    "inventory": {
+      "bytes": 21114,
+      "sha256": "e1948e92ae4c4686f933b3280253959b9252bed1c9c1ab110d3494124cca482c"
+    },
+    "logical_member_bytes": 3137893,
+    "no_VM_wake": true,
+    "objects": [
+      {
+        "bytes": 505830,
+        "generation": "1792225998558981",
+        "readback_verified": true,
+        "uri": "gs://dl-binner-archive-167650584170/e011/cached-7a43eb6-20261017T080610Z/review-evidence-v1.tar.gz"
+      },
+      {
+        "bytes": 92,
+        "generation": "1792225999728550",
+        "readback_verified": true,
+        "uri": "gs://dl-binner-archive-167650584170/e011/cached-7a43eb6-20261017T080610Z/review-evidence-v1.tar.gz.sha256"
+      }
+    ],
+    "regular_members": 135,
+    "retention_extended": false,
+    "scope": "Closed failed/passed local journals and pre-upload maintained records; no credentials/environments/bulk native DNA. Raw provider SSH metadata excluded; compact control-plane summary bound to retained raw record. Final upload locator appended after this immutable snapshot.",
+    "total_recovery_with_reserve_USD": 0.1045666007304577,
+    "uri": "gs://dl-binner-archive-167650584170/e011/cached-7a43eb6-20261017T080610Z/review-evidence-v1.tar.gz"
+  },
+  "execution_receipt": {
+    "bytes": 23710,
+    "sha256": "01f8543607aa651bc98a1bd27a1bfc5f381760e5018df4ceac35078842f0e108"
+  },
+  "execution_source_commit": "7a43eb6bb7b23ae0430bcfc85c6674ad5d628ddc",
+  "failed_local_reviews": [
+    {
+      "exit_receipt": {
+        "bytes": 1693,
+        "sha256": "74899a0ae43b2606d6c974da3fb26dc0a04b03b3c0035c94d23acce894358121"
+      },
+      "log": {
+        "bytes": 600,
+        "sha256": "67ba68b113cf557d8dd9db90e679066cbaa859990f3f8bef37e2e6793cadfc8e"
+      },
+      "reason": "New local reviewer compared complete ldd text; randomized ASLR addresses differ but all stable paths/member hashes match. No native change.",
+      "source": {
+        "bytes": 18586,
+        "sha256": "4f27ae4723d1924099d6d294f3ce7254096b32216319a112c4ccbb3c703f4890"
+      },
+      "version": "v1"
+    },
+    {
+      "exit_receipt": {
+        "bytes": 1697,
+        "sha256": "962e7ddfe82b1bd5147e4b08755b3afe4c36f994b7cb8cf111e2e02e79783db6"
+      },
+      "log": {
+        "bytes": 439,
+        "sha256": "984654c9372d9af7dadeedfce998f676411bd2f7e9ea4c7e793cd4db398f873c"
+      },
+      "reason": "New local reviewer required config on post partition; frozen refinement writer emits pre/features/marker bindings instead. Correct reader now verifies the actual schema; outputs unchanged.",
+      "source": {
+        "bytes": 19241,
+        "sha256": "c0e21e6b9929bf6a015cd070f3b153d16f31b49a3681add99391f8107ff74599"
+      },
+      "version": "v2"
+    }
+  ],
+  "implementation_interpretation": [
+    "CPM alone changes pre weighted R95 1.8763% to5.3990%, establishing an objective/partition effect on the fixed representation, not encoder optimality.",
+    "CPM post improves RB post by0.3261percentagepoints, below frozen0.5 keep threshold; do not promote or search resolutions.",
+    "Paired marker refinement loses0.7819percentagepoints, with four97.5-99.7% purity parents fragmented. Both seeds in each pair have the same admitted genome label, disjoint whole-contig source spans and nonidentical full predicted proteins. This disfavors identical duplicate assembly sequences for those pairs; marker reference localization/specificity/universal single-copy status remain unresolved.",
+    "All four affected seed families have count2 and repeated-witness count2, so largest-versus-second-largest selection does not explain these losses. The earlier RB prose/code discrepancy remains preserved.",
+    "MetaBAT2 beats the best preserved own weighted R95 by3.1503points and recovers16targets>=50%/5>=90%. This supports better recovery on this assembly/truth/metric, not a component cause, ceiling or verdict on simulation validity.",
+    "No fatal feature/window/parent-depth/graph/evaluator implementation bug was identified by the scoped audit. Limited training population/window diversity, false negatives and depth shortcut remain untested risks. Absence of a detected bug does not establish optimality."
+  ],
+  "limits": [
+    "development assembly, no generalization or product-feature conclusion",
+    "3.3034% N-quarantine",
+    "R95 all-bin purity and full provided-reference denominators; not MAG quality",
+    "MetaBAT native cvExt assumes variance=mean; different eligibility",
+    "restricted B3 excludes unattributable bin DNA; full-bin R95 does not",
+    "original Mac portability failure remains unresolved"
+  ],
+  "local_resources": {
+    "AMBER": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-amber-local/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e011-cached-grouping-reference/recovery-20261017/amber-three.py"
+      ],
+      "exit_code": 0,
+      "launched_pid": 1346,
+      "peak_sampled_rss_bytes": 569704448,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.7998581379676605,
+      "sampled_cpu_seconds": 12.68,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 900,
+      "stop_reason": null,
+      "wall_seconds": 15.85281114000827
+    },
+    "additional_diagnostics_seconds": 7.787035765009932,
+    "review": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e010-coherent-prototype/envs/candidate-dev4-v3/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e011_review.py",
+        "review",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e011-cached-grouping-reference/recovery-20261017/members",
+        "--completion",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e011-cached-grouping-reference/recovery-20261017/native-completion.json",
+        "--cache",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e011-cached-grouping-reference/restore-local",
+        "--fasta",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-gcp-review/20261015/returned/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+        "--depth",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-gcp-review/20261015/returned/data-stage-v1/parts/final/depth.tsv",
+        "--truth",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-truth-v2/20261015/attempt-local-v2/truth-v2",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e011-cached-grouping-reference/recovery-20261017/local-review-v3"
+      ],
+      "exit_code": 0,
+      "launched_pid": 1041,
+      "peak_sampled_rss_bytes": 1600966656,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.9564193727487581,
+      "sampled_cpu_seconds": 44.26,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 900,
+      "stop_reason": null,
+      "wall_seconds": 46.2767706940067
+    }
+  },
+  "marker_seed_audit": {
+    "lost_passing_bins": [
+      {
+        "calls": [
+          {
+            "contig": "k141_137918",
+            "end": 138587,
+            "family": "TIGR00420",
+            "gene": "g000162154",
+            "start": 137531
+          },
+          {
+            "contig": "k141_10375",
+            "end": 118375,
+            "family": "TIGR00420",
+            "gene": "g000207555",
+            "start": 117355
+          }
+        ],
+        "genes": {
+          "g000162154": {
+            "metadata": {
+              "contig": "k141_137918",
+              "end": 138590,
+              "gene": "g000162154",
+              "partial_begin": false,
+              "partial_end": false,
+              "protein_length": 355,
+              "start": 137522,
+              "strand": -1
+            },
+            "protein_sha256": "5efda990fbc4fc37a0f3a0094fc618d7653dfee9e31af1398a5d703946976305"
+          },
+          "g000207555": {
+            "metadata": {
+              "contig": "k141_10375",
+              "end": 118390,
+              "gene": "g000207555",
+              "partial_begin": false,
+              "partial_end": false,
+              "protein_length": 361,
+              "start": 117304,
+              "strand": -1
+            },
+            "protein_sha256": "3706f3a07e2fbfa510f4abd2494aa7cf4cbd5e233e9e56067af9d3ef559b0387"
+          }
+        },
+        "genome": "ASV150.14",
+        "pre_bin": 442,
+        "pre_bin_confirmed_purity": 0.9960980992025679,
+        "same_marker_protein_bytes": false,
+        "seed_family": "TIGR00420",
+        "seeds": [
+          {
+            "confirmed_query_bp": {
+              "ASV150.14": 294323
+            },
+            "contig": "k141_137918",
+            "truth_label": "ASV150.14"
+          },
+          {
+            "confirmed_query_bp": {
+              "ASV150.14": 125628
+            },
+            "contig": "k141_10375",
+            "truth_label": "ASV150.14"
+          }
+        ],
+        "whole_contig_reference_overlap_bp": 0
+      },
+      {
+        "calls": [
+          {
+            "contig": "k141_83874",
+            "end": 45586,
+            "family": "Methyltransf_5",
+            "gene": "g000157890",
+            "start": 44695
+          },
+          {
+            "contig": "k141_106071",
+            "end": 136137,
+            "family": "Methyltransf_5",
+            "gene": "g000231594",
+            "start": 135210
+          }
+        ],
+        "genes": {
+          "g000157890": {
+            "metadata": {
+              "contig": "k141_83874",
+              "end": 45598,
+              "gene": "g000157890",
+              "partial_begin": false,
+              "partial_end": false,
+              "protein_length": 352,
+              "start": 44539,
+              "strand": 1
+            },
+            "protein_sha256": "11b3d165045518421dd960d43009809b5d6bbc7864b3705096022a180c6d93ba"
+          },
+          "g000231594": {
+            "metadata": {
+              "contig": "k141_106071",
+              "end": 136140,
+              "gene": "g000231594",
+              "partial_begin": false,
+              "partial_end": false,
+              "protein_length": 312,
+              "start": 135201,
+              "strand": -1
+            },
+            "protein_sha256": "7a59122d2f78e63c7a94bf019ca603233205f218c88719d8cecd62d3bad3dc0a"
+          }
+        },
+        "genome": "ASV399.6",
+        "pre_bin": 372,
+        "pre_bin_confirmed_purity": 0.9971881802494382,
+        "same_marker_protein_bytes": false,
+        "seed_family": "Methyltransf_5",
+        "seeds": [
+          {
+            "confirmed_query_bp": {
+              "ASV399.6": 222989
+            },
+            "contig": "k141_106071",
+            "truth_label": "ASV399.6"
+          },
+          {
+            "confirmed_query_bp": {
+              "ASV399.6": 58309
+            },
+            "contig": "k141_83874",
+            "truth_label": "ASV399.6"
+          }
+        ],
+        "whole_contig_reference_overlap_bp": 0
+      },
+      {
+        "calls": [
+          {
+            "contig": "k141_3550",
+            "end": 50949,
+            "family": "TIGR00115",
+            "gene": "g000073650",
+            "start": 50067
+          },
+          {
+            "contig": "k141_27026",
+            "end": 152212,
+            "family": "TIGR00115",
+            "gene": "g000149389",
+            "start": 150988
+          }
+        ],
+        "genes": {
+          "g000073650": {
+            "metadata": {
+              "contig": "k141_3550",
+              "end": 51180,
+              "gene": "g000073650",
+              "partial_begin": false,
+              "partial_end": false,
+              "protein_length": 433,
+              "start": 49878,
+              "strand": 1
+            },
+            "protein_sha256": "160aaa8d486529626746ded520d098b1e9957a174c65ec6498eb338c7b546694"
+          },
+          "g000149389": {
+            "metadata": {
+              "contig": "k141_27026",
+              "end": 152248,
+              "gene": "g000149389",
+              "partial_begin": false,
+              "partial_end": false,
+              "protein_length": 428,
+              "start": 150961,
+              "strand": -1
+            },
+            "protein_sha256": "c8e4c6782790f2b9e2a6e14b614c2cef204bdea5aafce1e80be7c50e1180f96d"
+          }
+        },
+        "genome": "ASV406.4",
+        "pre_bin": 670,
+        "pre_bin_confirmed_purity": 0.9752780279416045,
+        "same_marker_protein_bytes": false,
+        "seed_family": "TIGR00115",
+        "seeds": [
+          {
+            "confirmed_query_bp": {
+              "ASV406.4": 367980
+            },
+            "contig": "k141_27026",
+            "truth_label": "ASV406.4"
+          },
+          {
+            "confirmed_query_bp": {
+              "ASV406.4": 129456
+            },
+            "contig": "k141_3550",
+            "truth_label": "ASV406.4"
+          }
+        ],
+        "whole_contig_reference_overlap_bp": 0
+      },
+      {
+        "calls": [
+          {
+            "contig": "k141_2326",
+            "end": 11574,
+            "family": "Methyltransf_5",
+            "gene": "g000046371",
+            "start": 10644
+          },
+          {
+            "contig": "k141_139685",
+            "end": 13165,
+            "family": "Methyltransf_5",
+            "gene": "g000186483",
+            "start": 12277
+          }
+        ],
+        "genes": {
+          "g000046371": {
+            "metadata": {
+              "contig": "k141_2326",
+              "end": 11580,
+              "gene": "g000046371",
+              "partial_begin": false,
+              "partial_end": false,
+              "protein_length": 312,
+              "start": 10641,
+              "strand": 1
+            },
+            "protein_sha256": "369d2ee25e1248b1b5036828d6c3af692e8218184724244e1e3556706a6bb834"
+          },
+          "g000186483": {
+            "metadata": {
+              "contig": "k141_139685",
+              "end": 13318,
+              "gene": "g000186483",
+              "partial_begin": false,
+              "partial_end": false,
+              "protein_length": 350,
+              "start": 12265,
+              "strand": -1
+            },
+            "protein_sha256": "b0dcc900999a220314d4e1ff1802aff5d53f67598896ca4361ddff72ea381abe"
+          }
+        },
+        "genome": "ASV456.0",
+        "pre_bin": 402,
+        "pre_bin_confirmed_purity": 0.9811796235536114,
+        "same_marker_protein_bytes": false,
+        "seed_family": "Methyltransf_5",
+        "seeds": [
+          {
+            "confirmed_query_bp": {
+              "ASV456.0": 25889
+            },
+            "contig": "k141_2326",
+            "truth_label": "ASV456.0"
+          },
+          {
+            "confirmed_query_bp": {
+              "ASV456.0": 23421
+            },
+            "contig": "k141_139685",
+            "truth_label": "ASV456.0"
+          }
+        ],
+        "whole_contig_reference_overlap_bp": 0
+      }
+    ],
+    "scope": "Retained evidence/source unions only; no marker detection, aligner or truth change. Whole-contig interval overlaps do not localize marker loci."
+  },
+  "objective": {
+    "edges": 1821900,
+    "gamma": 0.01294708220433279,
+    "n_iterations": 2,
+    "native_quality": 763150.8649837244,
+    "node_sizes": 1,
+    "rule": "median_positive_retained_edge_weight / frozen_neighbor_count",
+    "seed": 11,
+    "vertices": 89041
+  },
+  "paired_refinement": {
+    "adopted": 12,
+    "counts": {
+      "assigned_to_noise": 97,
+      "remains_assigned": 88908,
+      "remains_noise_or_excluded": 56697
+    },
+    "four_previously_passing_genomes_lose_best_bin_recovery": true,
+    "net_recovered_bp_change": -4336944,
+    "newly_unassigned": {
+      "by_length": {
+        "1000": {
+          "bp": 46548,
+          "clean_marker_contigs": 2,
+          "contigs": 29,
+          "primary_confirmed_bp": 17607
+        },
+        "10000": {
+          "bp": 1580129,
+          "clean_marker_contigs": 17,
+          "contigs": 29,
+          "primary_confirmed_bp": 1499157
+        },
+        "2500": {
+          "bp": 89219,
+          "clean_marker_contigs": 4,
+          "contigs": 20,
+          "primary_confirmed_bp": 35474
+        },
+        "500": {
+          "bp": 6027,
+          "clean_marker_contigs": 0,
+          "contigs": 10,
+          "primary_confirmed_bp": 1153
+        },
+        "768": {
+          "bp": 7866,
+          "clean_marker_contigs": 0,
+          "contigs": 9,
+          "primary_confirmed_bp": 3311
+        }
+      },
+      "by_lineage": {
+        "bacterial": {
+          "bp": 1273374,
+          "clean_marker_contigs": 14,
+          "contigs": 45,
+          "primary_confirmed_bp": 1273114
+        },
+        "eukaryotic": {
+          "bp": 33711,
+          "clean_marker_contigs": 0,
+          "contigs": 15,
+          "primary_confirmed_bp": 0
+        },
+        "not_attributable": {
+          "bp": 419914,
+          "clean_marker_contigs": 9,
+          "contigs": 34,
+          "primary_confirmed_bp": 283588
+        },
+        "viral": {
+          "bp": 2790,
+          "clean_marker_contigs": 0,
+          "contigs": 3,
+          "primary_confirmed_bp": 0
+        }
+      },
+      "total": {
+        "bp": 1729789,
+        "clean_marker_contigs": 23,
+        "contigs": 97,
+        "primary_confirmed_bp": 1556702
+      }
+    },
+    "no_merge_or_new_assignment": true,
+    "one_genome_gains_passing_recovery": true,
+    "proposals": 30,
+    "unresolved": 18
+  },
+  "predeclared_criteria": {
+    "R95_gain_percentage_points": 0.3261211979067105,
+    "assigned_bacterial_bp_ratio": 1.0780324423212115,
+    "disposition": "modify refinement hypothesis; frozen CPM setting fails keep threshold; no resolution search",
+    "external_gap_percentage_points": 3.150305134538809,
+    "external_material_gap_threshold": 1,
+    "keep_passed": false,
+    "required_assignment_ratio": 0.9,
+    "required_gain": 0.5,
+    "required_target50": 6,
+    "target50_count": 6
+  },
+  "protocol": {
+    "bytes": 3614,
+    "sha256": "a2a205f39dc01a012f73822577f31f3ecd7d954f0ea025dff5a2bed7e4732b95"
+  },
+  "recommendation": {
+    "alternatives": "Global refinement removal would discard its RB benefit; another encoder fit would confound the demonstrated grouping/refinement failure; a CPM grid would violate the frozen control.",
+    "estimated_local_resources": "4 CPU threads,2-4GiB RAM,<=15min per bounded review/control,<=2GiB new local artifacts; $0 new cloud compute. Existing approved storage costs continue until review.",
+    "next_decision": "Test one label-free parent-versus-retained-child refinement acceptance rule locally, after auditing marker-copy reliability; defer another encoder fit until this directly observed failure is resolved.",
+    "retention_review": "2026-10-21",
+    "scope": "Local marker-copy audit and one prospectively frozen acceptance rule on retained RB/CPM parent-child partitions. Sequence truth only for diagnosis/evaluation, no truth labels/K in selection. No additional external run. Oral-GSA confirmation remains frozen and unacquired; source/replicon/taxonomy/overlap/truth/cost admission required before later acquisition.",
+    "why_now": "A cheap restore-only selector can preserve useful parent bins and reject unsupported destructive splits without retraining, rerunning Leiden or marker detection. This is a selective uncertainty-driven control, not a mandatory one-feature campaign."
+  },
+  "record": "E011",
+  "retained_local_root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e011-cached-grouping-reference/recovery-20261017",
+  "reused_baseline_bindings": {
+    "E009": {
+      "bytes": 85430,
+      "sha256": "f261fe8fd32573d0e8fe41060f5431dcc8aa14a5d5088f46bbb0595351c3caaf"
+    },
+    "E010": {
+      "bytes": 95701,
+      "sha256": "03f142d336754c87cde10fd924283de06cd9d2a27f8aa646c9a30c8e678dbf98"
+    }
+  },
+  "reviewed_utc": "2026-10-17T08:28:26.825445+00:00",
+  "status": "accepted development evidence; CPM keep criterion failed, refinement hypothesis modified",
+  "summary": {
+    "RB-post": {
+      "at_least_50_percent": 6,
+      "at_least_90_percent": 2,
+      "bp_weighted_R95": 0.042909427218805314
+    },
+    "RB-pre": {
+      "at_least_50_percent": 3,
+      "at_least_90_percent": 1,
+      "bp_weighted_R95": 0.018762951245848168
+    },
+    "cpm-post": {
+      "at_least_50_percent": 6,
+      "at_least_90_percent": 2,
+      "bp_weighted_R95": 0.04617063919787242
+    },
+    "cpm-pre": {
+      "at_least_50_percent": 8,
+      "at_least_90_percent": 2,
+      "bp_weighted_R95": 0.05398971614941852
+    },
+    "dev3-learned-ten": {
+      "at_least_50_percent": 13,
+      "at_least_90_percent": 1,
+      "bp_weighted_R95": 0.05391142881657148
+    },
+    "metabat": {
+      "at_least_50_percent": 16,
+      "at_least_90_percent": 5,
+      "bp_weighted_R95": 0.08549276749480661
+    }
+  },
+  "truth": {
+    "N_quarantine_percent": 3.3034,
+    "admission": {
+      "bytes": 14364,
+      "sha256": "65b3ee7fc1a7b9cbe9e5e6ababdba606a85d0708c0f60bbcda2c25a7aaa25aed"
+    },
+    "claim": "conservative supplied-reference development recovery, not MAG quality or generalization",
+    "confirmed_primary_source_availability": 0.185321,
+    "duplicate_safe_locus_unions": true,
+    "full_provided_primary_bp": 554661890,
+    "min_bin_bp": 200000,
+    "min_confirmed_source_support_over_all_bin_DNA": 0.95,
+    "primary_targets": 156
+  }
+}

@@ -224,3 +224,37 @@ recovery, not outcome-driven tuning or repeating accepted science. Keep fresh
 credit coverage, explicit per-attempt limits, shutdown and October 21 storage review.
 Follow a short (about 15 minutes or less) supervised job through completion and
 local review; healthy longer work may be handed off after verified real progress.
+
+## Completed cached objective/reference, 2026-10-17
+
+[E011's review](../../experiments/E011-cached-grouping-reference/review.json) accepts
+all twelve native stages and the checksum-bound return after strict setup reuse.
+The original failed native journal and two corrected local reviewer journals stay
+intact. The recovery cost about $0.075 before small charges (<$0.105 with reserve);
+VM independently TERMINATED, October 21 retention unchanged. Operational debugging
+proceeded directly without another approval handoff; no scientific tuning occurred.
+
+Fixed dev4 vectors/graph with CPM yield pre/post weighted R95 5.3990/4.6171%, versus
+RB 1.8763/4.2909% and dev3 learned ten-depth 5.3911%. The +0.3261-point post gain
+fails the frozen +0.5 keep threshold. Modify the refinement hypothesis; do not
+promote or search resolutions. Four high-purity parents fragment, one new target
+gains. The harmed seed pairs all have the same admitted genome label, disjoint
+whole-contig source spans and different complete proteins. Their repeat counts
+are all 2; highest versus second-highest selection cannot explain these losses.
+Marker family membership is not proof of universal single-copy behavior; exact
+copy/call biology remains unresolved. No fatal feature/graph/evaluator bug was
+identified by the scoped audit, without claiming optimality or exhaustive absence.
+
+The one MetaBAT2 cvExt reference reaches 8.5493%, 16 targets >=50% and 5 >=90%:
+a material +3.1503-point feasible recovery gap over the best own output on this
+assembly/truth/metric. This is useful evidence beyond ranking a weak prototype;
+its different eligibility/variance assumption prevents a component-cause claim.
+No broad external campaign follows. Full DNA/origin/length/eligibility populations,
+provided-reference denominators and 3.3034% N-quarantine remain.
+
+Next selective decision: one local restore-only parent-versus-existing-child
+acceptance control, following a marker-copy reliability audit and prospectively
+frozen label-free rule. Existing RB/CPM proposals avoid new fits, marker scans or
+Leiden execution; $0 new cloud compute. This tests a demonstrated harmful stage
+without returning to a mandatory tiny-feature campaign. Oral-GSA confirmation is
+still frozen/unacquired, with independent population/truth/overlap/cost admission.

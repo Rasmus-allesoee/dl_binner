@@ -4,73 +4,54 @@ Updated: 2026-10-17. This is the single current handoff.
 
 ## Exact next step
 
-**Owner-authorized operational recovery is active (October 17).** Debug/retry the
-repaired E011 Linux gates and frozen CPM/MetaBAT job directly, preserving failures
-and strictly reusing passed cache/installation. The earlier no-retry handoff below
-is superseded by the owner's explicit instruction; no new approval prompt is
-needed for reasonable operational envelope changes. First attempt remains closed
-and unchanged. Use fresh credit/headroom/source/boot/process/STOP gates, keep
-October 21 retention, and follow a short job through shutdown and local evaluation.
-[Operations](../experiments/E011-cached-grouping-reference/OPERATIONS.md) owns this
-recovery sequence. No changed scientific setting, encoder fit or extra external tool.
+**E011 completed successfully; VM independently TERMINATED.** The repaired phase
+`cached-20261017T080610Z-7a43eb6` ran at clean pushed `7a43eb6`, reusing the verified
+18-file cache and 35-package MetaBAT installation. All twelve native stages,
+remaining Linux/tiny gates, archive readback and 1,905 local member checks passed.
+[Recovery receipt](../experiments/E011-cached-grouping-reference/recovery-observed.json)
+binds actual exits and shutdown. The original failed native attempt and two new
+failed local reviewer journals remain intact. No encoder training, marker scan,
+neighbor-index build, data DAG or changed seed ran.
 
-**E011 stopped at a native provenance-gate failure; VM independently TERMINATED.**
-[Native receipt](../experiments/E011-cached-grouping-reference/native-observed.json)
-records phase `cached-20261017T005141Z-ab80312`, clean pushed source ab80312,
-matching private/guest FAILED status, the 19,320-byte /28-member checksum-verified
-failure archive and provider stop **October 17 00:58:26.197 UTC /02:58 Copenhagen**.
-Actual uptime **404.884 s**. No community CPM or MetaBAT2 run, fit or new score was
-produced. The failure is a new launcher/provenance bug, not evidence invalidating
-accepted E010. That attempt made no resource or retention change; its failure record remains historical.
+[Reviewed E011 evidence](../experiments/E011-cached-grouping-reference/review.json):
+weighted full-reference R95 is RB pre **1.8763%**, RB post **4.2909%**, CPM pre
+**5.3990%**, CPM post **4.6171%**, preserved dev3 learned ten-depth **5.3911%**,
+MetaBAT2 **8.5493%**. CPM post's +0.3261-point gain fails the frozen +0.5 keep rule;
+do not promote the setting or run a resolution grid. CPM pre's near-tie with dev3
+has 8 versus 13 targets >=50%, not a stronger-binner claim. The sole MetaBAT cvExt
+reference recovers 16 targets >=50%/5 >=90%, demonstrating a material feasible gap
+under this assembly/truth/metric, without a component cause or simulation verdict.
 
-Passed native stages: every-member original archive restore, full owned E010
-28-distribution/source/import check, and independent 35-package MetaBAT2 install.
-MetaBAT's actual 2.18 CLI/help returned successfully; the next probe incorrectly
-rejected its normal libz.so.1 symlink using a scientific-artifact helper. Remaining
-native tiny/launcher gates and both community consumers were skipped. The watcher
-detected the exited held parent and uploaded its shutdown-request snapshot; an
-explicit provider stop was also issued. Final TERMINATED is independently verified.
+The paired marker stage fragments four passing parents (97.5–99.7% confirmed
+purity) and gains one new target. Both seeds in each harmed pair have the same
+admitted genome label, disjoint whole-contig source spans and different complete
+predicted proteins. All affected repeat counts are 2, so the highest-versus-second
+seed discrepancy does not explain these losses. Exact marker specificity/copy
+biology remains unresolved; conflict disappearance alone is insufficient evidence
+that a split helps recovery. Preserve the original Mac allclose failure and native
+vectors. Full DNA, all length/origin/native-eligibility populations, 156 primary
+provided-reference denominators and **3.3034% N-quarantine** remain in diagnostics.
 
-**Next: one fresh explicitly authorized E011 attempt after the local repair.**
-The repair preserves lexical loader aliases and resolved target bytes, keeping
-scientific artifact refusal and lexical Python invocation paths unchanged. Ten
-local tests, native Mac CLI and actual retained-cache reuse pass; repaired native
-Linux gates remain pending. Reuse passed cache/installation only after strict
-[reuse-lock](../experiments/E011-cached-grouping-reference/reuse-lock.json) checks;
-missing/corrupt bytes fail without recopy/reinstall. The unchanged one-rule CPM,
-marker refinement, MetaBAT defaults and prospective decision thresholds remain
-frozen. [Operations](../experiments/E011-cached-grouping-reference/OPERATIONS.md#exact-next-prompt)
-owns the exact following prompt. Recovery is now authorized by the later owner clarification above.
+**Next decision:** one local restore-only parent-versus-retained-child acceptance
+control, informed by a marker-copy reliability audit. Freeze one label-free policy
+before changed scores; reuse retained RB/CPM proposals instead of another encoder
+fit, marker search or Leiden run. This directly addresses an observed harmful
+stage and needs no new cloud compute. [Operations](../experiments/E011-cached-grouping-reference/OPERATIONS.md#exact-next-prompt)
+owns the exact prompt. Oral-GSA confirmation stays frozen and unacquired; its
+source/replicon/taxonomy/overlap/truth/cost admission remains separate. No external
+expansion, CompleteBin, architecture change or confirmation run followed E011.
 
-The implementation [audit](../experiments/E011-cached-grouping-reference/audit.json)
-confirms a seed prose/code discrepancy affecting four adopted splits: actual code
-uses the second-largest family count. It cannot explain the poor pre-refinement
-result. No fatal feature/pairing/graph/evaluation defect was identified; long-only
-training, limited window diversity, shared parent depth and false negatives remain
-plausible risks, without an optimality claim. Dev3, dev4, truth/results/journals
-and the original strict Mac numerical-portability failure remain preserved.
-
-Measured gross compute/IP **$0.03071**, disk interval **$0.00481**, setup readback
-**$0.00745**, tiny failure export plus small storage/operations: ~$0.043 before
-small charges, **<$0.063 with reserve**, within the new $1. Credit DKK1,933.15
-Available through 2027-01-12; delayed reported cost/savings 38.94/net0, pending usage
-unknown. Initial free 131.96 GiB /collection minimum 131.09 GiB. Full phase peak was
-not serialized on failure; this collection gap is repaired locally and explicit.
-Existing 30/300-GiB disks still cost **$31.20/month while stopped**; **October 21**
-review is unchanged. No additional resources are needed for the same bounded job.
-
-E010 remains accepted development evidence: full 145,702 contigs /231,678,157 bp,
-ordered ten-depth axes, exact native reload and all DNA retained. Weighted R95
-pre 1.8763% /post 4.2909% versus dev3 learned ten-depth 5.3911%; no new biological
-result or stronger-binner claim follows from E011's failed engineering gate.
-
-A [prospective confirmation choice/protocol](../experiments/E010-coherent-prototype/confirmation-plan.json)
-is frozen before changed community scores: CAMI II Toy HMB oral pooled GSA,
-sequence-only, publisher MD5-bound complete DNA/truth files. No bulk acquisition
-occurred; truth/population/overlap admission is a separate gate. This complements
-E009 with another domain/length population, without claiming unseen genomes,
-read-derived assembly or multi-depth confirmation. Use selective ablations; no
-mandatory one-feature campaign. CompleteBin and all external binners stay deferred.
+Measured recovery VM uptime **432.736 s**, compute/IP **$0.03282**, disk interval
+**$0.00514**, native export upper **$0.03655**, plus tiny review export and small
+storage/operations: about **$0.075**, **<$0.105 with reserve**. These are measured-
+uptime/live-list-price estimates, not a reconciled invoice. Paid-account Welcome
+credit **DKK 1,929.71 Available through 2027-01-12**; reported cost/savings 41.58/net 0
+is delayed and pending usage remains unknown/reserved. Minimum sampled free disk
+**129.55 GiB**, sampled increase **1.543 GiB**, native science peak ~1.081 GB RSS.
+Existing disks cost **$31.20/month while stopped**; **October 21 storage review**
+remains. No new resources or retention extension. The owner authorized operational
+debug/retry in this task; recoverable errors were handled without another approval
+handoff while preserving failed evidence and passed stages.
 
 **E009 controls remain accepted and unchanged.** [The review](../experiments/E009-competitive-benchmark/controls-review.json)
 binds all four completed controls, full DNA/sample axes and shutdown. Learned
@@ -82,12 +63,13 @@ availability is 18.5321% of the full provided reference denominator; the 3.3034%
 N-quarantine and lineage/length limitations remain. No feature-family conclusion.
 
 The preceding E009 review and the later completed E010 phase both independently
-verify TERMINATED; the reviewed E010 stop above is the current observation.
+verify TERMINATED; the reviewed E011 stop above is the current observation.
 The separate $2 control phase cost ~$0.479 compute/IP plus ~$0.0542 export and small
 operations; it is not a budget for the upgrade. Existing 30/300-GiB disks remain
 ~$31.20/month while stopped; retention review **October 21**, no extension. Any
-later cloud work needs fresh credits/prices and explicit execution scope. All
-external binners, including CompleteBin, remain deferred. [D013](decisions/D013-first-comparative-benchmark.md)
+later cloud work needs fresh credits/prices and explicit execution scope. Further
+external runs, including CompleteBin, remain deferred; E011 owns the one completed
+MetaBAT reference. [D013](decisions/D013-first-comparative-benchmark.md)
 retains the experiment's value-of-information rationale and historical decisions.
 
 The data-only DAG at **5fec4e1d1700c64c4bdd9945bad4e116ade73c57 failed in its final

@@ -1,72 +1,576 @@
 {
-  "status": "LOCAL_PASS_NATIVE_RECOVERY_PENDING",
-  "previous_failed_phase": "cached-20261017T005141Z-ab80312",
-  "previous_failure_preserved": true,
-  "owner_authorization": "2026-10-17: debug and retry operational errors directly without a new ceiling approval prompt; watch a short job through completion",
-  "scientific_protocol": {
-    "bytes": 3614,
-    "sha256": "a2a205f39dc01a012f73822577f31f3ecd7d954f0ea025dff5a2bed7e4732b95"
-  },
-  "reuse_lock": {
-    "bytes": 1237,
-    "sha256": "37c3955f327529d3e623d2515116ea9bb646de164fd378fed3e8e98925f230d2"
-  },
-  "local_tests": {
-    "tests": 10,
-    "status": "PASS",
-    "seconds": 9.763,
-    "log": {
-      "bytes": 6233,
-      "sha256": "8bdef005d8aa5f6a83f8aea26ef348e814b004f191c0204e4d205b3e42069374"
+  "archive": {
+    "archive": {
+      "bytes": 327025885,
+      "sha256": "e248953630c0953b67f78972099d95cc7ea0c9a7f598149f36806bab0a32cea2"
     },
-    "scope": "Actual tiny sparse graph/FASTA/refinement/export, runtime aliases, retained cache/prefix verification and inert parent supervision; cloud/host transport boundaries substituted. Repaired Linux gates pending."
+    "every_member_verified": true,
+    "inventory": {
+      "bytes": 277719,
+      "sha256": "074a719b73de6aae3e4b7e8740ccff137a1226de3965f41ae76e05b1aae48ed1"
+    },
+    "local_member_verification": {
+      "bytes": 349,
+      "sha256": "d2b16549b944e47db43fcb1337d23dcd94bee6bdf48a965007e9b1b19d32af28"
+    },
+    "logical_member_bytes": 997707722,
+    "native_readback_verified": true,
+    "regular_members": 1905,
+    "uri": "gs://dl-binner-archive-167650584170/e011/cached-7a43eb6-20261017T080610Z/run-evidence.tar.gz"
   },
-  "cost_gate": {
-    "checked_utc": "2026-10-17T08:05:01.817195+00:00",
-    "paid_account": true,
-    "credit_remaining_DKK": 1929.71,
-    "credit_original_DKK": 1973.43,
-    "credit_status": "Available",
-    "credit_scope": "Certain usage; see Free Trial terms; net pricing",
-    "credit_expiry": "2027-01-12",
-    "reported_cost_and_savings_DKK": 41.58,
-    "reported_net_DKK": 0,
-    "pending_usage": "unknown/delayed; not assumed zero",
-    "prior_unreconciled_exposure_reserve_USD": 30,
-    "existing_storage_reserve_USD": 5,
-    "coverage": "ordinary E2/nonpremium Ubuntu/PD/IP/Iowa private Standard Storage and operations/network; existing eligible products only",
-    "credit_gate_passed": true,
-    "pending_usage_accounted": true,
+  "cloud_collection_verified": true,
+  "cost": {
+    "compute_IP_USD": 0.03282130382270035,
+    "credit_gate": {
+      "VM_compute_IP_rate_USD_per_hour": 0.2730456762592464,
+      "asset_readback_storage_operations_reserve_USD": 0.07,
+      "checked_utc": "2026-10-17T08:05:01.817195+00:00",
+      "compute_IP_fallback_USD": 0.20478425719443483,
+      "conservative_gross_USD": 0.5468390516634588,
+      "coverage": "ordinary E2/nonpremium Ubuntu/PD/IP/Iowa private Standard Storage and operations/network; existing eligible products only",
+      "credit_expiry": "2027-01-12",
+      "credit_gate_passed": true,
+      "credit_original_DKK": 1973.43,
+      "credit_remaining_DKK": 1929.71,
+      "credit_scope": "Certain usage; see Free Trial terms; net pricing",
+      "credit_status": "Available",
+      "credit_valid_until_epoch": 1799712000.0,
+      "disk_interval_fallback_USD": 0.032054794469024,
+      "existing_disk_monthly_USD": 31.199999949850024,
+      "existing_storage_reserve_USD": 5,
+      "headroom": "Fresh mount/headroom gate at boot; existing stopped disk last free 131GiB",
+      "max_export_GiB": 2,
+      "max_export_USD": 0.24,
+      "new_ceiling_USD": 1,
+      "new_resources_needed": false,
+      "no_new_resources": true,
+      "official_coverage": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "official_network_storage": "https://cloud.google.com/storage/pricing",
+      "owner_operational_recovery_authorized": true,
+      "paid_account": true,
+      "pending_usage": "unknown/delayed; not assumed zero",
+      "pending_usage_accounted": true,
+      "prior_unreconciled_exposure_reserve_USD": 30,
+      "provider_fallback_seconds": 2700,
+      "recovery_scope": "Verify/reuse passed setup, repaired native gates, one frozen CPM/refinement and one MetaBAT2 reference. Debug/retry operational failures with recorded bounded attempts; no scientific tuning.",
+      "reported_cost_and_savings_DKK": 41.58,
+      "reported_net_DKK": 0,
+      "retention_extended": false,
+      "retention_review": "2026-10-21",
+      "storage_valid_until_epoch": 1792533600.0
+    },
+    "disk_interval_USD": 0.005137505014573174,
+    "export_USD_upper": 0.03655124980956316,
+    "export_assessed_bytes": 327055047,
+    "measured_VM_seconds": 432.736,
+    "no_credit_zero_cost_assumption": true,
+    "provider_terminated": true,
+    "small_storage_operations_reserve_USD": 0.03,
+    "total_conservative_USD": 0.10451005864683668
+  },
+  "failed_journals_preserved": true,
+  "failed_local_reviews": [
+    {
+      "exit_receipt": {
+        "bytes": 1693,
+        "sha256": "74899a0ae43b2606d6c974da3fb26dc0a04b03b3c0035c94d23acce894358121"
+      },
+      "log": {
+        "bytes": 600,
+        "sha256": "67ba68b113cf557d8dd9db90e679066cbaa859990f3f8bef37e2e6793cadfc8e"
+      },
+      "reason": "New local reviewer compared complete ldd text; randomized ASLR addresses differ but all stable paths/member hashes match. No native change.",
+      "source": {
+        "bytes": 18586,
+        "sha256": "4f27ae4723d1924099d6d294f3ce7254096b32216319a112c4ccbb3c703f4890"
+      },
+      "version": "v1"
+    },
+    {
+      "exit_receipt": {
+        "bytes": 1697,
+        "sha256": "962e7ddfe82b1bd5147e4b08755b3afe4c36f994b7cb8cf111e2e02e79783db6"
+      },
+      "log": {
+        "bytes": 439,
+        "sha256": "984654c9372d9af7dadeedfce998f676411bd2f7e9ea4c7e793cd4db398f873c"
+      },
+      "reason": "New local reviewer required config on post partition; frozen refinement writer emits pre/features/marker bindings instead. Correct reader now verifies the actual schema; outputs unchanged.",
+      "source": {
+        "bytes": 19241,
+        "sha256": "c0e21e6b9929bf6a015cd070f3b153d16f31b49a3681add99391f8107ff74599"
+      },
+      "version": "v2"
+    }
+  ],
+  "financial_gate": {
     "VM_compute_IP_rate_USD_per_hour": 0.2730456762592464,
-    "existing_disk_monthly_USD": 31.199999949850024,
-    "provider_fallback_seconds": 2700,
+    "asset_readback_storage_operations_reserve_USD": 0.07,
+    "checked_utc": "2026-10-17T08:05:01.817195+00:00",
     "compute_IP_fallback_USD": 0.20478425719443483,
+    "conservative_gross_USD": 0.5468390516634588,
+    "coverage": "ordinary E2/nonpremium Ubuntu/PD/IP/Iowa private Standard Storage and operations/network; existing eligible products only",
+    "credit_expiry": "2027-01-12",
+    "credit_gate_passed": true,
+    "credit_original_DKK": 1973.43,
+    "credit_remaining_DKK": 1929.71,
+    "credit_scope": "Certain usage; see Free Trial terms; net pricing",
+    "credit_status": "Available",
+    "credit_valid_until_epoch": 1799712000.0,
     "disk_interval_fallback_USD": 0.032054794469024,
+    "existing_disk_monthly_USD": 31.199999949850024,
+    "existing_storage_reserve_USD": 5,
+    "headroom": "Fresh mount/headroom gate at boot; existing stopped disk last free 131GiB",
     "max_export_GiB": 2,
     "max_export_USD": 0.24,
-    "asset_readback_storage_operations_reserve_USD": 0.07,
     "new_ceiling_USD": 1,
-    "retention_review": "2026-10-21",
-    "retention_extended": false,
+    "new_resources_needed": false,
     "no_new_resources": true,
-    "storage_valid_until_epoch": 1792533600.0,
-    "credit_valid_until_epoch": 1799712000.0,
-    "headroom": "Fresh mount/headroom gate at boot; existing stopped disk last free 131GiB",
     "official_coverage": "https://docs.cloud.google.com/free/docs/free-cloud-features",
     "official_network_storage": "https://cloud.google.com/storage/pricing",
-    "conservative_gross_USD": 0.5468390516634588,
     "owner_operational_recovery_authorized": true,
-    "new_resources_needed": false,
-    "recovery_scope": "Verify/reuse passed setup, repaired native gates, one frozen CPM/refinement and one MetaBAT2 reference. Debug/retry operational failures with recorded bounded attempts; no scientific tuning."
+    "paid_account": true,
+    "pending_usage": "unknown/delayed; not assumed zero",
+    "pending_usage_accounted": true,
+    "prior_unreconciled_exposure_reserve_USD": 30,
+    "provider_fallback_seconds": 2700,
+    "recovery_scope": "Verify/reuse passed setup, repaired native gates, one frozen CPM/refinement and one MetaBAT2 reference. Debug/retry operational failures with recorded bounded attempts; no scientific tuning.",
+    "reported_cost_and_savings_DKK": 41.58,
+    "reported_net_DKK": 0,
+    "retention_extended": false,
+    "retention_review": "2026-10-21",
+    "storage_valid_until_epoch": 1792533600.0
   },
-  "planned_limits": {
-    "gross_USD": 1,
-    "cumulative_seconds": 1800,
+  "local_tests": {
+    "final_tests": 15,
+    "log": {
+      "bytes": 6747,
+      "sha256": "df86f831acc9258016ef545b015cebad0ca3d2290c70ab3868d6237f95b6bdb9"
+    },
+    "native_launcher_tests": 10,
+    "native_watchdog_tests": 2,
+    "status": "PASS",
+    "wall_seconds": 7.833
+  },
+  "native_completion": {
+    "bytes": 27472,
+    "sha256": "171ed2926343b8a1148ac1e1459be813763c52cf78e2c982df84608ad0af38d6"
+  },
+  "native_resources": {
+    "charged_allocated_vCPU_hours": 0.9616355555555556,
+    "sampled_child_CPU_seconds": 208.5,
+    "scope": "Sampled children are not billed VM uptime; coordinator/collection/boot/watchdog time remains in VM price"
+  },
+  "owner_authorization": "2026-10-17: debug/retry operational failures in the same task without another ceiling approval prompt; follow a short job through shutdown and local review",
+  "phase_id": "cached-20261017T080610Z-7a43eb6",
+  "previous_failed_phase": "cached-20261017T005141Z-ab80312",
+  "previous_native_receipt": {
+    "bytes": 25374,
+    "sha256": "af930c11d751dad390dea4523b20d2c41746f51557dcfc856da474424383aba5"
+  },
+  "provider": {
+    "allocation": "existing e2-standard-8 /32GiB, 30GiB boot +300GiB balanced work",
+    "measured_uptime_seconds": 432.736,
+    "no_resource_or_retention_change": true,
+    "project": "project-d17bd588-df31-488f-b16",
     "provider_STOP_seconds": 2700,
-    "free_reserve_GiB": 25,
-    "extra_GiB": 20,
-    "export_GiB": 2
+    "start": "2026-10-17T01:06:10.549-07:00",
+    "status": "TERMINATED",
+    "stop": "2026-10-17T01:13:23.285-07:00",
+    "vm": "dl-binner-cpu",
+    "zone": "us-central1-a"
   },
-  "retained_artifact_root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e011-cached-grouping-reference/recovery-20261017",
-  "no_scientific_settings_changed": true
+  "retained_local_root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e011-cached-grouping-reference/recovery-20261017",
+  "scientific_review": "review.json",
+  "setup_reuse": {
+    "full_owned_runtime_distributions": 28,
+    "metabat_owned_packages": 35,
+    "native_loaded_library_gate": "PASS; lexical aliases/strict resolved regular bytes, unchanged before/after",
+    "no_recopy_or_reinstall": true,
+    "restored_files": 18,
+    "reuse_lock": {
+      "bytes": 1237,
+      "sha256": "37c3955f327529d3e623d2515116ea9bb646de164fd378fed3e8e98925f230d2"
+    }
+  },
+  "source_commit": "7a43eb6bb7b23ae0430bcfc85c6674ad5d628ddc",
+  "ssh_boot_retry": {
+    "first": "Banner exchange timed out before remote command; preserved remote-preflight.log",
+    "second": "PASS same boot, no repeated setup/science"
+  },
+  "stages": [
+    {
+      "name": "reuse-cache",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e011_cached.py",
+          "verify-restored",
+          "--root",
+          "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore",
+          "--output",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/reused-cache.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 1891,
+        "peak_sampled_rss_bytes": 58294272,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5679292027414933,
+        "sampled_cpu_seconds": 1.41,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1546.5438276317125,
+        "stop_reason": null,
+        "wall_seconds": 2.4827038179999974
+      }
+    },
+    {
+      "name": "runtime-before",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e011_cached.py",
+          "probe",
+          "--root",
+          "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore",
+          "--output",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/runtime-before.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 1892,
+        "peak_sampled_rss_bytes": 79785984,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.2393454815139868,
+        "sampled_cpu_seconds": 1.45,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1544.0175569287126,
+        "stop_reason": null,
+        "wall_seconds": 1.1699723939999984
+      }
+    },
+    {
+      "name": "reuse-metabat",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e011_metabat.py",
+          "verify-install",
+          "--prefix",
+          "/srv/dl_binner/experiments/e011/envs/metabat2-2.18-20261017T005141Z",
+          "--receipt",
+          "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/run/metabat-install.json",
+          "--output",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/reused-install.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 1900,
+        "peak_sampled_rss_bytes": 59432960,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5076583346342356,
+        "sampled_cpu_seconds": 0.25,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1542.8396554047126,
+        "stop_reason": null,
+        "wall_seconds": 0.4924571959999895
+      }
+    },
+    {
+      "name": "metabat-before",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e011_metabat.py",
+          "probe",
+          "--binary",
+          "/srv/dl_binner/experiments/e011/envs/metabat2-2.18-20261017T005141Z/bin/metabat2",
+          "--output",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/metabat-before.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 1901,
+        "peak_sampled_rss_bytes": 55324672,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5697557325520309,
+        "sampled_cpu_seconds": 0.28,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1542.3382156017126,
+        "stop_reason": null,
+        "wall_seconds": 0.4914386709999974
+      }
+    },
+    {
+      "name": "native-cache-smoke",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e011_native_smoke.py",
+          "--payload",
+          "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/payload",
+          "--output",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/native-cache-smoke"
+        ],
+        "exit_code": 0,
+        "launched_pid": 1910,
+        "peak_sampled_rss_bytes": 91897856,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.363498359783895,
+        "sampled_cpu_seconds": 1.6,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1541.8382245657126,
+        "stop_reason": null,
+        "wall_seconds": 1.173452090000012
+      }
+    },
+    {
+      "name": "launcher-contracts",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/srv/dl_binner/repo/tests",
+          "-p",
+          "test_e011*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "launched_pid": 1918,
+        "peak_sampled_rss_bytes": 264368128,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.7716508926680417,
+        "sampled_cpu_seconds": 7.0,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1540.6562585347126,
+        "stop_reason": null,
+        "wall_seconds": 9.071459732000008
+      }
+    },
+    {
+      "name": "metabat-smoke",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e011_metabat.py",
+          "smoke",
+          "--binary",
+          "/srv/dl_binner/experiments/e011/envs/metabat2-2.18-20261017T005141Z/bin/metabat2",
+          "--output",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/metabat-smoke"
+        ],
+        "exit_code": 0,
+        "launched_pid": 1956,
+        "peak_sampled_rss_bytes": 67047424,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.9483885976091726,
+        "sampled_cpu_seconds": 1.4300000000000002,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1531.5723980427126,
+        "stop_reason": null,
+        "wall_seconds": 0.7339398320000043
+      }
+    },
+    {
+      "name": "cpm",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e011_cached.py",
+          "control",
+          "--root",
+          "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore",
+          "--fasta",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+          "--depth",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/final/depth.tsv",
+          "--output",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/cpm"
+        ],
+        "exit_code": 0,
+        "launched_pid": 1967,
+        "peak_sampled_rss_bytes": 1080877056,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.0919202855078194,
+        "sampled_cpu_seconds": 78.14,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1530.8253358777126,
+        "stop_reason": null,
+        "wall_seconds": 71.56200048400001
+      }
+    },
+    {
+      "name": "metabat-native",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e011/envs/metabat2-2.18-20261017T005141Z/bin/metabat2",
+          "-i",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+          "-a",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/final/depth.tsv",
+          "--cvExt",
+          "-o",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/metabat-native/bin",
+          "-t",
+          "8",
+          "--seed",
+          "11",
+          "--minContig",
+          "2500",
+          "--minSmallContig",
+          "1000",
+          "--minClsSize",
+          "200000",
+          "--unbinned",
+          "-v"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2040,
+        "peak_sampled_rss_bytes": 994467840,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 6.826052463725443,
+        "sampled_cpu_seconds": 101.96,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1459.2523797007125,
+        "stop_reason": null,
+        "wall_seconds": 14.936890763999997
+      }
+    },
+    {
+      "name": "metabat-export",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e011_cached.py",
+          "external-export",
+          "--fasta",
+          "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+          "--native",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/metabat-native",
+          "--native-exit",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/logs/metabat-native.exit.json",
+          "--output",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/metabat-export"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2053,
+        "peak_sampled_rss_bytes": 476430336,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.1661245480182318,
+        "sampled_cpu_seconds": 13.469999999999999,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1444.3018728827126,
+        "stop_reason": null,
+        "wall_seconds": 11.551081762999985
+      }
+    },
+    {
+      "name": "runtime-after",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e011_cached.py",
+          "probe",
+          "--root",
+          "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore",
+          "--output",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/runtime-after.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2061,
+        "peak_sampled_rss_bytes": 68251648,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 2.5338318306342162,
+        "sampled_cpu_seconds": 1.2899999999999991,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1432.7441093867126,
+        "stop_reason": null,
+        "wall_seconds": 0.5091103459999999
+      }
+    },
+    {
+      "name": "metabat-after",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e011_metabat.py",
+          "probe",
+          "--binary",
+          "/srv/dl_binner/experiments/e011/envs/metabat2-2.18-20261017T005141Z/bin/metabat2",
+          "--output",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/metabat-after.json",
+          "--previous",
+          "/srv/dl_binner/experiments/e011/phase-20261017T080610Z-7a43eb6/run/metabat-before.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2069,
+        "peak_sampled_rss_bytes": 38121472,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.8118758902449807,
+        "sampled_cpu_seconds": 0.21999999999999886,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1432.2253007437125,
+        "stop_reason": null,
+        "wall_seconds": 0.27097737799999777
+      }
+    }
+  ],
+  "status": "SUCCESS_REVIEWED",
+  "storage": {
+    "existing_disk_monthly_USD": 31.2,
+    "initial_free_GiB": 131.09100723266602,
+    "maximum_sampled_filesystem_increase_GiB": 1.5429954528808594,
+    "minimum_sampled_free_GiB": 129.54801177978516,
+    "native_archive_monthly_USD": 0.006091331783682108,
+    "observations": 99,
+    "retention_extended": false,
+    "review_date": "2026-10-21",
+    "scope": "Execution + collection samples; final completion/guest API tiny writes follow collection. Config includes an explicit 1GiB preparation pad, not claimed as actual growth."
+  },
+  "supervision": {
+    "exit_snapshot": {
+      "bytes": 1604,
+      "sha256": "43f45f91c64a6de23f5cc2e666b9ad4034a8f9b5d1b56a53ca39dadb936d3429"
+    },
+    "exit_snapshot_uri": "gs://dl-binner-archive-167650584170/e011/cached-7a43eb6-20261017T080610Z/watchdog-exit.json",
+    "explicit_provider_stop_also_issued": true,
+    "held_parent_identity_verified_before_release": true,
+    "native_live_normal_crash_tests": 2,
+    "stop_actor": "Watcher recorded exit/requested clean shutdown; provider stop also issued after successful collection. Do not attribute final stop solely to the watcher.",
+    "watchdog_exit_utc": "2026-10-17T08:11:59.000071+00:00"
+  },
+  "transfer_note": "gcloud lacked optional bucket-metadata permission for parallel composite eligibility; it fell back to ordinary upload, exited0 and passed exact readback. No IAM expansion or upload retry."
 }

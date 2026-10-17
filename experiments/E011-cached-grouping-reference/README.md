@@ -1,14 +1,19 @@
 # E011: cached grouping objective and one external feasibility reference
 
-Opened 2026-10-17. Current owner direction: **operational repair/retry authorized
-in this task**, reusing verified passed setup and preserving every failed journal.
-The original status below is historical; [operations](OPERATIONS.md) owns recovery.
+Opened 2026-10-17. Status: **completed and reviewed development evidence**.
+[Recovery execution](recovery-observed.json) and [scientific review](review.json)
+bind successful source `7a43eb6`, strict setup reuse, all native exits, checksum/
+member verification and independently TERMINATED VM. The [first failed attempt](native-observed.json),
+old local preparation and failed Mac/local reviewer journals remain unchanged.
+Dev3/dev4 and all accepted E009/E010 science stay immutable.
 
-First-attempt status: **native provenance gate failed; VM stopped; no community
-consumer executed**. The owner authorized the attempted phase after gates; the
-stop-on-failure instruction closed it without a retry. The local repair is tested,
-with a new native Linux gate still required. Branch `codex/e011-cached-grouping-reference` starts at reviewed E010 commit
-`8950e7e`. Dev3, frozen dev4 and all accepted E009/E010 artifacts/journals stay intact.
+CPM pre/post weighted R95 **5.3990/4.6171%** versus RB **1.8763/4.2909%**, dev3
+learned ten-depth **5.3911%**; MetaBAT2 **8.5493%**. CPM fails its frozen post keep
+threshold. Paired refinement damages four high-purity source parents; the next
+recommended decision is a local cached parent/child acceptance control, not another
+encoder fit or objective grid. The reference demonstrates a material feasible
+recovery gap, with different native eligibility and cvExt variance=mean explicit.
+[Operations](OPERATIONS.md) owns the exact next prompt and current execution scope.
 
 ## Decision and prospective control
 
@@ -72,34 +77,30 @@ The frozen [oral-GSA confirmation](../E010-coherent-prototype/confirmation-plan.
 remains unacquired. A later useful frozen mechanism requires source/genome/replicon,
 taxonomy, overlap and independent truth admission plus separate cost approval.
 
-## Bounded execution and evidence
+## Execution and reviewed evidence
 
-Use only the existing Iowa e2-standard-8 /32 GiB, 300-GiB work and 30-GiB boot disk.
-New phase ceiling **$1 gross**, **30 cumulative minutes from VM start**, provider
-STOP **45 minutes**, 25-GiB free reserve, 20-GiB extra-space cap, <=2-GiB compressed
-export. The owner permits a justified larger envelope, but none is proposed now.
-No provisioning, resize, retry, extension or storage-retention change. Keep the
-**October 21** review; disks cost ~$31.20/month while stopped.
+The initial attempt failed before community consumers; its bounded closure below
+is preserved history. The owner then explicitly authorized operational debugging
+and retries without a new ceiling handoff. The repaired run reused the passed
+cache and installation after strict reuse-lock checks, with fresh credit, source,
+headroom, boot/process watcher and provider STOP gates. No setup reinstall/recopy,
+scientific grid, encoder fit or extra external tool occurred.
 
-Expected work: 5–15 minutes including verification, one cached grouping/refinement,
-one MetaBAT2 run and collection; roughly 2–8 GiB RAM /2–5 GiB extra live disk.
-45-minute fallback compute/IP ~$0.205, disk interval ~$0.032, worst 2-GiB export
-$0.24 plus ~$0.07 setup/storage/operations reserve gives **~$0.55**, below $1.
-Refresh live credit scope/balance/expiry, delayed usage, rates, retained storage
-approval and actual headroom before release. The estimate is not an invoice.
+Recovery retained the $1/30-minute cumulative/45-minute STOP, 25 GiB reserve,
+20 GiB extra and 2 GiB export limits. Both community commands and all twelve stages
+passed; actual uptime 432.736 s, native archive 327,025,885 bytes/all 1,905 members
+verified. Compute/IP$0.03282 +disk$0.00514 +native export upper$0.03655, plus small
+review/storage/operations, remains below $0.105 with reserve. Native peak ~1.081 GB
+sampled RSS; free disk minimum 129.55 GiB and sampled growth 1.543 GiB.
 
-Restore only verified archive members into a fresh directory; missing/corrupt
-evidence refuses execution rather than recreating data. Reuse the accepted E010
-runtime read-only after full distribution/source/origin checks; install MetaBAT2
-in a distinct pinned prefix. Local real tiny graph/cache/refinement/export and
-MetaBAT contracts precede the native gates, all native setup sharing the boot clock.
-Arm/test a fresh boot/process-bound held-parent exit watchdog and verify provider
-STOP before release. Capture stages/resources/closed terminal snapshots, verify
-every archive member and private readback, then stop. No success inference from
-shutdown. If still healthy after verified progress and a few minutes, report and
-leave supervision intact without polling to completion.
+[Review](review.json) retains full DNA/length/origin/eligibility accounting,
+paired losses and the actual native AMBER path. Two new local reviewer failures
+(raw ldd ASLR text and absent copied post config) were repaired against unchanged
+native schemas, with separate source/exit/log journals. All 15 final local tests
+pass. No tolerance, output or scientific setting was changed. **October 21**
+retention review and$31.20/month stopped-disk cost remain; oral-GSA unacquired.
 
-## Native outcome and local repair, 2026-10-17
+## First attempt and local repair history, 2026-10-17
 
 [The native receipt](native-observed.json) verifies FAILED phase
 `cached-20261017T005141Z-ab80312` at executed source ab80312 and independently
@@ -116,21 +117,21 @@ all 28 members /65,324 logical bytes independently verify. Guest/private complet
 agree. The exit watcher uploaded its pinned process-exit/shutdown-request snapshot;
 provider stop was also issued and TERMINATED confirmed. No VM wake for serial
 console or missing evidence. Full execution-phase disk samples and restore manifest
-were omitted by the failed archive collector; collection-only minimum free131.09
+were omitted by the failed archive collector; collection-only minimum free 131.09
 GiB is not claimed as full-phase peak. The local repair now retains failed-phase
 samples and the restore receipt. Original failed bytes/journals are unchanged.
 
 The corrected dependency probe records the reported alias, direct link and resolved
 regular target/hash, without resolving invocation paths or relaxing scientific
-artifact refusal. Ten local tests and actual Mac CLI/cache consumers pass; repaired
-native Linux remains unexecuted. [Reuse lock](reuse-lock.json) binds passed native
+artifact refusal. At that local repair cutoff, ten tests and actual Mac CLI/cache consumers passed;
+repaired Linux gates had not yet run. The completed recovery above passes them. [Reuse lock](reuse-lock.json) binds passed native
 installation and a deterministic expected cache receipt, requiring strict member
 checks rather than recopy/reinstall. A missing/corrupt receipt fails, without fallback.
 
 Gross measured-uptime compute/IP $0.03071 + disk interval $0.00481 + asset readback $0.00745
 and tiny native export totals ~$0.043 before small charges; <$0.063 with reserve,
 inside $1. Sampled CPU is not the charged allocation. Existing disks remain
-$31.20/month while stopped, October 21 review unchanged. No model/refinement/seed/
-scientific rule/score changed, and no automatic retry or broader tool run followed.
-[Operations](OPERATIONS.md#exact-next-prompt) gives the next explicitly authorized
-attempt, with fresh financial/native/supervision gates and the same frozen science.
+$31.20/month while stopped, October 21 review unchanged. That failed attempt produced no changed model/refinement/seed/scientific score.
+The later owner-authorized recovery above reused its passed setup.
+[The completed recovery](recovery-observed.json) supersedes that earlier handoff;
+the first failed record and its local repair remain historical evidence.

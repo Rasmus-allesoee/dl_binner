@@ -1,147 +1,140 @@
-# E011 authorized cached control and reference operations
+# E011 operations and following decision
 
-**Current owner instruction, October 17:** execute the repaired frozen job now;
-debug recoverable operational failures and retry autonomously in this task. No
-new ceiling-approval prompt is required. Keep failed attempts immutable and reuse
-passed stages only under the reuse-lock; never silently recopy/reinstall corrupt
-cache/runtime. Use a fresh held-parent watcher and provider STOP for each boot.
-The initial concrete retry envelope remains $1 /30 minutes /45-minute STOP, with
-25-GiB reserve, 20-GiB extra space and 2-GiB export; the owner permits justified
-expansion if operational repair needs it. Credit-only coverage and October 21
-retention still apply. For an expected <=15-minute job, follow it through shutdown
-and local evaluation. Longer healthy work can be handed off after real progress.
-The original attempt and old instructions below are historical; they do not
-override this recovery authorization. Scientific protocol/thresholds stay frozen.
+**Completed and reviewed. VM independently TERMINATED.**
+[Recovery receipt](recovery-observed.json) owns execution and costs;
+[review](review.json) owns scientific interpretation. Phase
+`cached-20261017T080610Z-7a43eb6` used clean pushed source
+`7a43eb6bb7b23ae0430bcfc85c6674ad5d628ddc`. Private/guest completion agree;
+all twelve native stages exited 0, both consumers completed, native readback and
+all 1,905 returned members verify. Success is established independently of shutdown.
 
-Recovery order: strict `verify-restored`, full source/runtime probe, strict
-`verify-install`, repaired loaded-library probe; remaining actual tiny cache,
-launcher and MetaBAT gates; sole CPM/refinement and sole MetaBAT community run;
-complete export, postflight, checksum/readback, shutdown and local truth diagnostics.
-Use the existing restored root, MetaBAT prefix and fixture payload; no new install
-or original-archive extraction. Retain new reuse receipts in the return.
+## What actually ran
 
+The earlier phase `cached-20261017T005141Z-ab80312` remains FAILED at the new
+library-alias provenance bug, before community work. Its [receipt](native-observed.json),
+archives and logs are immutable. The owner then clarified that operational bugs
+should be debugged/retried within the connected task without another approval
+handoff. The fixed loader probe preserves aliases and strict resolved file hashes.
 
-The owner directly authorized the attempted execution after gates. It failed
-at native library provenance before community consumers; VM is TERMINATED and no
-retry follows automatically. [Native receipt](native-observed.json) owns the outcome.
-The original execution sequence below is dated provenance; the next prompt uses
-the locally repaired gate and verified passed-stage reuse. [Protocol](protocol.json), [audit](audit.json),
-[local evidence](local-observed.json), [native dependency lock](metabat-linux.json)
-and [assets](assets.json) bind the prepared work. No encoder, neighbor index or
-marker detection is scheduled. All dev3/E009 and original dev4/E010 evidence stays
-immutable. E010's consumed following prompt is historical; this guide owns E011.
+The recovery reused the passed 18-file restored cache and 35-package MetaBAT
+installation under [reuse-lock](reuse-lock.json). No original recopy or reinstall.
+It ran strict reuse, full 28-distribution/source/runtime checks, repaired Linux
+library checks, actual tiny cached-graph/marker-refinement/export and MetaBAT
+cvExt/refusal tests, ten launcher tests, sole frozen CPM plus unchanged refinement,
+one MetaBAT2 2.18 cvExt/default/seed11 reference, complete exports and postflight.
+No encoder training, marker detection, neighbor-index build or aligner ran.
 
-Use only `dl-binner-cpu`, `us-central1-a`, project
-`project-d17bd588-df31-488f-b16`, existing 8-vCPU/32-GiB VM and 30/300-GiB disks.
-New $1 gross /30 cumulative minutes from provider VM start /45-minute provider
-STOP; 25-GiB free reserve /20-GiB additional disk /<=2-GiB compressed export.
-Fresh credit/usage/rates/retention must pass. The current estimate is ~$0.547 at
-the fallback with maximum export, not a reconciled invoice. No resource increase,
-retry, extension, broader tool campaign or retention change. **October 21** remains.
+Fresh held-parent current-boot/process identity and actual live/normal/crash tests
+passed before release. The watcher recorded exit/requested clean shutdown at
+08:11:59 UTC. A provider stop was also issued after collection; final stop actor
+is not attributed solely to the watcher. Independent GCP TERMINATED at
+**October 17 08:13:23.285 UTC /10:13 Copenhagen**. The 45-minute provider STOP
+was retained. Initial SSH banner timeout during boot was retried on the same boot.
 
-## Ordered execution
+## Cost, storage and review contracts
 
-1. Commit/push the exact clean prepared branch from Mac; VM GitHub access remains
-   read-only. Verify existing provider state/resources, prices/credit coverage and
-   original storage approval. Set/verify 2,700-second provider STOP before start.
-   Record provider start timestamp, not only child elapsed or sampled CPU.
-2. Check actual mount, 8 CPUs/32 GiB and >=45 GiB pre-setup free headroom. Charge
-   early preparation conservatively in the 20-GiB allowance. Download/verify only
-   the sealed small runtime payload. Do not install into or change old prefixes.
-3. Start `scripts/e011_phase.py` held in a fresh systemd cgroup. Arm a fresh root
-   timer bound to this boot, held PID birth tick and command hash. Reuse the tested
-   unchanged base exit detector with `e011_exit_watchdog.py`'s best-effort compact
-   snapshot upload; upload failure cannot prevent shutdown. Run inert live,
-   normal-exit and crash tests. Verify actual live identity/timer and provider STOP
-   before the hash-bound release. No active science is used to test shutdown.
-4. Serial stages: restore every original archive member's checksum, extracting
-   only cached consumers; verify the complete old owned distribution inventory,
-   source and import origins; install pinned independent MetaBAT2 packages offline;
-   actual native CLI/dependency and tiny cvExt/order-refusal checks; new tiny
-   cached-control/reader/refinement/export and launcher contracts. All count in
-   the same cumulative clock. No repeat of the accepted 21-test product campaign.
-5. One CPM control with its unchanged marker refinement and complete pre/post
-   exports; one native MetaBAT2 with exact accepted assembly/depth, cvExt, seed11,
-   8 threads and native defaults explicitly fixed (2,500-bp seed /1,000-bp small
-   contigs /200-kb bins), with small-contig recruitment enabled. Verify native exit
-   before producing its full-axis external export. Recheck consumed runtime and
-   external binary/shared-library bytes. No truth path enters these commands.
-6. Seal closed outputs/logs/receipts and verify all archive members; upload/readback
-   to the existing private bucket. Parent completion and compact guest attribute
-   `e011-cached/status` distinguish scientific completion and archive verification.
-   The root watcher stops after parent exit; provider STOP remains independent.
+Retained envelope: $1, 30 cumulative minutes from start, 45-minute STOP, 25-GiB
+free reserve, 20-GiB extra space, 2-GiB compressed export. The owner permitted
+justified operational expansion; none was needed. Measured uptime **432.736 s**,
+compute/IP **$0.03282**, disk interval **$0.00514**, native export upper **$0.03655**,
+plus tiny compact-review export/small object storage/operations: about $0.075,
+**<$0.105 with reserve**. This is measured-uptime/current-price accounting, not a
+reconciled invoice. Sampled child CPU **208.5 s** is not charged VM time.
 
-The parent covers setup, verification, native work, hashing/compression and upload
-within the original 1,800 seconds. Failure preserves the intended native cause and
-skips successors, without a retry or automatic budget/resource change. Collection
-cannot extend the clock. Missing evidence is a reported gap, not a reason to wake
-or rerun. The provider fallback still bounds a broken supervisor.
+Fresh credit: paid account; Welcome credit **DKK 1,929.71 Available through
+2027-01-12**, certain usage/Free Trial terms/net pricing. Reported cost/savings
+41.58/net0 is delayed, pending usage unknown and reserved. Relevant ordinary
+E2/Ubuntu/PD/IP/Iowa Standard Storage/network/operation prices and coverage pass.
+No new resource or service. Sampled native peak ~1.081 GB RSS; minimum free disk
+129.55 GiB, sampled growth 1.543 GiB. Existing disks cost **$31.20/month while
+stopped**; **October 21 storage review remains**, with no retention extension.
 
-If healthy after supervision/progress verification, wait a few minutes and report
-the actual stage/logs rather than polling to completion. If completed, independently
-verify TERMINATED, credit/export budget and archive/member bytes before bounded
-local admitted-truth diagnostics. Reuse original RB/dev3 scores and geometry;
-MetaBAT has no learned-vector geometry contract. Include full all-DNA denominators,
-N-quarantine, native eligibility and all per-target/length/origin outcomes. Do not
-tune or run confirmation data. The native observation receipt owns actual run IDs,
-locators, gates, exit/status and costs; preparation is not execution evidence.
+Native return: private
+`gs://dl-binner-archive-167650584170/e011/cached-7a43eb6-20261017T080610Z/`,
+327,025,885-byte archive, SHA256
+`e248953630c0953b67f78972099d95cc7ea0c9a7f598149f36806bab0a32cea2`;
+1,905 regular members /997,707,722 logical bytes. Every member and sidecar verify.
+Compact local review backup is linked in review.json. Do not wake the VM to inspect
+missing evidence. All required evidence for the reported diagnostics is available.
 
-## Following inspection prompt if still running at handoff
+Local review preserves two failed reviewer journals: v1 compared raw ldd text
+containing random addresses; v2 expected a copied config absent from the frozen
+post writer. Stable member/source/config input bindings and actual schema now
+pass. Original outputs/tolerances stay intact. Fifteen final local tests and the
+actual owned AMBER API on all three partitions pass; R95 rows agree across its
+runtime and the independently checked local grouping reader. No new inference
+replay masks the original strict Mac allclose failure.
 
-Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E011's protocol,
-audit, local evidence, native-observed receipt and operations. Inspect the phase
-and private completion locator in native-observed.json without starting a job,
-changing resources, retrying, extending limits or waking a stopped VM. Check GCP,
-e011-cached/status, completion and the watchdog exit snapshot; shutdown alone is
-not success. If healthy and still running, report its stage and retain supervision
-without polling until completion.
+## Decision
 
-After verified shutdown, establish actual native gate/CPM/MetaBAT exits, assess
-measured-uptime/export cost against the existing $1/credit coverage, then verify
-the archive and every member. Evaluate completed outputs locally with admitted
-sequence truth v2 and existing evaluator contracts. Compare reused dev3/RB and
-paired CPM pre/post; report MetaBAT's mean-only assumption, native eligibility and
-full DNA accounting. Retain full denominators, all length/origin strata, 3.3034%
-N-quarantine and the original Mac portability failure. No refit/tuning/architecture
-change/external expansion or confirmation run. Update records, check, commit and
-recommend at most one next decision, preserving October 21 retention review.
+| Frozen output | Weighted full-reference R95 | Targets >=50% / >=90% |
+| --- | ---: | ---: |
+| Preserved dev3 learned ten-depth | 5.3911% | 13 /1 |
+| Dev4 RB pre | 1.8763% | 3 /1 |
+| Dev4 RB post | 4.2909% | 6 /2 |
+| Cached CPM pre | 5.3990% | 8 /2 |
+| Cached CPM post | 4.6171% | 6 /2 |
+| MetaBAT2 cvExt | 8.5493% | 16 /5 |
+
+CPM post fails its frozen +0.5-point keep threshold: gain +0.3261 points, six
+>=50% targets and assigned bacterial bp ratio 1.0780. Do not promote or run a
+resolution grid. The fixed representation supports a materially better pre
+partition; this does not establish optimal embeddings or a stronger whole binner.
+
+Paired refinement loses 0.7819 points: four previously passing source parents
+fragment, one new target gains. It unassigns 97 contigs /1,729,789 bp, including
+1,556,702 confirmed primary bacterial bp. All four harmed seed pairs share an
+admitted genome label, disjoint whole-contig source spans, nonidentical complete
+predicted proteins and repeat counts 2. Highest versus second-highest choice
+cannot explain these cases. Exact marker specificity/copy biology remains
+unresolved; whole-contig spans do not locate the marker on its reference.
+
+MetaBAT's +3.1503 points over the best own output demonstrates a material feasible
+recovery gap on this assembly/truth/metric. Its native 2,500-bp seeds/1,000-bp
+recruitment and variance=mean cvExt assumption remain explicit; it is not a matched
+causal component test or a verdict on simulation quality. All DNA, native
+exclusions and unknown/non-target populations remain accounted for. Full 156
+provided-reference denominators, >=200-kb/95%-all-bin-DNA semantics and **3.3034%
+N-quarantine** stay fixed. These are development diagnostics, not MAG quality,
+feature-family decisions, SOTA or generalization evidence.
+
+Recommend one **local restore-only parent-versus-retained-child acceptance control**.
+Resolve marker-copy reliability and freeze one label-free rule before changed
+scores. Reuse both existing RB/CPM proposals to distinguish context-dependent
+benefit; no new splits, training, marker search or Leiden run is needed. This
+selective control addresses demonstrated harm cheaply, without imposing a separate
+experiment for every future ingredient. Global refinement removal discards its
+RB benefit; another encoder fit would confound the directly observed failure.
+Expected local envelope: 4 CPU threads, 2–4 GiB RAM, <=15 minutes per bounded
+control/review and <=2 GiB local artifacts; **$0 new cloud compute**. External
+expansion remains deferred. Oral-GSA confirmation remains frozen and unacquired,
+with source/genome/replicon/taxonomy/overlap/truth and separate cost admission later.
 
 ## Exact next prompt
 
-The owner has supplied and authorized the recovery prompt in this task. Execute
-the current recovery sequence above; do not request execution approval again.
-A results-driven following prompt will be recorded after the completed review.
+Our goal is a substantially stronger binner through coherent upgrades and selective
+controls. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E011's review,
+paired marker-seed evidence, protocol and operations. Preserve dev3/dev4 and all
+accepted E009–E011 data, truth, outputs, source freezes and failed journals.
 
-### Previous prompt (superseded)
+Implement and locally test one restore-only parent-versus-retained-child refinement
+acceptance control. Use the retained RB/CPM parent/child partitions, cached marker
+calls/genes/domains, features and unit vectors. Audit why same-genome marker copies
+triggered destructive splits; distinguish distinct provided loci, panel/call
+specificity, replicons and assembly duplication. Truth may diagnose/evaluate the
+problem but must not select bins, thresholds, genome counts or training inputs.
 
-Our goal is a substantially stronger binner. Read AGENTS.md, PROJECT_INTENT.md,
-STATE/CLOUD, D013/D015 and E011's audit, failed native receipt, local repair/reuse
-contracts, protocol/locks and operations. Preserve immutable dev3/dev4, accepted
-E009/E010 data/truth/results and all failed journals. The earlier E011 attempt
-failed before both community consumers because the provenance probe rejected a
-normal shared-library alias; the correction is local and still needs Linux gates.
+Use judgment and targeted primary sources to freeze one justified label-free
+acceptance rule and keep/modify/abandon criteria before new outcomes. Keep all DNA,
+short/marker-negative/unknown/non-target populations and optional unassigned
+outcomes. After actual tiny reader/selection/export tests pass, perform one bounded
+local matched comparison in both retained grouping contexts with the admitted v2
+truth, full denominators and N-quarantine. Reuse accepted science; do not regenerate
+splits, optimize a grid, retrain, redetect markers, rebuild neighbors, change the
+encoder, acquire confirmation data, run external tools or start/spend on cloud.
+Debug operational errors within this task with verified reuse and preserved
+journals; do not return another approval prompt for this authorized local control.
 
-I authorize **one fresh E011 attempt under a new $1 gross ceiling**, existing
-8-vCPU/32-GiB VM and 300-GiB work disk only, 30 cumulative minutes from VM start,
-45-minute provider STOP, 25-GiB free reserve, 20-GiB extra cap and <=2-GiB export.
-Check fresh Welcome-credit balance/scope/expiry, delayed usage, prices/coverage,
-original retention and actual headroom. Stop before unclear/uncovered spending;
-keep October 21 review. Do not provision/resize, extend, retry or add other tools.
-
-Push the exact clean repaired branch from Mac and sync the VM read-only. Verify
-and reuse the passed restored cache and MetaBAT installation with reuse-lock;
-refuse missing/corrupt bytes without fallback, recopy or reinstall. Arm/test a
-fresh current-boot/process held-parent exit watcher and provider STOP before
-release. Run the repaired Linux library/source/runtime and remaining tiny gates
-inside the same clock, then the unchanged sole CPM rule plus frozen marker
-refinement and one MetaBAT2 2.18 cvExt/default/seed11 reference. No encoder refit,
-marker detection, neighbor-index build, truth change or grid/tuning.
-
-On failure collect bounded evidence, stop and verify TERMINATED without retry.
-If healthy after supervision/progress verification, wait a few minutes and report
-stage/logs, finishing without polling to completion. If completed, independently
-verify shutdown, archive/member bytes and actual costs, then perform bounded
-local admitted-truth-v2 diagnostics. Reuse dev3/RB results; retain full denominators,
-all length/origin/native-eligibility populations, 3.3034% N-quarantine and failed Mac
-portability. Keep confirmation data unacquired and external expansion deferred.
-Update records, check, commit and report results/limits and one next decision.
+Keep oral-GSA confirmation frozen and October 21 storage review visible. Update
+records, check and commit; report the rule, paired results/limits, one next decision
+and exact following prompt.

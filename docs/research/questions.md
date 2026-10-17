@@ -346,3 +346,14 @@ both community consumers. No new biological score or resolution of Q001/Q003/Q00
 follows. [The failure and local repair](../../experiments/E011-cached-grouping-reference/native-observed.json)
 retain successful setup, strict reuse and pending repaired Linux gates; another
 explicitly authorized bounded attempt is the next execution, with no new mechanism.
+
+2026-10-17 completed E011: [the review](../../experiments/E011-cached-grouping-reference/review.json)
+finds that a frozen cached objective materially changes pre grouping (R95
+1.8763 to 5.3990%), but paired refinement reduces it to 4.6171%; CPM's post gain
+fails the prospective keep threshold. Four high-purity same-source parents split
+on repeated markers at disjoint source spans; a local parent/child acceptance
+control is the next selective question. The sole MetaBAT reference reaches
+8.5493%, demonstrating better attainable recovery under these conservative
+contracts, without a causal component or simulation-validity verdict. General
+Q001/Q003/Q005 and H001/E001 conclusions remain open/unchanged. No product feature
+family, optimality or SOTA claim; oral-GSA unacquired, October 21 review retained.
