@@ -401,3 +401,16 @@ separate marker-locus audit and bounded full-denominator evaluation. Its value i
 testing protection from an observed destructive stage without a new fit or tool
 campaign. No new cloud spend, repeated science, confirmation acquisition or
 retention extension; oral-GSA and October 21 review remain unchanged.
+
+## E012 value obtained, 2026-10-17
+
+The [completed local acceptance control](../../experiments/E012-marker-acceptance/review.json)
+uses accepted science for $0 new cloud cost: CPM's guarded 5.3990% exactly retains
+its parent, protecting four targets but missing one useful split; RB improves
+4.2909 to 4.5232% with 16/18 splits retained. This identifies a safety/quality
+trade-off and motivates coherent quality-aware marker refinement around CPM,
+without another mature-tool ranking, encoder fit or resolution search. Gene/domain
+mapping supports distinct provided loci and identifies partial/overlapping calls;
+biological specificity and reference purity remain uncertain. [D015](D015-coherent-prototype-upgrade.md#e012-observed-protection-and-next-coherent-upgrade-2026-10-17)
+owns the next design decision. Accepted dev3/dev4, truth, all populations and failed
+journals stay immutable; oral-GSA unacquired, October 21 review unchanged.

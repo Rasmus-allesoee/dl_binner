@@ -1,6 +1,6 @@
 # E012 — Accept retained marker splits only with independent graph support
 
-Established 2026-10-17. Status: **planned; no changed community scores yet**.
+Established 2026-10-17. Status: **completed; supports protection within scope**.
 Branch `e012-marker-acceptance-control` starts at completed E011 `3cc3d15`.
 The owner authorizes this local control and operational debugging in this task;
 no cloud execution, fit, external run or confirmation acquisition is included.
@@ -97,4 +97,71 @@ unknown/non-target DNA and optional unassigned outcomes remain. Evaluator uses
 Oral-GSA remains frozen/unacquired. **October 21 storage review** remains; this
 local control does not extend the existing cloud storage approval.
 
-Execution and conclusion will be appended here after frozen local execution.
+## Completed local comparison
+
+Clean source **`a90a8d8`** froze the rule/code/locks before changed community
+selection or scores. Attempt `attempt-001-a90a8d8` completed selection, all-seed
+locus audit and independent evaluation, all exits zero. A separate descriptive
+context audit reused ten projections and added eight for the four loss cases
+already identified in E011; it did not change selection. [Review](review.json)
+binds raw evidence, resources, checks and the exact unchanged rule.
+
+| Context | Original parent weighted R95 | Old children | Accepted selection | Splits retained | Targets >=50% / >=90% |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| RB | 1.8763% | 4.2909% | **4.5232%** | 16 /18 | 7 /2 |
+| CPM | 5.3990% | 4.6171% | **5.3990%** | 0 /12 | 8 /2 |
+
+CPM selected IDs, assignments, validity, reasons and neighbors are **exactly** its
+native parent, rather than merely equal scores. Four harmed targets regain
+6,221,970 source bp, but the former ASV300.2 gain of 1,885,026 bp is lost: net
+**+4,336,944 bp /+0.7819 percentage points** over old CPM children. RB regains
+**1,288,186 bp /+0.2322 points** for ASV399.6, with no target losing against its old
+children. Neither selected context loses a target against its own parent here.
+CPM still approximately ties dev3's 5.3911%, with 8 versus 13 targets >=50%.
+This is a protective result, with no demonstrated extra CPM marker recovery or
+generalization and no claim that graph quality is biological quality.
+
+The primary audit covered **74 genes/contigs, all 30 adopted RB/CPM proposals and
+840 retained competing PAF rows**. All four destructive seed pairs have uniquely
+localized gene/domain spans, different complete proteins and distinct provided
+records within the same simulator genome. The expanded four-case audit covers
+every repeated family: eight of nine pairs occupy distinct records; TIGR01030
+in ASV150.14 overlaps one source locus and includes a partial call. ASV456.0's
+other TIGR00115 evidence includes a near-cutoff score (180.2155 versus TC180.20)
+and a partial 56.10%-coverage call. Frozen trusted/coverage contracts passed;
+they do not make every call a reliable cross-contig cannot-link.
+
+Here “provided replicon” in inherited schemas means a FASTA sequence record.
+These draft WGS records do **not** prove separate biological replicons. Distinct
+loci do not establish functional paralogy or exclude source-reference assembly
+redundancy/contamination or HMM family cross-reactivity. The primary audit's raw
+any-gene-overlap flags also include one 9-bp boundary overlap with disjoint HMM
+domains; this is insufficient duplication evidence. Three other RB flags have
+substantial domain overlap, compatible with assembly fragments/redundancy.
+All raw coordinates, flags and unresolved cases remain. No family blacklist,
+increased cutoff or changed seed count was introduced.
+
+Full exports retain **231,678,157 bp** in each context, including 56,661 excluded
+short contigs /22,035,454 bp. CPM has 841 bins, 89,005 assigned contigs /209,605,828
+bp and 36 unassigned /36,875 bp. RB has 71 bins, 80,195 assigned /189,567,480 bp
+and 8,846 unassigned /20,075,223 bp. All length/origin/eligibility/marker cells,
+unknown/non-target DNA, 156 full reference denominators and N-quarantine remain.
+Native top-five geometry is unchanged; restricted B3 and all-bin purity have
+different explicit denominators. No new AMBER, training or marker detection ran.
+
+Local primary phase **192.469 s**, context **5.334 s**, combined sampled CPU
+**196.38 s**, peak sampled tree RSS **1.257 GB** on the 8-logical-CPU/16-GiB Mac
+(four numerical threads). Retained outputs before compact collection: **517,736,630
+bytes /0.4822 GiB**. The closed **7,042,851-byte archive**, 51 regular members /
+50,608,793 logical bytes, passed every-member readback. Full DNA FASTAs remain
+locally; their included export manifests bind them. New cloud cost **$0**, no VM
+or storage action/upload/extension. This is local evidence, not a new private
+cloud backup. Last verified VM state remains E011's dated TERMINATED observation;
+the existing $31.20/month disk quote and **October 21 review** remain separate.
+
+Keep CPM as the working path and retain this guard as a safety comparison.
+Next implement a coherent marker refinement upgrade that accounts for call
+reliability, marker-quality proxies and measured parent-depth/composition context.
+The ASV300.2 trade-off shows why requiring every useful marker split to improve
+the already optimized graph cannot be the final quality model. The
+[operations guide](OPERATIONS.md#exact-following-prompt) owns the next exact prompt.

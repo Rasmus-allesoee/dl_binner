@@ -1,5 +1,10 @@
 # E011 operations and following decision
 
+Following-step update, 2026-10-17: the exact local prompt below was carried out
+in [E012](../E012-marker-acceptance/README.md). Its operations now own the next
+prompt. E011's failed +0.5-point criterion stays unchanged; D015/E012 retain CPM
+as a provisional development direction and add a tested acceptance guard.
+
 **Completed and reviewed. VM independently TERMINATED.**
 [Recovery receipt](recovery-observed.json) owns execution and costs;
 [review](review.json) owns scientific interpretation. Phase

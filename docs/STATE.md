@@ -4,61 +4,71 @@ Updated: 2026-10-17. This is the single current handoff.
 
 ## Exact next step
 
-**E011 completed successfully; VM independently TERMINATED.** The repaired phase
-`cached-20261017T080610Z-7a43eb6` ran at clean pushed `7a43eb6`, reusing the verified
-18-file cache and 35-package MetaBAT installation. All twelve native stages,
-remaining Linux/tiny gates, archive readback and 1,905 local member checks passed.
-[Recovery receipt](../experiments/E011-cached-grouping-reference/recovery-observed.json)
-binds actual exits and shutdown. The original failed native attempt and two new
-failed local reviewer journals remain intact. No encoder training, marker scan,
-neighbor-index build, data DAG or changed seed ran.
+**E012 completed locally; no cloud action or spending.** On branch
+`e012-marker-acceptance-control`, clean source **a90a8d8** froze the sole graph
+CPM-gain gate before changed outcomes. The three primary stages and descriptive
+four-case context audit exited zero. [Review](../experiments/E012-marker-acceptance/review.json)
+binds exact inputs/outputs, all-DNA exports, markers, 156 target pairs and costs.
+No training/inference, new split, marker detection, optimizer, neighbor rebuild,
+alignment, external tool, acquisition or confirmation ran.
 
-[Reviewed E011 evidence](../experiments/E011-cached-grouping-reference/review.json):
-weighted full-reference R95 is RB pre **1.8763%**, RB post **4.2909%**, CPM pre
-**5.3990%**, CPM post **4.6171%**, preserved dev3 learned ten-depth **5.3911%**,
-MetaBAT2 **8.5493%**. CPM post's +0.3261-point gain fails the frozen +0.5 keep rule.
-The owner's later clarification and D015 revision retain CPM as the working
-development grouping direction; that practical threshold is not a universal
-scientific veto. No resolution grid. CPM pre's near-tie with dev3
-has 8 versus 13 targets >=50%, not a stronger-binner claim. The sole MetaBAT cvExt
-reference recovers 16 targets >=50%/5 >=90%, demonstrating a material feasible gap
-under this assembly/truth/metric, without a component cause or simulation verdict.
+| Retained context | Parent weighted R95 | Old children | Guarded selection | Accepted splits |
+| --- | ---: | ---: | ---: | ---: |
+| RB | 1.8763% | 4.2909% | **4.5232%** | 16 /18 |
+| CPM | 5.3990% | 4.6171% | **5.3990%** | 0 /12 |
 
-The paired marker stage fragments four passing parents (97.5–99.7% confirmed
-purity) and gains one new target. Both seeds in each harmed pair have the same
-admitted genome label, disjoint whole-contig source spans and different complete
-predicted proteins. All affected repeat counts are 2, so the highest-versus-second
-seed discrepancy does not explain these losses. Exact marker specificity/copy
-biology remains unresolved; conflict disappearance alone is insufficient evidence
-that a split helps recovery. Preserve the original Mac allclose failure and native
-vectors. Full DNA, all length/origin/native-eligibility populations, 156 primary
-provided-reference denominators and **3.3034% N-quarantine** remain in diagnostics.
+CPM selected assignments/reasons/validity/neighbors exactly equal its native
+parent. Four harmed targets regain 6,221,970 bp, while the old ASV300.2 gain of
+1,885,026 bp is lost: net +4,336,944 bp. RB regains 1,288,186 bp for ASV399.6 with
+no target loss versus old children. CPM has 8 /2 targets >=50% /90%, versus dev3's
+13 /1 and nearly equal aggregate 5.3911%. This is protection, not demonstrated
+additional CPM marker recovery, generalization or a stronger-binner claim.
 
-**Authorized current block:** [E012](../experiments/E012-marker-acceptance/README.md),
-one local restore-only parent/retained-child acceptance control on branch
-`e012-marker-acceptance-control`. Its single predeclared graph CPM-gain rule keeps
-the E011 density, graph, vectors and existing proposals unchanged. Marker calls
-propose; graph context must support accepting a split. RB remains a matched
-diagnostic context, CPM the working direction. Local tiny reader/selection/native
-fixed-score/full-export tests precede the once-per-context community comparison
-and separate gene/domain-to-retained-PAF audit. No changed community outcomes yet.
-No new encoder fit, split, marker search, optimizer, neighbor build or cloud use.
-This selective control directly tests an observed harmful stage and does not
-create another default tiny-feature campaign. Oral-GSA stays frozen/unacquired; its
-source/replicon/taxonomy/overlap/truth/cost admission remains separate. No external
-expansion, CompleteBin, architecture change or confirmation run followed E011.
+The all-adopted-seed audit projects 74 genes through 840 existing competing PAF
+rows. All four harmful seed pairs uniquely localize gene/domain spans to distinct
+provided records within the same simulator genome. The all-conflict-family audit
+in those four cases finds eight distinct-record pairs and one overlapping-locus
+pair with a partial call; another trigger includes a barely passing HMM score.
+Draft reference records are not proven biological replicons. Functional paralogy,
+family specificity and source-assembly redundancy/contamination remain unresolved.
+These observations support changing marker reliability/context policy, not a
+truth-derived family blacklist or ruling marker information out. Highest versus
+second marker count cannot explain the four k=2 cases.
 
-Measured recovery VM uptime **432.736 s**, compute/IP **$0.03282**, disk interval
-**$0.00514**, native export upper **$0.03655**, plus tiny review export and small
-storage/operations: about **$0.075**, **<$0.105 with reserve**. These are measured-
-uptime/live-list-price estimates, not a reconciled invoice. Paid-account Welcome
-credit **DKK 1,929.71 Available through 2027-01-12**; reported cost/savings 41.58/net 0
-is delayed and pending usage remains unknown/reserved. Minimum sampled free disk
-**129.55 GiB**, sampled increase **1.543 GiB**, native science peak ~1.081 GB RSS.
-Existing disks cost **$31.20/month while stopped**; **October 21 storage review**
-remains. No new resources or retention extension. The owner authorized operational
-debug/retry in this task; recoverable errors were handled without another approval
-handoff while preserving failed evidence and passed stages.
+**Next decision:** keep CPM as the provisional working grouping direction and
+implement one coherent confidence/quality-aware marker refinement upgrade.
+Retain E012's guard as a safety comparison, while allowing independent marker/
+composition/measured-parent-depth evidence to support useful splits that reduce
+graph quality. Parent alternatives and full DNA must survive. [Operations](../experiments/E012-marker-acceptance/OPERATIONS.md#exact-following-prompt)
+owns the exact next local implementation/comparison prompt; no paid run is needed.
+The original E011 +0.5-point post-refinement criterion remains failed. D015 revises
+the earlier over-rigid recommendation; that threshold was not a biological law.
+RB is a historical diagnostic context, not a recommended return path. No grid,
+marker-aware training, taxonomy addition or feature-family verdict follows.
+
+All 145,702 contigs /231,678,157 bp, ten ordered depths, 89,041 eligible rows,
+13 all-zero depth rows, all short/unknown/non-target populations and **3.3034%
+N-quarantine** remain. The old strict Mac allclose failure remains unresolved;
+original native vectors and accepted Linux reload remain unchanged. Oral-GSA
+confirmation stays frozen/unacquired, with independent source/genome/replicon/
+taxonomy/overlap/truth and separate cost admission before execution.
+
+Local execution/context **197.803 s**, sampled CPU 196.38 s, sampled peak tree RSS
+**1.257 GB**; retained output before compact collection **0.4822 GiB**. The
+**7,042,851-byte local archive /51 members** passed every-member readback. No cloud
+upload/backup or resource/retention change. Eight new tiny contracts and 21 related
+contracts passed; docs checks are recorded in the review.
+
+**Last live cloud observation is E011, not a new E012 query:** independently
+TERMINATED **2026-10-17 08:13:23.285 UTC** after successful phase
+`cached-20261017T080610Z-7a43eb6` /twelve native stages and 1,905 verified members.
+[E011 receipt](../experiments/E011-cached-grouping-reference/recovery-observed.json)
+and [review](../experiments/E011-cached-grouping-reference/review.json) retain the
+single MetaBAT2 reference (8.5493%), failed journals and priced uptime (~$0.075,
+<$0.105 with reserve). E011's credit observation was DKK1,929.71 Available through
+2027-01-12, with delayed/pending usage reserved. **Existing disks' quoted
+$31.20/month while stopped and October 21 storage review remain.** No extension;
+refresh live coverage/prices/retention before any later cloud work.
 
 **E009 controls remain accepted and unchanged.** [The review](../experiments/E009-competitive-benchmark/controls-review.json)
 binds all four completed controls, full DNA/sample axes and shutdown. Learned

@@ -1,0 +1,973 @@
+{
+  "acceptance": {
+    "CPM_assignment_reason_valid_neighbors_exactly_native_parent": true,
+    "actual_tiny_reader_selector_export": true,
+    "all_four_local_stage_exits_zero": true,
+    "depth_cells": 1457020,
+    "dev3_dev4_and_E009_E011_source_inputs_results_failed_journals_preserved": true,
+    "dimensions": 64,
+    "eligible": 89041,
+    "full_DNA_export_independently_rechecked": true,
+    "full_bp": 231678157,
+    "full_contigs": 145702,
+    "no_retrain_marker_detection_neighbor_build_or_optimizer": true,
+    "ordered_depth_columns": [
+      "cami3_toy_human_gut_short_read_sample_0",
+      "cami3_toy_human_gut_short_read_sample_2",
+      "cami3_toy_human_gut_short_read_sample_3",
+      "cami3_toy_human_gut_short_read_sample_4",
+      "cami3_toy_human_gut_short_read_sample_6",
+      "cami3_toy_human_gut_short_read_sample_9",
+      "cami3_toy_human_gut_short_read_sample_10",
+      "cami3_toy_human_gut_short_read_sample_11",
+      "cami3_toy_human_gut_short_read_sample_14",
+      "cami3_toy_human_gut_short_read_sample_17"
+    ],
+    "retained_edges": 1821900,
+    "retained_members_verified_without_restore": true,
+    "truth_not_used_by_selector": true,
+    "zero_depth_rows": 13
+  },
+  "arms": {
+    "CPM": {
+      "accepted": 0,
+      "bins": 841,
+      "changed_targets_vs_old_children": [
+        {
+          "genome": "ASV150.14",
+          "old_children_bp": 2698466,
+          "parent_bp": 5559851,
+          "reference_bp": 6474050,
+          "selected_bp": 5559851,
+          "selected_minus_old_children_bp": 2861385,
+          "selected_minus_parent_bp": 0
+        },
+        {
+          "genome": "ASV300.2",
+          "old_children_bp": 1885026,
+          "parent_bp": 0,
+          "reference_bp": 3107801,
+          "selected_bp": 0,
+          "selected_minus_old_children_bp": -1885026,
+          "selected_minus_parent_bp": 0
+        },
+        {
+          "genome": "ASV399.6",
+          "old_children_bp": 1432917,
+          "parent_bp": 2721103,
+          "reference_bp": 3159004,
+          "selected_bp": 2721103,
+          "selected_minus_old_children_bp": 1288186,
+          "selected_minus_parent_bp": 0
+        },
+        {
+          "genome": "ASV406.4",
+          "old_children_bp": 2382740,
+          "parent_bp": 3050041,
+          "reference_bp": 3405233,
+          "selected_bp": 3050041,
+          "selected_minus_old_children_bp": 667301,
+          "selected_minus_parent_bp": 0
+        },
+        {
+          "genome": "ASV456.0",
+          "old_children_bp": 1619452,
+          "parent_bp": 3024550,
+          "reference_bp": 3549767,
+          "selected_bp": 3024550,
+          "selected_minus_old_children_bp": 1405098,
+          "selected_minus_parent_bp": 0
+        }
+      ],
+      "paired": {
+        "recovered_bp_change_from_old_children": 4336944,
+        "recovered_bp_change_from_parent": 0,
+        "targets_gaining_vs_old_children": 4,
+        "targets_gaining_vs_parent": 0,
+        "targets_losing_vs_old_children": 1,
+        "targets_losing_vs_parent": 0
+      },
+      "proposals": 12,
+      "recovery": {
+        "at_least_50_percent": 8,
+        "at_least_90_percent": 2,
+        "bp_weighted_R95": 0.05398971614941852,
+        "macro_R95": 0.05450990027956753,
+        "reference_bp": 554661890,
+        "targets": 156
+      },
+      "rejected": 12,
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.42307772517047443,
+        "precision": 0.7608508454242253,
+        "recall": 0.2930020233788229
+      },
+      "statuses": {
+        "assigned": {
+          "bp": 209605828,
+          "contigs": 89005
+        },
+        "excluded": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "bp": 36875,
+          "contigs": 36
+        }
+      }
+    },
+    "RB": {
+      "accepted": 16,
+      "bins": 71,
+      "changed_targets_vs_old_children": [
+        {
+          "genome": "ASV399.6",
+          "old_children_bp": 1432917,
+          "parent_bp": 2721103,
+          "reference_bp": 3159004,
+          "selected_bp": 2721103,
+          "selected_minus_old_children_bp": 1288186,
+          "selected_minus_parent_bp": 0
+        }
+      ],
+      "paired": {
+        "recovered_bp_change_from_old_children": 1288186,
+        "recovered_bp_change_from_parent": 14681316,
+        "targets_gaining_vs_old_children": 1,
+        "targets_gaining_vs_parent": 6,
+        "targets_losing_vs_old_children": 0,
+        "targets_losing_vs_parent": 0
+      },
+      "proposals": 18,
+      "recovery": {
+        "at_least_50_percent": 7,
+        "at_least_90_percent": 2,
+        "bp_weighted_R95": 0.04523189794056339,
+        "macro_R95": 0.04540131538582439,
+        "reference_bp": 554661890,
+        "targets": 156
+      },
+      "rejected": 2,
+      "restricted_B3": {
+        "attributable_bp": 165477813,
+        "f1": 0.48714959079660664,
+        "precision": 0.6355029214069413,
+        "recall": 0.3949512264738769
+      },
+      "statuses": {
+        "assigned": {
+          "bp": 189567480,
+          "contigs": 80195
+        },
+        "excluded": {
+          "bp": 22035454,
+          "contigs": 56661
+        },
+        "unassigned": {
+          "bp": 20075223,
+          "contigs": 8846
+        }
+      }
+    }
+  },
+  "baseline_summary": {
+    "RB-post": {
+      "at_least_50_percent": 6,
+      "at_least_90_percent": 2,
+      "bp_weighted_R95": 0.042909427218805314
+    },
+    "RB-pre": {
+      "at_least_50_percent": 3,
+      "at_least_90_percent": 1,
+      "bp_weighted_R95": 0.018762951245848168
+    },
+    "cpm-post": {
+      "at_least_50_percent": 6,
+      "at_least_90_percent": 2,
+      "bp_weighted_R95": 0.04617063919787242
+    },
+    "cpm-pre": {
+      "at_least_50_percent": 8,
+      "at_least_90_percent": 2,
+      "bp_weighted_R95": 0.05398971614941852
+    },
+    "dev3-learned-ten": {
+      "at_least_50_percent": 13,
+      "at_least_90_percent": 1,
+      "bp_weighted_R95": 0.05391142881657148
+    },
+    "metabat": {
+      "at_least_50_percent": 16,
+      "at_least_90_percent": 5,
+      "bp_weighted_R95": 0.08549276749480661
+    }
+  },
+  "branch": "e012-marker-acceptance-control",
+  "checks": {
+    "docs": {
+      "documents": 66,
+      "local_links": 937,
+      "log": {
+        "bytes": 687,
+        "sha256": "f28ae05c8f4f8c58bfbd676e65e2497418571966b73c2d50b546fe653f1a29bd"
+      },
+      "optional_historical_caches_unavailable": 10,
+      "status": "PASS"
+    },
+    "post_run_integrity": {
+      "all_18_contextual_gene_domain_projections": true,
+      "archive_inventory_sidecar_context_source_match": true,
+      "frozen_rule_sources_locks_unchanged": true,
+      "log": {
+        "bytes": 375,
+        "sha256": "fcc36805c33892a612aa89fa7bbc1730810933d63e9c1bfa4a107bf20857f7a0"
+      },
+      "status": "PASS"
+    },
+    "prospective_new_unit_contracts": 8,
+    "related_contracts": 21
+  },
+  "confirmation": {
+    "admission": "source/genome/replicon/taxonomy/overlap/truth and separate cost admission before a later run",
+    "binding": {
+      "bytes": 3898,
+      "sha256": "73962986614d043495ac939456ad5b35e0afc968985a892005c4317701dc0a16"
+    },
+    "choice": "unchanged frozen oral-GSA, unacquired",
+    "plan": "experiments/E010-coherent-prototype/confirmation-plan.json"
+  },
+  "cost": {
+    "cloud_state": "No control-plane action/query in E012. Last independently verified E011 observation was TERMINATED 2026-10-17T08:13:23.285Z.",
+    "existing_disk_quote": "E011 October17 quote: $31.20/month while stopped; ongoing prior-approved storage is separate from this local control.",
+    "fresh_credit_price_gate": "not needed for zero-cloud local work; required before any later paid phase",
+    "new_cloud_compute_usd": 0,
+    "new_cloud_export_usd": 0,
+    "new_cloud_storage_or_extension": false,
+    "new_resources": false,
+    "retention_review": "2026-10-21; unchanged"
+  },
+  "criteria_application": {
+    "abandon": "Do not promote this gate to a universal biological quality estimator, discard markers, or declare CPM/dev3 superiority from this assembly",
+    "keep": "CPM working development direction and guard as a tested safety comparison; useful RB splits are retained",
+    "modify": "a universal graph-positive gate loses the ASV300.2 recovery gain; it cannot establish marker-assisted improvement on optimized CPM",
+    "no_post_score_rule_change": true
+  },
+  "evidence": {
+    "files": {
+      "attempt-001-a90a8d8/attempt.json": {
+        "bytes": 3209,
+        "sha256": "c8d10e9e98b5fcafdf69ea652ef0a0d73d4818dcda3656ba5fc75148e2c88f2b"
+      },
+      "attempt-001-a90a8d8/marker-audit/audit.json": {
+        "bytes": 359562,
+        "sha256": "c5acbc032bbcec65185d2426381fa6f8de57e80a209dffeb15e1730d85a09835"
+      },
+      "attempt-001-a90a8d8/review/review.json": {
+        "bytes": 981582,
+        "sha256": "5e0b7ad0a50edfe83de4c744f8a5cab6c1c49b9520bbea351ce999f0bbafa11e"
+      },
+      "attempt-001-a90a8d8/selection/completed.json": {
+        "bytes": 96914,
+        "sha256": "d3b6a51d1e28098639a19a9f0f7b4b1e09cbf29ea73ca238971b0fe7c0214564"
+      },
+      "attempt-001-a90a8d8/source.json": {
+        "bytes": 1099,
+        "sha256": "3dd7cf0a142d194e9e3c0d400b40b47da18201cf043b66a2bda17f0654ad8bdf"
+      },
+      "collection.json": {
+        "bytes": 582,
+        "sha256": "13146530105d6d34b43ca2cd76a52edb9ac45ac811f2e7f7cfe7f0eeeb084dbc"
+      },
+      "context-001/attempt.json": {
+        "bytes": 1106,
+        "sha256": "ac340078c6fa0a1edf51cd177e298a17d2e4fff157eeae27fec21e40c24706c6"
+      },
+      "context-001/result/context.json": {
+        "bytes": 74709,
+        "sha256": "e031440f984e9ddba2bbcda4688e4bfebe4575d61822809e3eb8e13254977b66"
+      },
+      "independent-validation.json": {
+        "bytes": 1179,
+        "sha256": "f6b31df6110c87fd7f30d40828e2c6ba0f67409c43b8db522abe90178fd6d860"
+      }
+    },
+    "local_archive": {
+      "archive": {
+        "bytes": 7042851,
+        "sha256": "5f799c97b550dd84844a3d3bde34f5ea5aead41d06accc55a0e021e14b060f04"
+      },
+      "cloud_uploaded": false,
+      "every_member_readback_verified": true,
+      "full_DNA_export_files_included": false,
+      "full_DNA_exports_retained_locally": true,
+      "inventory": {
+        "bytes": 8430,
+        "sha256": "d33330276ff9b1a35ce26c5bc01182c3414c2a2bab0e7e28536a13c47a61dc0d"
+      },
+      "local_path": "artifacts/e012-marker-acceptance/review-evidence-v1.tar.gz",
+      "logical_member_bytes": 50608793,
+      "regular_members": 51,
+      "wall_seconds": 1.9604493039660156
+    },
+    "raw_root": "artifacts/e012-marker-acceptance"
+  },
+  "execution_source_commit": "a90a8d83d6e23f33bbaa0aec8419d363a3c68e2d",
+  "input_lock": {
+    "bytes": 1954,
+    "sha256": "744f53babe810d2a1d811a251d0375252634105ed0f1be5dbf2bfc09a9337503"
+  },
+  "limits": [
+    "one development assembly; no confirmation/generalization or product feature-family verdict",
+    "156 primary bacterial targets; no primary archaeal target",
+    "full supplied-reference R95, all-bin DNA purity; not MIMAG quality",
+    "3.3034% N-quarantine (7653205bp) remains unknown",
+    "restricted B3 omits unattributable truth labels; full-bin purity does not",
+    "no new AMBER execution; tested full-reference R95 and independent grouping diagnostics used",
+    "Graph is evidence shared with the encoder/grouping; graph quality is not independent biological quality.",
+    "Gene/protein functionality, lineage-specific copy universality and reference assembly purity remain unresolved; no reannotation, marker search or aligner ran."
+  ],
+  "marker_copy_audit": {
+    "four_E011_cases": {
+      "additional_PAF_rows": {
+        "clean_qualifying_rows": 9,
+        "nn_positive_rows": 0,
+        "paf_rows": 41,
+        "qualifying_rows": 9
+      },
+      "additional_projections": 8,
+      "cases": [
+        {
+          "CPM_parent": 442,
+          "families": [
+            {
+              "calls": [
+                {
+                  "contig": "k141_137918",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.9971509971509972,
+                      "marker": "TIGR00420",
+                      "score": 337.2093505859375
+                    }
+                  ],
+                  "gene": "g000162154",
+                  "gene_loci": {
+                    "G000345R000010": [
+                      [
+                        137534,
+                        138602
+                      ]
+                    ]
+                  },
+                  "label": "ASV150.14",
+                  "partial_begin": false,
+                  "partial_end": false
+                },
+                {
+                  "contig": "k141_10375",
+                  "domains": [
+                    {
+                      "hmm_coverage": 1.0,
+                      "marker": "TIGR00420",
+                      "score": 294.1102600097656
+                    }
+                  ],
+                  "gene": "g000207555",
+                  "gene_loci": {
+                    "G000345R000065": [
+                      [
+                        117358,
+                        118444
+                      ]
+                    ]
+                  },
+                  "label": "ASV150.14",
+                  "partial_begin": false,
+                  "partial_end": false
+                }
+              ],
+              "copy_pairs": [
+                {
+                  "domain_classification": "same_genome_distinct_provided_replicons",
+                  "gene_classification": "same_genome_distinct_provided_replicons",
+                  "reference_overlap_bp": 0,
+                  "whole_source_record_hash_overlap": false
+                }
+              ],
+              "family": "TIGR00420"
+            },
+            {
+              "calls": [
+                {
+                  "contig": "k141_136883",
+                  "domains": [
+                    {
+                      "hmm_coverage": 1.0,
+                      "marker": "TIGR01030",
+                      "score": 80.22079467773438
+                    }
+                  ],
+                  "gene": "g000141116",
+                  "gene_loci": {
+                    "G000345R000021": [
+                      [
+                        153186,
+                        153345
+                      ]
+                    ]
+                  },
+                  "label": "ASV150.14",
+                  "partial_begin": false,
+                  "partial_end": false
+                },
+                {
+                  "contig": "k141_67998",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.6590909090909091,
+                      "marker": "TIGR01030",
+                      "score": 49.712440490722656
+                    }
+                  ],
+                  "gene": "g000229486",
+                  "gene_loci": {
+                    "G000345R000021": [
+                      [
+                        153258,
+                        153345
+                      ]
+                    ]
+                  },
+                  "label": "ASV150.14",
+                  "partial_begin": true,
+                  "partial_end": false
+                }
+              ],
+              "copy_pairs": [
+                {
+                  "domain_classification": "same_genome_overlapping_locus_duplication_candidate",
+                  "gene_classification": "same_genome_overlapping_locus_duplication_candidate",
+                  "reference_overlap_bp": 87,
+                  "whole_source_record_hash_overlap": true
+                }
+              ],
+              "family": "TIGR01030"
+            }
+          ],
+          "genome": "ASV150.14",
+          "seed_family": "TIGR00420"
+        },
+        {
+          "CPM_parent": 372,
+          "families": [
+            {
+              "calls": [
+                {
+                  "contig": "k141_83874",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.9870967741935484,
+                      "marker": "Methyltransf_5",
+                      "score": 251.61306762695312
+                    }
+                  ],
+                  "gene": "g000157890",
+                  "gene_loci": {
+                    "G000245R000003": [
+                      [
+                        55926,
+                        56985
+                      ]
+                    ]
+                  },
+                  "label": "ASV399.6",
+                  "partial_begin": false,
+                  "partial_end": false
+                },
+                {
+                  "contig": "k141_106071",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.9967741935483871,
+                      "marker": "Methyltransf_5",
+                      "score": 413.0086975097656
+                    }
+                  ],
+                  "gene": "g000231594",
+                  "gene_loci": {
+                    "G000245R000002": [
+                      [
+                        86852,
+                        87791
+                      ]
+                    ]
+                  },
+                  "label": "ASV399.6",
+                  "partial_begin": false,
+                  "partial_end": false
+                }
+              ],
+              "copy_pairs": [
+                {
+                  "domain_classification": "same_genome_distinct_provided_replicons",
+                  "gene_classification": "same_genome_distinct_provided_replicons",
+                  "reference_overlap_bp": 0,
+                  "whole_source_record_hash_overlap": false
+                }
+              ],
+              "family": "Methyltransf_5"
+            },
+            {
+              "calls": [
+                {
+                  "contig": "k141_61112",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.9931740614334471,
+                      "marker": "TIGR00459",
+                      "score": 608.2271728515625
+                    }
+                  ],
+                  "gene": "g000116121",
+                  "gene_loci": {
+                    "G000245R000001": [
+                      [
+                        56162,
+                        57908
+                      ]
+                    ]
+                  },
+                  "label": "ASV399.6",
+                  "partial_begin": false,
+                  "partial_end": false
+                },
+                {
+                  "contig": "k141_142349",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.9914675767918089,
+                      "marker": "TIGR00459",
+                      "score": 791.4693603515625
+                    }
+                  ],
+                  "gene": "g000229425",
+                  "gene_loci": {
+                    "G000245R000011": [
+                      [
+                        76167,
+                        77961
+                      ]
+                    ]
+                  },
+                  "label": "ASV399.6",
+                  "partial_begin": false,
+                  "partial_end": false
+                }
+              ],
+              "copy_pairs": [
+                {
+                  "domain_classification": "same_genome_distinct_provided_replicons",
+                  "gene_classification": "same_genome_distinct_provided_replicons",
+                  "reference_overlap_bp": 0,
+                  "whole_source_record_hash_overlap": false
+                }
+              ],
+              "family": "TIGR00459"
+            },
+            {
+              "calls": [
+                {
+                  "contig": "k141_119982",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.9966442953020134,
+                      "marker": "TIGR02350",
+                      "score": 913.6478271484375
+                    }
+                  ],
+                  "gene": "g000155368",
+                  "gene_loci": {
+                    "G000245R000003": [
+                      [
+                        9301,
+                        11161
+                      ]
+                    ]
+                  },
+                  "label": "ASV399.6",
+                  "partial_begin": false,
+                  "partial_end": false
+                },
+                {
+                  "contig": "k141_50171",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.9916107382550335,
+                      "marker": "TIGR02350",
+                      "score": 851.7364501953125
+                    }
+                  ],
+                  "gene": "g000223544",
+                  "gene_loci": {
+                    "G000245R000001": [
+                      [
+                        224599,
+                        226333
+                      ]
+                    ]
+                  },
+                  "label": "ASV399.6",
+                  "partial_begin": false,
+                  "partial_end": false
+                }
+              ],
+              "copy_pairs": [
+                {
+                  "domain_classification": "same_genome_distinct_provided_replicons",
+                  "gene_classification": "same_genome_distinct_provided_replicons",
+                  "reference_overlap_bp": 0,
+                  "whole_source_record_hash_overlap": false
+                }
+              ],
+              "family": "TIGR02350"
+            }
+          ],
+          "genome": "ASV399.6",
+          "seed_family": "Methyltransf_5"
+        },
+        {
+          "CPM_parent": 670,
+          "families": [
+            {
+              "calls": [
+                {
+                  "contig": "k141_3550",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.7170731707317073,
+                      "marker": "TIGR00115",
+                      "score": 213.52127075195312
+                    }
+                  ],
+                  "gene": "g000073650",
+                  "gene_loci": {
+                    "G000584R000020": [
+                      [
+                        92452,
+                        93754
+                      ]
+                    ]
+                  },
+                  "label": "ASV406.4",
+                  "partial_begin": false,
+                  "partial_end": false
+                },
+                {
+                  "contig": "k141_27026",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.9902439024390244,
+                      "marker": "TIGR00115",
+                      "score": 469.1507873535156
+                    }
+                  ],
+                  "gene": "g000149389",
+                  "gene_loci": {
+                    "G000584R000011": [
+                      [
+                        232379,
+                        233666
+                      ]
+                    ]
+                  },
+                  "label": "ASV406.4",
+                  "partial_begin": false,
+                  "partial_end": false
+                }
+              ],
+              "copy_pairs": [
+                {
+                  "domain_classification": "same_genome_distinct_provided_replicons",
+                  "gene_classification": "same_genome_distinct_provided_replicons",
+                  "reference_overlap_bp": 0,
+                  "whole_source_record_hash_overlap": false
+                }
+              ],
+              "family": "TIGR00115"
+            },
+            {
+              "calls": [
+                {
+                  "contig": "k141_43705",
+                  "domains": [
+                    {
+                      "hmm_coverage": 1.0,
+                      "marker": "TIGR00575",
+                      "score": 495.7783203125
+                    }
+                  ],
+                  "gene": "g000121619",
+                  "gene_loci": {
+                    "G000584R000018": [
+                      [
+                        124048,
+                        126043
+                      ]
+                    ]
+                  },
+                  "label": "ASV406.4",
+                  "partial_begin": false,
+                  "partial_end": false
+                },
+                {
+                  "contig": "k141_126959",
+                  "domains": [
+                    {
+                      "hmm_coverage": 1.0,
+                      "marker": "TIGR00575",
+                      "score": 547.64013671875
+                    }
+                  ],
+                  "gene": "g000263385",
+                  "gene_loci": {
+                    "G000584R000016": [
+                      [
+                        45809,
+                        47768
+                      ]
+                    ]
+                  },
+                  "label": "ASV406.4",
+                  "partial_begin": false,
+                  "partial_end": false
+                }
+              ],
+              "copy_pairs": [
+                {
+                  "domain_classification": "same_genome_distinct_provided_replicons",
+                  "gene_classification": "same_genome_distinct_provided_replicons",
+                  "reference_overlap_bp": 0,
+                  "whole_source_record_hash_overlap": false
+                }
+              ],
+              "family": "TIGR00575"
+            }
+          ],
+          "genome": "ASV406.4",
+          "seed_family": "TIGR00115"
+        },
+        {
+          "CPM_parent": 402,
+          "families": [
+            {
+              "calls": [
+                {
+                  "contig": "k141_2326",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.9967741935483871,
+                      "marker": "Methyltransf_5",
+                      "score": 399.1360168457031
+                    }
+                  ],
+                  "gene": "g000046371",
+                  "gene_loci": {
+                    "G001777R000012": [
+                      [
+                        20312,
+                        21251
+                      ]
+                    ]
+                  },
+                  "label": "ASV456.0",
+                  "partial_begin": false,
+                  "partial_end": false
+                },
+                {
+                  "contig": "k141_139685",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.9838709677419355,
+                      "marker": "Methyltransf_5",
+                      "score": 236.3856201171875
+                    }
+                  ],
+                  "gene": "g000186483",
+                  "gene_loci": {
+                    "G001777R000018": [
+                      [
+                        12259,
+                        13312
+                      ]
+                    ]
+                  },
+                  "label": "ASV456.0",
+                  "partial_begin": false,
+                  "partial_end": false
+                }
+              ],
+              "copy_pairs": [
+                {
+                  "domain_classification": "same_genome_distinct_provided_replicons",
+                  "gene_classification": "same_genome_distinct_provided_replicons",
+                  "reference_overlap_bp": 0,
+                  "whole_source_record_hash_overlap": false
+                }
+              ],
+              "family": "Methyltransf_5"
+            },
+            {
+              "calls": [
+                {
+                  "contig": "k141_19544",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.6878048780487804,
+                      "marker": "TIGR00115",
+                      "score": 180.21551513671875
+                    }
+                  ],
+                  "gene": "g000016437",
+                  "gene_loci": {
+                    "G001777R000052": [
+                      [
+                        19299,
+                        20631
+                      ]
+                    ]
+                  },
+                  "label": "ASV456.0",
+                  "partial_begin": false,
+                  "partial_end": false
+                },
+                {
+                  "contig": "k141_123869",
+                  "domains": [
+                    {
+                      "hmm_coverage": 0.5609756097560976,
+                      "marker": "TIGR00115",
+                      "score": 288.2385559082031
+                    }
+                  ],
+                  "gene": "g000216912",
+                  "gene_loci": {
+                    "G001777R000044": [
+                      [
+                        77469,
+                        78198
+                      ]
+                    ]
+                  },
+                  "label": "ASV456.0",
+                  "partial_begin": true,
+                  "partial_end": false
+                }
+              ],
+              "copy_pairs": [
+                {
+                  "domain_classification": "same_genome_distinct_provided_replicons",
+                  "gene_classification": "same_genome_distinct_provided_replicons",
+                  "reference_overlap_bp": 0,
+                  "whole_source_record_hash_overlap": false
+                }
+              ],
+              "family": "TIGR00115"
+            }
+          ],
+          "genome": "ASV456.0",
+          "seed_family": "Methyltransf_5"
+        }
+      ],
+      "pair_classifications": {
+        "same_genome_distinct_provided_replicons": 8,
+        "same_genome_overlapping_locus_duplication_candidate": 1
+      },
+      "projections_reused": 10
+    },
+    "interpretation": [
+      "All four destructive seed pairs have complete/nonidentical predicted proteins and uniquely localized domains/genes at distinct records within the same provided simulator genome, with no N/competitor/locus ambiguity in those spans.",
+      "Eight of nine repeated-family pairs across the four cases map to distinct provided reference records; one TIGR01030 pair overlaps the same reference locus, with a partial call.",
+      "ASV456.0 also includes a TIGR00115 call score 180.2155 versus trusted cutoff 180.20 and another partial 56.10%-coverage call; these were credible under the frozen .5 trusted policy, not universally reliable cannot-links.",
+      "Provided reference records include draft WGS contigs. Different record coordinates/hashes do not prove different biological replicons or exclude reference-assembly redundancy/contamination, paralogy or HMM family cross-reactivity.",
+      "Primary any-gene-overlap flags include one 9bp overlap with disjoint HMM domains; it is not persuasive duplication evidence. Three RB pair flags have substantial HMM-domain overlap, compatible with assembly overlap/fragments, without proof.",
+      "Highest-versus-second marker-count discrepancy cannot explain these four k=2 cases; no family blacklist, raised threshold or K change was used."
+    ],
+    "primary": {
+      "all_adopted_proposals": true,
+      "pair_classifications": {
+        "CPM": {
+          "different_provided_genomes": 3,
+          "same_genome_distinct_provided_replicons": 6,
+          "unresolved_competition_N_or_locus_support": 3
+        },
+        "RB": {
+          "different_provided_genomes": 80,
+          "same_genome_distinct_provided_replicons": 8,
+          "same_genome_overlapping_locus_duplication_candidate": 4,
+          "unresolved_competition_N_or_locus_support": 21
+        }
+      },
+      "retained_PAF_rows": {
+        "clean_qualifying_rows": 161,
+        "nn_positive_rows": 16,
+        "paf_rows": 840,
+        "qualifying_rows": 164,
+        "quarantined_rows": 3
+      },
+      "selected_contigs": 74,
+      "selected_genes": 74
+    }
+  },
+  "outcome": "supports protective acceptance within these retained contexts; no additional CPM marker-refinement recovery demonstrated",
+  "preserved_cross_platform_failure": "Original E010 Mac allclose rtol1e-5/atol2e-6 failure remains; no inference or tolerance change",
+  "prospective_protocol": {
+    "bytes": 5603,
+    "sha256": "31d2611051204cf6f98dbc7620d491be29b3bf7463410f7d90ec5fe7d89ccdc3"
+  },
+  "recommendation": "Implement one coherent confidence/quality-aware marker refinement upgrade around CPM, combining retained call reliability, marker-quality proxies and measured parent-depth/composition context. Retain E012 guard and old refinement as selective comparators; freeze the new rule before one matched cached local development comparison. No resolution grid, encoder change, external expansion or automatic confirmation.",
+  "record": "E012",
+  "resources": {
+    "archive_collection_wall_seconds": 1.9604493039660156,
+    "combined_phase_wall_seconds": 197.80262199696153,
+    "context_wall_seconds": 5.334016898996197,
+    "cumulative_control_seconds_ceiling": 1800,
+    "host": {
+      "logical_cpu_count": 8,
+      "machine": "x86_64",
+      "ram_bytes": 17179869184,
+      "requested_numerical_threads": 4,
+      "scope": "local engineering and retained evidence control; not dedicated cloud allocation",
+      "system": "macOS-26.1-x86_64-i386-64bit"
+    },
+    "local_retained_GiB_before_compact_archive": 0.4821798112243414,
+    "local_retained_bytes_before_compact_archive": 517736630,
+    "peak_sampled_process_tree_RSS_bytes": 1256988672,
+    "per_stage_seconds_ceiling": 900,
+    "primary_phase_wall_seconds": 192.46860509796534,
+    "ram_bytes_ceiling": 8000000000,
+    "sampled_CPU_seconds": 196.38,
+    "scope": "Phase clocks exclude coding/tests and subsequent evidence collection; CPU/RSS are sampled local process-tree estimates, not GCP allocation or exact peaks.",
+    "threads": 4
+  },
+  "review_lock": {
+    "bytes": 2051,
+    "sha256": "fda921529f5066ed2313b10349868a9567f724aaafd0adc73ef3ef0ecee33ca1"
+  },
+  "rule": {
+    "accept": "delta > 8*math.ulp(max(1,abs(gamma*separated_pairs),abs(cut_weight)))",
+    "alternatives": "original full parent or exact retained children/noise only; non-adopted proposals leave parent",
+    "delta": "gamma*(choose(n_parent,2)-sum choose(n_child,2))-cut_weight",
+    "density_source": "unchanged E011 median positive graph edge weight / 30",
+    "gamma": 0.01294708220433279,
+    "name": "retained-child positive CPM gain",
+    "node_sizes": 1,
+    "noise": "each retained unassigned vertex is a distinct singleton for scoring only; every lost edge counts; actual noise stays unassigned",
+    "objective": "S=sum_c(internal undirected edge weight - gamma*n_c*(n_c-1)/2)",
+    "selection_inputs": "features/unit geometry/fixed sparse graph, pre/post partitions and existing clean marker calls; no truth/taxonomy/K",
+    "tie": "keep original parent; math.fsum edge weights, no practical threshold fit"
+  },
+  "source_lock_unchanged": true,
+  "status": "completed"
+}

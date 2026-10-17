@@ -3,6 +3,13 @@
 Updated: 2026-10-17 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
+**E012 completed entirely locally, with $0 new cloud work.** Its
+[review](../experiments/E012-marker-acceptance/review.json) binds all-DNA cached
+selection and marker/truth diagnostics; no VM/API/start/upload/resource or
+retention action. The following E011 observation remains the last verified live
+provider state, rather than a new E012 control-plane/billing check. **October 21
+storage review remains; no extension.**
+
 **E011 recovery completed; VM independently TERMINATED.**
 [Recovery receipt](../experiments/E011-cached-grouping-reference/recovery-observed.json)
 binds phase `cached-20261017T080610Z-7a43eb6`, clean pushed source, strict cache/

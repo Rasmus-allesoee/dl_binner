@@ -366,3 +366,14 @@ priority; duplicate removal alone is insufficient acceptance evidence. The
 [frozen protocol](../../experiments/E012-marker-acceptance/protocol.json) predates
 changed community selection/scores. No feature-family or generalization claim;
 oral-GSA remains unacquired and October 21 storage review remains.
+
+2026-10-17 E012 completed: the frozen local guard retains 16/18 RB splits (R95
+4.5232% versus 4.2909%) and no CPM split, exactly protecting its 5.3990% parent.
+Four targets recover losses but one useful marker split is forgone. This supports
+protection within scope, without proving extra CPM marker benefit. Gene/domain
+mapping distinguishes provided loci, partial/overlapping calls and unresolved
+functional/reference specificity. [D015](../decisions/D015-coherent-prototype-upgrade.md#e012-observed-protection-and-next-coherent-upgrade-2026-10-17)
+retains CPM and recommends one coherent marker-quality/context refinement upgrade.
+Q001/Q003/Q005 remain open generally; no product feature-family, optimality or
+SOTA conclusion. Source freezes/failures remain, oral-GSA unacquired and October 21
+storage review unchanged.

@@ -281,3 +281,31 @@ specificity and possible duplication; truth never selects an alternative. This
 local control is authorized now, with engineering tests before one matched
 comparison. A null all-veto outcome can demonstrate protection only. Neither
 success nor failure decides a feature family or validates generalization.
+
+## E012 observed protection and next coherent upgrade, 2026-10-17
+
+[E012](../../experiments/E012-marker-acceptance/review.json) completed the authorized
+local comparison without cloud spend. The frozen graph-gain guard accepts 16/18
+RB splits (R95 4.5232% versus 4.2909%) and 0/12 CPM splits, exactly retaining CPM's
+5.3990% parent versus 4.6171% old children. CPM restores four harmed targets but
+forgoes the ASV300.2 gain; no extra CPM marker recovery or generalization follows.
+Keep CPM as the working direction and the guard as a safety comparison. This
+preserves the failed E011 threshold rather than changing it retroactively.
+
+Gene/domain-level evidence now distinguishes strong calls at distinct provided
+loci from a partial overlapping-locus call and barely passing/partial additional
+conflict evidence. Draft reference records do not prove biological replicons;
+paralogy, panel specificity and reference-assembly purity remain unresolved. Do
+not blacklist the affected families from truth or claim all duplicates are false.
+The old hard count-to-K/cannot-link assumptions and conflict-removal acceptance
+were implemented as documented choices; their quality assumptions failed here.
+The seed-count prose discrepancy is irrelevant to these four k=2 cases.
+
+Next implement one coherent marker refinement upgrade with call reliability,
+label-free marker-quality proxies and measured parent-depth/composition context,
+retaining whole-parent alternatives. Graph gain informs that model without being
+a universal veto. Keep encoder/vectors/graph fixed for one selective cached
+comparison; no default factorial campaign, new architecture or external expansion.
+The [following prompt](../../experiments/E012-marker-acceptance/OPERATIONS.md#exact-following-prompt)
+permits local implementation and one prospectively frozen cached comparison.
+Oral-GSA and its independent admission stay separate; October 21 review unchanged.
