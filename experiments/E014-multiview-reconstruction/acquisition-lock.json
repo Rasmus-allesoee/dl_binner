@@ -1,0 +1,30 @@
+{
+  "base_url": "https://frl.publisso.de/data/frl%3A6425518/",
+  "confirmation_plan": {
+    "bytes": 3898,
+    "sha256": "73962986614d043495ac939456ad5b35e0afc968985a892005c4317701dc0a16"
+  },
+  "files": [
+    {
+      "bytes": 1729496090,
+      "md5": "0f2c77508ba269b044409661b512d003",
+      "path": "per_bodysite/oral_bam/gsa.fa"
+    },
+    {
+      "bytes": 482371982,
+      "md5": "8c7f03a7bfc26dafc6542f21284917fc",
+      "path": "per_bodysite/oral_bam/gsa.tsv.gz"
+    },
+    {
+      "bytes": 77792819,
+      "md5": "3c2d78f6f833d97867ca14bea2e866ba",
+      "path": "per_bodysite/oral_bam/gsa_pooled_mapping_fixed.tsv"
+    },
+    {
+      "bytes": 155585543,
+      "md5": "dae4cda38548d0a01b04c9d4e205723e",
+      "path": "per_bodysite/oral_bam/gsa_pooled_mapping.tsv"
+    }
+  ],
+  "resume_partial": false
+}

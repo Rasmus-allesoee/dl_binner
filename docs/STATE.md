@@ -4,6 +4,17 @@ Updated: 2026-10-17. This is the single current handoff.
 
 ## Exact next step
 
+**E014 authorized current block: oral-GSA admission plus coherent training upgrade.**
+On `e014-multiview-reconstruction`, [the local block](../experiments/E014-multiview-reconstruction/README.md)
+acquires/verifies the four frozen files, audits independent truth, implements and
+tiny-tests multiview/reconstruction learning, and assesses source BAM/depth value.
+No old-artifact deletion/move is needed for the currently bounded acquisition.
+A single later frozen comparison is authorized in this task only if data/truth/
+runtime and live credit/eligibility/storage/cost gates all pass within about $10;
+otherwise report the failed condition without starting it. No bulk reads/mapping,
+aligners, external tools, resource changes or retention extension. October 21 review
+remains. All following completed records retain their original scopes.
+
 **E013 completed locally; keep its refiner provisionally and broaden development.**
 On `e013-marker-quality-refinement`, clean source **6d06560** froze one coherent
 call-reliability/median-proposal/quality-context rule before changed outcomes.
@@ -38,7 +49,7 @@ primary recovery gain. All ten ordered axes, 13 all-zero rows, full 156-target
 N-quarantine** remain. Mixing and fragmentation persist. Keep the gain as one
 community's development evidence, not a uniformly stronger-product claim.
 
-**Next block, proposed rather than executed/authorized by this completion:** admit
+**E013's recommendation, now authorized as E014 above:** admit
 the already frozen oral-GSA community and implement one coherent training upgrade
 locally in parallel. Do not tune markers further on E009 now or require perfect
 grouping first. Prior [E011 audit](../experiments/E011-cached-grouping-reference/audit.json)
