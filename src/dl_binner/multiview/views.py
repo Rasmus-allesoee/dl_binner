@@ -10,7 +10,8 @@ from pathlib import Path
 
 import numpy as np
 
-from ..io import DNA, digest, emit, read_depth, save_arrays, load_arrays, validate_features
+from ..io import DNA, digest, emit, read_depth, save_arrays, validate_features
+from .arrays import load_arrays
 from ..candidate.views import composition
 
 

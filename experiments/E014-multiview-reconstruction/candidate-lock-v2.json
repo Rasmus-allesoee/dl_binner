@@ -1,0 +1,169 @@
+{
+  "cloud_gate": "NOT RELEASED: oral truth/full denominators pending; Linux/new-phase live gates required",
+  "defaults": {
+    "bytes": 799,
+    "sha256": "0f532c4912b002c5cdb2ebde48bf172c96577f3edb066a1c03864e2b537c6038"
+  },
+  "engineering_receipts": {
+    "artifacts/e014-multiview-reconstruction/engineering/parity-v2/proof.json": {
+      "bytes": 115,
+      "sha256": "a8481ac8877398ee36f63bf710a15a7c5b7d923199fe57e3b5b6023238f1a590"
+    },
+    "artifacts/e014-multiview-reconstruction/engineering/tiny-v2.exit.json": {
+      "bytes": 761,
+      "sha256": "22d5e7a19007549ded79dae0fb20ba8b855a7f611584dfea9fc3ee9f94aba119"
+    },
+    "artifacts/e014-multiview-reconstruction/packaging-v2.json": {
+      "bytes": 3841,
+      "sha256": "7e559990d69e713530d3af7f872ccaa8bddf3a940d7b5043eb6fad4c025ae67f"
+    }
+  },
+  "frozen_dev4_defaults": {
+    "bytes": 678,
+    "sha256": "1c8049fa2cf70e51c2eab22fc7fe5cd0e626f807360b56ff2b392756207baa60"
+  },
+  "kind": "prospective E014 dev5 v2 memory-lifetime freeze; no community release",
+  "linux": "NOT VALIDATED; native Linux gates remain within any later VM-start clock",
+  "marker_asset": {
+    "bytes": 4655,
+    "sha256": "d1898ef92fa992881103cd19de2be6066db38917cb3be2e3ece86d35035692b3"
+  },
+  "memory_revision": "No redundant NPZ member copy, streamed exact historical ID digest, release crop bank before parent inference; no parameter, loss or default change.",
+  "package_metadata_note": "Fresh v2 wheel matches every current package source/default member; original v1 wheel remains executed provenance.",
+  "package_version": "0.1.0.dev5",
+  "packaged_E013_selector": {
+    "bytes": 16783,
+    "sha256": "0c1bae1f0fd5e8873cc30e68218e6796e87bf43b7d9262d2ec42fd781a51b8c0"
+  },
+  "pure_E013_selector": {
+    "bytes": 16783,
+    "sha256": "0c1bae1f0fd5e8873cc30e68218e6796e87bf43b7d9262d2ec42fd781a51b8c0"
+  },
+  "sdist": {
+    "bytes": 97230,
+    "path": "artifacts/e014-multiview-reconstruction/build-v2/dist/dl_binner-0.1.0.dev5.tar.gz",
+    "sha256": "4574debec835de9054152690039344c3e6d12d2184e0e1484a425123854bb639"
+  },
+  "sdist_rebuilt_wheel_logical_equal": true,
+  "source": {
+    "__init__.py": {
+      "bytes": 112,
+      "sha256": "354c46c057766a6243be40711dda76118ce958bbd6f4768ccab3b8bf9252b658"
+    },
+    "__main__.py": {
+      "bytes": 103,
+      "sha256": "28f47a18f1a12c011b4fa92812d8f4fb10840c469d489ee5ac246bc669620144"
+    },
+    "accounting.py": {
+      "bytes": 6732,
+      "sha256": "2a83aad8eb36864a704ebe72faeeba33c335c86f7072205f6f19c92db9f6f117"
+    },
+    "candidate/__init__.py": {
+      "bytes": 81,
+      "sha256": "5887ddf687250cefcf87aaa082c5a4edc9a5281a8a1be7a752300a5fcb190eff"
+    },
+    "candidate/grouping.py": {
+      "bytes": 12615,
+      "sha256": "d31c67705b2fc80d5fd06d8b2c403d7e543ebd64fc37c08b5b3db90ba657f233"
+    },
+    "candidate/markers.py": {
+      "bytes": 11226,
+      "sha256": "a77739cb64d219bf3af8e2baeb66ed81c86c53a8c5c633a184ee28412ee2760a"
+    },
+    "candidate/model.py": {
+      "bytes": 10499,
+      "sha256": "09eda66fcd324870d11b89c6f6b4bc7e4c02f3169d6d557389bc8c840de76f09"
+    },
+    "candidate/runner.py": {
+      "bytes": 12350,
+      "sha256": "ab153821b9bacf70373c7ffd79c058b1be356a6f96bdfae5aa8638cf4bdab2eb"
+    },
+    "candidate/views.py": {
+      "bytes": 8357,
+      "sha256": "d3f1b51ac61009f9f962d767fce5600d5c93bd14b4ca9adb4bdef7564438392f"
+    },
+    "cli.py": {
+      "bytes": 10923,
+      "sha256": "5d463fd8d901934348d4664a0b02929770853cb2af5b26d8fdbcb6a4ba409aad"
+    },
+    "clustering.py": {
+      "bytes": 7880,
+      "sha256": "2ac715b1449287b002ef7e4a75b84ef204256c2d5f589e31a6810acfad941b66"
+    },
+    "contracts.py": {
+      "bytes": 1671,
+      "sha256": "0455b5a45ecbb29eb1f6c168048efa3a861279dc7ba2af36896ddb6dfcab632d"
+    },
+    "io.py": {
+      "bytes": 12016,
+      "sha256": "71b0c423c046b3c72b651141e853ea622a62742fc087afeef37fbf9c253c2307"
+    },
+    "model.py": {
+      "bytes": 13986,
+      "sha256": "acc1f3c450910112cd7883cc6284139046fde6b339e73b82638d301d8e5a9948"
+    },
+    "multiview/__init__.py": {
+      "bytes": 85,
+      "sha256": "7724296c827c8ae34dc7558de991243c52ee78c1b8a37837e3070487657fe160"
+    },
+    "multiview/arrays.py": {
+      "bytes": 1395,
+      "sha256": "e6239aaa8ca298b5afd97d4c45ab58ff72183f485e4263226aebbcae03500a97"
+    },
+    "multiview/downstream.py": {
+      "bytes": 7469,
+      "sha256": "a24e96291dc6e779734e6990008296e7e7d8d3e400ff9102004a09959fa8fbbb"
+    },
+    "multiview/model.py": {
+      "bytes": 10256,
+      "sha256": "6342819c74f8d7da4cc23bea7666169de605d2c391ce3711d98243fc88f550d2"
+    },
+    "multiview/refinement.py": {
+      "bytes": 16783,
+      "sha256": "0c1bae1f0fd5e8873cc30e68218e6796e87bf43b7d9262d2ec42fd781a51b8c0"
+    },
+    "multiview/stage.py": {
+      "bytes": 2190,
+      "sha256": "a06543d0cd70ba4a63637a7072b96d03becc773c7ae0ba1dbeb4c603b2677581"
+    },
+    "multiview/views.py": {
+      "bytes": 9370,
+      "sha256": "0b3a00b87c17cd56417e589ebcb3a9f3234f85f4c14ac0b9204a680dc2590935"
+    },
+    "resources/candidate.json": {
+      "bytes": 678,
+      "sha256": "1c8049fa2cf70e51c2eab22fc7fe5cd0e626f807360b56ff2b392756207baa60"
+    },
+    "resources/multiview.json": {
+      "bytes": 799,
+      "sha256": "0f532c4912b002c5cdb2ebde48bf172c96577f3edb066a1c03864e2b537c6038"
+    },
+    "resources/training.json": {
+      "bytes": 215,
+      "sha256": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5"
+    },
+    "runner.py": {
+      "bytes": 20667,
+      "sha256": "99cbd7a14c360011b473dd22a03777eb7e3dfff109f11c78a2f5c1f067af3e8f"
+    },
+    "supervision.py": {
+      "bytes": 9575,
+      "sha256": "8ee9bd7d5f05a8e487a8691f7ab8152cca627f9f55ad27d48c6ece61cbd9a8a9"
+    }
+  },
+  "supersedes_for_new_execution": "candidate-lock.json v1; preserve all its build/test/failure journals",
+  "tested_wheel": {
+    "bytes": 73917,
+    "path": "artifacts/e014-multiview-reconstruction/build-v2/dist/dl_binner-0.1.0.dev5-py3-none-any.whl",
+    "sha256": "aa3536c7ab82ca9b8ddd37f2460fc133589a8406f1a6821061213eedbba19f42"
+  },
+  "tests": {
+    "data_contracts": 7,
+    "exact_v1_reload_and_legacy_bank_parity": true,
+    "phase_contracts": 2,
+    "prior_product_suite": 24,
+    "real_Snakemake_tiny_jobs": 20,
+    "source_archive_contracts": 3,
+    "v2_new_product": 4
+  }
+}

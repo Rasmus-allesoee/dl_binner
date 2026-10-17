@@ -1,0 +1,12 @@
+{
+  "frozen_before": "Any E014 community fit or changed community outcome",
+  "source": "Owner-approved publisher gastrooral/setup.tar.gz; verify whole MD5, new SHA256 and every streamed member",
+  "scope": "Independent sequence/origin audit, separate from binner features, marker calls and grouping",
+  "coordinates": "Corrected publisher map is one-based inclusive; require exact forward source[start-1:end] SHA256 equality to the independently joined anonymous/GSA sequence; refuse absent/out-of-range/mismatched loci",
+  "population": "Keep all 1057 supplied source genomes separate from oral abundance-supported, observed GSA, GI overlap and cellular taxonomy populations. All source records of an eligible provided genome contribute to its full denominator, including unobserved records.",
+  "duplicates": "Retain raw and exact-sequence-deduplicated per-genome reference lengths separately. Repeated record IDs with differing DNA refuse. Different source genomes sharing records or exact DNA are explicit competitors, never silently merged by taxon or OTU prefix. Molecular/host annotations cannot be inferred from accession prefixes.",
+  "overlap": "Screen all provided reference accessions and forward/reverse canonical DNA hashes against each other and accepted E009 source catalog. Record exact GI identity and historical taxonomy relationships. Exact tests do not prove absence of near homology; near-overlap/competitive support and evaluation ambiguity semantics remain an explicit admission gate.",
+  "input_derivative": "If admitted, use the verified anonymous FASTA with deterministic source-blind opaque IDs; preserve all nonempty DNA. Record the two empty original headers as zero-bp accounting rather than inventing sequences. Original files are immutable; ID-to-source joins remain outside training paths.",
+  "truth_status": "Source validation alone is not evaluator admission. Separate review must establish duplicate-safe coordinates/denominators, molecule/grouping limits, ambiguity and exact/near overlap contracts before community comparison release.",
+  "resources": {"original_acquisition_validation_seconds":5400,"extra_local_bytes":10737418240,"numerical_threads":4,"sampled_RSS_bytes":8000000000,"whole_reference_extraction":false}
+}

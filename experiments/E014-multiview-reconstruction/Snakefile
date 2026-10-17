@@ -1,0 +1,78 @@
+"""Serial comparison DAG; release/clock/RAM/cost guards belong to the launcher."""
+import json
+from pathlib import Path
+PLAN = str(Path(config['plan']).absolute())
+P = json.loads(Path(PLAN).read_text())
+UNITS = list(P['units'])
+WORKER = P['worker']
+PYTHON = P['python']
+threads_per_stage = P['threads']
+
+rule all:
+    input: expand('units/{unit}/export/accounting.json', unit=UNITS)
+
+def features_prerequisite(w):
+    return ['units/oral-dev5/features/prepared.json'] if P['units'][w.unit]['learning']=='dev4' else []
+
+rule features:
+    input: features_prerequisite
+    output: 'units/{unit}/features/prepared.json'
+    threads: threads_per_stage
+    log: 'logs/{unit}/features.log'
+    benchmark: 'benchmarks/{unit}/features.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage features > {log:q} 2>&1'
+
+rule markers:
+    input: expand('units/{unit}/features/prepared.json',unit=UNITS)
+    output: P['oral_marker_cache']+'/cache.json'
+    threads: threads_per_stage
+    log: 'logs/oral-markers.log'
+    benchmark: 'benchmarks/oral-markers.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit oral-dev5 --stage markers > {log:q} 2>&1'
+
+def previous_unit(w):
+    i=UNITS.index(w.unit)
+    return ['units/'+UNITS[i-1]+'/export/accounting.json'] if i else []
+
+rule train:
+    input:
+        features=expand('units/{unit}/features/prepared.json',unit=UNITS),
+        markers=P['oral_marker_cache']+'/cache.json',
+        previous=previous_unit
+    output: 'units/{unit}/train/checkpoint.json'
+    threads: threads_per_stage
+    log: 'logs/{unit}/train.log'
+    benchmark: 'benchmarks/{unit}/train.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage train > {log:q} 2>&1'
+
+rule embed:
+    input: 'units/{unit}/train/checkpoint.json'
+    output: 'units/{unit}/embeddings.json'
+    threads: threads_per_stage
+    log: 'logs/{unit}/embed.log'
+    benchmark: 'benchmarks/{unit}/embed.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage embed > {log:q} 2>&1'
+
+rule group:
+    input: 'units/{unit}/embeddings.json'
+    output: 'units/{unit}/group/partition.json'
+    threads: threads_per_stage
+    log: 'logs/{unit}/group.log'
+    benchmark: 'benchmarks/{unit}/group.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage group > {log:q} 2>&1'
+
+rule refine:
+    input: 'units/{unit}/group/partition.json'
+    output: 'units/{unit}/refine/completed.json'
+    threads: threads_per_stage
+    log: 'logs/{unit}/refine.log'
+    benchmark: 'benchmarks/{unit}/refine.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage refine > {log:q} 2>&1'
+
+rule export:
+    input: 'units/{unit}/refine/completed.json'
+    output: 'units/{unit}/export/accounting.json'
+    threads: threads_per_stage
+    log: 'logs/{unit}/export.log'
+    benchmark: 'benchmarks/{unit}/export.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage export > {log:q} 2>&1'

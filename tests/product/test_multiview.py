@@ -16,6 +16,18 @@ from fixtures import THREADS
 
 
 class MultiviewContracts(unittest.TestCase):
+    def test_lean_reader_preserves_original_values_ID_hash_and_corruption_refusal(self):
+        from dl_binner.multiview.arrays import load_arrays as lean
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/'a.npz';arrays=dict(ids=np.array(['opaque-æ','with"quote','back\\slash']),values=np.arange(15,dtype=np.float32).reshape(3,5))
+            save_arrays(p,arrays,dict(kind='tiny_owned'))
+            a,ma=load_arrays(p,'tiny_owned');b,mb=lean(p,'tiny_owned')
+            self.assertEqual(ma,mb)
+            for k in a:np.testing.assert_array_equal(a[k],b[k])
+            self.assertTrue(all(v.flags.owndata for v in b.values()))
+            p.write_bytes(p.read_bytes()+b'corrupt')
+            with self.assertRaisesRegex(ValueError,'byte hash'):lean(p,'tiny_owned')
+
     def test_variable_real_crops_short_exposure_zeros_and_malformed_refusal(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d);f,depth,rows=fixture(p);cfg=views.config();out=p/'features'

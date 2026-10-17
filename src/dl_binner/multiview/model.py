@@ -107,6 +107,10 @@ def train(features,views,output,cfg,threads):
                **dict(zip(['loss','fused_contrastive','sequence_contrastive','composition_reconstruction','depth_reconstruction'],(totals/seen).tolist())),
                wall_seconds=time.monotonic()-start)
         history.append(h);emit('multiview_epoch',**h)
+    contrastive_parents=int((data['eligible']&v['usable'].any(1)).sum())
+    # The fixed bank is no longer needed. Do not retain gigabytes of crop views
+    # while allocating the full parent inference transforms/reference output.
+    del v
     values,valid=infer(model,data,state,cfg)
     saved=dict(kind='multiview_checkpoint',version=1,config=cfg,transform=state,samples=meta['samples'],
                model_state=model.state_dict(),optimizer_state=optimizer.state_dict(),training_features_sha256=digest(features),training_views_sha256=digest(views))
@@ -114,7 +118,7 @@ def train(features,views,output,cfg,threads):
     write_json(out/'checkpoint.json',dict(kind='multiview_checkpoint',version=1,sha256=digest(out/'checkpoint.pt'),
         config=cfg,transform=state,samples=meta['samples'],training_features_sha256=digest(features),training_views_sha256=digest(views),
         history=history,threads=threads,loader_workers=0,training_parents=len(indices),
-        contrastive_parents=int((data['eligible']&v['usable'].any(1)).sum()),parameter_count=sum(p.numel() for p in model.parameters()),
+        contrastive_parents=contrastive_parents,parameter_count=sum(p.numel() for p in model.parameters()),
         wall_seconds=time.monotonic()-start,process_cpu_seconds=time.process_time()-cpu,
         assumptions='Fixed real-crop bank; parent mean depth with independent branch dropout; co-genomic negatives/chimeric positives unresolved; no truth/markers/taxonomy.'))
     save_arrays(out/'reference.npz',dict(ids=data['ids'],features=values,evidence=valid),dict(kind='embeddings',

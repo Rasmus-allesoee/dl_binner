@@ -102,15 +102,18 @@ def acquire(root=ROOT, plan=None, resume_partial=False):
         peak=max(peak,guard(root,clock));print('ACQUIRED',target.name,actual,flush=True)
     result=dict(status='SUCCESS',files=receipts,seconds=time.monotonic()-start,clock=clock,
                 peak_sampled_working_bytes=peak,body_bytes=sum(r['hashes']['bytes'] for r in receipts))
-    (root/'acquisition.json').write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
+    record_name=plan.get('output_record','acquisition.json')
+    if Path(record_name).name!=record_name:raise ValueError('Acquisition record must be a local basename')
+    (root/record_name).write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
     return result
 
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',type=Path,default=ROOT)
     p.add_argument('--resume-partial',action='store_true',help='Explicit verified-prefix transport recovery; original clock stays')
+    p.add_argument('--plan',type=Path,help='Separately authorized, checksum/size-locked acquisition plan')
     a=p.parse_args()
-    try:acquire(a.root,resume_partial=a.resume_partial)
+    try:acquire(a.root,plan=json.loads(a.plan.read_text()) if a.plan else None,resume_partial=a.resume_partial)
     except BaseException as exc:
         fail=a.root/('acquisition-failure-'+str(time.time_ns())+'.json')
         fail.write_text(json.dumps(dict(error=repr(exc),epoch=time.time()),indent=2)+'\n')

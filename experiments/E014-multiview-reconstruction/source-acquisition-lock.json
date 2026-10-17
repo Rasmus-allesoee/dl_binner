@@ -1,0 +1,12 @@
+{
+  "base_url": "https://frl.publisso.de/data/frl%3A6425518/",
+  "output_record": "source-acquisition.json",
+  "authorization": "2026-10-18 explicit owner async approval: Download and audit the additional archive",
+  "files": [
+    {
+      "path": "gastrooral/setup.tar.gz",
+      "bytes": 1906532721,
+      "md5": "eebd129ce7f8640683eb744a0e946223"
+    }
+  ]
+}

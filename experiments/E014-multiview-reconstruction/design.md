@@ -64,6 +64,14 @@ defines augmentation positives; this is **self-supervision**, not genome-class
 labels. We independently test a two-view NT-Xent equivalence and a ragged-view
 manual oracle, including no-positive anchors.
 
+Engineering memory follow-through, before any community fit/score: the input-byte
+audit observes over a million original GSA rows. The new NPZ reader therefore
+retains each already-owned NPZ member without a redundant `.copy()` and streams
+the exact historical JSON ID hash. Release the crop bank before full parent
+inference. Tiny equivalence/corruption tests preserve values, masks and ID
+contracts; this changes memory lifetime, not loss, schedule or the scientific rule.
+Preserve the earlier v1 build/test journals.
+
 [COMEBin's Methods](https://www.nature.com/articles/s41467-023-44290-z) support
 real-substring views and explicit coverage/fusion branches. Our retained means
 do not implement its measured substring mean/std features. [VAMB's primary
