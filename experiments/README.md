@@ -16,6 +16,7 @@ reproduced result of this project.
 - [E008: Product execution and private PR validation](E008-product-execution/README.md)
 - [E009: First competitive human-gut read-derived assembly benchmark](E009-competitive-benchmark/README.md)
 - [E010: coherent window/depth/marker prototype](E010-coherent-prototype/README.md)
+- [E011: cached grouping objective and one feasibility reference](E011-cached-grouping-reference/README.md)
 
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 

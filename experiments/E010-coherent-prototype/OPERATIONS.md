@@ -4,6 +4,9 @@ Status: **completed and reviewed on 2026-10-17; VM independently TERMINATED**.
 [Completed review](review.json) owns the seven-stage acceptance, mixed/negative
 bundle result, portability exception, actual costs and next preparation boundary.
 The launch details below are dated execution provenance.
+The earlier preparation-only following prompt has been consumed: the owner now
+directly authorizes [E011](../E011-cached-grouping-reference/README.md) after gates,
+including one MetaBAT2 reference. E011 owns that new bounded execution scope.
 [Native receipt](native-observed.json) owns actual gates, progress and costs for
 `candidate-20261016T212549Z-6917c3f`. The source is clean commit
 `6917c3f027bb975db43e771e979fecda0ab6c415` on **`dev4-coherent-prototype`**, renamed

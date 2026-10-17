@@ -1,0 +1,41 @@
+{
+  "fixture_files": {
+    "tiny-assembly.fna": {
+      "bytes": 37586,
+      "sha256": "d2cc8121afe7396b98beb9e8cfca211c3dcf8888cc4a3eb3e0d5cb83e8f276fe"
+    },
+    "tiny-depth.tsv": {
+      "bytes": 329,
+      "sha256": "319d1074670da7459af58efe1dfaa06645ebc85b458ecb51470dcd4d9eaf154d"
+    },
+    "tiny-native-cache.tar.gz": {
+      "bytes": 133513,
+      "sha256": "c14448e864816ceef9e81e10507fe0f6636b2fe535babe547bb1d26b8331a7bf"
+    }
+  },
+  "inventory": {
+    "bytes": 9175,
+    "sha256": "75190b3bd8a0b59b03bff65e7c47ac7d576448957ac434a5eee8f9f33b8d5ad0"
+  },
+  "logical_member_bytes": 66893506,
+  "members": 57,
+  "payload": {
+    "bytes": 66664540,
+    "sha256": "1746cab20d80dab4b77d049c759e415388e81008c9e828684dae6c178f82b88e"
+  },
+  "private_readback": {
+    "all_members_verified": 57,
+    "archive": {
+      "bytes": 66664540,
+      "sha256": "1746cab20d80dab4b77d049c759e415388e81008c9e828684dae6c178f82b88e"
+    },
+    "checked_utc": "2026-10-17T00:46:14.531786+00:00",
+    "generation": "1792197965086529",
+    "gross_readback_USD_upper": 0.007450342923402786,
+    "no_VM_start": true,
+    "no_retention_extension": true,
+    "readback_verified": true,
+    "uri": "gs://dl-binner-archive-167650584170/e011/assets-1746cab20d80/runtime-payload.tar.gz"
+  },
+  "uri": "gs://dl-binner-archive-167650584170/e011/assets-1746cab20d80/runtime-payload.tar.gz"
+}

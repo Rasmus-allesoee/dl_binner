@@ -287,3 +287,12 @@ peak 162.69 GiB /minimum free 132.28 GiB, charged growth 3.41 GiB including earl
 padding; later outer readback adds 335.6 MB outside persisted sample scope. No new
 capacity is needed. Existing disks cost $31.20/month while stopped; **October 21**
 review and original retention approval remain, without extension.
+
+## Subsequent implementation audit, 2026-10-17
+
+[E011's audit](../E011-cached-grouping-reference/audit.json) preserves the original
+prospective prose above, but records its seed discrepancy: the executed code uses
+the second-largest clean-family count, not necessarily the most-repeated family.
+Four adopted proposals differ. The new control retains actual frozen refinement;
+no old source, score, truth or failed journal is repaired in place. E011 now owns
+the separately authorized cached objective and one MetaBAT2 reference.

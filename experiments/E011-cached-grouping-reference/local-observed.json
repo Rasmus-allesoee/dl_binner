@@ -1,0 +1,178 @@
+{
+  "assets": {
+    "fixture_files": {
+      "tiny-assembly.fna": {
+        "bytes": 37586,
+        "sha256": "d2cc8121afe7396b98beb9e8cfca211c3dcf8888cc4a3eb3e0d5cb83e8f276fe"
+      },
+      "tiny-depth.tsv": {
+        "bytes": 329,
+        "sha256": "319d1074670da7459af58efe1dfaa06645ebc85b458ecb51470dcd4d9eaf154d"
+      },
+      "tiny-native-cache.tar.gz": {
+        "bytes": 133513,
+        "sha256": "c14448e864816ceef9e81e10507fe0f6636b2fe535babe547bb1d26b8331a7bf"
+      }
+    },
+    "inventory": {
+      "bytes": 9175,
+      "sha256": "75190b3bd8a0b59b03bff65e7c47ac7d576448957ac434a5eee8f9f33b8d5ad0"
+    },
+    "logical_member_bytes": 66893506,
+    "members": 57,
+    "payload": {
+      "bytes": 66664540,
+      "sha256": "1746cab20d80dab4b77d049c759e415388e81008c9e828684dae6c178f82b88e"
+    },
+    "private_readback": {
+      "all_members_verified": 57,
+      "archive": {
+        "bytes": 66664540,
+        "sha256": "1746cab20d80dab4b77d049c759e415388e81008c9e828684dae6c178f82b88e"
+      },
+      "checked_utc": "2026-10-17T00:46:14.531786+00:00",
+      "generation": "1792197965086529",
+      "gross_readback_USD_upper": 0.007450342923402786,
+      "no_VM_start": true,
+      "no_retention_extension": true,
+      "readback_verified": true,
+      "uri": "gs://dl-binner-archive-167650584170/e011/assets-1746cab20d80/runtime-payload.tar.gz"
+    },
+    "uri": "gs://dl-binner-archive-167650584170/e011/assets-1746cab20d80/runtime-payload.tar.gz"
+  },
+  "boundaries": "No training/marker search/neighbor index/changed scores/VM start in local preparation",
+  "branch": "codex/e011-cached-grouping-reference",
+  "cost_gate": {
+    "VM_compute_IP_rate_USD_per_hour": 0.2730456762592464,
+    "asset_readback_storage_operations_reserve_USD": 0.07,
+    "checked_utc": "2026-10-17T00:40:59.308388+00:00",
+    "compute_IP_fallback_USD": 0.20478425719443483,
+    "conservative_gross_USD": 0.5468390516634588,
+    "coverage": "ordinary E2/nonpremium Ubuntu/PD/IP/Iowa private Standard Storage and operations/network; existing eligible products only",
+    "credit_expiry": "2027-01-12",
+    "credit_gate_passed": true,
+    "credit_original_DKK": 1973.43,
+    "credit_remaining_DKK": 1933.15,
+    "credit_scope": "Certain usage; see Free Trial terms; net pricing",
+    "credit_status": "Available",
+    "credit_valid_until_epoch": 1799712000.0,
+    "disk_interval_fallback_USD": 0.032054794469024,
+    "existing_disk_monthly_USD": 31.199999949850024,
+    "existing_storage_reserve_USD": 5,
+    "headroom": "Last stopped receipt132.28GiB free; actual mount/RAM/headroom must pass immediately at boot before heavy setup",
+    "max_export_GiB": 2,
+    "max_export_USD": 0.24,
+    "new_ceiling_USD": 1,
+    "no_new_resources": true,
+    "official_coverage": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "official_network_storage": "https://cloud.google.com/storage/pricing",
+    "paid_account": true,
+    "pending_usage": "unknown/delayed; not assumed zero",
+    "pending_usage_accounted": true,
+    "prior_unreconciled_exposure_reserve_USD": 30,
+    "provider_fallback_seconds": 2700,
+    "reported_cost_and_savings_DKK": 38.94,
+    "reported_net_DKK": 0,
+    "retention_extended": false,
+    "retention_review": "2026-10-21",
+    "storage_valid_until_epoch": 1792533600.0
+  },
+  "evidence": {
+    "actual-retained-consumer.json": {
+      "bytes": 3412,
+      "sha256": "51067d31f15493a6f8a2ef0d41532062d0e1e3f09b81ba10430fb16d213ab1c2"
+    },
+    "audit.json": {
+      "bytes": 10423,
+      "sha256": "7e27ef73e8ab4a0cf016c142ac2e2849aaf6e229b0f4ff1ba20bc89be7672e03"
+    },
+    "audit.log": {
+      "bytes": 3644,
+      "sha256": "b4379363f2ee3100cbcfa58ed35d472b127df781e24203592a93312b0262a46a"
+    },
+    "contracts-v1.log": {
+      "bytes": 1299,
+      "sha256": "f78a5cc92fe4aef4441216b1cb5fc5311fcbae9d2f0a4463f2420edb564ea9b8"
+    },
+    "contracts-v3.log": {
+      "bytes": 4620,
+      "sha256": "81e22e245c009c6432e40103af2683126a245e2773b35af43184e68fdbe32ec2"
+    },
+    "contracts-v4.log": {
+      "bytes": 5904,
+      "sha256": "6d7d7f18268ef94f8091cc2dfed9d538d0be2498dd03e0a51ce3d14cfef7b4d3"
+    },
+    "cost-credit-admission.json": {
+      "bytes": 1593,
+      "sha256": "c9d549886b464263d19adc684f2d7655eb4985ea61bc9ad7d6c16a7648faedfe"
+    },
+    "current-sku-quote.json": {
+      "bytes": 9190,
+      "sha256": "e66b4f51c3502971312bfff3945d78de7f5b00548fd76182f00f6baf2e3395d7"
+    },
+    "metabat-smoke-local.log": {
+      "bytes": 118028,
+      "sha256": "3767ff778a98625d59df8ca587abc6364382c37da59e0e91cbcb6af6f998c568"
+    },
+    "numerical-audit.json": {
+      "bytes": 881,
+      "sha256": "674fc27a6c2d23ed018f0df012f2be5e6465f9dbd0cd3060fd41ae1f56880759"
+    },
+    "provider-before.json": {
+      "bytes": 33097,
+      "sha256": "66a30ae3b3dcff1d50763c32cd4182302fe548326b739e91d29c8a96360d2938"
+    }
+  },
+  "failed_local_monitor_test": "contracts-v3: Mac sandbox refused ps before inert child; retained separately. contracts-v4 passed with process-inspection permission, native exit7/failure successor checks verified.",
+  "immutable_parent_commit": "8950e7e54420980c9039881631174e7b33342e61",
+  "local_tests": 8,
+  "native_MetaBAT2_tiny": "PASS on Mac 2.18:3 positive bins, all81contigs/400400bp retained, intended depth-order refusal; 20kb minimum bin applies to fixture only",
+  "native_cache_control": "PASS actual restored accepted15-contig cached control/refinement/export; full145702-row community restore/cache/graph read only, no changed community partition",
+  "native_smoke_CLI": {
+    "receipt": {
+      "bytes": 241,
+      "sha256": "97f275913b720fb85c675f9ec20265074bd46554e55793a263dc881ff9406e4c"
+    },
+    "status": "PASS"
+  },
+  "protocol": {
+    "bytes": 3614,
+    "sha256": "a2a205f39dc01a012f73822577f31f3ecd7d954f0ea025dff5a2bed7e4732b95"
+  },
+  "source": {
+    "experiments/E011-cached-grouping-reference/audit.py": {
+      "bytes": 7473,
+      "sha256": "3a96de918e3f30fc0d1a470ead2da3c49ca77cde0db3801852259e9bcbb02d6f"
+    },
+    "scripts/e011_cached.py": {
+      "bytes": 14830,
+      "sha256": "bf4c829c295fe11cd8ac901c185cd57e9ca221a4b13197d14c909cf88100ed7e"
+    },
+    "scripts/e011_exit_watchdog.py": {
+      "bytes": 2426,
+      "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+    },
+    "scripts/e011_metabat.py": {
+      "bytes": 6653,
+      "sha256": "a51614c3f9348aba65e7b843426090f6be7b68b5cb628fdec5a881437fd77899"
+    },
+    "scripts/e011_native_smoke.py": {
+      "bytes": 1938,
+      "sha256": "3fb5d3ad848afca3ef2d06fff53652562de9d3cdf84a491167169ab2beb95b6f"
+    },
+    "scripts/e011_phase.py": {
+      "bytes": 9440,
+      "sha256": "6a9544fc0b062e0449004d7d14e0db20ad519e1ea6b6de0f7dcf4919ed217ea1"
+    },
+    "tests/test_e011.py": {
+      "bytes": 9864,
+      "sha256": "521a528d8a7d4d1bf93947505a443ec3df9eb8d374dc4ea9a7c9e11b6810e78a"
+    },
+    "tests/test_e011_phase.py": {
+      "bytes": 5246,
+      "sha256": "5fcd1431196285a20abd3d063b99792eb20d25437e8001a13c113aa2dfeaeaee"
+    }
+  },
+  "status": "local engineering passed; native Linux gates and community execution pending",
+  "unavailable": "Linux current boot/prefix/installer/native commands and all community outputs remain unexecuted at this receipt"
+}

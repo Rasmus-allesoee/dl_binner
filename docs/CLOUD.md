@@ -3,6 +3,17 @@
 Updated: 2026-10-17 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
+**E011 is directly authorized after gates; the VM is still TERMINATED at local preparation.**
+[The E011 record](../experiments/E011-cached-grouping-reference/README.md) owns the
+cached grouping control and one MetaBAT2 mean-depth reference. Fresh paid-account
+credit DKK1,933.15 Available through 2027-01-12; reported cost/savings 38.94/net0,
+pending usage unknown. Fresh DKK catalog rates give a ~$0.547 fallback envelope
+under a new $1: existing 8 CPU/32 GiB/300 GiB, 30-minute cumulative clock/45-minute
+provider STOP, 25-GiB free reserve/20-GiB extra cap/<=2-GiB export. No new resources,
+retention extension, automatic retry or broader external run. Fresh native mount,
+headroom/runtime/source and boot/process watcher checks precede release. Existing
+disks remain ~$31.20/month while stopped; **October 21** review is unchanged.
+
 **E010 is complete and the VM is independently TERMINATED.**
 [The completed review](../experiments/E010-coherent-prototype/review.json) binds
 GCP status, matching guest/private completion, the verified 335,636,093-byte science

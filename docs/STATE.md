@@ -4,54 +4,45 @@ Updated: 2026-10-17. This is the single current handoff.
 
 ## Exact next step
 
-**E010 completed successfully; the integrated candidate does not beat dev3 on
-conservative full-reference recovery.** [The independent review](../experiments/E010-coherent-prototype/review.json)
-verifies private completion, all 692 scientific members, all seven serial stages,
-full 145,702 contigs /231,678,157 bp, ordered ten-depth axes, real windows, exact
-native reload, sparse graph/marker cache and complete pre/post DNA exports.
-GCP independently confirms **TERMINATED**, stop **October 16 21:47:33.061 UTC /
-23:47 Copenhagen**, after **1,303.115 s /0.361976 h**. No wake/resource change,
-refit, external binner or confirmation acquisition occurred during review.
+**E011 is locally prepared and directly authorized, conditional on the live/native gates.**
+[The prospective protocol](../experiments/E011-cached-grouping-reference/README.md)
+freezes one cached CPM-versus-RB objective control and one justified MetaBAT2 2.18
+mean-depth reference. New branch `codex/e011-cached-grouping-reference`; do not
+retrain dev4, rebuild neighbors, redetect markers or alter its refinement policy.
+The owner explicitly authorizes execution after checks, superseding E010's earlier
+preparation-only following prompt. No separate execution approval is needed.
 
-Weighted conservative R95 (>=200 kb bins, >=95% confirmed purity, full provided
-bacterial references): **dev3 learned ten-depth 5.3911%; dev4 pre 1.8763%; post 4.2909%**.
-Targets >=50%-recovered: **13→3→6**; >=90%: 1→1→2. Refinement helps its fixed
-embedding, but the whole bundle does not pass the performance goal. Do not promote
-it as stronger from improved neighbor agreement alone. Bacterial 5-NN 67.05→72.59%,
-while bp-weighted 79.62→78.73% and >=10 kb 81.79→79.40%; identical query populations.
-One 35.10 Mb bacterial-dominant pre-bin contains 107 supported genomes; 45/57 large
-bacterial-dominant post-bins remain below 95% purity. Refinement newly unassigns
-20.50 Mb, including 8.49 Mb confirmed bacterial support, with all DNA retained.
+[Audit](../experiments/E011-cached-grouping-reference/audit.json) confirms a real
+prose/code discrepancy: actual refinement uses the second-largest clean-family
+count, affecting four adopted proposals. This conservatively requires two families
+to support the split count, but was not stated in the original prose. Preserve
+that executed policy in the CPM control; it cannot explain the poor pre-refinement
+output. No fatal feature/pairing/graph/evaluation defect was identified. Only
+13,554/89,041 eligible parents train; 12,337 training parents have identical pair
+draws. These and shared parent depth/false negatives remain scientific risks,
+not proof of an optimal implementation. Strict Mac portability remains failed.
 
-**Next: locally prepare one cached CPM-versus-RB grouping-objective control.**
-Keep the dev4 encoder, unit vectors, graph/weights, marker cache and current
-refinement fixed. Freeze one justified label-free density setting before changed
-scores; no truth K, score grid or automatic retries. This tests a coarse-grouping
-hypothesis cheaply; long-contig representation/refinement losses remain alternative
-explanations. [Operations](../experiments/E010-coherent-prototype/OPERATIONS.md#exact-following-step-prompt)
-owns the exact preparation prompt and prospective new $1 request. No next community
-partition, score, fit or cloud execution is authorized by this review. Use selective
-ablations and preserve dev3, dev4 and all accepted E009 evidence.
+Eight new software/launcher contracts pass, actual tiny cached native readers/
+refinement/export pass, and actual Mac MetaBAT2 cvExt binning/order-refusal pass.
+The sealed original community archive/cache is read-only verified without a new
+community partition/score. [Local receipt](../experiments/E011-cached-grouping-reference/local-observed.json)
+owns actual versus mocked host/cloud boundaries and the preserved sandbox-monitor
+failure. Linux gates run inside the upcoming same cumulative clock, before science.
 
-Native Linux checkpoint reload is bitwise exact. The independent Mac inference
-comparison **fails its unchanged rtol1e-5/atol2e-6 at four coordinates**, maximum 3.135e-6;
-evidence masks match. The failed review is retained. Diagnostics use original
-verified Linux bytes under an explicit limited scope; Mac portability is **not**
-passed and no tolerance/embedding was changed. All five new reader contracts,
-existing diagnostic/evaluator contracts and native AMBER pass. No quality claim
-extends beyond this one development assembly/source-truth convention.
+Fresh paid-account credit DKK1,933.15 Available through 2027-01-12; delayed reported
+cost/savings 38.94/net0, pending usage unknown. Existing resources only, new $1,
+30 cumulative minutes from VM start, provider STOP 45 minutes, 25-GiB free reserve,
+20-GiB extra-space cap and <=2-GiB export; conservative fallback ~$0.547. Arm/verify
+a fresh boot/process-bound held parent and watchdog before release. At this
+preparation checkpoint the last independently observed VM state is TERMINATED.
+No resize/provisioning/retry/extension or broader external campaign. Keep the
+**October 21** storage review and ~$31.20/month existing stopped-disk cost.
 
-Priced gross compute/IP **$0.09884**, disk interval **$0.01547**, scientific export
-upper **$0.03752**, prior asset readback~$0.00250, plus small object/operation costs:
-~$0.1543 before those small charges, **<$0.19 with reserve**, inside the original $2.
-Fresh Welcome credit **DKK1,933.15 Available through 2027-01-12**; reported
-cost/savings 38.35/net 0 remains delayed, not an invoice. Sampled candidate/collection
-filesystem peak 162.69 GiB, free 132.28 GiB; outer readback adds a 335.6 MB copy beyond
-that persisted sample scope. No new capacity is needed. Existing 30/300 GiB disks
-remain **$31.20/month while stopped**; **October 21** review remains, no extension.
-Branch **`dev4-coherent-prototype`** preserves all commits; executed source stays
-**6917c3f**. [The launch receipt](../experiments/E010-coherent-prototype/native-observed.json)
-is preserved as the earlier running observation; it is not current VM status.
+E010 remains accepted development evidence: full 145,702 contigs /231,678,157 bp,
+ordered ten-depth axes, native exact reload and all DNA retained. Weighted R95
+was pre 1.8763% /post 4.2909% versus dev3 learned ten-depth 5.3911%; the bundle
+is not promoted as stronger. [Its completed review](../experiments/E010-coherent-prototype/review.json)
+and original source/locks/outputs/failure journals remain immutable.
 
 A [prospective confirmation choice/protocol](../experiments/E010-coherent-prototype/confirmation-plan.json)
 is frozen before changed community scores: CAMI II Toy HMB oral pooled GSA,

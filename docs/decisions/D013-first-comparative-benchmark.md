@@ -8,7 +8,7 @@ The later 2026-10-14 owner message authorizes the prepared **data-only phase at
 5fec4e1d1700c64c4bdd9945bad4e116ade73c57**, subject to live credit/price/quota checks.
 It superseded the all-shortlist execution plan and excluded fits/scores from that
 data-only scope. A later separate $2 authorization executed only the four unchanged
-controls, now reviewed; no external run is authorized. CompleteBin's full run is deferred. The ten-coverage, one-assembly
+controls, now reviewed; that approval included no external run. CompleteBin's full run is deferred. The ten-coverage, one-assembly
 choice and immutable prototype source remain.
 [Operations](../../experiments/E009-competitive-benchmark/OPERATIONS.md) owns exact
 axes/resources/costs and the following execution prompt.
@@ -320,3 +320,16 @@ the next preparation, with no encoder fit, external tool or automatic campaign.
 No product feature family is selected or rejected. Additional confirmation data
 remain prospectively frozen but unacquired; no SOTA/generalization claim follows.
 Existing storage review stays October 21; the original $2 is not a future budget.
+
+## One feasibility reference and cached objective, 2026-10-17
+
+The owner directly authorizes [E011](../../experiments/E011-cached-grouping-reference/README.md)
+after local/native and live credit/storage/cost gates: one frozen cached CPM
+objective, actual dev4 refinement unchanged, plus one MetaBAT2 2.18 mean-only
+reference on the same accepted assembly/ten-depth data. The latter can establish
+an achievable recovery gap under the same conservative truth/denominators; a low
+result suggests difficulty/restriction, not defective simulation. Its native
+cvExt variance=mean assumption and different short-contig eligibility stay explicit.
+No broad mature-tool campaign or CompleteBin execution is authorized. New $1 /
+30-minute cumulative clock /45-minute STOP fits the ~$0.547 fallback estimate;
+the owner permits justified expansion but none is proposed. October 21 remains.

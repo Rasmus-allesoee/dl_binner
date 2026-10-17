@@ -331,3 +331,12 @@ cached CPM-versus-RB grouping-objective control, not another encoder/external fi
 Q001/Q003/Q005 remain open generally; this does not decide product feature families,
 novelty or generalization. H001/E001 are unchanged. Oral-GSA confirmation stays
 prospectively fixed and unacquired; next execution needs its own budget/credit gate.
+
+2026-10-17: [E011](../../experiments/E011-cached-grouping-reference/README.md) freezes
+one label-free CPM density rule on retained dev4 vectors/graph, holding actual
+marker refinement fixed. Its source audit documents the seed prose discrepancy
+and plausible representation risks without asserting a proven cause. One MetaBAT2
+mean-depth reference adds an achievable-recovery/difficulty observation, not a
+causal component claim or verdict on simulation quality. Keep Q001/Q003/Q005 and
+feature-family conclusions open; confirmation/overlap admission stays separate.
+The owner authorizes this bounded execution directly after gates.

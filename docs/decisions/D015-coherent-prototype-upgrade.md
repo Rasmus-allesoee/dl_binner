@@ -189,3 +189,17 @@ prospective oral-GSA confirmation, after source/truth/overlap admission. Keep al
 external binners deferred and October 21 retention visible. AGENTS now distinguishes
 exact native reload from cross-platform numerical portability; the failed tolerance
 is preserved while native-byte diagnostics have their own explicit admission scope.
+
+## Frozen implementation audit and next controlled execution, 2026-10-17
+
+[E011](../../experiments/E011-cached-grouping-reference/audit.json) finds a real
+prose/code contract discrepancy in marker seeds: second-largest family count is
+executed, providing two independent witnesses for the split count. Four adopted
+proposals differ from the largest-count prose. Preserve it in the cached objective
+control; changing it would confound that test. It cannot cause the poor pre-stage.
+Saved transform arithmetic, disjoint parent pairing, parent-depth semantics,
+geometry/graph, refinement accounting and evaluation show no identified fatal bug;
+this is not proof of optimality or an exhaustive absence of defects. Limited
+window diversity, long-only training, false negatives and depth shortcut remain.
+The new owner authorization covers direct E011 execution and one MetaBAT2 external
+feasibility reference after gates, not an encoder repair or larger campaign.

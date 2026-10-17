@@ -1,0 +1,121 @@
+{
+  "archive": {
+    "archive": {
+      "bytes": 335636093,
+      "sha256": "3ec883477ce6c9e070632200508be8b707e84a11938f51e6221089eb94d165a3"
+    },
+    "every_member_hashed": true,
+    "expected_member_manifest_verified": true,
+    "inventory": {
+      "bytes": 145891,
+      "sha256": "fee4157ca1b47f05573e5c5d6748674fb0c6f48e72a0a94f254ef79fd5d1383a"
+    },
+    "inventory_note": "Science uses the pre-transfer inventory; closure members are bound by the verified archive hash and inventoried individually",
+    "logical_member_bytes": 763504773,
+    "regular_members": 692,
+    "uri": "gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/candidate-run-evidence.tar.gz"
+  },
+  "candidate_lock": {
+    "bytes": 6654,
+    "sha256": "4b9d27e42a9e8427d66cac4ec3a612742401a6a34cf5aa0b4ccf851a1c6ec83e"
+  },
+  "config": {
+    "audit_queries": 64,
+    "batch_size": 512,
+    "depth_hidden": 64,
+    "epochs": 20,
+    "exact_threshold": 2048,
+    "fusion_hidden": 128,
+    "inference_batch_size": 2048,
+    "learning_rate": 0.001,
+    "leiden_iterations": 2,
+    "min_bin_bp": 10000,
+    "min_bin_contigs": 2,
+    "min_length": 500,
+    "min_neighbor_recall": 0.9,
+    "neighbors": 30,
+    "output": 64,
+    "refinement_iterations": 10,
+    "refinement_margin": 0.05,
+    "refinement_min_cosine": 0.2,
+    "resolution": 1.0,
+    "seed": 11,
+    "sequence_hidden": 256,
+    "sequence_loss_weight": 0.5,
+    "sequence_output": 128,
+    "temperature": 0.2,
+    "weight_decay": 1e-05,
+    "window_max": 10000,
+    "window_min": 1000,
+    "window_pairs": 2
+  },
+  "confirmation": {
+    "bytes": 3898,
+    "sha256": "73962986614d043495ac939456ad5b35e0afc968985a892005c4317701dc0a16"
+  },
+  "cpm": {
+    "density_rule": "median_positive_retained_edge_weight / frozen_neighbor_count",
+    "leiden_iterations": 2,
+    "neighbors": 30,
+    "node_sizes": 1,
+    "seed": 11
+  },
+  "decision": {
+    "external_material_gap_percentage_points": 1,
+    "keep_min_R95_gain_percentage_points": 0.5,
+    "keep_min_relative_assigned_confirmed_bacterial_bp": 0.9,
+    "keep_min_target50_count": 6,
+    "no_grid_or_automatic_recovery": true
+  },
+  "experiment": "E011",
+  "frozen_before_changed_partitions": true,
+  "inputs": {
+    "depth": {
+      "bytes": 24197403,
+      "sha256": "48e49f4bb2ec1892f4be1f4db7dbf8616709889c36148f3d14473f52fd1b7aec"
+    },
+    "fasta": {
+      "bytes": 237732361,
+      "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+    },
+    "marker_hmm": {
+      "bytes": 15929643,
+      "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9"
+    },
+    "marker_manifest": {
+      "bytes": 4655,
+      "sha256": "d1898ef92fa992881103cd19de2be6066db38917cb3be2e3ece86d35035692b3"
+    }
+  },
+  "limits": {
+    "cumulative_seconds": 1800,
+    "free_reserve_GiB": 25,
+    "gross_USD": 1,
+    "max_export_GiB": 2,
+    "max_extra_GiB": 20,
+    "provider_STOP_seconds": 2700
+  },
+  "metabat": {
+    "linux_build": "h38e344b_2",
+    "minClsSize": 200000,
+    "minContig": 2500,
+    "mode": "native cvExt; measured means only; native variance=mean assumption",
+    "osx_build": "hc05488d_2",
+    "seed": 11,
+    "threads": 8,
+    "version": "2.18"
+  },
+  "original_review": {
+    "bytes": 95701,
+    "sha256": "03f142d336754c87cde10fd924283de06cd9d2a27f8aa646c9a30c8e678dbf98"
+  },
+  "truth": {
+    "N_quarantine_percent": 3.3034,
+    "admission": {
+      "bytes": 14364,
+      "sha256": "65b3ee7fc1a7b9cbe9e5e6ababdba606a85d0708c0f60bbcda2c25a7aaa25aed"
+    },
+    "primary": "same full reference conservative R95; all bin DNA"
+  },
+  "version": 1
+}
