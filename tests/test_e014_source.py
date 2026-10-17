@@ -43,6 +43,8 @@ class SourceContracts(unittest.TestCase):
             self.assertEqual(result['verified_GSA_loci'],1)
             lengths=json.loads((root/'source-validation-v1/denominators.json').read_text())['g1']
             self.assertEqual(lengths['raw_bp'],12);self.assertEqual(lengths['exact_DNA_deduplicated_bp'],6)
+            references=json.loads((root/'source-validation-v1/references.json').read_text())
+            self.assertEqual(references[0]['canonical_sha256'],hashlib.sha256(min('ACGTAC','GTACGT').encode()).hexdigest())
             self.assertIn('PROVISIONAL',result['status'])
             self.assertTrue((root/'admission-v1/joins.sqlite').is_file())
 

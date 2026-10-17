@@ -115,8 +115,10 @@ def audit(root=ROOT, e009_catalog=None):
                     raise ValueError('Empty/duplicate source record ID')
                 records_seen.add((name.name, record))
                 sha = hashlib.sha256(dna.encode()).hexdigest()
-                reverse_sha = hashlib.sha256(dna.translate(complement)[::-1].encode()).hexdigest()
-                canonical = min(sha, reverse_sha)
+                # Match E009's frozen canonical_dna writer: choose the lexical
+                # sequence first, then hash, rather than taking a minimum hash.
+                reverse = dna.translate(complement)[::-1]
+                canonical = hashlib.sha256(min(dna, reverse).encode()).hexdigest()
                 lower = header.lower()
                 molecule = ('plasmid' if 'plasmid' in lower else 'chromosome' if 'chromosome' in lower else 'unannotated')
                 refs.append(dict(genomes=genomes, source=name.name, record=record, header=header,
