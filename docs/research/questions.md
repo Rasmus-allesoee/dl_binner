@@ -357,3 +357,12 @@ control is the next selective question. The sole MetaBAT reference reaches
 contracts, without a causal component or simulation-validity verdict. General
 Q001/Q003/Q005 and H001/E001 conclusions remain open/unchanged. No product feature
 family, optimality or SOTA claim; oral-GSA unacquired, October 21 review retained.
+
+2026-10-17 prospective E012: retain CPM as the working development grouping
+direction, preserving the failed E011 practical criterion. Test one local graph
+CPM-gain guard on exact cached parent/child alternatives in RB/CPM contexts, with
+a separate all-adopted-seed locus/call audit. Marker information remains a product
+priority; duplicate removal alone is insufficient acceptance evidence. The
+[frozen protocol](../../experiments/E012-marker-acceptance/protocol.json) predates
+changed community selection/scores. No feature-family or generalization claim;
+oral-GSA remains unacquired and October 21 storage review remains.

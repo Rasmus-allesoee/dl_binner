@@ -258,3 +258,26 @@ frozen label-free rule. Existing RB/CPM proposals avoid new fits, marker scans o
 Leiden execution; $0 new cloud compute. This tests a demonstrated harmful stage
 without returning to a mandatory tiny-feature campaign. Oral-GSA confirmation is
 still frozen/unacquired, with independent population/truth/overlap/cost admission.
+
+## Owner clarification and E012 prospective acceptance control, 2026-10-17
+
+The previous "do not promote" recommendation was too rigid. Preserve E011's failed
+numeric keep criterion, but **retain CPM as the provisional working development
+grouping direction**: with fixed vectors/graph it materially improves pre grouping
+and its harmful marker stage is separately identifiable. RB is a historical
+matched diagnostic control, not a recommended return path. No resolution grid or
+claim to outperform dev3 follows; target-level coverage remains relevant alongside
+the aggregate. Practical effect thresholds are decision aids rather than biology
+or significance tests.
+
+Markers remain a strong product priority supported by the completed source/thesis
+reviews. Adjust the confidence and context with which repeated calls are used;
+do not equate family membership with universal single-copy specificity or allow
+duplicate removal alone to justify a destructive split. [E012](../../experiments/E012-marker-acceptance/README.md)
+freezes one label-free graph CPM-gain acceptance rule for exact retained RB/CPM
+parent/child alternatives, with no regeneration, grid or new runtime science.
+A separate retained-PAF gene/domain audit diagnoses loci, replicons, copy/call
+specificity and possible duplication; truth never selects an alternative. This
+local control is authorized now, with engineering tests before one matched
+comparison. A null all-veto outcome can demonstrate protection only. Neither
+success nor failure decides a feature family or validates generalization.

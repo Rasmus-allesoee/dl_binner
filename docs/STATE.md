@@ -16,8 +16,10 @@ neighbor-index build, data DAG or changed seed ran.
 [Reviewed E011 evidence](../experiments/E011-cached-grouping-reference/review.json):
 weighted full-reference R95 is RB pre **1.8763%**, RB post **4.2909%**, CPM pre
 **5.3990%**, CPM post **4.6171%**, preserved dev3 learned ten-depth **5.3911%**,
-MetaBAT2 **8.5493%**. CPM post's +0.3261-point gain fails the frozen +0.5 keep rule;
-do not promote the setting or run a resolution grid. CPM pre's near-tie with dev3
+MetaBAT2 **8.5493%**. CPM post's +0.3261-point gain fails the frozen +0.5 keep rule.
+The owner's later clarification and D015 revision retain CPM as the working
+development grouping direction; that practical threshold is not a universal
+scientific veto. No resolution grid. CPM pre's near-tie with dev3
 has 8 versus 13 targets >=50%, not a stronger-binner claim. The sole MetaBAT cvExt
 reference recovers 16 targets >=50%/5 >=90%, demonstrating a material feasible gap
 under this assembly/truth/metric, without a component cause or simulation verdict.
@@ -32,12 +34,17 @@ that a split helps recovery. Preserve the original Mac allclose failure and nati
 vectors. Full DNA, all length/origin/native-eligibility populations, 156 primary
 provided-reference denominators and **3.3034% N-quarantine** remain in diagnostics.
 
-**Next decision:** one local restore-only parent-versus-retained-child acceptance
-control, informed by a marker-copy reliability audit. Freeze one label-free policy
-before changed scores; reuse retained RB/CPM proposals instead of another encoder
-fit, marker search or Leiden run. This directly addresses an observed harmful
-stage and needs no new cloud compute. [Operations](../experiments/E011-cached-grouping-reference/OPERATIONS.md#exact-next-prompt)
-owns the exact prompt. Oral-GSA confirmation stays frozen and unacquired; its
+**Authorized current block:** [E012](../experiments/E012-marker-acceptance/README.md),
+one local restore-only parent/retained-child acceptance control on branch
+`e012-marker-acceptance-control`. Its single predeclared graph CPM-gain rule keeps
+the E011 density, graph, vectors and existing proposals unchanged. Marker calls
+propose; graph context must support accepting a split. RB remains a matched
+diagnostic context, CPM the working direction. Local tiny reader/selection/native
+fixed-score/full-export tests precede the once-per-context community comparison
+and separate gene/domain-to-retained-PAF audit. No changed community outcomes yet.
+No new encoder fit, split, marker search, optimizer, neighbor build or cloud use.
+This selective control directly tests an observed harmful stage and does not
+create another default tiny-feature campaign. Oral-GSA stays frozen/unacquired; its
 source/replicon/taxonomy/overlap/truth/cost admission remains separate. No external
 expansion, CompleteBin, architecture change or confirmation run followed E011.
 

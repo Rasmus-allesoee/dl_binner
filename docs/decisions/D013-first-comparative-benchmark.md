@@ -385,3 +385,19 @@ frozen label-free rule. Existing RB/CPM proposals avoid new fits, marker scans o
 Leiden execution; $0 new cloud compute. This tests a demonstrated harmful stage
 without returning to a mandatory tiny-feature campaign. Oral-GSA confirmation is
 still frozen/unacquired, with independent population/truth/overlap/cost admission.
+
+## E012 local follow-through and interpretation revision, 2026-10-17
+
+[D015's clarification](D015-coherent-prototype-upgrade.md#owner-clarification-and-e012-prospective-acceptance-control-2026-10-17)
+revises the prior over-rigid recommendation against promoting CPM. Keep the failed
+E011 practical threshold as recorded, while using CPM as the provisional working
+grouping direction. RB remains a diagnostic context. Repeated marker use in strong
+tools supports retaining marker information as a product priority; it does not
+make every duplicate call reliable evidence for splitting.
+
+The owner authorizes [E012](../../experiments/E012-marker-acceptance/README.md),
+one local restore-only acceptance rule on existing parent/child proposals plus a
+separate marker-locus audit and bounded full-denominator evaluation. Its value is
+testing protection from an observed destructive stage without a new fit or tool
+campaign. No new cloud spend, repeated science, confirmation acquisition or
+retention extension; oral-GSA and October 21 review remain unchanged.

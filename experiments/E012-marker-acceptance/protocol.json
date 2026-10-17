@@ -1,0 +1,105 @@
+{
+  "authorization": "2026-10-17 owner: local restore-only matched acceptance comparison; no cloud/external/fit/rebuild",
+  "config": {
+    "audit_queries": 64,
+    "batch_size": 512,
+    "depth_hidden": 64,
+    "epochs": 20,
+    "exact_threshold": 2048,
+    "fusion_hidden": 128,
+    "inference_batch_size": 2048,
+    "learning_rate": 0.001,
+    "leiden_iterations": 2,
+    "min_bin_bp": 10000,
+    "min_bin_contigs": 2,
+    "min_length": 500,
+    "min_neighbor_recall": 0.9,
+    "neighbors": 30,
+    "output": 64,
+    "refinement_iterations": 10,
+    "refinement_margin": 0.05,
+    "refinement_min_cosine": 0.2,
+    "resolution": 1.0,
+    "seed": 11,
+    "sequence_hidden": 256,
+    "sequence_loss_weight": 0.5,
+    "sequence_output": 128,
+    "temperature": 0.2,
+    "weight_decay": 1e-05,
+    "window_max": 10000,
+    "window_min": 1000,
+    "window_pairs": 2
+  },
+  "confirmation": "oral-GSA remains frozen/unacquired; separate source/genome/replicon/taxonomy/overlap/truth and cost admission before execution",
+  "criteria": {
+    "abandon": "abandon this gate as a universal quality selector if it cannot protect useful parents across contexts; never infer markers/CPM are useless",
+    "keep": "engineering/full-DNA contracts pass; directional full-reference recovery and target losses vs parent/old children reported in both contexts; protective result can be retained as safety guard",
+    "modify": "graph-positive selections still cause target loss, or useful RB splits are vetoed; revise acceptance model in a future prospectively specified test, not this run",
+    "no_marker_benefit_claim_if_all_vetoed": true,
+    "no_universal_effect_threshold": "effect sizes are development decision aids; no post-hoc rule/threshold change"
+  },
+  "declared_before_changed_community_selection_and_scores": true,
+  "design": {
+    "CPM": "working development grouping direction; original E011 threshold failure retained; no resolution grid or stronger-binner claim",
+    "RB": "historical matched diagnostic context, not recommendation to return to RB",
+    "independence": "graph support differs from marker conflict removal, but graph shares encoder/weights with grouping; not biological independence",
+    "markers": "retain product priority; trusted calls propose splits, duplication alone is not proof of contamination; no truth-based family blacklist",
+    "null": "all CPM proposals may be vetoed because CPM already optimized this objective; equal-to-parent result demonstrates protection only"
+  },
+  "evaluation": {
+    "N_quarantine_bp": 7653205,
+    "N_quarantine_percent": 3.3034,
+    "denominators": "all 145702 contigs /231678157bp, 156 primary targets /554661890 full provided bp, all origin/length/eligibility/clean-marker populations",
+    "metrics": [
+      "weighted/macro full-reference R95 at 200kb bin/95% full-DNA purity",
+      "target >=50% and >=90%",
+      "paired parent/old-child/selected target deltas",
+      "assignment/origin/length and restricted B3",
+      "unchanged raw/learned geometry from accepted E010/E011, no new vectors"
+    ],
+    "truth": "admitted conservative E009 v2, separate process after selection"
+  },
+  "marker_audit": {
+    "limits": "family membership is not universal single-copy specificity or functional validation; no reference sequence reannotation; whole-chain identity does not establish gene-specific identity",
+    "method": "clip every retained qualifying competing PAF CIGAR piece and global nn veto to cached gene/domain coordinates, exact canonical circular normalization; no new aligner",
+    "scope": "all cached adopted seed families in both contexts; report the four previously observed harmed CPM parents separately"
+  },
+  "question": "Can independent retained graph support veto destructive marker proposals while retaining useful ones?",
+  "record": "E012",
+  "resources": {
+    "additional_local_disk_estimate_bytes": 2000000000,
+    "cloud_cost_usd": 0,
+    "cloud_start": false,
+    "local_threads": 4,
+    "per_stage_seconds": 900,
+    "ram_bytes": 8000000000,
+    "storage_review": "2026-10-21; no cloud retention extension",
+    "total_control_seconds": 1800
+  },
+  "rule": {
+    "accept": "delta > 8*math.ulp(max(1,abs(gamma*separated_pairs),abs(cut_weight)))",
+    "alternatives": "original full parent or exact retained children/noise only; non-adopted proposals leave parent",
+    "delta": "gamma*(choose(n_parent,2)-sum choose(n_child,2))-cut_weight",
+    "density_source": "unchanged E011 median positive graph edge weight / 30",
+    "gamma": 0.01294708220433279,
+    "name": "retained-child positive CPM gain",
+    "node_sizes": 1,
+    "noise": "each retained unassigned vertex is a distinct singleton for scoring only; every lost edge counts; actual noise stays unassigned",
+    "objective": "S=sum_c(internal undirected edge weight - gamma*n_c*(n_c-1)/2)",
+    "selection_inputs": "features/unit geometry/fixed sparse graph, pre/post partitions and existing clean marker calls; no truth/taxonomy/K",
+    "tie": "keep original parent; math.fsum edge weights, no practical threshold fit"
+  },
+  "samples": [
+    "cami3_toy_human_gut_short_read_sample_0",
+    "cami3_toy_human_gut_short_read_sample_2",
+    "cami3_toy_human_gut_short_read_sample_3",
+    "cami3_toy_human_gut_short_read_sample_4",
+    "cami3_toy_human_gut_short_read_sample_6",
+    "cami3_toy_human_gut_short_read_sample_9",
+    "cami3_toy_human_gut_short_read_sample_10",
+    "cami3_toy_human_gut_short_read_sample_11",
+    "cami3_toy_human_gut_short_read_sample_14",
+    "cami3_toy_human_gut_short_read_sample_17"
+  ],
+  "status": "planned"
+}

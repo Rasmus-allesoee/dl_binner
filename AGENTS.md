@@ -175,6 +175,12 @@ community benchmark.
 Preserve the accepted main implementation as the immutable comparator on a new
 research branch; do not quietly tune that baseline to the comparison's scores.
 
+Predeclared practical effect thresholds support the scoped experiment's decision;
+they are not biological standards or statistical significance tests. Preserve a
+failed criterion unchanged, while allowing an explicitly reasoned provisional
+development direction based on the complete paired evidence. Do not turn one
+threshold into a permanent ban on a method or retune it after seeing outcomes.
+
 Report lineage/origin and length denominators alongside community-wide diagnostic
 aggregates. A representation gain driven by non-target organisms is not evidence
 of improvement for the primary cellular targets. Compare the same query populations
@@ -524,6 +530,9 @@ when passing a prepared commit-message file to Git.
 ### Branches and experimental work
 
 Use branches when they genuinely help isolate substantial, risky, or exploratory work.
+
+Owner preference, 2026-10-17: use descriptive branch names without the `codex/`
+prefix. Preserve existing branch names and source commits referenced by evidence.
 
 Do not create branch/process ceremony for trivial changes.
 

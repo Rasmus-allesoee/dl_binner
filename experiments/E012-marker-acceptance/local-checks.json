@@ -1,0 +1,68 @@
+{
+  "actual": [
+    "full production restore-only consumer on tiny sealed restore/native archive",
+    "native NPZ readers/opaque-ID FASTA remapping",
+    "fixed-membership igraph/leidenalg CPM quality delta",
+    "complete native export and independent full DNA accounting",
+    "missing/corrupt/existing-directory refusal",
+    "truth-v2 PAF readers plus/minus/indels/circular/N-veto/competitor/malformed contracts",
+    "complete paired target denominator and unknown/non-target population cells",
+    "successful selection reuse refuses corruption/failure"
+  ],
+  "code": {
+    "e012_acceptance.py": {
+      "bytes": 13701,
+      "sha256": "3942c0e3e021eff589d8f2d555ea7cfa8238d02a7ca15813e9cc36d5f76b9039"
+    },
+    "e012_local.py": {
+      "bytes": 4786,
+      "sha256": "3c9b216898b7746174cc74f8b2a16ef464b2d9c84b2f1328906ed5426d76da74"
+    },
+    "e012_marker_audit.py": {
+      "bytes": 11410,
+      "sha256": "9a501479aa903408ceb4e947b3ef22132c14ebf0d3bcd0ed6ada178c979e49df"
+    },
+    "e012_review.py": {
+      "bytes": 10338,
+      "sha256": "c9e07b4a66c36e17b648096928dc52a041ccc573dd24c2e753cd241e7fd2b9ed"
+    }
+  },
+  "docs": {
+    "local_links": 923,
+    "maintained_documents": 65,
+    "optional_historical_caches_unavailable": 10,
+    "status": "PASS"
+  },
+  "hand_authored": [
+    "tiny genes/HMM domains/cache metadata and pre/post partitions, not native gene detection or generated splits"
+  ],
+  "mocks": [],
+  "new_contracts": 8,
+  "not_run": [
+    "training or inference",
+    "marker detector or reference reannotation",
+    "community optimizer or neighbor index",
+    "new Linux/cloud phase",
+    "new community selection/scoring before source freeze"
+  ],
+  "related_contracts": 21,
+  "status": "PASS",
+  "tests": {
+    "related-contracts-v1.log": {
+      "bytes": 1330,
+      "sha256": "a3fd4ba574fd8ac6eb8709e54973307eadacccb8ddc60b50a8bdf61e53522db0"
+    },
+    "tests-v1.log": {
+      "bytes": 2153,
+      "sha256": "32aa483e4a394f6889a42b198b39204f5be9bea6416059492f3d901fbb69395a"
+    },
+    "tests-v2.log": {
+      "bytes": 1314,
+      "sha256": "38a08b8af92ce3b0de0f82d1abdc994c3edb65188beb332e54c9607b8d944594"
+    },
+    "tests-v3.log": {
+      "bytes": 1316,
+      "sha256": "786208e48366db71dd7a5de623daf9bda097326c6a8d9e1c4fecd383f24a04fc"
+    }
+  }
+}
