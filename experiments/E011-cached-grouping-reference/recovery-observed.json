@@ -1,0 +1,72 @@
+{
+  "status": "LOCAL_PASS_NATIVE_RECOVERY_PENDING",
+  "previous_failed_phase": "cached-20261017T005141Z-ab80312",
+  "previous_failure_preserved": true,
+  "owner_authorization": "2026-10-17: debug and retry operational errors directly without a new ceiling approval prompt; watch a short job through completion",
+  "scientific_protocol": {
+    "bytes": 3614,
+    "sha256": "a2a205f39dc01a012f73822577f31f3ecd7d954f0ea025dff5a2bed7e4732b95"
+  },
+  "reuse_lock": {
+    "bytes": 1237,
+    "sha256": "37c3955f327529d3e623d2515116ea9bb646de164fd378fed3e8e98925f230d2"
+  },
+  "local_tests": {
+    "tests": 10,
+    "status": "PASS",
+    "seconds": 9.763,
+    "log": {
+      "bytes": 6233,
+      "sha256": "8bdef005d8aa5f6a83f8aea26ef348e814b004f191c0204e4d205b3e42069374"
+    },
+    "scope": "Actual tiny sparse graph/FASTA/refinement/export, runtime aliases, retained cache/prefix verification and inert parent supervision; cloud/host transport boundaries substituted. Repaired Linux gates pending."
+  },
+  "cost_gate": {
+    "checked_utc": "2026-10-17T08:05:01.817195+00:00",
+    "paid_account": true,
+    "credit_remaining_DKK": 1929.71,
+    "credit_original_DKK": 1973.43,
+    "credit_status": "Available",
+    "credit_scope": "Certain usage; see Free Trial terms; net pricing",
+    "credit_expiry": "2027-01-12",
+    "reported_cost_and_savings_DKK": 41.58,
+    "reported_net_DKK": 0,
+    "pending_usage": "unknown/delayed; not assumed zero",
+    "prior_unreconciled_exposure_reserve_USD": 30,
+    "existing_storage_reserve_USD": 5,
+    "coverage": "ordinary E2/nonpremium Ubuntu/PD/IP/Iowa private Standard Storage and operations/network; existing eligible products only",
+    "credit_gate_passed": true,
+    "pending_usage_accounted": true,
+    "VM_compute_IP_rate_USD_per_hour": 0.2730456762592464,
+    "existing_disk_monthly_USD": 31.199999949850024,
+    "provider_fallback_seconds": 2700,
+    "compute_IP_fallback_USD": 0.20478425719443483,
+    "disk_interval_fallback_USD": 0.032054794469024,
+    "max_export_GiB": 2,
+    "max_export_USD": 0.24,
+    "asset_readback_storage_operations_reserve_USD": 0.07,
+    "new_ceiling_USD": 1,
+    "retention_review": "2026-10-21",
+    "retention_extended": false,
+    "no_new_resources": true,
+    "storage_valid_until_epoch": 1792533600.0,
+    "credit_valid_until_epoch": 1799712000.0,
+    "headroom": "Fresh mount/headroom gate at boot; existing stopped disk last free 131GiB",
+    "official_coverage": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "official_network_storage": "https://cloud.google.com/storage/pricing",
+    "conservative_gross_USD": 0.5468390516634588,
+    "owner_operational_recovery_authorized": true,
+    "new_resources_needed": false,
+    "recovery_scope": "Verify/reuse passed setup, repaired native gates, one frozen CPM/refinement and one MetaBAT2 reference. Debug/retry operational failures with recorded bounded attempts; no scientific tuning."
+  },
+  "planned_limits": {
+    "gross_USD": 1,
+    "cumulative_seconds": 1800,
+    "provider_STOP_seconds": 2700,
+    "free_reserve_GiB": 25,
+    "extra_GiB": 20,
+    "export_GiB": 2
+  },
+  "retained_artifact_root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e011-cached-grouping-reference/recovery-20261017",
+  "no_scientific_settings_changed": true
+}

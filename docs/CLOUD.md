@@ -3,6 +3,14 @@
 Updated: 2026-10-17 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
+**October 17 owner clarification: E011 operational repair/retry is authorized in
+the current task.** Reuse passed cache/installation after strict checks, retain
+failed journals and fresh per-attempt financial/boot/process/STOP safeguards.
+The old no-retry handoff is superseded; the first failed attempt remains immutable.
+No new resources or retention extension are planned. Follow a short run through
+shutdown and local diagnostics. [E011 operations](../experiments/E011-cached-grouping-reference/OPERATIONS.md)
+owns the concrete execution; credit-only coverage and October 21 review remain.
+
 **E011 failed its native library-provenance gate; VM independently TERMINATED.**
 [Native receipt](../experiments/E011-cached-grouping-reference/native-observed.json)
 binds phase `cached-20261017T005141Z-ab80312`, exact source ab80312, successful
@@ -15,8 +23,8 @@ inside $1. The watcher uploaded its exit/shutdown-request snapshot; provider sto
 was also explicit. No final stop actor is inferred solely from the snapshot.
 
 The local repair and verified cache/installation reuse are prepared; native Linux
-repaired gates and both community runs remain pending. No automatic retry/wake,
-new resource or retention change. A next authorized attempt needs fresh credit,
+repaired gates and both community runs remain pending. The newly authorized
+recovery needs fresh credit,
 price/pending-usage/headroom/retention and boot/process/STOP gates. Last verified
 Welcome credit DKK1,933.15 through 2027-01-12, reported cost/savings 38.94/net0 delayed.
 Existing disks remain **$31.20/month while stopped**; **October 21** review remains.

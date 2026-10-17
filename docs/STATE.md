@@ -4,6 +4,16 @@ Updated: 2026-10-17. This is the single current handoff.
 
 ## Exact next step
 
+**Owner-authorized operational recovery is active (October 17).** Debug/retry the
+repaired E011 Linux gates and frozen CPM/MetaBAT job directly, preserving failures
+and strictly reusing passed cache/installation. The earlier no-retry handoff below
+is superseded by the owner's explicit instruction; no new approval prompt is
+needed for reasonable operational envelope changes. First attempt remains closed
+and unchanged. Use fresh credit/headroom/source/boot/process/STOP gates, keep
+October 21 retention, and follow a short job through shutdown and local evaluation.
+[Operations](../experiments/E011-cached-grouping-reference/OPERATIONS.md) owns this
+recovery sequence. No changed scientific setting, encoder fit or extra external tool.
+
 **E011 stopped at a native provenance-gate failure; VM independently TERMINATED.**
 [Native receipt](../experiments/E011-cached-grouping-reference/native-observed.json)
 records phase `cached-20261017T005141Z-ab80312`, clean pushed source ab80312,
@@ -11,7 +21,7 @@ matching private/guest FAILED status, the 19,320-byte /28-member checksum-verifi
 failure archive and provider stop **October 17 00:58:26.197 UTC /02:58 Copenhagen**.
 Actual uptime **404.884 s**. No community CPM or MetaBAT2 run, fit or new score was
 produced. The failure is a new launcher/provenance bug, not evidence invalidating
-accepted E010. No automatic retry, resource change, retention extension or wake.
+accepted E010. That attempt made no resource or retention change; its failure record remains historical.
 
 Passed native stages: every-member original archive restore, full owned E010
 28-distribution/source/import check, and independent 35-package MetaBAT2 install.
@@ -30,7 +40,7 @@ Linux gates remain pending. Reuse passed cache/installation only after strict
 missing/corrupt bytes fail without recopy/reinstall. The unchanged one-rule CPM,
 marker refinement, MetaBAT defaults and prospective decision thresholds remain
 frozen. [Operations](../experiments/E011-cached-grouping-reference/OPERATIONS.md#exact-next-prompt)
-owns the exact following prompt. No retry is authorized by this closed failure.
+owns the exact following prompt. Recovery is now authorized by the later owner clarification above.
 
 The implementation [audit](../experiments/E011-cached-grouping-reference/audit.json)
 confirms a seed prose/code discrepancy affecting four adopted splits: actual code

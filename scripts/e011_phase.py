@@ -3,7 +3,9 @@
 
 All setup, restore, native gates, serial CPM/MetaBAT2 commands and collection share
 30 minutes. The external boot/process watcher and 45-minute provider STOP own
-shutdown. There is no retry, resize, new encoder, scientific tuning or truth path.
+shutdown. Each attempt executes once; authorized operational repair uses a new
+recorded attempt and verified reuse, never an in-place journal rewrite. There is
+no resize, new encoder, scientific tuning or truth path in this driver.
 """
 import argparse
 import json

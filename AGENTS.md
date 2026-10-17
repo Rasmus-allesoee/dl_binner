@@ -310,6 +310,21 @@ normal-exit and crash detection without stopping active science, and retain the
 provider's maximum-runtime fallback. A shutdown watcher is not a scientific
 progress monitor or permission to retry, extend or start another stage.
 
+Owner clarification, 2026-10-17: during an authorized connected-GCP execution,
+debug recoverable operational failures and retry within the same task when the
+owner has authorized that recovery. Do not turn a launcher/runtime/provenance bug
+into another owner-transfer or approval loop. Preserve failed journals, repair and
+test the actual failing path, create a fresh recorded attempt, and reuse passed
+stages only after their byte/source/runtime contracts pass. Operational recovery
+is distinct from repeating accepted science, changing a frozen scientific rule,
+tuning to outcomes or expanding the tool campaign. Keep concrete clock/cost/disk
+limits and verified shutdown for each attempt; record justified envelope changes
+when already authorized instead of asking again. Credit coverage and evidence
+integrity still apply. A short supervised job expected to finish within about
+15 minutes should normally be followed through collection, independently verified
+shutdown and available local review. For a healthy longer job, verify supervision
+and real progress, wait a few minutes, then hand off without polling to completion.
+
 Use local development for cheap checks; use a verified SSH-connected GCP repository
 and shell for authorized Linux/cloud phases. Agents may operate that VM within the
 current task's explicit execution boundary; an infrastructure task does not

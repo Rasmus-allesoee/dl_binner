@@ -1,6 +1,10 @@
 # E011: cached grouping objective and one external feasibility reference
 
-Opened 2026-10-17. Status: **native provenance gate failed; VM stopped; no community
+Opened 2026-10-17. Current owner direction: **operational repair/retry authorized
+in this task**, reusing verified passed setup and preserving every failed journal.
+The original status below is historical; [operations](OPERATIONS.md) owns recovery.
+
+First-attempt status: **native provenance gate failed; VM stopped; no community
 consumer executed**. The owner authorized the attempted phase after gates; the
 stop-on-failure instruction closed it without a retry. The local repair is tested,
 with a new native Linux gate still required. Branch `codex/e011-cached-grouping-reference` starts at reviewed E010 commit

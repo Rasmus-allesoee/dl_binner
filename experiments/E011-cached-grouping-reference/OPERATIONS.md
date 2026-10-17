@@ -1,5 +1,26 @@
 # E011 authorized cached control and reference operations
 
+**Current owner instruction, October 17:** execute the repaired frozen job now;
+debug recoverable operational failures and retry autonomously in this task. No
+new ceiling-approval prompt is required. Keep failed attempts immutable and reuse
+passed stages only under the reuse-lock; never silently recopy/reinstall corrupt
+cache/runtime. Use a fresh held-parent watcher and provider STOP for each boot.
+The initial concrete retry envelope remains $1 /30 minutes /45-minute STOP, with
+25-GiB reserve, 20-GiB extra space and 2-GiB export; the owner permits justified
+expansion if operational repair needs it. Credit-only coverage and October 21
+retention still apply. For an expected <=15-minute job, follow it through shutdown
+and local evaluation. Longer healthy work can be handed off after real progress.
+The original attempt and old instructions below are historical; they do not
+override this recovery authorization. Scientific protocol/thresholds stay frozen.
+
+Recovery order: strict `verify-restored`, full source/runtime probe, strict
+`verify-install`, repaired loaded-library probe; remaining actual tiny cache,
+launcher and MetaBAT gates; sole CPM/refinement and sole MetaBAT community run;
+complete export, postflight, checksum/readback, shutdown and local truth diagnostics.
+Use the existing restored root, MetaBAT prefix and fixture payload; no new install
+or original-archive extraction. Retain new reuse receipts in the return.
+
+
 The owner directly authorized the attempted execution after gates. It failed
 at native library provenance before community consumers; VM is TERMINATED and no
 retry follows automatically. [Native receipt](native-observed.json) owns the outcome.
@@ -86,6 +107,12 @@ change/external expansion or confirmation run. Update records, check, commit and
 recommend at most one next decision, preserving October 21 retention review.
 
 ## Exact next prompt
+
+The owner has supplied and authorized the recovery prompt in this task. Execute
+the current recovery sequence above; do not request execution approval again.
+A results-driven following prompt will be recorded after the completed review.
+
+### Previous prompt (superseded)
 
 Our goal is a substantially stronger binner. Read AGENTS.md, PROJECT_INTENT.md,
 STATE/CLOUD, D013/D015 and E011's audit, failed native receipt, local repair/reuse

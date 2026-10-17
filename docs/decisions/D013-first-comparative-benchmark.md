@@ -338,3 +338,16 @@ The first E011 attempt then failed at native library provenance before either
 community consumer; it is closed without retry. The locally tested alias/content
 repair and strictly verified setup reuse do not authorize another execution;
 STATE/E011 operations own the next explicit bounded attempt.
+
+## Connected execution recovery clarification, 2026-10-17
+
+The owner explicitly authorizes debugging and operational retries of E011 in the
+same task, including reasonable justified envelope changes, without another
+ceiling/approval handoff. The earlier no-retry interpretation was too restrictive
+for a connected GCP workspace. Preserve the closed failed journal, test the actual
+repair and verify passed cache/installation before reuse; keep the scientific CPM
+rule, marker policy and sole MetaBAT reference frozen. This authorizes operational
+recovery, not outcome-driven tuning or repeating accepted science. Keep fresh
+credit coverage, explicit per-attempt limits, shutdown and October 21 storage review.
+Follow a short (about 15 minutes or less) supervised job through completion and
+local review; healthy longer work may be handed off after verified real progress.
