@@ -52,3 +52,10 @@ class AcquisitionContracts(unittest.TestCase):
             self.assertTrue((p/'out/oral/a.partial').exists())
             (p/'out/acquisition-clock.json').write_text(json.dumps(dict(started_epoch=0,seconds=1)))
             with self.assertRaisesRegex(TimeoutError,'clock exhausted'):acq.acquire(p/'out',plan)
+
+    def test_runtime_interpreter_alias_is_separate_from_scientific_output_links(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d);(p/'envs').mkdir();(p/'target').write_text('x');(p/'envs/python').symlink_to(p/'target')
+            acq.guard(p,dict(started_epoch=__import__('time').time(),seconds=10))
+            (p/'data-link').symlink_to(p/'target')
+            with self.assertRaisesRegex(ValueError,'scientific output link'):acq.guard(p,dict(started_epoch=__import__('time').time(),seconds=10))

@@ -35,7 +35,11 @@ def guard(root, clock):
         raise TimeoutError('Original E014 acquisition/validation clock exhausted')
     total = 0
     for p in Path(root).rglob('*'):
-        if p.is_symlink(): raise ValueError('E014 output link refused')
+        if p.is_symlink():
+            # Normal venv interpreter aliases are an explicitly retained runtime
+            # dependency, not downloaded scientific payloads or new file bytes.
+            if p.relative_to(root).parts[0]=='envs':continue
+            raise ValueError('E014 scientific output link refused: '+str(p))
         if p.is_file(): total += p.stat().st_size
     if total > 10*1024**3: raise RuntimeError('E014 10-GiB extra-space cap exceeded')
     if shutil.disk_usage(root).free < 5*1024**3: raise RuntimeError('E014 5-GiB free local reserve reached')
