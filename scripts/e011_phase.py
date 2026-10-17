@@ -72,6 +72,7 @@ def run(config_path):
         command(['/snap/bin/gcloud','storage','cp',uri,str(back),'--quiet'],'readback-'+name)
         if binding(path)!=binding(back):raise ValueError('Private readback differs')
         return dict(uri=uri,**binding(path),readback_verified=True)
+    guard=None
     try:
         with PhaseGuard(phase,remaining,growth_bytes=20*1024**3-initial_growth)as guard:
             print('E011_HELD_FOR_CURRENT_WATCHDOG pid='+str(os.getpid()),flush=True)
@@ -93,12 +94,15 @@ def run(config_path):
                 print('E011_STAGE_START '+step['name'],flush=True)
                 receipt=command(step['argv'],step['name'],reserve=180)
                 outcome['stages'].append(dict(name=step['name'],resources=receipt))
+                if step['name']=='restore':
+                    shutil.copyfile(phase/'restore/restore.json',results/'restore-verification.json')
                 if step['name']=='cpm':outcome['cpm_completed']=True
                 if step['name']=='metabat-export':outcome['metabat_completed']=True
                 publish({k:v for k,v in outcome.items()if k!='stages'}|{'status':'RUNNING','latest_completed':step['name']})
             if not outcome['cpm_completed']or not outcome['metabat_completed']:raise ValueError('Missing control/reference completion')
             outcome.update(status='SUCCESS',disk_observations=guard.observations)
     except BaseException as exc:outcome.update(status='FAILED',error=f'{type(exc).__name__}: {exc}')
+    outcome['disk_observations']=list(guard.observations)if guard is not None else []
     outcome['elapsed_since_VM_start_seconds']=time.time()-cfg['vm_start_epoch']
     # Collection remains inside the same deadline and cannot launch scientific work.
     try:

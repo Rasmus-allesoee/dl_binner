@@ -1,0 +1,21 @@
+{
+  "failed_phase": "cached-20261017T005141Z-ab80312",
+  "metabat_install_receipt": {
+    "bytes": 3086,
+    "sha256": "8e20339fdb6e86a5d9a1d3899130225681fe6a94869f6145edee69ed92f2b154"
+  },
+  "metabat_prefix": "/srv/dl_binner/experiments/e011/envs/metabat2-2.18-20261017T005141Z",
+  "native_prefix_status": "35-package installation passed; repaired loaded-library/native gates still required before science",
+  "record": "Prospective reuse of passed installation/cache, not a retry authorization",
+  "restore_manifest": {
+    "bytes": 3028,
+    "sha256": "4d19d958d48aa6cdb6f8a76a30076de75f8f1df351a6ae97f471fd2912b04c6a"
+  },
+  "restore_manifest_origin": "Independent local restore of identical accepted archive with the exact executed restore function; portable receipt contains no destination/time. Next native consumer must match its bytes and every selected member; no fallback.",
+  "retained_install_receipt": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/run/metabat-install.json",
+  "retained_restore": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore",
+  "source_archive": {
+    "bytes": 335636093,
+    "sha256": "3ec883477ce6c9e070632200508be8b707e84a11938f51e6221089eb94d165a3"
+  }
+}

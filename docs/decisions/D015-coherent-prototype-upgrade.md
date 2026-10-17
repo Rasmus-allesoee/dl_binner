@@ -203,3 +203,11 @@ this is not proof of optimality or an exhaustive absence of defects. Limited
 window diversity, long-only training, false negatives and depth shortcut remain.
 The new owner authorization covers direct E011 execution and one MetaBAT2 external
 feasibility reference after gates, not an encoder repair or larger campaign.
+
+E011's first authorized native attempt stopped at a new provenance-helper bug:
+normal dynamic-library symlinks were refused before CPM/MetaBAT community runs.
+[Failure/repair](../../experiments/E011-cached-grouping-reference/native-observed.json)
+preserves the original source/bytes and closes the attempt without recovery.
+The fix separates loader aliases/resolved content from scientific artifact rules;
+AGENTS records that durable distinction and keeps lexical Python invocation paths.
+No biological conclusion or architecture change follows from this gate failure.

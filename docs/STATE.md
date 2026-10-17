@@ -4,45 +4,55 @@ Updated: 2026-10-17. This is the single current handoff.
 
 ## Exact next step
 
-**E011 is locally prepared and directly authorized, conditional on the live/native gates.**
-[The prospective protocol](../experiments/E011-cached-grouping-reference/README.md)
-freezes one cached CPM-versus-RB objective control and one justified MetaBAT2 2.18
-mean-depth reference. New branch `codex/e011-cached-grouping-reference`; do not
-retrain dev4, rebuild neighbors, redetect markers or alter its refinement policy.
-The owner explicitly authorizes execution after checks, superseding E010's earlier
-preparation-only following prompt. No separate execution approval is needed.
+**E011 stopped at a native provenance-gate failure; VM independently TERMINATED.**
+[Native receipt](../experiments/E011-cached-grouping-reference/native-observed.json)
+records phase `cached-20261017T005141Z-ab80312`, clean pushed source ab80312,
+matching private/guest FAILED status, the 19,320-byte /28-member checksum-verified
+failure archive and provider stop **October 17 00:58:26.197 UTC /02:58 Copenhagen**.
+Actual uptime **404.884 s**. No community CPM or MetaBAT2 run, fit or new score was
+produced. The failure is a new launcher/provenance bug, not evidence invalidating
+accepted E010. No automatic retry, resource change, retention extension or wake.
 
-[Audit](../experiments/E011-cached-grouping-reference/audit.json) confirms a real
-prose/code discrepancy: actual refinement uses the second-largest clean-family
-count, affecting four adopted proposals. This conservatively requires two families
-to support the split count, but was not stated in the original prose. Preserve
-that executed policy in the CPM control; it cannot explain the poor pre-refinement
-output. No fatal feature/pairing/graph/evaluation defect was identified. Only
-13,554/89,041 eligible parents train; 12,337 training parents have identical pair
-draws. These and shared parent depth/false negatives remain scientific risks,
-not proof of an optimal implementation. Strict Mac portability remains failed.
+Passed native stages: every-member original archive restore, full owned E010
+28-distribution/source/import check, and independent 35-package MetaBAT2 install.
+MetaBAT's actual 2.18 CLI/help returned successfully; the next probe incorrectly
+rejected its normal libz.so.1 symlink using a scientific-artifact helper. Remaining
+native tiny/launcher gates and both community consumers were skipped. The watcher
+detected the exited held parent and uploaded its shutdown-request snapshot; an
+explicit provider stop was also issued. Final TERMINATED is independently verified.
 
-Eight new software/launcher contracts pass, actual tiny cached native readers/
-refinement/export pass, and actual Mac MetaBAT2 cvExt binning/order-refusal pass.
-The sealed original community archive/cache is read-only verified without a new
-community partition/score. [Local receipt](../experiments/E011-cached-grouping-reference/local-observed.json)
-owns actual versus mocked host/cloud boundaries and the preserved sandbox-monitor
-failure. Linux gates run inside the upcoming same cumulative clock, before science.
+**Next: one fresh explicitly authorized E011 attempt after the local repair.**
+The repair preserves lexical loader aliases and resolved target bytes, keeping
+scientific artifact refusal and lexical Python invocation paths unchanged. Ten
+local tests, native Mac CLI and actual retained-cache reuse pass; repaired native
+Linux gates remain pending. Reuse passed cache/installation only after strict
+[reuse-lock](../experiments/E011-cached-grouping-reference/reuse-lock.json) checks;
+missing/corrupt bytes fail without recopy/reinstall. The unchanged one-rule CPM,
+marker refinement, MetaBAT defaults and prospective decision thresholds remain
+frozen. [Operations](../experiments/E011-cached-grouping-reference/OPERATIONS.md#exact-next-prompt)
+owns the exact following prompt. No retry is authorized by this closed failure.
 
-Fresh paid-account credit DKK1,933.15 Available through 2027-01-12; delayed reported
-cost/savings 38.94/net0, pending usage unknown. Existing resources only, new $1,
-30 cumulative minutes from VM start, provider STOP 45 minutes, 25-GiB free reserve,
-20-GiB extra-space cap and <=2-GiB export; conservative fallback ~$0.547. Arm/verify
-a fresh boot/process-bound held parent and watchdog before release. At this
-preparation checkpoint the last independently observed VM state is TERMINATED.
-No resize/provisioning/retry/extension or broader external campaign. Keep the
-**October 21** storage review and ~$31.20/month existing stopped-disk cost.
+The implementation [audit](../experiments/E011-cached-grouping-reference/audit.json)
+confirms a seed prose/code discrepancy affecting four adopted splits: actual code
+uses the second-largest family count. It cannot explain the poor pre-refinement
+result. No fatal feature/pairing/graph/evaluation defect was identified; long-only
+training, limited window diversity, shared parent depth and false negatives remain
+plausible risks, without an optimality claim. Dev3, dev4, truth/results/journals
+and the original strict Mac numerical-portability failure remain preserved.
+
+Measured gross compute/IP **$0.03071**, disk interval **$0.00481**, setup readback
+**$0.00745**, tiny failure export plus small storage/operations: ~$0.043 before
+small charges, **<$0.063 with reserve**, within the new $1. Credit DKK1,933.15
+Available through 2027-01-12; delayed reported cost/savings 38.94/net0, pending usage
+unknown. Initial free 131.96 GiB /collection minimum 131.09 GiB. Full phase peak was
+not serialized on failure; this collection gap is repaired locally and explicit.
+Existing 30/300-GiB disks still cost **$31.20/month while stopped**; **October 21**
+review is unchanged. No additional resources are needed for the same bounded job.
 
 E010 remains accepted development evidence: full 145,702 contigs /231,678,157 bp,
-ordered ten-depth axes, native exact reload and all DNA retained. Weighted R95
-was pre 1.8763% /post 4.2909% versus dev3 learned ten-depth 5.3911%; the bundle
-is not promoted as stronger. [Its completed review](../experiments/E010-coherent-prototype/review.json)
-and original source/locks/outputs/failure journals remain immutable.
+ordered ten-depth axes, exact native reload and all DNA retained. Weighted R95
+pre 1.8763% /post 4.2909% versus dev3 learned ten-depth 5.3911%; no new biological
+result or stronger-binner claim follows from E011's failed engineering gate.
 
 A [prospective confirmation choice/protocol](../experiments/E010-coherent-prototype/confirmation-plan.json)
 is frozen before changed community scores: CAMI II Toy HMB oral pooled GSA,

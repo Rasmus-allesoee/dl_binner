@@ -340,3 +340,9 @@ mean-depth reference adds an achievable-recovery/difficulty observation, not a
 causal component claim or verdict on simulation quality. Keep Q001/Q003/Q005 and
 feature-family conclusions open; confirmation/overlap admission stays separate.
 The owner authorizes this bounded execution directly after gates.
+
+E011 native attempt at ab80312 failed in the new library-provenance probe before
+both community consumers. No new biological score or resolution of Q001/Q003/Q005
+follows. [The failure and local repair](../../experiments/E011-cached-grouping-reference/native-observed.json)
+retain successful setup, strict reuse and pending repaired Linux gates; another
+explicitly authorized bounded attempt is the next execution, with no new mechanism.

@@ -440,6 +440,10 @@ test changed production adapters on real tiny contracts before costly work.
 Preserve a virtual environment's lexical interpreter path when invoking it:
 resolving its `bin/python` symlink can bypass `pyvenv.cfg` and execute the base
 environment. Probe version/prefix before giving a harness runtime-validation credit.
+For native dependency provenance, retain the dynamic loader's reported alias and
+hash its resolved regular target, including any direct link destination. This is
+content verification, not a replacement invocation path. Keep scientific artifact
+link refusal separate from normal operating-system library aliases.
 
 ### Allocation and storage records
 

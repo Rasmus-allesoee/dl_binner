@@ -9,11 +9,42 @@ import tempfile
 import time
 import unittest
 sys.path.insert(0,str(Path(__file__).absolute().parents[1]/'scripts'))
-from e011_cached import restore,cached_graph,cpm_partition,external_export
+from e011_cached import restore,verify_restored,cached_graph,cpm_partition,external_export
 from e009_common import binding,write_json
 
 
 class CachedControlTests(unittest.TestCase):
+    def test_retained_native_installation_reuse_refuses_inventory_or_binary_drift(self):
+        from e011_metabat import verify_install
+        with tempfile.TemporaryDirectory()as directory:
+            p=Path(directory);(p/'bin').mkdir();(p/'conda-meta').mkdir();binary=p/'bin/metabat2';binary.write_bytes(b'bound native executable')
+            item=dict(name='metabat2',version='2.18',build='fixed');(p/'conda-meta/metabat2.json').write_text(json.dumps(item))
+            receipt=p/'installed.json';receipt.write_text(json.dumps(dict(binary=binding(binary),inventory={'metabat2':dict(version='2.18',build='fixed')})))
+            expected=binding(receipt);self.assertTrue(verify_install(p,receipt,expected)['installation_reused'])
+            binary.write_bytes(b'changed')
+            with self.assertRaisesRegex(ValueError,'changed'):verify_install(p,receipt,expected)
+            binary.write_bytes(b'bound native executable');(p/'conda-meta/extra.json').write_text(json.dumps(dict(name='extra',version='1',build='bad')))
+            with self.assertRaisesRegex(ValueError,'changed'):verify_install(p,receipt,expected)
+
+    def test_runtime_library_aliases_bind_target_bytes_without_relaxing_artifact_links(self):
+        import hashlib
+        from e011_metabat import runtime_member
+        with tempfile.TemporaryDirectory()as directory:
+            p=Path(directory);(p/'bin').mkdir();(p/'lib').mkdir()
+            target=p/'lib/libz.so.1.3.2';target.write_bytes(b'real dependency bytes')
+            alias=p/'lib/libz.so.1';alias.symlink_to(target.name)
+            lexical=p/'bin/../lib/libz.so.1';before=runtime_member(lexical)
+            self.assertTrue(before['direct_symlink']);self.assertEqual(before['resolved_path'],str(target.resolve()))
+            self.assertEqual(before['link_target'],target.name)
+            self.assertEqual(before['content']['sha256'],hashlib.sha256(target.read_bytes()).hexdigest())
+            with self.assertRaisesRegex(ValueError,'linked'):binding(alias)
+            target.write_bytes(b'changed actual dependency');self.assertNotEqual(before,runtime_member(lexical))
+            (p/'broken').symlink_to('missing')
+            with self.assertRaisesRegex(ValueError,'Unresolvable'):runtime_member(p/'broken')
+            (p/'cycle-a').symlink_to('cycle-b');(p/'cycle-b').symlink_to('cycle-a')
+            with self.assertRaisesRegex(ValueError,'Unresolvable'):runtime_member(p/'cycle-a')
+            with self.assertRaisesRegex(ValueError,'regular'):runtime_member(p/'lib')
+
     def test_snapshot_upload_failure_cannot_prevent_shutdown(self):
         from e011_exit_watchdog import finish
         calls=[]
@@ -55,6 +86,10 @@ class CachedControlTests(unittest.TestCase):
             self.assertEqual(result['verified_members'],3)
             self.assertFalse((p/'restored/unused').exists())
             self.assertEqual((p/'restored/candidate/group/file').read_bytes(),b'retained')
+            self.assertFalse(verify_restored(p/'restored',binding(p/'restored/restore.json'),binding(archive))['original_recopied'])
+            (p/'restored/candidate/group/file').write_bytes(b'corrupt retained bytes')
+            with self.assertRaisesRegex(ValueError,'bytes differ'):
+                verify_restored(p/'restored',binding(p/'restored/restore.json'),binding(archive))
             with self.assertRaisesRegex(ValueError,'fresh'):restore(archive,p/'restored',binding(archive))
             with self.assertRaisesRegex(ValueError,'archive bytes'):restore(archive,p/'bad',{'bytes':1,'sha256':'bad'})
             payload['unused']=b'changed unselected member';other=p/'corrupt.tar.gz';seal(other)

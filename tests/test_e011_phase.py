@@ -75,6 +75,7 @@ sys.exit(int(sys.argv[2]))
                 self.assertEqual(receipt['exit_code'],7 if failure else 0)
                 self.assertIsNone(receipt['stop_reason'])
                 self.assertEqual(outcome['status'],'FAILED'if failure else'SUCCESS')
+                self.assertIn('disk_observations',outcome)
                 self.assertLess(outcome['elapsed_since_VM_start_seconds'],1800)
 
 

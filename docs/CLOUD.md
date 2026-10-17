@@ -3,16 +3,23 @@
 Updated: 2026-10-17 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**E011 is directly authorized after gates; the VM is still TERMINATED at local preparation.**
-[The E011 record](../experiments/E011-cached-grouping-reference/README.md) owns the
-cached grouping control and one MetaBAT2 mean-depth reference. Fresh paid-account
-credit DKK1,933.15 Available through 2027-01-12; reported cost/savings 38.94/net0,
-pending usage unknown. Fresh DKK catalog rates give a ~$0.547 fallback envelope
-under a new $1: existing 8 CPU/32 GiB/300 GiB, 30-minute cumulative clock/45-minute
-provider STOP, 25-GiB free reserve/20-GiB extra cap/<=2-GiB export. No new resources,
-retention extension, automatic retry or broader external run. Fresh native mount,
-headroom/runtime/source and boot/process watcher checks precede release. Existing
-disks remain ~$31.20/month while stopped; **October 21** review is unchanged.
+**E011 failed its native library-provenance gate; VM independently TERMINATED.**
+[Native receipt](../experiments/E011-cached-grouping-reference/native-observed.json)
+binds phase `cached-20261017T005141Z-ab80312`, exact source ab80312, successful
+restore/runtime/MetaBAT installation, and the normal-library-symlink refusal before
+both community consumers. Private/guest FAILED and all 28 archive members verify.
+Stop October 17 00:58:26.197 UTC /02:58 Copenhagen; allocated uptime 404.884 s.
+Compute/IP~$0.03071, disk interval~$0.00481, asset readback~$0.00745, tiny export
+plus small operations/storage: ~$0.043 before small charges, <$0.063 with reserve,
+inside $1. The watcher uploaded its exit/shutdown-request snapshot; provider stop
+was also explicit. No final stop actor is inferred solely from the snapshot.
+
+The local repair and verified cache/installation reuse are prepared; native Linux
+repaired gates and both community runs remain pending. No automatic retry/wake,
+new resource or retention change. A next authorized attempt needs fresh credit,
+price/pending-usage/headroom/retention and boot/process/STOP gates. Last verified
+Welcome credit DKK1,933.15 through 2027-01-12, reported cost/savings 38.94/net0 delayed.
+Existing disks remain **$31.20/month while stopped**; **October 21** review remains.
 
 **E010 is complete and the VM is independently TERMINATED.**
 [The completed review](../experiments/E010-coherent-prototype/review.json) binds

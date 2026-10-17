@@ -1,8 +1,9 @@
 # E011: cached grouping objective and one external feasibility reference
 
-Opened 2026-10-17. Status: prospective preparation; community execution is explicitly
-authorized by the owner's follow-up, conditional on local/native and live financial
-gates. Branch `codex/e011-cached-grouping-reference` starts at reviewed E010 commit
+Opened 2026-10-17. Status: **native provenance gate failed; VM stopped; no community
+consumer executed**. The owner authorized the attempted phase after gates; the
+stop-on-failure instruction closed it without a retry. The local repair is tested,
+with a new native Linux gate still required. Branch `codex/e011-cached-grouping-reference` starts at reviewed E010 commit
 `8950e7e`. Dev3, frozen dev4 and all accepted E009/E010 artifacts/journals stay intact.
 
 ## Decision and prospective control
@@ -93,3 +94,39 @@ STOP before release. Capture stages/resources/closed terminal snapshots, verify
 every archive member and private readback, then stop. No success inference from
 shutdown. If still healthy after verified progress and a few minutes, report and
 leave supervision intact without polling to completion.
+
+## Native outcome and local repair, 2026-10-17
+
+[The native receipt](native-observed.json) verifies FAILED phase
+`cached-20261017T005141Z-ab80312` at executed source ab80312 and independently
+TERMINATED VM. Start 00:51:41.313 UTC /stop 00:58:26.197 UTC; 404.884 s allocation.
+Restore, full 28-distribution/source/origin check and 35-package independent MetaBAT
+installation pass. Actual 2.18 CLI/help passed before the probe rejected normal
+libz.so.1: our strict scientific-artifact binding helper was inappropriate for
+loader aliases. Neither community CPM nor MetaBAT ran; later native gates were
+skipped. This is an execution/verification failure, not a negative biological result.
+
+Private failure archive 19,320 bytes, SHA256
+`1fa72f3c51d9c942ac125e2d722e34e3a8e903a02223aa97175e9a94723a622f`;
+all 28 members /65,324 logical bytes independently verify. Guest/private completion
+agree. The exit watcher uploaded its pinned process-exit/shutdown-request snapshot;
+provider stop was also issued and TERMINATED confirmed. No VM wake for serial
+console or missing evidence. Full execution-phase disk samples and restore manifest
+were omitted by the failed archive collector; collection-only minimum free131.09
+GiB is not claimed as full-phase peak. The local repair now retains failed-phase
+samples and the restore receipt. Original failed bytes/journals are unchanged.
+
+The corrected dependency probe records the reported alias, direct link and resolved
+regular target/hash, without resolving invocation paths or relaxing scientific
+artifact refusal. Ten local tests and actual Mac CLI/cache consumers pass; repaired
+native Linux remains unexecuted. [Reuse lock](reuse-lock.json) binds passed native
+installation and a deterministic expected cache receipt, requiring strict member
+checks rather than recopy/reinstall. A missing/corrupt receipt fails, without fallback.
+
+Gross measured-uptime compute/IP $0.03071 + disk interval $0.00481 + asset readback $0.00745
+and tiny native export totals ~$0.043 before small charges; <$0.063 with reserve,
+inside $1. Sampled CPU is not the charged allocation. Existing disks remain
+$31.20/month while stopped, October 21 review unchanged. No model/refinement/seed/
+scientific rule/score changed, and no automatic retry or broader tool run followed.
+[Operations](OPERATIONS.md#exact-next-prompt) gives the next explicitly authorized
+attempt, with fresh financial/native/supervision gates and the same frozen science.

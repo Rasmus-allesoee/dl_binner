@@ -22,6 +22,22 @@ from e009_common import binding,write_json
 REPO=Path(__file__).absolute().parents[1]
 
 
+def runtime_member(path):
+    """Bind an executed file's lexical alias and regular resolved content separately.
+
+    Dynamic loaders routinely report symlinks such as libz.so.1. Preserve that
+    alias and its destination, then hash the actual regular target. Scientific
+    artifact link refusal is unchanged, and invocation/interpreter paths are
+    never replaced with these resolved data paths.
+    """
+    path=Path(path).absolute()
+    try:target=path.resolve(strict=True)
+    except (OSError,RuntimeError)as exc:raise ValueError('Unresolvable runtime member: '+str(path))from exc
+    return dict(lexical_path=str(path),resolved_path=str(target),
+                direct_symlink=path.is_symlink(),link_target=os.readlink(path)if path.is_symlink()else None,
+                content=binding(target))
+
+
 def install(payload,prefix,work):
     """Verify all independent native packages and install offline, without a solve/retry."""
     payload,prefix,work=map(Path,[payload,prefix,work]);work.mkdir(parents=True,exist_ok=False)
@@ -56,16 +72,32 @@ def probe(binary,output,previous=None):
     if '2:2.18'not in text or '--cvExt'not in text or '--minSmallContig'not in text:raise ValueError('Actual native MetaBAT CLI differs')
     command=['otool','-L',str(binary)]if platform.system()=='Darwin'else['ldd',str(binary)]
     libraries=subprocess.check_output(command,text=True,timeout=15)
-    members={str(binary):binding(binary)}
+    members={str(binary):runtime_member(binary)}
     if platform.system()=='Linux':
         if 'not found'in libraries:raise ValueError('Native shared library missing')
         for name in re.findall(r'(/[^\s()]+)',libraries):
             q=Path(name)
-            if q.is_file():members[str(q)]=binding(q)
+            members[str(q)]=runtime_member(q)
     if previous is not None and json.loads(Path(previous).read_text())['execution_members']!=members:
         raise ValueError('Executed MetaBAT binary/library bytes changed')
     write_json(output,dict(version='2.18',system=platform.system(),binary=str(binary),help=text,
-                           library_report=libraries,execution_members=members))
+                           library_report=libraries,execution_members=members,
+                           member_scope='Linux loaded ELF files and aliases; Mac binary binding plus native otool report'))
+
+
+def verify_install(prefix,receipt,expected_receipt):
+    """Reuse a passed independent installation read-only; native CLI/library gates remain."""
+    prefix,receipt=map(Path,[prefix,receipt])
+    if binding(receipt)!=expected_receipt:raise ValueError('Retained installation receipt differs')
+    record=json.loads(receipt.read_text());actual={}
+    for path in (prefix/'conda-meta').glob('*.json'):
+        item=json.loads(path.read_text())
+        if item['name']in actual:raise ValueError('Duplicate installed native package')
+        actual[item['name']]=dict(version=item['version'],build=item['build'])
+    if actual!=record['inventory'] or binding(prefix/'bin/metabat2')!=record['binary']:
+        raise ValueError('Retained native installation changed; no reinstall fallback')
+    return dict(status='PASS',inventory=actual,binary=record['binary'],installation_reused=True,
+                native_CLI_and_loaded_library_gate='still required; not implied by installation')
 
 
 def smoke(binary,output):
@@ -103,9 +135,12 @@ def smoke(binary,output):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['install','probe','smoke'])
-    for name in ['payload','prefix','work','binary','output','previous']:p.add_argument('--'+name,type=Path)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['install','verify-install','probe','smoke'])
+    for name in ['payload','prefix','work','binary','output','previous','receipt']:p.add_argument('--'+name,type=Path)
     a=p.parse_args()
     if a.action=='install':install(a.payload,a.prefix,a.work)
+    elif a.action=='verify-install':
+        reuse=json.loads((REPO/'experiments/E011-cached-grouping-reference/reuse-lock.json').read_text())
+        write_json(a.output,verify_install(a.prefix,a.receipt,reuse['metabat_install_receipt']))
     elif a.action=='probe':probe(a.binary,a.output,a.previous)
     else:smoke(a.binary,a.output)

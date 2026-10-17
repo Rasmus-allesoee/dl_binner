@@ -333,3 +333,8 @@ cvExt variance=mean assumption and different short-contig eligibility stay expli
 No broad mature-tool campaign or CompleteBin execution is authorized. New $1 /
 30-minute cumulative clock /45-minute STOP fits the ~$0.547 fallback estimate;
 the owner permits justified expansion but none is proposed. October 21 remains.
+
+The first E011 attempt then failed at native library provenance before either
+community consumer; it is closed without retry. The locally tested alias/content
+repair and strictly verified setup reuse do not authorize another execution;
+STATE/E011 operations own the next explicit bounded attempt.

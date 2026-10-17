@@ -87,6 +87,22 @@ def cached_graph(graph, ids, valid):
     return selected, edges
 
 
+def verify_restored(root, expected_manifest, expected_archive):
+    """Verify already restored sealed consumers without original recopy or fallback."""
+    root=Path(root);require(binding(root/'restore.json')==expected_manifest,'Retained restore receipt differs')
+    record=json.loads((root/'restore.json').read_text())
+    require(record['archive']==expected_archive,'Retained archive identity differs')
+    observed=set()
+    for path in root.rglob('*'):
+        require(not path.is_symlink(),'Linked retained consumer refused')
+        if path.is_file():observed.add(path.relative_to(root).as_posix())
+    require(observed==set(record['restored_files'])|{'restore.json'},'Retained consumer member set differs')
+    for name,expected in record['restored_files'].items():
+        require(binding(root/name)==expected,'Retained consumer bytes differ: '+name)
+    return dict(status='PASS',restore_manifest=expected_manifest,verified_files=len(record['restored_files']),
+                original_recopied=False,missing_or_corrupt_fallback=False)
+
+
 def cpm_partition(data, embeddings, graph, pre, cfg, features_path, graph_path):
     """Run the sole predeclared CPM rule on unchanged weights and unit vectors."""
     import numpy as np
@@ -230,10 +246,13 @@ def external_export(fasta, native, output):
 
 
 if __name__ == '__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['restore','probe','control','external-export'])
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['restore','verify-restored','probe','control','external-export'])
     for name in ['archive','root','fasta','depth','output','native','native-exit']:p.add_argument('--'+name,type=Path)
     p.add_argument('--local',action='store_true');a=p.parse_args();protocol=json.loads(PROTOCOL.read_text())
     if a.action == 'restore': restore(a.archive,a.output,protocol['archive']['archive'],protocol['archive'].get('inventory'))
+    elif a.action == 'verify-restored':
+        reuse=json.loads((REPO/'experiments/E011-cached-grouping-reference/reuse-lock.json').read_text())
+        write_json(a.output,verify_restored(a.root,reuse['restore_manifest'],protocol['archive']['archive']))
     elif a.action == 'probe': probe(a.root,a.output,native=not a.local)
     elif a.action == 'control': control(a.root,a.fasta,a.depth,a.output,protocol)
     else:

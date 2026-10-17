@@ -1,7 +1,10 @@
 # E011 authorized cached control and reference operations
 
-The owner directly authorizes this execution after gates; no separate approval
-prompt is required. [Protocol](protocol.json), [audit](audit.json),
+The owner directly authorized the attempted execution after gates. It failed
+at native library provenance before community consumers; VM is TERMINATED and no
+retry follows automatically. [Native receipt](native-observed.json) owns the outcome.
+The original execution sequence below is dated provenance; the next prompt uses
+the locally repaired gate and verified passed-stage reuse. [Protocol](protocol.json), [audit](audit.json),
 [local evidence](local-observed.json), [native dependency lock](metabat-linux.json)
 and [assets](assets.json) bind the prepared work. No encoder, neighbor index or
 marker detection is scheduled. All dev3/E009 and original dev4/E010 evidence stays
@@ -81,3 +84,37 @@ full DNA accounting. Retain full denominators, all length/origin strata, 3.3034%
 N-quarantine and the original Mac portability failure. No refit/tuning/architecture
 change/external expansion or confirmation run. Update records, check, commit and
 recommend at most one next decision, preserving October 21 retention review.
+
+## Exact next prompt
+
+Our goal is a substantially stronger binner. Read AGENTS.md, PROJECT_INTENT.md,
+STATE/CLOUD, D013/D015 and E011's audit, failed native receipt, local repair/reuse
+contracts, protocol/locks and operations. Preserve immutable dev3/dev4, accepted
+E009/E010 data/truth/results and all failed journals. The earlier E011 attempt
+failed before both community consumers because the provenance probe rejected a
+normal shared-library alias; the correction is local and still needs Linux gates.
+
+I authorize **one fresh E011 attempt under a new $1 gross ceiling**, existing
+8-vCPU/32-GiB VM and 300-GiB work disk only, 30 cumulative minutes from VM start,
+45-minute provider STOP, 25-GiB free reserve, 20-GiB extra cap and <=2-GiB export.
+Check fresh Welcome-credit balance/scope/expiry, delayed usage, prices/coverage,
+original retention and actual headroom. Stop before unclear/uncovered spending;
+keep October 21 review. Do not provision/resize, extend, retry or add other tools.
+
+Push the exact clean repaired branch from Mac and sync the VM read-only. Verify
+and reuse the passed restored cache and MetaBAT installation with reuse-lock;
+refuse missing/corrupt bytes without fallback, recopy or reinstall. Arm/test a
+fresh current-boot/process held-parent exit watcher and provider STOP before
+release. Run the repaired Linux library/source/runtime and remaining tiny gates
+inside the same clock, then the unchanged sole CPM rule plus frozen marker
+refinement and one MetaBAT2 2.18 cvExt/default/seed11 reference. No encoder refit,
+marker detection, neighbor-index build, truth change or grid/tuning.
+
+On failure collect bounded evidence, stop and verify TERMINATED without retry.
+If healthy after supervision/progress verification, wait a few minutes and report
+stage/logs, finishing without polling to completion. If completed, independently
+verify shutdown, archive/member bytes and actual costs, then perform bounded
+local admitted-truth-v2 diagnostics. Reuse dev3/RB results; retain full denominators,
+all length/origin/native-eligibility populations, 3.3034% N-quarantine and failed Mac
+portability. Keep confirmation data unacquired and external expansion deferred.
+Update records, check, commit and report results/limits and one next decision.

@@ -1,0 +1,595 @@
+{
+  "branch": "codex/e011-cached-grouping-reference",
+  "compact_failure_review": {
+    "additional_readback_USD_upper": 0.00012430384755134582,
+    "all_members_verified": 194,
+    "archive": {
+      "bytes": 1112252,
+      "sha256": "37700935a39f1c48771186c94c10088df63480d9c540c0f4cf5b0c5480539f58"
+    },
+    "checked_utc": "2026-10-17T01:21:27.758042+00:00",
+    "generation": "1792200086747657",
+    "inventory": {
+      "bytes": 31263,
+      "sha256": "278b55e412bfcdff31784bbef2871321b95350af132b997a67f5a4b1507c238c"
+    },
+    "logical_member_bytes": 2925112,
+    "readback_verified": true,
+    "scope": "Snapshot before final closure locator; no VM wake or retry",
+    "uri": "gs://dl-binner-archive-167650584170/e011/cached-ab80312-20261017T005141Z/failure-review-evidence-v1.tar.gz"
+  },
+  "completion": {
+    "cloud_collection_verified": true,
+    "collection_disk_observations": [
+      {
+        "free": 140758511616,
+        "growth": 151552,
+        "monotonic": 157.698630778,
+        "used": 175958364160
+      },
+      {
+        "free": 140758499328,
+        "growth": 163840,
+        "monotonic": 159.70132977,
+        "used": 175958376448
+      },
+      {
+        "free": 140758466560,
+        "growth": 196608,
+        "monotonic": 161.703683492,
+        "used": 175958409216
+      },
+      {
+        "free": 140758446080,
+        "growth": 217088,
+        "monotonic": 163.706296344,
+        "used": 175958429696
+      }
+    ],
+    "control_archive": {
+      "bytes": 19320,
+      "collection": {
+        "archive": {
+          "bytes": 19320,
+          "sha256": "1fa72f3c51d9c942ac125e2d722e34e3a8e903a02223aa97175e9a94723a622f"
+        },
+        "inventory": {
+          "bytes": 3995,
+          "sha256": "15c90b91dba97b9f8558df9109d82b71841bf786a517f3c036e1d02279054c87"
+        },
+        "logical_member_bytes": 65324,
+        "members": 28,
+        "path": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/run-evidence.tar.gz"
+      },
+      "readback_verified": true,
+      "sha256": "1fa72f3c51d9c942ac125e2d722e34e3a8e903a02223aa97175e9a94723a622f",
+      "uri": "gs://dl-binner-archive-167650584170/e011/cached-ab80312-20261017T005141Z/run-evidence.tar.gz"
+    },
+    "control_checksum": {
+      "bytes": 86,
+      "readback_verified": true,
+      "sha256": "741a863f7d2c94c16acc8c354ae0104c0635b0d950abc80dd4873e1b56bc52a1",
+      "uri": "gs://dl-binner-archive-167650584170/e011/cached-ab80312-20261017T005141Z/run-evidence.tar.gz.sha256"
+    },
+    "cpm_completed": false,
+    "elapsed_since_VM_start_seconds": 164.55179977416992,
+    "error": "RuntimeError: Command failed; see /srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/logs/metabat-before.log\nTraceback (most recent call last):\n  File \"/srv/dl_binner/repo/scripts/e011_metabat.py\", line 110, in <module>\n    elif a.action=='probe':probe(a.binary,a.output,a.previous)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/dl_binner/repo/scripts/e011_metabat.py\", line 64, in probe\n    if q.is_file():members[str(q)]=binding(q)\n                                   ^^^^^^^^^^\n  File \"/srv/dl_binner/repo/scripts/e009_common.py\", line 22, in binding\n    raise ValueError(f'Missing or linked regular file: {path}')\nValueError: Missing or linked regular file: /srv/dl_binner/experiments/e011/envs/metabat2-2.18-20261017T005141Z/bin/../lib/libz.so.1\n\nDLBINNER exit_code=1 stop_reason=None\n",
+    "metabat_completed": false,
+    "phase_id": "cached-20261017T005141Z-ab80312",
+    "source_commit": "ab80312c2dc30c79004e7abb51f27f0a8e028bcf",
+    "stages": [
+      {
+        "name": "restore",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e011_cached.py",
+            "restore",
+            "--archive",
+            "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/candidate-run-evidence.tar.gz",
+            "--output",
+            "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore"
+          ],
+          "exit_code": 0,
+          "launched_pid": 1973,
+          "peak_sampled_rss_bytes": 61292544,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.9179017337428119,
+          "sampled_cpu_seconds": 11.6,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1476.85931597096,
+          "stop_reason": null,
+          "wall_seconds": 12.637518346000007
+        }
+      },
+      {
+        "name": "runtime-before",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e011_cached.py",
+            "probe",
+            "--root",
+            "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore",
+            "--output",
+            "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/run/runtime-before.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 1974,
+          "peak_sampled_rss_bytes": 79654912,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.203093029777917,
+          "sampled_cpu_seconds": 1.38,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1464.1880999919601,
+          "stop_reason": null,
+          "wall_seconds": 1.1470434670000031
+        }
+      },
+      {
+        "name": "metabat-install",
+        "resources": {
+          "command": [
+            "/bin/bash",
+            "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/logs/metabat-install.sh"
+          ],
+          "exit_code": 0,
+          "launched_pid": 1982,
+          "peak_sampled_rss_bytes": 163827712,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.0809617275221632,
+          "sampled_cpu_seconds": 7.8999999999999995,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1463.03140982896,
+          "stop_reason": null,
+          "wall_seconds": 7.308306852000015
+        }
+      }
+    ],
+    "status": "FAILED"
+  },
+  "cost": {
+    "VM_compute_IP_USD": 0.030708840440707978,
+    "allocated_vCPU_hours": 0.8997422222222222,
+    "ceiling_USD": 1,
+    "compact_review_readback_USD_upper": 0.00012430384755134582,
+    "conservative_total_USD": 0.06296895467303719,
+    "credit_gate": {
+      "VM_compute_IP_rate_USD_per_hour": 0.2730456762592464,
+      "asset_readback_storage_operations_reserve_USD": 0.07,
+      "checked_utc": "2026-10-17T00:40:59.308388+00:00",
+      "compute_IP_fallback_USD": 0.20478425719443483,
+      "conservative_gross_USD": 0.5468390516634588,
+      "coverage": "ordinary E2/nonpremium Ubuntu/PD/IP/Iowa private Standard Storage and operations/network; existing eligible products only",
+      "credit_expiry": "2027-01-12",
+      "credit_gate_passed": true,
+      "credit_original_DKK": 1973.43,
+      "credit_remaining_DKK": 1933.15,
+      "credit_scope": "Certain usage; see Free Trial terms; net pricing",
+      "credit_status": "Available",
+      "credit_valid_until_epoch": 1799712000.0,
+      "disk_interval_fallback_USD": 0.032054794469024,
+      "existing_disk_monthly_USD": 31.199999949850024,
+      "existing_storage_reserve_USD": 5,
+      "headroom": "Last stopped receipt132.28GiB free; actual mount/RAM/headroom must pass immediately at boot before heavy setup",
+      "max_export_GiB": 2,
+      "max_export_USD": 0.24,
+      "new_ceiling_USD": 1,
+      "no_new_resources": true,
+      "official_coverage": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "official_network_storage": "https://cloud.google.com/storage/pricing",
+      "paid_account": true,
+      "pending_usage": "unknown/delayed; not assumed zero",
+      "pending_usage_accounted": true,
+      "prior_unreconciled_exposure_reserve_USD": 30,
+      "provider_fallback_seconds": 2700,
+      "reported_cost_and_savings_DKK": 38.94,
+      "reported_net_DKK": 0,
+      "retention_extended": false,
+      "retention_review": "2026-10-21",
+      "storage_valid_until_epoch": 1792533600.0
+    },
+    "disk_interval_USD": 0.0048068420014060415,
+    "measured_VM_seconds": 404.884,
+    "native_export_USD_upper": 2.9293075203895566e-06,
+    "native_export_bytes": 26211,
+    "no_retry": true,
+    "prior_asset_readback_USD_upper": 0.007450342923402786,
+    "provider_start": "2026-10-16T17:51:41.313-07:00",
+    "provider_status": "TERMINATED",
+    "provider_stop": "2026-10-16T17:58:26.197-07:00",
+    "remaining_small_charge_reserve_USD": 0.019875696152448656,
+    "storage_operations_reserve_USD": 0.02,
+    "subtotal_before_storage_operations_USD": 0.04296895467303719,
+    "subtotal_with_review_before_remaining_small_charges_USD": 0.04309325852058854
+  },
+  "evidence": {
+    "actual-cost.json": {
+      "bytes": 2332,
+      "sha256": "a829220ff95cee943bb2ab7b626dc54137f24e28fca24a13dbd7650f9ba38353"
+    },
+    "contracts-repair-local-v2.log": {
+      "bytes": 6018,
+      "sha256": "f11cbcd5fe169fbcc4f96580bc1e1edddb85d72a40bb21fc8feb55ea8d4b0cf4"
+    },
+    "contracts-repair-local.log": {
+      "bytes": 6920,
+      "sha256": "70609de8356b74b4dbbbf5fd84744b745a5e06ee98ef7a56126b8462b02cea0e"
+    },
+    "e011_metabat-repair-v1-executed.py": {
+      "bytes": 7612,
+      "sha256": "1ba02f59a66ce0dc7157ad7f0521c4cc8e137d6c518a05a22e6bb18f14e1ba1e"
+    },
+    "health-1.log": {
+      "bytes": 7651,
+      "sha256": "7a983c8e9dc6bdaf3b5e3699d1c2f43f646245b24c60493c7a499e8546ac5dff"
+    },
+    "native-completion.json": {
+      "bytes": 5539,
+      "sha256": "9604e2e7e6467e42da51d4da8ab8ae8df9bcec490c0312703806f7dd615c4c92"
+    },
+    "native-guest.json": {
+      "bytes": 2096,
+      "sha256": "929ad3459b82c42aa4d74343f87b324ebfb056bc752ff055fea6bf47176bc6e3"
+    },
+    "native-member-verification.json": {
+      "bytes": 4770,
+      "sha256": "cf1d78e5dd96c6e68cde7944667318bca83d69cfb6c3594529db94f03f2de10a"
+    },
+    "provider-stop-operation.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "provider-stop.log": {
+      "bytes": 208,
+      "sha256": "0c79c37e042083eeecde3f796bbc258155d0408af295d2119dacd4dbe82079a5"
+    },
+    "remote-arm.log": {
+      "bytes": 1660,
+      "sha256": "7df0aceed0f882032c6431c17b5de793e6ed991b03890a14487efb6f24d889d3"
+    },
+    "remote-preflight.log": {
+      "bytes": 6497,
+      "sha256": "9373399f9cc11f717b4b62499490eaca63e0b5ea7d2dfec5cb6a4ce44369b133"
+    },
+    "remote-release.log": {
+      "bytes": 3262,
+      "sha256": "470e3c05ff9fe5f4630f53a5426946e5ba8716d056be7a396790d5905f0749b2"
+    },
+    "serial-after-failure.stderr": {
+      "bytes": 205,
+      "sha256": "f0bb03cc5677d903f85a528755a658bcadea51f0a7a0cbeb9b979c26df266dab"
+    },
+    "test_e011-repair-v1-executed.py": {
+      "bytes": 11253,
+      "sha256": "edd0b8f19ba5a8114a657e1895f6ff13797548573c2e05749ed7f2395f4d2aac"
+    },
+    "watchdog-exit.json": {
+      "bytes": 1266,
+      "sha256": "14148856c8f9c2f8f9c0bd2ae7840db9717e4a56c386b6a25516a9ae0965faac"
+    }
+  },
+  "failed_native": {
+    "cause": "New probe incorrectly applied scientific-artifact symlink refusal to the normal dynamic-loader libz.so.1 alias",
+    "executed_source": {
+      "bytes": 6653,
+      "sha256": "a51614c3f9348aba65e7b843426090f6be7b68b5cb628fdec5a881437fd77899"
+    },
+    "receipt": {
+      "command": [
+        "/srv/dl_binner/experiments/e010/envs/candidate-dev4-py312-20261016T212549Z-6917c3f/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e011_metabat.py",
+        "probe",
+        "--binary",
+        "/srv/dl_binner/experiments/e011/envs/metabat2-2.18-20261017T005141Z/bin/metabat2",
+        "--output",
+        "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/run/metabat-before.json"
+      ],
+      "exit_code": 1,
+      "launched_pid": 2097,
+      "peak_sampled_rss_bytes": 37683200,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.42122851080734236,
+      "sampled_cpu_seconds": 0.11000000000000032,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1455.7106973599602,
+      "stop_reason": null,
+      "wall_seconds": 0.2611409179999953
+    },
+    "source_note": "Executed failed source is immutable commit ab80312 and its verified private payload; local repairs are separately bound below.",
+    "stage": "metabat-before"
+  },
+  "guest_private_status_agree": true,
+  "next": "One fresh explicitly authorized E011 attempt with verified retained cache/installation reuse and repaired native gates; unchanged sole CPM rule and MetaBAT defaults. Stop again on failure; no automatic retry, expansion or confirmation.",
+  "not_run": [
+    "native-cache-smoke",
+    "launcher-contracts",
+    "metabat-smoke",
+    "cpm",
+    "metabat-native",
+    "metabat-export",
+    "runtime-after",
+    "metabat-after"
+  ],
+  "passed_native": {
+    "actual_MetaBAT_help": "Returned successfully and matched2.18/cvExt before provenance error; not full native reader/fit acceptance",
+    "archive_restore": 12.637518346,
+    "complete_E010_runtime_inventory_and_source": 1.147043467,
+    "independent_MetaBAT_35_package_install": 7.308306852
+  },
+  "phase_id": "cached-20261017T005141Z-ab80312",
+  "provider": {
+    "machine": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/machineTypes/e2-standard-8",
+    "receipt": {
+      "bytes": 33096,
+      "sha256": "88255a81015314f36d900a02bb5ae217373f49803813669af37287fee0cf8b14"
+    },
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "2700"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "start": "2026-10-16T17:51:41.313-07:00",
+    "status": "TERMINATED",
+    "stop": "2026-10-16T17:58:26.197-07:00",
+    "wake_after_failure": false
+  },
+  "repair": {
+    "actual_restored_consumer_reuse": {
+      "bytes": 246,
+      "sha256": "81fc991376aa261c1e34db37df3023a9a6f406382bd9f1fb51b0ae8434e92f89"
+    },
+    "additional_repairs": "Serialize failed-phase disk observations and include restore verification receipt in future archives. Preserve this failed journal as executed.",
+    "docs_check": {
+      "bytes": 727,
+      "sha256": "04892b798d1f2d080859c4fe7960ff9bc439a987b875a48e395bf6a73f54993f"
+    },
+    "failed_local_repair_test": "Initial fixture compared /var with its physical /private/var alias. Its source/log are retained; corrected expected target path, with artifact/link/corruption checks unchanged.",
+    "native_Linux_repaired_gate": "unexecuted; must pass within a fresh separately authorized phase",
+    "native_Mac_CLI_probe": {
+      "bytes": 5798,
+      "sha256": "df88bb8d16ae0cd3d6e4aa4f51380cfec0539bfd8809e7192a2e695cff77512a"
+    },
+    "native_prefix_reuse": "Complete installation receipt + inventory/binary refusal contracts tested; full retained cache consumer verified. Linux actual retained-prefix and repaired library gates remain pending, no reinstall/fallback.",
+    "policy": "Preserve loader-reported alias and resolved target/content; keep invocation paths and scientific artifact refusal unchanged; refuse broken/looped/missing members",
+    "reuse_lock": {
+      "bytes": 1237,
+      "sha256": "37c3955f327529d3e623d2515116ea9bb646de164fd378fed3e8e98925f230d2"
+    },
+    "scope": "Local only; no retry, VM wake, fit, score, seed/model/refinement change",
+    "source": {
+      "scripts/e011_cached.py": {
+        "bytes": 16152,
+        "sha256": "78150f82f96d02c0a54cf8c272801b8d3d58800ed18c30c169d563c76ed9d663"
+      },
+      "scripts/e011_metabat.py": {
+        "bytes": 8829,
+        "sha256": "b59e155d590b066390b66c9bbef328840b38291d22cf80218072fd2292ef9f6f"
+      },
+      "scripts/e011_phase.py": {
+        "bytes": 9687,
+        "sha256": "92ecc3c3c52ff88dec4fa3e17aad45c356fef0b7a3b3805da7242be65cc8874f"
+      },
+      "tests/test_e011.py": {
+        "bytes": 12793,
+        "sha256": "de00744eb36410186c14b28ed6a770fe08c68c982aa70e786c03050962d07f9b"
+      },
+      "tests/test_e011_phase.py": {
+        "bytes": 5305,
+        "sha256": "bcfb8e9e163a16933f3e1374115f941a5082dc718bdcb51e40a70078ea1c5e3f"
+      }
+    },
+    "test_log": {
+      "bytes": 6236,
+      "sha256": "111eae99dea8d5d1d0039c1e3249c045bcc5da1c065ac5fc16ecac52f62196b5"
+    },
+    "tests": 10
+  },
+  "reviewed_utc": "2026-10-17T01:13:51.619927+00:00",
+  "science": {
+    "full_confirmation_plan_unchanged": true,
+    "new_community_outputs": false,
+    "new_scores": false,
+    "old_dev3_dev4_E009_truth_outputs_journals_unchanged": true,
+    "original_Mac_numeric_tolerance_remains_failed": true
+  },
+  "source_commit": "ab80312c2dc30c79004e7abb51f27f0a8e028bcf",
+  "status": "FAILED native provenance gate; no community CPM or MetaBAT execution; VM independently TERMINATED",
+  "storage": {
+    "collection_sampled_maximum_used_bytes": 175958429696,
+    "existing_disk_monthly_gross_USD": 31.2,
+    "full_phase_peak": "unknown: first guard observations were not serialized on failure; 0.2s limits enforced and no space/RAM limit triggered",
+    "initial_free_bytes": 141695594496,
+    "minimum_collection_sampled_free_bytes": 140758446080,
+    "missing_native_restore_manifest": "Not included in failed archive. A deterministic portable expected manifest from independent local restore is frozen in reuse-lock; next consumer must check actual retained bytes. No wake for missing evidence.",
+    "retention_extended": false,
+    "retention_review": "2026-10-21"
+  },
+  "verification": {
+    "archive": {
+      "bytes": 19320,
+      "collection": {
+        "archive": {
+          "bytes": 19320,
+          "sha256": "1fa72f3c51d9c942ac125e2d722e34e3a8e903a02223aa97175e9a94723a622f"
+        },
+        "inventory": {
+          "bytes": 3995,
+          "sha256": "15c90b91dba97b9f8558df9109d82b71841bf786a517f3c036e1d02279054c87"
+        },
+        "logical_member_bytes": 65324,
+        "members": 28,
+        "path": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/run-evidence.tar.gz"
+      },
+      "readback_verified": true,
+      "sha256": "1fa72f3c51d9c942ac125e2d722e34e3a8e903a02223aa97175e9a94723a622f",
+      "uri": "gs://dl-binner-archive-167650584170/e011/cached-ab80312-20261017T005141Z/run-evidence.tar.gz"
+    },
+    "every_member_verified": true,
+    "files": {
+      "collection-inventory.json": {
+        "bytes": 3995,
+        "sha256": "15c90b91dba97b9f8558df9109d82b71841bf786a517f3c036e1d02279054c87"
+      },
+      "log-arm.log": {
+        "bytes": 1458,
+        "sha256": "33d9861f162deb10d532192cdc4f821775b5eb524c7503c69e951e45fc8b55be"
+      },
+      "log-cost-credit-admission.json": {
+        "bytes": 1593,
+        "sha256": "c9d549886b464263d19adc684f2d7655eb4985ea61bc9ad7d6c16a7648faedfe"
+      },
+      "log-host-preflight.json": {
+        "bytes": 192,
+        "sha256": "4bf826f15f137b8b9e60a70d6d2376249c3bcd50266265e65e366f3e72e14177"
+      },
+      "log-metabat-before.exit.json": {
+        "bytes": 871,
+        "sha256": "3d5919a13894ccbb3aa604448c4cf73f6386d399130ab3d165cbebd936e1a0b7"
+      },
+      "log-metabat-before.log": {
+        "bytes": 710,
+        "sha256": "59879d5ba114481e639af0b37b000a91c0339ef5043940a0b0b0952b5fa5df55"
+      },
+      "log-metabat-before.samples.jsonl": {
+        "bytes": 202,
+        "sha256": "0c32319042c75f5622b6ca00688605ea633e3595daf4168c53f23a35bcafa26e"
+      },
+      "log-metabat-install.exit.json": {
+        "bytes": 579,
+        "sha256": "d238dec54036780832ee06b86dbb9fda692118ed58753ff1df17fc82d4e84594"
+      },
+      "log-metabat-install.log": {
+        "bytes": 9649,
+        "sha256": "7916d2aad8187d38e6bb2fe1853a559ae7d6c4a7e7c4ef59b37808e0f124270b"
+      },
+      "log-metabat-install.samples.jsonl": {
+        "bytes": 3095,
+        "sha256": "b43ceeb6533bcde345040d0c48942b2cc50147661c65cbca9e5531bd74991e84"
+      },
+      "log-metabat-install.sh": {
+        "bytes": 967,
+        "sha256": "0a004b2ac6ee9e59a215a63cf66eb54a3c1ba7fbfd8b6a9264c1d173cb9d6017"
+      },
+      "log-preflight.log": {
+        "bytes": 6295,
+        "sha256": "732eff66f78528820096130c7c346a62d96acf29e3cc9caf747ba80281dc0b1b"
+      },
+      "log-release.log": {
+        "bytes": 3060,
+        "sha256": "2aa5f11fecf70a7854c182176ea8a5346e08c1110cfafb855e9bf655d08f6650"
+      },
+      "log-restore.exit.json": {
+        "bytes": 851,
+        "sha256": "422bf0fc5ec285ac871695c0cfe88c41738766069fb35ae0ced796b6db59650c"
+      },
+      "log-restore.log": {
+        "bytes": 39,
+        "sha256": "656290c880214b589dbffc403a511384edfb33ad2dff20d8af5aa3bf69e751f2"
+      },
+      "log-restore.samples.jsonl": {
+        "bytes": 5136,
+        "sha256": "2c8835606954a86b823b3d90387a7992a7adb36d4598ef7ae35f3e984c28054e"
+      },
+      "log-runtime-before.exit.json": {
+        "bytes": 841,
+        "sha256": "c2375b4fba974f09b5d77714b46c930be9023d8e125c0a7a6159b49482ca6853"
+      },
+      "log-runtime-before.log": {
+        "bytes": 39,
+        "sha256": "656290c880214b589dbffc403a511384edfb33ad2dff20d8af5aa3bf69e751f2"
+      },
+      "log-runtime-before.samples.jsonl": {
+        "bytes": 551,
+        "sha256": "a895531bb9985bc3d8ae0fbe01bd9559b595ffbdb75ff5ee2adf63e3734a1cde"
+      },
+      "log-watchdog-live-before-release.json": {
+        "bytes": 569,
+        "sha256": "dc074af19e8b8151f6da3c0c03e5c02c8ee3ada855df8f05b4f2386fee0c2a4a"
+      },
+      "metabat-explicit.txt": {
+        "bytes": 5571,
+        "sha256": "c96a8e4b89cc491cea023f7da9140de9c4fdb39317f541c53dd6e2e89562006f"
+      },
+      "metabat-install.json": {
+        "bytes": 3086,
+        "sha256": "8e20339fdb6e86a5d9a1d3899130225681fe6a94869f6145edee69ed92f2b154"
+      },
+      "phase-config.json": {
+        "bytes": 6842,
+        "sha256": "55bb6904a6c833cfb0de16dc93b445fd7de4f74bb808555ab9aab3aba37842e0"
+      },
+      "phase-result.json": {
+        "bytes": 3999,
+        "sha256": "f62fbe28349e3de7bf4d30a7d7ee9deaf939e6e0b67706b31074aeae909a0516"
+      },
+      "release.json": {
+        "bytes": 558,
+        "sha256": "f325089600eaded76ef055298567632173f817255b59311441a55c53b8e061b9"
+      },
+      "runtime-before.json": {
+        "bytes": 4030,
+        "sha256": "96ef91c81cddcb21bb9de96f7a1dd07fa41e95b944d64279f48552bc348aa1f3"
+      },
+      "started.json": {
+        "bytes": 222,
+        "sha256": "07774c8b9e5fc585fe9cb782a428010e96c99963e0b276529badbbddd250d72d"
+      },
+      "terminal.snapshot.log": {
+        "bytes": 324,
+        "sha256": "40e2eb0c72c4051af404d1c4bb5c3e859f627dab2b372ff466033d00d76eac6f"
+      }
+    },
+    "logical_bytes": 65324,
+    "regular_members": 28
+  },
+  "watchdog": {
+    "native_before_release_tests": "2 tests passed, real /proc identity/live/normal/crash paths with inert children; no active science stopped by test",
+    "scope": "Exit detector and snapshot upload observed; final stop independently confirmed after explicit provider stop. Do not attribute the final provider state solely to the guest request.",
+    "serial_console": "Control-plane serial output unavailable (resource not ready); no VM wake",
+    "snapshot": {
+      "action": "clean guest shutdown requested; no retry or deletion",
+      "boot_id": "99034a8a-e41b-4f99-a0d6-9d903cd6483d",
+      "checked_utc": "2026-10-17T00:56:06.579392+00:00",
+      "decision": "workflow exited",
+      "expected_process": {
+        "command_sha256": "86915c9fca61b39ee455301b5eaff8260fe32539cdff25f5e5128b3653db0f5c",
+        "pid": 1828,
+        "start_ticks": 10925
+      },
+      "first_missing_monotonic": 196.218295858,
+      "missing_seconds": 61.994235988999975,
+      "observed_process": null,
+      "shutdown": true,
+      "snapshot": {
+        "attempts": {},
+        "log_tails": {
+          "upload-run-evidence.tar.gz.log": "Copying file:///srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/run-evidence.tar.gz to gs://dl-binner-archive-167650584170/e011/cached-ab80312-20261017T005141Z/run-evidence.tar.gz\n  \n.\n\nDLBINNER exit_code=0 stop_reason=None\n",
+          "upload-run-evidence.tar.gz.sha256.log": "Copying file:///srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/run-evidence.tar.gz.sha256 to gs://dl-binner-archive-167650584170/e011/cached-ab80312-20261017T005141Z/run-evidence.tar.gz.sha256\n  \n\n\nDLBINNER exit_code=0 stop_reason=None\n"
+        },
+        "stages": {}
+      },
+      "workflow_root": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312"
+    },
+    "snapshot_binding": {
+      "bytes": 1266,
+      "sha256": "14148856c8f9c2f8f9c0bd2ae7840db9717e4a56c386b6a25516a9ae0965faac"
+    }
+  }
+}
