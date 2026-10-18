@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-18",
+  "authorization": "Owner resumed the interrupted local engineering/admission task and had explicitly authorized debugging recoverable local errors with verified reuse and preserved journals.",
+  "failed_attempt": "source-validation-v1: 247.574 s, exit1, sampled RSS148721664; refused an unrelated 924011023-byte anonymous_gsa_pooled.fasta.gz regular member after processing source FASTAs. Original source freeze, log, partial directory and expired 5400-second acquisition clock remain immutable.",
+  "diagnosis": "The complete publisher archive also contains a compressed pooled GSA. Applying the source-FASTA in-memory size check to every unrelated archive member was an adapter mistake, not corrupt source sequence or a biological result.",
+  "repair": "Stream-hash all unused regular members in1MiB blocks without decompression/extraction or scientific use. Retain the256MiB in-memory ceiling for source FASTAs/needed metadata, exact record/path/link/malformed-input refusal, complete publisher MD5/SHA256, all locus checks, storage and RSS caps.",
+  "new_bounded_attempt": "One explicit900-second local diagnosis/repair/source-validation/union clock, from source-repair-v2/clock.json; no silent reset of original wall clock, download, accepted-science rerun, cloud start or spend. Fresh source-validation-v2 output only.",
+  "scientific_rule": "Unchanged. Full source inventory alone still does not admit unique-support sequence truth or the community comparison.",
+  "resources": {"threads":4,"sampled_RSS_bytes":8000000000,"extra_local_bytes":10737418240,"free_local_reserve_bytes":5368709120}
+}

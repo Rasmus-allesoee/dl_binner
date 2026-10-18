@@ -18,6 +18,19 @@ from e014_acquire import hashes
 
 
 class SourceContracts(unittest.TestCase):
+    def test_unused_regular_member_streamed_while_source_RAM_limit_stays(self):
+        with tempfile.TemporaryDirectory()as t:
+            path=Path(t)/'tiny.tar'
+            with tarfile.open(path,'w')as archive:
+                member=tarfile.TarInfo('unused.gz');member.size=12;archive.addfile(member,io.BytesIO(b'opaque bytes'))
+            with tarfile.open(path,'r')as archive:
+                member=archive.next();raw,bound=source.read_member(archive,member,False,maximum=4)
+                self.assertIsNone(raw);self.assertEqual(bound['bytes'],12)
+                self.assertEqual(bound['sha256'],hashlib.sha256(b'opaque bytes').hexdigest())
+            with tarfile.open(path,'r')as archive:
+                with self.assertRaisesRegex(ValueError,'Oversized in-memory'):
+                    source.read_member(archive,archive.next(),True,maximum=4)
+
     def fixture(self, root, wrong=False, unsafe=False):
         """Create actual source bytes, receipt and disk-indexed independent GSA join."""
         (root/'metadata').mkdir();(root/'admission-v1').mkdir()

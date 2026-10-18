@@ -54,10 +54,27 @@ def verify_locus(dna, start, end, expected):
         raise ValueError('Provided GSA/source substring DNA differs')
 
 
-def audit(root=ROOT, e009_catalog=None):
+def read_member(archive, member, in_memory, maximum=256*1024**2):
+    """Hash every regular member; only needed small source/metadata bytes enter RAM.
+
+    Setup also contains an unrelated 924-MB compressed pooled GSA. It is hashed
+    as opaque archive content, never decompressed, extracted or used as truth.
+    Source FASTAs still have an explicit in-memory size refusal.
+    """
+    if not member.isfile():raise ValueError('Unsupported nonregular source member: '+member.name)
+    if in_memory and member.size>maximum:raise ValueError('Oversized in-memory source member: '+member.name)
+    stream=archive.extractfile(member);sha=hashlib.sha256();n=0;chunks=[]
+    for block in iter(lambda:stream.read(1024**2),b''):
+        sha.update(block);n+=len(block)
+        if in_memory:chunks.append(block)
+    if n!=member.size:raise ValueError('Truncated source member')
+    return (b''.join(chunks) if in_memory else None),dict(member=member.name,bytes=n,sha256=sha.hexdigest())
+
+
+def audit(root=ROOT, e009_catalog=None, clock_path=None, output_name='source-validation-v1'):
     """Bind the complete archive, metadata and all indexed GSA intervals without fits."""
     root = Path(root)
-    clock = json.loads((root/'acquisition-clock.json').read_text())
+    clock = json.loads(Path(clock_path or root/'acquisition-clock.json').read_text())
     guard(root, clock)
     receipt = json.loads((root/'source-acquisition.json').read_text())
     item = receipt['files'][0]
@@ -73,7 +90,8 @@ def audit(root=ROOT, e009_catalog=None):
     by_name = defaultdict(list)
     for genome, path in sources.items():
         by_name[Path(path).name].append(genome)
-    out = root/'source-validation-v1'
+    if Path(output_name).name!=output_name:raise ValueError('Source audit output must be a fresh local basename')
+    out = root/output_name
     out.mkdir(exist_ok=False)
     inventory, refs, totals, members = [], [], {}, set()
     checked, metadata_checked = Counter(), []
@@ -89,15 +107,9 @@ def audit(root=ROOT, e009_catalog=None):
             members.add(member.name)
             if member.isdir():
                 continue
-            if not member.isfile() or member.size > 256*1024**2:
-                raise ValueError('Unsupported/oversized source member')
-            # extractfile reads bytes and never writes an archive path on disk.
-            raw = archive.extractfile(member).read()
-            if len(raw) != member.size:
-                raise ValueError('Truncated source member')
-            bound = dict(member=member.name, bytes=len(raw), sha256=hashlib.sha256(raw).hexdigest())
-            inventory.append(bound)
             metadata_path = root/'metadata'/('setup-'+member.name)
+            raw,bound=read_member(archive,member,name.name in by_name or metadata_path.is_file())
+            inventory.append(bound)
             if metadata_path.is_file():
                 if metadata_path.read_bytes() != raw:
                     raise ValueError('Complete source metadata differs from earlier bounded prefix')
@@ -171,7 +183,8 @@ def audit(root=ROOT, e009_catalog=None):
         unresolved=['Near homology/competitive-origin ambiguity has not been exhaustively localized; exact hashes/accessions are not a near-overlap proof.',
                     'Source FASTA headers do not provide a complete molecule/host annotation inventory; retain provided assembly grouping and unknown annotations.',
                     'A source-blind model-input derivative, duplicate-safe union evaluator and independently reviewed truth admission are still required.'],
-        seconds=time.monotonic()-started, original_clock=clock,
+        seconds=time.monotonic()-started, validation_clock=clock,
+        original_acquisition_clock=json.loads((root/'acquisition-clock.json').read_text()),
         scope='Exact publisher origin and full reference inventory, not admitted unique-alignment truth or a changed community score.')
     for name, value in [('members.json',inventory),('references.json',refs),('denominators.json',totals),('review.json',result)]:
         (out/name).write_text(json.dumps(value,indent=2,sort_keys=True)+'\n')
@@ -183,4 +196,6 @@ def audit(root=ROOT, e009_catalog=None):
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root', type=Path, default=ROOT)
-    audit(p.parse_args().root)
+    p.add_argument('--clock',type=Path,help='Explicit recorded repair clock; original attempt is preserved')
+    p.add_argument('--output-name',default='source-validation-v1')
+    a=p.parse_args();audit(a.root,clock_path=a.clock,output_name=a.output_name)
