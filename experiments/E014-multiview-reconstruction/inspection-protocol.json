@@ -26,8 +26,8 @@
   "reviewer_freeze_UTC": "2026-10-18T22:49:45.483332+00:00",
   "reviewer_source": {
     "scripts/e014_review.py": {
-      "bytes": 22465,
-      "sha256": "8678f7bec38d6027e922e274b7854cbb30e90866b26736cd49fd92b116f89ef7"
+      "bytes": 22710,
+      "sha256": "b72d6a974658374000e6f55be66d925f74187786965bebfb622d1f596764cb1a"
     },
     "scripts/e014_archive_review.py": {
       "bytes": 6373,
@@ -42,5 +42,6 @@
       "sha256": "eac6b3367d74408929d31fd96c5ca104215dec9b71ea83ae7c229b9581909640"
     }
   },
-  "engineering_tests": "6actual review/archive/graph fixtures pass: allDNA CSV+axes, unknown/short/non-target/nonACGT populations, raw vs deliberately mismatched learned geometry, cached marker full/nonhit refusal, actual tar streams/corruptbytes/cap/selective copies, transferred sparse graph CLI. Existing admitted evaluators reused without metric changes."
+  "engineering_tests": "6actual review/archive/graph fixtures pass: allDNA CSV+axes, unknown/short/non-target/nonACGT populations, raw vs deliberately mismatched learned geometry, cached marker full/nonhit refusal, actual tar streams/corruptbytes/cap/selective copies, transferred sparse graph CLI. Existing admitted evaluators reused without metric changes.",
+  "reviewer_memory_note": "Before changed outcomes: release the already checked/evaluated old/post Python partition objects before raw matrix diagnostics; metrics/query/schedule semantics unchanged."
 }

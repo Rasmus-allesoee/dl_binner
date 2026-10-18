@@ -266,6 +266,10 @@ def unit_review(unit,features,original_inventory,output,dataset,marker_clean,tru
             evaluated=evaluate(truth_root,path,output/('truth-'+arm))
             result['arms'][arm]=dict(evaluation=evaluated,grouping=oral_population(part,data,lab,quarantine,shared,genomes,truth['targets'],clean))
         labels={q:(genomes[int(lab[i])]if lab[i]>=0 else None)for i,q in enumerate(ids)}
+    # Saved alternatives are fully checked/evaluated; retain only the parent
+    # during the bounded raw-matrix diagnostic, rather than three million-row
+    # Python partition objects alongside its numerical temporaries.
+    del old,post,part
     result['raw_learned_geometry']=parent_geometry(data,checkpoint['transform'],pre,labels)
     query_groups=defaultdict(list)
     for row in result['raw_learned_geometry']['queries']:
