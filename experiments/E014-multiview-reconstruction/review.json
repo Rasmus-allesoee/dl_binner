@@ -66,8 +66,9 @@
   "comparison": {
     "actually_run": 0,
     "cloud_VM_starts": 0,
+    "current_gate": "Local data/origin-oracle and financial gates pass; actual new Linux/runtime/headroom/held-parent/STOP gates precede science release.",
     "external_binners": 0,
-    "failed_gate": "Oral truth/ambiguity/evaluator admission has not passed; therefore no conditional community comparison or VM wake.",
+    "failed_gate": null,
     "native_pending": "New complete Python3.12 Linux CPU environment/inventory/import/CLI/marker/train/reload/graph/refinement/export, fresh guest headroom, held-parent watcher/STOP and current financial release gates.",
     "new_fits_if_admitted": 3,
     "operations": "OPERATIONS.md",
@@ -86,8 +87,9 @@
   },
   "engineering": {
     "active_v2_new_product_tests": 4,
+    "actual_ready_rule_scheduler": "engineering/scheduler-entry-v2/verified.json; two real independently ready4-core rules serial under--cores4/no--jobs",
     "actual_tiny_Snakemake_jobs": 20,
-    "data_and_release_contracts": 20,
+    "data_and_release_contracts": 23,
     "limits": "Generated HMM and synthetic DNA/depth are engineering fixtures, not biological community evidence. No new native Linux/dev5 full-scale acceptance. Original Mac allclose failure remains failed.",
     "native": "Actual installed Mac PyTorch/NumPy, Pyrodigal/PyHMMER generated-HMM fixture, exact/approximate sparse readers, CPM/refinement/export; no mocked worker replaces the changed path",
     "owned_runtime_inventory": "artifacts/e014-multiview-reconstruction/runtime-inventory-v3.json",
@@ -190,7 +192,8 @@
       "inner_model_seconds": 1.7141818009549752,
       "parameter_count": 145618,
       "parents": 1024
-    }
+    },
+    "workflow_entry": "Actual production exec entry passes a fresh20-job synthetic dry-run; no science repeated"
   },
   "failed_journals_preserved": [
     "two initial acquisition failures/range recovery",
@@ -209,12 +212,13 @@
     "encoder": "unchanged explicit composition/depth branch dimensions and64-D unit geometry; small reconstruction decoders",
     "frozen_legacy_learning_sources_unchanged": true,
     "loss": "parent-balanced multi-positive fused +0.5sequence contrastive +1composition reconstruction +0.1measured-parent depth reconstruction; independent0.5depth branch dropout",
+    "native_bootstrap": "scripts/e014_bootstrap.py: fresh owned CPU closure from verified existing recipe, source/runtime/production-marker/full-product/input/scheduler/watcher gates within original45-minute held setup and12-hour cumulative clock.",
     "retained": "complete parent features, crop coordinates/hashes/masks, checkpoint/exact reload, unit embeddings, raw and pre/post refinement/export alternatives",
     "schedule": "seed11,20epochs,256parents,bounded four-thread engineering; no grid",
     "version": "0.1.0.dev5",
     "views": "four real variable crops in two disjoint-half pairs plus full parent; every distinct available positive; full eligible exposure"
   },
-  "next": "Complete source-origin/identifiability ambiguity semantics and a tested oral evaluator adapter on retained data before the frozen three-fit comparison. Keep E013 CPM/refinement, encoder/source lock and oral sequence-only scope fixed; no new marker tuning/external campaign.",
+  "next": "Start the conditionally authorized existing VM for native gates and the one frozen three-fit comparison; no model/policy change or new campaign.",
   "record": "E014",
   "scientific_outcome": "not assessed; no changed community fit/score",
   "source_admission": {
@@ -389,20 +393,31 @@
     "strand_canonical_writer": "3f9a986",
     "streaming_source_recovery": "00c830c"
   },
-  "status": "LOCAL_IMPLEMENTATION_AND_SOURCE_AUDIT_COMPLETED; COMMUNITY_COMPARISON_NOT_RELEASED",
+  "status": "LOCAL_IMPLEMENTATION_AND_PROVIDED_ORIGIN_TRUTH_ADMITTED; NATIVE_RELEASE_PREPARATION",
   "truth": {
     "E009": "Admitted v2 unchanged,156targets/554661890bp;3.3034% N-quarantine preserved; no new E009 score.",
-    "accepted": "Exact publisher/source origins, all provided sequences and full denominator inventory, taxonomy, all-DNA source-blind derivative and coordinate availability unions",
-    "admitted": false,
+    "accepted": "Separately admitted exact provided-source origin oracle, all799 full provided denominators, all DNA and1,734 localized non-ACGT quarantined bases;49 known-shared queries/12,063bp retained and flagged. No unique-sequence claim.",
+    "admission": "oral-truth-admission.json",
+    "admitted": true,
+    "counts": {
+      "bp": 1669981123,
+      "contigs": 1286547,
+      "known_shared_bp": 12063,
+      "known_shared_contigs": 49,
+      "quarantined_bp": 1734
+    },
+    "mode": "provided_source_origin_oracle",
     "not_blockers_alone": [
       "Known reference/species overlap or incomplete historical/pretraining inventory; these limit interpretation rather than automatically invalidating a paired comparison."
     ],
     "prospective_scope_review": "oral-truth-policy.json freezes a separate provided-source-origin oracle before outcomes; deriving/reviewing/testing it locally may resolve admission without pretending to establish unique DNA. Original provisional evidence is preserved in review-provisional-before-origin-oracle.json.",
-    "unresolved": [
-      "Freeze and independently test what oral truth labels mean: provided simulator origin versus sequence-identifiable support. Known identical queries/records and unlocalized partial/reverse/circular/near competitors must not silently become unique support.",
-      "Implement/test the oral full-reference evaluator adapter, including all bin DNA in purity, per-source coordinate unions, ambiguity/non-ACGT quarantine and zero-GSA targets. The source availability union is not that evaluator.",
-      "State provided-assembly/replicon/molecule/host grouping semantics explicitly despite unannotated source headers; preserve unknowns, do not merge simulator genomes by taxon."
-    ]
+    "residual_limits": [
+      "Partial/reverse/circular/near competitors remain unlocalized; known-shared-mask is only a sensitivity.",
+      "Source assembly groups are provided units; molecule/host annotations and pretraining overlap remain unknown.",
+      "Oral origin-R95 and E009 conservative R95 are separate truth scopes; no pooled quality or unseen-genome claim."
+    ],
+    "unique_sequence_support_admitted": false,
+    "unresolved": []
   },
   "updated": "2026-10-18",
   "version": 1

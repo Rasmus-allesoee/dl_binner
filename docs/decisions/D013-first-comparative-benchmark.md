@@ -468,3 +468,11 @@ full-scale gate. No VM start/new compute/upload, external tool, resource change
 or retention extension occurred. Existing stopped-disk cost and October21 review
 remain; no old local artifacts were deleted or moved. CompleteBin and broader
 external expansion stay deferred; E011's sole MetaBAT2 reference is reused.
+
+The later E014 [provided-origin admission](../../experiments/E014-multiview-reconstruction/oral-truth-admission.json)
+resolves the hold for a specifically named origin oracle, without claiming unique
+sequence support or rewriting the old journals. It follows five real evaluator
+contracts and an independent every-sequence/coordinate/mask review, before any
+community outcome. Keep E009 conservative R95 and oral origin-R95 separate, with
+known-shared sensitivity and all full denominators. The value is a paired bundle
+comparison across two questions, not a hidden relaxation to produce a win.

@@ -6,10 +6,7 @@
   "compressed_export_ceiling_GiB": 2,
   "credit_scope": "Fresh active upgraded Free Trial DKK1920.02 Available through2027-01-12; Certain usage/net pricing; paid billing enabled. Exact delayed usage unknown, may exceed24hours;30USD prior-exposure+5USD remaining-storage reserves+10USD new-run cap fit.",
   "cumulative_ceiling_seconds": 43200,
-  "current_failed_gates": [
-    "oral truth/evaluator admission provisional",
-    "new Linux/runtime/guest headroom/watchdog gates not run because no VM start"
-  ],
+  "current_failed_gates": [],
   "expected_runtime_hours": [
     4,
     9
@@ -24,6 +21,7 @@
   "max_STOP_disk_interval_USD": 0.5235616429940586,
   "max_STOP_hours": 12.25,
   "monthly_existing_disks_USD": 31.199999949850024,
+  "native_pending": "Fresh actual guest headroom, complete independently owned LinuxCPU prefix, isolated imports/source/tiny native/contracts and current held-parent watcher/providerSTOP before science.",
   "network_export_estimate_USD": 0.24,
   "network_price_status": "Current official public GCS worldwide excluding Asia/Australia first-tier .12USD/GiB, Denmark applicable; DKK SKUs govern billing.2GiB planning export .24USD plus .15reserve; no free network allowance assumed.",
   "network_source": "https://cloud.google.com/storage/pricing",
@@ -47,6 +45,6 @@
   },
   "small_storage_ops_reserve_USD": 0.15,
   "source": "live official Google Cloud Billing Catalog API; DKK quote divided by its stated USD conversion, conservative nonfree tiers",
-  "status": "NOT RELEASED; prerequisite admission, native runtime and fresh credit gates incomplete",
+  "status": "LOCAL_ORIGIN_ORACLE_AND_FINANCIAL_GATES_PASS; NATIVE_PREPARATION_PENDING",
   "storage_retention": "No extension beyond existing approval/review October21. At 31.20/month stopped disks continue to accrue about 1.03/day using planning 730h/month."
 }

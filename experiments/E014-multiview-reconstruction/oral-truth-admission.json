@@ -1,0 +1,94 @@
+{
+  "admission": {
+    "admitted": true,
+    "counts": {
+      "bp": 1669981123,
+      "contigs": 1286547,
+      "known_shared_bp": 12063,
+      "known_shared_contigs": 49,
+      "quarantined_bp": 1734
+    },
+    "limits": [
+      "Partial/reverse/circular/near competitors remain unlocalized; known-shared-mask is only a sensitivity.",
+      "Source assembly groups are provided units; molecule/host annotations and pretraining overlap remain unknown.",
+      "Oral origin-R95 and E009 conservative R95 are separate truth scopes; no pooled quality or unseen-genome claim."
+    ],
+    "mode": "provided_source_origin_oracle",
+    "observed_genomes": 797,
+    "reference_bp": 2083072211,
+    "scope": "Provided-source origin; no unique-sequence support, physical host or MAG-quality claim.",
+    "targets": 799,
+    "unique_sequence_support_admitted": false
+  },
+  "admitted": true,
+  "artifact_contracts": "Five actual tiny origin recovery/gzip/ordered-axis/quarantine/refusal tests; separate20-test data/release suite; no community evaluation yet.",
+  "artifact_root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/oral-truth-origin-v1",
+  "derivation_resources": {
+    "derive": {
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "-I",
+        "-B",
+        "scripts/e014_oral_truth.py",
+        "derive",
+        "--artifact",
+        "artifacts/e014-multiview-reconstruction/oral-truth-origin-v1",
+        "--clock",
+        "artifacts/e014-multiview-reconstruction/origin-truth-attempt-v1/clock.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 64265,
+      "peak_sampled_rss_bytes": 290926592,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.8392081749843114,
+      "sampled_cpu_seconds": 178.66,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1799.9824268817902,
+      "stop_reason": null,
+      "wall_seconds": 212.89115779090207
+    },
+    "review": {
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "-I",
+        "-B",
+        "scripts/e014_oral_truth.py",
+        "review",
+        "--artifact",
+        "artifacts/e014-multiview-reconstruction/oral-truth-origin-v1",
+        "--clock",
+        "artifacts/e014-multiview-reconstruction/origin-truth-attempt-v1/clock.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 65256,
+      "peak_sampled_rss_bytes": 75874304,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.8763545441437876,
+      "sampled_cpu_seconds": 123.1,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1587.089783668518,
+      "stop_reason": null,
+      "wall_seconds": 140.46826232899912
+    }
+  },
+  "independent_review": "Every opaque model sequence, reverse source join, DNA hash, origin/reference/coordinate, independently recomputed non-ACGT mask, known shared flags and full target axes checked. All full-source substring proofs are reused byte-bound.",
+  "manifest": {
+    "bytes": 254660,
+    "md5": "1124aee21f208a603f7e94a5fc4a484e",
+    "sha256": "8e494f97451a820360364faed6c1aef13040ba934276d5d6d344f43ac655d9eb"
+  },
+  "mode": "provided_source_origin_oracle",
+  "policy": "oral-truth-policy.json",
+  "prior_journals": "All source-validation/provisional reviews remain unadmitted for unique-sequence support, including review-provisional-before-origin-oracle.json. This is a separate prospectively frozen source-origin artifact.",
+  "record": "E014",
+  "rows": {
+    "bytes": 76297138,
+    "md5": "5b32f819171617c394970c3d8a971b78",
+    "sha256": "b4679491dc19c55549a3c8fbc8027299365b5f9a490407ed16462dbae912b809"
+  },
+  "scope": "Paired provided-source-genome/assembly origin recovery only. Primary oral origin-R95 and known-shared-mask sensitivity are separate from E009 conservative v2 R95; no pooled quality, unique sequence, molecule-host, MAG-quality, unseen-genome or depth claim.",
+  "source_freeze": "7daedff",
+  "unique_sequence_support_admitted": false
+}

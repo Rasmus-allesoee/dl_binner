@@ -1,8 +1,9 @@
 # E014 — Multiview/reconstruction learning and oral-GSA admission
 
 Updated 2026-10-18. **Local implementation and full-source audit completed;
-oral truth remains provisional, so the conditional community comparison did not
-run.** [Review](review.json) owns the verified outcome and limits;
+the separate provided-source-origin oracle is now admitted, and native release
+is being prepared. Unique-sequence support remains provisional.**
+[Admission](oral-truth-admission.json) and [review](review.json) own the exact scopes;
 [operations](OPERATIONS.md) owns the next exact prompt. The prospective text below
 preserves the original local engineering/admission scope; one later frozen community
 comparison is conditionally authorized only after independent data/truth/runtime
@@ -179,7 +180,27 @@ spending. Existing stopped disks still accrue quoted **$31.20/month**. The
 **October21 storage review remains**. No old artifacts were deleted or moved;
 the bounded local files fit. Full evidence/footprint/checksums are in the review.
 
-The conditional comparison did not start because oral truth/evaluator admission
-has not passed. Complete that contract from retained data, keep this candidate
-and downstream policy frozen, then perform the one comparison if fresh native/
-financial/storage gates pass. Do not resume E009-specific marker tuning.
+## Separate provided-origin admission before community outcomes
+
+The earlier provisional source/unique-support journals above remain unchanged.
+[The prospectively frozen oracle policy](oral-truth-policy.json) defines the actual
+publisher-known source origin without claiming unique DNA identifiability.
+Five real tiny recovery/gzip/axis/refusal contracts pass. An independent reader
+checks every opaque DNA sequence, reverse origin join, coordinates, masks,
+reference bounds, shared flags and full target axes. Derivation/review complete
+in353.372 s under a separate explicit30-minute local clock, with sampled RSS
+0.291/0.076 GB. All1,286,547 contigs /1,669,981,123 bp remain;1,734 localized
+non-ACGT bases supply no recovery support.49 known-shared queries /12,063bp retain
+flags and alternative-source evidence. All799 full provided denominators remain.
+
+This admits **provided-source origin**, with a predeclared known-shared-mask
+sensitivity, separately from E009's conservative alignment support. It does not
+admit unique sequence support or biological molecule/host assignments. Full-bin
+purity counts every assigned base; source-coordinate unions cannot double count;
+zero-GSA targets remain. No genotype count or labels enter model paths, no new
+aligner, outcome-driven truth threshold or community score. This explicit scope
+resolves the admission gate without pretending that shared DNA is unique.
+
+Keep the candidate/downstream policy frozen and proceed to the conditionally
+authorized native gates and three-fit comparison if current financial, guest
+headroom and supervision checks pass. No further E009 marker tuning.

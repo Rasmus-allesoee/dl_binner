@@ -415,3 +415,10 @@ are defective. Q001/Q003/Q005 remain open generally; no ingredient, feature-fami
 performance or SOTA conclusion. [D015](../decisions/D015-coherent-prototype-upgrade.md#e014-implemented-bundle-and-source-admission-2026-10-18)
 keeps the candidate fixed and finishes truth admission next. No cloud execution or
 external expansion; oral stays sequence-only and October21 review remains.
+
+Later E014 admission: [provided-source origin truth](../../experiments/E014-multiview-reconstruction/oral-truth-admission.json)
+passes actual derivation/every-row independent review and five tiny evaluator
+contracts. Unique-sequence support stays provisional; known-shared masking is a
+separate sensitivity. Keep all799 targets, full DNA and localized non-ACGT support
+quarantine. This permits the frozen paired comparison after native/financial
+gates, without changing the candidate or making a performance claim.

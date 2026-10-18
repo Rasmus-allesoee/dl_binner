@@ -4,15 +4,15 @@ Updated: 2026-10-18. This is the single current handoff.
 
 ## Exact next step
 
-**E014 local candidate and source audit completed; truth admission blocks fits.**
+**E014 provided-origin oral truth admitted; prepare the authorized native release.**
 On `e014-multiview-reconstruction`, [review](../experiments/E014-multiview-reconstruction/review.json)
 binds the frozen dev5 implementation, real local contracts, acquired data, repaired
 source audit, actual resources and failures. No changed community fit/score,
 external binner, VM start, resource change or retention extension occurred.
 [Operations](../experiments/E014-multiview-reconstruction/OPERATIONS.md#exact-following-prompt)
-owns the exact next prompt: complete oral ambiguity/truth semantics and its tested
-full-reference evaluator adapter from retained data, then release the one frozen
-comparison only after admissions. Do not tune E013 markers further on E009.
+owns the exact next prompt: use the separately [admitted provided-origin oracle](../experiments/E014-multiview-reconstruction/oral-truth-admission.json)
+and tested full-reference adapter, then release the one frozen comparison after
+native and current financial/storage/supervision gates. Do not tune E013 markers further on E009.
 
 Dev5 adds varied real DNA crops, every available positive, all eligible parent
 exposure, reconstruction and depth-branch dropout while retaining explicit
@@ -30,9 +30,12 @@ source coordinates exactly; source-blind IDs retain every base and account for
 two zero-bp original records. Full source inventory:1,057 genomes /1,410 records.
 All799 oral-positive genomes resolve to Bacteria;797 occur in GSA. Their complete
 provided denominators total2,083,072,211 bp, including two absent genomes.
-**Truth is provisional:**42 identical cross-genome query contigs /6,764 bp and shared
-reference DNA require explicit origin-versus-identifiability semantics, ambiguity/
-non-ACGT handling and a tested evaluator. Molecule/host annotations are unknown.
+**Unique-sequence truth remains provisional.** A separate provided-source-origin
+oracle is now admitted after five tiny evaluator contracts and every-row independent
+sequence/axis/coordinate/mask review. It retains all799 targets,1,734 quarantined
+non-ACGT bases and49 flagged known-shared queries /12,063bp. Primary oral origin-R95
+and its known-shared-mask sensitivity are separately named from E009 conservative
+v2 R95; no unique-sequence or biological molecule/host claim.
 Exact/reference and historical species overlap are audited limitations, not an
 unseen-genome claim or a veto based solely on unknown pretraining inventory.
 

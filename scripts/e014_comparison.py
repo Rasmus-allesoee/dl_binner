@@ -7,8 +7,21 @@ watchdog, costs and final collection are external, before this consumer runs.
 """
 import argparse
 import json
+import os
 from pathlib import Path
 import sys
+
+
+def validate_plan(p):
+    """Keep the three science units and their inputs distinct from evaluator labels."""
+    allowed={'kind','work','units','threads','python','worker','candidate_config','legacy_config','hmm','asset_manifest',
+             'oral_marker_cache','workflow_python','snakefile'}
+    if set(p)-allowed or p['threads']!=4 or set(p['units'])!={'E009-dev5','oral-dev4','oral-dev5'}:
+        raise ValueError('Frozen science plan scope differs')
+    unit_fields={'learning','fasta','depth','parent_features','features','marker_cache'}
+    for name,u in p['units'].items():
+        if set(u)-unit_fields or u['learning']!=('dev4'if name=='oral-dev4'else'dev5'):
+            raise ValueError('Unexpected science/evaluator input or learner')
 
 
 def legacy_bank(fasta,features,output,cfg):
@@ -46,7 +59,7 @@ def stage(plan,unit,name):
     from dl_binner.multiview.views import config,prepare
     from dl_binner.io import load_arrays,digest,write_json
     from dl_binner.candidate.views import config as legacy_config
-    p=json.loads(Path(plan).read_text());u=p['units'][unit];root=Path(p['work'])/'units'/unit
+    p=json.loads(Path(plan).read_text());validate_plan(p);u=p['units'][unit];root=Path(p['work'])/'units'/unit
     cfg=config(p['candidate_config']);old=legacy_config(p['legacy_config']);root.mkdir(parents=True,exist_ok=True)
     # Snakemake creates declared output parents before dispatch. Admit only that
     # empty directory; never delete or reinterpret a partial/completed payload.
@@ -88,7 +101,24 @@ def stage(plan,unit,name):
     else:raise ValueError('Unknown comparison stage')
 
 
+def workflow(plan,dry_run=False):
+    """Replace this process with the pinned local Snakemake executor, four cores only."""
+    plan=Path(plan).absolute();p=json.loads(plan.read_text());validate_plan(p)
+    if p['threads']!=4:raise ValueError('Frozen four-thread comparison required')
+    argv=[p['workflow_python'],'-I','-B','-m','snakemake','--snakefile',p['snakefile'],
+          '--directory',p['work'],'--cores','4','--config','plan='+str(plan),'--printshellcmds','--benchmark-extended']
+    if dry_run:argv.append('--dry-run')
+    os.execv(argv[0],argv)
+
+
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--plan',type=Path,required=True)
-    p.add_argument('--unit',required=True);p.add_argument('--stage',required=True,choices=['features','markers','train','embed','group','refine','export'])
-    a=p.parse_args();stage(a.plan,a.unit,a.stage)
+    p.add_argument('--workflow',action='store_true');p.add_argument('--dry-run',action='store_true');p.add_argument('--unit');p.add_argument('--stage',choices=['features','markers','train','embed','group','refine','export'])
+    a=p.parse_args()
+    if a.workflow:
+        if a.unit or a.stage:p.error('Workflow entry cannot select another individual stage')
+        workflow(a.plan,a.dry_run)
+    else:
+        if a.dry_run:p.error('--dry-run requires --workflow')
+        if not a.unit or not a.stage:p.error('Individual stage needs --unit and --stage')
+        stage(a.plan,a.unit,a.stage)

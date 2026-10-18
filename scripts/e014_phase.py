@@ -50,14 +50,17 @@ def admission(cfg, release, now):
         raise ValueError('Complete run exceeds the authorized gross ceiling')
     if [step['name'] for step in cfg['stages']] != ['comparison']:
         raise ValueError('The sole released stage must be the complete serial comparison DAG')
+    if '--workflow'not in cfg['stages'][0]['argv']or '--dry-run'in cfg['stages'][0]['argv']:
+        raise ValueError('Production comparison must run the full workflow')
 
 
 def collect(root, output, ceiling=2*1024**3):
     """Seal compact scientific evidence; retain bulk DNA/banks on the existing disk.
 
     Inventory binds every regular result, including non-exported FASTA/features.
-    The return holds closed logs, receipts, partitions and embeddings, not complete
-    duplicate bin FASTAs or crop banks. Links are refused, not followed.
+    The return holds closed logs, receipts, partitions, full parent features,
+    embeddings/graphs and checkpoints, without duplicate bin FASTAs/crop banks.
+    Links are refused, not followed; the compressed cap is never expanded.
     """
     root,output=Path(root),Path(output)
     files={};retained=[]
@@ -65,11 +68,11 @@ def collect(root, output, ceiling=2*1024**3):
         if p.is_symlink():raise ValueError('Scientific result link refused')
         if not p.is_file():continue
         key=str(p.relative_to(root));files[key]=binding(p)
-        if p.suffix in ['.json','.log','.tsv','.jsonl'] or p.name in ['embeddings.npz','genes.tsv','calls.tsv','domains.tsv']:
+        if p.suffix in ['.json','.log','.tsv','.jsonl'] or p.name in ['features.npz','embeddings.npz','graph.npz','reference.npz','checkpoint.pt','genes.tsv','calls.tsv','domains.tsv']:
             retained.append(p)
     inventory=output.with_suffix('.inventory.json')
     write_json(inventory,dict(all_result_members=files,retained=[str(p.relative_to(root))for p in retained],
-                             omitted_bulk='Full DNA, view banks and parent features retained on work disk; inventory byte-bound.'))
+                             omitted_bulk='Full DNA and crop banks retained on work disk; inventory byte-bound. Parent features/graphs/checkpoints are included.'))
     with tarfile.open(output,'x:gz')as archive:
         archive.add(inventory,arcname='inventory.json',recursive=False)
         for p in retained:
@@ -93,10 +96,14 @@ def run(path):
     """Wait while guarded, verify native release identity, execute the serial DAG once."""
     cfg=json.loads(Path(path).read_text());cfg['_path']=str(path)
     phase=Path(cfg['phase_root']);logs=phase/'logs';logs.mkdir(exist_ok=True)
+    if (phase/'started.json').exists()or(phase/'completion.json').exists():raise ValueError('Existing phase journal refused; use a fresh recorded attempt')
     write_json(phase/'started.json',dict(pid=os.getpid(),config=binding(path),epoch=time.time()))
     remaining=SECONDS-(time.time()-cfg['vm_start_epoch'])
     if remaining<600:raise TimeoutError('No original clock remains')
     deadline=time.monotonic()+remaining;sup=supervisor();env=sup.isolated_env(4)
+    for folder in ['native-cache','tmp']:(phase/folder).mkdir(exist_ok=True)
+    env.update(NUMBA_NUM_THREADS='4',NUMBA_CACHE_DIR=str(phase/'native-cache'),TMPDIR=str(phase/'tmp'),
+               CLOUDSDK_STORAGE_PROCESS_COUNT='1',CLOUDSDK_STORAGE_THREAD_COUNT='2',CLOUDSDK_CORE_DISABLE_PROMPTS='1')
     initial_growth=max(0,shutil.disk_usage(phase).used-cfg['initial_filesystem_used_bytes'])
     cap=45*1024**3
     if initial_growth>=cap:raise ValueError('Preparation exhausted the frozen space envelope')
@@ -105,7 +112,9 @@ def run(path):
     try:
         with PhaseGuard(phase,remaining,growth_bytes=cap-initial_growth)as guard:
             print('E014_HELD_FOR_CURRENT_BOOT_WATCHDOG',os.getpid(),flush=True)
-            while not Path(cfg['release_file']).exists():time.sleep(.2)
+            while not Path(cfg['release_file']).exists():
+                if time.time()-cfg['vm_start_epoch']>2700:raise TimeoutError('45-minute held setup/release allowance exhausted')
+                time.sleep(.2)
             release=json.loads(Path(cfg['release_file']).read_text());admission(cfg,release,time.time())
             from e009_exit_watchdog import identity
             watched=json.loads((logs/'watchdog-live-before-release.json').read_text())
@@ -126,6 +135,12 @@ def run(path):
                 print('E014_STAGE_START',step['name'],flush=True)
                 receipt=sup.supervise(step['argv'],logs/(step['name']+'.log'),left,26_000_000_000,env,sample_root=os.getpid())
                 outcome['stages'].append(dict(name=step['name'],resources=receipt))
+            plan=json.loads(Path(cfg['science_plan']).read_text())
+            if set(plan['units'])!={'E009-dev5','oral-dev4','oral-dev5'}:raise ValueError('Complete comparison unit set differs')
+            for unit in plan['units']:
+                final=Path(plan['work'])/'units'/unit/'export/accounting.json'
+                accounting=json.loads(final.read_text())
+                if set(accounting)!={'pre','post'}:raise ValueError('Missing complete pre/post DNA accounting')
             outcome.update(status='SUCCESS',community_completed=True)
     except BaseException as exc:outcome.update(error=f'{type(exc).__name__}: {exc}')
     outcome['disk_observations']=guard.observations if guard else []

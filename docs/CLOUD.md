@@ -6,7 +6,7 @@ Updated: 2026-10-18 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC)
 **E014 completed local implementation/source validation; no new cloud execution.**
 [The review](../experiments/E014-multiview-reconstruction/review.json) binds actual
 Mac engineering, full public source bytes/coordinates, retained failures and the
-remaining oral truth/evaluator admission gate. No community fit/score, VM start,
+separate provided-origin oracle admission and pending native release gates. No community fit/score, VM start,
 private upload, resource change or retention extension. Read-only APIs independently
 recheck **TERMINATED on2026-10-18**; previous stop stays2026-10-17 08:13:23.285 UTC.
 Old provider45-minute STOP/automaticRestart=false are unchanged, not a new run's

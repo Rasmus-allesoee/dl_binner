@@ -453,3 +453,16 @@ decision consequential. Oral lacks assembly errors and admitted measured depth,
 so it cannot establish depth or read-assembly benefits. A later additional-data
 confirmation must be prospective; inspected outcomes used for design become
 development evidence. October21 storage review is unchanged.
+
+Later E014 follow-through, before community outcomes: do not mistake inability to
+prove sequence uniqueness for absence of valid publisher origins. A separately
+[frozen provided-origin policy](../../experiments/E014-multiview-reconstruction/oral-truth-policy.json)
+and tested adapter count localized ACGT origin support, every bin/reference base,
+duplicate-safe source unions and all799 targets. Every model DNA/reverse source
+row and mask independently passes review; [admission](../../experiments/E014-multiview-reconstruction/oral-truth-admission.json)
+is specifically for that oracle.49 known-shared queries remain flagged, with a
+predeclared mask sensitivity. Unique-sequence support, biological host annotations
+and unseen-genome claims remain unadmitted. This explicit prospective scope
+resolves the earlier hold without silently weakening or rewriting the conservative
+journals. It allows the one paired development comparison after native/financial
+gates, keeping the candidate fixed and its two dataset truth modes separate.

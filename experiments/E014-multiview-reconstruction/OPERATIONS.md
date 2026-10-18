@@ -6,8 +6,10 @@ comparison is conditional, **not released**. Read [STATE](../../docs/STATE.md),
 [candidate v2 lock](candidate-lock-v2.json), [source admission policy](source-admission-policy.json)
 and [resource plan](resource-plan.json). Preserve the first v1 freeze, every failed
 transport/build/DAG journal, old Mac allclose failure and all accepted science.
-The [completed local review](review.json) establishes full-source validation and
-the remaining **truth/evaluator admission** failure. It does not release science.
+The [completed local review](review.json) and [separate oral admission](oral-truth-admission.json)
+establish a prospectively defined **provided-source-origin oracle**, retaining
+unique-sequence uncertainty. Native/runtime/headroom/supervision gates still
+precede science release; no changed community outcome chose this scope.
 
 ## What has actually run
 
@@ -68,6 +70,8 @@ reacquiring, rebuilding accepted science or editing receipts.
 - Independently admit oral full-source truth, duplicate-safe full denominators,
   exact/near overlap/ambiguity policy, all populations and the source-blind input.
   Exact publisher joins alone do not pass conservative unique-support evaluation.
+  The separately admitted origin oracle is explicitly named and has a known-shared
+  sensitivity; it does not promote the old unique-support journals.
 - Verify the active v2 wheel/source/defaults, unchanged dev4 learning modules and
   E013 selector, the complete biological HMM/asset, and full E009 ten-column axes.
 - Refresh the **displayed** Welcome balance, scope, expiry, delayed usage reserve
@@ -75,8 +79,8 @@ reacquiring, rebuilding accepted science or editing receipts.
   Free Trial eligibility and billing enabled do not establish remaining credit.
   Price the complete run below $10; retain the October 21 review without extension.
 - These data/truth and financial/storage gates precede any VM start. Current
-  source-byte validation passes; truth/evaluator admission does not, so no start
-  follows. Later native gates below occur only after that initial admission.
+  source-byte and provided-origin evaluator admission now pass. Later native gates
+  below occur only after that initial admission and the current financial check.
 - Push a clean exact research commit only when the phase is admitted; sync the
   existing VM read-only. Verify original disks/mount/actual free bytes. No resize,
   new machine/disk/quota/service or retention extension is implied.
