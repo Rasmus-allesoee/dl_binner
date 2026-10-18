@@ -33,6 +33,28 @@ def admission(cfg,release,now):
         raise ValueError('Original cost/storage allowance exceeded')
 
 
+def reuse_graph_proofs(prior,proof,expected_completion,expected_reader):
+    """Reuse only the three passed original native readers, retaining failed collection evidence."""
+    prior,proof=Path(prior),Path(proof)
+    if binding(prior/'completion.json')!=expected_completion:raise ValueError('Prior failed journal differs')
+    old=json.loads((prior/'completion.json').read_text())
+    passed={s['name'] for s in old['stages'] if s['resources']['exit_code']==0 and not s['resources']['stop_reason']}
+    if old['status']!='FAILED' or passed!={'graph-'+u for u in ['E009-dev5','oral-dev4','oral-dev5']}:
+        raise ValueError('Prior graph-reader contracts did not pass')
+    if binding(prior/'helpers/e014_graph_review.py')!=expected_reader:
+        raise ValueError('Passed native graph reader source differs')
+    for unit in ['E009-dev5','oral-dev4','oral-dev5']:
+        source=prior/'proofs'/('graph-'+unit+'.json')
+        if source.is_symlink():raise ValueError('Prior graph proof link refused')
+        shutil.copyfile(source,proof/source.name)
+    (proof/'previous-collection-failure').mkdir()
+    for name in ['completion.json','host.json','config.json','started.json','release.json']:
+        shutil.copyfile(prior/name,proof/'previous-collection-failure'/name)
+    for name in ['parent-terminal.log','collect.log','supervision.json','watchdog-live-before-release.json']:
+        shutil.copyfile(prior/'logs'/name,proof/'previous-collection-failure'/name)
+    return dict(passed_readers_reused=3,previous_failure=expected_completion,reader_source=expected_reader)
+
+
 def run(path):
     """Execute fixed restore/verify/collect consumers once, retaining every failed journal."""
     from e009_owner import supervisor
@@ -68,8 +90,12 @@ def run(path):
             if not done['community_completed']or done['status']!='FAILED'or done['stages'][0]['resources']['exit_code']!=0 or 'Compact export cap exceeded'not in done['collection_error']:
                 raise ValueError('Expected collection-only failed phase receipt differs')
             print('ORIGINAL_RETAINED_MEMBERS',len(json.loads(Path(cfg['inventory']).read_text())['all_result_members']),flush=True)
-            for unit in ['E009-dev5','oral-dev4','oral-dev5']:
-                command('graph-'+unit,[cfg['python'],'-I','-B',str(root/'helpers/e014_graph_review.py'),'--unit',str(phase/'work/units'/unit),'--output',str(proof/('graph-'+unit+'.json')),'--research-scripts',str(REPO/'scripts')])
+            if cfg.get('reuse_graph_proofs_from'):
+                outcome['graph_contract_reuse']=reuse_graph_proofs(cfg['reuse_graph_proofs_from'],proof,cfg['prior_completion'],cfg['helpers']['e014_graph_review.py'])
+                print('REUSED_PASSED_NATIVE_GRAPH_READER_CONTRACTS',cfg['reuse_graph_proofs_from'],flush=True)
+            else:
+                for unit in ['E009-dev5','oral-dev4','oral-dev5']:
+                    command('graph-'+unit,[cfg['python'],'-I','-B',str(root/'helpers/e014_graph_review.py'),'--unit',str(phase/'work/units'/unit),'--output',str(proof/('graph-'+unit+'.json')),'--research-scripts',str(REPO/'scripts')])
             for name in ['config.json','started.json','release.json']:shutil.copyfile(root/name,proof/name)
             command('collect',[sys.executable,'-I','-B',str(root/'helpers/e014_collect.py'),'--work',str(phase/'work'),'--inventory',cfg['inventory'],'--phase',str(phase),'--proofs',str(proof),'--output',str(root/'return')])
             collection=json.loads((root/'return/collection.json').read_text());outcome['collection']=collection

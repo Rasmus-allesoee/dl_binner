@@ -2,8 +2,9 @@
 """Recover sealed E014 outputs without fitting, rewriting or regenerating science.
 
 The failed first collector already inventoried every work member. Verify that
-inventory against retained bytes, omit only full graph binaries from this smaller
-return, and include separately verified graph-reader receipts. Full graph/view/
+inventory against retained bytes, omit full graph binaries and byte-identical
+checkpoint-reference duplicates from this smaller return, and include separately
+verified graph-reader receipts. Full graph/view/
 DNA files remain untouched on the existing disk. This helper cannot start a VM.
 """
 import argparse
@@ -50,19 +51,24 @@ def verify_work(work,inventory):
 
 
 def selection(work,inventory):
-    """Keep the original retained set except full graph NPZs, never alter their bytes."""
-    record=json.loads(Path(inventory).read_text());files={};omitted=[]
+    """Select original bytes, binding duplicate references to identical embedding members."""
+    record=json.loads(Path(inventory).read_text());files={};omitted=[];duplicates={}
     for key in record['retained']:
         if key in {'units/'+u+'/group/graph.npz'for u in ['E009-dev5','oral-dev4','oral-dev5']}:
             omitted.append(dict(path=key,**record['all_result_members'][key]));continue
+        if key.startswith('units/') and key.endswith('/train/reference.npz'):
+            canonical=key.removesuffix('/train/reference.npz')+'/embeddings.npz'
+            if canonical not in record['retained'] or record['all_result_members'][key]!=record['all_result_members'][canonical]:
+                raise ValueError('Checkpoint reference is not an identical retained embedding')
+            duplicates['work/'+key]=dict(canonical='work/'+canonical,**record['all_result_members'][key]);continue
         files['work/'+key]=member_path(work,key)
-    return files,omitted
+    return files,omitted,duplicates
 
 
 def pack(work,inventory,phase,proofs,output,ceiling=2*1024**3):
     """Seal the reduced return and independently read back every member under its cap."""
     work,inventory,phase,proofs,output=map(Path,[work,inventory,phase,proofs,output])
-    output.mkdir(exist_ok=False);checked=verify_work(work,inventory);files,omitted=selection(work,inventory)
+    output.mkdir(exist_ok=False);checked=verify_work(work,inventory);files,omitted,duplicates=selection(work,inventory)
     graph_proofs=sorted(proofs.glob('graph-*.json'))
     if omitted and len(graph_proofs)!=3:raise ValueError('Three native retained-graph proof receipts required')
     proof_units=set()
@@ -84,7 +90,8 @@ def pack(work,inventory,phase,proofs,output,ceiling=2*1024**3):
     files['original-inventory.json']=inventory
     expected={key:binding(p)for key,p in files.items()}
     record=dict(source='Retained E014 science source858b7cc; collection only',all_original_work=checked,
-                omitted_graphs_retained_on_disk=omitted,full_science_inventory=binding(inventory),members=expected)
+                omitted_graphs_retained_on_disk=omitted,identical_duplicate_members=duplicates,
+                full_science_inventory=binding(inventory),members=expected)
     manifest=output/'inventory.json';manifest.write_text(json.dumps(record,indent=2,sort_keys=True)+'\n')
     archive=output/'e014-review.tar.gz'
     with tarfile.open(archive,'x:gz')as a:
@@ -106,6 +113,7 @@ def pack(work,inventory,phase,proofs,output,ceiling=2*1024**3):
     receipt=dict(status='SUCCESS',archive=binding(archive),regular_members=len(seen),
                  logical_member_bytes=sum(v['bytes']for v in expected.values())+manifest.stat().st_size,
                  all_original_work=checked,every_return_member_verified=True,omitted_graphs=omitted,
+                 identical_duplicate_members=duplicates,
                  science_repeated=False,original_files_modified=False)
     (output/'collection.json').write_text(json.dumps(receipt,indent=2)+'\n')
     (output/'e014-review.tar.gz.sha256').write_text(receipt['archive']['sha256']+'  e014-review.tar.gz\n')

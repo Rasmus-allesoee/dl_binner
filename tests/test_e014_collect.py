@@ -9,7 +9,7 @@ import unittest
 
 sys.path.insert(0,str(Path(__file__).absolute().parents[1]/'scripts'))
 from e014_collect import binding,pack,selection,verify_work
-from e014_inspect_phase import admission
+from e014_inspect_phase import admission,reuse_graph_proofs
 
 
 class CollectionContracts(unittest.TestCase):
@@ -65,6 +65,41 @@ class CollectionContracts(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'cap'):pack(work,inventory,phase,proofs,root/'too-small',ceiling=1)
             (proofs/'graph-0.json').unlink()
             with self.assertRaisesRegex(ValueError,'Three'):pack(work,inventory,phase,proofs,root/'missing')
+
+    def test_identical_reference_is_losslessly_bound_not_duplicated(self):
+        with tempfile.TemporaryDirectory()as t:
+            root=Path(t);work,inventory,phase,proofs=self.fixture(root)
+            ref=work/'units/E009-dev5/train/reference.npz';ref.parent.mkdir(parents=True);ref.write_bytes(b'actual identical payload')
+            em=ref.parents[1]/'embeddings.npz';em.write_bytes(ref.read_bytes())
+            r=json.loads(inventory.read_text())
+            for p in [ref,em]:
+                key=str(p.relative_to(work));r['all_result_members'][key]=binding(p);r['retained'].append(key)
+            inventory.write_text(json.dumps(r))
+            result=pack(work,inventory,phase,proofs,root/'return')
+            alias='work/'+str(ref.relative_to(work));canonical='work/'+str(em.relative_to(work))
+            self.assertEqual(result['identical_duplicate_members'][alias],dict(canonical=canonical,**binding(ref)))
+            with tarfile.open(root/'return/e014-review.tar.gz')as a:
+                self.assertNotIn(alias,a.getnames());self.assertEqual(a.extractfile(canonical).read(),ref.read_bytes())
+            ref.write_bytes(b'nonidentical')
+            r['all_result_members'][str(ref.relative_to(work))]=binding(ref);inventory.write_text(json.dumps(r))
+            with self.assertRaisesRegex(ValueError,'not an identical'):selection(work,inventory)
+
+    def test_reuses_passed_readers_and_preserves_failed_collection_without_invocation(self):
+        with tempfile.TemporaryDirectory()as t:
+            root=Path(t);prior=root/'prior';(prior/'proofs').mkdir(parents=True);(prior/'logs').mkdir();(prior/'helpers').mkdir()
+            for u in ['E009-dev5','oral-dev4','oral-dev5']:(prior/'proofs'/('graph-'+u+'.json')).write_text(json.dumps(dict(status='PASS',unit=u)))
+            stages=[dict(name='graph-'+u,resources=dict(exit_code=0,stop_reason=None))for u in ['E009-dev5','oral-dev4','oral-dev5']]
+            (prior/'completion.json').write_text(json.dumps(dict(status='FAILED',stages=stages)))
+            for n in ['host.json','config.json','started.json','release.json']:(prior/n).write_text('{}')
+            for n in ['parent-terminal.log','collect.log','supervision.json','watchdog-live-before-release.json']:(prior/'logs'/n).write_text('retained evidence')
+            reader=prior/'helpers/e014_graph_review.py';reader.write_text('raise RuntimeError("must never execute")')
+            proof=root/'fresh';proof.mkdir();expected=binding(prior/'completion.json')
+            r=reuse_graph_proofs(prior,proof,expected,binding(reader))
+            self.assertEqual(r['passed_readers_reused'],3)
+            self.assertEqual(binding(proof/'previous-collection-failure/completion.json'),expected)
+            stages[0]['resources']['exit_code']=1;(prior/'completion.json').write_text(json.dumps(dict(status='FAILED',stages=stages)))
+            with self.assertRaisesRegex(ValueError,'journal differs'):reuse_graph_proofs(prior,proof,expected,binding(reader))
+            with self.assertRaisesRegex(ValueError,'did not pass'):reuse_graph_proofs(prior,proof,binding(prior/'completion.json'),binding(reader))
 
 
 if __name__=='__main__':unittest.main()

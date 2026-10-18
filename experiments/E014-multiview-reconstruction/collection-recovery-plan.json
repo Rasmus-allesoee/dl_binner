@@ -50,5 +50,16 @@
     "clock": "Fresh cumulative local review clock covers stream verification and diagnostic consumers; preserve attempted/failure clocks",
     "truth_modes": "E009 admitted conservative v2/full156 and3.3034% N-quarantine; oral provided-source-origin oracle/full799 incl2zeroGSA, localized1734non-ACGT,known-shared-mask; no pooled metric"
   },
-  "original_failure_evidence": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/completion.json"
+  "original_failure_evidence": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/completion.json",
+  "repair_2": {
+    "reason": "First collection-only wake passed all three native graph readers and full 27,207-member byte verification, but compressed bundle still exceeded2GiB. Preserve FAILED receipt and partial archive.",
+    "first_recovery_start_UTC": "2026-10-18T22:26:48.569Z",
+    "first_recovery_stop_UTC": "2026-10-18T22:38:33.348Z",
+    "first_recovery_VM_uptime_seconds": 704.779,
+    "selection_change": "Lossless exact-byte reference.npz -> embeddings.npz aliases, with mandatory equal size/SHA256; graph proofs reused without rerunning successful readers. All original science remains intact.",
+    "fresh_attempt_limits": "30min cumulative from next existing-VM start,45min provider STOP,4threads/8GB sampledRSS/5GiBextra/25GiBreserve/2GiBexport; same original$10 and October21.",
+    "combined_VM_seconds_upper": 12751.909,
+    "total_phase_forecast_USD_upper": 1.7,
+    "tests": "6actual tiny collection, alias/refusal, passed-proof restore without reader invocation contracts pass"
+  }
 }
