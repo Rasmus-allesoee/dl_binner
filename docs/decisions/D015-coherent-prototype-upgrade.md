@@ -403,3 +403,53 @@ become development data, requiring later prospective confirmation for broader cl
 E013's [following prompt](../../experiments/E013-marker-quality/OPERATIONS.md#exact-following-prompt)
 owns the proposed local block. Existing storage review is still October 21;
 no cloud action, paid work or retention extension follows from this recommendation.
+
+## E014 implemented bundle and source admission, 2026-10-18
+
+The [local E014 block](../../experiments/E014-multiview-reconstruction/review.json)
+implements the recommendation directly, preserving dev3/dev4 and E013 science.
+The [prospective design](../../experiments/E014-multiview-reconstruction/design.md)
+uses full-parent plus four varied real crops, every available positive,
+parent-balanced exposure, composition/depth reconstruction and independent depth
+dropout. The composition/depth encoder widths and unit inference/grouping geometry
+remain; measured parent means are not crop coverage. Sole CPM/E013 downstream
+defaults remain fixed. SupCon/COMEBin/VAMB evidence informs this coherent bundle,
+without claiming their equivalence or a causal win for each ingredient. A larger
+network is not the intervention. False negatives, chimeric parents, nuisance
+reconstruction and depth shortcuts remain hypotheses for selective diagnosis.
+
+Installed native Mac engineering, exact reload/legacy-array parity, wheel/sdist,
+real marker/graph/refinement/export contracts and the serial tiny DAG pass. A
+fresh Linux/full-scale runtime has not passed; there is no changed community
+result. Preserve the failed Mac allclose and all acquisition/build/workflow/source
+audit failures. Operational repairs used fresh recorded attempts and verified
+reuse, including the unrelated oversized compressed setup member; no data DAG,
+accepted science, download or cloud run was repeated.
+
+The quartet and separately approved setup provide complete bytes: every nonempty
+GSA locus matches source sequence; all799 oral-positive provided genomes contribute
+full denominators, including two absent from GSA. Source-blind IDs retain all DNA
+and account for the two empty original records. Cross-genome identical queries,
+shared reference records and unannotated molecule/host context remain explicit.
+The new durable AGENTS guidance separates known simulator origin from unique
+sequence support and keeps origin-bearing IDs/reverse joins out of model paths.
+
+**Keep the dev5 candidate frozen and finish oral truth/evaluator admission next.**
+That is an evaluation-integrity dependency, not another architecture review or
+requirement for perfect grouping. Define/test source-origin versus identifiable
+support, ambiguity/non-ACGT handling, full-bin purity, coordinate unions and all
+provided denominators before community outcomes. Exact/reference and species
+overlap limit unseen-genome claims; unknown historical/pretraining inventory alone
+does not invalidate a paired comparison. The currently conservative protocol has
+not admitted oral truth, so the conditionally authorized three-fit comparison
+did not run. No performance hypothesis has failed or succeeded from engineering.
+
+The [first comparison protocol](../../experiments/E014-multiview-reconstruction/comparison-protocol.json)
+uses E009 dev5 versus retained dev4/E013/dev3, and oral sequence-only dev4 versus
+dev5. Only three new fits, no new external reference or compulsory ablation grid.
+Keep all pre/post alternatives for a cheap refinement contrast; the sole prepared
+optional loss control is zero reconstruction if a later outcome makes that
+decision consequential. Oral lacks assembly errors and admitted measured depth,
+so it cannot establish depth or read-assembly benefits. A later additional-data
+confirmation must be prospective; inspected outcomes used for design become
+development evidence. October21 storage review is unchanged.

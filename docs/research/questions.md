@@ -401,3 +401,17 @@ engineering as the next block, without requiring perfect refinement first.
 Oral-GSA stays unacquired/unadmitted; no community fit, source-truth admission or
 generalization claim follows. All accepted evidence/failures and October 21
 storage review remain.
+
+2026-10-18 E014: the coherent dev5 multiview/reconstruction candidate is
+[implemented and locally exercised](../../experiments/E014-multiview-reconstruction/review.json),
+with explicit measured-parent depth and unchanged CPM/E013 policy. Native tiny
+training/reload/marker/grouping/refinement/export and the serial DAG pass, without
+a changed community outcome. The quartet/approved source archive and every GSA
+source interval verify; full799-genome oral denominators retain two zero-GSA
+targets. Shared/identical DNA needs explicit origin-versus-identifiability truth
+and a tested full-reference evaluator before fitting; truth remains provisional.
+Exact/species overlap constrains generalization, not a claim that simulator data
+are defective. Q001/Q003/Q005 remain open generally; no ingredient, feature-family,
+performance or SOTA conclusion. [D015](../decisions/D015-coherent-prototype-upgrade.md#e014-implemented-bundle-and-source-admission-2026-10-18)
+keeps the candidate fixed and finishes truth admission next. No cloud execution or
+external expansion; oral stays sequence-only and October21 review remains.

@@ -34,6 +34,8 @@ def admission(cfg, release, now):
         'no_resource_change','source_and_wheel_verified']
     if any(release.get(k) is not True for k in required):
         raise ValueError('E014 release gate incomplete')
+    if release.get('oral_truth_mode')!='provided_source_origin_oracle':
+        raise ValueError('Explicit oral provided-origin truth scope missing')
     if release.get('provider_stop_seconds')!=STOP_SECONDS or release.get('incremental_gross_ceiling_usd')!=10:
         raise ValueError('E014 clock/cost envelope differs')
     if release.get('storage_retention_extended') is not False:

@@ -19,6 +19,7 @@ reproduced result of this project.
 - [E011: cached grouping objective and one feasibility reference](E011-cached-grouping-reference/README.md)
 - [E012: restore-only marker-split acceptance control](E012-marker-acceptance/README.md)
 - [E013: quality-aware marker refinement on retained CPM parents](E013-marker-quality/README.md)
+- [E014: multiview/reconstruction learning and oral-GSA source admission](E014-multiview-reconstruction/README.md)
 
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 

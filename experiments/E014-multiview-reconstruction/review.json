@@ -1,0 +1,409 @@
+{
+  "acquisition": {
+    "additional_owner_approved_source_bytes": 1906532721,
+    "anonymous_file_format": "gsa.tsv.gz is FASTA, not TSV",
+    "body_payload_bytes": 4351779155,
+    "explicit_recovery": "source-repair-policy.json; one successful local900-second clock; original failures remain",
+    "opaque_input": {
+      "anonymous_input": {
+        "bytes": 482371982,
+        "md5": "8c7f03a7bfc26dafc6542f21284917fc",
+        "sha256": "8f14fc865f8c2279c4735b37d7f08f25d2d647c669377ca0c421b5c7cd7863b6"
+      },
+      "bp": 1669981123,
+      "model_input": {
+        "bytes": 1757466319,
+        "md5": "1432199aee3cf4dda32870492f6937b8",
+        "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+      },
+      "namespace": "CAMI-II-Toy-HMB-oral-E014-opaque-v1",
+      "original_clock": {
+        "seconds": 5400,
+        "started_epoch": 1792271875.968195
+      },
+      "original_empty_records": [
+        {
+          "bp": 0,
+          "id": "_from__to_-42_total_0",
+          "issue": "empty_original_record"
+        },
+        {
+          "bp": 0,
+          "id": "_from__to_-42_total_0",
+          "issue": "empty_original_record"
+        }
+      ],
+      "records": 1286547,
+      "reverse_join": {
+        "bytes": 114093151,
+        "md5": "fb41b7877d6a66edd8a144bb558ad331",
+        "sha256": "63810d2bc38c605925db6e3e84540ebc8ff3a2c0f30b47885874478925a0b587"
+      },
+      "seconds": 176.41240352299064,
+      "status": "INPUT_DERIVATIVE_VERIFIED_TRUTH_NOT_ADMITTED",
+      "training_boundary": "Only model-input-v1/oral.fna enters features; source-blind-join-v1.tsv.gz is evaluator-only.",
+      "zero_bp_record_policy": "Two original empty records retained in raw input and this accounting; no DNA removed or invented."
+    },
+    "original_clock": "artifacts/e014-multiview-reconstruction/acquisition-clock.json; expired after interruption, never reset",
+    "publisher_MD5_and_SHA256_verified": true,
+    "quartet_bytes": 2445246434,
+    "raw_mapping": {
+      "corrected_matching": 1286547,
+      "historical_wrong_or_unjoined": 1286547,
+      "rows": 2573094
+    },
+    "supplied_GSA": {
+      "ambiguous_base_bp": 1734,
+      "bp": 1669981123,
+      "empty_records": 2,
+      "records": 1286549,
+      "verified_publisher_sequence_join_bp": 1669981123,
+      "verified_publisher_sequence_join_contigs": 1286547
+    },
+    "whole_reference_extraction": false
+  },
+  "branch": "e014-multiview-reconstruction",
+  "comparison": {
+    "actually_run": 0,
+    "cloud_VM_starts": 0,
+    "external_binners": 0,
+    "failed_gate": "Oral truth/ambiguity/evaluator admission has not passed; therefore no conditional community comparison or VM wake.",
+    "native_pending": "New complete Python3.12 Linux CPU environment/inventory/import/CLI/marker/train/reload/graph/refinement/export, fresh guest headroom, held-parent watcher/STOP and current financial release gates.",
+    "new_fits_if_admitted": 3,
+    "operations": "OPERATIONS.md",
+    "prepared": "restore/reuse-aware scientific stage consumer, serial Snakemake DAG, typed fail-closed held-parent launcher and checksum-verified compact collection",
+    "protocol": "comparison-protocol.json",
+    "resource_plan": "resource-plan.json"
+  },
+  "costs": {
+    "existing_stopped_disks_quoted_USD_month": 31.2,
+    "existing_storage_review": "2026-10-21; no extension",
+    "latest_credit_observation": "Fresh October18 active upgraded Free Trial DKK1920.02 Available through2027-01-12;certain usage/net pricing. Gross/savings52.65/net0; reporting may lag over24h.30USD prior-exposure+5USD storage reserve fit; refresh at VM release.",
+    "new_GCP_compute_USD": 0,
+    "new_GCS_storage_uploads": 0,
+    "provider_state": "TERMINATED independently read2026-10-18; previous stop2026-10-17T08:13:23.285UTC; current old2700s STOP unchanged, no new watcher armed on a stopped VM.",
+    "quote": "Official five-SKU query2026-10-18T17:46:48UTC; complete allocation-priced run remains prospective"
+  },
+  "engineering": {
+    "active_v2_new_product_tests": 4,
+    "actual_tiny_Snakemake_jobs": 20,
+    "data_and_release_contracts": 20,
+    "limits": "Generated HMM and synthetic DNA/depth are engineering fixtures, not biological community evidence. No new native Linux/dev5 full-scale acceptance. Original Mac allclose failure remains failed.",
+    "native": "Actual installed Mac PyTorch/NumPy, Pyrodigal/PyHMMER generated-HMM fixture, exact/approximate sparse readers, CPM/refinement/export; no mocked worker replaces the changed path",
+    "owned_runtime_inventory": "artifacts/e014-multiview-reconstruction/runtime-inventory-v3.json",
+    "packaging": {
+      "failed_parent_preserved": true,
+      "only_failed_rebuild_repeated": true,
+      "sdist": {
+        "bytes": 97230,
+        "path": "artifacts/e014-multiview-reconstruction/build-v2/dist/dl_binner-0.1.0.dev5.tar.gz",
+        "sha256": "4574debec835de9054152690039344c3e6d12d2184e0e1484a425123854bb639"
+      },
+      "sdist_rebuilt_wheel_logical_equal": true,
+      "wheel": {
+        "bytes": 73917,
+        "path": "artifacts/e014-multiview-reconstruction/build-v2/dist/dl_binner-0.1.0.dev5-py3-none-any.whl",
+        "sha256": "aa3536c7ab82ca9b8ddd37f2460fc133589a8406f1a6821061213eedbba19f42"
+      }
+    },
+    "prior_full_product_suite": 24,
+    "resource_note": "Earlier two independent4-thread tiny probes briefly overlapped; aggregate numerical scheduling was not measured for that interval. Original receipts remain. A fresh sequential four-test verification and the actual serial20-job DAG address the active scheduling contract; do not rewrite prior observations.",
+    "resources": {
+      "engineering/dag-v2/native": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 404963328,
+        "sampled_cpu_seconds": 49.78,
+        "wall_seconds": 57.353320172056556
+      },
+      "engineering/product-v1": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 717381632,
+        "sampled_cpu_seconds": 267.92,
+        "wall_seconds": 394.13985066104215
+      },
+      "engineering/tiny-v2": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 513609728,
+        "sampled_cpu_seconds": 53.33,
+        "wall_seconds": 148.6089939509984
+      },
+      "opaque-input-v1": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 250556416,
+        "sampled_cpu_seconds": 147.56,
+        "wall_seconds": 182.2780220299028
+      },
+      "oral-admission-v1": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 365826048,
+        "sampled_cpu_seconds": 387.34,
+        "wall_seconds": 460.9437049870612
+      },
+      "source-repair-v2/native": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 251924480,
+        "sampled_cpu_seconds": 209.48,
+        "wall_seconds": 240.47934685798828
+      },
+      "source-repair-v2/overlap": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 606248960,
+        "sampled_cpu_seconds": 10.09,
+        "wall_seconds": 18.315261128009297
+      },
+      "source-repair-v2/union": {
+        "exit_code": 0,
+        "peak_sampled_rss_bytes": 32456704,
+        "sampled_cpu_seconds": 20.28,
+        "wall_seconds": 21.810800994979218
+      }
+    },
+    "runtime": "Python3.10.15 Mac CPU,28 independently owned distributions; external base interpreter/stdlib relationship documented, not a portable prefix",
+    "sequential_reverification": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product",
+        "-p",
+        "test_multiview.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "launched_pid": 62421,
+      "peak_sampled_rss_bytes": 550105088,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 1.0723269338981165,
+      "sampled_cpu_seconds": 45.85,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 575.9490592479706,
+      "stop_reason": null,
+      "wall_seconds": 42.757482397020794
+    },
+    "synthetic_full_width": {
+      "epochs": 2,
+      "inner_model_seconds": 1.7141818009549752,
+      "parameter_count": 145618,
+      "parents": 1024
+    }
+  },
+  "failed_journals_preserved": [
+    "two initial acquisition failures/range recovery",
+    "provisional taxonomy join probe failures",
+    "v1 DAG precreated-empty-directory refusal",
+    "v2 builder missing-pip sdist-rebuild failure",
+    "initial source canonical-hash freeze correction",
+    "source-validation-v1 oversized-unused-member failure",
+    "inventory syntax error before import",
+    "sequential-check wrapper missing receipt before any child",
+    "all prior E009-E013 failures including strict Mac allclose"
+  ],
+  "implementation": {
+    "design": "design.md",
+    "downstream": "unchanged sole CPM rule median_positive_weight/neighbors and byte-identical E013 selector",
+    "encoder": "unchanged explicit composition/depth branch dimensions and64-D unit geometry; small reconstruction decoders",
+    "frozen_legacy_learning_sources_unchanged": true,
+    "loss": "parent-balanced multi-positive fused +0.5sequence contrastive +1composition reconstruction +0.1measured-parent depth reconstruction; independent0.5depth branch dropout",
+    "retained": "complete parent features, crop coordinates/hashes/masks, checkpoint/exact reload, unit embeddings, raw and pre/post refinement/export alternatives",
+    "schedule": "seed11,20epochs,256parents,bounded four-thread engineering; no grid",
+    "version": "0.1.0.dev5",
+    "views": "four real variable crops in two disjoint-half pairs plus full parent; every distinct available positive; full eligible exposure"
+  },
+  "next": "Complete source-origin/identifiability ambiguity semantics and a tested oral evaluator adapter on retained data before the frozen three-fit comparison. Keep E013 CPM/refinement, encoder/source lock and oral sequence-only scope fixed; no new marker tuning/external campaign.",
+  "record": "E014",
+  "scientific_outcome": "not assessed; no changed community fit/score",
+  "source_admission": {
+    "GSA_observed": 797,
+    "all_nonempty_loci_exact_forward_substrings": true,
+    "all_source_reference_bp": 3112090857,
+    "complete_provided_genomes": 1057,
+    "coordinate_union_bp": 1669981123,
+    "forward_identical_cross_genome_GSA": {
+      "bp": 6764,
+      "contigs": 42,
+      "examples": [
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "00a99c3ce4d6ca333bea31cb583492f364b97415d96855e63c18647496bb52ca"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "043721bfcb6d8a8c4bd3a7af138ba82f9a986d50ea9965577d6c5ea7963475ee"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "0a36954b91834c626c74073cde819251a8c4b5988dccf76f6358be9af810291b"
+        },
+        {
+          "bp": 502,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "2ad34b0a5faa9435c3f94395de20e319df7ee80f3746d77d321b8dd9416a9446"
+        },
+        {
+          "bp": 562,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "36a1a7fb96a718f54441f89e73acfc270edbc80123f76050c62c2b0bc37ff94e"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "436ce5557a591653d44c52255768545e36e89759137a6abc80d25775dd8e18b6"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "5ec1bd03d844f0ddd753af7c077a2458210e7e7dddde06b5f614f6cb397eb6bb"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "64f2a520c098d8c281cc4751f277c2b6f5b53247aecaa4e4bbfe487b1e61328f"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "72a5d051c36eb0175b5d1e6a307b91ced19017fc20fb0681dcca7054b65766ac"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "7bbd9826ddf1305c756b9d28c97b26aec57f50650f147e8a25544198e6cee8c3"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "7d6fcafa45f3780521e01cf70e8b73073abb1f4ced474ad9c64c3b8da33a95c3"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "7d9e466d03accc7e69cf03916a39430858c208a3b55a46175c7b8b3055433628"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "8be7e147f95ad697da7c351ad4b58e00dc4265925e01cd92fdea6dda1f010732"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "8f98c0dcaa38ec7582486ae5227338038e786677b763a84aeeb6214c95d4f971"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "a6e6a8d918807eca7c5ebb191e6f56d581c3926d199561befe51d0e5048f416d"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "a76f71c71acc84bd1113f96da2ce6420e9eab2b15cd2e297e6132aceaa90ae76"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "af39fbd7698bb0223246b4caffba88be003e032ae20e4a0a642e511e1e425558"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "c8ed884d8a242fbd6eb84a065e537794753cea7a7ed4cec654148579328a3087"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "cb64e0bad4a6dd71d9e3e457ae5d6eea4acd764109568d3ee39a64c4f79eae39"
+        },
+        {
+          "bp": 300,
+          "contigs": 2,
+          "genomes": 2,
+          "sha256": "d04ff6f14b7b7e81a617ac3b51d2536ca5b25da186c1ec9abd52bf8c822df00a"
+        }
+      ],
+      "groups": 21
+    },
+    "known_shared_reference_record_groups": 2,
+    "molecule_annotations": "All1410 source FASTA headers unannotated; provided assembly group is known, biological molecule/host annotations are not invented",
+    "oral_abundance_positive": 799,
+    "oral_full_provided_reference_bp": 2083072211,
+    "overlap": {
+      "E009_bacterial_taxa_without_historical_species": 21,
+      "E009_positive_read_source_matches": 0,
+      "exact_E009_reference_catalog_records": 3,
+      "exact_GI_source_identity_overlap": [
+        "OTU_97.25.0",
+        "OTU_97.29.0",
+        "OTU_97.37901.0",
+        "OTU_97.42502.0",
+        "OTU_97.43597.0",
+        "OTU_97.43848.0",
+        "OTU_97.45053.0",
+        "OTU_97.45053.1",
+        "OTU_97.45058.0",
+        "OTU_97.45365.0"
+      ],
+      "interpretation": "Reference-catalog, actual read-origin exposure, taxonomic relatedness and genome identity are different. No ANI/unseen-genome claim; unknown historical training inventory alone is not a blocker.",
+      "oral_present_of_these": 2,
+      "shared_historical_positive_bacterial_species": 11
+    },
+    "positive_cellular_taxonomy": "All799 Bacteria under verified publisher-linked historical taxonomy; simulator genome/source assembly/taxon nodes remain separate",
+    "provided_reference_records": 1410,
+    "within_genome_duplicate_reference_lengths": false,
+    "zero_GSA_positive_genomes": [
+      "OTU_97.21068.1",
+      "OTU_97.26160.0"
+    ]
+  },
+  "source_freezes": {
+    "active_candidate_memory_revision": "7ed7f66",
+    "candidate_lock": "candidate-lock-v2.json",
+    "initial_design": "a49ff80",
+    "strand_canonical_writer": "3f9a986",
+    "streaming_source_recovery": "00c830c"
+  },
+  "status": "LOCAL_IMPLEMENTATION_AND_SOURCE_AUDIT_COMPLETED; COMMUNITY_COMPARISON_NOT_RELEASED",
+  "truth": {
+    "E009": "Admitted v2 unchanged,156targets/554661890bp;3.3034% N-quarantine preserved; no new E009 score.",
+    "accepted": "Exact publisher/source origins, all provided sequences and full denominator inventory, taxonomy, all-DNA source-blind derivative and coordinate availability unions",
+    "admitted": false,
+    "not_blockers_alone": [
+      "Known reference/species overlap or incomplete historical/pretraining inventory; these limit interpretation rather than automatically invalidating a paired comparison."
+    ],
+    "prospective_scope_review": "oral-truth-policy.json freezes a separate provided-source-origin oracle before outcomes; deriving/reviewing/testing it locally may resolve admission without pretending to establish unique DNA. Original provisional evidence is preserved in review-provisional-before-origin-oracle.json.",
+    "unresolved": [
+      "Freeze and independently test what oral truth labels mean: provided simulator origin versus sequence-identifiable support. Known identical queries/records and unlocalized partial/reverse/circular/near competitors must not silently become unique support.",
+      "Implement/test the oral full-reference evaluator adapter, including all bin DNA in purity, per-source coordinate unions, ambiguity/non-ACGT quarantine and zero-GSA targets. The source availability union is not that evaluator.",
+      "State provided-assembly/replicon/molecule/host grouping semantics explicitly despite unannotated source headers; preserve unknowns, do not merge simulator genomes by taxon."
+    ]
+  },
+  "updated": "2026-10-18",
+  "version": 1
+}

@@ -1,18 +1,44 @@
 # Google Cloud workspace operations
 
-Updated: 2026-10-17 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
+Updated: 2026-10-18 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**E013 and preceding E012 completed entirely locally, with $0 new cloud work.**
-The [E013 review](../experiments/E013-marker-quality/review.json) binds cached
-marker-quality/context refinement, full-DNA evaluation and a 4,176,382-byte local
-archive with every-member readback. There was no VM/API/start/upload/resource or
-retention action. Planning-only oral-GSA HEAD checks downloaded zero body bytes;
-that community remains unacquired/unadmitted. The following E011 observation
-remains the last verified live provider state, rather than a new control-plane/
-billing check. **October 21 storage review remains; no extension.** Proposed local
-additional-data/training engineering has no implicit cloud authorization; a later
-cloud execution needs fresh credit/price/retention/cost admission.
+**E014 completed local implementation/source validation; no new cloud execution.**
+[The review](../experiments/E014-multiview-reconstruction/review.json) binds actual
+Mac engineering, full public source bytes/coordinates, retained failures and the
+remaining oral truth/evaluator admission gate. No community fit/score, VM start,
+private upload, resource change or retention extension. Read-only APIs independently
+recheck **TERMINATED on2026-10-18**; previous stop stays2026-10-17 08:13:23.285 UTC.
+Old provider45-minute STOP/automaticRestart=false are unchanged, not a new run's
+supervision. Current guest filesystem headroom is not observable while stopped.
+
+The [prepared comparison](../experiments/E014-multiview-reconstruction/OPERATIONS.md)
+uses only the existing8-vCPU/32-GiB VM and300-GiB disk, three serial fits, four
+numerical threads and proposed26-GB process-tree RSS.12-hour cumulative setup/
+science/collection clock,12.25-hour STOP,45-GiB extra/25-GiB reserve/2-GiB export
+are prepared, not armed. [Estimates](../experiments/E014-multiview-reconstruction/resource-plan.json)
+give max STOP compute/IP~$3.34 plus disk interval~$0.52 before export/small charges,
+within a prospective$10 ceiling. Local engineering stays8 GB/10 GiB. Data/truth
+admission precedes VM start; native/actual headroom/held-parent and financial
+release checks remain necessary. No new service, quota, machine or disk is needed.
+
+The refreshed official catalog quote is2026-10-18 17:46 UTC. The directly inspected
+active upgraded Free Trial credit was **DKK1,920.02 Available through2027-01-12**,
+Certain usage/net pricing, paid billing enabled. October1–18 reported gross/savings
+DKK52.65/net0 lag actual usage; exact pending usage is unknown, with$30 prior-exposure
+and$5 approved-storage reserves. The authorized browser initially failed/rejected
+access; after explicit read-only owner permission, a fresh tab worked. Preserve
+both connection-failure and successful observations. Refresh again before a later
+VM start; an old displayed balance is not current coverage or an invoice.
+
+Existing stopped disks still accrue quoted **$31.20/month (~$1.03/day)**. The
+**October21 storage review remains**, no extension. E014 public inbound files and
+local engineering incur no new GCP compute/storage upload; existing storage is not
+free. Local space fits without deleting/moving old artifacts or uploading them to
+GCS. [Depth assessment](../experiments/E014-multiview-reconstruction/depth-assessment.md)
+separates51.73-GB reads and prospective mapping from this sequence-only block.
+E013/E012 below remain dated, entirely local completed work; their former
+unacquired oral status is superseded by E014, without changing their evidence.
 
 **E011 recovery completed; VM independently TERMINATED.**
 [Recovery receipt](../experiments/E011-cached-grouping-reference/recovery-observed.json)

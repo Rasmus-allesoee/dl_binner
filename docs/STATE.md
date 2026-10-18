@@ -1,19 +1,64 @@
 # Current Research State
 
-Updated: 2026-10-17. This is the single current handoff.
+Updated: 2026-10-18. This is the single current handoff.
 
 ## Exact next step
 
-**E014 authorized current block: oral-GSA admission plus coherent training upgrade.**
-On `e014-multiview-reconstruction`, [the local block](../experiments/E014-multiview-reconstruction/README.md)
-acquires/verifies the four frozen files, audits independent truth, implements and
-tiny-tests multiview/reconstruction learning, and assesses source BAM/depth value.
-No old-artifact deletion/move is needed for the currently bounded acquisition.
-A single later frozen comparison is authorized in this task only if data/truth/
-runtime and live credit/eligibility/storage/cost gates all pass within about $10;
-otherwise report the failed condition without starting it. No bulk reads/mapping,
-aligners, external tools, resource changes or retention extension. October 21 review
-remains. All following completed records retain their original scopes.
+**E014 local candidate and source audit completed; truth admission blocks fits.**
+On `e014-multiview-reconstruction`, [review](../experiments/E014-multiview-reconstruction/review.json)
+binds the frozen dev5 implementation, real local contracts, acquired data, repaired
+source audit, actual resources and failures. No changed community fit/score,
+external binner, VM start, resource change or retention extension occurred.
+[Operations](../experiments/E014-multiview-reconstruction/OPERATIONS.md#exact-following-prompt)
+owns the exact next prompt: complete oral ambiguity/truth semantics and its tested
+full-reference evaluator adapter from retained data, then release the one frozen
+comparison only after admissions. Do not tune E013 markers further on E009.
+
+Dev5 adds varied real DNA crops, every available positive, all eligible parent
+exposure, reconstruction and depth-branch dropout while retaining explicit
+composition/depth branches and common unit geometry. The encoder widths, sole CPM
+rule and E013 selector remain fixed; dev4 learning/default source bytes remain
+unchanged. [Candidate v2 lock](../experiments/E014-multiview-reconstruction/candidate-lock-v2.json)
+freezes the wheel/source. Actual Mac native marker/train/reload/graph/refiner/export,
+24 earlier product tests, four revised tests, 15 data/release contracts and20-job
+serial tiny DAG pass; new Linux/full-scale contracts remain pending. Tiny generated
+DNA/HMMs are engineering evidence. Original Mac allclose and all failures remain.
+
+The four oral files plus separately approved setup total4,351,779,155 bytes and
+pass publisher MD5/new SHA256. All1,286,547 nonempty contigs /1,669,981,123 bp match
+source coordinates exactly; source-blind IDs retain every base and account for
+two zero-bp original records. Full source inventory:1,057 genomes /1,410 records.
+All799 oral-positive genomes resolve to Bacteria;797 occur in GSA. Their complete
+provided denominators total2,083,072,211 bp, including two absent genomes.
+**Truth is provisional:**42 identical cross-genome query contigs /6,764 bp and shared
+reference DNA require explicit origin-versus-identifiability semantics, ambiguity/
+non-ACGT handling and a tested evaluator. Molecule/host annotations are unknown.
+Exact/reference and historical species overlap are audited limitations, not an
+unseen-genome claim or a veto based solely on unknown pretraining inventory.
+
+The cancelled attempt's expired90-minute clock and source-member refusal remain.
+A separately recorded15-minute local recovery fixes streaming of an unused924-MB
+compressed archive member and passes all source/union/overlap audits in~758 s,
+without new downloads or scientific reruns. Sampled repaired source RSS0.252 GB;
+largest sampled product RSS0.717 GB. [Depth assessment](../experiments/E014-multiview-reconstruction/depth-assessment.md)
+finds51.73 GB compressed reads for all ten; BAM headers reference source genomes,
+not pooled GSA contigs. Keep oral sequence-only here; no mapping/aligners.
+
+[Resource plan](../experiments/E014-multiview-reconstruction/resource-plan.json)
+prepares E009 dev5 plus oral dev4/dev5 (three fits), reusing accepted E009 comparators.
+Existing8-vCPU/32-GiB VM/300-GiB disk; estimated4–9 h,12-hour cumulative clock,
+12.25-hour STOP, four numerical threads,26-GB cloud RSS,45-GiB extra,25-GiB free,
+2-GiB export. Local limits remain8 GB/10 GiB. Maximum STOP compute/IP~$3.34 plus
+~$0.52 disk interval before export/small charges, under proposed$10. These are
+estimates; truth/native/current credit/price/retention gates must pass first.
+
+E014 independently rechecks **TERMINATED on October18**, with the previous
+October17 stop unchanged; no fresh watcher is armed on a stopped VM. Actual new
+cloud compute/upload is zero, while existing disks accrue quoted **$31.20/month**.
+**October21 storage review remains**, without extension. Local files fit; no old
+artifact was deleted or moved. E014 owns the dated credit/control-plane evidence;
+refresh live financial coverage before any later spend. All following accepted
+records keep their original scopes.
 
 **E013 completed locally; keep its refiner provisionally and broaden development.**
 On `e013-marker-quality-refinement`, clean source **6d06560** froze one coherent
@@ -63,15 +108,12 @@ retain grouping, false-negative/teacher and pretrained/context alternatives.
 records the decision. One future selective control can resolve a design-changing
 uncertainty; no compulsory grid/factorial campaign.
 
-[Operations](../experiments/E013-marker-quality/OPERATIONS.md#exact-following-prompt)
-owns the exact next local admission/engineering prompt. Oral-GSA is still
-**unacquired/unadmitted**: planning-only HEADs find four locked files totaling
-2,445,246,434 bytes, zero body bytes downloaded. Additional source-reference needs
-are unknown. Verify publisher/new checksums, source/genome/replicon/taxonomy/overlap,
-coordinates and full denominators before truth admission; no community fit/score
-yet. GSA is sequence-only with no assembly errors and cannot confirm depth benefit.
-A later community/cloud execution needs its own frozen source, admission, resource/
-cost estimate and authorization. No budget or retention extension carries over.
+E013's original following prompt is superseded by E014's current handoff above.
+The original oral-GSA input choice/protocol remains frozen in E010; acquisition
+and source validation have now occurred in E014. That changes the earlier
+unacquired status, not any accepted E013 result. Oral remains sequence-only,
+without assembly errors or demonstrated ten-depth benefit. Its truth/evaluation
+contract and all later community execution gates remain explicit.
 
 E013's bounded driver including collection/readback took **79.120 s**, sampled CPU
 78.36 s, RSS peak **1.496 GB**, working files peak **0.2484 GiB**, within four-thread
@@ -90,7 +132,7 @@ next instruction, not its evidence. The original E011 practical +0.5-point
 criterion remains failed; CPM is the provisional working direction, RB a retained
 historical control. Immutable dev3/dev4 and E009–E012 science are unchanged.
 
-**Last live cloud observation is E011, not a new E012/E013 query:** independently
+**E011 remains the last completed native phase; E014 rechecks the stopped provider above.** It independently verified
 TERMINATED **2026-10-17 08:13:23.285 UTC** after successful phase
 `cached-20261017T080610Z-7a43eb6` /twelve native stages and 1,905 verified members.
 [E011 receipt](../experiments/E011-cached-grouping-reference/recovery-observed.json)

@@ -1,0 +1,52 @@
+{
+  "CPUs_allocated": 8,
+  "RAM_reason": "Frozen legacy dev4 materializes full window and transformed banks; estimate 12-20 GB rather than pretending its tiny RSS extrapolates. Candidate roughly 6-12 GB; graph/refinement roughly 8-20 GB. 26-GB ceiling leaves coordinator/OS headroom in existing 32-GiB allocation. These are estimates, not passing full-scale measurements.",
+  "cloud_extra_ceiling_GiB": 45,
+  "cloud_sampled_tree_RSS_bytes": 26000000000,
+  "compressed_export_ceiling_GiB": 2,
+  "credit_scope": "Fresh active upgraded Free Trial DKK1920.02 Available through2027-01-12; Certain usage/net pricing; paid billing enabled. Exact delayed usage unknown, may exceed24hours;30USD prior-exposure+5USD remaining-storage reserves+10USD new-run cap fit.",
+  "cumulative_ceiling_seconds": 43200,
+  "current_failed_gates": [
+    "oral truth/evaluator admission provisional",
+    "new Linux/runtime/guest headroom/watchdog gates not run because no VM start"
+  ],
+  "expected_runtime_hours": [
+    4,
+    9
+  ],
+  "free_reserve_GiB": 25,
+  "hourly_compute_and_IP_USD": 0.2730456762592464,
+  "incremental_gross_ceiling_USD": 10,
+  "live_account_record": "artifacts/e014-multiview-reconstruction/credit-gate-v3.json",
+  "local_extra_ceiling_GiB": 10,
+  "local_sampled_tree_RSS_bytes": 8000000000,
+  "max_STOP_compute_IP_USD": 3.3448095341757687,
+  "max_STOP_disk_interval_USD": 0.5235616429940586,
+  "max_STOP_hours": 12.25,
+  "monthly_existing_disks_USD": 31.199999949850024,
+  "network_export_estimate_USD": 0.24,
+  "network_price_status": "Current official public GCS worldwide excluding Asia/Australia first-tier .12USD/GiB, Denmark applicable; DKK SKUs govern billing.2GiB planning export .24USD plus .15reserve; no free network allowance assumed.",
+  "network_source": "https://cloud.google.com/storage/pricing",
+  "new_machine_disk_service_quota": "None. Verify current guest free space only after gated bounded start; last accepted E011 minimum129.55GiB is historical, not a current guest reading.",
+  "node_RAM_GiB": 32,
+  "numerical_threads": 4,
+  "peak_extra_cloud_GiB": [
+    25,
+    45
+  ],
+  "price_scope": "Gross list estimates before allowances/credits, not sampled CPU or invoice. No new cloud compute occurred.",
+  "provider_STOP_seconds": 44100,
+  "quoted_UTC": "2026-10-18T17:46:48.421353+00:00",
+  "release": "Exact clean branch/wheel/default/asset/data input bindings; fresh credits, pending usage, eligibility and retention must cover maxSTOP plus complete network/ops/storage reserve. Native representative memory/runtime gates and tested fresh held-parent watcher before science.",
+  "runtime_basis": {
+    "E009_eligible": 89041,
+    "note": "Rough Mac kernel scaling gives about25min E009 and2.37h oral candidate model-only. Linux speed, I/O, setup, baseline, graph/refinement, markers and collection require margin; do not promise full larger GSA affordability from this alone.",
+    "oral_length_ge500": 508763,
+    "synthetic_inner_model_seconds": 1.7141818009549752,
+    "synthetic_model_parent_epochs": 2048
+  },
+  "small_storage_ops_reserve_USD": 0.15,
+  "source": "live official Google Cloud Billing Catalog API; DKK quote divided by its stated USD conversion, conservative nonfree tiers",
+  "status": "NOT RELEASED; prerequisite admission, native runtime and fresh credit gates incomplete",
+  "storage_retention": "No extension beyond existing approval/review October21. At 31.20/month stopped disks continue to accrue about 1.03/day using planning 730h/month."
+}

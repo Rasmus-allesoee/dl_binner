@@ -436,3 +436,35 @@ bottleneck. Oral-GSA remains frozen/unacquired; HEAD-only size assessment is not
 source/truth admission. A later community execution needs its own frozen candidate,
 data/truth/resource/cost admission and authorization. No cloud starts, fits or
 retention change occurred here; October 21 review remains.
+
+## E014 value obtained and outstanding execution gate, 2026-10-18
+
+[E014](../../experiments/E014-multiview-reconstruction/review.json) implements the
+coherent multiview/reconstruction candidate while admitting the frozen oral input
+bytes. Actual local native engineering and full source-coordinate validation pass;
+the original simple and integrated comparators, E009–E013 results and failures
+remain immutable. This moves implementation forward without another mature-tool
+ranking or ingredient-by-ingredient campaign. There is no new quality outcome.
+
+Four original files plus the separately approved setup total4.352 GB. Oral
+abundance supports799 provided genomes;797 occur in GSA, with full denominators
+for all799. Known shared/identical source DNA prevents treating publisher origins
+as automatically unique sequence support. The full-reference evaluator and its
+ambiguity contract remain unadmitted; the conditional community comparison
+therefore did not start. Unknown pretraining inventory is a limitation, not the
+reason for this hold. [D015](D015-coherent-prototype-upgrade.md#e014-implemented-bundle-and-source-admission-2026-10-18)
+owns the next design decision: finish that truth contract, keep the candidate/
+CPM/E013 fixed, then perform one bounded comparison if native/cost gates pass.
+
+The [depth assessment](../../experiments/E014-multiview-reconstruction/depth-assessment.md)
+finds51.73 GB compressed ten-sample reads; inspected BAMs use source-genome rather
+than GSA-contig coordinates. Sequence-only oral plus retained E009 depth is the
+current valuable scope. New mapping would need its own admission and can exceed
+existing disk headroom; it is not a hidden prerequisite to coding or this bundle.
+The [prepared three-fit plan](../../experiments/E014-multiview-reconstruction/resource-plan.json)
+uses the existing VM/disks, estimates4–9 hours and stays below a proposed$10 gross
+ceiling with independent STOP/exit supervision. It is not a successful Linux or
+full-scale gate. No VM start/new compute/upload, external tool, resource change
+or retention extension occurred. Existing stopped-disk cost and October21 review
+remain; no old local artifacts were deleted or moved. CompleteBin and broader
+external expansion stay deferred; E011's sole MetaBAT2 reference is reused.

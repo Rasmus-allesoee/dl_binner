@@ -202,6 +202,15 @@ in a separate review record; never rewrite a failed execution journal as success
 
 When uncertainty remains, state it.
 
+For reference-derived benchmark inputs, distinguish a verified simulator/source
+origin from DNA that uniquely identifies that origin. Preserve known alternative
+sources, shared sequence and ambiguous bases under an explicit evaluation policy;
+do not silently turn an origin label into unique support. Headers can expose
+genome/accession/coordinate information. When IDs affect view seeds, sorting or
+grouping ties, use verified source-blind IDs and retain the reverse source join
+outside feature/training paths. Keep zero-bp original records in explicit input
+accounting rather than inventing DNA or silently losing the records.
+
 Use public community benchmarks alongside question-specific simulations. Keep unmodified benchmark results distinct from controlled derivatives, and treat data used for mechanism selection as development data. Reuse established evaluators where their contracts fit; add tested diagnostic summaries before considering a replacement framework. Audit the actual input and execution paths rather than inferring them from a paper title or README. For multi-sample features, check native emitted sample and contig axes against the frozen manifest; do not assume filesystem ordering or alias names survive native path resolution. One assembly can still use many read/BAM samples: per-base coverage storage scales with covered assembly bases times BAM count, while multiple assemblies multiply whole run directories. Audit persistent candidates, checkpoints and temporary coexistence before claiming that a smaller epoch count bounds peak disk use.
 
 ---

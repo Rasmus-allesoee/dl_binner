@@ -19,6 +19,7 @@ class PhaseContracts(unittest.TestCase):
             release={k:True for k in ['credit_gate_passed','pending_usage_accounted','oral_truth_admitted',
                 'native_runtime_gates_passed','full_input_axes_verified','watchdog_release_verified','no_resource_change','source_and_wheel_verified']}
             release.update(provider_stop_seconds=phase.STOP_SECONDS,incremental_gross_ceiling_usd=10,
+                oral_truth_mode='provided_source_origin_oracle',
                 storage_retention_extended=False,covered_costs=['compute','disk','storage','network','operations'],
                 credit_valid_until_epoch=now+999999,storage_valid_until_epoch=now+999999,
                 estimated_incremental_gross_usd=6,phase_config=phase.binding(path))
