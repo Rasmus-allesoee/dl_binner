@@ -1,0 +1,54 @@
+{
+  "record": "E014",
+  "date": "2026-10-19 Europe/Copenhagen",
+  "status": "collection repair prepared; no changed science",
+  "original_source": "858b7cc8adea930ea6f13f754eeaa8d031a9b5b4",
+  "original_phase": "comparison-20261018T183446Z-858b7cc",
+  "original_phase_status": "FAILED collection cap; community_completed true and DAG exit0. Final contracts pending independent retained review.",
+  "boundary": "Owner explicitly permits existing-VM wake if needed, keeping original10USD and October21. No scientific replay, tune, detector/index/aligner or external tool.",
+  "recovery": {
+    "purpose": "Only restore retained outputs, verify hash-bound native graph/readers and collect a smaller evidence bundle; no scientific replay or score on VM",
+    "execution_seconds": 1800,
+    "provider_STOP_seconds": 2700,
+    "extra_working_GiB": 5,
+    "free_reserve_GiB": 25,
+    "compressed_export_GiB": 2,
+    "collection_RSS_bytes": 8000000000,
+    "threads": 4,
+    "combined_original_and_recovery_clock_max_seconds": 12047.13,
+    "original_clock_seconds": 43200,
+    "maximum_additional_compute_IP_USD": 0.20478425719443483,
+    "maximum_additional_disk_interval_USD": 0.032054794469024,
+    "export_upper_USD": 0.24,
+    "small_charges_reserve_USD": 0.15,
+    "original_gross_ceiling_USD": 10,
+    "total_phase_gross_forecast_USD_upper": 1.6,
+    "latest_owner_permission": "Explicit VM wake if needed; same original10USD and October21 boundaries",
+    "retention_extended": false,
+    "storage_valid_until_epoch": 1792533600
+  },
+  "credit": {
+    "remaining_DKK": 1918.78,
+    "expiry": "2027-01-12",
+    "pending": "Unknown,30USD exposure+5USD storage reserves",
+    "prices": "Official current DKK catalog2026-10-18T22:16:22Z; unchanged; ordinary product scope passes"
+  },
+  "collection": {
+    "verify": "Every original work member against failed collector frozen inventory; refuse corruption/links/unexpected files. Keep original phase completion/partial archive untouched.",
+    "omit_only": "Three full production graph.npz binaries from export; preserve them in place, full hashes/native sparse+128 fixed-SHA unit-neighbor reader receipts retained. All original non-graph retained members kept.",
+    "archive": "Fresh archive/return prefix only,2GiB cap unchanged, all selected member and complete private readback hashes verified.",
+    "risk": "If the reduced bundle still exceeds2GiB, preserve its failure; adapt evidence packaging without changing scientific bytes or increasing the cap."
+  },
+  "local_tests": {
+    "collector": "4actual tiny tar/inventory/corruption/link/cap and held-parent original-budget/retention/STOP-refusal tests pass",
+    "graph_reader": "1actual numeric NPZ/unsorted-opaque-ID/sparse/unit-neighbor/refusal test pass, including actual separately transferred CLI layout with frozen review-helper path"
+  },
+  "review": {
+    "threads": 4,
+    "RSS_bytes": 8000000000,
+    "extra_local_GiB": 4,
+    "clock": "Fresh cumulative local review clock covers stream verification and diagnostic consumers; preserve attempted/failure clocks",
+    "truth_modes": "E009 admitted conservative v2/full156 and3.3034% N-quarantine; oral provided-source-origin oracle/full799 incl2zeroGSA, localized1734non-ACGT,known-shared-mask; no pooled metric"
+  },
+  "original_failure_evidence": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/completion.json"
+}
