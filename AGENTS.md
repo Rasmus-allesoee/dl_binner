@@ -351,7 +351,10 @@ and shell for authorized Linux/cloud phases. Agents may operate that VM within t
 current task's explicit execution boundary; an infrastructure task does not
 implicitly authorize acquisition, scientific fits or benchmark scores. Owner login,
 app connection and IAM/quota approvals may need owner action. Never claim remote
-app access from a plain SSH test or local harness alone. Keep SSH/auth credentials
+app access from a plain SSH test or local harness alone. Reuse the established
+strictly pinned SSH entry point in CLOUD before invoking cloud CLI SSH defaults;
+a missing generic default key or known-hosts file is not evidence that the
+project-specific credentials or host pin need replacement. Keep SSH/auth credentials
 outside Git and backups; prefer narrowly scoped access without public app-server
 listeners. Install the documented Linux sandbox prerequisites when the host needs
 them; prefer the distro's scoped Bubblewrap/AppArmor profile and retain global

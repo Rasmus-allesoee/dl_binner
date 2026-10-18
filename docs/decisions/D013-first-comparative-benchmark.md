@@ -476,3 +476,9 @@ contracts and an independent every-sequence/coordinate/mask review, before any
 community outcome. Keep E009 conservative R95 and oral origin-R95 separate, with
 known-shared sensitivity and all full denominators. The value is a paired bundle
 comparison across two questions, not a hidden relaxation to produce a win.
+
+E014 execution follow-through: [native release](../../experiments/E014-multiview-reconstruction/native-observed.json)
+passes all 15 Linux gates and starts the sole frozen three-fit comparison on the
+existing VM at source858b7cc. The original 12-hour/$10 envelope, current-boot
+watcher/provider STOP and October21 review remain. No new result yet; the decision
+is still whether this bundle improves the two separately scoped recovery questions.

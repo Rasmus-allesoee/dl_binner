@@ -3,42 +3,56 @@
 Updated: 2026-10-18 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**E014 completed local implementation/source validation; no new cloud execution.**
-[The review](../experiments/E014-multiview-reconstruction/review.json) binds actual
-Mac engineering, full public source bytes/coordinates, retained failures and the
-separate provided-origin oracle admission and pending native release gates. No community fit/score, VM start,
-private upload, resource change or retention extension. Read-only APIs independently
-recheck **TERMINATED on2026-10-18**; previous stop stays2026-10-17 08:13:23.285 UTC.
-Old provider45-minute STOP/automaticRestart=false are unchanged, not a new run's
-supervision. Current guest filesystem headroom is not observable while stopped.
+**E014 frozen comparison running under verified shutdown supervision.**
+[Native receipt](../experiments/E014-multiview-reconstruction/native-observed.json)
+binds phase `comparison-20261018T183446Z-858b7cc`, exact clean source858b7cc and
+boot/process identities. Start October18 **18:35:08.455 UTC /20:35 Copenhagen**;
+current control-plane state is RUNNING. Initial work-disk free139,100,987,392bytes
+(**129.55 GiB**). No provisioning, resize, new quota/service or retention extension.
+The source sync initially selected the wrong default gcloud host alias and failed
+before source mutation; the established strict pinned `dl-binner-gcp` alias passed.
+Retain both logs. No accepted science was repeated.
 
-The [prepared comparison](../experiments/E014-multiview-reconstruction/OPERATIONS.md)
-uses only the existing8-vCPU/32-GiB VM and300-GiB disk, three serial fits, four
-numerical threads and proposed26-GB process-tree RSS.12-hour cumulative setup/
-science/collection clock,12.25-hour STOP,45-GiB extra/25-GiB reserve/2-GiB export
-are prepared, not armed. [Estimates](../experiments/E014-multiview-reconstruction/resource-plan.json)
-give max STOP compute/IP~$3.34 plus disk interval~$0.52 before export/small charges,
-within a prospective$10 ceiling. Local engineering stays8 GB/10 GiB. Data/truth
-admission precedes VM start; native/actual headroom/held-parent and financial
-release checks remain necessary. No new service, quota, machine or disk is needed.
+The held parent has a fresh30-second root watcher, bound to current boot/PID birth/
+command; actual Linux live/normal-exit/crash tests pass. Provider STOP **44100s**
+with automaticRestart=false is independently verified. Twelve hours cumulatively
+from VM start includes input transfer, setup/gates, science and collection; driver
+deadline October19 **06:35 UTC /08:35 Copenhagen**, provider fallback **06:50 UTC
+/08:50 Copenhagen**. Release passed at 18:48:42.532 UTC before the October18
+**19:20 UTC** setup cutoff. All 15 fresh owned Python3.12 native/source/import/
+CLI/tiny/input/scheduler gates pass, including 25 installed product tests. Oral
+feature stages have both exited successfully at 18:57 UTC, followed by active
+E009 dev5 feature construction; no completed fit, quality result or shutdown is
+claimed. The retained heartbeat window reaches 9.46 GB sampled process-tree RSS,
+below the 26-GB cloud ceiling. Disk free is 125.38 GiB. At that observation,
+measured running uptime 1,348.740 s prices compute/IP ~$0.10230 and disk interval
+~$0.01601; these are accrued list-price estimates, not final actual cost or invoice.
 
-The refreshed official catalog quote is2026-10-18 17:46 UTC. The directly inspected
-active upgraded Free Trial credit was **DKK1,920.02 Available through2027-01-12**,
-Certain usage/net pricing, paid billing enabled. October1–18 reported gross/savings
-DKK52.65/net0 lag actual usage; exact pending usage is unknown, with$30 prior-exposure
-and$5 approved-storage reserves. The authorized browser initially failed/rejected
-access; after explicit read-only owner permission, a fresh tab worked. Preserve
-both connection-failure and successful observations. Refresh again before a later
-VM start; an old displayed balance is not current coverage or an invoice.
+The [frozen comparison](../experiments/E014-multiview-reconstruction/OPERATIONS.md)
+uses the existing8-vCPU/32-GiB VM and300-GiB disk, three serial fits, four numerical
+threads,26-GB sampled process-tree RSS,45-GiB extra/25-GiB reserve/2-GiB export.
+Expected4–9 hours is an estimate; the clock remains twelve hours. Maximum STOP
+compute/IP~$3.34481 plus disk interval~$0.52356, 2-GiB export~$0.24, local admission
+evidence readback~$0.0215 and $0.15 small storage/operations reserve give under
+$4.3 gross, within authorized $10. Final measured
+uptime and cost follow shutdown; sampled CPU never substitutes for billed uptime.
 
-Existing stopped disks still accrue quoted **$31.20/month (~$1.03/day)**. The
-**October21 storage review remains**, no extension. E014 public inbound files and
-local engineering incur no new GCP compute/storage upload; existing storage is not
-free. Local space fits without deleting/moving old artifacts or uploading them to
-GCS. [Depth assessment](../experiments/E014-multiview-reconstruction/depth-assessment.md)
-separates51.73-GB reads and prospective mapping from this sequence-only block.
-E013/E012 below remain dated, entirely local completed work; their former
-unacquired oral status is superseded by E014, without changing their evidence.
+Official catalog refreshed October18 17:46UTC; directly inspected active upgraded
+Free Trial at18:04UTC: **DKK1,920.02 Available through2027-01-12**, Certain usage/net
+pricing, paid billing enabled. Reported October1–18 gross/savingsDKK52.65/net0 lag
+actual usage, possibly over24hours; exact pending usage unknown, with$30 prior
+exposure+$5 approved-storage reserves. Existing ordinaryE2/Ubuntu/PD/IP/Iowa
+StandardStorage/network/operations coverage passes; no excluded product is added.
+Preserve earlier rejected/stale-tab observations and the successful authorized
+read-only page inspection. A future phase still needs its own fresh coverage.
+
+Existing disks continue at quoted **$31.20/month (~$1.03/day)** while stopped.
+**October21 storage review remains**, without extension. New local oral source/
+truth bytes are separate from native training inputs: only lossless opaque DNA
+and the locked wheel are transferred. No source/truth labels enter fits. No old
+artifacts were deleted or migrated. [Depth assessment](../experiments/E014-multiview-reconstruction/depth-assessment.md)
+keeps51.73-GB reads/contig mapping outside this sequence-only comparison. Earlier
+E011/E010 and entirely local E013/E012 receipts below keep their dated scopes.
 
 **E011 recovery completed; VM independently TERMINATED.**
 [Recovery receipt](../experiments/E011-cached-grouping-reference/recovery-observed.json)

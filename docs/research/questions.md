@@ -422,3 +422,8 @@ contracts. Unique-sequence support stays provisional; known-shared masking is a
 separate sensitivity. Keep all799 targets, full DNA and localized non-ACGT support
 quarantine. This permits the frozen paired comparison after native/financial
 gates, without changing the candidate or making a performance claim.
+
+E014 native release, 2026-10-18: all 15 Linux gates pass and the frozen three-fit
+comparison is [running under supervision](../../experiments/E014-multiview-reconstruction/native-observed.json).
+This changes execution status only; no community quality result or feature-family
+conclusion yet. Retain both truth scopes and the unchanged October21 review.

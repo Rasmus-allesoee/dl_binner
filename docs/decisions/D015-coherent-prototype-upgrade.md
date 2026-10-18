@@ -466,3 +466,9 @@ and unseen-genome claims remain unadmitted. This explicit prospective scope
 resolves the earlier hold without silently weakening or rewriting the conservative
 journals. It allows the one paired development comparison after native/financial
 gates, keeping the candidate fixed and its two dataset truth modes separate.
+
+E014 native release, 2026-10-18: the same frozen bundle now passes all 15 Linux
+gates, including 25 installed product tests, and the [authorized three-fit DAG](../../experiments/E014-multiview-reconstruction/native-observed.json)
+is progressing under the verified original limits. No new scientific rule, model
+or architecture choice follows from native readiness; compare the complete outputs
+after shutdown before deciding whether to keep or selectively modify the bundle.

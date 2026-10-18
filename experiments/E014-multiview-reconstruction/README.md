@@ -204,3 +204,52 @@ resolves the admission gate without pretending that shared DNA is unique.
 Keep the candidate/downstream policy frozen and proceed to the conditionally
 authorized native gates and three-fit comparison if current financial, guest
 headroom and supervision checks pass. No further E009 marker tuning.
+
+
+## Authorized native comparison released, 2026-10-18
+
+[Native observation](native-observed.json) records the exact clean pushed source
+**858b7cc**, phase `comparison-20261018T183446Z-858b7cc`, existing-VM start
+18:35:08.455UTC and release18:48:42.532UTC. All15 Linux gates pass, including a
+fresh independently owned complete Python3.12 CPU environment, actual installed
+source/imports/CLI, full assembly/ordered ten-depth axes, biological-panel positive,
+25 product tests,23 research contracts and real scheduler/watchdog checks. The
+native gate archive2,533,496bytes /571members passes complete local byte review.
+The fixtures remain engineering; full-scale performance is not established.
+
+The source-blind oral feature bank has sustained real progress:302,000contigs at
+18:49UTC to1,238,000/1,286,547 at18:52UTC. At that observation the current parent/
+boot watcher agrees, disk free126.19GiB and no science error or completed fit is
+reported. The driver clock still ends October19 06:35UTC /08:35Copenhagen; provider
+STOP06:50UTC /08:50Copenhagen is independent. The code/source/defaults, three-fit
+scope, four-thread/26GB/45GiB/25GiB reserve limits and original$10 remain fixed.
+No new resources, external tools, read mapping, retention extension or score.
+
+The closed local source/truth/engineering evidence is backed up in the existing
+private prefix as `local-admission-evidence.tar.gz`: **192,167,634bytes**,
+SHA256 `7c5faa9e1a5928697a31c6a13728006fd888a8e205d9a5f35d59614be3c876a4`.
+All353members /201,826,549logicalbytes and private streamed readback pass. It includes
+the admitted oracle and evaluator-only reverse join, without bulk public bodies,
+numerical environments, secrets or active science logs. No original file is
+removed. Local E014 physical footprint is~9.24GiB, below10GiB.
+
+At18:52:14UTC, measured running uptime1,026.127s prices compute/IP~$0.07783 and
+existing-disk interval~$0.01218, separate from sampled CPU and unfinalized billing.
+Admission evidence export upper~$0.02148 and storage~$0.00358/month are bounded;
+complete maximum-STOP forecast including native export/small charges stays under
+$4.3 gross /authorized$10. Final actual uptime/cost follow verified shutdown.
+Existing disks still accrue$31.20/month while stopped; **October21 review remains**.
+
+[Operations](OPERATIONS.md#exact-following-prompt) owns the exact completed-output
+inspection prompt. Leave a healthy long run under supervision after its real
+progress check; no repeated completion polling. Later check private completion,
+watchdog exit and actual stages, then archive/member contracts and the frozen
+separately named E009 conservative/oral origin diagnostics. The prototype bundle
+has no new biological conclusion yet.
+
+Final handoff at 18:57:37 UTC: both oral feature stages exited successfully;
+E009 dev5 features advance to 64,000/145,702. Source remains clean858b7cc and
+watcher/parent/provider STOP agree. Retained heartbeat RSS reaches 9.46 GB;
+disk free 125.38 GiB. Accrued uptime 1,348.740 s prices compute/IP ~$0.10230 and
+disk interval ~$0.01601. These update the earlier live observation, without
+claiming final cost, completed model training or quality.

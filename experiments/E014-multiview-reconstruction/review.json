@@ -63,34 +63,110 @@
     "whole_reference_extraction": false
   },
   "branch": "e014-multiview-reconstruction",
+  "compact_admission_evidence": {
+    "archive": {
+      "bytes": 192167634,
+      "sha256": "7c5faa9e1a5928697a31c6a13728006fd888a8e205d9a5f35d59614be3c876a4"
+    },
+    "assessment": {
+      "archive_bytes": 192167634,
+      "ceiling_USD": 10,
+      "complete_run_forecast_USD": 4.279847583848385,
+      "coverage": "Current active Free Trial, ordinary existing private Iowa Standard bucket/network/operations; same phase budget, no resource or retention extension",
+      "ordinary_GCS_export_upper_USD": 0.021476406678557394,
+      "ordinary_standard_storage_USD_month": 0.0035794011130928995
+    },
+    "every_local_member_verified": true,
+    "readback_bytes": 192167634,
+    "regular_members": 353,
+    "retention_review": "2026-10-21; no extension",
+    "second_local_archive_created": false,
+    "seconds": 53.792722940444946,
+    "source_commit": "858b7cc8adea930ea6f13f754eeaa8d031a9b5b4",
+    "status": "PRIVATE_UPLOAD_AND_STREAM_READBACK_VERIFIED",
+    "uri": "gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z/local-admission-evidence.tar.gz"
+  },
   "comparison": {
-    "actually_run": 0,
-    "cloud_VM_starts": 0,
-    "current_gate": "Local data/origin-oracle and financial gates pass; actual new Linux/runtime/headroom/held-parent/STOP gates precede science release.",
+    "actually_run": "20-job DAG released once; oraldev5/dev4 feature stages exited successfully; E009dev5 features advancing at18:57UTC. No completed fit or score yet.",
+    "cloud_VM_starts": 1,
+    "current_gate": "All15 native gates pass; released once at18:48:42.532UTC under original12h clock and verified current-boot held-parent watcher/STOP.",
     "external_binners": 0,
     "failed_gate": null,
-    "native_pending": "New complete Python3.12 Linux CPU environment/inventory/import/CLI/marker/train/reload/graph/refinement/export, fresh guest headroom, held-parent watcher/STOP and current financial release gates.",
+    "native_observation": "native-observed.json",
+    "native_pending": "Full-scale completion, collection, independently verified shutdown, archive/member contracts and frozen diagnostics remain pending.",
     "new_fits_if_admitted": 3,
+    "new_fits_planned": 3,
     "operations": "OPERATIONS.md",
+    "phase_id": "comparison-20261018T183446Z-858b7cc",
     "prepared": "restore/reuse-aware scientific stage consumer, serial Snakemake DAG, typed fail-closed held-parent launcher and checksum-verified compact collection",
     "protocol": "comparison-protocol.json",
-    "resource_plan": "resource-plan.json"
+    "resource_plan": "resource-plan.json",
+    "source_commit": "858b7cc8adea930ea6f13f754eeaa8d031a9b5b4"
   },
   "costs": {
     "existing_stopped_disks_quoted_USD_month": 31.2,
     "existing_storage_review": "2026-10-21; no extension",
-    "latest_credit_observation": "Fresh October18 active upgraded Free Trial DKK1920.02 Available through2027-01-12;certain usage/net pricing. Gross/savings52.65/net0; reporting may lag over24h.30USD prior-exposure+5USD storage reserve fit; refresh at VM release.",
-    "new_GCP_compute_USD": 0,
-    "new_GCS_storage_uploads": 0,
-    "provider_state": "TERMINATED independently read2026-10-18; previous stop2026-10-17T08:13:23.285UTC; current old2700s STOP unchanged, no new watcher armed on a stopped VM.",
-    "quote": "Official five-SKU query2026-10-18T17:46:48UTC; complete allocation-priced run remains prospective"
+    "latest_credit_observation": "Direct authorized live October18 18:04UTC credit DKK1920.02 Available through2027-01-12; paid upgraded Free Trial/certain usage/net pricing. Delayed usage unknown;30USD exposure+5USD storage reserves.",
+    "live_uptime_estimate": {
+      "admission_archive_readback_export_upper_USD": 0.021476406678557394,
+      "allocated_vCPU_hours": 2.9972005764643352,
+      "ceiling_USD": 10,
+      "checked_UTC": "2026-10-18T18:57:37.195259+00:00",
+      "compute_and_IP_USD": 0.10229658228566345,
+      "compute_and_IP_hourly_USD": 0.2730456762592464,
+      "existing_disks_interval_USD": 0.01601244141016742,
+      "existing_disks_monthly_USD": 31.199999949850024,
+      "forecast_complete_gross_USD_upper": 4.3,
+      "invoice": "Unreconciled; overview lags, potentially over24hours",
+      "native_gate_archive_SSH_export_reserved_USD": 0.001,
+      "pending_usage": "Unknown;30USD prior exposure+5USD approved storage reserved; not zero",
+      "remaining_credit_DKK": 1920.02,
+      "scope": "Measured VM uptime through live observation only, not final shutdown or reconciled invoice. Sampled CPU is separate.",
+      "uptime_seconds": 1348.7402594089508
+    },
+    "new_GCP_compute_USD": "Accruing; see measured-uptime quote-based cost_to_observation in native-observed.json. Final total/invoice unknown.",
+    "new_GCS_storage_uploads": {
+      "archive": {
+        "bytes": 192167634,
+        "sha256": "7c5faa9e1a5928697a31c6a13728006fd888a8e205d9a5f35d59614be3c876a4"
+      },
+      "count": 1,
+      "export_upper_USD": 0.021476406678557394,
+      "kind": "Compact source/admission/engineering evidence; existing private bucket only",
+      "native_science_archive": "Pending; no success inferred",
+      "readback": "All192167634bytes streamed SHA256 match; every353localmember verified",
+      "storage_USD_month": 0.0035794011130928995
+    },
+    "provider_state": "RUNNING independently verified after existing-VM start2026-10-18T18:35:08.455UTC; providerSTOP44100/automaticRestartfalse; current process-bound watcher alive",
+    "quote": "Current October18 official prices; complete forecast under4.3USD including native export and local admission evidence readback, under authorized10USD."
   },
   "engineering": {
+    "Linux": {
+      "actual_scheduler_ready_rules": 2,
+      "archive": {
+        "archive": {
+          "bytes": 2533496,
+          "sha256": "f9d0887f35bef6987edb7db414b62dbe052c1399a90080bee4f35cfdd102cbf2"
+        },
+        "every_member_verified": true,
+        "logical_member_bytes": 7527141,
+        "regular_members": 571,
+        "status": "PASS"
+      },
+      "core_cap": 4,
+      "data_source_runtime_release_oracle_contracts": 23,
+      "exact_input_axes": "145702x10; ordered0,2,3,4,6,9,10,11,14,17;13all-zero rows; fullDNA231678157bp",
+      "installed_product_tests": 25,
+      "jobs_argument": false,
+      "native_gates": 15,
+      "owned_distributions": 28,
+      "source": "858b7cc"
+    },
     "active_v2_new_product_tests": 4,
     "actual_ready_rule_scheduler": "engineering/scheduler-entry-v2/verified.json; two real independently ready4-core rules serial under--cores4/no--jobs",
     "actual_tiny_Snakemake_jobs": 20,
     "data_and_release_contracts": 23,
-    "limits": "Generated HMM and synthetic DNA/depth are engineering fixtures, not biological community evidence. No new native Linux/dev5 full-scale acceptance. Original Mac allclose failure remains failed.",
+    "limits": "Synthetic tiny DNA/depth and HMM positive are engineering, not community utility. All15 Linux gates pass; full-scale science still running, quality not established. Original Mac allclose remains failed.",
     "native": "Actual installed Mac PyTorch/NumPy, Pyrodigal/PyHMMER generated-HMM fixture, exact/approximate sparse readers, CPM/refinement/export; no mocked worker replaces the changed path",
     "owned_runtime_inventory": "artifacts/e014-multiview-reconstruction/runtime-inventory-v3.json",
     "packaging": {
@@ -218,9 +294,9 @@
     "version": "0.1.0.dev5",
     "views": "four real variable crops in two disjoint-half pairs plus full parent; every distinct available positive; full eligible exposure"
   },
-  "next": "Start the conditionally authorized existing VM for native gates and the one frozen three-fit comparison; no model/policy change or new campaign.",
+  "next": "After supervised completion, inspect source-bound private completion, shutdown, all stage exits/archive/member bytes and frozen diagnostics. Exact prompt in OPERATIONS.md.",
   "record": "E014",
-  "scientific_outcome": "not assessed; no changed community fit/score",
+  "scientific_outcome": "No new community outcome yet. Native preparation passes and the frozen paired comparison is progressing; do not infer recovery from progress or eventual shutdown.",
   "source_admission": {
     "GSA_observed": 797,
     "all_nonempty_loci_exact_forward_substrings": true,
@@ -390,10 +466,11 @@
     "active_candidate_memory_revision": "7ed7f66",
     "candidate_lock": "candidate-lock-v2.json",
     "initial_design": "a49ff80",
+    "native_execution": "858b7cc8adea930ea6f13f754eeaa8d031a9b5b4",
     "strand_canonical_writer": "3f9a986",
     "streaming_source_recovery": "00c830c"
   },
-  "status": "LOCAL_IMPLEMENTATION_AND_PROVIDED_ORIGIN_TRUTH_ADMITTED; NATIVE_RELEASE_PREPARATION",
+  "status": "LOCAL_AND_NATIVE_CONTRACTS_PASS; FROZEN_COMPARISON_RUNNING",
   "truth": {
     "E009": "Admitted v2 unchanged,156targets/554661890bp;3.3034% N-quarantine preserved; no new E009 score.",
     "accepted": "Separately admitted exact provided-source origin oracle, all799 full provided denominators, all DNA and1,734 localized non-ACGT quarantined bases;49 known-shared queries/12,063bp retained and flagged. No unique-sequence claim.",

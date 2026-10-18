@@ -1,0 +1,342 @@
+{
+  "record": "E014",
+  "phase_id": "comparison-20261018T183446Z-858b7cc",
+  "status": "FROZEN_COMPARISON_RELEASED; HEALTHY_REAL_PROGRESS; OUTCOME_PENDING",
+  "source_commit": "858b7cc8adea930ea6f13f754eeaa8d031a9b5b4",
+  "branch": "e014-multiview-reconstruction",
+  "observed_UTC": "2026-10-18T18:57:37.195259+00:00",
+  "vm": {
+    "name": "dl-binner-cpu",
+    "state": "RUNNING",
+    "start_epoch": 1792348508.455,
+    "start_UTC": "2026-10-18T18:35:08.455Z",
+    "CPUs_allocated": 8,
+    "RAM_GiB": 32,
+    "boot_id": "ed332a66-bc04-49f5-96f0-a36621ccdca5",
+    "existing_work_disk_GiB": 300,
+    "initial_used_bytes": 177615888384,
+    "initial_free_bytes": 139100987392
+  },
+  "supervision": {
+    "parent_pid": 2000,
+    "parent_start_ticks": 45481,
+    "parent_command_sha256": "e35512b93d10f40a2f3e29cb485a0168fb17d8fd7ebc6643479a0c24f8b96fda",
+    "parent_service": "e014-comparison-20261018t183446z.service",
+    "watchdog_timer": "e014-comparison-20261018t183446z-exit.timer",
+    "native_live_normal_exit_crash_tests_passed": true,
+    "provider_STOP_seconds": 44100,
+    "driver_deadline_UTC": "2026-10-19T06:35:08.455Z",
+    "provider_STOP_deadline_UTC": "2026-10-19T06:50:08.455Z",
+    "held_release_deadline_UTC": "2026-10-18T19:20:08.455Z",
+    "latest_live_tick_UTC": "2026-10-18T18:57:27.259929+00:00",
+    "latest_decision": "workflow alive",
+    "parent_service_and_watchdog_timer_active_at_handoff": true,
+    "VM_source_still_exact_and_clean": true
+  },
+  "boundaries": {
+    "incremental_gross_USD": 10,
+    "cumulative_seconds": 43200,
+    "threads": 4,
+    "sampled_tree_RSS_bytes": 26000000000,
+    "cloud_extra_GiB": 45,
+    "free_reserve_GiB": 25,
+    "compressed_export_GiB": 2,
+    "local_extra_GiB": 10,
+    "storage_review": "2026-10-21",
+    "retention_extended": false
+  },
+  "local_evidence": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/native-20261018T183446Z",
+  "remote_phase_root": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc",
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z",
+  "operational_journals": [
+    {
+      "stage": "initial transfer",
+      "status": "FAILED_BEFORE_SYNC",
+      "reason": "Default gcloud SSH selected an unpinned default host alias; existing verified dl-binner-gcp SSH alias succeeds.",
+      "evidence": "upload-sync.log"
+    },
+    {
+      "stage": "pinned source sync and supervision",
+      "status": "PASS",
+      "evidence": [
+        "sync-host.log",
+        "arm-supervision.log",
+        "provider-supervised.json"
+      ]
+    }
+  ],
+  "truth_mode": "provided_source_origin_oracle; unique_sequence_support_admitted=false",
+  "credit": "credit-gate-v3.json: DKK1920.02 Available through2027-01-12; pending unknown;30USD exposure+5USD storage reserve",
+  "cost_status": "Billing not reconciled. Quote-based accrued uptime will be recorded at handoff; final actual uptime cannot be known during a running job.",
+  "new_resource_service_quota_retention_changes": false,
+  "native_gates": {
+    "status": "SUCCESS",
+    "stages": [
+      {
+        "name": "accepted-cache",
+        "exit_code": 0,
+        "seconds": 1.787129340999968,
+        "sampled_RSS_bytes": 56643584,
+        "sampled_CPU_seconds": 0.66
+      },
+      {
+        "name": "accepted-runtime",
+        "exit_code": 0,
+        "seconds": 0.9097837110000455,
+        "sampled_RSS_bytes": 74686464,
+        "sampled_CPU_seconds": 0.8199999999999998
+      },
+      {
+        "name": "owned-env",
+        "exit_code": 0,
+        "seconds": 20.57996062699999,
+        "sampled_RSS_bytes": 61100032,
+        "sampled_CPU_seconds": 7.969999999999999
+      },
+      {
+        "name": "install-wheel",
+        "exit_code": 0,
+        "seconds": 1.1183911069999795,
+        "sampled_RSS_bytes": 74420224,
+        "sampled_CPU_seconds": 0.95
+      },
+      {
+        "name": "complete-runtime",
+        "exit_code": 0,
+        "seconds": 14.940929611000001,
+        "sampled_RSS_bytes": 297701376,
+        "sampled_CPU_seconds": 16.580000000000002
+      },
+      {
+        "name": "installed-source",
+        "exit_code": 0,
+        "seconds": 0.25329461799992714,
+        "sampled_RSS_bytes": 35414016,
+        "sampled_CPU_seconds": 0.16999999999999993
+      },
+      {
+        "name": "installed-CLI",
+        "exit_code": 0,
+        "seconds": 0.25392420700006824,
+        "sampled_RSS_bytes": 35749888,
+        "sampled_CPU_seconds": 0.06000000000000005
+      },
+      {
+        "name": "restore-opaque-input",
+        "exit_code": 0,
+        "seconds": 9.305025193000006,
+        "sampled_RSS_bytes": 54857728,
+        "sampled_CPU_seconds": 9.79
+      },
+      {
+        "name": "complete-inputs",
+        "exit_code": 0,
+        "seconds": 7.160839139000018,
+        "sampled_RSS_bytes": 529866752,
+        "sampled_CPU_seconds": 7.010000000000001
+      },
+      {
+        "name": "production-marker-contract",
+        "exit_code": 0,
+        "seconds": 0.9069183629999316,
+        "sampled_RSS_bytes": 125202432,
+        "sampled_CPU_seconds": 1.17
+      },
+      {
+        "name": "installed-product",
+        "exit_code": 0,
+        "seconds": 125.63635778399998,
+        "sampled_RSS_bytes": 758181888,
+        "sampled_CPU_seconds": 152.43
+      },
+      {
+        "name": "native-scheduler",
+        "exit_code": 0,
+        "seconds": 3.0921833239999614,
+        "sampled_RSS_bytes": 115486720,
+        "sampled_CPU_seconds": 0.9700000000000006
+      },
+      {
+        "name": "launcher-contracts",
+        "exit_code": 0,
+        "seconds": 1.1216909190000024,
+        "sampled_RSS_bytes": 66592768,
+        "sampled_CPU_seconds": 0.3699999999999992
+      },
+      {
+        "name": "native-exit-detector",
+        "exit_code": 0,
+        "seconds": 0.2554233619999877,
+        "sampled_RSS_bytes": 35901440,
+        "sampled_CPU_seconds": 0.09999999999999964
+      },
+      {
+        "name": "complete-DAG-dry-run",
+        "exit_code": 0,
+        "seconds": 0.6888504249999414,
+        "sampled_RSS_bytes": 79638528,
+        "sampled_CPU_seconds": 0.5700000000000003
+      }
+    ],
+    "total_child_wall_seconds": 188.0107017309998,
+    "largest_sampled_gate_RSS_bytes": 758181888,
+    "native_product_tests": 25,
+    "research_contracts": 23,
+    "watchdog_native_test_methods": 2,
+    "complete_owned_distributions": 28,
+    "real_biological_panel_profiles": 111,
+    "canonical_families": 107,
+    "generation_fixture": "Panel-consensus synthetic positive; unchanged trusted cutoff. Product train/DNA/HMM fixtures are engineering, not community quality.",
+    "member_archive": {
+      "status": "PASS",
+      "archive": {
+        "bytes": 2533496,
+        "sha256": "f9d0887f35bef6987edb7db414b62dbe052c1399a90080bee4f35cfdd102cbf2"
+      },
+      "regular_members": 571,
+      "logical_member_bytes": 7527141,
+      "every_member_verified": true
+    },
+    "bootstrap_result_binding": {
+      "bytes": 15678,
+      "sha256": "e8da2e47cb157e73f70b543d80362173c7dda7a257e1a1cb69e1b6bebc7d2e81"
+    }
+  },
+  "release": {
+    "epoch": 1792349322.5320055,
+    "UTC": "2026-10-18T18:48:42.532006+00:00",
+    "phase_config": {
+      "bytes": 2347,
+      "sha256": "6d6fae80e938271c45cbe2dd5f912b643116740d6513d22ffcb8f92516ebb2ec"
+    },
+    "all_required_gates_passed": true
+  },
+  "progress": {
+    "stage": "E009-dev5 multiview features/crop bank",
+    "observed_completed_contigs": 64000,
+    "total_contigs": 145702,
+    "completed_community_feature_stages": [
+      "oral-dev5",
+      "oral-dev4"
+    ],
+    "completed_feature_stage_receipts": [
+      "work/units/oral-dev5/features/prepared.json",
+      "work/units/oral-dev4/features/prepared.json"
+    ],
+    "completed_DAG_jobs": 2,
+    "total_DAG_jobs": 20,
+    "current_worker_pid": 4339,
+    "real_progress": true,
+    "current_worker_CPU_seconds_from_ps": 25,
+    "child_sampled_RSS_from_ps_KiB": 420124,
+    "sampled_tree_RSS_latest_parent_heartbeat_GB": 0.47,
+    "highest_heartbeat_RSS_in_retained_window_GB": 9.46,
+    "science_completed": false,
+    "new_community_fit_completed": false,
+    "reported_science_error": false,
+    "warning": "Closed feature stages and CPU/file progress establish healthy execution, not model/recovery success; final stage contracts remain for shutdown review."
+  },
+  "cost_to_observation": {
+    "scope": "Measured VM uptime through live observation only, not final shutdown or reconciled invoice. Sampled CPU is separate.",
+    "checked_UTC": "2026-10-18T18:57:37.195259+00:00",
+    "uptime_seconds": 1348.7402594089508,
+    "allocated_vCPU_hours": 2.9972005764643352,
+    "compute_and_IP_hourly_USD": 0.2730456762592464,
+    "compute_and_IP_USD": 0.10229658228566345,
+    "existing_disks_interval_USD": 0.01601244141016742,
+    "existing_disks_monthly_USD": 31.199999949850024,
+    "remaining_credit_DKK": 1920.02,
+    "pending_usage": "Unknown;30USD prior exposure+5USD approved storage reserved; not zero",
+    "invoice": "Unreconciled; overview lags, potentially over24hours",
+    "forecast_complete_gross_USD_upper": 4.3,
+    "ceiling_USD": 10,
+    "admission_archive_readback_export_upper_USD": 0.021476406678557394,
+    "native_gate_archive_SSH_export_reserved_USD": 0.001
+  },
+  "storage": {
+    "initial_work_free_bytes": 139100987392,
+    "observed_work_free_bytes": 134620512256,
+    "observed_filesystem_growth_bytes": 4480475136,
+    "local_E014_physical_KiB": 9689940,
+    "local_cap_bytes": 10737418240,
+    "originals_deleted_or_migrated": false,
+    "October21_review_unchanged": true
+  },
+  "gates_retained_inside_science_return": "work/native-gate-evidence and native-preparation copies sealed before science release",
+  "completion_evidence": "private completion.json and watchdog-exit.json; no guest-status writer in this phase",
+  "current_limits_unchanged": true,
+  "logs": {
+    "driver": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/logs/parent-terminal.log",
+    "DAG": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/logs/comparison.log",
+    "current_stage": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/logs/E009-dev5/features.log",
+    "native_bootstrap": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/logs/bootstrap-terminal.log"
+  },
+  "local_admission_archive": {
+    "status": "PRIVATE_UPLOAD_AND_STREAM_READBACK_VERIFIED",
+    "uri": "gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z/local-admission-evidence.tar.gz",
+    "archive": {
+      "bytes": 192167634,
+      "sha256": "7c5faa9e1a5928697a31c6a13728006fd888a8e205d9a5f35d59614be3c876a4"
+    },
+    "regular_members": 353,
+    "every_local_member_verified": true,
+    "readback_bytes": 192167634,
+    "seconds": 53.792722940444946,
+    "source_commit": "858b7cc8adea930ea6f13f754eeaa8d031a9b5b4",
+    "assessment": {
+      "archive_bytes": 192167634,
+      "ordinary_GCS_export_upper_USD": 0.021476406678557394,
+      "ordinary_standard_storage_USD_month": 0.0035794011130928995,
+      "complete_run_forecast_USD": 4.279847583848385,
+      "ceiling_USD": 10,
+      "coverage": "Current active Free Trial, ordinary existing private Iowa Standard bucket/network/operations; same phase budget, no resource or retention extension"
+    },
+    "second_local_archive_created": false,
+    "retention_review": "2026-10-21; no extension"
+  },
+  "prior_observations": [
+    {
+      "UTC": "2026-10-18T18:52:14.582491+00:00",
+      "progress": {
+        "stage": "oral-dev5 multiview features/crop bank",
+        "observed_completed_contigs": 1238000,
+        "total_contigs": 1286547,
+        "first_completed_contigs": 302000,
+        "sustained_real_progress_seconds": 143.50091648101807,
+        "process_pid": 3175,
+        "child_sampled_RSS_from_ps_KiB": 4154636,
+        "sampled_tree_RSS_latest_parent_heartbeat_GB": 4.24,
+        "science_completed": false,
+        "new_community_fit_completed": false,
+        "warning": "Progress is source-blind feature construction, not evidence that model training/recovery has succeeded."
+      },
+      "cost": {
+        "scope": "Measured VM uptime through live observation only, not final shutdown or reconciled invoice. Sampled CPU is separate.",
+        "checked_UTC": "2026-10-18T18:57:37.195259+00:00",
+        "uptime_seconds": 1348.7402594089508,
+        "allocated_vCPU_hours": 2.9972005764643352,
+        "compute_and_IP_hourly_USD": 0.2730456762592464,
+        "compute_and_IP_USD": 0.10229658228566345,
+        "existing_disks_interval_USD": 0.01601244141016742,
+        "existing_disks_monthly_USD": 31.199999949850024,
+        "remaining_credit_DKK": 1920.02,
+        "pending_usage": "Unknown;30USD prior exposure+5USD approved storage reserved; not zero",
+        "invoice": "Unreconciled; overview lags, potentially over24hours",
+        "forecast_complete_gross_USD_upper": 4.3,
+        "ceiling_USD": 10,
+        "admission_archive_readback_export_upper_USD": 0.021476406678557394,
+        "native_gate_archive_SSH_export_reserved_USD": 0.001
+      },
+      "storage": {
+        "initial_work_free_bytes": 139100987392,
+        "observed_work_free_bytes": 134620512256,
+        "observed_filesystem_growth_bytes": 4480475136,
+        "local_E014_physical_KiB": 9689940,
+        "local_cap_bytes": 10737418240,
+        "originals_deleted_or_migrated": false,
+        "October21_review_unchanged": true
+      }
+    }
+  ],
+  "handoff_snapshot": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/native-20261018T183446Z/handoff-snapshot.json"
+}

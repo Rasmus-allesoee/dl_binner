@@ -1,6 +1,6 @@
 {
   "record": "E014",
-  "status": "prospective conditional execution; not released",
+  "status": "Frozen prospective rule; released2026-10-18 at source858b7cc after native/financial/truth gates; outcome pending, no scientific defaults changed",
   "candidate": "candidate-lock-v2.json: packaged dev5 multiview.json and memory-lifetime source/wheel; no grid or outcome-driven defaults",
   "question": "Does broader real-window exposure, all-positive contrastive learning, depth dropout and reconstruction improve full-reference recovery under the preserved CPM/E013 downstream policy?",
   "arms": {
@@ -74,5 +74,6 @@
     "fresh live Welcome-credit balance/scope/expiry and delayed-usage reserve plus current eligible prices cover complete <=about10USD envelope",
     "exact clean pushed branch read-only VM sync, held-parent watcher and provider STOP verified"
   ],
-  "storage_review": "October21 unchanged; no silent local deletion, cloud migration or retention extension"
+  "storage_review": "October21 unchanged; no silent local deletion, cloud migration or retention extension",
+  "execution_record": "native-observed.json"
 }

@@ -4,64 +4,65 @@ Updated: 2026-10-18. This is the single current handoff.
 
 ## Exact next step
 
-**E014 provided-origin oral truth admitted; prepare the authorized native release.**
-On `e014-multiview-reconstruction`, [review](../experiments/E014-multiview-reconstruction/review.json)
-binds the frozen dev5 implementation, real local contracts, acquired data, repaired
-source audit, actual resources and failures. No changed community fit/score,
-external binner, VM start, resource change or retention extension occurred.
-[Operations](../experiments/E014-multiview-reconstruction/OPERATIONS.md#exact-following-prompt)
-owns the exact next prompt: use the separately [admitted provided-origin oracle](../experiments/E014-multiview-reconstruction/oral-truth-admission.json)
-and tested full-reference adapter, then release the one frozen comparison after
-native and current financial/storage/supervision gates. Do not tune E013 markers further on E009.
+**E014 frozen comparison is running normally under verified shutdown supervision.**
+Phase `comparison-20261018T183446Z-858b7cc` uses clean pushed source **858b7cc**
+on `e014-multiview-reconstruction`. The existing VM started October18 at
+**18:35:08.455 UTC /20:35 Copenhagen**. [Native observation](../experiments/E014-multiview-reconstruction/native-observed.json)
+owns the exact process/boot, gates, limits, logs and cost records. All 15 Linux
+gates pass; release occurred at **18:48:42.532 UTC**. At **18:57 UTC**, both oral
+feature stages have exited successfully and E009 dev5 feature construction
+advanced to 64,000/145,702 contigs, with real CPU progress and no reported science
+error. No community fit/score has completed yet. Do not start another job or
+disturb accepted outputs.
 
-Dev5 adds varied real DNA crops, every available positive, all eligible parent
-exposure, reconstruction and depth-branch dropout while retaining explicit
-composition/depth branches and common unit geometry. The encoder widths, sole CPM
-rule and E013 selector remain fixed; dev4 learning/default source bytes remain
-unchanged. [Candidate v2 lock](../experiments/E014-multiview-reconstruction/candidate-lock-v2.json)
-freezes the wheel/source. Actual Mac native marker/train/reload/graph/refiner/export,
-24 earlier product tests, four revised tests, 15 data/release contracts and20-job
-serial tiny DAG pass; new Linux/full-scale contracts remain pending. Tiny generated
-DNA/HMMs are engineering evidence. Original Mac allclose and all failures remain.
+The fresh process-bound watcher is armed and passes actual Linux live/normal-exit/
+crash tests. Provider STOP44100s/automaticRestart=false is independently verified.
+The original twelve-hour clock includes setup/upload/gates/science/collection;
+driver deadline **October19 06:35 UTC /08:35 Copenhagen**, provider STOP **06:50
+UTC /08:50 Copenhagen**. Release passed before the original October18
+**19:20 UTC** setup cutoff.
+Initial free **129.55 GiB** exceeds45-GiB growth plus25-GiB reserve. No new
+machine/disk/service/quota, resize or retention extension. The **October21 storage
+review remains**; existing disks continue at quoted **$31.20/month**.
 
-The four oral files plus separately approved setup total4,351,779,155 bytes and
-pass publisher MD5/new SHA256. All1,286,547 nonempty contigs /1,669,981,123 bp match
-source coordinates exactly; source-blind IDs retain every base and account for
-two zero-bp original records. Full source inventory:1,057 genomes /1,410 records.
-All799 oral-positive genomes resolve to Bacteria;797 occur in GSA. Their complete
-provided denominators total2,083,072,211 bp, including two absent genomes.
-**Unique-sequence truth remains provisional.** A separate provided-source-origin
-oracle is now admitted after five tiny evaluator contracts and every-row independent
-sequence/axis/coordinate/mask review. It retains all799 targets,1,734 quarantined
-non-ACGT bases and49 flagged known-shared queries /12,063bp. Primary oral origin-R95
-and its known-shared-mask sensitivity are separately named from E009 conservative
-v2 R95; no unique-sequence or biological molecule/host claim.
-Exact/reference and historical species overlap are audited limitations, not an
-unseen-genome claim or a veto based solely on unknown pretraining inventory.
+The [frozen three-fit comparison](../experiments/E014-multiview-reconstruction/comparison-protocol.json)
+is E009 dev5 and sequence-only oral dev4/dev5. Reuse accepted E009 dev4/E013 and
+dev3 outputs; no refit. Four numerical threads,26-GB cloud RSS,45-GiB extra,
+25-GiB free and2-GiB compressed export; local engineering remains8 GB/10 GiB.
+[Fresh financial evidence](../experiments/E014-multiview-reconstruction/resource-plan.json)
+shows DKK1,920.02 Available through2027-01-12, with delayed usage unknown and
+$30 exposure+$5 storage reserves. Complete conservative run estimate under$4.3
+fits the authorized$10. Price charged VM uptime separately from sampled CPU.
 
-The cancelled attempt's expired90-minute clock and source-member refusal remain.
-A separately recorded15-minute local recovery fixes streaming of an unused924-MB
-compressed archive member and passes all source/union/overlap audits in~758 s,
-without new downloads or scientific reruns. Sampled repaired source RSS0.252 GB;
-largest sampled product RSS0.717 GB. [Depth assessment](../experiments/E014-multiview-reconstruction/depth-assessment.md)
-finds51.73 GB compressed reads for all ten; BAM headers reference source genomes,
-not pooled GSA contigs. Keep oral sequence-only here; no mapping/aligners.
+[Local review](../experiments/E014-multiview-reconstruction/review.json) binds the
+real installed training/view/reload/geometry/marker/refinement/export contracts,
+23 source/runtime/data/release/oracle contracts and actual serial tiny DAG.
+Linux independently passes 25 installed product tests, all 15 gates and the
+full biological-panel positive contract. Dev5
+adds varied real crops, every available positive, full eligible-parent exposure,
+reconstruction and depth dropout; encoder widths, unit geometry, sole CPM rule
+and E013 selector stay fixed. [Candidate v2 lock](../experiments/E014-multiview-reconstruction/candidate-lock-v2.json)
+preserves source/wheel/defaults and unchanged legacy learning. Tiny engineering
+is not community performance; failed Mac allclose and every journal remain.
 
-[Resource plan](../experiments/E014-multiview-reconstruction/resource-plan.json)
-prepares E009 dev5 plus oral dev4/dev5 (three fits), reusing accepted E009 comparators.
-Existing8-vCPU/32-GiB VM/300-GiB disk; estimated4–9 h,12-hour cumulative clock,
-12.25-hour STOP, four numerical threads,26-GB cloud RSS,45-GiB extra,25-GiB free,
-2-GiB export. Local limits remain8 GB/10 GiB. Maximum STOP compute/IP~$3.34 plus
-~$0.52 disk interval before export/small charges, under proposed$10. These are
-estimates; truth/native/current credit/price/retention gates must pass first.
+[Oral provided-source-origin oracle](../experiments/E014-multiview-reconstruction/oral-truth-admission.json)
+is separately admitted after all-row independent DNA/source/axis/coordinate/mask
+review. All1,286,547 nonempty contigs /1,669,981,123 bp and799 full positive-source
+denominators /2,083,072,211 bp remain, including two zero-GSA targets.1,734 localized
+non-ACGT bases supply no support;49 known-shared queries /12,063bp retain flags and
+a predeclared mask sensitivity. **Unique-sequence support remains unadmitted.**
+Oral origin-R95 and E009 conservative-v2 R95 are separately named; no pooled metric,
+unseen-genome, physical molecule/host or MAG-quality claim. All original provisional
+source/failure records remain intact. Truth and reverse joins stay outside VM fits.
 
-E014 independently rechecks **TERMINATED on October18**, with the previous
-October17 stop unchanged; no fresh watcher is armed on a stopped VM. Actual new
-cloud compute/upload is zero, while existing disks accrue quoted **$31.20/month**.
-**October21 storage review remains**, without extension. Local files fit; no old
-artifact was deleted or moved. E014 owns the dated credit/control-plane evidence;
-refresh live financial coverage before any later spend. All following accepted
-records keep their original scopes.
+[Depth assessment](../experiments/E014-multiview-reconstruction/depth-assessment.md)
+finds51.73 GB compressed oral reads; inspected BAMs map to source genomes, not
+pooled GSA contigs. Keep this comparison sequence-only; no reads/mapping/aligners.
+The acquired quartet plus owner-approved setup passes publisherMD5/SHA256; the
+expired original clock and separately bounded successful streaming repair remain.
+No old artifact was deleted or migrated; current local files fit10GiB. External
+binners and extra ablations remain deferred. [Operations](../experiments/E014-multiview-reconstruction/OPERATIONS.md)
+owns release and completed-output inspection, without inferring success from stop.
 
 **E013 completed locally; keep its refiner provisionally and broaden development.**
 On `e013-marker-quality-refinement`, clean source **6d06560** froze one coherent

@@ -21,21 +21,21 @@
   "max_STOP_disk_interval_USD": 0.5235616429940586,
   "max_STOP_hours": 12.25,
   "monthly_existing_disks_USD": 31.199999949850024,
-  "native_pending": "Fresh actual guest headroom, complete independently owned LinuxCPU prefix, isolated imports/source/tiny native/contracts and current held-parent watcher/providerSTOP before science.",
+  "native_pending": "Complete actual independently owned Python3.12/Linux gate set passes; full-scale resource/quality outcome pending, see native-observed.json.",
   "network_export_estimate_USD": 0.24,
   "network_price_status": "Current official public GCS worldwide excluding Asia/Australia first-tier .12USD/GiB, Denmark applicable; DKK SKUs govern billing.2GiB planning export .24USD plus .15reserve; no free network allowance assumed.",
   "network_source": "https://cloud.google.com/storage/pricing",
-  "new_machine_disk_service_quota": "None. Verify current guest free space only after gated bounded start; last accepted E011 minimum129.55GiB is historical, not a current guest reading.",
+  "new_machine_disk_service_quota": "None. Actual starting free129.55GiB; observed18:57UTC free125.38GiB above25GiB reserve. No resource/quota/service/retention change.",
   "node_RAM_GiB": 32,
   "numerical_threads": 4,
   "peak_extra_cloud_GiB": [
     25,
     45
   ],
-  "price_scope": "Gross list estimates before allowances/credits, not sampled CPU or invoice. No new cloud compute occurred.",
+  "price_scope": "Gross list estimates before allowances/credits, not sampled CPU or invoice. Actual accrued uptime and disk interval are separate in native-observed.json.",
   "provider_STOP_seconds": 44100,
   "quoted_UTC": "2026-10-18T17:46:48.421353+00:00",
-  "release": "Exact clean branch/wheel/default/asset/data input bindings; fresh credits, pending usage, eligibility and retention must cover maxSTOP plus complete network/ops/storage reserve. Native representative memory/runtime gates and tested fresh held-parent watcher before science.",
+  "release": "All15 native/source/axes/runtime/tiny/scheduler gates passed. Fresh financial/storage/headroom/current-boot watcher/providerSTOP release bound once to native config. Original limits retained.",
   "runtime_basis": {
     "E009_eligible": 89041,
     "note": "Rough Mac kernel scaling gives about25min E009 and2.37h oral candidate model-only. Linux speed, I/O, setup, baseline, graph/refinement, markers and collection require margin; do not promise full larger GSA affordability from this alone.",
@@ -45,6 +45,7 @@
   },
   "small_storage_ops_reserve_USD": 0.15,
   "source": "live official Google Cloud Billing Catalog API; DKK quote divided by its stated USD conversion, conservative nonfree tiers",
-  "status": "LOCAL_ORIGIN_ORACLE_AND_FINANCIAL_GATES_PASS; NATIVE_PREPARATION_PENDING",
-  "storage_retention": "No extension beyond existing approval/review October21. At 31.20/month stopped disks continue to accrue about 1.03/day using planning 730h/month."
+  "status": "ALL_NATIVE_RELEASE_GATES_PASS; RUNNING_UNDER_ORIGINAL_LIMITS",
+  "storage_retention": "No extension beyond existing approval/review October21. At 31.20/month stopped disks continue to accrue about 1.03/day using planning 730h/month.",
+  "local_admission_evidence_export_upper_USD": 0.021476406678557394
 }
