@@ -1,0 +1,46 @@
+{
+  "record": "E014 completed-output inspection",
+  "date": "2026-10-19 Europe/Copenhagen",
+  "phase": "comparison-20261018T183446Z-858b7cc",
+  "status": "Frozen local diagnostic plan before changed community scores",
+  "science": "Original source858b7cc, seed11/20epochs, sole CPM and E013 refinement unchanged. Three science fits completed exit0; failed collection is not scientific acceptance. No new fit, inference, detector, neighbor index, selection or rule change.",
+  "admission": "Independently confirm provider TERMINATED, native gates/stages, private completion and archive and every retained member. Graphs/bulk DNA verified in place; returned native proof and original full inventory explicitly distinguish local and native scope. Byte-identical references use exact size/SHA aliases only.",
+  "evaluation": {
+    "E009": "Unchanged tested conservative-v2 diagnostics and independent grouping/recovery cross-check; all156 targets/full554661890bp and7653205bp/3.3034% N quarantine. Newdev5 parent/old/current refinement only. Reuse accepted dev4/E013/dev3 summaries without refit/rescore.",
+    "oral": "Unchanged admitted provided-origin adapter for dev4/dev5 parent/old/current; full799targets/2083072211bp incl2zeroGSA. All1286547nonemptycontigs/1669981123bp plus original2zero-bp records,1734nonACGT quarantine,49knownsharedqueries/12063bp and predeclared mask sensitivity. Not unique support, unseen-genome or ten-depth evidence.",
+    "diagnostics": "Complete native five-neighbor census with origin/length, status/eligibility and clean-marker population cells, grouping/fragmentation and paired targets; full-bin DNA purity>=.95 and size>=200kb, full reference denominators.",
+    "bounded_raw_geometry": "First128 SHA256 IDs with usable eligible raw vectors, label blind, full raw eligible reference pool. Apply saved sqrtTNF/zscore/L2 and log1p measured parent depth/zscore/sqrt(S)/zero-mask, concatenate/unit-normalize. Exact cosine top5, opaque-ID tie break; unknown neighbors remain in denominator. Compare saved native learned top5 for identical queries. No refitted stats/index/model inference. Separate from full native neighbor census.",
+    "markers": "Reuse accepted E009 cache. Independently validate all new oral gene rows including non-hit genes, stream only hit genes into unchanged reduce_hits and compare full cached reduction. No caller/search. Panel, partial-hit and lineage limitations remain.",
+    "exports": "Native summarize_arm re-read all exported DNA before successful DAG exit; fresh full original work-member hashes reverify every omitted DNA file. Locally independently compare all manifest bindings and assignment rows/ID/length/status/reason/base/bin counts, and selected alternatives. Do not claim local reread of omitted FASTAs."
+  },
+  "resources": {
+    "threads": 4,
+    "sampled_RSS_bytes": 8000000000,
+    "additional_local_review_GiB": 4,
+    "local_clock_seconds": 3600,
+    "clock_scope": "Download, archive/member verification, staged local review and diagnostics; local engineering tests outside execution clock. Keep failed journals; source-bound repaired readers may reuse passed stages within the cumulative clock.",
+    "staging": "Retain compressed archive, stream all member verification, stage only one unit plus shared parent arrays at a time. Remove only new reproducible scratch copies after recorded review, never old/accepted evidence."
+  },
+  "decision": "Use original comparison-protocol keep/modify/abandon criteria unchanged; report bundle and paired refinement effects and at most one design-changing follow-up. No threshold/grid or outcome-selected rules.",
+  "boundary": "Original10USD and October21 only. Explicit owner wake permission covers collection-only operational recovery, no new science. Oral becomes development evidence when interpreted to choose design; later independent confirmation still needed.",
+  "reviewer_freeze_UTC": "2026-10-18T22:49:45.483332+00:00",
+  "reviewer_source": {
+    "scripts/e014_review.py": {
+      "bytes": 22465,
+      "sha256": "8678f7bec38d6027e922e274b7854cbb30e90866b26736cd49fd92b116f89ef7"
+    },
+    "scripts/e014_archive_review.py": {
+      "bytes": 6373,
+      "sha256": "408fc304cdcf970772aab6c3cf91b4317af2cbe81d8ca76fa4801ada3d7a8ec1"
+    },
+    "tests/test_e014_review.py": {
+      "bytes": 5511,
+      "sha256": "b6a6e727b318cc9244213cc60fc9146e19fab304321d2689a6e105030841276b"
+    },
+    "tests/test_e014_archive_review.py": {
+      "bytes": 1823,
+      "sha256": "eac6b3367d74408929d31fd96c5ca104215dec9b71ea83ae7c229b9581909640"
+    }
+  },
+  "engineering_tests": "6actual review/archive/graph fixtures pass: allDNA CSV+axes, unknown/short/non-target/nonACGT populations, raw vs deliberately mismatched learned geometry, cached marker full/nonhit refusal, actual tar streams/corruptbytes/cap/selective copies, transferred sparse graph CLI. Existing admitted evaluators reused without metric changes."
+}
