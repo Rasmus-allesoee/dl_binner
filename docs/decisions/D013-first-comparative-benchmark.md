@@ -549,3 +549,30 @@ Same-task owner follow-through: an explicit reply now approves the prepared
 collection-only wake/local review, with a fresh30-minute clock/45-minute STOP and
 up to$0.65additional within original$2. Fresh financial/native transfer/supervision
 gates still precede release; no new science or retention extension is authorized.
+
+## E015 value obtained after evidence recovery, 2026-10-19
+
+The [completed selective loss comparison](../../experiments/E015-zero-reconstruction/comparison-review.json)
+passes all contracts and retains the original collection failure. The explicit
+owner-approved wake recovered existing outputs without scientific replay; final
+VM TERMINATED14:00:31UTC. Compute/run-disk/export subtotal~$0.546, shared stopped
+gap~$0.093, combined<$0.80 with reserve. Trial eligibility passes; invoice/pending
+usage remains unknown. October21 storage review and$31.20/month disks remain.
+
+The new evidence is useful despite no universal win: zero reconstruction lowers
+E009 weighted R95 5.5196→5.3329% but improves oral-origin post6.2432→6.5548%, with
+more50/90% targets and less unassigned DNA. Oral parent recovery and length-
+weighted geometry/grouping worsen; the fixed marker selector accounts for a
+larger downstream recovery lift. The original modify criterion stands; no pooled
+score, per-dataset oracle, feature-family rejection or SOTA claim. This selective
+test resolves the misconception that simply removing reconstruction fixes the
+bundle, without identifying the sole remaining bottleneck.
+
+[D015](D015-coherent-prototype-upgrade.md#e015-mixed-loss-control-and-next-positive-only-candidate-2026-10-19)
+chooses a coherent positive-only learning candidate next, using retained within-
+parent views rather than unvalidated cross-contig pseudo-labels or another mature-
+tool campaign. Preserve current reconstruction/defaults provisionally and both
+matched outcomes. New community execution needs its own prospective source/
+protocol/native/resource/financial admission and new authorization; E015's budget
+does not carry. Both inspected communities are development. Additional untouched
+confirmation still needs prospective naming/provenance/truth/overlap/cost admission.

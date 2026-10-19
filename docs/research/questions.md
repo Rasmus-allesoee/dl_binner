@@ -442,3 +442,18 @@ Both communities now serve development; independent confirmation still needs
 prospective additional data/source/overlap/truth/protocol/cost admission. All
 failed journals and dev3/dev4/dev5 stay preserved. VM is independently TERMINATED;
 original$10 remains bounded and October21 storage review is unchanged.
+
+2026-10-19 E015 completed: [the matched zero-reconstruction control](../../experiments/E015-zero-reconstruction/comparison-review.json)
+passes native/input/exposure/reload/geometry/marker/DNA and all199return-member
+contracts after explicitly approved collection-only recovery. Original failure
+journals remain. Zero lowers E009 R955.5196→5.3329% but raises oral-origin post
+6.2432→6.5548%, with target-count/assignment gains and oral parent/length-weighted
+geometry/grouping trade-offs. The frozen modify criterion applies, not a universal
+reconstruction verdict. Q001/Q003/Q005 remain open generally; no product-family,
+optimality or SOTA conclusion. D015 selects one coherent positive-only online/
+target learning candidate next, testing an unresolved negative-pair assumption
+without claiming it is the cause. Both communities remain development; untouched
+confirmation still requires prospective naming/protocol and full admission.
+Final VM TERMINATED14:00:31UTC; no scientific replay or retention/resource change.
+OriginalE015$2 covers~$0.639 including stopped gap/<$0.80with reserve. October21
+storage review remains; next paid work needs a fresh separately authorized scope.

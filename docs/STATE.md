@@ -4,52 +4,71 @@ Updated: 2026-10-19. This is the single current handoff.
 
 ## Exact next step
 
-**E015 is stopped: science reports completion, but collection failed before an archive.**
-[Inspection](../experiments/E015-zero-reconstruction/inspection-observed.json)
-independently verifies **TERMINATED October19 11:38:44.496UTC /13:38 Copenhagen**
-for phase `zero-20261019T102859Z-b259dca`, original science source **b259dca**.
-The private FAILED completion contains science-DAG **exit0** (13 jobs, two fits)
-and retained-input recheck **exit0**; its boot/process-bound watcher independently
-records parent exit and shutdown. Seven prior native gates remain accepted.
-The isolated collector then failed with `ModuleNotFoundError: e014_collect` before
-creating an inventory/archive. The three expected return objects are absent.
-Per-rule benchmarks, new checkpoints/axes/graphs/exports and paired quality still
-need independent admission from the stopped disk; no new R95 is claimed.
+**E015 completed and was independently reviewed; the loss control is mixed.**
+[Comparison](../experiments/E015-zero-reconstruction/comparison-review.json),
+[recovery receipt](../experiments/E015-zero-reconstruction/recovery-observed.json)
+and [operations](../experiments/E015-zero-reconstruction/OPERATIONS.md) own results,
+limits, original failure, costs and the exact following prompt. All seven native
+admission gates, twelve serial scientific rule exits plus final target, native
+reloads, full axes/geometry/marker/selection/DNA contracts pass. Original science
+source **b259dca**, dev3/dev4/dev5 and accepted E009–E014 evidence remain unchanged.
 
-**Next: collect and review the already computed outputs, without any scientific
-replay.** The exact isolated collector failure is reproduced and repaired locally;
-six policy/collection/CLI contracts and four recovery/clock/entrypoint contracts
-pass. Actual tar/member/alias readers ran; recovery proof fixtures use small opaque
-payloads, and the new Linux/root recovery launcher remains unrun. The
-[recovery plan](../experiments/E015-zero-reconstruction/collection-recovery-plan.json)
-prepares a fresh collection-only directory, four hash-bound helpers, original clean
-VM checkout b259dca, passed receipt/byte reuse, a fresh held-parent exit watcher,
-30-minute cumulative clock and45-minute providerSTOP. Expected8–15minutes;
-4threads/8GBRSS/5GiBextra/25GiBfree/2GiBreturn. No fit, inference, graph rebuild,
-marker detection, score or source/input mutation belongs on that VM wake.
+| Fixed downstream policy | E009 conservative-v2 weighted R95 | Oral provided-origin weighted R95 |
+| --- | ---: | ---: |
+| Retained dev4 + E013 | 5.7388% | 5.7242% |
+| E014 reconstruction | 5.5196% | 6.2432% |
+| E015 both reconstruction weights zero | 5.3329% | 6.5548% |
 
-**The owner subsequently approved that bounded collection-only wake and local review.**
-It has not run at this source freeze. The owner's preceding inspection prompt expressly
-says not to wake for missing evidence or extend a clock; the original two-hour
-clock expired at12:25:22UTC. The [exact next prompt](../experiments/E015-zero-reconstruction/OPERATIONS.md#exact-following-prompt)
-defines the approved separately bounded collection clock/wake, then local new-arm
-diagnostics with unchanged truth scopes/criteria. It needs no larger dollar budget:
-measured uptime4402.331s costs~**$0.33390 compute/IP +$0.05128 disk interval**;
-compact exports add~$0.000035. Subtotal~**$0.38522 /<$0.54 with reserve**.
-Recovery's full45-minute/export/storage quote~$0.63624 fits **$0.65 additional**
-and **<$1.19 combined**, within original E015$2. These are current-SKU gross
-estimates, not reconciled billing. Sampled science CPU11644.78s and11.64GB RSS
-are separate from allocation; minimum free99.93GiB, science growth5.69GiB.
+The frozen **modify** criterion applies: zero loses 1,035,483 E009 recovered bp
+(6 target gains/16 losses) but gains 6,489,511 oral bp (21 gains/33 losses).
+Targets >=50%/90% change 9/4→10/4 and 42/30→44/31. E009 bacterial 5-NN agreement
+improves 80.5066→80.7611%, restricted grouping F1 47.9414→48.2642%, and unassigned
+DNA declines 722,737→526,837 bp. Oral unassigned DNA also declines, but parent
+R95 falls 5.5638→4.9157%, length-weighted neighborhoods and grouping F1 worsen.
+Its fixed E013 refiner then lifts 4.9157→6.5548% (12 gains/2 losses). This is a
+representation/downstream interaction, not uniform embedding or product progress.
+Do not pool truth scopes, select a policy per dataset/bin, or tune weights now.
 
-Fresh Welcome credit **DKK1,909.55 Available through2027-01-12**,97%, paid-account
-Overview cost/savings62.36/net0, with pending usage unknown (>24h lag possible).
-Keep$30 prior-exposure/$5 approved-storage reserves. Existing disks still accrue
-**$31.20/month while stopped; October21 storage review unchanged**. No VM start,
-resource/service/retention change, science replay or new community scoring occurred
-in this inspection. Dev3/dev4/dev5, all accepted E009–E014 evidence, frozen E015
-candidate/protocol and every failed journal remain intact. Both communities remain
-development; reconstruction's next design decision and any untouched confirmation
-admission await the missing output review.
+**Next: one coherent positive-only online/target multiview learning candidate.**
+Keep current reconstruction/defaults provisionally as the implementation anchor,
+retaining zero as a matched alternative. Test the explicit co-genomic-negative
+assumption without using unreliable cross-contig pseudo-positive labels: align
+real same-parent views to a slowly updated target network, with predictor,
+stop-gradient/EMA and collapse contracts as one bundle. D015 owns why this is worth
+trying and its risks; it is not proof that false negatives caused E015. Keep the
+current encoders, measured-parent depth, views/exposure, geometry and CPM/E013
+initially fixed. No larger network, taxonomy, marker training or external campaign
+is implied. The following prompt proposes local implementation and one conditional
+new two-fit comparison under a **new $3**, subject to source/native/credit/cost/
+retention gates; it is not authorized by this completed inspection.
+
+Original E015 collection failed on an isolated sibling import before its first
+inventory/archive. That FAILED journal and all prior failures remain intact.
+After exact CLI repair/tests and the owner's explicit new-clock approval, a
+**collection-only** wake at repair source **89dcd61** reused completed science and
+uploaded/read back the 1,042,061,418-byte archive, all **199 members** verified.
+All 16,480 work files /6,072,312,382 bytes are inventoried; full exported FASTAs
+and shared inputs remain on disk, not backed up merely by their hashes.
+Final VM **TERMINATED October19 14:00:31.103 UTC /16:00 Copenhagen**; matching
+fresh watcher exit and explicit provider STOP are both recorded. Recovery took
+506.160 seconds, no scientific replay. Both twenty-epoch parent/view/dropout
+histories, transforms and parameter counts match E014; decoders/RNG stay present.
+Single-view parents still supply negatives without positive anchors when both
+reconstruction terms are zero (2,333 E009;13,716 oral), an explicit scope limit.
+
+Measured allocation plus assessed exports totals **~$0.54596**; separately shared
+stopped-disk gap **$0.09320**, giving **~$0.63916 /<$0.80 with reserve**. Later
+stopped hours accrue separately. Fresh credit **DKK1,909.55 Available through
+2027-01-12**, pending usage unknown/reserved; this is a SKU estimate, not invoice.
+Existing disks remain **$31.20/month; October21 storage review unchanged**.
+Core local review used9.04minutes; the full clock through sealing/private backup
+closed at28.90minutes, with5.413GB sampled numerical-stage tree RSS and2.297GiB
+extra. Compact review3,285,918bytes/all140members and private readback verify. No old artifact
+was deleted, no resource/retention change or extra fit/score was performed.
+Both datasets remain development. E009 full156 targets/554,661,890 bp and3.3034%
+N-quarantine, oral799 targets/2,083,072,211 bp and known-shared sensitivity remain;
+oral is a sequence-only origin oracle. A genuinely untouched confirmation community
+still needs prospective naming, protocol and full source/truth/overlap/cost admission.
 
 **E014 completed and independently reviewed; VM TERMINATED.**
 Phase `comparison-20261018T183446Z-858b7cc` completed all three frozen fits and

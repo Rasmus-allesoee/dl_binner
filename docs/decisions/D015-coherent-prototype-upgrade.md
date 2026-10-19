@@ -577,3 +577,71 @@ Same-task owner follow-through: an explicit reply now approves the prepared
 collection-only wake/local review, with a fresh30-minute clock/45-minute STOP and
 up to$0.65additional within original$2. Fresh financial/native transfer/supervision
 gates still precede release; no new science or retention extension is authorized.
+
+## E015 mixed loss control and next positive-only candidate, 2026-10-19
+
+The [independently reviewed E015 outputs](../../experiments/E015-zero-reconstruction/comparison-review.json)
+retain exactly the two zero reconstruction coefficients, original construction/
+seed/RNG, all20epoch parent/view/dropout counts, transforms, inputs, native geometry
+and fixed CPM/E013. All gates/rule/reload/full-DNA/export contracts pass. The
+isolated collector failure stays FAILED; a separately approved source-bound
+collection-only wake recovers every compact member without repeating science.
+Final VM TERMINATED14:00:31UTC; both boots/run disks/export/shared stopped gap total
+~$0.639/<$0.80 with reserve. October21 review is unchanged. No default/model changed.
+
+Zero lowers E009 R95 **5.5196→5.3329%**, while oral post rises **6.2432→6.5548%**.
+E009 gains one>=50% target, slightly better bacterial5NN/B3 and less unassigned
+DNA; oral gains two>=50%/one>=90% targets and better assignment. Oral parent R95,
+bp-weighted neighborhoods and post B3 worsen, with a larger fixed-refiner lift.
+Apply **modify**: neither original universal keep condition passes. Keep original
+reconstruction/defaults provisionally as the implementation anchor and zero as a
+useful retained alternative; do not choose a policy separately for each dataset
+or retune coefficients. Full denominators/N-quarantine/known-shared sensitivity and
+all per-target/length/origin/marker/eligibility populations remain. All eligible
+parents are exposed, but zero removes the reconstruction signal for2,333E009/
+13,716oral parents with no usable positive crop; they still provide negatives.
+This is a scoped treatment consequence, not a silent data exclusion.
+
+**Choose one coherent positive-only online/target multiview training candidate.**
+The current instance-discrimination objective treats every distinct parent as a
+negative, including co-genomic contigs. That is an explicit unresolved assumption,
+not a demonstrated cause of these losses. Removing reconstruction alone did not
+produce a strong common direction; another weight grid is lower value. The
+existing [source review](../evidence/2026-09-30-binner-design-review.md) already
+identifies McDevol's BYOL route as a serious alternative. A targeted primary
+refresh reads the [BYOL paper abstract](https://arxiv.org/abs/2006.07733v3) and
+[McDevol author README](https://github.com/soedinglab/McDevol): an online network
+predicts the representation of another real view from a slowly averaged target.
+This is a mechanism reference, not reproduced tool performance, a complete new
+code audit or permission to execute McDevol. Its pretrained composition/coverage
+sampling choices are distinct from our retained measured-parent inputs.
+
+A small predictor, stop-gradient target, moving average and noncollapse contracts
+are necessary parts of that single learning bundle; do not demand a separate
+performance study before implementing each. Keep current encoder widths, real
+parent/crop bank, full exposure, reconstruction1.0/0.1, measured-parent depth,
+depth dropout, seed/schedule, unit inference geometry and CPM/E013 initially fixed.
+No larger network, taxonomy, marker-aware training, context model or ensemble is
+automatically justified. Resolve exact algorithm/defaults through targeted source
+checks before changed outcomes; preserve all intermediary/checkpoint evidence.
+
+Conservative false-negative masking or cross-contig mining remains serious, but
+the current oral native5NN origin agreement is only20.6%; unfiltered pseudo-
+positive links would mostly join different provided origins. A reliable confidence
+rule is not admitted. Positive-only learning preserves verified parent positives
+while testing a different loss assumption. Collapse, weak discrimination,
+chimeric/weak views and sequence-only behavior are real risks; test actual gradients,
+target updates/buffers, exposure, variance/effective rank and exact reload rather
+than assuming a teacher guarantees success. This is a prospective hypothesis.
+
+The [following prompt](../../experiments/E015-zero-reconstruction/OPERATIONS.md#exact-following-prompt)
+proposes one local coherent implementation and one conditionally authorized new
+two-fit development comparison, reusing all accepted baselines without rescoring.
+Proposed new$3, existing8vCPU/32GiB/300GiB,4threads/26GB/20GiBextra/25GiBreserve/
+2GiBreturn,4h cumulative/4.25hSTOP; forecast~1–2.5h, maximum ordinary-rate envelope
+~$1.74 before any required revision. It remains a proposal until the owner sends
+that prompt. Source/data/native/credit/price/headroom/original-retention gates
+precede release; no resource increase, automatic extension or retention change.
+Both communities are development. Freeze a genuinely untouched additional input/
+protocol and its source/genome/replicon/taxonomy/overlap/truth/full-denominator/
+length/depth/cost admission prospectively; acquire no confirmation payload here.

@@ -1,0 +1,408 @@
+{
+  "record": "E015 approved collection-only recovery",
+  "status": "SUCCESS; PROVIDER_TERMINATED; ARCHIVE_ALL_MEMBERS_VERIFIED",
+  "recovery_phase": "collect-20261019T135207Z-89dcd61",
+  "original_phase": "zero-20261019T102859Z-b259dca",
+  "science_source": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+  "repair_source": "89dcd61a8280bdd990c00673d73a86b64ccfd8d7",
+  "owner_authorization": {
+    "reply": "Authorize the bounded collection-only wake and local review",
+    "scope": "One existing-VM collection-only wake; new30min cumulative/45minSTOP;<=0.65USDadditional, combinedE015<=2USD;no science/retention extension",
+    "received_UTC": "2026-10-19T13:48:22.493012+00:00"
+  },
+  "provider": {
+    "status": "TERMINATED",
+    "start_UTC": "2026-10-19T13:52:04.943000+00:00",
+    "stop_UTC": "2026-10-19T14:00:31.103000+00:00",
+    "uptime_seconds": 506.16,
+    "policy": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "2700"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "watcher_requested_shutdown": true,
+    "additional_explicit_provider_stop": true,
+    "attribution": "Both watcher request and explicit provider STOP are recorded; do not attribute final stop solely to either."
+  },
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e015-collect-20261019t135207z.service",
+    "watchdog_timer": "e015-collect-20261019t135207z-exit.timer",
+    "watchdog_service": "e015-collect-20261019t135207z-exit.service",
+    "process": {
+      "pid": 1865,
+      "start_ticks": 6598,
+      "command_sha256": "d6270ba0c7a66615efc9159a0c79b67a57b1f7fddde0eda1517ae254e7fda2c0"
+    },
+    "boot_id": "03f33f06-73e4-4993-b4c5-f46f5b605c26",
+    "source_commit": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1792417924.943,
+    "hard_deadline_epoch": 1792419724.943,
+    "provider_stop_epoch": 1792420624.943,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "watcher": {
+    "action": "clean guest shutdown requested; no retry or deletion",
+    "boot_id": "03f33f06-73e4-4993-b4c5-f46f5b605c26",
+    "checked_utc": "2026-10-19T13:58:54.936048+00:00",
+    "decision": "workflow exited",
+    "expected_process": {
+      "command_sha256": "d6270ba0c7a66615efc9159a0c79b67a57b1f7fddde0eda1517ae254e7fda2c0",
+      "pid": 1865,
+      "start_ticks": 6598
+    },
+    "first_missing_monotonic": 338.439890791,
+    "missing_seconds": 61.992718266,
+    "observed_process": null,
+    "shutdown": true,
+    "workflow_root": "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61"
+  },
+  "native_tiny_contract": {
+    "status": "PASS",
+    "scope": "Actual isolated transferred archive/alias/member/link-refusal CLI only; opaque NPZ transport fixtures, no native science replay",
+    "stages": [
+      {
+        "name": "collector-pack",
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-B",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/helpers/e015_collect.py",
+          "--work",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/tmp/collector-fixture/work",
+          "--evidence",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/tmp/collector-fixture/evidence",
+          "--output",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/tmp/collector-fixture/return"
+        ],
+        "exit_code": 0,
+        "expected_refusal": null
+      },
+      {
+        "name": "collector-verify",
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-B",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/helpers/e015_collect.py",
+          "--verify",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/tmp/collector-fixture/return/e015-evidence.tar.gz",
+          "--output",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/tmp/collector-fixture/verified"
+        ],
+        "exit_code": 0,
+        "expected_refusal": null
+      },
+      {
+        "name": "collector-link-refusal",
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-B",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/helpers/e015_collect.py",
+          "--work",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/tmp/collector-fixture/work",
+          "--evidence",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/tmp/collector-fixture/evidence",
+          "--output",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/tmp/collector-fixture/refused"
+        ],
+        "exit_code": 1,
+        "expected_refusal": "Scientific result link refused"
+      }
+    ]
+  },
+  "stages": [
+    {
+      "name": "collection",
+      "resources": {
+        "command": [
+          "/usr/bin/python3",
+          "-I",
+          "-B",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/helpers/e015_collect.py",
+          "--work",
+          "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/work",
+          "--evidence",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/evidence",
+          "--output",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/return"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2051,
+        "peak_sampled_rss_bytes": 93650944,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.8744884186752035,
+        "sampled_cpu_seconds": 134.28,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1645.7150435447693,
+        "stop_reason": null,
+        "wall_seconds": 153.55263389700002
+      }
+    },
+    {
+      "name": "upload-e015-evidence.tar.gz",
+      "resources": {
+        "command": [
+          "/snap/bin/gcloud",
+          "storage",
+          "cp",
+          "--if-generation-match=0",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/return/e015-evidence.tar.gz",
+          "gs://dl-binner-archive-167650584170/e015/collect-20261019T135207Z-89dcd61/e015-evidence.tar.gz",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2129,
+        "peak_sampled_rss_bytes": 287195136,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5986452260967403,
+        "sampled_cpu_seconds": 10.950000000000001,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1492.1619839668274,
+        "stop_reason": null,
+        "wall_seconds": 18.29130096199998
+      }
+    },
+    {
+      "name": "readback-e015-evidence.tar.gz",
+      "resources": {
+        "command": [
+          "/snap/bin/gcloud",
+          "storage",
+          "cp",
+          "gs://dl-binner-archive-167650584170/e015/collect-20261019T135207Z-89dcd61/e015-evidence.tar.gz",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/readback-e015-evidence.tar.gz",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2193,
+        "peak_sampled_rss_bytes": 286715904,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.1081828008230306,
+        "sampled_cpu_seconds": 6.17,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1473.8703682422638,
+        "stop_reason": null,
+        "wall_seconds": 5.567673488000025
+      }
+    },
+    {
+      "name": "upload-e015-evidence.tar.gz.sha256",
+      "resources": {
+        "command": [
+          "/snap/bin/gcloud",
+          "storage",
+          "cp",
+          "--if-generation-match=0",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/return/e015-evidence.tar.gz.sha256",
+          "gs://dl-binner-archive-167650584170/e015/collect-20261019T135207Z-89dcd61/e015-evidence.tar.gz.sha256",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2256,
+        "peak_sampled_rss_bytes": 202268672,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.7291466668535616,
+        "sampled_cpu_seconds": 1.4700000000000024,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1466.7224161624908,
+        "stop_reason": null,
+        "wall_seconds": 2.01605529699998
+      }
+    },
+    {
+      "name": "readback-e015-evidence.tar.gz.sha256",
+      "resources": {
+        "command": [
+          "/snap/bin/gcloud",
+          "storage",
+          "cp",
+          "gs://dl-binner-archive-167650584170/e015/collect-20261019T135207Z-89dcd61/e015-evidence.tar.gz.sha256",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/readback-e015-evidence.tar.gz.sha256",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2314,
+        "peak_sampled_rss_bytes": 284676096,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.7716267699319741,
+        "sampled_cpu_seconds": 1.2099999999999973,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1464.705986738205,
+        "stop_reason": null,
+        "wall_seconds": 1.5681156320000014
+      }
+    },
+    {
+      "name": "upload-collection.json",
+      "resources": {
+        "command": [
+          "/snap/bin/gcloud",
+          "storage",
+          "cp",
+          "--if-generation-match=0",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/return/collection.json",
+          "gs://dl-binner-archive-167650584170/e015/collect-20261019T135207Z-89dcd61/collection.json",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2372,
+        "peak_sampled_rss_bytes": 284901376,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.7356122574380032,
+        "sampled_cpu_seconds": 1.4699999999999989,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1463.137396812439,
+        "stop_reason": null,
+        "wall_seconds": 1.9983353799999577
+      }
+    },
+    {
+      "name": "readback-collection.json",
+      "resources": {
+        "command": [
+          "/snap/bin/gcloud",
+          "storage",
+          "cp",
+          "gs://dl-binner-archive-167650584170/e015/collect-20261019T135207Z-89dcd61/collection.json",
+          "/srv/dl_binner/experiments/e015/collect-20261019T135207Z-89dcd61/readback-collection.json",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2432,
+        "peak_sampled_rss_bytes": 283299840,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.8152706466897549,
+        "sampled_cpu_seconds": 1.4500000000000028,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1461.138769865036,
+        "stop_reason": null,
+        "wall_seconds": 1.7785504800000353
+      }
+    }
+  ],
+  "elapsed_at_completion_seconds": 325.64056491851807,
+  "private_readback_verified": true,
+  "local_archive_verification": {
+    "status": "SUCCESS",
+    "archive": {
+      "bytes": 1042061418,
+      "sha256": "27b0941a108df73ba7e983e39563d282833f79a74fbb83b74bb04f23af0ec643"
+    },
+    "regular_members": 199,
+    "logical_member_bytes": 1892209736,
+    "every_member_verified": true
+  },
+  "archive_private_prefix": "gs://dl-binner-archive-167650584170/e015/collect-20261019T135207Z-89dcd61",
+  "work_inventory": {
+    "files": 16480,
+    "bytes": 6072312382,
+    "omitted_full_DNA_files": 16399,
+    "omitted_full_DNA_bytes": 3982147476,
+    "aliases": {
+      "work/units/E009-zero/train/reference.npz": {
+        "bytes": 21870714,
+        "canonical": "work/units/E009-zero/embeddings.npz",
+        "sha256": "c26b3d97706b48ec9c575a35c474ee83147bb834bf7b189f5317291493f69cf5"
+      },
+      "work/units/oral-zero/train/reference.npz": {
+        "bytes": 185941964,
+        "canonical": "work/units/oral-zero/embeddings.npz",
+        "sha256": "2d5ad144abe096ac9ffe069ea7fc8236ede679f15d9a8a3bfb91314be42ea260"
+      }
+    },
+    "scope": "Every original work file was streamed/hashed during collection; all compact return members verified locally. Omitted full FASTAs/shared view/features/runtime remain on disk and are not backed up by their hashes."
+  },
+  "resources": {
+    "peak_sampled_tree_RSS_bytes": 287195136,
+    "minimum_sampled_free_bytes": 105199833088,
+    "maximum_sampled_growth_bytes": 2094534656,
+    "clock_seconds": 1800,
+    "provider_STOP_seconds": 2700,
+    "threads": 4,
+    "RSS_bytes": 8000000000,
+    "extra_GiB": 5,
+    "free_reserve_GiB": 25,
+    "compressed_GiB": 2
+  },
+  "cost": {
+    "original_run_and_small_export_USD": 0.3852155586292142,
+    "recovery_compute_IP_USD": 0.03839022208205005,
+    "recovery_disk_interval_USD": 0.005896129022780797,
+    "native_archive_export_USD_upper": 0.11645943872630596,
+    "combined_run_and_export_subtotal_USD": 0.545961348460351,
+    "shared_stopped_gap_seconds": 8000.447,
+    "shared_stopped_gap_disk_USD": 0.09319517099715419,
+    "total_including_stopped_gap_USD": 0.6391565194575053,
+    "total_with_gap_and_0_15_reserve_USD": 0.7891565194575053,
+    "additional_approved_USD": 0.65,
+    "combined_original_E015_ceiling_USD": 2,
+    "stopped_disks_monthly_USD": 31.199999949850024,
+    "new_archive_storage_USD_month": 0.019409906454384326,
+    "scope": "Current eligible-SKU measured-uptime/list-price estimate; pending invoice/usage unknown, not credit-display subtraction. Shared stopped storage separately approved; October21 unchanged. Further stopped hours continue accruing."
+  },
+  "science_repeated": false,
+  "new_fit_inference_marker_or_graph_work": false,
+  "original_failed_completion_preserved": true,
+  "quality_admission": "Owned by subsequent comparison-review, not inferred from this recovery success.",
+  "evidence": {
+    "artifacts/e015-zero-reconstruction/collection-recovery-20261019/provider-stopped.json": {
+      "bytes": 33009,
+      "sha256": "acebe10ea48705700b7824a5bf331f92c5f16ee3f1c09e261f8cd85d5782ec14"
+    },
+    "artifacts/e015-zero-reconstruction/collection-recovery-20261019/export-completion.json": {
+      "bytes": 23791,
+      "sha256": "57fe9d015af14472669161af59c349b9e1fd2ff69952bd5349881bceea1e82f5"
+    },
+    "artifacts/e015-zero-reconstruction/collection-recovery-20261019/export-watchdog-exit.json": {
+      "bytes": 4264,
+      "sha256": "9a602ba9f03d8d3c21f01fcddd7555e6f8a68c4c14c8ac0ea24524eed84fc07e"
+    },
+    "artifacts/e015-zero-reconstruction/collection-recovery-20261019/native-admission.json": {
+      "bytes": 2808,
+      "sha256": "480addca5d841c056f0d98e6d1b158bcb11cc279e6a47e83cc48786cc791c622"
+    },
+    "artifacts/e015-zero-reconstruction/collection-recovery-20261019/supervision.json": {
+      "bytes": 1036,
+      "sha256": "c708e7bc64326862013ee2157eedfbc244f7028be81f54750ab323352d12df6a"
+    },
+    "artifacts/e015-zero-reconstruction/review-20261019/verified/inventory.json": {
+      "bytes": 5420246,
+      "sha256": "052898d28085fa24fd814a267f341dc247cd2f5f0e76e181e02a91cc4bed25b6"
+    },
+    "artifacts/e015-zero-reconstruction/review-20261019/verified/verification.json": {
+      "bytes": 249,
+      "sha256": "a0c506e95e989eef3fd6b519ef1e6349279f84b0f65339f3df806d028d84ced2"
+    },
+    "artifacts/e015-zero-reconstruction/review-20261019/native-receipts-review.json": {
+      "bytes": 19489,
+      "sha256": "6e6dd0e3ab0695ace773cce911b75271cb009196ce6f5c857434fbb0df5965f7"
+    }
+  }
+}

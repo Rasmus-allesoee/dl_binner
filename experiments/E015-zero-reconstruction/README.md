@@ -1,7 +1,7 @@
 # E015: matched zero-reconstruction learning control
 
-Date: 2026-10-19. Status: **TERMINATED; science reports complete; collection failed;
-independent output/quality review pending**.
+Date: 2026-10-19. Status: **completed and independently reviewed; mixed loss-control
+result; original delivery failure preserved and collection-only recovery verified**.
 Question: does reconstruction justify its recovery, length/assignment and runtime
 trade-offs in the accepted multiview bundle? E014 improves oral-origin recovery
 but loses E009 weighted conservative recovery. This pre-contemplated two-fit
@@ -20,7 +20,8 @@ Original banks/cache/prefix bytes are read-only; missing bytes fail without fall
 
 All older outputs/evaluations are reused. Only E009 ten-depth and oral sequence-only
 zero-reconstruction arms are new. No changed outcome was available at preparation;
-the missing native return still prevents quality evaluation.
+the initial missing native return delayed quality evaluation; completed recovery and
+review are recorded below.
 Both datasets are development, with different admitted truth modes; independent
 confirmation needs new prospective admission, not reuse of oral as unseen validation.
 
@@ -108,3 +109,101 @@ for missing evidence/clock extension. [Operations](OPERATIONS.md#exact-following
 contains the separate bounded approval prompt. No larger dollar budget, resource
 change, scientific replay or retention extension is requested. Both communities
 remain development; untouched confirmation admission remains future work.
+
+## Completed comparison and decision, 2026-10-19
+
+The [recovery receipt](recovery-observed.json), [comparison](comparison-review.json)
+and [all-target table](comparison-targets.tsv) supersede the preceding pending
+status, preserving every earlier journal. All seven native gates, twelve serial
+scientific rule exits and final target pass. The exact two zero coefficients,
+twenty-epoch parent/view/depth-dropout histories, feature/view bindings, transforms,
+parameter counts, native reload/graph/neighbor and complete selection/export
+contracts independently pass. No old comparison was refitted or rescored.
+
+| Fixed CPM/E013 comparison | E009 weighted R95 | Oral origin weighted R95 | E009 targets ≥50% /90% | Oral targets ≥50% /90% |
+| --- | ---: | ---: | ---: | ---: |
+| Preserved dev4/E013 | 5.7388% | 5.7242% | 9 /2 | 38 /24 |
+| E014 reconstruction | 5.5196% | 6.2432% | 9 /4 | 42 /30 |
+| E015 zero reconstruction | 5.3329% | 6.5548% | 10 /4 | 44 /31 |
+
+These are separate truth questions, not a pooled score. E009 loses **1,035,483 bp**
+(6 target gains,16 losses); oral gains **6,489,511 bp** (21 gains,33 losses).
+The original **modify** criterion applies. Neither universal keep-zero nor strict
+keep-reconstruction passes: there are compensating target/geometry/assignment
+effects, not a clean two-community result.
+
+E009 bacterial native5NN agreement rises80.5066→80.7611% on the same25,543 queries;
+restricted B3F1 rises47.9414→48.2642%. Post unassigned DNA drops722,737→526,837bp.
+E009 parent/old/E013 recovery are identical at5.3329%, despite changed partitions.
+Oral unweighted neighbor agreement rises20.4339→20.6136%, while bp-weighted
+agreement falls22.2483→22.0529% and post grouping F1 falls31.2073→30.9649%.
+Its parent R95 falls5.5638→4.9157%; fixed E013 then raises it to6.5548%, versus
+old-refinement5.6843%. Post versus parent gains34,142,310bp,12targets gain/2lose;
+versus old gains18,131,554bp,11gain/6lose. Oral post unassigned DNA declines
+7,595,264→5,862,188bp. Preserve these interactions and every target/length/origin
+cell; better short neighborhoods alone do not establish a stronger binner.
+
+All145,702E009contigs/231,678,157bp and1,286,547nonemptyoralcontigs/1,669,981,123bp
+are accounted. Original two zero-bp oral records remain in input accounting.
+Keep E009 full156targets/554,661,890referencebp/3.3034%N-quarantine and oral
+799targets/2,083,072,211referencebp, two zero-GSA targets, localized1,734nonACGTbp
+and49known-shared queries. Known-shared masking leaves every new arm's per-target
+recovery/R95 unchanged; it does not establish unique sequence support. Oral has
+no assembly errors or admitted depth. Native exact reload passes; original Mac
+allclose remains failed, without a tolerance change or local neural inference.
+
+Zero weights preserve decoder computation/initialization and AdamW construction;
+raw reconstruction diagnostic values are not expected to be zero. Eligible
+single-view/no-positive parents still act as negatives, with no positive anchor
+once reconstruction contributes zero: **2,333E009/13,716oral**. This is the declared
+loss's consequence, not dropped DNA or a changed exposure schedule. Exact full-
+community initial weights were not separately archived; source/native tiny
+construction/RNG contracts establish that aspect of the matched treatment.
+
+Both original fits completed before collection failed. Explicitly approved
+collection-only repair89dcd61 kept science checkoutb259dca unchanged and passed
+actual Linux isolated archive/alias/refusal checks before release. Fresh boot/
+PID/start/command-bound exit supervision and45min providerSTOP passed; final
+**TERMINATED14:00:31.103UTC /16:00 Copenhagen** follows matching watcher shutdown
+and explicit provider STOP. Recovery took506.160s, with0.287GB sampled peak,
+1.951GiB growth/minimum free97.975GiB. No scientific replay or resource change.
+Archive1,042,061,418bytes/all199members/1,892,209,736logical bytes verify locally.
+Full16,480work members/6,072,312,382bytes are inventoried;16,399full FASTA exports
+stay on disk. Hashes do not back up omitted DNA or shared inputs/runtime.
+
+Measured allocation/run disks/export subtotal **$0.54596**, plus shared stopped gap
+**$0.09320**, total **$0.63916 /<$0.80 with reserve**, within originalE015$2 and
+the approved$0.65recovery. Invoice/pending usage remains unresolved; current credit
+1909.55DKK/January12 and ordinary-product coverage pass. Existing disks still cost
+$31.20/month; new native archive adds~$0.0194/month. **October21 review remains**,
+without retention extension. Local core review542.56s/5.413GB sampled peak/
+2.291GiB core extra passes. Full local clock through sealing/private backup closes
+28.90minutes, final peak2.297GiB. The3,285,918-byte compact review archive/all140
+members and private readback verify. Its$0.000367 export adds to priced total
+$0.639524; pooled small/storage reserves give<$0.80 (two separate phase reserves
+give<$0.95). Compact sealing/readback child RSS was not separately sampled; the
+small standard-library payload/closure scope is recorded explicitly.
+No old local artifact was deleted or migrated. An aggregation-only assertion first
+mistook the old composition coefficient for0.1; the frozen value is1.0. Its failed
+source/journal remain; correcting it reran no evaluator and changed no contract.
+
+**Next decision:** keep reconstruction/current defaults provisionally as the fixed
+implementation anchor and retain zero as useful evidence. Prepare one coherent
+positive-only online/EMA-target learning candidate, as already contemplated in
+the completed McDevol/BYOL review. Current instance discrimination still repels
+different parents even when co-genomic; E015 does not prove that caused the losses.
+Aligning real within-parent views without negatives avoids trusting cross-contig
+pseudo-labels when oral nearest-neighbor agreement is only20.6%. A predictor,
+stop-gradient target, moving average and collapse contracts are one learning
+bundle. Keep current encoders/views/depth semantics and CPM/E013 initially fixed;
+do not run a weight grid, enlarge the network or add an external campaign now.
+Collapse and loss of useful discrimination are serious risks; benefit is untested.
+[D015](../../docs/decisions/D015-coherent-prototype-upgrade.md#e015-mixed-loss-control-and-next-positive-only-candidate-2026-10-19)
+owns this recommendation and the targeted primary-source refresh scope.
+
+Both communities remain development. A genuinely untouched, prospectively named
+confirmation input/protocol still needs source/genome/replicon/molecule/taxonomy/
+overlap/unique-versus-origin truth/full-denominator/length/depth/cost admission.
+None was acquired. [The next prompt](OPERATIONS.md#exact-following-prompt) proposes
+local implementation and a conditional new$3 two-fit comparison after fresh gates;
+it grants no work until the owner sends it. No prior budget carries over.

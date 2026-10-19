@@ -3,52 +3,64 @@
 Updated: 2026-10-19 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**E015 independently TERMINATED; science reports complete, collection FAILED.**
-[Inspection](../experiments/E015-zero-reconstruction/inspection-observed.json) binds
-`zero-20261019T102859Z-b259dca`, clean original sourceb259dca, raw provider/private
-receipts and the original boot/PID identity. Start **October19 10:25:22.165UTC**,
-stop **11:38:44.496UTC /13:38 Copenhagen**, uptime **4402.331s /1.222870h**.
-Watchdog snapshot11:37:01.892UTC records the expected PID2265/start22851 exiting,
-then shutdown; boot`b67b504d-c0a2-43ea-9397-b74b9c21fbb0` matches original admission.
-Provider8100sSTOP/automaticRestart=false remains. No new start/resource/service/
-quota/retention change occurred in this inspection.
+**E015 reviewed; final VM independently TERMINATED.**
+[Recovery receipt](../experiments/E015-zero-reconstruction/recovery-observed.json)
+and [comparison](../experiments/E015-zero-reconstruction/comparison-review.json)
+bind actual exits, source/input/reader contracts, costs and complete archive checks.
+The original science DAG and input recheck exit0; its phase remains FAILED because
+isolated collection could not import its sibling helper. Preserve that journal.
+No archive was present in the original prefix, and the inspection did not infer
+quality from shutdown. The owner then explicitly approved one collection-only
+wake with a fresh30-minute clock/45-minute provider STOP, up to$0.65 additional
+within original E015$2. No science, installation, resource or retention replay.
 
-Private completion is **FAILED**, with science_completed=true, science DAGexit0
-and reuse-after exit0. It includes no successful collection: the exact isolated
-`e015_collect.py` argv fails to import its sibling `e014_collect` before any
-inventory/archive. Prefix lists only completion, prior native-admission archive
-and watchdog snapshot; all three main-return objects are absent. The raw small
-receipts match GCS generation/MD5 and new SHA256. No large archive was downloaded,
-no missing member is treated as admitted, and no new quality score is available.
-Prior seven native gates are reused; individual new artifacts/benchmarks await
-collection. Sampled science wall3732.172s, CPU11644.78s, peak treeRSS11.64GB and
-minimum filesystem free99.93GiB are distinct from charged VM uptime/allocation.
+| Existing VM purpose | Start UTC, October19 | Stop UTC | Uptime seconds |
+| --- | --- | --- | ---: |
+| Original two-fit science, failed collection | 10:25:22.165 | 11:38:44.496 | 4402.331 |
+| Approved collection-only recovery | 13:52:04.943 | 14:00:31.103 | 506.160 |
 
-Fresh Credits **DKK1,909.55 Available**,97%, Certain usage/net pricing, expiry
-2027-01-12. Paid Overview October1–19 cost/savings62.36/net0 warns delays can exceed
-24h; pending usage remains unknown, with$30 prior-exposure+$5 approved-storage
-reserves. Fresh official Catalog5SKUs remain unchanged; existing ordinary E2/
-non-premium Ubuntu/PD/IPv4/privateIowa Standard/network/operations remain covered,
-with no new product. Measured allocation/current-SKU gross costs: compute/IP
-**$0.333899**, run disk interval **$0.051282**, compact exports~**$0.000035**;
-subtotal **$0.385216**, **<$0.54 with$0.15 reserve**. No native-results export
-exists yet. These are estimates, not reconciled billing or sampled-CPU pricing.
-Subsequent shared stopped-disk storage is separate: **$31.20/month /$0.04194hour**
-at the current744hour conversion; October21 approval/review remains unchanged.
+The recovery kept `/srv/dl_binner/repo` clean at scientific sourceb259dca, transferring
+only four byte-locked repair89dcd61 helpers into a fresh directory. Actual Linux
+isolated pack/verify/link-refusal and fresh boot/process live/normal/crash watcher
+checks passed before release13:54:17UTC. Private completion SUCCESS/readback true,
+watcher exit13:58:54.936UTC and explicit provider STOP independently precede the
+verified final TERMINATED state. Current policy2700sSTOP/automaticRestart=false;
+this is not permission to start another phase. No provisioning/resize/quota/service
+change or retention extension. Original failed config/collection and Mac journals
+remain; exact isolated CLI testing is now durable AGENTS guidance.
 
-The [prepared collection-only recovery](../experiments/E015-zero-reconstruction/collection-recovery-plan.json)
-has received explicit new wake/clock approval in the owner's reply; it has not run
-at this source freeze. The preceding inspection prompt forbids
-waking for missing evidence, and the original2h clock has expired. Locally tested
-four-helper transfer keeps the VM science checkout cleanb259dca, verifies passed
-proofs/bytes and creates the first full work inventory without science replay.
-Proposal: fresh30min fromVMstart,45min providerSTOP/current-boot held-parent watcher,
-4threads/8GBRSS/5GiBextra/25GiBreserve/2GiBreturn, existingVM/disks only. Expected
-8–15min; full45min compute/disks$0.23624 +maxexport$0.24 +storage$0.01 +reserve$0.15
-=**$0.63624**, capped **$0.65 additional /<$1.19 combined** within originalE015$2.
-No dollar-envelope increase is needed. Refresh finance/headroom/date gates before
-any authorized wake; no reinstall/recopy, fit/inference/index/detector or retry.
-The Linux/root recovery path is prepared, not executed or claimed native-passed.
+Return **1,042,061,418bytes /199members**, SHA256
+`27b0941a108df73ba7e983e39563d282833f79a74fbb83b74bb04f23af0ec643`,
+all1,892,209,736 logical bytes/member aliases verify locally. All16,480 work files /
+6,072,312,382 bytes were hashed in place, including16,399 omitted full FASTA files.
+Omitted DNA/shared features/views/runtime are still on disk; hashes are not backups.
+Recovery completion325.641s from boot; sampled peak0.287GB, growth1.951GiB,
+minimum free97.975GiB, within new30min/8GB/5GiB/25GiB/2GiB limits. Original science
+wall3732.172s/sampled CPU11644.78s/peak11.64GB are separate from paid allocation.
+
+Fresh credit **DKK1,909.55 Available**,97%, Certain usage/net pricing, through
+2027-01-12. Paid Overview October1–19 cost/savings62.36/net0 may lag>24h; pending
+unknown, with$30 prior-exposure+$5 approved-storage reserves. Fresh official five
+SKUs/ordinary existing E2/Ubuntu/PD/IPv4/private Iowa Standard/network/operations
+remain covered; no new product. Total measured VM uptime4908.491s: compute/IP
+**$0.372290**, run disk intervals **$0.057178**, native export upper **$0.116459**
+plus compact exports~$0.000035: subtotal **$0.545961**. The intervening8000.447s
+shared stopped-disk interval adds **$0.093195**, total **$0.639157**, **<$0.80 with
+reserve**, within original$2 and new$0.65 recovery allowance. These are current-SKU
+measured-allocation estimates, not invoice or sampled-CPU/credit-delta pricing.
+Later stopped hours continue at **$31.20/month /$0.04194hour**, with **October21
+storage review unchanged**. New native archive adds~$0.0194/month object storage.
+Private compact review3,285,918bytes/all140members verify/read back; assessed
+export adds$0.000367 and storage~$0.000061/month. Final priced total including
+stopped gap/compact export~$0.639524; pooled small/storage reserves give<$0.80
+(two separate phase reserves instead give<$0.95), below original$2. Full local
+review/backup closes28.90min,5.413GB sampled numerical-stage RSS/2.297GiB extra;
+no old artifact is deleted. Compact sealing/readback child RSS was not separately
+sampled; its small standard-library payload scope is explicit in the receipt.
+The proposed next training candidate needs its own source/protocol and conditional
+new$3 authorization; E015's remainder does not carry over. No new data/confirmation
+or external-tool run follows from this inspection.
+
 The following E014 sections are completed dated history, not current VM state.
 
 **E014 science completed; evidence recovered; VM independently TERMINATED.**

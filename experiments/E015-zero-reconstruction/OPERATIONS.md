@@ -2,35 +2,54 @@
 
 Read [STATE](../../docs/STATE.md), [CLOUD](../../docs/CLOUD.md), [protocol](protocol.json),
 [reuse lock](reuse-lock.json), [config](config.json) and [E014 review](../E014-multiview-reconstruction/comparison-review.json).
-Status: **TERMINATED; science DAG and input recheck exit0; collection FAILED**.
-[Inspection](inspection-observed.json) binds the actual stop **October19
-11:38:44.496UTC**, original FAILED private completion and matching exit watcher.
-The isolated collector failed before inventory/archive creation. The original
-[native receipt](native-observed.json), seven passed gates, sourceb259dca and all
-failed journals stay unchanged. No new quality evaluation has run.
+Status: **completed and independently reviewed; frozen modify criterion applies**.
+[Comparison](comparison-review.json) and [collection recovery](recovery-observed.json)
+verify seven native gates, twelve serial scientific rule exits/final target, exact
+native reload, full axes/geometry/marker/DNA accounting and every199archive member.
+Science sourceb259dca is unchanged. The original private phase remains FAILED:
+isolated collection imported a sibling helper incorrectly before inventory/archive.
+That failure was reproduced and fixed, with actual isolated CLI contracts on Mac
+and Linux. An explicit owner reply approved the new collection-only clock; repair
+89dcd61 transferred four locked helpers while keeping the VM science checkout clean.
+No fit, inference, marker detection, neighbor construction or accepted score replay.
+Final VM **TERMINATED October19 14:00:31.103UTC /16:00 Copenhagen**, after matching
+fresh exit watcher plus explicit provider STOP. Current policy2700sSTOP, no restart.
 
-The local collector repair now passes the actual isolated `-I -B` CLI in checkout
-and transferred layouts. [Collection recovery plan](collection-recovery-plan.json)
-binds four separately transferred helpers, passed-output proof checks and a fresh
-30-minute/45-minuteSTOP held-parent launcher. It is prepared and locally tested,
-**not run**. The owner subsequently approved its bounded collection-only wake and
-local review in an explicit reply. New Linux/root execution remains a native gate. The
-original inspection prompt at91aafb4 explicitly says **“Do not wake the VM for
-missing evidence or extend a clock”**. Its original clock expired12:25:22UTC;
-the prompt below requests a new collection-only clock/wake within remaining$2.
-No fit, marker detection, neighbor build, inference or scientific retry is needed.
+| Same CPM/E013 policy | E009 conservative-v2 R95 | Oral origin-oracle R95 |
+| --- | ---: | ---: |
+| E014 reconstruction | 5.5196% | 6.2432% |
+| E015 weights zero | 5.3329% | 6.5548% |
 
-Private prefix still contains only prior native admission, failed completion and
-watchdog snapshot. Missing: `e015-evidence.tar.gz`, its `.sha256`, `collection.json`.
-The 260261B completion and12192B watcher snapshot match object MD5/generation and
-SHA256. The first full work inventory must be created during collection; do not
-pretend it existed before failure. Member/axis/geometry/export/quality admission
-remains pending. Fresh financial inspection prices measured4402.331s uptime at
-~$0.38522 including disk interval/compact exports, <$0.54 with reserve. Proposed
-recovery full fallback/export/storage quote~$0.63624, capped$0.65 additional and
-<$1.19 combined within original$2. No dollar increase is needed. Credits1909.55DKK
-Available/January12, delayed usage unknown/reserved; refresh before any wake.
-Existing disks$31.20/month, **October21 review unchanged**, no retention extension.
+E009 loses1,035,483 recovered bp while oral gains6,489,511. Counts>=50%/90%
+improve9/4→10/4 and42/30→44/31; unassigned DNA declines in both. Oral parent
+recovery/B3/length-weighted geometry worsen; E013 adds1.6390points after zero
+training, with12target gains/2losses versus its parent. Keep all per-target rows,
+strata and original criteria; no pooled win or per-bin/dataset oracle. Preserve
+current reconstruction/defaults provisionally as the implementation anchor and
+zero as useful evidence. Both communities remain development, with original
+N-quarantine/full denominators and known-shared sensitivity unchanged.
+
+New native return1,042,061,418bytes/SHA256
+`27b0941a108df73ba7e983e39563d282833f79a74fbb83b74bb04f23af0ec643`,
+199members/all1,892,209,736logical bytes verify. Original16,480work files/6.072GB
+are inventoried; omitted full FASTAs/shared caches are not backed up by hashes.
+Recovery phase`collect-20261019T135207Z-89dcd61` owns its new private prefix under
+`gs://dl-binner-archive-167650584170/e015/`. Native/archive/new local diagnostics
+are admitted separately; old Mac allclose and failed journals remain failed.
+Both full20epoch parent/view/dropout histories, transforms and parameter counts
+match E014. Zero-weight single-view parents supply negatives without positive
+anchors (2,333E009/13,716oral); full exposure is not positive evidence for each.
+
+Measured compute/disk/export subtotal~$0.54596; shared stopped gap$0.09320 yields
+~$0.63916/<$0.80with reserve, within originalE015$2 and approved$0.65recovery.
+Fresh eligible-product credit1909.55DKK/January12; pending usage unknown/reserved,
+not reconciled invoice. Existing disks$31.20/month, **October21 review unchanged**.
+Full local review/compact backup closes28.90min,5.413GB sampled numerical-stage
+RSS/2.297GiB extra. Private compact3.286MB/all140members readback verifies; final
+priced total~$0.639524, <$0.80 with pooled reserves or<$0.95 with both phase
+reserves. No retention/resource extension. The following original launch instructions are
+historical, not authorization to repeat science. Next paid work needs its own
+fresh conditional authorization; the prompt below proposes a new$3, not E015 reuse.
 
 ## Original native execution (historical; do not replay)
 
@@ -86,77 +105,81 @@ outcome; immutable original sources/results/failures remain unchanged.
 ## Exact following prompt
 
 Our goal is a substantially stronger binner through coherent upgrades and selective
-controls. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E015's
-protocol, candidate/reuse locks, native/inspection receipts, collection-recovery
-plan and operations. Preserve dev3/dev4/dev5, all accepted E009–E015 inputs/truth/
-outputs/source freezes and every failed journal. Original phase
-**`zero-20261019T102859Z-b259dca`** reports science/reuse-after exit0 but remains
-FAILED because isolated collection could not import e014_collect. Do not rewrite
-that failure or rerun accepted science.
+controls. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015, the completed
+source/literature reviews, E014's design and E015's comparison, per-target table,
+inspection/recovery receipts, protocol/locks and operations. Preserve dev3/dev4/dev5,
+all accepted E009–E015 science/source/input/truth/results and every failed journal.
+Use a new descriptive research branch without a codex/ prefix.
 
-**I authorize one collection-only wake of the existing VM with a fresh 30-minute
-cumulative VM-start clock and 45-minute provider STOP**, up to **$0.65 additional
-gross while combined E015 stays within its original$2**. This authorizes recovery
-of the already computed outputs, not another fit or clock/retention extension.
-Fresh live Welcome-credit scope/balance/expiry, delayed usage, current eligible
-prices, original October21 retention and actual disk headroom must pass. No
-provisioning, resize, new service or spending outside credits. Existing
-e2-standard-8/32GiB/300GiB only, four numerical threads,8GB sampled treeRSS,
-5GiB extra working space from initial filesystem measurement,25GiB free reserve,
-2GiB compressed return. Expected8–15minutes; follow through collection/shutdown.
-Stop before unclear/uncovered costs, missing/corrupt retained bytes or dates
-outside original storage approval. No retry, automatic extension or scientific
-recovery is included in this collection-only wake.
+Implement one coherent **positive-only online/EMA-target multiview training
+candidate**, guided by the reviewed McDevol/BYOL mechanism and targeted primary
+source checks. The hypothesis is that treating all different parents as negatives
+can repel co-genomic fragments; E015 did not prove that cause. Prefer real
+within-parent positives to unvalidated cross-contig pseudo-positive links. Resolve
+one predictor/stop-gradient/target-update/collapse policy and defaults prospectively,
+without a grid. Keep explicit composition/depth encoders, current widths, original
+real view banks/full-parent/every-available-positive exposure, measured-parent depth
+and0.5branch dropout, reconstruction weights1.0/0.1, seed11/20epochs/batch256,
+unit inference geometry and CPM/E013 initially fixed. Teacher/predictor/EMA form a
+single learning bundle, not a claim isolating every ingredient. Do not automatically
+add markers to training, taxonomy, pretrained sequence models, GLM/context attention,
+ensembles, fabricated window depth/variance or new coverage noise. Account explicitly
+for single-view/no-positive, short/marker-negative/unknown/non-target/unassigned DNA.
 
-Push the exact clean repaired branch from Mac, record its repair commit and verify
-the four helper hashes in the recovery plan. **Keep the VM science checkout clean
-at b259dcac12968b38b909ce7733a4a12ee07eae5a**; do not pull repaired source over the
-original executed checkout. Transfer only the four locked recovery/collection
-helpers into a fresh attempt directory and private prefix. Use the documented
-config fields, including original completion/config hashes and initial filesystem
-used bytes. No reinstall, recopy fallback or mutation of the original work/source/
-sealed evidence is permitted. Test the actual isolated transferred collector on
-tiny archive/alias/link-refusal fixtures within this fresh clock. Verify existing
-OS/mount and passed native/graph/reload/input receipts against actual retained bytes;
-do not replay the native DAG, reader probes, neural inference, training, marker
-detection or neighbor construction. The first full work inventory is created now.
+Record a concise prospective design and implement in the same task. Reuse accepted
+views/features/marker calls and comparator summaries; do not refit or rescore E014,
+E015, dev4/E013, dev3 or MetaBAT. Test real tiny multiview loss/gradient, stopped
+target gradients, EMA parameters/buffers, initialization/RNG/exposure, noncollapse,
+masked-depth/sequence-only behavior, exact save/reload, inference/grouping geometry,
+marker/refinement/export and archive/member contracts. Distinguish native paths
+from mocks; test actual isolated CLIs in checkout and transferred layouts. Keep
+features, embeddings, teacher/online checkpoints and pre/post alternatives.
 
-Arm/test a fresh current-boot/process-bound held-parent exit watcher, verify live/
-normal/crash behavior and independent2700s providerSTOP/automaticRestart=false
-before release. Run the prepared collection-only launcher once, automatically
-capturing logs. Retain original failed completion/closed logs/source freeze plus
-new source/config/clock proofs; inventory all original work members, verify exact
-aliases and every retained archive/member byte. Upload/read back the bounded
-archive/checksum/collection/completion into the fresh private prefix. Collect
-bounded failure evidence if needed, stop and independently verify TERMINATED.
-Price measured recovery uptime, stopped/shared storage and assessed export
-separately from sampled CPU. Keep October21 review visible; do not extend retention.
+Freeze one candidate/source/protocol/keep-modify-abandon rule before changed
+community outcomes. Compare only one new candidate fit on E009 ten-depth and one
+on oral sequence-only against the preserved summaries, using independent admitted
+E009 conservative-v2 and separately named oral provided-origin truth, full156/799
+reference denominators,3.3034%N-quarantine/known-shared sensitivity and all length/
+origin/eligibility/marker/unassigned populations. Truth may diagnose/evaluate, never
+select training links, bins, thresholds, K or defaults. No weight/resolution/seed
+grid or compulsory factorial campaign. Both inspected communities remain development.
+Prospectively name a genuinely untouched additional confirmation input/protocol;
+assess public provenance metadata only (<=10MiB), including sample/source/genome/
+replicon/molecule/taxonomy/overlap/unique-versus-origin truth/full denominators/
+length/depth/cost/storage. Do not acquire its DNA/reads/references or run confirmation.
 
-After verified shutdown and remaining-cost/export assessment, download and verify
-the archive and every member. Establish individual rule/final-target exits, exact
-two-zero-weight source/config, unchanged decoder/encoder initialization/RNG,
-real view/feature/marker bindings, full-parent/every-positive/depth-dropout exposure,
-seed11/20epochs/batch256, full DNA/ordered ten E009 depth columns, native exact
-reload, unit geometry/sparse graph/neighbor proofs and complete pre/old/E013
-accounting. Preserve failed Mac allclose without altering its tolerance.
+**I authorize this local implementation/engineering block and, if its frozen
+source/data/runtime and financial gates pass, the single new two-fit development
+comparison under a NEW$3 incremental gross ceiling.** Do not ask for a separate
+execution approval inside that scope. Estimate the actual complete setup/fit/
+collection/review footprint and revise the forecast from tiny/native evidence
+before release; do not launch if it cannot fit. Planning forecast~1–2.5h including
+setup/collection;4h cumulative VM-start ceiling and4.25h providerSTOP quote~$1.74
+at current ordinary rates, not an affordability guarantee. Use only the existing
+e2-standard-8/32GiB and300GiB work disk,4numerical threads,26GB sampled treeRSS,
+20GiB extra work,25GiB free reserve and2GiB compressed export. Refresh live Welcome
+credit balance/scope/expiry, delayed usage, applicable SKU eligibility/prices,
+original retention and measured headroom before start. **October21 review remains;
+stop before dates outside that approval, uncovered/unclear cost or required resource
+increase.** No provisioning/resize/new service/retention extension. E015's unused
+budget does not carry over.
 
-Evaluate **only the two new outputs** locally with the frozen E009 conservative-v2
-and separately named oral provided-origin oracle, full156/799provided denominators,
-3.3034% E009 N-quarantine, localized oral ambiguity/known-shared mask sensitivity,
-and all length/origin/eligibility/marker/unassigned/excluded/unknown/non-target DNA.
-Use `e015_review.py`'s narrow retained-input/config adapter and unchanged tested
-metric helpers, four numerical threads/8GB sampled RSS/one cumulative hour/4GiB
-extra local review. Verify bytes before consuming data and stage one oral unit at
-a time. Reuse accepted E014/dev4/dev3/E013/MetaBAT summaries without refitting or
-rescoring them. No threshold changes, grid or per-bin/dataset truth-selected policy.
-
-Apply E015's prospectively frozen keep/modify/abandon criteria to reconstruction's
-value and length/grouping/assignment/resources trade-offs. This control holds the
-other ingredients fixed; it does not prove their separate effects or settle product
-feature families. Both communities remain development. Name one next design
-step, retaining the need for a genuinely untouched prospectively named confirmation
-input/protocol with source/genome/replicon/molecule/taxonomy/overlap/truth/full-
-denominator/length/depth/cost/retention admission, without acquisition now.
+Push the exact clean prepared branch from Mac; sync a fresh VM research checkout
+read-only without overwriting any executed source/input/output. Reuse verified
+healthy dependency/input bytes, with a separately owned new package/runtime source
+binding and complete import/source/library inventory; no reinstall/recopy fallback
+or placeholder modules. Run actual Linux tiny train/teacher/reload/graph/marker/
+export/collection and launcher gates inside the same clock before community fits.
+Arm/test a fresh boot/process-bound held parent and exit watcher, independently
+verify providerSTOP before release, and capture all commands/progress/resources.
+Debug recoverable operational failures with fresh journals and verified passed-stage
+reuse inside the same clock/budget; no automatic scientific replay or extension.
+For healthy long work, verify supervision/real progress, wait a few minutes and
+finish with stage/logs; follow short work through collection. After collection,
+stop and independently confirm TERMINATED, assess export, verify every archive/
+member and evaluate only new outputs locally under4threads/8GBRSS/1h/4GiB. Preserve
+all failures, old Mac tolerance and full DNA. No external binner or other campaign.
 Update records, run relevant checks and commit with structured what changed/why
-bodies. Report verified collection outcome, paired results/limits, actual allocated-compute
-and storage/export costs, one next decision and the exact following prompt.
+bodies. Report candidate contracts, actual versus predicted resources/costs,
+results/limits if complete, untouched-confirmation admission dependencies, one next
+decision and the exact following prompt.
