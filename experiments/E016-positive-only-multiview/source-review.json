@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-20",
+  "scope": "Targeted primary method/source checks, reused completed reviews; not a new full tool audit or run",
+  "BYOL": {
+    "url": "https://arxiv.org/html/2006.07733v3",
+    "read": "Method3.1 equations1-3,3.3architecture/optimization; online-only predictor, normalized pair regression, stop-gradient and post-step EMA; paper images/augmentation/normalization do not certify our DNA variant",
+    "local": {
+      "bytes": 841954,
+      "sha256": "cd28eb49e1ea8f1f2d11e5acc052ced25fa60a8de1d7a636a5218db7ee5704d7"
+    }
+  },
+  "McDevol": {
+    "commit": "1fa3bad078b45c645df53fc54e6f0ff194a6965e",
+    "url": "https://github.com/soedinglab/McDevol",
+    "path": "mcdevol/byol_model.py",
+    "local": {
+      "bytes": 35440,
+      "sha256": "d0261980c49cd58045838c963519ab37aca0673f6a9fa6835d7b7eeb0506c4f5"
+    },
+    "anchors": [
+      "MLP:BatchNorm predictor",
+      "initialize_target_network:deepcopy and requires_grad false",
+      "forward/compute_loss:symmetric stopped unit-prediction distance",
+      "moving_average_decay=.996;update_moving_average after optimizer"
+    ],
+    "differences": "Our encoderLayerNorm/currentwidths+onlinepredictorBatchNorm, existing unit heads/no new projector, all retained within-parent positives, cosineEMA, measured-parent depth without simulated count sampling, reconstruction retained, AdamW20epochs. Not source parity or McDevol performance."
+  },
+  "reused_reviews": [
+    "docs/evidence/2026-09-16-thesis.md",
+    "docs/evidence/2026-09-30-binner-design-review.md",
+    "docs/evidence/2026-09-30-architecture-reassessment.md",
+    "docs/evidence/2026-10-08-competitive-binner-study.md"
+  ],
+  "future_alternatives": "Strong grouping/raw-depth constraints, marker-aware training only with reliable calls, context/window aggregation, frozenGLM/head/hybrid. Existing E003 grouping benefit and short-neighbor loss are counterevidence to rejectingGLMs; expensive GPU/reference/pretraining scopes need separate admission. No automatic architecture-size/ingredient checklist."
+}

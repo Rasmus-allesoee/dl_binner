@@ -1,0 +1,77 @@
+{
+  "status": "LOCAL_ENGINEERING_PASS; Linux/current-boot gates pending",
+  "date": "2026-10-20",
+  "tests": {
+    "installed_positive_contracts": 4,
+    "stdlib_policy_configuration_watch_archive_CLI_refusals": 7,
+    "actual_tiny_full_serial_DAG_jobs": 13,
+    "actual_two_mode_native_integration": 1,
+    "independent_package_runtime_probe": "PASS: complete inventory/source/import origins and native libraries in read-only dependency-linked Mac prefix"
+  },
+  "actual": "Real installed PyTorch online/teacher/predictor/loss/gradient/EMA/buffers/collapse and exact reloader; Pyrodigal/PyHMMER owned tiny HMM; native sparse graph/CPM/E013/cache/refinement/all-DNA export and pack/member/alias/refusal; no community fit/score or mocked scientific reader.",
+  "resources": {
+    "full_width_synthetic_1024_parents_two_epochs_inner_model_seconds": 0.6587184420786798,
+    "full_width_process_CPU_seconds": 2.8679050000000004,
+    "numerical_threads_per_child": 4,
+    "actual_DAG_wall_seconds": 63.669,
+    "local_workflow_version": "9.13.7; actual native accepted9.16.3 must pass before release",
+    "peak_RSS": "Not sampled for direct local engineering commands; these are tiny software fixtures, not full-scale memory validation.",
+    "local_working_footprint_KiB": 15764
+  },
+  "failed_journals": [
+    {
+      "path": "build-v1/sdist.log",
+      "cause": "Sandbox denied ps needed by build supervisor; fresh build-v2/v3 with process-read approval passed, no disabled supervision."
+    },
+    {
+      "path": "native-tiny-DAG-v2.log",
+      "cause": "Copied test referred to E016-zero-reconstruction Snakefile; fresh corrected actual tiny DAG-v3 passed."
+    },
+    {
+      "path": "native-tiny-v1.log",
+      "note": "Successful direct two-mode stages; sandbox sysctl warning retained; no false native Linux claim."
+    }
+  ],
+  "original_portability": "Original failed Mac allclose remains failed; no local community inference/native vector change/tolerance relaxation.",
+  "package_build": {
+    "bytes": 4314,
+    "sha256": "ac4f95a16a80647a65785bcbbac7c98f9cd989517d1e39af9eb01c155d4cf9d2"
+  },
+  "logs": {
+    "positive-v2.log": {
+      "bytes": 529,
+      "sha256": "366b10bbf305cfb1c8b8cdc55f970267d030ba509b7670988aeaf6d94360fde2"
+    },
+    "contracts-v3.log": {
+      "bytes": 1389,
+      "sha256": "ef26ae57aaee869eece1b1bc327afecb7c8f320b212fa29614870141afcd7ee4"
+    },
+    "native-tiny-v1.log": {
+      "bytes": 768,
+      "sha256": "19e7e10c37647915778cc6ddf5f74b07b23f910c6de1b68329e58f0c53179fb1"
+    },
+    "native-tiny-DAG-v2.log": {
+      "bytes": 1451,
+      "sha256": "aebff44d1e3202518a726f13ba4ab124cc4c570d6b2b4022468fd185b0e1d03d"
+    },
+    "native-tiny-DAG-v3.log": {
+      "bytes": 714,
+      "sha256": "04ce522ce65bdd97cba545f503a948fb2c5120968e4869d62b00228b228534d9"
+    },
+    "full-width-v1.log": {
+      "bytes": 2508,
+      "sha256": "3cdc2f6df0b43af31bb7e6747573034f3cd941824f40506a722224af88b61242"
+    },
+    "mac-runtime-probe-v1.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime-create-v3.log": {
+      "bytes": 478,
+      "sha256": "ac540a3c28c4b41fabb893156f28aa2f2598e112bcdf914f5aac32ca5a453bda"
+    }
+  },
+  "source_check": "Targeted current author source and BYOL method plus completed reviews; source-review.json owns exact scope.",
+  "confirmation": "Small public metadata only1,734,275bytes; provisional skin choice and unresolved full admission, no payload.",
+  "accepted_science_replayed": false
+}

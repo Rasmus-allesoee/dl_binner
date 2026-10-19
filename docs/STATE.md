@@ -1,8 +1,40 @@
 # Current Research State
 
-Updated: 2026-10-19. This is the single current handoff.
+Updated: 2026-10-20. This is the single current handoff.
 
 ## Exact next step
+
+**E016 positive-only multiview candidate implemented; conditional execution authorized.**
+The owner sent E015's following prompt and explicitly prioritizes closing the
+stronger-binner recovery gap. [E016](../experiments/E016-positive-only-multiview/README.md)
+owns the [prospective design](../experiments/E016-positive-only-multiview/design.md),
+[protocol](../experiments/E016-positive-only-multiview/protocol.json),
+[resources](../experiments/E016-positive-only-multiview/resource-plan.json) and
+[operations](../experiments/E016-positive-only-multiview/OPERATIONS.md).
+Branch `e016-positive-only-multiview` preserves all older source/results/failures.
+This is one coherent online-predictor/stopped-EMA-target bundle on the same real
+views, explicit encoder widths, reconstruction1.0/.1, measured-parent depth,
+seed11/20epochs/batch256, unit inference geometry and CPM/E013. No cross-parent
+negative labels or unvalidated pseudo-positive links; single-view parents keep
+reconstruction. Both inspected communities remain development. Local actual
+loss/gradient/EMA/buffer/masked-depth/noncollapse/reload/graph/marker/refine/export
+and archive/member paths pass; Linux/runtime/headroom/affordability release pending.
+The original Mac tolerance stays failed, and old summaries are reused, not rescored.
+
+New$3, existing8vCPU/32GiB/300GiB only;4h cumulative from provider start/4.25hSTOP,
+4threads/26GB/20GiBextra/25GiBreserve/2GiBreturn. Fresh credit1904.91DKK through
+January12 and five ordinary SKU prices/coverage pass; delayed usage unknown with
+reserves. Whole maximum provider interval+worst export+reserve quote~$1.83, not
+native affordability proof. **October21 retention review remains**, disks$31.20/
+month while stopped, no extension. Fresh source-bound package-only runtime borrows
+accepted complete dependencies read-only, no reinstall/cache-copy fallback.
+The [skin confirmation choice](../experiments/E016-positive-only-multiview/confirmation-plan.json)
+is now prospective; only1.73MB public metadata acquired. Full source/overlap/truth/
+reference-denominator/depth/cost admission and separate execution remain outstanding.
+Judge a broader information/architecture upgrade against a narrower follow-up
+using E016's actual recovery/geometry/population outcomes, not network size alone.
+
+Earlier E015/E014 recommendations below are dated evidence; E016 authorization above owns the current next step.
 
 **E015 completed and was independently reviewed; the loss control is mixed.**
 [Comparison](../experiments/E015-zero-reconstruction/comparison-review.json),

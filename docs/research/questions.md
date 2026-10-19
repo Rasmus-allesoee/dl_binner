@@ -457,3 +457,15 @@ confirmation still requires prospective naming/protocol and full admission.
 Final VM TERMINATED14:00:31UTC; no scientific replay or retention/resource change.
 OriginalE015$2 covers~$0.639 including stopped gap/<$0.80with reserve. October21
 storage review remains; next paid work needs a fresh separately authorized scope.
+
+
+2026-10-20 prospective E016: [one coherent positive-only learner](../../experiments/E016-positive-only-multiview/README.md)
+now implements the next D015 hypothesis using original real within-parent views,
+explicit composition/depth branches and a stoppedEMA target. Co-genomic negative
+repulsion is unproven; actual local target/gradient/noncollapse/reload/full-DNA
+contracts pass, native two-fit development comparison remains gated. The owner
+prioritizes gap closure and decision-relevant coherent upgrades over a default
+sequence of small loss controls. Keep broader window/context/GLM/marker-aware/
+information-aware grouping alternatives live; new outcomes will choose one next
+block. Skin pooled GSA is prospectively selected with metadata only; source/truth/
+overlap/denominator/cost admission remains, no confirmation payload acquired.

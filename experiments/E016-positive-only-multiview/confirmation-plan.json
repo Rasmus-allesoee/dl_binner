@@ -1,0 +1,96 @@
+{
+  "record": "E016 prospective untouched additional confirmation input",
+  "frozen_UTC": "2026-10-19T22:23:14.045413+00:00",
+  "choice": "CAMI II Toy HMB skin pooled short-read GSA, per_bodysite/skin_bam/gsa.fa; sequence-only",
+  "reason": "New body-site source group and uninspected outcomes; similar scale to oral, no new read/assembly/mapping pipeline. Separately admit genomes before any independence claim.",
+  "role": "Prospective confirmation only after candidate/policy freeze; E009 and oral remain development. Metadata inspected; no sequences, truth labels or candidate scores inspected.",
+  "base_url": "https://frl.publisso.de/data/frl%3A6425518/",
+  "official_overview": "https://cami-challenge.org/datasets/toy-human-microbiome-project/",
+  "public_metadata": {
+    "skin-index.html": {
+      "bytes": 111444,
+      "sha256": "f787c4c67a02e072bde0c752eb27e9969b2d1042fb1ac5830ad7162f9ed08f82"
+    },
+    "airskinurogenital-index.html": {
+      "bytes": 4233,
+      "sha256": "c4086965192386e4699b2e651abacbed93da700d4addc1e0ebb37203f8a150f2"
+    },
+    "mcdevol-byol.py": {
+      "bytes": 35440,
+      "sha256": "d0261980c49cd58045838c963519ab37aca0673f6a9fa6835d7b7eeb0506c4f5"
+    },
+    "md5sums.tsv": {
+      "bytes": 709793,
+      "sha256": "c29dc3e08f059941118e2a77d9445d6b768bcd1f624e41b3876d602ef3af1b14"
+    },
+    "skin-HEADs.json": {
+      "bytes": 2240,
+      "sha256": "12b465bceb9bedfb4e8089d074961c6eed4f47a8fe982b42d71a22c492d4d78a"
+    },
+    "hmb.html": {
+      "bytes": 21444,
+      "sha256": "1168a184b1916734dfac5e8b26fd917996eb52de2fee61c8090b2cdfdb278b61"
+    },
+    "mcdevol-commit.json": {
+      "bytes": 6729,
+      "sha256": "88d13cbd28fe93e2bcae5041dcc60baafd1e4dae7b3e9c630e40f2e2dc3e35ac"
+    },
+    "byol.html": {
+      "bytes": 841954,
+      "sha256": "cd28eb49e1ea8f1f2d11e5acc052ced25fa60a8de1d7a636a5218db7ee5704d7"
+    },
+    "receipt.json": {
+      "bytes": 998,
+      "sha256": "429248906ebdc6462027fd7c030b5a09a1e88c6f657363b84013629d1f2db815"
+    }
+  },
+  "metadata_cap_bytes": 10485760,
+  "files": [
+    {
+      "path": "per_bodysite/skin_bam/gsa.fa",
+      "HEAD_bytes": 1562022677,
+      "publisher_md5": "57a7234f868007d6d9357cf69233f21d",
+      "payload_acquired": false
+    },
+    {
+      "path": "per_bodysite/skin_bam/gsa.tsv.gz",
+      "HEAD_bytes": 440256505,
+      "publisher_md5": "16e0c8624aafc486d43ffb302ce0186f",
+      "payload_acquired": false
+    },
+    {
+      "path": "per_bodysite/skin_bam/gsa_pooled_mapping_fixed.tsv",
+      "HEAD_bytes": 45238732,
+      "publisher_md5": "17afcd16c9417c2a284170b62769dc92",
+      "payload_acquired": false
+    },
+    {
+      "path": "per_bodysite/skin_bam/gsa_pooled_mapping.tsv",
+      "HEAD_bytes": 90477267,
+      "publisher_md5": "e74948368c7a97ad94d31f04115a3543",
+      "payload_acquired": false
+    },
+    {
+      "path": "airskinurogenital/setup.tar.gz",
+      "HEAD_bytes": 2467407842,
+      "publisher_md5": "e3e9620340d1ef53d751d12fa154267d",
+      "payload_acquired": false
+    }
+  ],
+  "total_four_payload_HEAD_bytes": 2137995181,
+  "total_with_shared_source_setup_HEAD_bytes": 4605403023,
+  "admission_status": "PROVISIONAL_NOT_ACQUIRED_NOT_SCIENCE_ADMITTED",
+  "missing_contracts": [
+    "Verify whole publisher MD5 and new SHA256; preserve original rows and source-blind input IDs/reverse mapping outside training",
+    "Independent sample/source ID join:49 HMB samples include10skin, but actual archive mappings/profile omissions must be audited",
+    "Separate provided genome/replicon/molecule/circular-alias/host/taxonomic node IDs; cellular target set and full duplicate-safe reference denominators include zero-origin targets",
+    "Audit exact/near overlap to E009 and GI/oral, shared DNA/competitive origins and unknown reference/pretraining/panel inventories; body-site novelty is not genome independence",
+    "Stream every GSA sequence/source coordinate and ambiguous base; admit separately named source-origin oracle only if unique support cannot be proven; keep shared/non-target/unknown/zero-length DNA",
+    "No assembly errors in GSA and no admitted per-sample GSA-contig depth; do not treat source-genome BAMs as measured contig depth or claim unseen-genome/ten-depth transfer",
+    "Freeze one unchanged candidate and comparator protocol, seed/schedule/eligibility/metrics/full denominators before scores; no tuning/selection to confirmation outcomes",
+    "Separate fresh owner cost/storage/acquisition/execution admission; original October21 retention does not extend"
+  ],
+  "prospective_protocol": "One sequence-only frozen candidate vs already frozen E014-style/development comparator, same full input and source-blind IDs. Train unsupervised on target DNA without truth, eval independently afterward. Keep whole parent/old/post, all length/origin/eligibility/marker/unassigned strata and full provided denominators. No acquisition or fits now.",
+  "rough_resources": "Four listed input files2.138GB plus source setup2.467GB (~4.605GB transport), stream source joins rather than extract collection; count actual parents/views before schedule admission. Oral-scale forecast ~1-2.5hCPU and12-20GBRSS, extra local roughly6-10GiB subject to streaming proof; NOT admitted cost guarantee or approved spending.",
+  "retention": "October21 unchanged; new acquisition/confirmation cannot use expired storage approval"
+}

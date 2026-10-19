@@ -576,3 +576,18 @@ matched outcomes. New community execution needs its own prospective source/
 protocol/native/resource/financial admission and new authorization; E015's budget
 does not carry. Both inspected communities are development. Additional untouched
 confirmation still needs prospective naming/provenance/truth/overlap/cost admission.
+
+
+## E016 authorized learning bundle, 2026-10-20
+
+[E016](../../experiments/E016-positive-only-multiview/README.md) implements the
+prospective positive-only online/target hypothesis while retaining all accepted
+science and comparator summaries. The owner emphasizes substantial gap closure:
+use the joint development recovery and population diagnostics to choose a coherent
+broader feature/architecture/grouping block or one necessary narrower follow-up,
+not another default loss grid or a mature-tool campaign. No community outcome yet.
+The new conditional$3/existingVM/4h/4.25hSTOP scope is separate from earlier budgets;
+fresh credit1904.91DKK and ordinary price/coverage checks pass, pending native gates.
+The skin pooled GSA confirmation input is prospectively named with small metadata
+only; full source/truth/overlap/cost admission remains. Both currently inspected
+communities stay development. October21 storage review remains; no extension.

@@ -1,0 +1,83 @@
+{
+  "status": "PREPARED; native timing/headroom gates pending",
+  "new_gross_ceiling_USD": 3,
+  "compute_IP_USD_hour": 0.2730456762592464,
+  "existing_disks_USD_month": 31.199999949850024,
+  "existing_disks_USD_hour": 0.04193548380356186,
+  "maximum_provider_interval_hours": 4.25,
+  "compute_disk_provider_upper_USD": 1.3386699302669354,
+  "maximum_export_upper_USD": 0.24,
+  "storage_operations_reserve_USD": 0.25,
+  "maximum_incremental_gross_forecast_USD": 1.8286699302669354,
+  "expected_complete_VM_minutes": [
+    70,
+    150
+  ],
+  "expected_sampled_RSS_GB": [
+    12,
+    20
+  ],
+  "peak_extra_working_GiB": [
+    8,
+    12
+  ],
+  "return_forecast": {
+    "logical_bytes": [
+      1892209736,
+      1950000000
+    ],
+    "compressed_GiB": [
+      0.95,
+      1.3
+    ],
+    "bound": "Use actual member inventory, exact reference aliases and manifest-inclusive worst-case 2GiB cap; no oversized fallback. Teacher/predictor are saved inside small new checkpoints."
+  },
+  "local_review_peak_extra_GiB": [
+    2.3,
+    3.5
+  ],
+  "local_free_GiB_at_entry": 13,
+  "local_policy": "Do not remove accepted/old artifacts; stage only new unit copies.",
+  "training_forecast": "Use E015 actual42min combined train and~20min other stages as anchor; two-headed teacher adds forward/EMA while linear-memory positive reduction removes quadratic logits. Mac synthetic1024x2epochs=.659s inner model; rough only. Gate native steady epoch x597804/1024 x20 x3 +2400s reserve against remaining VM clock before release.",
+  "resources": {
+    "gross_USD_ceiling": 3,
+    "cumulative_VM_start_seconds": 14400,
+    "provider_STOP_seconds": 15300,
+    "numerical_threads": 4,
+    "VM": "existing e2-standard-8/32GiB",
+    "work_disk_GiB": 300,
+    "sampled_tree_RSS_bytes": 26000000000,
+    "extra_working_GiB": 20,
+    "free_reserve_GiB": 25,
+    "compressed_export_GiB": 2,
+    "retention_valid_until_epoch": 1792533600,
+    "storage_review": "October21 unchanged; no extension",
+    "local_review": "4threads/8GBRSS/1hour/4GiBextra"
+  },
+  "costs_are": "Current public SKU measured allocation forecasts, not sampled CPU prices or a reconciled invoice; charge storage separately while stopped; no assumptions about unused free allowances",
+  "fresh_credit": {
+    "checked_UTC": "2026-10-19T22:22:31.515743+00:00",
+    "remaining_DKK": 1904.91,
+    "original_DKK": 1973.43,
+    "status": "Available",
+    "percent": 97,
+    "scope": "Certain usage; see terms for free trial",
+    "application": "Net pricing",
+    "expiry": "2027-01-12",
+    "paid_account": true,
+    "overview_period": "October1-20",
+    "cost_DKK": 67.21,
+    "savings_DKK": 67.21,
+    "net_DKK": 0,
+    "pending_usage": "Unknown; live latency tooltip confirms reporting may exceed24h; do not infer zero pending or attribute credit delta",
+    "prior_exposure_USD_reserve": 30,
+    "approved_storage_USD_reserve": 5,
+    "coverage": "Existing ordinary E2/nonpremium Ubuntu/PD/IPv4/Iowa Standard storage/network/operations, no new product/service; remaining Welcome credit usable on paid account",
+    "official_terms": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "live_read": "Signed-in Billing Credits and Overview via Chrome CUA, fresh in this task"
+  },
+  "prices": {
+    "bytes": 8003,
+    "sha256": "31c056ecc9d9be510452c1982903a12dbbd9882959609ad24bb3666d66c16aac"
+  }
+}

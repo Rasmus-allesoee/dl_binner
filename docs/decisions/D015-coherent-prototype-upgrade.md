@@ -645,3 +645,40 @@ precede release; no resource increase, automatic extension or retention change.
 Both communities are development. Freeze a genuinely untouched additional input/
 protocol and its source/genome/replicon/taxonomy/overlap/truth/full-denominator/
 length/depth/cost admission prospectively; acquire no confirmation payload here.
+
+
+## E016 coherent positive-only candidate and recovery-gap priority, 2026-10-20
+
+The owner authorizes [E016](../../experiments/E016-positive-only-multiview/README.md)
+local implementation and one conditional new$3 two-fit development comparison.
+[The design](../../experiments/E016-positive-only-multiview/design.md) freezes one
+online-only predictor/stopped target/cosineEMA bundle, preserving dev5 encoders,
+real views/full exposure/measured-parent depth/reconstruction/geometry/CPM/E013.
+It avoids unvalidated cross-contig positive links; no evidence yet proves that
+co-genomic negatives caused earlier losses. Real tiny gradient/EMA/buffer/collapse/
+reload/graph/marker/export/member contracts pass. Native scientific utility and
+full runtime/source/headroom/affordability gates remain pending. Preserve all
+accepted comparator outputs, source freezes and failed journals without rescoring.
+
+The owner's additional recovery-gap concern changes the interpretation priority,
+not the frozen treatment: judge whether the next block should add information or
+redesign grouping/training more broadly, rather than automatically continuing
+small loss tests. The completed reviews keep window/context-TNF, frozen GLM/head/
+hybrid representations, reliable marker-aware learning and raw/depth-informed
+probabilistic grouping serious. E003's grouping benefit and short-neighbor loss
+remain counterevidence to simplistic GLM verdicts. Marker call/repeated-locus audits
+caution against naive cannot-links; neither a Transformer label nor adding every
+successful-tool ingredient identifies the useful next mechanism. Prefer a coherent
+broader block if E016 remains weak and retained diagnostics identify a substantive
+limitation. A narrow follow-up earns its place only if it resolves an uncertainty
+that can change that design. Do not declare which cause won before outcomes.
+
+[Skin pooled GSA](../../experiments/E016-positive-only-multiview/confirmation-plan.json)
+is frozen as the next untouched outcome input: ten HMB skin samples, sequence-only
+pooled GSA, a distinct source group with unknown exact/near genome overlap. Only
+1.73MB public metadata inspected, no DNA/reference/read body. Four files total
+2,137,995,181 HEAD bytes; shared source setup2,467,407,842bytes. It is not admitted
+unique-sequence truth, genome independence, assembly-error or ten-depth evidence.
+Actual sample/source/replicon/taxonomy/full-denominator/overlap/truth/cost admission
+is still required before separately authorized confirmation. October21 review and
+existing disks$31.20/month remain, with no automatic retention/resource change.

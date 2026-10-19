@@ -21,6 +21,7 @@ reproduced result of this project.
 - [E013: quality-aware marker refinement on retained CPM parents](E013-marker-quality/README.md)
 - [E014: multiview/reconstruction learning and oral-GSA source admission](E014-multiview-reconstruction/README.md)
 - [E015: matched zero-reconstruction learning control](E015-zero-reconstruction/README.md)
+- [E016: positive-only online/target multiview learner](E016-positive-only-multiview/README.md)
 
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 

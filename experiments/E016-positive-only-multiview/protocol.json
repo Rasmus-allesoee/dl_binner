@@ -1,0 +1,49 @@
+{
+  "record": "E016",
+  "frozen_before_changed_outcomes": true,
+  "question": "Can positive-only moving-target real-view learning improve recovery without co-genomic negative labels?",
+  "treatment": "Two predictor heads, frozen stop-gradient online-copy target and cosine .996->1 EMA; all-other-parent negatives removed. One coherent bundle, not a component-specific causal claim.",
+  "design": "design.md",
+  "config": {
+    "bytes": 952,
+    "sha256": "5baca9483cdfed4513a72a766c425ee73b2e142a33f9f3fef07c17849dd8d9fe"
+  },
+  "held_fixed": [
+    "Original dev5 encoders/widths/decoders/inference unit geometry",
+    "original full-parent and every usable real crop",
+    "measured-parent depth,0.5 dropout,1.0/.1 reconstruction",
+    "seed11/20epochs/batch256/AdamW .001/1e-5",
+    "sole median-edge/30 CPM and E013 refiner"
+  ],
+  "arms": [
+    "E009-positive",
+    "oral-positive"
+  ],
+  "reused": "All E009-E015 baselines/summaries immutable; no refit/rescore",
+  "truth": {
+    "E009": "admitted conservative-v2;156 targets/554661890fullbp;7653205bp/3.3034% N quarantine",
+    "oral": "provided-source-origin oracle v1;799targets/2083072211fullbp incl2zeroGSA,1734localizednonACGTbp,49knownsharedqueries/12063bp with predeclared mask sensitivity; unique support unadmitted",
+    "boundary": "No truth/genome/taxon/K/score in features, model, grouping or selector; metric thresholds unchanged95%/200kb, no per-bin oracle"
+  },
+  "decision": {
+    "keep": "Both post R95 >=E014; at least one +0.5pp or more, neither >=90% target count lower; integrity/collapse/all-population contracts pass.",
+    "modify": "Useful gains coexist with recovery/count/population losses; preserve both scopes and choose one reasoned next bundle, no oracle or grid.",
+    "abandon": "Both R95 fail to improve and neither >=90% target count improves, or catastrophic collapse. Integrity failure invalidates that arm, not a biological family."
+  },
+  "resources": {
+    "gross_USD_ceiling": 3,
+    "cumulative_VM_start_seconds": 14400,
+    "provider_STOP_seconds": 15300,
+    "numerical_threads": 4,
+    "VM": "existing e2-standard-8/32GiB",
+    "work_disk_GiB": 300,
+    "sampled_tree_RSS_bytes": 26000000000,
+    "extra_working_GiB": 20,
+    "free_reserve_GiB": 25,
+    "compressed_export_GiB": 2,
+    "retention_valid_until_epoch": 1792533600,
+    "storage_review": "October21 unchanged; no extension",
+    "local_review": "4threads/8GBRSS/1hour/4GiBextra"
+  },
+  "confirmation": "Prospectively fixed untouched CAMI II HMB skin pooled GSA sequence-only; metadata/provenance/overlap/unique-vs-origin/full denominators/depth/cost remain separate admission; no DNA acquired or confirmation execution authorized."
+}

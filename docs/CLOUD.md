@@ -1,8 +1,24 @@
 # Google Cloud workspace operations
 
-Updated: 2026-10-19 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
+Updated: 2026-10-20 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
+**E016 conditional new two-fit comparison authorized; native release pending.**
+[E016 operations](../experiments/E016-positive-only-multiview/OPERATIONS.md) owns the
+new$3/4h cumulative/4.25hSTOP existing8vCPU/32GiB/300GiB scope,4threads/26GB/
+20GiBextra/25GiBreserve/2GiBreturn. No provisioning, resize, new product/service,
+retention extension or older science replay. Fresh live Credits1904.91DKK/97%/
+Certain usage/net pricing/January12 and Paid Overview67.21cost/67.21savings/net0
+pass; reporting may exceed24h, pending unknown with$30prior+$5storage reserves.
+Five official current SKUs unchanged: compute/IP$0.273046/h, existingdisks$31.20/
+month. Maximum4.25h allocation+disks+2GiBexport+.25reserve~$1.83, below$3; actual
+native timing/headroom/source/runtime/heldwatcher gates precede community release.
+Fresh package-only prefix links accepted dependencies read-only and owns newwheel;
+it is not a portable independent numerical distribution. Existing executed checkouts
+stay untouched. **October21 review remains**, no further storage approval inferred.
+The current provider preflight still shows TERMINATED after E015; a new receipt
+will own E016's actual start, watchdog and scientific state. No new result yet.
+
 **E015 reviewed; final VM independently TERMINATED.**
 [Recovery receipt](../experiments/E015-zero-reconstruction/recovery-observed.json)
 and [comparison](../experiments/E015-zero-reconstruction/comparison-review.json)
