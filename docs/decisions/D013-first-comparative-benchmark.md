@@ -521,3 +521,31 @@ no accepted science replay, external expansion or outcome-driven change. Quality
 and actual final allocation costs await verified completion/shutdown and local
 truth-scoped review. Both datasets remain development, requiring new untouched
 confirmation admission later; no product-family or SOTA conclusion follows.
+
+## E015 stopped inspection: preserve computed evidence before another decision, 2026-10-19
+
+[The inspection](../../experiments/E015-zero-reconstruction/inspection-observed.json)
+verifies TERMINATED at 11:38:44.496 UTC, science-DAG exit 0 and retained-input
+recheck exit 0. The phase remains FAILED: an isolated collector sibling import
+failed before any work inventory/archive. This is an evidence-delivery failure,
+not a negative reconstruction result. Individual new artifacts and paired quality
+remain unadmitted; do not infer them from shutdown or invent missing scores.
+
+The right next expenditure is bounded collection of the existing results, followed
+by the frozen local comparison, rather than repeating fits or adding another tool.
+Exact isolated CLI tests reproduce and repair the missed import path; portable
+recovery/clock contracts pass, while Linux/root recovery remains unrun. Original
+source/failure journals and accepted evidence remain intact. The inspection prompt
+explicitly forbids a wake for missing evidence and its clock has expired, so the
+[prepared recovery](../../experiments/E015-zero-reconstruction/collection-recovery-plan.json)
+needs a fresh collection-only wake/30-minute clock approval, not a larger budget.
+Measured run gross estimate $0.38522 /<$0.54 with reserve; up to $0.65 recovery
+keeps combined E015 <$1.19 within its original $2. Fresh credit coverage passes;
+pending usage is unknown/reserved. Stopped disks still accrue $31.20/month;
+October 21 review is unchanged. No new mechanism or confirmation campaign follows
+before the already computed results can be independently reviewed.
+
+Same-task owner follow-through: an explicit reply now approves the prepared
+collection-only wake/local review, with a fresh30-minute clock/45-minute STOP and
+up to$0.65additional within original$2. Fresh financial/native transfer/supervision
+gates still precede release; no new science or retention extension is authorized.

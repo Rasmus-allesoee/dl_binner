@@ -1,7 +1,10 @@
 """Actual E015 policy/source/collection refusal tests, independent of cloud state."""
 import ast
 import json
+import os
 from pathlib import Path
+import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -77,6 +80,39 @@ class ControlContracts(unittest.TestCase):
             inv=json.loads((p/'verified/inventory.json').read_text());self.assertIn('units/x/full.fna',inv['omitted_DNA_retained_on_disk'])
             (p/'return/e015-evidence.tar.gz').write_bytes(b'corruption')
             with self.assertRaisesRegex(ValueError,'bytes/cap'):verify(p/'return/e015-evidence.tar.gz',r['archive'])
+
+    def test_exact_isolated_collector_CLI_and_transferred_sibling_layout(self):
+        """Run the production -I/-B child from another cwd, not an in-process import.
+
+        Exercise both checkout and explicit two-helper transfer layouts, including
+        fresh output, exact archive verification and intended scientific-link
+        refusal. The ignored inherited Python environment must supply no imports.
+        """
+        for transferred in [False,True]:
+            with self.subTest(transferred=transferred),tempfile.TemporaryDirectory() as t:
+                p=Path(t);work,evidence=self.fixture(p);cwd=p/'unrelated';cwd.mkdir()
+                script=REPO/'scripts/e015_collect.py'
+                if transferred:
+                    helpers=p/'transferred-helpers';helpers.mkdir()
+                    for name in ['e015_collect.py','e014_collect.py']:
+                        shutil.copyfile(REPO/'scripts'/name,helpers/name)
+                    script=helpers/'e015_collect.py'
+                env=os.environ|{'PYTHONPATH':str(p/'untrusted-imports'),
+                    'PYTHONHOME':str(p/'nonexistent-home'),'PYTHONUSERBASE':str(p/'untrusted-site')}
+                def child(args):
+                    return subprocess.run([sys.executable,'-I','-B',str(script),*map(str,args)],
+                        cwd=cwd,env=env,capture_output=True,text=True,timeout=30)
+                result=child(['--work',work,'--evidence',evidence,'--output',p/'return'])
+                self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+                receipt=json.loads(result.stdout);self.assertTrue(receipt['every_member_verified'])
+                result=child(['--verify',p/'return/e015-evidence.tar.gz','--output',p/'verified'])
+                self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+                self.assertEqual(json.loads(result.stdout)['archive'],receipt['archive'])
+                (work/'bad-link.json').symlink_to(evidence/'passed.json')
+                result=child(['--work',work,'--evidence',evidence,'--output',p/'refused'])
+                self.assertNotEqual(result.returncode,0)
+                self.assertIn('Scientific result link refused',result.stderr)
+                self.assertNotIn('ModuleNotFoundError',result.stderr)
 
     def test_collection_refuses_nonidentical_alias_link_unknown_or_impossible_bound(self):
         for mode in ['nonidentical','link','unknown','cap']:

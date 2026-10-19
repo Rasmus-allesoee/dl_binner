@@ -1,0 +1,143 @@
+{
+  "record": "E015 collection-only recovery preparation",
+  "status": "OWNER_APPROVED_PRELAUNCH_NOT_RUN",
+  "science_source": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+  "original_phase": "zero-20261019T102859Z-b259dca",
+  "original_root": "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca",
+  "original_private_prefix": "gs://dl-binner-archive-167650584170/e015/zero-20261019T102859Z-b259dca",
+  "original_completion": {
+    "locator": "gs://dl-binner-archive-167650584170/e015/zero-20261019T102859Z-b259dca/completion.json#1792409756151868",
+    "generation": "1792409756151868",
+    "MD5_verified": "TFX8nA7AE8wjlAy8v1jDgg==",
+    "bytes": 260261,
+    "sha256": "a68bfb6dd9bf7c77271cf72233335e2506dc1cd00a5f845b8dc662f97d03482e"
+  },
+  "original_config": {
+    "bytes": 1573,
+    "sha256": "230782721d79fff1e656ecb1adf05b6448bc8eba0a61479534972250af795d25"
+  },
+  "failure": "Original science/reuse-after exits0; isolated collector sibling import failed before inventory/archive. Preserve original FAILED journal.",
+  "helpers": {
+    "e015_recover.py": {
+      "bytes": 13000,
+      "sha256": "8b25038cee9e2a8c3cd74b0ce0a98b3c94a100bf5fe3fef157fc659c12635313"
+    },
+    "e015_collect.py": {
+      "bytes": 7234,
+      "sha256": "0d8776b1310e60a1eca2bae7f826a717dd5c418d41f92a3d76360dd55e8c47bb"
+    },
+    "e014_collect.py": {
+      "bytes": 7220,
+      "sha256": "070a07f999769840f1f2ade0cf90b231b8e8bae73b1d453b55a7184ead6be76f"
+    },
+    "e015_recovery_arm.py": {
+      "bytes": 5904,
+      "sha256": "d2482b3065ec4f5a961e538a5f1f969f272bc401f25143f69c8557a3833b7cc5"
+    }
+  },
+  "helper_source_directory": "scripts/ on the exact clean repaired Mac branch; commit recorded before approved transfer. Hash every transferred file before arming/import/release.",
+  "VM_source": "Keep /srv/dl_binner/repo clean at original science_source. Do not sync repaired files over the executed checkout.",
+  "fresh_root": "/srv/dl_binner/experiments/e015/collect-<UTC>-<repair-short-SHA>; helpers/logs/tmp/watchdog/evidence/return remain separate from original phase.",
+  "fresh_private_prefix": "gs://dl-binner-archive-167650584170/e015/collect-<UTC>-<repair-short-SHA>/",
+  "config_fields": {
+    "root": "Fresh recovery root absolute path; create logs/tmp and four-file helpers directory before arming.",
+    "phase": "Original_root, read-only scientific input locator.",
+    "repo": "/srv/dl_binner/repo",
+    "source_commit": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+    "service_name": "Fresh e015-collect-<UTC> systemd service identity",
+    "vm_start_epoch": "Fresh provider lastStartTimestamp converted to UTC epoch, not SSH/controller time.",
+    "initial_filesystem_used_bytes": "Measured mounted work filesystem before setup/transfers; include setup in 5GiB growth cap.",
+    "archive_prefix": "Fresh private prefix without trailing slash.",
+    "helpers": {
+      "e015_recover.py": {
+        "bytes": 13000,
+        "sha256": "8b25038cee9e2a8c3cd74b0ce0a98b3c94a100bf5fe3fef157fc659c12635313"
+      },
+      "e015_collect.py": {
+        "bytes": 7234,
+        "sha256": "0d8776b1310e60a1eca2bae7f826a717dd5c418d41f92a3d76360dd55e8c47bb"
+      },
+      "e014_collect.py": {
+        "bytes": 7220,
+        "sha256": "070a07f999769840f1f2ade0cf90b231b8e8bae73b1d453b55a7184ead6be76f"
+      },
+      "e015_recovery_arm.py": {
+        "bytes": 5904,
+        "sha256": "d2482b3065ec4f5a961e538a5f1f969f272bc401f25143f69c8557a3833b7cc5"
+      }
+    },
+    "original_completion": {
+      "bytes": 260261,
+      "sha256": "a68bfb6dd9bf7c77271cf72233335e2506dc1cd00a5f845b8dc662f97d03482e"
+    },
+    "original_config": {
+      "bytes": 1573,
+      "sha256": "230782721d79fff1e656ecb1adf05b6448bc8eba0a61479534972250af795d25"
+    }
+  },
+  "release": "Use e015_recover.admission schema: exact config hash and explicit owner collection/new-clock permission, fresh credit/pending/product/cost/retention coverage, verified fresh current-boot/process watcher and2700sSTOP. No release until actual tiny transferred isolated pack/verify/refusal checks pass.",
+  "runtime": {
+    "existing_VM": "e2-standard-8/32GiB; existing30GiB boot/300GiB work disk",
+    "cumulative_from_fresh_VM_start_seconds": 1800,
+    "provider_STOP_seconds": 2700,
+    "maximum_held_setup_seconds": 600,
+    "numerical_threads": 4,
+    "sampled_tree_RSS_bytes": 8000000000,
+    "extra_working_GiB": 5,
+    "free_reserve_GiB": 25,
+    "compressed_return_GiB": 2,
+    "storage_valid_until_epoch": 1792533600,
+    "October21_review_unchanged": true,
+    "expected_minutes": [
+      8,
+      15
+    ],
+    "native_Linux_root_execution": "Not run; portable tests are not native admission."
+  },
+  "cost": {
+    "fresh_catalog_binding": {
+      "bytes": 8003,
+      "sha256": "b82a5bc768717b1eacf38905aaaa7732585ddf960c56e29c1d6a74fddffc11a9"
+    },
+    "prior_measured_run_and_compact_exports_USD": 0.3852155586292142,
+    "prior_with_small_charge_reserve_USD": 0.5352155586292142,
+    "full45minute_compute_and_disks_USD": 0.23623587004710622,
+    "max2GiB_export_USD": 0.24,
+    "archive_storage_USD_reserve": 0.01,
+    "other_operations_stop_grace_USD_reserve": 0.15,
+    "additional_forecast_USD_upper": 0.6362358700471062,
+    "additional_ceiling_USD": 0.65,
+    "combined_E015_ceiling_USD": 2,
+    "combined_E015_with_additional_ceiling_USD_upper": 1.1852155586292143,
+    "stopped_disks_monthly_USD": 31.199999949850024,
+    "note": "No larger dollar budget requested. Fresh clock/wake approval is required by the exact inspection prompt; pending invoice/usage is unknown. Refresh live finance/prices/headroom/original-retention gates before any approved wake."
+  },
+  "restore_contract": "Reverify original failed completion/config bytes, original source/input plans, seven passed native gates and before/after reuse maps. Bind passed per-unit graph/reload/checkpoint/E013 receipts to actual scientific files. Missing/corrupt bytes refuse without fallback. First full work inventory is created now; none exists from the original failed collector.",
+  "execution": "Arm/test fresh boot/process held-parent watcher and independent STOP before release. Run prepared collection once, using -I -B and adjacent source-bound helpers; inventory original work, retain new graphs/checkpoints/embeddings/partitions/assignments, bind omitted full FASTAs and exact reference aliases. Upload and read back archive/checksum/collection/completion in fresh private prefix. No original file/journal rewrite, new output partition or cleanup of accepted bytes.",
+  "tests": {
+    "test_e015_contracts.py": "Six actual policy/config/archive/CLI/refusal tests. Archive/alias/tar readers and isolated checkout/transferred CLI execute on real small files; fixture npz names hold opaque transport bytes, not scientific graph decoding.",
+    "test_e015_recovery.py": "Four byte-bound journal/proof, corrupt-output/refused-drift, fresh credit/clock/retention, actual isolated help-import and arming-AST contracts. Proof fixtures are opaque bytes; Linux/root/systemd/real retained community loading is not exercised.",
+    "original_isolated_failure": "Reproduced against original b259dca e015_collect/e014_collect, retained separately with exact failure cause. No tolerance or malformed-input check weakened."
+  },
+  "forbidden": [
+    "new fit or accepted science replay",
+    "neural inference",
+    "native reader/DAG gate replay",
+    "marker redetection",
+    "neighbor rebuild",
+    "VM scoring",
+    "reinstall/recopy fallback",
+    "automatic retry/clock extension",
+    "provision/resize/new service",
+    "new acquisition/confirmation",
+    "retention extension",
+    "rewriting original FAILED/source/input/evidence bytes"
+  ],
+  "after_shutdown": "Independently confirm TERMINATED and new collection/private completion exits; assess actual export cost; verify archive and every member locally. Review only new outputs with unchanged E015 criteria/E009 conservativev2/oral provided-origin truth, all full denominators/known-shared sensitivity/N-quarantine/populations and accepted baseline summaries. Use4threads/8GBRSS/1hour/4GiB local review; stage one oral unit at a time. New design decision remains pending.",
+  "approval": "Owner explicitly approved the bounded collection-only wake/local review after the inspection refusal. Finance/headroom/native transfer/watchdog gates still precede release.",
+  "owner_authorization": {
+    "reply": "Authorize the bounded collection-only wake and local review",
+    "scope": "One existing-VM collection-only wake; new30min cumulative/45minSTOP;<=0.65USDadditional, combinedE015<=2USD;no science/retention extension",
+    "received_UTC": "2026-10-19T13:48:22.493012+00:00"
+  }
+}

@@ -11,9 +11,13 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import sys
 import tarfile
 import time
 
+# Isolated Python removes the script directory from sys.path. Admit only the
+# adjacent, source-bound helper directory; never inherit PYTHONPATH/user site.
+sys.path.insert(0,str(Path(__file__).absolute().parent))
 from e014_collect import binding,member_path
 
 CAP=2*1024**3

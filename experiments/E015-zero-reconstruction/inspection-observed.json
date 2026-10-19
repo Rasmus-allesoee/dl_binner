@@ -1,0 +1,363 @@
+{
+  "record": "E015 stopped-phase inspection and collection failure repair",
+  "updated_UTC": "2026-10-19T13:36:59.009372+00:00",
+  "status": "SCIENCE_REPORTED_COMPLETE; COLLECTION_FAILED_BEFORE_ARCHIVE; QUALITY_REVIEW_PENDING",
+  "phase": "zero-20261019T102859Z-b259dca",
+  "source": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+  "provider": {
+    "status": "TERMINATED",
+    "start_UTC": "2026-10-19T10:25:22.165000+00:00",
+    "stop_UTC": "2026-10-19T11:38:44.496000+00:00",
+    "provider_policy": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "8100"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    }
+  },
+  "watcher": {
+    "action": "clean guest shutdown requested; no retry or deletion",
+    "boot_id": "b67b504d-c0a2-43ea-9397-b74b9c21fbb0",
+    "checked_utc": "2026-10-19T11:37:01.892511+00:00",
+    "decision": "workflow exited",
+    "expected_process": {
+      "command_sha256": "24114a7a934689cfd390550498ce11214a7df95e28034a48a83c74463c1261a8",
+      "pid": 2265,
+      "start_ticks": 22851
+    },
+    "first_missing_monotonic": 4227.445156011,
+    "missing_seconds": 62.00267526399966,
+    "observed_process": null,
+    "shutdown": true,
+    "workflow_root": "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca"
+  },
+  "cloud_objects": {
+    "completion.json": {
+      "locator": "gs://dl-binner-archive-167650584170/e015/zero-20261019T102859Z-b259dca/completion.json#1792409756151868",
+      "generation": "1792409756151868",
+      "MD5_verified": "TFX8nA7AE8wjlAy8v1jDgg==",
+      "bytes": 260261,
+      "sha256": "a68bfb6dd9bf7c77271cf72233335e2506dc1cd00a5f845b8dc662f97d03482e"
+    },
+    "watchdog-exit.json": {
+      "locator": "gs://dl-binner-archive-167650584170/e015/zero-20261019T102859Z-b259dca/watchdog-exit.json#1792409822057587",
+      "generation": "1792409822057587",
+      "MD5_verified": "gFPp8sW3C9lIQ5Af7w/ypA==",
+      "bytes": 12192,
+      "sha256": "5ee68805df00cb0cc8be13939aa24a8e17d736e201255c76f208f625de851e69"
+    }
+  },
+  "missing": [
+    "e015-evidence.tar.gz",
+    "e015-evidence.tar.gz.sha256",
+    "collection.json"
+  ],
+  "completion": {
+    "status": "FAILED",
+    "science_completed": true,
+    "stages": [
+      {
+        "name": "science",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e015_control.py",
+            "--plan",
+            "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/science-plan.json",
+            "--workflow"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2836,
+          "peak_sampled_rss_bytes": 11637444608,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 3.120108025208746,
+          "sampled_cpu_seconds": 11644.78,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 6111.597686052322,
+          "stop_reason": null,
+          "wall_seconds": 3732.172061325
+        }
+      },
+      {
+        "name": "reuse-after",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e015_reuse.py",
+            "--lock",
+            "/srv/dl_binner/repo/experiments/E015-zero-reconstruction/reuse-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/reuse-after.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 4963,
+          "peak_sampled_rss_bytes": 51949568,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.9073147010105599,
+          "sampled_cpu_seconds": 4.690000000000055,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 2979.411167860031,
+          "stop_reason": null,
+          "wall_seconds": 5.169099536000431
+        }
+      }
+    ],
+    "collection_error": "RuntimeError: Command failed; see /srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/logs/collection.log\nTraceback (most recent call last):\n  File \"/srv/dl_binner/repo/scripts/e015_collect.py\", line 17, in <module>\n    from e014_collect import binding,member_path\nModuleNotFoundError: No module named 'e014_collect'\n\nDLBINNER exit_code=1 stop_reason=None\n"
+  },
+  "native_admission": "Prior independently checked7gates/full28distribution source-runtime/full axes/tiny contracts retained and accepted; actual new per-unit artifacts/benchmarks/checkpoints/graphs/exports remain on disk and unadmitted.",
+  "diagnosis": {
+    "root_cause": "-I removes the script directory; e015_collect imported its sibling helper without explicitly admitting that source-bound directory.",
+    "why_prior_tests_missed_it": "Earlier in-process collection calls inherited the tests script path; they did not execute the production isolated collector argv.",
+    "local_reproduction": {
+      "bytes": 315,
+      "sha256": "67dc60f307de7bbd596eaebccb52bbbded0d3ed501120f86697f1dab5febc55d"
+    },
+    "fix": "Explicit adjacent source-bound helper directory in collector sys.path; no PYTHONPATH/user-site reliance, native scientific byte or tolerance change.",
+    "tests": "6 actual policy/config/archive/isolated CLI/refusal tests plus4retained-proof/clock/help/arming-AST contracts pass. Real archive/tar readers; NPZ-named transport/proof fixtures contain opaque bytes, not native scientific graph loading. Original7native science gates reused; new Linux/root recovery remains unrun."
+  },
+  "resources": {
+    "science": {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e015_control.py",
+        "--plan",
+        "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/science-plan.json",
+        "--workflow"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2836,
+      "peak_sampled_rss_bytes": 11637444608,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 3.120108025208746,
+      "sampled_cpu_seconds": 11644.78,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 6111.597686052322,
+      "stop_reason": null,
+      "wall_seconds": 3732.172061325
+    },
+    "reuse_after": {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e015_reuse.py",
+        "--lock",
+        "/srv/dl_binner/repo/experiments/E015-zero-reconstruction/reuse-lock.json",
+        "--output",
+        "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/reuse-after.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 4963,
+      "peak_sampled_rss_bytes": 51949568,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.9073147010105599,
+      "sampled_cpu_seconds": 4.690000000000055,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 2979.411167860031,
+      "stop_reason": null,
+      "wall_seconds": 5.169099536000431
+    },
+    "phase_completion_elapsed_since_VM_start_seconds": 4226.082324266434,
+    "free_min_bytes": 107294871552,
+    "filesystem_used_max_bytes": 209422004224,
+    "science_growth_max_bytes": 6110183424,
+    "native_rule_benchmarks": "Still on stopped disk, not independently read; DAG exit0 plus science_completed flag reports completion of both units/all13jobs, not independent member admission",
+    "collection": "Failed at import before inventory/archive creation; no collection resource/byte result to invent"
+  },
+  "cost": {
+    "status": "Measured allocation priced at fresh eligible SKUs; invoice unreconciled",
+    "current_prices": {
+      "bytes": 8003,
+      "sha256": "b82a5bc768717b1eacf38905aaaa7732585ddf960c56e29c1d6a74fddffc11a9"
+    },
+    "VM_uptime_seconds": 4402.331,
+    "VM_uptime_hours": 1.2228697222222222,
+    "allocated_vCPU_hours": 9.782957777777778,
+    "compute_IP_USD": 0.3338992902811235,
+    "run_disk_interval_USD": 0.05128163343011619,
+    "compute_IP_hour_USD": 0.2730456762592464,
+    "disk_monthly_USD": 31.199999949850024,
+    "current_month_hours": 744.0,
+    "prior_compact_admission_readback_USD": 4.185922443866729e-06,
+    "current_compact_receipts_export_bytes": 272453,
+    "current_compact_receipts_export_USD_upper": 3.0448995530605317e-05,
+    "native_results_export_USD": 0,
+    "subtotal_USD": 0.3852155586292142,
+    "small_charges_storage_operations_reserve_USD": 0.15,
+    "total_USD_upper_with_reserve": 0.5352155586292142,
+    "original_E015_ceiling_USD": 2,
+    "remaining_conservative_ceiling_USD": 1.464784441370786,
+    "stopped_disk_hour_USD": 0.04193548380356186,
+    "stopped_disk_interval_until_inspection_seconds": 7094.513372,
+    "stopped_disk_cost_until_inspection_USD": 0.08264218072379417,
+    "disk_scope": "Run interval charged conservatively. Subsequent shared stopped-disk storage is ongoing under original October21 approval and reported separately; no retention extension.",
+    "pending": "Unknown,30USD prior exposure+5USD approved-storage reserves; no invoice subtraction claim"
+  },
+  "credits": {
+    "checked_UTC": "2026-10-19T13:36:59.009372+00:00",
+    "surface": "Authorized read-only signed-in Billing Credits and Overview",
+    "remaining_DKK": 1909.55,
+    "original_DKK": 1973.43,
+    "percent": 97,
+    "status": "Available",
+    "scope": "Certain usage; see terms for free trial",
+    "application": "Net pricing",
+    "expiry": "2027-01-12",
+    "paid_account": true,
+    "overview_period": "October1-19",
+    "cost_DKK": 62.36,
+    "savings_DKK": 62.36,
+    "net_DKK": 0,
+    "pending": "Unknown; UI confirms may exceed24h latency. Not inferred from credit delta.",
+    "prior_exposure_USD_reserve": 30,
+    "approved_storage_USD_reserve": 5,
+    "coverage": "Existing ordinary E2/non-premium Ubuntu/PD/IPv4/private Iowa Standard storage/network/operations remain covered by Welcome credits; no new product/service",
+    "official_terms": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "storage_prices": "https://cloud.google.com/storage/pricing"
+  },
+  "proposal": {
+    "status": "PREPARED_AND_LOCALLY_TESTED; NOT AUTHORIZED_OR_RUN",
+    "purpose": "Collect existing completed E015 outputs only; then independent byte/reader/evaluation admission, no scientific replay",
+    "new_cumulative_VM_start_seconds": 1800,
+    "provider_STOP_seconds": 2700,
+    "existing_VM": "e2-standard-8/32GiB and300GiB work disk only",
+    "numeric_threads": 4,
+    "sampled_tree_RSS_bytes": 8000000000,
+    "extra_working_GiB": 5,
+    "free_reserve_GiB": 25,
+    "compressed_export_GiB": 2,
+    "additional_gross_forecast_USD_upper": 0.6362358700471062,
+    "additional_gross_ceiling_USD": 0.65,
+    "combined_E015_forecast_with_both_reserves_USD_upper": 1.1714514286763205,
+    "combined_E015_with_additional_ceiling_USD_upper": 1.1852155586292143,
+    "original_combined_E015_gross_ceiling_USD": 2,
+    "expected_minutes": [
+      8,
+      15
+    ],
+    "local_review": "Fresh admitted data-review clock after collection:4threads/8GBRSS/1hour/4GiB extra, only new outputs with unchanged separately scoped truths and accepted baseline summaries",
+    "original_phase_source": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+    "original_phase_config": {
+      "bytes": 1573,
+      "sha256": "230782721d79fff1e656ecb1adf05b6448bc8eba0a61479534972250af795d25"
+    },
+    "original_completion": {
+      "bytes": 260261,
+      "sha256": "a68bfb6dd9bf7c77271cf72233335e2506dc1cd00a5f845b8dc662f97d03482e"
+    },
+    "original_clock": "Expired at2026-10-19T12:25:22.165UTC. Existing authorization explicitly forbids wake for missing evidence. A fresh collection-only wake/clock needs owner approval even though it fits remaining2USD.",
+    "VM_checkout": "Keep original cleanb259dca; transfer only four checksum-bound repair/recovery helpers into a fresh phase, no original source/output modification",
+    "setup": "Reuse passed graph/reload/input/native proofs with byte checks; refuse missing/corrupt data without fallback. First full work inventory will be made during recovery, since original collector never reached it.",
+    "storage_review": "October21 unchanged; valid_until_epoch1792533600, no extension/resource change",
+    "outcomes": "No new outcome, paired score, design decision or feature-family claim before recovered member admission"
+  },
+  "truth_and_scores": "Original admitted conservative E009v2 and oral provided-origin/full-denominator/known-shared-mask contracts unchanged. No new outputs or community score evaluated; keep3.3034% N-quarantine and all populations. Both communities remain development.",
+  "next_decision": "Recover/check already completed science outputs, then apply original reconstruction criteria. No next biological mechanism choice before missing data are reviewed.",
+  "actions_this_task": "Read-only GCP status/catalog/billing/private small receipts; local collector repair/tests; no VM wake, resize, provision, retention extension, fit or score.",
+  "receipt_bindings": {
+    "provider.json": {
+      "bytes": 33096,
+      "sha256": "bc054cb95ad8073a9fc3ca50964da45e47a3d4da0e1ef02fef4b1ba12bae1be3"
+    },
+    "completion.json": {
+      "bytes": 260261,
+      "sha256": "a68bfb6dd9bf7c77271cf72233335e2506dc1cd00a5f845b8dc662f97d03482e"
+    },
+    "watchdog-exit.json": {
+      "bytes": 12192,
+      "sha256": "5ee68805df00cb0cc8be13939aa24a8e17d736e201255c76f208f625de851e69"
+    },
+    "completion.json.metadata.json": {
+      "bytes": 635,
+      "sha256": "408335f3266ffe02ce28b56d14975fc6d34002eb3d5da4ae0bbf2f37a4dc1384"
+    },
+    "watchdog-exit.json.metadata.json": {
+      "bytes": 640,
+      "sha256": "d088dfb552ad82246a737c41f1b80f84f0e149690f40f44b3503ec8e4786ef5c"
+    },
+    "object.json.stderr": {
+      "bytes": 153,
+      "sha256": "f111583c81accd4a03f51674a6b6d60fe8085d8120497299c92e58807a2206d8"
+    },
+    "collection.json.stderr": {
+      "bytes": 163,
+      "sha256": "3147ef475339d90254e4754ac80599d58248e6927e1c5b63f3bb9154e2a245ce"
+    },
+    "e015-evidence.tar.gz.sha256.stderr": {
+      "bytes": 175,
+      "sha256": "39a959325b43833fc8f19598424aa049bc79a0140ccc7c1c565486a444dd9290"
+    },
+    "private-prefix-list.log": {
+      "bytes": 417,
+      "sha256": "a4525c431356dc461e9179bfbc1457b86c20f8ec1f18f031df251a6524bd979a"
+    },
+    "status-fetch-exits.json": {
+      "bytes": 156,
+      "sha256": "27c6adc77d135a1f4e62c4631a4460d3602ab913bc74a94438680bbc0dc6e0a8"
+    },
+    "current-prices.json": {
+      "bytes": 8003,
+      "sha256": "b82a5bc768717b1eacf38905aaaa7732585ddf960c56e29c1d6a74fddffc11a9"
+    },
+    "collector-repair-contracts.log": {
+      "bytes": 1237,
+      "sha256": "e915c5db1fc23947a3c6f21f803bdf3c347ead5c35802e514fbff37881d13ad1"
+    },
+    "recovery-contracts-final.log": {
+      "bytes": 874,
+      "sha256": "604b6f0b8e808cf65e7c30a55117f65eb1d179ce0591725f1f02a0a89e6a81d1"
+    }
+  },
+  "subsequent_owner_authorization": {
+    "reply": "Authorize the bounded collection-only wake and local review",
+    "scope": "One existing-VM collection-only wake; new30min cumulative/45minSTOP;<=0.65USDadditional, combinedE015<=2USD;no science/retention extension",
+    "received_UTC": "2026-10-19T13:48:22.493012+00:00",
+    "execution_status": "Not started at this source freeze; separate recovery receipt will own execution/results."
+  },
+  "compact_local_inspection_evidence": {
+    "path": "artifacts/e015-zero-reconstruction/inspection-20261019/compact-inspection-evidence.tar.gz",
+    "bytes": 52924,
+    "sha256": "91865b8f9d798419cff9b43681d7bfedd560931f36703767311ef9054d792fbe",
+    "members": 15,
+    "all_listed_members_verified": true,
+    "private_cloud_upload": false,
+    "scope": "Small downloaded operational receipts and actual local check logs, no scientific outputs. Cloud completion/watchdog bytes already recoverable via generation-bound private locators."
+  },
+  "final_portable_checks": {
+    "checks-20261019T134507Z.json": {
+      "bytes": 1549,
+      "sha256": "1ccfb2ff1a98caa4d0626fdf7ff37419152959198feade37ddad66167452412f"
+    },
+    "collector-final-20261019T134507Z.log": {
+      "bytes": 1237,
+      "sha256": "5e94667d654dafd7c715dc314847797d86717917d0a67eb046ce4c776cc0d522"
+    },
+    "recovery-final-20261019T134507Z.log": {
+      "bytes": 874,
+      "sha256": "c5226fe7d01f22d28929301c63ee9569599de5cf82b8b3ba239ebb02026ae0bb"
+    },
+    "docs-final-20261019T134507Z.log": {
+      "bytes": 688,
+      "sha256": "975ef962e335c00b6a7aefc2df3d9e85b9c6ff791ac8c67ac30cda3a3fca5173"
+    },
+    "diff-check-final-20261019T134507Z.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

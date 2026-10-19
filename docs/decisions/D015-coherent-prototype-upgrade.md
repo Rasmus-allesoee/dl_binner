@@ -543,3 +543,37 @@ the same10:25VM-start clock without extension or accepted replay. At10:37E009-ze
 reaches epoch12/20 with E014-matched exact parent/view/dropout counts, under fresh
 process-bound shutdown and8100sSTOP. This is healthy execution, not a quality result.
 Inspect complete outputs only after independently verified shutdown/delivery.
+
+## E015 science reported complete, delivery repair pending approval, 2026-10-19
+
+The [stopped-phase receipt](../../experiments/E015-zero-reconstruction/inspection-observed.json)
+verifies science-DAG/reuse-after exits 0 and the expected process-bound shutdown,
+with provider TERMINATED at 11:38:44.496 UTC. Original FAILED status is preserved:
+the isolated collector could not import its sibling helper, before creating an
+inventory/archive. The new two-arm checkpoints/partitions/graphs and individual
+rule resource records remain on stopped disk and are not independently admitted.
+Reconstruction's keep/modify/abandon decision remains unresolved; delivery status
+is not a model-quality result and does not justify another architecture change.
+
+The collector repair changes only adjacent helper-path admission and passes real
+isolated checkout/transferred CLI archive/alias/refusal contracts. In-process tests
+had hidden that path failure; AGENTS now requires the exact isolated subprocess
+layout. [Collection-only recovery](../../experiments/E015-zero-reconstruction/collection-recovery-plan.json)
+is prepared with original clean science source b259dca, four hash-bound helpers,
+passed-proof/byte reuse, a fresh held-parent watcher and 30-minute/45-minute STOP.
+No training, inference, reader replay, marker redetection or graph rebuilding.
+Portable byte/journal/clock tests pass; Linux/root execution remains unrun.
+
+The current inspection prompt prohibits waking for missing evidence and the
+original clock expired. Request explicit approval for that new bounded wake,
+then review only the new outputs with unchanged E009/oral truth scopes, denominators,
+N-quarantine, populations and original criteria. Up to $0.65 additional fits the
+remaining original E015 $2; no larger dollar envelope or storage extension is
+needed. October 21 remains. Independent confirmation still needs a new untouched
+prospectively named input/protocol and full source/truth/overlap/cost admission;
+neither inspected community becomes confirmation by repeating it.
+
+Same-task owner follow-through: an explicit reply now approves the prepared
+collection-only wake/local review, with a fresh30-minute clock/45-minute STOP and
+up to$0.65additional within original$2. Fresh financial/native transfer/supervision
+gates still precede release; no new science or retention extension is authorized.

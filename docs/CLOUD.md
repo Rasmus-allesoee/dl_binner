@@ -3,35 +3,52 @@
 Updated: 2026-10-19 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**Current E015 phase RUNNING under a fresh verified watchdog/providerSTOP.**
-[Native receipt](../experiments/E015-zero-reconstruction/native-observed.json) binds
-`zero-20261019T102859Z-b259dca`, clean pushed sourceb259dca and read-only Git sync.
-Original VM start **2026-10-19T10:25:22.165UTC**; held PID2265/start22851,
-boot`b67b504d-c0a2-43ea-9397-b74b9c21fbb0`. Live/normal/crash tests pass, parent and
-30s watcher timer active, provider8100sSTOP/automaticRestart=false independently
-verified. Driver deadline12:25:22UTC, provider12:40:22UTC. No provisioning/resize/
-new quota/service or retention extension. Same two-hour clock includes the first
-before-release config failure; its journals remain. No accepted science replay.
+**E015 independently TERMINATED; science reports complete, collection FAILED.**
+[Inspection](../experiments/E015-zero-reconstruction/inspection-observed.json) binds
+`zero-20261019T102859Z-b259dca`, clean original sourceb259dca, raw provider/private
+receipts and the original boot/PID identity. Start **October19 10:25:22.165UTC**,
+stop **11:38:44.496UTC /13:38 Copenhagen**, uptime **4402.331s /1.222870h**.
+Watchdog snapshot11:37:01.892UTC records the expected PID2265/start22851 exiting,
+then shutdown; boot`b67b504d-c0a2-43ea-9397-b74b9c21fbb0` matches original admission.
+Provider8100sSTOP/automaticRestart=false remains. No new start/resource/service/
+quota/retention change occurred in this inspection.
 
-Seven native gates pass with4.229GB/59bound inputs/runtime files, complete28-owned-
-distribution inventory/origins/libraries, original package bytes, full retained
-views/ordered axes and real tiny13-job control DAG. Reuse is read-only, without
-install/recopy fallback. Initial mounted free **105.6GiB** covers20GiB extra plus
-25GiB reserve. Four numerical threads/26GB sampled treeRSS/2GiB return remain.
-Release10:33:30UTC; first observed E009 epochs progress normally under fresh watcher.
-This is not completion or a quality result; inspect private completion and actual
-exits/checksums after independently verified shutdown. Healthy long work is handed
-off after sustained progress, without polling to completion.
+Private completion is **FAILED**, with science_completed=true, science DAGexit0
+and reuse-after exit0. It includes no successful collection: the exact isolated
+`e015_collect.py` argv fails to import its sibling `e014_collect` before any
+inventory/archive. Prefix lists only completion, prior native-admission archive
+and watchdog snapshot; all three main-return objects are absent. The raw small
+receipts match GCS generation/MD5 and new SHA256. No large archive was downloaded,
+no missing member is treated as admitted, and no new quality score is available.
+Prior seven native gates are reused; individual new artifacts/benchmarks await
+collection. Sampled science wall3732.172s, CPU11644.78s, peak treeRSS11.64GB and
+minimum filesystem free99.93GiB are distinct from charged VM uptime/allocation.
 
-Fresh Credits **DKK1,910.77 Available**,97%, Certain usage/net pricing, expiry
-2027-01-12. Paid Overview October1–19 cost/savings60.86/net0 warns delays can exceed
-24h; pending usage stays unknown, with$30 prior-exposure+$5 storage reserves.
-Fresh official Catalog5SKUs unchanged, existing ordinary E2/Ubuntu/PD/IP/Iowa
-Standard/network/operations eligible; no new product. The **new$2** full-envelope
-quote is~**$1.109**: max2.25h compute/IP$0.61435, disks$0.09435,2GiB export$0.24,
-archive storage$0.01 and$0.15 small/stop-grace reserve. Current rates are charged
-allocation, not sampled CPU or an invoice; final actual costs await shutdown.
-Existing disks remain **$31.20/month while stopped**, **October21 review unchanged**.
+Fresh Credits **DKK1,909.55 Available**,97%, Certain usage/net pricing, expiry
+2027-01-12. Paid Overview October1–19 cost/savings62.36/net0 warns delays can exceed
+24h; pending usage remains unknown, with$30 prior-exposure+$5 approved-storage
+reserves. Fresh official Catalog5SKUs remain unchanged; existing ordinary E2/
+non-premium Ubuntu/PD/IPv4/privateIowa Standard/network/operations remain covered,
+with no new product. Measured allocation/current-SKU gross costs: compute/IP
+**$0.333899**, run disk interval **$0.051282**, compact exports~**$0.000035**;
+subtotal **$0.385216**, **<$0.54 with$0.15 reserve**. No native-results export
+exists yet. These are estimates, not reconciled billing or sampled-CPU pricing.
+Subsequent shared stopped-disk storage is separate: **$31.20/month /$0.04194hour**
+at the current744hour conversion; October21 approval/review remains unchanged.
+
+The [prepared collection-only recovery](../experiments/E015-zero-reconstruction/collection-recovery-plan.json)
+has received explicit new wake/clock approval in the owner's reply; it has not run
+at this source freeze. The preceding inspection prompt forbids
+waking for missing evidence, and the original2h clock has expired. Locally tested
+four-helper transfer keeps the VM science checkout cleanb259dca, verifies passed
+proofs/bytes and creates the first full work inventory without science replay.
+Proposal: fresh30min fromVMstart,45min providerSTOP/current-boot held-parent watcher,
+4threads/8GBRSS/5GiBextra/25GiBreserve/2GiBreturn, existingVM/disks only. Expected
+8–15min; full45min compute/disks$0.23624 +maxexport$0.24 +storage$0.01 +reserve$0.15
+=**$0.63624**, capped **$0.65 additional /<$1.19 combined** within originalE015$2.
+No dollar-envelope increase is needed. Refresh finance/headroom/date gates before
+any authorized wake; no reinstall/recopy, fit/inference/index/detector or retry.
+The Linux/root recovery path is prepared, not executed or claimed native-passed.
 The following E014 sections are completed dated history, not current VM state.
 
 **E014 science completed; evidence recovered; VM independently TERMINATED.**
@@ -85,8 +102,9 @@ pricing, expiry**2027-01-12**. Delayed usage remains unknown; retain$30 prior
 exposure+$5 approved-storage reserve. Ordinary existingE2/Ubuntu/PD/IP/privateIowa
 Standard/network/operations coverage passed; no new product or service.
 
-The original three-fit authorization is used. The proposed next zero-reconstruction
-control needs its **own new$2** and fresh gates; it has not run. Estimated70–100min
+The original three-fit authorization is used. Its then-proposed zero-reconstruction
+control needed its **own new$2** and fresh gates; the later E015 execution is above.
+The original planning estimate was70–100min and
 uses the existing allocation,2h cumulative/2.25h STOP,4threads/26GB/20GiBextra/
 25GiBreserve/2GiBreturn, with accepted caches/runtime reuse and tested smaller
 collection. Stop if original retention no longer covers its dates. No external

@@ -437,6 +437,9 @@ Use actual native readers/writers and tiny real inputs where locally available;
 keep mocks for external dependencies outside the contract under test. Record
 which paths ran, which were mocked or skipped, and which still need Linux
 validation. Passing test counts alone are not evidence of native readiness.
+For helpers launched with isolated Python (`-I`), test the exact subprocess argv
+from outside the checkout, including any transferred helper layout. In-process
+imports can mask a missing sibling import that isolated execution will refuse.
 Failure checks must verify the intended worker error or enforced limit in retained
 evidence, not just any nonzero exit; a monitoring/prerequisite failure can otherwise
 produce a false pass.

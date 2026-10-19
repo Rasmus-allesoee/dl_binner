@@ -2,11 +2,41 @@
 
 Read [STATE](../../docs/STATE.md), [CLOUD](../../docs/CLOUD.md), [protocol](protocol.json),
 [reuse lock](reuse-lock.json), [config](config.json) and [E014 review](../E014-multiview-reconstruction/comparison-review.json).
-Status: **native control released and progressing**, clean sourceb259dca.
-[Native receipt](native-observed.json) binds phase`zero-20261019T102859Z-b259dca`,
-VM start10:25:22UTC, release10:33:30UTC and the original2h/2.25hSTOP. The first
-config-key failure is preserved; repaired fresh attempt reuses the same boot clock.
-The owner authorizes this conditional two-fit control, not another campaign.
+Status: **TERMINATED; science DAG and input recheck exit0; collection FAILED**.
+[Inspection](inspection-observed.json) binds the actual stop **October19
+11:38:44.496UTC**, original FAILED private completion and matching exit watcher.
+The isolated collector failed before inventory/archive creation. The original
+[native receipt](native-observed.json), seven passed gates, sourceb259dca and all
+failed journals stay unchanged. No new quality evaluation has run.
+
+The local collector repair now passes the actual isolated `-I -B` CLI in checkout
+and transferred layouts. [Collection recovery plan](collection-recovery-plan.json)
+binds four separately transferred helpers, passed-output proof checks and a fresh
+30-minute/45-minuteSTOP held-parent launcher. It is prepared and locally tested,
+**not run**. The owner subsequently approved its bounded collection-only wake and
+local review in an explicit reply. New Linux/root execution remains a native gate. The
+original inspection prompt at91aafb4 explicitly says **“Do not wake the VM for
+missing evidence or extend a clock”**. Its original clock expired12:25:22UTC;
+the prompt below requests a new collection-only clock/wake within remaining$2.
+No fit, marker detection, neighbor build, inference or scientific retry is needed.
+
+Private prefix still contains only prior native admission, failed completion and
+watchdog snapshot. Missing: `e015-evidence.tar.gz`, its `.sha256`, `collection.json`.
+The 260261B completion and12192B watcher snapshot match object MD5/generation and
+SHA256. The first full work inventory must be created during collection; do not
+pretend it existed before failure. Member/axis/geometry/export/quality admission
+remains pending. Fresh financial inspection prices measured4402.331s uptime at
+~$0.38522 including disk interval/compact exports, <$0.54 with reserve. Proposed
+recovery full fallback/export/storage quote~$0.63624, capped$0.65 additional and
+<$1.19 combined within original$2. No dollar increase is needed. Credits1909.55DKK
+Available/January12, delayed usage unknown/reserved; refresh before any wake.
+Existing disks$31.20/month, **October21 review unchanged**, no retention extension.
+
+## Original native execution (historical; do not replay)
+
+The following describes the launched b259dca phase, not authorization to rerun it.
+VM start10:25:22UTC, release10:33:30UTC, original2h/2.25hSTOP; its first config-key
+failure and fresh same-boot attempt remain preserved.
 
 Push the clean frozen branch `e015-zero-reconstruction` from Mac. Use the existing
 strict `dl-binner-gcp` SSH alias and VM read-only Git key; verify exact HEAD and
@@ -57,35 +87,58 @@ outcome; immutable original sources/results/failures remain unchanged.
 
 Our goal is a substantially stronger binner through coherent upgrades and selective
 controls. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E015's
-protocol, candidate/reuse locks, local evidence, native-observed.json and operations;
-reuse E014's comparison-review/inspection and unchanged admitted evaluator contracts.
-Inspect phase **`zero-20261019T102859Z-b259dca`**, frozen science/control source
-**b259dcac12968b38b909ce7733a4a12ee07eae5a**, without starting another job or
-repeating accepted science. Preserve immutable dev3/dev4/dev5, all E009–E015 data,
-truth, outputs, source freezes and every failure journal, including the initial
-E015 config/held-parent and Mac source-cache/process-monitor/controller refusals.
+protocol, candidate/reuse locks, native/inspection receipts, collection-recovery
+plan and operations. Preserve dev3/dev4/dev5, all accepted E009–E015 inputs/truth/
+outputs/source freezes and every failed journal. Original phase
+**`zero-20261019T102859Z-b259dca`** reports science/reuse-after exit0 but remains
+FAILED because isolated collection could not import e014_collect. Do not rewrite
+that failure or rerun accepted science.
 
-Check GCP control-plane state, private completion and watcher snapshot under
-**`gs://dl-binner-archive-167650584170/e015/zero-20261019T102859Z-b259dca/`**.
-The VM's original start is October19 **10:25:22.165UTC**, two-hour cumulative
-clock includes both setup attempts, all verification/fits/collection, and provider
-STOP is **12:40:22UTC**. Do not infer success from shutdown. If healthy and still
-running, report its current stage/progress and leave supervision/providerSTOP intact
-without polling to completion. No new fit, tuning, other ablation, external tool,
-resource change, new data or retention extension. The **new$2** is separate from
-E014's original$10; refresh remaining Welcome-credit scope/expiry/delayed usage,
-prices, original October21 storage approval and measured uptime/export/storage cost
-before downloading. Do not wake the VM for missing evidence or extend a clock;
-report the missing receipt and required separately bounded approval instead.
+**I authorize one collection-only wake of the existing VM with a fresh 30-minute
+cumulative VM-start clock and 45-minute provider STOP**, up to **$0.65 additional
+gross while combined E015 stays within its original$2**. This authorizes recovery
+of the already computed outputs, not another fit or clock/retention extension.
+Fresh live Welcome-credit scope/balance/expiry, delayed usage, current eligible
+prices, original October21 retention and actual disk headroom must pass. No
+provisioning, resize, new service or spending outside credits. Existing
+e2-standard-8/32GiB/300GiB only, four numerical threads,8GB sampled treeRSS,
+5GiB extra working space from initial filesystem measurement,25GiB free reserve,
+2GiB compressed return. Expected8–15minutes; follow through collection/shutdown.
+Stop before unclear/uncovered costs, missing/corrupt retained bytes or dates
+outside original storage approval. No retry, automatic extension or scientific
+recovery is included in this collection-only wake.
 
-After independently verified TERMINATED, establish all7native gates and the12new
-rule/final-target exits from retained receipts/logs, complete upload/readback,
-archive/member hashes, exact aliases and every omitted-DNA inventory. Reused input
-caches are bound locators, not a new backup. Review the exact two-zero-weight config,
-unchanged decoder/encoder construction and initialization/RNG/exposure/dropout,
-seed11/20epochs/batch256, original view/feature/marker bytes, full DNA/ten ordered
-E009 depth axes, unit geometry/sparse graph/neighbor audit, exact native reload and
-complete pre/old/E013 exports. Keep original failed Mac allclose unchanged.
+Push the exact clean repaired branch from Mac, record its repair commit and verify
+the four helper hashes in the recovery plan. **Keep the VM science checkout clean
+at b259dcac12968b38b909ce7733a4a12ee07eae5a**; do not pull repaired source over the
+original executed checkout. Transfer only the four locked recovery/collection
+helpers into a fresh attempt directory and private prefix. Use the documented
+config fields, including original completion/config hashes and initial filesystem
+used bytes. No reinstall, recopy fallback or mutation of the original work/source/
+sealed evidence is permitted. Test the actual isolated transferred collector on
+tiny archive/alias/link-refusal fixtures within this fresh clock. Verify existing
+OS/mount and passed native/graph/reload/input receipts against actual retained bytes;
+do not replay the native DAG, reader probes, neural inference, training, marker
+detection or neighbor construction. The first full work inventory is created now.
+
+Arm/test a fresh current-boot/process-bound held-parent exit watcher, verify live/
+normal/crash behavior and independent2700s providerSTOP/automaticRestart=false
+before release. Run the prepared collection-only launcher once, automatically
+capturing logs. Retain original failed completion/closed logs/source freeze plus
+new source/config/clock proofs; inventory all original work members, verify exact
+aliases and every retained archive/member byte. Upload/read back the bounded
+archive/checksum/collection/completion into the fresh private prefix. Collect
+bounded failure evidence if needed, stop and independently verify TERMINATED.
+Price measured recovery uptime, stopped/shared storage and assessed export
+separately from sampled CPU. Keep October21 review visible; do not extend retention.
+
+After verified shutdown and remaining-cost/export assessment, download and verify
+the archive and every member. Establish individual rule/final-target exits, exact
+two-zero-weight source/config, unchanged decoder/encoder initialization/RNG,
+real view/feature/marker bindings, full-parent/every-positive/depth-dropout exposure,
+seed11/20epochs/batch256, full DNA/ordered ten E009 depth columns, native exact
+reload, unit geometry/sparse graph/neighbor proofs and complete pre/old/E013
+accounting. Preserve failed Mac allclose without altering its tolerance.
 
 Evaluate **only the two new outputs** locally with the frozen E009 conservative-v2
 and separately named oral provided-origin oracle, full156/799provided denominators,
@@ -104,6 +157,6 @@ feature families. Both communities remain development. Name one next design
 step, retaining the need for a genuinely untouched prospectively named confirmation
 input/protocol with source/genome/replicon/molecule/taxonomy/overlap/truth/full-
 denominator/length/depth/cost/retention admission, without acquisition now.
-Update records, run relevant checks and commit with structured what-changed/why
-bodies. Report verified outcome, paired results/limits, actual allocated-compute
+Update records, run relevant checks and commit with structured what changed/why
+bodies. Report verified collection outcome, paired results/limits, actual allocated-compute
 and storage/export costs, one next decision and the exact following prompt.

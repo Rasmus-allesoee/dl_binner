@@ -4,40 +4,52 @@ Updated: 2026-10-19. This is the single current handoff.
 
 ## Exact next step
 
-**E015 zero-reconstruction control is running under verified supervision.**
-On `e015-zero-reconstruction`, clean pushed source **b259dca** runs phase
-`zero-20261019T102859Z-b259dca`. [Native receipt](../experiments/E015-zero-reconstruction/native-observed.json)
-and [operations](../experiments/E015-zero-reconstruction/OPERATIONS.md) own exact
-logs, private prefix, current observations, costs and the following inspection prompt.
-Only both reconstruction coefficients become0; original decoder/encoder/RNG,
-retained banks/features/markers, full-parent/every-positive exposure, measured
-parent depth/dropout, seed11/20epochs/batch256 and CPM/E013 are fixed.
-No dev3/dev4/dev5 or E009–E014 accepted byte/result/journal is changed.
+**E015 is stopped: science reports completion, but collection failed before an archive.**
+[Inspection](../experiments/E015-zero-reconstruction/inspection-observed.json)
+independently verifies **TERMINATED October19 11:38:44.496UTC /13:38 Copenhagen**
+for phase `zero-20261019T102859Z-b259dca`, original science source **b259dca**.
+The private FAILED completion contains science-DAG **exit0** (13 jobs, two fits)
+and retained-input recheck **exit0**; its boot/process-bound watcher independently
+records parent exit and shutdown. Seven prior native gates remain accepted.
+The isolated collector then failed with `ModuleNotFoundError: e014_collect` before
+creating an inventory/archive. The three expected return objects are absent.
+Per-rule benchmarks, new checkpoints/axes/graphs/exports and paired quality still
+need independent admission from the stopped disk; no new R95 is claimed.
 
-VM started **October19 10:25:22.165UTC /12:25 Copenhagen**. The first generated
-config omitted `source_commit`; parent/bootstrap refused before all science/gate
-children. Preserve its journals; tested configuration translation and fresh phase
-reuse the **same original boot clock**, not a restart/extension. Seven native
-gates now pass, including4.229GB/59retained byte contracts, full28-distribution
-runtime/source/libraries, complete DNA/view axes, actual tiny13-job DAG and exact
-production dry run. Release **10:33:30UTC** follows fresh boot/process PID2265
-watcher/live/normal/crash tests. Provider8100sSTOP and automaticRestart=false pass.
-At10:37UTC E009-zero trains normally at epoch12/20; all12 observed epochs match
-E014's exact parent/view/depth-dropout exposure; no completed fit/quality claim. Leave it supervised; do not
-poll until completion. Next: independently inspect shutdown/exits/archive/member
-bytes and evaluate **only new arms** with separately scoped admitted truths.
+**Next: collect and review the already computed outputs, without any scientific
+replay.** The exact isolated collector failure is reproduced and repaired locally;
+six policy/collection/CLI contracts and four recovery/clock/entrypoint contracts
+pass. Actual tar/member/alias readers ran; recovery proof fixtures use small opaque
+payloads, and the new Linux/root recovery launcher remains unrun. The
+[recovery plan](../experiments/E015-zero-reconstruction/collection-recovery-plan.json)
+prepares a fresh collection-only directory, four hash-bound helpers, original clean
+VM checkout b259dca, passed receipt/byte reuse, a fresh held-parent exit watcher,
+30-minute cumulative clock and45-minute providerSTOP. Expected8–15minutes;
+4threads/8GBRSS/5GiBextra/25GiBfree/2GiBreturn. No fit, inference, graph rebuild,
+marker detection, score or source/input mutation belongs on that VM wake.
 
-Fresh paid-account Welcome credit **DKK1,910.77 Available through2027-01-12**,
-net cost displayed0 with >24h billing-lag warning; pending usage is unknown and
-reserved. Current rates unchanged; full8100s allocation/disks/2GiBexport/storage/
-small-charge reserve quote~**$1.109**, under the **new$2**. Original$10 does not
-carry over. Existing8vCPU/32GiB/300GiB only,4threads/26GBRSS/20GiBextra/25GiBfree/
-2GiBreturn,2h cumulative includes setup/failures/fits/collection. Driver ends
-**12:25:22UTC /14:25**, provider STOP **12:40:22UTC /14:40**. Mounted free105.6GiB
-passes headroom; no install/recopy fallback, resource change or extension.
-**October21 storage review remains**; stopped disks still cost$31.20/month.
-Both communities are development; independent confirmation still needs new
-prospective input/source/genome/replicon/taxonomy/overlap/truth/protocol/cost admission.
+**The owner subsequently approved that bounded collection-only wake and local review.**
+It has not run at this source freeze. The owner's preceding inspection prompt expressly
+says not to wake for missing evidence or extend a clock; the original two-hour
+clock expired at12:25:22UTC. The [exact next prompt](../experiments/E015-zero-reconstruction/OPERATIONS.md#exact-following-prompt)
+defines the approved separately bounded collection clock/wake, then local new-arm
+diagnostics with unchanged truth scopes/criteria. It needs no larger dollar budget:
+measured uptime4402.331s costs~**$0.33390 compute/IP +$0.05128 disk interval**;
+compact exports add~$0.000035. Subtotal~**$0.38522 /<$0.54 with reserve**.
+Recovery's full45-minute/export/storage quote~$0.63624 fits **$0.65 additional**
+and **<$1.19 combined**, within original E015$2. These are current-SKU gross
+estimates, not reconciled billing. Sampled science CPU11644.78s and11.64GB RSS
+are separate from allocation; minimum free99.93GiB, science growth5.69GiB.
+
+Fresh Welcome credit **DKK1,909.55 Available through2027-01-12**,97%, paid-account
+Overview cost/savings62.36/net0, with pending usage unknown (>24h lag possible).
+Keep$30 prior-exposure/$5 approved-storage reserves. Existing disks still accrue
+**$31.20/month while stopped; October21 storage review unchanged**. No VM start,
+resource/service/retention change, science replay or new community scoring occurred
+in this inspection. Dev3/dev4/dev5, all accepted E009–E014 evidence, frozen E015
+candidate/protocol and every failed journal remain intact. Both communities remain
+development; reconstruction's next design decision and any untouched confirmation
+admission await the missing output review.
 
 **E014 completed and independently reviewed; VM TERMINATED.**
 Phase `comparison-20261018T183446Z-858b7cc` completed all three frozen fits and
@@ -70,7 +82,7 @@ fewer>=50/90% targets; no oracle per-bin choice or universal refinement win.
 Keep CPM/E013 provisionally fixed for the next learning control, without more
 E009 marker/resolution tuning.
 
-**Next decision: prepare one matched zero-reconstruction control**, already
+**E014's dated next decision was one matched zero-reconstruction control**, already
 contemplated prospectively. Set only both reconstruction coefficients to0; retain
 encoder/decoder initialization, varied views, every-positive rule, full-parent
 exposure, depth dropout, seed11/20epochs and CPM/E013. It can decide whether the
@@ -79,8 +91,9 @@ it cannot prove an optimal view policy or settle product feature families.
 [Operations](../experiments/E014-multiview-reconstruction/OPERATIONS.md#exact-following-prompt)
 contains the exact next prompt with a **new proposed$2**, two-hour cumulative /
 2.25-hour provider STOP, existing VM/disks, fresh financial/native/retention gates
-and tested collection prerequisites. It has **not run or been authorized by this
-inspection**; the old$10 does not carry into another fit. No external tool or new
+and tested collection prerequisites. This was **not authorized by the E014
+inspection**; the later E015 owner authorization/execution is recorded above.
+The old$10 does not carry into another fit. No external tool or new
 confirmation data is included. Both inspected communities now count as development
 evidence; a later independent confirmation still needs prospective source/input/
 truth/taxonomy/overlap/protocol and separate cost admission.
