@@ -1,7 +1,7 @@
 # E016: positive-only online/target multiview learning
 
-2026-10-20. Status: **implemented; local contracts pass; native release pending**.
-Scientific outcome: not assessed. This is one coherent learning bundle aimed at
+2026-10-20. Status: **native gates pass; two-fit comparison running under verified supervision**.
+Scientific outcome: pending completed-output admission; do not infer quality from progress. This is one coherent learning bundle aimed at
 closing the recovery gap, following E015's mixed loss control. The owner authorizes
 this local block and one conditional new $3 two-fit comparison; no other campaign.
 
@@ -54,3 +54,35 @@ because an older short-neighbor screen was mixed. A broader information upgrade
 is justified if the retained evidence identifies information/discrimination limits;
 another small follow-up is justified only if one unresolved contract can change
 that design decision. Both current communities are development.
+
+
+## Native release, October20 Copenhagen
+
+[Native receipt](native-observed.json) binds source **2cfefa3**, phase
+`positive-20261019T223128Z-2cfefa3`, fresh detached research checkout and unchanged
+original b259dca checkout. VM start00:31:25Copenhagen, release00:36:14; all ten
+actual Linux gates exit0, including full28-distribution/source/native-library
+inventory,59retained members/4,229,058,857bytes, both complete input axes, four
+loss/gradient/EMA/masked-depth contracts, real serial tiny13-job train/teacher/
+reload/graph/marker/refine/export/collector and full DAG dry run. Native full-width
+steady epoch .1860s yields a conservative148.6minute remaining projection, within
+original4h clock; it is not measured community completion. No fallback or retry.
+
+Fresh bootd7b01a9d/PID1847/start5180/command digest and live/normal/crash watcher
+checks pass. Provider15300sSTOP/automaticRestart=false is independently verified;
+driver deadline04:31:25 and providerSTOP04:46:25Copenhagen. At the final verified handoff sample, E009-positive has completed20epochs
+(89,041parents/432,664views per epoch) and its exact native reload stage; new kNN
+construction/CPM grouping is underway. All four online/target head collapse checks
+remain false. Oral fit and complete exports/refinement are still pending. Sampled science tree is~1.01GB
+at that early stage; it is not a whole-run maximum. Final progress is5.29minutes
+after release, under the same verified live watcher. Free space97.95GiB. The node
+continues under supervision; no completion, return archive or quality admission yet.
+
+Compute/IP quote at the final progress observation~$0.04599 plus run disks~$0.00706;
+final allocation/export/storage remains pending. Shared stopped hours since the
+prior E015 stop cost~$0.35708 separately under original storage approval. Maximum
+new phase/run disks/export/reserve quote~$1.83 fits new$3 (even adding that stopped
+gap remains<$2.19). These are SKU estimates, not a reconciled invoice or sampled
+CPU pricing. Existing disks$31.20/month; October21 review stays. Compact local
+engineering/failure/source evidence85,517bytes/all42members is privately uploaded
+and read back; no credentials or numerical environment are archived.

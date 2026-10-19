@@ -682,3 +682,13 @@ unique-sequence truth, genome independence, assembly-error or ten-depth evidence
 Actual sample/source/replicon/taxonomy/full-denominator/overlap/truth/cost admission
 is still required before separately authorized confirmation. October21 review and
 existing disks$31.20/month remain, with no automatic retention/resource change.
+
+
+E016 same-task native follow-through: [source2cfefa3 release](../../experiments/E016-positive-only-multiview/native-observed.json)
+passes all ten Linux runtime/source/input/tiny/export/collector/timing gates on
+existing VM/disks, starts the sole two-fit comparison at00:36Copenhagen and shows
+actual E009 epoch/view/EMA progress without collapse refusal. Fresh current-boot
+watcher and04:46providerSTOP verified. Keep it supervised rather than polling the
+long job. Final outcome/gap-closure/architecture recommendation remains pending
+independent completed-output review; this execution is not a quality claim.
+No extra budget/resource/retention, external tool or confirmation DNA follows.

@@ -4,7 +4,7 @@ Updated: 2026-10-20. This is the single current handoff.
 
 ## Exact next step
 
-**E016 positive-only multiview candidate implemented; conditional execution authorized.**
+**E016 positive-only multiview candidate released; healthy long run under supervision.**
 The owner sent E015's following prompt and explicitly prioritizes closing the
 stronger-binner recovery gap. [E016](../experiments/E016-positive-only-multiview/README.md)
 owns the [prospective design](../experiments/E016-positive-only-multiview/design.md),
@@ -18,7 +18,7 @@ seed11/20epochs/batch256, unit inference geometry and CPM/E013. No cross-parent
 negative labels or unvalidated pseudo-positive links; single-view parents keep
 reconstruction. Both inspected communities remain development. Local actual
 loss/gradient/EMA/buffer/masked-depth/noncollapse/reload/graph/marker/refine/export
-and archive/member paths pass; Linux/runtime/headroom/affordability release pending.
+and archive/member paths pass; All ten Linux byte/source/full-runtime/axes/actual-tiny/affordability gates pass; no new quality result yet.
 The original Mac tolerance stays failed, and old summaries are reused, not rescored.
 
 New$3, existing8vCPU/32GiB/300GiB only;4h cumulative from provider start/4.25hSTOP,
@@ -33,6 +33,19 @@ is now prospective; only1.73MB public metadata acquired. Full source/overlap/tru
 reference-denominator/depth/cost admission and separate execution remain outstanding.
 Judge a broader information/architecture upgrade against a narrower follow-up
 using E016's actual recovery/geometry/population outcomes, not network size alone.
+
+[Native release](../experiments/E016-positive-only-multiview/native-observed.json)
+now binds clean source2cfefa3, phase`positive-20261019T223128Z-2cfefa3`, separate
+research checkout and intact original b259dca checkout. Start00:31:25/release00:36:14
+Copenhagen; fresh boot/process held-parent watcher/live-normal-crash checks pass,
+providerSTOP04:46:25, original driver deadline04:31:25. E009-positive completed20epochs and exact reload, with real view/EMA progress
+and no collapse/nonfinite failure; its new kNN/CPM grouping is underway. Keep its
+long run supervised and inspect completion via the exact E016 operations prompt.
+No archive/quality admission or old baseline score replay yet. Early compute/IP
+quote~$0.04599+run disk~$0.00706; final cost pending. Shared preceding stopped-disk
+interval~$0.35708 is separate. Native gate source/input/runtime contracts and
+all42compact local-admission members/private readback pass. No source/input/cache/
+scientific fallback, resource/retention change, external tool or confirmation body.
 
 Earlier E015/E014 recommendations below are dated evidence; E016 authorization above owns the current next step.
 

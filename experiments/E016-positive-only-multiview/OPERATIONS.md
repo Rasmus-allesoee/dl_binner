@@ -2,7 +2,9 @@
 
 Read [STATE](../../docs/STATE.md), [CLOUD](../../docs/CLOUD.md), [design](design.md),
 [protocol](protocol.json), [reuse lock](reuse-lock.json) and [resource plan](resource-plan.json).
-Status: prepared and locally tested; native setup/release and results pending.
+Status: all ten native gates pass; frozen comparison released and healthy at handoff; completion/results pending.
+[Native receipt](native-observed.json) owns exact phase `positive-20261019T223128Z-2cfefa3`,
+source2cfefa3, watchdog/financial/axes/runtime proofs and current log paths.
 Owner authorization is one conditional new $3 comparison, not E015 budget reuse.
 
 Push clean `e016-positive-only-multiview`; use strict `dl-binner-gcp` SSH and its
@@ -57,7 +59,7 @@ relaxed Mac tolerance, per-bin oracle, refit, tuning or confirmation execution.
 Our goal is substantially closing the recovery gap to stronger binners. Read
 AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E016's design, prospective
 protocol/criteria, candidate/reuse locks, local/native receipts and operations.
-Inspect the exact phase in E016 native-observed.json without starting another job.
+Inspect phase `positive-20261019T223128Z-2cfefa3` in E016 native-observed.json without starting another job.
 Preserve dev3/dev4/dev5 and all accepted E009–E016 evidence and failed journals.
 
 Check GCP state, e016-candidate/status and private completion.json at the receipt's

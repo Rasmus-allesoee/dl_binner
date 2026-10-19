@@ -3,7 +3,7 @@
 Updated: 2026-10-20 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**E016 conditional new two-fit comparison authorized; native release pending.**
+**E016 two-fit comparison released; healthy under verified supervision.**
 [E016 operations](../experiments/E016-positive-only-multiview/OPERATIONS.md) owns the
 new$3/4h cumulative/4.25hSTOP existing8vCPU/32GiB/300GiB scope,4threads/26GB/
 20GiBextra/25GiBreserve/2GiBreturn. No provisioning, resize, new product/service,
@@ -16,8 +16,16 @@ native timing/headroom/source/runtime/heldwatcher gates precede community releas
 Fresh package-only prefix links accepted dependencies read-only and owns newwheel;
 it is not a portable independent numerical distribution. Existing executed checkouts
 stay untouched. **October21 review remains**, no further storage approval inferred.
-The current provider preflight still shows TERMINATED after E015; a new receipt
-will own E016's actual start, watchdog and scientific state. No new result yet.
+[Native receipt](../experiments/E016-positive-only-multiview/native-observed.json) owns
+newstart00:31:25/release00:36:14Copenhagen/source2cfefa3 and current RUNNING. All ten
+Linux gates pass, native full-width timing projection148.6min fits remaining4h.
+Fresh held-parentPID1847/currentboot/live-normal-crash tests and15300sSTOP verified;
+driver deadline04:31:25/providerSTOP04:46:25Copenhagen. E009 completed20epochs/exact native reload and is building the new graph; no
+collapse refusal. Both-unit completion/quality/final costs pending. Latest charged
+allocation quote~$0.04599compute/IP+$0.00706disks, separate preceding stopped gap
+~$0.35708. No old source overwritten: fresh detached checkout owns v6 and links
+accepted dependencies read-only. Compact85,517byte/42member local admission and
+private readback pass; no auth/environment backup. E015 below is dated history.
 
 **E015 reviewed; final VM independently TERMINATED.**
 [Recovery receipt](../experiments/E015-zero-reconstruction/recovery-observed.json)

@@ -591,3 +591,12 @@ fresh credit1904.91DKK and ordinary price/coverage checks pass, pending native g
 The skin pooled GSA confirmation input is prospectively named with small metadata
 only; full source/truth/overlap/cost admission remains. Both currently inspected
 communities stay development. October21 storage review remains; no extension.
+
+
+E016 follow-through: ten native source/runtime/axes/tiny/affordability gates pass;
+the single two-fit comparison is released on existing resources under fresh
+boot/process exit supervision and4.25hSTOP. [Receipt](../../experiments/E016-positive-only-multiview/native-observed.json)
+owns actual source/clock/logs and early allocation quote. No completed output or
+quality admission yet, and no older summary is rescored. Retain current scopes
+and October21; after shutdown review the new bundle before choosing one next
+coherent recovery-focused development block.
