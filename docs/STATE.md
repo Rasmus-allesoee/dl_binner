@@ -4,20 +4,40 @@ Updated: 2026-10-19. This is the single current handoff.
 
 ## Exact next step
 
-**E015 zero-reconstruction control is authorized conditionally and being prepared.**
-Owner selected the previously contemplated matched control on new branch
-`e015-zero-reconstruction`: precisely both reconstruction coefficients0, original
-encoder+decoder/RNG/views/features/cache/exposure/dropout/schedule and CPM/E013
-fixed. [Protocol](../experiments/E015-zero-reconstruction/protocol.json),
-[record](../experiments/E015-zero-reconstruction/README.md) and
-[operations](../experiments/E015-zero-reconstruction/OPERATIONS.md) own this block.
-The earlier next-step proposal below is now authorized as **new$2**, with fresh
-live financial/native/headroom gates,2h cumulative from VM start/2.25hSTOP,
-existing8vCPU/32GiB/300GiB,4threads/26GBRSS/20GiBextra/25GiBfree/2GiBreturn.
-No release or new community result yet. Credit breadth is welcome for justified
-larger development work; this deliberately matched treatment answers whether
-reconstruction earns its cost/trade-offs. No extra campaign, confirmation or
-retention extension follows. **October21 storage review remains.**
+**E015 zero-reconstruction control is running under verified supervision.**
+On `e015-zero-reconstruction`, clean pushed source **b259dca** runs phase
+`zero-20261019T102859Z-b259dca`. [Native receipt](../experiments/E015-zero-reconstruction/native-observed.json)
+and [operations](../experiments/E015-zero-reconstruction/OPERATIONS.md) own exact
+logs, private prefix, current observations, costs and the following inspection prompt.
+Only both reconstruction coefficients become0; original decoder/encoder/RNG,
+retained banks/features/markers, full-parent/every-positive exposure, measured
+parent depth/dropout, seed11/20epochs/batch256 and CPM/E013 are fixed.
+No dev3/dev4/dev5 or E009–E014 accepted byte/result/journal is changed.
+
+VM started **October19 10:25:22.165UTC /12:25 Copenhagen**. The first generated
+config omitted `source_commit`; parent/bootstrap refused before all science/gate
+children. Preserve its journals; tested configuration translation and fresh phase
+reuse the **same original boot clock**, not a restart/extension. Seven native
+gates now pass, including4.229GB/59retained byte contracts, full28-distribution
+runtime/source/libraries, complete DNA/view axes, actual tiny13-job DAG and exact
+production dry run. Release **10:33:30UTC** follows fresh boot/process PID2265
+watcher/live/normal/crash tests. Provider8100sSTOP and automaticRestart=false pass.
+At10:37UTC E009-zero trains normally at epoch12/20; all12 observed epochs match
+E014's exact parent/view/depth-dropout exposure; no completed fit/quality claim. Leave it supervised; do not
+poll until completion. Next: independently inspect shutdown/exits/archive/member
+bytes and evaluate **only new arms** with separately scoped admitted truths.
+
+Fresh paid-account Welcome credit **DKK1,910.77 Available through2027-01-12**,
+net cost displayed0 with >24h billing-lag warning; pending usage is unknown and
+reserved. Current rates unchanged; full8100s allocation/disks/2GiBexport/storage/
+small-charge reserve quote~**$1.109**, under the **new$2**. Original$10 does not
+carry over. Existing8vCPU/32GiB/300GiB only,4threads/26GBRSS/20GiBextra/25GiBfree/
+2GiBreturn,2h cumulative includes setup/failures/fits/collection. Driver ends
+**12:25:22UTC /14:25**, provider STOP **12:40:22UTC /14:40**. Mounted free105.6GiB
+passes headroom; no install/recopy fallback, resource change or extension.
+**October21 storage review remains**; stopped disks still cost$31.20/month.
+Both communities are development; independent confirmation still needs new
+prospective input/source/genome/replicon/taxonomy/overlap/truth/protocol/cost admission.
 
 **E014 completed and independently reviewed; VM TERMINATED.**
 Phase `comparison-20261018T183446Z-858b7cc` completed all three frozen fits and

@@ -2,8 +2,11 @@
 
 Read [STATE](../../docs/STATE.md), [CLOUD](../../docs/CLOUD.md), [protocol](protocol.json),
 [reuse lock](reuse-lock.json), [config](config.json) and [E014 review](../E014-multiview-reconstruction/comparison-review.json).
-Status: local preparation; **no community release yet**. The owner has authorized
-one conditional two-fit control, not another tool/confirmation campaign.
+Status: **native control released and progressing**, clean sourceb259dca.
+[Native receipt](native-observed.json) binds phase`zero-20261019T102859Z-b259dca`,
+VM start10:25:22UTC, release10:33:30UTC and the original2h/2.25hSTOP. The first
+config-key failure is preserved; repaired fresh attempt reuses the same boot clock.
+The owner authorizes this conditional two-fit control, not another campaign.
 
 Push the clean frozen branch `e015-zero-reconstruction` from Mac. Use the existing
 strict `dl-binner-gcp` SSH alias and VM read-only Git key; verify exact HEAD and
@@ -52,11 +55,55 @@ outcome; immutable original sources/results/failures remain unchanged.
 
 ## Exact following prompt
 
-After native release, inspect the exact phase and private prefix recorded in the
-native receipt. Verify GCP shutdown, completion/watchdog, exits and member bytes,
-then evaluate only the new zero-reconstruction outputs against the separately
-admitted E009-v2 and oral-origin truths and unchanged E014 summaries. Keep the new$2,
-original two-hour boot clock and October21 retention boundary; do not refit, tune,
-repeat accepted science, start other tools or acquire confirmation. Preserve all
-failure evidence. Report loss-block trade-offs/limits, measured allocation cost,
-one next design decision and the exact next prompt; update/check/commit.
+Our goal is a substantially stronger binner through coherent upgrades and selective
+controls. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E015's
+protocol, candidate/reuse locks, local evidence, native-observed.json and operations;
+reuse E014's comparison-review/inspection and unchanged admitted evaluator contracts.
+Inspect phase **`zero-20261019T102859Z-b259dca`**, frozen science/control source
+**b259dcac12968b38b909ce7733a4a12ee07eae5a**, without starting another job or
+repeating accepted science. Preserve immutable dev3/dev4/dev5, all E009–E015 data,
+truth, outputs, source freezes and every failure journal, including the initial
+E015 config/held-parent and Mac source-cache/process-monitor/controller refusals.
+
+Check GCP control-plane state, private completion and watcher snapshot under
+**`gs://dl-binner-archive-167650584170/e015/zero-20261019T102859Z-b259dca/`**.
+The VM's original start is October19 **10:25:22.165UTC**, two-hour cumulative
+clock includes both setup attempts, all verification/fits/collection, and provider
+STOP is **12:40:22UTC**. Do not infer success from shutdown. If healthy and still
+running, report its current stage/progress and leave supervision/providerSTOP intact
+without polling to completion. No new fit, tuning, other ablation, external tool,
+resource change, new data or retention extension. The **new$2** is separate from
+E014's original$10; refresh remaining Welcome-credit scope/expiry/delayed usage,
+prices, original October21 storage approval and measured uptime/export/storage cost
+before downloading. Do not wake the VM for missing evidence or extend a clock;
+report the missing receipt and required separately bounded approval instead.
+
+After independently verified TERMINATED, establish all7native gates and the12new
+rule/final-target exits from retained receipts/logs, complete upload/readback,
+archive/member hashes, exact aliases and every omitted-DNA inventory. Reused input
+caches are bound locators, not a new backup. Review the exact two-zero-weight config,
+unchanged decoder/encoder construction and initialization/RNG/exposure/dropout,
+seed11/20epochs/batch256, original view/feature/marker bytes, full DNA/ten ordered
+E009 depth axes, unit geometry/sparse graph/neighbor audit, exact native reload and
+complete pre/old/E013 exports. Keep original failed Mac allclose unchanged.
+
+Evaluate **only the two new outputs** locally with the frozen E009 conservative-v2
+and separately named oral provided-origin oracle, full156/799provided denominators,
+3.3034% E009 N-quarantine, localized oral ambiguity/known-shared mask sensitivity,
+and all length/origin/eligibility/marker/unassigned/excluded/unknown/non-target DNA.
+Use `e015_review.py`'s narrow retained-input/config adapter and unchanged tested
+metric helpers, four numerical threads/8GB sampled RSS/one cumulative hour/4GiB
+extra local review. Verify bytes before consuming data and stage one oral unit at
+a time. Reuse accepted E014/dev4/dev3/E013/MetaBAT summaries without refitting or
+rescoring them. No threshold changes, grid or per-bin/dataset truth-selected policy.
+
+Apply E015's prospectively frozen keep/modify/abandon criteria to reconstruction's
+value and length/grouping/assignment/resources trade-offs. This control holds the
+other ingredients fixed; it does not prove their separate effects or settle product
+feature families. Both communities remain development. Name one next design
+step, retaining the need for a genuinely untouched prospectively named confirmation
+input/protocol with source/genome/replicon/molecule/taxonomy/overlap/truth/full-
+denominator/length/depth/cost/retention admission, without acquisition now.
+Update records, run relevant checks and commit with structured what-changed/why
+bodies. Report verified outcome, paired results/limits, actual allocated-compute
+and storage/export costs, one next decision and the exact following prompt.

@@ -506,3 +506,18 @@ The next two-fit proposal needs its own new$2 and fresh gates. Existing disks
 still cost$31.20/month while stopped, with unchanged October21 review; no extension.
 Oral is now inspected development evidence; later independent confirmation still
 needs a prospective additional-input/source/taxonomy/overlap/truth/cost admission.
+
+
+## E015 authorized selective loss execution, 2026-10-19
+
+[E015](../../experiments/E015-zero-reconstruction/README.md) now executes the
+previously contemplated two-zero-weight control after local and seven native
+reuse/runtime/axes/tiny-path gates. Generous available credit supports valuable
+larger development when justified; this small matched question is chosen because
+it can decide reconstruction's value without confounding another architecture.
+The new$2,2h original VM-start clock/2.25hSTOP, existing machine/disks and October21
+remain. A config-key operational repair preserves failures and reuses the same boot;
+no accepted science replay, external expansion or outcome-driven change. Quality
+and actual final allocation costs await verified completion/shutdown and local
+truth-scoped review. Both datasets remain development, requiring new untouched
+confirmation admission later; no product-family or SOTA conclusion follows.

@@ -1,0 +1,587 @@
+{
+  "record": "E015 native zero-reconstruction control",
+  "status": "HEALTHY_LONG_RUN_HANDED_OFF; completion and quality pending",
+  "phase": "zero-20261019T102859Z-b259dca",
+  "source_commit": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+  "branch": "e015-zero-reconstruction",
+  "initial_prepared_source": "deec6689e5b451df3f46f188eaabb487f9116288",
+  "original_package_science_source": "858b7cc8adea930ea6f13f754eeaa8d031a9b5b4",
+  "VM_start_UTC": "2026-10-19T10:25:22.165000+00:00",
+  "VM_start_epoch": 1792405522.165,
+  "provider_state": "RUNNING",
+  "root": "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca",
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e015/zero-20261019T102859Z-b259dca",
+  "previous_attempt": {
+    "root": "/srv/dl_binner/experiments/e015/zero-20261019T102525Z-deec668",
+    "status": "FAILED_BEFORE_RELEASE",
+    "native_gate_children": 0,
+    "community_fit_children": 0,
+    "error": "Generated config had source instead of required source_commit; actual configuration factory tested/fixed before new source release",
+    "journals": "Original config/systemd parent error/gate failure retained unchanged on disk; small copies in active logs and Mac evidence",
+    "clock_reset": false
+  },
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e015-20261019t102859z.service",
+    "watchdog_timer": "e015-20261019t102859z-exit.timer",
+    "watchdog_service": "e015-20261019t102859z-exit.service",
+    "process": {
+      "pid": 2265,
+      "start_ticks": 22851,
+      "command_sha256": "24114a7a934689cfd390550498ce11214a7df95e28034a48a83c74463c1261a8"
+    },
+    "boot_id": "b67b504d-c0a2-43ea-9397-b74b9c21fbb0",
+    "source_commit": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1792405522.165,
+    "hard_deadline_epoch": 1792412722.165,
+    "provider_stop_epoch": 1792413622.165,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "provider": {
+    "maxRunDuration_seconds": 8100,
+    "termination_action": "STOP",
+    "automaticRestart": false,
+    "driver_deadline_UTC": "2026-10-19T12:25:22.165000+00:00",
+    "STOP_UTC": "2026-10-19T12:40:22.165000+00:00"
+  },
+  "host": {
+    "user": "rasmus_allesoee_gmail_com",
+    "uid": 1852909767,
+    "gid": 1852909767,
+    "boot_id": "b67b504d-c0a2-43ea-9397-b74b9c21fbb0",
+    "cpus": 8,
+    "physical_memory_bytes": 33646944256,
+    "used_bytes": 203308892160,
+    "free_bytes": 113407983616,
+    "mount": "/srv/dl_binner",
+    "checked_UTC": "2026-10-19T10:29:05.276313+00:00",
+    "source": "b259dcac12968b38b909ce7733a4a12ee07eae5a"
+  },
+  "native_gates": {
+    "status": "SUCCESS",
+    "count": 7,
+    "config": {
+      "bytes": 1573,
+      "sha256": "230782721d79fff1e656ecb1adf05b6448bc8eba0a61479534972250af795d25"
+    },
+    "stages": [
+      {
+        "name": "retained-bytes",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e015_reuse.py",
+            "--lock",
+            "/srv/dl_binner/repo/experiments/E015-zero-reconstruction/reuse-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/gates/reuse-before.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2377,
+          "peak_sampled_rss_bytes": 46206976,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.3375404289427638,
+          "sampled_cpu_seconds": 7.35,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 21.775169341999998
+        }
+      },
+      {
+        "name": "complete-runtime",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/check_runtime.py",
+            "--role",
+            "candidate",
+            "--requirements",
+            "/srv/dl_binner/repo/requirements/candidate-cpu.txt",
+            "--threads",
+            "4",
+            "--output",
+            "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/gates/runtime.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2382,
+          "peak_sampled_rss_bytes": 284999680,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.8763299206880287,
+          "sampled_cpu_seconds": 20.49,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 23.381604936999963
+        }
+      },
+      {
+        "name": "installed-source-library",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e014_runtime.py",
+            "probe",
+            "--lock",
+            "/srv/dl_binner/repo/experiments/E014-multiview-reconstruction/candidate-lock-v2.json",
+            "--inventory",
+            "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/gates/runtime.json",
+            "--output",
+            "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/gates/installed.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2473,
+          "peak_sampled_rss_bytes": 34435072,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.7295452614602815,
+          "sampled_cpu_seconds": 0.18999999999999995,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.2604362060000085
+        }
+      },
+      {
+        "name": "retained-input-axes",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e015_bootstrap.py",
+            "--inputs",
+            "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/science-plan.json",
+            "--output",
+            "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/gates/inputs.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2474,
+          "peak_sampled_rss_bytes": 5689831424,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.084403032633119,
+          "sampled_cpu_seconds": 52.82,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 48.708827263000046
+        }
+      },
+      {
+        "name": "new-contracts",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "/srv/dl_binner/repo/tests",
+            "-p",
+            "test_e015_contracts.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2489,
+          "peak_sampled_rss_bytes": 34873344,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.776937191301959,
+          "sampled_cpu_seconds": 0.20000000000000107,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.25742106600000625
+        }
+      },
+      {
+        "name": "native-zero-path",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "/srv/dl_binner/repo/tests",
+            "-p",
+            "test_e015_native.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2490,
+          "peak_sampled_rss_bytes": 439386112,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.103091935463469,
+          "sampled_cpu_seconds": 30.049999999999997,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 27.241609728000014
+        }
+      },
+      {
+        "name": "complete-DAG-dry-run",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e015_control.py",
+            "--plan",
+            "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/science-plan.json",
+            "--workflow",
+            "--dry-run"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2691,
+          "peak_sampled_rss_bytes": 78491648,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.8832298355200732,
+          "sampled_cpu_seconds": 0.6100000000000012,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.6906469589999915
+        }
+      }
+    ],
+    "reused_input_runtime_bytes": 4229058857,
+    "reused_members": 59,
+    "native_inventory_distributions": 28,
+    "inputs": {
+      "source_science_replayed": false,
+      "status": "PASS",
+      "truth_read": false,
+      "units": {
+        "E009-zero": {
+          "bank_policy_unchanged": true,
+          "bp": 231678157,
+          "features": {
+            "bytes": 42384557,
+            "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+          },
+          "parent_depth_semantics": "Measured full-parent means; repeated conditioning for windows, not measured window depth. No variance available.",
+          "rows": 145702,
+          "samples": [
+            "cami3_toy_human_gut_short_read_sample_0",
+            "cami3_toy_human_gut_short_read_sample_2",
+            "cami3_toy_human_gut_short_read_sample_3",
+            "cami3_toy_human_gut_short_read_sample_4",
+            "cami3_toy_human_gut_short_read_sample_6",
+            "cami3_toy_human_gut_short_read_sample_9",
+            "cami3_toy_human_gut_short_read_sample_10",
+            "cami3_toy_human_gut_short_read_sample_11",
+            "cami3_toy_human_gut_short_read_sample_14",
+            "cami3_toy_human_gut_short_read_sample_17"
+          ],
+          "training_parents": 89041,
+          "views": {
+            "bytes": 60980613,
+            "sha256": "3ded4f6d5c7bcbdb13e0204da696de940b4c46330358e5ea1ce668b02c22aabe"
+          }
+        },
+        "oral-zero": {
+          "bank_policy_unchanged": true,
+          "bp": 1669981123,
+          "features": {
+            "bytes": 333765352,
+            "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+          },
+          "parent_depth_semantics": "Measured parent means condition crops, not measured window depth; no variance.",
+          "rows": 1286547,
+          "samples": [],
+          "training_parents": 508763,
+          "views": {
+            "bytes": 419791282,
+            "sha256": "80d30e98c98642cf4dca5aad1b76a061065b3f93e92bab85e6b1ada5e0b4ac76"
+          }
+        }
+      }
+    },
+    "prefix_reinstalled": false,
+    "accepted_science_replayed": false,
+    "peak_sampled_RSS_bytes": 5689831424
+  },
+  "progress": {
+    "checked_UTC": "2026-10-19T10:37:32.309749+00:00",
+    "current_stage": "E009-zero/train",
+    "observed_training_epochs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "E009_stochastic_exposure_matches_E014_history": [
+      {
+        "epoch": 1,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 215783
+      },
+      {
+        "epoch": 2,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 216263
+      },
+      {
+        "epoch": 3,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 216163
+      },
+      {
+        "epoch": 4,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 216304
+      },
+      {
+        "epoch": 5,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 215900
+      },
+      {
+        "epoch": 6,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 216191
+      },
+      {
+        "epoch": 7,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 216606
+      },
+      {
+        "epoch": 8,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 216222
+      },
+      {
+        "epoch": 9,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 216388
+      },
+      {
+        "epoch": 10,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 216289
+      },
+      {
+        "epoch": 11,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 216327
+      },
+      {
+        "epoch": 12,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 216531
+      }
+    ],
+    "marker_input_shared": true,
+    "source_clean": true,
+    "watchdog": {
+      "boot_id": "b67b504d-c0a2-43ea-9397-b74b9c21fbb0",
+      "checked_utc": "2026-10-19T10:37:06.896855+00:00",
+      "decision": "workflow alive",
+      "expected_process": {
+        "command_sha256": "24114a7a934689cfd390550498ce11214a7df95e28034a48a83c74463c1261a8",
+        "pid": 2265,
+        "start_ticks": 22851
+      },
+      "observed_process": {
+        "command_sha256": "24114a7a934689cfd390550498ce11214a7df95e28034a48a83c74463c1261a8",
+        "pid": 2265,
+        "start_ticks": 22851
+      },
+      "shutdown": false,
+      "workflow_root": "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca"
+    },
+    "free_bytes": 113405984768,
+    "used_bytes": 203310891008,
+    "sample_scope": "Live sampled process tree, separate from billed allocated8CPU/32GiB",
+    "last_epoch": {
+      "stage": "multiview_epoch",
+      "utc": "2026-10-19T10:37:18Z",
+      "epoch": 12,
+      "parents_seen": 89041,
+      "available_views": 432664,
+      "depth_dropped_views": 216531,
+      "loss": 6.662354500424052,
+      "fused_contrastive": 4.370946680928745,
+      "sequence_contrastive": 4.582815648335531,
+      "composition_reconstruction": 2.011667044183288,
+      "depth_reconstruction": 0.05925815467378921,
+      "wall_seconds": 217.28576341200005
+    },
+    "sustained_observation": "Real epochs1/2 at10:34 and11/12at10:37, more than3minutes after release; finite losses, no science error. Stop polling this healthy longer run.",
+    "last_live_resource_samples": [
+      {
+        "seconds": 241.363460218,
+        "rss_bytes": 1051107328,
+        "sampled_cpu_seconds": 962.76
+      },
+      {
+        "seconds": 241.58796683399999,
+        "rss_bytes": 1051107328,
+        "sampled_cpu_seconds": 963.69
+      }
+    ]
+  },
+  "costs": {
+    "status": "In-progress allocation quote, not final/reconciled invoice",
+    "observation_UTC": "2026-10-19T10:37:32.309749+00:00",
+    "uptime_so_far_seconds": 730.1447489261627,
+    "compute_IP_so_far_USD": 0.055378574093800495,
+    "disk_interval_so_far_USD": 0.008505270359124677,
+    "final_envelope": {
+      "new_ceiling_USD": 2,
+      "compute_IP_hour_USD": 0.2730456762592464,
+      "max_provider_uptime_hours": 2.25,
+      "compute_IP_upper_USD": 0.6143527715833045,
+      "disk_monthly_USD": 31.199999949850024,
+      "disk_current_month_hours": 744.0,
+      "disk_run_interval_upper_USD": 0.09435483855801419,
+      "export_2GiB_upper_USD": 0.24,
+      "new_archive_storage_through_review_USD_reserve": 0.01,
+      "small_charges_and_stop_grace_USD_reserve": 0.15,
+      "incremental_gross_upper_USD": 1.1087076101413187,
+      "invoice": "Unreconciled; allocation/list prices, not sampledCPU or subtraction of credit display"
+    },
+    "credit": {
+      "surface": "Read-only signed-in Cloud Billing Credits/Overview",
+      "remaining_DKK": 1910.77,
+      "original_DKK": 1973.43,
+      "status": "Available",
+      "scope": "Certain usage; see terms for free trial",
+      "application": "Net pricing",
+      "expiry": "2027-01-12",
+      "paid_account": true,
+      "overview_cost_DKK": 60.86,
+      "overview_savings_DKK": 60.86,
+      "overview_net_DKK": 0,
+      "period": "October1-19",
+      "pending": "Unknown: costs may lag longer than24hours, not zero",
+      "prior_exposure_USD_reserve": 30,
+      "storage_USD_reserve": 5
+    },
+    "pending": "Unknown and reserved, not inferred zero from net invoice or credit subtraction",
+    "compact_admission_readback_USD_upper": 4.185922443866729e-06
+  },
+  "boundaries": {
+    "retention": "October21 remains, no extension",
+    "existing_disks_monthly_USD": 31.2,
+    "confirmation": "Both inspected communities are development; a new untouched community/protocol plus source/genome/replicon/molecule/taxonomy/overlap/truth/full denominators/length/depth/cost/retention admission remains unperformed; no acquisition now",
+    "old_evidence": "dev3/dev4/dev5 and all E009\u2013E014 accepted inputs/truth/results/source freezes/failed journals unchanged",
+    "budgets": "New2USD, original7200s from VM start includes failed setup and all new stages/collection,8100sSTOP; no new resource or automatic retry/extension"
+  },
+  "compact_receipts": {
+    "held-evidence.json": {
+      "bytes": 57113,
+      "sha256": "9e1116056c8d3d1c4822e4db1e0b9e478fceba7d73d956f155ed73661c87d913"
+    },
+    "provider-before-release.json": {
+      "bytes": 33117,
+      "sha256": "99154a4a630048f946e3a4e353e8a031e7684f02e6e337ba59f32a89f66526c6"
+    },
+    "release-native.log": {
+      "bytes": 1027,
+      "sha256": "1a69ecea5a6e0ff823e875e7956df9158374faed25e3f1c0eebbe7cc60ca99ba"
+    },
+    "bootstrap-native-attempt2.log": {
+      "bytes": 2204,
+      "sha256": "47451620b00e8c7ef72a7a20f2a982beea8eb3587f1164279e5f329315e46c12"
+    },
+    "arm-supervision-attempt2.log": {
+      "bytes": 1144,
+      "sha256": "ce8be0537d1d01bbb2e6900735b4464f1cbc5278a945f54649f7a1275227e74b"
+    },
+    "credit-gate.json": {
+      "bytes": 2865,
+      "sha256": "aa81cef1036c031bed2f55e1e0b27b8aa26b8a5f97cce27377e535b6f24ae537"
+    },
+    "current-prices.json": {
+      "bytes": 8003,
+      "sha256": "731545822add384a61a8613fd01e175a3e92235ae5b4c55aa77306c42d5fe4e0"
+    },
+    "failed-held-parent-inspection.log": {
+      "bytes": 1043,
+      "sha256": "99c51b4c87cbc341bf34ffd48dcc746308d1425fa9205ff4348da1a76af61818"
+    },
+    "setup-native.log": {
+      "bytes": 1686,
+      "sha256": "9fa115baa820cf388b93a4fcbdc6de2e0e52f5a0cff6fa144edd2b4e41f3d67a"
+    },
+    "setup-native-fresh-phase.log": {
+      "bytes": 1391,
+      "sha256": "76fcf61ed891098d10a95b983895fc20859d03027ff88c14337a330f2814cf28"
+    },
+    "latest-progress.json": {
+      "bytes": 19174,
+      "sha256": "5b73178d94f901661504b3f07a8fa0ce9162c19d69dcd1a843fb45d9d18ce558"
+    }
+  },
+  "native_admission_backup": {
+    "status": "SUCCESS",
+    "archive": {
+      "bytes": 37455,
+      "sha256": "36d74611746071c0734392076ba889d3d810f5d20d2a92e0936627fa4aa78294"
+    },
+    "regular_members": 13,
+    "private_locator": "gs://dl-binner-archive-167650584170/e015/zero-20261019T102859Z-b259dca/native-admission.tar.gz",
+    "every_member_verified": true,
+    "private_readback_verified": true,
+    "export_USD_upper": 4.185922443866729e-06
+  },
+  "local_checks": {
+    "docs": "74maintained documents/1040links PASS;10optional historical source caches unavailable, not active runtimes",
+    "new_policy_config_release_collection_tests": 5,
+    "real_native_tiny_tests": 2,
+    "real_serial_tiny_DAG_jobs": 13,
+    "unchanged_evaluator_tiny_contracts": 5,
+    "package_source_changed": false
+  }
+}

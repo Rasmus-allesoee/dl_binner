@@ -10,6 +10,12 @@ reviewer journals are preserved. No original data/science was rerun or altered.
 The original$10 and **October21 storage review** remain, with no retention extension.
 The following historical gates describe the executed phase, not another authorization.
 
+The following zero-reconstruction prompt was subsequently authorized by the owner
+as [E015](../E015-zero-reconstruction/OPERATIONS.md), now released atb259dca under
+its own new$2/original two-hour clock. Follow that record's exact phase inspection
+prompt next; do not execute E014's following prompt a second time. All E014 locks,
+science, admitted truth, results and failed journals remain unchanged.
+
 ## What has actually run
 
 Source `a49ff80` froze the first learning design; `7ed7f66` froze the memory-aware

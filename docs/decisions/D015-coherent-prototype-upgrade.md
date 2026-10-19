@@ -534,3 +534,12 @@ larger scientifically justified work later; keep this treatment interpretable.
 New loss/source/protocol/criteria and fit-to-cap collection are frozen before any
 new outcome. Both communities remain development; additional untouched confirmation
 requires prospective admission. Existing$2/2h/2.25hSTOP and October21 remain.
+
+
+E015 native follow-through: clean pushedb259dca passes7new Linux gates and releases
+the frozen two-fit DAG at10:33:30UTC. An operational config-key failure before all
+science/gate children remains preserved; a tested factory repair/fresh attempt uses
+the same10:25VM-start clock without extension or accepted replay. At10:37E009-zero
+reaches epoch12/20 with E014-matched exact parent/view/dropout counts, under fresh
+process-bound shutdown and8100sSTOP. This is healthy execution, not a quality result.
+Inspect complete outputs only after independently verified shutdown/delivery.

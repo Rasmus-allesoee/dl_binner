@@ -3,6 +3,37 @@
 Updated: 2026-10-19 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
+**Current E015 phase RUNNING under a fresh verified watchdog/providerSTOP.**
+[Native receipt](../experiments/E015-zero-reconstruction/native-observed.json) binds
+`zero-20261019T102859Z-b259dca`, clean pushed sourceb259dca and read-only Git sync.
+Original VM start **2026-10-19T10:25:22.165UTC**; held PID2265/start22851,
+boot`b67b504d-c0a2-43ea-9397-b74b9c21fbb0`. Live/normal/crash tests pass, parent and
+30s watcher timer active, provider8100sSTOP/automaticRestart=false independently
+verified. Driver deadline12:25:22UTC, provider12:40:22UTC. No provisioning/resize/
+new quota/service or retention extension. Same two-hour clock includes the first
+before-release config failure; its journals remain. No accepted science replay.
+
+Seven native gates pass with4.229GB/59bound inputs/runtime files, complete28-owned-
+distribution inventory/origins/libraries, original package bytes, full retained
+views/ordered axes and real tiny13-job control DAG. Reuse is read-only, without
+install/recopy fallback. Initial mounted free **105.6GiB** covers20GiB extra plus
+25GiB reserve. Four numerical threads/26GB sampled treeRSS/2GiB return remain.
+Release10:33:30UTC; first observed E009 epochs progress normally under fresh watcher.
+This is not completion or a quality result; inspect private completion and actual
+exits/checksums after independently verified shutdown. Healthy long work is handed
+off after sustained progress, without polling to completion.
+
+Fresh Credits **DKK1,910.77 Available**,97%, Certain usage/net pricing, expiry
+2027-01-12. Paid Overview October1–19 cost/savings60.86/net0 warns delays can exceed
+24h; pending usage stays unknown, with$30 prior-exposure+$5 storage reserves.
+Fresh official Catalog5SKUs unchanged, existing ordinary E2/Ubuntu/PD/IP/Iowa
+Standard/network/operations eligible; no new product. The **new$2** full-envelope
+quote is~**$1.109**: max2.25h compute/IP$0.61435, disks$0.09435,2GiB export$0.24,
+archive storage$0.01 and$0.15 small/stop-grace reserve. Current rates are charged
+allocation, not sampled CPU or an invoice; final actual costs await shutdown.
+Existing disks remain **$31.20/month while stopped**, **October21 review unchanged**.
+The following E014 sections are completed dated history, not current VM state.
+
 **E014 science completed; evidence recovered; VM independently TERMINATED.**
 [Inspection](../experiments/E014-multiview-reconstruction/inspection-observed.json)
 and [review](../experiments/E014-multiview-reconstruction/comparison-review.json)
