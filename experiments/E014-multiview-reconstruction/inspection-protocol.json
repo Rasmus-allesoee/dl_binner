@@ -26,16 +26,16 @@
   "reviewer_freeze_UTC": "2026-10-18T22:49:45.483332+00:00",
   "reviewer_source": {
     "scripts/e014_review.py": {
-      "bytes": 22710,
-      "sha256": "b72d6a974658374000e6f55be66d925f74187786965bebfb622d1f596764cb1a"
+      "bytes": 22904,
+      "sha256": "3c4a845528855821d5a4cb5469c515499e726252389fd5f006929edcb8f69be4"
     },
     "scripts/e014_archive_review.py": {
       "bytes": 6373,
       "sha256": "408fc304cdcf970772aab6c3cf91b4317af2cbe81d8ca76fa4801ada3d7a8ec1"
     },
     "tests/test_e014_review.py": {
-      "bytes": 5511,
-      "sha256": "b6a6e727b318cc9244213cc60fc9146e19fab304321d2689a6e105030841276b"
+      "bytes": 6914,
+      "sha256": "2e6d59d38711cdcb359dd4dedf961abdd7a1b49ee085d503db4cb581988fd875"
     },
     "tests/test_e014_archive_review.py": {
       "bytes": 1823,
@@ -43,5 +43,11 @@
     }
   },
   "engineering_tests": "6actual review/archive/graph fixtures pass: allDNA CSV+axes, unknown/short/non-target/nonACGT populations, raw vs deliberately mismatched learned geometry, cached marker full/nonhit refusal, actual tar streams/corruptbytes/cap/selective copies, transferred sparse graph CLI. Existing admitted evaluators reused without metric changes.",
-  "reviewer_memory_note": "Before changed outcomes: release the already checked/evaluated old/post Python partition objects before raw matrix diagnostics; metrics/query/schedule semantics unchanged."
+  "reviewer_memory_note": "Before changed outcomes: release the already checked/evaluated old/post Python partition objects before raw matrix diagnostics; metrics/query/schedule semantics unchanged.",
+  "reader_repairs": [
+    {
+      "failure": "Before any changed scores, strict CSV reason comparison refused56,661 short rows: native writer intentionally exports data exclusion_reason while partition retains zero_geometry_evidence.",
+      "correction": "Check actual frozen exporter status/reason semantics; preserve original data and failed unit journal, use a fresh local review output directory. Add actual tiny native prepare/export/accounting test, including wrong reason refusal. No metric/check tolerance changed."
+    }
+  ]
 }

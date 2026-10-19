@@ -51,7 +51,8 @@ def export_accounting(part,data,table,accounting,manifest):
             require(i<len(ids)and row['contig_id']==ids[i]and int(row['length'])==int(lengths[i]),'Export complete ID/length axes differ')
             b=part['assignment'][i];status='excluded'if not eligible[i]else'assigned'if b>=0 else'unassigned'
             label=f'bin_{b+1:06d}'if b>=0 else''
-            require(row['status']==status and row['bin_id']==label and row['reason']==part['reason'][i], 'Export labels/status/reasons differ')
+            reason=str(data['exclusion_reason'][i])if not eligible[i]else''if b>=0 else part['reason'][i]
+            require(row['status']==status and row['bin_id']==label and row['reason']==reason, 'Export labels/status/reasons differ')
             totals[status]['contigs']+=1;totals[status]['bp']+=int(lengths[i]);seen+=1
             if b>=0:bins[label]+=int(lengths[i])
     require(seen==len(ids)and accounting['contigs']==seen and accounting['bp']==int(lengths.sum()),'Export lost whole DNA')
@@ -65,7 +66,8 @@ def synthetic_rows(part,data):
     rows=[]
     for i,q in enumerate(part['ids']):
         b=part['assignment'][i];status='excluded'if not data['eligible'][i]else'assigned'if b>=0 else'unassigned'
-        rows.append(dict(contig_id=q,length=str(int(data['lengths'][i])),bin_id=f'bin_{b+1:06d}'if b>=0 else'',status=status,reason=part['reason'][i]))
+        reason=str(data['exclusion_reason'][i])if not data['eligible'][i]else''if b>=0 else part['reason'][i]
+        rows.append(dict(contig_id=q,length=str(int(data['lengths'][i])),bin_id=f'bin_{b+1:06d}'if b>=0 else'',status=status,reason=reason))
     return rows
 
 

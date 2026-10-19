@@ -16,7 +16,7 @@ class ReviewContracts(unittest.TestCase):
         import numpy as np
         with tempfile.TemporaryDirectory()as t:
             p=Path(t)/'assignments.tsv';part=dict(ids=['a','b','c'],assignment=[0,-1,-1],reason=['','noise','below_min_length'])
-            data=dict(lengths=np.array([1000,800,499]),eligible=np.array([True,True,False]));rows=[['a',1000,'bin_000001','assigned',''],['b',800,'','unassigned','noise'],['c',499,'','excluded','below_min_length']]
+            data=dict(lengths=np.array([1000,800,499]),eligible=np.array([True,True,False]),exclusion_reason=np.array(['','','below_min_length']));rows=[['a',1000,'bin_000001','assigned',''],['b',800,'','unassigned','noise'],['c',499,'','excluded','below_min_length']]
             def write():
                 with p.open('w')as f:
                     w=csv.writer(f,delimiter='\t');w.writerow(['contig_id','length','bin_id','status','reason']);w.writerows(rows)
@@ -24,6 +24,19 @@ class ReviewContracts(unittest.TestCase):
             r=export_accounting(part,data,p,account,dict(bins=1));self.assertEqual(r['bp'],2299)
             rows[1][0]='a';write()
             with self.assertRaisesRegex(ValueError,'axes'):export_accounting(part,data,p,account,dict(bins=1))
+
+    def test_actual_native_export_separates_exclusion_from_geometry_reason(self):
+        from dl_binner.io import prepare,load_arrays,digest
+        from dl_binner.clustering import export
+        from dl_binner.accounting import summarize_arm
+        with tempfile.TemporaryDirectory()as t:
+            root=Path(t);fasta=root/'input.fna';fasta.write_text('>long\n'+'ACGT'*250+'\n>noise\n'+'TGCA'*200+'\n>short\nACGT\n')
+            features=root/'features';features.mkdir();f=features/'features.npz';prepare(fasta,f)
+            data,_=load_arrays(f,'features');part=dict(ids=['long','noise','short'],assignment=[0,-1,-1],valid=[True,True,False],reason=['','density_noise','zero_geometry_evidence'],clusters=1,unassigned=2,parent_features_sha256=digest(f))
+            partition=root/'partition.json';partition.write_text(json.dumps(part));out=root/'export';export(f,partition,fasta,out)
+            r=export_accounting(part,data,out/'assignments.tsv',summarize_arm(f,out)[0],json.loads((out/'manifest.json').read_text()));self.assertEqual(r['statuses']['excluded']['bp'],4)
+            table=out/'assignments.tsv';table.write_text(table.read_text().replace('below_min_length','zero_geometry_evidence'))
+            with self.assertRaisesRegex(ValueError,'reasons differ'):export_accounting(part,data,table,dict(contigs=3,bp=1804),dict(bins=1))
 
     def test_raw_geometry_unknown_neighbors_and_mismatched_learned_structure(self):
         import numpy as np
