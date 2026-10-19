@@ -1,0 +1,661 @@
+{
+  "files": {
+    "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa": {
+      "bytes": 237732361,
+      "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+    },
+    "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/lib/libgomp.so.1.0.0": {
+      "bytes": 1674616,
+      "sha256": "34324e0835be6e103844d7c416bec42834cf803d3ba8d9519df15ced19914dfe"
+    },
+    "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/marker.hmm": {
+      "bytes": 15929643,
+      "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.json": {
+      "bytes": 1103,
+      "sha256": "2b24603bd278f81178b3b843faeb961fb27061accb0df3f7968d9d5a937f9a8a"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz": {
+      "bytes": 42384557,
+      "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/asset.json": {
+      "bytes": 4655,
+      "sha256": "d1898ef92fa992881103cd19de2be6066db38917cb3be2e3ece86d35035692b3"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/cache.json": {
+      "bytes": 1841,
+      "sha256": "711c793d1af631486efc07b6241c2b75c3eb0b888585a66c321f061b4f40b404"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/domains.json": {
+      "bytes": 817210,
+      "sha256": "b1ad9e6e69fd30713b1840e7b2c7d1b6de8f53104f0ffc1df58cb4fd85d7aaec"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/evidence.json": {
+      "bytes": 3260961,
+      "sha256": "027b1aa746dd613ee39992afad160001a310fe6a1e3c71b4c2f45956bb4911ca"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/genes.jsonl": {
+      "bytes": 46493814,
+      "sha256": "66ad0f2384dc132b36c072aa81e786ff07474aeb0c471ae11ef06445bb776ba1"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/proteins.faa": {
+      "bytes": 61757382,
+      "sha256": "a08a9471e8b185c401bbefb21a4c39c88a9a72aa291037d94bf6f3d1d15d8540"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/__init__.py": {
+      "bytes": 112,
+      "sha256": "354c46c057766a6243be40711dda76118ce958bbd6f4768ccab3b8bf9252b658"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/__main__.py": {
+      "bytes": 103,
+      "sha256": "28f47a18f1a12c011b4fa92812d8f4fb10840c469d489ee5ac246bc669620144"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/accounting.py": {
+      "bytes": 6732,
+      "sha256": "2a83aad8eb36864a704ebe72faeeba33c335c86f7072205f6f19c92db9f6f117"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/candidate/__init__.py": {
+      "bytes": 81,
+      "sha256": "5887ddf687250cefcf87aaa082c5a4edc9a5281a8a1be7a752300a5fcb190eff"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/candidate/grouping.py": {
+      "bytes": 12615,
+      "sha256": "d31c67705b2fc80d5fd06d8b2c403d7e543ebd64fc37c08b5b3db90ba657f233"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/candidate/markers.py": {
+      "bytes": 11226,
+      "sha256": "a77739cb64d219bf3af8e2baeb66ed81c86c53a8c5c633a184ee28412ee2760a"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/candidate/model.py": {
+      "bytes": 10499,
+      "sha256": "09eda66fcd324870d11b89c6f6b4bc7e4c02f3169d6d557389bc8c840de76f09"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/candidate/runner.py": {
+      "bytes": 12350,
+      "sha256": "ab153821b9bacf70373c7ffd79c058b1be356a6f96bdfae5aa8638cf4bdab2eb"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/candidate/views.py": {
+      "bytes": 8357,
+      "sha256": "d3f1b51ac61009f9f962d767fce5600d5c93bd14b4ca9adb4bdef7564438392f"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/cli.py": {
+      "bytes": 10923,
+      "sha256": "5d463fd8d901934348d4664a0b02929770853cb2af5b26d8fdbcb6a4ba409aad"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/clustering.py": {
+      "bytes": 7880,
+      "sha256": "2ac715b1449287b002ef7e4a75b84ef204256c2d5f589e31a6810acfad941b66"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/contracts.py": {
+      "bytes": 1671,
+      "sha256": "0455b5a45ecbb29eb1f6c168048efa3a861279dc7ba2af36896ddb6dfcab632d"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/io.py": {
+      "bytes": 12016,
+      "sha256": "71b0c423c046b3c72b651141e853ea622a62742fc087afeef37fbf9c253c2307"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/model.py": {
+      "bytes": 13986,
+      "sha256": "acc1f3c450910112cd7883cc6284139046fde6b339e73b82638d301d8e5a9948"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/multiview/__init__.py": {
+      "bytes": 85,
+      "sha256": "7724296c827c8ae34dc7558de991243c52ee78c1b8a37837e3070487657fe160"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/multiview/arrays.py": {
+      "bytes": 1395,
+      "sha256": "e6239aaa8ca298b5afd97d4c45ab58ff72183f485e4263226aebbcae03500a97"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/multiview/downstream.py": {
+      "bytes": 7469,
+      "sha256": "a24e96291dc6e779734e6990008296e7e7d8d3e400ff9102004a09959fa8fbbb"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/multiview/model.py": {
+      "bytes": 10256,
+      "sha256": "6342819c74f8d7da4cc23bea7666169de605d2c391ce3711d98243fc88f550d2"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/multiview/refinement.py": {
+      "bytes": 16783,
+      "sha256": "0c1bae1f0fd5e8873cc30e68218e6796e87bf43b7d9262d2ec42fd781a51b8c0"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/multiview/stage.py": {
+      "bytes": 2190,
+      "sha256": "a06543d0cd70ba4a63637a7072b96d03becc773c7ae0ba1dbeb4c603b2677581"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/multiview/views.py": {
+      "bytes": 9370,
+      "sha256": "0b3a00b87c17cd56417e589ebcb3a9f3234f85f4c14ac0b9204a680dc2590935"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/resources/candidate.json": {
+      "bytes": 678,
+      "sha256": "1c8049fa2cf70e51c2eab22fc7fe5cd0e626f807360b56ff2b392756207baa60"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/resources/multiview.json": {
+      "bytes": 799,
+      "sha256": "0f532c4912b002c5cdb2ebde48bf172c96577f3edb066a1c03864e2b537c6038"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/resources/training.json": {
+      "bytes": 215,
+      "sha256": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/runner.py": {
+      "bytes": 20667,
+      "sha256": "99cbd7a14c360011b473dd22a03777eb7e3dfff109f11c78a2f5c1f067af3e8f"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/supervision.py": {
+      "bytes": 9575,
+      "sha256": "8ee9bd7d5f05a8e487a8691f7ab8152cca627f9f55ad27d48c6ece61cbd9a8a9"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so": {
+      "bytes": 35123345,
+      "sha256": "9254d0854dd7615e11de28d771ae408878ca8123a7ac204f21e4cc7a376cc2e5"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0": {
+      "bytes": 168193,
+      "sha256": "3a7eaece7231911be2fbb1b3e7cb4cb5c2e0f84e0c2bb73739472b5a1feec8c1"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy.libs/libopenblasp-r0-01191904.3.27.so": {
+      "bytes": 34990041,
+      "sha256": "9b91f6ba8fdba9cf7682371fda53bb228763bd5073ff824edbc4b81e2ddc46bc"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/lib/libgomp-a34b3233.so.1": {
+      "bytes": 168721,
+      "sha256": "570455c2902d6cc2a7f367703c06dac07495dd7f8a1ed2c8fc4cea628c881b13"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/gates/inputs.json": {
+      "bytes": 1127,
+      "sha256": "17cb09c7a1a44d95ac3337fd8da7ae716bcef9847a53a3cc22d6edd18e30b679"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/gates/installed.json": {
+      "bytes": 7270,
+      "sha256": "9948320086f5817f7a4cf2c7bc577013aa6772b1ce30e74ffca2245443d113af"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/gates/runtime.json": {
+      "bytes": 9637,
+      "sha256": "b9523544ea12691eecb638323bae37608d0df3740693524e63b13d45d469fc6a"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna": {
+      "bytes": 1757466319,
+      "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/asset.json": {
+      "bytes": 4655,
+      "sha256": "d1898ef92fa992881103cd19de2be6066db38917cb3be2e3ece86d35035692b3"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/cache.json": {
+      "bytes": 1850,
+      "sha256": "c1ea104624bf222e0ca3d9dfaa858bd6fe53586fcc4f811acbd2fe35076788cb"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/domains.json": {
+      "bytes": 14029728,
+      "sha256": "55317c8c03ba8e66de174237a1af55e938908c0dcdfb38171b9140992e522203"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/evidence.json": {
+      "bytes": 108777472,
+      "sha256": "ca89d3e4c09312143c8e94f9abbcfabeabe281aefa64dc6aa60d234e669e5183"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/genes.jsonl": {
+      "bytes": 535549613,
+      "sha256": "86a8fd5179f52957d46c4bd37a1d71b3373eef1966f62924a0c48ea6a5040005"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/proteins.faa": {
+      "bytes": 517972626,
+      "sha256": "b4c10fb3e4157d7889dfff6cd480e5f7f0741439b78f8d4d9656a1bd92ee7149"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/E009-dev5/features/prepared.json": {
+      "bytes": 942,
+      "sha256": "3c4f68dafa73dd5dac7d90b6e53e47c30ed697929094c1df03869b7739456707"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/E009-dev5/features/views.json": {
+      "bytes": 1442,
+      "sha256": "2788754cc90581949ba9217216214c48437054b7e3202fdb0ea47c91aa03126b"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/E009-dev5/features/views.npz": {
+      "bytes": 60980613,
+      "sha256": "3ded4f6d5c7bcbdb13e0204da696de940b4c46330358e5ea1ce668b02c22aabe"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.json": {
+      "bytes": 531,
+      "sha256": "d9a033ca2a3805fac0d88bffbad234e81e932a63b4b056711b9efdbcfb5d850c"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.npz": {
+      "bytes": 333765352,
+      "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/prepared.json": {
+      "bytes": 480,
+      "sha256": "74ddb454c912b1b9d29b54de77e5137e06981ec582b4d717f26426e5d0ba731b"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.json": {
+      "bytes": 1442,
+      "sha256": "a057326c19bcd7365bdf4066b84920f2a6bf1a2c7fb694757b7ac7c7143e7162"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.npz": {
+      "bytes": 419791282,
+      "sha256": "80d30e98c98642cf4dca5aad1b76a061065b3f93e92bab85e6b1ada5e0b4ac76"
+    }
+  },
+  "hmm": "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/marker.hmm",
+  "installed": {
+    "complete_distributions": {
+      "archspec": "0.2.6",
+      "dl-binner": "0.1.0.dev5",
+      "filelock": "4.0.10",
+      "fsspec": "2026.9.0",
+      "igraph": "0.11.8",
+      "jinja2": "3.1.6",
+      "joblib": "1.4.2",
+      "leidenalg": "0.10.2",
+      "llvmlite": "0.43.0",
+      "markupsafe": "3.0.4",
+      "mpmath": "1.3.0",
+      "networkx": "3.4.2",
+      "numba": "0.60.0",
+      "numpy": "1.26.4",
+      "pip": "25.1.1",
+      "psutil": "6.0.0",
+      "pyhmmer": "0.11.0",
+      "pynndescent": "0.5.13",
+      "pyrodigal": "3.6.3",
+      "scikit-learn": "1.5.2",
+      "scipy": "1.13.1",
+      "setuptools": "65.5.0",
+      "sympy": "1.14.0",
+      "texttable": "1.7.0",
+      "threadpoolctl": "3.5.0",
+      "torch": "2.2.2+cpu",
+      "typing-extensions": "4.16.0",
+      "wheel": "0.45.1"
+    },
+    "inventory": {
+      "bytes": 9637,
+      "sha256": "b9523544ea12691eecb638323bae37608d0df3740693524e63b13d45d469fc6a"
+    },
+    "loaded_math_libraries": [
+      {
+        "content": {
+          "bytes": 35123345,
+          "sha256": "9254d0854dd7615e11de28d771ae408878ca8123a7ac204f21e4cc7a376cc2e5"
+        },
+        "direct_link": null,
+        "loader_alias": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+        "resolved_regular": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so"
+      },
+      {
+        "content": {
+          "bytes": 34990041,
+          "sha256": "9b91f6ba8fdba9cf7682371fda53bb228763bd5073ff824edbc4b81e2ddc46bc"
+        },
+        "direct_link": null,
+        "loader_alias": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy.libs/libopenblasp-r0-01191904.3.27.so",
+        "resolved_regular": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy.libs/libopenblasp-r0-01191904.3.27.so"
+      },
+      {
+        "content": {
+          "bytes": 168193,
+          "sha256": "3a7eaece7231911be2fbb1b3e7cb4cb5c2e0f84e0c2bb73739472b5a1feec8c1"
+        },
+        "direct_link": null,
+        "loader_alias": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+        "resolved_regular": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0"
+      },
+      {
+        "content": {
+          "bytes": 1674616,
+          "sha256": "34324e0835be6e103844d7c416bec42834cf803d3ba8d9519df15ced19914dfe"
+        },
+        "direct_link": null,
+        "loader_alias": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/lib/libgomp.so.1.0.0",
+        "resolved_regular": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/lib/libgomp.so.1.0.0"
+      },
+      {
+        "content": {
+          "bytes": 168721,
+          "sha256": "570455c2902d6cc2a7f367703c06dac07495dd7f8a1ed2c8fc4cea628c881b13"
+        },
+        "direct_link": null,
+        "loader_alias": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/lib/libgomp-a34b3233.so.1",
+        "resolved_regular": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/lib/libgomp-a34b3233.so.1"
+      }
+    ],
+    "scope": "Actual isolated execution libraries only, with normal OS aliases resolved; no unused prefix recursion.",
+    "source": {
+      "__init__.py": {
+        "bytes": 112,
+        "sha256": "354c46c057766a6243be40711dda76118ce958bbd6f4768ccab3b8bf9252b658"
+      },
+      "__main__.py": {
+        "bytes": 103,
+        "sha256": "28f47a18f1a12c011b4fa92812d8f4fb10840c469d489ee5ac246bc669620144"
+      },
+      "accounting.py": {
+        "bytes": 6732,
+        "sha256": "2a83aad8eb36864a704ebe72faeeba33c335c86f7072205f6f19c92db9f6f117"
+      },
+      "candidate/__init__.py": {
+        "bytes": 81,
+        "sha256": "5887ddf687250cefcf87aaa082c5a4edc9a5281a8a1be7a752300a5fcb190eff"
+      },
+      "candidate/grouping.py": {
+        "bytes": 12615,
+        "sha256": "d31c67705b2fc80d5fd06d8b2c403d7e543ebd64fc37c08b5b3db90ba657f233"
+      },
+      "candidate/markers.py": {
+        "bytes": 11226,
+        "sha256": "a77739cb64d219bf3af8e2baeb66ed81c86c53a8c5c633a184ee28412ee2760a"
+      },
+      "candidate/model.py": {
+        "bytes": 10499,
+        "sha256": "09eda66fcd324870d11b89c6f6b4bc7e4c02f3169d6d557389bc8c840de76f09"
+      },
+      "candidate/runner.py": {
+        "bytes": 12350,
+        "sha256": "ab153821b9bacf70373c7ffd79c058b1be356a6f96bdfae5aa8638cf4bdab2eb"
+      },
+      "candidate/views.py": {
+        "bytes": 8357,
+        "sha256": "d3f1b51ac61009f9f962d767fce5600d5c93bd14b4ca9adb4bdef7564438392f"
+      },
+      "cli.py": {
+        "bytes": 10923,
+        "sha256": "5d463fd8d901934348d4664a0b02929770853cb2af5b26d8fdbcb6a4ba409aad"
+      },
+      "clustering.py": {
+        "bytes": 7880,
+        "sha256": "2ac715b1449287b002ef7e4a75b84ef204256c2d5f589e31a6810acfad941b66"
+      },
+      "contracts.py": {
+        "bytes": 1671,
+        "sha256": "0455b5a45ecbb29eb1f6c168048efa3a861279dc7ba2af36896ddb6dfcab632d"
+      },
+      "io.py": {
+        "bytes": 12016,
+        "sha256": "71b0c423c046b3c72b651141e853ea622a62742fc087afeef37fbf9c253c2307"
+      },
+      "model.py": {
+        "bytes": 13986,
+        "sha256": "acc1f3c450910112cd7883cc6284139046fde6b339e73b82638d301d8e5a9948"
+      },
+      "multiview/__init__.py": {
+        "bytes": 85,
+        "sha256": "7724296c827c8ae34dc7558de991243c52ee78c1b8a37837e3070487657fe160"
+      },
+      "multiview/arrays.py": {
+        "bytes": 1395,
+        "sha256": "e6239aaa8ca298b5afd97d4c45ab58ff72183f485e4263226aebbcae03500a97"
+      },
+      "multiview/downstream.py": {
+        "bytes": 7469,
+        "sha256": "a24e96291dc6e779734e6990008296e7e7d8d3e400ff9102004a09959fa8fbbb"
+      },
+      "multiview/model.py": {
+        "bytes": 10256,
+        "sha256": "6342819c74f8d7da4cc23bea7666169de605d2c391ce3711d98243fc88f550d2"
+      },
+      "multiview/refinement.py": {
+        "bytes": 16783,
+        "sha256": "0c1bae1f0fd5e8873cc30e68218e6796e87bf43b7d9262d2ec42fd781a51b8c0"
+      },
+      "multiview/stage.py": {
+        "bytes": 2190,
+        "sha256": "a06543d0cd70ba4a63637a7072b96d03becc773c7ae0ba1dbeb4c603b2677581"
+      },
+      "multiview/views.py": {
+        "bytes": 9370,
+        "sha256": "0b3a00b87c17cd56417e589ebcb3a9f3234f85f4c14ac0b9204a680dc2590935"
+      },
+      "resources/candidate.json": {
+        "bytes": 678,
+        "sha256": "1c8049fa2cf70e51c2eab22fc7fe5cd0e626f807360b56ff2b392756207baa60"
+      },
+      "resources/multiview.json": {
+        "bytes": 799,
+        "sha256": "0f532c4912b002c5cdb2ebde48bf172c96577f3edb066a1c03864e2b537c6038"
+      },
+      "resources/training.json": {
+        "bytes": 215,
+        "sha256": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5"
+      },
+      "runner.py": {
+        "bytes": 20667,
+        "sha256": "99cbd7a14c360011b473dd22a03777eb7e3dfff109f11c78a2f5c1f067af3e8f"
+      },
+      "supervision.py": {
+        "bytes": 9575,
+        "sha256": "8ee9bd7d5f05a8e487a8691f7ab8152cca627f9f55ad27d48c6ece61cbd9a8a9"
+      }
+    },
+    "source_lock": {
+      "bytes": 6310,
+      "sha256": "aaa372f7f487ddf3b6c4d2ea21fb0beb8302a18b696b70eb9b83576b610ed6dc"
+    },
+    "status": "PASS",
+    "version": "0.1.0.dev5"
+  },
+  "kind": "E015 restore-only accepted E014 input/runtime contract",
+  "native_science_source": "858b7cc8adea930ea6f13f754eeaa8d031a9b5b4",
+  "native_work_inventory": {
+    "bytes": 4564835,
+    "sha256": "8333756f6d15ff52a8bb1a6d30b55f0bc93a5e7154a4b8f6daedcf431c2edc0e"
+  },
+  "no_fallback": "Refuse missing/corrupt bytes; no acquisition, regeneration, recopy or reinstall",
+  "original_inputs_receipt": {
+    "E009": {
+      "all_zero_depth_rows": 13,
+      "bp": 231678157,
+      "canonical_families": 107,
+      "contigs": 145702,
+      "depth_shape": [
+        145702,
+        10
+      ],
+      "eligible": 89041,
+      "features": {
+        "bytes": 42384557,
+        "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+      },
+      "marker_profiles": 111,
+      "ordered_samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ]
+    },
+    "oral": {
+      "DNA": {
+        "bytes": 1757466319,
+        "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+      },
+      "sequence_only": true,
+      "source_blind": true
+    },
+    "status": "PASS",
+    "truth_read": false
+  },
+  "python": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/bin/python",
+  "runtime": {
+    "base_prefix": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315",
+    "distribution_locations": {
+      "archspec": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/archspec-0.2.6.dist-info",
+      "dl-binner": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner-0.1.0.dev5.dist-info",
+      "filelock": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/filelock-4.0.10.dist-info",
+      "fsspec": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/fsspec-2026.9.0.dist-info",
+      "igraph": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/igraph-0.11.8.dist-info",
+      "jinja2": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/jinja2-3.1.6.dist-info",
+      "joblib": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/joblib-1.4.2.dist-info",
+      "leidenalg": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/leidenalg-0.10.2.dist-info",
+      "llvmlite": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/llvmlite-0.43.0.dist-info",
+      "markupsafe": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/markupsafe-3.0.4.dist-info",
+      "mpmath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/mpmath-1.3.0.dist-info",
+      "networkx": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/networkx-3.4.2.dist-info",
+      "numba": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numba-0.60.0.dist-info",
+      "numpy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy-1.26.4.dist-info",
+      "pip": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pip-25.1.1.dist-info",
+      "psutil": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/psutil-6.0.0.dist-info",
+      "pyhmmer": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyhmmer-0.11.0.dist-info",
+      "pynndescent": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pynndescent-0.5.13.dist-info",
+      "pyrodigal": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyrodigal-3.6.3.dist-info",
+      "scikit-learn": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn-1.5.2.dist-info",
+      "scipy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy-1.13.1.dist-info",
+      "setuptools": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/setuptools-65.5.0.dist-info",
+      "sympy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/sympy-1.14.0.dist-info",
+      "texttable": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/texttable-1.7.0.dist-info",
+      "threadpoolctl": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/threadpoolctl-3.5.0.dist-info",
+      "torch": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch-2.2.2+cpu.dist-info",
+      "typing-extensions": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/typing_extensions-4.16.0.dist-info",
+      "wheel": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/wheel-0.45.1.dist-info"
+    },
+    "distributions": {
+      "archspec": "0.2.6",
+      "dl-binner": "0.1.0.dev5",
+      "filelock": "4.0.10",
+      "fsspec": "2026.9.0",
+      "igraph": "0.11.8",
+      "jinja2": "3.1.6",
+      "joblib": "1.4.2",
+      "leidenalg": "0.10.2",
+      "llvmlite": "0.43.0",
+      "markupsafe": "3.0.4",
+      "mpmath": "1.3.0",
+      "networkx": "3.4.2",
+      "numba": "0.60.0",
+      "numpy": "1.26.4",
+      "pip": "25.1.1",
+      "psutil": "6.0.0",
+      "pyhmmer": "0.11.0",
+      "pynndescent": "0.5.13",
+      "pyrodigal": "3.6.3",
+      "scikit-learn": "1.5.2",
+      "scipy": "1.13.1",
+      "setuptools": "65.5.0",
+      "sympy": "1.14.0",
+      "texttable": "1.7.0",
+      "threadpoolctl": "3.5.0",
+      "torch": "2.2.2+cpu",
+      "typing-extensions": "4.16.0",
+      "wheel": "0.45.1"
+    },
+    "isolated_native_groups": {
+      "graph": {
+        "origins": {
+          "igraph": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/igraph/__init__.py",
+          "leidenalg": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/leidenalg/__init__.py",
+          "numba": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numba/__init__.py",
+          "pynndescent": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pynndescent/__init__.py",
+          "scipy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy/__init__.py",
+          "sklearn": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/sklearn/__init__.py"
+        },
+        "pools": [
+          {
+            "architecture": "Zen",
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.23.dev"
+          },
+          {
+            "architecture": "Zen",
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy.libs/libopenblasp-r0-01191904.3.27.so",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.27"
+          },
+          {
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+            "internal_api": "openmp",
+            "num_threads": 4,
+            "prefix": "libgomp",
+            "user_api": "openmp",
+            "version": null
+          },
+          {
+            "filepath": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/lib/libgomp.so.1.0.0",
+            "internal_api": "openmp",
+            "num_threads": 4,
+            "prefix": "libgomp",
+            "user_api": "openmp",
+            "version": null
+          }
+        ]
+      },
+      "markers": {
+        "origins": {
+          "archspec": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/archspec/__init__.py",
+          "pyhmmer": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyhmmer/__init__.py",
+          "pyrodigal": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyrodigal/__init__.py"
+        },
+        "pools": []
+      },
+      "tensor": {
+        "origins": {
+          "dl_binner": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/dl_binner/__init__.py",
+          "numpy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy/__init__.py",
+          "threadpoolctl": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/threadpoolctl.py",
+          "torch": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/__init__.py"
+        },
+        "pools": [
+          {
+            "architecture": "Zen",
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.23.dev"
+          },
+          {
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/lib/libgomp-a34b3233.so.1",
+            "internal_api": "openmp",
+            "num_threads": 4,
+            "prefix": "libgomp",
+            "user_api": "openmp",
+            "version": null
+          }
+        ]
+      }
+    },
+    "prefix": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env",
+    "python": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/bin/python",
+    "python_version": "3.12.10",
+    "role": "candidate",
+    "status": "passed",
+    "system": "Linux",
+    "threads": 4,
+    "user_site_enabled": false
+  },
+  "source_lock": {
+    "bytes": 6310,
+    "sha256": "aaa372f7f487ddf3b6c4d2ea21fb0beb8302a18b696b70eb9b83576b610ed6dc"
+  },
+  "units": {
+    "E009-zero": {
+      "fasta": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+      "features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "marker_cache": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers",
+      "views": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/E009-dev5/features/views.npz"
+    },
+    "oral-zero": {
+      "fasta": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+      "features": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.npz",
+      "marker_cache": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers",
+      "views": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.npz"
+    }
+  },
+  "workflow_python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python"
+}

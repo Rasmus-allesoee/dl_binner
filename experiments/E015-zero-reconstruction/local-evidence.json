@@ -1,0 +1,43 @@
+{
+  "status": "LOCAL_ENGINEERING_PASS; native Linux gates pending",
+  "tests": {
+    "new_policy_source_archive_release_contracts": 4,
+    "new_native_tests": 2,
+    "actual_serial_tiny_DAG_jobs": 13,
+    "actual_tiny_modes": [
+      "measured parent depth",
+      "sequence-only"
+    ],
+    "unchanged_evaluator_contracts": 5
+  },
+  "native_modules": "Real installed Mac PyTorch/Pyrodigal/PyHMMER/igraph/leiden/sparse graph/readers/refiner/export. Separate processes for incompatible numerical library families; no model/tolerance workaround.",
+  "actual": "Initial direct two-modality worker path passed39.834s; expanded actual serial DAG and fit-to-cap collector passed31.110s after local cache/process-read corrections. No community fit/score.",
+  "failures_preserved": [
+    "AST test fixture indexed configure_torch rather than the policy node; test index fixed, training loop unchanged",
+    "Mac Snakemake runtime source cache outside sandbox; explicit job-local runtime-source-cache-path",
+    "Mac extended benchmark psutil process reads denied; full test passed with OS-process-read escalation, not a disabled benchmark",
+    "One evaluator test used system Python without numerical packages; repeated correctly with original lexical dev5 Mac environment"
+  ],
+  "original_Mac_portability": "Old allclose remains failed; no tolerance widening or native vector edit. Native Linux reload independently required.",
+  "logs": {
+    "local-contracts-release.log": {
+      "bytes": 794,
+      "sha256": "4d31c647c98f40e2c0158626aa43a1dfd8e56fdf243d27363ccd062b2a7885f2"
+    },
+    "local-native-attempt1.log": {
+      "bytes": 893,
+      "sha256": "95dfbb1a7c6459cd9766ac187bd6b26e2b01ece5c05c5d8b1fa1ee4cb37c2930"
+    },
+    "local-native-DAG-attempt4.log": {
+      "bytes": 839,
+      "sha256": "0e270d7b20426d73507c2590dbbdc109fa6f2f7b7829372228c6e4627651887a"
+    },
+    "reused-evaluator-contracts-attempt2.log": {
+      "bytes": 874,
+      "sha256": "ca4bce4fb28cfc903edd68bc466edf042e530bd83377d3c73492834d53eb5f87"
+    }
+  },
+  "package_source_changed": false,
+  "accepted_science_replayed": false,
+  "sampled_engineering_peak_RSS": "Not measured for these direct tiny test calls; no full-community resource claim"
+}

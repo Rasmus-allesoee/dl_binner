@@ -169,7 +169,11 @@ and project evidence can justify a coherent upgrade with several related changes
 Use selective matched ablations for uncertainties that can change the design or
 for component-level causal claims; do not require an isolated performance win for
 every ingredient before implementation. An integrated upgrade establishes a bundle
-result unless further controls isolate its causes. Data inspected to choose
+result unless further controls isolate its causes. Disabling a loss in a matched control
+should preserve module construction, initialization and random-number consumption
+unless changing those is the declared treatment. Admit training-only configuration
+overrides explicitly against retained cache metadata; never rewrite the accepted
+cache to make a new treatment pass. Data inspected to choose
 improvements become development data, even when they originate from a public
 community benchmark.
 Preserve the accepted main implementation as the immutable comparator on a new

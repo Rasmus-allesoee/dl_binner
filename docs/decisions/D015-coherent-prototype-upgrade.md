@@ -518,3 +518,19 @@ requests the separate scope. Both inspected communities now count as development
 Later independent confirmation needs a prospectively frozen additional-community
 protocol and source/overlap/truth/cost admission. Original oral choice and E014
 admission stay historical evidence. October21 storage review remains.
+
+
+## E015 matched reconstruction control authorization, 2026-10-19
+
+The owner now authorizes [E015](../../experiments/E015-zero-reconstruction/README.md)
+under a separate conditional$2. Preserve both decoder heads and their initialization/
+RNG use; zero only the two loss coefficients, reusing retained banks and all
+accepted evaluations. A narrow research train-function adapter admits those two
+configuration overrides without altering the original view metadata or dev5 package;
+its remaining statements have an AST equality contract. This is the already
+contemplated decision-changing control, not a compulsory one-feature campaign or
+attempt to optimize both datasets by a weight grid. Credit abundance permits
+larger scientifically justified work later; keep this treatment interpretable.
+New loss/source/protocol/criteria and fit-to-cap collection are frozen before any
+new outcome. Both communities remain development; additional untouched confirmation
+requires prospective admission. Existing$2/2h/2.25hSTOP and October21 remain.

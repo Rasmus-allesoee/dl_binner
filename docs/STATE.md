@@ -4,6 +4,21 @@ Updated: 2026-10-19. This is the single current handoff.
 
 ## Exact next step
 
+**E015 zero-reconstruction control is authorized conditionally and being prepared.**
+Owner selected the previously contemplated matched control on new branch
+`e015-zero-reconstruction`: precisely both reconstruction coefficients0, original
+encoder+decoder/RNG/views/features/cache/exposure/dropout/schedule and CPM/E013
+fixed. [Protocol](../experiments/E015-zero-reconstruction/protocol.json),
+[record](../experiments/E015-zero-reconstruction/README.md) and
+[operations](../experiments/E015-zero-reconstruction/OPERATIONS.md) own this block.
+The earlier next-step proposal below is now authorized as **new$2**, with fresh
+live financial/native/headroom gates,2h cumulative from VM start/2.25hSTOP,
+existing8vCPU/32GiB/300GiB,4threads/26GBRSS/20GiBextra/25GiBfree/2GiBreturn.
+No release or new community result yet. Credit breadth is welcome for justified
+larger development work; this deliberately matched treatment answers whether
+reconstruction earns its cost/trade-offs. No extra campaign, confirmation or
+retention extension follows. **October21 storage review remains.**
+
 **E014 completed and independently reviewed; VM TERMINATED.**
 Phase `comparison-20261018T183446Z-858b7cc` completed all three frozen fits and
 19 scientific rule invocations plus the final DAG target, with exit0. All15 native

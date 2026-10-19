@@ -1,0 +1,78 @@
+"""Actual E015 policy/source/collection refusal tests, independent of cloud state."""
+import ast
+import json
+from pathlib import Path
+import sys
+import tempfile
+import unittest
+
+REPO=Path(__file__).absolute().parents[1];sys.path.insert(0,str(REPO/'scripts'))
+from e015_policy import validate_control
+from e015_collect import pack,verify
+
+
+class ControlContracts(unittest.TestCase):
+    def test_only_two_weights_change_and_training_loop_AST_is_frozen(self):
+        base=json.loads((REPO/'src/dl_binner/resources/multiview.json').read_text())
+        cfg=json.loads((REPO/'experiments/E015-zero-reconstruction/config.json').read_text());validate_control(cfg,base)
+        for changed in [dict(seed=12),dict(depth_dropout=.4),dict(composition_reconstruction_weight=.1)]:
+            with self.assertRaises(ValueError):validate_control(cfg|changed,base)
+        with self.assertRaises(ValueError):validate_control(cfg,cfg)
+        old=next(n for n in ast.parse((REPO/'src/dl_binner/multiview/model.py').read_text()).body if isinstance(n,ast.FunctionDef)and n.name=='train')
+        new=next(n for n in ast.parse((REPO/'scripts/e015_training.py').read_text()).body if isinstance(n,ast.FunctionDef)and n.name=='train')
+        # The sole change is explicit admission of the original bank policy.
+        self.assertEqual(ast.unparse(old.body[3]),"if vm['policy'] != cfg:\n    raise ValueError('Multiview bank/config differs')")
+        self.assertEqual(ast.unparse(new.body[3]),"validate_control(cfg, vm['policy'])")
+        new.body[3]=old.body[3]
+        self.assertEqual(ast.dump(old),ast.dump(new))
+
+    def test_release_needs_current_credit_retention_clock_and_exact_config(self):
+        import time
+        from e015_phase import admission,STOP_SECONDS,SECONDS
+        from e014_collect import binding
+        with tempfile.TemporaryDirectory() as t:
+            p=Path(t)/'config.json';p.write_text('{}');now=time.time()
+            cfg=dict(_path=str(p),vm_start_epoch=now)
+            r={k:True for k in ['credit_gate_passed','pending_usage_accounted','native_gates_passed','watchdog_verified','existing_VM_only','full_axes_verified']}
+            r.update(config=binding(p),provider_STOP_seconds=STOP_SECONDS,ceiling_USD=2,estimated_incremental_gross_USD=1.1,
+                storage_retention_extended=False,covered_costs=['compute','disk','storage','network','operations'],
+                credit_valid_until_epoch=now+100000,storage_valid_until_epoch=now+100000)
+            admission(cfg,r,now)
+            for changed in [dict(credit_gate_passed=False),dict(provider_STOP_seconds=9000),dict(ceiling_USD=10),
+                            dict(estimated_incremental_gross_USD=2.1),dict(storage_retention_extended=True),
+                            dict(storage_valid_until_epoch=now+8100),dict(covered_costs=['compute'])]:
+                with self.assertRaises(ValueError):admission(cfg,r|changed,now)
+            with self.assertRaises(TimeoutError):admission(cfg,r,now+SECONDS)
+
+    def fixture(self,p):
+        work=p/'work';(work/'units/x/train').mkdir(parents=True);evidence=p/'evidence';evidence.mkdir()
+        (work/'units/x/train/reference.npz').write_bytes(b'identical native reload bytes')
+        (work/'units/x/embeddings.npz').write_bytes(b'identical native reload bytes')
+        (work/'units/x/graph.npz').write_bytes(b'tiny real graph transport')
+        (work/'units/x/partition.json').write_text('{"assignment":[0,-1]}')
+        (work/'units/x/full.fna').write_text('>opaque\nACGTNN\n')
+        (evidence/'passed.json').write_text('{"status":"PASS"}')
+        return work,evidence
+
+    def test_actual_archive_member_alias_and_DNA_accounting(self):
+        with tempfile.TemporaryDirectory() as t:
+            p=Path(t);work,evidence=self.fixture(p);r=pack(work,evidence,p/'return')
+            self.assertTrue(r['every_member_verified']);self.assertEqual(len(r['aliases']),1)
+            v=verify(p/'return/e015-evidence.tar.gz',r['archive'],p/'verified')
+            self.assertEqual(v['regular_members'],r['regular_members'])
+            inv=json.loads((p/'verified/inventory.json').read_text());self.assertIn('units/x/full.fna',inv['omitted_DNA_retained_on_disk'])
+            (p/'return/e015-evidence.tar.gz').write_bytes(b'corruption')
+            with self.assertRaisesRegex(ValueError,'bytes/cap'):verify(p/'return/e015-evidence.tar.gz',r['archive'])
+
+    def test_collection_refuses_nonidentical_alias_link_unknown_or_impossible_bound(self):
+        for mode in ['nonidentical','link','unknown','cap']:
+            with self.subTest(mode=mode),tempfile.TemporaryDirectory() as t:
+                p=Path(t);work,evidence=self.fixture(p)
+                if mode=='nonidentical':(work/'units/x/train/reference.npz').write_bytes(b'different')
+                if mode=='link':(work/'link.json').symlink_to(evidence/'passed.json')
+                if mode=='unknown':(work/'unsupported.bin').write_bytes(b'unknown')
+                with self.assertRaisesRegex(ValueError,{'nonidentical':'not exact','link':'link refused','unknown':'Unexpected','cap':'bound exceeds'}[mode]):
+                    pack(work,evidence,p/'return',ceiling=1 if mode=='cap' else 2*1024**3)
+
+
+if __name__=='__main__':unittest.main()

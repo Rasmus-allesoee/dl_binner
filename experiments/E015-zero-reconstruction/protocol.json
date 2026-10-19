@@ -1,0 +1,63 @@
+{
+  "record": "E015",
+  "frozen_before_changed_outcomes": true,
+  "question": "Does joint reconstruction earn its cost/trade-offs in the fixed dev5 multiview bundle?",
+  "treatment": {
+    "composition_reconstruction_weight": 0.0,
+    "depth_reconstruction_weight": 0.0
+  },
+  "held_fixed": [
+    "all original package source/defaults",
+    "encoder AND decoder construction/initialization and RNG consumption",
+    "original retained real crop banks/features/marker calls",
+    "every available same-parent positive",
+    "full eligible-parent exposure",
+    "measured-parent depth semantics and independent branch dropout",
+    "seed11/20epochs/batch256",
+    "unit-sphere inference and kNN graph construction/weights",
+    "sole CPM median-positive-weight/30 rule",
+    "E013 refiner and pre/old/post alternatives"
+  ],
+  "arms": [
+    "E009-zero: new ten-depth fit",
+    "oral-zero: new sequence-only fit"
+  ],
+  "reused": "E014 and all older accepted outputs/evaluations unchanged, without refits or rescoring",
+  "science_adapter": "Only the train function view-policy check permits exactly two zero coefficient overrides. AST equality test proves remainder unchanged. Decoder terms are computed, then weighted0; heads remain in optimizer and RNG sequence. This does not turn raw reconstruction diagnostic values into zero.",
+  "truth": {
+    "E009": "admitted conservative-v2;156 targets/554661890fullbp;7653205bp/3.3034% N quarantine",
+    "oral": "provided-source-origin oracle v1;799targets/2083072211fullbp incl2zeroGSA,1734localizednonACGTbp,49knownsharedqueries/12063bp with predeclared mask sensitivity; unique support unadmitted",
+    "boundary": "No truth/genome/taxon/K/score in features, model, grouping or selector; metric thresholds unchanged95%/200kb, no per-bin oracle"
+  },
+  "metrics": [
+    "full provided-reference weighted/macro R95 and every target paired recoveredbp",
+    "targets>=50/90%",
+    "parent/old/E013 paired outcomes",
+    "matched native/raw neighborhoods and restricted grouping precision/recall/F1",
+    "all length/origin/eligibility/marker/unassigned/excluded/unknown/non-target populations",
+    "native reload/geometry/CPU/time/RSS/disk/cost"
+  ],
+  "decision": {
+    "keep_zero": "Directionally useful full-reference weighted R95 gains on both datasets against E014dev5, with target>=50/90% no lower, while reporting length/grouping/unassigned trade-offs. Supports replacing reconstruction for the next development candidate, not a universal default.",
+    "keep_reconstruction": "Directionally worse R95 on both with no compensating target-count, geometry, assignment or material resource gain: keep E014 reconstruction provisionally.",
+    "modify": "Discordance/ties or material population trade-offs: retain both evidence, do not choose per dataset/bin or tune weights. Name one next decision using all paired evidence; permit a reasoned provisional development direction without changing the failed criteria.",
+    "abandon": "Failed integrity/truth/fullDNA/native contract invalidates that arm, not a biological feature family; no outcome-driven repair of science."
+  },
+  "resources": {
+    "gross_USD": 2,
+    "cumulative_VM_start_seconds": 7200,
+    "provider_STOP_seconds": 8100,
+    "numerical_threads": 4,
+    "VM": "existing e2-standard-8/32GiB",
+    "work_disk_GiB": 300,
+    "sampled_tree_RSS_bytes": 26000000000,
+    "extra_working_GiB": 20,
+    "free_reserve_GiB": 25,
+    "compressed_export_GiB": 2,
+    "local_review": "4threads/8GBRSS/1hour/4GiBextra",
+    "retention_valid_until_epoch": 1792533600,
+    "storage_review": "October21 unchanged; no extension"
+  },
+  "confirmation": "Both inspected communities are development. No untouched additional confirmation input has been admitted. A later prospectively named community requires sample/source/genome/replicon/molecule/taxonomy/overlap/unique-vs-origin truth/full-denominator/length/depth/evaluation/cost/retention admission before acquisition or scores. Sequence-only GSA cannot establish read-assembly/ten-depth/unseen-genome benefits.",
+  "authorization": "Owner explicitly authorizes this conditional two-fit scope. Credit abundance permits scientifically valuable larger work later, but does not change this matched treatment or authorize another campaign here."
+}
