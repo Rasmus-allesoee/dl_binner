@@ -26,6 +26,20 @@ class ControlContracts(unittest.TestCase):
         new.body[3]=old.body[3]
         self.assertEqual(ast.dump(old),ast.dump(new))
 
+    def test_actual_controller_to_native_configuration_schema_in_fresh_directory(self):
+        from e015_phase import configuration
+        from e014_collect import binding
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);plan=root/'science-plan.json';plan.write_text('{}')
+            ident=dict(root=str(root),service_name='fresh-test',source='a'*40,vm_start_epoch=12345,
+                       archive_prefix='gs://private-existing/fresh')
+            value=configuration(ident,root/'repo',100,{str(plan):binding(plan)})
+            path=root/'config.json';path.write_text(json.dumps(value));read=json.loads(path.read_text())
+            self.assertEqual(read['source_commit'],ident['source']);self.assertEqual(read['science_plan'],str(plan))
+            self.assertEqual(read['bindings'][str(plan)],binding(plan))
+            self.assertEqual(read['reuse_lock'],str(root/'repo/experiments/E015-zero-reconstruction/reuse-lock.json'))
+            with self.assertRaises(ValueError):configuration(ident|dict(source='short'),root,100,{})
+
     def test_release_needs_current_credit_retention_clock_and_exact_config(self):
         import time
         from e015_phase import admission,STOP_SECONDS,SECONDS

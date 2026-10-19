@@ -39,5 +39,15 @@
   },
   "package_source_changed": false,
   "accepted_science_replayed": false,
-  "sampled_engineering_peak_RSS": "Not measured for these direct tiny test calls; no full-community resource claim"
+  "sampled_engineering_peak_RSS": "Not measured for these direct tiny test calls; no full-community resource claim",
+  "native_config_repair": {
+    "before_community_release": true,
+    "failure": "Generated controller field source was not translated to native source_commit; held parent and bootstrap refused before any native gate/science child",
+    "test": "Actual configuration factory now writes/read-checks fresh config schema;5policy/config/collection/release tests pass",
+    "log": {
+      "bytes": 986,
+      "sha256": "4a4118607e8da790ecb0047b05b9f5d5495916319a47a4970b2d36d34e3786ef"
+    },
+    "recovery": "Fresh phase/config/service on the same boot/original7200s clock; original failed journals retained, no accepted science replay"
+  }
 }

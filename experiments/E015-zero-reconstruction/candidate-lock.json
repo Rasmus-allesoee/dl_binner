@@ -35,8 +35,8 @@
       "sha256": "9bccc7187e026750ced0f8cedb2a611021515365ace11df1fecdd4982a55165c"
     },
     "scripts/e015_phase.py": {
-      "bytes": 9098,
-      "sha256": "96cec633141eb6687e6b08b6eb708ef1f17eebc182482bb3dc81dff17d2be3ac"
+      "bytes": 10197,
+      "sha256": "13fe335c24f0b44062bd6205db47f5bbc627545f111f1ba4bbe0542c45267cc9"
     },
     "scripts/e015_policy.py": {
       "bytes": 700,
@@ -55,8 +55,8 @@
       "sha256": "6a1a8c914c91e209480aa14a2142a2a72d17894744a1011fd3276ad398d900c5"
     },
     "tests/test_e015_contracts.py": {
-      "bytes": 5239,
-      "sha256": "8ad91618faa8dbfdc930c025504978d636ae67277c9b5909b93d56df06045535"
+      "bytes": 6304,
+      "sha256": "29b87b7f6476f175aa348aa6dff261c5470486abb8f8a8a111ddb50e910762ed"
     },
     "tests/test_e015_native.py": {
       "bytes": 6457,
@@ -70,8 +70,8 @@
   },
   "release": "Exact clean pushed source commit is recorded later in native receipt, not self-referential in this lock",
   "test_receipt": {
-    "bytes": 2230,
-    "sha256": "638f81febab0035f412d58a9cac8f5dd7460e6ff21aa328d7651078e077b9fef"
+    "bytes": 2868,
+    "sha256": "8726c7fd753daedafca4a863f4004e7f3a9e921df3acabb635e54e16b4d3f438"
   },
   "unchanged_package_source": {
     "__init__.py": {

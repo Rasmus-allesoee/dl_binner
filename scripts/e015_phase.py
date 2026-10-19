@@ -26,6 +26,26 @@ SECONDS=7200
 STOP_SECONDS=8100
 
 
+
+def configuration(identity,repo,initial_filesystem_used_bytes,bindings):
+    """Build the actual held-parent schema from a controller launch identity.
+
+    The controller names its Git identity `source`; every native consumer requires
+    `source_commit`. Keep this explicit translation tested rather than passing an
+    unchecked controller dictionary through to a running service.
+    """
+    repo=Path(repo);root=Path(identity['root'])
+    value=dict(identity,source_commit=identity['source'],repo=str(repo),
+        science_plan=str(root/'science-plan.json'),
+        reuse_lock=str(repo/'experiments/E015-zero-reconstruction/reuse-lock.json'),
+        initial_filesystem_used_bytes=initial_filesystem_used_bytes,bindings=bindings)
+    required={'root','service_name','source_commit','repo','science_plan','reuse_lock',
+              'initial_filesystem_used_bytes','bindings','vm_start_epoch','archive_prefix'}
+    if not required<=set(value) or len(value['source_commit'])!=40 or value['vm_start_epoch']<=0:
+        raise ValueError('Incomplete held-parent configuration')
+    return value
+
+
 def admission(cfg,release,now):
     """Refuse drift in source, budget, complete credit coverage or original retention."""
     if not 0<=now-cfg['vm_start_epoch']<SECONDS-600:raise TimeoutError('Original two-hour clock unavailable')
