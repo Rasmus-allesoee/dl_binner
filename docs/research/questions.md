@@ -427,3 +427,18 @@ E014 native release, 2026-10-18: all 15 Linux gates pass and the frozen three-fi
 comparison is [running under supervision](../../experiments/E014-multiview-reconstruction/native-observed.json).
 This changes execution status only; no community quality result or feature-family
 conclusion yet. Retain both truth scopes and the unchanged October21 review.
+
+
+2026-10-19 E014 completed: [the reviewed frozen bundle](../../experiments/E014-multiview-reconstruction/comparison-review.json)
+passes native/byte/axes/reload/geometry/marker/DNA contracts but misses its improve-
+both criterion. E009 conservative R95 is5.5196% versus retained5.7388%; oral
+provided-origin R95 is6.2432% versus5.7242%. Bacterial/short-neighbor improvements,
+length/grouping/assignment trade-offs and paired marker effects are separately
+recorded, with full denominators and both quarantine policies. No metric pooling,
+feature-family verdict or SOTA/causal ingredient claim. Q001/Q003/Q005 remain open.
+D015 selects one zero-reconstruction condition to decide that block's value while
+holding the rest fixed; no new fit is authorized by the completed inspection.
+Both communities now serve development; independent confirmation still needs
+prospective additional data/source/overlap/truth/protocol/cost admission. All
+failed journals and dev3/dev4/dev5 stay preserved. VM is independently TERMINATED;
+original$10 remains bounded and October21 storage review is unchanged.

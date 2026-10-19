@@ -413,6 +413,14 @@ before a child starts. Surface native causes beyond scheduler trailers. Distingu
 exited/zombie from live processes during cleanup and verify the intended stop and
 absence of running orphans. Label-free size/assignment summaries must not imply
 genome recovery or MAG quality without a separate evaluator.
+
+Forecast both compressed return size and the uncompressed local review working
+set. For large retained evidence, stage only needed copies and distinguish native
+in-place verification from a local reread. Lossless deduplication requires explicit
+aliases with identical byte counts and content hashes; omitted on-disk artifacts
+are not backed up merely because their inventory is archived. Keep scientific
+completion, contract review and evidence delivery as separate statuses.
+
 Report retained storage from the immutable archive members, including its
 inventory and terminal snapshot. Do not sum an open log after collection and
 present that as the archived payload; retain and append corrections to older

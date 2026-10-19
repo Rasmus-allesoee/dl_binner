@@ -1,68 +1,90 @@
 # Current Research State
 
-Updated: 2026-10-18. This is the single current handoff.
+Updated: 2026-10-19. This is the single current handoff.
 
 ## Exact next step
 
-**E014 frozen comparison is running normally under verified shutdown supervision.**
-Phase `comparison-20261018T183446Z-858b7cc` uses clean pushed source **858b7cc**
-on `e014-multiview-reconstruction`. The existing VM started October18 at
-**18:35:08.455 UTC /20:35 Copenhagen**. [Native observation](../experiments/E014-multiview-reconstruction/native-observed.json)
-owns the exact process/boot, gates, limits, logs and cost records. All 15 Linux
-gates pass; release occurred at **18:48:42.532 UTC**. At **18:57 UTC**, both oral
-feature stages have exited successfully and E009 dev5 feature construction
-advanced to 64,000/145,702 contigs, with real CPU progress and no reported science
-error. No community fit/score has completed yet. Do not start another job or
-disturb accepted outputs.
+**E014 completed and independently reviewed; VM TERMINATED.**
+Phase `comparison-20261018T183446Z-858b7cc` completed all three frozen fits and
+19 scientific rule invocations plus the final DAG target, with exit0. All15 native
+gates, exact native reloads, complete axes, graph/neighbor, cached-marker and
+pre/post full-DNA contracts pass. [Comparison review](../experiments/E014-multiview-reconstruction/comparison-review.json)
+owns results/limits; [inspection receipt](../experiments/E014-multiview-reconstruction/inspection-observed.json)
+owns recovery, control-plane state, costs and checksums. Original science source
+**858b7cc** and all dev3/dev4/E009–E013 evidence remain unchanged.
 
-The fresh process-bound watcher is armed and passes actual Linux live/normal-exit/
-crash tests. Provider STOP44100s/automaticRestart=false is independently verified.
-The original twelve-hour clock includes setup/upload/gates/science/collection;
-driver deadline **October19 06:35 UTC /08:35 Copenhagen**, provider STOP **06:50
-UTC /08:50 Copenhagen**. Release passed before the original October18
-**19:20 UTC** setup cutoff.
-Initial free **129.55 GiB** exceeds45-GiB growth plus25-GiB reserve. No new
-machine/disk/service/quota, resize or retention extension. The **October21 storage
-review remains**; existing disks continue at quoted **$31.20/month**.
+| Frozen comparison | E009 conservative-v2 weighted R95 | Oral provided-origin weighted R95 |
+| --- | ---: | ---: |
+| Preserved dev4 + provisional E013 refinement | 5.7388% | 5.7242% |
+| Dev5 multiview/reconstruction + same policy | 5.5196% | 6.2432% |
 
-The [frozen three-fit comparison](../experiments/E014-multiview-reconstruction/comparison-protocol.json)
-is E009 dev5 and sequence-only oral dev4/dev5. Reuse accepted E009 dev4/E013 and
-dev3 outputs; no refit. Four numerical threads,26-GB cloud RSS,45-GiB extra,
-25-GiB free and2-GiB compressed export; local engineering remains8 GB/10 GiB.
-[Fresh financial evidence](../experiments/E014-multiview-reconstruction/resource-plan.json)
-shows DKK1,920.02 Available through2027-01-12, with delayed usage unknown and
-$30 exposure+$5 storage reserves. Complete conservative run estimate under$4.3
-fits the authorized$10. Price charged VM uptime separately from sampled CPU.
+These are separate truth questions; never pool them. E009 loses1,216,199 recovered
+bp (18 target gains/7 losses), while targets>=90% increase2→4. Oral gains
+10,811,739bp (46 gains/34 losses), with >=50%/90% targets38/24→42/30.
+The original improve-both criterion **fails**. Keep the multiview candidate as useful
+mixed development evidence, without promoting it as a uniformly stronger/default
+binner. E009 bacterial native5NN improves72.5882→80.5066% on the same25,543 queries;
+restricted grouping F1 improves41.9661→47.9414%. Oral unweighted5NN improves
+18.0565→20.4339%, but bp-weighted5NN and grouping recall/F1 decline, especially on
+longer contigs. Its post-refinement unassigned DNA increases3.739→7.595Mb.
 
-[Local review](../experiments/E014-multiview-reconstruction/review.json) binds the
-real installed training/view/reload/geometry/marker/refinement/export contracts,
-23 source/runtime/data/release/oracle contracts and actual serial tiny DAG.
-Linux independently passes 25 installed product tests, all 15 gates and the
-full biological-panel positive contract. Dev5
-adds varied real crops, every available positive, full eligible-parent exposure,
-reconstruction and depth dropout; encoder widths, unit geometry, sole CPM rule
-and E013 selector stay fixed. [Candidate v2 lock](../experiments/E014-multiview-reconstruction/candidate-lock-v2.json)
-preserves source/wheel/defaults and unchanged legacy learning. Tiny engineering
-is not community performance; failed Mac allclose and every journal remain.
+Paired refinement: E009 dev5 R95 stays5.5196%; oral dev4 parent2.5695→E0135.7242%,
+27 target gains/no loss, and oral dev5 parent5.5638→E0136.2432%,7 gains/no loss.
+On oral dev5 the old refiner reaches6.3443%, above E013's weighted result, with
+fewer>=50/90% targets; no oracle per-bin choice or universal refinement win.
+Keep CPM/E013 provisionally fixed for the next learning control, without more
+E009 marker/resolution tuning.
 
-[Oral provided-source-origin oracle](../experiments/E014-multiview-reconstruction/oral-truth-admission.json)
-is separately admitted after all-row independent DNA/source/axis/coordinate/mask
-review. All1,286,547 nonempty contigs /1,669,981,123 bp and799 full positive-source
-denominators /2,083,072,211 bp remain, including two zero-GSA targets.1,734 localized
-non-ACGT bases supply no support;49 known-shared queries /12,063bp retain flags and
-a predeclared mask sensitivity. **Unique-sequence support remains unadmitted.**
-Oral origin-R95 and E009 conservative-v2 R95 are separately named; no pooled metric,
-unseen-genome, physical molecule/host or MAG-quality claim. All original provisional
-source/failure records remain intact. Truth and reverse joins stay outside VM fits.
+**Next decision: prepare one matched zero-reconstruction control**, already
+contemplated prospectively. Set only both reconstruction coefficients to0; retain
+encoder/decoder initialization, varied views, every-positive rule, full-parent
+exposure, depth dropout, seed11/20epochs and CPM/E013. It can decide whether the
+reconstruction block is worth retaining or contributes length/nuisance trade-offs;
+it cannot prove an optimal view policy or settle product feature families.
+[Operations](../experiments/E014-multiview-reconstruction/OPERATIONS.md#exact-following-prompt)
+contains the exact next prompt with a **new proposed$2**, two-hour cumulative /
+2.25-hour provider STOP, existing VM/disks, fresh financial/native/retention gates
+and tested collection prerequisites. It has **not run or been authorized by this
+inspection**; the old$10 does not carry into another fit. No external tool or new
+confirmation data is included. Both inspected communities now count as development
+evidence; a later independent confirmation still needs prospective source/input/
+truth/taxonomy/overlap/protocol and separate cost admission.
 
-[Depth assessment](../experiments/E014-multiview-reconstruction/depth-assessment.md)
-finds51.73 GB compressed oral reads; inspected BAMs map to source genomes, not
-pooled GSA contigs. Keep this comparison sequence-only; no reads/mapping/aligners.
-The acquired quartet plus owner-approved setup passes publisherMD5/SHA256; the
-expired original clock and separately bounded successful streaming repair remain.
-No old artifact was deleted or migrated; current local files fit10GiB. External
-binners and extra ablations remain deferred. [Operations](../experiments/E014-multiview-reconstruction/OPERATIONS.md)
-owns release and completed-output inspection, without inferring success from stop.
+Science succeeded, but original collection exceeded2GiB; the first evidence-only
+wake also exceeded it. Both failures/partial archives remain. Owner expressly
+allowed a bounded wake. A second collection-only attempt at **5030964** reused
+all three passed graph-reader receipts, verified every original work member,
+left graph binaries in place and losslessly bound three identical reference files
+to their embedding members. No fit/inference/detector/index/DAG was replayed.
+Return **1,971,407,357bytes /657members** and all member/private-readback hashes
+verify; original work inventory **27,207files /13,653,291,886bytes**. Omitted
+on-disk graphs, view banks and full exported FASTAs are **not** backed up by the
+compact archive merely because their hashes are present. Old Mac allclose and
+all failed journals remain unchanged; native exact reload is a separate pass.
+
+Final VM stop **October18 22:57:25.491UTC /October19 00:57 Copenhagen** is
+independently confirmed, matching the fresh boot/process watcher. Three boot
+intervals total**10,844.586s /3.0124h**: compute/IP~**$0.82252**, disks through final
+stop including intervening stopped time~**$0.18332**, assessed new export~**$0.22032**.
+Including earlier compact-admission export, subtotal~**$1.2492**, **<$1.40 with
+reserve**, inside original$10; invoice remains delayed/unreconciled. Fresh final
+credit shows **DKK1,915.36 Available through2027-01-12**; pending usage unknown.
+Core download/verification/three-unit review/cleanup takes20.8minutes; the total
+review clock including compact sealing/private backup closes under33minutes,
+maximum sampled tree RSS**5.511GB**, extra review footprint**3.5273GiB**, under
+four-thread/8GB/one-hour/4GiB bounds. Only new reproducible scratch copies were
+removed after review; no old artifact was deleted or migrated.
+
+Full E009145,702contigs /231,678,157bp, ordered0,2,3,4,6,9,10,11,14,17 depth axes,
+156targets/554,661,890referencebp and **3.3034% N-quarantine** remain. Oral retains
+1,286,547nonemptycontigs /1,669,981,123bp plus two original zero-bp records,
+799targets/2,083,072,211referencebp including two zero-GSA targets,1,734 localized
+non-ACGTbp and49 known-shared queries. Shared-mask primary recovered bp/R95 are
+unchanged; assembly-available/conditional denominators can differ. Oral is a
+sequence-only provided-origin oracle, **not unique support**, unseen-genome,
+physical-host or MAG-quality evidence; source/pretraining and panel limits remain.
+Existing disks still accrue **$31.20/month while stopped**; **October21 storage
+review remains**, without extension or provisioning/resize/quota/service change.
 
 **E013 completed locally; keep its refiner provisionally and broaden development.**
 On `e013-marker-quality-refinement`, clean source **6d06560** froze one coherent
@@ -136,7 +158,7 @@ next instruction, not its evidence. The original E011 practical +0.5-point
 criterion remains failed; CPM is the provisional working direction, RB a retained
 historical control. Immutable dev3/dev4 and E009–E012 science are unchanged.
 
-**E011 remains the last completed native phase; E014 rechecks the stopped provider above.** It independently verified
+**E011 remains accepted; E014 is the latest completed native phase above.** It independently verified
 TERMINATED **2026-10-17 08:13:23.285 UTC** after successful phase
 `cached-20261017T080610Z-7a43eb6` /twelve native stages and 1,905 verified members.
 [E011 receipt](../experiments/E011-cached-grouping-reference/recovery-observed.json)
@@ -522,7 +544,7 @@ accepted mapping/AMBER prefixes. E005 v5 now checks the complete AMBER distribut
 inventory against E001's hash-identified clean-prefix review, not only `pip freeze`.
 Frozen E001 source/configuration and raw observed records remain unchanged.
 
-Local branch: `dev4-coherent-prototype`, renamed from `codex/coherent-prototype`
+Historical first implementation branch: `dev4-coherent-prototype`, renamed from `codex/coherent-prototype`
 without rewriting commits, created from updated main after the
 owner-authorized normal [PR #2 merge](https://github.com/Rasmus-allesoee/dl_binner/pull/2).
 Merge `5bd59d774306f586c22b23a2f6ee36d64947d052` preserves dev3 main

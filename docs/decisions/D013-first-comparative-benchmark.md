@@ -482,3 +482,27 @@ passes all 15 Linux gates and starts the sole frozen three-fit comparison on the
 existing VM at source858b7cc. The original 12-hour/$10 envelope, current-boot
 watcher/provider STOP and October21 review remain. No new result yet; the decision
 is still whether this bundle improves the two separately scoped recovery questions.
+
+
+## E014 value obtained from completed learning comparison, 2026-10-19
+
+[E014's reviewed outputs](../../experiments/E014-multiview-reconstruction/comparison-review.json)
+provide a useful mixed result: broad multiview/reconstruction improves bacterial
+E009 neighborhoods and oral-origin recovery, but does not improve both primary
+recovery endpoints. E0095.7388→5.5196%, oral5.7242→6.2432% under separately named
+truth/full denominators; all target and length/assignment trade-offs remain.
+This is development evidence for choosing our next mechanism, not a final product
+or an expected mature-tool win. The new domain also demonstrates marker-policy
+value beyond the single assembly, alongside a real selector trade-off.
+
+[D015](D015-coherent-prototype-upgrade.md#e014-mixed-bundle-result-and-one-selective-loss-control-2026-10-19)
+chooses one already contemplated zero-reconstruction control, preserving all other
+modules/schedules, rather than a new external campaign or more E009 refinement
+tuning. No component-level causal win, product-family rejection or SOTA claim.
+The original science exited0; two oversized collection attempts remain FAILED,
+with tested collection-only recovery and no scientific replay. Measured-usage
+gross estimate~$1.2486/<$1.40 with reserve fits original$10, pending invoice.
+The next two-fit proposal needs its own new$2 and fresh gates. Existing disks
+still cost$31.20/month while stopped, with unchanged October21 review; no extension.
+Oral is now inspected development evidence; later independent confirmation still
+needs a prospective additional-input/source/taxonomy/overlap/truth/cost admission.

@@ -1,16 +1,14 @@
 # E014 operations and execution boundary
 
-The single frozen three-fit comparison is **released and running**, after the
-authorized local admission and all native gates passed. Read [STATE](../../docs/STATE.md),
-[design](design.md), [comparison protocol](comparison-protocol.json),
-[candidate v2 lock](candidate-lock-v2.json), [source admission policy](source-admission-policy.json)
-and [resource plan](resource-plan.json). Preserve the first v1 freeze, every failed
-transport/build/DAG journal, old Mac allclose failure and all accepted science.
-The [completed local review](review.json) and [separate oral admission](oral-truth-admission.json)
-establish a prospectively defined **provided-source-origin oracle**, retaining
-unique-sequence uncertainty. [Native observation](native-observed.json) binds the
-passed gates and current supervised phase; no changed community outcome chose
-this scope. No fit or quality outcome is claimed from progress alone.
+The frozen comparison is **completed and reviewed**, with a mixed bundle result.
+Read [STATE](../../docs/STATE.md), [comparison review](comparison-review.json),
+[inspection receipt](inspection-observed.json), [frozen comparison protocol](comparison-protocol.json)
+and [inspection protocol](inspection-protocol.json). Science remains source858b7cc;
+original release/source/admission/failure records below retain their dated scopes.
+Both original collection-cap failures, failed Mac allclose and all source/truth/
+reviewer journals are preserved. No original data/science was rerun or altered.
+The original$10 and **October21 storage review** remain, with no retention extension.
+The following historical gates describe the executed phase, not another authorization.
 
 ## What has actually run
 
@@ -160,56 +158,117 @@ in the native receipt; no old files are deleted or migrated. This backup is
 outside training inputs. Cost, local10GiB scope and October21 retention remain
 explicit; final uptime/quality cannot be reported until verified shutdown.
 
+## Completed inspection and collection-only recovery, 2026-10-19
+
+The owner superseded the prior following prompt's stop-before-wake restriction by
+explicitly allowing a VM wake for necessary evidence. That original prompt remains
+in Git at214ac90. Both science and evidence delivery were inspected independently:
+all15 native gates and all19 scientific rules/final DAG target exit0, with exact
+native reloads and full contracts. The original phase journal remains **FAILED**
+because collection exceeded2GiB; it is not rewritten as successful.
+
+A first fresh30min/45minSTOP collection wake passed all three in-place native
+sparse/unit graph readers and original full-member hashing, then also exceeded
+the export cap. Its failure/partial archive remain. The tested5030964 collector
+used a second fresh boot/process watcher, reused those passed readers without
+rerunning them, reverified every original work file and omitted only the three
+full graphs and three byte-identical reference/embedding duplicates from return.
+It changed no scientific byte, rule or threshold. The graph binaries, banks and
+all DNA remain on the existing disk; an archived hash is not a backup of those bytes.
+
+Private completion SUCCESS/readback true, SHA and every local member agree:
+**1,971,407,357bytes /657members /4,125,997,517logical bytes**,
+SHA256 `6ddc8a7d01603432d79b7f24f4157fdc51c1b123ef6870e3332c0269afd32301`.
+The complete original work inventory binds27,207files/13,653,291,886bytes.
+Prefix is the original private comparison prefix plus
+`inspect-20261018T224343Z-5030964/`. Current control plane independently confirms
+**TERMINATED at2026-10-18 22:57:25.491UTC**; matching watcher exit22:55:38.652UTC,
+boot50675c55-0100-4483-a32c-04010e50f394, held PID1551/start4168,2700s provider STOP.
+
+Three boot intervals total10,844.586s. Compute/IP$0.82252, disk interval including
+stopped gaps$0.18332, new export$0.22032 and earlier admission export give subtotal
+$1.2492, **<$1.40 with reserve**, within original$10. These are measured-usage/
+current-SKU gross estimates; invoice/pending usage remain unreconciled. Refreshed
+credit **DKK1,915.36 Available through2027-01-12**. Disks still cost$31.20/month;
+**October21 review remains**, no extension/resource/service/quota change.
+
+Local review completed all units under four numerical threads/8GB/one-hour/4GiB
+extra: 20.8min core/<33min through compact backup,5.511GB peak sampled treeRSS,3.5273GiB peak extra space. Only new
+reproducible staging copies were removed after accepted review. The monitor's
+initial macOSps refusal and strict reviewer's exclusion-versus-geometry reason
+failure remain, with a tested actual-native-writer repair before scores. The
+summary's whole-row shared-mask comparison was corrected: primary recoveredbp/
+whole-reference R95 stay equal; masking properly changes available/conditional
+reference support. No evaluation rule/tolerance/data was weakened.
+
+The [paired result](comparison-targets.tsv) is E0095.7388→5.5196% and oral
+5.7242→6.2432%, with clear length/grouping/assignment trade-offs. The improve-both
+criterion fails; do not promote a universal/default winner. Preserve the candidate
+and provisional CPM/E013 policy. One next design-changing control is zeroing both
+reconstruction coefficients, holding everything else fixed. Its proposed new$2
+is separate authorization; no additional fit has run. The previously frozen oral
+choice has now been evaluated and becomes development evidence. Later independent
+confirmation needs a prospectively frozen additional input/source/overlap/truth/
+taxonomy/length/depth protocol and cost admission; none is acquired here.
+
+The closed local diagnostic/failure/source/receipt snapshot is also backed up and
+read back in the existing private prefix under `local-review-20261019/`:
+**4,844,721bytes /176members**, SHA256
+`b995a019461bb8c57784393e86f6436a7dac2d7fa5eddec19244b02a50cfd041`.
+All25,989,408logical member bytes pass local member checks. New backup readback
+adds~$0.00054 within the original reserve; no VM wake or retention change.
+
 ## Exact following prompt
 
-Our goal is a substantially stronger binner. Read AGENTS.md, PROJECT_INTENT.md,
-STATE/CLOUD, D013/D015 and E014's design, active candidate-lock-v2, comparison
-protocol, provided-origin truth admission, native-observed and operations.
-Preserve immutable dev3/dev4, all accepted E009–E014 evidence and failed journals.
-Inspect phase `comparison-20261018T183446Z-858b7cc` without another fit, VM start,
-resource change, retry, retention extension or additional data acquisition.
+Our goal is a substantially stronger binner through coherent upgrades and selective
+controls. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E014's
+comparison-review, inspection receipts, source/candidate locks and operations.
+Preserve immutable dev3/dev4/dev5, all accepted E009–E014 data/truth/results/source
+freezes and failed journals. Use a new descriptive branch without a codex/ prefix.
 
-Check the GCP control plane and private completion.json at
-`gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z/`.
-The source is858b7cc, VM start October18 18:35:08.455UTC, cumulative driver deadline
-October19 06:35:08.455UTC and provider STOP06:50:08.455UTC. Do not infer success
-from shutdown. This phase has no guest-status writer: inspect the private completion,
-watchdog-exit.json, retained driver/stage/gate receipts and logs instead. If still
-healthy and running, report actual stage/progress and leave verified supervision
-intact; do not poll to completion. If stopped with missing evidence, do not wake it.
+Prepare and locally test the single previously contemplated zero-reconstruction
+control. Change only composition_reconstruction_weight=0 and
+depth_reconstruction_weight=0; keep decoder/encoder construction and initialization,
+real view bank, every-positive rule, full-parent exposure, measured-parent depth,
+dropout, seed11/20epochs/batch256, unit geometry, sole CPM rule and E013 refiner.
+Do not remove decoder heads or change RNG consumption to create another treatment.
+Use the original retained views/features/marker caches, not regenerated science.
+Freeze one label-free control/source/protocol and keep/modify/abandon criteria
+before changed outcomes; test real tiny zero-loss/gradient, initialization/reload,
+cache/graph/refinement/export and bounded collection contracts. Reuse E014 outputs
+and all older baselines, without refitting or rescoring them.
 
-After independently confirming TERMINATED, establish all15 native-gate and all
-three units' feature/train/reload/embed/group/refine/export status. Refresh live
-credits/prices, delayed usage and export coverage against the remaining original
-$10; price measured VM uptime/IP, persistent-disk interval, archive retention,
-operations and export separately from sampled CPU. No new budget is implied.
-Verify the archive checksum and every retained member before using outputs.
+I authorize this one two-fit development control (E009ten-depth and oralsequence-
+only) under a NEW$2 incremental gross ceiling if fresh live Welcome-credit balance/
+scope/expiry, delayed usage, applicable prices/coverage, original retention and
+headroom gates pass. The original$10 does not carry over. Existing e2-standard-8/
+32GiB VM and300GiB work disk only; two cumulative hours from VM start include all
+setup/verification/fits/collection, provider STOP2.25h, four numerical threads,
+26GB sampled treeRSS,25GiB free reserve,20GiB extra working space,2GiB compressed
+export. Assess the actual return/review footprint before launch; use tested exact-
+byte deduplication and bound member inventories, not another oversized fallback.
+No provisioning, resize, new seed/grid, data acquisition/mapping/aligner, external
+binner, other ablation, architecture change or retention extension. Stop before
+unclear/uncovered spending or dates outside the original October21 storage approval.
 
-Use at most four numerical threads,8GB sampled RSS and a bounded local review
-clock. Assess the actual review footprint first; stream archive verification and
-extract only needed members. The acquisition/engineering10GiB scope remains in
-its original receipt; this inspection may use at most4GiB additional temporary
-review space after verifying headroom, without deleting original evidence or
-moving old artifacts. Record resources and preserve failures. Do not repeat source
-validation or accepted community science just for another receipt.
+Push the exact clean prepared branch from Mac and sync VM read-only. Verify
+retained byte/source/runtime contracts and reuse passed setup without reinstall/
+recopy fallback. Arm/test a fresh current-boot/process held-parent exit watcher
+and independent provider STOP before release. Debug recoverable operational
+errors with fresh recorded attempts and verified reuse inside this same clock/
+budget, preserving all failures; never silently repeat accepted science or extend.
+For a healthy longer job, verify supervision and real progress, wait a few minutes
+then report stage/logs and finish instead of polling to completion; follow a short
+job through collection. Collect on failure, stop and independently confirm
+TERMINATED. After successful shutdown, verify archive/member bytes and evaluate
+only new outputs with frozen conservative E009v2 and separately named oral-origin
+oracle/full provided denominators, known-shared sensitivity/N-quarantine and all
+length/origin/eligibility/marker/unassigned populations. No threshold or per-bin
+truth-selected changes. Compare the reconstruction block's value and trade-offs;
+do not claim the control isolates all other ingredients or settles product families.
 
-If the complete frozen comparison passed, review source/wheel/defaults, seed11/
-20epochs, all contig/depth axes, exact native reload, unit geometry, graph/neighbor
-audit, shared marker cache and complete pre/post DNA accounting. Reuse preserved
-E009 dev4/E013/dev3 results, without refitting/rescoring them. Evaluate only the
-new E009 dev5 against admitted conservative v2/full156target denominators and
-3.3034% N-quarantine. Evaluate oral dev4/dev5 separately with admitted provided-
-source-origin oracle/full799target denominators, two zero-GSA targets, all DNA,
-localized non-ACGT quarantine and the predeclared known-shared-mask sensitivity.
-Never call oracle support unique sequence support or pool these truth scopes.
-Keep all length/origin/marker/native-eligibility/unassigned/unknown/non-target
-populations and source/pretraining-overlap limitations. Oral is sequence-only GSA,
-without assembly errors; no ten-depth, physical host or unseen-genome claim.
-
-Report the bundle and paired refinement effects, target gains/losses, geometry/
-grouping diagnostics and actual cost/storage trade-offs, and recommend at most
-one decision-changing follow-up. No tuning, extra loss ablation, external binner,
-architecture change, confirmation run, reads/mapping/assembly/aligner or cloud
-recovery. Keep October21 storage review visible. Update records, run relevant
-checks and commit; report the verified outcome, unresolved contracts and exact
-next prompt.
+Both inspected communities are development data. Record what additional untouched
+confirmation data/protocol and source/genome/replicon/taxonomy/overlap/truth/cost
+admission remain needed, without acquiring or running confirmation now. Keep
+October21 storage review visible. Update records, check and commit; report actual
+costs/resources, paired results/limits, one next decision and exact following prompt.

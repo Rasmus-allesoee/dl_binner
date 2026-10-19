@@ -1,58 +1,72 @@
 # Google Cloud workspace operations
 
-Updated: 2026-10-18 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
+Updated: 2026-10-19 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**E014 frozen comparison running under verified shutdown supervision.**
-[Native receipt](../experiments/E014-multiview-reconstruction/native-observed.json)
-binds phase `comparison-20261018T183446Z-858b7cc`, exact clean source858b7cc and
-boot/process identities. Start October18 **18:35:08.455 UTC /20:35 Copenhagen**;
-current control-plane state is RUNNING. Initial work-disk free139,100,987,392bytes
-(**129.55 GiB**). No provisioning, resize, new quota/service or retention extension.
-The source sync initially selected the wrong default gcloud host alias and failed
-before source mutation; the established strict pinned `dl-binner-gcp` alias passed.
-Retain both logs. No accepted science was repeated.
+**E014 science completed; evidence recovered; VM independently TERMINATED.**
+[Inspection](../experiments/E014-multiview-reconstruction/inspection-observed.json)
+and [review](../experiments/E014-multiview-reconstruction/comparison-review.json)
+bind phase `comparison-20261018T183446Z-858b7cc`, frozen science858b7cc, all15 gates,
+19 scientific rule exits and final DAG target. Original FAILED phase status means
+collection exceeded2GiB, despite science exit0. Preserve it, both failed partial
+archives and the first collection-only wake's failure. Owner's latest instruction
+expressly allowed collection wakes; it did not authorize another science run.
 
-The held parent has a fresh30-second root watcher, bound to current boot/PID birth/
-command; actual Linux live/normal-exit/crash tests pass. Provider STOP **44100s**
-with automaticRestart=false is independently verified. Twelve hours cumulatively
-from VM start includes input transfer, setup/gates, science and collection; driver
-deadline October19 **06:35 UTC /08:35 Copenhagen**, provider fallback **06:50 UTC
-/08:50 Copenhagen**. Release passed at 18:48:42.532 UTC before the October18
-**19:20 UTC** setup cutoff. All 15 fresh owned Python3.12 native/source/import/
-CLI/tiny/input/scheduler gates pass, including 25 installed product tests. Oral
-feature stages have both exited successfully at 18:57 UTC, followed by active
-E009 dev5 feature construction; no completed fit, quality result or shutdown is
-claimed. The retained heartbeat window reaches 9.46 GB sampled process-tree RSS,
-below the 26-GB cloud ceiling. Disk free is 125.38 GiB. At that observation,
-measured running uptime 1,348.740 s prices compute/IP ~$0.10230 and disk interval
-~$0.01601; these are accrued list-price estimates, not final actual cost or invoice.
+Measured VM intervals (UTC):
 
-The [frozen comparison](../experiments/E014-multiview-reconstruction/OPERATIONS.md)
-uses the existing8-vCPU/32-GiB VM and300-GiB disk, three serial fits, four numerical
-threads,26-GB sampled process-tree RSS,45-GiB extra/25-GiB reserve/2-GiB export.
-Expected4–9 hours is an estimate; the clock remains twelve hours. Maximum STOP
-compute/IP~$3.34481 plus disk interval~$0.52356, 2-GiB export~$0.24, local admission
-evidence readback~$0.0215 and $0.15 small storage/operations reserve give under
-$4.3 gross, within authorized $10. Final measured
-uptime and cost follow shutdown; sampled CPU never substitutes for billed uptime.
+| Purpose | Start | Independently verified stop | Uptime seconds |
+| --- | --- | --- | ---: |
+| Original science + failed collection | Oct18 18:35:08.455 | Oct18 21:10:55.585 | 9347.130 |
+| First collection-only wake, cap failure | Oct18 22:26:48.569 | Oct18 22:38:33.348 | 704.779 |
+| Repaired collection-only wake, SUCCESS | Oct18 22:44:12.814 | Oct18 22:57:25.491 | 792.677 |
 
-Official catalog refreshed October18 17:46UTC; directly inspected active upgraded
-Free Trial at18:04UTC: **DKK1,920.02 Available through2027-01-12**, Certain usage/net
-pricing, paid billing enabled. Reported October1–18 gross/savingsDKK52.65/net0 lag
-actual usage, possibly over24hours; exact pending usage unknown, with$30 prior
-exposure+$5 approved-storage reserves. Existing ordinaryE2/Ubuntu/PD/IP/Iowa
-StandardStorage/network/operations coverage passes; no excluded product is added.
-Preserve earlier rejected/stale-tab observations and the successful authorized
-read-only page inspection. A future phase still needs its own fresh coverage.
+Total **10,844.586s /3.0124h**, compute/IP quote **$0.82252**, priced from charged
+8-vCPU/32-GiB allocation and uptime, not sampled child CPU. Science child
+8106.268s, sampled CPU18217.5s and peak sampled tree RSS18.266GB remain separate.
+Persistent disks through final stop, including stopped gaps, add**$0.18332** using
+the current catalog's October31-day conversion factor. Earlier730-hour normalized
+estimates remain their dated quotes. Disks keep accruing after final stop.
 
-Existing disks continue at quoted **$31.20/month (~$1.03/day)** while stopped.
-**October21 storage review remains**, without extension. New local oral source/
-truth bytes are separate from native training inputs: only lossless opaque DNA
-and the locked wheel are transferred. No source/truth labels enter fits. No old
-artifacts were deleted or migrated. [Depth assessment](../experiments/E014-multiview-reconstruction/depth-assessment.md)
-keeps51.73-GB reads/contig mapping outside this sequence-only comparison. Earlier
-E011/E010 and entirely local E013/E012 receipts below keep their dated scopes.
+Second collection helpers5030964 reused the three passed native sparse/unit graph
+readers, reverified all27,207 original work files/13,653,291,886bytes, omitted only
+three graph binaries and exact-byte duplicate reference payloads from the return,
+then uploaded/read back every selected byte in the existing private Iowa prefix.
+Archive **1,971,407,357bytes /657members**, SHA256
+`6ddc8a7d01603432d79b7f24f4157fdc51c1b123ef6870e3332c0269afd32301`,
+all4,125,997,517logical member bytes verify locally. Scientific outputs, full
+view banks/DNA and failed journals remain intact on the existing disk. Omitted
+bytes' hashes do not constitute a cloud backup of those bytes.
+
+Fresh boot/process-bound held parentPID1551/start ticks4168, boot
+`50675c55-0100-4483-a32c-04010e50f394`, live/normal/crash tests and2700s provider
+STOP passed before release. Private completion SUCCESS/private readback true and
+watchdog exit22:55:38.652UTC match; final provider stop22:57:25.491UTC confirms
+TERMINATED. No new machine/disk/service/quota/resize or retention extension.
+Collection consumed604.187s from its boot, extra3.673GiB under5GiB, with minimum
+sampled free**105.62GiB**, above25GiB. No scientific replay or scoring on VM.
+
+New archive export assessed**$0.22032**; earlier compact-admission export$0.02148,
+gate export reserve$0.001 give subtotal**$1.2492**, **<$1.40 with$0.15 reserve**
+for storage/operations/small charges, below original**$10**. These are measured-
+uptime/current-SKU gross estimates, **not reconciled billing**. The final directly
+refreshed Credits page shows **DKK1,915.36 Available**,97%, Certain usage/net
+pricing, expiry**2027-01-12**. Delayed usage remains unknown; retain$30 prior
+exposure+$5 approved-storage reserve. Ordinary existingE2/Ubuntu/PD/IP/privateIowa
+Standard/network/operations coverage passed; no new product or service.
+
+The original three-fit authorization is used. The proposed next zero-reconstruction
+control needs its **own new$2** and fresh gates; it has not run. Estimated70–100min
+uses the existing allocation,2h cumulative/2.25h STOP,4threads/26GB/20GiBextra/
+25GiBreserve/2GiBreturn, with accepted caches/runtime reuse and tested smaller
+collection. Stop if original retention no longer covers its dates. No external
+binner, extra data acquisition or confirmation follows from the original$10.
+
+Existing disks continue at **$31.20/month (~$1.03/day)** while stopped. New compact
+native/admission archive storage is~**$0.0403/month**, plus tiny review metadata.
+**October21 storage review remains**, without extension. Local review used a
+separate4GiB temporary allowance, peak3.5273GiB and5.511GB sampled RSS; only newly
+created reproducible scratch copies were removed. No old local artifact was
+migrated/deleted. Keep51.73GB oral reads/mapping outside this sequence-only phase.
 
 **E011 recovery completed; VM independently TERMINATED.**
 [Recovery receipt](../experiments/E011-cached-grouping-reference/recovery-observed.json)

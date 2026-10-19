@@ -1,15 +1,13 @@
 # E014 — Multiview/reconstruction learning and oral-GSA admission
 
-Updated 2026-10-18. **Local implementation and full-source audit completed;
-the separate provided-source-origin oracle is now admitted, and native release
-is being prepared. Unique-sequence support remains provisional.**
-[Admission](oral-truth-admission.json) and [review](review.json) own the exact scopes;
-[operations](OPERATIONS.md) owns the next exact prompt. The prospective text below
-preserves the original local engineering/admission scope; one later frozen community
-comparison is conditionally authorized only after independent data/truth/runtime
-and live credit/cost/storage gates, within about $10 incremental gross. Branch
-`e014-multiview-reconstruction` starts at E013 review `1e54441`. Preserve dev3/dev4
-and all accepted E009–E013 inputs, outputs, source freezes and failed journals.
+Updated 2026-10-19. **The frozen three-fit comparison and independent completed-
+output review are complete; VM is TERMINATED. The bundle result is mixed.**
+[Comparison review](comparison-review.json) owns quality/limits,
+[inspection](inspection-observed.json) owns recovery/costs, and
+[operations](OPERATIONS.md) owns the next exact prompt. Original native handoff,
+source/admission records and failed journals remain dated evidence. Dev3/dev4 and
+all accepted E009–E014 science stay immutable. The original$10 is not another-fit
+authorization. **October21 storage review remains**.
 
 ## Scope declared before acquisition or new community outcomes
 
@@ -253,3 +251,77 @@ watcher/parent/provider STOP agree. Retained heartbeat RSS reaches 9.46 GB;
 disk free 125.38 GiB. Accrued uptime 1,348.740 s prices compute/IP ~$0.10230 and
 disk interval ~$0.01601. These update the earlier live observation, without
 claiming final cost, completed model training or quality.
+
+
+## Completed frozen comparison, reviewed 2026-10-19
+
+All15 native gates and19 scientific rules plus the final DAG target pass at
+source858b7cc. All three native checkpoint reloads are exact. All DNA/feature/
+sample axes, sparse unit graph/128 sampled cosine audits, cached marker reductions,
+selected alternatives and complete pre/post export accounting pass. The local
+reader was repaired to use the frozen exporter's exclusion reasons rather than
+geometry reasons; its failed journal and actual tiny writer/refusal test remain.
+No model inference, data DAG, marker detection, neighbor rebuild or fit was replayed.
+
+| Unit / truth scope | Parent weighted R95 | Old refiner | E013 policy | Targets>=50% /90%, E013 |
+| --- | ---: | ---: | ---: | ---: |
+| E009 dev5 /conservativev2 | 5.5196% | 5.5196% | 5.5196% | 9 /4 |
+| Oral dev4 /provided origin | 2.5695% | 4.3486% | 5.7242% | 38 /24 |
+| Oral dev5 /provided origin | 5.5638% | 6.3443% | 6.2432% | 42 /30 |
+
+Reused E009 dev4/E013 is5.7388% (9/2), dev3 learned ten-depth5.3911% context;
+neither is refit/rescored. Dev5 loses1,216,199bp against E013 (18 targets gain,
+7 lose); oral gains10,811,739bp (46 gain,34 lose). [All955 paired target rows](comparison-targets.tsv)
+retain full provided references. Never pool E009 conservative and oral origin R95.
+
+E009 bacterial5NN improves72.5882→80.5066% on the same25,543 queries; aggregate
+restricted F1 improves41.9661→47.9414%. E009 dev5 retains145,702contigs/
+231,678,157bp and all ten depths; excluded56,661contigs/22,035,454bp remain.
+Its post counts are 88,138 assigned,
+903unassigned/722,737bp,873bins. The largest target loss crosses the unchanged
+95% purity boundary: ASV150.14's largest source bin is94.5606% confirmed support.
+This explains a discontinuity, without authorizing a threshold or truth-selected fix.
+
+Oral dev5 native unweighted5NN improves18.0565→20.4339%, especially500–999bp;
+bp-weighted5NN declines22.6006→22.2483% and origin grouping recall/F1 decline.
+Bins increase4834→7859; unassigned DNA3,738,827→7,595,264bp. All1,286,547nonempty
+contigs/1,669,981,123bp remain, including777,784excluded short contigs/226,153,459bp.
+The two original empty records stay separately accounted. Marker-negative/unknown/
+non-target and every length/status population stay in the review. Oral is
+sequence-only GSA without assembly errors, not ten-depth or unseen-genome evidence.
+
+Paired E013 refinement improves oral dev4 by65,715,666bp versus parent (27 gains,
+no loss), and oral dev5 by14,153,558bp (7 gains,no loss). Against old-refinement
+oral dev5 it loses2,106,043bp (4 gains,5 losses), despite more50/90% targets.
+Marker value and selector limitations are both observed; no post-score bin oracle.
+The shared oral cache's2,546,889 genes/59,450 domains independently reduce to the
+same23,632 clean-marker contigs; no caller/search rerun. Panel/reliability/lineage
+limits and the original Mac allclose failure remain.
+
+E009 retains156targets/554,661,890bp and3.3034% N quarantine. Oral retains799full
+positive targets/2,083,072,211bp including two zero-GSA targets,1,734nonACGTbp
+quarantine and49known-shared queries/12,063bp. The predeclared shared-mask mode has
+identical per-target recovered bp and whole-reference R95; available assembly
+and conditional denominators can differ. Unique support/near competitors,
+physical host/molecule and pretraining overlap remain unadmitted or unresolved.
+
+The improve-both criterion fails: **modify**, preserving useful multiview learning
+without promoting this bundle as uniformly superior. One next selective control
+sets both reconstruction coefficients to0 while keeping initialization, views,
+exposure, positives, dropout, seed/schedule and CPM/E013 fixed. It tests whether
+reconstruction merits its nuisance/length/cost trade-offs. No causal result for
+any other ingredient or product feature family follows. Oral now joins E009 as
+development evidence; an independent confirmation still needs a prospectively
+frozen new input/source/truth/overlap/evaluation/cost admission.
+
+Original science collection and the first evidence-only wake exceeded2GiB. Both
+FAILED journals/partials are preserved. A second fresh current-boot watcher/45min
+STOP collection-only wake reused passed graph readers and removed only lossless
+reference duplication from the return. Archive1,971,407,357bytes/657members and
+every member/private readback verify. Full on-disk work13,653,291,886bytes/27,207files
+was hash-verified; its omitted graphs/view banks/full DNA are not backed up by an
+inventory alone. VM independently TERMINATED22:57:25.491UTC October18. Measured
+three-boot uptime3.0124h prices compute/IP$0.82252, disk interval$0.18332,
+new export$0.22032; gross subtotal~$1.2492,<$1.40 with reserve, not reconciled invoice.
+Core local inspection takes20.8min; total clock including compact backup<33min,5.511GB sampledRSS/3.5273GiB extra, within4threads/
+8GB/one-hour/4GiB. Existing disk$31.20/month and **October21 review** remain.

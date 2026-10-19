@@ -1,0 +1,4609 @@
+{
+  "record": "E014 completed frozen comparison",
+  "reviewed_date": "2026-10-19 Europe/Copenhagen",
+  "status": "ACCEPTED_NATIVE_OUTPUTS_AND_LOCAL_DIAGNOSTICS; MIXED_BUNDLE_RESULT",
+  "science_source": "858b7cc8adea930ea6f13f754eeaa8d031a9b5b4",
+  "original_science_exit": 0,
+  "original_collection_status": "FAILED; preserved; collection-only recovery successful",
+  "provider": "TERMINATED at2026-10-18T22:57:25.491Z",
+  "protocol": {
+    "bytes": 5776,
+    "sha256": "afd72c2c8816888f9cd4760e0f3d88ae0753281a3a30a378074a5789e5401119"
+  },
+  "inspection_protocol": {
+    "bytes": 5678,
+    "sha256": "b6ca704c77218d9e6d239eb6fd57ecf48472cb23e1b2d7d2d8ec4f37851debd3"
+  },
+  "archive": {
+    "status": "SUCCESS",
+    "archive": {
+      "bytes": 1971407357,
+      "sha256": "6ddc8a7d01603432d79b7f24f4157fdc51c1b123ef6870e3332c0269afd32301"
+    },
+    "members": 657,
+    "uncompressed_member_bytes": 4125997517,
+    "every_archive_member_verified": true,
+    "lossless_aliases": {
+      "work/units/E009-dev5/train/reference.npz": {
+        "bytes": 21872260,
+        "canonical": "work/units/E009-dev5/embeddings.npz",
+        "sha256": "428b07f94af628139aee924575a4f4c5697419cdcca669ae4dbed558b8aaab75"
+      },
+      "work/units/oral-dev4/train/reference.npz": {
+        "bytes": 185991671,
+        "canonical": "work/units/oral-dev4/embeddings.npz",
+        "sha256": "d08d7aa3e7c0f6d6cbf56424f4d0e3e843221a8c1811a5d046666189cde87989"
+      },
+      "work/units/oral-dev5/train/reference.npz": {
+        "bytes": 185963052,
+        "canonical": "work/units/oral-dev5/embeddings.npz",
+        "sha256": "37c2eba14aa4324da01c82afdc0a22c945ed58d1d85f5f602f1511f163e394c5"
+      }
+    },
+    "omitted_graphs": [
+      {
+        "bytes": 31385819,
+        "path": "units/E009-dev5/group/graph.npz",
+        "sha256": "5f0eff297ac827bcd89ec736019205ad895d1393d6e47cd1e9920a6c2418207d"
+      },
+      {
+        "bytes": 237443752,
+        "path": "units/oral-dev4/group/graph.npz",
+        "sha256": "2fe0dc828faa7d139f823f36809384bdfe57c69e85dc5786113d0d32beedbdb2"
+      },
+      {
+        "bytes": 251638304,
+        "path": "units/oral-dev5/group/graph.npz",
+        "sha256": "3952e881ca956442cccc0acc3839020a22aa9d174bb7661e65a2116e936f71ea"
+      }
+    ],
+    "original_work": {
+      "bytes": 13653291886,
+      "every_original_work_member_verified": true,
+      "members": 27207
+    },
+    "seconds": 40.533576912013814,
+    "local_scope": "All return members streamed; graphs and omitted bulk DNA were independently verified in place on native VM. No local reread of omitted DNA."
+  },
+  "stage_ledger": {
+    "bytes": 21827,
+    "sha256": "a791223df8fd46b21ccb232f99c19d15e98c9f53261ce17c5b24854c31469e31"
+  },
+  "native_gate_exits": 15,
+  "science_rule_exits": 19,
+  "terminal_all_jobs": 1,
+  "terminal_all_exit_code": 0,
+  "all_stage_contracts_passed": true,
+  "units": {
+    "E009-dev5": {
+      "arms": {
+        "old": {
+          "recovery": {
+            "at_least_50_percent": 9,
+            "at_least_90_percent": 4,
+            "bp_weighted_R95": 0.05519554444239896,
+            "macro_R95": 0.06278222635994046,
+            "targets": 156,
+            "targets_with_any_passing_bin": 22
+          },
+          "grouping": {
+            "attributable_bp": 165477813,
+            "f1": 0.48107834868601623,
+            "precision": 0.7859131015705534,
+            "recall": 0.3466298609435717
+          },
+          "large_bins": 171,
+          "large_bins_below95": 83,
+          "population_cells": {
+            "cells": {
+              "10000|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 32425387,
+                "ambiguous_query_bp": 62129,
+                "confirmed_bacterial_bp": 32355322,
+                "contigs": 463,
+                "nn_quarantined_query_bp": 227,
+                "unsupported_query_bp": 7709
+              },
+              "10000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 21815871,
+                "ambiguous_query_bp": 40161,
+                "confirmed_bacterial_bp": 21769339,
+                "confirmed_eukaryotic_bp": 276,
+                "contigs": 769,
+                "nn_quarantined_query_bp": 220,
+                "unsupported_query_bp": 5875
+              },
+              "10000|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 25828,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 25272,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 556
+              },
+              "10000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 109030,
+                "ambiguous_query_bp": 781,
+                "confirmed_bacterial_bp": 107575,
+                "contigs": 8,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 674
+              },
+              "10000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1598996,
+                "ambiguous_query_bp": 1891,
+                "confirmed_eukaryotic_bp": 1596871,
+                "contigs": 33,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 234
+              },
+              "10000|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 10586759,
+                "ambiguous_query_bp": 5401340,
+                "confirmed_bacterial_bp": 2811421,
+                "confirmed_eukaryotic_bp": 115655,
+                "contigs": 142,
+                "nn_quarantined_query_bp": 2152619,
+                "unsupported_query_bp": 105724
+              },
+              "10000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 31392515,
+                "ambiguous_query_bp": 20334502,
+                "confirmed_bacterial_bp": 3334061,
+                "confirmed_eukaryotic_bp": 1727048,
+                "confirmed_other_bp": 54405,
+                "confirmed_viral_bp": 203902,
+                "contigs": 611,
+                "nn_quarantined_query_bp": 5444160,
+                "unsupported_query_bp": 294437
+              },
+              "10000|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 54527,
+                "ambiguous_query_bp": 32850,
+                "confirmed_bacterial_bp": 15784,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 5893
+              },
+              "10000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 85217,
+                "ambiguous_query_bp": 11709,
+                "confirmed_bacterial_bp": 69498,
+                "contigs": 6,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4010
+              },
+              "10000|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 171492,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 171492,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 96979,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 96979,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1136446,
+                "ambiguous_query_bp": 2794,
+                "confirmed_viral_bp": 1133017,
+                "contigs": 35,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 635
+              },
+              "10000|viral|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 301500,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 301500,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 385567,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 385567,
+                "contigs": 8,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 268827,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 268642,
+                "contigs": 172,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 185
+              },
+              "1000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 10736408,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 10729573,
+                "contigs": 7171,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 6835
+              },
+              "1000|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 8336,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 8305,
+                "contigs": 5,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 31
+              },
+              "1000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 272992,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 272206,
+                "contigs": 171,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 786
+              },
+              "1000|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 56251,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 56212,
+                "contigs": 34,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 39
+              },
+              "1000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 21920781,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 21912387,
+                "contigs": 15123,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 8394
+              },
+              "1000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 81419,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 81419,
+                "contigs": 62,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 146802,
+                "ambiguous_query_bp": 124809,
+                "confirmed_bacterial_bp": 7860,
+                "contigs": 89,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 14133
+              },
+              "1000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 6380900,
+                "ambiguous_query_bp": 4430651,
+                "confirmed_bacterial_bp": 688336,
+                "confirmed_eukaryotic_bp": 422567,
+                "confirmed_other_bp": 3263,
+                "confirmed_viral_bp": 75319,
+                "contigs": 4067,
+                "nn_quarantined_query_bp": 7822,
+                "unsupported_query_bp": 752942
+              },
+              "1000|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 17810,
+                "ambiguous_query_bp": 13848,
+                "confirmed_bacterial_bp": 2461,
+                "contigs": 11,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1501
+              },
+              "1000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 174135,
+                "ambiguous_query_bp": 84710,
+                "confirmed_bacterial_bp": 38466,
+                "confirmed_eukaryotic_bp": 2315,
+                "confirmed_viral_bp": 3381,
+                "contigs": 114,
+                "nn_quarantined_query_bp": 1168,
+                "unsupported_query_bp": 44095
+              },
+              "1000|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 13948,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 13948,
+                "contigs": 8,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|viral|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1405,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 1405,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 413016,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 412319,
+                "contigs": 270,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 697
+              },
+              "1000|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 12243,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 12243,
+                "contigs": 9,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|bacterial|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 22395,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 22362,
+                "contigs": 55,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 33
+              },
+              "1|bacterial|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 6322049,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 6317742,
+                "contigs": 16313,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4307
+              },
+              "1|eukaryotic|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 1002,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1002,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|eukaryotic|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 12906463,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 12898691,
+                "contigs": 32986,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 7772
+              },
+              "1|not_attributable|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 11167,
+                "ambiguous_query_bp": 7907,
+                "confirmed_bacterial_bp": 1816,
+                "contigs": 28,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1444
+              },
+              "1|not_attributable|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 2587510,
+                "ambiguous_query_bp": 1469064,
+                "confirmed_bacterial_bp": 148575,
+                "confirmed_eukaryotic_bp": 381704,
+                "confirmed_other_bp": 140,
+                "confirmed_viral_bp": 11635,
+                "contigs": 6795,
+                "nn_quarantined_query_bp": 4987,
+                "unsupported_query_bp": 571405
+              },
+              "1|other|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 278,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 278,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|viral|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 184590,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 184448,
+                "contigs": 480,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 142
+              },
+              "2500|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 988190,
+                "ambiguous_query_bp": 762,
+                "confirmed_bacterial_bp": 986545,
+                "contigs": 185,
+                "nn_quarantined_query_bp": 323,
+                "unsupported_query_bp": 560
+              },
+              "2500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 11638639,
+                "ambiguous_query_bp": 6688,
+                "confirmed_bacterial_bp": 11625588,
+                "contigs": 2593,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 6363
+              },
+              "2500|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 66809,
+                "ambiguous_query_bp": 233,
+                "confirmed_bacterial_bp": 66548,
+                "contigs": 11,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 28
+              },
+              "2500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 228671,
+                "ambiguous_query_bp": 255,
+                "confirmed_bacterial_bp": 227808,
+                "contigs": 56,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 608
+              },
+              "2500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 117541,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 117540,
+                "contigs": 27,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1
+              },
+              "2500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 8114908,
+                "ambiguous_query_bp": 252,
+                "confirmed_bacterial_bp": 343,
+                "confirmed_eukaryotic_bp": 8110653,
+                "contigs": 2241,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 3660
+              },
+              "2500|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 695589,
+                "ambiguous_query_bp": 582386,
+                "confirmed_bacterial_bp": 65915,
+                "contigs": 132,
+                "nn_quarantined_query_bp": 202,
+                "unsupported_query_bp": 47086
+              },
+              "2500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 9759086,
+                "ambiguous_query_bp": 7220299,
+                "confirmed_bacterial_bp": 1377242,
+                "confirmed_eukaryotic_bp": 153135,
+                "confirmed_other_bp": 16278,
+                "confirmed_viral_bp": 152664,
+                "contigs": 2201,
+                "nn_quarantined_query_bp": 35217,
+                "unsupported_query_bp": 804251
+              },
+              "2500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 71317,
+                "ambiguous_query_bp": 31690,
+                "confirmed_bacterial_bp": 33902,
+                "contigs": 17,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 5725
+              },
+              "2500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 371389,
+                "ambiguous_query_bp": 126767,
+                "confirmed_bacterial_bp": 150463,
+                "confirmed_viral_bp": 3056,
+                "contigs": 83,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 91103
+              },
+              "2500|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 27707,
+                "ambiguous_query_bp": 340,
+                "confirmed_other_bp": 27367,
+                "contigs": 4,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 766575,
+                "ambiguous_query_bp": 465,
+                "confirmed_viral_bp": 764730,
+                "contigs": 174,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1380
+              },
+              "2500|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 19689,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 19516,
+                "contigs": 4,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 173
+              },
+              "500|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 56179,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 56131,
+                "contigs": 90,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 48
+              },
+              "500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 5720109,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 5716877,
+                "contigs": 9297,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 3232
+              },
+              "500|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 515,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 515,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 160212,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 160101,
+                "contigs": 265,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 111
+              },
+              "500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1804,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1785,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 19
+              },
+              "500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 13422408,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 13417655,
+                "contigs": 21793,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4753
+              },
+              "500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 193609,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 193518,
+                "contigs": 317,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 91
+              },
+              "500|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 31260,
+                "ambiguous_query_bp": 25160,
+                "confirmed_bacterial_bp": 3172,
+                "contigs": 50,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2928
+              },
+              "500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 2265604,
+                "ambiguous_query_bp": 1339819,
+                "confirmed_bacterial_bp": 163948,
+                "confirmed_eukaryotic_bp": 311141,
+                "confirmed_other_bp": 303,
+                "confirmed_viral_bp": 18733,
+                "contigs": 3683,
+                "nn_quarantined_query_bp": 2875,
+                "unsupported_query_bp": 428785
+              },
+              "500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 4124,
+                "ambiguous_query_bp": 3100,
+                "confirmed_bacterial_bp": 707,
+                "contigs": 6,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 317
+              },
+              "500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 63761,
+                "ambiguous_query_bp": 38333,
+                "confirmed_bacterial_bp": 10658,
+                "confirmed_eukaryotic_bp": 3465,
+                "confirmed_viral_bp": 689,
+                "contigs": 104,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 10616
+              },
+              "500|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 169883,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 169642,
+                "contigs": 274,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 241
+              },
+              "500|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 9032,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 9032,
+                "contigs": 15,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 51361,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 51308,
+                "contigs": 59,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 53
+              },
+              "768|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 3597133,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 3594594,
+                "contigs": 4120,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2539
+              },
+              "768|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 91346,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 91193,
+                "contigs": 105,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 153
+              },
+              "768|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 4394,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 4394,
+                "contigs": 5,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 8527044,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 8524103,
+                "contigs": 9779,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2941
+              },
+              "768|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 90597,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 90507,
+                "contigs": 103,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 90
+              },
+              "768|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 30007,
+                "ambiguous_query_bp": 22204,
+                "confirmed_bacterial_bp": 4406,
+                "contigs": 34,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 3397
+              },
+              "768|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1429316,
+                "ambiguous_query_bp": 958691,
+                "confirmed_bacterial_bp": 114445,
+                "confirmed_eukaryotic_bp": 130692,
+                "confirmed_other_bp": 141,
+                "confirmed_viral_bp": 7286,
+                "contigs": 1631,
+                "nn_quarantined_query_bp": 3385,
+                "unsupported_query_bp": 214676
+              },
+              "768|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 973,
+                "ambiguous_query_bp": 0,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 973
+              },
+              "768|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 40576,
+                "ambiguous_query_bp": 26041,
+                "confirmed_bacterial_bp": 5615,
+                "contigs": 46,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 8920
+              },
+              "768|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 824,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 824,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 116617,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 116489,
+                "contigs": 133,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 128
+              },
+              "768|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 6518,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 6518,
+                "contigs": 7,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              }
+            },
+            "keys": [
+              "lower_bp",
+              "attributable_lineage",
+              "candidate_eligibility",
+              "status",
+              "clean_marker"
+            ]
+          }
+        },
+        "post": {
+          "recovery": {
+            "at_least_50_percent": 9,
+            "at_least_90_percent": 4,
+            "bp_weighted_R95": 0.05519554444239896,
+            "macro_R95": 0.06278222635994046,
+            "targets": 156,
+            "targets_with_any_passing_bin": 22
+          },
+          "grouping": {
+            "attributable_bp": 165477813,
+            "f1": 0.47941431561288095,
+            "precision": 0.7941758216618703,
+            "recall": 0.3433370385360457
+          },
+          "large_bins": 174,
+          "large_bins_below95": 86,
+          "population_cells": {
+            "cells": {
+              "10000|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 32437148,
+                "ambiguous_query_bp": 62129,
+                "confirmed_bacterial_bp": 32367083,
+                "contigs": 464,
+                "nn_quarantined_query_bp": 227,
+                "unsupported_query_bp": 7709
+              },
+              "10000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 21924901,
+                "ambiguous_query_bp": 40942,
+                "confirmed_bacterial_bp": 21876914,
+                "confirmed_eukaryotic_bp": 276,
+                "contigs": 777,
+                "nn_quarantined_query_bp": 220,
+                "unsupported_query_bp": 6549
+              },
+              "10000|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 14067,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 13511,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 556
+              },
+              "10000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1598996,
+                "ambiguous_query_bp": 1891,
+                "confirmed_eukaryotic_bp": 1596871,
+                "contigs": 33,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 234
+              },
+              "10000|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 10641286,
+                "ambiguous_query_bp": 5434190,
+                "confirmed_bacterial_bp": 2827205,
+                "confirmed_eukaryotic_bp": 115655,
+                "contigs": 145,
+                "nn_quarantined_query_bp": 2152619,
+                "unsupported_query_bp": 111617
+              },
+              "10000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 31477732,
+                "ambiguous_query_bp": 20346211,
+                "confirmed_bacterial_bp": 3403559,
+                "confirmed_eukaryotic_bp": 1727048,
+                "confirmed_other_bp": 54405,
+                "confirmed_viral_bp": 203902,
+                "contigs": 617,
+                "nn_quarantined_query_bp": 5444160,
+                "unsupported_query_bp": 298447
+              },
+              "10000|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 171492,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 171492,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 398479,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 398479,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1522013,
+                "ambiguous_query_bp": 2794,
+                "confirmed_viral_bp": 1518584,
+                "contigs": 43,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 635
+              },
+              "1000|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 277163,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 276947,
+                "contigs": 177,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 216
+              },
+              "1000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 10948628,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 10941173,
+                "contigs": 7298,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 7455
+              },
+              "1000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 60772,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 60606,
+                "contigs": 44,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 166
+              },
+              "1000|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 56251,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 56212,
+                "contigs": 34,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 39
+              },
+              "1000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 21920781,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 21912387,
+                "contigs": 15123,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 8394
+              },
+              "1000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 81419,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 81419,
+                "contigs": 62,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 161003,
+                "ambiguous_query_bp": 135048,
+                "confirmed_bacterial_bp": 10321,
+                "contigs": 98,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 15634
+              },
+              "1000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 6524808,
+                "ambiguous_query_bp": 4498137,
+                "confirmed_bacterial_bp": 720402,
+                "confirmed_eukaryotic_bp": 422567,
+                "confirmed_other_bp": 3263,
+                "confirmed_viral_bp": 78700,
+                "contigs": 4159,
+                "nn_quarantined_query_bp": 8990,
+                "unsupported_query_bp": 792749
+              },
+              "1000|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 3609,
+                "ambiguous_query_bp": 3609,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 30227,
+                "ambiguous_query_bp": 17224,
+                "confirmed_bacterial_bp": 6400,
+                "confirmed_eukaryotic_bp": 2315,
+                "contigs": 22,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4288
+              },
+              "1000|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 13948,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 13948,
+                "contigs": 8,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|viral|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1405,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 1405,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 425259,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 424562,
+                "contigs": 279,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 697
+              },
+              "1|bacterial|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 22395,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 22362,
+                "contigs": 55,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 33
+              },
+              "1|bacterial|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 6322049,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 6317742,
+                "contigs": 16313,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4307
+              },
+              "1|eukaryotic|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 1002,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1002,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|eukaryotic|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 12906463,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 12898691,
+                "contigs": 32986,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 7772
+              },
+              "1|not_attributable|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 11167,
+                "ambiguous_query_bp": 7907,
+                "confirmed_bacterial_bp": 1816,
+                "contigs": 28,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1444
+              },
+              "1|not_attributable|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 2587510,
+                "ambiguous_query_bp": 1469064,
+                "confirmed_bacterial_bp": 148575,
+                "confirmed_eukaryotic_bp": 381704,
+                "confirmed_other_bp": 140,
+                "confirmed_viral_bp": 11635,
+                "contigs": 6795,
+                "nn_quarantined_query_bp": 4987,
+                "unsupported_query_bp": 571405
+              },
+              "1|other|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 278,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 278,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|viral|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 184590,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 184448,
+                "contigs": 480,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 142
+              },
+              "2500|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1054999,
+                "ambiguous_query_bp": 995,
+                "confirmed_bacterial_bp": 1053093,
+                "contigs": 196,
+                "nn_quarantined_query_bp": 323,
+                "unsupported_query_bp": 588
+              },
+              "2500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 11863230,
+                "ambiguous_query_bp": 6943,
+                "confirmed_bacterial_bp": 11849316,
+                "contigs": 2648,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 6971
+              },
+              "2500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 4080,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 4080,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 117541,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 117540,
+                "contigs": 27,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1
+              },
+              "2500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 8114908,
+                "ambiguous_query_bp": 252,
+                "confirmed_bacterial_bp": 343,
+                "confirmed_eukaryotic_bp": 8110653,
+                "contigs": 2241,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 3660
+              },
+              "2500|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 766906,
+                "ambiguous_query_bp": 614076,
+                "confirmed_bacterial_bp": 99817,
+                "contigs": 149,
+                "nn_quarantined_query_bp": 202,
+                "unsupported_query_bp": 52811
+              },
+              "2500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 10111493,
+                "ambiguous_query_bp": 7330422,
+                "confirmed_bacterial_bp": 1525401,
+                "confirmed_eukaryotic_bp": 153135,
+                "confirmed_other_bp": 16278,
+                "confirmed_viral_bp": 155720,
+                "contigs": 2278,
+                "nn_quarantined_query_bp": 35217,
+                "unsupported_query_bp": 895320
+              },
+              "2500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 18982,
+                "ambiguous_query_bp": 16644,
+                "confirmed_bacterial_bp": 2304,
+                "contigs": 6,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 34
+              },
+              "2500|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 27707,
+                "ambiguous_query_bp": 340,
+                "confirmed_other_bp": 27367,
+                "contigs": 4,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 786264,
+                "ambiguous_query_bp": 465,
+                "confirmed_viral_bp": 784246,
+                "contigs": 178,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1553
+              },
+              "500|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 56179,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 56131,
+                "contigs": 90,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 48
+              },
+              "500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 5757548,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 5754275,
+                "contigs": 9356,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 3273
+              },
+              "500|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 515,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 515,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 122773,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 122703,
+                "contigs": 206,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 70
+              },
+              "500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1804,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1785,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 19
+              },
+              "500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 13422408,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 13417655,
+                "contigs": 21793,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4753
+              },
+              "500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 193609,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 193518,
+                "contigs": 317,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 91
+              },
+              "500|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 34645,
+                "ambiguous_query_bp": 28260,
+                "confirmed_bacterial_bp": 3457,
+                "contigs": 55,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2928
+              },
+              "500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 2289539,
+                "ambiguous_query_bp": 1352528,
+                "confirmed_bacterial_bp": 168491,
+                "confirmed_eukaryotic_bp": 311141,
+                "confirmed_other_bp": 303,
+                "confirmed_viral_bp": 19082,
+                "contigs": 3722,
+                "nn_quarantined_query_bp": 2875,
+                "unsupported_query_bp": 435119
+              },
+              "500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 739,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 422,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 317
+              },
+              "500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 39826,
+                "ambiguous_query_bp": 25624,
+                "confirmed_bacterial_bp": 6115,
+                "confirmed_eukaryotic_bp": 3465,
+                "confirmed_viral_bp": 340,
+                "contigs": 65,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4282
+              },
+              "500|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 175947,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 175706,
+                "contigs": 284,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 241
+              },
+              "500|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 2968,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 2968,
+                "contigs": 5,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 51361,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 51308,
+                "contigs": 59,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 53
+              },
+              "768|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 3648298,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 3645642,
+                "contigs": 4179,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2656
+              },
+              "768|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 40181,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 40145,
+                "contigs": 46,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 36
+              },
+              "768|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 4394,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 4394,
+                "contigs": 5,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 8527044,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 8524103,
+                "contigs": 9779,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2941
+              },
+              "768|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 90597,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 90507,
+                "contigs": 103,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 90
+              },
+              "768|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 30980,
+                "ambiguous_query_bp": 22204,
+                "confirmed_bacterial_bp": 4406,
+                "contigs": 35,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4370
+              },
+              "768|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1455208,
+                "ambiguous_query_bp": 974081,
+                "confirmed_bacterial_bp": 116992,
+                "confirmed_eukaryotic_bp": 130692,
+                "confirmed_other_bp": 141,
+                "confirmed_viral_bp": 7286,
+                "contigs": 1660,
+                "nn_quarantined_query_bp": 3385,
+                "unsupported_query_bp": 222631
+              },
+              "768|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 14684,
+                "ambiguous_query_bp": 10651,
+                "confirmed_bacterial_bp": 3068,
+                "contigs": 17,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 965
+              },
+              "768|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 824,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 824,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 119446,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 119318,
+                "contigs": 136,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 128
+              },
+              "768|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 3689,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 3689,
+                "contigs": 4,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              }
+            },
+            "keys": [
+              "lower_bp",
+              "attributable_lineage",
+              "candidate_eligibility",
+              "status",
+              "clean_marker"
+            ]
+          }
+        },
+        "pre": {
+          "recovery": {
+            "at_least_50_percent": 9,
+            "at_least_90_percent": 4,
+            "bp_weighted_R95": 0.05519554444239896,
+            "macro_R95": 0.06278222635994046,
+            "targets": 156,
+            "targets_with_any_passing_bin": 22
+          },
+          "grouping": {
+            "attributable_bp": 165477813,
+            "f1": 0.48725926194073377,
+            "precision": 0.7882817168778133,
+            "recall": 0.35260818557897544
+          },
+          "large_bins": 173,
+          "large_bins_below95": 85,
+          "population_cells": {
+            "cells": {
+              "10000|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 32437148,
+                "ambiguous_query_bp": 62129,
+                "confirmed_bacterial_bp": 32367083,
+                "contigs": 464,
+                "nn_quarantined_query_bp": 227,
+                "unsupported_query_bp": 7709
+              },
+              "10000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 21924901,
+                "ambiguous_query_bp": 40942,
+                "confirmed_bacterial_bp": 21876914,
+                "confirmed_eukaryotic_bp": 276,
+                "contigs": 777,
+                "nn_quarantined_query_bp": 220,
+                "unsupported_query_bp": 6549
+              },
+              "10000|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 14067,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 13511,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 556
+              },
+              "10000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1598996,
+                "ambiguous_query_bp": 1891,
+                "confirmed_eukaryotic_bp": 1596871,
+                "contigs": 33,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 234
+              },
+              "10000|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 10641286,
+                "ambiguous_query_bp": 5434190,
+                "confirmed_bacterial_bp": 2827205,
+                "confirmed_eukaryotic_bp": 115655,
+                "contigs": 145,
+                "nn_quarantined_query_bp": 2152619,
+                "unsupported_query_bp": 111617
+              },
+              "10000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 31477732,
+                "ambiguous_query_bp": 20346211,
+                "confirmed_bacterial_bp": 3403559,
+                "confirmed_eukaryotic_bp": 1727048,
+                "confirmed_other_bp": 54405,
+                "confirmed_viral_bp": 203902,
+                "contigs": 617,
+                "nn_quarantined_query_bp": 5444160,
+                "unsupported_query_bp": 298447
+              },
+              "10000|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 171492,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 171492,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 398479,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 398479,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1522013,
+                "ambiguous_query_bp": 2794,
+                "confirmed_viral_bp": 1518584,
+                "contigs": 43,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 635
+              },
+              "1000|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 277163,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 276947,
+                "contigs": 177,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 216
+              },
+              "1000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 10948628,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 10941173,
+                "contigs": 7298,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 7455
+              },
+              "1000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 60772,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 60606,
+                "contigs": 44,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 166
+              },
+              "1000|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 56251,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 56212,
+                "contigs": 34,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 39
+              },
+              "1000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 21920781,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 21912387,
+                "contigs": 15123,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 8394
+              },
+              "1000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 81419,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 81419,
+                "contigs": 62,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 161003,
+                "ambiguous_query_bp": 135048,
+                "confirmed_bacterial_bp": 10321,
+                "contigs": 98,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 15634
+              },
+              "1000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 6524808,
+                "ambiguous_query_bp": 4498137,
+                "confirmed_bacterial_bp": 720402,
+                "confirmed_eukaryotic_bp": 422567,
+                "confirmed_other_bp": 3263,
+                "confirmed_viral_bp": 78700,
+                "contigs": 4159,
+                "nn_quarantined_query_bp": 8990,
+                "unsupported_query_bp": 792749
+              },
+              "1000|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 3609,
+                "ambiguous_query_bp": 3609,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 30227,
+                "ambiguous_query_bp": 17224,
+                "confirmed_bacterial_bp": 6400,
+                "confirmed_eukaryotic_bp": 2315,
+                "contigs": 22,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4288
+              },
+              "1000|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 13948,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 13948,
+                "contigs": 8,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|viral|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1405,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 1405,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 425259,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 424562,
+                "contigs": 279,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 697
+              },
+              "1|bacterial|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 22395,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 22362,
+                "contigs": 55,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 33
+              },
+              "1|bacterial|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 6322049,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 6317742,
+                "contigs": 16313,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4307
+              },
+              "1|eukaryotic|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 1002,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1002,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|eukaryotic|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 12906463,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 12898691,
+                "contigs": 32986,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 7772
+              },
+              "1|not_attributable|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 11167,
+                "ambiguous_query_bp": 7907,
+                "confirmed_bacterial_bp": 1816,
+                "contigs": 28,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1444
+              },
+              "1|not_attributable|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 2587510,
+                "ambiguous_query_bp": 1469064,
+                "confirmed_bacterial_bp": 148575,
+                "confirmed_eukaryotic_bp": 381704,
+                "confirmed_other_bp": 140,
+                "confirmed_viral_bp": 11635,
+                "contigs": 6795,
+                "nn_quarantined_query_bp": 4987,
+                "unsupported_query_bp": 571405
+              },
+              "1|other|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 278,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 278,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|viral|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 184590,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 184448,
+                "contigs": 480,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 142
+              },
+              "2500|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1054999,
+                "ambiguous_query_bp": 995,
+                "confirmed_bacterial_bp": 1053093,
+                "contigs": 196,
+                "nn_quarantined_query_bp": 323,
+                "unsupported_query_bp": 588
+              },
+              "2500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 11863230,
+                "ambiguous_query_bp": 6943,
+                "confirmed_bacterial_bp": 11849316,
+                "contigs": 2648,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 6971
+              },
+              "2500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 4080,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 4080,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 117541,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 117540,
+                "contigs": 27,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1
+              },
+              "2500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 8114908,
+                "ambiguous_query_bp": 252,
+                "confirmed_bacterial_bp": 343,
+                "confirmed_eukaryotic_bp": 8110653,
+                "contigs": 2241,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 3660
+              },
+              "2500|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 766906,
+                "ambiguous_query_bp": 614076,
+                "confirmed_bacterial_bp": 99817,
+                "contigs": 149,
+                "nn_quarantined_query_bp": 202,
+                "unsupported_query_bp": 52811
+              },
+              "2500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 10111493,
+                "ambiguous_query_bp": 7330422,
+                "confirmed_bacterial_bp": 1525401,
+                "confirmed_eukaryotic_bp": 153135,
+                "confirmed_other_bp": 16278,
+                "confirmed_viral_bp": 155720,
+                "contigs": 2278,
+                "nn_quarantined_query_bp": 35217,
+                "unsupported_query_bp": 895320
+              },
+              "2500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 18982,
+                "ambiguous_query_bp": 16644,
+                "confirmed_bacterial_bp": 2304,
+                "contigs": 6,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 34
+              },
+              "2500|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 27707,
+                "ambiguous_query_bp": 340,
+                "confirmed_other_bp": 27367,
+                "contigs": 4,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 786264,
+                "ambiguous_query_bp": 465,
+                "confirmed_viral_bp": 784246,
+                "contigs": 178,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1553
+              },
+              "500|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 56179,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 56131,
+                "contigs": 90,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 48
+              },
+              "500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 5757548,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 5754275,
+                "contigs": 9356,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 3273
+              },
+              "500|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 515,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 515,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 122773,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 122703,
+                "contigs": 206,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 70
+              },
+              "500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1804,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1785,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 19
+              },
+              "500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 13422408,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 13417655,
+                "contigs": 21793,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4753
+              },
+              "500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 193609,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 193518,
+                "contigs": 317,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 91
+              },
+              "500|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 34645,
+                "ambiguous_query_bp": 28260,
+                "confirmed_bacterial_bp": 3457,
+                "contigs": 55,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2928
+              },
+              "500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 2289539,
+                "ambiguous_query_bp": 1352528,
+                "confirmed_bacterial_bp": 168491,
+                "confirmed_eukaryotic_bp": 311141,
+                "confirmed_other_bp": 303,
+                "confirmed_viral_bp": 19082,
+                "contigs": 3722,
+                "nn_quarantined_query_bp": 2875,
+                "unsupported_query_bp": 435119
+              },
+              "500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 739,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 422,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 317
+              },
+              "500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 39826,
+                "ambiguous_query_bp": 25624,
+                "confirmed_bacterial_bp": 6115,
+                "confirmed_eukaryotic_bp": 3465,
+                "confirmed_viral_bp": 340,
+                "contigs": 65,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4282
+              },
+              "500|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 175947,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 175706,
+                "contigs": 284,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 241
+              },
+              "500|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 2968,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 2968,
+                "contigs": 5,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 51361,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 51308,
+                "contigs": 59,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 53
+              },
+              "768|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 3648298,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 3645642,
+                "contigs": 4179,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2656
+              },
+              "768|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 40181,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 40145,
+                "contigs": 46,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 36
+              },
+              "768|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 4394,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 4394,
+                "contigs": 5,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 8527044,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 8524103,
+                "contigs": 9779,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2941
+              },
+              "768|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 90597,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 90507,
+                "contigs": 103,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 90
+              },
+              "768|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 30980,
+                "ambiguous_query_bp": 22204,
+                "confirmed_bacterial_bp": 4406,
+                "contigs": 35,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4370
+              },
+              "768|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1455208,
+                "ambiguous_query_bp": 974081,
+                "confirmed_bacterial_bp": 116992,
+                "confirmed_eukaryotic_bp": 130692,
+                "confirmed_other_bp": 141,
+                "confirmed_viral_bp": 7286,
+                "contigs": 1660,
+                "nn_quarantined_query_bp": 3385,
+                "unsupported_query_bp": 222631
+              },
+              "768|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 14684,
+                "ambiguous_query_bp": 10651,
+                "confirmed_bacterial_bp": 3068,
+                "contigs": 17,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 965
+              },
+              "768|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 824,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 824,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 119446,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 119318,
+                "contigs": 136,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 128
+              },
+              "768|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 3689,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 3689,
+                "contigs": 4,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              }
+            },
+            "keys": [
+              "lower_bp",
+              "attributable_lineage",
+              "candidate_eligibility",
+              "status",
+              "clean_marker"
+            ]
+          }
+        }
+      },
+      "accounting": {
+        "post": {
+          "all_bins_and_unassigned_DNA_counted": true,
+          "bins": 873,
+          "bp": 231678157,
+          "contigs": 145702,
+          "statuses": {
+            "assigned": {
+              "bp": 208919966,
+              "contigs": 88138
+            },
+            "excluded": {
+              "bp": 22035454,
+              "contigs": 56661
+            },
+            "unassigned": {
+              "bp": 722737,
+              "contigs": 903
+            }
+          }
+        },
+        "pre": {
+          "all_bins_and_unassigned_DNA_counted": true,
+          "bins": 871,
+          "bp": 231678157,
+          "contigs": 145702,
+          "statuses": {
+            "assigned": {
+              "bp": 208919966,
+              "contigs": 88138
+            },
+            "excluded": {
+              "bp": 22035454,
+              "contigs": 56661
+            },
+            "unassigned": {
+              "bp": 722737,
+              "contigs": 903
+            }
+          }
+        }
+      },
+      "geometry": {
+        "attributable_eligible_queries": 76010,
+        "nn_purity": 0.9034074463886331,
+        "nn_purity_bp_weighted": 0.8700475419799135,
+        "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+      },
+      "geometry_by_lineage": {
+        "bacterial": {
+          "attributable_bp": 94606287,
+          "b3_precision": 0.8178782946366295,
+          "b3_precision_sum": 77376428.67346354,
+          "b3_recall": 0.5503127902468911,
+          "b3_recall_sum": 52063049.77386817,
+          "nn_purity": 0.8050659671925772,
+          "nn_purity_bp_weighted": 0.8459523941733235,
+          "queries": 25543,
+          "query_bp": 88261843,
+          "same": 102819,
+          "same_weighted_sum": 74665317.39999999
+        },
+        "eukaryotic": {
+          "attributable_bp": 67037217,
+          "b3_precision": 0.7903903290041051,
+          "b3_precision_sum": 52985568.000149585,
+          "b3_recall": 0.01983290272499711,
+          "b3_recall_sum": 1329542.6037155227,
+          "nn_purity": 0.9599878836833603,
+          "nn_purity_bp_weighted": 0.9390058834926865,
+          "queries": 49520,
+          "query_bp": 54129752,
+          "same": 237693,
+          "same_weighted_sum": 50828155.60000002
+        },
+        "other": {
+          "attributable_bp": 214249,
+          "b3_precision": 0.23053676335058382,
+          "b3_precision_sum": 49392.271011099234,
+          "b3_recall": 0.9974648190033355,
+          "b3_recall_sum": 213705.84000664562,
+          "nn_purity": 0.10666666666666667,
+          "nn_purity_bp_weighted": 0.09084875987867516,
+          "queries": 15,
+          "query_bp": 213971,
+          "same": 8,
+          "same_weighted_sum": 19439.000000000004
+        },
+        "viral": {
+          "attributable_bp": 3620060,
+          "b3_precision": 0.2781968148209359,
+          "b3_precision_sum": 1007089.1614606772,
+          "b3_recall": 0.8862737195658242,
+          "b3_recall_sum": 3208364.0412514578,
+          "nn_purity": 0.6051502145922747,
+          "nn_purity_bp_weighted": 0.45109763729562496,
+          "queries": 932,
+          "query_bp": 3435470,
+          "same": 2820,
+          "same_weighted_sum": 1549732.4000000006
+        }
+      },
+      "raw_learned_geometry": {
+        "by_lineage": {
+          "bacterial": {
+            "learned_mean": 0.8864864864864864,
+            "queries": 37,
+            "raw_mean": 0.8324324324324325
+          },
+          "eukaryotic": {
+            "learned_mean": 0.981081081081081,
+            "queries": 74,
+            "raw_mean": 0.9756756756756755
+          },
+          "viral": {
+            "learned_mean": 1.0,
+            "queries": 1,
+            "raw_mean": 1.0
+          }
+        },
+        "learned_mean": 0.95,
+        "length_strata": {
+          "1": {
+            "learned_mean": null,
+            "queries": 0,
+            "raw_mean": null
+          },
+          "1000": {
+            "learned_mean": 0.9086956521739131,
+            "queries": 46,
+            "raw_mean": 0.8913043478260869
+          },
+          "10000": {
+            "learned_mean": 1.0,
+            "queries": 2,
+            "raw_mean": 1.0
+          },
+          "2500": {
+            "learned_mean": 1.0,
+            "queries": 3,
+            "raw_mean": 1.0
+          },
+          "500": {
+            "learned_mean": 0.9675675675675675,
+            "queries": 37,
+            "raw_mean": 0.9405405405405405
+          },
+          "768": {
+            "learned_mean": 0.9916666666666667,
+            "queries": 24,
+            "raw_mean": 0.9666666666666667
+          }
+        },
+        "query_selection": "First128 SHA256(eligible opaque/contig ID), label blind; attributable subset reported",
+        "raw_mean": 0.9285714285714286,
+        "reference_contigs": 89041,
+        "saved_transform_sha256": "694ffcd860544fe0aba1975f88075e0c394f783a9d24d1b9600dd24f913ebfae",
+        "statistics_refitted": false
+      },
+      "native_graph": {
+        "embedding": {
+          "bytes": 21872260,
+          "sha256": "428b07f94af628139aee924575a4f4c5697419cdcca669ae4dbed558b8aaab75"
+        },
+        "embedding_metadata": {
+          "checkpoint_sha256": "cd632ad1a0f7cf3219fea1f36c3fc060c34911f0c025ba4ca7b66718f5573d8c",
+          "features_sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e",
+          "ids_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+          "kind": "embeddings",
+          "metric": "unit-sphere cosine/equivalent Euclidean; no post-learning transform",
+          "mode": "multiview_learned_unit_sphere",
+          "reload_exact": true,
+          "samples": [
+            "cami3_toy_human_gut_short_read_sample_0",
+            "cami3_toy_human_gut_short_read_sample_2",
+            "cami3_toy_human_gut_short_read_sample_3",
+            "cami3_toy_human_gut_short_read_sample_4",
+            "cami3_toy_human_gut_short_read_sample_6",
+            "cami3_toy_human_gut_short_read_sample_9",
+            "cami3_toy_human_gut_short_read_sample_10",
+            "cami3_toy_human_gut_short_read_sample_11",
+            "cami3_toy_human_gut_short_read_sample_14",
+            "cami3_toy_human_gut_short_read_sample_17"
+          ],
+          "sha256": "428b07f94af628139aee924575a4f4c5697419cdcca669ae4dbed558b8aaab75",
+          "version": 1
+        },
+        "fit_inference_index_or_selection_ran": false,
+        "graph": {
+          "bytes": 31385819,
+          "sha256": "5f0eff297ac827bcd89ec736019205ad895d1393d6e47cd1e9920a6c2418207d"
+        },
+        "graph_metadata": {
+          "audit": {
+            "audit_queries": 64,
+            "guarantee": "fixed sampled queries only; no unqueried recall guarantee",
+            "k": 30,
+            "mean_tie_aware_recall": 0.9994791666666667,
+            "metric": "Euclidean on unit vectors; exact cosine rerank",
+            "min_query_recall": 0.9666666666666667,
+            "mode": "pynndescent_exact_rerank",
+            "query_ids": [
+              "k141_102538",
+              "k141_2973",
+              "k141_45451",
+              "k141_127986",
+              "k141_77346",
+              "k141_58642",
+              "k141_52675",
+              "k141_84530",
+              "k141_72387",
+              "k141_68688",
+              "k141_47987",
+              "k141_114432",
+              "k141_7364",
+              "k141_79264",
+              "k141_27229",
+              "k141_135618",
+              "k141_110065",
+              "k141_3214",
+              "k141_124749",
+              "k141_62514",
+              "k141_81267",
+              "k141_96621",
+              "k141_51167",
+              "k141_122362",
+              "k141_74522",
+              "k141_8536",
+              "k141_14568",
+              "k141_121845",
+              "k141_104789",
+              "k141_11079",
+              "k141_30914",
+              "k141_89140",
+              "k141_15976",
+              "k141_66662",
+              "k141_75014",
+              "k141_142207",
+              "k141_88948",
+              "k141_83908",
+              "k141_39029",
+              "k141_36082",
+              "k141_55999",
+              "k141_4817",
+              "k141_77666",
+              "k141_101140",
+              "k141_97201",
+              "k141_54423",
+              "k141_27016",
+              "k141_31823",
+              "k141_45509",
+              "k141_22471",
+              "k141_84875",
+              "k141_133887",
+              "k141_65414",
+              "k141_73118",
+              "k141_34531",
+              "k141_61300",
+              "k141_104624",
+              "k141_70555",
+              "k141_49835",
+              "k141_59020",
+              "k141_76347",
+              "k141_114616",
+              "k141_45808",
+              "k141_82315"
+            ],
+            "threads": 4,
+            "threshold": 0.9
+          },
+          "embedding_sha256": "428b07f94af628139aee924575a4f4c5697419cdcca669ae4dbed558b8aaab75",
+          "ids_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+          "kind": "candidate_sparse_graph",
+          "metric": "unit-sphere cosine/equivalent Euclidean; no post-learning transform",
+          "sha256": "5f0eff297ac827bcd89ec736019205ad895d1393d6e47cd1e9920a6c2418207d",
+          "version": 1
+        },
+        "objective": {
+          "gamma": 0.012099754990361594,
+          "n_iterations": 2,
+          "node_sizes": 1,
+          "rule": "median_positive_retained_edge_weight / frozen_neighbor_count",
+          "seed": 11
+        },
+        "partition": {
+          "bytes": 18372206,
+          "sha256": "6d14b277b1deb480c25d95cee02c204befd8a5088ba11cfb553860c387fd0cfc"
+        },
+        "seconds": 3.6470747109999877,
+        "sparse": {
+          "edges": 2068044,
+          "endpoint_order": "opaque-ID lexicographic, mapped to full FASTA row indices"
+        },
+        "status": "PASS",
+        "unit": "E009-dev5"
+      },
+      "native_128_queries": {
+        "mean_recall_5": 1.0,
+        "mean_recall_k": 0.9997395833333333,
+        "metric": "retained unit vectors, cosine; no post-learning z-score",
+        "native_neighbor_entries": 2671230,
+        "native_rows_checked": 89041,
+        "query_selection": "first128 SHA256(contigID), label blind",
+        "tolerance": 1e-06
+      },
+      "paired_refinement_vs_parent": {
+        "gained": 0,
+        "lost": 0,
+        "unchanged": 156,
+        "delta_bp": 0
+      },
+      "paired_refinement_vs_old": {
+        "gained": 0,
+        "lost": 0,
+        "unchanged": 156,
+        "delta_bp": 0
+      },
+      "training": {
+        "kind": "multiview_checkpoint",
+        "config": {
+          "audit_queries": 64,
+          "batch_size": 256,
+          "composition_reconstruction_weight": 1.0,
+          "crop_fraction": 0.8,
+          "crop_max": 10000,
+          "crop_min": 256,
+          "crop_pairs": 2,
+          "depth_dropout": 0.5,
+          "depth_hidden": 64,
+          "depth_reconstruction_weight": 0.1,
+          "epochs": 20,
+          "exact_threshold": 2048,
+          "fusion_hidden": 128,
+          "inference_batch_size": 2048,
+          "learning_rate": 0.001,
+          "leiden_iterations": 2,
+          "min_bin_bp": 10000,
+          "min_bin_contigs": 2,
+          "min_length": 500,
+          "min_neighbor_recall": 0.9,
+          "neighbors": 30,
+          "output": 64,
+          "refinement_iterations": 10,
+          "refinement_margin": 0.05,
+          "refinement_min_cosine": 0.2,
+          "resolution": 1.0,
+          "seed": 11,
+          "sequence_hidden": 256,
+          "sequence_loss_weight": 0.5,
+          "sequence_output": 128,
+          "temperature": 0.2,
+          "weight_decay": 1e-05
+        },
+        "training_parents": 89041,
+        "threads": 4,
+        "loader_workers": 0,
+        "parameter_count": 145618,
+        "wall_seconds": 374.44425964799984,
+        "process_cpu_seconds": 1495.91114346
+      },
+      "training_history_first_last": [
+        {
+          "available_views": 432664,
+          "composition_reconstruction": 0.8353840796652485,
+          "depth_dropped_views": 215783,
+          "depth_reconstruction": 0.0336945027662209,
+          "epoch": 1,
+          "fused_contrastive": 4.781075847476771,
+          "loss": 8.074771990821956,
+          "parents_seen": 89041,
+          "sequence_contrastive": 4.909885300936732,
+          "wall_seconds": 18.538181775999874
+        },
+        {
+          "available_views": 432664,
+          "composition_reconstruction": 0.599210242787386,
+          "depth_dropped_views": 216427,
+          "depth_reconstruction": 0.020268868418331074,
+          "epoch": 20,
+          "fused_contrastive": 4.341403799661829,
+          "loss": 7.221064401895785,
+          "parents_seen": 89041,
+          "sequence_contrastive": 4.556846968259381,
+          "wall_seconds": 373.5428442069997
+        }
+      ],
+      "features_metadata": {
+        "depth_semantics": "Measured full-parent means; repeated conditioning for windows, not measured window depth. No variance available.",
+        "depth_sha256": "48e49f4bb2ec1892f4be1f4db7dbf8616709889c36148f3d14473f52fd1b7aec",
+        "fasta_sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33",
+        "ids_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+        "kind": "features",
+        "min_length": 500,
+        "mode": "candidate_measured_parent_depth",
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ],
+        "sequence_dimensions": 136,
+        "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e",
+        "version": 1
+      },
+      "complete_alternatives": {
+        "complete_alternatives_checked": 871,
+        "no_merge_or_new_assignment": true
+      },
+      "paired_bundle_vs_preserved": {
+        "gained": 18,
+        "lost": 7,
+        "unchanged": 131,
+        "delta_bp": -1216199
+      }
+    },
+    "oral-dev4": {
+      "arms": {
+        "old": {
+          "recovery": {
+            "at_least_50_percent": 29,
+            "at_least_90_percent": 20,
+            "bp_weighted_R95": 0.04348603640414077,
+            "macro_R95": 0.03822812772174296,
+            "reference_bp": 2083072211,
+            "targets": 799
+          },
+          "grouping": {
+            "bp": 1669981123,
+            "f1": 0.2747629935480654,
+            "precision": 0.20843783599640175,
+            "recall": 0.40299714574250634,
+            "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+          },
+          "large_bins": 820,
+          "large_bins_below95": 719,
+          "population_cells": {
+            "10000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 653410214,
+              "contigs": 4006,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 653
+            },
+            "10000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 123861926,
+              "contigs": 5980,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 114
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 6791284,
+              "contigs": 167,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 7688120,
+              "contigs": 329,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 1
+            },
+            "1000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 9435672,
+              "contigs": 5914,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 6
+            },
+            "1000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 215719961,
+              "contigs": 145825,
+              "known_shared_query_bp": 3113,
+              "non_ACGT_quarantine_bp": 325
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 518338,
+              "contigs": 301,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 2
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 6130323,
+              "contigs": 3719,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 9
+            },
+            "1|positive_bacterial_source|excluded|excluded|clean_marker": {
+              "bp": 1085200,
+              "contigs": 3119,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 1
+            },
+            "1|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+              "bp": 225068259,
+              "contigs": 774665,
+              "known_shared_query_bp": 7832,
+              "non_ACGT_quarantine_bp": 181
+            },
+            "2500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 26471251,
+              "contigs": 5258,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 13
+            },
+            "2500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 179468386,
+              "contigs": 41912,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 221
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 1674006,
+              "contigs": 346,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 9480780,
+              "contigs": 2213,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 23
+            },
+            "500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 1556469,
+              "contigs": 2477,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 122734007,
+              "contigs": 199568,
+              "known_shared_query_bp": 1118,
+              "non_ACGT_quarantine_bp": 109
+            },
+            "500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 38552,
+              "contigs": 62,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 741880,
+              "contigs": 1196,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 1
+            },
+            "768|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 1693647,
+              "contigs": 1925,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 75783318,
+              "contigs": 86851,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 75
+            },
+            "768|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 50061,
+              "contigs": 57,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 579469,
+              "contigs": 657,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            }
+          },
+          "known_shared_mask_recovery_identical": true
+        },
+        "post": {
+          "recovery": {
+            "at_least_50_percent": 38,
+            "at_least_90_percent": 24,
+            "bp_weighted_R95": 0.057242024722108875,
+            "macro_R95": 0.04926207627350074,
+            "reference_bp": 2083072211,
+            "targets": 799
+          },
+          "grouping": {
+            "bp": 1669981123,
+            "f1": 0.31556663796930357,
+            "precision": 0.2714309252299588,
+            "recall": 0.3768427129509054,
+            "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+          },
+          "large_bins": 969,
+          "large_bins_below95": 856,
+          "population_cells": {
+            "10000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 658883113,
+              "contigs": 4155,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 653
+            },
+            "10000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 130991606,
+              "contigs": 6277,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 115
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 1318385,
+              "contigs": 18,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 558440,
+              "contigs": 32,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 9936585,
+              "contigs": 6204,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 8
+            },
+            "1000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 221267062,
+              "contigs": 149161,
+              "known_shared_query_bp": 3113,
+              "non_ACGT_quarantine_bp": 334
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 17425,
+              "contigs": 11,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 583222,
+              "contigs": 383,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1|positive_bacterial_source|excluded|excluded|clean_marker": {
+              "bp": 1085200,
+              "contigs": 3119,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 1
+            },
+            "1|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+              "bp": 225068259,
+              "contigs": 774665,
+              "known_shared_query_bp": 7832,
+              "non_ACGT_quarantine_bp": 181
+            },
+            "2500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 28048772,
+              "contigs": 5583,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 13
+            },
+            "2500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 188223827,
+              "contigs": 43953,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 244
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 96485,
+              "contigs": 21,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 725339,
+              "contigs": 172,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 1591352,
+              "contigs": 2533,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 123200984,
+              "contigs": 200313,
+              "known_shared_query_bp": 1118,
+              "non_ACGT_quarantine_bp": 110
+            },
+            "500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 3669,
+              "contigs": 6,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 274903,
+              "contigs": 451,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 1740251,
+              "contigs": 1978,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 76205285,
+              "contigs": 87329,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 75
+            },
+            "768|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 3457,
+              "contigs": 4,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 157502,
+              "contigs": 179,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            }
+          },
+          "known_shared_mask_recovery_identical": true
+        },
+        "pre": {
+          "recovery": {
+            "at_least_50_percent": 17,
+            "at_least_90_percent": 10,
+            "bp_weighted_R95": 0.025694550922123555,
+            "macro_R95": 0.023333161388856626,
+            "reference_bp": 2083072211,
+            "targets": 799
+          },
+          "grouping": {
+            "bp": 1669981123,
+            "f1": 0.2758456904041546,
+            "precision": 0.20662177870760567,
+            "recall": 0.4148225037259665,
+            "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+          },
+          "large_bins": 859,
+          "large_bins_below95": 773,
+          "population_cells": {
+            "10000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 660201498,
+              "contigs": 4173,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 653
+            },
+            "10000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 131530077,
+              "contigs": 6308,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 115
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 19969,
+              "contigs": 1,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 9940667,
+              "contigs": 6206,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 8
+            },
+            "1000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 221472210,
+              "contigs": 149278,
+              "known_shared_query_bp": 3113,
+              "non_ACGT_quarantine_bp": 334
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 13343,
+              "contigs": 9,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 378074,
+              "contigs": 266,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1|positive_bacterial_source|excluded|excluded|clean_marker": {
+              "bp": 1085200,
+              "contigs": 3119,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 1
+            },
+            "1|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+              "bp": 225068259,
+              "contigs": 774665,
+              "known_shared_query_bp": 7832,
+              "non_ACGT_quarantine_bp": 181
+            },
+            "2500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 28140483,
+              "contigs": 5603,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 13
+            },
+            "2500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 188823127,
+              "contigs": 44093,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 244
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 4774,
+              "contigs": 1,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 126039,
+              "contigs": 32,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 1591352,
+              "contigs": 2533,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 123203535,
+              "contigs": 200317,
+              "known_shared_query_bp": 1118,
+              "non_ACGT_quarantine_bp": 110
+            },
+            "500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 3669,
+              "contigs": 6,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 272352,
+              "contigs": 447,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 1740251,
+              "contigs": 1978,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 76215672,
+              "contigs": 87341,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 75
+            },
+            "768|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 3457,
+              "contigs": 4,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 147115,
+              "contigs": 167,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            }
+          },
+          "known_shared_mask_recovery_identical": true
+        }
+      },
+      "accounting": {
+        "post": {
+          "all_bins_and_unassigned_DNA_counted": true,
+          "bins": 4834,
+          "bp": 1669981123,
+          "contigs": 1286547,
+          "statuses": {
+            "assigned": {
+              "bp": 1440088837,
+              "contigs": 507486
+            },
+            "excluded": {
+              "bp": 226153459,
+              "contigs": 777784
+            },
+            "unassigned": {
+              "bp": 3738827,
+              "contigs": 1277
+            }
+          }
+        },
+        "pre": {
+          "all_bins_and_unassigned_DNA_counted": true,
+          "bins": 4612,
+          "bp": 1669981123,
+          "contigs": 1286547,
+          "statuses": {
+            "assigned": {
+              "bp": 1442858872,
+              "contigs": 507830
+            },
+            "excluded": {
+              "bp": 226153459,
+              "contigs": 777784
+            },
+            "unassigned": {
+              "bp": 968792,
+              "contigs": 933
+            }
+          }
+        }
+      },
+      "geometry": {
+        "length_strata": {
+          "1000": {
+            "queries": 155759,
+            "query_bp": 231804294,
+            "same": 170569,
+            "same_weighted_bp": 53137427.80000011
+          },
+          "10000": {
+            "queries": 10482,
+            "query_bp": 791751544,
+            "same": 23756,
+            "same_weighted_bp": 169517444.8000003
+          },
+          "2500": {
+            "queries": 49729,
+            "query_bp": 217094423,
+            "same": 85703,
+            "same_weighted_bp": 77975609.00000004
+          },
+          "500": {
+            "queries": 203303,
+            "query_bp": 125070908,
+            "same": 113494,
+            "same_weighted_bp": 14142428.000000155
+          },
+          "768": {
+            "queries": 89490,
+            "query_bp": 78106495,
+            "same": 65803,
+            "same_weighted_bp": 11540381.200000025
+          }
+        },
+        "nn_purity": 0.18056541061358627,
+        "nn_purity_bp_weighted": 0.22600570617685517,
+        "queries": 508763
+      },
+      "geometry_by_lineage": null,
+      "raw_learned_geometry": {
+        "by_lineage": {
+          "provided_bacterial_source": {
+            "learned_mean": 0.19374999999999987,
+            "queries": 128,
+            "raw_mean": 0.1265625
+          }
+        },
+        "learned_mean": 0.19374999999999987,
+        "length_strata": {
+          "1": {
+            "learned_mean": null,
+            "queries": 0,
+            "raw_mean": null
+          },
+          "1000": {
+            "learned_mean": 0.27027027027027034,
+            "queries": 37,
+            "raw_mean": 0.12432432432432435
+          },
+          "10000": {
+            "learned_mean": 0.6,
+            "queries": 3,
+            "raw_mean": 0.3333333333333333
+          },
+          "2500": {
+            "learned_mean": 0.2333333333333334,
+            "queries": 18,
+            "raw_mean": 0.14444444444444446
+          },
+          "500": {
+            "learned_mean": 0.10204081632653063,
+            "queries": 49,
+            "raw_mean": 0.10612244897959187
+          },
+          "768": {
+            "learned_mean": 0.18095238095238095,
+            "queries": 21,
+            "raw_mean": 0.13333333333333336
+          }
+        },
+        "query_selection": "First128 SHA256(eligible opaque/contig ID), label blind; attributable subset reported",
+        "raw_mean": 0.1265625,
+        "reference_contigs": 508763,
+        "saved_transform_sha256": "4abe2c278582b5042c10b395bfff39d42f370eeda819ade5fad8f3784929fa0d",
+        "statistics_refitted": false
+      },
+      "native_graph": {
+        "embedding": {
+          "bytes": 185991671,
+          "sha256": "d08d7aa3e7c0f6d6cbf56424f4d0e3e843221a8c1811a5d046666189cde87989"
+        },
+        "embedding_metadata": {
+          "checkpoint_sha256": "eedd20e938761ce38fe28aa94031b24d7f3a2d3293d6378354ccf841353f47f6",
+          "features_sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0",
+          "ids_sha256": "77eb90600172cb24d687302197a613146c008567b6922deb0fcee780dce89a89",
+          "kind": "embeddings",
+          "metric": "unit-sphere cosine/equivalent Euclidean; no post-learning transform",
+          "mode": "candidate_learned_unit_sphere",
+          "reload_exact": true,
+          "samples": [],
+          "sha256": "d08d7aa3e7c0f6d6cbf56424f4d0e3e843221a8c1811a5d046666189cde87989",
+          "version": 1
+        },
+        "fit_inference_index_or_selection_ran": false,
+        "graph": {
+          "bytes": 237443752,
+          "sha256": "2fe0dc828faa7d139f823f36809384bdfe57c69e85dc5786113d0d32beedbdb2"
+        },
+        "graph_metadata": {
+          "audit": {
+            "audit_queries": 64,
+            "guarantee": "fixed sampled queries only; no unqueried recall guarantee",
+            "k": 30,
+            "mean_tie_aware_recall": 1.0,
+            "metric": "Euclidean on unit vectors; exact cosine rerank",
+            "min_query_recall": 1.0,
+            "mode": "pynndescent_exact_rerank",
+            "query_ids": [
+              "Ca73279d62a50d0eec4fb9321954022de6bce5ddc39b5d0b5424934cdc809351e",
+              "C34a7dbf6d67c4a9b8fab7901f1b787c1471b6b8d618e90a9e4f3e994d670c117",
+              "C0733bb152ba6e1306c83c8d7d1520a33260fe1a64c8959dfbd96286e27e57f20",
+              "C5615f1f5d9ab5b777b83f8cc1a7d0f9660d97bdbc22846eec45cc788ae7332bd",
+              "Caaebdc5c8386b1e81a67d8bea5179b28d7d4cd302f716ff8acbad876432bf104",
+              "C37ae4d61719882b9bfd00cda79416988b437242e68a12223812fc128b9fc2510",
+              "Cf62231ca3a4e4242cf425ddff9439ba9f42c5cf30d1c114ebf8929cfa1b7c69a",
+              "C5e44853d4ff9a89e3ef456b4479a844dd1fcbc4f844a38c93522e3aab6ff17b9",
+              "Cea5ff3ee6b188564aa334a0668e3c10517ad355110c6fedf7f9da0c00920f5eb",
+              "Ca1106efb597501cbe80f3507e5450774bf9da226a0e1bf86a9ff50bf4d926727",
+              "Cafa9ae559af29aab2bfdae9df019b58214b1022e3640ed1c4eef9c5a05afc578",
+              "Cb4d98034a3880924172797d65f2b1c5dc7fe78fc5db3a1f20d16359635b16ac1",
+              "C845a3481534ffde97139c25a4aca89dcb8ade22a4c6b8804f84348e71592d08a",
+              "Cec8c888203f59eabf76dcd736e3737f1017393c0e1aba043eecfa29796d7715f",
+              "C51dfca939cbdcec60c10602ed193164e9060f94b1da050ca4faa00d4c219f767",
+              "Cc3e96e6567508606e5810535a21e3b9e57f90736038a3c9377de23af75bba061",
+              "C8ddc3d99a0a80cd23365ff79c0d5eefb98bfc9307ba1bc03421fb1ba352a8535",
+              "C7a93013582936984f038d38ce710e791c5005299052dbd79708fbf568a3ae488",
+              "Ceaedd535af0c96fc26d6954116dca2ce97e56733a8b196d31a919ca546edcd00",
+              "C75db57f1819faf3fd4f29991e0e6ff60f8d46ece2f52d1c4c23e7a0832d5c4a7",
+              "Ccd807399c89e7e14ce08a4bb85902733f6e32cf9e8b0aa9be1c284cbd5404d24",
+              "C74aee08f5ab5e74803e7be0fccd8eb5031b7da918fcc775cd68bbd1e1a7b4af1",
+              "C64917293076c8619dc7956df6ac63b1f30cdcc1413ff4af6bb604cee7ea11f61",
+              "C234919185afb42eb1d76fed6bb69576e6a879a69952b39ad7e2452b9f8910b36",
+              "C2149d23e2b3fb53c592231768516256ee245a77d22199f6b9751efa785992189",
+              "Cb683b2e95e8df0bf33fc1263a3add3563f6a9d4a0e46d5997e6eab3aff3651d8",
+              "Ca688d770b8caebafd52045019730bbf8e9d0a08ebcc8afb1ca011d510ae83bdf",
+              "C5993d056217c241990fc71b9678b306a5fefc0e91debc7497e9f7b42271f9252",
+              "Cbf0302b049f446dc37a3908058dc170f4cf82781ee1873e2aea31e8308aaa74e",
+              "C574bce1533dd387a50ef8384c562be575f7cb9f8f88d69ed5056e4761745dcde",
+              "Ca5745a28bccf26681e5736ef1b202d17c1673dfbd1dda517a97a4012081de8f4",
+              "Ca9c9edcf01ac1ce42550fc1d24433cc58cecaf82be80af9b957ca8d7d3eb6b9b",
+              "Cb8caab8f55b9bb142e3fc95bc6c71e297c5d01c426b8023f4a6abf81c3a9293b",
+              "Ccee2286c4e7c487b93be8d92461dc40f81871142d67f4b2ece31eed5bef6ec59",
+              "C2b110d1df42b145367176102d2ec554aa7fcc97ca15d35cef8f2684edc416bf1",
+              "C618b59c01f8ddf0f3f973849b8640996ebb91eb570fddb46996b7b8e951cc911",
+              "Ce599b4cc125d3ac0c6d491cbf52c959470e8afebf0edd442a49fd6cc12fc71d0",
+              "Cfdbaba80b31e6cf26ca850489cc09101c5dfbc547b03deea875062faed0f72bd",
+              "C31783e529b61e0ed62a5cc524a697bc7a677da69d244867e0cfbd787a03aab7c",
+              "Cf3d7059fd52d935caded2c7e9900b62ee6a13e8a8d010204867c87b3db1a2d66",
+              "C39f7c88d43c42bd522904af088476fb6bfa60bb926fdae15b156580f476f058f",
+              "C77402538d874d568063538c1928f5ee61528524c3d1833ec7d508d4af1afbce4",
+              "C27f09c4e1df3a8bf9d1b4b5104149c6fd3c957a5b83ffc53916053da0baa8918",
+              "C880623d4a658192f34c8c292731cfc6029dad14d584f2271505d3d5c08b2eaec",
+              "C2d49814dbd60f53e8e314a04ec297eb763c22c64ed435c7ddb06a36798d56bf5",
+              "Ce2e6e235465d0a95705f1c414bb554846ea0ea72276d2875d04f9b94033f559c",
+              "Cbd40a134e5d407e0fe8bdbaeb63dd656271b8b269e0daaecb2c81c0f79635544",
+              "C142a15568461682cbdad241904cc23917fe1861eb8ec1bf8c73c2814a2433004",
+              "Ca075db4c80a69e824c6bcac570e4c1ea9914f72bc1c1ac74cc082e955b925fa7",
+              "C333da8105cb6be6482ceda646f147b231a0d9a3217e5e2c716b2276355c88f17",
+              "Cb44cab1a31cc64e43eb3c036930987b54d3bc2ba9f4144e6ee3572bc36f5fc4a",
+              "C9871019a0f18d744eaffa7adeff20b765961a2b75b2e35ddecb80bbc0acccfa9",
+              "C57cf0f51b56cae80b2cff5ea4cfb76c68d2745e6998d8a129067d066d88e920d",
+              "C9d2e41740141e3360361964a5f55829094f8d5c0e7dd0478b88dc2e5dec34f90",
+              "C6528c8ad3832758b49f3b15b98d09ca26344418118b8ee5dc0ac345ab93a5b8e",
+              "C9d3c8a45a9eb632651f63e19fa9103e21a3d3a13a9bf7eb53c1c236491e48410",
+              "C605609a7a9aa7b7e479eb5552522f4203e677c79fa57f02e0d1c4388d467aeb9",
+              "Ca85dd654f76a2226657666631f2a050fe10f0149aa51615ba3048d6fa66e99d1",
+              "C264bcfcd9f539ba4bdf025fd5d4d884aef018bd292c776c25df9511096a3693d",
+              "C8144506f6455b2217392411e53a18c0366acafaa0d0188f1081deabdb295b2d8",
+              "Ce4bf6d778ef1f1b35f2b01b2a1684a2c7f5679ae355b0a706bdaaaf79c4bdeca",
+              "Cae12380ee8966d15bf506e8dc061286713efc41a7ada0ecfa2eac73c0f9bf427",
+              "C8e8e466f849349ac3aa29574cb2903e2249a29187e12a0d0ff06625694f7dfc4",
+              "Ce9201a3333336f193089a1f20082d2c1f2a246d7c92a175b6a150b0e128cafcc"
+            ],
+            "threads": 4,
+            "threshold": 0.9
+          },
+          "embedding_sha256": "d08d7aa3e7c0f6d6cbf56424f4d0e3e843221a8c1811a5d046666189cde87989",
+          "ids_sha256": "77eb90600172cb24d687302197a613146c008567b6922deb0fcee780dce89a89",
+          "kind": "candidate_sparse_graph",
+          "metric": "unit-sphere cosine/equivalent Euclidean; no post-learning transform",
+          "sha256": "2fe0dc828faa7d139f823f36809384bdfe57c69e85dc5786113d0d32beedbdb2",
+          "version": 1
+        },
+        "objective": {
+          "gamma": 0.012459131304853753,
+          "n_iterations": 2,
+          "node_sizes": 1,
+          "rule": "median_positive_retained_edge_weight / frozen_neighbor_count",
+          "seed": 11
+        },
+        "partition": {
+          "bytes": 349265121,
+          "sha256": "5cf5cc7b79d57156cddf4bcc88a50fbe9689530bf1fb8d4e31a4315d3e48bee9"
+        },
+        "seconds": 28.490692101999997,
+        "sparse": {
+          "edges": 11101246,
+          "endpoint_order": "opaque-ID lexicographic, mapped to full FASTA row indices"
+        },
+        "status": "PASS",
+        "unit": "oral-dev4"
+      },
+      "native_128_queries": {
+        "mean_recall_5": 1.0,
+        "mean_recall_k": 1.0,
+        "metric": "retained unit vectors, cosine; no post-learning z-score",
+        "native_neighbor_entries": 15262890,
+        "native_rows_checked": 508763,
+        "query_selection": "first128 SHA256(contigID), label blind",
+        "tolerance": 1e-06
+      },
+      "paired_refinement_vs_parent": {
+        "gained": 27,
+        "lost": 0,
+        "unchanged": 772,
+        "delta_bp": 65715666
+      },
+      "paired_refinement_vs_old": {
+        "gained": 21,
+        "lost": 7,
+        "unchanged": 771,
+        "delta_bp": 28654717
+      },
+      "training": {
+        "kind": "candidate_checkpoint",
+        "config": {
+          "audit_queries": 64,
+          "batch_size": 512,
+          "depth_hidden": 64,
+          "epochs": 20,
+          "exact_threshold": 2048,
+          "fusion_hidden": 128,
+          "inference_batch_size": 2048,
+          "learning_rate": 0.001,
+          "leiden_iterations": 2,
+          "min_bin_bp": 10000,
+          "min_bin_contigs": 2,
+          "min_length": 500,
+          "min_neighbor_recall": 0.9,
+          "neighbors": 30,
+          "output": 64,
+          "refinement_iterations": 10,
+          "refinement_margin": 0.05,
+          "refinement_min_cosine": 0.2,
+          "resolution": 1.0,
+          "seed": 11,
+          "sequence_hidden": 256,
+          "sequence_loss_weight": 0.5,
+          "sequence_output": 128,
+          "temperature": 0.2,
+          "weight_decay": 1e-05,
+          "window_max": 10000,
+          "window_min": 1000,
+          "window_pairs": 2
+        },
+        "training_parents": 82240,
+        "threads": 4,
+        "loader_workers": 0,
+        "parameter_count": 101760,
+        "wall_seconds": 113.7087282120001,
+        "process_cpu_seconds": 436.844120493
+      },
+      "training_history_first_last": [
+        {
+          "epoch": 1,
+          "loss": 6.754661101033252,
+          "parents_seen": 82240,
+          "sequence_loss": 4.534548601195042,
+          "wall_seconds": 5.779641337000612
+        },
+        {
+          "epoch": 20,
+          "loss": 5.355979157978458,
+          "parents_seen": 82240,
+          "sequence_loss": 3.6502426678104625,
+          "wall_seconds": 106.15098561500054
+        }
+      ],
+      "features_metadata": {
+        "depth_semantics": "Measured parent means condition crops, not measured window depth; no variance.",
+        "depth_sha256": null,
+        "fasta_sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d",
+        "ids_sha256": "77eb90600172cb24d687302197a613146c008567b6922deb0fcee780dce89a89",
+        "kind": "features",
+        "min_length": 500,
+        "mode": "multiview_measured_parent_depth",
+        "samples": [],
+        "sequence_dimensions": 136,
+        "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0",
+        "version": 1
+      },
+      "complete_alternatives": {
+        "complete_alternatives_checked": 4612,
+        "no_merge_or_new_assignment": true
+      }
+    },
+    "oral-dev5": {
+      "arms": {
+        "old": {
+          "recovery": {
+            "at_least_50_percent": 40,
+            "at_least_90_percent": 27,
+            "bp_weighted_R95": 0.06344333734669556,
+            "macro_R95": 0.0525324797542233,
+            "reference_bp": 2083072211,
+            "targets": 799
+          },
+          "grouping": {
+            "bp": 1669981123,
+            "f1": 0.2947574115617923,
+            "precision": 0.24377646576233433,
+            "recall": 0.372700154348107,
+            "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+          },
+          "large_bins": 751,
+          "large_bins_below95": 643,
+          "population_cells": {
+            "10000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 652122383,
+              "contigs": 4045,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 653
+            },
+            "10000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 126205931,
+              "contigs": 6125,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 115
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 8079115,
+              "contigs": 128,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 5344115,
+              "contigs": 184,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 9476575,
+              "contigs": 5938,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 8
+            },
+            "1000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 217473183,
+              "contigs": 146650,
+              "known_shared_query_bp": 3113,
+              "non_ACGT_quarantine_bp": 330
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 477435,
+              "contigs": 277,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 4377101,
+              "contigs": 2894,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 4
+            },
+            "1|positive_bacterial_source|excluded|excluded|clean_marker": {
+              "bp": 1085200,
+              "contigs": 3119,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 1
+            },
+            "1|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+              "bp": 225068259,
+              "contigs": 774665,
+              "known_shared_query_bp": 7832,
+              "non_ACGT_quarantine_bp": 181
+            },
+            "2500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 26698241,
+              "contigs": 5327,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 13
+            },
+            "2500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 183009581,
+              "contigs": 42809,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 244
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 1447016,
+              "contigs": 277,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 5939585,
+              "contigs": 1316,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 1535841,
+              "contigs": 2446,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 120726112,
+              "contigs": 196264,
+              "known_shared_query_bp": 522,
+              "non_ACGT_quarantine_bp": 104
+            },
+            "500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 59180,
+              "contigs": 93,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 2749775,
+              "contigs": 4500,
+              "known_shared_query_bp": 596,
+              "non_ACGT_quarantine_bp": 6
+            },
+            "768|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 1668279,
+              "contigs": 1897,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 74980208,
+              "contigs": 85918,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 75
+            },
+            "768|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 75429,
+              "contigs": 85,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 1382579,
+              "contigs": 1590,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            }
+          },
+          "known_shared_mask_recovery_identical": true
+        },
+        "post": {
+          "recovery": {
+            "at_least_50_percent": 42,
+            "at_least_90_percent": 30,
+            "bp_weighted_R95": 0.062432309985820264,
+            "macro_R95": 0.05343000403900358,
+            "reference_bp": 2083072211,
+            "targets": 799
+          },
+          "grouping": {
+            "bp": 1669981123,
+            "f1": 0.31207316894616954,
+            "precision": 0.28453318320041304,
+            "recall": 0.3455156518972094,
+            "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+          },
+          "large_bins": 901,
+          "large_bins_below95": 795,
+          "population_cells": {
+            "10000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 659516705,
+              "contigs": 4154,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 653
+            },
+            "10000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 131041838,
+              "contigs": 6281,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 115
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 684793,
+              "contigs": 19,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 508208,
+              "contigs": 28,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 9843410,
+              "contigs": 6151,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 8
+            },
+            "1000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 220298363,
+              "contigs": 148476,
+              "known_shared_query_bp": 3113,
+              "non_ACGT_quarantine_bp": 332
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 110600,
+              "contigs": 64,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 1551921,
+              "contigs": 1068,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 2
+            },
+            "1|positive_bacterial_source|excluded|excluded|clean_marker": {
+              "bp": 1085200,
+              "contigs": 3119,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 1
+            },
+            "1|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+              "bp": 225068259,
+              "contigs": 774665,
+              "known_shared_query_bp": 7832,
+              "non_ACGT_quarantine_bp": 181
+            },
+            "2500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 27711390,
+              "contigs": 5524,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 13
+            },
+            "2500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 187317676,
+              "contigs": 43745,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 244
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 433867,
+              "contigs": 80,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 1631490,
+              "contigs": 380,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 1575996,
+              "contigs": 2508,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 121637428,
+              "contigs": 197738,
+              "known_shared_query_bp": 522,
+              "non_ACGT_quarantine_bp": 107
+            },
+            "500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 19025,
+              "contigs": 31,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 1838459,
+              "contigs": 3026,
+              "known_shared_query_bp": 596,
+              "non_ACGT_quarantine_bp": 3
+            },
+            "768|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 1716125,
+              "contigs": 1951,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 75573469,
+              "contigs": 86597,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 75
+            },
+            "768|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 27583,
+              "contigs": 31,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 789318,
+              "contigs": 911,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            }
+          },
+          "known_shared_mask_recovery_identical": true
+        },
+        "pre": {
+          "recovery": {
+            "at_least_50_percent": 37,
+            "at_least_90_percent": 26,
+            "bp_weighted_R95": 0.05563775052443441,
+            "macro_R95": 0.046770877916383104,
+            "reference_bp": 2083072211,
+            "targets": 799
+          },
+          "grouping": {
+            "bp": 1669981123,
+            "f1": 0.2994637378319799,
+            "precision": 0.24628320392408196,
+            "recall": 0.3819361420852445,
+            "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+          },
+          "large_bins": 763,
+          "large_bins_below95": 665,
+          "population_cells": {
+            "10000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 660201498,
+              "contigs": 4173,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 653
+            },
+            "10000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 131550046,
+              "contigs": 6309,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 115
+            },
+            "1000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 9916142,
+              "contigs": 6191,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 8
+            },
+            "1000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 221044449,
+              "contigs": 148923,
+              "known_shared_query_bp": 3113,
+              "non_ACGT_quarantine_bp": 332
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 37868,
+              "contigs": 24,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 805835,
+              "contigs": 621,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 2
+            },
+            "1|positive_bacterial_source|excluded|excluded|clean_marker": {
+              "bp": 1085200,
+              "contigs": 3119,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 1
+            },
+            "1|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+              "bp": 225068259,
+              "contigs": 774665,
+              "known_shared_query_bp": 7832,
+              "non_ACGT_quarantine_bp": 181
+            },
+            "2500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 28145257,
+              "contigs": 5604,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 13
+            },
+            "2500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 188881811,
+              "contigs": 44103,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 244
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 67355,
+              "contigs": 22,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 1579395,
+              "contigs": 2514,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 121784722,
+              "contigs": 197979,
+              "known_shared_query_bp": 1118,
+              "non_ACGT_quarantine_bp": 107
+            },
+            "500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 15626,
+              "contigs": 25,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 1691165,
+              "contigs": 2785,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 3
+            },
+            "768|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 1722371,
+              "contigs": 1958,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 75680501,
+              "contigs": 86719,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 75
+            },
+            "768|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 21337,
+              "contigs": 24,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 682286,
+              "contigs": 789,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            }
+          },
+          "known_shared_mask_recovery_identical": true
+        }
+      },
+      "accounting": {
+        "post": {
+          "all_bins_and_unassigned_DNA_counted": true,
+          "bins": 7859,
+          "bp": 1669981123,
+          "contigs": 1286547,
+          "statuses": {
+            "assigned": {
+              "bp": 1436232400,
+              "contigs": 503125
+            },
+            "excluded": {
+              "bp": 226153459,
+              "contigs": 777784
+            },
+            "unassigned": {
+              "bp": 7595264,
+              "contigs": 5638
+            }
+          }
+        },
+        "pre": {
+          "all_bins_and_unassigned_DNA_counted": true,
+          "bins": 7432,
+          "bp": 1669981123,
+          "contigs": 1286547,
+          "statuses": {
+            "assigned": {
+              "bp": 1440506192,
+              "contigs": 504473
+            },
+            "excluded": {
+              "bp": 226153459,
+              "contigs": 777784
+            },
+            "unassigned": {
+              "bp": 3321472,
+              "contigs": 4290
+            }
+          }
+        }
+      },
+      "geometry": {
+        "length_strata": {
+          "1000": {
+            "queries": 155759,
+            "query_bp": 231804294,
+            "same": 179804,
+            "same_weighted_bp": 54939395.60000012
+          },
+          "10000": {
+            "queries": 10482,
+            "query_bp": 791751544,
+            "same": 21282,
+            "same_weighted_bp": 162221551.5999997
+          },
+          "2500": {
+            "queries": 49729,
+            "query_bp": 217094423,
+            "same": 77210,
+            "same_weighted_bp": 69883495.00000043
+          },
+          "500": {
+            "queries": 203303,
+            "query_bp": 125070908,
+            "same": 158972,
+            "same_weighted_bp": 19729286.599999975
+          },
+          "768": {
+            "queries": 89490,
+            "query_bp": 78106495,
+            "same": 82533,
+            "same_weighted_bp": 14453583.800000045
+          }
+        },
+        "nn_purity": 0.20433915202166825,
+        "nn_purity_bp_weighted": 0.22248314020391163,
+        "queries": 508763
+      },
+      "geometry_by_lineage": null,
+      "raw_learned_geometry": {
+        "by_lineage": {
+          "provided_bacterial_source": {
+            "learned_mean": 0.19531249999999986,
+            "queries": 128,
+            "raw_mean": 0.1265625
+          }
+        },
+        "learned_mean": 0.19531249999999986,
+        "length_strata": {
+          "1": {
+            "learned_mean": null,
+            "queries": 0,
+            "raw_mean": null
+          },
+          "1000": {
+            "learned_mean": 0.21081081081081085,
+            "queries": 37,
+            "raw_mean": 0.12432432432432435
+          },
+          "10000": {
+            "learned_mean": 0.26666666666666666,
+            "queries": 3,
+            "raw_mean": 0.3333333333333333
+          },
+          "2500": {
+            "learned_mean": 0.1666666666666667,
+            "queries": 18,
+            "raw_mean": 0.14444444444444446
+          },
+          "500": {
+            "learned_mean": 0.18775510204081636,
+            "queries": 49,
+            "raw_mean": 0.10612244897959187
+          },
+          "768": {
+            "learned_mean": 0.2,
+            "queries": 21,
+            "raw_mean": 0.13333333333333336
+          }
+        },
+        "query_selection": "First128 SHA256(eligible opaque/contig ID), label blind; attributable subset reported",
+        "raw_mean": 0.1265625,
+        "reference_contigs": 508763,
+        "saved_transform_sha256": "4abe2c278582b5042c10b395bfff39d42f370eeda819ade5fad8f3784929fa0d",
+        "statistics_refitted": false
+      },
+      "native_graph": {
+        "embedding": {
+          "bytes": 185963052,
+          "sha256": "37c2eba14aa4324da01c82afdc0a22c945ed58d1d85f5f602f1511f163e394c5"
+        },
+        "embedding_metadata": {
+          "checkpoint_sha256": "0ada374807c8497cdbab51e86e3cf458e5d6222a7ba48cf62335a4780ec4eca6",
+          "features_sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0",
+          "ids_sha256": "77eb90600172cb24d687302197a613146c008567b6922deb0fcee780dce89a89",
+          "kind": "embeddings",
+          "metric": "unit-sphere cosine/equivalent Euclidean; no post-learning transform",
+          "mode": "multiview_learned_unit_sphere",
+          "reload_exact": true,
+          "samples": [],
+          "sha256": "37c2eba14aa4324da01c82afdc0a22c945ed58d1d85f5f602f1511f163e394c5",
+          "version": 1
+        },
+        "fit_inference_index_or_selection_ran": false,
+        "graph": {
+          "bytes": 251638304,
+          "sha256": "3952e881ca956442cccc0acc3839020a22aa9d174bb7661e65a2116e936f71ea"
+        },
+        "graph_metadata": {
+          "audit": {
+            "audit_queries": 64,
+            "guarantee": "fixed sampled queries only; no unqueried recall guarantee",
+            "k": 30,
+            "mean_tie_aware_recall": 1.0,
+            "metric": "Euclidean on unit vectors; exact cosine rerank",
+            "min_query_recall": 1.0,
+            "mode": "pynndescent_exact_rerank",
+            "query_ids": [
+              "Ca73279d62a50d0eec4fb9321954022de6bce5ddc39b5d0b5424934cdc809351e",
+              "C34a7dbf6d67c4a9b8fab7901f1b787c1471b6b8d618e90a9e4f3e994d670c117",
+              "C0733bb152ba6e1306c83c8d7d1520a33260fe1a64c8959dfbd96286e27e57f20",
+              "C5615f1f5d9ab5b777b83f8cc1a7d0f9660d97bdbc22846eec45cc788ae7332bd",
+              "Caaebdc5c8386b1e81a67d8bea5179b28d7d4cd302f716ff8acbad876432bf104",
+              "C37ae4d61719882b9bfd00cda79416988b437242e68a12223812fc128b9fc2510",
+              "Cf62231ca3a4e4242cf425ddff9439ba9f42c5cf30d1c114ebf8929cfa1b7c69a",
+              "C5e44853d4ff9a89e3ef456b4479a844dd1fcbc4f844a38c93522e3aab6ff17b9",
+              "Cea5ff3ee6b188564aa334a0668e3c10517ad355110c6fedf7f9da0c00920f5eb",
+              "Ca1106efb597501cbe80f3507e5450774bf9da226a0e1bf86a9ff50bf4d926727",
+              "Cafa9ae559af29aab2bfdae9df019b58214b1022e3640ed1c4eef9c5a05afc578",
+              "Cb4d98034a3880924172797d65f2b1c5dc7fe78fc5db3a1f20d16359635b16ac1",
+              "C845a3481534ffde97139c25a4aca89dcb8ade22a4c6b8804f84348e71592d08a",
+              "Cec8c888203f59eabf76dcd736e3737f1017393c0e1aba043eecfa29796d7715f",
+              "C51dfca939cbdcec60c10602ed193164e9060f94b1da050ca4faa00d4c219f767",
+              "Cc3e96e6567508606e5810535a21e3b9e57f90736038a3c9377de23af75bba061",
+              "C8ddc3d99a0a80cd23365ff79c0d5eefb98bfc9307ba1bc03421fb1ba352a8535",
+              "C7a93013582936984f038d38ce710e791c5005299052dbd79708fbf568a3ae488",
+              "Ceaedd535af0c96fc26d6954116dca2ce97e56733a8b196d31a919ca546edcd00",
+              "C75db57f1819faf3fd4f29991e0e6ff60f8d46ece2f52d1c4c23e7a0832d5c4a7",
+              "Ccd807399c89e7e14ce08a4bb85902733f6e32cf9e8b0aa9be1c284cbd5404d24",
+              "C74aee08f5ab5e74803e7be0fccd8eb5031b7da918fcc775cd68bbd1e1a7b4af1",
+              "C64917293076c8619dc7956df6ac63b1f30cdcc1413ff4af6bb604cee7ea11f61",
+              "C234919185afb42eb1d76fed6bb69576e6a879a69952b39ad7e2452b9f8910b36",
+              "C2149d23e2b3fb53c592231768516256ee245a77d22199f6b9751efa785992189",
+              "Cb683b2e95e8df0bf33fc1263a3add3563f6a9d4a0e46d5997e6eab3aff3651d8",
+              "Ca688d770b8caebafd52045019730bbf8e9d0a08ebcc8afb1ca011d510ae83bdf",
+              "C5993d056217c241990fc71b9678b306a5fefc0e91debc7497e9f7b42271f9252",
+              "Cbf0302b049f446dc37a3908058dc170f4cf82781ee1873e2aea31e8308aaa74e",
+              "C574bce1533dd387a50ef8384c562be575f7cb9f8f88d69ed5056e4761745dcde",
+              "Ca5745a28bccf26681e5736ef1b202d17c1673dfbd1dda517a97a4012081de8f4",
+              "Ca9c9edcf01ac1ce42550fc1d24433cc58cecaf82be80af9b957ca8d7d3eb6b9b",
+              "Cb8caab8f55b9bb142e3fc95bc6c71e297c5d01c426b8023f4a6abf81c3a9293b",
+              "Ccee2286c4e7c487b93be8d92461dc40f81871142d67f4b2ece31eed5bef6ec59",
+              "C2b110d1df42b145367176102d2ec554aa7fcc97ca15d35cef8f2684edc416bf1",
+              "C618b59c01f8ddf0f3f973849b8640996ebb91eb570fddb46996b7b8e951cc911",
+              "Ce599b4cc125d3ac0c6d491cbf52c959470e8afebf0edd442a49fd6cc12fc71d0",
+              "Cfdbaba80b31e6cf26ca850489cc09101c5dfbc547b03deea875062faed0f72bd",
+              "C31783e529b61e0ed62a5cc524a697bc7a677da69d244867e0cfbd787a03aab7c",
+              "Cf3d7059fd52d935caded2c7e9900b62ee6a13e8a8d010204867c87b3db1a2d66",
+              "C39f7c88d43c42bd522904af088476fb6bfa60bb926fdae15b156580f476f058f",
+              "C77402538d874d568063538c1928f5ee61528524c3d1833ec7d508d4af1afbce4",
+              "C27f09c4e1df3a8bf9d1b4b5104149c6fd3c957a5b83ffc53916053da0baa8918",
+              "C880623d4a658192f34c8c292731cfc6029dad14d584f2271505d3d5c08b2eaec",
+              "C2d49814dbd60f53e8e314a04ec297eb763c22c64ed435c7ddb06a36798d56bf5",
+              "Ce2e6e235465d0a95705f1c414bb554846ea0ea72276d2875d04f9b94033f559c",
+              "Cbd40a134e5d407e0fe8bdbaeb63dd656271b8b269e0daaecb2c81c0f79635544",
+              "C142a15568461682cbdad241904cc23917fe1861eb8ec1bf8c73c2814a2433004",
+              "Ca075db4c80a69e824c6bcac570e4c1ea9914f72bc1c1ac74cc082e955b925fa7",
+              "C333da8105cb6be6482ceda646f147b231a0d9a3217e5e2c716b2276355c88f17",
+              "Cb44cab1a31cc64e43eb3c036930987b54d3bc2ba9f4144e6ee3572bc36f5fc4a",
+              "C9871019a0f18d744eaffa7adeff20b765961a2b75b2e35ddecb80bbc0acccfa9",
+              "C57cf0f51b56cae80b2cff5ea4cfb76c68d2745e6998d8a129067d066d88e920d",
+              "C9d2e41740141e3360361964a5f55829094f8d5c0e7dd0478b88dc2e5dec34f90",
+              "C6528c8ad3832758b49f3b15b98d09ca26344418118b8ee5dc0ac345ab93a5b8e",
+              "C9d3c8a45a9eb632651f63e19fa9103e21a3d3a13a9bf7eb53c1c236491e48410",
+              "C605609a7a9aa7b7e479eb5552522f4203e677c79fa57f02e0d1c4388d467aeb9",
+              "Ca85dd654f76a2226657666631f2a050fe10f0149aa51615ba3048d6fa66e99d1",
+              "C264bcfcd9f539ba4bdf025fd5d4d884aef018bd292c776c25df9511096a3693d",
+              "C8144506f6455b2217392411e53a18c0366acafaa0d0188f1081deabdb295b2d8",
+              "Ce4bf6d778ef1f1b35f2b01b2a1684a2c7f5679ae355b0a706bdaaaf79c4bdeca",
+              "Cae12380ee8966d15bf506e8dc061286713efc41a7ada0ecfa2eac73c0f9bf427",
+              "C8e8e466f849349ac3aa29574cb2903e2249a29187e12a0d0ff06625694f7dfc4",
+              "Ce9201a3333336f193089a1f20082d2c1f2a246d7c92a175b6a150b0e128cafcc"
+            ],
+            "threads": 4,
+            "threshold": 0.9
+          },
+          "embedding_sha256": "37c2eba14aa4324da01c82afdc0a22c945ed58d1d85f5f602f1511f163e394c5",
+          "ids_sha256": "77eb90600172cb24d687302197a613146c008567b6922deb0fcee780dce89a89",
+          "kind": "candidate_sparse_graph",
+          "metric": "unit-sphere cosine/equivalent Euclidean; no post-learning transform",
+          "sha256": "3952e881ca956442cccc0acc3839020a22aa9d174bb7661e65a2116e936f71ea",
+          "version": 1
+        },
+        "objective": {
+          "gamma": 0.011502514986521313,
+          "n_iterations": 2,
+          "node_sizes": 1,
+          "rule": "median_positive_retained_edge_weight / frozen_neighbor_count",
+          "seed": 11
+        },
+        "partition": {
+          "bytes": 349337496,
+          "sha256": "5242b76963ebc9a3e02d7f61e442d9813abba123c9da5be946e020a2cf63f9fe"
+        },
+        "seconds": 29.81824435599998,
+        "sparse": {
+          "edges": 12599884,
+          "endpoint_order": "opaque-ID lexicographic, mapped to full FASTA row indices"
+        },
+        "status": "PASS",
+        "unit": "oral-dev5"
+      },
+      "native_128_queries": {
+        "mean_recall_5": 1.0,
+        "mean_recall_k": 1.0,
+        "metric": "retained unit vectors, cosine; no post-learning z-score",
+        "native_neighbor_entries": 15262890,
+        "native_rows_checked": 508763,
+        "query_selection": "first128 SHA256(contigID), label blind",
+        "tolerance": 1e-06
+      },
+      "paired_refinement_vs_parent": {
+        "gained": 7,
+        "lost": 0,
+        "unchanged": 792,
+        "delta_bp": 14153558
+      },
+      "paired_refinement_vs_old": {
+        "gained": 4,
+        "lost": 5,
+        "unchanged": 790,
+        "delta_bp": -2106043
+      },
+      "training": {
+        "kind": "multiview_checkpoint",
+        "config": {
+          "audit_queries": 64,
+          "batch_size": 256,
+          "composition_reconstruction_weight": 1.0,
+          "crop_fraction": 0.8,
+          "crop_max": 10000,
+          "crop_min": 256,
+          "crop_pairs": 2,
+          "depth_dropout": 0.5,
+          "depth_hidden": 64,
+          "depth_reconstruction_weight": 0.1,
+          "epochs": 20,
+          "exact_threshold": 2048,
+          "fusion_hidden": 128,
+          "inference_batch_size": 2048,
+          "learning_rate": 0.001,
+          "leiden_iterations": 2,
+          "min_bin_bp": 10000,
+          "min_bin_contigs": 2,
+          "min_length": 500,
+          "min_neighbor_recall": 0.9,
+          "neighbors": 30,
+          "output": 64,
+          "refinement_iterations": 10,
+          "refinement_margin": 0.05,
+          "refinement_min_cosine": 0.2,
+          "resolution": 1.0,
+          "seed": 11,
+          "sequence_hidden": 256,
+          "sequence_loss_weight": 0.5,
+          "sequence_output": 128,
+          "temperature": 0.2,
+          "weight_decay": 1e-05
+        },
+        "training_parents": 508763,
+        "threads": 4,
+        "loader_workers": 0,
+        "parameter_count": 127624,
+        "wall_seconds": 2197.2972544940003,
+        "process_cpu_seconds": 8757.662473749
+      },
+      "training_history_first_last": [
+        {
+          "available_views": 2470549,
+          "composition_reconstruction": 0.5145967083535351,
+          "depth_dropped_views": 0,
+          "depth_reconstruction": 0.0,
+          "epoch": 1,
+          "fused_contrastive": 4.590483864926764,
+          "loss": 7.406489236542704,
+          "parents_seen": 508763,
+          "sequence_contrastive": 4.60281735604953,
+          "wall_seconds": 128.4288339579998
+        },
+        {
+          "available_views": 2470549,
+          "composition_reconstruction": 0.42859552796844863,
+          "depth_dropped_views": 0,
+          "depth_reconstruction": 0.0,
+          "epoch": 20,
+          "fused_contrastive": 4.401351531115295,
+          "loss": 7.042262395960283,
+          "parents_seen": 508763,
+          "sequence_contrastive": 4.424630698526422,
+          "wall_seconds": 2187.3262890019996
+        }
+      ],
+      "features_metadata": {
+        "depth_semantics": "Measured parent means condition crops, not measured window depth; no variance.",
+        "depth_sha256": null,
+        "fasta_sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d",
+        "ids_sha256": "77eb90600172cb24d687302197a613146c008567b6922deb0fcee780dce89a89",
+        "kind": "features",
+        "min_length": 500,
+        "mode": "multiview_measured_parent_depth",
+        "samples": [],
+        "sequence_dimensions": 136,
+        "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0",
+        "version": 1
+      },
+      "complete_alternatives": {
+        "complete_alternatives_checked": 7432,
+        "no_merge_or_new_assignment": true
+      },
+      "paired_bundle_vs_preserved": {
+        "gained": 46,
+        "lost": 34,
+        "unchanged": 719,
+        "delta_bp": 10811739
+      }
+    }
+  },
+  "preserved_baseline": {
+    "file": {
+      "bytes": 662800,
+      "sha256": "45e08899ec4730a08f2814cade28f5be0cadbf093a84b66922b0a927b33fe5c5"
+    },
+    "weighted_R95": 0.05738822979166641,
+    "target_counts": {
+      "at_least_50_percent": 9,
+      "at_least_90_percent": 2,
+      "bp_weighted_R95": 0.05738822979166641,
+      "macro_R95": 0.05839801924213946,
+      "reference_bp": 554661890,
+      "targets": 156
+    },
+    "geometry": {
+      "attributable_eligible_queries": 76010,
+      "nn_purity": 0.8817734508617288,
+      "nn_purity_bp_weighted": 0.8371106364926092,
+      "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+    },
+    "grouping": {
+      "attributable_bp": 165477813,
+      "f1": 0.41966118095709637,
+      "precision": 0.7620156222641202,
+      "recall": 0.28956632065254856
+    },
+    "accounting": {
+      "assigned": {
+        "bp": 209181564,
+        "contigs": 88960
+      },
+      "excluded": {
+        "bp": 22035454,
+        "contigs": 56661
+      },
+      "unassigned": {
+        "bp": 461139,
+        "contigs": 81
+      }
+    },
+    "dev3_learned_context": "5.3911%; accepted result reused without refit/rescore; E011 sole MetaBAT2 reference8.5493% remains context only."
+  },
+  "matched_E009_bacterial_geometry": {
+    "query_count": 25543,
+    "dev4_nn_purity": 0.7258818462983988,
+    "dev5_nn_purity": 0.8050659671925772,
+    "dev4_bp_weighted": 0.7873362762207466,
+    "dev5_bp_weighted": 0.8459523941733235
+  },
+  "oral_matched_raw_transform_and_128_queries": true,
+  "oral_shared_mask_sensitivity": "All per-target recovered bp/whole-reference R95 and primary summaries identical, for both learners/all arms. Masking reduces assembly-available denominators for known-shared origins; assembly-conditional ratios/purity rows may differ. This does not establish unique support.",
+  "E009_boundary_example": "ASV150.14 candidate largest source bin6302615bp/5959793confirmedbp=94.560638719% purity, below frozen95%; prior5559851recoveredbp becomes0. Do not weaken threshold or choose truth-selected bins.",
+  "target_table": {
+    "bytes": 32875,
+    "sha256": "0db6c1869e3e15b6f77d23ab571397e8da42db9c96d53f7336bbb6a82757f878"
+  },
+  "cost": {
+    "status": "APPROVED_EXPORT_WITHIN_ORIGINAL_ENVELOPE",
+    "checked_UTC": "2026-10-19T00:06:29.985627+00:00",
+    "credits": "DKK1918.78 Available,2027-01-12,Certain usage/net pricing; live refresh before recovery2. Delayed unknown,30USD exposure+5USD approved-storage reserves.",
+    "native_completion_verified": true,
+    "watchdog_identity": {
+      "command_sha256": "e51030c9341eab27fbc4f5a5a28caf2456020f49389d0db25d12a6f2eecd9428",
+      "pid": 1551,
+      "start_ticks": 4168
+    },
+    "VM_uptimes": [
+      {
+        "phase": "science",
+        "start": "2026-10-18T18:35:08.455+00:00",
+        "stop": "2026-10-18T21:10:55.585+00:00",
+        "uptime_seconds": 9347.13,
+        "compute_IP_USD": 0.7089426199814138
+      },
+      {
+        "phase": "collection-failed",
+        "start": "2026-10-18T22:26:48.569+00:00",
+        "stop": "2026-10-18T22:38:33.348+00:00",
+        "uptime_seconds": 704.779,
+        "compute_IP_USD": 0.05345468296342096
+      },
+      {
+        "phase": "collection-success",
+        "start": "2026-10-18T15:44:12.814-07:00",
+        "stop": "2026-10-18T15:57:25.491-07:00",
+        "uptime_seconds": 792.677,
+        "compute_IP_USD": 0.06012139653337519
+      }
+    ],
+    "total_VM_seconds": 10844.586,
+    "compute_IP_USD": 0.82251869947821,
+    "persistent_disk_interval_seconds": 15737.036,
+    "persistent_disk_interval_USD": 0.18331672759856632,
+    "disk_scope": "Full allocated existing30GiB standard+300GiB balanced disks; includes stopped gap between first science start and final collection stop. Current catalog October31-day conversion factor; after-stop retention charged separately.",
+    "export_USD_upper": 0.2203219410404563,
+    "archive_GiB": 1.8360161753371358,
+    "prior_admission_export_USD": 0.021476406678557394,
+    "gate_export_reserve_USD": 0.001,
+    "subtotal_USD": 1.2486337747957899,
+    "small_storage_operations_reserve_USD": 0.15,
+    "total_USD_upper_with_reserve": 1.3986337747957898,
+    "ceiling_USD": 10,
+    "invoice": "Not reconciled; current official list-price estimate of measured allocation/bytes, not sampled CPU or delayed billing totals.",
+    "storage_monthly_USD": 31.2,
+    "storage_review": "October21; no extension",
+    "review_backup_readback_USD_upper": 0.0005414397642016411,
+    "subtotal_including_review_backup_USD": 1.2491752145599915,
+    "total_USD_upper_including_review_backup_with_reserve": 1.3991752145599914
+  },
+  "final_credit": {
+    "checked_UTC": "2026-10-19T00:25:35.201386+00:00",
+    "surface": "Authorized read-only Cloud Billing Credits page, refreshed after shutdown",
+    "remaining_DKK": 1915.36,
+    "original_DKK": 1973.43,
+    "percent_display": 97,
+    "status": "Available",
+    "scope": "Certain usage; see terms for free trial",
+    "application": "Net pricing",
+    "expires": "2027-01-12",
+    "pending": "Still unknown; balance delta cannot be attributed to E014.30USD prior exposure+5USD storage reserves retained.",
+    "cost_basis": "Measured VM uptime and exported bytes with current-SKU quote; invoice unreconciled."
+  },
+  "local_resources": {
+    "clock": {
+      "start_epoch": 1792368392.573396,
+      "start_UTC": "2026-10-19T00:06:32.573404+00:00",
+      "seconds": 3600,
+      "threads": 4,
+      "RSS_bytes": 8000000000,
+      "extra_local_GiB": 4
+    },
+    "last_elapsed_seconds": 1245.965929031372,
+    "peak_sampled_RSS_bytes": 5511360512,
+    "peak_extra_local_bytes": 3787382666,
+    "stages": [
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/clean-oral-cache-1.resources.json",
+        "file": {
+          "bytes": 1215,
+          "sha256": "387846239d851dba39076ace4ec89906a0f0216a827c8ed5c8039731fc5eb6e2"
+        },
+        "status": "SUCCESS",
+        "operation": "clean-oral-cache",
+        "cumulative_seconds": 406.5119240283966,
+        "extra_local_peak_bytes": 2422522385,
+        "resources": null,
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/clean-unit-oral-dev4-1.resources.json",
+        "file": {
+          "bytes": 2537,
+          "sha256": "d6122b5fec37ea03cbecbdbb5abddb86586d220b3ffdbb2cf6b261fa2410ca08"
+        },
+        "status": "SUCCESS",
+        "operation": "clean-unit-oral-dev4",
+        "cumulative_seconds": 891.7909801006317,
+        "extra_local_peak_bytes": 3401325262,
+        "resources": null,
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/clean-unit-oral-dev5-1.resources.json",
+        "file": {
+          "bytes": 2537,
+          "sha256": "bb23102b2b7768072a2cec90a1b30355a7f1bc85469ef6df33996c9d063a9d9a"
+        },
+        "status": "SUCCESS",
+        "operation": "clean-unit-oral-dev5",
+        "cumulative_seconds": 1245.965929031372,
+        "extra_local_peak_bytes": 3438188269,
+        "resources": null,
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/download-1.resources.json",
+        "file": {
+          "bytes": 33973,
+          "sha256": "1b137e8f91407e09169542091e9554d353e433de1d1c52cfee6fae6182a4b2fe"
+        },
+        "status": "SUCCESS",
+        "operation": "download",
+        "cumulative_seconds": 254.49793195724487,
+        "extra_local_peak_bytes": 1972490837,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/gcp-workspace/tools/google-cloud-sdk/bin/gcloud",
+            "storage",
+            "cp",
+            "gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/e014-review.tar.gz",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/e014-review.tar.gz",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 254.49329651205335,
+          "peak_sampled_rss_bytes": 268062720,
+          "seconds_ceiling": 3599.990890979767,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 81392,
+          "sampled_cpu_seconds": 56.41,
+          "sampled_average_cpus": 0.22165613308140042,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/marker-1.resources.json",
+        "file": {
+          "bytes": 4491,
+          "sha256": "0ac326d62a743894b13d4349e931b19609477c009ff5811967cef93b491dabf3"
+        },
+        "status": "SUCCESS",
+        "operation": "marker",
+        "cumulative_seconds": 396.4812731742859,
+        "extra_local_peak_bytes": 3066820036,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "marker"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 27.419176156050526,
+          "peak_sampled_rss_bytes": 1307926528,
+          "seconds_ceiling": 3230.9797089099884,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 83671,
+          "sampled_cpu_seconds": 26.909999999999997,
+          "sampled_average_cpus": 0.9814299250585554,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/stage-oral-dev4-1.resources.json",
+        "file": {
+          "bytes": 5818,
+          "sha256": "bf4c1d081ee6cb758542d71cb2d76150bfb8b8db0cf17a89f97a94c062f40cd2"
+        },
+        "status": "SUCCESS",
+        "operation": "stage-oral-dev4",
+        "cumulative_seconds": 587.3627619743347,
+        "extra_local_peak_bytes": 3743367640,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "stage",
+            "--unit",
+            "oral-dev4"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 37.951444870908745,
+          "peak_sampled_rss_bytes": 43438080,
+          "seconds_ceiling": 3050.6259400844574,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 84253,
+          "sampled_cpu_seconds": 33.82,
+          "sampled_average_cpus": 0.8911386671848255,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/stage-oral-dev5-1.resources.json",
+        "file": {
+          "bytes": 5169,
+          "sha256": "1303829782c4e50760850769711cada0401b586844ef7f806ed21a3a2b507610"
+        },
+        "status": "SUCCESS",
+        "operation": "stage-oral-dev5",
+        "cumulative_seconds": 926.9502980709076,
+        "extra_local_peak_bytes": 3777862624,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "stage",
+            "--unit",
+            "oral-dev5"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 32.9543145269854,
+          "peak_sampled_rss_bytes": 47910912,
+          "seconds_ceiling": 2706.08820605278,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 86310,
+          "sampled_cpu_seconds": 31.53,
+          "sampled_average_cpus": 0.956779118381629,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/unit-E009-dev5-1.resources.json",
+        "file": {
+          "bytes": 2094,
+          "sha256": "d8f6d3ec25c17675e196da56ef6a901d73bf999fd74328becd4f30dc0b21906a"
+        },
+        "status": "FAILED",
+        "operation": "unit-E009-dev5",
+        "cumulative_seconds": 413.8813810348511,
+        "extra_local_peak_bytes": 2422526724,
+        "resources": null,
+        "error": "RuntimeError: Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/unit-E009-dev5-1.log\nTraceback (most recent call last):\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py\", line 29, in <module>\n    unit_review(verified/'work/units'/a.unit,feature,verified/'original-inventory.json',root/('diagnostics-'+a.unit), 'E009'if a.unit=='E009-dev5'else'oral',clean,truth,verified/'proofs'/('graph-'+a.unit+'.json'))\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e014_review.py\", line 250, in unit_review\n    checks[arm]=export_accounting(part,data,unit/'export'/arm/'assignments.tsv',account[arm],manifest)\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e014_review.py\", line 54, in export_accounting\n    require(row['status']==status and row['bin_id']==label and row['reason']==part['reason'][i], 'Export labels/status/reasons differ')\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e010_review.py\", line 27, in require\n    raise ValueError(message)\nValueError: Export labels/status/reasons differ\n\nDLBINNER exit_code=1 stop_reason=None\n"
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/unit-E009-dev5-2.resources.json",
+        "file": {
+          "bytes": 4643,
+          "sha256": "13a48cb19df2ca8eeff5c223f173ee4c4a8b760e1891e7d80ff8383a6faf2fbf"
+        },
+        "status": "SUCCESS",
+        "operation": "unit-E009-dev5",
+        "cumulative_seconds": 537.7186470031738,
+        "extra_local_peak_bytes": 2423752194,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "unit",
+            "--unit",
+            "E009-dev5"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 29.21676045807544,
+          "peak_sampled_rss_bytes": 1365032960,
+          "seconds_ceiling": 3091.537863969803,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 84047,
+          "sampled_cpu_seconds": 30.04,
+          "sampled_average_cpus": 1.0281769617513161,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/unit-oral-dev4-1.resources.json",
+        "file": {
+          "bytes": 35388,
+          "sha256": "f6060ad9ec7d55103a44226af1f2a5fc01aff18089e5b9ee235885459d64275e"
+        },
+        "status": "SUCCESS",
+        "operation": "unit-oral-dev4",
+        "cumulative_seconds": 876.4009048938751,
+        "extra_local_peak_bytes": 3750554995,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "unit",
+            "--unit",
+            "oral-dev4"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 275.640479743015,
+          "peak_sampled_rss_bytes": 5511360512,
+          "seconds_ceiling": 2999.2893908023834,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 84496,
+          "sampled_cpu_seconds": 278.97999999999996,
+          "sampled_average_cpus": 1.0121154928336304,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/unit-oral-dev5-1.resources.json",
+        "file": {
+          "bytes": 35898,
+          "sha256": "e1c9261ce227ab1a22f5e4bc3cae4bf70411ff800fbae606e50b3f2bca7cf680"
+        },
+        "status": "SUCCESS",
+        "operation": "unit-oral-dev5",
+        "cumulative_seconds": 1218.4305369853973,
+        "extra_local_peak_bytes": 3787382666,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "unit",
+            "--unit",
+            "oral-dev5"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 282.4615749459481,
+          "peak_sampled_rss_bytes": 5075189760,
+          "seconds_ceiling": 2664.0822920799255,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 86562,
+          "sampled_cpu_seconds": 278.89,
+          "sampled_average_cpus": 0.9873555369553131,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/verify-1.resources.json",
+        "file": {
+          "bytes": 502,
+          "sha256": "37814b7e9930b9c88e114e34b7b6e45745eba0511d54ec8383cac3cd7ead4fb8"
+        },
+        "status": "FAILED",
+        "operation": "verify",
+        "cumulative_seconds": 75.1429271697998,
+        "extra_local_peak_bytes": 1868105799,
+        "resources": null,
+        "error": "RuntimeError: Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/verify-1.log\nPermissionError: [Errno 1] Operation not permitted: 'ps'"
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/verify-2.resources.json",
+        "file": {
+          "bytes": 12164,
+          "sha256": "0deaa407d9ca235e3d124adb691e2e5f4f252f443bc0033716dbf45ca4f80227"
+        },
+        "status": "SUCCESS",
+        "operation": "verify",
+        "cumulative_seconds": 350.74132084846497,
+        "extra_local_peak_bytes": 3065073703,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "verify"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 88.47222980693914,
+          "peak_sampled_rss_bytes": 50831360,
+          "seconds_ceiling": 3337.765128850937,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 83160,
+          "sampled_cpu_seconds": 69.32000000000001,
+          "sampled_average_cpus": 0.783522695779993,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      }
+    ],
+    "storage_scope": "Extra4GiB review scope separate from original10GiB acquisition/engineering. Only new reproducible staged copies removed after accepted review; archive and all old accepted data/failures untouched."
+  },
+  "marker_summary": {
+    "all_gene_rows_validated": true,
+    "ambiguous_genes": 4,
+    "cache": {
+      "bytes": 1850,
+      "sha256": "c1ea104624bf222e0ca3d9dfaa858bd6fe53586fcc4f811acbd2fe35076788cb"
+    },
+    "canonical_families": 107,
+    "clean_marker_contigs": 23632,
+    "domains": 59450,
+    "genes": 2546889,
+    "hit_genes": 58905,
+    "implementation": {
+      "implementation": {
+        "bytes": 11226,
+        "sha256": "a77739cb64d219bf3af8e2baeb66ed81c86c53a8c5c633a184ee28412ee2760a"
+      },
+      "versions": {
+        "archspec": "0.2.6",
+        "pyhmmer": "0.11.0",
+        "pyrodigal": "3.6.3"
+      }
+    },
+    "multicopy_rows": 596,
+    "new_detector_or_HMM_search": false,
+    "partial_genes": 1518383,
+    "protein_bytes": "Reverified in-place against original manifest; not exported/read locally",
+    "status": "SUCCESS"
+  },
+  "decision": {
+    "original_keep_criterion_passed": false,
+    "disposition": "MODIFY: cross-dataset primary discordance and length/recovery trade-offs. Preserve the useful multiview implementation/candidate without promoting dev5 as a uniformly better/default binner; keep dev4/E013 comparator and provisional CPM/E013 downstream.",
+    "reason": "E009 post -0.21927pp despite better bacterial neighborhoods/B3 and more>=90% targets; oral post+0.51903pp but long-neighbor/bp-weighted geometry and grouping recall decline, with more unassigned DNA. Improvement of one component is not a whole-system win.",
+    "next": "One previously prepared zero-reconstruction condition: both reconstruction weights0, same encoder initialization/view/exposure/positives/dropout/seed11/20epochs/CPM/refiner. Two matched new fits, reuse all other accepted inputs/results. No grid, threshold tuning, marker refit, data acquisition or external expansion.",
+    "value": "Tests whether reconstruction is worth retaining or contributes nuisance/length trade-offs; does not identify an optimal view policy or settle depth/sequence/taxonomy product families.",
+    "alternatives": "Promote on oral gain alone, tune CPM/refiner again to E009, add a larger network, or add an expensive external campaign. Prefer the single cheap predeclared loss control before expanding the candidate.",
+    "next_run_estimate": {
+      "new_authorization_required": true,
+      "proposed_gross_USD": 2,
+      "existing_VM": "e2-standard-8/32GiB,300GiBwork only",
+      "cumulative_seconds": 7200,
+      "provider_STOP_seconds": 8100,
+      "threads": 4,
+      "tree_RSS_bytes": 26000000000,
+      "extra_working_GiB": 20,
+      "free_reserve_GiB": 25,
+      "compressed_export_GiB": 2,
+      "expected_seconds": "~70-100minutes including setup/collection; CPU fit work based on measured6.4minE009+38.2minoral, not a promise",
+      "maximum_compute_IP_USD": 0.6143527715833045,
+      "disk_interval_USD": 0.09435483870967742,
+      "export_upper_USD": 0.24,
+      "small_charges_reserve_USD": 0.15,
+      "fresh_gates": "Displayed credit/pending/SKU eligibility/prices, original retention/headroom, exact clean source/byte-verified reuse, Linux/tiny/runtime/collection, held-parent watcher and provider STOP. No prior budget carries over; stop if originalOctober21storage no longer covers phase.",
+      "expected_peak_RSS_GB": "8-12, based on measured ~8.27GB largest retained dev5 refinement rule; no shared oral marker search needed;26GB hard ceiling",
+      "expected_extra_working_GiB": "~6-10 using retained bank/features/cache, full pre/post DNA, new vectors/graphs and bounded return/readback;20GiB hard ceiling",
+      "expected_compressed_export_GiB": "~0.8-1.5 if accepted parent/cache/duplicate/graph bytes use explicit verified references; test actual inventory/forecast before launch;2GiB cap"
+    },
+    "confirmation": "E009 and inspected oral are now development evidence. Freeze an untouched additional-community input/truth/source/taxonomy/overlap/length/depth protocol and cost admission prospectively before later independent confirmation; no new data/confirmation fit here."
+  },
+  "limits": [
+    "Integrated three-fit bundle/one seed/two differently scoped questions, not causal per-ingredient, statistical significance, optimality, SOTA or release evidence.",
+    "E009 full156targets/554661890bp and7653205bp/3.3034% N-quarantine unchanged; every bin base remains in purity.",
+    "Oral provided-origin oracle/full799targets/2083072211bp with two zero-GSA targets;1286547nonemptycontigs/1669981123bp and original2zero-bp records;1734nonACGTbp quarantine and49knownsharedqueries/12063bp. Not exhaustive unique sequence support.",
+    "Oral GSA lacks assembly errors or measured contig depth; source-genome BAMs do not establish GSA depth. No ten-depth transfer/unseen-genome/physical host or MAG-quality claim.",
+    "Marker proxies remain panel/lineage/partial-call dependent. Oral dev5 E013 post6.2432% is below its old-refinement6.3443% despite more50/90% targets; no per-bin oracle or universal refinement win.",
+    "Native exact reload and all-row/unit graph checks pass; original Mac allclose failure remains failed. No local inference, full native graph binary or per-base export reread; native in-place byte verification is separately bound.",
+    "Both collection-cap failures, Mac portability/source-truth failures and local reviewer/monitoring failures remain. Source-frozen reader exclusion reason repair changed no data, score rule or tolerance.",
+    "Credits and gross costs are quote-based measured-usage estimates; delayed invoice/pending unknown. Existing disks31.20USD/month persist while stopped; October21review unchanged."
+  ],
+  "evidence": {
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/verified/verification.json": {
+      "bytes": 1806,
+      "sha256": "47aa2f568f276f84ca170b7b1dd5861a8d73a5f03c0b927ecdbaaa9ba1d07880"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/oral-marker-review.json": {
+      "bytes": 1725935,
+      "sha256": "f78130ac18748606ab235a557e50b6c486adaa49de85747152b953442d4126a4"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/native-receipts-review.json": {
+      "bytes": 21827,
+      "sha256": "a791223df8fd46b21ccb232f99c19d15e98c9f53261ce17c5b24854c31469e31"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/credit-final.json": {
+      "bytes": 594,
+      "sha256": "11b11efff1b79f3581b27813a88d4f162d771f1e117f72b9d44181a6cff95372"
+    },
+    "artifacts/e013-marker-quality/attempt-001-6d06560/review/review.json": {
+      "bytes": 662800,
+      "sha256": "45e08899ec4730a08f2814cade28f5be0cadbf093a84b66922b0a927b33fe5c5"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/diagnostics-E009-dev5-attempt2/review.json": {
+      "bytes": 1214635,
+      "sha256": "c64b57c423dda2fb59930532840f88021097ee9d384ece27e1f379b9a147d385"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/diagnostics-oral-dev4/review.json": {
+      "bytes": 5072880,
+      "sha256": "215e4990180b268b8e0663e00b358b9f347ffa7c63d2f47d85a377089e85d661"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/diagnostics-oral-dev5/review.json": {
+      "bytes": 7059851,
+      "sha256": "2aadb8d01f7c4cd1a8a67f3a2b011c85206c243ff9628e1ddded49b0492ab4e6"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-private.json": {
+      "bytes": 1683,
+      "sha256": "57433d4cacdaab3ef6a6e9fd48fba2990f6ca049246a13e17ce3fefecd5a6be4"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-collection.json": {
+      "bytes": 488,
+      "sha256": "07abe31051d4b072217350906a028e6c6e39256917468d874f47ee550136eacc"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/local-completion.json": {
+      "bytes": 553,
+      "sha256": "cd091ed9764ba3c39ec1f99bb542cd06a9acd1fd3a8d080c7188cd8bfed6ccde"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/seal-1.resources.json": {
+      "bytes": 1332,
+      "sha256": "7cc9a6fc5c661e2b9b8e49b12da79fb65eac62f6bd75e44147fa85113f82a3f3"
+    }
+  },
+  "checks": {
+    "new_review_archive_graph_marker_export_tests": 7,
+    "new_collection_alias_reuse_refusal_tests": 6,
+    "total_new_actual_tiny_contracts": 13,
+    "docs": "PASS72maintained documents/1021local links; optional ignored caches10unavailable remain unverified",
+    "diff_check": "PASS",
+    "native25product23research_gates_reused": true,
+    "not_repeated": "Accepted source/truth/data/fit/reload/science contracts; original Mac allclose remains failed.",
+    "evidence": {
+      "artifacts/e014-multiview-reconstruction/inspection-20261019/final-review-tests.log": {
+        "bytes": 1142,
+        "sha256": "ee80135441a3a1ea196ac82a84adff87eb8e4ab5654f4feeeba57d228282735d"
+      },
+      "artifacts/e014-multiview-reconstruction/inspection-20261019/final-collection-tests.log": {
+        "bytes": 1100,
+        "sha256": "d66f00d0686b5a488fc71add202e7b3582e6cbc4b5590cd46e133eb610ee1733"
+      },
+      "artifacts/e014-multiview-reconstruction/inspection-20261019/final-docs-check.log": {
+        "bytes": 688,
+        "sha256": "20f818d0e6641cf6e277daf1e6129180df97cc5b399893af5520fa90e4746522"
+      }
+    }
+  },
+  "local_review_backup": {
+    "status": "PRIVATE_UPLOAD_AND_READBACK_VERIFIED",
+    "archive": {
+      "bytes": 4844721,
+      "sha256": "b995a019461bb8c57784393e86f6436a7dac2d7fa5eddec19244b02a50cfd041"
+    },
+    "members": 176,
+    "every_local_member_verified": true,
+    "every_private_object_readback_verified": true,
+    "objects": [
+      {
+        "uri": "gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/local-review-20261019/e014-local-review.tar.gz",
+        "bytes": 4844721,
+        "sha256": "b995a019461bb8c57784393e86f6436a7dac2d7fa5eddec19244b02a50cfd041"
+      },
+      {
+        "uri": "gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/local-review-20261019/e014-local-review.tar.gz.sha256",
+        "bytes": 91,
+        "sha256": "8871105070905cfcf84a60f9d11d59caa7416ded18dff089b9dd2c5234aa2035"
+      },
+      {
+        "uri": "gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/local-review-20261019/local-review-collection.json",
+        "bytes": 488,
+        "sha256": "07abe31051d4b072217350906a028e6c6e39256917468d874f47ee550136eacc"
+      }
+    ],
+    "assessment": {
+      "archive_bytes": 4844721,
+      "export_readback_USD_upper": 0.0005414397642016411,
+      "storage_USD_month": 9.023996070027351e-05,
+      "covered_by_existing_small_charges_reserve": true,
+      "ceiling_USD": 10,
+      "prior_phase_subtotal_USD": 1.2486337747957899,
+      "retention": "October21 unchanged",
+      "credits": "Final live Available1915.36DKK; ordinary existing Iowa Standard/network/operations covered; pending unknown."
+    },
+    "UTC": "2026-10-19T00:38:15.199079+00:00",
+    "collection": {
+      "status": "SUCCESS",
+      "archive": {
+        "bytes": 4844721,
+        "sha256": "b995a019461bb8c57784393e86f6436a7dac2d7fa5eddec19244b02a50cfd041"
+      },
+      "regular_members": 176,
+      "logical_member_bytes": 25989408,
+      "every_member_verified": true,
+      "manifest": {
+        "bytes": 28042,
+        "sha256": "370b39fa1277c1144962c01c3e18af475e4d6fc447e51321234b6cc183c6d8c2"
+      },
+      "scope": "Closed review snapshot; no native science repeated. Archive limit64MiB; native return2GiB remains separate."
+    }
+  },
+  "local_completion": {
+    "status": "SUCCESS",
+    "started_UTC": "2026-10-19T00:06:32.573404+00:00",
+    "completed_UTC": "2026-10-19T00:39:15.399149+00:00",
+    "cumulative_seconds_through_review_seal_and_private_backup": 1962.8257420063019,
+    "seconds_ceiling": 3600,
+    "core_download_verify_diagnostics_cleanup_seconds": 1245.965929031372,
+    "seal_seconds": 1833.1117429733276,
+    "threads": 4,
+    "peak_sampled_RSS_bytes": 5511360512,
+    "peak_extra_review_bytes": 3787382666,
+    "all_three_units_accepted": true,
+    "private_backup_verified": true,
+    "VM_remains_stopped": true
+  }
+}

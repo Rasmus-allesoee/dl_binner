@@ -1,0 +1,819 @@
+{
+  "record": "E014 completed-output inspection",
+  "updated_UTC": "2026-10-19T00:35:17.980045+00:00",
+  "original_phase": "comparison-20261018T183446Z-858b7cc",
+  "original_science_source": "858b7cc8adea930ea6f13f754eeaa8d031a9b5b4",
+  "status": "SCIENCE_ACCEPTED; COLLECTION_RECOVERED; ALL_FROZEN_LOCAL_DIAGNOSTICS_PASS; MIXED_BUNDLE_RESULT",
+  "provider_state": "TERMINATED",
+  "final_stop_UTC": "2026-10-18T22:57:25.491Z",
+  "original_phase_outcome": "FAILED collection2GiB cap; community_completed true, scientific DAG exit0; original completion/partial archive retained unchanged.",
+  "collection_failure": "First collection-only wake passed three native graph readers and original full-member hashes; failed compressed cap. Preserved FAILED receipt, logs and partial archive. Second fresh attempt reused passed readers and deduplicated only exact byte-identical reference/embedding payloads.",
+  "recovery_helpers_source": "5030964084b8fa4562b73b3d5786bd7afd2e271a",
+  "collection": {
+    "status": "SUCCESS",
+    "archive": {
+      "bytes": 1971407357,
+      "sha256": "6ddc8a7d01603432d79b7f24f4157fdc51c1b123ef6870e3332c0269afd32301"
+    },
+    "regular_members": 657,
+    "logical_member_bytes": 4125997517,
+    "all_original_work": {
+      "members": 27207,
+      "bytes": 13653291886,
+      "every_original_work_member_verified": true
+    },
+    "every_return_member_verified": true,
+    "omitted_graphs": [
+      {
+        "path": "units/E009-dev5/group/graph.npz",
+        "bytes": 31385819,
+        "sha256": "5f0eff297ac827bcd89ec736019205ad895d1393d6e47cd1e9920a6c2418207d"
+      },
+      {
+        "path": "units/oral-dev4/group/graph.npz",
+        "bytes": 237443752,
+        "sha256": "2fe0dc828faa7d139f823f36809384bdfe57c69e85dc5786113d0d32beedbdb2"
+      },
+      {
+        "path": "units/oral-dev5/group/graph.npz",
+        "bytes": 251638304,
+        "sha256": "3952e881ca956442cccc0acc3839020a22aa9d174bb7661e65a2116e936f71ea"
+      }
+    ],
+    "identical_duplicate_members": {
+      "work/units/E009-dev5/train/reference.npz": {
+        "canonical": "work/units/E009-dev5/embeddings.npz",
+        "bytes": 21872260,
+        "sha256": "428b07f94af628139aee924575a4f4c5697419cdcca669ae4dbed558b8aaab75"
+      },
+      "work/units/oral-dev4/train/reference.npz": {
+        "canonical": "work/units/oral-dev4/embeddings.npz",
+        "bytes": 185991671,
+        "sha256": "d08d7aa3e7c0f6d6cbf56424f4d0e3e843221a8c1811a5d046666189cde87989"
+      },
+      "work/units/oral-dev5/train/reference.npz": {
+        "canonical": "work/units/oral-dev5/embeddings.npz",
+        "bytes": 185963052,
+        "sha256": "37c2eba14aa4324da01c82afdc0a22c945ed58d1d85f5f602f1511f163e394c5"
+      }
+    },
+    "science_repeated": false,
+    "original_files_modified": false
+  },
+  "watchdog": {
+    "current_boot": "50675c55-0100-4483-a32c-04010e50f394",
+    "process": {
+      "pid": 1551,
+      "start_ticks": 4168,
+      "command_sha256": "e51030c9341eab27fbc4f5a5a28caf2456020f49389d0db25d12a6f2eecd9428"
+    },
+    "exit_UTC": "2026-10-18T22:55:38.651937+00:00",
+    "fresh_live_normal_crash_tests_passed": true,
+    "provider_STOP_seconds": 2700
+  },
+  "native_gate_status": "15gates all exit0; previously sealed571-member gate archive reused without rerunning accepted tests.",
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964",
+  "cost": {
+    "status": "APPROVED_EXPORT_WITHIN_ORIGINAL_ENVELOPE",
+    "checked_UTC": "2026-10-19T00:06:29.985627+00:00",
+    "credits": "DKK1918.78 Available,2027-01-12,Certain usage/net pricing; live refresh before recovery2. Delayed unknown,30USD exposure+5USD approved-storage reserves.",
+    "native_completion_verified": true,
+    "watchdog_identity": {
+      "command_sha256": "e51030c9341eab27fbc4f5a5a28caf2456020f49389d0db25d12a6f2eecd9428",
+      "pid": 1551,
+      "start_ticks": 4168
+    },
+    "VM_uptimes": [
+      {
+        "phase": "science",
+        "start": "2026-10-18T18:35:08.455+00:00",
+        "stop": "2026-10-18T21:10:55.585+00:00",
+        "uptime_seconds": 9347.13,
+        "compute_IP_USD": 0.7089426199814138
+      },
+      {
+        "phase": "collection-failed",
+        "start": "2026-10-18T22:26:48.569+00:00",
+        "stop": "2026-10-18T22:38:33.348+00:00",
+        "uptime_seconds": 704.779,
+        "compute_IP_USD": 0.05345468296342096
+      },
+      {
+        "phase": "collection-success",
+        "start": "2026-10-18T15:44:12.814-07:00",
+        "stop": "2026-10-18T15:57:25.491-07:00",
+        "uptime_seconds": 792.677,
+        "compute_IP_USD": 0.06012139653337519
+      }
+    ],
+    "total_VM_seconds": 10844.586,
+    "compute_IP_USD": 0.82251869947821,
+    "persistent_disk_interval_seconds": 15737.036,
+    "persistent_disk_interval_USD": 0.18331672759856632,
+    "disk_scope": "Full allocated existing30GiB standard+300GiB balanced disks; includes stopped gap between first science start and final collection stop. Current catalog October31-day conversion factor; after-stop retention charged separately.",
+    "export_USD_upper": 0.2203219410404563,
+    "archive_GiB": 1.8360161753371358,
+    "prior_admission_export_USD": 0.021476406678557394,
+    "gate_export_reserve_USD": 0.001,
+    "subtotal_USD": 1.2486337747957899,
+    "small_storage_operations_reserve_USD": 0.15,
+    "total_USD_upper_with_reserve": 1.3986337747957898,
+    "ceiling_USD": 10,
+    "invoice": "Not reconciled; current official list-price estimate of measured allocation/bytes, not sampled CPU or delayed billing totals.",
+    "storage_monthly_USD": 31.2,
+    "storage_review": "October21; no extension",
+    "review_backup_readback_USD_upper": 0.0005414397642016411,
+    "subtotal_including_review_backup_USD": 1.2491752145599915,
+    "total_USD_upper_including_review_backup_with_reserve": 1.3991752145599914
+  },
+  "resources": [
+    {
+      "file": "completion.json",
+      "status": "FAILED",
+      "peak_used": 194920222720,
+      "minimum_free": 121796653056,
+      "peak_growth": 17302962176,
+      "stages": [
+        {
+          "name": "comparison",
+          "wall": 8106.267505655999,
+          "sampled_CPU": 18217.500000000004,
+          "RSS": 18265919488,
+          "exit": 0
+        }
+      ],
+      "end_filesystem_growth_bytes": null
+    },
+    {
+      "file": "recovery-private-completion-1.json",
+      "status": "FAILED",
+      "peak_used": null,
+      "minimum_free": null,
+      "peak_growth": null,
+      "stages": [
+        {
+          "name": "graph-E009-dev5",
+          "wall": 4.839881270999996,
+          "sampled_CPU": 5.78,
+          "RSS": 404656128,
+          "exit": 0
+        },
+        {
+          "name": "graph-oral-dev4",
+          "wall": 29.019795508000016,
+          "sampled_CPU": 35.44,
+          "RSS": 2737094656,
+          "exit": 0
+        },
+        {
+          "name": "graph-oral-dev5",
+          "wall": 30.347863036000007,
+          "sampled_CPU": 36.55,
+          "RSS": 2804350976,
+          "exit": 0
+        }
+      ],
+      "disk_observation_limit": "Not included in failed journal; missing is not zero.",
+      "end_filesystem_growth_bytes": 2172784640
+    },
+    {
+      "file": "completion-recovery2.json",
+      "status": "SUCCESS",
+      "peak_used": 203307712512,
+      "minimum_free": 113409163264,
+      "peak_growth": 3943460864,
+      "stages": [
+        {
+          "name": "collect",
+          "wall": 475.741416704,
+          "sampled_CPU": 455.22999999999996,
+          "RSS": 74465280,
+          "exit": 0
+        },
+        {
+          "name": "upload-e014-review.tar.gz",
+          "wall": 28.036730767999984,
+          "sampled_CPU": 20.860000000000007,
+          "RSS": 291295232,
+          "exit": 0
+        },
+        {
+          "name": "readback-e014-review.tar.gz",
+          "wall": 8.388032608999993,
+          "sampled_CPU": 11.809999999999995,
+          "RSS": 292048896,
+          "exit": 0
+        },
+        {
+          "name": "upload-e014-review.tar.gz.sha256",
+          "wall": 1.849145558000032,
+          "sampled_CPU": 1.6300000000000097,
+          "RSS": 290340864,
+          "exit": 0
+        },
+        {
+          "name": "readback-e014-review.tar.gz.sha256",
+          "wall": 2.9269582509999736,
+          "sampled_CPU": 2.5700000000000074,
+          "RSS": 290398208,
+          "exit": 0
+        },
+        {
+          "name": "upload-collection.json",
+          "wall": 3.465295881999964,
+          "sampled_CPU": 3.4000000000000057,
+          "RSS": 290607104,
+          "exit": 0
+        },
+        {
+          "name": "readback-collection.json",
+          "wall": 3.2180184940000345,
+          "sampled_CPU": 3.1799999999999926,
+          "RSS": 290037760,
+          "exit": 0
+        }
+      ],
+      "end_filesystem_growth_bytes": 3943473152
+    }
+  ],
+  "evidence": {
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/provider.json": {
+      "bytes": 33097,
+      "sha256": "366b9ace417aa35356cc1d5d7d013578ea1ef0b3a561f5b0ec2f1bee2bdb9b55"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/completion.json": {
+      "bytes": 556002,
+      "sha256": "e1e071e9e54978027d4f47b867a77b72be279bb28e99e1049048953e2aad402d"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/watchdog-exit.json": {
+      "bytes": 12611,
+      "sha256": "632ed26812e545fb0e151e849c5a5d36136e3a8a89409c10c5ac3a15654a6fc8"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/provider-recovery2-final.json": {
+      "bytes": 33096,
+      "sha256": "1200dfc5c989fe0ac8d0ed63e5d1f1e59f02c0fda65809917bf58745113a65b9"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/recovery-private-completion-1.json": {
+      "bytes": 5504,
+      "sha256": "1f528db935e2646601963acd7f0543df1d3a3fc413b7e815e0367f22006d59a2"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/collection-recovery2.json": {
+      "bytes": 1695,
+      "sha256": "1b71fef8f5c83e2659f52597ddd793fec4ca4c4a7748c9f41763f1660c003a46"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/completion-recovery2.json": {
+      "bytes": 45092,
+      "sha256": "3437216ed321dff2b412a224b69d363af56c7e16988cab8bb6f8efe7450b9056"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/watchdog-recovery2-exit.json": {
+      "bytes": 4293,
+      "sha256": "68a2370dbca3b2b0e56c02de4bc166854c692219db839f81e9a711e3a600ffe1"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/e014-review.tar.gz.sha256": {
+      "bytes": 85,
+      "sha256": "592d7dfeb07a95f27e324c03664afd7ff2b61ea41ed413579a6f6d90c75c0481"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/current-prices.json": {
+      "bytes": 8015,
+      "sha256": "04757caef1f83e1a5e369aeaf813c07eab691a103bfa01824ff5b1b53fef2a1e"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/credit-recovery2.json": {
+      "bytes": 2733,
+      "sha256": "7aac009399a0c58e952a6b15cbf42f300dbcc5cb11515876a88cd92b1962af7b"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/export-cost-assessment.json": {
+      "bytes": 2126,
+      "sha256": "12863eb4ec72e975301aaf222016959693405d43cd126ac5c7aa8c1309b976bb"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/local-runtime.json": {
+      "bytes": 1788,
+      "sha256": "03347f6d4038e899b1d234347e0134d07daa7cd0fd384eea7cffdb05c0a93e60"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-private.json": {
+      "bytes": 1683,
+      "sha256": "57433d4cacdaab3ef6a6e9fd48fba2990f6ca049246a13e17ce3fefecd5a6be4"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-collection.json": {
+      "bytes": 488,
+      "sha256": "07abe31051d4b072217350906a028e6c6e39256917468d874f47ee550136eacc"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/local-completion.json": {
+      "bytes": 553,
+      "sha256": "cd091ed9764ba3c39ec1f99bb542cd06a9acd1fd3a8d080c7188cd8bfed6ccde"
+    },
+    "artifacts/e014-multiview-reconstruction/inspection-20261019/seal-1.resources.json": {
+      "bytes": 1332,
+      "sha256": "7cc9a6fc5c661e2b9b8e49b12da79fb65eac62f6bd75e44147fa85113f82a3f3"
+    }
+  },
+  "boundary": "Original10USD and October21 retained. No scientific replay/new fit/detector/index/aligner or external tool, no resource/service/quota/retention extension; additional fits require new scope.",
+  "native_stage_review": {
+    "bytes": 21827,
+    "sha256": "a791223df8fd46b21ccb232f99c19d15e98c9f53261ce17c5b24854c31469e31"
+  },
+  "local_archive_verification": {
+    "status": "SUCCESS",
+    "archive": {
+      "bytes": 1971407357,
+      "sha256": "6ddc8a7d01603432d79b7f24f4157fdc51c1b123ef6870e3332c0269afd32301"
+    },
+    "members": 657,
+    "uncompressed_member_bytes": 4125997517,
+    "every_archive_member_verified": true,
+    "lossless_aliases": {
+      "work/units/E009-dev5/train/reference.npz": {
+        "bytes": 21872260,
+        "canonical": "work/units/E009-dev5/embeddings.npz",
+        "sha256": "428b07f94af628139aee924575a4f4c5697419cdcca669ae4dbed558b8aaab75"
+      },
+      "work/units/oral-dev4/train/reference.npz": {
+        "bytes": 185991671,
+        "canonical": "work/units/oral-dev4/embeddings.npz",
+        "sha256": "d08d7aa3e7c0f6d6cbf56424f4d0e3e843221a8c1811a5d046666189cde87989"
+      },
+      "work/units/oral-dev5/train/reference.npz": {
+        "bytes": 185963052,
+        "canonical": "work/units/oral-dev5/embeddings.npz",
+        "sha256": "37c2eba14aa4324da01c82afdc0a22c945ed58d1d85f5f602f1511f163e394c5"
+      }
+    },
+    "omitted_graphs": [
+      {
+        "bytes": 31385819,
+        "path": "units/E009-dev5/group/graph.npz",
+        "sha256": "5f0eff297ac827bcd89ec736019205ad895d1393d6e47cd1e9920a6c2418207d"
+      },
+      {
+        "bytes": 237443752,
+        "path": "units/oral-dev4/group/graph.npz",
+        "sha256": "2fe0dc828faa7d139f823f36809384bdfe57c69e85dc5786113d0d32beedbdb2"
+      },
+      {
+        "bytes": 251638304,
+        "path": "units/oral-dev5/group/graph.npz",
+        "sha256": "3952e881ca956442cccc0acc3839020a22aa9d174bb7661e65a2116e936f71ea"
+      }
+    ],
+    "original_work": {
+      "bytes": 13653291886,
+      "every_original_work_member_verified": true,
+      "members": 27207
+    },
+    "seconds": 40.533576912013814,
+    "local_scope": "All return members streamed; graphs and omitted bulk DNA were independently verified in place on native VM. No local reread of omitted DNA."
+  },
+  "comparison_review": "comparison-review.json",
+  "final_credit": {
+    "checked_UTC": "2026-10-19T00:25:35.201386+00:00",
+    "surface": "Authorized read-only Cloud Billing Credits page, refreshed after shutdown",
+    "remaining_DKK": 1915.36,
+    "original_DKK": 1973.43,
+    "percent_display": 97,
+    "status": "Available",
+    "scope": "Certain usage; see terms for free trial",
+    "application": "Net pricing",
+    "expires": "2027-01-12",
+    "pending": "Still unknown; balance delta cannot be attributed to E014.30USD prior exposure+5USD storage reserves retained.",
+    "cost_basis": "Measured VM uptime and exported bytes with current-SKU quote; invoice unreconciled."
+  },
+  "local_resources": {
+    "clock": {
+      "start_epoch": 1792368392.573396,
+      "start_UTC": "2026-10-19T00:06:32.573404+00:00",
+      "seconds": 3600,
+      "threads": 4,
+      "RSS_bytes": 8000000000,
+      "extra_local_GiB": 4
+    },
+    "last_elapsed_seconds": 1245.965929031372,
+    "peak_sampled_RSS_bytes": 5511360512,
+    "peak_extra_local_bytes": 3787382666,
+    "stages": [
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/clean-oral-cache-1.resources.json",
+        "file": {
+          "bytes": 1215,
+          "sha256": "387846239d851dba39076ace4ec89906a0f0216a827c8ed5c8039731fc5eb6e2"
+        },
+        "status": "SUCCESS",
+        "operation": "clean-oral-cache",
+        "cumulative_seconds": 406.5119240283966,
+        "extra_local_peak_bytes": 2422522385,
+        "resources": null,
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/clean-unit-oral-dev4-1.resources.json",
+        "file": {
+          "bytes": 2537,
+          "sha256": "d6122b5fec37ea03cbecbdbb5abddb86586d220b3ffdbb2cf6b261fa2410ca08"
+        },
+        "status": "SUCCESS",
+        "operation": "clean-unit-oral-dev4",
+        "cumulative_seconds": 891.7909801006317,
+        "extra_local_peak_bytes": 3401325262,
+        "resources": null,
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/clean-unit-oral-dev5-1.resources.json",
+        "file": {
+          "bytes": 2537,
+          "sha256": "bb23102b2b7768072a2cec90a1b30355a7f1bc85469ef6df33996c9d063a9d9a"
+        },
+        "status": "SUCCESS",
+        "operation": "clean-unit-oral-dev5",
+        "cumulative_seconds": 1245.965929031372,
+        "extra_local_peak_bytes": 3438188269,
+        "resources": null,
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/download-1.resources.json",
+        "file": {
+          "bytes": 33973,
+          "sha256": "1b137e8f91407e09169542091e9554d353e433de1d1c52cfee6fae6182a4b2fe"
+        },
+        "status": "SUCCESS",
+        "operation": "download",
+        "cumulative_seconds": 254.49793195724487,
+        "extra_local_peak_bytes": 1972490837,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/gcp-workspace/tools/google-cloud-sdk/bin/gcloud",
+            "storage",
+            "cp",
+            "gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/e014-review.tar.gz",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/e014-review.tar.gz",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 254.49329651205335,
+          "peak_sampled_rss_bytes": 268062720,
+          "seconds_ceiling": 3599.990890979767,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 81392,
+          "sampled_cpu_seconds": 56.41,
+          "sampled_average_cpus": 0.22165613308140042,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/marker-1.resources.json",
+        "file": {
+          "bytes": 4491,
+          "sha256": "0ac326d62a743894b13d4349e931b19609477c009ff5811967cef93b491dabf3"
+        },
+        "status": "SUCCESS",
+        "operation": "marker",
+        "cumulative_seconds": 396.4812731742859,
+        "extra_local_peak_bytes": 3066820036,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "marker"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 27.419176156050526,
+          "peak_sampled_rss_bytes": 1307926528,
+          "seconds_ceiling": 3230.9797089099884,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 83671,
+          "sampled_cpu_seconds": 26.909999999999997,
+          "sampled_average_cpus": 0.9814299250585554,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/stage-oral-dev4-1.resources.json",
+        "file": {
+          "bytes": 5818,
+          "sha256": "bf4c1d081ee6cb758542d71cb2d76150bfb8b8db0cf17a89f97a94c062f40cd2"
+        },
+        "status": "SUCCESS",
+        "operation": "stage-oral-dev4",
+        "cumulative_seconds": 587.3627619743347,
+        "extra_local_peak_bytes": 3743367640,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "stage",
+            "--unit",
+            "oral-dev4"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 37.951444870908745,
+          "peak_sampled_rss_bytes": 43438080,
+          "seconds_ceiling": 3050.6259400844574,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 84253,
+          "sampled_cpu_seconds": 33.82,
+          "sampled_average_cpus": 0.8911386671848255,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/stage-oral-dev5-1.resources.json",
+        "file": {
+          "bytes": 5169,
+          "sha256": "1303829782c4e50760850769711cada0401b586844ef7f806ed21a3a2b507610"
+        },
+        "status": "SUCCESS",
+        "operation": "stage-oral-dev5",
+        "cumulative_seconds": 926.9502980709076,
+        "extra_local_peak_bytes": 3777862624,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "stage",
+            "--unit",
+            "oral-dev5"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 32.9543145269854,
+          "peak_sampled_rss_bytes": 47910912,
+          "seconds_ceiling": 2706.08820605278,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 86310,
+          "sampled_cpu_seconds": 31.53,
+          "sampled_average_cpus": 0.956779118381629,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/unit-E009-dev5-1.resources.json",
+        "file": {
+          "bytes": 2094,
+          "sha256": "d8f6d3ec25c17675e196da56ef6a901d73bf999fd74328becd4f30dc0b21906a"
+        },
+        "status": "FAILED",
+        "operation": "unit-E009-dev5",
+        "cumulative_seconds": 413.8813810348511,
+        "extra_local_peak_bytes": 2422526724,
+        "resources": null,
+        "error": "RuntimeError: Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/unit-E009-dev5-1.log\nTraceback (most recent call last):\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py\", line 29, in <module>\n    unit_review(verified/'work/units'/a.unit,feature,verified/'original-inventory.json',root/('diagnostics-'+a.unit), 'E009'if a.unit=='E009-dev5'else'oral',clean,truth,verified/'proofs'/('graph-'+a.unit+'.json'))\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e014_review.py\", line 250, in unit_review\n    checks[arm]=export_accounting(part,data,unit/'export'/arm/'assignments.tsv',account[arm],manifest)\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e014_review.py\", line 54, in export_accounting\n    require(row['status']==status and row['bin_id']==label and row['reason']==part['reason'][i], 'Export labels/status/reasons differ')\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e010_review.py\", line 27, in require\n    raise ValueError(message)\nValueError: Export labels/status/reasons differ\n\nDLBINNER exit_code=1 stop_reason=None\n"
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/unit-E009-dev5-2.resources.json",
+        "file": {
+          "bytes": 4643,
+          "sha256": "13a48cb19df2ca8eeff5c223f173ee4c4a8b760e1891e7d80ff8383a6faf2fbf"
+        },
+        "status": "SUCCESS",
+        "operation": "unit-E009-dev5",
+        "cumulative_seconds": 537.7186470031738,
+        "extra_local_peak_bytes": 2423752194,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "unit",
+            "--unit",
+            "E009-dev5"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 29.21676045807544,
+          "peak_sampled_rss_bytes": 1365032960,
+          "seconds_ceiling": 3091.537863969803,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 84047,
+          "sampled_cpu_seconds": 30.04,
+          "sampled_average_cpus": 1.0281769617513161,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/unit-oral-dev4-1.resources.json",
+        "file": {
+          "bytes": 35388,
+          "sha256": "f6060ad9ec7d55103a44226af1f2a5fc01aff18089e5b9ee235885459d64275e"
+        },
+        "status": "SUCCESS",
+        "operation": "unit-oral-dev4",
+        "cumulative_seconds": 876.4009048938751,
+        "extra_local_peak_bytes": 3750554995,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "unit",
+            "--unit",
+            "oral-dev4"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 275.640479743015,
+          "peak_sampled_rss_bytes": 5511360512,
+          "seconds_ceiling": 2999.2893908023834,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 84496,
+          "sampled_cpu_seconds": 278.97999999999996,
+          "sampled_average_cpus": 1.0121154928336304,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/unit-oral-dev5-1.resources.json",
+        "file": {
+          "bytes": 35898,
+          "sha256": "e1c9261ce227ab1a22f5e4bc3cae4bf70411ff800fbae606e50b3f2bca7cf680"
+        },
+        "status": "SUCCESS",
+        "operation": "unit-oral-dev5",
+        "cumulative_seconds": 1218.4305369853973,
+        "extra_local_peak_bytes": 3787382666,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "unit",
+            "--unit",
+            "oral-dev5"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 282.4615749459481,
+          "peak_sampled_rss_bytes": 5075189760,
+          "seconds_ceiling": 2664.0822920799255,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 86562,
+          "sampled_cpu_seconds": 278.89,
+          "sampled_average_cpus": 0.9873555369553131,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/verify-1.resources.json",
+        "file": {
+          "bytes": 502,
+          "sha256": "37814b7e9930b9c88e114e34b7b6e45745eba0511d54ec8383cac3cd7ead4fb8"
+        },
+        "status": "FAILED",
+        "operation": "verify",
+        "cumulative_seconds": 75.1429271697998,
+        "extra_local_peak_bytes": 1868105799,
+        "resources": null,
+        "error": "RuntimeError: Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/verify-1.log\nPermissionError: [Errno 1] Operation not permitted: 'ps'"
+      },
+      {
+        "path": "artifacts/e014-multiview-reconstruction/inspection-20261019/verify-2.resources.json",
+        "file": {
+          "bytes": 12164,
+          "sha256": "0deaa407d9ca235e3d124adb691e2e5f4f252f443bc0033716dbf45ca4f80227"
+        },
+        "status": "SUCCESS",
+        "operation": "verify",
+        "cumulative_seconds": 350.74132084846497,
+        "extra_local_peak_bytes": 3065073703,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/local-review-stage.py",
+            "verify"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 88.47222980693914,
+          "peak_sampled_rss_bytes": 50831360,
+          "seconds_ceiling": 3337.765128850937,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 83160,
+          "sampled_cpu_seconds": 69.32000000000001,
+          "sampled_average_cpus": 0.783522695779993,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "error": null
+      }
+    ],
+    "storage_scope": "Extra4GiB review scope separate from original10GiB acquisition/engineering. Only new reproducible staged copies removed after accepted review; archive and all old accepted data/failures untouched."
+  },
+  "local_monitor_and_reader_failures": "Initial ps permission refusal and strict exclusion-vs-geometry-reason reader refusal occurred before scores. Preserved; process monitoring used required OS-read permission, actual native export/refusal test passes. Summary whole-row mask assertion corrected to compare primary fields; no metric/data/tolerance changed.",
+  "checks": {
+    "new_review_archive_graph_marker_export_tests": 7,
+    "new_collection_alias_reuse_refusal_tests": 6,
+    "total_new_actual_tiny_contracts": 13,
+    "docs": "PASS72maintained documents/1021local links; optional ignored caches10unavailable remain unverified",
+    "diff_check": "PASS",
+    "native25product23research_gates_reused": true,
+    "not_repeated": "Accepted source/truth/data/fit/reload/science contracts; original Mac allclose remains failed.",
+    "evidence": {
+      "artifacts/e014-multiview-reconstruction/inspection-20261019/final-review-tests.log": {
+        "bytes": 1142,
+        "sha256": "ee80135441a3a1ea196ac82a84adff87eb8e4ab5654f4feeeba57d228282735d"
+      },
+      "artifacts/e014-multiview-reconstruction/inspection-20261019/final-collection-tests.log": {
+        "bytes": 1100,
+        "sha256": "d66f00d0686b5a488fc71add202e7b3582e6cbc4b5590cd46e133eb610ee1733"
+      },
+      "artifacts/e014-multiview-reconstruction/inspection-20261019/final-docs-check.log": {
+        "bytes": 688,
+        "sha256": "20f818d0e6641cf6e277daf1e6129180df97cc5b399893af5520fa90e4746522"
+      }
+    }
+  },
+  "local_review_backup": {
+    "status": "PRIVATE_UPLOAD_AND_READBACK_VERIFIED",
+    "archive": {
+      "bytes": 4844721,
+      "sha256": "b995a019461bb8c57784393e86f6436a7dac2d7fa5eddec19244b02a50cfd041"
+    },
+    "members": 176,
+    "every_local_member_verified": true,
+    "every_private_object_readback_verified": true,
+    "objects": [
+      {
+        "uri": "gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/local-review-20261019/e014-local-review.tar.gz",
+        "bytes": 4844721,
+        "sha256": "b995a019461bb8c57784393e86f6436a7dac2d7fa5eddec19244b02a50cfd041"
+      },
+      {
+        "uri": "gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/local-review-20261019/e014-local-review.tar.gz.sha256",
+        "bytes": 91,
+        "sha256": "8871105070905cfcf84a60f9d11d59caa7416ded18dff089b9dd2c5234aa2035"
+      },
+      {
+        "uri": "gs://dl-binner-archive-167650584170/e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/local-review-20261019/local-review-collection.json",
+        "bytes": 488,
+        "sha256": "07abe31051d4b072217350906a028e6c6e39256917468d874f47ee550136eacc"
+      }
+    ],
+    "assessment": {
+      "archive_bytes": 4844721,
+      "export_readback_USD_upper": 0.0005414397642016411,
+      "storage_USD_month": 9.023996070027351e-05,
+      "covered_by_existing_small_charges_reserve": true,
+      "ceiling_USD": 10,
+      "prior_phase_subtotal_USD": 1.2486337747957899,
+      "retention": "October21 unchanged",
+      "credits": "Final live Available1915.36DKK; ordinary existing Iowa Standard/network/operations covered; pending unknown."
+    },
+    "UTC": "2026-10-19T00:38:15.199079+00:00",
+    "collection": {
+      "status": "SUCCESS",
+      "archive": {
+        "bytes": 4844721,
+        "sha256": "b995a019461bb8c57784393e86f6436a7dac2d7fa5eddec19244b02a50cfd041"
+      },
+      "regular_members": 176,
+      "logical_member_bytes": 25989408,
+      "every_member_verified": true,
+      "manifest": {
+        "bytes": 28042,
+        "sha256": "370b39fa1277c1144962c01c3e18af475e4d6fc447e51321234b6cc183c6d8c2"
+      },
+      "scope": "Closed review snapshot; no native science repeated. Archive limit64MiB; native return2GiB remains separate."
+    }
+  },
+  "local_completion": {
+    "status": "SUCCESS",
+    "started_UTC": "2026-10-19T00:06:32.573404+00:00",
+    "completed_UTC": "2026-10-19T00:39:15.399149+00:00",
+    "cumulative_seconds_through_review_seal_and_private_backup": 1962.8257420063019,
+    "seconds_ceiling": 3600,
+    "core_download_verify_diagnostics_cleanup_seconds": 1245.965929031372,
+    "seal_seconds": 1833.1117429733276,
+    "threads": 4,
+    "peak_sampled_RSS_bytes": 5511360512,
+    "peak_extra_review_bytes": 3787382666,
+    "all_three_units_accepted": true,
+    "private_backup_verified": true,
+    "VM_remains_stopped": true
+  }
+}

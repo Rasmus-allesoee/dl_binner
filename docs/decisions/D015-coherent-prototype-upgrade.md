@@ -472,3 +472,49 @@ gates, including 25 installed product tests, and the [authorized three-fit DAG](
 is progressing under the verified original limits. No new scientific rule, model
 or architecture choice follows from native readiness; compare the complete outputs
 after shutdown before deciding whether to keep or selectively modify the bundle.
+
+
+## E014 mixed bundle result and one selective loss control, 2026-10-19
+
+The [frozen comparison](../../experiments/E014-multiview-reconstruction/comparison-review.json)
+passes all native/input/reload/geometry/marker/DNA contracts, with independent
+TERMINATED and checksum-bound collection recovery. Science source858b7cc and all
+prior comparators/failures remain unchanged. The collection-cap failures are
+delivery failures, not an invitation to replay accepted science. AGENTS now makes
+compressed/uncompressed evidence working sets, lossless aliases and native-versus-
+local/backup scope explicit.
+
+E009 dev5 post R95 is5.5196% versus retained dev4/E0135.7388%; oral provided-origin
+post is6.2432% versus5.7242%. Never pool the two truth scopes. E009 target>=90%
+increases2→4, bacterial5NN72.5882→80.5066% and restricted F1 improves; oral short-
+contig neighborhoods improve, while long-contig/bp-weighted geometry, grouping
+recall and unassigned-DNA trade-offs remain. The improve-both criterion fails;
+classify **modify**, without calling the coherent bundle universally better or
+rejecting its feature families. Native correctness is not optimality.
+
+Hold CPM/E013 provisionally: it adds3.1547points on oral dev4 and0.6795points on
+oral dev5 relative to their parents, with no per-target losses in those pairs.
+It is not uniformly best: oral dev5 old refinement has6.3443% weighted R95 versus
+E0136.2432%, with fewer50/90% targets. Do not choose a truth-assisted per-bin
+oracle or tune the selector to E009 now.
+
+Choose **one joint zero-reconstruction condition** next, already contemplated
+before outcomes: both reconstruction weights0, all view/exposure/positives,
+encoder+decoder initialization, measured-depth/dropout, seed/schedule and downstream
+policy held fixed. Reconstruction may retain nuisance/length signals; broad
+exposure and co-genomic false negatives are serious alternatives. This control
+can change whether the reconstruction block stays, without requiring a factorial
+campaign or proving the other ingredients causal. Pure grouping tuning, a larger
+network and extra mature-tool runs are lower-priority alternatives here. Keep
+them deferred rather than declaring them scientifically excluded.
+
+Proposal: two new matched fits with complete retained caches and accepted results
+reused, new$2 ceiling,2h cumulative/2.25h STOP, existing8vCPU/32GiB/300GiB,4threads/
+26GB/20GiBextra/25GiBreserve/2GiBreturn. Expected70–100min includes setup/collection,
+using measured E0096.4min/oral38.2min training-rule costs; fresh native/financial/
+retention gates remain. No current authorization or fit follows from this record;
+[the next prompt](../../experiments/E014-multiview-reconstruction/OPERATIONS.md#exact-following-prompt)
+requests the separate scope. Both inspected communities now count as development.
+Later independent confirmation needs a prospectively frozen additional-community
+protocol and source/overlap/truth/cost admission. Original oral choice and E014
+admission stay historical evidence. October21 storage review remains.
