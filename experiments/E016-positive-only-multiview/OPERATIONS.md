@@ -2,10 +2,16 @@
 
 Read [STATE](../../docs/STATE.md), [CLOUD](../../docs/CLOUD.md), [design](design.md),
 [protocol](protocol.json), [reuse lock](reuse-lock.json) and [resource plan](resource-plan.json).
-Status: all ten native gates pass; frozen comparison released and healthy at handoff; completion/results pending.
-[Native receipt](native-observed.json) owns exact phase `positive-20261019T223128Z-2cfefa3`,
-source2cfefa3, watchdog/financial/axes/runtime proofs and current log paths.
-Owner authorization is one conditional new $3 comparison, not E015 budget reuse.
+Status: **completed, checksum-admitted and reviewed; VM TERMINATED**.
+[Release snapshot](native-observed.json) preserves source2cfefa3, exact phase
+`positive-20261019T223128Z-2cfefa3`, initial supervision and gates. The authoritative
+[inspection](inspection-observed.json), [comparison](comparison-review.json) and
+[target table](comparison-targets.tsv) establish final success and scoped KEEP,
+with population/geometry/refinement trade-offs. No new execution is authorized by
+this completed inspection. The original new$3 is not a reusable run allowance.
+**October21 storage review remains; current gate expires00:00Copenhagen.**
+
+## Completed execution protocol (historical, not a new start instruction)
 
 Push clean `e016-positive-only-multiview`; use strict `dl-binner-gcp` SSH and its
 read-only Git key. Create a fresh exact-source checkout; leave all previously
@@ -56,43 +62,18 @@ relaxed Mac tolerance, per-bin oracle, refit, tuning or confirmation execution.
 
 ## Exact following prompt
 
-Our goal is substantially closing the recovery gap to stronger binners. Read
-AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E016's design, prospective
-protocol/criteria, candidate/reuse locks, local/native receipts and operations.
-Inspect phase `positive-20261019T223128Z-2cfefa3` in E016 native-observed.json without starting another job.
-Preserve dev3/dev4/dev5 and all accepted E009–E016 evidence and failed journals.
+The inspection prompt was completed without a VM wake. The following proposes the
+next local engineering block and an **explicit new storage-only approval**; neither
+that approval nor another comparison is enacted until the owner sends it.
 
-Check GCP state, e016-candidate/status and private completion.json at the receipt's
-archive prefix. Do not infer success from shutdown. If healthy and running, report
-real progress and leave the verified watcher/provider STOP intact without polling
-to completion. After independently verified shutdown, establish setup/gate and
-every scientific/collection exit. Refresh credit/prices and assess export against
-the remaining original new $3 and October21 retention before downloading. Verify
-archive and every retained member/alias, exact source/schedule/full axes, stopped
-target/predictor/EMA/collapse history, native reload/geometry/neighbors, cached
-marker/refiner/complete DNA accounting. Do not wake for missing evidence without
-first assessing a collection-only recovery against that original clock/budget;
-never replay accepted science or extend retention automatically.
+Our goal is substantially closing the recovery gap through coherent upgrades and selective controls. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E016's reviewed comparison, inspection receipts, complete target/population diagnostics, frozen sources and operations. Preserve dev3/dev4/dev5, E016 and all accepted E009–E016 inputs/truth/results/source freezes and failed journals. Use a new descriptive research branch without a codex/ prefix.
 
-If complete, run only frozen bounded local E009 conservative-v2 and separately
-named oral provided-origin diagnostics on the new outputs. Reuse E014/E015/dev4/
-E013/dev3/MetaBAT summaries without refitting/rescoring. Keep full156/799 reference
-denominators,3.3034%N-quarantine, known-shared sensitivity and all length/origin/
-eligibility/marker/unknown/non-target/unassigned populations. Four threads,8GBRSS,
-one hour/4GiBextra review; preserve failures and the original Mac portability
-tolerance. Report paired parent/old/post effects, per-target recovery, effective
-rank and neighborhood/grouping diagnostics, actual allocation/storage/export cost
-and frozen keep/modify/abandon disposition. This is a learning bundle on two
-development communities, not proof isolating negatives or settling product families.
+Implement one coherent length-aware, multi-evidence grouping upgrade locally. Keep the admitted E016 encoder, native unit vectors, seed, retained measured-parent depth and marker evidence fixed; do not retrain or redetect markers. Use learned vectors together with retained raw composition and measured depth to form reliable genome cores and conservatively recruit short/marker-negative contigs, with explicit absent-depth handling and optional unassignment. Resolve one scalable graph/affinity/core/recruitment policy and defaults using judgment and targeted primary-source checks; freeze the rule and keep/modify/abandon criteria before changed community outcomes. Keep the sole CPM rule and E013 refiner as the initial fixed downstream/comparator context where their contracts fit; a replacement must be a declared part of the single coherent grouping bundle, not a resolution grid. All earlier partitions remain immutable.
 
-Use the results and completed reviews to recommend one strongest next coherent
-block. Explicitly weigh a broader architecture/information upgrade (window context,
-frozenGLM/hybrid, reliable marker-aware learning, or information-aware grouping)
-against a narrower decision-changing follow-up; do not default to another small
-loss/grid test or add a larger model without evidence. Preserve the frozen skin
-confirmation choice; name outstanding sample/source/genome/replicon/taxonomy/
-overlap/unique-versus-origin truth/cost/retention dependencies, without acquiring
-DNA or running confirmation. No refit, new score campaign, external binner,
-architecture change, new cloud job/resource or retention extension in inspection.
-Update records/check/commit with structured what changed/why and give the next
-exact prompt, including any separate authorization needed for new execution.
+Calibrate reliability without truth labels/K, per-genome thresholds or per-bin oracle selection. Distinguish finite-length composition uncertainty and modeled confidence from measured coverage variance; do not invent window depth/variance or remap reads. Repeated marker families alone must not become cannot-links: preserve partial/overlapping-call, same-genome-locus/replicon and panel/lineage qualifications. Keep all DNA, short, marker-negative, unknown/non-target, excluded and unassigned populations, and cache complete graphs/affinities/core/recruitment decisions and pre/post partitions. This is an information-use/grouping upgrade; no new encoder, GLM payload, marker-aware training, taxonomy, ensemble or external binner is automatic.
+
+Proceed directly from a concise prospective design to implementation in this task. Run real tiny sparse/opaque-ID/feature/geometry/cache/recruitment/refiner/export/reload and malformed-input contracts, including sequence-only, missing depth, long/short and unreliable-marker cases. Engineering fixtures are authorized. Prepare one bounded restore-only cached comparison against retained E016 CPM/E013 on both development communities, reusing every old score summary; no community grouping/fit/score, new neighbor build on community DNA, confirmation acquisition or cloud compute is authorized by this prompt. Estimate actual CPU/RAM/peak disk/export/runtime/cost, test the launcher and make any native/resource contract still unresolved explicit. If more resources would materially improve the decision, justify them rather than silently imposing an inferior recipe. New execution needs a separately approved budget and fresh live credit/product/price/headroom/retention gates; no previous budget carries over.
+
+Separately, I authorize up to $8 incremental gross for seven calendar days (169 hours across the DST change) of the existing disks/private evidence, from October21 00:00 through October28 00:00 Copenhagen, only after live credit, delayed usage, product-price/coverage and actual storage checks pass. Do not start the VM, provision/resize, add a service, delete accepted evidence or extend beyond this date. Review the backup gaps and propose later space savings without treating hashes as backups. This storage-only authorization is separate from any new compute/comparison. Stop before unclear or uncovered spending.
+
+Keep the frozen skin pooled-GSA confirmation choice untouched and unacquired. Before later confirmation admit actual sample/source/genome/replicon/molecule/taxonomy joins, exact/near and pretraining overlap, duplicate-safe full-reference denominators, ambiguity/competitive-source and unique-versus-origin truth, appropriate sequence-only/depth claims, unchanged candidate/comparator protocol and separate acquisition/cost/retention approval. Do not tune on skin outcomes or claim new body site means unseen genomes. Update records, check and commit with structured what changed/why; report what works, unresolved contracts, resource and storage decisions, and the exact separate execution-approval prompt.

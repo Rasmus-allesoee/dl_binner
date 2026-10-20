@@ -4,50 +4,61 @@ Updated: 2026-10-20. This is the single current handoff.
 
 ## Exact next step
 
-**E016 positive-only multiview candidate released; healthy long run under supervision.**
-The owner sent E015's following prompt and explicitly prioritizes closing the
-stronger-binner recovery gap. [E016](../experiments/E016-positive-only-multiview/README.md)
-owns the [prospective design](../experiments/E016-positive-only-multiview/design.md),
-[protocol](../experiments/E016-positive-only-multiview/protocol.json),
-[resources](../experiments/E016-positive-only-multiview/resource-plan.json) and
-[operations](../experiments/E016-positive-only-multiview/OPERATIONS.md).
-Branch `e016-positive-only-multiview` preserves all older source/results/failures.
-This is one coherent online-predictor/stopped-EMA-target bundle on the same real
-views, explicit encoder widths, reconstruction1.0/.1, measured-parent depth,
-seed11/20epochs/batch256, unit inference geometry and CPM/E013. No cross-parent
-negative labels or unvalidated pseudo-positive links; single-view parents keep
-reconstruction. Both inspected communities remain development. Local actual
-loss/gradient/EMA/buffer/masked-depth/noncollapse/reload/graph/marker/refine/export
-and archive/member paths pass; All ten Linux byte/source/full-runtime/axes/actual-tiny/affordability gates pass; no new quality result yet.
-The original Mac tolerance stays failed, and old summaries are reused, not rescored.
+**E016 completed, verified and kept as a scoped recovery candidate; VM TERMINATED.**
+[E016 comparison](../experiments/E016-positive-only-multiview/comparison-review.json),
+[inspection](../experiments/E016-positive-only-multiview/inspection-observed.json) and
+[operations](../experiments/E016-positive-only-multiview/OPERATIONS.md) own results,
+all target/population diagnostics, exact costs and the next prompt. Source2cfefa3,
+dev3/dev4/dev5, every accepted E009–E016 input/result and failed journal stay intact.
+All ten native gates, twelve serial science jobs plus final target, exact reload/
+unit geometry/neighbor/cache/refiner/full-DNA contracts and221archive members/two
+aliases pass. No VM wake, refit, old score replay or architecture change in inspection.
 
-New$3, existing8vCPU/32GiB/300GiB only;4h cumulative from provider start/4.25hSTOP,
-4threads/26GB/20GiBextra/25GiBreserve/2GiBreturn. Fresh credit1904.91DKK through
-January12 and five ordinary SKU prices/coverage pass; delayed usage unknown with
-reserves. Whole maximum provider interval+worst export+reserve quote~$1.83, not
-native affordability proof. **October21 retention review remains**, disks$31.20/
-month while stopped, no extension. Fresh source-bound package-only runtime borrows
-accepted complete dependencies read-only, no reinstall/cache-copy fallback.
-The [skin confirmation choice](../experiments/E016-positive-only-multiview/confirmation-plan.json)
-is now prospective; only1.73MB public metadata acquired. Full source/overlap/truth/
-reference-denominator/depth/cost admission and separate execution remain outstanding.
-Judge a broader information/architecture upgrade against a narrower follow-up
-using E016's actual recovery/geometry/population outcomes, not network size alone.
+| Weighted full-reference R95, separate truth scopes | E009 conservative-v2 | Oral provided-origin oracle |
+| --- | ---: | ---: |
+| E014 reconstruction | 5.5196% | 6.2432% |
+| E015 zero reconstruction | 5.3329% | 6.5548% |
+| E016 positive-only + E013 | **5.8219%** | **6.7719%** |
 
-[Native release](../experiments/E016-positive-only-multiview/native-observed.json)
-now binds clean source2cfefa3, phase`positive-20261019T223128Z-2cfefa3`, separate
-research checkout and intact original b259dca checkout. Start00:31:25/release00:36:14
-Copenhagen; fresh boot/process held-parent watcher/live-normal-crash checks pass,
-providerSTOP04:46:25, original driver deadline04:31:25. E009-positive completed20epochs and exact reload, with real view/EMA progress
-and no collapse/nonfinite failure; its new kNN/CPM grouping is underway. Keep its
-long run supervised and inspect completion via the exact E016 operations prompt.
-No archive/quality admission or old baseline score replay yet. Early compute/IP
-quote~$0.04599+run disk~$0.00706; final cost pending. Shared preceding stopped-disk
-interval~$0.35708 is separate. Native gate source/input/runtime contracts and
-all42compact local-admission members/private readback pass. No source/input/cache/
-scientific fallback, resource/retention change, external tool or confirmation body.
+The frozen **KEEP** recovery rule passes: both endpoints improve, oral+0.5287pp,
+>=90%targets4→4/30→34; >=50%9→11/42→44. Gains1.677/11.013Mb include17/55target
+gains and6/19losses. This is one learning bundle on two development communities,
+not a false-negative causal result, uniform advantage or product-default promotion.
+E009 still trails retained MetaBAT2's8.5493%; only~10% of the E014 gap closes.
+Oral parent/old/E0134.6429/5.0723/6.7719% exposes a large refinement interaction;
+E009's three recoveries are identical. Native5NN and short-contig precision worsen,
+unassigned DNA rises0.723→2.376Mb/7.595→11.584Mb, including more confirmed bacterial
+unassignment. All populations/full156/799denominators/N-quarantine/known-shared
+sensitivity remain. Effective ranks stay noncollapsed; original Mac tolerance
+stays FAILED. All older summaries are reused, not rescored.
 
-Earlier E015/E014 recommendations below are dated evidence; E016 authorization above owns the current next step.
+**Next: implement one coherent length-aware, multi-evidence grouper locally**, with
+reliable cores and conservative short-contig recruitment; hold E016 learning and
+initial E013 alternative fixed. [D015](decisions/D015-coherent-prototype-upgrade.md#e016-reviewed-recovery-gain-and-next-information-aware-grouper-2026-10-20)
+weighs context/GLM/Transformer/marker learning against this broader grouping block.
+Use retained learned/raw composition and measured parent means, preserving missing
+depth and every short/marker-negative/unknown/non-target/unassigned outcome. This
+is not another loss/resolution grid. Resolve one label-free policy from source/
+reliability evidence, test actual tiny contracts and prepare one cached comparison;
+no new fit/score/cloud execution or confirmation is authorized by this inspection.
+
+Allocation22:31:25→23:29:21UTC October19 (00:31→01:29CopenhagenOctober20),3475.602s.
+Native science47.09min/11.177GBsampled peak; no overlap. Archive1,058,172,524bytes,
+all221members verified. Run+disk+export quote~$0.4224, <$0.68withreserve; approved
+stopped storage is separate and total remains<$3. Fresh creditsDKK1,901.15/96%,
+Paid Overview70.51cost/savings/net0, delayed usage unknown. **October21 storage
+review remains; current admission ends00:00Copenhagen.** Existing stopped disks
+$31.20/month/~$1day. Propose seven more days only with explicit new storage approval;
+no renewal, resource change or deletion has occurred. See CLOUD for cost/coverage.
+
+The frozen [skin confirmation plan](../experiments/E016-positive-only-multiview/confirmation-plan.json)
+remains unacquired. Actual sample/source/genome/replicon/molecule/taxonomy joins,
+exact/near and pretraining overlap, full duplicate-safe denominators, unique-vs-
+provided-origin truth, depth and cost/retention/protocol admission remain. A new
+body site does not establish unseen genomes; do not silently turn it into tuning data.
+
+Earlier E015/E014 recommendations below are dated completed history; E016's reviewed
+next block above is current.
 
 **E015 completed and was independently reviewed; the loss control is mixed.**
 [Comparison](../experiments/E015-zero-reconstruction/comparison-review.json),

@@ -692,3 +692,111 @@ watcher and04:46providerSTOP verified. Keep it supervised rather than polling th
 long job. Final outcome/gap-closure/architecture recommendation remains pending
 independent completed-output review; this execution is not a quality claim.
 No extra budget/resource/retention, external tool or confirmation DNA follows.
+
+
+## E016 reviewed recovery gain and next information-aware grouper, 2026-10-20
+
+[The completed comparison](../../experiments/E016-positive-only-multiview/comparison-review.json)
+and [inspection](../../experiments/E016-positive-only-multiview/inspection-observed.json)
+verify all ten Linux gates/twelve science rules+final target, native exact reload,
+unit geometry/neighbor/cache/selector/DNA contracts and221return members/two exact
+aliases. The VM is independently TERMINATED; no wake or scientific replay occurs
+in review. All older source/results, native release snapshot and failed Mac/local
+journals remain. Core frozen diagnostics close9.22min,4.840GBsampled RSS/2.324GiB;
+final sealing/records remain within the same1h/4GiB envelope.
+
+**Keep the positive-only bundle as a provisional recovery-focused research anchor.**
+Frozen E014-referenced numerical conditions pass: E0095.5196→5.8219%, oral-origin
+6.2432→6.7719%, oral gain+0.5287pp, >=90%targets4→4/30→34, full-population contracts
+and noncollapse pass. E009 gains1,677,003bp (17 targets gain/6 lose, any-passing22→21), oral11,013,185bp
+(55gain/19lose), with full156/799provided denominators/N-quarantine/known-shared
+sensitivity intact. This does not promote a product default, prove a false-negative
+cause or establish uniform improvement. E016 also exceeds retained E015 recovery
+in both scopes, but only~10% of the E014→MetaBAT2 E009 gap closes. E0165.8219% still
+trails8.5493%, and exceeds dev4/E013 by only0.0831pp.
+
+The original population safeguard requires complete, visible accounting; it does
+not authorize hiding trade-offs behind KEEP. E009 bacterial5NN falls80.51→72.63%
+(bp-weighted84.60→82.05%), oral20.43→17.86% (bp-weighted22.25→20.68%). E009 short-bin
+precision worsens while >=10kb grouping improves. Unassigned DNA rises0.723→2.376Mb/
+7.595→11.584Mb, with confirmed bacterial E009 unassignment259,869→633,285bp. Oral
+B3F1 falls31.21→30.68% despite higher recall and recovery. Full length/origin/
+marker/eligibility/unknown/non-target/excluded/unassigned cells remain. Online/
+target ranks32.83/30.56E009 and26.75/26.58oral rule out the predeclared catastrophic
+collapse, not weak discrimination. Target/predictor/EMA saved-state and all20epoch
+exposure checks pass; no full gradient trajectory or initial community tensor
+snapshot exists. Original Mac portability tolerance is not weakened.
+
+Most decision-relevant: oral parent/old/E013 recoveries are4.6429/5.0723/6.7719%.
+The unchanged E013 selector adds44.35Mb over the parent,18target gains/1loss, while
+the candidate parent itself is worse than E014's5.5638%. E009 refinement selects
+two alternatives with no R95 change. Better final recovery therefore does not mean
+uniformly better local embeddings; genome-scale grouping and biological selection
+remain important. Do not select the old/current refiner separately per genome.
+
+**Choose one coherent length-aware, multi-evidence grouping module next, holding
+E016 learning fixed.** Use the retained learned representation alongside raw
+composition and measured parent means, with explicit absent-depth/length reliability,
+reliable genome cores and conservative short-contig recruitment/unassignment.
+Keep one scalable path and initially retain CPM/E013 as the fixed context where
+applicable. Any necessary replacement is declared in the new prospective bundle,
+not hidden in a resolution/threshold grid. Preserve all alternatives and all DNA.
+No community grouping or architecture change runs in this inspection.
+
+This is broader than another marker-split guard or loss coefficient. It addresses
+how the system uses available evidence to assemble genomes: current initial graphs
+use only unit embeddings and one global node-density rule; raw composition/depth
+are available downstream mainly for refinement. Direct affinity/reliability and
+long-core/short-recruitment contracts can protect information the embedding blurs
+and reduce fragmentation without forcing ambiguous DNA. The retained MetaBAT2
+run shows headroom on the same assembly and ten mean-depth inputs; it does not
+prove its specific affinity formula is causal or that our features are sufficient.
+The E001/thesis reviews also show similar neighborhoods with different recovery.
+
+Serious alternatives, weighed against this decision:
+
+| Route | Evidence and limitation | Priority now |
+| --- | --- | --- |
+| Multi-evidence, length-aware grouping + conservative recruitment | Large oral parent/refiner interaction, short precision/assignment losses, existing raw/depth signal and retained same-input reference gap; no guarantee of complete separation | **Next coherent block**, using fixed E016 caches and one prospective matched comparison |
+| Window-context TNF/compact attention | Adds local composition arrangement lost by whole-contig TNF; supported by reviewed CompleteBin source, but its whole-tool win combines pretraining/views/grouping and local tokens can be noisy on short DNA | Leading later information upgrade if the new grouper still encounters mixed/indistinguishable affinities; no assumption a larger network itself helps |
+| Frozen GLM/TNF/depth hybrid | External sequence prior can complement composition. E003 improved fixed-fragment grouping while hurting short-neighbor agreement; it never compared our trained/hybrid whole-binner or proved a family verdict. E002's CPU projection is old laptop planning, not a cloud veto | Serious alternative, not rejected for cost or old threshold alone. Full native inference/cache/strand/token/runtime/license/overlap and resource admission still needed; no blind bulk extraction/GPU provisioning now |
+| Reliable marker-aware learning | Current oral refinement lift supports keeping marker information, while E011–E013 reveal partial calls/same-genome distinct loci/replicons/panel limits | Keep cached marker quality/refinement. A new training-link rule must establish reliability; same-family duplicates alone are not universal negatives |
+| Narrow loss/EMA/resolution follow-up | Could isolate a bundle cause, but does not directly address the observed genome-assembly/short-DNA decision and would prolong small controls | Lower priority now; no default grid, causal dissection campaign, larger MLP or extra external tool |
+
+A targeted primary refresh reads author SemiBin grouping source at
+[b06c7d53bef28f46cb7030845913279f94dfa6bf](https://github.com/BigDataBiology/SemiBin/blob/b06c7d53bef28f46cb7030845913279f94dfa6bf/SemiBin/cluster.py):
+`run_embed_infomap` combines learned/kmer edge evidence and length-weighted graph
+partitioning; its non-combined coverage path's `cal_kl` needs means **and variances**.
+Our accepted ten means cannot silently supply that recipe. The read is18,749bytes,
+SHA256`e1e5690d23f23c0ce5fb5875ca5c8d2d1374df1116e7bcc280b2bd4735e95ee0`, dated
+October20. This supports information-use design, not source parity or reproduced
+performance. Reuse the completed MetaCAT/MetaBAT2/context/GLM/thesis reviews;
+no new whole-tool campaign, source vendoring or mandatory ingredient list follows.
+
+Next local work should resolve the actual affinity/reliability/core/recruitment
+algorithm with targeted primary sources, implement/test real tiny readers/export/
+cache/missing-depth/marker boundaries, then freeze one candidate and a cached
+matched comparison. Use no truth K, target-specific thresholds, native benchmark
+labels or per-bin oracle; preserve E016/CPM/E013 as the comparator. A one-hour local
+review here is not permission for another community grouping. New execution needs
+new source/protocol/native/headroom/credit/price/cost and explicit budget admission;
+prior$3 does not carry. Resources should serve likely recovery value, not an
+arbitrary preference for the smallest run. This is the strongest next judgment
+under current evidence, not a proved globally optimal architecture.
+
+The frozen skin choice remains untouched/unacquired. Admit actual sample/source/
+genome/replicon/molecule/taxonomy joins, exact/near and reference/pretraining overlap,
+full duplicate-safe denominators including zero-origin targets, ambiguity/competitive
+sources and separately named unique-versus-provided-origin truth before confirmation.
+GSA lacks assembly errors and admitted GSA-contig depth. Freeze one candidate and
+comparator before skin outcomes; source/acquisition/cost/retention approval remains
+separate. Both currently scored communities remain development.
+
+October21 storage review remains; current gate expires00:00Copenhagen. Existing
+stopped disks cost$31.20/month. Read-only inventory finds76liveStandard objects/
+5.3704GiB; a proposed additional seven days throughOctober28 crosses the October25DST switch (169hours):~$7.087disks+
+$0.025liveobjects, plus reserve for metadata/operations/unlisted versions. Propose
+an explicit new$8storage-only ceiling after fresh coverage/inventory checks; **no
+extension is enacted here**. Preserve accepted data and audit backup omissions
+before proposing any later cleanup. The [next exact prompt](../../experiments/E016-positive-only-multiview/OPERATIONS.md#exact-following-prompt)
+separates that prospective approval and local implementation from a later paid run.

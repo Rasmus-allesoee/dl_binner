@@ -469,3 +469,18 @@ sequence of small loss controls. Keep broader window/context/GLM/marker-aware/
 information-aware grouping alternatives live; new outcomes will choose one next
 block. Skin pooled GSA is prospectively selected with metadata only; source/truth/
 overlap/denominator/cost admission remains, no confirmation payload acquired.
+
+
+2026-10-20 E016 reviewed: [positive-only bundle](../../experiments/E016-positive-only-multiview/comparison-review.json)
+meets its scoped KEEP rule: E009/oral-originR955.8219/6.7719%, both aboveE014,
+oral+0.5287pp and >=90%counts4/34. Full156/799denominators/N-quarantine/known-shared
+sensitivity and every length/origin/marker/eligibility/assignment population remain.
+Bacterial/oral neighbors worsen and more DNA becomes unassigned; oral's unchanged
+E013 refiner contributes a large lift from4.6429%, while E009's R95 is unchanged by
+refinement. Q001/Q003/Q005 remain open: no false-negative causal conclusion,
+family verdict, independent confirmation or uniform advantage. Keep E016 as a
+provisional recovery anchor, no product-default change. D015 chooses a coherent
+length-aware multi-evidence grouper/core/short-recruitment block next, holding
+learning fixed and explicitly weighing context/GLM/marker training. No new science
+runs here; skin remains unacquired. All failures/source freezes remain; October21
+retention decision and separate future-execution authorization are still needed.

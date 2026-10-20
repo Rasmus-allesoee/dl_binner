@@ -600,3 +600,30 @@ owns actual source/clock/logs and early allocation quote. No completed output or
 quality admission yet, and no older summary is rescored. Retain current scopes
 and October21; after shutdown review the new bundle before choosing one next
 coherent recovery-focused development block.
+
+
+## E016 value obtained and next recovery decision, 2026-10-20
+
+[The completed comparison](../../experiments/E016-positive-only-multiview/comparison-review.json)
+passes the original scoped KEEP conditions: conservative E0095.5196→5.8219%,
+oral-origin6.2432→6.7719%, with >=90%targets4→4/30→34, full denominators and all
+DNA intact. It closes only~10% of the E014-to-retained-MetaBAT2 E009 gap; it is
+useful development evidence, not mature-tool parity or proof about negatives.
+Native all exits/member/alias/reload contracts pass; VM is independently TERMINATED.
+No wake or scientific replay in inspection. Run+disk+export quote~$0.4224 before
+small storage/operations reserves and separate stopped-disk time, below new$3.
+
+Lower neighborhood precision/more short unassignment coexist with higher final
+recovery, and oral's E013 lift4.6429→6.7719% is large (18targets gain/1lose).
+[D015](D015-coherent-prototype-upgrade.md#e016-reviewed-recovery-gain-and-next-information-aware-grouper-2026-10-20)
+therefore selects one coherent information/length-aware grouping and short-
+recruitment block around fixed E016 learning, weighing context/GLM/marker training
+seriously rather than defaulting to a new loss/grid or larger network. Keep all
+old source/results/failures and the original failed portability tolerance.
+
+Both scored communities remain development; skin pooledGSA is frozen but unacquired
+and requires sample/source/genome/replicon/taxonomy/overlap/unique-versus-origin/
+full-denominator/protocol/cost admission before separate confirmation. No new
+community run or paid execution is authorized. October21 storage review still
+applies; proposed$8/seven-day storage continuation is a new owner decision, not
+an extension already enacted by the inspection.

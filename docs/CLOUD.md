@@ -3,29 +3,66 @@
 Updated: 2026-10-20 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
-**E016 two-fit comparison released; healthy under verified supervision.**
-[E016 operations](../experiments/E016-positive-only-multiview/OPERATIONS.md) owns the
-new$3/4h cumulative/4.25hSTOP existing8vCPU/32GiB/300GiB scope,4threads/26GB/
-20GiBextra/25GiBreserve/2GiBreturn. No provisioning, resize, new product/service,
-retention extension or older science replay. Fresh live Credits1904.91DKK/97%/
-Certain usage/net pricing/January12 and Paid Overview67.21cost/67.21savings/net0
-pass; reporting may exceed24h, pending unknown with$30prior+$5storage reserves.
-Five official current SKUs unchanged: compute/IP$0.273046/h, existingdisks$31.20/
-month. Maximum4.25h allocation+disks+2GiBexport+.25reserve~$1.83, below$3; actual
-native timing/headroom/source/runtime/heldwatcher gates precede community release.
-Fresh package-only prefix links accepted dependencies read-only and owns newwheel;
-it is not a portable independent numerical distribution. Existing executed checkouts
-stay untouched. **October21 review remains**, no further storage approval inferred.
-[Native receipt](../experiments/E016-positive-only-multiview/native-observed.json) owns
-newstart00:31:25/release00:36:14Copenhagen/source2cfefa3 and current RUNNING. All ten
-Linux gates pass, native full-width timing projection148.6min fits remaining4h.
-Fresh held-parentPID1847/currentboot/live-normal-crash tests and15300sSTOP verified;
-driver deadline04:31:25/providerSTOP04:46:25Copenhagen. E009 completed20epochs/exact native reload and is building the new graph; no
-collapse refusal. Both-unit completion/quality/final costs pending. Latest charged
-allocation quote~$0.04599compute/IP+$0.00706disks, separate preceding stopped gap
-~$0.35708. No old source overwritten: fresh detached checkout owns v6 and links
-accepted dependencies read-only. Compact85,517byte/42member local admission and
-private readback pass; no auth/environment backup. E015 below is dated history.
+**E016 completed and independently reviewed; VM TERMINATED.**
+[E016 inspection](../experiments/E016-positive-only-multiview/inspection-observed.json)
+binds provider state, boot/process exit snapshot, guest/private completion bytes,
+all10native gates/12serial scientific exits+final target and221archive members.
+Native source2cfefa3 and all older inputs/results stay immutable; no wake or new
+job/resource/service/retention change in inspection. Current scheduling15300sSTOP/
+automaticRestart=false is historical fallback, not permission to start a new phase.
+
+Single allocation start22:31:25.463UTC October19, stop23:29:21.065UTC (00:31→01:29
+CopenhagenOctober20), **3475.602s /57.93min** at8vCPU/32GiB, existing300GiBwork+
+30GiBboot. Watcher requested shutdown23:27:20UTC with matching bootd7b01a9d,
+PID1847/start5180/command hash. Private completion SUCCESS, science/reuse/collection/
+three upload-readback pairs exit0; final completion delivery separately matches
+its guest SHA256. No self-contained completion-upload exit is invented. The sealed
+science snapshot's pre-collection FAILED sentinel remains; final receipts resolve it.
+
+All **1,058,172,524archive bytes /221members /1,921,098,467logical bytes** and two
+size/SHA-identical aliases verify locally; SHA256
+`dca4d686ce3feb2d4c0fef5058df70b7e5c25fdccb11ad9df6179b4a5919188c`.
+All25,972work files/6.090GB are accounted, including3.982GB omitted full FASTAs
+retained on disk. Shared data/features/views/marker/runtime and full FASTAs are
+not backed up just by hashes. Native measured growth7.736GiB/minimum free90.239GiB
+fit20GiBextra/25GiBreserve; science tree peak11.177GB under26GB. Sampled science
+CPU7663.55s/wall2825.60s are separate from charged8vCPU uptime7.724allocated core-hours.
+
+Fresh read-only Billing Credits: **DKK1,901.15Available/96%**, Certain usage/net
+pricing, expiry2027-01-12, paid account. OverviewOctober1–20cost70.51/savings70.51/
+net0; the tooltip confirms possible>24h delay. Pending usage unknown, with$30prior+
+$5approved-storage reserves. Five current official SKU expressions/regions/currency
+conversion are unchanged; only the daily effective timestamp changed. Ordinary
+existing E2/nonpremiumUbuntu/PD/IPv4/privateIowaStandard/network/operations remain
+eligible; no new product, unused allowance or credit-delta attribution assumed.
+
+Measured-uptime/current-SKU gross quotes: **compute/IP$0.263611**, run disks
+**$0.040486**, native export upper **$0.118260**, tiny metadata~$0.000025. Subtotal
+~**$0.4224**, **<$0.68with$0.25reserve**, under original new$3. Pre-start approved
+stopped gap$0.357085 and post-stop storage through inspection are separate; even
+including both observed intervals/reserve remains<$1.50. Exact observation times
+and amounts are in the inspection receipt. This is not a reconciled invoice or
+sampled-CPU pricing. New native archive storage is~$0.020/month; local review
+costs$0GCPcompute. Compact review backup/readback is separately byte-bound below.
+
+Existing stopped disks continue **$31.20/month (~$1/day)**. **October21 review is
+still required; current phase retention gate expires at00:00CopenhagenOctober21.**
+No renewal/deletion is automatic. A seven-day continuation throughOctober28 would
+need explicit new approval; a fresh read-only object inventory and proposed cost
+are recorded with this inspection. All confirmation payloads remain unacquired;
+new execution needs a fresh source/protocol/resource/credit/budget admission.
+Original$3 remainder does not authorize another comparison.
+
+E016 compact inspection backup2,250,990bytes/all132members, private archive and
+checksum readback PASS, export upper$0.000252. Final source/evidence entry proof
+and independent final TERMINATED check pass; original failed journals remain.
+Local review/sealing31.87min/4.840GBsampled peak/2.3282GiBnew storage
+fits the one-hour/8GB/4GiB ceiling. No numerical environment/auth or bulk DNA
+is in the compact backup. Live object inventory76Standard objects/5.3704GiB
+pre-backup; seven calendar days cross October25DST (169hours), disks/liveobjects~$7.087+$0.025,
+with a proposed$8storage-only ceiling including reserve. This extension needs
+explicit owner approval and fresh checks; it is not enacted. Noncurrent/soft-
+deleted/uncommitted bytes are not included in that live-object inventory.
 
 **E015 reviewed; final VM independently TERMINATED.**
 [Recovery receipt](../experiments/E015-zero-reconstruction/recovery-observed.json)

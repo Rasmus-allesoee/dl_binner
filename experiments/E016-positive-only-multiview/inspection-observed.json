@@ -1,0 +1,1472 @@
+{
+  "record": "E016 completed-output inspection",
+  "status": "COMPLETED_VERIFIED; VM_TERMINATED; FROZEN_DIAGNOSTICS_ACCEPTED",
+  "inspected_UTC": "2026-10-20T09:45:50.014590+00:00",
+  "phase": "positive-20261019T223128Z-2cfefa3",
+  "source_commit": "2cfefa3c2c7184e1003246dbf50b7f4d6b49e2fd",
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3",
+  "native_release_receipt": {
+    "bytes": 43548,
+    "sha256": "79ce53f81683fba7e624762478914cf9d9b8dc753507f7a22001ce3d1dd13bf1"
+  },
+  "comparison": {
+    "bytes": 227410,
+    "sha256": "b5514aa84447d249a8bf7be63c5b1f6d80f0486f97f8c3f488a2d17200289b9a"
+  },
+  "provider": {
+    "status": "TERMINATED",
+    "VM_start_UTC": "2026-10-19T22:31:25.463000+00:00",
+    "VM_stop_UTC": "2026-10-19T23:29:21.065000+00:00",
+    "uptime_seconds": 3475.602,
+    "machine": "existing e2-standard-8/8vCPU/32GiB",
+    "work_disk_GiB": 300,
+    "boot_disk_GiB": 30,
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "15300"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "started_again_in_inspection": false,
+    "resources_changed": false
+  },
+  "completion": {
+    "status": "SUCCESS",
+    "source": "2cfefa3c2c7184e1003246dbf50b7f4d6b49e2fd",
+    "elapsed_since_VM_start_seconds": 3269.061806201935,
+    "private_readback_verified": true,
+    "stages": [
+      {
+        "name": "science",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e016-2cfefa3c2c71/scripts/e016_control.py",
+            "--plan",
+            "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/science-plan.json",
+            "--workflow"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2522,
+          "peak_sampled_rss_bytes": 11177078784,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 2.7121804067514823,
+          "sampled_cpu_seconds": 7663.549999999999,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 13510.968681573868,
+          "stop_reason": null,
+          "wall_seconds": 2825.604808929
+        }
+      },
+      {
+        "name": "reuse-after",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e016-2cfefa3c2c71/scripts/e016_reuse.py",
+            "--lock",
+            "/srv/dl_binner/research/e016-2cfefa3c2c71/experiments/E016-positive-only-multiview/reuse-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/reuse-after.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3874,
+          "peak_sampled_rss_bytes": 57274368,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.9435732886806995,
+          "sampled_cpu_seconds": 4.680000000000007,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 11285.328288555145,
+          "stop_reason": null,
+          "wall_seconds": 4.959869102000084
+        }
+      },
+      {
+        "name": "collection",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e016-2cfefa3c2c71/scripts/e016_collect.py",
+            "--work",
+            "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/work",
+            "--evidence",
+            "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/sealed-evidence",
+            "--output",
+            "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/return"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3876,
+          "peak_sampled_rss_bytes": 125886464,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.0649310667794953,
+          "sampled_cpu_seconds": 123.70999999999998,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 11280.239608764648,
+          "stop_reason": null,
+          "wall_seconds": 116.1671434509999
+        }
+      },
+      {
+        "name": "upload-e016-evidence.tar.gz",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/return/e016-evidence.tar.gz",
+            "gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3/e016-evidence.tar.gz",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3900,
+          "peak_sampled_rss_bytes": 295383040,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.6138029069260568,
+          "sampled_cpu_seconds": 10.47999999999999,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 11164.054859399796,
+          "stop_reason": null,
+          "wall_seconds": 17.07388459999993
+        }
+      },
+      {
+        "name": "readback-e016-evidence.tar.gz",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3/e016-evidence.tar.gz",
+            "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/readback-e016-evidence.tar.gz",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3961,
+          "peak_sampled_rss_bytes": 295108608,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.9040737212172965,
+          "sampled_cpu_seconds": 6.519999999999982,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 11146.969948530197,
+          "stop_reason": null,
+          "wall_seconds": 7.211801258000378
+        }
+      },
+      {
+        "name": "upload-e016-evidence.tar.gz.sha256",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/return/e016-evidence.tar.gz.sha256",
+            "gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3/e016-evidence.tar.gz.sha256",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 4022,
+          "peak_sampled_rss_bytes": 293826560,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.6991816009944608,
+          "sampled_cpu_seconds": 1.3899999999999864,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 11138.05976319313,
+          "stop_reason": null,
+          "wall_seconds": 1.9880385840001509
+        }
+      },
+      {
+        "name": "readback-e016-evidence.tar.gz.sha256",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3/e016-evidence.tar.gz.sha256",
+            "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/readback-e016-evidence.tar.gz.sha256",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 4082,
+          "peak_sampled_rss_bytes": 211431424,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.7313103329537158,
+          "sampled_cpu_seconds": 1.289999999999992,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 11136.061035871506,
+          "stop_reason": null,
+          "wall_seconds": 1.7639570259998436
+        }
+      },
+      {
+        "name": "upload-collection.json",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/return/collection.json",
+            "gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3/collection.json",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 4140,
+          "peak_sampled_rss_bytes": 295505920,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.7105129641558129,
+          "sampled_cpu_seconds": 1.259999999999991,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 11134.289032936096,
+          "stop_reason": null,
+          "wall_seconds": 1.7733666569997695
+        }
+      },
+      {
+        "name": "readback-collection.json",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3/collection.json",
+            "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/readback-collection.json",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 4198,
+          "peak_sampled_rss_bytes": 136577024,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.8052179421389329,
+          "sampled_cpu_seconds": 1.240000000000009,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 11132.49261212349,
+          "stop_reason": null,
+          "wall_seconds": 1.53995574999999
+        }
+      }
+    ],
+    "guest_completion_bytes_match": true,
+    "completion_delivery": "Private object and guest SHA256 agree; completion-upload has no self-contained exit record in the pre-upload receipt. Do not invent that exit."
+  },
+  "watchdog": {
+    "identity": {
+      "status": "ARMED_AND_TESTED",
+      "parent_unit": "e016-20261019t223128z.service",
+      "watchdog_timer": "e016-20261019t223128z-exit.timer",
+      "watchdog_service": "e016-20261019t223128z-exit.service",
+      "process": {
+        "pid": 1847,
+        "start_ticks": 5180,
+        "command_sha256": "8596b21a51e82e940f7c2d237632baa8e0ba3b55597ddec670a05a02a84ba481"
+      },
+      "boot_id": "d7b01a9d-f307-4638-b830-d615bff2a9f1",
+      "source_commit": "2cfefa3c2c7184e1003246dbf50b7f4d6b49e2fd",
+      "detector_bindings": {
+        "e009_exit_watchdog.py": {
+          "bytes": 5959,
+          "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+        },
+        "e011_exit_watchdog.py": {
+          "bytes": 2426,
+          "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+        }
+      },
+      "exit_grace_seconds": 60,
+      "timer_seconds": 30,
+      "original_vm_start_epoch": 1792449085.463,
+      "hard_deadline_epoch": 1792463485.463,
+      "provider_stop_epoch": 1792464385.463,
+      "native_normal_exit_and_crash_tests_passed": true
+    },
+    "exit_snapshot": {
+      "action": "clean guest shutdown requested; no retry or deletion",
+      "boot_id": "d7b01a9d-f307-4638-b830-d615bff2a9f1",
+      "checked_utc": "2026-10-19T23:27:20.289991+00:00",
+      "decision": "workflow exited",
+      "expected_process": {
+        "command_sha256": "8596b21a51e82e940f7c2d237632baa8e0ba3b55597ddec670a05a02a84ba481",
+        "pid": 1847,
+        "start_ticks": 5180
+      },
+      "first_missing_monotonic": 3282.871158514,
+      "missing_seconds": 61.988707388999956,
+      "observed_process": null,
+      "shutdown": true,
+      "snapshot": {
+        "attempts": {},
+        "log_tails": {
+          "upload-e016-evidence.tar.gz.sha256.log": "Copying file:///srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/return/e016-evidence.tar.gz.sha256 to gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3/e016-evidence.tar.gz.sha256\n  \n.\n\nDLBINNER exit_code=0 stop_reason=None\n",
+          "watchdog-native-tests.log": "test_live_exit_grace_pid_reuse_zombie_and_boot (test_e009_exit_watchdog.WatchdogTests.test_live_exit_grace_pid_reuse_zombie_and_boot) ... ok\ntest_real_native_success_and_crash_without_powering_off_host (test_e009_exit_watchdog.WatchdogTests.test_real_native_success_and_crash_without_powering_off_host) ... {\"boot_id\": \"d7b01a9d-f307-4638-b830-d615bff2a9f1\", \"checked_utc\": \"2026-10-19T22:32:27.944943+00:00\", \"decision\": \"workflow alive\", \"expected_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1902, \"start_ticks\": 5251}, \"observed_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1902, \"start_ticks\": 5251}, \"shutdown\": false, \"workflow_root\": \"/tmp/tmpjjz0b1rq/work\"}\n{\"boot_id\": \"d7b01a9d-f307-4638-b830-d615bff2a9f1\", \"checked_utc\": \"2026-10-19T22:32:27.982824+00:00\", \"decision\": \"exit grace\", \"expected_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1902, \"start_ticks\": 5251}, \"first_missing_monotonic\": 1, \"missing_seconds\": 0, \"observed_process\": null, \"shutdown\": false, \"workflow_root\": \"/tmp/tmpjjz0b1rq/work\"}\n{\"boot_id\": \"d7b01a9d-f307-4638-b830-d615bff2a9f1\", \"checked_utc\": \"2026-10-19T22:32:27.987292+00:00\", \"decision\": \"workflow exited\", \"expected_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1902, \"start_ticks\": 5251}, \"first_missing_monotonic\": 1, \"missing_seconds\": 1, \"observed_process\": null, \"shutdown\": true, \"workflow_root\": \"/tmp/tmpjjz0b1rq/work\"}\n{\"boot_id\": \"d7b01a9d-f307-4638-b830-d615bff2a9f1\", \"checked_utc\": \"2026-10-19T22:32:28.012936+00:00\", \"decision\": \"workflow alive\", \"expected_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1903, \"start_ticks\": 5258}, \"observed_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1903, \"start_ticks\": 5258}, \"shutdown\": false, \"workflow_root\": \"/tmp/tmpz1le0ze8/work\"}\n{\"boot_id\": \"d7b01a9d-f307-4638-b830-d615bff2a9f1\", \"checked_utc\": \"2026-10-19T22:32:28.033411+00:00\", \"decision\": \"exit grace\", \"expected_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1903, \"start_ticks\": 5258}, \"first_missing_monotonic\": 1, \"missing_seconds\": 0, \"observed_process\": null, \"shutdown\": false, \"workflow_root\": \"/tmp/tmpz1le0ze8/work\"}\n{\"boot_id\": \"d7b01a9d-f307-4638-b830-d615bff2a9f1\", \"checked_utc\": \"2026-10-19T22:32:28.037736+00:00\", \"decision\": \"workflow exited\", \"expected_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1903, \"start_ticks\": 5258}, \"first_missing_monotonic\": 1, \"missing_seconds\": 1, \"observed_process\": null, \"shutdown\": true, \"workflow_root\": \"/tmp/tmpz1le0ze8/work\"}\nok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.109s\n\nOK\n"
+        },
+        "stages": {}
+      },
+      "workflow_root": "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3"
+    },
+    "provider_stop_independent": true
+  },
+  "archive": {
+    "status": "SUCCESS",
+    "archive": {
+      "bytes": 1058172524,
+      "sha256": "dca4d686ce3feb2d4c0fef5058df70b7e5c25fdccb11ad9df6179b4a5919188c"
+    },
+    "regular_members": 221,
+    "logical_member_bytes": 1921098467,
+    "every_member_verified": true
+  },
+  "archive_object": {
+    "bucket": "dl-binner-archive-167650584170",
+    "content_type": "application/x-tar",
+    "crc32c_hash": "bdgKxg==",
+    "creation_time": "2026-10-19T23:25:37+0000",
+    "etag": "CN2e/qadx5cDEAE=",
+    "generation": "1792452337831773",
+    "md5_hash": "dwQ87cQs/W6krP4TjYBQoQ==",
+    "metageneration": 1,
+    "name": "e016/positive-20261019T223128Z-2cfefa3/e016-evidence.tar.gz",
+    "size": 1058172524,
+    "storage_class": "STANDARD",
+    "storage_class_update_time": "2026-10-19T23:25:37+0000",
+    "storage_url": "gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3/e016-evidence.tar.gz#1792452337831773",
+    "update_time": "2026-10-19T23:25:37+0000"
+  },
+  "archive_accounting": {
+    "all_work_files": 25972,
+    "all_work_logical_bytes": 6090249416,
+    "omitted_DNA_files": 25849,
+    "omitted_DNA_bytes": 3982147476,
+    "exact_aliases": {
+      "work/units/E009-positive/train/reference.npz": {
+        "bytes": 21873665,
+        "canonical": "work/units/E009-positive/embeddings.npz",
+        "sha256": "16c6b1204ed14d790ab14cc709116ef73fa2046edc10a73a65626fb675eaa475"
+      },
+      "work/units/oral-positive/train/reference.npz": {
+        "bytes": 185981263,
+        "canonical": "work/units/oral-positive/embeddings.npz",
+        "sha256": "7e2ed0537121f69a65195d7ccc72df17464b7b84db1d0ae8731045c3b6d8a36c"
+      }
+    },
+    "omission": "Full native FASTAs and shared inputs/views/features/runtimes remain on disk; hashes are not backups."
+  },
+  "native_resources": {
+    "science": {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/srv/dl_binner/research/e016-2cfefa3c2c71/scripts/e016_control.py",
+        "--plan",
+        "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/science-plan.json",
+        "--workflow"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2522,
+      "peak_sampled_rss_bytes": 11177078784,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 2.7121804067514823,
+      "sampled_cpu_seconds": 7663.549999999999,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 13510.968681573868,
+      "stop_reason": null,
+      "wall_seconds": 2825.604808929
+    },
+    "max_setup_or_science_or_collection_sampled_RSS_bytes": 11177078784,
+    "min_sampled_free_GiB": 90.23887634277344,
+    "max_observed_filesystem_growth_GiB": 7.736030578613281,
+    "scope": "Maximums sampled; resource-free gaps between monitors and very short work are not exact physical peaks."
+  },
+  "financial": {
+    "checked_UTC": "2026-10-20T09:25:57.101048+00:00",
+    "provider_status": "TERMINATED",
+    "cost_covered": true,
+    "Welcome_credit_remaining_DKK": 1901.15,
+    "original_DKK": 1973.43,
+    "percent": 96,
+    "status": "Available",
+    "scope": "Certain usage; see free-trial terms",
+    "application": "Net pricing",
+    "expiry": "2027-01-12",
+    "paid_account": true,
+    "overview_cost_DKK": 70.51,
+    "overview_savings_DKK": 70.51,
+    "overview_net_DKK": 0,
+    "pending_usage": "Unknown; live tooltip says costs may take longer than24h",
+    "prior_exposure_reserve_USD": 30,
+    "original_storage_reserve_USD": 5,
+    "coverage": "Unchanged ordinary E2, nonpremium Ubuntu, persistent disk, external IPv4, private Iowa Standard storage/operations and Europe export; current official terms permit remaining Welcome credit after paid upgrade",
+    "source": "Fresh signed-in Billing Credits/Overview via CUA; five official Catalog SKU pricing expressions unchanged; official storage/free-credit pages refreshed",
+    "price_comparison": {
+      "6AE1-525F-8B80": {
+        "prior_effective_UTC": "2026-10-19T07:00:00Z",
+        "current_effective_UTC": "2026-10-20T07:00:00Z",
+        "prices_unchanged": true
+      },
+      "C054-7F72-A02E": {
+        "prior_effective_UTC": "2026-10-19T07:00:00Z",
+        "current_effective_UTC": "2026-10-20T07:00:00Z",
+        "prices_unchanged": true
+      },
+      "CF4E-A0C7-E3BF": {
+        "prior_effective_UTC": "2026-10-19T07:00:00Z",
+        "current_effective_UTC": "2026-10-20T07:00:00Z",
+        "prices_unchanged": true
+      },
+      "D973-5D65-BAB2": {
+        "prior_effective_UTC": "2026-10-19T07:00:00Z",
+        "current_effective_UTC": "2026-10-20T07:00:00Z",
+        "prices_unchanged": true
+      },
+      "F449-33EC-A5EF": {
+        "prior_effective_UTC": "2026-10-19T07:00:00Z",
+        "current_effective_UTC": "2026-10-20T07:00:00Z",
+        "prices_unchanged": true
+      }
+    },
+    "VM_start_UTC": "2026-10-19T22:31:25.463000+00:00",
+    "VM_stop_UTC": "2026-10-19T23:29:21.065000+00:00",
+    "VM_uptime_seconds": 3475.602,
+    "compute_IP_USD": 0.2636105829161081,
+    "run_disks_USD": 0.04048640316072978,
+    "export_upper_USD": 0.1182599951326847,
+    "preceding_approved_stopped_gap_disk_USD": 0.3570848381372648,
+    "small_storage_operations_stop_grace_reserve_USD": 0.25,
+    "combined_E016_gross_USD_upper": 1.0294418193467874,
+    "retention": "Original October21 boundary unchanged; current October20 inspection fits",
+    "archive_uri": "gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3/e016-evidence.tar.gz",
+    "archive": {
+      "bytes": 1058172524,
+      "sha256": "dca4d686ce3feb2d4c0fef5058df70b7e5c25fdccb11ad9df6179b4a5919188c"
+    },
+    "local_free_bytes": 12945293312,
+    "forecast_review_GiB": 3.5,
+    "limit_review_GiB": 4,
+    "official_urls": [
+      "https://cloud.google.com/storage/pricing?hl=en",
+      "https://docs.cloud.google.com/free/docs/free-cloud-features"
+    ],
+    "measured_compute_run_disk_export_small_subtotal_USD": 0.42238177297920587,
+    "phase_gross_with_reserve_USD": 0.6723817729792059,
+    "preceding_stopped_gap_separate_USD": 0.3570848381372648,
+    "post_stop_disk_through_inspection_seconds": 36988.949142,
+    "post_stop_disk_through_inspection_USD": 0.4308748549041984,
+    "all_including_both_stopped_intervals_and_reserve_USD": 1.4603414660206693,
+    "compute_hours": 0.965445,
+    "allocated_vCPU_hours": 7.72356,
+    "native_archive_storage_USD_normalized_month": 0.019709999188780785,
+    "full_existing_disk_USD_month": 31.199999949850024,
+    "invoice": "Unreconciled measured-allocation/current-SKU estimates; no credit-delta or sampled-CPU attribution",
+    "storage_review": "October21 original boundary; no retention extension",
+    "compact_review_export_upper_USD": 0.0002515677362680435,
+    "phase_gross_with_reserve_and_compact_USD": 0.6726333407154739,
+    "storage_proposal_new_ceiling_USD": 8,
+    "storage_proposal_approved": false
+  },
+  "local_review": {
+    "status": "PASS",
+    "clock": {
+      "start_epoch": 1792488382.321269,
+      "start_UTC": "2026-10-20T09:26:22.321295+00:00",
+      "seconds": 3600,
+      "threads": 4,
+      "RSS_bytes": 8000000000,
+      "extra_local_GiB": 4
+    },
+    "elapsed_through_record_seconds": 1167.6813859939575,
+    "peak_sampled_numerical_stage_RSS_bytes": 4839505920,
+    "peak_extra_review_bytes": 2494941383,
+    "stages": [
+      {
+        "path": "artifacts/e016-positive-only-multiview/review-20261020/checkpoint-1.resources.json",
+        "binding": {
+          "bytes": 1870,
+          "sha256": "27964698c2416804a1f04616ca7309637a56a9f92d18b2ab58e6122753bebdba"
+        },
+        "status": "SUCCESS",
+        "operation": "checkpoint",
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e016-positive-only-multiview/review-20261020/local-review-stage.py",
+            "checkpoint"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 7.068056797026657,
+          "peak_sampled_rss_bytes": 209403904,
+          "seconds_ceiling": 2812.8403840065002,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 49587,
+          "sampled_cpu_seconds": 5.75,
+          "sampled_average_cpus": 0.8135192125817201,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "extra_local_peak_bytes": 2494936651,
+        "cumulative_seconds": 794.2387409210205
+      },
+      {
+        "path": "artifacts/e016-positive-only-multiview/review-20261020/download-1.resources.json",
+        "binding": {
+          "bytes": 19343,
+          "sha256": "7da0caa7101821a4751644e54c3aad875f45f2196ebaffc1a44c124b455e5390"
+        },
+        "status": "SUCCESS",
+        "operation": "download",
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/gcp-workspace/tools/google-cloud-sdk/bin/gcloud",
+            "storage",
+            "cp",
+            "gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3/e016-evidence.tar.gz",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e016-positive-only-multiview/review-20261020/e016-evidence.tar.gz",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 141.59194957499858,
+          "peak_sampled_rss_bytes": 265535488,
+          "seconds_ceiling": 3599.9837749004364,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 45766,
+          "sampled_cpu_seconds": 32.489999999999995,
+          "sampled_average_cpus": 0.22946219822187458,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "extra_local_peak_bytes": 1058229222,
+        "cumulative_seconds": 141.60118198394775
+      },
+      {
+        "path": "artifacts/e016-positive-only-multiview/review-20261020/verify-1.resources.json",
+        "binding": {
+          "bytes": 3037,
+          "sha256": "e6f5de9dd30bd9223e4a19ef3339d2ba2d2b5b77e89715ed06f2f4d9065b672f"
+        },
+        "status": "SUCCESS",
+        "operation": "verify",
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e016-positive-only-multiview/review-20261020/local-review-stage.py",
+            "verify"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 15.908166119945236,
+          "peak_sampled_rss_bytes": 93593600,
+          "seconds_ceiling": 3446.816549062729,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 46811,
+          "sampled_cpu_seconds": 15.81,
+          "sampled_average_cpus": 0.9938291994686831,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "extra_local_peak_bytes": 1066979162,
+        "cumulative_seconds": 169.09333300590515
+      },
+      {
+        "path": "artifacts/e016-positive-only-multiview/review-20261020/contracts-1.resources.json",
+        "binding": {
+          "bytes": 1219,
+          "sha256": "532cd02f093c003e748f3e867910032696096eb3cbed61c9e879f184dc6ae357"
+        },
+        "status": "SUCCESS",
+        "operation": "contracts",
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e016-positive-only-multiview/review-20261020/local-review-stage.py",
+            "contracts"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.971308677108027,
+          "peak_sampled_rss_bytes": 82530304,
+          "seconds_ceiling": 2840.6251981258392,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 49553,
+          "sampled_cpu_seconds": 1.98,
+          "sampled_average_cpus": 1.0044089101787568,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "extra_local_peak_bytes": 2494928561,
+        "cumulative_seconds": 761.356330871582
+      },
+      {
+        "path": "artifacts/e016-positive-only-multiview/review-20261020/unit-E009-positive-1.resources.json",
+        "binding": {
+          "bytes": 6877,
+          "sha256": "2b0de93a315d4677edd546330736c119b537221d2a30feb93557ca0b545a5abf"
+        },
+        "status": "SUCCESS",
+        "operation": "unit-E009-positive",
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e016-positive-only-multiview/review-20261020/local-review-stage.py",
+            "unit",
+            "--unit",
+            "E009-positive"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 44.763816384016536,
+          "peak_sampled_rss_bytes": 1334894592,
+          "seconds_ceiling": 3397.241124153137,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 47048,
+          "sampled_cpu_seconds": 46.699999999999996,
+          "sampled_average_cpus": 1.043253318693238,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "extra_local_peak_bytes": 1152811164,
+        "cumulative_seconds": 247.52878308296204
+      },
+      {
+        "path": "artifacts/e016-positive-only-multiview/review-20261020/metadata-1.resources.json",
+        "binding": {
+          "bytes": 2914,
+          "sha256": "44f1138e2c3e40b340e34e9cc641d761d69b2fbfea16b576117a3dbe375d1730"
+        },
+        "status": "SUCCESS",
+        "operation": "metadata",
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e016-positive-only-multiview/review-20261020/local-review-stage.py",
+            "metadata"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 14.247775899944827,
+          "peak_sampled_rss_bytes": 85381120,
+          "seconds_ceiling": 3430.717229127884,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 46929,
+          "sampled_cpu_seconds": 13.58,
+          "sampled_average_cpus": 0.9531312181891202,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "extra_local_peak_bytes": 1079175949,
+        "cumulative_seconds": 183.53533005714417
+      },
+      {
+        "path": "artifacts/e016-positive-only-multiview/review-20261020/summary-1.resources.json",
+        "binding": {
+          "bytes": 1085,
+          "sha256": "318e3b2a44126687819b817d373cdeeb84e42bfe90ba91c57567aa7a71491893"
+        },
+        "status": "SUCCESS",
+        "operation": "summary",
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e016-positive-only-multiview/review-20261020/local-review-stage.py",
+            "summary"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 0.9240730300080031,
+          "peak_sampled_rss_bytes": 128180224,
+          "seconds_ceiling": 2764.5642409324646,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 49660,
+          "sampled_cpu_seconds": 0.35,
+          "sampled_average_cpus": 0.378757942970123,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "extra_local_peak_bytes": 2494940200,
+        "cumulative_seconds": 836.3708128929138
+      },
+      {
+        "path": "artifacts/e016-positive-only-multiview/review-20261020/unit-oral-positive-1.resources.json",
+        "binding": {
+          "bytes": 39899,
+          "sha256": "5629b2a16e22f95b7f86eca3c3696e956dfb7441005a8d3881edebd96f87bee6"
+        },
+        "status": "SUCCESS",
+        "operation": "unit-oral-positive",
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e016-positive-only-multiview/review-20261020/local-review-stage.py",
+            "unit",
+            "--unit",
+            "oral-positive"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 305.4823578110663,
+          "peak_sampled_rss_bytes": 4839505920,
+          "seconds_ceiling": 3352.2012569904327,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 47368,
+          "sampled_cpu_seconds": 301.56,
+          "sampled_average_cpus": 0.987160116743985,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "extra_local_peak_bytes": 2494877089,
+        "cumulative_seconds": 553.2852931022644
+      }
+    ],
+    "actual_tests": 15,
+    "actual_saved_tensor_reader": {
+      "status": "PASS",
+      "torch_version": "2.2.2",
+      "units": {
+        "E009-positive": {
+          "status": "PASS",
+          "weights_only": true,
+          "no_model_instantiation_or_inference": true,
+          "online_target_keys": 28,
+          "predictor_keys": 18,
+          "predictor_buffers": {
+            "0.1.num_batches_tracked": 6960,
+            "1.1.num_batches_tracked": 6960
+          },
+          "optimizer_parameter_ids": 40,
+          "target_parameter_ids_in_optimizer": false,
+          "target_optimizer_basis": "Hash-bound constructor supplies online+predictor only; saved optimizer count matches these exact axes. State dict IDs alone do not retain original Python parameter object identities.",
+          "target_differs_from_online": true,
+          "checkpoint_and_metadata_config_transform_updates_equal": true,
+          "all_saved_states_finite": true
+        },
+        "oral-positive": {
+          "status": "PASS",
+          "weights_only": true,
+          "no_model_instantiation_or_inference": true,
+          "online_target_keys": 18,
+          "predictor_keys": 18,
+          "predictor_buffers": {
+            "0.1.num_batches_tracked": 39760,
+            "1.1.num_batches_tracked": 39760
+          },
+          "optimizer_parameter_ids": 30,
+          "target_parameter_ids_in_optimizer": false,
+          "target_optimizer_basis": "Hash-bound constructor supplies online+predictor only; saved optimizer count matches these exact axes. State dict IDs alone do not retain original Python parameter object identities.",
+          "target_differs_from_online": true,
+          "checkpoint_and_metadata_config_transform_updates_equal": true,
+          "all_saved_states_finite": true
+        }
+      }
+    },
+    "scope": "Four numerical threads/8GB/onehour/4GiB. Frozen new outputs only; no local neural inference, source/DAG replay, graph build, marker detection or baseline rescoring. Small stdlib ledgers/aggregation are included in cumulative wall/storage, not individually RSS-sampled."
+  },
+  "preserved_inspection_failures": [
+    {
+      "path": "inspection-20261020/price-compare-attempt1.failure.json",
+      "reason": "Exact SKU object comparison refused daily effective-time metadata change. Pricing expressions/regions/categories/conversion independently verified unchanged before export."
+    },
+    {
+      "path": "inspection-20261020/assess-export-attempt1.failure.log",
+      "reason": "Read a non-existent nested watcher field; repaired to actual emitted schema and verified exact boot/process before export."
+    },
+    {
+      "path": "review-20261020/verify-controller.log",
+      "reason": "Controller invoked before asynchronous download completed; prerequisite refusal, no archive consumed. Fresh invocation after download succeeds. No science or score failure/retry."
+    }
+  ],
+  "preservation": "Original native release snapshot, all accepted E009\u2013E016 science/source/truth/results and failed journals unchanged. Original Mac portability tolerance remains failed. No new VM job, provision/resize/service, external tool, confirmation DNA or retention extension.",
+  "evidence": {
+    "artifacts/e016-positive-only-multiview/inspection-20261020/provider.json": {
+      "bytes": 33097,
+      "sha256": "2f42c6e6ec8cd7808b7f1374a930044914b04261f86197b83b33a47532ea2312"
+    },
+    "artifacts/e016-positive-only-multiview/inspection-20261020/guest.json": {
+      "bytes": 464,
+      "sha256": "c7c505583ced7f61f2118697d4148f337b69d3357f8dc58080c9f187fbace24d"
+    },
+    "artifacts/e016-positive-only-multiview/inspection-20261020/completion.json": {
+      "bytes": 217472,
+      "sha256": "c094c5045dc5c6b02f1aff0bce5b1ed90d546b85f2c50bcc0cf6ea07e7bd8da3"
+    },
+    "artifacts/e016-positive-only-multiview/inspection-20261020/watchdog-exit.json": {
+      "bytes": 4274,
+      "sha256": "8497080a7b49f1095e8ad08ff95beb338153622bd6b27f923aeb62bb1ed702e6"
+    },
+    "artifacts/e016-positive-only-multiview/inspection-20261020/current-prices.json": {
+      "bytes": 8003,
+      "sha256": "0589d75c4ea0b1906f87f616fab98a6e3e9917a2b7bedcb6f539065f723ec244"
+    },
+    "artifacts/e016-positive-only-multiview/inspection-20261020/export-admission.json": {
+      "bytes": 2879,
+      "sha256": "aa2e1f751e4b99ad33ac0b42a1a43e31bffc8c4dc259e09386a5538cce36e8b2"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/verified/inventory.json": {
+      "bytes": 8724635,
+      "sha256": "76400a32821f98fdb53706bee0b3236b132a26d6e5b6afd2386cbe8ae0fc8ec0"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/native-receipts-review.json": {
+      "bytes": 44349,
+      "sha256": "e20a5fa453a5151010b3334e218a8c6d585fb0c96b5b9c6a122b4af76ee6ed7e"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/learning-receipts-review.json": {
+      "bytes": 4540,
+      "sha256": "5eb5aeaf6ccfc69bec6ac6b5f68039870c74f8af90ef1905d27422302c94ee27"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/checkpoint-reader-review.json": {
+      "bytes": 1604,
+      "sha256": "6ee66804dfe52e8bf0413230803890302091e5a85ee203a4bda7c5076636e734"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/contracts-1.log": {
+      "bytes": 1912,
+      "sha256": "d8034f77bc6de6e353a3ec9263c330a221ccbb20e9191b035260fdb0f74c2a23"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/native-ledger.py": {
+      "bytes": 5071,
+      "sha256": "6297cdbc9203fa035a1d90e9f0df2b2a61384de98253b29b3850e8fd25f098ec"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/audit-learning.py": {
+      "bytes": 3744,
+      "sha256": "91cec985bfa55bd5f43874ba8df62e7b6e23c2b7bc64e2eef91a94d936808af3"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/read-checkpoints.py": {
+      "bytes": 2631,
+      "sha256": "724a2e6b79b17f610cd5e9a35c160670d3eec45818d0ca0f0835b940f85b379b"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/local-review-stage.py": {
+      "bytes": 4041,
+      "sha256": "4ab95ded307aee7e6cd62a0e054a5a9cab4ee1cbabda51aac99240de6e37a8c6"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/local-review-controller.py": {
+      "bytes": 4178,
+      "sha256": "d311d41832577276b1ee7b6c0c4e5f4447b5222c01f0adc6c8a095efcc741b1c"
+    },
+    "artifacts/e016-positive-only-multiview/inspection-20261020/targeted-grouping-source.json": {
+      "bytes": 1016,
+      "sha256": "e2bf8e7a0a0b638105b2a60f8e856ddfdf89d6e70eb6b8a23eb773cce8893c31"
+    },
+    "scripts/e016_summarize.py": {
+      "bytes": 14994,
+      "sha256": "ad326b11bd0d097e22725a8760212831bdffa26fba248cef3fc97bede112952b"
+    },
+    "tests/test_e016_review.py": {
+      "bytes": 1904,
+      "sha256": "2dcee0bfb00cb1c94ab7138544024ff4ac6df97625f7d6b29a5612779f50f321"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/compact-review-private.json": {
+      "bytes": 1299,
+      "sha256": "dfd7515112322b8e0e085c4f7ffcdf1b7c3664c15aedee05cbf910cff232cf0a"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/compact-review-inventory.json": {
+      "bytes": 20007,
+      "sha256": "ec046317800f2818616b173b4879f817321cfa991f630fc190d7aaeff6e9d2cb"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/seal-1.resources.json": {
+      "bytes": 4350,
+      "sha256": "29f9ababf1c396a07ee2e8cf2443752a788fe3c8462c1d25f93e3211456e73b8"
+    },
+    "artifacts/e016-positive-only-multiview/review-20261020/seal-review.py": {
+      "bytes": 4653,
+      "sha256": "23fae073996c41e3820825656968ef19120a6e72105a5b50f1044af590c9269a"
+    },
+    "artifacts/e016-positive-only-multiview/inspection-20261020/storage-inventory.json": {
+      "bytes": 16291,
+      "sha256": "397f6726580e359ef26952053185093972ce6c138366b679b657b7a11c38de6c"
+    },
+    "artifacts/e016-positive-only-multiview/inspection-20261020/finalize-review.py": {
+      "bytes": 4962,
+      "sha256": "050517e26cd44f0bcf12c3fb3594119ea9b66b27e67e184afbd3c53cce3f56e9"
+    },
+    "artifacts/e016-positive-only-multiview/inspection-20261020/storage-calendar-correction.json": {
+      "bytes": 592,
+      "sha256": "79846fa34479d64a18de67ec08f04b875cc18cf856fb837322debd377d082bee"
+    }
+  },
+  "private_review_archive": {
+    "members": 132,
+    "logical_bytes": 15866456,
+    "archive": {
+      "bytes": 2250990,
+      "sha256": "ff92708bb36f0da9d00269f71597106883291c6c7e276d952844ccd51e69a54f"
+    },
+    "every_member_verified": true,
+    "status": "SUCCESS",
+    "uri": "gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3/inspection-20261020/compact-review.tar.gz",
+    "checksum_uri": "gs://dl-binner-archive-167650584170/e016/positive-20261019T223128Z-2cfefa3/inspection-20261020/compact-review.tar.gz.sha256",
+    "all_private_readbacks_verified": true,
+    "transfer_exits": [
+      {
+        "name": "upload-compact-review.tar.gz",
+        "exit_code": 0
+      },
+      {
+        "name": "readback-compact-review.tar.gz",
+        "exit_code": 0
+      },
+      {
+        "name": "upload-compact-review.tar.gz.sha256",
+        "exit_code": 0
+      },
+      {
+        "name": "readback-compact-review.tar.gz.sha256",
+        "exit_code": 0
+      }
+    ],
+    "export_upper_USD": 0.0002515677362680435,
+    "object_storage_USD_normalized_month": 4.192795604467392e-05,
+    "scope": "Compact source/records/closed review logs and diagnostics only. Original bulk return remains separately verified/private. Excludes credentials/environments and all DNA/arrays/checkpoints. Snapshot precedes final seal receipt, so it cannot contain its own final hash."
+  },
+  "storage_review_proposal": {
+    "checked_UTC": "2026-10-20T09:47:28.606252+00:00",
+    "status": "READ_ONLY_LIST",
+    "live_objects": 76,
+    "live_object_bytes": 5766429198,
+    "live_GiB": 5.370405687019229,
+    "classes": [
+      "STANDARD"
+    ],
+    "proposed_seven_day_existing_disk_USD": 7.045161278998393,
+    "proposed_seven_day_live_objects_USD": 0.024718344774020653,
+    "proposed_retention": "October21 00:00 Copenhagen through October28 00:00 Copenhagen; owner approval required, not enacted",
+    "scope": "Live versions only. Soft-deleted/noncurrent objects, metadata and incomplete uploads are not counted; allow .50USD storage/operations reserve, no automatic deletion.",
+    "items": [
+      {
+        "name": "e009/20261015-watchdog-a6e351f/watchdog-evidence-a6e351f.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "9864",
+        "timeCreated": "2026-10-15T00:49:27.999Z"
+      },
+      {
+        "name": "e009/20261015-watchdog-a6e351f/watchdog-evidence-a6e351f.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "99",
+        "timeCreated": "2026-10-15T00:49:32.603Z"
+      },
+      {
+        "name": "e009/controls-cf7bf2a-20261015T211004Z/closure.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "447655",
+        "timeCreated": "2026-10-15T22:51:43.730Z"
+      },
+      {
+        "name": "e009/controls-cf7bf2a-20261015T211004Z/completion.json",
+        "storageClass": "STANDARD",
+        "size": "1763",
+        "timeCreated": "2026-10-15T22:51:46.876Z"
+      },
+      {
+        "name": "e009/controls-cf7bf2a-20261015T211004Z/controls-evidence.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "484269399",
+        "timeCreated": "2026-10-15T22:51:34.451Z"
+      },
+      {
+        "name": "e009/controls-cf7bf2a-20261015T211004Z/controls-evidence.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "91",
+        "timeCreated": "2026-10-15T22:51:40.278Z"
+      },
+      {
+        "name": "e009/controls-cf7bf2a-20261015T211004Z/review-20261016/e009-controls-reviewed-20261016-v1.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "484012",
+        "timeCreated": "2026-10-16T10:00:18.215Z"
+      },
+      {
+        "name": "e009/controls-cf7bf2a-20261015T211004Z/startup-metadata.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "6511",
+        "timeCreated": "2026-10-15T21:25:55.028Z"
+      },
+      {
+        "name": "e009/data-phase-5fec4e1-20261015-review-v1/e009-data-review-20261015-v1.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "246936673",
+        "timeCreated": "2026-10-15T13:17:21.113Z"
+      },
+      {
+        "name": "e009/data-phase-5fec4e1-20261015-review-v1/e009-data-review-20261015-v1.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "102",
+        "timeCreated": "2026-10-15T13:17:22.690Z"
+      },
+      {
+        "name": "e009/data-phase-5fec4e1-20261015-review-v1/e009-review-closure-20261015-v1.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "106654",
+        "timeCreated": "2026-10-15T13:37:49.841Z"
+      },
+      {
+        "name": "e009/data-phase-5fec4e1-20261015-review-v1/e009-review-closure-20261015-v1.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "105",
+        "timeCreated": "2026-10-15T13:37:54.513Z"
+      },
+      {
+        "name": "e009/truth-v2-20261015-control-preparation-v1/e009-truth-v2-20261015-evidence-v1.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "5218978",
+        "timeCreated": "2026-10-15T21:07:36.326Z"
+      },
+      {
+        "name": "e009/truth-v2-20261015-control-preparation-v1/e009-truth-v2-20261015-evidence-v1.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "108",
+        "timeCreated": "2026-10-15T21:07:41.491Z"
+      },
+      {
+        "name": "e010/assets-6917c3f-20261016/cost-credit-admission.json",
+        "storageClass": "STANDARD",
+        "size": "3449",
+        "timeCreated": "2026-10-16T21:24:57.170Z"
+      },
+      {
+        "name": "e010/assets-6917c3f-20261016/dl_binner-0.1.0.dev4-py3-none-any.whl",
+        "storageClass": "STANDARD",
+        "size": "54811",
+        "timeCreated": "2026-10-16T21:24:10.584Z"
+      },
+      {
+        "name": "e010/assets-6917c3f-20261016/e010-local-evidence-v1.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "6189207",
+        "timeCreated": "2026-10-16T21:24:45.542Z"
+      },
+      {
+        "name": "e010/assets-6917c3f-20261016/marker-asset.json",
+        "storageClass": "STANDARD",
+        "size": "4655",
+        "timeCreated": "2026-10-16T21:24:34.414Z"
+      },
+      {
+        "name": "e010/assets-6917c3f-20261016/marker.hmm",
+        "storageClass": "STANDARD",
+        "size": "15929643",
+        "timeCreated": "2026-10-16T21:24:22.494Z"
+      },
+      {
+        "name": "e010/candidate-6917c3f-20261016T212549Z/candidate-run-evidence.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "335636093",
+        "timeCreated": "2026-10-16T21:43:35.616Z"
+      },
+      {
+        "name": "e010/candidate-6917c3f-20261016T212549Z/candidate-run-evidence.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "96",
+        "timeCreated": "2026-10-16T21:43:40.752Z"
+      },
+      {
+        "name": "e010/candidate-6917c3f-20261016T212549Z/closure.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "99386",
+        "timeCreated": "2026-10-16T21:43:44.156Z"
+      },
+      {
+        "name": "e010/candidate-6917c3f-20261016T212549Z/completion.json",
+        "storageClass": "STANDARD",
+        "size": "1820",
+        "timeCreated": "2026-10-16T21:43:47.323Z"
+      },
+      {
+        "name": "e010/candidate-6917c3f-20261016T212549Z/launch-evidence.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "146882",
+        "timeCreated": "2026-10-16T21:35:38.991Z"
+      },
+      {
+        "name": "e010/candidate-6917c3f-20261016T212549Z/review-20261017/review-evidence-v1.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "2275305",
+        "timeCreated": "2026-10-16T22:42:32.962Z"
+      },
+      {
+        "name": "e010/candidate-6917c3f-20261016T212549Z/review-20261017/review-evidence-v1.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "92",
+        "timeCreated": "2026-10-16T22:42:35.004Z"
+      },
+      {
+        "name": "e011/assets-1746cab20d80/runtime-payload.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "66664540",
+        "timeCreated": "2026-10-17T00:46:05.096Z"
+      },
+      {
+        "name": "e011/cached-7a43eb6-20261017T080610Z/completion.json",
+        "storageClass": "STANDARD",
+        "size": "27472",
+        "timeCreated": "2026-10-17T08:10:30.162Z"
+      },
+      {
+        "name": "e011/cached-7a43eb6-20261017T080610Z/review-evidence-v1.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "505830",
+        "timeCreated": "2026-10-17T08:33:18.571Z"
+      },
+      {
+        "name": "e011/cached-7a43eb6-20261017T080610Z/review-evidence-v1.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "92",
+        "timeCreated": "2026-10-17T08:33:19.734Z"
+      },
+      {
+        "name": "e011/cached-7a43eb6-20261017T080610Z/run-evidence.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "327025885",
+        "timeCreated": "2026-10-17T08:10:17.402Z"
+      },
+      {
+        "name": "e011/cached-7a43eb6-20261017T080610Z/run-evidence.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "86",
+        "timeCreated": "2026-10-17T08:10:26.486Z"
+      },
+      {
+        "name": "e011/cached-7a43eb6-20261017T080610Z/watchdog-exit.json",
+        "storageClass": "STANDARD",
+        "size": "1604",
+        "timeCreated": "2026-10-17T08:11:59.178Z"
+      },
+      {
+        "name": "e011/cached-ab80312-20261017T005141Z/completion.json",
+        "storageClass": "STANDARD",
+        "size": "5539",
+        "timeCreated": "2026-10-17T00:54:33.594Z"
+      },
+      {
+        "name": "e011/cached-ab80312-20261017T005141Z/failure-review-evidence-v1.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "1112252",
+        "timeCreated": "2026-10-17T01:21:26.757Z"
+      },
+      {
+        "name": "e011/cached-ab80312-20261017T005141Z/run-evidence.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "19320",
+        "timeCreated": "2026-10-17T00:54:27.114Z"
+      },
+      {
+        "name": "e011/cached-ab80312-20261017T005141Z/run-evidence.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "86",
+        "timeCreated": "2026-10-17T00:54:30.410Z"
+      },
+      {
+        "name": "e011/cached-ab80312-20261017T005141Z/watchdog-exit.json",
+        "storageClass": "STANDARD",
+        "size": "1266",
+        "timeCreated": "2026-10-17T00:56:06.746Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/completion.json",
+        "storageClass": "STANDARD",
+        "size": "556002",
+        "timeCreated": "2026-10-18T21:07:44.128Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T222530Z-7011ce6/completion.json",
+        "storageClass": "STANDARD",
+        "size": "5504",
+        "timeCreated": "2026-10-18T22:35:49.234Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T222530Z-7011ce6/watchdog-exit.json",
+        "storageClass": "STANDARD",
+        "size": "12257",
+        "timeCreated": "2026-10-18T22:37:16.488Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/collection.json",
+        "storageClass": "STANDARD",
+        "size": "1695",
+        "timeCreated": "2026-10-18T22:54:12.916Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/completion.json",
+        "storageClass": "STANDARD",
+        "size": "45092",
+        "timeCreated": "2026-10-18T22:54:19.530Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/e014-review.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "1971407357",
+        "timeCreated": "2026-10-18T22:53:43.691Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/e014-review.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "85",
+        "timeCreated": "2026-10-18T22:54:06.957Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/local-review-20261019/e014-local-review.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "4844721",
+        "timeCreated": "2026-10-19T00:37:49.269Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/local-review-20261019/e014-local-review.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "91",
+        "timeCreated": "2026-10-19T00:38:00.782Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/local-review-20261019/local-review-collection.json",
+        "storageClass": "STANDARD",
+        "size": "488",
+        "timeCreated": "2026-10-19T00:38:09.798Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/inspect-20261018T224343Z-5030964/watchdog-exit.json",
+        "storageClass": "STANDARD",
+        "size": "4293",
+        "timeCreated": "2026-10-18T22:55:38.855Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/local-admission-evidence.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "192167634",
+        "timeCreated": "2026-10-18T18:53:26.637Z"
+      },
+      {
+        "name": "e014/comparison-858b7cc-20261018T183446Z/watchdog-exit.json",
+        "storageClass": "STANDARD",
+        "size": "12611",
+        "timeCreated": "2026-10-18T21:09:05.039Z"
+      },
+      {
+        "name": "e015/collect-20261019T135207Z-89dcd61/collection.json",
+        "storageClass": "STANDARD",
+        "size": "798",
+        "timeCreated": "2026-10-19T13:57:27.991Z"
+      },
+      {
+        "name": "e015/collect-20261019T135207Z-89dcd61/completion.json",
+        "storageClass": "STANDARD",
+        "size": "23791",
+        "timeCreated": "2026-10-19T13:57:31.750Z"
+      },
+      {
+        "name": "e015/collect-20261019T135207Z-89dcd61/e015-evidence.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "1042061418",
+        "timeCreated": "2026-10-19T13:57:15.346Z"
+      },
+      {
+        "name": "e015/collect-20261019T135207Z-89dcd61/e015-evidence.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "87",
+        "timeCreated": "2026-10-19T13:57:24.526Z"
+      },
+      {
+        "name": "e015/collect-20261019T135207Z-89dcd61/local-review-20261019/e015-local-review.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "3285918",
+        "timeCreated": "2026-10-19T14:28:07.691Z"
+      },
+      {
+        "name": "e015/collect-20261019T135207Z-89dcd61/local-review-20261019/e015-local-review.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "91",
+        "timeCreated": "2026-10-19T14:28:24.671Z"
+      },
+      {
+        "name": "e015/collect-20261019T135207Z-89dcd61/local-review-20261019/local-review-collection.json",
+        "storageClass": "STANDARD",
+        "size": "468",
+        "timeCreated": "2026-10-19T14:28:34.222Z"
+      },
+      {
+        "name": "e015/collect-20261019T135207Z-89dcd61/watchdog-exit.json",
+        "storageClass": "STANDARD",
+        "size": "4264",
+        "timeCreated": "2026-10-19T13:58:55.112Z"
+      },
+      {
+        "name": "e015/zero-20261019T102859Z-b259dca/completion.json",
+        "storageClass": "STANDARD",
+        "size": "260261",
+        "timeCreated": "2026-10-19T11:35:56.158Z"
+      },
+      {
+        "name": "e015/zero-20261019T102859Z-b259dca/native-admission.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "37455",
+        "timeCreated": "2026-10-19T10:39:09.271Z"
+      },
+      {
+        "name": "e015/zero-20261019T102859Z-b259dca/watchdog-exit.json",
+        "storageClass": "STANDARD",
+        "size": "12192",
+        "timeCreated": "2026-10-19T11:37:02.079Z"
+      },
+      {
+        "name": "e016/positive-20261019T223128Z-2cfefa3/collection.json",
+        "storageClass": "STANDARD",
+        "size": "814",
+        "timeCreated": "2026-10-19T23:25:52.402Z"
+      },
+      {
+        "name": "e016/positive-20261019T223128Z-2cfefa3/completion.json",
+        "storageClass": "STANDARD",
+        "size": "217472",
+        "timeCreated": "2026-10-19T23:25:55.752Z"
+      },
+      {
+        "name": "e016/positive-20261019T223128Z-2cfefa3/e016-evidence.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "1058172524",
+        "timeCreated": "2026-10-19T23:25:37.842Z"
+      },
+      {
+        "name": "e016/positive-20261019T223128Z-2cfefa3/e016-evidence.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "87",
+        "timeCreated": "2026-10-19T23:25:48.666Z"
+      },
+      {
+        "name": "e016/positive-20261019T223128Z-2cfefa3/local-admission.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "85517",
+        "timeCreated": "2026-10-19T22:34:07.033Z"
+      },
+      {
+        "name": "e016/positive-20261019T223128Z-2cfefa3/local-admission.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "89",
+        "timeCreated": "2026-10-19T22:34:17.627Z"
+      },
+      {
+        "name": "e016/positive-20261019T223128Z-2cfefa3/watchdog-exit.json",
+        "storageClass": "STANDARD",
+        "size": "4274",
+        "timeCreated": "2026-10-19T23:27:20.428Z"
+      },
+      {
+        "name": "workspace/20261013T220405Z/workspace-20261013T220405Z-setup.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "6126",
+        "timeCreated": "2026-10-13T22:05:34.630Z"
+      },
+      {
+        "name": "workspace/20261013T220405Z/workspace-20261013T220405Z-setup.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "106",
+        "timeCreated": "2026-10-13T22:05:34.631Z"
+      },
+      {
+        "name": "workspace/20261013T223943Z-acceptance/final-sync-stop.json",
+        "storageClass": "STANDARD",
+        "size": "2824",
+        "timeCreated": "2026-10-13T22:48:38.543Z"
+      },
+      {
+        "name": "workspace/20261013T223943Z-acceptance/final-sync-stop.json.sha256",
+        "storageClass": "STANDARD",
+        "size": "87",
+        "timeCreated": "2026-10-13T22:48:43.374Z"
+      },
+      {
+        "name": "workspace/20261013T223943Z-acceptance/remote-final-sync.txt",
+        "storageClass": "STANDARD",
+        "size": "1311",
+        "timeCreated": "2026-10-13T22:48:48.250Z"
+      },
+      {
+        "name": "workspace/20261013T223943Z-acceptance/workspace-20261013T223943Z-acceptance.tar.gz",
+        "storageClass": "STANDARD",
+        "size": "5858",
+        "timeCreated": "2026-10-13T22:42:36.456Z"
+      },
+      {
+        "name": "workspace/20261013T223943Z-acceptance/workspace-20261013T223943Z-acceptance.tar.gz.sha256",
+        "storageClass": "STANDARD",
+        "size": "111",
+        "timeCreated": "2026-10-13T22:42:41.289Z"
+      }
+    ],
+    "calendar_correction": {
+      "status": "PROPOSED_ONLY_NOT_APPROVED",
+      "reason": "Seven calendar days cross Copenhagen DST end on October25:169chargeable hours, not168. Preserve original dated quote; this is an appended correction, not a receipt rewrite.",
+      "start_Copenhagen": "2026-10-21T00:00:00+02:00",
+      "end_Copenhagen": "2026-10-28T00:00:00+01:00",
+      "hours": 169.0,
+      "existing_disks_USD": 7.087096762801954,
+      "live_objects_USD": 0.02486547777862792,
+      "metadata_soft_deleted_noncurrent_operations_reserve_USD": 0.5,
+      "proposed_new_ceiling_USD": 8,
+      "proposed_total_with_reserve_USD": 7.611962240580582
+    }
+  },
+  "finalization": {
+    "UTC": "2026-10-20T09:58:14.757982+00:00",
+    "elapsed_local_review_seconds": 1912.4249651432037,
+    "extra_review_and_inspection_bytes": 2499917204,
+    "peak_sampled_RSS_bytes": 4839505920,
+    "seal_resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e016-positive-only-multiview/review-20261020/local-review-stage.py",
+        "seal"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 25.96319651103113,
+      "peak_sampled_rss_bytes": 293187584,
+      "seconds_ceiling": 1810.4811599254608,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 50415,
+      "sampled_cpu_seconds": 15.840000000000002,
+      "sampled_average_cpus": 0.6100943692842279,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "final_provider_binding": {
+      "bytes": 581,
+      "sha256": "2fb5dcd080091019ce3ffa35386aca9d064f02b7b5ce1287fc10b44368fb113e"
+    },
+    "all_158_entry_old_evidence_and_source_bindings_unchanged": true,
+    "no_new_retention_authorized": true,
+    "scope": "Core review9.22min; this includes evidence sealing/private readback/records inside original1h and4GiB. Current doc/Git finishing checks are not a new diagnostic run."
+  }
+}
