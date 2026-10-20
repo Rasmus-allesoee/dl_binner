@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-20",
+  "scope": "Targeted primary checks plus completed reviews, not another exhaustive source/runtime campaign",
+  "evidence_reused": [
+    "docs/evidence/2026-09-30-binner-design-review.md",
+    "docs/evidence/2026-09-30-architecture-reassessment.md",
+    "docs/evidence/2026-10-08-competitive-binner-study.md",
+    "D013/D015/E016 reviewed results"
+  ],
+  "primary": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6662567/",
+      "version": "Kang et al2019 PeerJ7359",
+      "section": "Materials/Methods: composition scores, binning/recruitment, memory efficiency",
+      "observation": "Length-dependent TNF reliability, sparse links and separate short-contig recruitment; no calibrated probability formula imported into our method."
+    },
+    {
+      "url": "https://leidenalg.readthedocs.io/en/stable/reference.html#cpmvertexpartition",
+      "section": "CPMVertexPartition",
+      "observation": "Density objective/node sizes/seed/iterations; retain one median-edge/30 rule, no resolution search."
+    },
+    {
+      "url": "https://github.com/BigDataBiology/SemiBin/blob/b06c7d53bef28f46cb7030845913279f94dfa6bf/SemiBin/cluster.py",
+      "retained_source": "artifacts/e016-positive-only-multiview/inspection-20261020/SemiBin-cluster.py",
+      "binding": {
+        "bytes": 18749,
+        "sha256": "e1e5690d23f23c0ce5fb5875ca5c8d2d1374df1116e7bcc280b2bd4735e95ee0"
+      },
+      "functions": [
+        "run_embed_infomap",
+        "cal_kl"
+      ],
+      "observation": "Learned/raw edge intersection and length weighting; the KL coverage route requires means plus variances. Our mean-only affinity differs. Direct web source refresh was unavailable; retained author bytes re-read."
+    },
+    {
+      "retained_native": "eligibility-audit.json",
+      "observation": "Native MetaBAT2 2.18 2500bp main/default,1500allowed,1000bp short recruitment/default. Its unequal eligibility is distinct from our 500bp encoder population and from fixed full-reference scoring."
+    }
+  ],
+  "synthesis": "Our prospective background-gated affinity, empirical envelope and voting rule are unvalidated heuristics; no method parity, optimality or causal mechanism claim."
+}

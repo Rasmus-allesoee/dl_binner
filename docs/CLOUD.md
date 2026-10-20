@@ -3,6 +3,46 @@
 Updated: 2026-10-20 (Copenhagen; provisioning receipts are dated 2026-10-13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
+**Current E017 storage decision, 2026-10-20:** the owner explicitly approves up to
+**$8 incremental gross** for existing disks/private evidence from **October 21 at
+00:00 through October 28 at 00:00 Copenhagen** (169 hours across DST).
+[Fresh admission](../experiments/E017-information-aware-grouping/storage-admission.json)
+passes read-only signed-in Credits/Overview, current SKU expressions/regions,
+resource and all-version/soft-delete checks. Welcome credit is **DKK 1,897.28
+Available /96%**, net pricing, paid account, expiry January 12, 2027. Overview cost
+and savings are both DKK 74.50, net zero; reporting may exceed 24 hours, so pending
+usage stays unknown with $30 prior-usage/$5 prior-storage reserves.
+
+Existing VM is **TERMINATED**; disks remain 300 GiB balanced plus 30 GiB standard,
+both persistent. Five applicable SKU expressions remain unchanged. Private Iowa
+Standard inventory is **78 versions /5,768,680,276 bytes**, zero soft-deleted bytes;
+no public/security/service change. The 169-hour forecast is **$7.08710 disks +
+$0.02488 listed objects +$0.50 reserve = $7.61197**, below $8. Ordinary persistent
+disk/private Standard storage and operations remain covered by the Welcome credit
+under [current official terms](https://docs.cloud.google.com/free/docs/free-cloud-features)
+and [storage prices](https://cloud.google.com/storage/pricing?hl=en). This is a
+pre-credit SKU forecast, not a reconciled invoice or a credit-delta attribution.
+No API mutation is needed to retain the existing disks. No start, resize, new
+service, deletion or later renewal is enacted. **October 28 at 00:00 Copenhagen
+is the next retention boundary**; the original October 21 decision is resolved
+only for this approved interval. Stopped disks still cost about $31.20/month.
+
+[E017](../experiments/E017-information-aware-grouping/OPERATIONS.md) is local
+implementation/preparation only. A new $2 cached grouping comparison is proposed,
+not authorized: existing 8-vCPU/32-GiB VM, three-hour cumulative clock/3.25-hour
+STOP, four numerical threads, 26 GB sampled RSS, 25 GiB free reserve, 20 GiB extra
+work and 3 GiB export. Max forecast about $1.64; native/full-return gates remain.
+Do not carry an older compute budget or read the storage allowance as compute.
+
+Backup gaps remain: existing compact archives omit some full bin FASTAs, shared
+reads/BAMs/features/views/markers and runnable dependency bytes. Inspect exact
+inventories before later backup/migration or deleting regenerable duplicates.
+No old local/VM artifact is pruned in E017. Hashes and locators are not backups.
+
+The following E016/E015/E014 records are **dated completed history**. Their earlier
+October 21 boundary/proposed extension wording describes those inspections; the
+new owner-approved E017 storage decision above is current.
+
 **E016 completed and independently reviewed; VM TERMINATED.**
 [E016 inspection](../experiments/E016-positive-only-multiview/inspection-observed.json)
 binds provider state, boot/process exit snapshot, guest/private completion bytes,

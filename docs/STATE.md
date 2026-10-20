@@ -4,58 +4,77 @@ Updated: 2026-10-20. This is the single current handoff.
 
 ## Exact next step
 
-**E016 completed, verified and kept as a scoped recovery candidate; VM TERMINATED.**
-[E016 comparison](../experiments/E016-positive-only-multiview/comparison-review.json),
-[inspection](../experiments/E016-positive-only-multiview/inspection-observed.json) and
-[operations](../experiments/E016-positive-only-multiview/OPERATIONS.md) own results,
-all target/population diagnostics, exact costs and the next prompt. Source2cfefa3,
-dev3/dev4/dev5, every accepted E009–E016 input/result and failed journal stay intact.
-All ten native gates, twelve serial science jobs plus final target, exact reload/
-unit geometry/neighbor/cache/refiner/full-DNA contracts and221archive members/two
-aliases pass. No VM wake, refit, old score replay or architecture change in inspection.
+**E017 is implemented and locally tested; its cached community comparison is
+prepared, not authorized or executed. The VM remains TERMINATED.**
+[E017 operations](../experiments/E017-information-aware-grouping/OPERATIONS.md),
+[design](../experiments/E017-information-aware-grouping/design.md),
+[protocol](../experiments/E017-information-aware-grouping/protocol.json),
+[local evidence](../experiments/E017-information-aware-grouping/local-evidence.json)
+and [resource plan](../experiments/E017-information-aware-grouping/resource-plan.json)
+own the rule, actual engineering paths, pending Linux gates and separate execution
+prompt. Branch `e017-information-aware-grouping` preserves dev3/dev4/dev5/E016 and
+all accepted inputs/truth/results/source freezes and failed journals.
 
-| Weighted full-reference R95, separate truth scopes | E009 conservative-v2 | Oral provided-origin oracle |
-| --- | ---: | ---: |
-| E014 reconstruction | 5.5196% | 6.2432% |
-| E015 zero reconstruction | 5.3329% | 6.5548% |
-| E016 positive-only + E013 | **5.8219%** | **6.7719%** |
+The coherent block holds E016 learning/native unit vectors fixed. It forms
+>=2,500 bp cores using learned/raw composition and available measured parent means,
+then conservatively recruits shorter/unsupported eligible DNA once and applies
+unchanged E013. It retains all sparse/profile/vote evidence and core/recruited/
+old/E013 partitions, all DNA and optional unassignment. No new encoder, marker
+redetection on communities, truth K or coverage variance is added. Background
+agreement/reliability/profile rules are prospective heuristics, not a performance
+claim. Real tiny native readers/NN/Leiden/cache/refiner/export, the actual serial
+nine-job DAG and installed runtime/source/library contracts pass; Linux/full-scale
+cost, RAM, headroom and return/review contracts remain gated.
 
-The frozen **KEEP** recovery rule passes: both endpoints improve, oral+0.5287pp,
->=90%targets4→4/30→34; >=50%9→11/42→44. Gains1.677/11.013Mb include17/55target
-gains and6/19losses. This is one learning bundle on two development communities,
-not a false-negative causal result, uniform advantage or product-default promotion.
-E009 still trails retained MetaBAT2's8.5493%; only~10% of the E014 gap closes.
-Oral parent/old/E0134.6429/5.0723/6.7719% exposes a large refinement interaction;
-E009's three recoveries are identical. Native5NN and short-contig precision worsen,
-unassigned DNA rises0.723→2.376Mb/7.595→11.584Mb, including more confirmed bacterial
-unassignment. All populations/full156/799denominators/N-quarantine/known-shared
-sensitivity remain. Effective ranks stay noncollapsed; original Mac tolerance
-stays FAILED. All older summaries are reused, not rescored.
+The [eligibility audit](../experiments/E017-information-aware-grouping/eligibility-audit.json)
+confirms retained MetaBAT2 2.18 uses a 2,500 bp main default (minimum allowed 1,500),
+separate 1,000 bp default recruitment and native depth filters. Our frozen learner
+admits >=500 bp. Keep the accepted whole-tool result/full-reference denominator
+and native length/status populations; it is not an equal-cutoff ablation. E017's
+core cutoff changes grouping authority, not learning eligibility or DNA accounting.
 
-**Next: implement one coherent length-aware, multi-evidence grouper locally**, with
-reliable cores and conservative short-contig recruitment; hold E016 learning and
-initial E013 alternative fixed. [D015](decisions/D015-coherent-prototype-upgrade.md#e016-reviewed-recovery-gain-and-next-information-aware-grouper-2026-10-20)
-weighs context/GLM/Transformer/marker learning against this broader grouping block.
-Use retained learned/raw composition and measured parent means, preserving missing
-depth and every short/marker-negative/unknown/non-target/unassigned outcome. This
-is not another loss/resolution grid. Resolve one label-free policy from source/
-reliability evidence, test actual tiny contracts and prepare one cached comparison;
-no new fit/score/cloud execution or confirmation is authorized by this inspection.
+**Storage-only continuation is now approved and admitted:** up to **$8 gross**
+for the existing disks/private evidence, **October 21 at 00:00 through October 28
+at 00:00 Copenhagen**, 169 hours across DST. [Fresh checks](../experiments/E017-information-aware-grouping/storage-admission.json)
+find DKK 1,897.28 Welcome credit Available through January 12, 2027, paid/net-priced
+coverage, unknown delayed usage with reserves, unchanged applicable disk prices,
+78 object versions and zero soft-deleted bytes. Forecast **$7.61 with reserve**;
+no VM start, resize, new service, deletion or later extension. Existing disks cost
+$31.20/month while stopped. Review backup gaps before cleanup; hashes do not back
+up omitted FASTAs/shared inputs or dependency prefixes. The October 21 decision
+is resolved for this interval; **October 28 is the next retention boundary**.
 
-Allocation22:31:25→23:29:21UTC October19 (00:31→01:29CopenhagenOctober20),3475.602s.
-Native science47.09min/11.177GBsampled peak; no overlap. Archive1,058,172,524bytes,
-all221members verified. Run+disk+export quote~$0.4224, <$0.68withreserve; approved
-stopped storage is separate and total remains<$3. Fresh creditsDKK1,901.15/96%,
-Paid Overview70.51cost/savings/net0, delayed usage unknown. **October21 storage
-review remains; current admission ends00:00Copenhagen.** Existing stopped disks
-$31.20/month/~$1day. Propose seven more days only with explicit new storage approval;
-no renewal, resource change or deletion has occurred. See CLOUD for cost/coverage.
+The proposed cached comparison needs a **new $2** after fresh execution gates:
+existing 8-vCPU/32-GiB VM and 300-GiB disk, three-hour cumulative setup/verification/
+grouping/collection clock, 3.25-hour provider STOP, four numerical threads,
+26 GB sampled tree RSS, 25 GiB free reserve, 20 GiB extra work and 3 GiB compressed
+export. Maximum quote is about $1.64 including reserve, not an invoice. The wider
+clock/return bound preserves complete evidence; no inferior reduced community is
+substituted. The current task authorizes no community grouping/score or cloud
+compute. The original budgets do not carry over.
 
-The frozen [skin confirmation plan](../experiments/E016-positive-only-multiview/confirmation-plan.json)
-remains unacquired. Actual sample/source/genome/replicon/molecule/taxonomy joins,
-exact/near and pretraining overlap, full duplicate-safe denominators, unique-vs-
-provided-origin truth, depth and cost/retention/protocol admission remain. A new
-body site does not establish unseen genomes; do not silently turn it into tuning data.
+The [frozen skin confirmation choice](../experiments/E016-positive-only-multiview/confirmation-plan.json)
+remains untouched and unacquired. Sample/source/genome/replicon/molecule/taxonomy
+joins, exact/near/pretraining overlap, duplicate-safe full denominators,
+competitive/ambiguity and unique-versus-origin truth, unchanged candidate/comparator
+protocol and separate acquisition/cost/retention admission remain. Both currently
+scored communities are development; a new body site is not unseen genomes.
+
+## Preserved E016 result and reason for E017
+
+[E016 comparison](../experiments/E016-positive-only-multiview/comparison-review.json)
+and [inspection](../experiments/E016-positive-only-multiview/inspection-observed.json)
+accept source `2cfefa3`, all ten gates/twelve scientific jobs plus final target,
+221 archive members/two aliases, exact native reload and complete DNA contracts.
+E009 conservative-v2 R95 is **5.8219%**; oral provided-origin R95 **6.7719%**.
+The scoped KEEP rule passes against E014, but neighborhoods worsen and unassigned
+DNA rises. Oral parent/old/E013 recovery is 4.6429/5.0723/6.7719%, exposing a large
+grouping/refinement interaction; E009's three recoveries are identical. Full
+156/799 reference denominators, 3.3034% N-quarantine, known-shared sensitivity and
+all populations remain. Original Mac portability stays failed. Only about 10% of
+the E014-to-MetaBAT2 E009 gap closes; no causal, optimality or product-default claim.
+[D015](decisions/D015-coherent-prototype-upgrade.md) weighs context/GLM/Transformer/
+marker learning and chooses the coherent information-use block above first.
 
 Earlier E015/E014 recommendations below are dated completed history; E016's reviewed
 next block above is current.

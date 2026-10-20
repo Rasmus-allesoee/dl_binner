@@ -1,0 +1,69 @@
+{
+  "checked_UTC": "2026-10-20T20:44:02.692520+00:00",
+  "status": "PASS_STORAGE_ONLY_OWNER_AUTHORIZATION",
+  "authorization": "User explicitly authorizes new 8 USD incremental gross for existing disks/private evidence, October21 00:00 through October28 00:00 Copenhagen; no compute/resource/deletion/service change",
+  "start": "2026-10-21T00:00:00+02:00",
+  "end": "2026-10-28T00:00:00+01:00",
+  "hours": 169,
+  "ceiling_USD": 8,
+  "actual_VM": "TERMINATED",
+  "disks_GiB": [
+    30,
+    300
+  ],
+  "existing_disks_USD_month": 31.199999949850024,
+  "forecast_disks_USD": 7.087096762801954,
+  "all_version_object_bytes": 5768680276,
+  "soft_deleted_bytes": 0,
+  "forecast_objects_USD": 0.02487518467488295,
+  "incomplete_operations_reserve_USD": 0.5,
+  "forecast_total_USD": 7.611971947476837,
+  "price_comparison": {
+    "6AE1-525F-8B80": {
+      "description": "Balanced PD Capacity",
+      "same_pricing_expression": true
+    },
+    "C054-7F72-A02E": {
+      "description": "External IP Charge on a Standard VM",
+      "same_pricing_expression": true
+    },
+    "CF4E-A0C7-E3BF": {
+      "description": "E2 Instance Core running in Americas",
+      "same_pricing_expression": true
+    },
+    "D973-5D65-BAB2": {
+      "description": "Storage PD Capacity",
+      "same_pricing_expression": true
+    },
+    "F449-33EC-A5EF": {
+      "description": "E2 Instance Ram running in Americas",
+      "same_pricing_expression": true
+    }
+  },
+  "credit": {
+    "remaining_DKK": 1897.28,
+    "original_DKK": 1973.43,
+    "percent": 96,
+    "scope": "Certain usage; see Free Trial terms",
+    "application": "Net pricing",
+    "expiry": "2027-01-12",
+    "status": "Available",
+    "paid": true,
+    "overview_cost_savings_DKK": 74.5,
+    "overview_net_DKK": 0,
+    "pending": "Unknown; live tooltip confirms possibly more than 24 hours",
+    "prior_usage_reserve_USD": 30,
+    "prior_storage_reserve_USD": 5,
+    "USD_conversion": 6.578099999996525,
+    "source": "Read-only signed-in Billing Credits/Overview via CUA, 2026-10-20T20:40-20:48 UTC"
+  },
+  "coverage": "Existing ordinary persistent disks and private Iowa Standard storage/operations covered by remaining Welcome credit after paid upgrade; no excluded service introduced",
+  "coverage_sources": [
+    "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "https://cloud.google.com/storage/pricing?hl=en"
+  ],
+  "no_VM_start": true,
+  "no_resource_or_service_change": true,
+  "no_deletion": true,
+  "interpretation": "Retention authorization admitted after fresh checks. No provider API mutation needed to keep existing disks. This is an estimate, not invoice; no approval beyond end date or new compute."
+}

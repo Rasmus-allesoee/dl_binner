@@ -484,3 +484,16 @@ length-aware multi-evidence grouper/core/short-recruitment block next, holding
 learning fixed and explicitly weighing context/GLM/marker training. No new science
 runs here; skin remains unacquired. All failures/source freezes remain; October21
 retention decision and separate future-execution authorization are still needed.
+
+
+2026-10-20 E017: [one coherent information-aware grouper](../../experiments/E017-information-aware-grouping/README.md)
+is locally implemented on fixed E016 learning, addressing the unresolved
+information-use/fragmentation/short-DNA question. Native whole-tool cutoffs,
+recruitment and learner eligibility are explicitly separated; no accepted score
+or full denominator changes. Tiny engineering contracts and synthetic throughput
+are not biological evidence. The new cached comparison remains separately
+unauthorized, with prospective criteria and full paired/population diagnostics.
+Q001/Q003/Q005 remain open. Context/GLM/marker-aware alternatives and untouched
+skin confirmation remain; source/overlap/truth/protocol/cost admission still
+precedes confirmation. Fresh storage-only approval resolves October 21 through
+October 28 at 00:00 Copenhagen, without compute, new resources or deletion.

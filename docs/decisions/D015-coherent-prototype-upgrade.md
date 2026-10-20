@@ -1,5 +1,7 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+Current handoff: [E017](../../experiments/E017-information-aware-grouping/README.md) is locally implemented and prepared on fixed E016 learning; community execution remains separately gated. Its approved storage-only interval ends October 28 at 00:00 Copenhagen. Earlier implementation/run sections are dated evidence.
+
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
 the normal benchmark-planning PR merge. [E010](../../experiments/E010-coherent-prototype/README.md)
@@ -800,3 +802,65 @@ an explicit new$8storage-only ceiling after fresh coverage/inventory checks; **n
 extension is enacted here**. Preserve accepted data and audit backup omissions
 before proposing any later cleanup. The [next exact prompt](../../experiments/E016-positive-only-multiview/OPERATIONS.md#exact-following-prompt)
 separates that prospective approval and local implementation from a later paid run.
+
+
+## E017 local information-use implementation, 2026-10-20
+
+The owner sends E016's next prompt and approves the separate $8 storage-only
+interval after fresh checks. [E017](../../experiments/E017-information-aware-grouping/README.md)
+implements the coherent length-aware core/recruitment block around fixed E016
+learning. Learned/raw composition and observed parent means inform one sparse
+core graph, the sole CPM density rule, fixed profiles and conservative single-pass
+recruitment; unchanged E013 follows. All core/recruited/old/post alternatives and
+all DNA survive. No community grouping, score, encoder change, new data, external
+run or VM start occurs. [Design](../../experiments/E017-information-aware-grouping/design.md)
+owns the prospective heuristics, alternatives and failure risks; [local evidence](../../experiments/E017-information-aware-grouping/local-evidence.json)
+owns actual paths/failures and pending Linux contracts. This is implementation,
+not evidence that the recovery gap has closed.
+
+The owner's length concern is well founded for the named native reference.
+Retained MetaBAT2 2.18 uses main minContig 2,500 bp, allowed >=1,500, and separate
+short recruitment from 1,000 bp by default (allowed >=500), plus depth filters.
+Actual E011 counts are 9,812 large and 27,307 small candidate contigs, with only
+102,650 small-contig bp recruited. E016's 500 bp learner population is different.
+Keep native whole-tool/full-reference scores, explicit length/eligibility strata
+and all unassigned/excluded DNA; do not retrospectively create an equal-cutoff
+comparison or claim all strong tools exclude short DNA. E017 gives >=2,500 bp
+contigs core authority while retaining >=500 bp recruitment and the original
+learning population. This does not isolate the cutoff from other grouping changes.
+
+The first exponential-only graph draft had no meaningful zero-edge rule for
+forced distant neighbors. Inspection of a tiny separated fixture exposed that
+contract issue; the final prospective background-agreement gate is frozen before
+any changed community outcome. Initial sources/designs and local failed journals
+remain. Tiny labels are explicit generated engineering cases, never benchmark
+labels used to select a threshold. Full-width synthetic array timing informs only
+resource planning; native approximation/profile/affordability still need gates.
+
+The single next comparison can decide whether direct information use and
+core/recruitment improve recovery with fixed learning, retaining four cheap paired
+partitions. It proposes new $2, three hours/3.25-hour STOP and a 3 GiB complete
+cache return, rather than another reduced community or loss grid. The measured
+Mac kernel plus complete-evidence uncertainty justifies that clock; max gross
+forecast is about $1.64. This execution remains separately gated/unauthorized.
+The prior broad context/GLM/marker-learning alternatives remain serious if useful
+information cannot be recovered by this module; no family is settled.
+
+Fresh [storage admission](../../experiments/E017-information-aware-grouping/storage-admission.json)
+resolves the October 21 review for the explicit 169-hour interval through
+October 28 at 00:00 Copenhagen: forecast $7.61 including reserve, up to $8
+approved, credit DKK 1,897.28 Available through January 12, 2027; VM still
+TERMINATED. No resource/deletion/compute/retention action beyond that interval.
+Inspect backup omissions before later savings; no accepted evidence is deleted.
+Skin confirmation stays frozen and unacquired with the source/overlap/truth/
+protocol/acquisition/cost dependencies stated in E016/E017. Both inspected
+communities remain development. AGENTS now explicitly separates core cutoffs,
+recruitment/native eligibility and prospective matched-cutoff controls.
+
+A local reuse audit also found eight regenerable Numba compiler-cache entries
+written beside the borrowed local NN library during early direct tests. They
+remain recorded; protected source/library and scientific evidence did not change.
+Subsequent work uses an owned JIT-cache directory, the actual worker refuses an
+absent setting, and the corrected real tiny DAG/negative contract pass. AGENTS
+now makes this distinction explicit: `-B` alone does not control third-party JIT
+caches, and scoped source checks are not whole-prefix non-mutation proof.

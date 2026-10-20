@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-20",
+  "kind": "Retained native eligibility interpretation; no new run or score",
+  "native_log": {
+    "path": "artifacts/e011-cached-grouping-reference/recovery-20261017/members/log-metabat-native.log",
+    "bytes": 488475,
+    "sha256": "5a728406e9206967ff1e1ced54c2468f9ad73d770a2dd7f4637320f4b2056362"
+  },
+  "native_lines": [
+    "MetaBAT 2 (2.18) using minContig 2500, minCV 1.0, minCVSum 1.0, maxP 95%, minS 60, maxEdges 200 and minClsSize 200000. with random seed=11",
+    "[00:00:00] Number of large contigs >= 2500 bp are 9812, and small contigs >= 1000 bp are 27307                                                                  ",
+    "[00:00:00] Number of target contigs: 9812 of large (>= 2500) and 27307 of small ones (>=1000 & <2500). ",
+    "[00:00:14] 85.60% (113891385 bases) of large (>=2500) and 0.25% (102650 bases) of small (<2500) contigs were binned."
+  ],
+  "help": {
+    "path": "artifacts/e011-cached-grouping-reference/payload/local-proof/metabat-osx-help.log",
+    "sha256": "185c615ab8a34b7e9dc956ee81b58b4ccdf53ff083eaa0495bdada30909dea76"
+  },
+  "main_minContig_default": 2500,
+  "main_minimum_allowed": 1500,
+  "short_recruitment_default": 1000,
+  "short_minimum_allowed": 500,
+  "own_learning_min_bp": 500,
+  "interpretation": "Native whole-tool comparison has unequal main/recruitment/depth eligibility. Report full-community recovery denominators and strata, not a matched cutoff or component effect. No retrospective filtering/rescore."
+}

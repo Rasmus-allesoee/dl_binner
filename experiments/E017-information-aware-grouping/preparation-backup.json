@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "archive": {
+    "bytes": 583326,
+    "sha256": "986682f0eb35a5e109a42fb43d00f9a53da914dca307129a0378ae8ec3c8c756"
+  },
+  "members": 179,
+  "every_member_verified": true,
+  "logical_bytes": 1513739,
+  "forecast_new_storage_169_hours_USD": 2.515365955715999e-06,
+  "forecast_readback_export_USD_upper": 6.519176065921783e-05,
+  "storage_operations_within_approved_reserve": true,
+  "self_reference": "Final private readback/commit receipt appended after sealing; not inside its own archive.",
+  "private_uri": "gs://dl-binner-archive-167650584170/e017/preparation-20261020-986682f0eb35/preparation-evidence.tar.gz",
+  "private_checksum_uri": "gs://dl-binner-archive-167650584170/e017/preparation-20261020-986682f0eb35/preparation-evidence.tar.gz.sha256",
+  "checked_UTC": "2026-10-20T21:35:02.863309+00:00",
+  "private_readback_every_member_verified": true,
+  "stages": [
+    {
+      "stage": "upload-preparation-evidence.tar.gz",
+      "exit_code": 0
+    },
+    {
+      "stage": "readback-preparation-evidence.tar.gz",
+      "exit_code": 0
+    },
+    {
+      "stage": "upload-preparation-evidence.tar.gz.sha256",
+      "exit_code": 0
+    },
+    {
+      "stage": "readback-preparation-evidence.tar.gz.sha256",
+      "exit_code": 0
+    }
+  ],
+  "no_VM_start": true,
+  "no_resources_or_retention_change": true,
+  "storage_only_budget": "Existing approved8USD interval/reserve; only this tiny evidence backup added",
+  "original_science_untouched": true
+}

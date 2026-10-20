@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "core_min_bp": 2500,
+  "reliability_fourmers": 2500,
+  "neighbors": 30,
+  "candidates": 60,
+  "calibration_pairs": 8192,
+  "exact_threshold": 2048,
+  "audit_queries": 32,
+  "min_neighbor_recall": 0.9,
+  "profile_quantile": 0.95,
+  "profile_floor_fraction": 0.01,
+  "recruit_min_support": 2,
+  "recruit_vote_fraction": 0.6666666666666666,
+  "recruit_margin_ratio": 1.5,
+  "recruit_max_normalized_distance": 1.0,
+  "seed": 11,
+  "leiden_iterations": 2,
+  "batch_rows": 1024
+}

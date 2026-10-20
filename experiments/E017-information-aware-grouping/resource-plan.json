@@ -1,0 +1,72 @@
+{
+  "status": "PREPARED; new compute authorization and Linux gates pending",
+  "new_incremental_gross_USD": 2,
+  "expected_complete_VM_minutes": [
+    75,
+    150
+  ],
+  "cumulative_VM_start_seconds": 10800,
+  "provider_STOP_seconds": 11700,
+  "VM": "existing e2-standard-8,8 vCPU/32 GiB",
+  "numerical_threads": 4,
+  "additional_workers": 0,
+  "compute_IP_USD_hour": 0.2730456762592464,
+  "existing_disk_USD_hour": 0.04193548380356186,
+  "maximum_compute_IP_USD": 0.8873984478425508,
+  "maximum_run_disk_USD": 0.13629032236157604,
+  "maximum_export_USD": 0.36,
+  "small_storage_operations_reserve_USD": 0.25,
+  "maximum_incremental_gross_forecast_USD": 1.633688770204127,
+  "expected_sampled_RSS_GB": [
+    8,
+    16
+  ],
+  "sampled_tree_RSS_cap_bytes": 26000000000,
+  "expected_extra_working_GiB": [
+    6,
+    12
+  ],
+  "max_extra_working_GiB": 20,
+  "minimum_free_GiB": 25,
+  "last_native_free_GiB": 90.23887634277344,
+  "last_native_free_is": "Historical E016 sample only; actual headroom must be checked after authorized start, before consumers",
+  "return_plan": {
+    "estimated_compressed_GiB": [
+      0.6,
+      1.5
+    ],
+    "hard_cap_GiB": 3,
+    "estimated_logical_GiB": [
+      1.2,
+      2.5
+    ],
+    "policy": "All new graph/recruitment caches, full core/pre/old/post labels/alternatives and four complete assignment tables retained. Numeric neighbors stored once; lossless int32 index storage. Full final FASTAs remain on VM with immutable manifest, not backed up by hashes. No duplicate input arrays or model checkpoint added. Exact manifest-inclusive compressed upper bound enforced before packing, no oversized fallback."
+  },
+  "local_return_review": {
+    "max_extra_GiB": 6,
+    "threads": 4,
+    "sampled_RSS_GB": 8,
+    "clock_seconds": 3600,
+    "current_free_GiB": "~12 at entry; recheck before export. Stage one community/arm at a time; no old deletion."
+  },
+  "measured_synthetic_kernel": {
+    "audit_seconds": 6.922168391989544,
+    "caution": "Mac single-size throughput includes JIT; Linux and more competing profiles may scale differently. This is no full-community affordability pass.",
+    "cores": 4096,
+    "dimensions": 200,
+    "group_seconds": 76.32344167504925,
+    "kind": "Synthetic array kernels only, no recovery/biology",
+    "logical_files_bytes": 20887946,
+    "queries": 8192,
+    "status": "PASS",
+    "threads": 4,
+    "total_seconds": 83.88064643205144
+  },
+  "rough_scaled_group_audit_seconds": 4049.850153036789,
+  "prospective_native_affordability_rule": "2x actual native synthetic group+audit seconds *597804/12288 +1200s must fit remaining original three-hour clock; no tuning/automatic extension",
+  "native_projection_example_seconds": 9299.700306073577,
+  "limitations": "Single-size Mac synthetic throughput is not Linux/community affordability. Competing profiles, mixed affinities, JSON/export and marker paths can scale differently. The new same-clock Linux kernel/gates and actual clock/RSS/disk safeguards are required.",
+  "fresh_credit_prerequisites": "New signed-in Welcome balance/scope/expiry and delayed usage; live applicable prices/product coverage, original storage allowance remaining through October28, exact source/bytes/runtime/headroom/STOP/watchdog before release.",
+  "storage_scope": "Separate approved8 USD storage-only from October21 to October28 (169h); proposed compute budget is new, not enacted here. Run-disk quote is conservative attribution, not an extra extension or duplicate actual billing.",
+  "no_provision_resize_retention_extension": true
+}

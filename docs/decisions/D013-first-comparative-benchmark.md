@@ -1,5 +1,7 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+Current handoff: [E017](../../experiments/E017-information-aware-grouping/README.md) prepares the next fixed-learning grouping comparison. Storage-only continuation is approved through October 28 at 00:00 Copenhagen; a new community execution still needs separate approval. Dated earlier authorizations below are not open budgets.
+
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.
 [D014](D014-google-cloud-workspace.md) selects GCP after SDU access deactivation.
@@ -627,3 +629,24 @@ full-denominator/protocol/cost admission before separate confirmation. No new
 community run or paid execution is authorized. October21 storage review still
 applies; proposed$8/seven-day storage continuation is a new owner decision, not
 an extension already enacted by the inspection.
+
+
+## E017 local grouping preparation and bounded storage, 2026-10-20
+
+[E017](../../experiments/E017-information-aware-grouping/README.md) implements one
+information-aware core/recruitment grouping bundle on fixed E016 learning and
+cached evidence; no new community execution/score or external campaign occurs.
+Its separately proposed cached comparison can change an own-method grouping
+choice, rather than paying for an expected mature-tool win. Native MetaBAT2 main
+and recruitment cutoffs differ from the 500 bp learner; the accepted whole-tool
+scores/full-reference denominators stay intact, with all length/eligibility/
+assignment populations. No retrospective common-cutoff rescore is added.
+
+The owner now approves up to $8 storage-only through October 28 at 00:00
+Copenhagen; fresh [checks](../../experiments/E017-information-aware-grouping/storage-admission.json)
+pass at DKK 1,897.28 Available and a $7.61 forecast for 169 hours. This resolves
+the October 21 continuation decision, without a VM start, new resource, deletion
+or later extension. E017 proposes a new $2/three-hour cached comparison separately;
+no older budget carries over. All accepted science/failures/source freezes and
+unacquired skin confirmation remain preserved. [D015](D015-coherent-prototype-upgrade.md#e017-local-information-use-implementation-2026-10-20)
+owns the implemented rule's rationale and limits.

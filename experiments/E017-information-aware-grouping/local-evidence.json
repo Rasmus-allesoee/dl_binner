@@ -1,0 +1,606 @@
+{
+  "status": "LOCAL_ENGINEERING_PASS; Linux/full-community gates pending",
+  "date": "2026-10-20",
+  "branch": "e017-information-aware-grouping",
+  "local_machine": {
+    "system": "Darwin",
+    "machine": "x86_64",
+    "CPU_count": 8,
+    "allocation": "Shared Mac; no dedicated cloud allocation; numerical children limited to four threads"
+  },
+  "tests": {
+    "installed_graph_recruit_reader_geometry_export_review_contracts": 8,
+    "stdlib_launcher_archive_reuse_scope_refusals": 5,
+    "unchanged_marker_reliability_context_contracts": 4,
+    "actual_two_mode_generated_DNA_HMM_cached_refiner_export": true,
+    "actual_serial_DAG_jobs": 9,
+    "actual_retained_tiny_archive_members": 80
+  },
+  "actual": "Own installed wheel; genuine NPZ/sparse/opaque-ID/FASTA/depth readers, NNDescent/Leiden, partial/overlapping marker contexts, Pyrodigal/PyHMMER tiny own HMM cache/readback, unchanged E013, full exports/TSV independent reader, cache corruption/ambiguity/support/cap/refusal. No scientific reader or worker mocked.",
+  "synthetic": "Explicit generated unit vectors in DNA fixtures, and generated arrays for throughput; no encoder fit/inference or biological recovery claim.",
+  "runtime": {
+    "probe": {
+      "bytes": 16621,
+      "sha256": "a1417c95412574488defee234329292fa30a8ee864bb8a112a399f0a338dabce"
+    },
+    "python": "3.10.15",
+    "distributions": 28,
+    "owned_package_source_members": 31,
+    "borrowed_dependency_contract": "Protected source/import/library bytes unchanged; not a whole-prefix nonmutation claim. Eight regenerable local Numba/NN JIT cache entries were observed and preserved; subsequent work uses an owned NUMBA_CACHE_DIR.",
+    "native_library_families": "Tensor/graph/marker imports in separate child processes; normal loader aliases resolved to regular targets"
+  },
+  "packaging": {
+    "wheel": {
+      "bytes": 91801,
+      "sha256": "1d13e1a7453bdd20c71d3699e7663c919004661dafe0c3f1c1d54eb9420311a5"
+    },
+    "sdist": {
+      "bytes": 78350,
+      "sha256": "322f333776d465e4dc7426ba0c9de246487ae9da2dab83b1076f822abd6865f5"
+    },
+    "fresh_build": true,
+    "logical_package_members": 31,
+    "sdist_rebuilt_wheel": {
+      "status": "PASS",
+      "logical_wheel_members": 35,
+      "fresh_backend_process": true,
+      "supported_builder": true,
+      "source_sdist_sha256": "322f333776d465e4dc7426ba0c9de246487ae9da2dab83b1076f822abd6865f5"
+    }
+  },
+  "resources": {
+    "installed-fixture-v3": {
+      "command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "experiments/E017-information-aware-grouping/engineering_fixture.py",
+        "--output",
+        "artifacts/e017-information-aware-grouping/tiny-installed-v3",
+        "--fixture-source",
+        "tests/product/candidate_fixture.py",
+        "--threads",
+        "4"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 3.2170409319223836,
+      "peak_sampled_rss_bytes": 423157760,
+      "seconds_ceiling": 600,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 63471,
+      "sampled_cpu_seconds": 3.07,
+      "sampled_average_cpus": 0.9542931112677768,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false,
+      "start_UTC": "2026-10-20T21:02:27.899613+00:00",
+      "actual_command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "experiments/E017-information-aware-grouping/engineering_fixture.py",
+        "--output",
+        "artifacts/e017-information-aware-grouping/tiny-installed-v3",
+        "--fixture-source",
+        "tests/product/candidate_fixture.py",
+        "--threads",
+        "4"
+      ],
+      "kind": "Local engineering only; not a community run"
+    },
+    "installed-grouping-v2": {
+      "command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "tests/test_e017_grouping.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 41.30195497197565,
+      "peak_sampled_rss_bytes": 271450112,
+      "seconds_ceiling": 600,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 63735,
+      "sampled_cpu_seconds": 38.69,
+      "sampled_average_cpus": 0.9367595317522398,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false,
+      "start_UTC": "2026-10-20T21:03:52.836137+00:00",
+      "actual_command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "tests/test_e017_grouping.py"
+      ],
+      "kind": "Local engineering only; not a community run"
+    },
+    "final-grouping-contracts": {
+      "command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "tests/test_e017_grouping.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 51.14678480604198,
+      "peak_sampled_rss_bytes": 275386368,
+      "seconds_ceiling": 600,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 65225,
+      "sampled_cpu_seconds": 42.660000000000004,
+      "sampled_average_cpus": 0.8340700233998007,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false,
+      "start_UTC": "2026-10-20T21:20:35.858446+00:00",
+      "actual_command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "tests/test_e017_grouping.py"
+      ],
+      "kind": "Local engineering only; not a community run"
+    },
+    "synthetic-kernel-v1": {
+      "command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "experiments/E017-information-aware-grouping/kernel_fixture.py",
+        "--output",
+        "artifacts/e017-information-aware-grouping/kernel-v1",
+        "--config",
+        "experiments/E017-information-aware-grouping/config.json",
+        "--threads",
+        "4"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 86.44764319702517,
+      "peak_sampled_rss_bytes": 645070848,
+      "seconds_ceiling": 600,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 63979,
+      "sampled_cpu_seconds": 75.11,
+      "sampled_average_cpus": 0.8688495975398052,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false,
+      "start_UTC": "2026-10-20T21:05:46.670208+00:00",
+      "actual_command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "experiments/E017-information-aware-grouping/kernel_fixture.py",
+        "--output",
+        "artifacts/e017-information-aware-grouping/kernel-v1",
+        "--config",
+        "experiments/E017-information-aware-grouping/config.json",
+        "--threads",
+        "4"
+      ],
+      "kind": "Local engineering only; not a community run"
+    },
+    "tiny-DAG-v1": {
+      "command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e017_control.py",
+        "--plan",
+        "artifacts/e017-information-aware-grouping/tiny-dag-v1/plan.json",
+        "--workflow"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 12.61966416996438,
+      "peak_sampled_rss_bytes": 94253056,
+      "seconds_ceiling": 600,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 64775,
+      "sampled_cpu_seconds": 8.700000000000001,
+      "sampled_average_cpus": 0.6894002790269622,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false,
+      "start_UTC": "2026-10-20T21:12:44.356438+00:00",
+      "actual_command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e017_control.py",
+        "--plan",
+        "artifacts/e017-information-aware-grouping/tiny-dag-v1/plan.json",
+        "--workflow"
+      ],
+      "kind": "Local engineering only; not a community run"
+    },
+    "mac-runtime-probe": {
+      "command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e017_runtime.py",
+        "probe",
+        "--base",
+        "artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2",
+        "--lock",
+        "artifacts/e017-information-aware-grouping/mac-runtime-lock.json",
+        "--output",
+        "artifacts/e017-information-aware-grouping/mac-runtime-probe.json"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 20.92497180600185,
+      "peak_sampled_rss_bytes": 205922304,
+      "seconds_ceiling": 600,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 64785,
+      "sampled_cpu_seconds": 15.86,
+      "sampled_average_cpus": 0.7579460630599713,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false,
+      "start_UTC": "2026-10-20T21:12:45.817887+00:00",
+      "actual_command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e017_runtime.py",
+        "probe",
+        "--base",
+        "artifacts/e014-multiview-reconstruction/envs/multiview-dev5-v2",
+        "--lock",
+        "artifacts/e017-information-aware-grouping/mac-runtime-lock.json",
+        "--output",
+        "artifacts/e017-information-aware-grouping/mac-runtime-probe.json"
+      ],
+      "kind": "Local engineering only; not a community run"
+    },
+    "related-marker-pure-v2": {
+      "command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "artifacts/e017-information-aware-grouping/run-related-selected.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 1.5634748429292813,
+      "peak_sampled_rss_bytes": 48369664,
+      "seconds_ceiling": 600,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 64654,
+      "sampled_cpu_seconds": 1.29,
+      "sampled_average_cpus": 0.8250852297585379,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false,
+      "start_UTC": "2026-10-20T21:10:51.378525+00:00",
+      "actual_command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "artifacts/e017-information-aware-grouping/run-related-selected.py"
+      ],
+      "kind": "Local engineering only; not a community run"
+    },
+    "tiny-DAG-v2": {
+      "command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e017_control.py",
+        "--plan",
+        "artifacts/e017-information-aware-grouping/tiny-dag-v2/plan.json",
+        "--workflow"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 9.950496734934859,
+      "peak_sampled_rss_bytes": 95256576,
+      "seconds_ceiling": 600,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 65799,
+      "sampled_cpu_seconds": 8.34,
+      "sampled_average_cpus": 0.8381491117643785,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false,
+      "start_UTC": "2026-10-20T21:27:45.982545+00:00",
+      "actual_command": [
+        "artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e017_control.py",
+        "--plan",
+        "artifacts/e017-information-aware-grouping/tiny-dag-v2/plan.json",
+        "--workflow"
+      ],
+      "kind": "Local engineering only; not a community run"
+    }
+  },
+  "tiny_return": {
+    "collection": {
+      "status": "SUCCESS",
+      "archive": {
+        "bytes": 32140,
+        "sha256": "9270074a45799427df3b59af2e5eff3198bff6c251b6837792f5f2cf14963e47"
+      },
+      "regular_members": 80,
+      "logical_member_bytes": 136061,
+      "every_member_verified": true,
+      "aliases": {},
+      "prospective_worst_case_archive_bytes": 1348739,
+      "planned_science_fits": 0
+    },
+    "independent_readback": {
+      "status": "SUCCESS",
+      "archive": {
+        "bytes": 32140,
+        "sha256": "9270074a45799427df3b59af2e5eff3198bff6c251b6837792f5f2cf14963e47"
+      },
+      "regular_members": 80,
+      "logical_member_bytes": 136061,
+      "every_member_verified": true
+    }
+  },
+  "failures": [
+    {
+      "path": "local-dependency-new-files.json",
+      "cause": "Early direct NN tests lacked an owned NUMBA_CACHE_DIR and wrote8regenerable nbc/nbi entries in the local borrowed pynn cache. No protected source/library/scientific input/output changed; cache entries preserved, job-owned cache enforced/tested afterward."
+    },
+    {
+      "path": "test-attempt1.log",
+      "cause": "Attempted pytest was not present in the accepted numerical prefix; switched to repository-standard unittest, no dependency install."
+    },
+    {
+      "path": "test-attempt2.log",
+      "cause": "Tiny writer was given a multiview policy to the legacy window writer; corrected the actual fixture adapter to the real multiview writer."
+    },
+    {
+      "path": "grouping-attempt1.py / design-attempt1.md / test-attempt3.log",
+      "cause": "Initial exponential-only affinities produced one merged tiny separated population. Initial test assertions did not detect distinct-core merging; manual output review exposed it. Final tests require distinct cores and freeze a background-agreement gate before community outcomes."
+    },
+    {
+      "path": "build-local.log",
+      "cause": "Standalone build frontend absent; used installed pinned backend hooks in separate supported-Python processes, no installation."
+    },
+    {
+      "path": "build-local-v2.log",
+      "cause": "Logical source inspection found a copied ignored .DS_Store outside wheel; fresh build excludes it. No source-content/tolerance weakening."
+    },
+    {
+      "path": "operations-attempt1.log",
+      "cause": "Scientific parent-link refusal correctly rejected macOS /var alias in the generated temp path; resolved only the owned fixture root, preserving strict scientific link refusal."
+    },
+    {
+      "path": "installed-fixture-v2-controller.log",
+      "cause": "Sandbox denied ps process sampling; preserved failure and reran a fresh tiny directory with process-read approval, without disabling supervision."
+    },
+    {
+      "path": "related-marker-contracts.log",
+      "cause": "Old E013 frozen-consumer test correctly refused the changed installed package. Its lock/test remains unchanged; four relevant pure marker-context contracts and new full cached interfaces pass separately. This is not a passing old consumer/runtime claim."
+    }
+  ],
+  "pending": [
+    "Existing Linux Python3.12 full source/distribution/library/native tiny/serial-DAG/affordability gates",
+    "Live credit/product-price/remaining storage/headroom/STOP/watchdog at separate approved execution",
+    "First community run and actual archive footprint; no recovery claim",
+    "First full-community new review adapter invocation; underlying admitted evaluators reused, original Mac tolerance still failed"
+  ],
+  "preservation": {
+    "entry_bound_members": 116,
+    "every_entry_binding_unchanged": true,
+    "all_old_science_kept": true,
+    "old_scores_replayed": false,
+    "portability": "Original failed Mac allclose/tolerance and native vectors unchanged"
+  },
+  "cloud": {
+    "VM": "TERMINATED",
+    "control_plane": {
+      "bytes": 33097,
+      "sha256": "2f42c6e6ec8cd7808b7f1374a930044914b04261f86197b83b33a47532ea2312"
+    },
+    "no_VM_start": true,
+    "no_resource_change": true,
+    "community_execution": false,
+    "new_compute_gross_USD": 0,
+    "storage_approval": "storage-admission.json;8USD/169h only",
+    "minor_read_only_operations": "Within .50USD storage operations reserve; invoice not reconciled"
+  },
+  "logs": {
+    "build-local-v2.log": {
+      "bytes": 13623,
+      "sha256": "af1f21ff31bcf939c5a1bfb7aefb85c6495417eacd29ac6744dc386df50c3a05"
+    },
+    "build-local-v3.log": {
+      "bytes": 13589,
+      "sha256": "cd6c314efcce084d0aaff306ae2883be00f2abf03f7cf71b37339346b8fc127f"
+    },
+    "build-local-v4.log": {
+      "bytes": 13589,
+      "sha256": "db5827488c14bb6e5ee01b662b995a170c8a380fd95777b403df2026e5cae03f"
+    },
+    "build-local.log": {
+      "bytes": 139,
+      "sha256": "b7e97319646987f57a154a5b91f00e58a9a17bf9f6f4d54d168b76e1416a9265"
+    },
+    "docs-final-v1.log": {
+      "bytes": 728,
+      "sha256": "3ee5f9013c653dce2f03fbac412723bb3168a6a7cab8679c2ad28d7735e0ae2e"
+    },
+    "docs-final-v2.log": {
+      "bytes": 728,
+      "sha256": "3ee5f9013c653dce2f03fbac412723bb3168a6a7cab8679c2ad28d7735e0ae2e"
+    },
+    "docs-initial.log": {
+      "bytes": 688,
+      "sha256": "49c1f37c9ae954ec22408cc3e1861285914c96942353f386c6c80f3dc30ddf28"
+    },
+    "final-grouping-contracts.log": {
+      "bytes": 4327,
+      "sha256": "0177b29e37c9d684faaefa1db9e64ea7652201ab360eb1f16172d1705a9b796d"
+    },
+    "final-grouping-controller.log": {
+      "bytes": 808,
+      "sha256": "446db83058dcd2de6039d7672f7f499dddd7e52fe01f4f6026a2eb16cbe82f19"
+    },
+    "finalize-local-v2.log": {
+      "bytes": 43,
+      "sha256": "01a8d5dbc0368f9e22306317d80cf4de3eed14b3e1ba1d36f59191f7a2e3b495"
+    },
+    "finalize-local.log": {
+      "bytes": 43,
+      "sha256": "01a8d5dbc0368f9e22306317d80cf4de3eed14b3e1ba1d36f59191f7a2e3b495"
+    },
+    "finalize-lock.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "input-shapes.log": {
+      "bytes": 2043,
+      "sha256": "bd528cbe3351d0bee4fcfc863ef1622c73ac47224a35c7c639603296a5b01d1a"
+    },
+    "installed-fixture-v2-controller.log": {
+      "bytes": 712,
+      "sha256": "2d9d3276c78e504b0cd78072028808f7512632a7ba8ea5d5c7f471b144cbb528"
+    },
+    "installed-fixture-v2.log": {
+      "bytes": 95,
+      "sha256": "d5f34520e5306b0a2761714231d16b19f4a19d60378808696809e077a2c3b56b"
+    },
+    "installed-fixture-v3-controller.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "installed-fixture-v3.log": {
+      "bytes": 9379,
+      "sha256": "4e1ebf04f9b6f788d223646eddc8bb77dff66c0f0017440cf27643cf0d42ebc2"
+    },
+    "installed-grouping-v2-controller.log": {
+      "bytes": 796,
+      "sha256": "be7c373065e64f3890925e036fdc06cfbdd652ed4d4dd12baf322c540f166623"
+    },
+    "installed-grouping-v2.log": {
+      "bytes": 4327,
+      "sha256": "4225bddb5132499c807bdff15fc4f2a0af87082dd3c3a8527a7e23a38fb5263a"
+    },
+    "jit-guard-contract.log": {
+      "bytes": 205,
+      "sha256": "047186cde08481dfe4dbde3a66174547c98b1499732ec9db8f039ba6cdbdcbcd"
+    },
+    "local-environment-v2.log": {
+      "bytes": 481,
+      "sha256": "20a5946ec31a5a6dcf9aeae255410447c330ed648ee1cfb0deaf7aa6a762ea98"
+    },
+    "local-environment.log": {
+      "bytes": 481,
+      "sha256": "2156dcb669c2a45234b9397116cb0b0268cba402f58862c707a039914bf01f56"
+    },
+    "mac-runtime-probe-controller.log": {
+      "bytes": 390,
+      "sha256": "c2f11c21ee7d4d18cc0bfc7f34f1daf0b570ae60c42076b05536084ffd4dbe36"
+    },
+    "mac-runtime-probe.log": {
+      "bytes": 39,
+      "sha256": "656290c880214b589dbffc403a511384edfb33ad2dff20d8af5aa3bf69e751f2"
+    },
+    "operations-attempt1.log": {
+      "bytes": 1195,
+      "sha256": "871c71e19e85a01c09fae66a7f2bcdef55bd718e1bff6b164302640e8156c469"
+    },
+    "operations-attempt2.log": {
+      "bytes": 103,
+      "sha256": "4ca8199dbcbb865b042c9ca0adbdecd81e7ead4571ab98ed7f4d373ca0be4327"
+    },
+    "operations-attempt3.log": {
+      "bytes": 103,
+      "sha256": "591fa954327725561c214f2bc987342cb8747a513dd459d7f92c23ff9ec14257"
+    },
+    "operations-attempt4.log": {
+      "bytes": 103,
+      "sha256": "d4870ae910b1d0bb246375e6162709e6dbe51cf4b2f8998efacaf11bf855ea0a"
+    },
+    "operations-final-v2.log": {
+      "bytes": 103,
+      "sha256": "e09061bf22d5aaf435165d17e2d0df3bc1b541a8208459228c1862ea1b0bf090"
+    },
+    "operations-final.log": {
+      "bytes": 103,
+      "sha256": "2af78d4902aab31567e3ccdfe497023bba2b67d4b20f84b0375e258c2e5c2d94"
+    },
+    "prepare-reuse-lock-v2.log": {
+      "bytes": 41,
+      "sha256": "a85a759ef9f0dfe1cad703a008d6e5edcfc29c69b7486d3ea8277ab869dd2e5f"
+    },
+    "prepare-reuse-lock.log": {
+      "bytes": 41,
+      "sha256": "a85a759ef9f0dfe1cad703a008d6e5edcfc29c69b7486d3ea8277ab869dd2e5f"
+    },
+    "related-marker-contracts.log": {
+      "bytes": 3881,
+      "sha256": "688a4402f5ccc1ac99731debe7d1ca723eb6cbe59fa00fe1dab72b93885afbee"
+    },
+    "related-marker-controller.log": {
+      "bytes": 3160,
+      "sha256": "b2e41f3fb32c08cf375444a124068ddefc311db0f84a333a2b56d0d5f07a38a5"
+    },
+    "related-marker-pure-v2-controller.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "related-marker-pure-v2.log": {
+      "bytes": 1028,
+      "sha256": "c3868e04cfbb90434e6dc0239192835bc9fae982c6c094a10050d4d5cdc6352e"
+    },
+    "sdist-rebuild.log": {
+      "bytes": 8743,
+      "sha256": "ecc383f3c0371ab0b303f30816c724c5042453cc36e10163013f1ceb3b3025a1"
+    },
+    "synthetic-kernel-v1-controller.log": {
+      "bytes": 1576,
+      "sha256": "cc5e5474e2541a8240b2cdd01ca93aeddedacca863aecf52fd7a168ded9106db"
+    },
+    "synthetic-kernel-v1.log": {
+      "bytes": 1938,
+      "sha256": "01c38f9f3180485ac892e6b5e701d3455fc598e50699bb719db51187d16eeb3b"
+    },
+    "test-attempt1.log": {
+      "bytes": 147,
+      "sha256": "6e85de591f77faffc0fc64405f5a5cbb1e52e6a4c66559f05b90c0302770e632"
+    },
+    "test-attempt2.log": {
+      "bytes": 6730,
+      "sha256": "cbd9ce9146e4c7c3a6a2ec4a59b4822315354b0ac49c6b092d18fa7d91778b53"
+    },
+    "test-attempt3.log": {
+      "bytes": 3650,
+      "sha256": "e9631a1a9848a8a5ff0d2e4eb090339b6e7cee957481c5aebacbd0d73ae5babc"
+    },
+    "test-attempt4.log": {
+      "bytes": 3650,
+      "sha256": "635f79be265f2f849f3a95e0f3e1f03ec8557b804abbeee85aaff393395787c0"
+    },
+    "tiny-DAG-v1-controller.log": {
+      "bytes": 189,
+      "sha256": "e919c95b4618549d8c015e123b3c440e85c20f754934502c0fb39267351db9fe"
+    },
+    "tiny-DAG-v1.log": {
+      "bytes": 9303,
+      "sha256": "09dc9b51b3e6375c2e8600cd9c787029c2e8b0f4ce27f5b48b623e8a456cd507"
+    },
+    "tiny-DAG-v2-controller.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "tiny-DAG-v2.log": {
+      "bytes": 9303,
+      "sha256": "530be8fcd474820dec77128c2ae096ec5624b08f9cbd243e15db8f5c43a0ed8b"
+    },
+    "tiny-return-readback-v1.log": {
+      "bytes": 215,
+      "sha256": "91183888b6c545c5b2e8bbe376a57223ddc0458be03687d9deaa41c2300afde4"
+    },
+    "tiny-return-v1.log": {
+      "bytes": 306,
+      "sha256": "3f5022d3524279316fa399c934d58b0d75f4cd9dc1bc3da857544c2e18ac9a9f"
+    }
+  }
+}

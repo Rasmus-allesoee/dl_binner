@@ -1,0 +1,157 @@
+{
+  "record": "E017",
+  "status": "prospective; no community execution",
+  "date": "2026-10-20",
+  "question": "Can fixed-learning information-aware long cores and conservative recruitment close recovery gaps better than the retained E016 CPM/E013?",
+  "design": "design.md",
+  "configuration": {
+    "bytes": 494,
+    "sha256": "9e9f4341260dbc0827ac3ef3f0815c7002799adf83562d9949dc3f1e22bba9de"
+  },
+  "held_fixed": [
+    "E016 encoder/native unit vectors and source; no inference/fit",
+    "accepted full FASTA/features/ten ordered parent-depth columns or explicit sequence-only mode",
+    "seed11; sole median-positive-edge/30 CPM rule, node sizes1, two iterations",
+    "cached marker calls/genes/domains/HMM; unchanged E013 refinement",
+    "all old partitions/results/source freezes and failed journals"
+  ],
+  "treatment": "Joint learned/raw-composition core index, available measured-depth affinities, finite-length reliability and one conservative non-propagating recruitment pass; one grouping bundle, not an isolated cutoff test",
+  "arms": [
+    "core-partition",
+    "recruited-parent",
+    "old-refinement",
+    "E013-post"
+  ],
+  "populations": {
+    "E009": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible_contigs": 89041,
+      "eligible_bp": 209642703,
+      "core_contigs": 9812,
+      "core_bp": 133052224,
+      "short_recruitment_contigs": 79229,
+      "short_recruitment_bp": 76590479,
+      "strata": {
+        "0": {
+          "contigs": 56661,
+          "bp": 22035454
+        },
+        "500": {
+          "contigs": 51922,
+          "bp": 36085206
+        },
+        "1000": {
+          "contigs": 16406,
+          "bp": 19862688
+        },
+        "1500": {
+          "contigs": 10901,
+          "bp": 20642585
+        },
+        "2500": {
+          "contigs": 7728,
+          "bp": 32866110
+        },
+        "10000": {
+          "contigs": 2084,
+          "bp": 100186114
+        }
+      },
+      "source": "artifacts/e011-cached-grouping-reference/restore-local/candidate/features/features.npz",
+      "features_sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e",
+      "operation": "Retained length/eligibility reader only; no index/grouping/score/learning"
+    },
+    "oral": {
+      "rows": 1286547,
+      "bp": 1669981123,
+      "eligible_contigs": 508763,
+      "eligible_bp": 1443827664,
+      "core_contigs": 60211,
+      "core_bp": 1008845967,
+      "short_recruitment_contigs": 448552,
+      "short_recruitment_bp": 434981697,
+      "strata": {
+        "0": {
+          "contigs": 777784,
+          "bp": 226153459
+        },
+        "500": {
+          "contigs": 292793,
+          "bp": 203177403
+        },
+        "1000": {
+          "contigs": 92933,
+          "bp": 112531588
+        },
+        "1500": {
+          "contigs": 62826,
+          "bp": 119272706
+        },
+        "2500": {
+          "contigs": 49729,
+          "bp": 217094423
+        },
+        "10000": {
+          "contigs": 10482,
+          "bp": 791751544
+        }
+      },
+      "source": "artifacts/e014-multiview-reconstruction/inspection-20261019/verified/work/units/oral-dev5/features/features.npz",
+      "features_sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0",
+      "operation": "Retained length/eligibility reader only; no index/grouping/score/learning"
+    }
+  },
+  "truth": {
+    "E009": "Conservative v2:156 targets/554661890full-reference bp;7653205bp/3.3034% N-quarantine",
+    "oral": "Provided-source-origin oracle:799 targets/2083072211full-reference bp, incl2zeroGSA targets;1734nonACGTbp and49known-sharedqueries/12063bp mask sensitivity; unique support unadmitted",
+    "boundary": "No truth/taxonomy/K in native data plan, affinity, profiles, grouping or refinement. Fixed R95 >=95%purity/200kb/full reference-coordinate union denominators. No oracle per-bin policy."
+  },
+  "baselines": {
+    "E016": {
+      "path": "experiments/E016-positive-only-multiview/comparison-review.json",
+      "binding": {
+        "bytes": 227410,
+        "sha256": "b5514aa84447d249a8bf7be63c5b1f6d80f0486f97f8c3f488a2d17200289b9a"
+      }
+    },
+    "E015": {
+      "path": "experiments/E015-zero-reconstruction/comparison-review.json",
+      "binding": {
+        "bytes": 177309,
+        "sha256": "4b853f2ea711334c1c25fd3f53963d358ebdeef903a83eaed07fb739781587f9"
+      }
+    },
+    "E014": {
+      "path": "experiments/E014-multiview-reconstruction/comparison-review.json",
+      "binding": {
+        "bytes": 193201,
+        "sha256": "693271ae081fedac758fbd039b6134e94fea2a8e8bce7e5ffbb2695af0fad15c"
+      }
+    }
+  },
+  "older_baselines": "Reuse accepted dev4/E013/dev3/MetaBAT2 scalars/populations; no refit/rescore or retrospective cutoff filtering",
+  "decision": {
+    "keep": "Both E017 post weighted full-reference R95 >=E016 (0.05821901338849871/0.06771930145056311); at least one +0.005; neither >=90% target count below4/34; all integrity/population contracts pass.",
+    "modify": "Useful recovery/count gains coexist with endpoint or material population losses. Preserve all paired targets/length/origin/marker/eligibility/noise/excluded/unassigned cells and select one reasoned direction, no grid.",
+    "abandon": "Neither separately scoped R95 endpoint nor >=90% target count improves, or core/assignment integrity invalidates execution. No product-family conclusion."
+  },
+  "diagnostics": "Evaluate only new four partitions after shutdown/complete return. Reuse E016 fixed learned-neighbor arrays for new-label diagnostic views; no index rebuild or old partition rescore. New joint-core graph audits are a different retrieval population, not a matched 5NN win.",
+  "local_scope": "Implementation, real tiny contracts and synthetic array throughput only. No community grouping/score, encoder fit/inference, marker redetection on communities, confirmation DNA, VM start or resource change authorized.",
+  "proposed_execution": {
+    "new_gross_USD_ceiling": 2,
+    "cumulative_VM_start_seconds": 10800,
+    "provider_STOP_seconds": 11700,
+    "numerical_threads": 4,
+    "sampled_tree_RSS_bytes": 26000000000,
+    "free_reserve_GiB": 25,
+    "max_extra_working_GiB": 20,
+    "max_compressed_export_GiB": 3,
+    "VM": "existing e2-standard-8/32GiB",
+    "work_disk_GiB": 300,
+    "retention_valid_until_epoch": 1793142000,
+    "local_review": "four threads/8 GB sampled RSS/one hour/6 GiB extra; assess actual staged footprint and free disk before export",
+    "allowed_recovery": "Debug recoverable operational errors with fresh journals and verified reuse inside original clock/budget; never automatically replay passed science or extend/provision"
+  },
+  "confirmation": "E016 skin pooled-GSA choice stays frozen and unacquired. Actual sample/source/genome/replicon/molecule/taxonomy joins, overlap/pretraining, duplicate-safe full denominators, competitive/ambiguity/unique-versus-origin truth and separate unchanged-protocol/acquisition/cost/retention admission remain."
+}
