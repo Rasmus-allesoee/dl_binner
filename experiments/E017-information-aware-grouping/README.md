@@ -1,12 +1,22 @@
 # E017: information-aware long cores and conservative recruitment
 
-Status: **implemented and locally tested; community comparison not executed**.
-Date: 2026-10-20. Branch: `e017-information-aware-grouping`.
+Status: **native cached comparison running under verified supervision; outcome not assessed**.
+Updated: 2026-10-21. Branch: `e017-information-aware-grouping`.
 [D015](../../docs/decisions/D015-coherent-prototype-upgrade.md) owns why this coherent
 fixed-learning grouping block is next. [Design](design.md), [protocol](protocol.json),
 [config](config.json), [source review](source-review.json), [reuse lock](reuse-lock.json)
 and [operations](OPERATIONS.md) own the prospective rule and execution boundary.
 Dev3/dev4/dev5/E016 and every accepted input/result/failure remain immutable.
+
+[Native receipt](native-observed.json) owns phase
+`information-20261020T232634Z-e78d766`, actual gates/resources/logs and the live
+handoff. Source `e78d766` repairs only the parent-to-science interpreter adapter
+from prepared `067ceb2`; [launch lock](native-launch-lock.json) preserves the
+original source freeze and exact operating changes. The scientific wheel, policy,
+inputs and E016 learning are unchanged. All nine Linux admission stages pass;
+the sole two-community DAG is released once. E009's group/refine/export/audit
+stages finish and oral core-graph progress is observed. No score, recovery claim or KEEP disposition
+follows from startup. Follow the inspection prompt in operations after shutdown.
 
 Use >=2,500 bp cores with retained learned vectors, raw Hellinger composition and
 available measured parent means. One joint learned/composition index supplies
@@ -69,8 +79,10 @@ and 300-GiB disk, three-hour cumulative clock/3.25-hour STOP, four numerical
 threads, 26 GB sampled tree RSS, 25 GiB free reserve, 20 GiB extra work and
 3 GiB compressed return. Gross maximum forecast is about **$1.64** including
 compute/IP, run disks, maximum export and reserve. Expect 75–150 minutes;
-Linux timing/profile competition/headroom and actual member sizes remain gates.
-No execution is authorized by the local task. Older budgets do not carry over.
+Linux admission and initial headroom now pass; full-community timing/profile
+competition and actual return/review sizes remain bounded and unverified.
+The later owner message authorizes this execution under a new $2; older budgets
+do not carry over.
 
 Complete numeric neighbor axes are retained once. Compact partitions explicitly
 name those caches; E013 only copies their empty legacy display field. New local
@@ -91,8 +103,10 @@ appended after sealing rather than included in its own hash.
 [Storage admission](storage-admission.json) passes fresh credit/price/resource and
 all-version/soft-delete checks. The owner approves **$8 storage-only** from
 October 21 at 00:00 through **October 28 at 00:00 Copenhagen**, 169 hours across
-DST. Forecast is $7.61 including reserve. No start/resize/service/deletion or
-extra retention follows. Current VM remains TERMINATED. Disk cost continues at
+DST. The original admission forecasts $7.61; refreshed inventory plus the maximum
+new return forecasts $7.63 with reserve. Storage authorization adds no compute,
+resize, service, deletion or further retention. The separately authorized E017 VM
+is now running. Disk cost continues at
 $31.20/month; review backup omissions before proposing any later cleanup.
 
 The original [skin confirmation plan](../E016-positive-only-multiview/confirmation-plan.json)

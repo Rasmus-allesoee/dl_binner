@@ -1,0 +1,490 @@
+{
+  "record": "E017 authorized fixed-learning cached comparison",
+  "status": "RUNNING_NOT_REVIEWED",
+  "observed_UTC": "2026-10-20T23:36:25.590411+00:00",
+  "observed_Copenhagen": "2026-10-21T01:36:25.590411+02:00",
+  "phase": "information-20261020T232634Z-e78d766",
+  "source_commit": "e78d766f2fea5699ca91ff984933a22226f5d233",
+  "prepared_commit": "067ceb23da1c5ff1ee66ab29ecf82cd04e0fd2f0",
+  "branch": "e017-information-aware-grouping",
+  "source_clean_at_native_admission": true,
+  "source_repair": {
+    "lock": {
+      "bytes": 1790,
+      "sha256": "aa0d9eb541a3fd705ab72a7e6dd5f2fbb7d02d3735af2e6d55bb8cc18c0d7940"
+    },
+    "original_candidate_lock": {
+      "bytes": 16006,
+      "sha256": "80620eca4706dfe31dffcb2196eb6edad8e995bffd0ecf50328913200b28adce"
+    },
+    "scope": "Only parent scientific-child lexical interpreter and its explicit launcher/source tests. Original wheel/package/policy/protocol/inputs/E016 learning unchanged. Found/tested locally before VM start; no failed native science.",
+    "local_contracts": 7
+  },
+  "identity": {
+    "phase": "information-20261020T232634Z-e78d766",
+    "source": "e78d766f2fea5699ca91ff984933a22226f5d233",
+    "vm_start_epoch": 1792538791.522,
+    "root": "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766",
+    "service_name": "e017-20261020t232634z",
+    "repo": "/srv/dl_binner/research/e017-e78d766f2fea",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e017/information-20261020T232634Z-e78d766"
+  },
+  "authorization": {
+    "new_incremental_gross_USD": 2,
+    "cumulative_VM_start_seconds": 10800,
+    "provider_STOP_seconds": 11700,
+    "numerical_threads": 4,
+    "sampled_tree_RSS_bytes": 26000000000,
+    "free_reserve_GiB": 25,
+    "extra_work_GiB": 20,
+    "compressed_export_GiB": 3,
+    "local_later_review": "4 threads / 8 GB sampled RSS / 1 hour / 6 GiB extra; check actual free space before export",
+    "storage_authorization": {
+      "bytes": 2677,
+      "sha256": "7c48e90d768ff6c0d6c775c4b3daded29cd59abfad09765ac50a7f1ba44b11cf"
+    },
+    "storage_end": "2026-10-28T00:00:00+01:00",
+    "retention_extension": false
+  },
+  "provider": {
+    "state": "RUNNING",
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "11700"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "last_start": "2026-10-20T16:26:31.522-07:00",
+    "evidence": {
+      "bytes": 33118,
+      "sha256": "a16276766e0f0ad7f001401e2ed3ec70972b31e2581c3752f08d872758c10ea7"
+    },
+    "guest_status": [
+      {
+        "key": "status",
+        "namespace": "e017-candidate",
+        "value": "{\"status\": \"RUNNING\", \"stage\": \"science\", \"root\": \"/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766\", \"source\": \"e78d766f2fea5699ca91ff984933a22226f5d233\", \"epoch\": 1792539045.347746}"
+      }
+    ],
+    "guest_evidence": {
+      "bytes": 305,
+      "sha256": "9e9ace4ffd7e112f475ca82f766dd6464b38e4e3f7066c0dc3ed06f111c314ad"
+    }
+  },
+  "native_host": {
+    "user": "rasmus_allesoee_gmail_com",
+    "uid": 1852909767,
+    "gid": 1852909767,
+    "boot_id": "67845d81-10d2-4a09-99c8-2980d4c0b663",
+    "cpus": 8,
+    "physical_memory_bytes": 33646940160,
+    "used_bytes": 219823902720,
+    "free_bytes": 96892973056,
+    "mount": "/srv/dl_binner",
+    "checked_UTC": "2026-10-20T23:27:09.526219+00:00",
+    "source": "e78d766f2fea5699ca91ff984933a22226f5d233",
+    "original_checkout_source": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+    "new_research_checkout": "/srv/dl_binner/research/e017-e78d766f2fea"
+  },
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e017-20261020t232634z.service",
+    "watchdog_timer": "e017-20261020t232634z-exit.timer",
+    "watchdog_service": "e017-20261020t232634z-exit.service",
+    "process": {
+      "pid": 1847,
+      "start_ticks": 3824,
+      "command_sha256": "20df3380e372ccabe579e20e49530a5e28e7d83a5b0f91df812ad37411657a8e"
+    },
+    "boot_id": "67845d81-10d2-4a09-99c8-2980d4c0b663",
+    "source_commit": "e78d766f2fea5699ca91ff984933a22226f5d233",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1792538791.522,
+    "hard_deadline_epoch": 1792549591.522,
+    "provider_stop_epoch": 1792550491.522,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "current_watch_status": {
+    "boot_id": "67845d81-10d2-4a09-99c8-2980d4c0b663",
+    "checked_utc": "2026-10-20T23:36:25.233439+00:00",
+    "decision": "workflow alive",
+    "expected_process": {
+      "command_sha256": "20df3380e372ccabe579e20e49530a5e28e7d83a5b0f91df812ad37411657a8e",
+      "pid": 1847,
+      "start_ticks": 3824
+    },
+    "observed_process": {
+      "command_sha256": "20df3380e372ccabe579e20e49530a5e28e7d83a5b0f91df812ad37411657a8e",
+      "pid": 1847,
+      "start_ticks": 3824
+    },
+    "shutdown": false,
+    "workflow_root": "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766"
+  },
+  "native_gate_status": "SUCCESS",
+  "native_gate_exits": [
+    {
+      "name": "retained-bytes",
+      "exit_code": 0,
+      "wall_seconds": 28.226018531,
+      "sampled_cpu_seconds": 9.32,
+      "peak_sampled_rss_bytes": 46669824
+    },
+    {
+      "name": "owned-package-env",
+      "exit_code": 0,
+      "wall_seconds": 2.445150658000003,
+      "sampled_cpu_seconds": 1.35,
+      "peak_sampled_rss_bytes": 99368960
+    },
+    {
+      "name": "complete-native-runtime-source-library",
+      "exit_code": 0,
+      "wall_seconds": 20.45391101499999,
+      "sampled_cpu_seconds": 18.470000000000002,
+      "peak_sampled_rss_bytes": 294932480
+    },
+    {
+      "name": "full-input-axes",
+      "exit_code": 0,
+      "wall_seconds": 15.64188651900001,
+      "sampled_cpu_seconds": 17.020000000000003,
+      "peak_sampled_rss_bytes": 2548011008
+    },
+    {
+      "name": "actual-sparse-approximate-recruitment",
+      "exit_code": 0,
+      "wall_seconds": 31.445650782000016,
+      "sampled_cpu_seconds": 34.12,
+      "peak_sampled_rss_bytes": 343441408
+    },
+    {
+      "name": "cached-native-marker-refiner-export",
+      "exit_code": 0,
+      "wall_seconds": 1.3401166319999902,
+      "sampled_cpu_seconds": 1.6499999999999986,
+      "peak_sampled_rss_bytes": 434069504
+    },
+    {
+      "name": "synthetic-kernel-timing",
+      "exit_code": 0,
+      "wall_seconds": 39.938301661999986,
+      "sampled_cpu_seconds": 45.35000000000001,
+      "peak_sampled_rss_bytes": 694046720
+    },
+    {
+      "name": "launcher-collector-contracts",
+      "exit_code": 0,
+      "wall_seconds": 0.706281673999996,
+      "sampled_cpu_seconds": 0.23000000000000043,
+      "peak_sampled_rss_bytes": 75935744
+    },
+    {
+      "name": "complete-serial-DAG-dryrun",
+      "exit_code": 0,
+      "wall_seconds": 1.3416280379999819,
+      "sampled_cpu_seconds": 1.0,
+      "peak_sampled_rss_bytes": 78352384
+    }
+  ],
+  "retained_inputs": {
+    "files": 72,
+    "bytes": 6041240299,
+    "reuse_lock": {
+      "bytes": 40824,
+      "sha256": "9b509c0834b0588487e5e04a4ba3c224e0a487441a23889b633418e66fee601d"
+    },
+    "scope": "Exact in-place contracted archive/input/runtime files, no recopy/reinstall/regeneration fallback; not whole-prefix non-mutation proof"
+  },
+  "full_axes": {
+    "inference_or_index": false,
+    "status": "PASS",
+    "truth_used": false,
+    "units": {
+      "E009-positive": {
+        "bp": 231678157,
+        "core_contigs": 9812,
+        "eligible": 89041,
+        "embeddings": {
+          "bytes": 21873665,
+          "sha256": "16c6b1204ed14d790ab14cc709116ef73fa2046edc10a73a65626fb675eaa475"
+        },
+        "features": {
+          "bytes": 42384557,
+          "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+        },
+        "measured_parent_depth": "Measured full-parent means; repeated conditioning for windows, not measured window depth. No variance available.",
+        "rows": 145702,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "oral-positive": {
+        "bp": 1669981123,
+        "core_contigs": 60211,
+        "eligible": 508763,
+        "embeddings": {
+          "bytes": 185981263,
+          "sha256": "7e2ed0537121f69a65195d7ccc72df17464b7b84db1d0ae8731045c3b6d8a36c"
+        },
+        "features": {
+          "bytes": 333765352,
+          "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+        },
+        "measured_parent_depth": "Measured parent means condition crops, not measured window depth; no variance.",
+        "rows": 1286547,
+        "samples": []
+      }
+    }
+  },
+  "native_kernel": {
+    "audit_seconds": 2.4054697110000234,
+    "caution": "Mac single-size throughput includes JIT; Linux and more competing profiles may scale differently. This is no full-community affordability pass.",
+    "cores": 4096,
+    "dimensions": 200,
+    "group_seconds": 36.152679366,
+    "kind": "Synthetic array kernels only, no recovery/biology",
+    "logical_files_bytes": 20887937,
+    "queries": 8192,
+    "status": "PASS",
+    "threads": 4,
+    "total_seconds": 39.014724900000004
+  },
+  "affordability": {
+    "projected_remaining_seconds": 4951.662719861153,
+    "remaining_original_clock": 10598.228384256363,
+    "rule": "2x full-width synthetic group+audit scaled by eligible rows, plus1200s; planning heuristic, original clock/disk/RSS guard remains authoritative"
+  },
+  "release": {
+    "credit_gate_passed": true,
+    "pending_usage_accounted": true,
+    "native_gates_passed": true,
+    "watchdog_verified": true,
+    "existing_VM_only": true,
+    "full_axes_verified": true,
+    "config": {
+      "bytes": 2588,
+      "sha256": "994217bfaf2ade18449320aaf07f9b2ef3093c4068efbc882aed93aa03dee0ad"
+    },
+    "provider_STOP_seconds": 11700,
+    "ceiling_USD": 2,
+    "estimated_incremental_gross_USD": 1.633688770204127,
+    "compressed_export_GiB": 3,
+    "storage_authorization_sha256": "7c48e90d768ff6c0d6c775c4b3daded29cd59abfad09765ac50a7f1ba44b11cf",
+    "covered_costs": [
+      "compute",
+      "disk",
+      "storage",
+      "network",
+      "operations"
+    ],
+    "credit_valid_until_epoch": 1799708400.0,
+    "storage_valid_until_epoch": 1793142000,
+    "source_commit": "e78d766f2fea5699ca91ff984933a22226f5d233",
+    "native_gate_exits": 9,
+    "retained_bytes_verified": 6041240299,
+    "release_UTC": "2026-10-20T23:30:45.267815+00:00"
+  },
+  "native_evidence_bindings": {
+    "host.json": {
+      "bytes": 533,
+      "sha256": "b36bd2c3dddcb18330396697390b546ea1d159cba880a5143a6d27d29a53d267"
+    },
+    "config.json": {
+      "bytes": 2588,
+      "sha256": "994217bfaf2ade18449320aaf07f9b2ef3093c4068efbc882aed93aa03dee0ad"
+    },
+    "science-plan.json": {
+      "bytes": 2002,
+      "sha256": "e3e15f46618922e7ac0763001133e0170ef047c4d5c67c2c5a43148b7c046f6c"
+    },
+    "started.json": {
+      "bytes": 168,
+      "sha256": "a0ca2362f23f050cf62aa1253e604f00a20f060c495e2d97aa75ee63e065c800"
+    },
+    "release.json": {
+      "bytes": 917,
+      "sha256": "b7570d3c059925dda245ccc8d7f2ae74385e1f13f00f14289b54a17156b1eb2e"
+    },
+    "gates/completion.json": {
+      "bytes": 9644,
+      "sha256": "05a741951b61f8db7ee8993fb7e1d00709047c5ef57ed3e73623043f71caaf8f"
+    },
+    "gates/affordability.json": {
+      "bytes": 262,
+      "sha256": "2921241c1d5eee9e54041f769b2b6d11e63f5ea74d1be1eda620a502d9f91849"
+    },
+    "gates/inputs.json": {
+      "bytes": 1744,
+      "sha256": "ba05e2daca89fdebfa85fbcb91d6d334835f3ee83e10cfa99ad286523505da33"
+    },
+    "gates/runtime.json": {
+      "bytes": 15165,
+      "sha256": "d9aed10bcd3cc3071ca03998ea4a5de50bb23141e828a1840986a3b3c4301b5b"
+    },
+    "gates/environment.json": {
+      "bytes": 9805,
+      "sha256": "af2f35468ecbd7a3462c024066d7302164986fc336c014e71b54dc752fd99ff9"
+    },
+    "gates/kernel/fixture.json": {
+      "bytes": 465,
+      "sha256": "08c93bac5bb872d27e4863b23ce15aac6345b86a6b8be3541f2387c452230b49"
+    },
+    "gates/tiny-cached/fixture.json": {
+      "bytes": 10673,
+      "sha256": "cd6437b311660860110cb446c69006ae1de74020f436f1732fb4bf1312be6a56"
+    },
+    "logs/supervision.json": {
+      "bytes": 1012,
+      "sha256": "3f526db5a99e471a39d17d2134d73c2da70ada1821c01bc1d828e9f5bb24c164"
+    },
+    "logs/watchdog-live-before-release.json": {
+      "bytes": 573,
+      "sha256": "5f0b3e1c7aec9b458fdd9fbb64610834a7812490f30678b8ea910b68096edaa8"
+    },
+    "logs/watchdog-current-before-release.json": {
+      "bytes": 573,
+      "sha256": "31fec84f0a8ae249ea169e96ec90135f8f6585f9233607dad1ce3ab1414c5ad0"
+    }
+  },
+  "current_progress": {
+    "snapshot": "artifacts/e017-information-aware-grouping/execution-20261020T2322Z/science-progress-final.json",
+    "snapshot_binding": {
+      "bytes": 64568,
+      "sha256": "16d0794d12a3a917c9f5b0d3db620e7e2cca5cca386b524492776e21445da8e6"
+    },
+    "logs": {
+      "work/logs/E009-positive/audit.log": "",
+      "work/logs/E009-positive/export.log": "ress\", \"utc\": \"2026-10-20T23:32:44Z\", \"contigs\": 60000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:44Z\", \"contigs\": 70000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:44Z\", \"contigs\": 80000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:44Z\", \"contigs\": 90000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:45Z\", \"contigs\": 100000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:45Z\", \"contigs\": 110000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:45Z\", \"contigs\": 120000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:45Z\", \"contigs\": 130000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:45Z\", \"contigs\": 140000, \"include_dna\": false}\n{\"stage\": \"information_export_complete\", \"utc\": \"2026-10-20T23:32:46Z\", \"contigs\": 145702, \"bp\": 231678157, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:47Z\", \"contigs\": 10000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:47Z\", \"contigs\": 20000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:47Z\", \"contigs\": 30000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:47Z\", \"contigs\": 40000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:47Z\", \"contigs\": 50000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:48Z\", \"contigs\": 60000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:48Z\", \"contigs\": 70000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:48Z\", \"contigs\": 80000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:48Z\", \"contigs\": 90000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:48Z\", \"contigs\": 100000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:48Z\", \"contigs\": 110000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:49Z\", \"contigs\": 120000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:49Z\", \"contigs\": 130000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:49Z\", \"contigs\": 140000, \"include_dna\": false}\n{\"stage\": \"information_export_complete\", \"utc\": \"2026-10-20T23:32:49Z\", \"contigs\": 145702, \"bp\": 231678157, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:51Z\", \"contigs\": 10000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:51Z\", \"contigs\": 20000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:51Z\", \"contigs\": 30000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:51Z\", \"contigs\": 40000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:52Z\", \"contigs\": 50000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:52Z\", \"contigs\": 60000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:52Z\", \"contigs\": 70000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:52Z\", \"contigs\": 80000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:52Z\", \"contigs\": 90000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:53Z\", \"contigs\": 100000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:53Z\", \"contigs\": 110000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:53Z\", \"contigs\": 120000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:53Z\", \"contigs\": 130000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-20T23:32:53Z\", \"contigs\": 140000, \"include_dna\": true}\n{\"stage\": \"information_export_complete\", \"utc\": \"2026-10-20T23:32:54Z\", \"contigs\": 145702, \"bp\": 231678157, \"include_dna\": true}\n",
+      "work/logs/E009-positive/group.log": "ows\": 37888, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:41Z\", \"rows\": 38912, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:42Z\", \"rows\": 39936, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:42Z\", \"rows\": 40960, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:43Z\", \"rows\": 41984, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:43Z\", \"rows\": 43008, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:43Z\", \"rows\": 44032, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:44Z\", \"rows\": 45056, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:44Z\", \"rows\": 46080, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:45Z\", \"rows\": 47104, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:45Z\", \"rows\": 48128, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:46Z\", \"rows\": 49152, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:46Z\", \"rows\": 50176, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:47Z\", \"rows\": 51200, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:47Z\", \"rows\": 52224, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:48Z\", \"rows\": 53248, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:48Z\", \"rows\": 54272, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:48Z\", \"rows\": 55296, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:49Z\", \"rows\": 56320, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:49Z\", \"rows\": 57344, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:50Z\", \"rows\": 58368, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:50Z\", \"rows\": 59392, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:51Z\", \"rows\": 60416, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:51Z\", \"rows\": 61440, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:52Z\", \"rows\": 62464, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:52Z\", \"rows\": 63488, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:52Z\", \"rows\": 64512, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:53Z\", \"rows\": 65536, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:53Z\", \"rows\": 66560, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:54Z\", \"rows\": 67584, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:54Z\", \"rows\": 68608, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:55Z\", \"rows\": 69632, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:55Z\", \"rows\": 70656, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:56Z\", \"rows\": 71680, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:56Z\", \"rows\": 72704, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:57Z\", \"rows\": 73728, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:57Z\", \"rows\": 74752, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:57Z\", \"rows\": 75776, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:58Z\", \"rows\": 76800, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:58Z\", \"rows\": 77824, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:59Z\", \"rows\": 78848, \"total\": 79459}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:31:59Z\", \"rows\": 79459, \"total\": 79459}\n{\"stage\": \"information_grouping_complete\", \"utc\": \"2026-10-20T23:32:30Z\", \"rows\": 145702, \"cores\": 9812, \"recruited\": 14840}\n",
+      "work/logs/E009-positive/refine.log": "",
+      "work/logs/oral-positive/group.log": "ge\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:01Z\", \"rows\": 68608, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:02Z\", \"rows\": 69632, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:02Z\", \"rows\": 70656, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:03Z\", \"rows\": 71680, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:03Z\", \"rows\": 72704, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:04Z\", \"rows\": 73728, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:05Z\", \"rows\": 74752, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:05Z\", \"rows\": 75776, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:06Z\", \"rows\": 76800, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:06Z\", \"rows\": 77824, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:07Z\", \"rows\": 78848, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:07Z\", \"rows\": 79872, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:08Z\", \"rows\": 80896, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:09Z\", \"rows\": 81920, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:09Z\", \"rows\": 82944, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:10Z\", \"rows\": 83968, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:10Z\", \"rows\": 84992, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:11Z\", \"rows\": 86016, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:12Z\", \"rows\": 87040, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:12Z\", \"rows\": 88064, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:13Z\", \"rows\": 89088, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:13Z\", \"rows\": 90112, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:14Z\", \"rows\": 91136, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:14Z\", \"rows\": 92160, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:15Z\", \"rows\": 93184, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:16Z\", \"rows\": 94208, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:16Z\", \"rows\": 95232, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:17Z\", \"rows\": 96256, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:17Z\", \"rows\": 97280, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:18Z\", \"rows\": 98304, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:19Z\", \"rows\": 99328, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:19Z\", \"rows\": 100352, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:20Z\", \"rows\": 101376, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:20Z\", \"rows\": 102400, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:21Z\", \"rows\": 103424, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:21Z\", \"rows\": 104448, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:22Z\", \"rows\": 105472, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:23Z\", \"rows\": 106496, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:23Z\", \"rows\": 107520, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:24Z\", \"rows\": 108544, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:24Z\", \"rows\": 109568, \"total\": 454723}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-20T23:36:25Z\", \"rows\": 110592, \"total\": 454723}\n"
+    },
+    "last_science_samples": [
+      {
+        "seconds": 339.708828873,
+        "rss_bytes": 5284732928,
+        "sampled_cpu_seconds": 407.57
+      },
+      {
+        "seconds": 339.92689877399994,
+        "rss_bytes": 5284732928,
+        "sampled_cpu_seconds": 407.82
+      },
+      {
+        "seconds": 340.143059034,
+        "rss_bytes": 5284732928,
+        "sampled_cpu_seconds": 408.04
+      }
+    ],
+    "disk_usage": {
+      "total": 316733652992,
+      "used": 220218753024,
+      "free": 96498122752
+    },
+    "disk_growth_since_host_bytes": 394850304,
+    "completion": null,
+    "science_result": null,
+    "quality_assessed": false
+  },
+  "financial_gate": {
+    "evidence": "artifacts/e017-information-aware-grouping/execution-20261020T2322Z/credit-gate.json",
+    "binding": {
+      "bytes": 6319,
+      "sha256": "f1744b16b957cba25a7a56cfdab9f310fc74d7a93f7d1faa733e35ea7c18b159"
+    },
+    "credit": {
+      "remaining_DKK": 1896.6,
+      "original_DKK": 1973.43,
+      "status": "Available",
+      "percent": 96,
+      "scope": "Certain usage; see the terms for free trial",
+      "application": "Net pricing",
+      "expiry": "2027-01-12",
+      "paid_account": true,
+      "overview_period": "October 1-21, 2026",
+      "cost_DKK": 75.7,
+      "savings_DKK": 75.7,
+      "net_DKK": 0,
+      "pending_usage": "Unknown; signed-in Overview latency tooltip says costs may take longer than 24 hours. Do not infer zero pending or attribute credit differences.",
+      "prior_exposure_USD_reserve": 30,
+      "prior_storage_USD_reserve": 5,
+      "live_read": "Read-only signed-in Chrome CUA Billing Overview/Credits in this task",
+      "official_terms": "https://docs.cloud.google.com/free/docs/free-cloud-features"
+    },
+    "covered_costs": [
+      "compute",
+      "disk",
+      "storage",
+      "network",
+      "operations"
+    ],
+    "forecast_max_USD": 1.633688770204127,
+    "compute_IP_USD_hour": 0.2730456762592464,
+    "existing_disk_USD_hour": 0.04193548380356186,
+    "storage_forecast_including_max_return_USD": 7.6258647422481305,
+    "storage_all_version_bytes": 5769263696,
+    "soft_deleted_bytes": 0,
+    "cost_to_observation": {
+      "elapsed_VM_seconds": 594.0684108734131,
+      "allocated_vCPU_hours": 1.3201520241631401,
+      "compute_IP_SKU_quote_USD": 0.0450577252753297,
+      "run_disk_SKU_quote_USD": 0.006920151728441596,
+      "final": false,
+      "invoice_reconciled": false,
+      "note": "Current running allocation-to-observation quote only, not sampled-CPU pricing, credit-delta attribution or final cost. Run disks already lie within storage interval; do not double count. Final uptime/export/storage pending."
+    }
+  },
+  "remaining_contracts": [
+    "All oral stages and final target/after-reuse/collection/private readback exits",
+    "Independently verified TERMINATED and current-boot watchdog exit snapshot",
+    "Archive and every retained member/alias, full cache/partitions/DNA and final resource review",
+    "Export/local staging and remaining original $2 before download",
+    "Only then frozen new-output E009 v2 and separately named oral provided-origin diagnostics; no old rescoring"
+  ],
+  "scientific_disposition": "NOT ASSESSED; no changed community outcome inspected",
+  "preservation": {
+    "unchanged_learning": true,
+    "no_retraining_or_inference": true,
+    "no_community_marker_redetection": true,
+    "no_confirmation_acquisition": true,
+    "no_external_binner": true,
+    "no_new_resources_or_retention": true,
+    "original_Mac_portability_failure_preserved": true
+  },
+  "failed_local_controller_attempt": {
+    "log": "artifacts/e017-information-aware-grouping/execution-20261020T2322Z/start-existing-attempt1.log",
+    "binding": {
+      "bytes": 1146,
+      "sha256": "5dcf21f2f9a82a8fcb0f3ab0259c913c5c7a12e68bd7b763485940132adcdf80"
+    },
+    "cause": "Stale experiment-directory name in the local controller; refused before STOP mutation or VM start. Script/log preserved; corrected before the sole actual start. No paid setup or science replay."
+  },
+  "evidence_root": "artifacts/e017-information-aware-grouping/execution-20261020T2322Z",
+  "next_prompt": "OPERATIONS.md#exact-following-prompt"
+}

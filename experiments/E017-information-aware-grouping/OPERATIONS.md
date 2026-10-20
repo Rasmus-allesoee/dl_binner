@@ -1,7 +1,10 @@
-# E017 operations: preparation and separate cached execution
+# E017 operations: authorized cached execution and inspection
 
-Updated: 2026-10-20. **Local preparation only; no community E017 output or score.**
-The VM is TERMINATED. [Protocol](protocol.json), [design](design.md),
+Updated: 2026-10-21. **Native comparison running; scientific outcome not assessed.**
+[Native receipt](native-observed.json) owns phase
+`information-20261020T232634Z-e78d766`, actual source/gates/progress and costs.
+The VM is RUNNING under the new $2 authorization and verified supervision.
+[Protocol](protocol.json), [design](design.md),
 [candidate lock](candidate-lock.json), [reuse lock](reuse-lock.json),
 [local evidence](local-evidence.json) and [resources](resource-plan.json) own the
 single policy, bytes, actual contracts and outstanding native gates.
@@ -14,8 +17,17 @@ package environment. [Native launch lock](native-launch-lock.json) records the
 launcher-only repair and exact before/after adapter bytes. The original candidate
 lock, wheel/package, policy and science inputs stay unchanged. Seven actual local
 operations contracts pass, including the production child argv and original/effective
-source bindings; Linux gates are still required. The execution source is a new
-history-preserving descendant of `067ceb2`, never a rewrite of that freeze.
+source bindings; the later nine Linux admission stages also pass. The execution source is a new
+history-preserving descendant, `e78d766`, never a rewrite of `067ceb2`.
+
+VM start: October 21 at **01:26:31 Copenhagen**, science release **01:30:45**.
+Original three-hour deadline **04:26:31**, independent provider STOP **04:41:31**
+on October 21. Fresh boot/process watcher passes live/normal/crash tests and the
+pre-release identity check; initial free space is 90.24 GiB. All nine native gates
+exit zero. The frozen kernel rule projects 4,951.66 seconds against 10,598.23
+remaining, with the original clock/RSS/disk safeguards authoritative. Real E009
+index/affinity/recruitment progress is observed. No outcome, new score or KEEP
+claim follows until final exits, returned bytes and diagnostic contracts pass.
 
 ## Scope and retained consumers
 
@@ -77,8 +89,9 @@ Truth is absent from the native plan and every scientific stage.
    science retry, policy change, new resource, extension or accepted-stage replay.
    Collect bounded evidence, stop, and independently confirm TERMINATED.
 
-No step above has been run on the VM for E017. Native Linux gates and actual full
-resource/return footprints remain pending. Four numerical threads are process
+For the phase above, steps 1–6 have passed admission and released the science once.
+Full scientific/collection exits, final resource/return footprints and local
+diagnostics remain pending. Four numerical threads are process
 budgets; the charged allocation is eight vCPUs/32 GiB. Sampled CPU is not GCP cost.
 
 ## Post-shutdown review boundary
@@ -141,15 +154,51 @@ appended after sealing rather than included in its own hash.
 
 ## Exact following prompt
 
-The following is a **new proposed execution approval**. It is not enacted by the
-current local-preparation/storage-only task.
+This is inspection of the authorized phase, not approval for another run or a
+fresh clock. The consumed execution prompt and owner clarification remain in
+history at `e78d766` (prepared scientific freeze `067ceb2`).
 
-Our goal is substantially closing the recovery gap. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E017's design, frozen protocol/criteria, source/candidate/reuse locks, local evidence, eligibility audit, resource plan and operations. Preserve dev3/dev4/dev5/E016 and all accepted E009–E017 inputs/truth/results/source freezes and failed journals. Keep E016 learning/native unit vectors, retained features/parent-depth/marker evidence, seed, sole CPM rule and E013 policy fixed.
+Our goal is substantially closing the recovery gap. Read AGENTS.md,
+PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E017's frozen design/protocol/criteria,
+candidate/native-launch/reuse locks, native-observed.json and operations. Inspect
+phase `information-20261020T232634Z-e78d766` without starting another job. Preserve
+dev3/dev4/dev5/E016 and all accepted E009–E017 inputs, truth, results, source freezes
+and failed journals. E016 learning and native vectors remain fixed.
 
-I authorize exactly the prepared two-community cached E017 information-aware grouping comparison under a NEW $2 incremental gross ceiling, subject to fresh live Welcome-credit balance/scope/expiry, delayed usage, prices/product coverage, actual storage/headroom and retention gates. The separate approved $8 storage allowance ends October 28 at 00:00 Copenhagen; no previous compute budget carries over. Use only the existing e2-standard-8/32-GiB VM and 300-GiB work disk, three cumulative hours from VM start including setup/gates/collection/upload/readback, provider STOP at 3.25 hours, four numerical threads, 26 GB sampled tree RSS, 25 GiB free reserve, 20 GiB extra work and 3 GiB compressed export. No provisioning, resize, new service, retention extension, threshold/resolution/seed grid, encoder fit/inference, marker redetection on communities, new data, external binner or automatic extension. Stop before unclear/uncovered spending or dates outside approved retention; justify a needed resource increase before making it, but you don't need to stop the task to ask me.
+Check GCP control-plane state, `e017-candidate/status`, and private completion.json
+under `gs://dl-binner-archive-167650584170/e017/information-20261020T232634Z-e78d766/`.
+Do not infer success from shutdown. If healthy and running, report real progress
+and leave the verified watcher/provider STOP intact without polling to completion.
+After independently verified shutdown, establish all nine setup/native gate exits,
+every serial group/refine/export/audit exit for both communities, final target,
+reuse-after, collection/upload/readback and watchdog exit evidence. Refresh live
+credit/prices and assess export/local staging against the remaining original new
+$2 and the approved storage interval ending October 28 at 00:00 Copenhagen before
+downloading. Verify archive and every retained member/alias. Do not wake for missing
+evidence, replay science, extend a clock or change resources/retention; report
+missing evidence and a separately assessed recovery request if required.
 
-Push the exact clean prepared branch from Mac and sync a separate VM checkout read-only to that commit, retaining executed sources. Verify/reuse the sealed native archive and every contracted cache/runtime/input byte in place, with no recopy/reinstall/regeneration fallback. Create only the new package-owned environment on accepted complete read-only dependencies. Arm/test a fresh current-boot/process held-parent exit watcher and independent provider STOP before release; run all prepared native source/library/input-axis/tiny/serial-DAG/affordability gates within the same clock. Debug recoverable operational errors in this task with fresh journals and verified reuse, without replaying passed science or changing the prospective rule.
+If complete, verify exact source/policy/wheel/runtime/full contig and ordered
+sample axes, untouched native vectors, core/recruitment cache/neighbor proofs,
+fixed profiles/votes/assignment reasons, cached marker/E013 choices, all four
+partitions and complete DNA accounting. Perform only the frozen bounded local
+new-output diagnostics with conservative E009 v2 and the separately named oral
+provided-origin oracle. Keep full 156/799 reference denominators, 3.3034%
+N-quarantine, oral known-shared sensitivity and all length/origin/native-eligibility/
+marker/unknown/non-target/excluded/unassigned populations. Reuse E016 and older
+summaries without refitting/rescoring. Distinguish fixed E016 learned-neighbor
+geometry from the new joint-core retrieval population, and retain the original
+failed Mac portability tolerance. Report any missing runtime/contract before
+claiming quality. Use four numerical threads, 8 GB sampled RSS, one hour and
+6 GiB extra local review; check actual free space and stage sequentially.
 
-Run the sole frozen core/affinity/recruitment policy once on E009 ten-depth and oral sequence-only. Keep all short, marker-negative, unknown/non-target, excluded and unassigned DNA, complete sparse/candidate/profile/vote caches and core/recruited-parent/old/E013 partitions/exports. Truth stays outside the native plan. Reuse all old outputs and score summaries. For a healthy longer job, verify real progress/supervision, wait a few minutes and report stage/logs without polling to completion; follow a short job through collection. On failure/limit collect bounded evidence, stop and independently confirm TERMINATED; no automatic retry or limit extension.
-
-After shutdown verify actual stage exits, completion/watchdog evidence, archive and every member/alias, cost and export before bounded local diagnostics on new outputs only. Use conservative E009 v2 and separately named oral provided-origin oracle with full 156/799 denominators, 3.3034% N-quarantine, known-shared sensitivity and all length/origin/native-eligibility/marker/assignment populations. Use four threads, 8 GB sampled RSS, one hour and 6 GiB extra review, checking actual free disk before downloading. Retain the original Mac portability failure and distinguish fixed E016 learned geometry from the changed joint-core retrieval population. Report core/recruit/old/post target-level gains/trade-offs, frozen keep/modify/abandon status and one strongest next decision; do not tune to outcomes. Keep skin confirmation frozen and unacquired pending separate source/truth/overlap/protocol/cost admission. Update records, check and commit with structured what changed/why; report measured allocation, sampled resources, actual cost/storage and the next exact prompt.
+Report paired core/recruit/old/E013 effects, target-level gains/trade-offs, frozen
+keep/modify/abandon disposition and at most one strongest next recovery decision.
+Do not tune thresholds, add a score campaign, infer product-family decisions,
+refit, run external binners or acquire confirmation. Keep the frozen skin choice
+unacquired pending source/genome/replicon/molecule/taxonomy/overlap/ambiguity/
+unique-versus-origin truth, unchanged protocol and separate acquisition/compute/
+cost/retention admission. Price measured VM allocation/uptime, storage and export
+separately from sampled CPU; do not attribute the credit delta as an invoice.
+Update records, check and commit with structured what changed/why, and give the
+next exact prompt with any separate authorization required.

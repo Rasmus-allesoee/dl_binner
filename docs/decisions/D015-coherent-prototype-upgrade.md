@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E017](../../experiments/E017-information-aware-grouping/README.md) is locally implemented and prepared on fixed E016 learning; community execution remains separately gated. Its approved storage-only interval ends October 28 at 00:00 Copenhagen. Earlier implementation/run sections are dated evidence.
+Current handoff: [E017](../../experiments/E017-information-aware-grouping/README.md) is running its separately approved cached comparison after all nine native admission gates, holding E016 learning fixed. No changed-community quality outcome is reviewed yet. Its approved storage-only interval ends October 28 at 00:00 Copenhagen. Earlier implementation/run sections are dated evidence.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and

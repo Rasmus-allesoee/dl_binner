@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-10-08
+Updated: 2026-10-21
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -497,3 +497,9 @@ Q001/Q003/Q005 remain open. Context/GLM/marker-aware alternatives and untouched
 skin confirmation remain; source/overlap/truth/protocol/cost admission still
 precedes confirmation. Fresh storage-only approval resolves October 21 through
 October 28 at 00:00 Copenhagen, without compute, new resources or deletion.
+
+2026-10-21 E017 execution: the owner separately authorizes the single cached
+comparison under a new $2. [Native admission](../../experiments/E017-information-aware-grouping/native-observed.json)
+passes all nine gates and releases the sole DAG under verified supervision,
+holding E016 learning fixed. This moves the scoped question into testing; no
+community quality result or scientific resolution is yet admitted.

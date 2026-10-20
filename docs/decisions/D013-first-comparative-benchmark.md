@@ -1,6 +1,6 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E017](../../experiments/E017-information-aware-grouping/README.md) prepares the next fixed-learning grouping comparison. Storage-only continuation is approved through October 28 at 00:00 Copenhagen; a new community execution still needs separate approval. Dated earlier authorizations below are not open budgets.
+Current handoff: [E017](../../experiments/E017-information-aware-grouping/README.md) is running the separately authorized $2 fixed-learning cached grouping comparison after native gates; no quality result is reviewed yet. Storage-only continuation is approved through October 28 at 00:00 Copenhagen. Dated earlier authorizations below are not open budgets.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.

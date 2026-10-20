@@ -1,18 +1,22 @@
 # Current Research State
 
-Updated: 2026-10-20. This is the single current handoff.
+Updated: 2026-10-21. This is the single current handoff.
 
 ## Exact next step
 
-**E017 is implemented and locally tested; its cached community comparison is
-prepared, not authorized or executed. The VM remains TERMINATED.**
+**E017's separately authorized cached comparison is running under verified
+supervision; its scientific outcome is not yet reviewed.** Phase
+`information-20261020T232634Z-e78d766` uses source `e78d766`, a history-preserving
+launcher-only repair of prepared `067ceb2`. The original candidate lock, wheel,
+learning, scientific policy and inputs are unchanged. [Native receipt](../experiments/E017-information-aware-grouping/native-observed.json)
+owns the current stage, gates, exact source, logs and cost boundaries.
 [E017 operations](../experiments/E017-information-aware-grouping/OPERATIONS.md),
 [design](../experiments/E017-information-aware-grouping/design.md),
 [protocol](../experiments/E017-information-aware-grouping/protocol.json),
 [local evidence](../experiments/E017-information-aware-grouping/local-evidence.json)
 and [resource plan](../experiments/E017-information-aware-grouping/resource-plan.json)
-own the rule, actual engineering paths, pending Linux gates and separate execution
-prompt. Branch `e017-information-aware-grouping` preserves dev3/dev4/dev5/E016 and
+own the frozen rule, engineering paths and budget. Operations now gives the
+post-completion inspection prompt. Branch `e017-information-aware-grouping` preserves dev3/dev4/dev5/E016 and
 all accepted inputs/truth/results/source freezes and failed journals.
 
 The coherent block holds E016 learning/native unit vectors fixed. It forms
@@ -23,8 +27,13 @@ old/E013 partitions, all DNA and optional unassignment. No new encoder, marker
 redetection on communities, truth K or coverage variance is added. Background
 agreement/reliability/profile rules are prospective heuristics, not a performance
 claim. Real tiny native readers/NN/Leiden/cache/refiner/export, the actual serial
-nine-job DAG and installed runtime/source/library contracts pass; Linux/full-scale
-cost, RAM, headroom and return/review contracts remain gated.
+nine-job tiny DAG and installed runtime/source/library contracts pass. All nine
+Linux admission stages now pass, including 72 retained files / 6,041,240,299 bytes,
+independent Python 3.12 source/library/inventory, both full axes, actual tiny native
+NN/marker/refiner/export, collector/launcher and complete DAG dry run. The frozen
+native kernel projection is 4,951.66 seconds against 10,598.23 remaining; this is
+a planning heuristic, not proof of full-community affordability or quality.
+Actual full-community return/review and final resource contracts remain pending.
 
 The [eligibility audit](../experiments/E017-information-aware-grouping/eligibility-audit.json)
 confirms retained MetaBAT2 2.18 uses a 2,500 bp main default (minimum allowed 1,500),
@@ -35,8 +44,8 @@ core cutoff changes grouping authority, not learning eligibility or DNA accounti
 
 **Storage-only continuation is now approved and admitted:** up to **$8 gross**
 for the existing disks/private evidence, **October 21 at 00:00 through October 28
-at 00:00 Copenhagen**, 169 hours across DST. [Fresh checks](../experiments/E017-information-aware-grouping/storage-admission.json)
-find DKK 1,897.28 Welcome credit Available through January 12, 2027, paid/net-priced
+at 00:00 Copenhagen**, 169 hours across DST. [October 20 checks](../experiments/E017-information-aware-grouping/storage-admission.json)
+found DKK 1,897.28 Welcome credit Available through January 12, 2027, paid/net-priced
 coverage, unknown delayed usage with reserves, unchanged applicable disk prices,
 78 object versions and zero soft-deleted bytes. Forecast **$7.61 with reserve**;
 no VM start, resize, new service, deletion or later extension. Existing disks cost
@@ -44,14 +53,20 @@ $31.20/month while stopped. Review backup gaps before cleanup; hashes do not bac
 up omitted FASTAs/shared inputs or dependency prefixes. The October 21 decision
 is resolved for this interval; **October 28 is the next retention boundary**.
 
-The proposed cached comparison needs a **new $2** after fresh execution gates:
+The owner authorizes this comparison under a **new $2**, after fresh gates:
 existing 8-vCPU/32-GiB VM and 300-GiB disk, three-hour cumulative setup/verification/
 grouping/collection clock, 3.25-hour provider STOP, four numerical threads,
 26 GB sampled tree RSS, 25 GiB free reserve, 20 GiB extra work and 3 GiB compressed
-export. Maximum quote is about $1.64 including reserve, not an invoice. The wider
-clock/return bound preserves complete evidence; no inferior reduced community is
-substituted. The current task authorizes no community grouping/score or cloud
-compute. The original budgets do not carry over.
+export. Maximum quote is about $1.64 including reserve, not an invoice. Fresh
+Welcome credit is DKK 1,896.60 Available, expiry January 12, 2027; prices are
+unchanged, delayed usage remains unknown with reserves. Storage including the
+maximum new return is forecast at $7.63 inside the separate $8 allowance.
+VM start was October 21 at 01:26:31 Copenhagen, release at 01:30:45.
+The original three-hour deadline is **04:26:31**, provider STOP **04:41:31**, both
+October 21 Copenhagen. The fresh boot/process-bound watcher passed live/exit/crash
+tests; initial free space is 90.24 GiB. Do not restart, extend or replay science.
+For a healthy longer job, inspect real progress and hand off; after shutdown,
+verify completion/member bytes/cost before evaluating only the new outputs.
 
 The [frozen skin confirmation choice](../experiments/E016-positive-only-multiview/confirmation-plan.json)
 remains untouched and unacquired. Sample/source/genome/replicon/molecule/taxonomy
