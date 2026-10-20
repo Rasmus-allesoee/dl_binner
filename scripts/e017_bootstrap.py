@@ -19,6 +19,28 @@ from e009_owner import supervisor,Tee
 from e009_controls import PhaseGuard
 
 
+def source_lock(repo):
+    """Admit a recorded launcher-only repair without rewriting the science freeze.
+
+    Original 067ceb2 bindings and wheel remain independently verified. An optional
+    native launch lock may replace only these three operating/test adapters; any
+    scientific source, configuration or package-byte change is refused.
+    """
+    repo=Path(repo);original=repo/'experiments/E017-information-aware-grouping/candidate-lock.json'
+    frozen=json.loads(original.read_text());path=original.parent/'native-launch-lock.json'
+    if not path.exists():return frozen
+    launch=json.loads(path.read_text())
+    allowed={'scripts/e017_phase.py','scripts/e017_bootstrap.py','tests/test_e017_operations.py'}
+    if (launch['prepared_commit']!='067ceb23da1c5ff1ee66ab29ecf82cd04e0fd2f0'
+            or launch['preparation_lock']!=binding(original)
+            or set(launch['repaired_files'])!=allowed):
+        raise ValueError('Unadmitted E017 native launch repair')
+    for name,pair in launch['repaired_files'].items():
+        if pair['before']!=frozen['files'][name]:raise ValueError('Repair source ancestor differs')
+        frozen['files'][name]=pair['after']
+    return frozen
+
+
 def inputs(plan,output):
     """Verify complete frozen feature/vector/depth axes without model inference."""
     from e017_control import validate_plan
@@ -63,7 +85,7 @@ def run(path):
                 raise ValueError('Existing 32-GiB allocation memory unavailable')
             if subprocess.check_output(['git','rev-parse','HEAD'],cwd=repo,text=True).strip()!=cfg['source_commit'] or subprocess.check_output(['git','status','--porcelain'],cwd=repo,text=True).strip():
                 raise ValueError('Exact clean source required')
-            frozen=json.loads((repo/'experiments/E017-information-aware-grouping/candidate-lock.json').read_text())
+            frozen=source_lock(repo)
             for k,b in frozen['files'].items():
                 if binding(repo/k)!=b:raise ValueError('Frozen preparation bytes differ: '+k)
             if binding(cfg['wheel'])!=frozen['tested_wheel']:raise ValueError('Candidate wheel differs')

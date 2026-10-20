@@ -12,11 +12,36 @@ REPO=Path(__file__).absolute().parents[1]
 sys.path.insert(0,str(REPO/'scripts'))
 from e014_collect import binding
 from e017_collect import pack,verify
-from e017_phase import configuration,admission,SECONDS,STOP_SECONDS
+from e017_phase import configuration,admission,science_command,SECONDS,STOP_SECONDS
+from e017_bootstrap import source_lock
 from e017_reuse import verify as verify_reuse
 
 
 class Operations(unittest.TestCase):
+    def test_system_parent_uses_owned_lexical_science_interpreter(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);plan=root/'science-plan.json'
+            # Use the running lexical environment, retaining the exact argv from
+            # the parent rather than accidentally executing its system Python.
+            plan.write_text(json.dumps(dict(python=sys.executable)))
+            command=science_command(dict(science_plan=str(plan),repo=str(REPO)))
+            self.assertEqual(command,[sys.executable,'-I','-B',str(REPO/'scripts/e017_control.py'),
+                                      '--plan',str(plan),'--workflow'])
+            r=subprocess.run(command+['--help'],cwd=root,capture_output=True,text=True,timeout=20)
+            self.assertEqual(r.returncode,0,r.stdout+r.stderr)
+            plan.write_text(json.dumps(dict(python='/job/owned-env/bin/python')))
+            self.assertEqual(science_command(dict(science_plan=str(plan),repo=str(REPO)))[0],
+                             '/job/owned-env/bin/python')
+
+    def test_native_repair_preserves_original_scientific_freeze(self):
+        original=json.loads((REPO/'experiments/E017-information-aware-grouping/candidate-lock.json').read_text())
+        current=source_lock(REPO)
+        changes={p for p in original['files'] if original['files'][p]!=current['files'][p]}
+        self.assertEqual(changes,{'scripts/e017_phase.py','scripts/e017_bootstrap.py','tests/test_e017_operations.py'})
+        for p,b in current['files'].items():self.assertEqual(binding(REPO/p),b,p)
+        self.assertEqual(current['tested_wheel'],original['tested_wheel'])
+        self.assertEqual(current['source_package_members'],original['source_package_members'])
+
     def test_isolated_help_actual_entrypoints_outside_checkout(self):
         for name in ['control','collect','reuse','phase','arm','runtime','bootstrap']:
             with self.subTest(name=name),tempfile.TemporaryDirectory() as d:

@@ -6,6 +6,17 @@ The VM is TERMINATED. [Protocol](protocol.json), [design](design.md),
 [local evidence](local-evidence.json) and [resources](resource-plan.json) own the
 single policy, bytes, actual contracts and outstanding native gates.
 
+Execution authorization received October 21, 2026: the owner authorizes the
+prepared comparison at `067ceb2`, subject to every frozen gate and exclusion.
+Before VM start, a source audit found that the system-Python held parent would
+invoke the scientific consumer with its own interpreter instead of the owned
+package environment. [Native launch lock](native-launch-lock.json) records the
+launcher-only repair and exact before/after adapter bytes. The original candidate
+lock, wheel/package, policy and science inputs stay unchanged. Seven actual local
+operations contracts pass, including the production child argv and original/effective
+source bindings; Linux gates are still required. The execution source is a new
+history-preserving descendant of `067ceb2`, never a rewrite of that freeze.
+
 ## Scope and retained consumers
 
 Hold E016 learning fixed, including the original native arrays and seed. The
@@ -135,7 +146,7 @@ current local-preparation/storage-only task.
 
 Our goal is substantially closing the recovery gap. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E017's design, frozen protocol/criteria, source/candidate/reuse locks, local evidence, eligibility audit, resource plan and operations. Preserve dev3/dev4/dev5/E016 and all accepted E009–E017 inputs/truth/results/source freezes and failed journals. Keep E016 learning/native unit vectors, retained features/parent-depth/marker evidence, seed, sole CPM rule and E013 policy fixed.
 
-I authorize exactly the prepared two-community cached E017 information-aware grouping comparison under a NEW $2 incremental gross ceiling, subject to fresh live Welcome-credit balance/scope/expiry, delayed usage, prices/product coverage, actual storage/headroom and retention gates. The separate approved $8 storage allowance ends October 28 at 00:00 Copenhagen; no previous compute budget carries over. Use only the existing e2-standard-8/32-GiB VM and 300-GiB work disk, three cumulative hours from VM start including setup/gates/collection/upload/readback, provider STOP at 3.25 hours, four numerical threads, 26 GB sampled tree RSS, 25 GiB free reserve, 20 GiB extra work and 3 GiB compressed export. No provisioning, resize, new service, retention extension, threshold/resolution/seed grid, encoder fit/inference, marker redetection on communities, new data, external binner or automatic extension. Stop before unclear/uncovered spending or dates outside approved retention; justify a needed resource increase before making it.
+I authorize exactly the prepared two-community cached E017 information-aware grouping comparison under a NEW $2 incremental gross ceiling, subject to fresh live Welcome-credit balance/scope/expiry, delayed usage, prices/product coverage, actual storage/headroom and retention gates. The separate approved $8 storage allowance ends October 28 at 00:00 Copenhagen; no previous compute budget carries over. Use only the existing e2-standard-8/32-GiB VM and 300-GiB work disk, three cumulative hours from VM start including setup/gates/collection/upload/readback, provider STOP at 3.25 hours, four numerical threads, 26 GB sampled tree RSS, 25 GiB free reserve, 20 GiB extra work and 3 GiB compressed export. No provisioning, resize, new service, retention extension, threshold/resolution/seed grid, encoder fit/inference, marker redetection on communities, new data, external binner or automatic extension. Stop before unclear/uncovered spending or dates outside approved retention; justify a needed resource increase before making it, but you don't need to stop the task to ask me.
 
 Push the exact clean prepared branch from Mac and sync a separate VM checkout read-only to that commit, retaining executed sources. Verify/reuse the sealed native archive and every contracted cache/runtime/input byte in place, with no recopy/reinstall/regeneration fallback. Create only the new package-owned environment on accepted complete read-only dependencies. Arm/test a fresh current-boot/process held-parent exit watcher and independent provider STOP before release; run all prepared native source/library/input-axis/tiny/serial-DAG/affordability gates within the same clock. Debug recoverable operational errors in this task with fresh journals and verified reuse, without replaying passed science or changing the prospective rule.
 

@@ -28,6 +28,18 @@ SECONDS=10800
 STOP_SECONDS=11700
 
 
+def science_command(cfg):
+    """Invoke the cached consumer with its owned lexical package interpreter.
+
+    The held parent intentionally uses system Python before the package-only
+    environment exists. Its scientific child needs the installed package and
+    complete reviewed dependencies, so it must not inherit the parent's Python.
+    """
+    plan=json.loads(Path(cfg['science_plan']).read_text())
+    return [plan['python'],'-I','-B',str(Path(cfg['repo'])/'scripts/e017_control.py'),
+            '--plan',cfg['science_plan'],'--workflow']
+
+
 def publish_status(value):
     """Best-effort bounded guest status; never substitute it for exits/member review."""
     data=json.dumps(value).encode()
@@ -115,8 +127,7 @@ def run(path):
                 if binding(p)!=b:raise ValueError('Source/config/reuse binding differs')
             gate=json.loads((root/'gates/completion.json').read_text())
             if gate['status']!='SUCCESS' or gate['config']!=binding(path):raise ValueError('Native gate/config identity differs')
-            argv=[sys.executable,'-I','-B',str(Path(cfg['repo'])/'scripts/e017_control.py'),'--plan',cfg['science_plan'],'--workflow']
-            command('science',argv,reserve=600)
+            command('science',science_command(cfg),reserve=600)
             plan=json.loads(Path(cfg['science_plan']).read_text())
             for unit in ['E009-positive','oral-positive']:
                 accounting=json.loads((Path(plan['work'])/'units'/unit/'export/accounting.json').read_text())
