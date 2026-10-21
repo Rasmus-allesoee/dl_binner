@@ -1,0 +1,34 @@
+{
+  "online": {
+    "fused": {
+      "catastrophic_collapse": false,
+      "effective_rank": 3.272832139097785,
+      "mean_dimension_std": 0.015505560160111783,
+      "mean_other_cosine": 0.9817734713181518,
+      "rows": 1024
+    },
+    "sequence": {
+      "catastrophic_collapse": true,
+      "effective_rank": 1.851644740555362,
+      "mean_dimension_std": 0.006302236697281809,
+      "mean_other_cosine": 0.9965897044833021,
+      "rows": 1024
+    }
+  },
+  "target": {
+    "fused": {
+      "catastrophic_collapse": false,
+      "effective_rank": 16.7558968092107,
+      "mean_dimension_std": 0.04004525827036044,
+      "mean_other_cosine": 0.8933621985417949,
+      "rows": 1024
+    },
+    "sequence": {
+      "catastrophic_collapse": false,
+      "effective_rank": 27.921257376477982,
+      "mean_dimension_std": 0.03422856979088056,
+      "mean_other_cosine": 0.9237701710559478,
+      "rows": 1024
+    }
+  }
+}

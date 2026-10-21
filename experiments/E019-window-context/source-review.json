@@ -1,0 +1,102 @@
+{
+  "record": "Targeted context encoder source checks",
+  "UTC": "2026-10-21T21:56:07.140459+00:00",
+  "records": [
+    {
+      "name": "torch-activation.py",
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.2.2/torch/nn/modules/activation.py",
+      "resolved_url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.2.2/torch/nn/modules/activation.py",
+      "bytes": 55839,
+      "sha256": "4bbd8370c8b2c01a9199f1a4ba80221a3f9bd34d3025a0f2a42e624357e5c0fc",
+      "status": "READ_ONLY_PRIMARY_SOURCE"
+    },
+    {
+      "name": "CompleteBin-model.py",
+      "url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/CompleteBin/Model/model.py",
+      "resolved_url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/CompleteBin/Model/model.py",
+      "bytes": 5990,
+      "sha256": "2f066ef05e46d4f37d4fb2a9c4930ddde7d44dbb85c686a26dcdf1963a0a7320",
+      "status": "READ_ONLY_PRIMARY_SOURCE"
+    },
+    {
+      "name": "CompleteBin-layers.py",
+      "url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/CompleteBin/Model/layers.py",
+      "resolved_url": "https://raw.githubusercontent.com/zoubohao/CompleteBin/be0b9311f0fe4278c231010f78d995dca02b66d6/CompleteBin/Model/layers.py",
+      "bytes": 17627,
+      "sha256": "6ea289dcfd4240be9e348d9c22e0718dfe0ada3f66c7155ee068a25b8d40dfc8",
+      "status": "READ_ONLY_PRIMARY_SOURCE"
+    },
+    {
+      "path": "docs/evidence/2026-09-30-binner-design-review.md",
+      "bytes": 22771,
+      "sha256": "6ac0509fa086a044659913a7e928985d39bbc939e06ce3ab48a490d418a418cb",
+      "status": "REUSED_REVIEW_OR_INSPECTED_LOCAL_SOURCE"
+    },
+    {
+      "path": "docs/evidence/2026-09-30-architecture-reassessment.md",
+      "bytes": 18037,
+      "sha256": "49938378c86f3628cdb86ad9f9529a3bdba398719f551f1bbaaecf50e1a24cd1",
+      "status": "REUSED_REVIEW_OR_INSPECTED_LOCAL_SOURCE"
+    },
+    {
+      "path": "docs/evidence/2026-10-08-competitive-binner-study.md",
+      "bytes": 17919,
+      "sha256": "222262c74bab3456067aeb6c9154bba490fd1965d72daef147b844f9bad85204",
+      "status": "REUSED_REVIEW_OR_INSPECTED_LOCAL_SOURCE"
+    },
+    {
+      "path": "docs/evidence/2026-09-16-thesis.md",
+      "bytes": 8037,
+      "sha256": "ca1ca68eb62bd5420f90760e47350a99622859ec5c740bcd133f63b9ba76779c",
+      "status": "REUSED_REVIEW_OR_INSPECTED_LOCAL_SOURCE"
+    },
+    {
+      "path": "experiments/E016-positive-only-multiview/design.md",
+      "bytes": 5297,
+      "sha256": "e31dc073f043c1cfecb845991bb3e11113769f70516daf393e9509a85e4656dc",
+      "status": "REUSED_REVIEW_OR_INSPECTED_LOCAL_SOURCE"
+    },
+    {
+      "path": "experiments/E018-vote-led-recruitment/comparison-review.json",
+      "bytes": 172393,
+      "sha256": "0bed43d04aa7fdde2e8af640551822883282c916f2e5e43a7ad33cf3fa43412d",
+      "status": "REUSED_REVIEW_OR_INSPECTED_LOCAL_SOURCE"
+    },
+    {
+      "path": "agent_context/tools_repo/CompleteBin/CompleteBin/Model/model.py",
+      "bytes": 5990,
+      "sha256": "2f066ef05e46d4f37d4fb2a9c4930ddde7d44dbb85c686a26dcdf1963a0a7320",
+      "status": "REUSED_REVIEW_OR_INSPECTED_LOCAL_SOURCE"
+    },
+    {
+      "path": "agent_context/tools_repo/CompleteBin/CompleteBin/Model/layers.py",
+      "bytes": 17627,
+      "sha256": "6ea289dcfd4240be9e348d9c22e0718dfe0ada3f66c7155ee068a25b8d40dfc8",
+      "status": "REUSED_REVIEW_OR_INSPECTED_LOCAL_SOURCE"
+    },
+    {
+      "name": "torchvision-resnet.py",
+      "url": "https://raw.githubusercontent.com/pytorch/vision/v0.17.2/torchvision/models/resnet.py",
+      "bytes": 38932,
+      "sha256": "7499a5059ad7b1a1f8f7543c04b4a13795140fad837c38530b48ff5d9610bf6e",
+      "status": "READ_ONLY_PRIMARY_SOURCE",
+      "scope": "Identity/residual path and zero-initialized residual option; generic optimization rationale, not binning performance or imported code"
+    }
+  ],
+  "primary_papers": [
+    {
+      "url": "https://arxiv.org/abs/1706.03762",
+      "scope": "Attention interactions and positional information; original translation evidence is not binning evidence"
+    },
+    {
+      "url": "https://arxiv.org/abs/2006.07733",
+      "scope": "Slow stopped target/predictor principle; reuse accepted E016 implementation"
+    },
+    {
+      "url": "https://arxiv.org/abs/1512.03385",
+      "scope": "Residual mapping principle; not biology or whole-tool evidence"
+    }
+  ],
+  "interpretation": "Compact local/global feature-token attention is justified as a bounded information interaction, not CompleteBin parity or proof of causal superiority. Frozen raw-DNA GLM can supply complementary reference-trained information; no payload/model inference here.",
+  "engineering_amendment": "Before any community outcome: initial concatenation fusion tripped full-schedule rank guard, richer oligomer E016 comparator passed; freeze zero residual/preserved shared initialization. No loss/threshold/seed/schedule or accepted evidence change."
+}

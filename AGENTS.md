@@ -473,6 +473,13 @@ from a fresh source/build directory so stale generated files cannot enter a whee
 
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
+When a short learning smoke approaches an existing collapse/variance guard and
+a longer engineering schedule is cheap, exercise that schedule before claiming
+readiness. Distinguish a shared low-information fixture failure from a treatment
+regression using a bounded unchanged engineering anchor when it can change the
+implementation decision. Preserve failed guards; do not relax their thresholds
+or call passing tiny training a full-community stability result.
+
 Keep exact same-runtime checkpoint reload checks separate from cross-platform
 numerical comparisons. Preserve failed numerical tolerances without widening them
 after inspection. A separately admitted review of original native artifacts needs

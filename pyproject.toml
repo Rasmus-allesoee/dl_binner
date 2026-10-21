@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dl-binner"
-version = "0.1.0.dev6"
-description = "Experimental positive-only multiview metagenomic binner"
+version = "0.1.0.dev7"
+description = "Experimental compact DNA-context metagenomic binner"
 readme = "README.md"
 requires-python = ">=3.10,<3.13"
 dependencies = ["numpy==1.26.4", "torch==2.2.2", "networkx==3.4.2", "threadpoolctl==3.5.0"]

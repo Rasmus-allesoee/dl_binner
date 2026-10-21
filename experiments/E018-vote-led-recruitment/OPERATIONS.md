@@ -78,6 +78,15 @@ selects bins, thresholds, family use, K or native training inputs. Apply the
 prospective disposition unchanged and recommend at most one next recovery block.
 No automatic confirmation acquisition, new score campaign or external tool.
 
+## Follow-through, October 21–22
+
+The owner invoked the dated prompt below. [E019](../E019-window-context/README.md)
+now owns the local implementation and separately priced future execution request.
+The previously local E018 compact seal has been explicitly approved, uploaded and
+read back; [all 200 payload members verify](inspection-backup.json). The dated
+prompt's local-only status describes its preparation time, not the current backup.
+No E018 science, criteria, source lock, results or failed journal is changed.
+
 ## Exact following prompt
 
 This proposes a new local implementation block, not another cloud execution under

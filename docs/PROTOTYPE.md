@@ -1,5 +1,42 @@
 # Binner prototypes and current contracts
 
+## Compact window-context candidate, dev7
+
+[E019](../experiments/E019-window-context/README.md) adds a separate experimental
+`context-stage` interface. It consumes existing complete multiview features and
+real DNA crop banks; no truth, marker labels, downloads or regenerated crop draw
+enter learning. The compact attention branch uses at most eight local TNF windows
+and one global token with canonical strand, positional/reliability inputs and
+masked pooling. A zero-initialized residual preserves E016 global composition
+and predictor initialization; explicit depth fusion, E016 positive-only
+predictor/stopped EMA target and reconstruction remain. This is local engineering,
+not a new community-validated/default product. Dev3/dev4/dev5/E016 freezes remain.
+
+```
+python -I -B -m dl_binner context-stage --stage tokens --threads 4 \
+  --fasta assembly.fa --features retained/features.npz --views retained/views.npz \
+  --output new-context
+python -I -B -m dl_binner context-stage --stage train --threads 4 \
+  --features retained/features.npz --views retained/views.npz --tokens new-context \
+  --output new-context-train
+python -I -B -m dl_binner context-stage --stage embed --threads 4 \
+  --features retained/features.npz --views retained/views.npz --tokens new-context \
+  --checkpoint new-context-train/checkpoint.pt --output new-context-units.npz
+```
+
+`--config` is the complete strict context-plus-E016 schema. Default schedule is
+20 epochs/seed 11/batch 256; the bank's old policy must match. Existing/corrupt
+outputs are refused, without fallback. The indexed uint16 bank records original
+eligible-row mapping and canonical-window coordinates/strand. It samples bounded
+windows, not all DNA positions; global TNF still includes all DNA. Padding and
+ambiguous windows are masked, absent depth cannot leak, and no local coverage or
+variance is invented. Checkpoints retain online/target/predictor/optimizer and
+collapse/exposure histories. Exact native reload is distinct from the original
+failed cross-platform tolerance. Research CPM/E013 and pre/old/post exports run
+as separate processes; product `run`, `candidate` and `multiview-stage` keep their
+existing algorithms. Runtime/compute limits belong to the experiment, not ordinary
+product policy. A pretrained GLM could later complement this composition context.
+
 ## Multiview reconstruction candidate, dev5
 
 The experimental [E014 design](../experiments/E014-multiview-reconstruction/design.md)

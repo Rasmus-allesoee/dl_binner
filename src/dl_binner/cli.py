@@ -51,6 +51,12 @@ def main(argv=None):
     multi.add_argument('--output',type=Path,required=True)
     for name in ('fasta','depth','features','views','checkpoint','embeddings','parent','marker-cache','marker-hmm','marker-manifest','config','parent-features'):
         multi.add_argument('--'+name,type=Path)
+    context = commands.add_parser('context-stage', help='Experimental bounded DNA-context stage (dev7)',
+        description='Fresh context tokens, positive-only fit or exact reload. No truth, downloads or automatic retries.')
+    context.add_argument('--stage', choices=('tokens', 'train', 'embed'), required=True)
+    context.add_argument('--output', type=Path, required=True)
+    for name in ('fasta', 'features', 'views', 'tokens', 'checkpoint', 'config'):
+        context.add_argument('--'+name, type=Path)
     running.add_argument('--memory-gb', type=float, help='Optional sampled working process-tree RSS safeguard in GB; positive, no maximum')
     running.add_argument('--timeout', type=float, help='Optional overall invocation wall-time safeguard in seconds; positive, no maximum')
     running.add_argument('--resume', action='store_true', help='Verify matching inputs/source/config/runtime and reuse completed stages')
@@ -112,6 +118,10 @@ def main(argv=None):
             return run_pipeline(args)
         if args.command == 'multiview-stage':
             from .multiview.stage import run
+            run(args)
+            return 0
+        if args.command == 'context-stage':
+            from .context.stage import run
             run(args)
             return 0
         if args.output.exists():

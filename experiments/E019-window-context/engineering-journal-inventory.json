@@ -1,0 +1,52 @@
+{
+  "record": "E019 compact immutable failed engineering journals and initial source, not active candidate",
+  "scope": "Exact small source/terminal/geometry copies; no DNA, credentials, model weights or environments. All original run directories remain intact. Initial tests stay FAILED; current zero-residual source is separate.",
+  "files": {
+    "journals/initial-concatenation-model.py.txt": {
+      "bytes": 18622,
+      "sha256": "7457b50e8c93bfb508dfb17e7aba114e26b1d92f90eaa79b03ec2c42862b82e9",
+      "original_path": "artifacts/e019-window-context/build-v3/source/src/dl_binner/context/model.py"
+    },
+    "journals/initial-context-policy.json": {
+      "bytes": 198,
+      "sha256": "6ba8d252c488f539012335dc750d7f98deedfdae22e6b3c795f7078ea1fa13e0",
+      "original_path": "artifacts/e019-window-context/build-v3/source/src/dl_binner/resources/context.json"
+    },
+    "journals/original-GC-generator.py.txt": {
+      "bytes": 2784,
+      "sha256": "550c245dbba8313f0a5cc2765f259114915ae852e46e0364da2d68469368154f",
+      "original_path": "artifacts/e019-window-context/stability-v1/generator-source.py"
+    },
+    "journals/concatenation-GC-terminal.txt": {
+      "bytes": 3444,
+      "sha256": "e4e2f21fecb4deb1a75df1ccd0a1865802d1abc42c792beddb41d49572242ccd",
+      "original_path": "artifacts/e019-window-context/stability-v1/depth-train.log"
+    },
+    "journals/concatenation-GC-geometry-03.json": {
+      "bytes": 919,
+      "sha256": "3c0ca64d8330a16e74cd407819a716237daab32f936dc9875ae9ccac7bb0f11b",
+      "original_path": "artifacts/e019-window-context/stability-v1/depth-train/geometry-03.json"
+    },
+    "journals/concatenation-oligomer-terminal.txt": {
+      "bytes": 5827,
+      "sha256": "adb36a139e784719fe088ce1a28ad48ae222c0f645a42ac65bf8753fdb7485c2",
+      "original_path": "artifacts/e019-window-context/stability-v2-oligomer/depth-train.log"
+    },
+    "journals/concatenation-oligomer-geometry-05.json": {
+      "bytes": 918,
+      "sha256": "b42c349b85e3d6ba114d3614f4753b6fd1d905973225f45351a1733317c4b02b",
+      "original_path": "artifacts/e019-window-context/stability-v2-oligomer/depth-train/geometry-05.json"
+    },
+    "journals/unchanged-E016-GC-terminal.txt": {
+      "bytes": 5258,
+      "sha256": "125a6a7e92a91c92dcfee63a368dcb3efedd76e4a7cc9e61b222f1a22f41f630",
+      "original_path": "artifacts/e019-window-context/stability-e016-engineering/train.log"
+    },
+    "journals/unchanged-E016-GC-geometry-05.json": {
+      "bytes": 919,
+      "sha256": "d0dc18ed0afe6c455f1429012b1af5f615bfa1d43a4eb73ca15a124f09ff23ac",
+      "original_path": "artifacts/e019-window-context/stability-e016-engineering/train/geometry-05.json"
+    }
+  },
+  "logical_bytes": 38889
+}

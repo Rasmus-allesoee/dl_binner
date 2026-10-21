@@ -1,0 +1,34 @@
+{
+  "record": "E018 compact inspection backup explicitly approved in E019 task",
+  "status": "PASS_PRIVATE_UPLOAD_READBACK_EVERY_MEMBER",
+  "UTC": "2026-10-21T21:48:29.233737+00:00",
+  "archive": {
+    "bytes": 887152,
+    "sha256": "acd61c7bdbe85f860f4dd52e61e3d43314207f4ae45c32a9ebaff12201fae795"
+  },
+  "uri": "gs://dl-binner-archive-167650584170/e018/voteled-20261021T122945Z-b996f6a/inspection-approved-e019-20261021/compact-review.tar.gz",
+  "regular_payload_members": 200,
+  "logical_payload_bytes": 6322705,
+  "scope": "Closed snapshot before own receipt/final closure/commit. No DNA, credentials or environments.",
+  "export_upper_USD": 9.914696216583251e-05,
+  "storage_month_upper_USD": 1.652449369430542e-05,
+  "operations_and_storage_reserve_USD": 0.01,
+  "credit_gate": {
+    "checked_UTC": "2026-10-21T21:48:05.747406+00:00",
+    "remaining_DKK": 1889.28,
+    "status": "Available",
+    "scope": "Certain usage; Free Trial terms",
+    "expiry": "2027-01-12",
+    "paid": true,
+    "overview_cost_and_savings_DKK": 81.81,
+    "overview_net_DKK": 0,
+    "pending": "Unknown and may be delayed; 35 USD reserve",
+    "specific_upload_reserve_USD": 0.01,
+    "retention_end": "2026-10-28T00:00:00+01:00",
+    "no_compute": true,
+    "source": "Fresh read-only signed-in Chrome Credits/Overview plus ordinary Iowa Standard storage terms/prices"
+  },
+  "permissions_changed": false,
+  "retention_extended": false,
+  "old_journals_preserved": true
+}

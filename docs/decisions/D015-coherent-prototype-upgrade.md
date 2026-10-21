@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E018](../../experiments/E018-vote-led-recruitment/README.md) completed and is reviewed as ABANDON: permissive cached recruitment lowers both post endpoints/counts. Preserve E017 original/MODIFY, E016 broader anchor. Next is one coherent local window-context composition/information candidate with a separately costed future comparison; no new model/data/cloud execution here. Storage still ends October 28 at 00:00 Copenhagen.
+Current handoff: [E019](../../experiments/E019-window-context/README.md) implements the compact window-context learner locally and prepares a separately authorized $5 comparison. E016 remains the immutable development anchor; E017 original/MODIFY and E018 ABANDON are preserved. No new community/cloud execution here. Storage still ends October 28 at 00:00 Copenhagen.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
@@ -1022,3 +1022,55 @@ freeze precedes changed community outcomes. October 28 at 00:00 Copenhagen stays
 the storage boundary. AGENTS clarifies global vs per-guard peak growth: E018's
 3.524 GiB global snapshot delta is the whole-run sampled growth, not the 2.786 GiB
 maximum of reset guard counters. No original journal is rewritten.
+
+
+## E019 local context implementation, October 21–22, 2026
+
+[The prospective design](../../experiments/E019-window-context/design.md) implements
+one bounded local/global composition information route after E018's negative
+acceptance result. Up to eight real canonical-strand TNF windows interact with a
+global token in one width-64/four-head pre-norm attention block, followed by zero-initialized
+residual composition fusion and preserved original predictor initialization and explicit measured-parent depth. E016's real views/full-
+parent exposure, positive-only predictor/stopped EMA target/reconstruction and
+CPM/E013 remain anchors. Original accepted data/model/journals are immutable.
+
+Attention is explicitly considered and chosen for content-dependent local/global
+interaction with bounded sequence size, not as a mandatory fashionable ingredient.
+Pooling/CNN are serious simpler alternatives with different interaction priors.
+A pretrained GLM is complementary: it can add reference-trained sequence knowledge
+these target-trained TNF tokens lack. No payload, taxonomy, marker training or
+ensemble is implied, nor a family rejection based on old laptop projections.
+CompleteBin's source informs the concept; neither its whole-tool success nor its
+larger pretrained model is reproduced or causally isolated here. New context
+construction/fusion and deterministic initialization make this a bundle treatment.
+
+Integer indexed caches are ~6.42 GiB for the unchanged two-community eligible
+axes. No all-overlapping-crop bank or measured window coverage is invented. Tiny
+real reader/attention/gradient/EMA/reload/marker/CPM/E013/export/collection paths and
+ordinary installed regressions are engineering evidence only. The original concatenation version failed longer engineering stability on two
+profiles. E016 also fails GC-iid stress but passes oligomer20, exposing a new
+fusion/initialization regression. A prospective zero residual/preserved predictor
+correction passes 20 oligomer epochs in both modes without a new loss, seed,
+schedule or guard relaxation. Earlier journals stay failed, GC stress remains a
+limitation and native/full-community stability is still unproven. AGENTS records
+the durable lesson to investigate near-floor smoke dynamics with cheap longer
+engineering schedules before readiness, rather than weakening guards. Old Mac portability remains failed.
+
+Prepare one candidate-versus-preserved-E016 comparison, no baseline refit/rescore,
+no compulsory ablation campaign, same full populations/truth scope. Original
+practical KEEP requires >=0.5 percentage-point R95 gains in both scopes and no
+>=90% count loss; ABANDON if neither R95 nor either count improves, else MODIFY.
+No product/default or isolated-attention claim follows from one bundle result.
+A new $5 / eight-hour existing-VM request is separately priced (~$3.48 max quote),
+with native feasibility gate before community tokens/fits and all resource/STOP/
+credit/retention/return contracts. Current task starts none of it. October 28
+remains the storage boundary; no prior fit budgets carry onward.
+
+[Skin admission](../../experiments/E019-window-context/confirmation-plan.json)
+proceeds as protocol/source planning only. Actual source/genome/replicon/molecule/
+taxonomy joins, overlap/pretraining, duplicate-safe/zero-origin denominators,
+competitive ambiguity/unique-versus-origin truth and separate acquisition/compute/
+cost/retention still precede untouched confirmation. Genuine oral depth is also
+separate; these two communities do not isolate current depth benefit or unseen-
+genome/read-assembly robustness. Seek broader data at the coherent-candidate
+milestone before promotion, without a broad campaign to rescue E018.

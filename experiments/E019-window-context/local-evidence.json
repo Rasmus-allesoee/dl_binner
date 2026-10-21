@@ -1,0 +1,499 @@
+{
+  "record": "E019 final local engineering, prospective native comparison not executed",
+  "status": "PASS_FINAL_RESIDUAL_LOCAL_CONTRACTS; NATIVE_LINUX_COMMUNITY_PENDING; GC_STRESS_FAILURE_PRESERVED",
+  "UTC": "2026-10-21T23:02:58.592865+00:00",
+  "branch": "e019-window-context",
+  "parent_commit": "6620bfb52bb58ef2fac45a05a0885fc59c89e590",
+  "tests": {
+    "ordinary_installed_product": 35,
+    "including_new_actual_context_contracts": 6,
+    "parent_scope_release_headroom_archive_failure_review_admission": 5,
+    "actual_serial_two_mode_Snakemake_jobs": 15,
+    "actual_native_DAG_test": 1,
+    "total_unittest_cases_final": 41
+  },
+  "actual": "Installed owned pure-Python wheel outside checkout; real integer/mmap/DNA/strand readers, actual attention/gradient/initialization/EMA/stop-target/collapse/reload and generated/cached native marker/CPM/E013/complete DNA export; exact isolated collector and20-epoch timing adapter outside checkout; no scientific-reader mocks.",
+  "initialization": "Zero residual reproduces E016 shared states, predictor initialization and outputs exactly for identical inputs; first-step projection and subsequent attention/input gradients pass.",
+  "final_full_schedule_engineering": {
+    "depth": {
+      "epochs": 20,
+      "parents_seen_each_epoch": 1024,
+      "min_effective_rank": 4.155132852693183,
+      "last_geometry": {
+        "online": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 12.336122306618641,
+            "mean_dimension_std": 0.050758389781865636,
+            "mean_other_cosine": 0.8286341496530575,
+            "rows": 1024
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 20.476130811160434,
+            "mean_dimension_std": 0.06541600549805193,
+            "mean_other_cosine": 0.7210943694588332,
+            "rows": 1024
+          }
+        },
+        "target": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 22.753960001781984,
+            "mean_dimension_std": 0.05097054918854721,
+            "mean_other_cosine": 0.8301771527513241,
+            "rows": 1024
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 28.69098119801478,
+            "mean_dimension_std": 0.06352250031090051,
+            "mean_other_cosine": 0.7386000342958212,
+            "rows": 1024
+          }
+        }
+      },
+      "residual_state": {
+        "online_projection_norm": 0.8695223331451416,
+        "teacher_projection_norm": 0.09985499829053879,
+        "attention_change_norm": 1.1076809167861938
+      },
+      "model_seconds": 30.0541300219993,
+      "process_CPU_seconds": 112.005476
+    },
+    "sequence": {
+      "epochs": 20,
+      "parents_seen_each_epoch": 1024,
+      "min_effective_rank": 6.587343387466304,
+      "last_geometry": {
+        "online": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 11.57872345038731,
+            "mean_dimension_std": 0.023526010202512042,
+            "mean_other_cosine": 0.9634588103379538,
+            "rows": 1024
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 17.54619955902289,
+            "mean_dimension_std": 0.046503140544885,
+            "mean_other_cosine": 0.858585968892392,
+            "rows": 1024
+          }
+        },
+        "target": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 24.295722024003858,
+            "mean_dimension_std": 0.03226703859078529,
+            "mean_other_cosine": 0.9321141422061031,
+            "rows": 1024
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 28.94028444137549,
+            "mean_dimension_std": 0.06207487740277189,
+            "mean_other_cosine": 0.7504666644254705,
+            "rows": 1024
+          }
+        }
+      },
+      "residual_state": {
+        "online_projection_norm": 0.901138424873352,
+        "teacher_projection_norm": 0.11562954634428024,
+        "attention_change_norm": 1.0477430820465088
+      },
+      "model_seconds": 37.495501724999485,
+      "process_CPU_seconds": 102.087095
+    }
+  },
+  "engineering_differential": {
+    "unchanged_E016_oligomer20_epoch_pass": true,
+    "unchanged_E016_oligomer_final_sequence_rank": 23.4282695401148,
+    "initial_concatenation_failed": true,
+    "correction": "One prospective zero-initialized residual plus preserved original predictor initialization; no loss, seed, schedule, depth, view, downstream or guard relaxation.",
+    "causal_scope": "Diagnoses a fusion/initialization bundle stability regression, not the isolated benefit of residuals, attention, any feature family or binning quality."
+  },
+  "failed_learning_journals": [
+    {
+      "label": "original-concatenation-GC",
+      "path": "artifacts/e019-window-context/stability-v1/depth-train.log",
+      "binding": {
+        "bytes": 3444,
+        "sha256": "e4e2f21fecb4deb1a75df1ccd0a1865802d1abc42c792beddb41d49572242ccd"
+      },
+      "meaning": "Stopped at epoch 3, sequence effective rank 1.5067; source/generator/build and failed geometry retained"
+    },
+    {
+      "label": "original-concatenation-oligomer",
+      "path": "artifacts/e019-window-context/stability-v2-oligomer/depth-train.log",
+      "binding": {
+        "bytes": 5827,
+        "sha256": "adb36a139e784719fe088ce1a28ad48ae222c0f645a42ac65bf8753fdb7485c2"
+      },
+      "meaning": "Stopped at epoch 5 under unchanged rank guard"
+    },
+    {
+      "label": "unchanged-E016-GC-engineering",
+      "path": "artifacts/e019-window-context/stability-e016-engineering/train.log",
+      "binding": {
+        "bytes": 5258,
+        "sha256": "125a6a7e92a91c92dcfee63a368dcb3efedd76e4a7cc9e61b222f1a22f41f630"
+      },
+      "meaning": "Unchanged engineering anchor also stops at epoch 5; shared stress failure, not an accepted scientific result or proof data are defective"
+    }
+  ],
+  "GC_limit": "GC-iid failed the original context version and unchanged E016. This may combine low-dimensional inputs and a conservative rank proxy; it is unresolved, not a universal biological floor or repaired historical pass. Guard stays unchanged for future native admission and fits.",
+  "operational_failures": [
+    {
+      "path": "artifacts/e019-window-context/preparation/contracts-v1.log",
+      "reason": "Sandbox denied ps before child; approved process-read run passed."
+    },
+    {
+      "path": "artifacts/e019-window-context/integration-v1/generate.log",
+      "reason": "Same ps sandbox prerequisite; later bounded corrected attempt passed."
+    },
+    {
+      "path": "artifacts/e019-window-context/checks-v3/real-serial-context-DAG.log",
+      "reason": "Wrong local workflow prefix lacked Snakemake; fixed to accepted e001 workflow interpreter without reinstall."
+    },
+    {
+      "path": "artifacts/e019-window-context/preparation/final-adapter-attempt-1.json",
+      "reason": "Unsupported cwd keyword failed before child; actual supervisor API and parent chdir then passed."
+    }
+  ],
+  "resources": {
+    "threads_per_numerical_child": 4,
+    "local_RSS_ceiling_bytes": 8000000000,
+    "per_attempt_engineering_clock_seconds": 1800,
+    "final_contract_resources": {
+      "product-suite": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 322.9748398339998,
+        "peak_sampled_rss_bytes": 737505280,
+        "seconds_ceiling": 1796.7900149822235,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 26317,
+        "sampled_cpu_seconds": 234.5,
+        "sampled_average_cpus": 0.7260627487903596,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "parent-release-collection": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e019_contracts.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.0153689139988273,
+        "peak_sampled_rss_bytes": 66813952,
+        "seconds_ceiling": 1473.8226189613342,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 29706,
+        "sampled_cpu_seconds": 0.379999999999999,
+        "sampled_average_cpus": 0.3742482114244024,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "real-serial-context-DAG": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e019_native.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 34.73515211499944,
+        "peak_sampled_rss_bytes": 404066304,
+        "seconds_ceiling": 1472.8056681156158,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 29717,
+        "sampled_cpu_seconds": 40.190000000000005,
+        "sampled_average_cpus": 1.1570411399650973,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    "final_adapter_resources": {
+      "runtime-independent-v4": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/preparation/audit-local-runtime-v4.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 25.724257894000402,
+        "peak_sampled_rss_bytes": 311549952,
+        "seconds_ceiling": 597.8747951984406,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 30057,
+        "sampled_cpu_seconds": 24.76,
+        "sampled_average_cpus": 0.9625156186050642,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "actual-isolated-timing-adapter": {
+        "command": [
+          "/opt/miniconda3/bin/python3",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e019_timing.py",
+          "--python",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+          "--epochs",
+          "20",
+          "--output",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/timing-adapter-final"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 106.80788555300023,
+        "peak_sampled_rss_bytes": 425447424,
+        "seconds_ceiling": 572.1490612030029,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 30225,
+        "sampled_cpu_seconds": 262.78,
+        "sampled_average_cpus": 2.460305235324626,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    "peak_sampled_tree_RSS_bytes": 737505280,
+    "local_extra_bytes_including_all_new_owned_prefixes": 3303876398,
+    "local_extra_ceiling_bytes": 4294967296,
+    "free_local_bytes": 44982689792,
+    "global_guard_scope": "Final checks and adapter include original artifact bytes plus sampled filesystem growth; earlier direct setup copies/AST/stdlib checks are not separately RSS sampled."
+  },
+  "runtime": {
+    "python": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+    "python_version": "3.10.15",
+    "platform": "Darwin",
+    "complete_independent_distributions": 28,
+    "owned_source_files": 36,
+    "probe": {
+      "bytes": 16795,
+      "sha256": "a0756dc370051b51bd5ecf55ac7b28c5ae51854a6f3f4803d99dafe2f277ec2c"
+    },
+    "numerical_distributions": "Owned copies from accepted local base; source base untouched, all observed native library content hashes match prior admission. New package independently installed. Not a portable prefix.",
+    "local_workflow_version": "9.13.7; actual15-job serial DAG. Native9.16.3/Python3.12.10 still needs fresh gates."
+  },
+  "packaging": {
+    "status": "PASS",
+    "wheel": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/build-v4/dist/dl_binner-0.1.0.dev7-py3-none-any.whl",
+    "wheel_binding": {
+      "bytes": 103502,
+      "sha256": "5e0785531f0924675873be9bc6527d65dcbff7598760ee8be0636bb26dc931f7"
+    },
+    "sdist": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/build-v4/dist/dl_binner-0.1.0.dev7.tar.gz",
+    "sdist_binding": {
+      "bytes": 88251,
+      "sha256": "c217e1475059ffa252da2b13b9edecd5b1ccdf4c423ed252321c2fe3f0018d78"
+    },
+    "logical_package": {
+      "dl_binner/__init__.py": {
+        "bytes": 112,
+        "sha256": "0c20fbc9684299d19a2d2cca6607b71eb8164928ab2119f079b2c26f81e9a01d"
+      },
+      "dl_binner/__main__.py": {
+        "bytes": 103,
+        "sha256": "28f47a18f1a12c011b4fa92812d8f4fb10840c469d489ee5ac246bc669620144"
+      },
+      "dl_binner/accounting.py": {
+        "bytes": 6732,
+        "sha256": "2a83aad8eb36864a704ebe72faeeba33c335c86f7072205f6f19c92db9f6f117"
+      },
+      "dl_binner/cli.py": {
+        "bytes": 11565,
+        "sha256": "858943ab0a050285e50866cdf77188f89bfa5a6fa9f086a5eca10992a6792ea9"
+      },
+      "dl_binner/clustering.py": {
+        "bytes": 7880,
+        "sha256": "2ac715b1449287b002ef7e4a75b84ef204256c2d5f589e31a6810acfad941b66"
+      },
+      "dl_binner/contracts.py": {
+        "bytes": 1671,
+        "sha256": "0455b5a45ecbb29eb1f6c168048efa3a861279dc7ba2af36896ddb6dfcab632d"
+      },
+      "dl_binner/io.py": {
+        "bytes": 12016,
+        "sha256": "71b0c423c046b3c72b651141e853ea622a62742fc087afeef37fbf9c253c2307"
+      },
+      "dl_binner/model.py": {
+        "bytes": 13986,
+        "sha256": "acc1f3c450910112cd7883cc6284139046fde6b339e73b82638d301d8e5a9948"
+      },
+      "dl_binner/runner.py": {
+        "bytes": 20667,
+        "sha256": "99cbd7a14c360011b473dd22a03777eb7e3dfff109f11c78a2f5c1f067af3e8f"
+      },
+      "dl_binner/supervision.py": {
+        "bytes": 9575,
+        "sha256": "8ee9bd7d5f05a8e487a8691f7ab8152cca627f9f55ad27d48c6ece61cbd9a8a9"
+      },
+      "dl_binner/candidate/__init__.py": {
+        "bytes": 81,
+        "sha256": "5887ddf687250cefcf87aaa082c5a4edc9a5281a8a1be7a752300a5fcb190eff"
+      },
+      "dl_binner/candidate/grouping.py": {
+        "bytes": 12615,
+        "sha256": "d31c67705b2fc80d5fd06d8b2c403d7e543ebd64fc37c08b5b3db90ba657f233"
+      },
+      "dl_binner/candidate/markers.py": {
+        "bytes": 11226,
+        "sha256": "a77739cb64d219bf3af8e2baeb66ed81c86c53a8c5c633a184ee28412ee2760a"
+      },
+      "dl_binner/candidate/model.py": {
+        "bytes": 10499,
+        "sha256": "09eda66fcd324870d11b89c6f6b4bc7e4c02f3169d6d557389bc8c840de76f09"
+      },
+      "dl_binner/candidate/runner.py": {
+        "bytes": 12350,
+        "sha256": "ab153821b9bacf70373c7ffd79c058b1be356a6f96bdfae5aa8638cf4bdab2eb"
+      },
+      "dl_binner/candidate/views.py": {
+        "bytes": 8357,
+        "sha256": "d3f1b51ac61009f9f962d767fce5600d5c93bd14b4ca9adb4bdef7564438392f"
+      },
+      "dl_binner/context/__init__.py": {
+        "bytes": 83,
+        "sha256": "fa4215cc76f8b617b7771580085721dca8241e368ce96d7559cac2cca52bf5b9"
+      },
+      "dl_binner/context/model.py": {
+        "bytes": 19289,
+        "sha256": "f05c3ef2526880401af21e5bdb9a26f84b6faffc077bdeb882ff7678f0b9a4cf"
+      },
+      "dl_binner/context/stage.py": {
+        "bytes": 1234,
+        "sha256": "9174c043a838eec041b883ed9f1b0fe3323cb275db0199adee96c2a021997f5f"
+      },
+      "dl_binner/context/tokens.py": {
+        "bytes": 11844,
+        "sha256": "e2e2827798d085f245b20ec28830713d93fc189dee02998690d87b726e3ae7a2"
+      },
+      "dl_binner/information/__init__.py": {
+        "bytes": 83,
+        "sha256": "381d0d6bcd5fa452ba19db73173e5aa825dd30b4b704c1e9bd633466ce750050"
+      },
+      "dl_binner/information/audit.py": {
+        "bytes": 6106,
+        "sha256": "64ca1b8f66f641be3a5c79af94333db507dd3875171758a2af042df1714f9be2"
+      },
+      "dl_binner/information/export.py": {
+        "bytes": 4480,
+        "sha256": "1a6603b31de105de6a95afb16db1036a467e9dc12b9d843da53b3281caacfb5a"
+      },
+      "dl_binner/information/grouping.py": {
+        "bytes": 24866,
+        "sha256": "9d1f665b1f5024bdde90a86d536c6679cb3a5fbdb9635348141272d8de3d5235"
+      },
+      "dl_binner/multiview/__init__.py": {
+        "bytes": 85,
+        "sha256": "7724296c827c8ae34dc7558de991243c52ee78c1b8a37837e3070487657fe160"
+      },
+      "dl_binner/multiview/arrays.py": {
+        "bytes": 1395,
+        "sha256": "e6239aaa8ca298b5afd97d4c45ab58ff72183f485e4263226aebbcae03500a97"
+      },
+      "dl_binner/multiview/downstream.py": {
+        "bytes": 7469,
+        "sha256": "a24e96291dc6e779734e6990008296e7e7d8d3e400ff9102004a09959fa8fbbb"
+      },
+      "dl_binner/multiview/model.py": {
+        "bytes": 10256,
+        "sha256": "6342819c74f8d7da4cc23bea7666169de605d2c391ce3711d98243fc88f550d2"
+      },
+      "dl_binner/multiview/positive.py": {
+        "bytes": 15492,
+        "sha256": "133f54087e5516c6e90a6c71667e8b9e4b5cb5a1428d6418be1fc28393453ec6"
+      },
+      "dl_binner/multiview/refinement.py": {
+        "bytes": 16783,
+        "sha256": "0c1bae1f0fd5e8873cc30e68218e6796e87bf43b7d9262d2ec42fd781a51b8c0"
+      },
+      "dl_binner/multiview/stage.py": {
+        "bytes": 2190,
+        "sha256": "a06543d0cd70ba4a63637a7072b96d03becc773c7ae0ba1dbeb4c603b2677581"
+      },
+      "dl_binner/multiview/views.py": {
+        "bytes": 9370,
+        "sha256": "0b3a00b87c17cd56417e589ebcb3a9f3234f85f4c14ac0b9204a680dc2590935"
+      },
+      "dl_binner/resources/candidate.json": {
+        "bytes": 678,
+        "sha256": "1c8049fa2cf70e51c2eab22fc7fe5cd0e626f807360b56ff2b392756207baa60"
+      },
+      "dl_binner/resources/context.json": {
+        "bytes": 267,
+        "sha256": "90bc99e68c31be2456dbe8b04fe4d438e1613b6cec62f7db4ab72ab6a7db5387"
+      },
+      "dl_binner/resources/multiview.json": {
+        "bytes": 799,
+        "sha256": "0f532c4912b002c5cdb2ebde48bf172c96577f3edb066a1c03864e2b537c6038"
+      },
+      "dl_binner/resources/training.json": {
+        "bytes": 215,
+        "sha256": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5"
+      }
+    },
+    "builder": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python",
+    "sdist_rebuilt_logical_package_exact": true,
+    "rebuilt_wheel": {
+      "bytes": 103502,
+      "sha256": "5e0785531f0924675873be9bc6527d65dcbff7598760ee8be0636bb26dc931f7"
+    }
+  },
+  "portability": "Original E010 Mac allclose failure and exact tolerance unchanged. New same-runtime exact reload is a separate pass; no Linux/full-scale claim.",
+  "native_pending": [
+    "current complete runtime/source/import/library/CLI",
+    "actual both-mode20-epoch generated training/reload/learned-state/CPM/marker/export/collector gates",
+    "native timing and full headroom under original VM-start clock",
+    "fresh live credit/prices/product/storage/retention",
+    "fresh held-parent boot/PID/start/command watcher and provider STOP"
+  ],
+  "cloud": {
+    "VM_status": "TERMINATED",
+    "lastStartTimestamp": "2026-10-21T05:29:42.797-07:00",
+    "lastStopTimestamp": "2026-10-21T05:47:49.812-07:00",
+    "VM_started": false,
+    "paid_compute": false,
+    "resource_or_retention_change": false,
+    "authorized_E018_backup": {
+      "bytes": 1458,
+      "sha256": "b0df494adfad41df3fadad321bd501b51b85fab0d0d0a338fae29e1aa4dc2cf2"
+    }
+  },
+  "community_fit_or_score": false,
+  "bulk_context_bank_or_DNA_acquisition": false,
+  "external_tool_run": false,
+  "confirmation_acquired": false,
+  "accepted_science_replayed": false,
+  "prospective_comparison": {
+    "bytes": 6035,
+    "sha256": "f15245ded721a776d8b8b46143622757457f7ce5792b6c88192395f0a2383c5a"
+  },
+  "compact_failed_source_and_journals": {
+    "bytes": 2717,
+    "sha256": "08498b8cc257f9eabecb5c8b44bbe25e41b844562ed40cf761c26fbe64338076"
+  }
+}

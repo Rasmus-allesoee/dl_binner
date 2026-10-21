@@ -1,0 +1,55 @@
+{
+  "record": "E019 prospective window-context candidate",
+  "status": "FROZEN_BEFORE_CHANGED_COMMUNITY_OUTCOMES",
+  "opened": "2026-10-21",
+  "design": {
+    "bytes": 9729,
+    "sha256": "5505f68791d531a0cb812a5b08a24beb68aecd7ec05460c553ce3336bcc423ce"
+  },
+  "treatment": "One compact local/global DNA-window attention branch with zero-initialized residual composition fusion and exactly preserved E016 shared/predictor initialization. Losses, views/exposure, depth and CPM/E013 unchanged.",
+  "candidate_version": "0.1.0.dev7",
+  "seed": 11,
+  "epochs": 20,
+  "batch_size": 256,
+  "units": [
+    "E009-context",
+    "oral-context"
+  ],
+  "retained_baseline": "E016 positive-only post/pre/old summaries, never refit or rescored",
+  "retained_context": [
+    "E017 original/MODIFY",
+    "E018 ABANDON",
+    "E014/E015/dev4/E013/dev3/MetaBAT2"
+  ],
+  "keep": "Both post full-reference weighted R95 improve by at least 0.005 absolute over E016 and neither >=90% target count falls.",
+  "abandon": "Neither post R95 improves and neither >=90% target count improves.",
+  "modify": "All other mixed outcomes, retaining original criteria without tuning or per-community/per-bin oracle routing.",
+  "metrics": [
+    "paired parent/old/E013 recovery",
+    "per-target recovery and >=50/90% counts",
+    "all length/origin/eligibility/marker/unknown/non-target/excluded/unassigned populations",
+    "neighborhood and effective-rank/collapse histories",
+    "CPU allocation/wall/sample CPU/RSS/peak disk/export separately"
+  ],
+  "truth": {
+    "E009": "Admitted conservative-v2; full 156 references/554661890bp; 3.3034% N quarantine unchanged",
+    "oral": "Separately named provided-origin oracle; full 799/2083072211bp; known-shared sensitivity; no claim of unique source support"
+  },
+  "limits": {
+    "extra_disk_bytes": 21474836480,
+    "free_reserve_bytes": 26843545600,
+    "return_compressed_bytes": 3221225472,
+    "review_extra_bytes": 10737418240,
+    "sampled_RSS_bytes": 26000000000,
+    "seconds_from_VM_start": 28800,
+    "provider_STOP_seconds": 29700,
+    "threads": 4,
+    "loader_workers": 0
+  },
+  "extra_ablation": "None now; at most one later prospective control only if it would change design, not a factorial campaign.",
+  "no_confirmation_data": true,
+  "truth_in_training": false,
+  "not_isolated_attention_or_feature_family_proof": true,
+  "engineering": "Final generated oligomer 20-epoch two-mode stability/exact reload and real isolated adapter pass; initial concatenation/GC stress failures retained without threshold relaxation. No community quality scores.",
+  "portability": "Original failed Mac allclose tolerance stays failed; same-runtime exact reload is a separate contract."
+}

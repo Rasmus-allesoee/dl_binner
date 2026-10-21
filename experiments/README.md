@@ -24,6 +24,7 @@ reproduced result of this project.
 - [E016: positive-only online/target multiview learner](E016-positive-only-multiview/README.md)
 - [E017: fixed-learning information-aware core grouping and recruitment](E017-information-aware-grouping/README.md)
 - [E018: cached vote-led/profile-admissibility recruitment](E018-vote-led-recruitment/README.md)
+- [E019: compact window-context composition learner](E019-window-context/README.md)
 
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 

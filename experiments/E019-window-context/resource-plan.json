@@ -1,0 +1,140 @@
+{
+  "record": "E019 prospective separately authorized two-fit comparison",
+  "status": "PREPARED_NOT_AUTHORIZED_OR_EXECUTED",
+  "UTC": "2026-10-21T23:02:56.260555+00:00",
+  "ceiling_USD": 5,
+  "machine": "Existing e2-standard-8: 8 allocated vCPU / 32 GiB; existing 300 GiB balanced +30 GiB standard; no resource changes",
+  "limits": {
+    "extra_disk_bytes": 21474836480,
+    "free_reserve_bytes": 26843545600,
+    "return_compressed_bytes": 3221225472,
+    "review_extra_bytes": 10737418240,
+    "sampled_RSS_bytes": 26000000000,
+    "seconds_from_VM_start": 28800,
+    "provider_STOP_seconds": 29700,
+    "threads": 4,
+    "loader_workers": 0
+  },
+  "units": {
+    "E009-context": {
+      "training_parents": 89041,
+      "context_NPY_bytes": 1026910365,
+      "online_parameters": 196434,
+      "teacher_parameters": 196434,
+      "predictor_parameters": 33664,
+      "tiny_steady_epoch_seconds": 1.4406552569998894,
+      "unadjusted_linear_20_epoch_Mac_seconds": 2505.4176706743583,
+      "native_E016_fit_seconds_context_only": 250.99730641900004,
+      "tiny_full_width_epochs": 20,
+      "tiny_full_width_profile": "oligomer",
+      "tiny_1024_twenty_epoch_wall_seconds": 30.0541300219993,
+      "tiny_process_CPU_seconds": 112.005476,
+      "residual_state": {
+        "online_projection_norm": 0.8695223331451416,
+        "teacher_projection_norm": 0.09985499829053879,
+        "attention_change_norm": 1.1076809167861938
+      }
+    },
+    "oral-context": {
+      "training_parents": 508763,
+      "context_NPY_bytes": 5867564191,
+      "online_parameters": 178440,
+      "teacher_parameters": 178440,
+      "predictor_parameters": 33664,
+      "tiny_steady_epoch_seconds": 1.5336812780005857,
+      "unadjusted_linear_20_epoch_Mac_seconds": 15239.849375769765,
+      "native_E016_fit_seconds_context_only": 1196.0656017649999,
+      "tiny_full_width_epochs": 20,
+      "tiny_full_width_profile": "oligomer",
+      "tiny_1024_twenty_epoch_wall_seconds": 37.495501724999485,
+      "tiny_process_CPU_seconds": 102.087095,
+      "residual_state": {
+        "online_projection_norm": 0.901138424873352,
+        "teacher_projection_norm": 0.11562954634428024,
+        "attention_change_norm": 1.0477430820465088
+      }
+    }
+  },
+  "rate_source": {
+    "bytes": 8003,
+    "sha256": "44cc38063dadb65521edfc928a2ed887b0afaab89079373685be9467f942aa2e"
+  },
+  "USD_quote_method": "Current DKK Catalog SKU prices divided by their published currencyConversionRate; no Free Tier discounts assumed",
+  "compute_IP_USD_per_hour": 0.2730456762592464,
+  "disk_USD_per_hour": 0.04193548380356186,
+  "existing_disk_USD_per_month": 31.199999949850024,
+  "expected_VM_hours_range": [
+    3,
+    7
+  ],
+  "maximum_provider_hours": 8.25,
+  "maximum_quoted_compute_IP_USD": 2.2526268291387828,
+  "maximum_run_disk_attribution_USD": 0.34596774137938535,
+  "maximum_new_export_USD": 0.36,
+  "small_metadata_ops_storage_USD": 0.02,
+  "cost_uncertainty_reserve_USD": 0.5,
+  "maximum_incremental_quote_USD": 3.478594570518168,
+  "practical_expected_gross_USD_range": [
+    1.2,
+    2.8
+  ],
+  "linear_tiny_kernel_Mac_hours": 4.929240846234479,
+  "native_feasibility": "Not proven. Actual both-mode Linux 1,024-parent / 20-epoch oligomer stability/reload/state inspection plus 2x measured kernel allowance and 5,400 s other-stage reserve must fit the remaining original clock before community tokens or fits.",
+  "sampled_RAM_forecast_GB": [
+    12,
+    20
+  ],
+  "peak_extra_disk_forecast_GiB": [
+    13,
+    18.3
+  ],
+  "context_bank_bytes_total": 6894474556,
+  "peak_components_GiB": {
+    "token_counts_coordinates": 6.420979794114828,
+    "new_model_embedding_graph_partition_export_estimate": 5.5,
+    "return_archive": 3,
+    "readback_second_archive": 3,
+    "owned_package_setup_and_gates": 0.3
+  },
+  "coexistence_note": "Worst planned sum about18.2GiB; global growth guarded across setup/science/collection/readback. Return/readback coexist; no source feature/view/runtime copy. 20GiB cap and25GiB reserve remain, stop instead of silent deletion/resize.",
+  "return_expected_compressed_GiB": [
+    1,
+    2
+  ],
+  "return_cap_GiB": 3,
+  "return_omissions": "Indexed token NPY and full accounted DNA retained on disk with hashes; every checkpoint/embedding/graph/partition/choice/assignment/history returned. Omission hashes are not backups.",
+  "review_plan": "Stage sequentially after actual manifest/export/fresh credit check: up to3GiB compressed+4GiB unpacked+3GiB diagnostic scratch=10GiB; four threads/8GB sampledRSS/one hour.",
+  "storage": {
+    "approval_USD": 8,
+    "ending": "2026-10-28T00:00:00+01:00",
+    "interval_physical_hours": 169,
+    "current_all_versions_count": 94,
+    "current_all_versions_bytes": 7214743636,
+    "soft_deleted_count": 0,
+    "whole_interval_forecast_with_max_new_archive_and_reserve_USD": 7.632097810945131,
+    "extension_authorized": false
+  },
+  "fresh_prerequisites": [
+    "live credit balance/scope/expiry and delayed usage reserve",
+    "current applicable prices and product coverage",
+    "original storage horizon extends beyond provider STOP",
+    "provider VM/disks identity and guest headroom/mount",
+    "exact clean source, tested wheel/source/defaults/HMM/accepted axes/cache",
+    "complete independent owned package environment with original runtime reused read-only",
+    "all new Linux imports/tiny token/attention/train/reload/graph/marker/export/collector gates",
+    "fresh boot/PID/start/command held-parent watcher tested live/normal/crash plus verified provider STOP",
+    "native timing feasibility and tested manifest-inclusive return cap"
+  ],
+  "no_budget_carries_over": true,
+  "provision_resize_retention_or_new_data": false,
+  "allocated_vCPU_hours_expected": [
+    24,
+    56
+  ],
+  "allocated_vCPU_hours_at_provider_cap": 66,
+  "indicative_sampled_CPU_hours": [
+    9,
+    24
+  ],
+  "CPU_forecast_scope": "Rough active4-thread kernel extrapolation plus IO/graph uncertainty. Sample process CPU and allocated vCPU-hours separately; neither is a dollar quote."
+}

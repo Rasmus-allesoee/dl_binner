@@ -1,8 +1,34 @@
 # Google Cloud workspace operations
 
-Updated: 2026-10-21 (Copenhagen; initial provisioning receipts are October 13 UTC).
+Updated: 2026-10-22 (Copenhagen; initial provisioning receipts are October 13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
+
+**E019 is local preparation only; no VM start or new community work.**
+[Its operations](../experiments/E019-window-context/OPERATIONS.md) prepares a
+separate new $5 / eight-hour comparison on the unchanged VM/disks, with an
+8.25-hour STOP, native feasibility/source/runtime/headroom/credit gates, four
+threads/26 GB sampled RSS/25 GiB reserve/20 GiB extra/3 GiB return. Maximum current-
+SKU quote ~$3.48 with reserve; none of that execution is authorized by local coding.
+
+The sole new cloud write is the explicitly approved [E018 compact inspection
+backup](../experiments/E018-vote-led-recruitment/inspection-backup.json), 887,152
+bytes/all 200 payload members, privately uploaded and read back October 21 at
+21:48 UTC / 23:48 Copenhagen. Every member verifies; no DNA/auth/environment or
+permissions change. Assessed export upper $0.00009915, storage $0.00001652/month,
+plus small operations within $0.01. No compute usage.
+
+Fresh read-only Credits/Overview: DKK 1,889.28 Available / 96%, Certain usage /
+net pricing, January 12, 2027 expiry, paid account. October 1–21 costs/savings
+DKK 81.81, net zero; delayed usage unknown, $35 reserve retained. Five Catalog
+SKU expressions/rates are refreshed. 94 versions / 7,214,743,636 bytes and zero
+soft-deleted objects; separate $8 storage ending October 28 at 00:00 Copenhagen
+remains, with whole-interval forecast including maximum new E019 return ~$7.63.
+No extension, deletion, new service/resource or reconfiguration. Fresh guest
+headroom is pending the later authorized start; last native minimum was 81.148 GiB.
+
+The following E018 execution/cost snapshot is **dated completed history**, not
+a new current authorization. Its old credit balance is retained as observed.
 
 **E018 completed, privately returned, checksum-verified and reviewed: ABANDON.
 VM independently TERMINATED.** [Inspection](../experiments/E018-vote-led-recruitment/inspection-observed.json)
@@ -45,10 +71,10 @@ plus $0.50 reserve forecast **$7.618**, below $8. Stopped disks remain $31.20/mo
 No extension, automatic renewal/deletion, pruning or bulk backup/migration occurs.
 The owner-approved earlier E017 compact inspection backup is uploaded/read back;
 [receipt](../experiments/E017-information-aware-grouping/inspection-backup.json).
-E018's compact local review seal is separately identified; no unapproved upload.
+E018's then-local seal was later explicitly approved/uploaded; see the new backup receipt above.
 
-The next [prompt](../experiments/E018-vote-led-recruitment/OPERATIONS.md#exact-following-prompt)
-proposes local window-context implementation and a priced separate comparison.
+The dated E018 [prompt](../experiments/E018-vote-led-recruitment/OPERATIONS.md#exact-following-prompt)
+was invoked for E019 local implementation; E019 now owns the next execution request.
 It does not authorize new VM work under this $1. Oral reads/mapping/new datasets
 are separately costed scopes, not implicit extensions. Source/runtime/credit/
 headroom/original retention gates remain necessary for any later native work.

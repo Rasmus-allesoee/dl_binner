@@ -1,0 +1,10 @@
+{
+  "tokens": 8,
+  "token_min_interval": 256,
+  "token_max_bp": 512,
+  "context_width": 64,
+  "context_heads": 4,
+  "context_ff": 128,
+  "context_layers": 1,
+  "context_inference_batch_size": 256
+}

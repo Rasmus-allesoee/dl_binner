@@ -535,3 +535,14 @@ families or show a coding failure. Next is one coherent window-context compositi
 information learner as the previously leading later route, with local engineering
 and separately priced future execution. Untouched skin and current-system depth
 questions retain explicit admission/cost/retention dependencies; no new DNA/cloud.
+
+
+2026-10-22 — [E019](../../experiments/E019-window-context/README.md) implements the
+prospectively selected compact window-context information/encoder block locally.
+Q001/Q003/Q005 remain open: attention plus local tokens/fusion is a bundle, and
+no community quality/transfer outcome exists. E016 learning and CPM/E013 anchor
+the first separately priced comparison; all earlier results/failures remain.
+Engineering fixtures do not prove full-schedule stability/affordability; native
+rank/resource/credit/source gates precede community work. No score/grid/refit or
+new data occurs. A frozen GLM may complement context; skin and oral depth keep
+separate source/truth/cost/retention admissions. October 28 storage remains.

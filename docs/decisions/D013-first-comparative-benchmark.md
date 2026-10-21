@@ -1,6 +1,6 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E018](../../experiments/E018-vote-led-recruitment/README.md) completed and is reviewed as ABANDON: permissive cached recruitment lowers both post endpoints/counts. Preserve E017 original/MODIFY, E016 broader anchor. Next is one coherent local window-context composition/information candidate with a separately costed future comparison; no new model/data/cloud execution here. Storage still ends October 28 at 00:00 Copenhagen.
+Current handoff: [E019](../../experiments/E019-window-context/README.md) implements the compact window-context learner locally and prepares a separately authorized $5 comparison. E016 remains the immutable development anchor; E017 original/MODIFY and E018 ABANDON are preserved. No new community/cloud execution here. Storage still ends October 28 at 00:00 Copenhagen.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.

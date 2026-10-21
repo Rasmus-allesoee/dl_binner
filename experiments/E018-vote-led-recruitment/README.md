@@ -194,3 +194,10 @@ community fit or resolve the original Mac numerical portability failure. Native
 gates remain required. Keep before/after source/cache hashes and every failed
 journal. Compact returns omit full final FASTAs, which remain on the work disk;
 omission hashes are not backups.
+
+
+October 21–22 follow-through: the owner invokes the next prompt; [E019](../E019-window-context/README.md)
+implements the window-context candidate locally and prepares its separate run.
+The new [E018 inspection backup](inspection-backup.json) is explicitly approved,
+privately uploaded/read back and all 200 payload members verify. No accepted
+E018 scientific output or negative conclusion is rewritten.
