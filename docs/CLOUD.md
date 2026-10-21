@@ -1,54 +1,64 @@
 # Google Cloud workspace operations
 
 Updated: 2026-10-21 (Copenhagen; initial provisioning receipts are October 13 UTC).
-[D014](decisions/D014-google-cloud-workspace.md) owns the provider choice;
+[D014](decisions/D014-google-cloud-workspace.md) owns provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
 
-**Current E017 execution:** phase `information-20261020T232634Z-e78d766` is running
-under the owner's new $2 authorization. [Native receipt](../experiments/E017-information-aware-grouping/native-observed.json)
-and [operations](../experiments/E017-information-aware-grouping/OPERATIONS.md) own
-exact source, stages, evidence and the next inspection prompt. Prepared `067ceb2`
-is preserved; source `e78d766` is a tested launcher-only repair, with the original
-candidate lock/wheel/policy/learning unchanged. All nine native admission stages
-pass. Real E009 core-index/affinity/recruitment progress is observed; outcome and
-complete return are not yet reviewed. No training, inference, community marker
-redetection, old scoring or confirmation acquisition occurs.
+**E017 completed and was independently reviewed; VM TERMINATED.**
+[Inspection](../experiments/E017-information-aware-grouping/inspection-observed.json)
+binds control-plane state, guest/private completion SHA, matching boot/PID/start/
+command watchdog exit, nine native gates, eight serial science rules plus target,
+retained reuse-before/after, collection and three upload/readback pairs. Source
+`e78d766` and prepared `067ceb2` remain; no VM wake/new job, resource/service or
+retention change occurred in inspection. Original Mac and local reader failures
+are preserved; the local schema adapter repair does not change native science.
 
-Existing e2-standard-8 / 8 vCPUs / 32 GiB, 300 GiB balanced work plus 30 GiB standard
-boot remain. No provisioning, resize, new service, security change or deletion.
-Initial work-disk free space is **90.24 GiB**. The new boot/process-bound watcher
-is armed/tested, with the held parent alive and no automatic restart. VM start:
-**October 21, 01:26:31 Copenhagen** (October 20, 23:26:31 UTC); science release:
-01:30:45. The original three-hour clock ends **04:26:31**, provider STOP at
-**04:41:31 Copenhagen**. Four numerical threads, 26 GB sampled tree RSS, 25 GiB
-free reserve, 20 GiB extra work, 3 GiB compressed return. No automatic retry,
-accepted-science replay, resource/retention expansion or clock extension.
+Allocation: **October 21, 01:26:31.522 → 01:57:35.627 Copenhagen**
+(October 20, 23:26:31.522 → 23:57:35.627 UTC), **1,864.105 seconds / 31.07 minutes**,
+8 vCPU / 32 GiB, existing 300 GiB work + 30 GiB boot. Watcher requested shutdown
+at 01:55 Copenhagen after its bound parent exited. Provider independently reports
+TERMINATED; 11,700-second STOP / no automatic restart remains a fallback, not
+permission for another start. Science 1,238.96 seconds, sampled CPU 1,389.23 seconds,
+sampled tree RSS 9.347 GB. Charged allocation is 4.1425 vCPU-hours; sampled CPU is
+not provider pricing. Sampled growth 5.567 GiB / minimum free 84.671 GiB fit the
+20 GiB extra / 25 GiB reserve bounds.
 
-Fresh signed-in Welcome credit is **DKK 1,896.60 Available / 96%**, net pricing,
-paid account, expiry January 12, 2027. Overview October 1–21 cost and savings are
-both DKK 75.70, net zero. Pending usage remains unknown: the live tooltip says
-reporting can exceed 24 hours. Keep $30 prior-usage and $5 prior-storage reserves;
-do not attribute a credit difference to this phase. Five applicable SKU
-expressions/regions/categories and currency conversion are unchanged. Ordinary
-existing E2 CPU/RAM, nonpremium Ubuntu, PD, IPv4 and private Iowa Standard
-storage/network/operations remain covered under [current credit terms](https://docs.cloud.google.com/free/docs/free-cloud-features)
-and [storage prices](https://cloud.google.com/storage/pricing?hl=en).
+All **1,055,048,062 archive bytes / 245 members / 1,835,035,318 logical bytes**
+verify, SHA256 `7b45916a0b7bd2dc938595c40a501af97ae8d1585a67b23b34103f985a6ca5fc`.
+No aliases. Complete sparse/candidate/profile/selection/assignment and source/axes
+contracts pass. Full native FASTAs and shared science/runtime bytes remain on disk;
+omission hashes are not backups. Private/guest completion delivery agrees; a
+self-contained completion-upload exit is not invented inside its pre-upload record.
 
-Gross compute/IP rate is $0.273046 per hour, disks $0.0419355 per hour
-($31.20/month while stopped). Maximum provider interval, disks, 3 GiB export at
-$0.12/GiB and $0.25 storage/operations reserve total **$1.63369**, below $2.
-This is an allocation/SKU forecast, not sampled-CPU pricing or a reconciled invoice.
-Measured uptime/final export must be priced after verified shutdown.
+Fresh Credits/Overview: **DKK 1,893.83 Available / 96%**, Certain usage, net pricing,
+paid billing, expiry January 12, 2027. October 1–21 cost/savings both DKK 78.24,
+net zero. Reporting may exceed 24 hours; pending use remains unknown with $30
+prior-usage / $5 prior-storage reserves. Five current SKU pricing expressions,
+regions and categories are unchanged. Existing ordinary E2 / nonpremium Ubuntu /
+PD / IPv4 / Iowa private Standard storage/network/operations remain eligible under
+[current credit terms](https://docs.cloud.google.com/free/docs/free-cloud-features)
+and [storage pricing](https://cloud.google.com/storage/pricing?hl=en). No free
+allowance, reconciled invoice or credit-delta attribution is assumed.
 
-**Storage remains separately approved up to $8**, October 21 at 00:00 through
-**October 28 at 00:00 Copenhagen**, 169 hours across DST. The original
-[storage admission](../experiments/E017-information-aware-grouping/storage-admission.json)
-is preserved. Fresh inventory: **80 versions / 5,769,263,696 bytes**, zero
-soft-deleted bytes; private Iowa Standard controls unchanged. Conservatively adding
-the maximum new 3 GiB return for the full interval plus $0.50 reserve forecasts
-**$7.62586**, below $8. No renewal/deletion follows automatically. October 28 at
-00:00 Copenhagen is the next retention boundary; the October 21 decision is
-resolved only for this explicit interval. The $8 allowance is not compute approval.
+Measured-uptime/current-SKU gross quotes: compute/IP **$0.141385**, run disks
+**$0.021714**, one archive export **$0.117911**, small metadata/operations:
+about **$0.282**, below **$0.54 with reserve**, within original new $2. Storage
+while stopped is separate within the $8 interval; run disks must not be counted
+twice. Idle provisioned disks remain **$31.20/month / $0.0419355 per hour**.
+
+Storage approval remains **up to $8, October 21 at 00:00 through October 28 at
+00:00 Copenhagen**, 169 physical hours across DST. Fresh inventory before compact
+inspection backup is **85 versions / 6,824,427,944 bytes**, zero soft-deleted bytes;
+Iowa Standard private controls unchanged. Disks + listed bytes + $0.50 reserve
+forecast about **$7.62**, below $8. The compact review adds negligible bytes inside
+that reserve. No automatic renewal/deletion follows; October 28 is the next
+retention boundary.
+
+The next [proposed control](../experiments/E017-information-aware-grouping/OPERATIONS.md#exact-following-prompt)
+needs a **new $1** after fresh gates: one-hour cumulative existing-VM clock,
+75-minute STOP, four threads / 26 GB sampled RSS, 25 GiB reserve / 20 GiB extra /
+2 GiB compressed export. Max forecast **$0.884**; no old compute budget carries
+over. It is neither started nor authorized by this completed inspection.
 
 Backup gaps remain: existing compact archives omit some full bin FASTAs, shared
 reads/BAMs/features/views/markers and runnable dependency bytes. Inspect exact

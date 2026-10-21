@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E017](../../experiments/E017-information-aware-grouping/README.md) is running its separately approved cached comparison after all nine native admission gates, holding E016 learning fixed. No changed-community quality outcome is reviewed yet. Its approved storage-only interval ends October 28 at 00:00 Copenhagen. Earlier implementation/run sections are dated evidence.
+Current handoff: [E017](../../experiments/E017-information-aware-grouping/README.md) is completed and independently reviewed as MODIFY, holding E016 learning fixed. Keep the useful E009 evidence without promoting its oral regression. The strongest next decision is one cached vote-led/profile-admissibility control, separately proposed at new $1; no new execution occurs in inspection. Storage ends October 28 at 00:00 Copenhagen. Earlier sections are dated evidence.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
@@ -864,3 +864,64 @@ Subsequent work uses an owned JIT-cache directory, the actual worker refuses an
 absent setting, and the corrected real tiny DAG/negative contract pass. AGENTS
 now makes this distinction explicit: `-B` alone does not control third-party JIT
 caches, and scoped source checks are not whole-prefix non-mutation proof.
+
+
+## E017 reviewed mixed result and next ranking control, 2026-10-21
+
+[The completed comparison](../../experiments/E017-information-aware-grouping/comparison-review.json)
+uses fixed E016 learning/native vectors and all full denominators. E009 post R95
+improves 5.8219 → 7.5284%, +9,465,205 recovered bp, 14 target gains / 9 losses,
+>=90% targets 4 → 8. Oral provided-origin R95 falls 6.7719 → 4.9664%,
+-37,609,955 bp, 23 gains / 45 losses, >=90% targets 34 → 21. Original MODIFY applies.
+E016 remains the provisional research anchor; no per-community product routing,
+new default, threshold tuning, family verdict or SOTA claim follows.
+
+New unassigned DNA is substantial: 59.75 Mb E009 and 410.55 Mb oral, versus
+2.38 / 11.58 Mb. Fixed learned 5-NN metrics remain exactly E016's. Oral's core
+and recruited parents recover only 1.9045 / 1.9449%; E013 adds 62.94 Mb but cannot
+restore the old result. Most large oral cores are mixed under the origin oracle.
+Thus neither new information use nor conservative abstention uniformly helps.
+Community, assembly, length distribution and depth availability differ together;
+this does not isolate the presence of depth or prove missing sequence information.
+
+One specific control can change the next design decision cheaply. Existing
+profile-normalized distances are empirical per-bin spread proxies, not calibrated
+cross-bin probabilities. E017 nevertheless ranks bins by those scores and applies
+a runner margin before requiring agreement with >=2/3 core votes. The saved
+label-free gate census finds an otherwise admissible candidate in 13,635 rejected
+E009 rows / 14.46 Mb and 99,067 oral rows / 95.98 Mb. Counts alone are not expected
+recovery: many new assignments could contaminate bins, and mixed cores/other
+rejections remain. Removing the margin alone would expose only 39.24 Mb oral DNA;
+competing winner rankings also matter.
+
+Recommend exactly one **vote-led/profile-admissibility** control. Hold cores,
+learned vectors, graph/weights, cached candidates/affinities/profiles, seed and E013
+fixed. A unique existing >=2/3 vote candidate with >=2 distinct positive core
+supporters and profile score <=1 may recruit; otherwise abstain. Do not rank
+incommensurate profile scores across bins or impose their runner margin. Preserve
+already accepted recruits, every alternative and all DNA. This is one coherent
+acceptance hypothesis, not a label-selected cutoff/grid or a claim that original
+E017 violated its implementation contract. The final source used a strict margin
+(best ×1.5 < runner); the earlier design's <= shorthand is preserved as a prose
+discrepancy, not silently changed in this review.
+
+Weighing alternatives: another encoder/Transformer/GLM/context block could add
+useful information, but cannot by itself resolve this demonstrated disagreement
+between existing group-level evidence. Source reviews keep those routes live.
+A new core objective/resolution campaign would confound the acceptance question
+and discard cached reuse. The one ranking control is narrow because its observed
+mechanism is concrete and its result can decide whether the veto protects purity
+or wastes supported DNA; it is not a default demand to isolate every ingredient.
+No guarantee is made that it restores oral recovery or fixes core mixing. Freeze
+criteria before its changed outcomes, anchor both E016 and E017, and require
+additional-data admission before a transfer claim.
+
+The [next prompt](../../experiments/E017-information-aware-grouping/OPERATIONS.md#exact-following-prompt)
+proposes one new $1 existing-VM control after local contracts/fresh gates:
+15–35 minutes expected, one-hour cumulative / 75-minute STOP, four threads /
+26 GB sampled RSS, 25 GiB reserve / 20 GiB extra / 2 GiB export. Maximum gross
+forecast about $0.884 including reserve. Current inspection executes none of it.
+Skin stays frozen/unacquired pending actual source/genome/replicon/molecule/
+taxonomy joins, overlap/pretraining, duplicate-safe denominators, ambiguity and
+unique-versus-origin truth, unchanged comparator/protocol and separate acquisition/
+compute/cost/retention admission. The October 28 storage boundary remains.

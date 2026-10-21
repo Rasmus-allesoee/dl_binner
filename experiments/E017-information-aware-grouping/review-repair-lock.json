@@ -1,0 +1,41 @@
+{
+  "record": "E017 local review adapter repair; native source/science immutable",
+  "native_source": "e78d766f2fea5699ca91ff984933a22226f5d233",
+  "original_reader": {
+    "bytes": 7849,
+    "sha256": "a6e9044b5a2720250b35dcdc7fb7626f3c322718591bf59fec3faeb5f9dfd372"
+  },
+  "repaired_reader": {
+    "bytes": 10328,
+    "sha256": "b27402567fc5883d2b6f3d400aaf8346502c753baf2be0521e80bc2d99d072e4"
+  },
+  "tests": {
+    "bytes": 3192,
+    "sha256": "6671406aa2e8d9a846bb75457b3654d0cba0100af2e4b2086611eae9ca8a4482"
+  },
+  "reason": "Recognize the exact emitted parent/legacy-child/E013 schemas. Parent declares numeric caches; legacy child emits only feature identity; E013 emits graph/vector hashes without neighbor_storage. Verify source and completed refinement identity, then attach byte-bound full E016 learned neighbors only to temporary legacy membership/diagnostic views.",
+  "semantics": "All assignment/mask/ID/no-merge/no-new-assignment and saved-alternative checks remain unchanged; numeric caches independently inspected; no tolerance/threshold/source science/input/output changed.",
+  "failed_attempt": "inspection-20261021/unit-E009-positive-1.log",
+  "scientific_score_started_in_failed_attempt": false,
+  "tests_passed": 3,
+  "prior_adapter_attempt": {
+    "bytes": 9455,
+    "sha256": "4dfde5e83c62a3d6d4dc991440d1b48aadf0f4d0491acf4a13428cf7fb7ab063"
+  },
+  "actual_writer_fixtures": {
+    "bytes": 1259,
+    "sha256": "ba4bfc90ff48890813247458aa9a69c1f0290ca1db740f741e3440e1211faba3"
+  },
+  "failed_attempts": [
+    {
+      "log": "unit-E009-positive-1.log",
+      "cause": "Legacy full-list length guard applied directly to compact partitions"
+    },
+    {
+      "log": "unit-E009-positive-2.log",
+      "cause": "First adapter required geometry/storage fields absent from the frozen legacy-child and selected-child writers"
+    }
+  ],
+  "native_or_scientific_bytes_changed": false,
+  "scores_started_in_failed_attempts": false
+}

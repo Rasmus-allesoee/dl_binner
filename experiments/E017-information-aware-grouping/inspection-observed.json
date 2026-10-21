@@ -1,0 +1,3310 @@
+{
+  "record": "E017 completed-output inspection",
+  "status": "COMPLETED_VERIFIED; VM_TERMINATED; FROZEN_DIAGNOSTICS_ACCEPTED",
+  "inspected_UTC": "2026-10-21T09:45:21.274888+00:00",
+  "phase": "information-20261020T232634Z-e78d766",
+  "source_commit": "e78d766f2fea5699ca91ff984933a22226f5d233",
+  "native_release_receipt": {
+    "bytes": 33353,
+    "sha256": "3267632f2f7c66f248ed55ca150a9dd31a15c0f7cc4918f3038c3dcacbb1d8ec"
+  },
+  "comparison": {
+    "bytes": 208738,
+    "sha256": "a212b6c3d2c7dc335c7578af61bf7fb166629e5a96e6f1f716b26f93729c993d"
+  },
+  "provider": {
+    "status": "TERMINATED",
+    "start": "2026-10-20T16:26:31.522-07:00",
+    "stop": "2026-10-20T16:57:35.627-07:00",
+    "uptime_seconds": 1864.1050000190735,
+    "machine": "existing e2-standard-8 / 8 vCPU / 32 GiB",
+    "work_disk_GiB": 300,
+    "boot_disk_GiB": 30,
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "11700"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "started_again": false,
+    "resource_or_retention_change": false
+  },
+  "completion": {
+    "status": "SUCCESS",
+    "elapsed_since_VM_start_seconds": 1638.0557367801666,
+    "stages": [
+      {
+        "name": "science",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e017-e78d766f2fea/scripts/e017_control.py",
+            "--plan",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/science-plan.json",
+            "--workflow"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2610,
+          "peak_sampled_rss_bytes": 9346543616,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.1212900623440085,
+          "sampled_cpu_seconds": 1389.23,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 9946.17431640625,
+          "stop_reason": null,
+          "wall_seconds": 1238.9568468090001
+        }
+      },
+      {
+        "name": "reuse-after",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e017-e78d766f2fea/scripts/e017_reuse.py",
+            "--lock",
+            "/srv/dl_binner/research/e017-e78d766f2fea/experiments/E017-information-aware-grouping/reuse-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/reuse-after.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3522,
+          "peak_sampled_rss_bytes": 48783360,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.0277511361025207,
+          "sampled_cpu_seconds": 4.8799999999999955,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 9307.206899881363,
+          "stop_reason": null,
+          "wall_seconds": 4.7482311900000695
+        }
+      },
+      {
+        "name": "collection",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e017-e78d766f2fea/scripts/e017_collect.py",
+            "--work",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/work",
+            "--evidence",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/sealed-evidence",
+            "--output",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/return"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3524,
+          "peak_sampled_rss_bytes": 63561728,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.0898158436007181,
+          "sampled_cpu_seconds": 114.18000000000002,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 9302.41177868843,
+          "stop_reason": null,
+          "wall_seconds": 104.76999455500004
+        }
+      },
+      {
+        "name": "upload-e017-evidence.tar.gz",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/return/e017-evidence.tar.gz",
+            "gs://dl-binner-archive-167650584170/e017/information-20261020T232634Z-e78d766/e017-evidence.tar.gz",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3540,
+          "peak_sampled_rss_bytes": 286973952,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.5232186677733277,
+          "sampled_cpu_seconds": 11.090000000000003,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 9197.633356332779,
+          "stop_reason": null,
+          "wall_seconds": 21.195726917000002
+        }
+      },
+      {
+        "name": "readback-e017-evidence.tar.gz",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "gs://dl-binner-archive-167650584170/e017/information-20261020T232634Z-e78d766/e017-evidence.tar.gz",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/readback-e017-evidence.tar.gz",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3606,
+          "peak_sampled_rss_bytes": 286801920,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.1011539557008556,
+          "sampled_cpu_seconds": 6.780000000000001,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 9176.42424607277,
+          "stop_reason": null,
+          "wall_seconds": 6.157177173000036
+        }
+      },
+      {
+        "name": "upload-e017-evidence.tar.gz.sha256",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/return/e017-evidence.tar.gz.sha256",
+            "gs://dl-binner-archive-167650584170/e017/information-20261020T232634Z-e78d766/e017-evidence.tar.gz.sha256",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3665,
+          "peak_sampled_rss_bytes": 284827648,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.7056394335024446,
+          "sampled_cpu_seconds": 1.2600000000000051,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 9168.666643619537,
+          "stop_reason": null,
+          "wall_seconds": 1.7856144940001286
+        }
+      },
+      {
+        "name": "readback-e017-evidence.tar.gz.sha256",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "gs://dl-binner-archive-167650584170/e017/information-20261020T232634Z-e78d766/e017-evidence.tar.gz.sha256",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/readback-e017-evidence.tar.gz.sha256",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3724,
+          "peak_sampled_rss_bytes": 284663808,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.7633463929156743,
+          "sampled_cpu_seconds": 1.1899999999999977,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 9166.870959997177,
+          "stop_reason": null,
+          "wall_seconds": 1.5589252940001188
+        }
+      },
+      {
+        "name": "upload-collection.json",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/return/collection.json",
+            "gs://dl-binner-archive-167650584170/e017/information-20261020T232634Z-e78d766/collection.json",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3782,
+          "peak_sampled_rss_bytes": 282939392,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.7230817341273894,
+          "sampled_cpu_seconds": 1.2900000000000063,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 9165.29977440834,
+          "stop_reason": null,
+          "wall_seconds": 1.7840306829998553
+        }
+      },
+      {
+        "name": "readback-collection.json",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "gs://dl-binner-archive-167650584170/e017/information-20261020T232634Z-e78d766/collection.json",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/readback-collection.json",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3840,
+          "peak_sampled_rss_bytes": 126459904,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.726873753929762,
+          "sampled_cpu_seconds": 1.1300000000000097,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 9163.50722193718,
+          "stop_reason": null,
+          "wall_seconds": 1.5546028369999476
+        }
+      }
+    ],
+    "private_readback_verified": true,
+    "guest_SHA_matches_private_completion": true,
+    "completion_upload": "Delivery verified by private object and guest SHA; no self-contained completion-upload exit is invented."
+  },
+  "watchdog": {
+    "action": "clean guest shutdown requested; no retry or deletion",
+    "boot_id": "67845d81-10d2-4a09-99c8-2980d4c0b663",
+    "checked_utc": "2026-10-20T23:55:00.229373+00:00",
+    "decision": "workflow exited",
+    "expected_process": {
+      "command_sha256": "20df3380e372ccabe579e20e49530a5e28e7d83a5b0f91df812ad37411657a8e",
+      "pid": 1847,
+      "start_ticks": 3824
+    },
+    "first_missing_monotonic": 1636.807427782,
+    "missing_seconds": 62.002076558,
+    "observed_process": null,
+    "shutdown": true,
+    "snapshot": {
+      "attempts": {},
+      "log_tails": {
+        "upload-e017-evidence.tar.gz.sha256.log": "Copying file:///srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/return/e017-evidence.tar.gz.sha256 to gs://dl-binner-archive-167650584170/e017/information-20261020T232634Z-e78d766/e017-evidence.tar.gz.sha256\n  \n.\n\nDLBINNER exit_code=0 stop_reason=None\n",
+        "watchdog-native-tests.log": "test_live_exit_grace_pid_reuse_zombie_and_boot (test_e009_exit_watchdog.WatchdogTests.test_live_exit_grace_pid_reuse_zombie_and_boot) ... ok\ntest_real_native_success_and_crash_without_powering_off_host (test_e009_exit_watchdog.WatchdogTests.test_real_native_success_and_crash_without_powering_off_host) ... {\"boot_id\": \"67845d81-10d2-4a09-99c8-2980d4c0b663\", \"checked_utc\": \"2026-10-20T23:27:20.257939+00:00\", \"decision\": \"workflow alive\", \"expected_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1904, \"start_ticks\": 3883}, \"observed_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1904, \"start_ticks\": 3883}, \"shutdown\": false, \"workflow_root\": \"/tmp/tmphtu80uky/work\"}\n{\"boot_id\": \"67845d81-10d2-4a09-99c8-2980d4c0b663\", \"checked_utc\": \"2026-10-20T23:27:20.279061+00:00\", \"decision\": \"exit grace\", \"expected_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1904, \"start_ticks\": 3883}, \"first_missing_monotonic\": 1, \"missing_seconds\": 0, \"observed_process\": null, \"shutdown\": false, \"workflow_root\": \"/tmp/tmphtu80uky/work\"}\n{\"boot_id\": \"67845d81-10d2-4a09-99c8-2980d4c0b663\", \"checked_utc\": \"2026-10-20T23:27:20.282926+00:00\", \"decision\": \"workflow exited\", \"expected_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1904, \"start_ticks\": 3883}, \"first_missing_monotonic\": 1, \"missing_seconds\": 1, \"observed_process\": null, \"shutdown\": true, \"workflow_root\": \"/tmp/tmphtu80uky/work\"}\n{\"boot_id\": \"67845d81-10d2-4a09-99c8-2980d4c0b663\", \"checked_utc\": \"2026-10-20T23:27:20.294989+00:00\", \"decision\": \"workflow alive\", \"expected_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1905, \"start_ticks\": 3887}, \"observed_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1905, \"start_ticks\": 3887}, \"shutdown\": false, \"workflow_root\": \"/tmp/tmpbr5j2f_u/work\"}\n{\"boot_id\": \"67845d81-10d2-4a09-99c8-2980d4c0b663\", \"checked_utc\": \"2026-10-20T23:27:20.314495+00:00\", \"decision\": \"exit grace\", \"expected_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1905, \"start_ticks\": 3887}, \"first_missing_monotonic\": 1, \"missing_seconds\": 0, \"observed_process\": null, \"shutdown\": false, \"workflow_root\": \"/tmp/tmpbr5j2f_u/work\"}\n{\"boot_id\": \"67845d81-10d2-4a09-99c8-2980d4c0b663\", \"checked_utc\": \"2026-10-20T23:27:20.319054+00:00\", \"decision\": \"workflow exited\", \"expected_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1905, \"start_ticks\": 3887}, \"first_missing_monotonic\": 1, \"missing_seconds\": 1, \"observed_process\": null, \"shutdown\": true, \"workflow_root\": \"/tmp/tmpbr5j2f_u/work\"}\nok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.075s\n\nOK\n"
+      },
+      "stages": {}
+    },
+    "workflow_root": "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766"
+  },
+  "archive": {
+    "status": "SUCCESS",
+    "archive": {
+      "bytes": 1055048062,
+      "sha256": "7b45916a0b7bd2dc938595c40a501af97ae8d1585a67b23b34103f985a6ca5fc"
+    },
+    "regular_members": 245,
+    "logical_member_bytes": 1835035318,
+    "every_member_verified": true
+  },
+  "archive_accounting": {
+    "all_work_files": 951,
+    "all_work_bytes": 3801860136,
+    "omitted_DNA_files": 878,
+    "omitted_DNA_bytes": 1991073738,
+    "aliases": {},
+    "scope": "All 245 retained members and all-work/omission inventories verified. Native full FASTAs/shared inputs/runtime prefixes remain on disk; hashes are not backups."
+  },
+  "native_resources": {
+    "science": {
+      "command": [
+        "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/research/e017-e78d766f2fea/scripts/e017_control.py",
+        "--plan",
+        "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/science-plan.json",
+        "--workflow"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2610,
+      "peak_sampled_rss_bytes": 9346543616,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 1.1212900623440085,
+      "sampled_cpu_seconds": 1389.23,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 9946.17431640625,
+      "stop_reason": null,
+      "wall_seconds": 1238.9568468090001
+    },
+    "native_setup": [
+      {
+        "name": "retained-bytes",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e017-e78d766f2fea/scripts/e017_reuse.py",
+            "--lock",
+            "/srv/dl_binner/research/e017-e78d766f2fea/experiments/E017-information-aware-grouping/reuse-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/gates/reuse-before.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2127,
+          "peak_sampled_rss_bytes": 46669824,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.33019180476212234,
+          "sampled_cpu_seconds": 9.32,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 28.226018531
+        }
+      },
+      {
+        "name": "owned-package-env",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e017-e78d766f2fea/scripts/e017_runtime.py",
+            "create",
+            "--base",
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env",
+            "--destination",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env",
+            "--wheel",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/payload/dl_binner-0.1.0.dev6-py3-none-any.whl",
+            "--output",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/gates/environment.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2185,
+          "peak_sampled_rss_bytes": 99368960,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.5521132187021248,
+          "sampled_cpu_seconds": 1.35,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 2.445150658000003
+        }
+      },
+      {
+        "name": "complete-native-runtime-source-library",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e017-e78d766f2fea/scripts/e017_runtime.py",
+            "probe",
+            "--base",
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env",
+            "--lock",
+            "/srv/dl_binner/research/e017-e78d766f2fea/experiments/E017-information-aware-grouping/reuse-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/gates/runtime.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2204,
+          "peak_sampled_rss_bytes": 294932480,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.9030057863483871,
+          "sampled_cpu_seconds": 18.470000000000002,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 20.45391101499999
+        }
+      },
+      {
+        "name": "full-input-axes",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e017-e78d766f2fea/scripts/e017_bootstrap.py",
+            "--inputs",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/science-plan.json",
+            "--output",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/gates/inputs.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2235,
+          "peak_sampled_rss_bytes": 2548011008,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.0881040454631872,
+          "sampled_cpu_seconds": 17.020000000000003,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 15.64188651900001
+        }
+      },
+      {
+        "name": "actual-sparse-approximate-recruitment",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e017-e78d766f2fea/tests/test_e017_grouping.py"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2239,
+          "peak_sampled_rss_bytes": 343441408,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.0850467123908538,
+          "sampled_cpu_seconds": 34.12,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 31.445650782000016
+        }
+      },
+      {
+        "name": "cached-native-marker-refiner-export",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e017-e78d766f2fea/experiments/E017-information-aware-grouping/engineering_fixture.py",
+            "--output",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/gates/tiny-cached",
+            "--fixture-source",
+            "/srv/dl_binner/research/e017-e78d766f2fea/tests/product/candidate_fixture.py",
+            "--threads",
+            "4"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2327,
+          "peak_sampled_rss_bytes": 434069504,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.2312361182604967,
+          "sampled_cpu_seconds": 1.6499999999999986,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 1.3401166319999902
+        }
+      },
+      {
+        "name": "synthetic-kernel-timing",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e017-e78d766f2fea/experiments/E017-information-aware-grouping/kernel_fixture.py",
+            "--output",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/gates/kernel",
+            "--config",
+            "/srv/dl_binner/research/e017-e78d766f2fea/experiments/E017-information-aware-grouping/config.json",
+            "--threads",
+            "4"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2331,
+          "peak_sampled_rss_bytes": 694046720,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.1355014638278693,
+          "sampled_cpu_seconds": 45.35000000000001,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 39.938301661999986
+        }
+      },
+      {
+        "name": "launcher-collector-contracts",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e017-e78d766f2fea/tests/test_e017_operations.py"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2475,
+          "peak_sampled_rss_bytes": 75935744,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.32564911205667463,
+          "sampled_cpu_seconds": 0.23000000000000043,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.706281673999996
+        }
+      },
+      {
+        "name": "complete-serial-DAG-dryrun",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e017-e78d766f2fea/scripts/e017_control.py",
+            "--plan",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/science-plan.json",
+            "--workflow",
+            "--dry-run"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2484,
+          "peak_sampled_rss_bytes": 78352384,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.7453630750671696,
+          "sampled_cpu_seconds": 1.0,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 1.3416280379999819
+        }
+      }
+    ],
+    "min_sampled_free_GiB": 84.6713638305664,
+    "max_sampled_growth_from_host_GiB": 5.567249298095703,
+    "actual_allocation_vCPU_hours": 4.142455555597941,
+    "sampled_CPU_not_provider_pricing": true
+  },
+  "financial": {
+    "status": "PASS_EXPORT_COST_CREDIT_RETENTION",
+    "checked_UTC": "2026-10-21T09:10:41.239977+00:00",
+    "credit": {
+      "remaining_DKK": 1893.83,
+      "original_DKK": 1973.43,
+      "status": "Available",
+      "percent": 96,
+      "scope": "Certain usage; see the terms for free trial",
+      "application": "Net pricing",
+      "expiry": "2027-01-12",
+      "paid_account": true,
+      "overview_period": "October 1-21, 2026",
+      "cost_DKK": 78.24,
+      "savings_DKK": 78.24,
+      "net_DKK": 0,
+      "pending_usage": "Unknown; live tooltip says reporting may take longer than 24 hours",
+      "prior_usage_USD_reserve": 30,
+      "prior_storage_USD_reserve": 5,
+      "read": "Signed-in Chrome CUA Credits/Overview, fresh in inspection; no billing changes"
+    },
+    "products": "Existing E2/nonpremium Ubuntu/PD/IPv4/Iowa private Standard storage/network/operations; eligible remaining Welcome credits after paid upgrade, no new service",
+    "primary_terms": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "storage_pricing": "https://cloud.google.com/storage/pricing?hl=en",
+    "price_comparison": {
+      "6AE1-525F-8B80": {
+        "description": "Balanced PD Capacity",
+        "same_price_region_category": true
+      },
+      "C054-7F72-A02E": {
+        "description": "External IP Charge on a Standard VM",
+        "same_price_region_category": true
+      },
+      "CF4E-A0C7-E3BF": {
+        "description": "E2 Instance Core running in Americas",
+        "same_price_region_category": true
+      },
+      "D973-5D65-BAB2": {
+        "description": "Storage PD Capacity",
+        "same_price_region_category": true
+      },
+      "F449-33EC-A5EF": {
+        "description": "E2 Instance Ram running in Americas",
+        "same_price_region_category": true
+      }
+    },
+    "cost": {
+      "measured_uptime_seconds": 1864.1050000190735,
+      "allocated_vCPU_hours": 4.142455555597941,
+      "compute_IP_USD": 0.14138494731901402,
+      "run_disks_USD": 0.021714484732344035,
+      "proposed_archive_export_upper_USD": 0.11791080929338932,
+      "compact_metadata_export_upper_USD": 0.0001,
+      "operations_storage_reserve_USD": 0.25,
+      "stopped_disks_to_inspection_USD": 0.3865707417142218,
+      "invoice_reconciled": false,
+      "note": "Allocation-based current-SKU quote; sampled CPU and displayed credit delta are not a bill. Run/stopped disks lie within the separate approved storage interval; do not double count.",
+      "phase_plus_export_reserve_USD": 0.5311102413447474
+    },
+    "storage_forecast_USD": 7.616524447694406,
+    "storage_end": "2026-10-28T00:00:00+01:00",
+    "storage_allowance_USD": 8,
+    "local_archive_plus_members_bytes": 2890083380,
+    "forecast_local_total_extra_bytes": 3963825204,
+    "local_free_bytes": 49276129280,
+    "review_start_epoch": 1792573547.0,
+    "review_deadline_epoch": 1792577147.0,
+    "review_extra_cap_bytes": 6442450944,
+    "review_RSS_bytes": 8000000000,
+    "review_threads": 4,
+    "retention_extended": false,
+    "VM_woken": false
+  },
+  "post_stop_storage_to_inspection": {
+    "seconds": 35265.647887945175,
+    "USD": 0.4108005571741779,
+    "covered_by_separate_8_USD_storage_allowance": true,
+    "do_not_double_count": true
+  },
+  "local_review": {
+    "clock_start_UTC": "2026-10-21T09:05:47+00:00",
+    "deadline_UTC": "2026-10-21T10:05:47+00:00",
+    "elapsed_seconds": 2374.2748880386353,
+    "threads": 4,
+    "RSS_ceiling_bytes": 8000000000,
+    "extra_storage_ceiling_GiB": 6,
+    "peak_sampled_worker_tree_RSS_bytes": 3720044544,
+    "peak_recorded_extra_bytes": 2896289008,
+    "stages": [
+      {
+        "path": "artifacts/e017-information-aware-grouping/inspection-20261021/adapter-1.resources.json",
+        "binding": {
+          "bytes": 1100,
+          "sha256": "88019b98086d5b4eeea0ba08c4a775aa1986f8dfa2fd0a0d4ff6e6fbe6730256"
+        },
+        "operation": "adapter",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py",
+            "adapter"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.7405949539970607,
+          "peak_sampled_rss_bytes": 228716544,
+          "seconds_ceiling": 2445.892507791519,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 80816,
+          "sampled_cpu_seconds": 1.05,
+          "sampled_average_cpus": 0.603242010778444,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 1155.8496220111847,
+        "extra_local_peak_bytes": 2890593085,
+        "samples": [
+          {
+            "epoch": 1792574702.125639,
+            "extra_review_bytes": 2890590772,
+            "free_bytes": 44483596288
+          }
+        ]
+      },
+      {
+        "path": "artifacts/e017-information-aware-grouping/inspection-20261021/cache-1.resources.json",
+        "binding": {
+          "bytes": 6360,
+          "sha256": "e4bebc1f60cd98d5f39fa97f2c518c5ac5d4e109447c00c515a974876f4e2a0a"
+        },
+        "operation": "cache",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py",
+            "cache"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 46.031261346070096,
+          "peak_sampled_rss_bytes": 3720044544,
+          "seconds_ceiling": 1983.3446559906006,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 83036,
+          "sampled_cpu_seconds": 46.379999999999995,
+          "sampled_average_cpus": 1.0075761263917586,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 1662.689363002777,
+        "extra_local_peak_bytes": 2896262527,
+        "samples": [
+          {
+            "epoch": 1792575164.6565068,
+            "extra_review_bytes": 2896233784,
+            "free_bytes": 43390615552
+          },
+          {
+            "epoch": 1792575165.675682,
+            "extra_review_bytes": 2896234052,
+            "free_bytes": 43390590976
+          },
+          {
+            "epoch": 1792575166.696995,
+            "extra_review_bytes": 2896234404,
+            "free_bytes": 43390717952
+          },
+          {
+            "epoch": 1792575167.7147782,
+            "extra_review_bytes": 2896234672,
+            "free_bytes": 43390717952
+          },
+          {
+            "epoch": 1792575168.736835,
+            "extra_review_bytes": 2896234950,
+            "free_bytes": 43390713856
+          },
+          {
+            "epoch": 1792575169.7553291,
+            "extra_review_bytes": 2896235119,
+            "free_bytes": 43390709760
+          },
+          {
+            "epoch": 1792575170.773956,
+            "extra_review_bytes": 2896235469,
+            "free_bytes": 43390709760
+          },
+          {
+            "epoch": 1792575171.796066,
+            "extra_review_bytes": 2896235720,
+            "free_bytes": 43390705664
+          },
+          {
+            "epoch": 1792575172.811497,
+            "extra_review_bytes": 2896235997,
+            "free_bytes": 43390705664
+          },
+          {
+            "epoch": 1792575173.8257868,
+            "extra_review_bytes": 2896236266,
+            "free_bytes": 43390705664
+          },
+          {
+            "epoch": 1792575174.843671,
+            "extra_review_bytes": 2896236816,
+            "free_bytes": 43390689280
+          },
+          {
+            "epoch": 1792575175.860659,
+            "extra_review_bytes": 2896237103,
+            "free_bytes": 43390668800
+          },
+          {
+            "epoch": 1792575176.8768818,
+            "extra_review_bytes": 2896237375,
+            "free_bytes": 43390668800
+          },
+          {
+            "epoch": 1792575177.898175,
+            "extra_review_bytes": 2896237635,
+            "free_bytes": 43390656512
+          },
+          {
+            "epoch": 1792575178.914064,
+            "extra_review_bytes": 2896238008,
+            "free_bytes": 43390648320
+          },
+          {
+            "epoch": 1792575179.932744,
+            "extra_review_bytes": 2896238308,
+            "free_bytes": 43390648320
+          },
+          {
+            "epoch": 1792575180.962471,
+            "extra_review_bytes": 2896238595,
+            "free_bytes": 43390599168
+          },
+          {
+            "epoch": 1792575181.982181,
+            "extra_review_bytes": 2896238867,
+            "free_bytes": 42316795904
+          },
+          {
+            "epoch": 1792575182.999892,
+            "extra_review_bytes": 2896239141,
+            "free_bytes": 42316849152
+          },
+          {
+            "epoch": 1792575184.024249,
+            "extra_review_bytes": 2896239439,
+            "free_bytes": 42316840960
+          },
+          {
+            "epoch": 1792575185.037395,
+            "extra_review_bytes": 2896240017,
+            "free_bytes": 42316812288
+          },
+          {
+            "epoch": 1792575186.0541499,
+            "extra_review_bytes": 2896240291,
+            "free_bytes": 42316804096
+          },
+          {
+            "epoch": 1792575187.075775,
+            "extra_review_bytes": 2896240578,
+            "free_bytes": 42316701696
+          },
+          {
+            "epoch": 1792575188.10018,
+            "extra_review_bytes": 2896240863,
+            "free_bytes": 42316693504
+          },
+          {
+            "epoch": 1792575189.131335,
+            "extra_review_bytes": 2896241136,
+            "free_bytes": 42316685312
+          },
+          {
+            "epoch": 1792575190.148554,
+            "extra_review_bytes": 2896241520,
+            "free_bytes": 42316685312
+          },
+          {
+            "epoch": 1792575191.165513,
+            "extra_review_bytes": 2896241793,
+            "free_bytes": 42316685312
+          },
+          {
+            "epoch": 1792575192.183527,
+            "extra_review_bytes": 2896242076,
+            "free_bytes": 42316673024
+          },
+          {
+            "epoch": 1792575193.230137,
+            "extra_review_bytes": 2896242349,
+            "free_bytes": 42316742656
+          },
+          {
+            "epoch": 1792575194.244034,
+            "extra_review_bytes": 2896242609,
+            "free_bytes": 42316722176
+          },
+          {
+            "epoch": 1792575195.2623098,
+            "extra_review_bytes": 2896243087,
+            "free_bytes": 42316779520
+          },
+          {
+            "epoch": 1792575196.2785192,
+            "extra_review_bytes": 2896243386,
+            "free_bytes": 42316795904
+          },
+          {
+            "epoch": 1792575197.299232,
+            "extra_review_bytes": 2896243644,
+            "free_bytes": 42316754944
+          },
+          {
+            "epoch": 1792575198.3188071,
+            "extra_review_bytes": 2896243913,
+            "free_bytes": 42316750848
+          },
+          {
+            "epoch": 1792575199.3382049,
+            "extra_review_bytes": 2896244183,
+            "free_bytes": 42316738560
+          },
+          {
+            "epoch": 1792575200.360356,
+            "extra_review_bytes": 2896244455,
+            "free_bytes": 42316738560
+          },
+          {
+            "epoch": 1792575201.3818061,
+            "extra_review_bytes": 2896244727,
+            "free_bytes": 42316709888
+          },
+          {
+            "epoch": 1792575202.401288,
+            "extra_review_bytes": 2896244997,
+            "free_bytes": 41242865664
+          },
+          {
+            "epoch": 1792575203.4236748,
+            "extra_review_bytes": 2896245282,
+            "free_bytes": 41242865664
+          },
+          {
+            "epoch": 1792575204.439151,
+            "extra_review_bytes": 2896245771,
+            "free_bytes": 41242857472
+          },
+          {
+            "epoch": 1792575205.455967,
+            "extra_review_bytes": 2896246129,
+            "free_bytes": 41242906624
+          },
+          {
+            "epoch": 1792575206.4758558,
+            "extra_review_bytes": 2896246410,
+            "free_bytes": 41242902528
+          },
+          {
+            "epoch": 1792575207.491866,
+            "extra_review_bytes": 2896246693,
+            "free_bytes": 41242882048
+          },
+          {
+            "epoch": 1792575208.5130298,
+            "extra_review_bytes": 2896246976,
+            "free_bytes": 41242918912
+          },
+          {
+            "epoch": 1792575209.53529,
+            "extra_review_bytes": 2896261626,
+            "free_bytes": 41242873856
+          }
+        ]
+      },
+      {
+        "path": "artifacts/e017-information-aware-grouping/inspection-20261021/contracts-1.resources.json",
+        "binding": {
+          "bytes": 1237,
+          "sha256": "77357bb81ea9ee965ffd6280a6531e42cf41b4bbeca998e947209dcdf4b64c10"
+        },
+        "operation": "contracts",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py",
+            "contracts"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 2.996828334988095,
+          "peak_sampled_rss_bytes": 80596992,
+          "seconds_ceiling": 2927.077176094055,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 80414,
+          "sampled_cpu_seconds": 2.0999999999999996,
+          "sampled_average_cpus": 0.7007408383998551,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 675.9206309318542,
+        "extra_local_peak_bytes": 2890544816,
+        "samples": [
+          {
+            "epoch": 1792574220.9268851,
+            "extra_review_bytes": 2890542782,
+            "free_bytes": 46036508672
+          },
+          {
+            "epoch": 1792574221.9589398,
+            "extra_review_bytes": 2890543094,
+            "free_bytes": 45919514624
+          }
+        ]
+      },
+      {
+        "path": "artifacts/e017-information-aware-grouping/inspection-20261021/ledger-1.resources.json",
+        "binding": {
+          "bytes": 1579,
+          "sha256": "99266c2b5462a6457fbb3117d3a24968e2b150b552c47c404f630500a4e6b168"
+        },
+        "operation": "ledger",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py",
+            "ledger"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 5.5727201390545815,
+          "peak_sampled_rss_bytes": 55500800,
+          "seconds_ceiling": 2933.0130281448364,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 80357,
+          "sampled_cpu_seconds": 2.98,
+          "sampled_average_cpus": 0.5347478297206506,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 672.5616099834442,
+        "extra_local_peak_bytes": 2890539977,
+        "samples": [
+          {
+            "epoch": 1792574214.9910452,
+            "extra_review_bytes": 2890347750,
+            "free_bytes": 45152104448
+          },
+          {
+            "epoch": 1792574216.0168672,
+            "extra_review_bytes": 2890347932,
+            "free_bytes": 45152010240
+          },
+          {
+            "epoch": 1792574217.0472908,
+            "extra_review_bytes": 2890538340,
+            "free_bytes": 45152608256
+          },
+          {
+            "epoch": 1792574218.0735989,
+            "extra_review_bytes": 2890538521,
+            "free_bytes": 45151662080
+          },
+          {
+            "epoch": 1792574219.0991979,
+            "extra_review_bytes": 2890539105,
+            "free_bytes": 46226509824
+          }
+        ]
+      },
+      {
+        "path": "artifacts/e017-information-aware-grouping/inspection-20261021/summarize-1.resources.json",
+        "binding": {
+          "bytes": 1119,
+          "sha256": "c27566b06eb042da2f4a7539bc4a9b227acbdcbe6457465665ff7fa0d2b8e128"
+        },
+        "operation": "summarize",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py",
+            "summarize"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.2862409009831026,
+          "peak_sampled_rss_bytes": 82235392,
+          "seconds_ceiling": 1480.8719279766083,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 83597,
+          "sampled_cpu_seconds": 0.3499999999999999,
+          "sampled_average_cpus": 0.2721107684668456,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 2120.4168729782104,
+        "extra_local_peak_bytes": 2896289008,
+        "samples": [
+          {
+            "epoch": 1792575667.166131,
+            "extra_review_bytes": 2896288104,
+            "free_bytes": 42321371136
+          }
+        ]
+      },
+      {
+        "path": "artifacts/e017-information-aware-grouping/inspection-20261021/topology-1.resources.json",
+        "binding": {
+          "bytes": 1238,
+          "sha256": "c874be58563defeceee0c2f465075c0a1e5f0192df0d4875b6ef6047ee433194"
+        },
+        "operation": "topology",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py",
+            "topology"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 2.8779653609963134,
+          "peak_sampled_rss_bytes": 608858112,
+          "seconds_ceiling": 1680.3019478321075,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 83451,
+          "sampled_cpu_seconds": 2.9399999999999995,
+          "sampled_average_cpus": 1.0215550332343857,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 1922.5774509906769,
+        "extra_local_peak_bytes": 2896276254,
+        "samples": [
+          {
+            "epoch": 1792575467.7020202,
+            "extra_review_bytes": 2896271576,
+            "free_bytes": 43377811456
+          },
+          {
+            "epoch": 1792575468.722667,
+            "extra_review_bytes": 2896271844,
+            "free_bytes": 43377786880
+          }
+        ]
+      },
+      {
+        "path": "artifacts/e017-information-aware-grouping/inspection-20261021/topology-2.resources.json",
+        "binding": {
+          "bytes": 1343,
+          "sha256": "0dd687b5a929fdea3e6e2ff1df249f52fb960740e573f0ee1a187790af69cf50"
+        },
+        "operation": "topology",
+        "status": "SUCCESS",
+        "attempt": 2,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py",
+            "topology"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 3.5480989009374753,
+          "peak_sampled_rss_bytes": 649576448,
+          "seconds_ceiling": 1556.6074187755585,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 83530,
+          "sampled_cpu_seconds": 3.15,
+          "sampled_average_cpus": 0.8877993787511701,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 2046.9415500164032,
+        "extra_local_peak_bytes": 2896285818,
+        "samples": [
+          {
+            "epoch": 1792575591.388392,
+            "extra_review_bytes": 2896282405,
+            "free_bytes": 43399393280
+          },
+          {
+            "epoch": 1792575592.4100952,
+            "extra_review_bytes": 2896282674,
+            "free_bytes": 43399393280
+          },
+          {
+            "epoch": 1792575593.448595,
+            "extra_review_bytes": 2896282857,
+            "free_bytes": 43399393280
+          }
+        ]
+      },
+      {
+        "path": "artifacts/e017-information-aware-grouping/inspection-20261021/unit-E009-positive-1.resources.json",
+        "binding": {
+          "bytes": 1751,
+          "sha256": "aff6fc676e671cb4bb6f4231b986a30dc0e9b12a6adeeab91a7bfa50647e4d5b"
+        },
+        "operation": "unit-E009-positive",
+        "status": "FAILED",
+        "attempt": 1,
+        "error": "RuntimeError: Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/unit-E009-positive-1.log\nTraceback (most recent call last):\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py\", line 37, in <module>\n    review(v/'work/units'/a.unit,features,root/'review-admission.json',root/('diagnostics-'+a.unit),'E009'if a.unit=='E009-positive'else'oral',clean,truth,fixed,repo/'experiments/E017-information-aware-grouping/reuse-lock.json')\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e017_review.py\", line 70, in review\n    refinement_membership(pre,old)\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e010_review.py\", line 77, in refinement_membership\n    require(len(pre['assignment']) == len(post['assignment']) == len(pre['valid']) == len(pre['ids'])\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e010_review.py\", line 27, in require\n    raise ValueError(message)\nValueError: Malformed/truncated refinement assignments\n\nDLBINNER exit_code=1 stop_reason=None\n",
+        "elapsed_original_seconds": 679.9832119941711,
+        "extra_local_peak_bytes": 2890550760,
+        "samples": [
+          {
+            "epoch": 1792574224.172927,
+            "extra_review_bytes": 2890546316,
+            "free_bytes": 45871591424
+          },
+          {
+            "epoch": 1792574225.186547,
+            "extra_review_bytes": 2890546597,
+            "free_bytes": 45757329408
+          },
+          {
+            "epoch": 1792574226.203639,
+            "extra_review_bytes": 2890546935,
+            "free_bytes": 45320810496
+          }
+        ]
+      },
+      {
+        "path": "artifacts/e017-information-aware-grouping/inspection-20261021/unit-E009-positive-2.resources.json",
+        "binding": {
+          "bytes": 1817,
+          "sha256": "49d0353f99244662f3fdb1a1f93d5e095cdd9cd468be45262af5339ca19b21cc"
+        },
+        "operation": "unit-E009-positive",
+        "status": "FAILED",
+        "attempt": 2,
+        "error": "RuntimeError: Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/unit-E009-positive-2.log\nTraceback (most recent call last):\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py\", line 37, in <module>\n    review(v/'work/units'/a.unit,features,root/'review-admission.json',root/('diagnostics-'+a.unit+('-attempt2'if a.unit=='E009-positive'else'')),'E009'if a.unit=='E009-positive'else'oral',clean,truth,fixed,repo/'experiments/E017-information-aware-grouping/reuse-lock.json')\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e017_review.py\", line 95, in review\n    pre,old,post=legacy_membership_views([pre,old,post],fixed_nn)\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e017_review.py\", line 45, in legacy_membership_views\n    require(part.get('neighbors')==[] and part.get('neighbor_storage')==storage\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e010_review.py\", line 27, in require\n    raise ValueError(message)\nValueError: Refinement changed compact cache/geometry identity\n\nDLBINNER exit_code=1 stop_reason=None\n",
+        "elapsed_original_seconds": 859.9356200695038,
+        "extra_local_peak_bytes": 2890568929,
+        "samples": [
+          {
+            "epoch": 1792574404.161165,
+            "extra_review_bytes": 2890564368,
+            "free_bytes": 43401310208
+          },
+          {
+            "epoch": 1792574405.186072,
+            "extra_review_bytes": 2890564622,
+            "free_bytes": 43401265152
+          },
+          {
+            "epoch": 1792574406.2021918,
+            "extra_review_bytes": 2890564973,
+            "free_bytes": 43405447168
+          }
+        ]
+      },
+      {
+        "path": "artifacts/e017-information-aware-grouping/inspection-20261021/unit-E009-positive-3.resources.json",
+        "binding": {
+          "bytes": 4016,
+          "sha256": "4dab56f19f2523be9e2f6e56c0b12fdf23857819fb4492bd5af26c06702805fd"
+        },
+        "operation": "unit-E009-positive",
+        "status": "SUCCESS",
+        "attempt": 3,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py",
+            "unit",
+            "--unit",
+            "E009-positive"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 25.934651155024767,
+          "peak_sampled_rss_bytes": 645173248,
+          "seconds_ceiling": 2361.1543900966644,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 80860,
+          "sampled_cpu_seconds": 26.5,
+          "sampled_average_cpus": 1.0217989762652233,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 1264.7804880142212,
+        "extra_local_peak_bytes": 2891277377,
+        "samples": [
+          {
+            "epoch": 1792574786.849694,
+            "extra_review_bytes": 2890594548,
+            "free_bytes": 44479938560
+          },
+          {
+            "epoch": 1792574787.866836,
+            "extra_review_bytes": 2890594816,
+            "free_bytes": 44479930368
+          },
+          {
+            "epoch": 1792574788.888653,
+            "extra_review_bytes": 2890595068,
+            "free_bytes": 44479913984
+          },
+          {
+            "epoch": 1792574789.902687,
+            "extra_review_bytes": 2890595336,
+            "free_bytes": 44479897600
+          },
+          {
+            "epoch": 1792574790.923418,
+            "extra_review_bytes": 2890595589,
+            "free_bytes": 43406090240
+          },
+          {
+            "epoch": 1792574791.941268,
+            "extra_review_bytes": 2890595855,
+            "free_bytes": 43406163968
+          },
+          {
+            "epoch": 1792574792.9616902,
+            "extra_review_bytes": 2890596106,
+            "free_bytes": 43406217216
+          },
+          {
+            "epoch": 1792574793.9795232,
+            "extra_review_bytes": 2890596455,
+            "free_bytes": 43406233600
+          },
+          {
+            "epoch": 1792574795.000183,
+            "extra_review_bytes": 2890596707,
+            "free_bytes": 43406180352
+          },
+          {
+            "epoch": 1792574796.0195682,
+            "extra_review_bytes": 2890596973,
+            "free_bytes": 43406168064
+          },
+          {
+            "epoch": 1792574797.041444,
+            "extra_review_bytes": 2890597448,
+            "free_bytes": 43406032896
+          },
+          {
+            "epoch": 1792574798.064704,
+            "extra_review_bytes": 2890597731,
+            "free_bytes": 43406073856
+          },
+          {
+            "epoch": 1792574799.080852,
+            "extra_review_bytes": 2890598087,
+            "free_bytes": 43406053376
+          },
+          {
+            "epoch": 1792574800.096802,
+            "extra_review_bytes": 2890598344,
+            "free_bytes": 43406049280
+          },
+          {
+            "epoch": 1792574801.1157918,
+            "extra_review_bytes": 2890598600,
+            "free_bytes": 43406045184
+          },
+          {
+            "epoch": 1792574802.1365771,
+            "extra_review_bytes": 2890598856,
+            "free_bytes": 43406020608
+          },
+          {
+            "epoch": 1792574803.1586251,
+            "extra_review_bytes": 2890599113,
+            "free_bytes": 43406016512
+          },
+          {
+            "epoch": 1792574804.1761532,
+            "extra_review_bytes": 2890599383,
+            "free_bytes": 43406016512
+          },
+          {
+            "epoch": 1792574805.194284,
+            "extra_review_bytes": 2890599739,
+            "free_bytes": 43406114816
+          },
+          {
+            "epoch": 1792574806.2143848,
+            "extra_review_bytes": 2890600022,
+            "free_bytes": 43405987840
+          },
+          {
+            "epoch": 1792574807.231266,
+            "extra_review_bytes": 2890600522,
+            "free_bytes": 43406065664
+          },
+          {
+            "epoch": 1792574808.2483861,
+            "extra_review_bytes": 2890600793,
+            "free_bytes": 43406053376
+          },
+          {
+            "epoch": 1792574809.2655869,
+            "extra_review_bytes": 2890601063,
+            "free_bytes": 43406049280
+          },
+          {
+            "epoch": 1792574810.284951,
+            "extra_review_bytes": 2890601333,
+            "free_bytes": 43406041088
+          },
+          {
+            "epoch": 1792574811.3008351,
+            "extra_review_bytes": 2890601703,
+            "free_bytes": 43406020608
+          }
+        ]
+      },
+      {
+        "path": "artifacts/e017-information-aware-grouping/inspection-20261021/unit-oral-positive-1.resources.json",
+        "binding": {
+          "bytes": 35495,
+          "sha256": "4791ba585de0d15f4d7fcb36fe95b896ad0a0211c4d5695e3ae839c130c75dbd"
+        },
+        "operation": "unit-oral-positive",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py",
+            "unit",
+            "--unit",
+            "oral-positive"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 295.27389317401685,
+          "peak_sampled_rss_bytes": 3367608320,
+          "seconds_ceiling": 2334.9930617809296,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 81045,
+          "sampled_cpu_seconds": 300.04999999999995,
+          "sampled_average_cpus": 1.0161751747661902,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 1560.3357939720154,
+        "extra_local_peak_bytes": 2896197916,
+        "samples": [
+          {
+            "epoch": 1792574813.007186,
+            "extra_review_bytes": 2891281748,
+            "free_bytes": 43405312000
+          },
+          {
+            "epoch": 1792574814.031795,
+            "extra_review_bytes": 2891282043,
+            "free_bytes": 43405291520
+          },
+          {
+            "epoch": 1792574815.047468,
+            "extra_review_bytes": 2891282409,
+            "free_bytes": 43405406208
+          },
+          {
+            "epoch": 1792574816.063945,
+            "extra_review_bytes": 2891282692,
+            "free_bytes": 43405443072
+          },
+          {
+            "epoch": 1792574817.078876,
+            "extra_review_bytes": 2891282944,
+            "free_bytes": 43405438976
+          },
+          {
+            "epoch": 1792574818.0971289,
+            "extra_review_bytes": 2891283210,
+            "free_bytes": 43405430784
+          },
+          {
+            "epoch": 1792574819.117285,
+            "extra_review_bytes": 2891283478,
+            "free_bytes": 43405422592
+          },
+          {
+            "epoch": 1792574820.137793,
+            "extra_review_bytes": 2891283746,
+            "free_bytes": 43405373440
+          },
+          {
+            "epoch": 1792574821.160527,
+            "extra_review_bytes": 2891284112,
+            "free_bytes": 43405369344
+          },
+          {
+            "epoch": 1792574822.181485,
+            "extra_review_bytes": 2891284381,
+            "free_bytes": 43405398016
+          },
+          {
+            "epoch": 1792574823.200821,
+            "extra_review_bytes": 2891284899,
+            "free_bytes": 43405365248
+          },
+          {
+            "epoch": 1792574824.2208571,
+            "extra_review_bytes": 2891285186,
+            "free_bytes": 43405361152
+          },
+          {
+            "epoch": 1792574825.2457018,
+            "extra_review_bytes": 2891285473,
+            "free_bytes": 43405344768
+          },
+          {
+            "epoch": 1792574826.265994,
+            "extra_review_bytes": 2891285734,
+            "free_bytes": 43405430784
+          },
+          {
+            "epoch": 1792574827.302096,
+            "extra_review_bytes": 2891285934,
+            "free_bytes": 43405119488
+          },
+          {
+            "epoch": 1792574828.3299289,
+            "extra_review_bytes": 2891286194,
+            "free_bytes": 43405369344
+          },
+          {
+            "epoch": 1792574829.4362261,
+            "extra_review_bytes": 2891286481,
+            "free_bytes": 43404255232
+          },
+          {
+            "epoch": 1792574830.45395,
+            "extra_review_bytes": 2891286754,
+            "free_bytes": 43404234752
+          },
+          {
+            "epoch": 1792574831.489689,
+            "extra_review_bytes": 2891287015,
+            "free_bytes": 43404201984
+          },
+          {
+            "epoch": 1792574832.590302,
+            "extra_review_bytes": 2891287214,
+            "free_bytes": 43404283904
+          },
+          {
+            "epoch": 1792574833.631144,
+            "extra_review_bytes": 2891287617,
+            "free_bytes": 43404005376
+          },
+          {
+            "epoch": 1792574834.715956,
+            "extra_review_bytes": 2891287791,
+            "free_bytes": 42330198016
+          },
+          {
+            "epoch": 1792574835.7445672,
+            "extra_review_bytes": 2891288050,
+            "free_bytes": 42330173440
+          },
+          {
+            "epoch": 1792574836.7636201,
+            "extra_review_bytes": 2891288334,
+            "free_bytes": 42330161152
+          },
+          {
+            "epoch": 1792574837.789293,
+            "extra_review_bytes": 2891288620,
+            "free_bytes": 42325069824
+          },
+          {
+            "epoch": 1792574838.812106,
+            "extra_review_bytes": 2891288879,
+            "free_bytes": 42325049344
+          },
+          {
+            "epoch": 1792574839.832043,
+            "extra_review_bytes": 2891289224,
+            "free_bytes": 42325037056
+          },
+          {
+            "epoch": 1792574840.849511,
+            "extra_review_bytes": 2891289510,
+            "free_bytes": 42325143552
+          },
+          {
+            "epoch": 1792574841.867838,
+            "extra_review_bytes": 2891289768,
+            "free_bytes": 42325110784
+          },
+          {
+            "epoch": 1792574842.893426,
+            "extra_review_bytes": 2891290039,
+            "free_bytes": 42325106688
+          },
+          {
+            "epoch": 1792574843.924059,
+            "extra_review_bytes": 2891290544,
+            "free_bytes": 42325061632
+          },
+          {
+            "epoch": 1792574844.9437802,
+            "extra_review_bytes": 2891290814,
+            "free_bytes": 42325118976
+          },
+          {
+            "epoch": 1792574845.9658282,
+            "extra_review_bytes": 2891291171,
+            "free_bytes": 42325102592
+          },
+          {
+            "epoch": 1792574846.985634,
+            "extra_review_bytes": 2891291430,
+            "free_bytes": 42325143552
+          },
+          {
+            "epoch": 1792574848.003693,
+            "extra_review_bytes": 2891291700,
+            "free_bytes": 42325118976
+          },
+          {
+            "epoch": 1792574849.018259,
+            "extra_review_bytes": 2891291985,
+            "free_bytes": 42325110784
+          },
+          {
+            "epoch": 1792574850.037565,
+            "extra_review_bytes": 2891292258,
+            "free_bytes": 42325094400
+          },
+          {
+            "epoch": 1792574851.0561888,
+            "extra_review_bytes": 2891292516,
+            "free_bytes": 42325078016
+          },
+          {
+            "epoch": 1792574852.0880089,
+            "extra_review_bytes": 2891292774,
+            "free_bytes": 42325135360
+          },
+          {
+            "epoch": 1792574853.110075,
+            "extra_review_bytes": 2891293032,
+            "free_bytes": 42325086208
+          },
+          {
+            "epoch": 1792574854.129184,
+            "extra_review_bytes": 2891293621,
+            "free_bytes": 42325053440
+          },
+          {
+            "epoch": 1792574855.150576,
+            "extra_review_bytes": 2891293892,
+            "free_bytes": 42325078016
+          },
+          {
+            "epoch": 1792574856.170458,
+            "extra_review_bytes": 2891294163,
+            "free_bytes": 42325057536
+          },
+          {
+            "epoch": 1792574857.191299,
+            "extra_review_bytes": 2891294435,
+            "free_bytes": 42325057536
+          },
+          {
+            "epoch": 1792574858.2136881,
+            "extra_review_bytes": 2891294704,
+            "free_bytes": 42325078016
+          },
+          {
+            "epoch": 1792574859.2303512,
+            "extra_review_bytes": 2891294962,
+            "free_bytes": 42325143552
+          },
+          {
+            "epoch": 1792574860.252604,
+            "extra_review_bytes": 2891295233,
+            "free_bytes": 42325110784
+          },
+          {
+            "epoch": 1792574861.2691321,
+            "extra_review_bytes": 2891295490,
+            "free_bytes": 42325098496
+          },
+          {
+            "epoch": 1792574862.2896252,
+            "extra_review_bytes": 2891295747,
+            "free_bytes": 42325073920
+          },
+          {
+            "epoch": 1792574863.313195,
+            "extra_review_bytes": 2891296046,
+            "free_bytes": 42325041152
+          },
+          {
+            "epoch": 1792574864.344084,
+            "extra_review_bytes": 2891296648,
+            "free_bytes": 42325151744
+          },
+          {
+            "epoch": 1792574865.363905,
+            "extra_review_bytes": 2891296934,
+            "free_bytes": 42325094400
+          },
+          {
+            "epoch": 1792574866.3841238,
+            "extra_review_bytes": 2891297206,
+            "free_bytes": 42325135360
+          },
+          {
+            "epoch": 1792574867.406909,
+            "extra_review_bytes": 2891297379,
+            "free_bytes": 42325032960
+          },
+          {
+            "epoch": 1792574868.426692,
+            "extra_review_bytes": 2891297739,
+            "free_bytes": 42325086208
+          },
+          {
+            "epoch": 1792574869.442977,
+            "extra_review_bytes": 2891298010,
+            "free_bytes": 42325078016
+          },
+          {
+            "epoch": 1792574870.459738,
+            "extra_review_bytes": 2891298293,
+            "free_bytes": 42324017152
+          },
+          {
+            "epoch": 1792574871.4782531,
+            "extra_review_bytes": 2891298551,
+            "free_bytes": 42324017152
+          },
+          {
+            "epoch": 1792574872.495858,
+            "extra_review_bytes": 2891298822,
+            "free_bytes": 42324021248
+          },
+          {
+            "epoch": 1792574873.519029,
+            "extra_review_bytes": 2891299094,
+            "free_bytes": 42324004864
+          },
+          {
+            "epoch": 1792574874.5398452,
+            "extra_review_bytes": 2891299583,
+            "free_bytes": 42323996672
+          },
+          {
+            "epoch": 1792574875.55938,
+            "extra_review_bytes": 2891299954,
+            "free_bytes": 42323968000
+          },
+          {
+            "epoch": 1792574876.580056,
+            "extra_review_bytes": 2891300236,
+            "free_bytes": 42323943424
+          },
+          {
+            "epoch": 1792574877.5983438,
+            "extra_review_bytes": 2891300529,
+            "free_bytes": 42324008960
+          },
+          {
+            "epoch": 1792574878.621074,
+            "extra_review_bytes": 2891300810,
+            "free_bytes": 42324029440
+          },
+          {
+            "epoch": 1792574879.638487,
+            "extra_review_bytes": 2891301080,
+            "free_bytes": 42324017152
+          },
+          {
+            "epoch": 1792574880.658821,
+            "extra_review_bytes": 2891301448,
+            "free_bytes": 42327793664
+          },
+          {
+            "epoch": 1792574881.6868632,
+            "extra_review_bytes": 2891301704,
+            "free_bytes": 42327805952
+          },
+          {
+            "epoch": 1792574882.707514,
+            "extra_review_bytes": 2891301973,
+            "free_bytes": 42327777280
+          },
+          {
+            "epoch": 1792574883.7245498,
+            "extra_review_bytes": 2891302242,
+            "free_bytes": 42327740416
+          },
+          {
+            "epoch": 1792574884.74838,
+            "extra_review_bytes": 2891302730,
+            "free_bytes": 42327707648
+          },
+          {
+            "epoch": 1792574885.7665129,
+            "extra_review_bytes": 2891303110,
+            "free_bytes": 42327670784
+          },
+          {
+            "epoch": 1792574886.784534,
+            "extra_review_bytes": 2891303404,
+            "free_bytes": 42327760896
+          },
+          {
+            "epoch": 1792574887.8052511,
+            "extra_review_bytes": 2891303673,
+            "free_bytes": 42327736320
+          },
+          {
+            "epoch": 1792574888.819919,
+            "extra_review_bytes": 2891303943,
+            "free_bytes": 42327728128
+          },
+          {
+            "epoch": 1792574889.8389812,
+            "extra_review_bytes": 2891304237,
+            "free_bytes": 42327711744
+          },
+          {
+            "epoch": 1792574890.856729,
+            "extra_review_bytes": 2891304506,
+            "free_bytes": 42327814144
+          },
+          {
+            "epoch": 1792574891.876678,
+            "extra_review_bytes": 2891304776,
+            "free_bytes": 42327801856
+          },
+          {
+            "epoch": 1792574892.8926919,
+            "extra_review_bytes": 2891305155,
+            "free_bytes": 42327822336
+          },
+          {
+            "epoch": 1792574893.91119,
+            "extra_review_bytes": 2891305435,
+            "free_bytes": 42327752704
+          },
+          {
+            "epoch": 1792574894.929579,
+            "extra_review_bytes": 2891305923,
+            "free_bytes": 42327724032
+          },
+          {
+            "epoch": 1792574895.9448,
+            "extra_review_bytes": 2891306192,
+            "free_bytes": 42327715840
+          },
+          {
+            "epoch": 1792574896.968019,
+            "extra_review_bytes": 2891306474,
+            "free_bytes": 42327805952
+          },
+          {
+            "epoch": 1792574897.985489,
+            "extra_review_bytes": 2891306839,
+            "free_bytes": 42327801856
+          },
+          {
+            "epoch": 1792574899.006155,
+            "extra_review_bytes": 2891307108,
+            "free_bytes": 42327777280
+          },
+          {
+            "epoch": 1792574900.024234,
+            "extra_review_bytes": 2891307390,
+            "free_bytes": 42327773184
+          },
+          {
+            "epoch": 1792574901.0444632,
+            "extra_review_bytes": 2891307647,
+            "free_bytes": 42327826432
+          },
+          {
+            "epoch": 1792574902.064685,
+            "extra_review_bytes": 2891307916,
+            "free_bytes": 42327822336
+          },
+          {
+            "epoch": 1792574903.0796921,
+            "extra_review_bytes": 2891308259,
+            "free_bytes": 42327805952
+          },
+          {
+            "epoch": 1792574904.100539,
+            "extra_review_bytes": 2891308527,
+            "free_bytes": 42327793664
+          },
+          {
+            "epoch": 1792574905.115432,
+            "extra_review_bytes": 2891309027,
+            "free_bytes": 42327707648
+          },
+          {
+            "epoch": 1792574906.136299,
+            "extra_review_bytes": 2891309296,
+            "free_bytes": 42327781376
+          },
+          {
+            "epoch": 1792574907.151999,
+            "extra_review_bytes": 2891799553,
+            "free_bytes": 42327330816
+          },
+          {
+            "epoch": 1792574908.171725,
+            "extra_review_bytes": 2891799823,
+            "free_bytes": 42327318528
+          },
+          {
+            "epoch": 1792574909.187944,
+            "extra_review_bytes": 2891800093,
+            "free_bytes": 42327310336
+          },
+          {
+            "epoch": 1792574910.20501,
+            "extra_review_bytes": 2891800447,
+            "free_bytes": 42327302144
+          },
+          {
+            "epoch": 1792574911.2255511,
+            "extra_review_bytes": 2891800715,
+            "free_bytes": 42327339008
+          },
+          {
+            "epoch": 1792574912.249133,
+            "extra_review_bytes": 2891800999,
+            "free_bytes": 42327289856
+          },
+          {
+            "epoch": 1792574913.2749288,
+            "extra_review_bytes": 2891801285,
+            "free_bytes": 42327269376
+          },
+          {
+            "epoch": 1792574914.2910411,
+            "extra_review_bytes": 2891801672,
+            "free_bytes": 42327265280
+          },
+          {
+            "epoch": 1792574915.308407,
+            "extra_review_bytes": 2891802155,
+            "free_bytes": 42327330816
+          },
+          {
+            "epoch": 1792574916.3252852,
+            "extra_review_bytes": 2891802443,
+            "free_bytes": 42327326720
+          },
+          {
+            "epoch": 1792574917.345626,
+            "extra_review_bytes": 2891802731,
+            "free_bytes": 42327150592
+          },
+          {
+            "epoch": 1792574918.368736,
+            "extra_review_bytes": 2891803018,
+            "free_bytes": 42327257088
+          },
+          {
+            "epoch": 1792574919.387527,
+            "extra_review_bytes": 2891803294,
+            "free_bytes": 42327220224
+          },
+          {
+            "epoch": 1792574920.403355,
+            "extra_review_bytes": 2891803594,
+            "free_bytes": 42327216128
+          },
+          {
+            "epoch": 1792574921.420789,
+            "extra_review_bytes": 2891803881,
+            "free_bytes": 42327212032
+          },
+          {
+            "epoch": 1792574922.436506,
+            "extra_review_bytes": 2891804169,
+            "free_bytes": 42327318528
+          },
+          {
+            "epoch": 1792574923.456459,
+            "extra_review_bytes": 2891804544,
+            "free_bytes": 42327298048
+          },
+          {
+            "epoch": 1792574924.473551,
+            "extra_review_bytes": 2891804820,
+            "free_bytes": 42327285760
+          },
+          {
+            "epoch": 1792574925.490756,
+            "extra_review_bytes": 2891805311,
+            "free_bytes": 42327252992
+          },
+          {
+            "epoch": 1792574926.50733,
+            "extra_review_bytes": 2891805574,
+            "free_bytes": 42327322624
+          },
+          {
+            "epoch": 1792574927.52654,
+            "extra_review_bytes": 2891805874,
+            "free_bytes": 42327302144
+          },
+          {
+            "epoch": 1792574928.545374,
+            "extra_review_bytes": 2891806150,
+            "free_bytes": 42327298048
+          },
+          {
+            "epoch": 1792574929.568369,
+            "extra_review_bytes": 2891806449,
+            "free_bytes": 42327293952
+          },
+          {
+            "epoch": 1792574930.590288,
+            "extra_review_bytes": 2891806713,
+            "free_bytes": 42327289856
+          },
+          {
+            "epoch": 1792574931.610629,
+            "extra_review_bytes": 2891807077,
+            "free_bytes": 42327269376
+          },
+          {
+            "epoch": 1792574932.630451,
+            "extra_review_bytes": 2891807353,
+            "free_bytes": 42327269376
+          },
+          {
+            "epoch": 1792574933.65176,
+            "extra_review_bytes": 2891807640,
+            "free_bytes": 42327285760
+          },
+          {
+            "epoch": 1792574934.6685052,
+            "extra_review_bytes": 2891807915,
+            "free_bytes": 42327318528
+          },
+          {
+            "epoch": 1792574935.690732,
+            "extra_review_bytes": 2891808422,
+            "free_bytes": 42327248896
+          },
+          {
+            "epoch": 1792574936.711773,
+            "extra_review_bytes": 2891808721,
+            "free_bytes": 42327244800
+          },
+          {
+            "epoch": 1792574937.730221,
+            "extra_review_bytes": 2891809084,
+            "free_bytes": 42327240704
+          },
+          {
+            "epoch": 1792574938.749155,
+            "extra_review_bytes": 2891809360,
+            "free_bytes": 42327232512
+          },
+          {
+            "epoch": 1792574939.7647202,
+            "extra_review_bytes": 2891809624,
+            "free_bytes": 42327220224
+          },
+          {
+            "epoch": 1792574940.785726,
+            "extra_review_bytes": 2891809899,
+            "free_bytes": 42326732800
+          },
+          {
+            "epoch": 1792574941.814694,
+            "extra_review_bytes": 2891810162,
+            "free_bytes": 42326839296
+          },
+          {
+            "epoch": 1792574942.834687,
+            "extra_review_bytes": 2891810537,
+            "free_bytes": 42326827008
+          },
+          {
+            "epoch": 1792574943.8525188,
+            "extra_review_bytes": 2891810800,
+            "free_bytes": 42326867968
+          },
+          {
+            "epoch": 1792574944.869674,
+            "extra_review_bytes": 2891811063,
+            "free_bytes": 42326822912
+          },
+          {
+            "epoch": 1792574945.887396,
+            "extra_review_bytes": 2891811558,
+            "free_bytes": 42326802432
+          },
+          {
+            "epoch": 1792574946.931701,
+            "extra_review_bytes": 2891811821,
+            "free_bytes": 42326831104
+          },
+          {
+            "epoch": 1792574947.954685,
+            "extra_review_bytes": 2891812083,
+            "free_bytes": 42326429696
+          },
+          {
+            "epoch": 1792574948.9758358,
+            "extra_review_bytes": 2891812368,
+            "free_bytes": 42326769664
+          },
+          {
+            "epoch": 1792574949.994457,
+            "extra_review_bytes": 2891812630,
+            "free_bytes": 42326757376
+          },
+          {
+            "epoch": 1792574951.011371,
+            "extra_review_bytes": 2891812918,
+            "free_bytes": 42326757376
+          },
+          {
+            "epoch": 1792574952.030745,
+            "extra_review_bytes": 2891813191,
+            "free_bytes": 42326749184
+          },
+          {
+            "epoch": 1792574953.049112,
+            "extra_review_bytes": 2891813462,
+            "free_bytes": 42326728704
+          },
+          {
+            "epoch": 1792574954.066745,
+            "extra_review_bytes": 2891813825,
+            "free_bytes": 42326851584
+          },
+          {
+            "epoch": 1792574955.082686,
+            "extra_review_bytes": 2891814113,
+            "free_bytes": 42326822912
+          },
+          {
+            "epoch": 1792574956.1020732,
+            "extra_review_bytes": 2891814606,
+            "free_bytes": 42326663168
+          },
+          {
+            "epoch": 1792574957.117176,
+            "extra_review_bytes": 2891814867,
+            "free_bytes": 42326704128
+          },
+          {
+            "epoch": 1792574958.139622,
+            "extra_review_bytes": 2891815142,
+            "free_bytes": 42326700032
+          },
+          {
+            "epoch": 1792574959.161255,
+            "extra_review_bytes": 2891815428,
+            "free_bytes": 42326695936
+          },
+          {
+            "epoch": 1792574960.176119,
+            "extra_review_bytes": 2891815802,
+            "free_bytes": 42326687744
+          },
+          {
+            "epoch": 1792574961.195534,
+            "extra_review_bytes": 2891816077,
+            "free_bytes": 42326679552
+          },
+          {
+            "epoch": 1792574962.217697,
+            "extra_review_bytes": 2891816352,
+            "free_bytes": 42326667264
+          },
+          {
+            "epoch": 1792574963.238098,
+            "extra_review_bytes": 2891816628,
+            "free_bytes": 42326663168
+          },
+          {
+            "epoch": 1792574964.258199,
+            "extra_review_bytes": 2891816891,
+            "free_bytes": 42326732800
+          },
+          {
+            "epoch": 1792574965.2787251,
+            "extra_review_bytes": 2891817254,
+            "free_bytes": 42326663168
+          },
+          {
+            "epoch": 1792574966.3012311,
+            "extra_review_bytes": 2891817749,
+            "free_bytes": 42326687744
+          },
+          {
+            "epoch": 1792574967.35111,
+            "extra_review_bytes": 2891817937,
+            "free_bytes": 42326499328
+          },
+          {
+            "epoch": 1792574968.373354,
+            "extra_review_bytes": 2891818237,
+            "free_bytes": 42326437888
+          },
+          {
+            "epoch": 1792574969.398083,
+            "extra_review_bytes": 2891818509,
+            "free_bytes": 42326437888
+          },
+          {
+            "epoch": 1792574970.418346,
+            "extra_review_bytes": 2891818785,
+            "free_bytes": 42326433792
+          },
+          {
+            "epoch": 1792574971.443166,
+            "extra_review_bytes": 2892308788,
+            "free_bytes": 42325942272
+          },
+          {
+            "epoch": 1792574972.476911,
+            "extra_review_bytes": 2892309051,
+            "free_bytes": 42326204416
+          },
+          {
+            "epoch": 1792574973.498065,
+            "extra_review_bytes": 2892309326,
+            "free_bytes": 42326093824
+          },
+          {
+            "epoch": 1792574974.5171998,
+            "extra_review_bytes": 2892309689,
+            "free_bytes": 42326073344
+          },
+          {
+            "epoch": 1792574975.543308,
+            "extra_review_bytes": 2892309975,
+            "free_bytes": 42326163456
+          },
+          {
+            "epoch": 1792574976.5645928,
+            "extra_review_bytes": 2892310469,
+            "free_bytes": 42326208512
+          },
+          {
+            "epoch": 1792574977.59362,
+            "extra_review_bytes": 2892310657,
+            "free_bytes": 42326142976
+          },
+          {
+            "epoch": 1792574978.613545,
+            "extra_review_bytes": 2892310933,
+            "free_bytes": 42326065152
+          },
+          {
+            "epoch": 1792574979.6417558,
+            "extra_review_bytes": 2892311218,
+            "free_bytes": 42326048768
+          },
+          {
+            "epoch": 1792574980.663511,
+            "extra_review_bytes": 2892311503,
+            "free_bytes": 42325843968
+          },
+          {
+            "epoch": 1792574981.682451,
+            "extra_review_bytes": 2892311791,
+            "free_bytes": 42325848064
+          },
+          {
+            "epoch": 1792574982.700641,
+            "extra_review_bytes": 2892312054,
+            "free_bytes": 42326085632
+          },
+          {
+            "epoch": 1792574983.718383,
+            "extra_review_bytes": 2892312417,
+            "free_bytes": 42325970944
+          },
+          {
+            "epoch": 1792574984.7396219,
+            "extra_review_bytes": 2892312680,
+            "free_bytes": 42326056960
+          },
+          {
+            "epoch": 1792574985.7632508,
+            "extra_review_bytes": 2892312956,
+            "free_bytes": 42325934080
+          },
+          {
+            "epoch": 1792574986.778347,
+            "extra_review_bytes": 2892313451,
+            "free_bytes": 42325843968
+          },
+          {
+            "epoch": 1792574987.801488,
+            "extra_review_bytes": 2892313726,
+            "free_bytes": 42325835776
+          },
+          {
+            "epoch": 1792574988.817931,
+            "extra_review_bytes": 2892314002,
+            "free_bytes": 42325831680
+          },
+          {
+            "epoch": 1792574989.8318431,
+            "extra_review_bytes": 2892314266,
+            "free_bytes": 42325688320
+          },
+          {
+            "epoch": 1792574990.8469079,
+            "extra_review_bytes": 2892314540,
+            "free_bytes": 42325684224
+          },
+          {
+            "epoch": 1792574991.877105,
+            "extra_review_bytes": 2892321629,
+            "free_bytes": 42324525056
+          },
+          {
+            "epoch": 1792574992.9041548,
+            "extra_review_bytes": 2892321904,
+            "free_bytes": 42324516864
+          },
+          {
+            "epoch": 1792574993.935572,
+            "extra_review_bytes": 2892322192,
+            "free_bytes": 42324512768
+          },
+          {
+            "epoch": 1792574994.9605708,
+            "extra_review_bytes": 2892322567,
+            "free_bytes": 42324832256
+          },
+          {
+            "epoch": 1792574995.9795961,
+            "extra_review_bytes": 2892322841,
+            "free_bytes": 42324672512
+          },
+          {
+            "epoch": 1792574997.000941,
+            "extra_review_bytes": 2892323336,
+            "free_bytes": 42324713472
+          },
+          {
+            "epoch": 1792574998.0211651,
+            "extra_review_bytes": 2892323611,
+            "free_bytes": 42324680704
+          },
+          {
+            "epoch": 1792574999.053622,
+            "extra_review_bytes": 2892323911,
+            "free_bytes": 42324639744
+          },
+          {
+            "epoch": 1792575000.078649,
+            "extra_review_bytes": 2892324198,
+            "free_bytes": 42324578304
+          },
+          {
+            "epoch": 1792575001.1014872,
+            "extra_review_bytes": 2892324471,
+            "free_bytes": 42324463616
+          },
+          {
+            "epoch": 1792575002.1278698,
+            "extra_review_bytes": 2892324733,
+            "free_bytes": 42324492288
+          },
+          {
+            "epoch": 1792575003.15079,
+            "extra_review_bytes": 2892325084,
+            "free_bytes": 42324484096
+          },
+          {
+            "epoch": 1792575004.171675,
+            "extra_review_bytes": 2892325372,
+            "free_bytes": 42324475904
+          },
+          {
+            "epoch": 1792575005.198348,
+            "extra_review_bytes": 2892325572,
+            "free_bytes": 42324443136
+          },
+          {
+            "epoch": 1792575006.2150662,
+            "extra_review_bytes": 2892325848,
+            "free_bytes": 42324533248
+          },
+          {
+            "epoch": 1792575007.24483,
+            "extra_review_bytes": 2892326330,
+            "free_bytes": 42324455424
+          },
+          {
+            "epoch": 1792575008.267877,
+            "extra_review_bytes": 2892326691,
+            "free_bytes": 42324455424
+          },
+          {
+            "epoch": 1792575009.286247,
+            "extra_review_bytes": 2892326954,
+            "free_bytes": 42324443136
+          },
+          {
+            "epoch": 1792575010.300273,
+            "extra_review_bytes": 2892327241,
+            "free_bytes": 42324406272
+          },
+          {
+            "epoch": 1792575011.319654,
+            "extra_review_bytes": 2892327504,
+            "free_bytes": 42324398080
+          },
+          {
+            "epoch": 1792575012.341061,
+            "extra_review_bytes": 2892327765,
+            "free_bytes": 42324389888
+          },
+          {
+            "epoch": 1792575013.415402,
+            "extra_review_bytes": 2892328029,
+            "free_bytes": 42324328448
+          },
+          {
+            "epoch": 1792575014.434484,
+            "extra_review_bytes": 2892328402,
+            "free_bytes": 42324512768
+          },
+          {
+            "epoch": 1792575015.4591029,
+            "extra_review_bytes": 2892328577,
+            "free_bytes": 42324426752
+          },
+          {
+            "epoch": 1792575016.473228,
+            "extra_review_bytes": 2892328939,
+            "free_bytes": 42324533248
+          },
+          {
+            "epoch": 1792575017.493366,
+            "extra_review_bytes": 2892329445,
+            "free_bytes": 42324504576
+          },
+          {
+            "epoch": 1792575018.511947,
+            "extra_review_bytes": 2892329719,
+            "free_bytes": 42324377600
+          },
+          {
+            "epoch": 1792575019.529304,
+            "extra_review_bytes": 2892329994,
+            "free_bytes": 42324369408
+          },
+          {
+            "epoch": 1792575020.554425,
+            "extra_review_bytes": 2892330257,
+            "free_bytes": 42324201472
+          },
+          {
+            "epoch": 1792575021.570482,
+            "extra_review_bytes": 2892330631,
+            "free_bytes": 42324193280
+          },
+          {
+            "epoch": 1792575022.590494,
+            "extra_review_bytes": 2892330917,
+            "free_bytes": 42324193280
+          },
+          {
+            "epoch": 1792575023.605154,
+            "extra_review_bytes": 2892331205,
+            "free_bytes": 42324176896
+          },
+          {
+            "epoch": 1792575024.6288052,
+            "extra_review_bytes": 2892331480,
+            "free_bytes": 42324176896
+          },
+          {
+            "epoch": 1792575025.648353,
+            "extra_review_bytes": 2892331853,
+            "free_bytes": 42324303872
+          },
+          {
+            "epoch": 1792575026.6666172,
+            "extra_review_bytes": 2892332127,
+            "free_bytes": 42324377600
+          },
+          {
+            "epoch": 1792575027.682561,
+            "extra_review_bytes": 2892332620,
+            "free_bytes": 42324361216
+          },
+          {
+            "epoch": 1792575028.6986,
+            "extra_review_bytes": 2892332907,
+            "free_bytes": 42324357120
+          },
+          {
+            "epoch": 1792575029.722851,
+            "extra_review_bytes": 2892333168,
+            "free_bytes": 42324357120
+          },
+          {
+            "epoch": 1792575030.741725,
+            "extra_review_bytes": 2892333519,
+            "free_bytes": 42324348928
+          },
+          {
+            "epoch": 1792575031.7684941,
+            "extra_review_bytes": 2892333807,
+            "free_bytes": 42324385792
+          },
+          {
+            "epoch": 1792575032.785581,
+            "extra_review_bytes": 2892334082,
+            "free_bytes": 42324353024
+          },
+          {
+            "epoch": 1792575033.8045282,
+            "extra_review_bytes": 2892334344,
+            "free_bytes": 42324328448
+          },
+          {
+            "epoch": 1792575034.8226008,
+            "extra_review_bytes": 2892334696,
+            "free_bytes": 42324312064
+          },
+          {
+            "epoch": 1792575035.8395991,
+            "extra_review_bytes": 2892334996,
+            "free_bytes": 42324324352
+          },
+          {
+            "epoch": 1792575036.862168,
+            "extra_review_bytes": 2892827282,
+            "free_bytes": 42323918848
+          },
+          {
+            "epoch": 1792575037.882859,
+            "extra_review_bytes": 2892827789,
+            "free_bytes": 42323767296
+          },
+          {
+            "epoch": 1792575038.9036741,
+            "extra_review_bytes": 2892828053,
+            "free_bytes": 42322702336
+          },
+          {
+            "epoch": 1792575039.918111,
+            "extra_review_bytes": 2892828416,
+            "free_bytes": 42322690048
+          },
+          {
+            "epoch": 1792575040.9376829,
+            "extra_review_bytes": 2892828690,
+            "free_bytes": 42322669568
+          },
+          {
+            "epoch": 1792575041.960463,
+            "extra_review_bytes": 2892828966,
+            "free_bytes": 42322731008
+          },
+          {
+            "epoch": 1792575042.9797928,
+            "extra_review_bytes": 2892829241,
+            "free_bytes": 42322726912
+          },
+          {
+            "epoch": 1792575043.99559,
+            "extra_review_bytes": 2892829603,
+            "free_bytes": 42322694144
+          },
+          {
+            "epoch": 1792575045.01503,
+            "extra_review_bytes": 2892829879,
+            "free_bytes": 42322669568
+          },
+          {
+            "epoch": 1792575046.0356631,
+            "extra_review_bytes": 2892830167,
+            "free_bytes": 42322640896
+          },
+          {
+            "epoch": 1792575047.056072,
+            "extra_review_bytes": 2892830443,
+            "free_bytes": 42322702336
+          },
+          {
+            "epoch": 1792575048.073623,
+            "extra_review_bytes": 2892831038,
+            "free_bytes": 42322698240
+          },
+          {
+            "epoch": 1792575049.0901299,
+            "extra_review_bytes": 2892831326,
+            "free_bytes": 42322681856
+          },
+          {
+            "epoch": 1792575050.106218,
+            "extra_review_bytes": 2892831601,
+            "free_bytes": 42322665472
+          },
+          {
+            "epoch": 1792575051.121014,
+            "extra_review_bytes": 2892831877,
+            "free_bytes": 42322665472
+          },
+          {
+            "epoch": 1792575052.138363,
+            "extra_review_bytes": 2892832253,
+            "free_bytes": 42322661376
+          },
+          {
+            "epoch": 1792575053.157224,
+            "extra_review_bytes": 2892832528,
+            "free_bytes": 42322661376
+          },
+          {
+            "epoch": 1792575054.1734521,
+            "extra_review_bytes": 2892832815,
+            "free_bytes": 42322661376
+          },
+          {
+            "epoch": 1792575055.1920798,
+            "extra_review_bytes": 2892833090,
+            "free_bytes": 42322706432
+          },
+          {
+            "epoch": 1792575056.207587,
+            "extra_review_bytes": 2892833365,
+            "free_bytes": 42322690048
+          },
+          {
+            "epoch": 1792575057.2220118,
+            "extra_review_bytes": 2892833959,
+            "free_bytes": 42322681856
+          },
+          {
+            "epoch": 1792575058.237597,
+            "extra_review_bytes": 2892834246,
+            "free_bytes": 42322681856
+          },
+          {
+            "epoch": 1792575059.257198,
+            "extra_review_bytes": 2892834532,
+            "free_bytes": 42322677760
+          },
+          {
+            "epoch": 1792575060.271151,
+            "extra_review_bytes": 2892834808,
+            "free_bytes": 42322665472
+          },
+          {
+            "epoch": 1792575061.2874691,
+            "extra_review_bytes": 2892835170,
+            "free_bytes": 42321518592
+          },
+          {
+            "epoch": 1792575062.3091478,
+            "extra_review_bytes": 2892835457,
+            "free_bytes": 42321588224
+          },
+          {
+            "epoch": 1792575063.328979,
+            "extra_review_bytes": 2892835732,
+            "free_bytes": 42321571840
+          },
+          {
+            "epoch": 1792575064.348576,
+            "extra_review_bytes": 2892836005,
+            "free_bytes": 42321567744
+          },
+          {
+            "epoch": 1792575065.3661718,
+            "extra_review_bytes": 2892836380,
+            "free_bytes": 42321551360
+          },
+          {
+            "epoch": 1792575066.383539,
+            "extra_review_bytes": 2892836654,
+            "free_bytes": 42321534976
+          },
+          {
+            "epoch": 1792575067.403321,
+            "extra_review_bytes": 2892837135,
+            "free_bytes": 42321448960
+          },
+          {
+            "epoch": 1792575068.426307,
+            "extra_review_bytes": 2892837410,
+            "free_bytes": 42321559552
+          },
+          {
+            "epoch": 1792575069.451884,
+            "extra_review_bytes": 2892837672,
+            "free_bytes": 42321526784
+          },
+          {
+            "epoch": 1792575070.471761,
+            "extra_review_bytes": 2892838020,
+            "free_bytes": 42321518592
+          },
+          {
+            "epoch": 1792575071.486721,
+            "extra_review_bytes": 2892838296,
+            "free_bytes": 42321637376
+          },
+          {
+            "epoch": 1792575072.5002859,
+            "extra_review_bytes": 2892838582,
+            "free_bytes": 42321629184
+          },
+          {
+            "epoch": 1792575073.51762,
+            "extra_review_bytes": 2892838844,
+            "free_bytes": 42321592320
+          },
+          {
+            "epoch": 1792575074.546716,
+            "extra_review_bytes": 2892839107,
+            "free_bytes": 42321584128
+          },
+          {
+            "epoch": 1792575075.5666728,
+            "extra_review_bytes": 2892839479,
+            "free_bytes": 42321551360
+          },
+          {
+            "epoch": 1792575076.584246,
+            "extra_review_bytes": 2892839741,
+            "free_bytes": 42321629184
+          },
+          {
+            "epoch": 1792575077.6049652,
+            "extra_review_bytes": 2892840245,
+            "free_bytes": 42321600512
+          },
+          {
+            "epoch": 1792575078.6236532,
+            "extra_review_bytes": 2892840532,
+            "free_bytes": 42321588224
+          },
+          {
+            "epoch": 1792575079.6430771,
+            "extra_review_bytes": 2892840881,
+            "free_bytes": 42321608704
+          },
+          {
+            "epoch": 1792575080.663718,
+            "extra_review_bytes": 2892841154,
+            "free_bytes": 42321596416
+          },
+          {
+            "epoch": 1792575081.686941,
+            "extra_review_bytes": 2892841427,
+            "free_bytes": 42321575936
+          },
+          {
+            "epoch": 1792575082.703973,
+            "extra_review_bytes": 2892841691,
+            "free_bytes": 42321559552
+          },
+          {
+            "epoch": 1792575083.72041,
+            "extra_review_bytes": 2892842078,
+            "free_bytes": 42321547264
+          },
+          {
+            "epoch": 1792575084.737664,
+            "extra_review_bytes": 2892842353,
+            "free_bytes": 42321547264
+          },
+          {
+            "epoch": 1792575085.750057,
+            "extra_review_bytes": 2892842616,
+            "free_bytes": 42321498112
+          },
+          {
+            "epoch": 1792575086.77515,
+            "extra_review_bytes": 2892842902,
+            "free_bytes": 42321469440
+          },
+          {
+            "epoch": 1792575087.796122,
+            "extra_review_bytes": 2892843469,
+            "free_bytes": 42321600512
+          },
+          {
+            "epoch": 1792575088.8144681,
+            "extra_review_bytes": 2892843756,
+            "free_bytes": 42321461248
+          },
+          {
+            "epoch": 1792575089.834344,
+            "extra_review_bytes": 2892844029,
+            "free_bytes": 42321453056
+          },
+          {
+            "epoch": 1792575090.855319,
+            "extra_review_bytes": 2892844302,
+            "free_bytes": 42321448960
+          },
+          {
+            "epoch": 1792575091.8939672,
+            "extra_review_bytes": 2892844575,
+            "free_bytes": 42321473536
+          },
+          {
+            "epoch": 1792575092.9142861,
+            "extra_review_bytes": 2892844862,
+            "free_bytes": 42321457152
+          },
+          {
+            "epoch": 1792575093.931523,
+            "extra_review_bytes": 2892845125,
+            "free_bytes": 42321444864
+          },
+          {
+            "epoch": 1792575094.946988,
+            "extra_review_bytes": 2892845398,
+            "free_bytes": 42321424384
+          },
+          {
+            "epoch": 1792575095.9673002,
+            "extra_review_bytes": 2892845672,
+            "free_bytes": 42321403904
+          },
+          {
+            "epoch": 1792575096.987722,
+            "extra_review_bytes": 2893347353,
+            "free_bytes": 42320822272
+          },
+          {
+            "epoch": 1792575098.012562,
+            "extra_review_bytes": 2893347847,
+            "free_bytes": 42320928768
+          },
+          {
+            "epoch": 1792575099.0365078,
+            "extra_review_bytes": 2893348132,
+            "free_bytes": 42320961536
+          },
+          {
+            "epoch": 1792575100.054181,
+            "extra_review_bytes": 2893348515,
+            "free_bytes": 42320936960
+          },
+          {
+            "epoch": 1792575101.071093,
+            "extra_review_bytes": 2893348787,
+            "free_bytes": 42320920576
+          },
+          {
+            "epoch": 1792575102.091639,
+            "extra_review_bytes": 2893349073,
+            "free_bytes": 42320912384
+          },
+          {
+            "epoch": 1792575103.106463,
+            "extra_review_bytes": 2893349334,
+            "free_bytes": 42320908288
+          },
+          {
+            "epoch": 1792575104.122439,
+            "extra_review_bytes": 2893349706,
+            "free_bytes": 42320887808
+          },
+          {
+            "epoch": 1792575105.137169,
+            "extra_review_bytes": 2893349980,
+            "free_bytes": 42320875520
+          },
+          {
+            "epoch": 1792575106.159321,
+            "extra_review_bytes": 2893350268,
+            "free_bytes": 42320850944
+          },
+          {
+            "epoch": 1792575107.183948,
+            "extra_review_bytes": 2896196980,
+            "free_bytes": 42318106624
+          }
+        ]
+      },
+      {
+        "path": "artifacts/e017-information-aware-grouping/inspection-20261021/verify-1.resources.json",
+        "binding": {
+          "bytes": 5027,
+          "sha256": "75486c9b1e4019db588ba0f31a60f6256bc70bd5a243b6713727bad95b5f31a2"
+        },
+        "operation": "verify",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py",
+            "verify"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 34.58189899800345,
+          "peak_sampled_rss_bytes": 43036672,
+          "seconds_ceiling": 3095.890492916107,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 80057,
+          "sampled_cpu_seconds": 31.7,
+          "sampled_average_cpus": 0.916664524462065,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 538.6929609775543,
+        "extra_local_peak_bytes": 2890335983,
+        "samples": [
+          {
+            "epoch": 1792574052.129336,
+            "extra_review_bytes": 1055290322,
+            "free_bytes": 48191500288
+          },
+          {
+            "epoch": 1792574053.136811,
+            "extra_review_bytes": 1055290490,
+            "free_bytes": 48191713280
+          },
+          {
+            "epoch": 1792574054.1457868,
+            "extra_review_bytes": 1055290784,
+            "free_bytes": 48191594496
+          },
+          {
+            "epoch": 1792574055.148781,
+            "extra_review_bytes": 1055291033,
+            "free_bytes": 48191590400
+          },
+          {
+            "epoch": 1792574056.1573582,
+            "extra_review_bytes": 1055291281,
+            "free_bytes": 48191504384
+          },
+          {
+            "epoch": 1792574057.1621802,
+            "extra_review_bytes": 1055291530,
+            "free_bytes": 48191696896
+          },
+          {
+            "epoch": 1792574058.168481,
+            "extra_review_bytes": 1055291778,
+            "free_bytes": 48191680512
+          },
+          {
+            "epoch": 1792574059.1736052,
+            "extra_review_bytes": 1055292111,
+            "free_bytes": 48191672320
+          },
+          {
+            "epoch": 1792574060.1753228,
+            "extra_review_bytes": 1055292359,
+            "free_bytes": 48190652416
+          },
+          {
+            "epoch": 1792574061.1813571,
+            "extra_review_bytes": 1055292619,
+            "free_bytes": 48190631936
+          },
+          {
+            "epoch": 1792574062.187946,
+            "extra_review_bytes": 1055293077,
+            "free_bytes": 48190652416
+          },
+          {
+            "epoch": 1792574063.192342,
+            "extra_review_bytes": 1055293344,
+            "free_bytes": 48190615552
+          },
+          {
+            "epoch": 1792574064.198417,
+            "extra_review_bytes": 1055293611,
+            "free_bytes": 48190648320
+          },
+          {
+            "epoch": 1792574065.2019641,
+            "extra_review_bytes": 1055293877,
+            "free_bytes": 48190627840
+          },
+          {
+            "epoch": 1792574066.20359,
+            "extra_review_bytes": 1055294143,
+            "free_bytes": 48190627840
+          },
+          {
+            "epoch": 1792574067.207465,
+            "extra_review_bytes": 1055644743,
+            "free_bytes": 48190148608
+          },
+          {
+            "epoch": 1792574068.218112,
+            "extra_review_bytes": 1076828011,
+            "free_bytes": 48168648704
+          },
+          {
+            "epoch": 1792574069.241059,
+            "extra_review_bytes": 1079581533,
+            "free_bytes": 48165523456
+          },
+          {
+            "epoch": 1792574070.2584698,
+            "extra_review_bytes": 1202298433,
+            "free_bytes": 48042721280
+          },
+          {
+            "epoch": 1792574071.272516,
+            "extra_review_bytes": 1315663386,
+            "free_bytes": 47928295424
+          },
+          {
+            "epoch": 1792574072.297821,
+            "extra_review_bytes": 1389298152,
+            "free_bytes": 47850725376
+          },
+          {
+            "epoch": 1792574073.332971,
+            "extra_review_bytes": 1475975090,
+            "free_bytes": 47761567744
+          },
+          {
+            "epoch": 1792574074.352064,
+            "extra_review_bytes": 1583551671,
+            "free_bytes": 47640965120
+          },
+          {
+            "epoch": 1792574075.374523,
+            "extra_review_bytes": 1679081243,
+            "free_bytes": 47545413632
+          },
+          {
+            "epoch": 1792574076.393493,
+            "extra_review_bytes": 1777193841,
+            "free_bytes": 47431098368
+          },
+          {
+            "epoch": 1792574077.414352,
+            "extra_review_bytes": 1873454658,
+            "free_bytes": 47331184640
+          },
+          {
+            "epoch": 1792574078.447673,
+            "extra_review_bytes": 2006218152,
+            "free_bytes": 47183306752
+          },
+          {
+            "epoch": 1792574079.468423,
+            "extra_review_bytes": 2123658917,
+            "free_bytes": 47064793088
+          },
+          {
+            "epoch": 1792574080.486967,
+            "extra_review_bytes": 2273040814,
+            "free_bytes": 46908080128
+          },
+          {
+            "epoch": 1792574081.537211,
+            "extra_review_bytes": 2514213476,
+            "free_bytes": 46658514944
+          },
+          {
+            "epoch": 1792574082.55833,
+            "extra_review_bytes": 2574579116,
+            "free_bytes": 46595743744
+          },
+          {
+            "epoch": 1792574083.586899,
+            "extra_review_bytes": 2666854071,
+            "free_bytes": 46490701824
+          },
+          {
+            "epoch": 1792574084.606905,
+            "extra_review_bytes": 2788520663,
+            "free_bytes": 46365900800
+          },
+          {
+            "epoch": 1792574085.62131,
+            "extra_review_bytes": 2890335197,
+            "free_bytes": 46254108672
+          }
+        ]
+      }
+    ],
+    "evaluator_contracts_passed": 13,
+    "reader_repair_contracts_passed": 3,
+    "actual_adapter_fixtures": {
+      "bytes": 1259,
+      "sha256": "ba4bfc90ff48890813247458aa9a69c1f0290ca1db740f741e3440e1211faba3"
+    },
+    "no_new_fits_or_baseline_scores": true,
+    "scope": "Exact retained-cache readers and new-output diagnostics only. Small standard-library ledgers/aggregation included in cumulative clock/storage; archive download is streamed, before numerical workers and not individually RSS sampled."
+  },
+  "local_reader_repair": {
+    "record": "E017 local review adapter repair; native source/science immutable",
+    "native_source": "e78d766f2fea5699ca91ff984933a22226f5d233",
+    "original_reader": {
+      "bytes": 7849,
+      "sha256": "a6e9044b5a2720250b35dcdc7fb7626f3c322718591bf59fec3faeb5f9dfd372"
+    },
+    "repaired_reader": {
+      "bytes": 10328,
+      "sha256": "b27402567fc5883d2b6f3d400aaf8346502c753baf2be0521e80bc2d99d072e4"
+    },
+    "tests": {
+      "bytes": 3192,
+      "sha256": "6671406aa2e8d9a846bb75457b3654d0cba0100af2e4b2086611eae9ca8a4482"
+    },
+    "reason": "Recognize the exact emitted parent/legacy-child/E013 schemas. Parent declares numeric caches; legacy child emits only feature identity; E013 emits graph/vector hashes without neighbor_storage. Verify source and completed refinement identity, then attach byte-bound full E016 learned neighbors only to temporary legacy membership/diagnostic views.",
+    "semantics": "All assignment/mask/ID/no-merge/no-new-assignment and saved-alternative checks remain unchanged; numeric caches independently inspected; no tolerance/threshold/source science/input/output changed.",
+    "failed_attempt": "inspection-20261021/unit-E009-positive-1.log",
+    "scientific_score_started_in_failed_attempt": false,
+    "tests_passed": 3,
+    "prior_adapter_attempt": {
+      "bytes": 9455,
+      "sha256": "4dfde5e83c62a3d6d4dc991440d1b48aadf0f4d0491acf4a13428cf7fb7ab063"
+    },
+    "actual_writer_fixtures": {
+      "bytes": 1259,
+      "sha256": "ba4bfc90ff48890813247458aa9a69c1f0290ca1db740f741e3440e1211faba3"
+    },
+    "failed_attempts": [
+      {
+        "log": "unit-E009-positive-1.log",
+        "cause": "Legacy full-list length guard applied directly to compact partitions"
+      },
+      {
+        "log": "unit-E009-positive-2.log",
+        "cause": "First adapter required geometry/storage fields absent from the frozen legacy-child and selected-child writers"
+      }
+    ],
+    "native_or_scientific_bytes_changed": false,
+    "scores_started_in_failed_attempts": false
+  },
+  "scientific_disposition": {
+    "disposition": "MODIFY",
+    "frozen_keep": false,
+    "criterion": {
+      "keep": "Both E017 post weighted full-reference R95 >=E016 (0.05821901338849871/0.06771930145056311); at least one +0.005; neither >=90% target count below4/34; all integrity/population contracts pass.",
+      "modify": "Useful recovery/count gains coexist with endpoint or material population losses. Preserve all paired targets/length/origin/marker/eligibility/noise/excluded/unassigned cells and select one reasoned direction, no grid.",
+      "abandon": "Neither separately scoped R95 endpoint nor >=90% target count improves, or core/assignment integrity invalidates execution. No product-family conclusion."
+    },
+    "scope": "Development grouping bundle only; no default promotion, per-dataset/per-bin oracle, causal ingredient proof or product-family decision."
+  },
+  "preservation": "Original E009\u2013E017 inputs, truth, scientific outputs/native sources and failed journals unchanged. Original Mac allclose tolerance remains failed; no new model inference, marker detection, grouping or cloud job in inspection.",
+  "entry_owner_operations_patch": {
+    "bytes": 854,
+    "sha256": "16124361f8687758b028079d9a53c2c8e152d547b890527f9afcaacdb13fbf19"
+  },
+  "evidence": {
+    "artifacts/e017-information-aware-grouping/inspection-20261021/provider.json": {
+      "bytes": 33097,
+      "sha256": "3c79dbfc9c4e3f3e40406af9d4e47df43b4a3ee7e77c1dc5f8a8fb99c15eaf90"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/guest.json": {
+      "bytes": 467,
+      "sha256": "f29264c46eab0183f2885b94f23d09ca12d9efce30c1fb197804413fc6df601a"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/completion.json": {
+      "bytes": 111473,
+      "sha256": "3e05c9fbf503cba079face2995531f1c2aed33ad953eed77f80f9b8932eee83f"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/watchdog-exit.json": {
+      "bytes": 4277,
+      "sha256": "3167bda7af3a369d1a3c99433ef7c2ae9c532a0c5e36dc2030060f4986a247a1"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/current-prices.json": {
+      "bytes": 8003,
+      "sha256": "e38ed3b6289566403168c54bbda715d6f72b18bf2329d806a82d0d8546953bd3"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/storage-list.json": {
+      "bytes": 22551,
+      "sha256": "2355586373cca8cf62baa70ec904b6121551cdaa99b7f64e75e1ef2b7fb623da"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/export-admission.json": {
+      "bytes": 2914,
+      "sha256": "f0825de93967693940331f09fd388ce005be9f5efb2047ebd68e550485eb13f0"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/download.json": {
+      "bytes": 289,
+      "sha256": "b3ca1b26b2c9da1f8cb0129c0a6ef1c895a09b9934f27a97d6f5047dfa5b9eea"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/verified/inventory.json": {
+      "bytes": 349849,
+      "sha256": "32a3d599bb26e54d17f65d08ea823038986b3fb247ed0c8b25289f5d275c75ff"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/native-receipts-review.json": {
+      "bytes": 190158,
+      "sha256": "f0db39d80e5f6092f0c78ae940c050930647fb8f2b3b2f21b523e4a66768d45e"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/cache-contract-review.json": {
+      "bytes": 14281,
+      "sha256": "ba27a36236d7a00bc6e9321ac032b827cbe0d21e5b24e6c1193a9c4a6b6fb018"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/gate-overlap-review.json": {
+      "bytes": 2277,
+      "sha256": "78ff762c47f164c7c52f29b02b2bffa342a314881671656014ffb6881752f4e2"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/review-controller.py": {
+      "bytes": 3159,
+      "sha256": "49fce6d9856e162848ebc4a0b2cccd1f23c1cd6d4151be5cbf0f7b2b204be0bf"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/review-stage.py": {
+      "bytes": 3806,
+      "sha256": "9b22e58dc06ced34d9f066f52c233fd03ddd00b1c79b8b2515a996bf08940758"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/native-ledger.py": {
+      "bytes": 6479,
+      "sha256": "0605f44648d1bfc69f95ffa3cb4dfd86d990857638c4b8d77409a8b9614eaeb1"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/cache-review.py": {
+      "bytes": 6814,
+      "sha256": "5ed527745482ffaa5a4ca81069adaaa42a2af5c64b787ce86937f3e32ab72de1"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/gate-overlap.py": {
+      "bytes": 2598,
+      "sha256": "f001c520c3abb35eaa1bf05dc22bd34038d8ab5fc8d99336d5b0c9d0a4e8fd81"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/adapter-fixtures.py": {
+      "bytes": 1909,
+      "sha256": "2f7f71c0074a6fa8aa35912bb98fac5ccea5632ec79f62e550281255cd9d1d6a"
+    },
+    "scripts/e017_review.py": {
+      "bytes": 10328,
+      "sha256": "b27402567fc5883d2b6f3d400aaf8346502c753baf2be0521e80bc2d99d072e4"
+    },
+    "scripts/e017_summarize.py": {
+      "bytes": 8541,
+      "sha256": "854fd9fec30be763c05a6511bc218647bf727384778f07dcb2d414bceeadb324"
+    },
+    "tests/test_e017_review.py": {
+      "bytes": 3192,
+      "sha256": "6671406aa2e8d9a846bb75457b3654d0cba0100af2e4b2086611eae9ca8a4482"
+    }
+  },
+  "final_seal": {
+    "UTC": "2026-10-21T09:59:02.066684+00:00",
+    "cumulative_seconds": 3195.035579919815,
+    "elapsed_bound_seconds": 3600,
+    "extra_local_peak_bytes": 2897194338,
+    "sampled_numerical_worker_peak_RSS_bytes": 3720044544,
+    "scope": "Numerical review workers sampled with controller; financial/orchestration/download not all independently RSS sampled; elapsed/storage include full inspection",
+    "local_compact": {
+      "status": "PASS_LOCAL_SEAL_EVERY_MEMBER",
+      "UTC": "2026-10-21T09:58:26.600379+00:00",
+      "archive": {
+        "bytes": 895506,
+        "sha256": "0b08fbc0afb3502989783cbf819047cebba71fd6be107473aa30a958897736c3"
+      },
+      "regular_payload_members": 140,
+      "logical_payload_bytes": 7403836,
+      "scope": "Closed snapshot before self receipt/final seal/Git edits; no DNA/credentials",
+      "private_upload": "NOT_ATTEMPTED: automatic approval review rejected optional upload before shell execution; owner question pending; no workaround"
+    },
+    "local_compact_receipt": {
+      "bytes": 526,
+      "sha256": "a2e90ecad3df65e68562428bc4223e7dc07a69d97becf5ba6f7b0b600a2f07aa"
+    },
+    "seal_resources": {
+      "bytes": 1108,
+      "sha256": "ef31e2741d5b7605c5458ab547789df6888442c05e42a2e9512017a716de7509"
+    },
+    "provider_final": {
+      "lastStartTimestamp": "2026-10-20T16:26:31.522-07:00",
+      "lastStopTimestamp": "2026-10-20T16:57:35.627-07:00",
+      "name": "dl-binner-cpu",
+      "scheduling": {
+        "automaticRestart": false,
+        "instanceTerminationAction": "STOP",
+        "maxRunDuration": {
+          "nanos": 0,
+          "seconds": "11700"
+        },
+        "onHostMaintenance": "MIGRATE",
+        "preemptible": false,
+        "provisioningModel": "STANDARD"
+      },
+      "status": "TERMINATED"
+    },
+    "frozen_science_and_accepted_records_unchanged": true,
+    "strict_executed_margin": "best * 1.5 < runner; earlier design <= shorthand preserved, no scientific rule changed",
+    "optional_private_upload": "Automatic approval review rejected upload before execution because payload egress not explicitly authorized. Owner question pending; compact inspection snapshot stays local. Existing native archive verification is complete."
+  }
+}

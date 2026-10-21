@@ -4,76 +4,73 @@ Updated: 2026-10-21. This is the single current handoff.
 
 ## Exact next step
 
-**E017's separately authorized cached comparison is running under verified
-supervision; its scientific outcome is not yet reviewed.** Phase
-`information-20261020T232634Z-e78d766` uses source `e78d766`, a history-preserving
-launcher-only repair of prepared `067ceb2`. The original candidate lock, wheel,
-learning, scientific policy and inputs are unchanged. [Native receipt](../experiments/E017-information-aware-grouping/native-observed.json)
-owns the current stage, gates, exact source, logs and cost boundaries.
-[E017 operations](../experiments/E017-information-aware-grouping/OPERATIONS.md),
-[design](../experiments/E017-information-aware-grouping/design.md),
-[protocol](../experiments/E017-information-aware-grouping/protocol.json),
-[local evidence](../experiments/E017-information-aware-grouping/local-evidence.json)
-and [resource plan](../experiments/E017-information-aware-grouping/resource-plan.json)
-own the frozen rule, engineering paths and budget. Operations now gives the
-post-completion inspection prompt. Branch `e017-information-aware-grouping` preserves dev3/dev4/dev5/E016 and
-all accepted inputs/truth/results/source freezes and failed journals.
+**E017 completed and is independently reviewed: MODIFY. VM TERMINATED.**
+[Comparison](../experiments/E017-information-aware-grouping/comparison-review.json),
+[full target table](../experiments/E017-information-aware-grouping/comparison-targets.tsv),
+[inspection](../experiments/E017-information-aware-grouping/inspection-observed.json)
+and [operations](../experiments/E017-information-aware-grouping/OPERATIONS.md) own
+outcome, failures, all populations, costs and the next proposed prompt. Native
+source `e78d766` preserves prepared `067ceb2`, E016 learning/vectors and all older
+science. The local compact-format reader repair is separate from native science;
+original failed Mac portability and two new pre-score review journals remain.
 
-The coherent block holds E016 learning/native unit vectors fixed. It forms
->=2,500 bp cores using learned/raw composition and available measured parent means,
-then conservatively recruits shorter/unsupported eligible DNA once and applies
-unchanged E013. It retains all sparse/profile/vote evidence and core/recruited/
-old/E013 partitions, all DNA and optional unassignment. No new encoder, marker
-redetection on communities, truth K or coverage variance is added. Background
-agreement/reliability/profile rules are prospective heuristics, not a performance
-claim. Real tiny native readers/NN/Leiden/cache/refiner/export, the actual serial
-nine-job tiny DAG and installed runtime/source/library contracts pass. All nine
-Linux admission stages now pass, including 72 retained files / 6,041,240,299 bytes,
-independent Python 3.12 source/library/inventory, both full axes, actual tiny native
-NN/marker/refiner/export, collector/launcher and complete DAG dry run. The frozen
-native kernel projection is 4,951.66 seconds against 10,598.23 remaining; this is
-a planning heuristic, not proof of full-community affordability or quality.
-Actual full-community return/review and final resource contracts remain pending.
+| Post weighted full-reference R95 | Retained E016 | E017 |
+| --- | ---: | ---: |
+| E009 conservative v2, 156 references | 5.8219% | **7.5284%** |
+| Oral provided-origin oracle, 799 references | 6.7719% | **4.9664%** |
 
-The [eligibility audit](../experiments/E017-information-aware-grouping/eligibility-audit.json)
-confirms retained MetaBAT2 2.18 uses a 2,500 bp main default (minimum allowed 1,500),
-separate 1,000 bp default recruitment and native depth filters. Our frozen learner
-admits >=500 bp. Keep the accepted whole-tool result/full-reference denominator
-and native length/status populations; it is not an equal-cutoff ablation. E017's
-core cutoff changes grouping authority, not learning eligibility or DNA accounting.
+E009 gains 9,465,205 recovered bp, 14 target gains / 9 losses, >=90% targets
+4 → 8. Oral loses 37,609,955 bp, 23 gains / 45 losses, >=90% targets 34 → 21.
+No global default or per-dataset/per-bin oracle is promoted. All four partitions,
+all DNA, 3.3034% N-quarantine, full provided denominators and oral known-shared
+sensitivity remain. Fixed E016 learned-neighbor metrics are exactly unchanged;
+new joint-core retrieval is a different population. E013 adds 62.94 Mb oral
+recovery over its recruited parent but does not restore E016.
 
-**Storage-only continuation is now approved and admitted:** up to **$8 gross**
-for the existing disks/private evidence, **October 21 at 00:00 through October 28
-at 00:00 Copenhagen**, 169 hours across DST. [October 20 checks](../experiments/E017-information-aware-grouping/storage-admission.json)
-found DKK 1,897.28 Welcome credit Available through January 12, 2027, paid/net-priced
-coverage, unknown delayed usage with reserves, unchanged applicable disk prices,
-78 object versions and zero soft-deleted bytes. Forecast **$7.61 with reserve**;
-no VM start, resize, new service, deletion or later extension. Existing disks cost
-$31.20/month while stopped. Review backup gaps before cleanup; hashes do not back
-up omitted FASTAs/shared inputs or dependency prefixes. The October 21 decision
-is resolved for this interval; **October 28 is the next retention boundary**.
+The next decision is **one cached recruitment-ranking control**, not a new encoder
+or a grid. Existing distance-first/profile-margin ranking can veto a unique core
+candidate already satisfying all existing profile <=1, >=2 supporters and >=2/3
+weighted-vote conditions: 13,635 E009 contigs / 14.46 Mb and 99,067 oral contigs /
+95.98 Mb. This label-free census creates no changed partition or score. Prepare
+one vote-led/profile-admissibility rule using the same thresholds, E017 cores/
+graph/profiles/seed, native vectors and unchanged E013. Reject when no candidate
+is admissible. It can test whether competing rankers are losing supported DNA or
+whether the veto protects purity. Mixed oral cores and other rejections remain;
+this control cannot fix all information/grouping failures. D015 weighs larger
+context/GLM/marker-learning alternatives; the specific cheap control is justified
+before paying for them, without ruling any family out.
 
-The owner authorizes this comparison under a **new $2**, after fresh gates:
-existing 8-vCPU/32-GiB VM and 300-GiB disk, three-hour cumulative setup/verification/
-grouping/collection clock, 3.25-hour provider STOP, four numerical threads,
-26 GB sampled tree RSS, 25 GiB free reserve, 20 GiB extra work and 3 GiB compressed
-export. Maximum quote is about $1.64 including reserve, not an invoice. Fresh
-Welcome credit is DKK 1,896.60 Available, expiry January 12, 2027; prices are
-unchanged, delayed usage remains unknown with reserves. Storage including the
-maximum new return is forecast at $7.63 inside the separate $8 allowance.
-VM start was October 21 at 01:26:31 Copenhagen, release at 01:30:45.
-The original three-hour deadline is **04:26:31**, provider STOP **04:41:31**, both
-October 21 Copenhagen. The fresh boot/process-bound watcher passed live/exit/crash
-tests; initial free space is 90.24 GiB. Do not restart, extend or replay science.
-For a healthy longer job, inspect real progress and hand off; after shutdown,
-verify completion/member bytes/cost before evaluating only the new outputs.
+[Operations' exact prompt](../experiments/E017-information-aware-grouping/OPERATIONS.md#exact-following-prompt)
+proposes local preparation and one separately authorized **new $1** native cached
+control: existing e2-standard-8 / 32 GiB and 300 GiB work disk, one cumulative hour,
+75-minute provider STOP, four numerical threads, 26 GB sampled tree RSS, 25 GiB
+free reserve, 20 GiB extra work and 2 GiB compressed export. Expect 15–35 minutes;
+max gross forecast about $0.884 including reserve. **Not executed or authorized
+by this inspection.** Fresh source/runtime/credit/prices/headroom/retention and a
+new boot/process watcher remain mandatory; no prior compute budget carries over.
 
-The [frozen skin confirmation choice](../experiments/E016-positive-only-multiview/confirmation-plan.json)
-remains untouched and unacquired. Sample/source/genome/replicon/molecule/taxonomy
-joins, exact/near/pretraining overlap, duplicate-safe full denominators,
-competitive/ambiguity and unique-versus-origin truth, unchanged candidate/comparator
-protocol and separate acquisition/cost/retention admission remain. Both currently
-scored communities are development; a new body site is not unseen genomes.
+E017 used 31.07 minutes of VM allocation, 20.65 minutes science, 9.347 GB sampled
+science RSS; all nine admission gates and eight rules plus final target pass.
+All 245 archive members / 1,055,048,062 compressed bytes verify. Exact retained
+before/after hashes, cached profiles/votes/assignment gates and complete exports
+pass. Allocation/SKU/export quote about $0.282, below $0.54 with reserve inside
+original $2; idle disk costs are separate, not sampled-CPU or credit-delta pricing.
+No wake, science replay, new resource or retention extension occurred in review.
+
+**Storage stays approved up to $8 through October 28 at 00:00 Copenhagen**.
+Fresh credit DKK 1,893.83 Available through January 12, 2027; pending usage unknown
+with reserves. Existing disks remain $31.20/month while stopped. Current listed
+storage plus reserves forecasts about $7.62 for the explicit 169-hour interval.
+October 28 is the next retention boundary; no automatic renewal/deletion.
+Backup omissions matter: native full FASTAs, shared DNA/features/views/markers and
+runtime prefixes are not restored by hashes alone. No accepted artifact is pruned.
+
+The frozen [skin confirmation choice](../experiments/E016-positive-only-multiview/confirmation-plan.json)
+stays untouched/unacquired. Actual sample/source/genome/replicon/molecule/taxonomy
+joins, exact/near/pretraining overlap, duplicate-safe full denominators, ambiguous/
+competitive DNA, unique-versus-origin truth, unchanged candidate/comparator
+protocol and separate acquisition/compute/cost/retention admission remain. Both
+inspected communities are development; their differences do not isolate depth.
 
 ## Preserved E016 result and reason for E017
 

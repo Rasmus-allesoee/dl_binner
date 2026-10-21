@@ -503,3 +503,13 @@ comparison under a new $2. [Native admission](../../experiments/E017-information
 passes all nine gates and releases the sole DAG under verified supervision,
 holding E016 learning fixed. This moves the scoped question into testing; no
 community quality result or scientific resolution is yet admitted.
+
+
+2026-10-21 E017 reviewed: [fixed-learning information-use bundle](../../experiments/E017-information-aware-grouping/comparison-review.json)
+is mixed (MODIFY): E009 post R95 5.8219 → 7.5284%, oral-origin 6.7719 → 4.9664%,
+>=90% targets 4 → 8 / 34 → 21. All DNA/full denominators/N-quarantine remain;
+large unassignment and oral core mixing are explicit. Q001/Q003/Q005 stay open.
+D015 selects one cached vote-led/profile-admissibility control because retained
+existing gate overlap exposes competing rankers; no rule/score/encoder change or
+new cloud job is executed in inspection. Larger context/GLM/marker-learning
+alternatives remain, with untouched skin admission and October 28 retention visible.

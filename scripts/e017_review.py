@@ -25,6 +25,44 @@ ARMS={'cores':'group/core-partition.json','pre':'group/partition.json',
       'old':'refine/old-partition.json','post':'refine/partition.json'}
 
 
+def legacy_membership_views(parts,fixed_neighbors):
+    """Adapt verified compact partitions for unchanged legacy set-membership checks.
+
+    E017 stores complete joint-core neighbors in separately byte-bound numeric
+    caches. The parent declares that storage; the unchanged legacy child writer
+    emits feature identity but no graph/vector fields, and E013 emits those two
+    hashes without the new storage declaration. Check each actual writer schema
+    and the independently byte-bound refinement receipt rather than inventing
+    missing metadata. Only in-memory diagnostic views borrow the separately
+    verified full E016 learned-neighbor lists; no retained vector/cache/partition
+    is changed and no new joint graph is relabeled as learned geometry.
+    """
+    require(len(parts)==3,'Parent/old/E013 alternatives required')
+    pre=parts[0];storage=pre.get('neighbor_storage')
+    expected=dict(mode='complete_sparse_numeric_cache',core='graph.npz:candidates',
+                  recruitment='recruitment.npz:candidate_indices',
+                  query_axes='core_indices / query_indices; original full FASTA row indices')
+    require(storage==expected and len(fixed_neighbors)==len(pre['ids']),
+            'Compact cache declaration or preserved learned-neighbor axis differs')
+    require(bool(pre.get('graph_sha256')) and bool(pre.get('embedding_sha256')),
+            'Parent cache/geometry identity missing')
+    for at,part in enumerate(parts):
+        require(part.get('neighbors')==[]
+                and part.get('parent_features_sha256')==pre.get('parent_features_sha256')
+                and bool(part.get('parent_features_sha256')),
+                'Refinement changed compact display/feature identity')
+        if at==1:
+            require(not any(k in part for k in ['neighbor_storage','graph_sha256','embedding_sha256'])
+                    and part.get('pre_partition_semantics')=='one proposal per pre-bin; no merging; uncertainty may remain unassigned',
+                    'Unexpected legacy-child writer schema')
+        elif at==2:
+            require('neighbor_storage'not in part
+                    and part.get('graph_sha256')==pre['graph_sha256']
+                    and part.get('embedding_sha256')==pre['embedding_sha256'],
+                    'Refinement changed compact cache/geometry identity')
+    return [dict(part,neighbors=fixed_neighbors) for part in parts]
+
+
 def export_contract(part,data,folder):
     """Independently verify complete TSV axes, status/reason and base denominators."""
     folder=Path(folder);meta=read(folder/'manifest.json');totals={k:dict(contigs=0,bp=0) for k in ['assigned','unassigned','excluded']}
@@ -67,6 +105,7 @@ def review(unit,features,admission,output,dataset,marker_clean,truth_root,fixed_
     output.mkdir(parents=True,exist_ok=False)
     # Check parent alternatives together once, then release them for sequential metrics.
     pre,old,post=[validate_partition(data,unit/ARMS[k],features) for k in ['pre','old','post']]
+    pre,old,post=legacy_membership_views([pre,old,post],fixed_nn)
     refinement_membership(pre,old)
     choices=verify_choices(pre,old,post,read(unit/'refine/decisions.json'),read(unit/'refine/alternatives.json'))
     completed=read(unit/'refine/completed.json')
