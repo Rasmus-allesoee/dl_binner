@@ -1,0 +1,786 @@
+{
+  "record": "E018 authorized frozen cached recruitment control",
+  "status": "RUNNING_NOT_REVIEWED",
+  "observed_UTC": "2026-10-21T12:38:29.154338+00:00",
+  "phase": "voteled-20261021T122945Z-b996f6a",
+  "source_commit": "b996f6a37f31ecd53385ccbab2f08f707b1ce9b1",
+  "branch": "e018-vote-led-recruitment",
+  "identity": {
+    "phase": "voteled-20261021T122945Z-b996f6a",
+    "source": "b996f6a37f31ecd53385ccbab2f08f707b1ce9b1",
+    "vm_start_epoch": 1792585782.797,
+    "root": "/srv/dl_binner/experiments/e018/voteled-20261021T122945Z-b996f6a",
+    "service_name": "e018-20261021t122945z",
+    "repo": "/srv/dl_binner/research/e018-b996f6a37f31",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e018/voteled-20261021T122945Z-b996f6a"
+  },
+  "authorization": {
+    "new_incremental_gross_USD": 1,
+    "owner_may_approve_justified_increase": "Already authorized, but no increase chosen; frozen $1 maintained",
+    "cumulative_VM_start_seconds": 3600,
+    "provider_STOP_seconds": 4500,
+    "numerical_threads": 4,
+    "sampled_tree_RSS_bytes": 26000000000,
+    "free_reserve_GiB": 25,
+    "max_extra_work_GiB": 20,
+    "max_compressed_export_GiB": 2,
+    "existing_VM": "e2-standard-8 / 8 vCPU / 32 GiB",
+    "existing_work_disk_GiB": 300,
+    "expected_minutes": [
+      15,
+      35
+    ],
+    "expected_sampled_tree_RSS_GB": [
+      8,
+      12
+    ],
+    "expected_extra_work_GiB": [
+      4,
+      8
+    ],
+    "local_review": {
+      "threads": 4,
+      "sampled_RSS_bytes": 8000000000,
+      "cumulative_seconds": 3600,
+      "extra_GiB": 6
+    },
+    "retention_end": "2026-10-28T00:00:00+01:00",
+    "retention_end_epoch": 1793142000,
+    "bound_cost_forecast_USD": {
+      "max_compute_IP_and_disks_75min": 0.3937264500785103,
+      "max_export_2GiB": 0.24,
+      "operations_reserve": 0.25,
+      "total": 0.8837264500785103
+    },
+    "no_new_resources_or_services": true,
+    "no_retention_extension": true,
+    "source_blind": true
+  },
+  "provider": {
+    "lastStartTimestamp": "2026-10-21T05:29:42.797-07:00",
+    "name": "dl-binner-cpu",
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "4500"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "status": "RUNNING"
+  },
+  "host": {
+    "user": "rasmus_allesoee_gmail_com",
+    "uid": 1852909767,
+    "gid": 1852909767,
+    "boot_id": "c37ca2c2-0c15-49a1-b0dc-b9c388dc7520",
+    "cpus": 8,
+    "physical_memory_bytes": 33646944256,
+    "used_bytes": 225801850880,
+    "free_bytes": 90915024896,
+    "mount": "/srv/dl_binner",
+    "checked_UTC": "2026-10-21T12:30:22.638876+00:00",
+    "source": "b996f6a37f31ecd53385ccbab2f08f707b1ce9b1",
+    "original_checkout_source": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+    "new_research_checkout": "/srv/dl_binner/research/e018-b996f6a37f31"
+  },
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e018-20261021t122945z.service",
+    "watchdog_timer": "e018-20261021t122945z-exit.timer",
+    "watchdog_service": "e018-20261021t122945z-exit.service",
+    "process": {
+      "pid": 1527,
+      "start_ticks": 3452,
+      "command_sha256": "0b6401c26c62bb1ad3816f3fcf1d9ca6254852c3228203bec62aeae811b772ed"
+    },
+    "boot_id": "c37ca2c2-0c15-49a1-b0dc-b9c388dc7520",
+    "source_commit": "b996f6a37f31ecd53385ccbab2f08f707b1ce9b1",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1792585782.797,
+    "hard_deadline_epoch": 1792589382.797,
+    "provider_stop_epoch": 1792590282.797,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "release": {
+    "credit_gate_passed": true,
+    "pending_usage_accounted": true,
+    "native_gates_passed": true,
+    "watchdog_verified": true,
+    "existing_VM_only": true,
+    "full_axes_verified": true,
+    "config": {
+      "bytes": 1951,
+      "sha256": "49bbd4cf3f990a9766a665829371bb432e05b4dcfe146b900c3785fbeec5cc4b"
+    },
+    "provider_STOP_seconds": 4500,
+    "ceiling_USD": 1,
+    "estimated_incremental_gross_USD": 0.8837264500785103,
+    "compressed_export_GiB": 2,
+    "storage_authorization_sha256": "7c48e90d768ff6c0d6c775c4b3daded29cd59abfad09765ac50a7f1ba44b11cf",
+    "covered_costs": [
+      "compute",
+      "disk",
+      "storage",
+      "network",
+      "operations"
+    ],
+    "credit_valid_until_epoch": 1799708400.0,
+    "storage_valid_until_epoch": 1793142000,
+    "source_commit": "b996f6a37f31ecd53385ccbab2f08f707b1ce9b1",
+    "native_gate_exits": 7,
+    "retained_bytes_verified": 8026691677,
+    "release_UTC": "2026-10-21T12:34:52.337570+00:00"
+  },
+  "native_gates": {
+    "accepted_setup_reinstalled": false,
+    "config": {
+      "bytes": 1951,
+      "sha256": "49bbd4cf3f990a9766a665829371bb432e05b4dcfe146b900c3785fbeec5cc4b"
+    },
+    "stages": [
+      {
+        "name": "retained-byte-reuse",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e018-b996f6a37f31/scripts/e018_reuse.py",
+            "--lock",
+            "/srv/dl_binner/research/e018-b996f6a37f31/experiments/E018-vote-led-recruitment/reuse-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e018/voteled-20261021T122945Z-b996f6a/gates/reuse-before.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 1913,
+          "peak_sampled_rss_bytes": 46305280,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.32742214445543816,
+          "sampled_cpu_seconds": 11.44,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 34.939603792
+        }
+      },
+      {
+        "name": "complete-existing-runtime-source-library",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e018-b996f6a37f31/scripts/e017_runtime.py",
+            "probe",
+            "--base",
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env",
+            "--lock",
+            "/srv/dl_binner/research/e018-b996f6a37f31/experiments/E018-vote-led-recruitment/reuse-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e018/voteled-20261021T122945Z-b996f6a/gates/runtime.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 1919,
+          "peak_sampled_rss_bytes": 291811328,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.8901353237550227,
+          "sampled_cpu_seconds": 18.1,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 20.333986886000005
+        }
+      },
+      {
+        "name": "full-input-axes",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e018-b996f6a37f31/scripts/e018_bootstrap.py",
+            "--inputs",
+            "/srv/dl_binner/experiments/e018/voteled-20261021T122945Z-b996f6a/science-plan.json",
+            "--output",
+            "/srv/dl_binner/experiments/e018/voteled-20261021T122945Z-b996f6a/gates/inputs.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 1948,
+          "peak_sampled_rss_bytes": 2471231488,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.0921383419285264,
+          "sampled_cpu_seconds": 17.0,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 15.565793587999991
+        }
+      },
+      {
+        "name": "new-selection-refusal-contracts",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e018-b996f6a37f31/tests/test_e018_recruit.py"
+          ],
+          "exit_code": 0,
+          "launched_pid": 1952,
+          "peak_sampled_rss_bytes": 34787328,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.8988397776440198,
+          "sampled_cpu_seconds": 0.47999999999999954,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.2527859410000133
+        }
+      },
+      {
+        "name": "actual-cached-reader-marker-refiner-export",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e018-b996f6a37f31/experiments/E018-vote-led-recruitment/engineering_fixture.py",
+            "--cached",
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/gates/tiny-cached",
+            "--output",
+            "/srv/dl_binner/experiments/e018/voteled-20261021T122945Z-b996f6a/gates/tiny-cached"
+          ],
+          "exit_code": 0,
+          "launched_pid": 1956,
+          "peak_sampled_rss_bytes": 72122368,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.6165357413989678,
+          "sampled_cpu_seconds": 0.7800000000000002,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.4825133030000188
+        }
+      },
+      {
+        "name": "launcher-collector-contracts",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e018-b996f6a37f31/tests/test_e018_operations.py"
+          ],
+          "exit_code": 0,
+          "launched_pid": 1960,
+          "peak_sampled_rss_bytes": 78364672,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.31547895755783684,
+          "sampled_cpu_seconds": 0.21999999999999975,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.6973523739999905
+        }
+      },
+      {
+        "name": "serial-new-output-DAG-dryrun",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e018-b996f6a37f31/scripts/e018_control.py",
+            "--plan",
+            "/srv/dl_binner/experiments/e018/voteled-20261021T122945Z-b996f6a/science-plan.json",
+            "--workflow",
+            "--dry-run"
+          ],
+          "exit_code": 0,
+          "launched_pid": 1969,
+          "peak_sampled_rss_bytes": 78106624,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.5492649978453574,
+          "sampled_cpu_seconds": 0.7300000000000004,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 1.329048825000001
+        }
+      }
+    ],
+    "status": "SUCCESS"
+  },
+  "runtime": {
+    "base_prefix": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315",
+    "borrowed_read_only": true,
+    "dependency_base": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env",
+    "distribution_locations": {
+      "archspec": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/archspec-0.2.6.dist-info",
+      "dl-binner": "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/lib/python3.12/site-packages/dl_binner-0.1.0.dev6.dist-info",
+      "filelock": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/filelock-4.0.10.dist-info",
+      "fsspec": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/fsspec-2026.9.0.dist-info",
+      "igraph": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/igraph-0.11.8.dist-info",
+      "jinja2": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/jinja2-3.1.6.dist-info",
+      "joblib": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/joblib-1.4.2.dist-info",
+      "leidenalg": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/leidenalg-0.10.2.dist-info",
+      "llvmlite": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/llvmlite-0.43.0.dist-info",
+      "markupsafe": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/markupsafe-3.0.4.dist-info",
+      "mpmath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/mpmath-1.3.0.dist-info",
+      "networkx": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/networkx-3.4.2.dist-info",
+      "numba": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numba-0.60.0.dist-info",
+      "numpy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy-1.26.4.dist-info",
+      "pip": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pip-25.1.1.dist-info",
+      "psutil": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/psutil-6.0.0.dist-info",
+      "pyhmmer": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyhmmer-0.11.0.dist-info",
+      "pynndescent": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pynndescent-0.5.13.dist-info",
+      "pyrodigal": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyrodigal-3.6.3.dist-info",
+      "scikit-learn": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn-1.5.2.dist-info",
+      "scipy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy-1.13.1.dist-info",
+      "setuptools": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/setuptools-65.5.0.dist-info",
+      "sympy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/sympy-1.14.0.dist-info",
+      "texttable": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/texttable-1.7.0.dist-info",
+      "threadpoolctl": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/threadpoolctl-3.5.0.dist-info",
+      "torch": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch-2.2.2+cpu.dist-info",
+      "typing-extensions": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/typing_extensions-4.16.0.dist-info",
+      "wheel": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/wheel-0.45.1.dist-info"
+    },
+    "distributions": {
+      "archspec": "0.2.6",
+      "dl-binner": "0.1.0.dev6",
+      "filelock": "4.0.10",
+      "fsspec": "2026.9.0",
+      "igraph": "0.11.8",
+      "jinja2": "3.1.6",
+      "joblib": "1.4.2",
+      "leidenalg": "0.10.2",
+      "llvmlite": "0.43.0",
+      "markupsafe": "3.0.4",
+      "mpmath": "1.3.0",
+      "networkx": "3.4.2",
+      "numba": "0.60.0",
+      "numpy": "1.26.4",
+      "pip": "25.1.1",
+      "psutil": "6.0.0",
+      "pyhmmer": "0.11.0",
+      "pynndescent": "0.5.13",
+      "pyrodigal": "3.6.3",
+      "scikit-learn": "1.5.2",
+      "scipy": "1.13.1",
+      "setuptools": "65.5.0",
+      "sympy": "1.14.0",
+      "texttable": "1.7.0",
+      "threadpoolctl": "3.5.0",
+      "torch": "2.2.2+cpu",
+      "typing-extensions": "4.16.0",
+      "wheel": "0.45.1"
+    },
+    "isolated_native_groups": {
+      "graph": {
+        "origins": {
+          "igraph": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/igraph/__init__.py",
+          "leidenalg": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/leidenalg/__init__.py",
+          "numba": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numba/__init__.py",
+          "pynndescent": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pynndescent/__init__.py",
+          "scipy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy/__init__.py",
+          "sklearn": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/sklearn/__init__.py"
+        },
+        "pools": [
+          {
+            "architecture": "Zen",
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.23.dev"
+          },
+          {
+            "architecture": "Zen",
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy.libs/libopenblasp-r0-01191904.3.27.so",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.27"
+          },
+          {
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+            "internal_api": "openmp",
+            "num_threads": 4,
+            "prefix": "libgomp",
+            "user_api": "openmp",
+            "version": null
+          },
+          {
+            "filepath": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/lib/libgomp.so.1.0.0",
+            "internal_api": "openmp",
+            "num_threads": 4,
+            "prefix": "libgomp",
+            "user_api": "openmp",
+            "version": null
+          }
+        ]
+      },
+      "markers": {
+        "origins": {
+          "archspec": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/archspec/__init__.py",
+          "pyhmmer": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyhmmer/__init__.py",
+          "pyrodigal": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyrodigal/__init__.py"
+        },
+        "pools": []
+      },
+      "tensor": {
+        "origins": {
+          "dl_binner": "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/lib/python3.12/site-packages/dl_binner/__init__.py",
+          "numpy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy/__init__.py",
+          "torch": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/__init__.py"
+        },
+        "pools": [
+          {
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/lib/libgomp-a34b3233.so.1",
+            "internal_api": "openmp",
+            "num_threads": 4,
+            "prefix": "libgomp",
+            "user_api": "openmp",
+            "version": null
+          },
+          {
+            "architecture": "Zen",
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.23.dev"
+          }
+        ]
+      }
+    },
+    "native_library_targets": {
+      "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/lib/libgomp.so.1.0.0": {
+        "bytes": 1674616,
+        "sha256": "34324e0835be6e103844d7c416bec42834cf803d3ba8d9519df15ced19914dfe"
+      },
+      "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so": {
+        "bytes": 35123345,
+        "sha256": "9254d0854dd7615e11de28d771ae408878ca8123a7ac204f21e4cc7a376cc2e5"
+      },
+      "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0": {
+        "bytes": 168193,
+        "sha256": "3a7eaece7231911be2fbb1b3e7cb4cb5c2e0f84e0c2bb73739472b5a1feec8c1"
+      },
+      "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy.libs/libopenblasp-r0-01191904.3.27.so": {
+        "bytes": 34990041,
+        "sha256": "9b91f6ba8fdba9cf7682371fda53bb228763bd5073ff824edbc4b81e2ddc46bc"
+      },
+      "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/lib/libgomp-a34b3233.so.1": {
+        "bytes": 168721,
+        "sha256": "570455c2902d6cc2a7f367703c06dac07495dd7f8a1ed2c8fc4cea628c881b13"
+      }
+    },
+    "portable": false,
+    "prefix": "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env",
+    "python": "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/env/bin/python",
+    "python_version": "3.12.10",
+    "source": {
+      "__init__.py": {
+        "bytes": 112,
+        "sha256": "7b5c54bf2aaec8ef0618d9c5b0571e4f9888134e364cbdb8b18c0b2801cd934e"
+      },
+      "__main__.py": {
+        "bytes": 103,
+        "sha256": "28f47a18f1a12c011b4fa92812d8f4fb10840c469d489ee5ac246bc669620144"
+      },
+      "accounting.py": {
+        "bytes": 6732,
+        "sha256": "2a83aad8eb36864a704ebe72faeeba33c335c86f7072205f6f19c92db9f6f117"
+      },
+      "candidate/__init__.py": {
+        "bytes": 81,
+        "sha256": "5887ddf687250cefcf87aaa082c5a4edc9a5281a8a1be7a752300a5fcb190eff"
+      },
+      "candidate/grouping.py": {
+        "bytes": 12615,
+        "sha256": "d31c67705b2fc80d5fd06d8b2c403d7e543ebd64fc37c08b5b3db90ba657f233"
+      },
+      "candidate/markers.py": {
+        "bytes": 11226,
+        "sha256": "a77739cb64d219bf3af8e2baeb66ed81c86c53a8c5c633a184ee28412ee2760a"
+      },
+      "candidate/model.py": {
+        "bytes": 10499,
+        "sha256": "09eda66fcd324870d11b89c6f6b4bc7e4c02f3169d6d557389bc8c840de76f09"
+      },
+      "candidate/runner.py": {
+        "bytes": 12350,
+        "sha256": "ab153821b9bacf70373c7ffd79c058b1be356a6f96bdfae5aa8638cf4bdab2eb"
+      },
+      "candidate/views.py": {
+        "bytes": 8357,
+        "sha256": "d3f1b51ac61009f9f962d767fce5600d5c93bd14b4ca9adb4bdef7564438392f"
+      },
+      "cli.py": {
+        "bytes": 10923,
+        "sha256": "5d463fd8d901934348d4664a0b02929770853cb2af5b26d8fdbcb6a4ba409aad"
+      },
+      "clustering.py": {
+        "bytes": 7880,
+        "sha256": "2ac715b1449287b002ef7e4a75b84ef204256c2d5f589e31a6810acfad941b66"
+      },
+      "contracts.py": {
+        "bytes": 1671,
+        "sha256": "0455b5a45ecbb29eb1f6c168048efa3a861279dc7ba2af36896ddb6dfcab632d"
+      },
+      "information/__init__.py": {
+        "bytes": 83,
+        "sha256": "381d0d6bcd5fa452ba19db73173e5aa825dd30b4b704c1e9bd633466ce750050"
+      },
+      "information/audit.py": {
+        "bytes": 6106,
+        "sha256": "64ca1b8f66f641be3a5c79af94333db507dd3875171758a2af042df1714f9be2"
+      },
+      "information/export.py": {
+        "bytes": 4480,
+        "sha256": "1a6603b31de105de6a95afb16db1036a467e9dc12b9d843da53b3281caacfb5a"
+      },
+      "information/grouping.py": {
+        "bytes": 24866,
+        "sha256": "9d1f665b1f5024bdde90a86d536c6679cb3a5fbdb9635348141272d8de3d5235"
+      },
+      "io.py": {
+        "bytes": 12016,
+        "sha256": "71b0c423c046b3c72b651141e853ea622a62742fc087afeef37fbf9c253c2307"
+      },
+      "model.py": {
+        "bytes": 13986,
+        "sha256": "acc1f3c450910112cd7883cc6284139046fde6b339e73b82638d301d8e5a9948"
+      },
+      "multiview/__init__.py": {
+        "bytes": 85,
+        "sha256": "7724296c827c8ae34dc7558de991243c52ee78c1b8a37837e3070487657fe160"
+      },
+      "multiview/arrays.py": {
+        "bytes": 1395,
+        "sha256": "e6239aaa8ca298b5afd97d4c45ab58ff72183f485e4263226aebbcae03500a97"
+      },
+      "multiview/downstream.py": {
+        "bytes": 7469,
+        "sha256": "a24e96291dc6e779734e6990008296e7e7d8d3e400ff9102004a09959fa8fbbb"
+      },
+      "multiview/model.py": {
+        "bytes": 10256,
+        "sha256": "6342819c74f8d7da4cc23bea7666169de605d2c391ce3711d98243fc88f550d2"
+      },
+      "multiview/positive.py": {
+        "bytes": 15492,
+        "sha256": "133f54087e5516c6e90a6c71667e8b9e4b5cb5a1428d6418be1fc28393453ec6"
+      },
+      "multiview/refinement.py": {
+        "bytes": 16783,
+        "sha256": "0c1bae1f0fd5e8873cc30e68218e6796e87bf43b7d9262d2ec42fd781a51b8c0"
+      },
+      "multiview/stage.py": {
+        "bytes": 2190,
+        "sha256": "a06543d0cd70ba4a63637a7072b96d03becc773c7ae0ba1dbeb4c603b2677581"
+      },
+      "multiview/views.py": {
+        "bytes": 9370,
+        "sha256": "0b3a00b87c17cd56417e589ebcb3a9f3234f85f4c14ac0b9204a680dc2590935"
+      },
+      "resources/candidate.json": {
+        "bytes": 678,
+        "sha256": "1c8049fa2cf70e51c2eab22fc7fe5cd0e626f807360b56ff2b392756207baa60"
+      },
+      "resources/multiview.json": {
+        "bytes": 799,
+        "sha256": "0f532c4912b002c5cdb2ebde48bf172c96577f3edb066a1c03864e2b537c6038"
+      },
+      "resources/training.json": {
+        "bytes": 215,
+        "sha256": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5"
+      },
+      "runner.py": {
+        "bytes": 20667,
+        "sha256": "99cbd7a14c360011b473dd22a03777eb7e3dfff109f11c78a2f5c1f067af3e8f"
+      },
+      "supervision.py": {
+        "bytes": 9575,
+        "sha256": "8ee9bd7d5f05a8e487a8691f7ab8152cca627f9f55ad27d48c6ece61cbd9a8a9"
+      }
+    },
+    "status": "PASS"
+  },
+  "full_axes": {
+    "inference_or_index": false,
+    "status": "PASS",
+    "truth_used": false,
+    "units": {
+      "E009-positive": {
+        "bp": 231678157,
+        "depth_semantics": "Measured full-parent means; repeated conditioning for windows, not measured window depth. No variance available.",
+        "eligible": 89041,
+        "embeddings": {
+          "bytes": 21873665,
+          "sha256": "16c6b1204ed14d790ab14cc709116ef73fa2046edc10a73a65626fb675eaa475"
+        },
+        "features": {
+          "bytes": 42384557,
+          "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+        },
+        "rows": 145702,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "oral-positive": {
+        "bp": 1669981123,
+        "depth_semantics": "Measured parent means condition crops, not measured window depth; no variance.",
+        "eligible": 508763,
+        "embeddings": {
+          "bytes": 185981263,
+          "sha256": "7e2ed0537121f69a65195d7ccc72df17464b7b84db1d0ae8731045c3b6d8a36c"
+        },
+        "features": {
+          "bytes": 333765352,
+          "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+        },
+        "rows": 1286547,
+        "samples": []
+      }
+    }
+  },
+  "financial_gate": {
+    "status": "PASS_FRESH_CREDIT_PRICE_STORAGE_PLAN; GUEST_HEADROOM_RUNTIME_PENDING",
+    "checked_UTC": "2026-10-21T12:22:15.436234+00:00",
+    "credit": {
+      "remaining_DKK": 1893.83,
+      "original_DKK": 1973.43,
+      "status": "Available",
+      "percent": 96,
+      "scope": "Certain usage; see Free Trial terms",
+      "application": "Net pricing",
+      "expiry": "2027-01-12",
+      "paid_account": true,
+      "overview_cost_savings_DKK": 79.66,
+      "overview_net_DKK": 0,
+      "pending_usage": "Unknown; fresh live tooltip explicitly says may take longer than24h",
+      "prior_usage_USD_reserve": 30,
+      "prior_storage_USD_reserve": 5,
+      "read": "Fresh signed-in Chrome CUA Credits and Overview 2026-10-21; no billing mutation"
+    },
+    "ceiling_USD": 1,
+    "estimate": {
+      "maximum_incremental_gross_forecast_USD": 0.8837264500785103,
+      "compute_IP_USD_per_hour": 0.2730456762592464,
+      "disk_USD_per_hour": 0.04193548380356186,
+      "export_USD_GiB": 0.12,
+      "pending_reserve_USD": 35
+    },
+    "covered_costs": [
+      "compute",
+      "disk",
+      "storage",
+      "network",
+      "operations"
+    ],
+    "products": "Existing ordinary E2, nonpremium Ubuntu, PD, IPv4, Iowa Standard private archive/network/operations; no new product/service",
+    "coverage_sources": [
+      "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "https://cloud.google.com/storage/pricing?hl=en"
+    ],
+    "price_source": {
+      "bytes": 8003,
+      "sha256": "611893f0d754b99b57a395125ad62aa7ee2000eea281db7d38f105ff7f34d8ad"
+    },
+    "storage_inventory": {
+      "bytes": 22551,
+      "sha256": "ab44ac8142258727119c8549d053e444837463f4c8e847fc243df4bad0a0a8fc"
+    },
+    "storage_forecast_USD": 7.625784633694406,
+    "storage_ceiling_USD": 8,
+    "storage_valid_until_epoch": 1793142000,
+    "credit_valid_until_epoch": 1799708400.0,
+    "retention_extended": false,
+    "initial_VM_status": "TERMINATED",
+    "source_runtime_and_guest_headroom": "Must pass natively inside the original VM-start clock before release; no current claim from stopped VM",
+    "local_free_bytes": 43257835520,
+    "return_staging_forecast": "Max2GiB archive+3GiB logical+1GiB review scratch <=6GiB; actual collection inventory must pass before download"
+  },
+  "source_freeze": {
+    "bytes": 9627,
+    "sha256": "e4720ade092f0807d740fd7a6d26bfbdf18ae4b92baf0d84b52fe598d553f909"
+  },
+  "reuse_lock": {
+    "bytes": 64785,
+    "sha256": "26e4976640e806166614dd3e238af1f8335a357ea0c4ed213da8aa8a047427a9"
+  },
+  "optional_E017_inspection_backup": {
+    "bytes": 851,
+    "sha256": "ed5eaf514f1752d2a6f1d86933be09d3c2ee315d38c0e6131528fe666ca48c5c"
+  },
+  "source_and_runtime_scope": "Exact clean b996f6a and unchanged installed E017 dev6 package; complete borrowed runtime/source/library inventory passes, no install/recopy fallback.168 contracted retained files/8026691677 bytes pass; no whole-prefix non-mutation claim.",
+  "active_logs": "/srv/dl_binner/experiments/e018/voteled-20261021T122945Z-b996f6a/logs/parent-terminal.log; work/logs/<unit>/{group,refine,export,audit}.log",
+  "local_binding_records": {
+    "artifacts/e018-vote-led-recruitment/execution-20261021/native-snapshot.json": {
+      "bytes": 31669,
+      "sha256": "2a42b49de931ab7d2c0d376be246712e182127ff381f9f6fad1cdc34f8942e59"
+    },
+    "artifacts/e018-vote-led-recruitment/execution-20261021/host-source.json": {
+      "bytes": 811,
+      "sha256": "9b7dedb7c7b63238095721d5c2cb97ad15ce76e14a7b0ae6743ebbbd5ab7921e"
+    },
+    "artifacts/e018-vote-led-recruitment/execution-20261021/supervision.json": {
+      "bytes": 1012,
+      "sha256": "f5276f0cc7854886d262c7a4242a5787ebb4dd2c1fee93a0f8becd8a5d76fa9c"
+    },
+    "artifacts/e018-vote-led-recruitment/execution-20261021/release.json": {
+      "bytes": 917,
+      "sha256": "2134c32272273571981d41e16e297a4d920dfce062b87a86e8d5850a83cbe2d8"
+    },
+    "artifacts/e018-vote-led-recruitment/execution-20261021/progress-2.ssh.log": {
+      "bytes": 35693,
+      "sha256": "8f2f16b4ce0f9a3621e4b32a00866891a720c734210b56c8a9a6602149dc2d8b"
+    }
+  },
+  "current_progress": "E009 group/refine/export/audit finished; oral cached group in progress; watcher workflow alive; original prior accepts preserved,13635 additional E009 rows/14456937bp, no quality claim.",
+  "no_new_reads_mapping_datasets": true,
+  "no_encoder_fit_inference_or_neighbor_profile_rebuild": true,
+  "original_Mac_portability_failure_preserved": true,
+  "retention_extension": false,
+  "boundary": "Existing VM only,1h VM-start clock/75min STOP/$1/4threads/26GB sampledRSS/25GiB free/20GiB extra/2GiB export. If long healthy verify progress/supervision, wait few minutes then hand off; follow short job through collection. No automatic accepted science replay or clock extension."
+}

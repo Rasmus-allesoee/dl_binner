@@ -92,7 +92,9 @@ Exact emitted schemas/source/receipt bindings resolve them without editing data
 or weakening membership/coordinate/purity contracts. Local peaks/elapsed and the
 compact local review seal are bound by the inspection receipt. The optional new
 private backup was blocked by automatic approval review because payload upload was
-not explicit in this inspection scope; owner approval is pending. No upload
+not explicit in this inspection scope; owner approval was subsequently granted. [The backup](inspection-backup.json)
+now passes private upload/readback and all-member verification; earlier local-only
+and rejection journals remain. No upload
 workaround or new scientific execution occurred. Existing native archives remain
 privately retained and fully verified.
 

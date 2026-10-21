@@ -4,97 +4,78 @@ Updated: 2026-10-21. This is the single current handoff.
 
 ## Exact next step
 
-**E018 is authorized and being prepared on `e018-vote-led-recruitment`.**
-[Protocol](../experiments/E018-vote-led-recruitment/protocol.json),
-[operations](../experiments/E018-vote-led-recruitment/OPERATIONS.md) and
-[robustness/data assessment](../experiments/E018-vote-led-recruitment/robustness-and-data.md)
-own the sole cached vote-led/profile-admissibility treatment. Keep E016 learning,
-E017 cores/graph/weights/profiles/thresholds/seed and unchanged E013 fixed. The
-owner authorizes a new $1 existing-VM control and permits justified extra cost;
-no increase is chosen. One-hour VM-start clock / 75-minute STOP / four threads /
-26 GB sampled RSS / 25 GiB reserve / 20 GiB extra / 2 GiB return. Fresh native
-source/runtime/headroom and supervision gates remain required before release.
-No read acquisition, remapping or new community is included. Oral regression is a
-serious robustness warning, not a causal depth result. Ten public HEADs still total
-51,731,811,351 read bytes; genuine mapping is a separately costed ~$4–10 planning
-scope with uncertain disk fit, deferred from this fixed-input test. Keep skin
-unacquired and revisit additional data before robustness/default claims.
+**E018 completed and is independently reviewed: ABANDON the acceptance control.
+VM TERMINATED.** [Comparison](../experiments/E018-vote-led-recruitment/comparison-review.json),
+[all 955 targets](../experiments/E018-vote-led-recruitment/comparison-targets.tsv),
+[inspection](../experiments/E018-vote-led-recruitment/inspection-observed.json) and
+[operations](../experiments/E018-vote-led-recruitment/OPERATIONS.md) own the exact
+source, receipts, all populations, costs and next prompt. Phase
+`voteled-20261021T122945Z-b996f6a` keeps E016 learning/native vectors, E017 cores/
+graph/profiles/thresholds/seed and unchanged E013 fixed. No science failed/replayed.
 
-The previously blocked compact E017 inspection backup is now explicitly approved,
-uploaded/read back and all 140 payload members verify; its
-[receipt](../experiments/E017-information-aware-grouping/inspection-backup.json)
-preserves the earlier rejected/local-only journal. Storage remains $8 through
-October 28 at 00:00 Copenhagen; no extension or cleanup is enacted.
+| Post weighted full-reference R95 | E016 | E017 | E018 |
+| --- | ---: | ---: | ---: |
+| E009 conservative v2, 156 references | 5.8219% | 7.5284% | **7.2124%** |
+| Oral provided-origin oracle, 799 references | 6.7719% | 4.9664% | **4.0538%** |
 
-### Accepted E017 inspection context
+E018 loses 1,752,541 / 19,011,061 recovered bp against E017, with >=90% targets
+8 -> 7 / 21 -> 18. Some targets/B3 improve and oral old refinement improves, but
+both final endpoints decline; apply original ABANDON without changing thresholds
+or choosing refiner/community/genome oracles. Added 14.46 / 95.98 Mb were accepted
+exactly as pre-audited; all old accepts and core memberships survive. More assigned
+DNA is not sufficient: ASV551.0 main-bin purity crosses 97.18 -> 93.28%, losing
+its former 2.24 Mb passing recovery. E017 original veto/MODIFY remains preserved;
+E016 is the broader development anchor, not a product-default/SOTA claim.
 
-**E017 completed and is independently reviewed: MODIFY. VM TERMINATED.**
-[Comparison](../experiments/E017-information-aware-grouping/comparison-review.json),
-[full target table](../experiments/E017-information-aware-grouping/comparison-targets.tsv),
-[inspection](../experiments/E017-information-aware-grouping/inspection-observed.json)
-and [operations](../experiments/E017-information-aware-grouping/OPERATIONS.md) own
-outcome, failures, all populations, costs and the next proposed prompt. Native
-source `e78d766` preserves prepared `067ceb2`, E016 learning/vectors and all older
-science. The local compact-format reader repair is separate from native science;
-original failed Mac portability and two new pre-score review journals remain.
+**Next: implement one coherent window-context composition/information learner
+locally**, not another recruitment/threshold/loss grid. Whole-contig averages lose
+local heterogeneity/arrangement; the completed CompleteBin/context reviews and
+residual mixing/weak fixed oral neighbors justify testing that information.
+Keep E016 EMA/reconstruction/measured-parent depth and CPM/E013 as initial anchors.
+Resolve exact token/strand/view/fusion algorithms with targeted primary checks in
+the same implementation block. Frozen GLM hybrid remains serious; marker learning
+needs a reliable link rule. No larger model, pretraining/taxonomy/marker-training/
+ensemble is automatic. [D015](decisions/D015-coherent-prototype-upgrade.md) weighs
+alternatives; [the next exact prompt](../experiments/E018-vote-led-recruitment/OPERATIONS.md#exact-following-prompt)
+authorizes local engineering when invoked, prepares a completely priced separate
+native comparison, and starts no new paid/community work under E018's $1.
 
-| Post weighted full-reference R95 | Retained E016 | E017 |
-| --- | ---: | ---: |
-| E009 conservative v2, 156 references | 5.8219% | **7.5284%** |
-| Oral provided-origin oracle, 799 references | 6.7719% | **4.9664%** |
+[Robustness/data assessment](../experiments/E018-vote-led-recruitment/robustness-and-data.md):
+oral regression is serious but not a causal depth result. Source and native
+metadata mask missing depth explicitly; no demonstrated missing-depth/ID bug.
+Sequence-only remains adequate for this acceptance question, not current depth
+benefit, measured-depth transfer or read-assembly/unseen-genome claims. Ten HEADs
+still total 51.73 GB reads. Genuine pooled-GSA mapping is separately costed roughly
+$4–10 mapping-only, 8–24 hours and uncertain 45–130 GiB serial extra space; upper
+needs do not fit current headroom above the reserve. Do not acquire/map now.
+Revisit for a current-system depth decision or the next coherent candidate's
+additional-data admission, without hiding an inconvenient sequence-only failure.
 
-E009 gains 9,465,205 recovered bp, 14 target gains / 9 losses, >=90% targets
-4 → 8. Oral loses 37,609,955 bp, 23 gains / 45 losses, >=90% targets 34 → 21.
-No global default or per-dataset/per-bin oracle is promoted. All four partitions,
-all DNA, 3.3034% N-quarantine, full provided denominators and oral known-shared
-sensitivity remain. Fixed E016 learned-neighbor metrics are exactly unchanged;
-new joint-core retrieval is a different population. E013 adds 62.94 Mb oral
-recovery over its recruited parent but does not restore E016.
+Skin stays frozen and unacquired. Admit actual sample/source/genome/replicon/
+molecule/taxonomy joins, overlap/pretraining, duplicate-safe full/zero-origin
+reference denominators, ambiguity/unique-versus-origin truth, unchanged protocol
+and separate acquisition/compute/cost/retention before confirmation. Do not wait
+until competitive scores to seek broader data, or launch a broad campaign while
+a concrete failure is already exposed. Both inspected communities are development.
 
-The next decision is **one cached recruitment-ranking control**, not a new encoder
-or a grid. Existing distance-first/profile-margin ranking can veto a unique core
-candidate already satisfying all existing profile <=1, >=2 supporters and >=2/3
-weighted-vote conditions: 13,635 E009 contigs / 14.46 Mb and 99,067 oral contigs /
-95.98 Mb. This label-free census creates no changed partition or score. Prepare
-one vote-led/profile-admissibility rule using the same thresholds, E017 cores/
-graph/profiles/seed, native vectors and unchanged E013. Reject when no candidate
-is admissible. It can test whether competing rankers are losing supported DNA or
-whether the veto protects purity. Mixed oral cores and other rejections remain;
-this control cannot fix all information/grouping failures. D015 weighs larger
-context/GLM/marker-learning alternatives; the specific cheap control is justified
-before paying for them, without ruling any family out.
+All seven Linux gates, eight serial science rules plus target, reuse-after,
+collection and upload/readback pass. 174 archive members / 388,461,386 compressed
+bytes verify. Before/after 168 contracted files / 8,026,691,677 bytes are identical;
+full axes and all new decisions/exports pass. Allocation **18.12 minutes**, science
+**9.22 minutes / 8.407 GB sampled RSS**, global growth **3.524 GiB**, minimum free
+**81.148 GiB**. Stopped October 21 at **14:47:49.812 Copenhagen**. No wake, new job,
+fit/inference/index/profile rebuild, marker scan, new reads/data or resource/retention
+change in inspection. Original numerical tolerance and all failures remain.
 
-[Operations' exact prompt](../experiments/E017-information-aware-grouping/OPERATIONS.md#exact-following-prompt)
-proposes local preparation and one separately authorized **new $1** native cached
-control: existing e2-standard-8 / 32 GiB and 300 GiB work disk, one cumulative hour,
-75-minute provider STOP, four numerical threads, 26 GB sampled tree RSS, 25 GiB
-free reserve, 20 GiB extra work and 2 GiB compressed export. Expect 15–35 minutes;
-max gross forecast about $0.884 including reserve. **Not executed or authorized
-by this inspection.** Fresh source/runtime/credit/prices/headroom/retention and a
-new boot/process watcher remain mandatory; no prior compute budget carries over.
-
-E017 used 31.07 minutes of VM allocation, 20.65 minutes science, 9.347 GB sampled
-science RSS; all nine admission gates and eight rules plus final target pass.
-All 245 archive members / 1,055,048,062 compressed bytes verify. Exact retained
-before/after hashes, cached profiles/votes/assignment gates and complete exports
-pass. Allocation/SKU/export quote about $0.282, below $0.54 with reserve inside
-original $2; idle disk costs are separate, not sampled-CPU or credit-delta pricing.
-No wake, science replay, new resource or retention extension occurred in review.
-
-**Storage stays approved up to $8 through October 28 at 00:00 Copenhagen**.
-Fresh credit DKK 1,893.83 Available through January 12, 2027; pending usage unknown
-with reserves. Existing disks remain $31.20/month while stopped. Current listed
-storage plus reserves forecasts about $7.62 for the explicit 169-hour interval.
-October 28 is the next retention boundary; no automatic renewal/deletion.
-Backup omissions matter: native full FASTAs, shared DNA/features/views/markers and
-runtime prefixes are not restored by hashes alone. No accepted artifact is pruned.
-
-The frozen [skin confirmation choice](../experiments/E016-positive-only-multiview/confirmation-plan.json)
-stays untouched/unacquired. Actual sample/source/genome/replicon/molecule/taxonomy
-joins, exact/near/pretraining overlap, duplicate-safe full denominators, ambiguous/
-competitive DNA, unique-versus-origin truth, unchanged candidate/comparator
-protocol and separate acquisition/compute/cost/retention admission remain. Both
-inspected communities are development; their differences do not isolate depth.
+Actual allocation/SKU/export quote **~$0.139 / <$0.389 with reserve**, within new
+$1; no increase chosen. Sampled CPU/credit delta are not invoices. Existing disks
+cost **$31.20/month**; separate **$8 storage ends October 28 at 00:00 Copenhagen**.
+Fresh DKK 1,893.83 Available through January 12, 2027, pending usage reserved.
+Current 92 versions / 7,213,856,396 bytes / zero soft-deleted plus disks/reserve
+forecast **$7.618**. No automatic renewal/deletion. Omitted native full FASTAs and
+shared science/runtime bytes are not backed up by hashes; nothing is pruned.
+The approved old E017 inspection backup is now privately uploaded/read back, all
+140 payload members verified. New E018 review seal is local with its exact scope.
 
 ## Preserved E016 result and reason for E017
 

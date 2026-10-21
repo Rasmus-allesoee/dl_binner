@@ -4,15 +4,57 @@ Updated: 2026-10-21 (Copenhagen; initial provisioning receipts are October 13 UT
 [D014](decisions/D014-google-cloud-workspace.md) owns provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
 
-**E018 preparation is newly authorized at $1 on the existing VM only.**
-[Operations](../experiments/E018-vote-led-recruitment/OPERATIONS.md) owns exact
-clock/resource/release limits. No increase to cost/resources/retention is chosen;
-live native headroom and fresh watcher/provider STOP remain gates before science.
-Signed-in credit is DKK 1,893.83 Available through January 12, 2027; fresh Overview
-cost/savings DKK 79.66 and net zero, with possible >24-hour reporting delay reserved.
-The explicitly approved compact E017 inspection backup is now privately uploaded,
-read back and all members verified; [receipt](../experiments/E017-information-aware-grouping/inspection-backup.json).
-The original $8 storage interval still ends October 28 at 00:00 Copenhagen.
+**E018 completed, privately returned, checksum-verified and reviewed: ABANDON.
+VM independently TERMINATED.** [Inspection](../experiments/E018-vote-led-recruitment/inspection-observed.json)
+records seven native gates/eight serial science rules+target, unchanged source/
+vector/cache axes, reuse-after, collection and all upload/readback exits. Source
+`b996f6a` remains; no science replay, fit/inference/index/profile rebuild, marker
+scan, new data, resource/service or retention change. E017/E016 remain preserved.
+
+Allocation October 21 **12:29:42.797 -> 12:47:49.812 UTC**
+(**14:29:42.797 -> 14:47:49.812 Copenhagen**), **1,087.015 seconds / 18.12 minutes**,
+existing 8 vCPU / 32 GiB / 300 GiB work / 30 GiB boot. Science 553.37 seconds,
+sampled CPU 627.22 seconds, sampled tree RSS 8.407 GB; charged allocation 2.4156
+vCPU-hours. Fresh matching boot/PID/start/command watcher requested shutdown at
+12:46:42 UTC; provider STOP 4,500 seconds/no restart remains a fallback. Global
+sampled growth **3.524 GiB** from original launch snapshot; per-guard max 2.786 GiB
+is separate. Minimum free 81.148 GiB. All execution limits pass.
+
+Return **388,461,386 bytes / 174 members / 997,690,598 logical bytes**, SHA256
+`3afd966ea07ca6c67e7bbcf92d310e31d56bd4365799dbbab8f9cc4ca0dcab88`.
+Private guest/completion SHA, GCS generation/MD5 and every member verify; aliases
+empty. The immutable inventory accounts for 975 new work files / 2,987,565,784
+bytes, with 912 full-DNA files / 1,991,073,738 bytes omitted and retained on VM.
+Omission hashes do not back up DNA/shared inputs or runnable prefixes.
+
+Fresh Credits: **DKK 1,893.83 Available / 96%**, Certain usage/net pricing,
+January 12, 2027 expiry, paid billing; Overview cost/savings DKK 79.66, net zero,
+>24-hour delay possible and $35 prior/pending/storage reserve. Current five SKU
+expressions/regions unchanged; existing eligible ordinary E2/Ubuntu/PD/IPv4/Iowa
+Standard/network/operations only. [Terms](https://docs.cloud.google.com/free/docs/free-cloud-features)
+and [storage pricing](https://cloud.google.com/storage/pricing?hl=en) refreshed.
+Measured allocation/SKU quotes: compute/IP **$0.082446**, run disks **$0.012662**,
+one export **$0.043414**, metadata small: **~$0.139 / <$0.389 with reserve**, within
+original new $1. No cost increase needed; sampled CPU and credit deltas are not
+invoices. Idle disks are separately retained, not counted twice as a storage bill.
+
+Separate storage approval stays **$8 through October 28 at 00:00 Copenhagen**,
+169 physical hours from October 21 midnight across DST. Current all-version
+inventory 92 objects / 7,213,856,396 bytes, zero soft-deleted; disks/listed objects
+plus $0.50 reserve forecast **$7.618**, below $8. Stopped disks remain $31.20/month.
+No extension, automatic renewal/deletion, pruning or bulk backup/migration occurs.
+The owner-approved earlier E017 compact inspection backup is uploaded/read back;
+[receipt](../experiments/E017-information-aware-grouping/inspection-backup.json).
+E018's compact local review seal is separately identified; no unapproved upload.
+
+The next [prompt](../experiments/E018-vote-led-recruitment/OPERATIONS.md#exact-following-prompt)
+proposes local window-context implementation and a priced separate comparison.
+It does not authorize new VM work under this $1. Oral reads/mapping/new datasets
+are separately costed scopes, not implicit extensions. Source/runtime/credit/
+headroom/original retention gates remain necessary for any later native work.
+
+The following E017 record is **dated completed history**, not another current
+execution authorization or current cost snapshot.
 
 **E017 completed and was independently reviewed; VM TERMINATED.**
 [Inspection](../experiments/E017-information-aware-grouping/inspection-observed.json)

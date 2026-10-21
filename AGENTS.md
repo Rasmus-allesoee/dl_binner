@@ -509,6 +509,11 @@ when reviewing retained outputs; do not rewrite evidence to fit a new reader.
 
 ### Allocation and storage records
 
+For a run with multiple storage guards, report total peak growth as the maximum
+sampled filesystem usage minus the original launch snapshot. A guard's own
+growth counter can reset between setup, science and collection; it is not the
+whole-run peak. Retain both scopes when they are useful.
+
 Record the owner's actual allocation for every performance run; recommendations and tool thread counts are not allocated vCPUs. Future owner-run resource drivers must accept explicit allocation inputs and use them for thread limits and charged core-hour estimates. Host CPU/RAM reports may describe the whole shared node. Smaller allocations are allowed; extrapolate only at the measured allocation, not by assuming proportional speedup. Distinguish expected runtime from a timeout. Preserve raw returned records and append corrections when allocation was wrong.
 
 UCloud's former shared-storage quota is inaccessible and is not a GCP entitlement.

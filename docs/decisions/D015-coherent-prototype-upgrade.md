@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E018](../../experiments/E018-vote-led-recruitment/README.md) prepares the owner-authorized $1 cached vote-led/profile-admissibility control, keeping E016 learning and E017 cores fixed. E017 stays MODIFY. No read mapping or dataset expansion is added; the focused assessment explains robustness, depth confounders and revisit conditions. Storage still ends October 28 at 00:00 Copenhagen. Earlier entries are dated evidence.
+Current handoff: [E018](../../experiments/E018-vote-led-recruitment/README.md) completed and is reviewed as ABANDON: permissive cached recruitment lowers both post endpoints/counts. Preserve E017 original/MODIFY, E016 broader anchor. Next is one coherent local window-context composition/information candidate with a separately costed future comparison; no new model/data/cloud execution here. Storage still ends October 28 at 00:00 Copenhagen.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
@@ -952,3 +952,73 @@ until competitiveness. Keep skin prospectively frozen and admit one additional
 community at the next coherent-candidate milestone before robustness/promotion
 claims, with all source/overlap/truth and separate cost/retention dependencies.
 This remains development work; no external tool or confirmation payload is added.
+
+
+## E018 negative matched result and next context information block, 2026-10-21
+
+[Completed E018](../../experiments/E018-vote-led-recruitment/comparison-review.json)
+passes all source/runtime/axes/cached decision/export/collection contracts and
+applies original **ABANDON**: E009 7.5284 -> 7.2124%, oral 4.9664 -> 4.0538%;
+>=90% counts 8 -> 7 / 21 -> 18. Same cores/graphs/profiles/native vectors and
+E013, no new learning/index/detection or source repair during science. Native
+VM is TERMINATED, actual quote ~ $0.139 / < $0.389 with reserve within $1.
+The authorized cost increase was not needed. No prior budget carries onward.
+
+Additional 14.46 / 95.98 Mb were assigned exactly as the label-free census, but
+that did not translate to high-purity recovery. E009 has twelve small target gains
+and one dominating loss: ASV551.0 main-bin purity 97.18 -> 93.28% removes its former
+2.24 Mb passing recovery. E009 B3 improves; oral recall improves with lower
+precision/F1. Oral old refinement gains against E017 old but E013 post loses.
+Preserve those trade-offs and all alternatives; no score-driven refiner choice,
+threshold/margin search or method-family conclusion. The original E017 veto has
+useful protection. E017 stays MODIFY, E016 broader research anchor, neither a
+universally optimal product default. Local Mac tolerance remains failed.
+
+**Choose one coherent window-context composition/information learner next.**
+Stop the recruitment-gate sequence here. Current composition averages discard
+local heterogeneity/arrangement, and fixed oral learned neighborhoods remain weak
+(bp-weighted agreement 20.68%) while many long cores mix origins. The already
+reviewed CompleteBin context-TNF/global-local tokens motivate an information
+route; its whole-tool performance is not causal proof for the module. Implement
+one justified compact view/token/fusion/strand/length/inference design in the next
+local block, with real contracts and one prospective comparison, rather than
+another feature-by-feature campaign or a larger MLP for its own sake.
+
+Retain explicit composition/depth branches, measured-parent semantics, E016
+positive-only predictor/stopped-EMA target/reconstruction as initial anchors and
+E016 CPM/E013 as the first fixed downstream context. Declare necessary integrated
+changes before outcomes; do not choose E016/E017/E018 per community/genome from
+truth. Keep all short/marker-negative/unknown/non-target DNA and optional noise,
+features/tokens/embeddings/pre-post alternatives. Test real DNA views, strand,
+exposure, gradients/EMA/noncollapse/reload/unit geometry/marker/export and owned
+wheel contracts. Use chunked/indexed/lazy contexts, not all overlapping crop banks;
+persistent candidates and temporary coexistence determine peak disk, not epochs.
+
+Serious alternatives: frozen GLM/TNF/depth hybrid can add an external sequence
+prior and remains a later candidate; E003's grouping gain/short-neighbor loss and
+old laptop runtime do not dismiss it. Reliable marker-aware training could improve
+biological separation, but same-genome copies/partial calls/replicons/panel limits
+make duplicate-family hard negatives unsafe without a link rule. Extra resolution/
+loss/acceptance grids would now reuse the same inadequate confidence evidence.
+Genuine oral depth could help but is a different input experiment and does not
+explain the E018 loss on depth-present E009. No option is proved optimal or ruled
+out as a product family. Reuse the completed reviews; target primary refreshes to
+precise design gaps and proceed directly to engineering.
+
+[The focused data assessment](../../experiments/E018-vote-led-recruitment/robustness-and-data.md)
+keeps oral sequence-only for this completed matched question, explicitly leaving
+current-system depth benefit/depth-enabled transfer untested. Revisit separately
+costed all-ten mapping or a current-system existing-depth control when that
+question can change the design; no old dev3 causal extrapolation. Do not add a
+broad dataset campaign to a solved acceptance test, or wait for competitive scores
+before independent data. Keep skin frozen/unacquired and plan source/genome/
+replicon/molecule/taxonomy/overlap/full-denominator/ambiguity/unique-vs-origin truth,
+unchanged confirmation protocol and separate cost/retention admission alongside
+the next coherent implementation. Two inspected communities remain development.
+
+The next exact prompt is local implementation/engineering and complete priced
+native preparation, not another cloud authorization. Source/candidate/criteria
+freeze precedes changed community outcomes. October 28 at 00:00 Copenhagen stays
+the storage boundary. AGENTS clarifies global vs per-guard peak growth: E018's
+3.524 GiB global snapshot delta is the whole-run sampled growth, not the 2.786 GiB
+maximum of reset guard counters. No original journal is rewritten.

@@ -523,3 +523,15 @@ assembly/truth causes. Sequence-only remains valid for this acceptance question;
 current depth benefit, measured-depth transfer and untouched-community robustness
 remain open. Genuine oral mapping and additional-data admission are separately
 costed, not silently added. No new scientific outcome yet.
+
+
+2026-10-21 — [E018 completed](../../experiments/E018-vote-led-recruitment/README.md):
+ABANDON the sole vote-led/profile-admissibility acceptance policy. All contracts
+pass, but post R95 and >=90% target counts fall in both communities despite less
+unassigned DNA. Some targets/B3/old-refinement diagnostics improve; preserve the
+full paired trade-off without tuning. Original E017 protection remains useful,
+E017 MODIFY and E016 anchor stay. This does not isolate depth, settle architecture
+families or show a coding failure. Next is one coherent window-context composition/
+information learner as the previously leading later route, with local engineering
+and separately priced future execution. Untouched skin and current-system depth
+questions retain explicit admission/cost/retention dependencies; no new DNA/cloud.

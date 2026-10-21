@@ -113,3 +113,38 @@ zero-origin DNA, competitive ambiguity and unique-versus-origin truth, an
 unchanged confirmation protocol and separate acquisition/compute/cost/retention
 admission. If it influences a design choice, call it development and reserve a
 later untouched confirmation. E018 has no permission to add those payloads.
+
+
+## Completed E018 update, 2026-10-21
+
+The prospectively frozen acceptance control is operationally successful but
+**ABANDON**: post R95 falls 7.5284 -> 7.2124% in E009 and 4.9664 -> 4.0538% in
+oral, despite more assigned DNA. Both >=90% counts fall. The E009 ASV551.0 bin
+crosses 97.18 -> 93.28% confirmed purity, losing its former passing recovery;
+oral precision also falls. All runtime/axis/cache/decision/full-DNA/evaluator
+contracts pass. This is a poor implemented choice, not a demonstrated reader,
+missing-depth or canonical-ID bug. E017 original veto/MODIFY and E016 anchor stay.
+
+The failed rule is not only a no-depth problem: it also loses E009 recovery with
+ten measured columns. That does **not** isolate depth's contribution to the
+original E017 oral regression. Mapping can add useful independent information,
+but would not retroactively make this fixed-input treatment a causal depth test.
+Keep the deferred mapping/admission boundaries above and revisit for a prospective
+current-system depth question or the next candidate's cross-community admission.
+
+Recommend one window-context composition/information learner next, as the leading
+later route in D015, rather than another gate/loss/resolution grid. It adds local
+composition heterogeneity/arrangement that a whole-contig average discards, while
+retaining measured-parent depth and positive-only EMA/reconstruction as anchors.
+Hold E016 CPM/E013 for the first matched learning comparison; do not introduce
+an outcome-selected E017/E018 downstream route. Source checks must choose one
+compact view/strand/length/cache and inference geometry contract before outcomes.
+Frozen GLM/hybrid and reliable marker learning remain alternatives, not disproved
+families. No bigger model, pretrained payload or training-label link is automatic.
+
+Implementation/engineering can proceed before untouched-data DNA admission,
+without a separate study for every ingredient. Freeze its prospective confirmation
+protocol/source/overlap/truth plan alongside implementation, and separately cost
+mapping or a new community. Two inspected communities already reveal a failure;
+more breadth matters before generalization/promotion, not only when chasing small
+improvements. No confirmation DNA, new architecture or new score runs in E018 review.

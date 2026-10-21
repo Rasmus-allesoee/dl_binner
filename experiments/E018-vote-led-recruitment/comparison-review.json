@@ -1,0 +1,4672 @@
+{
+  "record": "E018 fixed-learning vote-led acceptance review",
+  "status": "COMPLETED_VERIFIED; FROZEN_NEW_OUTPUT_DIAGNOSTICS",
+  "reviewed_UTC": "2026-10-21T13:06:03.138877+00:00",
+  "science_source": "b996f6a37f31ecd53385ccbab2f08f707b1ce9b1",
+  "phase": "voteled-20261021T122945Z-b996f6a",
+  "protocol": {
+    "bytes": 6718,
+    "sha256": "b8c89e349544aee9943c0b82badd111d390a7ec59bce1c886af0044dcafd7da2"
+  },
+  "candidate_lock": {
+    "bytes": 9627,
+    "sha256": "e4720ade092f0807d740fd7a6d26bfbdf18ae4b92baf0d84b52fe598d553f909"
+  },
+  "reuse_lock": {
+    "bytes": 64785,
+    "sha256": "26e4976640e806166614dd3e238af1f8335a357ea0c4ed213da8aa8a047427a9"
+  },
+  "local_reader_adapter": {
+    "bytes": 8545,
+    "sha256": "152cbfaa9bb8caa8c8a5a1c4bfe564c238bd95d40d0b1d0ea314a1a7204292f1"
+  },
+  "archive": {
+    "status": "SUCCESS",
+    "archive": {
+      "bytes": 388461386,
+      "sha256": "3afd966ea07ca6c67e7bbcf92d310e31d56bd4365799dbbab8f9cc4ca0dcab88"
+    },
+    "regular_members": 174,
+    "logical_member_bytes": 997690598,
+    "every_member_verified": true
+  },
+  "native_ledger": {
+    "bytes": 189924,
+    "sha256": "6ccd8e978122bdb3adcbde2e6f5c20ede7d6fb4a92f2ca1c0ea1647f49954b73"
+  },
+  "units": {
+    "E009-positive": {
+      "dataset": "E009_conservative_v2",
+      "arms": {
+        "pre": {
+          "recovery": {
+            "at_least_50_percent": 12,
+            "at_least_90_percent": 6,
+            "bp_weighted_R95": 0.06758134040901927,
+            "macro_R95": 0.06916858277582622,
+            "targets": 156,
+            "targets_with_any_passing_bin": 14
+          },
+          "grouping": {
+            "attributable_bp": 165477813,
+            "f1": 0.4845929143892327,
+            "precision": 0.5259889645500126,
+            "recall": 0.44923732326238497
+          },
+          "geometry": {
+            "attributable_eligible_queries": 76010,
+            "nn_purity": 0.8012208919878964,
+            "nn_purity_bp_weighted": 0.8207922025423038,
+            "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+          },
+          "populations": {
+            "cells": {
+              "10000|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 32451215,
+                "ambiguous_query_bp": 62129,
+                "confirmed_bacterial_bp": 32380594,
+                "contigs": 465,
+                "nn_quarantined_query_bp": 227,
+                "unsupported_query_bp": 8265
+              },
+              "10000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 21911600,
+                "ambiguous_query_bp": 40888,
+                "confirmed_bacterial_bp": 21863668,
+                "confirmed_eukaryotic_bp": 276,
+                "contigs": 776,
+                "nn_quarantined_query_bp": 220,
+                "unsupported_query_bp": 6548
+              },
+              "10000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 13301,
+                "ambiguous_query_bp": 54,
+                "confirmed_bacterial_bp": 13246,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1
+              },
+              "10000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1598996,
+                "ambiguous_query_bp": 1891,
+                "confirmed_eukaryotic_bp": 1596871,
+                "contigs": 33,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 234
+              },
+              "10000|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 10641286,
+                "ambiguous_query_bp": 5434190,
+                "confirmed_bacterial_bp": 2827205,
+                "confirmed_eukaryotic_bp": 115655,
+                "contigs": 145,
+                "nn_quarantined_query_bp": 2152619,
+                "unsupported_query_bp": 111617
+              },
+              "10000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 31412912,
+                "ambiguous_query_bp": 20336751,
+                "confirmed_bacterial_bp": 3360566,
+                "confirmed_eukaryotic_bp": 1727048,
+                "confirmed_other_bp": 42038,
+                "confirmed_viral_bp": 203902,
+                "contigs": 614,
+                "nn_quarantined_query_bp": 5444160,
+                "unsupported_query_bp": 298447
+              },
+              "10000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 64820,
+                "ambiguous_query_bp": 9460,
+                "confirmed_bacterial_bp": 42993,
+                "confirmed_other_bp": 12367,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 171492,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 171492,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 398479,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 398479,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1522013,
+                "ambiguous_query_bp": 2794,
+                "confirmed_viral_bp": 1518584,
+                "contigs": 43,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 635
+              },
+              "1000|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 220808,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 220627,
+                "contigs": 137,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 181
+              },
+              "1000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 8102346,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 8096616,
+                "contigs": 5324,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 5730
+              },
+              "1000|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 56355,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 56320,
+                "contigs": 40,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 35
+              },
+              "1000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 2907054,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 2905163,
+                "contigs": 2018,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1891
+              },
+              "1000|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 28100,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 28100,
+                "contigs": 16,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 8450645,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 8446587,
+                "contigs": 5573,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4058
+              },
+              "1000|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 28151,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 28112,
+                "contigs": 18,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 39
+              },
+              "1000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 13551555,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 13547219,
+                "contigs": 9612,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4336
+              },
+              "1000|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 119807,
+                "ambiguous_query_bp": 102627,
+                "confirmed_bacterial_bp": 6708,
+                "contigs": 72,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 10472
+              },
+              "1000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 4675552,
+                "ambiguous_query_bp": 3456455,
+                "confirmed_bacterial_bp": 534708,
+                "confirmed_eukaryotic_bp": 166464,
+                "confirmed_other_bp": 1460,
+                "confirmed_viral_bp": 53073,
+                "contigs": 2920,
+                "nn_quarantined_query_bp": 2886,
+                "unsupported_query_bp": 460506
+              },
+              "1000|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 44805,
+                "ambiguous_query_bp": 36030,
+                "confirmed_bacterial_bp": 3613,
+                "contigs": 28,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 5162
+              },
+              "1000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 1879483,
+                "ambiguous_query_bp": 1058906,
+                "confirmed_bacterial_bp": 192094,
+                "confirmed_eukaryotic_bp": 258418,
+                "confirmed_other_bp": 1803,
+                "confirmed_viral_bp": 25627,
+                "contigs": 1261,
+                "nn_quarantined_query_bp": 6104,
+                "unsupported_query_bp": 336531
+              },
+              "1000|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 13948,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 13948,
+                "contigs": 8,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|viral|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1405,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 1405,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 228751,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 228424,
+                "contigs": 144,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 327
+              },
+              "1000|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 196508,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 196138,
+                "contigs": 135,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 370
+              },
+              "1|bacterial|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 22395,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 22362,
+                "contigs": 55,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 33
+              },
+              "1|bacterial|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 6322049,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 6317742,
+                "contigs": 16313,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4307
+              },
+              "1|eukaryotic|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 1002,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1002,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|eukaryotic|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 12906463,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 12898691,
+                "contigs": 32986,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 7772
+              },
+              "1|not_attributable|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 11167,
+                "ambiguous_query_bp": 7907,
+                "confirmed_bacterial_bp": 1816,
+                "contigs": 28,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1444
+              },
+              "1|not_attributable|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 2587510,
+                "ambiguous_query_bp": 1469064,
+                "confirmed_bacterial_bp": 148575,
+                "confirmed_eukaryotic_bp": 381704,
+                "confirmed_other_bp": 140,
+                "confirmed_viral_bp": 11635,
+                "contigs": 6795,
+                "nn_quarantined_query_bp": 4987,
+                "unsupported_query_bp": 571405
+              },
+              "1|other|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 278,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 278,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|viral|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 184590,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 184448,
+                "contigs": 480,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 142
+              },
+              "2500|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1054999,
+                "ambiguous_query_bp": 995,
+                "confirmed_bacterial_bp": 1053093,
+                "contigs": 196,
+                "nn_quarantined_query_bp": 323,
+                "unsupported_query_bp": 588
+              },
+              "2500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 11798463,
+                "ambiguous_query_bp": 6728,
+                "confirmed_bacterial_bp": 11784798,
+                "contigs": 2629,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 6937
+              },
+              "2500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 68847,
+                "ambiguous_query_bp": 215,
+                "confirmed_bacterial_bp": 68598,
+                "contigs": 20,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 34
+              },
+              "2500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 107896,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 107895,
+                "contigs": 24,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1
+              },
+              "2500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 7649470,
+                "ambiguous_query_bp": 252,
+                "confirmed_bacterial_bp": 343,
+                "confirmed_eukaryotic_bp": 7645265,
+                "contigs": 2093,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 3610
+              },
+              "2500|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 9645,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 9645,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 465438,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 465388,
+                "contigs": 148,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 50
+              },
+              "2500|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 766906,
+                "ambiguous_query_bp": 614076,
+                "confirmed_bacterial_bp": 99817,
+                "contigs": 149,
+                "nn_quarantined_query_bp": 202,
+                "unsupported_query_bp": 52811
+              },
+              "2500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 10006175,
+                "ambiguous_query_bp": 7282183,
+                "confirmed_bacterial_bp": 1505687,
+                "confirmed_eukaryotic_bp": 145061,
+                "confirmed_other_bp": 13764,
+                "confirmed_viral_bp": 155720,
+                "contigs": 2251,
+                "nn_quarantined_query_bp": 26420,
+                "unsupported_query_bp": 877340
+              },
+              "2500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 124300,
+                "ambiguous_query_bp": 64883,
+                "confirmed_bacterial_bp": 22018,
+                "confirmed_eukaryotic_bp": 8074,
+                "confirmed_other_bp": 2514,
+                "contigs": 33,
+                "nn_quarantined_query_bp": 8797,
+                "unsupported_query_bp": 18014
+              },
+              "2500|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 27707,
+                "ambiguous_query_bp": 340,
+                "confirmed_other_bp": 27367,
+                "contigs": 4,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 781434,
+                "ambiguous_query_bp": 465,
+                "confirmed_viral_bp": 779416,
+                "contigs": 177,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1553
+              },
+              "2500|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 4830,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 4830,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "500|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 18689,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 18660,
+                "contigs": 29,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 29
+              },
+              "500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 2374706,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 2373252,
+                "contigs": 3727,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1454
+              },
+              "500|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 38005,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 37986,
+                "contigs": 62,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 19
+              },
+              "500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 3505615,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 3503726,
+                "contigs": 5835,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1889
+              },
+              "500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 2013695,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 2012938,
+                "contigs": 3164,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 757
+              },
+              "500|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 1804,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1785,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 19
+              },
+              "500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 11602322,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 11598235,
+                "contigs": 18946,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4087
+              },
+              "500|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 12668,
+                "ambiguous_query_bp": 11760,
+                "confirmed_bacterial_bp": 139,
+                "contigs": 19,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 769
+              },
+              "500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 853746,
+                "ambiguous_query_bp": 617182,
+                "confirmed_bacterial_bp": 81404,
+                "confirmed_eukaryotic_bp": 53197,
+                "confirmed_viral_bp": 9093,
+                "contigs": 1337,
+                "nn_quarantined_query_bp": 2051,
+                "unsupported_query_bp": 90819
+              },
+              "500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 22716,
+                "ambiguous_query_bp": 16500,
+                "confirmed_bacterial_bp": 3740,
+                "contigs": 37,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2476
+              },
+              "500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 1475619,
+                "ambiguous_query_bp": 760970,
+                "confirmed_bacterial_bp": 93202,
+                "confirmed_eukaryotic_bp": 261409,
+                "confirmed_other_bp": 303,
+                "confirmed_viral_bp": 10329,
+                "contigs": 2450,
+                "nn_quarantined_query_bp": 824,
+                "unsupported_query_bp": 348582
+              },
+              "500|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 51684,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 51616,
+                "contigs": 84,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 68
+              },
+              "500|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 127231,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 127058,
+                "contigs": 205,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 173
+              },
+              "768|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 27032,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 26994,
+                "contigs": 31,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 38
+              },
+              "768|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 2207922,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 2206163,
+                "contigs": 2524,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1759
+              },
+              "768|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 24329,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 24314,
+                "contigs": 28,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 15
+              },
+              "768|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 1480557,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 1479624,
+                "contigs": 1701,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 933
+              },
+              "768|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 2695,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 2695,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 2034369,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 2033393,
+                "contigs": 2326,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 976
+              },
+              "768|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 1699,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1699,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 6583272,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 6581217,
+                "contigs": 7556,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2055
+              },
+              "768|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 17246,
+                "ambiguous_query_bp": 12883,
+                "confirmed_bacterial_bp": 963,
+                "contigs": 19,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 3400
+              },
+              "768|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 821690,
+                "ambiguous_query_bp": 588759,
+                "confirmed_bacterial_bp": 73804,
+                "confirmed_eukaryotic_bp": 40169,
+                "confirmed_viral_bp": 2363,
+                "contigs": 937,
+                "nn_quarantined_query_bp": 2602,
+                "unsupported_query_bp": 113993
+              },
+              "768|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 13734,
+                "ambiguous_query_bp": 9321,
+                "confirmed_bacterial_bp": 3443,
+                "contigs": 16,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 970
+              },
+              "768|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 648202,
+                "ambiguous_query_bp": 395973,
+                "confirmed_bacterial_bp": 46256,
+                "confirmed_eukaryotic_bp": 90523,
+                "confirmed_other_bp": 141,
+                "confirmed_viral_bp": 4923,
+                "contigs": 740,
+                "nn_quarantined_query_bp": 783,
+                "unsupported_query_bp": 109603
+              },
+              "768|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 824,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 824,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 51276,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 51179,
+                "contigs": 58,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 97
+              },
+              "768|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 71859,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 71828,
+                "contigs": 82,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 31
+              }
+            },
+            "keys": [
+              "lower_bp",
+              "attributable_lineage",
+              "candidate_eligibility",
+              "status",
+              "clean_marker"
+            ]
+          },
+          "length_strata": {
+            "1": {
+              "attributable_bp": 19436777,
+              "b3_precision": 0.0,
+              "b3_recall": 0.0,
+              "bp": 22035454,
+              "contigs": 56661,
+              "excluded_bp": 22035454,
+              "excluded_contigs": 56661
+            },
+            "1000": {
+              "assigned_bp": 21841362,
+              "assigned_contigs": 14195,
+              "attributable_bp": 33785626,
+              "b3_precision": 0.440865679172092,
+              "b3_precision_sum": 14894922.95274429,
+              "b3_recall": 0.21833778132182213,
+              "b3_recall_sum": 7376678.621408869,
+              "bp": 40505273,
+              "contigs": 27307,
+              "unassigned_bp": 18663911,
+              "unassigned_contigs": 13112
+            },
+            "10000": {
+              "assigned_bp": 100107993,
+              "assigned_contigs": 2080,
+              "attributable_bp": 58067096,
+              "b3_precision": 0.8206115870902546,
+              "b3_precision_sum": 47650531.80628218,
+              "b3_recall": 0.9064891841056728,
+              "b3_recall_sum": 52637194.476425774,
+              "bp": 100186114,
+              "contigs": 2084,
+              "unassigned_bp": 78121,
+              "unassigned_contigs": 4
+            },
+            "2500": {
+              "assigned_bp": 32193050,
+              "assigned_contigs": 7523,
+              "attributable_bp": 21968729,
+              "b3_precision": 0.8056949319329865,
+              "b3_precision_sum": 17700093.616309226,
+              "b3_recall": 0.5084191032648748,
+              "b3_recall_sum": 11169321.49804905,
+              "bp": 32866110,
+              "contigs": 7728,
+              "unassigned_bp": 673060,
+              "unassigned_contigs": 205
+            },
+            "500": {
+              "assigned_bp": 5325188,
+              "assigned_contigs": 8360,
+              "attributable_bp": 19733751,
+              "b3_precision": 0.16632749720980114,
+              "b3_precision_sum": 3282265.4143914105,
+              "b3_recall": 0.07654760954602483,
+              "b3_recall_sum": 1510571.4664264768,
+              "bp": 22098500,
+              "contigs": 35898,
+              "unassigned_bp": 16773312,
+              "unassigned_contigs": 27538
+            },
+            "768": {
+              "assigned_bp": 5163054,
+              "assigned_contigs": 5899,
+              "attributable_bp": 12485834,
+              "b3_precision": 0.2812539175311083,
+              "b3_precision_sum": 3511689.7261431077,
+              "b3_recall": 0.13175280955385243,
+              "b3_recall_sum": 1645043.7091230156,
+              "bp": 13986706,
+              "contigs": 16024,
+              "unassigned_bp": 8823652,
+              "unassigned_contigs": 10125
+            }
+          },
+          "geometry_by_lineage": {
+            "bacterial": {
+              "attributable_bp": 94606287,
+              "b3_precision": 0.6907133437298328,
+              "b3_precision_sum": 65345824.831634216,
+              "b3_recall": 0.6944355854456195,
+              "b3_recall_sum": 65697972.2996813,
+              "nn_purity": 0.7262655130564146,
+              "nn_purity_bp_weighted": 0.8204701821148279,
+              "queries": 25543,
+              "query_bp": 88261843,
+              "same": 92755,
+              "same_weighted_sum": 72416210.40000035
+            },
+            "eukaryotic": {
+              "attributable_bp": 67037217,
+              "b3_precision": 0.30889292682174835,
+              "b3_precision_sum": 20707322.165114664,
+              "b3_recall": 0.08381608595806168,
+              "b3_recall_sum": 5618797.142461234,
+              "nn_purity": 0.8467689822294022,
+              "nn_purity_bp_weighted": 0.8518138268950539,
+              "queries": 49520,
+              "query_bp": 54129752,
+              "same": 209660,
+              "same_weighted_sum": 46108471.2000002
+            },
+            "other": {
+              "attributable_bp": 214249,
+              "b3_precision": 0.421792359712264,
+              "b3_precision_sum": 90368.59127599285,
+              "b3_recall": 0.991181135985953,
+              "b3_recall_sum": 212359.56720385444,
+              "nn_purity": 0.013333333333333334,
+              "nn_purity_bp_weighted": 0.0019675563510943074,
+              "queries": 15,
+              "query_bp": 213971,
+              "same": 1,
+              "same_weighted_sum": 421.0
+            },
+            "viral": {
+              "attributable_bp": 3620060,
+              "b3_precision": 0.24750637498975236,
+              "b3_precision_sum": 895987.927845403,
+              "b3_recall": 0.7761420424212063,
+              "b3_recall_sum": 2809680.762087312,
+              "nn_purity": 0.448068669527897,
+              "nn_purity_bp_weighted": 0.39128299766844143,
+              "queries": 932,
+              "query_bp": 3435470,
+              "same": 2088,
+              "same_weighted_sum": 1344241.0000000005
+            }
+          }
+        },
+        "old": {
+          "recovery": {
+            "at_least_50_percent": 12,
+            "at_least_90_percent": 6,
+            "bp_weighted_R95": 0.06864056046828816,
+            "macro_R95": 0.07152019731404954,
+            "targets": 156,
+            "targets_with_any_passing_bin": 15
+          },
+          "grouping": {
+            "attributable_bp": 165477813,
+            "f1": 0.4335963096798472,
+            "precision": 0.4920417824793645,
+            "recall": 0.38756119972888886
+          },
+          "geometry": {
+            "attributable_eligible_queries": 76010,
+            "nn_purity": 0.8012208919878964,
+            "nn_purity_bp_weighted": 0.8207922025423038,
+            "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+          },
+          "populations": {
+            "cells": {
+              "10000|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 26808212,
+                "ambiguous_query_bp": 48197,
+                "confirmed_bacterial_bp": 26752371,
+                "contigs": 406,
+                "nn_quarantined_query_bp": 227,
+                "unsupported_query_bp": 7417
+              },
+              "10000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 20481389,
+                "ambiguous_query_bp": 35621,
+                "confirmed_bacterial_bp": 20438736,
+                "confirmed_eukaryotic_bp": 276,
+                "contigs": 737,
+                "nn_quarantined_query_bp": 220,
+                "unsupported_query_bp": 6536
+              },
+              "10000|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 5643003,
+                "ambiguous_query_bp": 13932,
+                "confirmed_bacterial_bp": 5628223,
+                "contigs": 59,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 848
+              },
+              "10000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 1443512,
+                "ambiguous_query_bp": 5321,
+                "confirmed_bacterial_bp": 1438178,
+                "contigs": 40,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 13
+              },
+              "10000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1598996,
+                "ambiguous_query_bp": 1891,
+                "confirmed_eukaryotic_bp": 1596871,
+                "contigs": 33,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 234
+              },
+              "10000|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 10150623,
+                "ambiguous_query_bp": 5418696,
+                "confirmed_bacterial_bp": 2543514,
+                "confirmed_eukaryotic_bp": 115655,
+                "contigs": 139,
+                "nn_quarantined_query_bp": 1961260,
+                "unsupported_query_bp": 111498
+              },
+              "10000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 30984484,
+                "ambiguous_query_bp": 20156481,
+                "confirmed_bacterial_bp": 3112872,
+                "confirmed_eukaryotic_bp": 1727048,
+                "confirmed_other_bp": 42038,
+                "confirmed_viral_bp": 203902,
+                "contigs": 595,
+                "nn_quarantined_query_bp": 5444160,
+                "unsupported_query_bp": 297983
+              },
+              "10000|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 490663,
+                "ambiguous_query_bp": 15494,
+                "confirmed_bacterial_bp": 283691,
+                "contigs": 6,
+                "nn_quarantined_query_bp": 191359,
+                "unsupported_query_bp": 119
+              },
+              "10000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 493248,
+                "ambiguous_query_bp": 189730,
+                "confirmed_bacterial_bp": 290687,
+                "confirmed_other_bp": 12367,
+                "contigs": 22,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 464
+              },
+              "10000|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 171492,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 171492,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 398479,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 398479,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1455911,
+                "ambiguous_query_bp": 2794,
+                "confirmed_viral_bp": 1452482,
+                "contigs": 42,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 635
+              },
+              "10000|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 66102,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 66102,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 219707,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 219526,
+                "contigs": 136,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 181
+              },
+              "1000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 7790606,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 7785057,
+                "contigs": 5121,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 5549
+              },
+              "1000|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 57456,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 57421,
+                "contigs": 41,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 35
+              },
+              "1000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 3218794,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 3216722,
+                "contigs": 2221,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2072
+              },
+              "1000|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 28100,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 28100,
+                "contigs": 16,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 8010517,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 8006653,
+                "contigs": 5316,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 3864
+              },
+              "1000|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 28151,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 28112,
+                "contigs": 18,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 39
+              },
+              "1000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 13991683,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 13987153,
+                "contigs": 9869,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4530
+              },
+              "1000|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 97666,
+                "ambiguous_query_bp": 82899,
+                "confirmed_bacterial_bp": 5522,
+                "contigs": 58,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 9245
+              },
+              "1000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 3850540,
+                "ambiguous_query_bp": 2712352,
+                "confirmed_bacterial_bp": 476388,
+                "confirmed_eukaryotic_bp": 160802,
+                "confirmed_other_bp": 1460,
+                "confirmed_viral_bp": 49536,
+                "contigs": 2397,
+                "nn_quarantined_query_bp": 1524,
+                "unsupported_query_bp": 448478
+              },
+              "1000|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 66946,
+                "ambiguous_query_bp": 55758,
+                "confirmed_bacterial_bp": 4799,
+                "contigs": 42,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 6389
+              },
+              "1000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 2704495,
+                "ambiguous_query_bp": 1803009,
+                "confirmed_bacterial_bp": 250414,
+                "confirmed_eukaryotic_bp": 264080,
+                "confirmed_other_bp": 1803,
+                "confirmed_viral_bp": 29164,
+                "contigs": 1784,
+                "nn_quarantined_query_bp": 7466,
+                "unsupported_query_bp": 348559
+              },
+              "1000|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 13948,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 13948,
+                "contigs": 8,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|viral|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1405,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 1405,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 222170,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 221843,
+                "contigs": 140,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 327
+              },
+              "1000|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 203089,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 202719,
+                "contigs": 139,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 370
+              },
+              "1|bacterial|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 22395,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 22362,
+                "contigs": 55,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 33
+              },
+              "1|bacterial|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 6322049,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 6317742,
+                "contigs": 16313,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4307
+              },
+              "1|eukaryotic|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 1002,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1002,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|eukaryotic|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 12906463,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 12898691,
+                "contigs": 32986,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 7772
+              },
+              "1|not_attributable|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 11167,
+                "ambiguous_query_bp": 7907,
+                "confirmed_bacterial_bp": 1816,
+                "contigs": 28,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1444
+              },
+              "1|not_attributable|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 2587510,
+                "ambiguous_query_bp": 1469064,
+                "confirmed_bacterial_bp": 148575,
+                "confirmed_eukaryotic_bp": 381704,
+                "confirmed_other_bp": 140,
+                "confirmed_viral_bp": 11635,
+                "contigs": 6795,
+                "nn_quarantined_query_bp": 4987,
+                "unsupported_query_bp": 571405
+              },
+              "1|other|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 278,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 278,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|viral|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 184590,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 184448,
+                "contigs": 480,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 142
+              },
+              "2500|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1045324,
+                "ambiguous_query_bp": 995,
+                "confirmed_bacterial_bp": 1043418,
+                "contigs": 194,
+                "nn_quarantined_query_bp": 323,
+                "unsupported_query_bp": 588
+              },
+              "2500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 11406513,
+                "ambiguous_query_bp": 6277,
+                "confirmed_bacterial_bp": 11393472,
+                "contigs": 2536,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 6764
+              },
+              "2500|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 9675,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 9675,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 460797,
+                "ambiguous_query_bp": 666,
+                "confirmed_bacterial_bp": 459924,
+                "contigs": 113,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 207
+              },
+              "2500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 94340,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 94340,
+                "contigs": 20,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 6784383,
+                "ambiguous_query_bp": 252,
+                "confirmed_bacterial_bp": 343,
+                "confirmed_eukaryotic_bp": 6780234,
+                "contigs": 1877,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 3554
+              },
+              "2500|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 23201,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 23200,
+                "contigs": 7,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1
+              },
+              "2500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 1330525,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1330419,
+                "contigs": 364,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 106
+              },
+              "2500|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 645987,
+                "ambiguous_query_bp": 504267,
+                "confirmed_bacterial_bp": 90207,
+                "contigs": 124,
+                "nn_quarantined_query_bp": 202,
+                "unsupported_query_bp": 51311
+              },
+              "2500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 8967256,
+                "ambiguous_query_bp": 6402368,
+                "confirmed_bacterial_bp": 1372084,
+                "confirmed_eukaryotic_bp": 142560,
+                "confirmed_other_bp": 13764,
+                "confirmed_viral_bp": 153826,
+                "contigs": 1993,
+                "nn_quarantined_query_bp": 22298,
+                "unsupported_query_bp": 860356
+              },
+              "2500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 120919,
+                "ambiguous_query_bp": 109809,
+                "confirmed_bacterial_bp": 9610,
+                "contigs": 25,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1500
+              },
+              "2500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 1163219,
+                "ambiguous_query_bp": 944698,
+                "confirmed_bacterial_bp": 155621,
+                "confirmed_eukaryotic_bp": 10575,
+                "confirmed_other_bp": 2514,
+                "confirmed_viral_bp": 1894,
+                "contigs": 291,
+                "nn_quarantined_query_bp": 12919,
+                "unsupported_query_bp": 34998
+              },
+              "2500|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 27707,
+                "ambiguous_query_bp": 340,
+                "confirmed_other_bp": 27367,
+                "contigs": 4,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 768180,
+                "ambiguous_query_bp": 465,
+                "confirmed_viral_bp": 766162,
+                "contigs": 175,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1553
+              },
+              "2500|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 18084,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 18084,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "500|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 18025,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 17996,
+                "contigs": 28,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 29
+              },
+              "500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 2240972,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 2239608,
+                "contigs": 3513,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1364
+              },
+              "500|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 38669,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 38650,
+                "contigs": 63,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 19
+              },
+              "500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 3639349,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 3637370,
+                "contigs": 6049,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1979
+              },
+              "500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1948401,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1947644,
+                "contigs": 3062,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 757
+              },
+              "500|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 1804,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1785,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 19
+              },
+              "500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 11667616,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 11663529,
+                "contigs": 19048,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4087
+              },
+              "500|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 9508,
+                "ambiguous_query_bp": 8600,
+                "confirmed_bacterial_bp": 139,
+                "contigs": 14,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 769
+              },
+              "500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 687979,
+                "ambiguous_query_bp": 470059,
+                "confirmed_bacterial_bp": 74629,
+                "confirmed_eukaryotic_bp": 48899,
+                "confirmed_viral_bp": 9093,
+                "contigs": 1077,
+                "nn_quarantined_query_bp": 1438,
+                "unsupported_query_bp": 83861
+              },
+              "500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 25876,
+                "ambiguous_query_bp": 19660,
+                "confirmed_bacterial_bp": 3740,
+                "contigs": 42,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2476
+              },
+              "500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 1641386,
+                "ambiguous_query_bp": 908093,
+                "confirmed_bacterial_bp": 99977,
+                "confirmed_eukaryotic_bp": 265707,
+                "confirmed_other_bp": 303,
+                "confirmed_viral_bp": 10329,
+                "contigs": 2710,
+                "nn_quarantined_query_bp": 1437,
+                "unsupported_query_bp": 355540
+              },
+              "500|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 46071,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 46003,
+                "contigs": 75,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 68
+              },
+              "500|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 132844,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 132671,
+                "contigs": 214,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 173
+              },
+              "768|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 27032,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 26994,
+                "contigs": 31,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 38
+              },
+              "768|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 2098530,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 2096905,
+                "contigs": 2399,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1625
+              },
+              "768|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 24329,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 24314,
+                "contigs": 28,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 15
+              },
+              "768|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 1589949,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 1588882,
+                "contigs": 1826,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1067
+              },
+              "768|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 2695,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 2695,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1975403,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1974442,
+                "contigs": 2259,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 961
+              },
+              "768|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 1699,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1699,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 6642238,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 6640168,
+                "contigs": 7623,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2070
+              },
+              "768|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 14653,
+                "ambiguous_query_bp": 11211,
+                "confirmed_bacterial_bp": 963,
+                "contigs": 16,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2479
+              },
+              "768|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 661747,
+                "ambiguous_query_bp": 439250,
+                "confirmed_bacterial_bp": 68856,
+                "confirmed_eukaryotic_bp": 39011,
+                "confirmed_viral_bp": 2363,
+                "contigs": 756,
+                "nn_quarantined_query_bp": 2602,
+                "unsupported_query_bp": 109665
+              },
+              "768|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 16327,
+                "ambiguous_query_bp": 10993,
+                "confirmed_bacterial_bp": 3443,
+                "contigs": 19,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1891
+              },
+              "768|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 808145,
+                "ambiguous_query_bp": 545482,
+                "confirmed_bacterial_bp": 51204,
+                "confirmed_eukaryotic_bp": 91681,
+                "confirmed_other_bp": 141,
+                "confirmed_viral_bp": 4923,
+                "contigs": 921,
+                "nn_quarantined_query_bp": 783,
+                "unsupported_query_bp": 113931
+              },
+              "768|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 824,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 824,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 50462,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 50365,
+                "contigs": 57,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 97
+              },
+              "768|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 72673,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 72642,
+                "contigs": 83,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 31
+              }
+            },
+            "keys": [
+              "lower_bp",
+              "attributable_lineage",
+              "candidate_eligibility",
+              "status",
+              "clean_marker"
+            ]
+          },
+          "length_strata": {
+            "1": {
+              "attributable_bp": 19436777,
+              "b3_precision": 0.0,
+              "b3_recall": 0.0,
+              "bp": 22035454,
+              "contigs": 56661,
+              "excluded_bp": 22035454,
+              "excluded_contigs": 56661
+            },
+            "1000": {
+              "assigned_bp": 20234659,
+              "assigned_contigs": 13193,
+              "attributable_bp": 33785626,
+              "b3_precision": 0.42566909878077674,
+              "b3_precision_sum": 14381496.97116438,
+              "b3_recall": 0.2056892473060509,
+              "b3_recall_sum": 6949339.981703743,
+              "bp": 40505273,
+              "contigs": 27307,
+              "unassigned_bp": 20270614,
+              "unassigned_contigs": 14114
+            },
+            "10000": {
+              "assigned_bp": 92049586,
+              "assigned_contigs": 1956,
+              "attributable_bp": 58067096,
+              "b3_precision": 0.7511281539060723,
+              "b3_precision_sum": 43615830.62116668,
+              "b3_recall": 0.7535414294812025,
+              "b3_recall_sum": 43755962.52566221,
+              "bp": 100186114,
+              "contigs": 2084,
+              "unassigned_bp": 8136528,
+              "unassigned_contigs": 128
+            },
+            "2500": {
+              "assigned_bp": 29739690,
+              "assigned_contigs": 6923,
+              "attributable_bp": 21968729,
+              "b3_precision": 0.7585678428674022,
+              "b3_precision_sum": 16664771.368068542,
+              "b3_recall": 0.47420358908549237,
+              "b3_recall_sum": 10417650.13944654,
+              "bp": 32866110,
+              "contigs": 7728,
+              "unassigned_bp": 3126420,
+              "unassigned_contigs": 805
+            },
+            "500": {
+              "assigned_bp": 4950956,
+              "assigned_contigs": 7769,
+              "attributable_bp": 19733751,
+              "b3_precision": 0.16664363036312804,
+              "b3_precision_sum": 3288503.9073220086,
+              "b3_recall": 0.0730744045474227,
+              "b3_recall_sum": 1442032.1038121074,
+              "bp": 22098500,
+              "contigs": 35898,
+              "unassigned_bp": 17147544,
+              "unassigned_contigs": 28129
+            },
+            "768": {
+              "assigned_bp": 4831346,
+              "assigned_contigs": 5522,
+              "attributable_bp": 12485834,
+              "b3_precision": 0.2780266982234261,
+              "b3_precision_sum": 3471395.201585794,
+              "b3_recall": 0.1255659000566152,
+              "b3_recall_sum": 1567794.984167488,
+              "bp": 13986706,
+              "contigs": 16024,
+              "unassigned_bp": 9155360,
+              "unassigned_contigs": 10502
+            }
+          },
+          "geometry_by_lineage": {
+            "bacterial": {
+              "attributable_bp": 94606287,
+              "b3_precision": 0.6444858843969813,
+              "b3_precision_sum": 60972416.546709634,
+              "b3_recall": 0.5933094496382595,
+              "b3_recall_sum": 56130804.07228922,
+              "nn_purity": 0.7262655130564146,
+              "nn_purity_bp_weighted": 0.8204701821148279,
+              "queries": 25543,
+              "query_bp": 88261843,
+              "same": 92755,
+              "same_weighted_sum": 72416210.40000035
+            },
+            "eukaryotic": {
+              "attributable_bp": 67037217,
+              "b3_precision": 0.2881131333828397,
+              "b3_precision_sum": 19314302.643135373,
+              "b3_recall": 0.07560696323257003,
+              "b3_recall_sum": 5068480.400932819,
+              "nn_purity": 0.8467689822294022,
+              "nn_purity_bp_weighted": 0.8518138268950539,
+              "queries": 49520,
+              "query_bp": 54129752,
+              "same": 209660,
+              "same_weighted_sum": 46108471.2000002
+            },
+            "other": {
+              "attributable_bp": 214249,
+              "b3_precision": 0.42309693505833995,
+              "b3_precision_sum": 90648.09523931428,
+              "b3_recall": 0.991181135985953,
+              "b3_recall_sum": 212359.56720385444,
+              "nn_purity": 0.013333333333333334,
+              "nn_purity_bp_weighted": 0.0019675563510943074,
+              "queries": 15,
+              "query_bp": 213971,
+              "same": 1,
+              "same_weighted_sum": 421.0
+            },
+            "viral": {
+              "attributable_bp": 3620060,
+              "b3_precision": 0.28856725695791663,
+              "b3_precision_sum": 1044630.7842230757,
+              "b3_recall": 0.751682484369443,
+              "b3_recall_sum": 2721135.6943664458,
+              "nn_purity": 0.448068669527897,
+              "nn_purity_bp_weighted": 0.39128299766844143,
+              "queries": 932,
+              "query_bp": 3435470,
+              "same": 2088,
+              "same_weighted_sum": 1344241.0000000005
+            }
+          }
+        },
+        "post": {
+          "recovery": {
+            "at_least_50_percent": 13,
+            "at_least_90_percent": 7,
+            "bp_weighted_R95": 0.07212417640591821,
+            "macro_R95": 0.07555859190921457,
+            "targets": 156,
+            "targets_with_any_passing_bin": 15
+          },
+          "grouping": {
+            "attributable_bp": 165477813,
+            "f1": 0.4900680887129343,
+            "precision": 0.5460210421970529,
+            "recall": 0.44451669086429896
+          },
+          "geometry": {
+            "attributable_eligible_queries": 76010,
+            "nn_purity": 0.8012208919878964,
+            "nn_purity_bp_weighted": 0.8207922025423038,
+            "scope": "all emitted native 5-NN, attributable queries; unknown neighbors unconfirmed; no new neighbor search for scores"
+          },
+          "populations": {
+            "cells": {
+              "10000|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 32451215,
+                "ambiguous_query_bp": 62129,
+                "confirmed_bacterial_bp": 32380594,
+                "contigs": 465,
+                "nn_quarantined_query_bp": 227,
+                "unsupported_query_bp": 8265
+              },
+              "10000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 21876468,
+                "ambiguous_query_bp": 40519,
+                "confirmed_bacterial_bp": 21828917,
+                "confirmed_eukaryotic_bp": 276,
+                "contigs": 773,
+                "nn_quarantined_query_bp": 220,
+                "unsupported_query_bp": 6536
+              },
+              "10000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 48433,
+                "ambiguous_query_bp": 423,
+                "confirmed_bacterial_bp": 47997,
+                "contigs": 4,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 13
+              },
+              "10000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1598996,
+                "ambiguous_query_bp": 1891,
+                "confirmed_eukaryotic_bp": 1596871,
+                "contigs": 33,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 234
+              },
+              "10000|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 10641286,
+                "ambiguous_query_bp": 5434190,
+                "confirmed_bacterial_bp": 2827205,
+                "confirmed_eukaryotic_bp": 115655,
+                "contigs": 145,
+                "nn_quarantined_query_bp": 2152619,
+                "unsupported_query_bp": 111617
+              },
+              "10000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 31412912,
+                "ambiguous_query_bp": 20336751,
+                "confirmed_bacterial_bp": 3360566,
+                "confirmed_eukaryotic_bp": 1727048,
+                "confirmed_other_bp": 42038,
+                "confirmed_viral_bp": 203902,
+                "contigs": 614,
+                "nn_quarantined_query_bp": 5444160,
+                "unsupported_query_bp": 298447
+              },
+              "10000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 64820,
+                "ambiguous_query_bp": 9460,
+                "confirmed_bacterial_bp": 42993,
+                "confirmed_other_bp": 12367,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 171492,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 171492,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 398479,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 398479,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "10000|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1455911,
+                "ambiguous_query_bp": 2794,
+                "confirmed_viral_bp": 1452482,
+                "contigs": 42,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 635
+              },
+              "10000|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 66102,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 66102,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 220808,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 220627,
+                "contigs": 137,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 181
+              },
+              "1000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 8014606,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 8008921,
+                "contigs": 5265,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 5685
+              },
+              "1000|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 56355,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 56320,
+                "contigs": 40,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 35
+              },
+              "1000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 2994794,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 2992858,
+                "contigs": 2077,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1936
+              },
+              "1000|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 28100,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 28100,
+                "contigs": 16,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 8444776,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 8440734,
+                "contigs": 5568,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4042
+              },
+              "1000|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 28151,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 28112,
+                "contigs": 18,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 39
+              },
+              "1000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 13557424,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 13553072,
+                "contigs": 9617,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4352
+              },
+              "1000|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 118079,
+                "ambiguous_query_bp": 102627,
+                "confirmed_bacterial_bp": 6207,
+                "contigs": 71,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 9245
+              },
+              "1000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 4648781,
+                "ambiguous_query_bp": 3437479,
+                "confirmed_bacterial_bp": 533590,
+                "confirmed_eukaryotic_bp": 165874,
+                "confirmed_other_bp": 1460,
+                "confirmed_viral_bp": 49536,
+                "contigs": 2902,
+                "nn_quarantined_query_bp": 2886,
+                "unsupported_query_bp": 457956
+              },
+              "1000|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 46533,
+                "ambiguous_query_bp": 36030,
+                "confirmed_bacterial_bp": 4114,
+                "contigs": 29,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 6389
+              },
+              "1000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 1906254,
+                "ambiguous_query_bp": 1077882,
+                "confirmed_bacterial_bp": 193212,
+                "confirmed_eukaryotic_bp": 259008,
+                "confirmed_other_bp": 1803,
+                "confirmed_viral_bp": 29164,
+                "contigs": 1279,
+                "nn_quarantined_query_bp": 6104,
+                "unsupported_query_bp": 339081
+              },
+              "1000|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 13948,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 13948,
+                "contigs": 8,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|viral|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1405,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 1405,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1000|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 222170,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 221843,
+                "contigs": 140,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 327
+              },
+              "1000|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 203089,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 202719,
+                "contigs": 139,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 370
+              },
+              "1|bacterial|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 22395,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 22362,
+                "contigs": 55,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 33
+              },
+              "1|bacterial|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 6322049,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 6317742,
+                "contigs": 16313,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4307
+              },
+              "1|eukaryotic|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 1002,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1002,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|eukaryotic|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 12906463,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 12898691,
+                "contigs": 32986,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 7772
+              },
+              "1|not_attributable|candidate_excluded|excluded|clean_marker": {
+                "all_bp": 11167,
+                "ambiguous_query_bp": 7907,
+                "confirmed_bacterial_bp": 1816,
+                "contigs": 28,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1444
+              },
+              "1|not_attributable|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 2587510,
+                "ambiguous_query_bp": 1469064,
+                "confirmed_bacterial_bp": 148575,
+                "confirmed_eukaryotic_bp": 381704,
+                "confirmed_other_bp": 140,
+                "confirmed_viral_bp": 11635,
+                "contigs": 6795,
+                "nn_quarantined_query_bp": 4987,
+                "unsupported_query_bp": 571405
+              },
+              "1|other|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 278,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 278,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "1|viral|candidate_excluded|excluded|no_clean_marker": {
+                "all_bp": 184590,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 184448,
+                "contigs": 480,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 142
+              },
+              "2500|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 1054999,
+                "ambiguous_query_bp": 995,
+                "confirmed_bacterial_bp": 1053093,
+                "contigs": 196,
+                "nn_quarantined_query_bp": 323,
+                "unsupported_query_bp": 588
+              },
+              "2500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 11691167,
+                "ambiguous_query_bp": 6728,
+                "confirmed_bacterial_bp": 11677531,
+                "contigs": 2603,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 6908
+              },
+              "2500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 176143,
+                "ambiguous_query_bp": 215,
+                "confirmed_bacterial_bp": 175865,
+                "contigs": 46,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 63
+              },
+              "2500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 107896,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 107895,
+                "contigs": 24,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1
+              },
+              "2500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 7649470,
+                "ambiguous_query_bp": 252,
+                "confirmed_bacterial_bp": 343,
+                "confirmed_eukaryotic_bp": 7645265,
+                "contigs": 2093,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 3610
+              },
+              "2500|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 9645,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 9645,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 465438,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 465388,
+                "contigs": 148,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 50
+              },
+              "2500|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 762372,
+                "ambiguous_query_bp": 609542,
+                "confirmed_bacterial_bp": 99817,
+                "contigs": 148,
+                "nn_quarantined_query_bp": 202,
+                "unsupported_query_bp": 52811
+              },
+              "2500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 9969883,
+                "ambiguous_query_bp": 7257509,
+                "confirmed_bacterial_bp": 1496444,
+                "confirmed_eukaryotic_bp": 145061,
+                "confirmed_other_bp": 13764,
+                "confirmed_viral_bp": 153826,
+                "contigs": 2241,
+                "nn_quarantined_query_bp": 26420,
+                "unsupported_query_bp": 876859
+              },
+              "2500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 4534,
+                "ambiguous_query_bp": 4534,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 160592,
+                "ambiguous_query_bp": 89557,
+                "confirmed_bacterial_bp": 31261,
+                "confirmed_eukaryotic_bp": 8074,
+                "confirmed_other_bp": 2514,
+                "confirmed_viral_bp": 1894,
+                "contigs": 43,
+                "nn_quarantined_query_bp": 8797,
+                "unsupported_query_bp": 18495
+              },
+              "2500|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 27707,
+                "ambiguous_query_bp": 340,
+                "confirmed_other_bp": 27367,
+                "contigs": 4,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "2500|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 768180,
+                "ambiguous_query_bp": 465,
+                "confirmed_viral_bp": 766162,
+                "contigs": 175,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1553
+              },
+              "2500|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 18084,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 18084,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "500|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 18689,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 18660,
+                "contigs": 29,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 29
+              },
+              "500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 2316468,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 2315033,
+                "contigs": 3632,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1435
+              },
+              "500|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 38005,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 37986,
+                "contigs": 62,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 19
+              },
+              "500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 3563853,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 3561945,
+                "contigs": 5930,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1908
+              },
+              "500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 1992237,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1991480,
+                "contigs": 3130,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 757
+              },
+              "500|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 1804,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1785,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 19
+              },
+              "500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 11623780,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 11619693,
+                "contigs": 18980,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 4087
+              },
+              "500|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 12154,
+                "ambiguous_query_bp": 11246,
+                "confirmed_bacterial_bp": 139,
+                "contigs": 18,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 769
+              },
+              "500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 843144,
+                "ambiguous_query_bp": 611297,
+                "confirmed_bacterial_bp": 80187,
+                "confirmed_eukaryotic_bp": 50815,
+                "confirmed_viral_bp": 9093,
+                "contigs": 1320,
+                "nn_quarantined_query_bp": 2051,
+                "unsupported_query_bp": 89701
+              },
+              "500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 23230,
+                "ambiguous_query_bp": 17014,
+                "confirmed_bacterial_bp": 3740,
+                "contigs": 38,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2476
+              },
+              "500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 1486221,
+                "ambiguous_query_bp": 766855,
+                "confirmed_bacterial_bp": 94419,
+                "confirmed_eukaryotic_bp": 263791,
+                "confirmed_other_bp": 303,
+                "confirmed_viral_bp": 10329,
+                "contigs": 2467,
+                "nn_quarantined_query_bp": 824,
+                "unsupported_query_bp": 349700
+              },
+              "500|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 46768,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 46700,
+                "contigs": 76,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 68
+              },
+              "500|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 132147,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 131974,
+                "contigs": 213,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 173
+              },
+              "768|bacterial|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 27032,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 26994,
+                "contigs": 31,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 38
+              },
+              "768|bacterial|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 2169130,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 2167412,
+                "contigs": 2480,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1718
+              },
+              "768|bacterial|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 24329,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 24314,
+                "contigs": 28,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 15
+              },
+              "768|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 1519349,
+                "ambiguous_query_bp": 0,
+                "confirmed_bacterial_bp": 1518375,
+                "contigs": 1745,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 974
+              },
+              "768|eukaryotic|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 2695,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 2695,
+                "contigs": 3,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 2026755,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 2025779,
+                "contigs": 2317,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 976
+              },
+              "768|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 1699,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 1699,
+                "contigs": 2,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 6590886,
+                "ambiguous_query_bp": 0,
+                "confirmed_eukaryotic_bp": 6588831,
+                "contigs": 7565,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2055
+              },
+              "768|not_attributable|candidate_eligible|assigned|clean_marker": {
+                "all_bp": 15452,
+                "ambiguous_query_bp": 12010,
+                "confirmed_bacterial_bp": 963,
+                "contigs": 17,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 2479
+              },
+              "768|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 812072,
+                "ambiguous_query_bp": 582791,
+                "confirmed_bacterial_bp": 73763,
+                "confirmed_eukaryotic_bp": 39011,
+                "confirmed_viral_bp": 2363,
+                "contigs": 926,
+                "nn_quarantined_query_bp": 2602,
+                "unsupported_query_bp": 111542
+              },
+              "768|not_attributable|candidate_eligible|unassigned|clean_marker": {
+                "all_bp": 15528,
+                "ambiguous_query_bp": 10194,
+                "confirmed_bacterial_bp": 3443,
+                "contigs": 18,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 1891
+              },
+              "768|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 657820,
+                "ambiguous_query_bp": 401941,
+                "confirmed_bacterial_bp": 46297,
+                "confirmed_eukaryotic_bp": 91681,
+                "confirmed_other_bp": 141,
+                "confirmed_viral_bp": 4923,
+                "contigs": 751,
+                "nn_quarantined_query_bp": 783,
+                "unsupported_query_bp": 112054
+              },
+              "768|other|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 824,
+                "ambiguous_query_bp": 0,
+                "confirmed_other_bp": 824,
+                "contigs": 1,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 0
+              },
+              "768|viral|candidate_eligible|assigned|no_clean_marker": {
+                "all_bp": 50462,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 50365,
+                "contigs": 57,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 97
+              },
+              "768|viral|candidate_eligible|unassigned|no_clean_marker": {
+                "all_bp": 72673,
+                "ambiguous_query_bp": 0,
+                "confirmed_viral_bp": 72642,
+                "contigs": 83,
+                "nn_quarantined_query_bp": 0,
+                "unsupported_query_bp": 31
+              }
+            },
+            "keys": [
+              "lower_bp",
+              "attributable_lineage",
+              "candidate_eligibility",
+              "status",
+              "clean_marker"
+            ]
+          },
+          "length_strata": {
+            "1": {
+              "attributable_bp": 19436777,
+              "b3_precision": 0.0,
+              "b3_recall": 0.0,
+              "bp": 22035454,
+              "contigs": 56661,
+              "excluded_bp": 22035454,
+              "excluded_contigs": 56661
+            },
+            "1000": {
+              "assigned_bp": 21712673,
+              "assigned_contigs": 14108,
+              "attributable_bp": 33785626,
+              "b3_precision": 0.4422429231064771,
+              "b3_precision_sum": 14941454.001222193,
+              "b3_recall": 0.21776267330429405,
+              "b3_recall_sum": 7357248.237019063,
+              "bp": 40505273,
+              "contigs": 27307,
+              "unassigned_bp": 18792600,
+              "unassigned_contigs": 13199
+            },
+            "10000": {
+              "assigned_bp": 100006759,
+              "assigned_contigs": 2076,
+              "attributable_bp": 58067096,
+              "b3_precision": 0.8750256643732683,
+              "b3_precision_sum": 50810199.25562635,
+              "b3_recall": 0.894898903292112,
+              "b3_recall_sum": 51964180.52775778,
+              "bp": 100186114,
+              "contigs": 2084,
+              "unassigned_bp": 179355,
+              "unassigned_contigs": 8
+            },
+            "2500": {
+              "assigned_bp": 32031674,
+              "assigned_contigs": 7484,
+              "attributable_bp": 21968729,
+              "b3_precision": 0.8074403969174251,
+              "b3_precision_sum": 17738439.263531346,
+              "b3_recall": 0.5051274026400707,
+              "b3_recall_sum": 11097007.019073598,
+              "bp": 32866110,
+              "contigs": 7728,
+              "unassigned_bp": 834436,
+              "unassigned_contigs": 244
+            },
+            "500": {
+              "assigned_bp": 5229460,
+              "assigned_contigs": 8205,
+              "attributable_bp": 19733751,
+              "b3_precision": 0.16836182619848378,
+              "b3_precision_sum": 3322410.3561061556,
+              "b3_recall": 0.07608288556858772,
+              "b3_recall_sum": 1501400.7191720034,
+              "bp": 22098500,
+              "contigs": 35898,
+              "unassigned_bp": 16869040,
+              "unassigned_contigs": 27693
+            },
+            "768": {
+              "assigned_bp": 5104422,
+              "assigned_contigs": 5832,
+              "attributable_bp": 12485834,
+              "b3_precision": 0.2836706813708127,
+              "b3_precision_sum": 3541865.03826286,
+              "b3_recall": 0.13117372401383262,
+              "b3_recall_sum": 1637813.3431985278,
+              "bp": 13986706,
+              "contigs": 16024,
+              "unassigned_bp": 8882284,
+              "unassigned_contigs": 10192
+            }
+          },
+          "geometry_by_lineage": {
+            "bacterial": {
+              "attributable_bp": 94606287,
+              "b3_precision": 0.7241297982761739,
+              "b3_precision_sum": 68507231.52096781,
+              "b3_recall": 0.6871146341113407,
+              "b3_recall_sum": 65005364.27663749,
+              "nn_purity": 0.7262655130564146,
+              "nn_purity_bp_weighted": 0.8204701821148279,
+              "queries": 25543,
+              "query_bp": 88261843,
+              "same": 92755,
+              "same_weighted_sum": 72416210.40000035
+            },
+            "eukaryotic": {
+              "attributable_bp": 67037217,
+              "b3_precision": 0.30897378616942683,
+              "b3_precision_sum": 20712742.750751466,
+              "b3_recall": 0.08381458849027974,
+              "b3_recall_sum": 5618696.756388585,
+              "nn_purity": 0.8467689822294022,
+              "nn_purity_bp_weighted": 0.8518138268950539,
+              "queries": 49520,
+              "query_bp": 54129752,
+              "same": 209660,
+              "same_weighted_sum": 46108471.2000002
+            },
+            "other": {
+              "attributable_bp": 214249,
+              "b3_precision": 0.42309693505833995,
+              "b3_precision_sum": 90648.09523931428,
+              "b3_recall": 0.991181135985953,
+              "b3_recall_sum": 212359.56720385444,
+              "nn_purity": 0.013333333333333334,
+              "nn_purity_bp_weighted": 0.0019675563510943074,
+              "queries": 15,
+              "query_bp": 213971,
+              "same": 1,
+              "same_weighted_sum": 421.0
+            },
+            "viral": {
+              "attributable_bp": 3620060,
+              "b3_precision": 0.2883227205600639,
+              "b3_precision_sum": 1043745.547790665,
+              "b3_recall": 0.7517083269314494,
+              "b3_recall_sum": 2721229.245991463,
+              "nn_purity": 0.448068669527897,
+              "nn_purity_bp_weighted": 0.39128299766844143,
+              "queries": 932,
+              "query_bp": 3435470,
+              "same": 2088,
+              "same_weighted_sum": 1344241.0000000005
+            }
+          }
+        }
+      },
+      "baseline_E017_post": {
+        "at_least_50_percent": 14,
+        "at_least_90_percent": 8,
+        "bp_weighted_R95": 0.07528383282291128,
+        "macro_R95": 0.08092587509744675,
+        "targets": 156,
+        "targets_with_any_passing_bin": 16
+      },
+      "baseline_E016_post": {
+        "at_least_50_percent": 11,
+        "at_least_90_percent": 4,
+        "bp_weighted_R95": 0.05821901338849871,
+        "macro_R95": 0.06688940950404118,
+        "targets": 156,
+        "targets_with_any_passing_bin": 21
+      },
+      "baseline_E014_post": {
+        "at_least_50_percent": 9,
+        "at_least_90_percent": 4,
+        "bp_weighted_R95": 0.05519554444239896,
+        "macro_R95": 0.06278222635994046,
+        "targets": 156,
+        "targets_with_any_passing_bin": 22
+      },
+      "baseline_E015_post": {
+        "at_least_50_percent": 10,
+        "at_least_90_percent": 4,
+        "bp_weighted_R95": 0.053328671995114,
+        "macro_R95": 0.061512800680449474,
+        "targets": 156,
+        "targets_with_any_passing_bin": 20
+      },
+      "paired_vs_E017": {
+        "gained": 12,
+        "lost": 1,
+        "unchanged": 143,
+        "delta_bp": -1752541
+      },
+      "paired_transitions": {
+        "pre_to_old": {
+          "gained": 1,
+          "lost": 1,
+          "unchanged": 154,
+          "delta_bp": 587509
+        },
+        "old_to_post": {
+          "gained": 1,
+          "lost": 0,
+          "unchanged": 155,
+          "delta_bp": 1932229
+        },
+        "pre_to_post": {
+          "gained": 1,
+          "lost": 0,
+          "unchanged": 155,
+          "delta_bp": 2519738
+        }
+      },
+      "accounting": {
+        "old": {
+          "bp": 231678157,
+          "contigs": 145702,
+          "full_DNA_manifest": false,
+          "populations": {
+            "assigned": {
+              "bp": 151806237,
+              "contigs": 35363
+            },
+            "excluded": {
+              "bp": 22035454,
+              "contigs": 56661
+            },
+            "unassigned": {
+              "bp": 57836466,
+              "contigs": 53678
+            }
+          }
+        },
+        "post": {
+          "bp": 231678157,
+          "contigs": 145702,
+          "full_DNA_manifest": true,
+          "populations": {
+            "assigned": {
+              "bp": 164084988,
+              "contigs": 37705
+            },
+            "excluded": {
+              "bp": 22035454,
+              "contigs": 56661
+            },
+            "unassigned": {
+              "bp": 45557715,
+              "contigs": 51336
+            }
+          }
+        },
+        "pre": {
+          "bp": 231678157,
+          "contigs": 145702,
+          "full_DNA_manifest": false,
+          "populations": {
+            "assigned": {
+              "bp": 164630647,
+              "contigs": 38057
+            },
+            "excluded": {
+              "bp": 22035454,
+              "contigs": 56661
+            },
+            "unassigned": {
+              "bp": 45012056,
+              "contigs": 50984
+            }
+          }
+        }
+      },
+      "baseline_E017_accounting": {
+        "bp": 231678157,
+        "contigs": 145702,
+        "full_DNA_manifest": true,
+        "populations": {
+          "assigned": {
+            "bp": 149895140,
+            "contigs": 24341
+          },
+          "excluded": {
+            "bp": 22035454,
+            "contigs": 56661
+          },
+          "unassigned": {
+            "bp": 59747563,
+            "contigs": 64700
+          }
+        }
+      },
+      "target_gains": [
+        {
+          "genome": "ASV134.7",
+          "reference_bp": 5330584,
+          "previous_bp": 1972879,
+          "candidate_bp": 2204017,
+          "delta_bp": 231138
+        },
+        {
+          "genome": "ASV484.0",
+          "reference_bp": 2957579,
+          "previous_bp": 2670817,
+          "candidate_bp": 2738468,
+          "delta_bp": 67651
+        },
+        {
+          "genome": "ASV692.1",
+          "reference_bp": 2725870,
+          "previous_bp": 1747614,
+          "candidate_bp": 1813610,
+          "delta_bp": 65996
+        },
+        {
+          "genome": "ASV337.1",
+          "reference_bp": 3164285,
+          "previous_bp": 2363854,
+          "candidate_bp": 2417245,
+          "delta_bp": 53391
+        },
+        {
+          "genome": "ASV714.0",
+          "reference_bp": 3847181,
+          "previous_bp": 3063070,
+          "candidate_bp": 3095494,
+          "delta_bp": 32424
+        },
+        {
+          "genome": "ASV329.2",
+          "reference_bp": 2770539,
+          "previous_bp": 457188,
+          "candidate_bp": 474196,
+          "delta_bp": 17008
+        },
+        {
+          "genome": "ASV470.1",
+          "reference_bp": 3320462,
+          "previous_bp": 2019435,
+          "candidate_bp": 2025668,
+          "delta_bp": 6233
+        },
+        {
+          "genome": "ASV387.0",
+          "reference_bp": 3067081,
+          "previous_bp": 2832429,
+          "candidate_bp": 2834974,
+          "delta_bp": 2545
+        },
+        {
+          "genome": "ASV284.4",
+          "reference_bp": 2262214,
+          "previous_bp": 2072797,
+          "candidate_bp": 2074980,
+          "delta_bp": 2183
+        },
+        {
+          "genome": "ASV150.14",
+          "reference_bp": 6474050,
+          "previous_bp": 6005356,
+          "candidate_bp": 6007026,
+          "delta_bp": 1670
+        },
+        {
+          "genome": "ASV399.6",
+          "reference_bp": 3159004,
+          "previous_bp": 3067916,
+          "candidate_bp": 3069405,
+          "delta_bp": 1489
+        },
+        {
+          "genome": "ASV579.0",
+          "reference_bp": 2345971,
+          "previous_bp": 2091247,
+          "candidate_bp": 2091991,
+          "delta_bp": 744
+        }
+      ],
+      "target_losses": [
+        {
+          "genome": "ASV551.0",
+          "reference_bp": 2318719,
+          "previous_bp": 2235013,
+          "candidate_bp": 0,
+          "delta_bp": -2235013
+        }
+      ],
+      "selection": {
+        "status": "PASS",
+        "rows": 145702,
+        "bp": 231678157,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ],
+        "unchanged_core_bins": 83,
+        "queries": 79459,
+        "original_recruited": 14840,
+        "recruited": 28475,
+        "added_contigs": 13635,
+        "added_bp": 14456937,
+        "added_by_length": {
+          "500": {
+            "contigs": 7760,
+            "bp": 5638584
+          },
+          "1000": {
+            "contigs": 3511,
+            "bp": 4261685
+          },
+          "1500": {
+            "contigs": 2351,
+            "bp": 4467391
+          },
+          "2500": {
+            "contigs": 12,
+            "bp": 47645
+          },
+          "10000": {
+            "contigs": 1,
+            "bp": 41632
+          }
+        },
+        "old_accepts_preserved": true,
+        "canonical_core_mapping": {
+          "2": 1,
+          "3": 11,
+          "14": 34,
+          "0": 0,
+          "18": 38,
+          "6": 22,
+          "12": 26,
+          "23": 21,
+          "36": 49,
+          "33": 46,
+          "8": 18,
+          "27": 41,
+          "24": 25,
+          "10": 27,
+          "34": 47,
+          "7": 24,
+          "32": 12,
+          "5": 3,
+          "19": 16,
+          "13": 10,
+          "17": 37,
+          "16": 2,
+          "43": 4,
+          "44": 53,
+          "9": 14,
+          "40": 15,
+          "28": 43,
+          "37": 19,
+          "35": 48,
+          "21": 13,
+          "76": 31,
+          "48": 56,
+          "26": 8,
+          "11": 29,
+          "22": 30,
+          "60": 65,
+          "50": 36,
+          "41": 32,
+          "29": 20,
+          "51": 57,
+          "49": 5,
+          "52": 58,
+          "63": 68,
+          "46": 54,
+          "31": 45,
+          "56": 60,
+          "53": 59,
+          "55": 23,
+          "1": 7,
+          "4": 17,
+          "25": 40,
+          "45": 9,
+          "39": 51,
+          "81": 62,
+          "38": 50,
+          "71": 73,
+          "59": 64,
+          "47": 55,
+          "79": 81,
+          "77": 33,
+          "57": 61,
+          "80": 69,
+          "67": 72,
+          "82": 82,
+          "58": 63,
+          "15": 35,
+          "74": 78,
+          "66": 71,
+          "54": 42,
+          "62": 67,
+          "65": 70,
+          "61": 66,
+          "70": 75,
+          "68": 74,
+          "20": 39,
+          "69": 28,
+          "42": 52,
+          "73": 77,
+          "64": 6,
+          "78": 80,
+          "75": 79,
+          "30": 44,
+          "72": 76
+        },
+        "native_receipt": {
+          "bp": 231678157,
+          "complete_DNA_axes": true,
+          "cores_regrouped": false,
+          "graph_sha256": "9041ee332768dbda1541afa4d2897ca80ca8d27c7d954e6ffba5601503450816",
+          "index_rebuilt": false,
+          "marker_detection": false,
+          "old_accepted_subset": true,
+          "original_core_sha256": "5aa9e99416fe30ab5dd757e95949d1f68af66ccc07248dd9667ec916a19c9bdb",
+          "original_embeddings_sha256": "16c6b1204ed14d790ab14cc709116ef73fa2046edc10a73a65626fb675eaa475",
+          "parent_sha256": "3943773b8a090b299c0f1db1d19ba30abd5f247cfa90d2aa745bc93d8c550650",
+          "profiles_recomputed": false,
+          "recruitment_sha256": "a4bd2fd0c5ac80cacbae0585c6553b4597b5da1c95bc33c5c8d6e17bf14fbbec",
+          "rows": 145702,
+          "samples": [
+            "cami3_toy_human_gut_short_read_sample_0",
+            "cami3_toy_human_gut_short_read_sample_2",
+            "cami3_toy_human_gut_short_read_sample_3",
+            "cami3_toy_human_gut_short_read_sample_4",
+            "cami3_toy_human_gut_short_read_sample_6",
+            "cami3_toy_human_gut_short_read_sample_9",
+            "cami3_toy_human_gut_short_read_sample_10",
+            "cami3_toy_human_gut_short_read_sample_11",
+            "cami3_toy_human_gut_short_read_sample_14",
+            "cami3_toy_human_gut_short_read_sample_17"
+          ],
+          "status": "PASS",
+          "truth_used": false
+        },
+        "group_receipt": {
+          "added_bp": 14456937,
+          "bp": 231678157,
+          "cores_regrouped": false,
+          "embeddings_sha256": "16c6b1204ed14d790ab14cc709116ef73fa2046edc10a73a65626fb675eaa475",
+          "encoder_inference": false,
+          "features_sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e",
+          "graph_sha256": "9041ee332768dbda1541afa4d2897ca80ca8d27c7d954e6ffba5601503450816",
+          "index_rebuilt": false,
+          "newly_recruited": 13635,
+          "original_core_sha256": "5aa9e99416fe30ab5dd757e95949d1f68af66ccc07248dd9667ec916a19c9bdb",
+          "original_parent_sha256": "0ac60a90453f0a6182193e75c812e7934b386f32d7e43adfe545a6db1d9c1ebf",
+          "original_recruited": 14840,
+          "parent_sha256": "3943773b8a090b299c0f1db1d19ba30abd5f247cfa90d2aa745bc93d8c550650",
+          "profiles_recomputed": false,
+          "recruited": 28475,
+          "recruitment_sha256": "a4bd2fd0c5ac80cacbae0585c6553b4597b5da1c95bc33c5c8d6e17bf14fbbec",
+          "retained_group_root": "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/work/units/E009-positive/group",
+          "rows": 145702,
+          "samples": [
+            "cami3_toy_human_gut_short_read_sample_0",
+            "cami3_toy_human_gut_short_read_sample_2",
+            "cami3_toy_human_gut_short_read_sample_3",
+            "cami3_toy_human_gut_short_read_sample_4",
+            "cami3_toy_human_gut_short_read_sample_6",
+            "cami3_toy_human_gut_short_read_sample_9",
+            "cami3_toy_human_gut_short_read_sample_10",
+            "cami3_toy_human_gut_short_read_sample_11",
+            "cami3_toy_human_gut_short_read_sample_14",
+            "cami3_toy_human_gut_short_read_sample_17"
+          ],
+          "selection_sha256": "6936c8328c244472383c9dfe0fb81fff55740246c1629be053760927a5efe865",
+          "status": "SUCCESS",
+          "truth_used": false
+        },
+        "refinement_routes": {
+          "parent": 7,
+          "retained": 4,
+          "median_seeded": 1
+        },
+        "scope": "All new decisions/core identities and old-accept subset checked against stored offers; no recomputation of profiles, graph, vectors, geometry or old scores. Original native graph/profile/affinity validation is accepted byte-bound evidence. No truth used."
+      },
+      "fixed_learned_geometry_equal": true
+    },
+    "oral-positive": {
+      "dataset": "oral_provided_origin_oracle",
+      "arms": {
+        "pre": {
+          "recovery": {
+            "at_least_50_percent": 11,
+            "at_least_90_percent": 3,
+            "bp_weighted_R95": 0.013448160775257924,
+            "macro_R95": 0.011277746630888975,
+            "reference_bp": 2083072211,
+            "targets": 799
+          },
+          "grouping": {
+            "bp": 1669981123,
+            "f1": 0.21009133557895265,
+            "precision": 0.13495355197387887,
+            "recall": 0.4739982908938466,
+            "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+          },
+          "geometry": {
+            "length_strata": {
+              "1000": {
+                "queries": 155759,
+                "query_bp": 231804294,
+                "same": 157126,
+                "same_weighted_bp": 48173157.200000085
+              },
+              "10000": {
+                "queries": 10482,
+                "query_bp": 791751544,
+                "same": 19960,
+                "same_weighted_bp": 156207390.7999998
+              },
+              "2500": {
+                "queries": 49729,
+                "query_bp": 217094423,
+                "same": 71338,
+                "same_weighted_bp": 64952697.40000016
+              },
+              "500": {
+                "queries": 203303,
+                "query_bp": 125070908,
+                "same": 134981,
+                "same_weighted_bp": 16759633.799999982
+              },
+              "768": {
+                "queries": 89490,
+                "query_bp": 78106495,
+                "same": 70963,
+                "same_weighted_bp": 12431632.400000025
+              }
+            },
+            "nn_purity": 0.17861676261835077,
+            "nn_purity_bp_weighted": 0.20675910224144117,
+            "queries": 508763
+          },
+          "populations": {
+            "10000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 660201498,
+              "contigs": 4173,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 653
+            },
+            "10000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 131494491,
+              "contigs": 6304,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 115
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 55555,
+              "contigs": 5,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 3361374,
+              "contigs": 2100,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 2
+            },
+            "1000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 81538986,
+              "contigs": 54558,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 82
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 6592636,
+              "contigs": 4115,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 6
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 140311298,
+              "contigs": 94986,
+              "known_shared_query_bp": 3113,
+              "non_ACGT_quarantine_bp": 252
+            },
+            "1|positive_bacterial_source|excluded|excluded|clean_marker": {
+              "bp": 1085200,
+              "contigs": 3119,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 1
+            },
+            "1|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+              "bp": 225068259,
+              "contigs": 774665,
+              "known_shared_query_bp": 7832,
+              "non_ACGT_quarantine_bp": 181
+            },
+            "2500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 25947054,
+              "contigs": 5032,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 10
+            },
+            "2500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 171498245,
+              "contigs": 39133,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 222
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 2198203,
+              "contigs": 572,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 3
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 17450921,
+              "contigs": 4992,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 22
+            },
+            "500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 581923,
+              "contigs": 921,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 35714947,
+              "contigs": 57639,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 20
+            },
+            "500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 1013098,
+              "contigs": 1618,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 87760940,
+              "contigs": 143125,
+              "known_shared_query_bp": 1118,
+              "non_ACGT_quarantine_bp": 90
+            },
+            "768|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 652612,
+              "contigs": 743,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 24925154,
+              "contigs": 28510,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 11
+            },
+            "768|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 1091096,
+              "contigs": 1239,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 51437633,
+              "contigs": 58998,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 64
+            }
+          },
+          "length_strata": {
+            "1000": {
+              "queries": 155759,
+              "query_bp": 231804294,
+              "same": 157126,
+              "same_weighted_bp": 48173157.200000085
+            },
+            "10000": {
+              "queries": 10482,
+              "query_bp": 791751544,
+              "same": 19960,
+              "same_weighted_bp": 156207390.7999998
+            },
+            "2500": {
+              "queries": 49729,
+              "query_bp": 217094423,
+              "same": 71338,
+              "same_weighted_bp": 64952697.40000016
+            },
+            "500": {
+              "queries": 203303,
+              "query_bp": 125070908,
+              "same": 134981,
+              "same_weighted_bp": 16759633.799999982
+            },
+            "768": {
+              "queries": 89490,
+              "query_bp": 78106495,
+              "same": 70963,
+              "same_weighted_bp": 12431632.400000025
+            }
+          },
+          "known_shared_mask": {
+            "summary": {
+              "at_least_50_percent": 11,
+              "at_least_90_percent": 3,
+              "bp_weighted_R95": 0.013448160775257924,
+              "macro_R95": 0.011277746630888975,
+              "reference_bp": 2083072211,
+              "targets": 799
+            },
+            "all_target_recovery_identical": true
+          },
+          "large_bins": 208,
+          "large_bins_below95": 195
+        },
+        "old": {
+          "recovery": {
+            "at_least_50_percent": 30,
+            "at_least_90_percent": 14,
+            "bp_weighted_R95": 0.03883543286344575,
+            "macro_R95": 0.0330440234063754,
+            "reference_bp": 2083072211,
+            "targets": 799
+          },
+          "grouping": {
+            "bp": 1669981123,
+            "f1": 0.2238935577683773,
+            "precision": 0.14820379327873306,
+            "recall": 0.45759248391033447,
+            "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+          },
+          "geometry": {
+            "length_strata": {
+              "1000": {
+                "queries": 155759,
+                "query_bp": 231804294,
+                "same": 157126,
+                "same_weighted_bp": 48173157.200000085
+              },
+              "10000": {
+                "queries": 10482,
+                "query_bp": 791751544,
+                "same": 19960,
+                "same_weighted_bp": 156207390.7999998
+              },
+              "2500": {
+                "queries": 49729,
+                "query_bp": 217094423,
+                "same": 71338,
+                "same_weighted_bp": 64952697.40000016
+              },
+              "500": {
+                "queries": 203303,
+                "query_bp": 125070908,
+                "same": 134981,
+                "same_weighted_bp": 16759633.799999982
+              },
+              "768": {
+                "queries": 89490,
+                "query_bp": 78106495,
+                "same": 70963,
+                "same_weighted_bp": 12431632.400000025
+              }
+            },
+            "nn_purity": 0.17861676261835077,
+            "nn_purity_bp_weighted": 0.20675910224144117,
+            "queries": 508763
+          },
+          "populations": {
+            "10000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 656698694,
+              "contigs": 4074,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 653
+            },
+            "10000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 126330666,
+              "contigs": 6024,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 115
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 3502804,
+              "contigs": 99,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 5219380,
+              "contigs": 285,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 3004054,
+              "contigs": 1880,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 2
+            },
+            "1000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 70399445,
+              "contigs": 47099,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 71
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 6949956,
+              "contigs": 4335,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 6
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 151450839,
+              "contigs": 102445,
+              "known_shared_query_bp": 3113,
+              "non_ACGT_quarantine_bp": 263
+            },
+            "1|positive_bacterial_source|excluded|excluded|clean_marker": {
+              "bp": 1085200,
+              "contigs": 3119,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 1
+            },
+            "1|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+              "bp": 225068259,
+              "contigs": 774665,
+              "known_shared_query_bp": 7832,
+              "non_ACGT_quarantine_bp": 181
+            },
+            "2500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 24667134,
+              "contigs": 4766,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 10
+            },
+            "2500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 159160440,
+              "contigs": 36091,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 204
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 3478123,
+              "contigs": 838,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 3
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 29788726,
+              "contigs": 8034,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 40
+            },
+            "500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 538297,
+              "contigs": 853,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 30637813,
+              "contigs": 49435,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 16
+            },
+            "500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 1056724,
+              "contigs": 1686,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 92838074,
+              "contigs": 151329,
+              "known_shared_query_bp": 1118,
+              "non_ACGT_quarantine_bp": 94
+            },
+            "768|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 597769,
+              "contigs": 680,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 21474310,
+              "contigs": 24566,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 11
+            },
+            "768|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 1145939,
+              "contigs": 1302,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 54888477,
+              "contigs": 62942,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 64
+            }
+          },
+          "length_strata": {
+            "1000": {
+              "queries": 155759,
+              "query_bp": 231804294,
+              "same": 157126,
+              "same_weighted_bp": 48173157.200000085
+            },
+            "10000": {
+              "queries": 10482,
+              "query_bp": 791751544,
+              "same": 19960,
+              "same_weighted_bp": 156207390.7999998
+            },
+            "2500": {
+              "queries": 49729,
+              "query_bp": 217094423,
+              "same": 71338,
+              "same_weighted_bp": 64952697.40000016
+            },
+            "500": {
+              "queries": 203303,
+              "query_bp": 125070908,
+              "same": 134981,
+              "same_weighted_bp": 16759633.799999982
+            },
+            "768": {
+              "queries": 89490,
+              "query_bp": 78106495,
+              "same": 70963,
+              "same_weighted_bp": 12431632.400000025
+            }
+          },
+          "known_shared_mask": {
+            "summary": {
+              "at_least_50_percent": 30,
+              "at_least_90_percent": 14,
+              "bp_weighted_R95": 0.03883543286344575,
+              "macro_R95": 0.0330440234063754,
+              "reference_bp": 2083072211,
+              "targets": 799
+            },
+            "all_target_recovery_identical": true
+          },
+          "large_bins": 234,
+          "large_bins_below95": 200
+        },
+        "post": {
+          "recovery": {
+            "at_least_50_percent": 31,
+            "at_least_90_percent": 18,
+            "bp_weighted_R95": 0.040537806876825545,
+            "macro_R95": 0.03480363032965037,
+            "reference_bp": 2083072211,
+            "targets": 799
+          },
+          "grouping": {
+            "bp": 1669981123,
+            "f1": 0.25978499960695156,
+            "precision": 0.18919923650820503,
+            "recall": 0.4143806109804062,
+            "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+          },
+          "geometry": {
+            "length_strata": {
+              "1000": {
+                "queries": 155759,
+                "query_bp": 231804294,
+                "same": 157126,
+                "same_weighted_bp": 48173157.200000085
+              },
+              "10000": {
+                "queries": 10482,
+                "query_bp": 791751544,
+                "same": 19960,
+                "same_weighted_bp": 156207390.7999998
+              },
+              "2500": {
+                "queries": 49729,
+                "query_bp": 217094423,
+                "same": 71338,
+                "same_weighted_bp": 64952697.40000016
+              },
+              "500": {
+                "queries": 203303,
+                "query_bp": 125070908,
+                "same": 134981,
+                "same_weighted_bp": 16759633.799999982
+              },
+              "768": {
+                "queries": 89490,
+                "query_bp": 78106495,
+                "same": 70963,
+                "same_weighted_bp": 12431632.400000025
+              }
+            },
+            "nn_purity": 0.17861676261835077,
+            "nn_purity_bp_weighted": 0.20675910224144117,
+            "queries": 508763
+          },
+          "populations": {
+            "10000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 659637753,
+              "contigs": 4160,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 653
+            },
+            "10000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 130601902,
+              "contigs": 6265,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 115
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 563745,
+              "contigs": 13,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "10000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 948144,
+              "contigs": 44,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "1000|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 3266019,
+              "contigs": 2039,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 2
+            },
+            "1000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 79509593,
+              "contigs": 53175,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 82
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 6687991,
+              "contigs": 4176,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 6
+            },
+            "1000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 142340691,
+              "contigs": 96369,
+              "known_shared_query_bp": 3113,
+              "non_ACGT_quarantine_bp": 252
+            },
+            "1|positive_bacterial_source|excluded|excluded|clean_marker": {
+              "bp": 1085200,
+              "contigs": 3119,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 1
+            },
+            "1|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+              "bp": 225068259,
+              "contigs": 774665,
+              "known_shared_query_bp": 7832,
+              "non_ACGT_quarantine_bp": 181
+            },
+            "2500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 25534680,
+              "contigs": 4944,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 10
+            },
+            "2500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 169322914,
+              "contigs": 38591,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 222
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 2610577,
+              "contigs": 660,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 3
+            },
+            "2500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 19626252,
+              "contigs": 5534,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 22
+            },
+            "500|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 567298,
+              "contigs": 898,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 34464382,
+              "contigs": 55622,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 20
+            },
+            "500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 1027723,
+              "contigs": 1641,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 89011505,
+              "contigs": 145142,
+              "known_shared_query_bp": 1118,
+              "non_ACGT_quarantine_bp": 90
+            },
+            "768|positive_bacterial_source|eligible|assigned|clean_marker": {
+              "bp": 638225,
+              "contigs": 726,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+              "bp": 24118387,
+              "contigs": 27587,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 11
+            },
+            "768|positive_bacterial_source|eligible|unassigned|clean_marker": {
+              "bp": 1105483,
+              "contigs": 1256,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 0
+            },
+            "768|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+              "bp": 52244400,
+              "contigs": 59921,
+              "known_shared_query_bp": 0,
+              "non_ACGT_quarantine_bp": 64
+            }
+          },
+          "length_strata": {
+            "1000": {
+              "queries": 155759,
+              "query_bp": 231804294,
+              "same": 157126,
+              "same_weighted_bp": 48173157.200000085
+            },
+            "10000": {
+              "queries": 10482,
+              "query_bp": 791751544,
+              "same": 19960,
+              "same_weighted_bp": 156207390.7999998
+            },
+            "2500": {
+              "queries": 49729,
+              "query_bp": 217094423,
+              "same": 71338,
+              "same_weighted_bp": 64952697.40000016
+            },
+            "500": {
+              "queries": 203303,
+              "query_bp": 125070908,
+              "same": 134981,
+              "same_weighted_bp": 16759633.799999982
+            },
+            "768": {
+              "queries": 89490,
+              "query_bp": 78106495,
+              "same": 70963,
+              "same_weighted_bp": 12431632.400000025
+            }
+          },
+          "known_shared_mask": {
+            "summary": {
+              "at_least_50_percent": 31,
+              "at_least_90_percent": 18,
+              "bp_weighted_R95": 0.040537806876825545,
+              "macro_R95": 0.03480363032965037,
+              "reference_bp": 2083072211,
+              "targets": 799
+            },
+            "all_target_recovery_identical": true
+          },
+          "large_bins": 404,
+          "large_bins_below95": 370
+        }
+      },
+      "baseline_E017_post": {
+        "at_least_50_percent": 37,
+        "at_least_90_percent": 21,
+        "bp_weighted_R95": 0.04966426005478501,
+        "macro_R95": 0.041109585986804066,
+        "reference_bp": 2083072211,
+        "targets": 799
+      },
+      "baseline_E016_post": {
+        "at_least_50_percent": 44,
+        "at_least_90_percent": 34,
+        "bp_weighted_R95": 0.06771930145056311,
+        "macro_R95": 0.05980537419790817,
+        "reference_bp": 2083072211,
+        "targets": 799
+      },
+      "baseline_E014_post": {
+        "at_least_50_percent": 42,
+        "at_least_90_percent": 30,
+        "bp_weighted_R95": 0.062432309985820264,
+        "macro_R95": 0.05343000403900358,
+        "reference_bp": 2083072211,
+        "targets": 799
+      },
+      "baseline_E015_post": {
+        "at_least_50_percent": 44,
+        "at_least_90_percent": 31,
+        "bp_weighted_R95": 0.06554766574052291,
+        "macro_R95": 0.05551264956715338,
+        "reference_bp": 2083072211,
+        "targets": 799
+      },
+      "paired_vs_E017": {
+        "gained": 16,
+        "lost": 13,
+        "unchanged": 770,
+        "delta_bp": -19011061
+      },
+      "paired_transitions": {
+        "pre_to_old": {
+          "gained": 20,
+          "lost": 0,
+          "unchanged": 779,
+          "delta_bp": 52883521
+        },
+        "old_to_post": {
+          "gained": 9,
+          "lost": 8,
+          "unchanged": 782,
+          "delta_bp": 3546168
+        },
+        "pre_to_post": {
+          "gained": 20,
+          "lost": 0,
+          "unchanged": 779,
+          "delta_bp": 56429689
+        }
+      },
+      "accounting": {
+        "old": {
+          "bp": 1669981123,
+          "contigs": 1286547,
+          "full_DNA_manifest": false,
+          "populations": {
+            "assigned": {
+              "bp": 1093508622,
+              "contigs": 175468
+            },
+            "excluded": {
+              "bp": 226153459,
+              "contigs": 777784
+            },
+            "unassigned": {
+              "bp": 350319042,
+              "contigs": 333295
+            }
+          }
+        },
+        "post": {
+          "bp": 1669981123,
+          "contigs": 1286547,
+          "full_DNA_manifest": true,
+          "populations": {
+            "assigned": {
+              "bp": 1127661153,
+              "contigs": 194007
+            },
+            "excluded": {
+              "bp": 226153459,
+              "contigs": 777784
+            },
+            "unassigned": {
+              "bp": 316166511,
+              "contigs": 314756
+            }
+          }
+        },
+        "pre": {
+          "bp": 1669981123,
+          "contigs": 1286547,
+          "full_DNA_manifest": false,
+          "populations": {
+            "assigned": {
+              "bp": 1135916284,
+              "contigs": 199113
+            },
+            "excluded": {
+              "bp": 226153459,
+              "contigs": 777784
+            },
+            "unassigned": {
+              "bp": 307911380,
+              "contigs": 309650
+            }
+          }
+        }
+      },
+      "baseline_E017_accounting": {
+        "bp": 1669981123,
+        "contigs": 1286547,
+        "full_DNA_manifest": true,
+        "populations": {
+          "assigned": {
+            "bp": 1033280343,
+            "contigs": 98446
+          },
+          "excluded": {
+            "bp": 226153459,
+            "contigs": 777784
+          },
+          "unassigned": {
+            "bp": 410547321,
+            "contigs": 410317
+          }
+        }
+      },
+      "target_gains": [
+        {
+          "genome": "OTU_97.43152.1",
+          "reference_bp": 3842422,
+          "previous_bp": 0,
+          "candidate_bp": 3445261,
+          "delta_bp": 3445261
+        },
+        {
+          "genome": "OTU_97.7964.0",
+          "reference_bp": 2472645,
+          "previous_bp": 0,
+          "candidate_bp": 2472591,
+          "delta_bp": 2472591
+        },
+        {
+          "genome": "OTU_97.13257.0",
+          "reference_bp": 2194935,
+          "previous_bp": 0,
+          "candidate_bp": 1937084,
+          "delta_bp": 1937084
+        },
+        {
+          "genome": "OTU_97.5089.0",
+          "reference_bp": 1543805,
+          "previous_bp": 0,
+          "candidate_bp": 1211537,
+          "delta_bp": 1211537
+        },
+        {
+          "genome": "OTU_97.33448.0",
+          "reference_bp": 7225343,
+          "previous_bp": 2829557,
+          "candidate_bp": 3786213,
+          "delta_bp": 956656
+        },
+        {
+          "genome": "OTU_97.38222.0",
+          "reference_bp": 3520671,
+          "previous_bp": 430371,
+          "candidate_bp": 996246,
+          "delta_bp": 565875
+        },
+        {
+          "genome": "OTU_97.7430.0",
+          "reference_bp": 3055036,
+          "previous_bp": 1753319,
+          "candidate_bp": 1940267,
+          "delta_bp": 186948
+        },
+        {
+          "genome": "OTU_97.43597.0",
+          "reference_bp": 3210111,
+          "previous_bp": 2229823,
+          "candidate_bp": 2377137,
+          "delta_bp": 147314
+        },
+        {
+          "genome": "OTU_97.27798.0",
+          "reference_bp": 3619559,
+          "previous_bp": 2415127,
+          "candidate_bp": 2549489,
+          "delta_bp": 134362
+        },
+        {
+          "genome": "OTU_97.12613.0",
+          "reference_bp": 2991840,
+          "previous_bp": 1868995,
+          "candidate_bp": 1953783,
+          "delta_bp": 84788
+        },
+        {
+          "genome": "OTU_97.4084.0",
+          "reference_bp": 2897425,
+          "previous_bp": 1748596,
+          "candidate_bp": 1823955,
+          "delta_bp": 75359
+        },
+        {
+          "genome": "OTU_97.26707.0",
+          "reference_bp": 3132314,
+          "previous_bp": 2905642,
+          "candidate_bp": 2952747,
+          "delta_bp": 47105
+        },
+        {
+          "genome": "OTU_97.26859.0",
+          "reference_bp": 2159306,
+          "previous_bp": 1669242,
+          "candidate_bp": 1692034,
+          "delta_bp": 22792
+        },
+        {
+          "genome": "OTU_97.2652.0",
+          "reference_bp": 1330224,
+          "previous_bp": 909762,
+          "candidate_bp": 928129,
+          "delta_bp": 18367
+        },
+        {
+          "genome": "OTU_97.11895.0",
+          "reference_bp": 3055580,
+          "previous_bp": 2849915,
+          "candidate_bp": 2856559,
+          "delta_bp": 6644
+        },
+        {
+          "genome": "OTU_97.469.0",
+          "reference_bp": 1360589,
+          "previous_bp": 584922,
+          "candidate_bp": 590639,
+          "delta_bp": 5717
+        }
+      ],
+      "target_losses": [
+        {
+          "genome": "OTU_97.2092.0",
+          "reference_bp": 6964487,
+          "previous_bp": 5808350,
+          "candidate_bp": 0,
+          "delta_bp": -5808350
+        },
+        {
+          "genome": "OTU_97.5809.0",
+          "reference_bp": 3836419,
+          "previous_bp": 3703183,
+          "candidate_bp": 0,
+          "delta_bp": -3703183
+        },
+        {
+          "genome": "OTU_97.10732.1",
+          "reference_bp": 3051613,
+          "previous_bp": 3051464,
+          "candidate_bp": 0,
+          "delta_bp": -3051464
+        },
+        {
+          "genome": "OTU_97.43676.0",
+          "reference_bp": 2571406,
+          "previous_bp": 2571386,
+          "candidate_bp": 0,
+          "delta_bp": -2571386
+        },
+        {
+          "genome": "OTU_97.940.0",
+          "reference_bp": 2947662,
+          "previous_bp": 2562649,
+          "candidate_bp": 0,
+          "delta_bp": -2562649
+        },
+        {
+          "genome": "OTU_97.36605.0",
+          "reference_bp": 3563292,
+          "previous_bp": 2551565,
+          "candidate_bp": 0,
+          "delta_bp": -2551565
+        },
+        {
+          "genome": "OTU_97.8698.0",
+          "reference_bp": 4007868,
+          "previous_bp": 2398943,
+          "candidate_bp": 0,
+          "delta_bp": -2398943
+        },
+        {
+          "genome": "OTU_97.35840.0",
+          "reference_bp": 3120417,
+          "previous_bp": 2315760,
+          "candidate_bp": 0,
+          "delta_bp": -2315760
+        },
+        {
+          "genome": "OTU_97.2083.0",
+          "reference_bp": 2207832,
+          "previous_bp": 2114068,
+          "candidate_bp": 0,
+          "delta_bp": -2114068
+        },
+        {
+          "genome": "OTU_97.3008.0",
+          "reference_bp": 3608104,
+          "previous_bp": 1929169,
+          "candidate_bp": 0,
+          "delta_bp": -1929169
+        },
+        {
+          "genome": "OTU_97.15792.1",
+          "reference_bp": 1016707,
+          "previous_bp": 794446,
+          "candidate_bp": 0,
+          "delta_bp": -794446
+        },
+        {
+          "genome": "OTU_97.142.0",
+          "reference_bp": 3765936,
+          "previous_bp": 3149073,
+          "candidate_bp": 2625534,
+          "delta_bp": -523539
+        },
+        {
+          "genome": "OTU_97.43108.0",
+          "reference_bp": 2649207,
+          "previous_bp": 2393342,
+          "candidate_bp": 2388403,
+          "delta_bp": -4939
+        }
+      ],
+      "selection": {
+        "status": "PASS",
+        "rows": 1286547,
+        "bp": 1669981123,
+        "samples": [],
+        "unchanged_core_bins": 550,
+        "queries": 454723,
+        "original_recruited": 46006,
+        "recruited": 145073,
+        "added_contigs": 99067,
+        "added_bp": 95981333,
+        "added_by_length": {
+          "500": {
+            "contigs": 65163,
+            "bp": 45493946
+          },
+          "1000": {
+            "contigs": 21048,
+            "bp": 25454423
+          },
+          "1500": {
+            "contigs": 12260,
+            "bp": 22978438
+          },
+          "2500": {
+            "contigs": 596,
+            "bp": 2054526
+          },
+          "10000": {
+            "contigs": 0,
+            "bp": 0
+          }
+        },
+        "old_accepts_preserved": true,
+        "canonical_core_mapping": {
+          "112": 38,
+          "6": 20,
+          "237": 246,
+          "221": 170,
+          "31": 80,
+          "127": 163,
+          "13": 32,
+          "168": 194,
+          "156": 95,
+          "192": 79,
+          "252": 263,
+          "110": 73,
+          "62": 112,
+          "166": 94,
+          "311": 318,
+          "122": 37,
+          "178": 199,
+          "333": 338,
+          "124": 159,
+          "210": 223,
+          "139": 176,
+          "58": 108,
+          "44": 72,
+          "155": 186,
+          "34": 5,
+          "118": 155,
+          "183": 204,
+          "126": 162,
+          "173": 69,
+          "176": 161,
+          "403": 405,
+          "116": 154,
+          "355": 361,
+          "486": 486,
+          "213": 226,
+          "266": 274,
+          "16": 48,
+          "223": 233,
+          "419": 420,
+          "242": 251,
+          "414": 416,
+          "279": 259,
+          "204": 219,
+          "151": 184,
+          "199": 216,
+          "54": 43,
+          "347": 352,
+          "94": 140,
+          "456": 457,
+          "222": 232,
+          "278": 286,
+          "21": 59,
+          "412": 414,
+          "209": 222,
+          "121": 157,
+          "400": 403,
+          "439": 440,
+          "370": 374,
+          "215": 228,
+          "525": 525,
+          "393": 397,
+          "255": 265,
+          "489": 489,
+          "214": 227,
+          "268": 276,
+          "207": 221,
+          "39": 88,
+          "359": 202,
+          "77": 126,
+          "83": 132,
+          "228": 238,
+          "526": 526,
+          "338": 343,
+          "516": 516,
+          "391": 395,
+          "243": 252,
+          "543": 543,
+          "169": 195,
+          "125": 160,
+          "191": 210,
+          "350": 355,
+          "512": 512,
+          "408": 410,
+          "366": 370,
+          "275": 283,
+          "480": 480,
+          "132": 113,
+          "357": 363,
+          "17": 49,
+          "323": 329,
+          "12": 29,
+          "371": 375,
+          "212": 225,
+          "328": 333,
+          "66": 115,
+          "300": 307,
+          "160": 81,
+          "188": 208,
+          "211": 224,
+          "217": 229,
+          "19": 54,
+          "411": 413,
+          "70": 120,
+          "107": 148,
+          "147": 182,
+          "33": 82,
+          "368": 372,
+          "170": 196,
+          "258": 267,
+          "185": 206,
+          "402": 404,
+          "234": 243,
+          "325": 331,
+          "203": 218,
+          "460": 461,
+          "276": 284,
+          "291": 298,
+          "287": 294,
+          "232": 242,
+          "421": 422,
+          "473": 473,
+          "360": 365,
+          "269": 277,
+          "346": 351,
+          "55": 105,
+          "157": 187,
+          "372": 376,
+          "99": 141,
+          "198": 215,
+          "43": 68,
+          "143": 83,
+          "80": 128,
+          "95": 62,
+          "35": 84,
+          "138": 175,
+          "153": 50,
+          "28": 42,
+          "2": 13,
+          "285": 292,
+          "51": 101,
+          "90": 51,
+          "309": 317,
+          "238": 247,
+          "387": 391,
+          "76": 125,
+          "113": 15,
+          "447": 448,
+          "111": 2,
+          "327": 332,
+          "427": 429,
+          "11": 28,
+          "85": 134,
+          "239": 248,
+          "302": 309,
+          "167": 193,
+          "231": 241,
+          "303": 310,
+          "208": 177,
+          "376": 380,
+          "296": 303,
+          "363": 367,
+          "343": 348,
+          "197": 214,
+          "293": 300,
+          "82": 131,
+          "537": 537,
+          "163": 150,
+          "216": 75,
+          "56": 106,
+          "91": 118,
+          "162": 190,
+          "392": 396,
+          "171": 144,
+          "219": 230,
+          "229": 239,
+          "61": 6,
+          "244": 253,
+          "26": 55,
+          "186": 31,
+          "200": 217,
+          "32": 1,
+          "159": 119,
+          "313": 319,
+          "8": 12,
+          "146": 181,
+          "20": 41,
+          "404": 406,
+          "446": 447,
+          "165": 192,
+          "24": 63,
+          "329": 334,
+          "177": 198,
+          "50": 100,
+          "261": 269,
+          "72": 122,
+          "220": 231,
+          "175": 172,
+          "29": 76,
+          "64": 56,
+          "301": 308,
+          "164": 191,
+          "115": 151,
+          "381": 385,
+          "131": 167,
+          "298": 305,
+          "142": 178,
+          "109": 40,
+          "47": 60,
+          "195": 90,
+          "259": 205,
+          "356": 362,
+          "314": 320,
+          "310": 260,
+          "265": 272,
+          "182": 203,
+          "418": 360,
+          "332": 337,
+          "230": 240,
+          "108": 149,
+          "36": 86,
+          "267": 275,
+          "152": 103,
+          "84": 133,
+          "322": 328,
+          "396": 399,
+          "336": 341,
+          "46": 96,
+          "349": 354,
+          "362": 169,
+          "380": 384,
+          "373": 377,
+          "251": 262,
+          "133": 168,
+          "321": 327,
+          "316": 322,
+          "340": 345,
+          "180": 200,
+          "428": 430,
+          "145": 180,
+          "367": 371,
+          "295": 302,
+          "399": 402,
+          "503": 503,
+          "487": 487,
+          "438": 439,
+          "280": 287,
+          "351": 356,
+          "69": 67,
+          "75": 111,
+          "382": 386,
+          "41": 93,
+          "15": 47,
+          "253": 264,
+          "88": 57,
+          "499": 499,
+          "429": 431,
+          "106": 147,
+          "241": 250,
+          "53": 104,
+          "305": 313,
+          "342": 347,
+          "148": 183,
+          "318": 324,
+          "286": 293,
+          "271": 279,
+          "14": 33,
+          "161": 189,
+          "52": 102,
+          "339": 344,
+          "472": 472,
+          "542": 542,
+          "120": 156,
+          "184": 85,
+          "341": 346,
+          "205": 220,
+          "282": 289,
+          "104": 145,
+          "395": 398,
+          "59": 110,
+          "454": 455,
+          "353": 358,
+          "201": 74,
+          "63": 89,
+          "92": 138,
+          "431": 433,
+          "513": 513,
+          "444": 445,
+          "315": 321,
+          "365": 369,
+          "236": 245,
+          "283": 290,
+          "474": 474,
+          "441": 442,
+          "264": 271,
+          "334": 339,
+          "378": 382,
+          "250": 261,
+          "358": 364,
+          "130": 109,
+          "67": 116,
+          "289": 296,
+          "149": 44,
+          "119": 71,
+          "326": 211,
+          "57": 107,
+          "471": 471,
+          "97": 58,
+          "227": 237,
+          "451": 452,
+          "290": 297,
+          "73": 27,
+          "1": 10,
+          "240": 249,
+          "10": 7,
+          "297": 304,
+          "96": 35,
+          "273": 280,
+          "502": 502,
+          "134": 171,
+          "467": 467,
+          "226": 236,
+          "458": 459,
+          "102": 143,
+          "194": 212,
+          "478": 478,
+          "498": 498,
+          "262": 270,
+          "469": 469,
+          "344": 349,
+          "490": 490,
+          "417": 419,
+          "463": 464,
+          "383": 387,
+          "74": 124,
+          "390": 394,
+          "324": 330,
+          "281": 288,
+          "521": 521,
+          "128": 165,
+          "150": 36,
+          "536": 536,
+          "277": 285,
+          "292": 299,
+          "117": 30,
+          "42": 24,
+          "422": 423,
+          "246": 256,
+          "459": 460,
+          "235": 244,
+          "154": 185,
+          "409": 411,
+          "377": 381,
+          "9": 11,
+          "137": 174,
+          "101": 4,
+          "284": 291,
+          "3": 16,
+          "331": 336,
+          "38": 87,
+          "0": 9,
+          "7": 8,
+          "141": 64,
+          "190": 153,
+          "352": 357,
+          "179": 52,
+          "78": 127,
+          "507": 507,
+          "49": 99,
+          "93": 123,
+          "312": 281,
+          "48": 97,
+          "86": 130,
+          "426": 428,
+          "256": 0,
+          "45": 3,
+          "136": 173,
+          "432": 434,
+          "534": 534,
+          "424": 425,
+          "5": 19,
+          "464": 426,
+          "103": 39,
+          "535": 535,
+          "193": 136,
+          "379": 383,
+          "511": 511,
+          "129": 166,
+          "527": 527,
+          "81": 129,
+          "288": 295,
+          "270": 278,
+          "294": 301,
+          "345": 350,
+          "319": 325,
+          "65": 114,
+          "532": 532,
+          "482": 482,
+          "386": 390,
+          "455": 456,
+          "23": 61,
+          "375": 379,
+          "465": 465,
+          "257": 266,
+          "18": 53,
+          "225": 235,
+          "440": 441,
+          "174": 23,
+          "60": 17,
+          "398": 401,
+          "518": 518,
+          "509": 509,
+          "249": 91,
+          "181": 201,
+          "37": 25,
+          "100": 78,
+          "263": 164,
+          "254": 66,
+          "506": 506,
+          "218": 142,
+          "384": 388,
+          "320": 326,
+          "495": 495,
+          "114": 152,
+          "479": 479,
+          "493": 493,
+          "541": 541,
+          "247": 257,
+          "481": 481,
+          "477": 477,
+          "413": 415,
+          "245": 254,
+          "470": 470,
+          "304": 311,
+          "434": 436,
+          "337": 342,
+          "491": 491,
+          "394": 255,
+          "423": 424,
+          "206": 70,
+          "508": 508,
+          "540": 540,
+          "172": 197,
+          "317": 323,
+          "448": 449,
+          "397": 400,
+          "354": 359,
+          "453": 454,
+          "248": 258,
+          "374": 378,
+          "40": 92,
+          "25": 26,
+          "189": 209,
+          "401": 273,
+          "260": 268,
+          "307": 315,
+          "385": 389,
+          "416": 418,
+          "483": 483,
+          "547": 547,
+          "500": 500,
+          "442": 443,
+          "364": 368,
+          "415": 417,
+          "468": 468,
+          "406": 408,
+          "135": 45,
+          "430": 432,
+          "274": 282,
+          "530": 530,
+          "496": 496,
+          "187": 207,
+          "437": 438,
+          "548": 548,
+          "433": 435,
+          "308": 316,
+          "450": 451,
+          "466": 466,
+          "457": 458,
+          "306": 314,
+          "522": 522,
+          "515": 515,
+          "410": 412,
+          "546": 546,
+          "369": 373,
+          "476": 476,
+          "524": 524,
+          "539": 539,
+          "158": 188,
+          "545": 545,
+          "335": 340,
+          "224": 234,
+          "89": 137,
+          "462": 463,
+          "544": 544,
+          "494": 494,
+          "420": 421,
+          "389": 393,
+          "523": 523,
+          "123": 158,
+          "105": 146,
+          "140": 65,
+          "505": 505,
+          "4": 18,
+          "529": 529,
+          "68": 117,
+          "71": 121,
+          "348": 353,
+          "452": 453,
+          "30": 77,
+          "520": 520,
+          "538": 538,
+          "407": 409,
+          "87": 135,
+          "272": 34,
+          "488": 488,
+          "443": 444,
+          "519": 519,
+          "485": 485,
+          "492": 492,
+          "144": 179,
+          "461": 462,
+          "501": 501,
+          "497": 497,
+          "233": 14,
+          "299": 306,
+          "202": 22,
+          "484": 484,
+          "196": 213,
+          "388": 392,
+          "475": 475,
+          "79": 98,
+          "361": 366,
+          "98": 139,
+          "504": 504,
+          "436": 437,
+          "533": 533,
+          "425": 427,
+          "514": 514,
+          "330": 335,
+          "445": 446,
+          "449": 450,
+          "22": 21,
+          "528": 528,
+          "549": 549,
+          "510": 510,
+          "435": 312,
+          "517": 517,
+          "405": 407,
+          "27": 46,
+          "531": 531
+        },
+        "native_receipt": {
+          "bp": 1669981123,
+          "complete_DNA_axes": true,
+          "cores_regrouped": false,
+          "graph_sha256": "05605a013b6c0136f55f8fafe66b67764a44a8de586237f9f54794483bc6b1c5",
+          "index_rebuilt": false,
+          "marker_detection": false,
+          "old_accepted_subset": true,
+          "original_core_sha256": "8a5ba093cea9069f8bee564e2158eda93f393c67d80f93bc40ebf825895169ba",
+          "original_embeddings_sha256": "7e2ed0537121f69a65195d7ccc72df17464b7b84db1d0ae8731045c3b6d8a36c",
+          "parent_sha256": "9809a34b0f389868ef61b0c5076703d6d9059f37e0c939eb055b2c481b589375",
+          "profiles_recomputed": false,
+          "recruitment_sha256": "1707f0a743eb3d5474b0948052e83ace16b92bea6b0a89ec12f60160fa090aeb",
+          "rows": 1286547,
+          "samples": [],
+          "status": "PASS",
+          "truth_used": false
+        },
+        "group_receipt": {
+          "added_bp": 95981333,
+          "bp": 1669981123,
+          "cores_regrouped": false,
+          "embeddings_sha256": "7e2ed0537121f69a65195d7ccc72df17464b7b84db1d0ae8731045c3b6d8a36c",
+          "encoder_inference": false,
+          "features_sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0",
+          "graph_sha256": "05605a013b6c0136f55f8fafe66b67764a44a8de586237f9f54794483bc6b1c5",
+          "index_rebuilt": false,
+          "newly_recruited": 99067,
+          "original_core_sha256": "8a5ba093cea9069f8bee564e2158eda93f393c67d80f93bc40ebf825895169ba",
+          "original_parent_sha256": "c6b414274ef5853d5306107a6f5bc5a45bddf51e3907fc7ce0e4964e491fb5ea",
+          "original_recruited": 46006,
+          "parent_sha256": "9809a34b0f389868ef61b0c5076703d6d9059f37e0c939eb055b2c481b589375",
+          "profiles_recomputed": false,
+          "recruited": 145073,
+          "recruitment_sha256": "1707f0a743eb3d5474b0948052e83ace16b92bea6b0a89ec12f60160fa090aeb",
+          "retained_group_root": "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/work/units/oral-positive/group",
+          "rows": 1286547,
+          "samples": [],
+          "selection_sha256": "8baade33469e695c14200fb201254b080641a964270d2a4158a8a835e57d5d73",
+          "status": "SUCCESS",
+          "truth_used": false
+        },
+        "refinement_routes": {
+          "median_seeded": 81,
+          "parent": 66,
+          "retained": 16
+        },
+        "scope": "All new decisions/core identities and old-accept subset checked against stored offers; no recomputation of profiles, graph, vectors, geometry or old scores. Original native graph/profile/affinity validation is accepted byte-bound evidence. No truth used."
+      },
+      "fixed_learned_geometry_equal": true
+    }
+  },
+  "full_target_table": {
+    "bytes": 61664,
+    "sha256": "6f0ce64b581968e472c39ed36725d2b482cdebefa6b94f275d8ca0906ccf4848"
+  },
+  "preserved_context": {
+    "E014": {
+      "bytes": 193201,
+      "sha256": "693271ae081fedac758fbd039b6134e94fea2a8e8bce7e5ffbb2695af0fad15c"
+    },
+    "E015": {
+      "bytes": 177309,
+      "sha256": "4b853f2ea711334c1c25fd3f53963d358ebdeef903a83eaed07fb739781587f9"
+    },
+    "E009_dev3_R95": 0.053911,
+    "E009_dev4_E013_R95": 0.05738822979166641,
+    "E009_MetaBAT2_R95": 0.085493,
+    "E009_gap_closed_vs_E014": 0.09979283376954161,
+    "scope": "Rounded dev3/MetaBAT context from accepted summaries; no old rescore or refit"
+  },
+  "decision": {
+    "disposition": "ABANDON",
+    "frozen_keep": false,
+    "criterion": {
+      "keep": "Both new post weighted full-reference R95 >= E017 (0.07528383282291128 / 0.04966426005478501), at least one +0.005, neither >=90% target count below 8/21, and every integrity/population contract passes. This keeps an E017 acceptance mechanism provisionally, not the entire bundle over E016 or a product default.",
+      "modify": "Some R95 or >=90% target gain coexists with endpoint/count/material population losses. Preserve paired full targets and alternatives; one reasoned next direction, no threshold grid.",
+      "abandon": "Neither separately scoped R95 nor >=90% target count improves. Invalid/incomplete execution remains operationally invalid, not biological evidence.",
+      "anchor": "Always report E016 0.05821901338849871 / 0.06771930145056311 and counts4/34 alongside E017. No per-dataset/per-bin truth oracle or automatic replacement when oral remains below E016."
+    },
+    "scope": "Matched development acceptance policy conditional on E017; no whole-bundle default promotion, per-dataset/per-bin oracle, causal ingredient proof or product-family decision."
+  },
+  "limitations": [
+    "Both communities are development; skin remains frozen and unacquired.",
+    "E009 conservative v2: full 156 references, 554661890 bp; 7653205 bp / 3.3034% N-quarantine.",
+    "Oral provided-origin oracle: full 799 references, 2083072211 bp; unique support unadmitted; known-shared sensitivity kept.",
+    "The two communities differ in source, assembly, length distribution and depth availability; this does not isolate depth.",
+    "E017 cores/affinities/profiles are fixed. This matched acceptance policy does not isolate missing depth or causes of the original E017 bundle. Retained candidate recall is sampled.",
+    "Original failed Mac numerical tolerance is unchanged; native vectors remain hash-bound. Local format adapter repair does not make portability pass.",
+    "Native final FASTAs/shared inputs/runtimes are not backed up merely by return hashes."
+  ],
+  "evidence": {
+    "artifacts/e018-vote-led-recruitment/review-20261021/diagnostics-E009-positive/review.json": {
+      "bytes": 515056,
+      "sha256": "5f664cc742ca94c3d1cddf833d79a554509bc9f5607cd05d6b7eea0f3f096e65"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/diagnostics-E009-positive-attempt3/review.json": {
+      "bytes": 674766,
+      "sha256": "0b0e6f7b90179c6ec93d6c77f9ff101c0715d45bb4216d7e9ec1b0f30186e8da"
+    },
+    "artifacts/e018-vote-led-recruitment/review-20261021/diagnostics-oral-positive/review.json": {
+      "bytes": 2165654,
+      "sha256": "44e5fe51483fcedbaaf4b4aa14bb715ccbd78573dfc711fd54a59ee7b4a5684f"
+    },
+    "artifacts/e017-information-aware-grouping/inspection-20261021/diagnostics-oral-positive/review.json": {
+      "bytes": 2846451,
+      "sha256": "7ab3f45ac83891e0299f98ab54fd569bec5f2f87fc3642cb7cc993764e25b178"
+    }
+  },
+  "preserved_context_scope": "Inherited E016/E017 historical scalars. In particular E009_gap_closed_vs_E014 describes E016 at its review, not an E018 gap calculation.",
+  "interpretation": {
+    "disposition": "ABANDON sole vote-led/profile-admissibility policy; retain E017 original veto and its MODIFY status, E016 broader research anchor",
+    "evidence": "Both final R95/90% counts fall despite more assigned DNA. E009 B3 improves, oral recall improves but precision/F1 fall. Nonuniform target gains remain; no threshold tuning or per-bin refiner oracle.",
+    "E009_target_example": {
+      "genome": "ASV551.0",
+      "old_dominant_bin_all_bp": 2303881,
+      "old_confirmed_purity": 0.9718040992568626,
+      "new_dominant_bin_all_bp": 2407906,
+      "new_confirmed_purity": 0.9328212978413609,
+      "old_R95_recovered_bp": 2235013,
+      "new_R95_recovered_bp": 0,
+      "scope": "Already computed dominant-bin and target diagnostics, not a new threshold/score. Adding DNA crosses the frozen95% gate downward."
+    },
+    "next": "One coherent window-context composition/information learner, retaining E016 EMA/reconstruction/measured-parent depth and CPM/E013 as prospective anchors; local implementation and priced future comparison only until separately authorized.",
+    "alternative": "Frozen GLM hybrid remains serious, not rejected by old laptop timings; marker learning needs a reliable link rule. No new mapping/dataset/tool/threshold campaign here.",
+    "annotation_source": "artifacts/e018-vote-led-recruitment/review-20261021/write-inspection.py",
+    "annotation_source_binding": {
+      "bytes": 7966,
+      "sha256": "69735340a94bd0031a5b5ccc36c7b5492e3c5778efe1375c2efdfa17c6c5e1fb"
+    }
+  }
+}
