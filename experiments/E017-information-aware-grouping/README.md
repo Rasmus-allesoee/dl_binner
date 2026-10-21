@@ -38,7 +38,7 @@ origin purity). E013 adds 62,940,105 recovered bp over its oral parent but does 
 restore E016. More conservative assignment has not made all remaining bins pure.
 
 The saved gates expose a concrete inconsistency worth one selective control.
-Existing distance-first ranking plus margin rejects rows even when another core
+Existing distance-first ranking plus margin rejects rows even when a cached core
 candidate meets **all existing** profile <=1, >=2 supporters and >=2/3 weighted-vote
 conditions: **13,635 E009 contigs / 14,456,937 bp**, **99,067 oral contigs /
 95,981,333 bp**. This is a label-free census, not a replacement partition or a

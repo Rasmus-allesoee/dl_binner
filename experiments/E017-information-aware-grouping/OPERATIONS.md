@@ -33,7 +33,7 @@ E009 post R95 **5.8219 → 7.5284%**, >=90% targets **4 → 8**; oral-origin
 **6.7719 → 4.9664%**, **34 → 21**. Full 156 / 799 provided-reference denominators,
 3.3034% N-quarantine, known-shared sensitivity and every population remain.
 The original MODIFY criterion applies; there is no global promotion or per-bin/
-community oracle. Existing gates reject 14.46 / 95.98 Mb with another already
+community oracle. Existing gates reject 14.46 / 95.98 Mb with an existing
 jointly admissible core candidate. This is a label-free gate census, not a new
 assignment or predicted recovery. One vote-led acceptance control is proposed
 below; mixed cores and other rejections may still limit it.
