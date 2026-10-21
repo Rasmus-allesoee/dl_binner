@@ -1,0 +1,17 @@
+{
+  "record": "Owner-approved compact E017 inspection backup",
+  "status": "PASS_PRIVATE_UPLOAD_READBACK_EVERY_MEMBER",
+  "UTC": "2026-10-21T12:07:17.578292+00:00",
+  "archive": {
+    "bytes": 895506,
+    "sha256": "0b08fbc0afb3502989783cbf819047cebba71fd6be107473aa30a958897736c3"
+  },
+  "uri": "gs://dl-binner-archive-167650584170/e017/information-20261020T232634Z-e78d766/inspection-approved-20261021/compact-review.tar.gz",
+  "regular_payload_members": 140,
+  "logical_payload_bytes": 7403836,
+  "snapshot_scope": "Closed snapshot before self receipt/final seal/Git edits; no DNA/credentials",
+  "owner_authorization": "2026-10-21 current task explicitly approves the previously rejected optional compact inspection upload",
+  "export_upper_USD": 0.00010008059442043305,
+  "permissions_changed": false,
+  "prior_failed_journals_preserved": true
+}

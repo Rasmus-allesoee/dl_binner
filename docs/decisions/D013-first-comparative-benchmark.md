@@ -1,6 +1,6 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E017](../../experiments/E017-information-aware-grouping/README.md) completed and is reviewed as MODIFY: E009 improves, oral regresses. No global promotion or new run occurs in inspection. One cached recruitment-ranking control is proposed under a separate new $1; storage remains approved through October 28 at 00:00 Copenhagen. Earlier budgets are not open authorizations.
+Current handoff: [E018](../../experiments/E018-vote-led-recruitment/README.md) prepares the owner-authorized $1 cached vote-led/profile-admissibility control, keeping E016 learning and E017 cores fixed. E017 stays MODIFY. No read mapping or dataset expansion is added; the focused assessment explains robustness, depth confounders and revisit conditions. Storage still ends October 28 at 00:00 Copenhagen. Earlier entries are dated evidence.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.

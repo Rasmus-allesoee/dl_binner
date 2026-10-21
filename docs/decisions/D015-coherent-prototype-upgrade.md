@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E017](../../experiments/E017-information-aware-grouping/README.md) is completed and independently reviewed as MODIFY, holding E016 learning fixed. Keep the useful E009 evidence without promoting its oral regression. The strongest next decision is one cached vote-led/profile-admissibility control, separately proposed at new $1; no new execution occurs in inspection. Storage ends October 28 at 00:00 Copenhagen. Earlier sections are dated evidence.
+Current handoff: [E018](../../experiments/E018-vote-led-recruitment/README.md) prepares the owner-authorized $1 cached vote-led/profile-admissibility control, keeping E016 learning and E017 cores fixed. E017 stays MODIFY. No read mapping or dataset expansion is added; the focused assessment explains robustness, depth confounders and revisit conditions. Storage still ends October 28 at 00:00 Copenhagen. Earlier entries are dated evidence.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
@@ -925,3 +925,30 @@ Skin stays frozen/unacquired pending actual source/genome/replicon/molecule/
 taxonomy joins, overlap/pretraining, duplicate-safe denominators, ambiguity and
 unique-versus-origin truth, unchanged comparator/protocol and separate acquisition/
 compute/cost/retention admission. The October 28 storage boundary remains.
+
+
+## E018 authorization and robustness/data scope, 2026-10-21
+
+The owner authorizes the previously proposed sole cached acceptance control and
+permits a justified cost increase; the prepared $1 remains sufficient, with all
+other one-hour/75-minute STOP/resource/retention gates fixed. E017 stays MODIFY;
+E016 remains the broader development anchor. [E018’s assessment](../../experiments/E018-vote-led-recruitment/robustness-and-data.md)
+records why the oral regression matters, the audited absent-depth mask and other
+community/assembly/length/truth confounders. No demonstrated missing-depth coding
+bug explains the difference; correctly implemented policies may still be poor.
+
+Sequence-only oral adequately tests the fixed-input acceptance question, but not
+current depth benefit or depth-enabled transfer. Fresh public metadata confirms
+51.73 GB compressed reads; genuine pooled-GSA mapping has a rough $4–10 mapping-
+only cost and uncertain 45–130 GiB serial peak. Those upper disk needs do not fit
+the last free-space reserve. New input/training/downstream comparisons need their
+own declared question and admission; old dev3 depth controls cannot establish
+E016/E017 depth effects. Do not add mapping merely to remove an inconvenient
+sequence-only failure. Revisit if this control leaves oral unresolved or before
+a depth-specific design/default decision.
+
+Defer a broad dataset campaign during this concrete control, not all validation
+until competitiveness. Keep skin prospectively frozen and admit one additional
+community at the next coherent-candidate milestone before robustness/promotion
+claims, with all source/overlap/truth and separate cost/retention dependencies.
+This remains development work; no external tool or confirmation payload is added.

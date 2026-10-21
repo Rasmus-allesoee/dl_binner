@@ -4,6 +4,16 @@ Updated: 2026-10-21 (Copenhagen; initial provisioning receipts are October 13 UT
 [D014](decisions/D014-google-cloud-workspace.md) owns provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
 
+**E018 preparation is newly authorized at $1 on the existing VM only.**
+[Operations](../experiments/E018-vote-led-recruitment/OPERATIONS.md) owns exact
+clock/resource/release limits. No increase to cost/resources/retention is chosen;
+live native headroom and fresh watcher/provider STOP remain gates before science.
+Signed-in credit is DKK 1,893.83 Available through January 12, 2027; fresh Overview
+cost/savings DKK 79.66 and net zero, with possible >24-hour reporting delay reserved.
+The explicitly approved compact E017 inspection backup is now privately uploaded,
+read back and all members verified; [receipt](../experiments/E017-information-aware-grouping/inspection-backup.json).
+The original $8 storage interval still ends October 28 at 00:00 Copenhagen.
+
 **E017 completed and was independently reviewed; VM TERMINATED.**
 [Inspection](../experiments/E017-information-aware-grouping/inspection-observed.json)
 binds control-plane state, guest/private completion SHA, matching boot/PID/start/

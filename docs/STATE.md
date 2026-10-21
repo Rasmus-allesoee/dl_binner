@@ -4,6 +4,30 @@ Updated: 2026-10-21. This is the single current handoff.
 
 ## Exact next step
 
+**E018 is authorized and being prepared on `e018-vote-led-recruitment`.**
+[Protocol](../experiments/E018-vote-led-recruitment/protocol.json),
+[operations](../experiments/E018-vote-led-recruitment/OPERATIONS.md) and
+[robustness/data assessment](../experiments/E018-vote-led-recruitment/robustness-and-data.md)
+own the sole cached vote-led/profile-admissibility treatment. Keep E016 learning,
+E017 cores/graph/weights/profiles/thresholds/seed and unchanged E013 fixed. The
+owner authorizes a new $1 existing-VM control and permits justified extra cost;
+no increase is chosen. One-hour VM-start clock / 75-minute STOP / four threads /
+26 GB sampled RSS / 25 GiB reserve / 20 GiB extra / 2 GiB return. Fresh native
+source/runtime/headroom and supervision gates remain required before release.
+No read acquisition, remapping or new community is included. Oral regression is a
+serious robustness warning, not a causal depth result. Ten public HEADs still total
+51,731,811,351 read bytes; genuine mapping is a separately costed ~$4–10 planning
+scope with uncertain disk fit, deferred from this fixed-input test. Keep skin
+unacquired and revisit additional data before robustness/default claims.
+
+The previously blocked compact E017 inspection backup is now explicitly approved,
+uploaded/read back and all 140 payload members verify; its
+[receipt](../experiments/E017-information-aware-grouping/inspection-backup.json)
+preserves the earlier rejected/local-only journal. Storage remains $8 through
+October 28 at 00:00 Copenhagen; no extension or cleanup is enacted.
+
+### Accepted E017 inspection context
+
 **E017 completed and is independently reviewed: MODIFY. VM TERMINATED.**
 [Comparison](../experiments/E017-information-aware-grouping/comparison-review.json),
 [full target table](../experiments/E017-information-aware-grouping/comparison-targets.tsv),

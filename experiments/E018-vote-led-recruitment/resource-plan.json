@@ -1,0 +1,42 @@
+{
+  "new_incremental_gross_USD": 1,
+  "owner_may_approve_justified_increase": "Already authorized, but no increase chosen; frozen $1 maintained",
+  "cumulative_VM_start_seconds": 3600,
+  "provider_STOP_seconds": 4500,
+  "numerical_threads": 4,
+  "sampled_tree_RSS_bytes": 26000000000,
+  "free_reserve_GiB": 25,
+  "max_extra_work_GiB": 20,
+  "max_compressed_export_GiB": 2,
+  "existing_VM": "e2-standard-8 / 8 vCPU / 32 GiB",
+  "existing_work_disk_GiB": 300,
+  "expected_minutes": [
+    15,
+    35
+  ],
+  "expected_sampled_tree_RSS_GB": [
+    8,
+    12
+  ],
+  "expected_extra_work_GiB": [
+    4,
+    8
+  ],
+  "local_review": {
+    "threads": 4,
+    "sampled_RSS_bytes": 8000000000,
+    "cumulative_seconds": 3600,
+    "extra_GiB": 6
+  },
+  "retention_end": "2026-10-28T00:00:00+01:00",
+  "retention_end_epoch": 1793142000,
+  "bound_cost_forecast_USD": {
+    "max_compute_IP_and_disks_75min": 0.3937264500785103,
+    "max_export_2GiB": 0.24,
+    "operations_reserve": 0.25,
+    "total": 0.8837264500785103
+  },
+  "no_new_resources_or_services": true,
+  "no_retention_extension": true,
+  "source_blind": true
+}

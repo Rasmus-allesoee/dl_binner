@@ -177,6 +177,13 @@ execution because this payload was not explicitly authorized. Owner approval is
 pending; no workaround or cloud write occurred. Existing native archive verification
 and this completed inspection do not depend on that optional backup.
 
+Owner update, 2026-10-21: the optional compact inspection upload below is now
+explicitly authorized and completed, with every member/readback verified; see
+[inspection-backup.json](inspection-backup.json). The following exact control
+prompt is authorized and implemented as [E018](../E018-vote-led-recruitment/README.md);
+its earlier preparation/inspection journals remain unchanged. No new cost increase
+or retention extension is chosen.
+
 ## Exact following prompt
 
 This proposes **one new $1 execution scope**. It is not enacted by this completed

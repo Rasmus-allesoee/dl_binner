@@ -513,3 +513,13 @@ D015 selects one cached vote-led/profile-admissibility control because retained
 existing gate overlap exposes competing rankers; no rule/score/encoder change or
 new cloud job is executed in inspection. Larger context/GLM/marker-learning
 alternatives remain, with untouched skin admission and October 28 retention visible.
+
+
+2026-10-21 — E018 prospectively freezes the owner-authorized single cached
+vote-led/profile-admissibility acceptance control, preserving E016 learning and
+E017 cores/profiles. [Its assessment](../../experiments/E018-vote-led-recruitment/robustness-and-data.md)
+treats oral regression as a robustness problem with unisolated depth/community/
+assembly/truth causes. Sequence-only remains valid for this acceptance question;
+current depth benefit, measured-depth transfer and untouched-community robustness
+remain open. Genuine oral mapping and additional-data admission are separately
+costed, not silently added. No new scientific outcome yet.

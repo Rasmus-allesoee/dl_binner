@@ -1,0 +1,140 @@
+{
+  "record": "E018",
+  "status": "PROSPECTIVE_BEFORE_NEW_COMMUNITY_OUTCOMES",
+  "date": "2026-10-21",
+  "question": "Do conflicting profile-distance winner/margin and core votes unnecessarily reject supported DNA, or protect purity?",
+  "treatment": "Unique cached candidate with stored profile score <=1, >=2 distinct positive core supporters, >=2/3 existing normalized votes; otherwise abstain. Remove cross-bin profile score ranking and runner margin. Preserve existing accepts.",
+  "held_fixed": [
+    "E016 encoder/native unit vectors; no inference",
+    "E017 core CPM membership, graph/weights/gamma, candidates/affinities/profiles and seed11",
+    "Original measured-parent ten-depth or explicit sequence-only mode",
+    "All thresholds, marker caches, unchanged E013 refiner/defaults, full input axes",
+    "All accepted science, failed journals and original Mac portability tolerance"
+  ],
+  "arms": [
+    "new_recruited_parent",
+    "new_old_refinement",
+    "new_E013_post"
+  ],
+  "reused_no_rescore": [
+    "E017 core/pre/old/post summaries",
+    "E016 and all earlier baseline results"
+  ],
+  "source": "E017 OPERATIONS exact following prompt, reviewed scalar/profile/vote cache census and source; no external new algorithm or label-selected parameters",
+  "cache_precision": "Use original retained float32 offers/scores/votes. Thresholds unchanged; 1e-6 only validates float32 vote-sum normalization, never broadens scientific score/vote cutoffs.",
+  "geometry": "Original native unit sphere; attach byte-verified E016 learned-neighbor lists only to in-memory diagnostic views. E017 joint-core retrieval is separate. No cross-platform tolerance change.",
+  "truth": {
+    "E009": "Conservative v2:156 targets/554661890full-reference bp;7653205bp/3.3034% N-quarantine",
+    "oral": "Provided-source-origin oracle:799 targets/2083072211full-reference bp, incl2zeroGSA targets;1734nonACGTbp and49known-sharedqueries/12063bp mask sensitivity; unique support unadmitted",
+    "boundary": "No truth/taxonomy/K in native data plan, affinity, profiles, grouping or refinement. Fixed R95 >=95%purity/200kb/full reference-coordinate union denominators. No oracle per-bin policy."
+  },
+  "populations": {
+    "E009": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible_contigs": 89041,
+      "eligible_bp": 209642703,
+      "core_contigs": 9812,
+      "core_bp": 133052224,
+      "short_recruitment_contigs": 79229,
+      "short_recruitment_bp": 76590479,
+      "strata": {
+        "0": {
+          "contigs": 56661,
+          "bp": 22035454
+        },
+        "500": {
+          "contigs": 51922,
+          "bp": 36085206
+        },
+        "1000": {
+          "contigs": 16406,
+          "bp": 19862688
+        },
+        "1500": {
+          "contigs": 10901,
+          "bp": 20642585
+        },
+        "2500": {
+          "contigs": 7728,
+          "bp": 32866110
+        },
+        "10000": {
+          "contigs": 2084,
+          "bp": 100186114
+        }
+      },
+      "source": "artifacts/e011-cached-grouping-reference/restore-local/candidate/features/features.npz",
+      "features_sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e",
+      "operation": "Retained length/eligibility reader only; no index/grouping/score/learning"
+    },
+    "oral": {
+      "rows": 1286547,
+      "bp": 1669981123,
+      "eligible_contigs": 508763,
+      "eligible_bp": 1443827664,
+      "core_contigs": 60211,
+      "core_bp": 1008845967,
+      "short_recruitment_contigs": 448552,
+      "short_recruitment_bp": 434981697,
+      "strata": {
+        "0": {
+          "contigs": 777784,
+          "bp": 226153459
+        },
+        "500": {
+          "contigs": 292793,
+          "bp": 203177403
+        },
+        "1000": {
+          "contigs": 92933,
+          "bp": 112531588
+        },
+        "1500": {
+          "contigs": 62826,
+          "bp": 119272706
+        },
+        "2500": {
+          "contigs": 49729,
+          "bp": 217094423
+        },
+        "10000": {
+          "contigs": 10482,
+          "bp": 791751544
+        }
+      },
+      "source": "artifacts/e014-multiview-reconstruction/inspection-20261019/verified/work/units/oral-dev5/features/features.npz",
+      "features_sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0",
+      "operation": "Retained length/eligibility reader only; no index/grouping/score/learning"
+    }
+  },
+  "baselines": {
+    "E017": {
+      "path": "experiments/E017-information-aware-grouping/comparison-review.json",
+      "binding": {
+        "bytes": 208738,
+        "sha256": "a212b6c3d2c7dc335c7578af61bf7fb166629e5a96e6f1f716b26f93729c993d"
+      }
+    },
+    "E016": {
+      "path": "experiments/E016-positive-only-multiview/comparison-review.json",
+      "binding": {
+        "bytes": 227410,
+        "sha256": "b5514aa84447d249a8bf7be63c5b1f6d80f0486f97f8c3f488a2d17200289b9a"
+      }
+    }
+  },
+  "decision": {
+    "keep": "Both new post weighted full-reference R95 >= E017 (0.07528383282291128 / 0.04966426005478501), at least one +0.005, neither >=90% target count below 8/21, and every integrity/population contract passes. This keeps an E017 acceptance mechanism provisionally, not the entire bundle over E016 or a product default.",
+    "modify": "Some R95 or >=90% target gain coexists with endpoint/count/material population losses. Preserve paired full targets and alternatives; one reasoned next direction, no threshold grid.",
+    "abandon": "Neither separately scoped R95 nor >=90% target count improves. Invalid/incomplete execution remains operationally invalid, not biological evidence.",
+    "anchor": "Always report E016 0.05821901338849871 / 0.06771930145056311 and counts4/34 alongside E017. No per-dataset/per-bin truth oracle or automatic replacement when oral remains below E016."
+  },
+  "diagnostics": "Frozen conservative-v2 and separate oral-origin oracle, full156/799 provided references, 3.3034% N-quarantine, known-shared sensitivity, all length/origin/native eligibility/marker/non-target/unknown/excluded/unassigned populations. Score only new three arms after verified shutdown, exits, costs and every archive member.",
+  "allowed_recovery": "Debug operational errors with preserved journals and exact source/byte/runtime reuse inside same original clock/budget. No automatic accepted science replay or clock extension.",
+  "resources": {
+    "bytes": 1108,
+    "sha256": "aa38d8d444a01f7b93281f5e44c6cd40488fbcfaecd99d7b59fcb91b6c1a23c8"
+  },
+  "confirmation": "Frozen skin unacquired; separate sample/source/genome/replicon/molecule/taxonomy/overlap/ambiguity/unique-versus-origin truth, unchanged protocol and acquisition/compute/cost/retention admission required."
+}

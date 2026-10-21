@@ -1,0 +1,142 @@
+{
+  "record": "E018 local engineering",
+  "status": "PASS_REAL_LOCAL_CONTRACTS_NATIVE_GATES_PENDING",
+  "UTC": "2026-10-21T12:25:58.756180+00:00",
+  "runtime": "Actual installed unchanged E017 wheel and accepted local numerical dependencies, lexical Python3.10; not native Linux/Python3.12 proof",
+  "contracts": {
+    "selection-contracts": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e018_recruit.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 0.9535362870665267,
+      "peak_sampled_rss_bytes": 62582784,
+      "seconds_ceiling": 1799.999850988388,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 91804,
+      "sampled_cpu_seconds": 0.8599999999999999,
+      "sampled_average_cpus": 0.9019058966761682,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "operations-contracts": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e018_operations.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 1.3171955819707364,
+      "peak_sampled_rss_bytes": 55873536,
+      "seconds_ceiling": 1799.0452029705048,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 91814,
+      "sampled_cpu_seconds": 0.33,
+      "sampled_average_cpus": 0.2505322706186631,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "actual-tiny": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E018-vote-led-recruitment/engineering_fixture.py",
+        "--cached",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/tiny-installed-v3",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e018-vote-led-recruitment/preparation/tiny-v4"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 1.23783999402076,
+      "peak_sampled_rss_bytes": 69701632,
+      "seconds_ceiling": 1797.72696185112,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 91836,
+      "sampled_cpu_seconds": 1.29,
+      "sampled_average_cpus": 1.04213792269695,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    }
+  },
+  "selector_tests": 6,
+  "operations_tests": 6,
+  "actual_tiny_reader_refinement_export_modes": [
+    "measured-parent depth",
+    "sequence-only"
+  ],
+  "tiny_DAG": {
+    "resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e017-information-aware-grouping/envs/grouping-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e018_control.py",
+        "--plan",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e018-vote-led-recruitment/preparation/tiny-dag-v1/plan.json",
+        "--workflow"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 8.139781035017222,
+      "peak_sampled_rss_bytes": 119681024,
+      "seconds_ceiling": 600,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 91372,
+      "sampled_cpu_seconds": 7.14,
+      "sampled_average_cpus": 0.8771734730066842,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "steps": 9,
+    "serial_two_unit_barrier": true,
+    "log": {
+      "bytes": 9353,
+      "sha256": "ebd1156f03aaa746a83d1c37e98db1e5c6a80670cf533ed72603a5f1d4d158a7"
+    }
+  },
+  "mocks": "No target reader/refiner/export/DAG mocked. Tiny DNA/HMM/unit vectors are retained synthetic engineering evidence, not scientific fits.",
+  "malformed_refusals": [
+    "missing/corrupt retained bytes without fallback",
+    "nonfinite/negative/unnormalized/multiple-majority evidence",
+    "old accept lost/redirected",
+    "truncated axes",
+    "unapproved budget/clock/STOP/coverage",
+    "archive/member/link/cap failures"
+  ],
+  "complete_empty_cases": "No offers/no queries remain fully unassigned/accounted; adversarial opaque-ID canonical permutation tested.",
+  "failure_journals": [
+    {
+      "path": "artifacts/e018-vote-led-recruitment/preparation/operations-contracts-v2.log",
+      "binding": {
+        "bytes": 1225,
+        "sha256": "ece75fc974307b79086a2445a59920c26a8d1504df3be11d895180f7683d1a4d"
+      },
+      "cause": "Test still named the old E017 archive; production E018 collector correctly wrote its new filename. Corrected test only; preserve failure, no community science occurred."
+    }
+  ],
+  "optional_E017_backup": {
+    "bytes": 851,
+    "sha256": "ed5eaf514f1752d2a6f1d86933be09d3c2ee315d38c0e6131528fe666ca48c5c"
+  },
+  "oral_HEAD_metadata": {
+    "binding": {
+      "bytes": 2637,
+      "sha256": "49cfad4e57ee2d1a60e004f44e1424f7a7db2b0a652c69c85ed535b9422ab680"
+    },
+    "all_ten_prior_sizes_match": true,
+    "compressed_read_bytes": 51731811351,
+    "downloaded_DNA_bytes": 0
+  },
+  "source_audit": "Native E017 metadata: oral depth usable columns [], all1286547 unavailable, constant depth channel; E009 ten usable,13 unavailable. Source masks absent channel rather than treating it as measured zero. No demonstrated depth-mode implementation bug; effects confounded.",
+  "no_community_score_or_group": true,
+  "no_VM_start": true,
+  "no_data_acquisition": true
+}

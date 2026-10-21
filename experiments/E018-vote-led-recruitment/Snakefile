@@ -1,0 +1,47 @@
+"""Two serial fixed-learning cached acceptance consumers; no fit/feature/detector rules."""
+import json
+from pathlib import Path
+PLAN=str(Path(config['plan']).absolute())
+P=json.loads(Path(PLAN).read_text())
+UNITS=list(P['units'])
+PYTHON=P['python']
+WORKER=P['worker']
+
+rule all:
+    input: expand('units/{unit}/audit.json',unit=UNITS)
+
+def previous_unit(w):
+    i=UNITS.index(w.unit)
+    return ['units/'+UNITS[i-1]+'/audit.json'] if i else []
+
+rule group:
+    input: previous_unit
+    output: 'units/{unit}/group/completed.json'
+    threads: 4
+    log: 'logs/{unit}/group.log'
+    benchmark: 'benchmarks/{unit}/group.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage group > {log:q} 2>&1'
+
+rule refine:
+    input: 'units/{unit}/group/completed.json'
+    output: 'units/{unit}/refine/completed.json'
+    threads: 4
+    log: 'logs/{unit}/refine.log'
+    benchmark: 'benchmarks/{unit}/refine.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage refine > {log:q} 2>&1'
+
+rule export:
+    input: 'units/{unit}/refine/completed.json'
+    output: 'units/{unit}/export/accounting.json'
+    threads: 4
+    log: 'logs/{unit}/export.log'
+    benchmark: 'benchmarks/{unit}/export.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage export > {log:q} 2>&1'
+
+rule audit:
+    input: 'units/{unit}/export/accounting.json'
+    output: 'units/{unit}/audit.json'
+    threads: 4
+    log: 'logs/{unit}/audit.log'
+    benchmark: 'benchmarks/{unit}/audit.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage audit > {log:q} 2>&1'
