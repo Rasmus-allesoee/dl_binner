@@ -546,3 +546,9 @@ Engineering fixtures do not prove full-schedule stability/affordability; native
 rank/resource/credit/source gates precede community work. No score/grid/refit or
 new data occurs. A frozen GLM may complement context; skin and oral depth keep
 separate source/truth/cost/retention admissions. October 28 storage remains.
+
+
+E019 execution update, October 22, 2026: the coherent context question above now
+has one newly authorized comparison [released after all ten native gates](../../experiments/E019-window-context/native-observed.json).
+No community result yet. Keep the original hypothesis/criteria and E016 comparator;
+no score-driven tuning, confirmation or product-family decision follows.

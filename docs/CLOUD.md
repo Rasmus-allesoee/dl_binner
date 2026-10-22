@@ -1,31 +1,43 @@
 # Google Cloud workspace operations
 
-Updated: 2026-10-22 (Copenhagen; initial provisioning receipts are October 13 UTC).
+Updated: 2026-10-23 (Copenhagen; initial provisioning receipts are October 13 UTC).
 [D014](decisions/D014-google-cloud-workspace.md) owns provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
 
-**E019 is local preparation only; no VM start or new community work.**
-[Its operations](../experiments/E019-window-context/OPERATIONS.md) prepares a
-separate new $5 / eight-hour comparison on the unchanged VM/disks, with an
-8.25-hour STOP, native feasibility/source/runtime/headroom/credit gates, four
-threads/26 GB sampled RSS/25 GiB reserve/20 GiB extra/3 GiB return. Maximum current-
-SKU quote ~$3.48 with reserve; none of that execution is authorized by local coding.
+**E019 authorized comparison is RUNNING; no completed quality result.**
+[Native receipt](../experiments/E019-window-context/native-observed.json) and
+[operations](../experiments/E019-window-context/OPERATIONS.md) own phase `context-20261022T215123Z-b47b916`
+at exact source b47b916. Existing machine/disks only; normal Mac push + isolated
+read-only VM fetch/worktree, unchanged original checkout. All ten Linux gates,
+complete source/runtime/input/axes and two full 20-epoch engineering fits/reloads/
+affordability pass before community release October 22 at **21:56:19 UTC /
+23:56:19 Copenhagen**. Frozen 2x projection plus 5,400 s reserve is 6.13 hours.
 
-The sole new cloud write is the explicitly approved [E018 compact inspection
-backup](../experiments/E018-vote-led-recruitment/inspection-backup.json), 887,152
-bytes/all 200 payload members, privately uploaded and read back October 21 at
-21:48 UTC / 23:48 Copenhagen. Every member verifies; no DNA/auth/environment or
-permissions change. Assessed export upper $0.00009915, storage $0.00001652/month,
-plus small operations within $0.01. No compute usage.
+Original start **21:51:19.424 UTC / 23:51:19.424 Copenhagen October 22**;
+eight-hour clock ends **05:51:19.424 UTC / 07:51:19.424 Copenhagen October 23**.
+Provider STOP **06:06:19.424 UTC / 08:06:19.424 Copenhagen October 23**, verified
+29,700 seconds, STOP/no restart. Fresh boot/process-bound held-parent watcher
+passes live/normal/crash tests and remains active. Reserve 25 GiB / maximum
+20 GiB global growth; original guest free 81.15 GiB. Four threads / 26 GB sampled
+RSS / 3 GiB return. No new resource, resize, service or retention extension.
 
-Fresh read-only Credits/Overview: DKK 1,889.28 Available / 96%, Certain usage /
-net pricing, January 12, 2027 expiry, paid account. October 1–21 costs/savings
-DKK 81.81, net zero; delayed usage unknown, $35 reserve retained. Five Catalog
-SKU expressions/rates are refreshed. 94 versions / 7,214,743,636 bytes and zero
-soft-deleted objects; separate $8 storage ending October 28 at 00:00 Copenhagen
-remains, with whole-interval forecast including maximum new E019 return ~$7.63.
-No extension, deletion, new service/resource or reconfiguration. Fresh guest
-headroom is pending the later authorized start; last native minimum was 81.148 GiB.
+Fresh Credits/Overview: **DKK 1,882.53 Available / 95%**, Certain usage / net pricing,
+January 12, 2027 expiry, paid account; costs/savings DKK 88.70, net zero. Latency
+may exceed 24 hours, pending usage unknown, $35 reserve retained. Existing E2/PD/
+IPv4/private Iowa Standard/network/operations are ordinary eligible products;
+[official coverage](https://docs.cloud.google.com/free/docs/free-cloud-features)
+and [storage/network pricing](https://cloud.google.com/storage/pricing?hl=en)
+refreshed alongside five localized Catalog SKUs. New **$5** maximum quote **$3.4786**
+with export/reserves; final measured allocation/costs are pending, not credit delta.
+Stopped disks still cost **$31.20/month**. 94 versions / 7,214,743,636 bytes, zero
+soft-deleted; approved **$8** whole-interval forecast with maximum new archive
+**$7.6313**, ending **October 28 at 00:00 Copenhagen**. No automatic renewal/deletion.
+
+The earlier [E018 compact inspection backup](../experiments/E018-vote-led-recruitment/inspection-backup.json)
+is complete/all 200 payload members/private readback verified; not repeated now.
+No old fit/score/cache rebuild, external tool or confirmation acquisition occurs.
+After exit independently establish TERMINATED/completion/stages/archive/members
+and export affordability before bounded local diagnostics; no automatic wake.
 
 The following E018 execution/cost snapshot is **dated completed history**, not
 a new current authorization. Its old credit balance is retained as observed.

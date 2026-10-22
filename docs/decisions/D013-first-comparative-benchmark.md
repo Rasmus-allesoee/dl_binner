@@ -1,6 +1,6 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E019](../../experiments/E019-window-context/README.md) implements the compact window-context learner locally and prepares a separately authorized $5 comparison. E016 remains the immutable development anchor; E017 original/MODIFY and E018 ABANDON are preserved. No new community/cloud execution here. Storage still ends October 28 at 00:00 Copenhagen.
+Current handoff: [E019](../../experiments/E019-window-context/native-observed.json) is executing its newly authorized $5 context comparison at frozen source b47b916 after all ten native gates. No completed quality result yet. E016 remains the comparator; E017 original/MODIFY and E018 ABANDON are preserved. Storage still ends October 28 at 00:00 Copenhagen.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.
@@ -650,3 +650,23 @@ or later extension. E017 proposes a new $2/three-hour cached comparison separate
 no older budget carries over. All accepted science/failures/source freezes and
 unacquired skin confirmation remain preserved. [D015](D015-coherent-prototype-upgrade.md#e017-local-information-use-implementation-2026-10-20)
 owns the implemented rule's rationale and limits.
+
+
+## E019 authorized native comparison, October 22, 2026
+
+[Native admission](../../experiments/E019-window-context/native-observed.json) passes
+all ten Linux gates, actual 20-epoch two-mode engineering/reload/learned-state,
+complete source/runtime/retained axes and conservative affordability before the
+sole two-community fit release. This run can decide whether the coherent local/
+global context bundle improves recovery over preserved E016, not isolate attention
+or establish product defaults/general robustness. No extra ablation/tool or old
+fit/rescore is added. The owner newly approves $5; no older ceiling carries.
+
+Existing machine/disks, original eight-hour clock / 8.25-hour provider STOP,
+four threads / 26 GB sampled RSS / 25 GiB reserve / 20 GiB extra / 3 GiB return
+remain. Fresh boot/process watcher and normal/crash/live tests pass. Current quote
+~$3.48 with reserve, available credit DKK 1,882.53 / January 12 expiry and separate
+$8 storage forecast ~$7.63 through October 28 pass. Costs/quality await completion
+and independent evidence review; no final result from progress/shutdown alone.
+All earlier failures and source freezes remain. Skin and genuine oral depth stay
+separate/unacquired with their unchanged provenance/truth/cost admission needs.

@@ -1,6 +1,8 @@
 # E019: compact window-context information candidate
 
-Status: **local implementation/engineering; native comparison prepared, not run**.
+Status: **authorized native comparison RUNNING; no quality result yet**.
+[Native launch receipt](native-observed.json) owns the verified source, gates,
+limits, supervision, financial admission and latest progress.
 Opened October 21, 2026; completed local preparation October 22 Copenhagen.
 Scientific outcome: **not assessed**. New branch `e019-window-context` preserves
 dev3/dev4/dev5/E016 and all accepted E009–E018 source/data/truth/results/journals.
@@ -33,23 +35,27 @@ Meaningful local contracts and a real two-community **tiny synthetic** DAG cover
 token/strand/coordinates, masking/short/no-depth modes, gradients/EMA/stop-target,
 collapse refusal, exact reload, native graph/CPM, cached/native tiny markers,
 unchanged E013, three full-axis exports and bounded member/alias collection.
-No public community fit/score or bulk token bank is made here. Linux support and
-full-schedule stability/affordability remain native gates. The initial
+Those were local preparation checks, distinct from the later ten passed Linux
+gates and authorized current bank/fits. Full-community stability and recovery
+remain unreviewed. The initial
 concatenation version failed the longer stability test. The corrected
 zero residual/shared-predictor initialization passes all 20 oligomer epochs and
 exact reloads in both modes. GC-iid stress tripped both the old context version
 and unchanged E016; those failures remain limits, without threshold relaxation. The original failed Mac portability tolerance remains unchanged.
 
-The first proposed comparison uses E009 ten-depth and oral sequence-only as
-development, preserved E016 as comparator and older summaries as context. It needs
-a **new $5** approval, eight cumulative hours / 8.25-hour provider STOP, the same
+The authorized first comparison uses E009 ten-depth and oral sequence-only as
+development, preserved E016 as comparator and older summaries as context. It has
+a **new $5** owner approval, eight cumulative hours / 8.25-hour provider STOP, the same
 8 vCPU / 32 GiB VM/disks, four numerical threads, 26 GB sampled RSS, 25 GiB free,
 20 GiB extra space and a 3 GiB return. Max measured-rate quote is about $3.48
-including reserve; Linux timing must fit before community preparation/fitting.
+including reserve; actual Linux timing/affordability and all ten gates passed
+before release.
 The separate $8 storage interval still ends **October 28 at 00:00 Copenhagen**.
 No prior compute budget or cost-increase permission carries into this candidate.
 
-The only current cloud write is the explicitly authorized compact E018 inspection
-backup: [all 200 members privately uploaded/read back](../E018-vote-led-recruitment/inspection-backup.json).
-No VM start, resource/service/retention change, mapping, data acquisition, external
-binner, taxonomy/marker training, GLM payload or confirmation run occurs.
+The earlier separately authorized compact E018 inspection
+backup remains verified: [all 200 members privately uploaded/read back](../E018-vote-led-recruitment/inspection-backup.json).
+The current task started only the existing VM, synced exact source and released
+the frozen comparison after all gates. No resource/service/retention change,
+mapping, new DNA, external binner, taxonomy/marker training, GLM payload or
+confirmation run is included. The original local state remains in Git at b47b916.

@@ -1,65 +1,58 @@
 # Current Research State
 
-Updated: 2026-10-22. This is the single current handoff.
+Updated: 2026-10-23. This is the single current handoff.
 
 ## Exact next step
 
-**E019 window-context candidate is implemented locally; the separately priced
-comparison is prepared, not executed. VM remains TERMINATED.**
-[Design](../experiments/E019-window-context/design.md),
-[local evidence](../experiments/E019-window-context/local-evidence.json),
-[candidate lock](../experiments/E019-window-context/candidate-lock.json) and
-[operations / exact approval request](../experiments/E019-window-context/OPERATIONS.md)
-own the current block. Branch `e019-window-context` preserves immutable dev3/dev4/
-dev5/E016 and all accepted E009–E018 science/failures. No community fit/score, bulk
-context bank, VM start, new data, external tool or resource/retention change occurs.
+**E019 authorized two-community context comparison is RUNNING, not reviewed.**
+Phase `context-20261022T215123Z-b47b916`, exact clean science source **b47b916**,
+[receipt](../experiments/E019-window-context/native-observed.json),
+[operations / exact inspection prompt](../experiments/E019-window-context/OPERATIONS.md)
+and [frozen protocol](../experiments/E019-window-context/protocol.json) own this block.
+No completed quality or keep/modify/abandon claim yet. Preserve dev3/dev4/dev5/E016,
+all accepted E009–E019 evidence and all failed journals; E018 remains ABANDON.
 
-The candidate adds real canonical-strand local TNF windows plus a global token,
-one compact width-64/four-head attention block and zero-initialized residual
-composition fusion with preserved E016 shared/predictor initialization. E016 real parent/crop views/exposure, positive-only stopped EMA/predictor,
-reconstruction, measured-parent depth and sole CPM/E013 remain anchors. Self-
-attention is justified for bounded interactions among at most nine tokens, not
-because larger networks are inherently better. Frozen GLM information may later
-complement it; no payload/taxonomy/marker training is added automatically.
+All ten native gates pass: exact retained bytes/full contig/ordered ten or zero
+depth axes, independent new package prefix with accepted numerical dependencies
+read-only, complete Python 3.12.10 inventory/import/source/library/CLI, real token/
+attention/gradient/EMA/reload/marker/CPM/E013/export/collection/15-job tiny DAG, both
+20-epoch full-width engineering stability/reload/state and affordability. Native
+steady epochs 0.78625 / 0.70157 s predict 6.13 hours with the frozen 2x + 5,400 s
+reserve, fitting the original clock; this does not prove community performance.
+Old Mac portability and initial context/GC failures remain failed and preserved.
 
-Indexed uint16 token counts avoid an overlapping-crop bank: 6.421 GiB forecast
-across the unchanged 89,041/508,763 eligible parents. All short/marker-negative/
-unknown/non-target/excluded/noise DNA and complete axes remain. Local real-token/
-strand/masking/gradient/EMA/reload/CPM/E013/export/collection and installed-package
-contracts are recorded separately from pending Linux/full-scale/biological proof.
-The longer engineering check caught the initial concatenation fusion/initialization
-regression. The corrected candidate passes all 20 oligomer epochs/reloads in both
-modes; initial failures and the shared E016 GC stress failure remain explicit.
-Native full-schedule engineering/collapse checks still precede communities, with
-no threshold/tolerance relaxation. Old Mac cross-
-platform portability remains failed. No biological result is claimed here.
+New **$5**, existing 8 vCPU / 32 GiB / 300 GiB work + 30 GiB boot only; four threads,
+26 GB sampled RSS, 25 GiB free reserve, 20 GiB global growth and 3 GiB return.
+Start October 22 **23:51:19 Copenhagen**; original eight-hour deadline October 23
+**07:51:19**, independent 8.25-hour STOP **08:06:19**, no restart. Fresh current-
+boot/PID/start/command held-parent watcher is armed and tested live/normal/crash.
+Latest observation 22:00 UTC October 22 / 00:00 Copenhagen October 23: E009 tokens
+completed and epoch 3
+processed all 89,041 eligible parents; finite loss and all collapse checks pass,
+watcher alive, 80.14 GiB free / about 1.01 GiB global growth. Logs are under the
+receipt's root; longer run is left supervised after this few-minute verification,
+not polled to completion.
 
-**Next requires a new $5 authorization:** the exact prepared two-community
-candidate-versus-preserved-E016 comparison, roughly 3–7 hours expected; eight
-cumulative hours including all setup/collection, 8.25-hour independent provider
-STOP, existing 8 vCPU/32 GiB/300 GiB work disk, four numerical threads, 26 GB
-sampled RSS, 25 GiB reserve, 20 GiB extra and 3 GiB compressed return. Maximum
-current-SKU quote is about $3.48 with reserve; native timing must fit before
-community token preparation/fitting. No previous budget carries. Local review
-will need sequential staging within one hour/8 GB RSS/10 GiB extra.
+Fresh credit **DKK 1,882.53 Available / 95%**, January 12, 2027 expiry, paid account;
+delayed usage unknown with $35 reserve. Applicable ordinary products/price/coverage,
+private storage/versions and original retention pass. New run maximum quote
+**~$3.48** with export/reserves; final allocation/sample CPU/storage/export remain
+separate and pending. Separate storage forecast **~$7.63 of $8** still ends
+**October 28 at 00:00 Copenhagen**. Existing stopped disks cost **$31.20/month**.
+No provisioning/resize/service/retention change, baseline refit/rescore, external
+tool, reads/mapping, new data or confirmation acquisition occurs.
 
-Original keep/modify/abandon and all E009-v2/oral-origin/full denominators/
-N-quarantine/known-shared/population diagnostics are frozen before outcomes. This
-will be a bundle comparison on two development communities, not isolated causal
-attention proof or product-default/generalization evidence. Skin remains frozen
-and unacquired pending source/genome/replicon/molecule/taxonomy/overlap/full-
-denominator/ambiguity/unique-versus-origin/protocol and separate cost/retention
-admission. Genuine oral depth is also separate; no old dev3 extrapolation.
-
-The explicitly approved [E018 compact inspection backup](../experiments/E018-vote-led-recruitment/inspection-backup.json)
-now passes private upload/readback and all 200 payload members (887,152 bytes).
-No credentials/environments/DNA were uploaded. Export upper ~$0.00010 plus tiny
-storage/operations fits a separately checked $0.01 reserve. Fresh read-only credit
-shows DKK 1,889.28 Available / 96%, expiry January 12, 2027; delayed usage remains
-unknown/reserved, not an invoice. Current 94 listed versions/7,214,743,636 bytes,
-zero soft-deleted. Separate $8 storage still ends **October 28 at 00:00 Copenhagen**;
-whole-interval forecast including a maximum future E019 archive is ~$7.63.
-Stopped disks remain $31.20/month. No deletion or automatic retention extension.
+After independently verified shutdown, verify actual exits/private completion/
+watcher/archive/every member and remaining $5 before frozen bounded local new-output
+diagnostics. Do not infer success from STOP or wake/replay automatically for missing
+evidence. One hour / four threads / 8 GB sampled RSS / 10 GiB extra; stage sequentially.
+Preserve full 156/799 reference denominators, 3.3034% N quarantine, separately named
+oral origin oracle/known-shared sensitivity and every length/origin/eligibility/
+marker/unknown/non-target/excluded/unassigned population. Omitted token NPY/full
+DNA remain on disk; inventory hashes are not backups or a local numeric reread.
+Skin stays frozen/unacquired pending full source/truth/overlap/protocol and separate
+cost/retention admission; genuine oral depth is also separate. No product/default,
+causal attention or generalization claim from these two development communities.
 
 ## Preserved E018 result and reason for E019
 

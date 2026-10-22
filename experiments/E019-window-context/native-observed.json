@@ -1,0 +1,1075 @@
+{
+  "record": "E019 authorized frozen window-context comparison launch",
+  "status": "RUNNING_NOT_REVIEWED",
+  "observed_UTC": "2026-10-22T22:00:35.508676+00:00",
+  "phase": "context-20261022T215123Z-b47b916",
+  "source_commit": "b47b9164e3cb2ce51ae46728b813dbbb8d4320ea",
+  "branch": "e019-window-context",
+  "identity": {
+    "phase": "context-20261022T215123Z-b47b916",
+    "source": "b47b9164e3cb2ce51ae46728b813dbbb8d4320ea",
+    "vm_start_epoch": 1792705879.424,
+    "root": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916",
+    "service_name": "e019-20261022t215123z",
+    "repo": "/srv/dl_binner/research/e019-b47b9164e3cb",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e019/context-20261022T215123Z-b47b916"
+  },
+  "authorization": {
+    "new_incremental_gross_USD": 5,
+    "cumulative_VM_start_seconds": 28800,
+    "provider_STOP_seconds": 29700,
+    "numerical_threads": 4,
+    "loader_workers": 0,
+    "sampled_tree_RSS_bytes": 26000000000,
+    "free_reserve_bytes": 26843545600,
+    "max_extra_work_bytes": 21474836480,
+    "max_compressed_export_bytes": 3221225472,
+    "retention_end": "2026-10-28T00:00:00+01:00",
+    "retention_extended": false,
+    "no_previous_budget_carries": true,
+    "existing_VM": "e2-standard-8 / 8 vCPU / 32 GiB",
+    "disks_GiB": [
+      300,
+      30
+    ],
+    "local_review": {
+      "threads": 4,
+      "sampled_RSS_bytes": 8000000000,
+      "seconds": 3600,
+      "extra_bytes": 10737418240
+    }
+  },
+  "provider": {
+    "name": "dl-binner-cpu",
+    "status": "RUNNING",
+    "machineType": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/machineTypes/e2-standard-8",
+    "lastStartTimestamp": "2026-10-22T14:51:19.424-07:00",
+    "lastStopTimestamp": "2026-10-21T05:47:49.812-07:00",
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "29700"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    }
+  },
+  "host": {
+    "user": "rasmus_allesoee_gmail_com",
+    "uid": 1852909767,
+    "gid": 1852909767,
+    "boot_id": "1a2bc0cb-056e-431e-aaa3-4e41398be1b1",
+    "cpus": 8,
+    "physical_memory_bytes": 33646948352,
+    "used_bytes": 229585395712,
+    "free_bytes": 87131480064,
+    "mount": "/srv/dl_binner",
+    "mount_identity": {
+      "filesystems": [
+        {
+          "target": "/srv/dl_binner",
+          "source": "/dev/sdb",
+          "fstype": "ext4",
+          "uuid": "f76283ed-60c4-4060-bd22-84c95f38d3fb",
+          "size": "295G",
+          "options": "rw,relatime,discard"
+        }
+      ]
+    },
+    "checked_UTC": "2026-10-22T21:52:01.095242+00:00",
+    "source": "b47b9164e3cb2ce51ae46728b813dbbb8d4320ea",
+    "original_checkout_source": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+    "new_research_checkout": "/srv/dl_binner/research/e019-b47b9164e3cb"
+  },
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e019-20261022t215123z.service",
+    "watchdog_timer": "e019-20261022t215123z-exit.timer",
+    "watchdog_service": "e019-20261022t215123z-exit.service",
+    "process": {
+      "pid": 1382,
+      "start_ticks": 3151,
+      "command_sha256": "cf49bfe5410665ab2df34f1d44904556efeaacdb013b08b7ba6d5fc9e78ac12f"
+    },
+    "boot_id": "1a2bc0cb-056e-431e-aaa3-4e41398be1b1",
+    "source_commit": "b47b9164e3cb2ce51ae46728b813dbbb8d4320ea",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1792705879.424,
+    "hard_deadline_epoch": 1792734679.424,
+    "provider_stop_epoch": 1792735579.424,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "release": {
+    "credit_gate_passed": true,
+    "pending_usage_accounted": true,
+    "native_gates_passed": true,
+    "watchdog_verified": true,
+    "existing_VM_only": true,
+    "full_axes_verified": true,
+    "config": {
+      "bytes": 2156,
+      "sha256": "30a5f38261c0b6bcd9dc88abf3bda92d03d22083a24a8ffd588b281dc3a46ef1"
+    },
+    "provider_STOP_seconds": 29700,
+    "ceiling_USD": 5,
+    "estimated_incremental_gross_USD": 3.4785945705181684,
+    "compressed_export_GiB": 3,
+    "storage_retention_extended": false,
+    "covered_costs": [
+      "compute",
+      "disk",
+      "storage",
+      "network",
+      "operations"
+    ],
+    "credit_valid_until_epoch": 1799708400.0,
+    "storage_valid_until_epoch": 1793142000.0,
+    "source_commit": "b47b9164e3cb2ce51ae46728b813dbbb8d4320ea",
+    "native_gate_exits": 10,
+    "retained_bytes_verified": 4229058857,
+    "release_UTC": "2026-10-22T21:56:19.300950+00:00"
+  },
+  "financial_gate": {
+    "status": "PASS_FRESH_CREDIT_PRICE_STORAGE_PLAN; GUEST_HEADROOM_RUNTIME_PENDING",
+    "checked_UTC": "2026-10-22T21:49:09.242361+00:00",
+    "source_commit": "b47b9164e3cb2ce51ae46728b813dbbb8d4320ea",
+    "ceiling_USD": 5,
+    "credit": {
+      "remaining_DKK": 1882.53,
+      "original_DKK": 1973.43,
+      "percent": 95,
+      "status": "Available",
+      "scope": "Certain usage; see the terms for Free Trial",
+      "expiry": "2027-01-12",
+      "application": "Net pricing",
+      "paid_account": true,
+      "overview_cost_savings_DKK": 88.7,
+      "overview_net_DKK": 0,
+      "pending_usage": "Unknown; live tooltip explicitly says possibly longer than 24 hours",
+      "delayed_usage_reserve_USD": 35,
+      "read": "Fresh signed-in Google Cloud Billing Credits/Overview via CUA, 2026-10-22; read-only"
+    },
+    "estimate": {
+      "maximum_incremental_gross_forecast_USD": 3.4785945705181684,
+      "compute_IP_USD_per_hour": 0.2730456762592464,
+      "disk_USD_per_hour": 0.04193548380356186,
+      "disk_USD_per_month": 31.199999949850024,
+      "maximum_export_USD": 0.36,
+      "operations_small_storage_USD": 0.02,
+      "uncertainty_USD": 0.5
+    },
+    "covered_costs": [
+      "compute",
+      "disk",
+      "storage",
+      "network",
+      "operations"
+    ],
+    "products": "Existing ordinary E2, nonpremium Ubuntu, persistent disks, IPv4, Iowa Standard storage/network/operations; no new product",
+    "coverage_sources": [
+      "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "https://cloud.google.com/storage/pricing?hl=en"
+    ],
+    "price_source": {
+      "bytes": 8003,
+      "sha256": "639cb3cde7f94f42ad3bb9fbfb3a3c3bbb700be599acd92b9000032a1e82a507"
+    },
+    "storage_inventory": {
+      "bytes": 24924,
+      "sha256": "2d20a25364db5a77e2a2bf1d0563ef825dad920d5c52ebb1cf435e72bc259da4"
+    },
+    "storage_interval_forecast_USD": 7.631251436497859,
+    "storage_ceiling_USD": 8,
+    "storage_valid_until_epoch": 1793142000.0,
+    "credit_valid_until_epoch": 1799708400.0,
+    "retention_extended": false,
+    "initial_VM_status": "TERMINATED",
+    "local_free_bytes": 43838083072,
+    "return_staging": "3 GiB compressed plus sequential <=10 GiB local review; actual collection inventory/export must be admitted after stop",
+    "invoice_claim": false
+  },
+  "native_gates": {
+    "status": "SUCCESS",
+    "config": {
+      "bytes": 2156,
+      "sha256": "30a5f38261c0b6bcd9dc88abf3bda92d03d22083a24a8ffd588b281dc3a46ef1"
+    },
+    "stages": [
+      {
+        "name": "retained-bytes",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_reuse.py",
+            "--lock",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/experiments/E019-window-context/reuse-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/gates/reuse-before.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2057,
+          "peak_sampled_rss_bytes": 46501888,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.3151617146272788,
+          "sampled_cpu_seconds": 8.84,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 28.049092227000003
+        }
+      },
+      {
+        "name": "new-package-env",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_runtime.py",
+            "create",
+            "--base",
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env",
+            "--destination",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env",
+            "--wheel",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/payload/dl_binner-0.1.0.dev7-py3-none-any.whl",
+            "--output",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/gates/environment.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2230,
+          "peak_sampled_rss_bytes": 99364864,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.5035206527011704,
+          "sampled_cpu_seconds": 2.06,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 4.091192663000001
+        }
+      },
+      {
+        "name": "complete-runtime-source-library",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_runtime.py",
+            "probe",
+            "--base",
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env",
+            "--lock",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/experiments/E019-window-context/reuse-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/gates/runtime.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2252,
+          "peak_sampled_rss_bytes": 295206912,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.8694964337889505,
+          "sampled_cpu_seconds": 22.990000000000002,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 26.440591481
+        }
+      },
+      {
+        "name": "installed-CLI",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "dl_binner",
+            "--help"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2331,
+          "peak_sampled_rss_bytes": 35364864,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.270026318693782,
+          "sampled_cpu_seconds": 0.07000000000000028,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.25923398999999847
+        }
+      },
+      {
+        "name": "retained-input-axes",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_bootstrap.py",
+            "--inputs",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/science-plan.json",
+            "--output",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/gates/inputs.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2332,
+          "peak_sampled_rss_bytes": 5671391232,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.0865050892749875,
+          "sampled_cpu_seconds": 56.980000000000004,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 52.44338067299999
+        }
+      },
+      {
+        "name": "new-contracts",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/tests",
+            "-p",
+            "test_e019_contracts.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2403,
+          "peak_sampled_rss_bytes": 59699200,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.6016581432869612,
+          "sampled_cpu_seconds": 0.28999999999999915,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.4820012879999922
+        }
+      },
+      {
+        "name": "context-token-attention-gradient-EMA",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/tests/product",
+            "-p",
+            "test_context.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2405,
+          "peak_sampled_rss_bytes": 305332224,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.0945448140787009,
+          "sampled_cpu_seconds": 8.16,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 7.45515386400001
+        }
+      },
+      {
+        "name": "native-positive-path",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/tests",
+            "-p",
+            "test_e019_native.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2425,
+          "peak_sampled_rss_bytes": 450875392,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.1755312186463232,
+          "sampled_cpu_seconds": 27.77,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 23.62336240800002
+        }
+      },
+      {
+        "name": "full-width-timing",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_timing.py",
+            "--python",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "--epochs",
+            "20",
+            "--output",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/gates/full-width"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2622,
+          "peak_sampled_rss_bytes": 490876928,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 2.726786895846138,
+          "sampled_cpu_seconds": 163.78,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 60.06336624599999
+        }
+      },
+      {
+        "name": "complete-DAG-dry-run",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_control.py",
+            "--plan",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/science-plan.json",
+            "--workflow",
+            "--dry-run"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2914,
+          "peak_sampled_rss_bytes": 79024128,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.8737267511284136,
+          "sampled_cpu_seconds": 0.6099999999999994,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.6981587770000033
+        }
+      }
+    ],
+    "sampled_peak_tree_RSS_bytes": 5671391232,
+    "inputs": {
+      "source_science_replayed": false,
+      "status": "PASS",
+      "truth_read": false,
+      "units": {
+        "E009-context": {
+          "bank_policy_unchanged": true,
+          "bp": 231678157,
+          "features": {
+            "bytes": 42384557,
+            "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+          },
+          "parent_depth_semantics": "Measured full-parent means; repeated conditioning for windows, not measured window depth. No variance available.",
+          "rows": 145702,
+          "samples": [
+            "cami3_toy_human_gut_short_read_sample_0",
+            "cami3_toy_human_gut_short_read_sample_2",
+            "cami3_toy_human_gut_short_read_sample_3",
+            "cami3_toy_human_gut_short_read_sample_4",
+            "cami3_toy_human_gut_short_read_sample_6",
+            "cami3_toy_human_gut_short_read_sample_9",
+            "cami3_toy_human_gut_short_read_sample_10",
+            "cami3_toy_human_gut_short_read_sample_11",
+            "cami3_toy_human_gut_short_read_sample_14",
+            "cami3_toy_human_gut_short_read_sample_17"
+          ],
+          "training_parents": 89041,
+          "views": {
+            "bytes": 60980613,
+            "sha256": "3ded4f6d5c7bcbdb13e0204da696de940b4c46330358e5ea1ce668b02c22aabe"
+          }
+        },
+        "oral-context": {
+          "bank_policy_unchanged": true,
+          "bp": 1669981123,
+          "features": {
+            "bytes": 333765352,
+            "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+          },
+          "parent_depth_semantics": "Measured parent means condition crops, not measured window depth; no variance.",
+          "rows": 1286547,
+          "samples": [],
+          "training_parents": 508763,
+          "views": {
+            "bytes": 419791282,
+            "sha256": "80d30e98c98642cf4dca5aad1b76a061065b3f93e92bab85e6b1ada5e0b4ac76"
+          }
+        }
+      }
+    },
+    "affordability": {
+      "measured_epoch_seconds": {
+        "depth": 0.7862495390000106,
+        "sequence": 0.7015697760000137
+      },
+      "projected_remaining_seconds": 22077.390201140424,
+      "scope": "Actual two-mode native kernel scaling plus 5400s context-build/IO/group/refine/export/collection reserve; not community runtime proof",
+      "status": "PASS",
+      "uncertainty_factor": 2
+    },
+    "runtime": {
+      "base_prefix": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315",
+      "borrowed_read_only": true,
+      "dependency_base": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env",
+      "distribution_locations": {
+        "archspec": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/archspec-0.2.6.dist-info",
+        "dl-binner": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/lib/python3.12/site-packages/dl_binner-0.1.0.dev7.dist-info",
+        "filelock": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/filelock-4.0.10.dist-info",
+        "fsspec": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/fsspec-2026.9.0.dist-info",
+        "igraph": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/igraph-0.11.8.dist-info",
+        "jinja2": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/jinja2-3.1.6.dist-info",
+        "joblib": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/joblib-1.4.2.dist-info",
+        "leidenalg": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/leidenalg-0.10.2.dist-info",
+        "llvmlite": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/llvmlite-0.43.0.dist-info",
+        "markupsafe": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/markupsafe-3.0.4.dist-info",
+        "mpmath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/mpmath-1.3.0.dist-info",
+        "networkx": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/networkx-3.4.2.dist-info",
+        "numba": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numba-0.60.0.dist-info",
+        "numpy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy-1.26.4.dist-info",
+        "pip": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pip-25.1.1.dist-info",
+        "psutil": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/psutil-6.0.0.dist-info",
+        "pyhmmer": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyhmmer-0.11.0.dist-info",
+        "pynndescent": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pynndescent-0.5.13.dist-info",
+        "pyrodigal": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyrodigal-3.6.3.dist-info",
+        "scikit-learn": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn-1.5.2.dist-info",
+        "scipy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy-1.13.1.dist-info",
+        "setuptools": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/setuptools-65.5.0.dist-info",
+        "sympy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/sympy-1.14.0.dist-info",
+        "texttable": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/texttable-1.7.0.dist-info",
+        "threadpoolctl": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/threadpoolctl-3.5.0.dist-info",
+        "torch": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch-2.2.2+cpu.dist-info",
+        "typing-extensions": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/typing_extensions-4.16.0.dist-info",
+        "wheel": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/wheel-0.45.1.dist-info"
+      },
+      "distributions": {
+        "archspec": "0.2.6",
+        "dl-binner": "0.1.0.dev7",
+        "filelock": "4.0.10",
+        "fsspec": "2026.9.0",
+        "igraph": "0.11.8",
+        "jinja2": "3.1.6",
+        "joblib": "1.4.2",
+        "leidenalg": "0.10.2",
+        "llvmlite": "0.43.0",
+        "markupsafe": "3.0.4",
+        "mpmath": "1.3.0",
+        "networkx": "3.4.2",
+        "numba": "0.60.0",
+        "numpy": "1.26.4",
+        "pip": "25.1.1",
+        "psutil": "6.0.0",
+        "pyhmmer": "0.11.0",
+        "pynndescent": "0.5.13",
+        "pyrodigal": "3.6.3",
+        "scikit-learn": "1.5.2",
+        "scipy": "1.13.1",
+        "setuptools": "65.5.0",
+        "sympy": "1.14.0",
+        "texttable": "1.7.0",
+        "threadpoolctl": "3.5.0",
+        "torch": "2.2.2+cpu",
+        "typing-extensions": "4.16.0",
+        "wheel": "0.45.1"
+      },
+      "isolated_native_groups": {
+        "graph": {
+          "origins": {
+            "igraph": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/igraph/__init__.py",
+            "leidenalg": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/leidenalg/__init__.py",
+            "numba": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numba/__init__.py",
+            "pynndescent": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pynndescent/__init__.py",
+            "scipy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy/__init__.py",
+            "sklearn": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/sklearn/__init__.py"
+          },
+          "pools": [
+            {
+              "architecture": "Zen",
+              "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+              "internal_api": "openblas",
+              "num_threads": 4,
+              "prefix": "libopenblas",
+              "threading_layer": "pthreads",
+              "user_api": "blas",
+              "version": "0.3.23.dev"
+            },
+            {
+              "architecture": "Zen",
+              "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy.libs/libopenblasp-r0-01191904.3.27.so",
+              "internal_api": "openblas",
+              "num_threads": 4,
+              "prefix": "libopenblas",
+              "threading_layer": "pthreads",
+              "user_api": "blas",
+              "version": "0.3.27"
+            },
+            {
+              "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+              "internal_api": "openmp",
+              "num_threads": 4,
+              "prefix": "libgomp",
+              "user_api": "openmp",
+              "version": null
+            },
+            {
+              "filepath": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/lib/libgomp.so.1.0.0",
+              "internal_api": "openmp",
+              "num_threads": 4,
+              "prefix": "libgomp",
+              "user_api": "openmp",
+              "version": null
+            }
+          ]
+        },
+        "markers": {
+          "origins": {
+            "archspec": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/archspec/__init__.py",
+            "pyhmmer": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyhmmer/__init__.py",
+            "pyrodigal": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyrodigal/__init__.py"
+          },
+          "pools": []
+        },
+        "tensor": {
+          "origins": {
+            "dl_binner": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/lib/python3.12/site-packages/dl_binner/__init__.py",
+            "numpy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy/__init__.py",
+            "torch": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/__init__.py"
+          },
+          "pools": [
+            {
+              "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/lib/libgomp-a34b3233.so.1",
+              "internal_api": "openmp",
+              "num_threads": 4,
+              "prefix": "libgomp",
+              "user_api": "openmp",
+              "version": null
+            },
+            {
+              "architecture": "Zen",
+              "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+              "internal_api": "openblas",
+              "num_threads": 4,
+              "prefix": "libopenblas",
+              "threading_layer": "pthreads",
+              "user_api": "blas",
+              "version": "0.3.23.dev"
+            }
+          ]
+        }
+      },
+      "native_library_targets": {
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/lib/libgomp.so.1.0.0": {
+          "bytes": 1674616,
+          "sha256": "34324e0835be6e103844d7c416bec42834cf803d3ba8d9519df15ced19914dfe"
+        },
+        "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so": {
+          "bytes": 35123345,
+          "sha256": "9254d0854dd7615e11de28d771ae408878ca8123a7ac204f21e4cc7a376cc2e5"
+        },
+        "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0": {
+          "bytes": 168193,
+          "sha256": "3a7eaece7231911be2fbb1b3e7cb4cb5c2e0f84e0c2bb73739472b5a1feec8c1"
+        },
+        "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy.libs/libopenblasp-r0-01191904.3.27.so": {
+          "bytes": 34990041,
+          "sha256": "9b91f6ba8fdba9cf7682371fda53bb228763bd5073ff824edbc4b81e2ddc46bc"
+        },
+        "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/lib/libgomp-a34b3233.so.1": {
+          "bytes": 168721,
+          "sha256": "570455c2902d6cc2a7f367703c06dac07495dd7f8a1ed2c8fc4cea628c881b13"
+        }
+      },
+      "portable": false,
+      "prefix": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env",
+      "python": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+      "python_version": "3.12.10",
+      "source": {
+        "__init__.py": {
+          "bytes": 112,
+          "sha256": "0c20fbc9684299d19a2d2cca6607b71eb8164928ab2119f079b2c26f81e9a01d"
+        },
+        "__main__.py": {
+          "bytes": 103,
+          "sha256": "28f47a18f1a12c011b4fa92812d8f4fb10840c469d489ee5ac246bc669620144"
+        },
+        "accounting.py": {
+          "bytes": 6732,
+          "sha256": "2a83aad8eb36864a704ebe72faeeba33c335c86f7072205f6f19c92db9f6f117"
+        },
+        "candidate/__init__.py": {
+          "bytes": 81,
+          "sha256": "5887ddf687250cefcf87aaa082c5a4edc9a5281a8a1be7a752300a5fcb190eff"
+        },
+        "candidate/grouping.py": {
+          "bytes": 12615,
+          "sha256": "d31c67705b2fc80d5fd06d8b2c403d7e543ebd64fc37c08b5b3db90ba657f233"
+        },
+        "candidate/markers.py": {
+          "bytes": 11226,
+          "sha256": "a77739cb64d219bf3af8e2baeb66ed81c86c53a8c5c633a184ee28412ee2760a"
+        },
+        "candidate/model.py": {
+          "bytes": 10499,
+          "sha256": "09eda66fcd324870d11b89c6f6b4bc7e4c02f3169d6d557389bc8c840de76f09"
+        },
+        "candidate/runner.py": {
+          "bytes": 12350,
+          "sha256": "ab153821b9bacf70373c7ffd79c058b1be356a6f96bdfae5aa8638cf4bdab2eb"
+        },
+        "candidate/views.py": {
+          "bytes": 8357,
+          "sha256": "d3f1b51ac61009f9f962d767fce5600d5c93bd14b4ca9adb4bdef7564438392f"
+        },
+        "cli.py": {
+          "bytes": 11565,
+          "sha256": "858943ab0a050285e50866cdf77188f89bfa5a6fa9f086a5eca10992a6792ea9"
+        },
+        "clustering.py": {
+          "bytes": 7880,
+          "sha256": "2ac715b1449287b002ef7e4a75b84ef204256c2d5f589e31a6810acfad941b66"
+        },
+        "context/__init__.py": {
+          "bytes": 83,
+          "sha256": "fa4215cc76f8b617b7771580085721dca8241e368ce96d7559cac2cca52bf5b9"
+        },
+        "context/model.py": {
+          "bytes": 19289,
+          "sha256": "f05c3ef2526880401af21e5bdb9a26f84b6faffc077bdeb882ff7678f0b9a4cf"
+        },
+        "context/stage.py": {
+          "bytes": 1234,
+          "sha256": "9174c043a838eec041b883ed9f1b0fe3323cb275db0199adee96c2a021997f5f"
+        },
+        "context/tokens.py": {
+          "bytes": 11844,
+          "sha256": "e2e2827798d085f245b20ec28830713d93fc189dee02998690d87b726e3ae7a2"
+        },
+        "contracts.py": {
+          "bytes": 1671,
+          "sha256": "0455b5a45ecbb29eb1f6c168048efa3a861279dc7ba2af36896ddb6dfcab632d"
+        },
+        "information/__init__.py": {
+          "bytes": 83,
+          "sha256": "381d0d6bcd5fa452ba19db73173e5aa825dd30b4b704c1e9bd633466ce750050"
+        },
+        "information/audit.py": {
+          "bytes": 6106,
+          "sha256": "64ca1b8f66f641be3a5c79af94333db507dd3875171758a2af042df1714f9be2"
+        },
+        "information/export.py": {
+          "bytes": 4480,
+          "sha256": "1a6603b31de105de6a95afb16db1036a467e9dc12b9d843da53b3281caacfb5a"
+        },
+        "information/grouping.py": {
+          "bytes": 24866,
+          "sha256": "9d1f665b1f5024bdde90a86d536c6679cb3a5fbdb9635348141272d8de3d5235"
+        },
+        "io.py": {
+          "bytes": 12016,
+          "sha256": "71b0c423c046b3c72b651141e853ea622a62742fc087afeef37fbf9c253c2307"
+        },
+        "model.py": {
+          "bytes": 13986,
+          "sha256": "acc1f3c450910112cd7883cc6284139046fde6b339e73b82638d301d8e5a9948"
+        },
+        "multiview/__init__.py": {
+          "bytes": 85,
+          "sha256": "7724296c827c8ae34dc7558de991243c52ee78c1b8a37837e3070487657fe160"
+        },
+        "multiview/arrays.py": {
+          "bytes": 1395,
+          "sha256": "e6239aaa8ca298b5afd97d4c45ab58ff72183f485e4263226aebbcae03500a97"
+        },
+        "multiview/downstream.py": {
+          "bytes": 7469,
+          "sha256": "a24e96291dc6e779734e6990008296e7e7d8d3e400ff9102004a09959fa8fbbb"
+        },
+        "multiview/model.py": {
+          "bytes": 10256,
+          "sha256": "6342819c74f8d7da4cc23bea7666169de605d2c391ce3711d98243fc88f550d2"
+        },
+        "multiview/positive.py": {
+          "bytes": 15492,
+          "sha256": "133f54087e5516c6e90a6c71667e8b9e4b5cb5a1428d6418be1fc28393453ec6"
+        },
+        "multiview/refinement.py": {
+          "bytes": 16783,
+          "sha256": "0c1bae1f0fd5e8873cc30e68218e6796e87bf43b7d9262d2ec42fd781a51b8c0"
+        },
+        "multiview/stage.py": {
+          "bytes": 2190,
+          "sha256": "a06543d0cd70ba4a63637a7072b96d03becc773c7ae0ba1dbeb4c603b2677581"
+        },
+        "multiview/views.py": {
+          "bytes": 9370,
+          "sha256": "0b3a00b87c17cd56417e589ebcb3a9f3234f85f4c14ac0b9204a680dc2590935"
+        },
+        "resources/candidate.json": {
+          "bytes": 678,
+          "sha256": "1c8049fa2cf70e51c2eab22fc7fe5cd0e626f807360b56ff2b392756207baa60"
+        },
+        "resources/context.json": {
+          "bytes": 267,
+          "sha256": "90bc99e68c31be2456dbe8b04fe4d438e1613b6cec62f7db4ab72ab6a7db5387"
+        },
+        "resources/multiview.json": {
+          "bytes": 799,
+          "sha256": "0f532c4912b002c5cdb2ebde48bf172c96577f3edb066a1c03864e2b537c6038"
+        },
+        "resources/training.json": {
+          "bytes": 215,
+          "sha256": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5"
+        },
+        "runner.py": {
+          "bytes": 20667,
+          "sha256": "99cbd7a14c360011b473dd22a03777eb7e3dfff109f11c78a2f5c1f067af3e8f"
+        },
+        "supervision.py": {
+          "bytes": 9575,
+          "sha256": "8ee9bd7d5f05a8e487a8691f7ab8152cca627f9f55ad27d48c6ece61cbd9a8a9"
+        }
+      },
+      "status": "PASS"
+    },
+    "source_commit": "b47b9164e3cb2ce51ae46728b813dbbb8d4320ea",
+    "owned_package_sources": 36,
+    "whole_numerical_prefix_reinstalled": false,
+    "reuse_verified_files": 59,
+    "reuse_verified_bytes": 4229058857
+  },
+  "source_freeze": "Prepared b47b916 and its wheel/source/default/record hashes remain immutable; administrative receipt/README/operations edits after release are not the executed checkout and do not refresh the frozen lock.",
+  "progress": {
+    "stage": "E009-context train",
+    "completed_token_parents": 89041,
+    "completed_epochs": 3,
+    "total_epochs": 20,
+    "latest_epoch": {
+      "stage": "context_epoch",
+      "utc": "2026-10-22T22:00:17Z",
+      "epoch": 3,
+      "parents_seen": 89041,
+      "available_views": 432664,
+      "depth_dropped_views": 216163,
+      "loss": 1.0070250348859722,
+      "fused_positive": 0.26912100289040686,
+      "sequence_positive": 0.2774507324885779,
+      "composition_reconstruction": 0.5964978178283722,
+      "depth_reconstruction": 0.026808467932594626,
+      "ema_updates": 1044,
+      "last_tau": 0.9962175772902939,
+      "geometry": {
+        "online": {
+          "fused": {
+            "rows": 8192,
+            "effective_rank": 21.971394393316576,
+            "mean_dimension_std": 0.09620991300417181,
+            "mean_other_cosine": 0.3930608487449612,
+            "catastrophic_collapse": false
+          },
+          "sequence": {
+            "rows": 8192,
+            "effective_rank": 23.820452292761576,
+            "mean_dimension_std": 0.0941411170098766,
+            "mean_other_cosine": 0.42062641904678205,
+            "catastrophic_collapse": false
+          }
+        },
+        "target": {
+          "fused": {
+            "rows": 8192,
+            "effective_rank": 18.110307870644856,
+            "mean_dimension_std": 0.09623296065397728,
+            "mean_other_cosine": 0.38982544436327443,
+            "catastrophic_collapse": false
+          },
+          "sequence": {
+            "rows": 8192,
+            "effective_rank": 20.216317826462756,
+            "mean_dimension_std": 0.09321981256711451,
+            "mean_other_cosine": 0.42897635135428475,
+            "catastrophic_collapse": false
+          }
+        }
+      },
+      "wall_seconds": 165.11749381799996
+    },
+    "log": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/logs/E009-context/train.log",
+    "watchdog": {
+      "boot_id": "1a2bc0cb-056e-431e-aaa3-4e41398be1b1",
+      "checked_utc": "2026-10-22T22:00:26.377722+00:00",
+      "decision": "workflow alive",
+      "expected_process": {
+        "command_sha256": "cf49bfe5410665ab2df34f1d44904556efeaacdb013b08b7ba6d5fc9e78ac12f",
+        "pid": 1382,
+        "start_ticks": 3151
+      },
+      "observed_process": {
+        "command_sha256": "cf49bfe5410665ab2df34f1d44904556efeaacdb013b08b7ba6d5fc9e78ac12f",
+        "pid": 1382,
+        "start_ticks": 3151
+      },
+      "shutdown": false,
+      "workflow_root": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916"
+    },
+    "free_bytes": 86047539200,
+    "global_used_bytes": 230669336576,
+    "sampled_global_growth_bytes": 1083940864,
+    "seconds_since_release_at_observation": 256.2077262401581
+  },
+  "science_completed": false,
+  "quality_or_keep_modify_abandon_assessed": false,
+  "archive_collected": false,
+  "export_downloaded": false,
+  "operational_failures": [
+    {
+      "status": "FAILED_BEFORE_VM_MUTATION",
+      "path": "artifacts/e019-window-context/launch-20261022/start-existing-attempt-1.py.txt",
+      "cause": "Local orchestration identifier replacement retained obsolete experiment suffix; missing protocol path; repaired before VM start"
+    },
+    {
+      "status": "FAILED_BEFORE_REMOTE_EXECUTION",
+      "path": "artifacts/e019-window-context/launch-20261022/progress-1.ssh.log",
+      "cause": "Progress-only adapter newline escaping syntax error; preserved and repaired with rendered-script parse; science/watchdog unaffected"
+    },
+    {
+      "status": "FAILED_PUSH_LOCAL_SANDBOX",
+      "cause": "First normal push could not write Git LFS local cache; authorized elevated ordinary push succeeded; no force push or Git setting change"
+    }
+  ],
+  "retained_log_root": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/logs",
+  "local_launch_root": "artifacts/e019-window-context/launch-20261022",
+  "completion_uri": "gs://dl-binner-archive-167650584170/e019/context-20261022T215123Z-b47b916/completion.json",
+  "watchdog_exit_uri": "gs://dl-binner-archive-167650584170/e019/context-20261022T215123Z-b47b916/watchdog-exit.json",
+  "guest_attribute": "e019-candidate/status",
+  "limits_and_claims": "No baseline refit/rescore, external binner, reads/acquisition/mapping/aligner, new seed/grid/model/default change, confirmation, provisioning/resize/service/retention change. Original Mac allclose failure and all earlier journals remain. Native tiny engineering is not community stability or quality. The longer run is handed off after supervision and real progress verification; final actual uptime/costs/member review/diagnostics remain pending.",
+  "evidence": {
+    "native_snapshot": {
+      "bytes": 53050,
+      "sha256": "7661bca779adb8c2ff2a16f96484e03a147172d3855f192050f0ad9e46e82b5f"
+    },
+    "progress_snapshot": {
+      "bytes": 54426,
+      "sha256": "83e2a4ad948fd39105ba132257481c3dab280ca5f0124be04594dd866f3fae9d"
+    },
+    "provider_STOP": {
+      "bytes": 33010,
+      "sha256": "d04b1b564001a2aa1a8e6440b5d0916fe62f4f1136719b0febe2447ccdb63cee"
+    },
+    "provider_started": {
+      "bytes": 33118,
+      "sha256": "36c60f07f9c969cc9aec5186b882bc140d91d0e07b8c4c6db1ebf47d705903c5"
+    },
+    "release_log": {
+      "bytes": 998,
+      "sha256": "57f6d0577e83eb6359d079ce0a28515cc944bad657dc4e2b3a9adbc28ecdfd7e"
+    }
+  },
+  "allocation_cost_snapshot": {
+    "status": "IN_PROGRESS_NO_FINAL_INVOICE",
+    "observed_VM_seconds": 556.0846762657166,
+    "allocated_vCPU_hours": 1.2357437250349257,
+    "estimated_compute_IP_USD": 0.042176810135660193,
+    "estimated_run_disk_attribution_USD": 0.006477688870819415,
+    "estimated_subtotal_USD": 0.04865449900647961,
+    "export_performed": false,
+    "final_allocation_and_collection_export_cost_pending": true,
+    "note": "Price actual provider interval at exit; sampled CPU and credit delta are not billed uptime. Disk attribution also belongs to separate storage interval and must not be double-counted."
+  },
+  "progress_scope": "Three complete real community epochs after token construction; fresh watcher identity passes 256.21 seconds after release. No final scientific, delivery or quality result.",
+  "launch_adapters": {
+    "start-existing.py": {
+      "bytes": 3203,
+      "sha256": "8093d6be1243711402634c24f524eb64a3fa4ab9e2d0f6e3b757794292a317f7",
+      "locator": "artifacts/e019-window-context/launch-20261022/start-existing.py"
+    },
+    "native-setup-executed.py": {
+      "bytes": 6134,
+      "sha256": "1e909cf1c1d45919d0b87c94dd42ade567319f6562731133508a7b831760cf13",
+      "locator": "artifacts/e019-window-context/launch-20261022/native-setup-executed.py"
+    },
+    "native-bootstrap-executed.py": {
+      "bytes": 3259,
+      "sha256": "94f93ee99eef9eb0eb1cca76fa1f1b8d547f1159d35f140e3b711dcf831685a9",
+      "locator": "artifacts/e019-window-context/launch-20261022/native-bootstrap-executed.py"
+    },
+    "native-release-executed.py": {
+      "bytes": 5010,
+      "sha256": "9cab99cb964adde8060b41dfbdf606993141090521b34d7e7b808a2f97fe2977",
+      "locator": "artifacts/e019-window-context/launch-20261022/native-release-executed.py"
+    }
+  },
+  "provider_handoff": {
+    "provider": {
+      "name": "dl-binner-cpu",
+      "status": "RUNNING",
+      "machineType": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/machineTypes/e2-standard-8",
+      "scheduling": {
+        "automaticRestart": false,
+        "instanceTerminationAction": "STOP",
+        "maxRunDuration": {
+          "nanos": 0,
+          "seconds": "29700"
+        },
+        "onHostMaintenance": "MIGRATE",
+        "preemptible": false,
+        "provisioningModel": "STANDARD"
+      },
+      "lastStartTimestamp": "2026-10-22T14:51:19.424-07:00",
+      "lastStopTimestamp": "2026-10-21T05:47:49.812-07:00"
+    },
+    "guest": [
+      {
+        "key": "status",
+        "namespace": "e019-candidate",
+        "value": "{\"status\": \"RUNNING\", \"stage\": \"science\", \"root\": \"/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916\", \"source\": \"b47b9164e3cb2ce51ae46728b813dbbb8d4320ea\", \"epoch\": 1792706179.4325626}"
+      }
+    ],
+    "project-billing": {
+      "billingAccountName": "billingAccounts/01DD71-3C7861-1E59DF",
+      "billingEnabled": true,
+      "name": "projects/project-d17bd588-df31-488f-b16/billingInfo",
+      "projectId": "project-d17bd588-df31-488f-b16"
+    }
+  },
+  "provider_handoff_scope": "Independent read-only control-plane/guest observation after supervised progress; VM remains RUNNING, not completion evidence."
+}

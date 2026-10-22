@@ -1,12 +1,18 @@
 # E019 operations
 
-Local implementation/engineering is complete on `e019-window-context`; the
-community comparison is **prepared and separately unauthorized**. Preserve the
-source/wheel/default locks and all failed local journals. E016 learning is the
-anchor; E017 original/MODIFY and E018 ABANDON remain historical evidence. No new
-community outcome, native Linux support or performance/default claim exists.
+**Authorized comparison RUNNING, not yet reviewed.** Phase `context-20261022T215123Z-b47b916`
+uses exact clean source `b47b9164e3cb2ce51ae46728b813dbbb8d4320ea` in a fresh
+isolated VM checkout. [Native receipt](native-observed.json) records the new $5,
+all ten passing Linux gates, full axes/bytes, native 20-epoch timing/reloads and
+fresh tested boot/process watcher. No completed community/quality result exists.
+E016 is the comparator; E017 original/MODIFY and E018 ABANDON remain preserved.
 
-## What is prepared
+Prepared source/wheel/default/record locks remain scoped to immutable `b47b916`.
+Later administrative receipt/docs commits are not science-source replacements.
+The original approval prompt is retained at that commit; the exact prompt below
+now inspects this phase after exit. Do not sync a running checkout to later docs.
+
+## Executed launch and retained workflow
 
 The [design](design.md) and [protocol](protocol.json) freeze one compact global/local
 composition encoder around the original real E014/E016 views. Native inputs and
@@ -30,8 +36,9 @@ automatic retry or fallback is available. Full DNA is physically emitted once
 The [held parent](../../scripts/e019_phase.py), [bootstrap](../../scripts/e019_bootstrap.py),
 [runtime](../../scripts/e019_runtime.py), [reuse verifier](../../scripts/e019_reuse.py),
 [arm adapter](../../scripts/e019_arm.py), [native timing helper](../../scripts/e019_timing.py)
-and [collector](../../scripts/e019_collect.py) are prepared. Fresh Linux gates are
-still required. The parent and every setup/hash/fit/export/upload/readback share
+are launched at the frozen source. The [collector](../../scripts/e019_collect.py)
+passes its real tiny/native contracts; community collection has not run yet.
+All ten native gates pass; execution and later inspection remain distinct. The parent and every setup/hash/fit/export/upload/readback share
 the original VM-start clock, with global disk growth carried across guards.
 Collector preflights its manifest-inclusive worst-case return before writing; it
 will not use an oversized fallback. Exact-byte reference aliases are tested.
@@ -43,7 +50,7 @@ The new [review adapter](../../scripts/e019_review.py) preserves the accepted
 E009-v2/oral evaluators, validates all three exports and adds actual token-
 manifest/native-consumption/inventory bindings. Token NPY files remain on VM:
 local review of their manifest is not an independent numeric reread or backup.
-No truth evaluator is run in preparation. Baseline summaries are reused only.
+No truth evaluator is run during setup or training. Baseline summaries are reused only.
 The review admission must explicitly attest completed workflow, independent
 TERMINATED, every archive/member byte and cost/retention before diagnostics.
 
@@ -53,9 +60,9 @@ TERMINATED, every archive/member byte and cost/retention before diagnostics.
 vCPU / 32 GiB), 300 GiB balanced work and 30 GiB standard boot disk. No resize,
 provisioning, GPU, premium image, new service or retention extension is proposed.
 
-| Item | Proposed bound or forecast |
+| Item | Frozen bound or forecast |
 | --- | --- |
-| New gross authorization | $5; maximum quote about $3.48 with reserve |
+| New gross authorization | Owner approved $5; fresh maximum quote about $3.48 with reserve |
 | VM-start cumulative clock / provider STOP | 8 hours / 8.25 hours, STOP and no restart |
 | Numerical concurrency | Four threads, zero loader workers; serial scientific rules |
 | Sampled tree RSS | 26 GB ceiling; forecast 12–20 GB |
@@ -90,87 +97,95 @@ read is not a future approval. STOP must precede both storage and credit expiry.
 No deletion or automatic renewal follows. Omitted full DNA, token NPY, original
 feature/view/marker caches and runnable prefixes are not backed up by hashes.
 
+## Current supervision and inspection boundary
+
+VM started October 22 at **21:51:19.424 UTC / 23:51:19.424 Copenhagen**.
+Original science/setup/collection clock ends October 23 at **05:51:19.424 UTC /
+07:51:19.424 Copenhagen**. Independent provider STOP is **06:06:19.424 UTC /
+08:06:19.424 Copenhagen**, no automatic restart. The watcher checks the exact
+current-boot/PID/start/command every 30 seconds and stops after confirmed exit.
+Its live/normal/crash tests pass. The parent survives chat/SSH disconnection.
+
+Native Python 3.12.10 complete 28-distribution inventory, 36 installed sources,
+resolved library bytes, CLI, 59 contracted retained members / 4,229,058,857 bytes,
+complete 145,702 / 1,286,547 contig axes, original views and ordered ten/zero depth
+columns all pass. Six context and five launcher contracts plus one real 15-job
+native tiny DAG pass. Both 1,024-parent 20-epoch engineering modes pass their
+unchanged collapse guards, exact reload and learned residual/attention states.
+Median steady epochs are 0.78625 s depth / 0.70157 s sequence. The unchanged 2x
+parent/epoch scaling plus 5,400 s reserve predicts **22,077.39 s / 6.13 hours**,
+within the remaining original clock. This is no guarantee of community stability.
+
+Original work-filesystem snapshot: **81.15 GiB free** before checkout/environment.
+Fresh paid credit shows **DKK 1,882.53 Available / 95%**, Certain usage / net
+pricing, expiry January 12, 2027. Overview costs/savings DKK 88.70, net zero;
+usage can lag over 24 hours, so $35 reserve remains. Fresh Catalog maximum quote
+**$3.4786** includes export/reserves; separate $8 storage forecast **$7.6313**
+still ends October 28 at 00:00 Copenhagen. Neither quote nor credit delta is an
+invoice. Existing stopped disks remain **$31.20/month**; no automatic renewal.
+
+Logs: `/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/logs/parent-terminal.log`,
+`logs/science.log` and `work/logs/{E009-context,oral-context}/` below that root.
+Guest attribute `e019-candidate/status`; private completion and watcher evidence
+under `gs://dl-binner-archive-167650584170/e019/context-20261022T215123Z-b47b916/`.
+A running stage is not completed science, delivered evidence or admitted quality.
+Latest retained observation, **22:00:35 UTC October 22 / 00:00:35 Copenhagen
+October 23**: E009 token stage complete and training epoch 3 complete, all 89,041
+parents / 432,664 available views each epoch, finite losses, all four online/
+teacher branch collapse checks pass. Watcher reports the exact process alive;
+80.14 GiB free and about 1.01 GiB global growth. This is real progress, not
+completed recovery evidence. Allocation then was 556.08 s, quote ~$0.04218
+compute/IP + ~$0.00648 run disks before final collection/export; final
+allocation/invoice remains pending.
+After verified shutdown use the prompt below.
+No missing-evidence wake, scientific replay or clock/budget/retention extension
+follows automatically. Assess collection-only recovery separately if necessary.
+
 ## Exact following prompt
 
-This is a **new approval request**, not execution authorized by E018's $1 or by
-the current local implementation task:
+Our goal is substantially closing the recovery gap. Read AGENTS.md, PROJECT_INTENT.md,
+STATE/CLOUD, D013/D015 and E019's frozen design/source
+review/protocol/criteria/candidate/reuse locks, native-observed.json and operations.
+Inspect phase `context-20261022T215123Z-b47b916` at original source
+`b47b9164e3cb2ce51ae46728b813dbbb8d4320ea` without starting another job. Preserve all
+accepted evidence and failed journals.
 
-Our goal is substantially closing the recovery gap through coherent upgrades and
-selective controls. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and
-E019's design, source review, protocol/criteria, candidate/reuse locks, local
-evidence, resource plan, confirmation plan and operations. Preserve immutable
-dev3/dev4/dev5/E016 and all accepted E009–E019 inputs, truth, results, source
-freezes and failed journals. E018's permissive policy remains abandoned.
+Verify control-plane state, `e019-candidate/status`, private completion.json and
+watchdog-exit.json under
+`gs://dl-binner-archive-167650584170/e019/context-20261022T215123Z-b47b916/`. Do not
+infer success from shutdown. If healthy and running, report real progress and leave
+supervision intact without polling to completion.
 
-I authorize the single frozen E019 two-community candidate-versus-preserved-E016
-development comparison under a **new $5 incremental gross ceiling**, conditional
-on all gates. Use only the existing e2-standard-8 / 32 GiB VM and 300 GiB work
-disk, eight cumulative hours from VM start including setup/verification/token
-construction/fits/collection/upload/readback, provider STOP at 8.25 hours, four
-numerical threads, 26 GB sampled tree RSS, 25 GiB free reserve, 20 GiB maximum
-extra space and 3 GiB compressed export. No provisioning, resize, new seed/grid,
-schedule/model/default change, confirmation, reads/mapping/aligner, external
-binner, other ablation, service change or retention extension. Previous budgets
-and permission to increase a different VM run's cost do not carry over.
+After independently verified TERMINATED, establish all ten native-gate exits, all
+fourteen serial scientific stage exits plus the final target, reuse-after,
+collection/upload/readback and watcher evidence. Refresh credit/prices/storage and
+assess export/local staging against the remaining original new $5 and approved storage
+ending October 28 at 00:00 Copenhagen before downloading; no automatic wake, replay,
+extension or resource/retention change. Verify archive and every retained member/alias.
 
-First check live Welcome-credit balance/scope/expiry, delayed usage, applicable
-prices and coverage, actual retained storage/versions and the $8 interval ending
-October 28 at 00:00 Copenhagen. Stop before unclear/uncovered spending, resource
-needs or STOP dates beyond that approval. Normally push the exact clean prepared
-`e019-window-context` branch from Mac and sync the VM read-only to that commit in
-a fresh isolated checkout. Verify the exact tested wheel, every owned source/
-default, original HMM, accepted FASTA/feature/view/marker bytes and complete
-ordered ten-depth or zero-depth axes. No cache recopy/reinstall fallback.
+Review exact source/schedule/full contig and ten-depth or zero-depth axes, original
+view/exposure/parent-depth semantics, token provenance/native consumption,
+online/stopped-teacher/predictor/EMA/collapse histories, exact native reload, unit
+geometry/neighbors, cached markers/fixed CPM/E013 choices and complete pre/old/post DNA.
+Omitted token NPY/full DNA remain on disk; hashes are not backups or a local numeric
+reread.
 
-Set and read back the independent 8.25-hour provider STOP/no-restart fallback
-before starting the existing VM. Capture provider start time, boot and mounted
-disk identity. Arm and test a fresh current-boot/PID/start/command held-parent exit
-watcher before releasing the launcher, retaining live/normal-exit/crash proofs.
-Take the original work-filesystem snapshot before checkout, wheel or environment
-creation, so setup counts toward both clock and global growth. Materialize the
-template only under a fresh phase root; `e019_phase.configuration` translates
-the actual launch source and binds its exact wheel/payload/config paths.
-Create only the new complete package prefix, reusing accepted numerical
-dependencies explicitly read-only. Run exact complete inventory/import/library/
-source/CLI and new real tiny token/strand/attention/gradient/EMA/noncollapse/
-train/reload/graph/marker/refinement/export/collection/DAG gates inside the same
-clock. Validate both native timing forecasts and headroom before any community
-bank or fit; do not silently change the schedule to make it fit.
+Only after complete admission, run the frozen bounded local new-output diagnostics
+against conservative E009 v2 and separately named oral provided-origin truth with full
+156/799 denominators, 3.3034% N quarantine, known-shared sensitivity and every
+length/origin/eligibility/marker/unknown/non-target/excluded/unassigned population.
+Reuse old E016 and older summaries without refitting/rescoring, preserve the failed Mac
+tolerance, and apply unchanged keep/modify/abandon without truth-selected routing or
+tuning.
 
-Run the prepared serial E019 DAG once on original E009 ten-depth and oral
-sequence-only inputs. Preserve full DNA, indexed token manifests/counts, features,
-online/teacher/predictor/optimizer/history, native unit vectors/graphs and
-pre/old/E013 alternatives. Reuse E016 and older results without refitting or
-rescoring. Keep truth/markers/taxonomy outside learning, and measured parent depth
-distinct from measured window coverage. Do not acquire confirmation data or oral
-reads. Debug recoverable operational errors with fresh retained attempts and
-verified reuse inside the same clock/budget; never replay accepted science or
-extend automatically. Preserve every failure. On limit or scientific/contract
-failure collect bounded evidence and stop.
+Four threads, 8 GB sampled RSS, one hour and 10 GiB extra; stage sequentially. Price
+actual allocation, storage and export separately from sampled CPU or credit delta.
+Report paired pre/old/E013 and per-target effects, limits and at most one strongest next
+decision.
 
-If healthy after verifying supervision and real progress, wait a few minutes and
-report the exact stage/logs, finishing for a longer run without polling to
-completion. Follow a short run through collection. After exit, independently
-verify TERMINATED, guest/private completion, actual stage exits, archive and all
-member/alias bytes, actual allocation/storage/export quote and remaining original
-budget before download. Do not infer success from shutdown or missing logs.
+Both communities remain development; skin remains frozen/unacquired pending its full
+source/genome/replicon/molecule/taxonomy/overlap/ambiguity/unique-versus-origin/full-denominator/protocol/cost/retention
+admission.
 
-After verified completion perform only frozen bounded local new-output diagnostics
-using conservative E009 v2 and separately named oral provided-origin truth,
-full 156/799 provided denominators, 3.3034% N-quarantine, known-shared sensitivity
-and every length/origin/eligibility/marker/unknown/non-target/excluded/unassigned
-population. Apply original keep/modify/abandon without per-bin/community oracles,
-threshold tuning or changing the old Mac portability tolerance. Verify native
-unit geometry, token provenance, EMA/collapse histories and paired pre/old/E013
-effects. State that omitted token bytes are only natively consumed/inventory-bound,
-not independently reread locally or backed up by their hashes. This is a bundle
-comparison on two development communities, not causal attention proof, general
-robustness or product-family/default selection.
-
-Keep skin unacquired pending actual sample/source/genome/replicon/molecule/
-taxonomy joins, overlap/pretraining, duplicate-safe full/zero-origin denominators,
-competitive ambiguity/unique-versus-origin truth, unchanged confirmation protocol
-and separate acquisition/compute/cost/retention admission. Genuine oral depth
-also remains separate. Update records, run relevant checks and commit with
-structured what changed/why; report actual costs/resources, paired results and
-limits, at most one strongest next decision and the exact following prompt.
+Update records, check and commit with structured what changed/why; give the exact next
+prompt and any separate authorization needed.
