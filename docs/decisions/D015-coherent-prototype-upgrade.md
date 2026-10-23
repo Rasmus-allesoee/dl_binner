@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E019 reviewed comparison](../../experiments/E019-window-context/comparison-review.json) is complete: MODIFY, E009 7.3058% /oral 6.5077% post R95. Recommend one separately approved cached E019-learning + original E017-grouping integration before a new pretrained-information route. E016/E017/E018 evidence remains immutable; storage still ends October 28 at 00:00 Copenhagen.
+Current handoff: [E020 native admission](../../experiments/E020-context-information-integration/native-observed.json) passes all seven gates and releases the owner-authorized cached E019-learning + original E017-grouping integration, source 99af96f. No quality outcome yet. E019 MODIFY and all earlier evidence remain immutable; storage still ends October 28 at 00:00 Copenhagen.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
@@ -1150,3 +1150,12 @@ sparse/refiner/four-export/collector contracts pass; native source/runtime/credi
 headroom/retention gates precede execution. All sources/results/failures remain.
 90-minute cumulative / 105-minute STOP, $1 new ceiling and original October 28
 storage boundary apply; no old budget, scientific replay or extra resource.
+
+
+E020 native follow-through: all seven retained-byte/runtime/full-context-axis/real
+tiny marker/refiner/export/launcher/DAG gates pass under a fresh process/boot-bound
+watcher. The sole original-policy cached comparison is released, not scored or
+complete. Existing source/package/vectors and full populations remain; no retry
+of accepted science, model/threshold change, new DNA or retention extension.
+[Operations](../../experiments/E020-context-information-integration/OPERATIONS.md)
+owns exact clock, logs, original $1 and subsequent frozen inspection boundary.

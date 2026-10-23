@@ -571,3 +571,10 @@ with E013 unchanged. No new community outcome yet. Keep original criteria and bo
 scopes, full populations and negative evidence; no assumption of additive gains,
 product-default promotion or new information-family conclusion. Skin remains
 unacquired; fresh execution/credit/source/headroom/retention gates still apply.
+
+
+E020 execution update, October 23, 2026: [all seven Linux gates pass](../../experiments/E020-context-information-integration/native-observed.json),
+and the one cached integration is released under verified fresh supervision.
+This moves the prospective interaction question into testing, not resolution.
+No recovery outcome or default/promotion claim yet; all immutable baselines,
+full truth/population contracts and October 28 storage boundary remain.

@@ -5,17 +5,24 @@ Updated: 2026-10-23. This is the single current handoff.
 ## Exact next step
 
 
-**E020 authorized preparation, October 23:** the owner approves the separately
-bounded new $1 cached E019-learning + original E017 grouping comparison.
-[Operations](../experiments/E020-context-information-integration/OPERATIONS.md)
-now owns current execution/inspection boundaries. New source/restore/metadata/
-launcher contracts pass locally; native gates and VM start remain pending.
-Existing E019 science/package/vectors and all older evidence stay immutable;
-no inference, learning, marker scan, new DNA or E018 acceptance is included.
-90-minute cumulative / 105-minute STOP, four threads / 26 GB / 25 GiB reserve /
-20 GiB global growth / 2 GiB return. Fresh price/credit/coverage/storage checks
-quote $0.9513 maximum with reserves; separate $8 storage forecast $7.632 ends
-October 28 at 00:00 Copenhagen. No automatic extension.
+**E020 is running under verified supervision**, phase `integration-20261023T111835Z-99af96f`,
+exact source **99af96f**. [Native admission](../experiments/E020-context-information-integration/native-observed.json)
+and [operations / next inspection prompt](../experiments/E020-context-information-integration/OPERATIONS.md)
+own all seven passed gates, exact runtime/full axes/138 files and current real
+progress. Original E019 learning/vectors and original E017 grouping/E013 remain
+fixed. No inference, fit, marker scan or old score. No completion/quality result yet.
+At 13:27 Copenhagen, all four E009 stages have finished; oral recruitment advances.
+Latest sampled RSS 5.19 GB / free 68.202 GiB; matching watcher remains alive.
+
+Existing VM/disks; original 90-minute clock ends **October 23 14:48:30 Copenhagen**,
+provider 105-minute STOP/no restart **15:03:30**. Fresh boot/process-bound held-parent
+watcher passes live/normal/crash and current identity checks. Healthy longer work
+is handed off after progress verification, without polling to completion. On exit
+verify shutdown/completion/stages/archive/every member/cost before frozen diagnostics.
+New $1 maximum quote **$0.95122**, credit **DKK 1,874.97 Available / January 12**;
+pending usage unknown, $35 reserve. Separate $8 storage forecast **$7.6315** still
+ends **October 28 at 00:00 Copenhagen**, disks **$31.20/month**. No resource or
+retention change; skin remains unacquired. Exact limits/exclusions remain in E020.
 
 The following E019 completed-review snapshot is preserved context.
 

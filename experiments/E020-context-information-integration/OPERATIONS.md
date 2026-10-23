@@ -1,10 +1,47 @@
 # E020 operations
 
-Owner authorizes one new $1 cached E019-learning + original E017 grouping comparison,
-subject to fresh credit/source/runtime/headroom/retention gates. Locally preparing;
-no E020 community output or biological outcome yet. [Design](design.md),
-[protocol](protocol.json), [resource plan](resource-plan.json), [reuse](reuse-lock.json)
-and [source freeze](candidate-lock.json) own scope. Earlier E019 results stay intact.
+**E020 now running under verified supervision.** Phase `integration-20261023T111835Z-99af96f` uses
+exact clean pushed source `99af96f` in a new isolated VM checkout.
+All seven native source/runtime/byte/full-axis/tiny/refiner/export/launcher/DAG gates
+passed; 138 retained files / 5,935,872,985 bytes match. The sole serial cached
+comparison was released at 2026-10-23T11:22:24.366455+00:00. [Native receipt](native-observed.json)
+owns current progress, source/runtime, watcher and cost snapshots. No result or
+KEEP/MODIFY/ABANDON conclusion yet; no learning, inference or marker search.
+
+Provider start **October 23 11:18:30.392 UTC / 13:18:30.392 Copenhagen**. Original
+90-minute clock ends **12:48:30 UTC / 14:48:30 Copenhagen**; independent 105-minute
+STOP/no restart ends **13:03:30 UTC / 15:03:30 Copenhagen**. Fresh boot `c7cb22a3-ad3d-417a-b4cb-74766344faf5`
+/PID 1816/start 6255/command-bound watcher passes native live/normal/crash tests and
+current live verification. The parent attempts bounded collection before exit.
+The watcher stops the VM after normal exit or a crash; provider STOP remains
+independent. Do not stop healthy science
+when chat ends, poll until completion, or start another job.
+
+
+Handoff at **October 23 11:27:17 UTC / 13:27:17 Copenhagen**: all four E009
+stages have successful workflow finish events. Oral fixed-profile recruitment is
+advancing (18,432 / 454,295 at 11:27:16 UTC), sampled RSS latest **5.19 GB**,
+free **68.202 GiB**, global sampled growth **0.347 GiB** from original snapshot.
+Watcher remains `workflow alive` with the same boot/PID/start/command.
+Measured allocation through this snapshot **526.745 s / 0.1463 h**; provisional
+compute/IP + run-disk attribution **~$0.0461**, still accruing, with no export yet.
+This is not a final invoice. No full-run completion/quality or disposition claimed.
+Healthy longer science is left supervised without polling to completion.
+
+Fresh credit **DKK 1,874.97 Available / 95%**, Certain usage/net pricing, expires
+January 12, 2027; paid account and ordinary product coverage pass. October 1–23
+Overview cost/savings **DKK 94.06**, net zero; >24-hour delay remains unknown with
+$35 reserve. Full maximum allocation/disk/2 GiB export/metadata/uncertainty quote
+**$0.95122 < new $1**. Actual final costs await shutdown/export. Existing disks
+remain **$31.20/month**; separate $8 storage forecast **$7.6315**, 99 versions /
+8,345,160,022 bytes / zero soft-deleted, through **October 28, 00:00 Copenhagen**.
+No provisioning/resize/service/retention change. Initial work free 68.549 GiB; global
+growth/reserve use original pre-checkout snapshot.
+
+The owner-authorized scope is now executing. [Design](design.md), [protocol](protocol.json),
+[resource plan](resource-plan.json), [reuse](reuse-lock.json) and
+[source freeze](candidate-lock.json) stay prospective and unchanged. Earlier
+E019 and all failed local/native connection journals remain intact.
 
 Existing e2-standard-8 / 32 GiB and 300 GiB work disk only. One 90-minute VM-start
 clock including setup/hash/group/refine/export/collect/upload/readback; independent
@@ -32,7 +69,7 @@ before only-new-output frozen local diagnostics. No old refit/rescore or tuning.
 
 After the authorized comparison has finished: read AGENTS.md, PROJECT_INTENT.md,
 STATE/CLOUD, D013/D015 and E020 design/protocol/criteria/source/reuse/local/native
-records. Inspect only the phase in native-observed.json. Preserve all E009–E020
+records. Inspect only phase `integration-20261023T111835Z-99af96f` in native-observed.json. Preserve all E009–E020
 accepted evidence and failures. Check control-plane TERMINATED, e020-candidate/status,
 private completion and matching watcher exit; never infer success from shutdown.
 If healthy and running, report actual progress and leave supervision intact.

@@ -1,0 +1,814 @@
+{
+  "record": "E020 source-exact cached integration native admission",
+  "status": "RUNNING_VERIFIED_SUPERVISION_AND_REAL_PROGRESS; NOT_COMPLETED_OR_SCORED",
+  "observed_UTC": "2026-10-23T11:29:13.417157+00:00",
+  "phase": "integration-20261023T111835Z-99af96f",
+  "source_commit": "99af96fb31e2b29972f5b9c7882ed0bef27a0fb2",
+  "branch": "e020-context-information-integration",
+  "identity": {
+    "phase": "integration-20261023T111835Z-99af96f",
+    "source": "99af96fb31e2b29972f5b9c7882ed0bef27a0fb2",
+    "vm_start_epoch": 1792754310.392,
+    "root": "/srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f",
+    "service_name": "e020-20261023t111835z",
+    "repo": "/srv/dl_binner/research/e020-99af96fb31e2",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e020/integration-20261023T111835Z-99af96f"
+  },
+  "authorization": {
+    "new_gross_USD_ceiling": 1,
+    "VM_start_clock_seconds": 5400,
+    "provider_STOP_seconds": 6300,
+    "threads": 4,
+    "sampled_tree_RSS_bytes": 26000000000,
+    "free_reserve_GiB": 25,
+    "max_global_growth_GiB": 20,
+    "max_compressed_return_GiB": 2,
+    "storage_ends": "2026-10-28T00:00:00+01:00",
+    "no_retention_extension": true
+  },
+  "provider": {
+    "name": "dl-binner-cpu",
+    "status": "RUNNING",
+    "machineType": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/machineTypes/e2-standard-8",
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "6300"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "lastStartTimestamp": "2026-10-23T04:18:30.392-07:00"
+  },
+  "host": {
+    "user": "rasmus_allesoee_gmail_com",
+    "uid": 1852909767,
+    "gid": 1852909767,
+    "boot_id": "c7cb22a3-ad3d-417a-b4cb-74766344faf5",
+    "cpus": 8,
+    "physical_memory_bytes": 33646948352,
+    "used_bytes": 243112599552,
+    "free_bytes": 73604276224,
+    "mount": "/srv/dl_binner",
+    "mount_identity": {
+      "filesystems": [
+        {
+          "target": "/srv/dl_binner",
+          "source": "/dev/sdb",
+          "fstype": "ext4",
+          "uuid": "f76283ed-60c4-4060-bd22-84c95f38d3fb",
+          "size": "295G",
+          "options": "rw,relatime,discard"
+        }
+      ]
+    },
+    "checked_UTC": "2026-10-23T11:19:42.613456+00:00",
+    "source": "99af96fb31e2b29972f5b9c7882ed0bef27a0fb2",
+    "original_checkout_source": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+    "new_research_checkout": "/srv/dl_binner/research/e020-99af96fb31e2"
+  },
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e020-20261023t111835z.service",
+    "watchdog_timer": "e020-20261023t111835z-exit.timer",
+    "watchdog_service": "e020-20261023t111835z-exit.service",
+    "process": {
+      "pid": 1816,
+      "start_ticks": 6255,
+      "command_sha256": "8aa4c63cd9761f2bd802e1dd6e937120eaacc7cd775c66edd54207abbb3fb8df"
+    },
+    "boot_id": "c7cb22a3-ad3d-417a-b4cb-74766344faf5",
+    "source_commit": "99af96fb31e2b29972f5b9c7882ed0bef27a0fb2",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1792754310.392,
+    "hard_deadline_epoch": 1792759710.392,
+    "provider_stop_epoch": 1792760610.392,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "current_watch_status": {
+    "boot_id": "c7cb22a3-ad3d-417a-b4cb-74766344faf5",
+    "checked_utc": "2026-10-23T11:27:01.551680+00:00",
+    "decision": "workflow alive",
+    "expected_process": {
+      "command_sha256": "8aa4c63cd9761f2bd802e1dd6e937120eaacc7cd775c66edd54207abbb3fb8df",
+      "pid": 1816,
+      "start_ticks": 6255
+    },
+    "observed_process": {
+      "command_sha256": "8aa4c63cd9761f2bd802e1dd6e937120eaacc7cd775c66edd54207abbb3fb8df",
+      "pid": 1816,
+      "start_ticks": 6255
+    },
+    "shutdown": false,
+    "workflow_root": "/srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f"
+  },
+  "release": {
+    "credit_gate_passed": true,
+    "pending_usage_accounted": true,
+    "native_gates_passed": true,
+    "watchdog_verified": true,
+    "existing_VM_only": true,
+    "full_axes_verified": true,
+    "config": {
+      "bytes": 2225,
+      "sha256": "5d782c1d77b700dde0c28ec384f7fb896714d5a700de26fb5257d19411f821d5"
+    },
+    "provider_STOP_seconds": 6300,
+    "ceiling_USD": 1,
+    "estimated_incremental_gross_USD": 0.9512170301099145,
+    "compressed_export_GiB": 2,
+    "storage_retention_extended": false,
+    "covered_costs": [
+      "compute",
+      "disk",
+      "storage",
+      "network",
+      "operations"
+    ],
+    "credit_valid_until_epoch": 1799708400.0,
+    "storage_valid_until_epoch": 1793142000.0,
+    "storage_authorization_sha256": "7c48e90d768ff6c0d6c775c4b3daded29cd59abfad09765ac50a7f1ba44b11cf",
+    "source_commit": "99af96fb31e2b29972f5b9c7882ed0bef27a0fb2",
+    "native_gate_exits": 7,
+    "retained_bytes_verified": 5935872985,
+    "release_UTC": "2026-10-23T11:22:24.366455+00:00"
+  },
+  "native_gate_status": "SUCCESS",
+  "native_gate_exits": [
+    {
+      "name": "retained-byte-reuse",
+      "exit_code": 0,
+      "wall_seconds": 25.804070179999997,
+      "sampled_RSS_bytes": 46911488
+    },
+    {
+      "name": "complete-existing-runtime-source-library",
+      "exit_code": 0,
+      "wall_seconds": 19.528837713,
+      "sampled_RSS_bytes": 295055360
+    },
+    {
+      "name": "full-context-axes",
+      "exit_code": 0,
+      "wall_seconds": 15.592524639000004,
+      "sampled_RSS_bytes": 2472710144
+    },
+    {
+      "name": "context-metadata-sparse-opaque-reader-refusal",
+      "exit_code": 0,
+      "wall_seconds": 0.2553087889999972,
+      "sampled_RSS_bytes": 35143680
+    },
+    {
+      "name": "cached-marker-worker-refiner-four-export",
+      "exit_code": 0,
+      "wall_seconds": 0.6873452770000199,
+      "sampled_RSS_bytes": 77864960
+    },
+    {
+      "name": "launcher-collector-contracts",
+      "exit_code": 0,
+      "wall_seconds": 0.7012496659999954,
+      "sampled_RSS_bytes": 77778944
+    },
+    {
+      "name": "serial-DAG-dryrun",
+      "exit_code": 0,
+      "wall_seconds": 1.1199371860000156,
+      "sampled_RSS_bytes": 72515584
+    }
+  ],
+  "retained_reuse": {
+    "files": 138,
+    "bytes": 5935872985,
+    "fallback": false
+  },
+  "full_axes": {
+    "E009-context": {
+      "bp": 231678157,
+      "context_metadata": {
+        "checkpoint_sha256": "ab0160ed5793addf5f36ceec64d70b523d655d5c4b5fe98597defc43e69404ca",
+        "features_sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e",
+        "ids_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+        "kind": "embeddings",
+        "metric": "unit-sphere cosine/equivalent Euclidean; no post-learning transform",
+        "mode": "context_online_unit_sphere",
+        "reload_exact": true,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ],
+        "sha256": "4a9e6c4ab00d4e6f774f2eb217c28fe8894f95ece6d05bfa90ed76c9c7d4136e",
+        "tokens_manifest_sha256": "8b19a0107dc341ffa374112179a1925fe38d0906596726fac93a5ded35803abd",
+        "version": 1
+      },
+      "eligible": 89041,
+      "embeddings": {
+        "bytes": 21880259,
+        "sha256": "4a9e6c4ab00d4e6f774f2eb217c28fe8894f95ece6d05bfa90ed76c9c7d4136e"
+      },
+      "features": {
+        "bytes": 42384557,
+        "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+      },
+      "measured_parent_depth": "Measured full-parent means; repeated conditioning for windows, not measured window depth. No variance available.",
+      "rows": 145702,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ]
+    },
+    "oral-context": {
+      "bp": 1669981123,
+      "context_metadata": {
+        "checkpoint_sha256": "81297e2989b6756525c844a283998c6ad196337883ca0160529b0105c977b37b",
+        "features_sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0",
+        "ids_sha256": "77eb90600172cb24d687302197a613146c008567b6922deb0fcee780dce89a89",
+        "kind": "embeddings",
+        "metric": "unit-sphere cosine/equivalent Euclidean; no post-learning transform",
+        "mode": "context_online_unit_sphere",
+        "reload_exact": true,
+        "samples": [],
+        "sha256": "812791fabd8e371b1f35af352b96b86183805f1b3ebb730a0b99c3897dc52986",
+        "tokens_manifest_sha256": "831c3ac7723632ea7e323efeb876d5e2353571633ae868cda513dda2f5b10673",
+        "version": 1
+      },
+      "eligible": 508763,
+      "embeddings": {
+        "bytes": 186037411,
+        "sha256": "812791fabd8e371b1f35af352b96b86183805f1b3ebb730a0b99c3897dc52986"
+      },
+      "features": {
+        "bytes": 333765352,
+        "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+      },
+      "measured_parent_depth": "Measured parent means condition crops, not measured window depth; no variance.",
+      "rows": 1286547,
+      "samples": []
+    }
+  },
+  "runtime": {
+    "base_prefix": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315",
+    "borrowed_read_only": true,
+    "dependency_base": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env",
+    "distribution_locations": {
+      "archspec": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/archspec-0.2.6.dist-info",
+      "dl-binner": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/lib/python3.12/site-packages/dl_binner-0.1.0.dev7.dist-info",
+      "filelock": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/filelock-4.0.10.dist-info",
+      "fsspec": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/fsspec-2026.9.0.dist-info",
+      "igraph": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/igraph-0.11.8.dist-info",
+      "jinja2": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/jinja2-3.1.6.dist-info",
+      "joblib": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/joblib-1.4.2.dist-info",
+      "leidenalg": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/leidenalg-0.10.2.dist-info",
+      "llvmlite": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/llvmlite-0.43.0.dist-info",
+      "markupsafe": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/markupsafe-3.0.4.dist-info",
+      "mpmath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/mpmath-1.3.0.dist-info",
+      "networkx": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/networkx-3.4.2.dist-info",
+      "numba": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numba-0.60.0.dist-info",
+      "numpy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy-1.26.4.dist-info",
+      "pip": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pip-25.1.1.dist-info",
+      "psutil": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/psutil-6.0.0.dist-info",
+      "pyhmmer": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyhmmer-0.11.0.dist-info",
+      "pynndescent": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pynndescent-0.5.13.dist-info",
+      "pyrodigal": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyrodigal-3.6.3.dist-info",
+      "scikit-learn": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn-1.5.2.dist-info",
+      "scipy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy-1.13.1.dist-info",
+      "setuptools": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/setuptools-65.5.0.dist-info",
+      "sympy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/sympy-1.14.0.dist-info",
+      "texttable": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/texttable-1.7.0.dist-info",
+      "threadpoolctl": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/threadpoolctl-3.5.0.dist-info",
+      "torch": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch-2.2.2+cpu.dist-info",
+      "typing-extensions": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/typing_extensions-4.16.0.dist-info",
+      "wheel": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/wheel-0.45.1.dist-info"
+    },
+    "distributions": {
+      "archspec": "0.2.6",
+      "dl-binner": "0.1.0.dev7",
+      "filelock": "4.0.10",
+      "fsspec": "2026.9.0",
+      "igraph": "0.11.8",
+      "jinja2": "3.1.6",
+      "joblib": "1.4.2",
+      "leidenalg": "0.10.2",
+      "llvmlite": "0.43.0",
+      "markupsafe": "3.0.4",
+      "mpmath": "1.3.0",
+      "networkx": "3.4.2",
+      "numba": "0.60.0",
+      "numpy": "1.26.4",
+      "pip": "25.1.1",
+      "psutil": "6.0.0",
+      "pyhmmer": "0.11.0",
+      "pynndescent": "0.5.13",
+      "pyrodigal": "3.6.3",
+      "scikit-learn": "1.5.2",
+      "scipy": "1.13.1",
+      "setuptools": "65.5.0",
+      "sympy": "1.14.0",
+      "texttable": "1.7.0",
+      "threadpoolctl": "3.5.0",
+      "torch": "2.2.2+cpu",
+      "typing-extensions": "4.16.0",
+      "wheel": "0.45.1"
+    },
+    "isolated_native_groups": {
+      "graph": {
+        "origins": {
+          "igraph": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/igraph/__init__.py",
+          "leidenalg": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/leidenalg/__init__.py",
+          "numba": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numba/__init__.py",
+          "pynndescent": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pynndescent/__init__.py",
+          "scipy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy/__init__.py",
+          "sklearn": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/sklearn/__init__.py"
+        },
+        "pools": [
+          {
+            "architecture": "Zen",
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.23.dev"
+          },
+          {
+            "architecture": "Zen",
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy.libs/libopenblasp-r0-01191904.3.27.so",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.27"
+          },
+          {
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+            "internal_api": "openmp",
+            "num_threads": 4,
+            "prefix": "libgomp",
+            "user_api": "openmp",
+            "version": null
+          },
+          {
+            "filepath": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/lib/libgomp.so.1.0.0",
+            "internal_api": "openmp",
+            "num_threads": 4,
+            "prefix": "libgomp",
+            "user_api": "openmp",
+            "version": null
+          }
+        ]
+      },
+      "markers": {
+        "origins": {
+          "archspec": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/archspec/__init__.py",
+          "pyhmmer": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyhmmer/__init__.py",
+          "pyrodigal": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/pyrodigal/__init__.py"
+        },
+        "pools": []
+      },
+      "tensor": {
+        "origins": {
+          "dl_binner": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/lib/python3.12/site-packages/dl_binner/__init__.py",
+          "numpy": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy/__init__.py",
+          "torch": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/__init__.py"
+        },
+        "pools": [
+          {
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/lib/libgomp-a34b3233.so.1",
+            "internal_api": "openmp",
+            "num_threads": 4,
+            "prefix": "libgomp",
+            "user_api": "openmp",
+            "version": null
+          },
+          {
+            "architecture": "Zen",
+            "filepath": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libopenblas",
+            "threading_layer": "pthreads",
+            "user_api": "blas",
+            "version": "0.3.23.dev"
+          }
+        ]
+      }
+    },
+    "native_library_targets": {
+      "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/lib/libgomp.so.1.0.0": {
+        "bytes": 1674616,
+        "sha256": "34324e0835be6e103844d7c416bec42834cf803d3ba8d9519df15ced19914dfe"
+      },
+      "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so": {
+        "bytes": 35123345,
+        "sha256": "9254d0854dd7615e11de28d771ae408878ca8123a7ac204f21e4cc7a376cc2e5"
+      },
+      "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0": {
+        "bytes": 168193,
+        "sha256": "3a7eaece7231911be2fbb1b3e7cb4cb5c2e0f84e0c2bb73739472b5a1feec8c1"
+      },
+      "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/scipy.libs/libopenblasp-r0-01191904.3.27.so": {
+        "bytes": 34990041,
+        "sha256": "9b91f6ba8fdba9cf7682371fda53bb228763bd5073ff824edbc4b81e2ddc46bc"
+      },
+      "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/lib/python3.12/site-packages/torch/lib/libgomp-a34b3233.so.1": {
+        "bytes": 168721,
+        "sha256": "570455c2902d6cc2a7f367703c06dac07495dd7f8a1ed2c8fc4cea628c881b13"
+      }
+    },
+    "portable": false,
+    "prefix": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env",
+    "python": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+    "python_version": "3.12.10",
+    "source": {
+      "__init__.py": {
+        "bytes": 112,
+        "sha256": "0c20fbc9684299d19a2d2cca6607b71eb8164928ab2119f079b2c26f81e9a01d"
+      },
+      "__main__.py": {
+        "bytes": 103,
+        "sha256": "28f47a18f1a12c011b4fa92812d8f4fb10840c469d489ee5ac246bc669620144"
+      },
+      "accounting.py": {
+        "bytes": 6732,
+        "sha256": "2a83aad8eb36864a704ebe72faeeba33c335c86f7072205f6f19c92db9f6f117"
+      },
+      "candidate/__init__.py": {
+        "bytes": 81,
+        "sha256": "5887ddf687250cefcf87aaa082c5a4edc9a5281a8a1be7a752300a5fcb190eff"
+      },
+      "candidate/grouping.py": {
+        "bytes": 12615,
+        "sha256": "d31c67705b2fc80d5fd06d8b2c403d7e543ebd64fc37c08b5b3db90ba657f233"
+      },
+      "candidate/markers.py": {
+        "bytes": 11226,
+        "sha256": "a77739cb64d219bf3af8e2baeb66ed81c86c53a8c5c633a184ee28412ee2760a"
+      },
+      "candidate/model.py": {
+        "bytes": 10499,
+        "sha256": "09eda66fcd324870d11b89c6f6b4bc7e4c02f3169d6d557389bc8c840de76f09"
+      },
+      "candidate/runner.py": {
+        "bytes": 12350,
+        "sha256": "ab153821b9bacf70373c7ffd79c058b1be356a6f96bdfae5aa8638cf4bdab2eb"
+      },
+      "candidate/views.py": {
+        "bytes": 8357,
+        "sha256": "d3f1b51ac61009f9f962d767fce5600d5c93bd14b4ca9adb4bdef7564438392f"
+      },
+      "cli.py": {
+        "bytes": 11565,
+        "sha256": "858943ab0a050285e50866cdf77188f89bfa5a6fa9f086a5eca10992a6792ea9"
+      },
+      "clustering.py": {
+        "bytes": 7880,
+        "sha256": "2ac715b1449287b002ef7e4a75b84ef204256c2d5f589e31a6810acfad941b66"
+      },
+      "context/__init__.py": {
+        "bytes": 83,
+        "sha256": "fa4215cc76f8b617b7771580085721dca8241e368ce96d7559cac2cca52bf5b9"
+      },
+      "context/model.py": {
+        "bytes": 19289,
+        "sha256": "f05c3ef2526880401af21e5bdb9a26f84b6faffc077bdeb882ff7678f0b9a4cf"
+      },
+      "context/stage.py": {
+        "bytes": 1234,
+        "sha256": "9174c043a838eec041b883ed9f1b0fe3323cb275db0199adee96c2a021997f5f"
+      },
+      "context/tokens.py": {
+        "bytes": 11844,
+        "sha256": "e2e2827798d085f245b20ec28830713d93fc189dee02998690d87b726e3ae7a2"
+      },
+      "contracts.py": {
+        "bytes": 1671,
+        "sha256": "0455b5a45ecbb29eb1f6c168048efa3a861279dc7ba2af36896ddb6dfcab632d"
+      },
+      "information/__init__.py": {
+        "bytes": 83,
+        "sha256": "381d0d6bcd5fa452ba19db73173e5aa825dd30b4b704c1e9bd633466ce750050"
+      },
+      "information/audit.py": {
+        "bytes": 6106,
+        "sha256": "64ca1b8f66f641be3a5c79af94333db507dd3875171758a2af042df1714f9be2"
+      },
+      "information/export.py": {
+        "bytes": 4480,
+        "sha256": "1a6603b31de105de6a95afb16db1036a467e9dc12b9d843da53b3281caacfb5a"
+      },
+      "information/grouping.py": {
+        "bytes": 24866,
+        "sha256": "9d1f665b1f5024bdde90a86d536c6679cb3a5fbdb9635348141272d8de3d5235"
+      },
+      "io.py": {
+        "bytes": 12016,
+        "sha256": "71b0c423c046b3c72b651141e853ea622a62742fc087afeef37fbf9c253c2307"
+      },
+      "model.py": {
+        "bytes": 13986,
+        "sha256": "acc1f3c450910112cd7883cc6284139046fde6b339e73b82638d301d8e5a9948"
+      },
+      "multiview/__init__.py": {
+        "bytes": 85,
+        "sha256": "7724296c827c8ae34dc7558de991243c52ee78c1b8a37837e3070487657fe160"
+      },
+      "multiview/arrays.py": {
+        "bytes": 1395,
+        "sha256": "e6239aaa8ca298b5afd97d4c45ab58ff72183f485e4263226aebbcae03500a97"
+      },
+      "multiview/downstream.py": {
+        "bytes": 7469,
+        "sha256": "a24e96291dc6e779734e6990008296e7e7d8d3e400ff9102004a09959fa8fbbb"
+      },
+      "multiview/model.py": {
+        "bytes": 10256,
+        "sha256": "6342819c74f8d7da4cc23bea7666169de605d2c391ce3711d98243fc88f550d2"
+      },
+      "multiview/positive.py": {
+        "bytes": 15492,
+        "sha256": "133f54087e5516c6e90a6c71667e8b9e4b5cb5a1428d6418be1fc28393453ec6"
+      },
+      "multiview/refinement.py": {
+        "bytes": 16783,
+        "sha256": "0c1bae1f0fd5e8873cc30e68218e6796e87bf43b7d9262d2ec42fd781a51b8c0"
+      },
+      "multiview/stage.py": {
+        "bytes": 2190,
+        "sha256": "a06543d0cd70ba4a63637a7072b96d03becc773c7ae0ba1dbeb4c603b2677581"
+      },
+      "multiview/views.py": {
+        "bytes": 9370,
+        "sha256": "0b3a00b87c17cd56417e589ebcb3a9f3234f85f4c14ac0b9204a680dc2590935"
+      },
+      "resources/candidate.json": {
+        "bytes": 678,
+        "sha256": "1c8049fa2cf70e51c2eab22fc7fe5cd0e626f807360b56ff2b392756207baa60"
+      },
+      "resources/context.json": {
+        "bytes": 267,
+        "sha256": "90bc99e68c31be2456dbe8b04fe4d438e1613b6cec62f7db4ab72ab6a7db5387"
+      },
+      "resources/multiview.json": {
+        "bytes": 799,
+        "sha256": "0f532c4912b002c5cdb2ebde48bf172c96577f3edb066a1c03864e2b537c6038"
+      },
+      "resources/training.json": {
+        "bytes": 215,
+        "sha256": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5"
+      },
+      "runner.py": {
+        "bytes": 20667,
+        "sha256": "99cbd7a14c360011b473dd22a03777eb7e3dfff109f11c78a2f5c1f067af3e8f"
+      },
+      "supervision.py": {
+        "bytes": 9575,
+        "sha256": "8ee9bd7d5f05a8e487a8691f7ab8152cca627f9f55ad27d48c6ece61cbd9a8a9"
+      }
+    },
+    "status": "PASS"
+  },
+  "source_freeze": {
+    "bytes": 17395,
+    "sha256": "4b3576910a26a3ea0be7bc3fd06afbb0f2b006a9887637d311800eb2a3f4991b"
+  },
+  "reuse_freeze": {
+    "bytes": 59586,
+    "sha256": "6bd9d46ffc9e42dde657eee5b3166b81dc272d9b99f7701a69ff4f93aa6ab0ce"
+  },
+  "financial_gate": {
+    "status": "PASS_FRESH_CREDIT_PRICE_STORAGE_PLAN; GUEST_HEADROOM_RUNTIME_PENDING",
+    "checked_UTC": "2026-10-23T11:12:31.800159+00:00",
+    "ceiling_USD": 1,
+    "credit": {
+      "remaining_DKK": 1874.97,
+      "original_DKK": 1973.43,
+      "percent": 95,
+      "status": "Available",
+      "scope": "Certain usage; see the terms for Free Trial",
+      "expiry": "2027-01-12",
+      "application": "Net pricing",
+      "paid_account": true,
+      "overview_cost_savings_DKK": 94.06,
+      "overview_net_DKK": 0,
+      "pending_usage": "Unknown; live tooltip explicitly says possibly longer than 24 hours",
+      "delayed_usage_reserve_USD": 35,
+      "read": "Fresh signed-in Google Cloud Billing Credits/Overview via CUA, 2026-10-23; read-only"
+    },
+    "estimate": {
+      "maximum_incremental_gross_forecast_USD": 0.9512170301099145,
+      "compute_IP_USD_per_hour": 0.2730456762592464,
+      "disk_USD_per_hour": 0.04193548380356186,
+      "disk_USD_per_month": 31.199999949850024,
+      "maximum_export_USD": 0.24,
+      "operations_small_storage_USD": 0.01,
+      "uncertainty_USD": 0.15
+    },
+    "covered_costs": [
+      "compute",
+      "disk",
+      "storage",
+      "network",
+      "operations"
+    ],
+    "products": "Existing ordinary E2, nonpremium Ubuntu, persistent disks, IPv4, Iowa Standard storage/network/operations; no new product",
+    "coverage_sources": [
+      "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "https://cloud.google.com/storage/pricing?hl=en"
+    ],
+    "price_source": {
+      "bytes": 8003,
+      "sha256": "43ad3fbc06169e4e2cb1243fe3899d75fba1904d3dd0c0ae6067b3ed890352c9"
+    },
+    "storage_inventory": {
+      "bytes": 26164,
+      "sha256": "5cf56634496105d23e22e13e5c37a63b5736f9cbd3b61fbe11ed7afb55021d4e"
+    },
+    "storage_interval_forecast_USD": 7.631491227049755,
+    "storage_ceiling_USD": 8,
+    "storage_valid_until_epoch": 1793142000.0,
+    "credit_valid_until_epoch": 1799708400.0,
+    "retention_extended": false,
+    "initial_VM_status": "TERMINATED",
+    "local_free_bytes": 38723813376,
+    "return_staging": "<=2 GiB compressed plus sequential <=6 GiB local review; existing shared inputs reused, actual export/member inventory must be re-admitted after stop",
+    "invoice_claim": false
+  },
+  "progress": {
+    "epoch": 1792754837.136741,
+    "UTC": "2026-10-23T11:27:17.136741+00:00",
+    "stage_logs": {
+      "work/logs/E009-context/audit.log": "",
+      "work/logs/E009-context/export.log": ", \"contigs\": 110000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:34Z\", \"contigs\": 120000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:34Z\", \"contigs\": 130000, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:34Z\", \"contigs\": 140000, \"include_dna\": false}\n{\"stage\": \"information_export_complete\", \"utc\": \"2026-10-23T11:24:34Z\", \"contigs\": 145702, \"bp\": 231678157, \"include_dna\": false}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:36Z\", \"contigs\": 10000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:36Z\", \"contigs\": 20000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:36Z\", \"contigs\": 30000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:37Z\", \"contigs\": 40000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:37Z\", \"contigs\": 50000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:37Z\", \"contigs\": 60000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:38Z\", \"contigs\": 70000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:38Z\", \"contigs\": 80000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:38Z\", \"contigs\": 90000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:39Z\", \"contigs\": 100000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:39Z\", \"contigs\": 110000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:39Z\", \"contigs\": 120000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:39Z\", \"contigs\": 130000, \"include_dna\": true}\n{\"stage\": \"information_export_progress\", \"utc\": \"2026-10-23T11:24:40Z\", \"contigs\": 140000, \"include_dna\": true}\n{\"stage\": \"information_export_complete\", \"utc\": \"2026-10-23T11:24:40Z\", \"contigs\": 145702, \"bp\": 231678157, \"include_dna\": true}\n",
+      "work/logs/E009-context/group.log": "utc\": \"2026-10-23T11:23:33Z\", \"rows\": 60416, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:33Z\", \"rows\": 61440, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:33Z\", \"rows\": 62464, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:34Z\", \"rows\": 63488, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:34Z\", \"rows\": 64512, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:35Z\", \"rows\": 65536, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:35Z\", \"rows\": 66560, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:36Z\", \"rows\": 67584, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:36Z\", \"rows\": 68608, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:37Z\", \"rows\": 69632, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:37Z\", \"rows\": 70656, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:37Z\", \"rows\": 71680, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:38Z\", \"rows\": 72704, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:38Z\", \"rows\": 73728, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:39Z\", \"rows\": 74752, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:39Z\", \"rows\": 75776, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:40Z\", \"rows\": 76800, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:40Z\", \"rows\": 77824, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:41Z\", \"rows\": 78848, \"total\": 79494}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:23:41Z\", \"rows\": 79494, \"total\": 79494}\n{\"stage\": \"information_grouping_complete\", \"utc\": \"2026-10-23T11:24:12Z\", \"rows\": 145702, \"cores\": 9812, \"recruited\": 14121}\n",
+      "work/logs/E009-context/refine.log": "",
+      "work/logs/oral-context/group.log": "ntation therefore does not guarantee subpartition :math:`\\gamma`-density.\n/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/lib/python3.12/site-packages/leidenalg/Optimiser.py:346: SyntaxWarning: invalid escape sequence '\\s'\n  .. math:: Q = \\sum_k \\\\lambda_k Q_k.\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:07Z\", \"rows\": 1024, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:07Z\", \"rows\": 2048, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:08Z\", \"rows\": 3072, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:08Z\", \"rows\": 4096, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:09Z\", \"rows\": 5120, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:09Z\", \"rows\": 6144, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:10Z\", \"rows\": 7168, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:11Z\", \"rows\": 8192, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:11Z\", \"rows\": 9216, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:12Z\", \"rows\": 10240, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:12Z\", \"rows\": 11264, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:13Z\", \"rows\": 12288, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:13Z\", \"rows\": 13312, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:14Z\", \"rows\": 14336, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:15Z\", \"rows\": 15360, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:15Z\", \"rows\": 16384, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:16Z\", \"rows\": 17408, \"total\": 454295}\n{\"stage\": \"information_recruit_candidates\", \"utc\": \"2026-10-23T11:27:16Z\", \"rows\": 18432, \"total\": 454295}\n"
+    },
+    "parent_log_tail": "g (81s, sampled RSS 1.43 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:23:55 UTC | Still running (92s, sampled RSS 1.44 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:24:06 UTC | Still running (102s, sampled RSS 1.53 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:24:16 UTC | Still running (112s, sampled RSS 0.44 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:24:26 UTC | Still running (122s, sampled RSS 0.31 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:24:36 UTC | Still running (132s, sampled RSS 0.32 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:24:46 UTC | Still running (142s, sampled RSS 0.97 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:24:56 UTC | Still running (152s, sampled RSS 0.97 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:25:07 UTC | Still running (163s, sampled RSS 1.00 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:25:17 UTC | Still running (173s, sampled RSS 1.68 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:25:27 UTC | Still running (183s, sampled RSS 4.14 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:25:37 UTC | Still running (193s, sampled RSS 4.28 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:25:47 UTC | Still running (203s, sampled RSS 4.78 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:25:57 UTC | Still running (213s, sampled RSS 4.57 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:26:07 UTC | Still running (223s, sampled RSS 4.65 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:26:18 UTC | Still running (234s, sampled RSS 4.75 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:26:28 UTC | Still running (244s, sampled RSS 4.72 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:26:38 UTC | Still running (254s, sampled RSS 4.72 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:26:48 UTC | Still running (264s, sampled RSS 4.92 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:26:58 UTC | Still running (274s, sampled RSS 5.19 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\nDLBINNER 2026-10-23 11:27:08 UTC | Still running (284s, sampled RSS 5.19 GB); log: /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs/science.log\n",
+    "process_snapshot": "   2488    2232     127  0.0  3468 /usr/bin/bash -c set -euo pipefail;  /srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python -I -B /srv/dl_binner/research/e020-99af96fb31e2/scripts/e020_control.py --plan /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/science-plan.json --unit oral-context --stage group > logs/oral-context/group.log 2>&1\n   2490    2488     127  125 4994644 /srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python -I -B /srv/dl_binner/research/e020-99af96fb31e2/scripts/e020_control.py --plan /srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/science-plan.json --unit oral-context --stage group",
+    "disk_usage": {
+      "total": 316733652992,
+      "used": 243486011392,
+      "free": 73230864384
+    },
+    "global_growth_bytes": 373411840,
+    "completed_E009_stage_events": [
+      "group",
+      "refine",
+      "export",
+      "audit"
+    ],
+    "current_stage": "oral-context grouping: original fixed-profile recruitment candidates; 18,432 / 454,295 at 11:27:16 UTC",
+    "latest_sampled_RSS_GB": 5.19,
+    "scope": "Real timestamped scientific rows/stage exits; not mere parent heartbeat, not completion or quality admission"
+  },
+  "allocation_cost_snapshot": {
+    "interval_since_VM_start_seconds": 526.7447409629822,
+    "allocated_vCPU_hours": 1.170543868806627,
+    "compute_IP_USD": 0.03995149278117751,
+    "run_disk_attribution_USD": 0.006135915431462368,
+    "final_cost": false,
+    "invoice": false,
+    "scope": "Measured provider-start to retained progress timestamp, still accruing; sampled CPU is separate. Run disk is attribution inside original storage interval, not another bill."
+  },
+  "operational_failures": [
+    {
+      "attempt": "setup-1",
+      "cause": "IAP port22 backend not ready; no native command ran. Serial boot readiness verified before successful setup-2; no science replay.",
+      "evidence": {
+        "bytes": 1686,
+        "sha256": "9fa115baa820cf388b93a4fcbdc6de2e0e52f5a0cff6fa144edd2b4e41f3d67a"
+      }
+    },
+    {
+      "attempt": "pre-release local assertion",
+      "cause": "Invalid local Falseand token; rewritten separate assertions passed before any remote command/release. No scientific change or extension.",
+      "evidence": {
+        "bytes": 223,
+        "sha256": "80567a5ef6e64893b3132d6e7bc0fc65b8ae141777cfedd21b2bfa6d164037f0"
+      }
+    }
+  ],
+  "science_completed": false,
+  "quality_assessed": false,
+  "archive_collected": false,
+  "export_downloaded": false,
+  "completion_uri": "gs://dl-binner-archive-167650584170/e020/integration-20261023T111835Z-99af96f/completion.json",
+  "watchdog_exit_uri": "gs://dl-binner-archive-167650584170/e020/integration-20261023T111835Z-99af96f/watchdog-exit.json",
+  "guest_attribute": "e020-candidate/status",
+  "retained_log_root": "/srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/logs",
+  "local_launch_root": "artifacts/e020-context-information-integration/launch-20261023",
+  "preservation": "All immutable E009\u2013E019 data/truth/source/results/failures remain; no learning/inference/marker search/rebuild of accepted science, DNA acquisition, external tool, resource or retention change. New original-E017 joint core index is the declared grouping treatment.",
+  "evidence": {
+    "artifacts/e020-context-information-integration/launch-20261023/launch-identity.json": {
+      "bytes": 427,
+      "sha256": "9be46af2e25c0fe31d8c360d9b95cdc823fa3120ae65dec9b5bf0b877dd7bbfb"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/financial-gate.json": {
+      "bytes": 2176,
+      "sha256": "bbe4eb008876675c7fd90e590714c1ff7efd0ba699c1e2bf1f5b3127f31eb2ba"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/current-prices.json": {
+      "bytes": 8003,
+      "sha256": "43ad3fbc06169e4e2cb1243fe3899d75fba1904d3dd0c0ae6067b3ed890352c9"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/storage-list.json": {
+      "bytes": 26164,
+      "sha256": "5cf56634496105d23e22e13e5c37a63b5736f9cbd3b61fbe11ed7afb55021d4e"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/native-gates-snapshot.json": {
+      "bytes": 76207,
+      "sha256": "09eab4867c4b9a4b98c85dd5467f62ff005a203c0043fdf4def864be0d58f2f4"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/release-1.ssh.log": {
+      "bytes": 1096,
+      "sha256": "c2cd955f4b33e6ddaafaefbe4e11c9b8a4f19baf7752664da2a6919acd27aee8"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/setup-1.ssh.log": {
+      "bytes": 1686,
+      "sha256": "9fa115baa820cf388b93a4fcbdc6de2e0e52f5a0cff6fa144edd2b4e41f3d67a"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/setup-2.ssh.log": {
+      "bytes": 2806,
+      "sha256": "7c26a15939acabbbdbc65627b402454431e5977df155a5352156cf3dbe661a68"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/pre-release-controller-journal.json": {
+      "bytes": 223,
+      "sha256": "80567a5ef6e64893b3132d6e7bc0fc65b8ae141777cfedd21b2bfa6d164037f0"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/native-setup-executed.py": {
+      "bytes": 6203,
+      "sha256": "52daae16be69cb8f015c3a297f6417e90e6f50f7393fb7faefbc0349e9e1e78c"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/native-release-executed.py": {
+      "bytes": 5056,
+      "sha256": "c58f842a34771b008d757dac277bdc42e547a01a677d02b8deee840b38986c3c"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/native-bootstrap-executed.py": {
+      "bytes": 3243,
+      "sha256": "8af9d038ce3b5953b27f18fe86e6d4626218236477d9429f7edc8f03d51f1ca2"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/run-native.py": {
+      "bytes": 4191,
+      "sha256": "78644362dcc3d2a3bc6bb8bd907b4a4a7a07eef6458b5d6bde5cc6f989394def"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/start-existing.py": {
+      "bytes": 3214,
+      "sha256": "81abc5965a40378b00321d1a6e4aad659df9891d0097845a37beb07528c36739"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/progress-4.ssh.log": {
+      "bytes": 32860,
+      "sha256": "aeb1ead7f8b013c6f7aa50a1157e76feb39fbff5b913d5ff412ba40da5b07cba"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/provider-20261023T112109Z.json": {
+      "bytes": 33117,
+      "sha256": "cdf1e3571490f344aa9ee94620f2a27cde34922f3769df76117250468831fdc8"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/progress-5.ssh.log": {
+      "bytes": 35729,
+      "sha256": "39982f991c0ee25b4e9ff4bfa4a89eb1e494bfdf92c28582df528054c00e2795"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/provider-20261023T112559Z.json": {
+      "bytes": 33117,
+      "sha256": "cdf1e3571490f344aa9ee94620f2a27cde34922f3769df76117250468831fdc8"
+    },
+    "artifacts/e020-context-information-integration/launch-20261023/cloud-handoff.log": {
+      "bytes": 1198,
+      "sha256": "28a5ec4052c0657f3e68b030ba057b4bd9546a1a345294bf361788ef0682f8dd"
+    }
+  },
+  "next": "After completion invoke E020 operations Exact following prompt for this exact phase; verify shutdown/completion/stage/member/cost gates before frozen only-new-output diagnostics. No quality conclusion yet.",
+  "handoff": "Healthy longer run left under verified supervision after >4 minutes real progress; no polling to completion. Final quality/resources/cost await independent completed-output review."
+}
