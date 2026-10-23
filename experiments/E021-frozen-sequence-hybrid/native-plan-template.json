@@ -1,0 +1,35 @@
+{
+  "kind": "E021 frozen sequence hybrid",
+  "work": "@RUN_ROOT@/work",
+  "units": {
+    "E009-hybrid": {
+      "fasta": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+      "features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "marker_cache": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers",
+      "views": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/E009-dev5/features/views.npz",
+      "tokens": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/tokens",
+      "bank_reuse_from": null
+    },
+    "oral-hybrid": {
+      "fasta": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+      "features": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.npz",
+      "marker_cache": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers",
+      "views": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.npz",
+      "tokens": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/tokens",
+      "bank_reuse_from": null
+    }
+  },
+  "threads": 4,
+  "python": "@RUN_ROOT@/env/bin/python",
+  "worker": "@REPO@/scripts/e021_control.py",
+  "workflow_python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+  "snakefile": "@REPO@/experiments/E021-frozen-sequence-hybrid/Snakefile",
+  "config": "@REPO@/experiments/E021-frozen-sequence-hybrid/config.json",
+  "base_config": "@REPO@/src/dl_binner/resources/multiview.json",
+  "hmm": "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/marker.hmm",
+  "reuse_lock": "@REPO@/experiments/E021-frozen-sequence-hybrid/reuse-lock.json",
+  "candidate_lock": "@REPO@/experiments/E021-frozen-sequence-hybrid/candidate-lock.json",
+  "model_directory": "@RUN_ROOT@/payload/model",
+  "model_pin": "@REPO@/experiments/E002-dnabert-s-feasibility/model-pin.json",
+  "extract_device": "cpu"
+}

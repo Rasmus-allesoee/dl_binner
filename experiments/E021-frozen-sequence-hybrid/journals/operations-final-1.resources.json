@@ -1,0 +1,8 @@
+{
+  "status": "FAILED",
+  "label": "operations-final",
+  "attempt": 1,
+  "error": "RuntimeError(\"Command failed; see artifacts/e021-frozen-sequence-hybrid/operations-final-1.log\\nPermissionError: [Errno 1] Operation not permitted: 'ps'\")",
+  "elapsed_original_seconds": 5214.06750702858,
+  "extra_local_bytes": 9313983401
+}

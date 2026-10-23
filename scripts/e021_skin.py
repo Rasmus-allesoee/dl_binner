@@ -1,0 +1,253 @@
+#!/usr/bin/env python3
+"""Stream/index the five admitted skin files; never fit, align or select a model.
+
+Publisher origins and complete provided references are separate from unique DNA
+support. Source labels and reverse joins remain outside model-input paths. Every
+unknown, zero-bp, non-target and zero-origin population is retained explicitly.
+"""
+import argparse
+from collections import Counter,defaultdict
+import csv,gzip,hashlib,io,json,re,sqlite3,sys,tarfile,time,shutil
+from decimal import Decimal
+from pathlib import Path,PurePosixPath
+sys.path.insert(0,str(Path(__file__).absolute().parent))
+from e021_acquire import guard,hashes
+from e014_oral_audit import fasta,mapping,HEADER,DNA
+from e014_source_audit import records,verify_locus,read_member
+from e014_oral_truth import acgt_intervals,validate_row
+
+RC=str.maketrans('ACGTRYSWKMBDHVN','TGCAYRSWMKVHDBN')
+NAMESPACE='CAMI-II-Toy-HMB-skin-E021-opaque-v1'
+
+
+def write(path,obj):
+    """Write a new compact record without replacing prior evidence."""
+    with Path(path).open('x')as f:json.dump(obj,f,indent=2,sort_keys=True);f.write('\n')
+
+
+def opaque(anon):
+    """Hash only publisher anonymous identity, never source/header/taxonomy labels."""
+    if not anon or any(c.isspace()for c in anon):raise ValueError('Invalid anonymous identity')
+    return 'C'+hashlib.sha256((NAMESPACE+'\0'+anon).encode()).hexdigest()
+
+
+class HashReader:
+    """Hash compressed archive bytes during the sole full source-member pass."""
+    def __init__(self,stream):self.stream=stream;self.sha=hashlib.sha256();self.md5=hashlib.md5();self.bytes=0
+    def read(self,n=-1):
+        b=self.stream.read(n);self.sha.update(b);self.md5.update(b);self.bytes+=len(b);return b
+    def result(self):return dict(bytes=self.bytes,sha256=self.sha.hexdigest(),md5=self.md5.hexdigest())
+
+
+def extract_metadata(root,archive):
+    """Read only small leading setup metadata, with safe paths and a 10 MiB cap."""
+    out=root/'metadata';out.mkdir(exist_ok=False);total=0;inventory=[]
+    with tarfile.open(archive,'r|gz')as t:
+        for m in t:
+            path=PurePosixPath(m.name)
+            if path.is_absolute()or'..'in path.parts or m.issym()or m.islnk():raise ValueError('Unsafe source metadata path')
+            if m.isdir():continue
+            if len(path.parts)>1 or m.name.endswith(('.fa','.fna','.gz')):break
+            if m.size>1024**2 or total+m.size>10*1024**2:raise ValueError('Source metadata envelope exceeded')
+            raw,b=read_member(t,m,True);(out/m.name).write_bytes(raw);total+=len(raw);inventory.append(b)
+    for name in ['metadata.tsv','genome_to_id.tsv','config.ini']:
+        if not(out/name).exists():raise ValueError('Missing explicit source metadata')
+    write(out/'inventory.json',dict(files=inventory,bytes=total));return out
+
+
+def population(metadata,repo):
+    """Audit all 29 simulator sample axes, historical taxonomy and separate IDs."""
+    lines=(metadata/'genome_to_id.tsv').read_text().splitlines();sources=dict(line.split('\t',1)for line in lines)
+    with (metadata/'metadata.tsv').open()as stream:rows=list(csv.DictReader(stream,delimiter='\t'))
+    tax={r['genome_ID']:r for r in rows}
+    if len(sources)!=len(lines)or len(tax)!=len(rows)or set(tax)!=set(sources):raise ValueError('Source/genome/taxonomic axes differ')
+    policy=json.loads((repo/'experiments/E001-coverage-thinning/taxonomy-policy.json').read_text());expected=policy['members']['nodes.dmp'];nodes=repo/'artifacts/e001-taxonomy-reviewed/nodes.dmp';actual=hashes(nodes)
+    if actual['sha256']!=expected['sha256']or actual['bytes']!=expected['size']:raise ValueError('Historical taxonomy bytes differ')
+    parents={}
+    with nodes.open()as stream:
+        for line in stream:
+            f=line.split('|');parents[int(f[0])]=int(f[1])
+    ancestry={};domains={};missing=[]
+    for g,row in tax.items():
+        path=[];seen=set();n=int(row['NCBI_ID'])
+        while n not in seen:
+            path.append(n);seen.add(n)
+            if n==1:break
+            if n not in parents:missing.append(dict(genome=g,node=n));break
+            n=parents[n]
+        ancestry[g]=path;domains[g]=next((str(n)for n in path if n in [2,2157,2759,10239]),'unknown')
+    samples={};profile_differences=[]
+    files=sorted(metadata.glob('abundance*.tsv'),key=lambda p:int(re.search(r'(\d+)',p.name)[1]))
+    for path in files:
+        sid=int(re.search(r'(\d+)',path.name)[1]);a=[line.split('\t')for line in path.read_text().splitlines()];values={g:float(v)for g,v in a}
+        if len(values)!=len(a)or set(values)!=set(tax)or any(not(0<=v<=float('inf'))or v==float('inf')for v in values.values()):raise ValueError('Malformed abundance/genome axis')
+        present={}
+        for line in (metadata/f'taxonomic_profile_{sid}.txt').read_text().splitlines():
+            if not line or line.startswith('@'):continue
+            f=line.split('\t')
+            if len(f)<6 or not f[5]:continue
+            g=f[5]
+            if g not in tax or g in present:raise ValueError('Profile simulator genome join invalid/duplicate')
+            present[g]=f[0]
+            if f[0]!=tax[g]['NCBI_ID']:profile_differences.append(dict(sample=sid,genome=g,metadata_taxon=tax[g]['NCBI_ID'],profile_taxon=f[0],rank=f[1],verified_ancestor=int(f[0])in ancestry[g]))
+        positive=sorted(g for g,v in values.items()if v>0)
+        samples[str(sid)]=dict(positive=positive,abundance_sum=sum(values.values()),positive_missing_profile=sorted(set(positive)-set(present)))
+    if set(samples)!=set(map(str,range(29))):raise ValueError('Expected all 29 source-design samples')
+    publisher=repo/'artifacts/e021-frozen-sequence-hybrid/metadata-public/README.md'
+    body=publisher.read_text();match=re.search(r'Skin samples: ([0-9,]+)',body)
+    if not match:raise ValueError('Missing explicit publisher skin/sample join')
+    skin=list(map(int,match[1].split(',')))
+    if skin!=[1,13,14,15,16,17,18,19,20,28]:raise ValueError('Frozen skin sample membership changed')
+    positive=sorted(set().union(*(set(samples[str(i)]['positive'])for i in skin)))
+    return dict(sources=sources,tax=tax,domains=domains,samples=samples,profile_taxon_differences=profile_differences,historical_taxonomy=actual,missing_historical_nodes=missing,skin_sample_indices=skin,skin_positive_genomes=positive,publisher_sample_join=dict(path=str(publisher),sha256=hashlib.sha256(publisher.read_bytes()).hexdigest()))
+
+
+
+def sketch(dna):
+    """Bounded content-anchored shared-sequence screen, not ANI or absence evidence.
+
+    Palindromic ACGCGT anchors and symmetric 32-mers survive strand/coordinate
+    shifts. Bottom 128 hashes are a biased homology warning screen; near-unique
+    truth still requires a separately admitted competitive method.
+    """
+    import heapq
+    keep=[];seen=set();start=0
+    while True:
+        a=dna.find('ACGCGT',start)
+        if a<0:break
+        start=a+1
+        if a<13 or a+19>len(dna):continue
+        s=dna[a-13:a+19]
+        if set(s)-set('ACGT'):continue
+        s=min(s,s.translate(RC)[::-1]);h=int.from_bytes(hashlib.sha256(s.encode()).digest()[:8],'big')
+        if h in seen:continue
+        if len(keep)<128:heapq.heappush(keep,-h);seen.add(h)
+        elif h<-keep[0]:old=-heapq.heapreplace(keep,-h);seen.remove(old);seen.add(h)
+    return sorted(seen)
+
+
+def raw_mapping(path):
+    """Read this pinned skin historical map's explicitly headerless seven fields.
+
+    Corrected maps still require the original exact header. This is a separate
+    writer contract, not header auto-detection or malformed-row recovery.
+    """
+    with Path(path).open()as f:
+        for line in f:
+            fields=line.rstrip('\n').split('\t')
+            if len(fields)!=7:raise ValueError('Historical skin raw map requires seven headerless fields')
+            anon,g,t,r,count,a,b=fields
+            if not re.fullmatch(r'PC[0-9]+',anon)or not all([g,t,r]):raise ValueError('Historical skin raw identity/header refused')
+            start,end=int(a),int(b);reads=Decimal(count)
+            if start<1 or end<start or not reads.is_finite()or reads<0:raise ValueError('Invalid historical skin raw coordinates/count')
+            yield anon,g,t,r,start,end,str(reads)
+
+
+def audit(root,repo,reuse_index=None,output_name=None):
+    """Index all original rows then independently verify every locus against source DNA."""
+    root,repo=Path(root),Path(repo);clock=json.loads((root/'acquisition-clock.json').read_text());guard(root,clock)
+    acquired=json.loads((root/'acquisition.json').read_text());assert acquired['status']=='SUCCESS'
+    files={Path(x['path']).name:x for x in acquired['files']}
+    for name,x in files.items():
+        if Path(x['path']).stat().st_size!=x['hashes']['bytes']:raise ValueError('Accepted acquisition size changed')
+    if reuse_index:
+        proof=json.loads(Path(reuse_index).read_text())
+        if proof['status']!='PASS_VERIFIED_READ_ONLY_INDEX_REUSE'or hashes(proof['source_index'])!=proof['index']:raise ValueError('Closed index reuse proof/bytes differ')
+        metadata=root/'metadata';m=json.loads((metadata/'inventory.json').read_text())
+        for z in m['files']:
+            actual=hashes(metadata/z['member'])
+            if any(actual[k]!=z[k]for k in ['bytes','sha256']):raise ValueError('Retained metadata changed')
+        source=Path(proof['source_index']).parent/'population.json'
+        if hashes(source)!=proof['population']:raise ValueError('Retained population changed')
+        pop=json.loads(source.read_text())
+        out=root/(output_name or 'admission-v2');out.mkdir(exist_ok=False)
+        shutil.copyfile(proof['source_index'],out/'joins.sqlite');write(out/'population.json',pop)
+        fixed_rows=proof['fixed_rows'];anonymous=Counter(proof['anonymous']);gsa=Counter(proof['GSA'])
+        write(out/'verified-reuse.json',proof)
+    else:
+        metadata=extract_metadata(root,files['setup.tar.gz']['path']);pop=population(metadata,repo)
+        out=root/(output_name or 'admission-v1');out.mkdir(exist_ok=False);write(out/'population.json',pop)
+    db=sqlite3.connect(out/'joins.sqlite');db.execute('PRAGMA cache_size=-65536');db.execute('PRAGMA temp_store=FILE')
+    if not reuse_index:
+        db.executescript('CREATE TABLE fixed(anon TEXT PRIMARY KEY,genome TEXT,tax TEXT,record TEXT,start INTEGER,end INTEGER,reads TEXT,sha TEXT,matched INTEGER DEFAULT 0,verified INTEGER DEFAULT 0);CREATE INDEX locus ON fixed(record,start,end);CREATE TABLE gsa(id TEXT PRIMARY KEY,length INTEGER,sha TEXT,genome TEXT,tax TEXT,record TEXT,start INTEGER,end INTEGER,status TEXT);CREATE TABLE gsa_candidates(id TEXT,anon TEXT,genome TEXT);')
+        n=0
+        for row in mapping(root/'skin/gsa_pooled_mapping_fixed.tsv'):
+            anon,g,t,r,a,b,c=row
+            if g not in pop['tax']or t!=pop['tax'][g]['NCBI_ID']:raise ValueError('Corrected genome/tax metadata differs')
+            db.execute('INSERT INTO fixed(anon,genome,tax,record,start,end,reads)VALUES(?,?,?,?,?,?,?)',row);n+=1
+            if n%20000==0:db.commit();guard(root,clock);print('SKIN_FIXED',n,flush=True)
+        db.commit();fixed_rows=n;anonymous=Counter()
+        for ident,dna in fasta(root/'skin/gsa.tsv.gz'):
+            if set(dna)-DNA:raise ValueError('Invalid anonymous DNA')
+            row=db.execute('SELECT start,end,sha FROM fixed WHERE anon=?',(ident,)).fetchone();anonymous['records']+=1;anonymous['bp']+=len(dna)
+            if not row:raise ValueError('Anonymous record lacks corrected origin')
+            if row[2]is not None or row[1]-row[0]+1!=len(dna):raise ValueError('Anonymous duplicate/coordinate length differs')
+            db.execute('UPDATE fixed SET sha=?WHERE anon=?',(hashlib.sha256(dna.encode()).hexdigest(),ident))
+            if anonymous['records']%20000==0:db.commit();guard(root,clock);print('SKIN_ANONYMOUS',anonymous['records'],flush=True)
+        db.commit();gsa=Counter();examples=[]
+        for ident,dna in fasta(root/'skin/gsa.fa'):
+            if set(dna)-DNA:raise ValueError('Invalid original GSA DNA')
+            gsa['records']+=1;gsa['bp']+=len(dna);gsa['non_ACGT_bp']+=sum(c not in 'ACGT'for c in dna)
+            if not dna:gsa['zero_bp_records']+=1;examples.append(dict(id=ident,issue='Original zero-bp record'));continue
+            match=HEADER.fullmatch(ident)
+            if not match:raise ValueError('GSA source-coordinate schema differs')
+            rec,a,b,length=match.groups();a,b,length=map(int,[a,b,length]);sha=hashlib.sha256(dna.encode()).hexdigest()
+            if a<1 or b-a+1!=length or length!=len(dna):raise ValueError('GSA length/coordinate contract differs')
+            rows=db.execute('SELECT anon,genome,tax FROM fixed WHERE record=?AND start=?AND end=?AND sha=?',(rec,a,b,sha)).fetchall()
+            status='exact_single_origin'if len(rows)==1 else'multiple_provided_origins'if rows else'unresolved_origin'
+            g,t=rows[0][1:]if len(rows)==1 else(None,None)
+            db.execute('INSERT INTO gsa VALUES(?,?,?,?,?,?,?,?,?)',(ident,length,sha,g,t,rec,a,b,status));gsa[status]+=1
+            for anon,genome,taxon in rows:
+                db.execute('UPDATE fixed SET matched=matched+1 WHERE anon=?',(anon,));db.execute('INSERT INTO gsa_candidates VALUES(?,?,?)',(ident,anon,genome))
+            if gsa['records']%20000==0:db.commit();guard(root,clock);print('SKIN_GSA',gsa['records'],flush=True)
+    db.execute('CREATE INDEX IF NOT EXISTS fixed_genome ON fixed(genome)')
+    db.commit();raw=Counter()
+    for row in raw_mapping(root/'skin/gsa_pooled_mapping.tsv'):
+        value=db.execute('SELECT genome,tax,record,start,end,reads FROM fixed WHERE anon=?',(row[0],)).fetchone();raw['rows']+=1;raw['matches_corrected'if value==tuple(row[1:])else'historical_difference']+=1
+        if raw['rows']%100000==0:guard(root,clock)
+    by_name=defaultdict(list)
+    for g,path in pop['sources'].items():by_name[Path(path).name].append(g)
+    members=[];refs=[];totals={};seen=set();found=set();checked=Counter()
+    with open(files['setup.tar.gz']['path'],'rb')as f:
+        reader=HashReader(f)
+        with tarfile.open(fileobj=reader,mode='r|gz')as archive:
+            for m in archive:
+                path=PurePosixPath(m.name)
+                if path.is_absolute()or'..'in path.parts or m.name in seen or m.issym()or m.islnk():raise ValueError('Unsafe/duplicate source member')
+                seen.add(m.name)
+                if m.isdir():continue
+                meta=metadata/m.name;wanted=path.name in by_name
+                data,bound=read_member(archive,m,wanted or meta.is_file());members.append(bound)
+                if meta.is_file()and data!=meta.read_bytes():raise ValueError('Full source metadata differs')
+                if not wanted:continue
+                if path.name in found:raise ValueError('Duplicate source basename')
+                found.add(path.name);local=[];record_ids=set()
+                for header,dna in records(data):
+                    record=header.split()[0]
+                    if not dna or record in record_ids:raise ValueError('Empty/duplicate source record')
+                    record_ids.add(record);reverse=dna.translate(RC)[::-1];canonical=hashlib.sha256(min(dna,reverse).encode()).hexdigest();local.append((canonical,len(dna)))
+                    refs.append(dict(genomes=by_name[path.name],source=path.name,record=record,header=header,bp=len(dna),sha256=hashlib.sha256(dna.encode()).hexdigest(),canonical_sha256=canonical,ambiguous_bp=sum(c not in'ACGT'for c in dna),molecule_header_evidence='plasmid'if'plasmid'in header.lower()else'chromosome'if'chromosome'in header.lower()else'unannotated',host='not inferred',anchored32_sketch=sketch(dna)))
+                    for anon,g,a,b,expected in db.execute('SELECT anon,genome,start,end,sha FROM fixed WHERE record=?',(record,)):
+                        if g not in by_name[path.name]:continue
+                        if expected is None:raise ValueError('Unjoined anonymous source locus')
+                        verify_locus(dna,a,b,expected);db.execute('UPDATE fixed SET verified=verified+1 WHERE anon=?',(anon,));checked[g]+=1
+                for g in by_name[path.name]:totals[g]=dict(raw_bp=sum(n for _,n in local),records=len(local),exact_DNA_deduplicated_bp=sum(dict(local).values()),source=path.name,origin_queries=db.execute('SELECT count(*)FROM fixed WHERE genome=?',(g,)).fetchone()[0],domain=pop['domains'][g])
+                if len(found)%25==0:db.commit();guard(root,clock);print('SKIN_SOURCE',len(found),'VERIFIED_LOCI',sum(checked.values()),flush=True)
+        while reader.read(1024**2):pass
+        if reader.result()!=files['setup.tar.gz']['hashes']:raise ValueError('Complete compressed source archive bytes differ')
+    if found!=set(by_name)or set(totals)!=set(pop['sources']):raise ValueError('Incomplete provided reference axis')
+    db.commit();bad_fixed=db.execute('SELECT count(*)FROM fixed WHERE sha IS NULL OR matched!=1 OR verified!=1').fetchone()[0]
+    if sum(checked.values())!=fixed_rows:raise ValueError('Not every corrected locus independently verified')
+    # Exact source overlap to accepted E009/oral; no new reference payload.
+    e009=json.loads((repo/'artifacts/e009-gcp-data/20261014/preflight/source-catalog.json').read_text());eh={z['canonical_sha256']for f in e009['files']for z in f['replicons']}
+    oral_path=repo/'artifacts/e014-multiview-reconstruction/source-validation-v2/references.json';oral=json.loads(oral_path.read_text());oh={z['canonical_sha256']for z in oral};onames={z['source']for z in oral}
+    overlaps=[dict(source=z['source'],record=z['record'],genomes=z['genomes'],bp=z['bp'],E009_exact=z['canonical_sha256']in eh,oral_exact=z['canonical_sha256']in oh,oral_source_basename=z['source']in onames)for z in refs if z['canonical_sha256']in eh or z['canonical_sha256']in oh or z['source']in onames]
+    groups=defaultdict(list)
+    for z in refs:groups[z['canonical_sha256']].append(dict(genomes=z['genomes'],record=z['record'],bp=z['bp']))
+    result=dict(status='EXACT_SOURCE_REVIEWED_TRUTH_PROVISIONAL',fixed_rows=fixed_rows,anonymous=dict(anonymous),GSA=dict(gsa),raw_mapping=dict(raw),fixed_unmatched_or_unverified=bad_fixed,provided_genomes=len(totals),source_records=len(refs),provided_reference_raw_bp=sum(z['raw_bp']for z in totals.values()),provided_reference_exact_DNA_deduplicated_bp=sum(z['exact_DNA_deduplicated_bp']for z in totals.values()),zero_origin_genomes=[g for g,z in totals.items()if not z['origin_queries']],skin_positive_genomes=len(pop['skin_positive_genomes']),skin_positive_full_reference_bp=sum(totals[g]['raw_bp']for g in pop['skin_positive_genomes']),skin_positive_zero_origin=[g for g in pop['skin_positive_genomes']if not totals[g]['origin_queries']],observed_non_skin_positive=sorted(set(checked)-set(pop['skin_positive_genomes'])),domains=dict(Counter(pop['domains'].values())),molecule_headers=dict(Counter(z['molecule_header_evidence']for z in refs)),exact_duplicate_reference_groups=[v for v in groups.values()if len(v)>1],exact_or_source_basename_overlap=overlaps,unresolved=['Full source/sample join is independently reviewed before origin-oracle admission.','Molecule headers/host links are incomplete; no biological host or circular alias inferred.','Anchored 32-mer sketches are a limited positive homology screen, not ANI or exhaustive competitive/unique truth.','Complete historical GLM training inventory unavailable; no unseen-genome claim.','Independent full denominator, source-blind/origin-oracle admission and unchanged confirmation protocol review remain.'],original_clock=clock)
+    for name,obj in [('members.json',members),('references.json',refs),('denominators.json',totals),('review.json',result)]:write(out/name,obj)
+    db.close();guard(root,clock);print('SKIN_EXACT_SOURCE_REVIEWED_PROVISIONAL',len(totals),fixed_rows,flush=True);return result
+
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',type=Path,required=True);p.add_argument('--repo',type=Path,default=Path(__file__).absolute().parents[1]);p.add_argument('--reuse-index',type=Path);p.add_argument('--output-name');a=p.parse_args();audit(a.root,a.repo,a.reuse_index,a.output_name)

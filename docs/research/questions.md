@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-10-21
+Updated: 2026-10-23
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -592,3 +592,16 @@ neighbor criterion remains contrary evidence, not a family veto. No new score/gr
 fit, data, VM/resource or retention change in inspection. Skin source/genome/replicon/
 molecule/taxonomy/overlap/ambiguity/origin-vs-unique truth and prospective candidate/
 protocol/cost still require admission; no unseen-genome or product-family conclusion.
+
+
+E021 local update, October 23, 2026: [the view-exact frozen-sequence hybrid](../../experiments/E021-frozen-sequence-hybrid/README.md)
+is implemented with actual local extraction/train/reload/marker/graph/export and
+strict source/cache contracts. Q001/Q003/Q005 remain open; no new community quality
+result or feature-family conclusion. CPU full-scale throughput/RAM/space gates
+are unadmitted despite trial balance; proposed GPU native admission is separate.
+Five-file skin audit admits only a full-denominator origin oracle (610 targets,
+one zero origin); 313 complete provided inventories match oral-observed genomes.
+Keep all populations/overlap/ambiguity/host limits and original frozen skin choice,
+with separate evaluator/confirmation cost scope. No skin fit/score or cloud job;
+October 28 retention remains. This block moves complementary information into
+engineering readiness, not scientific support.

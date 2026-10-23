@@ -1,0 +1,49 @@
+{
+  "record": "E021 prospective single hybrid development comparison",
+  "frozen_UTC": "2026-10-23T19:50:06.751610+00:00",
+  "candidate": "One view-exact frozen DNABERT-S residual/reliability branch on E019 context/composition/measured-depth learning; exact sole CPM/E013 downstream",
+  "baseline": {
+    "path": "experiments/E019-window-context/comparison-review.json",
+    "bytes": 251373,
+    "sha256": "e80043238e97659228748ba7f55487fe1f0eac64af89d87c08e69e3df2536589"
+  },
+  "schedule": {
+    "seed": 11,
+    "epochs": 20,
+    "batch_size": 256
+  },
+  "criterion": {
+    "keep": "Neither final full-reference R95 declines, at least one gains >=0.005 absolute and neither >=90% target count falls; every integrity contract passes.",
+    "abandon": "Neither R95 endpoint nor either >=90% target count improves.",
+    "modify": "All other valid results; no metric-selected policy or per-bin/community oracle."
+  },
+  "evaluation": {
+    "E009": "Frozen conservative v2, all 156 targets/full provided-reference denominator and 3.3034% N quarantine",
+    "oral": "Separately named provided-origin oracle, all 799 full references and zero-origin targets, known-shared sensitivity; unique support unadmitted",
+    "all_populations": [
+      "original_length",
+      "origin_lineage",
+      "native_eligibility",
+      "marker",
+      "unknown",
+      "non-target",
+      "excluded",
+      "unassigned"
+    ],
+    "old_summaries": "Reuse only, never refit/rescore"
+  },
+  "skin": {
+    "choice": "Original frozen CAMI II Toy HMB pooled skin GSA, sequence-only",
+    "payloads": "Five acquired by separate local authorization",
+    "comparison": "No skin fit/score in current development comparison; source/truth admission is parallel, candidate/comparator/protocol must freeze before later confirmation scores",
+    "no_unseen_genome_claim": true
+  },
+  "ablation": "None scheduled; at most one later design-changing control may be prepared",
+  "limits": {
+    "current_local_extra_GiB": 10,
+    "numerical_threads": 4,
+    "sampled_RSS_GB": 8,
+    "acquisition_validation_seconds": 14400
+  },
+  "paid": "Conditional owner authorization, but no start until complete priced/source/runtime/data/resource/credit/retention gates; no resource or retention extension implied"
+}

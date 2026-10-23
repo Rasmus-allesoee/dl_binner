@@ -57,6 +57,12 @@ def main(argv=None):
     context.add_argument('--output', type=Path, required=True)
     for name in ('fasta', 'features', 'views', 'tokens', 'checkpoint', 'config'):
         context.add_argument('--'+name, type=Path)
+    hybrid = commands.add_parser('hybrid-stage', help='Frozen sequence/context candidate (dev8)')
+    hybrid.add_argument('--stage',choices=('extract','train','embed'),required=True)
+    hybrid.add_argument('--output',type=Path,required=True)
+    for name in ('fasta','features','views','tokens','frozen','checkpoint','config','model-directory','model-pin'):
+        hybrid.add_argument('--'+name,type=Path)
+    hybrid.add_argument('--device',choices=('cpu','cuda'),default='cpu')
     running.add_argument('--memory-gb', type=float, help='Optional sampled working process-tree RSS safeguard in GB; positive, no maximum')
     running.add_argument('--timeout', type=float, help='Optional overall invocation wall-time safeguard in seconds; positive, no maximum')
     running.add_argument('--resume', action='store_true', help='Verify matching inputs/source/config/runtime and reuse completed stages')
@@ -118,6 +124,10 @@ def main(argv=None):
             return run_pipeline(args)
         if args.command == 'multiview-stage':
             from .multiview.stage import run
+            run(args)
+            return 0
+        if args.command == 'hybrid-stage':
+            from .hybrid.stage import run
             run(args)
             return 0
         if args.command == 'context-stage':

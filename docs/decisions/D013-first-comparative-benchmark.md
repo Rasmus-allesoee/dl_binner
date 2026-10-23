@@ -1,6 +1,6 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E020 completed review](../../experiments/E020-context-information-integration/comparison-review.json) is MODIFY after verified completion/shutdown. Recommend one frozen pretrained-sequence/context/depth hybrid with untouched-skin admission in parallel; ordinary E019 CPM/E013 stays the uniform provisional anchor. No new implementation/acquisition or paid work in inspection. Storage still ends October 28 at 00:00 Copenhagen.
+Current handoff: [E021 local hybrid/skin admission](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md) is complete; community quality unassessed. Ordinary E019 CPM/E013 stays uniform. Native execution waits for complete GPU/resource/runtime/credit admission; proposed $45 is a new scope, not spent. Skin is an origin-only new-community-setting confirmation with substantial exact oral genome overlap. Storage still ends October 28 at 00:00 Copenhagen.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.
@@ -759,3 +759,11 @@ more than cached grouping and need actual CPU/GPU/runtime/RAM/disk/export/credit
 planning and separate concrete approval. No old budget or automatic October 28
 storage extension follows. Independent broader data, not a mature-tool win alone,
 will determine whether the richer information actually closes recovery gaps.
+
+
+October 23 E021 update: [local hybrid and source admission](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md)
+implements the next coherent candidate without repeating accepted science. Skin
+is admitted only as a provided-origin oracle with full/zero-origin denominators,
+substantial exact oral genome overlap and unique/near/host limits. No new community
+score or VM start. D015 owns the choice to defer until a new GPU resource/runtime/
+cost scope can pass; original $8 storage ends October 28, unchanged.

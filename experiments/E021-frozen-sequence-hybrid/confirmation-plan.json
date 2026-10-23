@@ -1,0 +1,35 @@
+{
+  "record": "E021 prospective skin confirmation, no outcomes inspected",
+  "frozen_date": "2026-10-23",
+  "choice": "Original CAMI II Toy HMB skin pooled GSA, sequence-only; no replacement selected after admission",
+  "original_choice": {
+    "bytes": 5516,
+    "sha256": "b02612ac926e424386f92b024d519bd9dff3c08d23c1527223447ebd4fec965f"
+  },
+  "admission": {
+    "bytes": 8808,
+    "sha256": "5930c4d8a68d2b0ce4460b051afa9560380542d44da28e58cd5dab64ab39055b"
+  },
+  "candidate": "One frozen E021 hybrid after development disposition; no skin-selected thresholds/architecture/per-bin choices",
+  "comparator": "Preserved E019 dev7 algorithm, new unsupervised target fit only if separately authorized; native original source/runtime/config required",
+  "protocol": {
+    "input": "All 753143 opaque-ID contigs / 1527051918 bp, including short/ambiguous/marker-negative DNA; preserve any future zero-bp source records explicitly",
+    "eligibility": "Inherited 500 bp engineering rule in both candidate/comparator, not product cutoff policy",
+    "schedule": "seed 11 / 20 epochs / batch 256 only if target runtime/peak-space admission passes; no unannounced shorter oral/skin schedule",
+    "grouping": "Ordinary sole CPM and E013 uniformly; pre/old/post and all excluded/unassigned retained",
+    "truth": "CAMI-II-HMB-skin-provided-origin-oracle-v1; exact source/coordinate support with every nonACGT base localized/quarantined; unique support unadmitted",
+    "primary": "Full-reference weighted R95, >=50% and >=90% target counts; all 610 positive cellular genomes / 1740112046 bp, including zero-origin OTU_97.44585.0",
+    "secondary": "Predeclared 313 exact full provided-inventory matches to genomes observed in oral GSA versus 297 without that exact match; report complete stratum denominators and all original length/origin/eligibility/marker/unknown/non-target/excluded/unassigned populations",
+    "sensitivity": "Mask all 67 known forward-query/canonical-complete-reference shared queries, while retaining full reference denominators; reverse-complement substrings and near alternatives are not exhaustively searched.",
+    "criteria": "Same paired practical no-regression and >=0.005 absolute R95 gain criteria as development, reported separately; no score-selected selector or threshold/grid"
+  },
+  "interpretation": "New community setting with substantial genome overlap, not unseen-genome, assembly-error or ten-depth confirmation. Labels inspected only for source/truth admission; no binning outcome inspected.",
+  "remaining": [
+    "Independent real tiny skin evaluator adapter against the frozen artifact and full/zero-origin/shared/quarantined/duplicate contracts before scoring",
+    "Complete E009/GI/oral near-genome and GLM/panel pretraining overlap inventory is unavailable; retain uncertainty and no unseen-genome claim",
+    "Biological molecule/host/circular alias annotations incomplete; provided-source origin only, no host/replicon biology inference",
+    "Fresh separate execution/compute/RAM/GPU/quota/return/local-review/credit/cost and retention admission; no skin execution now",
+    "No admitted per-contig skin read depth and no assembly errors; later measured-depth/real-assembly questions need separate inputs/protocol"
+  ],
+  "retention": "Current cloud storage authorization ends 2026-10-28T00:00:00+01:00; no extension or deletion implied. Local retained originals preserved."
+}

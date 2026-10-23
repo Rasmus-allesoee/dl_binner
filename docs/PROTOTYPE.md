@@ -1,5 +1,40 @@
 # Binner prototypes and current contracts
 
+## Frozen sequence/context hybrid, dev8
+
+[E021](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md) adds an experimental
+`hybrid-stage extract/train/embed` interface. Exact model/tokenizer/custom-source
+pins are packaged; model weights are deliberately external/read-only. Install a
+complete compatible model runtime in addition to ordinary/candidate dependencies;
+the [actual local inventory](../experiments/E021-frozen-sequence-hybrid/local-evidence.json)
+is a Mac Python 3.10 recipe, not proof of Linux/CUDA or Python 3.12 compatibility.
+The package never downloads remote code/weights. `--device cpu` is explicit;
+CUDA is a prospective option requiring native admission, not a tested fallback.
+
+```sh
+python -I -B -m dl_binner hybrid-stage --stage extract --threads 4 --device cpu \
+  --fasta assembly.fa --features retained/features.npz --views retained/views.npz \
+  --model-directory verified-model --model-pin verified-model-pin.json --output new-glm
+python -I -B -m dl_binner hybrid-stage --stage train --threads 4 \
+  --features retained/features.npz --views retained/views.npz --tokens retained/context \
+  --frozen new-glm --output new-hybrid-train
+python -I -B -m dl_binner hybrid-stage --stage embed --threads 4 \
+  --features retained/features.npz --views retained/views.npz --tokens retained/context \
+  --frozen new-glm --checkpoint new-hybrid-train/checkpoint.pt --output new-units.npz
+```
+
+Each exact parent/crop gets both-strand attended-token/bp-weighted chunk features,
+without truncation; no parent-vector substitution for crops. Cache availability,
+DNA/coordinates/IDs and source bytes are strict. Parent-only GLM z-score/L2 statistics
+are reused for inference. A small zero-initialized reliability residual complements
+E019 composition/context and measured-parent depth; it is not calibrated confidence.
+The author's hash-verified Torch float32 attention fallback is explicit because its
+optional Triton branch downcasts. Head training remains CPU; backbone is frozen.
+Corrupt/partial banks refuse, with no inference/rebuild fallback. Original defaults,
+EMA/predictors/collapse guards and unit geometry remain. Group/refine/export are
+separate unchanged research CPM/E013 stages, not automatic truth-informed selection.
+No community quality or production-default claim follows from actual tiny tests.
+
 ## Compact window-context candidate, dev7
 
 [E019](../experiments/E019-window-context/README.md) adds a separate experimental

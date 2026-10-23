@@ -163,9 +163,14 @@ owns the evidence and serious alternatives.
 
 ## Exact following prompt
 
+Invoked October 23 for [E021](../E021-frozen-sequence-hybrid/OPERATIONS.md). The owner
+separately overrode only no-VM/no-comparison limits with conditional execution and
+choice to defer; E021 now owns implementation/admission status and the next prompt.
+The dated wording below is preserved, not a current no-VM instruction.
+
 The following is a **proposed new local implementation/acquisition authorization**
 when the owner invokes it. It does not authorize execution under E020's completed
-$1, and requests separate concrete approval for later paid/community work.
+$1, and conditionally authorizes one paid comparison under the final paragraph.
 
 Our goal is substantially closing the recovery gap through coherent upgrades and selective controls. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015, the completed literature/source/thesis reviews, E003's preserved mixed GLM evidence and E019/E020's reviewed results, locks, operations and frozen skin plan. Preserve immutable dev3/dev4/dev5/E016/E019 and all accepted E009–E020 inputs, truth, results, source freezes and failed journals. Use a new descriptive research branch without a codex/ prefix.
 

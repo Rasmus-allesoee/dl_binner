@@ -1,0 +1,8 @@
+{
+  "status": "FAILED",
+  "label": "final-CLI-and-dryrun",
+  "attempt": 1,
+  "error": "RuntimeError('Command failed; see artifacts/e021-frozen-sequence-hybrid/final-CLI-and-dryrun-1.log\\nExplicitly passing a `revision` is encouraged when loading a configuration with custom code to ensure no malicious code has been contributed in a newer revision.\\nExplicitly passing a `revision` is encouraged when loading a model with custom code to ensure no malicious code has been contributed in a newer revision.\\n/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/model-module-cache/transformers_modules/model/bert_layers.py:126: UserWarning: Unable to import Triton; defaulting MosaicBERT attention implementation to pytorch (this will reduce throughput when using this model).\\n  warnings.warn(\\n{\"stage\": \"hybrid_reference_attention\", \"utc\": \"2026-10-23T20:52:55Z\", \"backend\": \"pinned_author_torch_float32_reference\", \"layers\": 12, \"sources\": {\"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/model-module-cache/transformers_modules/model/bert_layers.py\": \"cd2fe0efbb90db624fe4e25aa96bd049513e81740ba3f980163c385e894df561\"}, \"source_files_unchanged\": true}\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/check-final-cli-and-dryrun.py\", line 11, in <module>\\n    assert len(bank.rows)==2 and bank.usable.sum()==2\\nAssertionError\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+  "elapsed_original_seconds": 5835.863377094269,
+  "extra_local_bytes": 9326018633
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "model_revision": "00e47f96cdea35e4b6f5df89e5419cbe47d490c6",
+  "dimensions": 768,
+  "hidden": 128,
+  "output": 64,
+  "chunk_bp": 4000,
+  "max_tokens": 1024,
+  "batch_size": 2,
+  "pool": "attended-token mean including special tokens",
+  "strand": "canonical whole-DNA orientation, both-strand chunk mean",
+  "chunk_aggregation": "nonoverlapping, base-length-weighted mean",
+  "dtype": "float32",
+  "gate": "sigmoid(log1p(view_bp)/log1p(10000), ambiguous_fraction)",
+  "fusion": "zero_initialized_sequence_residual",
+  "exposure": "exact retained full parent plus every usable real crop"
+}

@@ -1,0 +1,4 @@
+{
+  "status": "OPERATIONAL_SCHEMA_FAILURE_BEFORE_TRANSFORMER_OR_FIT",
+  "cause": "Tiny generator changed grouping support in base policy but omitted matching training config fields. Validator correctly refused. Fresh explicit config/plan/work reuse passed features, token banks and native HMM by their original receipts; no old manifest edited."
+}

@@ -1,0 +1,150 @@
+{
+  "record": "E021 separately priced first development comparison",
+  "date": "2026-10-23T20:50:32.558736+00:00",
+  "status": "DEFERRED_NOT_NATIVE_ADMITTED_NOT_STARTED",
+  "decision": "Wait for a new GPU resource/quota/runtime admission task; do not start the existing E2 in this task.",
+  "units": {
+    "E009-hybrid": {
+      "full_contigs": 145702,
+      "eligible": 89041,
+      "parent_bp": 209642703,
+      "available_views": 432664,
+      "exposure_lower_bp": 297610191,
+      "exposure_upper_bp": 452039397,
+      "vector_NPY_bytes": 1367669888,
+      "other_NPY_bytes": 8637489
+    },
+    "oral-hybrid": {
+      "full_contigs": 1286547,
+      "eligible": 508763,
+      "parent_bp": 1443827664,
+      "available_views": 2470549,
+      "exposure_lower_bp": 1946044880,
+      "exposure_upper_bp": 2789947232,
+      "vector_NPY_bytes": 7814599808,
+      "other_NPY_bytes": 159243331
+    }
+  },
+  "cache_arrays_bytes": 9350150516,
+  "measured_Mac_extraction": {
+    "bp": 118536,
+    "seconds": 114.71,
+    "bp_per_second": 1033.35367448348,
+    "forward_tokens": 55618,
+    "chunk_calls": 177,
+    "scope": "Own synthetic native CPU, four threads; no E2/GPU timing guarantee. Header identity irrelevant to the model."
+  },
+  "same_Mac_linear_projection": {
+    "parent_only_hours": 444.472532016926,
+    "full_exposure_lower_hours": 603.1212111707508,
+    "full_exposure_upper_hours": 871.4846268283006,
+    "scope": "Planning warning, not a native estimate, proof of unsuitability or family veto. Longer-token cost is nonlinear."
+  },
+  "native_compute": {
+    "existing_machine": "e2-standard-8 / 32 GiB",
+    "numerical_threads": 4,
+    "loader_workers": 0,
+    "proposed_native_RSS_GB": 26,
+    "local_RSS_GB": 8,
+    "old_E019_sampled_native_RSS_GB": 17.334,
+    "new_native_RSS_and_throughput": "UNADMITTED; do not confuse 1.21 GB tiny RSS with full-community RAM"
+  },
+  "peak_disk": {
+    "retained_E019_original_work_bytes": 11121575506,
+    "reused_tokens_not_copied_bytes": 6894477926,
+    "matched_downstream_work_proxy_bytes": 4227097580,
+    "new_cache_array_bytes": 9350150516,
+    "view_log_planning_bytes": 1741927800,
+    "new_science_work_proxy_bytes": 15319175896,
+    "cpu_total_extra_forecast_GiB": [
+      19.4670943364501,
+      23.007158486917614
+    ],
+    "GPU_total_extra_forecast_GiB": [
+      21.4670943364501,
+      26.007158486917614
+    ],
+    "current_proposed_native_extra_cap_GiB": 20,
+    "free_reserve_GiB": 25,
+    "last_verified_work_free_GiB": 63.05056762695,
+    "headroom": "No guest wake to inspect; must freshly verify on an admitted start. GPU proposal requests <=32 GiB extra without resizing."
+  },
+  "return_and_review": {
+    "compressed_forecast_GiB": [
+      1.2,
+      1.8
+    ],
+    "compressed_hard_cap_GiB": 2,
+    "logical_hard_cap_GiB": 6,
+    "method": "Lossless exact-byte aliases and capped compressed writer including gzip footer; all member/omission inventories. No oversized fallback.",
+    "omitted": "Full immutable raw GLM vectors and full accounted DNA retained natively, explicitly inventoried; hashes are not backups.",
+    "local_current_bytes": 9325966390,
+    "additional_sequential_review_GiB": [
+      2.2,
+      4.5
+    ],
+    "current_total_extra_local_cap_GiB": 10,
+    "admission": "Full return/review must be admitted; a later task can authorize its own <=6 GiB review allowance after checking physical free space."
+  },
+  "prices": {
+    "source": "Fresh account-currency Catalog API; maximum marginal SKU tiers, conservatively without 744 IPv4-hour or 30 GiB PD free-tier offsets; actual conversion, not credit delta.",
+    "E2_compute_IP_USD_hour": 0.2730456762592464,
+    "N1_standard8_T4_IP_USD_hour": 0.7349979963823223,
+    "existing_disks_USD_hour": 0.04193548380356186,
+    "existing_disks_USD_month": 31.199999949850024,
+    "month_hours": 744.0,
+    "T4_SKU": "88B8-C3ED-03F0"
+  },
+  "conditional_CPU_envelope": {
+    "new_ceiling_USD": 25,
+    "cumulative_hours": 72,
+    "provider_STOP_hours": 72.25,
+    "native_RSS_GB": 26,
+    "extra_GiB": 20,
+    "compressed_export_GiB": 2,
+    "maximum_allocation_disks_export_reserve_USD": 24.4983888145379,
+    "status": "Financial quote fits, but runtime/RAM/peak-space/local-review proof does not pass. No VM start."
+  },
+  "separate_GPU_proposal": {
+    "new_ceiling_USD": 45,
+    "cumulative_hours": 48,
+    "provider_STOP_hours": 48.25,
+    "resources": "Temporary existing VM n1-standard-8 / 30 GiB + one NVIDIA T4 / 16 GiB; original disks, no format. Revert to E2 after independent stop.",
+    "native_RSS_GB": 26,
+    "extra_GiB": 32,
+    "GPU_memory_GiB": 14,
+    "maximum_allocation_disks_export_reserve_USD": 39.22804041896891,
+    "quota": {
+      "global_all_regions": 0,
+      "regional_T4": 1,
+      "needs_global_quota_at_least": 1
+    },
+    "native_gates": "Fresh complete Linux/CUDA recipe, explicit pinned float32 attention, tiny CPU/GPU equivalence with prospective tolerances, exact reload/cache/graph/refiner/export, measured throughput and VRAM/RAM/space before community release.",
+    "credit_eligibility": "Paid upgrade and balance verified; GPU-specific coverage must still be admitted before any GPU charge. Availability/quota not guaranteed.",
+    "authorization": "Proposal only; current task did not authorize type/GPU/quota changes. New explicit resource/ceiling scope needed."
+  },
+  "credit": {
+    "remaining_DKK": 1871.23,
+    "percent": 95,
+    "expiry": "2027-01-12",
+    "scope": "Certain usage, Free Trial terms, net pricing",
+    "paid": true,
+    "overview_cost_savings_display_DKK": 101,
+    "overview_net_DKK": 0,
+    "delayed_usage": "Can exceed 24 hours; unknown pending usage, $35 reserve; no invoice inference."
+  },
+  "retention": {
+    "approved_USD": 8,
+    "end": "2026-10-28T00:00:00+01:00",
+    "extended": false,
+    "forecast": "Original stopped disks and current listed versions ~7.63 USD; model/cache working disk charged by existing provisioned capacity, future archive growth must fit remaining storage allowance."
+  },
+  "current_task_actual": {
+    "VM_started": false,
+    "cloud_resources_changed": false,
+    "cloud_write": false,
+    "new_cloud_compute_USD": 0,
+    "local_public_acquisition_GCP_USD": 0,
+    "private_read_operations": "Covered by existing small storage/operation reserve; not an invoice."
+  }
+}

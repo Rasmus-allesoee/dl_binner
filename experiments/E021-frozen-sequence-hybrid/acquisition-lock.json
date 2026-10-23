@@ -1,0 +1,34 @@
+{
+  "base_url": "https://frl.publisso.de/data/frl%3A6425518/",
+  "files": [
+    {
+      "path": "airskinurogenital/setup.tar.gz",
+      "bytes": 2467407842,
+      "md5": "e3e9620340d1ef53d751d12fa154267d"
+    },
+    {
+      "path": "per_bodysite/skin_bam/gsa.fa",
+      "bytes": 1562022677,
+      "md5": "57a7234f868007d6d9357cf69233f21d"
+    },
+    {
+      "path": "per_bodysite/skin_bam/gsa.tsv.gz",
+      "bytes": 440256505,
+      "md5": "16e0c8624aafc486d43ffb302ce0186f"
+    },
+    {
+      "path": "per_bodysite/skin_bam/gsa_pooled_mapping_fixed.tsv",
+      "bytes": 45238732,
+      "md5": "17afcd16c9417c2a284170b62769dc92"
+    },
+    {
+      "path": "per_bodysite/skin_bam/gsa_pooled_mapping.tsv",
+      "bytes": 90477267,
+      "md5": "e74948368c7a97ad94d31f04115a3543"
+    }
+  ],
+  "output_record": "acquisition.json",
+  "extra_byte_cap": 10737418240,
+  "seconds": 14400,
+  "metadata_cap": 10485760
+}

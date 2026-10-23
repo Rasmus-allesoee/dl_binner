@@ -1,9 +1,53 @@
 # Current Research State
 
-Updated: 2026-10-23. This is the single current handoff.
+Updated: 2026-10-24 (Copenhagen). This is the single current handoff.
 
 ## Exact next step
 
+
+**E021 local frozen-sequence hybrid and skin source admission complete; no community
+extraction/fit/score or VM start.** [Operations / exact next prompt](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md),
+[local evidence](../experiments/E021-frozen-sequence-hybrid/local-evidence.json),
+[skin admission](../experiments/E021-frozen-sequence-hybrid/skin-admission.json) and
+[resource plan](../experiments/E021-frozen-sequence-hybrid/resource-plan.json) own this block.
+Dev8 adds exact retained parent/crop frozen DNABERT-S evidence through a compact gated
+residual into E019 context/composition/measured-depth learning. Original E019 CPM/E013,
+schedule and full-DNA accounting remain; no baseline/source freeze or old score changes.
+Real synthetic extraction, two 20-epoch modes, reload/marker/graph/refinement/export,
+installed wheel/owned-runtime and bounded collector contracts pass. Tiny tests are
+engineering evidence, not recovery or native Linux/GPU affordability.
+
+All five authorized skin files / 4,605,403,023 bytes pass publisher MD5 and SHA256.
+Full source/coordinate audit and independent origin review admit only the named
+provided-origin oracle: 753,143 contigs / 1,527,051,918 bp; 610 targets /
+1,740,112,046 full provided bp, including one zero origin. All 1,394 references
+remain competitive; 1,427 ambiguous bp are localized/quarantined and 67 shared
+queries flagged. Biological host/molecule/circular aliases and unique competitive
+truth remain unresolved. **313/610** have exact full provided-reference inventory
+matches to genomes observed in oral GSA; the other 297 are not proven unseen.
+[Confirmation](../experiments/E021-frozen-sequence-hybrid/confirmation-plan.json)
+keeps the original skin choice as a new-community-setting question with fixed
+strata and no scores, not unseen-genome/depth/assembly-error evidence.
+
+**Defer native execution, as permitted by the owner.** Latest October 23 Welcome balance is
+DKK 1,871.23 / 95%, January 12 expiry, with >24-hour pending usage/$35 reserve.
+The existing VM is TERMINATED; no quota/type/service/IAM/storage change or upload.
+CPU full-exposure throughput/RAM and 20 GiB growth/return/local-review gates are
+unadmitted: cache arrays alone are 8.708 GiB, total new VM work forecast 19.5–23.0 GiB,
+and same-Mac CPU extrapolation is 603–871 hours, not a native estimate. This is not
+a $1 cached job. Next recommend native GPU/resource admission of this one frozen
+candidate before another architecture/loss/grid: proposed temporary existing-VM
+n1-standard-8 + T4, new $45/48-hour ceiling, 32 GiB growth and separately bounded
+review. Global GPU quota is zero; new explicit resource/quota scope and GPU credit/
+Linux/CUDA/throughput admission are required before charge. No GPU request/change
+was made here. The complete copy-paste approval is in E021 operations.
+
+Current task adds $0 cloud compute and $0 GCP public-download cost. Existing stopped
+disks remain $31.20/month; separate $8 storage forecast ~ $7.63 still ends
+**October 28 at 00:00 Copenhagen (CET, UTC+01:00)**. No renewal/deletion implied.
+Preserve all original failures, including Mac allclose and new operational refusals.
+
+## Preserved E020 completed-review snapshot
 
 **E020 completed and independently reviewed: MODIFY. VM TERMINATED.**
 [Comparison](../experiments/E020-context-information-integration/comparison-review.json),

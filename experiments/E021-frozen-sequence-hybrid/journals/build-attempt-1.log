@@ -1,0 +1,7 @@
+/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python: No module named build
+Traceback (most recent call last):
+  File "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/build-owned.py", line 11, in <module>
+    subprocess.run([sys.executable,'-I','-B','-m','build','--no-isolation','--outdir',str(root/'dist'),str(src)],check=True)
+  File "/opt/miniconda3/envs/anvio-dev/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python', '-I', '-B', '-m', 'build', '--no-isolation', '--outdir', '/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/dist', '/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/build-source']' returned non-zero exit status 1.

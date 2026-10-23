@@ -1,0 +1,24 @@
+{
+  "frozen_UTC": "2026-10-23T19:57:27.150821+00:00",
+  "scope": "Source admission only; no binner outcome read",
+  "skin_samples": [
+    1,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    28
+  ],
+  "mapping_contracts": {
+    "corrected": "Original exact seven-field header required",
+    "historical_raw": "Publisher-MD5-pinned file is headerless; strict seven fields, PC identity, finite reads and exact positive coordinates. No automatic header detection/fallback."
+  },
+  "truth": "Provided-origin oracle may be separately admitted after independent complete-source/coordinate/full-reference/duplicate/ambiguity review. Unique competitive DNA support remains unadmitted.",
+  "denominators": "All positive skin cellular targets with complete provided record lengths, including zero origins; retain every provided competitor/non-target and raw/duplicate-sensitive totals.",
+  "source_blind": "IDs depend on anonymous PC identity and fixed namespace only, reverse join outside training",
+  "near": "Bounded content-anchored 32-mer warning screen is not ANI or an absence proof; historical pretraining inventory unknown is a limitation, not an automatic source-origin blocker."
+}

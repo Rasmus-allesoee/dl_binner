@@ -1,0 +1,8 @@
+{
+  "status": "37_PASSED_2_PACKAGING_FAILURES_PRESERVED",
+  "failures": [
+    "New version expected 0.1.0.dev8, test still fixed to dev7.",
+    "Manual wheel extraction omitted the installed console entry point. Fresh prefix will use actual pip --no-deps --no-index install; no executed environment modified."
+  ],
+  "recovery": "Fresh identical scientific wheel/prefix and targeted exact failing core/console contracts; source and dependency identity compared before reusing the other 37 passes."
+}

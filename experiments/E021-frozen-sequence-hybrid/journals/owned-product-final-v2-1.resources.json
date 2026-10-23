@@ -1,0 +1,8 @@
+{
+  "status": "FAILED",
+  "label": "owned-product-final-v2",
+  "attempt": 1,
+  "error": "RuntimeError(\"Command failed; see artifacts/e021-frozen-sequence-hybrid/owned-product-final-v2-1.log\\nPermissionError: [Errno 1] Operation not permitted: 'ps'\")",
+  "elapsed_original_seconds": 5184.379956245422,
+  "extra_local_bytes": 9313982405
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PASS_LOCAL_COMPACT_SEAL_EVERY_MEMBER",
+  "archive": {
+    "bytes": 2967063,
+    "sha256": "7240b089c75e4703ec95cda5ee065e169caf6b1462bd6d42c6b2df22ed64ae8c"
+  },
+  "locator": "artifacts/e021-frozen-sequence-hybrid/closure-seal-v1/e021-local-evidence.tar.gz",
+  "payload_members": 224,
+  "logical_payload_bytes": 11552462,
+  "every_member_verified": true,
+  "source_inventory": {
+    "bytes": 38647,
+    "sha256": "97c0c3777febd5fd96a017ba9046879166f4a304656def5e52fce63e7b24f3fc"
+  },
+  "excluded": [
+    "DNA",
+    "bulk original/view vectors",
+    "model weights",
+    "environments",
+    "credentials"
+  ],
+  "uploaded": false,
+  "closure_epoch": 1792796906.7185228,
+  "elapsed_original_clock_seconds": 13964.79773902893,
+  "extra_local_bytes": 9339113999,
+  "local_cap_bytes": 10737418240,
+  "resource_scope": "Stdlib local evidence closure; no model, score, acquisition or cloud compute."
+}

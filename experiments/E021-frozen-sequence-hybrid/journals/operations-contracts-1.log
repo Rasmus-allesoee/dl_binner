@@ -1,0 +1,15 @@
+E.
+======================================================================
+ERROR: test_fresh_release_requires_real_runtime_credit_watchdog_and_no_extension (test_e021_operations.Operations.test_fresh_release_requires_real_runtime_credit_watchdog_and_no_extension)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e021_operations.py", line 26, in test_fresh_release_requires_real_runtime_credit_watchdog_and_no_extension
+    admission(cfg,release,start+10)
+  File "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e021_phase.py", line 69, in admission
+    raise ValueError('Cost or retention expansion refused')
+ValueError: Cost or retention expansion refused
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.052s
+
+FAILED (errors=1)

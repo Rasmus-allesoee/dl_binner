@@ -1,0 +1,4 @@
+{
+  "error": "Test assumed a 708 bp parent had no crops; inherited crop_min is 256 bp. Use an eligible 504 bp fixture to exercise absent crops correctly. No algorithm/default/tolerance changed.",
+  "UTC": "2026-10-23T19:21:51.689953+00:00"
+}

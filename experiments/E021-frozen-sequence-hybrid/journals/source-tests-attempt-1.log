@@ -1,0 +1,24 @@
+test_canonical_exact_chunks_no_truncation_and_token_overflow (test_hybrid.Hybrid) ... ok
+test_initial_anchor_gradient_stopped_target_EMA_and_missing_depth (test_hybrid.Hybrid) ... ok
+test_view_cache_real_DNA_coordinates_masks_and_refusal (test_hybrid.Hybrid) ... {"stage": "multiview_features", "utc": "2026-10-23T19:20:54Z", "completed_contigs": 0, "total_contigs": 4}
+FAIL
+
+======================================================================
+FAIL: test_view_cache_real_DNA_coordinates_masks_and_refusal (test_hybrid.Hybrid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/test_hybrid.py", line 45, in test_view_cache_real_DNA_coordinates_masks_and_refusal
+    b=Bank(r/'glm',feat,view,data,meta,v);self.assertFalse(b.values.flags.writeable);self.assertEqual(b.rows.tolist(),[0,1]);self.assertEqual(b.usable[1].tolist(),[True,False,False,False,False])
+AssertionError: Lists differ: [True, True, True, True, True] != [True, False, False, False, False]
+
+First differing element 1:
+True
+False
+
+- [True, True, True, True, True]
++ [True, False, False, False, False]
+
+----------------------------------------------------------------------
+Ran 3 tests in 4.994s
+
+FAILED (failures=1)

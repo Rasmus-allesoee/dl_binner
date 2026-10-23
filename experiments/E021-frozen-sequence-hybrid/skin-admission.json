@@ -1,0 +1,230 @@
+{
+  "record": "E021 independently reviewed skin source/origin admission, no binning result",
+  "date": "2026-10-23",
+  "status": "ADMITTED_PROVIDED_ORIGIN_ORACLE_ONLY",
+  "locator": "artifacts/e021-frozen-sequence-hybrid",
+  "acquisition": {
+    "body_bytes": 4605403023,
+    "seconds": 1949.1466780069895,
+    "publisher_MD5_and_new_SHA256_verified": true,
+    "files": [
+      {
+        "url": "https://frl.publisso.de/data/frl%3A6425518/airskinurogenital/setup.tar.gz",
+        "bytes": 2467407842,
+        "md5": "e3e9620340d1ef53d751d12fa154267d",
+        "sha256": "4f6c2ed29c796907ac60d1d2be6432d0e717d62a613536964f9c4d20d609b3d7"
+      },
+      {
+        "url": "https://frl.publisso.de/data/frl%3A6425518/per_bodysite/skin_bam/gsa.fa",
+        "bytes": 1562022677,
+        "md5": "57a7234f868007d6d9357cf69233f21d",
+        "sha256": "1792ddee979d89dc1b2a46b160e1196cee6ad927975468cac6945958df64093b"
+      },
+      {
+        "url": "https://frl.publisso.de/data/frl%3A6425518/per_bodysite/skin_bam/gsa.tsv.gz",
+        "bytes": 440256505,
+        "md5": "16e0c8624aafc486d43ffb302ce0186f",
+        "sha256": "221ef85a6ec1ded34fd0504c8cf100d0a3d88afe59b98841cb303f6f6fe7d434"
+      },
+      {
+        "url": "https://frl.publisso.de/data/frl%3A6425518/per_bodysite/skin_bam/gsa_pooled_mapping_fixed.tsv",
+        "bytes": 45238732,
+        "md5": "17afcd16c9417c2a284170b62769dc92",
+        "sha256": "b7629d3478e9de0279e8e8e29335504241cd95208483d39c5a98a511fb073ad0"
+      },
+      {
+        "url": "https://frl.publisso.de/data/frl%3A6425518/per_bodysite/skin_bam/gsa_pooled_mapping.tsv",
+        "bytes": 90477267,
+        "md5": "e74948368c7a97ad94d31f04115a3543",
+        "sha256": "222fce99d1f6592fe36ae1a22730f65d573f6ab0efbdae35a5f0fad3af2aefbf"
+      }
+    ]
+  },
+  "population": {
+    "availability_is_not_binner_score": true,
+    "counts": {
+      "bp": 1527051918,
+      "known_shared_queries": 67,
+      "quarantined_bp": 1427,
+      "queries": 753143
+    },
+    "derivation": {
+      "bytes": 2523,
+      "md5": "e7d52dd15753223fef2cb0f2636d89f5",
+      "sha256": "be5fdd966b81c33a3394b7765b6ec78ab08494ba454a80d6dbe89fa33560c149"
+    },
+    "full_target_bp": 1740112046,
+    "length_strata": {
+      "1000-2499": {
+        "bp": 208062932,
+        "contigs": 132459
+      },
+      "2500-9999": {
+        "bp": 359542319,
+        "contigs": 79564
+      },
+      "500-999": {
+        "bp": 107689540,
+        "contigs": 152713
+      },
+      "<500": {
+        "bp": 109145236,
+        "contigs": 377573
+      },
+      ">=10000": {
+        "bp": 742611891,
+        "contigs": 10834
+      }
+    },
+    "limits": [
+      "Unique competitive/near-homology support unadmitted; origin labels do not prove sequence identifiability.",
+      "Molecule/host annotations incomplete; use provided source grouping, no biological host or circular alias inference.",
+      "Exact/near/pretraining overlap limits unseen-genome claims.",
+      "Sequence-only GSA has no assembly errors or measured contig-level depth.",
+      "No candidate/community/confirmation score or labels in training."
+    ],
+    "original_zero_bp_records": 0,
+    "provided_competitor_genomes": 1394,
+    "raw_source_union_bp": 1527051918,
+    "status": "ADMITTED_PROVIDED_ORIGIN_ORACLE_ONLY",
+    "targets": 610,
+    "zero_origin_targets": [
+      "OTU_97.44585.0"
+    ],
+    "known_shared_semantics": "Forward query DNA SHA256 duplicated across provided genomes, or complete provided-reference canonical-DNA duplicated across genomes; exact reverse-complement substring and near alternatives are not exhaustively searched."
+  },
+  "provided_references": {
+    "genomes": 1394,
+    "records": 2394,
+    "raw_bp": 4266674864,
+    "exact_DNA_deduplicated_bp": 4266674864,
+    "within_genome_duplicates": "None in this payload; future disagreement is refused and needs a separate denominator policy",
+    "all_historical_domain_nodes": {
+      "2": 1394
+    },
+    "molecule_header_evidence": {
+      "unannotated": 2394
+    },
+    "zero_skin_origin_genomes": 785,
+    "exact_cross_origin_duplicate_record_groups": 5,
+    "raw_mapping": {
+      "historical_difference": 753143,
+      "matches_corrected": 753143,
+      "rows": 1506286
+    },
+    "positive_samples": [
+      1,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      28
+    ]
+  },
+  "overlap": {
+    "exact_full_provided_inventory_to_old_gastrooral": 359,
+    "exact_to_admitted_oral_targets": 314,
+    "exact_to_oral_GSA_observed": 313,
+    "other_positive_targets": 297,
+    "source_anchor_matched_records": 1216,
+    "source_nonexact_anchor_matched_records": 1120,
+    "screen": "Bottom 128 SHA256-64 hashes of canonical 32-mers around palindromic ACGCGT anchors; fixed before screen, motif biased, no ANI/absence/unique-support claim.",
+    "limitation": "Positive homology warning only; no exact full provided E009 record hash match observed, but no ANI/exhaustive near/subrecord/pretraining absence, unseen-genome or unique-support proof.",
+    "E009_exact_full_provided_record_matches": 0
+  },
+  "artifact_files": {
+    "model-input-v1/skin.fna": {
+      "bytes": 1578265642,
+      "md5": "d00edbce714806c0544709ac12f6e0eb",
+      "sha256": "420dc3591fe1f9c340922766b8d724305e073e738505cc9ad2a4b9d4a524916a"
+    },
+    "policy.json": {
+      "bytes": 772,
+      "md5": "a372fca9caf896859ef38ba77ebc4d7f",
+      "sha256": "23b4ac35e6fcab476d0a4801ddb00cd8d7fcdd0ff356942bd80693bf1db55660"
+    },
+    "queries.jsonl.gz": {
+      "bytes": 75902545,
+      "md5": "a5829ce126d029fc7a72889c15ddce10",
+      "sha256": "d34f9a16c7cad35cbba8f054780e097ebde127c0d11eb59f735577518618bafd"
+    },
+    "references.json": {
+      "bytes": 644912,
+      "md5": "2303c653f1aeadd5a9d8987e6c3b2c84",
+      "sha256": "f5d405514b704d26815b0e2d8daf1d5a477842f44fd18a80f9923eab2ee82a8f"
+    },
+    "reverse-join.tsv.gz": {
+      "bytes": 66679972,
+      "md5": "0c59630693117348ab9a0ec5f01cd74f",
+      "sha256": "056a015538a98a65782ccd4089dc425c0f159c1545b4dfc55fba08ae718d86ac"
+    },
+    "targets.json": {
+      "bytes": 17474,
+      "md5": "c4c5ff44d533500df59aa24bcf5b1fb2",
+      "sha256": "c08cbab67c28609b51696177d2311961f315a26d6d589d5bfa93ae6e679574fc"
+    }
+  },
+  "evidence": {
+    "acquisition.json": {
+      "bytes": 2576,
+      "sha256": "b9d22743d564cafd6f6cae9b7f47377d425aacef8843b17accc582578bc11336"
+    },
+    "fresh-HEADs.json": {
+      "bytes": 2265,
+      "sha256": "d7b892cc8eda59915cf23d7e66d1c11ff105996808d236738a33f7257023e9b1"
+    },
+    "admission-v2/review.json": {
+      "bytes": 217774,
+      "sha256": "30051683f524a4e7a112133b56f9a0a50a13cfd2518f5afb6c86d8aad06f6aa2"
+    },
+    "admission-v2/population.json": {
+      "bytes": 1976051,
+      "sha256": "38072e02ff76f0cfc6ffd66820f8aecb4d40cec716e88f79683320e60421afbf"
+    },
+    "admission-v2/denominators.json": {
+      "bytes": 279821,
+      "sha256": "c0dc4d9b466c2c1f6739596eddc585aba12a042556dce822efb185463a3d916b"
+    },
+    "admission-v2/references.json": {
+      "bytes": 5838671,
+      "sha256": "a21869e64db60f64769ef3c17c6d6c7ef603ca143eea99ab0c12689c10e373e8"
+    },
+    "admission-v2/members.json": {
+      "bytes": 499202,
+      "sha256": "7dc53e097a9d1fa2f7d1f7b3bc103c9803e1665b0db277fefedc69936ac3f5d3"
+    },
+    "index-reuse-admission.json": {
+      "bytes": 898,
+      "sha256": "0638f53a12ca27162b31311630e282901b270e4e478c8c299165b62f3f54fa4e"
+    },
+    "truth-origin-v1/derivation.json": {
+      "bytes": 2523,
+      "sha256": "be5fdd966b81c33a3394b7765b6ec78ab08494ba454a80d6dbe89fa33560c149"
+    },
+    "truth-origin-v1/independent-admission.json": {
+      "bytes": 20121,
+      "sha256": "f6ad497d9d3ae6a927ee42fbe2030e93c1dfd31bf11ef280812ef24e601588fd"
+    },
+    "exact-genome-overlap.json": {
+      "bytes": 53232,
+      "sha256": "c77ac6ffda5f3e90212771291c0d230c351367829f8fd8fc828669e1ea92c720"
+    },
+    "overlap-screen.json": {
+      "bytes": 1053123,
+      "sha256": "70bce614151e694a5cf2a5d742dd71cd7ffb40c93ca54d2f4ef724b6e268f4fe"
+    }
+  },
+  "limits": [
+    "Unique competitive/near-homology support unadmitted; origin labels do not prove sequence identifiability.",
+    "Molecule/host annotations incomplete; use provided source grouping, no biological host or circular alias inference.",
+    "Exact/near/pretraining overlap limits unseen-genome claims.",
+    "Sequence-only GSA has no assembly errors or measured contig-level depth.",
+    "No candidate/community/confirmation score or labels in training."
+  ],
+  "current_authorization": "Five files/small metadata/local admission only; no skin features, GLM extraction, fit, score or confirmation execution.",
+  "source_blind": "Original anonymous PC IDs hashed with frozen namespace; reverse source join outside model inputs; no biological IDs in model FASTA."
+}

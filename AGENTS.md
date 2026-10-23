@@ -212,6 +212,11 @@ in a separate review record; never rewrite a failed execution journal as success
 
 When uncertainty remains, state it.
 
+For frozen feature caches, bind exact model/tokenizer/custom-source identity and
+actual DNA-view coordinates, hashes and availability. Parent-vector substitution
+for crop DNA is a scientific treatment, not a cache fallback. A depth-only rebind
+requires exact DNA/ID/view equality, a fresh receipt and an untouched source cache.
+
 For reference-derived benchmark inputs, distinguish a verified simulator/source
 origin from DNA that uniquely identifies that origin. Preserve known alternative
 sources, shared sequence and ambiguous bases under an explicit evaluation policy;
@@ -398,7 +403,9 @@ serial workflow. Verify actual scheduling events/overlap on independent ready
 rules; a driver label or tiny fixture that happens to serialize is insufficient.
 
 For installed product workflows, test the actual built wheel outside the checkout
-and package its defaults and any required DAG. Preserve journaled completed outputs: use explicit
+and package its defaults and any required DAG. Unpacking a wheel alone does not
+install console entry points; test the real installer and installed command.
+Preserve journaled completed outputs: use explicit
 resume only after matching source/input/config/runtime/artifact bytes; never edit
 manifests to make a retry pass. Prototype interfaces may evolve without a
 compatibility promise; current contracts belong in `docs/PROTOTYPE.md`.

@@ -1,0 +1,23 @@
+{
+  "status": "METADATA_DESTINATION_REPAIR_SEALED_E020_RESTORED",
+  "UTC": "2026-10-23T19:53:28.556213+00:00",
+  "cause": "Copied read-only metadata helpers retained a hard-coded E020 output staging path. Fresh observations copied to E021 and original sealed E020 price/storage metadata restored byte-for-byte. No archive, science, truth, source freeze or maintained E020 result changed.",
+  "fresh_observations_retained_E021": [
+    "current-prices.json",
+    "billing-account.json",
+    "billing-account.stderr",
+    "disks.json",
+    "disks.stderr",
+    "instances.json",
+    "instances.stderr",
+    "bucket.json",
+    "bucket.stderr",
+    "storage-list.json"
+  ],
+  "original_sealed_metadata_restored": [
+    "current-prices.json",
+    "storage-list.json"
+  ],
+  "unsealed_snapshots": "Provider/billing resource snapshots excluded from old compact seal were fresh read-only observations, not accepted scientific artifacts. Both observation scopes are explicitly recorded; no historical byte-identity claim for those unsealed snapshots.",
+  "auxiliary_planning_snapshot": "A newly created planning-prices.json also used the inherited staging destination; moved to E021, corrected helper, no historical file replaced by that new observation."
+}

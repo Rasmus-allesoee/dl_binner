@@ -1,6 +1,32 @@
 # Google Cloud workspace operations
 
-Updated: 2026-10-23 (Copenhagen; initial provisioning receipts are October 13 UTC).
+Updated: 2026-10-24 (Copenhagen; initial provisioning receipts are October 13 UTC).
+
+**E021 implementation/admission is local; VM remains TERMINATED. No new job or
+resource/retention change.** [Operations](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md)
+and [resource plan](../experiments/E021-frozen-sequence-hybrid/resource-plan.json)
+own the conditional-comparison decision: defer because complete native model runtime,
+throughput/full RAM/20 GiB growth and local-review gates are unadmitted. Credits
+are healthy: DKK 1,871.23 / 95%, January 12, 2027 expiry; paid account, Certain usage,
+net pricing, >24-hour delayed usage possible/$35 reserve. No credit delta is an invoice.
+Fresh Catalog reads include E2/N1/T4 SKUs; no GPU coverage inference from paid billing.
+Global GPU quota is zero, regional T4 is one. No quota request, GPU/type/service/IAM
+change, VM wake, SSH, private upload or new cloud compute ($0) occurred.
+
+Next proposed scope is temporary existing-VM n1-standard-8 / 30 GiB + one T4 / 16 GiB,
+original disks unformatted, new $45/48-hour clock/48.25-hour STOP, 32 GiB growth;
+about $39.23 max allocation/disks/export/reserves at conservative current marginal
+SKUs. It needs new explicit resource/quota approval and complete native CUDA,
+credit coverage, availability, throughput/VRAM/RAM/return proof before release.
+The current $25/72-hour CPU preparation is not a validated GPU launcher. Existing
+300 GiB work +30 GiB boot disks still cost $31.20/month while stopped; current
+104 object versions /9,384,180,741 bytes and separate approved $8 interval forecast
+~$7.63 still end **October 28 at 00:00 Copenhagen (UTC+01:00)**. No extension/deletion
+or backup of native omitted vectors is implied. Run disk is attribution within
+that storage interval, not double billing. Local five-file public acquisition
+adds $0 GCP cost; small control/metadata reads are operation estimates, not invoices.
+
+The following E020 record is a **dated completed snapshot**, not current authorization.
 
 **E020 completed/returned/reviewed; VM independently TERMINATED.**
 [Inspection](../experiments/E020-context-information-integration/inspection-observed.json)

@@ -1,0 +1,1248 @@
+{
+  "record": "E021 local implementation/skin admission closure, no community outcome",
+  "date": "2026-10-23T23:05:14.073316+00:00",
+  "status": "PASS_LOCAL_ENGINEERING_AND_NAMED_ORIGIN_ADMISSION_NATIVE_COMPARISON_DEFERRED",
+  "branch": "e021-frozen-sequence-hybrid",
+  "candidate": {
+    "bytes": 27649,
+    "sha256": "e48e5e2941456fa7560f5325eeda7eed75874feedea572cff906bfd91b4377f0"
+  },
+  "tests": {
+    "product_final": 40,
+    "skin_readers": 5,
+    "origin_derivation_review": 2,
+    "operations_return_release": 4,
+    "total_distinct_final": 51,
+    "actual": "Complete owned installed Mac CPU wheel/console, real model extraction, two synthetic 20-epoch fits, exact reload, native graph/marker/refiner/export, actual capped tar writer/readers and restore-only remaining dry-run; no new community scores.",
+    "mocked": "FakeExtractor only in cache unit fixture; tiny budget constants patched only for actual tar boundary tests. Full native extraction is separate, not mocked.",
+    "unavailable": "Complete Linux/CUDA runtime, GPU numerical/resource equivalence, full-community extraction/cache/fit/RAM/throughput/return; skin evaluator adapter and unique truth remain unadmitted."
+  },
+  "tiny_DAG": {
+    "jobs": 15,
+    "full_records": 39,
+    "eligible": 36,
+    "seed": 11,
+    "epochs": 20,
+    "batch": 256,
+    "exposed_views": 171,
+    "exposed_bp": 118536,
+    "forward_tokens": 55618,
+    "chunks": 177,
+    "extract_seconds": 114.71,
+    "resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-local-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e021_control.py",
+        "--plan",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/engineering-plan-v2.json",
+        "--workflow",
+        "--engineering"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 150.7147310579894,
+      "peak_sampled_rss_bytes": 1209884672,
+      "seconds_ceiling": 13563.527019023895,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 96391,
+      "sampled_cpu_seconds": 474.45,
+      "sampled_average_cpus": 3.148000176687767,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "final_effective_rank": {
+      "depth": 2.61921468,
+      "sequence_only": 3.13221392
+    },
+    "scope": "Synthetic fixtures with engineering min-bin settings, not E009/oral community evidence; all original exclusions/short/ambiguous DNA retained"
+  },
+  "final_native_runtime": {
+    "bytes": 35272,
+    "sha256": "36aba124a02a2967de5126a6b10e9031077c359a998e53fdf94c4570690a5cef"
+  },
+  "final_actual_return": {
+    "status": "PASS_ACTUAL_NATIVE_RETURN_EVERY_MEMBER_AND_HYBRID_REVIEW",
+    "collection": {
+      "status": "SUCCESS",
+      "archive": {
+        "bytes": 9910384,
+        "sha256": "9a8ee7814c0447d798dd33f95cfcf3fc356b99628099190b75663eef7d9e70c9"
+      },
+      "regular_members": 145,
+      "logical_member_bytes": 11278796,
+      "every_member_verified": true,
+      "aliases": {
+        "work/units/E009-hybrid/train/reference.npz": {
+          "bytes": 9429,
+          "canonical": "work/units/E009-hybrid/embeddings.npz",
+          "sha256": "15b61bd4985c7bf02f6b8e9bd017d7ac8b8cb0ff4b80e63fcbb18e26b79d568f"
+        },
+        "work/units/oral-hybrid/train/reference.npz": {
+          "bytes": 9413,
+          "canonical": "work/units/oral-hybrid/embeddings.npz",
+          "sha256": "b0980ad7da3298fb784b50428c05ec6a4bcad9688a67476ffb5f34fde797c86b"
+        }
+      },
+      "omitted_retained_on_disk": {
+        "units/E009-hybrid/export/post/bin_000001.fna": {
+          "bytes": 58779,
+          "reason": "Full accounted DNA retained on disk",
+          "sha256": "44c150ea79ee42f61da818bcff57743ee9433cf2855e15be837b024e520e43b1"
+        },
+        "units/E009-hybrid/export/post/excluded.fna": {
+          "bytes": 3083,
+          "reason": "Full accounted DNA retained on disk",
+          "sha256": "ae97e1c8184c11a72cb0f5815fd5e4d402d13f0fb65cd015d816a793adfe4057"
+        },
+        "units/E009-hybrid/frozen/vectors.npy": {
+          "bytes": 553088,
+          "reason": "New immutable full GLM view vectors retained natively; complete bank manifest and view provenance returned, not backed up by this hash",
+          "sha256": "2f0828d693cf985c4b083e690d743997fa072e17283dd1cb96b2035640fc2cb3"
+        },
+        "units/oral-hybrid/export/post/bin_000001.fna": {
+          "bytes": 58779,
+          "reason": "Full accounted DNA retained on disk",
+          "sha256": "44c150ea79ee42f61da818bcff57743ee9433cf2855e15be837b024e520e43b1"
+        },
+        "units/oral-hybrid/export/post/excluded.fna": {
+          "bytes": 3083,
+          "reason": "Full accounted DNA retained on disk",
+          "sha256": "ae97e1c8184c11a72cb0f5815fd5e4d402d13f0fb65cd015d816a793adfe4057"
+        },
+        "units/oral-hybrid/frozen/vectors.npy": {
+          "bytes": 553088,
+          "reason": "New immutable full GLM view vectors retained natively; complete bank manifest and view provenance returned, not backed up by this hash",
+          "sha256": "2f0828d693cf985c4b083e690d743997fa072e17283dd1cb96b2035640fc2cb3"
+        }
+      },
+      "uncompressed_plus_overhead_bound_bytes": 12638552,
+      "compressed_hard_ceiling_bytes": 2147483648,
+      "planned_science_fits": 2,
+      "incomplete_failure_evidence": false,
+      "omitted_bytes_not_backed_up": true
+    },
+    "units": {
+      "E009-hybrid": {
+        "status": "PASS_MANIFEST_NATIVE_CONSUMPTION_AND_RETURNED_MEMBERS",
+        "context_manifest": {
+          "bytes": 1456,
+          "sha256": "f35f2e65620d91d7790027df1f72cc2baaa49ebffda73f89a68aef0dea8a1c7b"
+        },
+        "frozen_manifest": {
+          "bytes": 5578,
+          "sha256": "21a6ad056aff16a41f14346e30b3c8bdacf7f42932c76c1521666ec71f85c164"
+        },
+        "native_full_readers": "Exact source-bound ContextBank/FrozenBank consumed and verified all full banks before train/embed",
+        "local_full_GLM_or_context_NPY_reread": false,
+        "omitted_bytes_are_not_backed_up": true
+      },
+      "oral-hybrid": {
+        "status": "PASS_MANIFEST_NATIVE_CONSUMPTION_AND_RETURNED_MEMBERS",
+        "context_manifest": {
+          "bytes": 1425,
+          "sha256": "8c3c70e6deedf1a81deea60ef60b504873534b7f57531a31f776716b3e9c4a4e"
+        },
+        "frozen_manifest": {
+          "bytes": 5818,
+          "sha256": "14f47e8124e5b23b49559e89ed9bf4143379da8580f3eb3b2e7790fd3d0cd7b6"
+        },
+        "native_full_readers": "Exact source-bound ContextBank/FrozenBank consumed and verified all full banks before train/embed",
+        "local_full_GLM_or_context_NPY_reread": false,
+        "omitted_bytes_are_not_backed_up": true
+      }
+    }
+  },
+  "CLI_recovery": {
+    "status": "PASS_ACTUAL_INSTALLED_HYBRID_CLI_AND_15_JOB_DRY_RUN",
+    "original_CLI_subprocess_exit": 0,
+    "original_harness_failed": true,
+    "recovery": "Restore-only Bank exact bytes/full availability; no extraction/training repeat",
+    "parents": 2,
+    "available_views": 5,
+    "bank": {
+      "chunks": 5,
+      "depth": "Measured parent means only; no window measurements",
+      "eligible": 2,
+      "exposed_bp": 1890,
+      "fasta_sha256": "f56c0c51f99c7e1893394f29d572a196e10c9fe311922d7a39b64ce12e9b924b",
+      "features_sha256": "9adbd2d46d83c9b8549edd96504434a7a3c8366ef9ce9ad4af4daf8963ec3a32",
+      "forward_tokens": 751,
+      "kind": "hybrid_bank",
+      "members": {
+        "ids.npy": {
+          "bytes": 168,
+          "sha256": "87d7af6b4da1fa81088d2b69244bd3225d0c91f68cf924054344d1baa13b3f5d"
+        },
+        "quality.npy": {
+          "bytes": 208,
+          "sha256": "cb1c5f10de7fae08e9e7afe2e26b9f9975f08c1b6ff9a3306780ea8f02f84e8e"
+        },
+        "rows.npy": {
+          "bytes": 144,
+          "sha256": "edf57b3e7cc4d837db7a3b400e84ffa2cc07b6adc347edef9feabbc11c5183cb"
+        },
+        "usable.npy": {
+          "bytes": 138,
+          "sha256": "f12348324a4fee71cb47026e92adcd0dc8494726351cf46fc014da7d6e60fad7"
+        },
+        "vectors.npy": {
+          "bytes": 30848,
+          "sha256": "e026d7b4c9a8532b7c145c5e09cdba21df5f37ea91f43fb35de425819d115eaf"
+        },
+        "views.jsonl": {
+          "bytes": 1249,
+          "sha256": "b8f91dcf4f0366a334ac165abde27bc3b751b205ddb42b4a0332e99c5a9fcc01"
+        }
+      },
+      "model": {
+        "author_commit": "ac01b55e5034182e4b915d34ce5a3a323b82adb8",
+        "author_instructions": {
+          "pinned-author-README.md": "f7c991fa836497d63f1b33eccca989ee4f851f3cda8df3bebe07e01881cf25c9",
+          "pinned-author-requirements.txt": "af018b271bf3c648d1e7a99b5a0cb7ffd5d5bfc6b24cce289d6e37397b0ade09"
+        },
+        "author_repository": "https://github.com/MAGICS-LAB/DNABERT_S",
+        "files": {
+          "README.md": {
+            "bytes": 54,
+            "sha256": "d58d735f6173814aab198c1e7e0f620809f85e37e0af8dab1330329692075e98",
+            "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/README.md"
+          },
+          "bert_layers.py": {
+            "bytes": 40807,
+            "sha256": "cd2fe0efbb90db624fe4e25aa96bd049513e81740ba3f980163c385e894df561",
+            "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/bert_layers.py"
+          },
+          "bert_padding.py": {
+            "bytes": 6099,
+            "sha256": "44d1c68afb1f585fdc66c150d4c60f1ed44a89c006abc57d50531d71940d7421",
+            "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/bert_padding.py"
+          },
+          "config.json": {
+            "bytes": 1025,
+            "sha256": "d54c142114563aa34ef7c2b54ccc921d08e50cd7c3cd69c439d5e0d2bbcfcdee",
+            "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/config.json"
+          },
+          "configuration_bert.py": {
+            "bytes": 1017,
+            "sha256": "d030166bd279ca81e9d2304eaff9419171f2f8c69ab419e7cd37873b72f47a22",
+            "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/configuration_bert.py"
+          },
+          "flash_attn_triton.py": {
+            "bytes": 42737,
+            "sha256": "568d1ac3beca0b5e1df528a1f136aa19b6489a616fcf3784f33336a50bb1de81",
+            "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/flash_attn_triton.py"
+          },
+          "pytorch_model.bin": {
+            "bytes": 468320053,
+            "sha256": "f3cfc3d0541859df64759e758cc4bc40fe1d5760799a7d098a9f9f09501c1e5f",
+            "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/pytorch_model.bin"
+          },
+          "special_tokens_map.json": {
+            "bytes": 125,
+            "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+            "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/special_tokens_map.json"
+          },
+          "tokenizer.json": {
+            "bytes": 168203,
+            "sha256": "667f5a0e6e9630f7052b004784dda7c7aeba395cc4ca3c01b11b02e6aa29d7b1",
+            "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/tokenizer.json"
+          },
+          "tokenizer_config.json": {
+            "bytes": 268,
+            "sha256": "f13dbe9968de35aff25b06965f18e30449ec37ed94811bd0c7f97990f3b18ebb",
+            "url": "https://huggingface.co/zhihan1996/DNABERT-S/resolve/00e47f96cdea35e4b6f5df89e5419cbe47d490c6/tokenizer_config.json"
+          }
+        },
+        "inspected_date": "2026-10-03",
+        "license_limits": "HF metadata apache-2.0 and model source SPDX Apache-2.0; author-root LICENSE probe 404; no redistribution",
+        "metadata_license": "apache-2.0",
+        "model_id": "zhihan1996/DNABERT-S",
+        "revision": "00e47f96cdea35e4b6f5df89e5419cbe47d490c6",
+        "weights_lfs_sha256": "f3cfc3d0541859df64759e758cc4bc40fe1d5760799a7d098a9f9f09501c1e5f"
+      },
+      "parents": 2,
+      "policy": {
+        "batch_size": 2,
+        "chunk_aggregation": "nonoverlapping, base-length-weighted mean",
+        "chunk_bp": 4000,
+        "dimensions": 768,
+        "dtype": "float32",
+        "exposure": "exact retained full parent plus every usable real crop",
+        "fusion": "zero_initialized_sequence_residual",
+        "gate": "sigmoid(log1p(view_bp)/log1p(10000), ambiguous_fraction)",
+        "hidden": 128,
+        "max_tokens": 1024,
+        "model_revision": "00e47f96cdea35e4b6f5df89e5419cbe47d490c6",
+        "output": 64,
+        "pool": "attended-token mean including special tokens",
+        "strand": "canonical whole-DNA orientation, both-strand chunk mean",
+        "version": 1
+      },
+      "samples": [],
+      "status": "COMPLETE",
+      "version": 1,
+      "views": 5,
+      "views_sha256": "b1d80215927a9cc1049c6d9fe29d4a2fd2ca67f5e1c24d9f27944919e644ac31"
+    },
+    "workflow": "Actual final controller/Snakefile, four-core serial barrier, dry-run only"
+  },
+  "clock": {
+    "original": {
+      "started_epoch": 1792782941.920785,
+      "seconds": 14400
+    },
+    "elapsed_seconds_at_closure": 13769.170610189438,
+    "includes_usage_interruption": true,
+    "reset": false
+  },
+  "storage": {
+    "extra_local_bytes_at_closure": 9336067962,
+    "cap_bytes": 10737418240,
+    "physical_free_bytes": 22155210752,
+    "no_old_artifact_deletion": true
+  },
+  "resources": {
+    "numerical_threads": 4,
+    "sampled_RSS_ceiling_bytes": 8000000000,
+    "max_single_guard_peak_RSS_bytes": 1299189760,
+    "scope": "Sampled supervised worker/coordinator process trees. Numerical jobs serial; some stdlib source I/O overlapped. Early public acquisition/build/metadata I/O was not fully RSS sampled; no invented global exact peak."
+  },
+  "receipts": {
+    "actual-return-final-1.resources.json": {
+      "binding": {
+        "bytes": 851,
+        "sha256": "3f171c1c80b84ecc70656ffdea186dd0539345cb5ae7c765dc9d2f9257c9256a"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "actual-return-final",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+            "-I",
+            "-B",
+            "artifacts/e021-frozen-sequence-hybrid/check-actual-return-final.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 2.506925780995516,
+          "peak_sampled_rss_bytes": 58372096,
+          "seconds_ceiling": 702.9260549545288,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 27779,
+          "sampled_cpu_seconds": 2.9799999999999995,
+          "sampled_average_cpus": 1.188706910507986,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 13700.030886173248,
+        "extra_local_bytes": 9336058928
+      }
+    },
+    "actual-return-review-1.resources.json": {
+      "binding": {
+        "bytes": 946,
+        "sha256": "17cae7c480944148b7ed8e747f58ff1a02655e49f10ed0ffdc89e75acac8cc22"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "actual-return-review",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v1/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/check-actual-return.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.994295675001922,
+          "peak_sampled_rss_bytes": 58716160,
+          "seconds_ceiling": 10410.073606014252,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 17234,
+          "sampled_cpu_seconds": 2.4999999999999996,
+          "sampled_average_cpus": 1.2535754007477302,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 3991.9220650196075,
+        "extra_local_bytes": 8243025953
+      }
+    },
+    "final-CLI-and-dryrun-1.resources.json": {
+      "binding": {
+        "bytes": 1651,
+        "sha256": "6a6c694efb99bb2329f8c7f2cf3cb52b588f399b9d6aa3cb4b8e318b13e44ddf"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "final-CLI-and-dryrun",
+        "attempt": 1,
+        "error": "RuntimeError('Command failed; see artifacts/e021-frozen-sequence-hybrid/final-CLI-and-dryrun-1.log\\nExplicitly passing a `revision` is encouraged when loading a configuration with custom code to ensure no malicious code has been contributed in a newer revision.\\nExplicitly passing a `revision` is encouraged when loading a model with custom code to ensure no malicious code has been contributed in a newer revision.\\n/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/model-module-cache/transformers_modules/model/bert_layers.py:126: UserWarning: Unable to import Triton; defaulting MosaicBERT attention implementation to pytorch (this will reduce throughput when using this model).\\n  warnings.warn(\\n{\"stage\": \"hybrid_reference_attention\", \"utc\": \"2026-10-23T20:52:55Z\", \"backend\": \"pinned_author_torch_float32_reference\", \"layers\": 12, \"sources\": {\"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/model-module-cache/transformers_modules/model/bert_layers.py\": \"cd2fe0efbb90db624fe4e25aa96bd049513e81740ba3f980163c385e894df561\"}, \"source_files_unchanged\": true}\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/check-final-cli-and-dryrun.py\", line 11, in <module>\\n    assert len(bank.rows)==2 and bank.usable.sum()==2\\nAssertionError\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+        "elapsed_original_seconds": 5835.863377094269,
+        "extra_local_bytes": 9326018633
+      }
+    },
+    "final-CLI-reuse-and-dryrun-1.resources.json": {
+      "binding": {
+        "bytes": 861,
+        "sha256": "bc8bfa3025557b42b72dd3c27cb5eeef29c128bb703ce23fd0da72098aa5233c"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "final-CLI-reuse-and-dryrun",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+            "-I",
+            "-B",
+            "artifacts/e021-frozen-sequence-hybrid/verify-final-cli-and-dryrun.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 2.5533202119986527,
+          "peak_sampled_rss_bytes": 99966976,
+          "seconds_ceiling": 8513.102052927017,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 23838,
+          "sampled_cpu_seconds": 3.0400000000000005,
+          "sampled_average_cpus": 1.1906066406063465,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 5890.046085119247,
+        "extra_local_bytes": 9326050599
+      }
+    },
+    "final-owned-reload-1.resources.json": {
+      "binding": {
+        "bytes": 1032,
+        "sha256": "7c0c456db3fbbce5424bf07f957173af9cfb8f41ff7d27d6e4884f48e1aba6ff"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "final-owned-reload",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v1/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/reload-final.py",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 5.792509771999903,
+          "peak_sampled_rss_bytes": 226328576,
+          "seconds_ceiling": 11065.702809810638,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 14416,
+          "sampled_cpu_seconds": 8.010000000000002,
+          "sampled_average_cpus": 1.3828202826206877,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 3340.310972213745,
+        "extra_local_bytes": 6503660507
+      }
+    },
+    "final-owned-reload-v2-1.resources.json": {
+      "binding": {
+        "bytes": 889,
+        "sha256": "e085182d182350095ee4cc65bc06aed94860c66a822e8b649faa50c8c782a722"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "final-owned-reload-v2",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+            "-I",
+            "-B",
+            "artifacts/e021-frozen-sequence-hybrid/reload-final-v2.py",
+            "artifacts/e021-frozen-sequence-hybrid"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 4.391395266997279,
+          "peak_sampled_rss_bytes": 220438528,
+          "seconds_ceiling": 8726.29725599289,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 23288,
+          "sampled_cpu_seconds": 7.130000000000001,
+          "sampled_average_cpus": 1.6236297501124985,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 5679.232964992523,
+        "extra_local_bytes": 9325963309
+      }
+    },
+    "final-owned-runtime-1.resources.json": {
+      "binding": {
+        "bytes": 846,
+        "sha256": "2f10aaf7c70654319843ca3fff3861dc3fcf36d969d6989626339e8b63fd134d"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "final-owned-runtime",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/opt/miniconda3/bin/python3",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/create-owned-runtime-final.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 28.43235269699653,
+          "peak_sampled_rss_bytes": 100028416,
+          "seconds_ceiling": 9624.538630008698,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 17993,
+          "sampled_cpu_seconds": 34.22,
+          "sampled_average_cpus": 1.203558508319111,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 4804.211922168732,
+        "extra_local_bytes": 9313959645
+      }
+    },
+    "final-production-adapter-1.resources.json": {
+      "binding": {
+        "bytes": 950,
+        "sha256": "e229c8ded50225ad9d0fb0eb2cef73f33ff7da1eb58e70c56e0b1cbb9bccb93c"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "final-production-adapter",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v1/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/test-final-adapter.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 10.908331440004986,
+          "peak_sampled_rss_bytes": 1299189760,
+          "seconds_ceiling": 10165.14724111557,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 17591,
+          "sampled_cpu_seconds": 17.720000000000002,
+          "sampled_average_cpus": 1.6244464240437402,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 4246.469097137451,
+        "extra_local_bytes": 8243136113
+      }
+    },
+    "index-reuse-1.resources.json": {
+      "binding": {
+        "bytes": 845,
+        "sha256": "8a7d491e1184c1d72ad96ae2627197a7247578bc0b579cfbd0700fe803629620"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "index-reuse",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/opt/miniconda3/bin/python3",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/verify-index-reuse.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 214.35585285398702,
+          "peak_sampled_rss_bytes": 170151936,
+          "seconds_ceiling": 11943.634804964066,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 5256,
+          "sampled_cpu_seconds": 236.98000000000002,
+          "sampled_average_cpus": 1.1055448071269782,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 2671.113958120346,
+        "extra_local_bytes": 6096331927
+      }
+    },
+    "installed-contracts-1.resources.json": {
+      "binding": {
+        "bytes": 942,
+        "sha256": "60954ee582c170c070b7c0cc677959b4db2ac1165f875440410366a172f1c91d"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "installed-contracts",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-local-v1/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/installed-tests.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 23.014446485001827,
+          "peak_sampled_rss_bytes": 266440704,
+          "seconds_ceiling": 13926.472934961319,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 95680,
+          "sampled_cpu_seconds": 10.549999999999999,
+          "sampled_average_cpus": 0.4584077225961214,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 496.5430281162262,
+        "extra_local_bytes": 1269971190
+      }
+    },
+    "operations-complete-1.resources.json": {
+      "binding": {
+        "bytes": 739,
+        "sha256": "cbdf24045086b7e02946ee4b40fd5c5c3011fc5b47f64760928677b4201cda16"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "operations-complete",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "python3",
+            "-I",
+            "-B",
+            "tests/test_e021_operations.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 2.084098842999083,
+          "peak_sampled_rss_bytes": 43806720,
+          "seconds_ceiling": 711.5185360908508,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 27763,
+          "sampled_cpu_seconds": 0.96,
+          "sampled_average_cpus": 0.4606307437024101,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 13692.572050094604,
+        "extra_local_bytes": 9326089265
+      }
+    },
+    "operations-final-1.resources.json": {
+      "binding": {
+        "bytes": 327,
+        "sha256": "7b099fcb8d5f0f5b6cf45254883a61f8561c763740fc72fd0241db71060a8cda"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "operations-final",
+        "attempt": 1,
+        "error": "RuntimeError(\"Command failed; see artifacts/e021-frozen-sequence-hybrid/operations-final-1.log\\nPermissionError: [Errno 1] Operation not permitted: 'ps'\")",
+        "elapsed_original_seconds": 5214.06750702858,
+        "extra_local_bytes": 9313983401
+      }
+    },
+    "operations-final-2.resources.json": {
+      "binding": {
+        "bytes": 753,
+        "sha256": "c07f90afa07cb202d61ff122426d989d016091651cccc6e36d910da6f137873e"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "operations-final",
+        "attempt": 2,
+        "resources": {
+          "command": [
+            "python3",
+            "-I",
+            "-B",
+            "tests/test_e021_operations.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 0.6039253959897906,
+          "peak_sampled_rss_bytes": 27136000,
+          "seconds_ceiling": 8717.347119808197,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 23333,
+          "sampled_cpu_seconds": 0.040000000000000036,
+          "sampled_average_cpus": 0.06623334647890224,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 5683.258024215698,
+        "extra_local_bytes": 9325965084
+      }
+    },
+    "overlap-screen-1.resources.json": {
+      "binding": {
+        "bytes": 913,
+        "sha256": "73bba81db46bb61908276cf8968bc2efdc968e737095c2d8037ef52af840cae8"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "overlap-screen",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/opt/miniconda3/bin/python3",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e021_overlap.py",
+            "--root",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 137.10842504499306,
+          "peak_sampled_rss_bytes": 150110208,
+          "seconds_ceiling": 10783.301748037338,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 15395,
+          "sampled_cpu_seconds": 200.09,
+          "sampled_average_cpus": 1.4593559800161013,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 3753.808584213257,
+        "extra_local_bytes": 8232963685
+      }
+    },
+    "owned-product-final-1.resources.json": {
+      "binding": {
+        "bytes": 941,
+        "sha256": "63bde79f682d2b64e54dd5eea0c52ef40dee6cca89c88fb16f3aaa6ecbcac0ed"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "owned-product-final",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v1/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/installed-owned-product-tests.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 516.368072525991,
+          "peak_sampled_rss_bytes": 723738624,
+          "seconds_ceiling": 12050.284216880798,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 4648,
+          "sampled_cpu_seconds": 465.74,
+          "sampled_average_cpus": 0.9019535187791018,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 2866.071149110794,
+        "extra_local_bytes": 6502851053
+      }
+    },
+    "owned-product-final-v2-1.resources.json": {
+      "binding": {
+        "bytes": 340,
+        "sha256": "55bcd027331c84aa59872f440251040ad0f991077db70f38d1bdb6ccaa9c9155"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "owned-product-final-v2",
+        "attempt": 1,
+        "error": "RuntimeError(\"Command failed; see artifacts/e021-frozen-sequence-hybrid/owned-product-final-v2-1.log\\nPermissionError: [Errno 1] Operation not permitted: 'ps'\")",
+        "elapsed_original_seconds": 5184.379956245422,
+        "extra_local_bytes": 9313982405
+      }
+    },
+    "owned-product-final-v2-2.resources.json": {
+      "binding": {
+        "bytes": 850,
+        "sha256": "054f46eb253b96ddd8b76ce494cfd9117870cb7eabc6f33504a547bbad99af4d"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "owned-product-final-v2",
+        "attempt": 2,
+        "resources": {
+          "command": [
+            "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+            "-I",
+            "-B",
+            "artifacts/e021-frozen-sequence-hybrid/installed-owned-product-tests-v2.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 382.6142851909972,
+          "peak_sampled_rss_bytes": 734851072,
+          "seconds_ceiling": 9160.709247112274,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 18852,
+          "sampled_cpu_seconds": 462.75,
+          "sampled_average_cpus": 1.2094425584998738,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 5621.899603128433,
+        "extra_local_bytes": 9325124306
+      }
+    },
+    "owned-runtime-1.resources.json": {
+      "binding": {
+        "bytes": 835,
+        "sha256": "d1306c6ce119603d9d70cce5698a5472c97fd91b71189883f886137a1dc1c01d"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "owned-runtime",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/opt/miniconda3/bin/python3",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/create-owned-runtime.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 86.16747616899374,
+          "peak_sampled_rss_bytes": 92573696,
+          "seconds_ceiling": 12183.972401857376,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 3797,
+          "sampled_cpu_seconds": 49.83,
+          "sampled_average_cpus": 0.5782924395078277,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 2302.1952550411224,
+        "extra_local_bytes": 6091697958
+      }
+    },
+    "packaging-repair-1.resources.json": {
+      "binding": {
+        "bytes": 2824,
+        "sha256": "eb6e9050d4f45bffdc13ad0392948e2273e84ddc08cba041ca7580ce9782e111"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "packaging-repair",
+        "attempt": 1,
+        "error": "RuntimeError('Command failed; see artifacts/e021-frozen-sequence-hybrid/packaging-repair-1.log\\n| exit_code=1 | failed | 0.85s | terminal log: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/packaging-repair-output/native-run/invalid/logs/invocation-20261023T194843-15bd98e9/terminal.log\\nPRODUCT contract passed: invalid-native\\nDLBINNER 2026-10-23 19:48:44 UTC | dl-binner 0.1.0.dev8 | output: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/packaging-repair-output/native-run/timeout\\nDLBINNER 2026-10-23 19:48:44 UTC | 4 CPU threads, loader workers 0; built-in serial stages; matched raw control enabled\\nDLBINNER 2026-10-23 19:48:44 UTC | Optional safeguards: RAM=None GB, time=0.3 seconds (None means disabled)\\nDLBINNER 2026-10-23 19:48:45 UTC | 1/8 features: starting\\nDLBINNER 2026-10-23 19:48:45 UTC | Stopped safely. Logs and failed-stage files retained: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/packaging-repair-output/native-run/timeout/logs/invocation-20261023T194844-1fc8ee71. Resume matching inputs with --resume; no automatic repairs\\nDLBINNER 2026-10-23 19:48:45 UTC | exit_code=1 | failed | 0.67s | terminal log: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/packaging-repair-output/native-run/timeout/logs/invocation-20261023T194844-1fc8ee71/terminal.log\\nPRODUCT contract passed: overall-timeout\\nDLBINNER 2026-10-23 19:48:58 UTC | Still running (10s, sampled RSS 0.01 GB); log: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/packaging-repair-output/native-run/heartbeat-supervisor.log\\nok\\n\\n======================================================================\\nFAIL: test_installed_owned_origins_version_and_packaged_resources (test_core.ProductContracts)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/test_core.py\", line 61, in test_installed_owned_origins_version_and_packaged_resources\\n    self.assertTrue(Path(module.__file__).resolve().is_relative_to(Path(sys.prefix).resolve()), module.__file__)\\nAssertionError: False is not true : /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-local-v4/lib/python3.10/site-packages/numpy/__init__.py\\n\\n----------------------------------------------------------------------\\nRan 2 tests in 85.269s\\n\\nFAILED (failures=1)\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+        "elapsed_original_seconds": 2017.409507036209,
+        "extra_local_bytes": 4748177417
+      }
+    },
+    "product-final-1.resources.json": {
+      "binding": {
+        "bytes": 2888,
+        "sha256": "5f5a4a2accb74aa900aecbcc1e0a8219166b1578f5b0f54aee6a8d1d43c7a713"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "product-final",
+        "attempt": 1,
+        "error": "RuntimeError('Command failed; see artifacts/e021-frozen-sequence-hybrid/product-final-1.log\\nEMA (test_positive.PositiveContracts) ... ok\\ntest_masked_depth_cannot_leak_and_sequence_only_branch_exists (test_positive.PositiveContracts) ... ok\\ntest_noncollapse_monitor_rejects_constant_and_rank_one_units (test_positive.PositiveContracts) ... ok\\ntest_ragged_pair_oracle_no_cross_parent_labels_stopped_target_and_singletons (test_positive.PositiveContracts) ... ok\\ntest_installed_run_resume_accounting_failures_and_resource_placement (test_run.NativeRunContracts) ... ERROR\\n\\n======================================================================\\nERROR: test_installed_run_resume_accounting_failures_and_resource_placement (test_run.NativeRunContracts)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/test_run.py\", line 58, in test_installed_run_resume_accounting_failures_and_resource_placement\\n    check([console,\\'run\\',\\'--help\\'],\\'console-help\\',needle=\\'learned/bins/\\')\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/test_run.py\", line 49, in check\\n    try:supervise(argv,log,320,8000000000,isolated_env(THREADS))\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-local-v3/lib/python3.10/site-packages/dl_binner/supervision.py\", line 204, in supervise\\n    raise RuntimeError(f\\'Command failed; see {log_path}\\\\n{reason or tail}\\')\\nRuntimeError: Command failed; see /var/folders/9j/m81n_89s149gnklx_f5xw5jr0000gn/T/dl-binner-native-1tc8zj35/console-help.log\\nFileNotFoundError: [Errno 2] No such file or directory: \\'/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-local-v3/bin/dl-binner\\'\\n\\n======================================================================\\nFAIL: test_installed_owned_origins_version_and_packaged_resources (test_core.ProductContracts)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/test_core.py\", line 59, in test_installed_owned_origins_version_and_packaged_resources\\n    self.assertEqual(dl_binner.__version__, \\'0.1.0.dev7\\')\\nAssertionError: \\'0.1.0.dev8\\' != \\'0.1.0.dev7\\'\\n- 0.1.0.dev8\\n?          ^\\n+ 0.1.0.dev7\\n?          ^\\n\\n\\n----------------------------------------------------------------------\\nRan 39 tests in 166.397s\\n\\nFAILED (failures=1, errors=1)\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+        "elapsed_original_seconds": 1723.3608429431915,
+        "extra_local_bytes": 4080150901
+      }
+    },
+    "real-DAG-1.resources.json": {
+      "binding": {
+        "bytes": 1065,
+        "sha256": "410d094b1209f537a68ff87b1866b31eed39bc79f38f481d56c3e3382a7cacb2"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "real-DAG",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-local-v2/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e021_control.py",
+            "--plan",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/engineering-plan-v2.json",
+            "--workflow",
+            "--engineering"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 150.7147310579894,
+          "peak_sampled_rss_bytes": 1209884672,
+          "seconds_ceiling": 13563.527019023895,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 96391,
+          "sampled_cpu_seconds": 474.45,
+          "sampled_average_cpus": 3.148000176687767,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 987.1814241409302,
+        "extra_local_bytes": 2490443834
+      }
+    },
+    "real-engineering-1.resources.json": {
+      "binding": {
+        "bytes": 1023,
+        "sha256": "d146841507327d5d4e09ab964728a1aced07a67686baf911cce186b46815d196"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "real-engineering",
+        "attempt": 1,
+        "error": "RuntimeError('Command failed; see artifacts/e021-frozen-sequence-hybrid/real-engineering-1.log\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/real-engineering.py\", line 17, in <module>\\n    call(\\'real-DAG\\',[repo/\\'scripts/e021_control.py\\',\\'--plan\\',planfile,\\'--workflow\\',\\'--engineering\\'])\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/real-engineering.py\", line 9, in call\\n    if result.returncode:raise RuntimeError(\\'Real native engineering failed; see \\'+str(root/(label+\\'.log\\')))\\nRuntimeError: Real native engineering failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/real-DAG.log\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+        "elapsed_original_seconds": 791.7582361698151,
+        "extra_local_bytes": 1991164248
+      }
+    },
+    "resource-plan-1.resources.json": {
+      "binding": {
+        "bytes": 928,
+        "sha256": "73db422dcda14c25916775074cf6f76dbee11b308326d3596ab9622b48173eac"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "resource-plan",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v1/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/prepare-resource-plan.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 3.6571900809940416,
+          "peak_sampled_rss_bytes": 395001856,
+          "seconds_ceiling": 9418.952002763748,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 18240,
+          "sampled_cpu_seconds": 5.52,
+          "sampled_average_cpus": 1.5093555100367213,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 4986.0439829826355,
+        "extra_local_bytes": 9313970971
+      }
+    },
+    "resource-plan-final-1.resources.json": {
+      "binding": {
+        "bytes": 847,
+        "sha256": "477af03d2e42d50c6992897c1b8663c52a7117a6a4e83bfe507c60e083fd2cee"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "resource-plan-final",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+            "-I",
+            "-B",
+            "artifacts/e021-frozen-sequence-hybrid/prepare-resource-plan.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 4.651011390000349,
+          "peak_sampled_rss_bytes": 409489408,
+          "seconds_ceiling": 8713.514965057373,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 23342,
+          "sampled_cpu_seconds": 6.490000000000001,
+          "sampled_average_cpus": 1.3953954217255775,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 5692.271029949188,
+        "extra_local_bytes": 9325967817
+      }
+    },
+    "runtime-final-1.resources.json": {
+      "binding": {
+        "bytes": 928,
+        "sha256": "ad09b4fa20b47189f1d50c9041e8dc9f4dad558e25d916397a948696d403894a"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "runtime-final",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v1/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/probe-final-runtime.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 25.147960977003095,
+          "peak_sampled_rss_bytes": 1243648000,
+          "seconds_ceiling": 10300.202585935593,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 17339,
+          "sampled_cpu_seconds": 35.96,
+          "sampled_average_cpus": 1.4299370049478017,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 4125.586231946945,
+        "extra_local_bytes": 8243050570
+      }
+    },
+    "runtime-final-v2-1.resources.json": {
+      "binding": {
+        "bytes": 834,
+        "sha256": "c3e9325d69626e0fce6805fffe896480648101f0d7baef5aad5664c2bd9a5c1f"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "runtime-final-v2",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+            "-I",
+            "-B",
+            "artifacts/e021-frozen-sequence-hybrid/probe-final-runtime-v2.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 27.350717670997255,
+          "peak_sampled_rss_bytes": 1273995264,
+          "seconds_ceiling": 8756.644340991974,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 23085,
+          "sampled_cpu_seconds": 42.07,
+          "sampled_average_cpus": 1.5381680475833033,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 5670.70724105835,
+        "extra_local_bytes": 9325940320
+      }
+    },
+    "skin-audit-1.resources.json": {
+      "binding": {
+        "bytes": 2953,
+        "sha256": "c728c05c441204b79a3e72022ebc78968e9b2e69a36ed3ea6315fd67d4d5dc0f"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "skin-audit",
+        "attempt": 1,
+        "error": "RuntimeError('Command failed; see artifacts/e021-frozen-sequence-hybrid/skin-audit-1.log\\n0000\\nSKIN_ANONYMOUS 100000\\nSKIN_ANONYMOUS 120000\\nSKIN_ANONYMOUS 140000\\nSKIN_ANONYMOUS 160000\\nSKIN_ANONYMOUS 180000\\nSKIN_ANONYMOUS 200000\\nSKIN_ANONYMOUS 220000\\nSKIN_ANONYMOUS 240000\\nSKIN_ANONYMOUS 260000\\nSKIN_ANONYMOUS 280000\\nSKIN_ANONYMOUS 300000\\nSKIN_ANONYMOUS 320000\\nSKIN_ANONYMOUS 340000\\nSKIN_ANONYMOUS 360000\\nSKIN_ANONYMOUS 380000\\nSKIN_ANONYMOUS 400000\\nSKIN_ANONYMOUS 420000\\nSKIN_ANONYMOUS 440000\\nSKIN_ANONYMOUS 460000\\nSKIN_ANONYMOUS 480000\\nSKIN_ANONYMOUS 500000\\nSKIN_ANONYMOUS 520000\\nSKIN_ANONYMOUS 540000\\nSKIN_ANONYMOUS 560000\\nSKIN_ANONYMOUS 580000\\nSKIN_ANONYMOUS 600000\\nSKIN_ANONYMOUS 620000\\nSKIN_ANONYMOUS 640000\\nSKIN_ANONYMOUS 660000\\nSKIN_ANONYMOUS 680000\\nSKIN_ANONYMOUS 700000\\nSKIN_ANONYMOUS 720000\\nSKIN_ANONYMOUS 740000\\nSKIN_GSA 20000\\nSKIN_GSA 40000\\nSKIN_GSA 60000\\nSKIN_GSA 80000\\nSKIN_GSA 100000\\nSKIN_GSA 120000\\nSKIN_GSA 140000\\nSKIN_GSA 160000\\nSKIN_GSA 180000\\nSKIN_GSA 200000\\nSKIN_GSA 220000\\nSKIN_GSA 240000\\nSKIN_GSA 260000\\nSKIN_GSA 280000\\nSKIN_GSA 300000\\nSKIN_GSA 320000\\nSKIN_GSA 340000\\nSKIN_GSA 360000\\nSKIN_GSA 380000\\nSKIN_GSA 400000\\nSKIN_GSA 420000\\nSKIN_GSA 440000\\nSKIN_GSA 460000\\nSKIN_GSA 480000\\nSKIN_GSA 500000\\nSKIN_GSA 520000\\nSKIN_GSA 540000\\nSKIN_GSA 560000\\nSKIN_GSA 580000\\nSKIN_GSA 600000\\nSKIN_GSA 620000\\nSKIN_GSA 640000\\nSKIN_GSA 660000\\nSKIN_GSA 680000\\nSKIN_GSA 700000\\nSKIN_GSA 720000\\nSKIN_GSA 740000\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e021_skin.py\", line 216, in <module>\\n    p=argparse.ArgumentParser(description=__doc__);p.add_argument(\\'--root\\',type=Path,required=True);p.add_argument(\\'--repo\\',type=Path,default=Path(__file__).absolute().parents[1]);a=p.parse_args();audit(a.root,a.repo)\\n                                                                                                                                                                                                     ~~~~~^^^^^^^^^^^^^^^\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e021_skin.py\", line 168, in audit\\n    for row in mapping(root/\\'skin/gsa_pooled_mapping.tsv\\'):\\n               ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e014_oral_audit.py\", line 51, in mapping\\n    if f.readline().lstrip(\\'#\\').split()!=expected:raise ValueError(\\'Unexpected oral mapping header\\')\\n                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nValueError: Unexpected oral mapping header\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+        "elapsed_original_seconds": 2287.3186888694763,
+        "extra_local_bytes": 6055401899
+      }
+    },
+    "skin-origin-derive-1.resources.json": {
+      "binding": {
+        "bytes": 937,
+        "sha256": "598ec22c1380bf998eee0e13c0146d23ba8599f2a2781004abeccb03c8dc3b4a"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "skin-origin-derive",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/opt/miniconda3/bin/python3",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e021_skin_origin.py",
+            "derive",
+            "--root",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 124.49777998399804,
+          "peak_sampled_rss_bytes": 308785152,
+          "seconds_ceiling": 10873.851568937302,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 14772,
+          "sampled_cpu_seconds": 178.57,
+          "sampled_average_cpus": 1.4343227648151795,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 3651.108320951462,
+        "extra_local_bytes": 8231854549
+      }
+    },
+    "skin-origin-review-1.resources.json": {
+      "binding": {
+        "bytes": 936,
+        "sha256": "7f304b7dff32fd01dc3c711aba40b92248825cb4c71bb27f99c28bb673420214"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "skin-origin-review",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/opt/miniconda3/bin/python3",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e021_skin_origin.py",
+            "review",
+            "--root",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 93.74723573500523,
+          "peak_sampled_rss_bytes": 214523904,
+          "seconds_ceiling": 10675.000294923782,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 16329,
+          "sampled_cpu_seconds": 127.7,
+          "sampled_average_cpus": 1.3621734976908424,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 3818.7482299804688,
+        "extra_local_bytes": 8233021110
+      }
+    },
+    "skin-source-repair-1.resources.json": {
+      "binding": {
+        "bytes": 1058,
+        "sha256": "397419c6b2a963129d8776644770d594b70c4a6a3fb2bd1d0cacdb0fcf87b37c"
+      },
+      "receipt": {
+        "status": "SUCCESS",
+        "label": "skin-source-repair",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/opt/miniconda3/bin/python3",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e021_skin.py",
+            "--root",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid",
+            "--reuse-index",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/index-reuse-admission.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 604.1755614650028,
+          "peak_sampled_rss_bytes": 281899008,
+          "seconds_ceiling": 11657.682521820068,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 8703,
+          "sampled_cpu_seconds": 869.27,
+          "sampled_average_cpus": 1.4387705419467762,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 3346.493707895279,
+        "extra_local_bytes": 6509510047
+      }
+    }
+  },
+  "logs": {
+    "owned-product-final-v2-2.log": {
+      "bytes": 26797,
+      "sha256": "2ff0b4a1d208662033e3949566970b0fe20a2d9875ce1e7ce1a9f367fcc3f3e1"
+    },
+    "skin-contracts-final.log": {
+      "bytes": 103,
+      "sha256": "bedc69ddc63d77b75aa91e9bcf59e11e843e0e5c863c8a442612f7e6ff898ba2"
+    },
+    "origin-contracts-final.log": {
+      "bytes": 100,
+      "sha256": "0fcc5ea8e9006bc32723a78a9c62e42ff1fbec46be798ae5fe7af01aeba2dc52"
+    },
+    "operations-complete-1.log": {
+      "bytes": 141,
+      "sha256": "e0d2415207eb75b04f1858e2be04687a42868ee85368641233de189a46a48da8"
+    },
+    "runtime-final-v2-1.log": {
+      "bytes": 1126,
+      "sha256": "d8560dfbfcb16e6a2c518622959794c79b3aa088b9b9ead2befc20e91785e261"
+    },
+    "final-owned-reload-v2-1.log": {
+      "bytes": 79,
+      "sha256": "861188a78f35e5c04848241bc87abe50130f84bcae4746440d10dcdde784a9df"
+    },
+    "final-CLI-and-dryrun-1.log": {
+      "bytes": 1327,
+      "sha256": "d27a53fbe32c5dfa7cf308573db76bad7a5da26c92b0bf7f30fb4065788c7a4e"
+    },
+    "final-CLI-reuse-and-dryrun-1.log": {
+      "bytes": 93,
+      "sha256": "77a69d9b8cc964e491d7b3400c7ff1fe5b202aec9bb595602ceb9b9f52256299"
+    },
+    "packaging-final.log": {
+      "bytes": 11566,
+      "sha256": "7f0c229b04febeed78535d56d94ea68c6d9e4c75d8d251e9d047d1ad2541a852"
+    },
+    "pip-check-final.log": {
+      "bytes": 319,
+      "sha256": "b9cd052bd93a9cd8764d8bbd2e8f84e8a44d6e828c7e057013c7f7288ac96bc9"
+    },
+    "real-DAG.log": {
+      "bytes": 781,
+      "sha256": "026a72d977d13a3c7ccb24f268c644d7719b3b0d6590ddf4b1940cd9d9649375"
+    },
+    "actual-return-final-1.log": {
+      "bytes": 93,
+      "sha256": "51576c91b574eb83f58ec2e47f9f7e6afaf23b1b6a620531f31ab60ff07a0f17"
+    }
+  },
+  "financial": {
+    "new_cloud_compute_USD": 0,
+    "local_public_acquisition_GCP_USD": 0,
+    "no_VM_start_or_resource_quota_service_IAM_retention_change": true,
+    "no_cloud_write": true,
+    "latest_credit_observed_date": "2026-10-23",
+    "latest_credit_DKK": 1871.23,
+    "delayed_usage_reserve_USD": 35,
+    "prices": {
+      "bytes": 13611,
+      "sha256": "464ea261388ce909034b0e66af72fb0a13dca8877d9302abec3f38829610b96b"
+    },
+    "proposed_scope": "New $45 existing-VM N1/T4 resource/runtime admission only after explicit approval; no spend here.",
+    "storage_end": "2026-10-28T00:00:00+01:00"
+  },
+  "original_failures": "Original Mac allclose/collapse and all prior source/journals preserved; latest local failure/recovery registry in journals.",
+  "source_repair_caveat": "Exact loaded source hash of the earlier source-repair worker was not captured before an index-only edit; independent complete data/byte review passes, without inventing that launch proof. Later file-handle cleanup changes no data semantics.",
+  "journals_manifest": {
+    "bytes": 17649,
+    "sha256": "97f6c9a401c8d0c9a34b5ad5d77e558120a2b1ea41b3946835a77bff8cddf32f"
+  },
+  "accepted_tiny_science_reuse": "The earlier real 15-job/two-fit synthetic DAG is retained, not replayed on every prefix. Final source separately passes all 40 installed product tests, exact old synthetic GLM-vector parity, both original tiny checkpoint reloads, actual installed CLI extraction, actual final collector/review and final 15-job dry-run. Final float32 backend selection preserves already used CPU mathematics; Linux/CUDA is still unadmitted.",
+  "control_plane_closure": {
+    "path": "artifacts/e021-frozen-sequence-hybrid/provider-20261023T230531Z.json",
+    "bytes": 33096,
+    "sha256": "74953c036fadfbaef11c5149d158e4d8b418cc989e1736d7f57571db2a90f769",
+    "state": "TERMINATED",
+    "last_start": "2026-10-23T04:18:30.392-07:00",
+    "last_stop": "2026-10-23T04:48:45.064-07:00",
+    "no_start": true
+  },
+  "closure_updated_UTC": "2026-10-23T23:07:06.984063+00:00"
+}

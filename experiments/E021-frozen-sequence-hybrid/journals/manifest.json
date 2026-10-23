@@ -1,0 +1,191 @@
+{
+  "record": "E021 original local operational/engineering failures, never community results",
+  "bulk_locator": "artifacts/e021-frozen-sequence-hybrid",
+  "failed_resource_receipts": [
+    {
+      "path": "artifacts/e021-frozen-sequence-hybrid/final-CLI-and-dryrun-1.resources.json",
+      "binding": {
+        "bytes": 1651,
+        "sha256": "6a6c694efb99bb2329f8c7f2cf3cb52b588f399b9d6aa3cb4b8e318b13e44ddf"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "final-CLI-and-dryrun",
+        "attempt": 1,
+        "error": "RuntimeError('Command failed; see artifacts/e021-frozen-sequence-hybrid/final-CLI-and-dryrun-1.log\\nExplicitly passing a `revision` is encouraged when loading a configuration with custom code to ensure no malicious code has been contributed in a newer revision.\\nExplicitly passing a `revision` is encouraged when loading a model with custom code to ensure no malicious code has been contributed in a newer revision.\\n/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/model-module-cache/transformers_modules/model/bert_layers.py:126: UserWarning: Unable to import Triton; defaulting MosaicBERT attention implementation to pytorch (this will reduce throughput when using this model).\\n  warnings.warn(\\n{\"stage\": \"hybrid_reference_attention\", \"utc\": \"2026-10-23T20:52:55Z\", \"backend\": \"pinned_author_torch_float32_reference\", \"layers\": 12, \"sources\": {\"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/model-module-cache/transformers_modules/model/bert_layers.py\": \"cd2fe0efbb90db624fe4e25aa96bd049513e81740ba3f980163c385e894df561\"}, \"source_files_unchanged\": true}\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/check-final-cli-and-dryrun.py\", line 11, in <module>\\n    assert len(bank.rows)==2 and bank.usable.sum()==2\\nAssertionError\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+        "elapsed_original_seconds": 5835.863377094269,
+        "extra_local_bytes": 9326018633
+      }
+    },
+    {
+      "path": "artifacts/e021-frozen-sequence-hybrid/operations-final-1.resources.json",
+      "binding": {
+        "bytes": 327,
+        "sha256": "7b099fcb8d5f0f5b6cf45254883a61f8561c763740fc72fd0241db71060a8cda"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "operations-final",
+        "attempt": 1,
+        "error": "RuntimeError(\"Command failed; see artifacts/e021-frozen-sequence-hybrid/operations-final-1.log\\nPermissionError: [Errno 1] Operation not permitted: 'ps'\")",
+        "elapsed_original_seconds": 5214.06750702858,
+        "extra_local_bytes": 9313983401
+      }
+    },
+    {
+      "path": "artifacts/e021-frozen-sequence-hybrid/owned-product-final-v2-1.resources.json",
+      "binding": {
+        "bytes": 340,
+        "sha256": "55bcd027331c84aa59872f440251040ad0f991077db70f38d1bdb6ccaa9c9155"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "owned-product-final-v2",
+        "attempt": 1,
+        "error": "RuntimeError(\"Command failed; see artifacts/e021-frozen-sequence-hybrid/owned-product-final-v2-1.log\\nPermissionError: [Errno 1] Operation not permitted: 'ps'\")",
+        "elapsed_original_seconds": 5184.379956245422,
+        "extra_local_bytes": 9313982405
+      }
+    },
+    {
+      "path": "artifacts/e021-frozen-sequence-hybrid/packaging-repair-1.resources.json",
+      "binding": {
+        "bytes": 2824,
+        "sha256": "eb6e9050d4f45bffdc13ad0392948e2273e84ddc08cba041ca7580ce9782e111"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "packaging-repair",
+        "attempt": 1,
+        "error": "RuntimeError('Command failed; see artifacts/e021-frozen-sequence-hybrid/packaging-repair-1.log\\n| exit_code=1 | failed | 0.85s | terminal log: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/packaging-repair-output/native-run/invalid/logs/invocation-20261023T194843-15bd98e9/terminal.log\\nPRODUCT contract passed: invalid-native\\nDLBINNER 2026-10-23 19:48:44 UTC | dl-binner 0.1.0.dev8 | output: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/packaging-repair-output/native-run/timeout\\nDLBINNER 2026-10-23 19:48:44 UTC | 4 CPU threads, loader workers 0; built-in serial stages; matched raw control enabled\\nDLBINNER 2026-10-23 19:48:44 UTC | Optional safeguards: RAM=None GB, time=0.3 seconds (None means disabled)\\nDLBINNER 2026-10-23 19:48:45 UTC | 1/8 features: starting\\nDLBINNER 2026-10-23 19:48:45 UTC | Stopped safely. Logs and failed-stage files retained: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/packaging-repair-output/native-run/timeout/logs/invocation-20261023T194844-1fc8ee71. Resume matching inputs with --resume; no automatic repairs\\nDLBINNER 2026-10-23 19:48:45 UTC | exit_code=1 | failed | 0.67s | terminal log: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/packaging-repair-output/native-run/timeout/logs/invocation-20261023T194844-1fc8ee71/terminal.log\\nPRODUCT contract passed: overall-timeout\\nDLBINNER 2026-10-23 19:48:58 UTC | Still running (10s, sampled RSS 0.01 GB); log: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/packaging-repair-output/native-run/heartbeat-supervisor.log\\nok\\n\\n======================================================================\\nFAIL: test_installed_owned_origins_version_and_packaged_resources (test_core.ProductContracts)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/test_core.py\", line 61, in test_installed_owned_origins_version_and_packaged_resources\\n    self.assertTrue(Path(module.__file__).resolve().is_relative_to(Path(sys.prefix).resolve()), module.__file__)\\nAssertionError: False is not true : /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-local-v4/lib/python3.10/site-packages/numpy/__init__.py\\n\\n----------------------------------------------------------------------\\nRan 2 tests in 85.269s\\n\\nFAILED (failures=1)\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+        "elapsed_original_seconds": 2017.409507036209,
+        "extra_local_bytes": 4748177417
+      }
+    },
+    {
+      "path": "artifacts/e021-frozen-sequence-hybrid/product-final-1.resources.json",
+      "binding": {
+        "bytes": 2888,
+        "sha256": "5f5a4a2accb74aa900aecbcc1e0a8219166b1578f5b0f54aee6a8d1d43c7a713"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "product-final",
+        "attempt": 1,
+        "error": "RuntimeError('Command failed; see artifacts/e021-frozen-sequence-hybrid/product-final-1.log\\nEMA (test_positive.PositiveContracts) ... ok\\ntest_masked_depth_cannot_leak_and_sequence_only_branch_exists (test_positive.PositiveContracts) ... ok\\ntest_noncollapse_monitor_rejects_constant_and_rank_one_units (test_positive.PositiveContracts) ... ok\\ntest_ragged_pair_oracle_no_cross_parent_labels_stopped_target_and_singletons (test_positive.PositiveContracts) ... ok\\ntest_installed_run_resume_accounting_failures_and_resource_placement (test_run.NativeRunContracts) ... ERROR\\n\\n======================================================================\\nERROR: test_installed_run_resume_accounting_failures_and_resource_placement (test_run.NativeRunContracts)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/test_run.py\", line 58, in test_installed_run_resume_accounting_failures_and_resource_placement\\n    check([console,\\'run\\',\\'--help\\'],\\'console-help\\',needle=\\'learned/bins/\\')\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/test_run.py\", line 49, in check\\n    try:supervise(argv,log,320,8000000000,isolated_env(THREADS))\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-local-v3/lib/python3.10/site-packages/dl_binner/supervision.py\", line 204, in supervise\\n    raise RuntimeError(f\\'Command failed; see {log_path}\\\\n{reason or tail}\\')\\nRuntimeError: Command failed; see /var/folders/9j/m81n_89s149gnklx_f5xw5jr0000gn/T/dl-binner-native-1tc8zj35/console-help.log\\nFileNotFoundError: [Errno 2] No such file or directory: \\'/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-local-v3/bin/dl-binner\\'\\n\\n======================================================================\\nFAIL: test_installed_owned_origins_version_and_packaged_resources (test_core.ProductContracts)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/test_core.py\", line 59, in test_installed_owned_origins_version_and_packaged_resources\\n    self.assertEqual(dl_binner.__version__, \\'0.1.0.dev7\\')\\nAssertionError: \\'0.1.0.dev8\\' != \\'0.1.0.dev7\\'\\n- 0.1.0.dev8\\n?          ^\\n+ 0.1.0.dev7\\n?          ^\\n\\n\\n----------------------------------------------------------------------\\nRan 39 tests in 166.397s\\n\\nFAILED (failures=1, errors=1)\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+        "elapsed_original_seconds": 1723.3608429431915,
+        "extra_local_bytes": 4080150901
+      }
+    },
+    {
+      "path": "artifacts/e021-frozen-sequence-hybrid/real-engineering-1.resources.json",
+      "binding": {
+        "bytes": 1023,
+        "sha256": "d146841507327d5d4e09ab964728a1aced07a67686baf911cce186b46815d196"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "real-engineering",
+        "attempt": 1,
+        "error": "RuntimeError('Command failed; see artifacts/e021-frozen-sequence-hybrid/real-engineering-1.log\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/real-engineering.py\", line 17, in <module>\\n    call(\\'real-DAG\\',[repo/\\'scripts/e021_control.py\\',\\'--plan\\',planfile,\\'--workflow\\',\\'--engineering\\'])\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/real-engineering.py\", line 9, in call\\n    if result.returncode:raise RuntimeError(\\'Real native engineering failed; see \\'+str(root/(label+\\'.log\\')))\\nRuntimeError: Real native engineering failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/real-DAG.log\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+        "elapsed_original_seconds": 791.7582361698151,
+        "extra_local_bytes": 1991164248
+      }
+    },
+    {
+      "path": "artifacts/e021-frozen-sequence-hybrid/skin-audit-1.resources.json",
+      "binding": {
+        "bytes": 2953,
+        "sha256": "c728c05c441204b79a3e72022ebc78968e9b2e69a36ed3ea6315fd67d4d5dc0f"
+      },
+      "receipt": {
+        "status": "FAILED",
+        "label": "skin-audit",
+        "attempt": 1,
+        "error": "RuntimeError('Command failed; see artifacts/e021-frozen-sequence-hybrid/skin-audit-1.log\\n0000\\nSKIN_ANONYMOUS 100000\\nSKIN_ANONYMOUS 120000\\nSKIN_ANONYMOUS 140000\\nSKIN_ANONYMOUS 160000\\nSKIN_ANONYMOUS 180000\\nSKIN_ANONYMOUS 200000\\nSKIN_ANONYMOUS 220000\\nSKIN_ANONYMOUS 240000\\nSKIN_ANONYMOUS 260000\\nSKIN_ANONYMOUS 280000\\nSKIN_ANONYMOUS 300000\\nSKIN_ANONYMOUS 320000\\nSKIN_ANONYMOUS 340000\\nSKIN_ANONYMOUS 360000\\nSKIN_ANONYMOUS 380000\\nSKIN_ANONYMOUS 400000\\nSKIN_ANONYMOUS 420000\\nSKIN_ANONYMOUS 440000\\nSKIN_ANONYMOUS 460000\\nSKIN_ANONYMOUS 480000\\nSKIN_ANONYMOUS 500000\\nSKIN_ANONYMOUS 520000\\nSKIN_ANONYMOUS 540000\\nSKIN_ANONYMOUS 560000\\nSKIN_ANONYMOUS 580000\\nSKIN_ANONYMOUS 600000\\nSKIN_ANONYMOUS 620000\\nSKIN_ANONYMOUS 640000\\nSKIN_ANONYMOUS 660000\\nSKIN_ANONYMOUS 680000\\nSKIN_ANONYMOUS 700000\\nSKIN_ANONYMOUS 720000\\nSKIN_ANONYMOUS 740000\\nSKIN_GSA 20000\\nSKIN_GSA 40000\\nSKIN_GSA 60000\\nSKIN_GSA 80000\\nSKIN_GSA 100000\\nSKIN_GSA 120000\\nSKIN_GSA 140000\\nSKIN_GSA 160000\\nSKIN_GSA 180000\\nSKIN_GSA 200000\\nSKIN_GSA 220000\\nSKIN_GSA 240000\\nSKIN_GSA 260000\\nSKIN_GSA 280000\\nSKIN_GSA 300000\\nSKIN_GSA 320000\\nSKIN_GSA 340000\\nSKIN_GSA 360000\\nSKIN_GSA 380000\\nSKIN_GSA 400000\\nSKIN_GSA 420000\\nSKIN_GSA 440000\\nSKIN_GSA 460000\\nSKIN_GSA 480000\\nSKIN_GSA 500000\\nSKIN_GSA 520000\\nSKIN_GSA 540000\\nSKIN_GSA 560000\\nSKIN_GSA 580000\\nSKIN_GSA 600000\\nSKIN_GSA 620000\\nSKIN_GSA 640000\\nSKIN_GSA 660000\\nSKIN_GSA 680000\\nSKIN_GSA 700000\\nSKIN_GSA 720000\\nSKIN_GSA 740000\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e021_skin.py\", line 216, in <module>\\n    p=argparse.ArgumentParser(description=__doc__);p.add_argument(\\'--root\\',type=Path,required=True);p.add_argument(\\'--repo\\',type=Path,default=Path(__file__).absolute().parents[1]);a=p.parse_args();audit(a.root,a.repo)\\n                                                                                                                                                                                                     ~~~~~^^^^^^^^^^^^^^^\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e021_skin.py\", line 168, in audit\\n    for row in mapping(root/\\'skin/gsa_pooled_mapping.tsv\\'):\\n               ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e014_oral_audit.py\", line 51, in mapping\\n    if f.readline().lstrip(\\'#\\').split()!=expected:raise ValueError(\\'Unexpected oral mapping header\\')\\n                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nValueError: Unexpected oral mapping header\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+        "elapsed_original_seconds": 2287.3186888694763,
+        "extra_local_bytes": 6055401899
+      }
+    }
+  ],
+  "compact_members": {
+    "build-attempt-1.log": {
+      "bytes": 1020,
+      "sha256": "96587248cdb9a4efea35c5785decb8b25ef33466e952be712b42c79209528436"
+    },
+    "e021_phase-attempt-1.py.txt": {
+      "bytes": 11885,
+      "sha256": "ded5eb31620a58723f46c4df15a5dfdc40069262c8799b8490ba25f964e13548"
+    },
+    "e021_skin-attempt-1.py.txt": {
+      "bytes": 17720,
+      "sha256": "494b3f4ba4ab2de050bdb975b35a3a02e245843e1a53afd678d0f95483be572d"
+    },
+    "engineering-attempt-1.review.json": {
+      "bytes": 348,
+      "sha256": "32511588cdac3d8cb385ad270e7fd96eb8acc53577a8e24a0d97b7d2a2cb3580"
+    },
+    "final-CLI-and-dryrun-1.resources.json": {
+      "bytes": 1651,
+      "sha256": "6a6c694efb99bb2329f8c7f2cf3cb52b588f399b9d6aa3cb4b8e318b13e44ddf"
+    },
+    "metadata-destination-repair.json": {
+      "bytes": 1247,
+      "sha256": "bb8dceb8a0b4de2d40efe0f2bd1929a1ae1d2f0e135e875366b21ae32e98df12"
+    },
+    "operations-contracts-1.log": {
+      "bytes": 904,
+      "sha256": "0a919e5fdb23ac6a330761ee23eb34ee01ef80d03a8cd9408cacee181898b4b3"
+    },
+    "operations-contracts-2.log": {
+      "bytes": 904,
+      "sha256": "30e096731d2f02c334147f1f2541ae4b15d2a9dba465093a9a87cf638e5e1d9c"
+    },
+    "operations-final-1.resources.json": {
+      "bytes": 327,
+      "sha256": "7b099fcb8d5f0f5b6cf45254883a61f8561c763740fc72fd0241db71060a8cda"
+    },
+    "owned-product-final-v2-1.resources.json": {
+      "bytes": 340,
+      "sha256": "55bcd027331c84aa59872f440251040ad0f991077db70f38d1bdb6ccaa9c9155"
+    },
+    "packaging-repair-1.resources.json": {
+      "bytes": 2824,
+      "sha256": "eb6e9050d4f45bffdc13ad0392948e2273e84ddc08cba041ca7580ce9782e111"
+    },
+    "prepare-resource-plan-attempt-1.py.txt": {
+      "bytes": 8577,
+      "sha256": "cbfe6c85a38ff1e12a321e2c9dfa3d89e2b08ad25cb193a2f1f49aee54b1f378"
+    },
+    "product-final-1.resources.json": {
+      "bytes": 2888,
+      "sha256": "5f5a4a2accb74aa900aecbcc1e0a8219166b1578f5b0f54aee6a8d1d43c7a713"
+    },
+    "product-final-1.review.json": {
+      "bytes": 500,
+      "sha256": "76e021767f78fa0541adeeffaeb86c3c10f8f10531c14e03caa34873d9d42d17"
+    },
+    "real-engineering-1.resources.json": {
+      "bytes": 1023,
+      "sha256": "d146841507327d5d4e09ab964728a1aced07a67686baf911cce186b46815d196"
+    },
+    "skin-audit-1.resources.json": {
+      "bytes": 2953,
+      "sha256": "c728c05c441204b79a3e72022ebc78968e9b2e69a36ed3ea6315fd67d4d5dc0f"
+    },
+    "source-tests-attempt-1.fixture.txt": {
+      "bytes": 5407,
+      "sha256": "b7c88a44ae0d9596037e258f76c0ca164be3e95c5894b1c3191e8bcb1123d584"
+    },
+    "source-tests-attempt-1.log": {
+      "bytes": 1309,
+      "sha256": "e17d3c30750e23a9c24db667d0aae97835aab9eae0d016ac876cd374ffb915e7"
+    },
+    "source-tests-attempt-1.review.json": {
+      "bytes": 242,
+      "sha256": "5330d7e758c024304843ac8f5354a4e6ff84d028ae292fde72ed832d4a5ce6b7"
+    }
+  },
+  "preservation": "Original full logs, prefixes, SQLite attempts, copied failing source and build snapshots remain under the ignored root; no deletion/rewrite, cloud upload or scientific replay.",
+  "source_caveat": "The source-repair worker was already loaded before a SQL index-only performance edit. Its exact loaded-source hash was not captured; preserve that uncertainty, original failed source and independent final artifact review. No invented exact source claim."
+}

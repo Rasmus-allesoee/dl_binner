@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E020 completed review](../../experiments/E020-context-information-integration/comparison-review.json) is MODIFY after verified completion/shutdown. Recommend one frozen pretrained-sequence/context/depth hybrid with untouched-skin admission in parallel; ordinary E019 CPM/E013 stays the uniform provisional anchor. No new implementation/acquisition or paid work in inspection. Storage still ends October 28 at 00:00 Copenhagen.
+Current handoff: [E021 local hybrid/skin admission](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md) is complete; community quality unassessed. Ordinary E019 CPM/E013 stays uniform. Native execution waits for complete GPU/resource/runtime/credit admission; proposed $45 is a new scope, not spent. Skin is an origin-only new-community-setting confirmation with substantial exact oral genome overlap. Storage still ends October 28 at 00:00 Copenhagen.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
@@ -1229,3 +1229,48 @@ service/permission/VM/resource change or storage extension is implied. E020 subt
 ~$0.2749 / <$0.426 with reserves fits its $1; original $8 storage ends October 28
 at 00:00 Copenhagen. Both inspected communities remain development, not final
 validation, SOTA evidence or a product-family decision.
+
+## E021 implemented hybrid and parallel skin admission, October 23, 2026
+
+The owner invoked E020's local prompt and conditionally authorized a comparison
+if every resource/runtime/financial gate passed, allowing this task to defer.
+[E021](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md) implements one
+coherent information upgrade directly, rather than another selector/loss grid.
+The exact retained frozen Transformer prior supplies base-order information to
+real parent/crop views; a compact reliability residual complements E019's local
+composition attention and explicit measured-parent depth. No backbone fine-tuning,
+marker-aware training, taxonomy or ensemble. Original E019 CPM/E013 remains uniform.
+The model's author float32 reference attention is selected explicitly because its
+optional Triton branch changes dtype; no source/weights are patched. Full-view
+provenance, zero initial residual, same-runtime reload and original guards matter
+more than treating tiny training as evidence of genome recovery.
+
+Actual local contracts pass; no community outcome is admitted and E003's contrary
+short-neighbor result remains. A current CPU launch is not justified: full native
+throughput/RAM are unknown, 8.708 GiB cache arrays plus working coexistence can
+exceed the 20 GiB cap, and current local staging cannot absorb a full return/review
+within its 10 GiB scope. Ample trial balance does not resolve those gates. **Defer,
+then admit one native GPU/resource envelope before this candidate comparison.**
+The proposed existing-VM N1/T4 route needs explicit quota/type/32 GiB growth scope,
+complete compatible Linux/CUDA checks and measured throughput; it is not a family
+rejection based on slow Mac extrapolation. New $45/48-hour planning bound is not
+spent or an extension of old budgets. Ordinary CPU learning/grouping remains four
+threads. No automatic alternative machine or retention extension.
+
+Five authorized skin files are acquired/audited in parallel. Independent origin
+admission retains all 610 full positive targets, one zero origin, every competitor,
+localized ambiguous bases and known exact-shared sensitivity. **313/610** target
+inventories exactly match oral-GSA-observed genomes; broader near/pretraining
+inventory and biological host/molecule grouping remain uncertain. Keep the original
+skin choice as a new-community-setting check, with prospective overlap strata;
+do not market it as unseen-genome confirmation or select a replacement after
+metadata inspection. No skin score/fit now; its real evaluator and later resource/
+cost/retention admission remain. GSA lacks assembly errors and measured contig depth.
+Independent sequence identifiability is still distinct from verified simulator origin.
+
+This block updates durable agent guidance only for exact-view/DNA cache bindings,
+explicit depth-only rebind proof and actual wheel entry-point installation. The
+experiment owns failures/resources, not AGENTS. The strongest next decision is
+whether this frozen complementary information is natively affordable and improves
+both development scopes under its original criteria; do not add more architecture
+before resolving that result. Storage review remains October 28 at 00:00 Copenhagen.

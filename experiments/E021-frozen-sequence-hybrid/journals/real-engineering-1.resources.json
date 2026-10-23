@@ -1,0 +1,8 @@
+{
+  "status": "FAILED",
+  "label": "real-engineering",
+  "attempt": 1,
+  "error": "RuntimeError('Command failed; see artifacts/e021-frozen-sequence-hybrid/real-engineering-1.log\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/real-engineering.py\", line 17, in <module>\\n    call(\\'real-DAG\\',[repo/\\'scripts/e021_control.py\\',\\'--plan\\',planfile,\\'--workflow\\',\\'--engineering\\'])\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/real-engineering.py\", line 9, in call\\n    if result.returncode:raise RuntimeError(\\'Real native engineering failed; see \\'+str(root/(label+\\'.log\\')))\\nRuntimeError: Real native engineering failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/real-DAG.log\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+  "elapsed_original_seconds": 791.7582361698151,
+  "extra_local_bytes": 1991164248
+}
