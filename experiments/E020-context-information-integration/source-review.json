@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-23",
+  "scope": "Primary pinned code-interface review; no scientific algorithm/default change or new literature campaign",
+  "original_E017_science_proof": {
+    "information/grouping.py": {
+      "bytes": 24866,
+      "sha256": "9d1f665b1f5024bdde90a86d536c6679cb3a5fbdb9635348141272d8de3d5235"
+    },
+    "information/audit.py": {
+      "bytes": 6106,
+      "sha256": "64ca1b8f66f641be3a5c79af94333db507dd3875171758a2af042df1714f9be2"
+    },
+    "information/export.py": {
+      "bytes": 4480,
+      "sha256": "1a6603b31de105de6a95afb16db1036a467e9dc12b9d843da53b3281caacfb5a"
+    },
+    "multiview/downstream.py": {
+      "bytes": 7469,
+      "sha256": "a24e96291dc6e779734e6990008296e7e7d8d3e400ff9102004a09959fa8fbbb"
+    },
+    "multiview/refinement.py": {
+      "bytes": 16783,
+      "sha256": "0c1bae1f0fd5e8873cc30e68218e6796e87bf43b7d9262d2ec42fd781a51b8c0"
+    }
+  },
+  "policy": {
+    "bytes": 494,
+    "sha256": "9e9f4341260dbc0827ac3ef3f0815c7002799adf83562d9949dc3f1e22bba9de"
+  },
+  "policy_exactly_equals": {
+    "bytes": 494,
+    "sha256": "9e9f4341260dbc0827ac3ef3f0815c7002799adf83562d9949dc3f1e22bba9de"
+  },
+  "E019_metadata": "embeddings kind, context_online_unit_sphere, original features/checkpoint/token hashes, native reload_exact and ordered sample metadata; load_inputs retains every opaque row and original vector bytes",
+  "runtime": "Reuse accepted E019 dev7 package with all 36 source/default members and complete native inventory/library targets; no new wheel, install or inference",
+  "limitation": "Original E017 oral regression is serious contrary evidence. Improvements need not add. A successful integration is a development interaction result, not isolated causal evidence or a default/SOTA claim.",
+  "sources": [
+    "experiments/E017-information-aware-grouping/design.md",
+    "experiments/E017-information-aware-grouping/source-review.json",
+    "experiments/E019-window-context/inspection-observed.json",
+    "experiments/E019-window-context/comparison-review.json"
+  ]
+}

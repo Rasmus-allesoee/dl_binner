@@ -1,6 +1,21 @@
 # Google Cloud workspace operations
 
 Updated: 2026-10-23 (Copenhagen; initial provisioning receipts are October 13 UTC).
+
+**E020 authorized preparation, October 23:** the owner approves the separately
+bounded new $1 cached E019-learning + original E017 grouping comparison.
+[Operations](../experiments/E020-context-information-integration/OPERATIONS.md)
+now owns current execution/inspection boundaries. New source/restore/metadata/
+launcher contracts pass locally; native gates and VM start remain pending.
+Existing E019 science/package/vectors and all older evidence stay immutable;
+no inference, learning, marker scan, new DNA or E018 acceptance is included.
+90-minute cumulative / 105-minute STOP, four threads / 26 GB / 25 GiB reserve /
+20 GiB global growth / 2 GiB return. Fresh price/credit/coverage/storage checks
+quote $0.9513 maximum with reserves; separate $8 storage forecast $7.632 ends
+October 28 at 00:00 Copenhagen. No automatic extension.
+
+The following E019 completed-review snapshot is preserved context.
+
 [D014](decisions/D014-google-cloud-workspace.md) owns provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
 

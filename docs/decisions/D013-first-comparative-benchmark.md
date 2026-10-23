@@ -710,3 +710,19 @@ resources, four threads/26 GB/25 GiB reserve/20 GiB growth/2 GiB return, max quo
 authorized by this inspection. Actual E019 subtotal ~$1.0162 /<$1.268 with reserve
 fits original $5; VM terminated. Separate $8 storage still ends October 28 at 00:00
 Copenhagen; no extension/deletion or old budget carries into the next comparison.
+
+
+## E020 authorized cached integration, October 23, 2026
+
+[The new E020 protocol](../../experiments/E020-context-information-integration/protocol.json)
+freezes the owner-authorized $1 comparison of exact E019 learned vectors and
+original E017 grouping/defaults with fixed E013. This is one cheap decision-changing
+interaction of coherent existing modules, not a new threshold/loss grid. Both
+communities use the same policy; original E017 oral harm is serious contrary
+evidence, not ignored or assumed repaired. A GLM/context/depth hybrid remains a
+strong complementary information direction after this interaction question.
+No changed community result is present at preparation. Actual tiny reader/worker/
+sparse/refiner/four-export/collector contracts pass; native source/runtime/credit/
+headroom/retention gates precede execution. All sources/results/failures remain.
+90-minute cumulative / 105-minute STOP, $1 new ceiling and original October 28
+storage boundary apply; no old budget, scientific replay or extra resource.

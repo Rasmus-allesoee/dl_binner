@@ -1,0 +1,24 @@
+....E019_REUSE_PASS 1 14
+E.
+======================================================================
+ERROR: test_reuse_refuses_corruption_without_recopy (__main__.Operations.test_reuse_refuses_corruption_without_recopy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e020_operations.py", line 95, in test_reuse_refuses_corruption_without_recopy
+    with self.assertRaises(FileNotFoundError):verify_reuse(lock,p/'missing.json')
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e020_reuse.py", line 16, in verify
+    return verify_bytes(lock, output)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e019_reuse.py", line 23, in verify
+    actual=binding(path)
+           ^^^^^^^^^^^^^
+  File "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e014_collect.py", line 21, in binding
+    if path.is_symlink() or not path.is_file():raise ValueError('Regular evidence file required: '+str(path))
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Regular evidence file required: /private/var/folders/9j/m81n_89s149gnklx_f5xw5jr0000gn/T/tmprk3jhyoo/sealed.bin
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.164s
+
+FAILED (errors=1)

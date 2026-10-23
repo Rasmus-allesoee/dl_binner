@@ -1,0 +1,29 @@
+{
+  "estimate": true,
+  "VM": "existing e2-standard-8 / 32 GiB / 300 GiB work + 30 GiB boot",
+  "threads": 4,
+  "expected_allocation_minutes": [
+    30,
+    60
+  ],
+  "expected_sampled_RSS_GB": [
+    9,
+    14
+  ],
+  "expected_extra_work_GiB": [
+    5,
+    10
+  ],
+  "compressed_return_forecast_GiB": [
+    0.4,
+    1.0
+  ],
+  "original_E017_worst_case_return_bytes": 1838420815,
+  "new_return_cap_bytes": 2147483648,
+  "collector": "Exact retained caches/partition/accounting/log member inventory; no repeated vectors/features/checkpoints or full FASTA. Manifest-inclusive uncompressed DEFLATE upper is checked before packing; no oversized fallback.",
+  "coexistence": "Existing E019 remains; new graph/recruitment caches + four assignment alternatives + one final full-DNA export + sealed snapshots + return/readback coexist, all inside 20 GiB global guard. Shared files reused in place. 25 GiB free reserve plus full remaining growth allowance required before release.",
+  "local_review": "Sequential <=2 GiB compressed + <=~1.9 GiB logical payload + bounded evaluator/summary/seal, <=6 GiB extra, four threads/8 GB/one hour. Existing E019 vectors/truth reused, not recopied.",
+  "price_gate": "Fresh credit and 5 SKUs, delayed usage reserved $35; max 105-minute allocation +2 GiB export +small storage/operations+uncertainty must remain <=new $1; $8 storage-only through October28 00:00 Copenhagen separately rechecked, no double disk bill.",
+  "no_provision": true,
+  "no_install_or_recopy": true
+}

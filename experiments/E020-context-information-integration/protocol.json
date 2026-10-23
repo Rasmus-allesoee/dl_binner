@@ -1,0 +1,86 @@
+{
+  "experiment": "E020",
+  "prospective": true,
+  "date": "2026-10-23",
+  "treatment": "Exact E019 context native vectors + every original E017 grouping rule + unchanged E013",
+  "fixed": [
+    "E019 embeddings/metadata/full opaque axes/learned-neighbor geometry",
+    "accepted original TNF/measured parent means/markers/HMM",
+    "original E017 config, CPM median positive edge weight / 30, node sizes 1, seed 11, two Leiden iterations",
+    "E013 source/defaults; pre/old/post alternatives"
+  ],
+  "new_science": "One original-E017 joint learned/composition core index and affinity/profile/vote/recruitment grouping per community, then fixed cached-marker refinement. Not training or changed learned-neighbor geometry.",
+  "endpoints": {
+    "E009": {
+      "truth": "conservative v2",
+      "references": 156,
+      "reference_bp": 554661890,
+      "baseline_ge90": 7,
+      "N_quarantine_bp": 7653205,
+      "baseline_post": {
+        "at_least_50_percent": 12,
+        "at_least_90_percent": 7,
+        "bp_weighted_R95": 0.07305826798376214,
+        "macro_R95": 0.07898098661714222,
+        "targets": 156,
+        "targets_with_any_passing_bin": 23
+      }
+    },
+    "oral": {
+      "truth": "provided-origin oracle; unique support unadmitted",
+      "references": 799,
+      "reference_bp": 2083072211,
+      "baseline_ge90": 33,
+      "known_shared_sensitivity": true,
+      "baseline_post": {
+        "at_least_50_percent": 43,
+        "at_least_90_percent": 33,
+        "bp_weighted_R95": 0.06507729606498985,
+        "macro_R95": 0.05957943805637829,
+        "reference_bp": 2083072211,
+        "targets": 799
+      }
+    }
+  },
+  "criterion": {
+    "keep": "Neither post R95 below retained E019, at least one gain >=0.005 absolute, neither >=90% recovered target count falls, all integrity contracts pass.",
+    "abandon": "Neither post R95 endpoint nor either >=90% target count improves; an integrity failure invalidates execution, not a biological family.",
+    "modify": "All other valid results; preserve original criterion, full paired targets and losses. No per-community or per-bin oracle."
+  },
+  "baseline": {
+    "path": "experiments/E019-window-context/comparison-review.json",
+    "binding": {
+      "bytes": 251373,
+      "sha256": "e80043238e97659228748ba7f55487fe1f0eac64af89d87c08e69e3df2536589"
+    },
+    "reuse_only": true
+  },
+  "diagnostics": "Only new core/recruited/old/E013 partitions, frozen E009 v2 and separately scoped oral-origin oracle; full denominators/all length/origin/native eligibility/marker/unknown/non-target/excluded/unassigned, N-quarantine and known-shared sensitivity. Retain original fixed E019 learned neighbor diagnostic vs distinct new joint-core retrieval proof. No old rescore.",
+  "limits": {
+    "new_incremental_gross_USD": 1,
+    "cumulative_VM_start_seconds": 5400,
+    "provider_STOP_seconds": 6300,
+    "threads": 4,
+    "sampled_tree_RSS_bytes": 26000000000,
+    "free_reserve_GiB": 25,
+    "max_global_growth_GiB": 20,
+    "max_compressed_return_GiB": 2,
+    "retention_valid_until_epoch": 1793142000
+  },
+  "exclusions": [
+    "retraining/inference/token/view/feature rebuild",
+    "marker search",
+    "E018 acceptance variant",
+    "new threshold/family/K/resolution/grid/seed/schedule",
+    "data acquisition/mapping/aligner/external binner",
+    "new machine/disk/service/resource/retention",
+    "confirmation acquisition or score"
+  ],
+  "local_review": {
+    "threads": 4,
+    "sampled_RSS_bytes": 8000000000,
+    "seconds": 3600,
+    "max_extra_GiB": 6
+  },
+  "confirmation": "Retain unacquired skin choice and its sample/source/genome/replicon/molecule/taxonomy/overlap/pretraining/full-zero-origin denominators/competitive ambiguity/unique-vs-origin truth/protocol/cost/retention dependencies; both inspected communities are development."
+}

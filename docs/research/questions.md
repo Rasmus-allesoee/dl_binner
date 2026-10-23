@@ -563,3 +563,11 @@ additive gain assumed from two partial results, a threshold grid or an automatic
 larger model. New proposed $1 requires separate authorization/fresh gates. Skin
 remains frozen/unacquired pending source/truth/overlap/protocol/cost admission;
 October 28 storage boundary remains.
+
+
+E020 prospective integration, October 23, 2026: [the owner-authorized cached block](../../experiments/E020-context-information-integration/README.md)
+tests whether fixed E019 learning benefits from every original E017 grouping rule
+with E013 unchanged. No new community outcome yet. Keep original criteria and both
+scopes, full populations and negative evidence; no assumption of additive gains,
+product-default promotion or new information-family conclusion. Skin remains
+unacquired; fresh execution/credit/source/headroom/retention gates still apply.

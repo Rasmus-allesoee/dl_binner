@@ -1,0 +1,121 @@
+{
+  "status": "PASS_LOCAL_ENGINEERING; NATIVE_GATES_PENDING",
+  "date": "2026-10-23",
+  "owned_read_only_environment": "artifacts/e019-window-context/envs/context-owned-v4",
+  "tests": {
+    "new_context_metadata_refusal": 1,
+    "new_operations": 6,
+    "original_sparse_opaque_approximate_refusal": 8,
+    "new_review_adapter": 3
+  },
+  "actual_fixture": "Both retained E019 learned-context modes, synthetic engineering DNA and cached actual Pyrodigal/PyHMMER markers. Actual E020 original-E017 worker, sparse mathematical readback, unchanged E013, four complete export alternatives; no model call or detection.",
+  "fixture_resources": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+      "-I",
+      "-B",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E020-context-information-integration/engineering_fixture.py",
+      "--cached",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/integration-v2/fixture",
+      "--layout",
+      "context",
+      "--output",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e020-context-information-integration/preparation/actual-context-worker"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 8.260278115005349,
+    "peak_sampled_rss_bytes": 252039168,
+    "seconds_ceiling": 600,
+    "rss_bytes_ceiling": 8000000000,
+    "launched_pid": 70681,
+    "sampled_cpu_seconds": 7.39,
+    "sampled_average_cpus": 0.8946430007696193,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": false
+  },
+  "sparse_resources": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+      "-I",
+      "-B",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e017_grouping.py"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 75.38217923299817,
+    "peak_sampled_rss_bytes": 269520896,
+    "seconds_ceiling": 600,
+    "rss_bytes_ceiling": 8000000000,
+    "launched_pid": 70725,
+    "sampled_cpu_seconds": 59.05,
+    "sampled_average_cpus": 0.7833416412317138,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": false
+  },
+  "collector": {
+    "archive": {
+      "bytes": 2374964,
+      "sha256": "5b3e4498c511f1b55d1f4f1d621efd08079a8c7b68bd507d3909b68c0841c5c0"
+    },
+    "regular_members": 50,
+    "logical_member_bytes": 3218957,
+    "every_member_verified": true
+  },
+  "failed_attempts": [
+    {
+      "log": "artifacts/e020-context-information-integration/preparation/actual-context-worker.log",
+      "cause": "Sandbox denied ps monitoring; failure retained, repeat used explicit process-inspection approval. No successful science was replayed.",
+      "binding": {
+        "bytes": 95,
+        "sha256": "d5f34520e5306b0a2761714231d16b19f4a19d60378808696809e077a2c3b56b"
+      }
+    },
+    {
+      "log": "artifacts/e020-context-information-integration/preparation/write-records.py",
+      "cause": "Local prospective source-proof dictionary key omitted dl_binner/; corrected before source freeze or community outcome. No algorithm/criterion changed."
+    },
+    {
+      "log": "experiments/E020-context-information-integration/journals/missing-byte-test-expectation-attempt-1.log",
+      "cause": "New local test expected FileNotFoundError; accepted member_path correctly rejects a missing regular file with ValueError before hashing. Test now verifies that exact refusal; production check unchanged."
+    }
+  ],
+  "no_community_grouping": true,
+  "no_fit_or_inference": true,
+  "no_cloud_start_yet": true,
+  "no_new_wheel": true,
+  "logs": {
+    "artifacts/e020-context-information-integration/preparation/actual-context-worker-2.log": {
+      "bytes": 1687,
+      "sha256": "2f4e0af1bbd6976396972a42ff71939a722488399ea66f4863be20380f4fdd1a"
+    },
+    "artifacts/e020-context-information-integration/preparation/actual-sparse-opaque-refusal-2.log": {
+      "bytes": 4407,
+      "sha256": "c8efcaef1d4840136ed212ac38800357b113b42973e1d97854d4dceb2037b514"
+    },
+    "artifacts/e020-context-information-integration/preparation/actual-context-worker.log": {
+      "bytes": 95,
+      "sha256": "d5f34520e5306b0a2761714231d16b19f4a19d60378808696809e077a2c3b56b"
+    },
+    "artifacts/e020-context-information-integration/preparation/collector.log": {
+      "bytes": 309,
+      "sha256": "0432578b2b7f9505d3e4cda72abb6744068de7b766e52c02d4d8bcd2cdda7583"
+    },
+    "artifacts/e020-context-information-integration/preparation/context-tests.log": {
+      "bytes": 205,
+      "sha256": "eda516efcd5318979102e4d444e3e424cc7a5a626b46be532fed885391afc09c"
+    },
+    "artifacts/e020-context-information-integration/preparation/review-tests.log": {
+      "bytes": 101,
+      "sha256": "921b60a7fd52e978fbb551cacd29df2d6708879400278e1fcc70fceeb0c6f8e0"
+    },
+    "artifacts/e020-context-information-integration/preparation/operations-tests.log": {
+      "bytes": 125,
+      "sha256": "0986aa8d01bdb51a872bd9daacb9f4dd7a28df809f988a4c821129bd038a515a"
+    },
+    "artifacts/e020-context-information-integration/preparation/operations-tests-final-2.log": {
+      "bytes": 125,
+      "sha256": "283513f6a121380f4dec081635a0419d87bbcb19e848223375f218e6d98ad807"
+    }
+  }
+}

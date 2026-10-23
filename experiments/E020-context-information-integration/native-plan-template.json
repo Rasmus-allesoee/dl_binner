@@ -1,0 +1,27 @@
+{
+  "kind": "E020 cached E019 learning original E017 grouping",
+  "work": "@RUN_ROOT@/work",
+  "units": {
+    "E009-context": {
+      "fasta": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+      "features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "marker_cache": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers",
+      "embeddings": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/embeddings.npz"
+    },
+    "oral-context": {
+      "fasta": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+      "features": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.npz",
+      "marker_cache": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers",
+      "embeddings": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/embeddings.npz"
+    }
+  },
+  "threads": 4,
+  "python": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+  "worker": "@REPO@/scripts/e020_control.py",
+  "workflow_python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+  "snakefile": "@REPO@/experiments/E020-context-information-integration/Snakefile",
+  "config": "@REPO@/experiments/E020-context-information-integration/config.json",
+  "base_config": "@REPO@/src/dl_binner/resources/multiview.json",
+  "hmm": "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/marker.hmm",
+  "reuse_lock": "@REPO@/experiments/E020-context-information-integration/reuse-lock.json"
+}

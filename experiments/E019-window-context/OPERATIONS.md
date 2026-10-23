@@ -1,5 +1,9 @@
 # E019 operations
 
+October 23: the owner has invoked the following prompt with new $1 authorization.
+[E020 operations](../E020-context-information-integration/OPERATIONS.md) owns that
+new cached integration; this E019 outcome/source remains preserved.
+
 **Completed, checksum-verified and independently reviewed: MODIFY the scoped
 context bundle. VM remains TERMINATED.** Phase `context-20261022T215123Z-b47b916`
 executed exact immutable source **b47b916**. The [inspection](inspection-observed.json),
