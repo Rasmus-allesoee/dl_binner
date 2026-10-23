@@ -5,24 +5,62 @@ Updated: 2026-10-23. This is the single current handoff.
 ## Exact next step
 
 
-**E020 is running under verified supervision**, phase `integration-20261023T111835Z-99af96f`,
-exact source **99af96f**. [Native admission](../experiments/E020-context-information-integration/native-observed.json)
-and [operations / next inspection prompt](../experiments/E020-context-information-integration/OPERATIONS.md)
-own all seven passed gates, exact runtime/full axes/138 files and current real
-progress. Original E019 learning/vectors and original E017 grouping/E013 remain
-fixed. No inference, fit, marker scan or old score. No completion/quality result yet.
-At 13:27 Copenhagen, all four E009 stages have finished; oral recruitment advances.
-Latest sampled RSS 5.19 GB / free 68.202 GiB; matching watcher remains alive.
+**E020 completed and independently reviewed: MODIFY. VM TERMINATED.**
+[Comparison](../experiments/E020-context-information-integration/comparison-review.json),
+[inspection](../experiments/E020-context-information-integration/inspection-observed.json),
+[all 955 targets](../experiments/E020-context-information-integration/comparison-targets.tsv)
+and [operations / exact next prompt](../experiments/E020-context-information-integration/OPERATIONS.md)
+own phase `integration-20261023T111835Z-99af96f`, immutable science source **99af96f**.
+All seven native gates, eight serial science rules+target, reuse-after, collection,
+three upload/readback pairs, archive and all 201 members pass. Matching boot/process
+watcher requests shutdown; provider independently confirms TERMINATED. Final private
+completion/guest bytes prove delivery; its own terminal CLI exit is not in its
+pre-upload receipt. No wake, science replay, inference/old score or new DNA.
 
-Existing VM/disks; original 90-minute clock ends **October 23 14:48:30 Copenhagen**,
-provider 105-minute STOP/no restart **15:03:30**. Fresh boot/process-bound held-parent
-watcher passes live/normal/crash and current identity checks. Healthy longer work
-is handed off after progress verification, without polling to completion. On exit
-verify shutdown/completion/stages/archive/every member/cost before frozen diagnostics.
-New $1 maximum quote **$0.95122**, credit **DKK 1,874.97 Available / January 12**;
-pending usage unknown, $35 reserve. Separate $8 storage forecast **$7.6315** still
-ends **October 28 at 00:00 Copenhagen**, disks **$31.20/month**. No resource or
-retention change; skin remains unacquired. Exact limits/exclusions remain in E020.
+| Final full-reference weighted R95 | E019 | E020 |
+| --- | ---: | ---: |
+| E009 conservative v2 | 7.3058% | **7.5416%** |
+| Oral provided-origin oracle | 6.5077% | **5.6688%** |
+
+E009 +1,307,506 recovered bp / >=90% targets 7 -> 8; oral -17,474,841 bp / 33 -> 27.
+Original joint KEEP fails, **MODIFY unchanged**; all target/length/origin/eligibility/
+marker/unknown/non-target/excluded/unassigned strata and full 156/799 reference
+populations remain. Final unassigned eligible DNA rises 2.944 -> 60.875 Mb / 10.026 ->
+402.581 Mb. B3 F1 declines in both, learned neighbors remain exactly E019's. Oral
+core/parent recovery is already weak; E013 adds 72.694 Mb versus parent with no target
+loss. No demonstrated critical adapter/ID/depth bug, no missing-depth causal claim,
+truth-selected selector or permanent feature-family rejection. Original Mac
+portability tolerance and all failed journals remain. Oral is an origin oracle,
+not admitted unique support; N quarantine and known-shared sensitivity remain.
+
+**Next: one coherent frozen pretrained-sequence/context/composition/measured-depth
+hybrid, with untouched-skin source/truth admission in parallel.** Use ordinary E019
+CPM/E013 uniformly as the provisional anchor, rather than another grouping grid or
+per-community policy. [D015](decisions/D015-coherent-prototype-upgrade.md#e020-reviewed-integration-and-next-semantic-information-block-october-23-2026)
+weighs E003's mixed/failed criterion, reviewed semantic information, larger/raw-DNA
+Transformers and marker-aware learning. Existing local context omits within-window
+base order; a frozen prior may add complementary information, not guaranteed recovery.
+The proposed next prompt explicitly authorizes local coding/tiny contracts and only
+five frozen skin files / 4.605 GB transport, <=10 GiB extra / four threads / 8 GB /
+four-hour acquisition-validation clock when invoked. **Not acquired or implemented
+now.** Freeze source/joins/overlap/full-reference/ambiguity/origin-vs-unique truth and
+candidate/protocol before later confirmation. Skin GSA has no assembly errors or
+admitted depth. New CPU/GPU full-extraction/fit/runtime/quota/product/cost admission
+needs separate concrete approval; old compute budgets do not carry. No GPU/resource
+or retention change is implied. Broader data admission must not wait indefinitely.
+
+Actual allocation **30.24 minutes / 4.0326 vCPU-hours**, science **20.31 minutes /
+9.360 GB sampled RSS**, global sampled growth **5.499 GiB**, minimum free **63.051 GiB**.
+Measured allocation/run disk/export **$0.274881 subtotal / <$0.426 with reserves**,
+within original new $1; not an invoice/credit delta or sampled CPU pricing. Fresh
+credit **DKK 1,871.70 Available / 95%**, January 12 expiry; delayed usage unknown,
+$35 reserve. Separate $8 storage forecast **$7.6276**, still ending **October 28 at
+00:00 Copenhagen (UTC+01:00)**; stopped disks **$31.20/month**. No automatic extension,
+delete, new resource, private backup upload or recovery wake. Native archive 1.039 GB;
+943 full-DNA members / 1.991 GB remain on stopped disk, not backed up by hashes.
+Numerical review uses four threads, peak sampled RSS 3.932 GB and 2.664 GiB extra
+through diagnostics within the original one-hour / 6 GiB budget; final seal/closure
+is in the inspection receipt. Compact local seal 991,824 bytes / 117 payload members verifies every member, with no private upload. Product guidance/AGENTS remain current.
 
 The following E019 completed-review snapshot is preserved context.
 

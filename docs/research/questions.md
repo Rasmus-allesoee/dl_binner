@@ -578,3 +578,17 @@ and the one cached integration is released under verified fresh supervision.
 This moves the prospective interaction question into testing, not resolution.
 No recovery outcome or default/promotion claim yet; all immutable baselines,
 full truth/population contracts and October 28 storage boundary remain.
+
+
+E020 inspected resolution, October 23, 2026: [the completed comparison](../../experiments/E020-context-information-integration/comparison-review.json)
+is **MODIFY** with E009 final R95 +0.2357 points / >=90% 7 -> 8, oral origin -0.8389
+points / 33 -> 27. All contracts/target populations pass and no demonstrated adapter
+or missing-depth bug explains the trade-off. E013 rescues weak oral parents; learned
+neighbors are fixed and assignment/B3 trade-offs persist. The integration question
+is answered in scope, without promoting a universal policy. Q001/Q003/Q005 remain
+open. Next propose one frozen pretrained-sequence/context/depth hybrid with untouched-
+skin admission in parallel, ordinary E019 downstream retained. E003's failed short-
+neighbor criterion remains contrary evidence, not a family veto. No new score/grid,
+fit, data, VM/resource or retention change in inspection. Skin source/genome/replicon/
+molecule/taxonomy/overlap/ambiguity/origin-vs-unique truth and prospective candidate/
+protocol/cost still require admission; no unseen-genome or product-family conclusion.

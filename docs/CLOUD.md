@@ -2,24 +2,47 @@
 
 Updated: 2026-10-23 (Copenhagen; initial provisioning receipts are October 13 UTC).
 
-**E020 is running under verified supervision**, phase `integration-20261023T111835Z-99af96f`,
-exact source **99af96f**. [Native admission](../experiments/E020-context-information-integration/native-observed.json)
-and [operations / next inspection prompt](../experiments/E020-context-information-integration/OPERATIONS.md)
-own all seven passed gates, exact runtime/full axes/138 files and current real
-progress. Original E019 learning/vectors and original E017 grouping/E013 remain
-fixed. No inference, fit, marker scan or old score. No completion/quality result yet.
-At 13:27 Copenhagen, all four E009 stages have finished; oral recruitment advances.
-Latest sampled RSS 5.19 GB / free 68.202 GiB; matching watcher remains alive.
+**E020 completed/returned/reviewed; VM independently TERMINATED.**
+[Inspection](../experiments/E020-context-information-integration/inspection-observed.json)
+records phase `integration-20261023T111835Z-99af96f`, exact source **99af96f**, all
+seven gates/eight serial science rules+target/reuse-after/collection/three upload-
+readback pairs and matching completion bytes. Scientific outcome **MODIFY**, not
+inferred from shutdown; [operations](../experiments/E020-context-information-integration/OPERATIONS.md)
+owns results and a proposed local hybrid/skin-admission prompt, not another paid run.
 
-Existing VM/disks; original 90-minute clock ends **October 23 14:48:30 Copenhagen**,
-provider 105-minute STOP/no restart **15:03:30**. Fresh boot/process-bound held-parent
-watcher passes live/normal/crash and current identity checks. Healthy longer work
-is handed off after progress verification, without polling to completion. On exit
-verify shutdown/completion/stages/archive/every member/cost before frozen diagnostics.
-New $1 maximum quote **$0.95122**, credit **DKK 1,874.97 Available / January 12**;
-pending usage unknown, $35 reserve. Separate $8 storage forecast **$7.6315** still
-ends **October 28 at 00:00 Copenhagen**, disks **$31.20/month**. No resource or
-retention change; skin remains unacquired. Exact limits/exclusions remain in E020.
+Measured allocation **October 23 11:18:30.392–11:48:45.064 UTC / 13:18:30.392–13:48:45.064
+Copenhagen**, **1,814.672 seconds / 30.24 minutes / 4.0326 vCPU-hours**, existing
+8 vCPU / 32 GiB / 300 GiB work + 30 GiB boot. Science 1,218.609 seconds, sampled CPU
+1,367.01 seconds / peak RSS 9.360 GB; global sampled growth 5.499 GiB, minimum free
+63.051 GiB. Matching boot/PID/start/command watcher requested shutdown 11:46:05 UTC;
+independent provider state verifies it. Original 90-minute clock / 105-minute
+STOP/no restart and all reserves pass. No VM wake or SSH/science replay in inspection.
+
+Private archive **1,038,909,515 bytes**, generation `1792755883690041`, SHA256
+`5a13a09f67ae13dabe3082a2e764e041307554f408642887c1b54e1fc03d2d41`;
+one admitted download, MD5 and every **201 members / 1,815,169,682 logical bytes**
+verify, no aliases. Full omission inventory records 943 DNA members / 1,991,073,738
+bytes retained only on stopped VM. Shared inputs/environment hashes are not backups.
+Final completion delivery is proven by private bytes and guest digest; its own
+post-upload CLI exit is not contained in its receipt. The new compact inspection
+seal is local only; no cloud write/private upload was performed or implied.
+
+Fresh paid-account credit **DKK 1,871.70 Available / 95%**, Certain usage/net pricing,
+expiry **January 12, 2027**. October 1–23 Overview costs/savings DKK 99.86 / net zero;
+>24-hour delay remains unknown with $35 reserve. Five account-local SKU expressions
+and ordinary E2/Ubuntu/PD/IPv4/Iowa Standard/network/operations coverage pass.
+Measured uptime/SKU attribution **$0.137636 compute/IP + $0.021139 run disks +
+$0.116107 archive export upper = $0.274881 / <$0.426 with metadata/operations reserve**,
+within original new $1. Not a reconciled invoice, sampled CPU bill or credit delta.
+Post-stop disks to admission $0.226324 are part of the storage interval, not a
+second disk invoice. Current all-version archive inventory 104 / 9,384,180,741 bytes,
+zero soft-deleted; 169-hour approved storage forecast **$7.6276 of $8**, ending
+**October 28 at 00:00 Copenhagen (CET, UTC+01:00)**. Existing stopped disks remain
+**$31.20/month**. No automatic renewal/deletion, new service/resource or retention
+extension. Next paid extraction/fits require a new concrete envelope/approval and
+fresh credits/product/quota/source/runtime/headroom; no GPU eligibility assumed.
+[Trial terms](https://docs.cloud.google.com/free/docs/free-cloud-features) and
+[storage/network pricing](https://cloud.google.com/storage/pricing?hl=en) were refreshed.
 
 The following E019 completed-review snapshot is preserved context.
 

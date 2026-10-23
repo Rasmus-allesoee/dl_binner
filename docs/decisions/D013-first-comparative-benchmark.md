@@ -1,6 +1,6 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E020 native admission](../../experiments/E020-context-information-integration/native-observed.json) passes all seven gates and releases the owner-authorized cached E019-learning + original E017-grouping integration, source 99af96f. No quality outcome yet. E019 MODIFY and all earlier evidence remain immutable; storage still ends October 28 at 00:00 Copenhagen.
+Current handoff: [E020 completed review](../../experiments/E020-context-information-integration/comparison-review.json) is MODIFY after verified completion/shutdown. Recommend one frozen pretrained-sequence/context/depth hybrid with untouched-skin admission in parallel; ordinary E019 CPM/E013 stays the uniform provisional anchor. No new implementation/acquisition or paid work in inspection. Storage still ends October 28 at 00:00 Copenhagen.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.
@@ -735,3 +735,27 @@ complete. Existing source/package/vectors and full populations remain; no retry
 of accepted science, model/threshold change, new DNA or retention extension.
 [Operations](../../experiments/E020-context-information-integration/OPERATIONS.md)
 owns exact clock, logs, original $1 and subsequent frozen inspection boundary.
+
+
+## E020 completed decision evidence, October 23, 2026
+
+[Verified E020 comparison](../../experiments/E020-context-information-integration/comparison-review.json)
+finishes the cheap coherent learning/grouping interaction: **MODIFY**, E009 final
+7.3058 -> 7.5416% and oral origin 6.5077 -> 5.6688%. Exact source/native/byte and
+full-population contracts pass; no critical adapter error is demonstrated. Current
+oral E013 rescues a weak parent, so do not mistake final decline for destructive
+refinement or establish a missing-depth cause. Preserve all target and eligibility
+trade-offs rather than report one favorable assembly. Allocation/disk/export subtotal
+~$0.2749 / <$0.426 with reserve stayed within $1, without new fit or tool campaign.
+
+The incremental question is answered; do not default to another small selector or
+threshold run. [D015's new decision](D015-coherent-prototype-upgrade.md#e020-reviewed-integration-and-next-semantic-information-block-october-23-2026)
+owns one coherent frozen pretrained-sequence/context/depth hybrid plus untouched-
+skin admission in parallel. Reuse E003's mixed/failed criterion and completed reviews,
+keep ordinary E019 CPM/E013 as a uniform provisional anchor, and admit the five frozen
+skin payloads/truth/overlap/protocol before later confirmation. This is a proposed
+new local authorization, not performed now. Full extraction/fits may cost materially
+more than cached grouping and need actual CPU/GPU/runtime/RAM/disk/export/credit/quota
+planning and separate concrete approval. No old budget or automatic October 28
+storage extension follows. Independent broader data, not a mature-tool win alone,
+will determine whether the richer information actually closes recovery gaps.

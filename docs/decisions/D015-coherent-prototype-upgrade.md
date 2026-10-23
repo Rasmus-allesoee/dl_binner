@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E020 native admission](../../experiments/E020-context-information-integration/native-observed.json) passes all seven gates and releases the owner-authorized cached E019-learning + original E017-grouping integration, source 99af96f. No quality outcome yet. E019 MODIFY and all earlier evidence remain immutable; storage still ends October 28 at 00:00 Copenhagen.
+Current handoff: [E020 completed review](../../experiments/E020-context-information-integration/comparison-review.json) is MODIFY after verified completion/shutdown. Recommend one frozen pretrained-sequence/context/depth hybrid with untouched-skin admission in parallel; ordinary E019 CPM/E013 stays the uniform provisional anchor. No new implementation/acquisition or paid work in inspection. Storage still ends October 28 at 00:00 Copenhagen.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
@@ -1159,3 +1159,73 @@ complete. Existing source/package/vectors and full populations remain; no retry
 of accepted science, model/threshold change, new DNA or retention extension.
 [Operations](../../experiments/E020-context-information-integration/OPERATIONS.md)
 owns exact clock, logs, original $1 and subsequent frozen inspection boundary.
+
+
+## E020 reviewed integration and next semantic information block, October 23, 2026
+
+[Independent completed inspection](../../experiments/E020-context-information-integration/inspection-observed.json)
+accepts science/source/runtime/full axes/cache policy/complete DNA and every return
+member. The frozen rule remains **MODIFY**: E009 post 7.3058 -> 7.5416% (+1.308 Mb,
+>=90% targets 7 -> 8), oral origin 6.5077 -> 5.6688% (-17.475 Mb, 33 -> 27). E009
+misses the original 0.5-point practical gain and oral loses; this is no promotion.
+All 955 target gains/losses and length/origin/eligibility/marker/unknown/non-target/
+excluded/unassigned populations remain. More eligible DNA is unassigned (+57.931 /
+392.555 Mb), B3 F1 falls in both scopes, and fixed E019 learned neighbors do not
+change. Oral parent recovery is already weak; E013 rescues +72.694 Mb over that
+parent with no target loss. Do not select old refinement by its higher E009 R95,
+blame missing depth, or call current-parent refinement destructively causal.
+Native/source and independent all-row cache checks find no critical adapter/ID/
+depth error, without proving all biology or policy optimality. Full denominators,
+N quarantine, oral origin-versus-unique limitation and Mac failures remain.
+
+**Choose a coherent frozen pretrained-sequence/context/composition/measured-depth
+hybrid, with frozen untouched-skin source/truth admission in parallel.** This
+resolves the now-completed integration question and uses the reviewed GLM route
+rather than another grouping threshold/selector grid. Current context summarizes
+composition within windows; a frozen semantic sequence prior offers base-order
+information learned outside the small target training set. A small trainable
+reliability/fusion adapter can use that evidence while retaining explicit depth,
+real views and consistent geometry. Use ordinary E019 CPM/E013 uniformly as the
+provisional downstream anchor; E020, E017 and E018 remain scoped evidence/modules,
+not permanently banned families or per-community routing choices.
+
+Contrary evidence matters: accepted E003 GLM short 5NN 0.45938 trails raw TNF 0.57396,
+failing its original criterion, while bp-weighted grouping B3 F1 0.37664 exceeds
+0.30801. These were not current-context or full-genome recovery comparisons. Reuse
+that failure and reviewed field/source/thesis evidence, exact model/tokenizer/custom
+source pins and retained cache; do not declare a semantic prior certain to help.
+[Author source](https://github.com/MAGICS-LAB/DNABERT_S) supports a species-aware
+DNABERT-2-based frozen 768-dimensional/mean-pooling route. The publisher redirect
+could not be refreshed; use the maintained completed paper review rather than claim
+it was freshly read. Resolve one precise view/cache/strand/exposure/fusion design
+in the implementation task, then perform real tiny extraction/training/reload tests.
+
+| Serious alternative | Current judgment and uncertainty |
+| --- | --- |
+| Larger Transformer or new raw-DNA encoder | Base-order processing is valuable to test; capacity is not shown to be limiting. A frozen GLM is itself Transformer based and may complement existing compact attention. A compact new sequence encoder is a fallback if pinned model/licensing/runtime proves unsuitable, not an extra model campaign. |
+| Reliable marker-aware learning | Keep visible, but E011/E012 same-genome duplicate families/partial/locus/panel limits make naive SCG cannot-links unsafe. A safe label-free pair rule and marker-negative handling are prerequisites. No automatic new marker loss or taxonomy. |
+| More grouping/refinement tuning | E017/E018/E020 provide enough mixed/negative two-community evidence to move to information now. Preserve modules/alternatives, no grid or perfect-grouping prerequisite. |
+| Untouched data alone | Admit skin alongside coding now, before promotion. Different body site does not establish genome/pretraining independence. More data cannot substitute for a justified candidate. Genuine oral depth remains separately costed. |
+
+The [proposed exact next prompt](../../experiments/E020-context-information-integration/OPERATIONS.md#exact-following-prompt)
+is local implementation/tiny engineering plus a newly explicit five-file skin
+acquisition/admission (4,605,403,023 prior HEAD bytes and <=10 MiB metadata; <=10 GiB
+extra / four threads / 8 GB sampled RSS / four-hour acquisition-validation clock).
+No DNA or new implementation occurs in this inspection. Stream/index source joins;
+remain provisional if molecule/circular/host/taxonomy/competitive-ambiguity truth
+or exact/near/reference/pretraining overlap is unresolved. Preserve full/zero-origin
+reference denominators, source-blind IDs and original zero-bp records. Freeze one
+candidate/comparator/criteria before confirmation scores. Skin is sequence-only
+GSA without assembly errors or admitted contig-depth, not unseen-genome evidence.
+
+At most one decision-changing control may be prepared. One later candidate-versus-
+preserved-E019 comparison must price full extraction, setup, fits, collection and
+review, reusing baseline outputs. The old Mac projection is ~447 parent-only hours
+for current eligible DNA, not an E2/GPU quote or a reason alone to reject the route;
+view exposure may add work. Measure tiny throughput, complete source/runtime/library
+contracts and CPU/GPU/RAM/peak-disk/cache/export/credit/product/quota prerequisites
+before a separate execution approval. No GPU availability/eligibility, old budget,
+service/permission/VM/resource change or storage extension is implied. E020 subtotal
+~$0.2749 / <$0.426 with reserves fits its $1; original $8 storage ends October 28
+at 00:00 Copenhagen. Both inspected communities remain development, not final
+validation, SOTA evidence or a product-family decision.

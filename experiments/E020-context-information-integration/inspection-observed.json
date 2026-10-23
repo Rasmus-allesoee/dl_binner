@@ -1,0 +1,693 @@
+{
+  "record": "E020 independent completed-output inspection",
+  "status": "PASS_COMPLETED_VERIFIED_AND_REVIEWED_MODIFY",
+  "phase": "integration-20261023T111835Z-99af96f",
+  "reviewed_UTC": "2026-10-23T17:47:27.318983+00:00",
+  "science_source": "99af96fb31e2b29972f5b9c7882ed0bef27a0fb2",
+  "provider": {
+    "status": "TERMINATED",
+    "start_UTC": "2026-10-23T11:18:30.392+00:00",
+    "stop_UTC": "2026-10-23T11:48:45.064+00:00",
+    "machine": "e2-standard-8",
+    "vCPU": 8,
+    "RAM_GiB": 32,
+    "work_GiB": 300,
+    "boot_GiB": 30,
+    "measured_seconds": 1814.6719999313354,
+    "provider_STOP_seconds": 6300,
+    "automatic_restart": false,
+    "final_verified_UTC": "2026-10-23T17:47:27.204373+00:00",
+    "final_guest_match": true
+  },
+  "completion": {
+    "status": "SUCCESS",
+    "science_completed": true,
+    "private_readback_verified": true,
+    "bytes": 106485,
+    "sha256": "5004fd7310aa13c188ed22abd24e61cf84d79e3574c0355b168e09bce94c834f",
+    "guest_and_private_match": true,
+    "delivery_limit": "Private object and matching guest SHA prove delivery. Completion upload cannot contain its own final exit inside its pre-upload receipt."
+  },
+  "watcher": {
+    "boot_id": "c7cb22a3-ad3d-417a-b4cb-74766344faf5",
+    "PID": 1816,
+    "start_ticks": 6255,
+    "command_sha256": "8aa4c63cd9761f2bd802e1dd6e937120eaacc7cd775c66edd54207abbb3fb8df",
+    "decision": "workflow exited",
+    "observed_process": null,
+    "shutdown": true,
+    "UTC": "2026-10-23T11:46:05.545251+00:00",
+    "native_live_normal_crash_tests_pass": true
+  },
+  "exits": {
+    "native_gates": [
+      {
+        "name": "retained-byte-reuse",
+        "exit_code": 0
+      },
+      {
+        "name": "complete-existing-runtime-source-library",
+        "exit_code": 0
+      },
+      {
+        "name": "full-context-axes",
+        "exit_code": 0
+      },
+      {
+        "name": "context-metadata-sparse-opaque-reader-refusal",
+        "exit_code": 0
+      },
+      {
+        "name": "cached-marker-worker-refiner-four-export",
+        "exit_code": 0
+      },
+      {
+        "name": "launcher-collector-contracts",
+        "exit_code": 0
+      },
+      {
+        "name": "serial-DAG-dryrun",
+        "exit_code": 0
+      }
+    ],
+    "scientific_rules": [
+      {
+        "jobid": 4,
+        "stage": "group",
+        "unit": "E009-context",
+        "start": "Fri Oct 23 11:22:24 2026",
+        "end": "Fri Oct 23 11:24:13 2026",
+        "exit_code": 0,
+        "exit_basis": "Exact successful shell-finish event plus overall supervised exit 0; no invented per-rule exit JSON."
+      },
+      {
+        "jobid": 3,
+        "stage": "refine",
+        "unit": "E009-context",
+        "start": "Fri Oct 23 11:24:13 2026",
+        "end": "Fri Oct 23 11:24:20 2026",
+        "exit_code": 0,
+        "exit_basis": "Exact successful shell-finish event plus overall supervised exit 0; no invented per-rule exit JSON."
+      },
+      {
+        "jobid": 2,
+        "stage": "export",
+        "unit": "E009-context",
+        "start": "Fri Oct 23 11:24:20 2026",
+        "end": "Fri Oct 23 11:24:40 2026",
+        "exit_code": 0,
+        "exit_basis": "Exact successful shell-finish event plus overall supervised exit 0; no invented per-rule exit JSON."
+      },
+      {
+        "jobid": 1,
+        "stage": "audit",
+        "unit": "E009-context",
+        "start": "Fri Oct 23 11:24:40 2026",
+        "end": "Fri Oct 23 11:25:09 2026",
+        "exit_code": 0,
+        "exit_basis": "Exact successful shell-finish event plus overall supervised exit 0; no invented per-rule exit JSON."
+      },
+      {
+        "jobid": 8,
+        "stage": "group",
+        "unit": "oral-context",
+        "start": "Fri Oct 23 11:25:09 2026",
+        "end": "Fri Oct 23 11:35:20 2026",
+        "exit_code": 0,
+        "exit_basis": "Exact successful shell-finish event plus overall supervised exit 0; no invented per-rule exit JSON."
+      },
+      {
+        "jobid": 7,
+        "stage": "refine",
+        "unit": "oral-context",
+        "start": "Fri Oct 23 11:35:20 2026",
+        "end": "Fri Oct 23 11:36:45 2026",
+        "exit_code": 0,
+        "exit_basis": "Exact successful shell-finish event plus overall supervised exit 0; no invented per-rule exit JSON."
+      },
+      {
+        "jobid": 6,
+        "stage": "export",
+        "unit": "oral-context",
+        "start": "Fri Oct 23 11:36:45 2026",
+        "end": "Fri Oct 23 11:39:09 2026",
+        "exit_code": 0,
+        "exit_basis": "Exact successful shell-finish event plus overall supervised exit 0; no invented per-rule exit JSON."
+      },
+      {
+        "jobid": 5,
+        "stage": "audit",
+        "unit": "oral-context",
+        "start": "Fri Oct 23 11:39:09 2026",
+        "end": "Fri Oct 23 11:42:41 2026",
+        "exit_code": 0,
+        "exit_basis": "Exact successful shell-finish event plus overall supervised exit 0; no invented per-rule exit JSON."
+      },
+      {
+        "jobid": 0,
+        "stage": "all",
+        "unit": "all",
+        "start": "Fri Oct 23 11:42:41 2026",
+        "end": "Fri Oct 23 11:42:41 2026",
+        "exit_code": 0,
+        "exit_basis": "Exact successful shell-finish event plus overall supervised exit 0; no invented per-rule exit JSON."
+      }
+    ],
+    "serial_no_overlap": true,
+    "completion_stages": [
+      {
+        "name": "science",
+        "exit_code": 0
+      },
+      {
+        "name": "reuse-after",
+        "exit_code": 0
+      },
+      {
+        "name": "collection",
+        "exit_code": 0
+      },
+      {
+        "name": "upload-e020-evidence.tar.gz",
+        "exit_code": 0
+      },
+      {
+        "name": "readback-e020-evidence.tar.gz",
+        "exit_code": 0
+      },
+      {
+        "name": "upload-e020-evidence.tar.gz.sha256",
+        "exit_code": 0
+      },
+      {
+        "name": "readback-e020-evidence.tar.gz.sha256",
+        "exit_code": 0
+      },
+      {
+        "name": "upload-collection.json",
+        "exit_code": 0
+      },
+      {
+        "name": "readback-collection.json",
+        "exit_code": 0
+      }
+    ],
+    "completion_self_upload_cli_exit": "Not returned; successful delivery independently established by private object/guest bytes. No invented exit."
+  },
+  "sources_and_inputs": {
+    "effective_source_bindings": 76,
+    "sealed_sources": 20,
+    "retained_files": 138,
+    "retained_bytes": 5935872985,
+    "before_after_identical": true,
+    "original_dev7_E019_wheel_unchanged": true,
+    "native_Python": "3.12.10",
+    "package_source_files": 36,
+    "distributions": 28,
+    "native_full_axes_verified": true,
+    "E009_contigs": 145702,
+    "E009_bp": 231678157,
+    "E009_depth_sample_order": [
+      0,
+      2,
+      3,
+      4,
+      6,
+      9,
+      10,
+      11,
+      14,
+      17
+    ],
+    "oral_nonempty_contigs": 1286547,
+    "oral_bp": 1669981123,
+    "oral_depth_columns": 0,
+    "original_oral_zero_bp_records": 2,
+    "unit_vectors_untouched": true,
+    "independent_cache_all_rows": "PASS",
+    "learned_neighbor_geometry_exactly_E019": true,
+    "original_E017_policy_and_E013_unchanged": true
+  },
+  "archive": {
+    "prefix": "gs://dl-binner-archive-167650584170/e020/integration-20261023T111835Z-99af96f/",
+    "generation": "1792755883690041",
+    "bytes": 1038909515,
+    "sha256": "5a13a09f67ae13dabe3082a2e764e041307554f408642887c1b54e1fc03d2d41",
+    "GCS_MD5_verified": true,
+    "all_members": 201,
+    "logical_member_bytes": 1815169682,
+    "physical_payload_members": 200,
+    "payload_bytes": 1814806371,
+    "aliases": 0,
+    "every_member_verified": true,
+    "inventory": {
+      "physical_members": 201,
+      "logical_archived_bytes": 1815169682,
+      "aliases": {},
+      "all_new_work_members": 1016,
+      "all_new_work_bytes": 3804750775,
+      "omitted_full_DNA_members": 943,
+      "omitted_full_DNA_bytes": 1991073738,
+      "inventory_binding": "46d09935666dd563ce04a5a176b5b2caf7ca144656901499a98cbceddba6b634",
+      "omissions_are_not_backups": true
+    },
+    "single_download": true,
+    "shared_inputs_environments_not_backed_up": true
+  },
+  "credit_and_coverage": {
+    "post_shutdown_fresh_read_UTC": "2026-10-23T17:12:34.133222+00:00",
+    "remaining_DKK": 1871.7,
+    "status": "Available",
+    "percent": 95,
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; see Free Trial terms",
+    "application": "Net pricing",
+    "paid_account": true,
+    "overview_cost_savings_DKK": 99.86,
+    "overview_net_DKK": 0,
+    "pending_usage": "Unknown; fresh live tooltip says may take longer than 24 hours; 35 USD reserve retained. No credit-delta invoice inference."
+  },
+  "pricing": {
+    "fresh_SKUs": {
+      "6AE1-525F-8B80": {
+        "description": "Balanced PD Capacity",
+        "unchanged": true
+      },
+      "C054-7F72-A02E": {
+        "description": "External IP Charge on a Standard VM",
+        "unchanged": true
+      },
+      "CF4E-A0C7-E3BF": {
+        "description": "E2 Instance Core running in Americas",
+        "unchanged": true
+      },
+      "D973-5D65-BAB2": {
+        "description": "Storage PD Capacity",
+        "unchanged": true
+      },
+      "F449-33EC-A5EF": {
+        "description": "E2 Instance Ram running in Americas",
+        "unchanged": true
+      }
+    },
+    "products": "Existing ordinary E2, nonpremium Ubuntu, persistent disks, IPv4, Iowa Standard storage/network/operations; no new product",
+    "sources": [
+      "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "https://cloud.google.com/storage/pricing?hl=en"
+    ],
+    "estimates": {
+      "native": {
+        "science": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e020-99af96fb31e2/scripts/e020_control.py",
+            "--plan",
+            "/srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/science-plan.json",
+            "--workflow"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2232,
+          "peak_sampled_rss_bytes": 9359949824,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.1217787812890323,
+          "sampled_cpu_seconds": 1367.01,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 4565.950726985931,
+          "stop_reason": null,
+          "wall_seconds": 1218.609250595
+        },
+        "global_sampled_growth_bytes": 5904244736,
+        "minimum_sampled_free_bytes": 67700031488,
+        "scope": "Across original pre-checkout filesystem snapshot, not reset guard growth; bounded native sampled points, not an unsampled absolute peak."
+      },
+      "allocation": {
+        "measured_uptime_seconds": 1814.6719999313354,
+        "allocated_vCPU_hours": 4.032604444291857,
+        "compute_IP_USD": 0.13763565094721406,
+        "run_disks_USD": 0.02113865229497159,
+        "archive_export_upper_USD": 0.11610718611627817,
+        "metadata_upper_USD": 0.001,
+        "operations_reserve_USD": 0.15,
+        "sampled_science_cpu_seconds": 1367.01,
+        "sampled_CPU_is_not_pricing": true,
+        "invoice_reconciled": false,
+        "credit_delta_attributed": false,
+        "post_stop_disks_to_inspection_USD": 0.22632425996141403,
+        "storage_scope": "Run disk and stopped interval are attribution within separate $8 retention, not a second invoice.",
+        "phase_export_with_reserve_USD": 0.4258814893584638
+      },
+      "native_completion_clock_seconds": 1587.0344116687775,
+      "scope": "Measured provider allocation and current SKUs, not sampled CPU billing or an invoice/credit delta.",
+      "storage": {
+        "existing_disk_USD_month": 31.199999949850024,
+        "approved_interval_forecast_USD": 7.627562383669526,
+        "approved_interval_ceiling_USD": 8,
+        "end": "2026-10-28T00:00:00+01:00",
+        "all_versions": 104,
+        "all_version_bytes": 9384180741,
+        "soft_deleted": 0,
+        "retention_extended": false
+      }
+    },
+    "invoice_reconciled": false,
+    "credit_delta_attributed": false
+  },
+  "decision": {
+    "disposition": "MODIFY",
+    "original_criterion": {
+      "keep": "Neither post R95 below retained E019, at least one gain >=0.005 absolute, neither >=90% recovered target count falls, all integrity contracts pass.",
+      "abandon": "Neither post R95 endpoint nor either >=90% target count improves; an integrity failure invalidates execution, not a biological family.",
+      "modify": "All other valid results; preserve original criterion, full paired targets and losses. No per-community or per-bin oracle."
+    },
+    "exact_totals": [
+      {
+        "candidate_bp": 41830143,
+        "baseline_bp": 40522637,
+        "reference_bp": 554661890,
+        "candidate_90": 8,
+        "baseline_90": 7
+      },
+      {
+        "candidate_bp": 118085866,
+        "baseline_bp": 135560707,
+        "reference_bp": 2083072211,
+        "candidate_90": 27,
+        "baseline_90": 33
+      }
+    ],
+    "scope": "Development interaction bundle; no ingredient-causal, generalization, per-community/bin oracle, default or SOTA claim."
+  },
+  "results": {
+    "main": "The frozen integration is technically valid but does not robustly improve recovery. Original MODIFY remains: E009 +0.2357 percentage points / +1,307,506 bp / >=90% targets 7 to 8; oral -0.8389 points / -17,474,841 bp / 33 to 27. Neither endpoint meets +0.5 points and oral violates no-loss/count gates. Do not promote E020 or choose a pipeline/refiner per community.",
+    "grouping": "Both learned spaces are exactly E019. Original E017 information grouping moves much more eligible DNA to unassigned: post E009 2.944 to 60.875 Mb, oral 10.026 to 402.581 Mb. B3 F1 falls 48.5636 to 44.8539% / 30.6625 to 26.5985%, despite some recovery/count gains. In oral the core-only parent is already weak at 1.9600%; recruiting raises R95 to 2.1791% with 22 gains / 5 losses. Thus short rejection alone is not a demonstrated complete explanation; core mixing/fragmentation and recruitment trade-offs remain.",
+    "marker": "Fixed E013 rescues oral parent 2.1791 to 5.6688%: +72,694,094 bp, 26 targets gain / none lose. Old to E013 has 17 gains / 4 losses but +42,597,219 bp. E009 selected and parent recoveries match for every target, although assignments differ; old refiner 7.8750% has fewer >=90% targets than post 7.5416%, 7 versus 8. Do not select old proposals with truth.",
+    "engineering": "All native source/runtime/full-axis/exact native vector/graph/profile/vote/refiner/export and independently reread all-row contracts pass. No critical adapter or ID/depth-remapping bug was found. Native affinity mathematics were checked by the exact source-bound native audit; local review checks every retained ID/score/vote/reason, not a cross-platform mathematical replay or proof that policy is optimal.",
+    "information": "Current context tokens summarize fourmer composition within windows, rather than raw-base order within those windows. The fixed oral full-population learned 5NN remains 18.0683% (20.7688% bp weighted), distinct from high sampled joint-core retrieval recall. Low learning separation and a harmful downstream interaction justify testing a new complementary sequence prior; they do not prove sole causality or capacity limitation.",
+    "reference": "Retained native MetaBAT2 E009 R95 is 8.5493% versus E020 7.5416%, with different native eligibility. This is not a matched cutoff ablation, SOTA ranking, or evidence that one toy development community determines product feature families."
+  },
+  "next_decision": {
+    "status": "PROPOSED_LOCAL_BLOCK_NOT_EXECUTED_OR_PAID_AUTHORIZED",
+    "choice": "One coherent frozen pretrained-sequence/context/composition/measured-depth hybrid upgrade, with untouched-skin source/truth admission in parallel.",
+    "why_now": "After E017 mixed, E018 abandoned and E020 mixed outcomes, another profile/margin/resolution or selector grid reuses the same limited evidence. A semantic prior can add different information to target-trained composition summaries; source and E003 grouping evidence support a substantial new module, while E003 short-neighbor regression is important contrary evidence.",
+    "implementation_anchor": "Preserve and build from E019 source. Keep its ordinary sole CPM/E013 as the uniform provisional downstream anchor, rather than promoting E020 or choosing per community. Retain E016 and all old outcomes as immutable context. Add one frozen sequence branch and a small trainable reliability/fusion adapter; resolve precise view/cache/exposure/strand/pooling/defaults in a concise prospective design and implement in the same local task. Keep real DNA-window semantics, explicit composition/depth branches and consistent train/inference/group geometry.",
+    "selective_control": "One new candidate versus preserved E019 on the two development communities, after full new budget/native admission; reuse baseline outputs. At most one decision-changing branch/loss control if justified, no compulsory factorial or model menu. Freeze untreated skin candidate/comparator/protocol before its scores.",
+    "alternatives": {
+      "larger_transformer_or_new_raw_sequence_encoder": "A compact ordered raw-DNA encoder is a serious alternative if pinned frozen-model licensing/runtime/coverage is unusable, but a larger Transformer is not justified by a measured capacity bottleneck. The frozen GLM itself is Transformer based; it can complement existing compact attention rather than replace it.",
+      "marker_aware_training": "Keep as an important later information option, but prior E011/E012 same-genome repeated-family/partial/locus evidence makes naive SCG cannot-links unreliable. A safe label-free pair rule and sparse marker-negative handling are prerequisites; marker learning is not automatically added now.",
+      "grouping_or_refiner_grid": "Do not continue E009-only threshold/selector tuning. Retain E017/E020 modules and E013 biological information for later contexts; MODIFY is not a permanent family ban.",
+      "additional_data_only": "Untouched-skin admission is needed now alongside implementation rather than after repeated two-community tuning. It cannot substitute for a richer candidate, and its DNA/scores remain unacquired in this inspection. Genuine oral depth remains a separate read/mapping/cost question."
+    },
+    "sources_reused": [
+      "docs/evidence/2026-09-30-binner-design-review.md",
+      "docs/evidence/2026-10-08-competitive-binner-study.md",
+      "docs/evidence/2026-09-30-architecture-reassessment.md",
+      "experiments/E003-representation-screen/README.md",
+      "experiments/E019-window-context/design.md",
+      "experiments/E019-window-context/confirmation-plan.json"
+    ],
+    "primary_refresh": {
+      "date": "2026-10-23",
+      "author_repository": "https://github.com/MAGICS-LAB/DNABERT_S",
+      "observed": "Author README names a DNABERT-2-based species-aware frozen 768-dimensional sequence embedding and mean-pooling interface. This supports the distinct information route, not a recovery guarantee. Reuse exact E002/E003 weight/tokenizer/custom-source pins, never mutable model code.",
+      "paper": "https://doi.org/10.1093/bioinformatics/btaf188",
+      "paper_refresh": "Publisher redirect inaccessible; completed maintained paper review reused, not claimed freshly read."
+    },
+    "resources": {
+      "current_authorization": "No new implementation, DNA acquisition, fit, inference, cloud start/resource or retention action in this inspection.",
+      "next_local_scope": "Propose local implementation/tiny engineering and separately explicit frozen skin acquisition of five files / 4,605,403,023 HEAD bytes + <=10 MiB metadata; <=10 GiB total new local disk, <=4 threads / 8 GB sampled RSS and bounded 4-hour acquisition/validation clock. Stream/index references, no extracted collection, alignment or community score. Existing model assets reused read-only; distinct native/GPU gates remain.",
+      "skin_acquisition_GCP_USD": 0,
+      "skin_payload_HEAD_bytes": 4605403023,
+      "Mac_E003_reference": {
+        "bp": 945152,
+        "seconds": 920.299,
+        "eligible_two_community_parent_bp": 1653470367,
+        "linear_same_Mac_parent_only_hours": 447.2199901531808,
+        "scope": "Rough planning extrapolation on the measured Mac; not E2 runtime, cloud price or schedule guarantee. Actual retained-view exposure can add extraction; do not reject family solely on this projection."
+      },
+      "future_paid_scope": "Full-community frozen extraction/training/collection is not currently admitted. Prepare actual CPU/GPU throughput, complete compatible environment/source/library/feature/view/cache gates, quotas, eligibility and a full allocation/RAM/peak-disk/export/cost envelope before a separate concrete owner approval. GPU suitability/Welcome-credit coverage is not assumed. No previous compute budget carries; no automatic resize/service or October 28 retention extension."
+    },
+    "missing_confirmation": [
+      "Publisher MD5/new SHA256 and duplicate-safe source-blind ID/reverse-source map",
+      "Actual sample/source/genome/replicon/molecule/circular aliases/host/taxonomy joins",
+      "Exact/near and pretrained/reference overlap; body-site difference is not unseen-genome independence",
+      "Full provided-reference/zero-origin denominators, competitive ambiguity and unique-versus-origin truth; remain provisional if unproved",
+      "One candidate/comparator/protocol and fixed metrics before confirmation scores; GSA has no assembly errors and no admitted contig-level depth",
+      "Separate explicit acquisition and later compute/cost/retention admission; original October 28 storage boundary applies"
+    ]
+  },
+  "local_review": {
+    "stage_wall_seconds": {
+      "verify-1.resources": 31.374923946001218,
+      "summarize-1.resources": 0.6129243570030667,
+      "contracts-1.resources": 2.6214393400005065,
+      "audit-1.resources": 46.55896274698898,
+      "ledger-1.resources": 4.1287418360006995,
+      "unit-oral-context-1.resources": 277.18422240999644,
+      "unit-E009-context-1.resources": 25.248349679997773
+    },
+    "peak_sampled_worker_RSS_bytes": 3931869184,
+    "elapsed_through_diagnostics_seconds": 630.9620380401611,
+    "extra_bytes_through_diagnostics": 2860309682,
+    "limits": "Original one-hour/4 threads/8GB sampledRSS/6GiB; stdlib download/metadata IO bounded by chunk sizes, numerical workers/coordinator sampled. No new environment, scientific retry, baseline score or cloud wake.",
+    "seal": {
+      "elapsed_original_seconds": 2138.735242128372,
+      "peak_sampled_RSS_bytes": 42078208,
+      "extra_peak_bytes": 2861420789,
+      "archive_bytes": 991824,
+      "members": 117
+    },
+    "closure": {
+      "UTC": "2026-10-23T17:49:03.630245+00:00",
+      "elapsed_original_seconds": 2189.499247074127,
+      "extra_review_bytes": 2861421891,
+      "free_local_bytes": 35924385792,
+      "clock_reset": false,
+      "scope": "All numerical diagnostics, records/checks and verified local seal before commit. Final git closure is appended separately; no further science/evaluation."
+    },
+    "closure_before_commit_UTC": "2026-10-23T17:50:40.057069+00:00",
+    "elapsed_through_final_checks_seconds": 2285.926022052765
+  },
+  "validation": {
+    "frozen_contract_tests": 25,
+    "summary_exact_rule_cases": 3,
+    "independent_targets": {
+      "status": "PASS",
+      "full_targets": 955,
+      "complete_denominators": true,
+      "arms": {
+        "E009-context": {
+          "cores": {
+            "sum_recovered_bp": 35701706,
+            "at_least_90": 6
+          },
+          "pre": {
+            "sum_recovered_bp": 41830143,
+            "at_least_90": 8
+          },
+          "old": {
+            "sum_recovered_bp": 43679860,
+            "at_least_90": 7
+          },
+          "post": {
+            "sum_recovered_bp": 41830143,
+            "at_least_90": 8
+          }
+        },
+        "oral-context": {
+          "cores": {
+            "sum_recovered_bp": 40828005,
+            "at_least_90": 7
+          },
+          "pre": {
+            "sum_recovered_bp": 45391772,
+            "at_least_90": 6
+          },
+          "old": {
+            "sum_recovered_bp": 75488647,
+            "at_least_90": 13
+          },
+          "post": {
+            "sum_recovered_bp": 118085866,
+            "at_least_90": 27
+          }
+        }
+      }
+    },
+    "isolated_owned_local_runtime": "PASS_OWNED_SOURCES_AND_ACTUAL_INVENTORY",
+    "docs": "PASS final: 89 maintained Markdown documents / 1270 local links / 85 present source fingerprints. Ten absent optional reference-cache files explicitly not verified.",
+    "source_and_whitespace": "PASS: all 76 frozen scientific source/config/protocol bindings unchanged, AST parses, git diff --check.",
+    "independent_closed_summary": "PASS: all 955 rows/full denominators/new-arm aggregates/deltas/known-shared and fixed-geometry claims.",
+    "AGENTS": "Reviewed, current; no durable governance change needed."
+  },
+  "preserved_failures": {
+    "original_Mac_allclose": "Unchanged and unresolved; no tolerance relaxation/native vector alteration",
+    "old_science_and_engineering": "All E009\u2013E020 failed journals and source freezes unchanged",
+    "inspection_metadata_path": "First stdlib metadata adapter failed locally on an incorrect experiment path before auth/API/download; source/log retained, corrected explicit path passed.",
+    "local_seal_monitor": "Attempt 1 was refused by the local sandbox process inventory (ps) before any child/archive was started. Retain null child/exit and failed monitor receipt; retry only this collection helper with host process-read permission inside the original clock. No scientific retry or weakened resource guard."
+  },
+  "authorization": {
+    "original_compute_USD": 1,
+    "retention_USD": 8,
+    "retention_end": "2026-10-28T00:00:00+01:00",
+    "VM_woken": false,
+    "scientific_replay": false,
+    "model_inference": false,
+    "baseline_rescore": false,
+    "new_DNA": false,
+    "cloud_write_or_private_backup": false,
+    "resource_service_permission_change": false,
+    "retention_extension": false,
+    "next_prompt": "Proposed new local implementation/explicit five-file acquisition; no community/paid execution implied."
+  },
+  "evidence": {
+    "artifacts/e020-context-information-integration/review-20261023/cache-contract-review.json": {
+      "bytes": 14293,
+      "sha256": "084d627506c92397a907f9e907da6fe2a53d6961eced07d428d9b3f56178a816"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/collection.json": {
+      "bytes": 349,
+      "sha256": "4bf75e808159481d30f70d3b8e2d7fdfce14fa96f726d6de88831ba8d67a2d46"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/completion.json": {
+      "bytes": 106485,
+      "sha256": "5004fd7310aa13c188ed22abd24e61cf84d79e3574c0355b168e09bce94c834f"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/download.json": {
+      "bytes": 288,
+      "sha256": "1ef35eacba79eb6c5d144da341e872d13c5ae9a44fefc4807596c661f013f6af"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/executed-owner-inspection-prompt.md": {
+      "bytes": 2334,
+      "sha256": "d306a3b93c249a89833848d4efde734a8ee78676d66cb224cfe461a3f6135ec2"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/export-admission.json": {
+      "bytes": 2657,
+      "sha256": "3b27b7a6f317139696ccfe552c21839952d4c61a1de5935e94d1bb9069c7c898"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/independent-summary-check.json": {
+      "bytes": 856,
+      "sha256": "0996a5b062d6035535419a74d7158313fa77d3160cd0eaabf2b8dfe6e5804705"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/local-runtime.json": {
+      "bytes": 7931,
+      "sha256": "ad7ec779a587fa68256052cb69bde33c920f138fef2b3d0d4aa438e37b386f8d"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/native-receipts-review.json": {
+      "bytes": 201602,
+      "sha256": "9533dc76e795842036444c6a3eeb79edb211ceb31262f6aaf0a9684c170f8e9e"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/owner-operations-entry.patch": {
+      "bytes": 2394,
+      "sha256": "c463fee81aaf3b219f32b19ea28df01705e03ebaa14aa68a083e97bd7ae710c1"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/private-metadata-attempt-1.log": {
+      "bytes": 1510,
+      "sha256": "866d17838501d111c43ce83a728705ea28a03e230889667d101035d4bc7ea5c4"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/read-private-metadata-attempt-1.py.txt": {
+      "bytes": 2096,
+      "sha256": "1ca79bdc2711620817eedc47d04b1680fffece1d1b67a161ccfbcc26200bf7e4"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/review-admission.json": {
+      "bytes": 406,
+      "sha256": "ce83e24f575b593ce401f4421c18c47b29668b36aef87e8eebad9a1424c3435e"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/review-clock.json": {
+      "bytes": 150,
+      "sha256": "4166862359044aacd570a86ce6e570d6efaa17007181e7aee85abaad40c32e8b"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/summary-contracts-pre-outcome.log": {
+      "bytes": 101,
+      "sha256": "199ba496f288116d36c62f29346d4fbf0bd75745a1c893abfcbdaa4c6d5b1033"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/watchdog-exit.json": {
+      "bytes": 4283,
+      "sha256": "530098000af3ebc902923ea258405af5dccc571ed00d888491979faf696ee12f"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/verified/inventory.json": {
+      "bytes": 363311,
+      "sha256": "46d09935666dd563ce04a5a176b5b2caf7ca144656901499a98cbceddba6b634"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/verified/verification.json": {
+      "bytes": 249,
+      "sha256": "ceb337bc561e2c04ddb44f15c9e2e602f86ee169b39950f6771b46349a640984"
+    },
+    "experiments/E020-context-information-integration/comparison-review.json": {
+      "bytes": 233871,
+      "sha256": "cdd5f2efd31ac07992080ea3b8faf69475a0be4c0309cf6940ae4475d42e2270"
+    },
+    "experiments/E020-context-information-integration/comparison-targets.tsv": {
+      "bytes": 65070,
+      "sha256": "31c2c736c7db35f682e2e51c65437593996c80956da8ee8a94928f955609df37"
+    },
+    "scripts/e020_summarize.py": {
+      "bytes": 10244,
+      "sha256": "8baf3c72ebf4a89606f26463b1a438bb6d53e5342dc82ab291a3bd3144f50e07"
+    },
+    "tests/test_e020_summary.py": {
+      "bytes": 1490,
+      "sha256": "92b11c5c89e8f485b0efed7f37a2cf14544d3b21fec11f8299400756315a9550"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/control-plane-final.log": {
+      "bytes": 1362,
+      "sha256": "c272d17ce44fe715f636af7cf5d424db97b2cf50e7d0c3f7e77ef34f6d1636c6"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/docs-check.log": {
+      "bytes": 728,
+      "sha256": "83bbc0fc8c36df5581012c40bfe8d351749ff8f297d212f2d02f81d39f5e2cbc"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/seal-1.log": {
+      "bytes": 96,
+      "sha256": "ce70974fa9d22c792b6bdae9c970675a22df327746032188af48e422770107fa"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/seal-1.resources.json": {
+      "bytes": 400,
+      "sha256": "17fd1311c3e45d19ecc4af01ef97cd2ef3cdf9163c60e1be2973bbbeace57363"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/seal-1.exit.json": {
+      "bytes": 774,
+      "sha256": "333c51e7415993c43b230019993afa96992fb52e6355e3493067df18aeaecac8"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/compact-review-local.json": {
+      "bytes": 562,
+      "sha256": "d1906c3790d55f9d3e6ce9729fe6170a743017895e82243713da82a7652bcd6f"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/compact-review.tar.gz.sha256": {
+      "bytes": 88,
+      "sha256": "6852346a83f6bbc414244a964d586ee831dde054109dc10ec802c5b5dfa29b83"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/seal-2.resources.json": {
+      "bytes": 1102,
+      "sha256": "53d9647abe5af069c6a62749e8cd7c29d1817acb5b8a1ed3ae9beee2bb806917"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/seal-2.exit.json": {
+      "bytes": 756,
+      "sha256": "fbc0f9fe51bfa913c2fbfe1a5c607d56daf97bb4de248f08c86b7f6e251625bf"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/final-local-check.json": {
+      "bytes": 312,
+      "sha256": "db8f8141b5e51f1ab0335abcf328e1a68d25ec06baf47cc6d5f3ee816b4c0458"
+    },
+    "artifacts/e020-context-information-integration/review-20261023/docs-check-final.log": {
+      "bytes": 728,
+      "sha256": "83bbc0fc8c36df5581012c40bfe8d351749ff8f297d212f2d02f81d39f5e2cbc"
+    }
+  },
+  "local_inspection_seal": {
+    "status": "PASS_LOCAL_SEAL_EVERY_MEMBER",
+    "UTC": "2026-10-23T17:48:12.455735+00:00",
+    "archive": {
+      "bytes": 991824,
+      "sha256": "1b05d6b85d4d42457a49a42390a69b01e4df010b2dc6dab403e6ee4dc0a3bd92"
+    },
+    "regular_payload_members": 117,
+    "logical_payload_bytes": 7603398,
+    "scope": "Closed snapshot before own seal receipt/final closure/commit. No DNA, credential, environment or cloud write.",
+    "private_upload": "Not performed; separate explicit approval would allow private append-only backup/readback before the unchanged retention boundary.",
+    "archive_path": "artifacts/e020-context-information-integration/review-20261023/compact-review.tar.gz",
+    "validation_scope": "Independently read every compact-seal payload against inspection-inventory.json inside its creation worker. It snapshots records before its own receipt, final closure and commit; the current receipt adds these closure fields afterward."
+  }
+}
