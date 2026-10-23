@@ -1,191 +1,203 @@
 # E019 operations
 
-**Authorized comparison RUNNING, not yet reviewed.** Phase `context-20261022T215123Z-b47b916`
-uses exact clean source `b47b9164e3cb2ce51ae46728b813dbbb8d4320ea` in a fresh
-isolated VM checkout. [Native receipt](native-observed.json) records the new $5,
-all ten passing Linux gates, full axes/bytes, native 20-epoch timing/reloads and
-fresh tested boot/process watcher. No completed community/quality result exists.
-E016 is the comparator; E017 original/MODIFY and E018 ABANDON remain preserved.
+**Completed, checksum-verified and independently reviewed: MODIFY the scoped
+context bundle. VM remains TERMINATED.** Phase `context-20261022T215123Z-b47b916`
+executed exact immutable source **b47b916**. The [inspection](inspection-observed.json),
+[comparison](comparison-review.json) and [all 955 targets](comparison-targets.tsv)
+own the result. All ten native gates, fourteen serial scientific rules plus final
+target, reuse-after, collection and every upload/readback passed. No wake or
+scientific replay occurred in inspection. [Native launch](native-observed.json)
+remains the original dated observation; its status is not silently rewritten.
 
-Prepared source/wheel/default/record locks remain scoped to immutable `b47b916`.
-Later administrative receipt/docs commits are not science-source replacements.
-The original approval prompt is retained at that commit; the exact prompt below
-now inspects this phase after exit. Do not sync a running checkout to later docs.
+## Verified outcome and scope
 
-## Executed launch and retained workflow
+| Full-reference weighted R95 | E016 pre / old / E013 | E019 pre / old / E013 |
+| --- | --- | --- |
+| E009 conservative v2 | 5.8219 / 5.8219 / 5.8219% | **7.3058 / 7.6044 / 7.3058%** |
+| Oral provided-origin oracle | 4.6429 / 5.0723 / 6.7719% | **5.4142 / 5.8185 / 6.5077%** |
 
-The [design](design.md) and [protocol](protocol.json) freeze one compact global/local
-composition encoder around the original real E014/E016 views. Native inputs and
-all original sample/contig rows are in [reuse-lock](reuse-lock.json); the
-[candidate lock](candidate-lock.json) binds complete source and the tested pure-
-Python dev7 wheel. `native-plan-template.json` has exact retained input paths and
-explicit launch-only placeholders for a fresh root, source checkout and package
-prefix. It is a template, not an executed plan or valid release.
+Original KEEP requires >=0.5 percentage-point post gains in both scopes and no
+>=90% target-count loss. It fails: E009 +1.4839 points / +8,230,769 bp / 4 -> 7
+>=90% targets; oral -0.2642 points / -5,503,488 bp / 34 -> 33. Original **MODIFY**
+applies, with no threshold change or dataset/bin/refiner oracle. E009 has 12 target
+gains / 12 losses; oral 37 / 34. Every full denominator/population remains.
 
-The actual new [worker](../../scripts/e019_control.py) and [DAG](Snakefile) execute
-seven stages per unit, with a serial unit barrier: tokens, train, exact embed,
-sole CPM, unchanged E013, pre/old/post export, independent graph proof; final target
-makes 15 jobs. The corrected zero-residual/preserved-predictor initialization starts exactly
-from E016 before learning context; initial concatenation and GC-stress failures
-remain in local evidence. The token builder consumes exact old crop coordinates/hashes;
-only the new bounded context counts are generated. No baseline fit, old feature/
-view rebuild, marker search on communities, truth input, new index policy, grid,
-automatic retry or fallback is available. Full DNA is physically emitted once
-(post); pre/old retain complete assignment/status/length/reason alternatives.
+Parent recovery improves in both scopes; oral old refinement also improves.
+E013 adds oral recovery 5.4142 -> 6.5077% (8 targets gain / none lose), but its
+lift is smaller than E016's. Thus the final oral loss is a bundle/downstream
+interaction, not destructive E013-versus-current-parent recovery or proof that
+absence of depth caused a defect. E009 old refinement adds a target trade-off,
+then E013 returns to parent R95; do not choose the old refiner just from its score.
 
-The [held parent](../../scripts/e019_phase.py), [bootstrap](../../scripts/e019_bootstrap.py),
-[runtime](../../scripts/e019_runtime.py), [reuse verifier](../../scripts/e019_reuse.py),
-[arm adapter](../../scripts/e019_arm.py), [native timing helper](../../scripts/e019_timing.py)
-are launched at the frozen source. The [collector](../../scripts/e019_collect.py)
-passes its real tiny/native contracts; community collection has not run yet.
-All ten native gates pass; execution and later inspection remain distinct. The parent and every setup/hash/fit/export/upload/readback share
-the original VM-start clock, with global disk growth carried across guards.
-Collector preflights its manifest-inclusive worst-case return before writing; it
-will not use an oversized fallback. Exact-byte reference aliases are tested.
-Failure-only collection explicitly preserves missing/nonidentical reload files
-as physical evidence, without claiming an alias or scientific success. The same
-return cap applies; corruption is never repaired by substituting another file.
+E009 native all-attributable 5-NN agreement falls 80.1221 -> 74.8933%; bacterial
+queries 72.6266 -> 70.9525%, while restricted B3 F1 rises 48.0493 -> 48.5636%.
+Oral 5-NN agreement rises slightly 17.8617 -> 18.0683% (bp weighted 20.6759 ->
+20.7688%); B3 F1 is effectively flat/slightly lower, 30.6818 -> 30.6625%. Do not
+substitute neighborhood gains for recovery or pool lineage populations.
+E009 post unassigned DNA rises 2.376 -> 2.944 Mb; oral falls 11.584 -> 10.026 Mb.
+All short/marker-negative/unknown/non-target/excluded/unassigned DNA and two original
+zero-bp oral rows remain accounted in the proper input/denominator records.
 
-The new [review adapter](../../scripts/e019_review.py) preserves the accepted
-E009-v2/oral evaluators, validates all three exports and adds actual token-
-manifest/native-consumption/inventory bindings. Token NPY files remain on VM:
-local review of their manifest is not an independent numeric reread or backup.
-No truth evaluator is run during setup or training. Baseline summaries are reused only.
-The review admission must explicitly attest completed workflow, independent
-TERMINATED, every archive/member byte and cost/retention before diagnostics.
+All 20 epoch/exposure/dropout/EMA/finite-state/noncollapse histories pass; native
+full-input reload is exact. Final online fused effective ranks 35.71 / 29.25.
+The original Mac cross-platform tolerance stays failed. No local neural forward,
+fit, new graph, marker scan or old score was performed. Token manifests and
+native full-reader consumption are bound to every omitted count/coordinate member;
+those NPY bytes and full emitted DNA remain on the stopped VM, not independently
+reread locally or backed up by hashes. Original source/weights/defaults and all
+failed local engineering/inspection journals stay intact.
 
-## Resource and cost boundary
+## Completion, cost, storage and return
 
-[The complete plan](resource-plan.json) uses the existing e2-standard-8 (8 allocated
-vCPU / 32 GiB), 300 GiB balanced work and 30 GiB standard boot disk. No resize,
-provisioning, GPU, premium image, new service or retention extension is proposed.
+Provider allocation: **October 22 21:51:19.424 -> October 23 00:40:57.754 UTC**,
+**October 22 23:51:19.424 -> October 23 02:40:57.754 Copenhagen**, **10,178.33 s /
+2.8273 hours / 22.6185 allocated vCPU-hours**. Science 9,448.36 s, sampled process
+CPU 29,458.86 s; sampled RSS peak **17.334 GB**. Global sampled work-disk growth
+**12.590 GiB**, minimum free **68.558 GiB**. All original limits pass. Matching
+boot/PID/start/command watcher requested shutdown at **00:39:02 UTC** after confirmed
+parent absence; provider TERMINATED is independently read. 29,700-second STOP/
+no restart remained the independent fallback. No new VM or recovery was needed.
 
-| Item | Frozen bound or forecast |
-| --- | --- |
-| New gross authorization | Owner approved $5; fresh maximum quote about $3.48 with reserve |
-| VM-start cumulative clock / provider STOP | 8 hours / 8.25 hours, STOP and no restart |
-| Numerical concurrency | Four threads, zero loader workers; serial scientific rules |
-| Sampled tree RSS | 26 GB ceiling; forecast 12–20 GB |
-| Working disk | 25 GiB free reserve, 20 GiB maximum global extra growth |
-| New indexed context bank | 6.421 GiB total for 89,041 + 508,763 eligible parents |
-| Peak coexistence | About 18.3 GiB: context + results + archive + separate readback + setup |
-| Expected allocation | Roughly 3–7 hours, not a timeout prediction |
-| Compressed return | 3 GiB hard cap, roughly 1–2 GiB expected |
-| Later local review | Four threads, 8 GB sampled RSS, one hour, 10 GiB extra; stage sequentially |
+Fresh current-SKU allocation quote: **$0.77199 compute/IP + $0.11856 run disks**;
+1,123,690,164-byte archive export upper **$0.12558**, subtotal **$1.01613**;
+**<$1.268 with metadata/operations reserve**, within original new $5. This is a
+measured-provider-interval/SKU estimate, not an invoice or credit-delta attribution.
+Run disk cost is an attribution within the separately approved storage interval,
+not a second disk bill. Further stopped hours still accrue at **$31.20/month**.
 
-Current Catalog-derived USD quote is $0.273046/hour compute/IP and
-$0.041935/hour disks, with no free allowances assumed. Maximum provider allocation
-is about $2.253 compute/IP plus $0.346 run disk attribution, up to $0.36 export,
-$0.02 small storage/operations and $0.50 uncertainty reserve. These are estimates,
-not an invoice; sampled CPU and credit changes are not charged uptime. Existing
-disks remain $31.20/month even when stopped. Their interval cost is also tracked
-under the separate storage approval, without double-counting two invoices.
+Fresh credit: **DKK 1,874.97 Available / 95%**, Certain usage / net pricing,
+January 12, 2027 expiry, paid account; Overview cost/savings DKK 92.22 / net zero.
+Pending usage can lag more than 24 hours; $35 reserve remains. Existing ordinary
+E2/PD/IPv4/private Iowa Standard/network/operations coverage and five localized
+Catalog SKUs pass. All versions **99 / 8,345,160,022 bytes**, zero soft-deleted.
+Whole approved storage interval forecast ~**$7.63 of $8**, ending **October 28 at
+00:00 Copenhagen**. No deletion, resource change or automatic retention renewal.
 
-The full two-mode Mac kernel extrapolation is about 4.9 hours before other stages,
-with different host/runtime and short-view distributions. Accepted E016 native
-timing provides context, not proof of speedup. Measure **both** actual Linux 20-epoch oligomer
-stability/reload/state kernels after package/source gates; 2x their parent/epoch projection plus 5,400
-seconds for token building, IO, grouping/refinement/export/collection must fit the
-remaining original eight hours before preparing either community bank. Refuse an
-unaffordable forecast; do not shrink DNA, schedule or extend automatically.
+Private return:
+`gs://dl-binner-archive-167650584170/e019/context-20261022T215123Z-b47b916/e019-evidence.tar.gz`
+SHA256 `859b32ce555b13e7b494cd1d42b2383b65bbcb9b5a655c75686e5b0c9611c950`.
+All **309 physical members / 2,078,927,328 logical archive bytes / two exact aliases**
+verify, plus private generation/MD5/SHA. Original work inventory 13,488 members /
+11,121,575,506 bytes; 13,353 omitted members / 8,885,548,294 bytes are explicitly
+on-disk only. Closed archive inventory/terminal sizes, not later open logs, own
+retention totals. Local review staging and failures remain under
+`artifacts/e019-window-context/review-20261023/`.
 
-Storage is separately approved only through **October 28 at 00:00 Copenhagen**.
-The 169-hour interval forecast including current listed versions, maximum new
-archive and reserve is about $7.63 of the approved $8. Fresh live credit/product/
-pending-usage/price/retention/headroom gates must pass at execution; the current
-read is not a future approval. STOP must precede both storage and credit expiry.
-No deletion or automatic renewal follows. Omitted full DNA, token NPY, original
-feature/view/marker caches and runnable prefixes are not backed up by hashes.
+The pre-collection `science-result.json` retains default status FAILED even after
+successful science because that frozen writer sets final SUCCESS only after
+collection. Its `science_completed=true`, two successful stages/no error and the
+final SUCCESS establish the actual transition. The journal is retained unchanged;
+its label must not be interpreted as a hidden scientific failure or rewritten.
+One failed local state audit counted BatchNorm buffers as parameters; the preserved
+reader/journal and repair use exact named parameter/buffer sets and strict state
+loads. No scientific tolerance/threshold/evidence was weakened.
 
-## Current supervision and inspection boundary
+## Strongest next recovery decision
 
-VM started October 22 at **21:51:19.424 UTC / 23:51:19.424 Copenhagen**.
-Original science/setup/collection clock ends October 23 at **05:51:19.424 UTC /
-07:51:19.424 Copenhagen**. Independent provider STOP is **06:06:19.424 UTC /
-08:06:19.424 Copenhagen**, no automatic restart. The watcher checks the exact
-current-boot/PID/start/command every 30 seconds and stops after confirmed exit.
-Its live/normal/crash tests pass. The parent survives chat/SSH disconnection.
+**One cached integration of fixed E019 learning with original E017 information-
+aware grouping, retaining E013 and every original E017 default.** This is the
+unmeasured combination of two coherent existing advances, not an E009 threshold
+series or assumption that gains add. E019 closes about 54.4% of the remaining
+E016-to-retained-MetaBAT2 E009 R95 gap; its oral parent/old recovery also improves.
+A cheap one-off interaction comparison can determine whether existing information
+and grouping combine before paying for a pretrained sequence prior. Original E017
+oral regression is a serious contrary observation; the new combination may fail.
+Both communities must use one policy, and E018 permissive acceptance stays abandoned.
 
-Native Python 3.12.10 complete 28-distribution inventory, 36 installed sources,
-resolved library bytes, CLI, 59 contracted retained members / 4,229,058,857 bytes,
-complete 145,702 / 1,286,547 contig axes, original views and ordered ten/zero depth
-columns all pass. Six context and five launcher contracts plus one real 15-job
-native tiny DAG pass. Both 1,024-parent 20-epoch engineering modes pass their
-unchanged collapse guards, exact reload and learned residual/attention states.
-Median steady epochs are 0.78625 s depth / 0.70157 s sequence. The unchanged 2x
-parent/epoch scaling plus 5,400 s reserve predicts **22,077.39 s / 6.13 hours**,
-within the remaining original clock. This is no guarantee of community stability.
+Frozen GLM/context/depth hybrid remains a serious broader architecture alternative;
+E003 did not test the current system or refute that family. Defer its extraction/
+new runtime/resource cost for this one decision-changing cached control. A larger
+Transformer or marker-aware training lacks a demonstrated capacity/safe-label
+contract. Do not start another profile/selector/resolution/loss grid. Keep skin
+admission/protocol planning alongside this next candidate milestone, without
+acquiring it or waiting for SOTA performance before broader validation.
 
-Original work-filesystem snapshot: **81.15 GiB free** before checkout/environment.
-Fresh paid credit shows **DKK 1,882.53 Available / 95%**, Certain usage / net
-pricing, expiry January 12, 2027. Overview costs/savings DKK 88.70, net zero;
-usage can lag over 24 hours, so $35 reserve remains. Fresh Catalog maximum quote
-**$3.4786** includes export/reserves; separate $8 storage forecast **$7.6313**
-still ends October 28 at 00:00 Copenhagen. Neither quote nor credit delta is an
-invoice. Existing stopped disks remain **$31.20/month**; no automatic renewal.
+Proposed separate **new $1**, no current execution authorization: existing VM/
+disks; **90-minute cumulative clock / 105-minute STOP**, four threads / 26 GB
+sampled RSS / 25 GiB reserve / 20 GiB extra / 2 GiB return. Original E017 science
+was 20.65 minutes / 9.35 GB sampled RSS; plan about 30–60 minutes allocation,
+9–14 GB sampled RSS and 5–10 GiB extra for this cache-only integration. Maximum
+current quote **~$0.9513** includes full provider allocation, disk attribution,
+maximum export and reserves. Actual byte/runtime/headroom/credit/product/retention
+and collector gates must pass; no old budget carries or new resource is assumed.
+The implementation is already byte-identical inside the E019 wheel for grouping,
+audit and E013; only a source-bound restore/plan adapter should be needed.
+No learning, feature/view/token rebuild, inference, marker detection or baseline
+rescore is justified. One new joint-core index is part of the declared grouping
+treatment; it is distinct from fixed E019 learned-neighbor geometry.
 
-Logs: `/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/logs/parent-terminal.log`,
-`logs/science.log` and `work/logs/{E009-context,oral-context}/` below that root.
-Guest attribute `e019-candidate/status`; private completion and watcher evidence
-under `gs://dl-binner-archive-167650584170/e019/context-20261022T215123Z-b47b916/`.
-A running stage is not completed science, delivered evidence or admitted quality.
-Latest retained observation, **22:00:35 UTC October 22 / 00:00:35 Copenhagen
-October 23**: E009 token stage complete and training epoch 3 complete, all 89,041
-parents / 432,664 available views each epoch, finite losses, all four online/
-teacher branch collapse checks pass. Watcher reports the exact process alive;
-80.14 GiB free and about 1.01 GiB global growth. This is real progress, not
-completed recovery evidence. Allocation then was 556.08 s, quote ~$0.04218
-compute/IP + ~$0.00648 run disks before final collection/export; final
-allocation/invoice remains pending.
-After verified shutdown use the prompt below.
-No missing-evidence wake, scientific replay or clock/budget/retention extension
-follows automatically. Assess collection-only recovery separately if necessary.
+Local frozen review passed 18 evaluator/launcher contracts plus four summary
+contracts (three exact-rule cases and one complete-inventory compaction case); numerical diagnostics/summary took 14.41 minutes and the full review
+through local sealing stayed within one hour. Peak sampled RSS 5.071 GB, extra review 3.024 GiB. The compact local seal is 6,943,466 bytes / 134 payload members, all verified;
+it excludes DNA/credentials/environments and is not yet privately uploaded.
 
 ## Exact following prompt
 
-Our goal is substantially closing the recovery gap. Read AGENTS.md, PROJECT_INTENT.md,
-STATE/CLOUD, D013/D015 and E019's frozen design/source
-review/protocol/criteria/candidate/reuse locks, native-observed.json and operations.
-Inspect phase `context-20261022T215123Z-b47b916` at original source
-`b47b9164e3cb2ce51ae46728b813dbbb8d4320ea` without starting another job. Preserve all
-accepted evidence and failed journals.
+The following is a **separate proposed $1 approval**. Nothing in the completed
+E019 inspection authorizes its execution. Invoke it only with that new approval:
 
-Verify control-plane state, `e019-candidate/status`, private completion.json and
-watchdog-exit.json under
-`gs://dl-binner-archive-167650584170/e019/context-20261022T215123Z-b47b916/`. Do not
-infer success from shutdown. If healthy and running, report real progress and leave
-supervision intact without polling to completion.
+Our goal is substantially closing the recovery gap through coherent upgrades and
+selective controls. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015,
+E019's reviewed comparison/inspection/protocol/operations and E017's original frozen
+information-aware grouping design, config, locks and review. Preserve immutable
+dev3/dev4/dev5/E016 and all accepted E009–E019 evidence, source freezes and failures.
+Use a new descriptive research branch without a codex/ prefix.
 
-After independently verified TERMINATED, establish all ten native-gate exits, all
-fourteen serial scientific stage exits plus the final target, reuse-after,
-collection/upload/readback and watcher evidence. Refresh credit/prices/storage and
-assess export/local staging against the remaining original new $5 and approved storage
-ending October 28 at 00:00 Copenhagen before downloading; no automatic wake, replay,
-extension or resource/retention change. Verify archive and every retained member/alias.
+Implement and locally test one restore-only E019-learning + original E017 grouping
+integration. Hold the exact E019 native unit vectors, full axes, original features,
+measured parent depth, marker cache, seed and E013 fixed. Apply every original E017
+core/retrieval/affinity/profile/vote/recruitment/default and sole CPM rule unchanged;
+do not use E018's abandoned permissive acceptance. A new joint-core index belongs
+to this declared grouping treatment, not retraining or a changed learned-neighbor
+metric. Preserve core/recruited/old/E013 partitions, cache/audit proofs and complete
+DNA. Test actual context-metadata/sparse/opaque-ID/readers, fixed interfaces, native
+geometry, marker/refiner/export and missing/corrupt payload refusal on tiny real
+fixtures. Source/policy/config/wheel/runtime freezes precede new community outcomes.
 
-Review exact source/schedule/full contig and ten-depth or zero-depth axes, original
-view/exposure/parent-depth semantics, token provenance/native consumption,
-online/stopped-teacher/predictor/EMA/collapse histories, exact native reload, unit
-geometry/neighbors, cached markers/fixed CPM/E013 choices and complete pre/old/post DNA.
-Omitted token NPY/full DNA remain on disk; hashes are not backups or a local numeric
-reread.
+Use one prospective two-community matched comparison against retained E019
+CPM/E013 results, reusing E016/E017 and older summaries without refitting/rescoring.
+Keep only if neither post full-reference R95 declines, at least one improves by
+>=0.005 absolute, neither >=90% target count falls and all contracts pass. Abandon
+if neither endpoint nor either >=90% count improves; otherwise modify, preserving
+this rule. No per-bin/community oracle, new threshold/family/K/resolution/grid,
+seed/schedule, another acceptance variant, model change or external binner.
 
-Only after complete admission, run the frozen bounded local new-output diagnostics
-against conservative E009 v2 and separately named oral provided-origin truth with full
-156/799 denominators, 3.3034% N quarantine, known-shared sensitivity and every
-length/origin/eligibility/marker/unknown/non-target/excluded/unassigned population.
-Reuse old E016 and older summaries without refitting/rescoring, preserve the failed Mac
-tolerance, and apply unchanged keep/modify/abandon without truth-selected routing or
-tuning.
+I authorize this single frozen cached comparison under a NEW $1 incremental gross
+ceiling, conditional on fresh live Welcome-credit balance/scope/expiry, delayed
+usage reserve, applicable SKU/coverage, source/runtime/headroom and original $8
+storage ending October 28 at 00:00 Copenhagen. Use only the existing e2-standard-8 /
+32 GiB / 300 GiB work disk, 90 cumulative minutes from VM start including all setup,
+verification/grouping/refinement/export/collection/upload/readback, 105-minute
+provider STOP/no restart, four numerical threads, 26 GB sampled tree RSS, 25 GiB
+free reserve, 20 GiB maximum global growth and 2 GiB compressed return. Quote
+complete coexistence/export/local review before release; stop before unclear or
+uncovered spending or extra resources/retention. No earlier budget carries over.
 
-Four threads, 8 GB sampled RSS, one hour and 10 GiB extra; stage sequentially. Price
-actual allocation, storage and export separately from sampled CPU or credit delta.
-Report paired pre/old/E013 and per-target effects, limits and at most one strongest next
-decision.
+Push the exact clean prepared branch from Mac; sync the VM read-only into a fresh
+isolated checkout. Verify and reuse the accepted E019 archive/cache/package/runtime,
+original data/marker/HMM bytes and full contig/ordered ten-depth or zero-depth axes;
+no recopy/reinstall fallback. Arm/test a fresh current-boot/PID/start/command
+held-parent exit watcher and independent provider STOP before release. Use one
+serial bounded launcher with persistent logs, actual progress and resource sampling.
+Debug recoverable operational errors with fresh failed journals and verified reuse
+inside the original clock/budget; never repeat accepted science or extend silently.
+Follow a short job through collection/shutdown; for a longer healthy job verify
+supervision/progress, wait a few minutes, then finish without polling to completion.
 
-Both communities remain development; skin remains frozen/unacquired pending its full
-source/genome/replicon/molecule/taxonomy/overlap/ambiguity/unique-versus-origin/full-denominator/protocol/cost/retention
-admission.
+After exit independently verify TERMINATED/completion/stage exits/watchdog/archive/
+every member/alias/cost before frozen bounded local new-output diagnostics. Reuse
+conservative E009 v2 and separately named oral provided-origin oracle, full 156/799
+reference denominators, 3.3034% N quarantine, known-shared sensitivity and all length/
+origin/native-eligibility/marker/unknown/non-target/excluded/unassigned populations.
+No local model inference, old rescore or tuning. Preserve original Mac portability
+failure and exact native vector bytes. Retain bundle/interaction/development limits;
+do not claim a product default or causal feature-family result.
 
-Update records, check and commit with structured what changed/why; give the exact next
-prompt and any separate authorization needed.
+No retraining, token/view/feature rebuild, marker search, reads/mapping/aligner,
+new DNA, external tool, new VM/resource/service or retention extension. Keep frozen
+skin unacquired pending actual sample/source/genome/replicon/molecule/taxonomy joins,
+exact/near and pretraining overlap, duplicate-safe full/zero-origin denominators,
+competitive ambiguity/unique-versus-origin truth, unchanged candidate/protocol and
+separate acquisition/compute/cost/retention admission. Update records/check/commit
+with structured what changed/why; report actual results/costs/limits, the single
+strongest next recovery decision and the exact following prompt.

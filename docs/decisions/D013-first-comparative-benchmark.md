@@ -1,6 +1,6 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E019](../../experiments/E019-window-context/native-observed.json) is executing its newly authorized $5 context comparison at frozen source b47b916 after all ten native gates. No completed quality result yet. E016 remains the comparator; E017 original/MODIFY and E018 ABANDON are preserved. Storage still ends October 28 at 00:00 Copenhagen.
+Current handoff: [E019 reviewed comparison](../../experiments/E019-window-context/comparison-review.json) is complete: MODIFY, E009 7.3058% /oral 6.5077% post R95. Recommend one separately approved cached E019-learning + original E017-grouping integration before a new pretrained-information route. E016/E017/E018 evidence remains immutable; storage still ends October 28 at 00:00 Copenhagen.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.
@@ -670,3 +670,43 @@ $8 storage forecast ~$7.63 through October 28 pass. Costs/quality await completi
 and independent evidence review; no final result from progress/shutdown alone.
 All earlier failures and source freezes remain. Skin and genuine oral depth stay
 separate/unacquired with their unchanged provenance/truth/cost admission needs.
+
+
+## E019 mixed recovery and one coherent integration next, October 23, 2026
+
+[Completed inspection](../../experiments/E019-window-context/inspection-observed.json)
+accepts all science/native/member/resource/learning/geometry/DNA contracts. The
+original joint criterion yields **MODIFY**: E009 post 5.8219 ->7.3058% (+8.231 Mb,
+>=90% targets 4 -> 7), oral origin post 6.7719 ->6.5077% (-5.503 Mb, 34 -> 33). Parent
+recovery improves in both scopes; oral old refinement improves too, but its E013
+lift is smaller. E009 neighborhoods worsen, oral slightly improve; neither is a
+whole-genome recovery proxy. Preserve all target/length/origin/unknown/non-target/
+marker/unassigned strata, original Mac tolerance and failed engineering/review
+journals. This is useful bundle evidence, not universal promotion or proof of a
+missing-depth, attention-only or destructive-refiner cause.
+
+Choose one cached E019-learning + **original E017** grouping integration with
+fixed E013/defaults. The new learning closes about 54.4% of the prior E016-to-MetaBAT2
+E009 gap, and the earlier grouping block improved that same endpoint under older
+learning. Their interaction is untested. A one-off cheap coherent combination can
+change which pipeline to retain, without a new threshold/selector/grid or claiming
+additive gains. E017's oral regression is serious contrary evidence, so both scopes
+must use the same frozen rule and no E018 permissive acceptance/per-bin oracle.
+Original grouping/audit/E013 source is already byte-identical in E019's package;
+prepare only a restore/schema/launcher contract, preserving science source freezes.
+
+A frozen GLM/context/depth hybrid remains a serious complementary architecture;
+E003's original failed criterion is no veto of the current family. Defer its new
+inference/cache/runtime cost for this one decision-changing integration. Larger
+Transformers/marker training lack a demonstrated capacity/safe-link case; do not
+add them automatically. This is a bounded interaction question, not a default
+return to many small feature tests. Skin admission/protocol should proceed at
+this coherent milestone before robustness/promotion, with no DNA acquisition now.
+
+[Operations](../../experiments/E019-window-context/OPERATIONS.md#exact-following-prompt)
+proposes a separate new $1 /90-minute cumulative /105-minute STOP on existing
+resources, four threads/26 GB/25 GiB reserve/20 GiB growth/2 GiB return, max quote
+~$0.952 with reserve and fresh financial/source/native/retention gates. It is not
+authorized by this inspection. Actual E019 subtotal ~$1.0162 /<$1.268 with reserve
+fits original $5; VM terminated. Separate $8 storage still ends October 28 at 00:00
+Copenhagen; no extension/deletion or old budget carries into the next comparison.

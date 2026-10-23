@@ -4,55 +4,66 @@ Updated: 2026-10-23. This is the single current handoff.
 
 ## Exact next step
 
-**E019 authorized two-community context comparison is RUNNING, not reviewed.**
-Phase `context-20261022T215123Z-b47b916`, exact clean science source **b47b916**,
-[receipt](../experiments/E019-window-context/native-observed.json),
-[operations / exact inspection prompt](../experiments/E019-window-context/OPERATIONS.md)
-and [frozen protocol](../experiments/E019-window-context/protocol.json) own this block.
-No completed quality or keep/modify/abandon claim yet. Preserve dev3/dev4/dev5/E016,
-all accepted E009–E019 evidence and all failed journals; E018 remains ABANDON.
+**E019 completed, privately returned and independently reviewed: MODIFY the scoped
+context bundle. VM TERMINATED.** [Comparison](../experiments/E019-window-context/comparison-review.json),
+[inspection](../experiments/E019-window-context/inspection-observed.json),
+[all 955 targets](../experiments/E019-window-context/comparison-targets.tsv) and
+[operations / exact new approval prompt](../experiments/E019-window-context/OPERATIONS.md)
+own phase `context-20261022T215123Z-b47b916`, immutable science source **b47b916**.
+All ten native gates, fourteen serial science rules plus final target, reuse-after,
+collection/upload/readback and all 309 archive members/two exact aliases pass.
+No VM wake, science replay, inference, old score or new data in inspection.
 
-All ten native gates pass: exact retained bytes/full contig/ordered ten or zero
-depth axes, independent new package prefix with accepted numerical dependencies
-read-only, complete Python 3.12.10 inventory/import/source/library/CLI, real token/
-attention/gradient/EMA/reload/marker/CPM/E013/export/collection/15-job tiny DAG, both
-20-epoch full-width engineering stability/reload/state and affordability. Native
-steady epochs 0.78625 / 0.70157 s predict 6.13 hours with the frozen 2x + 5,400 s
-reserve, fitting the original clock; this does not prove community performance.
-Old Mac portability and initial context/GC failures remain failed and preserved.
+| Full-reference weighted R95 | E016 pre / old / E013 | E019 pre / old / E013 |
+| --- | --- | --- |
+| E009 conservative v2 | 5.8219 / 5.8219 / 5.8219% | **7.3058 / 7.6044 / 7.3058%** |
+| Oral provided-origin oracle | 4.6429 / 5.0723 / 6.7719% | **5.4142 / 5.8185 / 6.5077%** |
 
-New **$5**, existing 8 vCPU / 32 GiB / 300 GiB work + 30 GiB boot only; four threads,
-26 GB sampled RSS, 25 GiB free reserve, 20 GiB global growth and 3 GiB return.
-Start October 22 **23:51:19 Copenhagen**; original eight-hour deadline October 23
-**07:51:19**, independent 8.25-hour STOP **08:06:19**, no restart. Fresh current-
-boot/PID/start/command held-parent watcher is armed and tested live/normal/crash.
-Latest observation 22:00 UTC October 22 / 00:00 Copenhagen October 23: E009 tokens
-completed and epoch 3
-processed all 89,041 eligible parents; finite loss and all collapse checks pass,
-watcher alive, 80.14 GiB free / about 1.01 GiB global growth. Logs are under the
-receipt's root; longer run is left supervised after this few-minute verification,
-not polled to completion.
+E009 gains 8,230,769 recovered bp, >=90% targets 4 -> 7; oral loses 5,503,488 bp,
+>=90% 34 -> 33. Original joint KEEP fails; MODIFY remains unchanged. E009 12 target
+gains/12 losses, oral 37/34. Parent recovery improves in both scopes; E013 adds oral
+recovery but less than it did for E016. This is not proof of destructive current
+refinement or a missing-depth cause. E009 neighborhoods worsen while restricted B3
+F1 improves slightly; oral neighborhoods improve slightly with near-flat B3 F1.
+No metric/length/lineage trade-off is hidden, no per-community/refiner oracle chosen.
+Full 156/799 denominators, N quarantine and all populations remain. Both communities
+are development; old portability/GC/initial context and failed review journals stay.
 
-Fresh credit **DKK 1,882.53 Available / 95%**, January 12, 2027 expiry, paid account;
-delayed usage unknown with $35 reserve. Applicable ordinary products/price/coverage,
-private storage/versions and original retention pass. New run maximum quote
-**~$3.48** with export/reserves; final allocation/sample CPU/storage/export remain
-separate and pending. Separate storage forecast **~$7.63 of $8** still ends
-**October 28 at 00:00 Copenhagen**. Existing stopped disks cost **$31.20/month**.
-No provisioning/resize/service/retention change, baseline refit/rescore, external
-tool, reads/mapping, new data or confirmation acquisition occurs.
+**Next recommend one cached integration of fixed E019 learning with original E017
+information-aware grouping and fixed E013**, every original default unchanged.
+This tests whether existing coherent learning/grouping advances combine before a
+much costlier GLM hybrid. Gains need not add; E017's prior oral regression is the
+main contrary evidence. No E018 permissive policy, new selector/loss/resolution grid
+or new model is proposed. GLM remains a serious complementary information route;
+capacity or safe marker-training labels are not shown to be the bottleneck.
+The [next prompt](../experiments/E019-window-context/OPERATIONS.md#exact-following-prompt)
+proposes a **separate new $1** with local preparation/source freeze and one conditional
+cached comparison: existing VM/disks only, 90-minute cumulative /105-minute STOP,
+four threads/26 GB/25 GiB reserve/20 GiB growth/2 GiB return; current maximum quote
+~$0.952 with reserves. It is not authorized by completed E019's $5.
 
-After independently verified shutdown, verify actual exits/private completion/
-watcher/archive/every member and remaining $5 before frozen bounded local new-output
-diagnostics. Do not infer success from STOP or wake/replay automatically for missing
-evidence. One hour / four threads / 8 GB sampled RSS / 10 GiB extra; stage sequentially.
-Preserve full 156/799 reference denominators, 3.3034% N quarantine, separately named
-oral origin oracle/known-shared sensitivity and every length/origin/eligibility/
-marker/unknown/non-target/excluded/unassigned population. Omitted token NPY/full
-DNA remain on disk; inventory hashes are not backups or a local numeric reread.
-Skin stays frozen/unacquired pending full source/truth/overlap/protocol and separate
-cost/retention admission; genuine oral depth is also separate. No product/default,
-causal attention or generalization claim from these two development communities.
+Actual E019 allocation **2.8273 h**, science **2.6245 h /17.334 GB sampled RSS**,
+global growth **12.590 GiB**, minimum free **68.558 GiB**. Matching watchdog requested
+shutdown; independent provider stop **02:40:57.754 Copenhagen October 23**. New $5
+cost attribution **~$1.0162 /<$1.268 with reserve** includes measured allocation/run
+disks/export; not sampled CPU, invoice or credit delta. Fresh credit **DKK 1,874.97
+Available /95%**, January 12 expiry, pending usage reserved. Existing disks still
+cost **$31.20/month**; separate $8 storage forecast ~**$7.63**, ending **October 28 at
+00:00 Copenhagen**. No automatic renewal, deletion, new resource or retention change.
+Return 1,123,690,164 bytes /2,078,927,328 logical archive bytes; omitted native token
+NPY/full DNA remain on disk, not reread locally or backed up by their hashes.
+
+Keep skin frozen/unacquired pending actual sample/source/genome/replicon/molecule/
+taxonomy joins, exact/near and pretraining overlap, duplicate-safe full/zero-origin
+denominators, competitive ambiguity/unique-versus-origin truth, unchanged candidate/
+protocol and separate acquisition/compute/cost/retention. Admit broader data at the
+next coherent candidate milestone before promotion; do not wait indefinitely for
+competitiveness. Genuine oral GSA depth remains a separate read/mapping cost scope.
+
+Local frozen review passed 18 evaluator/launcher contracts plus four summary
+contracts (three exact-rule cases and one complete-inventory compaction case); numerical diagnostics/summary took 14.41 minutes and the full review
+through local sealing stayed within one hour. Peak sampled RSS 5.071 GB, extra review 3.024 GiB. The compact local seal is 6,943,466 bytes / 134 payload members, all verified;
+it excludes DNA/credentials/environments and is not yet privately uploaded.
 
 ## Preserved E018 result and reason for E019
 

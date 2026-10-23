@@ -1,0 +1,70 @@
+{
+  "operation": "audit",
+  "status": "FAILED",
+  "attempt": 1,
+  "error": "RuntimeError: Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/audit-1.log\nTraceback (most recent call last):\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/review-stage.py\", line 37, in <module>\n    elif a.operation in ['summarize','seal','audit']:exec(compile((root/(a.operation+'.py')).read_text(),str(root/(a.operation+'.py')),'exec'))\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/audit.py\", line 33, in <module>\n    state=saved[key];assert all(torch.isfinite(t).all()for t in state.values());assert sum(t.numel()for t in state.values())==r[count]\nAssertionError\n\nDLBINNER exit_code=1 stop_reason=None\n",
+  "elapsed_original_seconds": 333.54594802856445,
+  "extra_local_peak_bytes": 3214685749,
+  "samples": [
+    {
+      "epoch": 1792745236.67773,
+      "extra_review_bytes": 3214681182,
+      "free_bytes": 39847383040
+    },
+    {
+      "epoch": 1792745237.6920152,
+      "extra_review_bytes": 3214681479,
+      "free_bytes": 39847370752
+    },
+    {
+      "epoch": 1792745238.7059789,
+      "extra_review_bytes": 3214681813,
+      "free_bytes": 39847358464
+    },
+    {
+      "epoch": 1792745239.720947,
+      "extra_review_bytes": 3214682094,
+      "free_bytes": 39847354368
+    },
+    {
+      "epoch": 1792745240.7374039,
+      "extra_review_bytes": 3214682358,
+      "free_bytes": 39847526400
+    },
+    {
+      "epoch": 1792745241.760152,
+      "extra_review_bytes": 3214682622,
+      "free_bytes": 39847370752
+    },
+    {
+      "epoch": 1792745242.775993,
+      "extra_review_bytes": 3214682953,
+      "free_bytes": 39847530496
+    },
+    {
+      "epoch": 1792745243.790014,
+      "extra_review_bytes": 3214683230,
+      "free_bytes": 39847510016
+    },
+    {
+      "epoch": 1792745244.8080819,
+      "extra_review_bytes": 3214683493,
+      "free_bytes": 39847505920
+    },
+    {
+      "epoch": 1792745245.877942,
+      "extra_review_bytes": 3214683745,
+      "free_bytes": 39847768064
+    },
+    {
+      "epoch": 1792745246.900846,
+      "extra_review_bytes": 3214683998,
+      "free_bytes": 39848460288
+    },
+    {
+      "epoch": 1792745247.9198358,
+      "extra_review_bytes": 3214684899,
+      "free_bytes": 39848300544
+    }
+  ]
+}

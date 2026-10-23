@@ -1,0 +1,7 @@
+{
+  "status": "LOCAL_REVIEWER_ERROR_REPAIRED",
+  "reason": "Initial state counter incorrectly counted predictor BatchNorm running statistics as trainable parameters. Exact named_parameters/named_buffers and strict module state load now establish both sets; no tolerance, source or artifact changed.",
+  "failed_source": "audit-attempt-1.py.txt",
+  "science_repeated": false,
+  "guards_unchanged": true
+}

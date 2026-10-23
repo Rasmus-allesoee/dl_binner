@@ -4,40 +4,44 @@ Updated: 2026-10-23 (Copenhagen; initial provisioning receipts are October 13 UT
 [D014](decisions/D014-google-cloud-workspace.md) owns provider choice;
 [STATE](STATE.md) owns the next action; this guide owns access, costs and retention.
 
-**E019 authorized comparison is RUNNING; no completed quality result.**
-[Native receipt](../experiments/E019-window-context/native-observed.json) and
-[operations](../experiments/E019-window-context/OPERATIONS.md) own phase `context-20261022T215123Z-b47b916`
-at exact source b47b916. Existing machine/disks only; normal Mac push + isolated
-read-only VM fetch/worktree, unchanged original checkout. All ten Linux gates,
-complete source/runtime/input/axes and two full 20-epoch engineering fits/reloads/
-affordability pass before community release October 22 at **21:56:19 UTC /
-23:56:19 Copenhagen**. Frozen 2x projection plus 5,400 s reserve is 6.13 hours.
+**E019 completed/returned/reviewed; VM TERMINATED. Scoped scientific outcome MODIFY.**
+[Inspection](../experiments/E019-window-context/inspection-observed.json) records
+all ten native gates/fourteen serial science rules+target/reuse-after/collection/
+upload/readback, source b47b916, all 309 members/two aliases and frozen diagnostics.
+No wake, scientific replay, inference/old score, new data or resource/retention
+change occurred during inspection. [Operations](../experiments/E019-window-context/OPERATIONS.md)
+contains the separately proposed $1 cached integration, not current authorization.
 
-Original start **21:51:19.424 UTC / 23:51:19.424 Copenhagen October 22**;
-eight-hour clock ends **05:51:19.424 UTC / 07:51:19.424 Copenhagen October 23**.
-Provider STOP **06:06:19.424 UTC / 08:06:19.424 Copenhagen October 23**, verified
-29,700 seconds, STOP/no restart. Fresh boot/process-bound held-parent watcher
-passes live/normal/crash tests and remains active. Reserve 25 GiB / maximum
-20 GiB global growth; original guest free 81.15 GiB. Four threads / 26 GB sampled
-RSS / 3 GiB return. No new resource, resize, service or retention extension.
+Measured allocation **October 22 21:51:19.424 -> October 23 00:40:57.754 UTC**
+(**23:51:19.424 -> 02:40:57.754 Copenhagen**), **10,178.33 s / 2.8273 hours** on the
+same 8 vCPU / 32 GiB / 300 GiB work + 30 GiB boot. Science 9,448.36 s, sampled process
+CPU 29,458.86 s, sampled RSS peak **17.334 GB**, allocation **22.6185 vCPU-hours**.
+Global peak growth **12.590 GiB**, minimum free **68.558 GiB**. Matching boot/PID/
+start/command watcher confirms parent exit and requests shutdown at 00:39:02 UTC;
+independent provider TERMINATED confirms the stop. 29,700-second STOP/no restart
+remains a fallback. No new resource/service, recovery or retention extension.
 
-Fresh Credits/Overview: **DKK 1,882.53 Available / 95%**, Certain usage / net pricing,
-January 12, 2027 expiry, paid account; costs/savings DKK 88.70, net zero. Latency
-may exceed 24 hours, pending usage unknown, $35 reserve retained. Existing E2/PD/
-IPv4/private Iowa Standard/network/operations are ordinary eligible products;
-[official coverage](https://docs.cloud.google.com/free/docs/free-cloud-features)
-and [storage/network pricing](https://cloud.google.com/storage/pricing?hl=en)
-refreshed alongside five localized Catalog SKUs. New **$5** maximum quote **$3.4786**
-with export/reserves; final measured allocation/costs are pending, not credit delta.
-Stopped disks still cost **$31.20/month**. 94 versions / 7,214,743,636 bytes, zero
-soft-deleted; approved **$8** whole-interval forecast with maximum new archive
-**$7.6313**, ending **October 28 at 00:00 Copenhagen**. No automatic renewal/deletion.
+Fresh five Catalog SKUs/coverage and paid billing pass; credit **DKK 1,874.97
+Available / 95%**, Certain usage/net pricing, expires January 12, 2027. October 1–23
+Overview costs/savings DKK 92.22, net zero; >24-hour usage lag remains unknown with
+$35 reserve, not an invoice. Current measured-uptime quote **$0.77199 compute/IP +
+$0.11856 run disks + $0.12558 archive export**, subtotal **$1.01613 / <$1.268 with
+metadata/operations reserve**, within original new $5. No credit-delta attribution;
+run disk is part of separate storage interval, not a second disk invoice.
 
-The earlier [E018 compact inspection backup](../experiments/E018-vote-led-recruitment/inspection-backup.json)
-is complete/all 200 payload members/private readback verified; not repeated now.
-No old fit/score/cache rebuild, external tool or confirmation acquisition occurs.
-After exit independently establish TERMINATED/completion/stages/archive/members
-and export affordability before bounded local diagnostics; no automatic wake.
+Private archive **1,123,690,164 bytes**, SHA256
+`859b32ce555b13e7b494cd1d42b2383b65bbcb9b5a655c75686e5b0c9611c950`,
+309 physical members / 2,078,927,328 logical bytes / all members and two exact aliases
+pass. Token NPY/full FASTAs remain natively retained, not backed up by hashes.
+99 listed versions/8,345,160,022 bytes, zero soft-deleted. Separate approved $8
+169-hour storage forecast ~**$7.63**, ending **October 28 at 00:00 Copenhagen**;
+existing stopped disks **$31.20/month**. No automatic renewal/deletion. The E019
+compact local inspection seal is separate from native return and private upload
+is not implied. E018 inspection backup remains already verified, not repeated.
+
+Fresh official coverage/prices: [Free Trial terms](https://docs.cloud.google.com/free/docs/free-cloud-features),
+[storage/network pricing](https://cloud.google.com/storage/pricing?hl=en), plus
+read-only account-local Catalog/credit observations in the inspection receipt.
 
 The following E018 execution/cost snapshot is **dated completed history**, not
 a new current authorization. Its old credit balance is retained as observed.

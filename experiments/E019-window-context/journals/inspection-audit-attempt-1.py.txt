@@ -1,0 +1,44 @@
+"""Audit saved E019 exposure/EMA/context/finite tensor state; never infer or train."""
+import json,math,hashlib
+from pathlib import Path
+import torch
+repo=Path.cwd();root=Path(__file__).absolute().parent;v=root/'verified'
+def read(p):return json.loads(Path(p).read_text())
+def bind(p):
+ b=Path(p).read_bytes();return dict(bytes=len(b),sha256=hashlib.sha256(b).hexdigest())
+torch.set_num_threads(4);torch.set_num_interop_threads(1)
+summary=read(repo/'experiments/E016-positive-only-multiview/comparison-review.json');reuse=read(repo/'experiments/E019-window-context/reuse-lock.json');result={}
+for unit,oldunit in [('E009-context','E009-positive'),('oral-context','oral-positive')]:
+ p=v/'work/units'/unit;r=read(p/'train/checkpoint.json');oldpath=repo/'artifacts/e016-positive-only-multiview/review-20261020'/('diagnostics-'+oldunit)/'review.json'
+ assert bind(oldpath)==summary['evidence'][str(oldpath.relative_to(repo))];b=read(oldpath)['checkpoint']
+ for k in ['transform','samples','training_features_sha256','training_views_sha256','training_parents','threads','loader_workers','positive_parents']:assert r[k]==b[k],k
+ assert {k:value for k,value in r['config'].items()if k!='context'}==b['config']
+ keys=['epoch','parents_seen','available_views','depth_dropped_views'];assert [{k:h[k]for k in keys}for h in r['history']]==[{k:h[k]for k in keys}for h in b['history']]
+ assert r['initial_geometry']['online']==r['initial_geometry']['target'];assert r['initial_geometry']==read(p/'train/initial-geometry.json')
+ per_epoch=math.ceil(r['training_parents']/256);steps=20*per_epoch
+ assert r['ema_updates']==steps
+ for h in r['history']:
+  assert h['ema_updates']==per_epoch*h['epoch'];last=h['ema_updates']-1;assert h['last_tau']==1-(1-.996)*(1+math.cos(math.pi*last/steps))/2
+  assert h['geometry']==read(p/'train'/('geometry-'+str(h['epoch']).zfill(2)+'.json'))
+  assert all(math.isfinite(h[k])for k in ['loss','fused_positive','sequence_positive','composition_reconstruction','depth_reconstruction'])
+  assert abs(h['loss']-(h['fused_positive']+.5*h['sequence_positive']+h['composition_reconstruction']+.1*h['depth_reconstruction']))<1e-5
+  for model in ['online','target']:
+   for head in ['fused','sequence']:
+    q=h['geometry'][model][head];assert q['rows']==8192 and not q['catastrophic_collapse']and q['mean_dimension_std']>=.001 and q['effective_rank']>=2
+ assert read(p/'refine/completed.json')['marker_cache_sha256']==reuse['files'][reuse['units'][unit]['marker_cache']+'/cache.json']['sha256']
+ saved=torch.load(p/'train/checkpoint.pt',weights_only=True,map_location='cpu');assert saved['kind']=='context_checkpoint'and saved['config']==r['config']and saved['ema_updates']==steps
+ for k in ['transform','samples','training_features_sha256','training_views_sha256','training_tokens_sha256']:assert saved[k]==r[k]
+ stats={}
+ for kind,key,count in [('online','model_state','parameter_count'),('target','target_state','teacher_parameter_count'),('predictor','predictor_state','predictor_parameter_count')]:
+  state=saved[key];assert all(torch.isfinite(t).all()for t in state.values());assert sum(t.numel()for t in state.values())==r[count]
+  stats[kind]=dict(tensors=len(state),parameters=r[count],finite=True)
+ assert saved['model_state'].keys()==saved['target_state'].keys()
+ state=saved['optimizer_state'];ids=[i for g in state['param_groups']for i in g['params']];assert len(ids)==len(set(ids))==len(saved['model_state'])+len(saved['predictor_state'])
+ assert set(state['state'])==set(ids)
+ for record in state['state'].values():
+  assert float(record['step'])==steps and all(torch.isfinite(value).all()for value in record.values()if isinstance(value,torch.Tensor))
+ residual={kind:float(saved[key]['context_projection.weight'].norm())for kind,key in [('online','model_state'),('target','target_state')]};assert all(x>0 for x in residual.values())
+ delta=math.sqrt(sum(float((saved['model_state'][k]-saved['target_state'][k]).double().square().sum())for k in saved['model_state']));assert delta>0
+ result[unit]=dict(status='PASS',all20_parent_view_dropout_exposures_identical_to_E016=True,transform_and_measured_parent_depth_unchanged=True,original_local_views_numeric_reread=False,original_views_basis='Hash-bound original bank verified before/after natively, same source algorithm, complete emitted exposure/dropout history agrees with accepted E016. No local original bank recopy.',EMA_updates=steps,EMA_cosine_counts_and_losses_verified=True,geometry_epochs=20,initial_online_target_equal=True,last_geometry=r['history'][-1]['geometry'],finite_saved_states=stats,finite_optimizer_online_predictor_steps_verified=True,learned_residual_norm=residual,online_target_L2_delta=delta,cached_marker_bytes_match=True,teacher_gradient_basis='Executed source requires requires_grad(False), eval/no_grad, target-gradient refusal and online+predictor-only optimizer. Actual native gradient/EMA contracts pass; historical individual gradients/EMA tensor trajectory are not fully retained.',reload_basis='Strict native all-module reload and exact full-axis inference alias; no local forward, inference, fit, grouping or marker detection.',initial_tensor_limit='No full community initial tensor snapshot; use source/native initialization contract. Nonzero residual proves movement from source-declared zero initialization; no isolated causal attention claim.')
+ del saved
+(root/'learning-receipts-review.json').write_text(json.dumps(dict(status='PASS',units=result),indent=2)+'\n');print('LEARNING_CONTEXT_STATE_AUDIT_PASS',list(result),flush=True)

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/review-stage.py", line 37, in <module>
+    elif a.operation in ['summarize','seal','audit']:exec(compile((root/(a.operation+'.py')).read_text(),str(root/(a.operation+'.py')),'exec'))
+  File "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/audit.py", line 33, in <module>
+    state=saved[key];assert all(torch.isfinite(t).all()for t in state.values());assert sum(t.numel()for t in state.values())==r[count]
+AssertionError
+
+DLBINNER exit_code=1 stop_reason=None

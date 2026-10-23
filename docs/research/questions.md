@@ -552,3 +552,14 @@ E019 execution update, October 22, 2026: the coherent context question above now
 has one newly authorized comparison [released after all ten native gates](../../experiments/E019-window-context/native-observed.json).
 No community result yet. Keep the original hypothesis/criteria and E016 comparator;
 no score-driven tuning, confirmation or product-family decision follows.
+
+
+E019 inspected resolution, October 23, 2026: [the frozen comparison](../../experiments/E019-window-context/comparison-review.json)
+is MODIFY. Local/global context improves conservative E009 R95 (5.8219 ->7.3058%)
+and parent recovery in both scopes, but oral final origin R95 declines (6.7719 ->
+6.5077%). Keep all trade-offs and development/portability/truth limits. The next
+question is one fixed-learning integration with original E017 grouping/E013, not
+additive gain assumed from two partial results, a threshold grid or an automatic
+larger model. New proposed $1 requires separate authorization/fresh gates. Skin
+remains frozen/unacquired pending source/truth/overlap/protocol/cost admission;
+October 28 storage boundary remains.

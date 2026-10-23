@@ -1,0 +1,1012 @@
+{
+  "record": "E019 stopped completion and frozen diagnostic inspection",
+  "status": "COMPLETED_VERIFIED; MODIFY_SCOPED_CONTEXT_BUNDLE",
+  "inspected_UTC": "2026-10-23T09:07:04.899078+00:00",
+  "phase": "context-20261022T215123Z-b47b916",
+  "source_commit": "b47b9164e3cb2ce51ae46728b813dbbb8d4320ea",
+  "native_release_receipt": {
+    "bytes": 46765,
+    "sha256": "f7189c7834715a12e07abc106c8a58cc5e7fc60eba4e53a1296b0b52c565bf3b"
+  },
+  "comparison": {
+    "bytes": 251373,
+    "sha256": "e80043238e97659228748ba7f55487fe1f0eac64af89d87c08e69e3df2536589"
+  },
+  "provider": {
+    "name": "dl-binner-cpu",
+    "status": "TERMINATED",
+    "machineType": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/machineTypes/e2-standard-8",
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "29700"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "lastStartTimestamp": "2026-10-22T14:51:19.424-07:00",
+    "lastStopTimestamp": "2026-10-22T17:40:57.754-07:00"
+  },
+  "guest": [
+    {
+      "key": "status",
+      "namespace": "e019-candidate",
+      "value": "{\"status\": \"SUCCESS\", \"science_completed\": true, \"private_readback_verified\": true, \"root\": \"/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916\", \"source\": \"b47b9164e3cb2ce51ae46728b813dbbb8d4320ea\", \"completion\": {\"bytes\": 3754341, \"sha256\": \"230e8e596e402b5cc1650997abea659b550fda78f112a13acf75e2dcb58167d6\"}, \"epoch\": 1792715869.5201347}"
+    }
+  ],
+  "completion": {
+    "status": "SUCCESS",
+    "science_completed": true,
+    "source": "b47b9164e3cb2ce51ae46728b813dbbb8d4320ea",
+    "private_readback_verified": true,
+    "elapsed_since_VM_start_seconds": 9987.977401971817,
+    "stage_exits": [
+      {
+        "name": "science",
+        "exit_code": 0,
+        "wall_seconds": 9448.360261511
+      },
+      {
+        "name": "reuse-after",
+        "exit_code": 0,
+        "wall_seconds": 8.486738989000514
+      },
+      {
+        "name": "collection",
+        "exit_code": 0,
+        "wall_seconds": 184.65722342200024
+      },
+      {
+        "name": "upload-e019-evidence.tar.gz",
+        "exit_code": 0,
+        "wall_seconds": 28.25945298699844
+      },
+      {
+        "name": "readback-e019-evidence.tar.gz",
+        "exit_code": 0,
+        "wall_seconds": 7.747470330999931
+      },
+      {
+        "name": "upload-e019-evidence.tar.gz.sha256",
+        "exit_code": 0,
+        "wall_seconds": 2.0136513540001033
+      },
+      {
+        "name": "readback-e019-evidence.tar.gz.sha256",
+        "exit_code": 0,
+        "wall_seconds": 1.779159626999899
+      },
+      {
+        "name": "upload-collection.json",
+        "exit_code": 0,
+        "wall_seconds": 1.995619514998907
+      },
+      {
+        "name": "readback-collection.json",
+        "exit_code": 0,
+        "wall_seconds": 1.7675675499995123
+      }
+    ],
+    "binding": {
+      "bytes": 3754341,
+      "sha256": "230e8e596e402b5cc1650997abea659b550fda78f112a13acf75e2dcb58167d6"
+    },
+    "guest_hash_agrees": true
+  },
+  "watchdog": {
+    "action": "clean guest shutdown requested; no retry or deletion",
+    "boot_id": "1a2bc0cb-056e-431e-aaa3-4e41398be1b1",
+    "checked_utc": "2026-10-23T00:39:02.350829+00:00",
+    "decision": "workflow exited",
+    "expected_process": {
+      "command_sha256": "cf49bfe5410665ab2df34f1d44904556efeaacdb013b08b7ba6d5fc9e78ac12f",
+      "pid": 1382,
+      "start_ticks": 3151
+    },
+    "first_missing_monotonic": 9989.988165011,
+    "missing_seconds": 62.002574178999566,
+    "observed_process": null,
+    "shutdown": true,
+    "snapshot": {
+      "attempts": {},
+      "log_tails": {
+        "upload-e019-evidence.tar.gz.sha256.log": "Copying file:///srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/return/e019-evidence.tar.gz.sha256 to gs://dl-binner-archive-167650584170/e019/context-20261022T215123Z-b47b916/e019-evidence.tar.gz.sha256\n  \n.\n\nDLBINNER exit_code=0 stop_reason=None\n",
+        "watchdog-native-tests.log": "test_live_exit_grace_pid_reuse_zombie_and_boot (test_e009_exit_watchdog.WatchdogTests.test_live_exit_grace_pid_reuse_zombie_and_boot) ... ok\ntest_real_native_success_and_crash_without_powering_off_host (test_e009_exit_watchdog.WatchdogTests.test_real_native_success_and_crash_without_powering_off_host) ... {\"boot_id\": \"1a2bc0cb-056e-431e-aaa3-4e41398be1b1\", \"checked_utc\": \"2026-10-22T21:52:02.757306+00:00\", \"decision\": \"workflow alive\", \"expected_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1440, \"start_ticks\": 3239}, \"observed_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1440, \"start_ticks\": 3239}, \"shutdown\": false, \"workflow_root\": \"/tmp/tmp4r2pfmyb/work\"}\n{\"boot_id\": \"1a2bc0cb-056e-431e-aaa3-4e41398be1b1\", \"checked_utc\": \"2026-10-22T21:52:02.795028+00:00\", \"decision\": \"exit grace\", \"expected_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1440, \"start_ticks\": 3239}, \"first_missing_monotonic\": 1, \"missing_seconds\": 0, \"observed_process\": null, \"shutdown\": false, \"workflow_root\": \"/tmp/tmp4r2pfmyb/work\"}\n{\"boot_id\": \"1a2bc0cb-056e-431e-aaa3-4e41398be1b1\", \"checked_utc\": \"2026-10-22T21:52:02.800480+00:00\", \"decision\": \"workflow exited\", \"expected_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1440, \"start_ticks\": 3239}, \"first_missing_monotonic\": 1, \"missing_seconds\": 1, \"observed_process\": null, \"shutdown\": true, \"workflow_root\": \"/tmp/tmp4r2pfmyb/work\"}\n{\"boot_id\": \"1a2bc0cb-056e-431e-aaa3-4e41398be1b1\", \"checked_utc\": \"2026-10-22T21:52:02.817359+00:00\", \"decision\": \"workflow alive\", \"expected_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1441, \"start_ticks\": 3245}, \"observed_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1441, \"start_ticks\": 3245}, \"shutdown\": false, \"workflow_root\": \"/tmp/tmp0h5pzimn/work\"}\n{\"boot_id\": \"1a2bc0cb-056e-431e-aaa3-4e41398be1b1\", \"checked_utc\": \"2026-10-22T21:52:02.839195+00:00\", \"decision\": \"exit grace\", \"expected_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1441, \"start_ticks\": 3245}, \"first_missing_monotonic\": 1, \"missing_seconds\": 0, \"observed_process\": null, \"shutdown\": false, \"workflow_root\": \"/tmp/tmp0h5pzimn/work\"}\n{\"boot_id\": \"1a2bc0cb-056e-431e-aaa3-4e41398be1b1\", \"checked_utc\": \"2026-10-22T21:52:02.844054+00:00\", \"decision\": \"workflow exited\", \"expected_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1441, \"start_ticks\": 3245}, \"first_missing_monotonic\": 1, \"missing_seconds\": 1, \"observed_process\": null, \"shutdown\": true, \"workflow_root\": \"/tmp/tmp0h5pzimn/work\"}\nok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.104s\n\nOK\n"
+      },
+      "stages": {}
+    },
+    "workflow_root": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916"
+  },
+  "archive": {
+    "status": "PASS",
+    "archive": {
+      "bytes": 1123690164,
+      "sha256": "859b32ce555b13e7b494cd1d42b2383b65bbcb9b5a655c75686e5b0c9611c950"
+    },
+    "generation": "1792715849444690",
+    "GCS_MD5_verified": true,
+    "seconds": 147.2563407550042,
+    "export_upper_USD": 0.12558216199278832
+  },
+  "archive_accounting": {
+    "archive": {
+      "bytes": 1123690164,
+      "sha256": "859b32ce555b13e7b494cd1d42b2383b65bbcb9b5a655c75686e5b0c9611c950"
+    },
+    "physical_members": 309,
+    "logical_archive_member_bytes": 2078927328,
+    "work_members": 13488,
+    "work_logical_bytes": 11121575506,
+    "exact_aliases": {
+      "work/units/E009-context/train/reference.npz": {
+        "bytes": 21880259,
+        "canonical": "work/units/E009-context/embeddings.npz",
+        "sha256": "4a9e6c4ab00d4e6f774f2eb217c28fe8894f95ece6d05bfa90ed76c9c7d4136e"
+      },
+      "work/units/oral-context/train/reference.npz": {
+        "bytes": 186037411,
+        "canonical": "work/units/oral-context/embeddings.npz",
+        "sha256": "812791fabd8e371b1f35af352b96b86183805f1b3ebb730a0b99c3897dc52986"
+      }
+    },
+    "omitted_members": 13353,
+    "omitted_bytes": 8885548294,
+    "scope": "Archive byte totals include immutable inventory and terminal snapshots. Work inventory covers new science, not the whole mounted disk or environments. Token NPY/full DNA omission hashes are not backups."
+  },
+  "native_resources": {
+    "science": {
+      "command": [
+        "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_control.py",
+        "--plan",
+        "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/science-plan.json",
+        "--workflow"
+      ],
+      "exit_code": 0,
+      "launched_pid": 3091,
+      "peak_sampled_rss_bytes": 17334079488,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 3.1178806887798416,
+      "sampled_cpu_seconds": 29458.86,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 27899.991498708725,
+      "stop_reason": null,
+      "wall_seconds": 9448.360261511
+    },
+    "setup": [
+      {
+        "name": "retained-bytes",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_reuse.py",
+            "--lock",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/experiments/E019-window-context/reuse-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/gates/reuse-before.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2057,
+          "peak_sampled_rss_bytes": 46501888,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.3151617146272788,
+          "sampled_cpu_seconds": 8.84,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 28.049092227000003
+        }
+      },
+      {
+        "name": "new-package-env",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_runtime.py",
+            "create",
+            "--base",
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env",
+            "--destination",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env",
+            "--wheel",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/payload/dl_binner-0.1.0.dev7-py3-none-any.whl",
+            "--output",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/gates/environment.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2230,
+          "peak_sampled_rss_bytes": 99364864,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.5035206527011704,
+          "sampled_cpu_seconds": 2.06,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 4.091192663000001
+        }
+      },
+      {
+        "name": "complete-runtime-source-library",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_runtime.py",
+            "probe",
+            "--base",
+            "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/env",
+            "--lock",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/experiments/E019-window-context/reuse-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/gates/runtime.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2252,
+          "peak_sampled_rss_bytes": 295206912,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.8694964337889505,
+          "sampled_cpu_seconds": 22.990000000000002,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 26.440591481
+        }
+      },
+      {
+        "name": "installed-CLI",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "dl_binner",
+            "--help"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2331,
+          "peak_sampled_rss_bytes": 35364864,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.270026318693782,
+          "sampled_cpu_seconds": 0.07000000000000028,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.25923398999999847
+        }
+      },
+      {
+        "name": "retained-input-axes",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_bootstrap.py",
+            "--inputs",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/science-plan.json",
+            "--output",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/gates/inputs.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2332,
+          "peak_sampled_rss_bytes": 5671391232,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.0865050892749875,
+          "sampled_cpu_seconds": 56.980000000000004,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 52.44338067299999
+        }
+      },
+      {
+        "name": "new-contracts",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/tests",
+            "-p",
+            "test_e019_contracts.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2403,
+          "peak_sampled_rss_bytes": 59699200,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.6016581432869612,
+          "sampled_cpu_seconds": 0.28999999999999915,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.4820012879999922
+        }
+      },
+      {
+        "name": "context-token-attention-gradient-EMA",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/tests/product",
+            "-p",
+            "test_context.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2405,
+          "peak_sampled_rss_bytes": 305332224,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.0945448140787009,
+          "sampled_cpu_seconds": 8.16,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 7.45515386400001
+        }
+      },
+      {
+        "name": "native-positive-path",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/tests",
+            "-p",
+            "test_e019_native.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2425,
+          "peak_sampled_rss_bytes": 450875392,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.1755312186463232,
+          "sampled_cpu_seconds": 27.77,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 23.62336240800002
+        }
+      },
+      {
+        "name": "full-width-timing",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_timing.py",
+            "--python",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "--epochs",
+            "20",
+            "--output",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/gates/full-width"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2622,
+          "peak_sampled_rss_bytes": 490876928,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 2.726786895846138,
+          "sampled_cpu_seconds": 163.78,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 60.06336624599999
+        }
+      },
+      {
+        "name": "complete-DAG-dry-run",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/research/e019-b47b9164e3cb/scripts/e019_control.py",
+            "--plan",
+            "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/science-plan.json",
+            "--workflow",
+            "--dry-run"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2914,
+          "peak_sampled_rss_bytes": 79024128,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.8737267511284136,
+          "sampled_cpu_seconds": 0.6099999999999994,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 600,
+          "stop_reason": null,
+          "wall_seconds": 0.6981587770000033
+        }
+      }
+    ],
+    "global_sampled_growth_bytes": 13518217216,
+    "min_sampled_free_bytes": 73613262848,
+    "allocation_seconds": 10178.329999923706,
+    "allocated_vCPU_hours": 22.61851111094157,
+    "guard_growth_is_not_whole_run_growth": true
+  },
+  "financial": {
+    "status": "PASS_EXPORT_COST_CREDIT_RETENTION",
+    "checked_UTC": "2026-10-23T08:41:54.544739+00:00",
+    "credit": {
+      "post_shutdown_fresh_read_UTC": "2026-10-23T08:41:54.543161+00:00",
+      "remaining_DKK": 1874.97,
+      "status": "Available",
+      "percent": 95,
+      "expiry": "2027-01-12",
+      "scope": "Certain usage; see Free Trial terms",
+      "application": "Net pricing",
+      "paid_account": true,
+      "overview_cost_savings_DKK": 92.22,
+      "overview_net_DKK": 0,
+      "pending_usage": "Unknown; fresh live tooltip says may take longer than 24 hours; 35 USD reserve retained. No credit-delta invoice inference."
+    },
+    "ceiling_USD": 5,
+    "cost": {
+      "measured_uptime_seconds": 10178.329999923706,
+      "allocated_vCPU_hours": 22.61851111094157,
+      "compute_IP_USD": 0.77198583278304,
+      "run_disks_USD": 0.11856477579419676,
+      "archive_export_upper_USD": 0.12558216199278832,
+      "metadata_upper_USD": 0.001,
+      "operations_reserve_USD": 0.25,
+      "sampled_science_cpu_seconds": 29458.86,
+      "sampled_CPU_is_not_pricing": true,
+      "invoice_reconciled": false,
+      "credit_delta_attributed": false,
+      "post_stop_disks_to_inspection_USD": 0.3361450454188706,
+      "storage_scope": "Run disk and stopped interval are attribution within separate $8 retention, not a second invoice.",
+      "phase_export_with_reserve_USD": 1.267132770570025
+    },
+    "prices": {
+      "6AE1-525F-8B80": {
+        "description": "Balanced PD Capacity",
+        "unchanged": true
+      },
+      "C054-7F72-A02E": {
+        "description": "External IP Charge on a Standard VM",
+        "unchanged": true
+      },
+      "CF4E-A0C7-E3BF": {
+        "description": "E2 Instance Core running in Americas",
+        "unchanged": true
+      },
+      "D973-5D65-BAB2": {
+        "description": "Storage PD Capacity",
+        "unchanged": true
+      },
+      "F449-33EC-A5EF": {
+        "description": "E2 Instance Ram running in Americas",
+        "unchanged": true
+      }
+    },
+    "products": "Existing ordinary E2, nonpremium Ubuntu, persistent disks, IPv4, Iowa Standard storage/network/operations; no new product",
+    "coverage_sources": [
+      "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "https://cloud.google.com/storage/pricing?hl=en"
+    ],
+    "storage_forecast_USD": 7.623082011898242,
+    "storage_allowance_USD": 8,
+    "storage_end": "2026-10-28T00:00:00+01:00",
+    "local_free_bytes": 42075688960,
+    "forecast_local_total_extra_bytes": 5350101140,
+    "review_start_epoch": 1792744914.51333,
+    "review_deadline_epoch": 1792748514.51333,
+    "review_threads": 4,
+    "review_RSS_bytes": 8000000000,
+    "review_extra_cap_bytes": 10737418240,
+    "VM_woken": false,
+    "retention_extended": false
+  },
+  "local_review": {
+    "clock": {
+      "start_epoch": 1792744914.51333,
+      "deadline_epoch": 1792748514.51333,
+      "threads": 4,
+      "RSS_bytes": 8000000000,
+      "extra_bytes": 10737418240
+    },
+    "stages": [
+      {
+        "operation": "seal",
+        "status": "SUCCESS",
+        "attempt": 2,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/review-stage.py",
+            "seal"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 3.4253438299929257,
+          "peak_sampled_rss_bytes": 68706304,
+          "seconds_ceiling": 1445.5553240776062,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 65774,
+          "sampled_cpu_seconds": 2.66,
+          "sampled_average_cpus": 0.7765643777738639,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 2157.8702290058136,
+        "extra_local_peak_bytes": 3246674463,
+        "path": "artifacts/e019-window-context/review-20261023/seal-2.resources.json",
+        "binding": {
+          "bytes": 1310,
+          "sha256": "8aed1334966ed3534b01c6631fe32c71c77ac9012a5a4d130605b404941b62b0"
+        }
+      },
+      {
+        "operation": "seal",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/review-stage.py",
+            "seal"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 3.499110030999873,
+          "peak_sampled_rss_bytes": 66052096,
+          "seconds_ceiling": 1829.7966318130493,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 65217,
+          "sampled_cpu_seconds": 3.08,
+          "sampled_average_cpus": 0.8802238205467029,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 1773.7033500671387,
+        "extra_local_peak_bytes": 3236363576,
+        "path": "artifacts/e019-window-context/review-20261023/seal-1.resources.json",
+        "binding": {
+          "bytes": 1308,
+          "sha256": "b0f3fe7e62dbf84b27666d2af2903608638e564e7fb378abc8de7cc820749ce4"
+        }
+      },
+      {
+        "operation": "verify",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/review-stage.py",
+            "verify"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 46.614196088004974,
+          "peak_sampled_rss_bytes": 100286464,
+          "seconds_ceiling": 3436.246838092804,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 61436,
+          "sampled_cpu_seconds": 39.42,
+          "sampled_average_cpus": 0.8456651258251299,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 210.36812615394592,
+        "extra_local_peak_bytes": 3212466052,
+        "path": "artifacts/e019-window-context/review-20261023/verify-1.resources.json",
+        "binding": {
+          "bytes": 6322,
+          "sha256": "6b1a73b2a357c12715e70dd8ffbfc438948e8bf21bbb1c5e3907a4b92425762b"
+        }
+      },
+      {
+        "operation": "summarize",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/review-stage.py",
+            "summarize"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.0409428989951266,
+          "peak_sampled_rss_bytes": 144736256,
+          "seconds_ceiling": 2736.677479028702,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 64286,
+          "sampled_cpu_seconds": 0.6299999999999999,
+          "sampled_average_cpus": 0.6052205174829185,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 864.3646109104156,
+        "extra_local_peak_bytes": 3229374838,
+        "path": "artifacts/e019-window-context/review-20261023/summarize-1.resources.json",
+        "binding": {
+          "bytes": 1096,
+          "sha256": "b3a6075a40c3126241523846086ae5f7cfc25196c174f4936f8366eb3daaf180"
+        }
+      },
+      {
+        "operation": "contracts",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/review-stage.py",
+            "contracts"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 8.26588951300073,
+          "peak_sampled_rss_bytes": 94486528,
+          "seconds_ceiling": 3287.334426879883,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 61945,
+          "sampled_cpu_seconds": 2.37,
+          "sampled_average_cpus": 0.286720503131868,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 320.9332468509674,
+        "extra_local_peak_bytes": 3214678971,
+        "path": "artifacts/e019-window-context/review-20261023/contracts-1.resources.json",
+        "binding": {
+          "bytes": 1911,
+          "sha256": "6a79b9aa104325bd1ffd938acda6854a5c393142f03e94e2996d15f1f4f1510e"
+        }
+      },
+      {
+        "operation": "audit",
+        "status": "FAILED",
+        "attempt": 1,
+        "error": "RuntimeError: Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/audit-1.log\nTraceback (most recent call last):\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/review-stage.py\", line 37, in <module>\n    elif a.operation in ['summarize','seal','audit']:exec(compile((root/(a.operation+'.py')).read_text(),str(root/(a.operation+'.py')),'exec'))\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/audit.py\", line 33, in <module>\n    state=saved[key];assert all(torch.isfinite(t).all()for t in state.values());assert sum(t.numel()for t in state.values())==r[count]\nAssertionError\n\nDLBINNER exit_code=1 stop_reason=None\n",
+        "elapsed_original_seconds": 333.54594802856445,
+        "extra_local_peak_bytes": 3214685749,
+        "path": "artifacts/e019-window-context/review-20261023/audit-1.resources.json",
+        "binding": {
+          "bytes": 2420,
+          "sha256": "787c02bd1cfdefade27c1118694d7628573e71d5b9b6fae30e241508024c7b6e"
+        }
+      },
+      {
+        "operation": "ledger",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/review-stage.py",
+            "ledger"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 5.089453060994856,
+          "peak_sampled_rss_bytes": 104566784,
+          "seconds_ceiling": 3292.6560559272766,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 61791,
+          "sampled_cpu_seconds": 2.71,
+          "sampled_average_cpus": 0.5324737191839363,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 312.4342110157013,
+        "extra_local_peak_bytes": 3214672443,
+        "path": "artifacts/e019-window-context/review-20261023/ledger-1.resources.json",
+        "binding": {
+          "bytes": 1433,
+          "sha256": "3c8af7950095dcb5f1867036215e25caf3399e017db99377b852bb8bbed76a67"
+        }
+      },
+      {
+        "operation": "unit-oral-context",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/review-stage.py",
+            "unit",
+            "--unit",
+            "oral-context"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 271.85048599400034,
+          "peak_sampled_rss_bytes": 5070536704,
+          "seconds_ceiling": 3126.2498331069946,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 62377,
+          "sampled_cpu_seconds": 274.4,
+          "sampled_average_cpus": 1.0093783683949562,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 745.6293239593506,
+        "extra_local_peak_bytes": 3229340646,
+        "path": "artifacts/e019-window-context/review-20261023/unit-oral-context-1.resources.json",
+        "binding": {
+          "bytes": 32702,
+          "sha256": "ad5aed7b562ed6876f325a79b81e95d47c41cda163a195f64ce6e81e8e376b48"
+        }
+      },
+      {
+        "operation": "unit-E009-context",
+        "status": "SUCCESS",
+        "attempt": 1,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/review-stage.py",
+            "unit",
+            "--unit",
+            "E009-context"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 27.923353983002016,
+          "peak_sampled_rss_bytes": 1449168896,
+          "seconds_ceiling": 3154.5768480300903,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 62184,
+          "sampled_cpu_seconds": 29.67,
+          "sampled_average_cpus": 1.0625514405633805,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 473.346981048584,
+        "extra_local_peak_bytes": 3216847370,
+        "path": "artifacts/e019-window-context/review-20261023/unit-E009-context-1.resources.json",
+        "binding": {
+          "bytes": 4225,
+          "sha256": "183d323f6c3b5fec6dce6f8684d130236636465b97a5a8caa05f3faf84abcd52"
+        }
+      },
+      {
+        "operation": "audit",
+        "status": "SUCCESS",
+        "attempt": 2,
+        "resources": {
+          "command": [
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/envs/context-owned-v4/bin/python",
+            "-I",
+            "-B",
+            "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e019-window-context/review-20261023/review-stage.py",
+            "audit"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 4.278731572005199,
+          "peak_sampled_rss_bytes": 221892608,
+          "seconds_ceiling": 3194.361911058426,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 62141,
+          "sampled_cpu_seconds": 5.06,
+          "sampled_average_cpus": 1.1825934660417747,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        },
+        "elapsed_original_seconds": 409.91767597198486,
+        "extra_local_peak_bytes": 3214703356,
+        "path": "artifacts/e019-window-context/review-20261023/audit-2.resources.json",
+        "binding": {
+          "bytes": 1431,
+          "sha256": "cab34205c7d1e358d54549cfc27aebf0a890414dcb22d9e9cc2ae37014161e67"
+        }
+      }
+    ],
+    "peak_sampled_RSS_bytes": 5070536704,
+    "peak_extra_review_bytes": 3246676501,
+    "numerical_review_completed_seconds": 864.3646109104156,
+    "full_review_elapsed_to_local_seal_seconds": 2157.8702290058136,
+    "closure_elapsed_seconds": 2290.4918580055237,
+    "scope": "Original one-hour clock including download/verification/repair/native audits/new-output diagnostics/summary/docs/local seal. Four threads, 8 GB sampled RSS, 10 GiB extra. No cloud start, science replay, local neural forward, old score or numerical input mutation. Separate strict module state load in Torch-only audit."
+  },
+  "local_reader_repair": {
+    "reason": "Initial local audit counted predictor BatchNorm buffers as parameters; strict named parameter/buffer sets and module loads repair the reader. No native/source/scientific artifact or guard/tolerance changed.",
+    "failed_journals": [
+      {
+        "path": "experiments/E019-window-context/journals/inspection-audit-attempt-1.py.txt",
+        "bytes": 5550,
+        "sha256": "6295a0414b97fd6b97ca7921ed7df2313ea55f435d0c14cf839ef15c4943d4e6"
+      },
+      {
+        "path": "experiments/E019-window-context/journals/inspection-audit-1.log",
+        "bytes": 645,
+        "sha256": "14690de1a27e94dc7a544d65d3b62dd391b375af3fe3dc513874ed88ba8804c7"
+      },
+      {
+        "path": "experiments/E019-window-context/journals/inspection-audit-1.resources.json",
+        "bytes": 2420,
+        "sha256": "787c02bd1cfdefade27c1118694d7628573e71d5b9b6fae30e241508024c7b6e"
+      },
+      {
+        "path": "experiments/E019-window-context/journals/inspection-audit-repair-note.json",
+        "bytes": 404,
+        "sha256": "8458be3595eb3685dbc3658704b6165780111be553663debc9fe7440e8ab0d3d"
+      }
+    ],
+    "repaired_source": {
+      "bytes": 6014,
+      "sha256": "517fbad74ed22fb14dc3f1d7c06c64af16748e9aab6c19ec4981e823c9fa5f55"
+    },
+    "resolved": true
+  },
+  "science_snapshot_status_note": "Frozen writer retains default FAILED in successful pre-collection snapshot; science_completed true, both stage exits 0, no error, then final completion SUCCESS. Preserved unchanged, no failed science rewritten.",
+  "scientific_disposition": {
+    "disposition": "MODIFY",
+    "frozen_keep": "Both post full-reference weighted R95 improve by at least 0.005 absolute over E016 and neither >=90% target count falls.",
+    "frozen_modify": "All other mixed outcomes, retaining original criteria without tuning or per-community/per-bin oracle routing.",
+    "frozen_abandon": "Neither post R95 improves and neither >=90% target count improves.",
+    "exact_fraction_rule": "Both recovered-bp/full-reference gains >=1/200 and no >=90% count decrease; no float tolerance or metric change.",
+    "scope": "One information/encoder bundle on two development communities. No isolated causal attention, optimality, product-default, feature-family or generalization claim."
+  },
+  "preservation": {
+    "VM_woken": false,
+    "science_replayed": false,
+    "new_data_or_external_tool": false,
+    "new_model_or_threshold": false,
+    "old_baselines_rescored": false,
+    "resources_or_retention_changed": false,
+    "original_Mac_portability_failure_unchanged": true,
+    "entry_owner_operations_patch": {
+      "bytes": 894,
+      "sha256": "0188459a326163759844688c63866ecdbdba67e0ac2b057ba69fab83a0aabaae"
+    }
+  },
+  "evidence": {
+    "artifacts/e019-window-context/review-20261023/native-receipts-review.json": {
+      "bytes": 2192085,
+      "sha256": "d34094262f52c3ef0d0a590acb34683aae535c7b0ea32a496dfbc875a0f91674"
+    },
+    "artifacts/e019-window-context/review-20261023/learning-receipts-review.json": {
+      "bytes": 6782,
+      "sha256": "4cbec2995d8fd7ac0ac09db44a3aa789d55654a793d4eb81e2c1435ab8ad772b"
+    },
+    "artifacts/e019-window-context/review-20261023/verified/verification.json": {
+      "bytes": 2967361,
+      "sha256": "3669efa37f88169fd3a076d9bfc4d830789cd594685b227527883adb4890f37d"
+    },
+    "artifacts/e019-window-context/review-20261023/verified/inventory.json": {
+      "bytes": 5272651,
+      "sha256": "09b68eb4e4fe1c00be62cc4924383021669fa44d08c53548c97a211bbc4cb3bf"
+    },
+    "artifacts/e019-window-context/review-20261023/collection.json": {
+      "bytes": 2967523,
+      "sha256": "291493880c5603431186b55a5236e31f4fcd91b881f02ec252d82d3772848590"
+    },
+    "artifacts/e019-window-context/review-20261023/private-object-list.json": {
+      "bytes": 1555,
+      "sha256": "3cc87f9e3d1b02d29f5d074eaa61027740fc96ab208413bff79de5a35a5949df"
+    }
+  },
+  "final_seal": {
+    "status": "PASS_LOCAL_SEAL_EVERY_MEMBER",
+    "UTC": "2026-10-23T09:17:52.110921+00:00",
+    "archive": {
+      "bytes": 6943466,
+      "sha256": "335020fff6e930c1917a7dfabe291fb0c9e22d295ceeb97d2461a28bcf7b9a43"
+    },
+    "regular_payload_members": 134,
+    "logical_payload_bytes": 36463978,
+    "scope": "Closed snapshot before own seal receipt/final closure/commit. No DNA, credential, environment or cloud write.",
+    "private_upload": "Not performed; separate explicit approval would allow private append-only backup/readback before the unchanged retention boundary.",
+    "locator": "artifacts/e019-window-context/review-20261023/compact-review-v2.tar.gz"
+  },
+  "final_control_plane": {
+    "provider": {
+      "name": "dl-binner-cpu",
+      "status": "TERMINATED",
+      "machineType": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/machineTypes/e2-standard-8",
+      "scheduling": {
+        "automaticRestart": false,
+        "instanceTerminationAction": "STOP",
+        "maxRunDuration": {
+          "nanos": 0,
+          "seconds": "29700"
+        },
+        "onHostMaintenance": "MIGRATE",
+        "preemptible": false,
+        "provisioningModel": "STANDARD"
+      },
+      "lastStartTimestamp": "2026-10-22T14:51:19.424-07:00",
+      "lastStopTimestamp": "2026-10-22T17:40:57.754-07:00"
+    },
+    "guest": [
+      {
+        "key": "status",
+        "namespace": "e019-candidate",
+        "value": "{\"status\": \"SUCCESS\", \"science_completed\": true, \"private_readback_verified\": true, \"root\": \"/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916\", \"source\": \"b47b9164e3cb2ce51ae46728b813dbbb8d4320ea\", \"completion\": {\"bytes\": 3754341, \"sha256\": \"230e8e596e402b5cc1650997abea659b550fda78f112a13acf75e2dcb58167d6\"}, \"epoch\": 1792715869.5201347}"
+      }
+    ],
+    "project-billing": {
+      "billingAccountName": "billingAccounts/01DD71-3C7861-1E59DF",
+      "billingEnabled": true,
+      "name": "projects/project-d17bd588-df31-488f-b16/billingInfo",
+      "projectId": "project-d17bd588-df31-488f-b16"
+    }
+  },
+  "closure_UTC": "2026-10-23T09:20:05.023239+00:00",
+  "summary_compaction": "Full omission inventory is retained in the immutable archive/local proof and now referenced by checksum instead of copied into the small Git summary; no metric, target row or scientific artifact changed. Original full-summary attempt retained locally.",
+  "summary_contract_tests": 4,
+  "source_and_docs_checks": {
+    "original_b47b916_bindings": 85,
+    "unchanged_current_science_files": 83,
+    "administrative_README_OPS_differences": 2,
+    "maintained_docs": 86,
+    "local_links": 1233,
+    "source_fingerprints": 85,
+    "optional_unavailable_old_caches": 10,
+    "all_passed": true
+  },
+  "earlier_local_seal": {
+    "status": "PASS_LOCAL_SEAL_EVERY_MEMBER",
+    "UTC": "2026-10-23T09:11:27.977832+00:00",
+    "archive": {
+      "bytes": 6902096,
+      "sha256": "ef5aebc7fc6cd2fa8c0fd67cd2881a7dcbaefb598637847b1d81d0105898b901"
+    },
+    "regular_payload_members": 128,
+    "logical_payload_bytes": 36190264,
+    "scope": "Closed snapshot before own seal receipt/final closure/commit. No DNA, credential, environment or cloud write.",
+    "private_upload": "Not performed; separate explicit approval would allow private append-only backup/readback before the unchanged retention boundary.",
+    "locator": "artifacts/e019-window-context/review-20261023/compact-review.tar.gz"
+  }
+}
