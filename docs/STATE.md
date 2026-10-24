@@ -1,16 +1,37 @@
 # Current Research State
 
-**E021 is preparing the owner-directed E009-only run after native cost admission.**
-The unchanged two-community extraction forecast is 69.92 GPU hours and fails
-the envelope; E009 alone needs 8.87 GPU hours including I/O.
+**E021 E009-only comparison is RUNNING under verified native supervision.**
+The owner chose E009 after full native measurement showed oral dominates cost.
 [E009-only protocol](../experiments/E021-frozen-sequence-hybrid/E009-only-protocol.md)
-keeps full DNA/views and frozen learning/CPM/E013, defers oral and leaves the
-original joint KEEP criterion unmet. No community science was started at this
-prospective freeze. Both actual native tiny modes and full input/runtime/parity
-checks pass; failures are preserved. The same $45, 48-hour common clock and
-approved 20 E2 / 30 GPU cumulative hours remain, with no retention extension.
-October 28 at 00:00 Copenhagen remains the storage review/stop boundary.
+and [current receipt](../experiments/E021-frozen-sequence-hybrid/portable-observed.json)
+own actual phase `gpu-native-v6`, frozen scientific f136b2c / native checkout
+26374b7 and repaired operational payload 721c63f. At 22:49 UTC October 24,
+1,500 / 89,041 eligible parents had completed exact-view extraction; live
+boot/PID/UUID guard and exit watcher pass, measured GPU use peaks at 1.96 GB.
+No recovery score or CPU community fit yet. Original E2 is TERMINATED;
+the bounded Mac controller will verify/relay the full bank and runtime, then
+arm a fresh E2 parent and release six unchanged consumers once. Its loss closes
+the GPU after a bounded handoff wait; CPU collection/stop is independent after release.
 
+Nineteen local operational contracts pass. Native two-mode tiny 20-epoch tests,
+source/runtime/parity/full-axis checks and failed archive/member reviews pass.
+The missing fresh GPU-ready receipt stopped v5 before a science child; repaired
+v6 admits actual current-parent device telemetry. Every failure is retained.
+Full E009 DNA and 432,664 views remain; oral and skin are unrun and original
+joint KEEP is unmet. Same $45 credit-only / 48-hour clock from October 24
+19:04:19 UTC, approved 20 E2 / 30 GPU cumulative hours, all resource caps and
+October 28 00:00 Copenhagen retention remain. Priced observed allocation/storage/
+transfer components through 22:47 UTC total about $3.48, ongoing and not an invoice.
+
+## Exact next step
+
+[Inspect the scoped run and handoff](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt).
+Check both machines/controller and actual exits before new-output diagnostics.
+Do not treat original whole-protocol science_completed=false or planned-fits=2
+as scoped completion; require PASS_E009_ONLY_COMPLETE and all six real exits.
+Accept completed stages without replay. No oral/skin run or retention renewal.
+
+## Preserved October 24 admission snapshots
 
 **E021 portable L4 placement succeeded; native operational recovery is in progress.**
 [Continuation receipt](../experiments/E021-frozen-sequence-hybrid/portable-observed.json)
@@ -29,7 +50,7 @@ delayed usage unknown / $35 reserve. Original October 28 storage boundary remain
 
 Updated: 2026-10-24 (Copenhagen). This is the single current handoff.
 
-## Exact next step
+## Historical reassessment and earlier handoffs
 
 **E021 execution reassessed after five capacity refusals: stop identical same-zone
 retries; retain CPU development plus an occasional portable GPU extraction worker.**
@@ -124,7 +145,7 @@ unadmitted: cache arrays alone are 8.708 GiB, total new VM work forecast 19.5–
 and same-Mac CPU extrapolation is 603–871 hours, not a native estimate. This is not
 a $1 cached job. Next recommend native GPU/resource admission of this one frozen
 candidate before another architecture/loss/grid: proposed temporary existing-VM
-n1-standard-8 + T4, new $45/48-hour ceiling, 32 GiB growth and separately bounded
+n1-standard-8 + T4, new $45/ 48-hour ceiling, 32 GiB growth and separately bounded
 review. Global GPU quota is zero; new explicit resource/quota scope and GPU credit/
 Linux/CUDA/throughput admission are required before charge. No GPU request/change
 was made here. The complete copy-paste approval is in E021 operations.
@@ -479,7 +500,7 @@ independently confirmed, matching the fresh boot/process watcher. Three boot
 intervals total**10,844.586s /3.0124h**: compute/IP~**$0.82252**, disks through final
 stop including intervening stopped time~**$0.18332**, assessed new export~**$0.22032**.
 Including earlier compact-admission export, subtotal~**$1.2492**, **<$1.40 with
-reserve**, inside original$10; invoice remains delayed/unreconciled. Fresh final
+reserve**, inside original $10; invoice remains delayed/unreconciled. Fresh final
 credit shows **DKK1,915.36 Available through2027-01-12**; pending usage unknown.
 Core download/verification/three-unit review/cleanup takes20.8minutes; the total
 review clock including compact sealing/private backup closes under33minutes,

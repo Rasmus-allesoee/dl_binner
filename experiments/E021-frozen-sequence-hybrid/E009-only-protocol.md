@@ -69,3 +69,7 @@ Legacy science_completed means both communities and remains false; separate
 PASS_E009_ONLY_COMPLETE is the required scoped target, never inferred from shutdown.
 Retain the temporary stopped worker/disks until evidence/caches/runtime preservation
 is independently verified; remove only then, within original retention.
+
+The unchanged collector retains planned_science_fits=2 for the original whole
+protocol. That is planned historical scope, not an executed count. Inspect the
+new scoped target and all actual stage exits to establish the one E009 fit.

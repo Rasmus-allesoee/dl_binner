@@ -1,17 +1,18 @@
 # Google Cloud workspace operations
 
-**Current E021 scope: owner-directed E009 only; preparation before release.**
-[Prospective protocol](../experiments/E021-frozen-sequence-hybrid/E009-only-protocol.md)
-records full native L4 timing, unchanged full E009 exposure and oral deferral.
-The resource exception is approved; approved running subcaps are now 20 E2 /
-30 GPU hours, not the historical 8 / 38. Common clock began October 24,
-19:04:19 UTC and never resets. Same $45 credit-only cap / $35 pending reserve,
-original hardware and October 28 retention; no new money. The temporary L4 b
-worker passed native checks on its first placement; no c/f capacity probe.
-The original E2 is terminated with original scheduling restored after bounded
-collection of already-passed tiny evidence. New E009 consumer will use fresh
-watcher/STOP and exact verified reuse. Dated snapshots below are history.
-
+**Current E021: E009-only extraction RUNNING on the existing temporary L4 b worker.**
+[Current native receipt](../experiments/E021-frozen-sequence-hybrid/portable-observed.json)
+verifies fresh boot/PID/UUID device guard, held-parent exit watcher and provider
+STOP. Original E2 is independently TERMINATED with original scheduling restored;
+its one later consumer boot is conditional on full bank admission and byte-bound
+setup, within four hours /4.25-hour STOP and remaining original cumulative caps.
+The Mac handoff controller is running on AC with a process-bound sleep guard;
+its failure cannot remove native clocks/shutdown. Keep same $45 credit-only,
+48-hour common clock, 20 E2 / 30 GPU hours, 32 GiB aggregate growth, 25 GiB reserves
+and October 28 00:00 Copenhagen retention. Current observed components are
+about $3.48 through 22:47 UTC; original storage attribution overlaps approved $8.
+No final invoice/credit-delta attribution, new resource or extension.
+The following blocks are preserved dated snapshots.
 
 **Owner has now approved the revised portable scope under the same remaining $45.**
 [Approved policy](../experiments/E021-frozen-sequence-hybrid/portable-policy.json) supersedes the pending-approval wording in the dated reassessment below.
@@ -87,7 +88,7 @@ Existing stopped disks continue at **$31.20/month**, separate $8 full-interval
 forecast ~$7.63 through **October 28, 00:00 Copenhagen (CET)**. No new cloud objects.
 
 The same frozen candidate remains the next admission decision under the owner's
-existing $45/48-hour scope. Maximum quote ~$39.23, not actual cost. No automatic
+existing $45/ 48-hour scope. Maximum quote ~$39.23, not actual cost. No automatic
 capacity retry/alternative or storage renewal. [Operations](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md)
 owns the precise continuation, last full-window start and unresolved original
 30 GiB boot versus provider 40 GiB guidance. Verify actual space/old-file inventory
@@ -106,7 +107,7 @@ Global GPU quota is zero, regional T4 is one. No quota request, GPU/type/service
 change, VM wake, SSH, private upload or new cloud compute ($0) occurred.
 
 Next proposed scope is temporary existing-VM n1-standard-8 / 30 GiB + one T4 / 16 GiB,
-original disks unformatted, new $45/48-hour clock/48.25-hour STOP, 32 GiB growth;
+original disks unformatted, new $45/ 48-hour clock/48.25-hour STOP, 32 GiB growth;
 about $39.23 max allocation/disks/export/reserves at conservative current marginal
 SKUs. It needs new explicit resource/quota approval and complete native CUDA,
 credit coverage, availability, throughput/VRAM/RAM/return proof before release.
@@ -370,7 +371,7 @@ costs$0GCPcompute. Compact review backup/readback is separately byte-bound below
 
 Existing stopped disks continue **$31.20/month (~$1/day)**. **October21 review is
 still required; current phase retention gate expires at00:00CopenhagenOctober21.**
-No renewal/deletion is automatic. A seven-day continuation throughOctober28 would
+No renewal/deletion is automatic. A seven-day continuation throughOctober 28 would
 need explicit new approval; a fresh read-only object inventory and proposed cost
 are recorded with this inspection. All confirmation payloads remain unacquired;
 new execution needs a fresh source/protocol/resource/credit/budget admission.
@@ -430,14 +431,14 @@ remain covered; no new product. Total measured VM uptime4908.491s: compute/IP
 **$0.372290**, run disk intervals **$0.057178**, native export upper **$0.116459**
 plus compact exports~$0.000035: subtotal **$0.545961**. The intervening8000.447s
 shared stopped-disk interval adds **$0.093195**, total **$0.639157**, **<$0.80 with
-reserve**, within original$2 and new$0.65 recovery allowance. These are current-SKU
+reserve**, within original $2 and new$0.65 recovery allowance. These are current-SKU
 measured-allocation estimates, not invoice or sampled-CPU/credit-delta pricing.
 Later stopped hours continue at **$31.20/month /$0.04194hour**, with **October21
 storage review unchanged**. New native archive adds~$0.0194/month object storage.
 Private compact review3,285,918bytes/all140members verify/read back; assessed
 export adds$0.000367 and storage~$0.000061/month. Final priced total including
 stopped gap/compact export~$0.639524; pooled small/storage reserves give<$0.80
-(two separate phase reserves instead give<$0.95), below original$2. Full local
+(two separate phase reserves instead give<$0.95), below original $2. Full local
 review/backup closes28.90min,5.413GB sampled numerical-stage RSS/2.297GiB extra;
 no old artifact is deleted. Compact sealing/readback child RSS was not separately
 sampled; its small standard-library payload scope is explicit in the receipt.
@@ -504,7 +505,7 @@ The original planning estimate was70–100min and
 uses the existing allocation,2h cumulative/2.25h STOP,4threads/26GB/20GiBextra/
 25GiBreserve/2GiBreturn, with accepted caches/runtime reuse and tested smaller
 collection. Stop if original retention no longer covers its dates. No external
-binner, extra data acquisition or confirmation follows from the original$10.
+binner, extra data acquisition or confirmation follows from the original $10.
 
 Existing disks continue at **$31.20/month (~$1.03/day)** while stopped. New compact
 native/admission archive storage is~**$0.0403/month**, plus tiny review metadata.

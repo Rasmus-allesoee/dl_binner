@@ -213,5 +213,117 @@
       "sha256": "ad0d3f56ca80f8788ff69d933063c45a222ee851301c1533e1db5e48422000f9"
     },
     "passed_timing_scope_correction": "v5 timing is real CUDA execution with process allocator cap, but its waiting parent did not provide live device-memory samples. Reuse timing as throughput evidence only, not v5 device-guard admission. Fresh native device guard is mandatory before science."
+  },
+  "current_E009_execution": {
+    "status": "RUNNING_REAL_COMMUNITY_EXTRACTION",
+    "inspection_UTC": "2026-10-24T22:49:40.098116+00:00",
+    "native_GPU_root": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/gpu-native-v6",
+    "native_CPU_consumer_root": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5",
+    "archive_prefix_GPU": "gs://dl-binner-archive-167650584170/e021/portable-20261024T190419Z/gpu-native-v6",
+    "archive_prefix_CPU": "gs://dl-binner-archive-167650584170/e021/portable-20261024T190419Z/cpu-E009-consumer-v5",
+    "operational_commit": "721c63f",
+    "scientific_native_checkout": "26374b7c2dab065fa4149eed7ec42be463a575ad",
+    "scientific_candidate": "f136b2c5f6195ae91a0566f23d84c8c6c9f69bf9",
+    "latest_verified_progress": {
+      "stage": "hybrid_extract",
+      "utc": "2026-10-24T22:49:25Z",
+      "eligible_done": 1500,
+      "eligible_total": 89041,
+      "exposed_bp": 5429222
+    },
+    "device_guard_peak_observed_bytes": 1958739968,
+    "device_samples": 136,
+    "source_bound_current_boot_PID_guard": {
+      "boot_id": "37609a7e-df37-4744-94df-0b908359dd71",
+      "checked_utc": "2026-10-24T22:49:14.034350+00:00",
+      "decision": "workflow alive",
+      "expected_process": {
+        "command_sha256": "26293918c4569502378d069ec5f8042506be3a7b2f268ef58e181244d23b095c",
+        "pid": 1634,
+        "start_ticks": 4964
+      },
+      "observed_process": {
+        "command_sha256": "26293918c4569502378d069ec5f8042506be3a7b2f268ef58e181244d23b095c",
+        "pid": 1634,
+        "start_ticks": 4964
+      },
+      "shutdown": false,
+      "workflow_root": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/gpu-native-v6"
+    },
+    "work_free_bytes": 56745279488,
+    "aggregate_fixed_space_partition_GiB": {
+      "GPU": 16,
+      "CPU": 16
+    },
+    "CPU_control_plane": "TERMINATED; source setup retained; controller may start its single bounded consumer after bank admission",
+    "controller": {
+      "artifact_root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-portable-admission/20261024T183844Z/continuation-v6",
+      "pid": 73596,
+      "caffeinate_pid": 73597,
+      "AC_power_verified": true,
+      "purpose": "Once-only verified bank/runtime relocation and six CPU consumers; no science retry. Native GPU90-minute handoff fallback and CPU watcher/STOP remain independent of Mac."
+    },
+    "allocation_cost_snapshot": {
+      "record": "Measured allocation attribution through in-progress handoff",
+      "UTC": "2026-10-24T22:47:25.256055+00:00",
+      "GPU_running_seconds": 9287.849556922913,
+      "CPU_running_seconds": 7568.019999742508,
+      "GPU_compute_IP_USD": 2.2152147974747107,
+      "CPU_compute_IP_USD": 0.5740042052147765,
+      "original_disk_attribution_USD": 0.1559318494289989,
+      "temporary_104GiB_disk_upper_since_VM_creation_USD": 0.04627138597478149,
+      "observed_bulk_transport_bytes": 4350240768,
+      "bulk_outbound_USD_conservative": 0.48617729187011716,
+      "compact_export_bytes": 12619846,
+      "price_scope": "Account-currency Catalog marginal prices converted6.5781DKK/USD; no free-tier offsets; ongoing not final, sampled CPU distinct, credit delta not an invoice; original disk overlaps existing8USD storage approval.",
+      "original_gross_ceiling_USD": 45,
+      "conservative_all_caps_quote_USD": 39.107882420652246,
+      "priced_components_USD": 3.4790099076595413
+    },
+    "original_two_community_outcome": "NOT_COMPLETE; scoped E009 pending; oral and skin unrun",
+    "verified_failed_or_evidence_archives": [
+      {
+        "phase": "gpu-native-v4",
+        "status": "SUCCESS",
+        "archive": {
+          "bytes": 1253476,
+          "sha256": "cbc0e3a2c64c345250330c3a0fd93468c51946bc73e3019b03b36c4e6b9a1ab1"
+        },
+        "regular_members": 113,
+        "logical_member_bytes": 4350201,
+        "every_member_verified": true,
+        "aliases": {},
+        "omitted_retained_on_disk": {}
+      },
+      {
+        "phase": "cpu-evidence-v4",
+        "status": "SUCCESS",
+        "archive": {
+          "bytes": 11144254,
+          "sha256": "2b89eb362448a60a70f600dc04c38893798b045878ea860be8c5e9c64bfea800"
+        },
+        "regular_members": 180,
+        "logical_member_bytes": 15230479,
+        "every_member_verified": true,
+        "aliases": {},
+        "omitted_retained_on_disk": {}
+      },
+      {
+        "phase": "gpu-native-v5",
+        "status": "SUCCESS",
+        "archive": {
+          "bytes": 96611,
+          "sha256": "ad0d3f56ca80f8788ff69d933063c45a222ee851301c1533e1db5e48422000f9"
+        },
+        "regular_members": 40,
+        "logical_member_bytes": 527821,
+        "every_member_verified": true,
+        "aliases": {},
+        "omitted_retained_on_disk": {}
+      }
+    ],
+    "native_run_is_not_quality_evidence": true,
+    "local_operational_tests": 19,
+    "all_original_candidate_bindings_unchanged": 115
   }
 }

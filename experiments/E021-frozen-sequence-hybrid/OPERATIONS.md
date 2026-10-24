@@ -467,9 +467,9 @@ Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015, E021's E009-only
 scope/protocol, allocation reassessment, portable-observed.json, original frozen
 candidate/reuse/criteria and operations. Preserve all accepted science and failures.
 Check the Mac handoff controller receipt/log under
-`artifacts/e021-portable-admission/20261024T183844Z`, existing L4 worker
+`artifacts/e021-portable-admission/20261024T183844Z/continuation-v6`, existing L4 worker
 `e021-portable-20261024-b` in Iowa b and original E2 `dl-binner-cpu` in Iowa a.
-Check `e021-portable/status`, GPU `gpu-native-v5` and CPU
+Check `e021-portable/status`, GPU `gpu-native-v6` and CPU
 `cpu-E009-consumer-v5` completion/exit evidence under
 `gs://dl-binner-archive-167650584170/e021/portable-20261024T190419Z/`.
 Do not infer scientific success from shutdown or confuse legacy two-community
@@ -498,3 +498,30 @@ Restore original E2 scheduling after independently stopped. Do not resize,
 provision, acquire DNA, run oral/skin/external tools or extend retention.
 Update records/check/commit with structured what changed/why, report actual costs,
 scoped results/limits and one next recovery-focused decision.
+
+## Verified long-job handoff, October 24 22:49 UTC
+
+Operational preparation 721c63f is committed/pushed; scientific native 26374b7
+and f136b2c package/default/view locks remain unchanged. E009 extraction is
+actually progressing in gpu-native-v6: 1,500 / 89,041 parents, 136 live device
+samples, 1.96 GB device peak, 56.75 GB work free. Current parent/watchdog/UUID
+contracts pass. E2 is TERMINATED; CPU bank/runtime readers and scientific fits
+remain pending. The controller lives under continuation-v6; older controller
+failure receipts in its parent directory are preserved history.
+
+The fresh-runtime reuse repair creates actual boot/UUID readiness before arming
+and verifies LIVE_NATIVE_TELEMETRY against the held PID. V5 was collected and
+stopped before any science child when that receipt was missing; its 40 archive
+members/checksum pass. Prior failed v4 has 113 members and passed CPU evidence
+return has 180; every member was verified locally. No accepted science was replayed.
+
+Priced allocation/storage/transport components through 22:47 UTC are about $3.48,
+including ongoing GPU allocation, not a final bill. The maximum all-subcap quote
+remains $39.11 inside the original $45 and current reserved credits. Original
+stopped disks remain$31.20/month; temporary 104 GiB balanced disks are about
+$0.014/hour until verified cleanup, all inside the unchanged October 28 review.
+
+Legacy collector planned_science_fits=2 describes the original whole plan.
+Legacy science_completed also covers both communities and stays false here.
+Require the new scoped E009 target, actual six CPU exits and full accounting;
+never present either legacy field as evidence that oral ran or a fit failed.
