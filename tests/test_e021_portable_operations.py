@@ -198,3 +198,9 @@ class ScopedHandoffContracts(unittest.TestCase):
             (r/'finish.json').unlink();(r/'gates/E009-scoped-target.json').unlink()
             (r/'tasks/extra.result.json').write_text(json.dumps(dict(kind='science',unit='oral-hybrid',stage='train',status='SUCCESS')))
             with self.assertRaisesRegex(ValueError,'Six E009'):m.cpu_target(r,p)
+    def test_current_boot_GPU_ready_receipt_and_wrong_device_refusal(self):
+        m=self.load('e021_portable_reuse_node')
+        self.assertEqual(m.readiness('GPU-exact, NVIDIA L4, 23034, 8','L4','fresh-boot'),
+            dict(boot_id='fresh-boot',gpu_uuid='GPU-exact'))
+        for text in ['GPU-exact, NVIDIA T4, 16000, 8','GPU-exact, NVIDIA L4, 23034, 15000','']:
+            with self.assertRaises(ValueError):m.readiness(text,'L4','fresh-boot')

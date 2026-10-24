@@ -201,5 +201,17 @@
     "local_operational_tests": 18,
     "community_science_at_this_freeze": "NOT_STARTED",
     "scope_limitation": "Original joint two-community KEEP cannot be met by E009 alone; unchanged oral and skin remain unscored"
+  },
+  "E009_first_release_refused": {
+    "attempt": "gpu-native-v5",
+    "status": "FAILED_BEFORE_ANY_SCIENCE_CHILD",
+    "error": "GPU driver readiness missing before release",
+    "cause": "Fresh reuse parent omitted gpu-ready.json; wait-for-ready guard refused release and collected before any extraction child.",
+    "repair": "Fresh native nvidia-smi boot/UUID readiness is created before arming; actual LIVE_NATIVE_TELEMETRY must match the held parent PID afterward.",
+    "old_archive": {
+      "bytes": 96611,
+      "sha256": "ad0d3f56ca80f8788ff69d933063c45a222ee851301c1533e1db5e48422000f9"
+    },
+    "passed_timing_scope_correction": "v5 timing is real CUDA execution with process allocator cap, but its waiting parent did not provide live device-memory samples. Reuse timing as throughput evidence only, not v5 device-guard admission. Fresh native device guard is mandatory before science."
   }
 }

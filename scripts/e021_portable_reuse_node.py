@@ -6,8 +6,19 @@ replays science. Each boot gets new config/source/runtime identity and watcher.
 Fixed peer reservations divide the unchanged 32 GiB aggregate budget explicitly;
 they are upper bounds, not a claim that the other node is stopped or measured live.
 """
-import argparse,hashlib,json,os,shutil,subprocess,sys,tarfile,time
+import argparse,csv,hashlib,json,os,shutil,subprocess,sys,tarfile,time
 from pathlib import Path
+
+
+def readiness(text,model,boot):
+    """Bind one actual current-boot GPU before the waiting device guard is armed."""
+    rows=list(csv.reader(text.strip().splitlines()))
+    if len(rows)!=1 or len(rows[0])!=4:raise ValueError('Exactly one GPU required')
+    uuid,name,total,used=[x.strip()for x in rows[0]]
+    if (model not in ['L4','T4']or not name.endswith(model)or not uuid.startswith('GPU-')
+        or not total.isdigit()or not used.isdigit()or int(total)<14*1024
+        or int(used)>14*1024):raise ValueError('Fresh GPU identity/memory differs')
+    return dict(boot_id=boot,gpu_uuid=uuid)
 
 
 def start(config):
@@ -44,11 +55,22 @@ def start(config):
     bindings={str(p):dict(bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest())for p in [old/'runtime-installed.json',old/'gates/runtime-native.json',old/'wheel-native-metadata.json']}
     peer=dict(kind='FIXED_PEER_RESERVATION',live=False,growth_bytes=cfg['peer_reservation_bytes'],epoch=time.time(),meaning='Conservative peer hard-cap allocation, not live telemetry or stopped-state assertion; both own caps sum to 32 GiB')
     for name,value in [('config.json',cfg),('host.json',host),('peer-usage.json',peer),('reused-runtime-receipts.json',dict(status='PASS',files=bindings,old_prefix=cfg['runtime_prefix'],no_reinstall=True,no_recopy=True))]:(root/name).write_text(json.dumps(value,indent=2)+'\n')
+    if cfg['role']=='gpu':
+        value=call(['/usr/bin/nvidia-smi','--query-gpu=uuid,name,memory.total,memory.used','--format=csv,noheader,nounits'])
+        ready=readiness(value,cfg['GPU'],host['boot_id'])
+        (root/'gpu-ready.json').write_text(json.dumps(ready)+'\n')
+        (root/'gates/fresh-native-GPU-readiness.json').write_text(json.dumps(dict(status='PASS',native_query=value,**ready))+'\n')
     # Stage all predeclared JSON controls before arming; source/clock fields stay explicit.
     for name in ['science-plan.json','allocation-approval.json']:
         src=Path(config).parent/(cfg['role']+'-'+name)
         if src.exists():shutil.copyfile(src,root/name)
     call(['sudo','-n','/usr/bin/python3','-I','-B',repo/'scripts/e021_portable_arm.py','--config',root/'config.json'])
+    if cfg['role']=='gpu':
+        live=json.loads((root/'logs/gpu-guard-live.json').read_text())
+        watch=json.loads((root/'logs/supervision.json').read_text())
+        if live['gpu_uuid']!=ready['gpu_uuid']or live['guard_pid']!=watch['process']['pid']:
+            raise ValueError('Fresh parent device guard is not live on the admitted GPU')
+        (root/'gates/current-boot-device-guard.json').write_text(json.dumps(dict(status='PASS',telemetry=live,watchdog=watch))+'\n')
     print('E021_REUSED_HELD_NODE_READY',json.dumps(cfg),flush=True)
 
 if __name__=='__main__':

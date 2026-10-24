@@ -57,7 +57,7 @@ def run(root):
     validate_lease(lease,clock,time.time())
     if binding(lease['financial_receipt'])!=lease['financial_binding']:raise ValueError('Admitted financial bytes differ')
     with(r/'E009-controller-started.json').open('x')as f:json.dump(dict(pid=os.getpid(),epoch=time.time(),scope=binding(r/'E009-only-scope.json')),f)
-    wait(r,g,6,min(clock['deadline_epoch']-7200,time.time()+12*3600))
+    wait(r,g,nodes.get('gpu_bank_task_index',6),min(clock['deadline_epoch']-7200,time.time()+12*3600))
     bank=read(r,g,g['root']+'/gates/E009-bank-reader.json')
     if bank['status']!='PASS_ACTUAL_E009_BANK_READER':raise ValueError('Full native GPU bank not proved')
     validate_lease(lease,clock,time.time())
