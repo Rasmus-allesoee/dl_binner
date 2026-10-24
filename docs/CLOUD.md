@@ -1,6 +1,47 @@
 # Google Cloud workspace operations
 
+**Owner has now approved the revised portable scope under the same remaining $45.**
+[Approved policy](../experiments/E021-frozen-sequence-hybrid/portable-policy.json) supersedes the pending-approval wording in the dated reassessment below.
+Actual native preparation/execution must pass every gate; no new start at this source freeze.
+
 Updated: 2026-10-24 (Copenhagen; initial provisioning receipts are October 13 UTC).
+
+**October 24, 18 UTC: repeated T4 capacity failures justify a placement redesign,
+not a CPU-only mandate.** [E021 execution strategy](../experiments/E021-frozen-sequence-hybrid/execution-strategy.md)
+records four additional exhausted-pool starts after the original one; current
+control-plane state is TERMINATED E2 / no GPU, with original resources/protections.
+This reassessment made no new start, quota request, mutation, transfer or science.
+Read-only live balance DKK 1,865.13 / 95%, January 12 expiry; delayed usage unknown,
+$35 reserve. Global/T4/L4 quota is one, usage zero; that is not capacity proof.
+
+Recommend the original persistent CPU node plus one temporary extraction-only
+worker, immutable bank return and CPU downstream work. Proposed ordered capacity
+placements: G2/L4 Iowa b, G2/L4 c, then N1/T4 f. No unbounded retries, Spot/DWS,
+reservation or vendor change. Current authorization still explicitly excludes
+new VM/zone/GPU/disk resources; **approval of the resource exception is pending**.
+The [proposal](../experiments/E021-frozen-sequence-hybrid/execution-strategy.json)
+prices the remaining original $45, not a new budget: ~$42.70 L4 / $37.17 T4 upper
+including temporary 40+64 GiB disks, original CPU and measured-rate cost reserves.
+L4 quota exists, but G2 cannot use the original standard boot disk and the current
+300 GiB balanced quota is fully used; new worker disks require >=404 GiB quota.
+Never resize/detach/reformat the original disks to hide this change.
+
+All setup/staging/transfer/GPU/CPU/collection minutes share the original 48-hour
+maximum, STOP <=48.25 hours before October 28. Proposed worker/CPU subcaps are
+38/8 running hours; host/device/work/free/evidence/review ceilings stay fixed.
+Price <=20 GiB bulk streams through Mac plus <=2 GiB compact return as <=22 GiB
+charged outbound, with bounded buffers and no bulk Mac retention or credential
+copy. This is not free internal traffic or a tested transport. Aggregate work
+must include both copies, runtime/setup and coexistence; require measured gates.
+Avoid bulk staging into the bucket's seven-day soft-delete lifecycle. Inspect
+actual original df/du before any storage request; existing free space and zonal/
+disk-type compatibility are separate issues. No current cleanup is needed locally.
+
+Original stopped disks stay $31.20/month, original $8 full-interval forecast
+~$7.63 through October 28 00:00 Copenhagen. Temporary-worker disks would be paid
+from the same $45 and removed only after verified evidence/input/cache preservation;
+no automatic retention extension. [Operations](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt)
+owns the exact proposed scope. The next block is the preserved 13–14 UTC snapshot.
 
 **October 24 E021 GPU admission: capacity blocked, stopped and rolled back.**
 [Native observation](../experiments/E021-frozen-sequence-hybrid/native-observed.json)

@@ -1,0 +1,105 @@
+{
+  "record": "Approved E021 portable execution policy",
+  "UTC": "2026-10-24T19:02:10.740708+00:00",
+  "approval": "Direct owner reply: Approve revised resource scope",
+  "approval_record": {
+    "path": "artifacts/e021-portable-admission/20261024T183844Z/approval.json",
+    "sha256": "db8c6c9dcd240842a5cd42522283e8603e048999ce47a6665ba39e8832d4beba"
+  },
+  "base_science": "f136b2c5f6195ae91a0566f23d84c8c6c9f69bf9",
+  "new_ceiling_USD": 45,
+  "ceiling_is_remaining_original": true,
+  "real_money": false,
+  "resource_policy": {
+    "approval": "OWNER_APPROVED_CURRENT_TASK",
+    "budget": "Remaining original $45 total, not another $45",
+    "scope": "One temporary extraction-only GPU worker plus original E2 for verified staging/CPU head/downstream. Same frozen two-community E021 comparison, no additional treatment.",
+    "placement_order": [
+      {
+        "zone": "us-central1-b",
+        "machine": "g2-standard-8",
+        "GPU": "one ordinary L4",
+        "boot_GiB": 40,
+        "work_GiB": 64,
+        "disk_type": "pd-balanced"
+      },
+      {
+        "zone": "us-central1-c",
+        "machine": "g2-standard-8",
+        "GPU": "one ordinary L4",
+        "boot_GiB": 40,
+        "work_GiB": 64,
+        "disk_type": "pd-balanced"
+      },
+      {
+        "zone": "us-central1-f",
+        "machine": "n1-standard-8",
+        "GPU": "one ordinary T4",
+        "boot_GiB": 40,
+        "work_GiB": 64,
+        "disk_type": "pd-standard"
+      }
+    ],
+    "at_most_sequential_placement_attempts": 3,
+    "at_most_GPU_workers_present": 1,
+    "no_start_until_previous_failed_candidate_empty_and_removed": true,
+    "no_capacity_loop_or_reservation": true,
+    "quota": "Only if L4 selected: balanced-disk quota at least 404 GiB (original 300 plus temporary 104). Global/T4/L4 GPU quota already 1; recheck usage and CPU quotas. No new service/IAM.",
+    "original_disks_not_resized_or_detached": true,
+    "cleanup_first": "Before requesting/provisioning storage, bounded original-E2 inventory must measure df/du and classify disposable files. Last accepted space fits proposed original-node work; the new disks solve cross-zone placement, not original-disk fullness. Safe cleanup cannot make a zonal disk attach in another zone or make pd-standard valid for G2.",
+    "workload_limits": {
+      "common_wall_clock_hours": 48,
+      "common_provider_STOP_hours": 48.25,
+      "maximum_cumulative_GPU_running_hours": 38,
+      "maximum_cumulative_original_E2_running_hours": 8,
+      "GPU_provider_STOP_hours_at_most": 38.25,
+      "E2_each_STOP_hours_at_most": 8.25,
+      "all_deadlines_also_bound_to_first_VM_start": true,
+      "threads": 4,
+      "loaders": 0,
+      "sampled_host_tree_RSS_GB": 26,
+      "GPU_used_GiB": 14,
+      "Torch_allocator_GiB": 13,
+      "aggregate_extra_work_GiB": 32,
+      "each_free_reserve_GiB": 25,
+      "compressed_science_evidence_GiB": 2,
+      "logical_science_evidence_GiB": 6,
+      "new_local_review_GiB": 6,
+      "bulk_transport_GiB": 20,
+      "all_charged_outbound_including_final_evidence_GiB": 22
+    },
+    "transport": "Plan: bounded encrypted source-node -> Mac -> worker input stream and worker -> Mac -> original-node complete-bank stream via pinned SSH/IAP. Fixed small buffers, no bulk DNA/cache retained on Mac, no credentials copied, no public listener or IAM/service expansion. Price WAN data honestly; do not call it internal free transfer. Avoid bulk GCS staging and its seven-day soft-delete tail.",
+    "source_delivery": "Exact clean shallow source/wheel/model payload from Mac; do not copy SSH/GitHub credentials to worker.",
+    "cache_lifetime": "Preserve complete new banks on original disk after verified transfer; preserve every journal. No partial-bank resume or accepted-science replay. Delete only authorized disposable worker/disks after originals/cache/logs are retained and verified; finish before original October28 boundary.",
+    "retention": "No extension. Disk 96-hour factor is a conservative price upper, not authorization to keep past October28. Source/refined outputs remain on original retained disk.",
+    "native_status": "UNADMITTED: no portable native launcher or Linux/CUDA/driver/transfer/scale gates have passed. Implement/test freeze before launch; source/precision/schedule/views/grouping/evaluator unchanged."
+  },
+  "financial_quote": {
+    "maximum_G2_L4_route": {
+      "GPU_worker_compute_GPU_IP": 32.8423792550454,
+      "original_E2_compute_IP": 2.2526268291387828,
+      "original_disk_attribution": 2.02338709352186,
+      "temporary_104_GiB_disk_costing_upper": 1.341935481831672,
+      "charged_22_GiB_network_upper": 2.6399999999999997,
+      "operations": 0.1,
+      "contingency": 1.5,
+      "total_USD": 42.70032865953772
+    },
+    "maximum_N1_T4_route": {
+      "GPU_worker_compute_GPU_IP": 28.113673361623828,
+      "original_E2_compute_IP": 2.2526268291387828,
+      "original_disk_attribution": 2.02338709352186,
+      "temporary_104_GiB_disk_costing_upper": 0.536774191508666,
+      "charged_22_GiB_network_upper": 2.6399999999999997,
+      "operations": 0.1,
+      "contingency": 1.5,
+      "total_USD": 37.166461475793135
+    },
+    "meaning": "Conservative gross upper estimates at current prices, not observed invoice or speed claim. 38.25 GPU/8.25 CPU stop bounds, 96h costing of temporary 104GiB disks, 48.25h original-disk attribution, 22GiB outbound, operations and contingency. Refresh before launch; stop above $45 or unclear coverage.",
+    "original_storage_forecast_USD": 7.6276,
+    "original_storage_approval_USD": 8,
+    "temporary_worker_disk_cost_in_45_not_original_8": true
+  },
+  "current_stage": "PREPARING_TESTED_ORIGINAL_NODE_INVENTORY_NO_VM_START_YET",
+  "native_runtime_or_science_admitted": false
+}

@@ -1,6 +1,6 @@
 # D014: Google Cloud as the connected Linux research workspace
 
-Date: 2026-10-13; preparation/data/review amendments: 2026-10-14–15. Status: **accepted; infrastructure, separate truth v2 and unchanged controls reviewed; original data-DAG failure preserved**.
+Date: 2026-10-13; preparation/data/review amendments: 2026-10-14–15; execution-strategy review: 2026-10-24. Status: **accepted; infrastructure, separate truth v2 and unchanged controls reviewed; original data-DAG failure preserved**.
 
 ## Problem and decision
 
@@ -184,3 +184,24 @@ Existing30/300 GiB disks still cost$31.20/month; review byOctober 21, no retenti
 extension. The strongest next step is local preparation of D013's one grouping
 mechanism, with full resource/credit admission and separate authorization before
 any later execution. Read-only GitHub remains adequate; no credential change.
+
+## Repeated GPU capacity and execution strategy, October 24, 2026
+
+[E021's reassessment](../../experiments/E021-frozen-sequence-hybrid/execution-strategy.md)
+confirms five failed N1/T4-a starts and a current stopped/restored CPU workspace.
+Keep GCP as the selected provider and CPU as the routine development environment.
+Do not require repeated requests for one GPU/zone before research can progress,
+or infer CPU-only architecture from resource scarcity. A frozen GLM cache allows
+compatible later CPU learning/grouping changes without backbone extraction.
+
+Recommend a separately admitted, temporary extraction worker with a fixed bounded
+L4-b/L4-c/T4-f capacity order, selective verified input transfer and complete cache
+return to the original node. This broadens resource placement, not source/model/
+view/precision/seed/scientific scope. Current $45 covers only the originally named
+existing-VM route: new worker/zone/GPU/disks require explicit owner approval even
+though a conservative alternative quote remains below $45 and credits are ample.
+No new resource, quota request, service, IAM, transfer or VM start was made in
+this reassessment; all native runtime/scale/watchdog gates remain unadmitted.
+Original $8 storage/October 28 review and all historical receipts are preserved.
+[Operations](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt)
+owns the concrete scope; do not interpret this proposal as provision permission.

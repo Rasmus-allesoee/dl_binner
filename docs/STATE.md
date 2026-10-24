@@ -1,8 +1,50 @@
 # Current Research State
 
+**Owner has now approved the revised portable scope under the same remaining $45.**
+[Approved policy](../experiments/E021-frozen-sequence-hybrid/portable-policy.json) supersedes the pending-approval wording in the dated reassessment below.
+Actual native preparation/execution must pass every gate; no new start at this source freeze.
+
 Updated: 2026-10-24 (Copenhagen). This is the single current handoff.
 
 ## Exact next step
+
+**E021 execution reassessed after five capacity refusals: stop identical same-zone
+retries; retain CPU development plus an occasional portable GPU extraction worker.**
+[Strategy](../experiments/E021-frozen-sequence-hybrid/execution-strategy.md) and
+[priced observation/proposal](../experiments/E021-frozen-sequence-hybrid/execution-strategy.json)
+own the owner's sustainability concern, four additional failed starts through
+17:43 UTC, fresh credits/quotas/SKUs and actual tiny cache-relocation checks.
+The VM remains independently TERMINATED / E2 / no GPU; this task made no new start,
+quota/resource change, bulk transfer or scientific run. Old native receipts and
+all f136b2c source/input/criteria locks remain intact.
+
+**Verdict:** persistent failure of one requested pool does not establish that all
+GPUs are unavailable or make full CPU GLM extraction economical. Keep the compact
+CPU learner/grouping path. Freeze and reuse exact parent/crop GLM banks for
+compatible downstream changes, admitting new DNA/model/view/policy changes
+explicitly. Same-Mac 603–871-hour projection is not native E2 timing; it does not
+justify a full CPU fallback inside the current envelope. No architecture, loss,
+precision, sample or feature-family decision follows from the capacity errors.
+
+The reviewed alternative proposes one temporary L4 worker in Iowa b/c, then a
+T4 worker in f only on capacity failure, at most three sequential probes / one
+worker; original E2 handles staging and CPU learning/grouping. New 40/64 GiB
+worker disks and L4 balanced quota >=404 GiB require **resource-scope approval**;
+the current adopted E021 prompt explicitly excludes those resources. Existing
+$45 can remain: conservative maxima ~$42.70 L4 / $37.17 T4 include temporary
+disks and charged bounded streaming transport. This is a plan, not a validated
+native launcher or availability claim. [Operations / exact proposed approval](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt)
+contains the resource exception and unchanged scientific/credit/retention gates.
+No additional money ceiling is requested. Full native/runtime/space/throughput/
+transport/watchdog admission remains, including actual original df/du before any
+storage request. New streams cannot silently expand Mac evidence/review caps.
+
+Latest visible Welcome balance **DKK 1,865.13 / 95%**, January 12, 2027 expiry;
+unknown delayed usage / $35 reserve. Original stopped disks remain $31.20/month,
+original $8 interval forecast ~$7.63 through **October 28, 00:00 Copenhagen**.
+No renewal, deletion, backup upload or new data. Frozen skin remains unscored.
+A full 48.25-hour window still must start before October 25 23:45 CET, with margin.
+The following is the **preserved earlier October 24 capacity/rollback snapshot**.
 
 **E021 GPU capacity blocked before boot; VM independently TERMINATED and restored
 to E2, no GPU.** [Native observation](../experiments/E021-frozen-sequence-hybrid/native-observed.json)

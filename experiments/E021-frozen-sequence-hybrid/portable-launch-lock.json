@@ -1,0 +1,28 @@
+{
+  "record": "E021 portable operational source; f136b2c science unchanged",
+  "UTC": "2026-10-24T19:03:08.959467+00:00",
+  "base_science": "f136b2c5f6195ae91a0566f23d84c8c6c9f69bf9",
+  "files": {
+    "scripts/e021_portable_inventory.py": {
+      "bytes": 8100,
+      "sha256": "c0fb8fb796957de2241792fc84760e31eeeb2f0ad4abf4c9c4a8ce323595848d"
+    },
+    "scripts/e021_portable_cloud.py": {
+      "bytes": 7375,
+      "sha256": "fa4f2fed8a2f4b4f7cd767dd745936c3906ff5c456a8a168a7a44517cdad0bf9"
+    },
+    "scripts/e021_portable_transport.py": {
+      "bytes": 7878,
+      "sha256": "a435a9673e4e83431c7bd4269e7e5c33fb7eb5974ad26b044a19a0dfb1e5337d"
+    },
+    "tests/test_e021_portable_operations.py": {
+      "bytes": 5836,
+      "sha256": "11328ddb5a2d2af418affef8614ac3c922cb56cf6483a64a4e1255bd62d9bf78"
+    },
+    "experiments/E021-frozen-sequence-hybrid/portable-policy.json": {
+      "bytes": 5755,
+      "sha256": "040e1092c80b990bbedcea2f1f14085279107501fd55a15095e8b07fb46f62eb"
+    }
+  },
+  "native_status": "Only local operations/transport contracts pass; native host/runtime/resources unadmitted"
+}

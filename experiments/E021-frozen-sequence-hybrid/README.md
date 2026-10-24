@@ -1,5 +1,13 @@
 # E021: frozen sequence/context hybrid and skin admission
 
+**Execution reassessed after repeated capacity refusal.** [Current strategy](execution-strategy.md)
+recommends occasional portable GPU extraction/cache reuse and routine CPU work,
+not another identical same-zone retry or an unadmitted full CPU GLM fallback.
+The [priced resource proposal](execution-strategy.json) remains within the original
+$45 but requires new resource-scope approval. No new start or science in this task;
+[operations](OPERATIONS.md#exact-following-prompt) owns the exact proposed request.
+The following local/native snapshot is preserved prior evidence.
+
 **Local implementation and bounded skin source admission completed. October 24
 GPU admission was blocked by zonal capacity before guest boot; VM independently
 TERMINATED and restored to E2. No community extraction/fit/score.**

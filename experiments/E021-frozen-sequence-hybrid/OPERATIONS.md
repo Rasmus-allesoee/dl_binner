@@ -1,5 +1,39 @@
 # E021 operations
 
+**Owner has now approved the revised portable scope under the same remaining $45.**
+[Approved policy](portable-policy.json) supersedes the pending-approval wording in the dated reassessment below.
+Actual native preparation/execution must pass every gate; no new start at this source freeze.
+
+## Current decision after repeated capacity failures, October 24, 18 UTC
+
+**Change execution strategy; no new job or resource mutation in this task.**
+The owner reports repeated unavailability over hours; live operations confirm
+four more failed starts after the original, last at 17:43 UTC. The VM is still
+TERMINATED / E2 / no GPU, original protected resources unchanged. The [execution
+strategy](execution-strategy.md) gives the verdict and [priced record](execution-strategy.json)
+binds fresh credit/quotas/SKUs and actual restore-only tests. Old receipts remain
+unchanged; their single-attempt status is a dated observation, not the cumulative
+history of later owner actions.
+
+Do not keep submitting the same N1/T4-a tuple as the ordinary development plan.
+Do not replace full frozen GLM extraction with an unadmitted long CPU run. Keep
+CPU as the regular learning/grouping path, and propose a short-lived extraction
+worker with a fixed small placement list and immutable cache return. Exact
+source/views/math/schedule/criteria and all populations remain fixed.
+
+The proposed L4-b / L4-c / T4-f scope fits the **remaining original $45**, with
+conservative maxima ~$42.70 / $37.17 including new temporary disks and charged
+streaming transport. It needs explicit resource exceptions to the current
+same-existing-VM authorization; no approval is inferred from having credit.
+Fresh balance is DKK 1,865.13 / 95%, expiry January 12, unknown delayed usage/$35
+reserve. Original $8 storage ends October 28 00:00 Copenhagen, without renewal.
+
+Real installed Mac readers restored both original tiny GLM banks unchanged at
+new paths and refused corrupt/overwrite cases. No GLM/Torch loaded or science
+repeated. This supports cache portability only; it is not Linux/CUDA, full-scale,
+SSH-stream or native-launch admission. The exact proposed owner approval is below.
+The following admission/rollback section is the **preserved earlier snapshot**.
+
 ## GPU admission outcome, October 24, 2026
 
 **Capacity blocked before guest boot; comparison not executed. VM independently
@@ -273,7 +307,10 @@ Arm/test a fresh current-boot/process held-parent exit watcher and independent p
 
 If healthy and long, verify fresh supervision and real scientific progress, wait a few minutes then report stage/logs and finish rather than polling to completion; follow a <=15-minute job through collection. Collect on failure/limit, stop and independently verify TERMINATED. After successful shutdown verify completion, archive/member/alias bytes and allocation/storage/export cost before bounded local frozen E009-v2 and separately named oral provided-origin diagnostics. Keep all 156/799 full denominators, 3.3034% E009 N-quarantine, oral known-shared sensitivity and every length/origin/eligibility/marker/unknown/non-target/excluded/unassigned population. Apply original keep/modify/abandon criteria unchanged. This is a development bundle, not causal isolation or SOTA/feature-family proof. Skin remains unscored, with its 610-target origin-only/overlap limitations and separate evaluator/compute/retention admission. Update records/check/commit with structured what changed/why; report measured resources/costs, results/limits, one next strongest decision and exact next prompt.
 
-## Exact following prompt
+## Prior same-resource continuation, superseded as the recommended next step
+
+This preserves the earlier bounded authorization. The owner's later repeated-
+capacity concern prompted the strategy above; it does not authorize new resources.
 
 Continue E021 under the existing October 24 $45 credit-only authorization. Read
 AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E021's native-observed.json,
@@ -321,3 +358,92 @@ archive/members/aliases/costs before the frozen diagnostics, full 156/799 refere
 denominators, N-quarantine and every population. Update records/check/commit with
 structured what changed/why; report actual status/costs/limits, one next strongest
 decision and exact following prompt. Stop before unclear or uncovered spending.
+
+## Exact following prompt
+
+**Proposed resource-scope approval, not effective yet.** The current authorization
+says “No new VM, zone, accelerator alternative, disk increase”. This request changes
+those explicit resource restrictions while keeping the remaining original $45,
+scientific scope, credit-only condition and October 28 boundary. No new budget or
+permission to repeat accepted science is requested.
+
+Our goal is a substantially stronger binner without a recurring GPU-placement
+bottleneck. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D014/D015 and E021's
+execution-strategy.md/json, prior native/failed receipts, original f136b2c source/
+candidate/protocol/criteria/reuse locks and operations. Preserve every accepted
+source/input/truth/output, original Mac failure/tolerance and all failed journals.
+
+I approve the revised E021 resource scope under the REMAINING original $45 gross,
+Welcome-credit-only ceiling. Permit one temporary extraction worker in this fixed
+capacity order: g2-standard-8 + ordinary L4 in us-central1-b; then the same in -c;
+then n1-standard-8 + ordinary T4 in -f. At most three sequential placement attempts,
+at most one worker present and one successful science execution. Only capacity
+rejection before science permits the next placement; no quality/numerical/grid
+selection or automatic loop. Allow its 40 GiB boot + 64 GiB work disks: balanced
+for G2, standard for T4. Allow balanced quota >=404 GiB if needed, after fresh
+space/old-file review. Keep the original E2 VM and 30/300 GiB disks unchanged;
+no detach/format/resize, no new service/IAM/public listener, credential copy,
+reservation, Spot/DWS, Marketplace/vWS or other provider spend.
+
+First prepare and locally test/freeze the actual selective input transport,
+complete-bank restore-only consumer and bounded GPU-extraction/CPU-consumer
+launchers. The current strategy and Mac relocation proof are not those launchers.
+Use exact science/wheel/model/default bytes and original six extraction inputs;
+no regenerated views, markers, neighbor inputs or baseline fits. Source transfer
+must not copy SSH/GitHub credentials. Preserve the float32 reference path and
+predeclared CPU/GPU tolerances, including on L4; no quantization/fp16/TF32 or new
+backbone. Test actual readers/writers, safe fresh/failure/resume layouts, partial/
+corrupt refusal and complete-axis/DNA export. Missing accepted bytes must refuse.
+
+Refresh paid-account Welcome balance/scope/expiry, unknown delayed usage/$35
+reserve, all eligible compute/GPU/disk/network/operation prices, quotas and the
+original retention. Before provisioning/requesting storage, a bounded inventory
+of the original node must measure df/du and assess safe disposable-file cleanup.
+New disks are for placement compatibility; do not grow the original disk. Stop
+before unclear/uncovered or >$45 spending. Proposed maxima ~$42.70 L4 / $37.17
+T4 are not measured speed or a passing native gate.
+
+Use the existing E2 for verified staging and later CPU learning/grouping; use the
+worker only for exact parent/crop frozen extraction. Permit <=20 GiB total bounded
+encrypted bulk transport, source-node -> Mac -> worker and worker -> Mac -> original
+node, without bulk Mac retention, plus original <=2 GiB compact science evidence;
+price <=22 GiB total outbound. Retain fixed small buffers, every byte/member/axis
+receipt and a tested restore-only return. Do not silently classify WAN traffic as
+free internal traffic. Keep original 6 GiB logical evidence / 6 GiB local review.
+Avoid large bucket staging/soft-delete retention tails. Preserve complete caches
+and necessary runtime/source/log payloads on the original node before deleting
+only authorized disposable temporary copies/resources; do not delete the only
+accepted copy or extend storage implicitly.
+
+All starts/setup/quota wait/verification/transfers/extraction/two CPU head fits/
+group/refine/export/collection/upload/readback share <=48 hours from the first
+VM start, independent provider STOP <=48.25 hours and before October 28 00:00
+Copenhagen. GPU running <=38 hours / STOP <=38.25; original E2 running <=8 hours /
+STOP <=8.25 across boots, all also bounded by the original common absolute deadline.
+Do not reset a clock on restart or admission failure. Four numerical threads,
+zero loaders, 26 GB sampled host tree RSS, 14 GiB device / 13 GiB allocator,
+32 GiB aggregate extra work across both nodes including staging/runtime/coexisting
+copies, and 25 GiB free reserve on each remain. Verify measured peak space/time/
+throughput/full RAM/return before science; stop if the complete work cannot fit.
+Arm/test fresh boot/PID/start/command held-parent exit watchers and provider STOP
+on each relevant boot before release. Inspect the real GPU/driver/Secure Boot,
+complete independently owned runtime/import/library/source/CLI, CPU/GPU parity,
+native tiny extraction/cache/gradient/EMA/noncollapse/reload/geometry/CPM/marker/
+refiner/export/collection paths. Restore original-node prerequisites without
+altering accepted environments. Every operational recovery needs fresh journals
+and verified reuse inside this same clock/budget; never replay passed science.
+
+Only after all gates pass, run the unchanged E009 ten-depth / oral sequence-only
+E021 candidate and fixed CPM/E013, on full axes/all DNA; truth stays outside
+features/training. Reuse E019 and older summaries without refit/rescore. No new
+data, skin features/fit/score, mapping, aligner, external tool, ablation/grid,
+model/default/threshold change or retention extension. For a healthy long phase,
+verify current supervision/progress, wait a few minutes, report and hand off;
+follow a short phase through collection. On failure collect, stop and independently
+confirm TERMINATED, retaining failures. After completion verify cache/compact
+archives/members/aliases and actual allocation/storage/export costs before frozen
+E009-v2 / oral provided-origin review, all 156/799 full denominators, N quarantine,
+known-shared and every length/origin/eligibility/marker/excluded/unassigned population.
+Apply the original criteria without tuning. Update records/check/commit with
+structured what changed/why and report actual status/costs/limits, one next decision
+and exact following prompt. Keep the October 28 storage review visible.

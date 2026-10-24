@@ -1,0 +1,332 @@
+{
+  "record": "E021 compute-strategy reassessment and separately scoped portable-worker proposal",
+  "UTC": "2026-10-24T18:28:32.780105+00:00",
+  "status": "LOCAL_REASSESSMENT_COMPLETE_REVISED_RESOURCE_SCOPE_NOT_AUTHORIZED",
+  "science_source": "f136b2c5f6195ae91a0566f23d84c8c6c9f69bf9",
+  "review_source": "2c599fb",
+  "verdict": "Stop serial identical us-central1-a T4 retries. Keep CPU as routine research path; use occasional placement-flexible GPU extraction with immutable cache reuse. Do not force the full frozen GLM job onto CPU or reject the information family from a resource error.",
+  "VM_start_requests_this_task": 0,
+  "resource_quota_permission_billing_mutations_this_task": false,
+  "community_extraction_fit_score": false,
+  "observed": {
+    "current_VM_status": "TERMINATED",
+    "current_VM_machine": "e2-standard-8",
+    "current_accelerators": [],
+    "original_resource_security_network_metadata_equal": true,
+    "last_successful_start": "2026-10-23T04:18:30.392-07:00",
+    "four_more_rejected_start_times_UTC": [
+      "2026-10-24T14:53:59.227000+00:00",
+      "2026-10-24T15:08:42.024000+00:00",
+      "2026-10-24T16:15:08.275000+00:00",
+      "2026-10-24T17:43:06.645000+00:00"
+    ],
+    "additional_failures_not_executed_by_this_task": true,
+    "total_confirmed_since_original_admission": 5,
+    "quota": {
+      "DISKS_TOTAL_GB": {
+        "limit": 2458.0,
+        "metric": "DISKS_TOTAL_GB",
+        "usage": 30.0
+      },
+      "SSD_TOTAL_GB": {
+        "limit": 300.0,
+        "metric": "SSD_TOTAL_GB",
+        "usage": 300.0
+      },
+      "NVIDIA_T4_GPUS": {
+        "limit": 1.0,
+        "metric": "NVIDIA_T4_GPUS",
+        "usage": 0.0
+      },
+      "NVIDIA_L4_GPUS": {
+        "limit": 1.0,
+        "metric": "NVIDIA_L4_GPUS",
+        "usage": 0.0
+      }
+    },
+    "credit": {
+      "observed_UTC_window": [
+        "2026-10-24T18:13:10+00:00",
+        "2026-10-24T18:17:26+00:00"
+      ],
+      "source": "Fresh signed-in Billing Credits active FreeTrialUpgrade row in Chrome",
+      "remaining_DKK": 1865.13,
+      "original_DKK": 1973.43,
+      "percent_remaining": 95,
+      "status": "Available",
+      "scope": "Certain usage; Free Trial terms",
+      "application": "Net pricing",
+      "expiry": "2027-01-12",
+      "pending_usage": "Unknown, not zero; maintain prior more-than-24-hour-delay interpretation and $35 reserve",
+      "real_money_authorized": false,
+      "new_billing_terms_or_account_change": false
+    },
+    "services_enabled_unchanged": true,
+    "storage_end": "2026-10-28T00:00:00+01:00",
+    "local_free_bytes": 21692162048,
+    "guest_free_is_not_fresh": true,
+    "last_accepted_guest_free_GiB": 63.05056762695,
+    "new_cleanup_or_storage_request": false
+  },
+  "ordinary_prices_USD": {
+    "source_UTC": "2026-10-24T18:01:14.101348+00:00",
+    "source_binding": {
+      "bytes": 21970,
+      "sha256": "944e8755b4aade1e11dc0bbe703d51e9f0ced9b3adcf1a9b85a813991212d4d6"
+    },
+    "E2_8_32_IP_hour": 0.2730456762592464,
+    "N1_8_30_T4_IP_hour": 0.7349979963823223,
+    "G2_8_32_L4_IP_hour": 0.8586242942495529,
+    "N1_V100_IP_hour": 2.864997996383447,
+    "pd_standard_GiB_month": 0.03999999984800155,
+    "pd_balanced_GiB_month": 0.09999999984803326,
+    "original_disks_month": 31.199999949850024,
+    "FX_DKK_per_USD": 6.578099999996525
+  },
+  "CPU_caution": {
+    "source": "Original immutable E021 resource-plan.json, synthetic own-DNA Mac CPU timing; not native E2 throughput",
+    "full_projection_hours": [
+      603.1212111707508,
+      871.4846268283006
+    ],
+    "same_speed_E2_run_disk_proxy_USD": [
+      189.97181875304906,
+      274.50123873528173
+    ],
+    "not_a_native_quote": true,
+    "full_CPU_fallback_not_admitted": true,
+    "original_E019_allocation_hours": 2.8273,
+    "baseline_schedule_reused_without_refit": true
+  },
+  "cache_contract": {
+    "raw_NPY_both_communities_bytes": 9350150516,
+    "additional_views_log_forecast_bytes": 1741927800,
+    "exact_extraction_inputs": {
+      "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa": {
+        "bytes": 237732361,
+        "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+      },
+      "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz": {
+        "bytes": 42384557,
+        "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+      },
+      "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/E009-dev5/features/views.npz": {
+        "bytes": 60980613,
+        "sha256": "3ded4f6d5c7bcbdb13e0204da696de940b4c46330358e5ea1ce668b02c22aabe"
+      },
+      "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna": {
+        "bytes": 1757466319,
+        "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+      },
+      "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.npz": {
+        "bytes": 333765352,
+        "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+      },
+      "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.npz": {
+        "bytes": 419791282,
+        "sha256": "80d30e98c98642cf4dca5aad1b76a061065b3f93e92bab85e6b1ada5e0b4ac76"
+      }
+    },
+    "extraction_input_bytes": 2852120484,
+    "context_tokens_not_needed_on_GPU_bytes": 6894477926,
+    "actual_tiny_Mac_relocation": {
+      "bytes": 4736,
+      "sha256": "f4f094823eaf96aac44a3f7b7897e51165fdde390ad528ec250aab8493295a29"
+    },
+    "no_GLM_or_training_rerun": true,
+    "caveat": "Current Bank binds complete hybrid policy as well as exact features/views/DNA/model. Downstream changes compatible with those identities may reuse; future head-policy or depth changes need explicit tested compatibility/rebind, never manifest edits or fallback. New DNA/crops/model/tokenizer/pooling/precision require fresh declared features."
+  },
+  "proposal": {
+    "approval": "RESOURCE_EXCEPTIONS_REQUIRED; existing $45 is not permission for new VM/zone/disks/GPU model",
+    "budget": "Remaining original $45 total, not another $45",
+    "scope": "One temporary extraction-only GPU worker plus original E2 for verified staging/CPU head/downstream. Same frozen two-community E021 comparison, no additional treatment.",
+    "placement_order": [
+      {
+        "zone": "us-central1-b",
+        "machine": "g2-standard-8",
+        "GPU": "one ordinary L4",
+        "boot_GiB": 40,
+        "work_GiB": 64,
+        "disk_type": "pd-balanced"
+      },
+      {
+        "zone": "us-central1-c",
+        "machine": "g2-standard-8",
+        "GPU": "one ordinary L4",
+        "boot_GiB": 40,
+        "work_GiB": 64,
+        "disk_type": "pd-balanced"
+      },
+      {
+        "zone": "us-central1-f",
+        "machine": "n1-standard-8",
+        "GPU": "one ordinary T4",
+        "boot_GiB": 40,
+        "work_GiB": 64,
+        "disk_type": "pd-standard"
+      }
+    ],
+    "at_most_sequential_placement_attempts": 3,
+    "at_most_GPU_workers_present": 1,
+    "no_start_until_previous_failed_candidate_empty_and_removed": true,
+    "no_capacity_loop_or_reservation": true,
+    "quota": "Only if L4 selected: balanced-disk quota at least 404 GiB (original 300 plus temporary 104). Global/T4/L4 GPU quota already 1; recheck usage and CPU quotas. No new service/IAM.",
+    "original_disks_not_resized_or_detached": true,
+    "cleanup_first": "Before requesting/provisioning storage, bounded original-E2 inventory must measure df/du and classify disposable files. Last accepted space fits proposed original-node work; the new disks solve cross-zone placement, not original-disk fullness. Safe cleanup cannot make a zonal disk attach in another zone or make pd-standard valid for G2.",
+    "workload_limits": {
+      "common_wall_clock_hours": 48,
+      "common_provider_STOP_hours": 48.25,
+      "maximum_cumulative_GPU_running_hours": 38,
+      "maximum_cumulative_original_E2_running_hours": 8,
+      "GPU_provider_STOP_hours_at_most": 38.25,
+      "E2_each_STOP_hours_at_most": 8.25,
+      "all_deadlines_also_bound_to_first_VM_start": true,
+      "threads": 4,
+      "loaders": 0,
+      "sampled_host_tree_RSS_GB": 26,
+      "GPU_used_GiB": 14,
+      "Torch_allocator_GiB": 13,
+      "aggregate_extra_work_GiB": 32,
+      "each_free_reserve_GiB": 25,
+      "compressed_science_evidence_GiB": 2,
+      "logical_science_evidence_GiB": 6,
+      "new_local_review_GiB": 6,
+      "bulk_transport_GiB": 20,
+      "all_charged_outbound_including_final_evidence_GiB": 22
+    },
+    "transport": "Plan: bounded encrypted source-node -> Mac -> worker input stream and worker -> Mac -> original-node complete-bank stream via pinned SSH/IAP. Fixed small buffers, no bulk DNA/cache retained on Mac, no credentials copied, no public listener or IAM/service expansion. Price WAN data honestly; do not call it internal free transfer. Avoid bulk GCS staging and its seven-day soft-delete tail.",
+    "source_delivery": "Exact clean shallow source/wheel/model payload from Mac; do not copy SSH/GitHub credentials to worker.",
+    "cache_lifetime": "Preserve complete new banks on original disk after verified transfer; preserve every journal. No partial-bank resume or accepted-science replay. Delete only authorized disposable worker/disks after originals/cache/logs are retained and verified; finish before original October28 boundary.",
+    "retention": "No extension. Disk 96-hour factor is a conservative price upper, not authorization to keep past October28. Source/refined outputs remain on original retained disk.",
+    "native_status": "UNADMITTED: no portable native launcher or Linux/CUDA/driver/transfer/scale gates have passed. Implement/test freeze before launch; source/precision/schedule/views/grouping/evaluator unchanged."
+  },
+  "quotes": {
+    "maximum_G2_L4_route": {
+      "GPU_worker_compute_GPU_IP": 32.8423792550454,
+      "original_E2_compute_IP": 2.2526268291387828,
+      "original_disk_attribution": 2.02338709352186,
+      "temporary_104_GiB_disk_costing_upper": 1.341935481831672,
+      "charged_22_GiB_network_upper": 2.6399999999999997,
+      "operations": 0.1,
+      "contingency": 1.5,
+      "total_USD": 42.70032865953772
+    },
+    "maximum_N1_T4_route": {
+      "GPU_worker_compute_GPU_IP": 28.113673361623828,
+      "original_E2_compute_IP": 2.2526268291387828,
+      "original_disk_attribution": 2.02338709352186,
+      "temporary_104_GiB_disk_costing_upper": 0.536774191508666,
+      "charged_22_GiB_network_upper": 2.6399999999999997,
+      "operations": 0.1,
+      "contingency": 1.5,
+      "total_USD": 37.166461475793135
+    },
+    "meaning": "Conservative gross upper estimates at current prices, not observed invoice or speed claim. 38.25 GPU/8.25 CPU stop bounds, 96h costing of temporary 104GiB disks, 48.25h original-disk attribution, 22GiB outbound, operations and contingency. Refresh before launch; stop above $45 or unclear coverage.",
+    "original_storage_forecast_USD": 7.6276,
+    "original_storage_approval_USD": 8,
+    "temporary_worker_disk_cost_in_45_not_original_8": true
+  },
+  "serious_alternatives": {
+    "same_zone_retries": "Deprioritized after five visible exhausted-pool errors; no new identical call in this task",
+    "pure_CPU": "Continue compact CPU architecture, code/tests, cached learners/grouping. Not automatic full GLM extraction; rough price/time conflicts with current envelope.",
+    "same_zone_V100": "Regional quota exists but ~$2.865/h including VM/IP; do not substitute speculatively. No availability or full runtime proof.",
+    "reservation": "Not a remedy creating unavailable physical capacity; billed idle capacity and commitments are a separate spending decision.",
+    "other_GPU_providers": "May help later but current Welcome credits do not fund unrelated vendors; no unapproved real-money fallback.",
+    "larger_architecture": "No change now. Frozen extraction is the outstanding information experiment; GPU scheduling does not determine model families."
+  },
+  "sources": [
+    {
+      "url": "https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-resource-availability",
+      "finding": "Request-specific physical capacity failures are distinct from quota. Alternate configuration or placement is a supported remedy; no pool is guaranteed."
+    },
+    {
+      "url": "https://docs.cloud.google.com/compute/docs/regions-zones/gpu-regions-zones",
+      "finding": "Iowa catalogs G2/L4 in a,b,c; N1/T4 in a,b,c,f. Catalog support is not free capacity."
+    },
+    {
+      "url": "https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines",
+      "finding": "g2-standard-8 has 8 vCPU, 32 GiB RAM and one 24 GiB L4. G2 does not support the original pd-standard boot type."
+    },
+    {
+      "url": "https://docs.cloud.google.com/compute/docs/disks/persistent-disks",
+      "finding": "Zonal PD cannot be attached across zones. Standard PD favors sequential IO; retain random-access head fitting on original balanced disk."
+    },
+    {
+      "url": "https://cloud.google.com/products/compute/gpus-pricing",
+      "finding": "Ordinary T4 GPU is $0.35/hour; ordinary V100 $2.48/hour before VM/IP. L4 cost included in G2 whole-VM pricing; Catalog component sum used without DWS/vWS."
+    },
+    {
+      "url": "https://cloud.google.com/vpc/network-pricing",
+      "finding": "Conservative North America-to-Europe first paid tier $0.12/GiB; do not assume free offsets. Streaming via Mac is charged outbound transport."
+    },
+    {
+      "url": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "finding": "Paid upgrade retains unused Welcome credit for covered products. Recheck product scope/balance/pending usage; no Marketplace/vWS/commitments or uncovered cost."
+    },
+    {
+      "url": "https://cloud.google.com/terms/free-trial",
+      "finding": "Sections 4.2/4.3 distinguish paid-upgrade retained credits from non-billable-trial restrictions."
+    }
+  ],
+  "retained_evidence": {
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/instance.json": {
+      "bytes": 33009,
+      "sha256": "1e36024399bf6513effe62aa4d20cd5b46e3084ee49e9b95a13230d476cb45cb"
+    },
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/global-quotas.json": {
+      "bytes": 5053,
+      "sha256": "24f8602045bd2722b02aae5c4250662b86ba78f566e08dacd1206e12f8cbc629"
+    },
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/region-quotas.json": {
+      "bytes": 11498,
+      "sha256": "caef4dcfc379acfab0f3d94ab9e50a486627a5d31f47c169c32b0d5e0e1e006e"
+    },
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/disks.json": {
+      "bytes": 2889,
+      "sha256": "7b1e31f2ea8f8d6aec30aee9cc5dd2f290f76661b48b8bc9167c844b143e5192"
+    },
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/services.json": {
+      "bytes": 297410,
+      "sha256": "e832ae2ae9dbea96919965fe30c9e0b4302e3fbcef4565f45226f94088a0aa56"
+    },
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/billing.json": {
+      "bytes": 207,
+      "sha256": "9c4fd259b47b8101051ccaa3bac81f8a453d3d2504adc5bf1667866933d0b1e6"
+    },
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/recent-operations.json": {
+      "bytes": 31412,
+      "sha256": "c57c617ceb6eb18d49812e56ba3275fb9c1e09ed3ec0edf6ccf647dd8ba8e8a0"
+    },
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/planning-prices.json": {
+      "bytes": 21970,
+      "sha256": "944e8755b4aade1e11dc0bbe703d51e9f0ced9b3adcf1a9b85a813991212d4d6"
+    },
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/cache-relocation.json": {
+      "bytes": 4736,
+      "sha256": "f4f094823eaf96aac44a3f7b7897e51165fdde390ad528ec250aab8493295a29"
+    },
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/cache-relocation.log": {
+      "bytes": 4736,
+      "sha256": "f4f094823eaf96aac44a3f7b7897e51165fdde390ad528ec250aab8493295a29"
+    },
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/check-cache-relocation.py": {
+      "bytes": 3431,
+      "sha256": "6327c5fa925c58fa1ecc98d262aaee72670eef1e32df3aa50c007f1fa3a159bd"
+    },
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/storage-list.json": {
+      "bytes": 27420,
+      "sha256": "ff2912ff833f33187fc42c55509074a01e84cc6ec1597a9c1827f19d21eabeb9"
+    },
+    "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-execution-strategy/20261024T175808Z/credit-gate.json": {
+      "bytes": 589,
+      "sha256": "4ebff83d01ea3b1efe423f248c8a037b4aa431ee97e9091a8bb9521ab4d6d674"
+    }
+  },
+  "scientific_source_unchanged": {
+    "candidate_bindings": 115,
+    "package_source_members": 43,
+    "old_native_receipt_and_failed_journals_unchanged": true,
+    "all_E009_E020_inputs_truth_results_unchanged": true,
+    "skin_unscored": true
+  }
+}

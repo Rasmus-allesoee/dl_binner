@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E021 native observation](../../experiments/E021-frozen-sequence-hybrid/native-observed.json) records quota approval but zonal capacity refusal before boot, verified E2 rollback and no science. Complete the same frozen candidate's native admission under existing $45/credit/October 28 limits when capacity permits; this infrastructure result does not motivate another architecture change. [Operations](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md) owns the exact continuation. Preserve all evidence and skin limitations.
+Current handoff: [E021 execution strategy](../../experiments/E021-frozen-sequence-hybrid/execution-strategy.md) replaces repeated same-zone T4 retries with a proposed occasional portable extraction worker plus CPU development/cache reuse. Five visible capacity refusals motivate a resource change, not a model-family conclusion. The remaining $45 can cover the priced alternative, but new VM/zone/GPU/disk resource exceptions are not yet approved. [Operations](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt) owns the exact request; original f136b2c science and October 28 storage boundary remain.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
