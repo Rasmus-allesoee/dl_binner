@@ -1,0 +1,46 @@
+{
+  "record": "E021 operational GPU launch additions; frozen f136b2c candidate unchanged",
+  "prepared_date": "2026-10-24T13:56:45.133368+00:00",
+  "base_commit": "f136b2c5f6195ae91a0566f23d84c8c6c9f69bf9",
+  "base_candidate": {
+    "bytes": 27649,
+    "sha256": "e48e5e2941456fa7560f5325eeda7eed75874feedea572cff906bfd91b4377f0"
+  },
+  "files": {
+    "scripts/e021_gpu_cloud.py": {
+      "bytes": 8350,
+      "sha256": "a8902f348d7f89a44b0d47dba2bc945a860ff265f4b2c6e14378d36ef227e867"
+    },
+    "scripts/e021_gpu_worker.py": {
+      "bytes": 1488,
+      "sha256": "1bd092edd7bbef555482a2f320fd27b06548d660e9e03f3f4dea2e8f95f24fc5"
+    },
+    "scripts/e021_gpu_phase.py": {
+      "bytes": 13286,
+      "sha256": "a544625821f47eea8627f5815b11ce4b190ebe970cb2632ba1c34dcb2455f5be"
+    },
+    "scripts/e021_gpu_arm.py": {
+      "bytes": 6539,
+      "sha256": "feedfeb5a1bae51f98478b36008ff0686de067ec42b29166800cce79235f43ec"
+    },
+    "scripts/e021_gpu_guard.py": {
+      "bytes": 4648,
+      "sha256": "050311a0c088bc5736c658616fe8af635a3fa0560458bda831cbc8d0f885b935"
+    },
+    "scripts/e021_gpu_initial.py": {
+      "bytes": 5866,
+      "sha256": "4de0ec78e55a8c51963a2f57fdf8d656e1b3d61122c08ca19878b0ad6982a8c1"
+    },
+    "tests/test_e021_gpu_operations.py": {
+      "bytes": 5956,
+      "sha256": "e9c22172d807eb298d7fdc3e0c63ab35d38436dae22b1b925aa80b8b37dcd83d"
+    },
+    "experiments/E021-frozen-sequence-hybrid/gpu-native-plan.json": {
+      "bytes": 4979,
+      "sha256": "1506dd8a20e1a1568d744349fa2d4301a93539e34be72668655e01ba4874c684"
+    }
+  },
+  "source_rule": "Exact clean commit containing these operational bytes is pushed/synced before native admission. Original candidate115bindings remain checked separately.",
+  "scientific_changes": false,
+  "hardware_native_status": "UNADMITTED until actual Linux/current boot gates pass; local tests use explicit sampler doubles outside native GPU boundary."
+}

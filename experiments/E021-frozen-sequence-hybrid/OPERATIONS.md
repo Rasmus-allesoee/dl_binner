@@ -1,5 +1,35 @@
 # E021 operations
 
+## Current GPU admission, October 24, 2026
+
+The owner authorized the new **$45 credit-only GPU admission and conditional comparison**.
+[Admission](gpu-admission.json) verifies live paid-account Welcome credit **DKK 1,866.09 /
+95%**, January 12 expiry, >24-hour delayed usage/$35 reserve, unchanged SKU quote
+**$39.23 maximum**, and effective global GPU quota **1** after approved request
+`c8d8dfd3-aa67-4fa1-aa68-37d19d2e841b`. Regional T4 quota is 1. No new service or IAM.
+The original candidate at **f136b2c** and all 115 bindings remain unchanged;
+[new operational sources](gpu-launch-lock.json) implement the approved 48-hour /
+48.25-hour STOP / 32 GiB / 26 GB host / 14 GiB device envelope. Seven local operational
+tests pass, with explicit sampler doubles; actual Linux/CUDA/systemd gates remain
+unadmitted. [Native plan](gpu-native-plan.json) predeclares separate CPU/GPU
+numerical tolerances, preserving old Mac failures. A 13 GiB Torch allocator cap
+leaves headroom below the 14 GiB whole-device monitor; math/precision stay float32.
+
+At this source-freeze point the VM is still stopped; no fit or GPU allocation.
+Only the quota request changes external state. Next execute bounded native
+admission after source push, exact clean read-only sync and provider STOP. Preserve
+Secure Boot; use only matching-kernel Canonical-signed drivers, no security bypass.
+Current local free space exceeds 22 GiB; last accepted guest free was 63.05 GiB,
+not a fresh guest measure. Capture actual root/work df and old-file du before
+installation. No cleanup or disk increase has been needed/requested. All current
+runtime/temporary payloads count in 32 GiB; no deletion of required/accepted bytes.
+The cloud GPU guide suggests >=40 GiB boot; the frozen boot disk is 30 GiB. Treat
+actual provider acceptance, measured free root space and signed-driver needs as
+explicit admission checks; do not resize or ignore a refusal. CUDA runtime is
+planned on the 300 GiB work disk, without a full toolkit on the boot disk.
+
+The following is the **preserved October 23 local-implementation snapshot**.
+
 **Local hybrid implementation and five-file skin admission complete. No community
 extraction, fit, score or VM start.** This invokes E020's following prompt under
 the owner's added conditional VM authorization. The owner allowed this task to
@@ -174,10 +204,11 @@ were checked October 23; account-local SKU/quota/credit evidence is hash-bound i
 the resource/local records. Capacity and GPU-specific credit coverage remain fresh
 gates. Original E019 mixed evidence and E003 failed short-neighbor criterion remain.
 
-## Exact following prompt
+## Authorized GPU execution prompt (invoked October 24)
 
-This is a **proposed new $45 resource/execution authorization**, not already spent
-or authorized by the current conditional existing-resource task. The strongest next
+The owner has invoked this **new $45 credit-only resource/execution authorization**.
+It is not an old budget carry-over and must not trigger another approval request
+for actions already covered here. No scientific run is inferred from authorization. The strongest next
 step is native affordability/admission of this frozen candidate, followed by its one
 development comparison if viable; no further architecture/grid before that evidence.
 
@@ -191,4 +222,14 @@ Push the exact clean branch from Mac and sync VM read-only. Verify original mode
 
 Arm/test a fresh current-boot/process held-parent exit watcher and independent provider STOP before release. Run the one fixed E009 ten-depth / oral sequence-only E021 DAG, all exact parent/crop DNA and frozen schedule, ordinary sole CPM/E013 uniformly. Reuse E019 and all older summaries without refitting/rescoring; no skin features/fit/score, new data/mapping/aligners/external binner, ablation, threshold/grid, model change or retention extension. Retain native full GLM cache, features/embeddings/pre/old/post/accounting and every failed journal; explicit omitted-byte inventory is not backup. Debug recoverable operational errors with fresh attempts and verified reuse within the same clock/budget; never silently replay accepted science or extend.
 
-If healthy and long, verify fresh supervision and real scientific progress, wait a few minutes then report stage/logs and finish rather than polling to completion; follow a <=15-minute job through collection. Collect on failure/limit, stop and independently verify TERMINATED. After successful shutdown verify completion, archive/member/alias bytes and allocation/storage/export cost before bounded local frozen E009-v2 and separately named oral provided-origin diagnostics. Keep all 156/799 full denominators, 3.3034% E009 N-quarantine, oral known-shared sensitivity and every length/origin/eligibility/marker/unknown/non-target/excluded/unassigned population. Apply original keep/modify/abandon criteria unchanged. This is a development bundle, not causal isolation or SOTA/feature-family proof. Skin remains unscored, with its 610-target origin-only/overlap limitations and separate evaluator/compute/retention admission. Update records/check/commit with structured what changed/why; report measured resources/costs, results/limits, one next decision and exact next prompt.
+If healthy and long, verify fresh supervision and real scientific progress, wait a few minutes then report stage/logs and finish rather than polling to completion; follow a <=15-minute job through collection. Collect on failure/limit, stop and independently verify TERMINATED. After successful shutdown verify completion, archive/member/alias bytes and allocation/storage/export cost before bounded local frozen E009-v2 and separately named oral provided-origin diagnostics. Keep all 156/799 full denominators, 3.3034% E009 N-quarantine, oral known-shared sensitivity and every length/origin/eligibility/marker/unknown/non-target/excluded/unassigned population. Apply original keep/modify/abandon criteria unchanged. This is a development bundle, not causal isolation or SOTA/feature-family proof. Skin remains unscored, with its 610-target origin-only/overlap limitations and separate evaluator/compute/retention admission. Update records/check/commit with structured what changed/why; report measured resources/costs, results/limits, one next strongest decision and exact next prompt.
+
+## Exact following prompt
+
+Continue E021 GPU admission under the owner's existing October 24 $45 credit-only
+authorization and all frozen limits. Read the current admission and native receipts
+before acting; preserve f136b2c science and failed journals. Do not repeat a passed
+stage or start another phase implicitly. If no native phase has started, finish
+source/runtime/resource/watchdog gates and execute the authorized comparison only
+when they pass. No new budget or retention extension is implied. Native launch or
+inspection handoff will replace this generic continuation with its exact phase.

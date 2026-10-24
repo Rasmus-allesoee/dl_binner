@@ -1,0 +1,121 @@
+{
+  "record": "E021 live credit/product gate before GPU changes",
+  "UTC": "2026-10-24T13:08:22.815331+00:00",
+  "paid_account_verified": true,
+  "credit": {
+    "name": "Free Trial upgrade / Welcome",
+    "status": "Available",
+    "percent": 95,
+    "remaining_DKK": 1866.09,
+    "original_DKK": 1973.43,
+    "start": "2026-10-13",
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; Free Trial terms",
+    "application": "Net pricing"
+  },
+  "overview": {
+    "period": "2026-10-01 through2026-10-24",
+    "cost_DKK_rounded": 105,
+    "savings_DKK_rounded": 105,
+    "net_DKK": 0
+  },
+  "pending_usage": "UI explicitly warns more than24hours delay possible; unreported usage not assumed zero.",
+  "pending_reserve_USD": 35,
+  "new_incremental_gross_ceiling_USD": 45,
+  "quoted_max48_25h_USD": 39.22804041896891,
+  "covered_products": [
+    "N1 predefined CPU/RAM",
+    "ordinary non-vWS T4 attached to Compute Engine",
+    "existing balanced and standard PD",
+    "standard VM IPv4",
+    "Iowa regional Standard GCS",
+    "ordinary network export and operations"
+  ],
+  "coverage_basis": [
+    "https://docs.cloud.google.com/free/docs/free-cloud-features#during-free-trial",
+    "https://docs.cloud.google.com/free/docs/free-cloud-features#when_the_free_trial_ends",
+    "https://cloud.google.com/terms/free-trial#4.-upgrading-to-a-paid-google-cloud-platform-account."
+  ],
+  "coverage_reason": "Official current rules distinguish non-billable trial GPU/quota access restrictions from retained Welcome credit after paid upgrade. Ordinary first-party Compute GPU service is unlocked and no applicable credit-use exclusion is listed; no Marketplace, partner model API, paid OS/license or commitment.",
+  "coverage_status": "PASS_FOR_SPECIFIED_ORDINARY_FIRST_PARTY_PRODUCTS_ONLY",
+  "VM_started": false,
+  "resource_changed": false,
+  "quota_request_submitted": true,
+  "real_money_authorized": false,
+  "limits": "Unexpected product/credit/scope/cost/retention must stop before charge; alerts are not hard spending caps.",
+  "quota_effective_approval": {
+    "UTC": "2026-10-24T13:35:20.081417+00:00",
+    "quota": {
+      "limit": 1.0,
+      "metric": "GPUS_ALL_REGIONS",
+      "usage": 0.0
+    },
+    "case_id": "c8d8dfd3-aa67-4fa1-aa68-37d19d2e841b"
+  },
+  "storage_review": {
+    "record": "E021 storage review before any increase or cleanup",
+    "date": "2026-10-24T13:31:54.462920+00:00",
+    "actual_local_free_bytes": 25682272256,
+    "local_E021_artifact_bytes": 9339261796,
+    "local_review_allowance_bytes": 6442450944,
+    "local_review_reserve_bytes": 5368709120,
+    "local_action": "No deletion needed: enough measured free space for authorized sequential review plus reserve. Preserve accepted originals, source freezes, failure logs and numerical prefixes.",
+    "VM_state": "TERMINATED",
+    "last_accepted_guest_free_GiB": 63.05056762695,
+    "guest_free_is_fresh": false,
+    "guest_inventory_source": "E020 immutable terminal snapshot; VM has not restarted. Cannot claim fresh guest df while stopped.",
+    "forecast_new_GPU_extra_GiB": [
+      21.4670943364501,
+      26.007158486917614
+    ],
+    "authorized_cap_GiB": 32,
+    "free_reserve_GiB": 25,
+    "launch_required_GiB": 57,
+    "work_disk_GiB": 300,
+    "boot_disk_GiB": 30,
+    "guest_required_action": "On admitted GPU start: capture actual df and bounded top-level du/inventory before runtime extraction. Classify only demonstrably disposable new caches/build trees/downloads; retain their hash/provenance before removal if needed. Never delete accepted inputs/results, unique failed evidence or pinned dependency targets. No extra disk request unless safe cleanup cannot meet measured needs.",
+    "storage_increase_requested": false,
+    "files_deleted": [],
+    "service_or_disk_changed": false,
+    "retention_end": "2026-10-28T00:00:00+01:00",
+    "archive_versions": 104,
+    "archive_bytes": 9384180741,
+    "soft_deleted": 0,
+    "original_storage_forecast_USD": 7.6276,
+    "original_storage_approval_USD": 8,
+    "original_stopped_disk_month_USD": 31.2,
+    "new_return_storage": "At most2GiB new archive within existing horizon; price actual bytes/operations before upload. No retention extension."
+  },
+  "local_operational_tests": {
+    "cases": 7,
+    "status": "PASS",
+    "log": {
+      "bytes": 105,
+      "sha256": "fa129d3b97dde5bc908e09229aed609fbb820f2c2778b1092b370a7687d965b0"
+    }
+  },
+  "native_VM_started": false,
+  "native_setup_and_science_released": false,
+  "status": "CREDIT_QUOTA_SOURCE_LOCAL_OPERATION_GATES_PASS_NATIVE_ADMISSION_NOT_STARTED",
+  "base_candidate": {
+    "bytes": 27649,
+    "sha256": "e48e5e2941456fa7560f5325eeda7eed75874feedea572cff906bfd91b4377f0"
+  },
+  "GPU_operational_lock": {
+    "bytes": 1926,
+    "sha256": "69f4c76716571a25b16dd8f45db55f96b3118125792bacf9033d4b8d8d35fa09"
+  },
+  "evidence_locator": "artifacts/e021-gpu-admission/20261024T130422Z",
+  "SecureBoot": true,
+  "driver_plan": "Preserve current Secure Boot; only Canonical pre-signed matching-kernel modules, no certificate enrollment or disabled protection. Check actual root/work free space before installation. Full CUDA runtime on work disk, no toolkit on boot disk.",
+  "preserved_local_failure": {
+    "log": "artifacts/e021-gpu-admission/20261024T130422Z/gpu-operations-commit.log",
+    "source": {
+      "bytes": 8299,
+      "sha256": "4a5eaa116a4b5618cc69817400889134c9ee67962d120dc648a4bf984668f265"
+    },
+    "reason": "Adjacent numeric/or token introduced a SyntaxError during STOP parser repair; local import test refused before any cloud mutation. Fixed with explicit separated duration fields, then tests/AST pass."
+  },
+  "quota_effective_global_limit": 1,
+  "compute_disk_security_resources_changed": false
+}

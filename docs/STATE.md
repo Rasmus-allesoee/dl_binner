@@ -4,6 +4,16 @@ Updated: 2026-10-24 (Copenhagen). This is the single current handoff.
 
 ## Exact next step
 
+**E021 GPU admission is now owner-authorized under a new $45 credit-only ceiling.**
+[Live admission](../experiments/E021-frozen-sequence-hybrid/gpu-admission.json) records
+remaining credit DKK 1,866.09, unchanged ~$39.23 upper-envelope quote and effective
+global GPU quota 1 after the requested increase. Current preparation has no VM
+start or science. Finish actual Linux/CUDA/space/throughput and fresh boot/process
+watchdog gates before releasing the frozen two-community candidate. Secure Boot
+stays enabled; no service/IAM/disk expansion. The October 28 boundary remains.
+The following local-implementation handoff is dated prior context; its request for
+a new GPU authorization has now been satisfied.
+
 
 **E021 local frozen-sequence hybrid and skin source admission complete; no community
 extraction/fit/score or VM start.** [Operations / exact next prompt](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md),

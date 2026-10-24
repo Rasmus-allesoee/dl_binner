@@ -2,6 +2,19 @@
 
 Updated: 2026-10-24 (Copenhagen; initial provisioning receipts are October 13 UTC).
 
+**October 24 GPU admission authorized: new $45, covered Welcome-credit products only.**
+[Admission](../experiments/E021-frozen-sequence-hybrid/gpu-admission.json) records
+DKK 1,866.09 / 95%, January 12 expiry, delayed usage reserve $35 and ~$39.23
+maximum allocation/disks/export/reserves. Global GPU quota is now 1 after case
+`c8d8dfd3-aa67-4fa1-aa68-37d19d2e841b`; Iowa T4 quota is 1. Current state before
+native admission is TERMINATED E2, original 300/30 GiB disks and Secure Boot enabled.
+No VM start/type change or science yet. Proposed N1/T4 and 48/48.25-hour clock,
+26 GB host/14 GiB device/32 GiB extra/25 GiB reserve still require actual native
+gates. No new service/IAM, storage increase or retention extension. Signed Ubuntu
+GPU driver/root-space checks must preserve protections; current boot disk is 30 GiB.
+[Operations](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md) owns the exact
+current authorization and handoff. The following is the prior dated snapshot.
+
 **E021 implementation/admission is local; VM remains TERMINATED. No new job or
 resource/retention change.** [Operations](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md)
 and [resource plan](../experiments/E021-frozen-sequence-hybrid/resource-plan.json)

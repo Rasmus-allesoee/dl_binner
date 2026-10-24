@@ -1,6 +1,6 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E021 local hybrid/skin admission](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md) is complete; community quality unassessed. Ordinary E019 CPM/E013 stays uniform. Native execution waits for complete GPU/resource/runtime/credit admission; proposed $45 is a new scope, not spent. Skin is an origin-only new-community-setting confirmation with substantial exact oral genome overlap. Storage still ends October 28 at 00:00 Copenhagen.
+Current handoff: [E021 GPU admission](../../experiments/E021-frozen-sequence-hybrid/gpu-admission.json) is owner-authorized under a new $45 credit-only envelope; live credit/price/global quota gates pass. Native runtime/resource/watchdog and comparison outcomes are still unadmitted. Preserve frozen f136b2c science, all earlier evidence, skin origin/overlap limits and October 28 retention.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.
