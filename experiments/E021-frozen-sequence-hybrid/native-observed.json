@@ -1,0 +1,544 @@
+{
+  "record": "E021 GPU-native admission attempt: capacity failure before boot, not scientific failure",
+  "observed_UTC": "2026-10-24T14:22:42.448161+00:00",
+  "status": "NOT_EVALUATED_PROVIDER_CAPACITY_BLOCKED_ROLLBACK_VERIFIED",
+  "base_science_commit": "f136b2c5f6195ae91a0566f23d84c8c6c9f69bf9",
+  "prelaunch_source": "534240b",
+  "actual_start_controller_source": "dca4ff208901801581c8d7283e67e3b6201dbecd",
+  "rollback_repair_source": {
+    "bytes": 9130,
+    "sha256": "8980aa1cf7451d3973497d7d697f2f1b791eaabf787cbde625b0ba6bff69c4f0"
+  },
+  "operational_lock": {
+    "bytes": 1926,
+    "sha256": "0e06b2117a2e1899f2b068cdf9e02e48e4176fbe2079aa6ab2bfca37f84d2a00"
+  },
+  "scientific_candidate_lock": {
+    "bytes": 27649,
+    "sha256": "e48e5e2941456fa7560f5325eeda7eed75874feedea572cff906bfd91b4377f0"
+  },
+  "unchanged_scientific_bindings": 115,
+  "package_source_members_unchanged": 43,
+  "branch": "e021-frozen-sequence-hybrid",
+  "Mac_branch_pushed": true,
+  "guest_source_sync": false,
+  "phase": null,
+  "archive_prefix": null,
+  "authorization": {
+    "new_incremental_gross_ceiling_USD": 45,
+    "credit_coverage_only": true,
+    "real_money_authorized": false,
+    "existing_VM": "dl-binner-cpu",
+    "project": "project-d17bd588-df31-488f-b16",
+    "zone": "us-central1-a",
+    "temporary_machine": "n1-standard-8",
+    "temporary_GPU": "one ordinary nvidia-tesla-t4",
+    "original_disks_GiB": [
+      30,
+      300
+    ],
+    "cumulative_from_successful_VM_start_hours": 48,
+    "provider_STOP_seconds": 173700,
+    "threads": 4,
+    "loader_workers": 0,
+    "host_RSS_bytes": 26000000000,
+    "device_memory_GiB": 14,
+    "Torch_allocator_GiB": 13,
+    "new_work_GiB": 32,
+    "free_reserve_GiB": 25,
+    "compressed_export_GiB": 2,
+    "logical_export_GiB": 6,
+    "sequential_local_review_GiB": 6,
+    "retention_end": "2026-10-28T00:00:00+01:00",
+    "retention_end_epoch": 1793142000,
+    "last_full_window_start_before": "2026-10-25T23:45:00+01:00",
+    "no_automatic_capacity_retry_or_resource_alternative": true
+  },
+  "financial_gate": {
+    "initial": {
+      "record": "E021 live credit/product gate before GPU changes",
+      "UTC": "2026-10-24T13:08:22.815331+00:00",
+      "paid_account_verified": true,
+      "credit": {
+        "name": "Free Trial upgrade / Welcome",
+        "status": "Available",
+        "percent": 95,
+        "remaining_DKK": 1866.09,
+        "original_DKK": 1973.43,
+        "start": "2026-10-13",
+        "expiry": "2027-01-12",
+        "scope": "Certain usage; Free Trial terms",
+        "application": "Net pricing"
+      },
+      "overview": {
+        "period": "2026-10-01 through2026-10-24",
+        "cost_DKK_rounded": 105,
+        "savings_DKK_rounded": 105,
+        "net_DKK": 0
+      },
+      "pending_usage": "UI explicitly warns more than24hours delay possible; unreported usage not assumed zero.",
+      "pending_reserve_USD": 35,
+      "new_incremental_gross_ceiling_USD": 45,
+      "quoted_max48_25h_USD": 39.22804041896891,
+      "covered_products": [
+        "N1 predefined CPU/RAM",
+        "ordinary non-vWS T4 attached to Compute Engine",
+        "existing balanced and standard PD",
+        "standard VM IPv4",
+        "Iowa regional Standard GCS",
+        "ordinary network export and operations"
+      ],
+      "coverage_basis": [
+        "https://docs.cloud.google.com/free/docs/free-cloud-features#during-free-trial",
+        "https://docs.cloud.google.com/free/docs/free-cloud-features#when_the_free_trial_ends",
+        "https://cloud.google.com/terms/free-trial#4.-upgrading-to-a-paid-google-cloud-platform-account."
+      ],
+      "coverage_reason": "Official current rules distinguish non-billable trial GPU/quota access restrictions from retained Welcome credit after paid upgrade. Ordinary first-party Compute GPU service is unlocked and no applicable credit-use exclusion is listed; no Marketplace, partner model API, paid OS/license or commitment.",
+      "coverage_status": "PASS_FOR_SPECIFIED_ORDINARY_FIRST_PARTY_PRODUCTS_ONLY",
+      "VM_started": false,
+      "resource_changed": false,
+      "quota_request_submitted": false,
+      "real_money_authorized": false,
+      "limits": "Unexpected product/credit/scope/cost/retention must stop before charge; alerts are not hard spending caps."
+    },
+    "post_attempt": {
+      "record": "E021 final read-only visible credit observation after capacity refusal",
+      "observed_UTC": "2026-10-24T14:17:07.956000+00:00",
+      "source": "Signed-in Google Cloud Billing Credits table, reloaded in Chrome; visible active FreeTrialUpgrade row",
+      "remaining_DKK": 1865.82,
+      "percent_remaining": 95,
+      "original_DKK": 1973.43,
+      "status": "Available",
+      "scope": "Certain usage; see the terms for free trial",
+      "application": "Net pricing",
+      "start": "2026-10-13",
+      "expiry": "2027-01-12",
+      "pending_usage": "Unknown; previously verified UI warns more than 24 hours of delay; maintain $35 reserve.",
+      "credit_delta_is_invoice": false,
+      "real_money_authorized": false,
+      "billing_changes": false
+    },
+    "price_source": {
+      "bytes": 13611,
+      "sha256": "b6d98b91d07e5fad71f4f54c9ef8538bb982121e47687754231479b087d30397"
+    },
+    "quote_N1_T4_IP_per_hour_USD": 0.7349979963823223,
+    "disks_USD_month": 31.199999949850024,
+    "maximum48_25h_with_export_operations_and_reserves_USD": 39.22804041896891,
+    "coverage": "Ordinary first-party paid-upgrade retained Welcome credits, specified products only; not free-tier GPU",
+    "pending_usage_not_zero": true,
+    "delta_is_invoice": false
+  },
+  "quota": {
+    "request_case": "c8d8dfd3-aa67-4fa1-aa68-37d19d2e841b",
+    "global_increase": [
+      0,
+      1
+    ],
+    "current": {
+      "GPUS_ALL_REGIONS": {
+        "limit": 1.0,
+        "metric": "GPUS_ALL_REGIONS",
+        "usage": 0.0
+      },
+      "NVIDIA_T4_GPUS": {
+        "limit": 1.0,
+        "metric": "NVIDIA_T4_GPUS",
+        "usage": 0.0
+      }
+    },
+    "quota_is_capacity": false,
+    "services_enabled": 29,
+    "enabled_services_unchanged": true
+  },
+  "attempts": [
+    {
+      "name": "first-prestart-configuration",
+      "source": "534240b",
+      "result": "E2 scheduling rejected before any accepted resource mutation",
+      "cause": "Ordinary E2 does not support onHostMaintenance TERMINATE",
+      "repair": "Stopped N1 -> scheduling/STOP -> GPU; exact order tested",
+      "start_requests": 0
+    },
+    {
+      "name": "corrected-configuration-and-only-start",
+      "source": "dca4ff208901801581c8d7283e67e3b6201dbecd",
+      "configuration_readback_passed": true,
+      "provider_STOP_seconds": 173700,
+      "start_requests": 1,
+      "start_operation": "operation-1792851037539-65e96a93a4b7e-1dba9131-b513e8a4",
+      "result": "ZONE_RESOURCE_POOL_EXHAUSTED",
+      "successful_VM_boot": false,
+      "RUNNING_interval_seconds": 0,
+      "guest_execution": false,
+      "capacity_error": {
+        "errors": [
+          {
+            "code": "ZONE_RESOURCE_POOL_EXHAUSTED",
+            "errorDetails": [
+              {
+                "help": {
+                  "links": [
+                    {
+                      "description": "Troubleshooting documentation",
+                      "url": "https://cloud.google.com/compute/docs/resource-error"
+                    }
+                  ]
+                }
+              },
+              {
+                "localizedMessage": {
+                  "locale": "en-US",
+                  "message": "A n1-standard-8 VM instance with 1 nvidia-tesla-t4 accelerator(s) is currently unavailable in the us-central1-a zone. Alternatively, you can try your request again with a different VM hardware configuration or at a later time. For more information, see the troubleshooting documentation."
+                }
+              },
+              {
+                "errorInfo": {
+                  "domain": "compute.googleapis.com",
+                  "metadatas": {
+                    "attachment": "nvidia-tesla-t4:1",
+                    "vmType": "n1-standard-8",
+                    "zone": "us-central1-a",
+                    "zonesAvailable": ""
+                  },
+                  "reason": "resource_availability"
+                }
+              }
+            ],
+            "message": "The zone 'projects/project-d17bd588-df31-488f-b16/zones/us-central1-a' does not have enough resources available to fulfill the request.  Try a different zone, or try again later."
+          }
+        ]
+      }
+    },
+    {
+      "name": "rollback",
+      "result": "VERIFIED_ORIGINAL_E2_TERMINATED",
+      "initial_helper_failure": "Submitted GPU removal succeeded; nonexistent gcloud compute operations wait refused. No repeat removal needed.",
+      "repair": "Describe already submitted operation; restore MIGRATE/scheduling before E2",
+      "no_restart": true
+    }
+  ],
+  "operations": [
+    {
+      "name": "operation-1792851022872-65e96a85a8087-32a62dd4-837c74a4",
+      "operationType": "setMachineType",
+      "status": "DONE",
+      "insertTime": "2026-10-24T07:10:23.168-07:00",
+      "startTime": "2026-10-24T07:10:23.210-07:00",
+      "endTime": "2026-10-24T07:10:23.438-07:00"
+    },
+    {
+      "name": "operation-1792851027503-65e96a8a12a84-30bcbc89-4664e4a6",
+      "operationType": "setScheduling",
+      "status": "DONE",
+      "insertTime": "2026-10-24T07:10:27.828-07:00",
+      "startTime": "2026-10-24T07:10:27.853-07:00",
+      "endTime": "2026-10-24T07:10:28.010-07:00"
+    },
+    {
+      "name": "operation-1792851031753-65e96a8e201da-44f4a371-41778131",
+      "operationType": "setMachineResources",
+      "status": "DONE",
+      "insertTime": "2026-10-24T07:10:31.961-07:00",
+      "startTime": "2026-10-24T07:10:31.976-07:00",
+      "endTime": "2026-10-24T07:10:32.748-07:00"
+    },
+    {
+      "name": "operation-1792851037539-65e96a93a4b7e-1dba9131-b513e8a4",
+      "operationType": "start",
+      "status": "DONE",
+      "insertTime": "2026-10-24T07:10:37.925-07:00",
+      "startTime": "2026-10-24T07:10:37.984-07:00",
+      "endTime": "2026-10-24T07:10:43.727-07:00",
+      "error": {
+        "errors": [
+          {
+            "code": "ZONE_RESOURCE_POOL_EXHAUSTED",
+            "errorDetails": [
+              {
+                "help": {
+                  "links": [
+                    {
+                      "description": "Troubleshooting documentation",
+                      "url": "https://cloud.google.com/compute/docs/resource-error"
+                    }
+                  ]
+                }
+              },
+              {
+                "localizedMessage": {
+                  "locale": "en-US",
+                  "message": "A n1-standard-8 VM instance with 1 nvidia-tesla-t4 accelerator(s) is currently unavailable in the us-central1-a zone. Alternatively, you can try your request again with a different VM hardware configuration or at a later time. For more information, see the troubleshooting documentation."
+                }
+              },
+              {
+                "errorInfo": {
+                  "domain": "compute.googleapis.com",
+                  "metadatas": {
+                    "attachment": "nvidia-tesla-t4:1",
+                    "vmType": "n1-standard-8",
+                    "zone": "us-central1-a",
+                    "zonesAvailable": ""
+                  },
+                  "reason": "resource_availability"
+                }
+              }
+            ],
+            "message": "The zone 'projects/project-d17bd588-df31-488f-b16/zones/us-central1-a' does not have enough resources available to fulfill the request.  Try a different zone, or try again later."
+          }
+        ]
+      }
+    },
+    {
+      "name": "operation-1792851101972-65e96ad1178ad-92c1d6e1-d90df491",
+      "operationType": "setMachineResources",
+      "status": "DONE",
+      "insertTime": "2026-10-24T07:11:42.113-07:00",
+      "startTime": "2026-10-24T07:11:42.124-07:00",
+      "endTime": "2026-10-24T07:11:42.434-07:00"
+    },
+    {
+      "name": "operation-1792851152920-65e96b01adec9-76d660c2-dddb031b",
+      "operationType": "setScheduling",
+      "status": "DONE",
+      "insertTime": "2026-10-24T07:12:33.170-07:00",
+      "startTime": "2026-10-24T07:12:33.181-07:00",
+      "endTime": "2026-10-24T07:12:33.323-07:00"
+    },
+    {
+      "name": "operation-1792851159515-65e96b07f8027-6364d104-14ed0f93",
+      "operationType": "setMachineType",
+      "status": "DONE",
+      "insertTime": "2026-10-24T07:12:39.788-07:00",
+      "startTime": "2026-10-24T07:12:39.821-07:00",
+      "endTime": "2026-10-24T07:12:40.029-07:00"
+    }
+  ],
+  "final_control_plane": {
+    "checked_UTC": "2026-10-24T14:14:24.817104+00:00",
+    "status": "TERMINATED",
+    "machine": "e2-standard-8",
+    "guestAccelerators": [],
+    "last_successful_start": "2026-10-23T04:18:30.392-07:00",
+    "last_stop_after_failed_start": "2026-10-24T07:10:43.676-07:00",
+    "last_successful_start_unchanged": true,
+    "original_scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "6300"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "shieldedInstanceConfig": {
+      "enableIntegrityMonitoring": true,
+      "enableSecureBoot": true,
+      "enableVtpm": true
+    },
+    "original_fields_equal": {
+      "disks": true,
+      "shieldedInstanceConfig": true,
+      "scheduling": true,
+      "networkInterfaces": true,
+      "serviceAccounts": true,
+      "metadata": true
+    },
+    "disks_exact_equal": true,
+    "services_exact_name_set_equal": true
+  },
+  "resource_and_cost_observations": {
+    "successful_allocation_seconds": 0,
+    "allocated_vCPU_hours": 0,
+    "sampled_science_CPU_seconds": null,
+    "sampled_science_RSS_bytes": null,
+    "expected_new_CPU_GPU_USD": 0,
+    "science_export_USD": 0,
+    "control_operations_allowance_USD": 0.001,
+    "invoice_reconciled": false,
+    "credit_delta_attributed": false,
+    "stopped_disk_USD_month": 31.199999949850024,
+    "control_observation_window_UTC": [
+      "2026-10-24T13:05:29.287158+00:00",
+      "2026-10-24T14:14:24.817104+00:00"
+    ],
+    "window_seconds": 4135.529946,
+    "original_disk_attribution_in_window_USD": 0.048173735852674454,
+    "disk_attribution_is_not_incremental_storage_purchase": true,
+    "original_full_storage_forecast_USD": 7.6276,
+    "original_storage_ceiling_USD": 8,
+    "storage_interval_extended": false,
+    "archive_version_count": 104,
+    "archive_version_bytes": 9384180741,
+    "soft_deleted_count": 0,
+    "new_cloud_object_uploads": 0,
+    "new_native_GLM_cache_bytes": 0
+  },
+  "space_review": {
+    "local_free_bytes": 25660665856,
+    "guest_free_currently_measured": false,
+    "last_accepted_work_free_GiB": 63.05056762695,
+    "launch_required_work_free_GiB": 57,
+    "original_boot_GiB": 30,
+    "provider_boot_guidance_GiB": 40,
+    "root_driver_contract": "UNRESOLVED: accepted configuration does not establish successful boot, signed-driver space or current kernel compatibility",
+    "guest_df_du": "Not run; no successful guest boot. Required before installation or any storage request",
+    "cleanup_files": [],
+    "storage_increase_requested": false,
+    "accepted_evidence_modified": false
+  },
+  "native_gates": {
+    "status": "NOT_RUN",
+    "held_parent": false,
+    "exit_watcher_armed": false,
+    "provider_STOP_readback_before_failed_start": true,
+    "provider_STOP_restored_after_failure": true,
+    "driver_installed": false,
+    "independent_Python_CUDA_runtime_installed": false,
+    "model_transferred": false,
+    "original_VM_input_bytes_reverified_this_attempt": false,
+    "full_axes_reverified_this_attempt": false,
+    "CUDA_parity_and_tiny_science": false,
+    "representative_throughput": false,
+    "full_RAM_VRAM_disk_return": false,
+    "comparison_released": false,
+    "scientific_stages": [],
+    "science_completion_receipt": null,
+    "science_return_archive": null
+  },
+  "local_checks": {
+    "operational_contracts": 8,
+    "status": "PASS",
+    "final_test_log": {
+      "bytes": 1432,
+      "sha256": "5283c7448f904595578d2296f7eab964a830820c8f356b22e5d38d1d091d09ff"
+    },
+    "native_telemetry_doubled_explicitly": true,
+    "scope": "Actual CSV/parser, alarm clock/VRAM limit contract with sampler doubles, held-unit and plan interfaces, exact stopped-VM command order, asynchronous operation readback and frozen release gates; not native GPU/systemd science"
+  },
+  "preserved_journals": {
+    "raw_local_bindings": {
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/credit-gate.json": {
+        "bytes": 2031,
+        "sha256": "9e9d79f158331c6df7f62115b8f015b6149655deb55d9c7d7bc267d83440b803"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/credit-final.json": {
+        "bytes": 717,
+        "sha256": "0ed87031141a2784b893dc84d5f1b03bbf0c1e6cf13e4fa97732b1e4bf0711d5"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/planning-prices.json": {
+        "bytes": 13611,
+        "sha256": "b6d98b91d07e5fad71f4f54c9ef8538bb982121e47687754231479b087d30397"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/quota-request.json": {
+        "bytes": 546,
+        "sha256": "e5167636ea2dfe51575f5640bb6888ca6a7be346901b5ff3f1b5b7bb64d7ea86"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/quota-after-preparation.json": {
+        "bytes": 188,
+        "sha256": "6e2035fcb26f3461ae02b246fb45564bb0fdcaafb9100c249a9aea88e9f04e75"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-start-terminal.log": {
+        "bytes": 1077,
+        "sha256": "e3207e923610e591c4779d222414c77a166408d6b0bc4049b8c2eb4b416deffa"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-failure.json": {
+        "bytes": 262,
+        "sha256": "712a20569e112147b58e3a06ad9aa9fbaeb9c854f0bce85bc90f4500dc72370a"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-operations.json": {
+        "bytes": 7855,
+        "sha256": "6694ac51df7d22d56a0b78ce00611c45f2941747f7135bd07cdeca2e44645c6b"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-attempt2/cloud-start-terminal.log": {
+        "bytes": 2378,
+        "sha256": "a8531dfcda60c4078296fd6fca8a13913bd06e1fac3d6a8d8cb49b6c2752085b"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-attempt2/cloud-failure.json": {
+        "bytes": 1210,
+        "sha256": "34e38f0e63ac020a6aa68b66d5db25639b9d478def4501aa46ed881cacd8f279"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-attempt2/cloud-original.json": {
+        "bytes": 33096,
+        "sha256": "74953c036fadfbaef11c5149d158e4d8b418cc989e1736d7f57571db2a90f769"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-attempt2/configured-before-start.json": {
+        "bytes": 33242,
+        "sha256": "f76de176a03a79cdf034d250a1b8a521bf5ddf2617ba0bf2ae8d475164f96a46"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-attempt2/independent-stop.json": {
+        "bytes": 33242,
+        "sha256": "8829bb4bc409cb03ed451bdba021a9e013057c13080a044b9bb64589aad62f68"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-attempt2/restore-terminal.log": {
+        "bytes": 1130,
+        "sha256": "6790a079fb10b333d411b350ab38ccc99be412114aedffb3e38b6d1e21a3e52a"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-attempt2/restore-attempt2-terminal.log": {
+        "bytes": 349,
+        "sha256": "b75080e3b885dae22be8aa31d86bc8e859b873729a73e004321aae208dd79200"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-attempt2/restore-accelerator-operation.json": {
+        "bytes": 823,
+        "sha256": "d26876cc1e2864fd0632dcfede90a3b4beb86dc3578b09866ee0afd0f96e58fc"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-attempt2/restored-E2.json": {
+        "bytes": 33009,
+        "sha256": "a82f5052a4d911405c3ca0ec4fa208cbb85b80bf39c3eee492e570c9bda38151"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/final-control/instance.json": {
+        "bytes": 33009,
+        "sha256": "a82f5052a4d911405c3ca0ec4fa208cbb85b80bf39c3eee492e570c9bda38151"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/final-control/disks.json": {
+        "bytes": 2889,
+        "sha256": "7b1e31f2ea8f8d6aec30aee9cc5dd2f290f76661b48b8bc9167c844b143e5192"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/final-control/services.json": {
+        "bytes": 297410,
+        "sha256": "e832ae2ae9dbea96919965fe30c9e0b4302e3fbcef4565f45226f94088a0aa56"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/final-control/global-quotas.json": {
+        "bytes": 5053,
+        "sha256": "24f8602045bd2722b02aae5c4250662b86ba78f566e08dacd1206e12f8cbc629"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/final-control/region-quotas.json": {
+        "bytes": 11498,
+        "sha256": "caef4dcfc379acfab0f3d94ab9e50a486627a5d31f47c169c32b0d5e0e1e006e"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/final-control/storage-list.json": {
+        "bytes": 27420,
+        "sha256": "02a4cfe43f21c7992874458f4446ddb072ac04c468d732ec5bfa73dbff76e89b"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/final-control/control-read-time.json": {
+        "bytes": 119,
+        "sha256": "a4ebf4967e40e078a8df6c55cf826af9922befdc9aace676ab0c14cd6f3433b1"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-order-tests.log": {
+        "bytes": 1284,
+        "sha256": "cfa6e55cf018d09701689ece5a5d40ca20f92b562e31207ae4df66cccea2f76a"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/cloud-restoration-tests.log": {
+        "bytes": 1432,
+        "sha256": "44fab5d53c9a477fe37f7ec66f0acb62b8f3429800a04260033c5185920578e7"
+      },
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/final-operational-tests.log": {
+        "bytes": 1432,
+        "sha256": "5283c7448f904595578d2296f7eab964a830820c8f356b22e5d38d1d091d09ff"
+      }
+    },
+    "raw_originals_not_backed_up_by_hash": true,
+    "local_compact_seal": "experiments/E021-frozen-sequence-hybrid/gpu-inspection-seal.json",
+    "no_private_upload": true,
+    "old_failed_Mac_tolerance_changed": false,
+    "owner_operations_strongest_word_preserved": true
+  },
+  "disposition": {
+    "scientific": "NOT_EVALUATED",
+    "strongest_next_decision": "Complete native admission of the same frozen information hybrid when original-zone T4 capacity is available; no architecture change follows from a provider capacity refusal.",
+    "next_handoff": "OPERATIONS.md Exact following prompt; original $45 scope and retention only, no automatic capacity loop or alternative resources.",
+    "skin": "No feature/fit/score/acquisition now; retain original 610-target provided-origin and overlap/unique/molecule/taxonomy limitations"
+  }
+}

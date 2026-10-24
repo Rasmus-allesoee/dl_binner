@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E021 GPU admission](../../experiments/E021-frozen-sequence-hybrid/gpu-admission.json) is owner-authorized under a new $45 credit-only envelope; live credit/price/global quota gates pass. Native runtime/resource/watchdog and comparison outcomes are still unadmitted. Preserve frozen f136b2c science, all earlier evidence, skin origin/overlap limits and October 28 retention.
+Current handoff: [E021 native observation](../../experiments/E021-frozen-sequence-hybrid/native-observed.json) records quota approval but zonal capacity refusal before boot, verified E2 rollback and no science. Complete the same frozen candidate's native admission under existing $45/credit/October 28 limits when capacity permits; this infrastructure result does not motivate another architecture change. [Operations](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md) owns the exact continuation. Preserve all evidence and skin limitations.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and

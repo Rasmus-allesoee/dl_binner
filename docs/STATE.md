@@ -4,16 +4,28 @@ Updated: 2026-10-24 (Copenhagen). This is the single current handoff.
 
 ## Exact next step
 
-**E021 GPU admission is now owner-authorized under a new $45 credit-only ceiling.**
-[Live admission](../experiments/E021-frozen-sequence-hybrid/gpu-admission.json) records
-remaining credit DKK 1,866.09, unchanged ~$39.23 upper-envelope quote and effective
-global GPU quota 1 after the requested increase. Current preparation has no VM
-start or science. Finish actual Linux/CUDA/space/throughput and fresh boot/process
-watchdog gates before releasing the frozen two-community candidate. Secure Boot
-stays enabled; no service/IAM/disk expansion. The October 28 boundary remains.
-The following local-implementation handoff is dated prior context; its request for
-a new GPU authorization has now been satisfied.
+**E021 GPU capacity blocked before boot; VM independently TERMINATED and restored
+to E2, no GPU.** [Native observation](../experiments/E021-frozen-sequence-hybrid/native-observed.json)
+and [operations / exact continuation](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md)
+own the quota approval, one rejected N1/T4 start, preserved operational repairs,
+complete rollback and unmet native gates. Global/T4 quota is 1 / usage 0; GCP reports
+ZONE_RESOURCE_POOL_EXHAUSTED in us-central1-a. Original disks/security/services
+remain unchanged. No SSH, installation, extraction, fit, score or native watcher
+ran. Expected CPU/GPU cost $0; original storage continues under $8 through October
+28 00:00 Copenhagen. Latest Welcome credit DKK 1,865.82 / 95%, January 12 expiry,
+$35 delayed-usage reserve. No credit delta is a run invoice.
 
+Keep the frozen f136b2c scientific candidate and complete its same-resource GPU
+admission when capacity is available, rather than change architecture after an
+infrastructure refusal. The existing $45 scope is not a new approval request.
+Linux/CUDA/driver/root/work space, throughput/full RAM/VRAM/return and fresh held-parent
+watcher gates remain unadmitted; eight operational tests are local evidence only.
+No automatic capacity retry/alternative resource or retention extension. The full
+48.25-hour window must start before October 25 23:45 CET with margin. Boot is still
+30 GiB versus the provider guide's 40 GiB check; resolve without silent expansion
+or security bypass. No cleanup was needed or performed. The following local
+implementation handoff is a **preserved October 23 snapshot**, not current quota
+or authorization status.
 
 **E021 local frozen-sequence hybrid and skin source admission complete; no community
 extraction/fit/score or VM start.** [Operations / exact next prompt](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md),

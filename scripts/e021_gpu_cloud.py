@@ -20,6 +20,17 @@ def configuration_commands():
         ['compute','instances','set-machine-resources',VM,'--accelerator-count=1','--accelerator-type=nvidia-tesla-t4']]
 
 
+def await_operation(operation,describe,timeout=180):
+    """Read a submitted zonal operation to completion; never resubmit a mutation."""
+    deadline=time.monotonic()+timeout
+    while operation.get('status')!='DONE':
+        if time.monotonic()>=deadline:raise TimeoutError('Existing restoration operation did not complete within readback window')
+        time.sleep(1)
+        operation=describe(operation['name'])
+    if operation.get('error'):raise RuntimeError('Provider restoration operation failed: '+json.dumps(operation['error']))
+    return operation
+
+
 def main():
     """Run one explicit live action and seal current state/clock or preserved failure."""
     a=argparse.ArgumentParser(description=__doc__);a.add_argument('action',choices=['start','stop','restore','describe']);a.add_argument('--root',type=Path,required=True);p=a.parse_args();repo=Path(__file__).absolute().parents[1];root=p.root.absolute();root.mkdir(parents=True,exist_ok=True)
@@ -78,13 +89,19 @@ def main():
             request=urllib.request.Request(url,data=json.dumps(body).encode(),method='POST',headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'})
             with urllib.request.urlopen(request,timeout=45)as response:operation=json.load(response)
             put('restore-accelerator-operation.json',operation)
-            if operation.get('status')!='DONE':run(['compute','operations','wait',operation['name']])
+            completed=await_operation(operation,lambda name:run(['compute','operations','describe',name]))
+            put('restore-accelerator-completed.json',completed)
             if state().get('guestAccelerators'):raise ValueError('GPU removal did not pass readback')
-        if not state()['machineType'].endswith('/e2-standard-8'):run(['compute','instances','set-machine-type',VM,'--machine-type=e2-standard-8'])
         old_schedule=original['scheduling'];duration=old_schedule.get('maxRunDuration',{}).get('seconds')
         args=['compute','instances','set-scheduling',VM,'--maintenance-policy='+old_schedule['onHostMaintenance'],'--no-restart-on-failure','--instance-termination-action=STOP','--clear-termination-time']
         args+=['--max-run-duration='+duration+'s']if duration else['--clear-max-run-duration']
-        run(args);restored=state();put('restored-E2.json',restored)
-        if restored['status']!='TERMINATED'or restored.get('guestAccelerators')or not restored['machineType'].endswith('/e2-standard-8')or restored['disks']!=original['disks']or restored['shieldedInstanceConfig']!=original['shieldedInstanceConfig']:raise ValueError('Independent E2/disk/security restoration differs')
+        # Restore MIGRATE while still N1; ordinary E2 refuses TERMINATE.
+        run(args)
+        if not state()['machineType'].endswith('/e2-standard-8'):run(['compute','instances','set-machine-type',VM,'--machine-type=e2-standard-8'])
+        restored=state();put('restored-E2.json',restored)
+        if (restored['status']!='TERMINATED' or restored.get('guestAccelerators')
+                or not restored['machineType'].endswith('/e2-standard-8')
+                or any(restored[k]!=original[k]for k in ['disks','shieldedInstanceConfig','scheduling','serviceAccounts','metadata'])):
+            raise ValueError('Independent E2/disk/security/scheduling restoration differs')
 
 if __name__=='__main__':main()

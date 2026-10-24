@@ -1,32 +1,81 @@
 # E021 operations
 
-## Current GPU admission, October 24, 2026
+## GPU admission outcome, October 24, 2026
 
-The owner authorized the new **$45 credit-only GPU admission and conditional comparison**.
-[Admission](gpu-admission.json) verifies live paid-account Welcome credit **DKK 1,866.09 /
-95%**, January 12 expiry, >24-hour delayed usage/$35 reserve, unchanged SKU quote
-**$39.23 maximum**, and effective global GPU quota **1** after approved request
-`c8d8dfd3-aa67-4fa1-aa68-37d19d2e841b`. Regional T4 quota is 1. No new service or IAM.
-The original candidate at **f136b2c** and all 115 bindings remain unchanged;
-[new operational sources](gpu-launch-lock.json) implement the approved 48-hour /
-48.25-hour STOP / 32 GiB / 26 GB host / 14 GiB device envelope. Seven local operational
-tests pass, with explicit sampler doubles; actual Linux/CUDA/systemd gates remain
-unadmitted. [Native plan](gpu-native-plan.json) predeclares separate CPU/GPU
-numerical tolerances, preserving old Mac failures. A 13 GiB Torch allocator cap
-leaves headroom below the 14 GiB whole-device monitor; math/precision stay float32.
+**Capacity blocked before guest boot; comparison not executed. VM independently
+TERMINATED and restored to e2-standard-8, with no GPU.**
+[Native observation](native-observed.json) owns the actual provider operations,
+failures and rollback. [Prelaunch admission](gpu-admission.json) is a dated snapshot,
+not proof of a native runtime or scientific completion.
 
-At this source-freeze point the VM is still stopped; no fit or GPU allocation.
-Only the quota request changes external state. Next execute bounded native
-admission after source push, exact clean read-only sync and provider STOP. Preserve
-Secure Boot; use only matching-kernel Canonical-signed drivers, no security bypass.
-Current local free space exceeds 22 GiB; last accepted guest free was 63.05 GiB,
-not a fresh guest measure. Capture actual root/work df and old-file du before
-installation. No cleanup or disk increase has been needed/requested. All current
-runtime/temporary payloads count in 32 GiB; no deletion of required/accepted bytes.
-The cloud GPU guide suggests >=40 GiB boot; the frozen boot disk is 30 GiB. Treat
-actual provider acceptance, measured free root space and signed-driver needs as
-explicit admission checks; do not resize or ignore a refusal. CUDA runtime is
-planned on the 300 GiB work disk, without a full toolkit on the boot disk.
+The owner authorized **$45 gross, Welcome-credit coverage only** and the temporary
+existing-VM N1/T4 configuration. Fresh signed-in credit was DKK 1,866.09 / 95%,
+January 12, 2027 expiry; the post-attempt read is **DKK 1,865.82 / 95%**. Scope is
+Certain usage / net pricing; >24-hour delayed usage remains unknown with a $35
+reserve. Official paid-upgrade terms admit the retained credit for the specified
+ordinary first-party N1/T4/PD/IP/GCS/network/operations products. This is not a
+free-tier GPU claim, reconciled invoice, or attribution of the credit delta.
+Conservative full-window quote remains **$39.23 maximum** within $45.
+
+Global GPU quota was successfully raised **0 -> 1**, case
+`c8d8dfd3-aa67-4fa1-aa68-37d19d2e841b`; regional T4 limit is also 1. Both final usages
+are zero. Quota permission does not establish physical zonal capacity. The first
+command was refused because ordinary E2 does not support TERMINATE maintenance.
+The repaired order is stopped N1 type -> maintenance/STOP -> ordinary T4 attachment.
+That configuration passed exact disk/security and **173,700-second STOP** readback.
+One start request then failed with **ZONE_RESOURCE_POOL_EXHAUSTED**: no
+n1-standard-8 + one T4 capacity in us-central1-a. It did not reach RUNNING; the
+last successful start remains October 23. No zone, accelerator, VM, disk or
+retention substitution and no repeated start request followed.
+
+Rollback removed the T4, restored original MIGRATE / no restart / 6,300-second
+STOP scheduling, then restored E2. An initial CLI operation-wait helper failed
+because that subcommand is absent; the submitted GPU-removal operation itself
+succeeded. The repaired helper reads the already submitted operation rather than
+resubmitting it. Independent final control reads prove original 300 GiB balanced
+work / 30 GiB standard boot disks, Secure Boot/integrity/vTPM, metadata, service
+accounts, network configuration and enabled services unchanged. Both failed
+helpers/journals remain. No guest SSH, package/driver install, model transfer,
+science, native watcher, completion or science-return archive exists for this
+attempt. This is **NOT EVALUATED**, not a failed biological criterion.
+
+The original **f136b2c** candidate / 115 bindings and 43 package source members stay
+unchanged. [Operational lock](gpu-launch-lock.json) freezes the new 48-hour parent,
+14 GiB device monitor, 13 GiB Torch allocator cap and 32 GiB extra-space envelope.
+**Eight local operational contracts pass**, including the real CSV/clock guard,
+with explicit telemetry doubles, exact command order and submitted-operation
+readback. These are not native CUDA/systemd proof. [Native plan](gpu-native-plan.json)
+still requires a complete independently owned compatible Python/CUDA recipe,
+hash-pinned author float32 attention, separate prospective CPU/GPU numerical gates,
+real tiny scientific paths, actual resource/throughput/return admission and a fresh
+boot/process watcher before release. Old Mac failures/tolerances stay unchanged.
+
+No files were deleted and no storage increase was requested. Actual local free
+space exceeds 22 GiB. Last accepted guest work free was 63.05 GiB; it is **not** a
+fresh guest measurement. Before installation, require actual root/work df and old-file
+du, 57 GiB work headroom (32 GiB cap + 25 GiB reserve), and safe cleanup review.
+The provider GPU guide directs checking a boot disk of at least **40 GiB**, while
+the authorized original is **30 GiB**. Configuration acceptance is not proof of
+boot/driver suitability. Resolve the actual signed-driver/root-space contract
+without silently resizing or disabling Secure Boot; report a concrete incompatibility
+if it cannot fit. Full CUDA runtime belongs on the existing work disk, not a full
+toolkit on boot. No claim of native readiness follows from quota or source tests.
+
+Expected new CPU/GPU allocation **$0** (no successful boot / RUNNING interval),
+science/export **$0**; small control-read operation allowance is recorded separately.
+Original stopped disks remain **$31.20/month**, about $1/day. The separately approved
+$8 storage forecast remains ~$7.63 and ends **October 28, 00:00 Copenhagen (CET)**.
+No storage was extended and no new cloud object uploaded. The compact checksum-
+verified [local admission seal](gpu-inspection-seal.json) contains control evidence,
+not science; omitted raw snapshots are retained locally and not backed up by hashes.
+
+**Strongest next decision:** complete admission of this same frozen candidate when
+same-zone capacity is available. A provider refusal gives no reason to change the
+model, substitute a costly CPU run or acquire more data. All Linux/resource gates
+remain. Full 48.25-hour window must start before **October 25, 23:45 Copenhagen
+(CET, UTC+01:00)**, with preparation margin; recheck the absolute retention epoch
+and fresh billing before any later attempt. No automatic loop, alternative resource,
+new budget, retention extension or capacity-monitor automation is authorized here.
 
 The following is the **preserved October 23 local-implementation snapshot**.
 
@@ -226,10 +275,49 @@ If healthy and long, verify fresh supervision and real scientific progress, wait
 
 ## Exact following prompt
 
-Continue E021 GPU admission under the owner's existing October 24 $45 credit-only
-authorization and all frozen limits. Read the current admission and native receipts
-before acting; preserve f136b2c science and failed journals. Do not repeat a passed
-stage or start another phase implicitly. If no native phase has started, finish
-source/runtime/resource/watchdog gates and execute the authorized comparison only
-when they pass. No new budget or retention extension is implied. Native launch or
-inspection handoff will replace this generic continuation with its exact phase.
+Continue E021 under the existing October 24 $45 credit-only authorization. Read
+AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E021's native-observed.json,
+local admission seal, original f136b2c candidate/protocol/criteria/reuse locks,
+GPU operational lock/native plan and operations. The prior single start request
+failed with ZONE_RESOURCE_POOL_EXHAUSTED before boot. Global/regional T4 quotas
+are 1, usage 0; the VM is TERMINATED and restored to E2. Preserve both operational
+failures, every accepted source/input/result and the original Mac tolerance.
+
+Refresh live credit/scope/expiry/delayed usage, eligible SKUs/prices, the original
+$8 storage interval and physical/local return headroom. Finish and test the exact
+native bootstrap/runtime/gate/release tools before scientific release; a planned
+Python/CUDA recipe is not an installed admission. Push the exact clean branch
+from Mac and use the existing read-only VM Git key. Make one fresh recorded
+same-existing-VM/us-central1-a N1-standard-8 + ordinary T4 capacity attempt only
+when the whole original 48-hour clock / 48.25-hour STOP can end before October 28
+00:00 Copenhagen. Start before October 25 23:45 CET with preparation margin.
+No new VM, zone, accelerator alternative, disk increase, service/IAM change,
+reservation, automatic capacity loop or retention extension. If capacity still
+fails, independently confirm TERMINATED and restore original E2/scheduling.
+
+On successful boot, capture actual root/work free space and old-file inventory
+before installing. Resolve the provider 40 GiB boot guidance versus original
+30 GiB disk using a documented signed-driver/root-space admission; do not silently
+resize or weaken Secure Boot. Clean only proven disposable, unneeded files after
+recording their identities; preserve accepted evidence and required inputs.
+Verify source/model/tokenizer/custom-code/input/full-axis/runtime bytes without
+reinstall/recopy fallback. Arm/test the fresh held-parent current-boot/process exit
+watcher and independently verify 173,700-second provider STOP. All setup/gates and
+science remain within 48 cumulative hours / $45, four numerical threads / zero
+loaders, 26 GB host RSS, 14 GiB device, 32 GiB new work, 25 GiB free reserve,
+2 GiB compressed / 6 GiB logical return and 6 GiB sequential local review.
+
+Only after real Linux/CUDA float32 attention/parity, tiny extraction/cache/gradient/
+EMA/noncollapse/reload/geometry/marker/CPM/E013/export/collection and representative
+full-stage throughput/RAM/VRAM/space/return gates pass, release the original sole
+E009 ten-depth / oral sequence-only frozen comparison. Reuse E019/older summaries;
+no baseline refit/rescore, new grid/loss/model, skin work, data/mapping/aligner or
+external tool. Debug operational errors within the same original clock/budget
+with verified reuse and fresh journals; never repeat accepted science implicitly.
+For a healthy long job verify supervision/progress, wait a few minutes and hand
+off without polling to completion; follow a short job through collection. On
+failure collect, stop/verify and restore E2. After successful shutdown verify
+archive/members/aliases/costs before the frozen diagnostics, full 156/799 reference
+denominators, N-quarantine and every population. Update records/check/commit with
+structured what changed/why; report actual status/costs/limits, one next strongest
+decision and exact following prompt. Stop before unclear or uncovered spending.

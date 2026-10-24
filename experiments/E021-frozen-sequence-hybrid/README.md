@@ -1,10 +1,16 @@
 # E021: frozen sequence/context hybrid and skin admission
 
-**Local implementation and bounded skin source admission completed. Scientific
-outcome not assessed; no community extraction/fit/score or VM start.** This block
-asks whether a frozen species-aware sequence prior adds useful base-order
-information to E019's composition/context/measured-depth learner, while admitting
-the previously frozen skin community for a separately authorized later check.
+**Local implementation and bounded skin source admission completed. October 24
+GPU admission was blocked by zonal capacity before guest boot; VM independently
+TERMINATED and restored to E2. No community extraction/fit/score.**
+[Native observation](native-observed.json) distinguishes quota approval, actual
+failed start/rollback and unexecuted native contracts. [Operations / continuation](OPERATIONS.md)
+owns the authorized $45 scope and original October 28 storage boundary. The frozen
+scientific candidate remains unchanged; a capacity refusal is not a model result.
+
+This block asks whether a frozen species-aware sequence prior adds useful base-
+order information to E019's composition/context/measured-depth learner, while
+admitting the previously frozen skin community for a separately authorized later check.
 
 [Design](design.md) owns the single view-exact frozen branch and small residual
 fusion. [Protocol](protocol.json) fixes one E009 ten-depth / oral sequence-only
@@ -20,12 +26,11 @@ origin oracle, without a unique-support claim. [Confirmation](confirmation-plan.
 keeps full/zero-origin denominators and substantial oral overlap visible; no skin
 outcome is inspected. An untouched outcome is not proof of an unseen genome.
 
-[Operations / exact next prompt](OPERATIONS.md) owns the choice to defer the
-conditionally authorized community comparison: the existing CPU runtime/peak-space/
-return gates are unadmitted. [Resources](resource-plan.json) prices a new proposed
-GPU-native admission/execution scope rather than starting an unjustified CPU job.
-The $8 storage boundary stays **October 28 at 00:00 Copenhagen**. Old compute
-budgets do not carry; no resource/quota/service/retention change or upload here.
+[Resources](resource-plan.json) preserves the original CPU/GPU planning snapshot;
+[current GPU plan](gpu-native-plan.json) and [observation](native-observed.json)
+own the new admission. Linux/CUDA/resource/throughput/watchdog gates remain
+unadmitted. No cleanup, new disk, service/IAM expansion, cloud upload or retention
+extension occurred. Eight local operational tests do not establish native readiness.
 
 Immutable dev3/dev4/dev5/E016/E019 and all accepted E009–E020 evidence remain.
 Source/header/label joins stay outside feature/training paths; all short,

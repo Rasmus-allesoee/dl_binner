@@ -2,18 +2,43 @@
 
 Updated: 2026-10-24 (Copenhagen; initial provisioning receipts are October 13 UTC).
 
-**October 24 GPU admission authorized: new $45, covered Welcome-credit products only.**
-[Admission](../experiments/E021-frozen-sequence-hybrid/gpu-admission.json) records
-DKK 1,866.09 / 95%, January 12 expiry, delayed usage reserve $35 and ~$39.23
-maximum allocation/disks/export/reserves. Global GPU quota is now 1 after case
-`c8d8dfd3-aa67-4fa1-aa68-37d19d2e841b`; Iowa T4 quota is 1. Current state before
-native admission is TERMINATED E2, original 300/30 GiB disks and Secure Boot enabled.
-No VM start/type change or science yet. Proposed N1/T4 and 48/48.25-hour clock,
-26 GB host/14 GiB device/32 GiB extra/25 GiB reserve still require actual native
-gates. No new service/IAM, storage increase or retention extension. Signed Ubuntu
-GPU driver/root-space checks must preserve protections; current boot disk is 30 GiB.
-[Operations](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md) owns the exact
-current authorization and handoff. The following is the prior dated snapshot.
+**October 24 E021 GPU admission: capacity blocked, stopped and rolled back.**
+[Native observation](../experiments/E021-frozen-sequence-hybrid/native-observed.json)
+records approved global GPU quota 0 -> 1 (Iowa T4 also 1), the only N1/T4 start
+refused with ZONE_RESOURCE_POOL_EXHAUSTED, and independent TERMINATED E2 readback.
+No successful boot/guest SSH/setup/science. Temporary N1/T4/173,700-second STOP
+configuration was removed; original 300/30 GiB disks, Secure Boot/integrity/vTPM,
+metadata, service accounts, network, enabled services and original scheduling
+match. No alternative VM/zone/service/disk, cleanup or retention extension.
+
+Operational order is stopped E2 -> N1 -> TERMINATE maintenance/provider STOP ->
+GPU -> start. E2 refuses that maintenance setting. For rollback, remove GPU ->
+restore original MIGRATE/scheduling while still N1 -> E2. The inspected SDK lacks
+`gcloud compute operations wait`; read the submitted zonal operation with
+`operations describe` rather than replaying a mutation. Preserve all failed
+journals. Eight local tests pass; no native driver, CUDA, systemd or throughput
+contract is claimed. See [operational lock](../experiments/E021-frozen-sequence-hybrid/gpu-launch-lock.json).
+
+A failed restart can advance `lastStopTimestamp` while `lastStartTimestamp` still
+names an older successful allocation. Do not subtract those fields to price a
+new run. Bind allocation accounting to the actual start operation and successful
+boot; preserve the failed operation and rollback evidence separately.
+
+Latest Welcome balance **DKK 1,865.82 / 95%**, January 12, 2027 expiry; paid account,
+Certain usage / net pricing, delayed usage unknown with $35 reserve. Ordinary
+first-party GPU coverage was checked against retained-credit paid-upgrade terms;
+this is not free-tier eligibility. Expected new compute/GPU **$0**, no export;
+control-operation allowance separate, not an invoice/credit-delta attribution.
+Existing stopped disks continue at **$31.20/month**, separate $8 full-interval
+forecast ~$7.63 through **October 28, 00:00 Copenhagen (CET)**. No new cloud objects.
+
+The same frozen candidate remains the next admission decision under the owner's
+existing $45/48-hour scope. Maximum quote ~$39.23, not actual cost. No automatic
+capacity retry/alternative or storage renewal. [Operations](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md)
+owns the precise continuation, last full-window start and unresolved original
+30 GiB boot versus provider 40 GiB guidance. Verify actual space/old-file inventory
+and a compatible signed-driver route before installation; no silent resize or
+Secure Boot bypass. The following is the **dated October 23 snapshot**.
 
 **E021 implementation/admission is local; VM remains TERMINATED. No new job or
 resource/retention change.** [Operations](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md)

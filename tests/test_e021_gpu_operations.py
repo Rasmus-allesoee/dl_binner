@@ -6,7 +6,7 @@ from e014_collect import binding
 from e021_gpu_guard import parse_gpu,GPUPhaseGuard,GPU_BYTES
 from e021_gpu_phase import admission,SECONDS,STOP_SECONDS
 from e021_gpu_arm import service_content
-from e021_gpu_cloud import configuration_commands
+from e021_gpu_cloud import configuration_commands,await_operation
 from e021_gpu_initial import populate_plan
 
 class GPUOperations(unittest.TestCase):
@@ -50,6 +50,14 @@ class GPUOperations(unittest.TestCase):
         self.assertIn('173700s',text);self.assertIn('n1-standard-8',text);self.assertIn('--accelerator-count=1',text)
         for forbidden in ['create','disks','services','iam','shielded','billing','reserve']:
             self.assertNotIn(forbidden,text)
+
+    def test_submitted_operation_readback_never_resubmits(self):
+        calls=[]
+        def describe(name):calls.append(name);return dict(name=name,status='DONE')
+        self.assertEqual(await_operation(dict(name='known-operation',status='RUNNING'),describe)['status'],'DONE')
+        self.assertEqual(calls,['known-operation'])
+        with self.assertRaisesRegex(RuntimeError,'Provider restoration operation failed'):
+            await_operation(dict(name='known-operation',status='DONE',error={'code':'REFUSED'}),describe)
 
     def test_actual_parent_unit_has_fixed_cpu_ram_and_original_clock(self):
         text=service_content(Path('/srv/repo'),Path('/srv/job'),'researcher',Path('/srv/job/config.json'),172000)

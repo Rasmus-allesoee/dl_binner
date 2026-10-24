@@ -1,0 +1,26 @@
+{
+  "record": "E021 local GPU-admission failure seal; no native scientific archive",
+  "status": "PASS_EVERY_RETAINED_MEMBER",
+  "location": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-gpu-admission/20261024T130422Z/sealed-admission",
+  "archive": {
+    "bytes": 33304,
+    "sha256": "8b2de6c67715f2b531fd10e6d79e4826ce4f312a7e9c04457f7f8e75595e133a"
+  },
+  "checksum": {
+    "bytes": 87,
+    "sha256": "018a8b945982d9f58af29f6e89ea91c86b5acd6b836f6a350ee0e64dc40b4063"
+  },
+  "regular_members": 22,
+  "logical_member_bytes": 107331,
+  "every_member_verified": true,
+  "aliases": {},
+  "private_upload": false,
+  "native_science": false,
+  "empty_native_work": true,
+  "raw_original_metadata_outside_archive": true,
+  "raw_originals_retained_on_Mac": true,
+  "raw_hashes_not_backup": true,
+  "credentials_DNA_environments_excluded": true,
+  "scope": "Safe control-plane projection, failed command logs, tested operational source and original failure. Not a scientific completion receipt.",
+  "original_candidate_modified": false
+}

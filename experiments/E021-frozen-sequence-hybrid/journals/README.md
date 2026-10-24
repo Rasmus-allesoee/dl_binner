@@ -57,3 +57,9 @@ Closure caught an inventory self-reference/README snapshot issue before sealing.
 The manifest now lists only immutable payload journals; mutable README and the
 manifest itself are excluded. Every listed member is reverified; no scientific
 artifact or original failed journal changed.
+
+The October 24 GPU admission's failed configuration helper, provider capacity
+refusal and rollback are owned by [native observation](../native-observed.json)
+and its [local seal](../gpu-inspection-seal.json). The VM never booted, so these
+are control-plane evidence, not native model failures or community outcomes.
+The earlier manifest and all original journals remain unchanged.
