@@ -1,6 +1,6 @@
 {
   "record": "E021 operational GPU launch additions; frozen f136b2c candidate unchanged",
-  "prepared_date": "2026-10-24T13:56:45.133368+00:00",
+  "prepared_date": "2026-10-24T14:09:58.646892+00:00",
   "base_commit": "f136b2c5f6195ae91a0566f23d84c8c6c9f69bf9",
   "base_candidate": {
     "bytes": 27649,
@@ -9,7 +9,7 @@
   "files": {
     "scripts/e021_gpu_cloud.py": {
       "bytes": 8350,
-      "sha256": "a8902f348d7f89a44b0d47dba2bc945a860ff265f4b2c6e14378d36ef227e867"
+      "sha256": "33b238150217f7726a3c138c3c3e5ddbf99a89b2de1f54e35877b6aa4adb750d"
     },
     "scripts/e021_gpu_worker.py": {
       "bytes": 1488,
@@ -32,8 +32,8 @@
       "sha256": "4de0ec78e55a8c51963a2f57fdf8d656e1b3d61122c08ca19878b0ad6982a8c1"
     },
     "tests/test_e021_gpu_operations.py": {
-      "bytes": 5956,
-      "sha256": "e9c22172d807eb298d7fdc3e0c63ab35d38436dae22b1b925aa80b8b37dcd83d"
+      "bytes": 6228,
+      "sha256": "9f6392dd1b1aaf6b0f38f683f27d01fdd4346d8673bea5f5a3d2815465cb10bf"
     },
     "experiments/E021-frozen-sequence-hybrid/gpu-native-plan.json": {
       "bytes": 4979,

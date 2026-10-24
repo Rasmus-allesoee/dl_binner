@@ -15,8 +15,8 @@ PROJECT='project-d17bd588-df31-488f-b16';ZONE='us-central1-a';VM='dl-binner-cpu'
 def configuration_commands():
     """Return the sole prospective resource/STOP mutation sequence, without executing."""
     return [
-        ['compute','instances','set-scheduling',VM,'--maintenance-policy=TERMINATE','--no-restart-on-failure','--max-run-duration='+str(STOP)+'s','--instance-termination-action=STOP'],
         ['compute','instances','set-machine-type',VM,'--machine-type=n1-standard-8'],
+        ['compute','instances','set-scheduling',VM,'--maintenance-policy=TERMINATE','--no-restart-on-failure','--max-run-duration='+str(STOP)+'s','--instance-termination-action=STOP'],
         ['compute','instances','set-machine-resources',VM,'--accelerator-count=1','--accelerator-type=nvidia-tesla-t4']]
 
 

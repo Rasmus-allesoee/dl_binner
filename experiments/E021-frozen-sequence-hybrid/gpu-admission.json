@@ -103,7 +103,7 @@
   },
   "GPU_operational_lock": {
     "bytes": 1926,
-    "sha256": "69f4c76716571a25b16dd8f45db55f96b3118125792bacf9033d4b8d8d35fa09"
+    "sha256": "85684094ec3cc7a49b461ead9518a2b13a0bbdcd1c4a47bce42261bf65cc06c6"
   },
   "evidence_locator": "artifacts/e021-gpu-admission/20261024T130422Z",
   "SecureBoot": true,
@@ -117,5 +117,10 @@
     "reason": "Adjacent numeric/or token introduced a SyntaxError during STOP parser repair; local import test refused before any cloud mutation. Fixed with explicit separated duration fields, then tests/AST pass."
   },
   "quota_effective_global_limit": 1,
-  "compute_disk_security_resources_changed": false
+  "compute_disk_security_resources_changed": false,
+  "preserved_cloud_configuration_failure": {
+    "log": "artifacts/e021-gpu-admission/20261024T130422Z/cloud-start-terminal.log",
+    "cause": "E2 refuses TERMINATE maintenance; first mutation rejected with VM stopped. Reorder stopped machine type before scheduling and GPU, add exact order test, fresh recorded allocation attempt.",
+    "science_started": false
+  }
 }

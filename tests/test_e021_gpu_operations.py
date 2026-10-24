@@ -44,6 +44,9 @@ class GPUOperations(unittest.TestCase):
 
     def test_exact_cloud_commands_never_provision_or_weaken_security(self):
         commands=configuration_commands();text=json.dumps(commands)
+        # E2 rejects TERMINATE maintenance; change the stopped machine first,
+        # then set GPU maintenance/STOP before adding the accelerator or booting.
+        self.assertEqual([c[2]for c in commands],['set-machine-type','set-scheduling','set-machine-resources'])
         self.assertIn('173700s',text);self.assertIn('n1-standard-8',text);self.assertIn('--accelerator-count=1',text)
         for forbidden in ['create','disks','services','iam','shielded','billing','reserve']:
             self.assertNotIn(forbidden,text)
