@@ -26,11 +26,18 @@ def acquire(row,path):
             n+=len(data)
             if n>2*1024**3 or(row.get('bytes')is not None and n>row['bytes']):raise ValueError('Software payload exceeds declared cap')
             target.write(data);h.update(data)
-    if h.hexdigest()!=row['sha256']or(row.get('bytes')is not None and n!=row['bytes']):raise ValueError('Publisher software bytes differ')
+    if h.hexdigest()!=row['sha256']or(row.get('bytes')is not None and n!=row['bytes']):raise ValueError('Publisher software bytes differ: '+p.name+' observed='+str(n)+' expected='+str(row.get('bytes')))
     temp.rename(p);return dict(bytes=n,sha256=h.hexdigest())
 
 
-def install(recipe,prefix,root):
+def metadata_member(names):
+    """Select only the wheel distribution, excluding vendored distribution metadata."""
+    choices=[n for n in names if len(n.split('/'))==2 and n.endswith('.dist-info/METADATA')]
+    if len(choices)!=1:raise ValueError('Top-level wheel METADATA inventory differs')
+    return choices[0]
+
+
+def install(recipe,prefix,root,reuse_verified=False):
     """Download hash-closed software, inspect wheel metadata and run the real installers."""
     recipe=Path(recipe);p=Path(prefix);root=Path(root);cfg=json.loads(recipe.read_text());logs=root/'logs';logs.mkdir(exist_ok=True)
     if p.exists():raise FileExistsError('Existing/partial runtime prefix refused; no reinstall fallback')
@@ -42,11 +49,16 @@ def install(recipe,prefix,root):
     mamba=Path(cfg['micromamba']['path'])
     if binding(mamba)!={k:cfg['micromamba'][k]for k in ['bytes','sha256']}:raise ValueError('Pinned micromamba archive differs')
     tool=root/'tools/bin/micromamba';tool.parent.mkdir(parents=True,exist_ok=True)
-    if tool.exists():raise FileExistsError('Fresh installer path required')
+    if tool.exists()and not reuse_verified:raise FileExistsError('Fresh installer path or explicit verified-software reuse required')
     with tarfile.open(mamba)as a:
         member=a.getmember('bin/micromamba')
         if not member.isfile()or member.size>30*1024**2:raise ValueError('Installer archive member differs')
-        with tool.open('xb')as out:out.write(a.extractfile(member).read())
+        expected=a.extractfile(member).read()
+        if tool.exists():
+            if tool.is_symlink()or tool.read_bytes()!=expected:raise ValueError('Retained micromamba differs; no fallback')
+            print('EXACT_VERIFIED_INSTALLER_REUSE',hashlib.sha256(expected).hexdigest(),flush=True)
+        else:
+            with tool.open('xb')as out:out.write(expected)
     tool.chmod(0o700);run([tool,'--version'])
     rows=cfg['conda'];wheelrows=cfg['wheels'];results={}
     jobs=[('conda/'+x['filename'],x,conda/x['filename'])for x in rows]+[('wheels/'+x['filename'],x,wheels/x['filename'])for x in wheelrows.values()]
@@ -56,9 +68,9 @@ def install(recipe,prefix,root):
     metadata={}
     for name,row in wheelrows.items():
         with zipfile.ZipFile(wheels/row['filename'])as a:
-            choices=[z for z in a.namelist()if z.endswith('.dist-info/METADATA')]
-            if len(choices)!=1 or a.getinfo(choices[0]).file_size>1024**2:raise ValueError('Wheel METADATA inventory differs')
-            text=a.read(choices[0]).decode();msg=email.parser.Parser().parsestr(text)
+            member=metadata_member(a.namelist())
+            if a.getinfo(member).file_size>1024**2:raise ValueError('Wheel METADATA size differs')
+            text=a.read(member).decode();msg=email.parser.Parser().parsestr(text)
             if msg['Name'].lower().replace('_','-')!=name or msg['Version']!=row['version']:raise ValueError('Actual wheel identity differs: '+name)
             metadata[name]=dict(version=msg['Version'],requires_python=msg['Requires-Python'],requires_dist=msg.get_all('Requires-Dist',[]),metadata_sha256=hashlib.sha256(text.encode()).hexdigest())
     write_json(root/'wheel-native-metadata.json',metadata)
@@ -74,4 +86,4 @@ def install(recipe,prefix,root):
     print('RUNTIME_INSTALLED_COMPLETE_OWNED',p,flush=True)
 
 if __name__=='__main__':
-    a=argparse.ArgumentParser(description=__doc__);a.add_argument('--recipe',type=Path,required=True);a.add_argument('--prefix',type=Path,required=True);a.add_argument('--root',type=Path,required=True);v=a.parse_args();install(v.recipe,v.prefix,v.root)
+    a=argparse.ArgumentParser(description=__doc__);a.add_argument('--recipe',type=Path,required=True);a.add_argument('--prefix',type=Path,required=True);a.add_argument('--root',type=Path,required=True);a.add_argument('--reuse-verified-software',action='store_true');v=a.parse_args();install(v.recipe,v.prefix,v.root,v.reuse_verified_software)

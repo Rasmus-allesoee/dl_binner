@@ -1,6 +1,6 @@
 {
   "record": "E021 approved portable native continuation",
-  "UTC": "2026-10-24T19:27:15.614209+00:00",
+  "UTC": "2026-10-24T20:21:05.613432+00:00",
   "owner_approved_revised_scope": true,
   "common_clock": {
     "first_VM_start_epoch": 1792868659.099,
@@ -71,9 +71,39 @@
     "case": "80f8f190-c0a0-4f48-8ff7-b17da19c857d"
   },
   "original_VM": "TERMINATED and original scheduling restored",
-  "worker": "NOT_CREATED",
-  "community_science": "NOT_STARTED",
+  "worker": "Stopped after native stale-peer failure; all disk/source/runtime bytes retained",
+  "community_science": "NOT_STARTED; no release and no science-kind task",
   "local_operations_tests": 10,
   "native_runtime_or_throughput_admitted": false,
-  "artifacts": "artifacts/e021-portable-admission/20261024T183844Z"
+  "artifacts": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-portable-admission/20261024T183844Z",
+  "worker_first_capacity_attempt": "PASS: g2-standard-8 + L4 in us-central1-b",
+  "native_passed": [
+    "Both complete independent Linux Python 3.10.15 CPU/CUDA prefixes; full inventory/source/CLI",
+    "Original 148-member / 12,830,350,911-byte reuse check",
+    "40 installed native product tests",
+    "Signed 615.71.09 precompiled current-kernel headless driver installation without DKMS",
+    "Live, normal-exit and crash native watchers",
+    "Current held PID survives refused maintenance-style restart on disposable unit",
+    "GPU failed-evidence archive / every 58 members verified"
+  ],
+  "failures_preserved": [
+    "Wrong initial work-device alias refused before format",
+    "Wrong launch checksum refused before source extraction",
+    "Mac tar AppleDouble dirty-source refusal; regular Python GNU archive passes",
+    "Vendored wheel METADATA adapter refusal repaired/tested",
+    "Truncated 211,579,136-byte CUDA download; new copy matches unchanged publisher hash",
+    "Unattended maintenance restarted original parent; restarted writer refused existing journal; watcher stopped E2",
+    "GPU first NVML readiness failed; subsequent CUDA runtime inventory passed; fresh readiness still required",
+    "Stale live-peer telemetry stopped GPU parent and sealed return",
+    "Overcomplete model transport descriptor refused before any data bytes; normalized closed schema"
+  ],
+  "diagnostic_recovery": "Existing E2 wake only, same original clock/CPU allocation/$45; provider STOP 30 minutes; no science replay",
+  "latest_credit": {
+    "remaining_DKK": 1864.27,
+    "percent": 94,
+    "expiry": "2027-01-12",
+    "pending_usage_unknown": true,
+    "reserve_USD": 35
+  },
+  "source_and_science_immutable": true
 }

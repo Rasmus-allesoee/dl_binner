@@ -1,48 +1,76 @@
 {
   "record": "E021 approved portable operational source; f136b2c science unchanged",
-  "UTC": "2026-10-24T19:26:38.815856+00:00",
+  "UTC": "2026-10-24T20:18:48.926481+00:00",
   "base_science": "f136b2c5f6195ae91a0566f23d84c8c6c9f69bf9",
   "files": {
+    "scripts/e021_portable_arm.py": {
+      "bytes": 6540,
+      "sha256": "ff87cf006ef340856a63dc8d770ec6db2104ae13a86997fa1dd966792232991a"
+    },
+    "scripts/e021_portable_bootstrap.py": {
+      "bytes": 3167,
+      "sha256": "84d4b34747160cc650233a30c4b9a5eec4795582d8616181db55a52e91d32069"
+    },
+    "scripts/e021_portable_cloud.py": {
+      "bytes": 11874,
+      "sha256": "64137eb110b18aebf9a288bd698576fa5af49f6b13410f7ac5f093dfe22b29c2"
+    },
+    "scripts/e021_portable_driver.py": {
+      "bytes": 5177,
+      "sha256": "8924d536bb0f211ad0f00e09896380c7b3bc0c12b257f39ec9d92a2ac3e149d3"
+    },
+    "scripts/e021_portable_gates.py": {
+      "bytes": 11468,
+      "sha256": "6574205b375f5a7e5036f0b93a70b0753e74d04a2d7bf5fa181e47614c5bdb4e"
+    },
+    "scripts/e021_portable_heartbeat.py": {
+      "bytes": 2739,
+      "sha256": "00314d013c2d276d945eef5d95b9f49c048d16cba9b88aa5aff3b98c34331c17"
+    },
     "scripts/e021_portable_inventory.py": {
       "bytes": 8100,
       "sha256": "c0fb8fb796957de2241792fc84760e31eeeb2f0ad4abf4c9c4a8ce323595848d"
     },
-    "scripts/e021_portable_cloud.py": {
-      "bytes": 11504,
-      "sha256": "f28afd858af6796703c3b1d59b5019f9963376c68b772aa7f4461250fdbf21f0"
-    },
-    "scripts/e021_portable_transport.py": {
-      "bytes": 7878,
-      "sha256": "a435a9673e4e83431c7bd4269e7e5c33fb7eb5974ad26b044a19a0dfb1e5337d"
-    },
-    "scripts/e021_portable_runtime.py": {
-      "bytes": 6055,
-      "sha256": "95e9cedaa3c3f5c2a86b193c9e60b8522c4f3698ae218b40173b0d6578a2780c"
+    "scripts/e021_portable_memory.py": {
+      "bytes": 6687,
+      "sha256": "0f079355f766affa7cf78d8a28c60817bf68fbfbd01e23811b309b1a39b6c2de"
     },
     "scripts/e021_portable_node.py": {
       "bytes": 15851,
       "sha256": "57733dfb640d2e25cc455322fb0bffcead1d7ce8ce300c5c4a35e862856d5b13"
     },
-    "scripts/e021_portable_arm.py": {
-      "bytes": 5952,
-      "sha256": "7e5e6e1d6a58a530c3677e5224bff51e41fb2e5ee6ac03efd7da30b3d8708703"
+    "scripts/e021_portable_prepare.py": {
+      "bytes": 5017,
+      "sha256": "9dced8251d0bdd5ace9031d2b052289db56ee62fb875eae365e165b619ac0f4f"
     },
-    "scripts/e021_portable_bootstrap.py": {
-      "bytes": 2891,
-      "sha256": "e10610fbda74905b25ca96cb887c7e2d89e1af876c299c6a151944614d984960"
+    "scripts/e021_portable_relay.py": {
+      "bytes": 6734,
+      "sha256": "56b84916749567220488c13276f11ec50304f4c2d5f502ccf2996f42603b1e74"
+    },
+    "scripts/e021_portable_runtime.py": {
+      "bytes": 6836,
+      "sha256": "bc95bb375a83b40a12b0a65a29a1c50fa1a6e49370c50c201f5ba0443e325cf0"
+    },
+    "scripts/e021_portable_source.py": {
+      "bytes": 1989,
+      "sha256": "560a771f7f83d8762db98347c6d8b9bf2c30c4725e30ef16440f698a1a81e982"
+    },
+    "scripts/e021_portable_transport.py": {
+      "bytes": 9017,
+      "sha256": "da1093a7f5de07697214741b086348bf8792ac0cd15fcc400e2bb0f5e95f2e29"
     },
     "tests/test_e021_portable_operations.py": {
-      "bytes": 8172,
-      "sha256": "ff24b40581e1d3165804e26e5d03b9458d5a4aee94ec56336e2da0eb52e6d9d8"
-    },
-    "experiments/E021-frozen-sequence-hybrid/portable-policy.json": {
-      "bytes": 5755,
-      "sha256": "040e1092c80b990bbedcea2f1f14085279107501fd55a15095e8b07fb46f62eb"
+      "bytes": 9793,
+      "sha256": "482b123d00632e0bc8bf8a63b91e25adb32ddef4bdeee25dfe8020712ffab657"
     },
     "experiments/E021-frozen-sequence-hybrid/portable-runtime-lock.json": {
       "bytes": 51253,
       "sha256": "5782ade8cc21fdda4c3978515a689d360f0f7542f00bed6aa04a166b22462476"
+    },
+    "experiments/E021-frozen-sequence-hybrid/portable-policy.json": {
+      "bytes": 5755,
+      "sha256": "040e1092c80b990bbedcea2f1f14085279107501fd55a15095e8b07fb46f62eb"
     }
   },
-  "native_status": "Original inventory/watchdog passed; worker runtime/source/device/throughput/scale science release unadmitted"
+  "native_status": "Passed owned-runtime inventory, 148-member original reuse and 40 native product contracts. Automatic maintenance restarted held E2 parent; preserved return and tested per-unit restart protection. Community science unstarted."
 }

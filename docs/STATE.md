@@ -1,14 +1,19 @@
 # Current Research State
 
-**Portable E021 scope approved; original-node inventory passed and E2 stopped.**
-[Live continuation receipt](../experiments/E021-frozen-sequence-hybrid/portable-observed.json)
-owns the first start at **October 24, 19:04:19 UTC**, common 48-hour clock, 332.333-second
-inventory allocation, current 63.05 GiB work headroom and verified restoration.
-Iowa SSD quota **404 GiB** is now effective. Original disks and science are intact;
-worker installation/extraction/comparison remain unstarted at this source freeze.
-Ten portable transport/runtime/service/limit contracts pass locally; native worker
-admission is still required. The dated reassessment below is preserved history,
-including its earlier pending-approval wording.
+**E021 portable L4 placement succeeded; native operational recovery is in progress.**
+[Continuation receipt](../experiments/E021-frozen-sequence-hybrid/portable-observed.json)
+owns the first L4 attempt in Iowa b, both complete independent Python runtimes,
+148-member original reuse and 40 native product contracts. No community extraction,
+fit or score was released. Automatic maintenance restarted the original E2 held
+parent; its journal refused overwrite, and the verified watcher stopped the VM.
+Stale live-peer telemetry then stopped/sealed the GPU parent. All failures remain.
+A native per-unit restart-refusal probe preserves the exact held PID without
+turning off system updates. Existing-E2 diagnostic wake is bounded to 30 minutes
+inside the original cumulative clock/budget; source/runtime/model/scale/throughput
+and fresh supervision still gate science. The common 48-hour clock remains
+**October 24, 19:04:19 UTC**; no reset or retention extension. Dated text below is
+preserved history. Live credit: **DKK 1,864.27 / 94%**, January 12, 2027 expiry;
+delayed usage unknown / $35 reserve. Original October 28 storage boundary remains.
 
 Updated: 2026-10-24 (Copenhagen). This is the single current handoff.
 

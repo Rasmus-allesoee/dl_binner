@@ -83,7 +83,7 @@ def send(manifest,stream,cap=CAP):
     return dict(status='SENT_VERIFIED',stream=meter.record(),manifest_sha256=hashlib.sha256(raw).hexdigest(),members=len(files))
 
 
-def receive(manifest,stream,destination,cap=CAP):
+def receive(manifest,stream,destination,cap=CAP,before_write=None):
     """Restore every byte to a fresh directory and retain failure partials."""
     files=names(manifest);dest=Path(destination);incoming=dest.with_name(dest.name+'.incoming')
     if dest.exists()or incoming.exists():raise FileExistsError('Fresh destination/partial required')
@@ -102,7 +102,9 @@ def receive(manifest,stream,destination,cap=CAP):
             p=incoming/m.name;p.parent.mkdir(parents=True,exist_ok=True);h=hashlib.sha256();n=0
             with p.open('xb')as out:
                 f=a.extractfile(m)
-                for b in iter(lambda:f.read(1024**2),b''):out.write(b);h.update(b);n+=len(b)
+                for b in iter(lambda:f.read(1024**2),b''):
+                    if before_write is not None:before_write(len(b))
+                    out.write(b);h.update(b);n+=len(b)
             if dict(bytes=n,sha256=h.hexdigest())!={k:files[m.name][k]for k in ['bytes','sha256']}:raise ValueError('Member bytes differ: '+m.name)
             seen.add(m.name)
     for _ in iter(lambda:meter.read(1024**2),b''):pass
@@ -119,10 +121,23 @@ def paired(sender,receiver,relay):
     return dict(status='PAIRED_STREAM_AND_MEMBERS_PASS',stream=relay,manifest_sha256=sender['manifest_sha256'],members=sender['members'],consumer_admitted=True)
 
 
+def native_budget(config):
+    """Refuse each write before aggregate space/reserve or current clock can be lost."""
+    import shutil
+    cfg=json.loads(Path(config).read_text());root=Path(cfg['root']);host=json.loads((root/'host.json').read_text())
+    def check(n):
+        if time.time()>=cfg['node_deadline_epoch']-120:raise TimeoutError('Original node/common transport clock exhausted')
+        peer=json.loads((root/'peer-usage.json').read_text());w=shutil.disk_usage('/srv/dl_binner');b=shutil.disk_usage('/')
+        if peer.get('live')and time.time()-peer['epoch']>180:raise TimeoutError('Live peer accounting stale')
+        growth=max(0,w.used-host['work_used_bytes'])+max(0,b.used-host['boot_used_bytes'])
+        if growth+peer.get('growth_bytes',0)+n+256*1024>32*1024**3 or w.free-n-1024**2<25*1024**3 or b.free<1024**3:raise MemoryError('Before-write aggregate/reserve transport guard failed')
+    return check
+
+
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['send','receive']);p.add_argument('--manifest',type=Path,required=True);p.add_argument('--receipt',type=Path,required=True);p.add_argument('--destination',type=Path);p.add_argument('--cap',type=int,default=CAP);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['send','receive']);p.add_argument('--manifest',type=Path,required=True);p.add_argument('--receipt',type=Path,required=True);p.add_argument('--destination',type=Path);p.add_argument('--cap',type=int,default=CAP);p.add_argument('--budget-config',type=Path);a=p.parse_args()
     try:
-        m=json.loads(a.manifest.read_text());value=send(m,sys.stdout.buffer,a.cap)if a.action=='send'else receive(m,sys.stdin.buffer,a.destination,a.cap)
+        m=json.loads(a.manifest.read_text());value=send(m,sys.stdout.buffer,a.cap)if a.action=='send'else receive(m,sys.stdin.buffer,a.destination,a.cap,native_budget(a.budget_config)if a.budget_config else None)
     except BaseException as e:
         with a.receipt.open('x')as f:json.dump(dict(status='FAILED',error=repr(e),epoch=time.time()),f)
         raise

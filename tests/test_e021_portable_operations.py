@@ -90,3 +90,23 @@ class PortableNativeContracts(unittest.TestCase):
     def test_completion_refuses_unproven_controller_boolean(self):
         m=self.load('e021_portable_node')
         with self.assertRaisesRegex(ValueError,'incomplete'):m.completed(dict(role='gpu',root='/never-read'),dict(stages=[]))
+
+class RuntimeMetadataContract(unittest.TestCase):
+    def test_actual_zip_vendor_metadata_is_not_the_distributions_identity(self):
+        import io,sys,zipfile
+        sys.path.insert(0,str(P/'scripts'));from e021_portable_runtime import metadata_member
+        b=io.BytesIO()
+        with zipfile.ZipFile(b,'w')as z:
+            z.writestr('setuptools-78.1.1.dist-info/METADATA','Name: setuptools\nVersion: 78.1.1\n');z.writestr('setuptools/_vendor/packaging-24.2.dist-info/METADATA','Name: packaging\nVersion: 24.2\n')
+        with zipfile.ZipFile(io.BytesIO(b.getvalue()))as z:self.assertEqual(metadata_member(z.namelist()),'setuptools-78.1.1.dist-info/METADATA')
+        with self.assertRaises(ValueError):metadata_member(['a.dist-info/METADATA','b.dist-info/METADATA'])
+
+class StrictTransportGuard(unittest.TestCase):
+    def test_actual_receiver_checks_budget_before_writing_file_content(self):
+        import io,json,sys
+        sys.path.insert(0,str(P/'scripts'));from e021_portable_transport import send,receive,binding
+        with tempfile.TemporaryDirectory()as d:
+            r=Path(d);p=r/'a';p.write_bytes(b'actual tiny byte stream');m=dict(kind='E021 verified transport v1',files={'a':dict(source=str(p),**binding(p))});b=io.BytesIO();send(m,b,1048576)
+            def refuse(n):raise MemoryError('intended before-write reserve failure')
+            with self.assertRaisesRegex(MemoryError,'intended before-write'):receive(m,io.BytesIO(b.getvalue()),r/'destination',1048576,refuse)
+            self.assertEqual((r/'destination.incoming/a').stat().st_size,0);self.assertFalse((r/'destination').exists())

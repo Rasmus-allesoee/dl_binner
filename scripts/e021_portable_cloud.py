@@ -38,7 +38,11 @@ class Cloud:
         return json.loads(p.stdout)if p.stdout.strip()else None
     def state(self,name=CPU,zone=CPU_ZONE):return self.call(['compute','instances','describe',name],zone)
     def financial(self):
-        g=json.loads((self.root/'financial-gate.json').read_text())
+        path=self.root/'financial-gate.json'
+        if(self.root/'financial-current.json').exists():
+            pointer=json.loads((self.root/'financial-current.json').read_text());path=Path(pointer['path']);import hashlib
+            if dict(bytes=path.stat().st_size,sha256=hashlib.sha256(path.read_bytes()).hexdigest())!=pointer['binding']:raise ValueError('Current financial receipt differs')
+        g=json.loads(path.read_text())
         if g['coverage_status']!='PASS_FOR_SPECIFIED_ORDINARY_FIRST_PARTY_PRODUCTS_ONLY'or g['real_money_authorized']is not False or g['new_incremental_gross_ceiling_USD']!=45:raise ValueError('Strict credit-only financial gate missing')
         if time.time()-datetime.datetime.fromisoformat(g['UTC']).timestamp()>7200:raise ValueError('Credit observation expired; refresh, never bypass')
         if time.time()+1800>=RETENTION:raise ValueError('Original storage interval unavailable')

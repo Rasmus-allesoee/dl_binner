@@ -14,7 +14,7 @@ def service_content(repo,root,user,config,remaining):
     if type(remaining)is not int or not 1<=remaining<=172800:raise ValueError('Original common/node remainder required')
     for x in [repo,root,user,config]:
         if any(c in str(x)for c in ['\n','\r',' ','\t']):raise ValueError('Unsafe unit field')
-    return ('[Unit]\nDescription=Bounded portable E021 '+str(user)+' parent\nAfter=network-online.target\n[Service]\nType=simple\nUser='+str(user)+'\nWorkingDirectory='+str(repo)+'\nEnvironment=PYTHONNOUSERSITE=1\nEnvironment=OMP_NUM_THREADS=4\nEnvironment=OPENBLAS_NUM_THREADS=4\nEnvironment=MKL_NUM_THREADS=4\nEnvironment=NUMBA_NUM_THREADS=4\nCPUAffinity=0 1 2 3\nMemoryMax=26000000000\nExecStart=/usr/bin/python3 -u -I -B '+str(Path(repo)/'scripts/e021_portable_node.py')+' --config '+str(config)+'\nRuntimeMaxSec='+str(remaining)+'\nKillMode=control-group\nTimeoutStopSec=30\nStandardOutput=append:'+str(Path(root)/'logs/systemd-parent.log')+'\nStandardError=append:'+str(Path(root)/'logs/systemd-parent.log')+'\n')
+    return ('[Unit]\nRefuseManualStop=yes\nDescription=Bounded portable E021 '+str(user)+' parent\nAfter=network-online.target\n[Service]\nType=simple\nUser='+str(user)+'\nWorkingDirectory='+str(repo)+'\nRestart=no\nEnvironment=PYTHONNOUSERSITE=1\nEnvironment=OMP_NUM_THREADS=4\nEnvironment=OPENBLAS_NUM_THREADS=4\nEnvironment=MKL_NUM_THREADS=4\nEnvironment=NUMBA_NUM_THREADS=4\nCPUAffinity=0 1 2 3\nMemoryMax=26000000000\nExecStart=/usr/bin/python3 -u -I -B '+str(Path(repo)/'scripts/e021_portable_node.py')+' --config '+str(config)+'\nRuntimeMaxSec='+str(remaining)+'\nKillMode=control-group\nTimeoutStopSec=30\nStandardOutput=append:'+str(Path(root)/'logs/systemd-parent.log')+'\nStandardError=append:'+str(Path(root)/'logs/systemd-parent.log')+'\n')
 
 
 def arm(path):
@@ -42,6 +42,10 @@ def arm(path):
     run(['systemctl','daemon-reload']);run(['systemctl','start',watch+'.timer']);run(['systemctl','start',watch+'.service'])
     status=json.loads((Path('/var/lib')/watch/'status.json').read_text())
     if status['decision']!='workflow alive'or status['expected_process']!=identity or status['observed_process']!=identity or status['boot_id']!=host['boot_id']:raise ValueError('Watcher live identity failed')
+    restart=subprocess.run(['systemctl','try-restart',unit+'.service'],capture_output=True,text=True,timeout=15)
+    actual=int(run(['systemctl','show',unit+'.service','--property=MainPID','--value']).stdout)
+    if not restart.returncode or 'refus'not in(restart.stdout+restart.stderr).lower()or actual!=pid:raise ValueError('Held parent restart protection failed')
+    (root/'logs/maintenance-restart-refused.json').write_text(json.dumps(dict(status='PASS',pid_before=pid,pid_after=actual,exit=restart.returncode,stderr=restart.stderr),indent=2)+'\n')
     for n,v in [('watchdog-live-before-release.json',status),('supervision.json',dict(status='ARMED_AND_TESTED',parent_unit=unit+'.service',watchdog_timer=watch+'.timer',process=identity,boot_id=host['boot_id'],source=cfg['source'],config_sha256=hashlib.sha256(Path(path).read_bytes()).hexdigest(),detector_bindings=bindings,node_deadline_epoch=cfg['node_deadline_epoch'],provider_deadline_epoch=cfg['provider_deadline_epoch'],native_normal_exit_and_crash_tests_passed=True))]:
         p=root/'logs'/n;p.write_text(json.dumps(v,indent=2)+'\n');os.chown(p,account.pw_uid,account.pw_gid)
     with(root/'logs/watchdog-native-tests.log').open('x')as f:
