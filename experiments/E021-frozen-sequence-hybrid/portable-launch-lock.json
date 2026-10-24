@@ -1,6 +1,6 @@
 {
-  "record": "E021 portable operational source; f136b2c science unchanged",
-  "UTC": "2026-10-24T19:03:08.959467+00:00",
+  "record": "E021 approved portable operational source; f136b2c science unchanged",
+  "UTC": "2026-10-24T19:26:38.815856+00:00",
   "base_science": "f136b2c5f6195ae91a0566f23d84c8c6c9f69bf9",
   "files": {
     "scripts/e021_portable_inventory.py": {
@@ -8,21 +8,41 @@
       "sha256": "c0fb8fb796957de2241792fc84760e31eeeb2f0ad4abf4c9c4a8ce323595848d"
     },
     "scripts/e021_portable_cloud.py": {
-      "bytes": 7375,
-      "sha256": "fa4f2fed8a2f4b4f7cd767dd745936c3906ff5c456a8a168a7a44517cdad0bf9"
+      "bytes": 11504,
+      "sha256": "f28afd858af6796703c3b1d59b5019f9963376c68b772aa7f4461250fdbf21f0"
     },
     "scripts/e021_portable_transport.py": {
       "bytes": 7878,
       "sha256": "a435a9673e4e83431c7bd4269e7e5c33fb7eb5974ad26b044a19a0dfb1e5337d"
     },
+    "scripts/e021_portable_runtime.py": {
+      "bytes": 6055,
+      "sha256": "95e9cedaa3c3f5c2a86b193c9e60b8522c4f3698ae218b40173b0d6578a2780c"
+    },
+    "scripts/e021_portable_node.py": {
+      "bytes": 15851,
+      "sha256": "57733dfb640d2e25cc455322fb0bffcead1d7ce8ce300c5c4a35e862856d5b13"
+    },
+    "scripts/e021_portable_arm.py": {
+      "bytes": 5952,
+      "sha256": "7e5e6e1d6a58a530c3677e5224bff51e41fb2e5ee6ac03efd7da30b3d8708703"
+    },
+    "scripts/e021_portable_bootstrap.py": {
+      "bytes": 2891,
+      "sha256": "e10610fbda74905b25ca96cb887c7e2d89e1af876c299c6a151944614d984960"
+    },
     "tests/test_e021_portable_operations.py": {
-      "bytes": 5836,
-      "sha256": "11328ddb5a2d2af418affef8614ac3c922cb56cf6483a64a4e1255bd62d9bf78"
+      "bytes": 8172,
+      "sha256": "ff24b40581e1d3165804e26e5d03b9458d5a4aee94ec56336e2da0eb52e6d9d8"
     },
     "experiments/E021-frozen-sequence-hybrid/portable-policy.json": {
       "bytes": 5755,
       "sha256": "040e1092c80b990bbedcea2f1f14085279107501fd55a15095e8b07fb46f62eb"
+    },
+    "experiments/E021-frozen-sequence-hybrid/portable-runtime-lock.json": {
+      "bytes": 51253,
+      "sha256": "5782ade8cc21fdda4c3978515a689d360f0f7542f00bed6aa04a166b22462476"
     }
   },
-  "native_status": "Only local operations/transport contracts pass; native host/runtime/resources unadmitted"
+  "native_status": "Original inventory/watchdog passed; worker runtime/source/device/throughput/scale science release unadmitted"
 }

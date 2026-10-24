@@ -1,8 +1,14 @@
 # Current Research State
 
-**Owner has now approved the revised portable scope under the same remaining $45.**
-[Approved policy](../experiments/E021-frozen-sequence-hybrid/portable-policy.json) supersedes the pending-approval wording in the dated reassessment below.
-Actual native preparation/execution must pass every gate; no new start at this source freeze.
+**Portable E021 scope approved; original-node inventory passed and E2 stopped.**
+[Live continuation receipt](../experiments/E021-frozen-sequence-hybrid/portable-observed.json)
+owns the first start at **October 24, 19:04:19 UTC**, common 48-hour clock, 332.333-second
+inventory allocation, current 63.05 GiB work headroom and verified restoration.
+Iowa SSD quota **404 GiB** is now effective. Original disks and science are intact;
+worker installation/extraction/comparison remain unstarted at this source freeze.
+Ten portable transport/runtime/service/limit contracts pass locally; native worker
+admission is still required. The dated reassessment below is preserved history,
+including its earlier pending-approval wording.
 
 Updated: 2026-10-24 (Copenhagen). This is the single current handoff.
 

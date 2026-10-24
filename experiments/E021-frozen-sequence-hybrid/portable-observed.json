@@ -1,0 +1,79 @@
+{
+  "record": "E021 approved portable native continuation",
+  "UTC": "2026-10-24T19:27:15.614209+00:00",
+  "owner_approved_revised_scope": true,
+  "common_clock": {
+    "first_VM_start_epoch": 1792868659.099,
+    "deadline_epoch": 1793041459.099,
+    "provider_deadline_epoch": 1793042359.099,
+    "retention_epoch": 1793142000,
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e021/portable-20261024T190419Z",
+    "original_CPU_running_seconds": 0
+  },
+  "inventory_allocation": {
+    "status": "TERMINATED_AND_ORIGINAL_SCHEDULE_RESTORED",
+    "start_epoch": 1792868659.099,
+    "stop_epoch": 1792868991.432,
+    "allocation_seconds": 332.3329999446869,
+    "original_CPU_remaining_seconds": 28467.667000055313,
+    "science": false
+  },
+  "inventory": {
+    "status": "PASS_SOURCE_CAPTURED_TERMINAL",
+    "native_inventory": {
+      "status": "PASS",
+      "checked_UTC": "2026-10-24T19:06:42.769077+00:00",
+      "host": {
+        "user": "rasmus_allesoee_gmail_com",
+        "uid": 1852909767,
+        "gid": 1852909767,
+        "boot_id": "4a06f797-a111-41ed-acc0-54892f8fcae8",
+        "unit": "e021-inventory-1792868659",
+        "inventory_deadline": 1792870159.099,
+        "archive_prefix": "gs://dl-binner-archive-167650584170/e021/portable-20261024T190419Z",
+        "source_script": "/tmp/e021-portable-387ad8d/scripts/e021_portable_inventory.py",
+        "first_VM_start_epoch": 1792868659.099,
+        "work_used_bytes": 249017020416,
+        "work_free_bytes": 67699855360,
+        "boot_used_bytes": 7234723840,
+        "boot_free_bytes": 22832275456
+      },
+      "mount": {
+        "filesystems": [
+          {
+            "target": "/srv/dl_binner",
+            "source": "/dev/sdb",
+            "fstype": "ext4",
+            "uuid": "f76283ed-60c4-4060-bd22-84c95f38d3fb",
+            "size": "295G",
+            "options": "rw,relatime,discard"
+          }
+        ]
+      },
+      "primary_checkout": "b259dcac12968b38b909ce7733a4a12ee07eae5a",
+      "primary_unchanged": true,
+      "original_work_headroom_passed": true,
+      "cleanup": [],
+      "storage_increase_for_original_node": false,
+      "temporary_worker_disks": "Necessary only for approved cross-zone/G2 compatibility; no original resize.",
+      "science": false
+    },
+    "terminal_binding": {
+      "bytes": 4879,
+      "sha256": "0eedb80ffa81e97dc4117e1e54c2934e0f73f0a314c9852d0229eba23eea41b9"
+    },
+    "returned_native_directory_partial": true,
+    "no_recovery_wake": true
+  },
+  "SSD_quota": {
+    "limit": 404,
+    "usage": 300,
+    "case": "80f8f190-c0a0-4f48-8ff7-b17da19c857d"
+  },
+  "original_VM": "TERMINATED and original scheduling restored",
+  "worker": "NOT_CREATED",
+  "community_science": "NOT_STARTED",
+  "local_operations_tests": 10,
+  "native_runtime_or_throughput_admitted": false,
+  "artifacts": "artifacts/e021-portable-admission/20261024T183844Z"
+}

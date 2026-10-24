@@ -74,3 +74,41 @@ class Cloud:
         final=self.state();self.put('original-schedule-restored-'+str(time.time_ns())+'.json',final)
         if final['scheduling']!=original['scheduling']or any(final[k]!=original[k]for k in ['disks','shieldedInstanceConfig','metadata','serviceAccounts']):raise ValueError('Original configuration restoration differs')
         return final
+
+    def create_worker(self):
+        """Try approved placements once each; clean only empty capacity-failed resources."""
+        self.financial();clock=json.loads((self.root/'common-clock.json').read_text())
+        if time.time()>clock['deadline_epoch']-7200:raise TimeoutError('Original common clock cannot admit setup')
+        baseline=self.state()
+        if baseline['status']!='TERMINATED'or baseline['disks']!=json.loads((self.root/'original-CPU.json').read_text())['disks']:raise ValueError('Stopped unchanged original node required')
+        existing=self.call(['compute','instances','list'])
+        if any(x['name'].startswith('e021-')for x in existing):raise ValueError('Prior temporary worker exists; no parallel allocation')
+        quotas=self.call(['compute','regions','describe','us-central1']);self.put('effective-worker-quotas.json',quotas);q={x['metric']:x for x in quotas['quotas']}
+        if q['SSD_TOTAL_GB']['limit']-q['SSD_TOTAL_GB']['usage']<104 or q['NVIDIA_L4_GPUS']['limit']-q['NVIDIA_L4_GPUS']['usage']<1:raise ValueError('Approved L4 disk/GPU quota not effective')
+        image=self.call(['compute','disks','describe',baseline['disks'][0]['source'].split('/')[-1]],CPU_ZONE)['sourceImage']
+        for i,placement in enumerate(PLACEMENTS):
+            zone,machine,gpu,disk=placement;name='e021-portable-20261024-'+zone[-1];commands=worker_commands(name,placement,baseline,image);attempt=dict(name=name,placement=placement,epoch=time.time(),commands=commands,original_image=image)
+            try:
+                for args in commands:self.call(args,zone)
+                state=self.state(name,zone)
+                if state['status']!='RUNNING'or not state['machineType'].endswith('/'+machine)or state['scheduling']['instanceTerminationAction']!='STOP'or not state['shieldedInstanceConfig']['enableSecureBoot']:raise ValueError('Worker resource/security/STOP readback differs')
+                if len(state.get('guestAccelerators',[]))!=1 or state['guestAccelerators'][0]['acceleratorCount']!=1 or not state['guestAccelerators'][0]['acceleratorType'].endswith('/nvidia-'+('l4'if gpu=='L4'else'tesla-t4')):raise ValueError('Worker accelerator differs')
+                if state['serviceAccounts']!=baseline['serviceAccounts']:raise ValueError('Worker service identity/scopes differ')
+                start=datetime.datetime.fromisoformat(state['lastStartTimestamp']).timestamp();worker=dict(name=name,zone=zone,GPU=gpu,start_epoch=start,node_deadline_epoch=min(start+38*3600,clock['deadline_epoch']),provider_deadline_epoch=min(start+38.25*3600,clock['provider_deadline_epoch']),state=state)
+                if start+137700>clock['provider_deadline_epoch']:raise ValueError('Provider fallback would exceed common deadline; stop before admission')
+                self.put('worker-start.json',worker);self.put('capacity-attempt-'+str(i)+'.json',dict(attempt,status='RUNNING',state=state));return worker
+            except Exception as e:
+                attempt['error']=str(e);capacity='ZONE_RESOURCE_POOL_EXHAUSTED'in str(e)or'ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS'in str(e)
+                self.put('capacity-attempt-'+str(i)+'.json',dict(attempt,status='CAPACITY_FAILURE'if capacity else'OPERATIONAL_FAILURE'))
+                # Only resources created by this exact exclusive attempt can be removed.
+                instances=self.call(['compute','instances','list','--filter=name='+name])
+                if instances:
+                    s=instances[0]
+                    if s['status']=='RUNNING':self.stop(name,zone)
+                    self.call(['compute','instances','delete',name,'--keep-disks=all'],zone)
+                disks=self.call(['compute','disks','list','--filter=name~^'+name+'-(boot|work)$'])
+                for d in disks:
+                    if d.get('users')or d['name']not in [name+'-boot',name+'-work']:raise ValueError('Failed worker disk ownership differs')
+                    self.call(['compute','disks','delete',d['name']],zone)
+                if not capacity:raise
+        raise RuntimeError('All three approved capacity attempts exhausted; no loop')

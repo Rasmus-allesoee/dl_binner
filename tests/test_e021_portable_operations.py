@@ -63,3 +63,30 @@ class TransferredCLI(unittest.TestCase):
             sent=json.loads((r/'sent.json').read_text());recv=json.loads((r/'received.json').read_text());self.assertEqual(sent['stream'],recv['stream']);self.assertEqual((r/'fresh/bank/opaque.bin').read_bytes(),b)
 
 if __name__=='__main__':unittest.main()
+
+class PortableNativeContracts(unittest.TestCase):
+    def load(self,name):
+        import sys
+        sys.path.insert(0,str(P/'scripts'))
+        s=importlib.util.spec_from_file_location(name,P/'scripts'/(name+'.py'));q=importlib.util.module_from_spec(s);s.loader.exec_module(q);return q
+    def test_portable_actual_service_clock_threads_and_memory(self):
+        m=self.load('e021_portable_arm');s=m.service_content('/repo','/work','user','/work/config.json',7100)
+        for x in ['RuntimeMaxSec=7100','e021_portable_node.py --config','MemoryMax=26000000000','CPUAffinity=0 1 2 3','KillMode=control-group']:self.assertIn(x,s)
+        with self.assertRaises(ValueError):m.service_content('/repo','/work','bad user','/c',60)
+        with self.assertRaises(ValueError):m.service_content('/repo','/work','u','/c',172801)
+    def test_real_runtime_stream_hash_reuse_and_corruption_refusal(self):
+        import hashlib
+        m=self.load('e021_portable_runtime')
+        with tempfile.TemporaryDirectory()as d:
+            r=Path(d);f=r/'publisher';f.write_bytes(b'actual pinned software fixture'*113);b=f.read_bytes();row=dict(url=f.as_uri(),sha256=hashlib.sha256(b).hexdigest(),bytes=len(b));out=r/'fresh'
+            self.assertEqual(m.acquire(row,out)['sha256'],row['sha256']);self.assertEqual(m.acquire(row,out)['bytes'],len(b));out.write_bytes(b'corrupt')
+            with self.assertRaisesRegex(ValueError,'Corrupt retained'):m.acquire(row,out)
+            with self.assertRaisesRegex(ValueError,'bytes differ'):m.acquire(dict(row,sha256='0'*64),r/'bad')
+    def test_actual_peer_and_aggregate_space_refusal(self):
+        m=self.load('e021_portable_node');local=dict(growth_bytes=9*1024**3,work_free_bytes=30*1024**3,boot_free_bytes=5*1024**3)
+        m.peer_check({},local,dict(live=False,epoch=0,growth_bytes=10*1024**3),1000)
+        with self.assertRaisesRegex(TimeoutError,'stale'):m.peer_check({},local,dict(live=True,epoch=0,growth_bytes=0),1000)
+        with self.assertRaisesRegex(MemoryError,'Aggregate'):m.peer_check({},local,dict(live=False,epoch=0,growth_bytes=24*1024**3),1000)
+    def test_completion_refuses_unproven_controller_boolean(self):
+        m=self.load('e021_portable_node')
+        with self.assertRaisesRegex(ValueError,'incomplete'):m.completed(dict(role='gpu',root='/never-read'),dict(stages=[]))
