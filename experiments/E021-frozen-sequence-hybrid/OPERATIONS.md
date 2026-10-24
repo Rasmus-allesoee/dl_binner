@@ -359,7 +359,7 @@ denominators, N-quarantine and every population. Update records/check/commit wit
 structured what changed/why; report actual status/costs/limits, one next strongest
 decision and exact following prompt. Stop before unclear or uncovered spending.
 
-## Exact following prompt
+## Prior portable resource approval, executed October 24
 
 **Proposed resource-scope approval, not effective yet.** The current authorization
 says “No new VM, zone, accelerator alternative, disk increase”. This request changes
@@ -447,3 +447,54 @@ known-shared and every length/origin/eligibility/marker/excluded/unassigned popu
 Apply the original criteria without tuning. Update records/check/commit with
 structured what changed/why and report actual status/costs/limits, one next decision
 and exact following prompt. Keep the October 28 storage review visible.
+
+## Current E009-only execution amendment
+
+The owner authorized considering E009 alone after the complete native L4 probe
+forecast 69.92 GPU hours for both communities. Adopt the
+[E009-only prospective protocol](E009-only-protocol.md), preserving full exposure
+and all original scientific settings. Oral accounts for 61.05 conservative GPU
+hours versus E009 8.37; adding original I/O gives E009 8.87 hours.
+Original f136b2c science, clean native 26374b7 and failed attempts stay immutable.
+The owner-approved [20 E2 / 30 GPU time reallocation](allocation-reassessment.json)
+supersedes the historical 8 / 38 wording. No new budget or clock reset.
+The next exact inspection prompt will identify the actual released attempt.
+
+## Exact following prompt
+
+Continue E021's owner-directed E009-only phase `portable-20261024T190419Z`.
+Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015, E021's E009-only
+scope/protocol, allocation reassessment, portable-observed.json, original frozen
+candidate/reuse/criteria and operations. Preserve all accepted science and failures.
+Check the Mac handoff controller receipt/log under
+`artifacts/e021-portable-admission/20261024T183844Z`, existing L4 worker
+`e021-portable-20261024-b` in Iowa b and original E2 `dl-binner-cpu` in Iowa a.
+Check `e021-portable/status`, GPU `gpu-native-v5` and CPU
+`cpu-E009-consumer-v5` completion/exit evidence under
+`gs://dl-binner-archive-167650584170/e021/portable-20261024T190419Z/`.
+Do not infer scientific success from shutdown or confuse legacy two-community
+science_completed=false with the separately required E009 scoped target.
+If healthy, report actual extraction/handoff/CPU stage and leave verified native
+watchers/provider STOP intact without polling a long job to completion.
+
+After independently verified shutdown, establish the extraction, actual restored
+bank/context/runtime gates and every one of six E009 CPU exits, scoped target,
+collection/upload/readback and watchdog outcome. Verify exact full axes/source/
+seed/schedule/reload/geometry, retained native bank and every archive member/alias
+before bounded frozen E009 conservative-v2 diagnostics on NEW outputs only.
+Keep full 156 denominators, 3.3034% N-quarantine and all populations; reuse E019
+and older summaries without refit/rescore. Original joint two-community KEEP
+remains unmet; oral and skin were not run. No truth tuning or new comparison.
+
+Refresh credit/prices before export or any assessed recovery; price actual
+provider allocation, stopped disks and WAN bytes separately from sampled CPU.
+Keep the same original $45 credit-only / 48-hour clock from October 24 19:04:19
+UTC, approved 20 E2 / 30 GPU cumulative hours, all resource/return caps and
+October 28 00:00 Copenhagen retention. No budget or clock reset. A missing
+handoff may require bounded collection/consumer recovery within that original
+allowance; assess it first, never repeat accepted extraction or fits. Preserve
+verified cache/runtime/journals before deleting only the temporary worker/disks.
+Restore original E2 scheduling after independently stopped. Do not resize,
+provision, acquire DNA, run oral/skin/external tools or extend retention.
+Update records/check/commit with structured what changed/why, report actual costs,
+scoped results/limits and one next recovery-focused decision.

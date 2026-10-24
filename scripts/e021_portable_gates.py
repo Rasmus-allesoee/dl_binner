@@ -78,7 +78,7 @@ def throughput(plan,output):
     from dl_binner.multiview.views import load,fasta_rows
     from dl_binner.model import configure_torch
     configure_torch(4);torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False;torch.cuda.set_per_process_memory_fraction(13*1024**3/torch.cuda.get_device_properties(0).total_memory)
-    p=json.loads(Path(plan).read_text());extractor=Extractor(p['model_directory'],p['model_pin'],'cuda');results={};bounds=[1,500,1000,2000,4000,8000,16000,64000,2**63-1];total_upper=0
+    p=json.loads(Path(plan).read_text());extractor=Extractor(p['model_directory'],p['model_pin'],'cuda');warm_start=time.perf_counter();warm_rng=np.random.default_rng(718);warm_DNA=''.join(warm_rng.choice(list('ACGT'),4001));extractor.extract([('own-one-time-warmup',warm_DNA)]);warm_seconds=time.perf_counter()-warm_start;results={};bounds=[1,500,1000,2000,4000,8000,16000,64000,2**63-1];total_upper=0
     expected_axes={'E009-hybrid':(145702,89041),'oral-hybrid':(1286547,508763)}
     locked=json.loads(Path(p['candidate_lock']).read_text())
     for unit,u in p['units'].items():
@@ -109,7 +109,7 @@ def throughput(plan,output):
             obs=z['observations'];point=z['views']*sum(x['seconds']for x in obs)/len(obs);bp_upper=z['exposed_bp']*max(x['seconds']/(x['end']-x['start'])for x in obs);z['point_seconds']=point;z['planning_upper_seconds']=1.5*max(point,bp_upper);upper+=z['planning_upper_seconds']
         results[unit]=dict(full_contigs=n,eligible=int(eligible.sum()),ordered_samples=meta['samples'],available_views=sum(x['views']for x in strata),exposed_bp=sum(x['exposed_bp']for x in strata),strata=strata,planning_upper_seconds=upper);total_upper+=upper
         del data,v
-    write_json(output,dict(status='MEASURED_NOT_AUTOMATIC_RELEASE',units=results,total_extraction_planning_upper_seconds=total_upper,scope='Label-free length/coordinate stratified native float32 timing, 1.5 multiplier; forecast is not a statistical upper guarantee; full live guards still apply'))
+    write_json(output,dict(status='MEASURED_NOT_AUTOMATIC_RELEASE',units=results,total_extraction_planning_upper_seconds=total_upper+warm_seconds+1800,one_time_warmup_seconds=warm_seconds,full_scan_hash_log_IO_allowance_seconds=1800,warmup_sha256=hashlib.sha256(warm_DNA.encode()).hexdigest(),scope='Label-free length/coordinate stratified native float32 timing, 1.5 multiplier; forecast is not a statistical upper guarantee; full live guards still apply'))
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('operation',choices=['inventory','parity','tiny-plan','throughput']);p.add_argument('--config',type=Path);p.add_argument('--recipe',type=Path);p.add_argument('--plan',type=Path);p.add_argument('--model',type=Path);p.add_argument('--pin',type=Path);p.add_argument('--output',type=Path,required=True);a=p.parse_args()

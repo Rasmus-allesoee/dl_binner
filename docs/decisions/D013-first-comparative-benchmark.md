@@ -1,6 +1,6 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E021 execution strategy](../../experiments/E021-frozen-sequence-hybrid/execution-strategy.md) replaces repeated same-zone T4 retries with a proposed occasional portable extraction worker plus CPU development/cache reuse. Five visible capacity refusals motivate a resource change, not a model-family conclusion. The remaining $45 can cover the priced alternative, but new VM/zone/GPU/disk resource exceptions are not yet approved. [Operations](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt) owns the exact request; original f136b2c science and October 28 storage boundary remain.
+Current handoff: [E021 E009-only protocol](../../experiments/E021-frozen-sequence-hybrid/E009-only-protocol.md) prospectively adopts the owner's cost-driven E009-only scope. First-placement L4 native runtime/parity/tiny/full-input gates pass, but full two-community extraction forecasts 69.92 GPU hours. Keep full E009 exposure and frozen learning/CPM/E013; defer oral without claiming original joint KEEP. Approved portable resources and 20 E2 / 30 GPU cumulative hours share the same $45 credit-only / 48-hour clock and October 28 retention. [Operations](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt) owns the current handoff.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.

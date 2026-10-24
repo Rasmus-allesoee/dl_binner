@@ -1,0 +1,42 @@
+{
+  "record": "Prospective owner-directed E009-only scope amendment",
+  "UTC": "2026-10-24T22:21:29.992426+00:00",
+  "status": "ADOPT_E009_ONLY_BEFORE_COMMUNITY_OUTCOMES",
+  "owner_direction": "If too many views are too expensive, consider running E009 only because oral is the bottleneck.",
+  "decision": "Run only full E009 with unchanged candidate/view exposure/source/schedule/CPM/E013; defer oral. No truth, quality outcome or shortened view bank used to choose scope.",
+  "science_source": "f136b2c5f6195ae91a0566f23d84c8c6c9f69bf9",
+  "native_clean_source": "26374b7c2dab065fa4149eed7ec42be463a575ad",
+  "full_contigs": 145702,
+  "eligible": 89041,
+  "views": 432664,
+  "ordered_samples": [
+    "cami3_toy_human_gut_short_read_sample_0",
+    "cami3_toy_human_gut_short_read_sample_2",
+    "cami3_toy_human_gut_short_read_sample_3",
+    "cami3_toy_human_gut_short_read_sample_4",
+    "cami3_toy_human_gut_short_read_sample_6",
+    "cami3_toy_human_gut_short_read_sample_9",
+    "cami3_toy_human_gut_short_read_sample_10",
+    "cami3_toy_human_gut_short_read_sample_11",
+    "cami3_toy_human_gut_short_read_sample_14",
+    "cami3_toy_human_gut_short_read_sample_17"
+  ],
+  "measured_GPU_planning_upper_hours": 8.868668935916832,
+  "measured_CPU_training_planning_upper_hours": 0.5656143382999517,
+  "GPU_handoff_and_collection_allowance_hours": 1.75,
+  "CPU_whole_consumer_cap_hours": 4,
+  "CPU_provider_STOP_hours": 4.25,
+  "full_original_45_USD_ceiling_unchanged": true,
+  "original_20_CPU_30_GPU_cumulative_caps_unchanged": true,
+  "common_clock": {
+    "first_VM_start_epoch": 1792868659.099,
+    "deadline_epoch": 1793041459.099,
+    "provider_deadline_epoch": 1793042359.099,
+    "retention_epoch": 1793142000,
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e021/portable-20261024T190419Z",
+    "original_CPU_running_seconds": 0
+  },
+  "criteria": "Preserve original per-community diagnostics and thresholds. Original joint two-community KEEP cannot be met by this scope; no product-default promotion or unseen-genome/depth-family claim. Frozen oral/skin questions remain untested.",
+  "excluded": "No oral extraction/fit/score, old baseline refit/rescore, new DNA, precision/batch/model change or retention extension.",
+  "handoff": "Fresh native held-parent/watcher per boot, bounded Mac IAP relay and actual CPU restore-only readers; disappearance of Mac closes GPU after bounded wait. CPU fits and collection then independent of Mac."
+}

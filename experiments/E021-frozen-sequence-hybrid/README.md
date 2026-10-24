@@ -1,5 +1,14 @@
 # E021: frozen sequence/context hybrid and skin admission
 
+**Current: prepare the owner-directed full E009-only comparison.**
+[Prospective scope/protocol](E009-only-protocol.md) preserves all E009 views and
+frozen science after measured oral cost fails the two-community envelope.
+[Native continuation](portable-observed.json) records actual Linux/CUDA/tiny/
+source/input/scale gates, preserved failures and the approved 20 E2 / 30 GPU
+subcaps inside the same original $45 / 48-hour and October 28 limits.
+Oral/skin are unrun and original joint KEEP remains unmet. Dated text below is history.
+
+
 **Execution reassessed after repeated capacity refusal.** [Current strategy](execution-strategy.md)
 recommends occasional portable GPU extraction/cache reuse and routine CPU work,
 not another identical same-zone retry or an unadmitted full CPU GLM fallback.

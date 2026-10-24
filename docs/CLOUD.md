@@ -1,5 +1,18 @@
 # Google Cloud workspace operations
 
+**Current E021 scope: owner-directed E009 only; preparation before release.**
+[Prospective protocol](../experiments/E021-frozen-sequence-hybrid/E009-only-protocol.md)
+records full native L4 timing, unchanged full E009 exposure and oral deferral.
+The resource exception is approved; approved running subcaps are now 20 E2 /
+30 GPU hours, not the historical 8 / 38. Common clock began October 24,
+19:04:19 UTC and never resets. Same $45 credit-only cap / $35 pending reserve,
+original hardware and October 28 retention; no new money. The temporary L4 b
+worker passed native checks on its first placement; no c/f capacity probe.
+The original E2 is terminated with original scheduling restored after bounded
+collection of already-passed tiny evidence. New E009 consumer will use fresh
+watcher/STOP and exact verified reuse. Dated snapshots below are history.
+
+
 **Owner has now approved the revised portable scope under the same remaining $45.**
 [Approved policy](../experiments/E021-frozen-sequence-hybrid/portable-policy.json) supersedes the pending-approval wording in the dated reassessment below.
 Actual native preparation/execution must pass every gate; no new start at this source freeze.

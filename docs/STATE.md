@@ -1,5 +1,17 @@
 # Current Research State
 
+**E021 is preparing the owner-directed E009-only run after native cost admission.**
+The unchanged two-community extraction forecast is 69.92 GPU hours and fails
+the envelope; E009 alone needs 8.87 GPU hours including I/O.
+[E009-only protocol](../experiments/E021-frozen-sequence-hybrid/E009-only-protocol.md)
+keeps full DNA/views and frozen learning/CPM/E013, defers oral and leaves the
+original joint KEEP criterion unmet. No community science was started at this
+prospective freeze. Both actual native tiny modes and full input/runtime/parity
+checks pass; failures are preserved. The same $45, 48-hour common clock and
+approved 20 E2 / 30 GPU cumulative hours remain, with no retention extension.
+October 28 at 00:00 Copenhagen remains the storage review/stop boundary.
+
+
 **E021 portable L4 placement succeeded; native operational recovery is in progress.**
 [Continuation receipt](../experiments/E021-frozen-sequence-hybrid/portable-observed.json)
 owns the first L4 attempt in Iowa b, both complete independent Python runtimes,

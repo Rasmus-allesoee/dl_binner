@@ -1,0 +1,31 @@
+{
+  "record": "E021 measured time-allocation reassessment",
+  "UTC": "2026-10-24T20:34:46.347293+00:00",
+  "status": "OWNER_APPROVED_REVISED_TIME_ALLOCATION",
+  "observed_CPU_training_planning_upper_seconds": 51950.584417079604,
+  "sampled_peak_RSS_bytes": 23514734592,
+  "scope": "Actual retained feature/view/context readers plus explicitly synthetic full-shape GLM maps; resource engineering only, no community fit/checkpoint/score",
+  "old_caps_hours": {
+    "GPU": 38,
+    "CPU": 8
+  },
+  "proposed_caps_hours": {
+    "GPU": 30,
+    "CPU": 20
+  },
+  "STOP_caps_hours": {
+    "GPU": 30.25,
+    "CPU": 20.25
+  },
+  "common_first_start_epoch": 1792868659.099,
+  "common_wall_clock_hours": 48,
+  "common_STOP_hours": 48.25,
+  "remaining_original_ceiling_USD": 45,
+  "new_money": false,
+  "conservative_gross_upper_USD": 39.107882420652246,
+  "credit_only": true,
+  "change": "Reallocate within original hardware, science, 45 USD and 48h common deadline. No new resource or retention. Full native GPU throughput plus serial sum forecast must still fit remaining common deadline; otherwise no science release.",
+  "storage_end": "2026-10-28T00:00:00+01:00",
+  "approval": "Direct owner reply: Approve revised time allocation",
+  "approval_UTC_recorded": "2026-10-24T20:43:24.018594+00:00"
+}

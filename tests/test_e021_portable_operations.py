@@ -110,3 +110,91 @@ class StrictTransportGuard(unittest.TestCase):
             def refuse(n):raise MemoryError('intended before-write reserve failure')
             with self.assertRaisesRegex(MemoryError,'intended before-write'):receive(m,io.BytesIO(b.getvalue()),r/'destination',1048576,refuse)
             self.assertEqual((r/'destination.incoming/a').stat().st_size,0);self.assertFalse((r/'destination').exists())
+
+class CompleteInputManifest(unittest.TestCase):
+    def test_native_reader_sidecars_are_explicit_original_members(self):
+        import sys
+        sys.path.insert(0,str(P/'scripts'))
+        from e021_portable_inputs import compile_manifest
+        units={u:dict(fasta='/original/'+u+'/assembly.fna',
+            features='/original/'+u+'/features.npz',views='/original/'+u+'/views.npz',
+            tokens='/original/'+u+'/tokens')for u in ['E009-hybrid','oral-hybrid']}
+        files={}
+        for u,v in units.items():
+            for path in [v['fasta'],v['features'],v['views'],
+                    v['features'].replace('.npz','.json'),v['views'].replace('.npz','.json'),
+                    v['tokens']+'/tokens.json']:
+                files[path]=dict(bytes=23,sha256='a'*64)
+        out=compile_manifest(units,files)
+        self.assertEqual(len(out['files']),12)
+        self.assertEqual(sum(k.endswith('.json')for k in out['files']),6)
+        del files[units['oral-hybrid']['views'].replace('.npz','.json')]
+        with self.assertRaisesRegex(ValueError,'original input binding'):
+            compile_manifest(units,files)
+
+class RuntimeArchivePreservation(unittest.TestCase):
+    def test_actual_bytes_internal_alias_and_no_overwrite(self):
+        import sys
+        sys.path.insert(0,str(P/'scripts'))
+        from e021_portable_runtime_archive import pack,verify,inventory
+        with tempfile.TemporaryDirectory()as d:
+            r=Path(d);prefix=r/'prefix';prefix.mkdir();(prefix/'python').write_bytes(b'owned runtime bytes'*170)
+            (prefix/'alias').symlink_to('python')
+            __import__('os').link(prefix/'python',prefix/'second-regular')
+            result=pack(prefix,r/'preserved')
+            self.assertTrue(verify(r/'preserved/native-runtime.tar.gz',result['members']))
+            self.assertFalse(result['destination_execution_admitted'])
+            with self.assertRaises(FileExistsError):pack(prefix,r/'preserved')
+            (prefix/'outside').symlink_to(r)
+            with self.assertRaisesRegex(ValueError,'escapes'):inventory(prefix)
+
+class ScopedHandoffContracts(unittest.TestCase):
+    def load(self,name):
+        import sys
+        sys.path.insert(0,str(P/'scripts'))
+        return __import__(name)
+    def test_exact_subprocess_JSON_roundtrip_and_overwrite_refusal(self):
+        m=self.load('e021_portable_E009_controller')
+        with tempfile.TemporaryDirectory()as d:
+            r=Path(d);node=dict(ssh=['/bin/sh','-c'],root=str(r))
+            value=dict(opaque='quote \' and actual\nnewline',axes=[0,2,17])
+            m.put(r,node,str(r/'actual.json'),value)
+            self.assertEqual(m.read(r,node,str(r/'actual.json')),value)
+            with self.assertRaises(RuntimeError):m.put(r,node,str(r/'actual.json'),{})
+    def test_original_credit_and_common_clock_lease_cannot_expand(self):
+        m=self.load('e021_portable_E009_controller')
+        v=dict(gross_upper_USD=39.11,real_money=False,available_USD_after_pending_reserve=248,
+            credit_expiry_epoch=30000,scope='SAME_PREAPPROVED_E009_PHASE_ONLY')
+        clock=dict(provider_deadline_epoch=20000,deadline_epoch=19000)
+        m.validate_lease(v,clock,1000)
+        for bad in [dict(v,gross_upper_USD=46),dict(v,real_money=True),
+                dict(v,available_USD_after_pending_reserve=44),dict(v,credit_expiry_epoch=19000)]:
+            with self.assertRaises(ValueError):m.validate_lease(bad,clock,1000)
+    def test_native_wait_closes_without_claiming_two_community_success(self):
+        import json,time
+        m=self.load('e021_portable_handoff')
+        with tempfile.TemporaryDirectory()as d:
+            r=Path(d);(r/'config.json').write_text(json.dumps(dict(node_deadline_epoch=time.time()+7200)))
+            m.wait_handoff(r,0)
+            v=json.loads((r/'finish.json').read_text())
+            self.assertFalse(v['science_completed']);self.assertFalse(v['oral_executed'])
+            self.assertEqual(v['status'],'SUCCESS_E009_EXTRACTION_RETAINED_HANDOFF_PENDING')
+    def test_scoped_completion_requires_all_six_actual_exits(self):
+        import json
+        m=self.load('e021_portable_handoff')
+        with tempfile.TemporaryDirectory()as d:
+            r=Path(d);(r/'tasks').mkdir();(r/'gates').mkdir();u=r/'work/units/E009-hybrid'
+            for n in ['train','export']:(u/n).mkdir(parents=True)
+            (u/'train/checkpoint.json').write_text(json.dumps(dict(history=[{}]*20)))
+            (u/'train/reference.npz').write_bytes(b'exact reload fixture')
+            (u/'embeddings.npz').write_bytes(b'exact reload fixture')
+            (u/'export/accounting.json').write_text(json.dumps({n:{}for n in ['pre','old','post']}))
+            (u/'graph-proof.json').write_text(json.dumps(dict(status='PASS')))
+            p=r/'plan.json';p.write_text(json.dumps(dict(work=str(r/'work'))))
+            for i,s in enumerate(['train','embed','group','refine','export','graph-proof']):
+                (r/'tasks'/(str(i)+'.result.json')).write_text(json.dumps(dict(kind='science',unit='E009-hybrid',stage=s,status='SUCCESS')))
+            m.cpu_target(r,p)
+            self.assertFalse(json.loads((r/'finish.json').read_text())['science_completed'])
+            (r/'finish.json').unlink();(r/'gates/E009-scoped-target.json').unlink()
+            (r/'tasks/extra.result.json').write_text(json.dumps(dict(kind='science',unit='oral-hybrid',stage='train',status='SUCCESS')))
+            with self.assertRaisesRegex(ValueError,'Six E009'):m.cpu_target(r,p)

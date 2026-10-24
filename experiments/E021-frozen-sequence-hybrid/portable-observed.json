@@ -105,5 +105,101 @@
     "pending_usage_unknown": true,
     "reserve_USD": 35
   },
-  "source_and_science_immutable": true
+  "source_and_science_immutable": true,
+  "later_native_admission": {
+    "UTC": "2026-10-24T22:30:14.353870+00:00",
+    "status": "E009_ONLY_PROSPECTIVELY_ADOPTED_PENDING_COMMUNITY_RELEASE",
+    "owner_suggestion": "Consider only E009 because oral is the cost bottleneck",
+    "scope_record": "E009-only-scope.json",
+    "protocol": "E009-only-protocol.md",
+    "approved_time_reallocation": "20 cumulative E2 hours /30 GPU hours; same original45USD/48h, no reset",
+    "original_two_community_extraction_planning_upper_hours": 69.92129019080114,
+    "units": {
+      "E009-hybrid": {
+        "full_contigs": 145702,
+        "eligible": 89041,
+        "available_views": 432664,
+        "exposed_bp": 374710147,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ],
+        "stratified_point_hours": 4.902152384264168,
+        "planning_upper_hours": 8.368426277714887
+      },
+      "oral-hybrid": {
+        "full_contigs": 1286547,
+        "eligible": 508763,
+        "available_views": 2470549,
+        "exposed_bp": 2366088186,
+        "samples": [],
+        "stratified_point_hours": 38.81249984708149,
+        "planning_upper_hours": 61.05262125488431
+      }
+    },
+    "native_probe_resources": {
+      "command": [
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/gpu-admission-v3/env-gpu-v2/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/gpu-native-v5/helpers/e021_portable_gates.py",
+        "throughput",
+        "--plan",
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/gpu-native-v5/science-plan.json",
+        "--output",
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/gpu-native-v5/gates/full-GPU-throughput.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2103,
+      "peak_sampled_rss_bytes": 7074537472,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 1.0810687361896272,
+      "sampled_cpu_seconds": 385.82,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1200,
+      "stop_reason": null,
+      "wall_seconds": 356.887575308
+    },
+    "CPU_full_shape_training_upper_hours": 14.430717893633224,
+    "CPU_full_shape_sampled_RSS_bytes": 23514734592,
+    "CPU_full_shape_scope": "Actual retained inputs/context plus synthetic full-shape GLM and metadata proxy; no community fit",
+    "CPU_GPU_parity": {
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "cosine_floor": 0.99999,
+      "observed_max_abs_difference": 3.933906555175781e-06,
+      "original_Mac_tolerance_unchanged": true
+    },
+    "actual_native_tiny": {
+      "modes": 2,
+      "epochs_each": 20,
+      "actual_stage_exits": 12,
+      "receipt": {
+        "bytes": 3338,
+        "sha256": "183dc26bb8233a12f398a1bace952f7ffa822cbec9b5f736b7aaa5f0f28afe22"
+      },
+      "no_repeated_extraction_or_marker_detection": true
+    },
+    "closed_input_manifest_members": 12,
+    "closed_input_manifest_bytes": 2852128372,
+    "additional_failures_preserved": [
+      "Multiplexed bulk input stream broke after1025507328bytes; actual cause unresolved. Dedicated NumPy-enabled nonmultiplexed IAP passed2852136960wirebytes.",
+      "Four required original JSON sidecars omitted by the initial selective transport adapter; full unchanged sidecars recovered by exact SHA from retained archives, no regeneration.",
+      "GPU v4 recovery queue expired and safely collected/stopped before the repair arrived. New v5 reuses accepted setup, not accepted science.",
+      "CPU staging passed all five gates but its idle deadline preceded collection. Evidence-only v4 wake verifies/collects the twelve passed tiny exits without replay.",
+      "Stale SSH control master timed out on a new boot; strictly pinned dedicated nonmultiplexed IAP works."
+    ],
+    "local_operational_tests": 18,
+    "community_science_at_this_freeze": "NOT_STARTED",
+    "scope_limitation": "Original joint two-community KEEP cannot be met by E009 alone; unchanged oral and skin remain unscored"
+  }
 }
