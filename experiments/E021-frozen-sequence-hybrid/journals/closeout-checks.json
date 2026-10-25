@@ -1,0 +1,41 @@
+{
+  "record": "E021 completion closeout checks",
+  "UTC": "2026-10-25T15:06:27.566518+00:00",
+  "status": "PASS",
+  "runtime": "3.12.2",
+  "scientific_execution_source": "1f6214013c359e66fb258faccc9d0052036777fb",
+  "local_checks": [
+    {
+      "command": "python3 -m unittest discover -s tests -p 'test_e021*operations.py'",
+      "passed": 31,
+      "exit": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -p 'test_e021_control_json.py'",
+      "passed": 4,
+      "exit": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -p 'test_e021_restore_cpu.py'",
+      "passed": 4,
+      "exit": 0
+    },
+    {
+      "command": "python3 scripts/check_docs.py",
+      "exit": 0,
+      "retained_log": "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/closeout-docs-check.log",
+      "optional_local_cache_files_unavailable": 10,
+      "optional_cache_status": "Not verified; not product/native failures"
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0
+    },
+    {
+      "check": "Independent exact target-table/summary reconciliation; all three full-DNA populations, 156/554661890 reference denominators, ten native exits, archive/member/watcher/provider/backup proofs",
+      "status": "PASS"
+    }
+  ],
+  "native_contracts": "Three new restore gates, six science stages and scoped target exit0; passed original runtime/tiny/setup preserved without replay",
+  "scope": "No new fit, inference, scoring, data acquisition or cloud run during closeout checks"
+}

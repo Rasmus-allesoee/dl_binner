@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E021 E009-only protocol](../../experiments/E021-frozen-sequence-hybrid/E009-only-protocol.md) prospectively adopts the owner's cost-driven E009-only scope. First-placement L4 native runtime/parity/tiny/full-input gates pass, but full two-community extraction forecasts 69.92 GPU hours. Keep full E009 exposure and frozen learning/CPM/E013; defer oral without claiming original joint KEEP. Approved portable resources and 20 E2 / 30 GPU cumulative hours share the same $45 credit-only / 48-hour clock and October 28 retention. [Operations](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt) owns the current handoff.
+Current handoff: [E021 completed E009-only review](../../experiments/E021-frozen-sequence-hybrid/comparison-review.json) is MODIFY: weighted R95 7.3058 -> 7.8175%, but >=90% targets 7 -> 6; oral/skin unrun and original joint KEEP unmet. [Inspection/costs](../../experiments/E021-frozen-sequence-hybrid/inspection-observed.json) verifies shutdown, restore-only recovery and temporary GPU cleanup. Next implement a reliable marker-informed cross-contig learning block locally using retained caches; no automatic GPU/community run or storage renewal. [Operations](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt) owns the exact next scope and October 28 boundary.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
@@ -1274,3 +1274,52 @@ experiment owns failures/resources, not AGENTS. The strongest next decision is
 whether this frozen complementary information is natively affordable and improves
 both development scopes under its original criteria; do not add more architecture
 before resolving that result. Storage review remains October 28 at 00:00 Copenhagen.
+
+## E021 E009-only completed review and next learning block, October 25, 2026
+
+[Completed review](../../experiments/E021-frozen-sequence-hybrid/comparison-review.json)
+is **MODIFY**, with every native scientific/reader/reload/accounting contract
+passing. Full-reference R95 7.3058 -> 7.8175% gains 2,837,916 bp, but >=90% targets
+7 -> 6; 10 targets gain / 15 lose. ASV406.4 contributes 3.112 Mb, with two high-
+recovery losses elsewhere. The practical gain threshold passes unchanged; no-count-
+loss and original two-community KEEP do not. Oral/skin remain unrun. Slightly
+better bacterial nearest neighbors coexist with worse bacterial restricted grouping
+precision/recall. Noncollapse, exact reload and graph proofs reject several critical
+implementation explanations, without proving the design optimal or isolating the
+GLM contribution from changed branch initialization/training.
+
+Keep E021's view-exact bank and optional branch as development evidence, not a
+uniform default. The old destructive refinement's higher 8.2428% R95 cannot select
+that policy after truth; frozen E013 remains uniform and all alternatives survive.
+A zero-GLM matched control could isolate attribution cheaply, but is secondary
+unless it changes a design decision. More large-model capacity or full oral GPU
+extraction is not the strongest next use of resources after this narrow gain.
+
+**Next implement reliable marker-informed cross-contig learning locally.** Existing
+self-positive crops explicitly link views of one parent, not different genomic
+fragments. Add a justified biological/context constraint to the compact learner,
+using cached information and abstention. This is a new hypothesis, not a diagnosed
+causal explanation of E021. E011/E012 distinct loci, partial/overlap, panel/lineage,
+replicon and assembly-duplication findings rule out naive repeated-family hard
+negatives. Source-reviewed reliability and composition/depth support must precede
+constraints; preserve marker-negative/short/non-target DNA and unknown/unassigned
+outcomes. Truth may evaluate/diagnose, never choose pairs, thresholds or bins.
+
+Resolve one coherent learning rule prospectively, keep CPM/E013 provisional,
+retain immutable E019/E021 and prepare one separately priced comparison using
+CPU-readable caches. No new GPU extraction, broad grid or mandatory factorial.
+Additional sequence-only transfer and original skin remain untested; freeze a
+supported comparator/data protocol and evaluator before changed outcomes. Skin's
+313/610 exact oral-inventory overlap and unresolved unique/near/pretraining/molecule
+limits remain, without silently acquiring a different community.
+
+[Final operational inspection](../../experiments/E021-frozen-sequence-hybrid/inspection-observed.json)
+closes the CPU queue publication race with atomic preloaded controls, restore-only
+reader/source/runtime admission and six actual consumer exits. Old pending receivers
+and failed journals are preserved. Transport verification alone is not consumer
+admission or completion. This durable distinction/atomic publication enters AGENTS;
+transient phase details remain in E021. E2 is stopped/restored; temporary GPU/disks
+are removed after verified preservation. Costs are $9.992 priced subtotal / $11.592
+with reserves inside the original $45, not an invoice. Existing stopped storage
+remains $31.20/month and the $8 approval ends October 28 at 00:00 Copenhagen; the
+next local preparation must surface preservation needs before that boundary.

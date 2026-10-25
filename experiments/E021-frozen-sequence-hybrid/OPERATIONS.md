@@ -1,10 +1,175 @@
 # E021 operations
 
+## Verified final E009-only outcome, October 25, 2026
+
+**Completed and independently reviewed: MODIFY.** [Inspection](inspection-observed.json),
+[comparison](comparison-review.json), [all 156 targets](comparison-targets.tsv) and
+[cost ledger](cost-review.json) are current. Dated admission/running/failure snapshots
+below remain history; they do not override this completion or authorize new science.
+
+| Frozen full-reference diagnostic | Preserved E019 | E021 E009-only |
+| --- | ---: | ---: |
+| Parent / old / E013 R95 | 7.3058 / 7.6044 / 7.3058% | 7.8175 / 8.2428 / 7.8175% |
+| E013 targets >=50% recovered | 12 | 14 |
+| E013 targets >=90% recovered | 7 | 6 |
+| E013 targets with any passing bin | 23 | 25 |
+
+E013 final gains 2,837,916 bp / 0.51165 percentage points: 10 targets improve,
+15 decline and 131 are unchanged. ASV406.4 gains 3,111,747 bp (0 -> 91.38%);
+ASV150.14 and ASV300.2 fall below 90%. E013 chooses two alternatives among 2,012
+parents without changing any target's recovered bp, although assignments change.
+Old refinement gains another 2,359,192 bp / 0.42534 points; it is a retained
+alternative, not a truth-selected replacement. [Full target table](comparison-targets.tsv)
+retains all pre/old/post alternatives and original reference denominators.
+
+Native all-query bacterial 5-NN purity improves 70.9525 -> 71.2571%, while bacterial
+restricted B3 precision/recall decline 81.4478/58.7453 -> 80.8480/57.7927%.
+Whole-population 5-NN is 74.8933 -> 75.6927%; eukaryotic queries are numerous,
+so that aggregate cannot establish a cellular recovery gain. The fixed label-blind
+small raw/learned probe stays 92.8571/82.8571% overall; this raw probe is saved
+TNF+depth geometry, not a Mac reread of 768-dimensional GLM arrays. Final online
+fused effective rank is 36.9467, std 0.10993; all original collapse guards pass.
+Neighbor audit recall@5 is 1.0, recall@30 is 0.998177. Native reload is exact.
+No demonstrated axis/source/view/depth/reload/geometry/export bug explains the
+mixed result; these checks do not prove optimality or isolate a causal GLM effect.
+
+The original numerical KEEP rule is unchanged: E009 clears the practical R95
+gain threshold but loses a >=90% target; oral is unrun, so joint KEEP is unmet.
+Scoped MODIFY preserves a useful complementary branch and its expensive bank,
+without a product-default/uniform-improvement claim. Full 156 references /
+554,661,890 bp, all 145,702 contigs / 231,678,157 bp, 3.3034% N quarantine and all
+length/origin/eligibility/marker/unknown/non-target/excluded/unassigned populations
+remain in diagnostics. E013 final accounts for 85,744 assigned / 206,919,018 bp,
+3,297 unassigned / 2,723,685 bp and 56,661 excluded / 22,035,454 bp. No short DNA
+was removed from denominators. Oral and skin have no E021 extraction, fit or score.
+
+### What actually completed and what failed
+
+Original `gpu-native-v6` extraction and full reader passed. Bank and runtime have
+identical sender/relay/receiver digests, but original receiver records correctly
+remain pending, `consumer_admitted=false`. Original `cpu-E009-consumer-v5` passed
+only owned-runtime inventory, then failed on an empty ready JSON command before
+any science. The later IAP 4003 followed shutdown; it never proved CPU progress.
+Old command files and every failure receipt/archive remain unchanged.
+
+Operational source **1f6214013c359e66fb258faccc9d0052036777fb** fixes atomic command
+publication and preloads the complete queue before release. Fresh `cpu-E009-recovery-v7`
+verified retained runtime members/tiny/library/source receipts, then actual full
+FrozenBank/ContextBank readers and explicit consumer admission. It hardlinked the
+existing eight bank files; no GPU wake/extraction, transfer, install, accepted tiny
+fit or baseline replay. All three gates, train/embed/group/refine/export/graph-proof
+and `PASS_E009_ONLY_COMPLETE` exit 0. One seed 11 / 20-epoch fit exposes all 89,041
+parents each epoch and 432,664 views, with 86,708 positive-capable parents and all
+ordered ten measured-depth columns. The 43-member f136b2c scientific package and
+execution snapshot's 115 source/input bindings match; later governance/doc edits
+do not alter the frozen run. Legacy whole-plan `science_completed=false` and
+`planned_science_fits=2` do not change scoped success or imply oral execution.
+
+Fresh held-parent supervision passed live/normal/crash tests; exit snapshot has
+the same boot/PID/start ticks/command hash and requests shutdown. Provider confirms
+original E2 TERMINATED at 14:24:13.903 UTC October 25. Original MIGRATE, STOP 6,300 s,
+no automatic restart, security/metadata/service identity and 30/300 GiB disks are
+restored unchanged. Temporary L4 worker and both 40/64 GiB disks were deleted only
+after bank/runtime/model/journal preservation and actual CPU reader admission;
+independent lists confirm absence. No quota or service expansion occurred here.
+
+### Evidence, resource and cost closure
+
+Private final prefix:
+`gs://dl-binner-archive-167650584170/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/`.
+`completion.json`, `watchdog-exit.json`, `collection.json` and archive/checksum are
+retained. Final archive: **98,377,566 bytes**, SHA256
+`b99cbcb6c162e109b7be33f3499c509c35c1a7b14f658e4f9916007bdf7aae38`;
+all **109 members / 258,370,418 logical bytes** plus exact-byte alias pass locally.
+Prior v6 GPU/v5 CPU archives have 44/34 verified members. A separate
+[inspection backup](inspection-backup.json) preserves 30 compact members, including
+the full independent new-output review, and passes GCS download/readback SHA256
+(600,578 compressed bytes). Final documentation/summary additions are in Git.
+The compact return omits
+bulk GLM/context arrays and emitted FASTA; they remain on original CPU disk and
+are not backed up merely by inventory hashes. The complete GLM bank and inert
+CUDA runtime archive are preserved from the original handoff. Mac retains the
+verified ten-file pinned model and all small failed journals. No full GPU OS backup
+is claimed; deleted OS/download/duplicate staging was regenerable.
+
+Local evidence root:
+`artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z`.
+New-output diagnostics use unchanged `scripts/e021_review.py`, retained native
+vectors and conservative truth v2, without baseline rescoring or Mac inference.
+First local attempt verified/extracted the archive then failed because sandboxed
+`ps` was denied, before diagnostics. Second used the same original review clock:
+31.34 s child, 335.73 s cumulative wall, 1.448 GB sampled RSS, 392.31 MB peak extra.
+Both journals remain. Numerical threads are four; original Mac allclose remains
+failed at its unchanged tolerance. [Summary code](journals/summarize-e009-inspection.py)
+only joins already evaluated rows and receipts; it launches no scientific work.
+[Closeout checks](journals/closeout-checks.json) retain 39 passing local operational
+contracts, exact target/accounting reconciliation, documentation and whitespace
+checks. Ten unavailable optional source caches are explicitly not reverified.
+
+CPU recovery allocation was **29.02 minutes**, including setup/collection/idle,
+not the 19.51-minute training child. All six CPU stages took 22.83 minutes with
+3.791 GB peak sampled tree RSS; sampled CPU seconds are separate from charges.
+Original failed consumer plus recovery use 53.64 minutes of the four-hour allowance.
+Whole phase: **8.239 GPU hours / 2.996 E2 hours**; extraction child 4.140 hours,
+plus admission/setup/handoff idle. The same 48-hour clock began October 24 at
+19:04:19 UTC; it was never reset. No budget, resource or retention increase.
+
+Fresh October 25 Welcome credit is **DKK 1,808.22 / 92%**, January 12, 2027 expiry,
+Certain usage / net pricing, delayed usage unknown / $35 reserve. Fresh official
+Catalog rates match earlier ordinary E2/G2/L4/PD/IP pricing; retained-credit scope
+covers the actual first-party products. [Credit terms](https://docs.cloud.google.com/free/docs/free-cloud-features)
+and [Free Trial terms](https://cloud.google.com/terms/free-trial) were refreshed.
+No real-money spending is authorized. Export was assessed before download.
+
+| Priced measured component | USD |
+| --- | ---: |
+| GPU allocation + IP, including setup/idle | 7.0739 |
+| E2 allocation + IP, including all recovery | 0.8181 |
+| Temporary disks through verified deletion | 0.2633 |
+| Original disk attribution, overlapping existing $8 approval | 0.8107 |
+| All 9,036,044,288 stream bytes at conservative paid WAN rate | 1.0099 |
+| All compact archive downloads at conservative paid WAN rate | 0.0157 |
+| Subtotal | **9.9916** |
+| Small GCS/control/network allowance + unmetered reserve | 1.6000 |
+| Conservative total including reserves | **11.5916** |
+
+These are allocation/storage/byte-priced estimates, not a billing invoice or a
+credit-delta attribution. Recovery compute+IP adds ~$0.1321 inside original $45.
+Temporary disk charges are stopped; original stopped disks remain $31.20/month.
+Existing $8 storage approval still ends **October 28, 00:00 Copenhagen (CET)**;
+no renewal is implied. No VM is running or awaiting a controller.
+
+### Strongest next recovery decision
+
+Choose one reliable marker-informed cross-contig learning block locally. Current
+same-parent crops do not directly teach which distinct fragments belong together;
+E021's modest, concentrated gain and persistent grouping loss justify adding
+biological constraints before more GLM capacity/extraction or another threshold
+grid. This is a hypothesis, not a proven cause. Reliability and abstention are
+central: repeated-family hits alone cannot be hard negatives given accepted
+E011/E012 locus/panel/replicon/duplication failures. Use label-free call/context
+support, protect marker-negative DNA and retain original self-positive learning.
+
+For retained whole-tool context, MetaBAT2 R95 is 8.5493% versus E021 7.8175%;
+its native length eligibility differs, so this is not a matched-cutoff ablation.
+No external score was recomputed. A zero-GLM control is a serious cheap attribution option, but is lower priority
+unless its answer changes the next design: it does not itself connect fragmented
+genomes. Bigger/fine-tuned GLMs and full oral extraction cost substantially more
+without evidence capacity is limiting. Retain the optional E021 bank for future
+CPU consumers; no new GPU campaign. New community runs require a separately frozen
+comparator/data scope and budget. Skin remains unscored with its source/origin/
+unique-support/overlap/evaluator/resource limitations; 313/610 exact inventory
+overlaps with oral preclude unseen-genome claims. No confirmation or new score here.
+
+---
+
+All sections below, except the new Exact following prompt, preserve dated attempts.
+
 **Owner has now approved the revised portable scope under the same remaining $45.**
 [Approved policy](portable-policy.json) supersedes the pending-approval wording in the dated reassessment below.
 Actual native preparation/execution must pass every gate; no new start at this source freeze.
 
-## Current decision after repeated capacity failures, October 24, 18 UTC
+## Historical decision after repeated capacity failures, October 24, 18 UTC
 
 **Change execution strategy; no new job or resource mutation in this task.**
 The owner reports repeated unavailability over hours; live operations confirm
@@ -461,6 +626,68 @@ supersedes the historical 8 / 38 wording. No new budget or clock reset.
 The next exact inspection prompt will identify the actual released attempt.
 
 ## Exact following prompt
+
+Our goal is substantially closing the recovery gap with coherent upgrades and
+selective controls. Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015,
+the completed competitive/source/thesis reviews, E011/E012's marker-locus/call
+and training-view audits, and E021's completed E009-only comparison, target table,
+inspection/cost records, immutable locks and operations. Preserve dev3/dev4/dev5,
+E016/E019/E021 and every accepted E009–E021 input, truth, output, source freeze and
+failed journal. Use a new descriptive research branch without a codex/ prefix.
+
+Implement and locally test one coherent reliable marker-informed cross-contig
+learning candidate. The problem is that same-parent positive views provide no
+explicit same-genome connection between distinct contigs, while E021's modest
+R95 gain remains concentrated and high-recovery counts regress. Reuse retained
+marker calls/genes/domains/locus audits, real parent/crop features, measured-parent
+depth, context and optional frozen GLM banks; do not extract GLM DNA again. Keep
+CPM/E013 as the provisional downstream anchor for this block, rather than tuning
+another grouping grid. A larger network is not the objective.
+
+Use judgment and targeted primary-source checks to resolve one label-free
+reliability, cross-contig constraint and learning rule before changed outcomes.
+Repeated marker families alone are not cannot-links: distinguish partial/overlapping
+calls, independent loci, panel/lineage specificity, replicons and assembly duplication.
+Use composition/depth/context to support or withhold constraints; abstain when
+insufficient. Avoid reinforcing graph errors as certain positive labels. Keep
+marker-negative, short, unknown/non-target DNA and optional unassigned outcomes;
+truth/source identities must not choose pairs, thresholds, families, K or training
+inputs. Do not invent measured window depth/variance, taxonomy labels or coverage.
+Retain the original self-positive/full-parent exposure unless a prospectively
+justified treatment requires a change; document initialization/RNG and missing-
+modality behavior. Cached E009 GLM use does not establish oral sequence-only
+transfer. Choose the immutable comparator and supported data scope prospectively.
+
+Record a concise prospective design, serious alternatives, source/default locks
+and keep/modify/abandon criteria, then implement in this task. Run actual tiny
+reader/reliability/pair-selection/loss/gradient/train/reload/geometry/marker/
+refinement/export and complete-DNA contracts. Keep features, pair evidence,
+embeddings and pre/post alternatives for selective later controls. At most one
+additional ablation should be prepared if it can change the design; no compulsory
+grid/factorial or isolated win required for every ingredient. Preserve failures
+and original Mac portability tolerance; distinguish actual versus mocked paths.
+
+This prompt authorizes local implementation and bounded tiny engineering only.
+Do not fit/score communities, rescore accepted baselines, run external binners,
+acquire/map DNA, start/provision cloud resources, change hardware or extend storage.
+Prepare the first bounded candidate-versus-immutable-anchor execution, using
+retained CPU-readable caches where appropriate. Measure/estimate complete setup,
+fit, RAM, peak disk, collection/export/review and cost, with fresh credit/product/
+retention gates and a separate exact execution-approval request. No old remaining
+$45 or clock carries into new science. Keep original two-community E021 KEEP
+unmet and both inspected communities marked development.
+
+Keep frozen skin unscored. State its source/genome/replicon/molecule/host/circular/
+taxonomy/overlap/pretraining/competitive ambiguity and provided-origin-versus-unique
+truth limitations, unchanged protocol/evaluator and separate resource/cost admission
+before confirmation; no new DNA now. Original stopped 30/300 GiB disks cost
+$31.20/month and their existing $8 approval ends October 28 at 00:00 Copenhagen
+(CET). Surface exact preservation/retention needs before that boundary; prepare a
+priced owner decision rather than silently renewing or deleting accepted bulk.
+Update records/check/commit with structured what changed/why; report what works,
+remaining uncertainty, the matched scope/resources and exact next approval prompt.
+
+## Superseded October 24 inspection prompt
 
 Continue E021's owner-directed E009-only phase `portable-20261024T190419Z`.
 Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015, E021's E009-only

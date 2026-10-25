@@ -605,3 +605,15 @@ Keep all populations/overlap/ambiguity/host limits and original frozen skin choi
 with separate evaluator/confirmation cost scope. No skin fit/score or cloud job;
 October 28 retention remains. This block moves complementary information into
 engineering readiness, not scientific support.
+
+
+E021 inspected resolution, October 25, 2026: [full E009-only review](../../experiments/E021-frozen-sequence-hybrid/comparison-review.json)
+is MODIFY, not a GLM-family decision. Weighted R95 gains 0.51165 points but >=90%
+counts fall 7 -> 6; 10 gains / 15 losses and one 3.112 Mb target dominates. Original
+joint KEEP is unmet; oral/skin unrun. All native contracts pass, with a preserved
+operational failure repaired before the sole fit. Q001/Q003/Q005 remain open.
+D015's next coherent block is reliable marker-informed cross-contig learning on
+retained caches: source/context-supported constraints with abstention, no naive
+repeated-family hard negatives or truth-selected pairs. No new fit/score/confirmation
+is authorized by the local preparation prompt. Frozen skin source/origin/unique/
+overlap/evaluator/resource limits and October 28 retention remain explicit.

@@ -1,6 +1,6 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E021 E009-only protocol](../../experiments/E021-frozen-sequence-hybrid/E009-only-protocol.md) prospectively adopts the owner's cost-driven E009-only scope. First-placement L4 native runtime/parity/tiny/full-input gates pass, but full two-community extraction forecasts 69.92 GPU hours. Keep full E009 exposure and frozen learning/CPM/E013; defer oral without claiming original joint KEEP. Approved portable resources and 20 E2 / 30 GPU cumulative hours share the same $45 credit-only / 48-hour clock and October 28 retention. [Operations](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt) owns the current handoff.
+Current handoff: [E021 completed E009-only review](../../experiments/E021-frozen-sequence-hybrid/comparison-review.json) is MODIFY: weighted R95 7.3058 -> 7.8175%, but >=90% targets 7 -> 6; oral/skin unrun and original joint KEEP unmet. [Inspection/costs](../../experiments/E021-frozen-sequence-hybrid/inspection-observed.json) verifies shutdown, restore-only recovery and temporary GPU cleanup. Next implement a reliable marker-informed cross-contig learning block locally using retained caches; no automatic GPU/community run or storage renewal. [Operations](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt) owns the exact next scope and October 28 boundary.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.
@@ -767,3 +767,15 @@ is admitted only as a provided-origin oracle with full/zero-origin denominators,
 substantial exact oral genome overlap and unique/near/host limits. No new community
 score or VM start. D015 owns the choice to defer until a new GPU resource/runtime/
 cost scope can pass; original $8 storage ends October 28, unchanged.
+
+
+October 25 E021 resolution: [E009-only review](../../experiments/E021-frozen-sequence-hybrid/comparison-review.json)
+is scoped MODIFY: weighted R95 7.3058 -> 7.8175%, >=90% targets 7 -> 6, one target
+dominates gains; original joint KEEP unmet with oral/skin unrun. Native contracts
+and all DNA accounting pass. No external-tool rerun or larger GPU campaign is
+needed to interpret that mixed evidence. D015 recommends reliable marker-informed
+cross-contig learning locally, with safe label-free reliability rather than naive
+duplicate-family constraints. Prepare a fresh prospective comparator/data/cost
+scope before further community work. [Inspection](../../experiments/E021-frozen-sequence-hybrid/inspection-observed.json)
+closes recovery/cleanup and $9.992 subtotal / $11.592 with reserves inside original
+$45; original $8 storage still ends October 28, 00:00 Copenhagen, without renewal.

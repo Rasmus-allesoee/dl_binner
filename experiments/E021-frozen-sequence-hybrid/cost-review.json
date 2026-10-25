@@ -1,0 +1,99 @@
+{
+  "record": "E021 allocation-priced estimate, not an invoice",
+  "price_receipt": {
+    "path": "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/current-prices.json",
+    "bytes": 21967,
+    "sha256": "a7ddf8d30d639916567b97325d49567a40cf3b74febc277a8e18ce74c997ba37"
+  },
+  "fresh_credit_receipt": {
+    "path": "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/financial-gate.json",
+    "bytes": 3170,
+    "sha256": "18d2b64f79b000d6a10d9054967009be0c816ef25a067345465bed3cbc563d63"
+  },
+  "Welcome_DKK": 1808.22,
+  "balance_percent": 92,
+  "expires": "2027-01-12",
+  "delayed_usage": "unknown, not zero",
+  "delayed_reserve_USD": 35,
+  "credit_only": true,
+  "real_money_authorized": false,
+  "original_ceiling_USD": 45,
+  "ordinary_first_party_coverage": "Verified live retained-credit paid-upgrade scope; no Marketplace, vWS, commitment or new services",
+  "provider_allocation": {
+    "GPU_seconds": 29659.21299982071,
+    "CPU_seconds": 10786.233000040054,
+    "recovery_seconds": 1741.2740001678467,
+    "total_consumer_seconds": 3218.2130002975464,
+    "common_first_start": 1792868659.099,
+    "common_deadline": 1793041459.099
+  },
+  "hourly_USD": {
+    "E2_8_32_with_IP": 0.2730456762592464,
+    "G2_8_32_L4_with_IP": 0.8586242942495529
+  },
+  "transport_ledgers": [
+    {
+      "path": "artifacts/e021-portable-admission/20261024T183844Z/transport-original-extraction-inputs-v2.json",
+      "status": "PASS",
+      "bytes": 2852136960
+    },
+    {
+      "path": "artifacts/e021-portable-admission/20261024T183844Z/transport-original-extraction-inputs.json",
+      "status": "FAILED",
+      "bytes": 1025507328
+    },
+    {
+      "path": "artifacts/e021-portable-admission/20261024T183844Z/transport-pinned-model-1.json",
+      "status": "FAILED",
+      "bytes": 0
+    },
+    {
+      "path": "artifacts/e021-portable-admission/20261024T183844Z/transport-pinned-model-2.json",
+      "status": "PASS",
+      "bytes": 468592640
+    },
+    {
+      "path": "artifacts/e021-portable-admission/20261024T183844Z/transport-real-tiny-DNA-cpu-gpu.json",
+      "status": "PASS",
+      "bytes": 2744320
+    },
+    {
+      "path": "artifacts/e021-portable-admission/20261024T183844Z/transport-real-tiny-GLM-gpu-cpu.json",
+      "status": "PASS",
+      "bytes": 1239040
+    },
+    {
+      "path": "artifacts/e021-portable-admission/20261024T183844Z/transport-retained-original-sidecars-v1.json",
+      "status": "PASS",
+      "bytes": 20480
+    },
+    {
+      "path": "artifacts/e021-portable-admission/20261024T183844Z/continuation-v6/transport-E009-bank-v1.json",
+      "status": "PASS",
+      "bytes": 1489704960
+    },
+    {
+      "path": "artifacts/e021-portable-admission/20261024T183844Z/continuation-v6/transport-E009-runtime-v1.json",
+      "status": "PASS",
+      "bytes": 3196098560
+    }
+  ],
+  "total_wire_bytes": 9036044288,
+  "charged_export_bytes": 140884522,
+  "components_USD": {
+    "GPU_allocation_including_idle_IP": 7.07392245276895,
+    "CPU_allocation_including_recovery_idle_IP": 0.8180928566071491,
+    "temporary_disks_through_verified_deletion": 0.2633306427990045,
+    "original_disks_attribution_overlaps_existing_8_USD_approval": 0.8106921599888615,
+    "all_transport_wire_conservative_WAN": 1.0098566436767578,
+    "all_downloaded_scientific_archives_conservative_WAN": 0.015745072290301323
+  },
+  "priced_subtotal_USD": 9.991639828131024,
+  "small_GCS_storage_ops_control_and_unrecorded_minor_network_allowance_USD": 0.1,
+  "additional_unmetered_safety_reserve_USD": 1.5,
+  "bounded_total_with_reserves_USD": 11.591639828131024,
+  "recovery_compute_IP_USD": 0.13206870470235357,
+  "stopped_original_disks_USD_per_month": 31.199999949850024,
+  "retention": "2026-10-28 00:00 Europe/Copenhagen (CET); original $8 interval ~ $7.63, no extension",
+  "caveat": "All wire is conservatively priced as paid $0.12/GiB outbound, even Mac-origin bytes. No free offsets or credit-delta invoice attribution; Catalog FX used. 744-hour month convention; original-disk attribution is not an additional storage invoice."
+}

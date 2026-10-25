@@ -1,168 +1,68 @@
 # Current Research State
 
-**October 25 inspection supersedes the older RUNNING snapshot below.** Both VMs
-are independently TERMINATED. GPU extraction/full-bank reader passed; both
-transfers pair successfully, but CPU consumer admission did not complete. CPU
-completion records only the inventory gate and a queue JSON parse failure before
-any fit. Its later IAP error is not the scientific failure. Passed artifacts and
-failed journals remain intact. Recovery is being assessed against the original
-remaining $45 / 48-hour and cumulative CPU limits; no extraction replay.
+Updated: October 25, 2026 (Copenhagen). This is the single current handoff.
 
+**E021 E009-only is completed, checksum-verified and independently reviewed:
+MODIFY. No VM is running.** [Inspection](../experiments/E021-frozen-sequence-hybrid/inspection-observed.json),
+[comparison](../experiments/E021-frozen-sequence-hybrid/comparison-review.json),
+[all 156 targets](../experiments/E021-frozen-sequence-hybrid/comparison-targets.tsv)
+and [cost ledger](../experiments/E021-frozen-sequence-hybrid/cost-review.json)
+own the verified outcome. These supersede every older RUNNING/admission snapshot;
+[operations](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md) preserves the
+attempt history and original frozen scope.
 
-**E021 E009-only comparison is RUNNING under verified native supervision.**
-The owner chose E009 after full native measurement showed oral dominates cost.
-[E009-only protocol](../experiments/E021-frozen-sequence-hybrid/E009-only-protocol.md)
-and [current receipt](../experiments/E021-frozen-sequence-hybrid/portable-observed.json)
-own actual phase `gpu-native-v6`, frozen scientific f136b2c / native checkout
-26374b7 and repaired operational payload 721c63f. At 22:49 UTC October 24,
-1,500 / 89,041 eligible parents had completed exact-view extraction; live
-boot/PID/UUID guard and exit watcher pass, measured GPU use peaks at 1.96 GB.
-No recovery score or CPU community fit yet. Original E2 is TERMINATED;
-the bounded Mac controller will verify/relay the full bank and runtime, then
-arm a fresh E2 parent and release six unchanged consumers once. Its loss closes
-the GPU after a bounded handoff wait; CPU collection/stop is independent after release.
+GPU extraction/full-bank reader passed. The old CPU attempt failed on a partially
+published JSON command before any science. Its later IAP 4003 followed shutdown.
+Atomic publication and restore-only recovery reused the original bank/runtime and
+passed three fresh gates, all six scientific exits and PASS_E009_ONLY_COMPLETE.
+No GPU extraction, passed setup/tiny gate or baseline science was repeated. Exact
+scientific f136b2c package, full axes/views, seed 11 / 20 epochs, native unit geometry,
+CPM/E013 and original portability tolerance remain unchanged. Execution source is
+1f62140; later documentation changes do not rewrite its source bindings.
 
-Nineteen local operational contracts pass. Native two-mode tiny 20-epoch tests,
-source/runtime/parity/full-axis checks and failed archive/member reviews pass.
-The missing fresh GPU-ready receipt stopped v5 before a science child; repaired
-v6 admits actual current-parent device telemetry. Every failure is retained.
-Full E009 DNA and 432,664 views remain; oral and skin are unrun and original
-joint KEEP is unmet. Same $45 credit-only / 48-hour clock from October 24
-19:04:19 UTC, approved 20 E2 / 30 GPU cumulative hours, all resource caps and
-October 28 00:00 Copenhagen retention remain. Priced observed allocation/storage/
-transfer components through 22:47 UTC total about $3.48, ongoing and not an invoice.
+E009 full-reference weighted R95 is **7.8175% versus E019 7.3058%**, +2,837,916 bp;
+10 targets gain / 15 lose, >=50% targets 12 -> 14, >=90% targets 7 -> 6. ASV406.4
+accounts for 3.112 Mb of the gain; two other targets fall below 90%. Bacterial 5-NN
+improves slightly while bacterial grouping precision/recall decline. Old refinement
+has 8.2428% R95; frozen E013 retains 7.8175%, with no truth-selected policy change.
+The E009 gain exceeds the original practical threshold but fails its no-count-loss
+condition. Oral/skin are unrun; original joint KEEP remains unmet. No uniform,
+isolated-causal GLM, unseen-genome or product-default claim.
+
+All 109 return members and the exact-byte alias pass; the 98.38 MB archive is in
+private GCS and on Mac. Local new-output diagnostics took 31.34 seconds, 1.448 GB
+sampled RSS and <0.4 GB extra staging within the original review clock. Full
+145,702-contig / 231,678,157-bp accounting, 156 reference denominators and 3.3034%
+N quarantine remain. Raw GLM/context arrays and emitted FASTA remain on the original
+work disk; their archived hashes are not bulk backups. Failed journals, including
+the first local sampler refusal and original Mac allclose failure, are preserved.
+
+The CPU is independently TERMINATED with original scheduling and 30/300 GiB disks.
+The temporary GPU VM and both 40/64 GiB disks are deleted after verified bank,
+runtime, model and evidence preservation. Whole-phase allocation is 8.239 GPU hours
+and 2.996 E2 hours; recovery added 29.02 minutes / about $0.132 compute+IP. Priced
+allocation/storage/WAN subtotal is **$9.992**, or **$11.592 including reserves**,
+inside the original $45 credit-only envelope; this is not an invoice or credit-delta
+attribution. Fresh October 25 Welcome credit: DKK 1,808.22 / 92%, January 12 expiry,
+delayed usage unknown / $35 reserve. No new budget, clock or retention extension.
 
 ## Exact next step
 
-[Inspect the scoped run and handoff](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt).
-Check both machines/controller and actual exits before new-output diagnostics.
-Do not treat original whole-protocol science_completed=false or planned-fits=2
-as scoped completion; require PASS_E009_ONLY_COMPLETE and all six real exits.
-Accept completed stages without replay. No oral/skin run or retention renewal.
+Prepare one **reliable marker-informed cross-contig learning** upgrade locally,
+using retained features/caches and abstaining when marker/context evidence is
+unreliable. Same-parent crop positives do not explicitly connect different contigs
+from the same genome; this is a more direct information/supervision question than
+another larger model or grouping grid. E011/E012 duplicate-locus/panel/replicon
+failures prohibit naive repeated-family cannot-links. Keep E019/E021 immutable,
+source/truth outside training, all DNA and optional unassigned outcomes.
 
-## Preserved October 24 admission snapshots
-
-**E021 portable L4 placement succeeded; native operational recovery is in progress.**
-[Continuation receipt](../experiments/E021-frozen-sequence-hybrid/portable-observed.json)
-owns the first L4 attempt in Iowa b, both complete independent Python runtimes,
-148-member original reuse and 40 native product contracts. No community extraction,
-fit or score was released. Automatic maintenance restarted the original E2 held
-parent; its journal refused overwrite, and the verified watcher stopped the VM.
-Stale live-peer telemetry then stopped/sealed the GPU parent. All failures remain.
-A native per-unit restart-refusal probe preserves the exact held PID without
-turning off system updates. Existing-E2 diagnostic wake is bounded to 30 minutes
-inside the original cumulative clock/budget; source/runtime/model/scale/throughput
-and fresh supervision still gate science. The common 48-hour clock remains
-**October 24, 19:04:19 UTC**; no reset or retention extension. Dated text below is
-preserved history. Live credit: **DKK 1,864.27 / 94%**, January 12, 2027 expiry;
-delayed usage unknown / $35 reserve. Original October 28 storage boundary remains.
-
-Updated: 2026-10-24 (Copenhagen). This is the single current handoff.
-
-## Historical reassessment and earlier handoffs
-
-**E021 execution reassessed after five capacity refusals: stop identical same-zone
-retries; retain CPU development plus an occasional portable GPU extraction worker.**
-[Strategy](../experiments/E021-frozen-sequence-hybrid/execution-strategy.md) and
-[priced observation/proposal](../experiments/E021-frozen-sequence-hybrid/execution-strategy.json)
-own the owner's sustainability concern, four additional failed starts through
-17:43 UTC, fresh credits/quotas/SKUs and actual tiny cache-relocation checks.
-The VM remains independently TERMINATED / E2 / no GPU; this task made no new start,
-quota/resource change, bulk transfer or scientific run. Old native receipts and
-all f136b2c source/input/criteria locks remain intact.
-
-**Verdict:** persistent failure of one requested pool does not establish that all
-GPUs are unavailable or make full CPU GLM extraction economical. Keep the compact
-CPU learner/grouping path. Freeze and reuse exact parent/crop GLM banks for
-compatible downstream changes, admitting new DNA/model/view/policy changes
-explicitly. Same-Mac 603–871-hour projection is not native E2 timing; it does not
-justify a full CPU fallback inside the current envelope. No architecture, loss,
-precision, sample or feature-family decision follows from the capacity errors.
-
-The reviewed alternative proposes one temporary L4 worker in Iowa b/c, then a
-T4 worker in f only on capacity failure, at most three sequential probes / one
-worker; original E2 handles staging and CPU learning/grouping. New 40/64 GiB
-worker disks and L4 balanced quota >=404 GiB require **resource-scope approval**;
-the current adopted E021 prompt explicitly excludes those resources. Existing
-$45 can remain: conservative maxima ~$42.70 L4 / $37.17 T4 include temporary
-disks and charged bounded streaming transport. This is a plan, not a validated
-native launcher or availability claim. [Operations / exact proposed approval](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt)
-contains the resource exception and unchanged scientific/credit/retention gates.
-No additional money ceiling is requested. Full native/runtime/space/throughput/
-transport/watchdog admission remains, including actual original df/du before any
-storage request. New streams cannot silently expand Mac evidence/review caps.
-
-Latest visible Welcome balance **DKK 1,865.13 / 95%**, January 12, 2027 expiry;
-unknown delayed usage / $35 reserve. Original stopped disks remain $31.20/month,
-original $8 interval forecast ~$7.63 through **October 28, 00:00 Copenhagen**.
-No renewal, deletion, backup upload or new data. Frozen skin remains unscored.
-A full 48.25-hour window still must start before October 25 23:45 CET, with margin.
-The following is the **preserved earlier October 24 capacity/rollback snapshot**.
-
-**E021 GPU capacity blocked before boot; VM independently TERMINATED and restored
-to E2, no GPU.** [Native observation](../experiments/E021-frozen-sequence-hybrid/native-observed.json)
-and [operations / exact continuation](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md)
-own the quota approval, one rejected N1/T4 start, preserved operational repairs,
-complete rollback and unmet native gates. Global/T4 quota is 1 / usage 0; GCP reports
-ZONE_RESOURCE_POOL_EXHAUSTED in us-central1-a. Original disks/security/services
-remain unchanged. No SSH, installation, extraction, fit, score or native watcher
-ran. Expected CPU/GPU cost $0; original storage continues under $8 through October
-28 00:00 Copenhagen. Latest Welcome credit DKK 1,865.82 / 95%, January 12 expiry,
-$35 delayed-usage reserve. No credit delta is a run invoice.
-
-Keep the frozen f136b2c scientific candidate and complete its same-resource GPU
-admission when capacity is available, rather than change architecture after an
-infrastructure refusal. The existing $45 scope is not a new approval request.
-Linux/CUDA/driver/root/work space, throughput/full RAM/VRAM/return and fresh held-parent
-watcher gates remain unadmitted; eight operational tests are local evidence only.
-No automatic capacity retry/alternative resource or retention extension. The full
-48.25-hour window must start before October 25 23:45 CET with margin. Boot is still
-30 GiB versus the provider guide's 40 GiB check; resolve without silent expansion
-or security bypass. No cleanup was needed or performed. The following local
-implementation handoff is a **preserved October 23 snapshot**, not current quota
-or authorization status.
-
-**E021 local frozen-sequence hybrid and skin source admission complete; no community
-extraction/fit/score or VM start.** [Operations / exact next prompt](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md),
-[local evidence](../experiments/E021-frozen-sequence-hybrid/local-evidence.json),
-[skin admission](../experiments/E021-frozen-sequence-hybrid/skin-admission.json) and
-[resource plan](../experiments/E021-frozen-sequence-hybrid/resource-plan.json) own this block.
-Dev8 adds exact retained parent/crop frozen DNABERT-S evidence through a compact gated
-residual into E019 context/composition/measured-depth learning. Original E019 CPM/E013,
-schedule and full-DNA accounting remain; no baseline/source freeze or old score changes.
-Real synthetic extraction, two 20-epoch modes, reload/marker/graph/refinement/export,
-installed wheel/owned-runtime and bounded collector contracts pass. Tiny tests are
-engineering evidence, not recovery or native Linux/GPU affordability.
-
-All five authorized skin files / 4,605,403,023 bytes pass publisher MD5 and SHA256.
-Full source/coordinate audit and independent origin review admit only the named
-provided-origin oracle: 753,143 contigs / 1,527,051,918 bp; 610 targets /
-1,740,112,046 full provided bp, including one zero origin. All 1,394 references
-remain competitive; 1,427 ambiguous bp are localized/quarantined and 67 shared
-queries flagged. Biological host/molecule/circular aliases and unique competitive
-truth remain unresolved. **313/610** have exact full provided-reference inventory
-matches to genomes observed in oral GSA; the other 297 are not proven unseen.
-[Confirmation](../experiments/E021-frozen-sequence-hybrid/confirmation-plan.json)
-keeps the original skin choice as a new-community-setting question with fixed
-strata and no scores, not unseen-genome/depth/assembly-error evidence.
-
-**Defer native execution, as permitted by the owner.** Latest October 23 Welcome balance is
-DKK 1,871.23 / 95%, January 12 expiry, with >24-hour pending usage/$35 reserve.
-The existing VM is TERMINATED; no quota/type/service/IAM/storage change or upload.
-CPU full-exposure throughput/RAM and 20 GiB growth/return/local-review gates are
-unadmitted: cache arrays alone are 8.708 GiB, total new VM work forecast 19.5–23.0 GiB,
-and same-Mac CPU extrapolation is 603–871 hours, not a native estimate. This is not
-a $1 cached job. Next recommend native GPU/resource admission of this one frozen
-candidate before another architecture/loss/grid: proposed temporary existing-VM
-n1-standard-8 + T4, new $45/ 48-hour ceiling, 32 GiB growth and separately bounded
-review. Global GPU quota is zero; new explicit resource/quota scope and GPU credit/
-Linux/CUDA/throughput admission are required before charge. No GPU request/change
-was made here. The complete copy-paste approval is in E021 operations.
-
-Current task adds $0 cloud compute and $0 GCP public-download cost. Existing stopped
-disks remain $31.20/month; separate $8 storage forecast ~ $7.63 still ends
-**October 28 at 00:00 Copenhagen (CET, UTC+01:00)**. No renewal/deletion implied.
-Preserve all original failures, including Mac allclose and new operational refusals.
+[Exact local implementation prompt](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt)
+prepares a separately priced comparison; it authorizes no new community execution,
+GPU extraction, acquisition or score campaign. Frozen skin remains unscored pending
+its named origin-versus-unique/overlap/evaluator/resource/cost admission. Original
+stopped disks cost **$31.20/month**; approved storage still ends **October 28 at
+00:00 Copenhagen (CET)**. The next task must surface preservation/retention needs
+before that boundary; neither a new fit nor continued paid retention is implied.
 
 ## Preserved E020 completed-review snapshot
 

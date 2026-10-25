@@ -346,6 +346,14 @@ normal-exit and crash detection without stopping active science, and retain the
 provider's maximum-runtime fallback. A shutdown watcher is not a scientific
 progress monitor or permission to retry, extend or start another stage.
 
+Publish shared control files atomically: finish serialization and validation in a
+private sibling, flush it, then expose the complete ready name without overwriting
+an existing command. A polling worker must never see a partially written ready
+file. Test the actual producer/consumer filesystem path, including malformed input,
+overwrite refusal and a disconnected controller. Preload independent commands
+before release when possible. Transport/member verification, actual consumer
+admission and scientific completion are separate contracts; none implies the next.
+
 Owner clarification, 2026-10-17: during an authorized connected-GCP execution,
 debug recoverable operational failures and retry within the same task when the
 owner has authorized that recovery. Do not turn a launcher/runtime/provenance bug

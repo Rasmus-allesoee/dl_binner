@@ -1,18 +1,31 @@
 # Google Cloud workspace operations
 
-**Current E021: E009-only extraction RUNNING on the existing temporary L4 b worker.**
-[Current native receipt](../experiments/E021-frozen-sequence-hybrid/portable-observed.json)
-verifies fresh boot/PID/UUID device guard, held-parent exit watcher and provider
-STOP. Original E2 is independently TERMINATED with original scheduling restored;
-its one later consumer boot is conditional on full bank admission and byte-bound
-setup, within four hours /4.25-hour STOP and remaining original cumulative caps.
-The Mac handoff controller is running on AC with a process-bound sleep guard;
-its failure cannot remove native clocks/shutdown. Keep same $45 credit-only,
-48-hour common clock, 20 E2 / 30 GPU hours, 32 GiB aggregate growth, 25 GiB reserves
-and October 28 00:00 Copenhagen retention. Current observed components are
-about $3.48 through 22:47 UTC; original storage attribution overlaps approved $8.
-No final invoice/credit-delta attribution, new resource or extension.
-The following blocks are preserved dated snapshots.
+**Current E021: completed and reviewed; original E2 TERMINATED, temporary GPU
+worker and its two disks deleted.** [Final inspection](../experiments/E021-frozen-sequence-hybrid/inspection-observed.json)
+verifies all six E009 CPU exits, scoped target, matching boot/process watcher,
+return delivery and independent provider shutdown. Original 30/300 GiB disks,
+security, metadata, service identity and scheduling are preserved/restored.
+No GPU extraction or accepted science was replayed. The old CPU JSON publication
+failure is preserved separately from the successful restore-only recovery.
+
+[Cost ledger](../experiments/E021-frozen-sequence-hybrid/cost-review.json) prices
+8.239 GPU hours and 2.996 CPU hours, storage and measured WAN separately: $9.992
+subtotal / $11.592 with reserves, inside the original $45 credit-only ceiling.
+Fresh October 25 Welcome credit is DKK 1,808.22 / 92%, January 12, 2027 expiry;
+delayed usage remains unknown / $35 reserve. No credit delta is an invoice.
+Temporary disk charges have stopped. Original stopped disks remain $31.20/month,
+under the existing $8 interval ending **October 28, 00:00 Copenhagen (CET)**.
+No renewal, new fit/start, resource/service/IAM change or further GPU work is
+currently authorized by the next local preparation prompt.
+
+Full GLM bank and inert CUDA runtime archive are preserved on the original CPU
+work disk; compact scientific evidence is checksum-verified on Mac/private GCS.
+Omitted arrays and FASTA are not backed up by an inventory alone. See E021 operations
+for exact locators and preservation needs before the storage boundary.
+
+Updated: October 25, 2026 (Copenhagen). All blocks below are **dated historical
+snapshots**, superseded by the final inspection above. Pending-approval, RUNNING
+and no-execution wording in those snapshots is not current authority.
 
 **Owner has now approved the revised portable scope under the same remaining $45.**
 [Approved policy](../experiments/E021-frozen-sequence-hybrid/portable-policy.json) supersedes the pending-approval wording in the dated reassessment below.

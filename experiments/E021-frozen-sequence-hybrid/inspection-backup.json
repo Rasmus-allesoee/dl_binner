@@ -1,0 +1,146 @@
+{
+  "record": "E021 compact inspection backup/readback",
+  "UTC": "2026-10-25T15:02:02.616647+00:00",
+  "status": "PASS_ARCHIVE_AND_EVERY_MEMBER_AND_GCS_READBACK",
+  "uri": "gs://dl-binner-archive-167650584170/e021/portable-20261024T190419Z/inspection-20261025/inspection-20261025T1500Z.tar.gz",
+  "generation": "1792940513169584",
+  "archive": {
+    "bytes": 600578,
+    "sha256": "7e3d0360bba0fe77c9b93cb9651b4ca923470ef0432d503d36b413d32dd94aec"
+  },
+  "regular_members": 30,
+  "logical_member_bytes": 3979238,
+  "members": {
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/recovery-completion.json": {
+      "bytes": 499810,
+      "sha256": "57e695301765fbd913c49396375deaba8e0ef7c08950b887988b11c0e53a5c74"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/recovery-watchdog-exit.json": {
+      "bytes": 12039,
+      "sha256": "1f0f8eba17e21af2217d3fc4484a602c030b7cc7ab517a08adf08d7d3bb6fcec"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/recovery-collection.json": {
+      "bytes": 446841,
+      "sha256": "734809930e95670afc0381f0dd74fef99311e1c38c6c44395ab618ffdbdaba3c"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/recovery-archive-verification.json": {
+      "bytes": 446631,
+      "sha256": "3aabfa03d45a7608296a91c30423601de0f2dbb81ab5d378453d27deb3cbc73b"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/gpu-native-v6-completion.json": {
+      "bytes": 5378,
+      "sha256": "60255931c732122d69342ddb159cdef331683a6230351bd4142ec7b3458d6ffb"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/gpu-native-v6-archive-verification.json": {
+      "bytes": 294,
+      "sha256": "1ac8cf70fa4e3374ab12891c33c9a2f31d8beee34f01033b5758f96baecb8fd1"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/cpu-E009-consumer-v5-completion.json": {
+      "bytes": 3741,
+      "sha256": "a091e1b7e93abe5d13d3b1ee13c622b1567a446f62f1faff8c3c86c6ad4d2bad"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/cpu-E009-consumer-v5-archive-verification.json": {
+      "bytes": 615,
+      "sha256": "dffe0bb5c6781763c47080670c76c693bdd2ee73845da1f4df4a9a554dbd71c4"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/CPU-control-plane.json": {
+      "bytes": 33010,
+      "sha256": "456cc89ed233c0c6ee729c77ab7264fb12a5bc2f1f559a46a21835a0d85ec4e0"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/GPU-retirement-verified.json": {
+      "bytes": 277,
+      "sha256": "a02318164761bf0ad4f58bf2588b7b02cd6dd96330a956bafa549a05e8453750"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/final-original-CPU.json": {
+      "bytes": 565,
+      "sha256": "dbe2bc97365454481252a215c22c5362d157b78394dfe0bf23e926934a23aeba"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/native-preservation-proof.json": {
+      "bytes": 7665,
+      "sha256": "b8e3d5a362fba8afca36b5c4878f4d4b983bbfcd845a89d0b36b8bd1a491c5bd"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/local-model-preservation.json": {
+      "bytes": 2658,
+      "sha256": "e828fb2b1095ac45248c5a2bdb63d388f374f93c92a4ac74601a26a7bdb42428"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/remaining-original-allowance.json": {
+      "bytes": 943,
+      "sha256": "430dc006cb5575f775bac06dd24958fe095135c43d3d4a92b392e8994098bc40"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/recovery-start.json": {
+      "bytes": 33754,
+      "sha256": "b0cd551bc210e2d3c9bb1e8216e790b320f85312cfbfc26f71edc30766206d24"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/recovery-release-plan.json": {
+      "bytes": 1486,
+      "sha256": "20edd195795b48e84fbe67a55b661ed20c30dd28f1581eb36c5e238668e396f7"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/financial-gate.json": {
+      "bytes": 3170,
+      "sha256": "18d2b64f79b000d6a10d9054967009be0c816ef25a067345465bed3cbc563d63"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/current-prices.json": {
+      "bytes": 21967,
+      "sha256": "a7ddf8d30d639916567b97325d49567a40cf3b74febc277a8e18ce74c997ba37"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/local-review/diagnostics.resources.json": {
+      "bytes": 1475,
+      "sha256": "0ff6ab25c4c3f66b9e09ebb3c6db0477a840cf756090f763ea834a32a3fd5f24"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/local-review-attempt2/diagnostics.resources.json": {
+      "bytes": 4240,
+      "sha256": "e5ee6dc9f2cea73c07d2f1401fb4f8afaf4a9c6382e68f2052b142d45327b87d"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/local-review-attempt2/admission.json": {
+      "bytes": 636,
+      "sha256": "a0738b9a1e88a7a03d040cde72141fbbad1adb80249d77926e781e4b9ec34083"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/local-review-attempt2/new-output-diagnostics.log": {
+      "bytes": 636,
+      "sha256": "259ca608a90d0b2806043da5dd888ada299129a16224d70f11340484f18307f4"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/local-review-attempt2/diagnostics-E009-hybrid/review.json": {
+      "bytes": 2227598,
+      "sha256": "d19dae57566b2b4cc8163c01dc4f626747df5f1c9cea34a407429df50021e3c2"
+    },
+    "experiments/E021-frozen-sequence-hybrid/comparison-review.json": {
+      "bytes": 172720,
+      "sha256": "3684f77924eddb2e28342a83d2070df9c461aea2d1b1e646cfd21a7733d9cc62"
+    },
+    "experiments/E021-frozen-sequence-hybrid/comparison-targets.tsv": {
+      "bytes": 9168,
+      "sha256": "a6766fd1f83741f7ea57385d982a63915025532402c0b4435ce1dc71bc1a3fcc"
+    },
+    "experiments/E021-frozen-sequence-hybrid/inspection-observed.json": {
+      "bytes": 8545,
+      "sha256": "8c4770bbd330d17a16201182465953c3c5ba7f516563018a7b3f848978ee8ab0"
+    },
+    "experiments/E021-frozen-sequence-hybrid/cost-review.json": {
+      "bytes": 4096,
+      "sha256": "6a4ee3335a475bca586c07660d3ee411c871f5207c3e448e98175321fd89ee42"
+    },
+    "experiments/E021-frozen-sequence-hybrid/recovery-assessment.json": {
+      "bytes": 2522,
+      "sha256": "a460fb8e81a6bfb48c67beb01afc4542cdd58417b68793648f802338417c457f"
+    },
+    "experiments/E021-frozen-sequence-hybrid/journals/summarize-e009-inspection.py": {
+      "bytes": 20198,
+      "sha256": "fd574853500f80f57045cb1b17947fd224b0cb863277fdd9461e22fe8a0fa5cf"
+    },
+    "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/inspection-backup-members.json": {
+      "bytes": 6560,
+      "sha256": "a6a50625f9367bbcb53eb74e85c14bed4fe5038a7c0653407a348f23d5e0d09c"
+    }
+  },
+  "manifest": {
+    "bytes": 6560,
+    "sha256": "a6a50625f9367bbcb53eb74e85c14bed4fe5038a7c0653407a348f23d5e0d09c"
+  },
+  "original_45_USD_only": true,
+  "no_VM_wake": true,
+  "credit_gate": "Fresh October25 receipt within 2-hour validity at upload",
+  "cost_USD_conservative_readback_egress": 6.711982190608978e-05,
+  "cost_within_existing_small_GCS_and_minor_network_allowance": true,
+  "retention": "No extension beyond original October28 boundary; GCS seven-day soft-delete tail remains existing policy",
+  "omitted_bulk_not_backed_up": true
+}

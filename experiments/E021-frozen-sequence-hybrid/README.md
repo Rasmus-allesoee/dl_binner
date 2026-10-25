@@ -1,54 +1,40 @@
 # E021: frozen sequence/context hybrid and skin admission
 
-**Current: prepare the owner-directed full E009-only comparison.**
-[Prospective scope/protocol](E009-only-protocol.md) preserves all E009 views and
-frozen science after measured oral cost fails the two-community envelope.
-[Native continuation](portable-observed.json) records actual Linux/CUDA/tiny/
-source/input/scale gates, preserved failures and the approved 20 E2 / 30 GPU
-subcaps inside the same original $45 / 48-hour and October 28 limits.
-Oral/skin are unrun and original joint KEEP remains unmet. Dated text below is history.
+**Completed E009-only and independently reviewed: MODIFY.**
+[Comparison](comparison-review.json), [all 156 targets](comparison-targets.tsv),
+[inspection](inspection-observed.json), [cost ledger](cost-review.json) and
+[operations / next prompt](OPERATIONS.md#exact-following-prompt) are current.
+All earlier admission/RUNNING snapshots are superseded, with failures preserved.
 
+Full-reference E009 weighted R95 **7.3058 -> 7.8175%**, but >=90% targets **7 -> 6**.
+Ten targets gain / 15 lose; one newly recovered genome dominates the net gain.
+All scientific/reader/reload/neighbor/export contracts pass. The original joint
+KEEP is unmet: oral/skin are unrun and E009 loses a high-recovery target. This is
+one development bundle, not isolated GLM causality or a product-default promotion.
 
-**Execution reassessed after repeated capacity refusal.** [Current strategy](execution-strategy.md)
-recommends occasional portable GPU extraction/cache reuse and routine CPU work,
-not another identical same-zone retry or an unadmitted full CPU GLM fallback.
-The [priced resource proposal](execution-strategy.json) remains within the original
-$45 but requires new resource-scope approval. No new start or science in this task;
-[operations](OPERATIONS.md#exact-following-prompt) owns the exact proposed request.
-The following local/native snapshot is preserved prior evidence.
+GPU extraction was accepted once. Original CPU failed before science on an empty
+ready JSON file; atomic publication and restore-only recovery passed three gates,
+six science stages and the scoped target. All 109 return members/alias verify.
+CPU is independently TERMINATED with original disks/scheduling; temporary GPU VM
+and both disks are deleted after verified preservation. Raw bank/runtime remain
+on CPU disk; compact evidence is on Mac/private GCS. Inventories are not bulk backups.
 
-**Local implementation and bounded skin source admission completed. October 24
-GPU admission was blocked by zonal capacity before guest boot; VM independently
-TERMINATED and restored to E2. No community extraction/fit/score.**
-[Native observation](native-observed.json) distinguishes quota approval, actual
-failed start/rollback and unexecuted native contracts. [Operations / continuation](OPERATIONS.md)
-owns the authorized $45 scope and original October 28 storage boundary. The frozen
-scientific candidate remains unchanged; a capacity refusal is not a model result.
+Whole-phase priced subtotal **$9.992 / $11.592 with reserves**, within original $45
+credit-only authorization. No clock, budget or retention reset. Original stopped
+disks remain $31.20/month; storage review is **October 28, 00:00 Copenhagen (CET)**.
+Next locally implement reliable marker-informed cross-contig learning using cached
+information, without another GPU extraction or community execution authorization.
 
-This block asks whether a frozen species-aware sequence prior adds useful base-
-order information to E019's composition/context/measured-depth learner, while
-admitting the previously frozen skin community for a separately authorized later check.
+[Design](design.md), [protocol](protocol.json), [candidate](candidate-lock.json),
+[reuse](reuse-lock.json) and [E009-only amendment](E009-only-protocol.md) retain the
+prospective scientific contracts. [Local evidence](local-evidence.json),
+[initial native attempt](native-observed.json), [portable attempts](portable-observed.json)
+and [journals](journals/README.md) preserve source/runtime/failure history.
+Scientific f136b2c and operational execution 1f62140 remain immutable provenance.
 
-[Design](design.md) owns the single view-exact frozen branch and small residual
-fusion. [Protocol](protocol.json) fixes one E009 ten-depth / oral sequence-only
-candidate-versus-preserved-E019 comparison, ordinary CPM/E013 uniformly, with no
-baseline refit/rescore. [Candidate](candidate-lock.json) and [reuse](reuse-lock.json)
-lock source/default/model/input bytes. [Local evidence](local-evidence.json) separates
-actual native Mac extraction/training/marker/graph/export from mocks and unresolved
-Linux/GPU/full-scale contracts. [Journals](journals/README.md) preserve failures.
-
-[Skin admission](skin-admission.json) verifies the five original publisher files,
-full exact source/sample/coordinate/taxonomy joins and a separately named provided-
-origin oracle, without a unique-support claim. [Confirmation](confirmation-plan.json)
-keeps full/zero-origin denominators and substantial oral overlap visible; no skin
-outcome is inspected. An untouched outcome is not proof of an unseen genome.
-
-[Resources](resource-plan.json) preserves the original CPU/GPU planning snapshot;
-[current GPU plan](gpu-native-plan.json) and [observation](native-observed.json)
-own the new admission. Linux/CUDA/resource/throughput/watchdog gates remain
-unadmitted. No cleanup, new disk, service/IAM expansion, cloud upload or retention
-extension occurred. Eight local operational tests do not establish native readiness.
-
-Immutable dev3/dev4/dev5/E016/E019 and all accepted E009–E020 evidence remain.
-Source/header/label joins stay outside feature/training paths; all short,
-marker-negative, unknown/non-target, excluded and unassigned DNA stays accounted for.
+[Skin admission](skin-admission.json) admits only the named provided-origin oracle,
+610 full targets/one zero origin, with exact shared and ambiguous DNA retained.
+[Confirmation](confirmation-plan.json) stays unscored; 313/610 inventories overlap
+oral-observed genomes. Unique competitive support, biological grouping, near/
+pretraining overlap, evaluator/resources/cost and retention limits remain explicit.
+Immutable dev3/dev4/dev5/E016/E019 and all E009–E020 evidence remain unchanged.

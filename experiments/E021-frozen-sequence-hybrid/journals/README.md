@@ -63,3 +63,22 @@ refusal and rollback are owned by [native observation](../native-observed.json)
 and its [local seal](../gpu-inspection-seal.json). The VM never booted, so these
 are control-plane evidence, not native model failures or community outcomes.
 The earlier manifest and all original journals remain unchanged.
+
+
+October 25 completion: [final inspection](../inspection-observed.json) supersedes
+all earlier RUNNING snapshots. GPU extraction/full-bank reader passed, but old CPU
+queue publication exposed an empty command JSON before serialization; its sole
+passed inventory does not imply any science. The deterministic filesystem race
+regression and atomic exclusive writer preserve that failure. Restore-only CPU
+recovery reused the original passed bank/runtime/tiny/source receipts, then ran
+three gates and six consumers once; scoped completion and all return members pass.
+Old receiver records remain pending and a separate actual-reader receipt admits
+the consumer. Later IAP4003 followed shutdown rather than causing a scientific exit.
+
+The first local review verified/extracted bytes then sandboxed ps failed before
+diagnostics. A fresh logged review attempt used the same one-hour wall deadline,
+unchanged limits and already verified extraction; it passed without a science or
+baseline replay. Both receipts remain at the inspection locator. All earlier
+failure manifests/source freezes remain untouched. [Summary code](summarize-e009-inspection.py)
+joins only already evaluated new rows, accepted E019 target rows and native receipts;
+it never trains, rebuilds neighbors or scores an old output.

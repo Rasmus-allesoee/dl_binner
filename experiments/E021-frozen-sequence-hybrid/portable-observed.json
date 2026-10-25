@@ -215,6 +215,22 @@
     "passed_timing_scope_correction": "v5 timing is real CUDA execution with process allocator cap, but its waiting parent did not provide live device-memory samples. Reuse timing as throughput evidence only, not v5 device-guard admission. Fresh native device guard is mandatory before science."
   },
   "current_E009_execution": {
+    "status": "COMPLETED_VERIFIED_MODIFY",
+    "source": "1f6214013c359e66fb258faccc9d0052036777fb",
+    "phase": "cpu-E009-recovery-v7",
+    "inspection": "experiments/E021-frozen-sequence-hybrid/inspection-observed.json",
+    "comparison": "experiments/E021-frozen-sequence-hybrid/comparison-review.json",
+    "CPU": "TERMINATED_ORIGINAL_SCHEDULING_RESTORED",
+    "GPU": "TEMPORARY_VM_AND_BOTH_DISKS_REMOVED_AFTER_PRESERVATION",
+    "original_receivers_unchanged": true,
+    "consumer_admitted": true,
+    "scoped_science_completed": true,
+    "actual_fits": 1,
+    "legacy_two_community_science_completed": false,
+    "oral_executed": false,
+    "skin_executed": false
+  },
+  "historical_E009_execution_20261024": {
     "status": "RUNNING_REAL_COMMUNITY_EXTRACTION",
     "inspection_UTC": "2026-10-24T22:49:40.098116+00:00",
     "native_GPU_root": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/gpu-native-v6",
@@ -325,5 +341,6 @@
     "native_run_is_not_quality_evidence": true,
     "local_operational_tests": 19,
     "all_original_candidate_bindings_unchanged": 115
-  }
+  },
+  "current_status_note": "October 25 completed inspection supersedes every older RUNNING/admission snapshot below; historical payloads and failed receiver journals remain unchanged."
 }

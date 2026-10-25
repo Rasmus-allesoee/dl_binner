@@ -1,0 +1,245 @@
+{
+  "record": "E021 E009-only verified completion and cleanup",
+  "status": "COMPLETED_VERIFIED_MODIFY",
+  "phase": "portable-20261024T190419Z",
+  "CPU_phase": "cpu-E009-recovery-v7",
+  "scientific_candidate": "f136b2c5f6195ae91a0566f23d84c8c6c9f69bf9",
+  "execution_source": "1f6214013c359e66fb258faccc9d0052036777fb",
+  "final_CPU": {
+    "status": "TERMINATED",
+    "machine": "e2-standard-8",
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "6300"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "disks": [
+      {
+        "name": "dl-binner-cpu",
+        "GiB": "30"
+      },
+      {
+        "name": "dl-binner-work",
+        "GiB": "300"
+      }
+    ],
+    "last_start": "2026-10-25T06:55:12.629-07:00",
+    "last_stop": "2026-10-25T07:24:13.903-07:00"
+  },
+  "GPU_retirement": {
+    "status": "RETIRED_AND_BOTH_TEMPORARY_DISKS_REMOVED",
+    "UTC": "2026-10-25T14:18:42.006187+00:00",
+    "name": "e021-portable-20261024-b",
+    "zone": "us-central1-b",
+    "original_CPU_and_disks_untouched": true,
+    "remaining_instances": [],
+    "remaining_temporary_disks": []
+  },
+  "final_provider_STATE_independent": true,
+  "scoped_status": "SUCCESS_E009_ONLY_COMPLETE",
+  "scoped_science_completed": true,
+  "legacy_two_community_science_completed": false,
+  "actual_fits": 1,
+  "oral_executed": false,
+  "skin_executed": false,
+  "stages": [
+    {
+      "name": "restore-only-verify-retained",
+      "kind": "gate",
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "wall_seconds": 36.479556069,
+      "peak_sampled_rss_bytes": 154845184,
+      "sampled_cpu_seconds": 38.970000000000006
+    },
+    {
+      "name": "restore-only-bank",
+      "kind": "gate",
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "wall_seconds": 16.734668830000004,
+      "peak_sampled_rss_bytes": 2864611328,
+      "sampled_cpu_seconds": 14.64
+    },
+    {
+      "name": "restore-only-admit",
+      "kind": "gate",
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "wall_seconds": 0.2604311810000013,
+      "peak_sampled_rss_bytes": 38744064,
+      "sampled_cpu_seconds": 0.08999999999999986
+    },
+    {
+      "name": "E009-train",
+      "kind": "science",
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "wall_seconds": 1186.872324268,
+      "peak_sampled_rss_bytes": 3774984192,
+      "sampled_cpu_seconds": 4006.79
+    },
+    {
+      "name": "E009-embed",
+      "kind": "science",
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "wall_seconds": 20.87866520800003,
+      "peak_sampled_rss_bytes": 3790692352,
+      "sampled_cpu_seconds": 36.93999999999998
+    },
+    {
+      "name": "E009-group",
+      "kind": "science",
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "wall_seconds": 128.67625658099996,
+      "peak_sampled_rss_bytes": 2508148736,
+      "sampled_cpu_seconds": 170.06
+    },
+    {
+      "name": "E009-refine",
+      "kind": "science",
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "wall_seconds": 10.328212480000047,
+      "peak_sampled_rss_bytes": 1044955136,
+      "sampled_cpu_seconds": 9.780000000000001
+    },
+    {
+      "name": "E009-export",
+      "kind": "science",
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "wall_seconds": 19.343944215999954,
+      "peak_sampled_rss_bytes": 320688128,
+      "sampled_cpu_seconds": 20.810000000000002
+    },
+    {
+      "name": "E009-graph-proof",
+      "kind": "science",
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "wall_seconds": 3.690509923000036,
+      "peak_sampled_rss_bytes": 403173376,
+      "sampled_cpu_seconds": 5.640000000000001
+    },
+    {
+      "name": "complete-E009-target-and-close",
+      "kind": "gate",
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "wall_seconds": 0.25355994100004864,
+      "peak_sampled_rss_bytes": 36331520,
+      "sampled_cpu_seconds": 0.09000000000000341
+    }
+  ],
+  "guard_errors": [],
+  "archive": {
+    "status": "SUCCESS",
+    "archive": {
+      "bytes": 98377566,
+      "sha256": "b99cbcb6c162e109b7be33f3499c509c35c1a7b14f658e4f9916007bdf7aae38"
+    },
+    "regular_members": 109,
+    "logical_member_bytes": 258370418,
+    "every_member_verified": true,
+    "aliases": {
+      "work/units/E009-hybrid/train/reference.npz": {
+        "bytes": 21879596,
+        "canonical": "work/units/E009-hybrid/embeddings.npz",
+        "sha256": "a7115f187a25abaf7f8873ea78e06d56d9e4b3b5bb66425641b8b13df5ca21f1"
+      }
+    }
+  },
+  "omitted_native_files": 2017,
+  "omitted_native_bytes": 1601277307,
+  "uploads": [
+    {
+      "binding": {
+        "bytes": 98377566,
+        "sha256": "b99cbcb6c162e109b7be33f3499c509c35c1a7b14f658e4f9916007bdf7aae38"
+      },
+      "generation": "1792938059497181",
+      "readback_verified": true,
+      "uri": "gs://dl-binner-archive-167650584170/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/e021-evidence.tar.gz"
+    },
+    {
+      "binding": {
+        "bytes": 87,
+        "sha256": "75107e13d2d90d620b17b86c4433b2b114d152d9b4c0494032c2c5403a2d1f3a"
+      },
+      "generation": "1792938060352324",
+      "readback_verified": true,
+      "uri": "gs://dl-binner-archive-167650584170/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/e021-evidence.tar.gz.sha256"
+    },
+    {
+      "binding": {
+        "bytes": 446841,
+        "sha256": "734809930e95670afc0381f0dd74fef99311e1c38c6c44395ab618ffdbdaba3c"
+      },
+      "generation": "1792938060565314",
+      "readback_verified": true,
+      "uri": "gs://dl-binner-archive-167650584170/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/collection.json"
+    }
+  ],
+  "completion_binding": {
+    "path": "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/recovery-completion.json",
+    "bytes": 499810,
+    "sha256": "57e695301765fbd913c49396375deaba8e0ef7c08950b887988b11c0e53a5c74"
+  },
+  "watcher_binding": {
+    "path": "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/recovery-watchdog-exit.json",
+    "bytes": 12039,
+    "sha256": "1f0f8eba17e21af2217d3fc4484a602c030b7cc7ab517a08adf08d7d3bb6fcec"
+  },
+  "consumer_proof_binding": {
+    "path": "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/native-preservation-proof.json",
+    "bytes": 7665,
+    "sha256": "b8e3d5a362fba8afca36b5c4878f4d4b983bbfcd845a89d0b36b8bd1a491c5bd"
+  },
+  "watchdog": {
+    "boot_id": "008fe8b9-291c-4b5b-ac6b-b1ed6148209d",
+    "process": {
+      "command_sha256": "2b26910ad41908a098a9e5a43e79e09fdf92f08a09caf5138d8a202ed238d801",
+      "pid": 2216,
+      "start_ticks": 8642
+    },
+    "decision": "workflow exited",
+    "shutdown": true,
+    "normal_exit_and_crash_tests_passed": true
+  },
+  "original_failure": {
+    "status": "FAILED_BEFORE_CPU_SCIENCE",
+    "cause": "Ready task file exposed empty JSON before serialization; deterministic regression reproduces race; later IAP4003 follows CPU shutdown",
+    "preserved_old_receivers_pending": true,
+    "failure_journals_preserved": true,
+    "repair": "Exclusive atomic publication, preloaded commands before arm; restored bytes/hardlinks with no recopy/reinstall/extraction/tiny replay"
+  },
+  "terminal_storage_snapshot": {
+    "epoch": 1792938030.8282487,
+    "boot_id": "008fe8b9-291c-4b5b-ac6b-b1ed6148209d",
+    "growth_bytes": 6934638592,
+    "work_free_bytes": 60792123392,
+    "boot_free_bytes": 22805368832,
+    "role": "cpu"
+  },
+  "local_review": {
+    "path": "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/local-review-attempt2/diagnostics.resources.json",
+    "bytes": 4240,
+    "sha256": "e5ee6dc9f2cea73c07d2f1401fb4f8afaf4a9c6382e68f2052b142d45327b87d"
+  },
+  "local_review_failed_attempt": "First attempt verified archive then sandbox denied ps before diagnostics; retained FAILED receipt. Second used same original one-hour clock and verified extracted bytes, no science replay.",
+  "retained_bulk": "Complete raw GLM bank and inert CUDA runtime archive remain on original CPU work disk; original bank and hardlinked recovery both preserved. Only compact science archive is in GCS/Mac. Omitted arrays/FASTA are not backed up merely by hashes.",
+  "costs": "cost-review.json",
+  "comparison": "comparison-review.json",
+  "full_targets": "comparison-targets.tsv",
+  "evidence_root": "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z",
+  "inspection_backup_record": "inspection-backup.json"
+}
