@@ -10,6 +10,7 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).absolute().parent))
 from e021_portable_cloud import Cloud,CPU,CPU_ZONE
 from e021_portable_relay import transfer
+from e021_control_json import remote_program
 
 def binding(p):
     """Bind a small immutable control file."""
@@ -29,7 +30,7 @@ def remote(r,n,code,value=None,seconds=180):
 def read(r,n,p):return json.loads(remote(r,n,'from pathlib import Path;print(Path('+repr(p)+').read_text())'))
 
 def put(r,n,p,v):
-    remote(r,n,"import json,sys;from pathlib import Path;f=Path("+repr(p)+").open('x');json.dump(json.load(sys.stdin),f);f.write(chr(10));f.close()",v)
+    remote(r,n,remote_program(p),v)
 
 def queue(r,n,i,v):put(r,n,n['root']+'/tasks/'+str(i).zfill(4)+'.json',v)
 

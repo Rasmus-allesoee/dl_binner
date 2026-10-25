@@ -1,5 +1,14 @@
 # Current Research State
 
+**October 25 inspection supersedes the older RUNNING snapshot below.** Both VMs
+are independently TERMINATED. GPU extraction/full-bank reader passed; both
+transfers pair successfully, but CPU consumer admission did not complete. CPU
+completion records only the inventory gate and a queue JSON parse failure before
+any fit. Its later IAP error is not the scientific failure. Passed artifacts and
+failed journals remain intact. Recovery is being assessed against the original
+remaining $45 / 48-hour and cumulative CPU limits; no extraction replay.
+
+
 **E021 E009-only comparison is RUNNING under verified native supervision.**
 The owner chose E009 after full native measurement showed oral dominates cost.
 [E009-only protocol](../experiments/E021-frozen-sequence-hybrid/E009-only-protocol.md)

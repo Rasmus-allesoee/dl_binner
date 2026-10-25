@@ -525,3 +525,39 @@ Legacy collector planned_science_fits=2 describes the original whole plan.
 Legacy science_completed also covers both communities and stays false here.
 Require the new scoped E009 target, actual six CPU exits and full accounting;
 never present either legacy field as evidence that oral ran or a fit failed.
+
+## October 25 verified handoff failure and restore-only recovery
+
+Both machines are independently TERMINATED. The GPU scientific extraction and
+full-bank reader passed; its completion is extraction-only, not a completed fit.
+CPU inventory passed. CPU then failed parsing a queue JSON file before either
+remaining gate or any scientific child was recorded. The later IAP 4003 was a
+consequence of shutdown, not proof that the scientific work ran. GPU and CPU
+archives and every member pass local verification (44 / 34 physical members).
+
+The old controller opened a ready command file before dumping JSON. The new
+regression reproduces that empty-file visibility; publishing a fully serialized,
+fsynced sibling under an exclusive atomic ready name removes the race. Recovery
+preloads every command before arming the parent. It reuses the original transferred
+1.49 GB bank and 3.20 GB inert CUDA-runtime archive, preserving all old pending
+receiver receipts. Three equal stream digests establish transport; a new receipt
+and actual CPU FrozenBank/ContextBank readers establish consumer admission.
+
+[Recovery assessment](recovery-assessment.json) prices only the remaining CPU
+consumer, no GPU wake, recopy, reinstall, extraction or baseline replay. Of the
+stricter original four-hour active consumer allowance, 24.62 minutes were spent;
+3 hours 35 minutes remain, with provider STOP also reduced by that allocation.
+The 48-hour wall clock still ends October 26 at 19:04:19 UTC. Original cumulative
+20 CPU / 30 GPU hours, $45 credit-only ceiling, resource/export limits and
+October 28 retention remain. Fresh Welcome credit is DKK 1,808.22 / 92%, January
+12 expiry, with unknown delayed usage / $35 reserve. Ordinary existing E2/PD/IP/
+network/archive products remain covered under retained-credit terms. Current
+Catalog prices match the earlier rate: approximately $0.27305 per E2 hour with
+IP; the remaining consumer's provider-limit compute maximum is about $1.05.
+
+Reuse every verified successful stage. New gates verify retained archive members,
+reused library/source identities, passed tiny receipts and actual bank/context
+readers. Only then release the unchanged six E009 consumers once. Source, full
+DNA/views/depth axes, seed/schedule, unit geometry and CPM/E013 remain frozen.
+The new native scoped completion receipt records one fit; original two-community
+science_completed remains false and the joint KEEP criterion remains unmet.

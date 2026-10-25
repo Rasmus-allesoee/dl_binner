@@ -64,6 +64,9 @@ def start(config):
     for name in ['science-plan.json','allocation-approval.json']:
         src=Path(config).parent/(cfg['role']+'-'+name)
         if src.exists():shutil.copyfile(src,root/name)
+    if cfg.get('prepare_only')is True:
+        print('E021_VERIFIED_SETUP_PREPARED_PARENT_NOT_ARMED',flush=True)
+        return
     call(['sudo','-n','/usr/bin/python3','-I','-B',repo/'scripts/e021_portable_arm.py','--config',root/'config.json'])
     if cfg['role']=='gpu':
         live=json.loads((root/'logs/gpu-guard-live.json').read_text())

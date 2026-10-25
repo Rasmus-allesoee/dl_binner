@@ -1,0 +1,59 @@
+{
+  "record": "E021 restore-only CPU recovery admission before execution",
+  "status": "APPROVED_WITHIN_ORIGINAL_ALLOWANCE",
+  "UTC": "2026-10-25T13:48:08.626360+00:00",
+  "owner_authorization": "Current Exact following prompt and explicit latest instruction: use only original remaining budget and clock; preserve transfers and accepted stages",
+  "real_money_authorized": false,
+  "balance_DKK": 1808.22,
+  "pending_reserve_USD": 35,
+  "credit_expiry_displayed": "2027-01-12",
+  "original_ceiling_USD": 45,
+  "whole_phase_gross_upper_USD": 39.107882420652246,
+  "CPU_only_recovery_compute_max_USD": 1.048424177411778,
+  "original_remaining": {
+    "checked_UTC": "2026-10-25T13:30:48.568550+00:00",
+    "common_elapsed_hours": 18.4415190403329,
+    "common_remaining_hours": 29.5584809596671,
+    "common_deadline_UTC": "2026-10-26T19:04:19.099000+00:00",
+    "GPU_running_seconds": 29659.21299982071,
+    "GPU_cumulative_remaining_hours": 21.761329722272023,
+    "CPU_running_seconds": 9044.958999872208,
+    "CPU_cumulative_remaining_hours": 17.487511388924386,
+    "E009_consumer_elapsed_running_seconds": 1476.9390001296997,
+    "E009_consumer_remaining_running_seconds": 12923.0609998703,
+    "E009_consumer_provider_remaining_seconds": 13823.0609998703,
+    "observed_compute_GPU_IP_USD": 7.07392245276895,
+    "observed_compute_CPU_IP_USD": 0.6860241519047955,
+    "quoted_recovery_compute_max_USD": 1.048424177411778,
+    "basis": "Common48h remains wall clock. Node/consumer running-time limits remain cumulative across boots; failed journals keep original deadlines. No reset, extension or new budget."
+  },
+  "gate_valid_until_epoch": 1792943288.626378,
+  "no_new_resources": true,
+  "scientific_stages_to_run": [
+    "train",
+    "embed",
+    "group",
+    "refine",
+    "export",
+    "graph-proof"
+  ],
+  "reused_not_repeated": [
+    "GPU extraction and full-bank reader",
+    "all paired transfers",
+    "CPU owned inventory",
+    "two-mode native tiny fits",
+    "original baselines"
+  ],
+  "resource_limits": {
+    "threads": 4,
+    "sampled_tree_RSS_GB": 26,
+    "CPU_extra_growth_GiB": 16,
+    "GPU_fixed_reservation_GiB": 16,
+    "aggregate_growth_GiB": 32,
+    "free_reserve_GiB": 25,
+    "compressed_return_GiB": 2,
+    "logical_return_GiB": 6
+  },
+  "retention_end": "2026-10-28T00:00:00+01:00",
+  "observed_failure": "Original final-name queue writer can expose empty JSON; reproducible regression; no CPU scientific stage recorded. New complete queue is atomically published before parent arm."
+}

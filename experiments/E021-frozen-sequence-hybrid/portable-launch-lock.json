@@ -36,8 +36,8 @@
       "sha256": "0f079355f766affa7cf78d8a28c60817bf68fbfbd01e23811b309b1a39b6c2de"
     },
     "scripts/e021_portable_node.py": {
-      "bytes": 15851,
-      "sha256": "57733dfb640d2e25cc455322fb0bffcead1d7ce8ce300c5c4a35e862856d5b13"
+      "bytes": 17051,
+      "sha256": "a099455583b290ed2aed8d6ffbfad750d9bac462ec8d977193f89fd42027e1c4"
     },
     "scripts/e021_portable_prepare.py": {
       "bytes": 5017,
@@ -72,8 +72,8 @@
       "sha256": "040e1092c80b990bbedcea2f1f14085279107501fd55a15095e8b07fb46f62eb"
     },
     "scripts/e021_portable_E009_controller.py": {
-      "bytes": 12615,
-      "sha256": "cfaaaadf2fbbf8e65e0772e288ddea7710cf09b953613e6d32ad67ae146a9c34"
+      "bytes": 12544,
+      "sha256": "ac06d75691f7d76fc7dc0288f573d45abbb54da3aab8ee58e5cb2ed9e39e7cda"
     },
     "scripts/e021_portable_handoff.py": {
       "bytes": 5784,
@@ -84,8 +84,8 @@
       "sha256": "3b7fa3a017b497706eafa72617e9d22ebcae360d862d95fdd73df887907e83ca"
     },
     "scripts/e021_portable_reuse_node.py": {
-      "bytes": 6393,
-      "sha256": "2d2e54b77497b592709f88bc40273297f4952254447d8b3b17e1c0e7bdbb8be7"
+      "bytes": 6521,
+      "sha256": "bad75f8c9b3ddc042fed63eb197dfc5cc38e559230460876fb6f397372d2002c"
     },
     "scripts/e021_portable_runtime_archive.py": {
       "bytes": 4690,
@@ -94,6 +94,14 @@
     "scripts/e021_portable_tiny_cached.py": {
       "bytes": 2974,
       "sha256": "8fd36939c6be2dd2080ad5262deaa7b9fabdf62d0d27fbd6cee6d1114dd3c796"
+    },
+    "scripts/e021_control_json.py": {
+      "bytes": 1990,
+      "sha256": "52671c722329da09452d87f33ec6f3b908aac53fe4b001d440b3d6e3ced3e9d4"
+    },
+    "scripts/e021_restore_cpu.py": {
+      "bytes": 10674,
+      "sha256": "136140360cd66f98509d5ee365c647b45f5f1d3d2d5b160173a875f0753fdc05"
     }
   },
   "native_status": "Passed owned-runtime inventory, 148-member original reuse and 40 native product contracts. Automatic maintenance restarted held E2 parent; preserved return and tested per-unit restart protection. Community science unstarted.",

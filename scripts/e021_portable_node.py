@@ -6,7 +6,7 @@ The Mac controller may disappear: absolute clocks, stale-live-peer detection,
 idle limits, native exit watcher and provider STOP still bound charges. No retry,
 cloud lifecycle mutation, feature fallback or scientific tuning occurs here.
 """
-import argparse,csv,hashlib,json,os,shutil,signal,subprocess,sys,threading,time,urllib.parse,urllib.request
+import argparse,csv,hashlib,json,os,shutil,signal,subprocess,sys,threading,time,traceback,urllib.parse,urllib.request
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).absolute().parent))
 from e009_common import binding,write_json
@@ -116,6 +116,19 @@ def completed(cfg,outcome):
     return True
 
 
+def completed_E009(cfg,outcome):
+    """Require the one-community target and six exits, separate from legacy scope."""
+    scientific=[x for x in outcome['stages']if x['kind']=='science']
+    expected={('E009-hybrid',s)for s in ['train','embed','group','refine','export','graph-proof']}
+    target=json.loads((Path(cfg['root'])/'gates/E009-scoped-target.json').read_text())
+    if(cfg.get('scope')!='E009-only'or cfg['role']!='cpu'or len(scientific)!=6
+        or any(x['status']!='SUCCESS'for x in scientific)
+        or{(x['unit'],x['stage'])for x in scientific}!=expected
+        or target['status']!='PASS_E009_ONLY_COMPLETE'):
+        raise ValueError('Scoped E009 completion is not proved')
+    return True
+
+
 def collect(cfg,outcome):
     """Seal native journals before exit; raw banks/runtime are explicitly retained."""
     root=Path(cfg['root']);ev=root/'sealed-evidence';ev.mkdir(exist_ok=False)
@@ -124,7 +137,7 @@ def collect(cfg,outcome):
         if p.is_file()and p.suffix in ['.json','.py']:shutil.copyfile(p,ev/p.name)
     from e021_collect import pack
     work=root/'work'if cfg['role']=='cpu'else root/'empty-return-work';work.mkdir(exist_ok=True)
-    result=pack(work,ev,root/'return',ceiling=cfg.get('return_cap_bytes',2*1024**3),allow_incomplete=not outcome.get('science_completed',False));uploads=[]
+    result=pack(work,ev,root/'return',ceiling=cfg.get('return_cap_bytes',2*1024**3),allow_incomplete=not(outcome.get('science_completed',False)or outcome.get('scoped_science_completed',False)));uploads=[]
     for n in ['e021-evidence.tar.gz','e021-evidence.tar.gz.sha256','collection.json']:uploads.append(storage_upload(root/'return'/n,cfg['archive_prefix']+'/'+n))
     return dict(collection=result,uploads=uploads,raw_bank_runtime_not_backed_up_by_hash=True)
 
@@ -153,12 +166,17 @@ def run(config):
                 if(root/'finish.json').exists():
                     finish=json.loads((root/'finish.json').read_text());outcome['science_completed']=finish.get('science_completed')is True
                     if outcome['science_completed']:completed(cfg,outcome)
+                    if finish.get('E009_scoped_science_completed')is True:
+                        completed_E009(cfg,outcome)
+                        outcome.update(scoped_science_completed=True,scientific_fits_completed=1,oral_executed=False)
                     outcome['status']=finish['status'];break
                 p=jobs/(str(next_job).zfill(4)+'.json')
                 if not p.exists():
                     if time.time()-last>(900 if failed_since else 7200):raise TimeoutError('Native task queue idle/setup ceiling exhausted')
                     time.sleep(.2);continue
-                task=json.loads(p.read_text());name=task['name'];kind=task['kind'];argv=task['argv']
+                try:task=json.loads(p.read_text())
+                except (ValueError,OSError)as exc:raise ValueError('Invalid published task '+str(p)+': '+str(exc))from exc
+                name=task['name'];kind=task['kind'];argv=task['argv']
                 if Path(name).name!=name or not name or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_'for c in name):raise ValueError('Unsafe task name')
                 if kind=='science':
                     release=json.loads((root/'release.json').read_text())
@@ -177,7 +195,7 @@ def run(config):
                     write_status(root,dict(status='FAILED_HELD_FOR_RECORDED_RECOVERY',role=cfg['role'],stage=name))
                     if kind=='science':raise RuntimeError('Scientific stage failed; no automatic retry')
                 else:failed_since=None;write_status(root,dict(status='HELD',role=cfg['role'],completed_stage=name))
-    except BaseException as e:outcome['error']=repr(e)
+    except BaseException as e:outcome.update(error=repr(e),traceback=traceback.format_exc())
     finally:done.set()
     outcome['guard_errors']=error;outcome['elapsed_since_first_VM_start']=time.time()-cfg['first_VM_start_epoch'];write_json(root/'node-result.json',outcome)
     try:
