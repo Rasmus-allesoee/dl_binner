@@ -1,0 +1,94 @@
+{
+  "dcvbin": {
+    "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/dcvbin",
+    "commit": "732ee4257f7da200994f4c105e9dacbc74242883",
+    "modified": [
+      " M DNABERT-S/.DS_Store",
+      " D DNABERT-S/pytorch_model.bin",
+      "?? .DS_Store",
+      "?? marker_gene/.DS_Store",
+      "?? marker_gene/auxiliary/.DS_Store",
+      "?? myvae/.DS_Store"
+    ],
+    "files": {
+      "bin/my_method.sh": {
+        "bytes": 6875,
+        "sha256": "f442c72159de050c75815f15696a70730792620cf3328fabadfc1e0e3ce72360"
+      },
+      "bin/my_method_fur.sh": {
+        "bytes": 8364,
+        "sha256": "a1365fc46ea61ea5ebe91f128e3ca085e5d413720f1e00ec31acac4ae477c0ec"
+      },
+      "scripts/featureExtract_gpu_2.py": {
+        "bytes": 3239,
+        "sha256": "f0fb9982308e6a9cacaf80f7af1597877d77d030cc3f15dee47fdde0a50a9e18"
+      },
+      "scripts/data_process_final.py": {
+        "bytes": 3177,
+        "sha256": "ea6729fe47950e301b4125fd36818102d3fe3da94fcb5bd2acf0deca546a184f"
+      },
+      "DNABERT-S/bert_layers.py": {
+        "bytes": 40734,
+        "sha256": "089e5d47229fa2784439d003cee93e45af6946d662dd1280b49d83dd93a58e36"
+      },
+      "myvae/mainfiles/vaeTest_2.py": {
+        "bytes": 2166,
+        "sha256": "27629e8c8688f81c7f01aec6fba3a6d33ed363324a565e81c5b904eb90286066"
+      },
+      "README.md": {
+        "bytes": 3929,
+        "sha256": "77d27e55865fc575b537f05e3ee891c91403f701ecc6ad2cfb7114cf2054169e"
+      }
+    }
+  },
+  "SCGBinner": {
+    "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/SCGBinner",
+    "commit": "d5ad239af9a1445f0e454c4d4aa9307b922961a9",
+    "modified": [
+      "?? .DS_Store",
+      "?? SCGBinner/.DS_Store"
+    ],
+    "files": {
+      "SCGBinner/simclr.py": {
+        "bytes": 9124,
+        "sha256": "c4a13a11120547843d91d3dd2cd0d00d91bfbe4c3cf005db1be4ac02947d4b83"
+      }
+    }
+  },
+  "SemiBin": {
+    "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/SemiBin",
+    "commit": "f7c45dcbcdfa81e8fbc3e08b04c54683122e72d6",
+    "modified": [
+      "?? .DS_Store",
+      "?? SemiBin/.DS_Store",
+      "?? test/.DS_Store"
+    ],
+    "files": {
+      "SemiBin/self_supervised_model.py": {
+        "bytes": 5888,
+        "sha256": "49f9796c167e1e874de0071ae5b9765d993434ba6b530f56b0072d6f4c85ef4c"
+      }
+    }
+  },
+  "publisher_payloads": {
+    "artifacts/e022-marker-learning/dcvbin-primary.xml": {
+      "bytes": 163183,
+      "sha256": "767947ddff218fd805ee5c6b997baf18bca1a02363aa5c6ece9b3f21d2e09cc6"
+    },
+    "artifacts/e022-marker-learning/dcvbin-supplement-europepmc.zip": {
+      "bytes": 690571,
+      "sha256": "b1c1e96622b92eb65230dd84027092c01c0bf6e41926b3cc06bb928516b2ca4e"
+    },
+    "artifacts/e022-marker-learning/Supplementary_Material_bbag241.tex": {
+      "bytes": 11777,
+      "sha256": "0f2fa84bfaa9dc46830ba8e41606231be804387294fe693709ad5f499e975957"
+    }
+  },
+  "execution": "No external tool/model run",
+  "local_paper_transcription": {
+    "path": "agent_context/papers/bin_tools/DCVBin_2026_paper.md",
+    "bytes": 62467,
+    "sha256": "081867e66e767f5e5ed6414fc483582927b050e0f80bb0b1fd4698c30742825b",
+    "scope": "Targeted runtime/compute check agrees with current journal; no numerical speed comparison found"
+  }
+}

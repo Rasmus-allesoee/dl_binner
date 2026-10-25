@@ -63,6 +63,12 @@ def main(argv=None):
     for name in ('fasta','features','views','tokens','frozen','checkpoint','config','model-directory','model-pin'):
         hybrid.add_argument('--'+name,type=Path)
     hybrid.add_argument('--device',choices=('cpu','cuda'),default='cpu')
+    relation = commands.add_parser('relation-stage', help='Cached reliable cross-contig learning candidate (dev9)',
+        description='Restore-only marker/context pairs, fresh fit or exact reload. No truth, detector, GLM extraction or downloads.')
+    relation.add_argument('--stage', choices=('pairs', 'train', 'embed'), required=True)
+    relation.add_argument('--output', type=Path, required=True)
+    for name in ('features', 'views', 'tokens', 'frozen', 'embeddings', 'graph', 'marker-cache', 'marker-hmm', 'pairs', 'checkpoint', 'config'):
+        relation.add_argument('--'+name, type=Path)
     running.add_argument('--memory-gb', type=float, help='Optional sampled working process-tree RSS safeguard in GB; positive, no maximum')
     running.add_argument('--timeout', type=float, help='Optional overall invocation wall-time safeguard in seconds; positive, no maximum')
     running.add_argument('--resume', action='store_true', help='Verify matching inputs/source/config/runtime and reuse completed stages')
@@ -132,6 +138,10 @@ def main(argv=None):
             return 0
         if args.command == 'context-stage':
             from .context.stage import run
+            run(args)
+            return 0
+        if args.command == 'relation-stage':
+            from .relational.stage import run
             run(args)
             return 0
         if args.output.exists():

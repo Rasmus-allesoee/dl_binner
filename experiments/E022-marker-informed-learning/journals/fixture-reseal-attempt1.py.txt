@@ -1,0 +1,96 @@
+"""Own DNA, actual sparse graph/HMM files, explicit synthetic cached annotations.
+
+The numeric graph vectors and marker domains are hand-authored engineering inputs,
+not a detector/biological accuracy claim. No ignored research assets are used.
+"""
+import hashlib
+import json
+from pathlib import Path
+
+import numpy as np
+
+
+def fixture(root, measured=True):
+    """Create diverse DNA, exact twin positives, missing/short DNA and marker cache."""
+    import pyhmmer
+    from dl_binner.multiview.views import prepare, config, load
+    from dl_binner.multiview.downstream import group
+    from dl_binner.context.tokens import prepare as tokens
+    from dl_binner.candidate.markers import POLICY, runtime, reduce_hits
+    from dl_binner.io import digest, save_arrays, write_json, id_digest
+    from dl_binner.contracts import file_record
+    root = Path(root); root.mkdir(exist_ok=True)
+    rng = np.random.default_rng(714); rows = []
+    for i in range(24):
+        p = rng.dirichlet(np.full(4, .3)); dna = ''.join(rng.choice(list('ACGT'), 3200, p=p))
+        rows.append(('opaque-'+str(i), dna))
+    for i in range(4):
+        rows += [('twin-z'+str(i), rows[2*i][1]), ('twin-a'+str(i), rows[2*i][1])]
+    rows += [('short', 'ACGT'*7), ('marker-negative', 'ACGT'*180), ('no-signal', 'N'*2500)]
+    fasta = root/'assembly.fna'; fasta.write_text(''.join('>'+q+'\n'+dna+'\n' for q, dna in rows))
+    depth = root/'depth.tsv'
+    coverage = rng.uniform(0, 40, (len(rows), 10))
+    for i in range(4): coverage[24+2*i:26+2*i] = coverage[2*i]
+    coverage[-1] = 0
+    depth.write_text('contig_id\t'+ '\t'.join(['Z9','A1','q2','q3','q4','q5','q6','q7','q8','q0'])+'\n'+
+        ''.join(q+'\t'+'\t'.join(map(str, coverage[i]))+'\n' for i,(q,_) in reversed(list(enumerate(rows)))))
+    cfg = config(); cfg.update(epochs=20, min_bin_bp=1, min_bin_contigs=1)
+    prepare(fasta, depth if measured else None, root/'data', cfg)
+    features, views = root/'data/features.npz', root/'data/views.npz'
+    data, meta, v, vm = load(features, views); tokens(fasta, features, views, root/'tokens')
+    values = rng.normal(size=(len(rows), 64)).astype(np.float32)
+    values /= np.linalg.norm(values, axis=1)[:, None]
+    for i in range(4): values[24+2*i:26+2*i] = values[2*i]
+    values[~data['eligible']] = 0
+    save_arrays(root/'anchor.npz', dict(ids=data['ids'], features=values, evidence=data['eligible']),
+                dict(kind='embeddings', features_sha256=digest(features), metric='unit-sphere cosine'))
+    group(root/'anchor.npz', features, root/'group', cfg, 4)
+    markers = root/'markers'; markers.mkdir()
+    hmm = root/'markers.hmm'; alphabet = pyhmmer.easel.Alphabet.amino(); families = {}
+    with hmm.open('xb') as stream:
+        for i in range(4):
+            key = 'family-'+str(i); families[key] = key
+            seq = ''.join(rng.choice(list('ACDEFGHIKLMNPQRSTVWY'), 40))
+            digital = pyhmmer.easel.TextSequence(name=key.encode(), sequence=seq).digitize(alphabet)
+            model, _, _ = pyhmmer.plan7.Builder(alphabet).build(digital, pyhmmer.plan7.Background(alphabet))
+            model.cutoffs.trusted = (20., 20.); model.write(stream)
+    genes = {}; domains = []; proteins = {}
+    for i, (ident, dna) in enumerate(rows[:32]):
+        # Different families on each exact twin permit guarded positive proposals.
+        family = 'family-'+str((i if i < 24 else i-24) % 4)
+        gene = 'gene-'+str(i)
+        genes[gene] = dict(contig=ident, start=0, end=123, strand=1,
+                           protein_length=40, partial_begin=False, partial_end=False)
+        proteins[gene] = ''.join(rng.choice(list('ACDEFGHIKLMNPQRSTVWY'), 40))
+        domains.append(dict(gene=gene, marker=family, score=100., hmm_from=1, hmm_to=40,
+                            hmm_length=40, protein_from=1, protein_to=40, hmm_coverage=1.))
+    asset = dict(version=1, kind='scg_profile_asset', families=families, hmm=file_record(hmm),
+                 source='Own native synthetic HMM / explicitly hand-authored engineering domains', license='Own')
+    write_json(markers/'asset.json', asset)
+    def seal():
+        """Seal explicit fixture mutations; never called on accepted evidence."""
+        (markers/'genes.jsonl').write_text(''.join(json.dumps(dict(gene=k, **g))+'\n' for k,g in genes.items()))
+        (markers/'proteins.faa').write_text(''.join('>'+k+'\n'+s+'\n' for k,s in proteins.items()))
+        write_json(markers/'domains.json', domains)
+        write_json(markers/'evidence.json', dict(version=1, ids=data['ids'].tolist(), ids_sha256=id_digest(data['ids']),
+            skipped=[], gene_count=len(genes), profile_count=4, canonical_families=4, **reduce_hits(genes, domains, families)))
+        write_json(markers/'cache.json', dict(version=1, kind='candidate_marker_cache', policy=POLICY,
+            fasta=file_record(fasta), hmm=file_record(hmm), asset_manifest=file_record(markers/'asset.json'),
+            runtime=runtime(), genes=len(genes), domains=len(domains),
+            files={n:file_record(markers/n)for n in ['asset.json','proteins.faa','genes.jsonl','domains.json','evidence.json']}))
+    seal()
+    return dict(root=root, fasta=fasta, features=features, views=views, tokens=root/'tokens',
+                embeddings=root/'anchor.npz', graph=root/'group/graph.npz', markers=markers, hmm=hmm,
+                data=data, metadata=meta, cfg=cfg, genes=genes, domains=domains, proteins=proteins, seal=seal)
+
+
+class NumericExtractor:
+    """Mock only GLM inference; real cache coordinates/readers/trainer still run."""
+    def extract(self, rows):
+        out = []; details = []
+        for ident, dna in rows:
+            rng = np.random.default_rng(int(hashlib.sha256(dna.encode()).hexdigest()[:16], 16))
+            out.append(rng.normal(size=768).astype(np.float32))
+            details.append(dict(id=ident, bp=len(dna), chunks=1, tokens=[len(dna)+2]*2,
+                unknown_tokens=0, intervals=[[0,len(dna)]]))
+        return np.stack(out), details

@@ -1,5 +1,19 @@
 # Google Cloud workspace operations
 
+## Current E022 boundary, October 25, 2026
+
+[E022](../experiments/E022-marker-informed-learning/OPERATIONS.md) is local-only
+preparation. No live cloud read, start, upload, new service/resource or retention
+change occurred. Existing E021 bank/runtime/context/marker/graph bytes are named
+for restore-only CPU reuse; no GPU or new extraction is proposed. New $2 and
+two-hour / 2.25-hour STOP execution needs separate approval and fresh financial,
+coverage, delayed-usage, source/runtime/input and headroom gates. Previous balances
+below are dated observations, not fresh E022 admission. Preserve original 30/300 GiB
+disks and accepted bulk; existing $8 storage ends **October 28, 00:00 Copenhagen
+(CET)**. Stopped cost remains $31.20/month. A proposed seven-day storage-only $8
+renewal is not authorized and must be repriced against actual retained GCS bytes.
+
+
 **Current E021: completed and reviewed; original E2 TERMINATED, temporary GPU
 worker and its two disks deleted.** [Final inspection](../experiments/E021-frozen-sequence-hybrid/inspection-observed.json)
 verifies all six E009 CPU exits, scoped target, matching boot/process watcher,

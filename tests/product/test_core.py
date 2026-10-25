@@ -56,7 +56,7 @@ class ProductContracts(unittest.TestCase):
 
     def test_installed_owned_origins_version_and_packaged_resources(self):
         self.assertEqual(dl_binner.__version__, importlib.metadata.version('dl-binner'))
-        self.assertEqual(dl_binner.__version__, '0.1.0.dev8')
+        self.assertEqual(dl_binner.__version__, '0.1.0.dev9')
         for module in (dl_binner, np, torch):
             self.assertTrue(Path(module.__file__).resolve().is_relative_to(Path(sys.prefix).resolve()), module.__file__)
         self.assertIsNone(torch.version.cuda)

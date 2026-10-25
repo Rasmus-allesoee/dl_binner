@@ -29,6 +29,8 @@ reproduced result of this project.
 
 - [E021: frozen pretrained-sequence/context/depth hybrid and skin source admission](E021-frozen-sequence-hybrid/README.md)
 
+- [E022: reliable marker-informed cross-contig learning](E022-marker-informed-learning/README.md)
+
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 
 ## Record convention

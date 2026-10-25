@@ -1323,3 +1323,38 @@ are removed after verified preservation. Costs are $9.992 priced subtotal / $11.
 with reserves inside the original $45, not an invoice. Existing stopped storage
 remains $31.20/month and the $8 approval ends October 28 at 00:00 Copenhagen; the
 next local preparation must surface preservation needs before that boundary.
+
+
+## E022 reliable cross-contig candidate prepared, October 25, 2026
+
+[E022 design](../../experiments/E022-marker-informed-learning/design.md) implements
+the selected learning block directly: strong cached marker calls plus measured
+parent depth/composition support bounded soft links, with original real views,
+encoder/initialization/predictors/EMA, seed/schedule and CPM/E013 intact. Protein
+near-identity, partial/overlapping/ambiguous calls and context disagreement can
+withhold a constraint. Repeated-family hits alone do not define negatives.
+Marker-negative partners may receive supported positives; no DNA is discarded.
+This is a useful hypothesis about fragmented-genome supervision, not a diagnosis
+proved by E021's scores. Pair thresholds are label-free and frozen before new
+outcomes, with no truth/family/K/grid tuning.
+
+Actual installed local reader/loss/gradient/20-epoch/reload/refiner/export and
+zero-weight-state checks support engineering readiness, not recovery or Linux
+admission. Label-free E009 availability gives 1,963 positives / 365 negatives in
+23.96 seconds, 1.343 GB sampled RSS. Only one first candidate E009 fit is proposed;
+E021 outputs are reused. The optional zero-side-loss ablation is prepared but not
+part of that execution. Sequence-only input runs ordinary learning and abstains
+from this depth-gated mechanism; skin cannot silently become active confirmation.
+
+[DCVBin audit](../evidence/2026-10-25-dcvbin-efficiency-and-marker-learning.md) records
+a much smaller parent-only/truncated >=2 kb workload, not measured speed. No
+quantitative runtime table could be confirmed in the accessible current paper and
+supplement. Preserve GLM bank reuse now; length-bucket batching/token reuse and
+explicit cheaper exposure/distillation remain future choices. Do not add another
+GPU job or larger model merely because E021 allocation was long.
+
+[Operations](../../experiments/E022-marker-informed-learning/OPERATIONS.md) proposes
+a new $2 CPU-only / two-hour comparison, all native/live-credit/resource gates
+still pending. No old budget, community execution, resource or retention change
+is authorized here. Original stopped storage ends October 28, 00:00 Copenhagen;
+a separate storage decision must preserve non-backed-up bulk before that date.

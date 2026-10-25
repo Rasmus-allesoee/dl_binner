@@ -3,7 +3,7 @@
 Updated: October 25, 2026 (Copenhagen). This is the single current handoff.
 
 **E021 E009-only is completed, checksum-verified and independently reviewed:
-MODIFY. No VM is running.** [Inspection](../experiments/E021-frozen-sequence-hybrid/inspection-observed.json),
+MODIFY. The last provider check confirmed shutdown.** [Inspection](../experiments/E021-frozen-sequence-hybrid/inspection-observed.json),
 [comparison](../experiments/E021-frozen-sequence-hybrid/comparison-review.json),
 [all 156 targets](../experiments/E021-frozen-sequence-hybrid/comparison-targets.tsv)
 and [cost ledger](../experiments/E021-frozen-sequence-hybrid/cost-review.json)
@@ -48,21 +48,46 @@ delayed usage unknown / $35 reserve. No new budget, clock or retention extension
 
 ## Exact next step
 
-Prepare one **reliable marker-informed cross-contig learning** upgrade locally,
-using retained features/caches and abstaining when marker/context evidence is
-unreliable. Same-parent crop positives do not explicitly connect different contigs
-from the same genome; this is a more direct information/supervision question than
-another larger model or grouping grid. E011/E012 duplicate-locus/panel/replicon
-failures prohibit naive repeated-family cannot-links. Keep E019/E021 immutable,
-source/truth outside training, all DNA and optional unassigned outcomes.
+**E022 is implemented locally; no community execution or cloud spending.**
+[Design](../experiments/E022-marker-informed-learning/design.md),
+[local evidence](../experiments/E022-marker-informed-learning/local-observed.json),
+[locks/operations](../experiments/E022-marker-informed-learning/OPERATIONS.md)
+prepare one reliable marker-informed cross-contig learning comparison against
+immutable E021. Strong complete cached calls plus composition and measured-parent
+multi-sample depth support soft positive/negative pairs. Same-family repetition
+alone is insufficient. Missing/inadequate depth abstains; every parent/real view
+and short/marker-negative/unknown/non-target DNA remains in the learner/accounting.
 
-[Exact local implementation prompt](../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt)
-prepares a separately priced comparison; it authorizes no new community execution,
-GPU extraction, acquisition or score campaign. Frozen skin remains unscored pending
-its named origin-versus-unique/overlap/evaluator/resource/cost admission. Original
-stopped disks cost **$31.20/month**; approved storage still ends **October 28 at
-00:00 Copenhagen (CET)**. The next task must surface preservation/retention needs
-before that boundary; neither a new fit nor continued paid retention is implied.
+The label-free full E009 cache has 2,328 bounded pairs (1,963 positive, 365 negative),
+with no truth or community fit. Tiny installed training/reload/graph/refiner/export
+and exact zero-weight initialization/state controls are local engineering evidence,
+not recovery results or Linux admission. Frozen E021 learning/source and all
+accepted old evidence, failures and Mac tolerance remain intact. E022 keeps the
+same architecture/init/seed/schedule/CPM/E013 and adds a ramped bounded side loss.
+No product default or joint two-community KEEP is established.
+
+[DCVBin audit](evidence/2026-10-25-dcvbin-efficiency-and-marker-learning.md) finds a
+much smaller source workload: one truncated input per >=2 kb parent, batch one,
+versus E021's exact parent/crop/both-strand bank. On these lengths that is 13,554
+versus 930,118 stranded inputs; **not a timing ratio**. The published quantitative
+runtime comparison could not be confirmed. E021 extraction was 4.14 hours, GPU
+allocation 8.24 hours and CPU training 19.51 minutes. Future batching/token reuse
+and separately declared exposure/distillation options are recorded; no DCVBin run.
+
+Next request: one CPU E009 candidate fit using the retained bank and restored
+exact pair cache, proposed **new $2**, two-hour VM-start clock / 2.25-hour provider
+STOP. No old budget carries. Fresh credit/eligibility/pending usage/prices, native
+runtime/full-reader/tiny/launcher gates and headroom are mandatory before release.
+The [exact approval prompt](../experiments/E022-marker-informed-learning/OPERATIONS.md#exact-following-prompt)
+contains the limits. Skin stays unscored and cannot confirm this depth-gated rule
+without measured contig depth; further data/truth/cost admission remains separate.
+
+Original stopped 30/300 GiB disks remain **$31.20/month**; current $8 storage
+approval ends **October 28 at 00:00 Copenhagen (CET)**. No new live lifecycle check,
+start, cloud upload, deletion, resource or retention change occurred in this task.
+Bulk E021 bank/context arrays and emitted DNA are not backed up by inventory
+hashes. Preserve their locators and make a separately priced storage decision
+before expiry; no automatic renewal or deletion is authorized.
 
 ## Preserved E020 completed-review snapshot
 

@@ -1,0 +1,38 @@
+{
+  "record": "Source-workload estimate from accepted E009 metadata, not a runtime comparison",
+  "E021": {
+    "full_contigs": 145702,
+    "eligible_parents": 89041,
+    "DNA_views": 432664,
+    "chunks": 465059,
+    "strand_sequences": 930118,
+    "tokens": 157758426,
+    "view_bp_before_two_strands": 374710147,
+    "max_tokens": 921,
+    "unique_raw_view_SHA256": 432664,
+    "exact_raw_view_duplicates": 0,
+    "native_GPU_extraction_seconds": 14904.810655847,
+    "GPU_allocation_hours": 8.238670277727975,
+    "CPU_training_seconds": 1170.475089972
+  },
+  "DCVBin_source_only": {
+    "minimum_bp": 2000,
+    "eligible_model_inputs": 13554,
+    "retained_parent_bp": 141391731,
+    "batch": 1,
+    "max_tokens": 5000,
+    "crops": 0,
+    "strands": 1,
+    "truncation": true
+  },
+  "ratios": {
+    "E021_views_per_DCV_parent": 31.921499188431458,
+    "E021_strand_sequences_per_DCV_parent": 68.6231370813044
+  },
+  "caveats": [
+    "Input counts are not elapsed-time ratios: token lengths, quadratic attention, hardware/backend/precision, CPT and pipeline scope differ.",
+    "DCV source tokenizer/weights are not established identical to E021 pins; no DCV execution.",
+    "The current journal main text and supplied supplementary TeX contain no quantitative runtime/hardware comparison; no claimed speed table was verified."
+  ],
+  "view_metadata_SHA256": "09528973591df44950cbc5985a8cd0933cb86be6dce5fac8be42a0561d40d389"
+}

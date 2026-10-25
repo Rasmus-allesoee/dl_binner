@@ -1,0 +1,398 @@
+{
+  "status": "PASS_COMPLETE_READONLY_BASE_AND_NEW_OWNED_PACKAGE",
+  "prefix": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/env-v3",
+  "base": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+  "python": "3.10.15 | packaged by conda-forge | (main, Oct 16 2024, 01:21:29) [Clang 17.0.6 ]",
+  "distributions": {
+    "leidenalg": "0.10.2",
+    "huggingface-hub": "0.23.5",
+    "packaging": "26.3",
+    "scipy": "1.13.1",
+    "archspec": "0.2.6",
+    "einops": "0.6.1",
+    "pip": "25.1.1",
+    "requests": "2.34.2",
+    "filelock": "4.0.10",
+    "networkx": "3.4.2",
+    "texttable": "1.7.0",
+    "joblib": "1.4.2",
+    "pynndescent": "0.5.13",
+    "numpy": "1.26.4",
+    "numba": "0.60.0",
+    "setuptools": "65.5.0",
+    "sympy": "1.14.0",
+    "threadpoolctl": "3.5.0",
+    "psutil": "6.0.0",
+    "pyhmmer": "0.11.0",
+    "tqdm": "4.70.1",
+    "transformers": "4.27.0",
+    "urllib3": "2.8.0",
+    "mpmath": "1.3.0",
+    "pyyaml": "6.0.3",
+    "pyrodigal": "3.6.3",
+    "fsspec": "2026.9.0",
+    "torch": "2.2.2",
+    "igraph": "0.11.8",
+    "certifi": "2026.7.22",
+    "jinja2": "3.1.6",
+    "wheel": "0.45.1",
+    "regex": "2026.9.29",
+    "typing-extensions": "4.16.0",
+    "markupsafe": "3.0.4",
+    "dl-binner": "0.1.0.dev9",
+    "charset-normalizer": "3.5.2",
+    "tokenizers": "0.13.3",
+    "scikit-learn": "1.5.2",
+    "idna": "3.20",
+    "llvmlite": "0.43.0"
+  },
+  "locations": {
+    "leidenalg": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/leidenalg-0.10.2.dist-info",
+    "huggingface-hub": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/huggingface_hub-0.23.5.dist-info",
+    "packaging": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/packaging-26.3.dist-info",
+    "scipy": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/scipy-1.13.1.dist-info",
+    "archspec": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/archspec-0.2.6.dist-info",
+    "einops": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/einops-0.6.1.dist-info",
+    "pip": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/pip-25.1.1.dist-info",
+    "requests": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/requests-2.34.2.dist-info",
+    "filelock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/filelock-4.0.10.dist-info",
+    "networkx": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/networkx-3.4.2.dist-info",
+    "texttable": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/texttable-1.7.0.dist-info",
+    "joblib": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/joblib-1.4.2.dist-info",
+    "pynndescent": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/pynndescent-0.5.13.dist-info",
+    "numpy": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/numpy-1.26.4.dist-info",
+    "numba": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/numba-0.60.0.dist-info",
+    "setuptools": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/setuptools-65.5.0.dist-info",
+    "sympy": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/sympy-1.14.0.dist-info",
+    "threadpoolctl": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/threadpoolctl-3.5.0.dist-info",
+    "psutil": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/psutil-6.0.0.dist-info",
+    "pyhmmer": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/pyhmmer-0.11.0.dist-info",
+    "tqdm": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/tqdm-4.70.1.dist-info",
+    "transformers": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/transformers-4.27.0.dist-info",
+    "urllib3": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/urllib3-2.8.0.dist-info",
+    "mpmath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/mpmath-1.3.0.dist-info",
+    "pyyaml": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/pyyaml-6.0.3.dist-info",
+    "pyrodigal": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/pyrodigal-3.6.3.dist-info",
+    "fsspec": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/fsspec-2026.9.0.dist-info",
+    "torch": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/torch-2.2.2.dist-info",
+    "igraph": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/igraph-0.11.8.dist-info",
+    "certifi": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/certifi-2026.7.22.dist-info",
+    "jinja2": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/jinja2-3.1.6.dist-info",
+    "wheel": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/wheel-0.45.1.dist-info",
+    "regex": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/regex-2026.9.29.dist-info",
+    "typing-extensions": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/typing_extensions-4.16.0.dist-info",
+    "markupsafe": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/markupsafe-3.0.4.dist-info",
+    "dl-binner": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/env-v3/lib/python3.10/site-packages/dl_binner-0.1.0.dev9.dist-info",
+    "charset-normalizer": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/charset_normalizer-3.5.2.dist-info",
+    "tokenizers": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/tokenizers-0.13.3.dist-info",
+    "scikit-learn": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/scikit_learn-1.5.2.dist-info",
+    "idna": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/idna-3.20.dist-info",
+    "llvmlite": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/llvmlite-0.43.0.dist-info"
+  },
+  "package_files": {
+    "runner.py": {
+      "bytes": 20667,
+      "sha256": "99cbd7a14c360011b473dd22a03777eb7e3dfff109f11c78a2f5c1f067af3e8f"
+    },
+    "accounting.py": {
+      "bytes": 6732,
+      "sha256": "2a83aad8eb36864a704ebe72faeeba33c335c86f7072205f6f19c92db9f6f117"
+    },
+    "clustering.py": {
+      "bytes": 7880,
+      "sha256": "2ac715b1449287b002ef7e4a75b84ef204256c2d5f589e31a6810acfad941b66"
+    },
+    "io.py": {
+      "bytes": 12016,
+      "sha256": "71b0c423c046b3c72b651141e853ea622a62742fc087afeef37fbf9c253c2307"
+    },
+    "__init__.py": {
+      "bytes": 143,
+      "sha256": "c9a9311ac7922e4c9ac9b7367d2324e3e8594b585eaacea3ebcaeb51c684bcc4"
+    },
+    "model.py": {
+      "bytes": 13986,
+      "sha256": "acc1f3c450910112cd7883cc6284139046fde6b339e73b82638d301d8e5a9948"
+    },
+    "supervision.py": {
+      "bytes": 9575,
+      "sha256": "8ee9bd7d5f05a8e487a8691f7ab8152cca627f9f55ad27d48c6ece61cbd9a8a9"
+    },
+    "cli.py": {
+      "bytes": 12908,
+      "sha256": "de58801feab895ec95ea6123ddcab2d4ee099e8137c136042b58cd36830434b7"
+    },
+    "contracts.py": {
+      "bytes": 1671,
+      "sha256": "0455b5a45ecbb29eb1f6c168048efa3a861279dc7ba2af36896ddb6dfcab632d"
+    },
+    "__main__.py": {
+      "bytes": 103,
+      "sha256": "28f47a18f1a12c011b4fa92812d8f4fb10840c469d489ee5ac246bc669620144"
+    },
+    "candidate/runner.py": {
+      "bytes": 12350,
+      "sha256": "ab153821b9bacf70373c7ffd79c058b1be356a6f96bdfae5aa8638cf4bdab2eb"
+    },
+    "candidate/grouping.py": {
+      "bytes": 12615,
+      "sha256": "d31c67705b2fc80d5fd06d8b2c403d7e543ebd64fc37c08b5b3db90ba657f233"
+    },
+    "candidate/__init__.py": {
+      "bytes": 81,
+      "sha256": "5887ddf687250cefcf87aaa082c5a4edc9a5281a8a1be7a752300a5fcb190eff"
+    },
+    "candidate/model.py": {
+      "bytes": 10499,
+      "sha256": "09eda66fcd324870d11b89c6f6b4bc7e4c02f3169d6d557389bc8c840de76f09"
+    },
+    "candidate/markers.py": {
+      "bytes": 11226,
+      "sha256": "a77739cb64d219bf3af8e2baeb66ed81c86c53a8c5c633a184ee28412ee2760a"
+    },
+    "candidate/views.py": {
+      "bytes": 8357,
+      "sha256": "d3f1b51ac61009f9f962d767fce5600d5c93bd14b4ca9adb4bdef7564438392f"
+    },
+    "relational/pairs.py": {
+      "bytes": 15523,
+      "sha256": "a0e9d0ab0f57e97d301a6b875552af69778874847700bb75cddea6af49bebff9"
+    },
+    "relational/__init__.py": {
+      "bytes": 85,
+      "sha256": "12d1964131fc8d98a226ee7c07849f9073a2c157c66f7d0defc95f940dd1c432"
+    },
+    "relational/model.py": {
+      "bytes": 18860,
+      "sha256": "4890129563635bfd56c2e0a9becb29fd6e4a725c740bc2d02ba77353bad6206e"
+    },
+    "relational/stage.py": {
+      "bytes": 1491,
+      "sha256": "a46741b39f315a1e7e003c7cc09e3a654d3141368c4961d687521232e4cd1cc8"
+    },
+    "relational/evidence.py": {
+      "bytes": 8177,
+      "sha256": "f3fb84c5cbaceec874668c8ce6e1d2e2a34d66d80ca05a7df563169dc0987813"
+    },
+    "information/audit.py": {
+      "bytes": 6106,
+      "sha256": "64ca1b8f66f641be3a5c79af94333db507dd3875171758a2af042df1714f9be2"
+    },
+    "information/grouping.py": {
+      "bytes": 24866,
+      "sha256": "9d1f665b1f5024bdde90a86d536c6679cb3a5fbdb9635348141272d8de3d5235"
+    },
+    "information/__init__.py": {
+      "bytes": 83,
+      "sha256": "381d0d6bcd5fa452ba19db73173e5aa825dd30b4b704c1e9bd633466ce750050"
+    },
+    "information/export.py": {
+      "bytes": 4480,
+      "sha256": "1a6603b31de105de6a95afb16db1036a467e9dc12b9d843da53b3281caacfb5a"
+    },
+    "context/__init__.py": {
+      "bytes": 83,
+      "sha256": "fa4215cc76f8b617b7771580085721dca8241e368ce96d7559cac2cca52bf5b9"
+    },
+    "context/tokens.py": {
+      "bytes": 11844,
+      "sha256": "e2e2827798d085f245b20ec28830713d93fc189dee02998690d87b726e3ae7a2"
+    },
+    "context/model.py": {
+      "bytes": 19289,
+      "sha256": "f05c3ef2526880401af21e5bdb9a26f84b6faffc077bdeb882ff7678f0b9a4cf"
+    },
+    "context/stage.py": {
+      "bytes": 1234,
+      "sha256": "9174c043a838eec041b883ed9f1b0fe3323cb275db0199adee96c2a021997f5f"
+    },
+    "resources/training.json": {
+      "bytes": 215,
+      "sha256": "d8c20c7827d4e19cc4215214a5f30183e5c412345a0a06d9c8478a84ec546ee5"
+    },
+    "resources/candidate.json": {
+      "bytes": 678,
+      "sha256": "1c8049fa2cf70e51c2eab22fc7fe5cd0e626f807360b56ff2b392756207baa60"
+    },
+    "resources/relational.json": {
+      "bytes": 473,
+      "sha256": "8b3d69be7ecaae22016dd0a1153b3467de02c9fec48541f30f8858125be828b3"
+    },
+    "resources/context.json": {
+      "bytes": 267,
+      "sha256": "90bc99e68c31be2456dbe8b04fe4d438e1613b6cec62f7db4ab72ab6a7db5387"
+    },
+    "resources/multiview.json": {
+      "bytes": 799,
+      "sha256": "0f532c4912b002c5cdb2ebde48bf172c96577f3edb066a1c03864e2b537c6038"
+    },
+    "resources/hybrid-model-pin.json": {
+      "bytes": 3417,
+      "sha256": "1c1d7ff4d934ca54429be56608b22f3214c96198362c2f506761a39daa703529"
+    },
+    "resources/hybrid.json": {
+      "bytes": 609,
+      "sha256": "0975f50e2c409701b5abdc69666eabfb869f90890079981af37bd3854290c542"
+    },
+    "multiview/arrays.py": {
+      "bytes": 1395,
+      "sha256": "e6239aaa8ca298b5afd97d4c45ab58ff72183f485e4263226aebbcae03500a97"
+    },
+    "multiview/positive.py": {
+      "bytes": 15492,
+      "sha256": "133f54087e5516c6e90a6c71667e8b9e4b5cb5a1428d6418be1fc28393453ec6"
+    },
+    "multiview/__init__.py": {
+      "bytes": 85,
+      "sha256": "7724296c827c8ae34dc7558de991243c52ee78c1b8a37837e3070487657fe160"
+    },
+    "multiview/refinement.py": {
+      "bytes": 16783,
+      "sha256": "0c1bae1f0fd5e8873cc30e68218e6796e87bf43b7d9262d2ec42fd781a51b8c0"
+    },
+    "multiview/model.py": {
+      "bytes": 10256,
+      "sha256": "6342819c74f8d7da4cc23bea7666169de605d2c391ce3711d98243fc88f550d2"
+    },
+    "multiview/stage.py": {
+      "bytes": 2190,
+      "sha256": "a06543d0cd70ba4a63637a7072b96d03becc773c7ae0ba1dbeb4c603b2677581"
+    },
+    "multiview/downstream.py": {
+      "bytes": 7469,
+      "sha256": "a24e96291dc6e779734e6990008296e7e7d8d3e400ff9102004a09959fa8fbbb"
+    },
+    "multiview/views.py": {
+      "bytes": 9370,
+      "sha256": "0b3a00b87c17cd56417e589ebcb3a9f3234f85f4c14ac0b9204a680dc2590935"
+    },
+    "hybrid/__init__.py": {
+      "bytes": 85,
+      "sha256": "f6e79bfb663f155c854e52cd52461e85508b697c24f98984ce814976a4323adb"
+    },
+    "hybrid/bank.py": {
+      "bytes": 11190,
+      "sha256": "2a7b6538106e51962fbde33083450cc69ad91bb1f83651fd2fa2bc2ec8b0ee58"
+    },
+    "hybrid/model.py": {
+      "bytes": 19099,
+      "sha256": "abfddc122a146a157f5972eb04b0ca6a7b9e8a19fb5ee1e41df18af30d800e90"
+    },
+    "hybrid/stage.py": {
+      "bytes": 1271,
+      "sha256": "efe7c2461577239780b0615ab10f43cb743e685afbc60a173762ccdd62f6dac8"
+    },
+    "hybrid/extract.py": {
+      "bytes": 5842,
+      "sha256": "553a2c4c744dfe103dc688026a2eff9e1f0dad7715859b84d72c7f3218bb6096"
+    }
+  },
+  "groups": {
+    "tensor": {
+      "origins": {
+        "numpy": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/numpy/__init__.py",
+        "torch": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/torch/__init__.py"
+      },
+      "pools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libopenblas",
+          "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libiomp",
+          "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/functorch/.dylibs/libiomp5.dylib",
+          "version": null
+        }
+      ],
+      "libraries": {
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib": {
+          "resolved": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+          "bytes": 69339728,
+          "sha256": "7989f7da454076b55824c0eb64b9d57e5553439e0450f719b386aa19c251fbc1"
+        },
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/functorch/.dylibs/libiomp5.dylib": {
+          "resolved": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/functorch/.dylibs/libiomp5.dylib",
+          "bytes": 1831360,
+          "sha256": "737561cea249347e4fa7cec6d13569cf56bd2783ed6f9fba0831a7e1f3fdd457"
+        }
+      }
+    },
+    "graph": {
+      "origins": {
+        "scipy": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/scipy/__init__.py",
+        "sklearn": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/sklearn/__init__.py",
+        "numba": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/numba/__init__.py",
+        "pynndescent": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/pynndescent/__init__.py",
+        "igraph": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/igraph/__init__.py",
+        "leidenalg": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/leidenalg/__init__.py"
+      },
+      "pools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libopenblas",
+          "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libopenblas",
+          "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/scipy/.dylibs/libopenblas.0.dylib",
+          "version": "0.3.27",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/sklearn/.dylibs/libomp.dylib",
+          "version": null
+        }
+      ],
+      "libraries": {
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib": {
+          "resolved": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+          "bytes": 69339728,
+          "sha256": "7989f7da454076b55824c0eb64b9d57e5553439e0450f719b386aa19c251fbc1"
+        },
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/scipy/.dylibs/libopenblas.0.dylib": {
+          "resolved": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/scipy/.dylibs/libopenblas.0.dylib",
+          "bytes": 68969792,
+          "sha256": "089c1f3e1441c9cbbcd22e4829a14b31dec65d27c6804a4f94fc969e4ffe3437"
+        },
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/sklearn/.dylibs/libomp.dylib": {
+          "resolved": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/sklearn/.dylibs/libomp.dylib",
+          "bytes": 688416,
+          "sha256": "be61ec108198547b38d6f8b797131f64032ac5013f912012cf5e42d961011e4a"
+        }
+      }
+    },
+    "markers": {
+      "origins": {
+        "pyhmmer": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/pyhmmer/__init__.py",
+        "pyrodigal": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/pyrodigal/__init__.py",
+        "archspec": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/archspec/__init__.py"
+      },
+      "pools": [],
+      "libraries": {}
+    }
+  },
+  "scope": "Complete distribution versions/origins, own package source and actual loaded native libraries; not whole-prefix nonmutation",
+  "portable": false
+}

@@ -393,3 +393,21 @@ JSON/TSV summaries, stage/exit receipts and actionable retained errors. Optional
 GPU and Conda/mamba distribution are future goals only. No scientific settings,
 architecture or accepted scores change. Private push/PR/CI/review are authorized;
 merge and public publication are not.
+
+
+## Experimental relational stage, dev9
+
+`dl-binner relation-stage --stage pairs|train|embed` is an explicit research
+interface; ordinary installed `run`/`candidate` behavior is unchanged.
+[E022](../experiments/E022-marker-informed-learning/OPERATIONS.md) freezes one
+marker/context side loss on the original E021 (or explicitly E019) model. The
+feature/view/token/pair paths are required; a declared hybrid also requires its
+exact frozen bank. There is no truth input or missing-bank fallback. Pair building
+uses the real native sparse graph/HMM/cache readers; train/embed retain every
+parent axis and exact same-runtime reload. Missing informative measured depth
+abstains from cross-contig constraints, not from normal learning.
+
+This local candidate is not a product-default change or demonstrated recovery
+gain. See the experiment for knobs that are frozen scientific choices rather
+than a supported tuning surface, native admission pending, synthetic-vs-actual
+contracts, complete DNA exports and separately authorized comparison scope.

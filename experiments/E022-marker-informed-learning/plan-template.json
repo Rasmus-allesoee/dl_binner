@@ -1,0 +1,24 @@
+{
+  "base_config": "{REPO}/src/dl_binner/resources/multiview.json",
+  "config": "{REPO}/experiments/E022-marker-informed-learning/config.json",
+  "input_lock": "{REPO}/experiments/E022-marker-informed-learning/input-lock.json",
+  "kind": "E022 cached marker-informed learning",
+  "pair_archive": "{PHASE}/payload/E009-pairs.tar.gz",
+  "python": "{PHASE}/env/bin/python",
+  "snakefile": "{REPO}/experiments/E022-marker-informed-learning/Snakefile",
+  "threads": 4,
+  "unit": {
+    "anchor_embeddings": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/embeddings.npz",
+    "anchor_graph": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/group/graph.npz",
+    "fasta": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+    "features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+    "frozen": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/frozen",
+    "hmm": "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/marker.hmm",
+    "marker_cache": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers",
+    "tokens": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/tokens",
+    "views": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/E009-dev5/features/views.npz"
+  },
+  "work": "{PHASE}/work",
+  "worker": "{REPO}/scripts/e022_control.py",
+  "workflow_python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python"
+}

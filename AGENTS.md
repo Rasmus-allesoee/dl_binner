@@ -171,7 +171,10 @@ for component-level causal claims; do not require an isolated performance win fo
 every ingredient before implementation. An integrated upgrade establishes a bundle
 result unless further controls isolate its causes. Disabling a loss in a matched control
 should preserve module construction, initialization and random-number consumption
-unless changing those is the declared treatment. Admit training-only configuration
+unless changing those is the declared treatment. Preserve non-parameter state
+(such as BatchNorm running statistics) as well as RNG in an intended zero-loss
+control; an extra forward can change the comparator even when its weight is zero.
+Admit training-only configuration
 overrides explicitly against retained cache metadata; never rewrite the accepted
 cache to make a new treatment pass. Data inspected to choose
 improvements become development data, even when they originate from a public
@@ -438,6 +441,12 @@ before a child starts. Surface native causes beyond scheduler trailers. Distingu
 exited/zombie from live processes during cleanup and verify the intended stop and
 absence of running orphans. Label-free size/assignment summaries must not imply
 genome recovery or MAG quality without a separate evaluator.
+
+For pretrained-sequence efficiency estimates, count actual eligible parents, DNA
+views, chunks, token lengths and strands. A smaller input count is not a measured
+speed ratio; filtering, truncation or replacing crop vectors changes information
+and needs an explicit treatment. Separate extraction, downstream training and total
+allocated setup/idle time, and preserve reusable banks before another extraction.
 
 Forecast both compressed return size and the uncompressed local review working
 set. For large retained evidence, stage only needed copies and distinguish native

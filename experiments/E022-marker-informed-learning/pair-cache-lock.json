@@ -1,0 +1,187 @@
+{
+  "archive": {
+    "bytes": 2812443,
+    "sha256": "b2ae349e147296d185e192ee612871c078c02cc1392e609b70e6e7811f225233"
+  },
+  "cache_manifest": {
+    "files": {
+      "calibration.npz": {
+        "bytes": 1243317,
+        "sha256": "e2c64ec6272ba3ac8fe334aed65e038d12d9b5beeeeb844b0e3c578c61db9965"
+      },
+      "decisions.jsonl": {
+        "bytes": 3716373,
+        "sha256": "d284c6e2bc75c931e7b567eb72c55ea073b78ba6ce5325778454a18d37c40273"
+      },
+      "pairs.json": {
+        "bytes": 302,
+        "sha256": "18e5985ef96160a3c6eb24f459409b1aeb8a6e964650bf1ad6684a860a6fd8c0"
+      },
+      "pairs.npz": {
+        "bytes": 519958,
+        "sha256": "97e30136e7925c854b1c0c0b08d4651326c821ac731130d5c3f983cdf9b3ba52"
+      },
+      "quality.json": {
+        "bytes": 2528758,
+        "sha256": "fa48ff4abd707a385671bce028be869857a748541edfadab8b64eaa1785771fc"
+      }
+    },
+    "full_bp": 231678157,
+    "full_contigs": 145702,
+    "inputs": {
+      "embeddings": {
+        "bytes": 21879596,
+        "sha256": "a7115f187a25abaf7f8873ea78e06d56d9e4b3b5bb66425641b8b13df5ca21f1"
+      },
+      "features": {
+        "bytes": 42384557,
+        "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+      },
+      "graph": {
+        "bytes": 32592587,
+        "sha256": "9ec5f794cd4e964541806e0065b7a22e246f3aa7a691ce005cf3fc12856a03c6"
+      },
+      "hmm": {
+        "bytes": 15929643,
+        "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9"
+      },
+      "marker_cache": {
+        "bytes": 1841,
+        "sha256": "711c793d1af631486efc07b6241c2b75c3eb0b888585a66c321f061b4f40b404"
+      }
+    },
+    "kind": "relational_pair_cache",
+    "native_vectors_untouched": true,
+    "no_new_index_detection_or_original_DNA_read": true,
+    "policy": {
+      "calibration_pairs": 65536,
+      "constraint_min_bp": 2000,
+      "family_offsets": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "far_quantile": 0.75,
+      "hmm_coverage": 0.8,
+      "loss_weight": 0.1,
+      "margin_bits": 10.0,
+      "max_degree": 4,
+      "min_depth_columns": 2,
+      "near_quantile": 0.1,
+      "negative_cosine_margin": 0.2,
+      "pair_batch_size": 256,
+      "physical_overlap_fraction": 0.5,
+      "protein_k": 5,
+      "protein_near_jaccard": 0.9,
+      "ramp_epochs": 3,
+      "seed": 11,
+      "version": 1,
+      "warmup_epochs": 2
+    },
+    "samples": [
+      "cami3_toy_human_gut_short_read_sample_0",
+      "cami3_toy_human_gut_short_read_sample_2",
+      "cami3_toy_human_gut_short_read_sample_3",
+      "cami3_toy_human_gut_short_read_sample_4",
+      "cami3_toy_human_gut_short_read_sample_6",
+      "cami3_toy_human_gut_short_read_sample_9",
+      "cami3_toy_human_gut_short_read_sample_10",
+      "cami3_toy_human_gut_short_read_sample_11",
+      "cami3_toy_human_gut_short_read_sample_14",
+      "cami3_toy_human_gut_short_read_sample_17"
+    ],
+    "summary": {
+      "abstention_counts": {
+        "credible_family_conflict_abstain_positive": 28,
+        "degree_or_original_step_budget_abstention": 9028,
+        "identical_or_near_protein_abstention": 11,
+        "missing_length_or_two_context_evidence": 783,
+        "two_context_far_disagreement": 6128,
+        "two_context_near_disagreement": 459
+      },
+      "calibration": {
+        "far": [
+          0.40075113666781065,
+          5.710040165179697
+        ],
+        "near": [
+          0.2011881982053628,
+          2.3103185986242787
+        ],
+        "pairs": 65536,
+        "seed": 11,
+        "status": "PASS"
+      },
+      "degree_max": 4,
+      "eligible_context_rows": 13554,
+      "pair_budget": 89088,
+      "pair_budget_basis": "ceil(all training parents / inherited batch256) * pair_batch_size",
+      "proposals": 18765,
+      "retained": 2328,
+      "sign_counts": {
+        "-1": 365,
+        "1": 1963
+      },
+      "strong_marker_rows": 915,
+      "transforms": {
+        "composition_semantics": "Hellinger sqrt raw retained TNF",
+        "depth_column_std": [
+          0.6386057514221064,
+          1.0290568257952795,
+          1.2320769495239947,
+          1.000005288493893,
+          1.0983682123831957,
+          1.2559228836541136,
+          1.179349436756196,
+          1.0094021307053953,
+          1.1272451746360506,
+          1.1551717234304368
+        ],
+        "depth_semantics": "log1p measured parent means / eligible-column std; no window variance",
+        "usable_columns": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    "truth_accessed": false,
+    "version": 1
+  },
+  "local_archive": "artifacts/e022-marker-learning/E009-pairs.tar.gz",
+  "members": {
+    "cache.json": {
+      "bytes": 4239,
+      "sha256": "312859f22d70c000ffc5f4a30841215a930a97f66aebddfc368f2ae94c3a25a0"
+    },
+    "calibration.npz": {
+      "bytes": 1243317,
+      "sha256": "e2c64ec6272ba3ac8fe334aed65e038d12d9b5beeeeb844b0e3c578c61db9965"
+    },
+    "decisions.jsonl": {
+      "bytes": 3716373,
+      "sha256": "d284c6e2bc75c931e7b567eb72c55ea073b78ba6ce5325778454a18d37c40273"
+    },
+    "pairs.json": {
+      "bytes": 302,
+      "sha256": "18e5985ef96160a3c6eb24f459409b1aeb8a6e964650bf1ad6684a860a6fd8c0"
+    },
+    "pairs.npz": {
+      "bytes": 519958,
+      "sha256": "97e30136e7925c854b1c0c0b08d4651326c821ac731130d5c3f983cdf9b3ba52"
+    },
+    "quality.json": {
+      "bytes": 2528758,
+      "sha256": "fa48ff4abd707a385671bce028be869857a748541edfadab8b64eaa1785771fc"
+    }
+  },
+  "native_reselection_authorized": false
+}

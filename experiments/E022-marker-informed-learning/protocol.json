@@ -1,0 +1,18 @@
+{
+  "record": "Prospective E022 one-fit development comparison; frozen before changed community outcomes",
+  "dataset": "E009 sample-0 assembly / ordered ten measured depths",
+  "candidate": "0.1.0.dev9 relational hybrid, exact retained E021 views/context/frozen bank plus restored static reliable pairs",
+  "comparator": "Immutable accepted E021 E009-only outputs; no baseline fit or rescore",
+  "additional_context": ["retained E019", "retained dev3/dev4/dev5/E016", "retained native-eligibility MetaBAT2 summary"],
+  "fit": {"seed": 11, "epochs": 20, "batch_size": 256, "numerical_threads": 4, "loader_workers": 0},
+  "downstream": "Unchanged unit geometry, sole CPM rule, E013 refinement; retain pre/old/post without truth-selected policy",
+  "primary": "Post full-provided-reference weighted R95, absolute recovered bp and >=90% target count",
+  "KEEP": "All integrity/resource contracts; post R95 gain >=0.005 absolute and no >=90% count loss relative to E021",
+  "ABANDON": "Neither post R95 nor >=90% target count improves",
+  "MODIFY": "Other integrity-passing mixed result; failed numerical criterion remains failed",
+  "truth": "Conservative independently admitted E009 v2; complete 156 reference / 554661890 bp denominators; 3.3034% N quarantine",
+  "secondary": ["All 156 target gains/losses", "Parent/old/E013 paired effects", "Same-query raw/learned neighborhoods and grouping", "Effective rank/EMA/stopped-target/predictor history", "Pair source-origin correctness diagnosed only after fit, never used to select constraints", "Length/origin/native-eligibility/marker/excluded/unassigned/unknown/non-target populations"],
+  "optional_ablation": "Prepare loss_weight=0 only, preserving all construction/init/RNG/pair schedule/buffers; not authorized for community execution in first run",
+  "interpretation": "One seed and development assembly; not causal isolation of every reliability ingredient, joint E021 KEEP or a product-default change",
+  "confirmation": "Frozen skin remains unscored; insufficient measured depth for active rule; independent depth-enabled source/truth/evaluator/overlap/resource/cost admission required separately"
+}

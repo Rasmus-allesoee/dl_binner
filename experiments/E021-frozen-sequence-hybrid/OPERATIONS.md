@@ -1,5 +1,10 @@
 # E021 operations
 
+Successor [E022](../E022-marker-informed-learning/OPERATIONS.md) now owns the
+prepared local marker-learning candidate and its next execution-approval request.
+The Exact following prompt below is preserved as the completed preparation scope,
+including the owner's bounded-engineering edits; it does not authorize an E022 fit.
+
 ## Verified final E009-only outcome, October 25, 2026
 
 **Completed and independently reviewed: MODIFY.** [Inspection](inspection-observed.json),
@@ -667,9 +672,9 @@ additional ablation should be prepared if it can change the design; no compulsor
 grid/factorial or isolated win required for every ingredient. Preserve failures
 and original Mac portability tolerance; distinguish actual versus mocked paths.
 
-This prompt authorizes local implementation and bounded tiny engineering only.
+This prompt authorizes local implementation and bounded engineering only.
 Do not fit/score communities, rescore accepted baselines, run external binners,
-acquire/map DNA, start/provision cloud resources, change hardware or extend storage.
+acquire/map DNA, start/provision cloud resources, change hardware or extend storage, unless you have a strong reasoning for this.
 Prepare the first bounded candidate-versus-immutable-anchor execution, using
 retained CPU-readable caches where appropriate. Measure/estimate complete setup,
 fit, RAM, peak disk, collection/export/review and cost, with fresh credit/product/

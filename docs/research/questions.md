@@ -617,3 +617,12 @@ retained caches: source/context-supported constraints with abstention, no naive
 repeated-family hard negatives or truth-selected pairs. No new fit/score/confirmation
 is authorized by the local preparation prompt. Frozen skin source/origin/unique/
 overlap/evaluator/resource limits and October 28 retention remain explicit.
+
+
+E022 local preparation, October 25, 2026: [reliable cross-contig learning](../../experiments/E022-marker-informed-learning/design.md)
+adds one conservative label-free marker/context supervision block to the unchanged
+E021 hybrid. Actual local contracts and 2,328 available E009 pairs do not establish
+recovery; Q001/Q003/Q005 remain open. Missing depth abstains, skin remains unscored,
+and fresh native/cost/retention admission precedes any community fit.
+[DCVBin source audit](../evidence/2026-10-25-dcvbin-efficiency-and-marker-learning.md)
+records cheaper exposure and batching ideas without claiming measured speed.

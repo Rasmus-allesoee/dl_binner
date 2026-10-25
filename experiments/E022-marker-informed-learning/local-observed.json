@@ -1,0 +1,1228 @@
+{
+  "actual": {
+    "collection": {
+      "aliases": {
+        "work/units/E009-relational/train/reference.npz": {
+          "bytes": 6808,
+          "canonical": "work/units/E009-relational/embeddings.npz",
+          "sha256": "db7f58dcc7bc68ec1f6b258165d0ab1fc19eab917545e16ad2f36f332312f52f"
+        }
+      },
+      "archive": {
+        "bytes": 5119238,
+        "sha256": "010aa7a0f48d996ce187981351ad9a1d3e04c5d69510bb31c513af09bbd88adf"
+      },
+      "compressed_hard_ceiling_bytes": 2147483648,
+      "every_member_verified": true,
+      "incomplete_failure_evidence": false,
+      "logical_member_bytes": 5945129,
+      "omitted_bytes_not_backed_up": true,
+      "omitted_retained_on_disk": {
+        "units/E009-relational/export/post/bin_000001.fna": {
+          "bytes": 103496,
+          "reason": "Full accounted DNA retained on disk",
+          "sha256": "677f53982d195bff49f85bdd02c9d99c111ff566d9d623cefd113cbaa6b623ca"
+        },
+        "units/E009-relational/export/post/excluded.fna": {
+          "bytes": 2548,
+          "reason": "Full accounted DNA retained on disk",
+          "sha256": "35b0cd8db023d1d11287e471d5baaef320742dce73805c1cb238f7c41d1a95ec"
+        },
+        "units/E009-relational/frozen/vectors.npy": {
+          "bytes": 507008,
+          "reason": "Original immutable full GLM view vectors hardlinked natively; complete bank manifest and view provenance returned, not backed up by this hash",
+          "sha256": "bf0b87e56e4b130944bf5e3938fc3ec15aaf1aa1cd814f211ab40f4f16147504"
+        }
+      },
+      "planned_science_fits": 1,
+      "regular_members": 82,
+      "status": "SUCCESS",
+      "uncompressed_plus_overhead_bound_bytes": 7170529
+    },
+    "complete_runtime": "PASS_COMPLETE_READONLY_BASE_AND_NEW_OWNED_PACKAGE",
+    "final_tiny_online_fused": {
+      "catastrophic_collapse": false,
+      "effective_rank": 4.32909668221365,
+      "mean_dimension_std": 0.1077637031796735,
+      "mean_other_cosine": 0.14237045714325602,
+      "rows": 33
+    },
+    "full_owned_product_prefix": {
+      "receipt": {
+        "bytes": 3305337,
+        "sha256": "51ba69582e4273e03e25c8f629d3eb322082f743b15e03efdc07e483f9c5ec90"
+      },
+      "regular_copied_bytes": 1071679131
+    },
+    "installed_wheel_and_sdist_rebuild": "Final clean build-v3, independent hooks, matching rebuilt logical members",
+    "learning": "Real 20-epoch active/zero-weight/anchor and sequence-only fits on own tiny DNA; stopped gradients, exact model/teacher/predictor state for zero control; all parent/view axes, exact same-runtime reload",
+    "marker_detection": "Ordinary product suite performed real tiny native gene/HMM search; E022 reliability fixtures use explicitly hand-authored cached annotations, not detector-accuracy evidence",
+    "native_operations": "Real HMM file reader, sparse graph, reliability/pair selection, CPM, cached E013 refiner, streamed complete DNA export, actual installed console outside checkout, actual production Snakemake helper and collector argv from /private/tmp",
+    "operational_tests": 6,
+    "pair_manifest": {
+      "bytes": 4239,
+      "sha256": "312859f22d70c000ffc5f4a30841215a930a97f66aebddfc368f2ae94c3a25a0"
+    },
+    "product_suite": {
+      "final_exit": {
+        "bytes": 666,
+        "sha256": "f9fead127d970f93b0632b5e6aba574d3897618a508eb402828a576456b5d0ce"
+      },
+      "status": "PASS",
+      "tests": 50
+    },
+    "source_freeze": {
+      "bytes": 13819,
+      "sha256": "279e850cc68a8da80a10266a8503ce65c4c775a55be2a60fbcc43a50f520e6de"
+    }
+  },
+  "attempts": [
+    {
+      "attempt": "build-v1-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e022_build.py",
+          "--output",
+          "artifacts/e022-marker-learning/build-v1"
+        ],
+        "exit_code": 0,
+        "launched_pid": 22843,
+        "peak_sampled_rss_bytes": 67977216,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.4450971739141646,
+        "sampled_cpu_seconds": 2.0100000000000002,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 5399.985619068146,
+        "stop_reason": null,
+        "wall_seconds": 4.5158678099978715
+      },
+      "original_clock_elapsed_seconds": 4.531606912612915,
+      "retained_files": {
+        "build-v1-1.exit.json": {
+          "bytes": 655,
+          "sha256": "80eda03abd4acc71aecde4b58aaac12f7f667f080aede8586ee49fb610f3dfb2"
+        },
+        "build-v1-1.log": {
+          "bytes": 32845,
+          "sha256": "4f926d4a19d64d547f1a53687539b61f99a935bcb124b00e31488947b86562f8"
+        },
+        "build-v1-1.resources.json": {
+          "bytes": 1185,
+          "sha256": "f21ec8b94c98254167e196570739291ba642969b3b35ab4e9854cbcfc843c527"
+        },
+        "build-v1-1.samples.jsonl": {
+          "bytes": 935,
+          "sha256": "4ba491e57e90deef801c86877480477b2b449abf989afd86380732282c59ef84"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "build-v2-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e022_build.py",
+          "--output",
+          "artifacts/e022-marker-learning/build-v2"
+        ],
+        "exit_code": 0,
+        "launched_pid": 23351,
+        "peak_sampled_rss_bytes": 67993600,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.519003333127728,
+        "sampled_cpu_seconds": 1.93,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 5136.199780225754,
+        "stop_reason": null,
+        "wall_seconds": 3.7186659059952945
+      },
+      "original_clock_elapsed_seconds": 267.5203289985657,
+      "retained_files": {
+        "build-v2-1.exit.json": {
+          "bytes": 640,
+          "sha256": "0528bc1cd579e88d21703f1bf5abd2f90abd0852a5766e939223c951703bb8ae"
+        },
+        "build-v2-1.log": {
+          "bytes": 32845,
+          "sha256": "832fdb38c28df9685b925c917134d2c9edffdc63e7cd204aefde095c6d3ebfd8"
+        },
+        "build-v2-1.resources.json": {
+          "bytes": 1101,
+          "sha256": "617e71b7d7e141ad6ba28f69a627d2b536183a27f9d854e7286497f543e99501"
+        },
+        "build-v2-1.samples.jsonl": {
+          "bytes": 786,
+          "sha256": "98265f1aa89c16a3fc125bf32a3d414d653611b11d2d377fd3097e179baa5de0"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "cached-pairs-E009-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/env-v2/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "dl_binner",
+          "--threads",
+          "4",
+          "relation-stage",
+          "--stage",
+          "pairs",
+          "--features",
+          "artifacts/e011-cached-grouping-reference/restore-local/candidate/features/features.npz",
+          "--embeddings",
+          "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/local-review/verified/work/units/E009-hybrid/embeddings.npz",
+          "--graph",
+          "artifacts/e021-portable-admission/20261024T183844Z/inspection-20261025T1320Z/local-review/verified/work/units/E009-hybrid/group/graph.npz",
+          "--marker-cache",
+          "artifacts/e011-cached-grouping-reference/restore-local/candidate/markers",
+          "--marker-hmm",
+          "artifacts/e010-coherent-prototype/gcp-20261016/readback-marker.hmm",
+          "--output",
+          "artifacts/e022-marker-learning/cached-E009-pairs-v1"
+        ],
+        "exit_code": 0,
+        "launched_pid": 23829,
+        "peak_sampled_rss_bytes": 1343102976,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.0042640356815757,
+        "sampled_cpu_seconds": 24.06,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 4833.979690074921,
+        "stop_reason": null,
+        "wall_seconds": 23.957842903007986
+      },
+      "original_clock_elapsed_seconds": 589.9790270328522,
+      "retained_files": {
+        "cached-pairs-E009-1.exit.json": {
+          "bytes": 1344,
+          "sha256": "0231d7f8eabe2e9b506176aa26d0f5acad89e08277603557c4c3bb663c53705a"
+        },
+        "cached-pairs-E009-1.log": {
+          "bytes": 39,
+          "sha256": "656290c880214b589dbffc403a511384edfb33ad2dff20d8af5aa3bf69e751f2"
+        },
+        "cached-pairs-E009-1.resources.json": {
+          "bytes": 3098,
+          "sha256": "62d2ddd35ec681f5f8cc4ef99a67ed4f29778e59f6dbb31a75775cf6283acab7"
+        },
+        "cached-pairs-E009-1.samples.jsonl": {
+          "bytes": 6412,
+          "sha256": "5aa0c060d90567cd931d5efabd870fa349be793b8f4aec6783795e3f670ef7f7"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "clean-build-v3-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e022_build.py",
+          "--output",
+          "artifacts/e022-marker-learning/build-v3"
+        ],
+        "exit_code": 0,
+        "launched_pid": 29230,
+        "peak_sampled_rss_bytes": 68169728,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.585836042660061,
+        "sampled_cpu_seconds": 2.3099999999999996,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2263.984498023987,
+        "stop_reason": null,
+        "wall_seconds": 3.9430827600008342
+      },
+      "original_clock_elapsed_seconds": 3139.960034132004,
+      "retained_files": {
+        "clean-build-v3-1.exit.json": {
+          "bytes": 654,
+          "sha256": "a28cc77d1bc355c6ca566402d2e180490ed02f29d2a5af5a6d936929aad34963"
+        },
+        "clean-build-v3-1.log": {
+          "bytes": 32936,
+          "sha256": "782413d82fc7fd75baa81a7e5ed6cbf17356d23f43bd14a11b5c9a476eefb47f"
+        },
+        "clean-build-v3-1.resources.json": {
+          "bytes": 1117,
+          "sha256": "509f650fa0466aac8181547ab1dd8fff06da9c553a4a6a99677dd5fd934da1cf"
+        },
+        "clean-build-v3-1.samples.jsonl": {
+          "bytes": 813,
+          "sha256": "bdbfa90b8ef835f8aa0c8cef11d08ae54e07d8cacddb1a4de8247a2865258b4d"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "extraction-work-counts-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/env-v2/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e022-marker-learning/count-extraction-work.py"
+        ],
+        "exit_code": 0,
+        "launched_pid": 24367,
+        "peak_sampled_rss_bytes": 139116544,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.020051581250115,
+        "sampled_cpu_seconds": 5.34,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 4244.657508850098,
+        "stop_reason": null,
+        "wall_seconds": 5.235029382980429
+      },
+      "original_clock_elapsed_seconds": 1160.5785348415375,
+      "retained_files": {
+        "extraction-work-counts-1.exit.json": {
+          "bytes": 593,
+          "sha256": "f8ec9bb0e698cda4f54a1733ef403a0fcb4c1cfe4a62fb2ab420298b520d983d"
+        },
+        "extraction-work-counts-1.log": {
+          "bytes": 1473,
+          "sha256": "d7c555aae3ff50e61d014faac65e41eba9abafe04babb9ed751f1b9183974a62"
+        },
+        "extraction-work-counts-1.resources.json": {
+          "bytes": 1108,
+          "sha256": "5abe97e4466a9e2fb60e334fd8738651954b25ac5f0722cf1011da98dcd759a9"
+        },
+        "extraction-work-counts-1.samples.jsonl": {
+          "bytes": 1413,
+          "sha256": "271467550f2c5a5de8856933f0ce22e6a0f94ddf23f39c0385ce3c3a0715eb32"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "final-adapters-v3-1",
+      "error": "RuntimeError('Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/final-adapters-v3-1.log\\ntest_installed_owned_origins_version_and_packaged_resources (test_core.ProductContracts) ... FAIL\\n\\n======================================================================\\nFAIL: test_installed_owned_origins_version_and_packaged_resources (test_core.ProductContracts)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/test_core.py\", line 61, in test_installed_owned_origins_version_and_packaged_resources\\n    self.assertTrue(Path(module.__file__).resolve().is_relative_to(Path(sys.prefix).resolve()), module.__file__)\\nAssertionError: False is not true : /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/env-v3/lib/python3.10/site-packages/numpy/__init__.py\\n\\n----------------------------------------------------------------------\\nRan 1 test in 0.004s\\n\\nFAILED (failures=1)\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/final-adapters.py\", line 8, in <module>\\n    if not result.wasSuccessful():raise RuntimeError(\\'Final installed version/origin contract failed\\')\\nRuntimeError: Final installed version/origin contract failed\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/env-v3/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e022-marker-learning/final-adapters.py"
+        ],
+        "exit_code": 1,
+        "launched_pid": 29876,
+        "peak_sampled_rss_bytes": 214962176,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.029711289551122,
+        "sampled_cpu_seconds": 5.49,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1988.1167149543762,
+        "stop_reason": null,
+        "wall_seconds": 5.33159153998713
+      },
+      "original_clock_elapsed_seconds": 3417.2159299850464,
+      "retained_files": {
+        "final-adapters-v3-1.exit.json": {
+          "bytes": 586,
+          "sha256": "cbd34920f4195f1290e00e87efff907871c3b40d22ab4ec3473f32c4872ca14b"
+        },
+        "final-adapters-v3-1.log": {
+          "bytes": 1292,
+          "sha256": "d71404eb7a65441493a07968f6e6c433792f74cebe8b0005a990c049be095587"
+        },
+        "final-adapters-v3-1.resources.json": {
+          "bytes": 2059,
+          "sha256": "722acb077ee6b45c5f4d4900b59e95c2f2cd364d0809053ae6a88849133fe371"
+        },
+        "final-adapters-v3-1.samples.jsonl": {
+          "bytes": 1360,
+          "sha256": "e6418bba43e8996318ea1b9bc61185f699b6ceac3e9cf1a4b1c88d80561233ac"
+        }
+      },
+      "status": "FAILED"
+    },
+    {
+      "attempt": "final-console-isolated-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/product-owned-v3/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;sys.path.insert(0,\"tests/product\");from test_relational import Relational;r=unittest.TextTestRunner(verbosity=2).run(unittest.TestSuite([Relational(\"test_actual_installed_CLI_outside_checkout_and_truth_refusal\")]));raise SystemExit(not r.wasSuccessful())"
+        ],
+        "exit_code": 0,
+        "launched_pid": 35050,
+        "peak_sampled_rss_bytes": 217595904,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.3220407140051942,
+        "sampled_cpu_seconds": 7.96,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1059.661770105362,
+        "stop_reason": null,
+        "wall_seconds": 6.020994599995902
+      },
+      "original_clock_elapsed_seconds": 4346.360563993454,
+      "retained_files": {
+        "final-console-isolated-1.exit.json": {
+          "bytes": 837,
+          "sha256": "ce97b2a52f5ccdb090eea29a00c3a04e1ce60b6edec49d8a30c3ed056dbc6233"
+        },
+        "final-console-isolated-1.log": {
+          "bytes": 233,
+          "sha256": "d1902dc2c0afc40b078770526d9495120be02e6bef20922d0a4830468bcb942a"
+        },
+        "final-console-isolated-1.resources.json": {
+          "bytes": 1593,
+          "sha256": "c461ecc02e4ace8e829a699d3fc0d078ec820f88ce7d2d764bb7c7e3f1539e66"
+        },
+        "final-console-isolated-1.samples.jsonl": {
+          "bytes": 1531,
+          "sha256": "732ab4065678e12a7e99d49bfb1c923cbe177f99bed4ff1652d82d9a3b141cf8"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "final-operational-six-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/product-owned-v3/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e022_operational.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "launched_pid": 34980,
+        "peak_sampled_rss_bytes": 48906240,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.28190136204197946,
+        "sampled_cpu_seconds": 0.33999999999999986,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1093.9509210586548,
+        "stop_reason": null,
+        "wall_seconds": 1.2060956269851886
+      },
+      "original_clock_elapsed_seconds": 4308.265713214874,
+      "retained_files": {
+        "final-operational-six-1.exit.json": {
+          "bytes": 675,
+          "sha256": "71e898d766b1abb10a1b5451495f3671c1f5df23de55be925046816e6fb34521"
+        },
+        "final-operational-six-1.log": {
+          "bytes": 737,
+          "sha256": "9c7164db6b7b6a2d0da783caf88229b0366808e740d22d1ad6c75b2adb2b99fb"
+        },
+        "final-operational-six-1.resources.json": {
+          "bytes": 1112,
+          "sha256": "5f1d7d7fa45fb57df7a650733c793fbd540e84f7797b18bf68d114aad3163657"
+        },
+        "final-operational-six-1.samples.jsonl": {
+          "bytes": 299,
+          "sha256": "0f67087b6f73a4abdc8e479604b892aa315adb98ffd66e6b11adfb7d04e8d701"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "final-owned-adapters-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/product-owned-v3/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e022-marker-learning/final-adapters.py"
+        ],
+        "exit_code": 0,
+        "launched_pid": 30689,
+        "peak_sampled_rss_bytes": 731009024,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.0034418560383518,
+        "sampled_cpu_seconds": 73.61999999999999,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1742.137214899063,
+        "stop_reason": null,
+        "wall_seconds": 73.36747969698627
+      },
+      "original_clock_elapsed_seconds": 3731.2279789447784,
+      "retained_files": {
+        "final-owned-adapters-1.exit.json": {
+          "bytes": 610,
+          "sha256": "4f6181e11766c7e9b5f6f29afae9bc160afca79d2d43432ee004d981ec6cf64d"
+        },
+        "final-owned-adapters-1.log": {
+          "bytes": 9815,
+          "sha256": "eead49912c54b1689ec740ff36bd6d728af59ef472075760b446f5255dcadcf3"
+        },
+        "final-owned-adapters-1.resources.json": {
+          "bytes": 2539,
+          "sha256": "e4072871a89b6d729d95c6d40bfba2af7ee7f23c730c4372b7ad26d7b8f13cb2"
+        },
+        "final-owned-adapters-1.samples.jsonl": {
+          "bytes": 17489,
+          "sha256": "5ecb800043529c29a97e402de010a661288039a99c90084bb346083579d5d0d1"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "final-owned-product-suite-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/product-owned-v3/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests/product",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "launched_pid": 31297,
+        "peak_sampled_rss_bytes": 763412480,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.1973176039203248,
+        "sampled_cpu_seconds": 412.40000000000003,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1635.5339760780334,
+        "stop_reason": null,
+        "wall_seconds": 344.4365961459989
+      },
+      "original_clock_elapsed_seconds": 4109.987543106079,
+      "retained_files": {
+        "final-owned-product-suite-1.exit.json": {
+          "bytes": 666,
+          "sha256": "f9fead127d970f93b0632b5e6aba574d3897618a508eb402828a576456b5d0ce"
+        },
+        "final-owned-product-suite-1.log": {
+          "bytes": 132480,
+          "sha256": "2be710d913adba190ffba4571578b489a7d4251bc6b681f34e08e5f1450c3469"
+        },
+        "final-owned-product-suite-1.resources.json": {
+          "bytes": 8207,
+          "sha256": "f611c897127657f7c9bc84d5000648ede0086475212db35a5f67a8bb152fcc5e"
+        },
+        "final-owned-product-suite-1.samples.jsonl": {
+          "bytes": 78269,
+          "sha256": "9387b66f788ecc98b9958713aa8b13a96927ef643bce038296e8f625dc50ce8b"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "final-runtime-v3-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/env-v3/bin/python",
+          "-I",
+          "-B",
+          "scripts/e022_runtime.py",
+          "--base",
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+          "--reference",
+          "experiments/E021-frozen-sequence-hybrid/local-runtime.json",
+          "--candidate-lock",
+          "experiments/E022-marker-informed-learning/candidate-lock.json",
+          "--output",
+          "artifacts/e022-marker-learning/runtime-v3.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 29587,
+        "peak_sampled_rss_bytes": 318476288,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.999235841037924,
+        "sampled_cpu_seconds": 25.03,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2033.65398812294,
+        "stop_reason": null,
+        "wall_seconds": 25.0491415259894
+      },
+      "original_clock_elapsed_seconds": 3391.401160955429,
+      "retained_files": {
+        "final-runtime-v3-1.exit.json": {
+          "bytes": 888,
+          "sha256": "3379769718f111df590fb22e6f6f0651e18e678e8ab78b98a0e431319d82188c"
+        },
+        "final-runtime-v3-1.log": {
+          "bytes": 63,
+          "sha256": "17f2970f9ab347a4c50b79471695d44bcbf94ab58298da70031e4462fa42b62b"
+        },
+        "final-runtime-v3-1.resources.json": {
+          "bytes": 2376,
+          "sha256": "673184f05285f1919080a418f65084dd311036a35bf5a3ff4685180046a87e60"
+        },
+        "final-runtime-v3-1.samples.jsonl": {
+          "bytes": 6498,
+          "sha256": "8679b8d6cd209f38fffdc8ee2654bdb406b455061f1b9796514f7cea68ac7cca"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "install-v1-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e019_runtime.py",
+          "create",
+          "--base",
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+          "--destination",
+          "artifacts/e022-marker-learning/env-v1",
+          "--wheel",
+          "artifacts/e022-marker-learning/build-v1/dist/dl_binner-0.1.0.dev9-py3-none-any.whl",
+          "--output",
+          "artifacts/e022-marker-learning/runtime-create-v1.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 22921,
+        "peak_sampled_rss_bytes": 96600064,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5287465994877976,
+        "sampled_cpu_seconds": 1.48,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 5370.012171983719,
+        "stop_reason": null,
+        "wall_seconds": 2.799072374997195
+      },
+      "original_clock_elapsed_seconds": 32.787869930267334,
+      "retained_files": {
+        "install-v1-1.exit.json": {
+          "bytes": 924,
+          "sha256": "b9508e3192f059a49d9d9a5efff67bf10609bd1a8bce6fc13673775ad4c1a804"
+        },
+        "install-v1-1.log": {
+          "bytes": 220,
+          "sha256": "f029d211d0c3b71e767ff684656df43728eb15ca3999ae45b4e9e362256fff02"
+        },
+        "install-v1-1.resources.json": {
+          "bytes": 1601,
+          "sha256": "d2f48b0bcf81cd62ba772c52a5d9f6f8482c91bbd3fca5ef9675497784ef1a2b"
+        },
+        "install-v1-1.samples.jsonl": {
+          "bytes": 645,
+          "sha256": "f699e172ac613e49118fd716bb0d1a98be23d96b23861ebdf60b9129e5ddd9db"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "install-v2-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e019_runtime.py",
+          "create",
+          "--base",
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+          "--destination",
+          "artifacts/e022-marker-learning/env-v2",
+          "--wheel",
+          "artifacts/e022-marker-learning/build-v2/dist/dl_binner-0.1.0.dev9-py3-none-any.whl",
+          "--output",
+          "artifacts/e022-marker-learning/runtime-create-v2.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 23546,
+        "peak_sampled_rss_bytes": 93655040,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5775987596903825,
+        "sampled_cpu_seconds": 1.5499999999999998,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 4964.614649772644,
+        "stop_reason": null,
+        "wall_seconds": 2.6835237680061255
+      },
+      "original_clock_elapsed_seconds": 438.06999015808105,
+      "retained_files": {
+        "install-v2-1.exit.json": {
+          "bytes": 939,
+          "sha256": "0d2682ae8fb0f543660273c58f128d7aa2e08bea38bf928f4541edf4728f0896"
+        },
+        "install-v2-1.log": {
+          "bytes": 220,
+          "sha256": "b5e2dadc300482fd73c828333cb3ca5164836653b44d054c419aaab756d33893"
+        },
+        "install-v2-1.resources.json": {
+          "bytes": 1616,
+          "sha256": "c4fc310a3d3a81dab2874642972290654e621392f4b65fb26ce6cd30c5da9771"
+        },
+        "install-v2-1.samples.jsonl": {
+          "bytes": 646,
+          "sha256": "6c661efbb4eb88cc046035f5130911224ccb04a4fca7528b405873aca96ccdc8"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "install-v3-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e019_runtime.py",
+          "create",
+          "--base",
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+          "--destination",
+          "artifacts/e022-marker-learning/env-v3",
+          "--wheel",
+          "artifacts/e022-marker-learning/build-v3/dist/dl_binner-0.1.0.dev9-py3-none-any.whl",
+          "--output",
+          "artifacts/e022-marker-learning/runtime-create-v3.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 29393,
+        "peak_sampled_rss_bytes": 100896768,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.612139276866537,
+        "sampled_cpu_seconds": 1.6199999999999999,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2160.1296470165253,
+        "stop_reason": null,
+        "wall_seconds": 2.646456552000018
+      },
+      "original_clock_elapsed_seconds": 3242.5178849697113,
+      "retained_files": {
+        "install-v3-1.exit.json": {
+          "bytes": 939,
+          "sha256": "fba8053f9c74fa7110b9e038f7f0e64c305d911684e299e0bd717a0f777819cc"
+        },
+        "install-v3-1.log": {
+          "bytes": 220,
+          "sha256": "99fd6c2cfaa6b979b8827aa3e27c0c49d037a9ff789b072276c65a60a363f387"
+        },
+        "install-v3-1.resources.json": {
+          "bytes": 1618,
+          "sha256": "9b07f5d1bf068867ac0df365de5f6a7b98e0f470bda05317a7a09d65d6e13535"
+        },
+        "install-v3-1.samples.jsonl": {
+          "bytes": 662,
+          "sha256": "8a90a97a1c3051dddc1cf6bb7c2b957a1061642e418464640001772c76210052"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "operational-v1-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/env-v2/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e022-marker-learning/check-operational.py"
+        ],
+        "exit_code": 0,
+        "launched_pid": 29111,
+        "peak_sampled_rss_bytes": 110739456,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.6966395187752343,
+        "sampled_cpu_seconds": 3.5500000000000003,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2308.5621299743652,
+        "stop_reason": null,
+        "wall_seconds": 5.095892357989214
+      },
+      "original_clock_elapsed_seconds": 3096.535066127777,
+      "retained_files": {
+        "operational-v1-1.exit.json": {
+          "bytes": 605,
+          "sha256": "9b496d1c77c4c5a95cb9ee850c1500abc0b07cec14262ce710bb4164b36650f5"
+        },
+        "operational-v1-1.log": {
+          "bytes": 768,
+          "sha256": "f0da6947af8fd88ea5aa4c133e0ccd620ecaba534f3cda4d4498a7b815e40d99"
+        },
+        "operational-v1-1.resources.json": {
+          "bytes": 1114,
+          "sha256": "0cb878494a5a05f27f82ad1d7cd794152c71201ff4b4a3b88f02be690f92befc"
+        },
+        "operational-v1-1.samples.jsonl": {
+          "bytes": 1035,
+          "sha256": "54477ae79d9b2165aa97d7fba8369a72638f7d4cc632249429b73b2f1475fc29"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "owned-product-prefix-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e022-marker-learning/create-owned-product.py"
+        ],
+        "exit_code": 0,
+        "launched_pid": 30193,
+        "peak_sampled_rss_bytes": 536408064,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.0554387195514967,
+        "sampled_cpu_seconds": 67.56,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1875.963087797165,
+        "stop_reason": null,
+        "wall_seconds": 64.0112957280071
+      },
+      "original_clock_elapsed_seconds": 3587.9820668697357,
+      "retained_files": {
+        "owned-product-prefix-1.exit.json": {
+          "bytes": 614,
+          "sha256": "71e042c333de472f57798ddabc931a7f184e66b55d9fe7f59ba706a4fd06bba1"
+        },
+        "owned-product-prefix-1.log": {
+          "bytes": 220,
+          "sha256": "99fd6c2cfaa6b979b8827aa3e27c0c49d037a9ff789b072276c65a60a363f387"
+        },
+        "owned-product-prefix-1.resources.json": {
+          "bytes": 2319,
+          "sha256": "89f9c33c86fa00edac4cfe074b80ef543dba8da7bf4e2ce232ada38ae7027fe5"
+        },
+        "owned-product-prefix-1.samples.jsonl": {
+          "bytes": 14355,
+          "sha256": "cf0a64aa495ff19ba1df2b8b93a3a81b2306bc6521be94758aa6ea913df6e3ba"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "prepare-native-tiny-DAG-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/env-v2/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e022-marker-learning/prepare-tiny-dag.py"
+        ],
+        "exit_code": 0,
+        "launched_pid": 24945,
+        "peak_sampled_rss_bytes": 212578304,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.8616740488034412,
+        "sampled_cpu_seconds": 5.5200000000000005,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 3415.058459997177,
+        "stop_reason": null,
+        "wall_seconds": 6.406134671997279
+      },
+      "original_clock_elapsed_seconds": 1991.3493711948395,
+      "retained_files": {
+        "prepare-native-tiny-DAG-1.exit.json": {
+          "bytes": 603,
+          "sha256": "b615d7345878c3a969a9640b3e7211baea115d317de48c296500af3c6f04123d"
+        },
+        "prepare-native-tiny-DAG-1.log": {
+          "bytes": 500,
+          "sha256": "b326253ecf68917db2a8e86846652b91b978cbd0ab907e13a0156ec7787c055e"
+        },
+        "prepare-native-tiny-DAG-1.resources.json": {
+          "bytes": 1188,
+          "sha256": "2ad0b5066dee72b36f7e1ba4669ed88beb9d1c658ea9804f70dacccbf96a17de"
+        },
+        "prepare-native-tiny-DAG-1.samples.jsonl": {
+          "bytes": 1698,
+          "sha256": "ff212ee64961b87487f3e793408120a6dae33690ae4a1321fba77e5d10322310"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "product-relational-v1-1",
+      "error": "RuntimeError('Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/product-relational-v1-1.log\\n\": {\"fused\": {\"rows\": 33, \"effective_rank\": 4.32909668221365, \"mean_dimension_std\": 0.1077637031796735, \"mean_other_cosine\": 0.14237045714325602, \"catastrophic_collapse\": false}, \"sequence\": {\"rows\": 33, \"effective_rank\": 4.3198489019512865, \"mean_dimension_std\": 0.11087626086766028, \"mean_other_cosine\": 0.10719347133601743, \"catastrophic_collapse\": false}}, \"target\": {\"fused\": {\"rows\": 33, \"effective_rank\": 9.373817387990634, \"mean_dimension_std\": 0.05128706657270958, \"mean_other_cosine\": 0.8127973631213833, \"catastrophic_collapse\": false}, \"sequence\": {\"rows\": 33, \"effective_rank\": 7.804727270999272, \"mean_dimension_std\": 0.0597088229355832, \"mean_other_cosine\": 0.7489567304685641, \"catastrophic_collapse\": false}}}, \"wall_seconds\": 1.9519352729839738}\\n{\"stage\": \"candidate_neighbor_audit\", \"utc\": \"2026-10-25T19:08:25Z\", \"mean_recall\": 1.0, \"queries\": 33, \"mode\": \"bounded_exact\"}\\n{\"stage\": \"multiview_CPM_complete\", \"utc\": \"2026-10-25T19:08:25Z\", \"rows\": 35, \"edges\": 304, \"clusters\": 1}\\n{\"stage\": \"export_complete\", \"utc\": \"2026-10-25T19:08:25Z\", \"contigs\": 35, \"bins\": 1}\\n{\"stage\": \"export_complete\", \"utc\": \"2026-10-25T19:08:25Z\", \"contigs\": 35, \"bins\": 1}\\nok\\n\\n======================================================================\\nERROR: test_reliability_partial_overlap_multifamily_and_protein_veto (test_relational.Relational)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/test_relational.py\", line 52, in test_reliability_partial_overlap_multifamily_and_protein_veto\\n    f[\\'seal\\']();q,seq=restore(f[\\'markers\\'],f[\\'hmm\\'],f[\\'data\\'],f[\\'metadata\\'],policy())\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/relational_fixture.py\", line 74, in seal\\n    write_json(markers/\\'domains.json\\', domains)\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/env-v1/lib/python3.10/site-packages/dl_binner/io.py\", line 36, in write_json\\n    with path.open(\\'x\\') as stream:\\n  File \"/opt/miniconda3/envs/anvio-dev/lib/python3.10/pathlib.py\", line 1119, in open\\n    return self._accessor.open(self, mode, buffering, encoding, errors,\\nFileExistsError: [Errno 17] File exists: \\'/var/folders/9j/m81n_89s149gnklx_f5xw5jr0000gn/T/tmpw4fjtibt/markers/domains.json\\'\\n\\n----------------------------------------------------------------------\\nRan 8 tests in 13.677s\\n\\nFAILED (errors=1)\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/env-v1/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests/product",
+          "-p",
+          "test_relational.py",
+          "-v"
+        ],
+        "exit_code": 1,
+        "launched_pid": 23033,
+        "peak_sampled_rss_bytes": 323645440,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 2.2553736032390956,
+        "sampled_cpu_seconds": 45.45,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 5301.47226190567,
+        "stop_reason": null,
+        "wall_seconds": 20.151871926995227
+      },
+      "original_clock_elapsed_seconds": 118.68553495407104,
+      "retained_files": {
+        "product-relational-v1-1.exit.json": {
+          "bytes": 651,
+          "sha256": "832f61c26b81514b8befc14561bcbb6f0cd2aeb88eb66b093a2a3c9035b6c1cf"
+        },
+        "product-relational-v1-1.log": {
+          "bytes": 81209,
+          "sha256": "16a9918719eee81da330187fe9488647a70298207c3f9b87b88c1c05adb06dc6"
+        },
+        "product-relational-v1-1.resources.json": {
+          "bytes": 3973,
+          "sha256": "531fa01699a7846d873793f7f323a1fc285b52acd5df2626cd63003a7900c4a5"
+        },
+        "product-relational-v1-1.samples.jsonl": {
+          "bytes": 5103,
+          "sha256": "e1f10cd7ec544f11caa72140a9042705aaabda7c0bd7ec69c1f8b989785e3b4e"
+        }
+      },
+      "status": "FAILED"
+    },
+    {
+      "attempt": "product-relational-v2-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/env-v2/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests/product",
+          "-p",
+          "test_relational.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "launched_pid": 23623,
+        "peak_sampled_rss_bytes": 318373888,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 2.451125117189701,
+        "sampled_cpu_seconds": 44.48,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 4915.594404935837,
+        "stop_reason": null,
+        "wall_seconds": 18.14676847300143
+      },
+      "original_clock_elapsed_seconds": 502.5535328388214,
+      "retained_files": {
+        "product-relational-v2-1.exit.json": {
+          "bytes": 650,
+          "sha256": "b02b413400f86b1b5d0af1668a747c25b5f7e81b6471d8bec447a6d98512e034"
+        },
+        "product-relational-v2-1.log": {
+          "bytes": 80020,
+          "sha256": "87a22d1e63bd11f9b7054303adc3469188e093d45739e4a888dd5e1a44979ab7"
+        },
+        "product-relational-v2-1.resources.json": {
+          "bytes": 1595,
+          "sha256": "e4a5e2ae6f7b7bc4c883d80f75ae5018455278e9b8e70b66249d678f9b16a335"
+        },
+        "product-relational-v2-1.samples.jsonl": {
+          "bytes": 4727,
+          "sha256": "d02f3245344beb44fc722af1921bfc3d9a625a5a48a6891a8042a0f073941956"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "product-suite-v2-1",
+      "error": "RuntimeError('Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/product-suite-v2-1.log\\ner/artifacts/e022-marker-learning/tmp/dl-binner-native-zw_8t0s8/invalid/logs/invocation-20261025T195653-80b8285e. Resume matching inputs with --resume; no automatic repairs\\nDLBINNER 2026-10-25 19:56:54 UTC | exit_code=1 | failed | 0.70s | terminal log: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/tmp/dl-binner-native-zw_8t0s8/invalid/logs/invocation-20261025T195653-80b8285e/terminal.log\\nPRODUCT contract passed: invalid-native\\nDLBINNER 2026-10-25 19:56:54 UTC | dl-binner 0.1.0.dev9 | output: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/tmp/dl-binner-native-zw_8t0s8/timeout\\nDLBINNER 2026-10-25 19:56:54 UTC | 4 CPU threads, loader workers 0; built-in serial stages; matched raw control enabled\\nDLBINNER 2026-10-25 19:56:54 UTC | Optional safeguards: RAM=None GB, time=0.3 seconds (None means disabled)\\nDLBINNER 2026-10-25 19:56:54 UTC | 1/8 features: starting\\nDLBINNER 2026-10-25 19:56:55 UTC | Stopped safely. Logs and failed-stage files retained: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/tmp/dl-binner-native-zw_8t0s8/timeout/logs/invocation-20261025T195654-d7b8ef77. Resume matching inputs with --resume; no automatic repairs\\nDLBINNER 2026-10-25 19:56:55 UTC | exit_code=1 | failed | 0.59s | terminal log: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/tmp/dl-binner-native-zw_8t0s8/timeout/logs/invocation-20261025T195654-d7b8ef77/terminal.log\\nPRODUCT contract passed: overall-timeout\\nDLBINNER 2026-10-25 19:57:07 UTC | Still running (10s, sampled RSS 0.01 GB); log: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/tmp/dl-binner-native-zw_8t0s8/heartbeat-supervisor.log\\nok\\n\\n======================================================================\\nFAIL: test_installed_owned_origins_version_and_packaged_resources (test_core.ProductContracts)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product/test_core.py\", line 59, in test_installed_owned_origins_version_and_packaged_resources\\n    self.assertEqual(dl_binner.__version__, \\'0.1.0.dev8\\')\\nAssertionError: \\'0.1.0.dev9\\' != \\'0.1.0.dev8\\'\\n- 0.1.0.dev9\\n?          ^\\n+ 0.1.0.dev8\\n?          ^\\n\\n\\n----------------------------------------------------------------------\\nRan 50 tests in 182.748s\\n\\nFAILED (failures=1)\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/env-v2/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests/product",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "exit_code": 1,
+        "launched_pid": 26217,
+        "peak_sampled_rss_bytes": 736641024,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.1306677048892024,
+        "sampled_cpu_seconds": 231.0,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2545.0046820640564,
+        "stop_reason": null,
+        "wall_seconds": 204.3040576830099
+      },
+      "original_clock_elapsed_seconds": 3059.3011140823364,
+      "retained_files": {
+        "product-suite-v2-1.exit.json": {
+          "bytes": 643,
+          "sha256": "c71d4efe04a3912cd28280384f14432a7a398ac062a42b390a2725567c8069f3"
+        },
+        "product-suite-v2-1.log": {
+          "bytes": 132586,
+          "sha256": "7093e65834fc0748fb63474d329a0a1f1bea8a82f7a501258def00c1c5658b7a"
+        },
+        "product-suite-v2-1.resources.json": {
+          "bytes": 10551,
+          "sha256": "121b9b802381878601e8b7065fc5c1758176ed39639d0712b760ec56c2d05ae6"
+        },
+        "product-suite-v2-1.samples.jsonl": {
+          "bytes": 48866,
+          "sha256": "2ff6e1c0081954272e2e2bfc012fe2cddf516c3f1b15781cc667337348b13827"
+        }
+      },
+      "status": "FAILED"
+    },
+    {
+      "attempt": "runtime-v2-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/env-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e022_runtime.py",
+          "--base",
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+          "--reference",
+          "experiments/E021-frozen-sequence-hybrid/local-runtime.json",
+          "--candidate-lock",
+          "experiments/E022-marker-informed-learning/candidate-lock.json",
+          "--output",
+          "artifacts/e022-marker-learning/runtime-v2.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 26001,
+        "peak_sampled_rss_bytes": 312426496,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.9875691679167766,
+        "sampled_cpu_seconds": 23.81,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2580.7559309005737,
+        "stop_reason": null,
+        "wall_seconds": 24.10970367799746
+      },
+      "original_clock_elapsed_seconds": 2843.354527950287,
+      "retained_files": {
+        "runtime-v2-1.exit.json": {
+          "bytes": 892,
+          "sha256": "26a7f5db03a9288e502f02a94dc7c49a25641edc354767ebbda80d80f9de689a"
+        },
+        "runtime-v2-1.log": {
+          "bytes": 63,
+          "sha256": "17f2970f9ab347a4c50b79471695d44bcbf94ab58298da70031e4462fa42b62b"
+        },
+        "runtime-v2-1.resources.json": {
+          "bytes": 2305,
+          "sha256": "083c7a6af609024ee79436da8ea612e8a179ba362ebe3a79578b9ef6bcfcc769"
+        },
+        "runtime-v2-1.samples.jsonl": {
+          "bytes": 6402,
+          "sha256": "e5c4d95e12d164e452221de012ab2b875142bb193fb4f0cfa110171a2f83fd1c"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "tiny-DAG-reuse-v1-1",
+      "error": null,
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/env-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e022_control.py",
+          "--plan",
+          "artifacts/e022-marker-learning/tiny-dag-v1/plan.json",
+          "--workflow",
+          "--engineering"
+        ],
+        "exit_code": 0,
+        "launched_pid": 25855,
+        "peak_sampled_rss_bytes": 108294144,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.7883771712383953,
+        "sampled_cpu_seconds": 2.72,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2619.6293828487396,
+        "stop_reason": null,
+        "wall_seconds": 3.4501252690097317
+      },
+      "original_clock_elapsed_seconds": 2783.8218100070953,
+      "retained_files": {
+        "tiny-DAG-reuse-v1-1.exit.json": {
+          "bytes": 677,
+          "sha256": "ccbd1d71116b754b818071c632bd3a2fd177fbfe1a78e576bc93bb6f26479fc5"
+        },
+        "tiny-DAG-reuse-v1-1.log": {
+          "bytes": 3076,
+          "sha256": "45126318ce4cbda21b30a26dd94826fa9fac018751808a4ca65a50fe73f191d0"
+        },
+        "tiny-DAG-reuse-v1-1.resources.json": {
+          "bytes": 1156,
+          "sha256": "da5d566ebc8b808f53a164c71e91e3c3c72e201b795392ac19a4719ec37247c0"
+        },
+        "tiny-DAG-reuse-v1-1.samples.jsonl": {
+          "bytes": 897,
+          "sha256": "9e1c6b921fa86c96afdbf6c7b16d03c56cc20ddc22eecea9d3585466b22c6a7b"
+        }
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "attempt": "tiny-DAG-v1-1",
+      "error": "RuntimeError('Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/tiny-DAG-v1-1.log\\nmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/tiny-dag-v1/plan.json --stage export --engineering > logs/E009-relational/export.log 2>&1\\nRuleException:\\nCalledProcessError in file \"/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E022-marker-informed-learning/Snakefile\", line 59:\\nCommand \\'set -euo pipefail;  /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/env-v2/bin/python -I -B /Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e022_control.py --plan /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/tiny-dag-v1/plan.json --stage export --engineering > logs/E009-relational/export.log 2>&1\\' returned non-zero exit status 1.\\n[Sun Oct 25 20:52:11 2026]\\nError in rule export:\\n    message: None\\n    jobid: 2\\n    input: units/E009-relational/refine/completed.json\\n    output: units/E009-relational/export/accounting.json\\n    log: logs/E009-relational/export.log (check log file(s) for error details)\\n    shell:\\n        /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/env-v2/bin/python -I -B /Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e022_control.py --plan /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/tiny-dag-v1/plan.json --stage export --engineering > logs/E009-relational/export.log 2>&1\\n        (command exited with non-zero exit code)\\nShutting down, this might take some time.\\nExiting because a job execution failed. Look below for error messages\\n[Sun Oct 25 20:52:11 2026]\\nError in rule export:\\n    message: None\\n    jobid: 2\\n    input: units/E009-relational/refine/completed.json\\n    output: units/E009-relational/export/accounting.json\\n    log: logs/E009-relational/export.log (check log file(s) for error details)\\n    shell:\\n        /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/env-v2/bin/python -I -B /Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e022_control.py --plan /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/tiny-dag-v1/plan.json --stage export --engineering > logs/E009-relational/export.log 2>&1\\n        (command exited with non-zero exit code)\\nComplete log(s): /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/tiny-dag-v1/work/.snakemake/log/2026-10-25T205157.371341.snakemake.log\\nWorkflowError:\\nAt least one job did not complete successfully.\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+      "measurement": {
+        "command": [
+          "artifacts/e022-marker-learning/env-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e022_control.py",
+          "--plan",
+          "artifacts/e022-marker-learning/tiny-dag-v1/plan.json",
+          "--workflow",
+          "--engineering"
+        ],
+        "exit_code": 1,
+        "launched_pid": 25536,
+        "peak_sampled_rss_bytes": 345653248,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.4940720304696242,
+        "sampled_cpu_seconds": 26.23,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2671.077502965927,
+        "stop_reason": null,
+        "wall_seconds": 17.55604781099828
+      },
+      "original_clock_elapsed_seconds": 2746.4795260429382,
+      "retained_files": {
+        "tiny-DAG-v1-1.exit.json": {
+          "bytes": 676,
+          "sha256": "6d289be3a95b937aca34c9704a63aa0e07f6ba3fc4de5dcb8f29f8457c57253b"
+        },
+        "tiny-DAG-v1-1.log": {
+          "bytes": 8940,
+          "sha256": "7acbb9f382e71ff204b33542cae057ed388eb2d0f1c041fa4b2b0e36dde66df7"
+        },
+        "tiny-DAG-v1-1.resources.json": {
+          "bytes": 3806,
+          "sha256": "0733d3ca1a67001213d67219be803977c8c7e324e91a028317720fd6ce09d52d"
+        },
+        "tiny-DAG-v1-1.samples.jsonl": {
+          "bytes": 4271,
+          "sha256": "a6d7d0713dc8f93f11360bf0941d6179d031532120038789ab01d27bf9b755e2"
+        }
+      },
+      "status": "FAILED"
+    }
+  ],
+  "branch": "marker-informed-cross-contig-learning",
+  "failures": [
+    {
+      "attempt": "product-relational-v1-1",
+      "reason": "Fixture reseal tried exclusive write_json on existing fixture metadata; fixed only fixture and preserved failure/source"
+    },
+    {
+      "attempt": "tiny-DAG-v1-1",
+      "reason": "Wrong exporter keyword emit_dna; corrected to include_dna. Restore/train/embed/group/refine passed; resumed only export/proof and preserved original outputs/logs"
+    },
+    {
+      "attempt": "product-suite-v2-1",
+      "reason": "49 tests passed, version assertion expected dev8; updated to declared dev9"
+    },
+    {
+      "attempt": "final-adapters-v3-1",
+      "reason": "Version then passed; ordinary owned-dependency assertion correctly rejected borrowed research prefix. Kept assertion unchanged, made explicit fresh byte-verified local owned copy, final complete suite passes"
+    }
+  ],
+  "limits": {
+    "elapsed_at_seal_seconds": 4509.576330900192,
+    "extra_GiB": 4,
+    "free_reserve_GiB": 6,
+    "original_clock_seconds": 5400,
+    "sampled_RSS_bytes": 8000000000,
+    "threads": 4
+  },
+  "live_cloud_checks_this_task": false,
+  "mocks_and_unavailable": {
+    "GLM": "NumericExtractor synthetic DNA-specific vectors in tiny fixtures; no DNABERT execution. Actual E009 pair construction consumed native E021 embeddings/graph, not omitted GLM arrays.",
+    "full_GLM_reread": "Raw vectors.npy remains natively retained; no independent Mac reread or fallback",
+    "native_linux": "Fresh Linux source/runtime/full raw bank/readers/systemd/provider/full-candidate affordability remain gates; not executed here",
+    "science": "No biological pair correctness, recovery improvement, optimality, unseen-genome, product-default or joint E021 KEEP claim"
+  },
+  "native_ready": false,
+  "new_GCP_compute_cost_USD": 0,
+  "preserved": "All accepted old data/truth/results/source freezes and failures. E021 OPERATIONS owner edits retained; original Mac allclose remains failed unchanged.",
+  "quality_result": null,
+  "resources": {
+    "disk_scope": "Owned regular bytes below R, explicit borrowed dependency links excluded. Initial attempts before TMPDIR correction did not count system temporary fixture dirs; final suites/adapters redirect them under R. No claim of an all-Mac historical meter.",
+    "minimum_sampled_free_bytes": 16733257728,
+    "peak_sampled_RSS_bytes": 1343102976,
+    "peak_sampled_owned_extra_bytes": 1137932683
+  },
+  "scope": "One locally implemented candidate and label-free pair availability. No community fit/score, old rescore, DNA acquisition, external tool, VM start, GCP operation or retention change.",
+  "source_parent": "9d02bdc",
+  "status": "PASS_LOCAL_ENGINEERING_NATIVE_AND_QUALITY_UNADMITTED"
+}

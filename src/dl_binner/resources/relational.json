@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "constraint_min_bp": 2000,
+  "hmm_coverage": 0.8,
+  "margin_bits": 10.0,
+  "physical_overlap_fraction": 0.5,
+  "protein_k": 5,
+  "protein_near_jaccard": 0.9,
+  "calibration_pairs": 65536,
+  "near_quantile": 0.1,
+  "far_quantile": 0.75,
+  "min_depth_columns": 2,
+  "family_offsets": [1, 2, 4, 8],
+  "max_degree": 4,
+  "pair_batch_size": 256,
+  "loss_weight": 0.1,
+  "negative_cosine_margin": 0.2,
+  "warmup_epochs": 2,
+  "ramp_epochs": 3,
+  "seed": 11
+}

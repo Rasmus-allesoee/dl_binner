@@ -1,0 +1,67 @@
+"""One restore-only cached cross-contig fit; original CPM/E013, no extraction or detector jobs."""
+import json
+from pathlib import Path
+PLAN = str(Path(config['plan']).absolute())
+P = json.loads(Path(PLAN).read_text())
+UNITS = ['E009-relational']
+PYTHON = P['python']
+WORKER = P['worker']
+ENGINEERING = '--engineering' if config.get('engineering') in [True, 'true'] else ''
+
+rule all:
+    input: expand('units/{unit}/graph-proof.json', unit=UNITS)
+
+rule restore:
+    output: 'units/{unit}/restore.json'
+    threads: 4
+    log: 'logs/{unit}/restore.log'
+    benchmark: 'benchmarks/{unit}/restore.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage restore {ENGINEERING} > {log:q} 2>&1'
+
+rule train:
+    input: 'units/{unit}/restore.json'
+    output: 'units/{unit}/train/checkpoint.json'
+    threads: 4
+    log: 'logs/{unit}/train.log'
+    benchmark: 'benchmarks/{unit}/train.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage train {ENGINEERING} > {log:q} 2>&1'
+
+rule embed:
+    input: 'units/{unit}/train/checkpoint.json'
+    output: 'units/{unit}/embeddings.json'
+    threads: 4
+    log: 'logs/{unit}/embed.log'
+    benchmark: 'benchmarks/{unit}/embed.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage embed {ENGINEERING} > {log:q} 2>&1'
+
+rule group:
+    input: 'units/{unit}/embeddings.json'
+    output: 'units/{unit}/group/partition.json'
+    threads: 4
+    log: 'logs/{unit}/group.log'
+    benchmark: 'benchmarks/{unit}/group.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage group {ENGINEERING} > {log:q} 2>&1'
+
+rule refine:
+    input: 'units/{unit}/group/partition.json'
+    output: 'units/{unit}/refine/completed.json'
+    threads: 4
+    log: 'logs/{unit}/refine.log'
+    benchmark: 'benchmarks/{unit}/refine.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage refine {ENGINEERING} > {log:q} 2>&1'
+
+rule export:
+    input: 'units/{unit}/refine/completed.json'
+    output: 'units/{unit}/export/accounting.json'
+    threads: 4
+    log: 'logs/{unit}/export.log'
+    benchmark: 'benchmarks/{unit}/export.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage export {ENGINEERING} > {log:q} 2>&1'
+
+rule graph_proof:
+    input: 'units/{unit}/export/accounting.json'
+    output: 'units/{unit}/graph-proof.json'
+    threads: 4
+    log: 'logs/{unit}/graph-proof.log'
+    benchmark: 'benchmarks/{unit}/graph-proof.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage graph-proof {ENGINEERING} > {log:q} 2>&1'

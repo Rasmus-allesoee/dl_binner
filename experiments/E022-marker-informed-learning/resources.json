@@ -1,0 +1,92 @@
+{
+  "status": "PROPOSED_NOT_AUTHORIZED_OR_EXECUTED",
+  "machine": "Existing Iowa e2-standard-8 / 8 vCPU / 32 GiB and existing 300 GiB work + 30 GiB boot; no GPU",
+  "clock_seconds_from_VM_start": 7200,
+  "provider_STOP_seconds": 8100,
+  "held_setup_max_seconds": 1800,
+  "collection_reserve_seconds": 600,
+  "numerical_threads": 4,
+  "sampled_tree_RSS_limit_bytes": 26000000000,
+  "free_reserve_GiB": 25,
+  "extra_work_limit_GiB": 20,
+  "compressed_export_limit_GiB": 2,
+  "logical_archive_limit_GiB": 6,
+  "local_review": {
+    "threads": 4,
+    "sampled_RSS_bytes": 8000000000,
+    "seconds": 3600,
+    "extra_GiB": 6
+  },
+  "forecast": {
+    "setup_verification_minutes": [
+      8,
+      20
+    ],
+    "fit_minutes": [
+      20,
+      30
+    ],
+    "embed_group_refine_export_minutes": [
+      4,
+      10
+    ],
+    "collection_upload_readback_minutes": [
+      3,
+      10
+    ],
+    "total_minutes": [
+      35,
+      70
+    ],
+    "RAM_GB": [
+      4,
+      6
+    ],
+    "new_work_GiB": [
+      2,
+      4
+    ],
+    "compressed_return_GiB": [
+      0.1,
+      0.3
+    ],
+    "logical_local_staging_GiB": [
+      0.3,
+      1.0
+    ],
+    "extra_full_parent_side_inputs_per_epoch": 4656,
+    "side_inputs_relative_to_original_views": 0.0107612401331287,
+    "uncertainty": "Full E022 schedule unmeasured. Pair forwards add call overhead; SHA verification and upload share the same allocation clock. Abort before science if complete conservative schedule cannot fit."
+  },
+  "new_gross_ceiling_USD": 2,
+  "indicative_prices_from_prior_2026_10_25_record_NOT_fresh_launch_admission": {
+    "E2_and_IP_per_hour_USD": 0.273045676,
+    "2_25_hour_compute_IP_USD": 0.614352771,
+    "original_disks_attribution_2_25_hours_USD": 0.096164384,
+    "max_2_GiB_paid_WAN_at_0_12_USD": 0.24,
+    "small_storage_operations_allowance_USD": 0.1,
+    "contingency_USD": 0.5,
+    "conservative_combined_USD": 1.550517155,
+    "warning": "Storage attribution overlaps original approved storage and is not billed twice. This is not an invoice; live credit/SKU/network prices and delayed usage must be refreshed before start."
+  },
+  "credit_conditions": "Remaining Welcome balance/scope/expiry and delayed usage reserve cover compute/disk/GCS/network/operations, no real-money permission; fresh before start and before export",
+  "retention": {
+    "approved_until": "2026-10-28T00:00:00+01:00",
+    "current_original_disks_USD_per_month": 31.2,
+    "extension_authorized": false,
+    "separately_proposed_storage_only_ceiling_USD": 8,
+    "proposed_extension_until": "2026-11-04T00:00:00+01:00",
+    "seven_day_disk_estimate_USD": 7.180274,
+    "proposal_note": "Not authorized by this task. Fresh retained GCS inventory and credit coverage must fit with disks inside $8, otherwise reprice before any extension. Preserve accepted bank/context/DNA; no automatic delete or renewal."
+  },
+  "excluded": [
+    "GPU extraction or quota",
+    "New data or mapping",
+    "Oral/skin fits",
+    "Baseline refit/rescore",
+    "External binner",
+    "Grid/new seed",
+    "Resource resize/provisioning",
+    "Automatic retry/clock or retention extension"
+  ]
+}

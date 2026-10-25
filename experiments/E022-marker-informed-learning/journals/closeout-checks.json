@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "product_tests": 50,
+  "operational_tests": 6,
+  "console_isolated": "PASS final-console-isolated-1",
+  "source_members": 87,
+  "source_lock": {
+    "bytes": 13819,
+    "sha256": "279e850cc68a8da80a10266a8503ce65c4c775a55be2a60fbcc43a50f520e6de"
+  },
+  "docs_log": {
+    "bytes": 688,
+    "sha256": "cfd705d8b21418b01b3db71cac49df6a1ac4f58d3d5501032cd2ca331c86aaac"
+  },
+  "docs_status": "PASS",
+  "native": "PENDING",
+  "quality": "UNRUN",
+  "new_cloud_compute_USD": 0
+}
