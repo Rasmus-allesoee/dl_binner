@@ -1,0 +1,41 @@
+{
+  "kind": "E022 operational native launch addition",
+  "scientific_prepared_source": "fdad862143799cab2d6943aa25070e2a9ad459c7",
+  "candidate_wheel_and_policy_unchanged": true,
+  "original_source_freeze": {
+    "bytes": 13819,
+    "sha256": "279e850cc68a8da80a10266a8503ce65c4c775a55be2a60fbcc43a50f520e6de"
+  },
+  "files": {
+    "scripts/e022_bootstrap.py": {
+      "bytes": 7465,
+      "sha256": "9e45785120be8f975de422216be7b189535b28f936fd3465d85f76161709fd9b"
+    },
+    "tests/test_e022_bootstrap.py": {
+      "bytes": 1908,
+      "sha256": "7ffc44cee8cc87e130fdbdaf4b4d3e118f6765837c00508cfedf576a5eb65ae7"
+    }
+  },
+  "local_contracts": {
+    "tests": 2,
+    "status": "PASS",
+    "scope": "Pure actual path/config/clock/financial refusal functions; Linux setup/systemd/full readers remain native gates"
+  },
+  "approved_execution": {
+    "new_USD": 2,
+    "VM": "existing e2-standard-8",
+    "disks_GiB": [
+      30,
+      300
+    ],
+    "clock_seconds": 7200,
+    "provider_STOP_seconds": 8100,
+    "numerical_threads": 4,
+    "RSS_bytes": 26000000000,
+    "free_GiB": 25,
+    "growth_GiB": 20,
+    "compressed_return_GiB": 2,
+    "retention_end": "2026-10-28T00:00:00+01:00"
+  },
+  "no_science_or_cost_bearing_change_yet": true
+}
