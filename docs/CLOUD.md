@@ -1,18 +1,39 @@
 # Google Cloud workspace operations
 
-## Current E022 boundary, October 25, 2026
+## Current E022 execution, October 26, 2026
 
-[E022](../experiments/E022-marker-informed-learning/OPERATIONS.md) is local-only
-preparation. No live cloud read, start, upload, new service/resource or retention
-change occurred. Existing E021 bank/runtime/context/marker/graph bytes are named
-for restore-only CPU reuse; no GPU or new extraction is proposed. New $2 and
-two-hour / 2.25-hour STOP execution needs separate approval and fresh financial,
-coverage, delayed-usage, source/runtime/input and headroom gates. Previous balances
-below are dated observations, not fresh E022 admission. Preserve original 30/300 GiB
-disks and accepted bulk; existing $8 storage ends **October 28, 00:00 Copenhagen
-(CET)**. Stopped cost remains $31.20/month. A proposed seven-day storage-only $8
-renewal is not authorized and must be repriced against actual retained GCS bytes.
+[Native E022](../experiments/E022-marker-informed-learning/native-observed.json) is
+RUNNING on the original e2-standard-8 / 30+300 GiB disks, unchanged security/service
+identity. One new $2 candidate comparison is authorized and admitted. Scientific
+candidate/config/pairs stay fixed; no new resource, GPU, service or retention.
+First boot failed remote setup parsing before science and was independently stopped;
+repair retains its original clock. Actual provider STOP is **2026-10-26T04:39:09.328000+01:00** and the
+fresh tested boot/process-bound watcher is active. Driver deadline 04:25:38.700
+Copenhagen. [Operations](../experiments/E022-marker-informed-learning/OPERATIONS.md)
+owns exact phase, logs, limits and inspection prompt; no completion/score yet.
 
+Direct refreshed Billing Credits/Overview: **DKK 1,803.60 Available / 91%**, original
+DKK 1,973.43, January 12, 2027 expiry, Certain usage / net pricing, paid billing.
+Overview rounds cost/savings DKK 168 / net zero; >24-hour usage lag is unknown,
+with $35 reserve. Current ordinary E2/PD/IP prices match prior Catalog values;
+GCS 9.53 GB, soft-deleted zero. Original 169-hour storage including max new compact
+return/reserve conservatively ~$7.7734 within approved $8. It still ends **October
+28 at 00:00 Copenhagen (CET)**. No extension; stopped disks remain $31.20/month.
+A proposed next $8 storage renewal through November 4 is not authorization.
+
+Actual accepted numerical prefix is Python **3.10.15**, workflow **3.12.10**; the
+prepared 3.12 numerical description was an error. Exact retained CPU inventory,
+source and math-library bindings pass; no port, fallback or dependency reinstall.
+The installed candidate has its own wheel and explicitly borrowed read-only base.
+
+For Billing UI reads, use the actual Chrome extension identity from the current
+inventory if a transient numeric ID resolves to another browser. Claim the user
+tab through that selected browser and follow visible Billing navigation links.
+A timed-out click can still navigate: inspect the returned state before repeating.
+No browser security setting, credential, extension or vendor file was changed.
+
+The E021 block below is preserved completed history; its local-only next-scope
+wording does not override the current authorized E022 receipt.
 
 **Current E021: completed and reviewed; original E2 TERMINATED, temporary GPU
 worker and its two disks deleted.** [Final inspection](../experiments/E021-frozen-sequence-hybrid/inspection-observed.json)

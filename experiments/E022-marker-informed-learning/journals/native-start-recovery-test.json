@@ -1,0 +1,5 @@
+{
+  "status": "PASS_EXACT_NATIVE_SCRIPT_COMPILE_AND_SHELL_ROUNDTRIP",
+  "script_sha256": "89d2f93745d247a7ab82c95bd3dfd7199b737ee99f0361bc87666c0baee41169",
+  "clock_reset": false
+}

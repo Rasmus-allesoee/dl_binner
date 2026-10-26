@@ -1,5 +1,73 @@
 # E022 operations
 
+## Current native execution, October 26, 2026
+
+**RUNNING under verified supervision**, phase `marker-20261026T012935Z-e88dc8a-r2`. The current
+[native receipt](native-observed.json) owns status, clocks, gates and progress;
+shutdown/completion/return and quality have **not** been admitted. Scientific
+prepared source is `fdad862`; exact clean operational source is `e88dc8a`.
+The locked dev9 wheel, all original 87 frozen source members, input/pair/default
+locks and scientific rule are unchanged. The branch was normally pushed from Mac
+and fetched read-only into `/srv/dl_binner/e022-code/e88dc8a`.
+
+The initial start failed on generated remote Python quoting before setup/science.
+It was independently stopped; failed code/logs remain. Exact rendered-consumer
+compilation/shell-roundtrip tests repair that operational path. A fresh explicit
+attempt uses the **original** first-start clock, beginning October 26 at
+01:25:38.700 UTC / 02:25:38.700 Copenhagen. The scientific deadline remains
+2026-10-26 04:25:38 Copenhagen (CET); provider STOP is earlier than the original 2.25-hour maximum,
+currently **2026-10-26T04:39:09.328000+01:00**. No new budget/clock, hardware, data, rule or retention.
+A first local release-substitution error was also caught by compilation before
+SSH or release; the corrected atomic release succeeded exactly once.
+
+All five actual Linux gates exit 0: complete runtime/import/source/libraries,
+full retained readers, tiny product contracts, operational refusals and actual
+serial tiny DAG/collector. Native gates took 108.23 seconds / 3.387 GB sampled
+peak tree RSS. They verify all 145,702 contigs / 231,678,157 bp and the ordered ten
+samples 0,2,3,4,6,9,10,11,14,17, with the restored 1,963 positive / 365 negative
+pairs. The full bank/context readers actually ran. Tiny GLM values and cached
+annotations remain explicitly synthetic; no new extraction or community marker
+search occurred. Real community epochs are progressing with all 89,041 parents,
+432,664 available views and 2,328 pairs each epoch, including the declared ramp.
+No collapse guard has failed in observed epochs. This is progress, not completion
+or a recovery result. Parent PID/start/command/current boot and fresh live watcher
+match; live/normal/crash and maintenance-restart refusal tests pass. Provider STOP
+and original resources were independently read back before release.
+
+**Runtime erratum:** the prepared prose's “CPU Python 3.12” was inaccurate. The
+actual accepted E021 numerical base, frozen E022 checker and complete content-
+bound native reference require **Python 3.10.15**; that exact base is reused.
+The separate workflow interpreter is **Python 3.12.10**. No fallback, environment
+replacement or tolerance relaxation occurred. This correction preserves the
+frozen comparator/runtime rather than adding an unplanned port. Original prose
+below is retained as dated history, not a claim that a 3.12 numerical gate passed.
+
+Fresh directly refreshed Billing: DKK 1,803.60 Available / 91%, January 12, 2027
+expiry, Certain usage / net pricing; paid billing, overview rounded DKK 168 cost /
+168 savings / zero net. Usage lag remains unknown (>24 hours); $35 reserve is
+retained. Ordinary eligible E2/PD/GCS/IP/network prices are unchanged. The new
+$2 comparison ceiling passes, with conservative full-phase quote ~$1.551. Current
+allocation-priced interim costs are in native-observed, separately from sampled
+CPU and final invoice. Original 169-hour $8 storage interval has conservative
+current-plus-maximum-return quote **$7.7734**, including reserve. It still ends
+**October 28, 00:00 Copenhagen (CET)**. No retention extension or accepted-data
+cleanup; stopped 30/300 GiB disks remain $31.20/month. GCS inventory is 9.53 GB,
+with zero soft-deleted bytes. No extra machine, disk, quota or service is needed.
+
+Native root: `/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2`.
+Detailed training: `work/logs/E009-relational/train.log`; parent:
+`logs/parent-terminal.log`. Compact guest attribute: `e022-candidate/status`.
+Private completion/archive prefix: `gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/`.
+The provider/watcher supervise without the Mac. Follow the **new inspection
+prompt below**; never repeat this fit merely because the VM stops or the UI is stale.
+
+The sections below preserve preparation at `fdad862`. `source-lock.json` is that
+immutable snapshot, verified in the native `e88dc8a` worktree. Later status/prompt
+edits to this document do not rewrite that lock; use the recorded Git source when
+rechecking its original bound documents. Candidate/config/input/pair bytes remain
+unchanged. Dated “proposed”, “local-only” and “pending” statements below do not
+override the current native receipt.
+
 ## Current boundary and result
 
 Local implementation and engineering only. No VM lifecycle, private upload,
@@ -135,7 +203,7 @@ measured-depth-gated mechanism needs separately admitted depth-enabled data or a
 prospectively frozen missing-modality question, plus acquisition/compute/retention
 cost permission. No additional DNA is acquired here.
 
-## Exact following prompt
+## Executed October 26 authorization prompt
 
 Our goal is substantially closing the recovery gap. Read AGENTS.md, PROJECT_INTENT.md,
 STATE/CLOUD, D013/D015 and E022's design, protocol, local evidence, candidate/source/
@@ -186,3 +254,63 @@ assembly is development evidence. No confirmation, tuning or another fit. Update
 records/check/commit with what changed/why, report costs/resources/limits and one
 strongest next decision. Surface separately priced preservation/retention needs
 before October 28; do not automatically renew or delete accepted bulk.
+
+## Exact following prompt
+
+Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E022's frozen
+candidate/design/protocol/criteria, original source/input/pair/reuse/launch locks,
+local/native evidence and operations. Inspect phase
+`marker-20261026T012935Z-e88dc8a-r2`; preserve dev3/dev4/dev5/E016/E019/E021 and all
+accepted inputs, truth, outputs/source freezes and failed journals. The candidate
+and scientific wheel remain fdad862; operational native source is e88dc8a. Keep
+DCVBin efficiency context deferred; no candidate or policy changes.
+
+Check the GCP control plane, `e022-candidate/status` and private completion.json
+under `gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/`.
+Do not infer success from shutdown. If healthy and running, report actual stage/
+progress and leave its verified process/boot watcher and provider STOP intact,
+without polling to completion or starting anything else. After independent
+TERMINATED confirmation, establish every setup/gate and all seven serial science/
+collection/upload/readback exits, final target, used-inputs-after and watchdog
+identity/exit evidence. Keep the two native-start attempts distinct; the first
+failed before setup/science. Its repair/recovery did not reset the original
+01:25:38.700 UTC first-start clock or new $2 ceiling. The actual provider STOP is
+conservatively earlier than the original 2.25-hour limit; price actual allocated
+intervals, storage and export separately from process CPU and elapsed stopped time.
+
+Refresh Welcome balance/scope/expiry, delayed usage, current product/egress prices
+and remaining original $2/$8 storage coverage before downloads. Original retention
+ends October 28, 00:00 Copenhagen. Do not wake/replay, change resources or extend a
+clock/retention for missing evidence; first assess any collection-only recovery
+against the original limits and obtain separate approval if needed. No prior
+$45 or other budget carries. Verify archive and **every** retained member/alias
+with the prepared collector; omitted bulk vectors/context/FASTA are not backed up
+by inventory hashes. Native numerical reuse is the exact accepted **Python
+3.10.15** base, while workflow is Python 3.12.10; preserve the explicit original
+prose erratum, hashes and failed Mac allclose tolerance.
+
+If complete and admitted, perform only the frozen bounded local new-output E009
+conservative-v2 diagnostics using the prepared review adapter/evaluator contracts:
+four numerical threads, 8 GB sampled tree RSS, one hour / 6 GiB extra, sequential
+staging and checked free space. Reuse E021/E019/older baseline summaries without
+refitting/rescoring. Verify exact seed11/20epoch/batch256/source/defaults, all full
+contig/ordered ten-depth/view/pair axes, pair confidence/ramp/exposure, stopped
+teacher/predictor/EMA/noncollapse history, exact native reload, unit geometry,
+neighbor proof, cached markers/E013 decisions and complete parent/old/post DNA.
+Keep all 156 references / 554,661,890 provided bp, 3.3034% N quarantine and every
+length/origin/native-eligibility/marker/unknown/non-target/excluded/unassigned
+population. Diagnose pair dominant-origin consistency without turning it into
+unique identity or using truth to reselect pairs, thresholds, families, K or bins.
+Report paired parent/old/E013 effects, target gains/losses, raw/learned geometry,
+effective rank, grouping and frozen KEEP/MODIFY/ABANDON disposition. One seed and
+assembly remain development evidence, not a product-default or causal family claim.
+
+No new fit, seed/grid/ablation, external binner, GLM extraction, data/mapping,
+architecture/policy change or confirmation run. Keep skin unscored, with its named
+source/genome/replicon/molecule/host/circular/taxonomy/overlap/pretraining/competitive
+ambiguity and provided-origin-versus-unique truth, evaluator/depth/cost dependencies.
+Recommend at most one strongest next recovery-focused decision. Surface a concrete
+separately priced preservation/retention decision before October 28, without
+automatic renewal or deletion of accepted bulk. Update records/check/commit with
+structured what changed/why; report actual costs/resources/results/limits and the
+next exact prompt with any separate authorization needed.

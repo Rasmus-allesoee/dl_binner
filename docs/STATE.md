@@ -1,6 +1,48 @@
 # Current Research State
 
-Updated: October 25, 2026 (Copenhagen). This is the single current handoff.
+Updated: October 26, 2026 (Copenhagen). This is the single current handoff.
+
+**E022 is RUNNING under independently verified supervision**, phase
+`marker-20261026T012935Z-e88dc8a-r2`. [Native receipt](../experiments/E022-marker-informed-learning/native-observed.json)
+owns its actual current stage/resources/gates; [operations](../experiments/E022-marker-informed-learning/OPERATIONS.md)
+owns the next inspection prompt. Five native gates and exact restore pass; the
+single frozen E009 candidate fit is progressing with full parents/views/pairs and
+the declared side-loss ramp. No completion, returned archive or recovery score is
+admitted. Immutable E021 and older outputs remain unchanged; no baseline refit,
+external run, new extraction/data or confirmation.
+
+Prepared scientific source `fdad862`, clean normally pushed operational source
+`e88dc8a`, unchanged locked dev9 wheel and pair/input/config policy. An initial
+remote setup quoting failure was independently stopped before setup/science;
+the repaired explicit attempt preserves the original two-hour clock and new $2.
+First start 02:25:38.700 Copenhagen; driver deadline **04:25:38.700**; actual provider
+STOP **2026-10-26T04:39:09.328000+01:00**. Fresh current-boot/PID/start/command watcher and timer pass live,
+normal/crash and restart-refusal tests. Leave supervision/provider STOP intact.
+
+Runtime description corrected openly: exact accepted numerical base is **Python
+3.10.15**, separate workflow Python **3.12.10**. Original prose's 3.12 numerical
+claim was inaccurate; original complete distribution/source/library checks pass
+without an environment port/fallback. All 145,702 contigs / 231,678,157 bp, ten
+ordered depth columns and 2,328 pairs pass actual full readers. Full-scale outcome
+and final cost remain pending; tiny mocks are not biological validation.
+
+Fresh Welcome credit **DKK 1,803.60 / 91%**, January 12 expiry; delayed usage unknown
+with $35 reserve. Full new-phase conservative quote ~$1.551 within $2. Original
+$8 storage interval conservatively ~$7.7734, ending **October 28, 00:00 Copenhagen**;
+no renewal. Existing stopped disks cost **$31.20/month**. Native bulk bank/context/
+DNA are not backed up by compact inventory hashes. No extra resources are needed.
+
+## Exact next step
+
+[Inspect E022's completion](../experiments/E022-marker-informed-learning/OPERATIONS.md#exact-following-prompt)
+without another job. If still healthy, report progress and leave it supervised.
+After confirmed shutdown, admit actual exits, source/member/alias bytes and cost
+before frozen local conservative-v2 diagnostics. No baseline rescore or tuning;
+full reference/population denominators and N quarantine remain. Keep skin unscored
+and separately admit any future depth/data/truth/cost question. Make the original
+October 28 preservation/retention decision explicitly; no automatic renewal/deletion.
+
+## Preserved E021 completed review
 
 **E021 E009-only is completed, checksum-verified and independently reviewed:
 MODIFY. The last provider check confirmed shutdown.** [Inspection](../experiments/E021-frozen-sequence-hybrid/inspection-observed.json),
@@ -45,49 +87,6 @@ allocation/storage/WAN subtotal is **$9.992**, or **$11.592 including reserves**
 inside the original $45 credit-only envelope; this is not an invoice or credit-delta
 attribution. Fresh October 25 Welcome credit: DKK 1,808.22 / 92%, January 12 expiry,
 delayed usage unknown / $35 reserve. No new budget, clock or retention extension.
-
-## Exact next step
-
-**E022 is implemented locally; no community execution or cloud spending.**
-[Design](../experiments/E022-marker-informed-learning/design.md),
-[local evidence](../experiments/E022-marker-informed-learning/local-observed.json),
-[locks/operations](../experiments/E022-marker-informed-learning/OPERATIONS.md)
-prepare one reliable marker-informed cross-contig learning comparison against
-immutable E021. Strong complete cached calls plus composition and measured-parent
-multi-sample depth support soft positive/negative pairs. Same-family repetition
-alone is insufficient. Missing/inadequate depth abstains; every parent/real view
-and short/marker-negative/unknown/non-target DNA remains in the learner/accounting.
-
-The label-free full E009 cache has 2,328 bounded pairs (1,963 positive, 365 negative),
-with no truth or community fit. Tiny installed training/reload/graph/refiner/export
-and exact zero-weight initialization/state controls are local engineering evidence,
-not recovery results or Linux admission. Frozen E021 learning/source and all
-accepted old evidence, failures and Mac tolerance remain intact. E022 keeps the
-same architecture/init/seed/schedule/CPM/E013 and adds a ramped bounded side loss.
-No product default or joint two-community KEEP is established.
-
-[DCVBin audit](evidence/2026-10-25-dcvbin-efficiency-and-marker-learning.md) finds a
-much smaller source workload: one truncated input per >=2 kb parent, batch one,
-versus E021's exact parent/crop/both-strand bank. On these lengths that is 13,554
-versus 930,118 stranded inputs; **not a timing ratio**. The published quantitative
-runtime comparison could not be confirmed. E021 extraction was 4.14 hours, GPU
-allocation 8.24 hours and CPU training 19.51 minutes. Future batching/token reuse
-and separately declared exposure/distillation options are recorded; no DCVBin run.
-
-Next request: one CPU E009 candidate fit using the retained bank and restored
-exact pair cache, proposed **new $2**, two-hour VM-start clock / 2.25-hour provider
-STOP. No old budget carries. Fresh credit/eligibility/pending usage/prices, native
-runtime/full-reader/tiny/launcher gates and headroom are mandatory before release.
-The [exact approval prompt](../experiments/E022-marker-informed-learning/OPERATIONS.md#exact-following-prompt)
-contains the limits. Skin stays unscored and cannot confirm this depth-gated rule
-without measured contig depth; further data/truth/cost admission remains separate.
-
-Original stopped 30/300 GiB disks remain **$31.20/month**; current $8 storage
-approval ends **October 28 at 00:00 Copenhagen (CET)**. No new live lifecycle check,
-start, cloud upload, deletion, resource or retention change occurred in this task.
-Bulk E021 bank/context arrays and emitted DNA are not backed up by inventory
-hashes. Preserve their locators and make a separately priced storage decision
-before expiry; no automatic renewal or deletion is authorized.
 
 ## Preserved E020 completed-review snapshot
 

@@ -1358,3 +1358,33 @@ a new $2 CPU-only / two-hour comparison, all native/live-credit/resource gates
 still pending. No old budget, community execution, resource or retention change
 is authorized here. Original stopped storage ends October 28, 00:00 Copenhagen;
 a separate storage decision must preserve non-backed-up bulk before that date.
+
+
+## E022 fixed candidate admitted on retained CPU runtime, October 26, 2026
+
+[Native admission](../../experiments/E022-marker-informed-learning/native-observed.json)
+passes five Linux gates, exact full input/bank/context/pair readers, new tiny
+training/reload/geometry/refinement/export and actual bounded collector. The sole
+E009 candidate is running, with original seed/schedule/encoders/CPM/E013 and all
+DNA retained. No new outcome is admitted. Exact package/science remains fdad862;
+operational bootstrap e88dc8a adds no model treatment. Original E021/older science
+is reused, no DCVBin/external run or new GLM extraction.
+
+The prepared prompt incorrectly called the accepted numerical base Python 3.12.
+Actual reference/source/library bindings require **3.10.15**; workflow separately
+uses 3.12.10. Applied that exact frozen numerical binding rather than porting to a
+new interpreter and changing the comparator/runtime. This is an explicit factual
+erratum, not a claim that a 3.12 numerical gate passed or a weakened inventory.
+The frozen original documents remain recoverable at recorded source commits.
+
+One start failed generated remote-code parsing before setup/science; shutdown and
+failed code/logs are preserved. Exact rendered consumer compilation/quoting checks
+repair the path; a fresh explicit attempt retains original $2/absolute clocks and
+an earlier provider fallback. Another local substitution failure was caught before
+SSH/release; corrected atomic release occurred once. This operational recovery
+is not scientific repetition, a new seed or threshold tuning.
+
+Fresh credit DKK 1,803.60 and ordinary product/prices/coverage pass with pending
+usage reserve. Original stopped storage still ends October 28; no renewal or
+cleanup. Next inspect shutdown/exits/bytes/cost before frozen local diagnostics
+and one recovery-focused decision. All additional data/confirmation remain separate.

@@ -1,0 +1,65 @@
+"""One authorized E022 start: fixed source/resources, held setup, no science release."""
+import datetime,hashlib,json,os,shlex,subprocess,sys,time
+from pathlib import Path
+repo=Path.cwd();r=Path((repo/'artifacts/e022-native/active-root.txt').read_text().strip());sys.path.insert(0,str(repo/'scripts'))
+from e021_portable_cloud import Cloud
+from e014_collect import binding
+c=Cloud(r);source=json.loads((r/'prepared-source.json').read_text())['source'];branch='marker-informed-cross-contig-learning'
+finance=json.loads((r/'financial-gate.json').read_text());now=time.time()
+assert now-datetime.datetime.fromisoformat(finance['UTC']).timestamp()<7200 and finance['new_incremental_gross_ceiling_USD']==2 and finance['real_money_authorized']is False
+assert finance['storage']['total_existing_and_proposed_max_export_quote_USD']<8
+assert now+8100<min(finance['storage_valid_until_epoch'],finance['credit_valid_until_epoch'])
+assert subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()==source and not subprocess.check_output(['git','status','--porcelain'],text=True).strip()
+assert subprocess.check_output(['git','ls-remote','origin','refs/heads/'+branch],text=True).split()[0]==source
+before=c.state();assert before['status']=='TERMINATED' and before['machineType'].endswith('/e2-standard-8') and not before.get('guestAccelerators')
+assert [x['source'].split('/')[-1]for x in before['disks']]==['dl-binner-cpu','dl-binner-work'] and before['shieldedInstanceConfig']['enableSecureBoot']
+c.put('provider-before.json',before)
+phase='marker-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+source[:7]
+root='/srv/dl_binner/experiments/e022/'+phase;remote_repo='/srv/dl_binner/e022-code/'+source[:7]
+identity=dict(root=root,repo=remote_repo,source=source,phase=phase,user='rasmus_allesoee_gmail_com',service_name='e022-'+phase,setup_service='e022-'+phase+'-setup',archive_prefix='gs://dl-binner-archive-167650584170/e022/'+phase,input_lock=remote_repo+'/experiments/E022-marker-informed-learning/input-lock.json',ceiling_USD=2,provider_STOP_seconds=8100,storage_retention_extended=False)
+ssh=['ssh','-o','ControlMaster=no','-o','ControlPath=none','-o','ConnectTimeout=12','dl-binner-gcp'];scp=['scp','-o','ControlMaster=no','-o','ControlPath=none','-o','ConnectTimeout=12']
+def remote(code,seconds=240):
+ p=subprocess.run(ssh+['/usr/bin/python3 -I -B -c '+shlex.quote(code)],capture_output=True,text=True,timeout=seconds)
+ f=r/(str(time.time_ns())+'-ssh.log');f.write_text(p.stdout+p.stderr);print(p.stdout+p.stderr,flush=True);p.check_returncode();return p.stdout
+try:
+ c.call(['compute','instances','set-scheduling','dl-binner-cpu','--no-restart-on-failure','--max-run-duration=8100s','--instance-termination-action=STOP'],'us-central1-a')
+ policy=c.state();assert policy['scheduling']['maxRunDuration']['seconds']=='8100' and policy['scheduling']['instanceTerminationAction']=='STOP'
+ assert all(policy[k]==before[k]for k in ['machineType','disks','shieldedInstanceConfig','metadata','serviceAccounts'])
+ c.put('provider-STOP-readback.json',policy)
+ c.call(['compute','instances','start','dl-binner-cpu'],'us-central1-a');live=c.state();assert live['status']=='RUNNING'
+ start=datetime.datetime.fromisoformat(live['lastStartTimestamp']).timestamp();assert live['lastStartTimestamp']!=before['lastStartTimestamp']
+ identity['vm_start_epoch']=start;c.put('provider-start.json',live);c.put('clock.json',dict(start_epoch=start,deadline_epoch=start+7200,provider_STOP_epoch=start+8100,retention_epoch=1793142000))
+ for k in range(10):
+  p=subprocess.run(ssh+['true'],capture_output=True,text=True,timeout=20);(r/('ssh-ready-'+str(k)+'.log')).write_text(p.stdout+p.stderr)
+  if p.returncode==0:break
+  time.sleep(2)
+ else:raise RuntimeError('Strict pinned SSH unavailable; no credential fallback')
+ code="""import os,subprocess,json,pathlib,shutil,pwd
+if not os.path.ismount('/srv/dl_binner'):subprocess.run(['sudo','-n','mount','-U','f76283ed-60c4-4060-bd22-84c95f38d3fb','/srv/dl_binner'],check=True)
+if not os.path.ismount('/srv/dl_binner')or os.cpu_count()!=8:raise ValueError('Original allocation/mount differs')
+u=shutil.disk_usage('/srv/dl_binner')
+if u.free<25*1024**3+4*1024**3:raise ValueError('Reserve plus forecast work unavailable')
+base=pathlib.Path('/srv/dl_binner/repo');target=pathlib.Path(TARGET);root=pathlib.Path(ROOT)
+def call(a):return subprocess.check_output(a,cwd=base,text=True).strip()
+if call(['git','status','--porcelain']):raise ValueError('Original checkout dirty')
+call(['git','fetch','origin',BRANCH])
+if call(['git','rev-parse','FETCH_HEAD'])!=SOURCE:raise ValueError('Pushed source differs')
+if target.exists()or root.exists():raise ValueError('Fresh attempt/code path required')
+call(['git','worktree','add','--detach',str(target),SOURCE])
+for n in ['logs','tmp','payload']:(root/n).mkdir(parents=True,exist_ok=False)
+h=dict(initial_filesystem_used_bytes=u.used,filesystem=u._asdict(),boot_id=pathlib.Path('/proc/sys/kernel/random/boot_id').read_text().strip(),user=pwd.getpwuid(os.getuid()).pw_name)
+(root/'initial-host.json').write_text(json.dumps(h,indent=2)+'\n');print('E022_INITIAL_HOST',json.dumps(h))
+""".replace('TARGET',repr(remote_repo)).replace('ROOT',repr(root)).replace('BRANCH',repr(branch)).replace('SOURCE',repr(source))
+ out=remote(code);host=json.loads(next(x.split('E022_INITIAL_HOST ',1)[1]for x in out.splitlines()if x.startswith('E022_INITIAL_HOST ')))
+ assert host['user']==identity['user'];identity['initial_filesystem_used_bytes']=host['initial_filesystem_used_bytes']
+ (r/'identity.json').write_text(json.dumps(identity,indent=2)+'\n')
+ files=[(r/'identity.json','identity.json'),(r/'financial-gate.json','financial-gate.json'),(repo/'artifacts/e022-marker-learning/build-v3/dist/dl_binner-0.1.0.dev9-py3-none-any.whl','dl_binner-0.1.0.dev9-py3-none-any.whl'),(repo/'artifacts/e022-marker-learning/E009-pairs.tar.gz','E009-pairs.tar.gz')]
+ for local,name in files:
+  p=subprocess.run(scp+[str(local),'dl-binner-gcp:'+root+'/payload/'+name],capture_output=True,text=True,timeout=120);(r/('scp-'+name+'.log')).write_text(p.stdout+p.stderr);p.check_returncode()
+  print('E022_PAYLOAD_SENT',name,binding(local),flush=True)
+ argv=['sudo','-n','systemd-run','--unit='+identity['setup_service'],'--uid='+identity['user'],'--property=Restart=no','--property=MemoryMax=26000000000','--property=RuntimeMaxSec='+str(int(start+1800-time.time())),'--property=KillMode=control-group','--property=TimeoutStopSec=30','/usr/bin/python3','-u','-I','-B',remote_repo+'/scripts/e022_bootstrap.py','--identity',root+'/payload/identity.json']
+ remote('import subprocess;subprocess.run('+repr(argv)+',check=True)')
+ c.put('setup-dispatched.json',dict(identity=identity,scope='Native setup/gates only; community release absent',clock_start_epoch=start))
+ print('E022_NATIVE_HELD_SETUP_DISPATCHED',json.dumps(identity),flush=True)
+except BaseException:
+ c.stop();raise

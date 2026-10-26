@@ -1,6 +1,6 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E021 completed E009-only review](../../experiments/E021-frozen-sequence-hybrid/comparison-review.json) is MODIFY: weighted R95 7.3058 -> 7.8175%, but >=90% targets 7 -> 6; oral/skin unrun and original joint KEEP unmet. [Inspection/costs](../../experiments/E021-frozen-sequence-hybrid/inspection-observed.json) verifies shutdown, restore-only recovery and temporary GPU cleanup. Next implement a reliable marker-informed cross-contig learning block locally using retained caches; no automatic GPU/community run or storage renewal. [Operations](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt) owns the exact next scope and October 28 boundary.
+Current handoff: [E022's frozen marker-informed learning comparison](../../experiments/E022-marker-informed-learning/native-observed.json) is running under its separately approved new $2/clock/credit/storage gates. [E021's accepted review](../../experiments/E021-frozen-sequence-hybrid/comparison-review.json) remains MODIFY and immutable. [STATE](../STATE.md) and [E022 operations](../../experiments/E022-marker-informed-learning/OPERATIONS.md) own actual status and the following inspection; no further tool campaign or retention renewal is implied.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.

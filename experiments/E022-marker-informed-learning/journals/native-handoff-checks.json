@@ -1,0 +1,36 @@
+{
+  "status": "PASS_NATIVE_LAUNCH_AND_HEALTHY_HANDOFF",
+  "execution_source": "e88dc8a513e0408cf96dcc9462aa8ba077d7321e",
+  "frozen_members_at_execution_source": 87,
+  "native_gate_exits": [
+    {
+      "name": "runtime",
+      "exit": 0
+    },
+    {
+      "name": "full-readers",
+      "exit": 0
+    },
+    {
+      "name": "tiny-product",
+      "exit": 0
+    },
+    {
+      "name": "operational",
+      "exit": 0
+    },
+    {
+      "name": "tiny-DAG-collection",
+      "exit": 0
+    }
+  ],
+  "progress_epoch": 9,
+  "active_pair_weight": 0.1,
+  "watcher_current_boot_and_process_match": true,
+  "provider_status": "RUNNING",
+  "provider_STOP_seconds": "7743",
+  "original_clock_not_reset": true,
+  "candidate_science_unchanged": true,
+  "quality_unadmitted": true,
+  "docs_check": "PASS 99 maintained documents; ten optional historical cache paths remain unavailable/unverified"
+}

@@ -1,0 +1,526 @@
+{
+  "actual_provider_STOP_Copenhagen": "2026-10-26T04:39:09.328000+01:00",
+  "actual_provider_STOP_epoch": 1792985949.328,
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2",
+  "candidate_wheel": {
+    "bytes": 135827,
+    "sha256": "9122dd88b6799cda55b6d1adeb2626568f759da6cac6ebe811f4963eecd55602"
+  },
+  "checked_Copenhagen": "2026-10-26T02:56:18.911573+01:00",
+  "checked_UTC": "2026-10-26T01:56:18.911573+00:00",
+  "collection_verified": false,
+  "complete_science": false,
+  "costs": {
+    "compute_and_IP_quote_upper_USD": 0.12668899940455144,
+    "credit_delta_is_not_invoice": true,
+    "final_uptime_storage_export_pending": true,
+    "full_phase_conservative_quote_USD": 1.551,
+    "gross_ceiling_USD": 2,
+    "invoice": false,
+    "measured_allocated_upper_seconds_at_observation": 1670.3447003364563,
+    "stopped_disks_USD_month": 31.2,
+    "storage_ceiling_USD": 8,
+    "storage_end": "2026-10-28T00:00:00+01:00",
+    "storage_full_original_interval_conservative_USD": 7.773354803219515
+  },
+  "current_watchdog": {
+    "boot_id": "2d966d44-3429-4839-b7f2-d37dd4596246",
+    "checked_utc": "2026-10-26T01:51:51.610318+00:00",
+    "decision": "workflow alive",
+    "expected_process": {
+      "command_sha256": "0acdc8fcaa1c3a8fe16b0c33eb10171843c3a53745457be9248322552a9d5ac0",
+      "pid": 2143,
+      "start_ticks": 5528
+    },
+    "observed_process": {
+      "command_sha256": "0acdc8fcaa1c3a8fe16b0c33eb10171843c3a53745457be9248322552a9d5ac0",
+      "pid": 2143,
+      "start_ticks": 5528
+    },
+    "shutdown": false,
+    "workflow_root": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2"
+  },
+  "evidence": {
+    "current_native_snapshot": {
+      "binding": {
+        "bytes": 43790,
+        "sha256": "ed4d95b13c9eb3e21e05e9c6b0fd8e89b7e53ba8af16d55139312644f9f919ee"
+      },
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-native/20261026T010043Z-fdad862/attempt-2/1792979519655754000-native-status.json"
+    },
+    "exact_consumer_test": {
+      "bytes": 182,
+      "sha256": "2cbc6d3d369a62c23f9ed9b1274c1283340f47c5b53440f7e0099ebc9a3e82bb"
+    },
+    "financial": {
+      "bytes": 2400,
+      "sha256": "597368fcb1d45fc53679c597ced1735e9ba6eb2c66e79496ef32cfe1d1a49209"
+    },
+    "handoff_control_plane": {
+      "bytes": 33847,
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-native/20261026T010043Z-fdad862/attempt-2/handoff-cloud.json",
+      "sha256": "97ded8b636e2a947d91558c82df9781aff109dd19dc03311e775fb813d4c756e"
+    },
+    "local_root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-native/20261026T010043Z-fdad862",
+    "objects_live": {
+      "bytes": 35255,
+      "sha256": "6c4212695bbc539e719c14d45f3c63eedec22b34c89ce08ed3b05ba94b20386c"
+    },
+    "objects_soft_deleted": {
+      "bytes": 93,
+      "sha256": "a16e2cd3af7fa9827e7ba2aa9883dce3c3424b60ed09522c2654f085ebf6216d"
+    },
+    "original_failed_controller": {
+      "bytes": 6938,
+      "sha256": "7bf262668ca1ddfaad9da7a8fef7759c72b981427b5ebfce1067231937915d3d"
+    },
+    "original_failed_log": {
+      "bytes": 4299,
+      "sha256": "f3039497a485345ce3701f9f1768a597700f2f55bf7a3d3e73f52b8dad91feec"
+    },
+    "prices": {
+      "bytes": 8003,
+      "sha256": "98195e4fbfaf686c46731e1d4a3da452fb51fbda5f06f67cdafb0c37284b46be"
+    },
+    "release_stdout": {
+      "bytes": 550,
+      "sha256": "ae2a0b49a1664934e9190648f27244f715544ea50415e1df4cc21344fa8d01d0"
+    },
+    "repaired_controller": {
+      "bytes": 7342,
+      "sha256": "f6626c981d97209f8e77da8ac4886ad4836a5c0fb84e9ede823870a9d0896e1f"
+    }
+  },
+  "exclusions": "No baseline refit/rescore, new truth use/training labels, acquisition, mapping, GLM extraction, external binner, model/rule/seed/grid change, resource expansion or retention extension. Skin remains unscored.",
+  "execution_source": "e88dc8a513e0408cf96dcc9462aa8ba077d7321e",
+  "failures": [
+    {
+      "attempt": "initial provider start",
+      "error": "Generated remote setup had an unterminated string; rejected before any setup/science. VM independently stopped, failed script/log/source preserved.",
+      "first_allocation_API_seconds": 92.92400002479553,
+      "first_allocation_observation_upper_seconds": 97.76112747192383,
+      "recovery": "Exact rendered consumer compiled and shell-quoted roundtrip tested; fresh explicit attempt retained original budget/deadlines, with earlier provider fallback."
+    },
+    {
+      "attempt": "first release local preflight",
+      "error": "Placeholder substitution also matched a status label; exact compilation rejected it before SSH or release. Preserved journal, narrowed substitution; second explicit release succeeded once."
+    }
+  ],
+  "filesystem": {
+    "free": 60638990336,
+    "total": 316733652992,
+    "used": 256077885440
+  },
+  "financial_gate": {
+    "UTC": "2026-10-26T01:17:18.037037+00:00",
+    "coverage_status": "PASS_FOR_SPECIFIED_ORDINARY_FIRST_PARTY_PRODUCTS_ONLY",
+    "covered_costs": [
+      "compute",
+      "disk",
+      "storage",
+      "network",
+      "operations"
+    ],
+    "credit": {
+      "application": "Net pricing",
+      "expiry": "2027-01-12",
+      "original_DKK": 1973.43,
+      "paid_account": true,
+      "percent_remaining": 91,
+      "remaining_DKK": 1803.6,
+      "scope": "Certain usage; see the terms for free trial.",
+      "start": "2026-10-13",
+      "status": "Available"
+    },
+    "credit_valid_until_epoch": 1799708400.0,
+    "delayed_usage": {
+      "actual": "UNKNOWN_NOT_ZERO",
+      "reason": "Conservative reserve exceeds remaining exposure supported by measured E021 ledger; no running VM before new phase",
+      "reserve_USD": 35
+    },
+    "interpretation": "Allocation/byte/storage estimates and displayed credit are not an invoice. All conservative ceilings/reserves fit remaining Welcome credit; no new product, paid image, GPU, Marketplace, resource or service.",
+    "new_incremental_gross_ceiling_USD": 2,
+    "overview": {
+      "net_DKK": 0,
+      "period": "October 1\u201326, 2026",
+      "rounded_cost_DKK": 168,
+      "rounded_savings_DKK": 168,
+      "warning": "Costs take a few hours to show up, and might take longer than 24 hours. Numbers are rounded to make them easier to read."
+    },
+    "planned_run_full_conservative_USD": 1.551,
+    "price_USD_DKK_conversion": 6.578099999996525,
+    "real_money_authorized": false,
+    "remaining_USD_equivalent": 274.1825147080392,
+    "source": "Direct read-only refreshed Chrome Billing Credits and Overview; explicit extension binding and current visible navigation routes",
+    "storage": {
+      "ceiling_USD": 8,
+      "conservative_month_hours": 730,
+      "full_interval_hours": 169,
+      "live_GCS_bytes": 9526760467,
+      "original_authorization": "User explicitly authorizes new 8 USD incremental gross for existing disks/private evidence, October21 00:00 through October28 00:00 Copenhagen; no compute/resource/deletion/service change",
+      "soft_deleted_bytes": 0,
+      "total_existing_and_proposed_max_export_quote_USD": 7.773354803219515
+    },
+    "storage_retention_extended": false,
+    "storage_valid_until_epoch": 1793142000,
+    "terms": [
+      "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "https://cloud.google.com/terms/free-trial",
+      "https://cloud.google.com/vpc/network-pricing"
+    ]
+  },
+  "full_reader": {
+    "bp": 231678157,
+    "contigs": 145702,
+    "no_training_or_extraction": true,
+    "pair_counts": {
+      "-1": 365,
+      "1": 1963
+    },
+    "pairs": {
+      "bytes": 4239,
+      "sha256": "312859f22d70c000ffc5f4a30841215a930a97f66aebddfc368f2ae94c3a25a0"
+    },
+    "samples": [
+      "cami3_toy_human_gut_short_read_sample_0",
+      "cami3_toy_human_gut_short_read_sample_2",
+      "cami3_toy_human_gut_short_read_sample_3",
+      "cami3_toy_human_gut_short_read_sample_4",
+      "cami3_toy_human_gut_short_read_sample_6",
+      "cami3_toy_human_gut_short_read_sample_9",
+      "cami3_toy_human_gut_short_read_sample_10",
+      "cami3_toy_human_gut_short_read_sample_11",
+      "cami3_toy_human_gut_short_read_sample_14",
+      "cami3_toy_human_gut_short_read_sample_17"
+    ],
+    "status": "PASS_FULL_READERS"
+  },
+  "handoff_control_plane": {
+    "guest": [
+      {
+        "key": "status",
+        "namespace": "e022-candidate",
+        "value": "{\"status\": \"RUNNING\", \"stage\": \"science\", \"root\": \"/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2\", \"source\": \"e88dc8a513e0408cf96dcc9462aa8ba077d7321e\", \"epoch\": 1792978821.180851}"
+      }
+    ],
+    "lastStartTimestamp": "2026-10-25T18:30:06.328-07:00",
+    "observation_epoch": 1792979520.761824,
+    "provider_status": "RUNNING",
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "7743"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    }
+  },
+  "identity": {
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2",
+    "ceiling_USD": 2,
+    "current_boot_start_epoch": 1792978206.328,
+    "initial_filesystem_used_bytes": 256026517504,
+    "input_lock": "/srv/dl_binner/e022-code/e88dc8a/experiments/E022-marker-informed-learning/input-lock.json",
+    "phase": "marker-20261026T012935Z-e88dc8a-r2",
+    "provider_STOP_seconds": 8100,
+    "repo": "/srv/dl_binner/e022-code/e88dc8a",
+    "root": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2",
+    "service_name": "e022-marker-20261026T012935Z-e88dc8a-r2",
+    "setup_service": "e022-marker-20261026T012935Z-e88dc8a-r2-setup",
+    "source": "e88dc8a513e0408cf96dcc9462aa8ba077d7321e",
+    "storage_retention_extended": false,
+    "user": "rasmus_allesoee_gmail_com",
+    "vm_start_epoch": 1792977938.7
+  },
+  "latest_training_progress": {
+    "available_views": 432664,
+    "composition_reconstruction": 0.5323506832153595,
+    "depth_dropped_views": 216388,
+    "depth_reconstruction": 0.022362656421736238,
+    "ema_updates": 3132,
+    "epoch": 9,
+    "fused_positive": 0.31773782465850214,
+    "geometry": {
+      "online": {
+        "fused": {
+          "catastrophic_collapse": false,
+          "effective_rank": 32.702952570415846,
+          "mean_dimension_std": 0.0995271696171137,
+          "mean_other_cosine": 0.35609191036242877,
+          "rows": 8192
+        },
+        "sequence": {
+          "catastrophic_collapse": false,
+          "effective_rank": 33.199645310753546,
+          "mean_dimension_std": 0.09941410127098865,
+          "mean_other_cosine": 0.3569405050060731,
+          "rows": 8192
+        }
+      },
+      "target": {
+        "fused": {
+          "catastrophic_collapse": false,
+          "effective_rank": 31.95523411868916,
+          "mean_dimension_std": 0.10060817407320438,
+          "mean_other_cosine": 0.3419099716030583,
+          "rows": 8192
+        },
+        "sequence": {
+          "catastrophic_collapse": false,
+          "effective_rank": 32.53463520370679,
+          "mean_dimension_std": 0.1000751664535108,
+          "mean_other_cosine": 0.3481146334342826,
+          "rows": 8192
+        }
+      }
+    },
+    "last_tau": 0.9976862394597431,
+    "loss": 1.0305994335228585,
+    "parents_seen": 89041,
+    "relation_negative": 3.582877093801986e-05,
+    "relation_pairs_exposed": 2328,
+    "relation_positive": 0.01663115477067192,
+    "relation_weight": 0.1,
+    "sequence_positive": 0.35321592083222675,
+    "stage": "relational_epoch",
+    "utc": "2026-10-26T01:51:41Z",
+    "wall_seconds": 624.2076998370001
+  },
+  "native_gates": {
+    "config": {
+      "bytes": 3007,
+      "sha256": "28648b73045e669cdb863687c136f12d6bf5dc9488ee04d135b3aab868fa5e82"
+    },
+    "elapsed_since_VM_start_seconds": 440.5227131843567,
+    "scope": "Fresh Linux gates, no community science released; package-only install is separate inside same original clock",
+    "stages": [
+      {
+        "name": "runtime",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_runtime.py",
+            "--base",
+            "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+            "--reference",
+            "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json",
+            "--candidate-lock",
+            "/srv/dl_binner/e022-code/e88dc8a/experiments/E022-marker-informed-learning/candidate-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/gates/runtime.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2203,
+          "peak_sampled_rss_bytes": 298164224,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.9528495737378395,
+          "sampled_cpu_seconds": 24.220000000000002,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1467.0278322696686,
+          "stop_reason": null,
+          "wall_seconds": 25.418492768999997
+        }
+      },
+      {
+        "name": "full-readers",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_gates.py",
+            "--readers",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/science-plan.json",
+            "--output",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/gates/readers.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2234,
+          "peak_sampled_rss_bytes": 3360276480,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.917167075618155,
+          "sampled_cpu_seconds": 45.74,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1441.6089367866516,
+          "stop_reason": null,
+          "wall_seconds": 49.870957228999984
+        }
+      },
+      {
+        "name": "tiny-product",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "/srv/dl_binner/e022-code/e88dc8a/tests/product",
+            "-p",
+            "test_relational.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2310,
+          "peak_sampled_rss_bytes": 349622272,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 3.564855871713453,
+          "sampled_cpu_seconds": 54.04,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1391.7376182079315,
+          "stop_reason": null,
+          "wall_seconds": 15.159098135999983
+        }
+      },
+      {
+        "name": "operational",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "/srv/dl_binner/e022-code/e88dc8a/tests",
+            "-p",
+            "test_e022_operational.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2332,
+          "peak_sampled_rss_bytes": 59912192,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.6385094915373697,
+          "sampled_cpu_seconds": 0.3200000000000003,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1376.578208208084,
+          "stop_reason": null,
+          "wall_seconds": 0.5011671780000029
+        }
+      },
+      {
+        "name": "tiny-DAG-collection",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_tiny.py",
+            "--root",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/gates/tiny-DAG",
+            "--workflow-python",
+            "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2333,
+          "peak_sampled_rss_bytes": 582692864,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.9712404980716594,
+          "sampled_cpu_seconds": 32.72,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1376.076696395874,
+          "stop_reason": null,
+          "wall_seconds": 16.598684956
+        }
+      }
+    ],
+    "status": "SUCCESS"
+  },
+  "native_launch_lock": {
+    "bytes": 1244,
+    "sha256": "adf342292942e7506c5fac33e23aa2b19456ec0c62e6295ff53a9bdbe6185b39"
+  },
+  "native_root": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2",
+  "new_quality_result": null,
+  "original_clock": {
+    "deadline_epoch": 1792985138.7,
+    "provider_STOP_epoch": 1792986038.7,
+    "retention_epoch": 1793142000,
+    "start_epoch": 1792977938.7
+  },
+  "phase": "marker-20261026T012935Z-e88dc8a-r2",
+  "release": {
+    "actual_provider_STOP_epoch": 1792985949.328,
+    "filesystem": {
+      "free": 60647538688,
+      "total": 316733652992,
+      "used": 256069337088
+    },
+    "original_clock": {
+      "deadline_epoch": 1792985138.7,
+      "provider_STOP_epoch": 1792986038.7,
+      "retention_epoch": 1793142000,
+      "start_epoch": 1792977938.7
+    },
+    "release": {
+      "bytes": 1947,
+      "sha256": "8a9fabcbd7d1a5f91fcb80c93ffa6029433ead29c94c017406feb801f9ee571e"
+    },
+    "status": "RELEASED_ONCE",
+    "versions": {
+      "numerical": "3.10.15 | packaged by conda-forge | (main, Oct 16 2024, 01:24:24) [GCC 13.3.0]",
+      "workflow": "3.12.10"
+    }
+  },
+  "runtime": {
+    "erratum": "Prepared prompt described numerical reuse as Python 3.12; exact accepted E021 reference and frozen E022 checker bind 3.10.15. Retained that same base, complete inventory and library hashes; no version fallback, port or reinstall. Workflow is separately Python 3.12.10.",
+    "numerical": "3.10.15",
+    "original_bound_environment_reused_unchanged": true,
+    "workflow": "3.12.10"
+  },
+  "scientific_prepared_source": "fdad862143799cab2d6943aa25070e2a9ad459c7",
+  "services": {
+    "e022-marker-20261026T012935Z-e88dc8a-r2-exit.timer": "Result=success\nActiveState=active\nSubState=waiting\n",
+    "e022-marker-20261026T012935Z-e88dc8a-r2-setup.service": "MainPID=0\nResult=success\nActiveState=inactive\nSubState=dead\n",
+    "e022-marker-20261026T012935Z-e88dc8a-r2.service": "MainPID=2143\nResult=success\nActiveState=active\nSubState=running\n"
+  },
+  "shutdown_confirmed": false,
+  "source_freeze": {
+    "bytes": 13819,
+    "sha256": "279e850cc68a8da80a10266a8503ce65c4c775a55be2a60fbcc43a50f520e6de"
+  },
+  "status": "RUNNING_UNDER_VERIFIED_SUPERVISION",
+  "supervision": {
+    "boot_id": "2d966d44-3429-4839-b7f2-d37dd4596246",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "hard_deadline_epoch": 1792985138.7,
+    "native_normal_exit_and_crash_tests_passed": true,
+    "original_vm_start_epoch": 1792977938.7,
+    "parent_unit": "e022-marker-20261026T012935Z-e88dc8a-r2.service",
+    "process": {
+      "command_sha256": "0acdc8fcaa1c3a8fe16b0c33eb10171843c3a53745457be9248322552a9d5ac0",
+      "pid": 2143,
+      "start_ticks": 5528
+    },
+    "provider_stop_epoch": 1792986038.7,
+    "source_commit": "e88dc8a513e0408cf96dcc9462aa8ba077d7321e",
+    "status": "ARMED_AND_TESTED",
+    "timer_seconds": 30,
+    "watchdog_service": "e022-marker-20261026T012935Z-e88dc8a-r2-exit.service",
+    "watchdog_timer": "e022-marker-20261026T012935Z-e88dc8a-r2-exit.timer"
+  }
+}

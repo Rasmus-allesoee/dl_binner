@@ -467,6 +467,9 @@ Use actual native readers/writers and tiny real inputs where locally available;
 keep mocks for external dependencies outside the contract under test. Record
 which paths ran, which were mocked or skipped, and which still need Linux
 validation. Passing test counts alone are not evidence of native readiness.
+For generated remote Python or shell helpers, compile/parse the fully rendered
+consumer before starting a paid allocation; parsing only its controller does not
+validate nested quoting or placeholder substitution.
 For helpers launched with isolated Python (`-I`), test the exact subprocess argv
 from outside the checkout, including any transferred helper layout. In-process
 imports can mask a missing sibling import that isolated execution will refuse.
