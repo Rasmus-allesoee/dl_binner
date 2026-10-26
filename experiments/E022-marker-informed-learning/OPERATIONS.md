@@ -1,6 +1,49 @@
 # E022 operations
 
-## Current native execution, October 26, 2026
+## Completed inspection, October 26, 2026
+
+**COMPLETE / independently reviewed / MODIFY. VM TERMINATED.**
+[Final inspection](inspection-observed.json), [comparison](comparison-review.json),
+[all targets](comparison-targets.tsv), [results/reasoning](README.md) and
+[cost ledger](cost-review.json) supersede the dated running handoff below.
+
+Phase `marker-20261026T012935Z-e88dc8a-r2`: all five gates, seven serial science
+stages, final target, reuse-after and collection/upload/readback pass. All 299
+archive members and the exact reload alias verify. Private watchdog exit snapshot
+matches the current boot/process and provider independently reports TERMINATED.
+No wake, replay, model/policy change, old rescore or new extraction/data.
+
+Post weighted R95 **7.7497% versus E021 7.8175%**, −375,929 bp; target-50 stays 14,
+target-90 rises **6 -> 8**. Parent/old/E013 R95 are identical, partitions differ.
+Thirteen target gains / eleven losses, modest bacterial geometry/grouping gains,
+eukaryotic losses, full 156-reference denominators / N quarantine preserved.
+KEEP fails unchanged, ABANDON also fails; **MODIFY**, not promotion.
+
+Actual allocation **45.59 minutes**, science **29.34 minutes / 3.889 GB sampled
+RSS**, global sampled growth **0.655 GiB**, minimum free **55.87 GiB**. Priced
+allocation/disk/export subtotal **$0.25310 / $0.85310 with reserves** within original
+new $2, not an invoice or a credit-delta attribution. Fresh credit DKK 1,800.33 /
+91%, January 12 expiry; delayed usage remains unknown / $35 reserve. All original
+source/runtime/axis/clock/space limits pass; earlier failures and errata survive.
+
+Private evidence:
+`gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/`.
+Local inspection: `artifacts/e022-inspection/20261026/`, frozen diagnostics under
+`local-review-attempt1/diagnostics-E009-relational/`. Archive SHA256
+`d7d709969070ee0831e2a765eacf6e3588de725cf37e2ca914c58022423c4cd9`.
+Complete raw return, independent audit/sampler and failed preliminary probes are
+preserved there; maintained receipts bind their bytes. Bulk vectors/context/DNA
+and original runtime/input dependencies remain native, not backed up by hashes.
+
+**Preservation decision due before October 28, 00:00 Copenhagen (CET).** Current
+original storage interval ends then, no renewal/deletion authorization. Proposed
+new **$8 storage-only** through November 4 forecasts **$7.73** with current GCS,
+2 GiB extra and reserve, subject to fresh credit/inventory/eligibility checks.
+Stopped original disks conservatively cost $31.20/month. This proposal is separate
+from any new compute. The next prompt below grants that scope only if the owner
+explicitly invokes it; no approval is inferred from writing it.
+
+## Dated native admission handoff, October 26, 2026 (superseded)
 
 **RUNNING under verified supervision**, phase `marker-20261026T012935Z-e88dc8a-r2`. The current
 [native receipt](native-observed.json) owns status, clocks, gates and progress;
@@ -255,15 +298,14 @@ records/check/commit with what changed/why, report costs/resources/limits and on
 strongest next decision. Surface separately priced preservation/retention needs
 before October 28; do not automatically renew or delete accepted bulk.
 
-## Exact following prompt
+## Executed October 26 inspection prompt
 
 Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E022's frozen
 candidate/design/protocol/criteria, original source/input/pair/reuse/launch locks,
 local/native evidence and operations. Inspect phase
 `marker-20261026T012935Z-e88dc8a-r2`; preserve dev3/dev4/dev5/E016/E019/E021 and all
 accepted inputs, truth, outputs/source freezes and failed journals. The candidate
-and scientific wheel remain fdad862; operational native source is e88dc8a. Keep
-DCVBin efficiency context deferred; no candidate or policy changes.
+and scientific wheel remain fdad862; operational native source is e88dc8a. Keep DCVBin changes out of this review, but leave them eligible as a future recommendation if the E022 results support them.
 
 Check the GCP control plane, `e022-candidate/status` and private completion.json
 under `gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/`.
@@ -314,3 +356,85 @@ separately priced preservation/retention decision before October 28, without
 automatic renewal or deletion of accepted bulk. Update records/check/commit with
 structured what changed/why; report actual costs/resources/results/limits and the
 next exact prompt with any separate authorization needed.
+
+
+## Exact following prompt
+
+Our goal is substantially closing the recovery gap. Read AGENTS.md,
+PROJECT_INTENT.md, STATE/CLOUD, D013/D015, completed literature/source/thesis reviews,
+E022's reviewed comparison/all-target diagnostics/inspection/costs and the retained
+E017/E018 grouping failures. Preserve immutable dev3/dev4/dev5/E016/E019/E021/E022
+and all accepted inputs, truth, outputs, source freezes and failed journals. Use a
+new descriptive research branch without a codex/ prefix.
+
+Implement one coherent **adaptive-density, abundance/marker-informed bin-construction
+upgrade locally**, holding learning, native unit vectors and existing seed fixed.
+Use E022 E009-ten-depth and already available E019 oral-sequence-only caches as
+separate fixed learning anchors. Each future matched comparison must use its own
+retained ordinary CPM/E013 baseline without refitting/rescoring. Different anchors
+test downstream transfer; do not call this E022 learning on two communities.
+
+Use judgment and targeted primary-source checks to resolve one scalable local-
+density/candidate-hierarchy and conservative bin-selection/refinement algorithm.
+Address both mixed and fragmented bins; retain supported whole-parent and child/
+consolidation alternatives. Use explicit length/composition, actual measured
+parent-depth where available and reliable cached-marker evidence. Markers are
+fallible, lineage/panel-limited proxies, not hard universal cannot-links or truth K.
+A changed sparse candidate graph is part of this declared grouping treatment;
+preserve original graphs and audit new candidate/geometry/index mapping contracts.
+Avoid dense all-pairs matrices. Do not repeat E017/E018's single long-core CPM plus
+fixed-profile/vote recruitment under a new name, force recruitment, use a universal
+graph-gain veto, or search a resolution/score grid. No measured coverage variance
+or window coverage may be invented. Missing depth is explicit, never zero-filled
+as evidence. Keep every short, marker-negative, unknown/non-target and optionally
+unassigned contig and complete DNA accounting.
+
+Record a concise prospective design and proceed directly to local implementation.
+Freeze one label-free policy/default/source and joint keep/modify/abandon criteria
+before changed community outcomes. Truth may diagnose/evaluate, never select
+thresholds, bins, merges, seeds, K or training inputs. Do not tune to ASV406.4 or
+choose a per-target oracle. Preserve real sparse-reader/cache/index/unit-sphere,
+density/selection/refinement/export/reload contracts on tiny actual fixtures,
+including unequal-density groups, bridge contamination, distinct true marker loci,
+short/no-marker DNA, absent depth and abstention. Report actual versus mocked paths.
+Bound local engineering to four numerical threads, 8 GB sampled tree RSS, two
+cumulative hours and 4 GiB extra; check actual free space, preserve failed attempts
+and debug operational errors within that clock. No new community grouping/score,
+training, baseline rescore, GLM extraction, marker redetection, data acquisition,
+mapping, aligner, external binner, paid compute, VM start or resource change here.
+
+Prepare, test and separately price the first two-community cached comparison.
+Forecast complete setup/native gates/grouping/selection/export/collection/review,
+CPU/RAM/peak disk/archive and cost; fresh credits/eligibility/storage admission and
+an exact separate execution request are required. Reuse existing caches/science,
+with no recopy/reinstall fallback or automatic retry/extension. Preserve all
+alternatives and full conservative E009-v2 / separately named oral-origin
+156/799 denominators, N quarantine and oral known-shared sensitivity. Do not claim
+independent confirmation from these two development communities.
+
+Keep the original skin choice unscored. Preserve the original source/610-target
+provided-origin plan; explicitly version any prospective candidate/protocol amendment
+before later untouched outcomes. Name remaining genome/replicon/molecule/host/
+circular/taxonomy/near/pretraining/competitive-ambiguity/unique-versus-origin/evaluator/
+measured-depth/cost dependencies. Skin cannot confirm active depth-gated E022
+learning. A genuinely independent depth-enabled community or oral GSA read mapping
+needs separately costed data/compute/truth admission; acquire/run neither now.
+Larger/fine-tuned Transformers, taxonomy and DCVBin-inspired efficiency remain
+future options, not additions to this fixed-learning grouping block.
+
+I authorize a **new $8 storage-only allowance from October 28 at 00:00 Copenhagen
+through November 4 at 00:00 Copenhagen**, subject to fresh Welcome-credit
+balance/scope/expiry, delayed usage, product eligibility, prices, complete retained
+GCS/soft-delete inventory and remaining original storage approval. Keep original
+30 + 300 GiB disks and existing private bucket only. Do not resize/provision/start
+anything or delete accepted evidence. No real-money charges are authorized. Stop
+before unclear/uncovered costs or a forecast beyond $8; no automatic later renewal.
+Record approval/checks prospectively before the original boundary, preserving the
+expensive GLM/context/DNA/runtime dependencies. If that date has already passed,
+report the actual uncovered interval and obtain an explicit revised scope instead
+of backdating approval. The $8 covers storage only, not the prepared comparison.
+
+Update records/check/commit with structured what changed/why. Report what works,
+remaining native/quality contracts, why this is materially different from failed
+E017/E018, resources/cost/storage status, selective paired evaluation scope and the
+exact next execution prompt. Do not start the comparison in this preparation task.

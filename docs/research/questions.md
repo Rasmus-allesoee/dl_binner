@@ -626,3 +626,16 @@ recovery; Q001/Q003/Q005 remain open. Missing depth abstains, skin remains unsco
 and fresh native/cost/retention admission precedes any community fit.
 [DCVBin source audit](../evidence/2026-10-25-dcvbin-efficiency-and-marker-learning.md)
 records cheaper exposure and batching ideas without claiming measured speed.
+
+
+E022 completed inspection, October 26, 2026: [the frozen learning block](../../experiments/E022-marker-informed-learning/comparison-review.json)
+is MODIFY: full-reference R95 7.8175 -> 7.7497%, target-90 count 6 -> 8, bacterial
+neighbors/grouping modestly improve while eukaryotic geometry worsens. Constraint
+labels are mostly consistent where attributable, with unresolved pairs preserved;
+no unique-identity, isolated-loss or product-family conclusion. Q001/Q003/Q005 remain
+open. [D015](../decisions/D015-coherent-prototype-upgrade.md#e022-reviewed-trade-offs-and-next-bin-construction-block-october-26-2026)
+selects one adaptive-density/bin-construction local block with learning fixed,
+explicitly accounting for E017/E018 oral failures, rather than another loss/grid
+or larger model by default. Broader depth-enabled confirmation/source/truth and
+separate cost admission remain needed; frozen skin stays unscored. October 28
+preservation approval is separate from any new compute or automatic deletion.

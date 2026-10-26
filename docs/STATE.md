@@ -2,45 +2,68 @@
 
 Updated: October 26, 2026 (Copenhagen). This is the single current handoff.
 
-**E022 is RUNNING under independently verified supervision**, phase
-`marker-20261026T012935Z-e88dc8a-r2`. [Native receipt](../experiments/E022-marker-informed-learning/native-observed.json)
-owns its actual current stage/resources/gates; [operations](../experiments/E022-marker-informed-learning/OPERATIONS.md)
-owns the next inspection prompt. Five native gates and exact restore pass; the
-single frozen E009 candidate fit is progressing with full parents/views/pairs and
-the declared side-loss ramp. No completion, returned archive or recovery score is
-admitted. Immutable E021 and older outputs remain unchanged; no baseline refit,
-external run, new extraction/data or confirmation.
+**E022 completed, checksum-verified and independently reviewed: MODIFY. VM
+TERMINATED.** [Inspection](../experiments/E022-marker-informed-learning/inspection-observed.json),
+[comparison](../experiments/E022-marker-informed-learning/comparison-review.json),
+[all 156 targets](../experiments/E022-marker-informed-learning/comparison-targets.tsv)
+and [costs](../experiments/E022-marker-informed-learning/cost-review.json) supersede
+its dated running handoff. Phase `marker-20261026T012935Z-e88dc8a-r2` passes all five
+native gates, seven serial scientific stages, final target, used-inputs-after,
+collection/upload/readback and independently matching exit-watcher evidence.
+All 299 archive members / exact reload alias, original source/schedule/axes and
+full DNA accounting pass. No wake, accepted-stage replay, old rescore or new data.
 
-Prepared scientific source `fdad862`, clean normally pushed operational source
-`e88dc8a`, unchanged locked dev9 wheel and pair/input/config policy. An initial
-remote setup quoting failure was independently stopped before setup/science;
-the repaired explicit attempt preserves the original two-hour clock and new $2.
-First start 02:25:38.700 Copenhagen; driver deadline **04:25:38.700**; actual provider
-STOP **2026-10-26T04:39:09.328000+01:00**. Fresh current-boot/PID/start/command watcher and timer pass live,
-normal/crash and restart-refusal tests. Leave supervision/provider STOP intact.
+| E009 conservative v2 post | E021 | E022 |
+| --- | ---: | ---: |
+| Full-reference weighted R95 | 7.8175% | **7.7497%** |
+| Targets at least 50% recovered | 14 | **14** |
+| Targets at least 90% recovered | 6 | **8** |
 
-Runtime description corrected openly: exact accepted numerical base is **Python
-3.10.15**, separate workflow Python **3.12.10**. Original prose's 3.12 numerical
-claim was inaccurate; original complete distribution/source/library checks pass
-without an environment port/fallback. All 145,702 contigs / 231,678,157 bp, ten
-ordered depth columns and 2,328 pairs pass actual full readers. Full-scale outcome
-and final cost remain pending; tiny mocks are not biological validation.
+R95 changes by −375,929 bp / −0.06778 percentage points, with 13 target gains / 11
+losses. Three targets newly pass 90%; ASV406.4 falls below the purity gate and loses
+3.112 Mb of passing recovery. Bacterial native neighbors and grouping improve
+modestly, eukaryotic geometry worsens, and parent/old/E013 have identical R95 with
+different partitions. Original KEEP fails; higher target-90 count prevents ABANDON.
+No default promotion, demonstrated critical implementation bug or universal marker
+verdict. Full 156 / 554,661,890 bp denominators and 3.3034% N quarantine remain.
 
-Fresh Welcome credit **DKK 1,803.60 / 91%**, January 12 expiry; delayed usage unknown
-with $35 reserve. Full new-phase conservative quote ~$1.551 within $2. Original
-$8 storage interval conservatively ~$7.7734, ending **October 28, 00:00 Copenhagen**;
-no renewal. Existing stopped disks cost **$31.20/month**. Native bulk bank/context/
-DNA are not backed up by compact inventory hashes. No extra resources are needed.
+The candidate remains fdad862, operational source e88dc8a. Original numerical
+Python 3.10.15 and workflow 3.12.10 are verified; retain the earlier prose erratum,
+failed Mac portability tolerance and all failed native/local journals. One frozen
+new-output evaluator invocation passes in 32.62 seconds / 1.406 GB sampled RSS.
+No library/runtime, module, pair, model or downstream policy was changed.
+
+Total measured allocation 45.59 minutes including the first failed pre-setup
+start; science 29.34 minutes / 3.889 GB sampled RSS. Global sampled disk growth
+0.655 GiB, minimum free 55.87 GiB. Compute/IP ~$0.20746, run-disk attribution ~$0.03247,
+export ~$0.01303: **$0.25310 subtotal / $0.85310 with reserves**, inside original $2.
+These are priced allocations, not an invoice or credit-delta attribution. Fresh
+Welcome credit **DKK 1,800.33 Available / 91%**, January 12 expiry; reporting lag
+unknown with $35 reserve. Existing storage forecast ~$7.774 within original $8.
 
 ## Exact next step
 
-[Inspect E022's completion](../experiments/E022-marker-informed-learning/OPERATIONS.md#exact-following-prompt)
-without another job. If still healthy, report progress and leave it supervised.
-After confirmed shutdown, admit actual exits, source/member/alias bytes and cost
-before frozen local conservative-v2 diagnostics. No baseline rescore or tuning;
-full reference/population denominators and N quarantine remain. Keep skin unscored
-and separately admit any future depth/data/truth/cost question. Make the original
-October 28 preservation/retention decision explicitly; no automatic renewal/deletion.
+**Implement one adaptive-density, abundance/marker-informed bin-construction block
+locally, with learning and native vectors fixed; prepare a two-community cached
+comparison without executing it.** [D015](decisions/D015-coherent-prototype-upgrade.md#e022-reviewed-trade-offs-and-next-bin-construction-block-october-26-2026)
+weighs larger learning/taxonomy upgrades, efficiency work and additional data. This
+is a coherent local-density/whole-parent/candidate-selection upgrade, not another
+CPM resolution or loss grid, or a repeat of E017/E018's fixed-profile recruitment.
+Use E022 E009 and existing E019 oral vectors, each against its own retained CPM/E013
+output. Different fixed learning anchors test the shared downstream policy, not
+E022 learning without depth. Freeze one rule and joint no-regression criteria
+before new outcomes; no community fit/score is authorized by this inspection.
+[Operations](../experiments/E022-marker-informed-learning/OPERATIONS.md#exact-following-prompt)
+has the full proposed next prompt.
+
+**Owner preservation decision needed before October 28, 00:00 Copenhagen (CET).**
+Original stopped disks conservatively cost $31.20/month. A new $8 storage-only week
+through November 4 forecasts ~$7.73 with GCS/2 GiB extra/reserve; it is **not yet
+approved**. Do not renew/delete automatically. Bulk GLM/context/DNA and linked
+runtime prerequisites on the work disk are not backed up by compact inventories.
+Skin stays unscored; its provided-origin/overlap/evaluator/real-depth/cost limits
+remain. Independent depth-enabled confirmation needs separate prospective data
+and resource admission, without acquisition now.
 
 ## Preserved E021 completed review
 

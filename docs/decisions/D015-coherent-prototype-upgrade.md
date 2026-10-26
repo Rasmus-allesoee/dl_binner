@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E021 completed E009-only review](../../experiments/E021-frozen-sequence-hybrid/comparison-review.json) is MODIFY: weighted R95 7.3058 -> 7.8175%, but >=90% targets 7 -> 6; oral/skin unrun and original joint KEEP unmet. [Inspection/costs](../../experiments/E021-frozen-sequence-hybrid/inspection-observed.json) verifies shutdown, restore-only recovery and temporary GPU cleanup. Next implement a reliable marker-informed cross-contig learning block locally using retained caches; no automatic GPU/community run or storage renewal. [Operations](../../experiments/E021-frozen-sequence-hybrid/OPERATIONS.md#exact-following-prompt) owns the exact next scope and October 28 boundary.
+Current handoff: [E022 completed review](../../experiments/E022-marker-informed-learning/comparison-review.json) is MODIFY: full-reference R95 7.8175 -> 7.7497%, but targets at least 90% recovered rise 6 -> 8. [Inspection/costs](../../experiments/E022-marker-informed-learning/inspection-observed.json) verify completion, shutdown and original envelopes. Next locally implement one adaptive-density, abundance/marker-informed bin-construction block with fixed representations, and prepare its matched cached comparison. No new community execution or retention renewal is implied. The dated decisions below remain history; [STATE](../STATE.md) and [E022 operations](../../experiments/E022-marker-informed-learning/OPERATIONS.md#exact-following-prompt) own the next scope.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
@@ -1388,3 +1388,86 @@ Fresh credit DKK 1,803.60 and ordinary product/prices/coverage pass with pending
 usage reserve. Original stopped storage still ends October 28; no renewal or
 cleanup. Next inspect shutdown/exits/bytes/cost before frozen local diagnostics
 and one recovery-focused decision. All additional data/confirmation remain separate.
+
+
+## E022 reviewed trade-offs and next bin-construction block, October 26, 2026
+
+[The frozen comparison](../../experiments/E022-marker-informed-learning/comparison-review.json)
+returns **MODIFY**, without changing its practical rule. R95 loses 375,929 bp /
+0.06778 percentage points, target-50 stays 14 and target-90 rises 6 -> 8. Thirteen
+targets gain / eleven lose. ASV266.11 reaches 99.20%; ASV150.14/ASV300.2 cross 90%.
+ASV406.4 loses 3,111,747 passing bp, although its largest new dominant bin contains
+3,193,657 confirmed bp: conservative all-DNA purity 0.762798 is below the original
+0.95 gate. This is a mixture/uncertainty diagnosis, not permission to edit that bin,
+weaken truth, or label all its unconfirmed bases as biological contamination.
+
+Bacterial native neighbors improve 0.71257 -> 0.72030 and bp-weighted grouping
+precision/recall 0.80848/0.57793 -> 0.81556/0.59175. Eukaryotic geometry worsens.
+Final effective ranks 38.98 online / 35.97 target and exact reload/native neighbor
+proofs show no collapse or demonstrated critical adapter/geometry mistake. Tiny
+zero-weight equality is engineering evidence, not the unrun community ablation.
+Of 1,963 positives, 1,301 agree on admitted dominant labels, 4 disagree and 658
+remain unresolved; negatives have 210 disagreements, no equal labels and 155
+unresolved. Retain uncertainty and all pairs; this does not prove unique identity.
+
+**Next: one adaptive-density, abundance/marker-informed bin-construction upgrade,
+with the current representations fixed.** The new learner supplies modestly better
+bacterial neighborhoods yet final recovery remains limited by both impure and
+fragmented outputs. E022 has 2,031 bins; 252 bacterial-dominant bins / 10.81 Mb fall
+below 200 kb. These observations justify testing bin construction, not declaring
+it the only bottleneck or assuming small bins should all merge. Ordinary CPM uses
+one global density rule; E013 can select parent/children but cannot consolidate
+fragments. Parent/old/E013 recovery is identical here, so another split-acceptance
+threshold is not the strongest next move.
+
+Use a single coherent local-density/candidate hierarchy with conservative
+bin-level split/merge/assignment alternatives, explicit length/composition/depth
+support and reliable cached-marker proxies. Preserve whole-parent alternatives,
+all DNA and unassigned outcomes. Do not define K, select bins or tune a resolution
+with truth. Resolve the exact algorithm/defaults prospectively during local coding,
+then freeze it before community outcomes. Labels may diagnose, never select.
+Mean-only depth cannot supply measured variance or independent window coverage.
+
+This is **not a repeat of E017/E018**: those use one long-core CPM partition and
+fixed-profile/vote recruitment, with serious oral harm. Keep their failures as
+contrary evidence. The next method must address variable density and competing
+whole-bin alternatives, rather than relax their recruitment gates. Prepare a
+matched comparison on E022 E009 vectors and already available E019 oral vectors,
+each against its own retained CPM/E013 outputs, with one common missing-depth-aware
+rule and joint no-regression/gain criteria. Different upstream anchors limit the
+claim to downstream transfer; oral cannot validate active depth-gated E022 learning.
+No new extraction, fit, baseline rescore or confirmation acquisition is needed for
+preparation. Actual community grouping/scoring needs a separately approved plan.
+
+Targeted source checks reuse the completed review: MetaBAT2 combines normalized
+composition/abundance evidence and iteratively expands/partitions its graph;
+VAMB selects length-weighted local density valleys. Independently rooted caches
+are clean for the inspected files at MetaBAT `8eb96023ef627d1955c05e3aca348c84b8757914`
+and VAMB `b146fb610921aef1da8aed5d739f1ce80d21b33a`, with hashes in E022's review.
+These are source observations, not reproduced runtime or parity. They support an
+adaptive alternative to a global cut, without importing unsupported variance.
+
+A broader Transformer/fine-tuning or taxonomy branch could improve information,
+but the current results do not establish capacity/missing taxonomy as the primary
+failure; annotation/database overlap, runtime and novel/short-contig uncertainty
+would add new dependencies. Another side-weight/grid or zero-GLM attribution fit
+is secondary unless it changes a design decision. DCVBin-inspired token batching,
+cheaper prior exposure or distillation remain valuable future scaling options,
+not demonstrated equal-information speedups or changes made in this inspection.
+A cached downstream block offers a concrete recovery decision now, without
+concluding that richer models or reference information do not belong in the tool.
+
+Do not postpone independent data indefinitely. Frozen skin remains unscored under
+its original source/610-target provided-origin protocol; unique/competitive/near/
+pretraining/molecule/host/circular/taxonomy/evaluator/depth limits remain. It cannot
+confirm the active depth-gated mechanism. A different depth-enabled community or
+oral-to-GSA measured depth needs prospective source/overlap/truth/reads/mapping/
+cost/retention admission; no acquisition is authorized now. A cached oral control
+is development evidence, not that missing independent confirmation.
+
+[Inspection](../../experiments/E022-marker-informed-learning/inspection-observed.json)
+accepts all five gates, seven stages, all 299 members/alias and matching shutdown.
+Priced allocation/storage/export subtotal $0.25310 / $0.85310 with reserves stays
+inside the original new $2. Original $8 storage ends October 28 at 00:00 Copenhagen;
+a separate new $8 week through November 4 forecasts $7.73 and requires owner approval.
+No automatic deletion/renewal, additional science or resource change occurred.

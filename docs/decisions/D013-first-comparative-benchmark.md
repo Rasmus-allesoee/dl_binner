@@ -1,6 +1,6 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E022's frozen marker-informed learning comparison](../../experiments/E022-marker-informed-learning/native-observed.json) is running under its separately approved new $2/clock/credit/storage gates. [E021's accepted review](../../experiments/E021-frozen-sequence-hybrid/comparison-review.json) remains MODIFY and immutable. [STATE](../STATE.md) and [E022 operations](../../experiments/E022-marker-informed-learning/OPERATIONS.md) own actual status and the following inspection; no further tool campaign or retention renewal is implied.
+Current handoff: [E022's verified review](../../experiments/E022-marker-informed-learning/comparison-review.json) is MODIFY: slightly lower full-reference R95, two more targets at least 90% recovered. Completion, shutdown, source/member contracts and original costs pass. [D015](D015-coherent-prototype-upgrade.md#e022-reviewed-trade-offs-and-next-bin-construction-block-october-26-2026) recommends a coherent adaptive bin-construction block locally with fixed representations, not another mature-tool campaign. [STATE](../STATE.md) and [E022 operations](../../experiments/E022-marker-informed-learning/OPERATIONS.md#exact-following-prompt) own the next scope and separate October 28 storage decision.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.
@@ -779,3 +779,29 @@ duplicate-family constraints. Prepare a fresh prospective comparator/data/cost
 scope before further community work. [Inspection](../../experiments/E021-frozen-sequence-hybrid/inspection-observed.json)
 closes recovery/cleanup and $9.992 subtotal / $11.592 with reserves inside original
 $45; original $8 storage still ends October 28, 00:00 Copenhagen, without renewal.
+
+
+## E022 completed decision evidence, October 26, 2026
+
+[Verified E022](../../experiments/E022-marker-informed-learning/comparison-review.json)
+answers the one frozen marker/context-learning question with mixed development
+evidence: weighted R95 7.8175 -> 7.7497%, targets at least 90% recovered 6 -> 8.
+Thirteen target gains / eleven losses include a large purity-gate loss despite
+modestly improved bacterial neighbors/grouping. KEEP fails unchanged, MODIFY;
+no critical implementation bug, universal marker verdict or causal attribution
+of every reliability ingredient is established. All reference/population/N limits
+remain; the retained native-eligibility MetaBAT2 result is reused, not rerun.
+
+D015 chooses a coherent adaptive-density/bin-candidate construction upgrade
+using fixed E022 E009 and existing E019 oral vectors, each against its preserved
+CPM/E013 output. Local source/tiny contracts and a frozen two-community cost/protocol
+come before separately authorized cached execution. E017/E018 oral regressions
+remain contrary evidence, not discarded. No bigger model, loss/grid or expected
+mature-tool win is automatically required. Independent depth-enabled data remains
+a separate admission need; skin remains unscored and not active-depth validation.
+
+Original $2 phase subtotal $0.25310 / $0.85310 with reserves includes both actual
+allocation intervals and paid export, not sampled CPU or an inferred credit delta.
+No inspection wake or accepted science replay. Existing $8 storage ends October 28,
+00:00 Copenhagen; a new $8 week through November 4 forecasts $7.73 but remains
+unapproved. No automatic extension or deletion of accepted bulk.

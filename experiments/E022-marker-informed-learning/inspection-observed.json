@@ -1,0 +1,737 @@
+{
+  "additional_same_query_population_audit": {
+    "bytes": 580,
+    "sha256": "9c13759de40be481cc738015339ba286384ff122a3a8aeef53576a3118dc2f5b"
+  },
+  "archive": {
+    "aliases": {
+      "work/units/E009-relational/train/reference.npz": {
+        "bytes": 21880578,
+        "canonical": "work/units/E009-relational/embeddings.npz",
+        "sha256": "0c33748fa4b66309caafdb1e559ef8c75dc1f8d8819d8f8d046dbdb184d6442e"
+      }
+    },
+    "archive": {
+      "bytes": 115627793,
+      "sha256": "d7d709969070ee0831e2a765eacf6e3588de725cf37e2ca914c58022423c4cd9"
+    },
+    "every_member_verified": true,
+    "full_inventory_binding": {
+      "bytes": 869514,
+      "sha256": "5cc6dabbaea741c3f3d3f1c782acac5afefda764675d10bbbd8755f19f19b564"
+    },
+    "full_verification_binding": {
+      "bytes": 458534,
+      "sha256": "b993c862dbfdd8a4747a1df8154e06d07106782978bf1c97d3a2349516dd69d2"
+    },
+    "logical_member_bytes": 288134191,
+    "regular_members": 299,
+    "status": "SUCCESS"
+  },
+  "closeout": {
+    "checks": {
+      "bytes": 1093,
+      "sha256": "6d3a31538df11aaeb48214e5d096db5097815d3d991ac794bfca65c24f01472f"
+    },
+    "compact_local_evidence": {
+      "UTC": "2026-10-26T10:44:47.975779+00:00",
+      "archive": {
+        "bytes": 1034187,
+        "sha256": "00ff4e1bf3d1613835e6bb8ffa28d3f5d117b4943e2da8c5e6fbebf05d79fad0"
+      },
+      "inventory": {
+        "bytes": 10927,
+        "sha256": "c4f8c05e26d27a8f7091ba109c3cd53cfe09db5bcb4012ea536536820f073768"
+      },
+      "logical_bytes": 5619493,
+      "members": 66,
+      "path": "artifacts/e022-inspection/20261026/closure-seal-v1/e022-inspection-evidence.tar.gz",
+      "private_upload": false,
+      "status": "PASS_EVERY_COMPACT_MEMBER"
+    },
+    "elapsed_original_review_seconds": 2607.692202806473,
+    "extra_maintained_metadata_under_bytes": 2000000,
+    "free_local_bytes": 16521216000,
+    "original_deadline_epoch": 1793012480.3156633,
+    "owned_inspection_bytes": 410121540,
+    "peak_RSS_across_measured_children_bytes": 1405509632,
+    "private_upload": false,
+    "status": "PASS"
+  },
+  "comparison": "comparison-review.json",
+  "complete_work_logical_bytes": 1887965789,
+  "complete_work_logical_members": 2115,
+  "completion": {
+    "bytes": 496284,
+    "sha256": "8e6082b11107fd88910cce560c314ea127be5e776173f1762aefcba331e0c3a9"
+  },
+  "costs": "cost-review.json",
+  "final_provider": {
+    "bytes": 33096,
+    "sha256": "dc394182375e4690eee92cbab2d17734cdfe26b8a391af15544d25983f61fbbb"
+  },
+  "guest": {
+    "bytes": 465,
+    "sha256": "cf3a97419bcea680792a716aae4ceaee1be33b4e589f2728d327a6e7df352b46"
+  },
+  "historical_failures": "Original first-start parse/release failures and Mac portability remain. Preliminary inspection probes failed before affected checks (download not yet complete; gates/stages schema key; summary omitted baseline query rows). Correct retained schemas/full prior review used without weakening checks or rescoring. Frozen evaluator ran once successfully.",
+  "local_returned_graph_array_contract": {
+    "proof": {
+      "bytes": 17085,
+      "sha256": "7401b20d483d6e5352815f4eb2acf74d99f8be552d6c08120dfba66af78b2b6c"
+    },
+    "resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/env-v3/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e014_graph_review.py",
+        "--unit",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-inspection/20261026/verified/work/units/E009-relational",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-inspection/20261026/local-graph-proof.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 50214,
+      "peak_sampled_rss_bytes": 439484416,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 1.2071824334835681,
+      "sampled_cpu_seconds": 7.079999999999999,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1690.2117083072662,
+      "stop_reason": null,
+      "wall_seconds": 5.86489647597773
+    },
+    "same_as_native_except_elapsed": true,
+    "scope": "Independent local reads of original returned embedding vectors and full sparse graph; no inference, fit, new index or selection. Omitted full GLM/context banks remain native only."
+  },
+  "local_review_peak_extra_bytes": 408971656,
+  "local_review_resources": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/env-v3/bin/python",
+      "-I",
+      "-B",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e022_review.py",
+      "--unit",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-inspection/20261026/verified/work/units/E009-relational",
+      "--features",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e011-cached-grouping-reference/restore-local/candidate/features/features.npz",
+      "--original-inventory",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-inspection/20261026/verified/inventory.json",
+      "--output",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-inspection/20261026/local-review-attempt1/diagnostics-E009-relational",
+      "--dataset",
+      "E009",
+      "--marker-clean",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e011-cached-grouping-reference/restore-local/candidate/markers/evidence.json",
+      "--truth-root",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e009-truth-v2/20261015/attempt-local-v2/truth-v2",
+      "--graph-proof",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-inspection/20261026/verified/work/units/E009-relational/graph-proof.json",
+      "--reuse-lock",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E022-marker-informed-learning/reuse-lock.json",
+      "--admission",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-inspection/20261026/local-review-attempt1/admission.json"
+    ],
+    "exit_code": 0,
+    "launched_pid": 48486,
+    "peak_sampled_rss_bytes": 1405509632,
+    "rss_bytes_ceiling": 8000000000,
+    "sample_includes_coordinator": true,
+    "sampled_average_cpus": 1.0899139422706725,
+    "sampled_cpu_seconds": 35.550000000000004,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 3390.3639261722565,
+    "stop_reason": null,
+    "wall_seconds": 32.617254098004196
+  },
+  "local_root": "artifacts/e022-inspection/20261026",
+  "native_contract": {
+    "all_phase_recorded_exits_zero": true,
+    "archive": {
+      "bytes": 115627793,
+      "sha256": "d7d709969070ee0831e2a765eacf6e3588de725cf37e2ca914c58022423c4cd9"
+    },
+    "completion_upload_limit": "Final completion upload is absent from its pre-upload stage list; remote object and guest SHA prove delivery, not a captured final CLI exit.",
+    "disk": {
+      "global_sampled_growth_bytes": 702918656,
+      "initial_used_bytes": 256026517504,
+      "minimum_free_bytes": 59987439616,
+      "peak_used_bytes": 256729436160,
+      "samples": 1193
+    },
+    "final_target": "8 of 8 steps (100%) done",
+    "gate_count": 5,
+    "gates": [
+      {
+        "name": "runtime",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_runtime.py",
+            "--base",
+            "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+            "--reference",
+            "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json",
+            "--candidate-lock",
+            "/srv/dl_binner/e022-code/e88dc8a/experiments/E022-marker-informed-learning/candidate-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/gates/runtime.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2203,
+          "peak_sampled_rss_bytes": 298164224,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.9528495737378395,
+          "sampled_cpu_seconds": 24.220000000000002,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1467.0278322696686,
+          "stop_reason": null,
+          "wall_seconds": 25.418492768999997
+        }
+      },
+      {
+        "name": "full-readers",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_gates.py",
+            "--readers",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/science-plan.json",
+            "--output",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/gates/readers.json"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2234,
+          "peak_sampled_rss_bytes": 3360276480,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.917167075618155,
+          "sampled_cpu_seconds": 45.74,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1441.6089367866516,
+          "stop_reason": null,
+          "wall_seconds": 49.870957228999984
+        }
+      },
+      {
+        "name": "tiny-product",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "/srv/dl_binner/e022-code/e88dc8a/tests/product",
+            "-p",
+            "test_relational.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2310,
+          "peak_sampled_rss_bytes": 349622272,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 3.564855871713453,
+          "sampled_cpu_seconds": 54.04,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1391.7376182079315,
+          "stop_reason": null,
+          "wall_seconds": 15.159098135999983
+        }
+      },
+      {
+        "name": "operational",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "/srv/dl_binner/e022-code/e88dc8a/tests",
+            "-p",
+            "test_e022_operational.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2332,
+          "peak_sampled_rss_bytes": 59912192,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.6385094915373697,
+          "sampled_cpu_seconds": 0.3200000000000003,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1376.578208208084,
+          "stop_reason": null,
+          "wall_seconds": 0.5011671780000029
+        }
+      },
+      {
+        "name": "tiny-DAG-collection",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_tiny.py",
+            "--root",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/gates/tiny-DAG",
+            "--workflow-python",
+            "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2333,
+          "peak_sampled_rss_bytes": 582692864,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.9712404980716594,
+          "sampled_cpu_seconds": 32.72,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 1376.076696395874,
+          "stop_reason": null,
+          "wall_seconds": 16.598684956
+        }
+      }
+    ],
+    "native_source": "e88dc8a513e0408cf96dcc9462aa8ba077d7321e",
+    "runtime_distributions": 41,
+    "runtime_package_members": 49,
+    "runtime_python": "3.10.15 | packaged by conda-forge | (main, Oct 16 2024, 01:24:24) [GCC 13.3.0]",
+    "scientific_source": "fdad862143799cab2d6943aa25070e2a9ad459c7",
+    "serial_no_overlap": true,
+    "source_members": 87,
+    "stage_resources": [
+      {
+        "name": "science",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_control.py",
+            "--plan",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/science-plan.json",
+            "--workflow"
+          ],
+          "exit_code": 0,
+          "launched_pid": 2666,
+          "peak_sampled_rss_bytes": 3888668672,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 2.906452788330065,
+          "sampled_cpu_seconds": 5117.27,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 5717.519248962402,
+          "stop_reason": null,
+          "wall_seconds": 1760.658222472
+        }
+      },
+      {
+        "name": "used-inputs-after",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_control.py",
+            "--plan",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/science-plan.json",
+            "--verify-inputs"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3766,
+          "peak_sampled_rss_bytes": 48955392,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.0771724721563956,
+          "sampled_cpu_seconds": 10.650000000000006,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 4556.847813367844,
+          "stop_reason": null,
+          "wall_seconds": 9.88699607100034
+        }
+      },
+      {
+        "name": "collection",
+        "resources": {
+          "command": [
+            "/usr/bin/python3",
+            "-I",
+            "-B",
+            "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_collect.py",
+            "--work",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work",
+            "--evidence",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/sealed-evidence",
+            "--output",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/return"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3771,
+          "peak_sampled_rss_bytes": 67158016,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 1.080282708358134,
+          "sampled_cpu_seconds": 46.859999999999985,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 4546.864882707596,
+          "stop_reason": null,
+          "wall_seconds": 43.377534081999784
+        }
+      },
+      {
+        "name": "upload-e022-evidence.tar.gz",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/return/e022-evidence.tar.gz",
+            "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/e022-evidence.tar.gz",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3779,
+          "peak_sampled_rss_bytes": 291344384,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.5693009267884585,
+          "sampled_cpu_seconds": 7.029999999999973,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 4503.4744963645935,
+          "stop_reason": null,
+          "wall_seconds": 12.348478053000235
+        }
+      },
+      {
+        "name": "readback-e022-evidence.tar.gz",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/e022-evidence.tar.gz",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/readback-e022-evidence.tar.gz",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3844,
+          "peak_sampled_rss_bytes": 291622912,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.8051949653373606,
+          "sampled_cpu_seconds": 2.1699999999999875,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 4491.118824720383,
+          "stop_reason": null,
+          "wall_seconds": 2.694999464000375
+        }
+      },
+      {
+        "name": "upload-e022-evidence.tar.gz.sha256",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/return/e022-evidence.tar.gz.sha256",
+            "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/e022-evidence.tar.gz.sha256",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3899,
+          "peak_sampled_rss_bytes": 288804864,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.767282484637738,
+          "sampled_cpu_seconds": 1.5600000000000023,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 4487.660924196243,
+          "stop_reason": null,
+          "wall_seconds": 2.033149500000036
+        }
+      },
+      {
+        "name": "readback-e022-evidence.tar.gz.sha256",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/e022-evidence.tar.gz.sha256",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/readback-e022-evidence.tar.gz.sha256",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 3955,
+          "peak_sampled_rss_bytes": 129216512,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.8361349884911011,
+          "sampled_cpu_seconds": 1.5,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 4485.612129211426,
+          "stop_reason": null,
+          "wall_seconds": 1.7939687019998019
+        }
+      },
+      {
+        "name": "upload-collection.json",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/return/collection.json",
+            "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/collection.json",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 4009,
+          "peak_sampled_rss_bytes": 291405824,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.7775305824404923,
+          "sampled_cpu_seconds": 1.5900000000000034,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 4483.811941623688,
+          "stop_reason": null,
+          "wall_seconds": 2.044935640999938
+        }
+      },
+      {
+        "name": "readback-collection.json",
+        "resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/collection.json",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/readback-collection.json",
+            "--quiet"
+          ],
+          "exit_code": 0,
+          "launched_pid": 4065,
+          "peak_sampled_rss_bytes": 129282048,
+          "rss_bytes_ceiling": 26000000000,
+          "sample_includes_coordinator": true,
+          "sampled_average_cpus": 0.8301256926074427,
+          "sampled_cpu_seconds": 1.5000000000000284,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "seconds_ceiling": 4481.757103443146,
+          "stop_reason": null,
+          "wall_seconds": 1.806955275999826
+        }
+      }
+    ],
+    "stages": [
+      {
+        "end_epoch": 1792978838.9982786,
+        "rule": "restore",
+        "start_epoch": 1792978821.8292658,
+        "wall_seconds": 17.169012784957886
+      },
+      {
+        "end_epoch": 1792980279.1804364,
+        "rule": "train",
+        "start_epoch": 1792978839.0033028,
+        "wall_seconds": 1440.1771335601807
+      },
+      {
+        "end_epoch": 1792980326.9647598,
+        "rule": "embed",
+        "start_epoch": 1792980279.186437,
+        "wall_seconds": 47.77832293510437
+      },
+      {
+        "end_epoch": 1792980494.2687893,
+        "rule": "group",
+        "start_epoch": 1792980326.9701912,
+        "wall_seconds": 167.29859805107117
+      },
+      {
+        "end_epoch": 1792980518.79231,
+        "rule": "refine",
+        "start_epoch": 1792980494.2740264,
+        "wall_seconds": 24.51828360557556
+      },
+      {
+        "end_epoch": 1792980564.730853,
+        "rule": "export",
+        "start_epoch": 1792980518.825869,
+        "wall_seconds": 45.90498399734497
+      },
+      {
+        "end_epoch": 1792980580.445561,
+        "rule": "graph_proof",
+        "start_epoch": 1792980564.735672,
+        "wall_seconds": 15.709888935089111
+      }
+    ],
+    "status": "PASS_NATIVE_EXIT_SOURCE_REUSE_AND_SUPERVISION",
+    "used_inputs_after": "Exit 0; exact original used-input lock, no fallback",
+    "watchdog": {
+      "binding": {
+        "bytes": 4027,
+        "sha256": "6682e8bd0ab6752d1aecb6b189727a91af6d3e22908e9d31c9666d058132348c"
+      },
+      "boot_id": "2d966d44-3429-4839-b7f2-d37dd4596246",
+      "checked_utc": "2026-10-26T02:12:28.595503+00:00",
+      "missing_seconds": 61.99128656999983,
+      "process": {
+        "command_sha256": "0acdc8fcaa1c3a8fe16b0c33eb10171843c3a53745457be9248322552a9d5ac0",
+        "pid": 2143,
+        "start_ticks": 5528
+      }
+    }
+  },
+  "omissions": "1,367,669,888 B frozen vectors and 233,607,419 B emitted DNA remain native; original context/FASTA inputs are separate retained dependencies, not backed up by these hashes.",
+  "omitted_work_logical_bytes": 1601277307,
+  "omitted_work_members": 2034,
+  "original_local_review_seconds": 242.2539496421814,
+  "phase": "marker-20261026T012935Z-e88dc8a-r2",
+  "prohibited_work_performed": false,
+  "provider": {
+    "bytes": 33096,
+    "sha256": "dc394182375e4690eee92cbab2d17734cdfe26b8a391af15544d25983f61fbbb"
+  },
+  "provider_status": "TERMINATED",
+  "pure_operational_contracts": {
+    "resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e022-marker-learning/env-v3/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests",
+        "-p",
+        "test_e022_operational.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "launched_pid": 50271,
+      "peak_sampled_rss_bytes": 25255936,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.06435480668753861,
+      "sampled_cpu_seconds": 0.040000000000000036,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1684.3269672393799,
+      "stop_reason": null,
+      "wall_seconds": 0.6215541939891409
+    },
+    "tests": 6
+  },
+  "review_scope": "Every returned member and alias checked; omitted native bulk uses bound in-place receipts/inventories, not a local reread.",
+  "reviewed_UTC": "2026-10-26T10:19:52.091928+00:00",
+  "setup_exit_review": {
+    "bytes": 3555,
+    "sha256": "d7fade12b1b75319dc4f0af0de5ff340795611e41a05782df48eb106b8670b0a"
+  },
+  "setup_exits": [
+    {
+      "name": "bootstrap-package-install",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/e022-code/e88dc8a/scripts/e019_runtime.py",
+          "create",
+          "--base",
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+          "--destination",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env",
+          "--wheel",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/payload/dl_binner-0.1.0.dev9-py3-none-any.whl",
+          "--output",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/package-install.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2078,
+        "peak_sampled_rss_bytes": 89325568,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.447655925940566,
+        "sampled_cpu_seconds": 0.94,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1471.0116791725159,
+        "stop_reason": null,
+        "wall_seconds": 2.0998269999999977
+      }
+    },
+    {
+      "name": "bootstrap-arm",
+      "resources": {
+        "command": [
+          "sudo",
+          "-n",
+          "/usr/bin/python3",
+          "-I",
+          "-B",
+          "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_arm.py",
+          "--config",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/config.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2097,
+        "peak_sampled_rss_bytes": 76730368,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.20367680428058665,
+        "sampled_cpu_seconds": 0.35,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1468.9113171100616,
+        "stop_reason": null,
+        "wall_seconds": 1.7184087370000043
+      }
+    },
+    {
+      "name": "bootstrap-native-gates",
+      "resources": {
+        "command": [
+          "/usr/bin/python3",
+          "-I",
+          "-B",
+          "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_gates.py",
+          "--config",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/config.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2202,
+        "peak_sampled_rss_bytes": 3387080704,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.5651959374229063,
+        "sampled_cpu_seconds": 169.4,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1467.1925022602081,
+        "stop_reason": null,
+        "wall_seconds": 108.22926123799999
+      }
+    }
+  ],
+  "status": "COMPLETE_AND_INDEPENDENTLY_REVIEWED",
+  "watchdog": {
+    "bytes": 4027,
+    "sha256": "6682e8bd0ab6752d1aecb6b189727a91af6d3e22908e9d31c9666d058132348c"
+  }
+}

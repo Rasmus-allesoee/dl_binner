@@ -1,0 +1,350 @@
+{
+  "GCS_inventory": {
+    "bytes": 36432,
+    "sha256": "ebb8f689316a5bd3c981ce6b07f2763eb30e36526801134f8fff3b944fa266ae"
+  },
+  "allocated_vCPU_hours": 6.078433333333334,
+  "caveats": [
+    "VM/IP prices conservatively ignore free allowances; actual discounts/invoice may differ.",
+    "Existing disk and GCS attribution overlaps the separate original $8 storage interval; do not double-count.",
+    "No compute, new object upload, service/resource change or retention extension in this inspection.",
+    "Original first-start two-hour clock includes stopped time; charged allocation sums only two actual running intervals.",
+    "Completion upload occurs after the pre-upload receipt, and was independently received/hash-bound."
+  ],
+  "combined_VM_IP_rate_USD_per_hour": 0.2730456762592465,
+  "compute_RAM_IP_USD": 0.20746124251209322,
+  "conservative_paid_export_USD": 0.013029605336487293,
+  "contingency_USD": 0.5,
+  "current_Catalog_binding": {
+    "bytes": 8003,
+    "sha256": "aa0db489c4f38e3fca7c8573d3195173cb78dc799a690e76b23fe8e2339da776"
+  },
+  "existing_disk_attribution_USD": 0.03247382191780822,
+  "existing_stopped_disks_conservative_USD_per_month": 31.2,
+  "exported_bytes": 116586935,
+  "fresh_financial_gate": {
+    "UTC": "2026-10-26T10:00:21.841077+00:00",
+    "compute_IP_rate_USD_per_hour": 0.2730456762592465,
+    "coverage_status": "PASS_FOR_SPECIFIED_ORDINARY_FIRST_PARTY_PRODUCTS_ONLY",
+    "credit": {
+      "application": "Net pricing",
+      "expiry": "2027-01-12",
+      "original_DKK": 1973.43,
+      "percent": 91,
+      "remaining_DKK": 1800.33,
+      "scope": "Certain usage; see the terms for free trial.",
+      "status": "Available"
+    },
+    "delayed_usage": {
+      "amount": "UNKNOWN",
+      "reserve_USD": 35,
+      "warning": "Costs take a few hours to show up, and might take longer than 24 hours. Numbers are rounded."
+    },
+    "export_bytes": 116582908,
+    "export_paid_upper_USD": 0.013029155284166335,
+    "interpretation": "Fresh displayed credit is not an invoice; delayed usage is reserved, not assumed zero. No free-tier discounts assumed. Disk attribution overlaps original storage approval and must not be summed twice.",
+    "local_free_bytes": 16987344896,
+    "measured_allocation_seconds": 2735.295,
+    "measured_compute_IP_estimate_USD": 0.20746124251209322,
+    "new_incremental_gross_ceiling_USD": 2,
+    "original_phase_with_run_disk_export_and_reserves_USD": 0.8529642197140678,
+    "overview": {
+      "account": "Paid account",
+      "net_DKK": 0,
+      "period": "2026-10-01 through 2026-10-26",
+      "rounded_cost_DKK": 172,
+      "rounded_savings_DKK": 172
+    },
+    "price_USD_DKK_conversion": 6.578099999996525,
+    "products": [
+      "E2 core and RAM",
+      "existing PD",
+      "conservatively paid external IPv4",
+      "US-CENTRAL1 Standard GCS and operations",
+      "GCS Internet download to Denmark"
+    ],
+    "real_money_authorized": false,
+    "remaining_USD_equivalent": 273.6854106810403,
+    "source": "Direct signed-in Chrome Billing Credits and Overview; read-only Catalog/GCS control plane",
+    "storage": {
+      "conservative_full_interval_USD": 7.773857543699393,
+      "current_GCS_bytes": 9643347402,
+      "current_soft_deleted_bytes": 0,
+      "ends": "2026-10-28T00:00:00+01:00",
+      "extension_authorized": false,
+      "full_interval_hours": 169,
+      "original_approved_USD": 8,
+      "stopped_disks_USD_per_month": 31.2
+    },
+    "terms": [
+      "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "https://cloud.google.com/storage/pricing"
+    ]
+  },
+  "gross_with_reserves_USD": 0.8530980017640716,
+  "intervals": [
+    {
+      "attempt": "First failed remote parse before setup/science",
+      "scope": "Provider reported successful allocation start to lastStopTimestamp, not sampled process CPU or exact invoice",
+      "seconds": 92.924,
+      "start_UTC": "2026-10-26T01:25:38.700000+00:00",
+      "stop_UTC": "2026-10-26T01:27:11.624000+00:00"
+    },
+    {
+      "attempt": "Repaired native phase",
+      "scope": "Provider reported successful allocation start to lastStopTimestamp, not sampled process CPU or exact invoice",
+      "seconds": 2642.371,
+      "start_UTC": "2026-10-26T01:30:06.328000+00:00",
+      "stop_UTC": "2026-10-26T02:14:08.699000+00:00"
+    }
+  ],
+  "measured_allocation_seconds": 2735.295,
+  "new_return_storage_through_original_boundary_USD": 0.00013333199768287486,
+  "operations_reserve_USD": 0.1,
+  "original_new_ceiling_USD": 2,
+  "phase": "marker-20261026T012935Z-e88dc8a-r2",
+  "price_sources": [
+    "https://cloud.google.com/storage/pricing",
+    "https://docs.cloud.google.com/free/docs/free-cloud-features"
+  ],
+  "priced_subtotal_USD": 0.2530980017640716,
+  "process_resources": [
+    {
+      "name": "science",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_control.py",
+          "--plan",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/science-plan.json",
+          "--workflow"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2666,
+        "peak_sampled_rss_bytes": 3888668672,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 2.906452788330065,
+        "sampled_cpu_seconds": 5117.27,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 5717.519248962402,
+        "stop_reason": null,
+        "wall_seconds": 1760.658222472
+      }
+    },
+    {
+      "name": "used-inputs-after",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_control.py",
+          "--plan",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/science-plan.json",
+          "--verify-inputs"
+        ],
+        "exit_code": 0,
+        "launched_pid": 3766,
+        "peak_sampled_rss_bytes": 48955392,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.0771724721563956,
+        "sampled_cpu_seconds": 10.650000000000006,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 4556.847813367844,
+        "stop_reason": null,
+        "wall_seconds": 9.88699607100034
+      }
+    },
+    {
+      "name": "collection",
+      "resources": {
+        "command": [
+          "/usr/bin/python3",
+          "-I",
+          "-B",
+          "/srv/dl_binner/e022-code/e88dc8a/scripts/e022_collect.py",
+          "--work",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work",
+          "--evidence",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/sealed-evidence",
+          "--output",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/return"
+        ],
+        "exit_code": 0,
+        "launched_pid": 3771,
+        "peak_sampled_rss_bytes": 67158016,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.080282708358134,
+        "sampled_cpu_seconds": 46.859999999999985,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 4546.864882707596,
+        "stop_reason": null,
+        "wall_seconds": 43.377534081999784
+      }
+    },
+    {
+      "name": "upload-e022-evidence.tar.gz",
+      "resources": {
+        "command": [
+          "/snap/bin/gcloud",
+          "storage",
+          "cp",
+          "--if-generation-match=0",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/return/e022-evidence.tar.gz",
+          "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/e022-evidence.tar.gz",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "launched_pid": 3779,
+        "peak_sampled_rss_bytes": 291344384,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5693009267884585,
+        "sampled_cpu_seconds": 7.029999999999973,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 4503.4744963645935,
+        "stop_reason": null,
+        "wall_seconds": 12.348478053000235
+      }
+    },
+    {
+      "name": "readback-e022-evidence.tar.gz",
+      "resources": {
+        "command": [
+          "/snap/bin/gcloud",
+          "storage",
+          "cp",
+          "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/e022-evidence.tar.gz",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/readback-e022-evidence.tar.gz",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "launched_pid": 3844,
+        "peak_sampled_rss_bytes": 291622912,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.8051949653373606,
+        "sampled_cpu_seconds": 2.1699999999999875,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 4491.118824720383,
+        "stop_reason": null,
+        "wall_seconds": 2.694999464000375
+      }
+    },
+    {
+      "name": "upload-e022-evidence.tar.gz.sha256",
+      "resources": {
+        "command": [
+          "/snap/bin/gcloud",
+          "storage",
+          "cp",
+          "--if-generation-match=0",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/return/e022-evidence.tar.gz.sha256",
+          "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/e022-evidence.tar.gz.sha256",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "launched_pid": 3899,
+        "peak_sampled_rss_bytes": 288804864,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.767282484637738,
+        "sampled_cpu_seconds": 1.5600000000000023,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 4487.660924196243,
+        "stop_reason": null,
+        "wall_seconds": 2.033149500000036
+      }
+    },
+    {
+      "name": "readback-e022-evidence.tar.gz.sha256",
+      "resources": {
+        "command": [
+          "/snap/bin/gcloud",
+          "storage",
+          "cp",
+          "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/e022-evidence.tar.gz.sha256",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/readback-e022-evidence.tar.gz.sha256",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "launched_pid": 3955,
+        "peak_sampled_rss_bytes": 129216512,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.8361349884911011,
+        "sampled_cpu_seconds": 1.5,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 4485.612129211426,
+        "stop_reason": null,
+        "wall_seconds": 1.7939687019998019
+      }
+    },
+    {
+      "name": "upload-collection.json",
+      "resources": {
+        "command": [
+          "/snap/bin/gcloud",
+          "storage",
+          "cp",
+          "--if-generation-match=0",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/return/collection.json",
+          "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/collection.json",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "launched_pid": 4009,
+        "peak_sampled_rss_bytes": 291405824,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.7775305824404923,
+        "sampled_cpu_seconds": 1.5900000000000034,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 4483.811941623688,
+        "stop_reason": null,
+        "wall_seconds": 2.044935640999938
+      }
+    },
+    {
+      "name": "readback-collection.json",
+      "resources": {
+        "command": [
+          "/snap/bin/gcloud",
+          "storage",
+          "cp",
+          "gs://dl-binner-archive-167650584170/e022/marker-20261026T012935Z-e88dc8a-r2/collection.json",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/readback-collection.json",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "launched_pid": 4065,
+        "peak_sampled_rss_bytes": 129282048,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.8301256926074427,
+        "sampled_cpu_seconds": 1.5000000000000284,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 4481.757103443146,
+        "stop_reason": null,
+        "wall_seconds": 1.806955275999826
+      }
+    }
+  ],
+  "record": "Measured-allocation pricing, not invoice or credit-delta attribution",
+  "resource": "Existing e2-standard-8; 30 GiB pd-standard + 300 GiB pd-balanced unchanged",
+  "storage_current_approved_until": "2026-10-28T00:00:00+01:00",
+  "storage_proposal": {
+    "action": "Owner approval needed before current boundary. No automatic renewal or deletion.",
+    "approved": false,
+    "eligibility": "Same ordinary PD/GCS products appear credit-eligible; fresh credit/delayed-usage/inventory gate before approval is exercised.",
+    "forecast_with_2GiB_extra_GCS_and_half_dollar_reserve_USD": 7.730816966517739,
+    "from_Copenhagen": "2026-10-28T00:00:00+01:00",
+    "new_storage_only_ceiling_USD": 8,
+    "until_Copenhagen": "2026-11-04T00:00:00+01:00"
+  }
+}

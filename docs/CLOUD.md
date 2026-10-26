@@ -1,36 +1,49 @@
 # Google Cloud workspace operations
 
-## Current E022 execution, October 26, 2026
+## E022 completed inspection, October 26, 2026
 
-[Native E022](../experiments/E022-marker-informed-learning/native-observed.json) is
-RUNNING on the original e2-standard-8 / 30+300 GiB disks, unchanged security/service
-identity. One new $2 candidate comparison is authorized and admitted. Scientific
-candidate/config/pairs stay fixed; no new resource, GPU, service or retention.
-First boot failed remote setup parsing before science and was independently stopped;
-repair retains its original clock. Actual provider STOP is **2026-10-26T04:39:09.328000+01:00** and the
-fresh tested boot/process-bound watcher is active. Driver deadline 04:25:38.700
-Copenhagen. [Operations](../experiments/E022-marker-informed-learning/OPERATIONS.md)
-owns exact phase, logs, limits and inspection prompt; no completion/score yet.
+[Final inspection](../experiments/E022-marker-informed-learning/inspection-observed.json)
+confirms **TERMINATED** independently of guest SUCCESS/private completion. The
+current-boot/PID/command watcher observed exit and requested shutdown; its separate
+private snapshot verifies the admitted process. Five native gates, seven serial
+science stages, target, reuse-after and collection/upload/readback pass. All 299
+archive members / exact alias are locally verified. No wake, resource/service
+change, new object upload, science replay or retention extension in inspection.
 
-Direct refreshed Billing Credits/Overview: **DKK 1,803.60 Available / 91%**, original
-DKK 1,973.43, January 12, 2027 expiry, Certain usage / net pricing, paid billing.
-Overview rounds cost/savings DKK 168 / net zero; >24-hour usage lag is unknown,
-with $35 reserve. Current ordinary E2/PD/IP prices match prior Catalog values;
-GCS 9.53 GB, soft-deleted zero. Original 169-hour storage including max new compact
-return/reserve conservatively ~$7.7734 within approved $8. It still ends **October
-28 at 00:00 Copenhagen (CET)**. No extension; stopped disks remain $31.20/month.
-A proposed next $8 storage renewal through November 4 is not authorization.
+The two successful provider starts (first failed remote parse before setup/science)
+allocate 92.924 + 2,642.371 seconds = **45.59 minutes**. Original absolute clocks
+were not reset. [Ledger](../experiments/E022-marker-informed-learning/cost-review.json)
+prices compute/RAM/IP $0.20746, existing-disk run attribution $0.03247, paid export
+$0.01303 and tiny return storage: **$0.25310 subtotal / $0.85310 with reserves**,
+inside original new $2. Sampled CPU is separate. This is not an invoice or credit
+change attribution; existing-disk/GCS attribution overlaps the storage approval.
+Existing e2-standard-8 / 30 + 300 GiB disks and security identity remain. Last-run
+STOP is 7,743 seconds, automaticRestart false; no new start is authorized here.
 
-Actual accepted numerical prefix is Python **3.10.15**, workflow **3.12.10**; the
-prepared 3.12 numerical description was an error. Exact retained CPU inventory,
-source and math-library bindings pass; no port, fallback or dependency reinstall.
-The installed candidate has its own wheel and explicitly borrowed read-only base.
+Direct refreshed Billing Credits/Overview: **DKK 1,800.33 Available / 91%**, original
+DKK 1,973.43, January 12, 2027 expiry, Certain usage / net pricing, paid account.
+October 1–26 rounded costs/savings DKK 172 / net zero; >24-hour delayed usage remains
+unknown, with $35 reserve. Fresh ordinary E2/PD/IP Catalog values are unchanged;
+GCS contains **149 objects / 9,643,347,402 bytes**, zero soft-deleted bytes. Denmark
+export was admitted conservatively at $0.12/GiB before downloading 116.59 MB.
+
+Original 169-hour storage approval remains ~$7.774 including reserves and ends
+**October 28, 00:00 Copenhagen (CET)**. Original stopped disks conservatively cost
+**$31.20/month**. A **new $8 storage-only week through November 4** forecasts ~$7.73
+with current GCS, 2 GiB extra and reserve; it needs owner approval and fresh checks.
+Do not automatically renew/delete. Full GLM/context/DNA and dependency runtimes
+are not backed up by compact manifests; protect their current locators.
+
+Numerical Python is **3.10.15**, workflow **3.12.10**. The previous 3.12 numerical
+prose erratum remains; original source/library/distribution bindings pass without
+port/fallback. Original Mac allclose tolerance remains failed; exact native reload
+passes. E022 result is MODIFY, not promotion; STATE/D015 own the next local-only
+bin-construction recommendation and later separately priced comparison.
 
 For Billing UI reads, use the actual Chrome extension identity from the current
-inventory if a transient numeric ID resolves to another browser. Claim the user
-tab through that selected browser and follow visible Billing navigation links.
-A timed-out click can still navigate: inspect the returned state before repeating.
-No browser security setting, credential, extension or vendor file was changed.
+inventory if a transient numeric ID resolves to another browser. Follow visible
+Billing links. A timed-out click can still navigate; inspect the state before
+repeating. No security setting, credential, extension or vendor file was changed.
 
 The E021 block below is preserved completed history; its local-only next-scope
 wording does not override the current authorized E022 receipt.
