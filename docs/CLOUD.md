@@ -1,5 +1,35 @@
 # Google Cloud workspace operations
 
+## E023 native admission and current authorized execution, October 26, 2026
+
+[Native receipt](../experiments/E023-adaptive-density-bins/native-observed.json)
+records the running phase `density-20261026T213652Z-f13e5a1-r2`. All five native
+gates and exact source/runtime/full input axes pass; fresh boot/process watcher
+and normal/crash/restart-refusal tests preceded the sole release. Original first-
+start two-hour clock ends 23:37:22 UTC October 26; actual provider STOP is earlier
+than nominal at 23:50:50 UTC. Watcher also stops on parent exit/crash. No automatic
+restart, resource increase, clock or retention extension. Initial pre-gate NumPy/
+interpreter failure and local pre-release render failure remain, no science replay.
+
+Fresh direct Billing: DKK 1,797.10 Available / 91%, January 12 expiry, paid account;
+October 1–26 rounded cost/savings DKK 176 / net zero, hours/>24-hour lag unknown,
+$35 reserve. Current ordinary E2/PD/IP SKUs and GCS prices support ~$1.85 quote
+within the newly approved $3. All 149 GCS versions / 9,643,347,402 bytes and zero
+soft-deleted bytes are unchanged. New $8 storage-only week through November 4 at
+00:00 Copenhagen still forecasts ~$7.73. No later renewal/deletion or uncovered
+charges. Actual allocation/storage/export must be priced after verified shutdown.
+
+The normal push destination was independently verified as the signed-in owner
+Rasmus-allesoee/dl_binner with ADMIN access; it is currently PUBLIC, superseding
+older private-repository observations below. No visibility change occurred.
+Initial automatic review rejected the push for unverified destination/authority;
+read-only owner/remote verification established the authorization and the normal
+retry succeeded. VM fetch remains read-only; private GCS remains private. Exact
+execution source is f13e5a1, with all 287 scientific/default/helper bytes matching
+prepared 546763d. Later local documentation/secondary analysis does not mutate the
+executing checkout. [Operations](../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt)
+owns the stopped-output inspection; progress is not completion or quality.
+
 ## E023 local preparation and storage admission, October 26, 2026
 
 The owner invoked E022's next prompt, explicitly authorizing a new **$8 storage-

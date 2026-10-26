@@ -1,0 +1,112 @@
+{
+  "record": "E023 secondary retained MetaBAT2 context",
+  "status": "ACCEPTED_SECONDARY_ONLY",
+  "reviewed_UTC": "2026-10-26T21:43:36.801133+00:00",
+  "retained_E011_inputs_truth_and_native_export_DNA_match": true,
+  "full_contigs": 145702,
+  "full_bp": 231678157,
+  "full_targets": 156,
+  "full_reference_bp": 554661890,
+  "N_quarantine_percent": 3.3034,
+  "ordered_depth_columns": [
+    "cami3_toy_human_gut_short_read_sample_0",
+    "cami3_toy_human_gut_short_read_sample_2",
+    "cami3_toy_human_gut_short_read_sample_3",
+    "cami3_toy_human_gut_short_read_sample_4",
+    "cami3_toy_human_gut_short_read_sample_6",
+    "cami3_toy_human_gut_short_read_sample_9",
+    "cami3_toy_human_gut_short_read_sample_10",
+    "cami3_toy_human_gut_short_read_sample_11",
+    "cami3_toy_human_gut_short_read_sample_14",
+    "cami3_toy_human_gut_short_read_sample_17"
+  ],
+  "secondary": {
+    "counts": {
+      "threshold_based_HQ": 7,
+      "threshold_based_MQ": 11,
+      "high_impurity_or_unresolved": 16,
+      "threshold_based_LQ": 9
+    },
+    "target_counts": {
+      "threshold_based_MQ": 11,
+      "threshold_based_HQ": 5,
+      "high_impurity_or_unresolved": 14,
+      "threshold_based_LQ": 6
+    },
+    "at_least_200kb_counts": {
+      "threshold_based_HQ": 7,
+      "threshold_based_MQ": 11,
+      "high_impurity_or_unresolved": 16,
+      "threshold_based_LQ": 9
+    },
+    "assigned_bp": 113994035,
+    "query_count": 145702,
+    "primary_rule_changed": false,
+    "rRNA_tRNA_screened": false,
+    "numerical_units": "fractions in [0,1], not percentages",
+    "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+    "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+    "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity",
+    "target_at_least_200kb_counts": {
+      "threshold_based_MQ": 11,
+      "threshold_based_HQ": 5,
+      "high_impurity_or_unresolved": 14,
+      "threshold_based_LQ": 6
+    }
+  },
+  "retained_primary_summary": {
+    "at_least_50_percent": 16,
+    "at_least_90_percent": 5,
+    "bp_weighted_R95": 0.08549276749480661
+  },
+  "primary_rescored": false,
+  "formal_MIMAG_HQ": false,
+  "source": {
+    "bytes": 7267,
+    "sha256": "287bdb882355a8bdd0ad05843c44f90ba1874cc025966383c1f0f000ebc2ed2e"
+  },
+  "analysis": {
+    "review.json": {
+      "bytes": 58767,
+      "sha256": "69d7f4f5a39f844784b388a9a5b4444fdc2f0d46d2e189683491ac451567771d"
+    },
+    "bin-quality.tsv": {
+      "bytes": 7551,
+      "sha256": "75279519e316e35f693858d40a4086488d2e57725ac27c9e5c6778de5a16fc6a"
+    },
+    "resources.json": {
+      "bytes": 1164,
+      "sha256": "59d79098f90645780c213a9621b48c1418db47b771af431b53f73a92058bf65d"
+    }
+  },
+  "verified_native_and_export_members": 94,
+  "verified_FASTA_files": 88,
+  "local_resources": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+      "-I",
+      "-B",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e023_metabat_secondary.py",
+      "--output",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-native/20261026T213247Z/metabat-secondary-r2/result"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 26.723393947992008,
+    "peak_sampled_rss_bytes": 616968192,
+    "seconds_ceiling": 600,
+    "rss_bytes_ceiling": 8000000000,
+    "launched_pid": 81976,
+    "sampled_cpu_seconds": 26.869999999999997,
+    "sampled_average_cpus": 1.0054860566099242,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": true
+  },
+  "engineering_test": "Actual tiny FASTA membership/original-DNA/duplicate/omission contract: 1 test passed",
+  "failed_local_wrapper": {
+    "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-native/20261026T213247Z/metabat-secondary/failure.json",
+    "cause": "VM-only default 25 GiB reserve applied to Mac; refused before evaluator",
+    "repair": "Explicit local 6 GiB reserve; 512 MiB growth / 600 seconds / 8 GB / 4 threads retained"
+  },
+  "limits": "Native whole-tool context: seed cutoff 2500 bp, later eligibility 1000 bp, cvExt variance=mean assumption; not matched cutoff/encoder or formal MAG-quality certification. Confirmed foreign-origin and unresolved DNA remain separate."
+}

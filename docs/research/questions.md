@@ -647,3 +647,15 @@ E009 and E019 oral anchors prepare a downstream transfer test, not a depth-learn
 ablation. Secondary per-bin sequence quality/tier reporting does not change the
 primary R95 policy. New storage-only through November 4 is freshly admitted;
 comparison compute and untouched confirmation remain separately authorized scopes.
+
+
+E023 native handoff, October 26, 2026: [five Linux gates and exact full axes](../../experiments/E023-adaptive-density-bins/native-observed.json)
+pass; the one authorized cached comparison is running under the original clock
+and tested watcher. No new outcome resolves Q001/Q003/Q005. [Secondary retained
+MetaBAT2 tables](../../experiments/E023-adaptive-density-bins/metabat-secondary-review.json)
+match E009 truth/input/DNA and show nonuniform trade-offs: higher external R95,
+higher E022 target-90 count. This is a diagnostic priority, not proof that model
+capacity or grouping alone is limiting. Await the frozen joint outcome before
+selecting one strongest recovery block; broader architecture/information and
+independent depth-enabled data remain serious alternatives. No new fit, external
+run or confirmation acquisition. New $3 scope and November 4 storage remain fixed.

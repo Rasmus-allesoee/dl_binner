@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E022 completed review](../../experiments/E022-marker-informed-learning/comparison-review.json) is MODIFY: full-reference R95 7.8175 -> 7.7497%, but targets at least 90% recovered rise 6 -> 8. [Inspection/costs](../../experiments/E022-marker-informed-learning/inspection-observed.json) verify completion, shutdown and original envelopes. Next locally implement one adaptive-density, abundance/marker-informed bin-construction block with fixed representations, and prepare its matched cached comparison. No new community execution or retention renewal is implied. The dated decisions below remain history; [STATE](../STATE.md) and [E022 operations](../../experiments/E022-marker-informed-learning/OPERATIONS.md#exact-following-prompt) own the next scope.
+Current handoff: [E023 native admission](../../experiments/E023-adaptive-density-bins/native-observed.json) passes and the single fixed-learning cached comparison is running under its new $3 authorization; no new recovery outcome yet. It implements the adaptive-density/bin-construction block recommended after [E022's MODIFY](../../experiments/E022-marker-informed-learning/comparison-review.json), preserving every accepted comparator and source freeze. [Secondary retained MetaBAT2 context](../../experiments/E023-adaptive-density-bins/metabat-secondary-review.json) shows nonuniform recovery/quality trade-offs, without a new tool run or primary rescore. [STATE](../STATE.md) and [E023 operations](../../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt) own completion inspection and the strongest next-block decision. November 4 storage and original execution limits remain. The dated decisions below retain their historical scope.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
@@ -1513,3 +1513,35 @@ overlaps and named source/competitive/unique/evaluator/depth/cost limits; explic
 version any later candidate/protocol amendment. It cannot confirm depth-gated E022
 learning. Broader architecture, efficiency and genuinely independent depth-enabled
 data remain serious later options, not additions to this fixed-learning block.
+
+
+## E023 native comparison and retained external quality context, October 26, 2026
+
+[The fixed grouping block](../../experiments/E023-adaptive-density-bins/native-observed.json)
+passes five Linux gates and is running after tested boot/process supervision and
+one atomic release, with learning fixed. No new recovery or promotion is claimed.
+Interpreter/bootstrap and pre-release render failures are preserved, repaired
+within the first-start absolute clock, without repeating accepted science. The
+new $3 ceiling and November 4 retention remain; old budgets do not carry over.
+
+The owner's [secondary MetaBAT2 request](../../experiments/E023-adaptive-density-bins/metabat-secondary-review.json)
+uses actual retained assignments and native/export DNA, matching assembly, ordered
+ten-depth and conservative v2 truth. Threshold-based all-bin HQ/MQ/LQ counts are
+7/11/9; target-dominant counts 5/11/6. Unresolved DNA is separate from confirmed
+foreign origins; uncertainty-inclusive impurity is an upper bound. No RNA checks,
+formal MIMAG HQ, new native tool run or primary rescore. Native seed/recruitment
+cutoffs 2,500/1,000 bp differ from our 500 bp eligibility; full denominators remain.
+
+Existing primary summaries show a 4.435 Mb / 0.7996-percentage-point MetaBAT2 R95
+advantage over E022, alongside E022's higher target-90 count (eight versus five).
+Three targets contribute 7.447 Mb of external advantage, offset by our gains
+elsewhere; this concentrates a useful diagnostic without selecting scientific
+thresholds, bins or training labels. Complete E023 before deciding the next block.
+Its density-only/marker-weighted alternatives and cross-community transfer can
+help distinguish bin-construction failure from insufficient representation or
+information. The next inspection must explicitly weigh a broader learning/prior/
+coverage-information upgrade, grouping and efficiency/data alternatives, using
+new source audits if a concrete uncertainty could change the recommendation.
+Do not default to another small parameter study or larger model, but do not treat
+fixed-learning grouping as the only allowable future direction. Skin and genuine
+depth-enabled independent confirmation remain unrun with existing dependencies.

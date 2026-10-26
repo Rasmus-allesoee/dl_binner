@@ -2,36 +2,44 @@
 
 Updated: October 26, 2026 (Copenhagen). This is the single current handoff.
 
-**E023 implemented and locally tested; cached comparison prepared, unrun.**
-[Design](../experiments/E023-adaptive-density-bins/design.md),
-[local evidence](../experiments/E023-adaptive-density-bins/local-observed.json),
-[protocol/criteria](../experiments/E023-adaptive-density-bins/protocol.json) and
-[operations / exact next approval](../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt)
-own the next block. Branch `adaptive-density-bin-construction` preserves fixed
-E022 E009 and E019 oral vectors and all accepted science. A sparse mutual-
-reachability forest supplies local-density parent/child/consolidation alternatives;
-bp persistence and soft cached physical-marker proxies select disjoint bins.
-This is a new downstream heuristic, not E017/E018's long-core profile recruitment,
-an exact HDBSCAN implementation or an observed recovery improvement.
+**E023 native-admitted cached comparison is running; no new recovery result yet.**
+Phase `density-20261026T213652Z-f13e5a1-r2`, execution `f13e5a1`, unchanged science
+from `546763d`. [Native admission](../experiments/E023-adaptive-density-bins/native-observed.json)
+passes all five Linux gates, full E022 E009 / E019 oral axes, 17 tiny contracts and
+actual serial DAG/resume/collection. [Operations](../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt)
+owns the next completed-output inspection. Fixed learning/native vectors, source,
+sole policy and primary joint criteria remain; no refit or new score.
 
-Real tiny two-mode readers/native NNDescent/forest/selection/physical-locus/export/
-reload/serial DAG/resume/collector and financial/scope refusal tests pass. Synthetic
-unit vectors/annotations are explicit; no fit or marker search. Linux native
-runtime/full axes/systemd and full-scale cost remain pending. Secondary full-
-reference per-bin completeness and uncertainty-inclusive contamination/tier
-tables are implemented/tested; numerical HQ is threshold-based, not MIMAG HQ.
-Primary joint R95/target-90 criteria stay fixed. No community grouping/score,
-baseline rescore, acquisition, VM start, resource change or new private upload.
+Fresh current-boot/PID/start/command watcher and normal/crash/restart-refusal tests
+pass before the sole atomic release at 21:45:11 UTC. Original first-start clock:
+21:37:22 -> 23:37:22 UTC October 26; recovery STOP is earlier at 23:50:50 UTC
+(00:50:50 Copenhagen October 27). Initial interpreter/controller and pre-release
+render failures are preserved, without replaying science or extending limits.
+At 21:54 UTC, all four E009 native rules have passed into oral grouping;
+oral reranking advanced to 31,232 / 508,763 eligible rows, with 55.55 GiB free
+and about 6.59 GB sampled RSS. Independent completed-output review is pending. For a
+healthy longer run hand off after real progress; do not repeatedly poll to finish.
+Shutdown alone will not prove success. Exits, delivery, every-member/cost admission
+and frozen new-output diagnostics are still required.
 
-**Storage approved/admitted:** new $8 storage-only interval October 28 through
-**November 4, 00:00 Copenhagen**, ~$7.73 forecast. Fresh Welcome credit DKK 1,798.81
-Available / 91%, January 12 expiry; reporting lag unknown with $35 reserve. All
-149 GCS versions / 9,643,347,402 bytes, zero soft-deleted; original 30 + 300 GiB
-disks unchanged and VM TERMINATED. No later automatic renewal/deletion. Expensive
-GLM/context/DNA/runtimes remain protected; compact inventories are not backups.
-The separate new comparison proposes $3 / ~$1.85 conservative envelope, two-hour
-clock / 2.25-hour STOP; **no compute authorization yet**. Keep skin unscored under
-the original 610-target/313-overlap plan; it cannot confirm depth-gated learning.
+New $3 comparison authorization passes fresh Welcome-credit DKK 1,797.10 / 91%,
+January 12 expiry, unknown delayed usage / $35 reserve, unchanged ordinary prices
+and ~$1.85 quote. All 149 GCS versions / 9,643,347,402 bytes, no soft-deleted bytes;
+original E2 and 30 + 300 GiB disks only. Storage-only $8 interval October 28 ->
+**November 4, 00:00 Copenhagen**, ~$7.73, remains unchanged. No automatic renewal,
+cleanup or deletion. Protect expensive GLM/context/DNA/runtimes; inventories are
+not bulk backups. Actual final allocation/export/storage cost is pending shutdown.
+
+[Secondary retained MetaBAT2 context](../experiments/E023-adaptive-density-bins/metabat-secondary-review.json)
+verifies matching E009 input/truth and native/export DNA. Of 43 bins: 7 numerical
+HQ / 11 MQ / 9 LQ / 16 high-impurity-or-unresolved; target-dominant counts 5 / 11 /
+6 / 14. No RNA screen or formal MIMAG HQ. Retained primary R95 is 8.5493% versus
+E022's 7.7497%, but target-90 counts are five versus eight. Three target losses
+account for 7.447 Mb of MetaBAT advantage, offset elsewhere; do not infer a uniform
+model-capacity deficit or select bins/thresholds from that diagnosis. The completed
+E023 comparison will inform the strongest next block with serious alternatives
+and targeted source checks where useful. All 156/799/full references, N quarantine,
+oral origin-versus-uniqueness limits and frozen unscored skin remain.
 
 ## Preserved E022 reviewed outcome
 

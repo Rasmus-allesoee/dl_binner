@@ -1,0 +1,59 @@
+{
+  "record": "E023 launch and local-context failures, preserved",
+  "attempts": [
+    {
+      "attempt": "density-20261026T213652Z-f13e5a1",
+      "stage": "controller plan construction, before gates/science",
+      "cause": "System Python invoked validate_plan, which imports NumPy; NumPy absent in system Python",
+      "evidence": {
+        "bytes": 5330,
+        "sha256": "3ba0f17500f9d945f7c8d378b7cdc452b10aad2c229ce2d622e2c645065ec627"
+      },
+      "controller": {
+        "bytes": 8855,
+        "sha256": "040b6a3ec3f02b9dd5f432e390d8d1757692d1f9514b3214d2d8e05e2628a06b"
+      },
+      "confirmed_TERMINATED": {
+        "bytes": 33009,
+        "sha256": "cc31dacc313adf189180d4c427118025cdf61efe6f2e9f0cf0579269cc69c7aa"
+      },
+      "allocation_seconds": 96.63099980354309,
+      "repair": "Use retained isolated numerical Python for the exact plan check; fresh r2 root/current-boot watcher, same first-start absolute clock and earlier STOP",
+      "no_scientific_stage_repeated": true
+    },
+    {
+      "attempt": "release-native",
+      "stage": "local exact rendered-code compile, before atomic release",
+      "cause": "Generic STOP placeholder collided with provider_STOP_seconds identifier; caught by compile before SSH/release",
+      "evidence": {
+        "bytes": 1513,
+        "sha256": "b133b8d1e51b0acc31c655c9ecd1f33be25a949daa2dab50d7c2888b17ac9349"
+      },
+      "controller": {
+        "bytes": 6073,
+        "sha256": "6e645231d2fe75749b5093dff6e2b41c524a6c9d7b58f548443b28db180f6443"
+      },
+      "repair": "Unique placeholder plus exact rendered compile/schema test; preserved passed native gates; release once",
+      "repaired_source": {
+        "bytes": 6130,
+        "sha256": "32c790a57f8fc8df3b80d7bba90ffa7648d6dccd78c5df07f615d61b94374c68"
+      }
+    },
+    {
+      "attempt": "metabat-secondary",
+      "stage": "local resource prerequisite, before evaluator",
+      "cause": "VM-only 25 GiB reserve incorrectly used on Mac; refused before scientific reader",
+      "evidence": {
+        "bytes": 108,
+        "sha256": "d1f1095849f1d21aecb4e721db0139800bc4ac9545804e1c4ce5a9a3e6bb021e"
+      },
+      "repair": "Explicit local 6 GiB reserve, four threads/8 GB/600 seconds/512 MiB growth; original files untouched",
+      "result": {
+        "bytes": 1164,
+        "sha256": "59d79098f90645780c213a9621b48c1418db47b771af431b53f73a92058bf65d"
+      }
+    }
+  ],
+  "financial_epoch_erratum": "Original launch financial numeric epoch was one day later than displayed January 12 expiry; preserved and corrected append-only before release to earliest Copenhagen January 12 boundary. November 4 storage was already earlier and constrained all plans.",
+  "no_original_science_or_limits_modified": true
+}

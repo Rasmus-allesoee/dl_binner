@@ -1,0 +1,283 @@
+{
+  "record": "E023 native admission and running handoff",
+  "status": "RUNNING_GROUPING_NO_QUALITY_OR_COMPLETION_ADMISSION",
+  "observed_UTC": "2026-10-26T21:50:21.795234+00:00",
+  "phase": "density-20261026T213652Z-f13e5a1-r2",
+  "identity": {
+    "root": "/srv/dl_binner/experiments/e023/density-20261026T213652Z-f13e5a1-r2",
+    "repo": "/srv/dl_binner/e023-code/f13e5a1",
+    "source": "f13e5a1ea1933fa78c56773d739daa7faef24181",
+    "phase": "density-20261026T213652Z-f13e5a1-r2",
+    "user": "rasmus_allesoee_gmail_com",
+    "service_name": "e023-density-20261026T213652Z-f13e5a1-r2",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e023/density-20261026T213652Z-f13e5a1-r2",
+    "input_lock": "/srv/dl_binner/e023-code/f13e5a1/experiments/E023-adaptive-density-bins/reuse-lock.json",
+    "ceiling_USD": 3,
+    "provider_STOP_seconds": 8100,
+    "storage_retention_extended": false,
+    "vm_start_epoch": 1793050642.015
+  },
+  "prepared_scientific_commit": "546763dc27ad3e038f4054c8a183a8ceaf11b03d",
+  "execution_commit": "f13e5a1ea1933fa78c56773d739daa7faef24181",
+  "execution_commit_difference": "Documentation/owner prompt and authorization only; all 287 frozen source/policy/default/helper bytes unchanged",
+  "source_lock": {
+    "bytes": 43403,
+    "sha256": "fa7e55203409d32c1a3d9ba43ec8508f65ae741208a1506992c74c6d28a7c8f7"
+  },
+  "native_gates": [
+    {
+      "name": "workflow-version",
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 0.9356799000000038,
+      "sampled_tree_RSS_bytes": 43175936
+    },
+    {
+      "name": "accepted-runtime",
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 16.712916188999998,
+      "sampled_tree_RSS_bytes": 312868864
+    },
+    {
+      "name": "full-readers",
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 76.568498353,
+      "sampled_tree_RSS_bytes": 3365400576
+    },
+    {
+      "name": "tiny-readers-selection-export",
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 32.06376585000001,
+      "sampled_tree_RSS_bytes": 344465408
+    },
+    {
+      "name": "tiny-DAG-collection",
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 5.601407368999986,
+      "sampled_tree_RSS_bytes": 179437568
+    }
+  ],
+  "full_readers": {
+    "status": "PASS_FULL_READERS_NO_GROUPING",
+    "units": {
+      "E009-E022": {
+        "contigs": 145702,
+        "bp": 231678157,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ],
+        "eligible": 89041,
+        "marker_loci": 3462
+      },
+      "oral-E019": {
+        "contigs": 1286547,
+        "bp": 1669981123,
+        "samples": [],
+        "eligible": 508763,
+        "marker_loci": 59442
+      }
+    }
+  },
+  "runtime": {
+    "python": "3.10.15 | packaged by conda-forge | (main, Oct 16 2024, 01:24:24) [GCC 13.3.0]",
+    "prefix": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env",
+    "complete_distributions": 41,
+    "original_package_members": 49,
+    "status": "PASS_COMPLETE_RETAINED_DISTRIBUTIONS_SOURCE_AND_GRAPH_LIBRARIES"
+  },
+  "native_tiny_contracts": {
+    "tests": 17,
+    "status": "PASS",
+    "serial_jobs": 9,
+    "verified_no_op_resume": true,
+    "all_58_collection_members_verified": true,
+    "mocked": "No neural fit/marker detection; synthetic vectors/hand-authored annotations in tiny fixtures only"
+  },
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e023-density-20261026T213652Z-f13e5a1-r2.service",
+    "watchdog_timer": "e023-density-20261026T213652Z-f13e5a1-r2-exit.timer",
+    "watchdog_service": "e023-density-20261026T213652Z-f13e5a1-r2-exit.service",
+    "process": {
+      "pid": 1983,
+      "start_ticks": 4045,
+      "command_sha256": "9605f125b19da027496ab69a51b3bdbf2590558c54c84bc57577d7bf28d3d352"
+    },
+    "boot_id": "380e9663-b2c6-4cf9-8c28-ef6901856285",
+    "source_commit": "f13e5a1ea1933fa78c56773d739daa7faef24181",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1793050642.015,
+    "hard_deadline_epoch": 1793057842.015,
+    "provider_stop_epoch": 1793058742.015,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "release": {
+    "binding": {
+      "bytes": 2135,
+      "sha256": "5b6acf158c3784b191aa0f8a67deefbe32968ec0d54947c972ccb70d6925120d"
+    },
+    "epoch": 1793051111.1178699,
+    "once": true,
+    "provider_actual_STOP_epoch": 1793058650.583
+  },
+  "original_clock": {
+    "start_epoch": 1793050642.015,
+    "deadline_epoch": 1793057842.015,
+    "provider_STOP_epoch": 1793058742.015,
+    "retention_epoch": 1793746800
+  },
+  "new_gross_ceiling_USD": 3,
+  "financial_quote_USD": 1.8505171549903765,
+  "credit_DKK": 1797.1,
+  "pending_usage_reserve_USD": 35,
+  "credit_valid_until_epoch": 1799708400.0,
+  "storage_authorized_until": "2026-11-04T00:00:00+01:00",
+  "first_failed_allocation_seconds": 96.63099980354309,
+  "first_failed_compute_IP_USD": 0.007329076858045981,
+  "final_allocation_costs": "PENDING INDEPENDENT SHUTDOWN; no invoice or credit-delta attribution",
+  "no_new_fit_or_extraction_or_marker_search": true,
+  "no_scientific_output_replayed": true,
+  "secondary_MetaBAT": {
+    "bytes": 4593,
+    "sha256": "6e4448b55d20432b841abcdb148967c7a0f94eaa618f650b734ce62239b8b74b"
+  },
+  "retained_admission": {
+    "path": "artifacts/e023-native/20261026T213247Z/native-admission",
+    "members": {
+      "capture.json": {
+        "bytes": 1651,
+        "sha256": "84ca2eac06bdbcf094a2caebe548fd5ee5bf54d36bc63573fc1a15300f8250cf"
+      },
+      "config.json": {
+        "bytes": 2306,
+        "sha256": "3e83bd32b507c89b5bbcc1af98d63b710ad8e8c7e056016288f3d11a48bafd5e"
+      },
+      "gates/completion.json": {
+        "bytes": 4416,
+        "sha256": "2cab774bb8b6cfa12b7ede8bfe659d37bb51432f0a66320d618510a6ad9cd0ce"
+      },
+      "gates/readers.json": {
+        "bytes": 670,
+        "sha256": "3298154ef4cd4577ce9c3e418b174b87953348a54b7bec03282498301d444250"
+      },
+      "gates/runtime.json": {
+        "bytes": 19072,
+        "sha256": "3098eca3219993be12d7b2017d22b4dd155fa4a2e6eb9df8ec656c65718d85b8"
+      },
+      "gates/source.json": {
+        "bytes": 155,
+        "sha256": "06b78224451302e31c5e5ccaba304b750c067b6cef0128b800143a4812044dd2"
+      },
+      "logs/maintenance-restart-refused.json": {
+        "bytes": 427,
+        "sha256": "7be1b7b2ef23f77a0feaa4cb63d0bbda7db014e7135924fd8bd8c7f503eb1808"
+      },
+      "logs/supervision.json": {
+        "bytes": 1069,
+        "sha256": "2c4ef57bd56964e27ce7d086371c663b4158359255b7b78861c2287af0842d62"
+      },
+      "logs/watchdog-live-before-release.json": {
+        "bytes": 572,
+        "sha256": "79e1acb95993308d80472c814e257841ebea28ef83fc181af8f3a1ef0be3394d"
+      },
+      "logs/watchdog-native-tests.log": {
+        "bytes": 3012,
+        "sha256": "4651d95dd704f9eca702a6d6833e017c9fecaedb5fe621fd4486fe0baebacb83"
+      },
+      "release.json": {
+        "bytes": 2135,
+        "sha256": "5b6acf158c3784b191aa0f8a67deefbe32968ec0d54947c972ccb70d6925120d"
+      },
+      "science-plan.json": {
+        "bytes": 2191,
+        "sha256": "4a2d8f69c491518781d63ba76d0146c28acc457be3cedafc30746bfd0ab91e3c"
+      },
+      "ssh.stderr": {
+        "bytes": 202,
+        "sha256": "5444cd70365e9587f6e2d566306f73340b6fd59461883752c13d03c35bc9bafb"
+      }
+    }
+  },
+  "failures": {
+    "bytes": 2746,
+    "sha256": "8625373a623e5162c694171fa1be4deebfe67a0ed3d8c72e8dde59aeb40d826b"
+  },
+  "github_destination": "Verified signed-in owner Rasmus-allesoee, ADMIN, origin Rasmus-allesoee/dl_binner currently PUBLIC; no visibility change. New prepared branch pushed normally; VM fetched read-only.",
+  "quality": "PENDING COMPLETE SHUTDOWN/ARCHIVE/MEMBERS/COST AND FROZEN LOCAL REVIEW",
+  "latest_verified_progress": {
+    "UTC": "2026-10-26T21:54:37.789242+00:00",
+    "status": "RUNNING_HEALTHY_NOT_COMPLETED",
+    "stage": "oral-E019 group: approximate index constructed; distance reranking progressing",
+    "completed_candidate_rows": 31232,
+    "total_eligible_rows": 508763,
+    "E009_native_stages": "verify/group/export/audit completed in serial scheduler before oral; independent post-return scientific review pending",
+    "oral_verify": "completed before group",
+    "watcher_decision": "workflow alive",
+    "process": {
+      "command_sha256": "9605f125b19da027496ab69a51b3bdbf2590558c54c84bc57577d7bf28d3d352",
+      "pid": 1983,
+      "start_ticks": 4045
+    },
+    "free_GiB": 55.55162811279297,
+    "sampled_science_RSS_GB_latest_rounded": 6.59,
+    "full_snapshot": {
+      "bytes": 47590,
+      "sha256": "8324217cb14e73807f9e1602436a157cff6c2020d83eb6e509d90ca918529841"
+    },
+    "control_plane": {
+      "bytes": 33117,
+      "sha256": "b6e5bb28ffe6f3abc73d1917b5318e94708f92453b9f568406603794cb7a29ba"
+    },
+    "guest_attribute": {
+      "bytes": 305,
+      "sha256": "0e3c6d2f18d1cc650bc23e93b6015944b8d237776334fa021339905adac42b4e"
+    },
+    "no_completion_or_quality_claim": true
+  },
+  "priced_allocation_snapshot": {
+    "asof_UTC": "2026-10-26T21:54:37.789242+00:00",
+    "measured_running_VM_seconds_including_failed_bootstrap": 971.8372421264648,
+    "allocated_vCPU_hours": 2.1596383158365886,
+    "compute_and_IP_USD": 0.07370998805287267,
+    "run_disk_attribution_USD": 0.011537793723595162,
+    "final": false,
+    "sampled_CPU_not_used_as_price": true,
+    "storage_attribution_overlaps_approved_storage": true,
+    "not_invoice": true
+  },
+  "local_checks": {
+    "source": {
+      "bytes": 183,
+      "sha256": "7061cda4f2ba1ce360c2947c2deac1ddddf5a39e52aa8da7e0ca33fe7de4130a"
+    },
+    "docs_log": {
+      "bytes": 689,
+      "sha256": "4e6576764a5c12a212ee16147ee5441796503b32edc5ef179e4ce345cacc1120"
+    },
+    "new_secondary_test": "1 actual tiny contract passed, plus 17 frozen native contracts; no new community score"
+  }
+}
