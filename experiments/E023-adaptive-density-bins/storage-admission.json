@@ -1,0 +1,92 @@
+{
+  "status": "APPROVED_AND_FRESHLY_ADMITTED_STORAGE_ONLY",
+  "owner_authorization": "2026-10-26: carry out E022 Exact following prompt, including its new $8 storage-only allowance",
+  "checked_UTC": "2026-10-26T14:56:50.649801+00:00",
+  "start": "2026-10-28T00:00:00+01:00",
+  "end": "2026-11-04T00:00:00+01:00",
+  "hours": 168,
+  "ceiling_USD": 8,
+  "forecast_USD": 7.730816966517739,
+  "scope": "Existing 30 GiB standard and 300 GiB balanced disks; existing private US-CENTRAL1 Standard bucket only; no compute/resource change, deletion or automatic later renewal",
+  "credits": {
+    "displayed_DKK": 1798.81,
+    "percent_remaining": 91,
+    "status": "Available",
+    "original_DKK": 1973.43,
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; free-trial terms; net pricing; upgraded paid billing account",
+    "overview_October_1_26_DKK": {
+      "cost_rounded": 173,
+      "savings_rounded": 173,
+      "net": 0
+    },
+    "reporting_delay": "Hours, possibly more than 24 hours; amount unknown",
+    "delayed_usage_reserve_USD": 35
+  },
+  "products_covered": [
+    "Compute Engine persistent disk",
+    "Cloud Storage Standard and ordinary operations"
+  ],
+  "conservative_disk_USD_month": 31.2,
+  "gcs_live_objects": 149,
+  "gcs_live_bytes": 9643347402,
+  "gcs_soft_deleted_objects": 0,
+  "gcs_soft_deleted_bytes": 0,
+  "future_extra_GCS_allowance_GiB": 2,
+  "operations_contingency_USD": 0.5,
+  "GCS_USD_GiB_month": 0.02,
+  "original_interval": {
+    "end": "2026-10-28T00:00:00+01:00",
+    "ceiling_USD": 8,
+    "current_forecast_USD": 7.7738575
+  },
+  "provider_status": "TERMINATED",
+  "changes_made": "Record authorization only; persistent resources retained unchanged",
+  "current_USD_DKK_conversion": 6.578099999996525,
+  "evidence": {
+    "instances": {
+      "bytes": 33448,
+      "sha256": "b7e826402209c96a5fbe5eb37047ded69ed8fed24082a0bb990eea246ed6ba23"
+    },
+    "disks": {
+      "bytes": 2889,
+      "sha256": "7b1e31f2ea8f8d6aec30aee9cc5dd2f290f76661b48b8bc9167c844b143e5192"
+    },
+    "bucket": {
+      "bytes": 563,
+      "sha256": "83cef51f3d07bbffe6579d612c0b45bc79a041021c6756a21b77543d3c17628a"
+    },
+    "objects-live": {
+      "bytes": 36432,
+      "sha256": "4dc8daa96874c1ad7a2011bd2ff4fe7e06387fb22a8c776e4a385baaab603b49"
+    },
+    "objects-soft-deleted": {
+      "bytes": 93,
+      "sha256": "28dc790994a8d42f0469719d199693b9b896d17c5739f001083a9e7126e3d459"
+    },
+    "current-prices": {
+      "bytes": 8003,
+      "sha256": "b675cb0d811dfe02d1bc457971ca669aea3e6e508427ea9f3b10a896ab14af88"
+    },
+    "project-billing": {
+      "bytes": 207,
+      "sha256": "9c4fd259b47b8101051ccaa3bac81f8a453d3d2504adc5bf1667866933d0b1e6"
+    },
+    "billing-account": {
+      "bytes": 179,
+      "sha256": "17dd9713d07020527cf5fe1b60bce655218cc43355120a522d4a31c35f73961b"
+    },
+    "objects-all-versions": {
+      "bytes": 36432,
+      "sha256": "b1ce9b5a766c1ade273d51133496655fcf14613c61ac7978a0f4f11ddcb6ee29"
+    }
+  },
+  "sources": [
+    "https://cloud.google.com/storage/pricing",
+    "https://docs.cloud.google.com/free/docs/free-cloud-features"
+  ],
+  "not_invoice": true,
+  "no_real_money_authorized": true,
+  "gcs_all_versions_objects": 149,
+  "gcs_all_versions_bytes": 9643347402
+}

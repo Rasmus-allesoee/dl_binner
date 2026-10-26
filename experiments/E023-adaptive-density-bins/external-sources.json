@@ -1,0 +1,43 @@
+{
+  "consulted_UTC": "2026-10-26T15:13:18.087344+00:00",
+  "review_scope": "Targeted primary source checks; no external execution, vendoring, measured speed or parity",
+  "reused_reviews": [
+    "docs/evidence/2026-10-08-competitive-binner-study.md",
+    "docs/evidence/2026-09-30-binner-design-review.md",
+    "docs/evidence/2026-09-16-thesis.md"
+  ],
+  "sources": [
+    {
+      "name": "Official HDBSCAN implementation documentation",
+      "url": "https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html",
+      "use": "mutual reachability, sparse MST rationale, condensed hierarchy and stability; E023 bp weighting/marker utility is a new heuristic, not stock HDBSCAN"
+    },
+    {
+      "name": "MetaBAT2 primary methods",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6662567/",
+      "use": "sparse iterative integration of composition and abundance; not a reproduced tool"
+    },
+    {
+      "name": "VAMB source",
+      "commit": "b146fb610921aef1da8aed5d739f1ce80d21b33a",
+      "file": "vamb/cluster.py",
+      "binding": {
+        "bytes": 25211,
+        "sha256": "d603712e70303761d922e21cd0949e0b81d52dd5af25ea55542f3d799acaabb5"
+      },
+      "use": "length-weighted local histogram valleys, lines 452-535"
+    },
+    {
+      "name": "MetaBAT2 source",
+      "commit": "8eb96023ef627d1955c05e3aca348c84b8757914",
+      "file": "src/metabat2.cpp",
+      "binding": {
+        "bytes": 77442,
+        "sha256": "20c6105f5c4d6dd8de05864cbd8da5cc11f2d99198576b8cfd39fdde0dd2d2ee"
+      },
+      "use": "coverage graph integration, lines 785-830"
+    }
+  ],
+  "secondary_quality_note": "Experimental numerical tiers, explicitly not MIMAG HQ. Author publisher full-text request failed; do not claim fresh complete MIMAG full-text review.",
+  "method_sources_not_performance_evidence": true
+}

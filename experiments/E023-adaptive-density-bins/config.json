@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "seed": 11,
+  "neighbors": 30,
+  "candidates": 60,
+  "min_samples": 10,
+  "min_bin_contigs": 2,
+  "min_bin_bp": 10000,
+  "exact_threshold": 2048,
+  "audit_queries": 32,
+  "min_neighbor_recall": 0.9,
+  "calibration_pairs": 8192,
+  "batch_rows": 512,
+  "length_scale_bp": 2500,
+  "marker_excess_penalty": 5.0,
+  "distance_floor": 0.000001
+}

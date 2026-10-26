@@ -1,0 +1,49 @@
+{
+  "record": "E023",
+  "status": "FROZEN_PROSPECTIVE_NO_COMMUNITY_OUTCOME",
+  "learning": "fixed E022 E009 and fixed E019 oral; separate anchors, not a learning ablation",
+  "policy": {
+    "bytes": 359,
+    "sha256": "9760c050f028d8576400fe7fc4471ff26222e108c73c4399b2e673d206b7c8b7"
+  },
+  "rule": "Sparse mutual-reachability forest, bp-weighted support condensation and marker-weighted antichain; density-only alternative retained",
+  "truth_never_selects": true,
+  "primary": {
+    "keep": "At least +0.005 absolute full-reference weighted R95 in one community; neither community R95 decreases; neither >=90% target count decreases",
+    "abandon": "Neither community improves weighted R95 or its >=90% target count",
+    "modify": "All other valid mixed results; failed primary criteria unchanged"
+  },
+  "references": {
+    "E009_targets": 156,
+    "E009_reference_bp": 554661890,
+    "oral_targets": 799,
+    "oral_reference_bp": 2083072211,
+    "E009_N_quarantine_bp": 7653205,
+    "E009_N_quarantine_percent": 3.3034,
+    "oral": "provided-origin oracle, not unique sequence; known-shared sensitivity unchanged"
+  },
+  "secondary": {
+    "completeness": "Dominant-origin duplicate-safe source union / full provided reference length",
+    "contamination": "Confirmed foreign-origin bp and unresolved bp separately; 1-confirmed all-bin purity is an upper bound",
+    "HQ": "completeness>0.90 and impurity<0.05",
+    "MQ": "otherwise completeness>=0.50 and impurity<0.10",
+    "LQ": "otherwise completeness<0.50 and impurity<0.10",
+    "other": "high impurity or unresolved; non-target bins reported separately",
+    "RNA_screened": false,
+    "formal_MIMAG_HQ": false,
+    "NC_category": false,
+    "primary_rule_changed": false
+  },
+  "baseline_summaries": {
+    "E022_E009": {
+      "bytes": 369410,
+      "sha256": "ee44befc007aa5fc9bae41a498c08850de2d5ec314a7ad641028d601f975ad2f"
+    },
+    "E019_oral": {
+      "bytes": 251373,
+      "sha256": "e80043238e97659228748ba7f55487fe1f0eac64af89d87c08e69e3df2536589"
+    }
+  },
+  "extra_scope": "No community grouping/score, new fit, baseline rescore, extraction, markers, DNA acquisition or cloud compute in local preparation; new execution approval required",
+  "context_semantics": "Depth scales from observed eligible measured-parent means only; missing rows omitted from scale estimates and pair evidence. Composition reliability is physical contig length L/(L+2500), an explicit heuristic, not measured coverage variance or independent fourmer confidence."
+}

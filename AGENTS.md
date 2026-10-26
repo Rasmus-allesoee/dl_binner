@@ -193,6 +193,13 @@ aggregates. A representation gain driven by non-target organisms is not evidence
 of improvement for the primary cellular targets. Compare the same query populations
 and retain unknown/non-target DNA in the appropriate full-population denominators.
 
+Keep secondary per-bin quality summaries separate from the primary recovery rule.
+State the completeness denominator and contamination formula. Under conservative
+sequence truth, one minus confirmed all-bin purity includes unresolved DNA and is
+a contamination upper bound, not measured contamination or a marker estimate.
+Numerical HQ/MQ/LQ counts without required RNA checks are threshold-based tiers,
+not formal MIMAG HQ; retain unknown/non-target bins and their separate counts.
+
 For length-dependent methods, distinguish the main/core binning cutoff from
 later short-contig recruitment, coverage filters and actual emitted eligibility.
 A native whole-tool comparison may have different eligibility from our learner;

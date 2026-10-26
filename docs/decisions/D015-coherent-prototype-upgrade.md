@@ -1471,3 +1471,45 @@ Priced allocation/storage/export subtotal $0.25310 / $0.85310 with reserves stay
 inside the original new $2. Original $8 storage ends October 28 at 00:00 Copenhagen;
 a separate new $8 week through November 4 forecasts $7.73 and requires owner approval.
 No automatic deletion/renewal, additional science or resource change occurred.
+
+## E023 prospective local bin construction, October 26, 2026
+
+[E023](../../experiments/E023-adaptive-density-bins/README.md) implements the chosen
+block without retraining or changed community outcomes. Use sparse mutual-
+reachability density branches and support condensation over every eligible row;
+bp-weighted persistence plus soft cached E013 physical-marker reliability chooses
+a disjoint parent/child/consolidation antichain. Learned sphere, explicit
+Hellinger composition/length and actual available measured parent-depth remain;
+missing depth contributes no evidence. This is an HDBSCAN-inspired sparse heuristic,
+not exact standard HDBSCAN, measured coverage variance or proof of improved recovery.
+
+The hierarchy can consolidate across old CPM fragments and split a mixed branch.
+It differs materially from E017/E018 long-core CPM plus fixed profiles/votes;
+their negative oral results are preserved, not reinterpreted as support. Marker
+copies are fallible quality proxies, never hard cannot-links, a true K or calibrated
+MAG quality. Whole-parent alternatives, all DNA and abstention remain. No truth
+or score-selected thresholds, families, merges, grid or per-community routing.
+
+Real tiny native sparse/index/forest, physical-locus, two-mode reader/export/reload,
+serial DAG/resume, collection and refusal contracts pass; original failures remain.
+Linux/systemd/full-shape/runtime affordability is not yet admitted. Prepare one
+common downstream policy on E022 E009 and E019 oral, each against its own preserved
+CPM/E013 summary. Frozen joint KEEP needs >=0.5 percentage-point R95 gain in one,
+no R95 regression or target-90 loss in either. Otherwise apply prospective
+MODIFY/ABANDON unchanged. No baseline refit/rescore or new community evaluation here.
+
+The owner's secondary per-bin request adds duplicate-safe full-reference sequence
+completeness, confirmed foreign-origin versus unresolved DNA and threshold-based
+HQ/MQ/LQ counts. One minus confirmed purity is a contamination upper bound, not
+measured contamination; no RNA screen or formal MIMAG HQ claim. Primary policy and
+full 156/799 reference populations/N-quarantine stay unchanged. AGENTS now carries
+this durable reporting distinction; experimental thresholds belong in E023.
+
+Fresh checks admit the newly authorized $8 storage-only October 28–November 4
+interval at ~$7.73; no start/resources/deletion or further renewal. A separate $3
+two-hour cached comparison forecasts ~$1.85 conservatively and awaits explicit
+execution approval. Keep skin unscored with original 610 targets / 313 exact oral
+overlaps and named source/competitive/unique/evaluator/depth/cost limits; explicitly
+version any later candidate/protocol amendment. It cannot confirm depth-gated E022
+learning. Broader architecture, efficiency and genuinely independent depth-enabled
+data remain serious later options, not additions to this fixed-learning block.

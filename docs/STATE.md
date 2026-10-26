@@ -2,6 +2,39 @@
 
 Updated: October 26, 2026 (Copenhagen). This is the single current handoff.
 
+**E023 implemented and locally tested; cached comparison prepared, unrun.**
+[Design](../experiments/E023-adaptive-density-bins/design.md),
+[local evidence](../experiments/E023-adaptive-density-bins/local-observed.json),
+[protocol/criteria](../experiments/E023-adaptive-density-bins/protocol.json) and
+[operations / exact next approval](../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt)
+own the next block. Branch `adaptive-density-bin-construction` preserves fixed
+E022 E009 and E019 oral vectors and all accepted science. A sparse mutual-
+reachability forest supplies local-density parent/child/consolidation alternatives;
+bp persistence and soft cached physical-marker proxies select disjoint bins.
+This is a new downstream heuristic, not E017/E018's long-core profile recruitment,
+an exact HDBSCAN implementation or an observed recovery improvement.
+
+Real tiny two-mode readers/native NNDescent/forest/selection/physical-locus/export/
+reload/serial DAG/resume/collector and financial/scope refusal tests pass. Synthetic
+unit vectors/annotations are explicit; no fit or marker search. Linux native
+runtime/full axes/systemd and full-scale cost remain pending. Secondary full-
+reference per-bin completeness and uncertainty-inclusive contamination/tier
+tables are implemented/tested; numerical HQ is threshold-based, not MIMAG HQ.
+Primary joint R95/target-90 criteria stay fixed. No community grouping/score,
+baseline rescore, acquisition, VM start, resource change or new private upload.
+
+**Storage approved/admitted:** new $8 storage-only interval October 28 through
+**November 4, 00:00 Copenhagen**, ~$7.73 forecast. Fresh Welcome credit DKK 1,798.81
+Available / 91%, January 12 expiry; reporting lag unknown with $35 reserve. All
+149 GCS versions / 9,643,347,402 bytes, zero soft-deleted; original 30 + 300 GiB
+disks unchanged and VM TERMINATED. No later automatic renewal/deletion. Expensive
+GLM/context/DNA/runtimes remain protected; compact inventories are not backups.
+The separate new comparison proposes $3 / ~$1.85 conservative envelope, two-hour
+clock / 2.25-hour STOP; **no compute authorization yet**. Keep skin unscored under
+the original 610-target/313-overlap plan; it cannot confirm depth-gated learning.
+
+## Preserved E022 reviewed outcome
+
 **E022 completed, checksum-verified and independently reviewed: MODIFY. VM
 TERMINATED.** [Inspection](../experiments/E022-marker-informed-learning/inspection-observed.json),
 [comparison](../experiments/E022-marker-informed-learning/comparison-review.json),
@@ -41,7 +74,7 @@ These are priced allocations, not an invoice or credit-delta attribution. Fresh
 Welcome credit **DKK 1,800.33 Available / 91%**, January 12 expiry; reporting lag
 unknown with $35 reserve. Existing storage forecast ~$7.774 within original $8.
 
-## Exact next step
+### E022 recommendation, implemented locally in E023
 
 **Implement one adaptive-density, abundance/marker-informed bin-construction block
 locally, with learning and native vectors fixed; prepare a two-community cached
@@ -56,10 +89,11 @@ before new outcomes; no community fit/score is authorized by this inspection.
 [Operations](../experiments/E022-marker-informed-learning/OPERATIONS.md#exact-following-prompt)
 has the full proposed next prompt.
 
-**Owner preservation decision needed before October 28, 00:00 Copenhagen (CET).**
+**Preservation decision at the E022 review, now resolved by E023.**
 Original stopped disks conservatively cost $31.20/month. A new $8 storage-only week
-through November 4 forecasts ~$7.73 with GCS/2 GiB extra/reserve; it is **not yet
-approved**. Do not renew/delete automatically. Bulk GLM/context/DNA and linked
+through November 4 forecasts ~$7.73 with GCS/2 GiB extra/reserve and is now
+[approved/admitted](../experiments/E023-adaptive-density-bins/storage-admission.json).
+Do not renew/delete automatically beyond that endpoint. Bulk GLM/context/DNA and linked
 runtime prerequisites on the work disk are not backed up by compact inventories.
 Skin stays unscored; its provided-origin/overlap/evaluator/real-depth/cost limits
 remain. Independent depth-enabled confirmation needs separate prospective data

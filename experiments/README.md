@@ -31,6 +31,8 @@ reproduced result of this project.
 
 - [E022: reliable marker-informed cross-contig learning](E022-marker-informed-learning/README.md)
 
+- [E023: adaptive-density, marker-informed bin construction](E023-adaptive-density-bins/README.md)
+
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 
 ## Record convention

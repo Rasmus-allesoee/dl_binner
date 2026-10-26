@@ -1,0 +1,56 @@
+{
+  "failures": [
+    {
+      "attempt": "contracts-1",
+      "cause": "Local sandbox denied ps before the first supervised test; no fixture/science ran",
+      "repair": "Use authorized process-tree sampling outside the sandbox inside the same original clock",
+      "journal": {
+        "bytes": 585,
+        "sha256": "ac6c745e00577ed26a1f929c0d49b0e692e81b6a2015d3b3ab73bd3e727ae3a9"
+      }
+    },
+    {
+      "attempt": "contracts-2",
+      "cause": "New reader incorrectly required numeric edge order; native writer canonicalizes opaque IDs",
+      "repair": "Match the unchanged native opaque-ID order, retaining all byte/axis checks; actual two-mode sparse/FASTA fixtures pass",
+      "journal": {
+        "bytes": 3220,
+        "sha256": "0e03cd52f153370660bb919561ffa9dfe3e7e3eea04a8d3cd7c9ac4292c37132"
+      }
+    },
+    {
+      "attempt": "reuse-lock-generator",
+      "cause": "Attempted to obtain an older native-runtime reference binding absent from inherited files map; KeyError before writing lock",
+      "repair": "Use already bound E022 runtime receipt directly and a new exact complete-distribution/source/graph-library reader; no fallback or missing-byte acceptance",
+      "science_or_lock_written": false
+    },
+    {
+      "attempt": "cache-audit-contracts-1",
+      "cause": "RuntimeError('Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/cache-audit-contracts-1.log\\n_ambiguity (test_e023_density.SecondaryQuality) ... ok\\ntest_tier_edges_do_not_claim_mimag (test_e023_density.SecondaryQuality) ... ok\\ntest_exact_new_hierarchy_collector_and_cap (test_e023_operational.Operational) ... ok\\ntest_fresh_credit_clock_storage_and_watchdog_scope (test_e023_operational.Operational) ... ok\\ntest_new_review_refuses_unadmitted_outputs_before_any_truth_read (test_e023_operational.Operational) ... ok\\ntest_real_restore_reader_refuses_missing_corrupt_and_links (test_e023_operational.Operational) ... ok\\ntest_source_plan_rejects_truth_path_and_expansion (test_e023_operational.Operational) ... ok\\n\\n======================================================================\\nERROR: test_real_two_mode_readers_hierarchy_export_reload (test_e023_density.Density) (depth=True)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e023_density.py\", line 83, in test_real_two_mode_readers_hierarchy_export_reload\\n    save_arrays(p/\\'new/hierarchy.npz\\',a,{k:v for k,v in meta.items()if k not in [\\'version\\',\\'sha256\\',\\'ids_sha256\\']})\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/src/dl_binner/io.py\", line 171, in save_arrays\\n    raise FileExistsError(f\\'Fresh artifact path required: {path}\\')\\nFileExistsError: Fresh artifact path required: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tmp/tmpbtclpbhq/new/hierarchy.npz\\n\\n======================================================================\\nERROR: test_real_two_mode_readers_hierarchy_export_reload (test_e023_density.Density) (depth=False)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e023_density.py\", line 83, in test_real_two_mode_readers_hierarchy_export_reload\\n    save_arrays(p/\\'new/hierarchy.npz\\',a,{k:v for k,v in meta.items()if k not in [\\'version\\',\\'sha256\\',\\'ids_sha256\\']})\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/src/dl_binner/io.py\", line 171, in save_arrays\\n    raise FileExistsError(f\\'Fresh artifact path required: {path}\\')\\nFileExistsError: Fresh artifact path required: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tmp/tmp4lbgd8ue/new/hierarchy.npz\\n\\n----------------------------------------------------------------------\\nRan 14 tests in 39.923s\\n\\nFAILED (errors=2)\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+      "receipt": {
+        "bytes": 4662,
+        "sha256": "b4d7d516543aa70f30f22938e4fb63696dd06387f74c539d5102c747baf36b2a"
+      },
+      "repair": "Malformed-cache test now writes to a fresh damaged artifact; immutable writer refusal remains. Actual structural reader test passes."
+    },
+    {
+      "attempt": "final-17-contracts-1",
+      "cause": "RuntimeError(\"Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/final-17-contracts-1.log\\nTimeoutError: FileNotFoundError(2, 'No such file or directory')\")",
+      "receipt": {
+        "bytes": 2108,
+        "sha256": "772862a8e654e6bafc2944242c5cc4c5fd36f361686bcd084f66ec9db344a3d5"
+      },
+      "repair": "Local resource sampler now tolerates disappearance of test-owned temporary files between walk/stat; scientific missing-member refusal unchanged."
+    },
+    {
+      "attempt": "source-resource-seal-1",
+      "cause": "RuntimeError('Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/source-resource-seal-1.log\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E023-adaptive-density-bins/journals/summarize-local.py\", line 91, in <module>\\n    if __name__==\\'__main__\\':main()\\n                            ^^^^^^\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E023-adaptive-density-bins/journals/summarize-local.py\", line 58, in main\\n    if indexed[name][\\'status\\']!=\\'SUCCESS\\':raise ValueError(\\'Required local contract not passed: \\'+name)\\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nValueError: Required local contract not passed: final-17-contracts-1\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+      "receipt": {
+        "bytes": 1275,
+        "sha256": "d44cb9ff32eb3cbc75287be68b0cd4e4495c74ba80b3d460a235d8fffd6bce9a"
+      },
+      "repair": "Premature finalization refused the interrupted required suite; no success/native admission was published."
+    }
+  ],
+  "original_clock_not_reset": true
+}

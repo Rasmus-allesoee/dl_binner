@@ -1,0 +1,2381 @@
+{
+  "record": "E023 bounded local preparation",
+  "status": "IMPLEMENTED_LOCAL_CONTRACTS_PASS_COMPARISON_UNRUN",
+  "observed_UTC": "2026-10-26T16:09:28.254641+00:00",
+  "branch": "adaptive-density-bin-construction",
+  "source_parent": "5a82ae9982911e0e41e7726766659cefd936519d",
+  "source_lock": {
+    "bytes": 43403,
+    "sha256": "fa7e55203409d32c1a3d9ba43ec8508f65ae741208a1506992c74c6d28a7c8f7"
+  },
+  "original_package": {
+    "status": "PASS",
+    "original_E022_package_members": 49,
+    "all_original_source_defaults_unchanged": true,
+    "added_only": "density research module; no installed prefix changed"
+  },
+  "limits": {
+    "clock_seconds": 7200,
+    "threads": 4,
+    "sampled_tree_RSS_bytes": 8000000000,
+    "extra_bytes": 4294967296
+  },
+  "elapsed_cumulative_seconds": 5134.388795852661,
+  "peak_sampled_tree_RSS_bytes": 314552320,
+  "owned_artifact_bytes": 3409539,
+  "free_local_bytes": 15369248768,
+  "tests": {
+    "combined_contracts": 17,
+    "status": "PASS",
+    "latest_full": "final-17-contracts-2",
+    "latest_affected": "final-control-inventory-1",
+    "actual": [
+      "real DNA/features/opaque IDs and original sparse graph readers",
+      "native NNDescent + fixed sampled recall",
+      "scipy sparse mutual-reachability forest/condensation",
+      "unequal-density/bridge/parent-child/consolidation and abstention fixtures",
+      "cached physical overlap/partial/cross-contig marker interpretation",
+      "both missing/present depth and complete FASTA export/reload",
+      "actual serial nine-job Snakemake helper argv outside checkout; verified no-op resume",
+      "bounded collector and every retained member hash",
+      "real restore/cost/clock/source/scientific-link/admission refusal paths",
+      "streamed oral support/shared/N adapter and sequence quality tier boundaries"
+    ],
+    "synthetic": [
+      "tiny fixed unit vectors instead of any neural fit",
+      "hand-authored cached marker annotations instead of detector-accuracy evidence"
+    ],
+    "not_run": [
+      "new community grouping or evaluation",
+      "baseline fit/rescore",
+      "new encoder inference/training/GLM extraction/marker detection",
+      "new Linux full-axis/source/runtime/systemd gates",
+      "full-scale affordability/quality",
+      "cloud compute/resource mutation, acquisition, confirmation or new private upload"
+    ],
+    "final_actual_DAG": "sealed-adapter-DAG-1",
+    "persisted_hierarchy": "PASS_STRUCTURAL_AND_REPRODUCED_CACHED_CHOICES_NO_INDEX_OR_MST_REBUILD",
+    "large_completion_control": "10,000-member full receipt bound in <2 KiB compact control"
+  },
+  "attempts": [
+    {
+      "attempt": "cache-audit-contracts-1.resources",
+      "status": "FAILED",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_checks.py"
+      ],
+      "error": "RuntimeError('Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/cache-audit-contracts-1.log\\n_ambiguity (test_e023_density.SecondaryQuality) ... ok\\ntest_tier_edges_do_not_claim_mimag (test_e023_density.SecondaryQuality) ... ok\\ntest_exact_new_hierarchy_collector_and_cap (test_e023_operational.Operational) ... ok\\ntest_fresh_credit_clock_storage_and_watchdog_scope (test_e023_operational.Operational) ... ok\\ntest_new_review_refuses_unadmitted_outputs_before_any_truth_read (test_e023_operational.Operational) ... ok\\ntest_real_restore_reader_refuses_missing_corrupt_and_links (test_e023_operational.Operational) ... ok\\ntest_source_plan_rejects_truth_path_and_expansion (test_e023_operational.Operational) ... ok\\n\\n======================================================================\\nERROR: test_real_two_mode_readers_hierarchy_export_reload (test_e023_density.Density) (depth=True)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e023_density.py\", line 83, in test_real_two_mode_readers_hierarchy_export_reload\\n    save_arrays(p/\\'new/hierarchy.npz\\',a,{k:v for k,v in meta.items()if k not in [\\'version\\',\\'sha256\\',\\'ids_sha256\\']})\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/src/dl_binner/io.py\", line 171, in save_arrays\\n    raise FileExistsError(f\\'Fresh artifact path required: {path}\\')\\nFileExistsError: Fresh artifact path required: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tmp/tmpbtclpbhq/new/hierarchy.npz\\n\\n======================================================================\\nERROR: test_real_two_mode_readers_hierarchy_export_reload (test_e023_density.Density) (depth=False)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e023_density.py\", line 83, in test_real_two_mode_readers_hierarchy_export_reload\\n    save_arrays(p/\\'new/hierarchy.npz\\',a,{k:v for k,v in meta.items()if k not in [\\'version\\',\\'sha256\\',\\'ids_sha256\\']})\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/src/dl_binner/io.py\", line 171, in save_arrays\\n    raise FileExistsError(f\\'Fresh artifact path required: {path}\\')\\nFileExistsError: Fresh artifact path required: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tmp/tmp4lbgd8ue/new/hierarchy.npz\\n\\n----------------------------------------------------------------------\\nRan 14 tests in 39.923s\\n\\nFAILED (errors=2)\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+      "elapsed_original_seconds": 2626.9327008724213,
+      "samples": [
+        {
+          "epoch": 1793028419.0647628,
+          "extra_bytes": 2244615,
+          "free_bytes": 15397658624
+        },
+        {
+          "epoch": 1793028421.0622668,
+          "extra_bytes": 2245247,
+          "free_bytes": 15397662720
+        },
+        {
+          "epoch": 1793028423.09157,
+          "extra_bytes": 2245755,
+          "free_bytes": 15397814272
+        },
+        {
+          "epoch": 1793028425.113394,
+          "extra_bytes": 2246272,
+          "free_bytes": 15396585472
+        },
+        {
+          "epoch": 1793028427.138444,
+          "extra_bytes": 2246802,
+          "free_bytes": 15396683776
+        },
+        {
+          "epoch": 1793028429.1659782,
+          "extra_bytes": 2247489,
+          "free_bytes": 15396610048
+        },
+        {
+          "epoch": 1793028431.190202,
+          "extra_bytes": 2248043,
+          "free_bytes": 15395282944
+        },
+        {
+          "epoch": 1793028433.215633,
+          "extra_bytes": 2248611,
+          "free_bytes": 15395635200
+        },
+        {
+          "epoch": 1793028435.239153,
+          "extra_bytes": 2249179,
+          "free_bytes": 15395590144
+        },
+        {
+          "epoch": 1793028437.2675462,
+          "extra_bytes": 2249733,
+          "free_bytes": 15395680256
+        },
+        {
+          "epoch": 1793028439.309261,
+          "extra_bytes": 2250273,
+          "free_bytes": 15395655680
+        },
+        {
+          "epoch": 1793028441.3424819,
+          "extra_bytes": 2250813,
+          "free_bytes": 15395536896
+        },
+        {
+          "epoch": 1793028443.383144,
+          "extra_bytes": 2251335,
+          "free_bytes": 15395500032
+        },
+        {
+          "epoch": 1793028445.426997,
+          "extra_bytes": 2251847,
+          "free_bytes": 15395573760
+        },
+        {
+          "epoch": 1793028447.45218,
+          "extra_bytes": 2252374,
+          "free_bytes": 15395573760
+        },
+        {
+          "epoch": 1793028449.491916,
+          "extra_bytes": 2252887,
+          "free_bytes": 15394242560
+        },
+        {
+          "epoch": 1793028451.517287,
+          "extra_bytes": 2253413,
+          "free_bytes": 15394467840
+        },
+        {
+          "epoch": 1793028453.543324,
+          "extra_bytes": 2253937,
+          "free_bytes": 15394455552
+        },
+        {
+          "epoch": 1793028455.567507,
+          "extra_bytes": 2254460,
+          "free_bytes": 15394361344
+        },
+        {
+          "epoch": 1793028457.593479,
+          "extra_bytes": 2255096,
+          "free_bytes": 15394484224
+        },
+        {
+          "epoch": 1793028459.67381,
+          "extra_bytes": 2259614,
+          "free_bytes": 15394410496
+        }
+      ],
+      "extra_bytes": 2262532,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 4662,
+        "sha256": "b4d7d516543aa70f30f22938e4fb63696dd06387f74c539d5102c747baf36b2a"
+      }
+    },
+    {
+      "attempt": "combined-contracts-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_checks.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e023_checks.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 41.35803293401841,
+        "peak_sampled_rss_bytes": 294158336,
+        "seconds_ceiling": 5976.888761043549,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 61942,
+        "sampled_cpu_seconds": 41.91,
+        "sampled_average_cpus": 1.0133460666966967,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 1264.4700500965118,
+      "samples": [
+        {
+          "epoch": 1793027056.977876,
+          "extra_bytes": 1899427,
+          "free_bytes": 15414550528
+        },
+        {
+          "epoch": 1793027058.985329,
+          "extra_bytes": 1900045,
+          "free_bytes": 15414530048
+        },
+        {
+          "epoch": 1793027061.014157,
+          "extra_bytes": 1900524,
+          "free_bytes": 15414603776
+        },
+        {
+          "epoch": 1793027063.064767,
+          "extra_bytes": 1901029,
+          "free_bytes": 15414525952
+        },
+        {
+          "epoch": 1793027065.094479,
+          "extra_bytes": 1901574,
+          "free_bytes": 15414636544
+        },
+        {
+          "epoch": 1793027067.118438,
+          "extra_bytes": 1902021,
+          "free_bytes": 15414546432
+        },
+        {
+          "epoch": 1793027069.1362848,
+          "extra_bytes": 1902680,
+          "free_bytes": 15414476800
+        },
+        {
+          "epoch": 1793027071.156745,
+          "extra_bytes": 1903123,
+          "free_bytes": 15414693888
+        },
+        {
+          "epoch": 1793027073.175332,
+          "extra_bytes": 1903662,
+          "free_bytes": 15414616064
+        },
+        {
+          "epoch": 1793027075.198077,
+          "extra_bytes": 1904287,
+          "free_bytes": 15414562816
+        },
+        {
+          "epoch": 1793027077.216297,
+          "extra_bytes": 1904813,
+          "free_bytes": 15414534144
+        },
+        {
+          "epoch": 1793027079.241089,
+          "extra_bytes": 1905379,
+          "free_bytes": 15414530048
+        },
+        {
+          "epoch": 1793027081.263721,
+          "extra_bytes": 1905918,
+          "free_bytes": 15414489088
+        },
+        {
+          "epoch": 1793027083.2830431,
+          "extra_bytes": 1906460,
+          "free_bytes": 15414468608
+        },
+        {
+          "epoch": 1793027085.308498,
+          "extra_bytes": 1906986,
+          "free_bytes": 15414452224
+        },
+        {
+          "epoch": 1793027087.328075,
+          "extra_bytes": 1907636,
+          "free_bytes": 15414452224
+        },
+        {
+          "epoch": 1793027089.3522618,
+          "extra_bytes": 1908174,
+          "free_bytes": 15414611968
+        },
+        {
+          "epoch": 1793027091.369961,
+          "extra_bytes": 1908713,
+          "free_bytes": 15414599680
+        },
+        {
+          "epoch": 1793027093.39081,
+          "extra_bytes": 1909262,
+          "free_bytes": 15414566912
+        },
+        {
+          "epoch": 1793027095.412797,
+          "extra_bytes": 1909826,
+          "free_bytes": 15414255616
+        },
+        {
+          "epoch": 1793027097.43931,
+          "extra_bytes": 1913217,
+          "free_bytes": 15408173056
+        }
+      ],
+      "extra_bytes": 1914096,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 2422,
+        "sha256": "79c7e9af5d1c13ddc44ba10577443696fc89c522d2bbc83ca79fc492e43c98cb"
+      }
+    },
+    {
+      "attempt": "contracts-1.resources",
+      "status": "FAILED",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_checks.py"
+      ],
+      "error": "RuntimeError(\"Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/contracts-1.log\\nPermissionError: [Errno 1] Operation not permitted: 'ps'\")",
+      "elapsed_original_seconds": 514.6568288803101,
+      "samples": [
+        {
+          "epoch": 1793026348.511483,
+          "extra_bytes": 97572,
+          "free_bytes": 16498606080
+        }
+      ],
+      "extra_bytes": 98283,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 585,
+        "sha256": "ac6c745e00577ed26a1f929c0d49b0e692e81b6a2015d3b3ab73bd3e727ae3a9"
+      }
+    },
+    {
+      "attempt": "contracts-2.resources",
+      "status": "FAILED",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_checks.py"
+      ],
+      "error": "RuntimeError('Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/contracts-2.log\\nsity) ... ok\\ntest_unequal_density_bridge_and_supported_alternatives (test_e023_density.Density) ... ok\\ntest_full_union_unknown_and_non_target (test_e023_density.SecondaryQuality) ... ok\\ntest_tier_edges_do_not_claim_mimag (test_e023_density.SecondaryQuality) ... ok\\n\\n======================================================================\\nERROR: test_real_two_mode_readers_hierarchy_export_reload (test_e023_density.Density) (depth=True)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e023_density.py\", line 47, in test_real_two_mode_readers_hierarchy_export_reload\\n    record=run(f,e,g,m,p/\\'new\\',policy(CFG),4)\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/src/dl_binner/density/grouping.py\", line 231, in run\\n    original, gm = sparse_input(graph, ids, valid, embeddings)\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/src/dl_binner/density/grouping.py\", line 36, in sparse_input\\n    require(a[\\'ids\\'].tolist() == ids and meta[\\'embedding_sha256\\'] == digest(embedding)\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/src/dl_binner/information/grouping.py\", line 22, in require\\n    raise ValueError(message)\\nValueError: Malformed retained sparse graph\\n\\n======================================================================\\nERROR: test_real_two_mode_readers_hierarchy_export_reload (test_e023_density.Density) (depth=False)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e023_density.py\", line 47, in test_real_two_mode_readers_hierarchy_export_reload\\n    record=run(f,e,g,m,p/\\'new\\',policy(CFG),4)\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/src/dl_binner/density/grouping.py\", line 231, in run\\n    original, gm = sparse_input(graph, ids, valid, embeddings)\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/src/dl_binner/density/grouping.py\", line 36, in sparse_input\\n    require(a[\\'ids\\'].tolist() == ids and meta[\\'embedding_sha256\\'] == digest(embedding)\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/src/dl_binner/information/grouping.py\", line 22, in require\\n    raise ValueError(message)\\nValueError: Malformed retained sparse graph\\n\\n----------------------------------------------------------------------\\nRan 6 tests in 0.887s\\n\\nFAILED (errors=2)\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+      "elapsed_original_seconds": 536.9173450469971,
+      "samples": [
+        {
+          "epoch": 1793026368.753504,
+          "extra_bytes": 98868,
+          "free_bytes": 16498466816
+        },
+        {
+          "epoch": 1793026370.749949,
+          "extra_bytes": 102796,
+          "free_bytes": 16498311168
+        }
+      ],
+      "extra_bytes": 103415,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 3220,
+        "sha256": "0e03cd52f153370660bb919561ffa9dfe3e7e3eea04a8d3cd7c9ac4292c37132"
+      }
+    },
+    {
+      "attempt": "contracts-3.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_checks.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e023_checks.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.462290899013169,
+        "peak_sampled_rss_bytes": 71340032,
+        "seconds_ceiling": 6637.052757978439,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 60708,
+        "sampled_cpu_seconds": 1.76,
+        "sampled_average_cpus": 1.2035908868664509,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 564.410402059555,
+      "samples": [
+        {
+          "epoch": 1793026396.81388,
+          "extra_bytes": 106635,
+          "free_bytes": 16498307072
+        }
+      ],
+      "extra_bytes": 109371,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 914,
+        "sha256": "8989e79faff36541553bfa6efc831566d5ec4cd50cd7eebdca681f941d36d614"
+      }
+    },
+    {
+      "attempt": "exact-tiny-DAG-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_tiny.py",
+        "--root",
+        "artifacts/e023-local/tiny-dag-v1",
+        "--workflow-python",
+        "artifacts/e001-snakemake-test-env/bin/python"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e023_tiny.py",
+          "--root",
+          "artifacts/e023-local/tiny-dag-v1",
+          "--workflow-python",
+          "artifacts/e001-snakemake-test-env/bin/python"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 9.792208849044982,
+        "peak_sampled_rss_bytes": 162934784,
+        "seconds_ceiling": 6155.693243741989,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 61634,
+        "sampled_cpu_seconds": 8.73,
+        "sampled_average_cpus": 0.8915251027199469,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 1054.1000590324402,
+      "samples": [
+        {
+          "epoch": 1793026878.173394,
+          "extra_bytes": 1654583,
+          "free_bytes": 16488394752
+        },
+        {
+          "epoch": 1793026880.180496,
+          "extra_bytes": 1741869,
+          "free_bytes": 16488415232
+        },
+        {
+          "epoch": 1793026882.19971,
+          "extra_bytes": 1798496,
+          "free_bytes": 16488038400
+        },
+        {
+          "epoch": 1793026884.222083,
+          "extra_bytes": 1858008,
+          "free_bytes": 16487841792
+        },
+        {
+          "epoch": 1793026886.2588868,
+          "extra_bytes": 1858439,
+          "free_bytes": 16487829504
+        }
+      ],
+      "extra_bytes": 1897989,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 1438,
+        "sha256": "95cf6236f3d7778d11b479cf47b33db9a00d58867bab1c92b5ab51d0bb1b086e"
+      }
+    },
+    {
+      "attempt": "final-17-contracts-1.resources",
+      "status": "FAILED",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_checks.py"
+      ],
+      "error": "RuntimeError(\"Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/final-17-contracts-1.log\\nTimeoutError: FileNotFoundError(2, 'No such file or directory')\")",
+      "elapsed_original_seconds": 4443.645514011383,
+      "samples": [
+        {
+          "epoch": 1793030233.681855,
+          "extra_bytes": 3112631,
+          "free_bytes": 15375077376
+        },
+        {
+          "epoch": 1793030235.68115,
+          "extra_bytes": 3113247,
+          "free_bytes": 15375032320
+        },
+        {
+          "epoch": 1793030237.763438,
+          "extra_bytes": 3113795,
+          "free_bytes": 15374979072
+        },
+        {
+          "epoch": 1793030239.8438249,
+          "extra_bytes": 3114227,
+          "free_bytes": 15374966784
+        },
+        {
+          "epoch": 1793030241.8975759,
+          "extra_bytes": 3114869,
+          "free_bytes": 15374970880
+        },
+        {
+          "epoch": 1793030243.955331,
+          "extra_bytes": 3115376,
+          "free_bytes": 15374946304
+        },
+        {
+          "epoch": 1793030246.026674,
+          "extra_bytes": 3115948,
+          "free_bytes": 15374872576
+        },
+        {
+          "epoch": 1793030248.078596,
+          "extra_bytes": 3116589,
+          "free_bytes": 15374860288
+        },
+        {
+          "epoch": 1793030250.139159,
+          "extra_bytes": 3117130,
+          "free_bytes": 15374835712
+        },
+        {
+          "epoch": 1793030252.191971,
+          "extra_bytes": 3117657,
+          "free_bytes": 15374938112
+        },
+        {
+          "epoch": 1793030254.252609,
+          "extra_bytes": 3118179,
+          "free_bytes": 15374884864
+        },
+        {
+          "epoch": 1793030256.316999,
+          "extra_bytes": 3118716,
+          "free_bytes": 15374872576
+        },
+        {
+          "epoch": 1793030258.373717,
+          "extra_bytes": 3119232,
+          "free_bytes": 15374843904
+        },
+        {
+          "epoch": 1793030260.439542,
+          "extra_bytes": 3119859,
+          "free_bytes": 15374843904
+        },
+        {
+          "epoch": 1793030262.499766,
+          "extra_bytes": 3120400,
+          "free_bytes": 15374790656
+        },
+        {
+          "epoch": 1793030264.5584362,
+          "extra_bytes": 3120938,
+          "free_bytes": 15374757888
+        },
+        {
+          "epoch": 1793030266.615436,
+          "extra_bytes": 3121450,
+          "free_bytes": 15374749696
+        },
+        {
+          "epoch": 1793030268.671045,
+          "extra_bytes": 3121972,
+          "free_bytes": 15372763136
+        },
+        {
+          "epoch": 1793030270.7368078,
+          "extra_bytes": 3122412,
+          "free_bytes": 15372804096
+        },
+        {
+          "epoch": 1793030272.793002,
+          "extra_bytes": 3123009,
+          "free_bytes": 15372804096
+        },
+        {
+          "epoch": 1793030274.868777,
+          "extra_bytes": 3123436,
+          "free_bytes": 15372832768
+        }
+      ],
+      "extra_bytes": 3128902,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 2108,
+        "sha256": "772862a8e654e6bafc2944242c5cc4c5fd36f361686bcd084f66ec9db344a3d5"
+      }
+    },
+    {
+      "attempt": "final-17-contracts-2.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_checks.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e023_checks.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 77.6642573820427,
+        "peak_sampled_rss_bytes": 296591360,
+        "seconds_ceiling": 2347.4833772182465,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 67756,
+        "sampled_cpu_seconds": 71.59,
+        "sampled_average_cpus": 0.9217882512909062,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 4930.190053939819,
+      "samples": [
+        {
+          "epoch": 1793030686.383242,
+          "extra_bytes": 3385201,
+          "free_bytes": 16446885888
+        },
+        {
+          "epoch": 1793030688.6798668,
+          "extra_bytes": 3385499,
+          "free_bytes": 16446558208
+        },
+        {
+          "epoch": 1793030690.900095,
+          "extra_bytes": 3385832,
+          "free_bytes": 16446795776
+        },
+        {
+          "epoch": 1793030693.3708942,
+          "extra_bytes": 3386192,
+          "free_bytes": 16446746624
+        },
+        {
+          "epoch": 1793030695.626558,
+          "extra_bytes": 3386485,
+          "free_bytes": 16445554688
+        },
+        {
+          "epoch": 1793030698.052274,
+          "extra_bytes": 3386763,
+          "free_bytes": 16445407232
+        },
+        {
+          "epoch": 1793030700.3417778,
+          "extra_bytes": 3387018,
+          "free_bytes": 15371169792
+        },
+        {
+          "epoch": 1793030703.040373,
+          "extra_bytes": 3387300,
+          "free_bytes": 15376211968
+        },
+        {
+          "epoch": 1793030705.587788,
+          "extra_bytes": 3387471,
+          "free_bytes": 14296190976
+        },
+        {
+          "epoch": 1793030707.802312,
+          "extra_bytes": 3387729,
+          "free_bytes": 14301450240
+        },
+        {
+          "epoch": 1793030709.968777,
+          "extra_bytes": 3388099,
+          "free_bytes": 14301286400
+        },
+        {
+          "epoch": 1793030712.071317,
+          "extra_bytes": 3388526,
+          "free_bytes": 14301511680
+        },
+        {
+          "epoch": 1793030714.23458,
+          "extra_bytes": 3388881,
+          "free_bytes": 14300512256
+        },
+        {
+          "epoch": 1793030716.315373,
+          "extra_bytes": 3389337,
+          "free_bytes": 14300385280
+        },
+        {
+          "epoch": 1793030718.4056902,
+          "extra_bytes": 3389897,
+          "free_bytes": 14300090368
+        },
+        {
+          "epoch": 1793030720.494335,
+          "extra_bytes": 3390436,
+          "free_bytes": 14299340800
+        },
+        {
+          "epoch": 1793030722.5954921,
+          "extra_bytes": 3390876,
+          "free_bytes": 14299357184
+        },
+        {
+          "epoch": 1793030724.671288,
+          "extra_bytes": 3391400,
+          "free_bytes": 14303666176
+        },
+        {
+          "epoch": 1793030726.777278,
+          "extra_bytes": 3391824,
+          "free_bytes": 14307704832
+        },
+        {
+          "epoch": 1793030728.8339021,
+          "extra_bytes": 3392253,
+          "free_bytes": 14307651584
+        },
+        {
+          "epoch": 1793030730.925654,
+          "extra_bytes": 3392761,
+          "free_bytes": 14307745792
+        },
+        {
+          "epoch": 1793030733.015367,
+          "extra_bytes": 3393199,
+          "free_bytes": 14311890944
+        },
+        {
+          "epoch": 1793030735.093107,
+          "extra_bytes": 3393746,
+          "free_bytes": 14311723008
+        },
+        {
+          "epoch": 1793030737.161319,
+          "extra_bytes": 3394183,
+          "free_bytes": 14311710720
+        },
+        {
+          "epoch": 1793030739.255012,
+          "extra_bytes": 3394607,
+          "free_bytes": 14311628800
+        },
+        {
+          "epoch": 1793030741.335954,
+          "extra_bytes": 3395059,
+          "free_bytes": 15386087424
+        },
+        {
+          "epoch": 1793030743.4099321,
+          "extra_bytes": 3395583,
+          "free_bytes": 15386132480
+        },
+        {
+          "epoch": 1793030745.4800692,
+          "extra_bytes": 3396019,
+          "free_bytes": 15386091520
+        },
+        {
+          "epoch": 1793030747.551466,
+          "extra_bytes": 3396545,
+          "free_bytes": 15386079232
+        },
+        {
+          "epoch": 1793030749.6394382,
+          "extra_bytes": 3397070,
+          "free_bytes": 15386013696
+        },
+        {
+          "epoch": 1793030751.715876,
+          "extra_bytes": 3397523,
+          "free_bytes": 15385989120
+        },
+        {
+          "epoch": 1793030753.789797,
+          "extra_bytes": 3397986,
+          "free_bytes": 15385980928
+        },
+        {
+          "epoch": 1793030755.872628,
+          "extra_bytes": 3398533,
+          "free_bytes": 15386066944
+        },
+        {
+          "epoch": 1793030757.95347,
+          "extra_bytes": 3398969,
+          "free_bytes": 15386030080
+        },
+        {
+          "epoch": 1793030760.022551,
+          "extra_bytes": 3399526,
+          "free_bytes": 15386013696
+        },
+        {
+          "epoch": 1793030762.115503,
+          "extra_bytes": 3453706,
+          "free_bytes": 15386017792
+        }
+      ],
+      "extra_bytes": 3405620,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 3552,
+        "sha256": "602e9324014c925a2cec27b915622e59048e1d5bf1545dc14e7b261d4091a2d9"
+      }
+    },
+    {
+      "attempt": "final-cache-contracts-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_checks.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e023_checks.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 45.36668052297318,
+        "peak_sampled_rss_bytes": 280870912,
+        "seconds_ceiling": 4412.044756889343,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 64708,
+        "sampled_cpu_seconds": 45.59,
+        "sampled_average_cpus": 1.0049225439122382,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 2833.308615922928,
+      "samples": [
+        {
+          "epoch": 1793028621.821881,
+          "extra_bytes": 2267194,
+          "free_bytes": 16476913664
+        },
+        {
+          "epoch": 1793028623.813764,
+          "extra_bytes": 2267824,
+          "free_bytes": 16476807168
+        },
+        {
+          "epoch": 1793028625.840043,
+          "extra_bytes": 2268276,
+          "free_bytes": 16476868608
+        },
+        {
+          "epoch": 1793028627.931849,
+          "extra_bytes": 2268736,
+          "free_bytes": 16476004352
+        },
+        {
+          "epoch": 1793028629.9733949,
+          "extra_bytes": 2269171,
+          "free_bytes": 16474345472
+        },
+        {
+          "epoch": 1793028632.002666,
+          "extra_bytes": 2269617,
+          "free_bytes": 16474234880
+        },
+        {
+          "epoch": 1793028634.03012,
+          "extra_bytes": 2270072,
+          "free_bytes": 16473657344
+        },
+        {
+          "epoch": 1793028636.05443,
+          "extra_bytes": 2270717,
+          "free_bytes": 16473559040
+        },
+        {
+          "epoch": 1793028638.0814579,
+          "extra_bytes": 2271257,
+          "free_bytes": 16473825280
+        },
+        {
+          "epoch": 1793028640.103743,
+          "extra_bytes": 2271772,
+          "free_bytes": 16473788416
+        },
+        {
+          "epoch": 1793028642.124104,
+          "extra_bytes": 2272311,
+          "free_bytes": 16472264704
+        },
+        {
+          "epoch": 1793028644.144217,
+          "extra_bytes": 2272850,
+          "free_bytes": 16472322048
+        },
+        {
+          "epoch": 1793028646.168193,
+          "extra_bytes": 2273389,
+          "free_bytes": 16472313856
+        },
+        {
+          "epoch": 1793028648.192288,
+          "extra_bytes": 2273943,
+          "free_bytes": 16472387584
+        },
+        {
+          "epoch": 1793028650.215431,
+          "extra_bytes": 2274569,
+          "free_bytes": 16472367104
+        },
+        {
+          "epoch": 1793028652.237047,
+          "extra_bytes": 2275096,
+          "free_bytes": 16471031808
+        },
+        {
+          "epoch": 1793028654.260721,
+          "extra_bytes": 2275630,
+          "free_bytes": 16471011328
+        },
+        {
+          "epoch": 1793028656.292164,
+          "extra_bytes": 2276166,
+          "free_bytes": 16471248896
+        },
+        {
+          "epoch": 1793028658.330674,
+          "extra_bytes": 2276616,
+          "free_bytes": 16471097344
+        },
+        {
+          "epoch": 1793028660.355231,
+          "extra_bytes": 2277276,
+          "free_bytes": 16471072768
+        },
+        {
+          "epoch": 1793028662.380638,
+          "extra_bytes": 2277726,
+          "free_bytes": 16471240704
+        },
+        {
+          "epoch": 1793028664.405888,
+          "extra_bytes": 2278359,
+          "free_bytes": 16471031808
+        },
+        {
+          "epoch": 1793028666.431316,
+          "extra_bytes": 2283181,
+          "free_bytes": 16471003136
+        }
+      ],
+      "extra_bytes": 2283974,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 2570,
+        "sha256": "764cdd2d8efc67474cef0292d4242ffa45038d8d1f902f4ff4a04a9844dac717"
+      }
+    },
+    {
+      "attempt": "final-collector-DAG-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e023_tiny.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tiny-dag-v4",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e001-snakemake-test-env/bin/python"
+      ],
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e023_tiny.py",
+          "--root",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tiny-dag-v4",
+          "--workflow-python",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e001-snakemake-test-env/bin/python"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 10.68992051598616,
+        "peak_sampled_rss_bytes": 157253632,
+        "seconds_ceiling": 3898.7012989521027,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 65455,
+        "sampled_cpu_seconds": 6.74,
+        "sampled_average_cpus": 0.6305004784573205,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 3311.9897480010986,
+      "samples": [
+        {
+          "epoch": 1793029135.16534,
+          "extra_bytes": 2570970,
+          "free_bytes": 16438607872
+        },
+        {
+          "epoch": 1793029137.169127,
+          "extra_bytes": 2658184,
+          "free_bytes": 16438706176
+        },
+        {
+          "epoch": 1793029139.2175722,
+          "extra_bytes": 2681606,
+          "free_bytes": 16438337536
+        },
+        {
+          "epoch": 1793029141.266485,
+          "extra_bytes": 2772748,
+          "free_bytes": 16438083584
+        },
+        {
+          "epoch": 1793029143.3153431,
+          "extra_bytes": 2777205,
+          "free_bytes": 16437993472
+        },
+        {
+          "epoch": 1793029145.395218,
+          "extra_bytes": 2816882,
+          "free_bytes": 16437850112
+        }
+      ],
+      "extra_bytes": 2817829,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 1907,
+        "sha256": "cda1290dd739d6d1b3d961a276462feb270335308308108877af186c0a54e382"
+      }
+    },
+    {
+      "attempt": "final-context-DAG-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e023_tiny.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tiny-dag-v5",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e001-snakemake-test-env/bin/python"
+      ],
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e023_tiny.py",
+          "--root",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tiny-dag-v5",
+          "--workflow-python",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e001-snakemake-test-env/bin/python"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 13.42015000199899,
+        "peak_sampled_rss_bytes": 161341440,
+        "seconds_ceiling": 3405.907695055008,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 66528,
+        "sampled_cpu_seconds": 9.41,
+        "sampled_average_cpus": 0.7011844128864684,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 3807.5129148960114,
+      "samples": [
+        {
+          "epoch": 1793029627.958911,
+          "extra_bytes": 2857146,
+          "free_bytes": 17524310016
+        },
+        {
+          "epoch": 1793029629.9739678,
+          "extra_bytes": 2944276,
+          "free_bytes": 17523957760
+        },
+        {
+          "epoch": 1793029632.128133,
+          "extra_bytes": 2944652,
+          "free_bytes": 18597785600
+        },
+        {
+          "epoch": 1793029634.198408,
+          "extra_bytes": 2952330,
+          "free_bytes": 16449843200
+        },
+        {
+          "epoch": 1793029636.280341,
+          "extra_bytes": 3023440,
+          "free_bytes": 16449613824
+        },
+        {
+          "epoch": 1793029638.354955,
+          "extra_bytes": 3064069,
+          "free_bytes": 14300831744
+        },
+        {
+          "epoch": 1793029640.414408,
+          "extra_bytes": 3104036,
+          "free_bytes": 14300610560
+        }
+      ],
+      "extra_bytes": 3104982,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 1981,
+        "sha256": "57098c0db20d2a3e81602477125aa5796b037430615f41922df3026e56faaf21"
+      }
+    },
+    {
+      "attempt": "final-contracts-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_checks.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e023_checks.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 38.657354562019464,
+        "peak_sampled_rss_bytes": 304013312,
+        "seconds_ceiling": 5270.504995107651,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 63001,
+        "sampled_cpu_seconds": 39.57,
+        "sampled_average_cpus": 1.0236085849205316,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 1968.1530361175537,
+      "samples": [
+        {
+          "epoch": 1793027763.361644,
+          "extra_bytes": 1954680,
+          "free_bytes": 14380388352
+        },
+        {
+          "epoch": 1793027765.358942,
+          "extra_bytes": 1955313,
+          "free_bytes": 14380331008
+        },
+        {
+          "epoch": 1793027767.376416,
+          "extra_bytes": 1955834,
+          "free_bytes": 14744850432
+        },
+        {
+          "epoch": 1793027769.395322,
+          "extra_bytes": 1956351,
+          "free_bytes": 15454576640
+        },
+        {
+          "epoch": 1793027771.411167,
+          "extra_bytes": 1956963,
+          "free_bytes": 15454527488
+        },
+        {
+          "epoch": 1793027773.4238122,
+          "extra_bytes": 1957598,
+          "free_bytes": 15454683136
+        },
+        {
+          "epoch": 1793027775.438851,
+          "extra_bytes": 1958138,
+          "free_bytes": 15454674944
+        },
+        {
+          "epoch": 1793027777.4538372,
+          "extra_bytes": 1958679,
+          "free_bytes": 15454674944
+        },
+        {
+          "epoch": 1793027779.47946,
+          "extra_bytes": 1959207,
+          "free_bytes": 15454666752
+        },
+        {
+          "epoch": 1793027781.4938009,
+          "extra_bytes": 1959819,
+          "free_bytes": 15454650368
+        },
+        {
+          "epoch": 1793027783.5062022,
+          "extra_bytes": 1960346,
+          "free_bytes": 15454494720
+        },
+        {
+          "epoch": 1793027785.525256,
+          "extra_bytes": 1960860,
+          "free_bytes": 15454511104
+        },
+        {
+          "epoch": 1793027787.5412202,
+          "extra_bytes": 1961400,
+          "free_bytes": 15454511104
+        },
+        {
+          "epoch": 1793027789.559969,
+          "extra_bytes": 1961923,
+          "free_bytes": 15454539776
+        },
+        {
+          "epoch": 1793027791.571591,
+          "extra_bytes": 1962463,
+          "free_bytes": 15454543872
+        },
+        {
+          "epoch": 1793027793.591449,
+          "extra_bytes": 1962973,
+          "free_bytes": 15454552064
+        },
+        {
+          "epoch": 1793027795.605292,
+          "extra_bytes": 1963583,
+          "free_bytes": 15454433280
+        },
+        {
+          "epoch": 1793027797.620123,
+          "extra_bytes": 1964105,
+          "free_bytes": 15454425088
+        },
+        {
+          "epoch": 1793027799.6388988,
+          "extra_bytes": 1964642,
+          "free_bytes": 15454412800
+        },
+        {
+          "epoch": 1793027801.654966,
+          "extra_bytes": 1968354,
+          "free_bytes": 15454330880
+        }
+      ],
+      "extra_bytes": 1969061,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 2352,
+        "sha256": "b1ededf2f61ca88df68ee1bb841dd598eb36e98616f64f634930facde9db2d40"
+      }
+    },
+    {
+      "attempt": "final-control-inventory-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "artifacts/e023-local/secondary-final.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e023-local/secondary-final.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.8490172079764307,
+        "peak_sampled_rss_bytes": 63328256,
+        "seconds_ceiling": 3177.271744966507,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 66743,
+        "sampled_cpu_seconds": 1.12,
+        "sampled_average_cpus": 0.6057271912713733,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 4024.6772108078003,
+      "samples": [
+        {
+          "epoch": 1793029856.5948548,
+          "extra_bytes": 3106963,
+          "free_bytes": 17522929664
+        },
+        {
+          "epoch": 1793029858.543753,
+          "extra_bytes": 3108376,
+          "free_bytes": 15833563136
+        }
+      ],
+      "extra_bytes": 3109014,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 1030,
+        "sha256": "90da4019d7020edab0212dce5f450dcf31adb37e768cece20405cfff020755a8"
+      }
+    },
+    {
+      "attempt": "final-measured-context-contracts-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_checks.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e023_checks.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 36.62356167199323,
+        "peak_sampled_rss_bytes": 303534080,
+        "seconds_ceiling": 3542.9848461151123,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 66157,
+        "sampled_cpu_seconds": 38.94,
+        "sampled_average_cpus": 1.0632499468171113,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 3693.639549970627,
+      "samples": [
+        {
+          "epoch": 1793029490.8817909,
+          "extra_bytes": 2839488,
+          "free_bytes": 15372988416
+        },
+        {
+          "epoch": 1793029492.880919,
+          "extra_bytes": 2840095,
+          "free_bytes": 16447369216
+        },
+        {
+          "epoch": 1793029494.9313679,
+          "extra_bytes": 2840629,
+          "free_bytes": 16447168512
+        },
+        {
+          "epoch": 1793029496.9692512,
+          "extra_bytes": 2841261,
+          "free_bytes": 16447152128
+        },
+        {
+          "epoch": 1793029499.006606,
+          "extra_bytes": 2841921,
+          "free_bytes": 16447102976
+        },
+        {
+          "epoch": 1793029501.043595,
+          "extra_bytes": 2842538,
+          "free_bytes": 16447291392
+        },
+        {
+          "epoch": 1793029503.0737212,
+          "extra_bytes": 2843080,
+          "free_bytes": 16447066112
+        },
+        {
+          "epoch": 1793029505.114763,
+          "extra_bytes": 2843622,
+          "free_bytes": 16447021056
+        },
+        {
+          "epoch": 1793029507.147072,
+          "extra_bytes": 2844274,
+          "free_bytes": 16446980096
+        },
+        {
+          "epoch": 1793029509.185127,
+          "extra_bytes": 2844814,
+          "free_bytes": 16446976000
+        },
+        {
+          "epoch": 1793029511.228539,
+          "extra_bytes": 2845353,
+          "free_bytes": 16447119360
+        },
+        {
+          "epoch": 1793029513.2761269,
+          "extra_bytes": 2846018,
+          "free_bytes": 16447098880
+        },
+        {
+          "epoch": 1793029515.316704,
+          "extra_bytes": 2846556,
+          "free_bytes": 16447086592
+        },
+        {
+          "epoch": 1793029517.355962,
+          "extra_bytes": 2847094,
+          "free_bytes": 16447008768
+        },
+        {
+          "epoch": 1793029519.394855,
+          "extra_bytes": 2847720,
+          "free_bytes": 16447021056
+        },
+        {
+          "epoch": 1793029521.4297101,
+          "extra_bytes": 2848260,
+          "free_bytes": 16447000576
+        },
+        {
+          "epoch": 1793029523.46435,
+          "extra_bytes": 2848886,
+          "free_bytes": 16446996480
+        },
+        {
+          "epoch": 1793029525.5071099,
+          "extra_bytes": 2849405,
+          "free_bytes": 16446889984
+        }
+      ],
+      "extra_bytes": 2854944,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 2202,
+        "sha256": "c66a50fb342a4795c7eb20953ab8ebfc02619ff0a70aeb72ba5d855859484f28"
+      }
+    },
+    {
+      "attempt": "final-native-adapter-DAG-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e023_tiny.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tiny-dag-v3",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e001-snakemake-test-env/bin/python"
+      ],
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e023_tiny.py",
+          "--root",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tiny-dag-v3",
+          "--workflow-python",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e001-snakemake-test-env/bin/python"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 9.593567484989762,
+        "peak_sampled_rss_bytes": 164753408,
+        "seconds_ceiling": 4243.547200918198,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 65119,
+        "sampled_cpu_seconds": 7.31,
+        "sampled_average_cpus": 0.7619688933691595,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 2966.04744720459,
+      "samples": [
+        {
+          "epoch": 1793028790.319416,
+          "extra_bytes": 2319640,
+          "free_bytes": 16472449024
+        },
+        {
+          "epoch": 1793028792.296509,
+          "extra_bytes": 2406752,
+          "free_bytes": 15398240256
+        },
+        {
+          "epoch": 1793028794.337161,
+          "extra_bytes": 2464023,
+          "free_bytes": 15398035456
+        },
+        {
+          "epoch": 1793028796.393694,
+          "extra_bytes": 2525507,
+          "free_bytes": 15397720064
+        },
+        {
+          "epoch": 1793028798.4358132,
+          "extra_bytes": 2565298,
+          "free_bytes": 15397232640
+        }
+      ],
+      "extra_bytes": 2566327,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 1829,
+        "sha256": "a6e99ed5076e47c4ea66b080ecf2902aed8f2c828ccd418da44a23223cb13939"
+      }
+    },
+    {
+      "attempt": "local-runtime-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "artifacts/e023-local/local-runtime-check.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e023-local/local-runtime-check.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 12.49427291896427,
+        "peak_sampled_rss_bytes": 280166400,
+        "seconds_ceiling": 4815.390267133713,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 64063,
+        "sampled_cpu_seconds": 12.3,
+        "sampled_average_cpus": 0.9844510424716756,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 2397.1056578159332,
+      "samples": [
+        {
+          "epoch": 1793028218.476356,
+          "extra_bytes": 2225386,
+          "free_bytes": 15420870656
+        },
+        {
+          "epoch": 1793028220.479241,
+          "extra_bytes": 2225948,
+          "free_bytes": 15420792832
+        },
+        {
+          "epoch": 1793028222.511754,
+          "extra_bytes": 2226428,
+          "free_bytes": 15420985344
+        },
+        {
+          "epoch": 1793028224.5420392,
+          "extra_bytes": 2226958,
+          "free_bytes": 15420895232
+        },
+        {
+          "epoch": 1793028226.585171,
+          "extra_bytes": 2227461,
+          "free_bytes": 15420907520
+        },
+        {
+          "epoch": 1793028228.625691,
+          "extra_bytes": 2227878,
+          "free_bytes": 15420518400
+        },
+        {
+          "epoch": 1793028230.654151,
+          "extra_bytes": 2242476,
+          "free_bytes": 15420260352
+        }
+      ],
+      "extra_bytes": 2243202,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 1413,
+        "sha256": "39d2d743af59a34a11202a8b6d55e72a69cd13e3d4178a7acfe978c2a7de64a1"
+      }
+    },
+    {
+      "attempt": "native-index-contracts-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_checks.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e023_checks.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 50.1299291329924,
+        "peak_sampled_rss_bytes": 314552320,
+        "seconds_ceiling": 6516.989548921585,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 60841,
+        "sampled_cpu_seconds": 50.54,
+        "sampled_average_cpus": 1.008180160516878,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 733.1398229598999,
+      "samples": [
+        {
+          "epoch": 1793026516.8770938,
+          "extra_bytes": 110285,
+          "free_bytes": 16500465664
+        },
+        {
+          "epoch": 1793026518.877913,
+          "extra_bytes": 110902,
+          "free_bytes": 16501350400
+        },
+        {
+          "epoch": 1793026520.883832,
+          "extra_bytes": 111437,
+          "free_bytes": 16501518336
+        },
+        {
+          "epoch": 1793026522.890444,
+          "extra_bytes": 283852,
+          "free_bytes": 16501198848
+        },
+        {
+          "epoch": 1793026524.899698,
+          "extra_bytes": 316335,
+          "free_bytes": 16501112832
+        },
+        {
+          "epoch": 1793026526.9049401,
+          "extra_bytes": 316837,
+          "free_bytes": 16501022720
+        },
+        {
+          "epoch": 1793026528.9101472,
+          "extra_bytes": 612313,
+          "free_bytes": 16500723712
+        },
+        {
+          "epoch": 1793026530.916665,
+          "extra_bytes": 612866,
+          "free_bytes": 16500637696
+        },
+        {
+          "epoch": 1793026532.924972,
+          "extra_bytes": 919041,
+          "free_bytes": 16500424704
+        },
+        {
+          "epoch": 1793026534.933345,
+          "extra_bytes": 1309008,
+          "free_bytes": 16499834880
+        },
+        {
+          "epoch": 1793026536.941153,
+          "extra_bytes": 1360593,
+          "free_bytes": 16499687424
+        },
+        {
+          "epoch": 1793026538.948092,
+          "extra_bytes": 1361230,
+          "free_bytes": 16499671040
+        },
+        {
+          "epoch": 1793026540.956925,
+          "extra_bytes": 1361756,
+          "free_bytes": 16499646464
+        },
+        {
+          "epoch": 1793026542.96128,
+          "extra_bytes": 1362284,
+          "free_bytes": 16499888128
+        },
+        {
+          "epoch": 1793026544.969795,
+          "extra_bytes": 1362849,
+          "free_bytes": 16499830784
+        },
+        {
+          "epoch": 1793026546.974405,
+          "extra_bytes": 1363458,
+          "free_bytes": 16499810304
+        },
+        {
+          "epoch": 1793026548.984419,
+          "extra_bytes": 1467861,
+          "free_bytes": 16499544064
+        },
+        {
+          "epoch": 1793026550.996703,
+          "extra_bytes": 1493835,
+          "free_bytes": 16499564544
+        },
+        {
+          "epoch": 1793026553.005227,
+          "extra_bytes": 1494429,
+          "free_bytes": 16499560448
+        },
+        {
+          "epoch": 1793026555.013534,
+          "extra_bytes": 1645459,
+          "free_bytes": 16499322880
+        },
+        {
+          "epoch": 1793026557.0203898,
+          "extra_bytes": 1645982,
+          "free_bytes": 16499408896
+        },
+        {
+          "epoch": 1793026559.033865,
+          "extra_bytes": 1646506,
+          "free_bytes": 16499351552
+        },
+        {
+          "epoch": 1793026561.0425239,
+          "extra_bytes": 1647113,
+          "free_bytes": 16499445760
+        },
+        {
+          "epoch": 1793026563.05213,
+          "extra_bytes": 1647623,
+          "free_bytes": 16499433472
+        },
+        {
+          "epoch": 1793026565.0598211,
+          "extra_bytes": 1648147,
+          "free_bytes": 16499359744
+        }
+      ],
+      "extra_bytes": 1651870,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 2713,
+        "sha256": "55bfa03f0137fa06f90a4ed278439366c97324006e9d4e28f1805323e8a20130"
+      }
+    },
+    {
+      "attempt": "outside-checkout-DAG-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e023_tiny.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tiny-dag-v2",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e001-snakemake-test-env/bin/python"
+      ],
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e023_tiny.py",
+          "--root",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tiny-dag-v2",
+          "--workflow-python",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e001-snakemake-test-env/bin/python"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 9.058815160009544,
+        "peak_sampled_rss_bytes": 160948224,
+        "seconds_ceiling": 5130.499496936798,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 63382,
+        "sampled_cpu_seconds": 6.94,
+        "sampled_average_cpus": 0.7661046039041477,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 2078.5601160526276,
+      "samples": [
+        {
+          "epoch": 1793027903.367139,
+          "extra_bytes": 1971413,
+          "free_bytes": 15449550848
+        },
+        {
+          "epoch": 1793027905.377292,
+          "extra_bytes": 2058626,
+          "free_bytes": 15448084480
+        },
+        {
+          "epoch": 1793027907.39831,
+          "extra_bytes": 2115880,
+          "free_bytes": 16522571776
+        },
+        {
+          "epoch": 1793027909.41913,
+          "extra_bytes": 2175965,
+          "free_bytes": 16522268672
+        },
+        {
+          "epoch": 1793027911.441816,
+          "extra_bytes": 2215318,
+          "free_bytes": 16522317824
+        }
+      ],
+      "extra_bytes": 2216264,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 1828,
+        "sha256": "e85ecfa378747fb805bcc2b9a695a338d717a11635eaa4cf9b913406f8836990"
+      }
+    },
+    {
+      "attempt": "release-contracts-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "scripts/e023_checks.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e023_checks.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 44.27226644597249,
+        "peak_sampled_rss_bytes": 272601088,
+        "seconds_ceiling": 3816.922066926956,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 65594,
+        "sampled_cpu_seconds": 44.44,
+        "sampled_average_cpus": 1.0037886823398166,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 3427.351462841034,
+      "samples": [
+        {
+          "epoch": 1793029216.944566,
+          "extra_bytes": 2819736,
+          "free_bytes": 16439308288
+        },
+        {
+          "epoch": 1793029218.92977,
+          "extra_bytes": 2820366,
+          "free_bytes": 16439271424
+        },
+        {
+          "epoch": 1793029220.977052,
+          "extra_bytes": 2820815,
+          "free_bytes": 16439365632
+        },
+        {
+          "epoch": 1793029223.0486798,
+          "extra_bytes": 2821336,
+          "free_bytes": 16438124544
+        },
+        {
+          "epoch": 1793029225.14043,
+          "extra_bytes": 2821586,
+          "free_bytes": 16437649408
+        },
+        {
+          "epoch": 1793029227.194745,
+          "extra_bytes": 2822031,
+          "free_bytes": 17511923712
+        },
+        {
+          "epoch": 1793029229.242578,
+          "extra_bytes": 2822544,
+          "free_bytes": 17511985152
+        },
+        {
+          "epoch": 1793029231.28234,
+          "extra_bytes": 2823190,
+          "free_bytes": 17512001536
+        },
+        {
+          "epoch": 1793029233.323057,
+          "extra_bytes": 2823743,
+          "free_bytes": 17512026112
+        },
+        {
+          "epoch": 1793029235.35972,
+          "extra_bytes": 2824256,
+          "free_bytes": 17510862848
+        },
+        {
+          "epoch": 1793029237.399668,
+          "extra_bytes": 2824781,
+          "free_bytes": 17510850560
+        },
+        {
+          "epoch": 1793029239.441578,
+          "extra_bytes": 2825295,
+          "free_bytes": 17510625280
+        },
+        {
+          "epoch": 1793029241.483148,
+          "extra_bytes": 2825807,
+          "free_bytes": 17510572032
+        },
+        {
+          "epoch": 1793029243.531463,
+          "extra_bytes": 2826335,
+          "free_bytes": 17510481920
+        },
+        {
+          "epoch": 1793029245.5723321,
+          "extra_bytes": 2826848,
+          "free_bytes": 17510465536
+        },
+        {
+          "epoch": 1793029247.61307,
+          "extra_bytes": 2827474,
+          "free_bytes": 17510752256
+        },
+        {
+          "epoch": 1793029249.6522,
+          "extra_bytes": 2828012,
+          "free_bytes": 17510768640
+        },
+        {
+          "epoch": 1793029251.746924,
+          "extra_bytes": 2828574,
+          "free_bytes": 17510617088
+        },
+        {
+          "epoch": 1793029253.789116,
+          "extra_bytes": 2829122,
+          "free_bytes": 17510518784
+        },
+        {
+          "epoch": 1793029255.838915,
+          "extra_bytes": 2829672,
+          "free_bytes": 17509621760
+        },
+        {
+          "epoch": 1793029257.901885,
+          "extra_bytes": 2830331,
+          "free_bytes": 17509609472
+        },
+        {
+          "epoch": 1793029259.961427,
+          "extra_bytes": 2834691,
+          "free_bytes": 17509662720
+        }
+      ],
+      "extra_bytes": 2836269,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 2490,
+        "sha256": "ec38feb2d665db4243871dd7a1ffdda5432aa27a5f2dae0f668d960f1de421d5"
+      }
+    },
+    {
+      "attempt": "sealed-adapter-DAG-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e023_tiny.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tiny-dag-v6",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e001-snakemake-test-env/bin/python"
+      ],
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e023_tiny.py",
+          "--root",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tiny-dag-v6",
+          "--workflow-python",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e001-snakemake-test-env/bin/python"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 12.096885654027574,
+        "peak_sampled_rss_bytes": 165507072,
+        "seconds_ceiling": 2660.6210799217224,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 67413,
+        "sampled_cpu_seconds": 9.65,
+        "sampled_average_cpus": 0.7977259830332528,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 4551.4761300086975,
+      "samples": [
+        {
+          "epoch": 1793030373.2455628,
+          "extra_bytes": 3131010,
+          "free_bytes": 16445984768
+        },
+        {
+          "epoch": 1793030375.2861152,
+          "extra_bytes": 3218223,
+          "free_bytes": 16449925120
+        },
+        {
+          "epoch": 1793030377.420956,
+          "extra_bytes": 3243683,
+          "free_bytes": 16449662976
+        },
+        {
+          "epoch": 1793030379.543398,
+          "extra_bytes": 3286133,
+          "free_bytes": 16449519616
+        },
+        {
+          "epoch": 1793030381.612787,
+          "extra_bytes": 3339321,
+          "free_bytes": 16449351680
+        },
+        {
+          "epoch": 1793030383.7034528,
+          "extra_bytes": 3340157,
+          "free_bytes": 16449310720
+        }
+      ],
+      "extra_bytes": 3380360,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 1910,
+        "sha256": "28cc81122f6333c71d203bf94d41be24d87ae42d2253be81a29d42ec6c489973"
+      }
+    },
+    {
+      "attempt": "secondary-final-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "artifacts/e023-local/secondary-final.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e023-local/secondary-final.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.5873384790029377,
+        "peak_sampled_rss_bytes": 66781184,
+        "seconds_ceiling": 4952.907712936401,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 63647,
+        "sampled_cpu_seconds": 1.24,
+        "sampled_average_cpus": 0.7811818439498089,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 2248.6811640262604,
+      "samples": [
+        {
+          "epoch": 1793028080.958924,
+          "extra_bytes": 2218509,
+          "free_bytes": 15423041536
+        }
+      ],
+      "extra_bytes": 2220343,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 954,
+        "sha256": "86bad544b8373234beae5792d3b28ea98b9df1af37f3ab2b2c0ca6d5725f45fd"
+      }
+    },
+    {
+      "attempt": "source-final-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "artifacts/e023-local/secondary-final.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e023-local/secondary-final.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 0.9690013590152375,
+        "peak_sampled_rss_bytes": 61845504,
+        "seconds_ceiling": 4151.865196943283,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 65275,
+        "sampled_cpu_seconds": 0.97,
+        "sampled_average_cpus": 1.0010305878061692,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 3049.1049230098724,
+      "samples": [
+        {
+          "epoch": 1793028882.0014431,
+          "extra_bytes": 2568156,
+          "free_bytes": 15373266944
+        }
+      ],
+      "extra_bytes": 2570015,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 955,
+        "sha256": "51875287e1366f8548b2e8c34ecc8fae08753ddf9963843e418060b45c955720"
+      }
+    },
+    {
+      "attempt": "source-resource-seal-1.resources",
+      "status": "FAILED",
+      "command": [
+        "python3",
+        "-I",
+        "-B",
+        "experiments/E023-adaptive-density-bins/journals/summarize-local.py"
+      ],
+      "error": "RuntimeError('Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/source-resource-seal-1.log\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E023-adaptive-density-bins/journals/summarize-local.py\", line 91, in <module>\\n    if __name__==\\'__main__\\':main()\\n                            ^^^^^^\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E023-adaptive-density-bins/journals/summarize-local.py\", line 58, in main\\n    if indexed[name][\\'status\\']!=\\'SUCCESS\\':raise ValueError(\\'Required local contract not passed: \\'+name)\\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nValueError: Required local contract not passed: final-17-contracts-1\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+      "elapsed_original_seconds": 4817.378320932388,
+      "samples": [
+        {
+          "epoch": 1793030649.934884,
+          "extra_bytes": 3382270,
+          "free_bytes": 15377960960
+        }
+      ],
+      "extra_bytes": 3383926,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 1275,
+        "sha256": "d44cb9ff32eb3cbc75287be68b0cd4e4495c74ba80b3d460a235d8fffd6bce9a"
+      }
+    },
+    {
+      "attempt": "workflow-actual-1.resources",
+      "status": "SUCCESS",
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "artifacts/e023-local/workflow-probe-check.py"
+      ],
+      "resources": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e023-local/workflow-probe-check.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.0970909930183552,
+        "peak_sampled_rss_bytes": 46186496,
+        "seconds_ceiling": 2893.5376749038696,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 66967,
+        "sampled_cpu_seconds": 0.30999999999999994,
+        "sampled_average_cpus": 0.2825654407635934,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      },
+      "elapsed_original_seconds": 4307.560497045517,
+      "samples": [
+        {
+          "epoch": 1793030140.328907,
+          "extra_bytes": 3110356,
+          "free_bytes": 16452575232
+        }
+      ],
+      "extra_bytes": 3111652,
+      "clock": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/engineering-clock.json",
+      "receipt": {
+        "bytes": 979,
+        "sha256": "b8e47bf08e5b89f61eb96faef51f6a97b81cae987a1f796c8841879892cf0fb3"
+      }
+    }
+  ],
+  "failed_attempts_preserved": [
+    {
+      "attempt": "contracts-1",
+      "cause": "Local sandbox denied ps before the first supervised test; no fixture/science ran",
+      "repair": "Use authorized process-tree sampling outside the sandbox inside the same original clock",
+      "journal": {
+        "bytes": 585,
+        "sha256": "ac6c745e00577ed26a1f929c0d49b0e692e81b6a2015d3b3ab73bd3e727ae3a9"
+      }
+    },
+    {
+      "attempt": "contracts-2",
+      "cause": "New reader incorrectly required numeric edge order; native writer canonicalizes opaque IDs",
+      "repair": "Match the unchanged native opaque-ID order, retaining all byte/axis checks; actual two-mode sparse/FASTA fixtures pass",
+      "journal": {
+        "bytes": 3220,
+        "sha256": "0e03cd52f153370660bb919561ffa9dfe3e7e3eea04a8d3cd7c9ac4292c37132"
+      }
+    },
+    {
+      "attempt": "reuse-lock-generator",
+      "cause": "Attempted to obtain an older native-runtime reference binding absent from inherited files map; KeyError before writing lock",
+      "repair": "Use already bound E022 runtime receipt directly and a new exact complete-distribution/source/graph-library reader; no fallback or missing-byte acceptance",
+      "science_or_lock_written": false
+    },
+    {
+      "attempt": "cache-audit-contracts-1",
+      "cause": "RuntimeError('Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/cache-audit-contracts-1.log\\n_ambiguity (test_e023_density.SecondaryQuality) ... ok\\ntest_tier_edges_do_not_claim_mimag (test_e023_density.SecondaryQuality) ... ok\\ntest_exact_new_hierarchy_collector_and_cap (test_e023_operational.Operational) ... ok\\ntest_fresh_credit_clock_storage_and_watchdog_scope (test_e023_operational.Operational) ... ok\\ntest_new_review_refuses_unadmitted_outputs_before_any_truth_read (test_e023_operational.Operational) ... ok\\ntest_real_restore_reader_refuses_missing_corrupt_and_links (test_e023_operational.Operational) ... ok\\ntest_source_plan_rejects_truth_path_and_expansion (test_e023_operational.Operational) ... ok\\n\\n======================================================================\\nERROR: test_real_two_mode_readers_hierarchy_export_reload (test_e023_density.Density) (depth=True)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e023_density.py\", line 83, in test_real_two_mode_readers_hierarchy_export_reload\\n    save_arrays(p/\\'new/hierarchy.npz\\',a,{k:v for k,v in meta.items()if k not in [\\'version\\',\\'sha256\\',\\'ids_sha256\\']})\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/src/dl_binner/io.py\", line 171, in save_arrays\\n    raise FileExistsError(f\\'Fresh artifact path required: {path}\\')\\nFileExistsError: Fresh artifact path required: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tmp/tmpbtclpbhq/new/hierarchy.npz\\n\\n======================================================================\\nERROR: test_real_two_mode_readers_hierarchy_export_reload (test_e023_density.Density) (depth=False)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/test_e023_density.py\", line 83, in test_real_two_mode_readers_hierarchy_export_reload\\n    save_arrays(p/\\'new/hierarchy.npz\\',a,{k:v for k,v in meta.items()if k not in [\\'version\\',\\'sha256\\',\\'ids_sha256\\']})\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/src/dl_binner/io.py\", line 171, in save_arrays\\n    raise FileExistsError(f\\'Fresh artifact path required: {path}\\')\\nFileExistsError: Fresh artifact path required: /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/tmp/tmp4lbgd8ue/new/hierarchy.npz\\n\\n----------------------------------------------------------------------\\nRan 14 tests in 39.923s\\n\\nFAILED (errors=2)\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+      "receipt": {
+        "bytes": 4662,
+        "sha256": "b4d7d516543aa70f30f22938e4fb63696dd06387f74c539d5102c747baf36b2a"
+      },
+      "repair": "Malformed-cache test now writes to a fresh damaged artifact; immutable writer refusal remains. Actual structural reader test passes."
+    },
+    {
+      "attempt": "final-17-contracts-1",
+      "cause": "RuntimeError(\"Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/final-17-contracts-1.log\\nTimeoutError: FileNotFoundError(2, 'No such file or directory')\")",
+      "receipt": {
+        "bytes": 2108,
+        "sha256": "772862a8e654e6bafc2944242c5cc4c5fd36f361686bcd084f66ec9db344a3d5"
+      },
+      "repair": "Local resource sampler now tolerates disappearance of test-owned temporary files between walk/stat; scientific missing-member refusal unchanged."
+    },
+    {
+      "attempt": "source-resource-seal-1",
+      "cause": "RuntimeError('Command failed; see /Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-local/source-resource-seal-1.log\\nTraceback (most recent call last):\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E023-adaptive-density-bins/journals/summarize-local.py\", line 91, in <module>\\n    if __name__==\\'__main__\\':main()\\n                            ^^^^^^\\n  File \"/Users/rasmusallesoeenielsen/Documents/dl_binner/experiments/E023-adaptive-density-bins/journals/summarize-local.py\", line 58, in main\\n    if indexed[name][\\'status\\']!=\\'SUCCESS\\':raise ValueError(\\'Required local contract not passed: \\'+name)\\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nValueError: Required local contract not passed: final-17-contracts-1\\n\\nDLBINNER exit_code=1 stop_reason=None\\n')",
+      "receipt": {
+        "bytes": 1275,
+        "sha256": "d44cb9ff32eb3cbc75287be68b0cd4e4495c74ba80b3d460a235d8fffd6bce9a"
+      },
+      "repair": "Premature finalization refused the interrupted required suite; no success/native admission was published."
+    }
+  ],
+  "storage_admission": {
+    "bytes": 3234,
+    "sha256": "50fe58350368d0be5975b1ace409133c300bba058c8a20ecaa63e3194d334ddb"
+  },
+  "new_compute_USD": 0,
+  "credit_only_storage_forecast_USD": 7.730816966517739,
+  "quality_outcome": "NOT_ASSESSED",
+  "comparison_compute_approval": "new $3 proposed only",
+  "portability": "Original Mac allclose failure and exact tolerance unchanged; no local inference on retained native model",
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "additional_source_metadata_bytes": 144489,
+  "local_runtime": {
+    "bytes": 13998,
+    "sha256": "9a6a206f90f1c902162ea8b629c830340644a98cf0757f8c321251711489659a"
+  },
+  "local_workflow": {
+    "python": "3.13.2",
+    "snakemake": "9.13.7",
+    "status": "ACTUAL_LOCAL_DAG_AND_RENDERED_PROBE_PASS",
+    "native_expected": "3.12.10 / 9.16.3, separate pending native gate"
+  },
+  "provider_final": {
+    "status": "TERMINATED",
+    "receipt": {
+      "bytes": 33096,
+      "sha256": "dc394182375e4690eee92cbab2d17734cdfe26b8a391af15544d25983f61fbbb"
+    }
+  },
+  "final_tiny_return": {
+    "status": "SUCCESS",
+    "archive": {
+      "bytes": 15592,
+      "sha256": "e451a61486dc0f0a25abbef0396923f116abc28a9dcaa90b31f9ad34f158df6e"
+    },
+    "regular_members": 58,
+    "logical_member_bytes": 77891,
+    "every_member_verified": true,
+    "aliases": {},
+    "omitted_retained_on_disk": {
+      "units/E009-E022/export/selected/bin_000001.fna": {
+        "bytes": 25862,
+        "reason": "Full accounted DNA retained on disk",
+        "sha256": "c2611bd43c3792dbac89a828b67f083505d77dfa1e86e8416c8313ef04599dee"
+      },
+      "units/E009-E022/export/selected/excluded.fna": {
+        "bytes": 91,
+        "reason": "Full accounted DNA retained on disk",
+        "sha256": "38e0d5f16bf36f40f39c62f4a89ea0a0854a66f98561756cd15dc7f94917ad80"
+      },
+      "units/oral-E019/export/selected/bin_000001.fna": {
+        "bytes": 25862,
+        "reason": "Full accounted DNA retained on disk",
+        "sha256": "c2611bd43c3792dbac89a828b67f083505d77dfa1e86e8416c8313ef04599dee"
+      },
+      "units/oral-E019/export/selected/excluded.fna": {
+        "bytes": 91,
+        "reason": "Full accounted DNA retained on disk",
+        "sha256": "38e0d5f16bf36f40f39c62f4a89ea0a0854a66f98561756cd15dc7f94917ad80"
+      }
+    },
+    "uncompressed_plus_overhead_bound_bytes": 1248273,
+    "compressed_hard_ceiling_bytes": 2147483648,
+    "planned_science_fits": 0,
+    "incomplete_failure_evidence": false,
+    "omitted_bytes_not_backed_up": true
+  },
+  "closeout_checks": {
+    "source_verification": {
+      "bytes": 183,
+      "sha256": "7061cda4f2ba1ce360c2947c2deac1ddddf5a39e52aa8da7e0ca33fe7de4130a"
+    },
+    "source_seal_resources": {
+      "bytes": 958,
+      "sha256": "7bb3211cb07353ad0c739229a8d8582697ade38d30738b3c2895d4213592c847"
+    },
+    "docs_resources": {
+      "bytes": 2272,
+      "sha256": "64d14cb157e72a9c564552029f9a3efa885cbed9387b57e73f8b5803de49a6a6"
+    },
+    "docs_log": {
+      "bytes": 768,
+      "sha256": "04e06c240dfc9bb76a80e602dd91d1ac343f295be3c010697efcfd8fea0489fa"
+    },
+    "maintained_documents": 102,
+    "local_links": 1443,
+    "present_source_fingerprints": 85,
+    "optional_old_cache_paths_unavailable": 10
+  },
+  "local_seal": {
+    "path": "artifacts/e023-local/closure-v1/e023-local-evidence.tar.gz",
+    "bytes": 196063,
+    "sha256": "9726793f83f4cacea1840e47d937e43dbe3b96d3ffa84520822625db53f1b0f0",
+    "regular_members": 147,
+    "logical_member_bytes_including_inventory": 740574,
+    "all_member_bytes_verified": true,
+    "private_upload": false
+  },
+  "closure": {
+    "elapsed_original_seconds": 5849.882928848267,
+    "owned_artifact_bytes": 3728988,
+    "free_local_bytes": 15296430080,
+    "clock_limit_seconds": 7200,
+    "within_clock": true,
+    "no_new_cloud_compute_or_science": true,
+    "no_live_owned_orphans": true
+  }
+}

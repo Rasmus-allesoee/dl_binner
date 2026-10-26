@@ -1,0 +1,73 @@
+{
+  "status": "PROPOSED_NOT_EXECUTED_OR_COMPUTE_AUTHORIZED",
+  "new_gross_ceiling_USD": 3,
+  "machine": "existing e2-standard-8 / 8 allocated vCPU / 32 GiB, 30 GiB standard + 300 GiB balanced disks",
+  "cumulative_VM_start_seconds": 7200,
+  "provider_STOP_seconds": 8100,
+  "numerical_threads": 4,
+  "sampled_tree_RSS_bytes": 26000000000,
+  "free_reserve_bytes": 26843545600,
+  "extra_work_bytes": 21474836480,
+  "compressed_return_bytes": 2147483648,
+  "logical_return_bytes": 6442450944,
+  "local_review": {
+    "seconds": 3600,
+    "threads": 4,
+    "RSS_bytes": 8000000000,
+    "extra_bytes": 6442450944
+  },
+  "forecast": {
+    "setup_and_native_gates_minutes": [
+      8,
+      20
+    ],
+    "E009_group_selection_export_minutes": [
+      3,
+      12
+    ],
+    "oral_group_selection_export_minutes": [
+      15,
+      45
+    ],
+    "reuse_collection_upload_readback_minutes": [
+      5,
+      15
+    ],
+    "total_minutes": [
+      31,
+      92
+    ],
+    "expected_peak_tree_RSS_GB": [
+      8,
+      20
+    ],
+    "expected_new_work_GiB": [
+      3,
+      7
+    ],
+    "expected_compressed_return_GiB": [
+      0.2,
+      1.1
+    ],
+    "expected_local_review_GiB": [
+      2,
+      4.5
+    ],
+    "charged_vCPU_hours_at_limit": 16,
+    "sampled_process_CPU_hours": "unmeasured; do not substitute for allocation pricing",
+    "uncertainty": "No full-scale new joint index/hierarchy has run; approximate index and cache/JSON overhead may exceed forecast. Fresh Linux gates must admit the complete remaining schedule; no automatic extension."
+  },
+  "price_checked_UTC": "2026-10-26T14:44:12.459179+00:00",
+  "prices_USD": {
+    "compute_and_IP_per_hour": 0.2730456762592464,
+    "all_existing_disks_per_month": 31.199999949850024,
+    "compute_at_provider_STOP": 0.6143527715833045,
+    "run_disks_at_provider_STOP": 0.09616438340707201,
+    "max_export_at_0_12_per_GiB": 0.24,
+    "operations_and_small_return_storage": 0.15,
+    "contingency": 0.75,
+    "conservative_total": 1.8505171549903765
+  },
+  "storage": "New $8 storage-only allowance through November 4 admitted separately; run-disk attribution overlaps it and must not be charged twice. No real-money permission, provisioning, resize or retention extension.",
+  "no_compute_spent_in_preparation": true
+}

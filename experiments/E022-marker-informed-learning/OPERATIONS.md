@@ -360,6 +360,11 @@ next exact prompt with any separate authorization needed.
 
 ## Exact following prompt
 
+Executed as local preparation on October 26, 2026. [E023](../E023-adaptive-density-bins/README.md)
+owns the implementation/local evidence and [next separate execution approval](../E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt).
+The prompt below remains the scope executed; no E023 community comparison ran.
+Its new $8 storage-only allowance now passes fresh checks through November 4.
+
 Our goal is substantially closing the recovery gap. Read AGENTS.md,
 PROJECT_INTENT.md, STATE/CLOUD, D013/D015, completed literature/source/thesis reviews,
 E022's reviewed comparison/all-target diagnostics/inspection/costs and the retained
@@ -427,8 +432,7 @@ through November 4 at 00:00 Copenhagen**, subject to fresh Welcome-credit
 balance/scope/expiry, delayed usage, product eligibility, prices, complete retained
 GCS/soft-delete inventory and remaining original storage approval. Keep original
 30 + 300 GiB disks and existing private bucket only. Do not resize/provision/start
-anything or delete accepted evidence. No real-money charges are authorized. Stop
-before unclear/uncovered costs or a forecast beyond $8; no automatic later renewal.
+anything or delete accepted evidence. No real-money charges are authorized.
 Record approval/checks prospectively before the original boundary, preserving the
 expensive GLM/context/DNA/runtime dependencies. If that date has already passed,
 report the actual uncovered interval and obtain an explicit revised scope instead

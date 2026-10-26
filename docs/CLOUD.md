@@ -1,5 +1,31 @@
 # Google Cloud workspace operations
 
+## E023 local preparation and storage admission, October 26, 2026
+
+The owner invoked E022's next prompt, explicitly authorizing a new **$8 storage-
+only** interval October 28 through **November 4, 00:00 Copenhagen**. Fresh
+[admission](../experiments/E023-adaptive-density-bins/storage-admission.json) passes
+at **$7.73082** including existing 30 GiB standard + 300 GiB balanced disks,
+all 149 GCS versions / 9,643,347,402 bytes, 2 GiB extra GCS allowance and $0.50
+operations/contingency. Zero soft-deleted objects; US-CENTRAL1 Standard and existing
+seven-day soft-delete remain unchanged. Original interval still ends October 28;
+the new interval is prospective, not a backdated approval or automatic renewal.
+
+Fresh signed-in Billing: Welcome credit **DKK 1,798.81 Available / 91%**, original
+DKK 1,973.43, January 12 expiry, Certain usage / net pricing, paid account.
+October 1–26 rounded costs/savings DKK 173 / net zero. Hours/>24-hour delayed usage
+is unknown; retain $35 reserve. Official Catalog PD/E2/IP prices are unchanged.
+Remaining credits cover the storage scope; no real-money permission or inference
+of an invoice from a credit delta. Stopped disks cost a conservative $31.20/month.
+
+Provider read-only inventory confirms `dl-binner-cpu` TERMINATED and only original
+disks. No start, resize/provision, bucket-policy change, delete, payload transfer
+or paid compute. Protect GLM/context/DNA/runtime dependencies. Do not retain past
+November 4 or delete accepted evidence automatically; seek the next owner decision
+before that boundary. E023 comparison is only prepared: [resources](../experiments/E023-adaptive-density-bins/resources.json)
+propose a separate $3 ceiling / ~$1.85 conservative envelope. Its Linux/runtime/
+financial/watchdog admission remains future work after explicit execution approval.
+
 ## E022 completed inspection, October 26, 2026
 
 [Final inspection](../experiments/E022-marker-informed-learning/inspection-observed.json)

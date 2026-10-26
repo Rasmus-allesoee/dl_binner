@@ -1,0 +1,29 @@
+{
+  "kind": "E023 fixed-learning density hierarchy",
+  "units": {
+    "E009-E022": {
+      "embeddings": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/embeddings.npz",
+      "graph": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/group/graph.npz",
+      "marker_evidence": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json",
+      "baseline_partition": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/partition.json",
+      "features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "fasta": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa"
+    },
+    "oral-E019": {
+      "embeddings": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/embeddings.npz",
+      "graph": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/group/graph.npz",
+      "marker_evidence": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json",
+      "baseline_partition": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/partition.json",
+      "features": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.npz",
+      "fasta": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna"
+    }
+  },
+  "threads": 4,
+  "python": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+  "workflow_python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+  "work": "{PHASE}/work",
+  "worker": "{REPO}/scripts/e023_control.py",
+  "snakefile": "{REPO}/experiments/E023-adaptive-density-bins/Snakefile",
+  "config": "{REPO}/experiments/E023-adaptive-density-bins/config.json",
+  "reuse_lock": "{REPO}/experiments/E023-adaptive-density-bins/reuse-lock.json"
+}

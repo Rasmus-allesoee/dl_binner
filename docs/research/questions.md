@@ -639,3 +639,11 @@ explicitly accounting for E017/E018 oral failures, rather than another loss/grid
 or larger model by default. Broader depth-enabled confirmation/source/truth and
 separate cost admission remain needed; frozen skin stays unscored. October 28
 preservation approval is separate from any new compute or automatic deletion.
+
+E023 local preparation, October 26, 2026: [the adaptive-density block](../../experiments/E023-adaptive-density-bins/README.md)
+now has real tiny sparse/index/hierarchy/selection/export/reload/DAG/collection
+contracts, without new community outcomes. Q001/Q003/Q005 remain open. Fixed E022
+E009 and E019 oral anchors prepare a downstream transfer test, not a depth-learning
+ablation. Secondary per-bin sequence quality/tier reporting does not change the
+primary R95 policy. New storage-only through November 4 is freshly admitted;
+comparison compute and untouched confirmation remain separately authorized scopes.
