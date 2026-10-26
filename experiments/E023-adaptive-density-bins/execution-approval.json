@@ -1,0 +1,22 @@
+{
+  "record": "E023 execution authorization",
+  "owner_authorization": "Carry out E023 Exact following prompt at 546763d; new $3 cached comparison under every frozen gate/limit and November 4 retention",
+  "prepared_source_commit": "546763dc27ad3e038f4054c8a183a8ceaf11b03d",
+  "scientific_source_freeze": {
+    "bytes": 43403,
+    "sha256": "fa7e55203409d32c1a3d9ba43ec8508f65ae741208a1506992c74c6d28a7c8f7"
+  },
+  "financial_gate": {
+    "bytes": 3119,
+    "sha256": "1bf6e6f048b69de33997e666ac5efa8b82a232979bfcb7a032713f6a76c1c3d8"
+  },
+  "fresh_credit_DKK": 1797.1,
+  "delayed_usage_reserve_USD": 35,
+  "gross_ceiling_USD": 3,
+  "conservative_quote_USD": 1.8505171549903765,
+  "resource_limits": "Existing e2-standard-8/32 GiB, 30+300 GiB; 2 hours cumulative / 2.25 hours STOP, 4 threads / 26 GB RSS, 25 GiB reserve / 20 GiB growth / 2 GiB compressed / 6 GiB logical",
+  "retention": "2026-11-04T00:00:00+01:00",
+  "status": "LIVE_FINANCIAL_GATE_PASS_NATIVE_PENDING_NO_START_YET",
+  "secondary_scope": "Owner authorizes additional retained E011 MetaBAT2 per-bin threshold-based sequence completeness/contamination/tier context only if input/truth/FASTA contracts match. No tool rerun or primary change.",
+  "all_original_science_preserved": true
+}

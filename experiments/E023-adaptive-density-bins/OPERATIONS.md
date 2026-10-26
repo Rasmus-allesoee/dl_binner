@@ -1,5 +1,17 @@
 # E023 operations
 
+## Execution authorization, October 26, 2026
+
+The owner authorized the prepared `546763d` comparison under the new $3 ceiling.
+[Fresh financial admission](execution-approval.json) passes with DKK 1,797.10
+Welcome credit, $35 delayed-use reserve and the unchanged ~$1.85 forecast.
+The original source/policy/reuse locks remain unchanged; the owner-edited prompt
+below is preserved. Linux/headroom/watchdog gates still precede any release.
+The existing November 4 storage endpoint and every resource limit remain fixed.
+Secondary retained E011 MetaBAT2 quality tables are additionally authorized only
+after matching the accepted E009 input/truth/assignment/FASTA contracts; no refit,
+external execution or primary-rule change.
+
 ## Scope and current state
 
 Local preparation only, October 26, 2026. New branch
@@ -125,7 +137,8 @@ screen or NC category. Do not change primary criteria or use truth to choose bin
 thresholds, merges, families or any per-community oracle.
 
 Apply frozen joint KEEP/MODIFY/ABANDON; report density-only versus selected effects,
-target trade-offs, resources/cost/storage and at most one strongest next decision.
+target trade-offs, resources/cost/storage and at most one strongest next decision. Figuring out what the strongest, most optimal next decision/upgrade is for our binner is very important, because we need to close the performance GAP to at least MetaBAT2 very soon!
+
 Keep the frozen skin source/610-target/313-overlap protocol unscored and require
 an explicitly versioned future candidate/protocol amendment and remaining source/
 genome/replicon/molecule/host/circular/taxonomy/near/pretraining/competitive ambiguity/
