@@ -24,6 +24,18 @@ class Operations(unittest.TestCase):
             self.assertEqual(value.returncode,0,value.stderr)
             self.assertIn('--config',value.stdout)
 
+    def test_actual_verified_archive_inventory_reader_not_summary_schema(self):
+        from e024_reuse_gates import archive_inventory
+        from e024_collect import pack
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);work=root/'work';work.mkdir();evidence=root/'evidence';evidence.mkdir()
+            (evidence/'gate.json').write_text('{"fixture":true}')
+            pack(work,evidence,root/'return',allow_incomplete=True)
+            path=root/'return/e024-evidence.tar.gz';inv=archive_inventory(path)
+            self.assertEqual(inv['members']['evidence/gate.json'],binding(evidence/'gate.json'))
+            bad=root/'bad.tar.gz';bad.write_bytes(path.read_bytes()[:30])
+            with self.assertRaises(Exception):archive_inventory(bad)
+
     def test_private_delivery_refuses_overwriting_an_accepted_generation(self):
         self.assertEqual(upload_command('gcloud','/tmp/a','gs://private/new'),
                          ['gcloud','storage','cp','--if-generation-match=0','/tmp/a','gs://private/new'])

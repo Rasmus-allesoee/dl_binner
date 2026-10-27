@@ -94,8 +94,8 @@
       "sha256": "f2676cad6433c8e0102cf7ef7cc33c942f4a57f8153286e83cbe0ea30e807c7a"
     },
     "tests/test_e024_operations.py": {
-      "bytes": 8242,
-      "sha256": "c35b3284c6e14f3f800fcf4cb5a28436ee565d009ffa6784c8c7dfc4572e8e33"
+      "bytes": 9020,
+      "sha256": "4f1cd621ca14a7f409be4b1794fd0a393a506a395e1eaca069ef0db17a70441f"
     },
     "scripts/e024_alignment.py": {
       "bytes": 5693,
@@ -110,8 +110,8 @@
       "sha256": "460e7097f23337734231ce7522c0e1791dc92ed42fb2a9fa8a65adeafdfdc3a0"
     },
     "scripts/e024_reuse_gates.py": {
-      "bytes": 6291,
-      "sha256": "9bd58ab304801af1a146e35e500b13224f3cfbfe283769712235c01c0b0946b2"
+      "bytes": 6769,
+      "sha256": "22306fcfad7f38aa9f61a778e84ac34e6fe552a8e544bc389a98d66e105c1230"
     }
   },
   "inherited_source_lock": {

@@ -15,6 +15,7 @@ from pathlib import Path
 import shutil
 import sys
 import time
+import tarfile
 
 ROOT=Path(__file__).absolute().parents[1]
 sys.path[:0]=[str(ROOT/'scripts'),str(ROOT/'src')]
@@ -26,6 +27,13 @@ from e023_gates import workflow_probe
 from e009_owner import supervisor
 
 
+def archive_inventory(path):
+    """Verify every archive member before reading its bounded internal inventory."""
+    verify(path)
+    with tarfile.open(path,'r:gz') as archive:
+        return json.load(archive.extractfile('inventory.json'))
+
+
 def run(config, previous):
     """Verify and explicitly reuse immutable gates; test only the changed transport."""
     cfg=json.loads(Path(config).read_text());root=Path(cfg['root']);old=Path(previous)
@@ -34,7 +42,7 @@ def run(config, previous):
         raise ValueError('Distinct retained E024 attempt required')
     if binding(cfg['plan'])!=binding(prior['plan']) or p['work']!=prior['work']:
         raise ValueError('Original accepted plan/work cannot change for transport recovery')
-    inv=verify(old/'collection/e024-evidence.tar.gz')
+    inv=archive_inventory(old/'collection/e024-evidence.tar.gz')
     completion=json.loads((old/'gates/completion.json').read_text())
     if completion['status']!='PASS' or completion['config']!=binding(old/'config.json'):
         raise ValueError('Old complete native admission missing')
@@ -50,6 +58,8 @@ def run(config, previous):
         if binding(path)!=sealed['inputs'][key]:raise ValueError('Retained input drift')
     out=root/'gates';out.mkdir(exist_ok=False)
     write(out/'source.json',freeze())
+    write(out/'operational-adapter.json',dict(script=str(Path(__file__).absolute()),identity=binding(__file__),
+        scope='Operational verified-reuse adapter; frozen scientific source/config unchanged'))
     for name in ['readers.json']:
         shutil.copyfile(old/'gates'/name,out/name)
     transport=old/'gates/private-BAM-smoke';(out/'private-BAM-smoke').mkdir()
