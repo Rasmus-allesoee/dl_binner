@@ -25,14 +25,16 @@ selected community router or product-family verdict. All 156/799 full references
 Secondary threshold-based target HQ/MQ/LQ: E009 9/10/10 (MetaBAT2 5/11/6), oral
 10/21/24; unknown/non-target/impure bins remain, no RNA or formal MIMAG HQ claim.
 
-**E024 is locally prepared; next is a separate execution approval, not more
-community work in preparation.** [E024](../experiments/E024-oral-measured-coverage/README.md)
-implements real all-ten oral read/index/SAM-summary/rebind/retrieval/marker/export
-workers and a bounded serial DAG. Actual tiny native mapping, samtools agreement,
-NNDescent, full accounting and partial/completed reuse pass locally; [local evidence](../experiments/E024-oral-measured-coverage/local-observed.json)
-separates synthetic vectors/marker fixtures and stubbed external transport from
-pending Linux/full-GSA/pilot/credit/watchdog gates. No bulk reads, real depth,
-community fits/scores, VM start, cloud resource change or deletion of pre-existing artifacts occurred.
+**E024 execution is authorized; fresh Linux gates and scientific release are pending.**
+The owner approved `f7083b2` plus a prospective [reusable-alignment amendment](../experiments/E024-oral-measured-coverage/execution-amendment.md).
+Retain exact unfiltered primary BAMs in the existing private GCS without local
+spooling; sort/index on later restore. Original E019 learning, E023 grouping rule,
+scientific criteria and limits remain fixed. New complete ceiling is $16 under
+the owner's explicit small-increase permission. Local real BAM/readback/refusal,
+unchanged depth sums, actual tiny serial DAG and accepted reuse pass. Source freeze
+will be pushed from Mac and synced read-only before an approved setup boot;
+no community mapping has yet started. SemiBin2 is assessed and deferred pending
+this Oral information result; original E009 ten-BAM integrity is checked on boot.
 
 The [design/alternatives](../experiments/E024-oral-measured-coverage/design.md)
 recognize E009 E022 depth/GLM learning versus oral E019 sequence-only as unmatched.
@@ -44,21 +46,24 @@ native probes project about 61 GPU hours, versus 43/36/33 hours at 1,000/1,500/
 2,000 bp. Exact counts and a cost-only random-genome alternative are retained;
 no cutoff sweep, GLM extraction or derivative community was run.
 
-[The proposed new $15 complete scope](../experiments/E024-oral-measured-coverage/resource-plan.json)
-uses the existing E2/30+300 GiB disks, 36 cumulative hours / 36.25-hour STOP,
-4 numerical grouping threads / 8 total data CPUs, 26 GB sampled RSS, 25 GiB reserve / 24 GiB growth, 2 GiB export.
-Forecast with reserves is $14.50125, not fresh credit admission. Streamed means
-avoid BAM/sort/per-base coexistence; only newly acquired raw FASTQ may be released
-after complete measured summary proof. A full accepted sample 6 is the pilot and
-must admit the remaining nine without remapping itself. Historical 51.53 GiB free
-must be freshly checked. No more storage is recommended before the measured gate;
-no unverified old-cleanup savings are assumed. Current provider read is TERMINATED.
+[The authorized complete scope](../experiments/E024-oral-measured-coverage/resource-plan.json)
+uses existing E2/30+300 GiB disks, 36 cumulative hours / 36.25-hour STOP,
+4 numerical grouping threads / 8 total data CPUs, 26 GB sampled RSS,
+25 GiB reserve / 24 GiB local growth and 2 GiB compact internet return. Full-primary
+BAMs have a separate internal GCS cap of 13 GiB per sample / 130 GiB total,
+with SHA256 readback and native full decode before raw cleanup. Forecast with
+reserves is $15.30125 under the new $16 ceiling; no BAM WAN export or new quota.
+A complete accepted sample 6 must admit the remaining nine without remapping.
 
-[Exact separate approval prompt](../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt).
-Keep existing storage-only approval through **November 4, 00:00 Copenhagen**, with
-fresh original-$8 forecast; prior compute budgets do not carry over. Skin remains
-unscored with 610 targets / 313 exact oral overlaps and all original source/truth/
-unique/depth/cost dependencies. Both current communities remain development data.
+Fresh signed-in Credits shows DKK 1,790.46 Available / 91%, expiry January 12,
+2027; paid Overview October 1–27 cost/savings about DKK 183, net DKK 0.
+Pending usage remains unknown / $35 reserve. Original storage forecast is
+$7.73369 under its separate $8 through **November 4, 00:00 Copenhagen**;
+new BAM storage is charged to E024's new allowance. No retention extension or
+cleanup of historical files has occurred. Skin remains unscored. Both communities
+remain development data. The forthcoming native receipt owns actual boot/headroom,
+gates, cleanup, supervision, progress and eventual completion; shutdown alone is
+not success.
 
 Measured allocation including failure: 34.54 minutes; science 21.87 minutes /
 8.436 GB sampled RSS; growth 4.336 GiB / minimum free 51.53 GiB. Priced compute/IP,

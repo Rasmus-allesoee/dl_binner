@@ -1,5 +1,10 @@
 # E024: measured oral coverage and fixed-learning information
 
+**Execution amendment, October 27:** the owner now authorizes execution.
+[Reusable primary BAMs](execution-amendment.md) supersede the original mean-only
+retention choice, with no scientific parameter change. Fresh native gates remain
+required; the small amended complete ceiling is $16.
+
 Prepared October 27, 2026. **Local engineering passed; community acquisition,
 mapping, grouping and evaluation are unrun and require a new approval.** The VM
 was read-only checked as TERMINATED; no cloud start, resource change, new cloud

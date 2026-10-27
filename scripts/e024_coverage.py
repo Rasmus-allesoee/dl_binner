@@ -297,7 +297,7 @@ def read_profile(first, second=None):
 
 
 def map_summary(mapper, reference, reads, output, second=None, use_index=True,
-                expected_read_length=150, mapper_threads=2, sample=None):
+                expected_read_length=150, mapper_threads=2, sample=None, bam_retention=None):
     """Feed validated pairs to the real mapper and summarize stdout, with both exits.
 
     Native use assigns four mapper workers + one validation/decompression thread
@@ -315,6 +315,10 @@ def map_summary(mapper, reference, reads, output, second=None, use_index=True,
     argv += [str(reference), '-']
     write(out/'started.json', dict(argv=argv, reference=binding(reference), reads=binding(reads),
                                   second=binding(second) if second else None))
+    retained = None
+    if bam_retention:
+        from e024_alignment import BamRetention
+        retained = BamRetention(log_root=out, **bam_retention)
     fed, errors = dict(pairs=0, reads=0, bases=0, primary_identity_sum=0), []
     with (out/'mapper.stderr.log').open('x') as log:
         process = subprocess.Popen(argv, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=log)
@@ -343,12 +347,14 @@ def map_summary(mapper, reference, reads, output, second=None, use_index=True,
         worker.start()
         try:
             with io.TextIOWrapper(process.stdout, encoding='ascii') as stream:
-                totals, counts, histogram = sum_sam(stream, ids, lengths, paired=True)
+                totals, counts, histogram = sum_sam(retained.lines(stream) if retained else stream, ids, lengths, paired=True)
             exit_code = process.wait(timeout=60)
             worker.join(60)
             if (worker.is_alive() or errors or exit_code or counts.get('primary_reads', 0) != fed['reads']
                     or counts.get('primary_identity_sum',0) != fed['primary_identity_sum']):
                 raise RuntimeError('Mapper/FASTQ/count contract failed: ' + str((exit_code, errors, fed, counts)))
+            retention = retained.finish(counts['SAM_records']) if retained else None
+            if retention:write(out/'alignment-retained.json', retention)
             target = out/'depth.tsv'
             with target.open('x') as f:
                 f.write('contig_id\taligned_read_bases\tlength\tmean\n')
@@ -358,13 +364,15 @@ def map_summary(mapper, reference, reads, output, second=None, use_index=True,
                           second=binding(second) if second else None, rows=len(ids), bp=sum(lengths),
                           depth=binding(target), feeder=fed, counters=counts, MAPQ_histogram=histogram,
                           zero_rows=sum(v == 0 for v in totals), mapper_exit=exit_code,
-                          policy='M/= /X; MAPQ >=20 except unknown255; BQ0; exclude0xF04; overlapping mates twice; full contig denominator; no variance/BAM')
+                          retained_alignment=retention,
+                          policy='M/= /X; MAPQ >=20 except unknown255; BQ0; exclude0xF04; overlapping mates twice; full contig denominator; no variance; unfiltered primary BAM retained separately when admitted')
             write(out/'done.json', result)
             return result
         except BaseException as exc:
             write(out/'failed.json', dict(error=repr(exc), feeder=fed, input_errors=errors))
             raise
         finally:
+            if retained:retained.close()
             if process.poll() is None:
                 process.terminate()
                 try:

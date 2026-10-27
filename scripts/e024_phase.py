@@ -76,8 +76,8 @@ def admission(cfg, release, now):
     if (not 0 <= now-cfg['vm_start_epoch'] < SECONDS-3600 or release.get('real_money_authorized') is not False
             or type(release.get('estimated_incremental_gross_USD')) not in (int,float)
             or not math.isfinite(release['estimated_incremental_gross_USD'])
-            or not 0 <= release['estimated_incremental_gross_USD'] <= 15
-            or release.get('ceiling_USD') != 15 or release.get('provider_STOP_seconds') != STOP_SECONDS
+            or not 0 <= release['estimated_incremental_gross_USD'] <= 16
+            or release.get('ceiling_USD') != 16 or release.get('provider_STOP_seconds') != STOP_SECONDS
             or release.get('storage_retention_extended') is not False):
         raise ValueError('Original clock/credit-only gross ceiling/STOP differs')
     if (set(release.get('covered_costs',[])) != {'compute','disk','storage','network','operations'}

@@ -20,7 +20,7 @@
   "limits": {
     "seconds": 129600,
     "provider_STOP_seconds": 130500,
-    "ceiling_USD": 15,
+    "ceiling_USD": 16,
     "numerical_threads": 4,
     "tree_RSS_bytes": 26000000000,
     "free_reserve_bytes": 26843545600,
@@ -34,5 +34,12 @@
     "mapper_threads": 4,
     "index_threads": 6
   },
-  "engineering": false
+  "engineering": false,
+  "alignment_archive": {
+    "mode": "gcs-primary-bam",
+    "prefix": "gs://dl-binner-archive-167650584170/e024/NEW_PHASE/alignments",
+    "maximum_total_bytes": 139586437120,
+    "maximum_sample_bytes": 13958643712,
+    "gcloud": "/usr/bin/gcloud"
+  }
 }

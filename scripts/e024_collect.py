@@ -73,7 +73,10 @@ def pack(work, evidence, output, ceiling=CAP, allow_incomplete=False):
     partial.rename(archive)
     result = verify(archive)
     result.update(scope='E024 compact new evidence; omitted byte inventories are not backups',
-                  raw_BAM_retained=False,compressed_cap_bytes=ceiling)
+                  raw_BAM_in_compact_archive=False,
+                  remote_primary_BAM_receipts=len(list((work/'samples').glob('*/mapped/alignment-retained.json'))),
+                  remote_primary_BAM_scope='Separately retained exact GCS objects, full byte/readback/decode in archived receipts; no BAM internet export',
+                  compressed_cap_bytes=ceiling)
     write(output/'collection.json',result)
     (output/'e024-evidence.tar.gz.sha256').write_text(binding(archive)['sha256']+'  e024-evidence.tar.gz\n')
     return result

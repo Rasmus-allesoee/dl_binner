@@ -1,5 +1,10 @@
 # E024 design and the next information decision
 
+**Execution amendment, October 27:** the owner now authorizes execution.
+[Reusable primary BAMs](execution-amendment.md) supersede the original mean-only
+retention choice, with no scientific parameter change. Fresh native gates remain
+required; the small amended complete ceiling is $16.
+
 Prospective design, October 27, 2026. No new community outcomes have been produced.
 The [protocol](protocol.json) and [source freeze](source-lock.json) are authoritative
 for the treatment; [E023's review](../E023-adaptive-density-bins/comparison-review.json)

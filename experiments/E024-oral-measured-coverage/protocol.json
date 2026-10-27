@@ -1,7 +1,7 @@
 {
   "kind": "E024 prospective oral measured-depth information comparison",
   "date": "2026-10-27",
-  "status": "PREPARED_NOT_EXECUTED",
+  "status": "AUTHORIZED_PENDING_FRESH_NATIVE_GATES",
   "hypothesis": "Independent measured per-contig abundance can improve Oral retrieval and recovery with E019 learning fixed; between-community contrast does not identify depth causally.",
   "ordered_samples": [
     6,
@@ -46,7 +46,7 @@
   "data_plan": {
     "pilot": "Complete first sample 6 acquisition/index/mapping/summary is the native pilot and is never repeated. 1.5 x byte-scaled remaining acquisition + mapping estimate plus 3 h comparison/collection must fit remaining original 36 h.",
     "reads": "Serial one 5.17 GB object at a time, publisher segment MD5 + new whole SHA256/MD5, complete gzip/paired/multiset-primary identity counts",
-    "intermediate_policy": "After exact full-axis summary validation and sealed receipt, remove only this phase newly downloaded raw FASTQ; no community SAM/BAM/per-base tracks written. Original E009 data remain immutable."
+    "intermediate_policy": "Retain exact unfiltered primary emitted SAM as streamed, lossless unsorted BAM in existing private GCS; full byte/readback/decode proof before new raw FASTQ release. Scientific means/filters unchanged; no local BAM/SAM/sort spool."
   },
   "metrics": {
     "primary": "Conservative duplicate-safe source-union R95 / all 799 provided targets / 2,083,072,211 bp, separately named provided-origin oracle; known-shared sensitivity unchanged",
@@ -94,5 +94,6 @@
       "bytes": 51055,
       "sha256": "e39e45692e09d35126034102af0a77470433df0d1c7dbf5399d17da282b9caf8"
     }
-  }
+  },
+  "retention_amendment": "execution-amendment.md; owner authorized October27; BAM sort/index on later restore, no external fit now"
 }

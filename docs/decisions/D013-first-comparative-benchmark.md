@@ -813,3 +813,17 @@ allocation intervals and paid export, not sampled CPU or an inferred credit delt
 No inspection wake or accepted science replay. Existing $8 storage ends October 28,
 00:00 Copenhagen; a new $8 week through November 4 forecasts $7.73 but remains
 unapproved. No automatic extension or deletion of accepted bulk.
+
+
+## E024 authorized reusable-alignment amendment, October 27, 2026
+
+The owner approved execution and flexible storage within existing quotas/credits.
+[The prospective amendment](../../experiments/E024-oral-measured-coverage/execution-amendment.md)
+selects streamed unfiltered primary BAMs in existing private GCS, with byte/SHA256
+readback and full native decode before raw release. Sort/index on future restore;
+no local BAM/sort spool, provisioning or cutoff change. Keep scientific means,
+learning/retrieval/criteria fixed. Complete ceiling $16 uses explicit small-increase
+permission; original clock and November 4 retention stay. AEMB requires separate
+split-contig mapping and is not E024's means. Defer SemiBin2 fitting; check existing
+E009 BAM integrity on boot, and choose a target-resolving stronger reference after
+the Oral information result. Local contracts pass; no native result is implied.

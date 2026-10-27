@@ -1,0 +1,46 @@
+{
+  "status": "AMENDED_LOCALLY_TESTED_NATIVE_PENDING",
+  "UTC": "2026-10-27T20:52:52.211741+00:00",
+  "prepared_commit": "f7083b26e9e5f4031502e4b451e9ddcdcd394682",
+  "new_ceiling_USD": 16,
+  "science_changed": false,
+  "retention": "Streamed unfiltered primary BAM to existing private GCS, sort/index later",
+  "actual": {
+    "full_local_suite": 22,
+    "additional_external_transport_test": 1,
+    "actual_mapper_samtools": true,
+    "mean_equality": true,
+    "actual_DAG_jobs": 20,
+    "partial_and_completed_reuse": true
+  },
+  "substituted": "Generated reads/vectors/markers; external GCS transport substituted only in new tiny transport test; real GCS/native Linux pending",
+  "failures": [
+    "First local supervisor refused sandbox ps; retained log, rerun with authorized process-sampling permission"
+  ],
+  "logs": {
+    "artifacts/e024-native/20261027T204322Z/local-contracts-r2.log": {
+      "bytes": 6822,
+      "sha256": "1b58a4696d8bc449b42df2f5e1b81ab6196ae266cb44ffeebbface3bc515f030"
+    },
+    "artifacts/e024-native/20261027T204322Z/local-contracts-r2.exit.json": {
+      "bytes": 903,
+      "sha256": "1e77e116831adeeb6f4124170f3e1a7e5f2bd3019afd19e392ac42c4800b6019"
+    },
+    "artifacts/e024-native/20261027T204322Z/local-DAG.log": {
+      "bytes": 15022,
+      "sha256": "698914f202a7e6d9acdcb91151658dba426c2a274170ef7125b36b0941ae0221"
+    },
+    "artifacts/e024-native/20261027T204322Z/local-DAG.exit.json": {
+      "bytes": 911,
+      "sha256": "fad5f02ed00488a1173f1ca3464c853c1aa5650863002cd19d9262ec1272c979"
+    },
+    "artifacts/e024-native/20261027T204322Z/transport-contract.log": {
+      "bytes": 593,
+      "sha256": "b854ad6c3f9de1f8a3f1b59f5c3690c1315a695927803ce625675741c746cb6a"
+    },
+    "artifacts/e024-native/20261027T204322Z/transport-contract.exit.json": {
+      "bytes": 959,
+      "sha256": "4396fb1853d76c7156a0e1f997c8d5fadec6d9c9583b644762e0977c94723f00"
+    }
+  }
+}

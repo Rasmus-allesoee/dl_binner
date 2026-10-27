@@ -1,8 +1,8 @@
 # E024 operations
 
-## Current status: prepared locally, no native community execution
+## Current status: execution authorized, fresh native gates pending
 
-October 27, 2026. The owner authorized preparation and tests only. Current branch
+October 27, 2026. The owner now authorized execution and the [prospective reusable-BAM amendment](execution-amendment.md), with a small complete ceiling increase to $16. Earlier preparation-only statements below are superseded by that explicit scope. Current branch
 is `oral-measured-coverage-information`; E023's MODIFY result and all accepted
 baselines/data/source freezes/failures are unchanged. The main VM was independently
 read-only checked **TERMINATED**, `e2-standard-8`, original 30/300 GiB disks.
@@ -73,7 +73,7 @@ Python 3.13.2 fixture does **not** admit those Linux runtime identities.
 
 The external release must bind the config and gate files, current financial/
 storage/headroom/STOP/watcher proofs, complete covered-cost set, estimated gross
-≤ $15, unchanged storage interval and `real_money_authorized=false`. Do not let
+≤ $16, unchanged storage interval and `real_money_authorized=false`. Do not let
 source sync/setup, hashing, gates or collection fall outside allocation accounting.
 Bind the actual plan and original `vm_start_epoch` as well. The launcher passes
 this attempt's immutable release path as `E024_RELEASE_FILE`; a recorded recovery
@@ -104,7 +104,7 @@ Each sample validates every publisher segment MD5 and new whole SHA256, full gzi
 mate/length contracts, primary-read identity totals, native exit, exact full SQ
 axis, integer numerator/full-length denominator and measured-zero rows. After
 summary admission, journal removal of **only the newly acquired current-phase
-raw FASTQ**. No community SAM, sorted BAM or dense per-base track is retained.
+raw FASTQ**. No local SAM, sorted BAM or dense per-base track is retained. Exact unfiltered primary BAMs are streamed to existing GCS with full byte/readback/decode verification before raw cleanup; these are unsorted and must be sorted/indexed on restore.
 No old reads/data/evidence/environment is deleted. Treat failed/unsealed directories
 as preserved attempts; repair recoverable operational faults explicitly, verify
 reuse and record fresh attempts within this same original budget/clock. Do not
@@ -172,7 +172,7 @@ STATE/CLOUD, D013/D015 and E024's design/protocol/source/reuse/read/runtime/reso
 locks and local evidence. Preserve all accepted E009–E023 inputs, truth, native
 vectors, source freezes, outputs and failed journals; keep skin unscored.
 
-I authorize a **NEW $15 incremental gross, credit-only ceiling** for the complete
+I authorize the **new complete $16 incremental gross, credit-only ceiling** (original $15 plus owner-approved small reusable-alignment allowance) for the complete
 all-ten oral read acquisition/index/measured-parent-mean data phase and one
 fixed-E019-learning information comparison, including the full sample-6 native
 pilot. Use only the existing e2-standard-8/32 GiB VM and original 30/300 GiB disks.
@@ -207,6 +207,5 @@ After success, verify all archive/member/alias bytes and costs before the frozen
 bounded local new-output review (four threads, 8 GB RSS, one hour / 8 GiB extra,
 6 GiB physical reserve). Keep full denominators and ambiguity/all-DNA populations;
 reuse older summaries without refit/rescore. Report actual allocation/storage/export
-cost, matched gains/trade-offs/limits, disposition, one next recovery decision and
-the next exact prompt. Both communities remain development data; this is not a
+cost, matched gains/trade-offs/limits, disposition, one next strongest recovery decision (important, think extensively) and the next exact prompt. Both communities remain development data; this is not a
 matched latest-learning/GLM or independent-confirmation result.

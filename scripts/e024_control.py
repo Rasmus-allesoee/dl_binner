@@ -27,7 +27,7 @@ def read_plan(path, engineering=False):
     """Refuse expanded science, truth paths and changes to the frozen sample rule."""
     p = json.loads(Path(path).read_text())
     fields = {'kind','work','python','workflow_python','mapper','samtools','reference','inputs',
-              'read_manifest','policy','worker','snakefile','limits','engineering'}
+              'read_manifest','policy','worker','snakefile','limits','engineering','alignment_archive'}
     if set(p) != fields or p['kind'] != 'E024 oral measured-depth information' or p['engineering'] is not engineering:
         raise ValueError('Unexpected E024 plan/schema/scope')
     m = json.loads(Path(p['read_manifest']).read_text())
@@ -46,6 +46,11 @@ def read_plan(path, engineering=False):
         release=json.loads(Path(release_path).read_text())
         if release.get('plan')!=binding(path):
             raise ValueError('Active held-parent release/plan binding differs')
+        a=p['alignment_archive']
+        if (a['mode']!='gcs-primary-bam' or not a['prefix'].startswith('gs://dl-binner-archive-167650584170/e024/')
+                or a['maximum_total_bytes']!=130*1024**3 or a['maximum_sample_bytes']!=13*1024**3
+                or a['gcloud']!='/usr/bin/gcloud'):
+            raise ValueError('Frozen private primary-BAM retention scope differs')
         for k in ['mapper','samtools','reference','inputs','python','workflow_python','worker','snakefile','policy','read_manifest']:
             if p[k] != expected[k]:
                 raise ValueError('Native existing runtime/reference differs')
@@ -94,9 +99,9 @@ def verify_seal(path):
 def cleanup_read(path, receipt, summary_receipt):
     """Delete only a newly owned regenerable FASTQ after admitted measured summary.
 
-    No accepted input, BAM, old experiment, environment or source is a target.
+    No accepted input, old experiment, environment or source is a target.
     The caller retains download+mapper+summary bindings before deletion. This
-    policy is only proposed now; tiny generated fixtures exercise it locally.
+    policy is explicitly owner-authorized and also tested with generated fixtures.
     """
     path = Path(path)
     if path.name != 'raw.fq.gz' or path.is_symlink():
@@ -107,9 +112,11 @@ def cleanup_read(path, receipt, summary_receipt):
             or s['reads'] != binding(path) or s['depth'] != binding(Path(summary_receipt).parent/'depth.tsv')
             or {k:r[k] for k in ['bytes','sha256']} != binding(path)):
         raise ValueError('Input/summary must be byte-verified before temporary release')
+    if not s.get('retained_alignment',{}).get('full_readback_verified'):
+        raise ValueError('Read release requires the new verified reusable BAM backup')
     removed = dict(path=str(path), identity=binding(path), regeneration=r['manifest'],
                    summary=binding(summary_receipt), backup=False,
-                   reason='New public raw FASTQ regenerable by publisher segment MD5; complete measured summary retained')
+                   reason='New public raw FASTQ regenerable by publisher segment MD5; complete summary and byte-verified primary BAM retained')
     write(path.parent/'released-raw.json', removed)
     path.unlink()
     return removed
@@ -188,9 +195,17 @@ def stage(plan, name, sample=None, engineering=False):
         if read_profile(raw) != index['profile']:
             raise ValueError('Sample index profile differs; do not silently rebuild')
         started = time.time()
+        archive=p['alignment_archive']; retained=None
+        if archive['mode'] in ['gcs-primary-bam','local-fixture-bam']:
+            previous=[json.loads(q.read_text()) for q in (work/'samples').glob('*/mapped/alignment-retained.json')]
+            remaining=archive['maximum_total_bytes']-sum(q['bytes'] for q in previous)
+            if remaining<=0:raise ValueError('Aggregate retained BAM allowance exhausted')
+            dest=archive['prefix'].rstrip('/')+'/'+str(sample)+'.bam'
+            retained=dict(samtools=p['samtools'],destination=dest,cap=min(remaining,archive['maximum_sample_bytes']),
+                          gcloud=archive.get('gcloud') if archive['mode']=='gcs-primary-bam' else None)
         result = map_summary(p['mapper'],work/'index/reference.fna',raw,out/'mapped',
                              expected_read_length=index['profile'],sample=sample,
-                             mapper_threads=p['limits']['mapper_threads'])
+                             mapper_threads=p['limits']['mapper_threads'],bam_retention=retained)
         # Reference bytes are exactly identical to the original, not its location.
         if result['reference'] != binding(p['reference']):
             raise ValueError('Summary mapped to a different reference')

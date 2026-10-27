@@ -1,5 +1,15 @@
 # Google Cloud workspace operations
 
+
+**October 27 E024 authorization update:** the owner now approves execution from
+`f7083b2` with the [reusable primary-BAM amendment](../experiments/E024-oral-measured-coverage/execution-amendment.md).
+The complete ceiling is $16 under the explicit small-increase permission;
+original 36-hour/36.25-hour STOP and November 4 retention remain. No new VM/disk or
+quota is selected. Stream <=130 GiB primary BAM to existing private GCS and verify
+all bytes/decode; no local spool or BAM WAN export. Old preparation-only paragraphs
+below are dated history, superseded for this explicit run only. Fresh credit and
+price read-only gates pass; native headroom/runtime/watchdog/release remain pending.
+
 ## E024 local preparation, October 27, 2026
 
 [E024](../experiments/E024-oral-measured-coverage/README.md) prepares genuine all-ten

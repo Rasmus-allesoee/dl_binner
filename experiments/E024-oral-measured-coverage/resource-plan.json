@@ -1,8 +1,8 @@
 {
   "kind": "E024 proposed new complete credit-only execution envelope",
   "date": "2026-10-27",
-  "status": "PROPOSAL_NOT_AUTHORIZED",
-  "ceiling_USD": 15,
+  "status": "AUTHORIZED_PENDING_FRESH_NATIVE_GATES",
+  "ceiling_USD": 16,
   "cumulative_VM_hours": 36,
   "provider_STOP_hours": 36.25,
   "existing_VM": "e2-standard-8/32GiB; original30GiB standard +300GiB balanced disks",
@@ -23,9 +23,10 @@
     "export_2GiB": 0.24,
     "new_archive_storage_through_boundary": 0.02,
     "operations": 0.25,
-    "contingency": 2.5
+    "contingency": 2.5,
+    "new_primary_BAM_storage_operations_reserve": 0.8
   },
-  "complete_maximum_with_reserves_USD": 14.50125,
+  "complete_maximum_with_reserves_USD": 15.30125,
   "storage_scope": "Existing PD attribution overlaps approved storage, not double invoiced; keep total original retained-storage forecast within approved8USD/November4 boundary. New archive<=2GiB must fit the fresh storage forecast.",
   "runtime_estimate": "Old 8\u201324 h mapping at 4 mapper workers is historical. The new stream uses 4 mapper workers + validated feeder + summary + accounted I/O inside 8 allocated CPUs. Complete 10\u201330 h expected remains unmeasured; 36 h is a cap, not a guarantee; full sample-6 pilot must pass.",
   "budget_clock": "Cumulative from first VM start, includes sync/source/runtime gates, download/index/validation/map/summary/rebind/group/export/hash/collection/upload/readback and any recorded operational recovery; never reset on another attempt",
@@ -106,7 +107,8 @@
     "VM_started": false,
     "resources_changed": false,
     "bulk_reads_acquired": false,
-    "community_science": false
+    "community_science": false,
+    "owner_authorized": true
   },
   "retention_end": "2026-11-04T00:00:00+01:00",
   "local_review": {
@@ -128,5 +130,6 @@
     "index_workers": 6,
     "index_coordinator_IO_allowance": 2,
     "enforcement": "Serial DAG: --cores 8 without --jobs; data rules declare 8, grouping 4; Linux affinity bounds each native stage. Sample actual threads/CPU at native pilot, no proportional speedup claim."
-  }
+  },
+  "alignment_retention": "Unsorted full-primary BAM, write-once existing GCS, <=130GiB total/13GiB sample, streaming SHA256 and full readback/decode. No local spool/sort/new quota. E024 pays added storage through existing November4 boundary; sort/index later."
 }

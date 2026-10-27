@@ -60,12 +60,12 @@ class Operations(unittest.TestCase):
             release=dict(config=binding(root/'config.json'),credit_gate_passed=True,pending_usage_accounted=True,
                 native_gates_passed=True,watchdog_verified=True,provider_STOP_verified=True,existing_VM_only=True,
                 full_axes_verified=True,headroom_measured=True,retention_passed=True,real_money_authorized=False,
-                estimated_incremental_gross_USD=14.75,ceiling_USD=15,provider_STOP_seconds=STOP_SECONDS,
+                estimated_incremental_gross_USD=14.75,ceiling_USD=16,provider_STOP_seconds=STOP_SECONDS,
                 storage_retention_extended=False,credit_valid_until_epoch=1799740800,
                 storage_valid_until_epoch=1793746800,covered_costs=['compute','disk','storage','network','operations'],
                 gate_files={str(root/'gate.json'):binding(root/'gate.json')},plan=binding(root/'plan.json'),vm_start_epoch=1000)
             admission(cfg,release,1100)
-            for field,value in [('estimated_incremental_gross_USD',15.01),('estimated_incremental_gross_USD',float('nan')),
+            for field,value in [('estimated_incremental_gross_USD',16.01),('estimated_incremental_gross_USD',float('nan')),
                                 ('real_money_authorized',True),('provider_STOP_seconds',36*3600),
                                 ('covered_costs',['compute']),('credit_gate_passed',False),
                                 ('vm_start_epoch',1001),

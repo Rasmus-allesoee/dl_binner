@@ -6,8 +6,8 @@
       "sha256": "b6572ebc05c733854463300dd6c226f544f392ac13ff610bff9e60ba45b6e161"
     },
     "experiments/E024-oral-measured-coverage/design.md": {
-      "bytes": 20787,
-      "sha256": "04f7d31c48c0ac0c5bf601eab2fd899b2e0f4bc38ed8fb00035e3be874aa63e5"
+      "bytes": 21076,
+      "sha256": "e19fd3930b88d864cd4f7cef5800dba64dbf03e2636aa1f23425c12de795f3f4"
     },
     "experiments/E024-oral-measured-coverage/illustrative-subset-cost.json": {
       "bytes": 3869,
@@ -18,24 +18,24 @@
       "sha256": "2dae1be4c3db83554847ca7708d7f400c05a7257bea204888465255bff0dbd73"
     },
     "experiments/E024-oral-measured-coverage/protocol.json": {
-      "bytes": 6112,
-      "sha256": "3b033a7df12dcd75ef2560fa356ad13623daa47078d669631268065b3062ebcb"
+      "bytes": 6297,
+      "sha256": "72ceecc10839a2860a817975edd8b9bb1a74704ae84b71513a84b290975c8de4"
     },
     "experiments/E024-oral-measured-coverage/read-manifest.json": {
       "bytes": 28761,
       "sha256": "0412d21d813b0d1c6cd5f653384cc8cf49dfac9ab62b7d2ea93129ef3e5acc9a"
     },
     "experiments/E024-oral-measured-coverage/resource-plan.json": {
-      "bytes": 6494,
-      "sha256": "6a2989f30bc4670bc6d76127dbb9733854ca087388a61556c646066dce1f807a"
+      "bytes": 6855,
+      "sha256": "d85962c24646e7f6fe5cf2038776bcc5cf8eccb6a9a3026f1ed5a36988af73de"
     },
     "experiments/E024-oral-measured-coverage/reuse-lock.json": {
       "bytes": 3040,
       "sha256": "3703c4e2bbd15e3fa51f455912e3f3dfb4641d01f8331a685d91dde33365bc0d"
     },
     "experiments/E024-oral-measured-coverage/runtime-plan.json": {
-      "bytes": 2114,
-      "sha256": "6b1a1be77556dba512e7e07144fc463b36a62384b7aa5c0cf7069a75898252bb"
+      "bytes": 2368,
+      "sha256": "cbe2d211ca98998aa304ecd872c960ef4f455aed62b4ed0e8a40e77aed88495f"
     },
     "experiments/E024-oral-measured-coverage/source-profile-limits.json": {
       "bytes": 5899,
@@ -46,16 +46,16 @@
       "sha256": "e2c859f5ba430ef15dd7db82e23f5b95955e9bf9bc66b7ac1d19ee5356273197"
     },
     "scripts/e024_collect.py": {
-      "bytes": 4658,
-      "sha256": "f1065cbc79554ccd751b77f2c2d23afad4bd9587a8b0a26aded4ac7b8181c324"
+      "bytes": 4959,
+      "sha256": "88e3c91fb805d66d9be9c299b4c0cdba9b7703e704cdb3fd84e1642e4d2d0e09"
     },
     "scripts/e024_control.py": {
-      "bytes": 18568,
-      "sha256": "93b123f86858fef879688dd311a4824a116811363ed8bab5716b3a896f80ad90"
+      "bytes": 19885,
+      "sha256": "fa91e76ad1531dff20b9b261c7b55484c8297c3cded0bcee6fca1de3f3feba89"
     },
     "scripts/e024_coverage.py": {
-      "bytes": 19748,
-      "sha256": "15a966616939457dd2b74d69cd2e9bba99bed90710f5e1521c048bb83040ea05"
+      "bytes": 20270,
+      "sha256": "77eaa6edd60b935c1ec8c7bcacd64dbc94a4082f878e46f2473ab6c631f899f2"
     },
     "scripts/e024_gates.py": {
       "bytes": 5228,
@@ -71,7 +71,7 @@
     },
     "scripts/e024_phase.py": {
       "bytes": 16907,
-      "sha256": "e4f7542ae75b4a8ca013cddc782166936cef8c3f4391f4435b9ef1b251227379"
+      "sha256": "4585a9ed93d3e1f5ff2e041869e9fb087742c33d4eaebe3e5afaee7f7f1b34e1"
     },
     "scripts/e024_review.py": {
       "bytes": 11203,
@@ -82,20 +82,32 @@
       "sha256": "31590bc7630937c2a86ffc3e7d96d25d20382c355efecd0d0b997f70f1cedc22"
     },
     "scripts/e024_tiny.py": {
-      "bytes": 6546,
-      "sha256": "0c32cfbdd128d236cef8c34de6c0189986138151c65d961729837fc29d0c2de2"
+      "bytes": 6708,
+      "sha256": "8ed4d22d86fc2d44e5a4cc231201c001a79caaa04f1309dc075e6816788151e9"
     },
     "scripts/e024_workload.py": {
       "bytes": 6287,
       "sha256": "9cb5fffa3a9204b080a68fa218f2a92168d3990bc2ace75b9bba99ef1f65f44e"
     },
     "tests/test_e024_coverage.py": {
-      "bytes": 17202,
-      "sha256": "431f375fa3ad1cf7343379dff2df65d9f66cbd5311b594c37057440bc3ade47f"
+      "bytes": 20543,
+      "sha256": "25756c2993c5f453af8971bbe38276aff35604f6f06c58072745cce3d50ec287"
     },
     "tests/test_e024_operations.py": {
       "bytes": 7818,
-      "sha256": "2dc2bdbc260d64039074524f753ad5bb231a982bc0b22a018627bb5fb04868d0"
+      "sha256": "ee05319f1bff3d60cc68e8770d37a6e7371cee3d76ff01b3fbd2bd75502dfe2e"
+    },
+    "scripts/e024_alignment.py": {
+      "bytes": 5693,
+      "sha256": "7dd82c2a987e3d06127a32d7265d0fc7e1e24dd581e3cff02430fba705c9c80d"
+    },
+    "scripts/e024_arm.py": {
+      "bytes": 7454,
+      "sha256": "9ba44387a0ffb85c85da67e49b44522175aa303aa9ce4e3b0a6df9650bc79a2c"
+    },
+    "experiments/E024-oral-measured-coverage/execution-amendment.md": {
+      "bytes": 9877,
+      "sha256": "460e7097f23337734231ce7522c0e1791dc92ed42fb2a9fa8a65adeafdfdc3a0"
     }
   },
   "inherited_source_lock": {
@@ -104,5 +116,6 @@
     "sha256": "fa7e55203409d32c1a3d9ba43ec8508f65ae741208a1506992c74c6d28a7c8f7"
   },
   "new_community_outcomes": false,
-  "pre_execution_operational_revision": "Separate long-clock disk samples from capped atomic controls; test 70,000 observations; no community outcome or scientific parameter change."
+  "pre_execution_operational_revision": "Separate long-clock disk samples from capped atomic controls; test 70,000 observations; no community outcome or scientific parameter change.",
+  "pre_execution_retention_amendment": "Owner October27 authorized retention/storage changes and slight ceiling increase. Retain complete unfiltered emitted primary BAM in existing private GCS, streamed without spool; native full byte/readback/decode mandatory. Scientific means/retrieval/criteria fixed; no new outcomes."
 }

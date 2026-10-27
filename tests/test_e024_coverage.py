@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 import random
 import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -169,6 +170,45 @@ class Coverage(unittest.TestCase):
             self.assertTrue((root/'mapped/depth.tsv').read_text().endswith('tiny\t0\t4\t0\nunknown-DNA\t0\t8\t0\n'))
             self.assertEqual(b['mapper_exit'],0)
 
+    def test_actual_primary_BAM_roundtrip_preserves_frozen_means_and_can_sort(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);u,dna=fixture(root);raw,_,_=reads(root,dna)
+            native=map_summary(MAPPER,u['reference'],raw,root/'base',use_index=False,sample=6)
+            bam=root/'retained.bam'
+            retained=map_summary(MAPPER,u['reference'],raw,root/'backed',use_index=False,sample=6,
+                bam_retention=dict(samtools=SAMTOOLS,destination=bam,cap=1024**2))
+            self.assertEqual((root/'base/depth.tsv').read_bytes(),(root/'backed/depth.tsv').read_bytes())
+            self.assertEqual(native['counters'],retained['counters'])
+            self.assertTrue(retained['retained_alignment']['full_readback_verified'])
+            sam=subprocess.check_output([str(SAMTOOLS),'view','-h',str(bam)],text=True)
+            totals,counts,_=sum_sam(sam.splitlines(True),*axis(u['reference']),paired=True)
+            self.assertEqual(counts,retained['counters'])
+            ordered=root/'sorted.bam'
+            subprocess.run([str(SAMTOOLS),'sort','-@','0','-m','1M','-o',str(ordered),str(bam)],check=True,capture_output=True)
+            subprocess.run([str(SAMTOOLS),'index',str(ordered)],check=True,capture_output=True)
+            self.assertTrue(ordered.with_suffix('.bam.bai').is_file())
+            with self.assertRaises(Exception):
+                map_summary(MAPPER,u['reference'],raw,root/'capped',use_index=False,
+                    bam_retention=dict(samtools=SAMTOOLS,destination=root/'cap.bam',cap=1))
+            self.assertFalse((root/'capped/done.json').exists())
+
+    def test_actual_BAM_external_transport_write_once_and_corrupt_readback_refused(self):
+        from e024_alignment import BamRetention
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);u,dna=fixture(root);raw,_,_=reads(root,dna)
+            remote=root/'object.bam';cli=root/'cloud-transport'
+            script='#!'+sys.executable+'\nimport sys\nfrom pathlib import Path\np=Path('+repr(str(remote))+')\na=sys.argv[1:]\nif a[:2]==["storage","cp"]:\n assert a[2]=="--if-generation-match=0" and a[3]=="-"\n with p.open("xb") as f:\n  while b:=sys.stdin.buffer.read(65536):f.write(b)\nelif a[:2]==["storage","cat"]:sys.stdout.buffer.write(p.read_bytes())\nelse:raise SystemExit(8)\n'
+            cli.write_text(script);cli.chmod(0o700)
+            options=dict(samtools=SAMTOOLS,destination='gs://dl-binner-archive-167650584170/e024/tiny-only/6.bam',cap=1024**2,gcloud=str(cli))
+            value=map_summary(MAPPER,u['reference'],raw,root/'remote',use_index=False,sample=6,bam_retention=options)
+            self.assertEqual(value['retained_alignment']['sha256'],binding(remote)['sha256'])
+            with self.assertRaises(Exception):
+                map_summary(MAPPER,u['reference'],raw,root/'overwrite',use_index=False,sample=6,bam_retention=options)
+            remote.unlink();cli.write_text(script.replace('p.read_bytes())','p.read_bytes()[:-5])'))
+            with self.assertRaisesRegex(ValueError,'readback'):
+                map_summary(MAPPER,u['reference'],raw,root/'corrupt',use_index=False,sample=6,bam_retention=options)
+            self.assertFalse((root/'corrupt/done.json').exists())
+
     def test_stream_failure_never_seals_success(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -199,7 +239,7 @@ class Coverage(unittest.TestCase):
             write(root/'acquired.json',dict(**binding(raw),manifest={'synthetic':True}))
             mapped = root/'mapped';mapped.mkdir()
             (mapped/'depth.tsv').write_text('verified fixture')
-            write(mapped/'done.json',dict(status='PASS',mapper_exit=0,reads=binding(raw),depth=binding(mapped/'depth.tsv')))
+            write(mapped/'done.json',dict(status='PASS',mapper_exit=0,reads=binding(raw),depth=binding(mapped/'depth.tsv'),retained_alignment=dict(full_readback_verified=True)))
             with self.assertRaises(ValueError):cleanup_read(root/'other.gz',root/'acquired.json',mapped/'done.json')
             cleanup_read(raw,root/'acquired.json',mapped/'done.json')
             self.assertFalse(raw.exists())

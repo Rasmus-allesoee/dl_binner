@@ -62,6 +62,7 @@ def tiny(root, workflow_python):
                     policy=str(ROOT/'experiments/E023-adaptive-density-bins/config.json'),
                     worker=str(ROOT/'scripts/e024_control.py'),
                     snakefile=str(ROOT/'experiments/E024-oral-measured-coverage/Snakefile'),engineering=True)
+        plan['alignment_archive']=dict(mode='local-fixture-bam',prefix=str(root/'retained-bams'),maximum_total_bytes=130*1024**3,maximum_sample_bytes=13*1024**3)
         write(root/'plan.json',plan)
         argv=[sys.executable,'-I','-B',str(ROOT/'scripts/e024_control.py'),'--plan',str(root/'plan.json'),'--engineering','--workflow']
         env=dict(os.environ,NUMBA_NUM_THREADS='4',NUMBA_CACHE_DIR=str(root/'jit'))
