@@ -1,0 +1,18 @@
+{
+  "kind": "Table presentation correction only; no scientific values changed",
+  "cause": "Empty trailing MetaBAT2 field for unrun oral reference triggered staged whitespace check; prior compound command continued after check failure",
+  "original_table": {
+    "bytes": 45462,
+    "sha256": "cdd5974973a0707d2335a7d3becd8bdba28843e01327db859c21af23758c6753"
+  },
+  "current_table": {
+    "bytes": 51055,
+    "sha256": "e39e45692e09d35126034102af0a77470433df0d1c7dbf5399d17da282b9caf8"
+  },
+  "rows": 955,
+  "only_changed_field": "retained_MetaBAT_bp: empty -> not_run for 799 oral rows",
+  "all_other_fields_equal": true,
+  "original_preserved_in_commit": "145f5af",
+  "original_preserved_in_compact_seal": "3c9395f7c5bcff3ab7501f5ada98058fb0e15b1f3fabc55b22311a3623ee1589",
+  "original_local_path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-inspection/20261027T000221Z/comparison-targets-before-format.tsv"
+}

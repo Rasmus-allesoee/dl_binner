@@ -42,8 +42,8 @@
     "sha256": "cb387ada3b948e9d2c2e2c17e0892a20988d33d64eae3f778a72a8970d8744eb"
   },
   "all_955_targets": {
-    "bytes": 45462,
-    "sha256": "cdd5974973a0707d2335a7d3becd8bdba28843e01327db859c21af23758c6753"
+    "bytes": 51055,
+    "sha256": "e39e45692e09d35126034102af0a77470433df0d1c7dbf5399d17da282b9caf8"
   },
   "cost": {
     "bytes": 2947,
@@ -108,6 +108,10 @@
     "inspection_helpers/gap-audit.py": {
       "bytes": 4055,
       "sha256": "e62a785da6f69d89696addec70b44da4b9bdc7a1e294fbf7c0b20eefe687e6e3"
+    },
+    "inspection_helpers/post-format-qa.py": {
+      "bytes": 2842,
+      "sha256": "969f3dfe47e24745cbd67ba5f124b272d080a06d8d5beb85d8de29a829f6d34c"
     }
   },
   "failure_journal": {
@@ -279,7 +283,8 @@
     "extra_bytes": 6442450944,
     "elapsed_original_seconds": 2167.472076892853,
     "owned_bytes": 1975909781,
-    "numerical_runtime": "Existing E021 hybrid-owned-v2 Python 3.10.15, borrowed read-only; no local model inference or environment install"
+    "numerical_runtime": "Existing E021 hybrid-owned-v2 Python 3.10.15, borrowed read-only; no local model inference or environment install",
+    "elapsed_original_seconds_at_closeout": 2367.2922599315643
   },
   "compact_local_evidence": {
     "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-inspection/20261027T000221Z/compact-inspection-v1/e023-inspection-evidence.tar.gz",
@@ -291,6 +296,19 @@
     "logical_bytes": 3410701,
     "every_member_verified": true,
     "private_upload": false,
-    "scope": "Compact analysis/source/receipt backup; accepted native archive stays in private GCS; bulk DNA/banks/runtimes omitted"
+    "scope": "Compact analysis/source/receipt backup; accepted native archive stays in private GCS; bulk DNA/banks/runtimes omitted",
+    "table_note": "Seal includes pre-format target table; every numeric/scientific field is identical. Current table replaces only unrun oral MetaBAT empty cells with not_run; correction receipt and Git history preserve both."
+  },
+  "all_955_targets_before_format": {
+    "bytes": 45462,
+    "sha256": "cdd5974973a0707d2335a7d3becd8bdba28843e01327db859c21af23758c6753"
+  },
+  "table_format_correction": {
+    "bytes": 935,
+    "sha256": "b1badab450a45944c64cea1d5d6de652cc5f2ee3a17e81628dfbe6aa587b0494"
+  },
+  "post_format_contracts": {
+    "bytes": 901,
+    "sha256": "4f72aa1219062c2e53a9d2f3cce3288903062f83a59d5cc0b6568f51cdd358c8"
   }
 }
