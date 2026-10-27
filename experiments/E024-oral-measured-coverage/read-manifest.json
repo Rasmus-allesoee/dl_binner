@@ -1,0 +1,521 @@
+{
+  "kind": "E024 publisher segment-MD5 acquisition manifest",
+  "observed_epoch": 1793100971.232478,
+  "ordered_samples": [
+    6,
+    7,
+    8,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "total_read_bytes": 51731811351,
+  "reads": [
+    {
+      "sample": 6,
+      "column": "oral_sample_6",
+      "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral/short_read/2017.12.04_18.45.54_sample_6/reads/anonymous_reads.fq.gz",
+      "bytes": 5174041407,
+      "headers": {
+        "content-length": "5174041407",
+        "accept-ranges": "bytes",
+        "last-modified": "Fri, 09 Mar 2018 19:10:09 GMT",
+        "x-timestamp": "1520622609.23268",
+        "etag": "\"2eb7790db4f2fb9d4e4063da2a73f1f6\"",
+        "x-object-meta-mtime": "1520615125.672000",
+        "x-object-manifest": "CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_6/reads/anonymous_reads.fq.gz/1520615125.672000/5174041407/1073741824/",
+        "x-trans-id": "tx000007113d936d7e5ab21-006ae08ca7-2844488849-default",
+        "x-openstack-request-id": "tx000007113d936d7e5ab21-006ae08ca7-2844488849-default",
+        "content-type": "application/gzip",
+        "server": "Ceph Object Gateway (squid)",
+        "date": "Tue, 27 Oct 2026 11:36:07 GMT",
+        "connection": "close"
+      },
+      "segments": [
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_6/reads/anonymous_reads.fq.gz/1520615125.672000/5174041407/1073741824/00000000",
+          "bytes": 1073741824,
+          "md5": "2a207807c26fd63313b460551472d1a5"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_6/reads/anonymous_reads.fq.gz/1520615125.672000/5174041407/1073741824/00000001",
+          "bytes": 1073741824,
+          "md5": "cdb82b16b1e14f5d544a331f0bcd49b9"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_6/reads/anonymous_reads.fq.gz/1520615125.672000/5174041407/1073741824/00000002",
+          "bytes": 1073741824,
+          "md5": "04decef687eb099b34070bae5f07bfb2"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_6/reads/anonymous_reads.fq.gz/1520615125.672000/5174041407/1073741824/00000003",
+          "bytes": 1073741824,
+          "md5": "a0719c2deedb1f7cbd49d75d3329daff"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_6/reads/anonymous_reads.fq.gz/1520615125.672000/5174041407/1073741824/00000004",
+          "bytes": 879074111,
+          "md5": "7347f47df712a9c43a3d909e1ff8b496"
+        }
+      ],
+      "etag_semantics": "DLO MD5 of concatenated segment MD5 hex strings; NOT whole FASTQ MD5",
+      "DLO_aggregate_md5": "2eb7790db4f2fb9d4e4063da2a73f1f6"
+    },
+    {
+      "sample": 7,
+      "column": "oral_sample_7",
+      "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral/short_read/2017.12.04_18.45.54_sample_7/reads/anonymous_reads.fq.gz",
+      "bytes": 5174753335,
+      "headers": {
+        "content-length": "5174753335",
+        "accept-ranges": "bytes",
+        "last-modified": "Fri, 09 Mar 2018 19:12:54 GMT",
+        "x-timestamp": "1520622774.88921",
+        "etag": "\"f1a260f967515270ce851f99c2954df3\"",
+        "x-object-meta-mtime": "1520614692.104000",
+        "x-object-manifest": "CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_7/reads/anonymous_reads.fq.gz/1520614692.104000/5174753335/1073741824/",
+        "x-trans-id": "tx00000ff6064c82573938b-006ae08ca7-2844488849-default",
+        "x-openstack-request-id": "tx00000ff6064c82573938b-006ae08ca7-2844488849-default",
+        "content-type": "application/gzip",
+        "server": "Ceph Object Gateway (squid)",
+        "date": "Tue, 27 Oct 2026 11:36:07 GMT",
+        "connection": "close"
+      },
+      "segments": [
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_7/reads/anonymous_reads.fq.gz/1520614692.104000/5174753335/1073741824/00000000",
+          "bytes": 1073741824,
+          "md5": "69fe1e9a586adfa27a0b0601f3ca8b5c"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_7/reads/anonymous_reads.fq.gz/1520614692.104000/5174753335/1073741824/00000001",
+          "bytes": 1073741824,
+          "md5": "49e93c6181a30d5395943a795270ddc1"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_7/reads/anonymous_reads.fq.gz/1520614692.104000/5174753335/1073741824/00000002",
+          "bytes": 1073741824,
+          "md5": "6476e92a64998281a4229e311a200a68"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_7/reads/anonymous_reads.fq.gz/1520614692.104000/5174753335/1073741824/00000003",
+          "bytes": 1073741824,
+          "md5": "3e8f1dc2b926e40f04d9a7e670995d99"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_7/reads/anonymous_reads.fq.gz/1520614692.104000/5174753335/1073741824/00000004",
+          "bytes": 879786039,
+          "md5": "215f74ec6268dcf26a01a785da760713"
+        }
+      ],
+      "etag_semantics": "DLO MD5 of concatenated segment MD5 hex strings; NOT whole FASTQ MD5",
+      "DLO_aggregate_md5": "f1a260f967515270ce851f99c2954df3"
+    },
+    {
+      "sample": 8,
+      "column": "oral_sample_8",
+      "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral/short_read/2017.12.04_18.45.54_sample_8/reads/anonymous_reads.fq.gz",
+      "bytes": 5175133013,
+      "headers": {
+        "content-length": "5175133013",
+        "accept-ranges": "bytes",
+        "last-modified": "Fri, 09 Mar 2018 19:06:02 GMT",
+        "x-timestamp": "1520622362.70679",
+        "etag": "\"3a835b10dac50dfb65c606c2aa879229\"",
+        "x-object-meta-mtime": "1520613319.668000",
+        "x-object-manifest": "CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_8/reads/anonymous_reads.fq.gz/1520613319.668000/5175133013/1073741824/",
+        "x-trans-id": "tx000008ca17b1f48b0cfc0-006ae08ca8-2844488849-default",
+        "x-openstack-request-id": "tx000008ca17b1f48b0cfc0-006ae08ca8-2844488849-default",
+        "content-type": "application/gzip",
+        "server": "Ceph Object Gateway (squid)",
+        "date": "Tue, 27 Oct 2026 11:36:08 GMT",
+        "connection": "close"
+      },
+      "segments": [
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_8/reads/anonymous_reads.fq.gz/1520613319.668000/5175133013/1073741824/00000000",
+          "bytes": 1073741824,
+          "md5": "863068d97f5e08571ac7bb120cbad626"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_8/reads/anonymous_reads.fq.gz/1520613319.668000/5175133013/1073741824/00000001",
+          "bytes": 1073741824,
+          "md5": "7cd669066e6597338a4c588779d0a0f4"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_8/reads/anonymous_reads.fq.gz/1520613319.668000/5175133013/1073741824/00000002",
+          "bytes": 1073741824,
+          "md5": "053e8b0ca9231925887bf1b2b495ca30"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_8/reads/anonymous_reads.fq.gz/1520613319.668000/5175133013/1073741824/00000003",
+          "bytes": 1073741824,
+          "md5": "20898b84f56ecf6b18c1fbe70db48b66"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_8/reads/anonymous_reads.fq.gz/1520613319.668000/5175133013/1073741824/00000004",
+          "bytes": 880165717,
+          "md5": "1b197cf5686493d9fd0a1c033a4a24b5"
+        }
+      ],
+      "etag_semantics": "DLO MD5 of concatenated segment MD5 hex strings; NOT whole FASTQ MD5",
+      "DLO_aggregate_md5": "3a835b10dac50dfb65c606c2aa879229"
+    },
+    {
+      "sample": 13,
+      "column": "oral_sample_13",
+      "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral/short_read/2017.12.04_18.45.54_sample_13/reads/anonymous_reads.fq.gz",
+      "bytes": 5170918830,
+      "headers": {
+        "content-length": "5170918830",
+        "accept-ranges": "bytes",
+        "last-modified": "Fri, 09 Mar 2018 19:11:31 GMT",
+        "x-timestamp": "1520622691.94118",
+        "etag": "\"1e3022400c45d39bfdbf792190d2a49c\"",
+        "x-object-meta-mtime": "1520615566.108000",
+        "x-object-manifest": "CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_13/reads/anonymous_reads.fq.gz/1520615566.108000/5170918830/1073741824/",
+        "x-trans-id": "tx000001aa060a243cf736f-006ae08ca8-2844488849-default",
+        "x-openstack-request-id": "tx000001aa060a243cf736f-006ae08ca8-2844488849-default",
+        "content-type": "application/gzip",
+        "server": "Ceph Object Gateway (squid)",
+        "date": "Tue, 27 Oct 2026 11:36:08 GMT",
+        "connection": "close"
+      },
+      "segments": [
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_13/reads/anonymous_reads.fq.gz/1520615566.108000/5170918830/1073741824/00000000",
+          "bytes": 1073741824,
+          "md5": "90ed0ed9a326c5a205ef31eafab74cf7"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_13/reads/anonymous_reads.fq.gz/1520615566.108000/5170918830/1073741824/00000001",
+          "bytes": 1073741824,
+          "md5": "dc5dccc309af71a21f097ed1f8f4ce7f"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_13/reads/anonymous_reads.fq.gz/1520615566.108000/5170918830/1073741824/00000002",
+          "bytes": 1073741824,
+          "md5": "96c61f3e6040bc943acb076d4d99bf71"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_13/reads/anonymous_reads.fq.gz/1520615566.108000/5170918830/1073741824/00000003",
+          "bytes": 1073741824,
+          "md5": "60721143100cda1271da7b027a704eab"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_13/reads/anonymous_reads.fq.gz/1520615566.108000/5170918830/1073741824/00000004",
+          "bytes": 875951534,
+          "md5": "438504f0d91bdee02029bcc1db12b5fa"
+        }
+      ],
+      "etag_semantics": "DLO MD5 of concatenated segment MD5 hex strings; NOT whole FASTQ MD5",
+      "DLO_aggregate_md5": "1e3022400c45d39bfdbf792190d2a49c"
+    },
+    {
+      "sample": 14,
+      "column": "oral_sample_14",
+      "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral/short_read/2017.12.04_18.45.54_sample_14/reads/anonymous_reads.fq.gz",
+      "bytes": 5176239706,
+      "headers": {
+        "content-length": "5176239706",
+        "accept-ranges": "bytes",
+        "last-modified": "Fri, 09 Mar 2018 19:08:49 GMT",
+        "x-timestamp": "1520622529.89576",
+        "etag": "\"319484a96b25642981c5cdd5dc6512f4\"",
+        "x-object-meta-mtime": "1520614084.352000",
+        "x-object-manifest": "CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_14/reads/anonymous_reads.fq.gz/1520614084.352000/5176239706/1073741824/",
+        "x-trans-id": "tx000005826a7d2430e9b5d-006ae08ca8-2844488849-default",
+        "x-openstack-request-id": "tx000005826a7d2430e9b5d-006ae08ca8-2844488849-default",
+        "content-type": "application/gzip",
+        "server": "Ceph Object Gateway (squid)",
+        "date": "Tue, 27 Oct 2026 11:36:08 GMT",
+        "connection": "close"
+      },
+      "segments": [
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_14/reads/anonymous_reads.fq.gz/1520614084.352000/5176239706/1073741824/00000000",
+          "bytes": 1073741824,
+          "md5": "9757261dd1bb03f18a2124939f84a468"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_14/reads/anonymous_reads.fq.gz/1520614084.352000/5176239706/1073741824/00000001",
+          "bytes": 1073741824,
+          "md5": "db4365506b6fd4a5436b2cdade470b4a"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_14/reads/anonymous_reads.fq.gz/1520614084.352000/5176239706/1073741824/00000002",
+          "bytes": 1073741824,
+          "md5": "54103698dea9fe23e3b35a310cd90740"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_14/reads/anonymous_reads.fq.gz/1520614084.352000/5176239706/1073741824/00000003",
+          "bytes": 1073741824,
+          "md5": "13050fb2ac2d2eb9584b64140fbbc961"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_14/reads/anonymous_reads.fq.gz/1520614084.352000/5176239706/1073741824/00000004",
+          "bytes": 881272410,
+          "md5": "6b1dbfb0f433a6d78e8824e02632b575"
+        }
+      ],
+      "etag_semantics": "DLO MD5 of concatenated segment MD5 hex strings; NOT whole FASTQ MD5",
+      "DLO_aggregate_md5": "319484a96b25642981c5cdd5dc6512f4"
+    },
+    {
+      "sample": 15,
+      "column": "oral_sample_15",
+      "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral/short_read/2017.12.04_18.45.54_sample_15/reads/anonymous_reads.fq.gz",
+      "bytes": 5174155694,
+      "headers": {
+        "content-length": "5174155694",
+        "accept-ranges": "bytes",
+        "last-modified": "Fri, 09 Mar 2018 19:07:26 GMT",
+        "x-timestamp": "1520622446.34052",
+        "etag": "\"cec4579016d87c2bb36e2170610f48de\"",
+        "x-object-meta-mtime": "1520613246.640000",
+        "x-object-manifest": "CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_15/reads/anonymous_reads.fq.gz/1520613246.640000/5174155694/1073741824/",
+        "x-trans-id": "tx000000209ef492c51c9d7-006ae08ca8-2844488849-default",
+        "x-openstack-request-id": "tx000000209ef492c51c9d7-006ae08ca8-2844488849-default",
+        "content-type": "application/gzip",
+        "server": "Ceph Object Gateway (squid)",
+        "date": "Tue, 27 Oct 2026 11:36:08 GMT",
+        "connection": "close"
+      },
+      "segments": [
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_15/reads/anonymous_reads.fq.gz/1520613246.640000/5174155694/1073741824/00000000",
+          "bytes": 1073741824,
+          "md5": "e7ec2f0ca5280313224392a8d9aee7ab"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_15/reads/anonymous_reads.fq.gz/1520613246.640000/5174155694/1073741824/00000001",
+          "bytes": 1073741824,
+          "md5": "bd8984c85d6e1a740eb73049639ef138"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_15/reads/anonymous_reads.fq.gz/1520613246.640000/5174155694/1073741824/00000002",
+          "bytes": 1073741824,
+          "md5": "2ff62ad4ec783fa02d0744e99a10cd0d"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_15/reads/anonymous_reads.fq.gz/1520613246.640000/5174155694/1073741824/00000003",
+          "bytes": 1073741824,
+          "md5": "4e3435e4174708af621f42ec1b4c5032"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_15/reads/anonymous_reads.fq.gz/1520613246.640000/5174155694/1073741824/00000004",
+          "bytes": 879188398,
+          "md5": "7c29883463f479124e299ec1447b63ad"
+        }
+      ],
+      "etag_semantics": "DLO MD5 of concatenated segment MD5 hex strings; NOT whole FASTQ MD5",
+      "DLO_aggregate_md5": "cec4579016d87c2bb36e2170610f48de"
+    },
+    {
+      "sample": 16,
+      "column": "oral_sample_16",
+      "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral/short_read/2017.12.04_18.45.54_sample_16/reads/anonymous_reads.fq.gz",
+      "bytes": 5167910189,
+      "headers": {
+        "content-length": "5167910189",
+        "accept-ranges": "bytes",
+        "last-modified": "Fri, 09 Mar 2018 19:04:39 GMT",
+        "x-timestamp": "1520622279.17974",
+        "etag": "\"72e7edb8e600ae53096d811ef326115b\"",
+        "x-object-meta-mtime": "1520614752.832000",
+        "x-object-manifest": "CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_16/reads/anonymous_reads.fq.gz/1520614752.832000/5167910189/1073741824/",
+        "x-trans-id": "tx00000926bb4baf0a050c9-006ae08ca8-2844488849-default",
+        "x-openstack-request-id": "tx00000926bb4baf0a050c9-006ae08ca8-2844488849-default",
+        "content-type": "application/gzip",
+        "server": "Ceph Object Gateway (squid)",
+        "date": "Tue, 27 Oct 2026 11:36:08 GMT",
+        "connection": "close"
+      },
+      "segments": [
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_16/reads/anonymous_reads.fq.gz/1520614752.832000/5167910189/1073741824/00000000",
+          "bytes": 1073741824,
+          "md5": "355c09f4d1e2ee2ce6ac664098e848cc"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_16/reads/anonymous_reads.fq.gz/1520614752.832000/5167910189/1073741824/00000001",
+          "bytes": 1073741824,
+          "md5": "5dbfdeb8e4e5e560468c2bd9d8e73027"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_16/reads/anonymous_reads.fq.gz/1520614752.832000/5167910189/1073741824/00000002",
+          "bytes": 1073741824,
+          "md5": "7504f55420c7f6e400aefdcc0364f638"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_16/reads/anonymous_reads.fq.gz/1520614752.832000/5167910189/1073741824/00000003",
+          "bytes": 1073741824,
+          "md5": "2fe2bbef4161b03b7c101799f875a5c9"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_16/reads/anonymous_reads.fq.gz/1520614752.832000/5167910189/1073741824/00000004",
+          "bytes": 872942893,
+          "md5": "1e949fe27d1d3c2ad2853b6db3cb997e"
+        }
+      ],
+      "etag_semantics": "DLO MD5 of concatenated segment MD5 hex strings; NOT whole FASTQ MD5",
+      "DLO_aggregate_md5": "72e7edb8e600ae53096d811ef326115b"
+    },
+    {
+      "sample": 17,
+      "column": "oral_sample_17",
+      "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral/short_read/2017.12.04_18.45.54_sample_17/reads/anonymous_reads.fq.gz",
+      "bytes": 5176384078,
+      "headers": {
+        "content-length": "5176384078",
+        "accept-ranges": "bytes",
+        "last-modified": "Fri, 09 Mar 2018 19:00:20 GMT",
+        "x-timestamp": "1520622020.60702",
+        "etag": "\"e973e484604809d8d06103b3541f0746\"",
+        "x-object-meta-mtime": "1520614075.552000",
+        "x-object-manifest": "CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_17/reads/anonymous_reads.fq.gz/1520614075.552000/5176384078/1073741824/",
+        "x-trans-id": "tx000009586aa91a2382779-006ae08ca9-2844488849-default",
+        "x-openstack-request-id": "tx000009586aa91a2382779-006ae08ca9-2844488849-default",
+        "content-type": "application/gzip",
+        "server": "Ceph Object Gateway (squid)",
+        "date": "Tue, 27 Oct 2026 11:36:09 GMT",
+        "connection": "close"
+      },
+      "segments": [
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_17/reads/anonymous_reads.fq.gz/1520614075.552000/5176384078/1073741824/00000000",
+          "bytes": 1073741824,
+          "md5": "b2515c218bcfbac058fdbc6f72f0710b"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_17/reads/anonymous_reads.fq.gz/1520614075.552000/5176384078/1073741824/00000001",
+          "bytes": 1073741824,
+          "md5": "6199b4cd00f8dc98c77cbfa74b6a60b7"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_17/reads/anonymous_reads.fq.gz/1520614075.552000/5176384078/1073741824/00000002",
+          "bytes": 1073741824,
+          "md5": "739ded7b8ec352fcb4fad403561055b2"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_17/reads/anonymous_reads.fq.gz/1520614075.552000/5176384078/1073741824/00000003",
+          "bytes": 1073741824,
+          "md5": "24a213b8430659ffbc77b0649ed08193"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_17/reads/anonymous_reads.fq.gz/1520614075.552000/5176384078/1073741824/00000004",
+          "bytes": 881416782,
+          "md5": "1f02eef239202a3be1721a9430026d28"
+        }
+      ],
+      "etag_semantics": "DLO MD5 of concatenated segment MD5 hex strings; NOT whole FASTQ MD5",
+      "DLO_aggregate_md5": "e973e484604809d8d06103b3541f0746"
+    },
+    {
+      "sample": 18,
+      "column": "oral_sample_18",
+      "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral/short_read/2017.12.04_18.45.54_sample_18/reads/anonymous_reads.fq.gz",
+      "bytes": 5170439127,
+      "headers": {
+        "content-length": "5170439127",
+        "accept-ranges": "bytes",
+        "last-modified": "Fri, 09 Mar 2018 19:03:10 GMT",
+        "x-timestamp": "1520622190.25269",
+        "etag": "\"fb0ffe60f0923d0e5b9b623683a7ec52\"",
+        "x-object-meta-mtime": "1520613116.436000",
+        "x-object-manifest": "CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_18/reads/anonymous_reads.fq.gz/1520613116.436000/5170439127/1073741824/",
+        "x-trans-id": "tx0000005dacb78275d8057-006ae08ca9-2844488849-default",
+        "x-openstack-request-id": "tx0000005dacb78275d8057-006ae08ca9-2844488849-default",
+        "content-type": "application/gzip",
+        "server": "Ceph Object Gateway (squid)",
+        "date": "Tue, 27 Oct 2026 11:36:09 GMT",
+        "connection": "close"
+      },
+      "segments": [
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_18/reads/anonymous_reads.fq.gz/1520613116.436000/5170439127/1073741824/00000000",
+          "bytes": 1073741824,
+          "md5": "d841a2a600391d71a33c1c663883f98f"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_18/reads/anonymous_reads.fq.gz/1520613116.436000/5170439127/1073741824/00000001",
+          "bytes": 1073741824,
+          "md5": "1e1aa1ad21bdac8443a116ead670694e"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_18/reads/anonymous_reads.fq.gz/1520613116.436000/5170439127/1073741824/00000002",
+          "bytes": 1073741824,
+          "md5": "2f2b0e0ad5accc5a435281c59e184baa"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_18/reads/anonymous_reads.fq.gz/1520613116.436000/5170439127/1073741824/00000003",
+          "bytes": 1073741824,
+          "md5": "466a0a05045b362415139e810c7af59b"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_18/reads/anonymous_reads.fq.gz/1520613116.436000/5170439127/1073741824/00000004",
+          "bytes": 875471831,
+          "md5": "2778fc0389abf9ec7499d9b2194b8450"
+        }
+      ],
+      "etag_semantics": "DLO MD5 of concatenated segment MD5 hex strings; NOT whole FASTQ MD5",
+      "DLO_aggregate_md5": "fb0ffe60f0923d0e5b9b623683a7ec52"
+    },
+    {
+      "sample": 19,
+      "column": "oral_sample_19",
+      "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral/short_read/2017.12.04_18.45.54_sample_19/reads/anonymous_reads.fq.gz",
+      "bytes": 5171835972,
+      "headers": {
+        "content-length": "5171835972",
+        "accept-ranges": "bytes",
+        "last-modified": "Fri, 09 Mar 2018 19:01:47 GMT",
+        "x-timestamp": "1520622107.17206",
+        "etag": "\"1c829ccf48505ca95958bacbf313f81a\"",
+        "x-object-meta-mtime": "1520615279.428000",
+        "x-object-manifest": "CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_19/reads/anonymous_reads.fq.gz/1520615279.428000/5171835972/1073741824/",
+        "x-trans-id": "tx000005eb74ce32d560c03-006ae08ca9-2844488849-default",
+        "x-openstack-request-id": "tx000005eb74ce32d560c03-006ae08ca9-2844488849-default",
+        "content-type": "application/gzip",
+        "server": "Ceph Object Gateway (squid)",
+        "date": "Tue, 27 Oct 2026 11:36:09 GMT",
+        "connection": "close"
+      },
+      "segments": [
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_19/reads/anonymous_reads.fq.gz/1520615279.428000/5171835972/1073741824/00000000",
+          "bytes": 1073741824,
+          "md5": "b369072248c0e539095e778906a47623"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_19/reads/anonymous_reads.fq.gz/1520615279.428000/5171835972/1073741824/00000001",
+          "bytes": 1073741824,
+          "md5": "53863eefc85abc53c71e013e4cdca262"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_19/reads/anonymous_reads.fq.gz/1520615279.428000/5171835972/1073741824/00000002",
+          "bytes": 1073741824,
+          "md5": "3496924381555c964a1bab019ad14e6a"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_19/reads/anonymous_reads.fq.gz/1520615279.428000/5171835972/1073741824/00000003",
+          "bytes": 1073741824,
+          "md5": "eff903354f19fa47a42bb04c375590d8"
+        },
+        {
+          "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_19/reads/anonymous_reads.fq.gz/1520615279.428000/5171835972/1073741824/00000004",
+          "bytes": 876868676,
+          "md5": "b15c06c5be2f9389f381c54586312f52"
+        }
+      ],
+      "etag_semantics": "DLO MD5 of concatenated segment MD5 hex strings; NOT whole FASTQ MD5",
+      "DLO_aggregate_md5": "1c829ccf48505ca95958bacbf313f81a"
+    }
+  ],
+  "checksum_policy": "Every publisher segment MD5 plus total bytes and newly calculated whole-object MD5/SHA256; DLO aggregate is separately checked",
+  "bulk_downloaded": false
+}

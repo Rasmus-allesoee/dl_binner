@@ -239,6 +239,17 @@ grouping ties, use verified source-blind IDs and retain the reverse source join
 outside feature/training paths. Keep zero-bp original records in explicit input
 accounting rather than inventing DNA or silently losing the records.
 
+Verify the checksum semantics of segmented public objects. A Swift dynamic-large-
+object ETag can hash the concatenated segment MD5 strings rather than the file
+bytes. Check the publisher's segment identities/MD5s and record a new whole-object
+SHA256; do not call an aggregate ETag a verified whole-file MD5.
+
+Full-reference contig coverage can be reused for a later learner subset while
+retaining the original competitive mapping/filter semantics. Remapping against a
+reduced reference can change placements and MAPQ; sliced full-reference summaries
+are not that treatment. A contig mean cannot reconstruct per-base/window coverage,
+breadth, variance or new alignment filters without suitable retained alignments.
+
 Use public community benchmarks alongside question-specific simulations. Keep unmodified benchmark results distinct from controlled derivatives, and treat data used for mechanism selection as development data. Reuse established evaluators where their contracts fit; add tested diagnostic summaries before considering a replacement framework. Audit the actual input and execution paths rather than inferring them from a paper title or README. For multi-sample features, check native emitted sample and contig axes against the frozen manifest; do not assume filesystem ordering or alias names survive native path resolution. One assembly can still use many read/BAM samples: per-base coverage storage scales with covered assembly bases times BAM count, while multiple assemblies multiply whole run directories. Audit persistent candidates, checkpoints and temporary coexistence before claiming that a smaller epoch count bounds peak disk use.
 
 ---

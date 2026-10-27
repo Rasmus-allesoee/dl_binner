@@ -1,0 +1,108 @@
+"""Serial acquired-sample6 pilot, remaining nine summaries and cached comparison.
+
+The first full sample is measured once and reused. Every later sample depends
+on the preceding sealed summary and temporary-read release. No alignments from
+different samples compete for RAM/disk. Eight node cores without --jobs, with
+four-thread grouping and explicitly budgeted mapping helpers, is mandatory.
+"""
+import json
+from pathlib import Path
+
+PLAN = str(Path(config['plan']).absolute())
+P = json.loads(Path(PLAN).read_text())
+SAMPLES = ['6','7','8','13','14','15','16','17','18','19']
+PYTHON, WORKER = P['python'], P['worker']
+ENGINEERING = '--engineering' if config.get('engineering') in [True,'true'] else ''
+
+rule all:
+    input: 'audited/done.json'
+
+rule verify:
+    output: 'verified/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/verify.log'
+    benchmark: 'benchmarks/verify.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage verify {ENGINEERING} > {log:q} 2>&1'
+
+rule acquire_first:
+    input: 'verified/done.json'
+    output: 'first-acquired/done.json'
+    threads: 8
+    resources: mem_mb=26000
+    log: 'logs/acquire-first.log'
+    benchmark: 'benchmarks/acquire-first.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage acquire-first {ENGINEERING} > {log:q} 2>&1'
+
+rule index:
+    input: 'first-acquired/done.json'
+    output: 'index/done.json'
+    threads: 8
+    resources: mem_mb=26000
+    log: 'logs/index.log'
+    benchmark: 'benchmarks/index.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage index {ENGINEERING} > {log:q} 2>&1'
+
+rule sample:
+    input: lambda w: ['index/done.json'] if w.sample == '6' else ['pilot/done.json','samples/'+SAMPLES[SAMPLES.index(w.sample)-1]+'/done.json']
+    output: 'samples/{sample}/done.json'
+    wildcard_constraints: sample='6|7|8|13|14|15|16|17|18|19'
+    threads: 8
+    resources: mem_mb=26000
+    log: 'logs/sample-{sample}.log'
+    benchmark: 'benchmarks/sample-{sample}.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage sample --sample {wildcards.sample:q} {ENGINEERING} > {log:q} 2>&1'
+
+rule pilot:
+    input: 'samples/6/done.json'
+    output: 'pilot/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/pilot.log'
+    benchmark: 'benchmarks/pilot.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage pilot {ENGINEERING} > {log:q} 2>&1'
+
+rule combine:
+    input: expand('samples/{sample}/done.json',sample=SAMPLES)
+    output: 'combined/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/combine.log'
+    benchmark: 'benchmarks/combine.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage combine {ENGINEERING} > {log:q} 2>&1'
+
+rule rebind:
+    input: 'combined/done.json'
+    output: 'rebound/rebind.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/rebind.log'
+    benchmark: 'benchmarks/rebind.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage rebind {ENGINEERING} > {log:q} 2>&1'
+
+rule group:
+    input: 'rebound/rebind.json'
+    output: 'group/completed.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/group.log'
+    benchmark: 'benchmarks/group.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage group {ENGINEERING} > {log:q} 2>&1'
+
+rule export:
+    input: 'group/completed.json'
+    output: 'export/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/export.log'
+    benchmark: 'benchmarks/export.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage export {ENGINEERING} > {log:q} 2>&1'
+
+rule audit:
+    input: 'export/done.json'
+    output: 'audited/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/audit.log'
+    benchmark: 'benchmarks/audit.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage audit {ENGINEERING} > {log:q} 2>&1'

@@ -1,0 +1,108 @@
+{
+  "kind": "E024 exact prospective preparation/coverage/retrieval/review source",
+  "files": {
+    "experiments/E024-oral-measured-coverage/Snakefile": {
+      "bytes": 3889,
+      "sha256": "b6572ebc05c733854463300dd6c226f544f392ac13ff610bff9e60ba45b6e161"
+    },
+    "experiments/E024-oral-measured-coverage/design.md": {
+      "bytes": 20787,
+      "sha256": "04f7d31c48c0ac0c5bf601eab2fd899b2e0f4bc38ed8fb00035e3be874aa63e5"
+    },
+    "experiments/E024-oral-measured-coverage/illustrative-subset-cost.json": {
+      "bytes": 3869,
+      "sha256": "b2ab4b2a86b8d70f6ce4889142b474d1979f53b64cf43d8bc0e7e5e38b854313"
+    },
+    "experiments/E024-oral-measured-coverage/oral-workload.json": {
+      "bytes": 4017,
+      "sha256": "2dae1be4c3db83554847ca7708d7f400c05a7257bea204888465255bff0dbd73"
+    },
+    "experiments/E024-oral-measured-coverage/protocol.json": {
+      "bytes": 6112,
+      "sha256": "3b033a7df12dcd75ef2560fa356ad13623daa47078d669631268065b3062ebcb"
+    },
+    "experiments/E024-oral-measured-coverage/read-manifest.json": {
+      "bytes": 28761,
+      "sha256": "0412d21d813b0d1c6cd5f653384cc8cf49dfac9ab62b7d2ea93129ef3e5acc9a"
+    },
+    "experiments/E024-oral-measured-coverage/resource-plan.json": {
+      "bytes": 6494,
+      "sha256": "6a2989f30bc4670bc6d76127dbb9733854ca087388a61556c646066dce1f807a"
+    },
+    "experiments/E024-oral-measured-coverage/reuse-lock.json": {
+      "bytes": 3040,
+      "sha256": "3703c4e2bbd15e3fa51f455912e3f3dfb4641d01f8331a685d91dde33365bc0d"
+    },
+    "experiments/E024-oral-measured-coverage/runtime-plan.json": {
+      "bytes": 2114,
+      "sha256": "6b1a1be77556dba512e7e07144fc463b36a62384b7aa5c0cf7069a75898252bb"
+    },
+    "experiments/E024-oral-measured-coverage/source-profile-limits.json": {
+      "bytes": 5899,
+      "sha256": "307c3f5ee04c7def09121fce5d60fa8dd87ce0d9b8250bba2d8aff1cb183b983"
+    },
+    "scripts/e024_abundance.py": {
+      "bytes": 3492,
+      "sha256": "e2c859f5ba430ef15dd7db82e23f5b95955e9bf9bc66b7ac1d19ee5356273197"
+    },
+    "scripts/e024_collect.py": {
+      "bytes": 4658,
+      "sha256": "f1065cbc79554ccd751b77f2c2d23afad4bd9587a8b0a26aded4ac7b8181c324"
+    },
+    "scripts/e024_control.py": {
+      "bytes": 18568,
+      "sha256": "93b123f86858fef879688dd311a4824a116811363ed8bab5716b3a896f80ad90"
+    },
+    "scripts/e024_coverage.py": {
+      "bytes": 19748,
+      "sha256": "15a966616939457dd2b74d69cd2e9bba99bed90710f5e1521c048bb83040ea05"
+    },
+    "scripts/e024_gates.py": {
+      "bytes": 5228,
+      "sha256": "33cff9764f5b5cd0311ff8c16b3e04fa1c0b4d7d1489ada15619b301198961fc"
+    },
+    "scripts/e024_information.py": {
+      "bytes": 19874,
+      "sha256": "03154700e9e0dc5036f00e598767cb4a52ca5ecbbfbc90e2dff3473e0a2c5897"
+    },
+    "scripts/e024_metadata.py": {
+      "bytes": 4311,
+      "sha256": "510e04627da62fccb88d2f357aaf17cf3280f8f2a583a880a726e73bc85914b4"
+    },
+    "scripts/e024_phase.py": {
+      "bytes": 16907,
+      "sha256": "e4f7542ae75b4a8ca013cddc782166936cef8c3f4391f4435b9ef1b251227379"
+    },
+    "scripts/e024_review.py": {
+      "bytes": 11203,
+      "sha256": "50805f5cb63476fb948505d12727f272db7f1a2693e0901752d69ce4903b9f01"
+    },
+    "scripts/e024_subset_cost.py": {
+      "bytes": 4982,
+      "sha256": "31590bc7630937c2a86ffc3e7d96d25d20382c355efecd0d0b997f70f1cedc22"
+    },
+    "scripts/e024_tiny.py": {
+      "bytes": 6546,
+      "sha256": "0c32cfbdd128d236cef8c34de6c0189986138151c65d961729837fc29d0c2de2"
+    },
+    "scripts/e024_workload.py": {
+      "bytes": 6287,
+      "sha256": "9cb5fffa3a9204b080a68fa218f2a92168d3990bc2ace75b9bba99ef1f65f44e"
+    },
+    "tests/test_e024_coverage.py": {
+      "bytes": 17202,
+      "sha256": "431f375fa3ad1cf7343379dff2df65d9f66cbd5311b594c37057440bc3ade47f"
+    },
+    "tests/test_e024_operations.py": {
+      "bytes": 7818,
+      "sha256": "2dc2bdbc260d64039074524f753ad5bb231a982bc0b22a018627bb5fb04868d0"
+    }
+  },
+  "inherited_source_lock": {
+    "path": "experiments/E023-adaptive-density-bins/source-lock.json",
+    "bytes": 43403,
+    "sha256": "fa7e55203409d32c1a3d9ba43ec8508f65ae741208a1506992c74c6d28a7c8f7"
+  },
+  "new_community_outcomes": false,
+  "pre_execution_operational_revision": "Separate long-clock disk samples from capped atomic controls; test 70,000 observations; no community outcome or scientific parameter change."
+}

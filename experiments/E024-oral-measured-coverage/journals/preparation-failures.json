@@ -1,0 +1,62 @@
+{
+  "kind": "E024 preserved preparation failures and pre-execution corrections",
+  "community_science_run": false,
+  "observations": [
+    {
+      "attempt": "contracts-1",
+      "failure": "Sandbox refused ps before test launch",
+      "resolution": "Same bounded clock; process-sampling escalation approved; no cloud operation"
+    },
+    {
+      "attempt": "contracts-2",
+      "failure": "Two fixture assertions: attempted to reseal existing writer done.json; wrong export field total_bp instead of bp",
+      "resolution": "Fixed fixtures, kept exclusive overwrite refusal and actual writer schema; complete later contracts pass"
+    },
+    {
+      "stage": "Initial Swift segment listing probe",
+      "failure": "No-slash endpoint ignored prefix/JSON and returned an unrelated plain listing",
+      "resolution": "Trailing-slash listing with strict prefix/order/total/aggregate MD5 checks passed; no read payload downloaded"
+    },
+    {
+      "stage": "Pre-execution long-clock review",
+      "failure": "Embedding 36 h of two-second disk history would exceed the 1 MiB atomic control cap",
+      "resolution": "Raw closed JSONL files plus compact original-baseline summary and separate private terminal readback; the 70,000-row control-size regression passes."
+    },
+    {
+      "stage": "Early preparation scheduling",
+      "failure": "Two small engineering attempts briefly overlapped; per-command guards alone do not prove aggregate allocation caps",
+      "resolution": "Final accepted-contracts and accepted-DAG ran serially; no aggregate resource claim from overlapping attempts, no community/cloud work"
+    }
+  ],
+  "preserved_failed_logs": {
+    "artifacts/e024-oral-measured-coverage/engineering/contracts-1.log": {
+      "bytes": 96,
+      "sha256": "ce70974fa9d22c792b6bdae9c970675a22df327746032188af48e422770107fa"
+    },
+    "artifacts/e024-oral-measured-coverage/engineering/contracts-1.resources.json": {
+      "bytes": 898,
+      "sha256": "b52fd3e8d4fd0a2c8b2f09480f153aa399a53d8c44723ae51d6ff3da4fc7d558"
+    },
+    "artifacts/e024-oral-measured-coverage/engineering/contracts-1.exit.json": {
+      "bytes": 875,
+      "sha256": "644d03a26c770e6793439e4fafdf2c301b2833284c4c6873c4e25231280660c8"
+    },
+    "artifacts/e024-oral-measured-coverage/engineering/contracts-2.log": {
+      "bytes": 4664,
+      "sha256": "1104a52c0efa6302541cda6a66fe3321db42c45295ee0083da9c199b6483a747"
+    },
+    "artifacts/e024-oral-measured-coverage/engineering/contracts-2.resources.json": {
+      "bytes": 3738,
+      "sha256": "25b46aee0a8649f731b22c3dced0dee4a46e861a5f2ef84c16c1f5b0888e3d3c"
+    },
+    "artifacts/e024-oral-measured-coverage/engineering/contracts-2.exit.json": {
+      "bytes": 843,
+      "sha256": "feadc4c6c59844cbd6a7a277432e0b76f64adadb7bceb85d6ee7e8bb66c8c9ce"
+    }
+  },
+  "old_freeze_before_operational_revision": {
+    "bytes": 4163,
+    "sha256": "a1285fa580ac239dd55bce1d60d7017ac3be51546917066085b1892b2eddcfbd"
+  },
+  "protected": "All older Mac portability/allclose, E009-E023 source/data/results/journals untouched; no tolerance or native vector changed"
+}

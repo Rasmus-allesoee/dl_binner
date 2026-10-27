@@ -1,6 +1,14 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E023 completed review](../../experiments/E023-adaptive-density-bins/comparison-review.json) is MODIFY: E009 R95 7.7497 -> 10.4163% (above retained MetaBAT2's 8.5493%), but oral 6.5077 -> 4.0932%. [Inspection/costs](../../experiments/E023-adaptive-density-bins/inspection-observed.json) verify all stages, bytes and shutdown within original limits. [The next-step assessment](../evidence/2026-10-27-e023-information-and-recovery.md) selects local preparation of genuine ten-sample oral contig coverage and a fixed-learning information comparison, with no acquisition/mapping/cloud work yet. [STATE](../STATE.md) and [E023 operations](../../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt) own the next scope; November 4 storage remains fixed. Dated decisions below preserve historical context.
+Current handoff: [E024 local preparation](../../experiments/E024-oral-measured-coverage/README.md)
+implements the genuine all-ten oral coverage/fixed-learning information block.
+[Design/alternatives](../../experiments/E024-oral-measured-coverage/design.md)
+explicitly separates it from a matched latest depth/GLM learner comparison, costs
+actual cutoff/view workloads and assesses subset/storage/reuse tradeoffs.
+[Separate new $15 execution request](../../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
+requires fresh native/pilot/credit/resource/storage gates; no VM start, bulk reads,
+community work or deletion in preparation. November 4 retention remains fixed.
+E023's reviewed MODIFY result and all older source/data/evidence remain unchanged.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
@@ -1589,3 +1597,46 @@ communities are development; independent genuine-depth confirmation remains due.
 Operationally all gates/scientific rules/delivery and 221 members pass; current
 price subtotal $0.25662 / $1.00662 with reserves is within original $3. VM stopped,
 November 4 storage unchanged. No old budget carries into the recommended block.
+
+
+## E024 prospective information block and matched-feature scope, October 27, 2026
+
+Adopt the [prepared E024 rule](../../experiments/E024-oral-measured-coverage/protocol.json)
+as the next separately approved information experiment, not a global product
+promotion. The owner's matching concern is valid: fixed E019 oral learning plus
+new depth is not the full E022 depth/GLM/marker-learning candidate. Genuine all-ten
+parent means are reusable for that future coherent bundle. One within-community
+retrieval/information comparison first addresses observed poor oral homogeneity
+without requiring a four-fit GLM/depth factorial campaign. No result settles depth,
+GLM, short contigs or product feature families.
+
+The [cost-only retained-DNA audit](../../experiments/E024-oral-measured-coverage/oral-workload.json)
+exactly matches accepted E021 full-bank view/bp counts. At 1,000/1,500/2,000 bp,
+view counts fall sharply but exposed long DNA/token work dominates: native-probe
+projections remain about 43/36/33 GPU hours versus 61 at 500 bp. A fixed-hash
+100-genome illustration projects about 8 hours but changes community/reference
+scope; it is not a selected execution/confirmation dataset or a full-Oral claim.
+No cutoff sweep, GLM extraction, new fit, derivative DNA or community score ran.
+
+Prefer real measured depth now over another density grid, larger network or full
+Oral GLM extraction. Keep a later single matched latest-feature bundle available
+if information/representation evidence warrants it. This is a scoped decision,
+not an artificial gate to implementation or a permanent sequential-ablation rule.
+Full-reference competitive depth can be sliced for a learner subset; reference
+competition changes or unsupported new window/variance/filter needs may require
+remapping. The selected streaming summary path fits the historical existing-disk
+headroom forecast, subject to native pilot; no old deletions/new storage assumed.
+
+[Local tests and failures](../../experiments/E024-oral-measured-coverage/local-observed.json)
+are engineering evidence. The new $15 / 36-hour complete scope is a proposal with
+fresh credits/product/price/pending-usage/runtime/space/pilot/watcher/STOP gates.
+No paid/community work or retention extension is authorized by preparation.
+
+
+The small publisher-distribution audit also limits the information expectation:
+432 / 799 sources are positive in only one sample; 565 share a normalized profile
+direction at the stated precision. These are planning metadata, not measured
+coverage, a truth-derived K or a feature input. All ten remain useful to avoid
+losing sample-specific support, while a stronger matched sequence/depth learner
+may still be needed for within-cohort discrimination. E024 is not presented as
+sufficient to close every remaining recovery gap.

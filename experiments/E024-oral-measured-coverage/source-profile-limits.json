@@ -1,0 +1,201 @@
+{
+  "kind": "E024 source-metadata planning assessment, not measured coverage/features",
+  "status": "PASS",
+  "samples": [
+    6,
+    7,
+    8,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "targets": 799,
+  "positive_sources": 799,
+  "sources_with_between_sample_variation": 799,
+  "distinct_normalized_sample_columns": 10,
+  "sources_positive_in_exactly_one_sample": 432,
+  "distinct_source_profile_directions_at_12_decimals": 293,
+  "sources_in_shared_profile_direction_groups": 565,
+  "largest_profile_direction_group": 117,
+  "sample_cosine": [
+    [
+      1.0000000000000002,
+      0.9521016982139517,
+      0.705917923817347,
+      0.8101846143524638,
+      0.8345687607497339,
+      0.3137134017036892,
+      0.8029932374326516,
+      0.5217606140803803,
+      0.3587881124291522,
+      0.8891216361163078
+    ],
+    [
+      0.9521016982139517,
+      1.0,
+      0.6703358130971964,
+      0.7867065384867205,
+      0.8739012241934407,
+      0.3177492909545555,
+      0.8297258726961242,
+      0.5093159383569754,
+      0.40882031532698593,
+      0.9458882675786084
+    ],
+    [
+      0.705917923817347,
+      0.6703358130971964,
+      0.9999999999999998,
+      0.5620951737136657,
+      0.45992386052812634,
+      0.18006063257889365,
+      0.41890827058786484,
+      0.8994203568760851,
+      0.5635753613581573,
+      0.5523348061087185
+    ],
+    [
+      0.8101846143524638,
+      0.7867065384867205,
+      0.5620951737136657,
+      1.0,
+      0.8251286585747495,
+      0.34020678166127066,
+      0.8217946931706255,
+      0.37633619427544335,
+      0.34159687175799863,
+      0.8534667794303864
+    ],
+    [
+      0.8345687607497339,
+      0.8739012241934407,
+      0.45992386052812634,
+      0.8251286585747495,
+      1.0000000000000002,
+      0.35265194200152855,
+      0.8975282544848366,
+      0.27483635751489466,
+      0.292726828768757,
+      0.941734822816808
+    ],
+    [
+      0.3137134017036892,
+      0.3177492909545555,
+      0.18006063257889365,
+      0.34020678166127066,
+      0.35265194200152855,
+      0.9999999999999996,
+      0.3520356505279585,
+      0.10504827782193367,
+      0.1372203792521044,
+      0.42272190185308034
+    ],
+    [
+      0.8029932374326516,
+      0.8297258726961242,
+      0.41890827058786484,
+      0.8217946931706255,
+      0.8975282544848366,
+      0.3520356505279585,
+      1.0,
+      0.24236631802476924,
+      0.26415966032146315,
+      0.9211054454770237
+    ],
+    [
+      0.5217606140803803,
+      0.5093159383569754,
+      0.8994203568760851,
+      0.37633619427544335,
+      0.27483635751489466,
+      0.10504827782193367,
+      0.24236631802476924,
+      1.0000000000000002,
+      0.6374033619241501,
+      0.3753559347383811
+    ],
+    [
+      0.3587881124291522,
+      0.40882031532698593,
+      0.5635753613581573,
+      0.34159687175799863,
+      0.292726828768757,
+      0.1372203792521044,
+      0.26415966032146315,
+      0.6374033619241501,
+      1.0000000000000002,
+      0.37976118570023026
+    ],
+    [
+      0.8891216361163078,
+      0.9458882675786084,
+      0.5523348061087185,
+      0.8534667794303864,
+      0.941734822816808,
+      0.42272190185308034,
+      0.9211054454770237,
+      0.3753559347383811,
+      0.37976118570023026,
+      1.0000000000000004
+    ]
+  ],
+  "nearest_other_source_profile_cosine_quantiles": {
+    "min": 0.7659442454690796,
+    "q25": 0.9999999999999999,
+    "median": 1.0,
+    "q75": 1.0,
+    "max": 1.0000000000000002
+  },
+  "inputs": {
+    "artifacts/e014-multiview-reconstruction/oral-truth-origin-v1/manifest.json": {
+      "bytes": 254660,
+      "sha256": "8e494f97451a820360364faed6c1aef13040ba934276d5d6d344f43ac655d9eb"
+    },
+    "artifacts/e014-multiview-reconstruction/metadata/setup-abundance6.tsv": {
+      "bytes": 20055,
+      "sha256": "5441c4980d5128bbe07905d4b259a5b394a730dbd2403c272c044d92260774d8"
+    },
+    "artifacts/e014-multiview-reconstruction/metadata/setup-abundance7.tsv": {
+      "bytes": 20449,
+      "sha256": "a7bdfa7073ad845fbf6fec09e6907615a34427c045ea7683b591ac4726adaf4a"
+    },
+    "artifacts/e014-multiview-reconstruction/metadata/setup-abundance8.tsv": {
+      "bytes": 20447,
+      "sha256": "5a4d6047eac05758937e0765ac23c6e7a4afc8d692946e87a142851b8e58eb6c"
+    },
+    "artifacts/e014-multiview-reconstruction/metadata/setup-abundance13.tsv": {
+      "bytes": 20432,
+      "sha256": "08098236247bcbdd221f5e0df9d766ddb6604bf94aef9727c0be21c80d28dbe9"
+    },
+    "artifacts/e014-multiview-reconstruction/metadata/setup-abundance14.tsv": {
+      "bytes": 20326,
+      "sha256": "1a392a8c764f24b74739ce7f311e91dffffdbcdbc2169c909be0b67c4767643d"
+    },
+    "artifacts/e014-multiview-reconstruction/metadata/setup-abundance15.tsv": {
+      "bytes": 20494,
+      "sha256": "a61000f340d04a1a116165404faf997539af78ae34751a15cb0cf443149db8a5"
+    },
+    "artifacts/e014-multiview-reconstruction/metadata/setup-abundance16.tsv": {
+      "bytes": 21201,
+      "sha256": "6e7fbeb45082246c59d43d53b568c61d8b96c0043997f8be41c5a86194810838"
+    },
+    "artifacts/e014-multiview-reconstruction/metadata/setup-abundance17.tsv": {
+      "bytes": 20420,
+      "sha256": "945dcc141b1fc8c778185e3f9888288396f374be5964dbb1edea473c07b482e9"
+    },
+    "artifacts/e014-multiview-reconstruction/metadata/setup-abundance18.tsv": {
+      "bytes": 20381,
+      "sha256": "843a3cf33f33a0ef18a425903bbdb99428f766a770fdf7af2948ed6bb9df7ec1"
+    },
+    "artifacts/e014-multiview-reconstruction/metadata/setup-abundance19.tsv": {
+      "bytes": 20783,
+      "sha256": "c606b00eb26c15ffdb188613f1b1c0160716b0b7a3303705b95bf3047a06ffd8"
+    }
+  },
+  "used_to_choose_thresholds_or_bins": false,
+  "interpretation": "Publisher table entries vary across samples but many directions can be shared. Table units are not asserted to be measured depth or unique genome barcodes. Actual MAPQ-filtered contig depth, sampling and reference competition remain unmeasured."
+}

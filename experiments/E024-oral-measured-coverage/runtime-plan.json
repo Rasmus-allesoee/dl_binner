@@ -1,0 +1,38 @@
+{
+  "kind": "E024 oral measured-depth information",
+  "work": "/srv/dl_binner/experiments/e024/NEW_PHASE/work",
+  "python": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+  "workflow_python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+  "mapper": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/strobealign",
+  "samtools": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/samtools",
+  "reference": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+  "inputs": {
+    "embeddings": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/embeddings.npz",
+    "graph": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/group/graph.npz",
+    "marker_evidence": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json",
+    "features": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.npz",
+    "views": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.npz"
+  },
+  "read_manifest": "/srv/dl_binner/repo/experiments/E024-oral-measured-coverage/read-manifest.json",
+  "policy": "/srv/dl_binner/repo/experiments/E023-adaptive-density-bins/config.json",
+  "worker": "/srv/dl_binner/repo/scripts/e024_control.py",
+  "snakefile": "/srv/dl_binner/repo/experiments/E024-oral-measured-coverage/Snakefile",
+  "limits": {
+    "seconds": 129600,
+    "provider_STOP_seconds": 130500,
+    "ceiling_USD": 15,
+    "numerical_threads": 4,
+    "tree_RSS_bytes": 26000000000,
+    "free_reserve_bytes": 26843545600,
+    "extra_bytes": 25769803776,
+    "index_bytes": 8589934592,
+    "compressed_export_bytes": 2147483648,
+    "logical_export_bytes": 6442450944,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "allocated_vCPUs": 8,
+    "data_CPU_budget": 8,
+    "mapper_threads": 4,
+    "index_threads": 6
+  },
+  "engineering": false
+}

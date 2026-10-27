@@ -109,7 +109,7 @@ contracts. Portable fixtures, native runtime smoke and biological experiments
 are separate evidence. A pinned recipe or tiny smoke does not certify full-scale
 fit affordability. Accept settled scientific stages without replaying them.
 
-Keep code/small records in private Git and compact important archives in private
+Keep code/small records in Git and compact important archives in private
 Cloud Storage with checksums and a tested readback. Backups do not include keys,
 auth caches or numerical environments. Keep working data/environments on a
 persistent working disk with separate temporary and accepted-result locations;

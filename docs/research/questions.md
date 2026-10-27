@@ -671,3 +671,18 @@ one fixed-learning information comparison, prospectively freezing retrieval and
 cache rebind. No bulk reads, mapping, scoring, new model/cloud work or additional
 confirmation is authorized by this inspection. Old budgets do not carry over;
 November 4 storage and untouched skin dependencies remain.
+
+
+### October 27, 2026: E024 information preparation and the unmatched learner question
+
+[E024](../../experiments/E024-oral-measured-coverage/README.md) prepares actual all-ten
+oral parent-depth acquisition and one fixed-E019-learning retrieval comparison.
+No community output is produced. Its [design](../../experiments/E024-oral-measured-coverage/design.md)
+keeps the unmatched E022 E009 versus E019 oral feature/learning question open;
+depth-first is a reusable information test, not evidence for the full latest
+learner across datasets. Full-bank Oral GLM/cutoff and an illustrative random
+100-genome workload are costed from actual retained DNA/views and native probes,
+without a grid/fit/score or smaller denominator. The prepared observed-modality
+retrieval policy and practical criteria are prospective. Q001/Q003/Q005 remain
+unresolved; fresh paid execution approval and native data/credit/storage admission
+are required. Skin remains unscored and all confirmation dependencies unchanged.

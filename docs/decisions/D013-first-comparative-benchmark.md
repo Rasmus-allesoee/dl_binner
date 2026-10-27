@@ -1,6 +1,14 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E023 completed review](../../experiments/E023-adaptive-density-bins/comparison-review.json) is MODIFY: E009 R95 7.7497 -> 10.4163% (above retained MetaBAT2's 8.5493%), but oral 6.5077 -> 4.0932%. [Inspection/costs](../../experiments/E023-adaptive-density-bins/inspection-observed.json) verify all stages, bytes and shutdown within original limits. [The next-step assessment](../evidence/2026-10-27-e023-information-and-recovery.md) selects local preparation of genuine ten-sample oral contig coverage and a fixed-learning information comparison, with no acquisition/mapping/cloud work yet. [STATE](../STATE.md) and [E023 operations](../../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt) own the next scope; November 4 storage remains fixed. Dated decisions below preserve historical context.
+Current handoff: [E024 local preparation](../../experiments/E024-oral-measured-coverage/README.md)
+implements the genuine all-ten oral coverage/fixed-learning information block.
+[Design/alternatives](../../experiments/E024-oral-measured-coverage/design.md)
+explicitly separates it from a matched latest depth/GLM learner comparison, costs
+actual cutoff/view workloads and assesses subset/storage/reuse tradeoffs.
+[Separate new $15 execution request](../../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
+requires fresh native/pilot/credit/resource/storage gates; no VM start, bulk reads,
+community work or deletion in preparation. November 4 retention remains fixed.
+E023's reviewed MODIFY result and all older source/data/evidence remain unchanged.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.

@@ -1,0 +1,132 @@
+{
+  "kind": "E024 proposed new complete credit-only execution envelope",
+  "date": "2026-10-27",
+  "status": "PROPOSAL_NOT_AUTHORIZED",
+  "ceiling_USD": 15,
+  "cumulative_VM_hours": 36,
+  "provider_STOP_hours": 36.25,
+  "existing_VM": "e2-standard-8/32GiB; original30GiB standard +300GiB balanced disks",
+  "planning_prices": {
+    "compute_IP_USD_hour": 0.274,
+    "existing_PD_USD_hour": 0.043,
+    "source": "Rounded upward from October27 accepted Catalog E2/IP quote and current official disk hourly prices; fresh account-specific prices still required at execution",
+    "source_urls": [
+      "https://cloud.google.com/compute/disks-image-pricing",
+      "https://cloud.google.com/vpc/network-pricing",
+      "https://cloud.google.com/storage/pricing",
+      "https://docs.cloud.google.com/free/docs/free-cloud-features"
+    ]
+  },
+  "maximum_costs_USD": {
+    "compute_IP": 9.932500000000001,
+    "existing_PD_attribution": 1.5587499999999999,
+    "export_2GiB": 0.24,
+    "new_archive_storage_through_boundary": 0.02,
+    "operations": 0.25,
+    "contingency": 2.5
+  },
+  "complete_maximum_with_reserves_USD": 14.50125,
+  "storage_scope": "Existing PD attribution overlaps approved storage, not double invoiced; keep total original retained-storage forecast within approved8USD/November4 boundary. New archive<=2GiB must fit the fresh storage forecast.",
+  "runtime_estimate": "Old 8\u201324 h mapping at 4 mapper workers is historical. The new stream uses 4 mapper workers + validated feeder + summary + accounted I/O inside 8 allocated CPUs. Complete 10\u201330 h expected remains unmeasured; 36 h is a cap, not a guarantee; full sample-6 pilot must pass.",
+  "budget_clock": "Cumulative from first VM start, includes sync/source/runtime gates, download/index/validation/map/summary/rebind/group/export/hash/collection/upload/readback and any recorded operational recovery; never reset on another attempt",
+  "sampled_RSS_GB": 26,
+  "threads": 4,
+  "free_reserve_GiB": 25,
+  "new_working_bytes_cap_GiB": 24,
+  "compressed_export_GiB": 2,
+  "logical_export_GiB": 6,
+  "peak_disk": {
+    "index_and_new_reference_GiB": [
+      6.5,
+      9.64
+    ],
+    "one_FASTQ_GiB": 5,
+    "summaries_matrix_newfeatures_GiB": [
+      1,
+      2
+    ],
+    "group_partitions_export_GiB": [
+      2,
+      4
+    ],
+    "archive_and_manifests_GiB": [
+      0.8,
+      2.1
+    ],
+    "forecast_total_GiB": [
+      11,
+      23
+    ],
+    "hard_cap_GiB": 24,
+    "last_native_free_GiB": 51.530437,
+    "headroom_over_25GiB": 26.530437,
+    "exact": "No community SAM, coordinate sort, BAM or dense per-base coexistence in the selected path; pilot measures index/RSS/space",
+    "uncertainty": "Last native free is historical; measure live after an authorized boot. Stop if headroom, index8GiB or aggregate24GiB fails."
+  },
+  "cleanup_review": {
+    "preparation_deletion": false,
+    "native": "E021 inventory and E023 terminal snapshot retain accepted/required files; no newly verified old deletable bulk. Do not count unverified savings or remove transferred banks, runtimes, accepted DNA/evidence.",
+    "local_allocated_artifacts_bytes": 89583779840,
+    "local_free_snapshot_bytes": 19523379200,
+    "local": "Enough for bounded6GiB review plus6GiB reserve at snapshot; numerical prefixes have consumers/linked dependencies. Preserve originals; no migration/deletion needed for this preparation."
+  },
+  "temporary_resource_alternatives": {
+    "temporary_balanced_128GiB_36_25h_USD": 0.63561504,
+    "temporary_balanced_128GiB_7days_USD": 2.9457469439999997,
+    "temporary_worker_boot30GiB_36_25h_USD": 0.059589562500000005,
+    "setup_copy_verify_hours": [
+      1,
+      2
+    ],
+    "extra_setup_compute_IP_USD": [
+      0.274,
+      0.548
+    ],
+    "payload": "About8-10GiB original reference/runtime/feature/view/vector/graph/marker inputs for a separate full consumer; measure from actual reuse lock. Mapping-only worker needs fewer inputs.",
+    "cross_zone_10GiB_USD": 0.1,
+    "same_zone_internal_transfer_USD": 0,
+    "delete": "Temporary resource would require separate provision/quota/IAM/cleanup approval, verified collection and deletion (STOP does not remove disks). No new resource requested because streaming forecast fits existing disk subject to pilot.",
+    "comparison": "A128GiB disk for36.25h adds~0.64USD versus7days~2.95USD; separate worker also needs boot/setup/copy and does not remove existing disk charges. Full retained BAM45-130GiB upper estimate still needs measured margins.",
+    "temporary_balanced_200GiB_36_25h_USD": 0.9931485,
+    "BAM_GCS_45_to_130GiB_7day_USD": [
+      0.21,
+      0.6066666666666667
+    ],
+    "BAM_130GiB_WAN_export_USD": 15.6,
+    "example_balanced_quota_GiB_for_300_plus_200": 500,
+    "expanded_complete_BAM_scope_proposal_USD": [
+      18,
+      20
+    ],
+    "BAM_decision": "Legitimate cheap storage option if an alignment-level/window/variance question is selected. Current comparison and later matched E022 use parent means; choose serial compact summaries now, accepting possible later remap. No temp resource/archive allowance or retention tail implicitly authorized."
+  },
+  "live_credit_gate": "PENDING execution: fresh signed-in Welcome balance/status/scope/expiry, paid-account product coverage incl compute/IP/PD/GCS/network/ops, delayed usage reserve and storage forecast. Last accepted October27 DKK1796.60/91%/Jan12 is context, not fresh admission.",
+  "current_task": {
+    "new_cloud_compute_USD": 0,
+    "VM_started": false,
+    "resources_changed": false,
+    "bulk_reads_acquired": false,
+    "community_science": false
+  },
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "local_review": {
+    "threads": 4,
+    "sampled_RSS_bytes": 8000000000,
+    "seconds": 3600,
+    "extra_GiB": 8,
+    "physical_reserve_GiB": 6,
+    "forecast": "Actual member inventory before transfer; archive plus required uncompressed members plus review must fit inclusive 8 GiB, stage sequentially, no oversized fallback"
+  },
+  "CPU_budget": {
+    "allocated_vCPUs": 8,
+    "numerical_grouping_threads": 4,
+    "mapping_workers": 4,
+    "feeder_threads": 1,
+    "summary_processes": 1,
+    "mapper_IO_helper_allowance": 2,
+    "total_data_cpu_cap": 8,
+    "index_workers": 6,
+    "index_coordinator_IO_allowance": 2,
+    "enforcement": "Serial DAG: --cores 8 without --jobs; data rules declare 8, grouping 4; Linux affinity bounds each native stage. Sample actual threads/CPU at native pilot, no proportional speedup claim."
+  }
+}

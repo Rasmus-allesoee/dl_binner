@@ -1,6 +1,6 @@
 # Current Research State
 
-Updated: October 26, 2026 (Copenhagen). This is the single current handoff.
+Updated: October 27, 2026 (Copenhagen). This is the single current handoff.
 
 **E023 completed, byte-verified and independently reviewed: MODIFY. VM TERMINATED.**
 [Inspection](../experiments/E023-adaptive-density-bins/inspection-observed.json),
@@ -25,30 +25,45 @@ selected community router or product-family verdict. All 156/799 full references
 Secondary threshold-based target HQ/MQ/LQ: E009 9/10/10 (MetaBAT2 5/11/6), oral
 10/21/24; unknown/non-target/impure bins remain, no RNA or formal MIMAG HQ claim.
 
-**Next: locally prepare genuine all-ten oral contig depth and one fixed-learning
-information comparison.** [Diagnosis/alternatives](evidence/2026-10-27-e023-information-and-recovery.md)
-shows E009 bacterial composite-neighbor purity improving, while oral stays near
-20% bp-weighted same-origin support despite good retrieval recall. No demonstrated
-critical missing-depth/ID/cache bug. Between-community differences do not identify
-depth causally; a within-oral measured-information block is more decision-changing
-now than another density grid or larger model. Resolve prospective modality-aware
-retrieval and exact depth rebind; preserve E019 vectors/learning/seed/marker policy
-and E023 no-depth outputs. [Exact next local-preparation prompt](../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt)
-allows metadata/tiny engineering only. No bulk reads, mapping, real depth, score,
-fit, GLM extraction, VM start or new spend is authorized by this inspection.
+**E024 is locally prepared; next is a separate execution approval, not more
+community work in preparation.** [E024](../experiments/E024-oral-measured-coverage/README.md)
+implements real all-ten oral read/index/SAM-summary/rebind/retrieval/marker/export
+workers and a bounded serial DAG. Actual tiny native mapping, samtools agreement,
+NNDescent, full accounting and partial/completed reuse pass locally; [local evidence](../experiments/E024-oral-measured-coverage/local-observed.json)
+separates synthetic vectors/marker fixtures and stubbed external transport from
+pending Linux/full-GSA/pilot/credit/watchdog gates. No bulk reads, real depth,
+community fits/scores, VM start, cloud resource change or deletion of pre-existing artifacts occurred.
 
-Old ten-read HEAD total is 48.18 GiB; mapping estimate 8–24 hours / roughly $4–10
-mapping-only is historical. Prepare a complete separately approved pilot/data/
-cached-control scope, likely ~$12–15 if measured gates fit. About 26.53 GiB above
-reserve remains on the work disk; tested streaming/summary retention must precede
-any promise it fits. Skin stays unscored with original 610 targets / 313 exact oral
-overlaps and named source/truth/unique/depth/cost dependencies. Both current
-communities remain development data, not independent confirmation.
+The [design/alternatives](../experiments/E024-oral-measured-coverage/design.md)
+recognize E009 E022 depth/GLM learning versus oral E019 sequence-only as unmatched.
+Choose genuine depth first with fixed E019 vectors and one observed-depth retrieval
+union. This does not test the latest full learner on both communities or depth in
+training. Original E023 sequence-only outputs and E019 context are reused without
+refit/rescore. Full Oral GLM needs 2,470,549 views / 2.366 Gb exposure; accepted
+native probes project about 61 GPU hours, versus 43/36/33 hours at 1,000/1,500/
+2,000 bp. Exact counts and a cost-only random-genome alternative are retained;
+no cutoff sweep, GLM extraction or derivative community was run.
+
+[The proposed new $15 complete scope](../experiments/E024-oral-measured-coverage/resource-plan.json)
+uses the existing E2/30+300 GiB disks, 36 cumulative hours / 36.25-hour STOP,
+4 numerical grouping threads / 8 total data CPUs, 26 GB sampled RSS, 25 GiB reserve / 24 GiB growth, 2 GiB export.
+Forecast with reserves is $14.50125, not fresh credit admission. Streamed means
+avoid BAM/sort/per-base coexistence; only newly acquired raw FASTQ may be released
+after complete measured summary proof. A full accepted sample 6 is the pilot and
+must admit the remaining nine without remapping itself. Historical 51.53 GiB free
+must be freshly checked. No more storage is recommended before the measured gate;
+no unverified old-cleanup savings are assumed. Current provider read is TERMINATED.
+
+[Exact separate approval prompt](../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt).
+Keep existing storage-only approval through **November 4, 00:00 Copenhagen**, with
+fresh original-$8 forecast; prior compute budgets do not carry over. Skin remains
+unscored with 610 targets / 313 exact oral overlaps and all original source/truth/
+unique/depth/cost dependencies. Both current communities remain development data.
 
 Measured allocation including failure: 34.54 minutes; science 21.87 minutes /
 8.436 GB sampled RSS; growth 4.336 GiB / minimum free 51.53 GiB. Priced compute/IP,
 PD/export subtotal **$0.25662 / $1.00662 with reserves**, inside original $3, not an
-invoice. Fresh Welcome credit DKK 1,796.60 / 91%, January 12 expiry, unknown lag /
+invoice. E023 inspection Welcome credit DKK 1,796.60 / 91%, January 12 expiry, unknown lag /
 $35 reserve. Existing storage forecasts ~$7.734 within its separate $8 through
 **November 4, 00:00 Copenhagen**. No automatic extension/deletion. Protect all old
 GLM/context/DNA/runtimes; omitted bulk manifests are not backups.

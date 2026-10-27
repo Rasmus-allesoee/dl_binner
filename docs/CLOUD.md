@@ -1,5 +1,26 @@
 # Google Cloud workspace operations
 
+## E024 local preparation, October 27, 2026
+
+[E024](../experiments/E024-oral-measured-coverage/README.md) prepares genuine all-ten
+oral contig means and one fixed-learning retrieval comparison. Read-only provider
+inspection still shows TERMINATED, e2-standard-8, original 30/300 GiB disks. No
+start, new compute, resource/retention change, bulk reads, real mapping or deletion of pre-existing artifacts.
+
+[New $15 proposal](../experiments/E024-oral-measured-coverage/resource-plan.json):
+36 cumulative hours including setup/data/comparison/collection; STOP 36.25 hours;
+four numerical grouping threads / eight total data CPUs / 26 GB sampled RSS; 25 GiB reserve / 24 GiB growth; 2 GiB
+compressed return. Rounded conservative forecast $14.50125 with reserves. Streaming
+SAM summaries avoid retained BAM/sort/per-base files; full sample 6 is the measured
+pilot and is reused. No original budget carries over. Native throughput/index/
+space/runtime, signed-in credit/product/prices/delay and live original storage
+forecast remain **pending execution admission**, not proved by local fixtures.
+
+No old cleanup savings are assumed; original banks/runtimes/evidence remain.
+Temporary-disk/worker alternatives are costed, not requested. [Operations](../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
+owns the separate approval and held-parent/watcher/STOP gates. Existing $8 retention
+still ends **November 4, 00:00 Copenhagen**; no automatic extension or deletion.
+
 ## E023 independently verified completion, October 27, 2026
 
 [Inspection](../experiments/E023-adaptive-density-bins/inspection-observed.json)
@@ -24,7 +45,7 @@ versions / 10,313,126,200 bytes, zero soft-deleted. Storage-only new week foreca
 $7.73369 within $8 through November 4 at 00:00 Copenhagen. Current ordinary prices
 and credit coverage pass; this is not an invoice or a credit-delta allocation.
 
-Next scope is local preparation only for separately approved real oral contig
+The then-next scope was local preparation only for separately approved real oral contig
 depth and a cached information comparison. Old $3/other compute budgets do not
 carry over. Mapping pilot/runtime/disk/full cost and credit admission are not yet
 complete. The 51.53 GiB observed free space leaves only 26.53 GiB above reserve;

@@ -33,6 +33,8 @@ reproduced result of this project.
 
 - [E023: adaptive-density, marker-informed bin construction](E023-adaptive-density-bins/README.md)
 
+- [E024: measured oral coverage and fixed-learning information](E024-oral-measured-coverage/README.md)
+
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 
 ## Record convention

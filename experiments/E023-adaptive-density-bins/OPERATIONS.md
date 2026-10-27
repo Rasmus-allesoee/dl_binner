@@ -29,7 +29,7 @@ reserve. Storage forecast ~$7.734 stays within its separate $8 through **Novembe
 
 [Targeted diagnosis and next decision](../../docs/evidence/2026-10-27-e023-information-and-recovery.md)
 finds useful E009 composite neighborhoods but persistently weak oral source
-discrimination, plus mixed density branches. Next prepare genuine ten-sample oral
+discrimination, plus mixed density branches. The then-next preparation was genuine ten-sample oral
 depth and a prospective fixed-learning information comparison; choose retrieval/
 reranking semantics before outcomes. This is a new separately costed data/input
 block, not evidence that missing depth caused the cross-community difference or
@@ -309,6 +309,14 @@ verified outcome, limits, actual costs/storage and the next exact prompt, includ
 any separate execution authorization required.
 
 ## Exact following prompt
+
+The authorized local preparation below is now completed as
+[E024](../E024-oral-measured-coverage/README.md). Its
+[exact separate execution approval prompt](../E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
+is the current next action; no compute approval is implied by this preparation.
+E023 science, criteria and accepted evidence are unchanged.
+
+## Executed local-preparation prompt, October 27, 2026
 
 Our goal is a substantially stronger and robust binner. Read AGENTS.md,
 PROJECT_INTENT.md, STATE/CLOUD, D013/D015, E023's reviewed results/inspection/costs,

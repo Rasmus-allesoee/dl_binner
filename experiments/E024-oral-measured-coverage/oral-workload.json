@@ -1,0 +1,102 @@
+{
+  "kind": "E024 exact retained-DNA length/view cost audit",
+  "status": "PASS",
+  "inputs": {
+    "fasta": {
+      "bytes": 1757466319,
+      "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+    },
+    "features": {
+      "bytes": 333765352,
+      "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+    },
+    "view_metadata": {
+      "bytes": 1442,
+      "sha256": "a057326c19bcd7365bdf4066b84920f2a6bf1a2c7fb694757b7ac7c7143e7162"
+    },
+    "native_stratum_timing": {
+      "bytes": 110204,
+      "sha256": "e05b27e042aa22c6ec1dd00c1eeeb7f2f27df4e8aa36ac103ce880d309cec71f"
+    }
+  },
+  "full_contigs": 1286547,
+  "full_bp": 1669981123,
+  "cutoffs": {
+    "500": {
+      "parents": 508763,
+      "parent_bp": 1443827664,
+      "available_views": 2470549,
+      "exposed_bp": 2366088186,
+      "minimum_4000bp_chunks": 2707640,
+      "GPU_seconds_planning_projection": 219789.43651758353,
+      "forward_tokens_projection": 994274202.7577456,
+      "native_sample_forward_tokens": 3472161,
+      "native_sample_chunks": 2211,
+      "native_sample_views": 124,
+      "fixed_five_slot_vector_bytes": 7814599680,
+      "view_fraction": 1.0,
+      "exposure_fraction": 1.0,
+      "parent_bp_fraction_of_full_GSA": 0.8645772363020896,
+      "excluded_original_records": 777784,
+      "excluded_original_bp": 226153459
+    },
+    "1000": {
+      "parents": 215970,
+      "parent_bp": 1240650261,
+      "available_views": 1079839,
+      "exposed_bp": 1861623746,
+      "minimum_4000bp_chunks": 1316930,
+      "GPU_seconds_planning_projection": 154600.4508682524,
+      "forward_tokens_projection": 776024749.5389417,
+      "native_sample_forward_tokens": 3470805,
+      "native_sample_chunks": 2207,
+      "native_sample_views": 120,
+      "fixed_five_slot_vector_bytes": 3317299200,
+      "view_fraction": 0.4370846317964145,
+      "exposure_fraction": 0.7867938976303227,
+      "parent_bp_fraction_of_full_GSA": 0.7429127454873632,
+      "excluded_original_records": 1070577,
+      "excluded_original_bp": 429330862
+    },
+    "1500": {
+      "parents": 123037,
+      "parent_bp": 1128118673,
+      "available_views": 615181,
+      "exposed_bp": 1611530729,
+      "minimum_4000bp_chunks": 852272,
+      "GPU_seconds_planning_projection": 131079.65913102336,
+      "forward_tokens_projection": 666072852.6152954,
+      "native_sample_forward_tokens": 3470805,
+      "native_sample_chunks": 2207,
+      "native_sample_views": 120,
+      "fixed_five_slot_vector_bytes": 1889848320,
+      "view_fraction": 0.24900578778239169,
+      "exposure_fraction": 0.6810949560271377,
+      "parent_bp_fraction_of_full_GSA": 0.6755277993642327,
+      "excluded_original_records": 1163510,
+      "excluded_original_bp": 541862450
+    },
+    "2000": {
+      "parents": 82240,
+      "parent_bp": 1057905759,
+      "available_views": 411199,
+      "exposed_bp": 1464409113,
+      "minimum_4000bp_chunks": 648290,
+      "GPU_seconds_planning_projection": 120414.23671213145,
+      "forward_tokens_projection": 602026070.4691772,
+      "native_sample_forward_tokens": 3468402,
+      "native_sample_chunks": 2203,
+      "native_sample_views": 116,
+      "fixed_five_slot_vector_bytes": 1263206400,
+      "view_fraction": 0.16644033370720435,
+      "exposure_fraction": 0.6189156945479969,
+      "parent_bp_fraction_of_full_GSA": 0.6334836630365911,
+      "excluded_original_records": 1204307,
+      "excluded_original_bp": 612075364
+    }
+  },
+  "exact": "Parent counts/bp, available frozen-policy views/exposed bp and minimum bp chunks; 500bp totals independently agree with accepted Linux reader",
+  "estimated": "Full tokens and changed-cutoff time use actual native sampled token/chunk/timing observations; recursive token splits are not recomputed, min chunks are lower counts only",
+  "scope": "Cost-only coordinate/availability replay; no crop/feature bank, model inference, fit, grouping, truth or score produced",
+  "original_full_bank_GPU_planning_hours": 61.05262125488431
+}

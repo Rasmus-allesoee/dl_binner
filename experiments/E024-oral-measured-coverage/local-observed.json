@@ -1,0 +1,646 @@
+{
+  "kind": "E024 completed local preparation, not native/community execution",
+  "status": "PREPARED_LOCALLY_TESTED_EXECUTION_UNAUTHORIZED",
+  "checked_UTC": "2026-10-27T13:13:53Z",
+  "branch": "oral-measured-coverage-information",
+  "source_parent_commit": "84de5b0",
+  "source_freeze": {
+    "bytes": 4347,
+    "sha256": "1479d5ea4994b8d476abf63bf4e587c901d91fd1b9b3e0f226803f463047b9b5"
+  },
+  "new_frozen_files": 24,
+  "inherited_unchanged_source_files": 287,
+  "actual": {
+    "public_metadata_only": true,
+    "read_manifest": {
+      "bytes": 28761,
+      "sha256": "0412d21d813b0d1c6cd5f653384cc8cf49dfac9ab62b7d2ea93129ef3e5acc9a"
+    },
+    "read_HEAD_bytes": 51731811351,
+    "publisher_MD5_segments": 50,
+    "public_metadata_helper_tested": true,
+    "bulk_read_payload_downloaded": false,
+    "source_GSA_and_cost_metadata_read_only": true,
+    "actual_mapper": "strobealign 0.17.0 Mac native",
+    "actual_samtools": "samtools 1.24 Mac native",
+    "samtools_CIGAR_filter_counter_agreement": true,
+    "actual_native_tool_bindings": {
+      "artifacts/e005-linux-pilot/env-mapping-local/bin/strobealign": {
+        "bytes": 728992,
+        "sha256": "67f0fe17635c2757ffa9ccc3a8cbd4a335131c37d281142d598a0def04f3caf9"
+      },
+      "artifacts/e005-linux-pilot/env-mapping-local/bin/samtools": {
+        "bytes": 832464,
+        "sha256": "fcdb0a74914c57105c31d026e3a344aa62d59ccc439376c6913adb477a99b51c"
+      }
+    },
+    "unit_tests_passed": 21,
+    "actual_NNDescent": true,
+    "NNDescent_scope": "Only the engineering crossover was forced to 4; native frozen exact_threshold remains 2048.",
+    "actual_DAG_jobs": 20,
+    "serial_samples": [
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "tiny_contigs": 7,
+    "tiny_bp": 25380,
+    "full_partial_and_completed_reuse": true,
+    "consumer_from_outside_checkout": true,
+    "complete_rebind_graph_marker_export_reload_archive": true,
+    "measured_zero_short_below_seed_all_N_multimapper_CRC_error_refusal": true,
+    "long_control_size_test": "70,000 sampled disk rows summarized below 1 KiB; full raw observations remain separate.",
+    "actual_timeout_receipt": true,
+    "compressed_collection_limit_and_aliases": true,
+    "unit_test_execution": "20-test complete suite plus final 9 operational tests covering 21 distinct current contracts; not a claim that a 21-test monolithic invocation ran."
+  },
+  "actual_vs_substitute": {
+    "vectors": "Synthetic unit vectors on generated tiny DNA; no model fit/inference",
+    "markers": "Engineered cached physical-family quality evidence; no detector/database search",
+    "external_cloud_transport": "Only external CLI replaced in isolated readback tests; real byte counter/hash/producer-exit/refusal executed",
+    "actual_alignment": "No mocked index, read feeder, alignment, SAM/BAM/depth parser, sparse index, selector, rebind, export or archive reader",
+    "workflow": "Actual Mac Python3.13.2/Snakemake9.13.7, numerical Python3.10.15; Linux3.12.10/Snakemake9.16.3 remains pending",
+    "source_context": "Final code/default hashes verified before/after tests; a descriptive source-lock note and planning text were finalized afterward without changing tested code. Final source-only QA verifies current freeze."
+  },
+  "pending_native": [
+    "fresh live credit/status/scope/expiry/delayed usage and per-product prices/coverage",
+    "fresh original retention forecast and post-boot headroom",
+    "complete existing numerical/mapping/workflow runtime origins and loaders",
+    "full exact retained axes/views/markers/native-unit/source byte gates",
+    "actual Linux CPU affinity/effective native workers and native tiny DAG",
+    "current boot/process live-normal-crash exit-watcher proofs and provider STOP",
+    "full GSA index8GiB/RSS/space and complete sample6 throughput/pilot admission",
+    "all-ten measured depth and new grouping/source/neighbor/all-DNA outputs",
+    "actual private upload/readback/final snapshot/watchdog and control-plane shutdown",
+    "full799-reference new-output review, not executed here"
+  ],
+  "measured_cost_workload": {
+    "exact_500bp_available_views": 2470549,
+    "exact_exposed_bp": 2366088186,
+    "whole_tokens": "Projection, not full-bank tokenization",
+    "source": {
+      "kind": "E024 exact retained-DNA length/view cost audit",
+      "status": "PASS",
+      "inputs": {
+        "fasta": {
+          "bytes": 1757466319,
+          "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+        },
+        "features": {
+          "bytes": 333765352,
+          "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+        },
+        "view_metadata": {
+          "bytes": 1442,
+          "sha256": "a057326c19bcd7365bdf4066b84920f2a6bf1a2c7fb694757b7ac7c7143e7162"
+        },
+        "native_stratum_timing": {
+          "bytes": 110204,
+          "sha256": "e05b27e042aa22c6ec1dd00c1eeeb7f2f27df4e8aa36ac103ce880d309cec71f"
+        }
+      },
+      "full_contigs": 1286547,
+      "full_bp": 1669981123,
+      "cutoffs": {
+        "500": {
+          "parents": 508763,
+          "parent_bp": 1443827664,
+          "available_views": 2470549,
+          "exposed_bp": 2366088186,
+          "minimum_4000bp_chunks": 2707640,
+          "GPU_seconds_planning_projection": 219789.43651758353,
+          "forward_tokens_projection": 994274202.7577456,
+          "native_sample_forward_tokens": 3472161,
+          "native_sample_chunks": 2211,
+          "native_sample_views": 124,
+          "fixed_five_slot_vector_bytes": 7814599680,
+          "view_fraction": 1.0,
+          "exposure_fraction": 1.0,
+          "parent_bp_fraction_of_full_GSA": 0.8645772363020896,
+          "excluded_original_records": 777784,
+          "excluded_original_bp": 226153459
+        },
+        "1000": {
+          "parents": 215970,
+          "parent_bp": 1240650261,
+          "available_views": 1079839,
+          "exposed_bp": 1861623746,
+          "minimum_4000bp_chunks": 1316930,
+          "GPU_seconds_planning_projection": 154600.4508682524,
+          "forward_tokens_projection": 776024749.5389417,
+          "native_sample_forward_tokens": 3470805,
+          "native_sample_chunks": 2207,
+          "native_sample_views": 120,
+          "fixed_five_slot_vector_bytes": 3317299200,
+          "view_fraction": 0.4370846317964145,
+          "exposure_fraction": 0.7867938976303227,
+          "parent_bp_fraction_of_full_GSA": 0.7429127454873632,
+          "excluded_original_records": 1070577,
+          "excluded_original_bp": 429330862
+        },
+        "1500": {
+          "parents": 123037,
+          "parent_bp": 1128118673,
+          "available_views": 615181,
+          "exposed_bp": 1611530729,
+          "minimum_4000bp_chunks": 852272,
+          "GPU_seconds_planning_projection": 131079.65913102336,
+          "forward_tokens_projection": 666072852.6152954,
+          "native_sample_forward_tokens": 3470805,
+          "native_sample_chunks": 2207,
+          "native_sample_views": 120,
+          "fixed_five_slot_vector_bytes": 1889848320,
+          "view_fraction": 0.24900578778239169,
+          "exposure_fraction": 0.6810949560271377,
+          "parent_bp_fraction_of_full_GSA": 0.6755277993642327,
+          "excluded_original_records": 1163510,
+          "excluded_original_bp": 541862450
+        },
+        "2000": {
+          "parents": 82240,
+          "parent_bp": 1057905759,
+          "available_views": 411199,
+          "exposed_bp": 1464409113,
+          "minimum_4000bp_chunks": 648290,
+          "GPU_seconds_planning_projection": 120414.23671213145,
+          "forward_tokens_projection": 602026070.4691772,
+          "native_sample_forward_tokens": 3468402,
+          "native_sample_chunks": 2203,
+          "native_sample_views": 116,
+          "fixed_five_slot_vector_bytes": 1263206400,
+          "view_fraction": 0.16644033370720435,
+          "exposure_fraction": 0.6189156945479969,
+          "parent_bp_fraction_of_full_GSA": 0.6334836630365911,
+          "excluded_original_records": 1204307,
+          "excluded_original_bp": 612075364
+        }
+      },
+      "exact": "Parent counts/bp, available frozen-policy views/exposed bp and minimum bp chunks; 500bp totals independently agree with accepted Linux reader",
+      "estimated": "Full tokens and changed-cutoff time use actual native sampled token/chunk/timing observations; recursive token splits are not recomputed, min chunks are lower counts only",
+      "scope": "Cost-only coordinate/availability replay; no crop/feature bank, model inference, fit, grouping, truth or score produced",
+      "original_full_bank_GPU_planning_hours": 61.05262125488431
+    },
+    "illustrative_subset": {
+      "kind": "E024 cost-only illustrative 100 provided-genome derivative",
+      "status": "PASS",
+      "rule": "E024-cost-only-genome-subset-v1",
+      "genomes": [
+        "OTU_97.1043.1",
+        "OTU_97.34782.1",
+        "OTU_97.8663.0",
+        "OTU_97.3393.1",
+        "OTU_97.45016.0",
+        "OTU_97.26911.0",
+        "OTU_97.4925.1",
+        "OTU_97.35311.0",
+        "OTU_97.31214.0",
+        "OTU_97.13253.0",
+        "OTU_97.39830.0",
+        "OTU_97.39752.0",
+        "OTU_97.5795.0",
+        "OTU_97.3422.0",
+        "OTU_97.31370.0",
+        "OTU_97.17394.0",
+        "OTU_97.34566.0",
+        "OTU_97.28715.0",
+        "OTU_97.13842.0",
+        "OTU_97.11377.0",
+        "OTU_97.20774.1",
+        "OTU_97.41395.0",
+        "OTU_97.16759.0",
+        "OTU_97.35012.0",
+        "OTU_97.13449.0",
+        "OTU_97.25545.0",
+        "OTU_97.2652.0",
+        "OTU_97.16811.0",
+        "OTU_97.469.0",
+        "OTU_97.485.1",
+        "OTU_97.23667.0",
+        "OTU_97.837.1",
+        "OTU_97.19867.0",
+        "OTU_97.21068.0",
+        "OTU_97.29976.0",
+        "OTU_97.22538.1",
+        "OTU_97.45058.0",
+        "OTU_97.42504.0",
+        "OTU_97.5089.0",
+        "OTU_97.28774.0",
+        "OTU_97.32255.0",
+        "OTU_97.26079.0",
+        "OTU_97.37402.0",
+        "OTU_97.20271.0",
+        "OTU_97.38269.0",
+        "OTU_97.2518.0",
+        "OTU_97.17325.0",
+        "OTU_97.34227.0",
+        "OTU_97.39529.1",
+        "OTU_97.43469.1",
+        "OTU_97.23667.1",
+        "OTU_97.41546.0",
+        "OTU_97.29547.0",
+        "OTU_97.2213.1",
+        "OTU_97.5121.0",
+        "OTU_97.22007.0",
+        "OTU_97.20771.0",
+        "OTU_97.36221.0",
+        "OTU_97.39797.0",
+        "OTU_97.24216.0",
+        "OTU_97.27245.0",
+        "OTU_97.42865.0",
+        "OTU_97.32296.0",
+        "OTU_97.1358.0",
+        "OTU_97.42987.0",
+        "OTU_97.8273.1",
+        "OTU_97.40838.0",
+        "OTU_97.8361.0",
+        "OTU_97.44485.0",
+        "OTU_97.26792.0",
+        "OTU_97.37901.0",
+        "OTU_97.13996.0",
+        "OTU_97.36067.0",
+        "OTU_97.36533.0",
+        "OTU_97.12613.0",
+        "OTU_97.16860.0",
+        "OTU_97.41969.0",
+        "OTU_97.36382.0",
+        "OTU_97.28883.0",
+        "OTU_97.38845.0",
+        "OTU_97.24681.0",
+        "OTU_97.8291.1",
+        "OTU_97.27087.0",
+        "OTU_97.16181.1",
+        "OTU_97.5301.0",
+        "OTU_97.18445.1",
+        "OTU_97.39007.0",
+        "OTU_97.18522.0",
+        "OTU_97.1704.0",
+        "OTU_97.32701.0",
+        "OTU_97.21249.0",
+        "OTU_97.3084.0",
+        "OTU_97.22162.0",
+        "OTU_97.43143.0",
+        "OTU_97.6325.0",
+        "OTU_97.29545.0",
+        "OTU_97.29930.0",
+        "OTU_97.360.0",
+        "OTU_97.8703.0",
+        "OTU_97.26058.0"
+      ],
+      "selected_full_reference_bp": 284141521,
+      "unchanged_full_community_targets": 799,
+      "unchanged_full_reference_bp": 2083072211,
+      "counts": {
+        "original_contigs": 165647,
+        "original_bp": 229580556,
+        "eligible_parents": 66455,
+        "parent_bp": 200679426,
+        "available_views": 322892,
+        "exposed_bp": 320705907,
+        "minimum_chunks": 357088
+      },
+      "GPU_hours_planning_projection": 8.040545953359992,
+      "forward_tokens_projection": 134591578.65078962,
+      "inputs": {
+        "manifest.json": {
+          "bytes": 254660,
+          "sha256": "8e494f97451a820360364faed6c1aef13040ba934276d5d6d344f43ac655d9eb"
+        },
+        "source-blind-join-v1.tsv.gz": {
+          "bytes": 114093151,
+          "sha256": "63810d2bc38c605925db6e3e84540ebc8ff3a2c0f30b47885874478925a0b587"
+        },
+        "oral.fna": {
+          "bytes": 1757466319,
+          "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+        },
+        "features.npz": {
+          "bytes": 333765352,
+          "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+        },
+        "native-v5-full-GPU-throughput.json": {
+          "bytes": 110204,
+          "sha256": "e05b27e042aa22c6ec1dd00c1eeeb7f2f27df4e8aa36ac103ce880d309cec71f"
+        }
+      },
+      "allowed_interpretation": "Oracle-defined small-community engineering/development; not matched full Oral, independent confirmation or unseen genomes",
+      "denominator": "Never silently use selected100 denominator for the original799-target recovery claim",
+      "no_DNA_or_feature_derivative_written": true,
+      "proposed_for_E024": false
+    },
+    "source_profile_limits": {
+      "bytes": 5899,
+      "sha256": "307c3f5ee04c7def09121fce5d60fa8dd87ce0d9b8250bba2d8aff1cb183b983"
+    }
+  },
+  "evidence": {
+    "accepted-contracts-1": {
+      "exit": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;from pathlib import Path;r=Path.cwd();sys.path[:0]=[str(r/\"src\"),str(r/\"scripts\"),str(r/\"tests\")];from e024_gates import freeze;print(freeze());v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromNames([\"test_e024_coverage\",\"test_e024_operations\"]));print(freeze());sys.exit(not v.wasSuccessful())"
+        ],
+        "exit_code": 0,
+        "launched_pid": 28723,
+        "peak_sampled_rss_bytes": 299384832,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.8236765782793026,
+        "sampled_cpu_seconds": 84.36999999999999,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2004.4655010700226,
+        "stop_reason": null,
+        "wall_seconds": 102.4309810729992
+      },
+      "evidence": {
+        "artifacts/e024-oral-measured-coverage/engineering/accepted-contracts-1.exit.json": {
+          "bytes": 942,
+          "sha256": "6dc880c69699cc085a5fff06182fcb3c4343413887580075dd12334f43192caf"
+        },
+        "artifacts/e024-oral-measured-coverage/engineering/accepted-contracts-1.log": {
+          "bytes": 6724,
+          "sha256": "9529482e1ebd1215620640e77d426f4c98ba9b1a4784b0f9c3b78ec309181617"
+        },
+        "artifacts/e024-oral-measured-coverage/engineering/accepted-contracts-1.resources.json": {
+          "bytes": 5103,
+          "sha256": "392767ea7c73b0cc9e964d938bfdec07da0e99ac028d6612dd46bb8e080f5d13"
+        }
+      }
+    },
+    "accepted-DAG-1": {
+      "exit": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e024_tiny.py",
+          "--root",
+          "artifacts/e024-oral-measured-coverage/engineering/tiny-DAG-v5",
+          "--workflow-python",
+          "artifacts/e001-snakemake-test-env/bin/python"
+        ],
+        "exit_code": 0,
+        "launched_pid": 29844,
+        "peak_sampled_rss_bytes": 191606784,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.6926706413486555,
+        "sampled_cpu_seconds": 17.8,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1628.7500071525574,
+        "stop_reason": null,
+        "wall_seconds": 25.697638874000404
+      },
+      "evidence": {
+        "artifacts/e024-oral-measured-coverage/engineering/accepted-DAG-1.exit.json": {
+          "bytes": 742,
+          "sha256": "4eaa3556b4e4f15ab38b81a84792c0cf74576aaf2ffa3f392bbbe28b3ebaa11a"
+        },
+        "artifacts/e024-oral-measured-coverage/engineering/accepted-DAG-1.log": {
+          "bytes": 11398,
+          "sha256": "39509b769c1dda35e3ef9bb2aa2aca749df77695cb02443cd9b0e144460662b2"
+        },
+        "artifacts/e024-oral-measured-coverage/engineering/accepted-DAG-1.resources.json": {
+          "bytes": 2052,
+          "sha256": "76305c817acf5eabd5776194db10ec39a2d3deac94e33bceae5470e28b0b6e20"
+        }
+      }
+    },
+    "retained-workload-1": {
+      "exit": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e024_workload.py",
+          "--output",
+          "artifacts/e024-oral-measured-coverage/preparation/oral-workload.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 19046,
+        "peak_sampled_rss_bytes": 805998592,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.801109829034255,
+        "sampled_cpu_seconds": 198.19,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 6949.43905210495,
+        "stop_reason": null,
+        "wall_seconds": 247.39429328799997
+      },
+      "evidence": {
+        "artifacts/e024-oral-measured-coverage/engineering/retained-workload-1.exit.json": {
+          "bytes": 677,
+          "sha256": "ba3432633a86df4744abb6c9ec15f3d4c4c9cb323e1f806ea396f21f263537b1"
+        },
+        "artifacts/e024-oral-measured-coverage/engineering/retained-workload-1.log": {
+          "bytes": 3753,
+          "sha256": "ffad87e09fef5ba564da2b5873a2bfc68cf55e4c6ef64d15a41a0f9536687444"
+        },
+        "artifacts/e024-oral-measured-coverage/engineering/retained-workload-1.resources.json": {
+          "bytes": 10085,
+          "sha256": "db613de5bfdf5ec763a0fbde15005ec9994e08988192fcd737ca5b4f5d4d8234"
+        }
+      }
+    },
+    "subset-cost-1": {
+      "exit": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e024_subset_cost.py",
+          "--output",
+          "artifacts/e024-oral-measured-coverage/preparation/illustrative-subset-cost.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 21122,
+        "peak_sampled_rss_bytes": 637222912,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.7361329885465356,
+        "sampled_cpu_seconds": 98.86,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 6254.281799316406,
+        "stop_reason": null,
+        "wall_seconds": 134.29638603100102
+      },
+      "evidence": {
+        "artifacts/e024-oral-measured-coverage/engineering/subset-cost-1.exit.json": {
+          "bytes": 692,
+          "sha256": "279b81dd31c80257828e36899f935698b543feedd145cc63f6f3a9795b608572"
+        },
+        "artifacts/e024-oral-measured-coverage/engineering/subset-cost-1.log": {
+          "bytes": 3326,
+          "sha256": "51692ee2dc688b9e1664101e7c1d612a81dddfc8b4d03e3b07329f00b2060a52"
+        },
+        "artifacts/e024-oral-measured-coverage/engineering/subset-cost-1.resources.json": {
+          "bytes": 5962,
+          "sha256": "5c2c5cced29cf191bb12ca03b4bf826ec0f5e35b0e7433286d7e3bfd457dcb25"
+        }
+      }
+    },
+    "source-profile-limits-1": {
+      "exit": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e024_abundance.py",
+          "--output",
+          "artifacts/e024-oral-measured-coverage/preparation/source-profile-limits.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 26264,
+        "peak_sampled_rss_bytes": 51429376,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.6174517649765123,
+        "sampled_cpu_seconds": 0.6499999999999999,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 3367.2187950611115,
+        "stop_reason": null,
+        "wall_seconds": 1.0527138100005686
+      },
+      "evidence": {
+        "artifacts/e024-oral-measured-coverage/engineering/source-profile-limits-1.exit.json": {
+          "bytes": 700,
+          "sha256": "42699d8374390a6372b263e41f7f623365ac5a5b2f3cd07b152174a3b8c84434"
+        },
+        "artifacts/e024-oral-measured-coverage/engineering/source-profile-limits-1.log": {
+          "bytes": 4886,
+          "sha256": "1ec319617207c392e6f26c3517dac840a42b6ad8b4e94846374df02a90cfd5ac"
+        },
+        "artifacts/e024-oral-measured-coverage/engineering/source-profile-limits-1.resources.json": {
+          "bytes": 1150,
+          "sha256": "cbff0d4adde9a2257f47d9b41e028904765ff79704e8e896a597d2a9440cb6cf"
+        }
+      }
+    },
+    "final-operational-1": {
+      "exit": {
+        "command": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;from pathlib import Path;r=Path.cwd();sys.path[:0]=[str(r/\"src\"),str(r/\"scripts\"),str(r/\"tests\")];from e024_gates import freeze;print(freeze());v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(\"test_e024_operations\"));sys.exit(not v.wasSuccessful())"
+        ],
+        "exit_code": 0,
+        "launched_pid": 30611,
+        "peak_sampled_rss_bytes": 79249408,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.47318006793543194,
+        "sampled_cpu_seconds": 1.77,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 767.4524762630463,
+        "stop_reason": null,
+        "wall_seconds": 3.7406478419998166
+      },
+      "evidence": {
+        "artifacts/e024-oral-measured-coverage/engineering/final-operational-1.exit.json": {
+          "bytes": 887,
+          "sha256": "1f38d80eac1f88b84e4c16e12eba85b0e8246c9913db44948b5b2e23ab5eea05"
+        },
+        "artifacts/e024-oral-measured-coverage/engineering/final-operational-1.log": {
+          "bytes": 1286,
+          "sha256": "2e989056c0b63a7a62c3b59fd6991a90a59a31b4f45889e25772cd1477766c8c"
+        },
+        "artifacts/e024-oral-measured-coverage/engineering/final-operational-1.resources.json": {
+          "bytes": 1622,
+          "sha256": "f0c3304434926513053e4eb7b62e738a232c4a0c28507ecc253a2c0fdf194395"
+        }
+      }
+    }
+  },
+  "tiny_complete_receipt": {
+    "bytes": 13530,
+    "sha256": "a2775936106aaa3b2b9d0a6be93ef48b625c0b23550d7c75bc88fbf3af4ec9d0"
+  },
+  "provider": {
+    "status": "TERMINATED",
+    "machineType": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/machineTypes/e2-standard-8",
+    "disks": [
+      {
+        "source": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/disks/dl-binner-cpu",
+        "GiB": "30"
+      },
+      {
+        "source": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/disks/dl-binner-work",
+        "GiB": "300"
+      }
+    ],
+    "evidence": {
+      "bytes": 33096,
+      "sha256": "5f9b9774ffa7911cc4341b363bebe09e6ad9c87db105459ceb0e64389c0b7e8c"
+    },
+    "final_evidence": {
+      "bytes": 30545,
+      "sha256": "6468dfe952c243d4f6268654e13d5722204587c8f1a83b18c6fdecc2cf9a48fc"
+    },
+    "final_status": "TERMINATED"
+  },
+  "resource_scope": {
+    "local_harness": "Existing e023_local reused read-only: original 2 h clock, 4 numerical grouping threads, 8 GB sampled tree RSS, 4 GiB owned growth / 6 GiB reserve; explicit 8 CPU data-stage budget tested separately from four-thread grouping. These are local engineering commands, not a native VM allocation.",
+    "original_local_clock": {
+      "start_epoch": 1793099930.2138581,
+      "seconds": 7200,
+      "baseline_bytes": 0
+    },
+    "elapsed_original_seconds": 6483.929888010025,
+    "current_owned_allocated_bytes": 10076160,
+    "current_filesystem_free_bytes": 23325708288,
+    "old_artifacts_storage_snapshot": {
+      "bytes": 2734,
+      "sha256": "74eb5b89378b210b3c9888efb6820d3996286b6b90fb31ea41490aabc34bc228"
+    },
+    "allocation_accounting": "Per-command sampled resources; final accepted tests/DAG serial. Earlier overlaps are not aggregate-cap admission. Cost-only metadata and setup/review are not charged GCP CPU."
+  },
+  "new_execution": {
+    "status": "PROPOSAL_ONLY",
+    "ceiling_USD": 15,
+    "maximum_conservative_with_reserves_USD": 14.50125,
+    "limits": {
+      "seconds": 129600,
+      "provider_STOP_seconds": 130500,
+      "ceiling_USD": 15,
+      "numerical_threads": 4,
+      "tree_RSS_bytes": 26000000000,
+      "free_reserve_bytes": 26843545600,
+      "extra_bytes": 25769803776,
+      "index_bytes": 8589934592,
+      "compressed_export_bytes": 2147483648,
+      "logical_export_bytes": 6442450944,
+      "retention_end": "2026-11-04T00:00:00+01:00",
+      "allocated_vCPUs": 8,
+      "data_CPU_budget": 8,
+      "mapper_threads": 4,
+      "index_threads": 6
+    },
+    "new_cloud_compute_USD": 0,
+    "new_cloud_resource": false,
+    "VM_started": false,
+    "cloud_write": false,
+    "existing_artifacts_removed": false,
+    "only_generated_fixture_cleanup_tested": true,
+    "existing_retention_end": "2026-11-04T00:00:00+01:00",
+    "old_compute_approvals_do_not_carry": true
+  },
+  "next": "Separate explicit new $15 credit-only approval, then fresh gates and a measured full-sample pilot before the remaining nine; no original source/data replay.",
+  "checks": {
+    "docs": "106 maintained documents / 1,529 links / 85 present source fingerprints PASS; 10 optional historical caches unavailable",
+    "AST_and_JSON": "PASS",
+    "source_bytes": "24 new + 287 inherited exact members PASS",
+    "whitespace": "PASS before staging"
+  }
+}
