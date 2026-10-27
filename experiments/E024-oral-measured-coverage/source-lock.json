@@ -34,8 +34,8 @@
       "sha256": "3703c4e2bbd15e3fa51f455912e3f3dfb4641d01f8331a685d91dde33365bc0d"
     },
     "experiments/E024-oral-measured-coverage/runtime-plan.json": {
-      "bytes": 2368,
-      "sha256": "cbe2d211ca98998aa304ecd872c960ef4f455aed62b4ed0e8a40e77aed88495f"
+      "bytes": 2369,
+      "sha256": "1d988cd2e212d708247118ae5d5c06815464e81bc272e5eec61eaa36989f8b7e"
     },
     "experiments/E024-oral-measured-coverage/source-profile-limits.json": {
       "bytes": 5899,
@@ -50,8 +50,8 @@
       "sha256": "88e3c91fb805d66d9be9c299b4c0cdba9b7703e704cdb3fd84e1642e4d2d0e09"
     },
     "scripts/e024_control.py": {
-      "bytes": 19885,
-      "sha256": "fa91e76ad1531dff20b9b261c7b55484c8297c3cded0bcee6fca1de3f3feba89"
+      "bytes": 19886,
+      "sha256": "1b89cfff92f83122257610a2cb767338522a6496421dbae61748a80299f1d0a1"
     },
     "scripts/e024_coverage.py": {
       "bytes": 20270,

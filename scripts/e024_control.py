@@ -49,7 +49,7 @@ def read_plan(path, engineering=False):
         a=p['alignment_archive']
         if (a['mode']!='gcs-primary-bam' or not a['prefix'].startswith('gs://dl-binner-archive-167650584170/e024/')
                 or a['maximum_total_bytes']!=130*1024**3 or a['maximum_sample_bytes']!=13*1024**3
-                or a['gcloud']!='/usr/bin/gcloud'):
+                or a['gcloud']!='/snap/bin/gcloud'):
             raise ValueError('Frozen private primary-BAM retention scope differs')
         for k in ['mapper','samtools','reference','inputs','python','workflow_python','worker','snakefile','policy','read_manifest']:
             if p[k] != expected[k]:

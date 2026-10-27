@@ -1,0 +1,24 @@
+{
+  "status": "RECOVERABLE_PRE_GATE_CLI_PATH_ASSUMPTION",
+  "UTC": "2026-10-27T20:57:37.755588+00:00",
+  "first_identity": {
+    "root": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d",
+    "repo": "/srv/dl_binner/repo",
+    "source": "60cbf7de20fb2a417e37459ad6f0e49080d6d708",
+    "phase": "coverage-20261027T205510Z-60cbf7d",
+    "user": "rasmus_allesoee_gmail_com",
+    "service_name": "e024-coverage-20261027T205510Z-60cbf7d",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d/",
+    "ceiling_USD": 16,
+    "provider_STOP_seconds": 130500,
+    "storage_retention_extended": false,
+    "vm_start_epoch": 1793134532.272
+  },
+  "failure": "Expected /usr/bin/gcloud; preserved E022/E023 native consumer source explicitly uses /snap/bin/gcloud",
+  "repair": "Bind retained /snap/bin/gcloud lexical path; verify actual file/read version on original VM, no install or credential replacement",
+  "science_released": false,
+  "clock_reset": false,
+  "old_attempt_preserved": true,
+  "evidence": "Retained E022/E023 native source pins /snap/bin/gcloud; no installer needed. Controller stopped and independently confirmed TERMINATED; no parent/native gates/acquisition/backup object/science released.",
+  "disk_measurement_limit": "First attempt failed before host.json publication, after a small Git sync only. Recovery captures first retained df and uses a 64 MiB conservative setup allowance; whole-run resource reporting will preserve that first snapshot gap rather than call it continuous measurement."
+}

@@ -40,6 +40,6 @@
     "prefix": "gs://dl-binner-archive-167650584170/e024/NEW_PHASE/alignments",
     "maximum_total_bytes": 139586437120,
     "maximum_sample_bytes": 13958643712,
-    "gcloud": "/usr/bin/gcloud"
+    "gcloud": "/snap/bin/gcloud"
   }
 }
