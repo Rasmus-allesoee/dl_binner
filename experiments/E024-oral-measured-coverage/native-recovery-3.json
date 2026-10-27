@@ -1,0 +1,48 @@
+{
+  "status": "RECOVERABLE_PUBLISHER_DLO_GET_FAILURE",
+  "UTC": "2026-10-27T21:28:46.556818+00:00",
+  "previous": "coverage-20261027T205510Z-60cbf7d-r4",
+  "failure": "Aggregate GET401 AccessDenied despite public HEAD; no accepted download or mapping",
+  "direct_segment_probe": [
+    {
+      "label": "DLO",
+      "status": 401,
+      "headers": {
+        "content-length": "12",
+        "x-trans-id": "tx000008c2f01bd937cd49c-006ae11580-2844488849-default",
+        "x-openstack-request-id": "tx000008c2f01bd937cd49c-006ae11580-2844488849-default",
+        "accept-ranges": "bytes",
+        "content-type": "text/plain; charset=utf-8",
+        "server": "Ceph Object Gateway (squid)",
+        "date": "Tue, 27 Oct 2026 21:20:00 GMT",
+        "connection": "close"
+      },
+      "body": "AccessDenied"
+    },
+    {
+      "label": "publisher-first-segment",
+      "status": 206,
+      "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_6/reads/anonymous_reads.fq.gz/1520615125.672000/5174041407/1073741824/00000000",
+      "headers": {
+        "content-length": "16",
+        "content-range": "bytes 0-15/1073741824",
+        "accept-ranges": "bytes",
+        "last-modified": "Fri, 09 Mar 2018 19:10:08 GMT",
+        "x-timestamp": "1520622608.07683",
+        "etag": "2a207807c26fd63313b460551472d1a5",
+        "x-trans-id": "tx000002f9bf3d710dc3547-006ae11580-2844488849-default",
+        "x-openstack-request-id": "tx000002f9bf3d710dc3547-006ae11580-2844488849-default",
+        "content-type": "application/swiftclient-segment",
+        "server": "Ceph Object Gateway (squid)",
+        "date": "Tue, 27 Oct 2026 21:20:00 GMT",
+        "connection": "close"
+      },
+      "first16_hex": "1f8b0808295e2b5a02ff616e6f6e796d"
+    }
+  ],
+  "repair": "Explicit frozen public-segment GETs in order; every segment MD5/length/ETag, DLO aggregate, total bytes and new full hashes preserved. No fallback or weakened admission.",
+  "reuse": "Original exact plan/work and sealed verified input stage; old failed directories/logs renamed with journal, not overwritten. Prior native archive/gates verified; source/runtime/current transport freshly checked; completed tiny DAG no-op.",
+  "source_inputs_changed": false,
+  "science_repeated": false,
+  "clock_reset": false
+}

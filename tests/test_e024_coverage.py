@@ -209,6 +209,41 @@ class Coverage(unittest.TestCase):
                 map_summary(MAPPER,u['reference'],raw,root/'corrupt',use_index=False,sample=6,bam_retention=options)
             self.assertFalse((root/'corrupt/done.json').exists())
 
+    def test_actual_public_segment_transport_without_aggregate_GET(self):
+        import functools,http.server,threading
+        from e024_coverage import acquire
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);public=root/'public';public.mkdir();payload=b'precise generated segmented bytes'*123
+            pieces=[payload[:1000],payload[1000:]];seen=[]
+            for j,b in enumerate(pieces):(public/str(j)).write_bytes(b)
+            class Handler(http.server.SimpleHTTPRequestHandler):
+                def log_message(self,*a):pass
+                def do_GET(self):
+                    seen.append(self.path)
+                    if self.path=='/aggregate':self.send_error(401);return
+                    if self.path=='/corrupt':self.send_error(401);return
+                    return super().do_GET()
+                def end_headers(self):
+                    if self.path in ['/0','/1']:
+                        self.send_header('ETag',hashlib.md5(pieces[int(self.path[1:])]).hexdigest())
+                    super().end_headers()
+            server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Handler,directory=str(public)))
+            worker=threading.Thread(target=server.serve_forever,daemon=True);worker.start()
+            try:
+                base='http://127.0.0.1:'+str(server.server_port)
+                parts=[dict(url=base+'/'+str(j),bytes=len(b),md5=hashlib.md5(b).hexdigest()) for j,b in enumerate(pieces)]
+                record=dict(sample=6,url=base+'/aggregate',bytes=len(payload),segments=parts,
+                    DLO_aggregate_md5=hashlib.md5(''.join(p['md5'] for p in parts).encode()).hexdigest())
+                value=acquire(record,root/'exact')
+                self.assertEqual((root/'exact').read_bytes(),payload)
+                self.assertEqual(value['sha256'],hashlib.sha256(payload).hexdigest())
+                self.assertEqual(seen,['/0','/1'])
+                record['segments'][1]['url']=base+'/corrupt'
+                with self.assertRaises(Exception):acquire(record,root/'partial')
+                self.assertEqual((root/'partial').read_bytes(),pieces[0])
+                self.assertFalse((root/'partial.acquired.json').exists())
+            finally:server.shutdown();server.server_close();worker.join(5)
+
     def test_stream_failure_never_seals_success(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

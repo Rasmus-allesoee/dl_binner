@@ -113,8 +113,49 @@ def verify_segments(stream, segments, destination, progress=None):
                 publisher_segment_MD5_passed=len(segments))
 
 
+def acquire_segments(record, output, opener=urllib.request.urlopen):
+    """Acquire the publisher's exact public segments once in frozen byte order.
+
+    This explicit transport avoids an inaccessible DLO aggregate GET. It does
+    not weaken byte admission: validate each segment's length/ETag/MD5, the DLO
+    aggregate and whole byte count, and calculate new whole MD5/SHA256 while
+    concatenating. Preserve partial output on any error; never retry/fallback.
+    """
+    output=Path(output);started=time.time();parts=record['segments']
+    aggregate=hashlib.md5(''.join(x['md5'] for x in parts).encode()).hexdigest()
+    if (sum(x['bytes'] for x in parts)!=record['bytes'] or
+            aggregate!=record.get('DLO_aggregate_md5',aggregate)):
+        raise ValueError('Frozen segment aggregate/whole length differs')
+    total=0;sha=hashlib.sha256();md5=hashlib.md5();last=time.monotonic()
+    with output.open('xb') as destination:
+        class WholeWriter:
+            def write(self, b):
+                nonlocal total
+                total+=len(b);sha.update(b);md5.update(b);return destination.write(b)
+        def progress(n):
+            nonlocal last
+            if time.monotonic()-last>5:
+                print('E024_DOWNLOAD_BYTES',record['sample'],total,flush=True);last=time.monotonic()
+        for index,part in enumerate(parts):
+            request=urllib.request.Request(part['url'],headers={'Accept-Encoding':'identity'})
+            with opener(request,timeout=60) as source:
+                if (source.status!=200 or int(source.headers['Content-Length'])!=part['bytes']
+                        or source.headers.get('ETag','').strip('"')!=part['md5']):
+                    raise ValueError('Publisher segment HEAD/GET identity differs')
+                verify_segments(source,[part],WholeWriter(),progress)
+            print('E024_PUBLISHER_SEGMENT_PASS',record['sample'],index,total,flush=True)
+    if total!=record['bytes']:raise ValueError('Concatenated publisher object differs')
+    result=dict(bytes=total,sha256=sha.hexdigest(),calculated_whole_MD5=md5.hexdigest(),
+                publisher_segment_MD5_passed=len(parts),sample=record['sample'],manifest=record,
+                elapsed_seconds=time.time()-started,transport='Frozen public segment GETs in order; no DLO GET/fallback/retry')
+    write(str(output)+'.acquired.json',result)
+    return result
+
+
 def acquire(record, output, opener=urllib.request.urlopen):
-    """Acquire exactly one admitted object, preserving an unsealed partial on error."""
+    """Acquire exact admitted bytes by frozen segments or the tiny whole-object fixture."""
+    if record['segments'] and all(p.get('url') for p in record['segments']):
+        return acquire_segments(record,output,opener)
     output = Path(output)
     started = time.time()
     if sum(p['bytes'] for p in record['segments']) != record['bytes']:

@@ -54,8 +54,8 @@
       "sha256": "1b89cfff92f83122257610a2cb767338522a6496421dbae61748a80299f1d0a1"
     },
     "scripts/e024_coverage.py": {
-      "bytes": 20270,
-      "sha256": "77eaa6edd60b935c1ec8c7bcacd64dbc94a4082f878e46f2473ab6c631f899f2"
+      "bytes": 22795,
+      "sha256": "ac0d2a6939e9f68846ac95dbf6f06ccd3215c04fb82ed33671d98f51aecc1981"
     },
     "scripts/e024_gates.py": {
       "bytes": 5228,
@@ -90,8 +90,8 @@
       "sha256": "9cb5fffa3a9204b080a68fa218f2a92168d3990bc2ace75b9bba99ef1f65f44e"
     },
     "tests/test_e024_coverage.py": {
-      "bytes": 20543,
-      "sha256": "25756c2993c5f453af8971bbe38276aff35604f6f06c58072745cce3d50ec287"
+      "bytes": 22849,
+      "sha256": "f2676cad6433c8e0102cf7ef7cc33c942f4a57f8153286e83cbe0ea30e807c7a"
     },
     "tests/test_e024_operations.py": {
       "bytes": 8242,
@@ -108,6 +108,10 @@
     "experiments/E024-oral-measured-coverage/execution-amendment.md": {
       "bytes": 9877,
       "sha256": "460e7097f23337734231ce7522c0e1791dc92ed42fb2a9fa8a65adeafdfdc3a0"
+    },
+    "scripts/e024_reuse_gates.py": {
+      "bytes": 6291,
+      "sha256": "9bd58ab304801af1a146e35e500b13224f3cfbfe283769712235c01c0b0946b2"
     }
   },
   "inherited_source_lock": {
