@@ -1,5 +1,11 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+Current handoff: [E024 native run](../../experiments/E024-oral-measured-coverage/native-observed.json)
+is running sample-6 acquisition under the frozen pilot and original clock. Read
+[its operations](../../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
+for the next inspection. No current data/quality outcome is inferred from progress.
+
+Earlier preparation handoff (superseded by the explicit October 27 execution):
 Current handoff: [E024 local preparation](../../experiments/E024-oral-measured-coverage/README.md)
 implements the genuine all-ten oral coverage/fixed-learning information block.
 [Design/alternatives](../../experiments/E024-oral-measured-coverage/design.md)

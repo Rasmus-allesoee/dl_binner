@@ -1,0 +1,1020 @@
+{
+  "kind": "E024 exact direct-segment acquisition and fixed-learning information run",
+  "status": "RUNNING_FIRST_SAMPLE_ACQUISITION",
+  "as_of_UTC": "2026-10-27T22:00:25.269841+00:00",
+  "phase": "coverage-20261027T205510Z-60cbf7d-r5",
+  "root": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5",
+  "actual_work": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work",
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r5/",
+  "primary_BAM_archive_prefix": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments",
+  "scientific_source_commit": "2e34d648a7db6e84aa0720a23453ad30124571d5",
+  "prepared_base_commit": "f7083b26e9e5f4031502e4b451e9ddcdcd394682",
+  "operational_adapter": {
+    "status": "EXPLICIT_OPERATIONAL_ADAPTER_REPAIR",
+    "scientific_source": "2e34d648a7db6e84aa0720a23453ad30124571d5",
+    "adapter_source_commit": "7019517",
+    "adapter": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/payload/operational-reuse-adapter-7019517.py",
+    "identity": {
+      "bytes": 6760,
+      "sha256": "15d80084c0432f73f56fc1ff53fefd9fa7939eb141783c577578add10a0525f3"
+    },
+    "previous_failure": "Verifier returned summary, not internal member inventory; no acquisition released",
+    "clock_reset": false
+  },
+  "branch": "oral-measured-coverage-information",
+  "source_sync": "Mac normal push, existing read-only VM key fetch, exact clean detached scientific commit; current scientific checkout not changed for later operational payload/docs",
+  "credits": {
+    "observed_UTC": "2026-10-27T20:51:14.189100+00:00",
+    "method": "Signed-in Chrome Billing Credits/Overview visible UI",
+    "remaining_DKK": 1790.46,
+    "original_DKK": 1973.43,
+    "percent_remaining": 91,
+    "status": "Available",
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; see terms for Free Trial",
+    "application": "Net pricing",
+    "paid_account": true,
+    "overview": {
+      "period": "October1-27",
+      "rounded_cost_DKK": 183,
+      "rounded_savings_DKK": 183,
+      "net_DKK": 0
+    },
+    "delay": "Hours and might take more than24hours; unknown pending amount",
+    "delayed_usage_reserve_USD": 35
+  },
+  "financial_gate": {
+    "UTC": "2026-10-27T20:51:14.189943+00:00",
+    "coverage_status": "PASS_FOR_SPECIFIED_ORDINARY_FIRST_PARTY_PRODUCTS_ONLY",
+    "real_money_authorized": false,
+    "new_incremental_gross_ceiling_USD": 16,
+    "owner_ceiling_amendment": "New15USD plus explicit owner approval for small increase for better storage plan; choose16USD",
+    "credit": {
+      "observed_UTC": "2026-10-27T20:51:14.189100+00:00",
+      "method": "Signed-in Chrome Billing Credits/Overview visible UI",
+      "remaining_DKK": 1790.46,
+      "original_DKK": 1973.43,
+      "percent_remaining": 91,
+      "status": "Available",
+      "expiry": "2027-01-12",
+      "scope": "Certain usage; see terms for Free Trial",
+      "application": "Net pricing",
+      "paid_account": true,
+      "overview": {
+        "period": "October1-27",
+        "rounded_cost_DKK": 183,
+        "rounded_savings_DKK": 183,
+        "net_DKK": 0
+      },
+      "delay": "Hours and might take more than24hours; unknown pending amount",
+      "delayed_usage_reserve_USD": 35
+    },
+    "credit_valid_until_epoch": 1799708400,
+    "storage_valid_until_epoch": 1793746800,
+    "original_storage_forecast_USD": 7.733688064031405,
+    "original_storage_ceiling_USD": 8,
+    "added_BAM_storage_operations_reserve_USD": 0.8,
+    "prices_USD": {
+      "compute_IP_hour": 0.274,
+      "PD_hour": 0.043,
+      "original_complete_estimate": 14.50125,
+      "conservative_total": 15.30125
+    },
+    "remaining_after_pending_and_new_ceiling_USD": 221.18497742523618,
+    "covered_costs": [
+      "compute",
+      "disk",
+      "storage",
+      "network",
+      "operations"
+    ],
+    "products": [
+      "Ordinary E2 CPU/nonpremium Ubuntu",
+      "original standard/balanced PD",
+      "ephemeral IPv4",
+      "same-region Standard private GCS/operations",
+      "ordinary VPC ingress and <=2GiB WAN compact export"
+    ],
+    "BAM_internal_transfer_max_GiB": 260,
+    "BAM_Internet_export_authorized": false,
+    "excluded": [
+      "GPU",
+      "Marketplace",
+      "NAT",
+      "premium image",
+      "new service",
+      "new provision/resize",
+      "external binner",
+      "GLM",
+      "training",
+      "retention extension"
+    ],
+    "source_urls": [
+      "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "https://cloud.google.com/vpc/network-pricing",
+      "https://cloud.google.com/storage/pricing",
+      "https://cloud.google.com/compute/disks-image-pricing"
+    ]
+  },
+  "original_clock": {
+    "start_epoch": 1793134532.272,
+    "deadline_epoch": 1793264132.272,
+    "provider_STOP_epoch": 1793265032.272,
+    "retention_epoch": 1793746800
+  },
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e024-coverage-20261027T205510Z-60cbf7d-r5.service",
+    "watchdog_timer": "e024-coverage-20261027T205510Z-60cbf7d-r5-exit.timer",
+    "watchdog_service": "e024-coverage-20261027T205510Z-60cbf7d-r5-exit.service",
+    "process": {
+      "pid": 2037,
+      "start_ticks": 5327,
+      "command_sha256": "b3b2c8f163885a899eac418dd7b017a2193b5c684f36b726a38396937015e598"
+    },
+    "boot_id": "eeaacdc0-ebf1-4e1d-a72a-33a21bf2daf5",
+    "source_commit": "2e34d648a7db6e84aa0720a23453ad30124571d5",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1793134532.272,
+    "hard_deadline_epoch": 1793264132.272,
+    "provider_stop_epoch": 1793265032.272,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "native_gates": {
+    "status": "PASS",
+    "config": {
+      "bytes": 1138,
+      "sha256": "0df68b83799be0065bd0c5ae8c9df8c3c4b7c289f91c860458714cbe4de8daa8"
+    },
+    "stages": [
+      {
+        "stage": "workflow-origin",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "import importlib.metadata as metadata,json,platform,sys\nfrom pathlib import Path\nexpected=('3.12.10', '9.16.3')\nd=metadata.distribution('snakemake')\nif (platform.python_version(),d.version)!=expected:raise ValueError('Frozen workflow Python/Snakemake version differs')\nif not Path(d._path).resolve().is_relative_to(Path(sys.prefix).resolve()):raise ValueError('Foreign workflow distribution')\nprint(json.dumps(dict(status='PASS_WORKFLOW_VERSION_ORIGIN',python=platform.python_version(),snakemake=d.version,prefix=sys.prefix,distribution=str(Path(d._path).resolve()))))\n"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 0.7006788680000113,
+          "peak_sampled_rss_bytes": 44560384,
+          "seconds_ceiling": 1199.9909834861755,
+          "rss_bytes_ceiling": 26000000000,
+          "launched_pid": 2249,
+          "sampled_cpu_seconds": 0.20999999999999996,
+          "sampled_average_cpus": 0.29970933845830866,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        }
+      },
+      {
+        "stage": "accepted-numerical",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e023_runtime.py",
+            "--reference",
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/gates/runtime.json",
+            "--output",
+            "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/gates/runtime.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 16.335554726999987,
+          "peak_sampled_rss_bytes": 315514880,
+          "seconds_ceiling": 1199.2899074554443,
+          "rss_bytes_ceiling": 26000000000,
+          "launched_pid": 2250,
+          "sampled_cpu_seconds": 14.19,
+          "sampled_average_cpus": 0.8686573695931037,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        }
+      },
+      {
+        "stage": "full-retained-readers",
+        "resources": {
+          "exit_code": 0,
+          "stop_reason": null,
+          "scope": "VERIFIED_REUSE, not repeated",
+          "reference": {
+            "bytes": 168,
+            "sha256": "35b18c36e8e78693bdb2ddac223083e0a6449938bc2760a3c9f8b9dda0eeb28f"
+          }
+        }
+      },
+      {
+        "stage": "actual-native-contracts",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "import sys,unittest;sys.path[:0]=['/srv/dl_binner/repo/scripts', '/srv/dl_binner/repo/src', '/srv/dl_binner/repo/tests'];r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(\"test_e024_coverage.Coverage.test_actual_public_segment_transport_without_aggregate_GET\"));sys.exit(not r.wasSuccessful())"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 0.9057250619999877,
+          "peak_sampled_rss_bytes": 71073792,
+          "seconds_ceiling": 1182.9538729190826,
+          "rss_bytes_ceiling": 26000000000,
+          "launched_pid": 2264,
+          "sampled_cpu_seconds": 0.6300000000000008,
+          "sampled_average_cpus": 0.6955753201847575,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        }
+      },
+      {
+        "stage": "serial-tiny-DAG",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e024_control.py",
+            "--plan",
+            "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/gates/tiny-DAG/plan.json",
+            "--engineering",
+            "--workflow"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 2.2129819409999527,
+          "peak_sampled_rss_bytes": 123224064,
+          "seconds_ceiling": 1182.04785323143,
+          "rss_bytes_ceiling": 26000000000,
+          "launched_pid": 2273,
+          "sampled_cpu_seconds": 1.37,
+          "sampled_average_cpus": 0.6190741888209694,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        }
+      }
+    ],
+    "original_start_epoch": 1793134532.272,
+    "finished_epoch": 1793136952.4375224,
+    "full_science_started": false,
+    "source": {
+      "status": "PASS",
+      "new": {
+        "bytes": 5288,
+        "sha256": "f53d3a22fb445784adc6c4603eea97dc427ccaa4eb06c07f0b988d00cb4fe3ce"
+      },
+      "immutable": {
+        "bytes": 43403,
+        "sha256": "fa7e55203409d32c1a3d9ba43ec8508f65ae741208a1506992c74c6d28a7c8f7"
+      }
+    },
+    "verified_reuse": {
+      "previous": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4",
+      "archive": {
+        "bytes": 333347,
+        "sha256": "3c9d06601d7dc83fd955210a7ccde60da83fcd3c3fa23fe97898443bcdc50b31"
+      },
+      "prior_config": {
+        "bytes": 1138,
+        "sha256": "e21f5904f9dceb6d1aea4c420f4fe064e429c1ce09f1a1a07ed7d1a8032f5c23"
+      },
+      "prior_gates": {
+        "bytes": 6085,
+        "sha256": "8a7c29a8c0070fee21affea670a4f2ec08cf7609d5ce41f024e1bc81dbd9dbe2"
+      },
+      "prior_science_failed": true,
+      "accepted_input_verification_repeated": false,
+      "prior_full_readers": {
+        "bytes": 168,
+        "sha256": "35b18c36e8e78693bdb2ddac223083e0a6449938bc2760a3c9f8b9dda0eeb28f"
+      },
+      "prior_24_native_contracts": "PASS, unchanged code paths except new explicitly tested segment transport",
+      "original_E009_BAM_full_hash_audit": "Retained prior-boot byte proof, no repeat",
+      "private_BAM_transport": "Retained passed real GCS byte/readback/decode; sidecar code unchanged"
+    },
+    "changed_native_segment_contract_passed": true
+  },
+  "private_GCS_BAM_transport": {
+    "status": "PASS_REAL_PRIVATE_BAM_TRANSPORT",
+    "result": {
+      "status": "PASS",
+      "sample": 6,
+      "reference": {
+        "bytes": 25461,
+        "sha256": "a27b0706441afb7e7777bdd82c988a86e9555407c52389209407dc500fe8bd02"
+      },
+      "reads": {
+        "bytes": 765,
+        "sha256": "bcdaceb8d9d5c4dcfbf8d4326e569effd57bc58d0d0b6e84a475a53eae51e712"
+      },
+      "second": null,
+      "rows": 7,
+      "bp": 25380,
+      "depth": {
+        "bytes": 208,
+        "sha256": "45c66f0227e12fb2fe6d38006448d5b6a75c20a130229c34832bd0539f164a26"
+      },
+      "feeder": {
+        "pairs": 5,
+        "reads": 10,
+        "bases": 1500,
+        "primary_identity_sum": 114537997304575118948765399975455003650093705622724380963257556731975441051004
+      },
+      "counters": {
+        "SAM_records": 10,
+        "primary_reads": 10,
+        "primary_identity_sum": 114537997304575118948765399975455003650093705622724380963257556731975441051004,
+        "accepted_alignments": 6,
+        "aligned_read_bases": 900,
+        "excluded_MAPQ": 2,
+        "unmapped": 2
+      },
+      "MAPQ_histogram": {
+        "0": 2,
+        "60": 6
+      },
+      "zero_rows": 5,
+      "mapper_exit": 0,
+      "retained_alignment": {
+        "status": "PASS",
+        "uri": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/gates/primary-transport.bam",
+        "bytes": 1100,
+        "sha256": "0ed546dd5e6dfa58f4e7ca88f3cd8c1c8b72adf46efd86cafda89e2e99dccd6e",
+        "full_readback_verified": true,
+        "native_full_decode_records": 10,
+        "native_encoder_exit": 0,
+        "native_decoder_exit": 0,
+        "sorted": false,
+        "indexed": false,
+        "semantics": "All original emitted SAM records, sequence/quality retained; unfiltered primary -N0; sort/index on restore; cannot recover unreported alternatives",
+        "backup": true
+      },
+      "policy": "M/= /X; MAPQ >=20 except unknown255; BQ0; exclude0xF04; overlapping mates twice; full contig denominator; no variance; unfiltered primary BAM retained separately when admitted"
+    },
+    "scope": "Generated tiny reads only; no community/public reads; real native mapper/encoder/streaming private upload/readback/full decoder"
+  },
+  "verified_original_E009_BAMs": {
+    "status": "PASS_ORIGINAL_E009_BAM_INPUTS",
+    "rows": [
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+        "identity": {
+          "bytes": 237732361,
+          "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+        }
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/sample_0000.sorted.bam",
+        "identity": {
+          "bytes": 3781565849,
+          "sha256": "11bc0c875cbdff23a0a3909a6b4478998dd610c98b45dbe7c6fd135f580fc4a9"
+        },
+        "quickcheck": true,
+        "SQ_matches_original_full_assembly": true,
+        "coordinate_sorted_header": true
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/sample_0000.sorted.bam.bai",
+        "identity": {
+          "bytes": 11891008,
+          "sha256": "43351a9d059021f54333491edf282d8f2bf9e4443244cd9a636520a08d142ffe"
+        }
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/sample_0002.sorted.bam",
+        "identity": {
+          "bytes": 4139872212,
+          "sha256": "782de3bf3b7b61d6e96d08f4e4cebd1c405f43e1eefdeeb0fb1a2c136e9ad03f"
+        },
+        "quickcheck": true,
+        "SQ_matches_original_full_assembly": true,
+        "coordinate_sorted_header": true
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/sample_0002.sorted.bam.bai",
+        "identity": {
+          "bytes": 9227496,
+          "sha256": "75c314aa2e1337c0cd51c91481902f66421591ab9aaa0fb4a341d5edf06b8658"
+        }
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/sample_0003.sorted.bam",
+        "identity": {
+          "bytes": 4096193878,
+          "sha256": "57238109a0c1920b15c48954bd98c51bf4bae6d28d021baab3857d4c59e887ab"
+        },
+        "quickcheck": true,
+        "SQ_matches_original_full_assembly": true,
+        "coordinate_sorted_header": true
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/sample_0003.sorted.bam.bai",
+        "identity": {
+          "bytes": 10094248,
+          "sha256": "9fc5eb09bad4f0258da5ff2bb652a8be4532f0b940e58b2cbdbdc7db5e4e76d6"
+        }
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/sample_0004.sorted.bam",
+        "identity": {
+          "bytes": 4233074143,
+          "sha256": "d1ff473dcc0d047acc81ce16bb0844da0b41d69f9b4f050340f33159b0f5cb88"
+        },
+        "quickcheck": true,
+        "SQ_matches_original_full_assembly": true,
+        "coordinate_sorted_header": true
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/sample_0004.sorted.bam.bai",
+        "identity": {
+          "bytes": 9649608,
+          "sha256": "4a370c75478e1f738ca59c1dbdff8a52ce4a96f17c41416ca30caaaea336b299"
+        }
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/sample_0006.sorted.bam",
+        "identity": {
+          "bytes": 4081898122,
+          "sha256": "66ed3a4c50aff0b3e7b49340747296ada7506f1d89a2fb17d6d3c00804e4f3b3"
+        },
+        "quickcheck": true,
+        "SQ_matches_original_full_assembly": true,
+        "coordinate_sorted_header": true
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/sample_0006.sorted.bam.bai",
+        "identity": {
+          "bytes": 9154488,
+          "sha256": "ccd00acf44f0ad5388921bc07a189a6b50a1cbad1b09a2743aa3103540912b99"
+        }
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/sample_0009.sorted.bam",
+        "identity": {
+          "bytes": 4189258550,
+          "sha256": "e1477de062386c7aa3d6b1fd4900ed8f0d536ae4eba03ab751aeb2fdfb7fc368"
+        },
+        "quickcheck": true,
+        "SQ_matches_original_full_assembly": true,
+        "coordinate_sorted_header": true
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/sample_0009.sorted.bam.bai",
+        "identity": {
+          "bytes": 9780224,
+          "sha256": "154ad5ab406b404ac9f1dca5ca39ffed24267271e076e1d8daacf46edbb51df4"
+        }
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/sample_0010.sorted.bam",
+        "identity": {
+          "bytes": 4136949462,
+          "sha256": "750ea876c0f32a1c704ba0ae21a4404c1d1d4d9e35e9db09a13be12e7408d3d9"
+        },
+        "quickcheck": true,
+        "SQ_matches_original_full_assembly": true,
+        "coordinate_sorted_header": true
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/sample_0010.sorted.bam.bai",
+        "identity": {
+          "bytes": 9312736,
+          "sha256": "3a0c433b1f81c4b42d59b66c5e9b4cead9b987d64a7a11ba5747c8cdaba8da85"
+        }
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/sample_0011.sorted.bam",
+        "identity": {
+          "bytes": 4099177939,
+          "sha256": "a3164903ce48512727bc1afb6f1e26fb1f87dc2b8ca9f322bd9561c94b2f8f39"
+        },
+        "quickcheck": true,
+        "SQ_matches_original_full_assembly": true,
+        "coordinate_sorted_header": true
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/sample_0011.sorted.bam.bai",
+        "identity": {
+          "bytes": 8024112,
+          "sha256": "5fe5a182224a969f4fc2a6e093e160d557fa4223e684a3da6fc6fe5492bb0cc7"
+        }
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/sample_0014.sorted.bam",
+        "identity": {
+          "bytes": 4161072973,
+          "sha256": "dc52f3a03a935f5dcf2931ec53447ba0412e6990d38cfb849e1e9dd41d585d0e"
+        },
+        "quickcheck": true,
+        "SQ_matches_original_full_assembly": true,
+        "coordinate_sorted_header": true
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/sample_0014.sorted.bam.bai",
+        "identity": {
+          "bytes": 9227112,
+          "sha256": "1b63974468c036cedf331a91ba3caadd552029a03b9e43123f9e1ddb66119cb8"
+        }
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/sample_0017.sorted.bam",
+        "identity": {
+          "bytes": 4186238920,
+          "sha256": "0861589ca06c90c7e92148f4c1d475b3c1b45f389c634124e05743e6bd6bd386"
+        },
+        "quickcheck": true,
+        "SQ_matches_original_full_assembly": true,
+        "coordinate_sorted_header": true
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/sample_0017.sorted.bam.bai",
+        "identity": {
+          "bytes": 9478960,
+          "sha256": "557bfa7ab7f612decc173c871f3ef011f8179bfbf17ec65c2b6aa3219b5ee678"
+        }
+      }
+    ],
+    "BAM_count": 10,
+    "BAM_bytes": 41105302048,
+    "assembly_contigs": 145702,
+    "assembly_bp": 231678157,
+    "scope": "Full SHA256/bytes, existing BAI bytes, native quickcheck and exact full SQ; no mapping, fit or output score"
+  },
+  "cleanup_review": {
+    "status": "REVIEWED_NO_SAFE_OLD_DELETION_NEEDED",
+    "largest_paths": [
+      [
+        260758646784,
+        "/srv/dl_binner/experiments"
+      ],
+      [
+        171612725248,
+        "/srv/dl_binner/experiments/e009"
+      ],
+      [
+        166110441472,
+        "/srv/dl_binner/experiments/e009/data-stage-v1"
+      ],
+      [
+        165500923904,
+        "/srv/dl_binner/experiments/e009/data-stage-v1/parts"
+      ],
+      [
+        25690615808,
+        "/srv/dl_binner/experiments/e014"
+      ],
+      [
+        19574079488,
+        "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc"
+      ],
+      [
+        13711233024,
+        "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work"
+      ],
+      [
+        13513576448,
+        "/srv/dl_binner/experiments/e019"
+      ],
+      [
+        13513572352,
+        "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916"
+      ],
+      [
+        11148980224,
+        "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work"
+      ],
+      [
+        8296312832,
+        "/srv/dl_binner/experiments/e016"
+      ],
+      [
+        8296308736,
+        "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3"
+      ],
+      [
+        8208097280,
+        "/srv/dl_binner/experiments/e015"
+      ],
+      [
+        6143975424,
+        "/srv/dl_binner/experiments/e016/positive-20261019T223128Z-2cfefa3/work"
+      ],
+      [
+        6113210368,
+        "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca"
+      ],
+      [
+        6106877952,
+        "/srv/dl_binner/experiments/e015/zero-20261019T102859Z-b259dca/work"
+      ],
+      [
+        5965783040,
+        "/srv/dl_binner/experiments/e017"
+      ],
+      [
+        5965778944,
+        "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766"
+      ],
+      [
+        5890052096,
+        "/srv/dl_binner/experiments/e020"
+      ],
+      [
+        5890048000,
+        "/srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f"
+      ],
+      [
+        5474271232,
+        "/srv/dl_binner/experiments/e021"
+      ],
+      [
+        5474267136,
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z"
+      ],
+      [
+        4637880320,
+        "/srv/dl_binner/experiments/e023"
+      ],
+      [
+        4637827072,
+        "/srv/dl_binner/experiments/e023/density-20261026T213652Z-f13e5a1-r2"
+      ],
+      [
+        3943636992,
+        "/srv/dl_binner/experiments/e014/inspect-20261018T224343Z-5030964"
+      ],
+      [
+        3807043584,
+        "/srv/dl_binner/experiments/e020/integration-20261023T111835Z-99af96f/work"
+      ],
+      [
+        3803959296,
+        "/srv/dl_binner/experiments/e017/information-20261020T232634Z-e78d766/work"
+      ],
+      [
+        3770732544,
+        "/srv/dl_binner/experiments/e018"
+      ],
+      [
+        3770728448,
+        "/srv/dl_binner/experiments/e018/voteled-20261021T122945Z-b996f6a"
+      ],
+      [
+        3292786688,
+        "/srv/dl_binner/experiments/e023/density-20261026T213652Z-f13e5a1-r2/work"
+      ],
+      [
+        3226398720,
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5"
+      ],
+      [
+        3017994240,
+        "/srv/dl_binner/experiments/e009/controls-v1-20261015T211004Z"
+      ],
+      [
+        2989694976,
+        "/srv/dl_binner/experiments/e018/voteled-20261021T122945Z-b996f6a/work"
+      ],
+      [
+        2922364928,
+        "/srv/dl_binner/experiments/e010"
+      ],
+      [
+        2594144256,
+        "/srv/dl_binner/experiments/e011"
+      ]
+    ],
+    "free": 55317929984,
+    "original_used_bytes": 261328027648,
+    "deleted": [],
+    "reason": "Streaming retention fits live fixed reserve/growth; largest accepted DNA/BAM/banks and linked runtime/cache dependencies protected. No verified unused regenerable deletion required; no speculative cleanup savings counted.",
+    "BAM_audit_resources": {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-c",
+        "import json,pathlib,subprocess,hashlib,time,shutil\nroot=pathlib.Path('/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4');repo=pathlib.Path('/srv/dl_binner/repo')\nz=json.loads((repo/'experiments/E009-competitive-benchmark/gcp-data-observed.json').read_text())['independent_feature_acceptance']['report']['checked_inputs']\nchosen={k:v for k,v in z.items() if k.endswith(('.bam','.bam.bai')) or k.endswith('/megahit/final.contigs.fa')}\nmapper='/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/samtools';rows=[]\nreference=next(k for k in chosen if k.endswith('.fa'));axis=[]\nwith pathlib.Path(reference).open() as f:\n name=None;size=0\n for line in f:\n  if line.startswith('>'):\n   if name is not None:axis.append((name,size))\n   name=line[1:].split()[0];size=0\n  else:size+=len(line.strip())\n if name is not None:axis.append((name,size))\nfor name,want in chosen.items():\n p=pathlib.Path(name)\n if p.is_symlink() or not p.is_file():raise ValueError('Missing/original input link '+name)\n h=hashlib.sha256();n=0\n with p.open('rb') as f:\n  for b in iter(lambda:f.read(8*1024**2),b''):h.update(b);n+=len(b)\n got=dict(bytes=n,sha256=h.hexdigest())\n if got!=want:raise ValueError('Original E009 byte contract differs '+name)\n row=dict(path=name,identity=got)\n if name.endswith('.bam'):\n  subprocess.run([mapper,'quickcheck','-v',name],check=True)\n  header=subprocess.check_output([mapper,'view','-H',name],text=True)\n  sq=[]\n  for line in header.splitlines():\n   if line.startswith('@SQ'):\n    t=dict(a.split(':',1) for a in line.split('\t')[1:]);sq.append((t['SN'],int(t['LN'])))\n  if sq!=axis or '@HD\tVN:' not in header or 'SO:coordinate' not in header:raise ValueError('BAM full assembly axis/order differs')\n  row['quickcheck']=True;row['SQ_matches_original_full_assembly']=True;row['coordinate_sorted_header']=True\n rows.append(row);print('E024_ORIGINAL_E009_BYTES_PASS',name,n,flush=True)\nvalue=dict(status='PASS_ORIGINAL_E009_BAM_INPUTS',rows=rows,BAM_count=sum(r['path'].endswith('.bam') for r in rows),BAM_bytes=sum(r['identity']['bytes'] for r in rows if r['path'].endswith('.bam')),assembly_contigs=len(axis),assembly_bp=sum(v for _,v in axis),scope='Full SHA256/bytes, existing BAI bytes, native quickcheck and exact full SQ; no mapping, fit or output score')\nif value['BAM_count']!=10 or len(axis)!=145702 or sum(v for _,v in axis)!=231678157:raise ValueError('Original E009 population differs')\n(root/'logs/e009-bam-integrity.json').write_text(json.dumps(value,indent=2)+chr(10))\n"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 183.51193619199998,
+      "peak_sampled_rss_bytes": 148078592,
+      "seconds_ceiling": 900,
+      "rss_bytes_ceiling": 26000000000,
+      "launched_pid": 2709,
+      "sampled_cpu_seconds": 54.089999999999996,
+      "sampled_average_cpus": 0.294749219709655,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    }
+  },
+  "transport_recovery": {
+    "previous": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4",
+    "renamed": [
+      {
+        "original": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/downloads/6",
+        "retained": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/downloads/6.failed-DLO401-r4"
+      },
+      {
+        "original": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/logs/acquire-first.log",
+        "retained": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/logs/acquire-first.log.failed-DLO401-r4"
+      }
+    ],
+    "accepted_verification_untouched": true,
+    "clock_reset": false
+  },
+  "native_public_segment_probe": {
+    "status": "PASS_PUBLIC_DECLARED_SEGMENT",
+    "url": "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_Oral_segments/short_read/2017.12.04_18.45.54_sample_6/reads/anonymous_reads.fq.gz/1520615125.672000/5174041407/1073741824/00000000",
+    "HTTP": 206,
+    "bytes_read": 16,
+    "ETag": "2a207807c26fd63313b460551472d1a5",
+    "scope": "Bounded public access check only; no bulk acquisition or auth bypass"
+  },
+  "release": {
+    "config": {
+      "bytes": 1138,
+      "sha256": "0df68b83799be0065bd0c5ae8c9df8c3c4b7c289f91c860458714cbe4de8daa8"
+    },
+    "plan": {
+      "bytes": 2203,
+      "sha256": "a23997bdf0431be85e2c634cc1fc6388f595039caca77680cd3e8b934e996597"
+    },
+    "vm_start_epoch": 1793134532.272,
+    "credit_gate_passed": true,
+    "pending_usage_accounted": true,
+    "native_gates_passed": true,
+    "watchdog_verified": true,
+    "provider_STOP_verified": true,
+    "existing_VM_only": true,
+    "full_axes_verified": true,
+    "headroom_measured": true,
+    "retention_passed": true,
+    "real_money_authorized": false,
+    "estimated_incremental_gross_USD": 15.30125,
+    "ceiling_USD": 16,
+    "provider_STOP_seconds": 130500,
+    "storage_retention_extended": false,
+    "credit_valid_until_epoch": 1799708400,
+    "storage_valid_until_epoch": 1793746800,
+    "covered_costs": [
+      "compute",
+      "disk",
+      "storage",
+      "network",
+      "operations"
+    ],
+    "gate_files": {
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/gates/operational-adapter.json": {
+        "bytes": 345,
+        "sha256": "abee403bdd5472c4b64d6a40e50152110fe0c4c6c67c5afb2148c6f3f81a99ff"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/logs/operational-adapter-source.json": {
+        "bytes": 541,
+        "sha256": "c208e765439758a6827e77de1f6cd302eefd86ad528dc6fcd7edcf104f151093"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/payload/operational-reuse-adapter-7019517.py": {
+        "bytes": 6760,
+        "sha256": "15d80084c0432f73f56fc1ff53fefd9fa7939eb141783c577578add10a0525f3"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/logs/public-segment-native-probe.json": {
+        "bytes": 391,
+        "sha256": "e640c9a14e17ab4e1bedeca4b4b39dcbc9b0660f1493ce49543993a24b43cd25"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/gates/completion.json": {
+        "bytes": 6451,
+        "sha256": "5700a27898011b6b690dc28791d98a74631514ab1b703c7d243176221900d139"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/gates/runtime.json": {
+        "bytes": 19072,
+        "sha256": "3098eca3219993be12d7b2017d22b4dd155fa4a2e6eb9df8ec656c65718d85b8"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/gates/readers.json": {
+        "bytes": 168,
+        "sha256": "35b18c36e8e78693bdb2ddac223083e0a6449938bc2760a3c9f8b9dda0eeb28f"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/gates/private-BAM-smoke/receipt.json": {
+        "bytes": 2129,
+        "sha256": "e426d6fd1836d9d8ce344e2fda28d13755c4132a58b14737eec65bd03c6780b2"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/logs/financial-admission.json": {
+        "bytes": 2305,
+        "sha256": "dd7f082ddbc38a632e16bdb943929d030ee8dbed5cff5790e07c0f941ed656a4"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/logs/provider-before-release.json": {
+        "bytes": 33092,
+        "sha256": "498c89687272c444cea191b53b89739c1d31e015e04d1663fedbe7846d2ebeee"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/logs/host-before-release.json": {
+        "bytes": 467,
+        "sha256": "908d58347c0b07f83ae3a3274882ab5dfb03a20acbf97415f7918da1acdf82a8"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/logs/watchdog-live-at-release.json": {
+        "bytes": 502,
+        "sha256": "49bf8c35316513309822efacad89fa5eeb912ef04243236203823cdb8f288589"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/logs/supervision.json": {
+        "bytes": 1072,
+        "sha256": "46b8a06a5bfae1056143bd21c064bf2968a00a5ddc142c73535b31654caeebdb"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/logs/e009-bam-integrity.json": {
+        "bytes": 6990,
+        "sha256": "37f990b7490b8cae6be1357a05623724c2d8f524745d054a183748545cdbed6d"
+      },
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/logs/cleanup-review.json": {
+        "bytes": 6790,
+        "sha256": "2f6ba2cddc935c4490ac4a87da6c1bae431cacf479bc7b4c508fb3b36320b22d"
+      }
+    },
+    "released_epoch": 1793137169.337889,
+    "actual_absolute_provider_STOP": "2026-10-29T09:10:02.272Z",
+    "BAM_storage": "Existing private GCS only; full readback/decode; no local spool or WAN export",
+    "external_binners": false
+  },
+  "progress": {
+    "actual_work": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work",
+    "filesystem": {
+      "total": 316733652992,
+      "used": 263956623360,
+      "free": 52760252416
+    },
+    "sealed": [
+      "verified/done.json"
+    ],
+    "raw": {
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/downloads/6/raw.fq.gz": 2552233984
+    },
+    "log": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/logs/acquire-first.log",
+    "tail": "ES 6 1693450240\nE024_DOWNLOAD_BYTES 6 1697644544\nE024_DOWNLOAD_BYTES 6 1702887424\nE024_DOWNLOAD_BYTES 6 1709178880\nE024_DOWNLOAD_BYTES 6 1723858944\nE024_DOWNLOAD_BYTES 6 1733296128\nE024_DOWNLOAD_BYTES 6 1740636160\nE024_DOWNLOAD_BYTES 6 1747976192\nE024_DOWNLOAD_BYTES 6 1757413376\nE024_DOWNLOAD_BYTES 6 1781530624\nE024_DOWNLOAD_BYTES 6 1828716544\nE024_DOWNLOAD_BYTES 6 1852833792\nE024_DOWNLOAD_BYTES 6 1864368128\nE024_DOWNLOAD_BYTES 6 1876951040\nE024_DOWNLOAD_BYTES 6 1894776832\nE024_DOWNLOAD_BYTES 6 1911554048\nE024_DOWNLOAD_BYTES 6 1922039808\nE024_DOWNLOAD_BYTES 6 1932525568\nE024_DOWNLOAD_BYTES 6 1943011328\nE024_DOWNLOAD_BYTES 6 1954545664\nE024_DOWNLOAD_BYTES 6 1977614336\nE024_DOWNLOAD_BYTES 6 2025848832\nE024_DOWNLOAD_BYTES 6 2064646144\nE024_DOWNLOAD_BYTES 6 2081423360\nE024_DOWNLOAD_BYTES 6 2090860544\nE024_DOWNLOAD_BYTES 6 2097152000\nE024_DOWNLOAD_BYTES 6 2105540608\nE024_DOWNLOAD_BYTES 6 2120220672\nE024_DOWNLOAD_BYTES 6 2132803584\nE024_DOWNLOAD_BYTES 6 2142240768\nE024_PUBLISHER_SEGMENT_PASS 6 1 2147483648\nE024_DOWNLOAD_BYTES 6 2148532224\nE024_DOWNLOAD_BYTES 6 2161115136\nE024_DOWNLOAD_BYTES 6 2172649472\nE024_DOWNLOAD_BYTES 6 2181038080\nE024_DOWNLOAD_BYTES 6 2187329536\nE024_DOWNLOAD_BYTES 6 2194669568\nE024_DOWNLOAD_BYTES 6 2204106752\nE024_DOWNLOAD_BYTES 6 2210398208\nE024_DOWNLOAD_BYTES 6 2214592512\nE024_DOWNLOAD_BYTES 6 2218786816\nE024_DOWNLOAD_BYTES 6 2224029696\nE024_DOWNLOAD_BYTES 6 2228224000\nE024_DOWNLOAD_BYTES 6 2233466880\nE024_DOWNLOAD_BYTES 6 2237661184\nE024_DOWNLOAD_BYTES 6 2242904064\nE024_DOWNLOAD_BYTES 6 2253389824\nE024_DOWNLOAD_BYTES 6 2263875584\nE024_DOWNLOAD_BYTES 6 2275409920\nE024_DOWNLOAD_BYTES 6 2285895680\nE024_DOWNLOAD_BYTES 6 2293235712\nE024_DOWNLOAD_BYTES 6 2296381440\nE024_DOWNLOAD_BYTES 6 2299527168\nE024_DOWNLOAD_BYTES 6 2303721472\nE024_DOWNLOAD_BYTES 6 2307915776\nE024_DOWNLOAD_BYTES 6 2320498688\nE024_DOWNLOAD_BYTES 6 2336227328\nE024_DOWNLOAD_BYTES 6 2344615936\nE024_DOWNLOAD_BYTES 6 2350907392\nE024_DOWNLOAD_BYTES 6 2357198848\nE024_DOWNLOAD_BYTES 6 2362441728\nE024_DOWNLOAD_BYTES 6 2368733184\nE024_DOWNLOAD_BYTES 6 2375024640\nE024_DOWNLOAD_BYTES 6 2379218944\nE024_DOWNLOAD_BYTES 6 2383413248\nE024_DOWNLOAD_BYTES 6 2389704704\nE024_DOWNLOAD_BYTES 6 2412773376\nE024_DOWNLOAD_BYTES 6 2452619264\nE024_DOWNLOAD_BYTES 6 2472542208\nE024_DOWNLOAD_BYTES 6 2486173696\nE024_DOWNLOAD_BYTES 6 2494562304\nE024_DOWNLOAD_BYTES 6 2501902336\nE024_DOWNLOAD_BYTES 6 2510290944\nE024_DOWNLOAD_BYTES 6 2524971008\nE024_DOWNLOAD_BYTES 6 2535456768\nE024_DOWNLOAD_BYTES 6 2540699648\nE024_DOWNLOAD_BYTES 6 2544893952\nE024_DOWNLOAD_BYTES 6 2549088256\nE024_DOWNLOAD_BYTES 6 2552233984\n",
+    "publisher_segments_passed_for_sample6": 2,
+    "full_object_admitted": false,
+    "latest_snapshot": {
+      "path": "artifacts/e024-native/20261027T204322Z/native-status-1793138417853866000.json",
+      "bytes": 38512,
+      "sha256": "e7c60522a0ada81f132b97343b5178709c964b839549636c7d4fa8814f3a57e1"
+    }
+  },
+  "watchdog_at_observation": {
+    "boot_id": "eeaacdc0-ebf1-4e1d-a72a-33a21bf2daf5",
+    "checked_utc": "2026-10-27T21:59:55.866971+00:00",
+    "decision": "workflow alive",
+    "expected_process": {
+      "command_sha256": "b3b2c8f163885a899eac418dd7b017a2193b5c684f36b726a38396937015e598",
+      "pid": 2037,
+      "start_ticks": 5327
+    },
+    "observed_process": {
+      "command_sha256": "b3b2c8f163885a899eac418dd7b017a2193b5c684f36b726a38396937015e598",
+      "pid": 2037,
+      "start_ticks": 5327
+    },
+    "shutdown": false,
+    "workflow_root": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5"
+  },
+  "parent_at_observation": "MainPID=2037\nResult=success\nExecMainStatus=0\nActiveState=active\nSubState=running\n",
+  "passed_complete_samples": 0,
+  "pilot_admitted": false,
+  "grouping_completed": false,
+  "evaluation_started": false,
+  "provisional_truth_and_baselines_unchanged": true,
+  "external_binners": "SemiBin2 assessed and deferred; no installation/fit or external expansion",
+  "resources": "Existing8vCPU/32GiB E2, original30/300GiB disks, 4 numerical threads/8 total data CPUs, 26GB RSS, 24GiB growth/25GiB reserve,36h cumulative/36.25h providerSTOP; all original limits remain",
+  "previous_failures": [
+    "Pre-gate CLI path assumption; stopped",
+    "Controller attempted scheduling update while RUNNING; stopped",
+    "Isolated arm import; stopped",
+    "Aggregate publisher GET401; collected/readback verified, watcher stopped",
+    "Reuse verifier summary/internal inventory schema; held-parent repair, no restart or data replay"
+  ],
+  "first_disk_snapshot_limit": "First retained native df was on third setup boot, with explicit64MiB conservative allowance; earlier Git-sync-only peak unmeasured, never claimed continuous measurement",
+  "compact_backup": {
+    "UTC": "2026-10-27T21:49:22.904582+00:00",
+    "members": 301,
+    "all_member_checksums_verified": true,
+    "objects": {
+      "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r5/controller-evidence.tar.gz": {
+        "bytes": 1182372,
+        "sha256": "bb2e00fd7bab13afc0cac86cae5e8f783f6ce82d790b18153ce9b02392187ce9",
+        "readback_verified": true
+      },
+      "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r5/controller-evidence.json": {
+        "bytes": 45918,
+        "sha256": "ed0d193c0bc23aaf78fe5dd82974dcd7db8b34d8c5c51d31df9d0d60d77c94d8",
+        "readback_verified": true
+      }
+    },
+    "GCP_VM_started": false,
+    "Mac_readback_bytes": 1228290,
+    "gross_export_estimate_USD": 0.00013727210462093352
+  },
+  "exact_native_receipts": {
+    "host.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/host.json",
+      "bytes": 467,
+      "sha256": "908d58347c0b07f83ae3a3274882ab5dfb03a20acbf97415f7918da1acdf82a8"
+    },
+    "science-plan.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/science-plan.json",
+      "bytes": 2203,
+      "sha256": "a23997bdf0431be85e2c634cc1fc6388f595039caca77680cd3e8b934e996597"
+    },
+    "config.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/config.json",
+      "bytes": 1138,
+      "sha256": "0df68b83799be0065bd0c5ae8c9df8c3c4b7c289f91c860458714cbe4de8daa8"
+    },
+    "release.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/release.json",
+      "bytes": 3878,
+      "sha256": "07f3441b4e9a8db4bf924e983b6e61a8ff6beb50f18f94a96429ccf4a277c1b8"
+    },
+    "gates/readers.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/gates/readers.json",
+      "bytes": 168,
+      "sha256": "35b18c36e8e78693bdb2ddac223083e0a6449938bc2760a3c9f8b9dda0eeb28f"
+    },
+    "gates/runtime.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/gates/runtime.json",
+      "bytes": 19072,
+      "sha256": "3098eca3219993be12d7b2017d22b4dd155fa4a2e6eb9df8ec656c65718d85b8"
+    },
+    "gates/source.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/gates/source.json",
+      "bytes": 262,
+      "sha256": "018c3702c33a14b91c355830696d9d211e7cca1b0e9334149f1134324b848dfe"
+    },
+    "gates/verified-reuse.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/gates/verified-reuse.json",
+      "bytes": 963,
+      "sha256": "26620f22b84b1d6017fea1517af3d74d7006bedb9d4630f739319e3b48d7bfa0"
+    },
+    "gates/completion.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/gates/completion.json",
+      "bytes": 6451,
+      "sha256": "5700a27898011b6b690dc28791d98a74631514ab1b703c7d243176221900d139"
+    },
+    "gates/operational-adapter.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/gates/operational-adapter.json",
+      "bytes": 345,
+      "sha256": "abee403bdd5472c4b64d6a40e50152110fe0c4c6c67c5afb2148c6f3f81a99ff"
+    },
+    "logs/e009-bam-integrity.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/logs/e009-bam-integrity.json",
+      "bytes": 6990,
+      "sha256": "37f990b7490b8cae6be1357a05623724c2d8f524745d054a183748545cdbed6d"
+    },
+    "logs/public-segment-native-probe.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/logs/public-segment-native-probe.json",
+      "bytes": 391,
+      "sha256": "e640c9a14e17ab4e1bedeca4b4b39dcbc9b0660f1493ce49543993a24b43cd25"
+    },
+    "logs/cleanup-review.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/logs/cleanup-review.json",
+      "bytes": 6790,
+      "sha256": "2f6ba2cddc935c4490ac4a87da6c1bae431cacf479bc7b4c508fb3b36320b22d"
+    },
+    "logs/transport-recovery.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/logs/transport-recovery.json",
+      "bytes": 683,
+      "sha256": "ea3629be7167bf182ff99d165b54a1d8ebb5ee24f2aa329ec6699f158cb6613f"
+    },
+    "logs/operational-adapter-source.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/logs/operational-adapter-source.json",
+      "bytes": 541,
+      "sha256": "c208e765439758a6827e77de1f6cd302eefd86ad528dc6fcd7edcf104f151093"
+    },
+    "logs/watchdog-live-at-release.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/logs/watchdog-live-at-release.json",
+      "bytes": 502,
+      "sha256": "49bf8c35316513309822efacad89fa5eeb912ef04243236203823cdb8f288589"
+    },
+    "logs/supervision.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/logs/supervision.json",
+      "bytes": 1072,
+      "sha256": "46b8a06a5bfae1056143bd21c064bf2968a00a5ddc142c73535b31654caeebdb"
+    },
+    "gates/private-BAM-smoke/receipt.json": {
+      "local": "artifacts/e024-native/20261027T204322Z/native-receipts/gates/private-BAM-smoke/receipt.json",
+      "bytes": 2129,
+      "sha256": "e426d6fd1836d9d8ce344e2fda28d13755c4132a58b14737eec65bd03c6780b2"
+    }
+  },
+  "scientific_completion_not_inferred_from_guest_progress": true,
+  "initial_handoff_observation_UTC": "2026-10-27T21:47:12.042342+00:00"
+}

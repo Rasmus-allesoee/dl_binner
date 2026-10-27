@@ -1,14 +1,47 @@
 # Google Cloud workspace operations
 
 
-**October 27 E024 authorization update:** the owner now approves execution from
-`f7083b2` with the [reusable primary-BAM amendment](../experiments/E024-oral-measured-coverage/execution-amendment.md).
-The complete ceiling is $16 under the explicit small-increase permission;
-original 36-hour/36.25-hour STOP and November 4 retention remain. No new VM/disk or
-quota is selected. Stream <=130 GiB primary BAM to existing private GCS and verify
-all bytes/decode; no local spool or BAM WAN export. Old preparation-only paragraphs
-below are dated history, superseded for this explicit run only. Fresh credit and
-price read-only gates pass; native headroom/runtime/watchdog/release remain pending.
+**October 27 E024 is RUNNING: first sample acquisition, not completed data or quality.**
+[Native handoff](../experiments/E024-oral-measured-coverage/native-observed.json)
+owns phase `coverage-20261027T205510Z-60cbf7d-r5`. Scientific source is clean
+`2e34d64`; the explicit operational reuse adapter is `7019517`, hash-bound outside
+that checkout. All earlier failed journals remain. Existing E2/30+300 GiB disks
+only, no provisioning, resize, quota/IAM change, reinstall or historical deletion.
+The original first-start clock is 20:55:32 UTC October 27. Hard deadline is
+08:55:32 UTC October 29; independent provider STOP is **09:10:02 UTC October 29**,
+earlier than the original 36.25-hour fallback. Fresh current-boot/process watcher
+passes live/normal/crash tests and stops on parent exit; progress is not success.
+
+The [retention amendment](../experiments/E024-oral-measured-coverage/execution-amendment.md)
+keeps complete unfiltered primary BAMs in existing private GCS, unsorted, with
+full SHA256/readback/native decode before new raw release. Sort/index on later
+restore. No local BAM spool or WAN BAM export; 130 GiB remote cap / original
+24 GiB working allowance and 25 GiB reserve. Original data/learning/criteria stay.
+New complete $16 credit-only ceiling uses the owner's small-increase approval;
+forecast $15.30125. Live Welcome credit DKK 1,790.46 Available / 91%, January 12,
+2027 expiry; pending usage unknown / $35 reserve. Only this project is linked.
+Original retained storage remains $7.73369 within $8 through November 4,
+00:00 Copenhagen; new BAM storage comes from E024, with no automatic renewal.
+[Provisional priced uptime](../experiments/E024-oral-measured-coverage/cost-to-handoff.json)
+separates five allocations, disk attribution and tiny export from sampled CPU.
+No credit delta is treated as an invoice.
+
+The publisher's aggregate GET returned 401 despite public HEAD; direct declared
+segments are public and preserve every frozen length/ETag/MD5/aggregate/full-byte
+check. Accepted verification and passed native/cache contracts are reused;
+current source/runtime/segment tests and completed tiny no-op pass. Read the
+**actual work path from config**: it is retained under `...-r4/work`, while the
+new parent/collection live under `...-r5`. BAM receipts point to the original
+`...-r4/alignments` GCS prefix. Never infer these paths from the latest phase name.
+
+### Recovery STOP discipline
+
+Configure scheduling only while the instance is TERMINATED. For a recovery under
+an existing first-start clock, use the original **absolute** deadline with
+`--clear-max-run-duration --termination-time=ORIGINAL_UTC_END`, STOP and no restart;
+read back the exact `scheduling.terminationTime`. A relative maxRunDuration starts
+again on each boot and can extend an old clock. Do not attempt to change it on a
+running VM. This changes the shutdown bound only, not resources or authorization.
 
 ## E024 local preparation, October 27, 2026
 

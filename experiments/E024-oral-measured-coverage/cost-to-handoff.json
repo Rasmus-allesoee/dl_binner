@@ -1,0 +1,97 @@
+{
+  "status": "PROVISIONAL_PRICED_ALLOCATION_AT_HANDOFF_NOT_FINAL_INVOICE",
+  "as_of_UTC": "2026-10-27T22:00:25.269841+00:00",
+  "periods": [
+    {
+      "start_UTC": "2026-10-27T20:55:32.272000+00:00",
+      "end_UTC": "2026-10-27T20:57:13.206000+00:00",
+      "seconds": 100.93400001525879,
+      "ongoing": false,
+      "proof": [
+        "recovery-r2-control/provider-before.json",
+        "recovery-r2-control/STOP-readback.json",
+        "control-plane/stop-dl-binner-cpu-1793134639423600000.json"
+      ]
+    },
+    {
+      "start_UTC": "2026-10-27T20:59:32.697000+00:00",
+      "end_UTC": "2026-10-27T21:01:57.983000+00:00",
+      "seconds": 145.28600001335144,
+      "ongoing": false,
+      "proof": [
+        "recovery-r3-control/provider-before.json",
+        "recovery-r3-control/STOP-readback.json",
+        "recovery-r2-control/provider-start.json"
+      ]
+    },
+    {
+      "start_UTC": "2026-10-27T21:03:08.039000+00:00",
+      "end_UTC": "2026-10-27T21:04:59.785000+00:00",
+      "seconds": 111.74600005149841,
+      "ongoing": false,
+      "proof": [
+        "recovery-r3-control/provider-start.json",
+        "recovery-r3-control/absolute-STOP-readback.json",
+        "recovery-r3-control/stop-dl-binner-cpu-1793135105170914000.json"
+      ]
+    },
+    {
+      "start_UTC": "2026-10-27T21:07:06.483000+00:00",
+      "end_UTC": "2026-10-27T21:20:53.292000+00:00",
+      "seconds": 826.8090000152588,
+      "ongoing": false,
+      "proof": [
+        "release-control/provider-before-release.json",
+        "recovery-r4-control/provider-start.json",
+        "recovery-r4-control/absolute-STOP-readback.json"
+      ]
+    },
+    {
+      "start_UTC": "2026-10-27T21:31:06.905000+00:00",
+      "end_UTC": "2026-10-27T22:00:25.269841+00:00",
+      "seconds": 1758.364840745926,
+      "ongoing": true,
+      "proof": [
+        "recovery-r5-control/provider-start.json",
+        "recovery-r5-control/absolute-STOP-readback.json",
+        "release-r5-control/provider-before-release.json"
+      ]
+    }
+  ],
+  "allocation_seconds_to_observation": 2943.1398408412933,
+  "allocation_hours_to_observation": 0.8175388446781371,
+  "compute_IP_USD_per_hour": 0.2730456762592465,
+  "compute_IP_estimate_USD": 0.22322544671334502,
+  "PD_attribution_USD": 0.03494138623829846,
+  "PD_note": "Overlaps original existing-storage approval, not another invoice; disk billing also continues while stopped",
+  "sampled_CPU_is_separate": true,
+  "credit_delta_not_invoice": true,
+  "controller_export": {
+    "UTC": "2026-10-27T21:49:22.904582+00:00",
+    "members": 301,
+    "all_member_checksums_verified": true,
+    "objects": {
+      "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r5/controller-evidence.tar.gz": {
+        "bytes": 1182372,
+        "sha256": "bb2e00fd7bab13afc0cac86cae5e8f783f6ce82d790b18153ce9b02392187ce9",
+        "readback_verified": true
+      },
+      "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r5/controller-evidence.json": {
+        "bytes": 45918,
+        "sha256": "ed0d193c0bc23aaf78fe5dd82974dcd7db8b34d8c5c51d31df9d0d60d77c94d8",
+        "readback_verified": true
+      }
+    },
+    "GCP_VM_started": false,
+    "Mac_readback_bytes": 1228290,
+    "gross_export_estimate_USD": 0.00013727210462093352
+  },
+  "complete_forecast_USD": 15.30125,
+  "complete_ceiling_USD": 16,
+  "original_clock_not_reset": true,
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "final_uptime_BAM_storage_and_science_outcome_pending": true,
+  "initial_priced_observation_UTC": "2026-10-27T21:47:12.042342+00:00",
+  "subtotal_compute_IP_PD_controller_export_USD": 0.25830410505626444,
+  "ongoing_GCS_operations_not_yet_final": true
+}

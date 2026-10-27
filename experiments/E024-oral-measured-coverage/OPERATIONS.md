@@ -1,13 +1,54 @@
 # E024 operations
 
-## Current status: execution authorized, fresh native gates pending
+## Current status: running first-sample acquisition, October 27
 
-October 27, 2026. The owner now authorized execution and the [prospective reusable-BAM amendment](execution-amendment.md), with a small complete ceiling increase to $16. Earlier preparation-only statements below are superseded by that explicit scope. Current branch
-is `oral-measured-coverage-information`; E023's MODIFY result and all accepted
-baselines/data/source freezes/failures are unchanged. The main VM was independently
-read-only checked **TERMINATED**, `e2-standard-8`, original 30/300 GiB disks.
-No start, resource/retention change, paid compute, bulk reads, community mapping,
-new depth, fit, community score, GLM extraction or deletion of pre-existing artifacts occurred.
+[Native receipt](native-observed.json) and [provisional allocation costs](cost-to-handoff.json)
+own phase `coverage-20261027T205510Z-60cbf7d-r5`. All-ten data, pilot admission,
+grouping and quality are not complete. At 22:00 UTC sample 6 has 2.552 GB downloaded and two 1 GiB segments verified,
+parent PID 2037 is live and the watcher agrees. Do not confuse this progress with
+accepted data or infer success from a future stop.
+
+The scientific checkout is clean `2e34d64`, normally pushed from Mac and synced
+with the existing read-only key. Explicit operational adapter `7019517` is copied
+and hash-bound outside that checkout; it repairs archive-schema consumption only.
+The new release binds that adapter as well as original native/runtime/input/
+credit/STOP/watcher proofs. The original `f7083b2` candidate parameters/learning/
+criteria remain; changes are prospective retention and transport, not score tuning.
+
+**Read actual paths from config.** Parent/config/collection are under `...-r5`;
+passed work remains under `...-r4/work`, with the unchanged sealed verification
+and exact original plan. Primary BAM destination remains the plan's private
+`...-r4/alignments` prefix. Old r4 FAILED completion and all failed journals are
+preserved; r5 does not rewrite them as success. A bounded member-verified/readback
+backup contains 301 controller/native-proof members, 1.18 MB compressed, under
+r5's private prefix. It contains no credentials, environments or community bulk.
+
+The complete ceiling is **$16**, using the owner's explicit small-increase
+permission. Full forecast remains $15.30125. Original first start was 20:55:32 UTC
+October 27; hard deadline 08:55:32 UTC October 29, absolute provider STOP
+09:10:02 UTC October 29. Setup did not reset the clock. Fresh boot/process-bound
+live/normal/crash watcher tests pass; provider STOP/no automatic restart remain.
+No VM/disk provisioning, resize, new quota/IAM/service, reinstall, historical
+deletion, new fit, score or GLM extraction occurred.
+
+Five original Linux gates / 24 actual contracts and the real 20-job tiny DAG pass.
+Real private primary-BAM transport passes. Recovery verifies the old failure
+archive/every member, unchanged plan/inputs and current source/runtime; it tests
+new segmented HTTP acquisition and performs a completed tiny-DAG **no-op**.
+Full E009 BAM/BAI/assembly SHA256, quickcheck and SQ pass. Old complete contracts
+and science are reused with explicit provenance, not silently repeated.
+
+Aggregate publisher GET returned 401 despite public HEAD. Bounded public probes
+confirm the declared individual segments are readable. The new transport gets
+those frozen segments in order with exact length/ETag/MD5, DLO aggregate and
+new whole-file MD5/SHA256 checks. It does not weaken admission or fall back/retry.
+Only raw from a fully admitted measured summary plus verified BAM backup can be
+released. Failed operational attempts and the earlier disk-snapshot gap remain
+visible in the receipt; first retained df has an explicit conservative allowance.
+
+The following preparation/authorization text is retained as dated protocol
+context. This current status and the new inspection prompt supersede its old
+"future/pending" status statements.
 
 [Design](design.md), [protocol](protocol.json), [read manifest](read-manifest.json),
 [reuse lock](reuse-lock.json), [source freeze](source-lock.json),
@@ -163,7 +204,7 @@ new fit, GLM, confirmation or external tool. Apply the predeclared disposition a
 recommend one next decision, distinguishing downstream information from a fully
 matched latest learner. Update records/check/commit with what changed/why.
 
-## Exact following prompt
+## Authorized execution prompt, October 27 (carried out)
 
 Our goal is a substantially stronger and robust binner. Carry out E024's frozen
 execution and completed-output instructions in OPERATIONS.md on the exact clean
@@ -209,3 +250,85 @@ bounded local new-output review (four threads, 8 GB RSS, one hour / 8 GiB extra,
 reuse older summaries without refit/rescore. Report actual allocation/storage/export
 cost, matched gains/trade-offs/limits, disposition, one next strongest recovery decision (important, think extensively) and the next exact prompt. Both communities remain development data; this is not a
 matched latest-learning/GLM or independent-confirmation result.
+
+
+## Storage alternative clarification
+
+The amendment's 128–200 GiB examples concern retaining all sorted BAMs together.
+A **64 GiB temporary sort-only disk** for serial GCS delivery would fit the current
+404 GiB quota (300 + 64 = 364 GiB), about $0.32 for 36.25 hours / $1.47 for seven
+days, plus sort/setup/copy/verification CPU. It is also a valid future restore
+option; it is not selected or created now. Streaming unsorted lossless BAMs
+preserves alignments without paying today's sort cost for an unselected consumer.
+Deleting a temporary disk destroys its files; only an independently verified
+backup survives. No disk or old data was deleted in E024.
+
+## Exact following prompt
+
+Our goal is substantially closing the recovery gap with coherent upgrades and
+selective controls. Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015 and E024's
+native-observed, cost-to-handoff, execution amendment, protocol/source/reuse/read/
+runtime/resource locks and operations. Inspect phase
+`coverage-20261027T205510Z-60cbf7d-r5`, preserving every accepted E009–E024 input,
+truth, cache/vector, source freeze, output and failed journal. Keep skin unscored.
+
+Check GCP control-plane state, `e024-candidate/status` and private completion at
+`gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r5/completion.json`.
+Do not infer success from shutdown or transfer. If still healthy/running, report
+one real current stage/progress and leave the verified watcher/absolute provider
+STOP intact, without polling to completion. Do not start a new job or replay work.
+
+After independently verified shutdown, establish native admission/verified reuse,
+accepted verification, each actual acquisition/index/sample/pilot/matrix/rebind/
+group/export/audit exit, all collection/upload/readbacks and matching watcher exit.
+Read actual work and BAM-prefix paths from config/plan/receipts: work and primary
+BAMs remain under the prior r4 paths; new parent/collection are r5. Old FAILED
+receipts stay failed. Scientific source is `2e34d64`; the separately bound repair
+adapter is `7019517`. The archive verifier consumes the actual internal inventory.
+
+Refresh live credit/prices/delay, original retention and costs. Price **all five
+allocations** and the continuing last allocation from measured lifecycle times,
+compute/IP, PD, GCS/operations and export separately from sampled CPU. Keep the
+original $16 amended complete ceiling, original first-start/36-hour deadline and
+November 4, 00:00 Copenhagen boundary; no clock/resource/retention extension.
+Account for the controller-backup readback already exported (1,228,290 bytes)
+before the 2 GiB cumulative compact-export allowance and 8 GiB inclusive local
+review. Inspect the real member sizes/free space before transfer; no larger fallback.
+
+Verify controller backup and the main archive/every member/alias, including the
+bound prior native-gate archive when needed. Review all ten publisher segment and
+new whole-file checksums, exact GSA/ordered ten-column axes, preserved means/zeros,
+untouched native vectors, explicit depth-only rebind, composite-neighbor recall,
+fixed E023 hierarchy/marker choices and both complete DNA partitions. Primary BAMs
+are unfiltered **unsorted** lossless files in existing private GCS with native full
+SHA256/readback/decode receipts. Inspect their actual metadata/receipts and storage;
+**do not export BAMs to the Mac**, infer sorted/indexed readiness or remap. Future
+reuse must restore and byte-verify them before sorting/indexing. Archive hashes
+alone do not back up omitted original inputs. Preserve the first disk-snapshot gap.
+
+If complete, perform only the frozen bounded local new-output diagnostics with
+the separate oral provided-origin oracle / full 799 references / 2,083,072,211 bp,
+known-shared sensitivity and all length/origin/eligibility/marker/zero/unknown/
+non-target/excluded/unassigned populations. Retain E009 v2 156-target context and
+3.3034% N quarantine; reuse all old summaries without refit/rescore. Four threads,
+8 GB sampled RSS, one hour, 8 GiB extra inclusive staging/review and 6 GiB physical
+reserve. Preserve the original Mac portability tolerance. Do not claim quality
+before contracts pass or call threshold tiers formal MIMAG HQ without RNA checks.
+
+Apply the frozen KEEP/MODIFY/ABANDON rule unchanged. Report paired density/marker
+and target/neighborhood trade-offs, actual resources/cost/storage and one strongest
+recovery-focused next block. Weigh a matched latest learning/depth/GLM bundle,
+information/representation/grouping limitations and a targeted SemiBin2 reference
+against serious alternatives; do not default to another tiny grid or infer a
+cross-community causal depth effect. E024 holds E019 learning fixed and does not
+match E022 feature/learning regimes or independently confirm the product. Both
+communities remain development data. Skin admission/depth/truth/overlap/cost gates
+remain; no acquisition, GLM, training or external fit in inspection.
+
+On failure/partial output, state exactly what passed and what remains. Assess any
+collection-only recovery against remaining original clock/budget/credit first;
+never silently replay accepted science, extend or provision. Preserve all failed
+returns. No extra execution follows a limit. Update records/check/commit with
+structured what changed/why and give one exact next prompt and any genuinely new
+approval needed. Review retained storage by November 4; no automatic renewal or
+destruction of evidence.

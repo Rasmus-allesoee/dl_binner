@@ -1,5 +1,12 @@
 # E024: measured oral coverage and fixed-learning information
 
+**Current: RUNNING first sample acquisition**, phase
+`coverage-20261027T205510Z-60cbf7d-r5`. [Native receipt](native-observed.json),
+[provisional costs](cost-to-handoff.json) and [next inspection](OPERATIONS.md#exact-following-prompt)
+supersede preparation-only status below. Original inputs/learning/criteria remain
+fixed; all-ten success and quality are still unestablished.
+
+
 **Execution amendment, October 27:** the owner now authorizes execution.
 [Reusable primary BAMs](execution-amendment.md) supersede the original mean-only
 retention choice, with no scientific parameter change. Fresh native gates remain

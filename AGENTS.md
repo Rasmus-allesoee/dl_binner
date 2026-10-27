@@ -239,6 +239,11 @@ grouping ties, use verified source-blind IDs and retain the reverse source join
 outside feature/training paths. Keep zero-bp original records in explicit input
 accounting rather than inventing DNA or silently losing the records.
 
+A successful HEAD or public listing does not establish readable payloads. Before
+paid bulk acquisition, test a bounded GET/range against the declared public
+transport and exercise its actual streaming reader. Record a changed transport
+explicitly and preserve the original byte/checksum contracts and failure evidence.
+
 Verify the checksum semantics of segmented public objects. A Swift dynamic-large-
 object ETag can hash the concatenated segment MD5 strings rather than the file
 bytes. Check the publisher's segment identities/MD5s and record a new whole-object
