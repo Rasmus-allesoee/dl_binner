@@ -94,16 +94,16 @@
       "sha256": "25756c2993c5f453af8971bbe38276aff35604f6f06c58072745cce3d50ec287"
     },
     "tests/test_e024_operations.py": {
-      "bytes": 7818,
-      "sha256": "ee05319f1bff3d60cc68e8770d37a6e7371cee3d76ff01b3fbd2bd75502dfe2e"
+      "bytes": 8242,
+      "sha256": "c35b3284c6e14f3f800fcf4cb5a28436ee565d009ffa6784c8c7dfc4572e8e33"
     },
     "scripts/e024_alignment.py": {
       "bytes": 5693,
       "sha256": "7dd82c2a987e3d06127a32d7265d0fc7e1e24dd581e3cff02430fba705c9c80d"
     },
     "scripts/e024_arm.py": {
-      "bytes": 7454,
-      "sha256": "9ba44387a0ffb85c85da67e49b44522175aa303aa9ce4e3b0a6df9650bc79a2c"
+      "bytes": 6436,
+      "sha256": "e24566de26d9ed70f034fc4edd9704e7e70507e231d380b948960518f9208715"
     },
     "experiments/E024-oral-measured-coverage/execution-amendment.md": {
       "bytes": 9877,

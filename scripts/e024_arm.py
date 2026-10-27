@@ -15,14 +15,12 @@ from pathlib import Path
 import pwd
 import shutil
 import subprocess
+import sys
 import time
 
 
-def service_content(repo,root,user,path,remaining):
-    """Return only a fresh bounded four-thread/26 GB non-restarting parent unit."""
-    if type(remaining)is not int or not 1<=remaining<=129600:raise ValueError('Original two-hour remainder required')
-    if any(any(c in str(x)for c in ['\n','\r',' ','\t'])for x in [repo,root,user,path]):raise ValueError('Unsafe native unit path')
-    return '[Unit]\nRefuseManualStop=yes\nDescription=Frozen E024 held control parent\nAfter=network-online.target\n[Service]\nType=simple\nRestart=no\nMemoryMax=26000000000\nCPUAffinity=0 1 2 3\nUser='+user+'\nWorkingDirectory='+str(repo)+'\nEnvironment=PYTHONNOUSERSITE=1\nEnvironment=OMP_NUM_THREADS=4\nEnvironment=OPENBLAS_NUM_THREADS=4\nEnvironment=MKL_NUM_THREADS=4\nEnvironment=NUMBA_NUM_THREADS=4\nExecStart=/usr/bin/python3 -u -I -B '+str(repo/'scripts/e024_phase.py')+' --config '+str(path)+'\nRuntimeMaxSec='+str(remaining)+'\nKillMode=control-group\nTimeoutStopSec=30\nStandardOutput=append:'+str(root/'logs/systemd-parent.log')+'\nStandardError=append:'+str(root/'logs/systemd-parent.log')+'\n'
+sys.path.insert(0,str(Path(__file__).absolute().parent))
+from e024_phase import service_content as phase_service
 
 
 def arm(path):
@@ -38,7 +36,6 @@ def arm(path):
     for name in ['e009_exit_watchdog.py','e011_exit_watchdog.py']:
         target=wd/name;shutil.copyfile(repo/'scripts'/name,target);b=target.read_bytes();bindings[name]=dict(bytes=len(b),sha256=hashlib.sha256(b).hexdigest())
     remaining=int(cfg['vm_start_epoch']+129600-time.time())
-    from e024_phase import service_content as phase_service
     service=phase_service(root,'/usr/bin/python3',repo/'scripts/e024_phase.py',path,user)
     service=service.replace('[Unit]\n','[Unit]\nRefuseManualStop=yes\n',1)
     service=service.replace('Restart=no\n','Restart=no\nMemoryMax=26000000000\nCPUAffinity=0 1 2 3 4 5 6 7\nRuntimeMaxSec='+str(remaining)+'\n',1)
@@ -53,7 +50,7 @@ def arm(path):
     identity=base.identity(pid)
     if identity is None or identity['pid']!=json.loads((root/'started.json').read_text())['pid']:raise ValueError('Held process identity unavailable')
     configdir=Path('/run')/watch;configdir.mkdir(exist_ok=False)
-    config=dict(boot_id=host['boot_id'],process=identity,workflow_root=str(root),exit_grace_seconds=60,exit_snapshot_uri=cfg['archive_prefix']+'/watchdog-exit.json')
+    config=dict(boot_id=host['boot_id'],process=identity,workflow_root=str(root),exit_grace_seconds=60,exit_snapshot_uri=cfg['archive_prefix'].rstrip('/')+'/watchdog-exit.json')
     (configdir/'current.json').write_text(json.dumps(config,indent=2)+'\n')
     watcher='[Unit]\nDescription=Current-boot process-bound E024 exit shutdown\n[Service]\nType=oneshot\nExecStart=/usr/bin/python3 -I -B '+str(wd/'e011_exit_watchdog.py')+' --base '+str(wd/'e009_exit_watchdog.py')+' --config '+str(configdir/'current.json')+' --state /var/lib/'+watch+' --evidence '+str(root/'logs')+'\nTimeoutStartSec=60\n'
     timer='[Unit]\nDescription=Check held E024 parent every 30 seconds\n[Timer]\nOnActiveSec=1\nOnUnitActiveSec=30\nAccuracySec=1\nUnit='+watch+'.service\n[Install]\nWantedBy=timers.target\n'

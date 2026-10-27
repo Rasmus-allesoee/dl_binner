@@ -1,0 +1,20 @@
+{
+  "status": "RECOVERABLE_SETUP_ONLY_FAILURES",
+  "UTC": "2026-10-27T21:06:06.177380+00:00",
+  "science_released": false,
+  "acquisition_started": false,
+  "failures": [
+    {
+      "attempt": "r2",
+      "cause": "Controller attempted runtime-limit change while VM running",
+      "repair": "Use absolute original terminationTime configured while stopped; installed CLI documentation checked"
+    },
+    {
+      "attempt": "r3",
+      "cause": "New arm helper sibling import unavailable under isolated Python -I",
+      "repair": "Explicit own scripts path before import; actual isolated --help from outside checkout passes; normalize watchdog snapshot URI"
+    }
+  ],
+  "clock_reset": false,
+  "resources_increased": false
+}

@@ -17,6 +17,13 @@ ROOT=Path(__file__).absolute().parents[1]
 
 
 class Operations(unittest.TestCase):
+    def test_actual_isolated_arm_cli_imports_from_outside_checkout(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            value=subprocess.run([sys.executable,'-I','-B',str(ROOT/'scripts/e024_arm.py'),'--help'],
+                                 cwd=tmp,capture_output=True,text=True,timeout=20)
+            self.assertEqual(value.returncode,0,value.stderr)
+            self.assertIn('--config',value.stdout)
+
     def test_private_delivery_refuses_overwriting_an_accepted_generation(self):
         self.assertEqual(upload_command('gcloud','/tmp/a','gs://private/new'),
                          ['gcloud','storage','cp','--if-generation-match=0','/tmp/a','gs://private/new'])
