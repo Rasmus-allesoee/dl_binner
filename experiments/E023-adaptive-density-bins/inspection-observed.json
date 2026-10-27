@@ -1,0 +1,296 @@
+{
+  "record": "E023 completed-output independent inspection",
+  "status": "ACCEPTED_COMPLETION_AND_FROZEN_DEVELOPMENT_DIAGNOSTICS_MODIFY",
+  "reviewed_UTC": "2026-10-27T00:32:54.235968+00:00",
+  "phase": "density-20261026T213652Z-f13e5a1-r2",
+  "provider_status": "TERMINATED",
+  "completion": {
+    "bytes": 79138,
+    "sha256": "a0bd4ac1e9e75679f85a7973a628c07da6409624fec54f1c7fbe3f8d5106326a"
+  },
+  "guest_matches_private_completion": true,
+  "watchdog": {
+    "binding": {
+      "bytes": 4204,
+      "sha256": "ba3b04a2c6544128506a4907ec182142919ee9d0764f078d4e87fd5e12b0e4b1"
+    },
+    "boot_and_process_match": true,
+    "decision": "workflow exited; clean shutdown requested"
+  },
+  "archive": {
+    "bytes": 669636589,
+    "sha256": "7656d0a82c8af4ed062420dbdfeb8592c27dbc28a1acfd3fb5831a9e4e0ad5bd",
+    "regular_members": 221,
+    "logical_member_bytes": 1302342403,
+    "aliases": 0,
+    "every_member_and_extracted_byte_verified": true,
+    "omitted_native_FASTA_members": 260,
+    "omitted_native_FASTA_bytes": 1991073738,
+    "omission_manifest_bindings_verified": true,
+    "omitted_bulk_not_locally_reread_or_backed_up": true
+  },
+  "all_five_native_gates_passed": true,
+  "all_eight_serial_scientific_rules_and_final_target_passed": true,
+  "used_inputs_after_and_all_three_upload_readbacks_passed": true,
+  "exact_science_source": "546763dc27ad3e038f4054c8a183a8ceaf11b03d",
+  "execution_source": "f13e5a1ea1933fa78c56773d739daa7faef24181",
+  "scientific_fits": 0,
+  "grouping_communities": 2,
+  "original_vector_and_input_bindings_unchanged": true,
+  "comparison": {
+    "bytes": 135634,
+    "sha256": "cb387ada3b948e9d2c2e2c17e0892a20988d33d64eae3f778a72a8970d8744eb"
+  },
+  "all_955_targets": {
+    "bytes": 45462,
+    "sha256": "cdd5974973a0707d2335a7d3becd8bdba28843e01327db859c21af23758c6753"
+  },
+  "cost": {
+    "bytes": 2947,
+    "sha256": "15413cbb7ae1a5a6ab21b9e6f9abe351a92eda79be6e0e3d057a3da4874a2839"
+  },
+  "native_contract": {
+    "bytes": 50774,
+    "sha256": "f232a33557186f299538c295eb473881c770ef74c0d74af928a553b89fde150c"
+  },
+  "retained_local_root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-inspection/20261027T000221Z",
+  "analysis_bindings": {
+    "archive-verification.json": {
+      "bytes": 58569,
+      "sha256": "8fc06c3ed65a1a5db8744fe5410ce998583b325ef7fa56bde4b07edd9f45b2e3"
+    },
+    "native-contract-review.json": {
+      "bytes": 50774,
+      "sha256": "f232a33557186f299538c295eb473881c770ef74c0d74af928a553b89fde150c"
+    },
+    "review-admission.json": {
+      "bytes": 517,
+      "sha256": "50dd34fb74b7647211dbca21f4a84305368baab395e4433ca444d558b64ca3fd"
+    },
+    "frozen-diagnostics.resources.json": {
+      "bytes": 783,
+      "sha256": "13ffb4f90a1831b4e81e467d401c8781a96d00d273cf2da7c1111d96fbcddf88"
+    },
+    "residual-gap-audit.json": {
+      "bytes": 17254,
+      "sha256": "d474b9d5db85fdc7ae6d4b01c1d18247788de82139bb94b2a46d5da20c1e7f07"
+    },
+    "cached-neighbor-diagnostic.json": {
+      "bytes": 7295,
+      "sha256": "0bcf19d30436760464e3f4b4cdf1dda6044f7ab8a76351a9bb1ed7ce030015b5"
+    }
+  },
+  "analysis_helpers": {
+    "inspection_helpers/diagnostic-driver.py": {
+      "bytes": 2569,
+      "sha256": "4dd9fa1b67f2740afaa3904f449873dd9f933d06a03f47ac4f204140c1e513c5"
+    },
+    "inspection_helpers/cached-neighbor-audit.py": {
+      "bytes": 4132,
+      "sha256": "4cef2ee173e453b0a9c6c1d754a71247ce238de1bbd396241ace930db7cee989"
+    },
+    "inspection_helpers/native-review.py": {
+      "bytes": 8135,
+      "sha256": "655124b7301802b5474ce646e394914cf5c69345447cf3530996e8841ce18518"
+    },
+    "inspection_helpers/summarize-r2.py": {
+      "bytes": 8267,
+      "sha256": "6e8d325548252c1e42d116b414737e2d0b85fc4cc0bf5ce39e74c049816e746b"
+    },
+    "inspection_helpers/verify-extract.py": {
+      "bytes": 1358,
+      "sha256": "60ece85bc8ec8f6146ea82705c3175f154981bef402a5f7f47860c01cb1d549c"
+    },
+    "inspection_helpers/final-qa.py": {
+      "bytes": 2848,
+      "sha256": "cf9748b9801a0ea0369c42620c5d2bb8ab9d6af5ac89ca5066693a1639e02816"
+    },
+    "inspection_helpers/gap-audit.py": {
+      "bytes": 4055,
+      "sha256": "e62a785da6f69d89696addec70b44da4b9bdc7a1e294fbf7c0b20eefe687e6e3"
+    }
+  },
+  "failure_journal": {
+    "bytes": 833,
+    "sha256": "e1cdcd2d92a8052d29a17d4c82163049ccec73b3ea54ae143c5172e76cb1b4f8"
+  },
+  "no_VM_wake_or_resource_change_or_new_science": true,
+  "storage_valid_until": "2026-11-04T00:00:00+01:00",
+  "final_completion_upload_limit": "Delivered bytes independently match guest/GCS. Its own final CLI exit was not in the pre-upload receipt; do not invent it.",
+  "additional_contracts": {
+    "bytes": 900,
+    "sha256": "ee8b0378df34d2ca6219180ac7b6b9bab058443eeb53fe2b3a68b3b776bf1b48"
+  },
+  "final_provider": {
+    "bytes": 33096,
+    "sha256": "5f9b9774ffa7911cc4341b363bebe09e6ad9c87db105459ceb0e64389c0b7e8c"
+  },
+  "docs_checks": {
+    "log": {
+      "bytes": 729,
+      "sha256": "0bc685ad9964cfda508b4b2156d785e60adbb01fea066f3007f6fe87d173f350"
+    },
+    "maintained_documents": 103,
+    "local_links": 1485,
+    "present_fingerprints": 85,
+    "optional_missing_historical_caches": 10,
+    "status": "PASS"
+  },
+  "intermediate_receipt_note": "The archived pre-collection science-result.json retains initial status FAILED with science_completed=true and both exits zero. The frozen driver updates final status only after collection/readback. Exact final private completion, nine command exits and all nine DAG jobs establish success; the intermediate default flag is not a failed scientific stage.",
+  "local_resources": {
+    "verify-extract": {
+      "command": [
+        "python3",
+        "-I",
+        "-B",
+        "artifacts/e023-inspection/20261027T000221Z/verify-extract.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 24.428510917990934,
+      "peak_sampled_rss_bytes": 47452160,
+      "seconds_ceiling": 3599.99959397316,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 88247,
+      "sampled_cpu_seconds": 17.259999999999998,
+      "sampled_average_cpus": 0.7065514577594854,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "native-contracts": {
+      "command": [
+        "python3",
+        "-I",
+        "-B",
+        "artifacts/e023-inspection/20261027T000221Z/native-review.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 3.157724071003031,
+      "peak_sampled_rss_bytes": 48459776,
+      "seconds_ceiling": 3478.4982948303223,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 88506,
+      "sampled_cpu_seconds": 2.55,
+      "sampled_average_cpus": 0.8075436430359187,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "frozen-diagnostics": {
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "artifacts/e023-inspection/20261027T000221Z/diagnostic-driver.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 330.9569840139593,
+      "peak_sampled_rss_bytes": 3650805760,
+      "seconds_ceiling": 3435.3020508289337,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 88569,
+      "sampled_cpu_seconds": 297.93,
+      "sampled_average_cpus": 0.9002076233189076,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "residual-gap-audit": {
+      "command": [
+        "python3",
+        "-I",
+        "-B",
+        "artifacts/e023-inspection/20261027T000221Z/gap-audit.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 3.8836948290118016,
+      "peak_sampled_rss_bytes": 474472448,
+      "seconds_ceiling": 3047.7165319919586,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 90726,
+      "sampled_cpu_seconds": 3.6999999999999997,
+      "sampled_average_cpus": 0.9527010135710012,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "cached-neighbor-audit": {
+      "command": [
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "artifacts/e023-inspection/20261027T000221Z/cached-neighbor-audit.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 17.337213013030123,
+      "peak_sampled_rss_bytes": 930979840,
+      "seconds_ceiling": 2830.1992979049683,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 90976,
+      "sampled_cpu_seconds": 17.24,
+      "sampled_average_cpus": 0.9943928119844255,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "summarize-r2": {
+      "command": [
+        "python3",
+        "-I",
+        "-B",
+        "artifacts/e023-inspection/20261027T000221Z/summarize-r2.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 0.5869884670246392,
+      "peak_sampled_rss_bytes": 25747456,
+      "seconds_ceiling": 2222.962333917618,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 91617,
+      "sampled_cpu_seconds": 0.03,
+      "sampled_average_cpus": 0.05110832952488099,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "final-qa": {
+      "command": [
+        "python3",
+        "-I",
+        "-B",
+        "artifacts/e023-inspection/20261027T000221Z/final-qa.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 0.593983432976529,
+      "peak_sampled_rss_bytes": 25706496,
+      "seconds_ceiling": 1515.2051570415497,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 92458,
+      "sampled_cpu_seconds": 0.03,
+      "sampled_average_cpus": 0.050506459161101615,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    }
+  },
+  "local_review_budget": {
+    "threads": 4,
+    "sampled_RSS_bytes": 8000000000,
+    "seconds": 3600,
+    "extra_bytes": 6442450944,
+    "elapsed_original_seconds": 2167.472076892853,
+    "owned_bytes": 1975909781,
+    "numerical_runtime": "Existing E021 hybrid-owned-v2 Python 3.10.15, borrowed read-only; no local model inference or environment install"
+  },
+  "compact_local_evidence": {
+    "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e023-inspection/20261027T000221Z/compact-inspection-v1/e023-inspection-evidence.tar.gz",
+    "archive": {
+      "bytes": 462550,
+      "sha256": "3c9395f7c5bcff3ab7501f5ada98058fb0e15b1f3fabc55b22311a3623ee1589"
+    },
+    "regular_members": 115,
+    "logical_bytes": 3410701,
+    "every_member_verified": true,
+    "private_upload": false,
+    "scope": "Compact analysis/source/receipt backup; accepted native archive stays in private GCS; bulk DNA/banks/runtimes omitted"
+  }
+}

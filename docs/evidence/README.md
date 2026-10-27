@@ -27,3 +27,5 @@ Add a focused note when an investigation produces useful reasoning. Give it a da
 - [2026-10-14: CompleteBin peak storage, BAM/assembly multipliers and native retention](2026-10-14-completebin-storage.md)
 
 - [2026-10-25: DCVBin input workload and reliable marker-learning source audit](2026-10-25-dcvbin-efficiency-and-marker-learning.md)
+
+- [E023 information, recovery and the next measured-depth block](2026-10-27-e023-information-and-recovery.md)

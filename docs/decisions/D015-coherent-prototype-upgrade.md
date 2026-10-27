@@ -1,6 +1,6 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E023 native admission](../../experiments/E023-adaptive-density-bins/native-observed.json) passes and the single fixed-learning cached comparison is running under its new $3 authorization; no new recovery outcome yet. It implements the adaptive-density/bin-construction block recommended after [E022's MODIFY](../../experiments/E022-marker-informed-learning/comparison-review.json), preserving every accepted comparator and source freeze. [Secondary retained MetaBAT2 context](../../experiments/E023-adaptive-density-bins/metabat-secondary-review.json) shows nonuniform recovery/quality trade-offs, without a new tool run or primary rescore. [STATE](../STATE.md) and [E023 operations](../../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt) own completion inspection and the strongest next-block decision. November 4 storage and original execution limits remain. The dated decisions below retain their historical scope.
+Current handoff: [E023 completed review](../../experiments/E023-adaptive-density-bins/comparison-review.json) is MODIFY: E009 R95 7.7497 -> 10.4163% (above retained MetaBAT2's 8.5493%), but oral 6.5077 -> 4.0932%. [Inspection/costs](../../experiments/E023-adaptive-density-bins/inspection-observed.json) verify all stages, bytes and shutdown within original limits. [The next-step assessment](../evidence/2026-10-27-e023-information-and-recovery.md) selects local preparation of genuine ten-sample oral contig coverage and a fixed-learning information comparison, with no acquisition/mapping/cloud work yet. [STATE](../STATE.md) and [E023 operations](../../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt) own the next scope; November 4 storage remains fixed. Dated decisions below preserve historical context.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and
@@ -1545,3 +1545,47 @@ new source audits if a concrete uncertainty could change the recommendation.
 Do not default to another small parameter study or larger model, but do not treat
 fixed-learning grouping as the only allowable future direction. Skin and genuine
 depth-enabled independent confirmation remain unrun with existing dependencies.
+
+
+## E023 mixed recovery and the next information block, October 27, 2026
+
+[The completed comparison](../../experiments/E023-adaptive-density-bins/comparison-review.json)
+is MODIFY under its unchanged joint rule. Holding learning fixed raises E009 R95
+by 2.6666 percentage points to 10.4163%, above the retained MetaBAT2 native
+reference's 8.5493%; target-90 rises 8 -> 9. Oral loses 2.4145 points to 4.0932%
+and target-90 33 -> 10. Marker weighting adds 10.621 Mb in oral versus density-
+only, with no target losses in that paired utility control; E009 is identical.
+No uniform default promotion, score-selected router or attribution to one context
+channel follows. Full populations, original criteria and failed journals remain.
+
+[Matched cached-neighbor diagnostics and source audit](../evidence/2026-10-27-e023-information-and-recovery.md)
+separate accurate retrieval from biological information. Bacterial E009 neighbor
+support improves; oral remains near 20% bp-weighted same-origin neighbors, and
+mixed density branches compound that weakness. Native source/axis/reload and
+missing-depth semantics pass; no demonstrated critical implementation bug explains
+the transfer difference. More density/marker-threshold tuning is not the strongest
+next block, nor does a bigger network automatically supply independent information.
+
+Prepare real all-ten oral GSA contig coverage, then one prospective fixed-learning
+information comparison. Freeze observed-modality retrieval/reranking, exact depth
+rebind and the no-depth comparator before outcomes. This measures downstream depth
+information within the same oral DNA/labels/vectors, not a causal explanation of
+the between-community contrast or the effect of depth training. Existing source-
+genome BAMs cannot be projected through truth. All-ten 48.18 GiB metadata and old
+8–24-hour/$4–10 mapping-only projections need refresh and a measured pilot; roughly
+$12–15 for complete scope is a proposal, not an approval. Resolve stream/sort/index/
+BAM coexistence against ~26.53 GiB above reserve before claiming it fits. No cloud
+wake, data acquisition, model change, deletion or automatic extension now.
+
+The assessment explicitly weighs a larger sequence network/GLM prior, calibrated
+marker-anchored mixtures, cheap E009 depth removal, efficiency and more datasets.
+Independent abundance is a concrete missing measurement with a within-community
+decision; alternatives remain live if that test fails. Source checks of MetaCAT
+support evidence calibration, not copying mean/variance likelihoods onto invented
+variance or importing its seed/grid assumptions. Skin remains unscored and any
+future protocol/candidate amendment needs explicit versioning. Both current
+communities are development; independent genuine-depth confirmation remains due.
+
+Operationally all gates/scientific rules/delivery and 221 members pass; current
+price subtotal $0.25662 / $1.00662 with reserves is within original $3. VM stopped,
+November 4 storage unchanged. No old budget carries into the recommended block.

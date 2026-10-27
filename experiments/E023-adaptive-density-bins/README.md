@@ -1,17 +1,40 @@
 # E023: adaptive-density, marker-informed bin construction
 
-Status: **native admission passed; authorized cached comparison running**.
+Status: **completed, checksum-verified and independently reviewed: MODIFY**.
 Branch: `adaptive-density-bin-construction`. October 26, 2026.
 
 [Design](design.md) owns the algorithm/rationale; [frozen policy](config.json),
 [protocol](protocol.json), [retained-input lock](reuse-lock.json),
 [source lock](source-lock.json), [local evidence](local-observed.json) and
-[operations](OPERATIONS.md) own reproducibility. [Native admission](native-observed.json)
-passes five gates, all 287 frozen source members, full two-community axes, 17 tiny
-contracts and actual serial DAG/resume/collection. The single grouping comparison
-was released once after fresh credit and tested boot/process watcher checks.
-No new score, learning, acquisition, detector or completed comparison is claimed.
+[operations](OPERATIONS.md), [inspection](inspection-observed.json),
+[review](comparison-review.json), [all 955 target rows](comparison-targets.tsv) and
+[costs](cost-review.json) own the verified result. All five native gates, eight
+serial scientific rules plus target, reuse-after, collection/readback and matching
+watcher exit pass. All 221 archive/extracted members verify. VM independently
+TERMINATED; no wake, scientific replay or extra resource change in inspection.
 Immutable dev3/dev4/dev5/E016/E019/E021/E022 and all failed journals remain intact.
+
+| Full-reference weighted R95 | Preserved anchor | E023 density-only | E023 marker-weighted |
+| --- | ---: | ---: | ---: |
+| E009 conservative v2 | 7.7497% | 10.4163% | **10.4163%** |
+| Oral provided-origin oracle | 6.5077% | 3.5833% | **4.0932%** |
+
+E009 gains 14,790,857 passing bp, target-50 14 -> 19, target-90 8 -> 9, with
+18 target gains / 8 losses. It exceeds retained MetaBAT2's 8.5493% on this declared
+E009 metric; native length eligibility differs. Oral loses 50,296,592 bp, target-50
+43 -> 30, target-90 33 -> 10, with 25 gains / 57 losses. Marker weighting adds
+10,621,143 oral bp / six target gains, but cannot rescue the transfer failure.
+E009's two partitions are identical. **Original joint KEEP fails: MODIFY**, no
+universal default promotion, per-community score router or product-family verdict.
+
+The [information/next-step assessment](../../docs/evidence/2026-10-27-e023-information-and-recovery.md)
+compares actual cached neighbors on matched populations. E009 bacterial bp-weighted
+same-source fraction rises 81.8251 -> 85.8166%; oral remains 20.7688 -> 20.3297%.
+Good search recall is not biological discrimination. No demonstrated critical
+adapter/missing-depth bug; the declared rule performs differently across regimes.
+Next prepare real all-ten oral contig depth and a fixed-learning information
+comparison, including retrieval semantics, fresh cost/headroom/pilot gates and
+explicit depth-only cache rebind. Do not acquire/map or launch another model now.
 
 This block replaces global-CPM-plus-split-only bin construction with a sparse
 mutual-reachability density hierarchy. Every eligible native unit vector enters;
@@ -33,12 +56,11 @@ selection, physical marker weights, complete FASTA exports, reload, serial
 Snakemake/resume and capped all-member collection pass. Fixtures explicitly use
 synthetic unit vectors and hand-authored marker annotations. No new neural fit or
 marker detection is claimed. New Linux full-axis/runtime/systemd gates passed before release. The
-remaining full schedule fits the forecast, but full-scale performance and complete
-quality remain pending. The original failed Mac tolerance is unchanged. An initial controller
+full native schedule and frozen new-output diagnostics now pass. The original failed Mac tolerance is unchanged. An initial controller
 interpreter failure and a pre-release render failure are [preserved](journals/native-launch-failures.json);
 neither ran community science. Recovery used the original absolute clock.
 
-The running comparison uses **E022 E009 ten-depth** and **E019 oral sequence-only**,
+The completed comparison uses **E022 E009 ten-depth** and **E019 oral sequence-only**,
 each against its own preserved CPM/E013 summary without refit/rescore. Different
 upstream anchors test downstream transfer, not E022 learning with/without depth.
 All 156/799 full provided denominators, N quarantine, oral known-shared sensitivity
@@ -63,12 +85,14 @@ trade-offs; do not describe the external gap as a uniform defeat on every metric
 
 [Storage](storage-admission.json): new owner-authorized **$8 storage-only** week,
 October 28 through **November 4, 00:00 Copenhagen**, passes fresh checks at ~$7.73.
-At preparation the VM was TERMINATED; it is now running under the verified
-watcher/provider STOP. Original 30 + 300 GiB disks and private bucket are unchanged.
+The VM is independently TERMINATED after its verified watcher stop.
+Original 30 + 300 GiB disks and private bucket are unchanged.
 No deletion/cleanup or automatic later renewal. [Resources](resources.json)
-pins the newly authorized **$3 comparison**, ~$1.85 conservative priced envelope.
+retains the original **$3 comparison** forecast. Actual priced allocation/PD/export
+subtotal is **$0.25662 / $1.00662 with reserves**, inside that original ceiling.
 The first-start two-hour clock and earlier recovery STOP were not extended.
-See operations for the exact completed-output inspection prompt.
+See operations for the next local preparation prompt; no new data/compute budget
+carries over.
 
 Skin stays unscored under its [versioned dependency record](confirmation-plan.json).
 Original 610-target/313-overlap context and all source/truth/depth/cost limits stay

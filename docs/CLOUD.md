@@ -1,5 +1,37 @@
 # Google Cloud workspace operations
 
+## E023 independently verified completion, October 27, 2026
+
+[Inspection](../experiments/E023-adaptive-density-bins/inspection-observed.json)
+confirms TERMINATED, exact guest/private completion bytes, all five gates, eight
+serial rules + target, reuse-after, archive/readback and intended boot/process
+watcher exit. Last allocation: 21:40:02 -> 22:12:58 UTC October 26, plus initial
+96.631 seconds; total 2,072.347 seconds / 34.54 minutes. No wake/resources or
+retention change in inspection. Original first-start clock and earlier STOP held.
+
+[Current-price ledger](../experiments/E023-adaptive-density-bins/cost-review.json):
+compute/IP $0.15718, run-PD attribution $0.02460, 669.64 MB export $0.07484; subtotal
+$0.25662 / $1.00662 with storage/operations/contingency reserves, inside original
+new $3. Science 21.87 minutes / 8.436 GB sampled tree RSS / 1,757.68 sampled CPU
+seconds; sampled CPU is not priced 8-vCPU allocation. Disk global growth 4.336 GiB,
+minimum free 51.53 GiB. All 221 archive members / 1.302 GB logical bytes verify;
+omitted FASTA remains on disk and is not backed up by compact inventories.
+
+Fresh Credits/Overview: DKK 1,796.60 Available / 91%, January 12 expiry, paid
+account, Certain usage/net pricing; October 1–27 rounded cost/savings DKK 177 /
+net zero. Hours/>24-hour delayed usage unknown, $35 reserve retained. All 154 GCS
+versions / 10,313,126,200 bytes, zero soft-deleted. Storage-only new week forecasts
+$7.73369 within $8 through November 4 at 00:00 Copenhagen. Current ordinary prices
+and credit coverage pass; this is not an invoice or a credit-delta allocation.
+
+Next scope is local preparation only for separately approved real oral contig
+depth and a cached information comparison. Old $3/other compute budgets do not
+carry over. Mapping pilot/runtime/disk/full cost and credit admission are not yet
+complete. The 51.53 GiB observed free space leaves only 26.53 GiB above reserve;
+no promise of retained BAM capacity, cleanup, resize or retention extension.
+[Operations](../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt)
+owns the exact next prompt. Dated running/preparation snapshots below are history.
+
 ## E023 native admission and current authorized execution, October 26, 2026
 
 [Native receipt](../experiments/E023-adaptive-density-bins/native-observed.json)

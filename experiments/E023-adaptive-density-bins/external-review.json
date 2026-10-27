@@ -1,0 +1,77 @@
+{
+  "consulted_UTC": "2026-10-27T00:32:54.212723+00:00",
+  "scope": "Targeted primary/source review to decide the next information-versus-grouping-versus-capacity block; no external binner run",
+  "MetaCAT": {
+    "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/MetaCAT",
+    "commit": "5de573fbce0a6549010b07002e278620a7da22b9",
+    "inspected_files": {
+      "MetaCAT/kmer_frequency_model.py": {
+        "bytes": 2459,
+        "sha256": "a395a75dd889405401a2a165cc9c608506128ada431ada9de868730a2fd93b9d"
+      },
+      "MetaCAT/coverage_model.py": {
+        "bytes": 3425,
+        "sha256": "6813a1223b8c5ccd0223d24ee3207296c17c5937ec06fdbaf89a8e13323e7893"
+      },
+      "MetaCAT/affinity_model.py": {
+        "bytes": 6356,
+        "sha256": "3572e4bb57055a2b8759ac93e17862d801116629d42afacb718666b1310f988d"
+      },
+      "MetaCAT/semi_supervised_model.py": {
+        "bytes": 3342,
+        "sha256": "e51d2526ded5c2f01ece890b5c58f93a399c30cfa8fea658d761cc00c5e6e4b9"
+      },
+      "MetaCAT/score_model.py": {
+        "bytes": 7356,
+        "sha256": "5399be2866d9c2afb568da31cdda5fdb31c864a7d577628cc198c56993a37f31"
+      },
+      "MetaCAT/cluster.py": {
+        "bytes": 13587,
+        "sha256": "6a6aeb9c65a7adefd0fe06caf388a04d592175e19ec04dc57cd34a01830d856d"
+      }
+    },
+    "unrelated_status": "Untracked .DS_Store only; inspected files match HEAD",
+    "observations": [
+      "Length-dependent fitted composition log probabilities in kmer_frequency_model.model, lines 33\u201369",
+      "Coverage affinity explicitly consumes means and measured variances; empty/missing depth is not permission to invent variance",
+      "Seed selection/label propagation and marker scores provide biological information beyond density persistence; mixture engine conditional, not a compulsory neural architecture",
+      "No copied implementation or calibrated-confidence claim for our heuristic"
+    ]
+  },
+  "sources": [
+    {
+      "title": "MetaCAT primary abstract and public Extended Data Fig. 1",
+      "url": "https://www.nature.com/articles/s41564-026-02472-7",
+      "limits": "Main methods behind subscription; inspected accessible abstract/caption and independently versioned author code, not a complete new manuscript audit"
+    },
+    {
+      "title": "Official HDBSCAN implementation explanation",
+      "url": "https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html",
+      "use": "Mutual reachability, condensation and stability extraction. Density persistence is not biological genome purity; E023 remains a sparse bp-weighted variant"
+    }
+  ],
+  "own_code_observations": [
+    "Current E023 std/scale/channel availability correctly omits oral depth; native fields contain empty depth columns and no measured-zero substitution",
+    "Frozen config, percent/fraction marker factor and antichain/native reload are consistent with prospective design; no demonstrated critical adapter/geometry bug",
+    "High sampled search recall is distinct from the low same-origin oral neighbor purity; cannot assert full composite-neighbor optimality",
+    "E009 and oral differ in upstream learning, community, assembly/length and truth; endpoint differences do not causally identify depth"
+  ],
+  "data_assessment": {
+    "source": "experiments/E014-multiview-reconstruction/depth-assessment.md and E018 robustness-and-data.md",
+    "sizes": "Previously verified HEADs, not refreshed or downloaded here: ten interleaved FASTQs 51,731,811,351 bytes / 48.18 GiB",
+    "sample_ids": [
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "BAM_limit": "Publisher BAM references are source genomes, not pooled GSA contigs; no truth-coordinate projection into features"
+  },
+  "not_new_runtime_or_performance_evidence": true
+}

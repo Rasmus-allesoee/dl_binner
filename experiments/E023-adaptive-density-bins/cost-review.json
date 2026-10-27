@@ -1,0 +1,72 @@
+{
+  "record": "E023 measured allocation/current price ledger, not invoice",
+  "status": "WITHIN_ORIGINAL_NEW_3_USD_AND_CREDIT_COVERED",
+  "priced_UTC": "2026-10-27T00:32:54.173617+00:00",
+  "original_ceiling_USD": 3,
+  "real_money_authorized": false,
+  "allocation_seconds": {
+    "failed_bootstrap": 96.63099980354309,
+    "successful_phase": 1975.7160000801086,
+    "total": 2072.3469998836517
+  },
+  "allocated_vCPU_hours": 4.605215555297004,
+  "prices_USD": {
+    "compute_IP_per_hour": 0.2730456762592464,
+    "all_existing_disks_month": 31.199999949850024,
+    "DKK_per_USD": 6.578099999996525
+  },
+  "priced_allocation_PD_WAN_subtotal_USD": 0.25662020145863007,
+  "compute_IP_USD": 0.15717927445195895,
+  "run_disk_attribution_USD": 0.024603206351766282,
+  "return_export_USD": 0.07483772065490484,
+  "small_storage_operations_reserve_USD": 0.15,
+  "contingency_USD": 0.6,
+  "total_with_reserves_USD": 1.00662020145863,
+  "return_storage_through_boundary_USD_upper": 0.0032952233050161013,
+  "return_storage_included_in_reserve_not_extra": true,
+  "credits": {
+    "checked_UTC": "2026-10-27T00:04:33.823230+00:00",
+    "credit_remaining_DKK": 1796.6,
+    "credit_percent": 91,
+    "credit_status": "Available",
+    "credit_expiry": "2027-01-12",
+    "credit_scope": "Certain usage; FreeTrialUpgrade; free-trial terms; net pricing; paid account",
+    "original_DKK": 1973.43,
+    "overview": {
+      "period": "October 1\u201327, 2026",
+      "cost_rounded_DKK": 177,
+      "savings_rounded_DKK": 177,
+      "net_DKK": 0
+    },
+    "delayed_usage": "Hours, possibly more than 24 hours; amount unknown",
+    "reserve_USD": 35,
+    "source": "Read-only direct signed-in Chrome Credits/Overview",
+    "source_urls": [
+      "https://console.cloud.google.com/billing/01DD71-3C7861-1E59DF/credits/all",
+      "https://console.cloud.google.com/billing/01DD71-3C7861-1E59DF"
+    ]
+  },
+  "existing_storage": {
+    "approved_end": "2026-11-04T00:00:00+01:00",
+    "new_week_forecast_USD": 7.7336880524900415,
+    "new_week_ceiling_USD": 8,
+    "all_versions_objects": 154,
+    "all_versions_bytes": 10313126200,
+    "soft_deleted_bytes": 0,
+    "run_disk_attribution_overlaps_storage_approval": true
+  },
+  "native_resources": {
+    "science_seconds": 1312.105275987,
+    "sampled_science_CPU_seconds": 1757.68,
+    "sampled_mean_CPUs": 1.339587632309326,
+    "sampled_tree_RSS_peak_bytes": 8436121600,
+    "minimum_free_GiB": 51.53043746948242,
+    "maximum_global_growth_GiB": 4.335540771484375
+  },
+  "cost_basis": "Measured successful allocation plus 96.631-second failed bootstrap; current E2/RAM/IP and PD price. GCS-to-Mac 0.12 USD/GiB conservative export; in-region native readback not priced as WAN. Sampled CPU and credit delta are not allocation invoices.",
+  "storage_attribution_overlaps_approved_storage": true,
+  "evidence": {
+    "bytes": 3875,
+    "sha256": "3ff0b36a790f8db44ab6e7ee1d3682ebe33127feecc7c67977e9a3a12eeb6781"
+  }
+}

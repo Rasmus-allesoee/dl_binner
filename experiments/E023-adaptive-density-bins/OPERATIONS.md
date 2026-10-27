@@ -1,5 +1,41 @@
 # E023 operations
 
+## Verified completed outcome, October 27, 2026
+
+**MODIFY; VM independently TERMINATED.** [Inspection](inspection-observed.json),
+[paired review](comparison-review.json), [all targets](comparison-targets.tsv) and
+[cost ledger](cost-review.json) supersede the dated running handoff below. All five
+native gates, eight serial rules + target, reuse-after, collection, three upload/
+readback pairs and matched exit watcher pass. Archive 669,636,589 bytes / all 221
+members / 1,302,342,403 logical bytes verify. Omitted FASTA remains native, not
+backed up by inventory hashes. No VM wake, refit, baseline rescore or new data.
+
+E009 R95 7.7497 -> **10.4163%**, target-90 8 -> 9; retained MetaBAT2 is 8.5493%.
+Oral 6.5077 -> **4.0932%**, target-90 33 -> 10. Marker weighting is neutral in
+E009 and adds 10,621,143 oral bp versus density-only, without rescuing the joint
+criterion. All 156/799 full denominators, N quarantine, known-shared sensitivity
+and full DNA/population accounting remain. No global promotion or truth-selected
+community router. Secondary per-bin HQ/MQ/LQ remain threshold-based, not MIMAG HQ.
+
+Actual allocation includes the initial failure: 2,072.347 seconds / 34.54 minutes;
+science 21.87 minutes / 8.436 GB sampled tree RSS. Sampled CPU (1,757.68 seconds,
+mean 1.34 CPUs) is not billed 8-vCPU allocation. Global peak growth 4.336 GiB /
+minimum free 51.53 GiB. Compute/IP $0.15718, run-PD attribution $0.02460 and export
+$0.07484 give **$0.25662 subtotal / $1.00662 with reserves**, within original $3.
+These are current-price estimates, not an invoice or credit-delta attribution.
+Welcome credit DKK 1,796.60 Available / 91%, January 12 expiry, $35 delayed-use
+reserve. Storage forecast ~$7.734 stays within its separate $8 through **November
+4, 00:00 Copenhagen**. No later automatic retention or deletion is authorized.
+
+[Targeted diagnosis and next decision](../../docs/evidence/2026-10-27-e023-information-and-recovery.md)
+finds useful E009 composite neighborhoods but persistently weak oral source
+discrimination, plus mixed density branches. Next prepare genuine ten-sample oral
+depth and a prospective fixed-learning information comparison; choose retrieval/
+reranking semantics before outcomes. This is a new separately costed data/input
+block, not evidence that missing depth caused the cross-community difference or
+permission to start reads/mapping/cloud work. All earlier science/failures and
+untouched skin dependencies remain.
+
 ## Native launch and supervised handoff, October 26, 2026
 
 [Native admission](native-observed.json) records phase
@@ -207,7 +243,7 @@ unique-versus-origin/evaluator/measured-depth/cost admission. Acquire/run neithe
 skin nor independent depth-enabled data now. Update records/check/commit with
 structured what changed/why and provide the next exact prompt.
 
-## Exact following prompt
+## Executed completed-output inspection prompt
 
 Our goal is substantially closing the recovery gap. Read AGENTS.md,
 PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E023's frozen design/protocol/source/
@@ -271,3 +307,80 @@ version any later candidate/protocol amendment before untouched outcomes. Update
 records, run relevant checks and commit with structured what changed/why. Report
 verified outcome, limits, actual costs/storage and the next exact prompt, including
 any separate execution authorization required.
+
+## Exact following prompt
+
+Our goal is a substantially stronger and robust binner. Read AGENTS.md,
+PROJECT_INTENT.md, STATE/CLOUD, D013/D015, E023's reviewed results/inspection/costs,
+matched cached-neighbor and residual-gap audits, the October 27 information/next-
+step assessment, and E014/E018's oral read/header/mapping assessments. Preserve
+immutable dev3/dev4/dev5/E016/E019/E021/E022/E023 and all accepted inputs, truth,
+outputs, source freezes and failed journals. Use a descriptive research branch
+without a codex/ prefix. Do not promote E023 globally or add a community-score router.
+
+Prepare and locally test one genuine oral differential-coverage admission and
+fixed-learning information block. Use all ten publisher samples in the frozen
+order 6,7,8,13,14,15,16,17,18,19 on the exact existing opaque-ID pooled oral GSA.
+Refresh small public metadata/HEAD/MD5/source records only. Existing source-genome
+BAMs are not contig-mapped depth; do not project simulator truth into features.
+Do not acquire bulk reads, map, generate real depth, score a community, start the
+VM, fit, redetect markers, extract GLM features or change model architecture in
+this preparation task. Prior $3/$8 or older compute budgets do not carry over.
+
+Use judgment and targeted primary/tool-source checks to freeze one mapping and
+contig-summary policy: paired/interleaved read handling, ambiguous/multihit/map-
+quality/alignment filters, full contig denominator, measured zero versus missing,
+and exact ordered sample axes. Parent-contig means are the first feature; any
+saved variance must be genuinely measured and explicitly named, not invented
+window coverage or per-base variance. Keep all short/marker-negative/unknown/
+non-target/unassigned DNA. No source labels may affect mapping, features or bins.
+Maintain the oral provided-origin oracle/full 799-reference denominators and
+known-shared sensitivity; new mapping does not establish unique sequence truth.
+
+Implement the bounded serial acquisition/index/map/summary workflow using pinned
+existing tools where suitable and Snakemake. Test actual tiny paired/interleaved
+read/index/alignment/summary readers/writers, MD5/SHA256, full-axis/multimapper/
+zero-coverage/error/resume contracts, resource caps and compact collection. Native
+Linux/large-input gates remain pending where unavailable; state actual/mocked
+paths. Keep logs and verified completed stages; no hidden recopy/reinstall or
+accepted-science replay. Explicitly cost a bounded native pilot before admitting
+the full schedule; do not claim an old projection is measured throughput.
+
+Resolve prospective depth-aware retrieval as well as reranking for the one
+cached comparison. A restrictive sequence-only candidate pool may hide depth's
+value; if an observed-modality candidate union is needed, freeze that coherent
+rule and test the exact no-depth path. Keep E019's native unit vectors/encoder,
+seed and cached physical-marker policy fixed. Preserve the original E023 sequence-
+only outputs as comparator without refit/rescore; do not mislabel a changed
+retrieval bundle as a pure reweighting. A fresh depth-rebind receipt must bind old
+and new features and prove exact DNA/opaque-ID/TNF/real-view/native-vector equality;
+never edit accepted cache metadata to make the new consumer pass. No oral GLM
+extraction, new training schedule, marker search, resolution grid or external tool.
+Freeze practical keep/modify/abandon criteria before new outcomes, including
+recovery, target counts, all populations and comparison to retained E019 context.
+This tests downstream information, not depth's training effect or product families.
+
+Measure/forecast download, reference index, one-sample sort/BAM coexistence, summary,
+return/review and safe shutdown. Prior read HEAD total is 51,731,811,351 bytes;
+old all-ten mapping estimate 8–24 hours / 12–26 GB RSS / roughly $4–10 mapping-only.
+These are historical planning values. A complete ~$12–15 request is only a starting
+estimate. Current retained native free space is about 51.53 GiB, only 26.53 GiB
+above reserve. Prefer tested serial streaming and explicitly validated compact
+summaries over retaining every BAM. Propose any intermediate cleanup/retention
+policy with exact bytes/consumers/evidence preserved; delete nothing in preparation.
+Do not assume the old 45–130 GiB retained-BAM estimate fits. Assess safe regenerable
+files before proposing resources; no provisioning/resize/quota/retention mutation.
+
+Prepare the exact separate acquisition/pilot/compute approval request with complete
+setup/index/sort/summary/verification/upload allocation, clocks, CPU/RAM/peak disk,
+network/storage costs, fresh Welcome-credit prerequisites, watcher/provider STOP,
+verified reuse and failure/recovery boundaries. No real-money or unclear coverage.
+The current storage approval ends November 4 at 00:00 Copenhagen; do not silently
+extend it or promise a schedule beyond it. If no safe measured plan fits, explain
+the concrete approval needed instead of weakening accounting or silently choosing
+fewer samples. Keep original skin unscored, its 610-target/313-overlap protocol and
+source/genome/replicon/molecule/host/circular/taxonomy/near/pretraining/competitive/
+unique-versus-origin/evaluator/depth/cost dependencies unchanged. This oral block
+is development data, not independent confirmation. Update records, check and commit
+with structured what changed/why; report the prepared rule, tests/remaining native
+gates, costs/resources, necessary owner action and exact execution approval prompt.

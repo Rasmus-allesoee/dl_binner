@@ -1,0 +1,22 @@
+{
+  "status": "LOCAL_SUMMARY_ADAPTER_REPAIRED_WITHIN_ORIGINAL_REVIEW_CLOCK",
+  "cause": "Compile caught missing spaces after else in summary script before metrics ran; the dependent invocation then correctly reported missing script",
+  "failed_source": {
+    "bytes": 8265,
+    "sha256": "37b9f6a1dacd06f48cbb9fe7e1ff840e3b4fe3449a9d1cf90cb1ce08cd53914e"
+  },
+  "failed_log": {
+    "bytes": 294,
+    "sha256": "48629f7ab8cbe84753b97096f4b0184a62705bab2b7d432849577188bd197546"
+  },
+  "repaired_source": {
+    "bytes": 8267,
+    "sha256": "6e8d325548252c1e42d116b414737e2d0b85fc4cc0bf5ce39e74c049816e746b"
+  },
+  "repaired_resources": {
+    "bytes": 714,
+    "sha256": "9973d92049b9d24b1aaa0aa303f669c6979daebcf2a28a074cd0f4d7e5bb9431"
+  },
+  "no_scientific_output_or_frozen_evaluator_modified": true,
+  "no_baseline_rescore": true
+}

@@ -659,3 +659,15 @@ capacity or grouping alone is limiting. Await the frozen joint outcome before
 selecting one strongest recovery block; broader architecture/information and
 independent depth-enabled data remain serious alternatives. No new fit, external
 run or confirmation acquisition. New $3 scope and November 4 storage remain fixed.
+
+
+E023 completed inspection, October 27, 2026: [MODIFY](../../experiments/E023-adaptive-density-bins/comparison-review.json)
+with E009 10.4163% R95 (above retained MetaBAT2 8.5493%) and oral 4.0932% versus
+6.5077%. Q001/Q003/Q005 remain open; fixed-learning bin construction supplied a
+real scoped gain but failed joint transfer. [Matched neighbor/source diagnosis](../evidence/2026-10-27-e023-information-and-recovery.md)
+finds persistently weak oral same-origin neighborhoods, not a demonstrated
+missing-depth adapter bug. Next prepare all-ten genuine oral contig coverage and
+one fixed-learning information comparison, prospectively freezing retrieval and
+cache rebind. No bulk reads, mapping, scoring, new model/cloud work or additional
+confirmation is authorized by this inspection. Old budgets do not carry over;
+November 4 storage and untouched skin dependencies remain.

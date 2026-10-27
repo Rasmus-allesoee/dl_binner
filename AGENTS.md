@@ -192,6 +192,9 @@ Report lineage/origin and length denominators alongside community-wide diagnosti
 aggregates. A representation gain driven by non-target organisms is not evidence
 of improvement for the primary cellular targets. Compare the same query populations
 and retain unknown/non-target DNA in the appropriate full-population denominators.
+High nearest-neighbor search recall verifies retrieval accuracy in its declared
+geometry, not biological source homogeneity or genome recovery. Diagnose input
+information, representation and bin selection separately on matched populations.
 
 Keep secondary per-bin quality summaries separate from the primary recovery rule.
 State the completeness denominator and contamination formula. Under conservative

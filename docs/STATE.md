@@ -2,44 +2,56 @@
 
 Updated: October 26, 2026 (Copenhagen). This is the single current handoff.
 
-**E023 native-admitted cached comparison is running; no new recovery result yet.**
-Phase `density-20261026T213652Z-f13e5a1-r2`, execution `f13e5a1`, unchanged science
-from `546763d`. [Native admission](../experiments/E023-adaptive-density-bins/native-observed.json)
-passes all five Linux gates, full E022 E009 / E019 oral axes, 17 tiny contracts and
-actual serial DAG/resume/collection. [Operations](../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt)
-owns the next completed-output inspection. Fixed learning/native vectors, source,
-sole policy and primary joint criteria remain; no refit or new score.
+**E023 completed, byte-verified and independently reviewed: MODIFY. VM TERMINATED.**
+[Inspection](../experiments/E023-adaptive-density-bins/inspection-observed.json),
+[paired results](../experiments/E023-adaptive-density-bins/comparison-review.json),
+[all 955 targets](../experiments/E023-adaptive-density-bins/comparison-targets.tsv)
+and [costs](../experiments/E023-adaptive-density-bins/cost-review.json) supersede
+the dated running receipt. Five gates, eight serial rules + target, reuse-after,
+collection/readbacks and matching watcher exit pass; all 221 archive members verify.
+No wake, scientific replay, new model or data acquisition in inspection.
 
-Fresh current-boot/PID/start/command watcher and normal/crash/restart-refusal tests
-pass before the sole atomic release at 21:45:11 UTC. Original first-start clock:
-21:37:22 -> 23:37:22 UTC October 26; recovery STOP is earlier at 23:50:50 UTC
-(00:50:50 Copenhagen October 27). Initial interpreter/controller and pre-release
-render failures are preserved, without replaying science or extending limits.
-At 21:54 UTC, all four E009 native rules have passed into oral grouping;
-oral reranking advanced to 31,232 / 508,763 eligible rows, with 55.55 GiB free
-and about 6.59 GB sampled RSS. Independent completed-output review is pending. For a
-healthy longer run hand off after real progress; do not repeatedly poll to finish.
-Shutdown alone will not prove success. Exits, delivery, every-member/cost admission
-and frozen new-output diagnostics are still required.
+| Full-reference weighted R95 | Preserved anchor | E023 marker-weighted |
+| --- | ---: | ---: |
+| E009 conservative v2 | 7.7497% | **10.4163%** |
+| Oral provided-origin oracle | 6.5077% | **4.0932%** |
 
-New $3 comparison authorization passes fresh Welcome-credit DKK 1,797.10 / 91%,
-January 12 expiry, unknown delayed usage / $35 reserve, unchanged ordinary prices
-and ~$1.85 quote. All 149 GCS versions / 9,643,347,402 bytes, no soft-deleted bytes;
-original E2 and 30 + 300 GiB disks only. Storage-only $8 interval October 28 ->
-**November 4, 00:00 Copenhagen**, ~$7.73, remains unchanged. No automatic renewal,
-cleanup or deletion. Protect expensive GLM/context/DNA/runtimes; inventories are
-not bulk backups. Actual final allocation/export/storage cost is pending shutdown.
+E009 gains 14.791 Mb, target-50 14 -> 19, target-90 8 -> 9; it exceeds retained
+MetaBAT2's 8.5493% in this scoped metric. Oral loses 50.297 Mb, target-50 43 -> 30,
+target-90 33 -> 10. Marker weighting is neutral in E009 and adds 10.621 Mb versus
+oral density-only, but original joint KEEP fails. No universal promotion, outcome-
+selected community router or product-family verdict. All 156/799 full references,
+3.3034% N quarantine, oral known-shared sensitivity and complete DNA remain.
+Secondary threshold-based target HQ/MQ/LQ: E009 9/10/10 (MetaBAT2 5/11/6), oral
+10/21/24; unknown/non-target/impure bins remain, no RNA or formal MIMAG HQ claim.
 
-[Secondary retained MetaBAT2 context](../experiments/E023-adaptive-density-bins/metabat-secondary-review.json)
-verifies matching E009 input/truth and native/export DNA. Of 43 bins: 7 numerical
-HQ / 11 MQ / 9 LQ / 16 high-impurity-or-unresolved; target-dominant counts 5 / 11 /
-6 / 14. No RNA screen or formal MIMAG HQ. Retained primary R95 is 8.5493% versus
-E022's 7.7497%, but target-90 counts are five versus eight. Three target losses
-account for 7.447 Mb of MetaBAT advantage, offset elsewhere; do not infer a uniform
-model-capacity deficit or select bins/thresholds from that diagnosis. The completed
-E023 comparison will inform the strongest next block with serious alternatives
-and targeted source checks where useful. All 156/799/full references, N quarantine,
-oral origin-versus-uniqueness limits and frozen unscored skin remain.
+**Next: locally prepare genuine all-ten oral contig depth and one fixed-learning
+information comparison.** [Diagnosis/alternatives](evidence/2026-10-27-e023-information-and-recovery.md)
+shows E009 bacterial composite-neighbor purity improving, while oral stays near
+20% bp-weighted same-origin support despite good retrieval recall. No demonstrated
+critical missing-depth/ID/cache bug. Between-community differences do not identify
+depth causally; a within-oral measured-information block is more decision-changing
+now than another density grid or larger model. Resolve prospective modality-aware
+retrieval and exact depth rebind; preserve E019 vectors/learning/seed/marker policy
+and E023 no-depth outputs. [Exact next local-preparation prompt](../experiments/E023-adaptive-density-bins/OPERATIONS.md#exact-following-prompt)
+allows metadata/tiny engineering only. No bulk reads, mapping, real depth, score,
+fit, GLM extraction, VM start or new spend is authorized by this inspection.
+
+Old ten-read HEAD total is 48.18 GiB; mapping estimate 8–24 hours / roughly $4–10
+mapping-only is historical. Prepare a complete separately approved pilot/data/
+cached-control scope, likely ~$12–15 if measured gates fit. About 26.53 GiB above
+reserve remains on the work disk; tested streaming/summary retention must precede
+any promise it fits. Skin stays unscored with original 610 targets / 313 exact oral
+overlaps and named source/truth/unique/depth/cost dependencies. Both current
+communities remain development data, not independent confirmation.
+
+Measured allocation including failure: 34.54 minutes; science 21.87 minutes /
+8.436 GB sampled RSS; growth 4.336 GiB / minimum free 51.53 GiB. Priced compute/IP,
+PD/export subtotal **$0.25662 / $1.00662 with reserves**, inside original $3, not an
+invoice. Fresh Welcome credit DKK 1,796.60 / 91%, January 12 expiry, unknown lag /
+$35 reserve. Existing storage forecasts ~$7.734 within its separate $8 through
+**November 4, 00:00 Copenhagen**. No automatic extension/deletion. Protect all old
+GLM/context/DNA/runtimes; omitted bulk manifests are not backups.
 
 ## Preserved E022 reviewed outcome
 
