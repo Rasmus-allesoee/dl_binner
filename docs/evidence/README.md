@@ -1,6 +1,6 @@
 # Evidence
 
-Evidence notes distinguish what a source reports, what we inspected directly, and what we infer. No note currently reports a newly executed binning experiment.
+Evidence notes distinguish what a source reports, what we inspected directly, and what we infer. Experiment directories own execution records; notes can interpret their accepted results and audit the next decision.
 
 | Record | Scope |
 | --- | --- |
@@ -29,3 +29,5 @@ Add a focused note when an investigation produces useful reasoning. Give it a da
 - [2026-10-25: DCVBin input workload and reliable marker-learning source audit](2026-10-25-dcvbin-efficiency-and-marker-learning.md)
 
 - [E023 information, recovery and the next measured-depth block](2026-10-27-e023-information-and-recovery.md)
+
+- [E024 accepted data, failed retrieval and the next recovery block](2026-10-28-e024-retrieval-failure-and-next-block.md)

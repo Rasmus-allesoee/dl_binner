@@ -686,3 +686,17 @@ without a grid/fit/score or smaller denominator. The prepared observed-modality
 retrieval policy and practical criteria are prospective. Q001/Q003/Q005 remain
 unresolved; fresh paid execution approval and native data/credit/storage admission
 are required. Skin remains unscored and all confirmation dependencies unchanged.
+
+### October 28, 2026: E024 data accepted, information question still open
+
+[Independent inspection](../../experiments/E024-oral-measured-coverage/inspection-observed.json)
+accepts all ten mapping/mean-depth stages, reusable primary BAMs and unchanged
+non-depth features. The fixed-learning comparison failed final composite retrieval
+recall < 0.90 before any partition/export. No new truth scores or biological
+disposition exist; Q001/Q003/Q005 remain unresolved. This is not a negative depth
+finding. [The next-decision audit](../evidence/2026-10-28-e024-retrieval-failure-and-next-block.md)
+supports one joint-distance retrieval consumer and separately admitted cached-only
+follow-through, preserving the failed union and original gates. New learning/full
+Oral GLM, external fits and independent data remain deferred alternatives. No wake
+or scientific replay in inspection; original budget/clock and November 4 retention
+are unchanged. The new proposed $2 scope is not yet authorized.

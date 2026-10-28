@@ -1,38 +1,54 @@
 # Google Cloud workspace operations
 
 
-**October 27 E024 is RUNNING: first sample acquisition, not completed data or quality.**
-[Native handoff](../experiments/E024-oral-measured-coverage/native-observed.json)
-owns phase `coverage-20261027T205510Z-60cbf7d-r5`. Scientific source is clean
-`2e34d64`; the explicit operational reuse adapter is `7019517`, hash-bound outside
-that checkout. All earlier failed journals remain. Existing E2/30+300 GiB disks
-only, no provisioning, resize, quota/IAM change, reinstall or historical deletion.
-The original first-start clock is 20:55:32 UTC October 27. Hard deadline is
-08:55:32 UTC October 29; independent provider STOP is **09:10:02 UTC October 29**,
-earlier than the original 36.25-hour fallback. Fresh current-boot/process watcher
-passes live/normal/crash tests and stops on parent exit; progress is not success.
+**October 28 E024: VM TERMINATED; data accepted, cached comparison failed.**
+[Independent inspection](../experiments/E024-oral-measured-coverage/inspection-observed.json)
+supersedes the dated running handoff. Matching boot/process watcher requested
+shutdown at 10:42:08 UTC; control plane records stop at **10:44:39.525 UTC /
+11:44 Copenhagen**. Private completion is FAILED, collection/readbacks pass.
+The guest attribute is stale RUNNING/upload-completion; neither it nor the
+collecting parent's ordinary exit establishes science success.
 
-The [retention amendment](../experiments/E024-oral-measured-coverage/execution-amendment.md)
-keeps complete unfiltered primary BAMs in existing private GCS, unsorted, with
-full SHA256/readback/native decode before new raw release. Sort/index on later
-restore. No local BAM spool or WAN BAM export; 130 GiB remote cap / original
-24 GiB working allowance and 25 GiB reserve. Original data/learning/criteria stay.
-New complete $16 credit-only ceiling uses the owner's small-increase approval;
-forecast $15.30125. Live Welcome credit DKK 1,790.46 Available / 91%, January 12,
-2027 expiry; pending usage unknown / $35 reserve. Only this project is linked.
-Original retained storage remains $7.73369 within $8 through November 4,
-00:00 Copenhagen; new BAM storage comes from E024, with no automatic renewal.
-[Provisional priced uptime](../experiments/E024-oral-measured-coverage/cost-to-handoff.json)
-separates five allocations, disk attribution and tiny export from sampled CPU.
-No credit delta is treated as an invoice.
+All ten acquisitions/mappings, index/pilot, mean matrix and explicit rebind pass;
+all 12,865,470 cells and invariant non-depth arrays verify independently. The
+final composite-neighbor recall gate (< 0.90) stopped grouping. No completed
+new partitions/export/final input rehash or quality score. No wake, resource
+change, accepted-science replay, external tool or old-data deletion in inspection.
+All main/controller/prior archive members and 15 release gate-file bindings verify.
 
-The publisher's aggregate GET returned 401 despite public HEAD; direct declared
-segments are public and preserve every frozen length/ETag/MD5/aggregate/full-byte
-check. Accepted verification and passed native/cache contracts are reused;
-current source/runtime/segment tests and completed tiny no-op pass. Read the
-**actual work path from config**: it is retained under `...-r4/work`, while the
-new parent/collection live under `...-r5`. BAM receipts point to the original
-`...-r4/alignments` GCS prefix. Never infer these paths from the latest phase name.
+**Reusable alignment storage:** ten unfiltered primary **unsorted** BAMs total
+53,744,784,551 bytes / 50.0537 GiB in existing private GCS. Native SHA256/readback/
+full-decode receipts pass and current object metadata matches sizes. No BAMs were
+exported to the Mac or locally redecoded; restore must verify full bytes before
+sorting/indexing. Work and BAM prefix remain under r4, parent/collection under r5;
+read actual config paths. Original E009 BAM integrity remains accepted earlier
+proof, not a new stopped-guest scan. No temporary disk or extra quota exists.
+
+[Measured priced allocation](../experiments/E024-oral-measured-coverage/cost-review.json):
+five allocations / 13.554832 hours / **$3.70109 compute/IP**; run-PD attribution
+$0.57933 overlaps the existing storage approval. New BAM creation-to-November 4
+storage is about $0.22230; new compact/export costs are separate. Complete subtotal
+$4.61112 / $5.36112 with reserves stays within original amended $16, not an invoice.
+Workflow sampled CPU 84,668.43 s and peak RSS 10.037 GB are not allocated prices.
+Global peak growth 13.35 GiB / minimum free 38.24 GiB stay inside disk guards;
+the original first-snapshot gap remains. Final retained work growth is about 9.85 GiB.
+
+Fresh signed-in credit: **DKK 1,760.04 Available / 89%**, Certain usage/net pricing,
+January 12, 2027 expiry. Paid Overview October 1–28 cost/savings rounded DKK 213,
+net 0; usage may lag >24 hours / $35 reserve. Fresh Catalog rates unchanged.
+Existing disks still cost **$31.20/month while stopped**; original retained storage
+forecast $7.73369 within $8, through **November 4, 00:00 Copenhagen**. New BAMs
+are charged to E024, with no retention extension; a seven-day soft-delete tail
+would cost about $0.23 if later deleted. No automatic renewal or deletion.
+
+The failed journal's original absolute deadline stays **October 29, 08:55:32 UTC**,
+provider STOP **09:10:02 UTC**. Collection-only recovery is unnecessary; inspection
+does not authorize another grouping wake or a reset. The
+[proposed separate new $2 cached-only scope](../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
+requires explicit approval and fresh gates. Retained E019 learning and all old
+source/data/evidence remain fixed; full Oral GLM, training, SemiBin2 and skin
+remain deferred. Current cumulative compact payload export is 933,793,978 bytes;
+no second full data return should consume the remaining 1,213,689,670-byte cap.
 
 ### Recovery STOP discipline
 

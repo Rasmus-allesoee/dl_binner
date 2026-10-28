@@ -1,20 +1,34 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E024 native run](../../experiments/E024-oral-measured-coverage/native-observed.json)
-is running sample-6 acquisition under the frozen pilot and original clock. Read
-[its operations](../../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
-for the next inspection. No current data/quality outcome is inferred from progress.
+Current handoff: [E024 independent inspection](../../experiments/E024-oral-measured-coverage/inspection-observed.json)
+accepts all-ten data and depth rebinding, but the frozen composite-retrieval gate
+failed. VM TERMINATED; no new partitions or quality score. The
+[October 28 decision assessment](../evidence/2026-10-28-e024-retrieval-failure-and-next-block.md)
+recommends one joint-distance retrieval implementation and separately admitted
+cached-only follow-through, with learning and biological rules fixed. The
+[proposed next prompt](../../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
+is not current execution authority. Original $16/clock and November 4 retention
+remain; all accepted and failed evidence stays intact.
 
-Earlier preparation handoff (superseded by the explicit October 27 execution):
-Current handoff: [E024 local preparation](../../experiments/E024-oral-measured-coverage/README.md)
-implements the genuine all-ten oral coverage/fixed-learning information block.
-[Design/alternatives](../../experiments/E024-oral-measured-coverage/design.md)
-explicitly separates it from a matched latest depth/GLM learner comparison, costs
-actual cutoff/view workloads and assesses subset/storage/reuse tradeoffs.
-[Separate new $15 execution request](../../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
-requires fresh native/pilot/credit/resource/storage gates; no VM start, bulk reads,
-community work or deletion in preparation. November 4 retention remains fixed.
-E023's reviewed MODIFY result and all older source/data/evidence remain unchanged.
+## E024 accepted data and failed information comparison, October 28, 2026
+
+The all-ten coverage investment delivered reusable measurements and private
+50.0537 GiB primary BAM backups. All matrix cells and non-depth invariants pass
+independent local review. The new combined-distance retrieval failed its >=0.90
+gate before a partition existed. This supplies no recovery comparison, no negative
+depth conclusion and no reason to replay acquisition/mapping. The paid scope
+remains within $16; storage and credits are separately reviewed in E024's ledger.
+
+Adopt [the source-grounded joint-retrieval follow-through](../evidence/2026-10-28-e024-retrieval-failure-and-next-block.md)
+as the strongest next bounded decision. A small cached consumer can unlock the
+within-community information evidence already paid for; a larger model or mature
+tool win does not establish whether its current candidate search is valid. This
+is a declared new retrieval treatment, preserving the failed original rule, fixed
+learning and scientific acceptance thresholds. Full Oral GLM/learner matching,
+calibrated biological bin construction, one SemiBin2 reference and untouched
+depth-enabled confirmation remain alternatives with explicit decision triggers.
+No further execution is authorized by inspection; the proposed new $2 request is
+separate, without resurrecting the old clock or extending November 4 storage.
 
 Date: 2026-10-08; amended 2026-10-09 and 2026-10-14.
 Status: **accepted, amended by the owner's performance/cost clarification**.

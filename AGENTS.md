@@ -502,6 +502,11 @@ imports can mask a missing sibling import that isolated execution will refuse.
 Failure checks must verify the intended worker error or enforced limit in retained
 evidence, not just any nonzero exit; a monitoring/prerequisite failure can otherwise
 produce a false pass.
+Persist numerical gate values, sampled IDs and bounded reusable evidence before
+raising a refusal, especially after expensive candidate discovery. Preserve failed
+criteria unchanged. Scheduler completion metadata, a normally exited collecting
+parent or a stale guest progress attribute does not replace actual child exits
+and scientific acceptance receipts. A final status must remain final after upload.
 On recovery, test that completed stages are not scheduled again and that every
 remaining consumer follows the reused manifests rather than inferred paths.
 For an accepted hash-bound runtime payload, prepare a restore-only consumer that

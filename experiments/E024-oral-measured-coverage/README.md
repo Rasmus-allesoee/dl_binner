@@ -1,10 +1,20 @@
 # E024: measured oral coverage and fixed-learning information
 
-**Current: RUNNING first sample acquisition**, phase
-`coverage-20261027T205510Z-60cbf7d-r5`. [Native receipt](native-observed.json),
-[provisional costs](cost-to-handoff.json) and [next inspection](OPERATIONS.md#exact-following-prompt)
-supersede preparation-only status below. Original inputs/learning/criteria remain
-fixed; all-ten success and quality are still unestablished.
+**Current: data accepted; cached comparison failed its retrieval gate. VM TERMINATED.**
+[Independent inspection](inspection-observed.json), [all-ten data review](data-review.json)
+and [cost ledger](cost-review.json) supersede the dated running receipt for
+`coverage-20261027T205510Z-60cbf7d-r5`. Full acquisition/mapping/means/rebind pass;
+final composite recall < 0.90 prevents grouping/export/scoring. All 225 main
+members / 32 aliases, controller/prior archives and complete matrix cells verify.
+Ten reusable unsorted private BAMs occupy 50.0537 GiB. No quality result or
+biological disposition is admitted. No VM wake or science replay in inspection.
+
+[The next-decision assessment](../../docs/evidence/2026-10-28-e024-retrieval-failure-and-next-block.md)
+recommends one joint-distance retrieval implementation and a separately authorized
+cached-only follow-through, before full Oral GLM/new learning or external fits.
+[The proposed next prompt](OPERATIONS.md#exact-following-prompt) includes local
+contracts and conditional new $2 admission; it is not current execution authority.
+Original $16 / clock remain unchanged; storage review is November 4, 00:00 Copenhagen.
 
 
 **Execution amendment, October 27:** the owner now authorizes execution.
@@ -12,8 +22,9 @@ fixed; all-ten success and quality are still unestablished.
 retention choice, with no scientific parameter change. Fresh native gates remain
 required; the small amended complete ceiling is $16.
 
-Prepared October 27, 2026. **Local engineering passed; community acquisition,
-mapping, grouping and evaluation are unrun and require a new approval.** The VM
+Historical preparation snapshot, October 27, 2026, superseded by the authorized
+execution and October 28 inspection above: local engineering passed while
+community acquisition, mapping, grouping and evaluation were then unrun. The VM
 was read-only checked as TERMINATED; no cloud start, resource change, new cloud
 compute, bulk acquisition or deletion of pre-existing artifacts occurred. This is a research overlay,
 without a product/model/default change. Branch: `oral-measured-coverage-information`.

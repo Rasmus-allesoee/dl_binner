@@ -1,0 +1,142 @@
+{
+  "status": "MEASURED_ALLOCATION_PRICED_ESTIMATE_NOT_INVOICE",
+  "as_of_UTC": "2026-10-28T19:46:25.884604+00:00",
+  "periods": [
+    {
+      "start_UTC": "2026-10-27T20:55:32.272000+00:00",
+      "end_UTC": "2026-10-27T20:57:13.206000+00:00",
+      "seconds": 100.93400001525879,
+      "ongoing": false,
+      "proof": [
+        "recovery-r2-control/provider-before.json",
+        "recovery-r2-control/STOP-readback.json",
+        "control-plane/stop-dl-binner-cpu-1793134639423600000.json"
+      ]
+    },
+    {
+      "start_UTC": "2026-10-27T20:59:32.697000+00:00",
+      "end_UTC": "2026-10-27T21:01:57.983000+00:00",
+      "seconds": 145.28600001335144,
+      "ongoing": false,
+      "proof": [
+        "recovery-r3-control/provider-before.json",
+        "recovery-r3-control/STOP-readback.json",
+        "recovery-r2-control/provider-start.json"
+      ]
+    },
+    {
+      "start_UTC": "2026-10-27T21:03:08.039000+00:00",
+      "end_UTC": "2026-10-27T21:04:59.785000+00:00",
+      "seconds": 111.74600005149841,
+      "ongoing": false,
+      "proof": [
+        "recovery-r3-control/provider-start.json",
+        "recovery-r3-control/absolute-STOP-readback.json",
+        "recovery-r3-control/stop-dl-binner-cpu-1793135105170914000.json"
+      ]
+    },
+    {
+      "start_UTC": "2026-10-27T21:07:06.483000+00:00",
+      "end_UTC": "2026-10-27T21:20:53.292000+00:00",
+      "seconds": 826.8090000152588,
+      "ongoing": false,
+      "proof": [
+        "release-control/provider-before-release.json",
+        "recovery-r4-control/provider-start.json",
+        "recovery-r4-control/absolute-STOP-readback.json"
+      ]
+    },
+    {
+      "start_UTC": "2026-10-27T21:31:06.905000+00:00",
+      "end_UTC": "2026-10-28T10:44:39.525000+00:00",
+      "seconds": 47612.62,
+      "ongoing": false,
+      "proof": [
+        "recovery-r5-control/provider-start.json",
+        "recovery-r5-control/absolute-STOP-readback.json",
+        "release-r5-control/provider-before-release.json",
+        "current inspection/provider.stdout lastStopTimestamp"
+      ]
+    }
+  ],
+  "allocation_seconds": 48797.39500009537,
+  "allocation_hours": 13.554831944470935,
+  "allocated_vCPU_hours": 108.43865555576748,
+  "prices": {
+    "Catalog_checked_UTC": "2026-10-28T19:33:42.456372+00:00",
+    "DKK_per_USD": 6.578099999996525,
+    "compute_IP_USD_hour": 0.2730456762592464,
+    "PD_USD_month": 31.199999949850024,
+    "GCS_USD_GiB_hour": 2.7397e-05,
+    "WAN_USD_GiB": 0.12,
+    "SKU_source": "Official Cloud Billing Catalog API; DKK quotes converted with each Catalog currencyConversionRate; conservative no allowances"
+  },
+  "compute_IP_USD": 3.7010882548585027,
+  "run_PD_attribution_USD": 0.5793298027229024,
+  "PD_also_charged_while_stopped": true,
+  "PD_double_count_note": "Run attribution overlaps existing $8 storage approval; not a second charge",
+  "BAM": {
+    "bytes": 53744784551,
+    "GiB": 50.053731120191514,
+    "objects": 10,
+    "accrued_estimate_USD": 0.020401688344368948,
+    "creation_to_retention_end_USD": 0.22229614796909752,
+    "monthly_if_retained_USD": 1.0010746224038303,
+    "soft_delete_7day_tail_if_deleted_USD": 0.230382108011981
+  },
+  "compact_GCS_creation_to_end_upper_USD": 0.004045152311677048,
+  "export": {
+    "this_inspection_payload_bytes": 932565688,
+    "previous_payload_bytes": 1228290,
+    "cumulative_payload_bytes": 933793978,
+    "remaining_cumulative_cap_bytes": 1213689670,
+    "estimated_gross_USD": 0.10435960941016674,
+    "metadata_operation_rounding_reserve_USD": 0.02,
+    "BAM_WAN_bytes": 0
+  },
+  "original_storage_forecast_USD": 7.733688064031405,
+  "original_storage_ceiling_USD": 8,
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "complete_ceiling_USD": 16,
+  "science_resources": {
+    "command": [
+      "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+      "-I",
+      "-B",
+      "/srv/dl_binner/repo/scripts/e024_control.py",
+      "--plan",
+      "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/science-plan.json",
+      "--workflow"
+    ],
+    "exit_code": 1,
+    "launched_pid": 2495,
+    "peak_sampled_rss_bytes": 10037030912,
+    "rss_bytes_ceiling": 26000000000,
+    "sample_includes_coordinator": true,
+    "sampled_average_cpus": 1.812253297321945,
+    "sampled_cpu_seconds": 84668.43,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 123362.86554431915,
+    "stop_reason": null,
+    "wall_seconds": 46719.975692757
+  },
+  "whole_run_disk": {
+    "samples": 23653,
+    "minimum_free_bytes": 41055109120,
+    "maximum_sampled_global_growth_bytes": 14333739008,
+    "scope": "Sampled whole-filesystem usage; first-allocation baseline, not exact attributable bytes"
+  },
+  "archive": {
+    "bytes": 930977463,
+    "sha256": "08e9d9fc0a6aad12134226b4371ca993c140f415dfc2071060aa3295d9ccd20b"
+  },
+  "archive_logical_bytes": 1454899258,
+  "not_yet_scientific_completion": true,
+  "credit_delta_not_invoice": true,
+  "priced_compute_PD_export_plus_projected_new_storage_USD": 4.611118967272346,
+  "with_0_25_operations_and_0_50_unreconciled_contingency_USD": 5.361118967272346,
+  "remaining_original_ceiling_after_conservative_estimate_USD": 10.638881032727653,
+  "original_wall_clock_deadline_UTC": "2026-10-29T08:55:32.272+00:00",
+  "provider_absolute_STOP_UTC": "2026-10-29T09:10:02.272+00:00",
+  "clock_remaining_hours_at_review": 13.151774276666666
+}

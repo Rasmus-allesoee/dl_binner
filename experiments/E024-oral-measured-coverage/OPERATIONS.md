@@ -1,6 +1,52 @@
 # E024 operations
 
-## Current status: running first-sample acquisition, October 27
+## Verified inspection, October 28: data accepted, comparison failed
+
+[Independent inspection](inspection-observed.json), [data audit](data-review.json),
+[cost ledger](cost-review.json) and [next-decision assessment](../../docs/evidence/2026-10-28-e024-retrieval-failure-and-next-block.md)
+supersede the dated running handoff below. VM **TERMINATED**, provider stop
+**10:44:39.525 UTC / 11:44 Copenhagen**. Matching boot/process watcher requested
+stop after the parent exited. Private completion is **FAILED**; the guest's
+`RUNNING / upload-completion` is stale final-upload progress, not science success.
+
+Five current native gates and byte-bound prior gates pass. Acquisition/index/pilot,
+all ten mapping/summary/BAM readback/decode stages, combination and depth-only
+rebind pass. All 12,865,470 matrix cells and invariant non-depth arrays independently
+verify locally. All 225 main archive members / 32 aliases, 301 controller members,
+the prior r4 archive and all 15 release gate-file bindings verify. The complete
+data are reusable; no reads, mapping, learning or old scores were repeated.
+
+Grouping processed 508,763 rows, then refused **final composite recall < 0.90**.
+The numeric value and arrays were not saved before refusal. No completed new
+hierarchy/partition/export/final input rehash exists. No truth evaluation or
+biological KEEP/MODIFY/ABANDON classification is admitted. The failed r5 journal,
+earlier failures and original Mac tolerance remain unchanged.
+
+Ten unfiltered primary **unsorted** BAMs total **53,744,784,551 bytes / 50.0537 GiB**
+in the original r4 GCS alignment prefix. Native SHA256/readback/full-decode receipts
+and current object sizes/generations were inspected; BAM bytes were not exported
+or redecoded on the Mac. Future restore must verify full bytes before sort/index.
+The 124,584,683-byte matrix and 338,210,613-byte rebound feature file are retained
+in the compact archive, SHA256 `08e9d9fc0a6aad12134226b4371ca993c140f415dfc2071060aa3295d9ccd20b`
+(930,977,463 compressed bytes / 1,454,899,258 logical member bytes).
+
+All five allocations total **13.554832 hours / $3.70109 compute/IP**. Run disk
+attribution is $0.57933; projected new BAM retention through the existing boundary
+is $0.22230. Compute/PD/export/projected new-storage subtotal **$4.61112**, or
+**$5.36112** with operations/unreconciled reserves, is inside the original amended
+**$16**. Fresh credit DKK **1,760.04 Available / 89%**, January 12 expiry; usage
+can lag >24 hours and the $35 pending reserve stays. These are priced estimates,
+not an invoice. Existing stopped disks remain $31.20/month. Storage review stays
+**November 4, 00:00 Copenhagen**, with no automatic extension or deletion.
+
+There is no missing collection evidence and no reason for a collection-only wake.
+The old clock still expires **October 29, 08:55:32 UTC**, STOP 09:10:02 UTC. No
+new job or changed candidate was run in inspection. The strongest next block is a
+prospectively amended joint-distance retrieval consumer, retaining accepted depth
+and fixed learning. [The proposed authorization below](#exact-following-prompt)
+would create a separate cached-only scope; it is not already authorized here.
+
+## Dated execution handoff: first-sample acquisition, October 27
 
 [Native receipt](native-observed.json) and [provisional allocation costs](cost-to-handoff.json)
 own phase `coverage-20261027T205510Z-60cbf7d-r5`. All-ten data, pilot admission,
@@ -263,7 +309,7 @@ preserves alignments without paying today's sort cost for an unselected consumer
 Deleting a temporary disk destroys its files; only an independently verified
 backup survives. No disk or old data was deleted in E024.
 
-## Exact following prompt
+## Inspection prompt carried out, October 28
 
 Our goal is substantially closing the recovery gap with coherent upgrades and
 selective controls. Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015 and E024's
@@ -317,7 +363,7 @@ before contracts pass or call threshold tiers formal MIMAG HQ without RNA checks
 
 Apply the frozen KEEP/MODIFY/ABANDON rule unchanged. Report paired density/marker
 and target/neighborhood trade-offs, actual resources/cost/storage and one strongest
-recovery-focused next block. Weigh a matched latest learning/depth/GLM bundle,
+recovery-focused next block (finding the strongest next upgrade/task is important, so think be meticulous and think/investigate extensively). Weigh a matched latest learning/depth/GLM bundle,
 information/representation/grouping limitations and a targeted SemiBin2 reference
 against serious alternatives; do not default to another tiny grid or infer a
 cross-community causal depth effect. E024 holds E019 learning fixed and does not
@@ -332,3 +378,91 @@ returns. No extra execution follows a limit. Update records/check/commit with
 structured what changed/why and give one exact next prompt and any genuinely new
 approval needed. Review retained storage by November 4; no automatic renewal or
 destruction of evidence.
+
+## Exact following prompt
+
+Proposed next authorization, **not granted by the completed-output inspection**:
+
+Our goal is substantially closing the recovery gap. Read AGENTS, PROJECT_INTENT,
+STATE/CLOUD, D013/D015 and E024's inspection, data/cost review, failed recall
+evidence and October 28 next-decision assessment. Preserve dev3/dev4/dev5 and all
+accepted E009–E024 data, truth, vectors, source freezes, outputs and failed journals.
+Use a new descriptive research branch without a codex/ prefix. Keep skin unscored.
+
+Implement and locally test one coherent cached retrieval upgrade that indexes the
+actual E024 pair-dependent composite distance. Prefer the reviewed compiled
+joint-distance NNDescent route unless actual tiny contracts identify a concrete
+reason to change it. Freeze one source-blind index policy, without a resolution,
+candidate-count, loss or score grid. Retain exact native E019 unit vectors, measured
+ten-depth means/masks, label-free transforms/scales, length weights, exact final
+distance/reranking, seed 11, E023 hierarchy/marker selection and both full-DNA
+alternatives. This is an explicit new retrieval treatment; do not rewrite the
+failed original union as successful or weaken its 0.90 final-composite recall gate.
+
+Exercise actual compiled index/query/readers on tiny fixtures against exhaustive
+answers, including mixed availability/all-zero measured rows, pair-dependent
+weights, opaque full/local axes, ties/self-neighbors, serialization/reload,
+refusal, hierarchy/marker/export and verified partial reuse. Preserve the original
+Mac portability tolerance. Persist numeric audits, IDs, configuration and bounded
+neighbor arrays before a gate can reject them. Fix the future outer driver's
+failed-child exit propagation and terminal guest-status ordering, with real
+failure-path tests; leave executed source/journals unchanged.
+
+Use E024's accepted data and archive in place. No acquisition, remapping, marker
+redetection, training/GLM inference, old neighbor regeneration, old score replay,
+external binner, cutoff/seed change or confirmation work. Verify retained inputs
+and reuse passed setup; do not reinstall or recopy missing bytes as a fallback.
+Freeze protocol/source/defaults and E024's same primary KEEP/MODIFY/ABANDON criteria
+before changed community outcomes. No truth enters candidate selection or tuning.
+
+I authorize **one new $2 incremental gross, credit-only cached comparison**, only
+after local tests and fresh live Welcome balance/scope/expiry/delayed-usage,
+product prices/coverage, original storage approval, source/runtime, complete
+schedule and measured headroom/return gates pass. This is a new explicit scope;
+the failed E024 clock is not reset and its budget does not carry over. Existing
+e2-standard-8/32 GiB and 30/300 GiB disks only; three cumulative hours from this
+new VM start including setup/gates/collection, provider STOP 3.25 hours, four
+numerical threads, 26 GB sampled tree RSS, 25 GiB free reserve and 8 GiB additional
+working space. No provisioning/resize, automatic retry/grid/extension or storage
+retention beyond **November 4, 00:00 Copenhagen**. Stop before unclear/uncovered
+spending or a required resource increase.
+
+Price/inventory the actual return before launch. Return only new outputs with
+explicit external byte-bound references to E024's verified data archive; do not
+copy its data into another fallback archive. Cap new compressed export at 1 GiB,
+logical members at 4 GiB, and preserve E024's cumulative 2 GiB compact allowance
+(933,793,978 payload bytes used at the October 28 review; refresh any later
+transfers). Local review: four threads, 8 GB sampled RSS, one hour, 8 GiB inclusive
+staging and 6 GiB physical reserve. No BAM internet export. Preserve all DNA and
+short/marker-negative/unknown/non-target/excluded/unassigned populations.
+
+Push the exact clean branch normally from the Mac and synchronize VM read-only.
+Arm/test a fresh current-boot/process-bound held-parent exit watcher and verify
+provider STOP before release. Pass the new actual Linux compiled-metric and
+source/runtime gates inside the same clock. If the frozen retrieval gate fails,
+collect its numeric/cache evidence and stop; no automatic widening or quality
+claim. Debug operational errors with fresh journals and verified reuse inside
+the same authorized clock/budget, never repeat accepted science. Follow a short
+job through collection; for a healthy longer job verify supervision and real
+progress, wait a few minutes, then hand off. Independently confirm shutdown.
+
+After successful archive/member/alias verification, evaluate only new partitions
+with the frozen Oral provided-origin oracle, all 799 / 2,083,072,211 bp references,
+known-shared sensitivity and complete length/origin/eligibility/marker/zero/
+unknown/non-target/unassigned strata. Retain E009 v2's 156-target / 3.3034% N
+context and old summaries without rescoring. Report paired density/marker effects,
+target recovery, matched composite-neighbor diagnostics, secondary threshold-based
+quality tiers and actual allocation/storage/export cost, distinct from sampled
+CPU. No threshold-selected bins or formal MIMAG HQ without RNA checks.
+
+Use the result to recommend one strongest recovery-focused block: a coherent
+depth-enabled learner if representation remains limiting, or calibrated bin
+construction if biologically coherent neighbors are still lost downstream. Weigh
+the reviewed GLM-efficiency options and one targeted SemiBin2 reference without
+automatically adding them. Both inspected communities remain development data;
+skin/independent depth-enabled confirmation needs its existing source/genome/
+replicon/molecule/taxonomy/overlap/ambiguity/unique-truth/depth/cost admission.
+Update records/check/commit with structured what changed/why; report results,
+limits, storage review and the exact next prompt. If any prelaunch gate fails,
+finish the local preparation and report the precise unmet condition without
+starting cloud work.

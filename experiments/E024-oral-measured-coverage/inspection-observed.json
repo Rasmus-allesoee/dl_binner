@@ -1,0 +1,299 @@
+{
+  "kind": "E024 independent stopped-output inspection",
+  "as_of_UTC": "2026-10-28T19:51:29.583895+00:00",
+  "phase": "coverage-20261027T205510Z-60cbf7d-r5",
+  "status": "DATA_ACCEPTED_COMPARISON_FAILED_RECALL_GATE",
+  "science_success": false,
+  "data_success": true,
+  "quality_evaluation_admitted": false,
+  "VM_started": false,
+  "resources_changed": false,
+  "retention_extended": false,
+  "provider": {
+    "status": "TERMINATED",
+    "last_start": "2026-10-27T14:31:06.905-07:00",
+    "last_stop": "2026-10-28T03:44:39.525-07:00",
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD",
+      "terminationTime": "2026-10-29T09:10:02.272Z"
+    },
+    "disks_GiB": [
+      30,
+      300
+    ]
+  },
+  "guest_status": "Stale RUNNING/upload-completion; does not override FAILED completion and TERMINATED control plane",
+  "private_completion": {
+    "uri": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r5/completion.json",
+    "status": "FAILED",
+    "collection_readback_verified": true
+  },
+  "watchdog": {
+    "boot_id": "eeaacdc0-ebf1-4e1d-a72a-33a21bf2daf5",
+    "expected_process": {
+      "command_sha256": "b3b2c8f163885a899eac418dd7b017a2193b5c684f36b726a38396937015e598",
+      "pid": 2037,
+      "start_ticks": 5327
+    },
+    "matching_archived_start_and_live_proof": true,
+    "shutdown_requested_UTC": "2026-10-28T10:42:08.871773+00:00",
+    "decision": "workflow exited",
+    "grace_seconds": 61.997666885996296
+  },
+  "archive": {
+    "uri": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r5/e024-evidence.tar.gz",
+    "bytes": 930977463,
+    "sha256": "08e9d9fc0a6aad12134226b4371ca993c140f415dfc2071060aa3295d9ccd20b",
+    "physical_members": 225,
+    "payload_members": 224,
+    "aliases": 32,
+    "logical_member_bytes": 1454899258,
+    "every_member_alias_omission_relation_verified": true,
+    "controller_physical_members": 301,
+    "prior_r4_member_verification": 358,
+    "checksum_sidecar_matches_expected_SHA256": true
+  },
+  "stage_status": {
+    "native_gates": "Five PASS; prior 24 native tests/readers/private transport verified reuse; current source/runtime/segment/no-op checks PASS",
+    "verify": "Prior r4 accepted seal reused; not repeated",
+    "acquire_first": "PASS",
+    "index": "PASS",
+    "samples": "All ten sealed PASS, mapper/feeder/encoder/decode and checksum contracts pass",
+    "pilot": "PASS, first sample reused; original 79545.0015 s remaining forecast",
+    "combine": "PASS, complete ordered 1286547 x 10",
+    "rebind": "PASS, exact invariant arrays independently compared locally",
+    "group": {
+      "exit_code": 1,
+      "reason": "Final composite candidate recall below frozen 0.90; no auto widening",
+      "recall_value": null,
+      "sampled_query_rows": 32,
+      "generated_rows": 508763,
+      "neighbor_arrays_retained": false,
+      "sequence_and_depth_index_audits": "Returned without throwing before final composite refusal; exact numbers not retained",
+      "scheduler_incomplete_false_is_not_success": true
+    },
+    "export": "NOT_RUN",
+    "final_audit": "NOT_RUN",
+    "collection": "PASS, allow-incomplete; eleven collect/upload/readback commands exit 0"
+  },
+  "failure_interpretation": "Scientific retrieval contract failed; no demonstrated corruption, OOM, timer expiry or changed learner. The final joint metric is not the separate retrieval index metric. No biological KEEP/MODIFY/ABANDON disposition is possible.",
+  "source": {
+    "scientific_commit": "2e34d648a7db6e84aa0720a23453ad30124571d5",
+    "archived_files_match_commit": 28,
+    "operational_adapter_commit": "7019517",
+    "all_15_release_gate_file_bindings_in_verified_main_or_controller_archives": true,
+    "original_accepted_source_freezes_unchanged": true,
+    "final_after_workflow_full_original_input_rehash": "Not reached; rebind and release hashes are scoped earlier evidence"
+  },
+  "data_review": "data-review.json",
+  "cost_review": "cost-review.json",
+  "diagnostics": {
+    "new_recovery_scores": false,
+    "truth_opened": false,
+    "paired_density_marker_and_target_effects": "Unavailable: no new partitions",
+    "reference_denominators": {
+      "oral_targets": 799,
+      "oral_reference_bp": 2083072211,
+      "E009_targets": 156,
+      "E009_N_quarantine_percent": 3.3034
+    },
+    "old_summaries_unchanged": true,
+    "known_shared_and_all_populations": "Unchanged; no new scoring admitted",
+    "skin": "Unscored, 610 targets / 313 exact oral overlaps; remaining admission gates unchanged"
+  },
+  "local_review": {
+    "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e024-inspection/20261028T193107Z",
+    "numerical_data_audit": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e024_inspect_data.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e024-inspection/20261028T193107Z",
+        "--original-features",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e014-multiview-reconstruction/inspection-20261019/verified/work/units/oral-dev5/features/features.npz",
+        "--bam-metadata",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e024-inspection/20261028T193107Z/BAM-metadata.json",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e024-inspection/20261028T193107Z/data-audit.json"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 63.01229601899831,
+      "peak_sampled_rss_bytes": 1561845760,
+      "seconds_ceiling": 900,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 69403,
+      "sampled_cpu_seconds": 60.43,
+      "sampled_average_cpus": 0.9590191727306723,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "extra_staging_bytes": 2387476721,
+    "physical_free_after_bytes": 13473136640,
+    "ceiling_extra_bytes": 8589934592,
+    "ceiling_seconds": 3600,
+    "RSS_ceiling_bytes": 8000000000,
+    "original_Mac_allclose_tolerance_preserved": true,
+    "local_failures_preserved": [
+      {
+        "error": "Initial controller reader expected payload hash for inventory envelope; KeyError inventory.json; corrected to compare embedded/external manifest and all 300 payload hashes"
+      },
+      {
+        "error": "Sandbox ps denied before data audit; fresh recorded audit used authorized process sampling"
+      },
+      {
+        "error": "Python3.10 lacks hashlib.file_digest; portable streamed SHA256 implemented; original failed audit preserved"
+      }
+    ],
+    "elapsed_review_wall_seconds_at_record": 1831.070512,
+    "physical_free_reserve_bytes": 6442450944
+  },
+  "recovery_assessment": {
+    "missing_collection_evidence": false,
+    "collection_only_wake_needed": false,
+    "ordinary_original_clock": "2026-10-29T08:55:32.272Z",
+    "original_provider_STOP": "2026-10-29T09:10:02.272Z",
+    "budget": "Original amended $16 remains unextended",
+    "remaining_clock_at_cost_review_hours": 13.151774276666666,
+    "new_grouping_wake_authorized_in_inspection": false,
+    "scientific_gate_cannot_be_silently_relaxed_or_retried": true
+  },
+  "next_decision": "Prospectively implement and test a joint-composite retrieval path with the same final distance and unchanged recall gate, then separately authorize one cached-only new treatment. Do not buy full Oral GLM/training/external campaign before this missing within-community evidence.",
+  "raw_evidence_bindings": {
+    "provider.stdout": {
+      "bytes": 33071,
+      "sha256": "e196b845f410839669f4de136066398dec9851f94c38e67c34695672158bb94e"
+    },
+    "guest.stdout": {
+      "bytes": 257,
+      "sha256": "4b727930f3399d14c302c10aa4e42d00d393779c6b495779a482ebd2dd209cf4"
+    },
+    "completion.stdout": {
+      "bytes": 12185,
+      "sha256": "647c0eed355b399e038636c43419d0d403c6cb705dde1543a20d528fae97a499"
+    },
+    "watchdog-exit.json": {
+      "bytes": 4450,
+      "sha256": "208fb06f785e6b14c4635de039a556d9eb1133997d6e189195ea83bb1231079e"
+    },
+    "collection.json": {
+      "bytes": 7748,
+      "sha256": "4d9406e36aea7323d6acd559cdc48c6155a52ad7621baded2643e3b8c5eb7f70"
+    },
+    "terminal-disk.json": {
+      "bytes": 2118,
+      "sha256": "0e52d9ebd8bf5ddad9d9aecf01de4182a73d3df1f37bddc9f2d6e9937736d971"
+    },
+    "current-prices.json": {
+      "bytes": 8003,
+      "sha256": "966244e7286aac0dd883821c281708da8ada5209dbafae84992704ff64ee59ab"
+    },
+    "billing-ui.json": {
+      "bytes": 655,
+      "sha256": "9991a53e4a5281999b5a3969ffb04e055da04b011f32efb9caae192d6380e47e"
+    },
+    "BAM-metadata.json": {
+      "bytes": 7964,
+      "sha256": "0bff7ed4fd8935869a41578954e1a2e1fb2162c5089b24388cb227d5afe4fc91"
+    },
+    "source-verification.json": {
+      "bytes": 4602,
+      "sha256": "dbf5c437bcc6fbb2a0ad784fda602d0d0c1bb628d7e5421d161ed75201a7ded3"
+    },
+    "release-gate-bindings.json": {
+      "bytes": 3203,
+      "sha256": "de287e96bac31611ef730f48b8db9e458fcadb6a61c4bb0b88ac1501ab9a0eb9"
+    },
+    "member-verification.json": {
+      "bytes": 7409,
+      "sha256": "bdbdc60f3316615b48f0122bc779c12638894019b270e044a60ef3c7bf21901f"
+    },
+    "auxiliary/controller-verification.json": {
+      "bytes": 272,
+      "sha256": "49ab1420dfc8900f22edfdf0e6edc12791b5609d3245843d49aaa899eaf59ea5"
+    },
+    "auxiliary/prior-r4-verification.json": {
+      "bytes": 293,
+      "sha256": "29577e47f7e0a6a0a84d8d3ca8d31fef355964d10f9933538ff6937fa9547b60"
+    },
+    "data-audit-r3-resources.json": {
+      "bytes": 1253,
+      "sha256": "c3ba35aeaca730bb4dce4c26eba4e239ef3640f9afbbb942a7dc5d220b333575"
+    },
+    "external-source-audit.json": {
+      "bytes": 707,
+      "sha256": "47007bac2d0d80bf407b14f12308aa3add535553227e6705309768046ba7e67f"
+    },
+    "verified/evidence/phase-logs/workflow.exit.json": {
+      "bytes": 745,
+      "sha256": "b9bfc2f95065156b68d0d88b6da0a36c92a80d73e5696ca47988dc4adef7e4e8"
+    },
+    "provider-final.json": {
+      "bytes": 33071,
+      "sha256": "e196b845f410839669f4de136066398dec9851f94c38e67c34695672158bb94e"
+    },
+    "docs-check.log": {
+      "bytes": 729,
+      "sha256": "39d0ff1320a890835e92699461d5a6062d3897f632498416518ad1b70eb9f81a"
+    }
+  },
+  "verification": {
+    "local_reader_source": {
+      "bytes": 11165,
+      "sha256": "26b7b17f5b055f4623858b523a509d75bcbbe1c6ec0244f8a2334a0c94d43564"
+    },
+    "local_reader_tests": {
+      "bytes": 2889,
+      "sha256": "bfbba139be423e8a5b0de9ba23e20f4ec2b7c0523f466094fbef0bfe8424fb44"
+    },
+    "unit_tests": {
+      "status": "PASS",
+      "tests": 5,
+      "scope": "Four new archived-reader/binding/segment/seal tests plus unchanged frozen-disposition/neighbor-population test; direct local unittest invocation on retained Python3.10"
+    },
+    "docs_check": {
+      "status": "PASS",
+      "maintained_documents": 108,
+      "local_links": 1556,
+      "present_source_fingerprints": 85,
+      "optional_unavailable_historical_caches": 10
+    },
+    "unchanged_freezes": {
+      "E024_source_files": 28,
+      "E023_inherited_files": 287
+    },
+    "JSON_AST_whitespace": "PASS",
+    "no_custom_joint_index_implemented_or_executed": true
+  },
+  "provider_final_recheck": {
+    "status": "TERMINATED",
+    "checked_UTC": "2026-10-28T20:01:38.069586+00:00",
+    "proof": {
+      "bytes": 33071,
+      "sha256": "e196b845f410839669f4de136066398dec9851f94c38e67c34695672158bb94e"
+    }
+  },
+  "external_source_review": {
+    "source_url": "https://raw.githubusercontent.com/lmcinnes/pynndescent/ab65f93d108406444932474bf981de7cee322cde/pynndescent/pynndescent_.py",
+    "release": "release-0.5.13",
+    "commit": "ab65f93d108406444932474bf981de7cee322cde",
+    "bytes": 83456,
+    "sha256": "6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521",
+    "local_retained_version_matches": true,
+    "local_retained_source_identical": true,
+    "inspected_sections": [
+      "NNDescent metric callable initialization",
+      "init_graph/init_dist optional inputs",
+      "native float32 distances and query reranking",
+      "search epsilon accuracy/cost"
+    ],
+    "native_custom_metric_executed": false,
+    "community_biological_claim": false
+  }
+}

@@ -1,20 +1,41 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E024 native run](../../experiments/E024-oral-measured-coverage/native-observed.json)
-is running sample-6 acquisition under the frozen pilot and original clock. Read
-[its operations](../../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
-for the next inspection. No current data/quality outcome is inferred from progress.
+Current handoff: [E024 independent inspection](../../experiments/E024-oral-measured-coverage/inspection-observed.json)
+accepts all-ten data and depth rebinding, but the frozen composite-retrieval gate
+failed. VM TERMINATED; no new partitions or quality score. The
+[October 28 decision assessment](../evidence/2026-10-28-e024-retrieval-failure-and-next-block.md)
+recommends one joint-distance retrieval implementation and separately admitted
+cached-only follow-through, with learning and biological rules fixed. The
+[proposed next prompt](../../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
+is not current execution authority. Original $16/clock and November 4 retention
+remain; all accepted and failed evidence stays intact.
 
-Earlier preparation handoff (superseded by the explicit October 27 execution):
-Current handoff: [E024 local preparation](../../experiments/E024-oral-measured-coverage/README.md)
-implements the genuine all-ten oral coverage/fixed-learning information block.
-[Design/alternatives](../../experiments/E024-oral-measured-coverage/design.md)
-explicitly separates it from a matched latest depth/GLM learner comparison, costs
-actual cutoff/view workloads and assesses subset/storage/reuse tradeoffs.
-[Separate new $15 execution request](../../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
-requires fresh native/pilot/credit/resource/storage gates; no VM start, bulk reads,
-community work or deletion in preparation. November 4 retention remains fixed.
-E023's reviewed MODIFY result and all older source/data/evidence remain unchanged.
+## E024 evidence and one retrieval follow-through, October 28, 2026
+
+The accepted data block does not yet answer the information-versus-representation
+question. All ten genuine Oral depth columns and invariant feature arrays pass,
+but the separate learned/composition and depth shortlists missed enough neighbors
+under the final pair-dependent combined distance to fail its frozen >=0.90 gate.
+No numeric recall/cache was written before refusal, and no new bins or quality
+scores exist. This is a technical scientific-contract failure, not evidence to
+abandon depth, promote density or select the next encoder from recovery outcomes.
+
+Prefer [one joint-distance retrieval upgrade](../evidence/2026-10-28-e024-retrieval-failure-and-next-block.md),
+using the retained learning, data, exact final distance, biological selection and
+full reference rule. A compiled custom-distance index is supported by the pinned
+author source but needs actual tiny/native/exhaustive contracts; it is not proven
+ready by inspection. Persist audits/candidate evidence before refusal. Keep the
+original failed union immutable and freeze the revised discovery policy before
+new outcomes; no automatic candidate/resolution grid or relaxed gate.
+
+This narrow block is justified by a concrete retrieval-contract failure, not a renewed
+one-ingredient-at-a-time policy. It can inform the stronger coherent depth-enabled
+learner versus calibrated marker/mixture grouping choice without another mapping
+or an estimated 61-hour full Oral GLM extraction. The matched latest full-feature
+question stays open, as do efficient prior exposure and independent confirmation.
+Both communities remain development data. Inspection starts no job, changes no
+model and extends no budget/clock/storage; the next proposed $2 scope requires
+new authorization and fresh admission through the same November 4 boundary.
 
 Date: 2026-10-16. Status: **accepted for the first integrated implementation**.
 The owner subsequently authorized local implementation/engineering checks and

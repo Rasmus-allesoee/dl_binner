@@ -1,16 +1,51 @@
 # Current Research State
 
-Updated: October 27, 2026 (Copenhagen). This is the single current handoff.
+Updated: October 28, 2026 (Copenhagen). This is the single current handoff.
 
-**E024 is RUNNING under verified supervision; sample 6 acquisition is progressing.**
-[Native receipt](../experiments/E024-oral-measured-coverage/native-observed.json)
-for `coverage-20261027T205510Z-60cbf7d-r5` supersedes preparation-only handoffs.
-The full all-ten pilot/data/comparison has not completed; no new quality score.
-Current scientific source `2e34d64` and separately hash-bound operational adapter
-`7019517` preserve original learning/rules and passed work. The next action is
-[completed-output inspection](../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
-after shutdown, or one healthy progress report if still running. Do not poll to
-completion, replay accepted work or acquire new scope.
+**E024 data are accepted; its cached comparison failed the frozen retrieval gate.
+VM TERMINATED.** [Independent inspection](../experiments/E024-oral-measured-coverage/inspection-observed.json),
+[data review](../experiments/E024-oral-measured-coverage/data-review.json) and
+[costs](../experiments/E024-oral-measured-coverage/cost-review.json) supersede the
+dated RUNNING receipt for `coverage-20261027T205510Z-60cbf7d-r5`. Provider stop is
+October 28, 10:44:39.525 UTC / 11:44 Copenhagen; matching boot/process watcher and
+private **FAILED** completion verify. Stale guest `upload-completion` is progress,
+not science success. All archive members/aliases and 15 release gate bindings pass.
+
+All ten acquisitions/mappings/BAM backups, index/pilot, complete mean matrix and
+depth-only rebind pass. Independently verified all 12,865,470 cells and unchanged
+non-depth arrays; 576,144 measured all-zero contigs remain. Native E019 learning
+is fixed. Ten unsorted private BAMs total **50.0537 GiB**, with native full
+SHA256/readback/decode receipts; future restore needs byte verification/sort/index.
+Actual work and alignment prefix stay under r4, parent/collection under r5.
+
+The 150-candidate union processed 508,763 eligible rows but final combined-distance
+recall was **< 0.90**. No completed hierarchy, partitions, export or final input
+rehash exists; numeric recall and arrays were not saved. No new quality score,
+biological KEEP/MODIFY/ABANDON verdict or paired target effect is possible.
+No wake, retraining, acquisition, mapping, old rescore or external run in inspection.
+
+**Next:** [one joint-distance retrieval block](evidence/2026-10-28-e024-retrieval-failure-and-next-block.md),
+preserving learning, measured data, final metric, E023 density/marker policy and
+the original recall/recovery gates. Freeze/test a new custom-distance index and
+persist failure audits, then run only a separately admitted cached comparison.
+This is a declared new retrieval treatment, not an automatic retry or a network
+size prescription. Full Oral GLM/learner matching, calibrated bin construction
+and a targeted SemiBin2 reference remain reasoned alternatives, not extra scope.
+[Exact proposed next authorization](../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
+offers local preparation plus a conditional **new $2 / three-hour** phase; not
+authorized by this inspection. Skin stays unscored; current communities remain
+development and unmatched upstream regimes.
+
+All five allocations: **13.554832 h / $3.70109 compute/IP**, plus $0.57933 run-PD
+attribution (overlapping existing storage). Compute/PD/export/projected new
+storage subtotal **$4.61112**, **$5.36112** with reserves, inside amended $16.
+Fresh credit DKK **1,760.04 Available / 89%**, January 12 expiry, net displayed
+DKK 0; usage may lag >24 hours / $35 reserve. Not an invoice or credit-delta cost.
+The original deadline remains October 29, 08:55:32 UTC, provider STOP 09:10:02;
+no extension or new execution here. Existing $8 retained-storage approval ends
+**November 4, 00:00 Copenhagen**. Added BAM retention through that date is about
+$0.22230 from E024; disks remain $31.20/month while stopped. No automatic renewal,
+deletion or speculative cleanup. Preserve accepted banks/runtimes/DNA and failures.
 
 ## Preserved E023 reviewed outcome
 
@@ -36,49 +71,6 @@ selected community router or product-family verdict. All 156/799 full references
 3.3034% N quarantine, oral known-shared sensitivity and complete DNA remain.
 Secondary threshold-based target HQ/MQ/LQ: E009 9/10/10 (MetaBAT2 5/11/6), oral
 10/21/24; unknown/non-target/impure bins remain, no RNA or formal MIMAG HQ claim.
-
-**E024 native admission and recovery are verified.** Five native admission gates,
-24 original Linux contracts, real private BAM transport, fresh changed segment
-contract and exact completed tiny-DAG no-op pass. Full input verification is
-reused unchanged. Earlier CLI locator, stopped-scheduling, isolated-import,
-aggregate-GET401 and operational archive-schema failures remain explicit in Git,
-on disk and [the checksum/readback-verified compact backup](../experiments/E024-oral-measured-coverage/native-observed.json).
-No assembly, aligner result, learning fit or score was repeated.
-
-All ten original E009 BAMs / indexes and their assembly pass full SHA256,
-quickcheck and exact SQ checks: 41.105 GB of BAMs remain intact. Review found
-51.5 GiB free before data, enough for the streaming plan. No old files were
-deleted. Preserve linked environments, native banks and irreplaceable evidence.
-
-The [design/alternatives](../experiments/E024-oral-measured-coverage/design.md)
-recognize E009 E022 depth/GLM learning versus oral E019 sequence-only as unmatched.
-Choose genuine depth first with fixed E019 vectors and one observed-depth retrieval
-union. This does not test the latest full learner on both communities or depth in
-training. Original E023 sequence-only outputs and E019 context are reused without
-refit/rescore. Full Oral GLM needs 2,470,549 views / 2.366 Gb exposure; accepted
-native probes project about 61 GPU hours, versus 43/36/33 hours at 1,000/1,500/
-2,000 bp. Exact counts and a cost-only random-genome alternative are retained;
-no cutoff sweep, GLM extraction or derivative community was run.
-
-[The authorized complete scope](../experiments/E024-oral-measured-coverage/resource-plan.json)
-uses existing E2/30+300 GiB disks, 36 cumulative hours / 36.25-hour STOP,
-4 numerical grouping threads / 8 total data CPUs, 26 GB sampled RSS,
-25 GiB reserve / 24 GiB local growth and 2 GiB compact internet return. Full-primary
-BAMs have a separate internal GCS cap of 13 GiB per sample / 130 GiB total,
-with SHA256 readback and native full decode before raw cleanup. Forecast with
-reserves is $15.30125 under the new $16 ceiling; no BAM WAN export or new quota.
-A complete accepted sample 6 must admit the remaining nine without remapping.
-
-Fresh signed-in Credits shows DKK 1,790.46 Available / 91%, January 12, 2027
-expiry; paid Overview October 1–27 cost/savings about DKK 183, net DKK 0.
-Pending usage stays unknown / $35 reserve; only this project is billing-linked.
-Original storage remains $7.73369 under its separate $8 through **November 4,
-00:00 Copenhagen**. Added BAM storage is charged to E024's new allowance; no
-retention extension. As of 22:00 UTC, five measured allocations total 49.05 minutes:
-compute/IP about $0.2232 plus $0.0349 run-disk attribution, with ongoing compute,
-GCS/operations and final export pending. These are estimates, not an invoice or
-credit-delta attribution. Current data/quality remain unaccepted pending the pilot
-and full workflow. Skin remains unscored; both existing communities are development.
 
 Measured allocation including failure: 34.54 minutes; science 21.87 minutes /
 8.436 GB sampled RSS; growth 4.336 GiB / minimum free 51.53 GiB. Priced compute/IP,
