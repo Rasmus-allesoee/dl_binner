@@ -1,9 +1,12 @@
 # E025 — direct joint-distance retrieval
 
-Status: local implementation and engineering contracts; native gates pending.
-The owner explicitly removed the three-hour/$2 restrictions in-task on October
-28. The selected credit-only safety envelope is 12 cumulative hours, provider
-STOP at 12.25 hours and $5 gross; scientific policy and all other limits stay fixed.
+Status: **running final native cache audit**, phase
+`joint-20261028T225703Z-cea5f9e`. [Native receipt](native-observed.json) and
+[operations](OPERATIONS.md) own its exact live handoff and next inspection.
+Six native gates / nine contracts pass; retrieval recall 0.9979166667 passes
+0.90. Grouping/full-DNA exports exist; final acceptance and quality are pending.
+Owner-expanded safety envelope: 12 h / 12.25 h STOP / $5 credit-only, with all
+scientific/resource/export and November 4 limits fixed. No new resources.
 Research branch: `joint-distance-cached-retrieval`.
 
 E024 accepted all ten Oral coverage columns and the explicit depth-only rebind.
@@ -24,3 +27,9 @@ source freeze, DNA, vector, marker call or failed journal is rewritten.
 [The recorded clock amendment](clock-amendment.md) preserves the earlier refusal
 and owner clarification. Fresh credit/prices/storage checks and actual native
 gates precede the single comparison.
+
+The active scientific source remains cea5f9e. The separate later fast cache-audit
+adapter is locally equivalence-tested only; it does not replace the native source.
+Its one-time ID set preserves all checks while avoiding an inherited repeated
+lookup cost. Later comparison with E023 is an information/retrieval bundle, not
+an isolated depth ablation or an E022-matched learner.

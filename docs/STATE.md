@@ -1,27 +1,43 @@
 # Current Research State
 
-Updated: October 28, 2026 (Copenhagen). This is the single current handoff.
+Updated: October 29, 2026 (Copenhagen). This is the single current handoff.
 
-**E025 local joint-distance retrieval is implemented; native admission is next.**
-[Design](../experiments/E025-joint-distance-retrieval/design.md) and
-[protocol](../experiments/E025-joint-distance-retrieval/protocol.json) freeze one
-compiled index in the actual E024 distance, retaining E019 learning/native vectors,
-measured data, exact score, seed, E023 selection and original recall/recovery rules.
-Real local compiled index/query/reload, source-blind reader/export/partial reuse
-and failed-child/status-order contracts pass. No community score is claimed.
+**E025 is running its final native cache audit under verified supervision.**
+Phase `joint-20261028T225703Z-cea5f9e`, scientific source `cea5f9e`, is recorded in
+[the native receipt](../experiments/E025-joint-distance-retrieval/native-observed.json)
+and [operations](../experiments/E025-joint-distance-retrieval/OPERATIONS.md).
+All six Linux gates / nine actual contracts and accepted archive/input/source
+bindings pass. The exact native E019 vectors and full ten-depth/DNA axes stay
+fixed; no setup reinstall, acquisition, mapping, learning/GLM or marker search.
 
-The owner approved execution and explicitly removed the prior three-hour/$2
-restriction. [Operational amendment](../experiments/E025-joint-distance-retrieval/clock-amendment.md)
-selects **12 cumulative hours / 12.25-hour STOP / $5 credit-only**, with existing
-hardware and every scientific/resource/export exclusion unchanged. The earlier
-runtime refusals remain preserved. Fresh trial credit DKK 1,759.58 Available,
-January 12 expiry; displayed net 0, unknown delayed usage / $35 reserve. Complete
-STOP-bound forecast about $4.743. All-current-storage seven-day estimate including
-$0.25 reserve is $7.709, below the original $8; no retention beyond **November 4,
-00:00 Copenhagen**. Native gates and measured headroom must still pass before the
-single consumer release. Skin remains unscored; E009 context/old scores are reused.
-[Operations](../experiments/E025-joint-distance-retrieval/OPERATIONS.md) owns the
-exact phase and later inspection handoff. No current RUNNING claim yet.
+New direct joint-distance retrieval passes the unchanged 32-query gate: mean
+**0.9979166667**, minimum 0.9666666667, versus required 0.90. That is sampled search
+validity, not genome homogeneity/recovery. Grouping and both complete assignment exports
+exist (density 1 bin, selected 188), but **audit/collection/shutdown and independent
+truth review remain pending**. No new R95, quality tier or biological disposition.
+The inherited audit rebuilds the same 508,763-ID set for 23,686 cached marker
+lookups, consistent with its long CPU-bound tail. The active frozen source stays
+unchanged. A separate faster read-only adapter has a passing actual tiny
+reader/refinement/refusal equivalence test, with no native execution claim.
+
+Current-boot/process watchdog, normal/crash/restart-refusal tests and provider
+STOP pass. Owner-expanded safety envelope: **12 cumulative hours / 12.25-hour
+STOP / $5 credit-only**; existing E2/disks and scientific/resource/export limits
+unchanged. First start October 28 22:57:40 UTC; driver deadline October 29
+10:57:40 UTC, STOP 11:12:40 UTC / **12:12 Copenhagen**. Sampled peak RSS 7.173 GB,
+free 38.663 GiB / growth 3.068 GiB. At 23:40 UTC, priced compute/IP about $0.19546
+plus $0.03059 run-PD attribution (overlapping storage), not an invoice or total.
+Full STOP-bound forecast $4.743; no new archive WAN export yet.
+
+Fresh signed-in credit DKK **1,759.02 Available / 89%**, January 12 expiry,
+displayed net DKK 0; unknown lag / $35 reserve. All-current-storage seven-day
+forecast including $0.25 reserve is $7.709 within original $8. Retention still
+ends **November 4, 00:00 Copenhagen**; no renewal/deletion or new resources.
+[The exact next prompt](../experiments/E025-joint-distance-retrieval/OPERATIONS.md#exact-following-prompt)
+is completion/evidence/cost verification and frozen new-output Oral diagnostics.
+Use that evidence to choose one recovery block; no new fit or confirmation.
+Both communities remain development; skin is unscored. Comparing with E023 is a
+depth/retrieval bundle, not an isolated causal depth effect or matched E022 learner.
 
 ## Preserved E024 accepted data and failed retrieval
 

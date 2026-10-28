@@ -1,5 +1,59 @@
 # E025 operations
 
+## Native handoff, October 29 Copenhagen / October 28 UTC
+
+Phase **`joint-20261028T225703Z-cea5f9e`** runs source
+`cea5f9e609440c4428b868d3a7c54842ede8ec98` on the original E2/disks. The
+[receipt](native-observed.json) is a dated RUNNING snapshot, not final acceptance.
+All six native gates / nine contracts pass. Accepted archive/members, full
+1,286,547-contig / 1,669,981,123-bp ten-sample axes, exact original graph/marker
+bytes and independent runtime reuse pass without install/recopy.
+
+The new index stopped after five iterations. Sampled final-composite recall is
+**0.9979166667**, minimum query 0.9666666667, across the same 32 source-blind
+queries; the unchanged >= 0.90 gate passes. This verifies sampled retrieval,
+not biological homogeneity or recovery. Density-only selects one bin and marker-
+informed selection 188; these are size/selection summaries, not quality scores.
+Both complete assignment exports exist; full FASTA DNA is emitted once for the
+selected arm, with complete density-arm accounting. **Final cache audit is still running**, so no complete
+science/delivery/shutdown or truth result is claimed.
+
+The inherited E024 audit rebuilds a 508,763-ID set inside 23,686 membership
+checks. This avoidable source-level cost is consistent with its CPU-bound tail;
+no profiler attribution is claimed. The active frozen source stays unchanged.
+The separate [future validator](../../scripts/e025_cache_audit.py) hoists that
+set once; an actual tiny reader/choice/refusal equivalence test passes. It has
+not run as the native validator in this phase. Preserve the original validator
+and journal, and explicitly source-bind the adapter before any future native use.
+
+Current-boot/PID/start/command watchdog and native normal/crash/restart-refusal
+tests pass. First allocation **October 28 22:57:40.169 UTC / 23:57 Copenhagen**;
+driver deadline **October 29 10:57:40.169 UTC / 11:57 Copenhagen**; independent
+provider STOP **11:12:40.169 UTC / 12:12 Copenhagen**. Watcher stops after the
+held parent exits, well before fallback when possible. No restart, new node,
+resource change or retention extension.
+
+Latest sampled peak workflow RSS 7.173 GB; free disk 38.663 GiB / sampled global
+growth 3.067 GiB, under 26 GB / 25 GiB reserve / 8 GiB growth. These are sampled
+observations. Exact final allocation, storage/export and science acceptance
+require completion inspection. Original E024's data/failed return stay intact.
+
+Live logs:
+
+```text
+/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/terminal.log
+/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/phase-logs/workflow.log
+/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/work/logs/audit.log
+```
+
+Private completion/return prefix:
+`gs://dl-binner-archive-167650584170/e025/joint-20261028T225703Z-cea5f9e/`.
+No new quality result is available. Comparing later with E023 is a depth/retrieval
+bundle with E019 learning fixed, not an isolated causal depth ablation or a match
+to E022's E009 learning/features.
+
+## Authorized scope and preparation
+
 The owner authorized implementation and cached execution, then explicitly removed
 the prior three-hour/$2 restrictions in-task. The selected safety envelope is
 **12 cumulative hours / 12.25-hour provider STOP / $5 gross credit-only**. All
@@ -59,7 +113,66 @@ not rescored. Threshold HQ/MQ/LQ are secondary, not formal MIMAG HQ without RNA.
 
 ## Exact following prompt
 
-Execution/inspection handoff will be recorded here after the authorized native
-launch. Do not start a second job from this placeholder. Native source/runtime,
-compiled-reader, complete-schedule and all credit/storage/retention gates must
-pass before releasing the single cached consumer.
+Our goal is substantially closing the recovery gap. Read AGENTS, PROJECT_INTENT,
+STATE/CLOUD, D013/D015 and E025's design/protocol/criteria, source/runtime/resource
+locks, local/native receipts and operations. Inspect phase
+`joint-20261028T225703Z-cea5f9e` without starting another job or changing the frozen
+science. Preserve dev3/dev4/dev5 and all accepted E009–E025 data, truth, vectors,
+source freezes, outputs and failed journals. Skin remains unscored.
+
+Check GCP state, `e025-candidate/status` and private completion.json under
+`gs://dl-binner-archive-167650584170/e025/joint-20261028T225703Z-cea5f9e/`.
+Do not infer success from shutdown, guest progress or a collecting parent.
+If healthy/running, report actual stage/progress and leave the verified watcher
+and provider STOP intact without polling to completion. The long inherited cache
+audit has a documented repeated-set inefficiency; do not silently substitute the
+new adapter or rewrite its current journal. New faster-audit use needs explicit
+source/reuse admission, not a repeat of accepted grouping/export science.
+
+After independently verified shutdown establish all six setup gates, all four
+serial rule/target exits, full input-after proof, collection/upload/readback and
+matching boot/process watchdog evidence. Refresh trial balance/scope/expiry,
+delayed usage and current prices; assess return against the remaining original
+owner-amended $5 / 12-hour scope and November 4 retention before downloading.
+Price measured allocation, storage and network separately from sampled CPU.
+Do not use the credit delta as an invoice. Verify the new archive and every
+member/alias under 1 GiB compressed / 4 GiB logical / 20,000 members and the
+original cumulative 2 GiB compact allowance. No BAM WAN export or duplicate
+930,977,463-byte E024 data return. Reuse its verified local copy in place; verify
+the exact external-data bindings and original accepted archive identity.
+
+If complete, independently review exact source, ordered ten-depth/full-contig
+axes, native vectors, transforms/scales, cache/local-index mapping, numeric recall
+queries and all final neighbors, hierarchy/marker choices, both partitions and
+complete DNA/export accounting. The source at execution is cea5f9e; the separate
+later fast validator was only locally tested and was not the active source.
+Preserve the original Mac numerical portability failure/tolerance.
+
+Perform only frozen bounded local new-output diagnostics with the Oral provided-
+origin oracle, all 799 references / 2,083,072,211 bp, known-shared sensitivity and
+all length/origin/eligibility/marker/zero/unknown/non-target/excluded/unassigned
+populations. Keep E009 conservative v2 / 156 targets / 3.3034% N quarantine as
+retained context; do not refit/rescore old baselines. Four numerical threads,
+8 GB sampled RSS, one hour / 8 GiB inclusive review and 6 GiB physical reserve;
+check free space and stage sequentially. State missing contracts before quality
+claims. Apply the unchanged KEEP/MODIFY/ABANDON rule; secondary completeness,
+impurity-upper-bound and threshold HQ/MQ/LQ counts are not formal MIMAG HQ without
+RNA checks. No truth-selected thresholds, bins, families or per-bin exceptions.
+
+Report matched neighbor and per-target recovery, density/marker effects and all
+trade-offs. This is a development information/retrieval bundle, not isolated
+depth causality or a generalization/product-family decision. Recommend at most
+one strongest next coherent block, weighing depth-enabled learning against
+calibrated biological bin construction, reviewed GLM-efficiency and one targeted
+SemiBin2 reference. Do not default to a tiny grid or larger model without evidence.
+Keep skin/additional depth-enabled confirmation unscored pending source/genome/
+replicon/molecule/taxonomy/overlap/ambiguity/unique-versus-origin/depth/evaluation/
+cost/retention admission. No acquisition, mapping, fitting, external tool or
+retention extension in inspection.
+
+If evidence is missing, assess a bounded collection-only recovery against remaining
+original clock/budget/credit before any wake; preserve all partial outputs and
+never replay accepted science or silently extend storage. Debug operational
+failures with verified reuse and fresh journals within the authorized scope.
+Update records/check/commit with structured what changed/why; report verified
+outcome, limits, actual cost/storage, one next decision and exact following prompt.

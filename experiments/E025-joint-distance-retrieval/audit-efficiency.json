@@ -1,0 +1,42 @@
+{
+  "kind": "E025 later read-only cache-audit engineering adapter",
+  "date": "2026-10-29",
+  "status": "PASS_TINY_EQUIVALENCE_ONLY",
+  "active_native_source": "cea5f9e",
+  "active_source_modified": false,
+  "source": {
+    "bytes": 6039,
+    "sha256": "d57c025239669e7ab91954c30199ce9cb5e0b96a1ee1a757639647ba53ec90b6"
+  },
+  "tests": {
+    "bytes": 1363,
+    "sha256": "6630d84be0c7c71f6a5163e0ec73998e5ee78a84192112c2657b84f214bceada"
+  },
+  "resources": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+      "-I",
+      "-B",
+      "-c",
+      "import sys,unittest;from pathlib import Path;r=Path('/Users/rasmusallesoeenielsen/Documents/dl_binner');sys.path[:0]=[str(r/\"scripts\"),str(r/\"src\"),str(r/\"tests\")];v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(\"test_e025_cache_audit\"));sys.exit(not v.wasSuccessful())"
+    ],
+    "exit_code": 0,
+    "launched_pid": 88853,
+    "peak_sampled_rss_bytes": 95715328,
+    "rss_bytes_ceiling": 8000000000,
+    "sample_includes_coordinator": false,
+    "sampled_average_cpus": 0.8584418899893356,
+    "sampled_cpu_seconds": 2.81,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 180,
+    "stop_reason": null,
+    "wall_seconds": 3.2733724120043917
+  },
+  "test_scope": "Actual tiny retained-cache reader, marker-choice recomputation, complete proof equality and same malformed-choice refusal; no community rerun or truth",
+  "change": "Identical set(local_ids) hoisted once before cached-call comprehension; all other original checks preserved",
+  "native_full_shape_execution": false,
+  "source_issue": "scripts/e024_information.py:285 constructs the set once per cached-call test",
+  "measured_native_marker_contigs": 23686,
+  "eligible_ids": 508763,
+  "profile_attribution": "Not measured; source observation plus CPU-bound native tail"
+}

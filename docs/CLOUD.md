@@ -1,18 +1,32 @@
 # Google Cloud workspace operations
 
-**E025 admission, October 28:** the owner authorized the cached-only retrieval
-follow-through and explicitly removed the earlier runtime/cost restrictions.
-[The recorded amendment](../experiments/E025-joint-distance-retrieval/clock-amendment.md)
-selects 12 cumulative hours / 12.25-hour provider STOP / $5 credit-only on the
-same E2/disks, with all scientific/thread/RAM/space/export and November 4 limits
-unchanged. Full-STOP forecast $4.743, not expected idle time or an invoice; the
-watcher stops compute on workflow exit. Fresh credit DKK 1,759.58 Available,
-January 12 expiry / displayed net 0 / $35 delayed-usage reserve. All current
-storage for seven days plus $0.25 reserve forecasts $7.709 within original $8.
-No resource increase, source/data recopy, automatic storage renewal or deletion.
-Native gates and actual headroom precede community release. E024 accepted data
-and failed source remain immutable; [E025 operations](../experiments/E025-joint-distance-retrieval/OPERATIONS.md)
-owns current phase/status when launched.
+**E025 live handoff, October 29 Copenhagen:** phase
+`joint-20261028T225703Z-cea5f9e` is in final cache audit. Six native gates / nine
+contracts, exact accepted data/graph/marker bytes and full axes pass; grouping
+and complete exports exist. Sampled final-neighbor recall 0.9979166667 passes
+0.90, without a biological quality claim. Audit, collection, shutdown and local
+truth review are still pending. Its inherited repeated-set validator is slow;
+the active frozen source is unchanged and supervised.
+
+[Native receipt](../experiments/E025-joint-distance-retrieval/native-observed.json)
+and [operations](../experiments/E025-joint-distance-retrieval/OPERATIONS.md) bind
+boot/PID/start/command, real normal/crash/restart-refusal tests and independent
+STOP. Existing E2 / 30+300 GiB only. Owner-expanded **12 h / 12.25 h STOP / $5
+credit-only**; first start October 28 22:57:40 UTC, driver deadline October 29
+10:57:40 UTC and STOP **11:12:40 UTC / 12:12 Copenhagen**. Watcher stops on exit;
+no automatic retry, provision/resize or retention extension. Latest peak sampled
+RSS 7.173 GB, free 38.663 GiB / growth 3.068 GiB meet unchanged guards.
+
+At 23:40 UTC, priced compute/IP $0.19546 and run-PD attribution $0.03059 are
+incomplete allocation estimates, not an invoice or sampled-CPU charge. Full-STOP
+forecast $4.743 includes reserves/export/new compact storage. Fresh Welcome
+DKK 1,759.02 Available / 89%, January 12 expiry / displayed net 0; delayed usage
+may exceed 24 h, $35 reserve retained. Current rates unchanged. Existing disks
+remain $31.20/month while stopped. All-current-storage week plus $0.25 reserve
+forecasts $7.709 within original $8 through **November 4, 00:00 Copenhagen**.
+No cleanup savings, renewal or deletion assumed. E024 accepted data and failure
+remain intact. Inspect completion/member/alias/cost evidence before quality;
+no repeat mapping, old fit/score, external tool, GLM or skin work.
 
 ## Preserved E024 inspection
 

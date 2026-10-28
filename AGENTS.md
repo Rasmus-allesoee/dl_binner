@@ -390,10 +390,14 @@ into another owner-transfer or approval loop. Preserve failed journals, repair a
 test the actual failing path, create a fresh recorded attempt, and reuse passed
 stages only after their byte/source/runtime contracts pass. Operational recovery
 is distinct from repeating accepted science, changing a frozen scientific rule,
-tuning to outcomes or expanding the tool campaign. Keep concrete clock/cost/disk
-limits and verified shutdown for each attempt; record justified envelope changes
-when already authorized instead of asking again. Credit coverage and evidence
-integrity still apply. A short supervised job expected to finish within about
+tuning to outcomes or expanding the tool campaign. Keep concrete operational
+guards and verified shutdown for each attempt. When the owner has expressly
+allowed longer runtime or higher cost, choose and record a justified envelope
+with headroom instead of treating the earlier bound as immutable or starting
+another approval loop. Do not weaken the scientific treatment to fit a rough
+laptop projection when a covered native route is authorized. Credit coverage,
+evidence integrity, explicit resource/retention exclusions and frozen scientific
+criteria still apply. A short supervised job expected to finish within about
 15 minutes should normally be followed through collection, independently verified
 shutdown and available local review. For a healthy longer job, verify supervision
 and real progress, wait a few minutes, then hand off without polling to completion.

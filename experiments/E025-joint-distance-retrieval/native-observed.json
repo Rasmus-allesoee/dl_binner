@@ -1,0 +1,284 @@
+{
+  "kind": "E025 supervised native cached comparison handoff",
+  "as_of_UTC": "2026-10-28T23:40:37.205707+00:00",
+  "status": "RUNNING_FINAL_CACHE_AUDIT",
+  "phase": "joint-20261028T225703Z-cea5f9e",
+  "root": "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e",
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e025/joint-20261028T225703Z-cea5f9e/",
+  "source_commit": "cea5f9e609440c4428b868d3a7c54842ede8ec98",
+  "branch": "joint-distance-cached-retrieval",
+  "source_sync": "Mac normal push and exact clean detached VM checkout through existing read-only key",
+  "owner_amendment": "Explicit in-task permission removes3h/$2 restrictions; chosen12h/12.25hSTOP/$5 credit-only safety envelope; no scientific/resource/retention expansion",
+  "limits": {
+    "seconds": 43200,
+    "provider_STOP_seconds": 44100,
+    "ceiling_USD": 5,
+    "numerical_threads": 4,
+    "tree_RSS_bytes": 26000000000,
+    "free_reserve_bytes": 26843545600,
+    "extra_bytes": 8589934592,
+    "compressed_export_bytes": 1073741824,
+    "logical_export_bytes": 4294967296,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "allocated_vCPUs": 8
+  },
+  "provider": {
+    "status": "RUNNING",
+    "last_start": "2026-10-28T15:57:40.169-07:00",
+    "scheduling": {
+      "automaticRestart": false,
+      "instanceTerminationAction": "STOP",
+      "maxRunDuration": {
+        "nanos": 0,
+        "seconds": "44100"
+      },
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "disks_GiB": [
+      30,
+      300
+    ]
+  },
+  "watchdog": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e025-joint-20261028T225703Z-cea5f9e.service",
+    "watchdog_timer": "e025-joint-20261028T225703Z-cea5f9e-exit.timer",
+    "watchdog_service": "e025-joint-20261028T225703Z-cea5f9e-exit.service",
+    "process": {
+      "pid": 1411,
+      "start_ticks": 3730,
+      "command_sha256": "f578f3adb94f33c0c3a9820d200bf0229f55ee0c7834dd2a04eea98647f828e8"
+    },
+    "boot_id": "74066d44-3f7d-4266-9f65-9e6aeac2b865",
+    "source_commit": "cea5f9e609440c4428b868d3a7c54842ede8ec98",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1793228260.169,
+    "hard_deadline_epoch": 1793271460.169,
+    "provider_stop_epoch": 1793272360.169,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "live_watch": {
+    "boot_id": "74066d44-3f7d-4266-9f65-9e6aeac2b865",
+    "checked_utc": "2026-10-28T23:40:16.351918+00:00",
+    "decision": "workflow alive",
+    "expected_process": {
+      "command_sha256": "f578f3adb94f33c0c3a9820d200bf0229f55ee0c7834dd2a04eea98647f828e8",
+      "pid": 1411,
+      "start_ticks": 3730
+    },
+    "observed_process": {
+      "command_sha256": "f578f3adb94f33c0c3a9820d200bf0229f55ee0c7834dd2a04eea98647f828e8",
+      "pid": 1411,
+      "start_ticks": 3730
+    },
+    "shutdown": false,
+    "workflow_root": "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e"
+  },
+  "gate_stages": [
+    {
+      "stage": "workflow-origin",
+      "exit_code": 0,
+      "wall_seconds": 0.7003422650000033,
+      "peak_sampled_RSS_bytes": 41488384
+    },
+    {
+      "stage": "accepted-numerical",
+      "exit_code": 0,
+      "wall_seconds": 18.09105623,
+      "peak_sampled_RSS_bytes": 277041152
+    },
+    {
+      "stage": "actual-compiled-consumer",
+      "exit_code": 0,
+      "wall_seconds": 47.685804950999994,
+      "peak_sampled_RSS_bytes": 397135872
+    },
+    {
+      "stage": "serial-tiny-DAG",
+      "exit_code": 0,
+      "wall_seconds": 6.18713218900001,
+      "peak_sampled_RSS_bytes": 396627968
+    },
+    {
+      "stage": "synthetic-width-runtime",
+      "exit_code": 0,
+      "wall_seconds": 23.34968126700001,
+      "peak_sampled_RSS_bytes": 560558080
+    },
+    {
+      "stage": "retained-data",
+      "exit_code": 0,
+      "wall_seconds": 66.919348582,
+      "peak_sampled_RSS_bytes": 3677155328
+    }
+  ],
+  "native_tests": 9,
+  "setup_reused_without_install_or_recopy": true,
+  "accepted_data": {
+    "archive": {
+      "bytes": 930977463,
+      "sha256": "08e9d9fc0a6aad12134226b4371ca993c140f415dfc2071060aa3295d9ccd20b"
+    },
+    "every_prior_member_verified": true,
+    "in_place_only": true,
+    "previous_science_repeated": false
+  },
+  "accepted_graph_marker_binding": {
+    "status": "PASS",
+    "expected_lock": {
+      "bytes": 3040,
+      "sha256": "3703c4e2bbd15e3fa51f455912e3f3dfb4641d01f8331a685d91dde33365bc0d"
+    },
+    "files": {
+      "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/group/graph.npz": {
+        "bytes": 258146520,
+        "sha256": "b484c74e18560210a32ff4b3a96d4464573b35bf8a72a106f19b12a56590ecdd"
+      },
+      "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/group/graph.json": {
+        "bytes": 5587,
+        "sha256": "a95599d64748db676b3f2d2c0ed1d4a45af4c3e5951cb1c1838fe4b48884b5c0"
+      },
+      "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json": {
+        "bytes": 26815264,
+        "sha256": "e8d44c1dc18ea9f55e70548fb4de01581c4639834e87db720134e43c2127b8f1"
+      }
+    },
+    "scope": "Additional independent unchanged retained graph/metadata/marker-byte admission, no reconstruction or redetection"
+  },
+  "data_axes": {
+    "rows": 1286547,
+    "bp": 1669981123,
+    "ordered_samples": [
+      "oral_sample_6",
+      "oral_sample_7",
+      "oral_sample_8",
+      "oral_sample_13",
+      "oral_sample_14",
+      "oral_sample_15",
+      "oral_sample_16",
+      "oral_sample_17",
+      "oral_sample_18",
+      "oral_sample_19"
+    ],
+    "all_DNA_retained": true
+  },
+  "technical_retrieval": {
+    "mean_tie_aware_recall": 0.9979166666666667,
+    "minimum_query_recall": 0.9666666666666667,
+    "queries": 32,
+    "k": 30,
+    "threshold": 0.9,
+    "tie_tolerance": 1e-10,
+    "guarantee": "32 fixed source-blind queries only; search validity is not biological purity/recovery",
+    "native_iterations_observed": 5,
+    "eligible_rows": 508763
+  },
+  "new_outputs": {
+    "sealed": {
+      "verified/done.json": true,
+      "group/completed.json": true,
+      "export/done.json": true,
+      "audited/done.json": false
+    },
+    "arms": {
+      "density": {
+        "bins": 1,
+        "partition": {
+          "bytes": 347863024,
+          "sha256": "d54b6b5d26f1707b9ff30e2570c8af6f0c51d857e77189d1b35837692f55ac3a"
+        }
+      },
+      "selected": {
+        "bins": 188,
+        "partition": {
+          "bytes": 356780515,
+          "sha256": "5b744dc8e386e72c2b81bce7f1c323dd76894f2f3eea5d9509cf1bda5991cd59"
+        }
+      }
+    },
+    "meaning": "Grouping and complete exports exist; final audit, collection, shutdown and independent acceptance pending"
+  },
+  "progress": {
+    "native_log": "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/work/logs/audit.log",
+    "coordinator_log": "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/terminal.log",
+    "workflow_log": "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/phase-logs/workflow.log",
+    "peak_sampled_workflow_RSS_bytes": 7172632576,
+    "latest_resource": {
+      "seconds": 1998.782456928,
+      "rss_bytes": 2706657280,
+      "sampled_cpu_seconds": 2851.18
+    },
+    "disk": {
+      "total": 316733652992,
+      "used": 275203428352,
+      "free": 41513447424
+    },
+    "sampled_global_growth_bytes": 3293724672
+  },
+  "cost_to_snapshot": {
+    "allocation_seconds": 2577.036707162857,
+    "allocated_vCPU_hours": 5.726748238139682,
+    "compute_IP_priced_USD": 0.19545798068116219,
+    "run_PD_attribution_USD": 0.0305949562915688,
+    "sampled_CPU_seconds": 2851.18,
+    "full_STOP_forecast_USD": 4.742973873169827,
+    "not_invoice": true,
+    "no_archive_WAN_yet": true
+  },
+  "audit_efficiency": {
+    "source": "scripts/e024_information.py:285",
+    "observation": "Inherited validator reconstructs set(local_ids) within each cached-call membership test",
+    "eligible_IDs": 508763,
+    "marker_call_contigs": 23686,
+    "potential_repeated_ID_insertions": 12050560418,
+    "interpretation": "Consistent with CPU-bound long final audit; no measured profiler attribution or quality claim",
+    "active_source_unchanged": true,
+    "prepared_future_adapter": "scripts/e025_cache_audit.py",
+    "actual_local_equivalence_and_malformed_refusal_test": {
+      "bytes": 688,
+      "sha256": "2a6dcd87ebf3b42f31639504318c3fa7a521602a953fb399fdcd7300a3dd8017"
+    },
+    "native_adapter_executed": false
+  },
+  "evidence": {
+    "local_root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e025-native/20261028T225631Z",
+    "native_ready": {
+      "bytes": 12705,
+      "sha256": "ff4012818d308908b9c356263f460aa28ef13ac618258bb0d6e1524dba44936e"
+    },
+    "snapshot": {
+      "bytes": 1558,
+      "sha256": "94918c313fa991dd53464ef65f655433725533be84dcdecec7cdc5218b838048"
+    },
+    "independent_provider": {
+      "bytes": 33118,
+      "sha256": "4df3803b34b74ba99f28d178810f9402d123d0d272af8096567eafc6e76730f0"
+    }
+  },
+  "preserved_failures": [
+    {
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e025-native/20261028T225631Z/gates-status-1.log",
+      "reason": "Read-only status helper placeholder collision; caught by rendered compile before SSH; corrected helper, no scientific replay"
+    }
+  ],
+  "quality_evaluation_admitted": false,
+  "community_R95_unknown": true,
+  "VM_started_once": true,
+  "resources_provisioned_or_resized": false,
+  "retention_extended": false,
+  "storage_review_end": "2026-11-04T00:00:00+01:00",
+  "next": "Inspect verified completion/archive/cost before frozen local new-output diagnostics; no new fit"
+}
