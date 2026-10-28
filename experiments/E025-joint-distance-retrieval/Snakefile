@@ -1,0 +1,45 @@
+"""Cached-only serial verify, joint retrieval/hierarchy, complete export and audit."""
+import json
+from pathlib import Path
+PLAN=str(Path(config['plan']).absolute())
+P=json.loads(Path(PLAN).read_text())
+PYTHON, WORKER=P['python'],P['worker']
+ENGINEERING='--engineering' if config.get('engineering') in [True,'true'] else ''
+
+rule all:
+    input: 'audited/done.json'
+
+rule verify:
+    output: 'verified/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/verify.log'
+    benchmark: 'benchmarks/verify.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage verify {ENGINEERING} > {log:q} 2>&1'
+
+rule group:
+    input: 'verified/done.json'
+    output: 'group/completed.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/group.log'
+    benchmark: 'benchmarks/group.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage group {ENGINEERING} > {log:q} 2>&1'
+
+rule export:
+    input: 'group/completed.json'
+    output: 'export/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/export.log'
+    benchmark: 'benchmarks/export.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage export {ENGINEERING} > {log:q} 2>&1'
+
+rule audit:
+    input: 'export/done.json'
+    output: 'audited/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/audit.log'
+    benchmark: 'benchmarks/audit.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --stage audit {ENGINEERING} > {log:q} 2>&1'

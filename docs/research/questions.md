@@ -700,3 +700,16 @@ follow-through, preserving the failed union and original gates. New learning/ful
 Oral GLM, external fits and independent data remain deferred alternatives. No wake
 or scientific replay in inspection; original budget/clock and November 4 retention
 are unchanged. The new proposed $2 scope is not yet authorized.
+
+### October 28, 2026: E025 compiled retrieval preparation and owner amendment
+
+[E025](../../experiments/E025-joint-distance-retrieval/README.md) implements one
+direct joint-distance index, preserving E019 learning, E024 measured data and
+E023 selection. Real tiny compiled query/reload, native ties, sparse/full ID
+mapping, complete export and partial/no-op reuse pass. Numeric refusal evidence
+and child-failure/status-order contracts are explicit. This is engineering
+evidence, not changed community recovery; Q001/Q003/Q005 remain unresolved.
+The owner explicitly authorized longer runtime/higher cost after the three-hour
+forecast refused admission. Select a 12-hour / 12.25-hour STOP / $5 credit-only
+safety envelope with unchanged resources, scientific rules and November 4
+retention. No larger learner, external reference or confirmation is added.

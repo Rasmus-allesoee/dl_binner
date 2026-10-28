@@ -1,0 +1,187 @@
+{
+  "kind": "E025 final local engineering evidence",
+  "as_of_UTC": "2026-10-28T22:51:17.048837+00:00",
+  "status": "PASS_ENGINEERING_ONLY_NATIVE_PENDING",
+  "tests": 9,
+  "contracts": {
+    "path": "artifacts/e025-joint-distance-retrieval/preparation/contracts-r7-final.log",
+    "log": {
+      "bytes": 3951,
+      "sha256": "48222be47dbf557f7a202e6ecc82c0824dac87ce8b9c00638190ab8fffb6acad"
+    },
+    "resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import sys,unittest;from pathlib import Path;r=Path('/Users/rasmusallesoeenielsen/Documents/dl_binner');sys.path[:0]=[str(r/\"scripts\"),str(r/\"src\"),str(r/\"tests\")];v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromNames([\"test_e025_retrieval\",\"test_e025_operations\"]));sys.exit(not v.wasSuccessful())"
+      ],
+      "exit_code": 0,
+      "launched_pid": 85347,
+      "peak_sampled_rss_bytes": 332603392,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.9208625414390863,
+      "sampled_cpu_seconds": 59.419999999999995,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1800,
+      "stop_reason": null,
+      "wall_seconds": 64.52646005900169
+    }
+  },
+  "tiny": {
+    "path": "artifacts/e025-joint-distance-retrieval/preparation/tiny-DAG-r5-final",
+    "resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e025_tiny.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e025-joint-distance-retrieval/preparation/tiny-DAG-r5-final",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e001-snakemake-test-env/bin/python"
+      ],
+      "exit_code": 0,
+      "launched_pid": 86079,
+      "peak_sampled_rss_bytes": 296140800,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 1.0506904910055057,
+      "sampled_cpu_seconds": 12.04,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1800,
+      "stop_reason": null,
+      "wall_seconds": 11.459131021998473
+    },
+    "receipt": {
+      "bytes": 2685,
+      "sha256": "49c44d0ec046d76c948cfad51c60283a400e9ae18393b4116cd57cda85244319"
+    },
+    "summary": {
+      "status": "PASS",
+      "actual_partial_reuse": true,
+      "actual_completed_noop": true,
+      "actual_export": true,
+      "actual_collection": {
+        "status": "SUCCESS",
+        "archive": {
+          "bytes": 12943,
+          "sha256": "afb877ad44342f7d21153ef5854ea4a7b60522004d106c874afbe7f81e262cda"
+        },
+        "regular_members": 30,
+        "logical_member_bytes": 68763,
+        "every_member_verified": true,
+        "aliases": {
+          "work/export/selected/assignments.tsv": {
+            "bytes": 289,
+            "sha256": "4bed81ba97e8300acf1c64f8f8acee1ef1455a9e7ddf68d47ba3579006ad112d",
+            "canonical": "work/export/density/assignments.tsv"
+          },
+          "work/group/selected-partition.json": {
+            "bytes": 1999,
+            "sha256": "0df916a795c8819d686d029f5a13af3b5d54b7ea7393a9c6f491e3f90484adcf",
+            "canonical": "work/group/density-partition.json"
+          }
+        },
+        "omitted_retained_on_disk": {
+          "export/selected/bin_000001.fna": {
+            "bytes": 25370,
+            "sha256": "1e17fdba8a21534b922060633459a65e2f6c2eb019501e8e761334211e663464",
+            "reason": "Retained regenerable index/reference/DNA/cache or failed raw; inventory is not a backup"
+          },
+          "export/selected/excluded.fna": {
+            "bytes": 91,
+            "sha256": "245e9783b5e7f311ec2d3d92c64c6ccf5c2ca48fba3e6c09d0960919a4160612",
+            "reason": "Retained regenerable index/reference/DNA/cache or failed raw; inventory is not a backup"
+          }
+        },
+        "scope": "E025 compact new evidence; omitted byte inventories are not backups",
+        "raw_BAM_in_compact_archive": false,
+        "remote_primary_BAM_receipts": 0,
+        "remote_primary_BAM_scope": "Separately retained exact GCS objects, full byte/readback/decode in archived receipts; no BAM internet export",
+        "compressed_cap_bytes": 1073741824
+      },
+      "community_science": false,
+      "mocked": "Synthetic DNA/vectors/marker calls; no cloud transport",
+      "retained_inputs": {
+        "features": {
+          "bytes": 3625,
+          "sha256": "1a66fa413e36e7b5e7d052e0c03bcf16170316de883f55d46259eb741e88ba29"
+        },
+        "views": {
+          "bytes": 5773,
+          "sha256": "74dcc2b05e0dfb95cab68d85be3e743e84f4df5ba69ce84ef9f410c5b10643b4"
+        },
+        "embeddings": {
+          "bytes": 696,
+          "sha256": "0dfda95a5ee0e7237ba408389ce658697167066bd8a4c2b1d5e6ee214436f76a"
+        },
+        "graph": {
+          "bytes": 887,
+          "sha256": "458d774592f76d412f19afae02729ef5d7384aadaf03ba0fc9ada11a134b1ca7"
+        },
+        "marker_evidence": {
+          "bytes": 170,
+          "sha256": "1e483ace030a41bf4b07d210fe4ed31e66c752b580a5294f3d6997cb2a31e29f"
+        },
+        "reference": {
+          "bytes": 25461,
+          "sha256": "a27b0706441afb7e7777bdd82c988a86e9555407c52389209407dc500fe8bd02"
+        }
+      }
+    }
+  },
+  "actual": [
+    "compiled joint metric, construction and external query",
+    "native pickle/reload",
+    "exact float64 agreement1e-12, true measured zeros/constant column",
+    "native ties/self removal and full/local opaque IDs",
+    "real rebind/cache/sparse/marker hierarchy/export/reload",
+    "partial verified reuse and completed no-op",
+    "new-output reader using external data without recopy",
+    "numerical audit/arrays retained before actual gate refusal",
+    "real child exit7 and collecting-parent exit1",
+    "final guest status after upload/failure",
+    "fully rendered controller compile and actual isolated CLIs",
+    "archive member/alias/omission/external binding and cap/corruption refusal"
+  ],
+  "mocked_or_unavailable": [
+    "synthetic DNA/vectors/marker calls, no community biological proof",
+    "cloud transport mocked in failure-order tests",
+    "actual Linux runtime/watcher/STOP/full data and performance remain pending"
+  ],
+  "failures_preserved": [
+    {
+      "record": "artifacts/e025-joint-distance-retrieval/preparation/contracts-r2.log",
+      "status": "FAILED",
+      "reason": "Sandbox ps sampler failed before intended child; None exit refused; actual process-visible rerun passes7"
+    },
+    {
+      "record": "artifacts/e025-joint-distance-retrieval/preparation/local-schedule.json",
+      "status": "REFUSE_FORECAST",
+      "reason": "Initial estimate incorrectly scaled fixed compilation; retained"
+    },
+    {
+      "record": "artifacts/e025-joint-distance-retrieval/preparation/local-schedule-r2.json",
+      "status": "PASS_UNDER_EARLIER_KERNEL_NOT_SELECTED",
+      "reason": "Timer separates fixed compilation; noisy estimate not cherry-picked"
+    },
+    {
+      "record": "artifacts/e025-joint-distance-retrieval/preparation/local-schedule-r3.json",
+      "status": "REFUSE_ORIGINAL_THREE_HOUR_FORECAST",
+      "reason": "Final kernel forecast3.6486h; preserved despite later owner clock authorization"
+    }
+  ],
+  "current_allowance": {
+    "seconds": 43200,
+    "STOP_seconds": 44100,
+    "ceiling_USD": 5,
+    "owner_explicit_clock_cost_amendment": true
+  },
+  "no_community_fits": true,
+  "no_truth_scores": true,
+  "no_old_science_repeated": true,
+  "original_Mac_portability_tolerance_changed": false
+}

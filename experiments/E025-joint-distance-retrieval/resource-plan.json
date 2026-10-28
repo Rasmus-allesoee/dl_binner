@@ -1,0 +1,109 @@
+{
+  "kind": "E025 source-shaped complete resource/cost forecast",
+  "as_of_UTC": "2026-10-28T22:46:07.360702+00:00",
+  "owner_scope": "Explicit in-task longer-runtime/higher-cost authorization; keep frozen science and November4 retention",
+  "limits": {
+    "seconds": 43200,
+    "provider_STOP_seconds": 44100,
+    "ceiling_USD": 5,
+    "numerical_threads": 4,
+    "tree_RSS_bytes": 26000000000,
+    "free_reserve_bytes": 26843545600,
+    "extra_bytes": 8589934592,
+    "compressed_export_bytes": 1073741824,
+    "logical_export_bytes": 4294967296,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "allocated_vCPUs": 8
+  },
+  "compute_forecast": {
+    "Mac_synthetic_seconds": 47.4883124629996,
+    "measured_compile_seconds": 17.931754610995995,
+    "conservative_remaining_seconds": 13134.833008855867,
+    "native_speed_and_recall": "Pending actual existing-VM gates; no full-scale speed claim",
+    "allocation_stop_bound_hours": 12.25,
+    "allocated_vCPU_hours_at_STOP": 98.0,
+    "numerical_threads": 4
+  },
+  "money": {
+    "compute_IP_USD": 3.3448095341757687,
+    "run_PD_attribution_USD": 0.5235616429940586,
+    "PD_also_stopped_and_overlaps_storage_approval": true,
+    "one_GiB_WAN_USD": 0.12,
+    "new_compact_GCS_through_end_upper_USD": 0.004602696,
+    "operations_reserve_USD": 0.25,
+    "unreconciled_contingency_USD": 0.5,
+    "total_gross_USD": 4.742973873169827,
+    "ceiling_USD": 5,
+    "prices": {
+      "compute_IP_USD_hour": 0.2730456762592464,
+      "PD_USD_month": 31.199999949850024,
+      "Catalog": "2026-10-28T22:22:23.509751+00:00",
+      "same_rates_as_prior_verified": true
+    },
+    "real_money_authorized": false,
+    "not_invoice": true
+  },
+  "return_forecast": {
+    "full_contigs": 1286547,
+    "eligible": 508763,
+    "id_array_raw_bytes": 334502348,
+    "sparse_raw_bytes": 1350747076,
+    "estimated_logical_bytes": 3002506348,
+    "estimated_compressed_bytes": 681574400,
+    "compressed_not_guaranteed": true,
+    "compressed_hard_cap": 1073741824,
+    "logical_hard_cap": 4294967296,
+    "maximum_members": 20000,
+    "external_E024_data_copied": false,
+    "BAM_WAN_bytes": 0,
+    "old_cumulative_payload_bytes": 933793978,
+    "maximum_new_archive_plus_old_bytes": 2007535802,
+    "original_cumulative_cap": 2147483648,
+    "remaining_for_metadata": 139947846
+  },
+  "disk": {
+    "estimated_new_peak_bytes": 6270517295,
+    "extra_limit": 8589934592,
+    "native_minimum_free_admission_bytes": 35433480192,
+    "native_actual_free": "Required on boot before release; prior38.24GiB not current measurement",
+    "local_existing_E024_review_bytes": 2385876721,
+    "local_worst_inclusive_review_bytes": 7754585841,
+    "local_cap_bytes": 8589934592,
+    "local_free_reserve_bytes": 6442450944,
+    "cleanup_assumed": false
+  },
+  "storage": {
+    "objects": 181,
+    "bytes": 64990505198,
+    "soft_deleted_bytes": 0,
+    "disks_GiB": [
+      30,
+      300
+    ],
+    "seven_day_all_current_storage_plus_025USD_reserve": 7.708861915471554,
+    "original_approval_USD": 8,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "extended": false
+  },
+  "credit": {
+    "checked_UTC": "2026-10-28T22:22:02.145336+00:00",
+    "method": "Signed-in Chrome Credits/Overview visible read-only UI",
+    "remaining_DKK": 1759.58,
+    "original_DKK": 1973.43,
+    "remaining_percent": 89,
+    "status": "Available",
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; see terms for Free Trial",
+    "application": "Net pricing",
+    "paid_account": true,
+    "overview": {
+      "period": "October 1-28, 2026",
+      "rounded_cost_DKK": 214,
+      "rounded_savings_DKK": 214,
+      "net_DKK": 0
+    },
+    "delay": "Costs take a few hours and might take longer than 24 hours; numbers rounded",
+    "delayed_usage_reserve_USD": 35,
+    "real_money_authorized": false
+  }
+}

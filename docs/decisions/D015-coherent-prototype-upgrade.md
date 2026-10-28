@@ -1,14 +1,12 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Current handoff: [E024 independent inspection](../../experiments/E024-oral-measured-coverage/inspection-observed.json)
-accepts all-ten data and depth rebinding, but the frozen composite-retrieval gate
-failed. VM TERMINATED; no new partitions or quality score. The
-[October 28 decision assessment](../evidence/2026-10-28-e024-retrieval-failure-and-next-block.md)
-recommends one joint-distance retrieval implementation and separately admitted
-cached-only follow-through, with learning and biological rules fixed. The
-[proposed next prompt](../../experiments/E024-oral-measured-coverage/OPERATIONS.md#exact-following-prompt)
-is not current execution authority. Original $16/clock and November 4 retention
-remain; all accepted and failed evidence stays intact.
+Current handoff: [E025](../../experiments/E025-joint-distance-retrieval/README.md)
+implements the recommended direct joint-distance cached comparison, preserving
+E024 accepted data and failed union. The owner explicitly authorized longer
+runtime/higher cost after the three-hour local forecast refused admission. Select
+12 hours / 12.25-hour STOP / $5 credit-only, subject to fresh native/credit/storage
+and unchanged scientific gates. No larger learner, external reference or new data
+is added. November 4 retention and all immutable/failed evidence remain protected.
 
 ## E024 evidence and one retrieval follow-through, October 28, 2026
 

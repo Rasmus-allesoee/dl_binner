@@ -1,5 +1,12 @@
 # E024 operations
 
+October 28 follow-through: the owner authorized the prompt below and then
+explicitly removed its three-hour/$2 restrictions. The implemented new treatment
+is owned by [E025](../E025-joint-distance-retrieval/README.md), with a separate
+12-hour / 12.25-hour STOP / $5 credit-only safety envelope and unchanged scientific
+gates. November 4 retention remains. This file preserves the original inspection
+and carried prompt; use E025/STATE for current launch/inspection status.
+
 ## Verified inspection, October 28: data accepted, comparison failed
 
 [Independent inspection](inspection-observed.json), [data audit](data-review.json),

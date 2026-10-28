@@ -1,5 +1,21 @@
 # Google Cloud workspace operations
 
+**E025 admission, October 28:** the owner authorized the cached-only retrieval
+follow-through and explicitly removed the earlier runtime/cost restrictions.
+[The recorded amendment](../experiments/E025-joint-distance-retrieval/clock-amendment.md)
+selects 12 cumulative hours / 12.25-hour provider STOP / $5 credit-only on the
+same E2/disks, with all scientific/thread/RAM/space/export and November 4 limits
+unchanged. Full-STOP forecast $4.743, not expected idle time or an invoice; the
+watcher stops compute on workflow exit. Fresh credit DKK 1,759.58 Available,
+January 12 expiry / displayed net 0 / $35 delayed-usage reserve. All current
+storage for seven days plus $0.25 reserve forecasts $7.709 within original $8.
+No resource increase, source/data recopy, automatic storage renewal or deletion.
+Native gates and actual headroom precede community release. E024 accepted data
+and failed source remain immutable; [E025 operations](../experiments/E025-joint-distance-retrieval/OPERATIONS.md)
+owns current phase/status when launched.
+
+## Preserved E024 inspection
+
 
 **October 28 E024: VM TERMINATED; data accepted, cached comparison failed.**
 [Independent inspection](../experiments/E024-oral-measured-coverage/inspection-observed.json)

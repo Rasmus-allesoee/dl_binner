@@ -1,0 +1,34 @@
+{
+  "kind": "E025 cached joint-distance retrieval",
+  "work": "/srv/dl_binner/experiments/e025/NEW_PHASE/work",
+  "python": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+  "workflow_python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+  "worker": "/srv/dl_binner/repo/scripts/e025_control.py",
+  "snakefile": "/srv/dl_binner/repo/experiments/E025-joint-distance-retrieval/Snakefile",
+  "policy": "/srv/dl_binner/repo/experiments/E023-adaptive-density-bins/config.json",
+  "reference": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+  "graph": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/group/graph.npz",
+  "marker_evidence": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json",
+  "receipt": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/rebind.json",
+  "engineering": false,
+  "limits": {
+    "seconds": 43200,
+    "provider_STOP_seconds": 44100,
+    "ceiling_USD": 5,
+    "numerical_threads": 4,
+    "tree_RSS_bytes": 26000000000,
+    "free_reserve_bytes": 26843545600,
+    "extra_bytes": 8589934592,
+    "compressed_export_bytes": 1073741824,
+    "logical_export_bytes": 4294967296,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "allocated_vCPUs": 8
+  },
+  "data_archive": {
+    "path": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/collection/e024-evidence.tar.gz",
+    "bytes": 930977463,
+    "sha256": "08e9d9fc0a6aad12134226b4371ca993c140f415dfc2071060aa3295d9ccd20b",
+    "actual_work": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work",
+    "uri": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r5/e024-evidence.tar.gz"
+  }
+}

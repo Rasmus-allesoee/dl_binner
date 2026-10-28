@@ -1,0 +1,82 @@
+{
+  "kind": "E025 prospective consumer and policy source freeze",
+  "files": {
+    "experiments/E025-joint-distance-retrieval/Snakefile": {
+      "bytes": 1481,
+      "sha256": "a00aedab5df834c34d64ea1d0d9c9001bd387f0777918f2ee90d6112bfe4badb"
+    },
+    "experiments/E025-joint-distance-retrieval/design.md": {
+      "bytes": 3737,
+      "sha256": "0dc5932727f5562a6e4e594ae1f2073a98e9bc8637fc2830aa87cdf18d805ab3"
+    },
+    "experiments/E025-joint-distance-retrieval/index-policy.json": {
+      "bytes": 334,
+      "sha256": "6b0415736deda5979f2572b2aede2844e70cb44ffbc4209a6276d65dc695b560"
+    },
+    "experiments/E025-joint-distance-retrieval/protocol.json": {
+      "bytes": 6527,
+      "sha256": "cb49db6c3798a48677b8f89f8fe7976afdb5e8e6d475694998736ca177622762"
+    },
+    "experiments/E025-joint-distance-retrieval/resource-plan.json": {
+      "bytes": 3822,
+      "sha256": "fdb59859bcb6e8d4c73fca9aee9e8f8d7fc92dccd1de2c01a99cca42997da6d5"
+    },
+    "experiments/E025-joint-distance-retrieval/runtime-plan.json": {
+      "bytes": 1884,
+      "sha256": "9e1ef7bb65915284de320839e5160a2a195842e57b060dbce270d74936740a89"
+    },
+    "scripts/e025_arm.py": {
+      "bytes": 6433,
+      "sha256": "457cc24b02e919c764c19106b0d48c1a54b83fa305e982a5600f797e1ca65a22"
+    },
+    "scripts/e025_collect.py": {
+      "bytes": 5263,
+      "sha256": "3af06f2f09e7cc59a127b4d3be8aaa8d5b9290f2d352d0dc6ec80f1f4495ff5b"
+    },
+    "scripts/e025_control.py": {
+      "bytes": 7728,
+      "sha256": "b4eac77855ff577232794ff12375edb2ec8d5aaef64e25e96690d96e2ef55907"
+    },
+    "scripts/e025_gates.py": {
+      "bytes": 4374,
+      "sha256": "a821e828b1d4c79e753a98350a81799fa5ab7311def0d14e50067d40c121cee9"
+    },
+    "scripts/e025_information.py": {
+      "bytes": 15128,
+      "sha256": "0f826ab046c97e4dfbe02c2c33b00657b79a25ce8f56a27dbb732c54493f4254"
+    },
+    "scripts/e025_launch.py": {
+      "bytes": 14801,
+      "sha256": "13fefda49b17c7199d628e7563ea99efa0105598b532fe9323b25e4a09a7675f"
+    },
+    "scripts/e025_phase.py": {
+      "bytes": 18187,
+      "sha256": "0f2eee4cc85b1d231b47d52a85306946bc46381eb2e62f186b425922e4beb78a"
+    },
+    "scripts/e025_probe.py": {
+      "bytes": 3409,
+      "sha256": "717885c8e5cb2704507ec2515b705a29ef6a127263daf21cf9f29bea4e104a51"
+    },
+    "scripts/e025_review.py": {
+      "bytes": 11675,
+      "sha256": "04c41da3bf1508b40b71b8a67f9184216993bd58997cae068774fa5df72f1232"
+    },
+    "scripts/e025_tiny.py": {
+      "bytes": 4148,
+      "sha256": "09769b7e7eebfaf53613fa96bb8fa7f7ffc37ea93df5c93ea06258e0e8c4a293"
+    },
+    "tests/test_e025_operations.py": {
+      "bytes": 6826,
+      "sha256": "17fe7565509a6f84d510fd12c7ac54c0c9c3e05951023ae1213869f2228c408e"
+    },
+    "tests/test_e025_retrieval.py": {
+      "bytes": 8167,
+      "sha256": "ef6dd70961c032698002c1804ee7195a17067a5ecdb98cd3cd00e584a4bfdf21"
+    }
+  },
+  "inherited": [
+    "experiments/E024-oral-measured-coverage/source-lock.json",
+    "experiments/E023-adaptive-density-bins/source-lock.json"
+  ],
+  "scope": "New retrieval only; inherited DNA, learning, final score and selection immutable"
+}

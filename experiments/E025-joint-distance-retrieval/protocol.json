@@ -1,0 +1,115 @@
+{
+  "kind": "E025 prospective direct joint-distance cached comparison",
+  "date": "2026-10-28",
+  "status": "AUTHORIZED_PENDING_FRESH_GATES",
+  "parent": "E024 data accepted / original union FAILED_RECALL_GATE",
+  "hypothesis": "Indexing the actual composite score can satisfy unchanged retrieval validity and complete the fixed-learning Oral information comparison.",
+  "only_treatment": {
+    "version": 1,
+    "candidates": 60,
+    "max_candidates": 60,
+    "n_iters": 10,
+    "delta": 0.001,
+    "seed": 11,
+    "exact_threshold": 2048,
+    "initialization": "retained-native-neighbors-plus-self-and-random-fill",
+    "consumer": "training-neighbor-graph-then-exact-rerank",
+    "metric": "E024-pair-dependent-composite",
+    "threads": 4
+  },
+  "fixed": {
+    "encoder": "Retained E019 sequence-only context encoder and exact native unit vectors",
+    "seed": 11,
+    "eligibility_bp": 500,
+    "DNA": "All 1,286,547 contigs / 1,669,981,123 bp plus explicit original two 0 bp input records",
+    "downstream": "Exact E023 hierarchy/condensation/density antichain and cached physical-marker weighting; retained density-only alternative",
+    "baselines": "Retained E023 oral and E019 scalar/target/geometry summaries; no refit/rescore"
+  },
+  "ordered_samples": [
+    6,
+    7,
+    8,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "reference": {
+    "E009_targets": 156,
+    "E009_reference_bp": 554661890,
+    "oral_targets": 799,
+    "oral_reference_bp": 2083072211,
+    "E009_N_quarantine_bp": 7653205,
+    "E009_N_quarantine_percent": 3.3034,
+    "oral": "provided-origin oracle, not unique sequence; known-shared sensitivity unchanged"
+  },
+  "metrics": {
+    "primary": "Conservative duplicate-safe source-union R95 / all 799 provided targets / 2,083,072,211 bp, separately named provided-origin oracle; known-shared sensitivity unchanged",
+    "keep": "All operational/axis/source/resource contracts pass; selected R95 >= 0.07007729606498985 (E019 + 0.005), target-50 >= 43 and target-90 >= 33",
+    "modify": "Other valid mixed results or improved information without joint recovery criteria",
+    "abandon": "Selected R95<=0.04093190555264913 (E023), target90<=10 and bp-weighted same-origin composite-neighbor gain<=0; abandon this frozen retrieval policy, retain measured data and product depth option",
+    "practical": "These are scoped engineering/development effect criteria, not significance or biological standards; do not retune after outcomes",
+    "diagnostic": "Full target table and all length/origin/eligibility/marker/status/zero/non-target/unknown/unassigned populations; fixed E019 geometry distinct from new composite retrieval; same eligible-attributable query population",
+    "secondary": {
+      "completeness": "Dominant-origin duplicate-safe source union / full provided reference length",
+      "contamination": "Confirmed foreign-origin bp and unresolved bp separately; 1-confirmed all-bin purity is an upper bound",
+      "HQ": "completeness>0.90 and impurity<0.05",
+      "MQ": "otherwise completeness>=0.50 and impurity<0.10",
+      "LQ": "otherwise completeness<0.50 and impurity<0.10",
+      "other": "high impurity or unresolved; non-target bins reported separately",
+      "RNA_screened": false,
+      "formal_MIMAG_HQ": false,
+      "NC_category": false,
+      "primary_rule_changed": false
+    }
+  },
+  "baseline_summaries": {
+    "experiments/E023-adaptive-density-bins/comparison-review.json": {
+      "bytes": 135634,
+      "sha256": "cb387ada3b948e9d2c2e2c17e0892a20988d33d64eae3f778a72a8970d8744eb"
+    },
+    "experiments/E019-window-context/comparison-review.json": {
+      "bytes": 251373,
+      "sha256": "e80043238e97659228748ba7f55487fe1f0eac64af89d87c08e69e3df2536589"
+    },
+    "experiments/E023-adaptive-density-bins/comparison-targets.tsv": {
+      "bytes": 51055,
+      "sha256": "e39e45692e09d35126034102af0a77470433df0d1c7dbf5399d17da282b9caf8"
+    }
+  },
+  "coverage": {
+    "mapper": "strobealign 0.17.0 existing E009 binary, paired interleaved; -N 0; actual SAM alignments, not --aemb",
+    "index": "One new owned reference copy and reusable STI, first 500 pairs uniform 100\u2013500 bp profile; full-stream read lengths must match",
+    "filters": "MAPQ >= 20 and != 255; exclude 0xF04; no proper-pair requirement; BQ 0; M/= /X; no D/N/I/S/H/P contribution",
+    "overlapping_mates": "Count both aligned read bases; not fragment depth",
+    "denominator": "Full original contig length including uncovered and ambiguous positions; no edge trimming",
+    "zero": "All matrix cells measured, never imputed; zero rows retained; E023 at-least-one-positive mask omits uninformative all-zero pairs from depth contrasts",
+    "variance": "None. Column std across contig means is a transform, not a measured per-base/window variance",
+    "E009_difference": "Accepted E009 used MAPQ0/no edge or overlap trimming. E024 MAPQ20 is a new prospective oral policy, not a matched mapping-filter ablation."
+  },
+  "truth": "Provided origin is not unique source. Full 799 denominator, quarantine and shared sensitivity unchanged; original E009 156 / 3.3034% N quarantine is retained context, not rescored.",
+  "unchanged_skin": "610 targets / 313 exact oral overlaps unscored; sample/source/genome/replicon/molecule/host/circular/taxonomy/near/pretraining/competitive/unique-versus-origin/evaluator/depth/cost dependencies remain.",
+  "excluded": [
+    "GLM extraction",
+    "new learning/model architecture",
+    "marker detection",
+    "density/resolution/cutoff grid",
+    "external binner",
+    "confirmation acquisition",
+    "old-baseline rescore",
+    "resource provisioning/resize",
+    "retention extension",
+    "old neighbor regeneration",
+    "automatic candidate widening",
+    "original data/archive recopy",
+    "old scoring replay"
+  ],
+  "scientific_gate": "Mean of 32 fixed ID-hash query tie-aware final top30 recalls >=0.90 with tolerance1e-10 unchanged; exact values/IDs/top-k/proposals persisted before refusal",
+  "observability": "Nonzero child failure propagates through collecting parent to nonzero service exit; final guest status published after upload, never RUNNING afterward",
+  "budget": "Owner explicitly removed 3 h / $2 restrictions; select 12 h / 12.25 h STOP / $5 credit-only safety envelope; no scientific treatment change",
+  "original_E024_clock_reset": false,
+  "owner_amendment": "2026-10-28 direct in-task authorization for longer runtime and higher cost; original data/source and November 4 retention protected"
+}

@@ -2,6 +2,29 @@
 
 Updated: October 28, 2026 (Copenhagen). This is the single current handoff.
 
+**E025 local joint-distance retrieval is implemented; native admission is next.**
+[Design](../experiments/E025-joint-distance-retrieval/design.md) and
+[protocol](../experiments/E025-joint-distance-retrieval/protocol.json) freeze one
+compiled index in the actual E024 distance, retaining E019 learning/native vectors,
+measured data, exact score, seed, E023 selection and original recall/recovery rules.
+Real local compiled index/query/reload, source-blind reader/export/partial reuse
+and failed-child/status-order contracts pass. No community score is claimed.
+
+The owner approved execution and explicitly removed the prior three-hour/$2
+restriction. [Operational amendment](../experiments/E025-joint-distance-retrieval/clock-amendment.md)
+selects **12 cumulative hours / 12.25-hour STOP / $5 credit-only**, with existing
+hardware and every scientific/resource/export exclusion unchanged. The earlier
+runtime refusals remain preserved. Fresh trial credit DKK 1,759.58 Available,
+January 12 expiry; displayed net 0, unknown delayed usage / $35 reserve. Complete
+STOP-bound forecast about $4.743. All-current-storage seven-day estimate including
+$0.25 reserve is $7.709, below the original $8; no retention beyond **November 4,
+00:00 Copenhagen**. Native gates and measured headroom must still pass before the
+single consumer release. Skin remains unscored; E009 context/old scores are reused.
+[Operations](../experiments/E025-joint-distance-retrieval/OPERATIONS.md) owns the
+exact phase and later inspection handoff. No current RUNNING claim yet.
+
+## Preserved E024 accepted data and failed retrieval
+
 **E024 data are accepted; its cached comparison failed the frozen retrieval gate.
 VM TERMINATED.** [Independent inspection](../experiments/E024-oral-measured-coverage/inspection-observed.json),
 [data review](../experiments/E024-oral-measured-coverage/data-review.json) and
@@ -24,7 +47,7 @@ rehash exists; numeric recall and arrays were not saved. No new quality score,
 biological KEEP/MODIFY/ABANDON verdict or paired target effect is possible.
 No wake, retraining, acquisition, mapping, old rescore or external run in inspection.
 
-**Next:** [one joint-distance retrieval block](evidence/2026-10-28-e024-retrieval-failure-and-next-block.md),
+**October 28 inspection recommendation (now implemented by E025 above):** [one joint-distance retrieval block](evidence/2026-10-28-e024-retrieval-failure-and-next-block.md),
 preserving learning, measured data, final metric, E023 density/marker policy and
 the original recall/recovery gates. Freeze/test a new custom-distance index and
 persist failure audits, then run only a separately admitted cached comparison.

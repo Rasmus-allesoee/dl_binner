@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "candidates": 60,
+  "max_candidates": 60,
+  "n_iters": 10,
+  "delta": 0.001,
+  "seed": 11,
+  "exact_threshold": 2048,
+  "initialization": "retained-native-neighbors-plus-self-and-random-fill",
+  "consumer": "training-neighbor-graph-then-exact-rerank",
+  "metric": "E024-pair-dependent-composite",
+  "threads": 4
+}
