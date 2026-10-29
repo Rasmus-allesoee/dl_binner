@@ -713,3 +713,20 @@ The owner explicitly authorized longer runtime/higher cost after the three-hour
 forecast refused admission. Select a 12-hour / 12.25-hour STOP / $5 credit-only
 safety envelope with unchanged resources, scientific rules and November 4
 retention. No larger learner, external reference or confirmation is added.
+
+
+### October 29, 2026: E025 completes the depth/retrieval information evidence
+
+[Verified E025 MODIFY](../../experiments/E025-joint-distance-retrieval/comparison-review.json)
+raises Oral full-reference R95 to 8.1441% versus E023 4.0932% / E019 6.5077%,
+with target-50 58 and target-90 22 (E019 43/33). All accepted DNA, measured zeros,
+source/native vectors and full 799 reference denominators remain; no old rescore.
+Q001/Q003/Q005 remain open: information is useful, but incomplete target transfer,
+weak cross-availability links and giant density selection do not settle learning
+or bin construction. [The next-decision assessment](../evidence/2026-10-29-e025-depth-evidence-and-next-block.md)
+favors one coherent calibrated, availability-aware biological grouping upgrade
+with fixed learning, ahead of depth-enabled learning/full Oral GLM. The original
+joint KEEP failure is preserved; no truth-selected threshold/router or new product
+family claim. Local implementation/preparation is the next proposed scope, with
+separately admitted cached execution and unchanged November 4 retention. Skin
+stays unscored with all source/depth/overlap/truth/cost dependencies.

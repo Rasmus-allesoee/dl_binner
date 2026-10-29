@@ -1,56 +1,85 @@
 # E025 operations
 
-## Native handoff, October 29 Copenhagen / October 28 UTC
+## Verified completion and review, October 29, 2026
 
-Phase **`joint-20261028T225703Z-cea5f9e`** runs source
-`cea5f9e609440c4428b868d3a7c54842ede8ec98` on the original E2/disks. The
-[receipt](native-observed.json) is a dated RUNNING snapshot, not final acceptance.
-All six native gates / nine contracts pass. Accepted archive/members, full
-1,286,547-contig / 1,669,981,123-bp ten-sample axes, exact original graph/marker
-bytes and independent runtime reuse pass without install/recopy.
+**SUCCESS; independently verified TERMINATED; frozen biological disposition MODIFY.**
+Phase `joint-20261028T225703Z-cea5f9e` executed exact source
+`cea5f9e609440c4428b868d3a7c54842ede8ec98`. The [inspection](inspection-observed.json)
+supersedes [the dated RUNNING receipt](native-observed.json), which stays intact.
+All six gates / nine native contracts, verify/group/export/audit and final target,
+input-after, collection/upload/readbacks and matching boot/process exit proof pass.
+No wake, accepted-science replay, source substitution or resource change.
 
-The new index stopped after five iterations. Sampled final-composite recall is
-**0.9979166667**, minimum query 0.9666666667, across the same 32 source-blind
-queries; the unchanged >= 0.90 gate passes. This verifies sampled retrieval,
-not biological homogeneity or recovery. Density-only selects one bin and marker-
-informed selection 188; these are size/selection summaries, not quality scores.
-Both complete assignment exports exist; full FASTA DNA is emitted once for the
-selected arm, with complete density-arm accounting. **Final cache audit is still running**, so no complete
-science/delivery/shutdown or truth result is claimed.
+Provider allocation October 28 **22:57:40.169–23:56:59.646 UTC** (Copenhagen
+October 28 23:57–October 29 00:56), **3,559.477 seconds / 59.32 minutes**. The tested watcher
+requested shutdown at 23:54:42 UTC. Guest and private completion both say SUCCESS;
+shutdown alone is not the acceptance evidence. Science workflow wall 43.90 minutes,
+sampled CPU 3,527.49 seconds and peak tree RSS 7.173 GB are distinct from charged
+allocation. Whole-run sampled growth **3.959 GiB**, minimum free **37.771 GiB**,
+including collection; the earlier 3.068 GiB handoff covered science only.
 
-The inherited E024 audit rebuilds a 508,763-ID set inside 23,686 membership
-checks. This avoidable source-level cost is consistent with its CPU-bound tail;
-no profiler attribution is claimed. The active frozen source stays unchanged.
-The separate [future validator](../../scripts/e025_cache_audit.py) hoists that
-set once; an actual tiny reader/choice/refusal equivalence test passes. It has
-not run as the native validator in this phase. Preserve the original validator
-and journal, and explicitly source-bind the adapter before any future native use.
+The 954,145,356-byte archive SHA256 is
+`2d02ccc8d0527b5604eccde9573ee9a270d9db3865338374fd1a8b9c5aa19b3d`.
+Every one of 172 members / 1 exact alias verifies; logical payload 1,531,232,439
+bytes. [Delivery details](inspection-observed.json) bind original E024 data in
+place, all axes/vectors/arrays/choices and complete DNA accounting. Full selected
+FASTA remains on disk and is omitted from the compact backup with explicit hashes;
+its inventory is not a FASTA backup. No second old data archive or BAM WAN export.
+The separate [compact inspection backup](inspection-backup.json), including raw
+diagnostics, controller/review code and preserved local failures, is 560,865 bytes;
+private upload/readback and all 195 members pass without waking the VM.
+One auxiliary 412-byte restart-refusal stderr receipt was omitted by the collector;
+its locator/hash remain. Successful source-checked arming, actual normal/crash logs
+and unchanged live PID independently establish supervision. All scientific/runtime
+contracts are delivered. No wake is needed for that auxiliary file.
 
-Current-boot/PID/start/command watchdog and native normal/crash/restart-refusal
-tests pass. First allocation **October 28 22:57:40.169 UTC / 23:57 Copenhagen**;
-driver deadline **October 29 10:57:40.169 UTC / 11:57 Copenhagen**; independent
-provider STOP **11:12:40.169 UTC / 12:12 Copenhagen**. Watcher stops after the
-held parent exits, well before fallback when possible. No restart, new node,
-resource change or retention extension.
+[The frozen review](comparison-review.json) and [all targets](comparison-targets.tsv):
 
-Latest sampled peak workflow RSS 7.173 GB; free disk 38.663 GiB / sampled global
-growth 3.067 GiB, under 26 GB / 25 GiB reserve / 8 GiB growth. These are sampled
-observations. Exact final allocation, storage/export and science acceptance
-require completion inspection. Original E024's data/failed return stay intact.
+| Oral full-reference result | E019 retained | E023 retained | E025 selected |
+| --- | ---: | ---: | ---: |
+| Weighted R95 | 6.5077% | 4.0932% | **8.1441%** |
+| Targets at least 50% | 43 | 30 | **58** |
+| Targets at least 90% | 33 | 10 | **22** |
 
-Live logs:
+Compared with E023: +84,382,548 passing bp, 77 target gains / 6 losses. Compared
+with E019: +34,085,956 bp, 70 gains / 41 losses. KEEP fails its unchanged target-90
+requirement. Density-only is one mixed bin / zero R95; cached marker selection
+produces 188 bins and all passing recovery. Secondary threshold-based HQ/MQ/LQ
+**22/36/67**, plus 63 high-impurity/unresolved; no RNA or formal MIMAG HQ claim.
+Both known-shared recovery and tier endpoints are unchanged. All 799 full
+references / 2,083,072,211 bp, measured-zero profiles and all excluded/unassigned
+DNA remain. E009 v2 / 156 references / 3.3034% N quarantine is retained context,
+not rescored. Original Mac portability failure/tolerance stays unchanged.
 
-```text
-/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/terminal.log
-/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/phase-logs/workflow.log
-/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/work/logs/audit.log
-```
+Sampled technical recall **99.7917%** passes the unchanged 90% gate. Matched
+base-weighted same-origin 5NN rises **20.3297% -> 34.7336%**; fixed native E019
+geometry stays 20.7688%. New edge strata distinguish positive/positive **58.1417%**
+from positive/all-zero **0.3984%**. These are descriptive provided-origin links,
+not proof of uniqueness or that missing depth caused the earlier community contrast.
+[The recovery-focused assessment](../../docs/evidence/2026-10-29-e025-depth-evidence-and-next-block.md)
+recommends one coherent calibrated, availability-aware biological grouping block,
+with fixed learning, ahead of depth-enabled learning or a new GLM extraction.
 
-Private completion/return prefix:
-`gs://dl-binner-archive-167650584170/e025/joint-20261028T225703Z-cea5f9e/`.
-No new quality result is available. Comparing later with E023 is a depth/retrieval
-bundle with E019 learning fixed, not an isolated causal depth ablation or a match
-to E022's E009 learning/features.
+[Measured cost ledger](cost-review.json): compute/IP **$0.26997**, run-PD attribution
+**$0.04226**, new WAN plus metadata upper **$0.10688**, new compact storage through
+November 4 about **$0.00351**; subtotal **$0.42262**, **$1.17262** with reserves,
+inside the owner-amended $5. PD attribution overlaps retained-storage approval;
+this is current-price accounting, not an invoice or a credit-delta charge. Fresh
+Welcome credit DKK 1,759.02 Available / 89%, January 12 expiry, net displayed 0;
+usage may lag >24 hours, $35 reserve. Original disks remain $31.20/month while
+stopped. Seven-day all-current-storage forecast including new compact payload and
+reserve **$7.713 < $8**, with unchanged **November 4, 00:00 Copenhagen** end.
+No renewal, deletion or speculative cleanup. Ten original private primary BAMs
+remain in E024's prior storage scope.
+
+Native rule benchmarks separate grouping **614.27 seconds** from the original
+cache audit **1,862.97 seconds**. This is not a 44-minute neural fit. The long
+inherited audit and failed local prerequisite/forecast/render/reviewer
+journals are preserved. The faster hoisted-set validator passes actual tiny
+proof/refusal equivalence but was not the native source. The frozen diagnostic
+API ran successfully; its old direct CLI omits external feature/rebind arguments,
+so that CLI path is not claimed ready. Fix operational packaging prospectively,
+without rewriting the freeze or replaying outputs.
 
 ## Authorized scope and preparation
 
@@ -112,6 +141,76 @@ E009 conservative v2 / 156 references / 3.3034% N quarantine is retained context
 not rescored. Threshold HQ/MQ/LQ are secondary, not formal MIMAG HQ without RNA.
 
 ## Exact following prompt
+
+Our goal is substantially closing the recovery gap. Read AGENTS, PROJECT_INTENT,
+STATE/CLOUD, D013/D015, the completed reviews and E025's verified inspection,
+comparison/target/availability results, source locks, next-block assessment and
+operations. Preserve dev3/dev4/dev5 and all accepted E009–E025 data, truth, source,
+native vectors, outputs and failed journals. Use a new descriptive research branch
+without a codex/ prefix.
+
+Implement one coherent availability-aware calibrated evidence-fusion and biological
+bin-construction upgrade locally, keeping accepted learning/vectors fixed. Address
+E025's explicit positive-versus-zero/co-absence and unequal-score-confidence
+assumptions, weak cross-availability links and whole-forest density selection.
+Use measured parent means, composition/native context and reliable cached physical
+markers; keep supported whole/child alternatives. Build reliable cores and
+conservative recruitment/abstention without deleting short, marker-negative,
+all-zero, unknown/non-target or excluded DNA. All-zero is measured data, not a
+missing cell; do not invent coverage variance, window depth or confidence.
+
+Resolve exact algorithms/defaults using judgment and targeted primary-source checks
+of calibrated evidence, positive-versus-zero semantics and biological selection.
+This is a coherent upgrade, not a threshold/grid campaign or a requirement to
+perfect grouping before a future learning block. No truth-selected parameters,
+K, bins, per-community router or family exceptions. Freeze one prospective design,
+source/policy and joint keep/modify/abandon criteria before changed outcomes.
+Keep composition/depth/native contributions and assignment reasons auditable.
+
+Reuse retained DNA/features/vectors/marker calls and candidate arrays only under
+verified byte/axis/runtime contracts. A changed score needs its own exact/tie-aware
+source-blind recall audit; old top-30 accuracy does not establish new-score recall.
+Prepare a newly justified sparse retrieval only if retained candidates cannot
+support it. Do not redetect markers, rebuild accepted native indices or repeat
+accepted setup/science merely for convenience. Use the separately tested faster
+cache validator only through an explicit new source/reuse lock. Repair the review
+CLI's external-data arguments and collector control-file inventory; test their
+actual isolated production argv/layout and preserve old failures and source.
+
+Run meaningful tiny real reader/calibration/zero/constant/partial-channel,
+retrieval/tie/reload/core/marker/selection/export and complete DNA contracts.
+Bound local checks to four numerical threads, 8 GB sampled RSS and measured disk;
+use a realistic explicit engineering clock with headroom, preserving failures.
+No community fit/grouping/score, cloud start/spend, new reads/mapping/aligner,
+GLM extraction, external tool or confirmation work in this local block.
+
+Prepare one separately priced cached E009/Oral comparison, preserving each
+community's current learner: E022/E023 on E009 and E019/E024/E025 on Oral. Reuse
+accepted baseline summaries without refitting/rescoring. Retain full 156/799
+provided denominators, conservative E009 v2 / 3.3034% N quarantine, separately
+named Oral provided-origin/known-shared sensitivity and all length/origin/native-
+eligibility/marker/zero/unassigned populations. This tests one grouping policy
+across two development regimes, not matched upstream features or confirmation.
+Use recovery/target trade-offs plus calibration/availability/selection evidence.
+Secondary per-bin completeness/impurity and threshold tiers stay secondary and
+are not formal MIMAG HQ without RNA.
+
+Estimate the complete native setup/verification/retrieval/grouping/export/audit/
+collection/upload schedule, RAM, peak disk, return/review footprint and current
+compute/storage/network cost with headroom. Do not weaken the scientific block
+to fit the old $2 / three-hour scope; old compute budgets do not authorize a new
+scientific treatment. Prepare the exact later execution request with fresh live
+Welcome-credit/product/delay/price/headroom prerequisites and realistic shutdown
+bounds. Existing storage still ends November 4 at 00:00 Copenhagen; no extension
+or deletion is authorized. Keep skin/additional depth-enabled confirmation
+unacquired/unscored pending source/genome/replicon/molecule/taxonomy/near/pretraining
+and competitive uniqueness/ambiguity/depth/evaluator/cost/retention admission.
+Update records/check/commit with structured what changed/why; report what works,
+actual versus unavailable paths, scientific uncertainties, one next decision and
+the exact execution prompt.
+
+## Inspection prompt carried out in this task
+
 
 Our goal is substantially closing the recovery gap. Read AGENTS, PROJECT_INTENT,
 STATE/CLOUD, D013/D015 and E025's design/protocol/criteria, source/runtime/resource

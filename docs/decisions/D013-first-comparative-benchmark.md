@@ -1,12 +1,21 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Current handoff: [E025](../../experiments/E025-joint-distance-retrieval/README.md)
-implements the recommended direct joint-distance cached comparison, preserving
-E024 accepted data and failed union. The owner explicitly authorized longer
-runtime/higher cost after the three-hour local forecast refused admission. Select
-12 hours / 12.25-hour STOP / $5 credit-only, subject to fresh native/credit/storage
-and unchanged scientific gates. No larger learner, external reference or new data
-is added. November 4 retention and all immutable/failed evidence remain protected.
+Current handoff: [E025 completed review](../../experiments/E025-joint-distance-retrieval/comparison-review.json)
+returns **MODIFY**, Oral R95 8.1441% versus E023 4.0932% / E019 6.5077%, but
+22 target-90 versus E019's 33. All native/byte/runtime/DNA contracts pass and the
+VM is TERMINATED. The owner-expanded clock/cost preserved the complete treatment;
+measured allocation was 59.32 minutes, priced subtotal $0.42262, no new resources.
+
+Recommend [one coherent availability-aware calibrated fusion and biological bin-
+construction block](../evidence/2026-10-29-e025-depth-evidence-and-next-block.md),
+keeping learning/vectors fixed. Positive/positive edge homogeneity 58.14% versus
+positive/all-zero 0.40%, giant density-only selection and incomplete high-recovery
+transfer justify this over another network/loss grid. This is a new scientific
+treatment, not a repair to the accepted score or a permanent ban on depth-enabled
+learning. Prepare local implementation/tiny contracts and separately price a
+cached E009/Oral comparison. No new execution, truth-selected router, confirmation
+or retention extension; November 4 remains. [Operations](../../experiments/E025-joint-distance-retrieval/OPERATIONS.md#exact-following-prompt)
+owns the exact local next prompt. Prior dated directions below preserve history.
 
 ## E024 accepted data and failed information comparison, October 28, 2026
 

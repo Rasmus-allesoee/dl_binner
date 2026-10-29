@@ -2,42 +2,68 @@
 
 Updated: October 29, 2026 (Copenhagen). This is the single current handoff.
 
-**E025 is running its final native cache audit under verified supervision.**
-Phase `joint-20261028T225703Z-cea5f9e`, scientific source `cea5f9e`, is recorded in
-[the native receipt](../experiments/E025-joint-distance-retrieval/native-observed.json)
-and [operations](../experiments/E025-joint-distance-retrieval/OPERATIONS.md).
-All six Linux gates / nine actual contracts and accepted archive/input/source
-bindings pass. The exact native E019 vectors and full ten-depth/DNA axes stay
-fixed; no setup reinstall, acquisition, mapping, learning/GLM or marker search.
+**E025 completed and is independently reviewed: MODIFY. VM TERMINATED.**
+[Inspection](../experiments/E025-joint-distance-retrieval/inspection-observed.json),
+[results](../experiments/E025-joint-distance-retrieval/comparison-review.json),
+[all targets](../experiments/E025-joint-distance-retrieval/comparison-targets.tsv)
+and [costs](../experiments/E025-joint-distance-retrieval/cost-review.json) supersede
+the dated RUNNING snapshot for `joint-20261028T225703Z-cea5f9e`. All six native
+gates / nine contracts, four serial rules + target, full input-after proof,
+collection/readbacks, archive/members/alias and matching boot/process exit pass.
+Exact native source is `cea5f9e`; no wake, scientific replay, new model/resources
+or retention extension in inspection.
 
-New direct joint-distance retrieval passes the unchanged 32-query gate: mean
-**0.9979166667**, minimum 0.9666666667, versus required 0.90. That is sampled search
-validity, not genome homogeneity/recovery. Grouping and both complete assignment exports
-exist (density 1 bin, selected 188), but **audit/collection/shutdown and independent
-truth review remain pending**. No new R95, quality tier or biological disposition.
-The inherited audit rebuilds the same 508,763-ID set for 23,686 cached marker
-lookups, consistent with its long CPU-bound tail. The active frozen source stays
-unchanged. A separate faster read-only adapter has a passing actual tiny
-reader/refinement/refusal equivalence test, with no native execution claim.
+| Oral full-reference result | E019 retained | E023 retained | E025 selected |
+| --- | ---: | ---: | ---: |
+| Weighted R95 | 6.5077% | 4.0932% | **8.1441%** |
+| Targets at least 50% | 43 | 30 | **58** |
+| Targets at least 90% | 33 | 10 | **22** |
 
-Current-boot/process watchdog, normal/crash/restart-refusal tests and provider
-STOP pass. Owner-expanded safety envelope: **12 cumulative hours / 12.25-hour
-STOP / $5 credit-only**; existing E2/disks and scientific/resource/export limits
-unchanged. First start October 28 22:57:40 UTC; driver deadline October 29
-10:57:40 UTC, STOP 11:12:40 UTC / **12:12 Copenhagen**. Sampled peak RSS 7.173 GB,
-free 38.663 GiB / growth 3.068 GiB. At 23:40 UTC, priced compute/IP about $0.19546
-plus $0.03059 run-PD attribution (overlapping storage), not an invoice or total.
-Full STOP-bound forecast $4.743; no new archive WAN export yet.
+E025 gains 84.383 Mb versus E023 / 34.086 Mb versus E019, with 77 gains / 6 losses
+and 70 gains / 41 losses respectively. KEEP's unchanged target-90 requirement
+fails. Density-only is one mixed bin / zero R95; cached marker selection produces
+188 bins and all passing recovery. Secondary threshold-based HQ/MQ/LQ **22/36/67**,
+plus 63 impure/unresolved, are not formal MIMAG HQ without RNA. Full 799 references,
+known-shared sensitivity and all DNA/zero/length/eligibility/marker populations
+remain. E009 v2 / 156 targets / 3.3034% N quarantine is retained, not rescored.
 
-Fresh signed-in credit DKK **1,759.02 Available / 89%**, January 12 expiry,
-displayed net DKK 0; unknown lag / $35 reserve. All-current-storage seven-day
-forecast including $0.25 reserve is $7.709 within original $8. Retention still
-ends **November 4, 00:00 Copenhagen**; no renewal/deletion or new resources.
-[The exact next prompt](../experiments/E025-joint-distance-retrieval/OPERATIONS.md#exact-following-prompt)
-is completion/evidence/cost verification and frozen new-output Oral diagnostics.
-Use that evidence to choose one recovery block; no new fit or confirmation.
-Both communities remain development; skin is unscored. Comparing with E023 is a
-depth/retrieval bundle, not an isolated causal depth effect or matched E022 learner.
+Technical recall **99.7917%** passes the original 90% gate. Matched biological
+same-origin 5NN rises **20.3297% -> 34.7336%**, with fixed E019 learned geometry
+still 20.7688%. Positive/positive links have 58.1417% base-weighted homogeneity,
+positive/all-zero only 0.3984%. This is an information/retrieval development bundle,
+not isolated depth causality, unique-source truth or matched E022/E019 learning.
+
+**Strongest next block:** [availability-aware calibrated evidence fusion and biological
+bin construction](evidence/2026-10-29-e025-depth-evidence-and-next-block.md), holding
+learning fixed. Distinguish positive-versus-zero evidence from co-absence, calibrate
+channel confidence, construct reliable cores and recruit conservatively with
+cached physical markers and complete DNA/abstention. The explicit omission rule
+matches source; unequal evidence comparability is a design issue to test, not a
+proven execution bug. Depth-enabled learning remains the strongest alternative.
+Do not default to another small grid, larger network, full Oral GLM or external
+campaign. [Exact following prompt](../experiments/E025-joint-distance-retrieval/OPERATIONS.md#exact-following-prompt)
+prepares/locally tests one coherent upgrade and separately prices one cached
+E009/Oral comparison; no new community/cloud work now. Skin stays unscored with
+all independent truth/depth/overlap/cost dependencies.
+
+Allocation **59.32 minutes / $0.26997 compute/IP**; run-PD attribution $0.04226
+overlaps storage. WAN/new storage subtotal with compute/PD **$0.42262**, **$1.17262**
+with reserves, within owner-amended $5 / 12-hour scope. Science 43.90 minutes /
+7.173 GB sampled peak; whole-run growth 3.959 GiB / minimum free 37.771 GiB.
+Fresh credit DKK **1,759.02 Available / 89%**, January 12 expiry, displayed net 0;
+unknown >24-hour lag / $35 reserve, not credit-delta invoicing. Existing disks
+remain **$31.20/month while stopped**. All-current-storage week including new
+compact return/reserve forecasts **$7.713 < $8**, ending **November 4, 00:00
+Copenhagen**. No automatic renewal/deletion. Full FASTA is retained on disk, not
+inside the compact inventory; ten original BAM backups remain in E024's scope.
+One auxiliary restart-refusal stderr file was not delivered; scientific/runtime
+contracts and independent supervision pass. The old Mac portability failure,
+failed local/native journals and slow original validator stay preserved. The new
+fast validator is tiny-tested only, and the successful review used the explicit
+API rather than its incomplete old CLI.
+The compact inspection backup is privately uploaded/read back, with all 195
+members verified; no wake or bulk input copy. Grouping took 10.24 minutes and the
+old cached audit 31.05 minutes, separately benchmarked.
 
 ## Preserved E024 accepted data and failed retrieval
 

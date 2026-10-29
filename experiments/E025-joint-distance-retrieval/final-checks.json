@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "date": "2026-10-29",
+  "documentation": {
+    "command": "python3 scripts/check_docs.py --check-context",
+    "maintained_documents": 113,
+    "local_links": 1603,
+    "present_source_fingerprints": 85,
+    "optional_unavailable_source_caches": 10,
+    "log": {
+      "path": "artifacts/e025-inspection/20261028T232534Z/final-doc-check.log",
+      "bytes": 729,
+      "sha256": "c8e881dda71a13040b1f612db625987bfa0cc369fd64849022e4b219732a89ee"
+    }
+  },
+  "immutable_source_files_verified": 333,
+  "scopes": [
+    "18 E025 source/policy files",
+    "28 E024 source files",
+    "287 E023 inherited files"
+  ],
+  "checks": [
+    "JSON/AST parse",
+    "799 target denominators/paired recovery totals",
+    "188 bin quality rows/full assigned bp in both sensitivities",
+    "Cross-bound independent native review receipt",
+    "Private backup/readback and all 195 members",
+    "Inclusive 4,877,535,757-byte local review footprint and physical reserve",
+    "git diff --check"
+  ],
+  "native_gates_and_tiny_contracts": "Six native gates / nine contracts plus actual tiny serial DAG; unchanged science already accepted, not rerun for record edits",
+  "community_scoring": "Only frozen new E025 partitions; old baselines reused",
+  "not_claimed": [
+    "Native full-shape faster-validator performance",
+    "Successful old direct review CLI",
+    "Formal MIMAG HQ/RNA screening",
+    "Exhaustive Oral source uniqueness",
+    "Matched E009/Oral upstream features"
+  ]
+}

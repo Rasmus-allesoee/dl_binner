@@ -229,6 +229,12 @@ For frozen feature caches, bind exact model/tokenizer/custom-source identity and
 actual DNA-view coordinates, hashes and availability. Parent-vector substitution
 for crop DNA is a scientific treatment, not a cache fallback. A depth-only rebind
 requires exact DNA/ID/view equality, a fresh receipt and an untouched source cache.
+Distinguish failed/missing measurements, measured all-zero profiles, constant
+channels and method-excluded rows in diagnostics and field names. When pair
+scores omit a channel, audit their comparability across evidence-availability
+strata; absence of a contrast is not measured agreement. A measured positive
+versus zero contrast and co-absence can carry different evidence. Any change to
+that interpretation is a prospective scientific treatment, not a cache repair.
 
 For reference-derived benchmark inputs, distinguish a verified simulator/source
 origin from DNA that uniquely identifies that origin. Preserve known alternative

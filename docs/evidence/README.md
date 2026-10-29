@@ -31,3 +31,4 @@ Add a focused note when an investigation produces useful reasoning. Give it a da
 - [E023 information, recovery and the next measured-depth block](2026-10-27-e023-information-and-recovery.md)
 
 - [E024 accepted data, failed retrieval and the next recovery block](2026-10-28-e024-retrieval-failure-and-next-block.md)
+- [E025 useful depth, unequal evidence and the next recovery block](2026-10-29-e025-depth-evidence-and-next-block.md)

@@ -1,0 +1,1858 @@
+{
+  "kind": "E025 frozen new-output diagnostic review",
+  "date": "2026-10-29",
+  "status": "SUCCESS",
+  "phase": "joint-20261028T225703Z-cea5f9e",
+  "source_commit": "cea5f9e609440c4428b868d3a7c54842ede8ec98",
+  "full_diagnostic_artifact": {
+    "path": "artifacts/e025-inspection/20261028T232534Z/diagnostics/review.json",
+    "bytes": 1438056,
+    "sha256": "541ad51c9a07b7a3cc220d9e4c8bae3be1a6fab4f48c4d71b8485c6c5250ecbd"
+  },
+  "independent_native_contract": {
+    "bytes": 34387,
+    "sha256": "2df8c201408646033225a9216975b26b1be3f8abb8d6f2d4f5f4c052581d1d05"
+  },
+  "arms": {
+    "density": {
+      "recovery": {
+        "origin": {
+          "accounting": {
+            "contigs": 1286547,
+            "bp": 1669981123,
+            "quarantined_bp": 1734,
+            "unassigned_bp": 226153459
+          },
+          "recovery_summary": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.0,
+            "macro_R95": 0.0,
+            "at_least_50_percent": 0,
+            "at_least_90_percent": 0
+          },
+          "mode": "provided-origin"
+        },
+        "known_shared_mask": {
+          "accounting": {
+            "contigs": 1286547,
+            "bp": 1669981123,
+            "quarantined_bp": 1734,
+            "unassigned_bp": 226153459
+          },
+          "recovery_summary": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.0,
+            "macro_R95": 0.0,
+            "at_least_50_percent": 0,
+            "at_least_90_percent": 0
+          },
+          "mode": "provided-origin-known-shared-mask sensitivity; not exhaustive uniqueness"
+        }
+      },
+      "grouping": {
+        "population_cells": {
+          "1|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+            "contigs": 774665,
+            "bp": 225068259,
+            "non_ACGT_quarantine_bp": 181,
+            "known_shared_query_bp": 7832
+          },
+          "10000|positive_bacterial_source|eligible|assigned|clean_marker": {
+            "contigs": 4173,
+            "bp": 660201498,
+            "non_ACGT_quarantine_bp": 653,
+            "known_shared_query_bp": 0
+          },
+          "10000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+            "contigs": 6309,
+            "bp": 131550046,
+            "non_ACGT_quarantine_bp": 115,
+            "known_shared_query_bp": 0
+          },
+          "2500|positive_bacterial_source|eligible|assigned|clean_marker": {
+            "contigs": 5604,
+            "bp": 28145257,
+            "non_ACGT_quarantine_bp": 13,
+            "known_shared_query_bp": 0
+          },
+          "2500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+            "contigs": 44125,
+            "bp": 188949166,
+            "non_ACGT_quarantine_bp": 244,
+            "known_shared_query_bp": 0
+          },
+          "1000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+            "contigs": 149544,
+            "bp": 221850284,
+            "non_ACGT_quarantine_bp": 334,
+            "known_shared_query_bp": 3113
+          },
+          "768|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+            "contigs": 87508,
+            "bp": 76362787,
+            "non_ACGT_quarantine_bp": 75,
+            "known_shared_query_bp": 0
+          },
+          "500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+            "contigs": 200764,
+            "bp": 123475887,
+            "non_ACGT_quarantine_bp": 110,
+            "known_shared_query_bp": 1118
+          },
+          "1000|positive_bacterial_source|eligible|assigned|clean_marker": {
+            "contigs": 6215,
+            "bp": 9954010,
+            "non_ACGT_quarantine_bp": 8,
+            "known_shared_query_bp": 0
+          },
+          "500|positive_bacterial_source|eligible|assigned|clean_marker": {
+            "contigs": 2539,
+            "bp": 1595021,
+            "non_ACGT_quarantine_bp": 0,
+            "known_shared_query_bp": 0
+          },
+          "768|positive_bacterial_source|eligible|assigned|clean_marker": {
+            "contigs": 1982,
+            "bp": 1743708,
+            "non_ACGT_quarantine_bp": 0,
+            "known_shared_query_bp": 0
+          },
+          "1|positive_bacterial_source|excluded|excluded|clean_marker": {
+            "contigs": 3119,
+            "bp": 1085200,
+            "non_ACGT_quarantine_bp": 1,
+            "known_shared_query_bp": 0
+          }
+        },
+        "all_bp": 1669981123,
+        "geometry": {
+          "queries": 508763,
+          "nn_purity": 0.18068295060765033,
+          "nn_purity_bp_weighted": 0.20768782540794692,
+          "length_strata": {
+            "10000": {
+              "queries": 10482,
+              "query_bp": 791751544,
+              "same": 19866,
+              "same_weighted_bp": 156116295.00000036
+            },
+            "2500": {
+              "queries": 49729,
+              "query_bp": 217094423,
+              "same": 71904,
+              "same_weighted_bp": 65345641.20000022
+            },
+            "1000": {
+              "queries": 155759,
+              "query_bp": 231804294,
+              "same": 159373,
+              "same_weighted_bp": 48888024.60000037
+            },
+            "768": {
+              "queries": 89490,
+              "query_bp": 78106495,
+              "same": 71413,
+              "same_weighted_bp": 12507092.800000027
+            },
+            "500": {
+              "queries": 203303,
+              "query_bp": 125070908,
+              "same": 137068,
+              "same_weighted_bp": 17008374.200000014
+            }
+          }
+        },
+        "origin_B3": {
+          "bp": 1669981123,
+          "precision": 0.0016035168684987013,
+          "recall": 0.7951688029471085,
+          "f1": 0.0032005795309874474,
+          "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+        },
+        "large_bins": 1,
+        "large_bins_below95": 1
+      },
+      "secondary": {
+        "provided_origin": {
+          "counts": {
+            "high_impurity_or_unresolved": 1
+          },
+          "target_counts": {
+            "high_impurity_or_unresolved": 1
+          },
+          "at_least_200kb_counts": {
+            "high_impurity_or_unresolved": 1
+          },
+          "assigned_bp": 1443827664,
+          "query_count": 1286547,
+          "primary_rule_changed": false,
+          "rRNA_tRNA_screened": false,
+          "numerical_units": "fractions in [0,1], not percentages",
+          "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+          "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+          "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+        },
+        "known_shared_sensitivity": {
+          "counts": {
+            "high_impurity_or_unresolved": 1
+          },
+          "target_counts": {
+            "high_impurity_or_unresolved": 1
+          },
+          "at_least_200kb_counts": {
+            "high_impurity_or_unresolved": 1
+          },
+          "assigned_bp": 1443827664,
+          "query_count": 1286547,
+          "primary_rule_changed": false,
+          "rRNA_tRNA_screened": false,
+          "numerical_units": "fractions in [0,1], not percentages",
+          "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+          "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+          "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+        }
+      },
+      "export_contract": {
+        "contigs": 1286547,
+        "bp": 1669981123,
+        "populations": {
+          "assigned": {
+            "contigs": 508763,
+            "bp": 1443827664
+          },
+          "unassigned": {
+            "contigs": 0,
+            "bp": 0
+          },
+          "excluded": {
+            "contigs": 777784,
+            "bp": 226153459
+          }
+        },
+        "full_DNA_manifest": false
+      },
+      "measured_depth_population": {
+        "cells": {
+          "0|target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 391870,
+            "bp": 116350099
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 3941,
+            "bp": 655888632
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 5819,
+            "bp": 124551801
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 4159,
+            "bp": 21627892
+          },
+          "0|target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 382795,
+            "bp": 108718160
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 32023,
+            "bp": 140862210
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 95865,
+            "bp": 143203461
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_all_zero": {
+            "contigs": 34457,
+            "bp": 30046702
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 116258,
+            "bp": 71653035
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_all_zero": {
+            "contigs": 84506,
+            "bp": 51822852
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 3726,
+            "bp": 6019748
+          },
+          "500|target|eligible|assigned|clean_marker|measured_all_zero": {
+            "contigs": 1294,
+            "bp": 810128
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_all_zero": {
+            "contigs": 2489,
+            "bp": 3934262
+          },
+          "500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1245,
+            "bp": 784893
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_all_zero": {
+            "contigs": 12102,
+            "bp": 48086956
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 53051,
+            "bp": 46316085
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_all_zero": {
+            "contigs": 53679,
+            "bp": 78646823
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_all_zero": {
+            "contigs": 1445,
+            "bp": 6517365
+          },
+          "768|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1109,
+            "bp": 976115
+          },
+          "768|target|eligible|assigned|clean_marker|measured_all_zero": {
+            "contigs": 873,
+            "bp": 767593
+          },
+          "0|target|excluded|excluded|clean_marker|measured_all_zero": {
+            "contigs": 1782,
+            "bp": 609706
+          },
+          "0|target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 1337,
+            "bp": 475494
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_all_zero": {
+            "contigs": 490,
+            "bp": 6998245
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_all_zero": {
+            "contigs": 232,
+            "bp": 4312866
+          }
+        },
+        "all_zero_contigs": 576144,
+        "all_zero_bp": 341271658,
+        "zero_cells_per_sample": [
+          1264729,
+          1203196,
+          1232490,
+          1231845,
+          1247210,
+          1206375,
+          1030232,
+          1251039,
+          1245133,
+          1087459
+        ],
+        "missing_cells": 0,
+        "semantics": "Measured full-parent means; all-zero differs from missing; no per-base/window variance"
+      }
+    },
+    "selected": {
+      "recovery": {
+        "origin": {
+          "accounting": {
+            "contigs": 1286547,
+            "bp": 1669981123,
+            "quarantined_bp": 1734,
+            "unassigned_bp": 1146132488
+          },
+          "recovery_summary": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.08144060590129969,
+            "macro_R95": 0.06782181159289992,
+            "at_least_50_percent": 58,
+            "at_least_90_percent": 22
+          },
+          "mode": "provided-origin"
+        },
+        "known_shared_mask": {
+          "accounting": {
+            "contigs": 1286547,
+            "bp": 1669981123,
+            "quarantined_bp": 1734,
+            "unassigned_bp": 1146132488
+          },
+          "recovery_summary": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.08144060590129969,
+            "macro_R95": 0.06782181159289992,
+            "at_least_50_percent": 58,
+            "at_least_90_percent": 22
+          },
+          "mode": "provided-origin-known-shared-mask sensitivity; not exhaustive uniqueness"
+        }
+      },
+      "grouping": {
+        "population_cells": {
+          "1|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+            "contigs": 774665,
+            "bp": 225068259,
+            "non_ACGT_quarantine_bp": 181,
+            "known_shared_query_bp": 7832
+          },
+          "10000|positive_bacterial_source|eligible|assigned|clean_marker": {
+            "contigs": 2895,
+            "bp": 339810658,
+            "non_ACGT_quarantine_bp": 604,
+            "known_shared_query_bp": 0
+          },
+          "10000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+            "contigs": 1278,
+            "bp": 320390840,
+            "non_ACGT_quarantine_bp": 49,
+            "known_shared_query_bp": 0
+          },
+          "10000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+            "contigs": 2072,
+            "bp": 39670669,
+            "non_ACGT_quarantine_bp": 21,
+            "known_shared_query_bp": 0
+          },
+          "2500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+            "contigs": 4183,
+            "bp": 19675820,
+            "non_ACGT_quarantine_bp": 9,
+            "known_shared_query_bp": 0
+          },
+          "2500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+            "contigs": 33105,
+            "bp": 133990534,
+            "non_ACGT_quarantine_bp": 203,
+            "known_shared_query_bp": 0
+          },
+          "1000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+            "contigs": 135696,
+            "bp": 199620867,
+            "non_ACGT_quarantine_bp": 316,
+            "known_shared_query_bp": 3113
+          },
+          "768|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+            "contigs": 83967,
+            "bp": 73230392,
+            "non_ACGT_quarantine_bp": 73,
+            "known_shared_query_bp": 0
+          },
+          "500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+            "contigs": 196715,
+            "bp": 120879976,
+            "non_ACGT_quarantine_bp": 109,
+            "known_shared_query_bp": 1118
+          },
+          "1000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+            "contigs": 5816,
+            "bp": 9246387,
+            "non_ACGT_quarantine_bp": 8,
+            "known_shared_query_bp": 0
+          },
+          "500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+            "contigs": 2514,
+            "bp": 1578652,
+            "non_ACGT_quarantine_bp": 0,
+            "known_shared_query_bp": 0
+          },
+          "2500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+            "contigs": 11020,
+            "bp": 54958632,
+            "non_ACGT_quarantine_bp": 41,
+            "known_shared_query_bp": 0
+          },
+          "768|positive_bacterial_source|eligible|unassigned|clean_marker": {
+            "contigs": 1928,
+            "bp": 1694892,
+            "non_ACGT_quarantine_bp": 0,
+            "known_shared_query_bp": 0
+          },
+          "1|positive_bacterial_source|excluded|excluded|clean_marker": {
+            "contigs": 3119,
+            "bp": 1085200,
+            "non_ACGT_quarantine_bp": 1,
+            "known_shared_query_bp": 0
+          },
+          "2500|positive_bacterial_source|eligible|assigned|clean_marker": {
+            "contigs": 1421,
+            "bp": 8469437,
+            "non_ACGT_quarantine_bp": 4,
+            "known_shared_query_bp": 0
+          },
+          "10000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+            "contigs": 4237,
+            "bp": 91879377,
+            "non_ACGT_quarantine_bp": 94,
+            "known_shared_query_bp": 0
+          },
+          "1000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+            "contigs": 13848,
+            "bp": 22229417,
+            "non_ACGT_quarantine_bp": 18,
+            "known_shared_query_bp": 0
+          },
+          "768|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+            "contigs": 3541,
+            "bp": 3132395,
+            "non_ACGT_quarantine_bp": 2,
+            "known_shared_query_bp": 0
+          },
+          "768|positive_bacterial_source|eligible|assigned|clean_marker": {
+            "contigs": 54,
+            "bp": 48816,
+            "non_ACGT_quarantine_bp": 0,
+            "known_shared_query_bp": 0
+          },
+          "1000|positive_bacterial_source|eligible|assigned|clean_marker": {
+            "contigs": 399,
+            "bp": 707623,
+            "non_ACGT_quarantine_bp": 0,
+            "known_shared_query_bp": 0
+          },
+          "500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+            "contigs": 4049,
+            "bp": 2595911,
+            "non_ACGT_quarantine_bp": 1,
+            "known_shared_query_bp": 0
+          },
+          "500|positive_bacterial_source|eligible|assigned|clean_marker": {
+            "contigs": 25,
+            "bp": 16369,
+            "non_ACGT_quarantine_bp": 0,
+            "known_shared_query_bp": 0
+          }
+        },
+        "all_bp": 1669981123,
+        "geometry": {
+          "queries": 508763,
+          "nn_purity": 0.18068295060765033,
+          "nn_purity_bp_weighted": 0.20768782540794692,
+          "length_strata": {
+            "10000": {
+              "queries": 10482,
+              "query_bp": 791751544,
+              "same": 19866,
+              "same_weighted_bp": 156116295.00000036
+            },
+            "2500": {
+              "queries": 49729,
+              "query_bp": 217094423,
+              "same": 71904,
+              "same_weighted_bp": 65345641.20000022
+            },
+            "1000": {
+              "queries": 155759,
+              "query_bp": 231804294,
+              "same": 159373,
+              "same_weighted_bp": 48888024.60000037
+            },
+            "768": {
+              "queries": 89490,
+              "query_bp": 78106495,
+              "same": 71413,
+              "same_weighted_bp": 12507092.800000027
+            },
+            "500": {
+              "queries": 203303,
+              "query_bp": 125070908,
+              "same": 137068,
+              "same_weighted_bp": 17008374.200000014
+            }
+          }
+        },
+        "origin_B3": {
+          "bp": 1669981123,
+          "precision": 0.13669320691578088,
+          "recall": 0.26675302844465837,
+          "f1": 0.18075928694697324,
+          "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+        },
+        "large_bins": 107,
+        "large_bins_below95": 27
+      },
+      "secondary": {
+        "provided_origin": {
+          "counts": {
+            "high_impurity_or_unresolved": 63,
+            "threshold_based_LQ": 67,
+            "threshold_based_MQ": 36,
+            "threshold_based_HQ": 22
+          },
+          "target_counts": {
+            "high_impurity_or_unresolved": 63,
+            "threshold_based_LQ": 67,
+            "threshold_based_MQ": 36,
+            "threshold_based_HQ": 22
+          },
+          "at_least_200kb_counts": {
+            "high_impurity_or_unresolved": 26,
+            "threshold_based_MQ": 36,
+            "threshold_based_HQ": 22,
+            "threshold_based_LQ": 23
+          },
+          "assigned_bp": 523848635,
+          "query_count": 1286547,
+          "primary_rule_changed": false,
+          "rRNA_tRNA_screened": false,
+          "numerical_units": "fractions in [0,1], not percentages",
+          "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+          "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+          "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+        },
+        "known_shared_sensitivity": {
+          "counts": {
+            "high_impurity_or_unresolved": 63,
+            "threshold_based_LQ": 67,
+            "threshold_based_MQ": 36,
+            "threshold_based_HQ": 22
+          },
+          "target_counts": {
+            "high_impurity_or_unresolved": 63,
+            "threshold_based_LQ": 67,
+            "threshold_based_MQ": 36,
+            "threshold_based_HQ": 22
+          },
+          "at_least_200kb_counts": {
+            "high_impurity_or_unresolved": 26,
+            "threshold_based_MQ": 36,
+            "threshold_based_HQ": 22,
+            "threshold_based_LQ": 23
+          },
+          "assigned_bp": 523848635,
+          "query_count": 1286547,
+          "primary_rule_changed": false,
+          "rRNA_tRNA_screened": false,
+          "numerical_units": "fractions in [0,1], not percentages",
+          "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+          "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+          "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+        }
+      },
+      "export_contract": {
+        "contigs": 1286547,
+        "bp": 1669981123,
+        "populations": {
+          "assigned": {
+            "contigs": 41489,
+            "bp": 523848635
+          },
+          "unassigned": {
+            "contigs": 467274,
+            "bp": 919979029
+          },
+          "excluded": {
+            "contigs": 777784,
+            "bp": 226153459
+          }
+        },
+        "full_DNA_manifest": true
+      },
+      "measured_depth_population": {
+        "cells": {
+          "0|target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 391870,
+            "bp": 116350099
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 2789,
+            "bp": 337434442
+          },
+          "10000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1152,
+            "bp": 318454190
+          },
+          "10000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1798,
+            "bp": 35870209
+          },
+          "2500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 2837,
+            "bp": 13780980
+          },
+          "0|target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 382795,
+            "bp": 108718160
+          },
+          "2500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 21881,
+            "bp": 90690639
+          },
+          "1000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 82356,
+            "bp": 121547206
+          },
+          "768|target|eligible|unassigned|no_clean_marker|measured_all_zero": {
+            "contigs": 34387,
+            "bp": 29983736
+          },
+          "500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 112263,
+            "bp": 69091144
+          },
+          "500|target|eligible|unassigned|no_clean_marker|measured_all_zero": {
+            "contigs": 84452,
+            "bp": 51788832
+          },
+          "1000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3337,
+            "bp": 5330085
+          },
+          "500|target|eligible|unassigned|clean_marker|measured_all_zero": {
+            "contigs": 1294,
+            "bp": 810128
+          },
+          "1000|target|eligible|unassigned|clean_marker|measured_all_zero": {
+            "contigs": 2479,
+            "bp": 3916302
+          },
+          "500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1220,
+            "bp": 768524
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_all_zero": {
+            "contigs": 878,
+            "bp": 4787061
+          },
+          "768|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 49580,
+            "bp": 43246656
+          },
+          "2500|target|eligible|unassigned|no_clean_marker|measured_all_zero": {
+            "contigs": 11224,
+            "bp": 43299895
+          },
+          "1000|target|eligible|unassigned|no_clean_marker|measured_all_zero": {
+            "contigs": 53340,
+            "bp": 78073661
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 10142,
+            "bp": 50171571
+          },
+          "2500|target|eligible|unassigned|clean_marker|measured_all_zero": {
+            "contigs": 1346,
+            "bp": 5894840
+          },
+          "768|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1055,
+            "bp": 927299
+          },
+          "768|target|eligible|unassigned|clean_marker|measured_all_zero": {
+            "contigs": 873,
+            "bp": 767593
+          },
+          "0|target|excluded|excluded|clean_marker|measured_all_zero": {
+            "contigs": 1782,
+            "bp": 609706
+          },
+          "0|target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 1337,
+            "bp": 475494
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1322,
+            "bp": 7846912
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 4021,
+            "bp": 88681592
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 13509,
+            "bp": 21656255
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3471,
+            "bp": 3069429
+          },
+          "768|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 54,
+            "bp": 48816
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_all_zero": {
+            "contigs": 99,
+            "bp": 622525
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_all_zero": {
+            "contigs": 216,
+            "bp": 3197785
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_all_zero": {
+            "contigs": 106,
+            "bp": 2376216
+          },
+          "10000|target|eligible|unassigned|clean_marker|measured_all_zero": {
+            "contigs": 126,
+            "bp": 1936650
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_all_zero": {
+            "contigs": 339,
+            "bp": 573162
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 389,
+            "bp": 689663
+          },
+          "10000|target|eligible|unassigned|no_clean_marker|measured_all_zero": {
+            "contigs": 274,
+            "bp": 3800460
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3995,
+            "bp": 2561891
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_all_zero": {
+            "contigs": 70,
+            "bp": 62966
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_all_zero": {
+            "contigs": 54,
+            "bp": 34020
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_all_zero": {
+            "contigs": 10,
+            "bp": 17960
+          },
+          "500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 25,
+            "bp": 16369
+          }
+        },
+        "all_zero_contigs": 576144,
+        "all_zero_bp": 341271658,
+        "zero_cells_per_sample": [
+          1264729,
+          1203196,
+          1232490,
+          1231845,
+          1247210,
+          1206375,
+          1030232,
+          1251039,
+          1245133,
+          1087459
+        ],
+        "missing_cells": 0,
+        "semantics": "Measured full-parent means; all-zero differs from missing; no per-base/window variance"
+      }
+    }
+  },
+  "paired": {
+    "E019": {
+      "gaining_targets": 70,
+      "losing_targets": 41,
+      "unchanged_targets": 688,
+      "passing_bp_change": 34085956,
+      "baseline": {
+        "passing_bp": 135560707,
+        "R95": 0.06507729606498985,
+        "at_least_50_percent": 43,
+        "at_least_90_percent": 33
+      },
+      "new_50_crossings": 35,
+      "lost_50_crossings": 20,
+      "new_90_crossings": 12,
+      "lost_90_crossings": 23,
+      "largest_gains": [
+        {
+          "genome": "OTU_97.11180.0",
+          "reference_bp": "7424240",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "7293809",
+          "delta_vs_E023_bp": "7293809",
+          "delta_vs_E019_bp": "7293809",
+          "new_marker_effect_bp": "7293809"
+        },
+        {
+          "genome": "OTU_97.38169.0",
+          "reference_bp": "7189071",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "7028688",
+          "delta_vs_E023_bp": "7028688",
+          "delta_vs_E019_bp": "7028688",
+          "new_marker_effect_bp": "7028688"
+        },
+        {
+          "genome": "OTU_97.38777.0",
+          "reference_bp": "8605945",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "5255906",
+          "delta_vs_E023_bp": "5255906",
+          "delta_vs_E019_bp": "5255906",
+          "new_marker_effect_bp": "5255906"
+        },
+        {
+          "genome": "OTU_97.196.0",
+          "reference_bp": "5681722",
+          "retained_E019_bp": "1260833",
+          "retained_E023_bp": "4392807",
+          "new_density_bp": "0",
+          "new_selected_bp": "4617526",
+          "delta_vs_E023_bp": "224719",
+          "delta_vs_E019_bp": "3356693",
+          "new_marker_effect_bp": "4617526"
+        },
+        {
+          "genome": "OTU_97.16811.0",
+          "reference_bp": "4065010",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "3315818",
+          "delta_vs_E023_bp": "3315818",
+          "delta_vs_E019_bp": "3315818",
+          "new_marker_effect_bp": "3315818"
+        },
+        {
+          "genome": "OTU_97.33448.0",
+          "reference_bp": "7225343",
+          "retained_E019_bp": "814449",
+          "retained_E023_bp": "3512521",
+          "new_density_bp": "0",
+          "new_selected_bp": "3805403",
+          "delta_vs_E023_bp": "292882",
+          "delta_vs_E019_bp": "2990954",
+          "new_marker_effect_bp": "3805403"
+        },
+        {
+          "genome": "OTU_97.32295.1",
+          "reference_bp": "2952962",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "2952621",
+          "delta_vs_E023_bp": "2952621",
+          "delta_vs_E019_bp": "2952621",
+          "new_marker_effect_bp": "2952621"
+        },
+        {
+          "genome": "OTU_97.43518.0",
+          "reference_bp": "4191506",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "2457603",
+          "delta_vs_E023_bp": "2457603",
+          "delta_vs_E019_bp": "2457603",
+          "new_marker_effect_bp": "2457603"
+        },
+        {
+          "genome": "OTU_97.25556.0",
+          "reference_bp": "2675045",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "1674854",
+          "new_density_bp": "0",
+          "new_selected_bp": "2418392",
+          "delta_vs_E023_bp": "743538",
+          "delta_vs_E019_bp": "2418392",
+          "new_marker_effect_bp": "2418392"
+        },
+        {
+          "genome": "OTU_97.8581.0",
+          "reference_bp": "2426551",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "979374",
+          "new_density_bp": "0",
+          "new_selected_bp": "2255497",
+          "delta_vs_E023_bp": "1276123",
+          "delta_vs_E019_bp": "2255497",
+          "new_marker_effect_bp": "2255497"
+        }
+      ],
+      "all_losses": [
+        {
+          "genome": "OTU_97.1193.0",
+          "reference_bp": "3782798",
+          "retained_E019_bp": "3782791",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-3782791",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.40838.0",
+          "reference_bp": "3631933",
+          "retained_E019_bp": "3516463",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-3516463",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.237.0",
+          "reference_bp": "3176073",
+          "retained_E019_bp": "3176067",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-3176067",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.10732.1",
+          "reference_bp": "3051613",
+          "retained_E019_bp": "3051464",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-3051464",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.31370.0",
+          "reference_bp": "3042917",
+          "retained_E019_bp": "3042912",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-3042912",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.44036.0",
+          "reference_bp": "2688484",
+          "retained_E019_bp": "2688474",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2688474",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.27573.0",
+          "reference_bp": "2674170",
+          "retained_E019_bp": "2674080",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2674080",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.485.1",
+          "reference_bp": "2622031",
+          "retained_E019_bp": "2622008",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2622008",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.31969.0",
+          "reference_bp": "2568361",
+          "retained_E019_bp": "2568161",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2568161",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.20364.0",
+          "reference_bp": "2527978",
+          "retained_E019_bp": "2527961",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2527961",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.11128.1",
+          "reference_bp": "2510109",
+          "retained_E019_bp": "2509884",
+          "retained_E023_bp": "609514",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "-609514",
+          "delta_vs_E019_bp": "-2509884",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.38269.0",
+          "reference_bp": "2506025",
+          "retained_E019_bp": "2505961",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2505961",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.7964.0",
+          "reference_bp": "2472645",
+          "retained_E019_bp": "2472591",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2472591",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.5254.0",
+          "reference_bp": "2407846",
+          "retained_E019_bp": "2407815",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2407815",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.39365.1",
+          "reference_bp": "2399175",
+          "retained_E019_bp": "2399088",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2399088",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.44265.1",
+          "reference_bp": "2503066",
+          "retained_E019_bp": "2394124",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2394124",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.5278.0",
+          "reference_bp": "2272954",
+          "retained_E019_bp": "2272950",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2272950",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.32420.0",
+          "reference_bp": "2241302",
+          "retained_E019_bp": "2241133",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2241133",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.38344.0",
+          "reference_bp": "2186370",
+          "retained_E019_bp": "2186356",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2186356",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.44160.0",
+          "reference_bp": "2182100",
+          "retained_E019_bp": "2136605",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-2136605",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.38222.0",
+          "reference_bp": "3520671",
+          "retained_E019_bp": "1029419",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-1029419",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.43143.0",
+          "reference_bp": "4142802",
+          "retained_E019_bp": "970927",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-970927",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.31086.0",
+          "reference_bp": "1641887",
+          "retained_E019_bp": "592937",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-592937",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.35168.0",
+          "reference_bp": "2884293",
+          "retained_E019_bp": "810660",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "248626",
+          "delta_vs_E023_bp": "248626",
+          "delta_vs_E019_bp": "-562034",
+          "new_marker_effect_bp": "248626"
+        },
+        {
+          "genome": "OTU_97.28788.0",
+          "reference_bp": "1769679",
+          "retained_E019_bp": "489185",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-489185",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.1533.1",
+          "reference_bp": "3316466",
+          "retained_E019_bp": "476484",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-476484",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.3210.0",
+          "reference_bp": "2188497",
+          "retained_E019_bp": "467985",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-467985",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.14504.1",
+          "reference_bp": "2026292",
+          "retained_E019_bp": "406008",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-406008",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.23755.0",
+          "reference_bp": "2918253",
+          "retained_E019_bp": "390037",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-390037",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.24216.0",
+          "reference_bp": "2861432",
+          "retained_E019_bp": "346211",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-346211",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.2839.0",
+          "reference_bp": "3475610",
+          "retained_E019_bp": "342118",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-342118",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.360.1",
+          "reference_bp": "2184753",
+          "retained_E019_bp": "2161927",
+          "retained_E023_bp": "1927959",
+          "new_density_bp": "0",
+          "new_selected_bp": "1913610",
+          "delta_vs_E023_bp": "-14349",
+          "delta_vs_E019_bp": "-248317",
+          "new_marker_effect_bp": "1913610"
+        },
+        {
+          "genome": "OTU_97.14178.0",
+          "reference_bp": "3350206",
+          "retained_E019_bp": "237289",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-237289",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.8361.0",
+          "reference_bp": "8896411",
+          "retained_E019_bp": "222685",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "0",
+          "delta_vs_E019_bp": "-222685",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.3008.0",
+          "reference_bp": "3608104",
+          "retained_E019_bp": "1380833",
+          "retained_E023_bp": "648027",
+          "new_density_bp": "0",
+          "new_selected_bp": "1158822",
+          "delta_vs_E023_bp": "510795",
+          "delta_vs_E019_bp": "-222011",
+          "new_marker_effect_bp": "1158822"
+        },
+        {
+          "genome": "OTU_97.16729.0",
+          "reference_bp": "1863286",
+          "retained_E019_bp": "1842211",
+          "retained_E023_bp": "1678869",
+          "new_density_bp": "0",
+          "new_selected_bp": "1661125",
+          "delta_vs_E023_bp": "-17744",
+          "delta_vs_E019_bp": "-181086",
+          "new_marker_effect_bp": "1661125"
+        },
+        {
+          "genome": "OTU_97.38313.0",
+          "reference_bp": "3851214",
+          "retained_E019_bp": "3587199",
+          "retained_E023_bp": "3316326",
+          "new_density_bp": "0",
+          "new_selected_bp": "3451452",
+          "delta_vs_E023_bp": "135126",
+          "delta_vs_E019_bp": "-135747",
+          "new_marker_effect_bp": "3451452"
+        },
+        {
+          "genome": "OTU_97.3586.0",
+          "reference_bp": "1389350",
+          "retained_E019_bp": "468011",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "373826",
+          "delta_vs_E023_bp": "373826",
+          "delta_vs_E019_bp": "-94185",
+          "new_marker_effect_bp": "373826"
+        },
+        {
+          "genome": "OTU_97.2652.0",
+          "reference_bp": "1330224",
+          "retained_E019_bp": "1075697",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "1031972",
+          "delta_vs_E023_bp": "1031972",
+          "delta_vs_E019_bp": "-43725",
+          "new_marker_effect_bp": "1031972"
+        },
+        {
+          "genome": "OTU_97.5089.0",
+          "reference_bp": "1543805",
+          "retained_E019_bp": "1368909",
+          "retained_E023_bp": "892860",
+          "new_density_bp": "0",
+          "new_selected_bp": "1333620",
+          "delta_vs_E023_bp": "440760",
+          "delta_vs_E019_bp": "-35289",
+          "new_marker_effect_bp": "1333620"
+        },
+        {
+          "genome": "OTU_97.26707.0",
+          "reference_bp": "3132314",
+          "retained_E019_bp": "2883693",
+          "retained_E023_bp": "2838940",
+          "new_density_bp": "0",
+          "new_selected_bp": "2878669",
+          "delta_vs_E023_bp": "39729",
+          "delta_vs_E019_bp": "-5024",
+          "new_marker_effect_bp": "2878669"
+        }
+      ]
+    },
+    "E023": {
+      "gaining_targets": 77,
+      "losing_targets": 6,
+      "unchanged_targets": 716,
+      "passing_bp_change": 84382548,
+      "baseline": {
+        "passing_bp": 85264115,
+        "R95": 0.04093190555264913,
+        "at_least_50_percent": 30,
+        "at_least_90_percent": 10
+      },
+      "new_50_crossings": 30,
+      "lost_50_crossings": 2,
+      "new_90_crossings": 15,
+      "lost_90_crossings": 3,
+      "largest_gains": [
+        {
+          "genome": "OTU_97.11180.0",
+          "reference_bp": "7424240",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "7293809",
+          "delta_vs_E023_bp": "7293809",
+          "delta_vs_E019_bp": "7293809",
+          "new_marker_effect_bp": "7293809"
+        },
+        {
+          "genome": "OTU_97.38169.0",
+          "reference_bp": "7189071",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "7028688",
+          "delta_vs_E023_bp": "7028688",
+          "delta_vs_E019_bp": "7028688",
+          "new_marker_effect_bp": "7028688"
+        },
+        {
+          "genome": "OTU_97.38777.0",
+          "reference_bp": "8605945",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "5255906",
+          "delta_vs_E023_bp": "5255906",
+          "delta_vs_E019_bp": "5255906",
+          "new_marker_effect_bp": "5255906"
+        },
+        {
+          "genome": "OTU_97.5441.1",
+          "reference_bp": "3855671",
+          "retained_E019_bp": "3855183",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "3855183",
+          "delta_vs_E023_bp": "3855183",
+          "delta_vs_E019_bp": "0",
+          "new_marker_effect_bp": "3855183"
+        },
+        {
+          "genome": "OTU_97.16811.0",
+          "reference_bp": "4065010",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "3315818",
+          "delta_vs_E023_bp": "3315818",
+          "delta_vs_E019_bp": "3315818",
+          "new_marker_effect_bp": "3315818"
+        },
+        {
+          "genome": "OTU_97.142.0",
+          "reference_bp": "3765936",
+          "retained_E019_bp": "2670034",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "3297662",
+          "delta_vs_E023_bp": "3297662",
+          "delta_vs_E019_bp": "627628",
+          "new_marker_effect_bp": "3297662"
+        },
+        {
+          "genome": "OTU_97.32295.1",
+          "reference_bp": "2952962",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "2952621",
+          "delta_vs_E023_bp": "2952621",
+          "delta_vs_E019_bp": "2952621",
+          "new_marker_effect_bp": "2952621"
+        },
+        {
+          "genome": "OTU_97.23341.0",
+          "reference_bp": "3019213",
+          "retained_E019_bp": "2445908",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "2619332",
+          "delta_vs_E023_bp": "2619332",
+          "delta_vs_E019_bp": "173424",
+          "new_marker_effect_bp": "2619332"
+        },
+        {
+          "genome": "OTU_97.43518.0",
+          "reference_bp": "4191506",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "2457603",
+          "delta_vs_E023_bp": "2457603",
+          "delta_vs_E019_bp": "2457603",
+          "new_marker_effect_bp": "2457603"
+        },
+        {
+          "genome": "OTU_97.7659.0",
+          "reference_bp": "2284135",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "0",
+          "new_density_bp": "0",
+          "new_selected_bp": "2248802",
+          "delta_vs_E023_bp": "2248802",
+          "delta_vs_E019_bp": "2248802",
+          "new_marker_effect_bp": "2248802"
+        }
+      ],
+      "all_losses": [
+        {
+          "genome": "OTU_97.7158.0",
+          "reference_bp": "3350939",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "3350887",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "-3350887",
+          "delta_vs_E019_bp": "0",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.30394.0",
+          "reference_bp": "2142100",
+          "retained_E019_bp": "0",
+          "retained_E023_bp": "2142050",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "-2142050",
+          "delta_vs_E019_bp": "0",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.11128.1",
+          "reference_bp": "2510109",
+          "retained_E019_bp": "2509884",
+          "retained_E023_bp": "609514",
+          "new_density_bp": "0",
+          "new_selected_bp": "0",
+          "delta_vs_E023_bp": "-609514",
+          "delta_vs_E019_bp": "-2509884",
+          "new_marker_effect_bp": "0"
+        },
+        {
+          "genome": "OTU_97.16729.0",
+          "reference_bp": "1863286",
+          "retained_E019_bp": "1842211",
+          "retained_E023_bp": "1678869",
+          "new_density_bp": "0",
+          "new_selected_bp": "1661125",
+          "delta_vs_E023_bp": "-17744",
+          "delta_vs_E019_bp": "-181086",
+          "new_marker_effect_bp": "1661125"
+        },
+        {
+          "genome": "OTU_97.8698.0",
+          "reference_bp": "4007868",
+          "retained_E019_bp": "1389769",
+          "retained_E023_bp": "1596411",
+          "new_density_bp": "0",
+          "new_selected_bp": "1579366",
+          "delta_vs_E023_bp": "-17045",
+          "delta_vs_E019_bp": "189597",
+          "new_marker_effect_bp": "1579366"
+        },
+        {
+          "genome": "OTU_97.360.1",
+          "reference_bp": "2184753",
+          "retained_E019_bp": "2161927",
+          "retained_E023_bp": "1927959",
+          "new_density_bp": "0",
+          "new_selected_bp": "1913610",
+          "delta_vs_E023_bp": "-14349",
+          "delta_vs_E019_bp": "-248317",
+          "new_marker_effect_bp": "1913610"
+        }
+      ]
+    }
+  },
+  "new_composite_neighbors": {
+    "queries": 508763,
+    "bp": 1443827664,
+    "same_origin_mean": 0.3378598679542457,
+    "same_origin_bp_weighted": 0.34733623818417564,
+    "meaning": "Provided origin, not exhaustive unique-source support; fixed eligible attributable queries, unknown neighbors remain in denominator"
+  },
+  "matched_composite_neighbor_gain": 0.14403892028488374,
+  "additive_neighbor_strata": {
+    "scope": "Descriptive cached new 5NN edges; provided origin, not uniqueness; no candidate policy or old scoring change",
+    "full_DNA_bp": 1669981123,
+    "known_queries": 508763,
+    "query_bp": 1443827664,
+    "global_bp_weighted": 0.3473362381841716,
+    "length_depth_strata": [
+      {
+        "lower_bp": 500,
+        "upper_bp": 768,
+        "depth": "all",
+        "queries": 203303,
+        "bp": 125070908,
+        "mean": 0.2829176155787175,
+        "bp_weighted": 0.28457508439932333,
+        "cross_availability_edge_fraction": 0.21638342769167204
+      },
+      {
+        "lower_bp": 500,
+        "upper_bp": 768,
+        "depth": "positive",
+        "queries": 117503,
+        "bp": 72437928,
+        "mean": 0.45689216445537556,
+        "bp_weighted": 0.4590035706156587,
+        "cross_availability_edge_fraction": 0.09343250810617601
+      },
+      {
+        "lower_bp": 500,
+        "upper_bp": 768,
+        "depth": "measured_all_zero",
+        "queries": 85800,
+        "bp": 52632980,
+        "mean": 0.04465967365967366,
+        "bp_weighted": 0.04451195049187791,
+        "cross_availability_edge_fraction": 0.38476456876456877
+      },
+      {
+        "lower_bp": 768,
+        "upper_bp": 1000,
+        "depth": "all",
+        "queries": 89490,
+        "bp": 78106495,
+        "mean": 0.3189898312660633,
+        "bp_weighted": 0.3196127133857434,
+        "cross_availability_edge_fraction": 0.21993965806235333
+      },
+      {
+        "lower_bp": 768,
+        "upper_bp": 1000,
+        "depth": "positive",
+        "queries": 54160,
+        "bp": 47292200,
+        "mean": 0.49944977843426885,
+        "bp_weighted": 0.5002355229826483,
+        "cross_availability_edge_fraction": 0.11620384047267356
+      },
+      {
+        "lower_bp": 768,
+        "upper_bp": 1000,
+        "depth": "measured_all_zero",
+        "queries": 35330,
+        "bp": 30814295,
+        "mean": 0.04234927823379563,
+        "bp_weighted": 0.042402086434234494,
+        "cross_availability_edge_fraction": 0.3789640532125672
+      },
+      {
+        "lower_bp": 1000,
+        "upper_bp": 2500,
+        "depth": "all",
+        "queries": 155759,
+        "bp": 231804294,
+        "mean": 0.3672981978569457,
+        "bp_weighted": 0.37339879303530077,
+        "cross_availability_edge_fraction": 0.23728709095461578
+      },
+      {
+        "lower_bp": 1000,
+        "upper_bp": 2500,
+        "depth": "positive",
+        "queries": 99591,
+        "bp": 149223209,
+        "mean": 0.5488728901205934,
+        "bp_weighted": 0.5542698776837053,
+        "cross_availability_edge_fraction": 0.13238746473074875
+      },
+      {
+        "lower_bp": 1000,
+        "upper_bp": 2500,
+        "depth": "measured_all_zero",
+        "queries": 56168,
+        "bp": 82581085,
+        "mean": 0.04534966528984475,
+        "bp_weighted": 0.046566520650582394,
+        "cross_availability_edge_fraction": 0.4232837202677681
+      },
+      {
+        "lower_bp": 2500,
+        "upper_bp": 10000,
+        "depth": "all",
+        "queries": 49729,
+        "bp": 217094423,
+        "mean": 0.45121759938868666,
+        "bp_weighted": 0.46668179679585775,
+        "cross_availability_edge_fraction": 0.26006957710792494
+      },
+      {
+        "lower_bp": 2500,
+        "upper_bp": 10000,
+        "depth": "positive",
+        "queries": 36182,
+        "bp": 162490102,
+        "mean": 0.5908628599856282,
+        "bp_weighted": 0.5944799985416958,
+        "cross_availability_edge_fraction": 0.13054557514786358
+      },
+      {
+        "lower_bp": 2500,
+        "upper_bp": 10000,
+        "depth": "measured_all_zero",
+        "queries": 13547,
+        "bp": 54604321,
+        "mean": 0.07824610614896287,
+        "bp_weighted": 0.08638326992473727,
+        "cross_availability_edge_fraction": 0.6060087104155901
+      },
+      {
+        "lower_bp": 10000,
+        "upper_bp": 9223372036854775807,
+        "depth": "all",
+        "queries": 10482,
+        "bp": 791751544,
+        "mean": 0.5893531768746423,
+        "bp_weighted": 0.31963097428452886,
+        "cross_availability_edge_fraction": 0.13684411371875596
+      },
+      {
+        "lower_bp": 10000,
+        "upper_bp": 9223372036854775807,
+        "depth": "positive",
+        "queries": 9760,
+        "bp": 780440433,
+        "mean": 0.6243852459016394,
+        "bp_weighted": 0.3225607610209504,
+        "cross_availability_edge_fraction": 0.08567622950819673
+      },
+      {
+        "lower_bp": 10000,
+        "upper_bp": 9223372036854775807,
+        "depth": "measured_all_zero",
+        "queries": 722,
+        "bp": 11311111,
+        "mean": 0.11578947368421051,
+        "bp_weighted": 0.11748248249000473,
+        "cross_availability_edge_fraction": 0.8285318559556787
+      }
+    ],
+    "availability_edges": [
+      {
+        "query_positive": false,
+        "neighbor_positive": false,
+        "edges": 562913,
+        "query_bp_repeated_per_edge": 601477519,
+        "edge_same_origin": 0.053025956053599756,
+        "bp_weighted_same_origin": 0.07068707251218145
+      },
+      {
+        "query_positive": false,
+        "neighbor_positive": true,
+        "edges": 394922,
+        "query_bp_repeated_per_edge": 558241441,
+        "edge_same_origin": 0.0386025594927606,
+        "bp_weighted_same_origin": 0.045117762943005874
+      },
+      {
+        "query_positive": true,
+        "neighbor_positive": false,
+        "edges": 180082,
+        "query_bp_repeated_per_edge": 1876032791,
+        "edge_same_origin": 0.013577148188047667,
+        "bp_weighted_same_origin": 0.003984065223090229
+      },
+      {
+        "query_positive": true,
+        "neighbor_positive": true,
+        "edges": 1405898,
+        "query_bp_repeated_per_edge": 4183386569,
+        "edge_same_origin": 0.5775056227407678,
+        "bp_weighted_same_origin": 0.5814167014886737
+      }
+    ],
+    "all_target_queries": 508763,
+    "unknown_queries": 0,
+    "numeric_tolerance": "Global agreement1e-12; original Mac portability unchanged"
+  },
+  "geometry_scope": "Partition display neighbors are unchanged E019 native geometry; new composite neighbors are separately named",
+  "original_Mac_portability_tolerance_unchanged": true,
+  "frozen_disposition": "MODIFY",
+  "criteria": {
+    "primary": "Conservative duplicate-safe source-union R95 / all 799 provided targets / 2,083,072,211 bp, separately named provided-origin oracle; known-shared sensitivity unchanged",
+    "keep": "All operational/axis/source/resource contracts pass; selected R95 >= 0.07007729606498985 (E019 + 0.005), target-50 >= 43 and target-90 >= 33",
+    "modify": "Other valid mixed results or improved information without joint recovery criteria",
+    "abandon": "Selected R95<=0.04093190555264913 (E023), target90<=10 and bp-weighted same-origin composite-neighbor gain<=0; abandon this frozen retrieval policy, retain measured data and product depth option",
+    "practical": "These are scoped engineering/development effect criteria, not significance or biological standards; do not retune after outcomes",
+    "diagnostic": "Full target table and all length/origin/eligibility/marker/status/zero/non-target/unknown/unassigned populations; fixed E019 geometry distinct from new composite retrieval; same eligible-attributable query population",
+    "secondary": {
+      "completeness": "Dominant-origin duplicate-safe source union / full provided reference length",
+      "contamination": "Confirmed foreign-origin bp and unresolved bp separately; 1-confirmed all-bin purity is an upper bound",
+      "HQ": "completeness>0.90 and impurity<0.05",
+      "MQ": "otherwise completeness>=0.50 and impurity<0.10",
+      "LQ": "otherwise completeness<0.50 and impurity<0.10",
+      "other": "high impurity or unresolved; non-target bins reported separately",
+      "RNA_screened": false,
+      "formal_MIMAG_HQ": false,
+      "NC_category": false,
+      "primary_rule_changed": false
+    }
+  },
+  "keep_failed": "Target-90 count 22 is below unchanged 33; R95 and target-50 pass",
+  "primary_rule_unchanged": true,
+  "truth_selected_bins_or_thresholds": false,
+  "limitations": [
+    "Depth plus new retrieval with fixed E019 learning is a development bundle, not isolated depth causality",
+    "Oral provided origin is not exhaustive sequence uniqueness; known-shared sensitivity has identical recovery/tier endpoints",
+    "All 799 / 2,083,072,211 bp references and complete DNA/status/zero populations retained",
+    "E009 conservative v2 / 156 references / 3.3034% N quarantine is retained context, not rescored",
+    "E009 E022 and Oral E019 upstream feature/learning regimes remain unmatched",
+    "No new community learning or generalization/product-family/SOTA claim",
+    "Secondary tiers have no RNA screening and are not formal MIMAG HQ"
+  ]
+}

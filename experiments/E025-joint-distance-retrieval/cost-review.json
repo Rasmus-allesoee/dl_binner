@@ -1,0 +1,141 @@
+{
+  "kind": "E025 measured allocation and current-price ledger",
+  "date": "2026-10-29",
+  "status": "PASS_WITHIN_OWNER_AMENDED_CREDIT_ONLY_SCOPE",
+  "phase": "joint-20261028T225703Z-cea5f9e",
+  "allocation": {
+    "status": "TERMINATED",
+    "machine": "e2-standard-8",
+    "vCPUs": 8,
+    "RAM_GiB": 32,
+    "start_UTC": "2026-10-28T22:57:40.169000+00:00",
+    "stop_UTC": "2026-10-28T23:56:59.646000+00:00",
+    "measured_uptime_seconds": 3559.477,
+    "starts": 1,
+    "inspection_wakes": 0,
+    "original_disks_GiB": [
+      30,
+      300
+    ],
+    "resources_changed": false
+  },
+  "priced_allocation_hours": 0.9887436111111111,
+  "rates": {
+    "compute_IP_USD_hour": 0.2730456762592464,
+    "original_PD_USD_month": 31.199999949850024,
+    "GCS_Standard_USD_GiB_hour": 2.7397e-05,
+    "WAN_USD_GiB": 0.12,
+    "DKK_per_USD": 6.5781,
+    "current_Catalog_checked_UTC": "2026-10-28T23:25:54.291243+00:00",
+    "discounts_or_free_allowances_assumed": false
+  },
+  "costs_USD": {
+    "compute_and_IP": 0.2699721679428427,
+    "run_PD_attribution": 0.042258630982303015,
+    "WAN_new_archive_and_metadata_upper": 0.10687611233443021,
+    "new_compact_storage_to_retention_end_upper": 0.0035143968936972416,
+    "subtotal_including_overlapping_PD": 0.4226213081532732,
+    "operations_reserve": 0.25,
+    "unreconciled_contingency": 0.5,
+    "total_with_reserves": 1.1726213081532733,
+    "owner_amended_ceiling": 5
+  },
+  "network": {
+    "new_archive_bytes": 954145356,
+    "metadata_download_bytes_before_archive": 68757,
+    "additional_metadata_backup_readback_upper_bytes": 2097152,
+    "priced_WAN_upper_bytes": 956311265,
+    "original_E024_compact_payload_bytes": 933793978,
+    "cumulative_compact_upper_bytes": 1890105243,
+    "cumulative_cap_bytes": 2147483648,
+    "old_data_archive_download": false,
+    "BAM_WAN_export": false
+  },
+  "retained_storage": {
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "approved_storage_only_USD": 8,
+    "preexisting_all_current_seven_day_with_reserve_USD": 7.708861915471554,
+    "seven_day_including_new_compact_upper_USD": 7.71296093952764,
+    "original_PD_monthly_USD": 31.199999949850024,
+    "new_compact_upper_bytes": 956242508,
+    "old_BAMs_remain_in_prior_E024_scope": true,
+    "disk_billing_continues_while_stopped": true,
+    "retention_extended": false,
+    "automatic_deletion": false
+  },
+  "credit": {
+    "checked_UTC": "2026-10-28T23:47:20.033889+00:00",
+    "method": "Signed-in Chrome Credits/Overview visible read-only UI",
+    "remaining_DKK": 1759.02,
+    "original_DKK": 1973.43,
+    "remaining_percent": 89,
+    "status": "Available",
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; see terms for Free Trial",
+    "application": "Net pricing",
+    "paid_account": true,
+    "overview": {
+      "period": "October 1-29, 2026",
+      "rounded_cost_DKK": 214,
+      "rounded_savings_DKK": 214,
+      "net_DKK": 0
+    },
+    "delay": "Costs take a few hours and might take longer than 24 hours; numbers rounded",
+    "delayed_usage_reserve_USD": 35,
+    "real_money_authorized": false
+  },
+  "credit_delta_is_not_invoice": true,
+  "real_money_authorized": false,
+  "pricing_not_invoice": "Measured provider uptime at fresh ordinary Catalog rates; sampled CPU is not allocation pricing; export/storage include explicit conservative byte reserves",
+  "sampled_science_resources": {
+    "command": [
+      "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+      "-I",
+      "-B",
+      "/srv/dl_binner/repo/scripts/e025_control.py",
+      "--plan",
+      "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/science-plan.json",
+      "--workflow"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 2634.014843204,
+    "peak_sampled_rss_bytes": 7172632576,
+    "seconds_ceiling": 41721.92272949219,
+    "rss_bytes_ceiling": 26000000000,
+    "launched_pid": 2324,
+    "sampled_cpu_seconds": 3527.49,
+    "sampled_average_cpus": 1.3392065762655998,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": true
+  },
+  "terminal_disk_summary": {
+    "samples": 1659,
+    "minimum_free_bytes": 40556335104,
+    "maximum_sampled_global_growth_bytes": 4250836992,
+    "scope": "Sampled whole-filesystem usage; first-allocation baseline, not exact attributable bytes"
+  },
+  "storage_warning": "Original disks continue about $31.20/month after November 4 without an approved disposition; no extension or deletion is implied",
+  "evidence": {
+    "artifacts/e025-inspection/20261028T232534Z/provider-final.json": {
+      "bytes": 33097,
+      "sha256": "eb8a3182893c9754b7ecf68854322f6549ee77f2ebc64959c38166523e4dd661"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/current-prices.json": {
+      "bytes": 8003,
+      "sha256": "665de7d1fb394fb5d1f6bb716739fc12fefbe463df283c94c3d0de44a77dfe5e"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/billing-ui.json": {
+      "bytes": 663,
+      "sha256": "915e30b16a1b6dcd5cf947edd68db743150b7da2eedf2e3260d36a6389619db2"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/terminal-disk.json": {
+      "bytes": 2196,
+      "sha256": "17bf4ea24bd0de56e7a6500326bdb3328f871b6ee627d3060dfa38e1861e128f"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/export-admission.json": {
+      "bytes": 1357,
+      "sha256": "a00c67c47fd04c379cb1019634aa98cfc4311d21c3829d6b9342446e650872b6"
+    }
+  }
+}

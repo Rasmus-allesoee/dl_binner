@@ -1,0 +1,23 @@
+{
+  "status": "PASS_PRIVATE_UPLOAD_READBACK_ARCHIVE_AND_EVERY_MEMBER",
+  "phase": "joint-20261028T225703Z-cea5f9e",
+  "archive": {
+    "bytes": 560865,
+    "sha256": "813fe6fcb1a4e707395993079b9813fb34c0c049f27d3c9dc82f1a2aef7559b8"
+  },
+  "uri": "gs://dl-binner-archive-167650584170/e025/joint-20261028T225703Z-cea5f9e/e025-inspection-evidence.tar.gz",
+  "members_including_inventory": 195,
+  "logical_payload_bytes": 3952614,
+  "every_member_verified": true,
+  "readback_exact": true,
+  "source_snapshot": "Current review and prior accepted/failed journals; excludes auth/environments/bulk DNA",
+  "runtime_and_raw_review_complete": true,
+  "missing_auxiliary_stderr_not_invented": true,
+  "compressed_cap_bytes": 2097152,
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "retention_extended": false,
+  "VM_status_before_upload": "TERMINATED",
+  "VM_started": false,
+  "additional_WAN_USD": 6.268154829740525e-05,
+  "cost_scope": "Within previously priced 2 MiB metadata/readback reserve; no extra VM charge"
+}

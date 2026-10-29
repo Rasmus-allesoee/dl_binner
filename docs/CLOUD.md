@@ -1,32 +1,46 @@
 # Google Cloud workspace operations
 
-**E025 live handoff, October 29 Copenhagen:** phase
-`joint-20261028T225703Z-cea5f9e` is in final cache audit. Six native gates / nine
-contracts, exact accepted data/graph/marker bytes and full axes pass; grouping
-and complete exports exist. Sampled final-neighbor recall 0.9979166667 passes
-0.90, without a biological quality claim. Audit, collection, shutdown and local
-truth review are still pending. Its inherited repeated-set validator is slow;
-the active frozen source is unchanged and supervised.
+**October 29: E025 SUCCESS, independently verified TERMINATED, biological MODIFY.**
+[Inspection](../experiments/E025-joint-distance-retrieval/inspection-observed.json)
+for `joint-20261028T225703Z-cea5f9e` verifies all six gates, four serial rules and
+target, full input-after, matching boot/process watchdog exit, private completion,
+archive/member/alias and readbacks. Guest final status is SUCCESS. Dated RUNNING
+receipts stay intact; no wake, replay, resource change or retention extension.
 
-[Native receipt](../experiments/E025-joint-distance-retrieval/native-observed.json)
-and [operations](../experiments/E025-joint-distance-retrieval/OPERATIONS.md) bind
-boot/PID/start/command, real normal/crash/restart-refusal tests and independent
-STOP. Existing E2 / 30+300 GiB only. Owner-expanded **12 h / 12.25 h STOP / $5
-credit-only**; first start October 28 22:57:40 UTC, driver deadline October 29
-10:57:40 UTC and STOP **11:12:40 UTC / 12:12 Copenhagen**. Watcher stops on exit;
-no automatic retry, provision/resize or retention extension. Latest peak sampled
-RSS 7.173 GB, free 38.663 GiB / growth 3.068 GiB meet unchanged guards.
+One original e2-standard-8 / 32 GiB allocation: October 28 **22:57:40.169 ->
+23:56:59.646 UTC**, **3,559.477 seconds / 59.32 minutes**. Watcher requested stop
+23:54:42 UTC; the independent 12.25-hour provider STOP stayed armed. Existing
+30/300 GiB disks, no provisioning or cleanup. Whole-run sampled growth **3.959
+GiB**, minimum free **37.771 GiB**, including collection. Science peak RSS 7.173
+GB / sampled CPU 3,527.49 seconds is not charged allocated uptime.
 
-At 23:40 UTC, priced compute/IP $0.19546 and run-PD attribution $0.03059 are
-incomplete allocation estimates, not an invoice or sampled-CPU charge. Full-STOP
-forecast $4.743 includes reserves/export/new compact storage. Fresh Welcome
-DKK 1,759.02 Available / 89%, January 12 expiry / displayed net 0; delayed usage
-may exceed 24 h, $35 reserve retained. Current rates unchanged. Existing disks
-remain $31.20/month while stopped. All-current-storage week plus $0.25 reserve
-forecasts $7.709 within original $8 through **November 4, 00:00 Copenhagen**.
-No cleanup savings, renewal or deletion assumed. E024 accepted data and failure
-remain intact. Inspect completion/member/alias/cost evidence before quality;
-no repeat mapping, old fit/score, external tool, GLM or skin work.
+[Current-price ledger](../experiments/E025-joint-distance-retrieval/cost-review.json):
+compute/IP **$0.26997**, run-PD attribution **$0.04226**, WAN upper **$0.10688**,
+new compact retention about **$0.00351**; subtotal **$0.42262 / $1.17262 with
+reserves**, inside owner-amended $5. This is not an invoice or credit-delta charge.
+Fresh Welcome DKK **1,759.02 Available / 89%**, January 12 expiry, displayed net 0;
+usage may lag >24 hours / $35 reserve. Original disks still cost **$31.20/month
+while stopped**. All-current-storage seven-day forecast with new compact payload
+and reserve **$7.713 < $8**; original end **November 4, 00:00 Copenhagen** remains.
+No renewal or automatic deletion. Review storage disposition before that boundary.
+
+New archive **954,145,356 bytes**, 172 members / 1 alias / 1,531,232,439 logical
+bytes verified. No old 930.98 MB data return or BAM WAN export; original cumulative
+2 GiB compact allowance still passes. Selected FASTA is retained on disk with
+explicit omission hashes; inventories are not backups. One auxiliary 412-byte
+restart-refusal stderr receipt is absent from delivery, with native locator/hash
+retained; source-checked arming and independent normal/crash/live/exit proofs pass.
+No wake needed. Ten unsorted primary BAMs remain in E024's separate GCS scope.
+The separate [560,865-byte inspection backup](../experiments/E025-joint-distance-retrieval/inspection-backup.json)
+passes private readback and all 195 members, inside the priced metadata allowance.
+
+[Results](../experiments/E025-joint-distance-retrieval/comparison-review.json): Oral
+R95 **8.1441%**, target-50 **58**, target-90 **22**; original joint KEEP fails.
+No new fit/old score/GLM or confirmation. The [next prompt](../experiments/E025-joint-distance-retrieval/OPERATIONS.md#exact-following-prompt)
+is local calibrated evidence/biological grouping implementation and separately
+priced cached-comparison preparation. Existing learning and evidence remain fixed.
+The owner's clock/cost amendment preserved science; it does not authorize a new
+scientific treatment or extend storage. Prior live handoffs below are history.
 
 ## Preserved E024 inspection
 

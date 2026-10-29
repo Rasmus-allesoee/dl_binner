@@ -1,0 +1,772 @@
+{
+  "kind": "E025 independent stopped-output inspection",
+  "date": "2026-10-29",
+  "status": "VERIFIED_COMPLETE_MODIFY",
+  "phase": "joint-20261028T225703Z-cea5f9e",
+  "source_commit": "cea5f9e609440c4428b868d3a7c54842ede8ec98",
+  "branch": "joint-distance-cached-retrieval",
+  "supersedes_dated_running_receipt": "native-observed.json",
+  "provider": {
+    "status": "TERMINATED",
+    "machine": "e2-standard-8",
+    "vCPUs": 8,
+    "RAM_GiB": 32,
+    "start_UTC": "2026-10-28T22:57:40.169000+00:00",
+    "stop_UTC": "2026-10-28T23:56:59.646000+00:00",
+    "measured_uptime_seconds": 3559.477,
+    "starts": 1,
+    "inspection_wakes": 0,
+    "original_disks_GiB": [
+      30,
+      300
+    ],
+    "resources_changed": false
+  },
+  "native_contract_review": {
+    "status": "PASS_STOPPED_NATIVE_SOURCE_EXIT_AXES_CACHED_RELOAD_CONTRACTS",
+    "source": "cea5f9e609440c4428b868d3a7c54842ede8ec98",
+    "gates": 6,
+    "contracts": 9,
+    "serial_rules": [
+      "verify",
+      "group",
+      "export",
+      "audit"
+    ],
+    "every_rule_and_target_exit": 0,
+    "rows": 1286547,
+    "bp": 1669981123,
+    "eligible": 508763,
+    "samples": [
+      "oral_sample_6",
+      "oral_sample_7",
+      "oral_sample_8",
+      "oral_sample_13",
+      "oral_sample_14",
+      "oral_sample_15",
+      "oral_sample_16",
+      "oral_sample_17",
+      "oral_sample_18",
+      "oral_sample_19"
+    ],
+    "technical_recall": 0.9979166666666667,
+    "all_query_records_and_neighbor_arrays_verified": true,
+    "forest_structure_verified_without_reconstruction": true,
+    "archive_and_every_member_verified": true,
+    "recovered_exact_controls": {
+      "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/logs/supervision.json": {
+        "bytes": 1054,
+        "sha256": "64f136d6958799cbea9ae8f7e84061f39c3ac1aa7caeb7e6e071f82c2e4e0d7e"
+      },
+      "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/logs/watchdog-native-tests.log": {
+        "bytes": 3012,
+        "sha256": "1c562d1e0922e826199fc4b50881fa824b06ab5704b75237bb0a8bf4d88ded8d"
+      },
+      "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/logs/provider-before-release.json": {
+        "bytes": 31863,
+        "sha256": "0033b322bfd6e5978e9425b1b42de72991e0dcdec01611fbf441a06718b7e1fe"
+      },
+      "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/payload/financial-gate.json": {
+        "bytes": 4478,
+        "sha256": "4082d3cef2ed427b9ff69193cbd6bc937f4ce85e1d1ae4d4ef453bd689cc4226"
+      }
+    },
+    "auxiliary_control_files_not_delivered": [
+      {
+        "path": "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/logs/maintenance-restart-refused.json",
+        "expected": {
+          "bytes": 412,
+          "sha256": "56892493794a4376e3ac2ab6d828adde0635caf6f168faaceda28007ef9c2a8f"
+        },
+        "scope": "Auxiliary restart-refusal stderr receipt omitted; successful source-checked arming asserts it before ARMED_AND_TESTED, with unchanged observed live PID"
+      }
+    ],
+    "operational_contract_basis": "ARMED_AND_TESTED source assertion and observed unchanged live PID plus normal/crash log; missing auxiliary stderr does not remove scientific/runtime evidence",
+    "original_data_archive_not_recopied": true,
+    "truth_opened": false
+  },
+  "stages": [
+    {
+      "name": "workflow",
+      "resources": {
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 2634.014843204,
+        "peak_sampled_rss_bytes": 7172632576,
+        "seconds_ceiling": 41721.92272949219,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 2324,
+        "sampled_cpu_seconds": 3527.49,
+        "sampled_average_cpus": 1.3392065762655998,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "collect",
+      "resources": {
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 78.05165140300005,
+        "peak_sampled_rss_bytes": 62427136,
+        "seconds_ceiling": 39387.71040868759,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 3536,
+        "sampled_cpu_seconds": 82.98000000000002,
+        "sampled_average_cpus": 1.0631421438036421,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "upload-e025-evidence.tar.gz",
+      "resources": {
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 19.82078613199974,
+        "peak_sampled_rss_bytes": 289849344,
+        "seconds_ceiling": 39789.6172208786,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 3547,
+        "sampled_cpu_seconds": 10.379999999999995,
+        "sampled_average_cpus": 0.5236926492659122,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "readback-e025-evidence.tar.gz",
+      "resources": {
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 13.772039401999791,
+        "peak_sampled_rss_bytes": 158031872,
+        "seconds_ceiling": 39829.031851530075,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 3613,
+        "sampled_cpu_seconds": 7.530000000000001,
+        "sampled_average_cpus": 0.5467599808715763,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "upload-e025-evidence.tar.gz.sha256",
+      "resources": {
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.7701326970000082,
+        "peak_sampled_rss_bytes": 287244288,
+        "seconds_ceiling": 39755.134694337845,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 3659,
+        "sampled_cpu_seconds": 1.3100000000000023,
+        "sampled_average_cpus": 0.7400575121967798,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "readback-e025-evidence.tar.gz.sha256",
+      "resources": {
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.9847540099999605,
+        "peak_sampled_rss_bytes": 155164672,
+        "seconds_ceiling": 39813.35050654411,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 3718,
+        "sampled_cpu_seconds": 1.3199999999999932,
+        "sampled_average_cpus": 0.6650698239425749,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "upload-collection.json",
+      "resources": {
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.767941313999927,
+        "peak_sampled_rss_bytes": 287055872,
+        "seconds_ceiling": 39751.35387444496,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 3763,
+        "sampled_cpu_seconds": 1.289999999999992,
+        "sampled_average_cpus": 0.7296622290484271,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "readback-collection.json",
+      "resources": {
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.553497655999763,
+        "peak_sampled_rss_bytes": 155234304,
+        "seconds_ceiling": 39809.577825307846,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 3824,
+        "sampled_cpu_seconds": 1.1999999999999886,
+        "sampled_average_cpus": 0.7724504735269273,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "upload-collection-disk.jsonl",
+      "resources": {
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.9839466230000653,
+        "peak_sampled_rss_bytes": 286932992,
+        "seconds_ceiling": 39838.00626564026,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 3867,
+        "sampled_cpu_seconds": 1.3099999999999739,
+        "sampled_average_cpus": 0.6603000225979017,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "readback-collection-disk.jsonl",
+      "resources": {
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.7604376419999426,
+        "peak_sampled_rss_bytes": 154873856,
+        "seconds_ceiling": 39836.01142454147,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 3926,
+        "sampled_cpu_seconds": 1.200000000000017,
+        "sampled_average_cpus": 0.6816486829018032,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "upload-terminal-disk.json",
+      "resources": {
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.7668335369999113,
+        "peak_sampled_rss_bytes": 286900224,
+        "seconds_ceiling": 39834.24275302887,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 3973,
+        "sampled_cpu_seconds": 1.2800000000000011,
+        "sampled_average_cpus": 0.7244598730978613,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "readback-terminal-disk.json",
+      "resources": {
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.7644075089997386,
+        "peak_sampled_rss_bytes": 155369472,
+        "seconds_ceiling": 39832.465914011,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 4032,
+        "sampled_cpu_seconds": 1.3899999999999864,
+        "sampled_average_cpus": 0.7877998664764196,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    }
+  ],
+  "native_rule_benchmarks": {
+    "audit": {
+      "row": {
+        "s": "1862.97",
+        "h:m:s": "0:31:02",
+        "max_rss": "2560.35",
+        "max_vms": "2799.25",
+        "max_uss": "2539.58",
+        "max_pss": "2547.52",
+        "io_in": "893.64",
+        "io_out": "0.00",
+        "mean_load": "99.04",
+        "cpu_time": "1845.68",
+        "jobid": "1",
+        "rule_name": "audit",
+        "wildcards": "{}",
+        "params": "{}",
+        "threads": "4",
+        "cpu_usage": "184503.59",
+        "resources": "{'tmpdir': '/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/tmp', '_nodes': 1, 'mem_mb': 26000, 'mem': '26 GB', 'mem_mib': 24796, '_cores': 4}",
+        "input_size_mb": "{'export/done.json': 0.027338027954101562}"
+      },
+      "file": {
+        "bytes": 448,
+        "sha256": "64d8dc6d94b6a14588834b03ba72357ffc7d7f6586e2d6c70d741491bcc7610d"
+      }
+    },
+    "export": {
+      "row": {
+        "s": "102.19",
+        "h:m:s": "0:01:42",
+        "max_rss": "2495.90",
+        "max_vms": "2736.78",
+        "max_uss": "2475.09",
+        "max_pss": "2482.93",
+        "io_in": "0.00",
+        "io_out": "831.49",
+        "mean_load": "73.43",
+        "cpu_time": "75.89",
+        "jobid": "2",
+        "rule_name": "export",
+        "wildcards": "{}",
+        "params": "{}",
+        "threads": "4",
+        "cpu_usage": "7504.32",
+        "resources": "{'tmpdir': '/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/tmp', '_nodes': 1, 'mem_mb': 26000, 'mem': '26 GB', 'mem_mib': 24796, '_cores': 4}",
+        "input_size_mb": "{'group/completed.json': 1.61029052734375}"
+      },
+      "file": {
+        "bytes": 444,
+        "sha256": "bc2c48743ffb1635712c2ba93bc896e48f005e2f4487c8d759cc0b3c2a7d2244"
+      }
+    },
+    "group": {
+      "row": {
+        "s": "614.27",
+        "h:m:s": "0:10:14",
+        "max_rss": "5970.19",
+        "max_vms": "6580.33",
+        "max_uss": "5949.38",
+        "max_pss": "5957.20",
+        "io_in": "0.00",
+        "io_out": "1008.11",
+        "mean_load": "208.40",
+        "cpu_time": "1280.96",
+        "jobid": "3",
+        "rule_name": "group",
+        "wildcards": "{}",
+        "params": "{}",
+        "threads": "4",
+        "cpu_usage": "128015.50",
+        "resources": "{'tmpdir': '/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/tmp', '_nodes': 1, 'mem_mb': 26000, 'mem': '26 GB', 'mem_mib': 24796, '_cores': 4}",
+        "input_size_mb": "{'verified/done.json': 0.0041637420654296875}"
+      },
+      "file": {
+        "bytes": 452,
+        "sha256": "3a5aef6ede712c45b49a1ced2594309d4b902cb33068102d91ad3f3b29ace64b"
+      }
+    },
+    "verify": {
+      "row": {
+        "s": "52.63",
+        "h:m:s": "0:00:52",
+        "max_rss": "2960.43",
+        "max_vms": "3325.72",
+        "max_uss": "2935.77",
+        "max_pss": "2943.35",
+        "io_in": "0.00",
+        "io_out": "0.00",
+        "mean_load": "84.93",
+        "cpu_time": "45.56",
+        "jobid": "4",
+        "rule_name": "verify",
+        "wildcards": "{}",
+        "params": "{}",
+        "threads": "4",
+        "cpu_usage": "4469.87",
+        "resources": "{'tmpdir': '/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/tmp', '_nodes': 1, 'mem_mb': 26000, 'mem': '26 GB', 'mem_mib': 24796, '_cores': 4}",
+        "input_size_mb": "{}"
+      },
+      "file": {
+        "bytes": 401,
+        "sha256": "b643a60ce025c42d9861eff322b411ba95fa86178127e09ee14c3185c264e344"
+      }
+    }
+  },
+  "watchdog": {
+    "action": "clean guest shutdown requested; no retry or deletion",
+    "boot_id": "74066d44-3f7d-4266-9f65-9e6aeac2b865",
+    "checked_utc": "2026-10-28T23:54:42.348391+00:00",
+    "decision": "workflow exited",
+    "expected_process": {
+      "command_sha256": "f578f3adb94f33c0c3a9820d200bf0229f55ee0c7834dd2a04eea98647f828e8",
+      "pid": 1411,
+      "start_ticks": 3730
+    },
+    "first_missing_monotonic": 3354.168921843,
+    "missing_seconds": 62.00025475099983,
+    "observed_process": null,
+    "shutdown": true,
+    "snapshot": {
+      "attempts": {},
+      "log_tails": {
+        "gates-terminal.log": "DLBINNER 2026-10-28 22:58:35 UTC | Still running (10s, sampled RSS 0.25 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/accepted-numerical.log\nDLBINNER 2026-10-28 22:58:53 UTC | Still running (10s, sampled RSS 0.26 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/actual-compiled-consumer.log\nDLBINNER 2026-10-28 22:59:03 UTC | Still running (20s, sampled RSS 0.30 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/actual-compiled-consumer.log\nDLBINNER 2026-10-28 22:59:13 UTC | Still running (31s, sampled RSS 0.32 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/actual-compiled-consumer.log\nDLBINNER 2026-10-28 22:59:24 UTC | Still running (41s, sampled RSS 0.36 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/actual-compiled-consumer.log\nDLBINNER 2026-10-28 22:59:47 UTC | Still running (10s, sampled RSS 0.28 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/synthetic-width-runtime.log\nDLBINNER 2026-10-28 22:59:57 UTC | Still running (20s, sampled RSS 0.52 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/synthetic-width-runtime.log\nDLBINNER 2026-10-28 23:00:10 UTC | Still running (10s, sampled RSS 0.07 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/retained-data.log\nDLBINNER 2026-10-28 23:00:20 UTC | Still running (20s, sampled RSS 0.07 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/retained-data.log\nDLBINNER 2026-10-28 23:00:31 UTC | Still running (30s, sampled RSS 0.07 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/retained-data.log\nDLBINNER 2026-10-28 23:00:41 UTC | Still running (41s, sampled RSS 0.48 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/retained-data.log\nDLBINNER 2026-10-28 23:00:51 UTC | Still running (51s, sampled RSS 2.29 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/retained-data.log\nDLBINNER 2026-10-28 23:01:01 UTC | Still running (61s, sampled RSS 3.57 GB); log: /srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/gates/retained-data.log\n",
+        "watchdog-native-tests.log": "test_live_exit_grace_pid_reuse_zombie_and_boot (test_e009_exit_watchdog.WatchdogTests.test_live_exit_grace_pid_reuse_zombie_and_boot) ... ok\ntest_real_native_success_and_crash_without_powering_off_host (test_e009_exit_watchdog.WatchdogTests.test_real_native_success_and_crash_without_powering_off_host) ... {\"boot_id\": \"74066d44-3f7d-4266-9f65-9e6aeac2b865\", \"checked_utc\": \"2026-10-28T22:58:24.206594+00:00\", \"decision\": \"workflow alive\", \"expected_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1468, \"start_ticks\": 3802}, \"observed_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1468, \"start_ticks\": 3802}, \"shutdown\": false, \"workflow_root\": \"/tmp/tmp5zxy3mzi/work\"}\n{\"boot_id\": \"74066d44-3f7d-4266-9f65-9e6aeac2b865\", \"checked_utc\": \"2026-10-28T22:58:24.227652+00:00\", \"decision\": \"exit grace\", \"expected_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1468, \"start_ticks\": 3802}, \"first_missing_monotonic\": 1, \"missing_seconds\": 0, \"observed_process\": null, \"shutdown\": false, \"workflow_root\": \"/tmp/tmp5zxy3mzi/work\"}\n{\"boot_id\": \"74066d44-3f7d-4266-9f65-9e6aeac2b865\", \"checked_utc\": \"2026-10-28T22:58:24.231960+00:00\", \"decision\": \"workflow exited\", \"expected_process\": {\"command_sha256\": \"498e1d3a96ca0baf339d1a33c36e250719a9da3048443f2c39fc82ddd6c15770\", \"pid\": 1468, \"start_ticks\": 3802}, \"first_missing_monotonic\": 1, \"missing_seconds\": 1, \"observed_process\": null, \"shutdown\": true, \"workflow_root\": \"/tmp/tmp5zxy3mzi/work\"}\n{\"boot_id\": \"74066d44-3f7d-4266-9f65-9e6aeac2b865\", \"checked_utc\": \"2026-10-28T22:58:24.247088+00:00\", \"decision\": \"workflow alive\", \"expected_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1469, \"start_ticks\": 3806}, \"observed_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1469, \"start_ticks\": 3806}, \"shutdown\": false, \"workflow_root\": \"/tmp/tmp3w0utxm4/work\"}\n{\"boot_id\": \"74066d44-3f7d-4266-9f65-9e6aeac2b865\", \"checked_utc\": \"2026-10-28T22:58:24.267709+00:00\", \"decision\": \"exit grace\", \"expected_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1469, \"start_ticks\": 3806}, \"first_missing_monotonic\": 1, \"missing_seconds\": 0, \"observed_process\": null, \"shutdown\": false, \"workflow_root\": \"/tmp/tmp3w0utxm4/work\"}\n{\"boot_id\": \"74066d44-3f7d-4266-9f65-9e6aeac2b865\", \"checked_utc\": \"2026-10-28T22:58:24.272797+00:00\", \"decision\": \"workflow exited\", \"expected_process\": {\"command_sha256\": \"15e3aec78961f3a9cd6ab9fc5b860a53050956a7a59b361c85f6f205cd8899cc\", \"pid\": 1469, \"start_ticks\": 3806}, \"first_missing_monotonic\": 1, \"missing_seconds\": 1, \"observed_process\": null, \"shutdown\": true, \"workflow_root\": \"/tmp/tmp3w0utxm4/work\"}\nok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.089s\n\nOK\n"
+      },
+      "stages": {}
+    },
+    "workflow_root": "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e"
+  },
+  "delivery": {
+    "prefix": "gs://dl-binner-archive-167650584170/e025/joint-20261028T225703Z-cea5f9e/",
+    "archive": {
+      "bytes": 954145356,
+      "sha256": "2d02ccc8d0527b5604eccde9573ee9a270d9db3865338374fd1a8b9c5aa19b3d"
+    },
+    "regular_members": 172,
+    "logical_member_bytes": 1531232439,
+    "aliases": {
+      "work/logs/verify.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "canonical": "work/logs/audit.log"
+      }
+    },
+    "every_member_and_alias_verified": true,
+    "compressed_cap_bytes": 1073741824,
+    "logical_cap_bytes": 4294967296,
+    "cumulative_compact_upper_bytes": 1890105243,
+    "cumulative_cap_bytes": 2147483648,
+    "original_E024_archive_not_downloaded_again": true,
+    "raw_BAM_downloaded": false,
+    "omitted_files_count": 190,
+    "omitted_files_bytes": 1757466319,
+    "omission_semantics": "Complete FASTA bytes retained on original work disk; compact inventory is not a FASTA backup"
+  },
+  "scientific_fits_completed": 0,
+  "grouping_communities_completed": 1,
+  "science_disk": {
+    "summary": {
+      "samples": 1659,
+      "minimum_free_bytes": 40556335104,
+      "maximum_sampled_global_growth_bytes": 4250836992,
+      "scope": "Sampled whole-filesystem usage; first-allocation baseline, not exact attributable bytes"
+    },
+    "science_raw": {
+      "bytes": 136944,
+      "sha256": "2176d47a4905cf6f5a36145686522ac16141000ed90a8a4cce8cc40539e244e2"
+    },
+    "collection_raw": {
+      "bytes": 5205,
+      "sha256": "1560ecbe0d2377395a2c57849ff48aab28943b694a0e8a5fb2a71e8452033011"
+    },
+    "command_boundary_samples": [
+      {
+        "stage": "workflow",
+        "epoch": 1793228838.246288,
+        "used": 271913549824,
+        "free": 44803325952
+      },
+      {
+        "stage": "workflow",
+        "epoch": 1793231472.27783,
+        "used": 275203670016,
+        "free": 41513205760
+      },
+      {
+        "stage": "collect",
+        "epoch": 1793231472.4586096,
+        "used": 275206033408,
+        "free": 41510842368
+      },
+      {
+        "stage": "collect",
+        "epoch": 1793231550.5517397,
+        "used": 276160454656,
+        "free": 40556421120
+      },
+      {
+        "stage": "upload-e025-evidence.tar.gz",
+        "epoch": 1793231550.5517874,
+        "used": 276160454656,
+        "free": 40556421120
+      },
+      {
+        "stage": "upload-e025-evidence.tar.gz",
+        "epoch": 1793231570.383157,
+        "used": 276160475136,
+        "free": 40556400640
+      },
+      {
+        "stage": "readback-e025-evidence.tar.gz",
+        "epoch": 1793231571.1371715,
+        "used": 276160475136,
+        "free": 40556400640
+      },
+      {
+        "stage": "readback-e025-evidence.tar.gz",
+        "epoch": 1793231585.034269,
+        "used": 276160491520,
+        "free": 40556384256
+      },
+      {
+        "stage": "upload-e025-evidence.tar.gz.sha256",
+        "epoch": 1793231585.0343122,
+        "used": 276160491520,
+        "free": 40556384256
+      },
+      {
+        "stage": "upload-e025-evidence.tar.gz.sha256",
+        "epoch": 1793231586.8183424,
+        "used": 276160503808,
+        "free": 40556371968
+      },
+      {
+        "stage": "readback-e025-evidence.tar.gz.sha256",
+        "epoch": 1793231586.8185005,
+        "used": 276160503808,
+        "free": 40556371968
+      },
+      {
+        "stage": "readback-e025-evidence.tar.gz.sha256",
+        "epoch": 1793231588.815088,
+        "used": 276160516096,
+        "free": 40556359680
+      },
+      {
+        "stage": "upload-collection.json",
+        "epoch": 1793231588.8151343,
+        "used": 276160516096,
+        "free": 40556359680
+      },
+      {
+        "stage": "upload-collection.json",
+        "epoch": 1793231590.590999,
+        "used": 276160528384,
+        "free": 40556347392
+      },
+      {
+        "stage": "readback-collection.json",
+        "epoch": 1793231590.5912316,
+        "used": 276160528384,
+        "free": 40556347392
+      },
+      {
+        "stage": "readback-collection.json",
+        "epoch": 1793231592.1544147,
+        "used": 276160540672,
+        "free": 40556335104
+      }
+    ],
+    "scope": "Through archive collection/upload/readback; final compact proof delivery follows this closed snapshot"
+  },
+  "review_resources": {
+    "staging": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e025-inspection/20261028T232534Z/download-verify.py"
+      ],
+      "exit_code": 0,
+      "launched_pid": 91558,
+      "peak_sampled_rss_bytes": 798457856,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.49644928796222887,
+      "sampled_cpu_seconds": 78.7,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1521.5489270687103,
+      "stop_reason": null,
+      "wall_seconds": 158.52575863899256
+    },
+    "native-review-r2": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e025-inspection/20261028T232534Z/native-review-r2.py"
+      ],
+      "exit_code": 0,
+      "launched_pid": 92991,
+      "peak_sampled_rss_bytes": 2135494656,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.8716834087874925,
+      "sampled_cpu_seconds": 32.96,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 832.6749601364136,
+      "stop_reason": null,
+      "wall_seconds": 37.81189324900333
+    },
+    "frozen-diagnostics": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e025-inspection/20261028T232534Z/review-driver.py"
+      ],
+      "exit_code": 0,
+      "launched_pid": 93171,
+      "peak_sampled_rss_bytes": 3315892224,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.9138462176090386,
+      "sampled_cpu_seconds": 290.06,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 794.8617360591888,
+      "stop_reason": null,
+      "wall_seconds": 317.40570175899484
+    },
+    "neighbor-strata": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e025-inspection/20261028T232534Z/neighbor-strata.py"
+      ],
+      "exit_code": 0,
+      "launched_pid": 95076,
+      "peak_sampled_rss_bytes": 1874014208,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 1.0283999188721624,
+      "sampled_cpu_seconds": 32.63,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 139.10349416732788,
+      "stop_reason": null,
+      "wall_seconds": 31.728901763999602
+    }
+  },
+  "review_clock": {
+    "start": {
+      "UTC": "2026-10-28T23:25:34.806874+00:00",
+      "scope": "Stopped-output admission, transfer/checksum and frozen local review; no new VM/science"
+    },
+    "deadline_UTC": "2026-10-29T00:25:34.806874+00:00",
+    "final_numerical_completion_UTC": "2026-10-29T00:23:46+00:00",
+    "inclusive_working_set_cap_GiB": 8,
+    "required_physical_free_GiB": 6,
+    "numerical_threads": 4,
+    "maximum_sampled_RSS_bytes": 3315892224,
+    "original_clock_not_reset": true
+  },
+  "preserved_failures": [
+    "Original Mac portability allclose failure and tolerance",
+    "E024 failed retrieval and original scientific/data/source journals",
+    "Local E025 prerequisite/sampler and original three-hour forecast refusals",
+    "Pre-release rendered UNIT placeholder failure before SSH",
+    "Independent local native-review.py SyntaxError before truth; r2 retained separately"
+  ],
+  "review_entrypoint": "Actual frozen e025_review.review API with explicit external feature/rebind arguments; wrapper bytes retained",
+  "entrypoint_limit": "The frozen e025_review.py CLI omits those external arguments; no successful direct CLI invocation is claimed. API execution completed all diagnostics.",
+  "evidence": {
+    "artifacts/e025-inspection/20261028T232534Z/provider-final.json": {
+      "bytes": 33097,
+      "sha256": "eb8a3182893c9754b7ecf68854322f6549ee77f2ebc64959c38166523e4dd661"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/guest-final.json": {
+      "bytes": 364,
+      "sha256": "3924e88ddb36aef2cdfbdedffeeaa5a8c78504d3cbdfb79609fea252224cfdfc"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/completion.json": {
+      "bytes": 9961,
+      "sha256": "d677ce2b3febf15600c8e20f49fe6a70e75c0d129044a4e57cca475866415bef"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/collection.json": {
+      "bytes": 50255,
+      "sha256": "75d0895ebc9f26e14c58328924a63d8eb0646a84f44cd09643267dbe0b915557"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/watchdog-exit.json": {
+      "bytes": 6258,
+      "sha256": "b616b6b9eaa09e27bbe5697435689521cbcd3448568425872747003a1e1fbf7c"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/terminal-disk.json": {
+      "bytes": 2196,
+      "sha256": "17bf4ea24bd0de56e7a6500326bdb3328f871b6ee627d3060dfa38e1861e128f"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/inventory.json": {
+      "bytes": 116309,
+      "sha256": "2cc40709dc2a448e63056f6dfc0237d74efb8324d55994472eec96e500a8ec70"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/native-contract-review.json": {
+      "bytes": 2415,
+      "sha256": "019731bc68f4f2f7824e7f1842d8797d733ab548738dd80b2880392aa0c29188"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/member-verification.json": {
+      "bytes": 49917,
+      "sha256": "67e786bb3ec5edde48c92d8ab062a15d7ab430d36a7df08472e1f8d5106a1162"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/review-admission.json": {
+      "bytes": 516,
+      "sha256": "f45b8d0ec38634744abd07a8de04758127c3ac834f3a9df626492a99b5f6a507"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/export-admission.json": {
+      "bytes": 1357,
+      "sha256": "a00c67c47fd04c379cb1019634aa98cfc4311d21c3829d6b9342446e650872b6"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/current-prices.json": {
+      "bytes": 8003,
+      "sha256": "665de7d1fb394fb5d1f6bb716739fc12fefbe463df283c94c3d0de44a77dfe5e"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/billing-ui.json": {
+      "bytes": 663,
+      "sha256": "915e30b16a1b6dcd5cf947edd68db743150b7da2eedf2e3260d36a6389619db2"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/diagnostics/review.json": {
+      "bytes": 1438056,
+      "sha256": "541ad51c9a07b7a3cc220d9e4c8bae3be1a6fab4f48c4d71b8485c6c5250ecbd"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/diagnostics/comparison-targets.tsv": {
+      "bytes": 32118,
+      "sha256": "d91c5e2e4cdba4c76664a40db3ad013ae9d8eb7c9ce6c535c6edfedad1a4e22f"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/neighbor-strata.json": {
+      "bytes": 5594,
+      "sha256": "222c2c6249d8711f170767341e7e971e9f968960e8e7522a997e2984bb47a5b1"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/staging.exit.json": {
+      "bytes": 723,
+      "sha256": "fce921d832a806a24da9119d931b5561983d2a54d90e1212fec7e3dc3fe781d2"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/native-review-r2.exit.json": {
+      "bytes": 723,
+      "sha256": "da7afcb8261668fa4f4095fbb2bdacbb0f69f56bd6f7c53221580c56d76b5ffc"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/frozen-diagnostics.exit.json": {
+      "bytes": 722,
+      "sha256": "8d478a1c03636175fbdd58d6864686b368fbad17de73c0838fa928a7275b5f8d"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/neighbor-strata.exit.json": {
+      "bytes": 724,
+      "sha256": "5ba5a870ddf02e3270e9430e39eda0ba96d3319d2ea9c4a151f82711407a0ab2"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/review-driver.py": {
+      "bytes": 1461,
+      "sha256": "6ed6b90d3699fbc8388ea1cd08ac21b6c834c3836de37bad50fee255a8f683f8"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/native-review.py": {
+      "bytes": 7847,
+      "sha256": "f762a5986d8ec583ac385c8bd8ec08ad3d544bc6f453e614fde5dd2d578f7620"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/native-review-r2.py": {
+      "bytes": 7846,
+      "sha256": "f1662dec1a74787ac4cf46ccbc9516affafd3253c92c92123c71815d075a4601"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/neighbor-strata.py": {
+      "bytes": 3256,
+      "sha256": "cc2eec7c972fc760e60a8c54d656d950d35eac126fd0e1168b8059baeb23d561"
+    },
+    "artifacts/e025-inspection/20261028T232534Z/clock-start.json": {
+      "bytes": 149,
+      "sha256": "3f30fd247b4851fbdf6b2335c1c250c6b0b5701af5a1ec11ab3adab83ebef236"
+    }
+  },
+  "no_retraining_mapping_GLM_marker_search_old_rescore_or_confirmation": true,
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "retention_extended": false,
+  "final_local_review_footprint": {
+    "status": "PASS",
+    "scope": "Existing E024 inspection plus new E025 local staging/review; unique inodes count exact hardlink aliases once",
+    "files": 560,
+    "logical_unique_bytes": 4877535757,
+    "inclusive_cap_bytes": 8589934592,
+    "actual_filesystem_free_bytes": 15152386048,
+    "physical_reserve_bytes": 6442450944,
+    "backup_readback_every_member_verified": true,
+    "backup_members": 195
+  },
+  "compact_inspection_backup_record": "inspection-backup.json"
+}

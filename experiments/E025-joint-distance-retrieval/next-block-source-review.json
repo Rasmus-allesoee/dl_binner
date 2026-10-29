@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-29",
+  "status": "READ_ONLY_TARGETED_SOURCE_REVIEW",
+  "files": [
+    {
+      "tool": "MetaBAT2",
+      "path": "agent_context/tools_repo/metabat/src/metabat2.cpp",
+      "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/metabat",
+      "commit": "8eb96023ef627d1955c05e3aca348c84b8757914",
+      "bytes": 77442,
+      "sha256": "20c6105f5c4d6dd8de05864cbd8da5cc11f2d99198576b8cfd39fdde0dd2d2ee",
+      "inspected_file_matches_commit": true,
+      "scope": "Read-only source inspection; no installation or execution"
+    },
+    {
+      "tool": "SemiBin",
+      "path": "agent_context/tools_repo/SemiBin/SemiBin/cluster.py",
+      "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/SemiBin",
+      "commit": "f7c45dcbcdfa81e8fbc3e08b04c54683122e72d6",
+      "bytes": 13700,
+      "sha256": "473f4c488c3f2c79c54003336b96ffc2d013eee35de110947234d4d5cf639a00",
+      "inspected_file_matches_commit": true,
+      "scope": "Read-only source inspection; no installation or execution"
+    },
+    {
+      "path": "scripts/e025_information.py",
+      "commit": "cea5f9e609440c4428b868d3a7c54842ede8ec98",
+      "bytes": 15128,
+      "sha256": "0f826ab046c97e4dfbe02c2c33b00657b79a25ce8f56a27dbb732c54493f4254",
+      "matches_executed_freeze": true
+    },
+    {
+      "path": "src/dl_binner/density/grouping.py",
+      "commit": "cea5f9e609440c4428b868d3a7c54842ede8ec98",
+      "bytes": 24103,
+      "sha256": "71335000c1691ec1f5e6757b9ffc63b8d3b3ab525b2ec6e1212e8c68886b93e2",
+      "matches_executed_freeze": true
+    }
+  ],
+  "primary_urls": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6662567/",
+    "https://www.nature.com/articles/s41467-022-29843-y"
+  ],
+  "conclusion": "Evidence calibration and positive-versus-zero semantics merit a prospective grouping block; no optimality, reproduced external performance or measured variance claim"
+}
