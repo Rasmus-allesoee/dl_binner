@@ -745,3 +745,19 @@ strongest alternative if this coherent downstream block cannot improve recovery
 without excessive trade-offs. Runtime/cost forecasts are flexible under the owner's
 standing credit-only direction, not reasons to weaken science. Community/cloud
 execution is not authorized by preparation; November 4 retention remains.
+
+### October 29, 2026: E026 authorized execution and the full-version question
+
+The owner authorized the unchanged `f16c2e5` cached comparison. All six actual
+Linux admission stages, 19 contracts, source-shaped schedule and retained
+archive/member/full-axis checks pass. [Native receipt](../../experiments/E026-calibrated-evidence-fusion/native-observed.json)
+owns current execution/supervision, not a quality outcome. Q001/Q003/Q005 remain
+open pending the frozen new-output review; accepted historical results are reused.
+
+The owner also made the same-full-version question explicit. E026 uses one new
+downstream policy with different retained learners; between-community differences
+cannot identify dataset, depth-training or GLM causality. [D015](../decisions/D015-coherent-prototype-upgrade.md#e026-execution-and-one-version-milestone-october-29-2026)
+makes common learning/feature policy on both communities the next concrete
+recovery milestone, with an explicit GLM efficiency/resource/inclusion decision.
+Do not let more cached downstream controls indefinitely defer it. No new model,
+GLM extraction, acquisition, confirmation or retention extension enters E026.

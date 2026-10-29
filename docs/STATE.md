@@ -2,6 +2,36 @@
 
 Updated: October 29, 2026 (Copenhagen). This is the single current handoff.
 
+**E026 is running under verified supervision; quality is not assessed.**
+The clean `f16c2e5` branch was pushed normally and fetched read-only by the
+existing VM for `fusion-20261029T185844Z-f16c2e5`. First start was October 29,
+18:59:06 UTC; the independent provider STOP is 12.25 hours from that start.
+All six native gates and 19 real contracts passed, including exact retained
+archive/member/full-axis checks. The frozen workflow was released at 19:06:01 UTC.
+E009 verify/group/export/audit completed; Oral input verification passed and its
+60,211-core index construction began at 19:13:30 UTC.
+At the 19:18 UTC handoff, Oral has queried 18,944 of 508,763 eligible parents;
+the index is built and real progress continues.
+The fresh boot/process-bound parent and exit timer remain active/tested. Initial
+37.77 GiB free clears the 35 GiB release gate; 37.42 GiB remains at the 19:18 UTC
+snapshot. See [native receipt](../experiments/E026-calibrated-evidence-fusion/native-observed.json)
+for current progress. Completion, final archive/readbacks, independent shutdown
+and all frozen quality diagnostics are pending; no new R95 claim is made.
+The original $6 / 12-hour scope, all scientific gates and November 4 boundary
+remain. Live Welcome credit is DKK 1,751.96 Available through January 12;
+the complete conservative quote is $5.11758 with $35 delayed-usage reserve.
+[Operations](../experiments/E026-calibrated-evidence-fusion/OPERATIONS.md) owns
+the actual phase handoff, not the earlier preparation status below.
+
+The owner clarified that the product is one general-purpose binner. E026 keeps
+the intentionally asymmetric historical E022/E019 learners fixed and tests one
+downstream policy; it is not a same-full-version comparison. [D015's new milestone](decisions/D015-coherent-prototype-upgrade.md#e026-execution-and-one-version-milestone-october-29-2026)
+requires the next recovery block to resolve one common learner/feature policy on
+both communities, including a concrete GLM inclusion/resource decision. No Oral
+GLM extraction, retraining or new information treatment is added to this run.
+
+## Preserved E026 local preparation
+
 **E026 is locally implemented/prepared; no new community/cloud execution.**
 The [prospective design](../experiments/E026-calibrated-evidence-fusion/design.md)
 and [exact policy/protocol](../experiments/E026-calibrated-evidence-fusion/protocol.json)

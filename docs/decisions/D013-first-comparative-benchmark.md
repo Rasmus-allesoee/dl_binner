@@ -1,5 +1,17 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+October 29 E026 execution update: the owner authorized the unchanged cached
+comparison at `f16c2e5` under $6 / 12 hours, subject to fresh admission and the
+November 4 boundary. [Operations](../../experiments/E026-calibrated-evidence-fusion/OPERATIONS.md)
+owns actual native status. [D015's one-version milestone](D015-coherent-prototype-upgrade.md#e026-execution-and-one-version-milestone-october-29-2026)
+records the owner's valid concern: these retained learners differ, so this is a
+downstream development control, not a same-full-version cross-dataset result.
+Concretely harmonize the next learner/feature policy on both communities; do not
+turn cheaper historical reuse into two dataset-specific products. No GLM
+extraction, training or new acquisition is added to the current authorization.
+
+## Preserved E025 decision handoff
+
 Current handoff: [E025 completed review](../../experiments/E025-joint-distance-retrieval/comparison-review.json)
 returns **MODIFY**, Oral R95 8.1441% versus E023 4.0932% / E019 6.5077%, but
 22 target-90 versus E019's 33. All native/byte/runtime/DNA contracts pass and the

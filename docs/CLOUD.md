@@ -1,5 +1,35 @@
 # Google Cloud workspace operations
 
+**October 29: E026 is RUNNING under verified supervision.**
+The original VM started at 18:59:06 UTC for
+`fusion-20261029T185844Z-f16c2e5`, with exact clean `f16c2e5` fetched using its
+read-only GitHub access. Fresh Welcome credit is **DKK 1,751.96 Available / 89%**,
+January 12 expiry, Certain usage / net pricing; Overview shows rounded DKK 221
+cost and savings / net zero. Usage can lag more than 24 hours; reserve $35.
+Fresh Catalog rates remain unchanged. Complete 12.25-hour STOP quote is
+**$5.11758 within $6**. There is no need to revise the authorized envelope.
+
+Live inventory confirms only the existing e2-standard-8 and original 30/300 GiB
+disks, no GPU. All 189 storage versions total 65,945,285,381 bytes, with zero
+soft-deleted bytes. Seven-day storage plus a new 2 GiB allowance/reserve forecasts
+$7.72216 within the original $8. The existing boundary remains **November 4,
+00:00 Copenhagen**; stopped disks still cost about $31.20/month. No provisioning,
+resize, deletion or retention extension. Postboot free space is 37.77 GiB.
+The fresh tested held-parent exit watcher and 12.25-hour provider STOP are active.
+All six actual source/runtime/tiny/data/schedule gates and 19 contracts passed;
+science was released at 19:06:01 UTC. E009's four rules completed, Oral verification
+passed and its 60,211-core index construction started. At 19:13 UTC, 37.42 GiB
+remains free; at the earlier 19:11 UTC snapshot, estimated allocated compute/IP
+plus run-PD attribution was $0.06286, not an invoice/final cost or a
+sampled-CPU charge. [E026 operations](../experiments/E026-calibrated-evidence-fusion/OPERATIONS.md)
+and [native receipt](../experiments/E026-calibrated-evidence-fusion/native-observed.json)
+own current progress and the later completion/quality inspection. No new quality
+result or archive-delivery success is claimed while the workflow is running.
+The 19:18 UTC handoff verifies continuing Oral query progress (18,944 / 508,763),
+the same live parent/watcher and 37.42 GiB free. Final costs await shutdown.
+
+## Preserved E026 preparation snapshot
+
 **October 29 preparation: E026 is a new local-only candidate.**
 [Its operations](../experiments/E026-calibrated-evidence-fusion/OPERATIONS.md)
 prepare a separately priced cached comparison; this task starts no VM/community

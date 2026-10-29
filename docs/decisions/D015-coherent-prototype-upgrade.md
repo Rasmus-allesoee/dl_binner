@@ -1,5 +1,38 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E026 execution and one-version milestone, October 29, 2026
+
+The owner authorized the frozen E026 cached comparison at `f16c2e5`, with the
+standing reasonable credit-covered runtime/cost flexibility. Its scientific
+policy, learning, inputs and criteria stay fixed. [E026 operations](../../experiments/E026-calibrated-evidence-fusion/OPERATIONS.md)
+owns actual native admission/execution; the older preparation directions below
+are dated history, not a prohibition on this authorized run.
+
+The owner's version concern is valid: E009's E022 learner includes frozen GLM
+features and measured depth, while Oral's E019 learner lacks both during training;
+E024 depth enters Oral's downstream grouping. Applying the same E026 grouping
+code to these caches tests a downstream bundle in two development regimes. It
+does not test the same full latest binner twice, or identify missing GLM/depth as
+the cause of a between-community difference. Historical reuse was an economical
+mechanism control, not a decision to maintain two products.
+
+After E026 inspection, the next coherent recovery decision must concretely
+harmonize the learning/information policy on both communities before another
+major whole-version claim. The strongest currently supported candidate is one
+common measured-depth/sequence/marker learner; the paired E026 outcome will help
+choose its downstream policy without requiring more grouping perfection first.
+Resolve GLM inclusion prospectively for both: cost an efficient genuine Oral
+bank, or explicitly declare a common no-GLM candidate on both if that better
+serves the evidence and full-version question. Do not quietly compare GLM-enabled
+E009 against GLM-disabled Oral again or dismiss the full-bank option from an old
+forecast alone. The next preparation must bind one source/config/feature contract,
+same schedule policy, missing-modality semantics, both data axes and a complete
+resource/cost case; it must state what remains untested if GLM is deferred.
+No Oral extraction, retraining, new data or confirmation is added to E026.
+November 4 remains the existing retention boundary.
+
+## Preserved E025 decision handoff
+
 Current handoff: [E025 completed review](../../experiments/E025-joint-distance-retrieval/comparison-review.json)
 returns **MODIFY**, Oral R95 8.1441% versus E023 4.0932% / E019 6.5077%, but
 22 target-90 versus E019's 33. All native/byte/runtime/DNA contracts pass and the

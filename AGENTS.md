@@ -182,6 +182,17 @@ community benchmark.
 Preserve the accepted main implementation as the immutable comparator on a new
 research branch; do not quietly tune that baseline to the comparison's scores.
 
+Develop one general-purpose binner. Major whole-version comparisons should use
+the same frozen implementation, learner/objective/defaults and declared feature
+policy across datasets. A cached downstream control may intentionally reuse
+different historical learners, but must identify that limitation and cannot
+attribute between-dataset differences to the dataset alone or establish transfer
+of the full current binner. Make harmonization a concrete subsequent milestone,
+including a common prospective GLM/depth availability policy and its resource
+case, rather than indefinitely comparing divergent dataset-specific versions.
+Optional-modality modes can belong to one tool; truth-selected version or feature
+routing cannot. Preserve historical comparators instead of rewriting their runs.
+
 Predeclared practical effect thresholds support the scoped experiment's decision;
 they are not biological standards or statistical significance tests. Preserve a
 failed criterion unchanged, while allowing an explicitly reasoned provisional

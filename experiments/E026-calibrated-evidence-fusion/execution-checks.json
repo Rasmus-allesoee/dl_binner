@@ -1,0 +1,56 @@
+{
+  "status": "PASS_EXECUTION_HANDOFF_NOT_COMPLETED_COMPARISON",
+  "UTC": "2026-10-29T19:19:11.350116+00:00",
+  "scientific_source_unchanged": true,
+  "immutable_inherited_files": 333,
+  "new_frozen_files": 29,
+  "source": {
+    "status": "PASS",
+    "inherited": {
+      "status": "PASS",
+      "inherited": {
+        "status": "PASS",
+        "new": {
+          "bytes": 5288,
+          "sha256": "22643a866b0b33c5a03facc2cbf110b7ea821eb1cdf0a534995422a041cebcf3"
+        },
+        "immutable": {
+          "bytes": 43403,
+          "sha256": "fa7e55203409d32c1a3d9ba43ec8508f65ae741208a1506992c74c6d28a7c8f7"
+        }
+      },
+      "new": {
+        "bytes": 3119,
+        "sha256": "a168cff0169d21b3d85be23bfaf0dfc8bd49ead19e1a705e23058cc48f659501"
+      }
+    },
+    "new": {
+      "bytes": 5693,
+      "sha256": "7b8dc18d803ed266824b801449772b5017bb08cfd9ba3c153140d5af756fa7f9"
+    }
+  },
+  "native_admission_stages": 6,
+  "real_native_tests": 19,
+  "native_tiny_serial_partial_resume_export_streamed_review": true,
+  "full_native_quality_evaluation": false,
+  "doc_check": {
+    "bytes": 729,
+    "sha256": "110c4026130145653f41f8197690019910eab957fc204bb4c8f4a6ba34698697"
+  },
+  "native_observed": {
+    "bytes": 22308,
+    "sha256": "fe5b35d3c333bf96443a91a73ea00759b2166fe6971c5f964d50b1c7d4ec4974"
+  },
+  "checks": [
+    "Full recursive source freeze unchanged after record edits",
+    "All six native gate exit codes zero",
+    "All 19 actual native contracts passed",
+    "Source/read-only sync and supervisor/provider identity readbacks",
+    "Documentation/context and diff checks"
+  ],
+  "optional_missing_historical_cache_count": 10,
+  "last_link_check": {
+    "bytes": 689,
+    "sha256": "6cff65e2546794f0f4e2ae77041296292c0fabedff5d41b3768ad295fb352639"
+  }
+}

@@ -1,5 +1,15 @@
 # E026: availability-aware evidence fusion and biological bins
 
+October 29 authorized native phase: `fusion-20261029T185844Z-f16c2e5`, source
+`f16c2e5`, existing VM/disks and unchanged $6 / 12-hour scope. See
+[native status](native-observed.json) and [operations](OPERATIONS.md) for actual
+gates, release, supervision and the completion-inspection prompt. Do not infer
+community completion from successful admission or later shutdown. D015 now makes
+harmonizing one full learner/feature version on both communities the next concrete
+milestone; E026 deliberately reuses different historical learners.
+
+## Preserved local preparation
+
 Local implementation/preparation only, October 29, 2026. Accepted learning and
 E009–E025 data/truth/results/source freezes are preserved. No community grouping,
 score, VM start, acquisition, mapping or paid cloud work in this task.
