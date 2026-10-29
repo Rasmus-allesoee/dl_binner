@@ -854,3 +854,19 @@ permission; original clock and November 4 retention stay. AEMB requires separate
 split-contig mapping and is not E024's means. Defer SemiBin2 fitting; check existing
 E009 BAM integrity on boot, and choose a target-resolving stronger reference after
 the Oral information result. Local contracts pass; no native result is implied.
+
+## E026 local preparation and flexible forecasts, October 29, 2026
+
+[E026's prospective fixed-learning policy](../../experiments/E026-calibrated-evidence-fusion/design.md)
+implements E025's next decision locally: evidence calibration, reliable core
+construction, soft marker/context whole-child selection and conservative recruitment.
+It preserves full DNA/truth/baselines and prepares one cached E009/Oral development
+comparison, without executing community or paid cloud work. D015 owns the method
+choice/alternatives; E026 operations owns the separately priced execution scope.
+
+Owner standing direction now permits justified runtime/cost increases without
+another question when complete fresh checks establish reasonable Free Trial
+coverage against delayed usage and future project needs. Do not weaken science
+to fit an old estimate. This does not authorize execution during a preparation-only
+task, change frozen scientific criteria, spend real money, or renew the November 4
+storage boundary. Historical experiment limits remain dated provenance.

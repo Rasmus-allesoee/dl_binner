@@ -1688,3 +1688,58 @@ permission; original clock and November 4 retention stay. AEMB requires separate
 split-contig mapping and is not E024's means. Defer SemiBin2 fitting; check existing
 E009 BAM integrity on boot, and choose a target-resolving stronger reference after
 the Oral information result. Local contracts pass; no native result is implied.
+
+## E026 coherent fixed-learning evidence/bin construction, October 29, 2026
+
+The owner invoked [E025's next preparation](../../experiments/E025-joint-distance-retrieval/OPERATIONS.md#exact-following-prompt)
+and expressly made runtime/cost forecasts flexible within reasonable complete
+Free Trial coverage. [AGENTS](../../AGENTS.md) now owns that standing direction;
+old frozen limits/journals remain historical evidence, not a reason to weaken
+science or require another budget question. Explicit preparation-only, credit,
+scientific/resource/acquisition and November 4 retention boundaries still apply.
+
+[E026](../../experiments/E026-calibrated-evidence-fusion/design.md) implements the
+recommended coherent upgrade locally. It calibrates native/TNF/measured-parent
+depth ranks on a source-blind local/random reference population, keeps observed
+zero-positive contrasts, gives co-absence/missing channels neutral rank on a fixed
+denominator, and uses reliable reciprocal long-contig cores. Soft physical-marker
+breadth/excess and moment-based context coherence select supported whole/child
+alternatives with a prospective fragmentation margin. A single fixed-core voting
+pass recruits supported DNA, accumulates a conservative reliable-copy guard and
+otherwise abstains. Short, marker-negative, measured-zero and unknown/non-target
+DNA remain fully accounted for; the 2,500 bp scaffold cutoff is not product
+eligibility. Learned/TNF/depth channels can be correlated, and these are heuristic
+ranks/quality proxies, not biological probabilities or measured coverage variance.
+
+This directly addresses E025's observed unequal evidence and whole-forest selection
+problem without changing E022/E019 learning, source bytes, native geometry or marker
+calls. It is a bundle, not isolated causal proof. The [single joint protocol](../../experiments/E026-calibrated-evidence-fusion/protocol.json)
+requires no R95/target regression versus E023 E009 and E025 Oral, plus a practical
+0.5-point R95 gain in one community for KEEP; all losses and E019 Oral's stronger
+33-target-90 context remain visible. Full 156/799 denominators, conservative E009
+v2/N quarantine and separate Oral origin/shared sensitivity stay unchanged.
+
+Primary/source checks reuse the completed reviews and inspect MetaBAT2 rank/OR-depth
+semantics and SemiBin graph agreement, without copying their variance likelihoods
+or claiming reproduced performance. Distinct-channel agreement is not statistical
+independence. The original slow draft interpolation/query-heap/fixture failures
+remain logged; an allocation-free equivalent kernel and tested serial native query
+path preserve score tolerances. New collector/review adapters explicitly deliver
+supervision controls and restore through byte-bound local mappings, rather than
+rewriting native receipts or claiming the old Mac model reload passed.
+
+Depth-enabled learning is still the strongest alternative if this coherent cached
+block cannot use the measurements without excessive recovery losses. A bigger
+context/GLM model, a stronger external reference and more data remain justified
+alternatives when they can change a decision; do not add them to this block or
+turn the marker/graph work into a compulsory perfection gate. Both communities
+are development and use different upstream learners. Reuse accepted skin source
+admission; skin stays unscored pending remaining uniqueness/near/pretraining,
+genuine contig depth, protocol/evaluator and separate cost/retention admission.
+
+[Operations](../../experiments/E026-calibrated-evidence-fusion/OPERATIONS.md) prepares
+one separately authorized cached comparison. Initial $6 / 12 hours with 12.25-hour
+STOP has a $5.11758 dated-rate upper forecast; it may be justifiably revised under
+the standing rule with fresh complete credit/price/delay/headroom checks and
+consistent guards. No community result, cloud start, external tool, data acquisition,
+new resource or retention extension occurred in this local implementation task.

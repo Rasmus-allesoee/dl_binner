@@ -730,3 +730,18 @@ joint KEEP failure is preserved; no truth-selected threshold/router or new produ
 family claim. Local implementation/preparation is the next proposed scope, with
 separately admitted cached execution and unchanged November 4 retention. Skin
 stays unscored with all source/depth/overlap/truth/cost dependencies.
+
+### October 29, 2026: E026 coherent evidence/bin construction prepared locally
+
+[E026's prospective block](../../experiments/E026-calibrated-evidence-fusion/design.md)
+implements calibrated, availability-aware fusion, reliable cores, soft physical-
+marker/context whole-child selection and conservative recruitment, holding accepted
+learning/vectors fixed. Real tiny contracts cover the actual compiled metric/query,
+whole/child selection, complete DNA, paired core/final IDs, restore-only readers,
+serial partial/no-op DAG and isolated external-data review. No new community
+outcome resolves Q001/Q003/Q005. One joint development comparison is prepared with
+full denominators and no truth-selected router; depth-enabled learning remains the
+strongest alternative if this coherent downstream block cannot improve recovery
+without excessive trade-offs. Runtime/cost forecasts are flexible under the owner's
+standing credit-only direction, not reasons to weaken science. Community/cloud
+execution is not authorized by preparation; November 4 retention remains.

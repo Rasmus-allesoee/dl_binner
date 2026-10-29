@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-29",
+  "kind": "Targeted primary/source interpretation, not executed external comparison",
+  "files": [
+    {
+      "tool": "MetaBAT2",
+      "path": "agent_context/tools_repo/metabat/src/metabat2.cpp",
+      "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/metabat",
+      "commit": "8eb96023ef627d1955c05e3aca348c84b8757914",
+      "bytes": 77442,
+      "sha256": "20c6105f5c4d6dd8de05864cbd8da5cc11f2d99198576b8cfd39fdde0dd2d2ee",
+      "matches_independent_root_commit": true,
+      "scope": "790-870 rank normalization/geometric fusion; 1487-1506 OR-positive abundance; variance likelihood not copied"
+    },
+    {
+      "tool": "SemiBin",
+      "path": "agent_context/tools_repo/SemiBin/SemiBin/cluster.py",
+      "root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/SemiBin",
+      "commit": "f7c45dcbcdfa81e8fbc3e08b04c54683122e72d6",
+      "bytes": 13700,
+      "sha256": "473f4c488c3f2c79c54003336b96ffc2d013eee35de110947234d4d5cf639a00",
+      "matches_independent_root_commit": true,
+      "scope": "64-166 learned/raw graph intersection and coverage-variance limitation"
+    }
+  ],
+  "primary_urls": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6662567/",
+    "https://www.nature.com/articles/s41467-022-29843-y",
+    "https://pynndescent.readthedocs.io/en/stable/api.html"
+  ],
+  "rule": "Empirical calibration and independent context support; zeros not missing; our thresholds are prospective heuristics, not copied probability or universal marker rules",
+  "reused_reviews": [
+    "docs/evidence/2026-09-30-binner-design-review.md",
+    "docs/evidence/2026-09-30-architecture-reassessment.md",
+    "docs/evidence/2026-10-08-competitive-binner-study.md",
+    "docs/evidence/2026-10-29-e025-depth-evidence-and-next-block.md"
+  ],
+  "current_public_cost_sources": [
+    "https://cloud.google.com/compute/disks-image-pricing",
+    "https://cloud.google.com/storage/pricing",
+    "https://docs.cloud.google.com/free/docs/free-cloud-features"
+  ],
+  "cost_qualification": "Public pages checked October29; exact E2/current account Catalog/credit gate remains required before future execution; use dated October28 account Catalog only as forecast input"
+}

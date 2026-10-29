@@ -1,6 +1,6 @@
 # Working with the Research Record
 
-Established: 2026-09-16. Updated: 2026-10-14. This is the operating convention; [D001](decisions/D001-research-record.md) records its rationale.
+Established: 2026-09-16. Updated: 2026-10-29. This is the operating convention; [D001](decisions/D001-research-record.md) records its rationale.
 
 ## Sources of truth
 
@@ -88,11 +88,21 @@ owner authentication and app setup may require exact owner actions. Record what
 actually ran locally, over SSH and through the Codex app separately. Infrastructure
 setup is not scientific execution or benchmark admission.
 
+October 29 standing authorization: runtime/cost forecasts are flexible within an
+authorized scope. Choose and record a scientifically adequate envelope with
+headroom; increase it without another permission loop when fresh credit/product/
+delay/full-cost checks establish reasonable complete Free Trial coverage. Do not
+weaken science to meet an old estimate. Explicit preparation-only boundaries,
+frozen scientific rules, resource/acquisition scope and retention dates still
+apply. Real-money or unclear/uncovered spending remains prohibited. Older run
+limits are preserved historical evidence; [AGENTS](../AGENTS.md) owns the current
+durable rule.
+
 For substantial multi-stage research work, prefer Snakemake with tested helpers.
 Do not add a workflow engine to settled small preflights for ceremony. Keep actual
 CPUs/RAM, effective tool/pool/loader budgets, stage logs, native errors, progress,
 exit status, byte identities and monetary/allocation accounting. Use progress-aware
-stall detection; one agreed overall cost ceiling must match measured workload.
+stall detection; the recorded execution envelope must match measured workload.
 A snapshot/copy is not needed merely because UCloud needed one.
 
 Use the owner's current high-performance purpose in PROJECT_INTENT. The accepted

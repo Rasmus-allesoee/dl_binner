@@ -1,0 +1,150 @@
+{
+  "kind": "E026 explicit fixed-learning in-place reuse",
+  "units": {
+    "E009-E022": {
+      "embeddings": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/embeddings.npz",
+      "graph": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/group/graph.npz",
+      "marker_evidence": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json",
+      "features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "fasta": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+      "receipt": null
+    },
+    "oral-E019": {
+      "embeddings": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/embeddings.npz",
+      "graph": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/group/graph.npz",
+      "marker_evidence": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json",
+      "features": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz",
+      "fasta": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+      "receipt": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/rebind.json"
+    }
+  },
+  "files": {
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/embeddings.npz": {
+      "bytes": 21880578,
+      "sha256": "0c33748fa4b66309caafdb1e559ef8c75dc1f8d8819d8f8d046dbdb184d6442e"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/embeddings.json": {
+      "bytes": 1316,
+      "sha256": "9ee29b1b4c8d0f71cd65a1f62334080ef5f09f1213af28487a86939df6848beb"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/group/graph.npz": {
+      "bytes": 32792381,
+      "sha256": "7e220fd760f76c16742656df778ab2cc2048a8c02e607745ad0fcd6c82422034"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/group/graph.json": {
+      "bytes": 2076,
+      "sha256": "64533b7c3cab3ab014203987cf01f726808ca19cb960a4d8688259f00b310081"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json": {
+      "bytes": 1301132,
+      "sha256": "035d88e159a8c6aa29580c4fec28a3f0c470e553f97a0f9a9d04cf6a76b44c05"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz": {
+      "bytes": 42384557,
+      "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.json": {
+      "bytes": 1103,
+      "sha256": "2b24603bd278f81178b3b843faeb961fb27061accb0df3f7968d9d5a937f9a8a"
+    },
+    "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa": {
+      "bytes": 237732361,
+      "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/embeddings.npz": {
+      "bytes": 186037411,
+      "sha256": "812791fabd8e371b1f35af352b96b86183805f1b3ebb730a0b99c3897dc52986"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/embeddings.json": {
+      "bytes": 647,
+      "sha256": "562d778a1251d6a945c2349784483f614eb9327ff333ee5b6a0acba1ec88e0c3"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/group/graph.npz": {
+      "bytes": 258146520,
+      "sha256": "b484c74e18560210a32ff4b3a96d4464573b35bf8a72a106f19b12a56590ecdd"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/group/graph.json": {
+      "bytes": 5587,
+      "sha256": "a95599d64748db676b3f2d2c0ed1d4a45af4c3e5951cb1c1838fe4b48884b5c0"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json": {
+      "bytes": 26815264,
+      "sha256": "e8d44c1dc18ea9f55e70548fb4de01581c4639834e87db720134e43c2127b8f1"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.npz": {
+      "bytes": 333765352,
+      "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.json": {
+      "bytes": 531,
+      "sha256": "d9a033ca2a3805fac0d88bffbad234e81e932a63b4b056711b9efdbcfb5d850c"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna": {
+      "bytes": 1757466319,
+      "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/gates/runtime.json": {
+      "bytes": 21911,
+      "sha256": "0e1794aafa6aeb3e9a10a56d8addc35652760c207d3332075d0bfdce7339f4d2"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.npz": {
+      "bytes": 419791282,
+      "sha256": "80d30e98c98642cf4dca5aad1b76a061065b3f93e92bab85e6b1ada5e0b4ac76"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.json": {
+      "bytes": 1442,
+      "sha256": "a057326c19bcd7365bdf4066b84920f2a6bf1a2c7fb694757b7ac7c7143e7162"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/combined/depth.tsv": {
+      "bytes": 124584683,
+      "sha256": "4fa47b725701d73feeba60bce9e17e884e10db994d28978e2f3d3682a2ae8da4"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/combined/depth.tsv.receipt.json": {
+      "bytes": 1904,
+      "sha256": "8c3ef5cd110039d8153e65d40e8dcc76317ff23dda432f581cf5d9e970b840de"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz": {
+      "bytes": 338210613,
+      "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.json": {
+      "bytes": 852,
+      "sha256": "b03907a416f4cfe146a42ce461cd2a937e011a5299382d0e6984c62c5b5c780a"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/rebind.json": {
+      "bytes": 3706,
+      "sha256": "bce1756e31dbe524ee9f09fbfe316febda61ee7a8e05536305a959935b714b22"
+    }
+  },
+  "archives": [
+    {
+      "path": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r5/collection/e024-evidence.tar.gz",
+      "bytes": 930977463,
+      "sha256": "08e9d9fc0a6aad12134226b4371ca993c140f415dfc2071060aa3295d9ccd20b",
+      "actual_work": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work",
+      "uri": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r5/e024-evidence.tar.gz"
+    },
+    {
+      "path": "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/collection/e025-evidence.tar.gz",
+      "bytes": 954145356,
+      "sha256": "2d02ccc8d0527b5604eccde9573ee9a270d9db3865338374fd1a8b9c5aa19b3d"
+    }
+  ],
+  "old_E025": {
+    "receipt": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/rebind.json",
+    "graph": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/group/graph.npz",
+    "evidence": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json",
+    "output": "/srv/dl_binner/experiments/e025/joint-20261028T225703Z-cea5f9e/work/group"
+  },
+  "fast_validator": {
+    "path": "scripts/e025_cache_audit.py",
+    "bytes": 6039,
+    "sha256": "d57c025239669e7ab91954c30199ce9cb5e0b96a1ee1a757639647ba53ec90b6",
+    "scope": "Explicit new source/reuse binding; actual tiny legacy reload and equivalence gates. Old community hierarchy/choices are not candidate inputs and are not replayed."
+  },
+  "runtime_reference": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/gates/runtime.json",
+  "numerical_python": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+  "workflow_python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+  "no_fallback": true,
+  "scope": "Only actual retained consumers and runtime receipts are hashed; native old baseline partitions are preserved but unused, old summaries remain byte-bound in protocol"
+}

@@ -1,0 +1,114 @@
+{
+  "kind": "E026 prospective two-development-community fixed-learning grouping bundle",
+  "status": "FROZEN_BEFORE_NEW_COMMUNITY_OUTCOMES",
+  "axes": {
+    "E009-E022": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ],
+      "core_rows": 9812
+    },
+    "oral-E019": {
+      "rows": 1286547,
+      "bp": 1669981123,
+      "eligible": 508763,
+      "samples": [
+        "oral_sample_6",
+        "oral_sample_7",
+        "oral_sample_8",
+        "oral_sample_13",
+        "oral_sample_14",
+        "oral_sample_15",
+        "oral_sample_16",
+        "oral_sample_17",
+        "oral_sample_18",
+        "oral_sample_19"
+      ],
+      "core_rows": 60211
+    }
+  },
+  "anchors": {
+    "E009": {
+      "targets": 156,
+      "macro_R95": 0.11549198423927766,
+      "bp_weighted_R95": 0.1041634228737078,
+      "at_least_50_percent": 19,
+      "at_least_90_percent": 9,
+      "targets_with_any_passing_bin": 24
+    },
+    "oral": {
+      "targets": 799,
+      "reference_bp": 2083072211,
+      "bp_weighted_R95": 0.08144060590129969,
+      "macro_R95": 0.06782181159289992,
+      "at_least_50_percent": 58,
+      "at_least_90_percent": 22
+    }
+  },
+  "full_reference_bp": {
+    "E009": 554661890,
+    "oral": 2083072211
+  },
+  "baseline_summaries": {
+    "experiments/E023-adaptive-density-bins/comparison-review.json": {
+      "bytes": 135634,
+      "sha256": "cb387ada3b948e9d2c2e2c17e0892a20988d33d64eae3f778a72a8970d8744eb"
+    },
+    "experiments/E023-adaptive-density-bins/comparison-targets.tsv": {
+      "bytes": 51055,
+      "sha256": "e39e45692e09d35126034102af0a77470433df0d1c7dbf5399d17da282b9caf8"
+    },
+    "experiments/E025-joint-distance-retrieval/comparison-review.json": {
+      "bytes": 64463,
+      "sha256": "d9f782e4db3ca7147098c6225ba8c00060f1673c6082110b656790458e4a040d"
+    },
+    "experiments/E025-joint-distance-retrieval/comparison-targets.tsv": {
+      "bytes": 32118,
+      "sha256": "d91c5e2e4cdba4c76664a40db3ad013ae9d8eb7c9ce6c535c6edfedad1a4e22f"
+    }
+  },
+  "primary": "Full-reference sequence R95 and target-50/90; E009 conservative v2 / 3.3034% N quarantine; Oral provided-origin plus separate known-shared sensitivity",
+  "keep": {
+    "no_R95_regression_both": true,
+    "R95_gain_at_least_one": 0.005,
+    "no_target50_or_target90_regression_both": true
+  },
+  "modify": "If not KEEP and either community improves R95 or target-50/90",
+  "abandon": "Neither community improves R95 or target-50/90; this frozen policy only",
+  "context": "E019 Oral target90=33 remains reported; learners differ across communities; both development, not independent confirmation",
+  "arms": [
+    "core",
+    "recruited"
+  ],
+  "truth_selects_features_parameters_K_or_bins": false,
+  "model_changes": false,
+  "old_rescoring": false,
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "planning_core_counts_from": "Summed all origin/status/marker strata in accepted E023/E025 population tables, without conditioning on outcomes; native verifies actual length/valid arrays",
+  "confirmation": {
+    "choice": "CAMI II Toy HMB skin, still unscored; source-origin artifacts already admitted, unique-source/depth/protocol/cost dependencies remain",
+    "source_record": "experiments/E023-adaptive-density-bins/confirmation-plan.json",
+    "source_binding": {
+      "bytes": 2110,
+      "sha256": "6b51b30616c853714ee3b22a23fe23140f76406c2bd7a413e4780e58463b3425"
+    },
+    "original_record": "experiments/E021-frozen-sequence-hybrid/confirmation-plan.json",
+    "original_binding": {
+      "bytes": 3427,
+      "sha256": "1184670724ea373446c2683b475147ea39d0a5fbf44d437ccebb6ac4980bae37"
+    },
+    "new_DNA_or_confirmation_execution": false
+  }
+}

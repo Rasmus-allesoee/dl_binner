@@ -36,6 +36,7 @@ reproduced result of this project.
 - [E024: measured oral coverage and fixed-learning information](E024-oral-measured-coverage/README.md)
 
 - [E025: direct joint-distance retrieval on accepted Oral coverage](E025-joint-distance-retrieval/README.md)
+- [E026: calibrated evidence fusion and biological bin construction](E026-calibrated-evidence-fusion/README.md)
 
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 

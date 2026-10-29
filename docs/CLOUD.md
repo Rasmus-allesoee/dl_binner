@@ -1,5 +1,17 @@
 # Google Cloud workspace operations
 
+**October 29 preparation: E026 is a new local-only candidate.**
+[Its operations](../experiments/E026-calibrated-evidence-fusion/OPERATIONS.md)
+prepare a separately priced cached comparison; this task starts no VM/community
+work and renews no storage. The owner's standing direction now treats runtime/
+cost estimates as flexible planning envelopes: record a justified revision and
+continue within an authorized scope when fresh complete financial checks show
+reasonable Free Trial coverage. Scientific quality takes priority over an old
+small estimate. No real-money/uncovered spending, frozen-rule relaxation or
+implicit acquisition/resource/retention expansion. Historical limits below remain
+dated execution evidence. [AGENTS](../AGENTS.md) and [WORKING](WORKING.md) own the
+current general rule. Existing retention still ends **November 4, 00:00 Copenhagen**.
+
 **October 29: E025 SUCCESS, independently verified TERMINATED, biological MODIFY.**
 [Inspection](../experiments/E025-joint-distance-retrieval/inspection-observed.json)
 for `joint-20261028T225703Z-cea5f9e` verifies all six gates, four serial rules and

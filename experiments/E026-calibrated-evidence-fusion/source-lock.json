@@ -1,0 +1,140 @@
+{
+  "kind": "E026 exact prospective research overlay and execution source",
+  "base_commit": "3daf5a5f81e1525491fb506454ab6e378302c275",
+  "scientific_policy": "One fixed-learning calibrated core/recruitment rule; no community outcomes before freeze",
+  "files": {
+    "experiments/E026-calibrated-evidence-fusion/Snakefile": {
+      "bytes": 1892,
+      "sha256": "3f83657a55f08fd1f9616fae97b82922f303eded7a87ca00d1b1fb52ba32f0a4"
+    },
+    "experiments/E026-calibrated-evidence-fusion/design.md": {
+      "bytes": 8690,
+      "sha256": "e2d24875f87c572e4b230c76300a3e9325b0e24d5cd09c87954d453d0b283d2c"
+    },
+    "experiments/E026-calibrated-evidence-fusion/policy.json": {
+      "bytes": 858,
+      "sha256": "e71c73bbe115661e46cbf0c0c24daf2acd9644c33354699f287f26ab0782409c"
+    },
+    "experiments/E026-calibrated-evidence-fusion/protocol.json": {
+      "bytes": 4227,
+      "sha256": "13678a5886d8f2c834458326a201eb1626e3547149bdb0f8dc5d0100a4068209"
+    },
+    "experiments/E026-calibrated-evidence-fusion/resource-plan.json": {
+      "bytes": 6176,
+      "sha256": "25e5aee9eb1182f8a41b5d439cb017068f241757bac6374b23be0b8337fabbbc"
+    },
+    "experiments/E026-calibrated-evidence-fusion/reuse-lock.json": {
+      "bytes": 9015,
+      "sha256": "e7ba86dec59ce9c35c6801854b0f0ac111d54804c9eaa5c7180a2c5a38957063"
+    },
+    "experiments/E026-calibrated-evidence-fusion/runtime-plan.json": {
+      "bytes": 2570,
+      "sha256": "5d36cabedf67c2aaba7c754954ecf65fbb329c816c9f9b992e78df1c937149a1"
+    },
+    "experiments/E026-calibrated-evidence-fusion/source-review.json": {
+      "bytes": 2252,
+      "sha256": "f0832edada01b4eaf038cd3ca3cddb968244a7ae9c5f20de89c823ba2fb97fcd"
+    },
+    "scripts/e025_cache_audit.py": {
+      "bytes": 6039,
+      "sha256": "d57c025239669e7ab91954c30199ce9cb5e0b96a1ee1a757639647ba53ec90b6"
+    },
+    "scripts/e026_arm.py": {
+      "bytes": 6433,
+      "sha256": "306833e90f17c4f4851f3621cd693cb9d27b086f229f266305842684427e0fc9"
+    },
+    "scripts/e026_collect.py": {
+      "bytes": 6611,
+      "sha256": "bc60c3e788061bffd98de832347c6306f0686735e8a464485b2daaca8bca82db"
+    },
+    "scripts/e026_control.py": {
+      "bytes": 9182,
+      "sha256": "080822175c0fe24baead3db1b1d93df93da3cbbaa447ce78874bebcbfe3c4109"
+    },
+    "scripts/e026_gates.py": {
+      "bytes": 4933,
+      "sha256": "99d90f3f4aefac3a16d570195a016fb0a7f01950dd876288884b83be0c5698ac"
+    },
+    "scripts/e026_information.py": {
+      "bytes": 13033,
+      "sha256": "86ce48d15793265e221a55a1c00f4db887bc7a0db4f110143b5e6b913da966be"
+    },
+    "scripts/e026_launch.py": {
+      "bytes": 14901,
+      "sha256": "050b96d2aa22ace4337e3fac9152f94c493336ba08fb8c8efdebc4033a77388d"
+    },
+    "scripts/e026_local.py": {
+      "bytes": 4227,
+      "sha256": "12403eae38c3978bfae2a0bd8833b30727be591dccdf30299c69931d3be65fda"
+    },
+    "scripts/e026_phase.py": {
+      "bytes": 18409,
+      "sha256": "155c5bf50a32ce2534e2a309496519e6d05156abafa06591f5ed0e16ab992407"
+    },
+    "scripts/e026_probe.py": {
+      "bytes": 3542,
+      "sha256": "a60ef5bf9700188737f11d84c88cb9cf5b72d2fe94440d52b59a9a5bc35af7bd"
+    },
+    "scripts/e026_review.py": {
+      "bytes": 17662,
+      "sha256": "29d72204a6b27360329a8f28573e2dc666f9acc0bb5de8771d4346b3eac0e409"
+    },
+    "scripts/e026_stage_review.py": {
+      "bytes": 11942,
+      "sha256": "7ec2d336c07c789e4eb59ef1c11a9d065c9432f927292e6c9a4cbecdc68a1f58"
+    },
+    "scripts/e026_tiny.py": {
+      "bytes": 9423,
+      "sha256": "83ed13e1769c235c9677703f1e32a0a7d40a5879baa9798e48b3f20fda1f6d68"
+    },
+    "src/dl_binner/calibrated/__init__.py": {
+      "bytes": 82,
+      "sha256": "5d229233984ba76495dd89ce41b90e86b2c2513f116118581464a22ccc85145c"
+    },
+    "src/dl_binner/calibrated/arrays.py": {
+      "bytes": 1966,
+      "sha256": "50d0994ace6f11f1b0fed14f628df9a82a59f6f316344862feca8dde7a796325"
+    },
+    "src/dl_binner/calibrated/fusion.py": {
+      "bytes": 11744,
+      "sha256": "7ec1d335fa4172aa6fdceeb8eb68af0fbbe60782eccd7a344f3b8cd85e02f88b"
+    },
+    "src/dl_binner/calibrated/grouping.py": {
+      "bytes": 14638,
+      "sha256": "0fa84b66931a481dfb8a480567518036a3f2e1e7fd63812602f3486785dcd2a2"
+    },
+    "src/dl_binner/calibrated/retrieval.py": {
+      "bytes": 8618,
+      "sha256": "3ae772511fd475d96e77ce6e1ce6d1f9bd28f36d651bc4c64e444cc779eff290"
+    },
+    "tests/test_e025_cache_audit.py": {
+      "bytes": 1363,
+      "sha256": "6630d84be0c7c71f6a5163e0ec73998e5ee78a84192112c2657b84f214bceada"
+    },
+    "tests/test_e026_fusion.py": {
+      "bytes": 17925,
+      "sha256": "0541a1bb189e0f6f24c9962e026e01e3ccd868537167d71332c0e4625277d931"
+    },
+    "tests/test_e026_operations.py": {
+      "bytes": 12909,
+      "sha256": "6c1a4b4d4c030038360b0ab4a76a5514f9cdace95f5572975882efca414ecd6b"
+    }
+  },
+  "inherited_locks": {
+    "experiments/E023-adaptive-density-bins/source-lock.json": {
+      "bytes": 43403,
+      "sha256": "fa7e55203409d32c1a3d9ba43ec8508f65ae741208a1506992c74c6d28a7c8f7"
+    },
+    "experiments/E024-oral-measured-coverage/source-lock.json": {
+      "bytes": 5288,
+      "sha256": "22643a866b0b33c5a03facc2cbf110b7ea821eb1cdf0a534995422a041cebcf3"
+    },
+    "experiments/E025-joint-distance-retrieval/source-lock.json": {
+      "bytes": 3119,
+      "sha256": "a168cff0169d21b3d85be23bfaf0dfc8bd49ead19e1a705e23058cc48f659501"
+    }
+  },
+  "inherited_unique_files": 333,
+  "operational_envelopes": "Initial source-bound guard; justified credit-covered revisions use a recorded new operational source/ledger and consistent tests/controls under standing owner authorization. Scientific policy/truth criteria stay fixed.",
+  "no_prior_scientific_source_rewritten": true
+}

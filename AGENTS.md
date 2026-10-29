@@ -235,6 +235,9 @@ scores omit a channel, audit their comparability across evidence-availability
 strata; absence of a contrast is not measured agreement. A measured positive
 versus zero contrast and co-absence can carry different evidence. Any change to
 that interpretation is a prospective scientific treatment, not a cache repair.
+Rank/quantile calibration states a relative scale under a declared reference
+population; it does not itself calibrate common-genome probability. Distinct
+learned/composition/depth channels can be correlated, not statistically independent.
 
 For reference-derived benchmark inputs, distinguish a verified simulator/source
 origin from DNA that uniquely identifies that origin. Preserve known alternative
@@ -374,6 +377,23 @@ eligibility/cost is unclear or spending could fall outside those credits. Budget
 alerts are notifications, not spending caps. Account for running idle time and
 storage while stopped; stop compute when unused and review credit expiry before
 retaining chargeable storage. No GPU infrastructure is implied by paid billing.
+
+Owner standing direction, October 29, 2026: runtime and monetary estimates are
+planning envelopes, not reasons to weaken a justified research treatment. Within
+an authorized task, agents may increase a runtime/cost envelope without another
+approval when fresh complete-cost checks show that all charges remain covered by
+Free Trial credits and are reasonable against the remaining credits, delayed
+usage and future project needs. Prefer scientific quality and a useful coherent
+upgrade over an arbitrary small ceiling or pessimistic forecast. Record the
+revised envelope, rationale, complete schedule, headroom and current financial
+evidence before the affected execution; update shutdown controls consistently.
+This direction does not authorize real-money charges, bypass uncertain credit
+coverage, alter frozen scientific criteria after outcomes, or override an explicit
+task exclusion such as preparation-only/no community execution. Resource changes,
+acquisition and retention dates remain within their separately authorized scope;
+cost flexibility alone does not renew storage. Historical frozen limits and
+failed limit journals remain execution evidence, not current global policy.
+Stop before uncovered/unclear spending or an excessive commitment.
 
 For authorized unattended VM work, make end-of-run shutdown independent of the
 chat/SSH connection and bind it to the intended run's process identity. Test live,

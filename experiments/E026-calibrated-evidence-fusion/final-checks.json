@@ -1,0 +1,35 @@
+{
+  "status": "PASS_LOCAL_PREPARATION_ONLY",
+  "date": "2026-10-29",
+  "documentation": {
+    "command": "python3 scripts/check_docs.py --check-context",
+    "maintained_documents": 116,
+    "local_links": 1637,
+    "present_source_fingerprints": 85,
+    "optional_missing_caches": 10,
+    "log": {
+      "path": "artifacts/e026-calibrated-evidence-fusion/preparation/doc-check-final.log",
+      "bytes": 729,
+      "sha256": "b1506766fc776d06aa14e42c618c6431c0dd509c3fe18eb109ad26c5d3f08ff8"
+    }
+  },
+  "source_freeze": {
+    "path": "artifacts/e026-calibrated-evidence-fusion/preparation/source-freeze-check.json",
+    "bytes": 626,
+    "sha256": "6536fd438a4901847c7f9feadb20a934ae061447bd773325ac13730dd6c7c0ec"
+  },
+  "inherited_science_files_unchanged": 333,
+  "new_frozen_files": 29,
+  "contracts": "18-test final full suite plus final actual gate-ready producer contract; all 19 pass; streamed two-unit DAG and corrupt-stream/no-ready integration pass",
+  "operational_envelope_and_rendered_consumer_AST_JSON": "PASS",
+  "no_new_community_or_paid_cloud_work": true,
+  "source_lock": {
+    "bytes": 5693,
+    "sha256": "7b8dc18d803ed266824b801449772b5017bb08cfd9ba3c153140d5af756fa7f9"
+  },
+  "local_observed": {
+    "bytes": 35086,
+    "sha256": "47ebd4de77fd245d842e111def322aaa1c2abfb904c1d80a08b32d1407fa05b2"
+  },
+  "git_diff_check": "PASS working and staged"
+}

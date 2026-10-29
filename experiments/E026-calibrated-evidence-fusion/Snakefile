@@ -1,0 +1,47 @@
+"""Two communities, four serial new rules each; no old science scheduled."""
+import json
+from pathlib import Path
+PLAN = str(Path(config['plan']).absolute())
+P = json.loads(Path(PLAN).read_text())
+PYTHON, WORKER = P['python'], P['worker']
+UNITS = ['E009-E022', 'oral-E019']
+ENGINEERING = '--engineering' if config.get('engineering') in [True, 'true'] else ''
+
+rule all:
+    input: expand('units/{unit}/audited/done.json', unit=UNITS)
+
+rule verify:
+    input: lambda w: [] if w.unit == UNITS[0] else ['units/'+UNITS[0]+'/audited/done.json']
+    output: 'units/{unit}/verified/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/{unit}-verify.log'
+    benchmark: 'benchmarks/{unit}-verify.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage verify {ENGINEERING} > {log:q} 2>&1'
+
+rule group:
+    input: 'units/{unit}/verified/done.json'
+    output: 'units/{unit}/group/completed.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/{unit}-group.log'
+    benchmark: 'benchmarks/{unit}-group.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage group {ENGINEERING} > {log:q} 2>&1'
+
+rule export:
+    input: 'units/{unit}/group/completed.json'
+    output: 'units/{unit}/export/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/{unit}-export.log'
+    benchmark: 'benchmarks/{unit}-export.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage export {ENGINEERING} > {log:q} 2>&1'
+
+rule audit:
+    input: 'units/{unit}/export/done.json'
+    output: 'units/{unit}/audited/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/{unit}-audit.log'
+    benchmark: 'benchmarks/{unit}-audit.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit {wildcards.unit:q} --stage audit {ENGINEERING} > {log:q} 2>&1'

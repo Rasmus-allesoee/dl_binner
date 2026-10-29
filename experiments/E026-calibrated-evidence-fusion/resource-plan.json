@@ -1,0 +1,145 @@
+{
+  "kind": "E026 complete prospective source-shaped resource/cost plan",
+  "date": "2026-10-29",
+  "status": "PREPARATION_ONLY_NO_LIVE_FINANCIAL_ADMISSION",
+  "limits": {
+    "seconds": 43200,
+    "provider_STOP_seconds": 44100,
+    "ceiling_USD": 6,
+    "numerical_threads": 4,
+    "tree_RSS_bytes": 26000000000,
+    "free_reserve_bytes": 26843545600,
+    "extra_bytes": 10737418240,
+    "compressed_export_bytes": 2147483648,
+    "logical_export_bytes": 6442450944,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "allocated_vCPUs": 8,
+    "WAN_review_bytes": 4294967296
+  },
+  "local_probe": {
+    "path": "artifacts/e026-calibrated-evidence-fusion/preparation/synthetic-probe-r2/probe.json",
+    "bytes": 1795,
+    "sha256": "d354dac5bd2f75da4fb97090d366715008f3a11d28e1ae5555f587860f66fbc2",
+    "measured_seconds": {
+      "calibration_seconds": 0.2272141950088553,
+      "index_build_seconds": 104.94694346901088,
+      "lazy_query_setup_seconds": 16.173349261007388,
+      "full_probe_query_seconds": 19.150450084998738
+    },
+    "synthetic": true,
+    "not_measured_Linux_community": true
+  },
+  "schedule": {
+    "planning_science_and_collection_seconds": 26309.36978606918,
+    "gate_sync_inventory_minutes": 60,
+    "additional_upload_readback_minutes": 30,
+    "complete_planning_hours": 8.808158273908106,
+    "overall_clock_hours": 12,
+    "provider_STOP_hours": 12.25,
+    "allocated_vCPU_hours_at_STOP": 98,
+    "construction_threads": 4,
+    "search_threads": 1,
+    "serial_units": true,
+    "full_native_gate_required": true,
+    "forecast_uncertainty": "One synthetic Mac shape, threefold scale/log-population headroom, cold compile included conservatively; not proof of full-scale runtime"
+  },
+  "memory": {
+    "expected_tree_RSS_GB": [
+      9,
+      14
+    ],
+    "sampled_ceiling_GB": 26,
+    "allocated_GiB": 32,
+    "estimate": "Full immutable feature/vector/graph arrays, transformed contexts, sparse query cache, core moments and Python assignment/vote records; not a measured community peak"
+  },
+  "disk": {
+    "new_working_space_cap_GiB": 10,
+    "expected_peak_GiB": [
+      6,
+      8
+    ],
+    "free_reserve_GiB": 25,
+    "minimum_native_release_free_GiB": 35,
+    "last_verified_free_GiB": 37.77103042602539,
+    "last_verified_asof": "E025 shutdown October28, not current headroom",
+    "new_disk_or_VM_needed": false,
+    "cleanup_assumed": false,
+    "old_inputs_or_evidence_deleted": false
+  },
+  "return_and_review": {
+    "compressed_cap_GiB": 2,
+    "logical_cap_GiB": 6,
+    "maximum_members": 20000,
+    "full_DNA_omitted_with_hash_locator": true,
+    "original_inputs_external_not_recopied": true,
+    "expected_new_nonDNA_logical_GiB": [
+      1.5,
+      3
+    ],
+    "expected_compressed_GiB": [
+      0.5,
+      1.3
+    ],
+    "compressed_not_guaranteed": true,
+    "one_unit_materialization_cap_GiB": 2,
+    "local_physical_free_reserve_GiB": 6,
+    "local_review_seconds": 7200,
+    "local_threads": 4,
+    "local_sampled_RSS_GB": 8,
+    "staging": "Verify every compressed byte/member/alias; prefer one-pass stdin stream with no compressed local copy when headroom is tight. Up to two bounded unit streams are priced; materialize <=2 GiB per unit, reuse accepted input copies with explicit byte maps, stream journals if needed; never rewrite receipts.",
+    "mandatory_actual_export_and_free_space_gate_before_download": true,
+    "new_query_cache_uncompressed_array_bytes": 737819248,
+    "new_forest_raw_upper_estimate_bytes": 60000000,
+    "WAN_upper_GiB_including_optional_two_streams": 4,
+    "compressed_archive_local_copy_required": false,
+    "additional_external_input_copy_gate": "Resolve already retained exact copies first; price/measure any required local cache staging separately before download, keeping 6 GiB physical reserve.",
+    "planned_combined_materialization_GiB": 2.5,
+    "E009_selected_member_upper_estimate_GiB": 0.5,
+    "combined_actual_inventory_and_external_copies_must_fit_free_space": true
+  },
+  "money": {
+    "compute_and_IP_USD": 3.3448095341757687,
+    "run_disk_attribution_USD": 0.5235616429940586,
+    "export_upper_USD": 0.48,
+    "metadata_readback_reserve_USD": 0.01,
+    "new_compact_storage_through_end_upper_USD": 0.009205392,
+    "operations_reserve_USD": 0.25,
+    "contingency_USD": 0.5,
+    "complete_gross_upper_USD": 5.117576569169827
+  },
+  "prices": {
+    "dated_exact_account_catalog": "2026-10-28T23:25:54.291243+00:00",
+    "receipt": "artifacts/e025-inspection/20261028T232534Z/current-prices.json",
+    "receipt_binding": {
+      "bytes": 8003,
+      "sha256": "665de7d1fb394fb5d1f6bb716739fc12fefbe463df283c94c3d0de44a77dfe5e"
+    },
+    "compute_and_IP_USD_hour": 0.2730456762592464,
+    "existing_disks_USD_month": 31.199999949850024,
+    "Standard_GCS_GiB_hour": 2.7397e-05,
+    "WAN_GiB_USD": 0.12,
+    "public_GCS_and_disk_pages_rechecked": "2026-10-29",
+    "live_account_SKUs_exchange_credit_balance_scope_expiry_and_pending_usage": "Required at execution; not refreshed or admitted during this local-only task",
+    "no_free_allowance_or_discount_assumed": true
+  },
+  "credit_context": {
+    "last_observed_DKK": 1759.02,
+    "last_observed_UTC": "2026-10-28T23:47:20Z",
+    "status_then": "Available",
+    "expiry_then": "2027-01-12",
+    "scope_then": "Certain usage / Free Trial / net pricing",
+    "delayed_usage_reserve_USD": 35,
+    "current_balance_unknown": true,
+    "not_an_invoice_or_approval": true
+  },
+  "retention": {
+    "ends": "2026-11-04T00:00:00+01:00",
+    "existing_all_storage_week_upper_USD": 7.713,
+    "with_new_compact_week_upper_USD": 7.722205392,
+    "original_storage_ceiling_USD": 8,
+    "fresh_inventory_all_versions_soft_deleted_and_approval_required": true,
+    "stopped_disk_cost_USD_month": 31.199999949850024,
+    "automatic_renewal_or_deletion": false
+  },
+  "standing_owner_direction": "Initial $6/12-hour envelope may be increased with a recorded rationale, complete fresh credit-only coverage, reasonable future-credit allocation and consistently updated/tested controls. No separate permission for that adjustment. Explicit preparation-only/retention/scientific exclusions remain; no real money."
+}

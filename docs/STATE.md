@@ -2,6 +2,48 @@
 
 Updated: October 29, 2026 (Copenhagen). This is the single current handoff.
 
+**E026 is locally implemented/prepared; no new community/cloud execution.**
+The [prospective design](../experiments/E026-calibrated-evidence-fusion/design.md)
+and [exact policy/protocol](../experiments/E026-calibrated-evidence-fusion/protocol.json)
+hold E022 E009 and E019 Oral learning/native vectors fixed, using admitted E024
+ten-depth Oral inputs. Empirical rank fusion keeps a fixed channel denominator,
+observed positive-versus-zero contrasts and neutral co-absence/missing evidence.
+Reliable 2,500 bp cores feed soft marker/coherence whole-child selection and one
+conservative recruitment pass; every shorter eligible parent remains a query and
+all original DNA remains assigned/unassigned/excluded. These are correlated
+evidence channels and heuristic biological proxies, not calibrated probabilities.
+
+The new source-blind recall gates apply to the new query-to-core population, not
+E025's all-eligible target pool. Original indices are not rebuilt. Sparse numeric
+artifacts bind an external full opaque axis without repeating giant Unicode
+arrays. Core/recruited partitions, core-to-final bin IDs, all alternatives/votes/
+reasons and full exports are retained. New review/collector adapters preserve old
+failed source and test external-data arguments, explicit controls, selective
+member/alias staging and unavailable native absolute paths without rewriting
+receipts. See [operations](../experiments/E026-calibrated-evidence-fusion/OPERATIONS.md)
+for actual tiny paths, remaining Linux/full-scale gates and the exact next prompt.
+
+The [complete resource plan](../experiments/E026-calibrated-evidence-fusion/resource-plan.json)
+forecasts 8.81 hours including headroom/setup/transfer: initially propose **12 hours /
+12.25-hour STOP / $6 gross**, quote **$5.11758** at dated account rates. Existing
+e2-standard-8 and 30/300 GiB disks only; four numerical threads, 26 GB sampled RSS,
+25 GiB reserve / 10 GiB growth, 2 GiB compressed / 6 GiB logical return. Actual
+credit/prices/eligibility/delayed usage/storage/headroom and changed native gates
+remain future admission; no live coverage or full-scale performance claim now.
+Owner's new standing direction permits justified reasonable credit-covered
+runtime/cost increases without another question, while preserving explicit task,
+scientific/resource/acquisition and retention boundaries. **November 4, 00:00
+Copenhagen** remains; stopped disks still cost about $31.20/month. No cleanup,
+provisioning or renewal is assumed.
+
+**Strongest next decision:** one separately authorized frozen cached E009/Oral
+comparison under joint recovery/target trade-offs, not a score grid or old rescore.
+This directly tests the observed downstream information/selection limitation;
+depth-enabled learning remains the strongest alternative if it cannot convert
+evidence into recovery without substantial losses. Both communities are development
+and differ upstream. Skin remains unscored with its remaining independent truth,
+genuine depth, overlap, cost/retention and prospective-protocol dependencies.
+
 **E025 completed and is independently reviewed: MODIFY. VM TERMINATED.**
 [Inspection](../experiments/E025-joint-distance-retrieval/inspection-observed.json),
 [results](../experiments/E025-joint-distance-retrieval/comparison-review.json),

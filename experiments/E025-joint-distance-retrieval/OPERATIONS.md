@@ -142,6 +142,11 @@ not rescored. Threshold HQ/MQ/LQ are secondary, not formal MIMAG HQ without RNA.
 
 ## Exact following prompt
 
+October 29 handoff: this local preparation is carried out in
+[E026](../E026-calibrated-evidence-fusion/OPERATIONS.md). The original prompt below
+and owner wording remain as the preparation scope; E026 owns the next proposed
+cached execution. No new community result is implied.
+
 Our goal is substantially closing the recovery gap. Read AGENTS, PROJECT_INTENT,
 STATE/CLOUD, D013/D015, the completed reviews and E025's verified inspection,
 comparison/target/availability results, source locks, next-block assessment and
@@ -206,8 +211,7 @@ or deletion is authorized. Keep skin/additional depth-enabled confirmation
 unacquired/unscored pending source/genome/replicon/molecule/taxonomy/near/pretraining
 and competitive uniqueness/ambiguity/depth/evaluator/cost/retention admission.
 Update records/check/commit with structured what changed/why; report what works,
-actual versus unavailable paths, scientific uncertainties, one next decision and
-the exact execution prompt.
+actual versus unavailable paths, scientific uncertainties, one next strongest decision and the exact execution prompt.
 
 ## Inspection prompt carried out in this task
 
