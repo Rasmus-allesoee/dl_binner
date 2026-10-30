@@ -4,8 +4,8 @@
   "status": "FROZEN_BEFORE_CHANGED_COMMUNITY_OUTCOMES",
   "files": {
     "experiments/E027-common-information-binner/Snakefile": {
-      "bytes": 13698,
-      "sha256": "5d88ec8dd090f589bbf3273e443815f91b25866b2b4cd9d60b08645884375420"
+      "bytes": 13697,
+      "sha256": "d7213a6d437b6f2961910c060267604e155aacb61a7c2a5d34490ccc494618a5"
     },
     "experiments/E027-common-information-binner/candidate-lock.json": {
       "bytes": 9341,
