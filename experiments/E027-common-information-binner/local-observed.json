@@ -1,0 +1,446 @@
+{
+  "kind": "E027 local installed engineering admission",
+  "status": "PASS_LOCAL_ONLY_NATIVE_REQUIRED",
+  "checked_epoch": 1793399467.329491,
+  "engineering_clock": {
+    "start_epoch": 1793394631.2902203,
+    "deadline_epoch": 1793405431.2902203,
+    "threads": 4,
+    "sampled_RSS_bytes": 8000000000,
+    "scope": "First local E027 engineering test through setup/checks/collection; three hours, standing reasonable-envelope direction; no community science",
+    "extra_owned_bytes": 4294967296,
+    "free_reserve_bytes": 6442450944
+  },
+  "steps": {
+    "all-final-contracts-r5": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;from pathlib import Path;r=Path.cwd();sys.path[:0]=[str(r/\"tests/product\"),str(r/\"tests\"),str(r/\"scripts\")];v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromNames([\"test_unified\",\"test_e027_operations\"]));sys.exit(not v.wasSuccessful())"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 80.56701036699997,
+        "peak_sampled_rss_bytes": 513200128,
+        "seconds_ceiling": 6625.166547060013,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 22746,
+        "sampled_cpu_seconds": 113.22000000000001,
+        "sampled_average_cpus": 1.4052898262484694,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      },
+      "receipts": {
+        "artifacts/e027-common-information-binner/preparation/all-final-contracts-r5/byte-observations.json": {
+          "bytes": 4283,
+          "sha256": "7ca145dec3298715722e5fac9c2a5962c4166986f199fcbcd62db634d3e93533"
+        },
+        "artifacts/e027-common-information-binner/preparation/all-final-contracts-r5/command.json": {
+          "bytes": 1028,
+          "sha256": "12af090066d485399cbfe8a6d38ca98076d08c604f00528853d08fa04e9faff5"
+        },
+        "artifacts/e027-common-information-binner/preparation/all-final-contracts-r5/completed.json": {
+          "bytes": 963,
+          "sha256": "892e50691ece89d2b838e7414f7a2e2c8451d272523ba22e26046b096d40ef0a"
+        },
+        "artifacts/e027-common-information-binner/preparation/all-final-contracts-r5/filesystem-after.json": {
+          "bytes": 198,
+          "sha256": "c06d6622d3c39cfe2035e7736ac178ec87bab1b396a6c68a8d410fbeeca54fe1"
+        },
+        "artifacts/e027-common-information-binner/preparation/all-final-contracts-r5/terminal.exit.json": {
+          "bytes": 886,
+          "sha256": "157ed41c0157d8863e63e6b347f8b789fd14ad73a7d1a738b1c4dd620eeb95ea"
+        }
+      }
+    },
+    "final-reuse-DAG-r5": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "scripts/e027_tiny.py",
+          "--root",
+          "artifacts/e027-common-information-binner/preparation/final-reuse-DAG-r5/dag",
+          "--workflow-python",
+          "artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+          "--metabat",
+          "artifacts/e011-cached-grouping-reference/envs/metabat2-2.18-osx/bin/metabat2"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 225.5947035019999,
+        "peak_sampled_rss_bytes": 379777024,
+        "seconds_ceiling": 7406.4722583293915,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 20935,
+        "sampled_cpu_seconds": 209.82999999999993,
+        "sampled_average_cpus": 0.9301193545004472,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      },
+      "receipts": {
+        "artifacts/e027-common-information-binner/preparation/final-reuse-DAG-r5/byte-observations.json": {
+          "bytes": 9617,
+          "sha256": "3406f187958772c9fedc97c1d437e7d7bead2e1c18447252af0c40334ea92f87"
+        },
+        "artifacts/e027-common-information-binner/preparation/final-reuse-DAG-r5/command.json": {
+          "bytes": 1025,
+          "sha256": "e7094cdae56572eb5d1c6796d360b1267dc3e4ca313520d5e2840c2fd219a48a"
+        },
+        "artifacts/e027-common-information-binner/preparation/final-reuse-DAG-r5/completed.json": {
+          "bytes": 971,
+          "sha256": "92f7e29174beb9209008cbd0945bc08e271e121b8b82674cf30f9f205e2fd387"
+        },
+        "artifacts/e027-common-information-binner/preparation/final-reuse-DAG-r5/filesystem-after.json": {
+          "bytes": 199,
+          "sha256": "16d9d8266182a91162e1d7e362151ef7fbc819b3d3de68d44d793e391fd192b9"
+        },
+        "artifacts/e027-common-information-binner/preparation/final-reuse-DAG-r5/terminal.exit.json": {
+          "bytes": 884,
+          "sha256": "7e76bccfa3c2f7e6310512cdc621058c1a2862ceea4a624a14f91ac3987fb415"
+        }
+      }
+    },
+    "owned-runtime-r5": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "scripts/e027_runtime.py",
+          "--base",
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+          "--reference",
+          "experiments/E022-marker-informed-learning/local-runtime.json",
+          "--candidate-lock",
+          "experiments/E027-common-information-binner/candidate-lock.json",
+          "--output",
+          "artifacts/e027-common-information-binner/preparation/owned-runtime-r5/runtime.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 23.22971017600139,
+        "peak_sampled_rss_bytes": 283066368,
+        "seconds_ceiling": 6766.599097251892,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 22572,
+        "sampled_cpu_seconds": 22.14,
+        "sampled_average_cpus": 0.9530898075031875,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      },
+      "receipts": {
+        "artifacts/e027-common-information-binner/preparation/owned-runtime-r5/byte-observations.json": {
+          "bytes": 1501,
+          "sha256": "58ea72f3043a8041aaa360ed39c2c7f49d037fbc32921c2e746d4b050d3800c7"
+        },
+        "artifacts/e027-common-information-binner/preparation/owned-runtime-r5/command.json": {
+          "bytes": 1108,
+          "sha256": "c63ab02cb4220849b5dea3e34d153d849a40e7498590504b6508c2c94ae0eb39"
+        },
+        "artifacts/e027-common-information-binner/preparation/owned-runtime-r5/completed.json": {
+          "bytes": 1044,
+          "sha256": "868c9b0215f95cf7e73704964ded04c3ee90dfbba8508edcfd64bb3301131f33"
+        },
+        "artifacts/e027-common-information-binner/preparation/owned-runtime-r5/filesystem-after.json": {
+          "bytes": 198,
+          "sha256": "b5aa01617642b175015468f90d3ce66a1bb2d63d21e76947cb5c60785f536bdd"
+        },
+        "artifacts/e027-common-information-binner/preparation/owned-runtime-r5/runtime.json": {
+          "bytes": 24765,
+          "sha256": "21d22873d70e3b7687412b2aebf0097a246e2e6aecbe4c29864b8cc19b1ecde4"
+        },
+        "artifacts/e027-common-information-binner/preparation/owned-runtime-r5/terminal.exit.json": {
+          "bytes": 953,
+          "sha256": "732a4dea8a18adf0f738c6c7a1061f55431bf095f336186075e94025dcf64bb2"
+        }
+      }
+    },
+    "synthetic-approximate-graph-r1": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "artifacts/e027-common-information-binner/preparation/env-r4/bin/python",
+          "-I",
+          "-B",
+          "scripts/e027_probe.py",
+          "--graph-probe",
+          "--output",
+          "artifacts/e027-common-information-binner/preparation/synthetic-approximate-graph-r1/graph-probe.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 50.960084912998354,
+        "peak_sampled_rss_bytes": 386990080,
+        "seconds_ceiling": 8608.497590303421,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 18992,
+        "sampled_cpu_seconds": 62.660000000000004,
+        "sampled_average_cpus": 1.2295897879090338,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      },
+      "receipts": {
+        "artifacts/e027-common-information-binner/preparation/synthetic-approximate-graph-r1/byte-observations.json": {
+          "bytes": 2943,
+          "sha256": "e1c792e46693ad997733108d8062dc076c940e201de42bf307d66075d61fdd0b"
+        },
+        "artifacts/e027-common-information-binner/preparation/synthetic-approximate-graph-r1/command.json": {
+          "bytes": 884,
+          "sha256": "1a6cbd6b470c963157fe652ff59abb897ae804edf250445b1709ff415061f604"
+        },
+        "artifacts/e027-common-information-binner/preparation/synthetic-approximate-graph-r1/completed.json": {
+          "bytes": 824,
+          "sha256": "f39ca55aabd0cbfb6e1b7a67b0f226f58faae163139b0b07d6629a786d08fa74"
+        },
+        "artifacts/e027-common-information-binner/preparation/synthetic-approximate-graph-r1/filesystem-after.json": {
+          "bytes": 198,
+          "sha256": "304110beae2d95e0e520afa926b8c46643f10403506c3fdd93ed788610cee26c"
+        },
+        "artifacts/e027-common-information-binner/preparation/synthetic-approximate-graph-r1/graph-probe.json": {
+          "bytes": 226607,
+          "sha256": "b453d3526cd6507f3c5a1337b9dc578a59ddbacaaa0fc84b909e6cc63f4921f3"
+        },
+        "artifacts/e027-common-information-binner/preparation/synthetic-approximate-graph-r1/terminal.exit.json": {
+          "bytes": 743,
+          "sha256": "9232c2a0da9d1404532e74fc3438f736a03a41e725eed6ce21c7297bdb0b1de3"
+        }
+      }
+    },
+    "full-width-probe-r1": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "artifacts/e027-common-information-binner/preparation/env-r1/bin/python",
+          "-I",
+          "-B",
+          "scripts/e027_probe.py",
+          "--output",
+          "artifacts/e027-common-information-binner/preparation/full-width-probe-r1/probe.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 13.000540102999366,
+        "peak_sampled_rss_bytes": 365375488,
+        "seconds_ceiling": 9779.8494181633,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 16182,
+        "sampled_cpu_seconds": 20.71,
+        "sampled_average_cpus": 1.5930107392401318,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      },
+      "receipts": {
+        "artifacts/e027-common-information-binner/preparation/full-width-probe-r1/command.json": {
+          "bytes": 846,
+          "sha256": "e320ddfd0f726481938184eea2f704df7bfeefb451fb2b60fdb2d4483cec9f37"
+        },
+        "artifacts/e027-common-information-binner/preparation/full-width-probe-r1/completed.json": {
+          "bytes": 769,
+          "sha256": "0b77a1850a0c55165804818b434438a6f64eb0855864487b723496b29b68ccd4"
+        },
+        "artifacts/e027-common-information-binner/preparation/full-width-probe-r1/filesystem-after.json": {
+          "bytes": 198,
+          "sha256": "4df29ddc1188b661820c7b2ea6ce5e41e5813db956bd65999e2656df05371943"
+        },
+        "artifacts/e027-common-information-binner/preparation/full-width-probe-r1/probe.json": {
+          "bytes": 1306,
+          "sha256": "96b2d5b1e6491bbab6d1358bcc245ae3964f72fef59ac54036d43548cda468fa"
+        },
+        "artifacts/e027-common-information-binner/preparation/full-width-probe-r1/terminal.exit.json": {
+          "bytes": 690,
+          "sha256": "47b178f04537049bb7fa45e2d3774c6278e185d6d1db7dec7561907e3175ee03"
+        }
+      }
+    },
+    "final-operational-r5": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e027_operations.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 0.7236126330008119,
+        "peak_sampled_rss_bytes": 36720640,
+        "seconds_ceiling": 7021.249767065048,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 22380,
+        "sampled_cpu_seconds": 1.0,
+        "sampled_average_cpus": 1.3819548670025472,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      },
+      "receipts": {
+        "artifacts/e027-common-information-binner/preparation/final-operational-r5/byte-observations.json": {
+          "bytes": 388,
+          "sha256": "bfc89e86c87a0f13d58e3990b944779976f4779c7a988d4667e1fb92981f4638"
+        },
+        "artifacts/e027-common-information-binner/preparation/final-operational-r5/command.json": {
+          "bytes": 826,
+          "sha256": "4e74989c19837112970ac2b65c84de6b037598ce4fa951db89c5ea9f87f72d36"
+        },
+        "artifacts/e027-common-information-binner/preparation/final-operational-r5/completed.json": {
+          "bytes": 758,
+          "sha256": "4f3661e102cad987063a51c79a293c9593b0034e75a76549ba1c218f3a00e322"
+        },
+        "artifacts/e027-common-information-binner/preparation/final-operational-r5/filesystem-after.json": {
+          "bytes": 197,
+          "sha256": "bc3318b174986beecbe532babcfe9813197ae527a3435410bdba2c3f6f4f6a75"
+        },
+        "artifacts/e027-common-information-binner/preparation/final-operational-r5/terminal.exit.json": {
+          "bytes": 669,
+          "sha256": "d8ef6e448962a91b987061d80e6c088d2bbab14edd178af218e4c06549ddd65f"
+        }
+      }
+    }
+  },
+  "additional_evidence": {
+    "artifacts/e027-common-information-binner/preparation/build-r5/packaging.json": {
+      "bytes": 17426,
+      "sha256": "91cb8871a90ff20a1fc85b6c8be9b8bc7fccb3ad8364dee2d1299fe3772c69d4"
+    },
+    "artifacts/e027-common-information-binner/preparation/package-install-r5.json": {
+      "bytes": 16383,
+      "sha256": "b3c37d76fb81c4189e1bfa2b3d377f610355409b066ea1871059ac00e5f82bec"
+    },
+    "artifacts/e027-common-information-binner/preparation/final-reuse-DAG-r5/dag/completed.json": {
+      "bytes": 47288,
+      "sha256": "30947b0c633e3ca5a544a5b7c722fe65f8752c7e34e4618f1266ffd0bbdd8166"
+    },
+    "artifacts/e027-common-information-binner/preparation/owned-runtime-r5/runtime.json": {
+      "bytes": 24765,
+      "sha256": "21d22873d70e3b7687412b2aebf0097a246e2e6aecbe4c29864b8cc19b1ecde4"
+    },
+    "artifacts/e027-common-information-binner/preparation/synthetic-approximate-graph-r1/graph-probe.json": {
+      "bytes": 226607,
+      "sha256": "b453d3526cd6507f3c5a1337b9dc578a59ddbacaaa0fc84b909e6cc63f4921f3"
+    },
+    "artifacts/e027-common-information-binner/preparation/full-width-probe-r1/probe.json": {
+      "bytes": 1306,
+      "sha256": "96b2d5b1e6491bbab6d1358bcc245ae3964f72fef59ac54036d43548cda468fa"
+    }
+  },
+  "preserved_failures": {
+    "contracts-r1": {
+      "artifacts/e027-common-information-binner/preparation/contracts-r1/tests.exit.json": {
+        "bytes": 937,
+        "sha256": "9fca184ab1dc6ad788be96a71336c6f172c6ed102f11cd8f465d171574f93105"
+      },
+      "artifacts/e027-common-information-binner/preparation/contracts-r1/tests.log": {
+        "bytes": 95,
+        "sha256": "d5f34520e5306b0a2761714231d16b19f4a19d60378808696809e077a2c3b56b"
+      }
+    },
+    "tiny-dag-r1": {
+      "artifacts/e027-common-information-binner/preparation/tiny-dag-r1/tiny.exit.json": {
+        "bytes": 1095,
+        "sha256": "1754ffbfe39333da4dd268a407d4d5e90c2e61d80de4ba4083055f5aacbfc067"
+      },
+      "artifacts/e027-common-information-binner/preparation/tiny-dag-r1/tiny.log": {
+        "bytes": 1082,
+        "sha256": "1bb02566a59627fbade2bc2c7355d5e37ac03e00d0086850ed237941361dae4f"
+      }
+    },
+    "installed-contracts-r1": {
+      "artifacts/e027-common-information-binner/preparation/installed-contracts-r1/completed.json": {
+        "bytes": 955,
+        "sha256": "4a219ea12b0718b5f96e6d9c2960d08157dbf9a6edb4dbf94b283087418e8d31"
+      },
+      "artifacts/e027-common-information-binner/preparation/installed-contracts-r1/tests.exit.json": {
+        "bytes": 955,
+        "sha256": "735f9c81533571ce8eb6c0e2dbaa99ea405a76162abd3aa32ca7bebac11d65af"
+      },
+      "artifacts/e027-common-information-binner/preparation/installed-contracts-r1/tests.log": {
+        "bytes": 104300,
+        "sha256": "1294e701c5835e7983404bd8df6131cf5d43836fa88ed998a5eba62aed89b827"
+      }
+    },
+    "installed-contracts-r2": {
+      "artifacts/e027-common-information-binner/preparation/installed-contracts-r2/byte-observations.json": {
+        "bytes": 3393,
+        "sha256": "1ebecb7ed249dd2c2907a2523b1b6483f9d977aedd0bb604978c3100b2bc1070"
+      },
+      "artifacts/e027-common-information-binner/preparation/installed-contracts-r2/command.json": {
+        "bytes": 827,
+        "sha256": "60af8905290169a1f3305ab83e09310b643e16a76fb82073a9fba4c00d73ae17"
+      },
+      "artifacts/e027-common-information-binner/preparation/installed-contracts-r2/completed.json": {
+        "bytes": 760,
+        "sha256": "c34cd0cd79f242bab470505d6aa4739eb7466358e8b9875bbdf57fc7d450f242"
+      },
+      "artifacts/e027-common-information-binner/preparation/installed-contracts-r2/filesystem-after.json": {
+        "bytes": 198,
+        "sha256": "a6fe3a821b98431d2536d2de1e95b5948269906b7e2b387422f675b07ce91737"
+      },
+      "artifacts/e027-common-information-binner/preparation/installed-contracts-r2/terminal.exit.json": {
+        "bytes": 671,
+        "sha256": "05bbebdda24cdcce83c6ea06942fe25101bb08f08ea0cd970d2448ac6972724c"
+      },
+      "artifacts/e027-common-information-binner/preparation/installed-contracts-r2/terminal.log": {
+        "bytes": 105675,
+        "sha256": "051b4e6596fdec028e48782b788d13ea50a319306dcd7e70a370aa6b97f8c890"
+      }
+    }
+  },
+  "actual": {
+    "installed_tests": 10,
+    "tiny_serial_DAG_steps": 35,
+    "exact_completed_resume": true,
+    "actual_learning_restore_contracts": 7,
+    "synthetic_approximate_graph_parents": 4096,
+    "all_populated_strata_recall": 1.0,
+    "owned_distributions": 41,
+    "owned_package_files": 62,
+    "real_tiny_teacher_and_student_both_modes_20_epochs": true,
+    "native_Metabat_positive_and_export": true,
+    "complete_DNA_export_and_measured_depth_rebind": true,
+    "no_community_fit_or_score": true
+  },
+  "mocked": [
+    "NumericExtractor frozen-GLM inference on tiny DNA; no new native GLM inference claimed",
+    "Hand-authored synthetic marker calls; existing native detection is not redone"
+  ],
+  "limits": {
+    "threads": 4,
+    "sampled_RSS_bytes": 8000000000,
+    "clock_seconds": 10800,
+    "total_owned_preparation_bytes_cap": 4294967296,
+    "free_reserve_bytes": 6442450944
+  },
+  "filesystem_now": {
+    "total": 499963174912,
+    "used": 486884552704,
+    "free": 13078622208
+  },
+  "limitations": [
+    "Mac Python 3.10.15 is not Linux Python 3.12 admission",
+    "Original failed Mac portability tolerance remains unchanged",
+    "Early OpenMP-warning zero-exit tests are rejected as runtime admission",
+    "Full-width synthetic forecast is not measured community duration",
+    "Early full-width probe has before/after disk snapshots, not later active byte guard"
+  ],
+  "native_science_plan": {
+    "new_fits": 3,
+    "identical_accepted_models_reused": 3,
+    "new_groupings": 6,
+    "one_Oral_MetaBAT2_reference": true
+  }
+}

@@ -411,3 +411,7 @@ This local candidate is not a product-default change or demonstrated recovery
 gain. See the experiment for knobs that are frozen scientific choices rather
 than a supported tuning surface, native admission pending, synthetic-vs-actual
 contracts, complete DNA exports and separately authorized comparison scope.
+
+## Common information candidate (E027, research API)
+
+The separately frozen [E027 protocol](../experiments/E027-common-information-binner/protocol.json) exposes `dl_binner.unified.cache`, `training`, `graph` and `grouping` in the built wheel. This experimental candidate is not a promotion over the accepted CLI baseline. The source-bound research DAG owns admission → fresh bootstrap → own-teacher pairs → marker student → identical graded grouping → complete assignment exports. Optional frozen GLM propagates through the whole information path. New manifests admit genuine depth to unchanged DNA arrays read-only; they never alter accepted caches. [Operations](../experiments/E027-common-information-binner/OPERATIONS.md) owns actual native/software checks and resource status.

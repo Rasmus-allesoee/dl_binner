@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-30",
+  "scope": "Targeted existing primary source reread, no external execution or new speed measurement",
+  "SemiBin_commit": "f7c45dcbcdfa81e8fbc3e08b04c54683122e72d6",
+  "SCGBinner_commit": "d5ad239af9a1445f0e454c4d4aa9307b922961a9",
+  "DCVBin_commit": "732ee4257f7da200994f4c105e9dacbc74242883",
+  "files": {
+    "agent_context/tools_repo/SemiBin/SemiBin/cluster.py": {
+      "bytes": 13700,
+      "sha256": "473f4c488c3f2c79c54003336b96ffc2d013eee35de110947234d4d5cf639a00"
+    },
+    "agent_context/tools_repo/SemiBin/SemiBin/self_supervised_model.py": {
+      "bytes": 5888,
+      "sha256": "49f9796c167e1e874de0071ae5b9765d993434ba6b530f56b0072d6f4c85ef4c"
+    },
+    "agent_context/tools_repo/SCGBinner/SCGBinner/simclr.py": {
+      "bytes": 9124,
+      "sha256": "c4a13a11120547843d91d3dd2cd0d00d91bfbe4c3cf005db1be4ac02947d4b83"
+    },
+    "agent_context/tools_repo/dcvbin/scripts/featureExtract_gpu_2.py": {
+      "bytes": 3239,
+      "sha256": "f0fb9982308e6a9cacaf80f7af1597877d77d030cc3f15dee47fdde0a50a9e18"
+    }
+  },
+  "observations": [
+    "SemiBin2 uses measured abundance in its encoder and intersects raw/learned support before weighted partitioning; does not validate our metric, loss or selection defaults.",
+    "SCGBinner uses multiview alignment and SCG-derived contrastive constraints; our conservative physical-call/protein/context guards preserve biological ambiguity, not a claim of identical algorithm.",
+    "DCVBin filtered >=2000 bp and used one orientation of one truncated parent, 5000 tokens, one parent per forward. Full E021 parent/crop/both-strand/chunk exposure is a different treatment; no numerical speed advantage was confirmed in the previous paper audit."
+  ],
+  "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10311329/",
+    "https://github.com/BigDataBiology/SemiBin",
+    "https://github.com/dengdengf/dcvbin/blob/732ee4257f7da200994f4c105e9dacbc74242883/scripts/featureExtract_gpu_2.py"
+  ],
+  "publication_fetch_limits": "MetaBAT Bitbucket README request timed out; reuse E011 pinned CLI/source/paper audit plus actual native 2.18 help/readers, rather than claim a newly read publisher page.",
+  "prior_reviews": [
+    "docs/evidence/2026-09-30-binner-design-review.md",
+    "docs/evidence/2026-09-30-architecture-reassessment.md",
+    "docs/evidence/2026-10-08-competitive-binner-study.md",
+    "docs/evidence/2026-10-25-dcvbin-efficiency-and-marker-learning.md",
+    "docs/evidence/2026-10-30-e026-recovery-and-common-version.md"
+  ]
+}

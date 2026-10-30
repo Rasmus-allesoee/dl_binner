@@ -1,0 +1,143 @@
+{
+  "kind": "Concrete next Oral GLM parity milestone, not implicit GPU execution",
+  "date": "2026-10-30",
+  "status": "IMPLEMENTED_GENERIC_HYBRID_PATH_NATIVE_ORAL_BANK_NOT_YET_PRESENT",
+  "order": "Next information block after this CPU comparison review; prepare exact-exposure batched extractor and native admission, not wait for a score threshold or defer indefinitely.",
+  "current_scope": "Three CPU arms plus one Oral MetaBAT reference; Oral is explicitly allowed no-GLM by owner for this comparison.",
+  "generic_candidate": "Same hybrid constructor/bootstrap/marker-proposal/student/grouping code supports any admitted ten-depth/opaque DNA axis; tiny GLM-on contracts pass with mocked model vectors. No native Oral inference claim.",
+  "selected_exposure": {
+    "minimum_parent_bp": 500,
+    "full_original_population_preserved": true,
+    "parent_and_every_usable_real_crop": true,
+    "both_strands": true,
+    "nonoverlapping_4000bp_chunks": true,
+    "attended_token_mean_including_special_tokens": true,
+    "dimensions": 768,
+    "float32": true,
+    "model_revision": "00e47f96cdea35e4b6f5df89e5419cbe47d490c6"
+  },
+  "workload": {
+    "parents": 508763,
+    "parent_bp": 1443827664,
+    "available_views": 2470549,
+    "exposed_bp": 2366088186,
+    "minimum_4000bp_chunks": 2707640,
+    "GPU_seconds_planning_projection": 219789.43651758353,
+    "forward_tokens_projection": 994274202.7577456,
+    "native_sample_forward_tokens": 3472161,
+    "native_sample_chunks": 2211,
+    "native_sample_views": 124,
+    "fixed_five_slot_vector_bytes": 7814599680,
+    "view_fraction": 1.0,
+    "exposure_fraction": 1.0,
+    "parent_bp_fraction_of_full_GSA": 0.8645772363020896,
+    "excluded_original_records": 777784,
+    "excluded_original_bp": 226153459
+  },
+  "cutoff_alternatives": {
+    "500": {
+      "parents": 508763,
+      "parent_bp": 1443827664,
+      "available_views": 2470549,
+      "exposed_bp": 2366088186,
+      "minimum_4000bp_chunks": 2707640,
+      "GPU_seconds_planning_projection": 219789.43651758353,
+      "forward_tokens_projection": 994274202.7577456,
+      "native_sample_forward_tokens": 3472161,
+      "native_sample_chunks": 2211,
+      "native_sample_views": 124,
+      "fixed_five_slot_vector_bytes": 7814599680,
+      "view_fraction": 1.0,
+      "exposure_fraction": 1.0,
+      "parent_bp_fraction_of_full_GSA": 0.8645772363020896,
+      "excluded_original_records": 777784,
+      "excluded_original_bp": 226153459
+    },
+    "1000": {
+      "parents": 215970,
+      "parent_bp": 1240650261,
+      "available_views": 1079839,
+      "exposed_bp": 1861623746,
+      "minimum_4000bp_chunks": 1316930,
+      "GPU_seconds_planning_projection": 154600.4508682524,
+      "forward_tokens_projection": 776024749.5389417,
+      "native_sample_forward_tokens": 3470805,
+      "native_sample_chunks": 2207,
+      "native_sample_views": 120,
+      "fixed_five_slot_vector_bytes": 3317299200,
+      "view_fraction": 0.4370846317964145,
+      "exposure_fraction": 0.7867938976303227,
+      "parent_bp_fraction_of_full_GSA": 0.7429127454873632,
+      "excluded_original_records": 1070577,
+      "excluded_original_bp": 429330862
+    },
+    "1500": {
+      "parents": 123037,
+      "parent_bp": 1128118673,
+      "available_views": 615181,
+      "exposed_bp": 1611530729,
+      "minimum_4000bp_chunks": 852272,
+      "GPU_seconds_planning_projection": 131079.65913102336,
+      "forward_tokens_projection": 666072852.6152954,
+      "native_sample_forward_tokens": 3470805,
+      "native_sample_chunks": 2207,
+      "native_sample_views": 120,
+      "fixed_five_slot_vector_bytes": 1889848320,
+      "view_fraction": 0.24900578778239169,
+      "exposure_fraction": 0.6810949560271377,
+      "parent_bp_fraction_of_full_GSA": 0.6755277993642327,
+      "excluded_original_records": 1163510,
+      "excluded_original_bp": 541862450
+    },
+    "2000": {
+      "parents": 82240,
+      "parent_bp": 1057905759,
+      "available_views": 411199,
+      "exposed_bp": 1464409113,
+      "minimum_4000bp_chunks": 648290,
+      "GPU_seconds_planning_projection": 120414.23671213145,
+      "forward_tokens_projection": 602026070.4691772,
+      "native_sample_forward_tokens": 3468402,
+      "native_sample_chunks": 2203,
+      "native_sample_views": 116,
+      "fixed_five_slot_vector_bytes": 1263206400,
+      "view_fraction": 0.16644033370720435,
+      "exposure_fraction": 0.6189156945479969,
+      "parent_bp_fraction_of_full_GSA": 0.6334836630365911,
+      "excluded_original_records": 1204307,
+      "excluded_original_bp": 612075364
+    }
+  },
+  "source_binding": {
+    "bytes": 4017,
+    "sha256": "2dae1be4c3db83554847ca7708d7f400c05a7257bea204888465255bff0dbd73"
+  },
+  "efficiency": "Length-bucket already tokenized chunks across parents/views, preserve source-view interval/hash and strand/pooling accounting; measure native dtype/kernel/batch equivalence and throughput before complete run. Batching speedup unmeasured.",
+  "rejected_shortcuts": [
+    "No truth-selected genome subset, which changes community difficulty, denominators and unsupervised competition.",
+    "No silent parent-vector substitution for crop DNA.",
+    "No claim that raising eligibility to 1000/1500/2000 bp is merely optimization; it loses exposed short DNA and changes the supported claim.",
+    "No claim DCVBin timing equals full bank timing."
+  ],
+  "resource_case": {
+    "dated_L4_USD_hour": 0.858624294,
+    "full_original_GPU_hour_projection": 61.05262125488431,
+    "old_rate_full_extraction_USD": 52.42126382182443,
+    "complete_dated_case_USD": [
+      65,
+      85
+    ],
+    "not_current_GPU_price_or_admission": true,
+    "fixed_slot_vector_bytes": 7814599680,
+    "future_required": [
+      "fresh credit/product/current GPU price/quotas/capacity",
+      "complete cumulative extraction+transfer+same-version bootstrap/student schedule",
+      "existing model/runtime identity and source/code/precision/pooling gates",
+      "actual original-disk headroom and safe regenerable cleanup before added disk",
+      "bounded disposable GPU worker/disk if original CPU disk cannot coexist, delete only after verified collection",
+      "finish before November 4 00:00 Copenhagen or obtain separate retention decision"
+    ]
+  },
+  "November4_boundary_unchanged": true,
+  "no_GPU_started": true
+}

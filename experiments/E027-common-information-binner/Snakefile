@@ -1,0 +1,347 @@
+"""Independent arms, serial four-core/26-GB cap; all ready rules are measured."""
+import json
+from pathlib import Path
+PLAN = str(Path(config['plan']).absolute())
+P = json.loads(Path(PLAN).read_text())
+PYTHON, WORKER = P['python'], P['worker']
+ENGINEERING = '--engineering' if config.get('engineering') in [True, 'true'] else ''
+
+rule all:
+    input: ['reference/done.json'] + ['units/'+u+'/audit/done.json' for u in P['units']]
+
+rule oral_reference:
+    output: 'reference/done.json'
+    priority: 100
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/oral-reference.log'
+    benchmark: 'benchmarks/oral-reference.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --reference {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_noGLM_admit:
+    output: 'units/E009-noGLM/admit/done.json'
+    priority: 30
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-noGLM-admit.log'
+    benchmark: 'benchmarks/E009-noGLM-admit.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-noGLM --stage admit {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_noGLM_teacher:
+    input: 'units/E009-noGLM/admit/done.json'
+    output: 'units/E009-noGLM/teacher/done.json'
+    priority: 30
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-noGLM-teacher.log'
+    benchmark: 'benchmarks/E009-noGLM-teacher.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-noGLM --stage teacher {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_noGLM_teacher_embed:
+    input: 'units/E009-noGLM/teacher/done.json'
+    output: 'units/E009-noGLM/teacher-embed/done.json'
+    priority: 30
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-noGLM-teacher-embed.log'
+    benchmark: 'benchmarks/E009-noGLM-teacher-embed.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-noGLM --stage teacher-embed {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_noGLM_teacher_graph:
+    input: 'units/E009-noGLM/teacher-embed/done.json'
+    output: 'units/E009-noGLM/teacher-graph/done.json'
+    priority: 30
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-noGLM-teacher-graph.log'
+    benchmark: 'benchmarks/E009-noGLM-teacher-graph.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-noGLM --stage teacher-graph {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_noGLM_pairs:
+    input: 'units/E009-noGLM/teacher-graph/done.json'
+    output: 'units/E009-noGLM/pairs/done.json'
+    priority: 30
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-noGLM-pairs.log'
+    benchmark: 'benchmarks/E009-noGLM-pairs.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-noGLM --stage pairs {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_noGLM_student:
+    input: 'units/E009-noGLM/pairs/done.json'
+    output: 'units/E009-noGLM/student/done.json'
+    priority: 30
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-noGLM-student.log'
+    benchmark: 'benchmarks/E009-noGLM-student.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-noGLM --stage student {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_noGLM_student_embed:
+    input: 'units/E009-noGLM/student/done.json'
+    output: 'units/E009-noGLM/student-embed/done.json'
+    priority: 30
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-noGLM-student-embed.log'
+    benchmark: 'benchmarks/E009-noGLM-student-embed.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-noGLM --stage student-embed {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_noGLM_student_graph:
+    input: 'units/E009-noGLM/student-embed/done.json'
+    output: 'units/E009-noGLM/student-graph/done.json'
+    priority: 30
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-noGLM-student-graph.log'
+    benchmark: 'benchmarks/E009-noGLM-student-graph.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-noGLM --stage student-graph {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_noGLM_group:
+    input: 'units/E009-noGLM/student-graph/done.json'
+    output: 'units/E009-noGLM/group/done.json'
+    priority: 30
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-noGLM-group.log'
+    benchmark: 'benchmarks/E009-noGLM-group.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-noGLM --stage group {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_noGLM_export:
+    input: 'units/E009-noGLM/group/done.json'
+    output: 'units/E009-noGLM/export/done.json'
+    priority: 30
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-noGLM-export.log'
+    benchmark: 'benchmarks/E009-noGLM-export.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-noGLM --stage export {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_noGLM_audit:
+    input: 'units/E009-noGLM/export/done.json'
+    output: 'units/E009-noGLM/audit/done.json'
+    priority: 30
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-noGLM-audit.log'
+    benchmark: 'benchmarks/E009-noGLM-audit.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-noGLM --stage audit {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_GLM_admit:
+    output: 'units/E009-GLM/admit/done.json'
+    priority: 20
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-GLM-admit.log'
+    benchmark: 'benchmarks/E009-GLM-admit.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-GLM --stage admit {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_GLM_teacher:
+    input: 'units/E009-GLM/admit/done.json'
+    output: 'units/E009-GLM/teacher/done.json'
+    priority: 20
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-GLM-teacher.log'
+    benchmark: 'benchmarks/E009-GLM-teacher.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-GLM --stage teacher {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_GLM_teacher_embed:
+    input: 'units/E009-GLM/teacher/done.json'
+    output: 'units/E009-GLM/teacher-embed/done.json'
+    priority: 20
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-GLM-teacher-embed.log'
+    benchmark: 'benchmarks/E009-GLM-teacher-embed.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-GLM --stage teacher-embed {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_GLM_teacher_graph:
+    input: 'units/E009-GLM/teacher-embed/done.json'
+    output: 'units/E009-GLM/teacher-graph/done.json'
+    priority: 20
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-GLM-teacher-graph.log'
+    benchmark: 'benchmarks/E009-GLM-teacher-graph.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-GLM --stage teacher-graph {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_GLM_pairs:
+    input: 'units/E009-GLM/teacher-graph/done.json'
+    output: 'units/E009-GLM/pairs/done.json'
+    priority: 20
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-GLM-pairs.log'
+    benchmark: 'benchmarks/E009-GLM-pairs.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-GLM --stage pairs {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_GLM_student:
+    input: 'units/E009-GLM/pairs/done.json'
+    output: 'units/E009-GLM/student/done.json'
+    priority: 20
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-GLM-student.log'
+    benchmark: 'benchmarks/E009-GLM-student.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-GLM --stage student {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_GLM_student_embed:
+    input: 'units/E009-GLM/student/done.json'
+    output: 'units/E009-GLM/student-embed/done.json'
+    priority: 20
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-GLM-student-embed.log'
+    benchmark: 'benchmarks/E009-GLM-student-embed.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-GLM --stage student-embed {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_GLM_student_graph:
+    input: 'units/E009-GLM/student-embed/done.json'
+    output: 'units/E009-GLM/student-graph/done.json'
+    priority: 20
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-GLM-student-graph.log'
+    benchmark: 'benchmarks/E009-GLM-student-graph.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-GLM --stage student-graph {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_GLM_group:
+    input: 'units/E009-GLM/student-graph/done.json'
+    output: 'units/E009-GLM/group/done.json'
+    priority: 20
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-GLM-group.log'
+    benchmark: 'benchmarks/E009-GLM-group.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-GLM --stage group {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_GLM_export:
+    input: 'units/E009-GLM/group/done.json'
+    output: 'units/E009-GLM/export/done.json'
+    priority: 20
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-GLM-export.log'
+    benchmark: 'benchmarks/E009-GLM-export.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-GLM --stage export {ENGINEERING} > {log:q} 2>&1'
+
+rule E009_GLM_audit:
+    input: 'units/E009-GLM/export/done.json'
+    output: 'units/E009-GLM/audit/done.json'
+    priority: 20
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/E009-GLM-audit.log'
+    benchmark: 'benchmarks/E009-GLM-audit.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit E009-GLM --stage audit {ENGINEERING} > {log:q} 2>&1'
+
+rule oral_noGLM_admit:
+    output: 'units/oral-noGLM/admit/done.json'
+    priority: 10
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/oral-noGLM-admit.log'
+    benchmark: 'benchmarks/oral-noGLM-admit.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit oral-noGLM --stage admit {ENGINEERING} > {log:q} 2>&1'
+
+rule oral_noGLM_teacher:
+    input: 'units/oral-noGLM/admit/done.json'
+    output: 'units/oral-noGLM/teacher/done.json'
+    priority: 10
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/oral-noGLM-teacher.log'
+    benchmark: 'benchmarks/oral-noGLM-teacher.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit oral-noGLM --stage teacher {ENGINEERING} > {log:q} 2>&1'
+
+rule oral_noGLM_teacher_embed:
+    input: 'units/oral-noGLM/teacher/done.json'
+    output: 'units/oral-noGLM/teacher-embed/done.json'
+    priority: 10
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/oral-noGLM-teacher-embed.log'
+    benchmark: 'benchmarks/oral-noGLM-teacher-embed.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit oral-noGLM --stage teacher-embed {ENGINEERING} > {log:q} 2>&1'
+
+rule oral_noGLM_teacher_graph:
+    input: 'units/oral-noGLM/teacher-embed/done.json'
+    output: 'units/oral-noGLM/teacher-graph/done.json'
+    priority: 10
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/oral-noGLM-teacher-graph.log'
+    benchmark: 'benchmarks/oral-noGLM-teacher-graph.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit oral-noGLM --stage teacher-graph {ENGINEERING} > {log:q} 2>&1'
+
+rule oral_noGLM_pairs:
+    input: 'units/oral-noGLM/teacher-graph/done.json'
+    output: 'units/oral-noGLM/pairs/done.json'
+    priority: 10
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/oral-noGLM-pairs.log'
+    benchmark: 'benchmarks/oral-noGLM-pairs.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit oral-noGLM --stage pairs {ENGINEERING} > {log:q} 2>&1'
+
+rule oral_noGLM_student:
+    input: 'units/oral-noGLM/pairs/done.json'
+    output: 'units/oral-noGLM/student/done.json'
+    priority: 10
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/oral-noGLM-student.log'
+    benchmark: 'benchmarks/oral-noGLM-student.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit oral-noGLM --stage student {ENGINEERING} > {log:q} 2>&1'
+
+rule oral_noGLM_student_embed:
+    input: 'units/oral-noGLM/student/done.json'
+    output: 'units/oral-noGLM/student-embed/done.json'
+    priority: 10
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/oral-noGLM-student-embed.log'
+    benchmark: 'benchmarks/oral-noGLM-student-embed.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit oral-noGLM --stage student-embed {ENGINEERING} > {log:q} 2>&1'
+
+rule oral_noGLM_student_graph:
+    input: 'units/oral-noGLM/student-embed/done.json'
+    output: 'units/oral-noGLM/student-graph/done.json'
+    priority: 10
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/oral-noGLM-student-graph.log'
+    benchmark: 'benchmarks/oral-noGLM-student-graph.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit oral-noGLM --stage student-graph {ENGINEERING} > {log:q} 2>&1'
+
+rule oral_noGLM_group:
+    input: 'units/oral-noGLM/student-graph/done.json'
+    output: 'units/oral-noGLM/group/done.json'
+    priority: 10
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/oral-noGLM-group.log'
+    benchmark: 'benchmarks/oral-noGLM-group.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit oral-noGLM --stage group {ENGINEERING} > {log:q} 2>&1'
+
+rule oral_noGLM_export:
+    input: 'units/oral-noGLM/group/done.json'
+    output: 'units/oral-noGLM/export/done.json'
+    priority: 10
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/oral-noGLM-export.log'
+    benchmark: 'benchmarks/oral-noGLM-export.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit oral-noGLM --stage export {ENGINEERING} > {log:q} 2>&1'
+
+rule oral_noGLM_audit:
+    input: 'units/oral-noGLM/export/done.json'
+    output: 'units/oral-noGLM/audit/done.json'
+    priority: 10
+    threads: 4
+    resources: mem_mb=26000
+    log: 'logs/oral-noGLM-audit.log'
+    benchmark: 'benchmarks/oral-noGLM-audit.tsv'
+    shell: '{PYTHON:q} -I -B {WORKER:q} --plan {PLAN:q} --unit oral-noGLM --stage audit {ENGINEERING} > {log:q} 2>&1'
+

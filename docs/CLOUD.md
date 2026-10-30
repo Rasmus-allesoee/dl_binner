@@ -1,5 +1,23 @@
 # Google Cloud workspace operations
 
+**October 30 E027 admission:** the new owner-authorized common-version comparison
+includes E009 GLM off/on and Oral no-GLM with actual ten-depth learning plus one
+native Oral MetaBAT2 reference. [E027 operations](../experiments/E027-common-information-binner/OPERATIONS.md)
+owns actual status; currently local checks are closing and the VM remains stopped.
+Three exact accepted E009 learning instances are verified/reused, three fits are
+new; all mode teacher/pair availability is declared. Current planning envelope
+24 hours / 24.25-hour STOP / $15 gross, full conservative quote $10.376; no resources
+or retention expanded. Fresh signed-in Welcome credit DKK 1,741.87 Available / 88%,
+January 12 expiry, Certain usage/net pricing, paid account, rounded cost/savings
+DKK 232 / net 0; usage can lag >24 hours, reserve $35. Fresh Catalog/account/project/
+resource/quota reads pass ordinary CPU/PD/GCS/IP/network coverage. All 198 Standard
+object versions total 66,646,333,937 bytes, soft-deleted zero; original storage
+week plus 3 GiB is conservatively $7.8295 < $8. **November 4, 00:00 Copenhagen**
+remains; stopped original disks still ~$31.20/month. Native free-space, source,
+complete Python 3.12 runtime, current-boot watcher and full schedule gates must
+pass before science. No GPU, mapping, new acquisition, resize or provisioning.
+
+
 **October 30: E026 SUCCESS and independently TERMINATED; biological MODIFY.**
 [Inspection](../experiments/E026-calibrated-evidence-fusion/inspection-observed.json)
 verifies actual child exits, all gates/rules, exact completion/guest binding,

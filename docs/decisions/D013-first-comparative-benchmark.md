@@ -1,5 +1,18 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+October 30 owner amendment: [E027](../../experiments/E027-common-information-binner/OPERATIONS.md)
+now implements the shared full-version pipeline with complete E009 GLM off/on
+information paths and measured-depth Oral no-GLM learning. Three identical accepted
+E009 models are source/config/input-verified reuses, not differing old versions.
+The owner explicitly requests one reusable Oral external reference: use supported
+MetaBAT2 cvExt means/default/seed 11, preserving full input/truth/eligibility and its
+variance=mean assumption. This tests previously unmeasured Oral recoverability
+headroom; it is not an obligatory mature-tool campaign. Keep E023 10.4163% E009
+and retained MetaBAT2 8.5493% frozen. Conditional direct execution is authorized
+after fresh full credit/resource gates; prior budgets are not reused. Oral GLM is
+the next concrete information milestone, no-GLM is temporary, and November 4 remains.
+
+
 October 30 E026 inspection supersedes the launch snapshot below: all scientific
 and collection contracts pass and the VM is independently TERMINATED. Frozen
 joint **MODIFY**: E009 R95 7.1941% versus 10.4163% anchor, Oral 13.8569% versus

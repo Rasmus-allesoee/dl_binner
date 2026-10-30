@@ -1,0 +1,71 @@
+{
+  "kind": "E027 common full-version information binner",
+  "work": "/srv/dl_binner/experiments/e027/NEW_PHASE/work",
+  "units": {
+    "E009-noGLM": {
+      "fasta": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+      "original_features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "views": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/E009-dev5/features/views.npz",
+      "tokens": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/tokens",
+      "frozen": null,
+      "marker_cache": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers",
+      "hmm": "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/marker.hmm",
+      "marker_evidence": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json",
+      "measured_receipt": null
+    },
+    "E009-GLM": {
+      "fasta": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+      "original_features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "views": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/E009-dev5/features/views.npz",
+      "tokens": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/tokens",
+      "frozen": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/frozen",
+      "marker_cache": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers",
+      "hmm": "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/marker.hmm",
+      "marker_evidence": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json",
+      "measured_receipt": null
+    },
+    "oral-noGLM": {
+      "fasta": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+      "original_features": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.npz",
+      "features": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz",
+      "views": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.npz",
+      "tokens": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/tokens",
+      "frozen": null,
+      "marker_cache": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers",
+      "hmm": "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/marker.hmm",
+      "marker_evidence": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json",
+      "measured_receipt": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/combined/depth.tsv.receipt.json"
+    }
+  },
+  "reference": {
+    "fasta": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+    "matrix": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/combined/depth.tsv",
+    "matrix_receipt": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/combined/depth.tsv.receipt.json",
+    "binary": "/srv/dl_binner/experiments/e011/envs/metabat2-2.18-20261017T005141Z/bin/metabat2"
+  },
+  "python": "/srv/dl_binner/experiments/e027/NEW_PHASE/env/bin/python",
+  "workflow_python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+  "worker": "/srv/dl_binner/repo/scripts/e027_control.py",
+  "snakefile": "/srv/dl_binner/repo/experiments/E027-common-information-binner/Snakefile",
+  "policy": "/srv/dl_binner/repo/experiments/E027-common-information-binner/policy.json",
+  "limits": {
+    "seconds": 86400,
+    "provider_STOP_seconds": 87300,
+    "ceiling_USD": 15,
+    "numerical_threads": 4,
+    "tree_RSS_bytes": 26000000000,
+    "free_reserve_bytes": 26843545600,
+    "extra_bytes": 8589934592,
+    "compressed_export_bytes": 3221225472,
+    "logical_export_bytes": 8589934592,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "allocated_vCPUs": 8,
+    "WAN_review_bytes": 12884901888
+  },
+  "engineering": false,
+  "reuse_lock": "/srv/dl_binner/repo/experiments/E027-common-information-binner/reuse-lock.json",
+  "wheel": "/srv/dl_binner/experiments/e027/NEW_PHASE/payload/dl_binner-0.1.0.dev9-py3-none-any.whl",
+  "learning_reuse_lock": "/srv/dl_binner/repo/experiments/E027-common-information-binner/learning-reuse-lock.json"
+}

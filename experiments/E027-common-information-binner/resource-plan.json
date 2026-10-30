@@ -1,0 +1,143 @@
+{
+  "kind": "E027 complete three-mode/six-fit plus native Oral reference resource case",
+  "date": "2026-10-30",
+  "status": "LOCAL_PLANNING_PASSED_NATIVE_GATES_STILL_REQUIRED",
+  "limits": {
+    "seconds": 86400,
+    "provider_STOP_seconds": 87300,
+    "ceiling_USD": 15,
+    "numerical_threads": 4,
+    "tree_RSS_bytes": 26000000000,
+    "free_reserve_bytes": 26843545600,
+    "extra_bytes": 8589934592,
+    "compressed_export_bytes": 3221225472,
+    "logical_export_bytes": 8589934592,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "allocated_vCPUs": 8,
+    "WAN_review_bytes": 12884901888
+  },
+  "local_probe": {
+    "path": "artifacts/e027-common-information-binner/preparation/full-width-probe-r1/probe.json",
+    "binding": {
+      "bytes": 1306,
+      "sha256": "96b2d5b1e6491bbab6d1358bcc245ae3964f72fef59ac54036d43548cda468fa"
+    },
+    "forecast_seconds": 74091.68744896138,
+    "forecast_scope": "Conservative six-fit-equivalent forecast retained as an upper case; actual required new science is three fits plus six new groupings."
+  },
+  "compute": {
+    "existing": "e2-standard-8, 8 vCPU / 32 GiB",
+    "numerical_threads": 4,
+    "loader_workers": 0,
+    "serial_stages": true,
+    "expected_planning_hours": [
+      5,
+      18
+    ],
+    "native_complete_forecast_required": true,
+    "why_envelope": "Complete teacher/proposal/student availability remains fixed. Three identical accepted E009 models are verified/reused. Conservative full six-fit laptop upper20.58h plus setup fits24h; actual native full schedule must pass."
+  },
+  "RAM": {
+    "planning_sampled_tree_GB": [
+      16,
+      24
+    ],
+    "hard_sampled_tree_bytes": 26000000000,
+    "reason": "Historical full Oral context peak17.334GB; new marker/context caches and graded index measured natively before release; no unsupported RAM increase"
+  },
+  "disk": {
+    "original_work_GiB": 300,
+    "last_verified_minimum_free_GiB": 34.069,
+    "required_postboot_free_GiB": 33,
+    "free_reserve_GiB": 25,
+    "max_total_growth_GiB": 8,
+    "accepted_arrays_hardlinked_readonly": true,
+    "candidate_FASTA": "Complete assignment manifests plus protected original DNA, no repetitive new copies. Actual full FASTA export tested locally.",
+    "MetaBAT_native_FASTAs_retained_once": true,
+    "coexistence_GiB": {
+      "new_features_and_context_arrays": 0,
+      "three_mode_six_embeddings_graphs_and_hierarchies": 2.2,
+      "partitions_assignments_pairs_checkpoints_closed_evidence": 1.1,
+      "native_reference_FASTA_upper": 1.7,
+      "compressed_return_upper": 3.0
+    },
+    "sum_upper_GiB": 8.0,
+    "actual_global_guard_required": true,
+    "cleanup": "Only verified unused regenerable temporary files if actually needed; preserve all accepted evidence/data/banks. No cleanup or new disk inferred."
+  },
+  "export": {
+    "compressed_cap_GiB": 3,
+    "logical_cap_GiB": 8,
+    "WAN_cap_GiB": 12,
+    "local_materialization_cap_per_arm_GiB": 3,
+    "local_free_reserve_GiB": 6,
+    "local_current_free_bytes": 13267087360,
+    "stream_one_arm_then_release_only_new_staging": true,
+    "omitted_arrays": "Exact accepted original arrays; inventory is not a backup",
+    "native_reference_bin_DNA_backed_up": true
+  },
+  "prices": {
+    "checked_UTC": "2026-10-30T21:19:39.029256+00:00",
+    "catalog_binding": {
+      "bytes": 8003,
+      "sha256": "a3a9dda5ca25b373d219c923186c6285b58df01dbf0bcbf7650e8746d451b608"
+    },
+    "DKK_per_USD": 6.578099999996525,
+    "compute_IP_USD_hour": 0.2730456762592464,
+    "original_PD_USD_month": 31.199999949850024,
+    "conservative_PD_month_hours": 720,
+    "GCS_Standard_USD_GiB_hour": 2.7397e-05,
+    "WAN_USD_GiB": 0.12,
+    "ordinary_first_party_only": true
+  },
+  "full_STOP_upper_cost_USD": {
+    "compute_IP": 6.621357649286725,
+    "run_PD_overlapping_approved_storage": 1.0508333316442542,
+    "WAN_12GiB": 1.44,
+    "new_GCS_3GiB_168h": 0.013808088,
+    "operations": 0.25,
+    "contingency": 1.0
+  },
+  "total_gross_upper_USD": 10.37599906893098,
+  "new_envelope_USD": 15,
+  "credit": {
+    "UTC": "2026-10-30T21:19:20.207032+00:00",
+    "method": "Fresh signed-in Chrome Billing Credits visible DOM",
+    "remaining_DKK": 1741.87,
+    "original_DKK": 1973.43,
+    "percent_remaining": 88,
+    "status": "Available",
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; see the terms for free trial.",
+    "application": "Net pricing",
+    "real_money_authorized": false,
+    "delayed_usage_reserve_USD": 35,
+    "paid_account": true,
+    "overview_period": "October 1\u201330, 2026",
+    "rounded_cost_DKK": 232,
+    "rounded_savings_DKK": 232,
+    "net_DKK": 0,
+    "delay": "Costs take a few hours to show up, and might take longer than 24 hours. Numbers are rounded to make them easier to read."
+  },
+  "delayed_usage_reserve_USD": 35,
+  "future_project_planning_reserve_USD": 100,
+  "not_invoice_or_credit_delta": true,
+  "storage": {
+    "all_versions": 198,
+    "all_version_bytes": 66646333937,
+    "soft_deleted_bytes": 0,
+    "original_weekly_allowance_USD": 8,
+    "conservative_all_current_plus3GiB_week_USD": 7.829493897386831,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "retention_extended": false,
+    "stopped_disk_cost_USD_month": 31.199999949850024
+  },
+  "future_Oral_GLM": "oral-GLM-plan.json; actual native Oral bank absent, generic hybrid path implemented. No GPU start/provision/extraction in this CPU block.",
+  "learning_execution": {
+    "logical_models": 6,
+    "new_fits": 3,
+    "identical_accepted_models_reused": 3,
+    "proof": "learning-reuse-lock.json",
+    "no_refit_or_copy_fallback": true
+  }
+}

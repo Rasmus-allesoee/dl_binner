@@ -779,3 +779,16 @@ learning and supported bin-construction block, including common bootstrap/propos
 information. No GLM-derived hidden teacher in a claimed common no-GLM mode. Freeze
 one shared protocol before outcomes; do not tune E026 again or acquire confirmation.
 Skin stays unscored and November 4 retention/cost dependencies remain separate.
+
+
+### October 30, 2026: common-version implementation and main GLM coverage
+
+[E027](../../experiments/E027-common-information-binner/design.md) implements one
+shared window/context/ten-depth/marker pipeline and graded supported bin construction.
+Q001/Q003/Q005 remain open before new outcomes. The owner requires E009 GLM off/on
+through teacher/proposals/student, plus common no-GLM Oral now; exact accepted same-
+version E009 model instances are reused after byte/source/config/input admission.
+One native Oral MetaBAT2 reference supplies recoverability context. GLM-enabled Oral
+is a concrete next information milestone, with efficiency/exposure/native/cost and
+November 4 admission, not a product-family rejection or indefinite score trigger.
+Skin stays unscored. No hypothesis is resolved by engineering contracts alone.

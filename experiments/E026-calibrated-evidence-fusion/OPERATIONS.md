@@ -1,5 +1,7 @@
 # E026 operations
 
+October 30 continuation: the owner amended the proposed next task. [E027](../E027-common-information-binner/OPERATIONS.md) now owns the common-version implementation, complete E009 GLM-off/on paths, same-mode Oral candidate and one reusable Oral MetaBAT2 reference. Its conditional execution is authorized after fresh gates. The original next prompt below remains the dated preparation proposal; its no-VM/no-external boundary is superseded for this new task, without changing any E026 science or receipt.
+
 ## Reviewed completion, October 30, 2026
 
 **SUCCESS execution; independently TERMINATED; biological MODIFY.**

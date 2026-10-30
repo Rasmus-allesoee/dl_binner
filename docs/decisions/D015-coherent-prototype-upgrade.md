@@ -1,5 +1,44 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E027 owner-amended common-version scope, October 30, 2026
+
+The owner accepts a common no-GLM comparison mode temporarily, while retaining
+GLM-on as the intended main path. [E027](../../experiments/E027-common-information-binner/design.md)
+implements one composition/context + actual ten-depth + reliable-marker system
+and graded supported bin construction. E009 runs GLM off and fully on, including
+its matched bootstrap teacher and pair proposals; Oral runs the same no-GLM mode.
+All modes have the same defaults/objective/exposure and downstream policy, without
+historical hidden teacher priors or truth-selected routing. Preserve/report
+E023's **10.4163% E009 R95** and native MetaBAT2's **8.5493%** beside the candidate.
+This scope tests the current optional-modality interaction; it does not establish
+GLM-enabled Oral transfer or isolate every ingredient in the coherent bundle.
+
+The owner also explicitly authorizes one reusable Oral external reference. Choose
+the passed MetaBAT2 2.18 installation and its supported `cvExt` means mode on the
+complete GSA / accepted ten-column matrix. Its native variance-equals-mean assumption,
+2,500 bp core / 1,000 bp recruitment and all excluded/unassigned populations remain
+visible. Retain original bin FASTAs and full assignments. This first Oral reference
+tests recoverability headroom; an expected mature-tool win alone was not the reason.
+No additional external campaign or SemiBin input substitution is introduced.
+
+[The concrete Oral GLM milestone](../../experiments/E027-common-information-binner/oral-GLM-plan.json)
+is the next information block after this CPU comparison review. Implement/verify
+length-bucketed exact-view extraction and measure native throughput/pooling/precision;
+keep all >=500 bp inputs and short DNA unless a new prospective information treatment
+is explicitly selected. DCVBin's truncated parent-only >=2 kb exposure is not an
+equivalent faster cache. Generic hybrid learning is implemented for either admitted
+axis now; the missing native Oral bank is explicit, not a future-performance veto.
+Full original bank planning is still 61.05 GPU hours / ~$65–85 complete at dated rates,
+with fresh capacity, costs, storage coexistence and unchanged November 4 admission.
+
+After local contracts, the owner's latest task permits the three-arm CPU comparison
+plus one Oral reference directly if fresh full financial/resource gates pass. The
+initial recorded envelope is **24 hours / 24.25-hour STOP / $15 gross**, existing
+E2/disks only, four numerical threads, 26 GB sampled RSS, 25 GiB reserve / 8 GiB
+growth. Scientific scope is not weakened to fit an older $8 estimate. The current
+CPU block adds no GPU extraction, mapping, confirmation or retention extension.
+Actual gates/status and any justified revision belong in E027 operations.
+
 ## E026 reviewed outcome and a shared full-version block, October 30, 2026
 
 Accepted execution, **MODIFY** scientific disposition. [All paired evidence](../../experiments/E026-calibrated-evidence-fusion/comparison-review.json)

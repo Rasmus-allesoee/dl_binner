@@ -1,0 +1,137 @@
+{
+  "kind": "E027 prospective common full-version information/learning/bin-construction bundle",
+  "status": "FROZEN_BEFORE_ANY_NEW_COMMUNITY_OUTCOME",
+  "arms": [
+    "E009-noGLM",
+    "E009-GLM",
+    "oral-noGLM"
+  ],
+  "learning_stages": [
+    "same_policy_bootstrap_exact_reuse_if_proven_else_declared_fresh",
+    "own_teacher_marker_pairs_exact_reuse_if_proven",
+    "same_policy_marker_student_exact_reuse_if_proven_else_declared_fresh"
+  ],
+  "partitions": [
+    "bootstrap-parent",
+    "bootstrap-post",
+    "student-parent",
+    "student-post"
+  ],
+  "schedule": {
+    "seed": 11,
+    "epochs": 20,
+    "batch_size": 256
+  },
+  "axes": {
+    "E009-noGLM": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ],
+      "core_rows": 9812
+    },
+    "E009-GLM": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ],
+      "core_rows": 9812
+    },
+    "oral-noGLM": {
+      "rows": 1286547,
+      "bp": 1669981123,
+      "eligible": 508763,
+      "samples": [
+        "oral_sample_6",
+        "oral_sample_7",
+        "oral_sample_8",
+        "oral_sample_13",
+        "oral_sample_14",
+        "oral_sample_15",
+        "oral_sample_16",
+        "oral_sample_17",
+        "oral_sample_18",
+        "oral_sample_19"
+      ],
+      "core_rows": 60211
+    }
+  },
+  "full_reference_bp": {
+    "E009": 554661890,
+    "oral": 2083072211
+  },
+  "truth": {
+    "E009": "admitted conservative v2; 3.3034% N quarantine",
+    "oral": "provided-origin oracle; separate known-shared sensitivity, not exhaustive unique source"
+  },
+  "primary": ">=200 kb bins, >=95% confirmed all-bin purity; duplicate-safe best-bin full-reference locus union; target50/90",
+  "anchors": {
+    "E009_E023": {
+      "R95": 0.1041634228737078,
+      "target50": 19,
+      "target90": 9
+    },
+    "E009_MetaBAT2": {
+      "R95": 0.08549276749480661,
+      "target50": 16,
+      "target90": 5
+    },
+    "oral_E026": {
+      "R95": 0.1385692600936915,
+      "target50": 108,
+      "target90": 58
+    }
+  },
+  "keep": {
+    "E009_GLM_R95_gain_over_E023": 0.005,
+    "oral_noGLM_R95_gain_over_E026": 0.005,
+    "no_target50_or_target90_regression_both": true,
+    "all_engineering_native_DNA_contracts_pass": true
+  },
+  "modify": "Not KEEP, and at least one primary E009-GLM or oral-noGLM R95/target50/target90 metric improves over its frozen anchor. GLM off/on interaction is separately interpreted; it does not change this disposition.",
+  "abandon": "Neither primary arm improves any frozen-anchor R95/target50/target90 metric; this frozen bundle only, not feature families.",
+  "noGLM_comparison": "Same source/objective/default/view/teacher/pair availability on E009 and Oral; E009 GLM mode differs throughout bootstrap/proposals/student. Do not attribute between-dataset effects to depth or GLM alone.",
+  "secondary": "Per-bin completeness/full-reference unions and 1-confirmed/all-bin purity upper bound, threshold HQ/MQ/LQ not formal MIMAG; all length/origin/eligibility/marker/depth-zero/unknown/non-target/unassigned strata; per-target gains/losses; geometry and biological neighbors.",
+  "reference": "One Oral MetaBAT2 2.18 cvExt means/default/seed11, native eligibility retained, complete source FASTA/ten samples; external context not primary policy selector.",
+  "old_baselines_rescored": false,
+  "truth_selects_pairs_bins_thresholds_K_or_feature_policy": false,
+  "confirmation": {
+    "choice": "CAMI II Toy HMB skin, still unscored; source-origin artifacts already admitted, unique-source/depth/protocol/cost dependencies remain",
+    "source_record": "experiments/E023-adaptive-density-bins/confirmation-plan.json",
+    "source_binding": {
+      "bytes": 2110,
+      "sha256": "6b51b30616c853714ee3b22a23fe23140f76406c2bd7a413e4780e58463b3425"
+    },
+    "original_record": "experiments/E021-frozen-sequence-hybrid/confirmation-plan.json",
+    "original_binding": {
+      "bytes": 3427,
+      "sha256": "1184670724ea373446c2683b475147ea39d0a5fbf44d437ccebb6ac4980bae37"
+    },
+    "new_DNA_or_confirmation_execution": false
+  },
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "source_input_accounting": "Two original zero-bp Oral source records remain in accepted input accounting; no invented DNA or replacement denominator.",
+  "learning_execution": "Six logical teacher/student models: verify/reuse identical E019 no-GLM E009 teacher and E021 GLM teacher/E022 GLM student, including original on-mode pair provenance. Three genuinely new fits: no-GLM E009 student and measured-depth Oral teacher/student. No fitting fallback on corrupt or absent reused evidence."
+}

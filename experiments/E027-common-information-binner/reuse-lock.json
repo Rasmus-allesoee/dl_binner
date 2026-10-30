@@ -1,0 +1,333 @@
+{
+  "kind": "E027 exact common-version reused-input bytes; no historical teacher/pairs",
+  "files": {
+    "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa": {
+      "bytes": 237732361,
+      "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+    },
+    "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/marker.hmm": {
+      "bytes": 15929643,
+      "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.json": {
+      "bytes": 1103,
+      "sha256": "2b24603bd278f81178b3b843faeb961fb27061accb0df3f7968d9d5a937f9a8a"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz": {
+      "bytes": 42384557,
+      "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/asset.json": {
+      "bytes": 4655,
+      "sha256": "d1898ef92fa992881103cd19de2be6066db38917cb3be2e3ece86d35035692b3"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/cache.json": {
+      "bytes": 1841,
+      "sha256": "711c793d1af631486efc07b6241c2b75c3eb0b888585a66c321f061b4f40b404"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/domains.json": {
+      "bytes": 817210,
+      "sha256": "b1ad9e6e69fd30713b1840e7b2c7d1b6de8f53104f0ffc1df58cb4fd85d7aaec"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/evidence.json": {
+      "bytes": 3260961,
+      "sha256": "027b1aa746dd613ee39992afad160001a310fe6a1e3c71b4c2f45956bb4911ca"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/genes.jsonl": {
+      "bytes": 46493814,
+      "sha256": "66ad0f2384dc132b36c072aa81e786ff07474aeb0c471ae11ef06445bb776ba1"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/proteins.faa": {
+      "bytes": 61757382,
+      "sha256": "a08a9471e8b185c401bbefb21a4c39c88a9a72aa291037d94bf6f3d1d15d8540"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna": {
+      "bytes": 1757466319,
+      "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/E009-dev5/features/views.json": {
+      "bytes": 1442,
+      "sha256": "2788754cc90581949ba9217216214c48437054b7e3202fdb0ea47c91aa03126b"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/E009-dev5/features/views.npz": {
+      "bytes": 60980613,
+      "sha256": "3ded4f6d5c7bcbdb13e0204da696de940b4c46330358e5ea1ce668b02c22aabe"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.json": {
+      "bytes": 531,
+      "sha256": "d9a033ca2a3805fac0d88bffbad234e81e932a63b4b056711b9efdbcfb5d850c"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.npz": {
+      "bytes": 333765352,
+      "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.json": {
+      "bytes": 1442,
+      "sha256": "a057326c19bcd7365bdf4066b84920f2a6bf1a2c7fb694757b7ac7c7143e7162"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.npz": {
+      "bytes": 419791282,
+      "sha256": "80d30e98c98642cf4dca5aad1b76a061065b3f93e92bab85e6b1ada5e0b4ac76"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/tokens/coordinates.npy": {
+      "bytes": 56986368,
+      "sha256": "4ac27dc88bcebb9f41876e2f0fc943a3e5a8d4e0f5ab920748b917a2a8ea412b"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/tokens/counts.npy": {
+      "bytes": 968766208,
+      "sha256": "20c664c703a97a2aa9c301b25f4d274ecd6bbb6655a07bcd5604c56f9dcecc4a"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/tokens/flipped.npy": {
+      "bytes": 445333,
+      "sha256": "c957a8ae92da6d1cb20173010d913692fab8d28a3c43cb163689bd52a438749d"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/tokens/rows.npy": {
+      "bytes": 712456,
+      "sha256": "a5ddffeb6fd64d446c9c341c344e7b63bc76e6646650f40e3377b58c6a7b743b"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/tokens/tokens.json": {
+      "bytes": 1920,
+      "sha256": "8b19a0107dc341ffa374112179a1925fe38d0906596726fac93a5ded35803abd"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json": {
+      "bytes": 26815264,
+      "sha256": "e8d44c1dc18ea9f55e70548fb4de01581c4639834e87db720134e43c2127b8f1"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/tokens/coordinates.npy": {
+      "bytes": 325608448,
+      "sha256": "a8b97ba5d9344b758246836cb262616df1d71cf7d27be17b06674fc6f5678e10"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/tokens/counts.npy": {
+      "bytes": 5535341568,
+      "sha256": "1aa2e4868ab0a85ee2573d4acb2542b271f9e2d855a6d59dd199cab5aae80c4a"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/tokens/flipped.npy": {
+      "bytes": 2543943,
+      "sha256": "3f33a74724d2abfac6a7b465d21117ab31fc9be83deea7e254a03aca183460ac"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/tokens/rows.npy": {
+      "bytes": 4070232,
+      "sha256": "9eee6009101d001dca6cf3b104a8d2806a5c3aa0aa54bdac45525262d880e286"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/tokens/tokens.json": {
+      "bytes": 1450,
+      "sha256": "831c3ac7723632ea7e323efeb876d5e2353571633ae868cda513dda2f5b10673"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/frozen/bank.json": {
+      "bytes": 6063,
+      "sha256": "636f1fb852c3efd6899321e0f1a3de90a91271cf438c4dfb2508b2ba9eb01520"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/frozen/ids.npy": {
+      "bytes": 3917932,
+      "sha256": "63f126a66d46e6285e7d716b9e2e94cf35c137b5cac3bf3607f2f9883c569c8c"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/frozen/quality.npy": {
+      "bytes": 3561768,
+      "sha256": "f6de6551ed8e4ffd9930c2e1f8248dbbb125ddb4f15d347ea1ab86e8c4707ec4"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/frozen/rows.npy": {
+      "bytes": 712456,
+      "sha256": "a5ddffeb6fd64d446c9c341c344e7b63bc76e6646650f40e3377b58c6a7b743b"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/frozen/usable.npy": {
+      "bytes": 445333,
+      "sha256": "51a00d66c2a2b8f82fd40b6b8acd5ee189bdcfa9b6bd30bb2bcfeba0a17f2d0c"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/frozen/vectors.npy": {
+      "bytes": 1367669888,
+      "sha256": "9c05e5fe351a257f2a7176daee07db316e33de0c2f89e15f018b1e951ae5cfef"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/frozen/views.jsonl": {
+      "bytes": 113374628,
+      "sha256": "09528973591df44950cbc5985a8cd0933cb86be6dce5fac8be42a0561d40d389"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json": {
+      "bytes": 1301132,
+      "sha256": "035d88e159a8c6aa29580c4fec28a3f0c470e553f97a0f9a9d04cf6a76b44c05"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/combined/depth.tsv": {
+      "bytes": 124584683,
+      "sha256": "4fa47b725701d73feeba60bce9e17e884e10db994d28978e2f3d3682a2ae8da4"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/combined/depth.tsv.receipt.json": {
+      "bytes": 1904,
+      "sha256": "8c3ef5cd110039d8153e65d40e8dcc76317ff23dda432f581cf5d9e970b840de"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.json": {
+      "bytes": 852,
+      "sha256": "b03907a416f4cfe146a42ce461cd2a937e011a5299382d0e6984c62c5b5c780a"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz": {
+      "bytes": 338210613,
+      "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/asset.json": {
+      "bytes": 4655,
+      "sha256": "d1898ef92fa992881103cd19de2be6066db38917cb3be2e3ece86d35035692b3"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/cache.json": {
+      "bytes": 1850,
+      "sha256": "c1ea104624bf222e0ca3d9dfaa858bd6fe53586fcc4f811acbd2fe35076788cb"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/domains.json": {
+      "bytes": 14029728,
+      "sha256": "55317c8c03ba8e66de174237a1af55e938908c0dcdfb38171b9140992e522203"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/evidence.json": {
+      "bytes": 108777472,
+      "sha256": "ca89d3e4c09312143c8e94f9abbcfabeabe281aefa64dc6aa60d234e669e5183"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/genes.jsonl": {
+      "bytes": 535549613,
+      "sha256": "86a8fd5179f52957d46c4bd37a1d71b3373eef1966f62924a0c48ea6a5040005"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/proteins.faa": {
+      "bytes": 517972626,
+      "sha256": "b4c10fb3e4157d7889dfff6cd480e5f7f0741439b78f8d4d9656a1bd92ee7149"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/train/checkpoint.pt": {
+      "bytes": 3636592,
+      "sha256": "ab0160ed5793addf5f36ceec64d70b523d655d5c4b5fe98597defc43e69404ca"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/train/checkpoint.json": {
+      "bytes": 44639,
+      "sha256": "3ea9879c1136a0e1abf1ad3c449a411c8fe38abfe33bcb5774f2bc5967965fa2"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/train/reference.npz": {
+      "bytes": 21880259,
+      "sha256": "4a9e6c4ab00d4e6f774f2eb217c28fe8894f95ece6d05bfa90ed76c9c7d4136e"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/train/reference.json": {
+      "bytes": 920,
+      "sha256": "c5a400a0cdd46bd5b83ec9b2da5d5f83c0c866d0b6c874282063118218fd6831"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/embeddings.npz": {
+      "bytes": 21880259,
+      "sha256": "4a9e6c4ab00d4e6f774f2eb217c28fe8894f95ece6d05bfa90ed76c9c7d4136e"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/embeddings.json": {
+      "bytes": 1123,
+      "sha256": "bbd6299468205ac716d66c9db633bff72b920458d89ef97ae1cfb37b972f9d4c"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/group/graph.npz": {
+      "bytes": 32703614,
+      "sha256": "27bb48178459cf922f234c6d8a847562eb3c02e624006fdacf5b567acea16ec6"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/E009-context/group/graph.json": {
+      "bytes": 2066,
+      "sha256": "bd0186a0d0a6e8529f6ec77750f8144dafc2ac6a7d65501730388fa076117fc0"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/train/checkpoint.pt": {
+      "bytes": 5506582,
+      "sha256": "d78fd7b988f09918ce6c5789b803fea216e8c0a0ddf83b7918a82d8ca73373a7"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/train/checkpoint.json": {
+      "bytes": 90502,
+      "sha256": "d003261855f8286528a18424871edc607b3bc9805aa47c9b554c5b52a81b2fa6"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/train/reference.npz": {
+      "bytes": 21879596,
+      "sha256": "a7115f187a25abaf7f8873ea78e06d56d9e4b3b5bb66425641b8b13df5ca21f1"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/train/reference.json": {
+      "bytes": 919,
+      "sha256": "062e63bf6db59026cb112bba7a15d1472f610cad60f0d9f5bec76980bb6a7c9c"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/embeddings.npz": {
+      "bytes": 21879596,
+      "sha256": "a7115f187a25abaf7f8873ea78e06d56d9e4b3b5bb66425641b8b13df5ca21f1"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/embeddings.json": {
+      "bytes": 1122,
+      "sha256": "14a2e0176d278ea60be5ff9023c44caeea90da001e5df81ab28f68c10b85ff64"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/group/graph.npz": {
+      "bytes": 32592587,
+      "sha256": "9ec5f794cd4e964541806e0065b7a22e246f3aa7a691ce005cf3fc12856a03c6"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/group/graph.json": {
+      "bytes": 2076,
+      "sha256": "4f6b220500fa94f5e81e09492e83e60e158b90752aee24e2cb1331ae4dca91ee"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/train/checkpoint.pt": {
+      "bytes": 5507286,
+      "sha256": "e62739e333765578cd7b29ae291be44eb43dbd3505f167a20c479626449be130"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/train/checkpoint.json": {
+      "bytes": 94554,
+      "sha256": "d75139f19e25584cc14d931d3f933555263a18dc63481918bf1c06be1c1fe729"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/train/reference.npz": {
+      "bytes": 21880578,
+      "sha256": "0c33748fa4b66309caafdb1e559ef8c75dc1f8d8819d8f8d046dbdb184d6442e"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/train/reference.json": {
+      "bytes": 923,
+      "sha256": "0ff4faaff681c7645e5e7b1b77076bc94a36f28d9289373de7ae07f43190a558"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/embeddings.npz": {
+      "bytes": 21880578,
+      "sha256": "0c33748fa4b66309caafdb1e559ef8c75dc1f8d8819d8f8d046dbdb184d6442e"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/embeddings.json": {
+      "bytes": 1316,
+      "sha256": "9ee29b1b4c8d0f71cd65a1f62334080ef5f09f1213af28487a86939df6848beb"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/group/graph.npz": {
+      "bytes": 32792381,
+      "sha256": "7e220fd760f76c16742656df778ab2cc2048a8c02e607745ad0fcd6c82422034"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/group/graph.json": {
+      "bytes": 2076,
+      "sha256": "64533b7c3cab3ab014203987cf01f726808ca19cb960a4d8688259f00b310081"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/pairs/cache.json": {
+      "bytes": 4239,
+      "sha256": "312859f22d70c000ffc5f4a30841215a930a97f66aebddfc368f2ae94c3a25a0"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/pairs/calibration.npz": {
+      "bytes": 1243317,
+      "sha256": "e2c64ec6272ba3ac8fe334aed65e038d12d9b5beeeeb844b0e3c578c61db9965"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/pairs/decisions.jsonl": {
+      "bytes": 3716373,
+      "sha256": "d284c6e2bc75c931e7b567eb72c55ea073b78ba6ce5325778454a18d37c40273"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/pairs/pairs.json": {
+      "bytes": 302,
+      "sha256": "18e5985ef96160a3c6eb24f459409b1aeb8a6e964650bf1ad6684a860a6fd8c0"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/pairs/pairs.npz": {
+      "bytes": 519958,
+      "sha256": "97e30136e7925c854b1c0c0b08d4651326c821ac731130d5c3f983cdf9b3ba52"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/pairs/quality.json": {
+      "bytes": 2528758,
+      "sha256": "fa48ff4abd707a385671bce028be869857a748541edfadab8b64eaa1785771fc"
+    }
+  },
+  "no_fallback": true,
+  "native_dependency_base": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+  "native_runtime_reference": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json",
+  "metabat_install": {
+    "failed_phase": "cached-20261017T005141Z-ab80312",
+    "metabat_install_receipt": {
+      "bytes": 3086,
+      "sha256": "8e20339fdb6e86a5d9a1d3899130225681fe6a94869f6145edee69ed92f2b154"
+    },
+    "metabat_prefix": "/srv/dl_binner/experiments/e011/envs/metabat2-2.18-20261017T005141Z",
+    "native_prefix_status": "35-package installation passed; repaired loaded-library/native gates still required before science",
+    "record": "Prospective reuse of passed installation/cache, not a retry authorization",
+    "restore_manifest": {
+      "bytes": 3028,
+      "sha256": "4d19d958d48aa6cdb6f8a76a30076de75f8f1df351a6ae97f471fd2912b04c6a"
+    },
+    "restore_manifest_origin": "Independent local restore of identical accepted archive with the exact executed restore function; portable receipt contains no destination/time. Next native consumer must match its bytes and every selected member; no fallback.",
+    "retained_install_receipt": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/run/metabat-install.json",
+    "retained_restore": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore",
+    "source_archive": {
+      "bytes": 335636093,
+      "sha256": "3ec883477ce6c9e070632200508be8b707e84a11938f51e6221089eb94d165a3"
+    }
+  }
+}

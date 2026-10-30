@@ -197,6 +197,12 @@ in a version's information contract. Matching training flags alone does not make
 two pipelines equivalent if their upstream proposals use different priors. A
 common no-GLM mode must exclude hidden GLM-derived teacher/proposal inputs on both
 datasets, and does not establish transfer of the GLM-enabled mode.
+Keep the intended main optional-modality path in major upgrade comparisons where
+its inputs are admitted. In particular, a no-GLM improvement does not establish
+GLM compatibility: a GLM-on arm must include its teacher and pair proposals as
+well as the student. Declare temporary common availability modes explicitly and
+give missing main-mode data a concrete admission milestone, rather than letting
+an inexpensive control silently become the permanent product direction.
 
 Predeclared practical effect thresholds support the scoped experiment's decision;
 they are not biological standards or statistical significance tests. Preserve a

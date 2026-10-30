@@ -2,6 +2,45 @@
 
 Updated: October 30, 2026 (Copenhagen). This is the single current handoff.
 
+**E027 is locally implemented; final local/native admission is in progress.**
+The owner authorized conditional direct execution of the [common full-version
+candidate](../experiments/E027-common-information-binner/OPERATIONS.md), complete
+E009 GLM off/on paths, Oral measured-depth no-GLM mode and one native Oral MetaBAT2
+reference. No new community outcome is claimed here. Branch
+`common-multiview-marker-binner`; accepted E009–E026 science remains immutable.
+
+The [design](../experiments/E027-common-information-binner/design.md) combines actual
+DNA-window/context/depth learning, reliable marker relationships and graded sparse
+support with density/physical-marker whole-child selection. GLM availability covers
+bootstrap, pair teacher and student. Source/config/input identity admits reuse of
+three exact accepted E009 models (E019 no-GLM teacher, E021 GLM teacher and E022 GLM
+student/pairs). Three genuine new fits remain: no-GLM E009 student, measured-depth
+Oral teacher/student. All six downstream groupings are new; older quality summaries
+are reused without rescoring. [Learning reuse](../experiments/E027-common-information-binner/learning-reuse-lock.json)
+refuses missing/corrupt evidence rather than refitting a substitute.
+
+Preserve/report E023 E009 **10.4163% R95 / 19 target-50 / nine target-90**, native
+MetaBAT2 **8.5493% / 16 / five**, and E026 Oral **13.8569% / 108 / 58** beside the
+new candidate. Same-mode no-GLM comparison is temporary; GLM-on remains the intended
+main path. [Oral GLM parity](../experiments/E027-common-information-binner/oral-GLM-plan.json)
+is the next explicit information milestone, with full input exposure, exact-view
+batching/native throughput and separate GPU/storage/deadline admission. Skin stays
+unscored with unchanged truth/depth/overlap/protocol/cost dependencies.
+
+[Resource case](../experiments/E027-common-information-binner/resource-plan.json):
+24 hours / 24.25-hour provider STOP / $15 gross, existing E2/32 GiB and original
+disks, four numerical threads, 26 GB sampled RSS, 25 GiB reserve / 8 GiB growth.
+Full conservative quote **$10.376**, current credit DKK **1,741.87 Available** / 88%
+through January 12, $35 delayed-usage reserve. Original all-current storage plus
+3 GiB quotes **$7.8295 < $8**; **November 4, 00:00 Copenhagen** remains. Fresh native
+source/runtime/full-data/reuse/headroom/forecast/watchdog gates still precede release.
+Original stopped disks cost ~$31.20/month; no resources/retention are extended.
+
+## Preserved E026 inspection handoff
+
+The dated E026 outcome and rationale below are preserved. E027 above supersedes
+its proposed no-GLM-only/preparation-only next scope under the owner's latest update.
+
 **E026 completed successfully; independently verified VM TERMINATED. Biological
 joint disposition: MODIFY.** [Inspection](../experiments/E026-calibrated-evidence-fusion/inspection-observed.json)
 for `fusion-20261029T185844Z-f16c2e5` verifies all six native gates / 19 contracts,
