@@ -1,0 +1,24 @@
+"""Read bounded private receipt bytes without the gcloud JSON-format footer.
+
+Preserve the original failed parser records; no VM, science, or cloud mutation.
+"""
+import os,subprocess,json,datetime,hashlib
+from pathlib import Path
+root=Path.cwd();out=root/'artifacts/e026-calibrated-evidence-fusion/inspection-20261030';dest=out/'metadata';dest.mkdir(exist_ok=True)
+env=os.environ.copy();env['CLOUDSDK_CONFIG']=str(root/'artifacts/gcp-workspace/private-gcloud-config');sdk=str(root/'artifacts/gcp-workspace/tools/google-cloud-sdk/bin/gcloud')
+prefix='gs://dl-binner-archive-167650584170/e026/fusion-20261029T185844Z-f16c2e5/'
+records={}
+for name in ['completion.json','collection.json','watchdog-exit.json','terminal-disk.json','e026-evidence.tar.gz.sha256']:
+ p=subprocess.run([sdk,'storage','cat',prefix+name,'--quiet'],env=env,capture_output=True,timeout=120)
+ (dest/(name+'.stderr')).write_bytes(p.stderr);p.check_returncode()
+ if len(p.stdout)>2*1024**2:raise ValueError('Small receipt limit exceeded')
+ with (dest/name).open('xb')as f:f.write(p.stdout)
+ v=json.loads(p.stdout)if name.endswith('.json')else p.stdout.decode()
+ records[name]=dict(bytes=len(p.stdout),sha256=hashlib.sha256(p.stdout).hexdigest(),URI=prefix+name)
+ if name=='completion.json':print('COMPLETION',json.dumps(v),flush=True)
+ elif name=='collection.json':print('COLLECTION',json.dumps({k:v[k]for k in v if k not in ['inventory','omitted_retained_on_disk','members','aliases']}),flush=True)
+ elif name=='watchdog-exit.json':print('WATCHDOG',json.dumps(v),flush=True)
+ else:print(name,str(v)[:4000],flush=True)
+(dest/'read-bindings.json').write_text(json.dumps(dict(UTC=datetime.datetime.now(datetime.timezone.utc).isoformat(),records=records),indent=2)+'\n')
+g=json.loads((out/'control-plane/guest-status.json').read_text());guest=json.loads(g[0]['value']);assert guest['completion']=={k:records['completion.json'][k]for k in ['bytes','sha256']}
+print('GUEST_COMPLETION_EXACT_BYTES_PASS',flush=True)

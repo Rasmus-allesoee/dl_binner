@@ -1,0 +1,18 @@
+"""Run one recorded local inspection step inside the original two-hour clock.
+
+Four numerical threads, eight GB sampled tree RSS, independent immutable runtime
+and job-owned compiler cache. This wrapper has no cloud-start or science producer.
+"""
+import sys,json,time,shutil
+from pathlib import Path
+r=Path.cwd();sys.path.insert(0,str(r/'scripts'));from e009_owner import supervisor
+out=r/'artifacts/e026-calibrated-evidence-fusion/inspection-20261030';label=sys.argv[1];script=Path(sys.argv[2]).absolute();dest=out/'steps'/label;dest.mkdir(parents=True,exist_ok=False)
+clock=json.loads((out/'review-clock.json').read_text());left=clock['deadline_epoch']-time.time()
+if left<30:raise TimeoutError('Original review clock unavailable; preserve receipts and record any justified revision')
+if shutil.disk_usage(out).free<6*1024**3:raise ValueError('Local reserve unavailable')
+python=r/'artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python';sup=supervisor();env=sup.isolated_env(4);env.update(NUMBA_NUM_THREADS='4',NUMBA_CACHE_DIR=str(dest/'jit'),TMPDIR=str(dest/'tmp'));(dest/'tmp').mkdir()
+argv=[str(python),'-I','-B',str(script),*sys.argv[3:]]
+(dest/'command.json').write_text(json.dumps(dict(argv=argv,start_epoch=time.time(),common_clock=clock,remaining_seconds=left,disk_before=shutil.disk_usage(out)._asdict(),threads=4,RSS_bytes=8000000000),indent=2)+'\n')
+try:v=sup.supervise(argv,dest/'terminal.log',left,8000000000,env)
+finally:(dest/'disk-after.json').write_text(json.dumps(shutil.disk_usage(out)._asdict(),indent=2)+'\n')
+(dest/'completed.json').write_text(json.dumps(dict(status='PASS',resources=v),indent=2)+'\n');print(json.dumps(v),flush=True)

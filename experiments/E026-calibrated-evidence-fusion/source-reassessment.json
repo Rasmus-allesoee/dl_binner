@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-30",
+  "purpose": "Shared learner/information and graph policy reassessment after E026",
+  "SemiBin2": {
+    "repository": "https://github.com/BigDataBiology/SemiBin",
+    "commit": "f7c45dcbcdfa81e8fbc3e08b04c54683122e72d6",
+    "source_files": {
+      "SemiBin/cluster.py": {
+        "bytes": 13700,
+        "sha256": "473f4c488c3f2c79c54003336b96ffc2d013eee35de110947234d4d5cf639a00"
+      },
+      "SemiBin/self_supervised_model.py": {
+        "bytes": 5888,
+        "sha256": "49f9796c167e1e874de0071ae5b9765d993434ba6b530f56b0072d6f4c85ef4c"
+      }
+    },
+    "working_tree": "Only untracked .DS_Store files, no modified tracked source",
+    "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10311329/",
+    "paper_checked": "2026-10-30",
+    "executed": false
+  },
+  "E021_gpu_rates": {
+    "record": "experiments/E021-frozen-sequence-hybrid/execution-strategy.json",
+    "binding": {
+      "bytes": 17466,
+      "sha256": "46e0e91cde2d1f06ed225c9d57030164517fbc0583de734c5f2d709c9a88b8d1"
+    },
+    "date": "2026-10-24",
+    "G2_L4_IP_USD_hour": 0.8586242942495529,
+    "T4_N1_IP_USD_hour": 0.7349979963823223,
+    "current_GPU_quote": false
+  },
+  "remaining_uncertainty": "No source inspection establishes our native throughput, optimal defaults, causal depth benefit or unseen-genome performance",
+  "E021_retained_GLM_evidence": {
+    "record": "experiments/E021-frozen-sequence-hybrid/comparison-review.json",
+    "binding": {
+      "bytes": 173973,
+      "sha256": "3b2336a25f0b595bda21d163122d78602c80c20bbab9a01d9b8767bbc203eab8"
+    },
+    "R95_delta_percentage_points": 0.5116479158140828,
+    "target_gains": 10,
+    "target_losses": 15,
+    "target90_before": 7,
+    "target90_after": 6,
+    "oral_run": false,
+    "new_rescore": false
+  }
+}

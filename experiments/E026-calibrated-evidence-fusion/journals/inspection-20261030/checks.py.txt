@@ -1,0 +1,31 @@
+"""Check frozen evaluator contracts and independently reconcile E026 review tables.
+
+Reads only new diagnostics and accepted baseline summaries. Does not train,
+recluster, redetect markers, choose thresholds or access cloud compute.
+"""
+import csv, hashlib, json, math, sys, unittest
+from pathlib import Path
+r=Path.cwd(); sys.path[:0]=[str(r/'tests'),str(r/'scripts'),str(r/'src')]
+p=r/'artifacts/e026-calibrated-evidence-fusion/inspection-20261030'
+suite=unittest.TestSuite()
+for module in ['test_e009_evaluate','test_e014_truth','test_e014_unions']:
+ suite.addTests(unittest.defaultTestLoader.loadTestsFromName(module))
+for name in ['test_frozen_joint_disposition_no_winner_routing','test_failed_actual_worker_and_terminal_delivery_are_not_success','test_new_numeric_axis_mapping_and_population_reader']:
+ suite.addTests(unittest.defaultTestLoader.loadTestsFromName('test_e026_operations.OperationalContracts.'+name))
+result=unittest.TextTestRunner(verbosity=2).run(suite)
+if not result.wasSuccessful():raise SystemExit(1)
+v=json.loads((p/'comparison-review.json').read_text());m=json.loads((p/'mechanism-audit.json').read_text());rows=list(csv.DictReader((p/'comparison-targets.tsv').open(),delimiter='\t'))
+assert len(rows)==955 and len({(x['dataset'],x['genome'])for x in rows})==955
+for d,unit,n in [('E009','E009-E022',156),('oral','oral-E019',799)]:
+ xs=[x for x in rows if x['dataset']==d];assert len(xs)==n
+ total=sum(int(x['reference_bp'])for x in xs);assert total==v['full_reference_bp'][d]
+ for arm,col in [('core','E026_core_bp'),('recruited','E026_recruited_bp')]:
+  a=v['units'][d][arm];assert math.isclose(sum(int(x[col])for x in xs)/total,a['primary']['bp_weighted_R95'],rel_tol=0,abs_tol=1e-15)
+  pop=a['export']['populations'];assert sum(z['contigs']for z in pop.values())==a['export']['contigs'];assert sum(z['bp']for z in pop.values())==a['export']['bp']
+  for mode,q in a['secondary'].items():
+   assert sum(q['counts'].values())==m['units'][unit]['bins'][arm]['bins'];assert q['assigned_bp']==pop['assigned']['bp'];assert not q['rRNA_tRNA_screened'] and not q['primary_rule_changed']
+ strata=m['units'][unit]['whole_input_length_depth_strata'];assert sum(q['contigs']for q in strata.values())==v['units'][d]['recruited']['export']['contigs'];assert sum(q['bp']for q in strata.values())==v['units'][d]['recruited']['export']['bp']
+ votes=m['units'][unit]['votes'];assert sum(votes['reason_counts'].values())==votes['rows'];assert votes['rows']==m['units'][unit]['bins']['core']['eligible_unassigned_contigs']
+assert v['frozen_disposition']=='MODIFY',v['frozen_disposition']
+receipt=dict(status='PASS',tests_run=result.testsRun,all_955_target_rows=True,weighted_summaries_independently_reconciled=True,all_population_and_bin_tiers_accounted=True,all_vote_records_accounted=True,no_old_baseline_rescore=True,no_science_repeated=True)
+(p/'checks.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt),flush=True)

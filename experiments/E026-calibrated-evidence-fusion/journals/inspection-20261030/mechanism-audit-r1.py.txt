@@ -1,0 +1,71 @@
+"""Audit retained E026 geometry, calibration, core bottlenecks and recruitment.
+
+Read only: no new neighbor search, partition, selector, threshold or training.
+Recompute a small calibration-input arithmetic contract at the existing native
+1e-12 precision, retain all populations, and stream existing vote journals once.
+"""
+import json,csv,sys,math,tarfile,hashlib,gc
+from pathlib import Path
+from collections import Counter,defaultdict
+import numpy as np
+r=Path.cwd();sys.path[:0]=[str(r/'scripts'),str(r/'src')]
+from dl_binner.multiview.arrays import load_arrays
+from dl_binner.calibrated.arrays import load
+from e024_coverage import binding
+out=r/'artifacts/e026-calibrated-evidence-fusion/inspection-20261030';read=lambda p:json.loads(Path(p).read_text());maps=read(out/'external-review-map.json')['units'];results={}
+for unit,dataset in [('E009-E022','E009'),('oral-E019','oral')]:
+ print('MECHANISM_READ_START',unit,flush=True)
+ root=out/('stage-'+unit)/'work/units'/unit/'group';paths=maps[unit]['paths'];data,meta=load_arrays(paths['features'],'features');ids=data['ids'];length=data['lengths'];valid=data['eligible'];n=len(ids)
+ cache,_=load(root/'retrieval/neighbors.npz','calibrated_core_neighbors',ids);forest,_=load(root/'forest.npz','calibrated_biological_forest',ids)
+ core=cache['cores'];queries=cache['queries'];positive=(data['depth']>0).any(1);cal=read(root/'calibration.json');cfg=cal['cfg'];old,_=load_arrays(paths['graph'],'candidate_sparse_graph');vec,vm=load_arrays(paths['embeddings'],'embeddings')
+ assert np.array_equal(vec['ids'],ids)and vec['features'].shape==(n,64)and np.isfinite(vec['features']).all()
+ assert np.allclose(np.linalg.norm(vec['features'][valid],axis=1),1,atol=1e-5)and not np.any(vec['features'][~valid])
+ geometry=dict(local_original_vector_bytes=binding(paths['embeddings']),rows=n,eligible=int(valid.sum()),unit_norm_max_abs_error=float(np.max(np.abs(np.linalg.norm(vec['features'][valid],axis=1)-1))),ineligible_vectors_exact_zero=True,no_inference_or_model_reload=True,original_Mac_model_tolerance_unchanged=True)
+ pairs=np.array(cal['calibration_pairs'],np.int64);assert np.array_equal(ids[pairs],np.array(cal['pair_ids']))and np.all(pairs[:,0]!=pairs[:,1])
+ chosen=sorted(np.flatnonzero(valid),key=lambda i:(hashlib.sha256(ids[i].encode()).digest(),ids[i]))[:8192];expected={tuple(sorted((int(i),int(j))))for i,j in zip(chosen,np.roll(chosen,-1))}
+ for i in chosen:expected.add(tuple(sorted((int(i),int(old['neighbors'][i,0])))))
+ expected=sorted(expected,key=lambda p:(str(ids[p[0]]),str(ids[p[1]])));assert np.array_equal(pairs,np.array(expected,np.int64))
+ raw=np.log1p(data['depth'].astype(np.float64));spread=raw[valid].std(0);assert np.allclose(spread,cal['depth_column_std'],rtol=1e-12,atol=1e-12);use=spread>1e-8;assert use.tolist()==cal['depth_usable_columns']
+ assert cal['measured_rows']==n and cal['incomplete_measurement_rows']==0 and cal['no_depth_modality_rows']==0 and cal['all_zero_rows']==int((~positive).sum())
+ channel=(vec['features'],np.sqrt(data['tnf'].astype(np.float32)),(raw[:,use]/spread[use]).astype(np.float32));saved=np.asarray(cal['raw_pair_distances']);errors=[]
+ for c,x in enumerate(channel):
+  observed=np.ones(len(pairs),bool)if c!=2 else positive[pairs].any(1)
+  d=((x[pairs[observed,0]].astype(np.float64)-x[pairs[observed,1]])**2).sum(1)
+  assert np.all(saved[~observed,c]==-1)and np.allclose(d,saved[observed,c],rtol=1e-12,atol=1e-12)
+  errors.append(float(np.max(np.abs(d-saved[observed,c])))if len(d)else 0.)
+ quality=read(root/'choices.json');branches=read(root/'alternatives.json');stack=[i for i,b in enumerate(branches)if b['parent']<0];selected=[];expanded=0
+ while stack:
+  j=stack.pop()
+  if quality[j]['parent_selected']:selected.append(quality[j]['node'])
+  else:expanded+=1;stack.extend(branches[j]['children'])
+ before=read(root/'core-partition.json');after=read(root/'recruited-partition.json');assert len(selected)==before['clusters']
+ roots=forest['roots'];singleton=roots[forest['count'][roots]==1];bins={}
+ for arm,part in [('core',before),('recruited',after)]:
+  a=np.asarray(part['assignment']);take=a>=0;mass=np.bincount(a[take],weights=length[take],minlength=part['clusters']);count=np.bincount(a[take],minlength=part['clusters'])
+  bins[arm]=dict(bins=part['clusters'],assigned_contigs=int(take.sum()),assigned_bp=int(length[take].sum()),excluded_contigs=int((~valid).sum()),excluded_bp=int(length[~valid].sum()),eligible_unassigned_contigs=int((valid&~take).sum()),eligible_unassigned_bp=int(length[valid&~take].sum()),bp_quantiles={str(q):float(np.quantile(mass,q))for q in [0,.25,.5,.75,.9,1]},bins_below_primary_200kb=int((mass<200000).sum()),assigned_bp_in_sub200kb_bins=int(mass[mass<200000].sum()),singleton_bins=int((count==1).sum()),assignment_reason_counts=dict(Counter(part['reason'])))
+  review=read(out/('diagnostics-'+dataset)/'review.json')['arms'][arm];table=review['secondary']['conservative_sequence'if dataset=='E009'else'provided_origin']['bins'];assert len(table)==part['clusters']
+  bins[arm]['confirmed_other_origin_bp']=sum(z['confirmed_other_origin_bp']for z in table);bins[arm]['unconfirmed_bp']=sum(z['unconfirmed_bp']for z in table)
+  bins[arm]['bp_weighted_confirmed_purity']=sum(z['bp']*z['confirmed_purity']for z in table)/sum(z['bp']for z in table)
+  bins[arm]['target_HQ_origins']=[z['dominant_origin']for z in table if z['target']and z['tier']=='threshold_based_HQ']
+  bins[arm]['non_target_HQ_origins']=[z['dominant_origin']for z in table if not z['target']and z['tier']=='threshold_based_HQ']
+ evidence=read(paths['marker_evidence']);marker=set(evidence['calls']);post=np.asarray(after['assignment']);all_strata={}
+ for lo,hi in [(0,500),(500,768),(768,1000),(1000,2500),(2500,10000),(10000,np.inf)]:
+  for zero in [False,True]:
+   mask=(length>=lo)&(length<hi)&(positive!=zero);all_strata[str(lo)+'|'+('zero'if zero else'positive')]=dict(contigs=int(mask.sum()),bp=int(length[mask].sum()),eligible=int((mask&valid).sum()),assigned_contigs=int((mask&(post>=0)).sum()),assigned_bp=int(length[mask&(post>=0)].sum()))
+ forest_summary=dict(core_rows=len(core),core_bp=int(length[core].sum()),trusted_undirected_edges=len(forest['edge_left']),MST_edges=len(forest['mst_edges']),components=len(roots),singleton_core_components=len(singleton),singleton_core_bp=int(forest['mass'][singleton].sum()),largest_component_contigs=int(forest['count'][roots].max()),largest_component_bp=int(forest['mass'][roots].max()),condensed_candidates=len(branches),selected_bins=len(selected),selected_core_rows=int(sum(forest['count'][j]for j in selected)),selected_core_bp=int(sum(forest['mass'][j]for j in selected)),choices_visited_with_child_selection=expanded,candidates_nonpositive_own_utility=sum(q['own_utility']<=0 for q in quality))
+ results[unit]=dict(geometry=geometry,calibration=dict(pair_count=len(pairs),pair_cohort_exact=True,raw_pair_max_abs_errors=errors,precision='Existing 1e-12 absolute/relative reload contract; not original Mac model reload',active_channels=cal['active_channels'],all_zero_rows=cal['all_zero_rows'],eligible_zero_rows=int((valid&~positive).sum()),eligible_positive_rows=int((valid&positive).sum()),actual_missing_cells=0,full_parent_std_not_window_or_per_base_variance=True),forest=forest_summary,bins=bins,whole_input_length_depth_strata=all_strata,votes=dict(rows=0,reason_counts={},reason_bp={},by_length_depth={},supported_neighbors_but_zero_selected_voters=0,zero_accepted_neighbors=0))
+ print('MECHANISM_UNIT_READ_PASS',unit,forest_summary,flush=True)
+ del data,meta,ids,length,valid,cache,forest,core,queries,positive,cal,old,vec,raw,spread,channel,saved,quality,branches,before,after,evidence,post;gc.collect()
+# Stream original journals without materializing/replacing any accepted artifact.
+with tarfile.open(out/'e026-evidence.tar.gz','r|gz')as archive:
+ for member in archive:
+  if not member.name.endswith('/group/recruitment.jsonl'):continue
+  unit=member.name.split('/')[2];trace=results[unit]['votes'];reasons=Counter();reasonbp=Counter();strata=defaultdict(lambda:dict(rows=0,bp=0));paths=maps[unit]['paths'];data,_=load_arrays(paths['features'],'features');length=data['lengths'];positive=(data['depth']>0).any(1);previous=-1
+  for line in archive.extractfile(member):
+   q=json.loads(line);i=q['full_row'];assert i>previous and q['id']==str(data['ids'][i])and data['eligible'][i];previous=i;bp=int(length[i]);reasons[q['reason']]+=1;reasonbp[q['reason']]+=bp;trace['rows']+=1
+   lo=max(x for x in [0,500,768,1000,2500,10000]if bp>=x);key=str(lo)+'|'+('positive'if positive[i]else'zero')+'|'+q['reason'];strata[key]['rows']+=1;strata[key]['bp']+=bp
+   if not q['accepted_core_neighbors']:trace['zero_accepted_neighbors']+=1
+   elif not q['votes']:trace['supported_neighbors_but_zero_selected_voters']+=1
+  trace.update(reason_counts=dict(reasons),reason_bp=dict(reasonbp),by_length_depth=dict(strata));assert trace['rows']==int(data['eligible'].sum())-results[unit]['bins']['core']['assigned_contigs'];del data,length,positive;gc.collect()
+(out/'mechanism-audit.json').write_text(json.dumps(dict(status='PASS_READ_ONLY_RETAINED_MECHANISM_AUDIT',units=results,no_new_partition_or_search=True,no_truth_selected_threshold=True,all_original_populations_retained=True),indent=2)+'\n')
+print('MECHANISM_AUDIT_PASS',flush=True)

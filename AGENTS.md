@@ -192,6 +192,11 @@ including a common prospective GLM/depth availability policy and its resource
 case, rather than indefinitely comparing divergent dataset-specific versions.
 Optional-modality modes can belong to one tool; truth-selected version or feature
 routing cannot. Preserve historical comparators instead of rewriting their runs.
+Include bootstrap teachers, pair-proposal inputs and feature-availability masks
+in a version's information contract. Matching training flags alone does not make
+two pipelines equivalent if their upstream proposals use different priors. A
+common no-GLM mode must exclude hidden GLM-derived teacher/proposal inputs on both
+datasets, and does not establish transfer of the GLM-enabled mode.
 
 Predeclared practical effect thresholds support the scoped experiment's decision;
 they are not biological standards or statistical significance tests. Preserve a

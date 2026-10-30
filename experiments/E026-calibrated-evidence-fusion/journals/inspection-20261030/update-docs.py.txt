@@ -1,0 +1,341 @@
+"""Reconcile current E026 handoffs while preserving dated launch and source records."""
+from pathlib import Path
+r=Path.cwd();d=r/'experiments/E026-calibrated-evidence-fusion'
+note='evidence/2026-10-30-e026-recovery-and-common-version.md'
+p=r/'docs/STATE.md';s=p.read_text();idx=s.index('## Preserved E026 local preparation')
+new='''# Current Research State
+
+Updated: October 30, 2026 (Copenhagen). This is the single current handoff.
+
+**E026 completed successfully; independently verified VM TERMINATED. Biological
+joint disposition: MODIFY.** [Inspection](../experiments/E026-calibrated-evidence-fusion/inspection-observed.json)
+for `fusion-20261029T185844Z-f16c2e5` verifies all six native gates / 19 contracts,
+eight serial rules + target, input-after proofs, final SUCCESS, private readbacks,
+every archive/member/alias and matching boot/process watcher exit. Exact science
+is `f16c2e5`; no wake, replay, new resources or retention change in inspection.
+The native RUNNING journal remains a dated launch snapshot, superseded by this
+inspection rather than rewritten as completion evidence.
+
+| Full-reference result | E009 E023 anchor | E009 E026 final | Oral E025 anchor | Oral E026 final |
+| --- | ---: | ---: | ---: | ---: |
+| Weighted R95 | 10.4163% | **7.1941%** | 8.1441% | **13.8569%** |
+| Targets at least 50% | 19 | **14** | 58 | **108** |
+| Targets at least 90% | 9 | **1** | 22 | **58** |
+
+[All 955 target rows](../experiments/E026-calibrated-evidence-fusion/comparison-targets.tsv)
+retain E009 one gain / 24 losses / -17.872 Mb, Oral 88 gains / 61 losses /
++119.003 Mb. Recruitment adds 7.495 / 37.493 Mb, with zero / two target losses.
+Full 156/799 reference denominators, E009 conservative v2 / 3.3034% N quarantine,
+Oral origin oracle / separate known-shared sensitivity and all DNA populations
+remain. No per-dataset winner/default routing or formal MIMAG HQ claim. Threshold
+HQ-tier bins are 6 E009 (only one target-dominant; five viral) and 58 Oral.
+
+[Mechanism audit](../experiments/E026-calibrated-evidence-fusion/grouping-diagnostics.json)
+finds correct retained geometry/calibration but extensive disconnection: 6,810 /
+41,414 singleton core components and 84% / 93% of unselected queries without an
+agreeing core neighbor. This correctly implemented hard agreement policy is
+brittle; technical recall is not biological grouping quality. No critical bug
+was found in the inspected paths, nor is optimality established.
+
+**Strongest next block:** [one common full CPU composition/context + measured-depth
+and reliable-marker-learning pipeline with supported bin construction](evidence/2026-10-30-e026-recovery-and-common-version.md).
+Primary common mode excludes GLM on both, including bootstrap teachers/proposals;
+matching student flags alone leaves E022's GLM-derived teacher prior asymmetric.
+Keep historical banks/modes intact. Resolve/freeze one common design/default/
+feature policy before outcomes, retain bootstrap/student outputs for one useful
+selective control, and prepare a separately priced two-community execution.
+Local implementation/tiny checks are the proposed next task, not authorized new
+community/cloud science. Initial CPU planning case: 8–16 allocated hours, $4–7
+gross / $8 proposal, subject to actual native gates. Full Oral GLM parity remains
+a separately assessed ~$65–85 dated-rate alternative, not a product-family ban.
+[Operations](../experiments/E026-calibrated-evidence-fusion/OPERATIONS.md#exact-following-prompt)
+owns the exact preparation prompt. Skin remains unscored with unchanged truth/
+depth/overlap/protocol/cost/retention dependencies.
+
+[Cost ledger](../experiments/E026-calibrated-evidence-fusion/cost-review.json):
+111.194 minutes control-plane allocation, 98.790 minutes workflow, 6.697 GB sampled
+peak RSS. Gross subtotal ~$0.6644 / $1.4244 including reserves before compact
+inspection backup; not an invoice or credit delta. Fresh Welcome DKK 1,743.32
+Available / 88%, January 12 expiry; $35 delayed-usage reserve. Existing stopped
+disks still ~$31.20/month. **November 4, 00:00 Copenhagen** remains the storage
+boundary; no renewal or automatic deletion. [Backup receipt](../experiments/E026-calibrated-evidence-fusion/inspection-backup.json)
+records any additional compact inspection-only bytes/cost within original $6.
+
+## Preserved October 29 native handoff
+
+The following launch/preparation text is dated history. Completion, acceptance
+and the next priority above supersede its RUNNING/pending statements.
+
+'''
+# Preserve the entire prior native handoff, without duplicating the title/date.
+old=s[s.index('**E026 is running'):idx]
+p.write_text(new+old+s[idx:])
+p=r/'docs/CLOUD.md';s=p.read_text();s=s.replace('# Google Cloud workspace operations\n','# Google Cloud workspace operations\n\n'+'''**October 30: E026 SUCCESS and independently TERMINATED; biological MODIFY.**
+[Inspection](../experiments/E026-calibrated-evidence-fusion/inspection-observed.json)
+verifies actual child exits, all gates/rules, exact completion/guest binding,
+collection/readbacks, 566 physical members / three aliases and matching intended
+boot/process watcher exit. No inspection wake or resource/retention change. The
+old RUNNING snapshots below are preserved launch history, not current status.
+
+The one original E2 allocation was October 29, **18:59:06.293 → 20:50:17.937 UTC**
+(19:59 → 21:50 Copenhagen), **6,671.644 seconds / 111.194 minutes**. The watcher
+requested shutdown at 20:48:01 UTC; provider STOP stayed armed. Start-to-lastStop
+is a conservative billing interval; Google charges through STOPPING, not sampled
+CPU time. Science took 5,927.403 seconds / 6,531.33 sampled CPU seconds, peak tree
+RSS 6.697 GB; collection also passed. Sampled whole-filesystem growth was 3.702
+GiB, minimum free 34.069 GiB, inside the original 10 GiB / 25 GiB guards.
+
+[Fresh-price ledger](../experiments/E026-calibrated-evidence-fusion/cost-review.json):
+compute/IP $0.50602, overlapping run-PD $0.07772, native WAN/metadata upper $0.07846,
+new native archive retention $0.00218; subtotal $0.66437 / $1.42437 with reserves,
+before the compact [inspection backup](../experiments/E026-calibrated-evidence-fusion/inspection-backup.json).
+This is an estimate, not an invoice or balance-delta attribution. Fresh signed-in
+Welcome credit DKK **1,743.32 Available / 88%**, January 12 expiry, Certain usage /
+net pricing; rounded cost/savings DKK 230 / net zero. Usage can lag >24 hours;
+$35 reserve remains. Existing E2/ordinary PD/GCS/IP/egress coverage passed before
+the single 697,845,946-byte archive download; no old BAM/cache WAN transfer.
+
+196 all-version Standard objects total 66,643,839,866 bytes, zero soft-deleted.
+All-current weekly storage plus a 2 GiB contingency/reserve quotes $7.7252 within
+the original $8. Original stopped disks remain ~$31.20/month; **November 4,
+00:00 Copenhagen** stays the boundary. No new fit or retention renewal is implied
+by a recommendation or remaining credits. The next block is common-version local
+implementation/preparation; community execution requires separate authorization.
+
+Operational lesson: use raw `gcloud storage cat` output without the generic
+`--format=json` suffix when binding object bytes; that suffix can append a command
+summary footer. Preserve the failed parser output; never strip guessed bytes from
+a science artifact to make a checksum pass. Exact raw reads repaired this local
+metadata path without waking the VM. The immutable intermediate science-result
+status is an initialized FAILED before final collection; inspect actual exits and
+final completion, not that field alone. Numeric post-exit systemd status was not
+retained, and is not fabricated from shutdown.
+
+## Preserved October 29 E026 native handoff
+
+''',1);p.write_text(s)
+# Decision records own the scientific choice; the full reasoning remains in one evidence note.
+p=r/'docs/decisions/D015-coherent-prototype-upgrade.md';s=p.read_text();head,body=s.split('\n',1);p.write_text(head+'\n\n'+'''## E026 reviewed outcome and a shared full-version block, October 30, 2026
+
+Accepted execution, **MODIFY** scientific disposition. [All paired evidence](../../experiments/E026-calibrated-evidence-fusion/comparison-review.json)
+shows E009 10.4163 → 7.1941% R95 / nine → one target-90, while Oral improves
+8.1441 → 13.8569% / 22 → 58. Preserve the failed joint criterion; do not promote
+a truth-routed default. Correctly implemented hard core agreement disconnects
+most cores before marker selection. Recruitment improves aggregate recovery but
+loses two Oral targets. No critical implementation fault is identified in the
+inspected paths; no heuristic optimality or product-family conclusion follows.
+
+[The source-grounded reassessment](../evidence/2026-10-30-e026-recovery-and-common-version.md)
+selects one coherent shared **CPU composition/context + measured parent-depth +
+reliable marker-learning and supported biological bin-construction** block. Both
+communities use the same learner/objective/default/feature-availability policy;
+primary mode excludes GLM **including bootstrap teachers and pair proposals**.
+E022 proposals currently inherit E021's GLM-enabled teacher, so matching only
+student settings is insufficient. This durable information-contract clarification
+is also in AGENTS. Keep GLM banks and historical implementations immutable; a
+common no-GLM mode does not establish GLM-enabled transfer or remove that option.
+
+Locally implement/test and prospectively freeze the common bootstrap/student path
+and one scalable non-brittle bin constructor. Retain both stages and features /
+embeddings / all partitions, allowing a selective marker-learning comparison
+without a compulsory factorial campaign. Use depth in learning on both, preserve
+measured-zero/missing distinctions and parent-depth semantics, and avoid isolated
+long-contig loss based only on contig count. Truth diagnoses/evaluates, never picks
+thresholds, pairs, K, bins or dataset-specific versions. Exact design/defaults are
+the next implementation decision, not a post-score repair in this inspection.
+
+Initial comparison case is 8–16 allocated CPU hours, ~$4–7 gross / $8 proposal,
+not a new authorization or certified forecast. Full Oral GLM parity is a serious
+alternative (~$65–85 complete dated-rate case, uncertain native throughput) and
+would require common GLM-enabled bootstrap/student learning too. Existing Oral
+learning has never used the now-admitted depth; E026's graph loses support even
+with E009 GLM. This makes shared depth learning plus supported bin construction
+more directly useful now than another threshold/grid, larger model, external
+campaign or more development data. Revisit GLM if matched full-version evidence
+identifies sequence ambiguity as the remaining bottleneck. Keep skin unscored
+until independent truth/depth/overlap/evaluator/protocol and separate resource/
+cost/retention admission. Current November 4 boundary remains; no new science ran.
+
+'''+body)
+p=r/'docs/decisions/D013-first-comparative-benchmark.md';s=p.read_text();head,body=s.split('\n',1);p.write_text(head+'\n\n'+'''October 30 E026 inspection supersedes the launch snapshot below: all scientific
+and collection contracts pass and the VM is independently TERMINATED. Frozen
+joint **MODIFY**: E009 R95 7.1941% versus 10.4163% anchor, Oral 13.8569% versus
+8.1441%; all target losses and full denominators remain. [Review](../../experiments/E026-calibrated-evidence-fusion/comparison-review.json)
+is development evidence, not a final tool evaluation or same-full-version claim.
+[D015's reviewed next block](D015-coherent-prototype-upgrade.md#e026-reviewed-outcome-and-a-shared-full-version-block-october-30-2026)
+concretely selects a shared CPU composition/context + genuine depth + reliable
+marker-learning pipeline and supported bin construction. Include bootstrap
+teachers/proposals in the common no-GLM information contract. Preserve GLM as a
+separately costed option, all baselines and the failed criterion. No expectation
+of a mature-tool win is used to justify another external run. Execution/cost and
+storage are separate: ~$0.664 subtotal before compact inspection backup, original
+$6 remains sufficient, no wake or new science; November 4 retention is unchanged.
+
+'''+body)
+p=r/'docs/research/questions.md';s=p.read_text();s+='''
+
+### October 30, 2026: E026 completion and shared-version recovery decision
+
+[Verified E026](../../experiments/E026-calibrated-evidence-fusion/inspection-observed.json)
+completed without an inspection wake. The unchanged joint rule gives MODIFY:
+E009 7.1941% weighted R95 (one gain / 24 target losses), Oral 13.8569% (88 gains /
+61 losses). Source/geometry/calibration/accounting pass, but most reliable cores
+are disconnected and most unselected queries have no agreeing core neighbors.
+Recruitment adds recovery while retaining two Oral target losses. Q001/Q003/Q005
+remain open generally: technical recall, one loss/control bundle and asymmetric
+learners do not establish information-family value or transfer of the full tool.
+[D015](../decisions/D015-coherent-prototype-upgrade.md#e026-reviewed-outcome-and-a-shared-full-version-block-october-30-2026)
+now selects one common CPU composition/context + measured-depth / reliable-marker
+learning and supported bin-construction block, including common bootstrap/proposal
+information. No GLM-derived hidden teacher in a claimed common no-GLM mode. Freeze
+one shared protocol before outcomes; do not tune E026 again or acquire confirmation.
+Skin stays unscored and November 4 retention/cost dependencies remain separate.
+''';p.write_text(s)
+p=r/'docs/evidence/README.md';s=p.read_text();s+='\n- [E026 recovery, source reassessment and one common full version](2026-10-30-e026-recovery-and-common-version.md)\n';p.write_text(s)
+# Preserve the completed inspection request before replacing the current next action.
+p=d/'OPERATIONS.md';s=p.read_text();old_prompt=s[s.index('## Exact following prompt'):];(d/'journals/inspection-prompt-20261030.md').write_text(old_prompt)
+s=s[:s.index('## Exact following prompt')]
+summary='''## Reviewed completion, October 30, 2026
+
+**SUCCESS execution; independently TERMINATED; biological MODIFY.**
+[Inspection](inspection-observed.json), [checks](inspection-checks.json),
+[results](comparison-review.json), [all 955 targets](comparison-targets.tsv),
+[mechanisms](grouping-diagnostics.json) and [cost ledger](cost-review.json)
+supersede the preserved RUNNING receipt below. Exact source `f16c2e5` is unchanged.
+All six gates / 19 native contracts, eight serial scientific rules + target,
+input-after, collection/readbacks and intended boot/process watcher pass. No wake,
+fit, old rescore, scientific repair or resource/retention change in inspection.
+
+One archive download after finance/space admission: **697,845,946 bytes**, SHA256
+`d6fe576012a2cf2442a88ec0c2b0a7e64e43ef148f5326cde3703a771b39f915`,
+566 physical members / three aliases / 1,264,093,749 logical bytes verified.
+2,644 omission relations preserve native locators/hashes; inventories are not
+backups. All release controls, including restart-refusal stderr, were delivered.
+The completion's own upload-exit is outside its immutable stage list; exact
+private object/guest binding and subsequent watcher exit establish delivery.
+Post-exit numeric systemd status was not retained. Intermediate science-result
+FAILED is the frozen driver's pre-collection default, not an unreported stage
+failure; preserve it alongside actual zero exits and final SUCCESS.
+
+| Full-reference result | E009 E023 anchor | E009 core | E009 final | Oral E025 anchor | Oral core | Oral final |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Weighted R95 | 10.4163% | 5.8428% | **7.1941%** | 8.1441% | 12.0570% | **13.8569%** |
+| Targets at least 50% | 19 | 12 | **14** | 58 | 84 | **108** |
+| Targets at least 90% | 9 | 1 | **1** | 22 | 48 | **58** |
+
+E009 loses 17,872,406 recovered bp (one target gain / 24 losses); Oral gains
+119,003,112 (88 gains / 61 losses). Recruitment adds 7,495,114 / 37,492,932 bp,
+with zero / two target losses. The frozen joint KEEP criterion fails unchanged;
+no per-dataset winner routing. Full 156/799 denominators, N quarantine and Oral
+origin/shared sensitivity remain; all DNA/status/length/marker/zero populations
+are retained. Secondary tiers omit RNA and are not formal MIMAG HQ. E009's six
+HQ-tier bins include five viral origins; only one is target-dominant.
+
+Control-plane interval **18:59:06.293 → 20:50:17.937 UTC October 29**, 111.194
+minutes (19:59 → 21:50 Copenhagen). Workflow 98.790 minutes / 6.697 GB sampled
+peak, whole-disk growth 3.702 GiB / minimum free 34.069 GiB. Charged allocation
+is not sampled CPU. Fresh Welcome DKK 1,743.32 / 88%, Available through January 12,
+$35 delayed-usage reserve. Gross price subtotal **$0.66437 / $1.42437 with reserves**
+before [compact inspection backup](inspection-backup.json), within original $6;
+not an invoice. Stopped original disks still ~$31.20/month. **November 4, 00:00
+Copenhagen** remains, no renewal/deletion. Local four-thread / 8 GB review passed
+inside its original clock; helper/parser failures remain in journals/backup and
+never changed the frozen evaluator, vectors or scientific source.
+
+[The recovery reassessment](../../docs/evidence/2026-10-30-e026-recovery-and-common-version.md)
+recommends a common CPU composition/context + measured-depth + reliable-marker
+learning pipeline, with one supported bin constructor instead of another hard-core
+threshold sweep. Include teachers/proposals in the no-GLM primary information
+policy on both; preserve historical GLM banks/options. Local implementation and
+prospective freeze come next, with a separately priced/authorized comparison.
+Initial CPU planning $4–7 / $8 proposal (8–16 allocated hours), versus roughly
+$65–85 complete dated-rate full-Oral GLM parity, both needing actual runtime/
+credit/space/retention gates. Neither is execution approval. Skin stays unscored.
+
+## Preserved authorized native launch
+
+'''
+s=s.replace('# E026 operations\n\n','# E026 operations\n\n'+summary,1)
+next_prompt='''## Exact following prompt
+
+Our goal is substantially closing the recovery gap with one general-purpose
+binner. Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015, completed relevant
+reviews and E026's accepted inspection/comparison/target/mechanism/cost records,
+source reassessment and operations. Preserve dev3/dev4/dev5 and all accepted
+E009–E026 inputs, truth, outputs, native vectors, source freezes and failed
+journals. Use a new descriptive research branch without a codex/ prefix.
+
+Implement and locally test one coherent common CPU composition/context + genuine
+parent-depth and reliable-marker-learning pipeline with one scalable supported
+biological bin-construction path, as D015 recommends. Resolve precise algorithms,
+view exposure/objective/defaults and common bootstrap/proposal policy using
+judgment and targeted primary sources; record a concise prospective design and
+implement in the same task. Primary mode is no-GLM on both communities, including
+teachers and pair proposals: do not reuse E022's GLM-derived E021 teacher/pairs
+as a hidden prior. Preserve GLM banks/modes as future options. Use the same frozen
+implementation, learner/objective/defaults and feature-availability semantics on
+both datasets; no truth-selected version routing. E009 and Oral have genuine ten
+parent-depth columns; preserve source-blind DNA views, measured-zero/missing
+semantics and parent-depth versus measured-window distinctions.
+
+Address E026's disconnected core/recruitment support with graded composition /
+learned / depth evidence and conservative biological alternatives, rather than a
+threshold/resolution grid or a universal marginal-rank veto. Reconsider unsupported
+contig-count exclusion of long isolated DNA prospectively; do not assign every
+singleton automatically. Keep physical marker reliability/lineage limits,
+whole/child alternatives, all short/marker-negative/unknown/non-target DNA and
+explicit abstention. Truth diagnoses and evaluates but never selects thresholds,
+families, K, pairs, bins or training inputs. A larger model is not the goal; no
+new GLM extraction, taxonomy, ensemble or external campaign is automatic.
+
+Run meaningful tiny real view/depth/availability/bootstrap/pair/training/gradient/
+reload/geometry/graph/marker/refinement/export contracts, stating actual versus
+mocked/unavailable paths. Retain features, embeddings, bootstrap/student outputs
+and pre/post partitions. Use at most one decision-changing selective control:
+where the common bootstrap is already required, retain its output for comparison
+with the marker-informed student under the same grouping. No compulsory factorial
+campaign. Freeze one source/default/feature policy and paired full-population
+keep/modify/abandon criteria before changed community outcomes; no new community
+fits or scores in this preparation task.
+
+Prepare the separate common-full-version E009/Oral execution with exact runtime,
+compute, sampled RSS, peak disk/coexistence, return/export, price and credit case.
+Initial CPU planning range 8–16 allocated hours / $4–7 gross / $8 proposal is not a
+cap or certified schedule: use native full-shape gates and justified estimates,
+not weaker science. Review actual free space, verified reusable inputs and safe
+regenerable cleanup before recommending storage; preserve accepted banks/data/
+evidence. Reuse existing measured depth, without acquisition/mapping/aligners.
+No VM start, paid cloud work, resource change, external tool, confirmation DNA or
+retention extension. Prior execution budgets do not carry over. Keep November 4,
+00:00 Copenhagen visible; assess remaining storage/credits before any later run.
+
+Keep both inspected communities explicitly development. Skin remains unscored;
+reuse its source-origin audit and name remaining genuine-depth/source/genome/
+replicon/molecule/host/circular/taxonomy/near/reverse/pretraining/competitive
+ambiguity/unique-versus-origin/evaluator/protocol/cost/retention admissions before
+confirmation. Update records/check/commit with structured what changed/why.
+Report what works, unresolved contracts, same-version evaluation/control scope,
+complete resource case and exact separate execution approval request.
+'''
+p.write_text(s+next_prompt)
+p=d/'README.md';s=p.read_text();idx=s.index('## Preserved local preparation');old=s[s.index('October 29 authorized native phase'):idx];new='''October 30: **execution SUCCESS, VM independently TERMINATED, biological MODIFY**.
+[Inspection](inspection-observed.json) verifies all gates/rules, collection,
+archive/member/alias and matching watcher exit without a wake. Final full-reference
+R95 is **7.1941% E009** (anchor 10.4163%) and **13.8569% Oral** (anchor 8.1441%).
+Target-90 counts are 1 versus 9 / 58 versus 22. Keep all losses and the unchanged
+joint criterion; no product-default promotion or same-full-version claim.
+
+- [Paired review](comparison-review.json), [all 955 targets](comparison-targets.tsv)
+- [Retained mechanism audit](grouping-diagnostics.json), [cost ledger](cost-review.json)
+- [Common full-version decision](../../docs/evidence/2026-10-30-e026-recovery-and-common-version.md)
+- [Current exact local-implementation prompt](OPERATIONS.md#exact-following-prompt)
+
+Next: one shared CPU composition/context + measured-depth / reliable-marker
+learning and supported bin-construction block, with teachers/proposals included
+in the common no-GLM primary policy. No new community/cloud authorization or
+retention extension; November 4 remains. Prior launch/preparation text below is
+history; source locks and native-observed journal are preserved.
+
+## Preserved October 29 launch snapshot
+
+''';p.write_text(s[:s.index('October 29 authorized native phase')]+new+old+s[idx:])

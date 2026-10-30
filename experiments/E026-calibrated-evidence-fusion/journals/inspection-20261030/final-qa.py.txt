@@ -1,0 +1,36 @@
+"""Check final E026 publication consistency without repeating any diagnostic score.
+
+Validate JSON, accepted source locks, result/target bindings, compact review
+population counts, final stopped state and recorded local resource boundaries.
+"""
+import ast,csv,datetime,hashlib,json,shutil,sys,time
+from pathlib import Path
+r=Path.cwd();sys.path[:0]=[str(r/'scripts'),str(r/'src')];p=r/'artifacts/e026-calibrated-evidence-fusion/inspection-20261030';d=r/'experiments/E026-calibrated-evidence-fusion';read=lambda f:json.loads(Path(f).read_text())
+def bind(f):
+ f=Path(f);return dict(bytes=f.stat().st_size,sha256=hashlib.sha256(f.read_bytes()).hexdigest())
+def write(f,v):Path(f).write_text(json.dumps(v,indent=2,allow_nan=False)+'\n')
+for f in d.glob('*.json'):read(f)
+for name in ['read-metadata.py','admit-export.py','download-verify.py','native-review-and-stage.py','prepare-review-paths.py','run-bounded.py','summarize.py','mechanism-audit.py','checks.py','record-review.py','update-docs.py','backup-review.py','close-review.py','compact-review.py','final-qa.py']:
+ ast.parse((p/name).read_text(),filename=name)
+from e026_gates import freeze
+assert freeze()['status']=='PASS'
+assert read(p/'control-plane/provider-final.json')['status']=='TERMINATED'
+a=read(d/'comparison-review.json');assert a['frozen_disposition']=='MODIFY'and a['primary_rule_unchanged'];assert bind(d/'comparison-targets.tsv')==a['full_955_targets']
+rows=list(csv.DictReader((d/'comparison-targets.tsv').open(),delimiter='\t'));assert len(rows)==955 and len({(x['dataset'],x['genome'])for x in rows})==955
+for dataset,ref,n in [('E009',554661890,156),('oral',2083072211,799)]:
+ xs=[x for x in rows if x['dataset']==dataset];assert len(xs)==n and sum(int(x['reference_bp'])for x in xs)==ref
+ represented=a['represented_target_reference_unions'][dataset];assert represented['bp']==sum(int(x['assembly_confirmed_bp'])for x in xs)
+ for arm,column in [('core','E026_core_bp'),('recruited','E026_recruited_bp')]:
+  assert abs(sum(int(x[column])for x in xs)/ref-a['units'][dataset][arm]['primary']['bp_weighted_R95'])<1e-15
+ group=read(d/'grouping-diagnostics.json')['frozen_review_populations'][dataset]
+ assert group['technical_recall']['status']=='PASS'and group['different_target_pool_no_matched_representation_claim']
+ assert sum(q['queries']for q in group['new_query_to_core_neighborhoods']['cells'].values())==group['technical_recall']['query_rows']
+ for q in group['technical_recall']['strata'].values():assert q['mean_recall']is None if q['queries']==0 else q['mean_recall']>=.90
+assert read(d/'inspection-backup.json')['status']=='PASS_PRIVATE_BYTES_AND_EVERY_MEMBER_READBACK'
+cost=read(d/'cost-review.json');assert cost['costs_USD']['total_upper_including_inspection_backup']<6 and cost['storage']['weekly_with_actual_inspection_backup_upper_USD']<8
+clock=read(p/'review-clock.json');assert time.time()<clock['deadline_epoch']and shutil.disk_usage(p).free>6*1024**3
+checks=read(d/'inspection-checks.json');checks['steps']={q.parent.name:read(q)for q in(p/'steps').glob('*/completed.json')};checks['final_publication_QA']=dict(status='PASS',UTC=datetime.datetime.now(datetime.timezone.utc).isoformat(),json_and_successful_helper_AST=True,all_955_weighted_and_full_population_tables=True,all_frozen_source_unchanged=True,provider_final_TERMINATED=True,compact_backup_verified=True,docs_check_log=bind(p/'final-docs-check.log'),review_elapsed_seconds=time.time()-clock['start_epoch'],deadline_not_extended=True,physical_free_bytes=shutil.disk_usage(p).free)
+assert (p/'final-docs-check.log').read_text().strip().endswith('PASS')
+write(d/'inspection-checks.json',checks)
+receipt=read(d/'inspection-observed.json');receipt['local_review']['closed_diagnostic_checks']=bind(d/'inspection-checks.json');write(d/'inspection-observed.json',receipt)
+print('FINAL_QA_PASS',checks['final_publication_QA'],flush=True)

@@ -1,5 +1,20 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+October 30 E026 inspection supersedes the launch snapshot below: all scientific
+and collection contracts pass and the VM is independently TERMINATED. Frozen
+joint **MODIFY**: E009 R95 7.1941% versus 10.4163% anchor, Oral 13.8569% versus
+8.1441%; all target losses and full denominators remain. [Review](../../experiments/E026-calibrated-evidence-fusion/comparison-review.json)
+is development evidence, not a final tool evaluation or same-full-version claim.
+[D015's reviewed next block](D015-coherent-prototype-upgrade.md#e026-reviewed-outcome-and-a-shared-full-version-block-october-30-2026)
+concretely selects a shared CPU composition/context + genuine depth + reliable
+marker-learning pipeline and supported bin construction. Include bootstrap
+teachers/proposals in the common no-GLM information contract. Preserve GLM as a
+separately costed option, all baselines and the failed criterion. No expectation
+of a mature-tool win is used to justify another external run. Execution/cost and
+storage are separate: ~$0.664 subtotal before compact inspection backup, original
+$6 remains sufficient, no wake or new science; November 4 retention is unchanged.
+
+
 October 29 E026 execution update: the owner authorized the unchanged cached
 comparison at `f16c2e5` under $6 / 12 hours, subject to fresh admission and the
 November 4 boundary. [Operations](../../experiments/E026-calibrated-evidence-fusion/OPERATIONS.md)

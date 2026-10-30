@@ -1,0 +1,30 @@
+"""Close E026 review with retained population summaries, cost and evidence checks.
+
+Aggregate only already frozen diagnostics; no new truth evaluation, vector model,
+neighbor search, grouping, thresholds or scientific outcomes are generated.
+"""
+import datetime,hashlib,json,sys,time,shutil,subprocess
+from pathlib import Path
+r=Path.cwd();sys.path[:0]=[str(r/'scripts'),str(r/'src')];p=r/'artifacts/e026-calibrated-evidence-fusion/inspection-20261030';d=r/'experiments/E026-calibrated-evidence-fusion';read=lambda f:json.loads(Path(f).read_text())
+def bind(f):
+ f=Path(f);return dict(bytes=f.stat().st_size,sha256=hashlib.sha256(f.read_bytes()).hexdigest())
+def write(f,v):Path(f).write_text(json.dumps(v,indent=2,allow_nan=False)+'\n')
+v=read(d/'grouping-diagnostics.json');v['frozen_review_populations']={}
+for ds,unit in [('E009','E009-E022'),('oral','oral-E019')]:
+ raw=read(p/('diagnostics-'+ds)/'review.json');neighborhoods=raw['new_core_neighborhoods'];done=read(p/('stage-'+unit)/'work/units'/unit/'group/completed.json');arm=raw['arms']['recruited'];geometry=arm['diagnostics']['geometry']if ds=='E009'else arm['grouping']['geometry']
+ # Full original stratum cells are copied, not reevaluated or pooled into a new quality metric.
+ v['frozen_review_populations'][ds]=dict(native_fixed_all_eligible_geometry=geometry,new_query_to_core_neighborhoods=neighborhoods,technical_recall=done['retrieval_audit'],different_target_pool_no_matched_representation_claim=True,original_raw_review=bind(p/('diagnostics-'+ds)/'review.json'))
+write(d/'grouping-diagnostics.json',v)
+backup=read(d/'inspection-backup.json');cost=read(d/'cost-review.json');cost['compact_inspection_backup']=backup;additional=backup['cost']['actual_archive_readback_WAN_USD']+backup['cost']['new_storage_through_boundary_USD'];cost['costs_USD']['subtotal_including_inspection_backup']=cost['costs_USD']['subtotal']+additional;cost['costs_USD']['total_upper_including_inspection_backup']=cost['costs_USD']['total_upper_with_reserves']+additional;assert cost['costs_USD']['total_upper_including_inspection_backup']<6;cost['storage']['weekly_with_actual_inspection_backup_upper_USD']=cost['storage']['all_current_week_plus_2GiB_contingency_and_reserve_USD']+backup['archive']['bytes']/1024**3*168*2.7397e-5;assert cost['storage']['weekly_with_actual_inspection_backup_upper_USD']<8;write(d/'cost-review.json',cost)
+from e026_gates import freeze
+proof=freeze();assert proof['status']=='PASS'
+# Independently verify retained comparison input summaries and output publication.
+protocol=read(d/'protocol.json')
+for name,b in protocol['baseline_summaries'].items():assert bind(r/name)==b
+assert read(d/'comparison-review.json')['frozen_disposition']=='MODIFY'
+assert bind(d/'comparison-targets.tsv')==read(d/'comparison-review.json')['full_955_targets']
+checks=read(d/'inspection-checks.json');checks['steps']={q.parent.name:read(q)for q in(p/'steps').glob('*/completed.json')};checks.update(final_frozen_source=proof,all_29_new_and_333_inherited_files_unchanged=True,compact_backup_all_members_verified=True,compact_backup_binding=bind(d/'inspection-backup.json'),local_free_after_bytes=shutil.disk_usage(p).free,review_clock_elapsed_seconds=time.time()-read(p/'review-clock.json')['start_epoch'],original_review_clock_not_reset=True)
+assert checks['local_free_after_bytes']>6*1024**3 and time.time()<read(p/'review-clock.json')['deadline_epoch']
+write(d/'inspection-checks.json',checks)
+receipt=read(d/'inspection-observed.json');receipt['compact_inspection_backup']=bind(d/'inspection-backup.json');receipt['local_review']['maximum_sampled_step_RSS_bytes']=max(x['resources']['peak_sampled_rss_bytes']for x in checks['steps'].values());receipt['local_review']['closed_diagnostic_checks']=bind(d/'inspection-checks.json');receipt['local_review']['no_clock_reset_or_extension']=True;write(d/'inspection-observed.json',receipt)
+print('CLOSED_FROZEN_REVIEW_PASS',json.dumps(dict(gross_upper=cost['costs_USD']['total_upper_including_inspection_backup'],subtotal=cost['costs_USD']['subtotal_including_inspection_backup'],max_local_RSS=receipt['local_review']['maximum_sampled_step_RSS_bytes'])),flush=True)

@@ -1,0 +1,27 @@
+"""Bind existing accepted local feature/vector/graph/marker copies explicitly."""
+import sys,json
+from pathlib import Path
+r=Path.cwd();sys.path[:0]=[str(r/'scripts')];from e024_coverage import binding
+out=r/'artifacts/e026-calibrated-evidence-fusion/inspection-20261030';lock=json.loads((r/'experiments/E026-calibrated-evidence-fusion/reuse-lock.json').read_text());review={}
+for u in ['E009-E022','oral-E019']:
+ native=lock['units'][u]
+ if u=='E009-E022':
+  old=r/'artifacts/e022-inspection/20261026/verified/work/units/E009-relational'
+  paths=dict(features=str(r/'artifacts/e011-cached-grouping-reference/restore-local/candidate/features/features.npz'),embeddings=str(old/'embeddings.npz'),graph=str(old/'group/graph.npz'),marker_evidence=str(old/'refine/quality-evidence.json'))
+  clean=r/'artifacts/e011-cached-grouping-reference/restore-local/candidate/markers/evidence.json';a=json.loads((r/'experiments/E022-marker-informed-learning/reuse-lock.json').read_text());marker_native=a['units']['E009-relational']['marker_cache']+'/evidence.json';assert binding(clean)==a['files'][marker_native]
+  truth=r/'artifacts/e009-truth-v2/20261015/attempt-local-v2/truth-v2'
+ else:
+  old=r/'artifacts/e019-window-context/review-20261023/verified/work/units/oral-context'
+  features=r/'artifacts/e024-inspection/20261028T193107Z/verified/work/rebound/features.npz'
+  paths=dict(features=str(features),receipt=str(features.parent/'rebind.json'),embeddings=str(old/'embeddings.npz'),graph=str(old/'group/graph.npz'),marker_evidence=str(old/'refine/quality-evidence.json'))
+  clean=r/'artifacts/e014-multiview-reconstruction/inspection-20261019/oral-marker-review.json';a=json.loads((r/'experiments/E014-multiview-reconstruction/comparison-review.json').read_text());assert binding(clean)==a['evidence'][str(clean.relative_to(r))]
+  truth=r/'artifacts/e014-multiview-reconstruction/oral-truth-origin-v1'
+ proof={}
+ for key,path in paths.items():
+  assert binding(path)==lock['files'][native[key]],(u,key,path)
+  proof[key]=dict(local_path=path,native_path=native[key],**binding(path))
+  if key in ['features','graph','embeddings']:
+   meta=str(Path(path).with_suffix('.json'));expected=lock['files'][str(Path(native[key]).with_suffix('.json'))];assert binding(meta)==expected;proof[key+'_metadata']=dict(local_path=meta,**expected)
+ (out/(u+'-unit.json')).write_text(json.dumps(native,indent=2)+'\n');(out/(u+'-review-paths.json')).write_text(json.dumps(paths,indent=2)+'\n')
+ review[u]=dict(paths=paths,proof=proof,marker_clean=str(clean),marker_clean_binding=binding(clean),truth_root=str(truth),native_unit=native,dataset='E009'if u=='E009-E022'else'oral')
+(out/'external-review-map.json').write_text(json.dumps(dict(status='PASS_EXACT_EXISTING_COPIES',units=review,additional_data_copied=False,original_native_receipts_rewritten=False),indent=2)+'\n');print('EXACT_EXTERNAL_REVIEW_PATHS_PASS',flush=True)

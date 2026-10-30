@@ -1,0 +1,37 @@
+"""Price measured allocation/export and admit bounded local E026 delivery.
+
+Uses current signed-in credit observations and Catalog rates, never credit deltas
+as an invoice. No VM change; this authorizes one byte-bound private object read.
+"""
+import datetime,json,shutil,sys,time
+from pathlib import Path
+r=Path.cwd();sys.path.insert(0,str(r/'scripts'));from e024_coverage import binding
+out=r/'artifacts/e026-calibrated-evidence-fusion/inspection-20261030';m=out/'metadata'
+p=json.loads((out/'control-plane/provider-state.json').read_text());d=json.loads((m/'completion.json').read_text());c=json.loads((m/'collection.json').read_text());w=json.loads((m/'watchdog-exit.json').read_text());native=json.loads((r/'experiments/E026-calibrated-evidence-fusion/native-observed.json').read_text())
+assert p['status']=='TERMINATED'and d['status']=='SUCCESS'and d['science_completed']and d['collection_readback_verified']
+assert p['machineType'].endswith('/e2-standard-8')and[int(x['diskSizeGb'])for x in p['disks']]==[30,300]
+assert w['decision']=='workflow exited'and w['shutdown']and w['observed_process']is None
+assert w['expected_process']==native['watchdog']['process']and w['boot_id']==native['watchdog']['boot_id']
+assert all(x['resources']['exit_code']==0 and x['resources']['stop_reason']is None for x in d['stages'])
+prices=json.loads((out/'current-prices.json').read_text());by={s['skuId']:s for s in prices['skus']};fx=prices['skus'][0]['pricingInfo'][-1]['currencyConversionRate']
+def rate(k):
+ q=by[k]['pricingInfo'][-1]['pricingExpression'];a=q['tieredRates'][-1]['unitPrice'];return(int(a['units'])+a['nanos']/1e9)/fx
+compute=8*rate('CF4E-A0C7-E3BF')+32*rate('F449-33EC-A5EF')+rate('C054-7F72-A02E');pd=300*rate('6AE1-525F-8B80')+30*rate('D973-5D65-BAB2');month_hours=by['6AE1-525F-8B80']['pricingInfo'][-1]['pricingExpression']['baseUnitConversionFactor']/1024**3/3600
+start=datetime.datetime.fromisoformat(p['lastStartTimestamp']).timestamp();stop=datetime.datetime.fromisoformat(p['lastStopTimestamp']).timestamp();hours=(stop-start)/3600
+assert start==native['original_VM_start_epoch']and stop<start+43200
+archive=c['archive'];assert archive['bytes']<=2*1024**3 and c['logical_member_bytes']<=6*1024**3 and c['regular_members']<=20000
+objects=json.loads((out/'objects-all-versions.json').read_text());soft=json.loads((out/'objects-soft-deleted.json').read_text());assert {x['storageClass']for x in objects['objects']}=={'STANDARD'}
+retention=1793746800;now=time.time();assert now<retention
+metadata_est=4*1024**2;export_USD=(archive['bytes']+metadata_est)/1024**3*.12
+storage=(archive['bytes']/1024**3)*max(0,retention-d['finished_epoch'])/3600*.000027397
+subtotal=hours*compute+hours*pd/month_hours+export_USD+storage;upper=subtotal+.01+.25+.5
+storage_week=pd*168/730+(objects['bytes']+soft['bytes']+2*1024**3)/1024**3*.000027397*168+.25
+free=shutil.disk_usage(out);conservative_new=archive['bytes']+2*c['logical_member_bytes']+64*1024**2
+assert free.free-conservative_new>=6*1024**3 and upper<6 and storage_week<8
+credit=dict(UTC=datetime.datetime.now(datetime.timezone.utc).isoformat(),method='Fresh signed-in Chrome Billing Overview/Credits visible DOM',status='Available',remaining_DKK=1743.32,original_DKK=1973.43,percent_remaining=88,scope='Certain usage; see the terms for free trial',expiry='2027-01-12',application='Net pricing',paid_account=True,overview_period='October 1–30, 2026',rounded_cost_DKK=230,rounded_savings_DKK=230,net_DKK=0,delay='Costs take a few hours to show up, and might take longer than 24 hours. Numbers are rounded to make them easier to read.',delayed_usage_reserve_USD=35,real_money_authorized=False)
+assert credit['remaining_DKK']/fx>35+8+6
+ad=dict(status='PASS_COST_STORAGE_AND_EXPORT_BEFORE_DOWNLOAD',UTC=credit['UTC'],provider_status='TERMINATED',credit=credit,coverage_status='PASS_FOR_SPECIFIED_ORDINARY_FIRST_PARTY_PRODUCTS_ONLY',ordinary_products=['E2 CPU','standard non-premium Ubuntu','original 30 GiB standard and 300 GiB balanced PD','regional Standard GCS','external IPv4 and ordinary egress/operations'],conversion_DKK_per_USD=fx,current_Catalog=binding(out/'current-prices.json'),allocation_seconds=stop-start,allocated_vCPU_hours=hours*8,compute_IP_USD_hour=compute,PD_USD_month=pd,Catalog_month_hours=month_hours,compute_IP_USD=hours*compute,run_PD_USD=hours*pd/month_hours,run_PD_overlaps_storage_approval=True,archive=archive,planned_archive_downloads=1,metadata_export_allowance_bytes=metadata_est,WAN_export_upper_USD=export_USD,new_archive_storage_through_boundary_USD=storage,priced_subtotal_USD=subtotal,total_upper_with_reserves_USD=upper,original_phase_gross_allowance_USD=6,remaining_original_phase_gross_at_upper_USD=6-upper,storage=dict(all_versions=len(objects['objects']),bytes=objects['bytes'],soft_deleted_bytes=soft['bytes'],all_current_week_plus_2GiB_contingency_and_reserve_USD=storage_week,original_allowance_USD=8,retention_end='2026-11-04T00:00:00+01:00',extended=False),local=dict(free_bytes=free.free,conservative_archive_and_two_stages_bytes=conservative_new,reserve_bytes=6*1024**3,stage_cap_per_unit=2*1024**3,no_bulk_input_copy=True),not_invoice_or_credit_delta=True,VM_woken=False)
+(out/'export-admission.json').write_text(json.dumps(ad,indent=2)+'\n');(out/'billing-ui.json').write_text(json.dumps(credit,indent=2)+'\n')
+first=min(json.loads(x)['epoch']for x in(out/'control-plane/cloud-actions.jsonl').read_text().splitlines());clock=dict(start_epoch=first,deadline_epoch=first+7200,threads=4,sampled_RSS_bytes=8000000000,physical_free_reserve_bytes=6*1024**3,per_unit_materialization_bytes=2*1024**3,start_scope='First inspection control-plane read, conservative local review clock; cloud science clock is not restarted',scope='Archive/stopped-output verification and only new-output frozen diagnostics')
+(out/'review-clock.json').write_text(json.dumps(clock,indent=2)+'\n')
+print(json.dumps({k:ad[k]for k in ['status','allocation_seconds','compute_IP_USD','run_PD_USD','WAN_export_upper_USD','new_archive_storage_through_boundary_USD','priced_subtotal_USD','total_upper_with_reserves_USD','local','storage']},indent=2))

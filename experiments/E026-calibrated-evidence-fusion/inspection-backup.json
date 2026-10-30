@@ -1,0 +1,29 @@
+{
+  "kind": "E026 compact inspection backup",
+  "status": "PASS_PRIVATE_BYTES_AND_EVERY_MEMBER_READBACK",
+  "UTC": "2026-10-30T16:07:42.570497+00:00",
+  "URI": "gs://dl-binner-archive-167650584170/e026/fusion-20261029T185844Z-f16c2e5/inspection-20261030/e026-inspection.tar.gz",
+  "generation": "1793376448928740",
+  "archive": {
+    "bytes": 2493982,
+    "sha256": "0669972961f691cba05a50b292ea37b362dfa2d781435f87abb22b1fb1113eff"
+  },
+  "physical_members": 189,
+  "logical_bytes": 16849693,
+  "manifest": {
+    "bytes": 40445,
+    "sha256": "659fd80290dd2af58f682040573ecbe69494ba51bb9dd430435bd5139073eb4f"
+  },
+  "cost": {
+    "actual_archive_readback_WAN_USD": 0.0002787242084741592,
+    "new_storage_through_boundary_USD": 6.546577413089804e-06,
+    "operations_inside_existing_reserve": true,
+    "credit_gate": "2026-10-30T14:58:53.661375+00:00",
+    "covered_by_original_6_USD": true
+  },
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "retention_extended": false,
+  "no_VM_or_science": true,
+  "all_member_manifest": "inspection-manifest.json inside exact private archive",
+  "native_DNA_or_omitted_FASTA_backup": false
+}

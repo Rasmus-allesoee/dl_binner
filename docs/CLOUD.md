@@ -1,5 +1,52 @@
 # Google Cloud workspace operations
 
+**October 30: E026 SUCCESS and independently TERMINATED; biological MODIFY.**
+[Inspection](../experiments/E026-calibrated-evidence-fusion/inspection-observed.json)
+verifies actual child exits, all gates/rules, exact completion/guest binding,
+collection/readbacks, 566 physical members / three aliases and matching intended
+boot/process watcher exit. No inspection wake or resource/retention change. The
+old RUNNING snapshots below are preserved launch history, not current status.
+
+The one original E2 allocation was October 29, **18:59:06.293 → 20:50:17.937 UTC**
+(19:59 → 21:50 Copenhagen), **6,671.644 seconds / 111.194 minutes**. The watcher
+requested shutdown at 20:48:01 UTC; provider STOP stayed armed. Start-to-lastStop
+is a conservative billing interval; Google charges through STOPPING, not sampled
+CPU time. Science took 5,927.403 seconds / 6,531.33 sampled CPU seconds, peak tree
+RSS 6.697 GB; collection also passed. Sampled whole-filesystem growth was 3.702
+GiB, minimum free 34.069 GiB, inside the original 10 GiB / 25 GiB guards.
+
+[Fresh-price ledger](../experiments/E026-calibrated-evidence-fusion/cost-review.json):
+compute/IP $0.50602, overlapping run-PD $0.07772, native WAN/metadata upper $0.07846,
+new native archive retention $0.00218; including the $0.000285 compact backup,
+subtotal $0.66465 / $1.42465 with reserves. The [inspection backup](../experiments/E026-calibrated-evidence-fusion/inspection-backup.json)
+passes exact readback and all 189 members (2,493,982 compressed bytes).
+This is an estimate, not an invoice or balance-delta attribution. Fresh signed-in
+Welcome credit DKK **1,743.32 Available / 88%**, January 12 expiry, Certain usage /
+net pricing; rounded cost/savings DKK 230 / net zero. Usage can lag >24 hours;
+$35 reserve remains. Existing E2/ordinary PD/GCS/IP/egress coverage passed before
+the single 697,845,946-byte archive download; no old BAM/cache WAN transfer.
+
+The pre-backup inventory has 196 all-version Standard objects totaling
+66,643,839,866 bytes, zero soft-deleted. The two new inspection objects add
+about 2.494 MB; their exact bytes/readbacks are in the backup receipt.
+All-current weekly storage plus a 2 GiB contingency/reserve quotes $7.7252 within
+the original $8. Original stopped disks remain ~$31.20/month; **November 4,
+00:00 Copenhagen** stays the boundary. No new fit or retention renewal is implied
+by a recommendation or remaining credits. The next block is common-version local
+implementation/preparation; community execution requires separate authorization.
+
+Operational lesson: use raw `gcloud storage cat` output without the generic
+`--format=json` suffix when binding object bytes; that suffix can append a command
+summary footer. Preserve the failed parser output; never strip guessed bytes from
+a science artifact to make a checksum pass. Exact raw reads repaired this local
+metadata path without waking the VM. The immutable intermediate science-result
+status is an initialized FAILED before final collection; inspect actual exits and
+final completion, not that field alone. Numeric post-exit systemd status was not
+retained, and is not fabricated from shutdown.
+
+## Preserved October 29 E026 native handoff
+
+
 **October 29: E026 is RUNNING under verified supervision.**
 The original VM started at 18:59:06 UTC for
 `fusion-20261029T185844Z-f16c2e5`, with exact clean `f16c2e5` fetched using its

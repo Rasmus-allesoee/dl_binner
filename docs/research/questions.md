@@ -761,3 +761,21 @@ makes common learning/feature policy on both communities the next concrete
 recovery milestone, with an explicit GLM efficiency/resource/inclusion decision.
 Do not let more cached downstream controls indefinitely defer it. No new model,
 GLM extraction, acquisition, confirmation or retention extension enters E026.
+
+
+### October 30, 2026: E026 completion and shared-version recovery decision
+
+[Verified E026](../../experiments/E026-calibrated-evidence-fusion/inspection-observed.json)
+completed without an inspection wake. The unchanged joint rule gives MODIFY:
+E009 7.1941% weighted R95 (one gain / 24 target losses), Oral 13.8569% (88 gains /
+61 losses). Source/geometry/calibration/accounting pass, but most reliable cores
+are disconnected and most unselected queries have no agreeing core neighbors.
+Recruitment adds recovery while retaining two Oral target losses. Q001/Q003/Q005
+remain open generally: technical recall, one loss/control bundle and asymmetric
+learners do not establish information-family value or transfer of the full tool.
+[D015](../decisions/D015-coherent-prototype-upgrade.md#e026-reviewed-outcome-and-a-shared-full-version-block-october-30-2026)
+now selects one common CPU composition/context + measured-depth / reliable-marker
+learning and supported bin-construction block, including common bootstrap/proposal
+information. No GLM-derived hidden teacher in a claimed common no-GLM mode. Freeze
+one shared protocol before outcomes; do not tune E026 again or acquire confirmation.
+Skin stays unscored and November 4 retention/cost dependencies remain separate.

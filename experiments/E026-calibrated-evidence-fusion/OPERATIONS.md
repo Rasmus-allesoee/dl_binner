@@ -1,5 +1,64 @@
 # E026 operations
 
+## Reviewed completion, October 30, 2026
+
+**SUCCESS execution; independently TERMINATED; biological MODIFY.**
+[Inspection](inspection-observed.json), [checks](inspection-checks.json),
+[results](comparison-review.json), [all 955 targets](comparison-targets.tsv),
+[mechanisms](grouping-diagnostics.json) and [cost ledger](cost-review.json)
+supersede the preserved RUNNING receipt below. Exact source `f16c2e5` is unchanged.
+All six gates / 19 native contracts, eight serial scientific rules + target,
+input-after, collection/readbacks and intended boot/process watcher pass. No wake,
+fit, old rescore, scientific repair or resource/retention change in inspection.
+
+One archive download after finance/space admission: **697,845,946 bytes**, SHA256
+`d6fe576012a2cf2442a88ec0c2b0a7e64e43ef148f5326cde3703a771b39f915`,
+566 physical members / three aliases / 1,264,093,749 logical bytes verified.
+2,644 omission relations preserve native locators/hashes; inventories are not
+backups. All release controls, including restart-refusal stderr, were delivered.
+The completion's own upload-exit is outside its immutable stage list; exact
+private object/guest binding and subsequent watcher exit establish delivery.
+Post-exit numeric systemd status was not retained. Intermediate science-result
+FAILED is the frozen driver's pre-collection default, not an unreported stage
+failure; preserve it alongside actual zero exits and final SUCCESS.
+
+| Full-reference result | E009 E023 anchor | E009 core | E009 final | Oral E025 anchor | Oral core | Oral final |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Weighted R95 | 10.4163% | 5.8428% | **7.1941%** | 8.1441% | 12.0570% | **13.8569%** |
+| Targets at least 50% | 19 | 12 | **14** | 58 | 84 | **108** |
+| Targets at least 90% | 9 | 1 | **1** | 22 | 48 | **58** |
+
+E009 loses 17,872,406 recovered bp (one target gain / 24 losses); Oral gains
+119,003,112 (88 gains / 61 losses). Recruitment adds 7,495,114 / 37,492,932 bp,
+with zero / two target losses. The frozen joint KEEP criterion fails unchanged;
+no per-dataset winner routing. Full 156/799 denominators, N quarantine and Oral
+origin/shared sensitivity remain; all DNA/status/length/marker/zero populations
+are retained. Secondary tiers omit RNA and are not formal MIMAG HQ. E009's six
+HQ-tier bins include five viral origins; only one is target-dominant.
+
+Control-plane interval **18:59:06.293 → 20:50:17.937 UTC October 29**, 111.194
+minutes (19:59 → 21:50 Copenhagen). Workflow 98.790 minutes / 6.697 GB sampled
+peak, whole-disk growth 3.702 GiB / minimum free 34.069 GiB. Charged allocation
+is not sampled CPU. Fresh Welcome DKK 1,743.32 / 88%, Available through January 12,
+$35 delayed-usage reserve. Gross price subtotal **$0.66465 / $1.42465 with reserves**, including the verified
+[compact inspection backup](inspection-backup.json), within original $6;
+not an invoice. Stopped original disks still ~$31.20/month. **November 4, 00:00
+Copenhagen** remains, no renewal/deletion. Local four-thread / 8 GB review passed
+inside its original clock; helper/parser failures remain in journals/backup and
+never changed the frozen evaluator, vectors or scientific source.
+
+[The recovery reassessment](../../docs/evidence/2026-10-30-e026-recovery-and-common-version.md)
+recommends a common CPU composition/context + measured-depth + reliable-marker
+learning pipeline, with one supported bin constructor instead of another hard-core
+threshold sweep. Include teachers/proposals in the no-GLM primary information
+policy on both; preserve historical GLM banks/options. Local implementation and
+prospective freeze come next, with a separately priced/authorized comparison.
+Initial CPU planning $4–7 / $8 proposal (8–16 allocated hours), versus roughly
+$65–85 complete dated-rate full-Oral GLM parity, both needing actual runtime/
+credit/space/retention gates. Neither is execution approval. Skin stays unscored.
+
+## Preserved authorized native launch
+
 ## Authorized native phase, October 29, 2026
 
 The owner invoked the prepared exact prompt at clean commit `f16c2e5` and
@@ -187,82 +246,60 @@ assumed. If actual sizes cannot fit, assess a new staging plan before download.
 ## Exact following prompt
 
 Our goal is substantially closing the recovery gap with one general-purpose
-binner. Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015 and E026's frozen
-design/policy/protocol, source/reuse/runtime locks, native-observed.json, financial
-admission and operations. Inspect phase `fusion-20261029T185844Z-f16c2e5`, executed
-from exact clean `f16c2e5`, without starting another scientific job. Preserve
-dev3/dev4/dev5, every accepted E009–E026 input/truth/native vector/result/source
-freeze and all failed preparation/portability/native journals. Learning stays fixed.
+binner. Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015, completed relevant
+reviews and E026's accepted inspection/comparison/target/mechanism/cost records,
+source reassessment and operations. Preserve dev3/dev4/dev5 and all accepted
+E009–E026 inputs, truth, outputs, native vectors, source freezes and failed
+journals. Use a new descriptive research branch without a codex/ prefix.
 
-Check GCP control-plane state, `e026-candidate/status`, and private completion.json
-under `gs://dl-binner-archive-167650584170/e026/fusion-20261029T185844Z-f16c2e5/`.
-Shutdown alone is not success. If still healthy and running, report actual progress
-and leave the verified watcher/provider STOP intact without polling to completion.
-After independently verified TERMINATED, establish all six native gate exits,
-every verify/group/export/audit exit for both serial communities, final target,
-input-after proofs, collection/upload/readback and matching boot/process watcher
-exit. Preserve missing/failed contracts explicitly. Do not replay accepted science.
+Implement and locally test one coherent common CPU composition/context + genuine
+parent-depth and reliable-marker-learning pipeline with one scalable supported
+biological bin-construction path, as D015 recommends. Resolve precise algorithms,
+view exposure/objective/defaults and common bootstrap/proposal policy using
+judgment and targeted primary sources; record a concise prospective design and
+implement in the same task. Primary mode is no-GLM on both communities, including
+teachers and pair proposals: do not reuse E022's GLM-derived E021 teacher/pairs
+as a hidden prior. Preserve GLM banks/modes as future options. Use the same frozen
+implementation, learner/objective/defaults and feature-availability semantics on
+both datasets; no truth-selected version routing. E009 and Oral have genuine ten
+parent-depth columns; preserve source-blind DNA views, measured-zero/missing
+semantics and parent-depth versus measured-window distinctions.
 
-Refresh Welcome-credit balance/scope/expiry, delayed usage, applicable prices and
-product coverage. Price actual allocated uptime, disks, storage and WAN separately
-from sampled CPU/RAM; a credit delta is not an invoice. The original $6 / 12-hour
-scope began October 29 at 18:59:06.293 UTC; provider STOP is October 30 at
-07:14:06.293 UTC. Standing justified reasonable fully credit-covered revisions
-remain available, with a consistent recorded cumulative ledger and shutdown
-controls; never silently reset a clock. November 4, 00:00 Copenhagen remains the
-storage boundary. No provisioning, resize, acquisition or retention extension.
-Do not wake for missing evidence without first assessing collection-only recovery
-against the original remaining allowance/clock; do not repeat science.
+Address E026's disconnected core/recruitment support with graded composition /
+learned / depth evidence and conservative biological alternatives, rather than a
+threshold/resolution grid or a universal marginal-rank veto. Reconsider unsupported
+contig-count exclusion of long isolated DNA prospectively; do not assign every
+singleton automatically. Keep physical marker reliability/lineage limits,
+whole/child alternatives, all short/marker-negative/unknown/non-target DNA and
+explicit abstention. Truth diagnoses and evaluates but never selects thresholds,
+families, K, pairs, bins or training inputs. A larger model is not the goal; no
+new GLM extraction, taxonomy, ensemble or external campaign is automatic.
 
-Before downloading, assess actual compressed/member inventories, WAN and combined
-local footprints. Use the tested stdin selective stager if space is tight. Verify
-every compressed byte/member/alias and omitted-artifact locator; an inventory is
-not a backup. Keep 2 GiB compressed / 6 GiB logical / 20,000 physical members and
-up to 4 GiB WAN for two unit streams. Stage sequentially, at most 2 GiB needed
-members per unit with 6 GiB physical free reserve; reuse accepted local inputs via
-an explicit exact-byte map and preserve native receipts. Do not duplicate the
-full FASTA/vector/BAM caches. Four numerical threads, 8 GB sampled RSS and two
-hours local review; record an adequate justified revision if needed, not weaker
-scientific contracts or an oversized fallback.
+Run meaningful tiny real view/depth/availability/bootstrap/pair/training/gradient/
+reload/geometry/graph/marker/refinement/export contracts, stating actual versus
+mocked/unavailable paths. Retain features, embeddings, bootstrap/student outputs
+and pre/post partitions. Use at most one decision-changing selective control:
+where the common bootstrap is already required, retain its output for comparison
+with the marker-informed student under the same grouping. No compulsory factorial
+campaign. Freeze one source/default/feature policy and paired full-population
+keep/modify/abandon criteria before changed community outcomes; no new community
+fits or scores in this preparation task.
 
-If completed, independently verify exact source/policy/runtime, all 145,702 /
-1,286,547 nonempty contig axes and ordered ten sample columns, native unit vectors,
-calibration populations/knots, positive-zero/co-absence/missing semantics,
-query-to-core arrays and every source-blind recall-stratum gate, reliable edges,
-forest/whole-child alternatives/choices, physical marker evidence, recruitment
-votes/reasons/core-to-final ID mapping and both complete DNA partitions/exports.
-Keep the unchanged >=0.90 recall gate and original Mac model portability tolerance.
-Original learned-neighbor geometry differs from the new core retrieval population.
-No contract inference from a normal parent exit or just passing tiny tests.
+Prepare the separate common-full-version E009/Oral execution with exact runtime,
+compute, sampled RSS, peak disk/coexistence, return/export, price and credit case.
+Initial CPU planning range 8–16 allocated hours / $4–7 gross / $8 proposal is not a
+cap or certified schedule: use native full-shape gates and justified estimates,
+not weaker science. Review actual free space, verified reusable inputs and safe
+regenerable cleanup before recommending storage; preserve accepted banks/data/
+evidence. Reuse existing measured depth, without acquisition/mapping/aligners.
+No VM start, paid cloud work, resource change, external tool, confirmation DNA or
+retention extension. Prior execution budgets do not carry over. Keep November 4,
+00:00 Copenhagen visible; assess remaining storage/credits before any later run.
 
-Evaluate only the new core/recruited outputs with frozen conservative E009 v2 and
-separately named Oral provided-origin/known-shared sensitivity. Reuse E023/E025/
-E019 and older summaries without refit/rescore. Keep full 156/799 reference
-numerators/denominators, 3.3034% E009 N quarantine, original two zero-bp Oral
-records, all target/length/origin/native-eligibility/marker/zero/unknown/non-target/
-excluded/unassigned populations and per-target gains/losses. Report the unchanged
-joint KEEP/MODIFY/ABANDON disposition, recruitment effects, calibration/availability/
-selection mechanism evidence and secondary per-bin completeness/conservative
-impurity and threshold HQ/MQ/LQ with formulas, not formal MIMAG HQ without RNA.
-Stream checksum-bound raw vote journals if needed; truth must not choose bins,
-thresholds or a per-community winner. Missing runtime/evidence limits quality claims.
-
-Explicitly address the owner's same-version concern. E026 is one grouping policy
-over E022 GLM/depth-enabled E009 learning and E019 sequence-only Oral learning;
-Oral's measured E024 depth enters grouping only. It is downstream development
-evidence, not a same-full-version or causal between-dataset comparison. Recommend
-one strongest coherent recovery block that concretely harmonizes the next learner/
-feature policy on both communities, as D015 now requires. Resolve and separately
-price genuine Oral GLM inclusion/efficiency versus one declared common no-GLM
-candidate; do not defer version matching indefinitely, assume an old cost forecast
-is decisive, or add training/extraction to this inspection. Both inspected
-communities remain development. Skin stays unscored; reuse admitted source-origin
-audits and name remaining genuine-depth/source/replicon/molecule/taxonomy/near/
-pretraining/competitive ambiguity/unique-versus-origin/evaluator/protocol/cost/
-retention admissions before any later confirmation. No new DNA, score campaign,
-external binner, model/architecture/threshold tuning or confirmation here.
-
-Update records/check/commit with structured what changed/why. Report verified
-completion/failures, acceptance/diagnostic limits, actual cost/storage/resources,
-full target trade-offs, one concrete next decision and exact following prompt
-with any separately needed execution authorization.
+Keep both inspected communities explicitly development. Skin remains unscored;
+reuse its source-origin audit and name remaining genuine-depth/source/genome/
+replicon/molecule/host/circular/taxonomy/near/reverse/pretraining/competitive
+ambiguity/unique-versus-origin/evaluator/protocol/cost/retention admissions before
+confirmation. Update records/check/commit with structured what changed/why.
+Report what works, unresolved contracts, same-version evaluation/control scope,
+complete resource case and exact separate execution approval request.

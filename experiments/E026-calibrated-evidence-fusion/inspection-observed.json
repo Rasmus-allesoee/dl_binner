@@ -1,0 +1,438 @@
+{
+  "kind": "E026 independent stopped completion inspection",
+  "date": "2026-10-30",
+  "phase": "fusion-20261029T185844Z-f16c2e5",
+  "source_commit": "f16c2e51400939183c681bff938c82199f60f7cd",
+  "status": "SUCCESS_EXECUTION_ACCEPTED_BIOLOGICAL_MODIFY",
+  "control_plane": {
+    "status": "TERMINATED",
+    "lastStartTimestamp": "2026-10-29T11:59:06.293-07:00",
+    "lastStopTimestamp": "2026-10-29T13:50:17.937-07:00",
+    "inspection_wakes": 0,
+    "resource_or_retention_changes": false
+  },
+  "guest": "SUCCESS with exact completion byte/SHA binding",
+  "native_contracts": {
+    "status": "PASS_STOPPED_SOURCE_EXIT_CONTROLS_AND_ALL_MEMBER_ADMISSION",
+    "source_commit": "f16c2e51400939183c681bff938c82199f60f7cd",
+    "native_gates": 6,
+    "real_contracts": 19,
+    "source_files_returned_and_f16c2e5_blobs_verified": 29,
+    "inherited_science_files_unchanged": 333,
+    "all_release_gate_files_delivered_and_verified": 12,
+    "restart_refusal_stderr_delivered": true,
+    "actual_serial_finished_rules": [
+      [
+        "E009-E022",
+        "verify"
+      ],
+      [
+        "E009-E022",
+        "group"
+      ],
+      [
+        "E009-E022",
+        "export"
+      ],
+      [
+        "E009-E022",
+        "audit"
+      ],
+      [
+        "oral-E019",
+        "verify"
+      ],
+      [
+        "oral-E019",
+        "group"
+      ],
+      [
+        "oral-E019",
+        "export"
+      ],
+      [
+        "oral-E019",
+        "audit"
+      ],
+      [
+        null,
+        "all"
+      ]
+    ],
+    "target_exit": 0,
+    "actual_workflow_exit": 0,
+    "collection_and_readbacks": [
+      {
+        "stage": "workflow",
+        "exit": 0
+      },
+      {
+        "stage": "collect",
+        "exit": 0
+      },
+      {
+        "stage": "upload-e026-evidence.tar.gz",
+        "exit": 0
+      },
+      {
+        "stage": "readback-e026-evidence.tar.gz",
+        "exit": 0
+      },
+      {
+        "stage": "upload-e026-evidence.tar.gz.sha256",
+        "exit": 0
+      },
+      {
+        "stage": "readback-e026-evidence.tar.gz.sha256",
+        "exit": 0
+      },
+      {
+        "stage": "upload-collection.json",
+        "exit": 0
+      },
+      {
+        "stage": "readback-collection.json",
+        "exit": 0
+      },
+      {
+        "stage": "upload-collection-disk.jsonl",
+        "exit": 0
+      },
+      {
+        "stage": "readback-collection-disk.jsonl",
+        "exit": 0
+      },
+      {
+        "stage": "upload-terminal-disk.json",
+        "exit": 0
+      },
+      {
+        "stage": "readback-terminal-disk.json",
+        "exit": 0
+      }
+    ],
+    "watcher": "workflow exited",
+    "original_boot_process_verified": true,
+    "all_input_axes_native_admitted": {
+      "status": "PASS",
+      "units": {
+        "E009-E022": {
+          "inputs": {
+            "features": {
+              "path": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+              "bytes": 42384557,
+              "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+            },
+            "embeddings": {
+              "path": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/embeddings.npz",
+              "bytes": 21880578,
+              "sha256": "0c33748fa4b66309caafdb1e559ef8c75dc1f8d8819d8f8d046dbdb184d6442e"
+            },
+            "graph": {
+              "path": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/group/graph.npz",
+              "bytes": 32792381,
+              "sha256": "7e220fd760f76c16742656df778ab2cc2048a8c02e607745ad0fcd6c82422034"
+            },
+            "marker_evidence": {
+              "path": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json",
+              "bytes": 1301132,
+              "sha256": "035d88e159a8c6aa29580c4fec28a3f0c470e553f97a0f9a9d04cf6a76b44c05"
+            },
+            "fasta": {
+              "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+              "bytes": 237732361,
+              "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+            },
+            "features_metadata": {
+              "path": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.json",
+              "bytes": 1103,
+              "sha256": "2b24603bd278f81178b3b843faeb961fb27061accb0df3f7968d9d5a937f9a8a"
+            },
+            "embeddings_metadata": {
+              "path": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/embeddings.json",
+              "bytes": 1316,
+              "sha256": "9ee29b1b4c8d0f71cd65a1f62334080ef5f09f1213af28487a86939df6848beb"
+            },
+            "graph_metadata": {
+              "path": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/group/graph.json",
+              "bytes": 2076,
+              "sha256": "64533b7c3cab3ab014203987cf01f726808ca19cb960a4d8688259f00b310081"
+            }
+          },
+          "rows": 145702,
+          "bp": 231678157,
+          "samples": [
+            "cami3_toy_human_gut_short_read_sample_0",
+            "cami3_toy_human_gut_short_read_sample_2",
+            "cami3_toy_human_gut_short_read_sample_3",
+            "cami3_toy_human_gut_short_read_sample_4",
+            "cami3_toy_human_gut_short_read_sample_6",
+            "cami3_toy_human_gut_short_read_sample_9",
+            "cami3_toy_human_gut_short_read_sample_10",
+            "cami3_toy_human_gut_short_read_sample_11",
+            "cami3_toy_human_gut_short_read_sample_14",
+            "cami3_toy_human_gut_short_read_sample_17"
+          ],
+          "eligible": 89041
+        },
+        "oral-E019": {
+          "inputs": {
+            "features": {
+              "path": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz",
+              "bytes": 338210613,
+              "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+            },
+            "embeddings": {
+              "path": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/embeddings.npz",
+              "bytes": 186037411,
+              "sha256": "812791fabd8e371b1f35af352b96b86183805f1b3ebb730a0b99c3897dc52986"
+            },
+            "graph": {
+              "path": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/group/graph.npz",
+              "bytes": 258146520,
+              "sha256": "b484c74e18560210a32ff4b3a96d4464573b35bf8a72a106f19b12a56590ecdd"
+            },
+            "marker_evidence": {
+              "path": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json",
+              "bytes": 26815264,
+              "sha256": "e8d44c1dc18ea9f55e70548fb4de01581c4639834e87db720134e43c2127b8f1"
+            },
+            "fasta": {
+              "path": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+              "bytes": 1757466319,
+              "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+            },
+            "features_metadata": {
+              "path": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.json",
+              "bytes": 852,
+              "sha256": "b03907a416f4cfe146a42ce461cd2a937e011a5299382d0e6984c62c5b5c780a"
+            },
+            "embeddings_metadata": {
+              "path": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/embeddings.json",
+              "bytes": 647,
+              "sha256": "562d778a1251d6a945c2349784483f614eb9327ff333ee5b6a0acba1ec88e0c3"
+            },
+            "graph_metadata": {
+              "path": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/group/graph.json",
+              "bytes": 5587,
+              "sha256": "a95599d64748db676b3f2d2c0ed1d4a45af4c3e5951cb1c1838fe4b48884b5c0"
+            },
+            "receipt": {
+              "path": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/rebind.json",
+              "bytes": 3706,
+              "sha256": "bce1756e31dbe524ee9f09fbfe316febda61ee7a8e05536305a959935b714b22"
+            },
+            "rebind_original_features": {
+              "path": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.npz",
+              "bytes": 333765352,
+              "sha256": "87f8d26a7b12d1d724c3d9235feaa25aa6faa3e995fc2ca48a74903f603d75a0"
+            },
+            "rebind_original_metadata": {
+              "path": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/features.json",
+              "bytes": 531,
+              "sha256": "d9a033ca2a3805fac0d88bffbad234e81e932a63b4b056711b9efdbcfb5d850c"
+            },
+            "rebind_original_views": {
+              "path": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.npz",
+              "bytes": 419791282,
+              "sha256": "80d30e98c98642cf4dca5aad1b76a061065b3f93e92bab85e6b1ada5e0b4ac76"
+            },
+            "rebind_original_view_metadata": {
+              "path": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/units/oral-dev5/features/views.json",
+              "bytes": 1442,
+              "sha256": "a057326c19bcd7365bdf4066b84920f2a6bf1a2c7fb694757b7ac7c7143e7162"
+            },
+            "rebind_original_embeddings": {
+              "path": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/embeddings.npz",
+              "bytes": 186037411,
+              "sha256": "812791fabd8e371b1f35af352b96b86183805f1b3ebb730a0b99c3897dc52986"
+            },
+            "rebind_original_embedding_metadata": {
+              "path": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/embeddings.json",
+              "bytes": 647,
+              "sha256": "562d778a1251d6a945c2349784483f614eb9327ff333ee5b6a0acba1ec88e0c3"
+            },
+            "rebind_matrix": {
+              "path": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/combined/depth.tsv",
+              "bytes": 124584683,
+              "sha256": "4fa47b725701d73feeba60bce9e17e884e10db994d28978e2f3d3682a2ae8da4"
+            },
+            "rebind_matrix_receipt": {
+              "path": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/combined/depth.tsv.receipt.json",
+              "bytes": 1904,
+              "sha256": "8c3ef5cd110039d8153e65d40e8dcc76317ff23dda432f581cf5d9e970b840de"
+            },
+            "rebind_fasta": {
+              "path": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+              "bytes": 1757466319,
+              "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+            },
+            "rebind_rebound_features": {
+              "path": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz",
+              "bytes": 338210613,
+              "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+            },
+            "rebind_rebound_metadata": {
+              "path": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.json",
+              "bytes": 852,
+              "sha256": "b03907a416f4cfe146a42ce461cd2a937e011a5299382d0e6984c62c5b5c780a"
+            }
+          },
+          "rows": 1286547,
+          "bp": 1669981123,
+          "samples": [
+            "oral_sample_6",
+            "oral_sample_7",
+            "oral_sample_8",
+            "oral_sample_13",
+            "oral_sample_14",
+            "oral_sample_15",
+            "oral_sample_16",
+            "oral_sample_17",
+            "oral_sample_18",
+            "oral_sample_19"
+          ],
+          "eligible": 508763
+        }
+      },
+      "no_copy_install_or_science_fallback": true,
+      "prior_selection_replayed": false,
+      "old_native_index_rebuilt": false
+    },
+    "terminal_disk": {
+      "samples": 3192,
+      "minimum_free_bytes": 36581675008,
+      "maximum_sampled_global_growth_bytes": 3974565888,
+      "scope": "Sampled whole-filesystem usage; first-allocation baseline, not exact attributable bytes"
+    },
+    "intermediate_science_result_status": "FAILED",
+    "intermediate_status_semantics": "Frozen parent initializes FAILED and seals science-result before collection; science_completed plus actual exit zero and final SUCCESS establish completion. Preserve intermediate journal unchanged.",
+    "completion_upload_scope": "Exact private object plus guest SHA256 and subsequent intended watcher exit; upload-completion self-exit is after immutable completion publication, not present inside its stage list",
+    "native_systemd_ExecMainStatus_after_exit_not_retained": true,
+    "truth_opened": false
+  },
+  "archive": {
+    "URI": "gs://dl-binner-archive-167650584170/e026/fusion-20261029T185844Z-f16c2e5/e026-evidence.tar.gz",
+    "generation": "1793306780217010",
+    "bytes": 697845946,
+    "sha256": "d6fe576012a2cf2442a88ec0c2b0a7e64e43ef148f5326cde3703a771b39f915",
+    "physical_members": 566,
+    "logical_bytes": 1264093749,
+    "aliases": 3,
+    "omitted_inventory_entries": 2644,
+    "all_compressed_and_member_and_alias_bytes_verified": true,
+    "omissions": "Full FASTAs remain on original work disk with exact locators/hashes; inventories are not backups"
+  },
+  "review_admission": {
+    "provider_status": "TERMINATED",
+    "archive_and_every_member_verified": true,
+    "cost_and_retention_admitted": true,
+    "workflow_completed": true,
+    "native": {
+      "bytes": 12163,
+      "sha256": "4d35fb6af877492dfcbb483f7c46a69916e8cca56cdc4d76197be47fee8465e9"
+    },
+    "archive": {
+      "bytes": 697845946,
+      "sha256": "d6fe576012a2cf2442a88ec0c2b0a7e64e43ef148f5326cde3703a771b39f915"
+    },
+    "finance": {
+      "bytes": 2769,
+      "sha256": "8e3e2ddce5bfaa3158c138d14077d6b576e533b9f2fb632f4c5ae28bb14cb9a6"
+    },
+    "truth_opened": false
+  },
+  "local_review": {
+    "clock": {
+      "start_epoch": 1793371908.401279,
+      "deadline_epoch": 1793379108.401279,
+      "threads": 4,
+      "sampled_RSS_bytes": 8000000000,
+      "physical_free_reserve_bytes": 6442450944,
+      "per_unit_materialization_bytes": 2147483648,
+      "start_scope": "First inspection control-plane read, conservative local review clock; cloud science clock is not restarted",
+      "scope": "Archive/stopped-output verification and only new-output frozen diagnostics"
+    },
+    "stage_footprints": {
+      "status": "PASS",
+      "unit_upper_bytes": {
+        "E009-E022": 109743228,
+        "oral-E019": 1001241282
+      },
+      "free_bytes": 13101211648
+    },
+    "original_tolerance_preserved": true,
+    "no_model_reinference": true,
+    "no_old_scores_repeated": true,
+    "maximum_sampled_step_RSS_bytes": 4171485184,
+    "closed_diagnostic_checks": {
+      "bytes": 14039,
+      "sha256": "6e61a9a67d395575b9783e3fe693ec2dae1d741f72205a899491716c00d53fcf"
+    },
+    "no_clock_reset_or_extension": true
+  },
+  "evidence": {
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/metadata/completion.json": {
+      "bytes": 9956,
+      "sha256": "00b0280c1deb56c4fe03e1fda4d123218611c180f5adeeac600ac23901a256ef"
+    },
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/metadata/collection.json": {
+      "bytes": 683785,
+      "sha256": "6b4edb7da25fd8a20aa0468f02470172c42199d3efd6a39853ce098a935b2a6f"
+    },
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/metadata/watchdog-exit.json": {
+      "bytes": 8008,
+      "sha256": "e745083550ff70357462877943e672ad49e9c825e114ce7781c0f62b020594d0"
+    },
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/metadata/terminal-disk.json": {
+      "bytes": 2200,
+      "sha256": "946839735156a97d25b7e2b793b28e29afd8595d1d7616f42d7c4fca8b66278a"
+    },
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/control-plane/provider-state.json": {
+      "bytes": 33097,
+      "sha256": "39dd6115b4328194914e07739f6cf9511ce289e5b97efda15f09d7eab0513695"
+    },
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/control-plane/guest-status.json": {
+      "bytes": 364,
+      "sha256": "d5102cc567595cfd813eb5d00e0a15b5a2836d16fce5add61f07e48b94ed1da5"
+    },
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/member-verification.json": {
+      "bytes": 683655,
+      "sha256": "8fa1958d00557bb8b1b6ff1a44656eb970dd0502fbf6257b21b377fed72bbae2"
+    },
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/native-contract-review.json": {
+      "bytes": 12163,
+      "sha256": "4d35fb6af877492dfcbb483f7c46a69916e8cca56cdc4d76197be47fee8465e9"
+    },
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/export-admission.json": {
+      "bytes": 2769,
+      "sha256": "8e3e2ddce5bfaa3158c138d14077d6b576e533b9f2fb632f4c5ae28bb14cb9a6"
+    },
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/external-review-map.json": {
+      "bytes": 10146,
+      "sha256": "9ab1a0aed921eef50f06032e444747f8ed2d0d668fe29318a2107b6a2acd059d"
+    },
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/diagnostics-E009/review.json": {
+      "bytes": 715187,
+      "sha256": "927de07fa9b57c1b5972b73ec08265a88d2d1bc3c6197158bbcdec02bd59020a"
+    },
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/diagnostics-oral/review.json": {
+      "bytes": 8508388,
+      "sha256": "7eb07991967c76ebde206b6ac228499a41a5c1d812fc728a342b91f4808b20bf"
+    },
+    "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/checks.json": {
+      "bytes": 282,
+      "sha256": "153ec324935c1bf014a7e2e319e0547a1c37629e9fa3c76de384cc86829c9dc4"
+    }
+  },
+  "compact_inspection_backup": {
+    "bytes": 1136,
+    "sha256": "ca5de70f5168a044b099bd641f641aa9730e3ac8e6101fb4b5a18162637ff7bf"
+  },
+  "final_control_plane_recheck": {
+    "status": "TERMINATED",
+    "lastStopTimestamp": "2026-10-29T13:50:17.937-07:00",
+    "bytes": 33097,
+    "sha256": "39dd6115b4328194914e07739f6cf9511ce289e5b97efda15f09d7eab0513695"
+  }
+}

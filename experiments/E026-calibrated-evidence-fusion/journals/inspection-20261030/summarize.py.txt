@@ -1,0 +1,50 @@
+"""Summarize only frozen E026 outputs and checksum-bound retained summaries.
+
+No refit/rescore, threshold choice, per-bin winner or per-community routing. All
+955 targets and every raw per-bin quality table remain separately available.
+"""
+import json,csv,sys,datetime,math
+from pathlib import Path
+from collections import Counter
+r=Path.cwd();sys.path[:0]=[str(r/'scripts'),str(r/'src')];from e026_review import disposition;from e024_coverage import binding
+out=r/'artifacts/e026-calibrated-evidence-fusion/inspection-20261030';read=lambda p:json.loads(Path(p).read_text());protocol=read(r/'experiments/E026-calibrated-evidence-fusion/protocol.json')
+for path,b in protocol['baseline_summaries'].items():assert binding(r/path)==b
+raw={d:read(out/('diagnostics-'+d)/'review.json')for d in ['E009','oral']}
+base23={}
+with (r/'experiments/E023-adaptive-density-bins/comparison-targets.tsv').open()as f:
+ for x in csv.DictReader(f,delimiter='\t'):base23[(x['dataset'],x['genome'])]=x
+with (r/'experiments/E025-joint-distance-retrieval/comparison-targets.tsv').open()as f:base25={x['genome']:x for x in csv.DictReader(f,delimiter='\t')}
+rows=[];summaries={};paired={}
+def delta(items,a,b):
+ ds=[(x['genome'],int(x[a])-int(x[b]))for x in items]
+ result=dict(gained=sum(v>0 for _,v in ds),lost=sum(v<0 for _,v in ds),unchanged=sum(v==0 for _,v in ds),delta_recovered_bp=sum(v for _,v in ds),largest_gains=sorted(ds,key=lambda x:(-x[1],x[0]))[:10],largest_losses=sorted(ds,key=lambda x:(x[1],x[0]))[:10])
+ for t in [.5,.9]:
+  result[str(t)]=dict(gained=sum(int(x[a])/int(x['reference_bp'])>=t>int(x[b])/int(x['reference_bp'])for x in items),lost=sum(int(x[b])/int(x['reference_bp'])>=t>int(x[a])/int(x['reference_bp'])for x in items))
+ return result
+for d in ['E009','oral']:
+ v=raw[d];summaries[d]={}
+ for arm,a in v['arms'].items():
+  primary=a['diagnostics']if d=='E009'else a['evaluation']['origin']
+  summaries[d][arm]=dict(primary=primary['recovery_summary'],export=a['export_contract'],secondary={mode:{k:q for k,q in table.items()if k!='bins'}for mode,table in a['secondary'].items()})
+  if d=='oral':summaries[d][arm]['known_shared_sensitivity']=a['evaluation']['known_shared_mask']['recovery_summary']
+  targets=primary['recovery'];assert len(targets)==(156 if d=='E009'else 799)
+  assert math.isclose(sum(x['recovered_bp']for x in targets)/protocol['full_reference_bp'][d],primary['recovery_summary']['bp_weighted_R95'],rel_tol=0,abs_tol=1e-15)
+ targetarms={arm:{x['genome']:x for x in(a['diagnostics']if d=='E009'else a['evaluation']['origin'])['recovery']}for arm,a in v['arms'].items()}
+ assert set(targetarms['core'])==set(targetarms['recruited'])
+ for genome in sorted(targetarms['core']):
+  x=targetarms['recruited'][genome];old=base23[(d,genome)];ref=x['reference_bp'];assert ref==int(old['reference_bp'])
+  anchor=int(old['selected_bp'])if d=='E009'else int(base25[genome]['new_selected_bp']);a=targetarms['core'][genome]
+  row=dict(dataset=d,genome=genome,reference_bp=ref,assembly_confirmed_bp=x['assembly_confirmed_bp'],retained_E023_bp=int(old['selected_bp']),retained_E025_bp='not_run'if d=='E009'else int(base25[genome]['new_selected_bp']),retained_E019_bp='not_applicable'if d=='E009'else int(base25[genome]['retained_E019_bp']),retained_MetaBAT2_bp=old['retained_MetaBAT_bp'],anchor_bp=anchor,E026_core_bp=a['recovered_bp'],E026_recruited_bp=x['recovered_bp'],delta_vs_anchor_bp=x['recovered_bp']-anchor,recruitment_effect_bp=x['recovered_bp']-a['recovered_bp'])
+  if d=='oral':row['known_shared_sensitivity_bp']=next(q['recovered_bp']for q in v['arms']['recruited']['evaluation']['known_shared_mask']['recovery']if q['genome']==genome)
+  else:row['known_shared_sensitivity_bp']='not_applicable'
+  rows.append(row)
+ items=[x for x in rows if x['dataset']==d];paired[d]=dict(vs_anchor=delta(items,'E026_recruited_bp','anchor_bp'),recruitment=delta(items,'E026_recruited_bp','E026_core_bp'))
+ if d=='oral':paired[d]['vs_E019']=delta(items,'E026_recruited_bp','retained_E019_bp')
+ assert sum(x['reference_bp']for x in items)==protocol['full_reference_bp'][d]
+with (out/'comparison-targets.tsv').open('x')as f:
+ w=csv.DictWriter(f,fieldnames=list(rows[0]),delimiter='\t',lineterminator='\n');w.writeheader();w.writerows(rows)
+final={d:summaries[d]['recruited']['primary']for d in ['E009','oral']};decision=disposition(final,protocol['anchors'])
+result=dict(kind='E026 frozen new-output comparison',date='2026-10-30',status='SUCCESS_NEW_OUTPUT_DIAGNOSTICS',phase='fusion-20261029T185844Z-f16c2e5',source_commit='f16c2e51400939183c681bff938c82199f60f7cd',frozen_disposition=decision,criteria=protocol['keep'],anchors=protocol['anchors'],units=summaries,paired=paired,full_955_targets=binding(out/'comparison-targets.tsv'),full_reference_bp=protocol['full_reference_bp'],no_truth_selected_bins_or_per_community_router=True,primary_rule_unchanged=True,original_Mac_portability_tolerance_unchanged=True,source_bound_raw_reviews={d:dict(path=str(out/('diagnostics-'+d)/'review.json'),**binding(out/('diagnostics-'+d)/'review.json'))for d in ['E009','oral']},limits=['Both communities are development','Different historical upstream learners; downstream bundle only','E009 conservative v2 retains 3.3034% N quarantine','Oral provided-origin and known-shared sensitivity are not exhaustive unique support','Threshold-based tiers omit required RNA checks and are not formal MIMAG HQ','Native-only omissions remain locators, not backups','Parent numeric systemd status after exit not independently retained; actual science/collection exits and completion/watcher evidence pass'])
+(out/'comparison-review.json').write_text(json.dumps(result,indent=2)+'\n')
+print('FROZEN_DISPOSITION',decision,flush=True)
+for d in final:print(d,json.dumps(final[d]),'paired',json.dumps(paired[d]),flush=True)

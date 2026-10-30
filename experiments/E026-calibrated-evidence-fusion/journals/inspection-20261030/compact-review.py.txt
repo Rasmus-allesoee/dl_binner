@@ -1,0 +1,17 @@
+"""Keep full frozen diagnostic strata but avoid duplicating native audit row arrays.
+
+Original exact exhaustive-query rows remain checksum-bound in the native return;
+only their counts/means and full artifact binding belong in the compact summary.
+"""
+import hashlib,json
+from pathlib import Path
+r=Path.cwd();d=r/'experiments/E026-calibrated-evidence-fusion';p=r/'artifacts/e026-calibrated-evidence-fusion/inspection-20261030';f=d/'grouping-diagnostics.json';v=json.loads(f.read_text())
+for ds,unit in [('E009','E009-E022'),('oral','oral-E019')]:
+ a=v['frozen_review_populations'][ds]['technical_recall']
+ for name,x in a['strata'].items():
+  rows=x.pop('rows');queries=x.pop('queries');assert isinstance(rows,list)and isinstance(queries,list)and rows==[q['full_row']for q in queries];x['exact_saved_rows']=len(rows);x['queries']=len(queries)
+  if queries:assert abs(sum(q['recall']for q in queries)/len(queries)-x['mean_recall'])<1e-12
+  assert x['mean_recall']is None if not rows else x['mean_recall']>=a['cfg']['min_neighbor_recall']
+ source=p/('stage-'+unit)/'work/units'/unit/'group/completed.json';a['full_native_completed_artifact']=dict(member='work/units/'+unit+'/group/completed.json',bytes=source.stat().st_size,sha256=hashlib.sha256(source.read_bytes()).hexdigest(),native_archive='d6fe576012a2cf2442a88ec0c2b0a7e64e43ef148f5326cde3703a771b39f915')
+ a['full_query_rows_preserved_in_native_return']=True
+f.write_text(json.dumps(v,indent=2,allow_nan=False)+'\n');print('COMPACT_DIAGNOSTIC_STRATA_PASS',f.stat().st_size)

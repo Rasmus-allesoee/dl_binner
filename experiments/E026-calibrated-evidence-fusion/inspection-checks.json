@@ -1,0 +1,329 @@
+{
+  "status": "PASS",
+  "tests_run": 11,
+  "all_955_target_rows": true,
+  "weighted_summaries_independently_reconciled": true,
+  "all_population_and_bin_tiers_accounted": true,
+  "all_vote_records_accounted": true,
+  "no_old_baseline_rescore": true,
+  "no_science_repeated": true,
+  "steps": {
+    "mechanism-audit-r2": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e026-calibrated-evidence-fusion/inspection-20261030/mechanism-audit.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 177.82489933102624,
+        "peak_sampled_rss_bytes": 4112752640,
+        "seconds_ceiling": 4195.374439954758,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 72364,
+        "sampled_cpu_seconds": 119.97,
+        "sampled_average_cpus": 0.6746524274796429,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    },
+    "diagnostics-oral": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e026_review.py",
+          "--unit",
+          "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/oral-E019-unit.json",
+          "--unit-root",
+          "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/stage-oral-E019/work/units/oral-E019",
+          "--inventory",
+          "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/stage-oral-E019/inventory.json",
+          "--admission",
+          "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/review-admission.json",
+          "--output",
+          "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/diagnostics-oral",
+          "--dataset",
+          "oral",
+          "--marker-clean",
+          "artifacts/e014-multiview-reconstruction/inspection-20261019/oral-marker-review.json",
+          "--truth-root",
+          "artifacts/e014-multiview-reconstruction/oral-truth-origin-v1",
+          "--review-paths",
+          "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/oral-E019-review-paths.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 287.65405601399834,
+        "peak_sampled_rss_bytes": 4171485184,
+        "seconds_ceiling": 6002.565353870392,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 69951,
+        "sampled_cpu_seconds": 279.37,
+        "sampled_average_cpus": 0.9712013238096139,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    },
+    "close-review": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e026-calibrated-evidence-fusion/inspection-20261030/close-review.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.049999091977952,
+        "peak_sampled_rss_bytes": 63725568,
+        "seconds_ceiling": 2534.7098939418793,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 74509,
+        "sampled_cpu_seconds": 0.35,
+        "sampled_average_cpus": 0.3333336215945502,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    },
+    "native-contract-and-stage": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e026-calibrated-evidence-fusion/inspection-20261030/native-review-and-stage.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 46.28348337201169,
+        "peak_sampled_rss_bytes": 46231552,
+        "seconds_ceiling": 6427.330188035965,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 69328,
+        "sampled_cpu_seconds": 41.71,
+        "sampled_average_cpus": 0.9011854113215398,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    },
+    "diagnostics-E009": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e026_review.py",
+          "--unit",
+          "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/E009-E022-unit.json",
+          "--unit-root",
+          "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/stage-E009-E022/work/units/E009-E022",
+          "--inventory",
+          "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/stage-E009-E022/inventory.json",
+          "--admission",
+          "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/review-admission.json",
+          "--output",
+          "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/diagnostics-E009",
+          "--dataset",
+          "E009",
+          "--marker-clean",
+          "artifacts/e011-cached-grouping-reference/restore-local/candidate/markers/evidence.json",
+          "--truth-root",
+          "artifacts/e009-truth-v2/20261015/attempt-local-v2/truth-v2",
+          "--review-paths",
+          "artifacts/e026-calibrated-evidence-fusion/inspection-20261030/E009-E022-review-paths.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 22.273579618980875,
+        "peak_sampled_rss_bytes": 868851712,
+        "seconds_ceiling": 6128.477719068527,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 69791,
+        "sampled_cpu_seconds": 21.41,
+        "sampled_average_cpus": 0.9612285212456394,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    },
+    "external-reuse": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e026-calibrated-evidence-fusion/inspection-20261030/prepare-review-paths.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 3.0613407349737827,
+        "peak_sampled_rss_bytes": 23207936,
+        "seconds_ceiling": 6184.020315885544,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 69748,
+        "sampled_cpu_seconds": 2.31,
+        "sampled_average_cpus": 0.7545713463417468,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    },
+    "evaluator-and-review-checks-r2": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e026-calibrated-evidence-fusion/inspection-20261030/checks.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.3818761379807256,
+        "peak_sampled_rss_bytes": 34357248,
+        "seconds_ceiling": 3265.0090408325195,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 73483,
+        "sampled_cpu_seconds": 0.65,
+        "sampled_average_cpus": 0.4703750083924426,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    },
+    "summarize-r2": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e026-calibrated-evidence-fusion/inspection-20261030/summarize.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 0.7798199239769019,
+        "peak_sampled_rss_bytes": 23330816,
+        "seconds_ceiling": 4906.723597049713,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 71770,
+        "sampled_cpu_seconds": 0.21,
+        "sampled_average_cpus": 0.2692929400021589,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    },
+    "download-and-members": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e026-calibrated-evidence-fusion/inspection-20261030/download-verify.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 97.56163384398678,
+        "peak_sampled_rss_bytes": 803528704,
+        "seconds_ceiling": 6696.329632997513,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 68705,
+        "sampled_cpu_seconds": 45.92,
+        "sampled_average_cpus": 0.47067682439012665,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    },
+    "compact-inspection-backup-r2": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e026-calibrated-evidence-fusion/inspection-20261030/backup-review.py",
+          "compact-inspection-backup-r2"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 21.890792180987773,
+        "peak_sampled_rss_bytes": 282300416,
+        "seconds_ceiling": 2666.6374888420105,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 74165,
+        "sampled_cpu_seconds": 9.93,
+        "sampled_average_cpus": 0.45361537937508895,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    }
+  },
+  "failures_preserved": [
+    "control-plane initial raw-storage-cat JSON-footer parser failure",
+    "summarize-r1.py.txt syntax typo before summary publication",
+    "mechanism-audit-r1.py.txt tiny-fixture path matched before exact root selection",
+    "checks-r1.py.txt string-versus-object assertion after 11 successful evaluator tests",
+    "backup-review-r1.py.txt refused a member changed by its own live process sampler before any upload; repaired allowlist excludes current active step and preserves the closed failed step",
+    "compact-review-r1.py.txt expected an integer query count but native queries is an explicit list; refused before writing. r2 verifies row/query identity and mean before retaining compact counts; full rows stay native."
+  ],
+  "evaluator_or_native_science_changed": false,
+  "final_frozen_source": {
+    "status": "PASS",
+    "inherited": {
+      "status": "PASS",
+      "inherited": {
+        "status": "PASS",
+        "new": {
+          "bytes": 5288,
+          "sha256": "22643a866b0b33c5a03facc2cbf110b7ea821eb1cdf0a534995422a041cebcf3"
+        },
+        "immutable": {
+          "bytes": 43403,
+          "sha256": "fa7e55203409d32c1a3d9ba43ec8508f65ae741208a1506992c74c6d28a7c8f7"
+        }
+      },
+      "new": {
+        "bytes": 3119,
+        "sha256": "a168cff0169d21b3d85be23bfaf0dfc8bd49ead19e1a705e23058cc48f659501"
+      }
+    },
+    "new": {
+      "bytes": 5693,
+      "sha256": "7b8dc18d803ed266824b801449772b5017bb08cfd9ba3c153140d5af756fa7f9"
+    }
+  },
+  "all_29_new_and_333_inherited_files_unchanged": true,
+  "compact_backup_all_members_verified": true,
+  "compact_backup_binding": {
+    "bytes": 1136,
+    "sha256": "ca5de70f5168a044b099bd641f641aa9730e3ac8e6101fb4b5a18162637ff7bf"
+  },
+  "local_free_after_bytes": 10700365824,
+  "review_clock_elapsed_seconds": 4665.9754140377045,
+  "original_review_clock_not_reset": true,
+  "final_publication_QA": {
+    "status": "PASS",
+    "UTC": "2026-10-30T16:17:20.089759+00:00",
+    "json_and_successful_helper_AST": true,
+    "all_955_weighted_and_full_population_tables": true,
+    "all_frozen_source_unchanged": true,
+    "provider_final_TERMINATED": true,
+    "compact_backup_verified": true,
+    "docs_check_log": {
+      "bytes": 729,
+      "sha256": "497d708aa884e4d4f5ee804f3c1dea75a013ceacd08ee9d0908aafb84fd18d16"
+    },
+    "review_elapsed_seconds": 5131.689279079437,
+    "deadline_not_extended": true,
+    "physical_free_bytes": 10674544640,
+    "display_lists_omit_zero_delta_rows": true
+  }
+}

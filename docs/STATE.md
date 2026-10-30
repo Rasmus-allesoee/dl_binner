@@ -1,6 +1,66 @@
 # Current Research State
 
-Updated: October 29, 2026 (Copenhagen). This is the single current handoff.
+Updated: October 30, 2026 (Copenhagen). This is the single current handoff.
+
+**E026 completed successfully; independently verified VM TERMINATED. Biological
+joint disposition: MODIFY.** [Inspection](../experiments/E026-calibrated-evidence-fusion/inspection-observed.json)
+for `fusion-20261029T185844Z-f16c2e5` verifies all six native gates / 19 contracts,
+eight serial rules + target, input-after proofs, final SUCCESS, private readbacks,
+every archive/member/alias and matching boot/process watcher exit. Exact science
+is `f16c2e5`; no wake, replay, new resources or retention change in inspection.
+The native RUNNING journal remains a dated launch snapshot, superseded by this
+inspection rather than rewritten as completion evidence.
+
+| Full-reference result | E009 E023 anchor | E009 E026 final | Oral E025 anchor | Oral E026 final |
+| --- | ---: | ---: | ---: | ---: |
+| Weighted R95 | 10.4163% | **7.1941%** | 8.1441% | **13.8569%** |
+| Targets at least 50% | 19 | **14** | 58 | **108** |
+| Targets at least 90% | 9 | **1** | 22 | **58** |
+
+[All 955 target rows](../experiments/E026-calibrated-evidence-fusion/comparison-targets.tsv)
+retain E009 one gain / 24 losses / -17.872 Mb, Oral 88 gains / 61 losses /
++119.003 Mb. Recruitment adds 7.495 / 37.493 Mb, with zero / two target losses.
+Full 156/799 reference denominators, E009 conservative v2 / 3.3034% N quarantine,
+Oral origin oracle / separate known-shared sensitivity and all DNA populations
+remain. No per-dataset winner/default routing or formal MIMAG HQ claim. Threshold
+HQ-tier bins are 6 E009 (only one target-dominant; five viral) and 58 Oral.
+
+[Mechanism audit](../experiments/E026-calibrated-evidence-fusion/grouping-diagnostics.json)
+finds correct retained geometry/calibration but extensive disconnection: 6,810 /
+41,414 singleton core components and 84% / 93% of unselected queries without an
+agreeing core neighbor. This correctly implemented hard agreement policy is
+brittle; technical recall is not biological grouping quality. No critical bug
+was found in the inspected paths, nor is optimality established.
+
+**Strongest next block:** [one common full CPU composition/context + measured-depth
+and reliable-marker-learning pipeline with supported bin construction](evidence/2026-10-30-e026-recovery-and-common-version.md).
+Primary common mode excludes GLM on both, including bootstrap teachers/proposals;
+matching student flags alone leaves E022's GLM-derived teacher prior asymmetric.
+Keep historical banks/modes intact. Resolve/freeze one common design/default/
+feature policy before outcomes, retain bootstrap/student outputs for one useful
+selective control, and prepare a separately priced two-community execution.
+Local implementation/tiny checks are the proposed next task, not authorized new
+community/cloud science. Initial CPU planning case: 8–16 allocated hours, $4–7
+gross / $8 proposal, subject to actual native gates. Full Oral GLM parity remains
+a separately assessed ~$65–85 dated-rate alternative, not a product-family ban.
+[Operations](../experiments/E026-calibrated-evidence-fusion/OPERATIONS.md#exact-following-prompt)
+owns the exact preparation prompt. Skin remains unscored with unchanged truth/
+depth/overlap/protocol/cost/retention dependencies.
+
+[Cost ledger](../experiments/E026-calibrated-evidence-fusion/cost-review.json):
+111.194 minutes control-plane allocation, 98.790 minutes workflow, 6.697 GB sampled
+peak RSS. Gross subtotal ~$0.6647 / $1.4247 including reserves and compact
+inspection backup; not an invoice or credit delta. Fresh Welcome DKK 1,743.32
+Available / 88%, January 12 expiry; $35 delayed-usage reserve. Existing stopped
+disks still ~$31.20/month. **November 4, 00:00 Copenhagen** remains the storage
+boundary; no renewal or automatic deletion. [Backup receipt](../experiments/E026-calibrated-evidence-fusion/inspection-backup.json)
+verifies all 189 inspection-only members (2,493,982 compressed bytes), within
+original $6.
+
+## Preserved October 29 native handoff
+
+The following launch/preparation text is dated history. Completion, acceptance
+and the next priority above supersede its RUNNING/pending statements.
 
 **E026 is running under verified supervision; quality is not assessed.**
 The clean `f16c2e5` branch was pushed normally and fetched read-only by the

@@ -1,0 +1,60 @@
+"""Preserve a bounded checksum-bound E026 inspection in existing private storage.
+
+Allowlisted compact records, diagnostic tables and failed helper journals only.
+No DNA, vectors, runtimes, credentials, VM start, retention change or science.
+Verify every local member, immutable remote bytes and readback members before PASS.
+"""
+import datetime, hashlib, io, json, os, shutil, subprocess, tarfile, time, sys
+from pathlib import Path
+r=Path.cwd();p=r/'artifacts/e026-calibrated-evidence-fusion/inspection-20261030';d=r/'experiments/E026-calibrated-evidence-fusion';out=p/'inspection-backup-r2';out.mkdir(exist_ok=False);current_step=p/'steps'/sys.argv[1]
+read=lambda f:json.loads(Path(f).read_text())
+def binding(f):
+ f=Path(f);return dict(bytes=f.stat().st_size,sha256=hashlib.sha256(f.read_bytes()).hexdigest())
+def write(f,v):Path(f).write_text(json.dumps(v,indent=2)+'\n')
+credit=read(p/'billing-ui.json');assert credit['status']=='Available' and credit['remaining_DKK']==1743.32 and credit['delayed_usage_reserve_USD']==35
+assert time.time()-datetime.datetime.fromisoformat(credit['UTC']).timestamp()<7200
+assert time.time()<datetime.datetime.fromisoformat('2026-11-04T00:00:00+01:00').timestamp()
+assert read(p/'control-plane/provider-state.json')['status']=='TERMINATED' and read(p/'export-admission.json')['total_upper_with_reserves_USD']+.01<6
+assert shutil.disk_usage(p).free>6*1024**3+64*1024**2
+files=set();extensions={'.json','.jsonl','.log','.stderr','.stdout','.py','.txt','.tsv'}
+for f in p.iterdir():
+ if f.is_file()and f.suffix in extensions:files.add(f)
+for sub in ['metadata','control-plane','steps','diagnostics-E009','diagnostics-oral']:
+ for f in(p/sub).rglob('*'):
+  if f.is_file()and f.suffix in extensions and not f.is_relative_to(current_step)and not any(x in {'jit','tmp','__pycache__'}for x in f.parts):files.add(f)
+for name in ['comparison-review.json','comparison-targets.tsv','grouping-diagnostics.json','inspection-observed.json','inspection-checks.json','cost-review.json','source-reassessment.json','OPERATIONS.md','README.md']:
+ files.add(d/name)
+for f in(d/'journals').rglob('*'):
+ if f.is_file():files.add(f)
+files.add(r/'docs/evidence/2026-10-30-e026-recovery-and-common-version.md')
+assert all(f.is_relative_to(r)and not f.is_symlink()for f in files)
+assert all(not any(x in {'private-gcloud-config','.ssh','.aws','env','envs','native-evidence'}for x in f.relative_to(r).parts)for f in files)
+manifest={str(f.relative_to(r)):binding(f)for f in sorted(files)};logical=sum(x['bytes']for x in manifest.values());assert logical<128*1024**2 and len(manifest)<2000
+write(out/'manifest.json',dict(kind='E026 compact inspection-only member manifest',members=manifest,logical_bytes=logical,all_accepted_native_science_in_original_archive=True,credentials_DNA_vectors_environments_included=False))
+archive=out/'e026-inspection.tar.gz'
+with tarfile.open(archive,'w:gz')as t:
+ for f in sorted(files):t.add(f,arcname=str(f.relative_to(r)),recursive=False)
+ t.add(out/'manifest.json',arcname='inspection-manifest.json',recursive=False)
+expected=binding(archive);assert expected['bytes']<32*1024**2
+wanted=manifest|{'inspection-manifest.json':binding(out/'manifest.json')}
+def verify(data):
+ seen=set()
+ with tarfile.open(fileobj=io.BytesIO(data),mode='r:gz')as t:
+  for m in t:
+   assert m.isfile()and m.name in wanted and m.name not in seen
+   value=t.extractfile(m).read();assert dict(bytes=len(value),sha256=hashlib.sha256(value).hexdigest())==wanted[m.name];seen.add(m.name)
+ assert seen==set(wanted)
+verify(archive.read_bytes())
+new_WAN_upper=32/1024*.12;hours=max(0,(datetime.datetime.fromisoformat('2026-11-04T00:00:00+01:00').timestamp()-time.time())/3600);storage_upper=32/1024*hours*2.7397e-5
+write(out/'financial-before-upload.json',dict(status='PASS_SAME_ORIGINAL_CREDIT_ONLY_SCOPE',credit_UTC=credit['UTC'],new_WAN_upper_USD=new_WAN_upper,new_storage_upper_USD=storage_upper,new_metadata_operations_reserve_USD=.01,original_phase_remaining_at_previous_upper_USD=read(p/'export-admission.json')['remaining_original_phase_gross_at_upper_USD'],cap_compressed_bytes=32*1024**2,logical_bytes=logical,retention_extended=False))
+env=os.environ.copy();env['CLOUDSDK_CONFIG']=str(r/'artifacts/gcp-workspace/private-gcloud-config');g=str(r/'artifacts/gcp-workspace/tools/google-cloud-sdk/bin/gcloud');prefix='gs://dl-binner-archive-167650584170/e026/fusion-20261029T185844Z-f16c2e5/inspection-20261030/'
+def command(label,argv):
+ write(out/(label+'-command.json'),dict(argv=argv,UTC=datetime.datetime.now(datetime.timezone.utc).isoformat()))
+ q=subprocess.run(argv,capture_output=True,env=env,timeout=120);(out/(label+'.stdout')).write_bytes(q.stdout);(out/(label+'.stderr')).write_bytes(q.stderr);q.check_returncode();return q.stdout
+command('upload',[g,'storage','cp','--quiet','--if-generation-match=0',str(archive),prefix+archive.name])
+remote=json.loads(command('describe',[g,'storage','objects','describe',prefix+archive.name,'--format=json','--quiet']))
+back=command('readback',[g,'storage','cat',prefix+archive.name,'--quiet']);assert dict(bytes=len(back),sha256=hashlib.sha256(back).hexdigest())==expected;verify(back)
+# Raw readback is archive bytes, not a duplicate staging payload required afterward.
+checksum=out/(archive.name+'.sha256');checksum.write_text(expected['sha256']+'  '+archive.name+'\n');command('upload-checksum',[g,'storage','cp','--quiet','--if-generation-match=0',str(checksum),prefix+checksum.name]);assert command('readback-checksum',[g,'storage','cat',prefix+checksum.name,'--quiet'])==checksum.read_bytes()
+receipt=dict(kind='E026 compact inspection backup',status='PASS_PRIVATE_BYTES_AND_EVERY_MEMBER_READBACK',UTC=datetime.datetime.now(datetime.timezone.utc).isoformat(),URI=prefix+archive.name,generation=remote.get('generation'),archive=expected,physical_members=len(wanted),logical_bytes=logical+binding(out/'manifest.json')['bytes'],manifest=binding(out/'manifest.json'),cost=dict(actual_archive_readback_WAN_USD=expected['bytes']/1024**3*.12,new_storage_through_boundary_USD=expected['bytes']/1024**3*hours*2.7397e-5,operations_inside_existing_reserve=True,credit_gate=credit['UTC'],covered_by_original_6_USD=True),retention_end='2026-11-04T00:00:00+01:00',retention_extended=False,no_VM_or_science=True,all_member_manifest='inspection-manifest.json inside exact private archive',native_DNA_or_omitted_FASTA_backup=False)
+write(d/'inspection-backup.json',receipt);write(out/'completed.json',receipt);print(json.dumps(receipt),flush=True)

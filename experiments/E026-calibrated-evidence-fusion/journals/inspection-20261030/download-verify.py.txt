@@ -1,0 +1,26 @@
+"""Download one priced generation; verify every archive byte/member and alias."""
+import json,sys,subprocess,tarfile
+from pathlib import Path
+r=Path.cwd();sys.path[:0]=[str(r/'scripts')];from e021_portable_cloud import Cloud;from e023_collect import verify;from e024_coverage import binding
+out=r/'artifacts/e026-calibrated-evidence-fusion/inspection-20261030';ad=json.loads((out/'export-admission.json').read_text());assert ad['status']=='PASS_COST_STORAGE_AND_EXPORT_BEFORE_DOWNLOAD'
+name='e026/fusion-20261029T185844Z-f16c2e5/e026-evidence.tar.gz';rows=json.loads((out/'objects-all-versions.json').read_text())['objects'];objects=[x for x in rows if x['name']==name];assert len(objects)==1 and int(objects[0]['size'])==ad['archive']['bytes'];generation=objects[0]['generation'];c=Cloud(out/'download-control');dest=out/'e026-evidence.tar.gz'
+with (out/'download.log').open('x')as log:
+ p=subprocess.run([str(c.sdk),'storage','cp','--no-clobber','gs://dl-binner-archive-167650584170/'+name+'#'+generation,str(dest),'--quiet'],env=c.env,stdout=log,stderr=subprocess.STDOUT,timeout=600)
+p.check_returncode();proof=verify(dest,ad['archive']);collection=json.loads((out/'metadata/collection.json').read_text());assert proof['regular_members']==collection['regular_members']and proof['logical_member_bytes']==collection['logical_member_bytes']
+(out/'member-verification.json').write_text(json.dumps(dict(proof,source_generation=generation),indent=2)+'\n')
+with tarfile.open(dest,'r:gz')as a:
+ payload=a.extractfile('inventory.json').read();inv=json.loads(payload)
+ (out/'inventory.json').write_bytes(payload)
+ # Compact native source/exit/control evidence for independent admission, no bulk unit stage yet.
+ control=out/'native-evidence';control.mkdir(exist_ok=False)
+ for m in a:
+  if not m.name.startswith('evidence/'):continue
+  target=control/m.name;target.parent.mkdir(parents=True,exist_ok=True)
+  with target.open('xb')as f:
+   data=a.extractfile(m)
+   while True:
+    b=data.read(1024**2)
+    if not b:break
+    f.write(b)
+  assert binding(target)==inv['members'][m.name]
+print('EXACT_ARCHIVE_ALL_MEMBER_ALIAS_PASS',json.dumps({k:proof[k]for k in proof if k!='inventory'}),flush=True)

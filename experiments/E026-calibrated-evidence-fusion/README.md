@@ -1,5 +1,25 @@
 # E026: availability-aware evidence fusion and biological bins
 
+October 30: **execution SUCCESS, VM independently TERMINATED, biological MODIFY**.
+[Inspection](inspection-observed.json) verifies all gates/rules, collection,
+archive/member/alias and matching watcher exit without a wake. Final full-reference
+R95 is **7.1941% E009** (anchor 10.4163%) and **13.8569% Oral** (anchor 8.1441%).
+Target-90 counts are 1 versus 9 / 58 versus 22. Keep all losses and the unchanged
+joint criterion; no product-default promotion or same-full-version claim.
+
+- [Paired review](comparison-review.json), [all 955 targets](comparison-targets.tsv)
+- [Retained mechanism audit](grouping-diagnostics.json), [cost ledger](cost-review.json)
+- [Common full-version decision](../../docs/evidence/2026-10-30-e026-recovery-and-common-version.md)
+- [Current exact local-implementation prompt](OPERATIONS.md#exact-following-prompt)
+
+Next: one shared CPU composition/context + measured-depth / reliable-marker
+learning and supported bin-construction block, with teachers/proposals included
+in the common no-GLM primary policy. No new community/cloud authorization or
+retention extension; November 4 remains. Prior launch/preparation text below is
+history; source locks and native-observed journal are preserved.
+
+## Preserved October 29 launch snapshot
+
 October 29 authorized native phase: `fusion-20261029T185844Z-f16c2e5`, source
 `f16c2e5`, existing VM/disks and unchanged $6 / 12-hour scope. See
 [native status](native-observed.json) and [operations](OPERATIONS.md) for actual

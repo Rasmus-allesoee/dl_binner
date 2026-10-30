@@ -1,5 +1,47 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E026 reviewed outcome and a shared full-version block, October 30, 2026
+
+Accepted execution, **MODIFY** scientific disposition. [All paired evidence](../../experiments/E026-calibrated-evidence-fusion/comparison-review.json)
+shows E009 10.4163 → 7.1941% R95 / nine → one target-90, while Oral improves
+8.1441 → 13.8569% / 22 → 58. Preserve the failed joint criterion; do not promote
+a truth-routed default. Correctly implemented hard core agreement disconnects
+most cores before marker selection. Recruitment improves aggregate recovery but
+loses two Oral targets. No critical implementation fault is identified in the
+inspected paths; no heuristic optimality or product-family conclusion follows.
+
+[The source-grounded reassessment](../evidence/2026-10-30-e026-recovery-and-common-version.md)
+selects one coherent shared **CPU composition/context + measured parent-depth +
+reliable marker-learning and supported biological bin-construction** block. Both
+communities use the same learner/objective/default/feature-availability policy;
+primary mode excludes GLM **including bootstrap teachers and pair proposals**.
+E022 proposals currently inherit E021's GLM-enabled teacher, so matching only
+student settings is insufficient. This durable information-contract clarification
+is also in AGENTS. Keep GLM banks and historical implementations immutable; a
+common no-GLM mode does not establish GLM-enabled transfer or remove that option.
+
+Locally implement/test and prospectively freeze the common bootstrap/student path
+and one scalable non-brittle bin constructor. Retain both stages and features /
+embeddings / all partitions, allowing a selective marker-learning comparison
+without a compulsory factorial campaign. Use depth in learning on both, preserve
+measured-zero/missing distinctions and parent-depth semantics, and avoid isolated
+long-contig loss based only on contig count. Truth diagnoses/evaluates, never picks
+thresholds, pairs, K, bins or dataset-specific versions. Exact design/defaults are
+the next implementation decision, not a post-score repair in this inspection.
+
+Initial comparison case is 8–16 allocated CPU hours, ~$4–7 gross / $8 proposal,
+not a new authorization or certified forecast. Full Oral GLM parity is a serious
+alternative (~$65–85 complete dated-rate case, uncertain native throughput) and
+would require common GLM-enabled bootstrap/student learning too. Existing Oral
+learning has never used the now-admitted depth; E026's graph loses support even
+with E009 GLM. This makes shared depth learning plus supported bin construction
+more directly useful now than another threshold/grid, larger model, external
+campaign or more development data. Revisit GLM if matched full-version evidence
+identifies sequence ambiguity as the remaining bottleneck. Keep skin unscored
+until independent truth/depth/overlap/evaluator/protocol and separate resource/
+cost/retention admission. Current November 4 boundary remains; no new science ran.
+
+
 ## E026 execution and one-version milestone, October 29, 2026
 
 The owner authorized the frozen E026 cached comparison at `f16c2e5`, with the

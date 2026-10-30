@@ -1,0 +1,147 @@
+{
+  "kind": "E026 measured allocation/current-price ledger, not an invoice",
+  "date": "2026-10-30",
+  "status": "PASS_ORIGINAL_6_USD_CREDIT_ONLY_ALLOWANCE",
+  "phase": "fusion-20261029T185844Z-f16c2e5",
+  "allocation": {
+    "status": "TERMINATED",
+    "machine": "e2-standard-8",
+    "vCPUs": 8,
+    "RAM_GiB": 32,
+    "start_UTC": "2026-10-29T18:59:06.293+00:00",
+    "stop_UTC": "2026-10-29T20:50:17.937+00:00",
+    "measured_control_plane_interval_seconds": 6671.644000053406,
+    "starts": 1,
+    "inspection_wakes": 0,
+    "original_disks_GiB": [
+      30,
+      300
+    ],
+    "resources_changed": false,
+    "billing_scope": "Google bills through STOPPING; start to lastStop conservatively includes shutdown tail, not an invoice"
+  },
+  "credit": {
+    "UTC": "2026-10-30T14:58:53.661375+00:00",
+    "method": "Fresh signed-in Chrome Billing Overview/Credits visible DOM",
+    "status": "Available",
+    "remaining_DKK": 1743.32,
+    "original_DKK": 1973.43,
+    "percent_remaining": 88,
+    "scope": "Certain usage; see the terms for free trial",
+    "expiry": "2027-01-12",
+    "application": "Net pricing",
+    "paid_account": true,
+    "overview_period": "October 1\u201330, 2026",
+    "rounded_cost_DKK": 230,
+    "rounded_savings_DKK": 230,
+    "net_DKK": 0,
+    "delay": "Costs take a few hours to show up, and might take longer than 24 hours. Numbers are rounded to make them easier to read.",
+    "delayed_usage_reserve_USD": 35,
+    "real_money_authorized": false
+  },
+  "rates": {
+    "compute_IP_USD_hour": 0.2730456762592464,
+    "PD_USD_month": 31.199999949850024,
+    "Catalog_month_hours": 744.0,
+    "DKK_per_USD": 6.578099999996525,
+    "Catalog_binding": {
+      "bytes": 8003,
+      "sha256": "0ba7635a3c2299658e38a52065cf58ca6f717459d2774f99e3cc10cb1d985c77"
+    },
+    "GCS_Standard_USD_GiB_hour": 2.7397e-05,
+    "WAN_USD_GiB": 0.12
+  },
+  "costs_USD": {
+    "compute_IP": 0.5060176521543128,
+    "run_PD_attribution": 0.07771628302982507,
+    "WAN_native_archive_and_metadata_upper": 0.0784591119736433,
+    "new_native_archive_to_retention_end": 0.002176269604407517,
+    "subtotal": 0.6643693167621887,
+    "metadata_reserve": 0.01,
+    "operations_reserve": 0.25,
+    "unreconciled_contingency": 0.5,
+    "total_upper_with_reserves": 1.4243693167621887,
+    "subtotal_including_inspection_backup": 0.6646545875480759,
+    "total_upper_including_inspection_backup": 1.424654587548076
+  },
+  "PD_attribution_overlaps_storage_approval": true,
+  "original_phase_allowance_USD": 6,
+  "storage": {
+    "all_versions": 196,
+    "bytes": 66643839866,
+    "soft_deleted_bytes": 0,
+    "all_current_week_plus_2GiB_contingency_and_reserve_USD": 7.725154483078365,
+    "original_allowance_USD": 8,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "extended": false,
+    "weekly_with_actual_inspection_backup_upper_USD": 7.72516517376836
+  },
+  "sampled_science": {
+    "command": [
+      "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+      "-I",
+      "-B",
+      "/srv/dl_binner/repo/scripts/e026_control.py",
+      "--plan",
+      "/srv/dl_binner/experiments/e026/fusion-20261029T185844Z-f16c2e5/science-plan.json",
+      "--workflow"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 5927.403381765999,
+    "peak_sampled_rss_bytes": 6697234432,
+    "seconds_ceiling": 41884.15969705582,
+    "rss_bytes_ceiling": 26000000000,
+    "launched_pid": 2477,
+    "sampled_cpu_seconds": 6531.330000000001,
+    "sampled_average_cpus": 1.1018872142381626,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": true
+  },
+  "disk": {
+    "samples": 3192,
+    "minimum_free_bytes": 36581675008,
+    "maximum_sampled_global_growth_bytes": 3974565888,
+    "scope": "Sampled whole-filesystem usage; first-allocation baseline, not exact attributable bytes"
+  },
+  "invoice_or_credit_delta": false,
+  "public_sources_checked": "2026-10-30",
+  "sources": [
+    "https://cloud.google.com/compute/all-pricing",
+    "https://cloud.google.com/compute/docs/instances/instance-lifecycle",
+    "https://cloud.google.com/compute/disks-image-pricing",
+    "https://cloud.google.com/storage/pricing",
+    "https://cloud.google.com/vpc/network-pricing",
+    "https://cloud.google.com/free/docs/free-cloud-features"
+  ],
+  "local_export_plan": "One exact 697,845,946-byte generation downloaded after admission; accepted local inputs reused; no old archive/BAM transfer",
+  "compact_inspection_backup": {
+    "kind": "E026 compact inspection backup",
+    "status": "PASS_PRIVATE_BYTES_AND_EVERY_MEMBER_READBACK",
+    "UTC": "2026-10-30T16:07:42.570497+00:00",
+    "URI": "gs://dl-binner-archive-167650584170/e026/fusion-20261029T185844Z-f16c2e5/inspection-20261030/e026-inspection.tar.gz",
+    "generation": "1793376448928740",
+    "archive": {
+      "bytes": 2493982,
+      "sha256": "0669972961f691cba05a50b292ea37b362dfa2d781435f87abb22b1fb1113eff"
+    },
+    "physical_members": 189,
+    "logical_bytes": 16849693,
+    "manifest": {
+      "bytes": 40445,
+      "sha256": "659fd80290dd2af58f682040573ecbe69494ba51bb9dd430435bd5139073eb4f"
+    },
+    "cost": {
+      "actual_archive_readback_WAN_USD": 0.0002787242084741592,
+      "new_storage_through_boundary_USD": 6.546577413089804e-06,
+      "operations_inside_existing_reserve": true,
+      "credit_gate": "2026-10-30T14:58:53.661375+00:00",
+      "covered_by_original_6_USD": true
+    },
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "retention_extended": false,
+    "no_VM_or_science": true,
+    "all_member_manifest": "inspection-manifest.json inside exact private archive",
+    "native_DNA_or_omitted_FASTA_backup": false
+  }
+}
