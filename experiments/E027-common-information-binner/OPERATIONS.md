@@ -1,9 +1,37 @@
 # E027 common full-version binner operations
 
-October 30, 2026. Local implementation/checks passed; native admission is pending. No community result is
+October 30, 2026. Local and all ten native gates passed; the comparison is running. No community result is
 claimed. The owner authorized conditional direct execution in this task; no new
 execution-approval exchange is required if every gate passes. This supersedes
 E026's older preparation-only/no-external next prompt for this block.
+
+## Current native phase
+
+[Native observation](native-observed.json) records `common-20261030T223337Z-243b8ac`,
+exact science source `243b8ac`. The existing VM started at 22:33:57.843 UTC
+on October 30; release followed passing Linux gates. Numerical Python 3.10.15 /
+workflow Python 3.12.10 / Snakemake 9.16.3, 41 distributions / 62 package files,
+real 35-rule tiny DAG, seven reuse contracts and complete data/bank axes pass.
+Gate peak sampled tree RSS was 10.924 GB. Native conservative full six-fit-equivalent
+forecast is 11.16 hours; three exact learning instances are actually reused.
+
+Held-parent PID 1443 / start ticks 3430 is pinned to boot
+`757bf3a1-8226-42e0-abd2-dbaf83ce8343`; normal/crash/live/restart-refusal tests pass.
+Cumulative deadline October 31, 22:33:57 UTC; provider STOP 22:48:57 UTC
+(23:48:57 Copenhagen). Native Oral MetaBAT exited 0 with 217 bins / 517,669,017 bp
+assigned and a passed complete-DNA export. This is not yet an archive-accepted or
+scored reference. E009 no-GLM student training is running after five completed
+mode stages and the reference rule (six of 35 steps). At 22:49:57 UTC, two
+of 20 student epochs had completed, each exposing all 89,041 parents / 432,664
+available views. All observed collapse guards passed; the current watcher still
+matched the intended process and its timer was active. This is healthy progress,
+not a completed-fit or biological-quality claim. Logs: `<phase>/phase-logs/workflow.log`,
+`<phase>/work/reference/native.log` and `<phase>/work/logs/`.
+
+Fresh start credit was DKK 1,741.38 Available / 88%, January 12 expiry, rounded
+cost/savings DKK 232 / net zero, with >24-hour usage-lag warning and $35 reserve.
+The complete $10.376 upper case remains within $15 and current credits. Original
+storage approval is unchanged. Do not call the credit delta an invoice.
 
 ## Scientific scope
 
@@ -58,11 +86,14 @@ refusal and the new streaming external exporter are real native paths.
 The new wheel is built from a clean source tree, sdist rebuilt and logical wheel
 members compared. Its actual installation owns package files outside the checkout
 and explicitly borrows complete byte-bound numerical dependencies read-only. It
-is a job-local, nonportable prefix. Linux must independently verify Python 3.12,
-all distribution versions/origins, source/default bytes, loaded library targets,
-workflow 9.16.3 and actual new contracts before release. The Mac numerical runtime
-is Python 3.10.15 / workflow 3.13.12; this is not Linux admission or repair of the
-old Mac portability failure. Original numerical tolerances and native vectors stay.
+is a job-local, nonportable prefix. Linux must independently verify the accepted
+numerical Python 3.10.15, all distribution versions/origins, source/default bytes,
+loaded library targets, workflow Python 3.12.10 / Snakemake 9.16.3 and actual new
+contracts before release. The Mac numerical runtime is also Python 3.10.15; its
+workflow is Python 3.13.12. Matching version numbers alone are not Linux admission
+or repair of the old Mac portability failure. Original numerical tolerances and
+native vectors stay. The earlier local planning wording that implied numerical
+Python 3.12 is superseded by the exact accepted runtime and actual native probes.
 
 [Local evidence](local-observed.json) binds successful/failing attempts. A first
 monitor attempt was denied sandbox access to `ps`; the authorized sampled harness
@@ -155,7 +186,8 @@ Our goal is substantially closing the recovery gap with one general-purpose
 binner whose intended main GLM path is retained. Read AGENTS, PROJECT_INTENT,
 STATE/CLOUD, D013/D015 and E027's design/protocol/criteria, candidate/source/reuse
 locks, local/native receipts, resource case, Oral GLM milestone and operations.
-Inspect the recorded E027 phase without starting a new science job. Preserve all
+Inspect E027 phase `common-20261030T223337Z-243b8ac` at exact source `243b8ac`
+without starting a new science job. Preserve all
 accepted comparators/evidence, including E023 E009 10.4163% R95, retained MetaBAT2
 8.5493%, E026 Oral 13.8569%, native vectors and every failed journal.
 
@@ -163,7 +195,8 @@ Check Compute state, `e027-candidate/status`, exact private completion, watchdog
 exit and all native/scientific/collection exits. If healthy/running, report real
 stage progress and leave the verified held-parent watcher/provider STOP intact
 without polling to completion. After independent TERMINATED, verify all ten
-native gates, each of the 33 arm stages, native Oral MetaBAT exit/export, final
+native gates, each of the 33 arm stages (three actual new fits and exact accepted
+learning reuse as declared), native Oral MetaBAT exit/export, final
 target, source/input-after proofs, exact archive/member/alias/omission bindings,
 private readbacks and actual cost/storage before scoring. Assess transfer/local
 staging against actual bytes, remaining original $15 / 24-hour clock (or a documented
@@ -180,7 +213,10 @@ post under the same grouping; explicitly compare E009 GLM off/on including their
 teacher/pair availability, and the new no-GLM full version across both communities.
 Report every target gain/loss, geometry/neighbors/collapse/reload limits and secondary
 per-bin completeness/impurity-upper-bound threshold HQ/MQ/LQ (no formal MIMAG HQ).
-Report and preserve the new native Oral MetaBAT reference beside Oral candidate/
+Report actual native main/recruitment/coverage eligibility and any unavailable
+filter detail from the retained native log; the complete assignment table alone
+does not explain every unassigned row. Report and preserve the new native Oral
+MetaBAT reference beside Oral candidate/
 E026, retaining tool eligibility/mean-only cvExt assumptions. Reuse older scores,
 not old fits or rescoring. No tuning, grid, new external tool, model/feature change
 or confirmation work in inspection.

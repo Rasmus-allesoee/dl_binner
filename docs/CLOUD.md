@@ -1,21 +1,29 @@
 # Google Cloud workspace operations
 
-**October 30 E027 admission:** the new owner-authorized common-version comparison
+**October 30 E027 RUNNING, supervised:** the new owner-authorized common-version comparison
 includes E009 GLM off/on and Oral no-GLM with actual ten-depth learning plus one
 native Oral MetaBAT2 reference. [E027 operations](../experiments/E027-common-information-binner/OPERATIONS.md)
-owns actual status; currently local checks are closing and the VM remains stopped.
+owns actual status. [Native receipt](../experiments/E027-common-information-binner/native-observed.json)
+records phase `common-20261030T223337Z-243b8ac`, source `243b8ac`,
+all ten passing Linux gates and release. Original E2 started 22:33:57.843 UTC;
+provider STOP October 31, 22:48:57 UTC (23:48:57 Copenhagen). The native Oral
+MetaBAT reference exited 0 with 217 bins and complete-DNA export; E009 no-GLM
+student training is active. Final collection/shutdown and quality remain unverified.
 Three exact accepted E009 learning instances are verified/reused, three fits are
 new; all mode teacher/pair availability is declared. Current planning envelope
 24 hours / 24.25-hour STOP / $15 gross, full conservative quote $10.376; no resources
-or retention expanded. Fresh signed-in Welcome credit DKK 1,741.87 Available / 88%,
+or retention expanded. Fresh signed-in Welcome credit DKK 1,741.38 Available / 88%,
 January 12 expiry, Certain usage/net pricing, paid account, rounded cost/savings
 DKK 232 / net 0; usage can lag >24 hours, reserve $35. Fresh Catalog/account/project/
 resource/quota reads pass ordinary CPU/PD/GCS/IP/network coverage. All 198 Standard
 object versions total 66,646,333,937 bytes, soft-deleted zero; original storage
 week plus 3 GiB is conservatively $7.8295 < $8. **November 4, 00:00 Copenhagen**
-remains; stopped original disks still ~$31.20/month. Native free-space, source,
-complete Python 3.12 runtime, current-boot watcher and full schedule gates must
-pass before science. No GPU, mapping, new acquisition, resize or provisioning.
+remains; stopped original disks still ~$31.20/month. Native headroom 34.07 GiB at
+start (33 GiB required), complete numerical Python 3.10.15 / workflow Python
+3.12.10, full data/reuse readers and current-boot watcher all passed. Full native
+six-fit-equivalent forecast 11.16 hours fits the unchanged 24-hour clock. No GPU,
+mapping, new acquisition, resize or provisioning. Follow the exact inspection
+prompt after verified shutdown; do not infer completion from a stop.
 
 
 **October 30: E026 SUCCESS and independently TERMINATED; biological MODIFY.**

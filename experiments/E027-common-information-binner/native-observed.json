@@ -1,0 +1,756 @@
+{
+  "kind": "E027 native launch and supervised running handoff, not completed acceptance",
+  "status": "RUNNING_HEALTHY_PROGRESS_AND_SUPERVISION_VERIFIED",
+  "phase": "common-20261030T223337Z-243b8ac",
+  "source_commit": "243b8ac8ec3892fdb8e029d00016849f1785af2f",
+  "branch": "common-multiview-marker-binner",
+  "root": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac",
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e027/common-20261030T223337Z-243b8ac/",
+  "guest_attribute": "e027-candidate/status",
+  "VM_start_UTC": "2026-10-30T22:33:57.843000+00:00",
+  "VM_start_Copenhagen": "2026-10-30T23:33:57.843000+01:00",
+  "cumulative_deadline_UTC": "2026-10-31T22:33:57.843000+00:00",
+  "provider_STOP_UTC": "2026-10-31T22:48:57.843000+00:00",
+  "provider_STOP_Copenhagen": "2026-10-31T23:48:57.843000+01:00",
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "no_retention_or_resource_change": true,
+  "native_gates": {
+    "count": 10,
+    "all_exit_zero": true,
+    "stages": {
+      "workflow-origin": {
+        "exit_code": 0,
+        "wall_seconds": 0.707001027000004,
+        "peak_sampled_rss_bytes": 41734144,
+        "sampled_cpu_seconds": 0.22
+      },
+      "accepted-numerical": {
+        "exit_code": 0,
+        "wall_seconds": 18.689426157999996,
+        "peak_sampled_rss_bytes": 312598528,
+        "sampled_cpu_seconds": 17.180000000000003
+      },
+      "package-install": {
+        "exit_code": 0,
+        "wall_seconds": 1.361671666999996,
+        "peak_sampled_rss_bytes": 89292800,
+        "sampled_cpu_seconds": 0.72
+      },
+      "owned-complete-runtime": {
+        "exit_code": 0,
+        "wall_seconds": 18.676347244000006,
+        "peak_sampled_rss_bytes": 280408064,
+        "sampled_cpu_seconds": 19.02
+      },
+      "installed-model-graph-contracts": {
+        "exit_code": 0,
+        "wall_seconds": 62.335469948,
+        "peak_sampled_rss_bytes": 653164544,
+        "sampled_cpu_seconds": 115.53999999999999
+      },
+      "metabat-native-readers-writers": {
+        "exit_code": 0,
+        "wall_seconds": 0.6941589169999816,
+        "peak_sampled_rss_bytes": 55353344,
+        "sampled_cpu_seconds": 0.25
+      },
+      "serial-tiny-DAG": {
+        "exit_code": 0,
+        "wall_seconds": 58.080078136,
+        "peak_sampled_rss_bytes": 455581696,
+        "sampled_cpu_seconds": 123.97
+      },
+      "synthetic-width-runtime": {
+        "exit_code": 0,
+        "wall_seconds": 4.513766468,
+        "peak_sampled_rss_bytes": 443244544,
+        "sampled_cpu_seconds": 10.840000000000002
+      },
+      "synthetic-approximate-graph": {
+        "exit_code": 0,
+        "wall_seconds": 33.63356227699998,
+        "peak_sampled_rss_bytes": 417312768,
+        "sampled_cpu_seconds": 43.0
+      },
+      "retained-data": {
+        "exit_code": 0,
+        "wall_seconds": 245.957875507,
+        "peak_sampled_rss_bytes": 10924064768,
+        "sampled_cpu_seconds": 222.72000000000003
+      }
+    },
+    "numerical_python": "3.10.15",
+    "workflow_python": "3.12.10",
+    "Snakemake": "9.16.3",
+    "owned_distributions": 41,
+    "owned_package_files": 62,
+    "new_installed_contracts": 10,
+    "real_tiny_DAG_rules": 35,
+    "restore_only_learning_contracts": 7,
+    "full_input_and_bank_readers": {
+      "status": "PASS",
+      "units": {
+        "E009-noGLM": {
+          "rows": 145702,
+          "bp": 231678157,
+          "eligible": 89041,
+          "samples": [
+            "cami3_toy_human_gut_short_read_sample_0",
+            "cami3_toy_human_gut_short_read_sample_2",
+            "cami3_toy_human_gut_short_read_sample_3",
+            "cami3_toy_human_gut_short_read_sample_4",
+            "cami3_toy_human_gut_short_read_sample_6",
+            "cami3_toy_human_gut_short_read_sample_9",
+            "cami3_toy_human_gut_short_read_sample_10",
+            "cami3_toy_human_gut_short_read_sample_11",
+            "cami3_toy_human_gut_short_read_sample_14",
+            "cami3_toy_human_gut_short_read_sample_17"
+          ]
+        },
+        "E009-GLM": {
+          "rows": 145702,
+          "bp": 231678157,
+          "eligible": 89041,
+          "samples": [
+            "cami3_toy_human_gut_short_read_sample_0",
+            "cami3_toy_human_gut_short_read_sample_2",
+            "cami3_toy_human_gut_short_read_sample_3",
+            "cami3_toy_human_gut_short_read_sample_4",
+            "cami3_toy_human_gut_short_read_sample_6",
+            "cami3_toy_human_gut_short_read_sample_9",
+            "cami3_toy_human_gut_short_read_sample_10",
+            "cami3_toy_human_gut_short_read_sample_11",
+            "cami3_toy_human_gut_short_read_sample_14",
+            "cami3_toy_human_gut_short_read_sample_17"
+          ]
+        },
+        "oral-noGLM": {
+          "rows": 1286547,
+          "bp": 1669981123,
+          "eligible": 508763,
+          "samples": [
+            "oral_sample_6",
+            "oral_sample_7",
+            "oral_sample_8",
+            "oral_sample_13",
+            "oral_sample_14",
+            "oral_sample_15",
+            "oral_sample_16",
+            "oral_sample_17",
+            "oral_sample_18",
+            "oral_sample_19"
+          ]
+        }
+      },
+      "copied_or_regenerated_science": false,
+      "verified_reuse_lock": {
+        "bytes": 19288,
+        "sha256": "62ad2bf8bdc708aee771cc8695458e93e5234a5ed87dd3d3e89f22a33b009f3b"
+      },
+      "verified_learning_reuse_lock": {
+        "bytes": 20187,
+        "sha256": "df155a42382eb2bc1135dad7aa0e85d103a3dc2949c49f9460e77802480ef81a"
+      },
+      "identical_learning": {
+        "E009-noGLM": {
+          "teacher": {
+            "status": "PASS_IDENTICAL_ACCEPTED_LEARNING",
+            "producer": "E019",
+            "role": "teacher",
+            "checkpoint": {
+              "bytes": 3636592,
+              "sha256": "ab0160ed5793addf5f36ceec64d70b523d655d5c4b5fe98597defc43e69404ca"
+            },
+            "original_native_reload": true,
+            "no_new_reload_or_portability_claim": true,
+            "full_rows": 145702,
+            "samples": [
+              "cami3_toy_human_gut_short_read_sample_0",
+              "cami3_toy_human_gut_short_read_sample_2",
+              "cami3_toy_human_gut_short_read_sample_3",
+              "cami3_toy_human_gut_short_read_sample_4",
+              "cami3_toy_human_gut_short_read_sample_6",
+              "cami3_toy_human_gut_short_read_sample_9",
+              "cami3_toy_human_gut_short_read_sample_10",
+              "cami3_toy_human_gut_short_read_sample_11",
+              "cami3_toy_human_gut_short_read_sample_14",
+              "cami3_toy_human_gut_short_read_sample_17"
+            ],
+            "GLM": false,
+            "same_frozen_implementation_defaults_and_inputs": true,
+            "truth_accessed": false,
+            "trained_or_inferred": false
+          }
+        },
+        "E009-GLM": {
+          "teacher": {
+            "status": "PASS_IDENTICAL_ACCEPTED_LEARNING",
+            "producer": "E021",
+            "role": "teacher",
+            "checkpoint": {
+              "bytes": 5506582,
+              "sha256": "d78fd7b988f09918ce6c5789b803fea216e8c0a0ddf83b7918a82d8ca73373a7"
+            },
+            "original_native_reload": true,
+            "no_new_reload_or_portability_claim": true,
+            "full_rows": 145702,
+            "samples": [
+              "cami3_toy_human_gut_short_read_sample_0",
+              "cami3_toy_human_gut_short_read_sample_2",
+              "cami3_toy_human_gut_short_read_sample_3",
+              "cami3_toy_human_gut_short_read_sample_4",
+              "cami3_toy_human_gut_short_read_sample_6",
+              "cami3_toy_human_gut_short_read_sample_9",
+              "cami3_toy_human_gut_short_read_sample_10",
+              "cami3_toy_human_gut_short_read_sample_11",
+              "cami3_toy_human_gut_short_read_sample_14",
+              "cami3_toy_human_gut_short_read_sample_17"
+            ],
+            "GLM": true,
+            "same_frozen_implementation_defaults_and_inputs": true,
+            "truth_accessed": false,
+            "trained_or_inferred": false
+          },
+          "student": {
+            "status": "PASS_IDENTICAL_ACCEPTED_LEARNING",
+            "producer": "E022",
+            "role": "student",
+            "checkpoint": {
+              "bytes": 5507286,
+              "sha256": "e62739e333765578cd7b29ae291be44eb43dbd3505f167a20c479626449be130"
+            },
+            "original_native_reload": true,
+            "no_new_reload_or_portability_claim": true,
+            "full_rows": 145702,
+            "samples": [
+              "cami3_toy_human_gut_short_read_sample_0",
+              "cami3_toy_human_gut_short_read_sample_2",
+              "cami3_toy_human_gut_short_read_sample_3",
+              "cami3_toy_human_gut_short_read_sample_4",
+              "cami3_toy_human_gut_short_read_sample_6",
+              "cami3_toy_human_gut_short_read_sample_9",
+              "cami3_toy_human_gut_short_read_sample_10",
+              "cami3_toy_human_gut_short_read_sample_11",
+              "cami3_toy_human_gut_short_read_sample_14",
+              "cami3_toy_human_gut_short_read_sample_17"
+            ],
+            "GLM": true,
+            "same_frozen_implementation_defaults_and_inputs": true,
+            "truth_accessed": false,
+            "trained_or_inferred": false
+          }
+        }
+      },
+      "oral_cvExt_means": {
+        "status": "PASS",
+        "samples": [
+          "oral_sample_6",
+          "oral_sample_7",
+          "oral_sample_8",
+          "oral_sample_13",
+          "oral_sample_14",
+          "oral_sample_15",
+          "oral_sample_16",
+          "oral_sample_17",
+          "oral_sample_18",
+          "oral_sample_19"
+        ],
+        "rows": 1286547,
+        "mean_only": true
+      },
+      "full_original_token_and_optional_native_GLM_readers": true
+    },
+    "source": {
+      "status": "PASS",
+      "inherited": {
+        "status": "PASS",
+        "inherited": {
+          "status": "PASS",
+          "inherited": {
+            "status": "PASS",
+            "new": {
+              "bytes": 5288,
+              "sha256": "22643a866b0b33c5a03facc2cbf110b7ea821eb1cdf0a534995422a041cebcf3"
+            },
+            "immutable": {
+              "bytes": 43403,
+              "sha256": "fa7e55203409d32c1a3d9ba43ec8508f65ae741208a1506992c74c6d28a7c8f7"
+            }
+          },
+          "new": {
+            "bytes": 3119,
+            "sha256": "a168cff0169d21b3d85be23bfaf0dfc8bd49ead19e1a705e23058cc48f659501"
+          }
+        },
+        "new": {
+          "bytes": 5693,
+          "sha256": "7b8dc18d803ed266824b801449772b5017bb08cfd9ba3c153140d5af756fa7f9"
+        }
+      },
+      "current": {
+        "bytes": 5254,
+        "sha256": "571eae249fe4ef304bc8185bdebfff6c00f2210311254a822578f85220e87ae8"
+      }
+    },
+    "local_Python_3_12_planning_wording_superseded": true
+  },
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e027-common-20261030T223337Z-243b8ac.service",
+    "watchdog_timer": "e027-common-20261030T223337Z-243b8ac-exit.timer",
+    "watchdog_service": "e027-common-20261030T223337Z-243b8ac-exit.service",
+    "process": {
+      "pid": 1443,
+      "start_ticks": 3430,
+      "command_sha256": "4f311440b0678019ffa5cd82afbc2bf45e4c0cb4bc7c1b4908478054b3e8f4c1"
+    },
+    "boot_id": "757bf3a1-8226-42e0-abd2-dbaf83ce8343",
+    "source_commit": "243b8ac8ec3892fdb8e029d00016849f1785af2f",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1793399637.843,
+    "hard_deadline_epoch": 1793486037.843,
+    "provider_stop_epoch": 1793486937.843,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "closed_control_bindings": {
+    "host.json": {
+      "bytes": 277,
+      "sha256": "c2d6b26ff14b835833c1a2d7bdd83603d6e348a167703e4de36799e637a20610"
+    },
+    "started.json": {
+      "bytes": 167,
+      "sha256": "008312e4b0e51aeb9ccc494ae11febac42c23d085354caec834502352271cf06"
+    },
+    "release.json": {
+      "bytes": 2979,
+      "sha256": "8de2a618a55c5d031cfab631a1a5b3f1620fc1d64f9ca4436e569d5339b33f5d"
+    },
+    "gates/completion.json": {
+      "bytes": 10055,
+      "sha256": "1e8c81447b4f033a6c142e5eacdf3f70a8c7a3baec5f88a6a4ea60bb03a8ac22"
+    },
+    "gates/data.json": {
+      "bytes": 5894,
+      "sha256": "b017c90d9f9ca4e233772fa45ac37e930512d33c9d985d11020f637e7f75e491"
+    },
+    "gates/schedule.json": {
+      "bytes": 1311,
+      "sha256": "56e0dc0be9b599c0e0d08a2893b64c628ea7d5794edf4e785f797b927141e08e"
+    },
+    "gates/runtime.json": {
+      "bytes": 23761,
+      "sha256": "f3c5af13c4a4030fe1e9eb964d7db8bafd9f05c9d19684a0a6393bc74a18726a"
+    },
+    "logs/supervision.json": {
+      "bytes": 1057,
+      "sha256": "99a42b7a8eb7003ac352541994343337cf864618859d799c44592120fca3bb8e"
+    },
+    "logs/watchdog-native-tests.log": {
+      "bytes": 3012,
+      "sha256": "fe6c896ae24c6c47f19791bcea2f71dca5fcf07f758d8ee546eb8f07cd097b8e"
+    },
+    "logs/maintenance-restart-refused.json": {
+      "bytes": 415,
+      "sha256": "ac22a31204c6005a6adc6fbce33fdc43901d052536e3ef0ee5f34318aaf78bbb"
+    }
+  },
+  "released": {
+    "config": {
+      "bytes": 1054,
+      "sha256": "4b534f498d54740467f6b3b3511def211f408b3bd155772d08bf5fe8688370ea"
+    },
+    "plan": {
+      "bytes": 4744,
+      "sha256": "b5e4bc5206d0a3eb6ae2f656c38ff6e09057cdd1b1f794e5e355a1188dd9daa3"
+    },
+    "vm_start_epoch": 1793399637.843,
+    "credit_gate_passed": true,
+    "pending_usage_accounted": true,
+    "native_gates_passed": true,
+    "watchdog_verified": true,
+    "provider_STOP_verified": true,
+    "existing_VM_only": true,
+    "full_axes_verified": true,
+    "headroom_measured": true,
+    "retention_passed": true,
+    "real_money_authorized": false,
+    "estimated_incremental_gross_USD": 10.37599906893098,
+    "ceiling_USD": 15,
+    "provider_STOP_seconds": 87300,
+    "storage_retention_extended": false,
+    "credit_valid_until_epoch": 1799625600.0,
+    "storage_valid_until_epoch": 1793746800,
+    "covered_costs": [
+      "compute",
+      "disk",
+      "storage",
+      "network",
+      "operations"
+    ],
+    "gate_files": {
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/gates/completion.json": {
+        "bytes": 10055,
+        "sha256": "1e8c81447b4f033a6c142e5eacdf3f70a8c7a3baec5f88a6a4ea60bb03a8ac22"
+      },
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/gates/source.json": {
+        "bytes": 833,
+        "sha256": "13acff105cfb9042457b47a1670fda1ec318e1328f67ab447f2ac6447af2f686"
+      },
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/gates/runtime.json": {
+        "bytes": 23761,
+        "sha256": "f3c5af13c4a4030fe1e9eb964d7db8bafd9f05c9d19684a0a6393bc74a18726a"
+      },
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/gates/data.json": {
+        "bytes": 5894,
+        "sha256": "b017c90d9f9ca4e233772fa45ac37e930512d33c9d985d11020f637e7f75e491"
+      },
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/gates/schedule.json": {
+        "bytes": 1311,
+        "sha256": "56e0dc0be9b599c0e0d08a2893b64c628ea7d5794edf4e785f797b927141e08e"
+      },
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/gates/tiny-DAG/completed.json": {
+        "bytes": 49494,
+        "sha256": "cf8582ccaf66fbd87b26e051df0b5ef4d19ca81ca806364c46d5a2df982073b0"
+      },
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/logs/supervision.json": {
+        "bytes": 1057,
+        "sha256": "99a42b7a8eb7003ac352541994343337cf864618859d799c44592120fca3bb8e"
+      },
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/logs/watchdog-native-tests.log": {
+        "bytes": 3012,
+        "sha256": "fe6c896ae24c6c47f19791bcea2f71dca5fcf07f758d8ee546eb8f07cd097b8e"
+      },
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/logs/maintenance-restart-refused.json": {
+        "bytes": 415,
+        "sha256": "ac22a31204c6005a6adc6fbce33fdc43901d052536e3ef0ee5f34318aaf78bbb"
+      },
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/logs/provider-before-release.json": {
+        "bytes": 31863,
+        "sha256": "9338516ece79867d65d4ed8e8dafe718261d798dd7badc1da8c3ebb036c223de"
+      },
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/payload/financial-gate.json": {
+        "bytes": 5926,
+        "sha256": "1e0787b071590fa815f7d8b271ebec3bf6eac3f4dc88b8265bb27786db4d4005"
+      },
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/external-data.json": {
+        "bytes": 3272,
+        "sha256": "e24888abd7debf6361fd3b3d6a0dbca5d60918861f8876ffb3c55742605b621e"
+      }
+    }
+  },
+  "forecast": {
+    "native_six_fit_equivalent_upper_seconds": 40166.56554288198,
+    "scope": "Conservative six-fit equivalent plus three hours other work; three exact accepted models are actually reused. Native shape forecast, not community duration."
+  },
+  "progress_snapshots": {
+    "initial": {
+      "epoch": 1793400269.031184,
+      "watchdog": {
+        "boot_id": "757bf3a1-8226-42e0-abd2-dbaf83ce8343",
+        "checked_utc": "2026-10-30T22:44:12.035905+00:00",
+        "decision": "workflow alive",
+        "expected_process": {
+          "command_sha256": "4f311440b0678019ffa5cd82afbc2bf45e4c0cb4bc7c1b4908478054b3e8f4c1",
+          "pid": 1443,
+          "start_ticks": 3430
+        },
+        "observed_process": {
+          "command_sha256": "4f311440b0678019ffa5cd82afbc2bf45e4c0cb4bc7c1b4908478054b3e8f4c1",
+          "pid": 1443,
+          "start_ticks": 3430
+        },
+        "shutdown": false,
+        "workflow_root": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac"
+      },
+      "parent": "MainPID=1443\nExecMainStatus=0\nActiveState=active\nSubState=running\n",
+      "stage": "native Oral MetaBAT2 TNF processing",
+      "reference_exit": null,
+      "filesystem": {
+        "total": 316733652992,
+        "used": 280195387392,
+        "free": 36521488384
+      },
+      "completion": null
+    },
+    "after_five_minutes": {
+      "epoch": 1793400478.5551548,
+      "watchdog": {
+        "boot_id": "757bf3a1-8226-42e0-abd2-dbaf83ce8343",
+        "checked_utc": "2026-10-30T22:47:48.966250+00:00",
+        "decision": "workflow alive",
+        "expected_process": {
+          "command_sha256": "4f311440b0678019ffa5cd82afbc2bf45e4c0cb4bc7c1b4908478054b3e8f4c1",
+          "pid": 1443,
+          "start_ticks": 3430
+        },
+        "observed_process": {
+          "command_sha256": "4f311440b0678019ffa5cd82afbc2bf45e4c0cb4bc7c1b4908478054b3e8f4c1",
+          "pid": 1443,
+          "start_ticks": 3430
+        },
+        "shutdown": false,
+        "workflow_root": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac"
+      },
+      "parent": "MainPID=1443\nExecMainStatus=0\nActiveState=active\nSubState=running\n",
+      "watcher_timer": "active",
+      "stage": "E009-noGLM student fit",
+      "completed_stage_seals": [
+        "units/E009-noGLM/teacher/done.json",
+        "units/E009-noGLM/pairs/done.json",
+        "units/E009-noGLM/teacher-graph/done.json",
+        "units/E009-noGLM/admit/done.json",
+        "units/E009-noGLM/teacher-embed/done.json"
+      ],
+      "reference_exit": {
+        "argv": [
+          "/srv/dl_binner/experiments/e011/envs/metabat2-2.18-20261017T005141Z/bin/metabat2",
+          "-i",
+          "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+          "-a",
+          "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/combined/depth.tsv",
+          "--cvExt",
+          "-o",
+          "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/reference/native/bin",
+          "-t",
+          "4",
+          "--seed",
+          "11",
+          "-v"
+        ],
+        "exit_code": 0,
+        "means_only_native_assumption": true
+      },
+      "reference_stage": "PASS_NATIVE_EXIT_AND_COMPLETE_DNA_EXPORT_NOT_YET_SCORED_OR_ARCHIVE_ACCEPTED",
+      "reference_bins": 217,
+      "reference_assigned_bp": 517669017,
+      "reference_stage_seal_files": 223,
+      "reference_stage_seal_inventory_sha256": "b0a1088d43f568e10686c55a843e365679a698b207969e4744817280b4e93ee4",
+      "filesystem": {
+        "total": 316733652992,
+        "used": 280878886912,
+        "free": 35837988864
+      },
+      "science_result": null,
+      "completion": null
+    },
+    "training_verified": {
+      "epoch": 1793400597.4413743,
+      "current_stage": "E009-noGLM student training",
+      "last_completed_epoch": 2,
+      "total_epochs": 20,
+      "last_training_observation": {
+        "stage": "relational_epoch",
+        "utc": "2026-10-30T22:49:22Z",
+        "epoch": 2,
+        "parents_seen": 89041,
+        "available_views": 432664,
+        "depth_dropped_views": 216263,
+        "loss": 1.0526000417285226,
+        "fused_positive": 0.27634036473140733,
+        "sequence_positive": 0.26298329649021523,
+        "composition_reconstruction": 0.6418683123266443,
+        "depth_reconstruction": 0.028997170754638302,
+        "relation_positive": 0.021171838142393404,
+        "relation_negative": 0.0007399914391473585,
+        "relation_pairs_exposed": 2366,
+        "relation_weight": 0.0,
+        "ema_updates": 696,
+        "last_tau": 0.9960976081940863,
+        "geometry": {
+          "online": {
+            "fused": {
+              "rows": 8192,
+              "effective_rank": 17.87729854868022,
+              "mean_dimension_std": 0.09496928358137727,
+              "mean_other_cosine": 0.405308280830351,
+              "catastrophic_collapse": false
+            },
+            "sequence": {
+              "rows": 8192,
+              "effective_rank": 19.79746011843155,
+              "mean_dimension_std": 0.09298507807729853,
+              "mean_other_cosine": 0.4318031078631605,
+              "catastrophic_collapse": false
+            }
+          },
+          "target": {
+            "fused": {
+              "rows": 8192,
+              "effective_rank": 12.962629078221344,
+              "mean_dimension_std": 0.09550009089589084,
+              "mean_other_cosine": 0.39181104961425456,
+              "catastrophic_collapse": false
+            },
+            "sequence": {
+              "rows": 8192,
+              "effective_rank": 14.824025549543661,
+              "mean_dimension_std": 0.0914648129595769,
+              "mean_other_cosine": 0.4441273601649756,
+              "catastrophic_collapse": false
+            }
+          }
+        },
+        "wall_seconds": 117.63302676899991
+      },
+      "watchdog": {
+        "boot_id": "757bf3a1-8226-42e0-abd2-dbaf83ce8343",
+        "checked_utc": "2026-10-30T22:49:53.002164+00:00",
+        "decision": "workflow alive",
+        "expected_process": {
+          "command_sha256": "4f311440b0678019ffa5cd82afbc2bf45e4c0cb4bc7c1b4908478054b3e8f4c1",
+          "pid": 1443,
+          "start_ticks": 3430
+        },
+        "observed_process": {
+          "command_sha256": "4f311440b0678019ffa5cd82afbc2bf45e4c0cb4bc7c1b4908478054b3e8f4c1",
+          "pid": 1443,
+          "start_ticks": 3430
+        },
+        "shutdown": false,
+        "workflow_root": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac"
+      },
+      "watcher_timer": "active",
+      "parent": "MainPID=1443\nActiveState=active\n",
+      "filesystem": {
+        "total": 316733652992,
+        "used": 280878944256,
+        "free": 35837931520
+      },
+      "science_result_exists": false,
+      "completion_exists": false
+    }
+  },
+  "finance": {
+    "Welcome_remaining_DKK": 1741.38,
+    "approx_remaining_USD": 264.72385643284844,
+    "status": "Available",
+    "expiry": "2027-01-12",
+    "scope": "Certain usage, net pricing; ordinary first-party CPU/PD/GCS/IP/network only",
+    "pending_usage_reserve_USD": 35,
+    "new_ceiling_USD": 15,
+    "complete_full_STOP_upper_USD": 10.37599906893098,
+    "original_storage_week_upper_USD": 7.829493897386831,
+    "original_storage_allowance_USD": 8,
+    "real_money_authorized": false,
+    "not_invoice_or_credit_delta": true,
+    "actual_final_uptime_and_cost_pending": true
+  },
+  "immutable_anchors": {
+    "E009_E023_R95_percent": 10.41634228737078,
+    "E009_MetaBAT2_R95_percent": 8.549276749480661,
+    "oral_E026_R95_percent": 13.85692600936915
+  },
+  "new_science": {
+    "mode_arms": [
+      "E009-noGLM",
+      "E009-GLM",
+      "oral-noGLM"
+    ],
+    "new_fits": 3,
+    "identical_accepted_learning_reuses": 3,
+    "new_groupings": 6,
+    "retained_partitions_per_mode": 4,
+    "native_Oral_MetaBAT2_cvExt_reference": 1,
+    "GLM_on_affects_bootstrap_pair_teacher_student": true,
+    "truth_accessed": false,
+    "scores_available": false
+  },
+  "evidence": {
+    "artifacts/e027-common-information-binner/native-20261030/identity.json": {
+      "bytes": 573,
+      "sha256": "9c6e195014c513cecc567855bd2fe389bda8d612ab2f407a4b70e83d59a6c961"
+    },
+    "artifacts/e027-common-information-binner/native-20261030/financial-gate.json": {
+      "bytes": 6756,
+      "sha256": "0832346c33d826bc0e067da627839df9f33194cb3b2c228dd5927f1fc5855ab0"
+    },
+    "artifacts/e027-common-information-binner/native-20261030/credit-before-start.json": {
+      "bytes": 716,
+      "sha256": "de5e776fae4a0f36406542aeafd8624652a64f02ab3af4bbd3fea6c8bc2b78cd"
+    },
+    "artifacts/e027-common-information-binner/native-20261030/science-progress-initial.json": {
+      "bytes": 18208,
+      "sha256": "5cd1d2eb556cf8b16988431984155691c78197d6301be94343c27a6b9c0c2c38"
+    },
+    "artifacts/e027-common-information-binner/native-20261030/native-admission-progress-5.json": {
+      "bytes": 12969,
+      "sha256": "93385374a68591ca0bea64edd0f3d8b14612b0588bfb239b8340c139b5b21373"
+    },
+    "artifacts/e027-common-information-binner/native-20261030/science-progress-handoff.json": {
+      "bytes": 34556,
+      "sha256": "3a5fb2430710dd8b2376855a09d0796c54770eea069f91f5a73ab289bcffe67e"
+    },
+    "artifacts/e027-common-information-binner/native-20261030/handoff-control-plane/running.json": {
+      "bytes": 33118,
+      "sha256": "3d1b81cbbb025a60a0859f7003d9c3917d68e6ea993e52af3278e17f8b3e42bb"
+    },
+    "artifacts/e027-common-information-binner/native-20261030/handoff-control-plane/guest-status.json": {
+      "bytes": 244,
+      "sha256": "ef75ca990760d6bcc1cd9c34d7974354b212877caca6cca5fc006a1ccfa360b7"
+    },
+    "artifacts/e027-common-information-binner/native-20261030/learning-progress-verified.json": {
+      "bytes": 3656,
+      "sha256": "659e0669166200c6ee0274df051d4128591f14fe110d8023a317362a4f1a6ea4"
+    }
+  },
+  "unresolved": [
+    "Every new scientific and final collection/upload/member/readback exit",
+    "Independent terminal state and matching watchdog exit",
+    "Frozen full-population recovery/geometry/per-target and secondary threshold-quality diagnostics",
+    "Native Oral GLM bank absent; next concrete information-admission milestone, not part of current CPU fits",
+    "Original failed Mac portability tolerance remains unchanged",
+    "Full unique-source oral truth and independent skin confirmation remain unadmitted"
+  ],
+  "native_Oral_reference": {
+    "exit": 0,
+    "bins": 217,
+    "assigned_bp": 517669017,
+    "all_native_bin_fastas_retained": true,
+    "full_assignments_bytes": 143890470,
+    "assignments": {
+      "bytes": 143890470,
+      "sha256": "8eb8d677c9baffb0b3001ae4274c2dbdf4598e9acbe88923c424a028471782f2"
+    },
+    "export_manifest": {
+      "bytes": 55887,
+      "sha256": "8fc39bf2a7aa38706481b0cf6ca0c85a455cc8b97e5e634840e99a642f51b7ed"
+    },
+    "native_log": {
+      "bytes": 3510261,
+      "sha256": "ea2d968982fc0c54cbdc44738c9af3e065128c770e6639f9e527ed32c0eb371d"
+    },
+    "raw_fit_log_seconds": 100,
+    "note": "Raw CLI elapsed log is distinct from rule duration, export time and charged allocation. No quality score or HQ count inferred."
+  },
+  "independent_provider_status": {
+    "status": "RUNNING",
+    "lastStartTimestamp": "2026-10-30T15:33:57.843-07:00",
+    "maxRunDuration": {
+      "nanos": 0,
+      "seconds": "87300"
+    },
+    "action": "STOP",
+    "automaticRestart": false
+  },
+  "running_cost_snapshot": {
+    "seconds_since_provider_start": 840.7121548652649,
+    "allocation_vCPUs": 8,
+    "compute_plus_IP_estimate_USD": 0.06376467190682071,
+    "overlapping_PD_estimate_USD": 0.010119683329334326,
+    "partial_not_invoice": true,
+    "pending_final_allocation_storage_export_prices": true
+  },
+  "last_observed_epoch": 1793400597.4413743,
+  "not_a_completion_or_quality_claim": true
+}

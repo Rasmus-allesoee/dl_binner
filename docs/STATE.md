@@ -2,7 +2,16 @@
 
 Updated: October 30, 2026 (Copenhagen). This is the single current handoff.
 
-**E027 is locally implemented; final local/native admission is in progress.**
+**E027 is implemented and running under verified supervision.**
+Phase `common-20261030T223337Z-243b8ac`, exact source `243b8ac`.
+[Native receipt](../experiments/E027-common-information-binner/native-observed.json)
+records all ten passing Linux gates, the atomic release, full axes and exact
+accepted-learning reuse. The native Oral MetaBAT2 reference exited 0 and passed complete-DNA export
+(217 bins / 517,669,017 bp assigned, no recovery score yet). E009 no-GLM student
+training is now running (epoch 2 / 20 at 22:49:57 UTC; full exposure and observed
+collapse guards pass, watcher active);
+scientific completion, shutdown, return integrity and biological diagnostics remain
+pending. Inspect this phase next, without starting another job.
 The owner authorized conditional direct execution of the [common full-version
 candidate](../experiments/E027-common-information-binner/OPERATIONS.md), complete
 E009 GLM off/on paths, Oral measured-depth no-GLM mode and one native Oral MetaBAT2
@@ -30,10 +39,13 @@ unscored with unchanged truth/depth/overlap/protocol/cost dependencies.
 [Resource case](../experiments/E027-common-information-binner/resource-plan.json):
 24 hours / 24.25-hour provider STOP / $15 gross, existing E2/32 GiB and original
 disks, four numerical threads, 26 GB sampled RSS, 25 GiB reserve / 8 GiB growth.
-Full conservative quote **$10.376**, current credit DKK **1,741.87 Available** / 88%
+Full conservative quote **$10.376**, start-gate credit DKK **1,741.38 Available** / 88%
 through January 12, $35 delayed-usage reserve. Original all-current storage plus
-3 GiB quotes **$7.8295 < $8**; **November 4, 00:00 Copenhagen** remains. Fresh native
-source/runtime/full-data/reuse/headroom/forecast/watchdog gates still precede release.
+3 GiB quotes **$7.8295 < $8**; **November 4, 00:00 Copenhagen** remains. Native
+source/runtime/full-data/reuse/headroom/forecast/watchdog gates passed. The native
+conservative six-fit-equivalent forecast is 11.16 hours; only three fits are new.
+Original 24-hour deadline: October 31, 22:33:57 UTC; provider STOP 22:48:57 UTC.
+Numerical Python 3.10.15 and workflow Python 3.12.10 are separately admitted.
 Original stopped disks cost ~$31.20/month; no resources/retention are extended.
 
 ## Preserved E026 inspection handoff
