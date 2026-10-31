@@ -1,0 +1,187 @@
+"""Six retrieval barriers before frozen E027 bin selection; no learning rules."""
+import json
+from pathlib import Path
+import shlex
+P=json.loads(Path(config['plan']).read_text())
+ENG=str(config.get('engineering','false')).lower()=='true'
+FLAG=' --engineering' if ENG else ''
+q=lambda x:shlex.quote(str(x))
+BASE=q(P['python'])+' -I -B '+q(P['worker'])+' --plan '+q(config['plan'])+FLAG
+rule all:
+    input: [u+'/audit/done.json' for u in ['E009-noGLM','E009-GLM','oral-noGLM']]
+
+rule E009_noGLM_teacher_retrieve:
+    output: 'retrieval/E009-noGLM/teacher/done.json'
+    log: 'logs/E009-noGLM-teacher-retrieve.log'
+    benchmark: 'benchmarks/E009-noGLM-teacher-retrieve.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    priority: 100
+    shell: BASE+' --unit E009-noGLM --role teacher --stage retrieve > {log} 2>&1'
+
+rule E009_noGLM_student_retrieve:
+    input: ['retrieval/E009-noGLM/teacher/done.json']
+    output: 'retrieval/E009-noGLM/student/done.json'
+    log: 'logs/E009-noGLM-student-retrieve.log'
+    benchmark: 'benchmarks/E009-noGLM-student-retrieve.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    priority: 99
+    shell: BASE+' --unit E009-noGLM --role student --stage retrieve > {log} 2>&1'
+
+rule E009_GLM_teacher_retrieve:
+    input: ['retrieval/E009-noGLM/student/done.json']
+    output: 'retrieval/E009-GLM/teacher/done.json'
+    log: 'logs/E009-GLM-teacher-retrieve.log'
+    benchmark: 'benchmarks/E009-GLM-teacher-retrieve.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    priority: 98
+    shell: BASE+' --unit E009-GLM --role teacher --stage retrieve > {log} 2>&1'
+
+rule E009_GLM_student_retrieve:
+    input: ['retrieval/E009-GLM/teacher/done.json']
+    output: 'retrieval/E009-GLM/student/done.json'
+    log: 'logs/E009-GLM-student-retrieve.log'
+    benchmark: 'benchmarks/E009-GLM-student-retrieve.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    priority: 97
+    shell: BASE+' --unit E009-GLM --role student --stage retrieve > {log} 2>&1'
+
+rule oral_noGLM_teacher_retrieve:
+    input: ['retrieval/E009-GLM/student/done.json']
+    output: 'retrieval/oral-noGLM/teacher/done.json'
+    log: 'logs/oral-noGLM-teacher-retrieve.log'
+    benchmark: 'benchmarks/oral-noGLM-teacher-retrieve.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    priority: 96
+    shell: BASE+' --unit oral-noGLM --role teacher --stage retrieve > {log} 2>&1'
+
+rule oral_noGLM_student_retrieve:
+    input: ['retrieval/oral-noGLM/teacher/done.json']
+    output: 'retrieval/oral-noGLM/student/done.json'
+    log: 'logs/oral-noGLM-student-retrieve.log'
+    benchmark: 'benchmarks/oral-noGLM-student-retrieve.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    priority: 95
+    shell: BASE+' --unit oral-noGLM --role student --stage retrieve > {log} 2>&1'
+
+rule barrier:
+    input: (['retrieval/'+u+'/'+r+'/done.json' for u in ['E009-noGLM','E009-GLM','oral-noGLM'] for r in ['teacher','student']]) + ['retrieval/oral-noGLM/student/done.json']
+    output: 'barrier/done.json'
+    log: 'logs/barrier.log'
+    benchmark: 'benchmarks/barrier.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --stage barrier > {log} 2>&1'
+
+rule E009_noGLM_teacher_group:
+    input: ['barrier/done.json','barrier/done.json']
+    output: 'groups/E009-noGLM/teacher/done.json'
+    log: 'logs/E009-noGLM-teacher-group.log'
+    benchmark: 'benchmarks/E009-noGLM-teacher-group.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --unit E009-noGLM --role teacher --stage group > {log} 2>&1'
+
+rule E009_noGLM_student_group:
+    input: ['barrier/done.json','groups/E009-noGLM/teacher/done.json']
+    output: 'groups/E009-noGLM/student/done.json'
+    log: 'logs/E009-noGLM-student-group.log'
+    benchmark: 'benchmarks/E009-noGLM-student-group.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --unit E009-noGLM --role student --stage group > {log} 2>&1'
+
+rule E009_GLM_teacher_group:
+    input: ['barrier/done.json','groups/E009-noGLM/student/done.json']
+    output: 'groups/E009-GLM/teacher/done.json'
+    log: 'logs/E009-GLM-teacher-group.log'
+    benchmark: 'benchmarks/E009-GLM-teacher-group.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --unit E009-GLM --role teacher --stage group > {log} 2>&1'
+
+rule E009_GLM_student_group:
+    input: ['barrier/done.json','groups/E009-GLM/teacher/done.json']
+    output: 'groups/E009-GLM/student/done.json'
+    log: 'logs/E009-GLM-student-group.log'
+    benchmark: 'benchmarks/E009-GLM-student-group.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --unit E009-GLM --role student --stage group > {log} 2>&1'
+
+rule oral_noGLM_teacher_group:
+    input: ['barrier/done.json','groups/E009-GLM/student/done.json']
+    output: 'groups/oral-noGLM/teacher/done.json'
+    log: 'logs/oral-noGLM-teacher-group.log'
+    benchmark: 'benchmarks/oral-noGLM-teacher-group.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --unit oral-noGLM --role teacher --stage group > {log} 2>&1'
+
+rule oral_noGLM_student_group:
+    input: ['barrier/done.json','groups/oral-noGLM/teacher/done.json']
+    output: 'groups/oral-noGLM/student/done.json'
+    log: 'logs/oral-noGLM-student-group.log'
+    benchmark: 'benchmarks/oral-noGLM-student-group.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --unit oral-noGLM --role student --stage group > {log} 2>&1'
+
+rule E009_noGLM_export:
+    input: (['groups/E009-noGLM/teacher/done.json', 'groups/E009-noGLM/student/done.json']) + ['groups/oral-noGLM/student/done.json']
+    output: 'E009-noGLM/export/done.json'
+    log: 'logs/E009-noGLM-export.log'
+    benchmark: 'benchmarks/E009-noGLM-export.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --unit E009-noGLM --stage export > {log} 2>&1'
+
+rule E009_GLM_export:
+    input: (['groups/E009-GLM/teacher/done.json', 'groups/E009-GLM/student/done.json']) + ['E009-noGLM/export/done.json']
+    output: 'E009-GLM/export/done.json'
+    log: 'logs/E009-GLM-export.log'
+    benchmark: 'benchmarks/E009-GLM-export.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --unit E009-GLM --stage export > {log} 2>&1'
+
+rule oral_noGLM_export:
+    input: (['groups/oral-noGLM/teacher/done.json', 'groups/oral-noGLM/student/done.json']) + ['E009-GLM/export/done.json']
+    output: 'oral-noGLM/export/done.json'
+    log: 'logs/oral-noGLM-export.log'
+    benchmark: 'benchmarks/oral-noGLM-export.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --unit oral-noGLM --stage export > {log} 2>&1'
+
+rule E009_noGLM_audit:
+    input: (['E009-noGLM/export/done.json']) + ['oral-noGLM/export/done.json']
+    output: 'E009-noGLM/audit/done.json'
+    log: 'logs/E009-noGLM-audit.log'
+    benchmark: 'benchmarks/E009-noGLM-audit.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --unit E009-noGLM --stage audit > {log} 2>&1'
+
+rule E009_GLM_audit:
+    input: (['E009-GLM/export/done.json']) + ['E009-noGLM/audit/done.json']
+    output: 'E009-GLM/audit/done.json'
+    log: 'logs/E009-GLM-audit.log'
+    benchmark: 'benchmarks/E009-GLM-audit.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --unit E009-GLM --stage audit > {log} 2>&1'
+
+rule oral_noGLM_audit:
+    input: (['oral-noGLM/export/done.json']) + ['E009-GLM/audit/done.json']
+    output: 'oral-noGLM/audit/done.json'
+    log: 'logs/oral-noGLM-audit.log'
+    benchmark: 'benchmarks/oral-noGLM-audit.tsv'
+    threads: 4
+    resources: mem_mb=26000
+    shell: BASE+' --unit oral-noGLM --stage audit > {log} 2>&1'

@@ -1,0 +1,928 @@
+{
+  "kind": "E028 local installed engineering, native still required",
+  "status": "PASS_LOCAL_ONLY_NATIVE_REQUIRED",
+  "checked_epoch": 1793478372.4182348,
+  "engineering_clock": {
+    "start_epoch": 1793475365.9174411,
+    "deadline_epoch": 1793486165.9174411,
+    "threads": 4,
+    "sampled_RSS_bytes": 8000000000,
+    "extra_owned_bytes": 4294967296,
+    "free_reserve_bytes": 6442450944,
+    "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+  },
+  "attempts": {
+    "batched-contracts-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;from pathlib import Path;r=Path.cwd();sys.path[:0]=[str(r/\"src\"),str(r/\"tests/product\")];v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(\"test_batched_frozen\"));sys.exit(not v.wasSuccessful())"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793476307.992616,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489172705280,
+          "free": 10790469632
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "import sys,unittest;from pathlib import Path;r=Path.cwd();sys.path[:0]=[str(r/\"src\"),str(r/\"tests/product\")];v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(\"test_batched_frozen\"));sys.exit(not v.wasSuccessful())"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 9.15662309799518,
+          "peak_sampled_rss_bytes": 284987392,
+          "seconds_ceiling": 9857.925923109055,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 60239,
+          "sampled_cpu_seconds": 6.8,
+          "sampled_average_cpus": 0.7426318553494731,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 438,
+        "sha256": "f15d656198cbf4d209a7e61d0b0e99b65db7b94c847c626bc994c015f17edb17"
+      }
+    },
+    "discovery-contracts-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;from pathlib import Path;r=Path.cwd();sys.path[:0]=[str(r/\"src\"),str(r/\"tests/product\")];v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(\"test_discovery\"));sys.exit(not v.wasSuccessful())"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793475836.638486,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488115142656,
+          "free": 11848032256
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "import sys,unittest;from pathlib import Path;r=Path.cwd();sys.path[:0]=[str(r/\"src\"),str(r/\"tests/product\")];v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(\"test_discovery\"));sys.exit(not v.wasSuccessful())"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 55.343389375993866,
+          "peak_sampled_rss_bytes": 244789248,
+          "seconds_ceiling": 10329.280026197433,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 59554,
+          "sampled_cpu_seconds": 48.61,
+          "sampled_average_cpus": 0.8783343511860409,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 1557,
+        "sha256": "f8dba5bce2bbae1cf04e25373a3c7bc95883f93529ffa552d8188370e3e56a3e"
+      }
+    },
+    "final-installed-checks-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e028_local_checks.py",
+          "--root",
+          "artifacts/e028-global-discovery-repair/preparation/final-checks-r1"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793477924.0492458,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489217228800,
+          "free": 10745946112
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e028-global-discovery-repair/preparation/env-r2/bin/python",
+            "-I",
+            "-B",
+            "scripts/e028_local_checks.py",
+            "--root",
+            "artifacts/e028-global-discovery-repair/preparation/final-checks-r1"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 107.30203443299979,
+          "peak_sampled_rss_bytes": 308146176,
+          "seconds_ceiling": 8241.869443178177,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 62666,
+          "sampled_cpu_seconds": 106.75,
+          "sampled_average_cpus": 0.9948553218406638,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 39,
+        "sha256": "656290c880214b589dbffc403a511384edfb33ad2dff20d8af5aa3bf69e751f2"
+      }
+    },
+    "installed-tiny-DAG-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r1/bin/python",
+          "-I",
+          "-B",
+          "scripts/e028_tiny.py",
+          "--root",
+          "artifacts/e028-global-discovery-repair/preparation/tiny-DAG-r1",
+          "--workflow-python",
+          "artifacts/e005-linux-pilot/env-workflow-local/bin/python"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793477257.383574,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489195638784,
+          "free": 10767536128
+        }
+      },
+      "completed": null,
+      "log_binding": {
+        "bytes": 714,
+        "sha256": "514a1ac0879aee74aa98edbea36f6ebb2bbb4b9768789f975cb89ff890fb59ff"
+      }
+    },
+    "installed-tiny-DAG-r2": {
+      "command": {
+        "argv": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r1/bin/python",
+          "-I",
+          "-B",
+          "scripts/e028_tiny.py",
+          "--root",
+          "artifacts/e028-global-discovery-repair/preparation/tiny-DAG-r2",
+          "--workflow-python",
+          "artifacts/e005-linux-pilot/env-workflow-local/bin/python"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793477452.8518999,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488138608640,
+          "free": 11824566272
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e028-global-discovery-repair/preparation/env-r1/bin/python",
+            "-I",
+            "-B",
+            "scripts/e028_tiny.py",
+            "--root",
+            "artifacts/e028-global-discovery-repair/preparation/tiny-DAG-r2",
+            "--workflow-python",
+            "artifacts/e005-linux-pilot/env-workflow-local/bin/python"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 32.941682488999504,
+          "peak_sampled_rss_bytes": 196685824,
+          "seconds_ceiling": 8713.066332101822,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 61948,
+          "sampled_cpu_seconds": 36.31,
+          "sampled_average_cpus": 1.1022509251652617,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 147,
+        "sha256": "dd4c3be7454b46b8852e2a9e941f0d729fb398ecc05309a11a0eb7d85e2bfcf8"
+      }
+    },
+    "operations-contracts-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r1/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e028_operations.py",
+          "-v"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793477455.8749728,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488138907648,
+          "free": 11824267264
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e028-global-discovery-repair/preparation/env-r1/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_e028_operations.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 0.7739900899978238,
+          "peak_sampled_rss_bytes": 21245952,
+          "seconds_ceiling": 8710.043156147003,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 61984,
+          "sampled_cpu_seconds": 0.18,
+          "sampled_average_cpus": 0.2325611171591436,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 436,
+        "sha256": "f37a65d4ea5c2797e0a2c151cab548e3ba9291e4dcd8fda04259a3866f935773"
+      }
+    },
+    "package-build-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "scripts/e027_build.py",
+          "--output",
+          "artifacts/e028-global-discovery-repair/preparation/build-r1"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793476831.6719759,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488137170944,
+          "free": 11826003968
+        }
+      },
+      "completed": null,
+      "log_binding": {
+        "bytes": 525,
+        "sha256": "4ae129ed2b8076ca61b540ca7cc56133cfcaa717ad6bf8df7a3eadca15a8f09e"
+      }
+    },
+    "package-build-r2": {
+      "command": {
+        "argv": [
+          "artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e027_build.py",
+          "--output",
+          "artifacts/e028-global-discovery-repair/preparation/build-r2"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793476882.448632,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488134414336,
+          "free": 11828760576
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python",
+            "-I",
+            "-B",
+            "scripts/e027_build.py",
+            "--output",
+            "artifacts/e028-global-discovery-repair/preparation/build-r2"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 3.278429934005544,
+          "peak_sampled_rss_bytes": 44728320,
+          "seconds_ceiling": 9283.470142126083,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 61140,
+          "sampled_cpu_seconds": 1.72,
+          "sampled_average_cpus": 0.5246413785328411,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 42692,
+        "sha256": "ea99c0fa1b4ee58d3fd6d66e67420e9db964c9baa656f86166ee5ba8a0898e02"
+      }
+    },
+    "package-build-r3": {
+      "command": {
+        "argv": [
+          "artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e027_build.py",
+          "--output",
+          "artifacts/e028-global-discovery-repair/preparation/build-r3"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793477694.8629508,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489201389568,
+          "free": 10761785344
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python",
+            "-I",
+            "-B",
+            "scripts/e027_build.py",
+            "--output",
+            "artifacts/e028-global-discovery-repair/preparation/build-r3"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 3.408742969004379,
+          "peak_sampled_rss_bytes": 44716032,
+          "seconds_ceiling": 8471.055298089981,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 62439,
+          "sampled_cpu_seconds": 1.79,
+          "sampled_average_cpus": 0.5251202617141946,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 42692,
+        "sha256": "3b86d1d87bb7daa063b5aa5665c2bd133e67860e8b5e34136b2aac25230b3456"
+      }
+    },
+    "package-install-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e019_runtime.py",
+          "create",
+          "--base",
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+          "--destination",
+          "artifacts/e028-global-discovery-repair/preparation/env-r1",
+          "--wheel",
+          "artifacts/e028-global-discovery-repair/preparation/build-r2/dist/dl_binner-0.1.0.dev9-py3-none-any.whl",
+          "--output",
+          "artifacts/e028-global-discovery-repair/preparation/package-install.json"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793477058.215515,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489189572608,
+          "free": 10773602304
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+            "-I",
+            "-B",
+            "scripts/e019_runtime.py",
+            "create",
+            "--base",
+            "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+            "--destination",
+            "artifacts/e028-global-discovery-repair/preparation/env-r1",
+            "--wheel",
+            "artifacts/e028-global-discovery-repair/preparation/build-r2/dist/dl_binner-0.1.0.dev9-py3-none-any.whl",
+            "--output",
+            "artifacts/e028-global-discovery-repair/preparation/package-install.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 2.8930609529998037,
+          "peak_sampled_rss_bytes": 77832192,
+          "seconds_ceiling": 9107.702819108963,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 61308,
+          "sampled_cpu_seconds": 1.53,
+          "sampled_average_cpus": 0.5288516297638143,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 240,
+        "sha256": "ab2d2d408449122957abd55bb72a94d42d19b8e08683e337baa8ba99d6128370"
+      }
+    },
+    "package-install-r2": {
+      "command": {
+        "argv": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e019_runtime.py",
+          "create",
+          "--base",
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+          "--destination",
+          "artifacts/e028-global-discovery-repair/preparation/env-r2",
+          "--wheel",
+          "artifacts/e028-global-discovery-repair/preparation/build-r3/dist/dl_binner-0.1.0.dev9-py3-none-any.whl",
+          "--output",
+          "artifacts/e028-global-discovery-repair/preparation/package-install-r2.json"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793477877.577136,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489215066112,
+          "free": 10748108800
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+            "-I",
+            "-B",
+            "scripts/e019_runtime.py",
+            "create",
+            "--base",
+            "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+            "--destination",
+            "artifacts/e028-global-discovery-repair/preparation/env-r2",
+            "--wheel",
+            "artifacts/e028-global-discovery-repair/preparation/build-r3/dist/dl_binner-0.1.0.dev9-py3-none-any.whl",
+            "--output",
+            "artifacts/e028-global-discovery-repair/preparation/package-install-r2.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 2.3361550129993702,
+          "peak_sampled_rss_bytes": 76185600,
+          "seconds_ceiling": 8288.3411860466,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 62569,
+          "sampled_cpu_seconds": 1.42,
+          "sampled_average_cpus": 0.6078363773373384,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 240,
+        "sha256": "aeef521e544a411d1e25b2439d0ae91300006d7062ca387d3fdf2b810fce5c02"
+      }
+    },
+    "real-tokenizer-contract-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,runpy;from pathlib import Path;sys.path.insert(0,str(Path.cwd()/\"src\"));sys.argv=[\"scripts/e028_glm_tokens.py\",\"--model-dir\",\"artifacts/d011-dnabert-s-spike/model\",\"--output\",\"artifacts/e028-global-discovery-repair/preparation/real-tokenizer.json\"];runpy.run_path(\"scripts/e028_glm_tokens.py\",run_name=\"__main__\")"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793476732.867522,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489229701120,
+          "free": 10733473792
+        }
+      },
+      "completed": null,
+      "log_binding": {
+        "bytes": 970,
+        "sha256": "62ea7c26ba3a1fd1b9e8855383cdd16b9aba1496890dc9dfe5e8837d61abc385"
+      }
+    },
+    "real-tokenizer-contract-r2": {
+      "command": {
+        "argv": [
+          "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,runpy;from pathlib import Path;sys.path.insert(0,str(Path.cwd()/\"src\"));sys.argv=[\"scripts/e028_glm_tokens.py\",\"--model-dir\",\"artifacts/d011-dnabert-s-spike/model\",\"--output\",\"artifacts/e028-global-discovery-repair/preparation/real-tokenizer.json\"];runpy.run_path(\"scripts/e028_glm_tokens.py\",run_name=\"__main__\")"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793476828.55626,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488136802304,
+          "free": 11826372608
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "import sys,runpy;from pathlib import Path;sys.path.insert(0,str(Path.cwd()/\"src\"));sys.argv=[\"scripts/e028_glm_tokens.py\",\"--model-dir\",\"artifacts/d011-dnabert-s-spike/model\",\"--output\",\"artifacts/e028-global-discovery-repair/preparation/real-tokenizer.json\"];runpy.run_path(\"scripts/e028_glm_tokens.py\",run_name=\"__main__\")"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 7.663729216001229,
+          "peak_sampled_rss_bytes": 247996416,
+          "seconds_ceiling": 9337.362612009048,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 61029,
+          "sampled_cpu_seconds": 6.06,
+          "sampled_average_cpus": 0.7907377504084073,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 271,
+        "sha256": "794878bbcea9865efac68a88a5134362813253c6189eff3cc95366e43aebf728"
+      }
+    },
+    "schema-operations-r2": {
+      "command": {
+        "argv": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r2/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e028_operations.py",
+          "-v"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793478288.789597,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488132198400,
+          "free": 11830976512
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e028-global-discovery-repair/preparation/env-r2/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_e028_operations.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 0.7067026259974227,
+          "peak_sampled_rss_bytes": 22990848,
+          "seconds_ceiling": 7877.129290103912,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 63492,
+          "sampled_cpu_seconds": 0.2,
+          "sampled_average_cpus": 0.2830044670029702,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 530,
+        "sha256": "2757bb6212a5879156b850ef0c03b570c5f1ebe6e0980088615fc724a4aec765"
+      }
+    },
+    "width-forecast-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,runpy;from pathlib import Path;sys.path.insert(0,str(Path.cwd()/\"src\"));sys.argv=[\"scripts/e028_probe.py\",\"--output\",\"artifacts/e028-global-discovery-repair/preparation/local-schedule.json\"];runpy.run_path(\"scripts/e028_probe.py\",run_name=\"__main__\")"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793476560.126036,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489208160256,
+          "free": 10755014656
+        }
+      },
+      "completed": null,
+      "log_binding": {
+        "bytes": 2935,
+        "sha256": "4fe190c8ab5c323a3801ce85d0bff7f7dc6b5bfb8c2a98b11b828336a84387b1"
+      }
+    },
+    "final-publication-guards": {
+      "command": {
+        "argv": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r2/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e028_operations.py",
+          "-v"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793478713.7860868,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488148901888,
+          "free": 11814273024
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e028-global-discovery-repair/preparation/env-r2/bin/python",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_e028_operations.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 0.7332745249950676,
+          "peak_sampled_rss_bytes": 23236608,
+          "seconds_ceiling": 7452.132693052292,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 63844,
+          "sampled_cpu_seconds": 0.21,
+          "sampled_average_cpus": 0.28638660261845666,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 704,
+        "sha256": "56ce0ff0779ad84cd3fa22988b44c9ac0b1de2cf3247e9753a344bd9347698d4"
+      }
+    }
+  },
+  "actual": [
+    "65 owned package files, all 62 inherited product members unchanged",
+    "41 complete numerical distributions/origins/loaded-library targets",
+    "real PyNNDescent disconnected/tie/zero-depth retrieval and exact recall",
+    "real FASTA/features/sparse cache readers, unchanged density/physical-marker refinement and complete export",
+    "actual 19-work-rule cached DAG, explicit serialization, six-retrieval barrier, verified completed no-op, member/alias collector",
+    "new batched-view writer/reader, exact original chunk/strand/token/QC and CPU pooling/scatter",
+    "retained hash-pinned published tokenizer, no download"
+  ],
+  "mocks": [
+    "analytic CPU model for batched numerical engineering; no DNABERT/GPU forward",
+    "synthetic retained numeric vectors/old-neighbor graphs/marker calls in fixtures",
+    "explicit injected invalid native proposals for refusal journal test"
+  ],
+  "limits": [
+    "original Mac model allclose failure/tolerance unchanged",
+    "native Linux full source/cache/runtime/forecast/supervision/headroom/credit gates pending",
+    "no new community score or scientific fit during local preparation",
+    "no measured GPU speedup or full-bank admission"
+  ],
+  "preserved_failures": [
+    "six-hour width forecast refused; prospective 12-hour clock chosen before VM start, science unchanged",
+    "first tiny DAG genuinely overlapped group rules; explicit serial dependencies fix it",
+    "tokenizer content comparator wrongly included URL metadata; strict bytes/SHA schema fixed, assets unchanged",
+    "wrong builder refused pinned setuptools/wheel, corrected by reusing retained pinned builder"
+  ],
+  "filesystem_now": {
+    "total": 499963174912,
+    "used": 488143810560,
+    "free": 11819364352
+  },
+  "Oral_full_population_fixed_in_this_comparison": true,
+  "owner_future_subset_cutoff_flexibility": "Prospective controlled derivatives/cutoffs allowed; declared claim/denominator/availability policy required. Full-exposure batching preferred if practical.",
+  "final_source_freeze": "PASS",
+  "final_unit_test_count": 11,
+  "checks": "Installed runtime + 4 discovery tests + 2 batched tests + 5 operation tests; actual serial DAG/no-op/member collector separately."
+}

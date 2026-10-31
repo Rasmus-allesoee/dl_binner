@@ -1,5 +1,29 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E028 authorized cached recovery, October 31, 2026
+
+The owner invokes E027's prompt at `a8f5a34` and authorizes its new $5 cached
+repair/comparison. [E028](../../experiments/E028-global-discovery-repair/design.md)
+keeps all six completed learning instances, three modes and biological criteria
+fixed. One complete-global initialization plus six-retrieval barrier repairs the
+blocked consumer; no fit, learner graph, marker detection or external tool is run.
+The first local six-hour forecast refuses at 8.52 hours; standing owner direction
+supports the documented pre-start 12-hour / 12.25-hour STOP revision with a $4.88090
+complete upper case, still within $5 and fresh credit coverage. Space/resource/
+scientific gates and November 4 retention remain.
+
+The owner also permits a prospectively chosen smaller Oral derivative or practical
+cutoff for future upgrade work, while preferring efficient full-quality features.
+This does not change this matched full-population repair. The [new batching plan](../../experiments/E028-global-discovery-repair/oral-GLM-plan.md)
+implements bounded tokenized cross-view batches and an explicit new bank schema;
+native GPU equivalence/throughput and complete cost remain separate admissions.
+Full exposure is preferred if practical; a 1,000 bp derivative is a reasonable
+first fallback, not a score grid. Retain all removed DNA and full reference
+population accounting; a selected-genome community is a controlled derivative,
+not the original benchmark. Skin stays unscored. No old budget or storage date
+is silently carried into a new scope.
+
+
 ## E027 inspected failure and separately complete reference, October 31, 2026
 
 [Verified E027](../../experiments/E027-common-information-binner/inspection-observed.json)

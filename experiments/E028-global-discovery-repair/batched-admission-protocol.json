@@ -1,0 +1,17 @@
+{
+  "status": "PROSPECTIVE_LOCAL_PREPARATION_NO_GPU_ADMISSION",
+  "source": "src/dl_binner/hybrid/batched.py",
+  "reference_source": "src/dl_binner/hybrid/extract.py",
+  "cohort": "128 opaque ID-hash views; declared length/token/ambiguity/parent-crop strata, exact original view coordinates; freeze actual manifest before native probe",
+  "source_exposure_counts_must_match": true,
+  "allclose_rtol": 1e-05,
+  "allclose_atol": 1e-06,
+  "max_abs_error": 1e-05,
+  "min_cosine": 0.999999,
+  "old_Mac_tolerance_unchanged": true,
+  "speedup_measured": false,
+  "full_bank_sizes_source": "experiments/E027-common-information-binner/oral-GLM-plan.json",
+  "subset_or_cutoff_applied_now": false,
+  "owner_allows_prospective_future_reduction": true,
+  "native_weights_or_GPU_consumed_in_this_task": false
+}

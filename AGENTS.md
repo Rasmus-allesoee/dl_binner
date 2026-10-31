@@ -507,6 +507,11 @@ rules; a driver label or tiny fixture that happens to serialize is insufficient.
 For installed product workflows, test the actual built wheel outside the checkout
 and package its defaults and any required DAG. Unpacking a wheel alone does not
 install console entry points; test the real installer and installed command.
+Verify the actual scientific worker's package origin too. Legacy research helpers
+can insert the checkout's `src` directory into `sys.path` after an independent
+installation probe. Pin the owned installed package before those imports, or
+remove the overlay and refuse a foreign origin. Byte-identical checkout execution
+is not evidence that the installed consumer path was exercised.
 Preserve journaled completed outputs: use explicit
 resume only after matching source/input/config/runtime/artifact bytes; never edit
 manifests to make a retry pass. Prototype interfaces may evolve without a

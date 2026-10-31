@@ -2,6 +2,49 @@
 
 Updated: October 31, 2026 (Copenhagen). This is the single current handoff.
 
+**E028 is implemented locally; direct cached execution is owner-authorized,
+subject to fresh Linux/source/cache/credit/headroom/supervision gates.**
+[Operations](../experiments/E028-global-discovery-repair/OPERATIONS.md) owns the
+phase and exact following prompt. Branch `global-discovery-repair`, based on the
+E027 inspected commit `a8f5a34`. No E028 community outcome is claimed in preparation.
+
+The [frozen repair](../experiments/E028-global-discovery-repair/design.md) fills
+the partial joint-search initialization globally, while preserving all E027
+learning, native vectors/learner graphs, biological metric, seed and grouping/
+marker policy. All six unchanged 0.90 retrieval proofs precede any bin. The real
+4,096-row synthetic probe passes every stratum at 1.0. Real installed sparse/
+refinement/export/cache/refusal, full runtime and actual serial DAG/barrier/no-op/
+collection checks pass. Synthetic vector/marker fixtures and the analytic GLM
+model are explicitly identified. All 62 inherited package members remain byte
+identical; the new wheel owns 65 files and reuses 41 numerical distributions.
+The actual scientific workers pin the installed package before legacy helper
+source overlays can interfere. Original source freezes and Mac tolerance stay.
+
+[Resource reassessment](../experiments/E028-global-discovery-repair/resource-plan.json)
+uses 12 cumulative hours / 12.25-hour STOP under the new $5 scope: the actual
+local forecast needs 8.52 hours plus native setup, so the initial six-hour envelope
+is revised before start under standing owner direction. Full current upper quote
+$4.88090 includes reserve; four threads / 26 GB sampled RSS, original E2/32 GiB,
+30/300 GiB disks, 25 GiB free reserve, 4 GiB total extra and 2 GiB compressed return
+remain. Current Welcome DKK 1,726.30 Available / 87%, January 12, 2027 expiry,
+net displayed zero, $35 pending reserve. All-current storage week plus new return
+$7.83195 < original $8. **November 4, 00:00 Copenhagen** remains hard; no resource,
+acquisition, external campaign, new training or retention extension.
+
+[Oral GLM batching](../experiments/E028-global-discovery-repair/oral-GLM-plan.md)
+is implemented/tested locally, preserving exact views/chunks/strands/token/pooling
+exposure with a separately identified new bank schema. Published-tokenizer and
+real padding/pooling tests use an analytic model; actual DNABERT/GPU equivalence
+and throughput remain unadmitted. A native probe is the concrete next extraction
+milestone. The owner permits prospectively frozen smaller Oral derivatives or
+practical cutoffs; prefer full-exposure batching when practical. A 1,000 bp cutoff
+removes 56.3% of views but only 21.3% of exposure and about 22% of projected tokens,
+so row count is not GPU-time savings. This repair keeps complete Oral data fixed.
+Any future reduction needs explicit common availability, full denominators/short
+DNA accounting and appropriately limited claims. Skin remains unscored.
+
+## Preserved E027 inspection
+
 **E027 stopped safely but the candidate comparison FAILED in grouping.**
 [Independent inspection](../experiments/E027-common-information-binner/inspection-observed.json)
 for `common-20261030T223337Z-243b8ac`, exact source `243b8ac`, verifies control-plane

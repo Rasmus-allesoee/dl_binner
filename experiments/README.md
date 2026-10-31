@@ -59,3 +59,5 @@ For cloud/HPC work, Codex prepares the protocol, real contracts, resource estima
 and persistent evidence. Execute directly on a verified connected host only within
 the owner-authorized scope, or prepare an owner-run packet when needed. A submitted
 or stopped job is not a successful experiment; inspect its receipts and outputs.
+
+- [E028: cached global-discovery repair and Oral GLM batching preparation](E028-global-discovery-repair/README.md)

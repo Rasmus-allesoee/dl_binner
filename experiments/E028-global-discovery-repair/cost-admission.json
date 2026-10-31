@@ -1,0 +1,84 @@
+{
+  "status": "PASS_COMPLETE_CURRENT_PRICE_RESOURCE_RETENTION",
+  "checked_epoch": 1793477311.046678,
+  "rates": {
+    "Balanced PD Capacity": {
+      "USD": 0.09999999984803326,
+      "unit": "GiBy.mo",
+      "base": "By.s",
+      "conversion": 2875910101401600.0
+    },
+    "External IP Charge on a Standard VM": {
+      "USD": 0.004999999847983061,
+      "unit": "h",
+      "base": "s",
+      "conversion": 3600
+    },
+    "E2 Instance Core running in Americas": {
+      "USD": 0.02181158997280002,
+      "unit": "h",
+      "base": "s",
+      "conversion": 3600
+    },
+    "Storage PD Capacity": {
+      "USD": 0.03999999984800155,
+      "unit": "GiBy.mo",
+      "base": "By.s",
+      "conversion": 2875910101401600.0
+    },
+    "E2 Instance Ram running in Americas": {
+      "USD": 0.0029235298946519756,
+      "unit": "GiBy.h",
+      "base": "By.s",
+      "conversion": 3865470566400
+    }
+  },
+  "compute_IP_USD_hour": 0.2730456762592464,
+  "PD_USD_pricing_month": 31.199999949850024,
+  "selected_hours": 12,
+  "STOP_hours": 12.25,
+  "compute_IP_upper_USD": 3.3448095341757687,
+  "overlapping_approved_PD_upper_USD": 0.5308333324800872,
+  "export_upper_USD": 0.24,
+  "new_archive_storage_upper_USD": 0.005260224,
+  "operations_allowance_USD": 0.01,
+  "contingency_USD": 0.75,
+  "estimated_complete_gross_USD": 4.880903090655855,
+  "ceiling_USD": 5,
+  "all_version_objects": 205,
+  "soft_deleted_objects": 0,
+  "all_version_and_soft_deleted_bytes": 68294051112,
+  "conservative_storage_week_USD": 7.831954297077982,
+  "storage_ceiling_USD": 8,
+  "retention": "2026-11-04T00:00:00+01:00",
+  "credit_remaining_after_delayed_reserve_USD": 227.43140116460864,
+  "not_invoice_or_credit_delta": true,
+  "no_real_money": true,
+  "resource_or_retention_change": false,
+  "credit_browser_snapshot": {
+    "checked_epoch": 1793478810,
+    "credit_observed": "2026-10-31 read-only signed-in Credits table",
+    "name": "Free Trial upgraded Welcome credit",
+    "remaining_DKK": 1726.3,
+    "percent": 87,
+    "status": "Available",
+    "original_DKK": 1973.43,
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; see the terms for free trial",
+    "application": "Net pricing",
+    "paid_account": true,
+    "overview_period": "October 1-31 2026",
+    "rounded_gross_DKK": 247,
+    "rounded_savings_DKK": 247,
+    "displayed_net_DKK": 0,
+    "delay_warning": "Costs take a few hours to show up, and might take longer than 24 hours. Numbers are rounded to make them easier to read.",
+    "pending_reserve_USD": 35,
+    "browser_tab": "1767520237",
+    "credit_refreshed_UTC": "2026-10-31T20:33:30Z"
+  },
+  "source_urls": [
+    "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "https://cloud.google.com/storage/pricing",
+    "https://docs.cloud.google.com/billing/v1/how-tos/catalog-api"
+  ]
+}

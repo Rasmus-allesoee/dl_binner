@@ -1,0 +1,23 @@
+{
+  "kind": "Pre-execution resource reassessment; scientific treatment unchanged",
+  "initial_hours": 6,
+  "selected_cumulative_hours": 12,
+  "provider_STOP_hours": 12.25,
+  "ceiling_USD": 5,
+  "reason": "Actual local 4096-row width forecast gives 30666.72 s / 8.52 h for six retrievals + fixed downstream reserve, before full native setup. Choose headroom before starting rather than truncate science or consume extra seeds.",
+  "preserved_first_forecast": "artifacts/e028-global-discovery-repair/preparation/width-forecast-r1",
+  "local_measured_4096_seconds": 24.69498452,
+  "local_planning_remaining_science_seconds": 30666.72081193,
+  "native_gate_required": true,
+  "allocated_vCPUs": 8,
+  "numerical_threads": 4,
+  "RAM_GiB": 32,
+  "tree_RSS_bytes": 26000000000,
+  "work_disk_GiB": 300,
+  "free_reserve_GiB": 25,
+  "extra_space_GiB": 4,
+  "compressed_export_GiB": 2,
+  "retention": "2026-11-04T00:00:00+01:00",
+  "new_resources_or_retention": false,
+  "scientific_policy_changed": false
+}

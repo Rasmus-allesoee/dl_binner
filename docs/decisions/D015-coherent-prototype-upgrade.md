@@ -1,5 +1,51 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E028 implementation and concrete GLM efficiency preparation, October 31, 2026
+
+[The implemented cached repair](../../experiments/E028-global-discovery-repair/design.md)
+changes only joint-search initialization and its refusal/provenance handling.
+E027's six finished learning instances, native unit vectors/learner graphs,
+metric, seed, forest/physical-marker policy, full populations and primary
+criteria remain immutable. All six independent recall proofs must pass before
+any bin. Actual installed tiny reads/index/refinement/export/no-op/collector and
+numerical-origin contracts pass; the source-blind 4,096-row recall is 1.0 in every
+frozen stratum. Native full cache/source/runtime/forecast/supervision gates still
+precede community execution. The owner authorizes direct conditional execution.
+
+A real DAG test detects scheduler overlap despite declared four-thread/core/RAM
+budgets. Explicit serial dependency edges repair the observed path; do not infer
+serialization from declarations. Actual workers now pin their owned installed
+package before legacy research helpers can add source overlays. E027's inherited
+source bytes remain identical; this does not invalidate its preserved learning or
+pretend its grouping succeeded. Durable origin guidance is added to AGENTS.
+
+[The parallel Oral GLM implementation](../../experiments/E028-global-discovery-repair/oral-GLM-plan.md)
+uses bounded tokenized cross-view batches with unchanged parent/crop/strand/chunk/
+pooling exposure, explicit new execution metadata and strict new-bank admission.
+Real token/padding/pooling/cache tests and the retained published tokenizer pass
+with an analytic CPU model. Actual DNABERT/GPU equivalence, throughput and training
+use remain unadmitted; old Mac tolerances are untouched. The next concrete
+extraction admission is separately scoped, not deferred for another score threshold.
+
+The owner now explicitly permits prospective smaller Oral development subsets or
+practical cutoffs. Reuse the measured workload census: 1,000 bp retains 215,970
+parents / 1,079,839 views, but still 78.7% of exposed DNA and about 78% of tokens.
+Prefer quality-preserving full exposure if native batching makes it practical;
+otherwise propose one common 1,000 bp policy or a separately named random-source
+community, with scientific competition/denominator/short-DNA limits explicit.
+Do not silently change this comparison, choose genomes from recovery scores,
+invent GLM on unsupported short rows or call a derivative original-community
+confirmation. Existing full-reference depth may be sliced with its original
+mapping semantics; a reduced mapping reference is a different treatment.
+
+[Resource reassessment](../../experiments/E028-global-discovery-repair/resource-plan.json)
+selects 12 cumulative hours / 12.25-hour STOP before start after the six-hour
+forecast fails, retaining the new $5 ceiling (current complete upper $4.88090).
+No science is weakened. Four threads, 26 GB RSS, 25 GiB reserve / 4 GiB extra /
+2 GiB return, original E2/disks and November 4 boundary remain. Current Free Trial
+coverage must pass afresh; no GPU, new resource, acquisition or retention renewal.
+
+
 ## E027 failure localization and recovery-focused next block, October 31, 2026
 
 The [completed inspection](../../experiments/E027-common-information-binner/comparison-review.json)

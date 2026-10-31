@@ -299,7 +299,7 @@ control-plane allocation; use its rule benchmarks for new fits, verification,
 hardlink admission and grouping separately.
 
 
-## Exact following prompt
+## Preserved recovery prompt, authorized October 31
 
 Our goal is substantially closing the recovery gap with one general-purpose
 binner whose intended main GLM mode is retained. Read AGENTS, PROJECT_INTENT,
@@ -391,3 +391,11 @@ unique-versus-origin, depth, actual evaluator, protocol, cost and retention
 dependencies visible. Update records, relevant checks and commit with what changed/why. Report
 results/limits, costs/resources, one strongest next decision and exact following
 prompt, including the separate storage decision needed before November 4.
+
+
+## Exact following prompt
+
+Carry out the [E028 inspection prompt](../E028-global-discovery-repair/OPERATIONS.md#exact-following-prompt)
+for the phase recorded in E028 native-observed.json. That prompt owns the current
+cached recovery/comparison review and Oral GLM admission decision. Preserve E027's
+failed science and independently admitted reference; do not rerun its learning.

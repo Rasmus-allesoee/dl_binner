@@ -814,3 +814,22 @@ Prepare exact-exposure efficient Oral GLM batching alongside cached recovery;
 actual GPU and skin confirmation still need their own admissions. Preserve E023
 E009/MetaBAT2 anchors, all old failures and November 4 storage. No new job or
 confirmation acquisition occurs in inspection.
+
+
+### October 31, 2026: E028 authorized repair and Oral scalability options
+
+[E028](../../experiments/E028-global-discovery-repair/design.md) implements one
+complete-global initialization and a six-cache recall barrier with E027 learning
+and biological grouping fixed. Actual tiny disconnected/native-cache/selection/
+export/serial-DAG contracts pass; no new biological result is claimed. The owner
+allows direct cached execution after fresh admission. The measured forecast
+justifies 12 hours / 12.25-hour STOP, still within the $5 credit-only scope and
+unchanged November 4/resource/space limits.
+
+[Quality-preserving Oral batching](../../experiments/E028-global-discovery-repair/oral-GLM-plan.md)
+is prepared locally; native model/GPU throughput/equivalence remain open. A future
+smaller source-community or practical cutoff is now owner-permitted if declared
+prospectively with explicit population/competition/short-DNA/denominator limits.
+The current matched repair keeps full Oral data. At 1,000 bp, the 56.3% view-count
+reduction is only about a 22% token reduction; measure the whole extraction
+pipeline rather than assume row count predicts speed. Skin remains unscored.

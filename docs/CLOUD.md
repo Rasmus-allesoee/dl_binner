@@ -1,5 +1,44 @@
 # Google Cloud workspace operations
 
+**October 31 E028 preparation: conditional direct cached run is authorized.**
+[Operations](../experiments/E028-global-discovery-repair/OPERATIONS.md) owns actual
+status and native receipt. No VM has started at this prepared source snapshot.
+The original E2/32 GiB and 30/300 GiB disks are independently observed TERMINATED.
+No provisioning, resize, quota/service change, acquisition, GPU or retention
+extension is part of this scope. Reuse sealed E027 learning; zero new fits,
+original-neighbor rebuilds, marker detection or external binner runs.
+
+The measured local complete forecast is 30,666.721 seconds / 8.52 hours including
+downstream reserve. Record the justified pre-start revision to **12 cumulative
+hours / 12.25-hour provider STOP**, under the same new **$5**. Current full upper
+$4.88090: compute/IP $3.34481, conservative overlapping approved PD $0.53083,
+2 GiB WAN $0.24000, GCS/operations and $0.75 contingency. Fresh native complete
+throughput and headroom must still admit the actual remaining schedule. Existing
+four-thread/26 GB, 25 GiB free / 4 GiB total additional / 2 GiB compressed limits
+stay. Provider/watchdog controls must be synchronized and verified before release.
+
+Read-only signed-in credit: **DKK 1,726.30 Available / 87%**, January 12, 2027,
+Certain usage/net pricing; paid account, rounded cost/savings DKK 247 / net zero.
+Displayed usage can lag >24 hours; reserve $35. Current Catalog and existing
+ordinary first-party product coverage pass. All 205 Standard versions total
+68,294,051,112 bytes, soft-deleted zero. Conservative storage week including
+2 GiB new return $7.83195 < original $8. This is a forecast, not invoice or a
+credit-delta attribution. **November 4, 00:00 Copenhagen** stays; original stopped
+disks still cost about $31.20 per pricing month. Refresh finance if stale before
+start; do not use an old successful scope as new authorization.
+
+The new exact clean branch is pushed from Mac and fetched read-only. Own only the
+new locked wheel in a fresh package prefix; reuse the accepted complete numerical
+base without dependency install or data recopy. Verify actual worker package
+origin, since legacy research helpers can insert checkout source into sys.path.
+Actual DAG testing caught overlapping four-thread rules despite nominal budgets;
+explicit serial dependencies now pass real ready-rule/barrier/no-op contracts.
+Fresh boot/process held-parent watcher and independent STOP are mandatory.
+Efficient Oral GLM extraction is local preparation only; later GPU/native/complete
+cost/capacity/retention admission is separate. No confirmation scoring.
+
+## Preserved E027 inspection
+
 **October 31 E027 FAILED; independently TERMINATED.**
 [Inspection](../experiments/E027-common-information-binner/inspection-observed.json)
 supersedes the unchanged dated native RUNNING receipt for
