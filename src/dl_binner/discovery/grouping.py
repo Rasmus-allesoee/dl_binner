@@ -256,4 +256,3 @@ def audit(features, embeddings, graph, evidence_path, output):
     """Apply strict new discovery admission and the entire unchanged cached E027 audit."""
     restore(features, embeddings, graph, Path(output)/'retrieval')
     return frozen.audit(features, embeddings, graph, evidence_path, output)
-

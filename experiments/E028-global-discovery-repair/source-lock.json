@@ -166,8 +166,8 @@
       "sha256": "23a09e818255cf46246ac98784d04ad781fed828dc0460fbaade9c0a7d5ae3b7"
     },
     "src/dl_binner/discovery/grouping.py": {
-      "bytes": 16037,
-      "sha256": "7df22076766796194e0c4e334b8c3858e5d77c6d14eb92018f0eea7f1e19dd7f"
+      "bytes": 16036,
+      "sha256": "813ede7d556f80786b0263bc2c8cc017cc5fa7ce11006ebbd2d5bc329f023692"
     },
     "src/dl_binner/discovery/__init__.py": {
       "bytes": 86,
@@ -207,7 +207,7 @@
     },
     "experiments/E028-global-discovery-repair/candidate-lock.json": {
       "bytes": 9371,
-      "sha256": "b911f67530ca79615959da7787767c3580a2f812fe72160a99c422cdc662e048"
+      "sha256": "a357a5249df885ac33f713419f06b75989e6c0548c03400058abf71d6e75c903"
     },
     "experiments/E028-global-discovery-repair/ann-source-lock.json": {
       "bytes": 444,

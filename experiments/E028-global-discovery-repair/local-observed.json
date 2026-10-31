@@ -1,7 +1,7 @@
 {
   "kind": "E028 local installed engineering, native still required",
   "status": "PASS_LOCAL_ONLY_NATIVE_REQUIRED",
-  "checked_epoch": 1793478372.4182348,
+  "checked_epoch": 1793479486.699848,
   "engineering_clock": {
     "start_epoch": 1793475365.9174411,
     "deadline_epoch": 1793486165.9174411,
@@ -887,6 +887,224 @@
         "bytes": 704,
         "sha256": "56ce0ff0779ad84cd3fa22988b44c9ac0b1de2cf3247e9753a344bd9347698d4"
       }
+    },
+    "package-build-r4": {
+      "command": {
+        "argv": [
+          "artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e027_build.py",
+          "--output",
+          "artifacts/e028-global-discovery-repair/preparation/build-r4"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793479296.8364239,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488147906560,
+          "free": 11815268352
+        }
+      },
+      "log_binding": {
+        "bytes": 95,
+        "sha256": "d5f34520e5306b0a2761714231d16b19f4a19d60378808696809e077a2c3b56b"
+      }
+    },
+    "package-build-r5": {
+      "command": {
+        "argv": [
+          "artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e027_build.py",
+          "--output",
+          "artifacts/e028-global-discovery-repair/preparation/build-r4"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793479306.551805,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488149905408,
+          "free": 11813269504
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e014-multiview-reconstruction/envs/builder-v2/bin/python",
+            "-I",
+            "-B",
+            "scripts/e027_build.py",
+            "--output",
+            "artifacts/e028-global-discovery-repair/preparation/build-r4"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 3.698042907002673,
+          "peak_sampled_rss_bytes": 44859392,
+          "seconds_ceiling": 6859.36619925499,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 64625,
+          "sampled_cpu_seconds": 2.19,
+          "sampled_average_cpus": 0.5922051352765488,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 42692,
+        "sha256": "836aec621928c9312a3891a743179ecf5c3fef9e9dbe074e72ca2c9690ddf9da"
+      }
+    },
+    "package-install-r3": {
+      "command": {
+        "argv": [
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+          "-I",
+          "-B",
+          "scripts/e019_runtime.py",
+          "create",
+          "--base",
+          "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+          "--destination",
+          "artifacts/e028-global-discovery-repair/preparation/env-r3",
+          "--wheel",
+          "artifacts/e028-global-discovery-repair/preparation/build-r4/dist/dl_binner-0.1.0.dev9-py3-none-any.whl",
+          "--output",
+          "artifacts/e028-global-discovery-repair/preparation/install-r3.json"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793479325.923004,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488153604096,
+          "free": 11809570816
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/bin/python",
+            "-I",
+            "-B",
+            "scripts/e019_runtime.py",
+            "create",
+            "--base",
+            "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+            "--destination",
+            "artifacts/e028-global-discovery-repair/preparation/env-r3",
+            "--wheel",
+            "artifacts/e028-global-discovery-repair/preparation/build-r4/dist/dl_binner-0.1.0.dev9-py3-none-any.whl",
+            "--output",
+            "artifacts/e028-global-discovery-repair/preparation/install-r3.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 2.698206453998864,
+          "peak_sampled_rss_bytes": 74162176,
+          "seconds_ceiling": 6839.995351076126,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 64669,
+          "sampled_cpu_seconds": 1.61,
+          "sampled_average_cpus": 0.5966926650901406,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 240,
+        "sha256": "75c0fb0d03ea9a8faa2904abf0e4967a93d89b687d512be1230020a6bf03d8a6"
+      }
+    },
+    "final-installed-checks-r2": {
+      "command": {
+        "argv": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+          "-I",
+          "-B",
+          "scripts/e028_local_checks.py",
+          "--root",
+          "artifacts/e028-global-discovery-repair/preparation/final-checks-r2"
+        ],
+        "common_clock": {
+          "start_epoch": 1793475365.9174411,
+          "deadline_epoch": 1793486165.9174411,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "Local implementation/engineering, real tiny only; full community inputs remain fixed; no community score before native return."
+        },
+        "started_epoch": 1793479329.144224,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488154566656,
+          "free": 11808608256
+        }
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+            "-I",
+            "-B",
+            "scripts/e028_local_checks.py",
+            "--root",
+            "artifacts/e028-global-discovery-repair/preparation/final-checks-r2"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 133.2474453790055,
+          "peak_sampled_rss_bytes": 307908608,
+          "seconds_ceiling": 6836.773644208908,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 64698,
+          "sampled_cpu_seconds": 127.86,
+          "sampled_average_cpus": 0.9595681150683106,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "log_binding": {
+        "bytes": 39,
+        "sha256": "656290c880214b589dbffc403a511384edfb33ad2dff20d8af5aa3bf69e751f2"
+      }
     }
   },
   "actual": [
@@ -913,7 +1131,8 @@
     "six-hour width forecast refused; prospective 12-hour clock chosen before VM start, science unchanged",
     "first tiny DAG genuinely overlapped group rules; explicit serial dependencies fix it",
     "tokenizer content comparator wrongly included URL metadata; strict bytes/SHA schema fixed, assets unchanged",
-    "wrong builder refused pinned setuptools/wheel, corrected by reusing retained pinned builder"
+    "wrong builder refused pinned setuptools/wheel, corrected by reusing retained pinned builder",
+    "Final untracked-source diff exposed one extra EOF blank line; normalized before native execution, rebuilt wheel and reran installed checks. A sampler-only sandbox ps denial is retained; supervised build reran with approved process access."
   ],
   "filesystem_now": {
     "total": 499963174912,
@@ -924,5 +1143,7 @@
   "owner_future_subset_cutoff_flexibility": "Prospective controlled derivatives/cutoffs allowed; declared claim/denominator/availability policy required. Full-exposure batching preferred if practical.",
   "final_source_freeze": "PASS",
   "final_unit_test_count": 11,
-  "checks": "Installed runtime + 4 discovery tests + 2 batched tests + 5 operation tests; actual serial DAG/no-op/member collector separately."
+  "checks": "Installed runtime + 4 discovery tests + 2 batched tests + 5 operation tests; actual serial DAG/no-op/member collector separately.",
+  "final_installed_receipt": "artifacts/e028-global-discovery-repair/preparation/final-checks-r2/completed.json",
+  "final_wheel": "artifacts/e028-global-discovery-repair/preparation/build-r4/dist/dl_binner-0.1.0.dev9-py3-none-any.whl"
 }

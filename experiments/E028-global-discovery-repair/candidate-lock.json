@@ -1,8 +1,8 @@
 {
   "kind": "E028 new isolated discovery / batched-preparation package",
   "wheel": {
-    "bytes": 183683,
-    "sha256": "8d4bee431fe7cd3ac3ecee4e7a3e694fdfdfc0af4b29c89faea15792598fbdff"
+    "bytes": 183680,
+    "sha256": "c67a5191f99112b13791a66fe1156c02f0e3512a444ffa73b8089e7fa6aa98cb"
   },
   "package_files": {
     "__init__.py": {
@@ -122,8 +122,8 @@
       "sha256": "bad81e377c87a54fd4caa628daa404732b296d115e063ffee0c9fe8a079f6a9e"
     },
     "discovery/grouping.py": {
-      "bytes": 16037,
-      "sha256": "7df22076766796194e0c4e334b8c3858e5d77c6d14eb92018f0eea7f1e19dd7f"
+      "bytes": 16036,
+      "sha256": "813ede7d556f80786b0263bc2c8cc017cc5fa7ce11006ebbd2d5bc329f023692"
     },
     "hybrid/__init__.py": {
       "bytes": 85,
