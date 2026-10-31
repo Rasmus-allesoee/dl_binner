@@ -1,0 +1,1840 @@
+{
+  "kind": "Independently admitted Oral native MetaBAT2 reference; failed E027 candidate has no recovery score",
+  "full_targets": 799,
+  "reference_bp": 2083072211,
+  "provided_origin": {
+    "targets": 799,
+    "reference_bp": 2083072211,
+    "bp_weighted_R95": 0.17326008915780214,
+    "macro_R95": 0.16111533575290432,
+    "at_least_50_percent": 129,
+    "at_least_90_percent": 106
+  },
+  "known_shared_sensitivity": {
+    "targets": 799,
+    "reference_bp": 2083072211,
+    "bp_weighted_R95": 0.17326008915780214,
+    "macro_R95": 0.16111533575290432,
+    "at_least_50_percent": 129,
+    "at_least_90_percent": 106
+  },
+  "threshold_quality": {
+    "provided_origin": {
+      "counts": {
+        "threshold_based_LQ": 48,
+        "threshold_based_HQ": 106,
+        "high_impurity_or_unresolved": 34,
+        "threshold_based_MQ": 29
+      },
+      "target_counts": {
+        "threshold_based_LQ": 48,
+        "threshold_based_HQ": 106,
+        "high_impurity_or_unresolved": 34,
+        "threshold_based_MQ": 29
+      },
+      "at_least_200kb_counts": {
+        "threshold_based_LQ": 48,
+        "threshold_based_HQ": 106,
+        "high_impurity_or_unresolved": 34,
+        "threshold_based_MQ": 29
+      },
+      "assigned_bp": 517669017,
+      "query_count": 1286547,
+      "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+      "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+      "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity",
+      "rRNA_tRNA_screened": false
+    },
+    "known_shared_sensitivity": {
+      "counts": {
+        "threshold_based_LQ": 48,
+        "threshold_based_HQ": 106,
+        "high_impurity_or_unresolved": 34,
+        "threshold_based_MQ": 29
+      },
+      "target_counts": {
+        "threshold_based_LQ": 48,
+        "threshold_based_HQ": 106,
+        "high_impurity_or_unresolved": 34,
+        "threshold_based_MQ": 29
+      },
+      "at_least_200kb_counts": {
+        "threshold_based_LQ": 48,
+        "threshold_based_HQ": 106,
+        "high_impurity_or_unresolved": 34,
+        "threshold_based_MQ": 29
+      },
+      "assigned_bp": 517669017,
+      "query_count": 1286547,
+      "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+      "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+      "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity",
+      "rRNA_tRNA_screened": false
+    }
+  },
+  "DNA": {
+    "status": "PASS",
+    "bins": 217,
+    "rows": 1286547,
+    "bp": 1669981123,
+    "statuses": {
+      "assigned": {
+        "contigs": 28703,
+        "bp": 517669017
+      },
+      "unassigned": {
+        "contigs": 187267,
+        "bp": 722981244
+      },
+      "excluded": {
+        "contigs": 1070577,
+        "bp": 429330862
+      }
+    },
+    "native_DNA_reverified": true,
+    "no_NEW_DNA_or_partition_produced": true,
+    "length_eligibility": ">=2500 bp main; >=1000 bp recruitment; per-row coverage eligibility not invented"
+  },
+  "population": {
+    "population_cells": {
+      "1|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+        "contigs": 774665,
+        "bp": 225068259,
+        "non_ACGT_quarantine_bp": 181,
+        "known_shared_query_bp": 7832
+      },
+      "10000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+        "contigs": 2461,
+        "bp": 295444447,
+        "non_ACGT_quarantine_bp": 468,
+        "known_shared_query_bp": 0
+      },
+      "10000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+        "contigs": 3381,
+        "bp": 63290940,
+        "non_ACGT_quarantine_bp": 7,
+        "known_shared_query_bp": 0
+      },
+      "2500|positive_bacterial_source|eligible|unassigned|clean_marker": {
+        "contigs": 3999,
+        "bp": 19395278,
+        "non_ACGT_quarantine_bp": 6,
+        "known_shared_query_bp": 0
+      },
+      "10000|positive_bacterial_source|eligible|assigned|clean_marker": {
+        "contigs": 1712,
+        "bp": 364757051,
+        "non_ACGT_quarantine_bp": 185,
+        "known_shared_query_bp": 0
+      },
+      "2500|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+        "contigs": 30429,
+        "bp": 125801216,
+        "non_ACGT_quarantine_bp": 202,
+        "known_shared_query_bp": 0
+      },
+      "1000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+        "contigs": 8438,
+        "bp": 12253243,
+        "non_ACGT_quarantine_bp": 12,
+        "known_shared_query_bp": 0
+      },
+      "1000|positive_bacterial_source|eligible|unassigned|no_clean_marker": {
+        "contigs": 141106,
+        "bp": 209597041,
+        "non_ACGT_quarantine_bp": 322,
+        "known_shared_query_bp": 3113
+      },
+      "768|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+        "contigs": 87508,
+        "bp": 76362787,
+        "non_ACGT_quarantine_bp": 75,
+        "known_shared_query_bp": 0
+      },
+      "500|positive_bacterial_source|excluded|excluded|no_clean_marker": {
+        "contigs": 200764,
+        "bp": 123475887,
+        "non_ACGT_quarantine_bp": 110,
+        "known_shared_query_bp": 1118
+      },
+      "1000|positive_bacterial_source|eligible|unassigned|clean_marker": {
+        "contigs": 5891,
+        "bp": 9452322,
+        "non_ACGT_quarantine_bp": 8,
+        "known_shared_query_bp": 0
+      },
+      "500|positive_bacterial_source|excluded|excluded|clean_marker": {
+        "contigs": 2539,
+        "bp": 1595021,
+        "non_ACGT_quarantine_bp": 0,
+        "known_shared_query_bp": 0
+      },
+      "2500|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+        "contigs": 13696,
+        "bp": 63147950,
+        "non_ACGT_quarantine_bp": 42,
+        "known_shared_query_bp": 0
+      },
+      "2500|positive_bacterial_source|eligible|assigned|clean_marker": {
+        "contigs": 1605,
+        "bp": 8749979,
+        "non_ACGT_quarantine_bp": 7,
+        "known_shared_query_bp": 0
+      },
+      "768|positive_bacterial_source|excluded|excluded|clean_marker": {
+        "contigs": 1982,
+        "bp": 1743708,
+        "non_ACGT_quarantine_bp": 0,
+        "known_shared_query_bp": 0
+      },
+      "10000|positive_bacterial_source|eligible|assigned|no_clean_marker": {
+        "contigs": 2928,
+        "bp": 68259106,
+        "non_ACGT_quarantine_bp": 108,
+        "known_shared_query_bp": 0
+      },
+      "1|positive_bacterial_source|excluded|excluded|clean_marker": {
+        "contigs": 3119,
+        "bp": 1085200,
+        "non_ACGT_quarantine_bp": 1,
+        "known_shared_query_bp": 0
+      },
+      "1000|positive_bacterial_source|eligible|assigned|clean_marker": {
+        "contigs": 324,
+        "bp": 501688,
+        "non_ACGT_quarantine_bp": 0,
+        "known_shared_query_bp": 0
+      }
+    },
+    "all_bp": 1669981123,
+    "geometry": {
+      "queries": 0,
+      "nn_purity": null,
+      "nn_purity_bp_weighted": null,
+      "length_strata": {}
+    },
+    "origin_B3": {
+      "bp": 1669981123,
+      "precision": 0.26495477176931714,
+      "recall": 0.2672781422705686,
+      "f1": 0.2661113858844083,
+      "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+    },
+    "bins": [
+      {
+        "bin": 0,
+        "bp": 260483,
+        "dominant_source": "OTU_97.4084.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 1,
+        "bp": 4109678,
+        "dominant_source": "OTU_97.26542.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 2,
+        "bp": 2029162,
+        "dominant_source": "OTU_97.23272.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 3,
+        "bp": 2080771,
+        "dominant_source": "OTU_97.27245.0",
+        "supported_purity": 0.9858619713558099
+      },
+      {
+        "bin": 4,
+        "bp": 2201311,
+        "dominant_source": "OTU_97.33033.0",
+        "supported_purity": 0.9698752243549412
+      },
+      {
+        "bin": 5,
+        "bp": 2687272,
+        "dominant_source": "OTU_97.42200.0",
+        "supported_purity": 0.9999955345048808
+      },
+      {
+        "bin": 6,
+        "bp": 2767904,
+        "dominant_source": "OTU_97.30766.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 7,
+        "bp": 2292349,
+        "dominant_source": "OTU_97.2889.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 8,
+        "bp": 383936,
+        "dominant_source": "OTU_97.8581.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 9,
+        "bp": 640349,
+        "dominant_source": "OTU_97.8581.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 10,
+        "bp": 919798,
+        "dominant_source": "OTU_97.29.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 11,
+        "bp": 3002100,
+        "dominant_source": "OTU_97.27895.0",
+        "supported_purity": 0.5370693847639986
+      },
+      {
+        "bin": 12,
+        "bp": 5503671,
+        "dominant_source": "OTU_97.12103.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 13,
+        "bp": 2135089,
+        "dominant_source": "OTU_97.25956.0",
+        "supported_purity": 0.979975542003167
+      },
+      {
+        "bin": 14,
+        "bp": 2622008,
+        "dominant_source": "OTU_97.485.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 15,
+        "bp": 2442430,
+        "dominant_source": "OTU_97.1886.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 16,
+        "bp": 2139806,
+        "dominant_source": "OTU_97.44935.0",
+        "supported_purity": 0.8835590703082429
+      },
+      {
+        "bin": 17,
+        "bp": 7537930,
+        "dominant_source": "OTU_97.31214.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 18,
+        "bp": 4059847,
+        "dominant_source": "OTU_97.34865.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 19,
+        "bp": 2796910,
+        "dominant_source": "OTU_97.429.0",
+        "supported_purity": 0.9999992849251496
+      },
+      {
+        "bin": 20,
+        "bp": 2013574,
+        "dominant_source": "OTU_97.17727.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 21,
+        "bp": 900384,
+        "dominant_source": "OTU_97.43597.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 22,
+        "bp": 3446552,
+        "dominant_source": "OTU_97.16811.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 23,
+        "bp": 2272479,
+        "dominant_source": "OTU_97.44957.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 24,
+        "bp": 214127,
+        "dominant_source": "OTU_97.45443.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 25,
+        "bp": 2035537,
+        "dominant_source": "OTU_97.44267.1",
+        "supported_purity": 0.9854141683496788
+      },
+      {
+        "bin": 26,
+        "bp": 2444896,
+        "dominant_source": "OTU_97.40667.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 27,
+        "bp": 708202,
+        "dominant_source": "OTU_97.27573.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 28,
+        "bp": 4271128,
+        "dominant_source": "OTU_97.39365.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 29,
+        "bp": 2399088,
+        "dominant_source": "OTU_97.39365.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 30,
+        "bp": 3064479,
+        "dominant_source": "OTU_97.35840.0",
+        "supported_purity": 0.9921999791808004
+      },
+      {
+        "bin": 31,
+        "bp": 2137435,
+        "dominant_source": "OTU_97.42422.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 32,
+        "bp": 2349513,
+        "dominant_source": "OTU_97.42878.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 33,
+        "bp": 3051464,
+        "dominant_source": "OTU_97.10732.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 34,
+        "bp": 2505961,
+        "dominant_source": "OTU_97.38269.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 35,
+        "bp": 1924512,
+        "dominant_source": "OTU_97.44294.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 36,
+        "bp": 1505447,
+        "dominant_source": "OTU_97.22007.0",
+        "supported_purity": 0.9909687953146142
+      },
+      {
+        "bin": 37,
+        "bp": 870055,
+        "dominant_source": "OTU_97.10732.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 38,
+        "bp": 1914488,
+        "dominant_source": "OTU_97.45053.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 39,
+        "bp": 796842,
+        "dominant_source": "OTU_97.45326.0",
+        "supported_purity": 0.9757731143689715
+      },
+      {
+        "bin": 40,
+        "bp": 7379086,
+        "dominant_source": "OTU_97.33727.0",
+        "supported_purity": 0.3462947850180903
+      },
+      {
+        "bin": 41,
+        "bp": 2233278,
+        "dominant_source": "OTU_97.23363.0",
+        "supported_purity": 0.9953279439460739
+      },
+      {
+        "bin": 42,
+        "bp": 204914,
+        "dominant_source": "OTU_97.42261.0",
+        "supported_purity": 0.9908693403086173
+      },
+      {
+        "bin": 43,
+        "bp": 546826,
+        "dominant_source": "OTU_97.2083.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 44,
+        "bp": 1562944,
+        "dominant_source": "OTU_97.45057.0",
+        "supported_purity": 0.9888933960525776
+      },
+      {
+        "bin": 45,
+        "bp": 1167974,
+        "dominant_source": "OTU_97.27675.0",
+        "supported_purity": 0.8678395238250166
+      },
+      {
+        "bin": 46,
+        "bp": 2124215,
+        "dominant_source": "OTU_97.42490.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 47,
+        "bp": 2943753,
+        "dominant_source": "OTU_97.38777.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 48,
+        "bp": 4799230,
+        "dominant_source": "OTU_97.38777.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 49,
+        "bp": 3042912,
+        "dominant_source": "OTU_97.31370.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 50,
+        "bp": 3782791,
+        "dominant_source": "OTU_97.1193.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 51,
+        "bp": 2272950,
+        "dominant_source": "OTU_97.5278.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 52,
+        "bp": 1776390,
+        "dominant_source": "OTU_97.35197.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 53,
+        "bp": 1909399,
+        "dominant_source": "OTU_97.4793.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 54,
+        "bp": 2306414,
+        "dominant_source": "OTU_97.26897.0",
+        "supported_purity": 0.997657402357079
+      },
+      {
+        "bin": 55,
+        "bp": 2424561,
+        "dominant_source": "OTU_97.30399.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 56,
+        "bp": 6852131,
+        "dominant_source": "OTU_97.36692.0",
+        "supported_purity": 0.3471683480657331
+      },
+      {
+        "bin": 57,
+        "bp": 355302,
+        "dominant_source": "OTU_97.43528.1",
+        "supported_purity": 0.9478218529588913
+      },
+      {
+        "bin": 58,
+        "bp": 2472591,
+        "dominant_source": "OTU_97.7964.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 59,
+        "bp": 2372462,
+        "dominant_source": "OTU_97.43673.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 60,
+        "bp": 2035689,
+        "dominant_source": "OTU_97.45366.0",
+        "supported_purity": 0.9920557609733117
+      },
+      {
+        "bin": 61,
+        "bp": 496300,
+        "dominant_source": "OTU_97.12613.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 62,
+        "bp": 2287443,
+        "dominant_source": "OTU_97.25225.0",
+        "supported_purity": 0.997247144519011
+      },
+      {
+        "bin": 63,
+        "bp": 1962026,
+        "dominant_source": "OTU_97.28688.0",
+        "supported_purity": 0.9979516071652466
+      },
+      {
+        "bin": 64,
+        "bp": 2699098,
+        "dominant_source": "OTU_97.281.0",
+        "supported_purity": 0.8659989374227983
+      },
+      {
+        "bin": 65,
+        "bp": 751344,
+        "dominant_source": "OTU_97.33210.0",
+        "supported_purity": 0.9456360867991226
+      },
+      {
+        "bin": 66,
+        "bp": 863078,
+        "dominant_source": "OTU_97.14639.0",
+        "supported_purity": 0.968979628724171
+      },
+      {
+        "bin": 67,
+        "bp": 1247876,
+        "dominant_source": "OTU_97.23755.0",
+        "supported_purity": 0.29616564466341205
+      },
+      {
+        "bin": 68,
+        "bp": 2837506,
+        "dominant_source": "OTU_97.26707.0",
+        "supported_purity": 0.991029446281347
+      },
+      {
+        "bin": 69,
+        "bp": 302164,
+        "dominant_source": "OTU_97.8581.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 70,
+        "bp": 2028871,
+        "dominant_source": "OTU_97.34782.1",
+        "supported_purity": 0.9613425397671908
+      },
+      {
+        "bin": 71,
+        "bp": 1000994,
+        "dominant_source": "OTU_97.3008.0",
+        "supported_purity": 0.9907491952998719
+      },
+      {
+        "bin": 72,
+        "bp": 2727257,
+        "dominant_source": "OTU_97.940.0",
+        "supported_purity": 0.9949971711503537
+      },
+      {
+        "bin": 73,
+        "bp": 1965878,
+        "dominant_source": "OTU_97.27573.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 74,
+        "bp": 2159106,
+        "dominant_source": "OTU_97.29395.1",
+        "supported_purity": 0.9972984188826302
+      },
+      {
+        "bin": 75,
+        "bp": 2182000,
+        "dominant_source": "OTU_97.44160.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 76,
+        "bp": 1930970,
+        "dominant_source": "OTU_97.26568.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 77,
+        "bp": 477215,
+        "dominant_source": "OTU_97.38222.0",
+        "supported_purity": 0.9491298471338915
+      },
+      {
+        "bin": 78,
+        "bp": 4485986,
+        "dominant_source": "OTU_97.5254.0",
+        "supported_purity": 0.536741532407814
+      },
+      {
+        "bin": 79,
+        "bp": 398044,
+        "dominant_source": "OTU_97.2083.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 80,
+        "bp": 3544264,
+        "dominant_source": "OTU_97.40084.0",
+        "supported_purity": 0.9414005277259256
+      },
+      {
+        "bin": 81,
+        "bp": 2843149,
+        "dominant_source": "OTU_97.4075.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 82,
+        "bp": 2660862,
+        "dominant_source": "OTU_97.2092.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 83,
+        "bp": 2145162,
+        "dominant_source": "OTU_97.5757.1",
+        "supported_purity": 0.8925255994652153
+      },
+      {
+        "bin": 84,
+        "bp": 2698236,
+        "dominant_source": "OTU_97.13074.0",
+        "supported_purity": 0.99797608511635
+      },
+      {
+        "bin": 85,
+        "bp": 2142050,
+        "dominant_source": "OTU_97.30394.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 86,
+        "bp": 2447929,
+        "dominant_source": "OTU_97.39998.0",
+        "supported_purity": 0.8618546534642141
+      },
+      {
+        "bin": 87,
+        "bp": 1645468,
+        "dominant_source": "OTU_97.42206.0",
+        "supported_purity": 0.985697078278034
+      },
+      {
+        "bin": 88,
+        "bp": 7292894,
+        "dominant_source": "OTU_97.35864.0",
+        "supported_purity": 0.30457099746684924
+      },
+      {
+        "bin": 89,
+        "bp": 511252,
+        "dominant_source": "OTU_97.32318.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 90,
+        "bp": 1795605,
+        "dominant_source": "OTU_97.39679.0",
+        "supported_purity": 0.9999977723385711
+      },
+      {
+        "bin": 91,
+        "bp": 2362260,
+        "dominant_source": "OTU_97.11895.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 92,
+        "bp": 2960919,
+        "dominant_source": "OTU_97.44228.0",
+        "supported_purity": 0.7468904080118368
+      },
+      {
+        "bin": 93,
+        "bp": 2973751,
+        "dominant_source": "OTU_97.41189.0",
+        "supported_purity": 0.7818368114882517
+      },
+      {
+        "bin": 94,
+        "bp": 852002,
+        "dominant_source": "OTU_97.13257.0",
+        "supported_purity": 0.996857988596271
+      },
+      {
+        "bin": 95,
+        "bp": 1634507,
+        "dominant_source": "OTU_97.8405.0",
+        "supported_purity": 0.8734768342992719
+      },
+      {
+        "bin": 96,
+        "bp": 2509884,
+        "dominant_source": "OTU_97.11128.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 97,
+        "bp": 618824,
+        "dominant_source": "OTU_97.42515.0",
+        "supported_purity": 0.8935965638048945
+      },
+      {
+        "bin": 98,
+        "bp": 2186356,
+        "dominant_source": "OTU_97.38344.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 99,
+        "bp": 2095369,
+        "dominant_source": "OTU_97.44957.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 100,
+        "bp": 4455580,
+        "dominant_source": "OTU_97.5805.0",
+        "supported_purity": 0.5585537685329407
+      },
+      {
+        "bin": 101,
+        "bp": 1467840,
+        "dominant_source": "OTU_97.45326.0",
+        "supported_purity": 0.2787626716808371
+      },
+      {
+        "bin": 102,
+        "bp": 1986143,
+        "dominant_source": "OTU_97.9672.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 103,
+        "bp": 860453,
+        "dominant_source": "OTU_97.2083.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 104,
+        "bp": 3318879,
+        "dominant_source": "OTU_97.40838.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 105,
+        "bp": 4005393,
+        "dominant_source": "OTU_97.2373.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 106,
+        "bp": 1061704,
+        "dominant_source": "OTU_97.8698.0",
+        "supported_purity": 0.997284553886959
+      },
+      {
+        "bin": 107,
+        "bp": 287140,
+        "dominant_source": "OTU_97.43496.0",
+        "supported_purity": 0.9883436651110956
+      },
+      {
+        "bin": 108,
+        "bp": 3032564,
+        "dominant_source": "OTU_97.142.0",
+        "supported_purity": 0.9990397564569123
+      },
+      {
+        "bin": 109,
+        "bp": 2561598,
+        "dominant_source": "OTU_97.13253.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 110,
+        "bp": 2952621,
+        "dominant_source": "OTU_97.32295.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 111,
+        "bp": 711736,
+        "dominant_source": "OTU_97.33154.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 112,
+        "bp": 515209,
+        "dominant_source": "OTU_97.28231.0",
+        "supported_purity": 0.4580781779821393
+      },
+      {
+        "bin": 113,
+        "bp": 283831,
+        "dominant_source": "OTU_97.42462.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 114,
+        "bp": 2487473,
+        "dominant_source": "OTU_97.1704.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 115,
+        "bp": 1974259,
+        "dominant_source": "OTU_97.8334.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 116,
+        "bp": 2947693,
+        "dominant_source": "OTU_97.23341.0",
+        "supported_purity": 0.920584674184184
+      },
+      {
+        "bin": 117,
+        "bp": 295275,
+        "dominant_source": "OTU_97.18522.0",
+        "supported_purity": 0.9861654389975446
+      },
+      {
+        "bin": 118,
+        "bp": 946357,
+        "dominant_source": "OTU_97.15792.1",
+        "supported_purity": 0.9892387333744032
+      },
+      {
+        "bin": 119,
+        "bp": 4888246,
+        "dominant_source": "OTU_97.27897.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 120,
+        "bp": 1119201,
+        "dominant_source": "OTU_97.22007.0",
+        "supported_purity": 0.4653998700858916
+      },
+      {
+        "bin": 121,
+        "bp": 2392816,
+        "dominant_source": "OTU_97.36605.0",
+        "supported_purity": 0.9242607872899546
+      },
+      {
+        "bin": 122,
+        "bp": 1766437,
+        "dominant_source": "OTU_97.44484.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 123,
+        "bp": 4376802,
+        "dominant_source": "OTU_97.16209.0",
+        "supported_purity": 0.4975431833562496
+      },
+      {
+        "bin": 124,
+        "bp": 2030506,
+        "dominant_source": "OTU_97.360.1",
+        "supported_purity": 0.998040882420441
+      },
+      {
+        "bin": 125,
+        "bp": 1971265,
+        "dominant_source": "OTU_97.20271.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 126,
+        "bp": 2384978,
+        "dominant_source": "OTU_97.43108.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 127,
+        "bp": 1570482,
+        "dominant_source": "OTU_97.18437.0",
+        "supported_purity": 0.9962775759289186
+      },
+      {
+        "bin": 128,
+        "bp": 6815179,
+        "dominant_source": "OTU_97.20031.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 129,
+        "bp": 3874575,
+        "dominant_source": "OTU_97.14837.0",
+        "supported_purity": 0.4549131195034294
+      },
+      {
+        "bin": 130,
+        "bp": 709859,
+        "dominant_source": "OTU_97.8581.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 131,
+        "bp": 3364231,
+        "dominant_source": "OTU_97.11308.0",
+        "supported_purity": 0.9955014979649138
+      },
+      {
+        "bin": 132,
+        "bp": 1308684,
+        "dominant_source": "OTU_97.23850.0",
+        "supported_purity": 0.9931167493451437
+      },
+      {
+        "bin": 133,
+        "bp": 311016,
+        "dominant_source": "OTU_97.2092.0",
+        "supported_purity": 0.9900133755176582
+      },
+      {
+        "bin": 134,
+        "bp": 6975991,
+        "dominant_source": "OTU_97.13391.1",
+        "supported_purity": 0.32515136559092467
+      },
+      {
+        "bin": 135,
+        "bp": 247236,
+        "dominant_source": "OTU_97.5735.0",
+        "supported_purity": 0.9709993690239286
+      },
+      {
+        "bin": 136,
+        "bp": 6404305,
+        "dominant_source": "OTU_97.35376.0",
+        "supported_purity": 0.332577539639352
+      },
+      {
+        "bin": 137,
+        "bp": 2416262,
+        "dominant_source": "OTU_97.25556.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 138,
+        "bp": 4838068,
+        "dominant_source": "OTU_97.28342.1",
+        "supported_purity": 0.5435611901279601
+      },
+      {
+        "bin": 139,
+        "bp": 493876,
+        "dominant_source": "OTU_97.5735.0",
+        "supported_purity": 0.6934230454608039
+      },
+      {
+        "bin": 140,
+        "bp": 4446800,
+        "dominant_source": "OTU_97.30560.0",
+        "supported_purity": 0.5008655662498875
+      },
+      {
+        "bin": 141,
+        "bp": 2167920,
+        "dominant_source": "OTU_97.23667.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 142,
+        "bp": 1829208,
+        "dominant_source": "OTU_97.42989.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 143,
+        "bp": 1208855,
+        "dominant_source": "OTU_97.13257.0",
+        "supported_purity": 0.9824983145207655
+      },
+      {
+        "bin": 144,
+        "bp": 1039528,
+        "dominant_source": "OTU_97.40084.0",
+        "supported_purity": 0.9871355076534735
+      },
+      {
+        "bin": 145,
+        "bp": 360614,
+        "dominant_source": "OTU_97.45326.0",
+        "supported_purity": 0.9204828431508483
+      },
+      {
+        "bin": 146,
+        "bp": 3831159,
+        "dominant_source": "OTU_97.43152.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 147,
+        "bp": 620098,
+        "dominant_source": "OTU_97.28774.0",
+        "supported_purity": 0.9721850417192122
+      },
+      {
+        "bin": 148,
+        "bp": 710253,
+        "dominant_source": "OTU_97.42865.0",
+        "supported_purity": 0.9872566536149795
+      },
+      {
+        "bin": 149,
+        "bp": 1155388,
+        "dominant_source": "OTU_97.2652.0",
+        "supported_purity": 0.9975609924977583
+      },
+      {
+        "bin": 150,
+        "bp": 313133,
+        "dominant_source": "OTU_97.5757.0",
+        "supported_purity": 0.873350940335257
+      },
+      {
+        "bin": 151,
+        "bp": 1891911,
+        "dominant_source": "OTU_97.21263.0",
+        "supported_purity": 0.9732645985989827
+      },
+      {
+        "bin": 152,
+        "bp": 2524788,
+        "dominant_source": "OTU_97.42987.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 153,
+        "bp": 3176067,
+        "dominant_source": "OTU_97.237.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 154,
+        "bp": 332821,
+        "dominant_source": "OTU_97.35168.0",
+        "supported_purity": 0.9183675308949856
+      },
+      {
+        "bin": 155,
+        "bp": 2394124,
+        "dominant_source": "OTU_97.44265.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 156,
+        "bp": 7124004,
+        "dominant_source": "OTU_97.38169.0",
+        "supported_purity": 0.9979045491832964
+      },
+      {
+        "bin": 157,
+        "bp": 2241133,
+        "dominant_source": "OTU_97.32420.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 158,
+        "bp": 1684601,
+        "dominant_source": "OTU_97.56.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 159,
+        "bp": 2190677,
+        "dominant_source": "OTU_97.741.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 160,
+        "bp": 2439428,
+        "dominant_source": "OTU_97.36412.0",
+        "supported_purity": 0.7933691832675529
+      },
+      {
+        "bin": 161,
+        "bp": 3350887,
+        "dominant_source": "OTU_97.7158.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 162,
+        "bp": 7714336,
+        "dominant_source": "OTU_97.37901.0",
+        "supported_purity": 0.9425893557138294
+      },
+      {
+        "bin": 163,
+        "bp": 3296153,
+        "dominant_source": "OTU_97.143.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 164,
+        "bp": 1950137,
+        "dominant_source": "OTU_97.29722.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 165,
+        "bp": 2411238,
+        "dominant_source": "OTU_97.196.0",
+        "supported_purity": 0.9963707439912609
+      },
+      {
+        "bin": 166,
+        "bp": 1711328,
+        "dominant_source": "OTU_97.13658.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 167,
+        "bp": 379624,
+        "dominant_source": "OTU_97.10090.0",
+        "supported_purity": 0.9011205824710766
+      },
+      {
+        "bin": 168,
+        "bp": 2220399,
+        "dominant_source": "OTU_97.3838.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 169,
+        "bp": 976797,
+        "dominant_source": "OTU_97.15358.0",
+        "supported_purity": 0.9940888434342038
+      },
+      {
+        "bin": 170,
+        "bp": 2264278,
+        "dominant_source": "OTU_97.27797.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 171,
+        "bp": 4399244,
+        "dominant_source": "OTU_97.38092.0",
+        "supported_purity": 0.49876319658559515
+      },
+      {
+        "bin": 172,
+        "bp": 603756,
+        "dominant_source": "OTU_97.479.0",
+        "supported_purity": 0.99313795639298
+      },
+      {
+        "bin": 173,
+        "bp": 1903837,
+        "dominant_source": "OTU_97.44061.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 174,
+        "bp": 3203535,
+        "dominant_source": "OTU_97.9740.1",
+        "supported_purity": 0.5082245082385553
+      },
+      {
+        "bin": 175,
+        "bp": 2529466,
+        "dominant_source": "OTU_97.34726.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 176,
+        "bp": 378433,
+        "dominant_source": "OTU_97.43518.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 177,
+        "bp": 283462,
+        "dominant_source": "OTU_97.5735.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 178,
+        "bp": 1580297,
+        "dominant_source": "OTU_97.9305.0",
+        "supported_purity": 0.9533258621638844
+      },
+      {
+        "bin": 179,
+        "bp": 2124234,
+        "dominant_source": "OTU_97.44550.0",
+        "supported_purity": 0.9717093314578338
+      },
+      {
+        "bin": 180,
+        "bp": 1803383,
+        "dominant_source": "OTU_97.22162.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 181,
+        "bp": 507268,
+        "dominant_source": "OTU_97.31305.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 182,
+        "bp": 2495576,
+        "dominant_source": "OTU_97.23667.0",
+        "supported_purity": 0.8599786181627007
+      },
+      {
+        "bin": 183,
+        "bp": 2568161,
+        "dominant_source": "OTU_97.31969.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 184,
+        "bp": 435893,
+        "dominant_source": "OTU_97.40084.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 185,
+        "bp": 7418032,
+        "dominant_source": "OTU_97.11180.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 186,
+        "bp": 3855193,
+        "dominant_source": "OTU_97.5441.1",
+        "supported_purity": 0.999997406096141
+      },
+      {
+        "bin": 187,
+        "bp": 3943442,
+        "dominant_source": "OTU_97.2092.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 188,
+        "bp": 3804081,
+        "dominant_source": "OTU_97.38313.0",
+        "supported_purity": 0.9830737042665495
+      },
+      {
+        "bin": 189,
+        "bp": 2688474,
+        "dominant_source": "OTU_97.44036.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 190,
+        "bp": 2549338,
+        "dominant_source": "OTU_97.9670.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 191,
+        "bp": 1818274,
+        "dominant_source": "OTU_97.22593.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 192,
+        "bp": 12655447,
+        "dominant_source": "OTU_97.4320.0",
+        "supported_purity": 0.16943968869689074
+      },
+      {
+        "bin": 193,
+        "bp": 2585231,
+        "dominant_source": "OTU_97.42948.0",
+        "supported_purity": 0.921715699680222
+      },
+      {
+        "bin": 194,
+        "bp": 592221,
+        "dominant_source": "OTU_97.26859.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 195,
+        "bp": 2281600,
+        "dominant_source": "OTU_97.31176.1",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 196,
+        "bp": 201334,
+        "dominant_source": "OTU_97.26859.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 197,
+        "bp": 1942938,
+        "dominant_source": "OTU_97.16729.0",
+        "supported_purity": 0.943465514596966
+      },
+      {
+        "bin": 198,
+        "bp": 1489501,
+        "dominant_source": "OTU_97.29930.0",
+        "supported_purity": 0.8411850680194239
+      },
+      {
+        "bin": 199,
+        "bp": 5270087,
+        "dominant_source": "OTU_97.44204.0",
+        "supported_purity": 0.422605167618675
+      },
+      {
+        "bin": 200,
+        "bp": 946925,
+        "dominant_source": "OTU_97.5089.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 201,
+        "bp": 2143885,
+        "dominant_source": "OTU_97.39115.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 202,
+        "bp": 241374,
+        "dominant_source": "OTU_97.43496.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 203,
+        "bp": 2140455,
+        "dominant_source": "OTU_97.7659.0",
+        "supported_purity": 0.993667701493374
+      },
+      {
+        "bin": 204,
+        "bp": 2096866,
+        "dominant_source": "OTU_97.45365.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 205,
+        "bp": 2571386,
+        "dominant_source": "OTU_97.43676.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 206,
+        "bp": 2309502,
+        "dominant_source": "OTU_97.38628.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 207,
+        "bp": 3261759,
+        "dominant_source": "OTU_97.39522.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 208,
+        "bp": 3752829,
+        "dominant_source": "OTU_97.15438.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 209,
+        "bp": 3800700,
+        "dominant_source": "OTU_97.5809.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 210,
+        "bp": 1996211,
+        "dominant_source": "OTU_97.42502.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 211,
+        "bp": 2527961,
+        "dominant_source": "OTU_97.20364.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 212,
+        "bp": 2150751,
+        "dominant_source": "OTU_97.34836.0",
+        "supported_purity": 0.9978802753084852
+      },
+      {
+        "bin": 213,
+        "bp": 2300992,
+        "dominant_source": "OTU_97.20.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 214,
+        "bp": 5921553,
+        "dominant_source": "OTU_97.29.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 215,
+        "bp": 4064505,
+        "dominant_source": "OTU_97.1358.0",
+        "supported_purity": 1.0
+      },
+      {
+        "bin": 216,
+        "bp": 2431497,
+        "dominant_source": "OTU_97.1148.0",
+        "supported_purity": 1.0
+      }
+    ],
+    "large_bins": 217,
+    "large_bins_below95": 46,
+    "eligibility_scope": "Native length eligibility; further coverage filters unresolved per row, retained in native log. No learned-neighbor geometry exists for this external tool."
+  },
+  "measured_depth_status_bp": {
+    "excluded|measured_positive": 236555721,
+    "unassigned|measured_positive": 574484727,
+    "assigned|measured_positive": 517669017,
+    "excluded|measured_all_zero": 192775141,
+    "unassigned|measured_all_zero": 148496517
+  },
+  "paired_vs_E026": {
+    "gain_targets": 114,
+    "loss_targets": 77,
+    "unchanged_targets": 608,
+    "recovered_bp_gain": 72263502,
+    "R95_percentage_point_gain": 3.4690829064110638,
+    "top_gains": [
+      {
+        "genome": "OTU_97.12103.0",
+        "reference_bp": 5503743,
+        "assembly_confirmed_bp": 5503671,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 0,
+        "MetaBAT2_bp": 5503671,
+        "MetaBAT2_R95": 0.9999869179938089,
+        "E026_R95": 0.0,
+        "delta_bp": 5503671,
+        "known_shared_mask_bp": 5503671
+      },
+      {
+        "genome": "OTU_97.39365.0",
+        "reference_bp": 4271158,
+        "assembly_confirmed_bp": 4271128,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 0,
+        "MetaBAT2_bp": 4271128,
+        "MetaBAT2_R95": 0.9999929761437062,
+        "E026_R95": 0.0,
+        "delta_bp": 4271128,
+        "known_shared_mask_bp": 4271128
+      },
+      {
+        "genome": "OTU_97.26542.0",
+        "reference_bp": 4286205,
+        "assembly_confirmed_bp": 4286177,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 0,
+        "MetaBAT2_bp": 4109678,
+        "MetaBAT2_R95": 0.9588150823397388,
+        "E026_R95": 0.0,
+        "delta_bp": 4109678,
+        "known_shared_mask_bp": 4109678
+      },
+      {
+        "genome": "OTU_97.1358.0",
+        "reference_bp": 4064534,
+        "assembly_confirmed_bp": 4064505,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 0,
+        "MetaBAT2_bp": 4064505,
+        "MetaBAT2_R95": 0.9999928651107359,
+        "E026_R95": 0.0,
+        "delta_bp": 4064505,
+        "known_shared_mask_bp": 4064505
+      },
+      {
+        "genome": "OTU_97.34865.0",
+        "reference_bp": 4059867,
+        "assembly_confirmed_bp": 4059847,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 0,
+        "MetaBAT2_bp": 4059847,
+        "MetaBAT2_R95": 0.9999950737302478,
+        "E026_R95": 0.0,
+        "delta_bp": 4059847,
+        "known_shared_mask_bp": 4059847
+      },
+      {
+        "genome": "OTU_97.1193.0",
+        "reference_bp": 3782798,
+        "assembly_confirmed_bp": 3782791,
+        "retained_E019_bp": 3782791,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 0,
+        "MetaBAT2_bp": 3782791,
+        "MetaBAT2_R95": 0.9999981495178966,
+        "E026_R95": 0.0,
+        "delta_bp": 3782791,
+        "known_shared_mask_bp": 3782791
+      },
+      {
+        "genome": "OTU_97.15438.0",
+        "reference_bp": 3752836,
+        "assembly_confirmed_bp": 3752829,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 0,
+        "MetaBAT2_bp": 3752829,
+        "MetaBAT2_R95": 0.9999981347439643,
+        "E026_R95": 0.0,
+        "delta_bp": 3752829,
+        "known_shared_mask_bp": 3752829
+      },
+      {
+        "genome": "OTU_97.143.0",
+        "reference_bp": 3296168,
+        "assembly_confirmed_bp": 3296153,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 0,
+        "MetaBAT2_bp": 3296153,
+        "MetaBAT2_R95": 0.9999954492610813,
+        "E026_R95": 0.0,
+        "delta_bp": 3296153,
+        "known_shared_mask_bp": 3296153
+      },
+      {
+        "genome": "OTU_97.237.0",
+        "reference_bp": 3176073,
+        "assembly_confirmed_bp": 3176067,
+        "retained_E019_bp": 3176067,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 0,
+        "MetaBAT2_bp": 3176067,
+        "MetaBAT2_R95": 0.9999981108746556,
+        "E026_R95": 0.0,
+        "delta_bp": 3176067,
+        "known_shared_mask_bp": 3176067
+      },
+      {
+        "genome": "OTU_97.31370.0",
+        "reference_bp": 3042917,
+        "assembly_confirmed_bp": 3042912,
+        "retained_E019_bp": 3042912,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 0,
+        "MetaBAT2_bp": 3042912,
+        "MetaBAT2_R95": 0.999998356839835,
+        "E026_R95": 0.0,
+        "delta_bp": 3042912,
+        "known_shared_mask_bp": 3042912
+      }
+    ],
+    "top_losses": [
+      {
+        "genome": "OTU_97.37901.0",
+        "reference_bp": 7271506,
+        "assembly_confirmed_bp": 7271451,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 7271451,
+        "MetaBAT2_bp": 0,
+        "MetaBAT2_R95": 0.0,
+        "E026_R95": 0.9999924362298539,
+        "delta_bp": -7271451,
+        "known_shared_mask_bp": 0
+      },
+      {
+        "genome": "OTU_97.6437.0",
+        "reference_bp": 4133893,
+        "assembly_confirmed_bp": 4133854,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 4133854,
+        "MetaBAT2_bp": 0,
+        "MetaBAT2_R95": 0.0,
+        "E026_R95": 0.9999905657935511,
+        "delta_bp": -4133854,
+        "known_shared_mask_bp": 0
+      },
+      {
+        "genome": "OTU_97.43518.0",
+        "reference_bp": 4191506,
+        "assembly_confirmed_bp": 4190630,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 2457603,
+        "retained_E026_bp": 3483245,
+        "MetaBAT2_bp": 378433,
+        "MetaBAT2_R95": 0.0902856872923479,
+        "E026_R95": 0.8310246961354701,
+        "delta_bp": -3104812,
+        "known_shared_mask_bp": 378433
+      },
+      {
+        "genome": "OTU_97.42986.0",
+        "reference_bp": 2702201,
+        "assembly_confirmed_bp": 2702173,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 2702173,
+        "MetaBAT2_bp": 0,
+        "MetaBAT2_R95": 0.0,
+        "E026_R95": 0.9999896380765162,
+        "delta_bp": -2702173,
+        "known_shared_mask_bp": 0
+      },
+      {
+        "genome": "OTU_97.38845.0",
+        "reference_bp": 2699386,
+        "assembly_confirmed_bp": 2698879,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 2698879,
+        "MetaBAT2_bp": 0,
+        "MetaBAT2_R95": 0.0,
+        "E026_R95": 0.9998121795104516,
+        "delta_bp": -2698879,
+        "known_shared_mask_bp": 0
+      },
+      {
+        "genome": "OTU_97.2092.0",
+        "reference_bp": 6964487,
+        "assembly_confirmed_bp": 6961448,
+        "retained_E019_bp": 6593758,
+        "retained_E023_bp": 6451251,
+        "retained_E025_bp": 6780942,
+        "retained_E026_bp": 6579747,
+        "MetaBAT2_bp": 3943442,
+        "MetaBAT2_R95": 0.5662214603889705,
+        "E026_R95": 0.944756878719136,
+        "delta_bp": -2636305,
+        "known_shared_mask_bp": 3943442
+      },
+      {
+        "genome": "OTU_97.28342.1",
+        "reference_bp": 4369828,
+        "assembly_confirmed_bp": 4316403,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 2494816,
+        "MetaBAT2_bp": 0,
+        "MetaBAT2_R95": 0.0,
+        "E026_R95": 0.5709185807770923,
+        "delta_bp": -2494816,
+        "known_shared_mask_bp": 0
+      },
+      {
+        "genome": "OTU_97.971.0",
+        "reference_bp": 2367880,
+        "assembly_confirmed_bp": 2367878,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 2367878,
+        "MetaBAT2_bp": 0,
+        "MetaBAT2_R95": 0.0,
+        "E026_R95": 0.9999991553626029,
+        "delta_bp": -2367878,
+        "known_shared_mask_bp": 0
+      },
+      {
+        "genome": "OTU_97.38344.1",
+        "reference_bp": 2343476,
+        "assembly_confirmed_bp": 2343212,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 2298091,
+        "MetaBAT2_bp": 0,
+        "MetaBAT2_R95": 0.0,
+        "E026_R95": 0.9806334692567793,
+        "delta_bp": -2298091,
+        "known_shared_mask_bp": 0
+      },
+      {
+        "genome": "OTU_97.3393.1",
+        "reference_bp": 2378127,
+        "assembly_confirmed_bp": 2376205,
+        "retained_E019_bp": 0,
+        "retained_E023_bp": 0,
+        "retained_E025_bp": 0,
+        "retained_E026_bp": 2273114,
+        "MetaBAT2_bp": 0,
+        "MetaBAT2_R95": 0.0,
+        "E026_R95": 0.9558421396334174,
+        "delta_bp": -2273114,
+        "known_shared_mask_bp": 0
+      }
+    ]
+  },
+  "reference_not_a_matched_component_ablation": true,
+  "global_candidate_disposition": "NOT_ASSESSABLE_MISSING_GROUP_EXPORT_AUDIT",
+  "RNA_not_checked_not_formal_MIMAG": true,
+  "old_scores_not_recomputed": true,
+  "retained_target_context_input": {
+    "experiments/E026-calibrated-evidence-fusion/comparison-targets.tsv": {
+      "bytes": 67850,
+      "sha256": "dba8d5979e07c7d9362a78decf3a701074e79c43aa098c77a2986428e2e12fb1"
+    }
+  },
+  "bin_table_ID_semantics": "Secondary bin_id is zero based; integer b maps to native/bin.(b+1).fa and assignment bin_(b+1)."
+}

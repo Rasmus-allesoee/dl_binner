@@ -217,6 +217,19 @@ and retain unknown/non-target DNA in the appropriate full-population denominator
 High nearest-neighbor search recall verifies retrieval accuracy in its declared
 geometry, not biological source homogeneity or genome recovery. Diagnose input
 information, representation and bin selection separately on matched populations.
+For a changed search geometry, test warm starts on disconnected seed components,
+ties and each feature-availability stratum. A library may bypass its random/tree
+initialization when an explicit partial graph is supplied. Verify that behavior
+against the pinned implementation. Retain structured invalid-candidate and recall
+evidence before an early refusal; a successful tiny connected fixture cannot
+establish full-scale discovery or justify lowering a frozen recall gate.
+
+If an outer workflow fails, a fully completed independent target can receive a
+separate explicit admission after its own input, source, runtime, DNA, byte and
+exit contracts pass. Keep global completion false and preserve the failed
+whole-workflow gate. Partial partitions without required export/audit contracts
+are not accepted scores. Driver summary counters cannot replace actual stage
+receipts, and missing biological results are unavailable rather than zero.
 
 Keep secondary per-bin quality summaries separate from the primary recovery rule.
 State the completeness denominator and contamination formula. Under conservative

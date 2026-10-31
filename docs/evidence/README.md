@@ -34,3 +34,4 @@ Add a focused note when an investigation produces useful reasoning. Give it a da
 - [E025 useful depth, unequal evidence and the next recovery block](2026-10-29-e025-depth-evidence-and-next-block.md)
 
 - [E026 recovery, source reassessment and one common full version](2026-10-30-e026-recovery-and-common-version.md)
+- [E027 failed discovery, accepted Oral reference and cached recovery decision](2026-10-31-e027-discovery-and-next-block.md)

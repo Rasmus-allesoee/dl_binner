@@ -1,52 +1,73 @@
 # Current Research State
 
-Updated: October 30, 2026 (Copenhagen). This is the single current handoff.
+Updated: October 31, 2026 (Copenhagen). This is the single current handoff.
 
-**E027 is implemented and running under verified supervision.**
-Phase `common-20261030T223337Z-243b8ac`, exact source `243b8ac`.
-[Native receipt](../experiments/E027-common-information-binner/native-observed.json)
-records all ten passing Linux gates, the atomic release, full axes and exact
-accepted-learning reuse. The native Oral MetaBAT2 reference exited 0 and passed complete-DNA export
-(217 bins / 517,669,017 bp assigned, no recovery score yet). E009 no-GLM student
-training is now running (epoch 2 / 20 at 22:49:57 UTC; full exposure and observed
-collapse guards pass, watcher active);
-scientific completion, shutdown, return integrity and biological diagnostics remain
-pending. Inspect this phase next, without starting another job.
-The owner authorized conditional direct execution of the [common full-version
-candidate](../experiments/E027-common-information-binner/OPERATIONS.md), complete
-E009 GLM off/on paths, Oral measured-depth no-GLM mode and one native Oral MetaBAT2
-reference. No new community outcome is claimed here. Branch
-`common-multiview-marker-binner`; accepted E009–E026 science remains immutable.
+**E027 stopped safely but the candidate comparison FAILED in grouping.**
+[Independent inspection](../experiments/E027-common-information-binner/inspection-observed.json)
+for `common-20261030T223337Z-243b8ac`, exact source `243b8ac`, verifies control-plane
+TERMINATED, private completion/guest hash, intended boot/process watcher exit,
+all ten native gates and every archive/member/alias. Workflow exit 1; collection,
+uploads and private readbacks all pass. The dated RUNNING launch receipt is
+preserved unchanged; it is superseded by this inspection.
 
-The [design](../experiments/E027-common-information-binner/design.md) combines actual
-DNA-window/context/depth learning, reliable marker relationships and graded sparse
-support with density/physical-marker whole-child selection. GLM availability covers
-bootstrap, pair teacher and student. Source/config/input identity admits reuse of
-three exact accepted E009 models (E019 no-GLM teacher, E021 GLM teacher and E022 GLM
-student/pairs). Three genuine new fits remain: no-GLM E009 student, measured-depth
-Oral teacher/student. All six downstream groupings are new; older quality summaries
-are reused without rescoring. [Learning reuse](../experiments/E027-common-information-binner/learning-reuse-lock.json)
-refuses missing/corrupt evidence rather than refitting a substitute.
+All three new fits finished: E009 no-GLM student and Oral measured-depth teacher/
+student. Three exact older E009 learning instances are reused. All six native
+reload/embedding/graph chains pass. Each mode has eight sealed completed stages;
+all three grouping stages fail, and all six export/audit stages plus the final
+input-after proof are absent. No candidate recovery score or parent/post result
+is admitted; [frozen biological disposition](../experiments/E027-common-information-binner/comparison-review.json)
+is **NOT ASSESSABLE**, not zero or ABANDON. No VM wake or new science in inspection.
 
-Preserve/report E023 E009 **10.4163% R95 / 19 target-50 / nine target-90**, native
-MetaBAT2 **8.5493% / 16 / five**, and E026 Oral **13.8569% / 108 / 58** beside the
-new candidate. Same-mode no-GLM comparison is temporary; GLM-on remains the intended
-main path. [Oral GLM parity](../experiments/E027-common-information-binner/oral-GLM-plan.json)
-is the next explicit information milestone, with full input exposure, exact-view
-batching/native throughput and separate GPU/storage/deadline admission. Skin stays
-unscored with unchanged truth/depth/overlap/protocol/cost dependencies.
+The separately complete [Oral MetaBAT2 reference](../experiments/E027-common-information-binner/oral-reference-review.json)
+is independently admitted with global workflow completion still false. Every
+native bin DNA record, full GSA/ordered ten means, assignment and exit is verified.
+Oral provided-origin weighted R95 is **17.3260% / 129 target-50 / 106 target-90**,
+versus retained E026 **13.8569% / 108 / 58**; 114 targets gain, 77 lose, 608 are
+unchanged. [All 799 targets](../experiments/E027-common-information-binner/oral-metabat2-targets.tsv)
+and [217 secondary bin tiers](../experiments/E027-common-information-binner/oral-metabat2-bin-quality.tsv)
+are retained. Native cutoffs 2,500 bp main / 1,000 bp recruitment and mean-only
+`cvExt` assumptions make this whole-tool context, not a matched-cutoff ablation.
+Full denominators, known-shared sensitivity and all excluded/unassigned DNA remain;
+threshold tiers are not formal MIMAG HQ. E009 E023 **10.4163% / 19 / nine** and
+retained MetaBAT2 **8.5493% / 16 / five** remain immutable references.
 
-[Resource case](../experiments/E027-common-information-binner/resource-plan.json):
-24 hours / 24.25-hour provider STOP / $15 gross, existing E2/32 GiB and original
-disks, four numerical threads, 26 GB sampled RSS, 25 GiB reserve / 8 GiB growth.
-Full conservative quote **$10.376**, start-gate credit DKK **1,741.38 Available** / 88%
-through January 12, $35 delayed-usage reserve. Original all-current storage plus
-3 GiB quotes **$7.8295 < $8**; **November 4, 00:00 Copenhagen** remains. Native
-source/runtime/full-data/reuse/headroom/forecast/watchdog gates passed. The native
-conservative six-fit-equivalent forecast is 11.16 hours; only three fits are new.
-Original 24-hour deadline: October 31, 22:33:57 UTC; provider STOP 22:48:57 UTC.
-Numerical Python 3.10.15 and workflow Python 3.12.10 are separately admitted.
-Original stopped disks cost ~$31.20/month; no resources/retention are extended.
+**Strongest next block:** [repair global joint-search discovery and complete the
+cached common-version comparison](evidence/2026-10-31-e027-discovery-and-next-block.md),
+reusing all six finished learning instances/native vectors/learner graphs/markers.
+A partial old-geometry warm start bypasses the pinned library's random fill;
+actual tiny disconnected components reproduce missing proposals. Both E009 modes
+refuse missing candidates. Oral teacher recall is 0.8851 overall / 0.6104 on
+measured-zero depth, below the unchanged 0.90 gate; its student grouping never
+starts. Do not lower the gate or claim a biological failure from this technical
+blocker. Save structured failure evidence before refusal and pre-admit all six
+joint retrievals before new selection/export. No learner refit or loss/grid test.
+
+[Completed learning diagnostics](../experiments/E027-common-information-binner/learning-components-review.json)
+show full exposure/native exact reload and passing collapse guards, but Oral
+student neighborhoods deteriorate and 27.8% of its positive pairs have discordant
+provided origins. This is a proposal-reliability warning, not exhaustive unique-
+source error labeling. Resolve current grouping before another learning change.
+The main GLM path remains intended; common no-GLM is temporary. Prepare efficient
+exact-exposure Oral GLM batching alongside the cached repair, with separate native
+numerical/throughput and GPU cost/retention admission. Skin remains unscored.
+
+[Measured cost/resources](../experiments/E027-common-information-binner/cost-review.json):
+5 h 16 min 23.667 s E2 allocation / 42.1859 allocated vCPU-hours; workflow
+4 h 52 min 20.942 s / 23.664 GB sampled peak RSS. Whole-run sampled growth
+3.924 GiB, minimum free 30.146 GiB. Compute/IP $1.43984, overlapping approved PD
+$0.22114, WAN upper $0.18414; about **$1.859 gross including new GCS and small
+operations allowance**, not an invoice or credit delta. Fresh Welcome DKK
+**1,728.07 Available / 88%**, January 12 expiry; net displayed zero, $35 delayed-
+usage reserve. All-current conservative storage week $7.82275 within original $8.
+**November 4, 00:00 Copenhagen** remains the hard boundary; stopped disks still
+cost about $31.20 per pricing month. No retention renewal is implied.
+
+[Operations' exact next prompt](../experiments/E027-common-information-binner/OPERATIONS.md#exact-following-prompt)
+proposes a fresh cached-only $5 / six-hour block, subject to current credit/source/
+runtime/headroom/retention gates and explicit next-task execution authorization.
+No resources, acquisition or external campaign is proposed. Branch
+`common-multiview-marker-binner`; dev3/dev4/dev5 and accepted E009–E026 evidence,
+E027 learning, source freeze, all failures and the original Mac tolerance remain.
 
 ## Preserved E026 inspection handoff
 

@@ -1,5 +1,53 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E027 failure localization and recovery-focused next block, October 31, 2026
+
+The [completed inspection](../../experiments/E027-common-information-binner/comparison-review.json)
+finds **no candidate recovery result**: all three new fits finish, but all three
+group stages fail before required exports/audits. Do not reinterpret this as a
+negative biological result or judge the frozen KEEP/MODIFY/ABANDON criteria.
+Native learned geometry/reload/exposure and collapse contracts pass; the intended
+GLM mode still includes its teacher and pair proposals. No source, feature or
+native vector is altered to make the failed run pass.
+
+Both E009 searches refuse missing wide proposals; Oral teacher joint recall
+fails at 0.8851 overall / 0.6104 measured-zero, with positive-depth 0.9979. Pinned
+PyNNDescent source and the actual synthetic reproduction identify insufficient
+global discovery from a partial supplied old-metric seed graph. The native E009
+bad proposal arrays were not saved; full causal optimality is not claimed.
+
+Choose one **cached global-discovery repair and common-version completion block**,
+with one prospective source-blind complete initialization, structured failure
+proofs, unchanged biological distance/selection/recall contracts, all six retrieval
+barriers and native runtime/headroom gates. Reuse all six finished models,
+embeddings, original learner graphs, transforms, markers and inputs. No encoder
+retraining, new loss/grid or truth-selected proposals. Partial old teacher
+partitions remain evidence, not substitute complete-mode scores.
+
+The independent [Oral MetaBAT2 result](../../experiments/E027-common-information-binner/oral-reference-review.json)
+adds real context: 17.3260% R95 / 129 target-50 / 106 target-90, above E026's
+13.8569% / 108 / 58, with 114 gains and 77 losses. It is not a proof that a single
+MetaBAT component explains the gap. New Oral student native neighborhoods decline
+relative to its teacher; 27.8% of retained positive pairs join different provided
+origins. The label-free source follows its declared checks, but those heuristics
+do not guarantee common genome. Keep proposal precision as the strongest later
+learning uncertainty, not an excuse to tune accepted pairs now. The E009 matched
+37-query target subset is similar GLM off/on; it does not settle recovery or GLM.
+
+[The alternatives analysis](../evidence/2026-10-31-e027-discovery-and-next-block.md)
+explains why a larger architecture, another selector grid, a broad external
+campaign or new data is lower value before the broken consumer is repaired.
+Prepare exact-exposure batched Oral GLM extraction and its native numerical/
+throughput protocol in parallel with this cached block. Do not indefinitely defer
+the intended full GLM version, silently reduce exposure or claim a source-only
+speed estimate as measured acceleration. Actual GPU extraction retains separate
+fresh financial/capacity/storage/deadline admission. Preserve all anchors,
+provided-origin/unique-source limits and unscored skin dependencies. New cached
+planning case $5 / six hours with verified shutdown; no execution in inspection
+and no renewal of November 4 storage. AGENTS now makes partial-target admission
+and warm-start/early-failure evidence requirements explicit as durable lessons.
+
+
 ## E027 owner-amended common-version scope, October 30, 2026
 
 The owner accepts a common no-GLM comparison mode temporarily, while retaining

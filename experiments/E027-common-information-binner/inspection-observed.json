@@ -1,0 +1,1001 @@
+{
+  "kind": "Independent stopped E027 inspection",
+  "reviewed_UTC": "2026-10-31T15:47:43Z",
+  "phase": "common-20261030T223337Z-243b8ac",
+  "science_source": "243b8ac8ec3892fdb8e029d00016849f1785af2f",
+  "source_and_gates": {
+    "status": "PASS",
+    "source_files": 31,
+    "commit": "243b8ac",
+    "native_gates": 10,
+    "delivered_release_gates": 12,
+    "full_workflow_success_not_implied": true
+  },
+  "shutdown": {
+    "provider_status": "TERMINATED",
+    "workflow_completed": false,
+    "science_status": "FAILED",
+    "collection_completed": true,
+    "measured_allocation_seconds": 18983.667,
+    "intended_watchdog_process_verified": true,
+    "guest_private_completion_verified": true,
+    "stage_exits": {
+      "workflow": 1,
+      "collect": 0,
+      "upload-e027-evidence.tar.gz": 0,
+      "readback-e027-evidence.tar.gz": 0,
+      "upload-e027-evidence.tar.gz.sha256": 0,
+      "readback-e027-evidence.tar.gz.sha256": 0,
+      "upload-collection.json": 0,
+      "readback-collection.json": 0,
+      "upload-collection-disk.jsonl": 0,
+      "readback-collection-disk.jsonl": 0,
+      "upload-terminal-disk.json": 0,
+      "readback-terminal-disk.json": 0
+    },
+    "driver_fit_counter_not_a_scientific_stage_receipt": true
+  },
+  "stages": {
+    "E009-noGLM": {
+      "admit": {
+        "status": "PASS",
+        "members": 9
+      },
+      "teacher": {
+        "status": "PASS",
+        "members": 5
+      },
+      "teacher-embed": {
+        "status": "PASS",
+        "members": 3
+      },
+      "teacher-graph": {
+        "status": "PASS",
+        "members": 3
+      },
+      "pairs": {
+        "status": "PASS",
+        "members": 7
+      },
+      "student": {
+        "status": "PASS",
+        "members": 25
+      },
+      "student-embed": {
+        "status": "PASS",
+        "members": 3
+      },
+      "student-graph": {
+        "status": "PASS",
+        "members": 3
+      },
+      "group": {
+        "status": "PARTIAL_UNSEALED",
+        "retained_members": 12
+      },
+      "export": {
+        "status": "NOT_RUN",
+        "retained_members": 0
+      },
+      "audit": {
+        "status": "NOT_RUN",
+        "retained_members": 0
+      }
+    },
+    "E009-GLM": {
+      "admit": {
+        "status": "PASS",
+        "members": 9
+      },
+      "teacher": {
+        "status": "PASS",
+        "members": 5
+      },
+      "teacher-embed": {
+        "status": "PASS",
+        "members": 3
+      },
+      "teacher-graph": {
+        "status": "PASS",
+        "members": 3
+      },
+      "pairs": {
+        "status": "PASS",
+        "members": 7
+      },
+      "student": {
+        "status": "PASS",
+        "members": 5
+      },
+      "student-embed": {
+        "status": "PASS",
+        "members": 3
+      },
+      "student-graph": {
+        "status": "PASS",
+        "members": 3
+      },
+      "group": {
+        "status": "PARTIAL_UNSEALED",
+        "retained_members": 1
+      },
+      "export": {
+        "status": "NOT_RUN",
+        "retained_members": 0
+      },
+      "audit": {
+        "status": "NOT_RUN",
+        "retained_members": 0
+      }
+    },
+    "oral-noGLM": {
+      "admit": {
+        "status": "PASS",
+        "members": 9
+      },
+      "teacher": {
+        "status": "PASS",
+        "members": 25
+      },
+      "teacher-embed": {
+        "status": "PASS",
+        "members": 3
+      },
+      "teacher-graph": {
+        "status": "PASS",
+        "members": 3
+      },
+      "pairs": {
+        "status": "PASS",
+        "members": 7
+      },
+      "student": {
+        "status": "PASS",
+        "members": 25
+      },
+      "student-embed": {
+        "status": "PASS",
+        "members": 3
+      },
+      "student-graph": {
+        "status": "PASS",
+        "members": 3
+      },
+      "group": {
+        "status": "PARTIAL_UNSEALED",
+        "retained_members": 4
+      },
+      "export": {
+        "status": "NOT_RUN",
+        "retained_members": 0
+      },
+      "audit": {
+        "status": "NOT_RUN",
+        "retained_members": 0
+      }
+    }
+  },
+  "new_fits_completed": 3,
+  "identical_learning_instances_reused": 3,
+  "completed_native_embedding_and_graph_chains": 6,
+  "group_stages_failed": 3,
+  "export_audit_stages_not_run": 6,
+  "final_target_complete": false,
+  "used_inputs_after_present": false,
+  "archive": {
+    "locator": "gs://dl-binner-archive-167650584170/e027/common-20261030T223337Z-243b8ac/e027-evidence.tar.gz#1793418361333235",
+    "binding": {
+      "bytes": 1647651568,
+      "sha256": "202c8639a1e75518c5f97a3140c24757db7a65ca1c9cc9add03ada7ea7c73102"
+    },
+    "regular_members": 1198,
+    "logical_member_bytes": 2288345245,
+    "aliases": 26,
+    "omissions": 15,
+    "every_member_verified": true,
+    "private_native_readback_verified": true,
+    "independent_Mac_download_verified": true,
+    "local_redundant_compressed_copy_released_after_verification": true,
+    "inventory_not_a_backup": true
+  },
+  "omitted_inputs": "15 exact accepted linked arrays remain at original persistent source locators; not copied or regenerated.",
+  "authoritative_evidence": "Actual completion, 24 stage seals and full native logs; legacy watchdog empty-stage tables and whole-DAG fit counter are not completion evidence.",
+  "closed_reference": "oral-reference-review.json",
+  "candidate_review": "comparison-review.json",
+  "learning_components": "learning-components-review.json",
+  "all_returned_source_files_match_executed_Git": true,
+  "sampled_native_workflow": {
+    "command": [
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/env/bin/python",
+      "-I",
+      "-B",
+      "/srv/dl_binner/repo/scripts/e027_control.py",
+      "--plan",
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/science-plan.json",
+      "--workflow"
+    ],
+    "exit_code": 1,
+    "launched_pid": 3746,
+    "peak_sampled_rss_bytes": 23664345088,
+    "rss_bytes_ceiling": 26000000000,
+    "sample_includes_coordinator": true,
+    "sampled_average_cpus": 3.2389143931304982,
+    "sampled_cpu_seconds": 56813.61,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 84951.12378954887,
+    "stop_reason": null,
+    "wall_seconds": 17540.942150400002
+  },
+  "sampled_collection": {
+    "command": [
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/env/bin/python",
+      "-I",
+      "-B",
+      "/srv/dl_binner/repo/scripts/e027_collect.py",
+      "--work",
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work",
+      "--evidence",
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/sealed-evidence",
+      "--output",
+      "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/collection",
+      "--allow-incomplete"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 601.8450618220013,
+    "peak_sampled_rss_bytes": 76570624,
+    "seconds_ceiling": 67708.25700855255,
+    "rss_bytes_ceiling": 26000000000,
+    "launched_pid": 24259,
+    "sampled_cpu_seconds": 638.28,
+    "sampled_average_cpus": 1.0605387341182082,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": true
+  },
+  "whole_run_disk": {
+    "samples": 9357,
+    "minimum_free_bytes": 32368517120,
+    "maximum_sampled_global_growth_bytes": 4213063680,
+    "scope": "Sampled whole-filesystem usage; first-allocation baseline, not exact attributable bytes"
+  },
+  "local_review_resources": {
+    "learning-E009-GLM": {
+      "command": [
+        "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+        "-I",
+        "-B",
+        "scripts/e027_learning_review.py",
+        "--unit",
+        "E009-GLM",
+        "--staged",
+        "artifacts/e027-common-information-binner/inspection-20261031/mode-E009-GLM",
+        "--verified",
+        "artifacts/e027-common-information-binner/inspection-20261031/verified",
+        "--controls",
+        "artifacts/e027-common-information-binner/inspection-20261031/controls",
+        "--features",
+        "artifacts/e011-cached-grouping-reference/restore-local/candidate/features/features.npz",
+        "--status",
+        "artifacts/e027-common-information-binner/inspection-20261031/global-status.json",
+        "--finance",
+        "artifacts/e027-common-information-binner/inspection-20261031/finance/cost-admission.json",
+        "--source",
+        "artifacts/e027-common-information-binner/inspection-20261031/source-and-stages.json",
+        "--truth-root",
+        "artifacts/e009-truth-v2/20261015/attempt-local-v2/truth-v2",
+        "--marker-clean",
+        "artifacts/e011-cached-grouping-reference/restore-local/candidate/markers/evidence.json",
+        "--output",
+        "artifacts/e027-common-information-binner/inspection-20261031/E009-GLM-learning-review.json"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 6.5725090939959045,
+      "peak_sampled_rss_bytes": 383692800,
+      "seconds_ceiling": 7891.273927927017,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 46078,
+      "sampled_cpu_seconds": 5.69,
+      "sampled_average_cpus": 0.8657272159878652,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "stage-controls": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/e027_inspection.py",
+        "--archive",
+        "artifacts/e027-common-information-binner/inspection-20261031/e027-evidence.tar.gz",
+        "--verified",
+        "artifacts/e027-common-information-binner/inspection-20261031/verified",
+        "--scope",
+        "controls",
+        "--output",
+        "artifacts/e027-common-information-binner/inspection-20261031/controls"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 11.921164136001607,
+      "peak_sampled_rss_bytes": 29806592,
+      "seconds_ceiling": 10675.095185995102,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 42084,
+      "sampled_cpu_seconds": 10.73,
+      "sampled_average_cpus": 0.9000798812588846,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "stage-E009-noGLM": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/e027_inspection.py",
+        "--archive",
+        "artifacts/e027-common-information-binner/inspection-20261031/e027-evidence.tar.gz",
+        "--verified",
+        "artifacts/e027-common-information-binner/inspection-20261031/verified",
+        "--scope",
+        "E009-noGLM",
+        "--output",
+        "artifacts/e027-common-information-binner/inspection-20261031/mode-E009-noGLM"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 12.2313308399971,
+      "peak_sampled_rss_bytes": 28278784,
+      "seconds_ceiling": 9063.19590306282,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 44231,
+      "sampled_cpu_seconds": 11.09,
+      "sampled_average_cpus": 0.9066879266919273,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "inspection-contracts-strict-r2": {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_e027_inspection.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 0.4476538039962179,
+      "peak_sampled_rss_bytes": 29229056,
+      "seconds_ceiling": 10236.069151878357,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 42544,
+      "sampled_cpu_seconds": 0.26,
+      "sampled_average_cpus": 0.5808059658579304,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "inspection-contracts": {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_e027_inspection.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 0.7722079449958983,
+      "peak_sampled_rss_bytes": 28971008,
+      "seconds_ceiling": 10701.595004796982,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 42064,
+      "sampled_cpu_seconds": 0.28,
+      "sampled_average_cpus": 0.36259663192339636,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "stage-reference": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/e027_inspection.py",
+        "--archive",
+        "artifacts/e027-common-information-binner/inspection-20261031/e027-evidence.tar.gz",
+        "--verified",
+        "artifacts/e027-common-information-binner/inspection-20261031/verified",
+        "--scope",
+        "reference",
+        "--output",
+        "artifacts/e027-common-information-binner/inspection-20261031/reference"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 12.188857215995085,
+      "peak_sampled_rss_bytes": 29814784,
+      "seconds_ceiling": 10384.528366804123,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 42374,
+      "sampled_cpu_seconds": 10.79,
+      "sampled_average_cpus": 0.8852347524295053,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "independent-reference-review": {
+      "command": [
+        "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+        "-I",
+        "-B",
+        "scripts/e027_reference_review.py",
+        "--archive",
+        "artifacts/e027-common-information-binner/inspection-20261031/e027-evidence.tar.gz",
+        "--verified",
+        "artifacts/e027-common-information-binner/inspection-20261031/verified",
+        "--controls",
+        "artifacts/e027-common-information-binner/inspection-20261031/controls",
+        "--reference",
+        "artifacts/e027-common-information-binner/inspection-20261031/reference",
+        "--features",
+        "artifacts/e024-inspection/20261028T193107Z/verified/work/rebound/features.npz",
+        "--fasta",
+        "artifacts/e014-multiview-reconstruction/model-input-v1/oral.fna",
+        "--matrix",
+        "artifacts/e024-inspection/20261028T193107Z/verified/work/combined/depth.tsv",
+        "--matrix-receipt",
+        "artifacts/e024-inspection/20261028T193107Z/verified/work/combined/depth.tsv.receipt.json",
+        "--status",
+        "artifacts/e027-common-information-binner/inspection-20261031/global-status.json",
+        "--finance",
+        "artifacts/e027-common-information-binner/inspection-20261031/finance/cost-admission.json",
+        "--source",
+        "artifacts/e027-common-information-binner/inspection-20261031/source-and-stages.json",
+        "--truth-root",
+        "artifacts/e014-multiview-reconstruction/oral-truth-origin-v1",
+        "--marker-clean",
+        "artifacts/e014-multiview-reconstruction/inspection-20261019/oral-marker-review.json",
+        "--output",
+        "artifacts/e027-common-information-binner/inspection-20261031/reference-reviewed"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 199.36545343799662,
+      "peak_sampled_rss_bytes": 2506022912,
+      "seconds_ceiling": 9719.615244865417,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 42985,
+      "sampled_cpu_seconds": 194.1,
+      "sampled_average_cpus": 0.9735889375656841,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "actual-variant-publication-contract": {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_e027_initialization_audit.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 0.6579224789966247,
+      "peak_sampled_rss_bytes": 24788992,
+      "seconds_ceiling": 8166.915190696716,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 45527,
+      "sampled_cpu_seconds": 0.28,
+      "sampled_average_cpus": 0.42558205402408283,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "all-member-verification": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/e027_inspection.py",
+        "--archive",
+        "artifacts/e027-common-information-binner/inspection-20261031/e027-evidence.tar.gz",
+        "--expected",
+        "artifacts/e027-common-information-binner/inspection-20261031/metadata/collection.json",
+        "--output",
+        "artifacts/e027-common-information-binner/inspection-20261031/verified"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 25.190522174998478,
+      "peak_sampled_rss_bytes": 26116096,
+      "seconds_ceiling": 10799.76313495636,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 41870,
+      "sampled_cpu_seconds": 23.97,
+      "sampled_average_cpus": 0.9515483574925714,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "learning-reader-contracts-r2": {
+      "command": [
+        "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import sys,unittest;sys.path.insert(0,\"tests\");v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(\"test_e027_learning_review\"));sys.exit(not v.wasSuccessful())"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 2.1745508660023916,
+      "peak_sampled_rss_bytes": 31350784,
+      "seconds_ceiling": 8582.988950014114,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 44698,
+      "sampled_cpu_seconds": 0.89,
+      "sampled_average_cpus": 0.4092799179428444,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "learning-oral-noGLM-r3": {
+      "command": [
+        "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+        "-I",
+        "-B",
+        "scripts/e027_learning_review.py",
+        "--unit",
+        "oral-noGLM",
+        "--staged",
+        "artifacts/e027-common-information-binner/inspection-20261031/mode-oral-noGLM",
+        "--verified",
+        "artifacts/e027-common-information-binner/inspection-20261031/verified",
+        "--controls",
+        "artifacts/e027-common-information-binner/inspection-20261031/controls",
+        "--features",
+        "artifacts/e024-inspection/20261028T193107Z/verified/work/rebound/features.npz",
+        "--status",
+        "artifacts/e027-common-information-binner/inspection-20261031/global-status.json",
+        "--finance",
+        "artifacts/e027-common-information-binner/inspection-20261031/finance/cost-admission.json",
+        "--source",
+        "artifacts/e027-common-information-binner/inspection-20261031/source-and-stages.json",
+        "--truth-root",
+        "artifacts/e014-multiview-reconstruction/oral-truth-origin-v1",
+        "--marker-clean",
+        "artifacts/e014-multiview-reconstruction/inspection-20261019/oral-marker-review.json",
+        "--output",
+        "artifacts/e027-common-information-binner/inspection-20261031/oral-noGLM-learning-review.json"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 257.8236368039943,
+      "peak_sampled_rss_bytes": 6410039296,
+      "seconds_ceiling": 6755.952805757523,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 47612,
+      "sampled_cpu_seconds": 260.82,
+      "sampled_average_cpus": 1.0116217552166624,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "initialization-reproducer-r2": {
+      "command": [
+        "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+        "-I",
+        "-B",
+        "scripts/e027_initialization_audit.py",
+        "--output",
+        "artifacts/e027-common-information-binner/inspection-20261031/initialization-reproducer-r2/result.json"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 119.70486328100378,
+      "peak_sampled_rss_bytes": 252182528,
+      "seconds_ceiling": 8165.646164894104,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 45545,
+      "sampled_cpu_seconds": 90.62,
+      "sampled_average_cpus": 0.757028557705898,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "real-reference-reader-contracts": {
+      "command": [
+        "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import sys,unittest;sys.path.insert(0,\"tests\");v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(\"test_e027_reference_review\"));sys.exit(not v.wasSuccessful())"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 1.3192479130011634,
+      "peak_sampled_rss_bytes": 31211520,
+      "seconds_ceiling": 10050.594988822937,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 42738,
+      "sampled_cpu_seconds": 0.76,
+      "sampled_average_cpus": 0.5760858080655002,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "new-learning-reader-contracts": {
+      "command": [
+        "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import sys,unittest;sys.path.insert(0,\"tests\");v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(\"test_e027_learning_review\"));sys.exit(not v.wasSuccessful())"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 0.7278169199998956,
+      "peak_sampled_rss_bytes": 28397568,
+      "seconds_ceiling": 9064.201531887054,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 44223,
+      "sampled_cpu_seconds": 0.6,
+      "sampled_average_cpus": 0.8243831429476606,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "stage-E009-GLM": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/e027_inspection.py",
+        "--archive",
+        "artifacts/e027-common-information-binner/inspection-20261031/e027-evidence.tar.gz",
+        "--verified",
+        "artifacts/e027-common-information-binner/inspection-20261031/verified",
+        "--scope",
+        "E009-GLM",
+        "--output",
+        "artifacts/e027-common-information-binner/inspection-20261031/mode-E009-GLM"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 29.535124817994074,
+      "peak_sampled_rss_bytes": 28266496,
+      "seconds_ceiling": 7921.304575920105,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 45979,
+      "sampled_cpu_seconds": 21.49,
+      "sampled_average_cpus": 0.7276082336685221,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "learning-E009-noGLM-r2": {
+      "command": [
+        "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+        "-I",
+        "-B",
+        "scripts/e027_learning_review.py",
+        "--unit",
+        "E009-noGLM",
+        "--staged",
+        "artifacts/e027-common-information-binner/inspection-20261031/mode-E009-noGLM",
+        "--verified",
+        "artifacts/e027-common-information-binner/inspection-20261031/verified",
+        "--controls",
+        "artifacts/e027-common-information-binner/inspection-20261031/controls",
+        "--features",
+        "artifacts/e011-cached-grouping-reference/restore-local/candidate/features/features.npz",
+        "--status",
+        "artifacts/e027-common-information-binner/inspection-20261031/global-status.json",
+        "--finance",
+        "artifacts/e027-common-information-binner/inspection-20261031/finance/cost-admission.json",
+        "--source",
+        "artifacts/e027-common-information-binner/inspection-20261031/source-and-stages.json",
+        "--truth-root",
+        "artifacts/e009-truth-v2/20261015/attempt-local-v2/truth-v2",
+        "--marker-clean",
+        "artifacts/e011-cached-grouping-reference/restore-local/candidate/markers/evidence.json",
+        "--output",
+        "artifacts/e027-common-information-binner/inspection-20261031/E009-noGLM-learning-review.json"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 55.217183630004,
+      "peak_sampled_rss_bytes": 1374932992,
+      "seconds_ceiling": 8579.938651800156,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 44739,
+      "sampled_cpu_seconds": 44.58,
+      "sampled_average_cpus": 0.8073573672050895,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "stage-oral-noGLM": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/e027_inspection.py",
+        "--archive",
+        "artifacts/e027-common-information-binner/inspection-20261031/e027-evidence.tar.gz",
+        "--verified",
+        "artifacts/e027-common-information-binner/inspection-20261031/verified",
+        "--scope",
+        "oral-noGLM",
+        "--output",
+        "artifacts/e027-common-information-binner/inspection-20261031/mode-oral-noGLM"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 38.92622253300215,
+      "peak_sampled_rss_bytes": 31440896,
+      "seconds_ceiling": 7612.836207866669,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 46240,
+      "sampled_cpu_seconds": 28.56,
+      "sampled_average_cpus": 0.7336956463162195,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "all-inspection-contracts-r1": {
+      "command": [
+        "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_e027_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 1.0417750699998578,
+      "peak_sampled_rss_bytes": 40026112,
+      "seconds_ceiling": 6243.982617855072,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 49054,
+      "sampled_cpu_seconds": 0.91,
+      "sampled_average_cpus": 0.8735090963542872,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "inspection-contracts-r1": {
+      "command": [
+        "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_e027_inspection.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 0.7094178199986345,
+      "peak_sampled_rss_bytes": 23711744,
+      "seconds_ceiling": 6268.18635392189,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 49029,
+      "sampled_cpu_seconds": 0.23,
+      "sampled_average_cpus": 0.324209504633592,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    }
+  },
+  "local_clock": {
+    "start_epoch": 1793457041.263399,
+    "deadline_epoch": 1793467841.263399,
+    "threads": 4,
+    "sampled_RSS_bytes": 8000000000,
+    "extra_owned_bytes": 4294967296,
+    "free_reserve_bytes": 6442450944,
+    "scope": "One new three-hour local inspection/engineering/diagnostic clock; no fits, score tuning, acquisition or paid compute. One arm materialized at a time, max3GiB; compressed archive remains exact and protected."
+  },
+  "raw_evidence_root": "artifacts/e027-common-information-binner/inspection-20261031",
+  "bindings": {
+    "control-plane/provider.json": {
+      "bytes": 33097,
+      "sha256": "322ffa129caa0f1661d8a3b2e2adfd90e710c1a2156fad489a74fb924c832916"
+    },
+    "control-plane/guest-status.json": {
+      "bytes": 366,
+      "sha256": "73f623222adbb226627da2e8625f478a586dcb9c0ebafeb936a906f62c772e3f"
+    },
+    "control-plane/archive-object.json": {
+      "bytes": 654,
+      "sha256": "a10f7d8c79172bf0097046b9f0f9634fd9cf35c0cfd96dc81761025cb6c7a000"
+    },
+    "metadata/completion.json": {
+      "bytes": 12751,
+      "sha256": "e5851940591db8d2cc8cfc64d7b5a420c12cc7b1a8234e57b925749b341f6681"
+    },
+    "metadata/collection.json": {
+      "bytes": 10437,
+      "sha256": "297ba0c8fb4c7308df95aa5f9735301a078d94699a6a577948e2089f12b07bde"
+    },
+    "metadata/watchdog-exit.json": {
+      "bytes": 11011,
+      "sha256": "1080f9ba55e78f5323a17d50ba90bf6758f0d1920e9bb3282192929d494ced68"
+    },
+    "metadata/terminal-disk.json": {
+      "bytes": 2113,
+      "sha256": "23b704b94389b82b6bcc66296d37060cb87c003bc85fd63edc326f08b0afe56c"
+    },
+    "verified/inventory.json": {
+      "bytes": 306522,
+      "sha256": "22e55eb00695d6ca9795aabe006c41076ad94fbd4cb9d3878d547c74d0c70fcd"
+    },
+    "verified/archive-verified.json": {
+      "bytes": 10304,
+      "sha256": "e83e488128ffbfab90dacd73451b3cd7958865cb65859dc10cf7ed23f77291ac"
+    },
+    "shutdown-crosscheck.json": {
+      "bytes": 779,
+      "sha256": "bf7337c11c3c0867c64fa816a495e01a352ce6bd92782d6b971109e0b92bef5e"
+    },
+    "source-and-stages.json": {
+      "bytes": 2951,
+      "sha256": "92e036dcb85e5911e0ef76f00e05c01b2931a737c19c10d2843415739053a0d5"
+    },
+    "finance/current-prices.json": {
+      "bytes": 8003,
+      "sha256": "9d60f95c1804e0ecf83bbf12fd7d4a7f4ef74ce74dadaed488ca2afbc813d6c9"
+    },
+    "finance/cost-admission.json": {
+      "bytes": 1783,
+      "sha256": "9a1761a51cfada29b5eddb0d4a800adf176c8453662dd6784737900166c16c47"
+    },
+    "reference-reviewed/admission.json": {
+      "bytes": 1412,
+      "sha256": "55696e526a486800a7276c20292239e99eaef16e7ac944f18032f42b336a9dae"
+    },
+    "reference-reviewed/review.json": {
+      "bytes": 802295,
+      "sha256": "ab59dee93a6b11408f9e5228892d22f2486bf5fb5267d24a16b1427a90c97486"
+    },
+    "E009-noGLM-learning-review.json": {
+      "bytes": 151427,
+      "sha256": "29ad9c5998213777f699d3f7546f984c4705978929db51f02945be8040559d68"
+    },
+    "E009-GLM-learning-review.json": {
+      "bytes": 203028,
+      "sha256": "b72516d21937175c69abcb79b9d738d17d0170f106cbaf66ace73695e133d7e3"
+    },
+    "oral-noGLM-learning-review.json": {
+      "bytes": 224002,
+      "sha256": "0c703d15e066b6dc063dbd9a095fffe25be7437801e17f09c22a9a4483788b61"
+    },
+    "archive-download.json": {
+      "bytes": 546,
+      "sha256": "ba566ab9da7cbf498ba88a37a6edd81394541aee542e087314a67cce7e2164a5"
+    },
+    "archive-local-release.json": {
+      "bytes": 771,
+      "sha256": "6e80fb18dcadd425f25cb83340715d367057c8d1d9b7120c472be8a164425d2f"
+    },
+    "staging-release-ledger.json": {
+      "bytes": 3097,
+      "sha256": "f763597cdab07d0e87e5afc88eb1a505d8c31b583e49541a781b706c65e79aa1"
+    },
+    "control-plane/provider-final.json": {
+      "bytes": 33097,
+      "sha256": "322ffa129caa0f1661d8a3b2e2adfd90e710c1a2156fad489a74fb924c832916"
+    },
+    "control-plane/provider-final-command.json": {
+      "bytes": 384,
+      "sha256": "e41277ed87c1795182d7377c41bb1efb0a278b0c8453f45ca56c34524067f4f0"
+    },
+    "E009-GLM-off-on-retained-query-comparison.json": {
+      "bytes": 508,
+      "sha256": "57ef9f391011939c4567eddfc001631110b1c2d979105e05df5bc0080f8b7716"
+    }
+  },
+  "no_VM_wake_new_science_or_resource_retention_change": true,
+  "cost_record": "cost-review.json",
+  "failure_journals": "journals/README.md",
+  "current_backup": "Exact full native archive in private GCS; new compact review records committed in Git.",
+  "final_provider_check": "2026-10-31T15:54:24.270162+00:00",
+  "group_numeric_exit_receipts": "Unavailable per rule: retained unhandled ValueErrors and Snakemake nonzero-command reports prove failure; exact outer workflow exit is 1. No synthetic numeric per-rule receipts.",
+  "local_review_maximum_successful_sampled_tree_RSS_bytes": 6410039296,
+  "local_review_failures": {
+    "learning-E009-noGLM": {
+      "command.json": {
+        "bytes": 1888,
+        "sha256": "9d928e3271e84ba6be6a915b36f49741a2c3d3996a1f3c2364d5155b4c0952fe"
+      },
+      "terminal.log": {
+        "bytes": 457,
+        "sha256": "3a6aa564b1dacbf6e39c36700d8197584a4ca6de94c29505c9714a639d77ffec"
+      },
+      "byte-observations.json": {
+        "bytes": 502,
+        "sha256": "27005ae56641aafce75f1288c85078aef02618071d4591131a64825c7aa1da0b"
+      },
+      "filesystem-after.json": {
+        "bytes": 198,
+        "sha256": "6b61b8f72fa2fb373d6fa28e33c99ecae387ad624754af161c3822bb2c42f8ad"
+      }
+    },
+    "initialization-reproducer": {
+      "command.json": {
+        "bytes": 940,
+        "sha256": "9611345c47376fcc871340b0e607ece9b3a5a00b45ce25b9d3088dcd02aec23a"
+      },
+      "terminal.log": {
+        "bytes": 827,
+        "sha256": "7e65d855cbd1acdef9f941f4e70787a5841046dc1f875fd39b3aa93ae79a215b"
+      },
+      "byte-observations.json": {
+        "bytes": 6795,
+        "sha256": "85f7aabfd0839b097794b03a93d7d1994684aa2a4a2c44eca481d637135bc7ad"
+      },
+      "filesystem-after.json": {
+        "bytes": 198,
+        "sha256": "7431e1457af244f0580750859993740ec7826bff3a36116a580d40337d257fa4"
+      }
+    },
+    "learning-oral-noGLM": {
+      "command.json": {
+        "bytes": 1878,
+        "sha256": "e40fb0d14fa894061061401c1593b0febc90aef9421246629a9291f7b583c089"
+      },
+      "terminal.log": {
+        "bytes": 117,
+        "sha256": "c12dd638061c6e24965782e3f2b2ee86423cc504ff85a34c2bd2912ee6823c49"
+      },
+      "byte-observations.json": {
+        "bytes": 13364,
+        "sha256": "041ef29c684f327a14a6cbe86bc2ad2df9b8d0504ce55edb57353f111c7dcb03"
+      },
+      "filesystem-after.json": {
+        "bytes": 198,
+        "sha256": "c91576846947b439e95cce1122ff3ced67224b7b375f2e8643ad08a798071927"
+      }
+    },
+    "learning-oral-noGLM-r2": {
+      "command.json": {
+        "bytes": 1878,
+        "sha256": "7d2aca94b199c1ae9c3d8ff4c054a8bf1b00eeb02aaa12917399121c3197ff71"
+      },
+      "terminal.log": {
+        "bytes": 95,
+        "sha256": "d5f34520e5306b0a2761714231d16b19f4a19d60378808696809e077a2c3b56b"
+      },
+      "byte-observations.json": {
+        "bytes": 278,
+        "sha256": "f75cbcd2e323ba20831a837bcc058bfea12258e771a13db695c91c43e70ddd99"
+      },
+      "filesystem-after.json": {
+        "bytes": 197,
+        "sha256": "e4732d4e0a3ba1af8fedfd3d2c6d7f9cb34168aec6ea5434bda407a398b58582"
+      }
+    }
+  },
+  "local_review_staging_after": {
+    "free_bytes": 11875737600,
+    "oral_one_arm_materialization_released": true,
+    "full_private_archive_preserved": true
+  },
+  "inspection_modified_executed_source_or_native_vectors": false,
+  "global_original_VM_input_after_state": "NOT_VERIFIED_MISSING_FINAL_TARGET; closed reference and completed learning have separate explicit scoped proofs.",
+  "successful_Oral_review_minimum_free_bytes": 7299985408,
+  "successful_Oral_review_maximum_owned_bytes": 1874605805,
+  "checks": {
+    "tiny_real_and_refusal_tests": 16,
+    "all_passed": true,
+    "source_freeze_and_inherited_locks": "PASS",
+    "full_target_bin_and_population_reconciliation": "PASS",
+    "documentation": "PASS:124 documents/1759 links/85 present source fingerprints;10 optional source caches absent, not verified",
+    "diff_whitespace": "PASS"
+  }
+}

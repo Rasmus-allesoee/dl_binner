@@ -792,3 +792,25 @@ One native Oral MetaBAT2 reference supplies recoverability context. GLM-enabled 
 is a concrete next information milestone, with efficiency/exposure/native/cost and
 November 4 admission, not a product-family rejection or indefinite score trigger.
 Skin stays unscored. No hypothesis is resolved by engineering contracts alone.
+
+### October 31, 2026: E027 closed learning, failed discovery and Oral reference
+
+[E027 inspection](../../experiments/E027-common-information-binner/inspection-observed.json)
+verifies safe shutdown/collection, three completed new fits and three exact old
+learning reuses, but every candidate group fails before required exports/audits.
+The common-version and full-path GLM compatibility questions remain open; missing
+scores are not negative biological results. The [source/reproduction audit](../evidence/2026-10-31-e027-discovery-and-next-block.md)
+identifies a partial supplied seed graph that bypasses global discovery. Repair
+that consumer and finish the cached comparison with learning fixed; do not tune
+this failure into a biological score. All frozen recall/selection/truth criteria stay.
+
+The independently complete Oral MetaBAT2 reference gives 17.3260% full-reference
+provided-origin R95 / 129 target-50 / 106 target-90, versus retained E026 13.8569%
+/ 108 / 58, with 114 target gains / 77 losses. Whole-tool eligibility and mean-only
+cvExt limits remain. Oral student neighborhoods deteriorate and 27.8% of positive
+constraints have discordant provided origins: proposal precision is an unresolved
+learning question, not uniquely labeled error or a reason to drop markers.
+Prepare exact-exposure efficient Oral GLM batching alongside cached recovery;
+actual GPU and skin confirmation still need their own admissions. Preserve E023
+E009/MetaBAT2 anchors, all old failures and November 4 storage. No new job or
+confirmation acquisition occurs in inspection.

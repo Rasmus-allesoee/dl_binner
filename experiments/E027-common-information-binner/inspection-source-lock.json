@@ -1,0 +1,78 @@
+{
+  "kind": "E027 post-shutdown inspection helper/source identity, not a new scientific candidate freeze",
+  "files": {
+    "scripts/e027_inspection.py": {
+      "bytes": 13932,
+      "sha256": "2aa8c2b524e138e2d4887fedb58ab0f1f2db89e56ca525f2f76b78139b92d3c1"
+    },
+    "scripts/e027_reference_review.py": {
+      "bytes": 10838,
+      "sha256": "b0fbf2ccb60f9c68af639a508b30bce31914065f5886b09e1aa0964185fc51c3"
+    },
+    "scripts/e027_learning_review.py": {
+      "bytes": 13626,
+      "sha256": "51fad2ac3863a1a04a86b57e8f8693963540d9fc679c6350a19d410a34cf2494"
+    },
+    "scripts/e027_initialization_audit.py": {
+      "bytes": 5897,
+      "sha256": "721314378eede61b1ae5f94382be21372bbaa767b0988e02256c30ade32e82b4"
+    },
+    "tests/test_e027_inspection.py": {
+      "bytes": 8180,
+      "sha256": "da4c07073243cd2b171eff9c4c916bd6cd30b9b02429262e10ab8038f383cef0"
+    },
+    "tests/test_e027_reference_review.py": {
+      "bytes": 3181,
+      "sha256": "dfc783141b8c986d7eb71756ee6d3e2faf638bb55f95adef79226f2968fd3b15"
+    },
+    "tests/test_e027_learning_review.py": {
+      "bytes": 2420,
+      "sha256": "2bc12a823a12691790fe055f7400ec4cf66e241ce5ea67230b65f76e7eb193b6"
+    },
+    "tests/test_e027_initialization_audit.py": {
+      "bytes": 1013,
+      "sha256": "990feb7635db05c17f61f4ff83a601cd27d21d73a99e3141110d82ef07c64740"
+    }
+  },
+  "actual_checks": {
+    "real_tiny_tests": 16,
+    "combined_suite": {
+      "status": "PASS",
+      "resources": {
+        "command": [
+          "artifacts/e027-common-information-binner/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e027_*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.0417750699998578,
+        "peak_sampled_rss_bytes": 40026112,
+        "seconds_ceiling": 6243.982617855072,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 49054,
+        "sampled_cpu_seconds": 0.91,
+        "sampled_average_cpus": 0.8735090963542872,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    },
+    "native_archive_and_member_verifier": "Unchanged frozen scripts/e027_collect.py",
+    "Oral_evaluator": "Unchanged scripts/e014_oral_truth.py",
+    "secondary": "Unchanged dl_binner.density.bin_quality",
+    "old_whole_workflow_admission": "Unchanged scripts/e022_review.py; still rejects failed outer workflow",
+    "source_freeze_command": "python3: from e027_control import freeze; freeze()",
+    "source_freeze_result": "PASS including inherited E023-E026 locks"
+  },
+  "review_scope": "No fit, model re-inference, community ANN construction, score grid or prior baseline rescore",
+  "publication_contract": "Fresh immutable result paths; no journal overwrite",
+  "preserved_Mac_tolerance": true
+}

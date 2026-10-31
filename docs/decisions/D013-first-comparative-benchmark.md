@@ -1,5 +1,33 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E027 inspected failure and separately complete reference, October 31, 2026
+
+[Verified E027](../../experiments/E027-common-information-binner/inspection-observed.json)
+finishes all three new fits and exact accepted learning reuses, but all three
+candidate grouping chains fail. Shutdown/collection/byte integrity pass; recovery
+and the frozen joint biological decision remain NOT ASSESSABLE. No missing
+candidate score becomes zero or a failed biological criterion.
+
+The independently completed Oral MetaBAT2 target passes its own input/source/
+runtime/DNA/export/exit admission while global completion stays false. Its full-
+reference provided-origin R95 is 17.3260% versus retained E026 13.8569%, with
+114 target gains / 77 losses and 129/106 targets at least 50/90%. This gives useful
+headroom evidence without a matched-cutoff or component-causal claim. E023 E009
+10.4163% and retained E009 MetaBAT2 8.5493% stay frozen. All reference populations,
+N/shared policies, failures and source freezes remain.
+
+[Source audit and actual tiny reproduction](../evidence/2026-10-31-e027-discovery-and-next-block.md)
+identify a partial old-geometry warm start that bypasses global random discovery.
+Repair that consumer and complete the cached common-version/GLM compatibility
+comparison using finished learning, rather than add a model before obtaining its
+missing outcomes. Prepare exact-exposure efficient Oral GLM batching alongside
+this repair; actual GPU work needs separate current admission. Current inspection
+starts no new science. The proposed next cached $5 / six-hour execution is a new
+scope, not an extension of the failed phase; November 4 storage stays unchanged.
+An independent target admission is allowed only with all of its own contracts;
+it must never waive required contracts for an incomplete candidate.
+
+
 October 30 owner amendment: [E027](../../experiments/E027-common-information-binner/OPERATIONS.md)
 now implements the shared full-version pipeline with complete E009 GLM off/on
 information paths and measured-depth Oral no-GLM learning. Three identical accepted

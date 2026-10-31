@@ -1,0 +1,158 @@
+{
+  "kind": "Frozen E027 three-mode review with independently complete external target",
+  "phase": "common-20261030T223337Z-243b8ac",
+  "execution": "FAILED",
+  "disposition": "NOT_ASSESSABLE",
+  "criteria_file": "protocol.json",
+  "keep_modify_abandon_criteria_unchanged": true,
+  "criteria_not_evaluated_reason": "All three required new grouping/export/audit chains failed. No new candidate bin recovery exists; operational failure is not biological ABANDON.",
+  "arms": {
+    "E009-noGLM": {
+      "status": "NOT_ASSESSABLE_MISSING_GROUP_EXPORT_AUDIT",
+      "weighted_R95": null,
+      "target50": null,
+      "target90": null,
+      "partitions": {
+        "bootstrap-parent": null,
+        "bootstrap-post": null,
+        "student-parent": null,
+        "student-post": null
+      },
+      "reason": "Missing native neighbor proposal; no widening/fallback",
+      "full_axes": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ],
+        "core_rows": 9812
+      }
+    },
+    "E009-GLM": {
+      "status": "NOT_ASSESSABLE_MISSING_GROUP_EXPORT_AUDIT",
+      "weighted_R95": null,
+      "target50": null,
+      "target90": null,
+      "partitions": {
+        "bootstrap-parent": null,
+        "bootstrap-post": null,
+        "student-parent": null,
+        "student-post": null
+      },
+      "reason": "Missing native neighbor proposal; no widening/fallback",
+      "full_axes": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ],
+        "core_rows": 9812
+      }
+    },
+    "oral-noGLM": {
+      "status": "NOT_ASSESSABLE_MISSING_GROUP_EXPORT_AUDIT",
+      "weighted_R95": null,
+      "target50": null,
+      "target90": null,
+      "partitions": {
+        "bootstrap-parent": null,
+        "bootstrap-post": null,
+        "student-parent": null,
+        "student-post": null
+      },
+      "reason": "Graded final recall below frozen 0.90; evidence retained, no auto widening",
+      "full_axes": {
+        "rows": 1286547,
+        "bp": 1669981123,
+        "eligible": 508763,
+        "samples": [
+          "oral_sample_6",
+          "oral_sample_7",
+          "oral_sample_8",
+          "oral_sample_13",
+          "oral_sample_14",
+          "oral_sample_15",
+          "oral_sample_16",
+          "oral_sample_17",
+          "oral_sample_18",
+          "oral_sample_19"
+        ],
+        "core_rows": 60211
+      }
+    }
+  },
+  "reference": {
+    "status": "PASS_INDEPENDENT_COMPLETED_TARGET",
+    "record": "oral-reference-review.json",
+    "weighted_R95": 0.17326008915780214,
+    "target50": 129,
+    "target90": 106,
+    "full_reference_targets": 799,
+    "full_reference_bp": 2083072211,
+    "global_completion_still_false": true
+  },
+  "retained_anchors": {
+    "E009_E023": {
+      "R95": 0.1041634228737078,
+      "target50": 19,
+      "target90": 9
+    },
+    "E009_MetaBAT2": {
+      "R95": 0.08549276749480661,
+      "target50": 16,
+      "target90": 5
+    },
+    "oral_E026": {
+      "R95": 0.1385692600936915,
+      "target50": 108,
+      "target90": 58
+    }
+  },
+  "new_E009_candidate_beside_E023_10_4163_and_MetaBAT2_8_5493": "Unavailable, not zero",
+  "recovery_parent_post_GLM_interaction": "Unavailable until all three complete downstream chains pass. Matched cached-neighbor diagnostics in learning-components-review are not recovery.",
+  "truth_policy": {
+    "E009": "Admitted conservative v2, 156 targets / 554661890 bp, 3.3034% N quarantine",
+    "oral": "Provided-origin oracle, 799 targets / 2083072211 bp; known-shared sensitivity separate, not comprehensive uniqueness"
+  },
+  "all_DNA_unknown_non_target_short_marker_negative_excluded_unassigned_preserved": true,
+  "old_baselines_fit_or_scored_again": false,
+  "per_target_reference_table": "oral-metabat2-targets.tsv",
+  "secondary_reference_table": "oral-metabat2-bin-quality.tsv",
+  "secondary_not_formal_MIMAG": true,
+  "next_decision": "Cached global-discovery repair and completion, with exact-exposure Oral GLM preparation; no larger learner or score grid before resolving this blocked consumer.",
+  "confirmation": "Skin remains unscored, no acquisition; source/genome/replicon/molecule/host/circular/taxonomy/overlap/ambiguity/unique-vs-origin/depth/protocol/cost/retention admissions remain.",
+  "retained_summary_inputs": {
+    "experiments/E026-calibrated-evidence-fusion/comparison-targets.tsv": {
+      "bytes": 67850,
+      "sha256": "dba8d5979e07c7d9362a78decf3a701074e79c43aa098c77a2986428e2e12fb1"
+    },
+    "experiments/E022-marker-informed-learning/comparison-review.json": {
+      "bytes": 369410,
+      "sha256": "ee44befc007aa5fc9bae41a498c08850de2d5ec314a7ad641028d601f975ad2f"
+    },
+    "experiments/E027-common-information-binner/protocol.json": {
+      "bytes": 5680,
+      "sha256": "d0688b7b9ee2b59c851072098a79f2e109e5da005f4440e11fb61781ed82fd17"
+    }
+  }
+}

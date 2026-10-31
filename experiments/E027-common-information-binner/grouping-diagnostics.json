@@ -1,0 +1,229 @@
+{
+  "kind": "E027 failed grouping mechanism audit",
+  "phase": "common-20261030T223337Z-243b8ac",
+  "failures": {
+    "E009-noGLM": {
+      "failed_role": "student",
+      "error": "Missing native neighbor proposal; no widening/fallback",
+      "teacher_partial_completed": true,
+      "teacher_recall": 0.9992592592592593,
+      "proposal_bad_row_census_retained": false
+    },
+    "E009-GLM": {
+      "failed_role": "teacher",
+      "error": "Missing native neighbor proposal; no widening/fallback",
+      "student_grouping_attempted": false,
+      "proposal_bad_row_census_retained": false
+    },
+    "oral-noGLM": {
+      "failed_role": "teacher",
+      "error": "Graded final recall below frozen 0.90; evidence retained, no auto widening",
+      "student_grouping_attempted": false,
+      "retained_recall": {
+        "overall": 0.8851190476190476,
+        "strata": {
+          "long": 0.9895833333333334,
+          "measured_zero_depth": 0.6104166666666667,
+          "positive_depth": 0.9979166666666667,
+          "short": 0.9104166666666667
+        },
+        "status": "FAILED_RECALL_GATE"
+      }
+    }
+  },
+  "executed_initialization": {
+    "discovery_width": 61,
+    "self_plus_native_neighbors": 31,
+    "missing_initial_slots": 30,
+    "tree_init": false,
+    "supplied_graph_bypasses_library_random_fill": true,
+    "old_geometry_can_have_closed_seed_components": true
+  },
+  "source_interpretation": "Partial old-geometry warm start without global discovery is an implementation/design defect. Tiny reproduction confirms one failure mode, not a full native causal proof or a biological recovery result.",
+  "tiny_real_library_reproduction": {
+    "kind": "Tiny source-grounded initialization reproduction, no community outcomes",
+    "audit_script": {
+      "bytes": 5897,
+      "sha256": "721314378eede61b1ae5f94382be21372bbaa767b0988e02256c30ade32e82b4"
+    },
+    "fixture_rows": 256,
+    "isolated_seed_components": 8,
+    "seed_component_size": 32,
+    "executed_known_initial_candidates": 31,
+    "discovery_width": 61,
+    "retained_width": 30,
+    "numerical_threads": 4,
+    "library": "0.5.13",
+    "library_source": {
+      "bytes": 83456,
+      "sha256": "6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521"
+    },
+    "frozen_distance_source": {
+      "bytes": 20485,
+      "sha256": "4a578b351f641fd43c39a571c8eb7aa19cf295926300eead67fb5b48a2cab83b"
+    },
+    "exposure_or_model_changed": false,
+    "native_vectors_or_graph_changed": false,
+    "outcomes": {
+      "executed_partial_native": {
+        "missing_entries": 7424,
+        "rows_with_missing": 256,
+        "would_pass_executed_missing_candidate_gate": false,
+        "exact_tiny_recall": 1.0,
+        "warning": [
+          "Failed to correctly find n_neighbors for some samples. Results may be less than ideal. Try re-running with different parameters."
+        ],
+        "caller_init_unchanged": true,
+        "wall_seconds": 36.4317148370028
+      },
+      "prospective_complete_global": {
+        "missing_entries": 0,
+        "rows_with_missing": 0,
+        "would_pass_executed_missing_candidate_gate": true,
+        "exact_tiny_recall": 1.0,
+        "warning": [],
+        "caller_init_unchanged": true,
+        "wall_seconds": 27.359293111003353
+      }
+    },
+    "status": "PASS_REPRODUCTION_AND_ONE_FEASIBILITY_EXAMPLE",
+    "limitation": "One synthetic fixture; no community recall, biological recovery or optimality claim. Native failed E009 proposal arrays were not persisted, so their exact missing-row census remains unavailable."
+  },
+  "community_search_rebuilt_in_inspection": false,
+  "frozen_gate_or_numerical_tolerance_changed": false,
+  "learning_diagnostic_record": "learning-components-review.json",
+  "Oral_new_pair_origin_diagnostic": {
+    "positive_same_provided_origin": 9485,
+    "positive_different_provided_origin": 3657,
+    "positive_different_fraction": 0.2782681479226906,
+    "negative_same_provided_origin": 0,
+    "negative_different_provided_origin": 1644,
+    "interpretation": "Discordant provided origins, not exhaustive unique-source false-positive labels. Marker presence, reciprocal teacher neighbors and global near quantiles do not prove same genome. No thresholds or pairs changed."
+  },
+  "next_decision": "Repair global joint-search discovery, preserve all learning, finish cached common-version comparison; prepare exact-exposure Oral GLM batching alongside it. No new science job in this inspection.",
+  "primary_sources": [
+    "https://github.com/lmcinnes/pynndescent/blob/master/pynndescent/pynndescent_.py",
+    "https://pynndescent.readthedocs.io/en/stable/api.html"
+  ],
+  "new_learning_target_neighborhood_depth_length": {
+    "E009-noGLM": {
+      "student": {
+        "measured_positive_depth|all": {
+          "queries": 25543,
+          "query_bp": 88261843,
+          "same": 0.7153270954860431,
+          "bp_weighted": 0.8175921298176378
+        },
+        "measured_positive_depth|long_ge2500": {
+          "queries": 4087,
+          "query_bp": 67298425,
+          "same": 0.7642769757768534,
+          "bp_weighted": 0.8529871330569772
+        },
+        "measured_positive_depth|short_lt2500": {
+          "queries": 21456,
+          "query_bp": 20963418,
+          "same": 0.7060029828486204,
+          "bp_weighted": 0.703964286739881
+        },
+        "measured_all_zero|all": {
+          "queries": 0,
+          "query_bp": 0,
+          "same": null,
+          "bp_weighted": null
+        },
+        "measured_all_zero|long_ge2500": {
+          "queries": 0,
+          "query_bp": 0,
+          "same": null,
+          "bp_weighted": null
+        },
+        "measured_all_zero|short_lt2500": {
+          "queries": 0,
+          "query_bp": 0,
+          "same": null,
+          "bp_weighted": null
+        }
+      }
+    },
+    "oral-noGLM": {
+      "teacher": {
+        "measured_positive_depth|all": {
+          "queries": 317196,
+          "query_bp": 1211883872,
+          "same": 0.42264530448051046,
+          "bp_weighted": 0.3726373199890224
+        },
+        "measured_positive_depth|long_ge2500": {
+          "queries": 45942,
+          "query_bp": 942930535,
+          "same": 0.5616603543598451,
+          "bp_weighted": 0.35764299477267397
+        },
+        "measured_positive_depth|short_lt2500": {
+          "queries": 271254,
+          "query_bp": 268953337,
+          "same": 0.39910047409439126,
+          "bp_weighted": 0.4252063167373893
+        },
+        "measured_all_zero|all": {
+          "queries": 191567,
+          "query_bp": 231943792,
+          "same": 0.061398883941388656,
+          "bp_weighted": 0.08289896372824679
+        },
+        "measured_all_zero|long_ge2500": {
+          "queries": 14269,
+          "query_bp": 65915432,
+          "same": 0.12369472282570608,
+          "bp_weighted": 0.14232049029125682
+        },
+        "measured_all_zero|short_lt2500": {
+          "queries": 177298,
+          "query_bp": 166028360,
+          "same": 0.05638529481438031,
+          "bp_weighted": 0.05930783993770714
+        }
+      },
+      "student": {
+        "measured_positive_depth|all": {
+          "queries": 317196,
+          "query_bp": 1211883872,
+          "same": 0.39657751043518835,
+          "bp_weighted": 0.3594161898377009
+        },
+        "measured_positive_depth|long_ge2500": {
+          "queries": 45942,
+          "query_bp": 942930535,
+          "same": 0.5431892386051979,
+          "bp_weighted": 0.34806903585957155
+        },
+        "measured_positive_depth|short_lt2500": {
+          "queries": 271254,
+          "query_bp": 268953337,
+          "same": 0.3717460387680919,
+          "bp_weighted": 0.39919847359990196
+        },
+        "measured_all_zero|all": {
+          "queries": 191567,
+          "query_bp": 231943792,
+          "same": 0.04954715582537702,
+          "bp_weighted": 0.06768712309402956
+        },
+        "measured_all_zero|long_ge2500": {
+          "queries": 14269,
+          "query_bp": 65915432,
+          "same": 0.09926413904267993,
+          "bp_weighted": 0.117717717453479
+        },
+        "measured_all_zero|short_lt2500": {
+          "queries": 177298,
+          "query_bp": 166028360,
+          "same": 0.04554591704362147,
+          "bp_weighted": 0.047824322302527006
+        }
+      }
+    }
+  },
+  "library_source_evidence_scope": "Tiny reproduction binds and executes Mac PyNNDescent 0.5.13 source; native inventory confirms version/import origin, not a whole dependency-source audit. Exact native failed E009 proposals are unavailable. Bind/test actual Linux discovery source before the repair."
+}

@@ -1,11 +1,67 @@
 # E027 common full-version binner operations
 
-October 30, 2026. Local and all ten native gates passed; the comparison is running. No community result is
-claimed. The owner authorized conditional direct execution in this task; no new
-execution-approval exchange is required if every gate passes. This supersedes
-E026's older preparation-only/no-external next prompt for this block.
+October 31, 2026. **Candidate workflow FAILED; independently TERMINATED.**
+The [inspection receipt](inspection-observed.json), [comparison review](comparison-review.json),
+[learning-component audit](learning-components-review.json) and [cost ledger](cost-review.json)
+supersede the preserved October 30 launch snapshot below. Exact executed science
+source and every old failed journal remain immutable.
 
-## Current native phase
+## Verified stopped outcome
+
+Phase `common-20261030T223337Z-243b8ac`: all ten native gates pass. Control-plane,
+guest/private completion hash, intended boot/process exit watcher, archive/member/
+alias verification and collection/upload/readbacks agree. Workflow exit **1**;
+collection exit **0**. All three genuine new fits finish, plus three exact learning
+reuses and all six native reload/embedding/learner-graph chains. Each mode completes
+eight sealed stages. All three group stages fail; all six export/audit stages,
+final target and global `used-inputs-after.json` are absent. The logs retain
+unhandled group exceptions and Snakemake nonzero status, not a separate numeric
+exit receipt for each group. The outer workflow code is retained exactly.
+The driver's zero completed-fit counter is all-or-nothing and does not erase
+complete fit histories. Empty legacy watchdog stage tables are not authoritative.
+
+The [candidate disposition](comparison-review.json) is **NOT ASSESSABLE**. No
+candidate R95, parent/post gain or GLM recovery compatibility is claimed. Keep
+E023 E009 **10.4163%**, retained E009 MetaBAT2 **8.5493%** and E026 Oral **13.8569%**
+frozen. Missing new scores are null, not zero; partial teacher partitions remain
+unadmitted failure evidence. Original Mac inference allclose failure/tolerance
+remain separate from successful native reload and byte/geometry review.
+
+The independently complete [Oral MetaBAT2 target](oral-reference-review.json)
+passes its own closed input/source/DNA/exit/export admission while global
+completion stays false. Full provided-origin R95 **17.3260%**, target-50 **129**,
+target-90 **106**; versus E026 +3.4691 percentage points, 114 target gains / 77
+losses. [All target rows](oral-metabat2-targets.tsv) and [secondary bin summaries](oral-metabat2-bin-quality.tsv)
+remain reusable. Native main/recruitment cutoffs 2,500/1,000 bp and mean-only
+`cvExt` assumptions are explicit; the log does not resolve every unassigned row's
+coverage-filter status. Threshold HQ/MQ/LQ counts 106/29/48, plus 34 high-impurity/
+unresolved bins, are not formal MIMAG HQ. Full 799-reference denominator and
+separate known-shared sensitivity are unchanged.
+
+[Grouping source/reproduction](grouping-diagnostics.json) identifies a partial
+old-geometry seed graph without global discovery. E009 modes refuse missing
+proposals. Oral teacher recall fails the unchanged 0.90 gate (0.8851 overall /
+0.6104 measured-zero; positive-depth 0.9979). Real-library disconnected fixtures
+reproduce underfilled proposals; one complete global seed works on tiny data,
+without proving native recall. The [decision/source audit](../../docs/evidence/2026-10-31-e027-discovery-and-next-block.md)
+weighs architecture, proposal reliability, more data and Oral GLM alternatives.
+
+Actual E2 allocation **5 h 16 min 23.667 s**, workflow **4 h 52 min 20.942 s**,
+23.664 GB sampled tree peak; whole-run sampled growth 3.924 GiB / minimum free
+30.146 GiB. Priced compute/IP $1.43984, approved overlapping PD $0.22114, export
+upper $0.18414, GCS $0.00384 and $0.01 small-operations allowance: **$1.85895 gross
+estimate**, not invoice or credit-delta attribution. Fresh Welcome DKK 1,728.07
+Available / 88%, January 12, 2027 expiry; net displayed zero, $35 delayed reserve.
+Current all-version storage week $7.82275 < original $8. **November 4, 00:00
+Copenhagen** remains the boundary; stopped original disks still cost ~$31.20 per
+pricing month. No VM wake, science replay, resource or retention change occurred.
+A local free-space refusal and reviewer schema/publication failures were preserved;
+verified duplicate staging was released and the unchanged guarded Oral review passed.
+The full native archive remains protected in exact private GCS generation
+`1793418361333235`; a manifest alone is not the backup.
+
+## Preserved October 30 launch snapshot
+
 
 [Native observation](native-observed.json) records `common-20261030T223337Z-243b8ac`,
 exact science source `243b8ac`. The existing VM started at 22:33:57.843 UTC
@@ -180,7 +236,7 @@ Skin remains unscored, with source/genome/replicon/molecule/host/circular/taxono
 near/reverse/pretraining overlap, competitive ambiguity, unique-versus-origin truth,
 genuine depth if claimed, untouched protocol and separate cost/retention admissions.
 
-## Exact following prompt
+## Preserved inspection prompt, executed October 31
 
 Our goal is substantially closing the recovery gap with one general-purpose
 binner whose intended main GLM path is retained. Read AGENTS, PROJECT_INTENT,
@@ -241,3 +297,97 @@ Reused checkpoints retain their original learning times and histories. Those are
 historical measurements, not new E027 compute. Price this phase from its actual
 control-plane allocation; use its rule benchmarks for new fits, verification,
 hardlink admission and grouping separately.
+
+
+## Exact following prompt
+
+Our goal is substantially closing the recovery gap with one general-purpose
+binner whose intended main GLM mode is retained. Read AGENTS, PROJECT_INTENT,
+STATE/CLOUD, D013/D015 and E027's inspected failure, learning/reference reviews,
+grouping/source reproduction, frozen design/protocol/criteria, source/reuse locks,
+Oral GLM milestone and operations. Preserve dev3/dev4/dev5, all accepted E009–E027
+inputs, truth, learning, native vectors/graphs, outputs, freezes and failed
+journals. Keep E023 E009 10.4163% R95 and retained E009 MetaBAT2 8.5493%, E026 Oral
+13.8569% and independently admitted E027 Oral MetaBAT2 17.3260% as frozen context.
+Use a new descriptive branch without a codex/ prefix.
+
+Implement and locally test one cached global-discovery repair and common-version
+completion block. Reuse the six completed E027 teacher/student learning instances,
+exact native embeddings/30-neighbor learner graphs, transforms, pairs and marker
+caches. Do not retrain, redetect, rebuild learner graphs, rerun MetaBAT2 or alter
+DNA/views/depth. Prospectively freeze one source-blind complete ANN initialization
+rule justified by the pinned PyNNDescent path and disconnected/availability
+fixtures; retain the joint metric/weights, selected full population, seed and
+0.90 overall-and-every-populated-stratum recall gate, forest/selection/refinement,
+whole-parent alternatives and complete export policy. Save compact invalid-row/
+ID/candidate-count/source and recall evidence before every refusal. Keep the old
+partial-initialization failures intact; the changed discovery treatment gets a
+new source/policy receipt, not a rewritten E027 success.
+
+Exercise real tiny disconnected, tie, short and measured-zero search fixtures;
+strict restore/corruption/refusal, exact cache/source/axes, actual Linux ANN source
+identity, unit geometry, forest/
+selection/marker/export/DNA and installed isolated Linux runtime contracts. Preload
+and atomically publish commands. Require all six new joint retrieval caches and
+independent recall proofs to pass before new bin construction/export. No truth K,
+score grid, biological threshold changes or hidden GLM teacher in no-GLM mode.
+Preserve all short, marker-negative, zero-depth, unknown/non-target, excluded and
+unassigned DNA. Separate successful native exact reload from the unchanged failed
+Mac inference allclose contract.
+
+I authorize a new proposed $5 gross / six-cumulative-hour cached-only comparison
+if fresh signed-in Welcome balance/scope/expiry, delayed usage, current applicable
+prices/product coverage, original retention and measured complete headroom pass.
+Use only the existing E2-standard-8/32 GiB and original 30/300 GiB disks; four
+numerical threads, 26 GB sampled tree RSS, 25 GiB free reserve, 4 GiB extra space,
+2 GiB compressed return and 6.25-hour provider STOP. Assess full setup/verification,
+six retrieval/selection/export chains, collection/readback and WAN/local staging;
+run one label-free native throughput/space admission before release. Standing
+owner direction permits justified reasonable fully credit-covered runtime/cost
+revisions with recorded headroom and synchronized shutdown, not scientific
+weakening or unclear coverage. No real-money charges, provisioning, resize,
+acquisition, mapping, new external tool, learner change or retention extension.
+The hard boundary remains November 4, 00:00 Copenhagen; do not start if the
+complete run/collection cannot fit it. Old E027 clock/budget do not carry over.
+
+Push the exact clean branch from Mac, fetch read-only on VM, verify and reuse
+passed runtime/artifact members without reinstall/recopy/fitting fallback. Arm
+and test a fresh current-boot/process held-parent exit watcher and independent
+provider STOP before release. Debug recoverable operational failures with new
+recorded attempts and verified reuse inside the admitted clock/budget, preserving
+all evidence. Do not automatically loosen failed recall or science gates. For
+healthy long work verify real progress and supervision, wait a few minutes and
+report stage/logs; follow short work through collection, independent TERMINATED
+and local review. Preserve successful closed stages without silently repeating
+accepted science.
+
+After shutdown, verify archive/member/alias/omission/source/input-after bytes
+before frozen conservative E009 v2 and separately named Oral provided-origin/
+known-shared diagnostics on only new partitions. Reuse old learning/recovery and
+external summaries without rescoring. Retain full 156/799 reference denominators,
+3.3034% E009 N quarantine, all length/origin/eligibility/marker/depth/unassigned
+populations, complete target gains/losses and secondary threshold HQ/MQ/LQ, not
+formal MIMAG HQ. Compare teacher/student and parent/post in every mode, common
+no-GLM across communities and E009 GLM off/on including its teachers/proposals.
+Keep original biological criteria unchanged; the full comparison, not a failed
+consumer, determines its scoped disposition. Price actual allocation separately
+from sampled CPU and overlapping storage; do not attribute credit deltas as invoices.
+
+In parallel, locally prepare/test exact-exposure batched Oral GLM extraction and
+freeze its native numerical/throughput admission protocol. Preserve the selected
+parent/crop/strand/chunk/pooling exposure; do not substitute parent vectors,
+raise cutoffs or select genomes from truth to claim a free speedup. Distinguish
+mocked CPU adapters from actual GPU numerical/throughput contracts. Give a concrete
+next GPU admission/cost/storage schedule; this prompt does not authorize GPU
+provisioning/extraction. Do not postpone this preparation pending another small
+recovery threshold. Keep Oral proposal-origin discordance as a later learning
+uncertainty, not permission to tune this fixed comparison.
+
+Keep skin unscored. Reuse its admitted E021 source-origin bytes and frozen E023
+610-target / 313 known-Oral-overlap / 297 other-genome protocol; do not reacquire
+DNA or repeat closed origin checks. Keep the remaining biological source/genome/
+replicon/molecule/host/circular/taxonomy, near/reverse/pretraining overlap, ambiguity/
+unique-versus-origin, depth, actual evaluator, protocol, cost and retention
+dependencies visible. Update records, relevant checks and commit with what changed/why. Report
+results/limits, costs/resources, one strongest next decision and exact following
+prompt, including the separate storage decision needed before November 4.

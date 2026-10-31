@@ -1,30 +1,58 @@
 # Google Cloud workspace operations
 
-**October 30 E027 RUNNING, supervised:** the new owner-authorized common-version comparison
-includes E009 GLM off/on and Oral no-GLM with actual ten-depth learning plus one
-native Oral MetaBAT2 reference. [E027 operations](../experiments/E027-common-information-binner/OPERATIONS.md)
-owns actual status. [Native receipt](../experiments/E027-common-information-binner/native-observed.json)
-records phase `common-20261030T223337Z-243b8ac`, source `243b8ac`,
-all ten passing Linux gates and release. Original E2 started 22:33:57.843 UTC;
-provider STOP October 31, 22:48:57 UTC (23:48:57 Copenhagen). The native Oral
-MetaBAT reference exited 0 with 217 bins and complete-DNA export; E009 no-GLM
-student training is active. Final collection/shutdown and quality remain unverified.
-Three exact accepted E009 learning instances are verified/reused, three fits are
-new; all mode teacher/pair availability is declared. Current planning envelope
-24 hours / 24.25-hour STOP / $15 gross, full conservative quote $10.376; no resources
-or retention expanded. Fresh signed-in Welcome credit DKK 1,741.38 Available / 88%,
-January 12 expiry, Certain usage/net pricing, paid account, rounded cost/savings
-DKK 232 / net 0; usage can lag >24 hours, reserve $35. Fresh Catalog/account/project/
-resource/quota reads pass ordinary CPU/PD/GCS/IP/network coverage. All 198 Standard
-object versions total 66,646,333,937 bytes, soft-deleted zero; original storage
-week plus 3 GiB is conservatively $7.8295 < $8. **November 4, 00:00 Copenhagen**
-remains; stopped original disks still ~$31.20/month. Native headroom 34.07 GiB at
-start (33 GiB required), complete numerical Python 3.10.15 / workflow Python
-3.12.10, full data/reuse readers and current-boot watcher all passed. Full native
-six-fit-equivalent forecast 11.16 hours fits the unchanged 24-hour clock. No GPU,
-mapping, new acquisition, resize or provisioning. Follow the exact inspection
-prompt after verified shutdown; do not infer completion from a stop.
+**October 31 E027 FAILED; independently TERMINATED.**
+[Inspection](../experiments/E027-common-information-binner/inspection-observed.json)
+supersedes the unchanged dated native RUNNING receipt for
+`common-20261030T223337Z-243b8ac`, source `243b8ac`. Control-plane stop, guest/private
+completion hash, boot/PID/start-ticks/command watcher identity, all ten native gates,
+all archive/member/alias/omission contracts and upload/readbacks pass. Workflow
+exit 1, collection exit 0. Three new fits and three exact accepted reuses finish;
+all three grouping stages fail; export/audit/final input-after do not run. The
+separate Oral MetaBAT2 target is independently admitted and scored, without
+turning global completion true. [Operations](../experiments/E027-common-information-binner/OPERATIONS.md)
+owns science status, the source-grounded repair recommendation and exact next prompt.
+No wake, provisioning, resize or retention change during inspection.
 
+Actual original E2 allocation: October 30 **22:33:57.843 → October 31
+03:50:21.510 UTC** (23:33:57 → 04:50:21 Copenhagen), **18,983.667 seconds /
+5 h 16 min 23.667 s**, 42.1859 allocated vCPU-hours. The watcher requests shutdown
+at 03:48:15.944 UTC; provider STOP remains a fallback, not evidence of science
+success. Workflow wall 17,540.942 seconds, sampled CPU 56,813.61 seconds,
+23.664 GB sampled process-tree RSS. Whole-run sampled disk growth 3.924 GiB,
+minimum free 30.146 GiB, within 8 GiB / 25 GiB. Historical reused-checkpoint
+training times are not new E027 usage. Per-rule benchmarks distinguish actual
+new training and brief hash/reuse work.
+
+[Fresh cost ledger](../experiments/E027-common-information-binner/cost-review.json):
+compute/IP $1.43984, overlapping approved PD $0.22114, one 1,647,651,568-byte
+export upper $0.18414, new archive retention $0.00384, operations allowance $0.01:
+**$1.85895 gross estimate**, not an invoice or credit-delta attribution. October's
+live Catalog PD conversion factor is 2,875,910,101,401,600 byte-seconds per GiB-month
+(744 hours); use actual current SKU units, not a universal month divisor. Original
+stopped disks remain about $31.20 per pricing month. Overlapping PD is part of
+already approved retention, not a second independent disk charge.
+
+Fresh signed-in Welcome **DKK 1,728.07 Available / 88%**, expiry January 12, 2027,
+Certain usage/net pricing; paid account, rounded gross/savings DKK 244 / net zero.
+Usage may lag more than 24 hours; $35 reserve remains. Existing ordinary CPU/PD/
+GCS/IP/network coverage and current Catalog rates pass before the bounded export.
+All 205 Standard object versions total **68,294,051,112 bytes**, soft-deleted zero.
+Conservative all-current storage week plus operations reserve **$7.82275 < $8**.
+**November 4, 00:00 Copenhagen** remains a hard boundary; credits and proposed
+new compute do not renew storage. Plan a separate preservation/retention decision
+before that deadline.
+
+The native return's exact generation is retained privately; every one of 1,198
+physical members, 26 aliases and 15 explicit linked-input omissions is verified.
+The local review briefly hits its 6 GiB free-space guard and stops. Its failed
+journal remains. Only the newly downloaded duplicate compressed archive is
+released after native GCS readback, independent local hash/member verification
+and exact generation binding; the real private archive, original disk inputs,
+local controls and reviewed outputs remain protected. The Oral audit then passes
+under the unchanged four-thread / 8 GB / common-clock guard. This is local staging
+management, not a new VM allocation or science retry.
+
+## Preserved October 30 E026 inspection
 
 **October 30: E026 SUCCESS and independently TERMINATED; biological MODIFY.**
 [Inspection](../experiments/E026-calibrated-evidence-fusion/inspection-observed.json)
