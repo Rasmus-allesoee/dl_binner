@@ -10,7 +10,10 @@ criteria remain immutable. All six independent recall proofs must pass before
 any bin. Actual installed tiny reads/index/refinement/export/no-op/collector and
 numerical-origin contracts pass; the source-blind 4,096-row recall is 1.0 in every
 frozen stratum. Native full cache/source/runtime/forecast/supervision gates still
-precede community execution. The owner authorizes direct conditional execution.
+precede community execution. These actual Linux gates subsequently pass and the
+[native receipt](../../experiments/E028-global-discovery-repair/native-observed.json)
+records supervised release from exact `45a7590`; no quality result follows from
+setup, initialization or RUNNING status alone.
 
 A real DAG test detects scheduler overlap despite declared four-thread/core/RAM
 budgets. Explicit serial dependency edges repair the observed path; do not infer

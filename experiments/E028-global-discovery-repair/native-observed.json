@@ -1,0 +1,646 @@
+{
+  "kind": "E028 native admitted cached global-discovery comparison; long-job handoff",
+  "status": "RUNNING_NOT_A_SCIENTIFIC_RESULT",
+  "observed_UTC": "2026-10-31T20:54:41.563394+00:00",
+  "identity": {
+    "root": "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590",
+    "repo": "/srv/dl_binner/repo",
+    "source": "45a759051f91ee42f08f4bd0557bb9c68a7455bc",
+    "phase": "discovery-20261031T204532Z-45a7590",
+    "user": "rasmus_allesoee_gmail_com",
+    "service_name": "e028-discovery-20261031T204532Z-45a7590",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e028/discovery-20261031T204532Z-45a7590/",
+    "vm_start_epoch": 1793479550.098,
+    "wheel_binding": {
+      "bytes": 183680,
+      "sha256": "c67a5191f99112b13791a66fe1156c02f0e3512a444ffa73b8089e7fa6aa98cb"
+    }
+  },
+  "branch": "global-discovery-repair",
+  "source_commit": "45a759051f91ee42f08f4bd0557bb9c68a7455bc",
+  "source_clean_and_read_only_fetched": true,
+  "candidate_wheel": {
+    "bytes": 183680,
+    "sha256": "c67a5191f99112b13791a66fe1156c02f0e3512a444ffa73b8089e7fa6aa98cb"
+  },
+  "native_gate_status": "PASS",
+  "native_setup_gate_count": 10,
+  "native_setup_gates": [
+    {
+      "stage": "workflow-origin",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import importlib.metadata as metadata,json,platform,sys\nfrom pathlib import Path\nexpected=('3.12.10', '9.16.3')\nd=metadata.distribution('snakemake')\nif (platform.python_version(),d.version)!=expected:raise ValueError('Frozen workflow Python/Snakemake version differs')\nif not Path(d._path).resolve().is_relative_to(Path(sys.prefix).resolve()):raise ValueError('Foreign workflow distribution')\nprint(json.dumps(dict(status='PASS_WORKFLOW_VERSION_ORIGIN',python=platform.python_version(),snakemake=d.version,prefix=sys.prefix,distribution=str(Path(d._path).resolve()))))\n"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 0.6966719690000005,
+        "peak_sampled_rss_bytes": 44646400,
+        "seconds_ceiling": 2657.0289516448975,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 1452,
+        "sampled_cpu_seconds": 0.17,
+        "sampled_average_cpus": 0.24401728153928337,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "stage": "accepted-numerical",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e023_runtime.py",
+          "--reference",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/gates/runtime.json",
+          "--output",
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/gates/base-runtime.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 14.950641289000004,
+        "peak_sampled_rss_bytes": 307515392,
+        "seconds_ceiling": 2656.3318922519684,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 1453,
+        "sampled_cpu_seconds": 13.9,
+        "sampled_average_cpus": 0.9297260051464804,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "stage": "package-install",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e019_runtime.py",
+          "create",
+          "--base",
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+          "--destination",
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/env",
+          "--wheel",
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/payload/dl_binner-0.1.0.dev9-py3-none-any.whl",
+          "--output",
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/gates/package-install.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.1270853850000009,
+        "peak_sampled_rss_bytes": 90361856,
+        "seconds_ceiling": 2641.3806087970734,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 1722,
+        "sampled_cpu_seconds": 0.5599999999999998,
+        "sampled_average_cpus": 0.49685676653503885,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "stage": "owned-complete-runtime",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e027_runtime.py",
+          "--base",
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+          "--reference",
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json",
+          "--candidate-lock",
+          "/srv/dl_binner/repo/experiments/E028-global-discovery-repair/candidate-lock.json",
+          "--output",
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/gates/runtime.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 14.987343998000007,
+        "peak_sampled_rss_bytes": 281169920,
+        "seconds_ceiling": 2640.2532250881195,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 1796,
+        "sampled_cpu_seconds": 15.51,
+        "sampled_average_cpus": 1.0348731571164136,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "stage": "actual-ANN-source",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/env/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import importlib.metadata,json;from pathlib import Path;import pynndescent;import sys;sys.path.insert(0,'/srv/dl_binner/repo/scripts');from e024_coverage import binding,write;p=Path(pynndescent.__file__).parent/\"pynndescent_.py\";assert importlib.metadata.version(\"pynndescent\")==\"0.5.13\";assert binding(p)=={'bytes': 83456, 'sha256': '6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521'};write('/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/gates/ann-source.json',dict(status=\"PASS_ACTUAL_LINUX_DISCOVERY_SOURCE\",source=binding(p),path=str(p)))"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 4.780150786999997,
+        "peak_sampled_rss_bytes": 239935488,
+        "seconds_ceiling": 2625.26549577713,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 1985,
+        "sampled_cpu_seconds": 5.72,
+        "sampled_average_cpus": 1.19661497197034,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "stage": "installed-discovery",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/env/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;from pathlib import Path;r=Path('/srv/dl_binner/repo');sys.path.insert(0,str(r/\"tests/product\"));v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName('test_discovery'));sys.exit(not v.wasSuccessful())"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 25.73335696299999,
+        "peak_sampled_rss_bytes": 320430080,
+        "seconds_ceiling": 2620.4848594665527,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 1994,
+        "sampled_cpu_seconds": 28.43,
+        "sampled_average_cpus": 1.1047917316375513,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "stage": "installed-batched-engineering",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/env/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;from pathlib import Path;r=Path('/srv/dl_binner/repo');sys.path.insert(0,str(r/\"tests/product\"));v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName('test_batched_frozen'));sys.exit(not v.wasSuccessful())"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.7765924670000004,
+        "peak_sampled_rss_bytes": 247881728,
+        "seconds_ceiling": 2594.750916004181,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 2061,
+        "sampled_cpu_seconds": 2.5,
+        "sampled_average_cpus": 1.407188224895248,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "stage": "serial-cached-tiny-DAG",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e028_tiny.py",
+          "--root",
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/gates/tiny-DAG",
+          "--workflow-python",
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 11.381432556000007,
+        "peak_sampled_rss_bytes": 254390272,
+        "seconds_ceiling": 2592.9740602970123,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 2081,
+        "sampled_cpu_seconds": 13.01,
+        "sampled_average_cpus": 1.143089847080933,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "stage": "restore-complete-inputs",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e028_gates.py",
+          "--inputs",
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/science-plan.json",
+          "--output",
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/gates/data.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 65.088962997,
+        "peak_sampled_rss_bytes": 4171956224,
+        "seconds_ceiling": 2581.592298269272,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 2249,
+        "sampled_cpu_seconds": 56.81,
+        "sampled_average_cpus": 0.8728054248247652,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "stage": "synthetic-width-runtime",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e028_probe.py",
+          "--output",
+          "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/gates/schedule.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 31.622711302,
+        "peak_sampled_rss_bytes": 522563584,
+        "seconds_ceiling": 2516.5030477046967,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 2328,
+        "sampled_cpu_seconds": 40.849999999999994,
+        "sampled_average_cpus": 1.291793091676374,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    }
+  ],
+  "native_probe": {
+    "schedule": {
+      "status": "PASS",
+      "warmup_seconds": 15.423031890999994,
+      "measured_4096_seconds": 11.224803584,
+      "planning_retrieval_seconds": {
+        "E009": 2674.712010415481,
+        "oral": 8809.967321778042
+      },
+      "planning_remaining_science_seconds": 16884.679332193522,
+      "source_blind_synthetic": true,
+      "rows": 4096,
+      "unused_model_or_community_data": false,
+      "byte_projection": {
+        "retrieval_bytes": 483793428.5131836,
+        "conservative_complete_growth_bytes": 4080218931.2,
+        "extra_cap_bytes": 4294967296,
+        "compressed_cap_bytes": 2147483648,
+        "scope": "Retrieval measured on fixed dimensions; full partition/export/collection upper includes duplicated opaque IDs and deduplicated numeric caches. Active guard is authoritative."
+      },
+      "compile_excluded_from_n_scaling_but_inside_setup_clock": true
+    },
+    "recalls": {
+      "warm-cache": {
+        "overall": 1.0,
+        "strata": {
+          "long": 1.0,
+          "measured_zero_depth": 1.0,
+          "positive_depth": 1.0,
+          "short": 1.0
+        }
+      },
+      "width-cache": {
+        "overall": 1.0,
+        "strata": {
+          "long": 1.0,
+          "measured_zero_depth": 1.0,
+          "positive_depth": 1.0,
+          "short": 1.0
+        }
+      }
+    }
+  },
+  "watchdog": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e028-discovery-20261031T204532Z-45a7590.service",
+    "watchdog_timer": "e028-discovery-20261031T204532Z-45a7590-exit.timer",
+    "watchdog_service": "e028-discovery-20261031T204532Z-45a7590-exit.service",
+    "process": {
+      "pid": 1387,
+      "start_ticks": 3162,
+      "command_sha256": "ed925efd08b3b4d435d2acbecf9e6c555efc67440923ec55b2f94f6ec93f7045"
+    },
+    "boot_id": "c640594c-cb48-45b6-a991-f02423ccb443",
+    "source_commit": "45a759051f91ee42f08f4bd0557bb9c68a7455bc",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1793479550.098,
+    "hard_deadline_epoch": 1793522750.098,
+    "provider_stop_epoch": 1793523650.098,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "latest_watchdog": {
+    "boot_id": "c640594c-cb48-45b6-a991-f02423ccb443",
+    "checked_utc": "2026-10-31T20:54:19.349417+00:00",
+    "decision": "workflow alive",
+    "expected_process": {
+      "command_sha256": "ed925efd08b3b4d435d2acbecf9e6c555efc67440923ec55b2f94f6ec93f7045",
+      "pid": 1387,
+      "start_ticks": 3162
+    },
+    "observed_process": {
+      "command_sha256": "ed925efd08b3b4d435d2acbecf9e6c555efc67440923ec55b2f94f6ec93f7045",
+      "pid": 1387,
+      "start_ticks": 3162
+    },
+    "shutdown": false,
+    "workflow_root": "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590"
+  },
+  "provider_policy": {
+    "automaticRestart": false,
+    "instanceTerminationAction": "STOP",
+    "maxRunDuration": {
+      "nanos": 0,
+      "seconds": "44100"
+    },
+    "onHostMaintenance": "MIGRATE",
+    "preemptible": false,
+    "provisioningModel": "STANDARD"
+  },
+  "clock": {
+    "first_VM_start_UTC": "2026-10-31T20:45:50.098000+00:00",
+    "cumulative_seconds": 43200,
+    "collection_deadline_UTC": "2026-11-01T08:45:50.098000+00:00",
+    "provider_STOP_UTC": "2026-11-01T09:00:50.098000+00:00",
+    "retention": "2026-11-04T00:00:00+01:00",
+    "clock_or_retention_reset": false
+  },
+  "scientific_fits": 0,
+  "accepted_models_reused": 6,
+  "original_learner_graphs_rebuilt": 0,
+  "markers_redetected": 0,
+  "external_binners_run": 0,
+  "unchanged_learning_source_and_input_contracts": "PASS_NATIVE_USED_BYTE_AND_SEAL_RESTORE",
+  "community_stages_completed": [
+    "retrieval/E009-noGLM/teacher/done.json",
+    "retrieval/E009-noGLM/student/done.json"
+  ],
+  "community_recall_passes": {
+    "retrieval/E009-noGLM/teacher/cache/audit.json": {
+      "status": "PASS",
+      "overall": 0.9985185185185186,
+      "strata": {
+        "long": 1.0,
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667
+      }
+    },
+    "retrieval/E009-noGLM/student/cache/audit.json": {
+      "status": "PASS",
+      "overall": 0.9992592592592593,
+      "strata": {
+        "long": 1.0,
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667
+      }
+    }
+  },
+  "current_stage": "E009-GLM teacher joint retrieval",
+  "stage_log": "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/work/logs/E009-GLM-teacher-retrieve.log",
+  "workflow_log": "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/phase-logs/workflow.log",
+  "initializations": {
+    "retrieval/E009-GLM/teacher/cache/initialization.json": {
+      "initialization_sha256": "cf1dee16a7f86ecc7d665eb714b3196a5e9f7b151caed011d7d332174a0c78d8",
+      "library_source": {
+        "bytes": 83456,
+        "sha256": "6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521"
+      },
+      "missing_entries": 0,
+      "policy": {
+        "biological_policy": {
+          "audit_queries": 32,
+          "audit_stratum_queries": 16,
+          "batch_rows": 512,
+          "calibration_pairs": 8192,
+          "discovery_neighbors": 61,
+          "distance_floor": 1e-06,
+          "exact_threshold": 2048,
+          "index_delta": 0.001,
+          "index_iterations": 15,
+          "length_scale_bp": 2500,
+          "marker_excess_penalty": 5.0,
+          "max_candidates": 60,
+          "min_bin_bp": 10000,
+          "min_bin_contigs": 1,
+          "min_neighbor_recall": 0.9,
+          "min_samples": 10,
+          "neighbors": 30,
+          "neutral_squared_distance": 1.0,
+          "reliable_marker_weight": 0.8,
+          "seed": 11,
+          "singleton_min_bp": 200000,
+          "singleton_min_reliable_families": 2,
+          "version": 1
+        },
+        "exact_rerank_and_recall": "unchanged E027 query/stratum/float64/gate rule",
+        "initialization": "self_native30_unique_uniform_global_fill",
+        "native_library": "pynndescent==0.5.13",
+        "order": "eligible opaque IDs lexical; one PCG64 seed11 row-major stream",
+        "seed": 11,
+        "version": 1
+      },
+      "seed_inputs": "opaque selected axis and retained native neighbors only",
+      "shape": [
+        89041,
+        61
+      ],
+      "status": "PASS_COMPLETE_GLOBAL_INITIALIZATION"
+    },
+    "retrieval/E009-noGLM/teacher/cache/initialization.json": {
+      "initialization_sha256": "1928beb779625d5bb75732b436b4d6d63a803361b363c91e6c029267e7963132",
+      "library_source": {
+        "bytes": 83456,
+        "sha256": "6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521"
+      },
+      "missing_entries": 0,
+      "policy": {
+        "biological_policy": {
+          "audit_queries": 32,
+          "audit_stratum_queries": 16,
+          "batch_rows": 512,
+          "calibration_pairs": 8192,
+          "discovery_neighbors": 61,
+          "distance_floor": 1e-06,
+          "exact_threshold": 2048,
+          "index_delta": 0.001,
+          "index_iterations": 15,
+          "length_scale_bp": 2500,
+          "marker_excess_penalty": 5.0,
+          "max_candidates": 60,
+          "min_bin_bp": 10000,
+          "min_bin_contigs": 1,
+          "min_neighbor_recall": 0.9,
+          "min_samples": 10,
+          "neighbors": 30,
+          "neutral_squared_distance": 1.0,
+          "reliable_marker_weight": 0.8,
+          "seed": 11,
+          "singleton_min_bp": 200000,
+          "singleton_min_reliable_families": 2,
+          "version": 1
+        },
+        "exact_rerank_and_recall": "unchanged E027 query/stratum/float64/gate rule",
+        "initialization": "self_native30_unique_uniform_global_fill",
+        "native_library": "pynndescent==0.5.13",
+        "order": "eligible opaque IDs lexical; one PCG64 seed11 row-major stream",
+        "seed": 11,
+        "version": 1
+      },
+      "seed_inputs": "opaque selected axis and retained native neighbors only",
+      "shape": [
+        89041,
+        61
+      ],
+      "status": "PASS_COMPLETE_GLOBAL_INITIALIZATION"
+    },
+    "retrieval/E009-noGLM/student/cache/initialization.json": {
+      "initialization_sha256": "e5a2aabe8747d09c3e1fad03bc2545b2c860d9247083e498e2cda523fd735bd9",
+      "library_source": {
+        "bytes": 83456,
+        "sha256": "6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521"
+      },
+      "missing_entries": 0,
+      "policy": {
+        "biological_policy": {
+          "audit_queries": 32,
+          "audit_stratum_queries": 16,
+          "batch_rows": 512,
+          "calibration_pairs": 8192,
+          "discovery_neighbors": 61,
+          "distance_floor": 1e-06,
+          "exact_threshold": 2048,
+          "index_delta": 0.001,
+          "index_iterations": 15,
+          "length_scale_bp": 2500,
+          "marker_excess_penalty": 5.0,
+          "max_candidates": 60,
+          "min_bin_bp": 10000,
+          "min_bin_contigs": 1,
+          "min_neighbor_recall": 0.9,
+          "min_samples": 10,
+          "neighbors": 30,
+          "neutral_squared_distance": 1.0,
+          "reliable_marker_weight": 0.8,
+          "seed": 11,
+          "singleton_min_bp": 200000,
+          "singleton_min_reliable_families": 2,
+          "version": 1
+        },
+        "exact_rerank_and_recall": "unchanged E027 query/stratum/float64/gate rule",
+        "initialization": "self_native30_unique_uniform_global_fill",
+        "native_library": "pynndescent==0.5.13",
+        "order": "eligible opaque IDs lexical; one PCG64 seed11 row-major stream",
+        "seed": 11,
+        "version": 1
+      },
+      "seed_inputs": "opaque selected axis and retained native neighbors only",
+      "shape": [
+        89041,
+        61
+      ],
+      "status": "PASS_COMPLETE_GLOBAL_INITIALIZATION"
+    }
+  },
+  "latest_parent_service": "RuntimeMaxUSec=11h 59min 18s\nMainPID=1387\nResult=success\nExecMainStatus=0\nMemoryCurrent=786432000\nMemoryPeak=1603354624\nCPUUsageNSec=548215765000\nActiveState=active\nSubState=running\n",
+  "filesystem": {
+    "total": 316733652992,
+    "used": 284429647872,
+    "free": 32287227904
+  },
+  "headroom_GiB": 30.06982421875,
+  "finance": {
+    "new_ceiling_USD": 5,
+    "complete_upper_USD": 4.880903090655855,
+    "credit_browser": {
+      "checked_epoch": 1793478810,
+      "credit_observed": "2026-10-31 read-only signed-in Credits table",
+      "name": "Free Trial upgraded Welcome credit",
+      "remaining_DKK": 1726.3,
+      "percent": 87,
+      "status": "Available",
+      "original_DKK": 1973.43,
+      "expiry": "2027-01-12",
+      "scope": "Certain usage; see the terms for free trial",
+      "application": "Net pricing",
+      "paid_account": true,
+      "overview_period": "October 1-31 2026",
+      "rounded_gross_DKK": 247,
+      "rounded_savings_DKK": 247,
+      "displayed_net_DKK": 0,
+      "delay_warning": "Costs take a few hours to show up, and might take longer than 24 hours. Numbers are rounded to make them easier to read.",
+      "pending_reserve_USD": 35,
+      "browser_tab": "1767520237",
+      "credit_refreshed_UTC": "2026-10-31T20:33:30Z"
+    },
+    "pending_usage_reserve_USD": 35,
+    "native_allocation_seconds_so_far": 531.4653935432434,
+    "measured_uptime_compute_IP_estimate_USD_so_far": 0.040309535496778175,
+    "storage_and_export": "Approved stopped disks/GCS continue separately; exact final allocation/storage/export assessed after independent shutdown; not an invoice or credit-delta attribution.",
+    "standing_runtime_revision": "12 h cumulative / 12.25 h STOP selected before start; same $5; source/scientific/space limits unchanged"
+  },
+  "evidence": {
+    "artifacts/e028-global-discovery-repair/native/progress-snapshot-1793479899610476000.json": {
+      "bytes": 143011,
+      "sha256": "c0fa919fc9a82e9d1ab2c5b2b135943a4afb7a2be02a1f2fb84ceff795dfe0d5"
+    },
+    "artifacts/e028-global-discovery-repair/native/progress-snapshot-1793479899610476000-control.json": {
+      "bytes": 33755,
+      "sha256": "8cab720804ba6a2d75a7e6565569cf965013c1595f1d841bbd3d2e6fe7a80fac"
+    },
+    "artifacts/e028-global-discovery-repair/native/financial-gate.json": {
+      "bytes": 7971,
+      "sha256": "2146a3d01cef328fcf97739ddb2dc8fd526d1868568242a92c48ee6ea0cddc1a"
+    },
+    "artifacts/e028-global-discovery-repair/native/start-controller.exit.json": {
+      "bytes": 222,
+      "sha256": "7c4959ff2501080053bbb59c7d3577cbdceb322bd01b9ebe59fcee810327357e"
+    },
+    "artifacts/e028-global-discovery-repair/native/release-controller.exit.json": {
+      "bytes": 224,
+      "sha256": "67249a3b1f9b3964ec36410834146ec33ffa3d64905a726e9e82729d7093225d"
+    },
+    "artifacts/e028-global-discovery-repair/native/progress-snapshot-1793480082196239000.json": {
+      "bytes": 439321,
+      "sha256": "73dc38bb0586aef3aae2cda713c05bcf727b192a7548bcec15fa616779106ee1"
+    },
+    "artifacts/e028-global-discovery-repair/native/progress-snapshot-1793480082196239000-control.json": {
+      "bytes": 33755,
+      "sha256": "8cab720804ba6a2d75a7e6565569cf965013c1595f1d841bbd3d2e6fe7a80fac"
+    }
+  },
+  "acceptance_limits": [
+    "Current RUNNING state, passed setup gates and a complete initialization do not establish successful retrievals, partitions or quality.",
+    "All six unchanged recall gates and global barrier still required; then six groups/three exports/three audits/input-after/collection/readbacks/watchdog/shutdown.",
+    "No retraining, old-output rescore, extra tool, confirmation acquisition, GPU extraction or retention extension.",
+    "Original Mac allclose failure/tolerance preserved; native cached reuse is a separate accepted contract."
+  ],
+  "Oral_GLM": "Local exact-exposure batching/tokenizer/CPU engineering prepared; native GPU numerical/throughput admission remains separate. Full Oral current population unchanged; prospective cutoff/subset options documented.",
+  "initial_observation_UTC": "2026-10-31T20:51:39.166479+00:00",
+  "verified_long_job_minutes_after_release": 3.911550505956014,
+  "progress_evidence": "Two first 89,041-row retrievals finish in order; exact rerank reaches full axes and unchanged recall gates pass. The GLM teacher retrieval then starts. Original vectors/source/learning untouched; all-six barrier and independent final source/input/DNA/collection admission remain pending."
+}

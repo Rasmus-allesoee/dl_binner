@@ -825,6 +825,10 @@ export/serial-DAG contracts pass; no new biological result is claimed. The owner
 allows direct cached execution after fresh admission. The measured forecast
 justifies 12 hours / 12.25-hour STOP, still within the $5 credit-only scope and
 unchanged November 4/resource/space limits.
+The [native launch](../../experiments/E028-global-discovery-repair/native-observed.json)
+subsequently passes all ten gates and starts the serial cached comparison.
+Two first E009 no-GLM retrievals pass their frozen recall checks; no grouping or
+biological hypothesis is resolved before complete outputs and independent review.
 
 [Quality-preserving Oral batching](../../experiments/E028-global-discovery-repair/oral-GLM-plan.md)
 is prepared locally; native model/GPU throughput/equivalence remain open. A future

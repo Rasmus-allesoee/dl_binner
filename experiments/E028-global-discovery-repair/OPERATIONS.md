@@ -3,7 +3,47 @@
 October 31, 2026. The owner authorized direct execution after the stated gates.
 This is a new cached-only phase following E027's reviewed grouping failure. The
 original E027 source, learning, failed stages and inspection remain immutable.
-No E028 community outcome is claimed during preparation.
+No E028 community outcome is claimed from launch/progress alone.
+
+## Current native phase
+
+[Native receipt](native-observed.json): **RUNNING**, phase
+`discovery-20261031T204532Z-45a7590`, exact clean source `45a7590` on
+`global-discovery-repair`. Original E2 allocation starts October 31 at
+20:45:50.098 UTC; release is 20:50:46 UTC. All ten actual Linux gates exit zero:
+workflow, accepted base, owned wheel, complete runtime, actual ANN source,
+installed discovery/batching fixtures, real serial tiny DAG, full retained
+input/axis/model restore and synthetic complete-schedule probe. Both native
+probe sizes pass every recall stratum at 1.0. Native 4,096-row time is 11.225
+seconds; remaining schedule projection is 16,884.679 seconds / 4.69 hours,
+including downstream/collection reserve. This is a forecast, not a result.
+
+At the latest 20:54:41 UTC snapshot, two serial E009 no-GLM retrievals finish
+their full 89,041-row reranks: teacher recall 0.99852, student 0.99926, with every
+populated stratum above the frozen 0.90 gate. The E009 GLM teacher retrieval is
+active. Bin construction remains held behind the six-retrieval recall barrier;
+there is no recovery score or final independent admission yet. More than three
+minutes of actual ordered progress after release are verified. Fresh watcher
+boot/PID/start/command identity,
+native live/normal/crash tests and restart refusal pass. The provider STOP is
+44,100 seconds with automatic restart off. Initial 30.15 GiB free, latest about
+30.07 GiB. Setup sampled tree RSS peaks at 4.172 GB, below 26 GB. No cleanup,
+resource change, new learning, acquisition or GPU execution is needed.
+
+Collection deadline **November 1 at 08:45:50 UTC / 09:45:50 Copenhagen**;
+provider STOP **09:00:50 UTC / 10:00:50 Copenhagen**. These are maximum bounds;
+the exit watcher stops earlier after collection or failure. Its 30-second timer
+and 60-second exit grace operate without chat/SSH. Latest stage log:
+`/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/work/logs/E009-GLM-teacher-retrieve.log`;
+workflow/heartbeats: the same root's `phase-logs/workflow.log` and `terminal.log`.
+Private return prefix:
+`gs://dl-binner-archive-167650584170/e028/discovery-20261031T204532Z-45a7590/`.
+Two initial IAP SSH readiness failures precede success during boot; logs remain.
+No accepted stage is replayed and no clock is reset. See the exact inspection
+prompt below after the independently verified shutdown; do not relaunch.
+At this snapshot, measured allocation is 531.465 seconds and its compute/IP
+price estimate is $0.04031. Storage and any later export remain separate. Final
+cost/uptime is unavailable while running; do not call the credit delta an invoice.
 
 ## Treatment and reuse
 
@@ -93,7 +133,7 @@ Native mount/free-space admission requires 29 GiB, with the 25 GiB reserve live.
 No accepted unique evidence is deleted for headroom. Safe verified unused
 regenerable cleanup may be assessed if the actual gate requires it.
 
-## Direct execution and supervision
+## Execution protocol used October 31
 
 Push the exact clean `global-discovery-repair` branch from Mac. The existing VM
 fetches that exact commit using read-only GitHub access. The compact verified
@@ -137,8 +177,9 @@ cost/retention dependencies remain. No confirmation acquisition or score.
 Our goal is substantially closing the recovery gap with one general-purpose
 binner. Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015 and E028's design,
 prospective protocol, source/candidate/ANN/reuse/runtime locks, local/native
-receipts, Oral GLM batching/admission plan and operations. Inspect the phase
-recorded in native-observed.json without starting another job. Preserve all
+receipts, Oral GLM batching/admission plan and operations. Inspect phase
+`discovery-20261031T204532Z-45a7590` at exact source `45a7590` in
+native-observed.json without starting another job. Preserve all
 accepted E009–E028 science, native vectors, source freezes and failed journals;
 keep E023 E009 10.4163%, E009 MetaBAT2 8.5493%, E026 Oral 13.8569% and E027 Oral
 MetaBAT2 17.3260% as frozen context.

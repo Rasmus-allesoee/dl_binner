@@ -2,11 +2,26 @@
 
 Updated: October 31, 2026 (Copenhagen). This is the single current handoff.
 
-**E028 is implemented locally; direct cached execution is owner-authorized,
-subject to fresh Linux/source/cache/credit/headroom/supervision gates.**
+**E028 is RUNNING after all ten native gates passed; no new quality result yet.**
 [Operations](../experiments/E028-global-discovery-repair/OPERATIONS.md) owns the
-phase and exact following prompt. Branch `global-discovery-repair`, based on the
-E027 inspected commit `a8f5a34`. No E028 community outcome is claimed in preparation.
+exact following prompt for `discovery-20261031T204532Z-45a7590`.
+[Native receipt](../experiments/E028-global-discovery-repair/native-observed.json)
+binds exact clean source `45a7590` on `global-discovery-repair`, based on inspected
+E027 `a8f5a34`. The existing E2 started October 31 at 20:45:50 UTC; release was
+20:50:46 UTC. At 20:54:41 UTC the first two E009 no-GLM retrievals report PASS:
+teacher recall 0.99852, student 0.99926; every populated stratum exceeds 0.90.
+Both complete the 89,041-row exact rerank, then the E009 GLM teacher retrieval
+starts. No bin or recovery outcome is admitted by this launch receipt; the
+all-six cache barrier and independent final admission remain pending.
+
+Actual Linux library/source, complete runtime, installed readers/fixtures, serial
+tiny DAG, all retained input/learning/axis contracts and native forecast pass.
+The 4,096-row native probe gives recall 1.0 in every frozen stratum and forecasts
+16,884.679 seconds / 4.69 hours including downstream/collection reserve. The fresh
+boot/PID/start-ticks/command watcher passes normal/crash/live/restart-refusal tests;
+provider STOP is independently read back. Latest free space is about 30.07 GiB.
+For this healthy long job, leave supervision intact; after termination inspect
+actual exits, private completion and archive/member bytes before diagnostics.
 
 The [frozen repair](../experiments/E028-global-discovery-repair/design.md) fills
 the partial joint-search initialization globally, while preserving all E027
@@ -23,7 +38,9 @@ source overlays can interfere. Original source freezes and Mac tolerance stay.
 [Resource reassessment](../experiments/E028-global-discovery-repair/resource-plan.json)
 uses 12 cumulative hours / 12.25-hour STOP under the new $5 scope: the actual
 local forecast needs 8.52 hours plus native setup, so the initial six-hour envelope
-is revised before start under standing owner direction. Full current upper quote
+was revised before start under standing owner direction. Collection deadline is
+November 1 at 08:45:50 UTC / 09:45:50 Copenhagen; provider STOP is 09:00:50 UTC /
+10:00:50 Copenhagen. Full current upper quote
 $4.88090 includes reserve; four threads / 26 GB sampled RSS, original E2/32 GiB,
 30/300 GiB disks, 25 GiB free reserve, 4 GiB total extra and 2 GiB compressed return
 remain. Current Welcome DKK 1,726.30 Available / 87%, January 12, 2027 expiry,
