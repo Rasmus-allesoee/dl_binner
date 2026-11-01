@@ -4,7 +4,7 @@ from pathlib import Path
 from unittest.mock import patch
 ROOT=Path(__file__).absolute().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from e024_coverage import binding
-from e029_gpu_launch import commands,render_bootstrap,render_release
+from e029_gpu_launch import commands,render_bootstrap,render_release,unused_owned_disks
 from e029_gpu_node import unpack_runtime,collect
 from e029_gpu_arm import service_content
 
@@ -18,6 +18,13 @@ class Qualification(unittest.TestCase):
         baseline=dict(serviceAccounts=[dict(email='same-service',scopes=['same-scope'])],networkInterfaces=[dict(subnetwork='same-subnet')])
         args=commands(i['name'],'us-central1-b',baseline,'frozen-image')
         self.assertEqual(len(args),3);self.assertIn('--max-run-duration=6300s',args[-1]);self.assertNotIn('--no-shielded-secure-boot',args[-1])
+
+    def test_exact_capacity_cleanup_uses_real_inventory_fields(self):
+        name='e029-batching-fixture-b';zone='us-central1-b'
+        rows=[dict(name=name+'-boot',zone='/zones/'+zone,sizeGb='40',labels={'experiment':'e029'}),dict(name=name+'-work',zone='/zones/'+zone,sizeGb='64',labels={'experiment':'e029'}),dict(name='dl-binner-cpu-work',zone='/zones/'+zone,sizeGb='300',users=['accepted'])]
+        self.assertEqual([x['name']for x in unused_owned_disks(rows,name,zone)],[name+'-boot',name+'-work'])
+        with self.assertRaises(ValueError):unused_owned_disks([dict(rows[0],users=['live-instance'])],name,zone)
+        self.assertFalse(unused_owned_disks(rows,name,'us-central1-c'))
 
     def test_real_archive_runtime_bytes_internal_alias_and_escape_refusal(self):
         with tempfile.TemporaryDirectory()as d:

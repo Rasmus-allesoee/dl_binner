@@ -59,5 +59,33 @@
   "model_archive": {
     "bytes": 435628356,
     "sha256": "9301158c83bd141e9897089ea8dbd44c2c3955e03d56bf742314c320872c71f7"
-  }
+  },
+  "capacity_cleanup_repair_tests": {
+    "command": [
+      "artifacts/e029-certifiable-joint-retrieval/preparation/env-r1/bin/python",
+      "-I",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_e029_gpu_qualification.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "launched_pid": 84938,
+    "peak_sampled_rss_bytes": 2641920,
+    "rss_bytes_ceiling": 8000000000,
+    "sample_includes_coordinator": false,
+    "sampled_average_cpus": 0.022991909554429136,
+    "sampled_cpu_seconds": 0.01,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 6770.72624206543,
+    "stop_reason": null,
+    "wall_seconds": 0.4349356009915937
+  },
+  "actual_tests": 4,
+  "capacity_cleanup_repair": "Use actual all-resource inventory and exact Python name/zone/shape/label/user checks; retain b capacity refusal, continue c after verified empty disk removal. No quota change or scientific execution."
 }

@@ -142,6 +142,7 @@ def run(config):
                     if not member.isfile()or Path(member.name).name!=member.name:raise ValueError('Only declared regular model files allowed')
                     a.extract(member,model,filter='data')
             command('driver-refresh',['sudo','-n','apt-get','update'])
+            command('driver-system-tools',['sudo','-n','apt-get','install','-y','--no-install-recommends','mokutil','kmod'])
             command('driver-query',['/usr/bin/python3','-I','-B',repo/'scripts/e021_portable_driver.py','query','--root',root])
             proposal=json.loads((root/'gates/driver-proposal.json').read_text());command('driver-install',proposal['install_argv'])
             command('driver-native',['/usr/bin/python3','-I','-B',repo/'scripts/e021_portable_driver.py','verify','--root',root,'--gpu',cfg['GPU']])

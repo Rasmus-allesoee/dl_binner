@@ -121,3 +121,16 @@ mandatory. This does not alter any scientific or numerical tolerance. New bounde
 uploads disable composition where applicable; bucket protections remain intact.
 All-version/soft-deleted inventory and their cost remain part of storage review.
 Do not delete unique inputs or accepted evidence for headroom.
+
+### Preserved capacity/cleanup correction before any GPU start
+
+Iowa b refuses L4 capacity. Its instance never starts. The first cleanup filter
+misses the exact two empty temporary disks, causing c's first boot-disk creation
+to refuse quota. [Receipts](gpu-capacity-observed.json) preserve both errors.
+A tested correction selects actual inventory by exact name/zone/size/label and
+refuses any disk user. Both empty b disks are deleted; original CPU hardware,
+disks, metadata, scheduling and service/security settings independently match.
+No quota increase or science repeat. Reuse the bound b capacity refusal and
+continue c, then one priced T4/f capacity fallback. The GPU clock has not begun.
+Native host RAM and official signed-driver prerequisites are now explicit.
+The scientific recipe, 128-view cohort and numerical criteria remain unchanged.

@@ -1,0 +1,115 @@
+{
+  "status": "NO_GPU_INSTANCE_STARTED_CAPACITY_AND_OPERATIONAL_REFUSALS_PRESERVED",
+  "b": {
+    "error": "RuntimeError(\"ERROR: (gcloud.compute.instances.create) Could not fetch resource:\\n---\\ncode: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS\\nerrorDetails:\\n- help:\\n    links:\\n    - description: Troubleshooting documentation\\n      url: https://cloud.google.com/compute/docs/resource-error\\n- localizedMessage:\\n    locale: en-US\\n    message: A g2-standard-8 VM instance with 1 nvidia-l4 accelerator(s) is currently\\n      unavailable in the us-central1-b zone. Alternatively, you can try your request\\n      again with a different VM hardware configuration or at a later time. For more\\n      information, see the troubleshooting documentation.\\n- errorInfo:\\n    domain: compute.googleapis.com\\n    metadatas:\\n      attachment: nvidia-l4:1\\n      vmType: g2-standard-8\\n      zone: us-central1-b\\n      zonesAvailable: ''\\n    reason: resource_availability\\nmessage: The zone 'projects/project-d17bd588-df31-488f-b16/zones/us-central1-b' does\\n  not have enough resources available to fulfill the request.  'NULL:0/NULL:0/NULL:0\\n  (state:STOCKOUT, sub-state:STOCKOUT, resource type:compute)'.\\n\\n\")",
+    "capacity": true,
+    "commands": [
+      [
+        "compute",
+        "disks",
+        "create",
+        "e029-batching-20261101-b-boot",
+        "--size=40GB",
+        "--type=pd-balanced",
+        "--image=https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-2404-noble-amd64-v20261009",
+        "--labels=experiment=e029"
+      ],
+      [
+        "compute",
+        "disks",
+        "create",
+        "e029-batching-20261101-b-work",
+        "--size=64GB",
+        "--type=pd-balanced",
+        "--labels=experiment=e029"
+      ],
+      [
+        "compute",
+        "instances",
+        "create",
+        "e029-batching-20261101-b",
+        "--machine-type=g2-standard-8",
+        "--disk=name=e029-batching-20261101-b-boot,boot=yes,auto-delete=no",
+        "--disk=name=e029-batching-20261101-b-work,boot=no,auto-delete=no",
+        "--subnet=https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/regions/us-central1/subnetworks/dl-binner-us-central1",
+        "--network-tier=STANDARD",
+        "--tags=dl-binner-iap",
+        "--service-account=dl-binner-archive@project-d17bd588-df31-488f-b16.iam.gserviceaccount.com",
+        "--scopes=https://www.googleapis.com/auth/cloud-platform",
+        "--metadata=enable-oslogin=TRUE,enable-guest-attributes=TRUE",
+        "--shielded-secure-boot",
+        "--shielded-vtpm",
+        "--shielded-integrity-monitoring",
+        "--maintenance-policy=TERMINATE",
+        "--no-restart-on-failure",
+        "--max-run-duration=6300s",
+        "--instance-termination-action=STOP",
+        "--labels=experiment=e029"
+      ]
+    ]
+  },
+  "c": {
+    "error": "RuntimeError(\"ERROR: (gcloud.compute.disks.create) Could not fetch resource:\\n - Quota 'SSD_TOTAL_GB' exceeded.  Limit: 404.0 in region us-central1.\\n\\tmetric name = compute.googleapis.com/ssd_total_storage\\n\\tlimit name = SSD-TOTAL-GB-per-project-region\\n\\tlimit = 404.0\\n\\tdimensions = region: us-central1\\nTry your request in another zone, or view documentation on how to increase quotas: https://cloud.google.com/compute/quotas.\\n\\n\")",
+    "capacity": false,
+    "commands": [
+      [
+        "compute",
+        "disks",
+        "create",
+        "e029-batching-20261101-c-boot",
+        "--size=40GB",
+        "--type=pd-balanced",
+        "--image=https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-2404-noble-amd64-v20261009",
+        "--labels=experiment=e029"
+      ],
+      [
+        "compute",
+        "disks",
+        "create",
+        "e029-batching-20261101-c-work",
+        "--size=64GB",
+        "--type=pd-balanced",
+        "--labels=experiment=e029"
+      ],
+      [
+        "compute",
+        "instances",
+        "create",
+        "e029-batching-20261101-c",
+        "--machine-type=g2-standard-8",
+        "--disk=name=e029-batching-20261101-c-boot,boot=yes,auto-delete=no",
+        "--disk=name=e029-batching-20261101-c-work,boot=no,auto-delete=no",
+        "--subnet=https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/regions/us-central1/subnetworks/dl-binner-us-central1",
+        "--network-tier=STANDARD",
+        "--tags=dl-binner-iap",
+        "--service-account=dl-binner-archive@project-d17bd588-df31-488f-b16.iam.gserviceaccount.com",
+        "--scopes=https://www.googleapis.com/auth/cloud-platform",
+        "--metadata=enable-oslogin=TRUE,enable-guest-attributes=TRUE",
+        "--shielded-secure-boot",
+        "--shielded-vtpm",
+        "--shielded-integrity-monitoring",
+        "--maintenance-policy=TERMINATE",
+        "--no-restart-on-failure",
+        "--max-run-duration=6300s",
+        "--instance-termination-action=STOP",
+        "--labels=experiment=e029"
+      ]
+    ]
+  },
+  "cleanup_original_CPU_before": {
+    "bytes": 33119,
+    "sha256": "9d39cd48f0d9c13e56574f5eb461814b6dbb3632b3d4d2dbae2c1c58ae655e6d"
+  },
+  "cleanup_original_CPU_after": {
+    "bytes": 33119,
+    "sha256": "9d39cd48f0d9c13e56574f5eb461814b6dbb3632b3d4d2dbae2c1c58ae655e6d"
+  },
+  "empty_disks_removed": true,
+  "original_CPU_unchanged": true,
+  "remaining_placements": [
+    "us-central1-c L4",
+    "us-central1-f T4 only on c capacity refusal"
+  ],
+  "GPU_clock_not_started": true,
+  "source_science_unchanged": true
+}

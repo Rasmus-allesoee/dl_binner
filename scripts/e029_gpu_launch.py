@@ -22,6 +22,17 @@ def commands(name,zone,baseline,image,gpu='L4'):
     result.append(args);return result
 
 
+def unused_owned_disks(disks,name,zone):
+    """Select exact fresh temporary disks from actual inventory; refuse users/shape drift."""
+    expected={name+'-boot':40,name+'-work':64};selected=[]
+    if not name.startswith('e029-batching-')or zone not in ['us-central1-b','us-central1-c','us-central1-f']:raise ValueError('Unapproved empty-resource scope')
+    for disk in disks:
+        if disk['name']not in expected or not disk['zone'].endswith('/'+zone):continue
+        if disk.get('users')or int(disk['sizeGb'])!=expected[disk['name']]or disk.get('labels',{}).get('experiment')!='e029':raise ValueError('Temporary disk ownership/shape differs')
+        selected.append(disk)
+    return selected
+
+
 def create(out):
     """Check fresh complete cost/quota/source/assets before a bounded capacity sequence."""
     out=Path(out).absolute();c=Cloud(out/'control-plane');f=json.loads((out/'financial-gate.json').read_text())
@@ -40,6 +51,12 @@ def create(out):
     if any(x['name'].startswith('e029-batching-')for x in existing):raise ValueError('Existing temporary qualification worker requires inspection')
     image=c.call(['compute','disks','describe',before['disks'][0]['source'].split('/')[-1]],'us-central1-a')['sourceImage']
     for zone,gpu in [('us-central1-b','L4'),('us-central1-c','L4'),('us-central1-f','T4')]:
+        prior=f.get('prior_capacity_refusals',{}).get(zone)
+        if prior:
+            if binding(prior['path'])!=prior['binding']:raise ValueError('Prior capacity receipt changed')
+            refused=json.loads(Path(prior['path']).read_text())
+            if refused.get('capacity')is not True or 'ZONE_RESOURCE_POOL_EXHAUSTED'not in refused.get('error',''):raise ValueError('Only verified capacity refusal can skip a placement')
+            c.put('reused-capacity-'+zone+'.json',prior);continue
         if gpu=='T4'and f.get('T4_complete_current_pricing_passed')is not True:raise ValueError('T4 requires explicit current complete pricing; no unpriced fallback')
         if gpu=='T4'and quota['NVIDIA_T4_GPUS']['limit']-quota['NVIDIA_T4_GPUS']['usage']<1:raise ValueError('Existing T4 quota unavailable')
         name='e029-batching-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%d')+'-'+zone[-1]
@@ -55,11 +72,11 @@ def create(out):
             write(out/'identity.json',ident);return ident
         except BaseException as exc:
             capacity='ZONE_RESOURCE_POOL_EXHAUSTED'in str(exc);c.put('attempt-'+zone+'.json',dict(error=repr(exc),capacity=capacity,commands=cmds))
-            instances=c.call(['compute','instances','list','--filter=name='+name])
+            instances=[x for x in c.call(['compute','instances','list'])if x['name']==name and x['zone'].endswith('/'+zone)]
             if instances:
                 if instances[0]['status']!='TERMINATED':c.stop(name,zone)
                 c.call(['compute','instances','delete',name,'--keep-disks=all'],zone)
-            disks=c.call(['compute','disks','list','--filter=name~^'+name+'-(boot|work)$'])
+            disks=unused_owned_disks(c.call(['compute','disks','list']),name,zone)
             for d in disks:
                 if d.get('users')or d['name']not in [name+'-boot',name+'-work']:raise ValueError('Temporary empty disk ownership differs')
                 c.call(['compute','disks','delete',d['name']],zone)
@@ -144,7 +161,9 @@ for n,b in lock['files'].items():
  if binding(repo/n)!=b:raise ValueError('Frozen GPU/source member differs')
 u=shutil.disk_usage('/srv/dl_binner');boot=shutil.disk_usage('/')
 if os.cpu_count()!=8 or u.free<50*1024**3 or boot.free<5*1024**3:raise ValueError('Fresh GPU resources/headroom differ')
-h=dict(user=user,boot_id=pathlib.Path('/proc/sys/kernel/random/boot_id').read_text().strip(),work_used_bytes=u.used,work_free_bytes=u.free,boot_used_bytes=boot.used,boot_free_bytes=boot.free,cpus=os.cpu_count(),kernel=os.uname().release,source_packet=binding(packet))
+memory=int(next(x.split()[1]for x in pathlib.Path('/proc/meminfo').read_text().splitlines()if x.startswith('MemTotal:')))*1024
+if memory<29000000000:raise ValueError('Native GPU host RAM below declared tree/OS headroom')
+h=dict(physical_memory_bytes=memory,user=user,boot_id=pathlib.Path('/proc/sys/kernel/random/boot_id').read_text().strip(),work_used_bytes=u.used,work_free_bytes=u.free,boot_used_bytes=boot.used,boot_free_bytes=boot.free,cpus=os.cpu_count(),kernel=os.uname().release,source_packet=binding(packet))
 cfg=dict(root=str(root),repo=str(repo),source=ident['source'],start_epoch=ident['start_epoch'],node_deadline_epoch=ident['node_deadline_epoch'],provider_deadline_epoch=ident['provider_deadline_epoch'],service_name='e029-batching-'+str(int(ident['start_epoch'])),GPU=ident['GPU'],assets=ident['assets'],archive_prefix=ident['archive_prefix'],financial_gate=financial)
 publish(h,root/'host.json');publish(cfg,root/'config.json')
 p=subprocess.run(['sudo','-n','/usr/bin/python3','-I','-B',str(repo/'scripts/e029_gpu_arm.py'),'--config',str(root/'config.json')],capture_output=True,text=True)
