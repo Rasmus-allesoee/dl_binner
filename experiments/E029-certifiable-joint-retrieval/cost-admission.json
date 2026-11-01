@@ -1,0 +1,58 @@
+{
+  "status": "PASS_COMPLETE_CURRENT_PRICE_RESOURCE_RETENTION",
+  "checked_epoch": 1793497569.0549471,
+  "rates": {
+    "Balanced PD Capacity": {
+      "USD": 0.09999999984803326,
+      "unit": "GiBy.mo",
+      "base": "By.s",
+      "conversion": 2875910101401600.0
+    },
+    "External IP Charge on a Standard VM": {
+      "USD": 0.004999999847983061,
+      "unit": "h",
+      "base": "s",
+      "conversion": 3600
+    },
+    "E2 Instance Core running in Americas": {
+      "USD": 0.02181158997280002,
+      "unit": "h",
+      "base": "s",
+      "conversion": 3600
+    },
+    "Storage PD Capacity": {
+      "USD": 0.03999999984800155,
+      "unit": "GiBy.mo",
+      "base": "By.s",
+      "conversion": 2875910101401600.0
+    },
+    "E2 Instance Ram running in Americas": {
+      "USD": 0.0029235298946519756,
+      "unit": "GiBy.h",
+      "base": "By.s",
+      "conversion": 3865470566400
+    }
+  },
+  "compute_IP_USD_hour": 0.2730456762592464,
+  "PD_USD_pricing_month": 31.199999949850024,
+  "selected_hours": 60,
+  "STOP_hours": 60.25,
+  "compute_IP_upper_USD": 16.451001994619595,
+  "overlapping_approved_PD_upper_USD": 2.6108333291367556,
+  "export_upper_USD": 0.72,
+  "new_archive_storage_upper_USD": 0.005260224,
+  "operations_allowance_USD": 0.02,
+  "contingency_USD": 0.75,
+  "estimated_complete_gross_USD": 20.55709554775635,
+  "ceiling_USD": 22,
+  "all_version_objects": 212,
+  "soft_deleted_objects": 0,
+  "all_version_and_soft_deleted_bytes": 68568704156,
+  "conservative_storage_week_USD": 7.833131623357681,
+  "storage_ceiling_USD": 8,
+  "retention": "2026-11-04T00:00:00+01:00",
+  "credit_remaining_after_delayed_reserve_USD": 227.17904866160615,
+  "not_invoice_or_credit_delta": true,
+  "no_real_money": true,
+  "resource_or_retention_change": false
+}

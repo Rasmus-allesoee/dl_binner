@@ -1,0 +1,982 @@
+{
+  "kind": "Restore completed E027 learning only; no fitting or recopy fallback",
+  "source_work": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work",
+  "all_closed_stage_members": {
+    "units/E009-GLM/admit/admission.json": {
+      "bytes": 1951,
+      "sha256": "35e4ceaa8b5840ae08b5e52d433a9e9f20f8dc8ac2f8a94995c024a783845560"
+    },
+    "units/E009-GLM/admit/done.json": {
+      "bytes": 2501,
+      "sha256": "058f756db52328f58735e6421567f937693d6324387394d2af145fb6a70fe3ad"
+    },
+    "units/E009-GLM/admit/information-contract.json": {
+      "bytes": 702,
+      "sha256": "0e26281bd5aa623aa175a1a1f46768038535f63fa5adb64ca64217a30597a8fb"
+    },
+    "units/E009-GLM/admit/tokens/coordinates.npy": {
+      "bytes": 56986368,
+      "sha256": "4ac27dc88bcebb9f41876e2f0fc943a3e5a8d4e0f5ab920748b917a2a8ea412b"
+    },
+    "units/E009-GLM/admit/tokens/counts.npy": {
+      "bytes": 968766208,
+      "sha256": "20c664c703a97a2aa9c301b25f4d274ecd6bbb6655a07bcd5604c56f9dcecc4a"
+    },
+    "units/E009-GLM/admit/tokens/flipped.npy": {
+      "bytes": 445333,
+      "sha256": "c957a8ae92da6d1cb20173010d913692fab8d28a3c43cb163689bd52a438749d"
+    },
+    "units/E009-GLM/admit/tokens/rows.npy": {
+      "bytes": 712456,
+      "sha256": "a5ddffeb6fd64d446c9c341c344e7b63bc76e6646650f40e3377b58c6a7b743b"
+    },
+    "units/E009-GLM/admit/tokens/tokens.json": {
+      "bytes": 1920,
+      "sha256": "8b19a0107dc341ffa374112179a1925fe38d0906596726fac93a5ded35803abd"
+    },
+    "units/E009-GLM/admit/views.json": {
+      "bytes": 1442,
+      "sha256": "2788754cc90581949ba9217216214c48437054b7e3202fdb0ea47c91aa03126b"
+    },
+    "units/E009-GLM/admit/views.npz": {
+      "bytes": 60980613,
+      "sha256": "3ded4f6d5c7bcbdb13e0204da696de940b4c46330358e5ea1ce668b02c22aabe"
+    },
+    "units/E009-GLM/pairs/cache/cache.json": {
+      "bytes": 4239,
+      "sha256": "312859f22d70c000ffc5f4a30841215a930a97f66aebddfc368f2ae94c3a25a0"
+    },
+    "units/E009-GLM/pairs/cache/calibration.npz": {
+      "bytes": 1243317,
+      "sha256": "e2c64ec6272ba3ac8fe334aed65e038d12d9b5beeeeb844b0e3c578c61db9965"
+    },
+    "units/E009-GLM/pairs/cache/decisions.jsonl": {
+      "bytes": 3716373,
+      "sha256": "d284c6e2bc75c931e7b567eb72c55ea073b78ba6ce5325778454a18d37c40273"
+    },
+    "units/E009-GLM/pairs/cache/pairs.json": {
+      "bytes": 302,
+      "sha256": "18e5985ef96160a3c6eb24f459409b1aeb8a6e964650bf1ad6684a860a6fd8c0"
+    },
+    "units/E009-GLM/pairs/cache/pairs.npz": {
+      "bytes": 519958,
+      "sha256": "97e30136e7925c854b1c0c0b08d4651326c821ac731130d5c3f983cdf9b3ba52"
+    },
+    "units/E009-GLM/pairs/cache/quality.json": {
+      "bytes": 2528758,
+      "sha256": "fa48ff4abd707a385671bce028be869857a748541edfadab8b64eaa1785771fc"
+    },
+    "units/E009-GLM/pairs/done.json": {
+      "bytes": 1060,
+      "sha256": "7f80d817ce2f8815866d30480273cf115c914a2234b49a68776895d821a0904b"
+    },
+    "units/E009-GLM/pairs/verified-reuse.json": {
+      "bytes": 2656,
+      "sha256": "3c3009847fb355b576ccb6b2aaec36ec90f08e347c7782f8989cb4a771458bb6"
+    },
+    "units/E009-GLM/student/checkpoint.json": {
+      "bytes": 94554,
+      "sha256": "d75139f19e25584cc14d931d3f933555263a18dc63481918bf1c06be1c1fe729"
+    },
+    "units/E009-GLM/student/checkpoint.pt": {
+      "bytes": 5507286,
+      "sha256": "e62739e333765578cd7b29ae291be44eb43dbd3505f167a20c479626449be130"
+    },
+    "units/E009-GLM/student/done.json": {
+      "bytes": 763,
+      "sha256": "ec4621229676f35c1b1ef238ac1de8bee72b1d0a14c595cf01aa9a8a183ee1f5"
+    },
+    "units/E009-GLM/student/reference.json": {
+      "bytes": 923,
+      "sha256": "0ff4faaff681c7645e5e7b1b77076bc94a36f28d9289373de7ae07f43190a558"
+    },
+    "units/E009-GLM/student/reference.npz": {
+      "bytes": 21880578,
+      "sha256": "0c33748fa4b66309caafdb1e559ef8c75dc1f8d8819d8f8d046dbdb184d6442e"
+    },
+    "units/E009-GLM/student/verified-reuse.json": {
+      "bytes": 2101,
+      "sha256": "ad6acc9fd6e650d3891d260116012e8bedc7ee11af4c4bda416ddaa648845191"
+    },
+    "units/E009-GLM/student-embed/done.json": {
+      "bytes": 492,
+      "sha256": "0c79b9977097f458df88d1e8e5e1272eb5c2f20e2b5323a8c22b20b24e3d5bb6"
+    },
+    "units/E009-GLM/student-embed/embeddings.json": {
+      "bytes": 1316,
+      "sha256": "9ee29b1b4c8d0f71cd65a1f62334080ef5f09f1213af28487a86939df6848beb"
+    },
+    "units/E009-GLM/student-embed/embeddings.npz": {
+      "bytes": 21880578,
+      "sha256": "0c33748fa4b66309caafdb1e559ef8c75dc1f8d8819d8f8d046dbdb184d6442e"
+    },
+    "units/E009-GLM/student-embed/verified-reuse.json": {
+      "bytes": 1554,
+      "sha256": "232a5b546e3090371b5e6b901d8e5b85ab615508f518eeb9df4ab01416914c90"
+    },
+    "units/E009-GLM/student-graph/done.json": {
+      "bytes": 482,
+      "sha256": "274eb9a99199a723576f8a6061ca9fbdfdc844c141a357b82588686491b78e2a"
+    },
+    "units/E009-GLM/student-graph/graph.json": {
+      "bytes": 2076,
+      "sha256": "64533b7c3cab3ab014203987cf01f726808ca19cb960a4d8688259f00b310081"
+    },
+    "units/E009-GLM/student-graph/graph.npz": {
+      "bytes": 32792381,
+      "sha256": "7e220fd760f76c16742656df778ab2cc2048a8c02e607745ad0fcd6c82422034"
+    },
+    "units/E009-GLM/student-graph/verified-reuse.json": {
+      "bytes": 1546,
+      "sha256": "7772a2e9326c59e5844279899da06018d0fd8de6a8932d34fbbe0719ec14cc2c"
+    },
+    "units/E009-GLM/teacher/checkpoint.json": {
+      "bytes": 90502,
+      "sha256": "d003261855f8286528a18424871edc607b3bc9805aa47c9b554c5b52a81b2fa6"
+    },
+    "units/E009-GLM/teacher/checkpoint.pt": {
+      "bytes": 5506582,
+      "sha256": "d78fd7b988f09918ce6c5789b803fea216e8c0a0ddf83b7918a82d8ca73373a7"
+    },
+    "units/E009-GLM/teacher/done.json": {
+      "bytes": 763,
+      "sha256": "a2b561b2bf05688598bea1eb67eefceb6d86ff150003d2f53b619ac2af00a4ac"
+    },
+    "units/E009-GLM/teacher/reference.json": {
+      "bytes": 919,
+      "sha256": "062e63bf6db59026cb112bba7a15d1472f610cad60f0d9f5bec76980bb6a7c9c"
+    },
+    "units/E009-GLM/teacher/reference.npz": {
+      "bytes": 21879596,
+      "sha256": "a7115f187a25abaf7f8873ea78e06d56d9e4b3b5bb66425641b8b13df5ca21f1"
+    },
+    "units/E009-GLM/teacher/verified-reuse.json": {
+      "bytes": 2133,
+      "sha256": "366accc6113194d5625a019b41f109e47469b13c7c715e8af9c71caaf4678796"
+    },
+    "units/E009-GLM/teacher-embed/done.json": {
+      "bytes": 492,
+      "sha256": "bacb5afdbe17e1ae7eab380ec632bba16bafee9205714d5621a489901127d27d"
+    },
+    "units/E009-GLM/teacher-embed/embeddings.json": {
+      "bytes": 1122,
+      "sha256": "14a2e0176d278ea60be5ff9023c44caeea90da001e5df81ab28f68c10b85ff64"
+    },
+    "units/E009-GLM/teacher-embed/embeddings.npz": {
+      "bytes": 21879596,
+      "sha256": "a7115f187a25abaf7f8873ea78e06d56d9e4b3b5bb66425641b8b13df5ca21f1"
+    },
+    "units/E009-GLM/teacher-embed/verified-reuse.json": {
+      "bytes": 1570,
+      "sha256": "669cdf10b55585588c45c178a15b0d3d068625af80b666722c8872179fe27efe"
+    },
+    "units/E009-GLM/teacher-graph/done.json": {
+      "bytes": 482,
+      "sha256": "1efc5dbd656e9e07e49e61de5008dda1d17f93bd9bb3c5253fbd4b03d4b4eb37"
+    },
+    "units/E009-GLM/teacher-graph/graph.json": {
+      "bytes": 2076,
+      "sha256": "4f6b220500fa94f5e81e09492e83e60e158b90752aee24e2cb1331ae4dca91ee"
+    },
+    "units/E009-GLM/teacher-graph/graph.npz": {
+      "bytes": 32592587,
+      "sha256": "9ec5f794cd4e964541806e0065b7a22e246f3aa7a691ce005cf3fc12856a03c6"
+    },
+    "units/E009-GLM/teacher-graph/verified-reuse.json": {
+      "bytes": 1562,
+      "sha256": "6cd4c85734f58637c70eea3b8636e1e883c5200b295a5d1c3a54d7b30b385fb0"
+    },
+    "units/E009-noGLM/admit/admission.json": {
+      "bytes": 1951,
+      "sha256": "35e4ceaa8b5840ae08b5e52d433a9e9f20f8dc8ac2f8a94995c024a783845560"
+    },
+    "units/E009-noGLM/admit/done.json": {
+      "bytes": 2394,
+      "sha256": "24bf424d303b93f55ceb3afd8cdc8fa90189fd2bd6028d1feab32bb4fbf3a4d3"
+    },
+    "units/E009-noGLM/admit/information-contract.json": {
+      "bytes": 706,
+      "sha256": "2d06c01a5f55e4959fb37921d5ae5326ee96c11b8f9d3feb80188f39b7751ee4"
+    },
+    "units/E009-noGLM/admit/tokens/coordinates.npy": {
+      "bytes": 56986368,
+      "sha256": "4ac27dc88bcebb9f41876e2f0fc943a3e5a8d4e0f5ab920748b917a2a8ea412b"
+    },
+    "units/E009-noGLM/admit/tokens/counts.npy": {
+      "bytes": 968766208,
+      "sha256": "20c664c703a97a2aa9c301b25f4d274ecd6bbb6655a07bcd5604c56f9dcecc4a"
+    },
+    "units/E009-noGLM/admit/tokens/flipped.npy": {
+      "bytes": 445333,
+      "sha256": "c957a8ae92da6d1cb20173010d913692fab8d28a3c43cb163689bd52a438749d"
+    },
+    "units/E009-noGLM/admit/tokens/rows.npy": {
+      "bytes": 712456,
+      "sha256": "a5ddffeb6fd64d446c9c341c344e7b63bc76e6646650f40e3377b58c6a7b743b"
+    },
+    "units/E009-noGLM/admit/tokens/tokens.json": {
+      "bytes": 1920,
+      "sha256": "8b19a0107dc341ffa374112179a1925fe38d0906596726fac93a5ded35803abd"
+    },
+    "units/E009-noGLM/admit/views.json": {
+      "bytes": 1442,
+      "sha256": "2788754cc90581949ba9217216214c48437054b7e3202fdb0ea47c91aa03126b"
+    },
+    "units/E009-noGLM/admit/views.npz": {
+      "bytes": 60980613,
+      "sha256": "3ded4f6d5c7bcbdb13e0204da696de940b4c46330358e5ea1ce668b02c22aabe"
+    },
+    "units/E009-noGLM/pairs/cache/cache.json": {
+      "bytes": 4239,
+      "sha256": "4a3db9595cc3c538aa14165b55d092c02f6a8eb3d480e11aa95586542c4a1b86"
+    },
+    "units/E009-noGLM/pairs/cache/calibration.npz": {
+      "bytes": 1243318,
+      "sha256": "c9e17617f7ed9f6252efb2b1803d67502637a262a85dd341dda542d33b28d962"
+    },
+    "units/E009-noGLM/pairs/cache/decisions.jsonl": {
+      "bytes": 3784817,
+      "sha256": "d53463f832ada76a907ebc07f16468bff9e020b87d7c17899df7d276a61702ed"
+    },
+    "units/E009-noGLM/pairs/cache/pairs.json": {
+      "bytes": 302,
+      "sha256": "9b27f90e1ddd246001332ecdb53e323737fdb75c5becee6499d0bf8bfaa04332"
+    },
+    "units/E009-noGLM/pairs/cache/pairs.npz": {
+      "bytes": 520258,
+      "sha256": "0724b48db6368be2e18db2af5c578cd96e8be76ac2d688aefbc431b11a8e6af4"
+    },
+    "units/E009-noGLM/pairs/cache/quality.json": {
+      "bytes": 2528756,
+      "sha256": "12d66e154ce810bc72050b01e84fe8b1a427c9b04bf27e89a2b98e17721341c3"
+    },
+    "units/E009-noGLM/pairs/done.json": {
+      "bytes": 1014,
+      "sha256": "850202492746a303f4eb0c7daeec91ebf06d30ff02ef780d4a4bf695e0c559b0"
+    },
+    "units/E009-noGLM/pairs/started.json": {
+      "bytes": 54,
+      "sha256": "5eb53d851f829aec60e17b5f5e1f9cba8a007aaeeed761d2a8b4164fdc3affdf"
+    },
+    "units/E009-noGLM/student/checkpoint.json": {
+      "bytes": 48753,
+      "sha256": "f8af78c1a9d2fe8187b95bf04b677046197461f2b17043c0b4e60d55611dcebe"
+    },
+    "units/E009-noGLM/student/checkpoint.pt": {
+      "bytes": 3637296,
+      "sha256": "b063c8a3731b1b3dd6a9bf25a84572c9f54b84e7b9374a004b07c9941dab6868"
+    },
+    "units/E009-noGLM/student/done.json": {
+      "bytes": 3447,
+      "sha256": "ec2353b0a46c38acd337d9528c8c892cfc3f7cede93d469278e274713dac70ba"
+    },
+    "units/E009-noGLM/student/geometry-01.json": {
+      "bytes": 918,
+      "sha256": "6e5194619c1be1f6496d80e2b08a14594e78186a0fbf4187fdc3aa530a4f901a"
+    },
+    "units/E009-noGLM/student/geometry-02.json": {
+      "bytes": 918,
+      "sha256": "a48019f8ca7eb52ad9b14958b34b2058fa1035abb5ed6ab2cc5f7d25e9f70456"
+    },
+    "units/E009-noGLM/student/geometry-03.json": {
+      "bytes": 918,
+      "sha256": "11c0974da68b67444559467658e85662938995e6ed7fc45f73bd1edcd8113053"
+    },
+    "units/E009-noGLM/student/geometry-04.json": {
+      "bytes": 920,
+      "sha256": "fea05de4d7718f007edf0737d8ce9c88b593d9e6af4ef545bdf08db42b6ea85d"
+    },
+    "units/E009-noGLM/student/geometry-05.json": {
+      "bytes": 919,
+      "sha256": "222cde34c48319802e9c1002eb3de6e0176dbb206cd6b2c9c08b05d35cd3073f"
+    },
+    "units/E009-noGLM/student/geometry-06.json": {
+      "bytes": 921,
+      "sha256": "ace34c22084627ef1f19fd8e5b1b38e5616bd7ac6f9b13b509dfe76a828ba3b5"
+    },
+    "units/E009-noGLM/student/geometry-07.json": {
+      "bytes": 920,
+      "sha256": "12c8d5610dac97553e334611bdbacd3d8e39db137b294c19b351214004fe5b23"
+    },
+    "units/E009-noGLM/student/geometry-08.json": {
+      "bytes": 922,
+      "sha256": "9c7c0c3a9823f9ff649fe4a3b708b9c430049f61e159bfa1cfc007bb407b7d6a"
+    },
+    "units/E009-noGLM/student/geometry-09.json": {
+      "bytes": 917,
+      "sha256": "2eb0d002439f060581ef72366790e9d844825e53c31bdc6f950d746205644fc2"
+    },
+    "units/E009-noGLM/student/geometry-10.json": {
+      "bytes": 918,
+      "sha256": "f85ba05032fcba47a714cc378f55a0c3041a316a0b1b55a195349a6cc34132fb"
+    },
+    "units/E009-noGLM/student/geometry-11.json": {
+      "bytes": 919,
+      "sha256": "f75eaff9a1166387a2744d9b62e3ba3c8ea6d4a42db2d8c6df6069e12022ad39"
+    },
+    "units/E009-noGLM/student/geometry-12.json": {
+      "bytes": 916,
+      "sha256": "f7d4c5dd77d66504f0335ad9134d5b44b4e5a39794111997a8741a0ed1413dcb"
+    },
+    "units/E009-noGLM/student/geometry-13.json": {
+      "bytes": 921,
+      "sha256": "48424aadd1f13f9fe753163fe4f332b366d748a334973dd71dd47669bf7f01f4"
+    },
+    "units/E009-noGLM/student/geometry-14.json": {
+      "bytes": 915,
+      "sha256": "15847f9331fa088c1b56c8961fa0d81a7fd65bbbbf0b09fc745a6bd83a509cb6"
+    },
+    "units/E009-noGLM/student/geometry-15.json": {
+      "bytes": 917,
+      "sha256": "3eb03b5bace1d85766d54cb9a21ec40c9e92e3b0256b603f0718c8777c060808"
+    },
+    "units/E009-noGLM/student/geometry-16.json": {
+      "bytes": 919,
+      "sha256": "946e014cea1b094ee9a0b8ca8d0caa0cd3fddc339ef7cb1d275254042307e5e9"
+    },
+    "units/E009-noGLM/student/geometry-17.json": {
+      "bytes": 918,
+      "sha256": "cbc2a076b706cdd71cadbe8a10062f621572c3cd290dc9b2d9f3014ba6cc5b98"
+    },
+    "units/E009-noGLM/student/geometry-18.json": {
+      "bytes": 919,
+      "sha256": "3ec79a6d75f4a51dc4ba2d25d220d83907a85ff2562b86369cf4ea3ce9fa8cfb"
+    },
+    "units/E009-noGLM/student/geometry-19.json": {
+      "bytes": 918,
+      "sha256": "9379b18abf071de982add31fdf82b64f8a0002dcb3401878e03463aacd68b612"
+    },
+    "units/E009-noGLM/student/geometry-20.json": {
+      "bytes": 917,
+      "sha256": "ea15d089e641415fad45d7a22de2d204a8cde9f43dfbabe0ca7a2f711bba8bdd"
+    },
+    "units/E009-noGLM/student/initial-geometry.json": {
+      "bytes": 919,
+      "sha256": "e37908d7ce935ab6b0acfc233b22ba296416e20e90f1756a12ad8a42c6f2b120"
+    },
+    "units/E009-noGLM/student/reference.json": {
+      "bytes": 923,
+      "sha256": "95353a550ad83d8054f2304bb4a52d60a550b42bdfe4d392e86f9d3a87b99fae"
+    },
+    "units/E009-noGLM/student/reference.npz": {
+      "bytes": 21880114,
+      "sha256": "5c07bdbf497d27c2479412763b5f7b797df557512207d86ca24370463f9a4a9e"
+    },
+    "units/E009-noGLM/student-embed/done.json": {
+      "bytes": 446,
+      "sha256": "740b0b4aa85ff5c7cfa30707a95857b4ba295c117d353e2c7c0a588698ce6b83"
+    },
+    "units/E009-noGLM/student-embed/embeddings.json": {
+      "bytes": 1254,
+      "sha256": "4930d6ea1df7e1ae268bf266aca4ca7a6ded03d86d1876d17ea68f3bd6baf60e"
+    },
+    "units/E009-noGLM/student-embed/embeddings.npz": {
+      "bytes": 21880114,
+      "sha256": "5c07bdbf497d27c2479412763b5f7b797df557512207d86ca24370463f9a4a9e"
+    },
+    "units/E009-noGLM/student-embed/started.json": {
+      "bytes": 62,
+      "sha256": "35f395422ecb3c1013c7206caabdd67ee1398c724006aae9e8c42b77cd1323c9"
+    },
+    "units/E009-noGLM/student-graph/completed.json": {
+      "bytes": 5407,
+      "sha256": "713861685795209c469745645c4791551309d6d10e7c00dcf6e9232dad04aead"
+    },
+    "units/E009-noGLM/student-graph/done.json": {
+      "bytes": 440,
+      "sha256": "92c4948e0385ba92c210fed2140f10ae95d3e16e7b0f29ef49df6cf4434657ab"
+    },
+    "units/E009-noGLM/student-graph/graph.json": {
+      "bytes": 2076,
+      "sha256": "a26efa05d20b77efb9f50a59a1b85c7ae80adde12f12557f962855f22c07534e"
+    },
+    "units/E009-noGLM/student-graph/graph.npz": {
+      "bytes": 32483625,
+      "sha256": "171cbe45177721514579c8e509f1b2b67e5e4c1ea4f149aff46adce8383781e3"
+    },
+    "units/E009-noGLM/teacher/checkpoint.json": {
+      "bytes": 44639,
+      "sha256": "3ea9879c1136a0e1abf1ad3c449a411c8fe38abfe33bcb5774f2bc5967965fa2"
+    },
+    "units/E009-noGLM/teacher/checkpoint.pt": {
+      "bytes": 3636592,
+      "sha256": "ab0160ed5793addf5f36ceec64d70b523d655d5c4b5fe98597defc43e69404ca"
+    },
+    "units/E009-noGLM/teacher/done.json": {
+      "bytes": 763,
+      "sha256": "ade47baf5d35e8d143d3cd9eea0245d3eca07a46896957332c5e0cba0777c75c"
+    },
+    "units/E009-noGLM/teacher/reference.json": {
+      "bytes": 920,
+      "sha256": "c5a400a0cdd46bd5b83ec9b2da5d5f83c0c866d0b6c874282063118218fd6831"
+    },
+    "units/E009-noGLM/teacher/reference.npz": {
+      "bytes": 21880259,
+      "sha256": "4a9e6c4ab00d4e6f774f2eb217c28fe8894f95ece6d05bfa90ed76c9c7d4136e"
+    },
+    "units/E009-noGLM/teacher/verified-reuse.json": {
+      "bytes": 2082,
+      "sha256": "3ad4254d480855e857ff3e31b1358290e513c15abb28d52daf1dbf7483124994"
+    },
+    "units/E009-noGLM/teacher-embed/done.json": {
+      "bytes": 492,
+      "sha256": "649aad13f87f2215cdada5a3f059a38fd34b9f7826838434da273c1adc9807ae"
+    },
+    "units/E009-noGLM/teacher-embed/embeddings.json": {
+      "bytes": 1123,
+      "sha256": "bbd6299468205ac716d66c9db633bff72b920458d89ef97ae1cfb37b972f9d4c"
+    },
+    "units/E009-noGLM/teacher-embed/embeddings.npz": {
+      "bytes": 21880259,
+      "sha256": "4a9e6c4ab00d4e6f774f2eb217c28fe8894f95ece6d05bfa90ed76c9c7d4136e"
+    },
+    "units/E009-noGLM/teacher-embed/verified-reuse.json": {
+      "bytes": 1545,
+      "sha256": "d0c918b7e76ebaea1f5372be1a7b0cf849d6d371347df619962871abe5cdfcdb"
+    },
+    "units/E009-noGLM/teacher-graph/done.json": {
+      "bytes": 482,
+      "sha256": "37114948c3f832165451473f8ab1f0b6d5137c645de31642b247a8bd4e348591"
+    },
+    "units/E009-noGLM/teacher-graph/graph.json": {
+      "bytes": 2066,
+      "sha256": "bd0186a0d0a6e8529f6ec77750f8144dafc2ac6a7d65501730388fa076117fc0"
+    },
+    "units/E009-noGLM/teacher-graph/graph.npz": {
+      "bytes": 32703614,
+      "sha256": "27bb48178459cf922f234c6d8a847562eb3c02e624006fdacf5b567acea16ec6"
+    },
+    "units/E009-noGLM/teacher-graph/verified-reuse.json": {
+      "bytes": 1537,
+      "sha256": "0cc690696c469284a6056ac7ed50d4814c4186f0ec850460f3d1ee9fbe8c91a3"
+    },
+    "units/oral-noGLM/admit/admission.json": {
+      "bytes": 1805,
+      "sha256": "691dd7e60178a3a9774fe9639909e04c311c907f74a8157d67ce21337b2e28b0"
+    },
+    "units/oral-noGLM/admit/done.json": {
+      "bytes": 2541,
+      "sha256": "c386fe13f8c3a8935ca014b99adc7cdb20982e74b24fefc1accb3d3dc7b3ee64"
+    },
+    "units/oral-noGLM/admit/information-contract.json": {
+      "bytes": 707,
+      "sha256": "64f85ebf043715f70c39fa66de29df3fc5c12e3d199487e5af834c608c0dbfaa"
+    },
+    "units/oral-noGLM/admit/tokens/coordinates.npy": {
+      "bytes": 325608448,
+      "sha256": "a8b97ba5d9344b758246836cb262616df1d71cf7d27be17b06674fc6f5678e10"
+    },
+    "units/oral-noGLM/admit/tokens/counts.npy": {
+      "bytes": 5535341568,
+      "sha256": "1aa2e4868ab0a85ee2573d4acb2542b271f9e2d855a6d59dd199cab5aae80c4a"
+    },
+    "units/oral-noGLM/admit/tokens/flipped.npy": {
+      "bytes": 2543943,
+      "sha256": "3f33a74724d2abfac6a7b465d21117ab31fc9be83deea7e254a03aca183460ac"
+    },
+    "units/oral-noGLM/admit/tokens/rows.npy": {
+      "bytes": 4070232,
+      "sha256": "9eee6009101d001dca6cf3b104a8d2806a5c3aa0aa54bdac45525262d880e286"
+    },
+    "units/oral-noGLM/admit/tokens/tokens.json": {
+      "bytes": 1669,
+      "sha256": "75ae008c650fa64d8417db96971622bc68fb93c0540dc7fc1e06c9435d93dab4"
+    },
+    "units/oral-noGLM/admit/views.json": {
+      "bytes": 1442,
+      "sha256": "5c09dbb0ecd95bd3ff4c9787e105b76f0368567e862e6eebe87f23ed09ec5617"
+    },
+    "units/oral-noGLM/admit/views.npz": {
+      "bytes": 419791282,
+      "sha256": "80d30e98c98642cf4dca5aad1b76a061065b3f93e92bab85e6b1ada5e0b4ac76"
+    },
+    "units/oral-noGLM/pairs/cache/cache.json": {
+      "bytes": 4014,
+      "sha256": "a02f01662247de0861d543ab155e5841223e560789fa4e8594dea29a2e36606c"
+    },
+    "units/oral-noGLM/pairs/cache/calibration.npz": {
+      "bytes": 1311577,
+      "sha256": "2f55a55802be36091b6650a33440825669654f9dfccb49df60d1cddab65601e3"
+    },
+    "units/oral-noGLM/pairs/cache/decisions.jsonl": {
+      "bytes": 86071290,
+      "sha256": "a1b1de72be67a6e8573856a6df8980c7163d06bb8aae10ef9b10c0423bb3b3db"
+    },
+    "units/oral-noGLM/pairs/cache/pairs.json": {
+      "bytes": 302,
+      "sha256": "0771fbd46e83c6a6932fb08e598bf1c582d2cb4b6c91f1277637bcd2ce18368d"
+    },
+    "units/oral-noGLM/pairs/cache/pairs.npz": {
+      "bytes": 63371959,
+      "sha256": "e9c007bcbc9adf54be6ef426eb7bef5517feadcaa490264edc7b78a222103dca"
+    },
+    "units/oral-noGLM/pairs/cache/quality.json": {
+      "bytes": 50422818,
+      "sha256": "16a6f423a32ace339cfdd6fede6b29824a1b58c787f0fe0798ef2fdb6e0f3374"
+    },
+    "units/oral-noGLM/pairs/done.json": {
+      "bytes": 1018,
+      "sha256": "dbaab455b012dd246377d3dc167f4fdc69c7b5bfaeadbfd687f9a28063ed843b"
+    },
+    "units/oral-noGLM/pairs/started.json": {
+      "bytes": 54,
+      "sha256": "e5c1f376891e9565304ecd5852de8a3b91b8bc4438d2be3ba9b705a3ccb0ddcd"
+    },
+    "units/oral-noGLM/student/checkpoint.json": {
+      "bytes": 48613,
+      "sha256": "c4a2b1ab74b6a722e88ec49e0c70539f20fee69024a925647e8f6cc67b48d29a"
+    },
+    "units/oral-noGLM/student/checkpoint.pt": {
+      "bytes": 3637040,
+      "sha256": "c14df6ff73c6e356f6765732646eb1cb57fab55342c7dbb1d113f80eed86b916"
+    },
+    "units/oral-noGLM/student/done.json": {
+      "bytes": 3448,
+      "sha256": "62948771b8b44b7d86a202d89ab93815ed81547f2a1c2bd893a3cf9ded237cce"
+    },
+    "units/oral-noGLM/student/geometry-01.json": {
+      "bytes": 922,
+      "sha256": "7e35eabdc98ab82fd0b4db0e9604f7775742a45f48c56de4f5cd0be1e14e8e6a"
+    },
+    "units/oral-noGLM/student/geometry-02.json": {
+      "bytes": 923,
+      "sha256": "3099dbe30b107a4b769c67f059a88d599d1dd0d755f234b0286ef91a557742cf"
+    },
+    "units/oral-noGLM/student/geometry-03.json": {
+      "bytes": 922,
+      "sha256": "da57bb3a716042a0af8cfa4be3e5209c998c72339df510eef127aaf9821d2d76"
+    },
+    "units/oral-noGLM/student/geometry-04.json": {
+      "bytes": 919,
+      "sha256": "a358f96f3558980becb48208bdc4abea6cf87f8d91c75bc12f2fcda505cc9da5"
+    },
+    "units/oral-noGLM/student/geometry-05.json": {
+      "bytes": 922,
+      "sha256": "949962811ad1fb79ead4b5719edafc6a62af44913e5acf8f543097413886ce4e"
+    },
+    "units/oral-noGLM/student/geometry-06.json": {
+      "bytes": 920,
+      "sha256": "c081da3e3b0280d28bfa55a83bcab1a2952e4525dfa6c349c4aa0186dbe9e788"
+    },
+    "units/oral-noGLM/student/geometry-07.json": {
+      "bytes": 920,
+      "sha256": "02636dd4b13019d0eaa8000a2924c5caf2049d0e78ba666e0c11ddf4599cec58"
+    },
+    "units/oral-noGLM/student/geometry-08.json": {
+      "bytes": 919,
+      "sha256": "737154227799cf0012d60c98f323cfd99bb3cb35ff04e01ff08a121f67a8c94b"
+    },
+    "units/oral-noGLM/student/geometry-09.json": {
+      "bytes": 921,
+      "sha256": "08d4f3e703d536364ac369137b9d5e0a2fcad51fbad1b223e2951073f9a65b1b"
+    },
+    "units/oral-noGLM/student/geometry-10.json": {
+      "bytes": 917,
+      "sha256": "08d16791f05be5ce74d60da341cc147e0b34ec874136706eee7c33ddeba46b95"
+    },
+    "units/oral-noGLM/student/geometry-11.json": {
+      "bytes": 919,
+      "sha256": "4c9998648a4b3071b79887ad8415efe8403a3453fe25b74462ae971f75003218"
+    },
+    "units/oral-noGLM/student/geometry-12.json": {
+      "bytes": 917,
+      "sha256": "7ac8731293222fb9bd26b6f57162ad04fcf3f10f45dba2d2248bd1d8995aa1b9"
+    },
+    "units/oral-noGLM/student/geometry-13.json": {
+      "bytes": 916,
+      "sha256": "d24b1733a271d7c6bb817022045743d7dd3bf1bc07b37d01d46b074ef9483ef0"
+    },
+    "units/oral-noGLM/student/geometry-14.json": {
+      "bytes": 918,
+      "sha256": "5d145ad3a990d2314cec73e0d307cd81155909392061f797190210ae28516a92"
+    },
+    "units/oral-noGLM/student/geometry-15.json": {
+      "bytes": 918,
+      "sha256": "ccee2b9f4f717b8d8319bb7b1a951eb841071e9d8f85bdecbe3ce28170d00d94"
+    },
+    "units/oral-noGLM/student/geometry-16.json": {
+      "bytes": 918,
+      "sha256": "4801b5edd5457e555f3d83644777643e390cde90a43b187d20a626e30c4a0c62"
+    },
+    "units/oral-noGLM/student/geometry-17.json": {
+      "bytes": 915,
+      "sha256": "663c114ce9d3eb0ecda41c71782c73fa2cc006089023f8523ebe212893e040c3"
+    },
+    "units/oral-noGLM/student/geometry-18.json": {
+      "bytes": 917,
+      "sha256": "b768ec51964a38e225b837efded4050997b06b24b9ce7937771e6053e53369de"
+    },
+    "units/oral-noGLM/student/geometry-19.json": {
+      "bytes": 921,
+      "sha256": "777165f78409ecfd0e137bfe495efa6f4887221807dd703eb54df40b491f33ac"
+    },
+    "units/oral-noGLM/student/geometry-20.json": {
+      "bytes": 916,
+      "sha256": "d335795d843df812f765e5b4680cfc835b4d45d7e8ea83d1977ad13a6f34eb6b"
+    },
+    "units/oral-noGLM/student/initial-geometry.json": {
+      "bytes": 921,
+      "sha256": "0dba4ad0d1cf81875844e59c4eb5220420b0fcb738507cc12e1fd0fe81d4eb06"
+    },
+    "units/oral-noGLM/student/reference.json": {
+      "bytes": 666,
+      "sha256": "63d146449e1a3c1726ae33116c7432b5771f23dfc441df6c34cb0dcbde606ee0"
+    },
+    "units/oral-noGLM/student/reference.npz": {
+      "bytes": 185961877,
+      "sha256": "02eecceb5411a40e45c117212a4065d671196cc421a9abb63a50e98fd0b2295b"
+    },
+    "units/oral-noGLM/student-embed/done.json": {
+      "bytes": 446,
+      "sha256": "7beb8ccc75d7cfbee742c9127c974940506b8b208df90efff14e64cea49644aa"
+    },
+    "units/oral-noGLM/student-embed/embeddings.json": {
+      "bytes": 997,
+      "sha256": "8a58fad5726aa4f5713355672c410915e864c253d9f8c1ec5f25d32dea842141"
+    },
+    "units/oral-noGLM/student-embed/embeddings.npz": {
+      "bytes": 185961877,
+      "sha256": "02eecceb5411a40e45c117212a4065d671196cc421a9abb63a50e98fd0b2295b"
+    },
+    "units/oral-noGLM/student-embed/started.json": {
+      "bytes": 61,
+      "sha256": "84c49b0be25f4e8476a496adf7f93d530c058de6e38d23c4fa51a0408c6366ec"
+    },
+    "units/oral-noGLM/student-graph/completed.json": {
+      "bytes": 8918,
+      "sha256": "3c4b5367752eaa507728379163bf1932b92a530a9ffe6c965484eccb1d74a0a9"
+    },
+    "units/oral-noGLM/student-graph/done.json": {
+      "bytes": 441,
+      "sha256": "fffa96a3f07d0f492a08e8ec2aa89ae12429dafca6398502781969f3d7097951"
+    },
+    "units/oral-noGLM/student-graph/graph.json": {
+      "bytes": 5587,
+      "sha256": "d4caee039d23165fb51afcf984440780e1c082c3273307aae24e40b2c8b8c14b"
+    },
+    "units/oral-noGLM/student-graph/graph.npz": {
+      "bytes": 250586084,
+      "sha256": "dda6e9ba90e355f81d7ae95bb7286fa3450b2f6c07fc369e48571dc17dd957b2"
+    },
+    "units/oral-noGLM/teacher/checkpoint.json": {
+      "bytes": 44508,
+      "sha256": "2d4499c39c6bc183bbec51d99bfd9021a0fb6325c1a3b4cc1dc6907f51b46e58"
+    },
+    "units/oral-noGLM/teacher/checkpoint.pt": {
+      "bytes": 3636336,
+      "sha256": "1d4d58963b3887612c9754958d2df410b64a997b1908fc755492cc1635adc6cf"
+    },
+    "units/oral-noGLM/teacher/done.json": {
+      "bytes": 3448,
+      "sha256": "8086671c2c17c95cd31fc911091e7844a53bfc0610286cf25c8c5aef178e319b"
+    },
+    "units/oral-noGLM/teacher/geometry-01.json": {
+      "bytes": 922,
+      "sha256": "7e35eabdc98ab82fd0b4db0e9604f7775742a45f48c56de4f5cd0be1e14e8e6a"
+    },
+    "units/oral-noGLM/teacher/geometry-02.json": {
+      "bytes": 923,
+      "sha256": "3099dbe30b107a4b769c67f059a88d599d1dd0d755f234b0286ef91a557742cf"
+    },
+    "units/oral-noGLM/teacher/geometry-03.json": {
+      "bytes": 920,
+      "sha256": "5df32d2c2f47982c048fc2fad735b77206f0d46ea38d771c75ffbad81efeba02"
+    },
+    "units/oral-noGLM/teacher/geometry-04.json": {
+      "bytes": 922,
+      "sha256": "bb6e96b2faf53942252ed9ecebf66b9c3f2b9ceec85e5f5e1be6c3ee3059ed03"
+    },
+    "units/oral-noGLM/teacher/geometry-05.json": {
+      "bytes": 920,
+      "sha256": "54b36a8f080657420e5a5fe9bd5e59d1ec78faaf6b8d003a838f9fe4e2650d8a"
+    },
+    "units/oral-noGLM/teacher/geometry-06.json": {
+      "bytes": 921,
+      "sha256": "78f5e4a38d5d93a30ad427e7b44fa9533d1911f3e1388a7c24a9b1eef1e38446"
+    },
+    "units/oral-noGLM/teacher/geometry-07.json": {
+      "bytes": 919,
+      "sha256": "d2b14f09d005cb3c2ea2b6cc4bb8164d98e7d29c4f3bcff3fb4f1803c8e82092"
+    },
+    "units/oral-noGLM/teacher/geometry-08.json": {
+      "bytes": 921,
+      "sha256": "31237b570d473b4bd29fabfd72200ee77766fb3dd774758d31664c8a6a67fb91"
+    },
+    "units/oral-noGLM/teacher/geometry-09.json": {
+      "bytes": 922,
+      "sha256": "31626b6343cc4e49e802190fb4a17abf51561523e07225cde4f2227a5f393c20"
+    },
+    "units/oral-noGLM/teacher/geometry-10.json": {
+      "bytes": 924,
+      "sha256": "6cda312df0eddcfdcb63162914eaaa16056901cc8afab70e5c9e9e8c6c83863f"
+    },
+    "units/oral-noGLM/teacher/geometry-11.json": {
+      "bytes": 918,
+      "sha256": "b21280444539003b091e8b833e18c7cba38fda422cf63c99304db0c9e5186d7a"
+    },
+    "units/oral-noGLM/teacher/geometry-12.json": {
+      "bytes": 919,
+      "sha256": "5eef52f83855f5311c7b97021bb4f1c09346c092747132ff6318db268542462a"
+    },
+    "units/oral-noGLM/teacher/geometry-13.json": {
+      "bytes": 923,
+      "sha256": "15c0dcb9947270815e20c9b4865f8ca90cc5f9e706a716b7716bc9c5a24e8c32"
+    },
+    "units/oral-noGLM/teacher/geometry-14.json": {
+      "bytes": 918,
+      "sha256": "5399d97be6c06f63399cf0bf9516c56a557958f81d59f14ba585e716679a67d2"
+    },
+    "units/oral-noGLM/teacher/geometry-15.json": {
+      "bytes": 923,
+      "sha256": "b4c4225b168bb471d02f1f8c1ee91731a7dbd9300c13db8724c0c52549533a13"
+    },
+    "units/oral-noGLM/teacher/geometry-16.json": {
+      "bytes": 923,
+      "sha256": "144fe72b784da2d80ea1e87fd4411502c5068735e9dd63aae8c84db201425afe"
+    },
+    "units/oral-noGLM/teacher/geometry-17.json": {
+      "bytes": 917,
+      "sha256": "f24e6746bb93995d1227425b0cd64ea18e18b5210c21ed5f8cc8748e60b28f00"
+    },
+    "units/oral-noGLM/teacher/geometry-18.json": {
+      "bytes": 923,
+      "sha256": "ab631f52a0f0f55b79b803500383996d340e8a4756548619daa1caa418f126eb"
+    },
+    "units/oral-noGLM/teacher/geometry-19.json": {
+      "bytes": 920,
+      "sha256": "0960989e9192ebff50646c67a8312b98e71a2381b771b9efb0deb8eaa0dcbd8a"
+    },
+    "units/oral-noGLM/teacher/geometry-20.json": {
+      "bytes": 920,
+      "sha256": "2e5d312260236e98fe981266a6c6567456bb9252b42793dccc1729d698e40da0"
+    },
+    "units/oral-noGLM/teacher/initial-geometry.json": {
+      "bytes": 921,
+      "sha256": "0dba4ad0d1cf81875844e59c4eb5220420b0fcb738507cc12e1fd0fe81d4eb06"
+    },
+    "units/oral-noGLM/teacher/reference.json": {
+      "bytes": 663,
+      "sha256": "584cee5b7121c7eac4369280b044411313b0934348f39f6bb645b457f2e14881"
+    },
+    "units/oral-noGLM/teacher/reference.npz": {
+      "bytes": 185984365,
+      "sha256": "004596bffd4e85243c6dcc4b66cac4007bfbadbf7be80f4b1a7cab71a50c377f"
+    },
+    "units/oral-noGLM/teacher-embed/done.json": {
+      "bytes": 446,
+      "sha256": "db1eff9b9a5c06d358e28f26d401406e02a0c5459ac9be2d3a57d8b72dc17629"
+    },
+    "units/oral-noGLM/teacher-embed/embeddings.json": {
+      "bytes": 866,
+      "sha256": "8822e0434472fd8651f8fccbe271d68da69925c4528a9b3f38e4339edd18c29a"
+    },
+    "units/oral-noGLM/teacher-embed/embeddings.npz": {
+      "bytes": 185984365,
+      "sha256": "004596bffd4e85243c6dcc4b66cac4007bfbadbf7be80f4b1a7cab71a50c377f"
+    },
+    "units/oral-noGLM/teacher-embed/started.json": {
+      "bytes": 62,
+      "sha256": "6f1d368f65c71d325cb499e8904d915563d071100ceb394c1136472edc186181"
+    },
+    "units/oral-noGLM/teacher-graph/completed.json": {
+      "bytes": 8907,
+      "sha256": "8999752482e655b8726aef8d2003a70b099537aa107a137f22e87b5ea08372c7"
+    },
+    "units/oral-noGLM/teacher-graph/done.json": {
+      "bytes": 441,
+      "sha256": "e2967e69e0b376cd204580ddd341eadbfb69fe095af31e6915784c17d6b80f28"
+    },
+    "units/oral-noGLM/teacher-graph/graph.json": {
+      "bytes": 5576,
+      "sha256": "bea28a0646fe95ee77a70aa68ba5192c3d1db17bfad5129ad4f67bbfc740739b"
+    },
+    "units/oral-noGLM/teacher-graph/graph.npz": {
+      "bytes": 245530679,
+      "sha256": "f3c066bc5efdaa18420b0b67787ffa5bc816f86fcde9729a7a87af6e57654128"
+    }
+  },
+  "external_files": {
+    "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa": {
+      "bytes": 237732361,
+      "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz": {
+      "bytes": 42384557,
+      "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna": {
+      "bytes": 1757466319,
+      "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json": {
+      "bytes": 26815264,
+      "sha256": "e8d44c1dc18ea9f55e70548fb4de01581c4639834e87db720134e43c2127b8f1"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json": {
+      "bytes": 1301132,
+      "sha256": "035d88e159a8c6aa29580c4fec28a3f0c470e553f97a0f9a9d04cf6a76b44c05"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/combined/depth.tsv.receipt.json": {
+      "bytes": 1904,
+      "sha256": "8c3ef5cd110039d8153e65d40e8dcc76317ff23dda432f581cf5d9e970b840de"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz": {
+      "bytes": 338210613,
+      "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/frozen/bank.json": {
+      "bytes": 6063,
+      "sha256": "636f1fb852c3efd6899321e0f1a3de90a91271cf438c4dfb2508b2ba9eb01520"
+    }
+  },
+  "native_dependency_base": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+  "native_runtime_reference": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json",
+  "scope": "Hash every completed learning member except unused admitted view/token arrays (stat + exact original seal only); all scientific consumed files hashed before/after. No whole-prefix/nonmutation claim.",
+  "retained_retrieval_work": "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/work",
+  "retained_retrieval_members": {
+    "retrieval/E009-GLM/student/cache/audit.json": {
+      "bytes": 392574,
+      "sha256": "cb27cb0614348d327672574cf97cffabbebd8aebd1632bf6766b478beb14ec58"
+    },
+    "retrieval/E009-GLM/student/cache/completed.json": {
+      "bytes": 2442,
+      "sha256": "8c2c9f452bc90c4165a6fa063d65dfd0b2124212f9609b3ff47e5b268e616aa9"
+    },
+    "retrieval/E009-GLM/student/cache/initialization.json": {
+      "bytes": 1466,
+      "sha256": "f3ea3f2eb2927dc66d74fe71bd2e437a7274f270868913336c566666f77d7a49"
+    },
+    "retrieval/E009-GLM/student/cache/neighbors.json": {
+      "bytes": 459447,
+      "sha256": "c2c5d98081768a0a1cde13af8c9cffe0ccceafe6c4821c4acb2ed72939196603"
+    },
+    "retrieval/E009-GLM/student/cache/neighbors.npz": {
+      "bytes": 26727871,
+      "sha256": "78ace8a4a0830f5ee58f8ca7286c61efd4442ef095237c00c79ff09a2a998189"
+    },
+    "retrieval/E009-GLM/student/cache/packing.json": {
+      "bytes": 40,
+      "sha256": "735bf3d58c0c4d5d8a6d87b67fa2fe7097eadda31ef85ea427c94d90bf9ad6dd"
+    },
+    "retrieval/E009-GLM/student/cache/proposal-audit.json": {
+      "bytes": 158,
+      "sha256": "5e435cd287ae89a517baa37d227027209997073f2917eaff00445574a041e63c"
+    },
+    "retrieval/E009-GLM/student/done.json": {
+      "bytes": 1166,
+      "sha256": "1aa1ed04e3e07de6c662bd9e0960b9d34eafa23ee2ae0b27eee243c6681c3a77"
+    },
+    "retrieval/E009-GLM/student/started.json": {
+      "bytes": 56,
+      "sha256": "d5ca844d5cdaeef4d01958b538ac5673db50613598a8fccef063322a5aced62c"
+    },
+    "retrieval/E009-GLM/teacher/cache/audit.json": {
+      "bytes": 392575,
+      "sha256": "1cb90d9a7076d42e9d274d5b34db6fddb7acb3d3ba4056bac56b1ee57ae44261"
+    },
+    "retrieval/E009-GLM/teacher/cache/completed.json": {
+      "bytes": 2442,
+      "sha256": "8b565dbf9152e21f27276233511f947e626fe97881528804b351f9e6c9a55fb3"
+    },
+    "retrieval/E009-GLM/teacher/cache/initialization.json": {
+      "bytes": 1466,
+      "sha256": "c5e639bfb546144555afea4d7c11c14460679bdb70611d4a35b35ca9e1820bbb"
+    },
+    "retrieval/E009-GLM/teacher/cache/neighbors.json": {
+      "bytes": 459448,
+      "sha256": "f34442686fcd018b251f3cfb98caf5866608ec6cd96edbe51d5b840284700f59"
+    },
+    "retrieval/E009-GLM/teacher/cache/neighbors.npz": {
+      "bytes": 26746209,
+      "sha256": "7635525c4c9957517007e69c74666d1404a0d4ad21bca5ea30385ee5634f4c43"
+    },
+    "retrieval/E009-GLM/teacher/done.json": {
+      "bytes": 1166,
+      "sha256": "4be3804cd239d81e8e51af4b5d99700229ac24e6c6665297ac3c84e5a93e1e7d"
+    },
+    "retrieval/E009-GLM/teacher/started.json": {
+      "bytes": 55,
+      "sha256": "fbec41e854582809125d88753cb797a139d5bbced91f0e945b18f84eda25f134"
+    },
+    "retrieval/E009-noGLM/student/cache/audit.json": {
+      "bytes": 392576,
+      "sha256": "2612a89e368c8681dc777b3d6eccef4fc3ee735ee5de0d8c110ddd45b75906a2"
+    },
+    "retrieval/E009-noGLM/student/cache/completed.json": {
+      "bytes": 2442,
+      "sha256": "29d4c4b2f944ac844fdcb73b259379cb0e672dfcc4f0c400fdbf651d573746c4"
+    },
+    "retrieval/E009-noGLM/student/cache/initialization.json": {
+      "bytes": 1466,
+      "sha256": "08328dd53d0447e8354d5d0138dbfa813a3e1e9539d820e9e94cd43ec48114af"
+    },
+    "retrieval/E009-noGLM/student/cache/neighbors.json": {
+      "bytes": 459449,
+      "sha256": "7bca35432cfa185df6b52f1ab72343dcf9eae22d178178555eee8f447a961bc0"
+    },
+    "retrieval/E009-noGLM/student/cache/neighbors.npz": {
+      "bytes": 26744411,
+      "sha256": "4195fa534f96b200ae6e697cb0186eb4821855c4635a1366ba6241c4f18297c2"
+    },
+    "retrieval/E009-noGLM/student/done.json": {
+      "bytes": 1166,
+      "sha256": "dd00fd6064bfcfd9210ca243fdb47952bc1d4bf561c238037753c1c541a943ad"
+    },
+    "retrieval/E009-noGLM/student/started.json": {
+      "bytes": 56,
+      "sha256": "1cfff82cc99ea862c66a38a4e1b0c7a9a802252fc47f6c1987a6c9d83833cae4"
+    },
+    "retrieval/E009-noGLM/teacher/cache/audit.json": {
+      "bytes": 392587,
+      "sha256": "52761d47b1ff11caec28b2dae7a32890aac3b7c69282bea508f5b60d3227891f"
+    },
+    "retrieval/E009-noGLM/teacher/cache/completed.json": {
+      "bytes": 2442,
+      "sha256": "c32711de4562cb3db887e15cf1262226f3b408e7858be4ba8837beea126c6af3"
+    },
+    "retrieval/E009-noGLM/teacher/cache/initialization.json": {
+      "bytes": 1466,
+      "sha256": "0fccabd9237c838d838297ea75f8c218c5ac1f5c85efeee7065f2dd2cbf65c1e"
+    },
+    "retrieval/E009-noGLM/teacher/cache/neighbors.json": {
+      "bytes": 459460,
+      "sha256": "9ecbe2345833a636bf58e1c84a62ef1a473964955739960a9edce498574dd0cf"
+    },
+    "retrieval/E009-noGLM/teacher/cache/neighbors.npz": {
+      "bytes": 26781065,
+      "sha256": "714d538efe0e6ee04fe076b938335bb69c83a0deee83216d0f565bababd63bdc"
+    },
+    "retrieval/E009-noGLM/teacher/done.json": {
+      "bytes": 1166,
+      "sha256": "195397009cb1ca52737cf7f6f95d1f281d73d72ed3e146b67c5f9df72db8e1cd"
+    },
+    "retrieval/E009-noGLM/teacher/started.json": {
+      "bytes": 56,
+      "sha256": "1e2af58c13bff006d0051fba0c15d8d3494748cad60d2c530e8976b8e596578d"
+    },
+    "retrieval/E009-GLM/teacher/cache/packing.json": {
+      "bytes": 40,
+      "sha256": "735bf3d58c0c4d5d8a6d87b67fa2fe7097eadda31ef85ea427c94d90bf9ad6dd"
+    },
+    "retrieval/E009-GLM/teacher/cache/proposal-audit.json": {
+      "bytes": 158,
+      "sha256": "5e435cd287ae89a517baa37d227027209997073f2917eaff00445574a041e63c"
+    },
+    "retrieval/E009-noGLM/student/cache/packing.json": {
+      "bytes": 40,
+      "sha256": "735bf3d58c0c4d5d8a6d87b67fa2fe7097eadda31ef85ea427c94d90bf9ad6dd"
+    },
+    "retrieval/E009-noGLM/student/cache/proposal-audit.json": {
+      "bytes": 158,
+      "sha256": "5e435cd287ae89a517baa37d227027209997073f2917eaff00445574a041e63c"
+    },
+    "retrieval/E009-noGLM/teacher/cache/packing.json": {
+      "bytes": 40,
+      "sha256": "735bf3d58c0c4d5d8a6d87b67fa2fe7097eadda31ef85ea427c94d90bf9ad6dd"
+    },
+    "retrieval/E009-noGLM/teacher/cache/proposal-audit.json": {
+      "bytes": 158,
+      "sha256": "5e435cd287ae89a517baa37d227027209997073f2917eaff00445574a041e63c"
+    }
+  }
+}

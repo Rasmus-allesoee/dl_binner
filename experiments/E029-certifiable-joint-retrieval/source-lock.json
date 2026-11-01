@@ -1,0 +1,77 @@
+{
+  "kind": "E029 preserves inherited E028 and separates exact retrieval",
+  "files": {
+    "experiments/E029-certifiable-joint-retrieval/Snakefile": {
+      "bytes": 7505,
+      "sha256": "97fc5a6fc84a40abcb211985840bba04ff4b3afeb17b7511f25ddac4e87aee24"
+    },
+    "experiments/E029-certifiable-joint-retrieval/candidate-lock.json": {
+      "bytes": 9482,
+      "sha256": "4a546aefc51f6c236caf1e479a6fecedaa427fd766ed8637cc21c9d47113f326"
+    },
+    "experiments/E029-certifiable-joint-retrieval/design.md": {
+      "bytes": 4102,
+      "sha256": "79e4cb446ab9d165509db325c553d5f2e985829b46e9d2f74791195c4962472b"
+    },
+    "experiments/E029-certifiable-joint-retrieval/protocol.json": {
+      "bytes": 6415,
+      "sha256": "841a6e6703180fa0acd22026c17e2ad66ceddba7e0429bfa2ab8c19f45f74875"
+    },
+    "experiments/E029-certifiable-joint-retrieval/reuse-lock.json": {
+      "bytes": 40697,
+      "sha256": "96115d8ed3aaae74b532c6a6b04970e4f4c21f41c85f7b1b9972fcd1bcc7d43e"
+    },
+    "experiments/E029-certifiable-joint-retrieval/runtime-plan.json": {
+      "bytes": 2666,
+      "sha256": "b4deea2ee50834071ab738ee7ddc4dd4700757fcd746a35660c1fdf1aea9c144"
+    },
+    "scripts/e029_arm.py": {
+      "bytes": 6436,
+      "sha256": "9b82a2eb50978a63897acfb219089827b9442aac0abb3d020b38b0dc303b2aed"
+    },
+    "scripts/e029_collect.py": {
+      "bytes": 9962,
+      "sha256": "f3cd349463fcb742653b088bf5dc9ae63bbbda24ed0091f5ba72d413e9d4d1a3"
+    },
+    "scripts/e029_control.py": {
+      "bytes": 8137,
+      "sha256": "70ce3a14237c43e05e211c3595b70c2cd6adbc33f8016c9881852355c323a780"
+    },
+    "scripts/e029_gates.py": {
+      "bytes": 5152,
+      "sha256": "2431c47fc8cf4f876416fe8969a3cfb9789cfd14f2f64a84af1d7c10daf0ffb0"
+    },
+    "scripts/e029_launch.py": {
+      "bytes": 15599,
+      "sha256": "e0b7caa274f2c7a25a5a34155bff17643856039f71b209522c50a89353573fd4"
+    },
+    "scripts/e029_local_checks.py": {
+      "bytes": 2113,
+      "sha256": "bf29a8b01deb5930fa463683adecadbbb83e4573dc632a5f468369e1cea2f5d7"
+    },
+    "scripts/e029_phase.py": {
+      "bytes": 19020,
+      "sha256": "16f8b266e79552ad1d810049f5ae030ad314d573d84174250dd446a652ee7a38"
+    },
+    "scripts/e029_probe.py": {
+      "bytes": 2522,
+      "sha256": "7e82b5c3673358a6da46612a5d04ea38a2d52b57f8e3172a3d5ebd8a6c6f9ef3"
+    },
+    "scripts/e029_tiny.py": {
+      "bytes": 4556,
+      "sha256": "a50458b3870198f5b4b8546b3da78659420fe88b103fa59b1499815ad97848ed"
+    },
+    "src/dl_binner/discovery/exact.py": {
+      "bytes": 14166,
+      "sha256": "8bdde262ac86eb9a86e0e27a41ede22fd17d0df8c7d418faf1bfa6132875e268"
+    },
+    "tests/product/test_exact_discovery.py": {
+      "bytes": 4492,
+      "sha256": "f0c0dc839ffa57b21e3e594b89a9df680869060cbd7cfe6e6f8ab18f2c5bcda1"
+    },
+    "tests/test_e029_operations.py": {
+      "bytes": 5156,
+      "sha256": "5d3685099d13d173f57a95ca20add4cd8b008e03c2609ff309b289887039e5ca"
+    }
+  }
+}

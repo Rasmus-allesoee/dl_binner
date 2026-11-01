@@ -1,0 +1,37 @@
+{
+  "status": "PASS_REVISED_60_HOUR_LOCAL_ENVELOPE",
+  "full_candidate_rows": 508763,
+  "measured_query_rows": 128,
+  "measured_seconds": 13.138729419995798,
+  "planning_remaining_science_seconds": 163867.954591531,
+  "planning_safety_factor": 1.5,
+  "downstream_collection_reserve_seconds": 7200,
+  "partial_engineering_certificate": {
+    "status": "ENGINEERING_PARTIAL",
+    "rows": 508763,
+    "certified_rows": 128,
+    "dimensions": 215,
+    "query_rows": 64,
+    "floating_operation_count_margin": 14784,
+    "gamma": 3.2827074392224392e-12,
+    "maximum_squared_error_envelope": 5.283354270621656e-10,
+    "maximum_candidate_pool": 30,
+    "mean_candidate_pool": 30.0,
+    "minimum_excluded_expanded_gap": 9.646982976940777e-05,
+    "all_possible_boundaries_reranked": true,
+    "numerical_model": "finite normal float64 operations; frozen bounded coordinates and nonzero-median scales",
+    "no_quadratic_score_storage": true
+  },
+  "source_blind_synthetic": true,
+  "community_science_started": false,
+  "byte_projection": {
+    "conservative_complete_growth_bytes": 4080218931,
+    "extra_cap_bytes": 4294967296,
+    "compressed_cap_bytes": 2147483648,
+    "no_quadratic_score_storage": true
+  },
+  "original_refusal_preserved": true,
+  "selected_seconds": 216000,
+  "native_fresh_admission_still_required": true,
+  "maximum_complete_science_seconds": 208800
+}

@@ -1,5 +1,16 @@
 # Google Cloud workspace operations
 
+Current November 1 execution: E029 is explicitly authorized in this task after
+E028's verified failure/TERMINATED. [E029 operations](../experiments/E029-certifiable-joint-retrieval/OPERATIONS.md)
+owns the fresh $25 credit-only scope: existing E2 completion up to $22 / 60 h
+(provider STOP 60.25 h), plus independent $3 / 90-minute temporary GPU qualification
+(STOP 105 min). Fresh financial/native admission remains required before release.
+No original resize, quota increase, full Oral bank or retention extension.
+November 4 at 00:00 Copenhagen stays hard. Original $8 storage remains adequate
+under the fresh all-version inventory. Prior proposed $11 / 20 h is superseded
+by the complete full-shape timing and explicit owner flexibility.
+
+
 **November 1: E028 is independently TERMINATED; its scientific workflow FAILED.**
 [Inspection](../experiments/E028-global-discovery-repair/inspection-observed.json)
 and [operations](../experiments/E028-global-discovery-repair/OPERATIONS.md) supersede

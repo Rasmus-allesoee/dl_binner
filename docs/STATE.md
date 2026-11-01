@@ -2,6 +2,19 @@
 
 Updated: November 1, 2026 (Copenhagen). This is the single current handoff.
 
+**E029 implementation and execution are authorized in this task.** The new
+[operations guide](../experiments/E029-certifiable-joint-retrieval/OPERATIONS.md)
+owns current execution. The exact backend, installed tiny readers/grouping/export,
+serial DAG, strict reuse/no-op and collector pass locally. E028's failed journals
+and four passed E009 caches remain preserved. The complete local full-shape
+probe refuses the initial 20-hour estimate. Under the owner's explicit standing
+and current authorization, the new envelope is $22 CPU / 60 hours / 60.25-hour
+provider STOP, plus $3 / 90-minute GPU qualification / 105-minute STOP. Fresh native
+schedule, source/runtime/input, financial and shutdown gates remain required.
+No VM has started at this preparation snapshot. Retention still ends November 4
+at 00:00 Copenhagen; cost flexibility does not renew it. Full Oral GLM extraction
+and confirmation remain excluded. E028's inspection below is accepted history.
+
 **E028 FAILED its Oral retrieval gate. The VM is independently TERMINATED.**
 [Inspection](../experiments/E028-global-discovery-repair/inspection-observed.json)
 supersedes the preserved dated RUNNING receipt for

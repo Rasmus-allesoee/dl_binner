@@ -1,0 +1,10 @@
+{
+  "kind": "Critical pure-Python discovery implementation; native actual bytes must match before release",
+  "version": "0.5.13",
+  "file": "pynndescent_.py",
+  "binding": {
+    "bytes": 83456,
+    "sha256": "6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521"
+  },
+  "source_scope": "Distribution import origin/libraries verified separately; this binds the actual initialization implementation, not a version-only inference."
+}

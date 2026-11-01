@@ -1989,3 +1989,16 @@ STOP has a $5.11758 dated-rate upper forecast; it may be justifiably revised und
 the standing rule with fresh complete credit/price/delay/headroom checks and
 consistent guards. No community result, cloud start, external tool, data acquisition,
 new resource or retention extension occurred in this local implementation task.
+
+## November 1: E029 retrieval completion authorized
+
+E028's completed heaps still fail the frozen Oral recall contract. Its biological
+comparison remains unavailable. [E029](../../experiments/E029-certifiable-joint-retrieval/design.md)
+implements an exact unchanged-score reference/fallback, preserving all learning,
+information, selection and DNA populations. Four passed E009 caches are reused.
+This resolves a search contract before another architecture decision. It does
+not assert that quadratic fallback is the eventual scalable product method.
+The owner authorizes same-task execution and sensible covered resource envelopes;
+full native/credit gates and November 4 retention remain. Independent 128-view
+GPU batching qualification advances the concrete Oral main-mode milestone,
+without extracting the community bank or changing the current cached treatment.

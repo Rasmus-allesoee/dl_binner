@@ -1,0 +1,676 @@
+{
+  "status": "PASS_LOCAL_NOT_NATIVE",
+  "actual_installed_complete_runtime": "PASS_COMPLETE_READONLY_BASE_AND_NEW_OWNED_PACKAGE",
+  "actual_tiny_DAG": {
+    "status": "PASS",
+    "real_ready_rule_events": [
+      "E009_noGLM_teacher_retrieve",
+      "E009_noGLM_student_retrieve",
+      "E009_GLM_teacher_retrieve",
+      "E009_GLM_student_retrieve",
+      "oral_noGLM_teacher_retrieve",
+      "oral_noGLM_student_retrieve",
+      "barrier",
+      "E009_noGLM_teacher_group",
+      "E009_noGLM_student_group",
+      "E009_GLM_teacher_group",
+      "E009_GLM_student_group",
+      "oral_noGLM_teacher_group",
+      "oral_noGLM_student_group",
+      "E009_noGLM_export",
+      "E009_GLM_export",
+      "oral_noGLM_export",
+      "E009_noGLM_audit",
+      "E009_GLM_audit",
+      "oral_noGLM_audit"
+    ],
+    "no_overlap": true,
+    "all_six_retrievals_before_bins": true,
+    "completed_resume_noop": true,
+    "actual_archive": {
+      "status": "SUCCESS",
+      "archive": {
+        "bytes": 61966,
+        "sha256": "e7f886f9a33806112632aab270eff42fd5bfdec9bd1d6f2917b3664af6afe96e"
+      },
+      "regular_members": 130,
+      "logical_member_bytes": 335132,
+      "every_member_verified": true,
+      "aliases": {
+        "work/E009-GLM/export/student-post/assignments.tsv": {
+          "bytes": 2540,
+          "sha256": "737f1b86ed568ffb66eac7dca637873efce0957feb0fdea13f41649993c02a5c",
+          "canonical": "work/E009-GLM/export/student-parent/assignments.tsv"
+        },
+        "work/E009-GLM/export/student-post/manifest.json": {
+          "bytes": 717,
+          "sha256": "3eace4de8035a518e7eaf06576c1020cfcafba9f5c302deb378f65566af0ccfd",
+          "canonical": "work/E009-GLM/export/student-parent/manifest.json"
+        },
+        "work/E009-GLM/export/teacher-parent/assignments.tsv": {
+          "bytes": 2540,
+          "sha256": "737f1b86ed568ffb66eac7dca637873efce0957feb0fdea13f41649993c02a5c",
+          "canonical": "work/E009-GLM/export/student-parent/assignments.tsv"
+        },
+        "work/E009-GLM/export/teacher-parent/manifest.json": {
+          "bytes": 717,
+          "sha256": "3eace4de8035a518e7eaf06576c1020cfcafba9f5c302deb378f65566af0ccfd",
+          "canonical": "work/E009-GLM/export/student-parent/manifest.json"
+        },
+        "work/E009-GLM/export/teacher-post/assignments.tsv": {
+          "bytes": 2540,
+          "sha256": "737f1b86ed568ffb66eac7dca637873efce0957feb0fdea13f41649993c02a5c",
+          "canonical": "work/E009-GLM/export/student-parent/assignments.tsv"
+        },
+        "work/E009-GLM/export/teacher-post/manifest.json": {
+          "bytes": 717,
+          "sha256": "3eace4de8035a518e7eaf06576c1020cfcafba9f5c302deb378f65566af0ccfd",
+          "canonical": "work/E009-GLM/export/student-parent/manifest.json"
+        },
+        "work/E009-noGLM/audit/proof.json": {
+          "bytes": 501,
+          "sha256": "f2b6b58cf0935e50621c09c4a402812eb1652095e91dd604e779ff224c13e3b0",
+          "canonical": "work/E009-GLM/audit/proof.json"
+        },
+        "work/E009-noGLM/export/DNA-reuse.json": {
+          "bytes": 389,
+          "sha256": "10d0211c1dc8428b90bb54c7c3da25a9fb398bb0d0f7a4c6b99db81568688d89",
+          "canonical": "work/E009-GLM/export/DNA-reuse.json"
+        },
+        "work/E009-noGLM/export/accounting.json": {
+          "bytes": 3175,
+          "sha256": "bd26b315d465fad0b486b4ea6f06b99b41091dcfbc67c2d05c644c53ffd15e70",
+          "canonical": "work/E009-GLM/export/accounting.json"
+        },
+        "work/E009-noGLM/export/student-parent/assignments.tsv": {
+          "bytes": 2540,
+          "sha256": "737f1b86ed568ffb66eac7dca637873efce0957feb0fdea13f41649993c02a5c",
+          "canonical": "work/E009-GLM/export/student-parent/assignments.tsv"
+        },
+        "work/E009-noGLM/export/student-parent/manifest.json": {
+          "bytes": 717,
+          "sha256": "3eace4de8035a518e7eaf06576c1020cfcafba9f5c302deb378f65566af0ccfd",
+          "canonical": "work/E009-GLM/export/student-parent/manifest.json"
+        },
+        "work/E009-noGLM/export/student-post/assignments.tsv": {
+          "bytes": 2540,
+          "sha256": "737f1b86ed568ffb66eac7dca637873efce0957feb0fdea13f41649993c02a5c",
+          "canonical": "work/E009-GLM/export/student-parent/assignments.tsv"
+        },
+        "work/E009-noGLM/export/student-post/manifest.json": {
+          "bytes": 717,
+          "sha256": "3eace4de8035a518e7eaf06576c1020cfcafba9f5c302deb378f65566af0ccfd",
+          "canonical": "work/E009-GLM/export/student-parent/manifest.json"
+        },
+        "work/E009-noGLM/export/teacher-parent/assignments.tsv": {
+          "bytes": 2540,
+          "sha256": "737f1b86ed568ffb66eac7dca637873efce0957feb0fdea13f41649993c02a5c",
+          "canonical": "work/E009-GLM/export/student-parent/assignments.tsv"
+        },
+        "work/E009-noGLM/export/teacher-parent/manifest.json": {
+          "bytes": 717,
+          "sha256": "3eace4de8035a518e7eaf06576c1020cfcafba9f5c302deb378f65566af0ccfd",
+          "canonical": "work/E009-GLM/export/student-parent/manifest.json"
+        },
+        "work/E009-noGLM/export/teacher-post/assignments.tsv": {
+          "bytes": 2540,
+          "sha256": "737f1b86ed568ffb66eac7dca637873efce0957feb0fdea13f41649993c02a5c",
+          "canonical": "work/E009-GLM/export/student-parent/assignments.tsv"
+        },
+        "work/E009-noGLM/export/teacher-post/manifest.json": {
+          "bytes": 717,
+          "sha256": "3eace4de8035a518e7eaf06576c1020cfcafba9f5c302deb378f65566af0ccfd",
+          "canonical": "work/E009-GLM/export/student-parent/manifest.json"
+        },
+        "work/groups/E009-GLM/student/result/post-partition.json": {
+          "bytes": 5210,
+          "sha256": "e6d8b2b06aa9bbc169d3515840206d9ef6578f6d866e05682919fdba37a62881",
+          "canonical": "work/groups/E009-GLM/student/result/parent-partition.json"
+        },
+        "work/groups/E009-GLM/teacher/result/alternatives.json": {
+          "bytes": 459,
+          "sha256": "15e479e5dcbcd8d86cd74e3dce28fa0db3f0991b38dd388f10f8921b71c05487",
+          "canonical": "work/groups/E009-GLM/student/result/alternatives.json"
+        },
+        "work/groups/E009-GLM/teacher/result/completed.json": {
+          "bytes": 17461,
+          "sha256": "b3da7a6d5735b16665d00c222021b744f479fbccd8400cfad722a43a10030560",
+          "canonical": "work/groups/E009-GLM/student/result/completed.json"
+        },
+        "work/groups/E009-GLM/teacher/result/forest.json": {
+          "bytes": 285,
+          "sha256": "2a7dc1118c61afa7de0abf648db387c3feedb1c5271bfc4a90df28ec7ca3c59c",
+          "canonical": "work/groups/E009-GLM/student/result/forest.json"
+        },
+        "work/groups/E009-GLM/teacher/result/forest.npz": {
+          "bytes": 3789,
+          "sha256": "35daed569dbf3a8a5d111f1f5658ff6d5246730d09fc0c9632382b5e870fb7dc",
+          "canonical": "work/groups/E009-GLM/student/result/forest.npz"
+        },
+        "work/groups/E009-GLM/teacher/result/parent-choices.json": {
+          "bytes": 690,
+          "sha256": "21296198fee7f129a46ca5f434597766ece218e05df5f4bb1b11474d4b1d3d18",
+          "canonical": "work/groups/E009-GLM/student/result/parent-choices.json"
+        },
+        "work/groups/E009-GLM/teacher/result/parent-partition.json": {
+          "bytes": 5210,
+          "sha256": "e6d8b2b06aa9bbc169d3515840206d9ef6578f6d866e05682919fdba37a62881",
+          "canonical": "work/groups/E009-GLM/student/result/parent-partition.json"
+        },
+        "work/groups/E009-GLM/teacher/result/post-choices.json": {
+          "bytes": 734,
+          "sha256": "3834e77ca553357cf07f1663fc0dfe7196de21c426b979d18711c201a8caab99",
+          "canonical": "work/groups/E009-GLM/student/result/post-choices.json"
+        },
+        "work/groups/E009-GLM/teacher/result/post-partition.json": {
+          "bytes": 5210,
+          "sha256": "e6d8b2b06aa9bbc169d3515840206d9ef6578f6d866e05682919fdba37a62881",
+          "canonical": "work/groups/E009-GLM/student/result/parent-partition.json"
+        },
+        "work/groups/E009-GLM/teacher/result/retrieval/audit.json": {
+          "bytes": 11810,
+          "sha256": "20095f02f2c088cb43045569d58f26f8ecb6c25c566b04ab6b556b6bdfa6c466",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/audit.json"
+        },
+        "work/groups/E009-GLM/teacher/result/retrieval/completed.json": {
+          "bytes": 2278,
+          "sha256": "bbceedea3e9cea9d2f5ddfa466e5ac464ffb036e5439d31047d8da215c4a6702",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/completed.json"
+        },
+        "work/groups/E009-GLM/teacher/result/retrieval/initialization.json": {
+          "bytes": 1106,
+          "sha256": "cdae57cbfcae83ba1ddfd94e27cc019b228e0c6a093b5c3893d56dee87de7aa2",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/initialization.json"
+        },
+        "work/groups/E009-GLM/teacher/result/retrieval/neighbors.json": {
+          "bytes": 13521,
+          "sha256": "1eacfca3988f63e08bb8fd1116f44dd0605c5af6be29cf2a51b7aba531a25a76",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/neighbors.json"
+        },
+        "work/groups/E009-GLM/teacher/result/retrieval/neighbors.npz": {
+          "bytes": 12135,
+          "sha256": "b91d92ae93e967b0cfce302934915e926c235bb01b2cd28cc515a7a9ac45172c",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/neighbors.npz"
+        },
+        "work/groups/E009-GLM/teacher/result/retrieval/packing.json": {
+          "bytes": 37,
+          "sha256": "2f3d063f1780af8f2855115a45c148fdc61dda68fd9645a7a9a7216834fed2e4",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/packing.json"
+        },
+        "work/groups/E009-noGLM/student/result/alternatives.json": {
+          "bytes": 459,
+          "sha256": "15e479e5dcbcd8d86cd74e3dce28fa0db3f0991b38dd388f10f8921b71c05487",
+          "canonical": "work/groups/E009-GLM/student/result/alternatives.json"
+        },
+        "work/groups/E009-noGLM/student/result/completed.json": {
+          "bytes": 17461,
+          "sha256": "b3da7a6d5735b16665d00c222021b744f479fbccd8400cfad722a43a10030560",
+          "canonical": "work/groups/E009-GLM/student/result/completed.json"
+        },
+        "work/groups/E009-noGLM/student/result/forest.json": {
+          "bytes": 285,
+          "sha256": "2a7dc1118c61afa7de0abf648db387c3feedb1c5271bfc4a90df28ec7ca3c59c",
+          "canonical": "work/groups/E009-GLM/student/result/forest.json"
+        },
+        "work/groups/E009-noGLM/student/result/forest.npz": {
+          "bytes": 3789,
+          "sha256": "35daed569dbf3a8a5d111f1f5658ff6d5246730d09fc0c9632382b5e870fb7dc",
+          "canonical": "work/groups/E009-GLM/student/result/forest.npz"
+        },
+        "work/groups/E009-noGLM/student/result/parent-choices.json": {
+          "bytes": 690,
+          "sha256": "21296198fee7f129a46ca5f434597766ece218e05df5f4bb1b11474d4b1d3d18",
+          "canonical": "work/groups/E009-GLM/student/result/parent-choices.json"
+        },
+        "work/groups/E009-noGLM/student/result/parent-partition.json": {
+          "bytes": 5210,
+          "sha256": "e6d8b2b06aa9bbc169d3515840206d9ef6578f6d866e05682919fdba37a62881",
+          "canonical": "work/groups/E009-GLM/student/result/parent-partition.json"
+        },
+        "work/groups/E009-noGLM/student/result/post-choices.json": {
+          "bytes": 734,
+          "sha256": "3834e77ca553357cf07f1663fc0dfe7196de21c426b979d18711c201a8caab99",
+          "canonical": "work/groups/E009-GLM/student/result/post-choices.json"
+        },
+        "work/groups/E009-noGLM/student/result/post-partition.json": {
+          "bytes": 5210,
+          "sha256": "e6d8b2b06aa9bbc169d3515840206d9ef6578f6d866e05682919fdba37a62881",
+          "canonical": "work/groups/E009-GLM/student/result/parent-partition.json"
+        },
+        "work/groups/E009-noGLM/student/result/retrieval/audit.json": {
+          "bytes": 11810,
+          "sha256": "20095f02f2c088cb43045569d58f26f8ecb6c25c566b04ab6b556b6bdfa6c466",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/audit.json"
+        },
+        "work/groups/E009-noGLM/student/result/retrieval/completed.json": {
+          "bytes": 2278,
+          "sha256": "bbceedea3e9cea9d2f5ddfa466e5ac464ffb036e5439d31047d8da215c4a6702",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/completed.json"
+        },
+        "work/groups/E009-noGLM/student/result/retrieval/initialization.json": {
+          "bytes": 1106,
+          "sha256": "cdae57cbfcae83ba1ddfd94e27cc019b228e0c6a093b5c3893d56dee87de7aa2",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/initialization.json"
+        },
+        "work/groups/E009-noGLM/student/result/retrieval/neighbors.json": {
+          "bytes": 13521,
+          "sha256": "1eacfca3988f63e08bb8fd1116f44dd0605c5af6be29cf2a51b7aba531a25a76",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/neighbors.json"
+        },
+        "work/groups/E009-noGLM/student/result/retrieval/neighbors.npz": {
+          "bytes": 12135,
+          "sha256": "b91d92ae93e967b0cfce302934915e926c235bb01b2cd28cc515a7a9ac45172c",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/neighbors.npz"
+        },
+        "work/groups/E009-noGLM/student/result/retrieval/packing.json": {
+          "bytes": 37,
+          "sha256": "2f3d063f1780af8f2855115a45c148fdc61dda68fd9645a7a9a7216834fed2e4",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/packing.json"
+        },
+        "work/groups/E009-noGLM/teacher/result/alternatives.json": {
+          "bytes": 459,
+          "sha256": "15e479e5dcbcd8d86cd74e3dce28fa0db3f0991b38dd388f10f8921b71c05487",
+          "canonical": "work/groups/E009-GLM/student/result/alternatives.json"
+        },
+        "work/groups/E009-noGLM/teacher/result/completed.json": {
+          "bytes": 17461,
+          "sha256": "b3da7a6d5735b16665d00c222021b744f479fbccd8400cfad722a43a10030560",
+          "canonical": "work/groups/E009-GLM/student/result/completed.json"
+        },
+        "work/groups/E009-noGLM/teacher/result/forest.json": {
+          "bytes": 285,
+          "sha256": "2a7dc1118c61afa7de0abf648db387c3feedb1c5271bfc4a90df28ec7ca3c59c",
+          "canonical": "work/groups/E009-GLM/student/result/forest.json"
+        },
+        "work/groups/E009-noGLM/teacher/result/forest.npz": {
+          "bytes": 3789,
+          "sha256": "35daed569dbf3a8a5d111f1f5658ff6d5246730d09fc0c9632382b5e870fb7dc",
+          "canonical": "work/groups/E009-GLM/student/result/forest.npz"
+        },
+        "work/groups/E009-noGLM/teacher/result/parent-choices.json": {
+          "bytes": 690,
+          "sha256": "21296198fee7f129a46ca5f434597766ece218e05df5f4bb1b11474d4b1d3d18",
+          "canonical": "work/groups/E009-GLM/student/result/parent-choices.json"
+        },
+        "work/groups/E009-noGLM/teacher/result/parent-partition.json": {
+          "bytes": 5210,
+          "sha256": "e6d8b2b06aa9bbc169d3515840206d9ef6578f6d866e05682919fdba37a62881",
+          "canonical": "work/groups/E009-GLM/student/result/parent-partition.json"
+        },
+        "work/groups/E009-noGLM/teacher/result/post-choices.json": {
+          "bytes": 734,
+          "sha256": "3834e77ca553357cf07f1663fc0dfe7196de21c426b979d18711c201a8caab99",
+          "canonical": "work/groups/E009-GLM/student/result/post-choices.json"
+        },
+        "work/groups/E009-noGLM/teacher/result/post-partition.json": {
+          "bytes": 5210,
+          "sha256": "e6d8b2b06aa9bbc169d3515840206d9ef6578f6d866e05682919fdba37a62881",
+          "canonical": "work/groups/E009-GLM/student/result/parent-partition.json"
+        },
+        "work/groups/E009-noGLM/teacher/result/retrieval/audit.json": {
+          "bytes": 11810,
+          "sha256": "20095f02f2c088cb43045569d58f26f8ecb6c25c566b04ab6b556b6bdfa6c466",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/audit.json"
+        },
+        "work/groups/E009-noGLM/teacher/result/retrieval/completed.json": {
+          "bytes": 2278,
+          "sha256": "bbceedea3e9cea9d2f5ddfa466e5ac464ffb036e5439d31047d8da215c4a6702",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/completed.json"
+        },
+        "work/groups/E009-noGLM/teacher/result/retrieval/initialization.json": {
+          "bytes": 1106,
+          "sha256": "cdae57cbfcae83ba1ddfd94e27cc019b228e0c6a093b5c3893d56dee87de7aa2",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/initialization.json"
+        },
+        "work/groups/E009-noGLM/teacher/result/retrieval/neighbors.json": {
+          "bytes": 13521,
+          "sha256": "1eacfca3988f63e08bb8fd1116f44dd0605c5af6be29cf2a51b7aba531a25a76",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/neighbors.json"
+        },
+        "work/groups/E009-noGLM/teacher/result/retrieval/neighbors.npz": {
+          "bytes": 12135,
+          "sha256": "b91d92ae93e967b0cfce302934915e926c235bb01b2cd28cc515a7a9ac45172c",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/neighbors.npz"
+        },
+        "work/groups/E009-noGLM/teacher/result/retrieval/packing.json": {
+          "bytes": 37,
+          "sha256": "2f3d063f1780af8f2855115a45c148fdc61dda68fd9645a7a9a7216834fed2e4",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/packing.json"
+        },
+        "work/groups/oral-noGLM/student/result/alternatives.json": {
+          "bytes": 459,
+          "sha256": "15e479e5dcbcd8d86cd74e3dce28fa0db3f0991b38dd388f10f8921b71c05487",
+          "canonical": "work/groups/E009-GLM/student/result/alternatives.json"
+        },
+        "work/groups/oral-noGLM/student/result/forest.json": {
+          "bytes": 285,
+          "sha256": "2a7dc1118c61afa7de0abf648db387c3feedb1c5271bfc4a90df28ec7ca3c59c",
+          "canonical": "work/groups/E009-GLM/student/result/forest.json"
+        },
+        "work/groups/oral-noGLM/student/result/forest.npz": {
+          "bytes": 3789,
+          "sha256": "35daed569dbf3a8a5d111f1f5658ff6d5246730d09fc0c9632382b5e870fb7dc",
+          "canonical": "work/groups/E009-GLM/student/result/forest.npz"
+        },
+        "work/groups/oral-noGLM/student/result/parent-choices.json": {
+          "bytes": 690,
+          "sha256": "21296198fee7f129a46ca5f434597766ece218e05df5f4bb1b11474d4b1d3d18",
+          "canonical": "work/groups/E009-GLM/student/result/parent-choices.json"
+        },
+        "work/groups/oral-noGLM/student/result/post-choices.json": {
+          "bytes": 734,
+          "sha256": "3834e77ca553357cf07f1663fc0dfe7196de21c426b979d18711c201a8caab99",
+          "canonical": "work/groups/E009-GLM/student/result/post-choices.json"
+        },
+        "work/groups/oral-noGLM/student/result/post-partition.json": {
+          "bytes": 5196,
+          "sha256": "cf97b8bdc4f27769b94bb0b8bab5a101ca29ecb2ecaa821ff4709b3622e4a70d",
+          "canonical": "work/groups/oral-noGLM/student/result/parent-partition.json"
+        },
+        "work/groups/oral-noGLM/student/result/retrieval/neighbors.npz": {
+          "bytes": 12135,
+          "sha256": "b91d92ae93e967b0cfce302934915e926c235bb01b2cd28cc515a7a9ac45172c",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/neighbors.npz"
+        },
+        "work/groups/oral-noGLM/teacher/result/alternatives.json": {
+          "bytes": 459,
+          "sha256": "15e479e5dcbcd8d86cd74e3dce28fa0db3f0991b38dd388f10f8921b71c05487",
+          "canonical": "work/groups/E009-GLM/student/result/alternatives.json"
+        },
+        "work/groups/oral-noGLM/teacher/result/completed.json": {
+          "bytes": 18555,
+          "sha256": "a2a05e5a92dd4817c9b0b54af2387feec437edcd68384d255fc64460713de2c9",
+          "canonical": "work/groups/oral-noGLM/student/result/completed.json"
+        },
+        "work/groups/oral-noGLM/teacher/result/forest.json": {
+          "bytes": 285,
+          "sha256": "2a7dc1118c61afa7de0abf648db387c3feedb1c5271bfc4a90df28ec7ca3c59c",
+          "canonical": "work/groups/E009-GLM/student/result/forest.json"
+        },
+        "work/groups/oral-noGLM/teacher/result/forest.npz": {
+          "bytes": 3789,
+          "sha256": "35daed569dbf3a8a5d111f1f5658ff6d5246730d09fc0c9632382b5e870fb7dc",
+          "canonical": "work/groups/E009-GLM/student/result/forest.npz"
+        },
+        "work/groups/oral-noGLM/teacher/result/parent-choices.json": {
+          "bytes": 690,
+          "sha256": "21296198fee7f129a46ca5f434597766ece218e05df5f4bb1b11474d4b1d3d18",
+          "canonical": "work/groups/E009-GLM/student/result/parent-choices.json"
+        },
+        "work/groups/oral-noGLM/teacher/result/parent-partition.json": {
+          "bytes": 5196,
+          "sha256": "cf97b8bdc4f27769b94bb0b8bab5a101ca29ecb2ecaa821ff4709b3622e4a70d",
+          "canonical": "work/groups/oral-noGLM/student/result/parent-partition.json"
+        },
+        "work/groups/oral-noGLM/teacher/result/post-choices.json": {
+          "bytes": 734,
+          "sha256": "3834e77ca553357cf07f1663fc0dfe7196de21c426b979d18711c201a8caab99",
+          "canonical": "work/groups/E009-GLM/student/result/post-choices.json"
+        },
+        "work/groups/oral-noGLM/teacher/result/post-partition.json": {
+          "bytes": 5196,
+          "sha256": "cf97b8bdc4f27769b94bb0b8bab5a101ca29ecb2ecaa821ff4709b3622e4a70d",
+          "canonical": "work/groups/oral-noGLM/student/result/parent-partition.json"
+        },
+        "work/groups/oral-noGLM/teacher/result/retrieval/audit.json": {
+          "bytes": 12850,
+          "sha256": "75001bd4806acb06feb2f6a2b36d0fe69d04c67147a5aa29875521264c913408",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/audit.json"
+        },
+        "work/groups/oral-noGLM/teacher/result/retrieval/backend.json": {
+          "bytes": 1103,
+          "sha256": "25e85049e6cdbd45da518c80c36d73af699cdcf318446140e173ef94b2d212fd",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/backend.json"
+        },
+        "work/groups/oral-noGLM/teacher/result/retrieval/certificate.json": {
+          "bytes": 554,
+          "sha256": "82ce16f86e76fbe7c92b0d3b33d32a1e9bebb3b7438e1745bf9774b5b3148e00",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/certificate.json"
+        },
+        "work/groups/oral-noGLM/teacher/result/retrieval/completed.json": {
+          "bytes": 1877,
+          "sha256": "030855ad1876ab4e6c497caa6937f8eb735e7dda945c9c7e391de5800727067d",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/completed.json"
+        },
+        "work/groups/oral-noGLM/teacher/result/retrieval/neighbors.json": {
+          "bytes": 14631,
+          "sha256": "149c810f14a8af05fb784630841ec0020cd801e1919188b7be18550d7bc677d3",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/neighbors.json"
+        },
+        "work/groups/oral-noGLM/teacher/result/retrieval/neighbors.npz": {
+          "bytes": 12135,
+          "sha256": "b91d92ae93e967b0cfce302934915e926c235bb01b2cd28cc515a7a9ac45172c",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/neighbors.npz"
+        },
+        "work/logs/E009-GLM-student-group.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/logs/E009-GLM-student-retrieve.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/logs/E009-GLM-teacher-group.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/logs/E009-GLM-teacher-retrieve.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/logs/E009-noGLM-audit.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/logs/E009-noGLM-export.log": {
+          "bytes": 673,
+          "sha256": "a18111ba7de2cea4f8ab0ecb3f16b58501322bbb96237142dceb597ecc42b47d",
+          "canonical": "work/logs/E009-GLM-export.log"
+        },
+        "work/logs/E009-noGLM-student-group.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/logs/E009-noGLM-student-retrieve.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/logs/E009-noGLM-teacher-group.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/logs/E009-noGLM-teacher-retrieve.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/logs/barrier.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/logs/oral-noGLM-audit.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/logs/oral-noGLM-export.log": {
+          "bytes": 673,
+          "sha256": "a18111ba7de2cea4f8ab0ecb3f16b58501322bbb96237142dceb597ecc42b47d",
+          "canonical": "work/logs/E009-GLM-export.log"
+        },
+        "work/logs/oral-noGLM-student-group.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/logs/oral-noGLM-teacher-group.log": {
+          "bytes": 181,
+          "sha256": "55bda4bb7886dc92ae6e939eb7a7177479a6f58eab034f8958bfc6bcfc1f3990",
+          "canonical": "work/logs/E009-GLM-audit.log"
+        },
+        "work/oral-noGLM/audit/proof.json": {
+          "bytes": 501,
+          "sha256": "f2b6b58cf0935e50621c09c4a402812eb1652095e91dd604e779ff224c13e3b0",
+          "canonical": "work/E009-GLM/audit/proof.json"
+        },
+        "work/oral-noGLM/export/DNA-reuse.json": {
+          "bytes": 389,
+          "sha256": "10d0211c1dc8428b90bb54c7c3da25a9fb398bb0d0f7a4c6b99db81568688d89",
+          "canonical": "work/E009-GLM/export/DNA-reuse.json"
+        },
+        "work/oral-noGLM/export/student-parent/assignments.tsv": {
+          "bytes": 2540,
+          "sha256": "737f1b86ed568ffb66eac7dca637873efce0957feb0fdea13f41649993c02a5c",
+          "canonical": "work/E009-GLM/export/student-parent/assignments.tsv"
+        },
+        "work/oral-noGLM/export/student-post/assignments.tsv": {
+          "bytes": 2540,
+          "sha256": "737f1b86ed568ffb66eac7dca637873efce0957feb0fdea13f41649993c02a5c",
+          "canonical": "work/E009-GLM/export/student-parent/assignments.tsv"
+        },
+        "work/oral-noGLM/export/student-post/manifest.json": {
+          "bytes": 717,
+          "sha256": "d917eaac3afd242020af42fdcd086ff3ae5f2267a5c64004479d5a3ef6478771",
+          "canonical": "work/oral-noGLM/export/student-parent/manifest.json"
+        },
+        "work/oral-noGLM/export/teacher-parent/assignments.tsv": {
+          "bytes": 2540,
+          "sha256": "737f1b86ed568ffb66eac7dca637873efce0957feb0fdea13f41649993c02a5c",
+          "canonical": "work/E009-GLM/export/student-parent/assignments.tsv"
+        },
+        "work/oral-noGLM/export/teacher-parent/manifest.json": {
+          "bytes": 717,
+          "sha256": "d917eaac3afd242020af42fdcd086ff3ae5f2267a5c64004479d5a3ef6478771",
+          "canonical": "work/oral-noGLM/export/student-parent/manifest.json"
+        },
+        "work/oral-noGLM/export/teacher-post/assignments.tsv": {
+          "bytes": 2540,
+          "sha256": "737f1b86ed568ffb66eac7dca637873efce0957feb0fdea13f41649993c02a5c",
+          "canonical": "work/E009-GLM/export/student-parent/assignments.tsv"
+        },
+        "work/oral-noGLM/export/teacher-post/manifest.json": {
+          "bytes": 717,
+          "sha256": "d917eaac3afd242020af42fdcd086ff3ae5f2267a5c64004479d5a3ef6478771",
+          "canonical": "work/oral-noGLM/export/student-parent/manifest.json"
+        },
+        "work/retrieval/oral-noGLM/student/cache/audit.json": {
+          "bytes": 12850,
+          "sha256": "75001bd4806acb06feb2f6a2b36d0fe69d04c67147a5aa29875521264c913408",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/audit.json"
+        },
+        "work/retrieval/oral-noGLM/student/cache/backend.json": {
+          "bytes": 1103,
+          "sha256": "25e85049e6cdbd45da518c80c36d73af699cdcf318446140e173ef94b2d212fd",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/backend.json"
+        },
+        "work/retrieval/oral-noGLM/student/cache/certificate.json": {
+          "bytes": 554,
+          "sha256": "82ce16f86e76fbe7c92b0d3b33d32a1e9bebb3b7438e1745bf9774b5b3148e00",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/certificate.json"
+        },
+        "work/retrieval/oral-noGLM/student/cache/completed.json": {
+          "bytes": 1877,
+          "sha256": "030855ad1876ab4e6c497caa6937f8eb735e7dda945c9c7e391de5800727067d",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/completed.json"
+        },
+        "work/retrieval/oral-noGLM/student/cache/neighbors.json": {
+          "bytes": 14631,
+          "sha256": "149c810f14a8af05fb784630841ec0020cd801e1919188b7be18550d7bc677d3",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/neighbors.json"
+        },
+        "work/retrieval/oral-noGLM/student/cache/neighbors.npz": {
+          "bytes": 12135,
+          "sha256": "b91d92ae93e967b0cfce302934915e926c235bb01b2cd28cc515a7a9ac45172c",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/neighbors.npz"
+        },
+        "work/retrieval/oral-noGLM/teacher/cache/audit.json": {
+          "bytes": 12850,
+          "sha256": "75001bd4806acb06feb2f6a2b36d0fe69d04c67147a5aa29875521264c913408",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/audit.json"
+        },
+        "work/retrieval/oral-noGLM/teacher/cache/backend.json": {
+          "bytes": 1103,
+          "sha256": "25e85049e6cdbd45da518c80c36d73af699cdcf318446140e173ef94b2d212fd",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/backend.json"
+        },
+        "work/retrieval/oral-noGLM/teacher/cache/certificate.json": {
+          "bytes": 554,
+          "sha256": "82ce16f86e76fbe7c92b0d3b33d32a1e9bebb3b7438e1745bf9774b5b3148e00",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/certificate.json"
+        },
+        "work/retrieval/oral-noGLM/teacher/cache/completed.json": {
+          "bytes": 1877,
+          "sha256": "030855ad1876ab4e6c497caa6937f8eb735e7dda945c9c7e391de5800727067d",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/completed.json"
+        },
+        "work/retrieval/oral-noGLM/teacher/cache/neighbors.json": {
+          "bytes": 14631,
+          "sha256": "149c810f14a8af05fb784630841ec0020cd801e1919188b7be18550d7bc677d3",
+          "canonical": "work/groups/oral-noGLM/student/result/retrieval/neighbors.json"
+        },
+        "work/retrieval/oral-noGLM/teacher/cache/neighbors.npz": {
+          "bytes": 12135,
+          "sha256": "b91d92ae93e967b0cfce302934915e926c235bb01b2cd28cc515a7a9ac45172c",
+          "canonical": "work/groups/E009-GLM/student/result/retrieval/neighbors.npz"
+        }
+      },
+      "omitted_retained_on_disk": {},
+      "control_inventory": {
+        "bytes": 1949,
+        "sha256": "56d644f3fde109deb54c70db8033ac452e76e852b513b2b1ad28a27965213f03"
+      },
+      "omitted_inventory_is_not_backup": true
+    },
+    "synthetic": [
+      "numeric original embeddings/native-neighbor cache",
+      "hand-authored marker evidence"
+    ],
+    "real": [
+      "FASTA/feature/sparse readers",
+      "bin selection/refinement",
+      "all-DNA export",
+      "Snakemake barrier and scheduling",
+      "member/alias collector"
+    ],
+    "scientific_fits": 0,
+    "external_binners": 0
+  },
+  "resources": {
+    "command": [
+      "artifacts/e029-certifiable-joint-retrieval/preparation/env-r1/bin/python",
+      "-I",
+      "-B",
+      "scripts/e029_local_checks.py",
+      "--root",
+      "artifacts/e029-certifiable-joint-retrieval/preparation/complete-checks-r1-work"
+    ],
+    "exit_code": 0,
+    "launched_pid": 79819,
+    "peak_sampled_rss_bytes": 307208192,
+    "rss_bytes_ceiling": 8000000000,
+    "sample_includes_coordinator": false,
+    "sampled_average_cpus": 1.0225113457338142,
+    "sampled_cpu_seconds": 70.02,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 10090.064148902893,
+    "stop_reason": null,
+    "wall_seconds": 68.4784577620012
+  },
+  "failed_journals": [
+    "exact-source-tests-r1 wrong export test receipt key",
+    "exact-source-tests-r2 sandbox ps refused",
+    "full-shape-probe-r1 initial 20-hour forecast refused",
+    "full-shape-profile-r1 original forecast refused"
+  ],
+  "scientific_fits": 0,
+  "native_run": false
+}
