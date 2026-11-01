@@ -759,6 +759,16 @@ squash/rebase away their only durable provenance.
 
 Use GitHub as the durable collaborative record of the project where appropriate.
 
+Check destination visibility before publishing operational records. Private
+compute/source transfer and public Git publication are separate actions. If
+publication is not admitted, retain the commits locally and, within an authorized
+execution, use a checksum-bound private Git bundle when it preserves the exact
+clean source, protocol and scientific gates. Verify Git prerequisites, advertised
+head and receiving checkout; record the transport and keep GitHub access scoped.
+Do not bypass a publication rejection through an indirect public push. A private
+source transfer does not imply that the branch was published or approve later
+publication of its financial/account metadata.
+
 As the project grows, use the GitHub mechanisms that best support the work—for example issues, pull requests, discussions, releases, tags, or other repository features—but introduce them because they solve a real coordination or traceability problem, not because every software project is expected to use them.
 
 Important milestones and stable research/software states should eventually be identifiable through Git history and, where useful, tags or releases.

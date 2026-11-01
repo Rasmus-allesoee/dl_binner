@@ -21,6 +21,22 @@ quota/resource inventory, original storage approval and actual headroom. Safely
 release only verified redundant transport or regenerable temporary files without
 current users. November 4, 2026 at 00:00 Copenhagen is hard.
 
+## Source transport amendment before native execution
+
+The exact prepared source is committed locally. Automatic approval review rejects
+the public GitHub push because the new history contains financial/cloud-operation
+records without specific public-disclosure authorization. No public push is made.
+The owner publication preference is requested asynchronously; CPU work can use a
+safer private source transfer without exposing those records.
+
+The tested alternative is an incremental SHA256-bound Git bundle. Actual Git
+prerequisites, advertised branch, imported commit and clean receiving checkout
+must pass. The existing GitHub key stays read-only; only a missing known public
+base may be fetched. The scientific product, source/default/protocol/input gates,
+resource limits and watchdog are unchanged. Fully rendered source consumers and
+the real receiving-Git path pass locally. The transport change is recorded before
+execution, with its exact source commit/bundle in the native receipt.
+
 ## Exact following prompt
 
 To be replaced with the actual native phase and inspection boundary after launch.

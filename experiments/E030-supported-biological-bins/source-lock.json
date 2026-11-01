@@ -2,8 +2,8 @@
   "kind": "E030 scientific and production execution freeze before community outcomes",
   "files": {
     "scripts/e030_launch.py": {
-      "bytes": 17435,
-      "sha256": "3dec18eb3c84352e93f5d4605149b9221ed633dfe2af73c22ab29960f01d0463"
+      "bytes": 21260,
+      "sha256": "02276ede0ab8a1935ea1c811c4ad0d03dd33665f175bd454d20ef7e54f80744d"
     },
     "scripts/e030_probe.py": {
       "bytes": 5092,
@@ -58,8 +58,8 @@
       "sha256": "402a529d340f250e13e9cace511e821909f22451b7d1ee3af9856148a8f7273c"
     },
     "tests/test_e030_operations.py": {
-      "bytes": 6994,
-      "sha256": "74b1dfd15569b2cd14b2cc80cedcaa715660619bf2b756f1165a168f68879a08"
+      "bytes": 8535,
+      "sha256": "7900d95b844258687a254be1532f53ee2e02541537a99db14372ddd4f5741bad"
     },
     "tests/test_e030_review.py": {
       "bytes": 3259,

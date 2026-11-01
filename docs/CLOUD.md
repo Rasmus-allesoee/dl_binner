@@ -2,6 +2,13 @@
 
 ## November 1 E030 authorization and single fresh GPU refusal
 
+E030's public source push is rejected by automatic approval review because new
+financial/cloud records lack specific public-disclosure approval. Keep that
+publication blocked. The prepared alternative uses a tested private exact Git
+bundle, preserving the same clean scientific source and every native gate, with
+no GitHub write/key change. This is an operational source channel, not a scientific
+override. Current exact bundle/commit provenance belongs in E030's receipt.
+
 [E030 operations](../experiments/E030-supported-biological-bins/OPERATIONS.md)
 owns the newly authorized $3 cached CPU bin-construction comparison: existing
 E2/30 + 300 GiB disks, six cumulative hours / 6.25-hour provider STOP, four

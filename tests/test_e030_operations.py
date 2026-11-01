@@ -6,11 +6,24 @@ from unittest.mock import patch
 ROOT=Path(__file__).absolute().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from e024_coverage import binding
 from e030_phase import admission,SECONDS,STOP_SECONDS,deliver_completion
-from e030_launch import render_host,render_release
+from e030_launch import render_host,render_release,source_sync
 from e030_collect import pack,verify,collect_controls,CONTROLS
 
 
 class Operations(unittest.TestCase):
+    def test_actual_private_bundle_import_and_clean_source(self):
+        import os,subprocess
+        packet=ROOT/'artifacts/e030-supported-biological-bins/native-private/source.bundle'
+        source=subprocess.check_output(['git','bundle','list-heads',str(packet)],text=True).split()[0]
+        transport=dict(kind='private_exact_Git_bundle',path=str(packet),bundle=binding(packet),base='ec7ff25b24f3db428429d5b861e7a06c4d223ca8')
+        with tempfile.TemporaryDirectory() as d:
+            repo=Path(d)/'repo';subprocess.run(['git','clone','--shared','--no-checkout',str(ROOT),str(repo)],check=True,capture_output=True)
+            subprocess.run(['git','checkout','--detach',transport['base']],cwd=repo,check=True,capture_output=True)
+            text='import os,pathlib,subprocess,time,json\nrepo=pathlib.Path('+repr(str(repo))+')\nident='+repr(dict(source=source))+'\ndef call(a):return subprocess.check_output(a,cwd=repo,text=True).strip()\n'+source_sync(dict(source=source),transport)+"\ncall(['git','checkout','--detach',ident['source']])\nassert call(['git','rev-parse','HEAD'])==ident['source']\nassert not call(['git','status','--porcelain'])\nassert private_sync['public_GitHub_push_performed'] is False\n"
+            compile(text,'actual-private-import','exec')
+            subprocess.run([sys.executable,'-I','-B','-c',text],check=True,capture_output=True)
+            with self.assertRaisesRegex(ValueError,'bundle differs'):source_sync(dict(source=source),dict(transport,bundle=dict(bytes=0,sha256='0'*64)))
+
     def test_actual_cleanup_checksum_and_current_generation_refusal(self):
         from e030_cleanup import release
         import base64

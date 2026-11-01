@@ -64,11 +64,15 @@
     "artifacts/e030-supported-biological-bins/preparation/final-checks-final-r3-work/operations.exit.json": {
       "bytes": 325,
       "sha256": "2b2e66df617989bd96ca9552c8940445883530df40d520d83b32527f0c84a51d"
+    },
+    "artifacts/e030-supported-biological-bins/preparation/private-transport-operations-r1/completed.json": {
+      "bytes": 758,
+      "sha256": "fa63861ef0acbb7babf066b8daad85d4770c56235e0dc3f71de93e38687e6e5b"
     }
   },
   "contracts": {
     "real_product_tests": 9,
-    "operations_tests": 7,
+    "operations_tests": 8,
     "review_tests": 5,
     "serial_DAG_rules": 13,
     "verified_resume_noop": true,
@@ -79,7 +83,8 @@
     "full_native_shape_rows_required": 32768,
     "final_local_shape_rows": 16384,
     "explicit_trace_to_export_bin_maps": true,
-    "exact_fixed_post_merge_profiles_retained": true
+    "exact_fixed_post_merge_profiles_retained": true,
+    "actual_private_Git_receiver_tested": true
   },
   "real": [
     "FASTA/feature/sparse/forest/profile readers",
@@ -115,5 +120,6 @@
     "Earlier shape journal native_measurement flag was mislabeled on Mac. Final source records actual platform; arithmetic/scientific policy unchanged."
   ],
   "science_fits": 0,
-  "community_scores": 0
+  "community_scores": 0,
+  "source_transport_amendment": "Automatic public-push review rejected financial/cloud disclosure; tested private exact Git import preserves source/science and every gate, no public push."
 }

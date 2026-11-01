@@ -27,6 +27,38 @@ BRANCH='supported-biological-bins'
 SSH=['ssh','-o','ControlMaster=no','-o','ControlPath=none','-o','ConnectTimeout=12','dl-binner-gcp']
 
 
+def source_sync(ident,transport):
+    """Render a private exact Git import when public publication is not admitted.
+
+    The incremental bundle is transport, not a source rewrite. Its SHA256, Git
+    prerequisites, advertised branch, imported commit and clean checkout are
+    independently verified. Only a missing known public base may be fetched from
+    the VM's existing read-only origin; this function never pushes to GitHub.
+    """
+    if transport['kind']!='private_exact_Git_bundle':raise ValueError('Unknown source transport')
+    packet=Path(transport['path'])
+    if binding(packet)!=transport['bundle']:raise ValueError('Private source bundle differs')
+    code=r'''import base64,hashlib
+base=@@BASE@@;wanted=@@WANTED@@
+transport=repo.parent/'experiments/e030/source-transports';transport.mkdir(parents=True,exist_ok=True)
+bundle=transport/('source-'+ident['source']+'.bundle');private=transport/('.source-'+str(time.time_ns()))
+value=base64.b64decode(@@PAYLOAD@@,validate=True)
+if dict(bytes=len(value),sha256=hashlib.sha256(value).hexdigest())!=wanted:raise ValueError('Private source bytes differ')
+with private.open('xb')as f:f.write(value);f.flush();os.fsync(f.fileno())
+try:os.link(private,bundle)
+finally:private.unlink()
+if subprocess.run(['git','cat-file','-e',base+'^{commit}'],cwd=repo,capture_output=True).returncode:
+ call(['git','fetch','origin',base])
+ if call(['git','rev-parse','FETCH_HEAD'])!=base:raise ValueError('Known read-only source base differs')
+call(['git','bundle','verify',str(bundle)])
+if call(['git','bundle','list-heads',str(bundle)]).split()!=[ident['source'],'refs/heads/supported-biological-bins']:raise ValueError('Private advertised source differs')
+call(['git','fetch',str(bundle),'refs/heads/supported-biological-bins'])
+if call(['git','rev-parse','FETCH_HEAD'])!=ident['source']:raise ValueError('Private source commit differs')
+private_sync=dict(status='PASS_PRIVATE_EXACT_GIT_BUNDLE',source=ident['source'],base=base,bundle=wanted,private_path=str(bundle),public_GitHub_push_performed=False,GitHub_key_remains_read_only=True)
+'''
+    return code.replace('@@BASE@@',repr(transport['base'])).replace('@@WANTED@@',repr(transport['bundle'])).replace('@@PAYLOAD@@',repr(base64.b64encode(packet.read_bytes()).decode()))
+
+
 def render_host(ident,financial):
     """Render the exact source-sync, mount/headroom and held-service admission."""
     code=r'''import os,subprocess,json,pathlib,shutil,pwd,time,sys
@@ -82,6 +114,13 @@ print('E030_HELD_GATES',json.dumps(dict(root=str(root),config=binding(root/'conf
 '''
     wheel=Path(financial['wheel_path'])
     if binding(wheel)!=financial['wheel_binding']:raise ValueError('Local wheel changed')
+    private=financial.get('source_transport')
+    if private:
+        old="call(['git','fetch','origin','supported-biological-bins'])\nif call(['git','rev-parse','FETCH_HEAD'])!=ident['source']:raise ValueError('Pushed commit differs')\n"
+        if code.count(old)!=1:raise ValueError('Source-sync consumer changed')
+        code=code.replace(old,source_sync(ident,private))
+        marker="for name in ['logs','tmp','payload']:(root/name).mkdir(parents=True,exist_ok=False)\n"
+        code=code.replace(marker,marker+"(root/'logs/private-source-sync.json').write_text(json.dumps(private_sync,indent=2)+'\\n')\n")
     return code.replace('IDENTITY',repr(ident)).replace('FINANCIAL',repr(financial)).replace('WHEEL_PAYLOAD',repr(base64.b64encode(wheel.read_bytes()).decode()))
 
 
@@ -112,6 +151,10 @@ if time.time()-f['checked_epoch']>7200 or f['new_incremental_gross_ceiling_USD']
 if shutil.disk_usage(root).free<29*1024**3:raise ValueError('Native release headroom unavailable')
 proof=root/'logs/provider-before-release.json';publish(provider,proof)
 paths=[root/'gates/completion.json',root/'gates/source.json',root/'gates/runtime.json',root/'gates/data.json',root/'gates/schedule.json',root/'gates/construction-contracts.json',root/'logs/verified-transport-cleanup.json',root/'logs/supervision.json',root/'logs/watchdog-native-tests.log',root/'logs/maintenance-restart-refused.json',proof,root/'payload/financial-gate.json',root/'external-data.json']
+if f.get('source_transport'):
+ private=json.loads((root/'logs/private-source-sync.json').read_text())
+ if private['source']!=ident['source'] or private['bundle']!=f['source_transport']['bundle'] or private['public_GitHub_push_performed'] is not False:raise ValueError('Private exact-source admission differs')
+ paths.append(root/'logs/private-source-sync.json')
 release=dict(config=binding(root/'config.json'),plan=binding(cfg['plan']),vm_start_epoch=ident['vm_start_epoch'],credit_gate_passed=True,pending_usage_accounted=True,native_gates_passed=True,watchdog_verified=True,provider_STOP_verified=True,existing_VM_only=True,full_axes_verified=True,headroom_measured=True,retention_passed=True,real_money_authorized=False,estimated_incremental_gross_USD=f['estimated_complete_gross_USD'],ceiling_USD=3,provider_STOP_seconds=STOP_SECONDS,storage_retention_extended=False,credit_valid_until_epoch=f['credit_valid_until_epoch'],storage_valid_until_epoch=f['storage_valid_until_epoch'],covered_costs=['compute','disk','storage','network','operations'],gate_files={str(p):binding(p) for p in paths})
 admission(cfg,release,time.time());publish(release,root/'release.json')
 print('E030_RELEASED',json.dumps(dict(epoch=time.time(),release=binding(root/'release.json'),schedule=schedule,supervision=w)),flush=True)
@@ -148,7 +191,13 @@ def start(out,recovery=None):
         if binding(path)!=wanted:raise ValueError('Local gate/source changed')
     if subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip():raise ValueError('Clean source required')
     source=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
-    if subprocess.check_output(['git','ls-remote','origin','refs/heads/'+BRANCH],cwd=ROOT,text=True).split()[0]!=source:
+    transport=f.get('source_transport')
+    if transport:
+        if transport['kind']!='private_exact_Git_bundle' or transport['source']!=source or binding(transport['path'])!=transport['bundle']:raise ValueError('Exact private source transport differs')
+        subprocess.run(['git','bundle','verify',transport['path']],cwd=ROOT,check=True,capture_output=True)
+        heads=subprocess.check_output(['git','bundle','list-heads',transport['path']],cwd=ROOT,text=True).split()
+        if heads!=[source,'refs/heads/'+BRANCH]:raise ValueError('Private branch head differs')
+    elif subprocess.check_output(['git','ls-remote','origin','refs/heads/'+BRANCH],cwd=ROOT,text=True).split()[0]!=source:
         raise ValueError('Exact source not pushed')
     c=Cloud(out/'control-plane');before=c.state()
     if before['status']!='TERMINATED' or not before['machineType'].endswith('/e2-standard-8') or before.get('guestAccelerators'):
