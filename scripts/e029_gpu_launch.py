@@ -14,7 +14,7 @@ from e024_coverage import binding,write
 
 def commands(name,zone,baseline,image,gpu='L4'):
     """Render only one ordinary 8-vCPU GPU/40+64 GiB worker with 105-minute STOP."""
-    if not name.startswith('e029-batching-')or zone not in ['us-central1-b','us-central1-c','us-central1-f']:raise ValueError('Unapproved worker')
+    if not name.startswith('e029-batching-')or zone not in ['us-central1-a','us-central1-b','us-central1-c','us-central1-f']:raise ValueError('Unapproved worker')
     disk='pd-balanced'if gpu=='L4'else'pd-standard';sa=baseline['serviceAccounts'][0];network=baseline['networkInterfaces'][0]
     result=[['compute','disks','create',name+'-boot','--size=40GB','--type='+disk,'--image='+image,'--labels=experiment=e029'],['compute','disks','create',name+'-work','--size=64GB','--type='+disk,'--labels=experiment=e029']]
     args=['compute','instances','create',name,'--machine-type='+('g2-standard-8'if gpu=='L4'else'n1-standard-8'),'--disk=name='+name+'-boot,boot=yes,auto-delete=no','--disk=name='+name+'-work,boot=no,auto-delete=no','--subnet='+network['subnetwork'],'--network-tier=STANDARD','--tags=dl-binner-iap','--service-account='+sa['email'],'--scopes='+','.join(sa['scopes']),'--metadata=enable-oslogin=TRUE,enable-guest-attributes=TRUE','--shielded-secure-boot','--shielded-vtpm','--shielded-integrity-monitoring','--maintenance-policy=TERMINATE','--no-restart-on-failure','--max-run-duration=6300s','--instance-termination-action=STOP','--labels=experiment=e029']
@@ -25,7 +25,7 @@ def commands(name,zone,baseline,image,gpu='L4'):
 def unused_owned_disks(disks,name,zone):
     """Select exact fresh temporary disks from actual inventory; refuse users/shape drift."""
     expected={name+'-boot':40,name+'-work':64};selected=[]
-    if not name.startswith('e029-batching-')or zone not in ['us-central1-b','us-central1-c','us-central1-f']:raise ValueError('Unapproved empty-resource scope')
+    if not name.startswith('e029-batching-')or zone not in ['us-central1-a','us-central1-b','us-central1-c','us-central1-f']:raise ValueError('Unapproved empty-resource scope')
     for disk in disks:
         if disk['name']not in expected or not disk['zone'].endswith('/'+zone):continue
         if disk.get('users')or int(disk['sizeGb'])!=expected[disk['name']]or disk.get('labels',{}).get('experiment')!='e029':raise ValueError('Temporary disk ownership/shape differs')
@@ -50,7 +50,14 @@ def create(out):
     existing=c.call(['compute','instances','list'])
     if any(x['name'].startswith('e029-batching-')for x in existing):raise ValueError('Existing temporary qualification worker requires inspection')
     image=c.call(['compute','disks','describe',before['disks'][0]['source'].split('/')[-1]],'us-central1-a')['sourceImage']
-    for zone,gpu in [('us-central1-b','L4'),('us-central1-c','L4'),('us-central1-f','T4')]:
+    placements=[('us-central1-b','L4'),('us-central1-c','L4'),('us-central1-f','T4')]
+    advised=f.get('provider_directed_same_region_fallback')
+    if advised:
+        if advised['zone']!='us-central1-a'or binding(advised['path'])!=advised['binding']:raise ValueError('Unbound provider-directed placement')
+        refusal=json.loads(Path(advised['path']).read_text())
+        if refusal.get('capacity')is not True or 'zonesAvailable: us-central1-a'not in refusal.get('error',''):raise ValueError('Provider did not identify same-region L4 capacity')
+        placements.append(('us-central1-a','L4'))
+    for zone,gpu in placements:
         prior=f.get('prior_capacity_refusals',{}).get(zone)
         if prior:
             if binding(prior['path'])!=prior['binding']:raise ValueError('Prior capacity receipt changed')

@@ -25,6 +25,7 @@ class Qualification(unittest.TestCase):
         self.assertEqual([x['name']for x in unused_owned_disks(rows,name,zone)],[name+'-boot',name+'-work'])
         with self.assertRaises(ValueError):unused_owned_disks([dict(rows[0],users=['live-instance'])],name,zone)
         self.assertFalse(unused_owned_disks(rows,name,'us-central1-c'))
+        self.assertIn('--machine-type=g2-standard-8',commands('e029-batching-fixture-a','us-central1-a',dict(serviceAccounts=[dict(email='same',scopes=[])],networkInterfaces=[dict(subnetwork='same')]),'same-image')[-1])
 
     def test_real_archive_runtime_bytes_internal_alias_and_escape_refusal(self):
         with tempfile.TemporaryDirectory()as d:

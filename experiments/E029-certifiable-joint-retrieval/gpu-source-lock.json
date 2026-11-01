@@ -14,8 +14,8 @@
       "sha256": "fead82886e2e2afc5bbcc13e348f91eaad3425097ae9798a9173bf01afac3916"
     },
     "experiments/E029-certifiable-joint-retrieval/gpu-protocol.json": {
-      "bytes": 1837,
-      "sha256": "4e8af6fa9a92e4785daad4698bb908a013c26c28fdd7d22e15ca9d8129a18934"
+      "bytes": 2157,
+      "sha256": "ed425545bfed8bd205fb287bfc3adc5e2afbb4a5d437ef6ed1b545aa9d7f5c38"
     },
     "experiments/E029-certifiable-joint-retrieval/source-lock.json": {
       "bytes": 2923,
@@ -82,8 +82,8 @@
       "sha256": "74af917f177b3622f5369410b2d64c20ab46ff617053cb2bda3823f6fa61f046"
     },
     "scripts/e029_gpu_launch.py": {
-      "bytes": 18182,
-      "sha256": "75d920bf99bfb525fbccaf3dd6b25d2dfb4eae0aabb2d1c1d230e7f8e3c3ff27"
+      "bytes": 18756,
+      "sha256": "a4c660adb13091f103137b7da383879713fecbbe271e4a8ca66fc99ec2952506"
     },
     "scripts/e029_gpu_node.py": {
       "bytes": 13101,
@@ -114,8 +114,8 @@
       "sha256": "1c1d7ff4d934ca54429be56608b22f3214c96198362c2f506761a39daa703529"
     },
     "tests/test_e029_gpu_qualification.py": {
-      "bytes": 5089,
-      "sha256": "b13839040cb3219ca35aae0504d05a84637b69d8e5fa254c0d61344e3f0fabe7"
+      "bytes": 5309,
+      "sha256": "2c702f0c5fae99e6ad170304e8e227756bd2056be47d00712ce77316764ce53a"
     }
   }
 }

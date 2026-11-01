@@ -7,15 +7,33 @@
   "original_and_batched_model_weights_shared_unchanged": true,
   "dtype": "float32",
   "attention": "pinned author's existing Torch reference fallback; TF32/autocast disabled",
-  "exact_equal": ["DNA hashes", "canonical chunk boundaries", "both-strand token lengths", "unknown token counts", "view and base exposure", "pooling details"],
-  "allclose_rtol": 0.00001,
-  "allclose_atol": 0.000001,
-  "maximum_absolute_error": 0.00001,
+  "exact_equal": [
+    "DNA hashes",
+    "canonical chunk boundaries",
+    "both-strand token lengths",
+    "unknown token counts",
+    "view and base exposure",
+    "pooling details"
+  ],
+  "allclose_rtol": 1e-05,
+  "allclose_atol": 1e-06,
+  "maximum_absolute_error": 1e-05,
   "minimum_cosine": 0.999999,
   "original_failed_Mac_portability_tolerance_unchanged": true,
-  "measurement": ["one-time warmup", "original and batched elapsed", "tokenization included", "actual batch/padding shapes", "native VRAM samples", "sampled process-tree RSS/CPU", "same complete clock"],
+  "measurement": [
+    "one-time warmup",
+    "original and batched elapsed",
+    "tokenization included",
+    "actual batch/padding shapes",
+    "native VRAM samples",
+    "sampled process-tree RSS/CPU",
+    "same complete clock"
+  ],
   "GPU": "one L4/g2-standard-8; b then c on capacity failure; one currently priced T4/n1-standard-8 f fallback",
-  "boot_work_GiB": [40, 64],
+  "boot_work_GiB": [
+    40,
+    64
+  ],
   "numerical_threads": 4,
   "tree_RSS_bytes": 26000000000,
   "GPU_memory_bytes": 15032385536,
@@ -30,5 +48,12 @@
   "source_data_acquisition": false,
   "retention_end": "2026-11-04T00:00:00+01:00",
   "independent_CPU_completion": true,
-  "temporary_worker_deletion_requires_verified_private_collection": true
+  "temporary_worker_deletion_requires_verified_private_collection": true,
+  "provider_directed_same_region_fallback": {
+    "zone": "us-central1-a",
+    "shape": "g2-standard-8 + one L4",
+    "requires_exact_bound_c_capacity_receipt": true,
+    "additional_worker_or_quota": false,
+    "numerical_or_exposure_change": false
+  }
 }

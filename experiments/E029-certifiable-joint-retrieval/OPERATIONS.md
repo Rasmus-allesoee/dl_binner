@@ -134,3 +134,16 @@ No quota increase or science repeat. Reuse the bound b capacity refusal and
 continue c, then one priced T4/f capacity fallback. The GPU clock has not begun.
 Native host RAM and official signed-driver prerequisites are now explicit.
 The scientific recipe, 128-view cohort and numerical criteria remain unchanged.
+
+### Provider-directed same-region routing amendment, November 1
+
+The continuation verifies the CPU is TERMINATED with SUCCESS completion and no
+remaining temporary disks. The corrected c/f sequence refuses actual GPU capacity
+and safely removes every empty disk. The c provider receipt explicitly reports
+`zonesAvailable: us-central1-a` for the same L4/G2 shape. Use one prospectively
+recorded a attempt under the owner's instruction to finish this authorized work
+using sensible covered operational revisions. This changes placement within Iowa,
+not the single-worker count, hardware, regional quota, $3 scope, 90/105-minute
+limits, source/model/cohort/numerical rule or November 4 boundary. Bind the exact
+provider evidence before routing. Prior b/c/f refusals stay unchanged and are not
+repeated. No GPU clock has started because no GPU instance has yet been created.
