@@ -1,5 +1,30 @@
 # Google Cloud workspace operations
 
+## November 1 E030 authorization and single fresh GPU refusal
+
+[E030 operations](../experiments/E030-supported-biological-bins/OPERATIONS.md)
+owns the newly authorized $3 cached CPU bin-construction comparison: existing
+E2/30 + 300 GiB disks, six cumulative hours / 6.25-hour provider STOP, four
+numerical threads / 26 GB sampled tree RSS / 25 GiB free / 4 GiB extra / 2 GiB
+compressed export. Fresh gates precede native release. No retention renewal.
+
+One fresh unchanged E029 128-view qualification is attempted in Iowa a under its
+separate existing $3 / 90-minute / 105-minute STOP limits. Capacity refuses before
+any GPU boot. Both verified empty temporary disks are removed; original stopped
+CPU resources are unchanged. [Evidence](../experiments/E030-supported-biological-bins/gpu-observed.json)
+keeps this distinct from the earlier capacity sequence. No further attempt or
+measured GPU speedup is claimed. Full Oral GLM remains separately unadmitted.
+
+Fresh signed-in Welcome credit is DKK 1,714.18 Available / 87%, paid-upgraded
+Certain usage/net pricing, January 12, 2027 expiry. Displayed November cost/net
+are zero but may lag >24 hours; retain the $35 reserve. Current ordinary-product
+Catalog and all-version/soft-delete storage checks quote $2.5174 complete CPU
+upper and $2.8726 qualification upper, independently inside $3 each. The approved
+storage week remains $7.8524 < $8. **November 4 at 00:00 Copenhagen remains hard**.
+Original stopped disks continue about $31.20 per pricing month plus GCS.
+
+## Preserved E029 closeout
+
 **November 1 E029 closeout: CPU SUCCESS, independently TERMINATED; no temporary
 GPU resources.** [Inspection](../experiments/E029-certifiable-joint-retrieval/inspection-observed.json)
 closes phase `discovery-20261101T015844Z-31fb9c7`. All ten native gates, 19 DAG

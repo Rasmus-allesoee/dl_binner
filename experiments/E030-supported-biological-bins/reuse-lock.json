@@ -1,0 +1,365 @@
+{
+  "kind": "E030 explicit restore-only native E029 results",
+  "accepted_work": "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/work",
+  "accepted_science_source": "31fb9c788e3903f10eb8beb012ca44a36fa74400",
+  "accepted_archive": {
+    "bytes": 842865965,
+    "sha256": "8fe3c0ad6d30af8817050c272be3dc7800e055bf97152b9e8aa4eb248090bec7"
+  },
+  "accepted_members": {
+    "groups/E009-GLM/student/result/alternatives.json": {
+      "bytes": 677073,
+      "sha256": "dfb4b19ed9396229aa76f87252bc5e2ee605d893d43046b1bd66a869dd77ee76"
+    },
+    "groups/E009-GLM/student/result/completed.json": {
+      "bytes": 463877,
+      "sha256": "6cfafbaf9884b151dd8571e0c1d8052676fab1294e2aca99957378f4efae9f9f"
+    },
+    "groups/E009-GLM/student/result/forest.json": {
+      "bytes": 289,
+      "sha256": "495f2c1305a77f73ba2e5fbbb480c38222dc7b44fb317408a4906fc5f0993c07"
+    },
+    "groups/E009-GLM/student/result/forest.npz": {
+      "bytes": 3218828,
+      "sha256": "547f86813bedcbf8b3b4aab5bfa341f81977b0cc8eeade05c69093a58faa8874"
+    },
+    "groups/E009-GLM/student/result/parent-choices.json": {
+      "bytes": 994560,
+      "sha256": "45003a391eb13afe38ea119e85adbb71af2527c49f8028e048611e40fd663c71"
+    },
+    "groups/E009-GLM/student/result/parent-partition.json": {
+      "bytes": 7945727,
+      "sha256": "286d5a00891119a866e73a8073e6108ff112ac2c3588f77a1d6761dafca2f6eb"
+    },
+    "groups/E009-GLM/student/result/post-choices.json": {
+      "bytes": 1034448,
+      "sha256": "d27973f5378e26a461e95fbce9290e660ab997a05a802a652f1edf7cdb144754"
+    },
+    "groups/E009-GLM/student/result/post-partition.json": {
+      "bytes": 9847385,
+      "sha256": "3516f1746ff263f9ec416f6771b3e92b470e9eb82844fb49bb13f90417069d5e"
+    },
+    "groups/E009-GLM/student/result/retrieval/audit.json": {
+      "bytes": 392574,
+      "sha256": "cb27cb0614348d327672574cf97cffabbebd8aebd1632bf6766b478beb14ec58"
+    },
+    "groups/E009-GLM/student/result/retrieval/completed.json": {
+      "bytes": 2442,
+      "sha256": "8c2c9f452bc90c4165a6fa063d65dfd0b2124212f9609b3ff47e5b268e616aa9"
+    },
+    "groups/E009-GLM/student/result/retrieval/initialization.json": {
+      "bytes": 1466,
+      "sha256": "f3ea3f2eb2927dc66d74fe71bd2e437a7274f270868913336c566666f77d7a49"
+    },
+    "groups/E009-GLM/student/result/retrieval/neighbors.json": {
+      "bytes": 459447,
+      "sha256": "c2c5d98081768a0a1cde13af8c9cffe0ccceafe6c4821c4acb2ed72939196603"
+    },
+    "groups/E009-GLM/student/result/retrieval/neighbors.npz": {
+      "bytes": 26727871,
+      "sha256": "78ace8a4a0830f5ee58f8ca7286c61efd4442ef095237c00c79ff09a2a998189"
+    },
+    "groups/E009-GLM/student/result/retrieval/packing.json": {
+      "bytes": 40,
+      "sha256": "735bf3d58c0c4d5d8a6d87b67fa2fe7097eadda31ef85ea427c94d90bf9ad6dd"
+    },
+    "groups/E009-GLM/student/result/retrieval/proposal-audit.json": {
+      "bytes": 158,
+      "sha256": "5e435cd287ae89a517baa37d227027209997073f2917eaff00445574a041e63c"
+    },
+    "groups/E009-GLM/teacher/result/alternatives.json": {
+      "bytes": 676769,
+      "sha256": "916ff5ddb94606aa91f495362256f57400889ef2990650e04bf9cf0f00a8a17e"
+    },
+    "groups/E009-GLM/teacher/result/completed.json": {
+      "bytes": 463878,
+      "sha256": "0f058751a9a999a59f78aa78b547d764ff414637c1a9b789c226c1d7beb9a645"
+    },
+    "groups/E009-GLM/teacher/result/forest.json": {
+      "bytes": 289,
+      "sha256": "8b79bf1ef6a81367103bf544e84f3d68cb57a33226c7c1073e4aa4f7ce60641d"
+    },
+    "groups/E009-GLM/teacher/result/forest.npz": {
+      "bytes": 3218022,
+      "sha256": "7181ce3af3899d0c7b6a524dd429fb07ead9d4c6e1c24d3f3286c927015cb480"
+    },
+    "groups/E009-GLM/teacher/result/parent-choices.json": {
+      "bytes": 994095,
+      "sha256": "86a634dc3dc4cd2252c74562d58332822faf0a31477f4cddfc9b3fe9ee942bae"
+    },
+    "groups/E009-GLM/teacher/result/parent-partition.json": {
+      "bytes": 7945727,
+      "sha256": "7790792713cbe57ce72d52fe95cd52861865e981998558199c56ded65e64897a"
+    },
+    "groups/E009-GLM/teacher/result/post-choices.json": {
+      "bytes": 1034289,
+      "sha256": "9d49234e9a8ae200211c5ba518744ab8ecfbaa45c6ddd230d427a6a338ee7a91"
+    },
+    "groups/E009-GLM/teacher/result/post-partition.json": {
+      "bytes": 9863367,
+      "sha256": "a055a3a9ff0ebfa9fc92a374b4c10defc4a607a3432c66a74624a371bf59523a"
+    },
+    "groups/E009-GLM/teacher/result/retrieval/audit.json": {
+      "bytes": 392575,
+      "sha256": "1cb90d9a7076d42e9d274d5b34db6fddb7acb3d3ba4056bac56b1ee57ae44261"
+    },
+    "groups/E009-GLM/teacher/result/retrieval/completed.json": {
+      "bytes": 2442,
+      "sha256": "8b565dbf9152e21f27276233511f947e626fe97881528804b351f9e6c9a55fb3"
+    },
+    "groups/E009-GLM/teacher/result/retrieval/initialization.json": {
+      "bytes": 1466,
+      "sha256": "c5e639bfb546144555afea4d7c11c14460679bdb70611d4a35b35ca9e1820bbb"
+    },
+    "groups/E009-GLM/teacher/result/retrieval/neighbors.json": {
+      "bytes": 459448,
+      "sha256": "f34442686fcd018b251f3cfb98caf5866608ec6cd96edbe51d5b840284700f59"
+    },
+    "groups/E009-GLM/teacher/result/retrieval/neighbors.npz": {
+      "bytes": 26746209,
+      "sha256": "7635525c4c9957517007e69c74666d1404a0d4ad21bca5ea30385ee5634f4c43"
+    },
+    "groups/E009-GLM/teacher/result/retrieval/packing.json": {
+      "bytes": 40,
+      "sha256": "735bf3d58c0c4d5d8a6d87b67fa2fe7097eadda31ef85ea427c94d90bf9ad6dd"
+    },
+    "groups/E009-GLM/teacher/result/retrieval/proposal-audit.json": {
+      "bytes": 158,
+      "sha256": "5e435cd287ae89a517baa37d227027209997073f2917eaff00445574a041e63c"
+    },
+    "groups/E009-noGLM/student/result/alternatives.json": {
+      "bytes": 676535,
+      "sha256": "2fff6192b2b19c10de78fe36b00d119cffbf7fd449dcb61f699a1a0b6374d3ad"
+    },
+    "groups/E009-noGLM/student/result/completed.json": {
+      "bytes": 463879,
+      "sha256": "07212ba114aeb1b5a61b206404acb0bebec289ccbef73aad74d9dbc5fec2aae6"
+    },
+    "groups/E009-noGLM/student/result/forest.json": {
+      "bytes": 289,
+      "sha256": "995fac8583f2ccdcdef88135f60a5886491f2981bfb8e7af90db22cd1cc02dba"
+    },
+    "groups/E009-noGLM/student/result/forest.npz": {
+      "bytes": 3215874,
+      "sha256": "bdd9a366ce802039c2b2235fc89a0c4a7b7b0affef3fe80d87feb094378a78d1"
+    },
+    "groups/E009-noGLM/student/result/parent-choices.json": {
+      "bytes": 993601,
+      "sha256": "3b73c5ae18a61cb7bf63034d1409ee3c04027084e46391c0a66033bbe54a38e7"
+    },
+    "groups/E009-noGLM/student/result/parent-partition.json": {
+      "bytes": 7945727,
+      "sha256": "80acca709cb0d16fc930d1e0bc5b472c33e288e4c8bca8146a92ecdc4b196ac7"
+    },
+    "groups/E009-noGLM/student/result/post-choices.json": {
+      "bytes": 1033607,
+      "sha256": "0be5314b0c2210e9f2cf25a7124ad3166982f601949d1f2e24aa42167919514d"
+    },
+    "groups/E009-noGLM/student/result/post-partition.json": {
+      "bytes": 9871729,
+      "sha256": "a6c02f5536ec6d75a188e7b225d23c43ab5daa92a7858c0555a8eb13da468cc3"
+    },
+    "groups/E009-noGLM/student/result/retrieval/audit.json": {
+      "bytes": 392576,
+      "sha256": "2612a89e368c8681dc777b3d6eccef4fc3ee735ee5de0d8c110ddd45b75906a2"
+    },
+    "groups/E009-noGLM/student/result/retrieval/completed.json": {
+      "bytes": 2442,
+      "sha256": "29d4c4b2f944ac844fdcb73b259379cb0e672dfcc4f0c400fdbf651d573746c4"
+    },
+    "groups/E009-noGLM/student/result/retrieval/initialization.json": {
+      "bytes": 1466,
+      "sha256": "08328dd53d0447e8354d5d0138dbfa813a3e1e9539d820e9e94cd43ec48114af"
+    },
+    "groups/E009-noGLM/student/result/retrieval/neighbors.json": {
+      "bytes": 459449,
+      "sha256": "7bca35432cfa185df6b52f1ab72343dcf9eae22d178178555eee8f447a961bc0"
+    },
+    "groups/E009-noGLM/student/result/retrieval/neighbors.npz": {
+      "bytes": 26744411,
+      "sha256": "4195fa534f96b200ae6e697cb0186eb4821855c4635a1366ba6241c4f18297c2"
+    },
+    "groups/E009-noGLM/student/result/retrieval/packing.json": {
+      "bytes": 40,
+      "sha256": "735bf3d58c0c4d5d8a6d87b67fa2fe7097eadda31ef85ea427c94d90bf9ad6dd"
+    },
+    "groups/E009-noGLM/student/result/retrieval/proposal-audit.json": {
+      "bytes": 158,
+      "sha256": "5e435cd287ae89a517baa37d227027209997073f2917eaff00445574a041e63c"
+    },
+    "groups/E009-noGLM/teacher/result/alternatives.json": {
+      "bytes": 676060,
+      "sha256": "28c9a87abfbecdd1b28125a00bfd72189482ea59d726c9149195c2413c9145c8"
+    },
+    "groups/E009-noGLM/teacher/result/completed.json": {
+      "bytes": 463890,
+      "sha256": "ba0535e9ff228728ffd10f822ffacf6e1145b60331661f2bfa632f2560d2bfe9"
+    },
+    "groups/E009-noGLM/teacher/result/forest.json": {
+      "bytes": 289,
+      "sha256": "70a0712de81a84b96e4ce6c957f64f6aeb540cdc36b87384a88302df9ad092bb"
+    },
+    "groups/E009-noGLM/teacher/result/forest.npz": {
+      "bytes": 3216173,
+      "sha256": "bfe3aa23de98199fefffba27b565a8ac41a09bcc1aaa5d1022d0d7bdec1a03df"
+    },
+    "groups/E009-noGLM/teacher/result/parent-choices.json": {
+      "bytes": 993011,
+      "sha256": "e473cbf6a2ac6a78365b5cb2e3326723affb9611d1933429457b6fc5908e07e5"
+    },
+    "groups/E009-noGLM/teacher/result/parent-partition.json": {
+      "bytes": 7945727,
+      "sha256": "e2b81d37b048ae55db40c381d244758effed8ec25a6d2d012640b1a722a17f53"
+    },
+    "groups/E009-noGLM/teacher/result/post-choices.json": {
+      "bytes": 1033063,
+      "sha256": "e03e9e71d92960cd7cae8c9c5bca9536ba4ffda1b5e63d8805413abbe662c4f8"
+    },
+    "groups/E009-noGLM/teacher/result/post-partition.json": {
+      "bytes": 9896840,
+      "sha256": "8f6efa3f1b77580806bc4a65260379a44f60eea1111a6c48a52d27c6af86a809"
+    },
+    "groups/E009-noGLM/teacher/result/retrieval/audit.json": {
+      "bytes": 392587,
+      "sha256": "52761d47b1ff11caec28b2dae7a32890aac3b7c69282bea508f5b60d3227891f"
+    },
+    "groups/E009-noGLM/teacher/result/retrieval/completed.json": {
+      "bytes": 2442,
+      "sha256": "c32711de4562cb3db887e15cf1262226f3b408e7858be4ba8837beea126c6af3"
+    },
+    "groups/E009-noGLM/teacher/result/retrieval/initialization.json": {
+      "bytes": 1466,
+      "sha256": "0fccabd9237c838d838297ea75f8c218c5ac1f5c85efeee7065f2dd2cbf65c1e"
+    },
+    "groups/E009-noGLM/teacher/result/retrieval/neighbors.json": {
+      "bytes": 459460,
+      "sha256": "9ecbe2345833a636bf58e1c84a62ef1a473964955739960a9edce498574dd0cf"
+    },
+    "groups/E009-noGLM/teacher/result/retrieval/neighbors.npz": {
+      "bytes": 26781065,
+      "sha256": "714d538efe0e6ee04fe076b938335bb69c83a0deee83216d0f565bababd63bdc"
+    },
+    "groups/E009-noGLM/teacher/result/retrieval/packing.json": {
+      "bytes": 40,
+      "sha256": "735bf3d58c0c4d5d8a6d87b67fa2fe7097eadda31ef85ea427c94d90bf9ad6dd"
+    },
+    "groups/E009-noGLM/teacher/result/retrieval/proposal-audit.json": {
+      "bytes": 158,
+      "sha256": "5e435cd287ae89a517baa37d227027209997073f2917eaff00445574a041e63c"
+    },
+    "groups/oral-noGLM/student/result/alternatives.json": {
+      "bytes": 3431324,
+      "sha256": "680532991c937f2726c1b0884a3a02f37a31fb8d4889721777cf1ee4769eb001"
+    },
+    "groups/oral-noGLM/student/result/completed.json": {
+      "bytes": 482637,
+      "sha256": "a2786c10f5d1a964ed71fb56f4f21e87b2bd1ecd31e3e1b50e9873d923dd77da"
+    },
+    "groups/oral-noGLM/student/result/forest.json": {
+      "bytes": 290,
+      "sha256": "3869fd2989529043df99c591792ef98eb98952fb22eede76bc9f2db5d6a7eb3e"
+    },
+    "groups/oral-noGLM/student/result/forest.npz": {
+      "bytes": 18310191,
+      "sha256": "16a3d0a4f427ffd4562b2a50d20fab5d6976d08834fe1e168bb6b9c5fef67b70"
+    },
+    "groups/oral-noGLM/student/result/parent-choices.json": {
+      "bytes": 5023655,
+      "sha256": "de816b49bb6863491001f4b4c63d0a85e55e98f53e3db197acf43aa4b281a42c"
+    },
+    "groups/oral-noGLM/student/result/parent-partition.json": {
+      "bytes": 148639565,
+      "sha256": "d92893b04e172bcb70dea0430ef35db35d9da2f45f28eccd2df1f724ece53bff"
+    },
+    "groups/oral-noGLM/student/result/post-choices.json": {
+      "bytes": 5250383,
+      "sha256": "9bda7550c37c8c16a721babaa5e6a836fd11429606370df590adbf4ff4eb2a5b"
+    },
+    "groups/oral-noGLM/student/result/post-partition.json": {
+      "bytes": 161182221,
+      "sha256": "441657bace7968e79d70c9f8ce3de426079b35b5d7b3d177f593efa9d8c1fae0"
+    },
+    "groups/oral-noGLM/student/result/retrieval/audit.json": {
+      "bytes": 411544,
+      "sha256": "b1880af7931a943e0c07280fd681250b7626f849f934ff263736a3e3826e7c58"
+    },
+    "groups/oral-noGLM/student/result/retrieval/backend.json": {
+      "bytes": 1103,
+      "sha256": "25e85049e6cdbd45da518c80c36d73af699cdcf318446140e173ef94b2d212fd"
+    },
+    "groups/oral-noGLM/student/result/retrieval/certificate.json": {
+      "bytes": 561,
+      "sha256": "7a0d1fdf615ae056fa03bb01ce57f4cd86822120c66937bbb372fa902d5b3000"
+    },
+    "groups/oral-noGLM/student/result/retrieval/completed.json": {
+      "bytes": 1909,
+      "sha256": "aab71af74f5cb2ad75627a3876a7e3ae8916db81eb2b0cc73a99cc79cb0e6370"
+    },
+    "groups/oral-noGLM/student/result/retrieval/neighbors.json": {
+      "bytes": 478620,
+      "sha256": "c3c393107d3920fabbd5c347a82a331cd7ee577b67f868ebdc4e8a9310daeae0"
+    },
+    "groups/oral-noGLM/student/result/retrieval/neighbors.npz": {
+      "bytes": 155912346,
+      "sha256": "ad2ea446488aaace9ae4259615f1f64658cb0a30ed5d8ef22c3a616332c1e1b7"
+    },
+    "groups/oral-noGLM/teacher/result/alternatives.json": {
+      "bytes": 3439275,
+      "sha256": "f91d8ede688fecfbc87160bc41514cdbb12bf603425e831bf1eb136f0c5fd4de"
+    },
+    "groups/oral-noGLM/teacher/result/completed.json": {
+      "bytes": 482633,
+      "sha256": "6d2cbef742783ffb2e41bd8fe57555654f12054b3f99e5805195877e790f5cbd"
+    },
+    "groups/oral-noGLM/teacher/result/forest.json": {
+      "bytes": 290,
+      "sha256": "027a5a5d85ef4bcfcf85a3f480de23518ef2004dd898840fa8e0637afb624cb4"
+    },
+    "groups/oral-noGLM/teacher/result/forest.npz": {
+      "bytes": 18364297,
+      "sha256": "e7f96893c56d601930ac8a85ec53a1fd71accbc7a9708b9f86da9e0e93c97854"
+    },
+    "groups/oral-noGLM/teacher/result/parent-choices.json": {
+      "bytes": 5035076,
+      "sha256": "9659fe327992e50d423ff695b69389a0a87e2f97b959dcc655411cfe5b21b5df"
+    },
+    "groups/oral-noGLM/teacher/result/parent-partition.json": {
+      "bytes": 148639565,
+      "sha256": "b805df27ee79f315fa42cb507f0bd54b339d6393fc55676359c791a18bf1cddd"
+    },
+    "groups/oral-noGLM/teacher/result/post-choices.json": {
+      "bytes": 5262478,
+      "sha256": "c65783f6ac0cc4f37ac2698e1c2fa4d1e5ea4f7fecd8f3e61f16ffddc1aeff8c"
+    },
+    "groups/oral-noGLM/teacher/result/post-partition.json": {
+      "bytes": 160947183,
+      "sha256": "0eb74ded9ddbfa71b767fc9ec6e633a38811082d509ce1aeb87597ffd844678c"
+    },
+    "groups/oral-noGLM/teacher/result/retrieval/audit.json": {
+      "bytes": 411540,
+      "sha256": "fd1414c14d4a995e15a43eaa48f932a09bbf1230cfb91bd86298e53cf528cd91"
+    },
+    "groups/oral-noGLM/teacher/result/retrieval/backend.json": {
+      "bytes": 1103,
+      "sha256": "25e85049e6cdbd45da518c80c36d73af699cdcf318446140e173ef94b2d212fd"
+    },
+    "groups/oral-noGLM/teacher/result/retrieval/certificate.json": {
+      "bytes": 563,
+      "sha256": "4fb8273a91fc776f5978fea87617e2ebe52a375dc6bca1af11499af022f77d22"
+    },
+    "groups/oral-noGLM/teacher/result/retrieval/completed.json": {
+      "bytes": 1909,
+      "sha256": "98790cf8408a01a1d9e44029c9ae525c504087e8937a730a6f8328d9d8582271"
+    },
+    "groups/oral-noGLM/teacher/result/retrieval/neighbors.json": {
+      "bytes": 478616,
+      "sha256": "8097d6db8e4889837568de0af9a62b15ae9e5f98b0c4a4df1c6eee79c813fe99"
+    },
+    "groups/oral-noGLM/teacher/result/retrieval/neighbors.npz": {
+      "bytes": 157101515,
+      "sha256": "89def4ae6eb3a6b3899950cd69074b20183fa9974ba3929a6f9b95357f53462c"
+    }
+  },
+  "native_dependency_base": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+  "native_runtime_reference": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json"
+}

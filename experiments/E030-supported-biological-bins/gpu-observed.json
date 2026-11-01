@@ -1,0 +1,60 @@
+{
+  "kind": "One newly authorized fresh E029 qualification capacity attempt during E030",
+  "status": "NOT_RUN_CAPACITY_BLOCKED",
+  "source": {
+    "commit": "ec7ff25b24f3db428429d5b861e7a06c4d223ca8",
+    "asset": {
+      "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/source-ec7ff25.tar.gz",
+      "generation": "1793521766587483",
+      "binding": {
+        "bytes": 4786278,
+        "sha256": "ce8a9aca2659e7e5f002aaf0672725fed374b7af33a6bdc304f0629f055f01bb"
+      }
+    }
+  },
+  "zone": "us-central1-a",
+  "machine": "g2-standard-8 + one L4",
+  "attempts": 1,
+  "no_more_attempts": true,
+  "GPU_started": false,
+  "GPU_compute_USD": 0,
+  "qualification_model_outputs": false,
+  "full_Oral_bank": false,
+  "temporary_disks_removed": [
+    "e029-batching-20261101-r4-a-boot",
+    "e029-batching-20261101-r4-a-work"
+  ],
+  "original_CPU_TERMINATED": true,
+  "original_CPU_disks_unchanged": true,
+  "original_limits": {
+    "gross_USD": 3,
+    "seconds": 5400,
+    "STOP_seconds": 6300,
+    "views": 128
+  },
+  "failure": "RuntimeError(\"ERROR: (gcloud.compute.instances.create) Could not fetch resource:\\n---\\ncode: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS\\nerrorDetails:\\n- help:\\n    links:\\n    - description: Troubleshooting documentation\\n      url: https://cloud.google.com/compute/docs/resource-error\\n- localizedMessage:\\n    locale: en-US\\n    message: A g2-standard-8 VM instance with 1 nvidia-l4 accelerator(s) is currently\\n      unavailable in the us-central1-a zone. Alternatively, you can try your request\\n      again with a different VM hardware configuration or at a later time. For more\\n      information, see the troubleshooting documentation.\\n- errorInfo:\\n    domain: compute.googleapis.com\\n    metadatas:\\n      attachment: nvidia-l4:1\\n      vmType: g2-standard-8\\n      zone: us-central1-a\\n      zonesAvailable: ''\\n    reason: resource_availability\\nmessage: The zone 'projects/project-d17bd588-df31-488f-b16/zones/us-central1-a' does\\n  not have enough resources available to fulfill the request.  'NULL:0/NULL:0/NULL:0\\n  (state:STOCKOUT, sub-state:STOCKOUT, resource type:compute)'.\\n\\n\")",
+  "evidence": {
+    "artifacts/e030-supported-biological-bins/gpu-once/prospective.json": {
+      "bytes": 2224,
+      "sha256": "016ad660db47910d3732c5f499446febfff2ba49da34dedebfb3296dd7998173"
+    },
+    "artifacts/e030-supported-biological-bins/gpu-once/financial-gate.json": {
+      "bytes": 1321,
+      "sha256": "730c238fa46dd77b6baa2147ff6e35d5baa23cf2631cde04eca3153f52d79c6d"
+    },
+    "artifacts/e030-supported-biological-bins/gpu-once/closed.json": {
+      "bytes": 702,
+      "sha256": "0833d09ac3cd901ba5ec47007c2c5792a86eaa2826b2bb047b759245da5f1f66"
+    },
+    "artifacts/e030-supported-biological-bins/gpu-once/control-plane/failure.json": {
+      "bytes": 1214,
+      "sha256": "745262797f5d320a728c47db51bcb585f6a7121a1238974461bb06572424077b"
+    },
+    "artifacts/e030-supported-biological-bins/gpu-once/control-plane/cloud-actions.jsonl": {
+      "bytes": 8094,
+      "sha256": "0810708dd193ed9939b31dea64def02e3da94cd40dbfae7360d420609ee33ab6"
+    }
+  },
+  "full_Oral_plan": "Prior 61.05 unbatched GPU hours / $65\u201385 complete estimate remains unmeasured; no speedup or throughput claimed",
+  "retention_end": "2026-11-04T00:00:00+01:00"
+}

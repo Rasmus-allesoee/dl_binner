@@ -2,6 +2,26 @@
 
 Updated: November 1, 2026 (Copenhagen). This is the single current handoff.
 
+**E030 is authorized and locally implemented; native execution is not yet
+released.** [Root-safe biological construction](../experiments/E030-supported-biological-bins/design.md)
+keeps all six common learning instances, retrievals and forests fixed. It compares
+one profile-supported whole/child policy plus bounded merge/recruitment with a
+root-exclusion-only control. E009 GLM off/on through teacher/proposals/student and
+Oral no GLM with all ten measured depths remain the three declared modes.
+No truth K, new fit/retrieval/detector, external tool, confirmation or per-community
+router. E023/E026/E029 and both MetaBAT2 references remain immutable.
+
+The new $3 / six-hour existing-E2 scope needs fresh complete native/runtime/source/
+credit/headroom gates and verified held-parent shutdown supervision before release.
+The owner separately authorizes **one** fresh prepared GPU attempt. It refuses L4
+capacity in Iowa a; no GPU starts and both empty disks are independently removed.
+[Receipt](../experiments/E030-supported-biological-bins/gpu-observed.json) preserves
+the failure. No more GPU attempts or full Oral GLM extraction belong in this task.
+Native batching speed/equivalence remains unmeasured. **November 4, 00:00 Copenhagen
+remains hard**; this authorization does not renew storage.
+
+## Preserved E029 completed handoff
+
 **E029 is completed, independently inspected, and the CPU VM is TERMINATED.**
 Phase `discovery-20261101T015844Z-31fb9c7`, science source `31fb9c7`, succeeds.
 [Inspection](../experiments/E029-certifiable-joint-retrieval/inspection-observed.json)

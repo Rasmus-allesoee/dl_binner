@@ -1,0 +1,150 @@
+{
+  "kind": "E030 one prospective cached biological construction control",
+  "status": "FROZEN_BEFORE_NEW_COMMUNITY_OUTCOMES",
+  "seed": 11,
+  "learning": "All six accepted E027 teacher/student instances unchanged; GLM teacher/proposals/student on E009 only",
+  "retrieval": "All six E029 admitted caches/forests unchanged",
+  "units": [
+    "E009-noGLM",
+    "E009-GLM",
+    "oral-noGLM"
+  ],
+  "roles": [
+    "teacher",
+    "student"
+  ],
+  "arms": [
+    "root-only",
+    "pre",
+    "post"
+  ],
+  "truth": {
+    "E009": "admitted conservative v2; 3.3034% N quarantine",
+    "oral": "provided-origin oracle; separate known-shared sensitivity, not exhaustive unique source"
+  },
+  "full_reference_bp": {
+    "E009": 554661890,
+    "oral": 2083072211
+  },
+  "anchors": {
+    "E009_E023": {
+      "R95": 0.1041634228737078,
+      "target50": 19,
+      "target90": 9
+    },
+    "E009_MetaBAT2": {
+      "R95": 0.08549276749480661,
+      "target50": 16,
+      "target90": 5
+    },
+    "oral_E026": {
+      "R95": 0.1385692600936915,
+      "target50": 108,
+      "target90": 58
+    }
+  },
+  "axes": {
+    "E009-noGLM": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ],
+      "core_rows": 9812
+    },
+    "E009-GLM": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ],
+      "core_rows": 9812
+    },
+    "oral-noGLM": {
+      "rows": 1286547,
+      "bp": 1669981123,
+      "eligible": 508763,
+      "samples": [
+        "oral_sample_6",
+        "oral_sample_7",
+        "oral_sample_8",
+        "oral_sample_13",
+        "oral_sample_14",
+        "oral_sample_15",
+        "oral_sample_16",
+        "oral_sample_17",
+        "oral_sample_18",
+        "oral_sample_19"
+      ],
+      "core_rows": 60211
+    }
+  },
+  "E029_primary_student": {
+    "E009-noGLM": {
+      "targets": 156,
+      "macro_R95": 0.08478619650770247,
+      "bp_weighted_R95": 0.07233727559685055,
+      "at_least_50_percent": 16,
+      "at_least_90_percent": 5,
+      "targets_with_any_passing_bin": 19
+    },
+    "E009-GLM": {
+      "targets": 156,
+      "macro_R95": 0.08479642205691407,
+      "bp_weighted_R95": 0.07220995839465372,
+      "at_least_50_percent": 16,
+      "at_least_90_percent": 4,
+      "targets_with_any_passing_bin": 18
+    },
+    "oral-noGLM": {
+      "targets": 799,
+      "reference_bp": 2083072211,
+      "bp_weighted_R95": 0.10055911931129881,
+      "macro_R95": 0.09547210136284598,
+      "at_least_50_percent": 79,
+      "at_least_90_percent": 43
+    }
+  },
+  "decision": {
+    "primary": [
+      "E009-GLM/student/post",
+      "oral-noGLM/student/post"
+    ],
+    "KEEP": "Both primary R95 strictly improve over E029, neither loses target90, and at least one reaches its E023/E026 anchor R95",
+    "MODIFY": "At least one primary R95 strictly improves but joint KEEP fails; preserve root/pre/post and target trade-offs",
+    "ABANDON": "Neither primary student R95 strictly improves over E029",
+    "no_truth_selected_router": true,
+    "no_threshold_grid": true
+  },
+  "primary_rule": {
+    "bin_bp_min": 200000,
+    "confirmed_all_bin_purity_min": 0.95,
+    "full_denominators": true,
+    "E009_N_quarantine_fraction": 0.033034
+  },
+  "external_tools": 0,
+  "additional_fits": 0,
+  "confirmation": false,
+  "skin_unscored": true,
+  "retention_end": "2026-11-04T00:00:00+01:00"
+}

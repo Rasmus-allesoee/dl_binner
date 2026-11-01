@@ -1,0 +1,32 @@
+{
+  "kind": "E030 prospective complete cost, original storage and credit gate; not invoice",
+  "checked_epoch": 1793545998.494826,
+  "CPU_complete_upper_USD": 2.51736881882423,
+  "new_CPU_ceiling_USD": 3,
+  "CPU_IP_USD_hour": 0.27304567767858834,
+  "original_PD_month_USD": 31.19999999996773,
+  "six_cumulative_hours": true,
+  "provider_STOP_hours": 6.25,
+  "full_compressed_export_GiB": 2,
+  "contingency_and_small_storage_operations_USD": 0.3,
+  "conservative_original_storage_week_USD": 7.852440827310158,
+  "original_storage_allowance_USD": 8,
+  "credit_only": true,
+  "pending_reserve_USD": 35,
+  "original_retention_end": "2026-11-04T00:00:00+01:00",
+  "GPU_scope_separate": true,
+  "financial_evidence": {
+    "artifacts/e030-supported-biological-bins/finance-r1/complete-admission.json": {
+      "bytes": 3165,
+      "sha256": "e52b2b5d8b9d845c3fe0079de4c2e9322c5c03375f858931a7c25f0d7a7f5ef3"
+    },
+    "artifacts/e030-supported-biological-bins/finance-r1/current-prices.json": {
+      "bytes": 16242,
+      "sha256": "36371018a713451d979dbafe88d0a7bbb6823e52259748ecfbc66617993fa962"
+    },
+    "artifacts/e030-supported-biological-bins/finance-r1/billing-browser.json": {
+      "bytes": 718,
+      "sha256": "f221aca0e774f7fe2e274e14be6b132ec293bfb524efcc42b4b0f84212954277"
+    }
+  }
+}

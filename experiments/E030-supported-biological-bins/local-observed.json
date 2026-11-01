@@ -1,0 +1,119 @@
+{
+  "kind": "E030 actual installed local engineering; not native/community execution",
+  "status": "PASS_LOCAL_ENGINEERING_NATIVE_GATES_PENDING",
+  "checked_UTC": "2026-11-01T15:52:58.159639+00:00",
+  "source_modules_added": [
+    "construction/__init__.py",
+    "construction/grouping.py"
+  ],
+  "all_66_prior_product_members_unchanged": true,
+  "new_wheel": {
+    "bytes": 198272,
+    "sha256": "e6bd311a227a43b8832c044e11f071da778088238b7fb1298249770a95d849db"
+  },
+  "engineering_clock": {
+    "start_epoch": 1793546062.000118,
+    "deadline_epoch": 1793556862.000118,
+    "scope": "E030 local engineering only; four threads / 8 GB sampled RSS / 4 GiB owned work / 6 GiB free"
+  },
+  "receipts": {
+    "artifacts/e030-supported-biological-bins/preparation/build-final-r5-dist/packaging.json": {
+      "bytes": 19024,
+      "sha256": "a3691a971323a3a5c5b5ac6521a863ad11bf7b22305407678bf0ecaeaf6b727c"
+    },
+    "artifacts/e030-supported-biological-bins/preparation/install-final-r3/completed.json": {
+      "bytes": 1094,
+      "sha256": "61eff6596ca26d3d097e0caf14c2d32b7c5db64e9e0cd81452fd5a0ceaf85b50"
+    },
+    "artifacts/e030-supported-biological-bins/preparation/final-checks-final-r3-work/runtime.json": {
+      "bytes": 25616,
+      "sha256": "acb0a3a2ac7362bfb3b8b4e08faf67ce25ac9b53c1277996e88554674a326bf9"
+    },
+    "artifacts/e030-supported-biological-bins/preparation/final-checks-final-r3-work/tiny-DAG/completed.json": {
+      "bytes": 24363,
+      "sha256": "7392658b1e14b0bfce0d38ca6b09970ac4add1fe6d22307cb0cded356928c607"
+    },
+    "artifacts/e030-supported-biological-bins/preparation/final-shape-platform-r2/completed.json": {
+      "bytes": 799,
+      "sha256": "8a3f7c683b89a5978c9bf67a62b840869e081342ff22b7d1f8ec223899a59282"
+    },
+    "artifacts/e030-supported-biological-bins/preparation/final-shape-platform-r2.json": {
+      "bytes": 1456,
+      "sha256": "5be7129d595f0f00f754f11163cbe387ca3448edd3733a09312592a5c7647bd3"
+    },
+    "artifacts/e030-supported-biological-bins/preparation/actual-cleanup-transport-preflight/passed.json": {
+      "bytes": 113,
+      "sha256": "f3cfb17f101cf881de1b062bc7e5fd2eccd816144fc7bcd8ff5aeddefe8b8266"
+    },
+    "artifacts/e030-supported-biological-bins/preparation/final-checks-final-r3-work/reviewer-reader.exit.json": {
+      "bytes": 326,
+      "sha256": "92ec3f9011677f2691c7ad932dc37e2fe6da62e8542916dd0bffe318193f2312"
+    },
+    "artifacts/e030-supported-biological-bins/preparation/final-checks-final-r3-work/construction-contracts.exit.json": {
+      "bytes": 449,
+      "sha256": "d4dc7259d834d737d77506b0bff8e04a017e07657fc5350872bea149e7b6d2b9"
+    },
+    "artifacts/e030-supported-biological-bins/preparation/final-checks-final-r3-work/tiny-DAG.exit.json": {
+      "bytes": 483,
+      "sha256": "cbab7cd40f5cbdacbf3182c9dab0960a17dc5cf0687c66611a3a86ebdc0b13e5"
+    },
+    "artifacts/e030-supported-biological-bins/preparation/final-checks-final-r3-work/complete-runtime.exit.json": {
+      "bytes": 670,
+      "sha256": "75181319427b1e37eaa28d6154534a9c2335ec9f4abd1dcd06b7b951c8ca664a"
+    },
+    "artifacts/e030-supported-biological-bins/preparation/final-checks-final-r3-work/operations.exit.json": {
+      "bytes": 325,
+      "sha256": "2b2e66df617989bd96ca9552c8940445883530df40d520d83b32527f0c84a51d"
+    }
+  },
+  "contracts": {
+    "real_product_tests": 9,
+    "operations_tests": 7,
+    "review_tests": 5,
+    "serial_DAG_rules": 13,
+    "verified_resume_noop": true,
+    "actual_capped_collector_all_members": true,
+    "complete_runtime_distributions": 41,
+    "owned_product_members": 68,
+    "actual_tiny_DNA_emitted": true,
+    "full_native_shape_rows_required": 32768,
+    "final_local_shape_rows": 16384,
+    "explicit_trace_to_export_bin_maps": true,
+    "exact_fixed_post_merge_profiles_retained": true
+  },
+  "real": [
+    "FASTA/feature/sparse/forest/profile readers",
+    "whole-child and marker-negative selection",
+    "measured-zero/missing depth",
+    "merge and synchronous recruitment",
+    "complete-DNA export and cached reload",
+    "rendered isolated SSH consumers",
+    "capped archive member/alias verification"
+  ],
+  "synthetic": [
+    "engineering unit vectors and physical calls",
+    "large balanced sparse forest for shape timing"
+  ],
+  "mocked": [
+    "Cloud API metadata in cleanup unit test only",
+    "injected completion upload failure"
+  ],
+  "native_pending": [
+    "actual production Linux allocation and current-boot watchdog",
+    "root /proc archive-open-user check and private GCS CLI",
+    "native full-input/runtime/complete-shape gates"
+  ],
+  "failed_journals": [
+    "artifacts/e030-supported-biological-bins/preparation/build-r1",
+    "artifacts/e030-supported-biological-bins/preparation/final-checks-r1",
+    "artifacts/e030-supported-biological-bins/preparation/final-checks-final-r3"
+  ],
+  "failures_preserved": [
+    "Wrong existing builder refused before a wheel; pinned builder then passed",
+    "Synthetic per-row storage overestimate refused; corrected using immutable actual candidate inventories and in-place collector, not relaxed biology",
+    "Final full-shape local harness refused 6 GiB free reserve at 5.19 GiB; only 22 MB was task-owned. Earlier stages passed and final 16384-row rehearsal passed after free space recovered. Full 32768-row Linux gate remains mandatory.",
+    "Earlier shape journal native_measurement flag was mislabeled on Mac. Final source records actual platform; arithmetic/scientific policy unchanged."
+  ],
+  "science_fits": 0,
+  "community_scores": 0
+}

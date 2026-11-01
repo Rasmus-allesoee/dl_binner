@@ -1,5 +1,29 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E030 prospective coherent bin constructor, November 1, 2026
+
+Implement [one root-safe, profile-supported constructor](../../experiments/E030-supported-biological-bins/design.md),
+using all six admitted common teacher/student representations unchanged. Internal
+roots are ineligible; persistence is normalized to a finite local lifetime.
+Additive composition/measured-parent-depth moments and soft reliable physical
+marker evidence compare whole/child alternatives. One disjoint supported merge
+and one synchronous recruitment pass preserve uncertainty and all DNA. Long
+marker-negative leaves retain a declared finite-radius path. This is a new
+heuristic bundle, not standard HDBSCAN or calibrated genome probability.
+
+Keep the root-only control to determine whether the broader profile/update block
+adds value. Freeze one default/source/decision rule before changed outcomes;
+neither a threshold grid nor a performance study per ingredient is required.
+The primary joint rule requires E009 GLM and Oral improvement over E029 without
+target-90 loss and at least one older anchor recovered. Preserve every failed
+criterion, target loss and E023/E026/MetaBAT2 reference. No truth-selected router.
+Native outcome is still unavailable during this local preparation.
+
+The single newly authorized GPU attempt is capacity-blocked; no more GPU attempts
+or full-bank extraction are added. CPU development must proceed. November 4
+retention and the unscored skin biological/truth/protocol dependencies remain.
+
+
 ## E029 completed evidence and next algorithmic upgrade, November 1, 2026
 
 [E029 inspection](../../experiments/E029-certifiable-joint-retrieval/inspection-observed.json)

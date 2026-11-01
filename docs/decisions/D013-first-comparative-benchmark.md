@@ -1,5 +1,21 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E030 authorized cached biological-construction block, November 1, 2026
+
+[E030](../../experiments/E030-supported-biological-bins/design.md) implements the
+E029 recommendation with learning and accepted retrievals/forests fixed. One
+root-only diagnostic distinguishes the demonstrated root convention from the
+coherent profile/soft-marker/merge/recruitment bundle. The owner authorizes the
+new $3 cached comparison under fresh credit and original retention gates; no
+prior unused budget is presumed. Both communities stay development data and all
+older references remain immutable. No new external campaign or learner fit.
+
+The separately requested single fresh GPU qualification attempt again refuses
+capacity before boot. Its empty disks are removed; do not repeat a placement loop
+or claim batching throughput. The CPU comparison proceeds independently. Full
+Oral GLM and skin confirmation retain their concrete separate admission needs.
+
+
 ## E029 closed comparison and development decision, November 1, 2026
 
 [Verified E029](../../experiments/E029-certifiable-joint-retrieval/comparison-review.json)

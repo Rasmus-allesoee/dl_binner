@@ -887,3 +887,13 @@ Oral origin/known-shared limitations stay explicit. Skin is still unscored with
 610 targets / 313 exact-Oral overlaps / 297 other genomes and remaining biological,
 unique-source, depth, protocol, cost and retention admission. November 4 needs a
 separate preservation decision. No confirmation acquisition or fit occurs here.
+
+November 1 E030 follow-through: [the prospective constructor](../../experiments/E030-supported-biological-bins/design.md)
+is implemented with the six accepted representations/graphs/forests fixed. One
+root-only control tests whether a profile-supported construction bundle adds
+recovery evidence. Q001 remains open until the new complete cached comparison is
+admitted; no old result is overwritten or rescored. The single newly authorized
+GPU attempt again refuses capacity before boot and closes its empty disks.
+Q005's full Oral GLM milestone remains unmeasured; do not make a capacity loop a
+prerequisite for CPU algorithm progress. Q003's unscored skin and November 4
+preservation/retention dependencies are unchanged.

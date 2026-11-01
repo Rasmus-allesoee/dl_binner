@@ -1,0 +1,99 @@
+{
+  "kind": "E030 scientific and production execution freeze before community outcomes",
+  "files": {
+    "scripts/e030_launch.py": {
+      "bytes": 17435,
+      "sha256": "3dec18eb3c84352e93f5d4605149b9221ed633dfe2af73c22ab29960f01d0463"
+    },
+    "scripts/e030_probe.py": {
+      "bytes": 5092,
+      "sha256": "86853f681b40ec5dff2280dd65e21a66791f60962b7dc25eed5de19f3f7074d3"
+    },
+    "scripts/e030_summary.py": {
+      "bytes": 9801,
+      "sha256": "9465e76c320d80b8a835d9384e96997703e3862202c1605023376e0caaf125f9"
+    },
+    "scripts/e030_gates.py": {
+      "bytes": 3946,
+      "sha256": "363a3a01efb92d9ef3eeee82870d8d6308e2962d55ddd3318e7a1ae14607db40"
+    },
+    "scripts/e030_control.py": {
+      "bytes": 7763,
+      "sha256": "f2649afd38e6d38b19341a04413e8e3cf9c629a64be1b92d40fe921836107cbe"
+    },
+    "scripts/e030_arm.py": {
+      "bytes": 6433,
+      "sha256": "0d916094ebbb8d0cb4df0cdc696fac41b812b33ac9c24f990f253a69f029582a"
+    },
+    "scripts/e030_cleanup.py": {
+      "bytes": 3790,
+      "sha256": "6ba2d33213fa35f3a31856de8c965f221ae6f032297b6fe5f8e692bf35d62f4a"
+    },
+    "scripts/e030_tiny.py": {
+      "bytes": 4752,
+      "sha256": "264137c26d3a8c601dc6a74b2b645534e269f47589a731c002bb1d36516e25f2"
+    },
+    "scripts/e030_collect.py": {
+      "bytes": 9962,
+      "sha256": "7c4e245a76ae5b9e8c4b901a194687e9b1c25d3d210a0ae57748d7feb9e303c9"
+    },
+    "scripts/e030_review.py": {
+      "bytes": 11365,
+      "sha256": "a608ac65ca72df03417d87564ce20cbd24a54eaa7d1d99d7542c72515f123593"
+    },
+    "scripts/e030_phase.py": {
+      "bytes": 19194,
+      "sha256": "75f114c0df6242f49f9b7e4a24bce4d4189e48ef8504832f90e8f82c327303ed"
+    },
+    "src/dl_binner/construction/grouping.py": {
+      "bytes": 27100,
+      "sha256": "2b12e4b89f4a09bcae38c066fde0212d7d7ba740eba37fac507ba0a2dcafe142"
+    },
+    "src/dl_binner/construction/__init__.py": {
+      "bytes": 67,
+      "sha256": "62d0494ef921b15025c7bc0f37b1cf991f28820803b1245e345b306fd0c00e6f"
+    },
+    "tests/product/test_supported_construction.py": {
+      "bytes": 8199,
+      "sha256": "402a529d340f250e13e9cace511e821909f22451b7d1ee3af9856148a8f7273c"
+    },
+    "tests/test_e030_operations.py": {
+      "bytes": 6994,
+      "sha256": "74b1dfd15569b2cd14b2cc80cedcaa715660619bf2b756f1165a168f68879a08"
+    },
+    "tests/test_e030_review.py": {
+      "bytes": 3259,
+      "sha256": "a524754536ad5f5d934d2ce8f6fbbb56502216770d0addc691aaf87d1ccaebde"
+    },
+    "experiments/E030-supported-biological-bins/design.md": {
+      "bytes": 6838,
+      "sha256": "01d8831be777b4394d24167a25bd6aca1b0834185cbf89eb232930f80e5e4f13"
+    },
+    "experiments/E030-supported-biological-bins/protocol.json": {
+      "bytes": 4401,
+      "sha256": "41d1a8f99bbe1c988d84c593d7a10bbc667e9d9c87fa0d50891dec38fd822d5a"
+    },
+    "experiments/E030-supported-biological-bins/runtime-plan.json": {
+      "bytes": 2655,
+      "sha256": "bec0451179d527e445213542e3a21bdce22b0ddb12c3ef7c171eef6bd109ce17"
+    },
+    "experiments/E030-supported-biological-bins/reuse-lock.json": {
+      "bytes": 16017,
+      "sha256": "dc823d979f229103da43c33c4e7a92e4dd5c0322a25b3ae39bd9e32c12acd092"
+    },
+    "experiments/E030-supported-biological-bins/candidate-lock.json": {
+      "bytes": 9829,
+      "sha256": "b4b9f2ab15902869067dbfe38e697226b0b67299af5736ded99b015ea2770b67"
+    },
+    "experiments/E030-supported-biological-bins/cleanup-plan.json": {
+      "bytes": 1703,
+      "sha256": "4c392c087dbdce2946c539439db14a2627d2724fbeb01e17c9fadc13583a5d2c"
+    },
+    "experiments/E030-supported-biological-bins/Snakefile": {
+      "bytes": 4598,
+      "sha256": "b56d91bd57274344cd0c13ca72f1bba12621b6afd790fedbb5b16a303876377e"
+    }
+  },
+  "preserve_prior_locks": true,
+  "learning_unchanged": true
+}

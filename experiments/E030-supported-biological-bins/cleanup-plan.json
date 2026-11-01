@@ -1,0 +1,39 @@
+{
+  "kind": "Only accepted redundant return transports; no unique science",
+  "target_free_bytes": 32212254720,
+  "archives": [
+    {
+      "path": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/collection/e027-evidence.tar.gz",
+      "uri": "gs://dl-binner-archive-167650584170/e027/common-20261030T223337Z-243b8ac/e027-evidence.tar.gz",
+      "generation": "1793418361333235",
+      "crc32c": "4iOoDg==",
+      "binding": {
+        "bytes": 1647651568,
+        "sha256": "202c8639a1e75518c5f97a3140c24757db7a65ca1c9cc9add03ada7ea7c73102"
+      },
+      "accepted_member_review": "experiments/E027 inspection-observed.json"
+    },
+    {
+      "path": "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/collection/e029-evidence.tar.gz",
+      "uri": "gs://dl-binner-archive-167650584170/e029/discovery-20261101T015844Z-31fb9c7/e029-evidence.tar.gz",
+      "generation": "1793509475767976",
+      "crc32c": "eGpnuw==",
+      "binding": {
+        "bytes": 842865965,
+        "sha256": "8fe3c0ad6d30af8817050c272be3dc7800e055bf97152b9e8aa4eb248090bec7"
+      },
+      "accepted_member_review": "experiments/E029 inspection-observed.json"
+    },
+    {
+      "path": "/srv/dl_binner/experiments/e026/fusion-20261029T185844Z-f16c2e5/collection/e026-evidence.tar.gz",
+      "uri": "gs://dl-binner-archive-167650584170/e026/fusion-20261029T185844Z-f16c2e5/e026-evidence.tar.gz",
+      "generation": "1793306780217010",
+      "crc32c": "+Yhpww==",
+      "binding": {
+        "bytes": 697845946,
+        "sha256": "d6fe576012a2cf2442a88ec0c2b0a7e64e43ef148f5326cde3703a771b39f915"
+      },
+      "accepted_member_review": "experiments/E026 inspection-observed.json"
+    }
+  ]
+}
