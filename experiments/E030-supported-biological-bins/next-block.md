@@ -28,6 +28,14 @@ block's value, freeze its schedule and state/RNG parity; do not require a grid.
 Reuse accepted teachers/views/GLM/calls, and separate the common candidate's result
 from any narrower single-community mechanism control.
 
+E023 already achieved 10.4163% using the exact current GLM student vectors.
+The loss to that anchor is downstream, so do not diagnose the entire recovery gap
+as encoder information loss. A source-bound E023 graph-construction control is a serious
+alternative to weigh when selecting the one decision-changing control. Current
+teacher/student R95 is an interaction with construction. The independent Oral
+proposal/neighborhood evidence and absent bootstrap-state transfer still motivate
+this learning priority; no claim that grouping is solved follows.
+
 First prepare a complete separately priced comparison using actual retained
 training timings, native full-shape projections, setup/hash/graph/retrieval/
 evaluation/collection/upload and idle/shutdown allowance. Include temporary

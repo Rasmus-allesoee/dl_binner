@@ -61,6 +61,10 @@ Oral measured ten-depth/no-GLM. Keep GLM as the intended optional main path and
 the full Oral batching milestone concrete. Preserve E023 E009 10.4163%, E026 Oral
 13.8569%, both MetaBAT2 references, E030 teacher/student and all pre/post outcomes.
 No dataset-specific winner routing or new grouping threshold/grid campaign.
+E023's stronger E009 result uses the exact current GLM student vectors; do not
+blame that whole gap on learning. Weigh a source-bound E023 graph-construction control
+against the one permitted decision-changing control, while keeping the common
+candidate and its information policy prospective.
 
 Run meaningful actual tiny state-init/view/pair/gradient/reload/geometry/marker/
 partition/export/resume/collection tests. Freeze candidate/source/defaults and

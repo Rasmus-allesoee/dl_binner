@@ -37,5 +37,15 @@
     "observation": "Default root exclusion due EOM root bias; not a prediction that our marker-selected outputs improve"
   },
   "SemiBin2_refresh": "PMC browser challenge; earlier source-hashed review reused, no new performance or source claim",
-  "no_model_or_partition_changed": true
+  "no_model_or_partition_changed": true,
+  "identical_E023_E030_GLM_student_vectors": {
+    "binding": {
+      "bytes": 21880578,
+      "sha256": "0c33748fa4b66309caafdb1e559ef8c75dc1f8d8819d8f8d046dbdb184d6442e"
+    },
+    "E023_path": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/embeddings.npz",
+    "E027_reuse_path": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/embeddings.npz",
+    "E030_consumption": "E027 units/E009-GLM/student-embed/embeddings.npz via E028/E030 locks; before/after native admission",
+    "interpretation": "The E023-versus-E030 recovery difference cannot be caused by changed vector bytes. It is downstream; current teacher/student R95 differences do not prove intrinsic information destruction."
+  }
 }

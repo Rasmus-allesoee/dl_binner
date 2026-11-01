@@ -2111,3 +2111,14 @@ Six real local restoration/publication/reuse/refusal tests support the repair;
 passed native gates and payload are byte-verified reused. AGENTS now requires two
 successive actual writer transitions, with unique receipts or tested atomic
 replacement. Original failed journals and scientific source remain unchanged.
+
+The final identity audit constrains that recommendation: E023's stronger E009
+score uses the exact current GLM student embedding bytes, confirmed by E023/E027/
+E028–E030 locks. Its 2.7654-point gap is downstream of those vectors. Thus current
+teacher/student recovery is a construction interaction, not unique proof of
+intrinsic information loss. Keep an E023-derived graph-construction control as a serious
+decision-changing alternative; learning remains the next chosen block based on
+independent Oral neighborhood/proposal evidence and absent bootstrap-state
+transfer. Do not imply that construction is solved or promise that fine-tuning
+alone restores the anchors. The earlier provisional reasoning is preserved in
+commit 7f9cdaa and its private snapshot; this qualification adds no new score.

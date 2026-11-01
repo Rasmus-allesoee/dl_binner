@@ -1,9 +1,24 @@
 {
-  "status": "PREPARED_CLOSED_INSPECTION_BACKUP_PENDING",
-  "scope": "Closed compact inspection/source records only; original science and diagnostic archives already independently verified in private GCS",
-  "private_source_owner_authorized": true,
-  "maximum_compressed_bytes": 33554432,
-  "maximum_logical_bytes": 134217728,
-  "within_original_cost_and_retention_reserve": true,
-  "no_credentials_or_environments": true
+  "status": "PASS_CLOSED_PRIVATE_BACKUP_READBACK_EVERY_MEMBER",
+  "source_commit": "7f9cdaafa382c0029366bd010783b8842207f363",
+  "source_snapshot_files": 1293,
+  "private_Git_history_prerequisite": "ec7ff25b24f3db428429d5b861e7a06c4d223ca8",
+  "self_contained_source_tree_included": true,
+  "uri": "gs://dl-binner-archive-167650584170/e030/inspection-20261101T180610Z/e030-inspection.tar.gz",
+  "generation": "1793556381823618",
+  "archive": {
+    "bytes": 10582223,
+    "sha256": "4b52b0e0572d4944a1642cf560d4318842988dec09213f0465f347d1064da0eb"
+  },
+  "regular_members": 680,
+  "logical_file_bytes": 61939765,
+  "full_SHA256_and_every_member_verified": true,
+  "md5": "uqtabThZ3oeCqv17urpA+A==",
+  "crc32c": "FACCSg==",
+  "no_credentials_or_environments": true,
+  "no_live_artifacts": true,
+  "no_public_push": true,
+  "original_cost_and_retention_unchanged": true,
+  "receipt_scope": "The source snapshot contains the prepared backup record; this final receipt separately records the completed generation without a self-reference promise",
+  "every_nested_source_file_Git_identity_verified": 1293
 }

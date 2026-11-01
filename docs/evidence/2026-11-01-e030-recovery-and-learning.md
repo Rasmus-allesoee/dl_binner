@@ -84,6 +84,15 @@ without GLM, **-1.0765 with GLM**, and **-0.3614 on Oral**. GLM helps teacher by
 Do not reject GLM or markers: this is evidence that the current student does not
 consistently preserve/use available bootstrap information.
 
+A source-bound counterweight matters: **E023's 10.4163% E009 result and the
+current GLM student consume exactly the same 21,880,578-byte embedding file**,
+SHA256 0c33748fa4b66309caafdb1e559ef8c75dc1f8d8819d8f8d046dbdb184d6442e.
+E023, E027 learning reuse and E028/E030 before/after locks agree. The 2.7654-point
+gap to E023 is downstream of those vectors, not evidence that a newer encoder
+destroyed their information. Teacher/student R95 under this constructor is a
+representation–construction interaction, not a unique diagnosis of intrinsic
+embedding quality. Preserve this contrary evidence beside the learning hypothesis.
+
 The retained E027 audit finds 3,657 / 13,142 Oral positive links discordant in
 provided origin (27.8%), while all 1,644 negative links differ. Origin discordance
 is not exhaustive unique-source error labeling, and it does not prove which loss
@@ -139,7 +148,13 @@ causal claim.
 
 Why now instead of the main alternatives:
 
-1. More grouping thresholds do not address the reproducible student/teacher loss
+1. A common E023-derived graph-construction control is a serious alternative, because
+   the strong E009 anchor already uses these same student vectors. Do not call
+   the whole anchor gap a learning defect. I choose the learning block next based
+   on the separate Oral neighborhood/proposal evidence and missing bootstrap-state
+   transfer, after several consecutive grouping blocks; this is a research
+   priority judgment, not proof that construction is solved. More thresholds do
+   not by themselves address the reproducible student/teacher loss
    and poor Oral biological neighborhoods. Even Oral pre is only 10.5917%, well
    below the 17.3260% retained reference; eliminating the single recruitment
    failure is not evidence of closing the whole gap.

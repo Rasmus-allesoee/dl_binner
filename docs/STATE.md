@@ -42,7 +42,10 @@ uses useful accepted bootstrap states, reliable/abstaining signed proposals and
 teacher preservation, initially retaining encoder topology and E030's common
 downstream policy. Student starts fresh in E027, not from bootstrap weights;
 under E030 it loses to teacher in all three modes. This is a learning-bundle
-hypothesis, not proof blaming marker loss or banning GLM. Avoid another grouping
+hypothesis, not proof blaming marker loss or banning GLM. E023's stronger E009
+result uses the exact same GLM student vectors; that anchor gap is downstream.
+Keep an E023-derived graph-construction control as a serious selective alternative,
+without attributing all loss to the encoder. Avoid another grouping
 threshold/grid campaign or a larger network without evidence. Keep pre/post
 diagnostics and at most one decision-changing matched control. The exact
 [following prompt](../experiments/E030-supported-biological-bins/OPERATIONS.md#exact-following-prompt)
