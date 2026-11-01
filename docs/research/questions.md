@@ -897,3 +897,21 @@ GPU attempt again refuses capacity before boot and closes its empty disks.
 Q005's full Oral GLM milestone remains unmeasured; do not make a capacity loop a
 prerequisite for CPU algorithm progress. Q003's unscored skin and November 4
 preservation/retention dependencies are unchanged.
+
+### November 1, 2026: E030 reviewed construction, unresolved learning quality
+
+[E030](../../experiments/E030-supported-biological-bins/comparison-review.json)
+raises primary student R95 to 7.6509% GLM E009 / 10.5446% Oral but fails joint KEEP
+against stronger anchors. Root-only adds no R95 beyond the working E029 marker
+baseline. Profiles/recruitment help some targets and destroy others' purity.
+Q001 remains open: under the common constructor, teacher still beats student in
+all modes. D015 prioritizes one bootstrap-preserving, confidence-aware relational
+learning block, with common downstream pre/post evidence and selective controls.
+No larger-model, marker/GLM-family or causal signed-loss verdict is established.
+
+Q005 remains concrete: GLM teacher/proposals/student compatibility is retained
+on E009; Oral's full GLM bank is unmeasured after one fresh GPU capacity refusal.
+Q003 remains unresolved by development improvements: skin is still unscored with
+its source/overlap/truth/depth/protocol/cost dependencies. November 4 needs a
+separate preservation decision. No new fit, bank, acquisition or confirmation is
+authorized by this closeout.

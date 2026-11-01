@@ -1,0 +1,9 @@
+{
+  "status": "PREPARED_CLOSED_INSPECTION_BACKUP_PENDING",
+  "scope": "Closed compact inspection/source records only; original science and diagnostic archives already independently verified in private GCS",
+  "private_source_owner_authorized": true,
+  "maximum_compressed_bytes": 33554432,
+  "maximum_logical_bytes": 134217728,
+  "within_original_cost_and_retention_reserve": true,
+  "no_credentials_or_environments": true
+}

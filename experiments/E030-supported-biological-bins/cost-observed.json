@@ -1,0 +1,309 @@
+{
+  "kind": "E030 measured allocations priced at current Catalog; not invoice or credit delta",
+  "checked_UTC": "2026-11-01T17:48:23.515928+00:00",
+  "CPU_allocation_intervals": [
+    {
+      "status": "complete cached construction",
+      "start_UTC": "2026-11-01T16:10:47.991000+00:00",
+      "stop_UTC": "2026-11-01T16:37:04.274000+00:00",
+      "seconds": 1576.283
+    },
+    {
+      "status": "failed diagnostic bookkeeping before community evaluation",
+      "start_UTC": "2026-11-01T17:13:03.809000+00:00",
+      "stop_UTC": "2026-11-01T17:17:51.639000+00:00",
+      "seconds": 287.83
+    },
+    {
+      "status": "successful six-consumer frozen diagnostics",
+      "start_UTC": "2026-11-01T17:19:46.651000+00:00",
+      "stop_UTC": "2026-11-01T17:39:58.343000+00:00",
+      "seconds": 1211.692
+    }
+  ],
+  "CPU_total_allocated_seconds": 3075.805,
+  "CPU_allocated_vCPU_hours": 6.835122222222222,
+  "CPU_IP_USD_hour": 0.27304567767858834,
+  "CPU_compute_IP_USD": 0.23328757239783066,
+  "overlapping_original_PD_USD": 0.03697222838650023,
+  "PD_Catalog_pricing_month_hours": 721,
+  "GPU_compute_USD": 0,
+  "temporary_GPU_disk_upper_USD": 0.00018099798423554283,
+  "temporary_disk_seconds_upper": 45.1729199886322,
+  "review_WAN_upper_bytes": 948561706,
+  "review_WAN_upper_USD": 0.10601003162562847,
+  "review_WAN_scope": "One 784 MB science stream, exact 81 MB input readback, failed/successful compact returns and 64 MiB closed-control/backup reserve; no network Free Tier presumed",
+  "new_archive_72_hour_storage_upper_USD": 0.0017664983384311197,
+  "operations_allowance_USD": 0.03,
+  "subtotal_upper_USD": 0.40821732873262606,
+  "contingency_USD": 0.1,
+  "complete_upper_with_reserves_USD": 0.508217328732626,
+  "original_new_CPU_ceiling_USD": 3,
+  "independent_GPU_ceiling_USD": 3,
+  "native_workflow": {
+    "command": [
+      "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env/bin/python",
+      "-I",
+      "-B",
+      "/srv/dl_binner/repo/scripts/e030_control.py",
+      "--plan",
+      "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/science-plan.json",
+      "--workflow"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 796.62746866,
+    "peak_sampled_rss_bytes": 4478676992,
+    "seconds_ceiling": 20358.934329748154,
+    "rss_bytes_ceiling": 26000000000,
+    "launched_pid": 2514,
+    "sampled_cpu_seconds": 864.0,
+    "sampled_average_cpus": 1.0845721921355873,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": true
+  },
+  "native_review_consumers": [
+    {
+      "name": "review-E009-noGLM-teacher",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/scripts/e030_review.py",
+          "--base",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/artifacts/e030-supported-biological-bins/inspection",
+          "--staged",
+          "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d",
+          "--unit",
+          "E009-noGLM",
+          "--role",
+          "teacher",
+          "--output",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/artifacts/e030-supported-biological-bins/inspection/review-E009-noGLM-teacher"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 22.896741489,
+        "peak_sampled_rss_bytes": 623099904,
+        "seconds_ceiling": 6816.881304264069,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 2043,
+        "sampled_cpu_seconds": 23.590000000000003,
+        "sampled_average_cpus": 1.03027760571665,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "review-E009-noGLM-student",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/scripts/e030_review.py",
+          "--base",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/artifacts/e030-supported-biological-bins/inspection",
+          "--staged",
+          "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d",
+          "--unit",
+          "E009-noGLM",
+          "--role",
+          "student",
+          "--output",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/artifacts/e030-supported-biological-bins/inspection/review-E009-noGLM-student"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 20.885651635000002,
+        "peak_sampled_rss_bytes": 623820800,
+        "seconds_ceiling": 6793.978980064392,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 2055,
+        "sampled_cpu_seconds": 23.05,
+        "sampled_average_cpus": 1.1036284815443824,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "review-E009-GLM-teacher",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/scripts/e030_review.py",
+          "--base",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/artifacts/e030-supported-biological-bins/inspection",
+          "--staged",
+          "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d",
+          "--unit",
+          "E009-GLM",
+          "--role",
+          "teacher",
+          "--output",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/artifacts/e030-supported-biological-bins/inspection/review-E009-GLM-teacher"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 21.098063166000003,
+        "peak_sampled_rss_bytes": 624422912,
+        "seconds_ceiling": 6773.087173938751,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 2064,
+        "sampled_cpu_seconds": 23.07,
+        "sampled_average_cpus": 1.0934653014584683,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "review-E009-GLM-student",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/scripts/e030_review.py",
+          "--base",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/artifacts/e030-supported-biological-bins/inspection",
+          "--staged",
+          "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d",
+          "--unit",
+          "E009-GLM",
+          "--role",
+          "student",
+          "--output",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/artifacts/e030-supported-biological-bins/inspection/review-E009-GLM-student"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 21.461694726000005,
+        "peak_sampled_rss_bytes": 624070656,
+        "seconds_ceiling": 6751.982748270035,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 2075,
+        "sampled_cpu_seconds": 23.67,
+        "sampled_average_cpus": 1.1028951954723651,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "review-oral-noGLM-teacher",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/scripts/e030_review.py",
+          "--base",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/artifacts/e030-supported-biological-bins/inspection",
+          "--staged",
+          "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d",
+          "--unit",
+          "oral-noGLM",
+          "--role",
+          "teacher",
+          "--output",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/artifacts/e030-supported-biological-bins/inspection/review-oral-noGLM-teacher"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 428.28495996799995,
+        "peak_sampled_rss_bytes": 3639681024,
+        "seconds_ceiling": 6730.514535665512,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 2141,
+        "sampled_cpu_seconds": 468.11,
+        "sampled_average_cpus": 1.0929872485715484,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "name": "review-oral-noGLM-student",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/scripts/e030_review.py",
+          "--base",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/artifacts/e030-supported-biological-bins/inspection",
+          "--staged",
+          "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d",
+          "--unit",
+          "oral-noGLM",
+          "--role",
+          "student",
+          "--output",
+          "/srv/dl_binner/experiments/e030/e030-readonly-20261101t171946z/view/artifacts/e030-supported-biological-bins/inspection/review-oral-noGLM-student"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 427.8366089450001,
+        "peak_sampled_rss_bytes": 3640041472,
+        "seconds_ceiling": 6302.223166227341,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 2348,
+        "sampled_cpu_seconds": 464.63,
+        "sampled_average_cpus": 1.0859986973665683,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    }
+  ],
+  "sampled_CPU_is_not_GCP_allocation": true,
+  "storage": {
+    "PD_pricing_month_USD": 31.2,
+    "all_version_bytes_initial": 73073256991,
+    "current_upper_including_backup_bytes": 74021638565,
+    "conservative_original_storage_week_USD": 7.856561829456339,
+    "original_allowance_USD": 8,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "no_retention_extended": true,
+    "storage_gate": true,
+    "main_phase_disk_summary": {
+      "samples": 664,
+      "minimum_free_bytes": 29096083456,
+      "maximum_sampled_global_growth_bytes": 3336548352,
+      "scope": "Sampled whole-filesystem usage; first-allocation baseline, not exact attributable bytes"
+    },
+    "review_terminal_free_bytes": 28692807680,
+    "review_terminal_global_growth_bytes": 3739824128
+  },
+  "credit": {
+    "checked_UTC": "2026-11-01T16:31:37+00:00",
+    "remaining_DKK": 1713.46,
+    "original_DKK": 1973.43,
+    "percent": 87,
+    "status": "Available",
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; see the terms for free trial.",
+    "application": "Net pricing",
+    "paid_account": true,
+    "credit_type": "FreeTrialUpgrade",
+    "overview_period": "November 1, 2026 current month",
+    "displayed_gross_DKK": 0,
+    "displayed_savings_DKK": 0,
+    "displayed_net_DKK": 0,
+    "delay_warning": "Costs take a few hours to show up, and might take longer than 24 hours.",
+    "pending_reserve_USD": 35,
+    "browser_tabs": [
+      "1767520493",
+      "1767520496"
+    ],
+    "observed_read_only": true,
+    "credit_delta_is_not_an_invoice": true,
+    "observation_window_UTC": [
+      "2026-11-01T16:31:37+00:00",
+      "2026-11-01T16:33:00+00:00"
+    ],
+    "time_is_conservative_start_of_read_window": true
+  },
+  "credit_only": true,
+  "not_actual_invoice": true
+}

@@ -1,0 +1,1878 @@
+{
+  "kind": "E030 interpretation of frozen paired results, not a new score campaign",
+  "source_review": {
+    "bytes": 94113,
+    "sha256": "56ae545970fd0f0b37ae539f15b0c49198a637205e757bda0a2dbf32f83c95a2"
+  },
+  "actors": {
+    "E009-noGLM/teacher": {
+      "root_only_to_pre": {
+        "gains": 0,
+        "losses": 0,
+        "unchanged": 156,
+        "net_recovered_bp": 0,
+        "largest_gains": [],
+        "largest_losses": []
+      },
+      "pre_to_post": {
+        "gains": 16,
+        "losses": 2,
+        "unchanged": 138,
+        "net_recovered_bp": 1750745,
+        "largest_gains": [
+          [
+            "ASV284.4",
+            2046249
+          ],
+          [
+            "ASV484.0",
+            1060816
+          ],
+          [
+            "ASV456.0",
+            762049
+          ],
+          [
+            "ASV337.1",
+            710292
+          ],
+          [
+            "ASV150.14",
+            564239
+          ],
+          [
+            "ASV137.1",
+            472351
+          ],
+          [
+            "ASV470.1",
+            329746
+          ],
+          [
+            "ASV300.2",
+            283088
+          ],
+          [
+            "ASV329.2",
+            252706
+          ],
+          [
+            "ASV387.0",
+            169732
+          ]
+        ],
+        "largest_losses": [
+          [
+            "ASV300.8",
+            -3271350
+          ],
+          [
+            "ASV551.0",
+            -1990089
+          ]
+        ]
+      },
+      "final_vs_E029": {
+        "gains": 16,
+        "losses": 2,
+        "unchanged": 138,
+        "net_recovered_bp": 1750745,
+        "largest_gains": [
+          [
+            "ASV284.4",
+            2046249
+          ],
+          [
+            "ASV484.0",
+            1060816
+          ],
+          [
+            "ASV456.0",
+            762049
+          ],
+          [
+            "ASV337.1",
+            710292
+          ],
+          [
+            "ASV150.14",
+            564239
+          ],
+          [
+            "ASV137.1",
+            472351
+          ],
+          [
+            "ASV470.1",
+            329746
+          ],
+          [
+            "ASV300.2",
+            283088
+          ],
+          [
+            "ASV329.2",
+            252706
+          ],
+          [
+            "ASV387.0",
+            169732
+          ]
+        ],
+        "largest_losses": [
+          [
+            "ASV300.8",
+            -3271350
+          ],
+          [
+            "ASV551.0",
+            -1990089
+          ]
+        ]
+      },
+      "final_vs_anchor": {
+        "gains": 4,
+        "losses": 20,
+        "unchanged": 132,
+        "net_recovered_bp": -13505959,
+        "largest_gains": [
+          [
+            "ASV692.1",
+            97859
+          ],
+          [
+            "ASV284.4",
+            50575
+          ],
+          [
+            "ASV714.0",
+            19769
+          ],
+          [
+            "ASV399.6",
+            2019
+          ]
+        ],
+        "largest_losses": [
+          [
+            "ASV300.8",
+            -3284549
+          ],
+          [
+            "ASV551.0",
+            -2177993
+          ],
+          [
+            "ASV150.14",
+            -1797779
+          ],
+          [
+            "ASV134.7",
+            -1239754
+          ],
+          [
+            "ASV406.4",
+            -1051832
+          ],
+          [
+            "ASV431.3",
+            -989510
+          ],
+          [
+            "ASV426.8",
+            -877734
+          ],
+          [
+            "ASV300.2",
+            -541362
+          ],
+          [
+            "ASV456.0",
+            -352305
+          ],
+          [
+            "ASV137.1",
+            -284790
+          ]
+        ]
+      },
+      "raw_review": {
+        "bytes": 5171108,
+        "sha256": "cb09dd88d9d2d7be1eb73f19c302d8f0b6fb2c61be88e573d7103b65042ab869"
+      },
+      "bins": {
+        "root-only": {
+          "total": 62,
+          "at_least_200kb": 40,
+          "large_below_95_confirmed_purity": 16,
+          "populations": {
+            "assigned": {
+              "contigs": 14110,
+              "bp": 106856174
+            },
+            "unassigned": {
+              "contigs": 74931,
+              "bp": 102786529
+            },
+            "excluded": {
+              "contigs": 56661,
+              "bp": 22035454
+            }
+          }
+        },
+        "pre": {
+          "total": 62,
+          "at_least_200kb": 40,
+          "large_below_95_confirmed_purity": 16,
+          "populations": {
+            "assigned": {
+              "contigs": 14110,
+              "bp": 106856174
+            },
+            "unassigned": {
+              "contigs": 74931,
+              "bp": 102786529
+            },
+            "excluded": {
+              "contigs": 56661,
+              "bp": 22035454
+            }
+          }
+        },
+        "post": {
+          "total": 62,
+          "at_least_200kb": 41,
+          "large_below_95_confirmed_purity": 17,
+          "populations": {
+            "assigned": {
+              "contigs": 22580,
+              "bp": 121944193
+            },
+            "unassigned": {
+              "contigs": 66461,
+              "bp": 87698510
+            },
+            "excluded": {
+              "contigs": 56661,
+              "bp": 22035454
+            }
+          }
+        }
+      },
+      "merge_count_inference": {
+        "count": 0,
+        "reason": "Pre and post bin counts equal; frozen update path can merge or recruit into existing bins, and cannot create bins. This is an inference, not a new trace replay."
+      }
+    },
+    "E009-noGLM/student": {
+      "root_only_to_pre": {
+        "gains": 0,
+        "losses": 0,
+        "unchanged": 156,
+        "net_recovered_bp": 0,
+        "largest_gains": [],
+        "largest_losses": []
+      },
+      "pre_to_post": {
+        "gains": 15,
+        "losses": 0,
+        "unchanged": 141,
+        "net_recovered_bp": 3679387,
+        "largest_gains": [
+          [
+            "ASV484.0",
+            1026682
+          ],
+          [
+            "ASV337.1",
+            487272
+          ],
+          [
+            "ASV470.1",
+            343824
+          ],
+          [
+            "ASV456.0",
+            313342
+          ],
+          [
+            "ASV137.1",
+            295710
+          ],
+          [
+            "ASV300.2",
+            283088
+          ],
+          [
+            "ASV551.0",
+            195088
+          ],
+          [
+            "ASV329.2",
+            189435
+          ],
+          [
+            "ASV436.0",
+            155179
+          ],
+          [
+            "ASV692.1",
+            145419
+          ]
+        ],
+        "largest_losses": []
+      },
+      "final_vs_E029": {
+        "gains": 15,
+        "losses": 0,
+        "unchanged": 141,
+        "net_recovered_bp": 3679387,
+        "largest_gains": [
+          [
+            "ASV484.0",
+            1026682
+          ],
+          [
+            "ASV337.1",
+            487272
+          ],
+          [
+            "ASV470.1",
+            343824
+          ],
+          [
+            "ASV456.0",
+            313342
+          ],
+          [
+            "ASV137.1",
+            295710
+          ],
+          [
+            "ASV300.2",
+            283088
+          ],
+          [
+            "ASV551.0",
+            195088
+          ],
+          [
+            "ASV329.2",
+            189435
+          ],
+          [
+            "ASV436.0",
+            155179
+          ],
+          [
+            "ASV692.1",
+            145419
+          ]
+        ],
+        "largest_losses": []
+      },
+      "final_vs_anchor": {
+        "gains": 6,
+        "losses": 18,
+        "unchanged": 132,
+        "net_recovered_bp": -13973364,
+        "largest_gains": [
+          [
+            "ASV692.1",
+            96762
+          ],
+          [
+            "ASV714.0",
+            21659
+          ],
+          [
+            "ASV300.8",
+            20610
+          ],
+          [
+            "ASV551.0",
+            19204
+          ],
+          [
+            "ASV436.0",
+            5766
+          ],
+          [
+            "ASV399.6",
+            2019
+          ]
+        ],
+        "largest_losses": [
+          [
+            "ASV150.14",
+            -5393723
+          ],
+          [
+            "ASV284.4",
+            -1995674
+          ],
+          [
+            "ASV134.7",
+            -1239754
+          ],
+          [
+            "ASV426.8",
+            -1076770
+          ],
+          [
+            "ASV406.4",
+            -1051832
+          ],
+          [
+            "ASV431.3",
+            -989510
+          ],
+          [
+            "ASV387.0",
+            -761076
+          ],
+          [
+            "ASV300.2",
+            -541362
+          ],
+          [
+            "ASV444.5",
+            -274968
+          ],
+          [
+            "ASV137.1",
+            -243830
+          ]
+        ]
+      },
+      "raw_review": {
+        "bytes": 5158029,
+        "sha256": "b2017dc599294ac7ef6b9180fb033c6bc7cada32963fea20aad375f98cf6e896"
+      },
+      "bins": {
+        "root-only": {
+          "total": 57,
+          "at_least_200kb": 40,
+          "large_below_95_confirmed_purity": 16,
+          "populations": {
+            "assigned": {
+              "contigs": 15094,
+              "bp": 114503586
+            },
+            "unassigned": {
+              "contigs": 73947,
+              "bp": 95139117
+            },
+            "excluded": {
+              "contigs": 56661,
+              "bp": 22035454
+            }
+          }
+        },
+        "pre": {
+          "total": 57,
+          "at_least_200kb": 40,
+          "large_below_95_confirmed_purity": 16,
+          "populations": {
+            "assigned": {
+              "contigs": 15094,
+              "bp": 114503586
+            },
+            "unassigned": {
+              "contigs": 73947,
+              "bp": 95139117
+            },
+            "excluded": {
+              "contigs": 56661,
+              "bp": 22035454
+            }
+          }
+        },
+        "post": {
+          "total": 57,
+          "at_least_200kb": 40,
+          "large_below_95_confirmed_purity": 16,
+          "populations": {
+            "assigned": {
+              "contigs": 23612,
+              "bp": 130523086
+            },
+            "unassigned": {
+              "contigs": 65429,
+              "bp": 79119617
+            },
+            "excluded": {
+              "contigs": 56661,
+              "bp": 22035454
+            }
+          }
+        }
+      },
+      "merge_count_inference": {
+        "count": 0,
+        "reason": "Pre and post bin counts equal; frozen update path can merge or recruit into existing bins, and cannot create bins. This is an inference, not a new trace replay."
+      }
+    },
+    "E009-GLM/teacher": {
+      "root_only_to_pre": {
+        "gains": 1,
+        "losses": 0,
+        "unchanged": 155,
+        "net_recovered_bp": 2911111,
+        "largest_gains": [
+          [
+            "ASV150.14",
+            2911111
+          ]
+        ],
+        "largest_losses": []
+      },
+      "pre_to_post": {
+        "gains": 17,
+        "losses": 0,
+        "unchanged": 139,
+        "net_recovered_bp": 7166572,
+        "largest_gains": [
+          [
+            "ASV284.4",
+            2029824
+          ],
+          [
+            "ASV484.0",
+            1382264
+          ],
+          [
+            "ASV337.1",
+            1014285
+          ],
+          [
+            "ASV150.14",
+            478253
+          ],
+          [
+            "ASV470.1",
+            457020
+          ],
+          [
+            "ASV137.1",
+            355479
+          ],
+          [
+            "ASV300.2",
+            283088
+          ],
+          [
+            "ASV456.0",
+            256315
+          ],
+          [
+            "ASV329.2",
+            200816
+          ],
+          [
+            "ASV551.0",
+            190193
+          ]
+        ],
+        "largest_losses": []
+      },
+      "final_vs_E029": {
+        "gains": 17,
+        "losses": 0,
+        "unchanged": 139,
+        "net_recovered_bp": 10077683,
+        "largest_gains": [
+          [
+            "ASV150.14",
+            3389364
+          ],
+          [
+            "ASV284.4",
+            2029824
+          ],
+          [
+            "ASV484.0",
+            1382264
+          ],
+          [
+            "ASV337.1",
+            1014285
+          ],
+          [
+            "ASV470.1",
+            457020
+          ],
+          [
+            "ASV137.1",
+            355479
+          ],
+          [
+            "ASV300.2",
+            283088
+          ],
+          [
+            "ASV456.0",
+            256315
+          ],
+          [
+            "ASV329.2",
+            200816
+          ],
+          [
+            "ASV551.0",
+            190193
+          ]
+        ],
+        "largest_losses": []
+      },
+      "final_vs_anchor": {
+        "gains": 4,
+        "losses": 19,
+        "unchanged": 133,
+        "net_recovered_bp": -9367717,
+        "largest_gains": [
+          [
+            "ASV692.1",
+            105504
+          ],
+          [
+            "ASV284.4",
+            34150
+          ],
+          [
+            "ASV551.0",
+            20938
+          ],
+          [
+            "ASV300.8",
+            20610
+          ]
+        ],
+        "largest_losses": [
+          [
+            "ASV150.14",
+            -2004359
+          ],
+          [
+            "ASV134.7",
+            -1239754
+          ],
+          [
+            "ASV426.8",
+            -1076770
+          ],
+          [
+            "ASV406.4",
+            -1051832
+          ],
+          [
+            "ASV431.3",
+            -989510
+          ],
+          [
+            "ASV387.0",
+            -761076
+          ],
+          [
+            "ASV300.2",
+            -541362
+          ],
+          [
+            "ASV137.1",
+            -401662
+          ],
+          [
+            "ASV444.5",
+            -274968
+          ],
+          [
+            "ASV337.1",
+            -230805
+          ]
+        ]
+      },
+      "raw_review": {
+        "bytes": 5170839,
+        "sha256": "27aca2b7092e2ce1367d22ffe20ad4eacef2c8084f5ab6679ca103b237d48e20"
+      },
+      "bins": {
+        "root-only": {
+          "total": 61,
+          "at_least_200kb": 39,
+          "large_below_95_confirmed_purity": 16,
+          "populations": {
+            "assigned": {
+              "contigs": 15434,
+              "bp": 115659004
+            },
+            "unassigned": {
+              "contigs": 73607,
+              "bp": 93983699
+            },
+            "excluded": {
+              "contigs": 56661,
+              "bp": 22035454
+            }
+          }
+        },
+        "pre": {
+          "total": 62,
+          "at_least_200kb": 40,
+          "large_below_95_confirmed_purity": 16,
+          "populations": {
+            "assigned": {
+              "contigs": 15229,
+              "bp": 107572504
+            },
+            "unassigned": {
+              "contigs": 73812,
+              "bp": 102070199
+            },
+            "excluded": {
+              "contigs": 56661,
+              "bp": 22035454
+            }
+          }
+        },
+        "post": {
+          "total": 62,
+          "at_least_200kb": 41,
+          "large_below_95_confirmed_purity": 15,
+          "populations": {
+            "assigned": {
+              "contigs": 25531,
+              "bp": 125081589
+            },
+            "unassigned": {
+              "contigs": 63510,
+              "bp": 84561114
+            },
+            "excluded": {
+              "contigs": 56661,
+              "bp": 22035454
+            }
+          }
+        }
+      },
+      "merge_count_inference": {
+        "count": 0,
+        "reason": "Pre and post bin counts equal; frozen update path can merge or recruit into existing bins, and cannot create bins. This is an inference, not a new trace replay."
+      }
+    },
+    "E009-GLM/student": {
+      "root_only_to_pre": {
+        "gains": 0,
+        "losses": 0,
+        "unchanged": 156,
+        "net_recovered_bp": 0,
+        "largest_gains": [],
+        "largest_losses": []
+      },
+      "pre_to_post": {
+        "gains": 15,
+        "losses": 1,
+        "unchanged": 140,
+        "net_recovered_bp": 2384566,
+        "largest_gains": [
+          [
+            "ASV284.4",
+            2046249
+          ],
+          [
+            "ASV484.0",
+            993846
+          ],
+          [
+            "ASV137.1",
+            446623
+          ],
+          [
+            "ASV300.2",
+            390139
+          ],
+          [
+            "ASV337.1",
+            375376
+          ],
+          [
+            "ASV456.0",
+            262387
+          ],
+          [
+            "ASV399.6",
+            226198
+          ],
+          [
+            "ASV551.0",
+            189060
+          ],
+          [
+            "ASV329.2",
+            157408
+          ],
+          [
+            "ASV470.1",
+            153525
+          ]
+        ],
+        "largest_losses": [
+          [
+            "ASV300.8",
+            -3271350
+          ]
+        ]
+      },
+      "final_vs_E029": {
+        "gains": 15,
+        "losses": 1,
+        "unchanged": 140,
+        "net_recovered_bp": 2384566,
+        "largest_gains": [
+          [
+            "ASV284.4",
+            2046249
+          ],
+          [
+            "ASV484.0",
+            993846
+          ],
+          [
+            "ASV137.1",
+            446623
+          ],
+          [
+            "ASV300.2",
+            390139
+          ],
+          [
+            "ASV337.1",
+            375376
+          ],
+          [
+            "ASV456.0",
+            262387
+          ],
+          [
+            "ASV399.6",
+            226198
+          ],
+          [
+            "ASV551.0",
+            189060
+          ],
+          [
+            "ASV329.2",
+            157408
+          ],
+          [
+            "ASV470.1",
+            153525
+          ]
+        ],
+        "largest_losses": [
+          [
+            "ASV300.8",
+            -3271350
+          ]
+        ]
+      },
+      "final_vs_anchor": {
+        "gains": 5,
+        "losses": 18,
+        "unchanged": 133,
+        "net_recovered_bp": -15338803,
+        "largest_gains": [
+          [
+            "ASV470.1",
+            108709
+          ],
+          [
+            "ASV692.1",
+            96032
+          ],
+          [
+            "ASV284.4",
+            50575
+          ],
+          [
+            "ASV551.0",
+            19805
+          ],
+          [
+            "ASV714.0",
+            7451
+          ]
+        ],
+        "largest_losses": [
+          [
+            "ASV150.14",
+            -5393723
+          ],
+          [
+            "ASV300.8",
+            -3284549
+          ],
+          [
+            "ASV134.7",
+            -1239754
+          ],
+          [
+            "ASV426.8",
+            -1076770
+          ],
+          [
+            "ASV406.4",
+            -1051832
+          ],
+          [
+            "ASV431.3",
+            -989510
+          ],
+          [
+            "ASV387.0",
+            -761076
+          ],
+          [
+            "ASV300.2",
+            -434311
+          ],
+          [
+            "ASV137.1",
+            -310518
+          ],
+          [
+            "ASV444.5",
+            -274968
+          ]
+        ]
+      },
+      "raw_review": {
+        "bytes": 5171155,
+        "sha256": "27f9daa8396ee86024695e69ea153af890d39ef778e7cea30f16832aa6da208c"
+      },
+      "bins": {
+        "root-only": {
+          "total": 61,
+          "at_least_200kb": 39,
+          "large_below_95_confirmed_purity": 17,
+          "populations": {
+            "assigned": {
+              "contigs": 16028,
+              "bp": 110336110
+            },
+            "unassigned": {
+              "contigs": 73013,
+              "bp": 99306593
+            },
+            "excluded": {
+              "contigs": 56661,
+              "bp": 22035454
+            }
+          }
+        },
+        "pre": {
+          "total": 62,
+          "at_least_200kb": 39,
+          "large_below_95_confirmed_purity": 16,
+          "populations": {
+            "assigned": {
+              "contigs": 15949,
+              "bp": 110281906
+            },
+            "unassigned": {
+              "contigs": 73092,
+              "bp": 99360797
+            },
+            "excluded": {
+              "contigs": 56661,
+              "bp": 22035454
+            }
+          }
+        },
+        "post": {
+          "total": 62,
+          "at_least_200kb": 40,
+          "large_below_95_confirmed_purity": 16,
+          "populations": {
+            "assigned": {
+              "contigs": 26463,
+              "bp": 129407644
+            },
+            "unassigned": {
+              "contigs": 62578,
+              "bp": 80235059
+            },
+            "excluded": {
+              "contigs": 56661,
+              "bp": 22035454
+            }
+          }
+        }
+      },
+      "merge_count_inference": {
+        "count": 0,
+        "reason": "Pre and post bin counts equal; frozen update path can merge or recruit into existing bins, and cannot create bins. This is an inference, not a new trace replay."
+      },
+      "recruitment_failure_example": {
+        "genome": "ASV300.8",
+        "scope": "Illustrative diagnosis only; no bin/threshold/training selection",
+        "pre": {
+          "primary": {
+            "genome": "ASV300.8",
+            "reference_bp": 3460293,
+            "assembly_confirmed_bp": 3361302,
+            "best_bin": "bin_000006",
+            "confirmed_purity": 0.9758299902983336,
+            "recovered_bp": 3271350,
+            "whole_reference_R95": 0.9453968204426619,
+            "assembly_conditional_R95": 0.9732389413388026
+          },
+          "dominant_origin_bins": [
+            {
+              "bin_id": 5,
+              "bp": 3374678,
+              "dominant_origin": "ASV300.8",
+              "target": true,
+              "full_reference_bp": 3460293,
+              "source_union_bp": 3271350,
+              "completeness": 0.9453968204426619,
+              "confirmed_purity": 0.9758299902983336,
+              "impurity_upper_bound": 0.024170009701666384,
+              "confirmed_other_origin_bp": 0,
+              "confirmed_other_origin_fraction": 0.0,
+              "unconfirmed_bp": 81566,
+              "unresolved_fraction": 0.024170009701666353,
+              "tier": "threshold_based_HQ"
+            }
+          ]
+        },
+        "post": {
+          "primary": {
+            "genome": "ASV300.8",
+            "reference_bp": 3460293,
+            "assembly_confirmed_bp": 3361302,
+            "best_bin": null,
+            "confirmed_purity": null,
+            "recovered_bp": 0,
+            "whole_reference_R95": 0.0,
+            "assembly_conditional_R95": 0.0
+          },
+          "dominant_origin_bins": [
+            {
+              "bin_id": 10,
+              "bp": 3585019,
+              "dominant_origin": "ASV300.8",
+              "target": true,
+              "full_reference_bp": 3460293,
+              "source_union_bp": 3305159,
+              "completeness": 0.9551673803345555,
+              "confirmed_purity": 0.9281459875108053,
+              "impurity_upper_bound": 0.07185401248919465,
+              "confirmed_other_origin_bp": 174536,
+              "confirmed_other_origin_fraction": 0.04868481868575871,
+              "unconfirmed_bp": 83062,
+              "unresolved_fraction": 0.02316919380343591,
+              "tier": "threshold_based_MQ"
+            }
+          ]
+        }
+      }
+    },
+    "oral-noGLM/teacher": {
+      "root_only_to_pre": {
+        "gains": 2,
+        "losses": 0,
+        "unchanged": 797,
+        "net_recovered_bp": 4922081,
+        "largest_gains": [
+          [
+            "OTU_97.40838.0",
+            3629166
+          ],
+          [
+            "OTU_97.44160.0",
+            1292915
+          ]
+        ],
+        "largest_losses": []
+      },
+      "pre_to_post": {
+        "gains": 75,
+        "losses": 16,
+        "unchanged": 708,
+        "net_recovered_bp": -2638335,
+        "largest_gains": [
+          [
+            "OTU_97.21263.0",
+            1981563
+          ],
+          [
+            "OTU_97.36605.0",
+            1933877
+          ],
+          [
+            "OTU_97.45.0",
+            1590120
+          ],
+          [
+            "OTU_97.22166.0",
+            1304535
+          ],
+          [
+            "OTU_97.38222.0",
+            1232893
+          ],
+          [
+            "OTU_97.32318.0",
+            1205540
+          ],
+          [
+            "OTU_97.11308.0",
+            1134120
+          ],
+          [
+            "OTU_97.27798.0",
+            1103560
+          ],
+          [
+            "OTU_97.27484.0",
+            965310
+          ],
+          [
+            "OTU_97.13932.0",
+            879708
+          ]
+        ],
+        "largest_losses": [
+          [
+            "OTU_97.2092.0",
+            -6865679
+          ],
+          [
+            "OTU_97.28342.1",
+            -2859423
+          ],
+          [
+            "OTU_97.196.0",
+            -2838357
+          ],
+          [
+            "OTU_97.26707.0",
+            -2482321
+          ],
+          [
+            "OTU_97.18522.0",
+            -2266410
+          ],
+          [
+            "OTU_97.23341.0",
+            -2007210
+          ],
+          [
+            "OTU_97.42261.0",
+            -1676379
+          ],
+          [
+            "OTU_97.5757.1",
+            -1503276
+          ],
+          [
+            "OTU_97.14835.0",
+            -1471217
+          ],
+          [
+            "OTU_97.11468.0",
+            -1399320
+          ]
+        ]
+      },
+      "final_vs_E029": {
+        "gains": 77,
+        "losses": 16,
+        "unchanged": 706,
+        "net_recovered_bp": 2283746,
+        "largest_gains": [
+          [
+            "OTU_97.40838.0",
+            3629166
+          ],
+          [
+            "OTU_97.21263.0",
+            1981563
+          ],
+          [
+            "OTU_97.36605.0",
+            1933877
+          ],
+          [
+            "OTU_97.45.0",
+            1590120
+          ],
+          [
+            "OTU_97.22166.0",
+            1304535
+          ],
+          [
+            "OTU_97.44160.0",
+            1292915
+          ],
+          [
+            "OTU_97.38222.0",
+            1232893
+          ],
+          [
+            "OTU_97.32318.0",
+            1205540
+          ],
+          [
+            "OTU_97.11308.0",
+            1134120
+          ],
+          [
+            "OTU_97.27798.0",
+            1103560
+          ]
+        ],
+        "largest_losses": [
+          [
+            "OTU_97.2092.0",
+            -6865679
+          ],
+          [
+            "OTU_97.28342.1",
+            -2859423
+          ],
+          [
+            "OTU_97.196.0",
+            -2838357
+          ],
+          [
+            "OTU_97.26707.0",
+            -2482321
+          ],
+          [
+            "OTU_97.18522.0",
+            -2266410
+          ],
+          [
+            "OTU_97.23341.0",
+            -2007210
+          ],
+          [
+            "OTU_97.42261.0",
+            -1676379
+          ],
+          [
+            "OTU_97.5757.1",
+            -1503276
+          ],
+          [
+            "OTU_97.14835.0",
+            -1471217
+          ],
+          [
+            "OTU_97.11468.0",
+            -1399320
+          ]
+        ]
+      },
+      "final_vs_anchor": {
+        "gains": 90,
+        "losses": 74,
+        "unchanged": 635,
+        "net_recovered_bp": -61469439,
+        "largest_gains": [
+          [
+            "OTU_97.4320.0",
+            3603863
+          ],
+          [
+            "OTU_97.38777.0",
+            3050510
+          ],
+          [
+            "OTU_97.9670.0",
+            2549338
+          ],
+          [
+            "OTU_97.21263.0",
+            2487515
+          ],
+          [
+            "OTU_97.35846.0",
+            2173187
+          ],
+          [
+            "OTU_97.23667.0",
+            2146142
+          ],
+          [
+            "OTU_97.45.0",
+            2107468
+          ],
+          [
+            "OTU_97.44550.0",
+            2064138
+          ],
+          [
+            "OTU_97.27484.0",
+            1954588
+          ],
+          [
+            "OTU_97.43597.0",
+            1910551
+          ]
+        ],
+        "largest_losses": [
+          [
+            "OTU_97.31214.0",
+            -7537930
+          ],
+          [
+            "OTU_97.37901.0",
+            -7271451
+          ],
+          [
+            "OTU_97.29.0",
+            -6841351
+          ],
+          [
+            "OTU_97.20031.0",
+            -6815179
+          ],
+          [
+            "OTU_97.2092.0",
+            -6579747
+          ],
+          [
+            "OTU_97.27897.0",
+            -4888246
+          ],
+          [
+            "OTU_97.6437.0",
+            -4133854
+          ],
+          [
+            "OTU_97.7158.0",
+            -3350887
+          ],
+          [
+            "OTU_97.39522.0",
+            -3261759
+          ],
+          [
+            "OTU_97.10732.1",
+            -3020128
+          ]
+        ]
+      },
+      "raw_review": {
+        "bytes": 7910262,
+        "sha256": "c6e3a824af8e9785d1505073c5ff1f42d124485d5abd6896474f0f2398ad59a7"
+      },
+      "bins": {
+        "root-only": {
+          "total": 219,
+          "at_least_200kb": 145,
+          "large_below_95_confirmed_purity": 28,
+          "populations": {
+            "assigned": {
+              "contigs": 36646,
+              "bp": 340067021
+            },
+            "unassigned": {
+              "contigs": 472117,
+              "bp": 1103760643
+            },
+            "excluded": {
+              "contigs": 777784,
+              "bp": 226153459
+            }
+          }
+        },
+        "pre": {
+          "total": 219,
+          "at_least_200kb": 145,
+          "large_below_95_confirmed_purity": 26,
+          "populations": {
+            "assigned": {
+              "contigs": 36643,
+              "bp": 338046406
+            },
+            "unassigned": {
+              "contigs": 472120,
+              "bp": 1105781258
+            },
+            "excluded": {
+              "contigs": 777784,
+              "bp": 226153459
+            }
+          }
+        },
+        "post": {
+          "total": 219,
+          "at_least_200kb": 150,
+          "large_below_95_confirmed_purity": 42,
+          "populations": {
+            "assigned": {
+              "contigs": 90335,
+              "bp": 428054572
+            },
+            "unassigned": {
+              "contigs": 418428,
+              "bp": 1015773092
+            },
+            "excluded": {
+              "contigs": 777784,
+              "bp": 226153459
+            }
+          }
+        }
+      },
+      "merge_count_inference": {
+        "count": 0,
+        "reason": "Pre and post bin counts equal; frozen update path can merge or recruit into existing bins, and cannot create bins. This is an inference, not a new trace replay."
+      }
+    },
+    "oral-noGLM/student": {
+      "root_only_to_pre": {
+        "gains": 3,
+        "losses": 1,
+        "unchanged": 795,
+        "net_recovered_bp": 11161089,
+        "largest_gains": [
+          [
+            "OTU_97.2092.0",
+            6648196
+          ],
+          [
+            "OTU_97.5441.1",
+            3794094
+          ],
+          [
+            "OTU_97.11308.0",
+            725751
+          ]
+        ],
+        "largest_losses": [
+          [
+            "OTU_97.44061.0",
+            -6952
+          ]
+        ]
+      },
+      "pre_to_post": {
+        "gains": 63,
+        "losses": 19,
+        "unchanged": 717,
+        "net_recovered_bp": -981339,
+        "largest_gains": [
+          [
+            "OTU_97.33448.0",
+            2323533
+          ],
+          [
+            "OTU_97.38777.0",
+            1606667
+          ],
+          [
+            "OTU_97.45.0",
+            1496196
+          ],
+          [
+            "OTU_97.11308.0",
+            1482629
+          ],
+          [
+            "OTU_97.22166.0",
+            1418259
+          ],
+          [
+            "OTU_97.36605.0",
+            1355989
+          ],
+          [
+            "OTU_97.27484.0",
+            1327157
+          ],
+          [
+            "OTU_97.32318.0",
+            1181441
+          ],
+          [
+            "OTU_97.27798.0",
+            1131842
+          ],
+          [
+            "OTU_97.4084.0",
+            1083283
+          ]
+        ],
+        "largest_losses": [
+          [
+            "OTU_97.2092.0",
+            -6648196
+          ],
+          [
+            "OTU_97.25225.0",
+            -2302453
+          ],
+          [
+            "OTU_97.18522.0",
+            -2246019
+          ],
+          [
+            "OTU_97.196.0",
+            -2034196
+          ],
+          [
+            "OTU_97.23341.0",
+            -1819176
+          ],
+          [
+            "OTU_97.42261.0",
+            -1669590
+          ],
+          [
+            "OTU_97.5757.1",
+            -1496853
+          ],
+          [
+            "OTU_97.14639.0",
+            -1444042
+          ],
+          [
+            "OTU_97.9305.0",
+            -1432881
+          ],
+          [
+            "OTU_97.11468.0",
+            -1399320
+          ]
+        ]
+      },
+      "final_vs_E029": {
+        "gains": 63,
+        "losses": 18,
+        "unchanged": 718,
+        "net_recovered_bp": 10179750,
+        "largest_gains": [
+          [
+            "OTU_97.5441.1",
+            3855183
+          ],
+          [
+            "OTU_97.33448.0",
+            2323533
+          ],
+          [
+            "OTU_97.11308.0",
+            2208380
+          ],
+          [
+            "OTU_97.38777.0",
+            1606667
+          ],
+          [
+            "OTU_97.45.0",
+            1496196
+          ],
+          [
+            "OTU_97.22166.0",
+            1418259
+          ],
+          [
+            "OTU_97.36605.0",
+            1355989
+          ],
+          [
+            "OTU_97.27484.0",
+            1327157
+          ],
+          [
+            "OTU_97.32318.0",
+            1181441
+          ],
+          [
+            "OTU_97.27798.0",
+            1131842
+          ]
+        ],
+        "largest_losses": [
+          [
+            "OTU_97.25225.0",
+            -2302453
+          ],
+          [
+            "OTU_97.18522.0",
+            -2246019
+          ],
+          [
+            "OTU_97.196.0",
+            -2034196
+          ],
+          [
+            "OTU_97.23341.0",
+            -1819176
+          ],
+          [
+            "OTU_97.42261.0",
+            -1669590
+          ],
+          [
+            "OTU_97.5757.1",
+            -1496853
+          ],
+          [
+            "OTU_97.14639.0",
+            -1444042
+          ],
+          [
+            "OTU_97.9305.0",
+            -1432881
+          ],
+          [
+            "OTU_97.11468.0",
+            -1399320
+          ],
+          [
+            "OTU_97.28231.0",
+            -1354929
+          ]
+        ]
+      },
+      "final_vs_anchor": {
+        "gains": 83,
+        "losses": 78,
+        "unchanged": 638,
+        "net_recovered_bp": -68998118,
+        "largest_gains": [
+          [
+            "OTU_97.33448.0",
+            4050876
+          ],
+          [
+            "OTU_97.4320.0",
+            3637259
+          ],
+          [
+            "OTU_97.38777.0",
+            3046915
+          ],
+          [
+            "OTU_97.9670.0",
+            2549338
+          ],
+          [
+            "OTU_97.42543.1",
+            2362232
+          ],
+          [
+            "OTU_97.45.0",
+            2193998
+          ],
+          [
+            "OTU_97.35846.0",
+            2173187
+          ],
+          [
+            "OTU_97.34836.0",
+            2146192
+          ],
+          [
+            "OTU_97.44550.0",
+            2064138
+          ],
+          [
+            "OTU_97.23272.0",
+            2029162
+          ]
+        ],
+        "largest_losses": [
+          [
+            "OTU_97.31214.0",
+            -7537930
+          ],
+          [
+            "OTU_97.37901.0",
+            -7271451
+          ],
+          [
+            "OTU_97.29.0",
+            -6841351
+          ],
+          [
+            "OTU_97.2092.0",
+            -6579747
+          ],
+          [
+            "OTU_97.27897.0",
+            -4888246
+          ],
+          [
+            "OTU_97.6437.0",
+            -4133854
+          ],
+          [
+            "OTU_97.40838.0",
+            -3413214
+          ],
+          [
+            "OTU_97.7158.0",
+            -3350887
+          ],
+          [
+            "OTU_97.39522.0",
+            -3261759
+          ],
+          [
+            "OTU_97.10732.1",
+            -3020128
+          ]
+        ]
+      },
+      "raw_review": {
+        "bytes": 7810579,
+        "sha256": "0335ddc5a5cad9830df133ef7cbb8380553f70f6f8bca88fb6496fc662af6bcf"
+      },
+      "bins": {
+        "root-only": {
+          "total": 197,
+          "at_least_200kb": 141,
+          "large_below_95_confirmed_purity": 28,
+          "populations": {
+            "assigned": {
+              "contigs": 27201,
+              "bp": 338777913
+            },
+            "unassigned": {
+              "contigs": 481562,
+              "bp": 1105049751
+            },
+            "excluded": {
+              "contigs": 777784,
+              "bp": 226153459
+            }
+          }
+        },
+        "pre": {
+          "total": 197,
+          "at_least_200kb": 141,
+          "large_below_95_confirmed_purity": 26,
+          "populations": {
+            "assigned": {
+              "contigs": 27219,
+              "bp": 327433089
+            },
+            "unassigned": {
+              "contigs": 481544,
+              "bp": 1116394575
+            },
+            "excluded": {
+              "contigs": 777784,
+              "bp": 226153459
+            }
+          }
+        },
+        "post": {
+          "total": 197,
+          "at_least_200kb": 143,
+          "large_below_95_confirmed_purity": 45,
+          "populations": {
+            "assigned": {
+              "contigs": 80464,
+              "bp": 414571838
+            },
+            "unassigned": {
+              "contigs": 428299,
+              "bp": 1029255826
+            },
+            "excluded": {
+              "contigs": 777784,
+              "bp": 226153459
+            }
+          }
+        }
+      },
+      "merge_count_inference": {
+        "count": 0,
+        "reason": "Pre and post bin counts equal; frozen update path can merge or recruit into existing bins, and cannot create bins. This is an inference, not a new trace replay."
+      },
+      "recruitment_failure_example": {
+        "genome": "OTU_97.2092.0",
+        "scope": "Illustrative diagnosis only; no bin/threshold/training selection",
+        "pre": {
+          "primary": {
+            "genome": "OTU_97.2092.0",
+            "reference_bp": 6964487,
+            "assembly_confirmed_bp": 6961448,
+            "best_bin": 103,
+            "confirmed_purity": 1.0,
+            "recovered_bp": 6648196,
+            "whole_reference_R95": 0.9545851690153202,
+            "assembly_conditional_R95": 0.9550018904113052
+          },
+          "dominant_origin_bins": [
+            {
+              "bin_id": 103,
+              "bp": 6648196,
+              "dominant_origin": "OTU_97.2092.0",
+              "target": true,
+              "full_reference_bp": 6964487,
+              "source_union_bp": 6648196,
+              "completeness": 0.9545851690153202,
+              "confirmed_purity": 1.0,
+              "impurity_upper_bound": 0.0,
+              "confirmed_other_origin_bp": 0,
+              "confirmed_other_origin_fraction": 0.0,
+              "unconfirmed_bp": 0,
+              "unresolved_fraction": 0.0,
+              "tier": "threshold_based_HQ"
+            }
+          ]
+        },
+        "post": {
+          "primary": {
+            "genome": "OTU_97.2092.0",
+            "reference_bp": 6964487,
+            "assembly_confirmed_bp": 6961448,
+            "best_bin": null,
+            "confirmed_purity": null,
+            "recovered_bp": 0,
+            "whole_reference_R95": 0.0,
+            "assembly_conditional_R95": 0.0
+          },
+          "dominant_origin_bins": [
+            {
+              "bin_id": 30,
+              "bp": 11948372,
+              "dominant_origin": "OTU_97.2092.0",
+              "target": true,
+              "full_reference_bp": 6964487,
+              "source_union_bp": 6945621,
+              "completeness": 0.9972911141911817,
+              "confirmed_purity": 0.5813027080174604,
+              "impurity_upper_bound": 0.4186972919825396,
+              "confirmed_other_origin_bp": 5002749,
+              "confirmed_other_origin_fraction": 0.418697124595719,
+              "unconfirmed_bp": 2,
+              "unresolved_fraction": 1.673868205643413e-07,
+              "tier": "high_impurity_or_unresolved"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "student_minus_teacher_R95_points": {
+    "E009-noGLM": -0.08426845406667438,
+    "E009-GLM": -1.0765271794678386,
+    "oral-noGLM": -0.3614218921573431
+  },
+  "full_path_GLM_student_R95_points": -0.2461750166394175,
+  "full_path_GLM_teacher_R95_points": 0.7460837087617467,
+  "root_only_R95_equals_retained_E029_all_six": true,
+  "no_old_outputs_rescored": true,
+  "recruitment_not_universally_safe": true,
+  "biological_disposition_unchanged": "MODIFY"
+}

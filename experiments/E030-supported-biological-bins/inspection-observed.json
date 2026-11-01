@@ -1,0 +1,334 @@
+{
+  "private_source_transport": {
+    "status": "PASS_PRIVATE_EXACT_GIT_BUNDLE",
+    "source": "638084d05b257deeb221cade33042e3459025e2d",
+    "base": "ec7ff25b24f3db428429d5b861e7a06c4d223ca8",
+    "bundle": {
+      "bytes": 180132,
+      "sha256": "7d5bacf9580a5bbdde560573bf0d3e7a9b93cba82e53a3e3525a0efd6bd35780"
+    },
+    "private_path": "/srv/dl_binner/experiments/e030/source-transports/source-638084d05b257deeb221cade33042e3459025e2d.bundle",
+    "public_GitHub_push_performed": false,
+    "GitHub_key_remains_read_only": true
+  },
+  "status": "COMPLETED_INDEPENDENTLY_REVIEWED",
+  "phase": "construction-20261101T161023Z-638084d",
+  "source": "638084d05b257deeb221cade33042e3459025e2d",
+  "provider_status": "TERMINATED",
+  "archive_and_every_member_verified": true,
+  "cost_and_retention_admitted": true,
+  "workflow_completed": true,
+  "archive": {
+    "bytes": 784438675,
+    "sha256": "c4362a34f353c2b97f51a849988c074ec5cf8f2a8d96d4f6eaf6b21e618bb67c"
+  },
+  "regular_members": 617,
+  "aliases": 10,
+  "source_files": 23,
+  "owned_package_files": 68,
+  "numerical_distributions": 41,
+  "native_gate_exits": {
+    "workflow-origin": 0,
+    "package-install": 0,
+    "owned-complete-runtime": 0,
+    "installed-construction": 0,
+    "serial-cached-tiny-DAG": 0,
+    "restore-complete-inputs": 0,
+    "synthetic-shape-runtime": 0
+  },
+  "phase_exits": {
+    "workflow": 0,
+    "used-inputs-after": 0,
+    "collect": 0,
+    "upload-e030-evidence.tar.gz": 0,
+    "readback-e030-evidence.tar.gz": 0,
+    "upload-e030-evidence.tar.gz.sha256": 0,
+    "readback-e030-evidence.tar.gz.sha256": 0,
+    "upload-collection.json": 0,
+    "readback-collection.json": 0,
+    "upload-collection-disk.jsonl": 0,
+    "readback-collection-disk.jsonl": 0,
+    "upload-terminal-disk.json": 0,
+    "readback-terminal-disk.json": 0
+  },
+  "stages": {
+    "barrier": {
+      "status": "PASS",
+      "members": 2
+    },
+    "groups/E009-noGLM/teacher": {
+      "status": "PASS",
+      "members": 12
+    },
+    "groups/E009-noGLM/student": {
+      "status": "PASS",
+      "members": 12
+    },
+    "groups/E009-GLM/teacher": {
+      "status": "PASS",
+      "members": 12
+    },
+    "groups/E009-GLM/student": {
+      "status": "PASS",
+      "members": 12
+    },
+    "groups/oral-noGLM/teacher": {
+      "status": "PASS",
+      "members": 12
+    },
+    "groups/oral-noGLM/student": {
+      "status": "PASS",
+      "members": 12
+    },
+    "E009-noGLM/export": {
+      "status": "PASS",
+      "members": 15
+    },
+    "E009-GLM/export": {
+      "status": "PASS",
+      "members": 15
+    },
+    "oral-noGLM/export": {
+      "status": "PASS",
+      "members": 15
+    },
+    "E009-noGLM/audit": {
+      "status": "PASS",
+      "members": 2
+    },
+    "E009-GLM/audit": {
+      "status": "PASS",
+      "members": 2
+    },
+    "oral-noGLM/audit": {
+      "status": "PASS",
+      "members": 2
+    }
+  },
+  "recall": {
+    "E009-noGLM/teacher": {
+      "status": "PASS",
+      "overall": 0.9985185185185185,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667,
+        "long": 1.0
+      },
+      "query_count": 45,
+      "min_query_recall": 0.9666666666666667,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "E009-noGLM/student": {
+      "status": "PASS",
+      "overall": 0.9992592592592593,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667,
+        "long": 1.0
+      },
+      "query_count": 45,
+      "min_query_recall": 0.9666666666666667,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "E009-GLM/teacher": {
+      "status": "PASS",
+      "overall": 0.9992592592592593,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667,
+        "long": 1.0
+      },
+      "query_count": 45,
+      "min_query_recall": 0.9666666666666667,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "E009-GLM/student": {
+      "status": "PASS",
+      "overall": 0.9992592592592593,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667,
+        "long": 1.0
+      },
+      "query_count": 45,
+      "min_query_recall": 0.9666666666666667,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "oral-noGLM/teacher": {
+      "status": "PASS",
+      "overall": 1.0,
+      "strata": {
+        "positive_depth": 1.0,
+        "measured_zero_depth": 1.0,
+        "short": 1.0,
+        "long": 1.0
+      },
+      "query_count": 56,
+      "min_query_recall": 1.0,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "oral-noGLM/student": {
+      "status": "PASS",
+      "overall": 1.0,
+      "strata": {
+        "positive_depth": 1.0,
+        "measured_zero_depth": 1.0,
+        "short": 1.0,
+        "long": 1.0
+      },
+      "query_count": 56,
+      "min_query_recall": 1.0,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    }
+  },
+  "axes": {
+    "E009-noGLM": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ],
+      "core_rows": 9812,
+      "GLM_in_teacher_proposals_student": false
+    },
+    "E009-GLM": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ],
+      "core_rows": 9812,
+      "GLM_in_teacher_proposals_student": true
+    },
+    "oral-noGLM": {
+      "rows": 1286547,
+      "bp": 1669981123,
+      "eligible": 508763,
+      "samples": [
+        "oral_sample_6",
+        "oral_sample_7",
+        "oral_sample_8",
+        "oral_sample_13",
+        "oral_sample_14",
+        "oral_sample_15",
+        "oral_sample_16",
+        "oral_sample_17",
+        "oral_sample_18",
+        "oral_sample_19"
+      ],
+      "core_rows": 60211,
+      "GLM_in_teacher_proposals_student": false
+    }
+  },
+  "used_inputs_after_verified": true,
+  "hashed_files": 191,
+  "unused_stat_only": 15,
+  "watchdog_boot_process_verified": true,
+  "measured_allocation_seconds": 1576.283,
+  "actual_serial_dispatches": 14,
+  "original_cumulative_start_epoch": 1793549447.991,
+  "provider_absolute_STOP_epoch": 1793571947.991,
+  "native_disk": {
+    "samples": 664,
+    "minimum_free_bytes": 29096083456,
+    "maximum_sampled_global_growth_bytes": 3336548352,
+    "scope": "Sampled whole-filesystem usage; first-allocation baseline, not exact attributable bytes"
+  },
+  "no_truth_scores_computed": true,
+  "scope": "Exact used-input before/after and retained cache proofs; no claim about every unrelated VM file",
+  "diagnostic_review": {
+    "status": "PASS_INDEPENDENT_STOP_EVERY_REVIEW_MEMBER",
+    "archive": {
+      "bytes": 15684217,
+      "sha256": "db9b0a4af0f571e2dc33313dfa44c4ee10165b62337dcfef862e1aed275fffc1"
+    },
+    "generation": "1793554612498071",
+    "members": 86,
+    "logical_bytes": 141852297,
+    "provider_status": "TERMINATED",
+    "all_eight_exit_contracts_pass": true,
+    "reused_passed_gates": 2,
+    "new_review_consumers": 6,
+    "frozen_partitions_reviewed": 18,
+    "original_clock_and_budget_preserved": true,
+    "watchdog_boot_and_process_verified": true,
+    "new_science": false,
+    "local_numerical_review": false
+  },
+  "diagnostic_review_source": "bdf29c747a90ade832241dc8c442b682a588ff39",
+  "current_provider_status": "TERMINATED",
+  "science_source_unchanged": true,
+  "frozen_disposition": "MODIFY",
+  "primary_student_metrics": {
+    "E009-noGLM": {
+      "targets": 156,
+      "reference_bp": 554661890,
+      "bp_weighted_R95": 0.07897084294001162,
+      "macro_R95": 0.09235276609612894,
+      "at_least_50_percent": 16,
+      "at_least_90_percent": 7
+    },
+    "E009-GLM": {
+      "targets": 156,
+      "reference_bp": 554661890,
+      "bp_weighted_R95": 0.07650909277361745,
+      "macro_R95": 0.09187972530070088,
+      "at_least_50_percent": 16,
+      "at_least_90_percent": 7
+    },
+    "oral-noGLM": {
+      "targets": 799,
+      "reference_bp": 2083072211,
+      "bp_weighted_R95": 0.10544601182815165,
+      "macro_R95": 0.09583798781554752,
+      "at_least_50_percent": 83,
+      "at_least_90_percent": 50
+    }
+  },
+  "summary_integer_audit": {
+    "status": "PASS_COMPLETE_INTEGER_TABLE_RECONSTRUCTION",
+    "rows": 2222,
+    "partitions": 18
+  },
+  "evidence_lock": {
+    "bytes": 8488,
+    "sha256": "549683ade6e6687461eb4c7e6cda9c489c0a9ec7a0b7b16aa01e54b6011877fb"
+  },
+  "separate_failed_operational_review_preserved": true,
+  "original_6_GiB_Mac_engineering_refusal_preserved": true,
+  "Mac_numerical_arrays_review_not_run": true,
+  "Mac_summary_only": {
+    "seconds": 1.113257179997163,
+    "peak_sampled_RSS": 79331328
+  },
+  "full_DNA_export_scope": "Complete source-blind assignment/status/reason rows and original SHA-bound FASTA reuse; no second physical bin FASTA emission",
+  "missing_runtime_or_quality_contracts": [],
+  "review_disk_measurement_limit": "Active readers enforce guard; final/periodic disk observations retained, complete review guard time series not saved",
+  "main_phase_complete_disk_time_series_retained": true
+}

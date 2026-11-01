@@ -2075,3 +2075,39 @@ The owner authorizes same-task execution and sensible covered resource envelopes
 full native/credit gates and November 4 retention remain. Independent 128-view
 GPU batching qualification advances the concrete Oral main-mode milestone,
 without extracting the community bank or changing the current cached treatment.
+
+## E030 closeout and bootstrap-preserving learning, November 1, 2026
+
+[The complete E030 evidence](../../experiments/E030-supported-biological-bins/comparison-review.json)
+keeps the original MODIFY criterion: GLM E009 / Oral students reach 7.6509% /
+10.5446%, increasing both R95 and target-90 over E029 but not the stronger anchors.
+Root-only exactly reproduces working marker-selected R95; profile/update gains
+and wrong-origin recruitment losses are real paired observations. Keep this common
+constructor as a provisional fixed downstream substrate for the next learning
+comparison, with pre/post alternatives. This is not a validated product promotion,
+a recruitment-safety claim or a truth-selected dataset router.
+
+Choose one coherent bootstrap-preserving, confidence-aware relational learner
+next. [The source/result reassessment](../evidence/2026-11-01-e030-recovery-and-learning.md)
+finds student below teacher in all three modes, including a 1.0765-point GLM gap;
+the source initializes student from seed, not from useful bootstrap weights.
+The retained noisy-origin positive proposals and poor Oral biological neighborhoods
+justify checkpoint/target preservation and reliable/abstaining signed supervision
+together, initially without a larger encoder. Resolve initialization, optimizer/
+EMA/BatchNorm/RNG exposure and precise label-free confidence prospectively.
+An admitted teacher continuation adds training exposure; do not mislabel it a pure
+marker-loss causal test. At most one decision-changing continuation/signed-positive
+control is justified, not a grid. Main alternatives and limits remain explicit.
+
+Keep GLM's whole teacher/proposal/student route in E009, genuine ten-depth Oral and
+the full Oral GLM admission milestone; stockouts do not reject an information
+family or justify silently lower-quality views. Skin stays unscored. New fits need
+their own complete resource/credit admission, and November 4 is unchanged.
+
+Operational lesson: immutable stage receipts and evolving progress pointers have
+different write contracts. The first frozen-review driver fails before any new
+community diagnostic when an exclusive publisher reuses its progress name.
+Six real local restoration/publication/reuse/refusal tests support the repair;
+passed native gates and payload are byte-verified reused. AGENTS now requires two
+successive actual writer transitions, with unique receipts or tested atomic
+replacement. Original failed journals and scientific source remain unchanged.

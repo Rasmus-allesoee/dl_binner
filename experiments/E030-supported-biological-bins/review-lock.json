@@ -1,0 +1,166 @@
+{
+  "kind": "E030 post-outcome review evidence bindings, not a changed scientific freeze",
+  "science_source": "638084d05b257deeb221cade33042e3459025e2d",
+  "operations_source": "bdf29c747a90ade832241dc8c442b682a588ff39",
+  "files": {
+    "artifacts/e030-supported-biological-bins/inspection/admission.json": {
+      "bytes": 7640,
+      "sha256": "cef1bba8628b9eb859261f474c206f514266150553c5bef7a8f4f7a507f34197"
+    },
+    "artifacts/e030-supported-biological-bins/inspection/archive-verified.json": {
+      "bytes": 2723,
+      "sha256": "e423b2356c26d0c38f909885c085b5a556cd69644d8502df1d44ee98eda41060"
+    },
+    "artifacts/e030-supported-biological-bins/inspection/inventory.json": {
+      "bytes": 147374,
+      "sha256": "fd5d4ac503ba1da0c6e9db4791f61e1953e9ccbdd4a84b88c01fb6e698326b75"
+    },
+    "artifacts/e030-supported-biological-bins/inspection/completion.json": {
+      "bytes": 11069,
+      "sha256": "f6accf91afc31b0c6d635f1ef95966f703ea3026e42aad2cc3da705673030207"
+    },
+    "artifacts/e030-supported-biological-bins/inspection/collection.json": {
+      "bytes": 2816,
+      "sha256": "3c70f40a3f2b5305ddf0d90a2c0fa9928e6c400b936173079f67ee752579be15"
+    },
+    "artifacts/e030-supported-biological-bins/inspection/watchdog-exit.json": {
+      "bytes": 5481,
+      "sha256": "029e481761539aa06f48c2aeda0cf86d1d2ddabefc8621dc8fa439f513ff1c7b"
+    },
+    "artifacts/e030-supported-biological-bins/inspection/terminal-disk.json": {
+      "bytes": 2388,
+      "sha256": "fb5f1793b662c25b0ea694110dfdda0213999787a30aab70ce63d9b3dab6e718"
+    },
+    "artifacts/e030-supported-biological-bins/inspection/finance-admission.json": {
+      "bytes": 3463,
+      "sha256": "bf02fc579c286015467fc833ac5634d375adcad6744b91c6917176ac1eff6f11"
+    },
+    "artifacts/e030-supported-biological-bins/inspection/control/provider.json": {
+      "bytes": 33097,
+      "sha256": "f9efc626b481fc30dabc124f947a953b0ac0984059ecc6e9c9ee5d6ecefd60cc"
+    },
+    "artifacts/e030-supported-biological-bins/inspection/control/guest.json": {
+      "bytes": 372,
+      "sha256": "f611c28588a5f8e7e2cdb6439863ec7702548635e4637d3c3d55b1e29e40f677"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/admission.json": {
+      "bytes": 588,
+      "sha256": "d0849760b6e0c6f4c7d6a9a7cb1ff8916a3a20af01bbe4537edffd33fd1e662c"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/review-inventory.json": {
+      "bytes": 15865,
+      "sha256": "abc96dd8513bfea1f11d373feb55a654f4c343578c6dcb8af2c13f0b52fd6f62"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/attempt3/released.json": {
+      "bytes": 33769,
+      "sha256": "ffce13477fdd327ce873018eaa0f3592b3d8710335c17dc54ce5e70c3f982db3"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/attempt3/config.json": {
+      "bytes": 5047,
+      "sha256": "cba92c5f2a6b257bddc3e170578184c3ef996cc23f63dc7294c4b31d911de80f"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/controller-r3.py": {
+      "bytes": 10043,
+      "sha256": "6b83b084134d8484c82f4216a9791ccf768d856cd2868aec2ba513d6094a43f1"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/control-1793554802018923000/provider.json": {
+      "bytes": 33009,
+      "sha256": "65c9f3d1662e30735679244a6a88bcece819973f235bd4059f30bbdc15056cde"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/control-1793554802018923000/completion.json": {
+      "bytes": 9548,
+      "sha256": "6fc6af14c1882a1013652e771b2bc8f30247fcf5e4d91d162b964fa93aa3d517"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/control-1793554802018923000/watchdog-exit.json": {
+      "bytes": 4810,
+      "sha256": "b4dcb5b37a706ee1f849fea6b3a001f0e848e306c624bfb57aacc0fe3bd27889"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/control-1793554802018923000/objects.json": {
+      "bytes": 3445,
+      "sha256": "65eab08ad08c01e3fe194772922d41459c9cc21a8603be30ae04d3b10b3539bb"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/control-1793554802018923000/readback.json": {
+      "bytes": 392,
+      "sha256": "f7c73b9e25dd54c72a04886291ac58aa915f02c4fd1ed6d469c4762339208bf3"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/payload-readback.json": {
+      "bytes": 277,
+      "sha256": "8837e3a8549caead550b605959ad0c6f2564c369f6805b01cb6ff0d2f24d9337"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/payload-binding.json": {
+      "bytes": 4014,
+      "sha256": "e1be2bd195bdd387f1530247330ede1420a9a8a4f4f230778c05e1be2d3dcc4c"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/failed-review-proof-r2/admission.json": {
+      "bytes": 415,
+      "sha256": "11412484a09c32e2f8ee0eb902f57ae3b18a38987229e0fb3789f1c9a25b5fb0"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/failed-review-proof-r2/provider.json": {
+      "bytes": 33096,
+      "sha256": "21b53227b1c94e4b8e7d060cbe4c2a309eeaaf7bef75c5d11ca7023b721e8693"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/failed-review-proof-r2/completion.json": {
+      "bytes": 2383,
+      "sha256": "bac3dbe3c93fd4982113da83e37b45e68cdce9b352d120f2d5e9ff4a963ca83c"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/failed-review-proof-r2/watchdog-exit.json": {
+      "bytes": 4037,
+      "sha256": "5c6ab5f078d58aaab76b33ec1dd0cbeed810be8a21ca3e472457ff34966a7e5e"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/failed-review-proof-r2/reuse-gates.json": {
+      "bytes": 965,
+      "sha256": "0c05bb3d7105a8db9ee646bb44d143a3fe325324e0207b5644b2e55480ae9d17"
+    },
+    "artifacts/e030-supported-biological-bins/inspection/cloud-backed-old-transport-release.json": {
+      "bytes": 1882,
+      "sha256": "bcd8f8ed7bfa253799b1c51d86a353aafa15e79e89fad71236739d8347847c64"
+    },
+    "artifacts/e030-supported-biological-bins/inspection/summary.exit.json": {
+      "bytes": 895,
+      "sha256": "1d0bded0820d00975321e3a4e818897d1acfddad7d0a36150ad35a7c31b1a4bf"
+    },
+    "artifacts/e030-supported-biological-bins/inspection/summary-r2.exit.json": {
+      "bytes": 861,
+      "sha256": "47b3d8c31d87e85b01fa4d42e3976e92468118bb75786b3cd7e9971a47628aa1"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/verified/view/artifacts/e030-supported-biological-bins/inspection/review-E009-noGLM-teacher/review.json": {
+      "bytes": 5171108,
+      "sha256": "cb09dd88d9d2d7be1eb73f19c302d8f0b6fb2c61be88e573d7103b65042ab869"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/verified/view/artifacts/e030-supported-biological-bins/inspection/review-E009-noGLM-student/review.json": {
+      "bytes": 5158029,
+      "sha256": "b2017dc599294ac7ef6b9180fb033c6bc7cada32963fea20aad375f98cf6e896"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/verified/view/artifacts/e030-supported-biological-bins/inspection/review-E009-GLM-teacher/review.json": {
+      "bytes": 5170839,
+      "sha256": "27aca2b7092e2ce1367d22ffe20ad4eacef2c8084f5ab6679ca103b237d48e20"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/verified/view/artifacts/e030-supported-biological-bins/inspection/review-E009-GLM-student/review.json": {
+      "bytes": 5171155,
+      "sha256": "27f9daa8396ee86024695e69ea153af890d39ef778e7cea30f16832aa6da208c"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/verified/view/artifacts/e030-supported-biological-bins/inspection/review-oral-noGLM-teacher/review.json": {
+      "bytes": 7910262,
+      "sha256": "c6e3a824af8e9785d1505073c5ff1f42d124485d5abd6896474f0f2398ad59a7"
+    },
+    "artifacts/e030-supported-biological-bins/native-review/verified/view/artifacts/e030-supported-biological-bins/inspection/review-oral-noGLM-student/review.json": {
+      "bytes": 7810579,
+      "sha256": "0335ddc5a5cad9830df133ef7cbb8380553f70f6f8bca88fb6496fc662af6bcf"
+    }
+  },
+  "frozen_diagnostics": {
+    "scripts/e030_review.py": {
+      "bytes": 11365,
+      "sha256": "a608ac65ca72df03417d87564ce20cbd24a54eaa7d1d99d7542c72515f123593"
+    },
+    "scripts/e030_summary.py": {
+      "bytes": 9801,
+      "sha256": "9465e76c320d80b8a835d9384e96997703e3862202c1605023376e0caaf125f9"
+    },
+    "experiments/E030-supported-biological-bins/protocol.json": {
+      "bytes": 4401,
+      "sha256": "41d1a8f99bbe1c988d84c593d7a10bbc667e9d9c87fa0d50891dec38fd822d5a"
+    }
+  },
+  "source_freeze_unchanged": true
+}

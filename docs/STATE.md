@@ -2,37 +2,76 @@
 
 Updated: November 1, 2026 (Copenhagen). This is the single current handoff.
 
-**E030 is running under verified supervision.** Phase
-`construction-20261101T161023Z-638084d` uses exact clean source `638084d`,
-privately transferred by the owner-approved checksum-bound Git bundle. The
-public GitHub push remains unpublished. [Native receipt](../experiments/E030-supported-biological-bins/native-observed.json)
-binds all seven passed gates, fresh boot/process watcher, independent provider
-STOP, full axes and actual progress. Four E009 groups and Oral teacher complete;
-the 16:20 UTC snapshot has Oral student running and 29.31 GiB free. These are
-construction stages, not admitted recovery results. Start was 16:10:47.991 UTC;
-the cumulative deadline is 22:10:47.991 UTC, provider STOP 22:25:47.991 UTC
-(23:25:47.991 Copenhagen). Preserve supervision and original clock.
+**E030 construction and frozen diagnostics are completed and independently
+admitted; the VM is TERMINATED.** Scientific phase
+'construction-20261101T161023Z-638084d' uses exact source 638084d. All seven
+native gates, 13 DAG seals, 13 delivery exits, before/after inputs, full ordered
+axes, 68 installed product files and 41-distribution runtime pass.
+[Inspection](../experiments/E030-supported-biological-bins/inspection-observed.json)
+supersedes the dated RUNNING native launch receipt. The 784,438,675-byte science
+archive has 617 verified members / 10 aliases; the 15,684,217-byte frozen-review
+archive has 86 verified members. No accepted fit, retrieval, marker detection or
+old score is repeated. Source remains private under the owner's exact Git bundle
+choice; no public push or GitHub write key.
 
-[Root-safe biological construction](../experiments/E030-supported-biological-bins/design.md)
-keeps all six common learning instances, retrievals and forests fixed. It compares
-one profile-supported whole/child policy plus bounded merge/recruitment with a
-root-exclusion-only control. E009 GLM off/on through teacher/proposals/student and
-Oral no GLM with all ten measured depths remain the three declared modes.
-No truth K, new fit/retrieval/detector, external tool, confirmation or per-community
-router. E023/E026/E029 and both MetaBAT2 references remain immutable.
+**Frozen disposition: MODIFY.** [Results](../experiments/E030-supported-biological-bins/comparison-review.json),
+[all targets](../experiments/E030-supported-biological-bins/comparison-targets.tsv)
+and [interpretation](evidence/2026-11-01-e030-recovery-and-learning.md):
 
-The new $3 / six-hour existing-E2 scope passes fresh complete native/runtime/source/
-credit/headroom gates and held-parent shutdown supervision before release.
-Verified private-generation/SHA-bound redundant E026/E027/E029 compressed transports
-release 3,188,363,479 bytes; all extracted required science, primary backups and
-journals stay intact. Native post-cleanup free space is 30.20 GiB. The exact
-private source bundle is independently backed up/read back in the existing bucket.
-The owner separately authorizes **one** fresh prepared GPU attempt. It refuses L4
-capacity in Iowa a; no GPU starts and both empty disks are independently removed.
-[Receipt](../experiments/E030-supported-biological-bins/gpu-observed.json) preserves
-the failure. No more GPU attempts or full Oral GLM extraction belong in this task.
-Native batching speed/equivalence remains unmeasured. **November 4, 00:00 Copenhagen
-remains hard**; this authorization does not renew storage.
+| Common candidate mode | E029 student R95 | E030 teacher R95 | E030 student R95 | Student target-50 / target-90 |
+| --- | ---: | ---: | ---: | ---: |
+| E009 no GLM + ten-depth | 7.2337% | 7.9814% | 7.8971% | 16 / 7 |
+| E009 full-path GLM + ten-depth | 7.2210% | 8.7274% | 7.6509% | 16 / 7 |
+| Oral no GLM + ten-depth | 10.0559% | 10.9060% | 10.5446% | 83 / 50 |
+
+Both primary students gain but neither reaches E023 E009 **10.4163% / 19 / 9**
+or E026 Oral **13.8569% / 108 / 58**. KEEP fails unchanged. Retain MetaBAT2
+**8.5493% / 16 / 5** E009 and **17.3260% / 129 / 106** Oral. No dataset-specific
+winner routing or default promotion. Root-only R95 equals the working E029 marker
+baseline in every actor. Profiles help some arms; recruitment creates gains and
+serious losses. An Oral bin falls from 100% to 58.1303% origin purity after
+5,002,749 bp of other-origin DNA enter. All raw alternatives/profiles/traces and
+complete assigned/unassigned/excluded DNA remain. Full 156/799 denominators,
+E009 N quarantine, separate Oral origin/shared sensitivity and RNA-unchecked
+secondary quality tiers stay unchanged. Both communities remain development.
+
+**Next: implement one bootstrap-preserving, confidence-aware relational learning
+block locally and prepare its separately priced comparison.**
+[Recommendation](../experiments/E030-supported-biological-bins/next-block.md)
+uses useful accepted bootstrap states, reliable/abstaining signed proposals and
+teacher preservation, initially retaining encoder topology and E030's common
+downstream policy. Student starts fresh in E027, not from bootstrap weights;
+under E030 it loses to teacher in all three modes. This is a learning-bundle
+hypothesis, not proof blaming marker loss or banning GLM. Avoid another grouping
+threshold/grid campaign or a larger network without evidence. Keep pre/post
+diagnostics and at most one decision-changing matched control. The exact
+[following prompt](../experiments/E030-supported-biological-bins/OPERATIONS.md#exact-following-prompt)
+authorizes preparation when invoked, not a fit under old budgets.
+
+[Costs](../experiments/E030-supported-biological-bins/cost-observed.json):
+3,075.805 seconds measured total CPU allocation across successful construction,
+failed diagnostic bookkeeping and successful frozen review; **$0.2333 compute/IP**,
+$0.0370 overlapping PD, $0.1061 bounded WAN allowance, **$0.5083 complete upper
+including reserves**. These are priced measurements, not an invoice or credit
+delta. Mac memory/swap pressure motivated the same-clock existing-E2 diagnostic
+placement; its one pre-score progress-writer error is preserved and repaired.
+Passed gates and small truth payload are byte-verified reused, not repeated.
+Local summary needs 1.11 seconds / 79.3 MB sampled RSS; no native-vector inference
+or portability tolerance is changed.
+
+The single fresh GPU attempt again refuses L4 capacity before boot; empty disks
+are removed and no further attempt runs. [Receipt](../experiments/E030-supported-biological-bins/gpu-observed.json)
+preserves the result. Full Oral GLM still needs the prepared 128-view native
+batching qualification and a complete separately admitted schedule/headroom case.
+Skin stays unscored: 610 targets / 313 exact Oral overlaps / 297 other genomes,
+with existing truth/overlap/taxonomy/depth/protocol/cost dependencies.
+
+**November 4, 00:00 Copenhagen remains hard.** Storage week's conservative upper
+is $7.8566 < $8; original stopped disks continue about $31.20 per pricing month
+plus GCS. Safe duplicate transports released 3,188,363,479 native and
+2,113,220,586 local logical bytes; unique inputs/evidence/needed extractions stay.
+No retention or resource extension. A separate preservation decision is due.
+The older handoff below is retained history, not the current next action.
 
 ## Preserved E029 completed handoff
 

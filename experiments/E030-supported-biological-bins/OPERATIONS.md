@@ -39,8 +39,52 @@ execution, with its exact source commit/bundle in the native receipt.
 
 ## Exact following prompt
 
-To be replaced with the actual native phase and inspection boundary after launch.
-No inference of completion from provider shutdown or archive availability.
+Our goal is substantially closing the recovery gap. Read AGENTS.md,
+PROJECT_INTENT.md, STATE/CLOUD, D013/D015, the completed reviews and E030's reviewed
+results, paired failure examples, source/review locks, next-block and operations.
+Preserve dev3/dev4/dev5, all accepted E009–E030 inputs/truth/results/vectors/source
+freezes and failed journals. Use a new descriptive branch without a codex/ prefix.
+
+Implement and locally test one coherent bootstrap-preserving, confidence-aware
+relational-learning candidate. Reuse admitted bootstrap checkpoints, real DNA
+views, measured parent depth, context tokens, exact available GLM bank and physical
+marker caches. Initially keep encoder topology and the common E030 constructor
+fixed. Resolve precise checkpoint/EMA/optimizer/BatchNorm/RNG initialization,
+teacher preservation, reliable/abstaining signed proposals, view exposure and loss
+defaults using judgment and targeted primary sources. Do not use truth to choose
+pairs, confidence thresholds, bins, K or training inputs. Keep all DNA and optional
+unassigned outcomes. Do not label extra checkpoint continuation exposure a pure
+marker-loss treatment.
+
+Use one common policy for E009 GLM off/on through teacher/proposals/student and
+Oral measured ten-depth/no-GLM. Keep GLM as the intended optional main path and
+the full Oral batching milestone concrete. Preserve E023 E009 10.4163%, E026 Oral
+13.8569%, both MetaBAT2 references, E030 teacher/student and all pre/post outcomes.
+No dataset-specific winner routing or new grouping threshold/grid campaign.
+
+Run meaningful actual tiny state-init/view/pair/gradient/reload/geometry/marker/
+partition/export/resume/collection tests. Freeze candidate/source/defaults and
+joint recovery/trade-off criteria before changed community outcomes. Allow at most
+one decision-changing matched continuation-only or signed-positive control;
+preserve module/RNG/non-parameter parity where intended, without a factorial study.
+
+Prepare a separately priced bounded three-mode comparison with actual retained
+timings and complete setup/fit/graph/retrieval/review/collection/upload/idle/shutdown,
+RAM, peak disk and export estimates. Fresh credit/SKU/expiry/delayed usage,
+source/runtime/headroom and retention gates are required; old budgets do not carry.
+Standing reasonable credit-covered flexibility remains, with no real-money charges.
+This prompt authorizes local implementation/engineering/preparation, not community
+fits/scores, GPU work, new data, external tools, VM start, resource or retention
+changes. Prepare the exact separate execution request.
+
+Keep skin unscored and its source/genome/replicon/molecule/taxonomy/overlap/
+ambiguity/unique-versus-origin/depth/protocol/cost dependencies visible.
+November 4 at 00:00 Copenhagen remains hard: obtain a separate preservation/
+retention decision before then. Use private exact-commit source transport; no
+public push of financial/cloud records without explicit publication approval.
+Update records and AGENTS when durable guidance changes, run relevant checks and
+commit with structured what changed/why. Report what works, remaining uncertainty,
+resources, the single next decision and exact execution prompt.
 
 ## Same-clock diagnostic placement amendment — November 1
 
@@ -87,3 +131,47 @@ two checksum-bound passed gates and hard-link every verified truth/summary paylo
 member, avoiding another extraction/copy. The new source remains a diagnostic-only
 operational commit; original scientific source `638084d`, criteria, clock, budget
 and November 4 boundary remain unchanged. No completed science or score is replayed.
+
+## Verified outcome — November 1
+
+Construction succeeds at source 638084d: seven native gates, 13 seals and all
+13 phase/delivery exits pass. Independent shutdown and every member of the
+784,438,675-byte science archive (617 members / 10 aliases) verify before truth
+diagnostics. Source, full DNA/sample axes, installed product/runtime, numeric
+profile/choice audit and exact used-input-after pass. No fit, retrieval, detector
+or old score is repeated.
+
+The same-clock read-only diagnostic repair runs at operations source bdf29c7;
+all six frozen consumers pass, with the two passed first-attempt gates byte-bound
+reused. Its 15,684,217-byte archive has 86 verified members / 141,852,297 logical
+bytes. The intended watcher requests shutdown at 17:38:14.874 UTC; a final provider
+STOP also runs while waiting and independent state is TERMINATED at 17:39:58.343
+UTC. Main and failed-review watchdogs/allocations remain separate. The original
+22:10/22:25 UTC common deadlines and November 4 retention never reset.
+
+[Results](comparison-review.json), [2,222 target rows](comparison-targets.tsv),
+[paired failures](grouping-diagnostics.json), [inspection](inspection-observed.json)
+and [cost](cost-observed.json) give MODIFY. Both primary students improve over
+E029 but fail the original anchor requirement. No metric, threshold or label is
+changed. All source freezes and failures remain. Six operational repair contracts
+and actual native readers pass. Local final aggregation is 1.11 seconds / 79.3 MB
+sampled RSS; the first sandbox-monitor refusal is preserved, then only the
+resource monitor's authorized process read is enabled.
+
+The source FASTA is reused, not emitted again into each bin directory:
+includes_full_DNA=false means no second physical DNA copy. Native DNA-reuse proof,
+full assignments/status/reasons and original FASTA SHA verify complete DNA.
+Original learned geometry is reused, not recomputed or reported as empty-neighbor
+geometry. No Mac model inference or portability tolerance change occurs.
+Review readers enforce the disk guard and retain terminal/periodic measurements;
+their full guard time series is not saved. Original science's full disk series is.
+
+Total actual CPU allocation is 3,075.805 seconds across three intervals. Current
+Catalog pricing gives $0.2333 compute/IP, $0.0370 overlapping PD, $0.1061 bounded
+WAN/control/backup allowance and $0.5083 complete upper including reserves, not
+an invoice or credit delta. Storage week upper is $7.8566 < $8; stopped disks
+continue about $31.20 per pricing month plus GCS. No real-money, resource or
+retention expansion. Only the single approved GPU stockout is attempted.
+
+[The next coherent learning block](next-block.md) holds the constructor fixed
+initially and requires a new separately priced execution admission.

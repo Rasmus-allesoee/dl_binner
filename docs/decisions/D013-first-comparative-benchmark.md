@@ -1,5 +1,31 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E030 verified result and next learning decision, November 1, 2026
+
+[Reviewed E030](../../experiments/E030-supported-biological-bins/comparison-review.json)
+succeeds operationally and yields MODIFY: GLM E009 student 7.6509% R95 / 16 / 7,
+Oral student 10.5446% / 83 / 50, both improved over E029 but below E023/E026 anchors.
+The 8.7274% GLM teacher exceeds retained MetaBAT2 E009 R95; the student loses
+1.0765 points to that teacher. Keep all old references and full denominators.
+Recruitment also causes explicit wrong-origin bin failures; do not rationalize
+the bundle into KEEP or select historical winners separately per community.
+
+[D015](D015-coherent-prototype-upgrade.md) selects a coherent bootstrap-preserving,
+confidence-aware learning block, initially holding architecture and common
+downstream policy fixed. [Evidence](../evidence/2026-11-01-e030-recovery-and-learning.md)
+weighs larger models/GLM, recruitment guards, more data and external references.
+The next implementation/engineering task is separate from any future fit. Both
+communities stay development; skin remains unscored pending existing admission.
+No family-level or SOTA claim follows.
+
+The new source stays private by the owner's exact Git-bundle choice. Native
+construction and all frozen diagnostics/archives pass independent shutdown and
+byte checks; one operational pre-score review failure is preserved and repaired
+with verified reuse. Complete priced upper is $0.5083 within $3, not an invoice.
+No more GPU attempts after the single stockout, no new resource or storage date.
+November 4 at 00:00 Copenhagen requires a separate preservation decision.
+
+
 ## E030 authorized cached biological-construction block, November 1, 2026
 
 [E030](../../experiments/E030-supported-biological-bins/design.md) implements the

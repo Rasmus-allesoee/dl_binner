@@ -457,6 +457,10 @@ file. Test the actual producer/consumer filesystem path, including malformed inp
 overwrite refusal and a disconnected controller. Preload independent commands
 before release when possible. Transport/member verification, actual consumer
 admission and scientific completion are separate contracts; none implies the next.
+Distinguish immutable commands/receipts from evolving progress pointers. Use a
+unique immutable name for each stage, or an explicitly tested atomic replacement
+for a disposable pointer. Exercise at least two successive updates on the actual
+writer path; an exclusive publisher that succeeds once cannot update that name.
 Keep raw object bytes separate from CLI result formatting. A formatted command
 can append report data to a downloaded JSON document. Check the exact object
 generation, byte count and digest before treating a local parsing failure as

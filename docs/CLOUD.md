@@ -1,5 +1,51 @@
 # Google Cloud workspace operations
 
+## November 1 E030 verified closeout
+
+**Original CPU is TERMINATED; construction and frozen diagnostics both pass.**
+[Inspection](../experiments/E030-supported-biological-bins/inspection-observed.json)
+binds scientific source 638084d, seven native gates, 13 DAG seals / 13 delivery exits,
+617 science archive members / 10 aliases and 86 compact review members. Original
+main-phase completion is independent of shutdown. Private Git bundles preserve
+exact history without public publication or a write-enabled GitHub key.
+
+Read-only diagnostics use the same original $3 / common clock on the existing E2
+because of Mac memory/swap pressure. One progress-receipt bookkeeping failure
+occurs before community diagnostics; its archive/exits/watchdog/shutdown remain.
+The repair reuses passed gates and payload hardlinks, preserving the original
+16:10:47.991 UTC start and November 4 boundary. All six frozen consumers complete
+with no accepted science or old score replay. The watcher requests shutdown;
+the controller also issues the authorized final STOP while waiting and independently
+confirms TERMINATED at November 1 17:39:58.343 UTC.
+
+[Priced allocation](../experiments/E030-supported-biological-bins/cost-observed.json)
+is 3,075.805 seconds across three allocations: $0.2333 CPU/IP, about $0.0370
+overlapping original PD, $0.1061 bounded export/control/backup allowance and
+$0.5083 complete upper with reserves. Sampled science wall is 796.63 seconds /
+4.479 GB peak tree RSS; successful frozen numerical reviews total about
+942.5 seconds / 3.640 GB peak. Sampled CPU is not allocation pricing; credit deltas
+are not invoices. Current credit observation is DKK 1,713.46 Available / 87%,
+January 12, 2027 expiry, paid-upgraded Certain usage / net pricing. Displayed
+November gross/net remain zero with >24-hour possible lag; keep $35 reserve.
+
+The independent single fresh L4/Iowa-a attempt again stockouts. No GPU boots;
+both empty disks are verified deleted and no additional attempt follows.
+Do not infer model equivalence or Oral batching throughput. The frozen source,
+cohort and existing private qualification assets remain.
+
+The approved storage-week upper is $7.8566 < $8, including conservative new
+archive/backup allowances. Original disks cost about $31.20 per pricing month
+while stopped; GCS is separate. Original science terminal minimum free is
+27.10 GiB; review terminal is 26.72 GiB. Source/caches/truth/required extractions/
+failed journals stay. Three redundant native and two redundant local compressed
+transports release 3,188,363,479 / 2,113,220,586 logical bytes after accepted
+member/SHA/current-generation and no-open-user checks. No unique science is deleted.
+
+**November 4 at 00:00 Copenhagen remains hard.** A new preservation/retention
+decision is needed before then. The next learning block is local preparation with
+a separate complete resource/credit case; no unused E030 budget authorizes fits.
+The following launch-time section is preserved dated history.
+
 ## November 1 E030 authorization and single fresh GPU refusal
 
 E030's public source push is rejected by automatic approval review because new

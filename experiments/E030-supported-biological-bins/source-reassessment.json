@@ -1,0 +1,41 @@
+{
+  "kind": "Targeted source reassessment for the next learning decision",
+  "checked_UTC": "2026-11-01T17:58:57.592152+00:00",
+  "executed_scientific_source": "638084d05b257deeb221cade33042e3459025e2d",
+  "files": {
+    "src/dl_binner/unified/training.py": {
+      "bytes": 3800,
+      "sha256": "79778f9b7d007eaf38ef31afa6607e84a931b098ee4cd0f7f11796c48fa52b22"
+    },
+    "src/dl_binner/relational/model.py": {
+      "bytes": 18860,
+      "sha256": "4890129563635bfd56c2e0a9becb29fd6e4a725c740bc2d02ba77353bad6206e"
+    },
+    "src/dl_binner/relational/pairs.py": {
+      "bytes": 15523,
+      "sha256": "a0e9d0ab0f57e97d301a6b875552af69778874847700bb75cddea6af49bebff9"
+    },
+    "src/dl_binner/multiview/views.py": {
+      "bytes": 9370,
+      "sha256": "0b3a00b87c17cd56417e589ebcb3a9f3234f85f4c14ac0b9204a680dc2590935"
+    },
+    "src/dl_binner/construction/grouping.py": {
+      "bytes": 27100,
+      "sha256": "2b12e4b89f4a09bcae38c066fde0212d7d7ba740eba37fac507ba0a2dcafe142"
+    }
+  },
+  "observations": {
+    "student_initialized_from_bootstrap": false,
+    "depth_evidence_means_positive_not_missing": true,
+    "cozero_pairs_not_proposed_as_near": true,
+    "recruitment_chains": false,
+    "recruitment_joint_bin_quality_guarantee": false
+  },
+  "primary_documentation": {
+    "url": "https://hdbscan.readthedocs.io/en/latest/parameter_selection.html#allowing-a-single-cluster",
+    "retrieved": "2026-11-01",
+    "observation": "Default root exclusion due EOM root bias; not a prediction that our marker-selected outputs improve"
+  },
+  "SemiBin2_refresh": "PMC browser challenge; earlier source-hashed review reused, no new performance or source claim",
+  "no_model_or_partition_changed": true
+}
