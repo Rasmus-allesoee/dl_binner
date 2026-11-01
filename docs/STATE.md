@@ -2,8 +2,18 @@
 
 Updated: November 1, 2026 (Copenhagen). This is the single current handoff.
 
-**E030 is authorized and locally implemented; native execution is not yet
-released.** [Root-safe biological construction](../experiments/E030-supported-biological-bins/design.md)
+**E030 is running under verified supervision.** Phase
+`construction-20261101T161023Z-638084d` uses exact clean source `638084d`,
+privately transferred by the owner-approved checksum-bound Git bundle. The
+public GitHub push remains unpublished. [Native receipt](../experiments/E030-supported-biological-bins/native-observed.json)
+binds all seven passed gates, fresh boot/process watcher, independent provider
+STOP, full axes and actual progress. Four E009 groups and Oral teacher complete;
+the 16:20 UTC snapshot has Oral student running and 29.31 GiB free. These are
+construction stages, not admitted recovery results. Start was 16:10:47.991 UTC;
+the cumulative deadline is 22:10:47.991 UTC, provider STOP 22:25:47.991 UTC
+(23:25:47.991 Copenhagen). Preserve supervision and original clock.
+
+[Root-safe biological construction](../experiments/E030-supported-biological-bins/design.md)
 keeps all six common learning instances, retrievals and forests fixed. It compares
 one profile-supported whole/child policy plus bounded merge/recruitment with a
 root-exclusion-only control. E009 GLM off/on through teacher/proposals/student and
@@ -11,8 +21,12 @@ Oral no GLM with all ten measured depths remain the three declared modes.
 No truth K, new fit/retrieval/detector, external tool, confirmation or per-community
 router. E023/E026/E029 and both MetaBAT2 references remain immutable.
 
-The new $3 / six-hour existing-E2 scope needs fresh complete native/runtime/source/
-credit/headroom gates and verified held-parent shutdown supervision before release.
+The new $3 / six-hour existing-E2 scope passes fresh complete native/runtime/source/
+credit/headroom gates and held-parent shutdown supervision before release.
+Verified private-generation/SHA-bound redundant E026/E027/E029 compressed transports
+release 3,188,363,479 bytes; all extracted required science, primary backups and
+journals stay intact. Native post-cleanup free space is 30.20 GiB. The exact
+private source bundle is independently backed up/read back in the existing bucket.
 The owner separately authorizes **one** fresh prepared GPU attempt. It refuses L4
 capacity in Iowa a; no GPU starts and both empty disks are independently removed.
 [Receipt](../experiments/E030-supported-biological-bins/gpu-observed.json) preserves

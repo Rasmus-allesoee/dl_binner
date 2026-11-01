@@ -1,7 +1,10 @@
 # E030: root-safe, profile-supported biological bins
 
-Status: implementation and local engineering, November 1, 2026. No new community
-outcome has been inspected. The owner authorizes one new $3 cached comparison,
+Status: RUNNING under verified native supervision, November 1, 2026, phase
+`construction-20261101T161023Z-638084d`. [Native receipt](native-observed.json)
+binds exact private source, seven passed gates, watchdog, provider STOP and real
+progress. No recovery outcome is admitted while delivery/shutdown remain pending.
+The owner authorizes one new $3 cached comparison,
 with reasonable credit-covered time/cost revisions, and one independent fresh
 attempt at E029's unchanged 128-view GPU qualification. November 4 at 00:00
 Copenhagen remains the retention boundary.

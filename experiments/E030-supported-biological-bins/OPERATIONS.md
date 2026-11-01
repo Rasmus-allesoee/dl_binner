@@ -41,3 +41,39 @@ execution, with its exact source commit/bundle in the native receipt.
 
 To be replaced with the actual native phase and inspection boundary after launch.
 No inference of completion from provider shutdown or archive availability.
+
+## Same-clock diagnostic placement amendment — November 1
+
+The original construction is independently admitted after shutdown: all seven
+native gates, all 13 scientific seals and 13 driver/delivery exits passed. The
+784,438,675-byte archive, 617 regular members and 10 aliases passed independent
+stream verification. No new scores have been calculated at this amendment.
+
+The 16 GiB Mac reached 15.1 GiB swap use and 5.6 GiB free space. Two redundant
+local E016/E017 compressed transports were released only after complete accepted
+member proofs, local SHA256/MD5, current private generation/MD5 and no-open-user
+checks. This released 2,113,220,586 logical bytes; required extracted science and
+journals remain. The failed 6 GiB engineering reserve is preserved. Separate
+IO-only verification used a 4 GiB reserve and materialized just 3,098,910 bytes.
+
+Use the existing E2 for the unchanged six frozen diagnostic consumers only:
+`e030_diagnostics.py` and `e030_review_arm.py`. No fit, construction, graph,
+retrieval, detection or old-baseline score is repeated. The same original $3 and
+16:10:47.991 UTC common start/deadline remain; this is neither a new budget nor a
+clock reset. A two-hour read-only review with an earlier 2.25-hour provider STOP
+fits the original 22:10/22:25 UTC boundaries. Complete original-phase upper cost
+remains $2.52, including allocation, storage, export and operations. The fresh
+16:31–16:33 UTC credit observation is DKK 1,713.46, Available, expiry January 12,
+2027; $35 remains reserved for delayed usage. Ordinary E2/PD/GCS/network products
+and unchanged storage through November 4 remain covered. No resource is created,
+resized or retained longer.
+
+Restore checksum-bound small truth and accepted summary files into a private
+lexical source view. Hard-link exact native feature/marker bytes into that view;
+do not alter original manifests or caches. Verify the same 68 installed product
+members and 41-distribution runtime, actual tiny diagnostic contracts, native
+boot/process watcher and independent STOP before release. Four numerical threads,
+8 GB sampled review RSS, 25 GiB free and the original 4 GiB cumulative growth cap
+apply. Return at most 128 MiB compressed / 256 MiB logical diagnostic evidence.
+Retain failures and collect before shutdown. This operational placement amendment
+does not change any frozen evaluator, truth, criterion or scientific output.

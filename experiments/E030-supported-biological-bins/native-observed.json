@@ -1,0 +1,487 @@
+{
+  "kind": "E030 verified native launch/progress handoff; not completed quality admission",
+  "status": "RUNNING_PROGRESS_AND_SUPERVISION_VERIFIED",
+  "phase": "construction-20261101T161023Z-638084d",
+  "source_commit": "638084d05b257deeb221cade33042e3459025e2d",
+  "branch": "supported-biological-bins",
+  "identity": {
+    "root": "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d",
+    "repo": "/srv/dl_binner/repo",
+    "source": "638084d05b257deeb221cade33042e3459025e2d",
+    "phase": "construction-20261101T161023Z-638084d",
+    "user": "rasmus_allesoee_gmail_com",
+    "service_name": "e030-construction-20261101T161023Z-638084d",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e030/construction-20261101T161023Z-638084d/",
+    "vm_start_epoch": 1793549447.991,
+    "wheel_binding": {
+      "bytes": 198272,
+      "sha256": "e6bd311a227a43b8832c044e11f071da778088238b7fb1298249770a95d849db"
+    },
+    "provider_max_duration_seconds": 22500,
+    "allocation_start_epoch": 1793549447.991
+  },
+  "source_clean_private_bundle_verified": true,
+  "public_GitHub_push_performed": false,
+  "owner_private_transfer_approved": true,
+  "private_source_backup": {
+    "status": "PASS_PRIVATE_EXACT_SOURCE_SHA256_READBACK",
+    "uri": "gs://dl-binner-archive-167650584170/e030/source-638084d05b257deeb221cade33042e3459025e2d.bundle",
+    "generation": "1793549490459875",
+    "bundle": {
+      "bytes": 180132,
+      "sha256": "7d5bacf9580a5bbdde560573bf0d3e7a9b93cba82e53a3e3525a0efd6bd35780"
+    },
+    "source": "638084d05b257deeb221cade33042e3459025e2d",
+    "public_GitHub_mutation": false,
+    "bucket_access_or_retention_changed": false,
+    "small_storage_operations_within_original_reserve": true
+  },
+  "VM_start_UTC": "2026-11-01T16:10:47.991000+00:00",
+  "VM_start_Copenhagen": "2026-11-01T17:10:47.991000+01:00",
+  "cumulative_deadline_UTC": "2026-11-01T22:10:47.991000+00:00",
+  "provider_STOP_UTC": "2026-11-01T22:25:47.991000+00:00",
+  "provider_STOP_Copenhagen": "2026-11-01T23:25:47.991000+01:00",
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "limits": {
+    "seconds": 21600,
+    "provider_STOP_seconds": 22500,
+    "ceiling_USD": 3,
+    "numerical_threads": 4,
+    "tree_RSS_bytes": 26000000000,
+    "free_reserve_bytes": 26843545600,
+    "extra_bytes": 4294967296,
+    "compressed_export_bytes": 2147483648,
+    "logical_export_bytes": 4294967296,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "allocated_vCPUs": 8,
+    "WAN_review_bytes": 2147483648
+  },
+  "native_gates": {
+    "status": "PASS",
+    "config": {
+      "bytes": 1088,
+      "sha256": "b7627ccac68c810928581195ce1fba94d52c3c7d62e6f40dfe2a2d6210b9adf7"
+    },
+    "stages": [
+      {
+        "stage": "workflow-origin",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "import importlib.metadata as metadata,json,platform,sys\nfrom pathlib import Path\nexpected=('3.12.10', '9.16.3')\nd=metadata.distribution('snakemake')\nif (platform.python_version(),d.version)!=expected:raise ValueError('Frozen workflow Python/Snakemake version differs')\nif not Path(d._path).resolve().is_relative_to(Path(sys.prefix).resolve()):raise ValueError('Foreign workflow distribution')\nprint(json.dumps(dict(status='PASS_WORKFLOW_VERSION_ORIGIN',python=platform.python_version(),snakemake=d.version,prefix=sys.prefix,distribution=str(Path(d._path).resolve()))))\n"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 0.48311930499999534,
+          "peak_sampled_rss_bytes": 38899712,
+          "seconds_ceiling": 2638.163318872452,
+          "rss_bytes_ceiling": 26000000000,
+          "launched_pid": 1988,
+          "sampled_cpu_seconds": 0.16,
+          "sampled_average_cpus": 0.331181135475432,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        }
+      },
+      {
+        "stage": "package-install",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e019_runtime.py",
+            "create",
+            "--base",
+            "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+            "--destination",
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env",
+            "--wheel",
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/payload/dl_binner-0.1.0.dev9-py3-none-any.whl",
+            "--output",
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/gates/package-install.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.5685272859999984,
+          "peak_sampled_rss_bytes": 91758592,
+          "seconds_ceiling": 2637.679526567459,
+          "rss_bytes_ceiling": 26000000000,
+          "launched_pid": 1989,
+          "sampled_cpu_seconds": 0.73,
+          "sampled_average_cpus": 0.46540471849974613,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        }
+      },
+      {
+        "stage": "owned-complete-runtime",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e027_runtime.py",
+            "--base",
+            "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+            "--reference",
+            "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json",
+            "--candidate-lock",
+            "/srv/dl_binner/repo/experiments/E030-supported-biological-bins/candidate-lock.json",
+            "--output",
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/gates/runtime.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 17.289308936000005,
+          "peak_sampled_rss_bytes": 294645760,
+          "seconds_ceiling": 2636.110698699951,
+          "rss_bytes_ceiling": 26000000000,
+          "launched_pid": 2010,
+          "sampled_cpu_seconds": 16.04,
+          "sampled_average_cpus": 0.9277409559500276,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        }
+      },
+      {
+        "stage": "installed-construction",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env/bin/python",
+            "-I",
+            "-B",
+            "-c",
+            "import sys,unittest;from pathlib import Path;r=Path('/srv/dl_binner/repo');sys.path.insert(0,str(r/\"tests/product\"));v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName('test_supported_construction'));sys.exit(not v.wasSuccessful())"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.987977315000009,
+          "peak_sampled_rss_bytes": 194318336,
+          "seconds_ceiling": 2618.820948600769,
+          "rss_bytes_ceiling": 26000000000,
+          "launched_pid": 2038,
+          "sampled_cpu_seconds": 2.9499999999999993,
+          "sampled_average_cpus": 1.4839203534875276,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        }
+      },
+      {
+        "stage": "serial-cached-tiny-DAG",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e030_tiny.py",
+            "--root",
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/gates/tiny-DAG",
+            "--workflow-python",
+            "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 10.692420186999996,
+          "peak_sampled_rss_bytes": 377307136,
+          "seconds_ceiling": 2616.832576274872,
+          "rss_bytes_ceiling": 26000000000,
+          "launched_pid": 2047,
+          "sampled_cpu_seconds": 15.24,
+          "sampled_average_cpus": 1.4253087452108382,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        }
+      },
+      {
+        "stage": "restore-complete-inputs",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e030_gates.py",
+            "--inputs",
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/science-plan.json",
+            "--output",
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/gates/data.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 68.963648911,
+          "peak_sampled_rss_bytes": 4103995392,
+          "seconds_ceiling": 2606.139509677887,
+          "rss_bytes_ceiling": 26000000000,
+          "launched_pid": 2189,
+          "sampled_cpu_seconds": 57.32,
+          "sampled_average_cpus": 0.8311625168496154,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        }
+      },
+      {
+        "stage": "synthetic-shape-runtime",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/repo/scripts/e030_probe.py",
+            "--output",
+            "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/gates/schedule.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 8.00365136100001,
+          "peak_sampled_rss_bytes": 600780800,
+          "seconds_ceiling": 2537.1755895614624,
+          "rss_bytes_ceiling": 26000000000,
+          "launched_pid": 2203,
+          "sampled_cpu_seconds": 9.040000000000003,
+          "sampled_average_cpus": 1.1294844805521997,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": true
+        }
+      }
+    ],
+    "finished_epoch": 1793549618.8194375,
+    "source": {
+      "status": "PASS",
+      "inherited": {
+        "status": "PASS",
+        "inherited": {
+          "status": "PASS",
+          "inherited": {
+            "status": "PASS",
+            "inherited": {
+              "status": "PASS",
+              "inherited": {
+                "status": "PASS",
+                "inherited": {
+                  "status": "PASS",
+                  "new": {
+                    "bytes": 5288,
+                    "sha256": "22643a866b0b33c5a03facc2cbf110b7ea821eb1cdf0a534995422a041cebcf3"
+                  },
+                  "immutable": {
+                    "bytes": 43403,
+                    "sha256": "fa7e55203409d32c1a3d9ba43ec8508f65ae741208a1506992c74c6d28a7c8f7"
+                  }
+                },
+                "new": {
+                  "bytes": 3119,
+                  "sha256": "a168cff0169d21b3d85be23bfaf0dfc8bd49ead19e1a705e23058cc48f659501"
+                }
+              },
+              "new": {
+                "bytes": 5693,
+                "sha256": "7b8dc18d803ed266824b801449772b5017bb08cfd9ba3c153140d5af756fa7f9"
+              }
+            },
+            "current": {
+              "bytes": 5254,
+              "sha256": "571eae249fe4ef304bc8185bdebfff6c00f2210311254a822578f85220e87ae8"
+            }
+          },
+          "new": {
+            "bytes": 8985,
+            "sha256": "da670c0072a40d27ce42be8f967f6c308748e27315de05ecb245888113908417"
+          }
+        },
+        "new": {
+          "bytes": 2923,
+          "sha256": "23b8d9537ab639801ec768a0e0db8679ceb9b6d2b291424675309de99abc2a60"
+        }
+      },
+      "source": {
+        "bytes": 3767,
+        "sha256": "bc90688b43958eaf41e301c16839f25d7854255ab69d8497e8bd9d5906d21745"
+      }
+    },
+    "accepted_setup_reused": true,
+    "no_dependency_install_or_science_recopy": true,
+    "owned_package_install_explicit": true
+  },
+  "release": {
+    "epoch": 1793549788.9622333,
+    "release": {
+      "bytes": 3443,
+      "sha256": "a76313efd506b47c064bd218b6f7dff0be6d3b3499e9322366437e26840b5cf3"
+    },
+    "schedule": {
+      "status": "PASS",
+      "synthetic_rows": 32768,
+      "synthetic_candidates": 38111,
+      "elapsed_seconds": 6.962196836000004,
+      "total_actor_rows": 1373690,
+      "construction_and_audit_factor": 2,
+      "headroom_factor": 1.75,
+      "setup_hash_collection_reserve_seconds": 3600,
+      "planning_remaining_science_seconds": 4621.534747337554,
+      "projected_unique_work_bytes": 1950103616,
+      "projected_with_closed_copy_and_compressed_return_bytes": 4097587264,
+      "collector_scope": "Work is packed in place; no second work copy. Full 2 GiB compressed cap coexists.",
+      "retained_alternative_count_upper": 136812,
+      "minimum_serialized_record_bytes": 70,
+      "numeric_profile_bytes_per_candidate": 1224,
+      "native_measurement": true,
+      "measured_platform": "linux",
+      "community_outputs": false,
+      "policy": {
+        "version": 1,
+        "seed": 11,
+        "min_bin_contigs": 1,
+        "min_bin_bp": 10000,
+        "length_scale_bp": 2500,
+        "calibration_rows": 8192,
+        "calibration_neighbors": 10,
+        "calibration_quantile": 0.9,
+        "radius_floor": 1e-08,
+        "neutral_support": 0.5,
+        "merge_score": 0.6666666666666666,
+        "recruit_min_support": 2,
+        "recruit_vote_fraction": 0.6666666666666666,
+        "recruit_margin_ratio": 1.5,
+        "recruit_score": 0.6,
+        "marker_change_weight": 0.1,
+        "marker_excess_penalty": 5.0,
+        "reliable_marker_weight": 0.8,
+        "root_policy": "exclude_internal_forest_roots",
+        "profile_batch_rows": 4096,
+        "singleton_min_bp": 200000
+      }
+    },
+    "supervision": {
+      "boot_id": "2add72ea-f526-498b-9db1-e58ed1530d37",
+      "checked_utc": "2026-11-01T16:16:27.602052+00:00",
+      "decision": "workflow alive",
+      "expected_process": {
+        "command_sha256": "7a6418dde620e29360ecd9952d21642004cce62dac8ef3f00bbac131eaf253df",
+        "pid": 1927,
+        "start_ticks": 5534
+      },
+      "observed_process": {
+        "command_sha256": "7a6418dde620e29360ecd9952d21642004cce62dac8ef3f00bbac131eaf253df",
+        "pid": 1927,
+        "start_ticks": 5534
+      },
+      "shutdown": false,
+      "workflow_root": "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d"
+    }
+  },
+  "provider_STOP_verified": {
+    "automaticRestart": false,
+    "instanceTerminationAction": "STOP",
+    "maxRunDuration": {
+      "nanos": 0,
+      "seconds": "22500"
+    },
+    "onHostMaintenance": "MIGRATE",
+    "preemptible": false,
+    "provisioningModel": "STANDARD"
+  },
+  "current_boot_watchdog": {
+    "boot_id": "2add72ea-f526-498b-9db1-e58ed1530d37",
+    "checked_utc": "2026-11-01T16:19:33.208653+00:00",
+    "decision": "workflow alive",
+    "expected_process": {
+      "command_sha256": "7a6418dde620e29360ecd9952d21642004cce62dac8ef3f00bbac131eaf253df",
+      "pid": 1927,
+      "start_ticks": 5534
+    },
+    "observed_process": {
+      "command_sha256": "7a6418dde620e29360ecd9952d21642004cce62dac8ef3f00bbac131eaf253df",
+      "pid": 1927,
+      "start_ticks": 5534
+    },
+    "shutdown": false,
+    "workflow_root": "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d"
+  },
+  "latest_observed_epoch": 1793550000.7512224,
+  "latest_states": {
+    "e030-construction-20261101T161023Z-638084d.service": "MainPID=1927\nResult=success\nExecMainStatus=0\nActiveState=active\nSubState=running\n",
+    "e030-construction-20261101T161023Z-638084d-gates.service": "MainPID=0\nResult=success\nExecMainStatus=0\nActiveState=inactive\nSubState=dead\n",
+    "e030-construction-20261101T161023Z-638084d-exit.timer": "Result=success\nActiveState=active\nSubState=waiting\n"
+  },
+  "latest_free_GiB": 29.310447692871094,
+  "latest_stage": "Oral student construction; all four E009 and Oral teacher construction complete",
+  "actual_task_complete": false,
+  "quality_not_yet_admitted": true,
+  "accepted_learning_instances_reused": 6,
+  "new_fits": 0,
+  "new_community_retrievals": 0,
+  "marker_detection_repeated": false,
+  "actual_cleanup": {
+    "status": "PASS",
+    "records": [
+      {
+        "path": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/collection/e027-evidence.tar.gz",
+        "status": "verified_redundant_transport_released",
+        "binding": {
+          "bytes": 1647651568,
+          "sha256": "202c8639a1e75518c5f97a3140c24757db7a65ca1c9cc9add03ada7ea7c73102"
+        },
+        "private_object": "gs://dl-binner-archive-167650584170/e027/common-20261030T223337Z-243b8ac/e027-evidence.tar.gz",
+        "generation": "1793418361333235",
+        "server_crc32c": "4iOoDg==",
+        "retained_extracted_inputs_and_journals": true,
+        "epoch": 1793549498.676053
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/collection/e029-evidence.tar.gz",
+        "status": "verified_redundant_transport_released",
+        "binding": {
+          "bytes": 842865965,
+          "sha256": "8fe3c0ad6d30af8817050c272be3dc7800e055bf97152b9e8aa4eb248090bec7"
+        },
+        "private_object": "gs://dl-binner-archive-167650584170/e029/discovery-20261101T015844Z-31fb9c7/e029-evidence.tar.gz",
+        "generation": "1793509475767976",
+        "server_crc32c": "eGpnuw==",
+        "retained_extracted_inputs_and_journals": true,
+        "epoch": 1793549503.5895529
+      },
+      {
+        "path": "/srv/dl_binner/experiments/e026/fusion-20261029T185844Z-f16c2e5/collection/e026-evidence.tar.gz",
+        "status": "verified_redundant_transport_released",
+        "binding": {
+          "bytes": 697845946,
+          "sha256": "d6fe576012a2cf2442a88ec0c2b0a7e64e43ef148f5326cde3703a771b39f915"
+        },
+        "private_object": "gs://dl-binner-archive-167650584170/e026/fusion-20261029T185844Z-f16c2e5/e026-evidence.tar.gz",
+        "generation": "1793306780217010",
+        "server_crc32c": "+Yhpww==",
+        "retained_extracted_inputs_and_journals": true,
+        "epoch": 1793549507.9248962
+      }
+    ],
+    "unique_science_deleted": false,
+    "GCS_mutated": false,
+    "free_bytes": 32432640000
+  },
+  "source_delivery": "Owner-approved private exact Git bundle; public push rejected by automatic approval review",
+  "evidence": {
+    "artifacts/e030-supported-biological-bins/native-private/identity.json": {
+      "bytes": 683,
+      "sha256": "e32c880e15d47ab0194ae298d58b1596ad6dc9023e4e5620df42efc41b0ac966"
+    },
+    "artifacts/e030-supported-biological-bins/native-private/financial-gate.json": {
+      "bytes": 9176,
+      "sha256": "71936b5021007a2e0ade2cac0f028d64ecd0aeeb6ce2ea54629b8a4abe835259"
+    },
+    "artifacts/e030-supported-biological-bins/native-private/release-terminal.log": {
+      "bytes": 2310,
+      "sha256": "f7c3ecefc1734ac6a7c6e92276554ee4e339819cdb22bb74b24e586d1a41ca1e"
+    },
+    "artifacts/e030-supported-biological-bins/native-private/status-1793550000.json": {
+      "bytes": 31914,
+      "sha256": "49f703ebe23a019675122bfa533d8e5e7f597c50028485479afa936b10bd80e1"
+    },
+    "artifacts/e030-supported-biological-bins/native-private/private-source-backup.json": {
+      "bytes": 523,
+      "sha256": "d48a9267dcc466d8149a34ad2a8c8f949ee6df9ed9d216aac3f6d4404117dd5d"
+    }
+  }
+}
