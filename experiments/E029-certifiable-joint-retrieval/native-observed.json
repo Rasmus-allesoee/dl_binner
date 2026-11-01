@@ -1,0 +1,878 @@
+{
+  "status": "RUNNING_NOT_A_BIOLOGICAL_RESULT",
+  "observed_UTC": "2026-11-01T02:12:17.552928+00:00",
+  "branch": "certifiable-joint-retrieval",
+  "identity": {
+    "root": "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7",
+    "repo": "/srv/dl_binner/repo",
+    "source": "31fb9c788e3903f10eb8beb012ca44a36fa74400",
+    "phase": "discovery-20261101T015844Z-31fb9c7",
+    "user": "rasmus_allesoee_gmail_com",
+    "service_name": "e029-discovery-20261101T015844Z-31fb9c7",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e029/discovery-20261101T015844Z-31fb9c7/",
+    "vm_start_epoch": 1793497707.213,
+    "wheel_binding": {
+      "bytes": 189040,
+      "sha256": "4657b242e6a7cda85b190befa2f77e8f67ec42ed159e0bcc4ab1699b90434e71"
+    },
+    "provider_max_duration_seconds": 216163,
+    "reuse_passed_setup": {
+      "workflow-origin": {
+        "files": {
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/workflow-origin.log": {
+            "bytes": 338,
+            "sha256": "efad8b2bc605099359eb91b066e5c56ff72e447d89e83459c8e65d07cf544936"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/workflow-origin.exit.json": {
+            "bytes": 1166,
+            "sha256": "fedb7ec4ce8c970d906fc0cb838abef8da6ca64e0050d123d1e04ac70d704420"
+          }
+        },
+        "exit_receipt": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/workflow-origin.exit.json",
+        "proof": null
+      },
+      "accepted-numerical": {
+        "files": {
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/accepted-numerical.log": {
+            "bytes": 70,
+            "sha256": "f2ad5e61793a2e5e3527fd18a162e922a3b38ee6a697e6fe89d032e5ab9b8e05"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/accepted-numerical.exit.json": {
+            "bytes": 837,
+            "sha256": "b878dba0e11ed5feb825b183a64e65c54b49858eb520334f3e5f5fce1f515143"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/base-runtime.json": {
+            "bytes": 19080,
+            "sha256": "0ff40027012d5038b55cdb5fe8cbcf8843359aa133d5473e5a9edbbf9d439dbb"
+          }
+        },
+        "exit_receipt": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/accepted-numerical.exit.json",
+        "proof": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/base-runtime.json"
+      },
+      "package-install": {
+        "files": {
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/package-install.log": {
+            "bytes": 248,
+            "sha256": "a494b01dd7c3a546a181e4a59173678722083a46dbac0bc1e85eaa8a49fb524b"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/package-install.exit.json": {
+            "bytes": 1108,
+            "sha256": "301ad57510057d8099cbd7a608f9699c4e310b3e17fe9a2b4585e83a76e0b335"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/package-install.json": {
+            "bytes": 15010,
+            "sha256": "e83575ea25d2f009bd648a958be00c9e779a3cab141d929daa4f519611dc5823"
+          }
+        },
+        "exit_receipt": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/package-install.exit.json",
+        "proof": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/package-install.json"
+      },
+      "owned-complete-runtime": {
+        "files": {
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/owned-complete-runtime.log": {
+            "bytes": 63,
+            "sha256": "6d630b6589fcfad05261c36a71eab40a04eed62f349c0b5440d554f7bd9c2594"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/owned-complete-runtime.exit.json": {
+            "bytes": 1074,
+            "sha256": "0ae8d28a4154b92cda90eb548862520cb11cd832eaac9874d9f8b5474dd52be8"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/runtime.json": {
+            "bytes": 24341,
+            "sha256": "f49a519fdceb7fff92adde563df1cd37f1a25d81fc25f1d3373c07c2f443b700"
+          }
+        },
+        "exit_receipt": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/owned-complete-runtime.exit.json",
+        "proof": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/runtime.json"
+      },
+      "actual-ANN-source": {
+        "files": {
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/actual-ANN-source.log": {
+            "bytes": 39,
+            "sha256": "656290c880214b589dbffc403a511384edfb33ad2dff20d8af5aa3bf69e751f2"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/actual-ANN-source.exit.json": {
+            "bytes": 1170,
+            "sha256": "bda387397a3c88f0c1caab7a05d6c0c3f3f2ef2aaf515165772ff2ea0e57c474"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/ann-source.json": {
+            "bytes": 314,
+            "sha256": "2f80495a1823666caeef6b434598b8c295f84521b4943d8d76a76f6d06e2af4c"
+          }
+        },
+        "exit_receipt": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/actual-ANN-source.exit.json",
+        "proof": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/ann-source.json"
+      },
+      "installed-discovery": {
+        "files": {
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/installed-discovery.log": {
+            "bytes": 1485,
+            "sha256": "6ff9ed7f0db077469e8cbe53d0f29f7b3f6a45e5b8d9bfdc0941f17455f6b288"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/installed-discovery.exit.json": {
+            "bytes": 860,
+            "sha256": "04eab049bd9b2e7cf8942b2edccae8a3212eb314f590d731c5f1f12b92cb197a"
+          }
+        },
+        "exit_receipt": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/installed-discovery.exit.json",
+        "proof": null
+      },
+      "installed-batched-engineering": {
+        "files": {
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/installed-batched-engineering.log": {
+            "bytes": 438,
+            "sha256": "c17fe1f77ab5df0870d1ce363a8e70da1a3d2e8dbc2815d3eb350f7f679a1fe2"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/installed-batched-engineering.exit.json": {
+            "bytes": 858,
+            "sha256": "6a3a2d739c9e900b4f77e37ff131e9c83866af6c67e00a0641fb56d57ba0a5f5"
+          }
+        },
+        "exit_receipt": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/installed-batched-engineering.exit.json",
+        "proof": null
+      },
+      "serial-cached-tiny-DAG": {
+        "files": {
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/serial-cached-tiny-DAG.log": {
+            "bytes": 507,
+            "sha256": "6dd453ded7bf50246edbd8c2d09f542219641f6815e0559146dc316eb24051fd"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/serial-cached-tiny-DAG.exit.json": {
+            "bytes": 823,
+            "sha256": "571532daa4e3e69235c2c7c914e84eed920ce96e7cb54d3f1811a7a4229321b5"
+          },
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/tiny-DAG/completed.json": {
+            "bytes": 31270,
+            "sha256": "4366d79f9893fe7a12cddbc95e69b2a562bee253b2008a9a34fbae406674f0f9"
+          }
+        },
+        "exit_receipt": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/serial-cached-tiny-DAG.exit.json",
+        "proof": null
+      }
+    },
+    "reused_python": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/bin/python",
+    "initial_filesystem_used_bytes": 284939415552,
+    "recovery_from": {
+      "root": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8",
+      "repo": "/srv/dl_binner/repo",
+      "source": "db257a8e177914bc612fa2ce2794a957fb999d05",
+      "phase": "discovery-20261101T014746Z-db257a8",
+      "user": "rasmus_allesoee_gmail_com",
+      "service_name": "e029-discovery-20261101T014746Z-db257a8",
+      "archive_prefix": "gs://dl-binner-archive-167650584170/e029/discovery-20261101T014746Z-db257a8/",
+      "vm_start_epoch": 1793497707.213,
+      "wheel_binding": {
+        "bytes": 189040,
+        "sha256": "4657b242e6a7cda85b190befa2f77e8f67ec42ed159e0bcc4ab1699b90434e71"
+      }
+    },
+    "allocation_start_epoch": 1793498343.516
+  },
+  "source_commit": "31fb9c788e3903f10eb8beb012ca44a36fa74400",
+  "source_clean_readonly_fetch": true,
+  "native_setup_gate_count": 10,
+  "native_setup_gates": [
+    {
+      "stage": "workflow-origin",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import importlib.metadata as metadata,json,platform,sys\nfrom pathlib import Path\nexpected=('3.12.10', '9.16.3')\nd=metadata.distribution('snakemake')\nif (platform.python_version(),d.version)!=expected:raise ValueError('Frozen workflow Python/Snakemake version differs')\nif not Path(d._path).resolve().is_relative_to(Path(sys.prefix).resolve()):raise ValueError('Foreign workflow distribution')\nprint(json.dumps(dict(status='PASS_WORKFLOW_VERSION_ORIGIN',python=platform.python_version(),snakemake=d.version,prefix=sys.prefix,distribution=str(Path(d._path).resolve()))))\n"
+        ],
+        "exit_code": 0,
+        "launched_pid": 1572,
+        "peak_sampled_rss_bytes": 44814336,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.33949110818353334,
+        "sampled_cpu_seconds": 0.43999999999999995,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2659.4199583530426,
+        "stop_reason": null,
+        "wall_seconds": 1.2960575090000006
+      },
+      "reused_from": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/workflow-origin.exit.json",
+      "verified_files": {
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/workflow-origin.log": {
+          "bytes": 338,
+          "sha256": "efad8b2bc605099359eb91b066e5c56ff72e447d89e83459c8e65d07cf544936"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/workflow-origin.exit.json": {
+          "bytes": 1166,
+          "sha256": "fedb7ec4ce8c970d906fc0cb838abef8da6ca64e0050d123d1e04ac70d704420"
+        }
+      }
+    },
+    {
+      "stage": "accepted-numerical",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e023_runtime.py",
+          "--reference",
+          "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/gates/runtime.json",
+          "--output",
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/base-runtime.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 1584,
+        "peak_sampled_rss_bytes": 315932672,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.0298952633477256,
+        "sampled_cpu_seconds": 44.69,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2658.123300075531,
+        "stop_reason": null,
+        "wall_seconds": 43.392761954
+      },
+      "reused_from": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/accepted-numerical.exit.json",
+      "verified_files": {
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/accepted-numerical.log": {
+          "bytes": 70,
+          "sha256": "f2ad5e61793a2e5e3527fd18a162e922a3b38ee6a697e6fe89d032e5ab9b8e05"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/accepted-numerical.exit.json": {
+          "bytes": 837,
+          "sha256": "b878dba0e11ed5feb825b183a64e65c54b49858eb520334f3e5f5fce1f515143"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/base-runtime.json": {
+          "bytes": 19080,
+          "sha256": "0ff40027012d5038b55cdb5fe8cbcf8843359aa133d5473e5a9edbbf9d439dbb"
+        }
+      }
+    },
+    {
+      "stage": "package-install",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e019_runtime.py",
+          "create",
+          "--base",
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+          "--destination",
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env",
+          "--wheel",
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/payload/dl_binner-0.1.0.dev9-py3-none-any.whl",
+          "--output",
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/package-install.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 1989,
+        "peak_sampled_rss_bytes": 92336128,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.710097763758777,
+        "sampled_cpu_seconds": 2.2200000000000006,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2614.7282507419586,
+        "stop_reason": null,
+        "wall_seconds": 3.1263300820000097
+      },
+      "reused_from": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/package-install.exit.json",
+      "verified_files": {
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/package-install.log": {
+          "bytes": 248,
+          "sha256": "a494b01dd7c3a546a181e4a59173678722083a46dbac0bc1e85eaa8a49fb524b"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/package-install.exit.json": {
+          "bytes": 1108,
+          "sha256": "301ad57510057d8099cbd7a608f9699c4e310b3e17fe9a2b4585e83a76e0b335"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/package-install.json": {
+          "bytes": 15010,
+          "sha256": "e83575ea25d2f009bd648a958be00c9e779a3cab141d929daa4f519611dc5823"
+        }
+      }
+    },
+    {
+      "stage": "owned-complete-runtime",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e027_runtime.py",
+          "--base",
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+          "--reference",
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json",
+          "--candidate-lock",
+          "/srv/dl_binner/repo/experiments/E029-certifiable-joint-retrieval/candidate-lock.json",
+          "--output",
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/runtime.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2009,
+        "peak_sampled_rss_bytes": 319467520,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.098085463825042,
+        "sampled_cpu_seconds": 44.33,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2611.600414991379,
+        "stop_reason": null,
+        "wall_seconds": 40.37026393699999
+      },
+      "reused_from": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/owned-complete-runtime.exit.json",
+      "verified_files": {
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/owned-complete-runtime.log": {
+          "bytes": 63,
+          "sha256": "6d630b6589fcfad05261c36a71eab40a04eed62f349c0b5440d554f7bd9c2594"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/owned-complete-runtime.exit.json": {
+          "bytes": 1074,
+          "sha256": "0ae8d28a4154b92cda90eb548862520cb11cd832eaac9874d9f8b5474dd52be8"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/runtime.json": {
+          "bytes": 24341,
+          "sha256": "f49a519fdceb7fff92adde563df1cd37f1a25d81fc25f1d3373c07c2f443b700"
+        }
+      }
+    },
+    {
+      "stage": "actual-ANN-source",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import importlib.metadata,json;from pathlib import Path;import pynndescent;import sys;sys.path.insert(0,'/srv/dl_binner/repo/scripts');from e024_coverage import binding,write;p=Path(pynndescent.__file__).parent/\"pynndescent_.py\";assert importlib.metadata.version(\"pynndescent\")==\"0.5.13\";assert binding(p)=={'bytes': 83456, 'sha256': '6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521'};write('/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/ann-source.json',dict(status=\"PASS_ACTUAL_LINUX_DISCOVERY_SOURCE\",source=binding(p),path=str(p)))"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2103,
+        "peak_sampled_rss_bytes": 242937856,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.1777095637036277,
+        "sampled_cpu_seconds": 12.3,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2571.229437828064,
+        "stop_reason": null,
+        "wall_seconds": 10.444001118000017
+      },
+      "reused_from": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/actual-ANN-source.exit.json",
+      "verified_files": {
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/actual-ANN-source.log": {
+          "bytes": 39,
+          "sha256": "656290c880214b589dbffc403a511384edfb33ad2dff20d8af5aa3bf69e751f2"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/actual-ANN-source.exit.json": {
+          "bytes": 1170,
+          "sha256": "bda387397a3c88f0c1caab7a05d6c0c3f3f2ef2aaf515165772ff2ea0e57c474"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/ann-source.json": {
+          "bytes": 314,
+          "sha256": "2f80495a1823666caeef6b434598b8c295f84521b4943d8d76a76f6d06e2af4c"
+        }
+      }
+    },
+    {
+      "stage": "installed-discovery",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;from pathlib import Path;r=Path('/srv/dl_binner/repo');sys.path.insert(0,str(r/\"tests/product\"));v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName('test_exact_discovery'));sys.exit(not v.wasSuccessful())"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2113,
+        "peak_sampled_rss_bytes": 148606976,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.6874295457945208,
+        "sampled_cpu_seconds": 5.899999999999999,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2560.7848949432373,
+        "stop_reason": null,
+        "wall_seconds": 3.4964422749999926
+      },
+      "reused_from": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/installed-discovery.exit.json",
+      "verified_files": {
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/installed-discovery.log": {
+          "bytes": 1485,
+          "sha256": "6ff9ed7f0db077469e8cbe53d0f29f7b3f6a45e5b8d9bfdc0941f17455f6b288"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/installed-discovery.exit.json": {
+          "bytes": 860,
+          "sha256": "04eab049bd9b2e7cf8942b2edccae8a3212eb314f590d731c5f1f12b92cb197a"
+        }
+      }
+    },
+    {
+      "stage": "installed-batched-engineering",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;from pathlib import Path;r=Path('/srv/dl_binner/repo');sys.path.insert(0,str(r/\"tests/product\"));v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName('test_batched_frozen'));sys.exit(not v.wasSuccessful())"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2122,
+        "peak_sampled_rss_bytes": 245907456,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.3897834731679446,
+        "sampled_cpu_seconds": 5.779999999999998,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2557.2877280712128,
+        "stop_reason": null,
+        "wall_seconds": 4.158921235999998
+      },
+      "reused_from": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/installed-batched-engineering.exit.json",
+      "verified_files": {
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/installed-batched-engineering.log": {
+          "bytes": 438,
+          "sha256": "c17fe1f77ab5df0870d1ce363a8e70da1a3d2e8dbc2815d3eb350f7f679a1fe2"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/installed-batched-engineering.exit.json": {
+          "bytes": 858,
+          "sha256": "6a3a2d739c9e900b4f77e37ff131e9c83866af6c67e00a0641fb56d57ba0a5f5"
+        }
+      }
+    },
+    {
+      "stage": "serial-cached-tiny-DAG",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e029_tiny.py",
+          "--root",
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/tiny-DAG",
+          "--workflow-python",
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2140,
+        "peak_sampled_rss_bytes": 333365248,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.2880673124147641,
+        "sampled_cpu_seconds": 30.15,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 2553.1284697055817,
+        "stop_reason": null,
+        "wall_seconds": 23.407161806999994
+      },
+      "reused_from": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/serial-cached-tiny-DAG.exit.json",
+      "verified_files": {
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/serial-cached-tiny-DAG.log": {
+          "bytes": 507,
+          "sha256": "6dd453ded7bf50246edbd8c2d09f542219641f6815e0559146dc316eb24051fd"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/serial-cached-tiny-DAG.exit.json": {
+          "bytes": 823,
+          "sha256": "571532daa4e3e69235c2c7c914e84eed920ce96e7cb54d3f1811a7a4229321b5"
+        },
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/gates/tiny-DAG/completed.json": {
+          "bytes": 31270,
+          "sha256": "4366d79f9893fe7a12cddbc95e69b2a562bee253b2008a9a34fbae406674f0f9"
+        }
+      }
+    },
+    {
+      "stage": "restore-complete-inputs",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e029_gates.py",
+          "--inputs",
+          "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/science-plan.json",
+          "--output",
+          "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/gates/data.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 74.224682427,
+        "peak_sampled_rss_bytes": 4223803392,
+        "seconds_ceiling": 2022.3631119728088,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 1453,
+        "sampled_cpu_seconds": 64.49,
+        "sampled_average_cpus": 0.8688484462486711,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    },
+    {
+      "stage": "synthetic-width-runtime",
+      "resources": {
+        "command": [
+          "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e029_probe.py",
+          "--output",
+          "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/gates/schedule.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 4.137077073,
+        "peak_sampled_rss_bytes": 2353213440,
+        "seconds_ceiling": 1948.1381180286407,
+        "rss_bytes_ceiling": 26000000000,
+        "launched_pid": 1995,
+        "sampled_cpu_seconds": 6.000000000000002,
+        "sampled_average_cpus": 1.450299304104843,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": true
+      }
+    }
+  ],
+  "native_gate_status": "PASS",
+  "native_proofs": {
+    "host.json": {
+      "bytes": 278,
+      "sha256": "d508076e9d86ce1d92e4f3c5907825658f5523990594aae86be87d417dd5d5ce"
+    },
+    "config.json": {
+      "bytes": 6799,
+      "sha256": "a37e1ded129dc0fe2e4a40dbceef9100eb77ae6f2f078f82b657a36ee1b7fd10"
+    },
+    "science-plan.json": {
+      "bytes": 2481,
+      "sha256": "f9062946dd78828c2c1ba401092dd945edebbf80bc79526ecc38004222484ed2"
+    },
+    "release.json": {
+      "bytes": 3017,
+      "sha256": "12299ddbd2b2b2e4da8682787b3ef8a64225f549571d7c2d6b1ff41f1cda9793"
+    },
+    "started.json": {
+      "bytes": 167,
+      "sha256": "5f2bbcd018dda7661b92444f3867b53ff6095013e4b740dceaf83fd1c55813b7"
+    },
+    "gates/completion.json": {
+      "bytes": 15274,
+      "sha256": "286d394dc07f0d597368b3b35dd3c41d5400f5ed6d02b8b4a7ba7dd0928affe4"
+    },
+    "gates/source.json": {
+      "bytes": 1281,
+      "sha256": "09e8c4384bf07c39cd6d9fb3879d0eb8fb5755921c9cbd04ab6dbbddd0198f23"
+    },
+    "gates/runtime.json": {
+      "bytes": 24341,
+      "sha256": "f49a519fdceb7fff92adde563df1cd37f1a25d81fc25f1d3373c07c2f443b700"
+    },
+    "gates/data.json": {
+      "bytes": 60967,
+      "sha256": "3658b4415ba67c996bfa11dc7f85f8263ddd325dbd46b75c424a16ad60d3cf8e"
+    },
+    "gates/schedule.json": {
+      "bytes": 1179,
+      "sha256": "719604cbb7ee47becda8e100d917b7b11d0e9e8554790153b1a5deeacbfe89bd"
+    },
+    "logs/supervision.json": {
+      "bytes": 1066,
+      "sha256": "fcd37d7dc61f1551e0b4d75bb70c76ad694e910a07940b312bf548d634b7dd6f"
+    },
+    "gpu-input-prep/completed.json": {
+      "bytes": 6325,
+      "sha256": "cf0c14a5525fc6ec1bb0b042aeacd733882c8c78274aa820a7ccaa81c6007cb0"
+    },
+    "gpu-input-prep/cohort/manifest.json": {
+      "bytes": 296968,
+      "sha256": "8c41f4875d85a6243c4b4cfbef905f11c7a7e2d7d2643d3ed1dda374aedf45cf"
+    }
+  },
+  "native_schedule": {
+    "status": "PASS",
+    "full_candidate_rows": 508763,
+    "measured_query_rows": 128,
+    "measured_seconds": 2.4974667080000046,
+    "planning_remaining_science_seconds": 36980.12472098921,
+    "planning_safety_factor": 1.5,
+    "downstream_collection_reserve_seconds": 7200,
+    "partial_engineering_certificate": {
+      "status": "ENGINEERING_PARTIAL",
+      "rows": 508763,
+      "certified_rows": 128,
+      "dimensions": 215,
+      "query_rows": 64,
+      "floating_operation_count_margin": 14784,
+      "gamma": 3.2827074392224392e-12,
+      "maximum_squared_error_envelope": 5.283354270621656e-10,
+      "maximum_candidate_pool": 30,
+      "mean_candidate_pool": 30.0,
+      "minimum_excluded_expanded_gap": 9.646982976940777e-05,
+      "all_possible_boundaries_reranked": true,
+      "numerical_model": "finite normal float64 operations; frozen bounded coordinates and nonzero-median scales",
+      "no_quadratic_score_storage": true
+    },
+    "source_blind_synthetic": true,
+    "community_science_started": false,
+    "byte_projection": {
+      "conservative_complete_growth_bytes": 4080218931,
+      "extra_cap_bytes": 4294967296,
+      "compressed_cap_bytes": 2147483648,
+      "no_quadratic_score_storage": true
+    }
+  },
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e029-discovery-20261101T015844Z-31fb9c7.service",
+    "watchdog_timer": "e029-discovery-20261101T015844Z-31fb9c7-exit.timer",
+    "watchdog_service": "e029-discovery-20261101T015844Z-31fb9c7-exit.service",
+    "process": {
+      "pid": 1389,
+      "start_ticks": 3045,
+      "command_sha256": "7936e6424448de5e891eb40872e10ec4acd96bec298f2b49f46d8c58dc28f162"
+    },
+    "boot_id": "4428a8cc-caa3-4593-a31e-6951a83c2b6e",
+    "source_commit": "31fb9c788e3903f10eb8beb012ca44a36fa74400",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1793497707.213,
+    "hard_deadline_epoch": 1793713707.213,
+    "provider_stop_epoch": 1793714607.213,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "current_watcher": {
+    "boot_id": "4428a8cc-caa3-4593-a31e-6951a83c2b6e",
+    "checked_utc": "2026-11-01T02:12:08.628038+00:00",
+    "decision": "workflow alive",
+    "expected_process": {
+      "command_sha256": "7936e6424448de5e891eb40872e10ec4acd96bec298f2b49f46d8c58dc28f162",
+      "pid": 1389,
+      "start_ticks": 3045
+    },
+    "observed_process": {
+      "command_sha256": "7936e6424448de5e891eb40872e10ec4acd96bec298f2b49f46d8c58dc28f162",
+      "pid": 1389,
+      "start_ticks": 3045
+    },
+    "shutdown": false,
+    "workflow_root": "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7"
+  },
+  "provider_max_duration_seconds": 216163,
+  "actual_provider_STOP_epoch": 1793714506.516,
+  "provider_source_original_deadline_not_extended": true,
+  "done": [
+    "retrieval/E009-GLM/teacher/done.json",
+    "retrieval/E009-GLM/student/done.json",
+    "retrieval/E009-noGLM/teacher/done.json",
+    "retrieval/E009-noGLM/student/done.json"
+  ],
+  "latest_logs": {
+    "work/logs/oral-noGLM-teacher-retrieve.log": "overy-20261101T014746Z-db257a8/env/lib/python3.10/site-packages/dl_binner/__init__.py\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:10:39Z\", \"rows\": 576, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:10:44Z\", \"rows\": 1152, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:10:49Z\", \"rows\": 1728, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:10:54Z\", \"rows\": 2304, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:10:59Z\", \"rows\": 2880, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:11:04Z\", \"rows\": 3456, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:11:09Z\", \"rows\": 4032, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:11:14Z\", \"rows\": 4608, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:11:20Z\", \"rows\": 5184, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:11:25Z\", \"rows\": 5760, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:11:30Z\", \"rows\": 6336, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:11:35Z\", \"rows\": 6912, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:11:40Z\", \"rows\": 7488, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:11:45Z\", \"rows\": 8064, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:11:50Z\", \"rows\": 8640, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:11:56Z\", \"rows\": 9216, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:12:01Z\", \"rows\": 9792, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:12:06Z\", \"rows\": 10368, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n{\"stage\": \"exact_joint_rows\", \"utc\": \"2026-11-01T02:12:11Z\", \"rows\": 10944, \"total\": 508763, \"maximum_boundary_candidates\": 30}\n",
+    "work/logs/E009-GLM-teacher-retrieve.log": "E029_OWNED_PRODUCT /srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/lib/python3.10/site-packages/dl_binner/__init__.py\n",
+    "work/logs/E009-GLM-student-retrieve.log": "E029_OWNED_PRODUCT /srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/lib/python3.10/site-packages/dl_binner/__init__.py\n",
+    "work/logs/E009-noGLM-teacher-retrieve.log": "E029_OWNED_PRODUCT /srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/lib/python3.10/site-packages/dl_binner/__init__.py\n",
+    "work/logs/E009-noGLM-student-retrieve.log": "E029_OWNED_PRODUCT /srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/lib/python3.10/site-packages/dl_binner/__init__.py\n"
+  },
+  "filesystem": {
+    "total": 316733652992,
+    "used": 284964716544,
+    "free": 31752159232
+  },
+  "first_failed_attempt": {
+    "identity": {
+      "root": "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8",
+      "repo": "/srv/dl_binner/repo",
+      "source": "db257a8e177914bc612fa2ce2794a957fb999d05",
+      "phase": "discovery-20261101T014746Z-db257a8",
+      "user": "rasmus_allesoee_gmail_com",
+      "service_name": "e029-discovery-20261101T014746Z-db257a8",
+      "archive_prefix": "gs://dl-binner-archive-167650584170/e029/discovery-20261101T014746Z-db257a8/",
+      "vm_start_epoch": 1793497707.213,
+      "wheel_binding": {
+        "bytes": 189040,
+        "sha256": "4657b242e6a7cda85b190befa2f77e8f67ec42ed159e0bcc4ab1699b90434e71"
+      }
+    },
+    "shutdown": "TERMINATED",
+    "archive": {
+      "status": "SUCCESS",
+      "archive": {
+        "bytes": 616820,
+        "sha256": "98a4ace64b5b43133ff8066c11435c4c4c061625ff5d782d67533c6663933e8b"
+      },
+      "regular_members": 401,
+      "logical_member_bytes": 1867133,
+      "every_member_verified": true,
+      "aliases": {},
+      "omitted_retained_on_disk": {}
+    },
+    "no_science_release": true
+  },
+  "original_cumulative_start_epoch": 1793497707.213,
+  "CPU_fits_run": 0,
+  "GPU_worker_started": false,
+  "GPU_cohort_preparation": {
+    "status": "PASS_QUALIFICATION_INPUTS_FROZEN_AND_PRIVATE_READBACK",
+    "cohort_resources": {
+      "command": [
+        "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/gpu-input-prep/cohort-helper.py",
+        "--features",
+        "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz",
+        "--views",
+        "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/admit/views.npz",
+        "--fasta",
+        "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+        "--output",
+        "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/gpu-input-prep/cohort",
+        "--model-dir",
+        "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/gpu-input-prep/tokenizer"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 92.66033826099999,
+      "peak_sampled_rss_bytes": 6971301888,
+      "seconds_ceiling": 1630.2034804821014,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 2156,
+      "sampled_cpu_seconds": 90.77,
+      "sampled_average_cpus": 0.979599273038747,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "assets": {
+      "native-runtime.tar.gz": {
+        "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/native-runtime.tar.gz",
+        "binding": {
+          "bytes": 3188351161,
+          "sha256": "782149a2248b97ec47fea56ce72310649a49552ef02556ce78fd4e484e06b984"
+        },
+        "upload_resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/preserved-GPU-runtime/native-runtime.tar.gz",
+            "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/native-runtime.tar.gz"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 47.875812465000024,
+          "peak_sampled_rss_bytes": 260395008,
+          "seconds_ceiling": 1581.6736731529236,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 2187,
+          "sampled_cpu_seconds": 18.68,
+          "sampled_average_cpus": 0.3901761461208863,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        },
+        "readback_verified": true
+      },
+      "runtime-preservation.json": {
+        "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/runtime-preservation.json",
+        "binding": {
+          "bytes": 7738917,
+          "sha256": "717da1430c88618cf9487b4ed4be03ca104686bb590144c4f4f68d8a2337bb07"
+        },
+        "upload_resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/preserved-GPU-runtime/runtime-preservation.json",
+            "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/runtime-preservation.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.912513937999961,
+          "peak_sampled_rss_bytes": 290746368,
+          "seconds_ceiling": 1512.451848268509,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 2293,
+          "sampled_cpu_seconds": 1.1800000000000002,
+          "sampled_average_cpus": 0.6169889675334874,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        },
+        "readback_verified": true
+      },
+      "cohort.json": {
+        "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/cohort.json",
+        "binding": {
+          "bytes": 11033448,
+          "sha256": "fc5f672a506b60a5d0585ac7facf62e8b4a19d90c1c5b1dc3543939d4608eabc"
+        },
+        "upload_resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/gpu-input-prep/cohort/cohort.json",
+            "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/cohort.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.9119813920000297,
+          "peak_sampled_rss_bytes": 259911680,
+          "seconds_ceiling": 1509.2693297863007,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 2386,
+          "sampled_cpu_seconds": 1.1,
+          "sampled_average_cpus": 0.5753194066650116,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        },
+        "readback_verified": true
+      },
+      "manifest.json": {
+        "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/manifest.json",
+        "binding": {
+          "bytes": 296968,
+          "sha256": "8c41f4875d85a6243c4b4cfbef905f11c7a7e2d7d2643d3ed1dda374aedf45cf"
+        },
+        "upload_resources": {
+          "command": [
+            "/snap/bin/gcloud",
+            "storage",
+            "cp",
+            "--if-generation-match=0",
+            "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/gpu-input-prep/cohort/manifest.json",
+            "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/manifest.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.4955341749999889,
+          "peak_sampled_rss_bytes": 261070848,
+          "seconds_ceiling": 1506.106253862381,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 2481,
+          "sampled_cpu_seconds": 1.02,
+          "sampled_average_cpus": 0.682030552728765,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        },
+        "readback_verified": true
+      }
+    },
+    "community_or_model_science_run": false
+  }
+}

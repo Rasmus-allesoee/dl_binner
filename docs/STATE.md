@@ -2,18 +2,27 @@
 
 Updated: November 1, 2026 (Copenhagen). This is the single current handoff.
 
-**E029 implementation and execution are authorized in this task.** The new
-[operations guide](../experiments/E029-certifiable-joint-retrieval/OPERATIONS.md)
-owns current execution. The exact backend, installed tiny readers/grouping/export,
-serial DAG, strict reuse/no-op and collector pass locally. E028's failed journals
-and four passed E009 caches remain preserved. The complete local full-shape
-probe refuses the initial 20-hour estimate. Under the owner's explicit standing
-and current authorization, the new envelope is $22 CPU / 60 hours / 60.25-hour
-provider STOP, plus $3 / 90-minute GPU qualification / 105-minute STOP. Fresh native
-schedule, source/runtime/input, financial and shutdown gates remain required.
-No VM has started at this preparation snapshot. Retention still ends November 4
-at 00:00 Copenhagen; cost flexibility does not renew it. Full Oral GLM extraction
-and confirmation remain excluded. E028's inspection below is accepted history.
+**E029 CPU cached completion is RUNNING under verified supervision.** Phase
+`discovery-20261101T015844Z-31fb9c7` uses clean, read-only fetched source `31fb9c7`.
+[Native receipt](../experiments/E029-certifiable-joint-retrieval/native-observed.json)
+records ten passed Linux gates (eight verified setup reuses and two fresh gates),
+all four restored E009 caches and real Oral teacher progress. No bins or scores
+are claimed. The first attempt's input-import refusal, verified 401-member failure
+return and independent TERMINATED remain preserved. Recovery retains the original
+November 1 01:48:27 UTC clock and filesystem baseline; provider STOP is shortened
+to that original deadline. No dependency reinstall or scientific replay occurs.
+
+[Operations](../experiments/E029-certifiable-joint-retrieval/OPERATIONS.md) owns
+current execution and the exact inspection prompt. The native full-shape gate
+forecasts 36,980 seconds (10.27 hours), comfortably inside the recorded $22 /
+60-hour CPU maximum. Actual progress will determine usage, not that maximum.
+Four threads, 26 GB sampled tree RSS, 25 GiB free and 4 GiB extra remain enforced.
+The independent $3 / 90-minute / 105-minute STOP GPU qualification is preparing
+128 exact original Oral views. Its cohort/runtime uploads and private readbacks
+pass; no model/GPU forward or full Oral bank is claimed at this snapshot.
+The combined new credit-only ceiling is $25. No original resize, new quota,
+learning change, confirmation or retention extension. November 4 at 00:00
+Copenhagen remains hard. E028's verified failed inspection below is history.
 
 **E028 FAILED its Oral retrieval gate. The VM is independently TERMINATED.**
 [Inspection](../experiments/E028-global-discovery-repair/inspection-observed.json)

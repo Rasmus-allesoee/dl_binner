@@ -294,6 +294,14 @@ paid bulk acquisition, test a bounded GET/range against the declared public
 transport and exercise its actual streaming reader. Record a changed transport
 explicitly and preserve the original byte/checksum contracts and failure evidence.
 
+For GCS composite objects, an absent MD5 can be normal. Check authenticated
+metadata, exact generation/size and the local/server CRC32C; still require full
+SHA256 before artifact consumption. Do not overwrite a valid upload merely to
+obtain MD5. Prefer non-composite uploads for new bounded archive workflows when
+soft delete/versioning would retain temporary components. Inventory all versions,
+soft-deleted components and their storage cost. Do not weaken bucket protections
+or alter an active frozen workflow to avoid these costs.
+
 Verify the checksum semantics of segmented public objects. A Swift dynamic-large-
 object ETag can hash the concatenated segment MD5 strings rather than the file
 bytes. Check the publisher's segment identities/MD5s and record a new whole-object

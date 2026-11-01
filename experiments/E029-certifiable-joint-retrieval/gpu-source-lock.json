@@ -1,0 +1,121 @@
+{
+  "kind": "E029 independent engineering qualification source; unchanged biological model/exposure",
+  "files": {
+    "experiments/E029-certifiable-joint-retrieval/candidate-lock.json": {
+      "bytes": 9482,
+      "sha256": "4a546aefc51f6c236caf1e479a6fecedaa427fd766ed8637cc21c9d47113f326"
+    },
+    "experiments/E029-certifiable-joint-retrieval/gpu-asset-lock.json": {
+      "bytes": 3361,
+      "sha256": "543b8b2251438bef4367d2cbae9b14d30d970c64e7d10722d2af4661000d7986"
+    },
+    "experiments/E029-certifiable-joint-retrieval/gpu-cohort-freeze.json": {
+      "bytes": 47872,
+      "sha256": "fead82886e2e2afc5bbcc13e348f91eaad3425097ae9798a9173bf01afac3916"
+    },
+    "experiments/E029-certifiable-joint-retrieval/gpu-protocol.json": {
+      "bytes": 1837,
+      "sha256": "4e8af6fa9a92e4785daad4698bb908a013c26c28fdd7d22e15ca9d8129a18934"
+    },
+    "experiments/E029-certifiable-joint-retrieval/source-lock.json": {
+      "bytes": 2923,
+      "sha256": "23b8d9537ab639801ec768a0e0db8679ceb9b6d2b291424675309de99abc2a60"
+    },
+    "scripts/e009_common.py": {
+      "bytes": 9410,
+      "sha256": "5ce8580922799bbed20b89a0f823b70f147ad97351952b2f03225509f40e1102"
+    },
+    "scripts/e009_controls.py": {
+      "bytes": 16875,
+      "sha256": "2ad898996df287a38a406d9d1891b6438f9d8fab0415c48c09155903af17a5b4"
+    },
+    "scripts/e009_exit_watchdog.py": {
+      "bytes": 5959,
+      "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+    },
+    "scripts/e009_owner.py": {
+      "bytes": 39523,
+      "sha256": "ef8bd0f802284ad460f7220cac69104a0fa0483a9b25676004bbbefd90ad8863"
+    },
+    "scripts/e011_exit_watchdog.py": {
+      "bytes": 2426,
+      "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+    },
+    "scripts/e019_runtime.py": {
+      "bytes": 7500,
+      "sha256": "284a2ec99520152e8176b1326253579bfb1b2db8e0a69c90096e4d2384383146"
+    },
+    "scripts/e021_control_json.py": {
+      "bytes": 1990,
+      "sha256": "52671c722329da09452d87f33ec6f3b908aac53fe4b001d440b3d6e3ced3e9d4"
+    },
+    "scripts/e021_gpu_guard.py": {
+      "bytes": 4648,
+      "sha256": "050311a0c088bc5736c658616fe8af635a3fa0560458bda831cbc8d0f885b935"
+    },
+    "scripts/e021_portable_driver.py": {
+      "bytes": 5177,
+      "sha256": "8924d536bb0f211ad0f00e09896380c7b3bc0c12b257f39ec9d92a2ac3e149d3"
+    },
+    "scripts/e021_portable_node.py": {
+      "bytes": 17051,
+      "sha256": "a099455583b290ed2aed8d6ffbfad750d9bac462ec8d977193f89fd42027e1c4"
+    },
+    "scripts/e021_portable_runtime_archive.py": {
+      "bytes": 4690,
+      "sha256": "0d282a53c002bf987b977eff1efb877da0fe3d63ec485eda76df715c260c51b4"
+    },
+    "scripts/e024_coverage.py": {
+      "bytes": 22795,
+      "sha256": "ac0d2a6939e9f68846ac95dbf6f06ccd3215c04fb82ed33671d98f51aecc1981"
+    },
+    "scripts/e029_cohort.py": {
+      "bytes": 5947,
+      "sha256": "81a242477c54198ae79d536287996a47d15058335012544382cf68f3017a6424"
+    },
+    "scripts/e029_control.py": {
+      "bytes": 8157,
+      "sha256": "03b3a800199272690d64980c456822895adc81b4abb4c468b3169a8646c50c1e"
+    },
+    "scripts/e029_gpu_arm.py": {
+      "bytes": 6535,
+      "sha256": "74af917f177b3622f5369410b2d64c20ab46ff617053cb2bda3823f6fa61f046"
+    },
+    "scripts/e029_gpu_launch.py": {
+      "bytes": 16697,
+      "sha256": "97f5f508b306d28fe668387d479252b9bc174c0186997d458b27673be7821777"
+    },
+    "scripts/e029_gpu_node.py": {
+      "bytes": 12976,
+      "sha256": "54d508f14c317646a73d81db4af7aeb57dbce9b4c1725d2ef0e1fa520427bfe9"
+    },
+    "scripts/e029_gpu_probe.py": {
+      "bytes": 5737,
+      "sha256": "3dfa571af731aaefd9918e9e9f2c2d6adb38f30ba7bde87dca00268508025608"
+    },
+    "scripts/e029_gpu_runtime.py": {
+      "bytes": 4625,
+      "sha256": "82cc64807372b3e7ed36d8c35ac6c547b954051b849bc84530073100f9c56ffb"
+    },
+    "src/dl_binner/hybrid/bank.py": {
+      "bytes": 11190,
+      "sha256": "2a7b6538106e51962fbde33083450cc69ad91bb1f83651fd2fa2bc2ec8b0ee58"
+    },
+    "src/dl_binner/hybrid/batched.py": {
+      "bytes": 12211,
+      "sha256": "1ff44f3d859c6f1f28568dc97b5a2fd3153a7f2f36e906670fd03b46786878ec"
+    },
+    "src/dl_binner/hybrid/extract.py": {
+      "bytes": 5842,
+      "sha256": "553a2c4c744dfe103dc688026a2eff9e1f0dad7715859b84d72c7f3218bb6096"
+    },
+    "src/dl_binner/resources/hybrid-model-pin.json": {
+      "bytes": 3417,
+      "sha256": "1c1d7ff4d934ca54429be56608b22f3214c96198362c2f506761a39daa703529"
+    },
+    "tests/test_e029_gpu_qualification.py": {
+      "bytes": 4376,
+      "sha256": "804de77072772d6a32a24415e92d62b27be45c6d30e6ac94127eaa7b9387db28"
+    }
+  }
+}

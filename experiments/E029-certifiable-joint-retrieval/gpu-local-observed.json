@@ -1,0 +1,63 @@
+{
+  "status": "PASS_LOCAL_NOT_GPU_ADMITTED",
+  "actual_original_view_reader_and_published_tokenizer": {
+    "resources": {
+      "command": [
+        "artifacts/e029-certifiable-joint-retrieval/preparation/env-r1/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import sys;from pathlib import Path;r=Path.cwd();sys.path[:0]=[str(r/\"scripts\"),str(r/\"tests/product\")];from e029_control import product_scope;product_scope();from discovery_fixture import fixture;from e029_cohort import run;root=r/\"artifacts/e029-certifiable-joint-retrieval/preparation/cohort-real-reader-r1-work\";root.mkdir();f=fixture(root/\"input\",96);run(f[\"features\"],f[\"features\"].parent/\"views.npz\",f[\"fasta\"],root/\"cohort\",r/\"artifacts/d011-dnabert-s-spike/model\")"
+      ],
+      "exit_code": 0,
+      "launched_pid": 82287,
+      "peak_sampled_rss_bytes": 72220672,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 0.7633310876160458,
+      "sampled_cpu_seconds": 2.38,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 9115.060534000397,
+      "stop_reason": null,
+      "wall_seconds": 3.117913102993043
+    }
+  },
+  "actual_runtime_archive_alias_and_compact_export_contracts": {
+    "command": [
+      "artifacts/e029-certifiable-joint-retrieval/preparation/env-r1/bin/python",
+      "-I",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_e029_gpu_qualification.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "launched_pid": 82721,
+    "peak_sampled_rss_bytes": 23060480,
+    "rss_bytes_ceiling": 8000000000,
+    "sample_includes_coordinator": false,
+    "sampled_average_cpus": 0.28277546760424477,
+    "sampled_cpu_seconds": 0.21,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 8574.106578826904,
+    "stop_reason": null,
+    "wall_seconds": 0.7426386800070759
+  },
+  "native_model_or_GPU_equivalence": false,
+  "transport_mocked_only_in_tiny_collection_test": true,
+  "failed_journals": [
+    "initial staging renderer refused locally before remote execution",
+    "composite model upload MD5 assumption refused; same generation reused after whole local/server CRC32C; native SHA256 still mandatory",
+    "public USD versus DKK-account quote exact-equality assumption refused; account Catalog units/rates govern"
+  ],
+  "native_original_view_preparation": true,
+  "model_archive": {
+    "bytes": 435628356,
+    "sha256": "9301158c83bd141e9897089ea8dbd44c2c3955e03d56bf742314c320872c71f7"
+  }
+}

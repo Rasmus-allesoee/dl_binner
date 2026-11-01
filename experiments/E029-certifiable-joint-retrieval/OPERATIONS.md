@@ -77,3 +77,47 @@ the unchanged installed wheel. Do not reinstall dependencies or replay tests
 whose exact passed output is verified. Input restoration and full-shape timing
 remain fresh gates. Provider STOP on a new boot is shortened to the original
 absolute deadline. Record every allocation separately for actual cost.
+
+## Native admission and independent batching qualification
+
+The repaired CPU phase `discovery-20261101T015844Z-31fb9c7` releases at
+02:10:03 UTC / 03:10:03 Copenhagen on November 1. All ten native gates pass;
+eight closed setup stages are reused, while full inputs and full-shape timing
+run fresh. Actual full-width timing is 2.497 seconds for 128 queries against
+508,763 candidates, forecasting 36,980 seconds including 1.5x headroom and a
+7,200-second downstream/collection reserve. This is a planning measurement,
+not a completed comparison. All four E009 retrieval references pass. Oral teacher
+shows timestamped complete-query progress under unchanged score/boundary rules.
+The native receipt binds exact source, full axes, original clock, current
+watcher identity and provider STOP. Leave the running CPU source at `31fb9c7`.
+Later local GPU/receipt commits do not change that remote checkout.
+
+The [GPU protocol](gpu-protocol.json), [original-view freeze](gpu-cohort-freeze.json),
+[assets](gpu-asset-lock.json), [source lock](gpu-source-lock.json),
+[local contracts](gpu-local-observed.json) and [current complete prices](gpu-cost-admission.json)
+own the independent 128-view qualification. The original-view producer uses the
+actual installed reader, retained crop coordinates and published tokenizer. It
+verifies the full source FASTA and freezes its cohort before any GPU model output.
+It completes in 92.66 seconds / 6.971 GB sampled RSS. Its source/runtime/cohort
+assets pass private SHA256 readback. No source DNA or feature bank is regenerated.
+All setup/probe/collection fits one original 90-minute GPU clock; provider STOP
+is 105 minutes. L4 G2 has 32 GiB RAM; the priced N1 T4 fallback has 30 GiB.
+The 26 GB sampled tree limit and four CPU threads fit either. Native VRAM is
+monitored at 14 GiB; the model uses a 13 GiB per-process allocation limit.
+
+The complete GPU upper is $2.87260, including 105-minute compute/IP, temporary
+104 GiB balanced storage for up to 72 hours, compact export, operations, a
+contingency and stored/soft-deleted upload components. Actual temporary resources
+must close before the original November 4 boundary. Current exact DKK Catalog
+conversion gives about $0.85362429/hour for L4/G2; N1/T4 with conservatively
+priced 32 GiB RAM is $0.738472/hour. Public USD rounding is a cross-check.
+Credit eligibility uses the paid-upgraded Welcome-credit scope, not Free Tier
+GPU eligibility. No partner-model API, Marketplace, commitment or paid OS.
+
+One first model-transport verifier expects MD5 and refuses a normal nine-part
+GCS composite object. The same generation is preserved and independently matches
+local/server CRC32C. Native full SHA256 and ten pinned model-member checks remain
+mandatory. This does not alter any scientific or numerical tolerance. New bounded
+uploads disable composition where applicable; bucket protections remain intact.
+All-version/soft-deleted inventory and their cost remain part of storage review.
+Do not delete unique inputs or accepted evidence for headroom.

@@ -1,0 +1,84 @@
+{
+  "kind": "E029 private generation-bound qualification assets",
+  "assets": {
+    "model.tar.gz": {
+      "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/model.tar.gz",
+      "generation": "1793499253294279",
+      "binding": {
+        "bytes": 435628356,
+        "sha256": "9301158c83bd141e9897089ea8dbd44c2c3955e03d56bf742314c320872c71f7"
+      },
+      "transport": {
+        "server_CRC32C_verified": true,
+        "component_count": 9,
+        "whole_file_MD5_not_available_for_composite": true,
+        "original_failed_assumption_preserved": true
+      },
+      "full_SHA256_consumer_verification_required": true
+    },
+    "gpu-recipe.json": {
+      "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/gpu-recipe.json",
+      "generation": "1793499383790691",
+      "binding": {
+        "bytes": 33767,
+        "sha256": "7229d942a94b8de9b412cdba7841a9e11fe5a037ff1b1c5771605dc998afdec2"
+      },
+      "transport": {
+        "server_CRC32C_verified": true,
+        "parallel_composite_disabled": true
+      },
+      "full_SHA256_consumer_verification_required": true
+    },
+    "dl_binner-0.1.0.dev9-py3-none-any.whl": {
+      "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/dl_binner-0.1.0.dev9-py3-none-any.whl",
+      "generation": "1793499393041915",
+      "binding": {
+        "bytes": 189040,
+        "sha256": "4657b242e6a7cda85b190befa2f77e8f67ec42ed159e0bcc4ab1699b90434e71"
+      },
+      "transport": {
+        "server_CRC32C_verified": true,
+        "parallel_composite_disabled": true
+      },
+      "full_SHA256_consumer_verification_required": true
+    },
+    "native-runtime.tar.gz": {
+      "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/native-runtime.tar.gz",
+      "generation": "1793498812785982",
+      "binding": {
+        "bytes": 3188351161,
+        "sha256": "782149a2248b97ec47fea56ce72310649a49552ef02556ce78fd4e484e06b984"
+      },
+      "native_upload_SHA256_readback_verified": true
+    },
+    "runtime-preservation.json": {
+      "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/runtime-preservation.json",
+      "generation": "1793498836070893",
+      "binding": {
+        "bytes": 7738917,
+        "sha256": "717da1430c88618cf9487b4ed4be03ca104686bb590144c4f4f68d8a2337bb07"
+      },
+      "native_upload_SHA256_readback_verified": true
+    },
+    "cohort.json": {
+      "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/cohort.json",
+      "generation": "1793498839263931",
+      "binding": {
+        "bytes": 11033448,
+        "sha256": "fc5f672a506b60a5d0585ac7facf62e8b4a19d90c1c5b1dc3543939d4608eabc"
+      },
+      "native_upload_SHA256_readback_verified": true
+    },
+    "manifest.json": {
+      "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/manifest.json",
+      "generation": "1793498842153064",
+      "binding": {
+        "bytes": 296968,
+        "sha256": "8c41f4875d85a6243c4b4cfbef905f11c7a7e2d7d2643d3ed1dda374aedf45cf"
+      },
+      "native_upload_SHA256_readback_verified": true
+    }
+  },
+  "original_runtime_prefix": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/gpu-admission-v3/env-gpu-v2",
+  "native_SHA256_and_full_member_checks_required_before_consumption": true
+}
