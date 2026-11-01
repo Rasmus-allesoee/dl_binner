@@ -1,5 +1,40 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E028: complete the consumer before changing learning, November 1, 2026
+
+[The inspected phase](../../experiments/E028-global-discovery-repair/inspection-observed.json)
+provides no whole-binner result. Four E009 searches pass. Oral teacher recall
+fails and the global barrier blocks all bins. Keep missing scores unavailable.
+Do not turn this into a biological failure or a product-family decision.
+
+[Matched search evidence](../evidence/2026-11-01-e028-search-refusal.md) keeps the
+exact score stable while approximate recall falls from 0.88512 to 0.86548.
+Oral has 191,567 measured-zero eligible contigs; E009 has none. The score admits
+a nonmetric counterexample. A bounded compiled/reference numerical check passes.
+No runtime/axis drift or sole native causal explanation is established.
+
+Choose one [evidence-completion block](../../experiments/E028-global-discovery-repair/next-block.md).
+Implement certifiable retrieval for the unchanged score. Use the tested algebraic
+expansion, conservative arithmetic boundaries and original subtraction-based
+reranking. Reuse four sealed E009 caches and compute only the remaining Oral
+retrievals before unchanged biological selection. Native full-shape admission is
+required. Quadratic exact arithmetic is a bounded completion route, not solved
+product scalability. The inner-product form permits later indexed search with
+independently verified recall.
+
+A larger network, new marker-aware loss or full GLM bank does not repair this
+consumer. Changing neutrality or deleting short/zero-depth DNA changes the biology.
+More seed/width/iteration trials are less compelling after two failed Oral cases.
+The accepted Oral student/proposal-origin concerns remain for a later decision
+based on valid bin outputs. Truth must not select pairs, thresholds or features.
+
+Independently qualify Oral batching on 128 original views alongside this work.
+The proposed $8 CPU / $3 GPU scope includes complete costs and shutdown controls.
+It needs fresh execution/resource admission. Full bank and confirmation stay
+separate. Prefer full exposure when practical. Prospective cutoffs/derivatives
+need explicit population, short-DNA and denominator claims. Keep skin unscored
+and November 4 retention unchanged.
+
 ## E028 implementation and concrete GLM efficiency preparation, October 31, 2026
 
 [The implemented cached repair](../../experiments/E028-global-discovery-repair/design.md)

@@ -223,6 +223,12 @@ initialization when an explicit partial graph is supplied. Verify that behavior
 against the pinned implementation. Retain structured invalid-candidate and recall
 evidence before an early refusal; a successful tiny connected fixture cannot
 establish full-scale discovery or justify lowering a frozen recall gate.
+Complete candidate lists and a completed ANN iteration budget do not establish
+search accuracy. For pair-dependent or nonmetric scores, compare the compiled
+and exact expressions and retain matched query populations across repairs.
+Validate an exact reference or fallback when approximation repeatedly fails an
+availability stratum. Preserve the biological score and its failed recall gate
+while changing the search implementation prospectively.
 
 If an outer workflow fails, a fully completed independent target can receive a
 separate explicit admission after its own input, source, runtime, DNA, byte and
@@ -443,6 +449,10 @@ file. Test the actual producer/consumer filesystem path, including malformed inp
 overwrite refusal and a disconnected controller. Preload independent commands
 before release when possible. Transport/member verification, actual consumer
 admission and scientific completion are separate contracts; none implies the next.
+Keep raw object bytes separate from CLI result formatting. A formatted command
+can append report data to a downloaded JSON document. Check the exact object
+generation, byte count and digest before treating a local parsing failure as
+corrupt native evidence. Preserve the failed transport journal.
 
 Owner clarification, 2026-10-17: during an authorized connected-GCP execution,
 debug recoverable operational failures and retry within the same task when the

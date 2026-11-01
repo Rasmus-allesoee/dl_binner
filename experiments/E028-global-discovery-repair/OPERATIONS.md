@@ -5,7 +5,50 @@ This is a new cached-only phase following E027's reviewed grouping failure. The
 original E027 source, learning, failed stages and inspection remain immutable.
 No E028 community outcome is claimed from launch/progress alone.
 
-## Current native phase
+## Verified stopped outcome, November 1
+
+[Independent inspection](inspection-observed.json) verifies **FAILED science and
+independently TERMINATED compute**. The dated RUNNING receipt remains unchanged.
+All ten native gates pass. Four E009 retrievals seal and pass the 0.90 gate.
+Oral teacher completes all 15 iterations and its full rerank, but sampled recall
+is 0.86548 overall / 0.58333 measured-zero / 0.88125 short. Its complete candidate
+lists do not satisfy the required search accuracy. Oral student, the global
+barrier, six grouping jobs, three exports, three audits and input-after do not run.
+
+[Biological disposition](comparison-review.json) is **NOT ASSESSABLE**. No new
+bins or quality scores exist. All parent/post, teacher/student, per-target and
+threshold-based HQ/MQ/LQ results are unavailable. Do not substitute zeros or
+partial partitions. Full 156/799 denominators, E009 N quarantine and separate Oral
+origin/shared policies remain frozen. Older recovery/reference results stay intact.
+
+The exact private archive has 274,627,567 bytes and SHA256
+`31b1c427cfb81312ce2f40e05f517e99587259cea61d2d200597abb3461f4149`,
+generation `1793480896411579`. Every one of its 542 regular members and seven
+aliases verifies. Guest/private completion agree. The intended watcher observes
+exit and requests shutdown. Collection/upload/readbacks pass. Numeric readers
+independently match full ID and ordered ten-sample axes. Original source/wheel/
+runtime and before-use contracts pass; global input-after remains unavailable.
+No evidence-only wake or accepted-science replay is necessary.
+
+[Costs](cost-observed.json): allocation 1,569.938 seconds, compute/IP $0.11907,
+overlapping disk interval about $0.0183, one archive export $0.03069. Complete
+phase/storage/export upper estimate $0.18857 includes an operations reserve.
+It stays within the original $5. Current credit is DKK 1,725.24 Available / 87%,
+expiry January 12, 2027. Keep $35 for delayed usage. These are conservative priced
+estimates, not an invoice or credit-delta attribution. Peak sampled tree RSS is
+6.695 GB, minimum free disk 29.59 GiB and maximum sampled growth 0.55 GiB.
+
+[Search diagnosis](../../docs/evidence/2026-11-01-e028-search-refusal.md) establishes
+matched native query/calibration/kth scores, a nonmetric counterexample and a
+synthetic score-preserving algebraic route. It does not prove the sole native
+cause or admit a production search backend. [The next block](next-block.md)
+proposes certifiable retrieval and completion, with a separate small Oral GPU
+batching qualification. Proposed new scope is $8 CPU plus $3 GPU, not current
+execution authority. No full Oral bank, new learner, external tool or confirmation
+is authorized in this inspection. November 4 at 00:00 Copenhagen remains hard.
+A separate preservation decision is due before that date.
+
+## Preserved native launch handoff, October 31
 
 [Native receipt](native-observed.json): **RUNNING**, phase
 `discovery-20261031T204532Z-45a7590`, exact clean source `45a7590` on
@@ -172,7 +215,7 @@ E023 610-target / 313 exact-Oral-overlap / 297 other-genome plan. Remaining
 biological joins, unique-versus-origin, overlap, measured-depth/evaluator/protocol/
 cost/retention dependencies remain. No confirmation acquisition or score.
 
-## Exact following prompt
+## Preserved inspection prompt, executed November 1
 
 Our goal is substantially closing the recovery gap with one general-purpose
 binner. Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015 and E028's design,
@@ -224,3 +267,111 @@ Keep skin unscored and require a separate preservation/retention decision before
 November 4. Update records, relevant checks and commit with structured what
 changed/why; report verified results/limits, actual allocation versus sampled CPU,
 storage/export costs versus credit deltas, next decision and exact following prompt.
+
+## Exact following prompt
+
+This proposes the next task's new $11 execution/resource scope. It grants no
+additional execution during the completed inspection. The owner must approve it
+before the new CPU comparison or temporary GPU creation.
+
+Our goal is substantially closing the recovery gap with one general-purpose binner.
+Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015 and E028's inspection, diagnosis, locks, next-block plan and operations.
+Preserve all accepted E009–E028 science, native vectors, failed journals and source freezes.
+Use a descriptive research branch without a codex/ prefix.
+
+Implement and locally test certifiable retrieval for the frozen E027 score.
+Keep the learner, seed, native unit vectors, biological distance, forest, physical-marker policy and full populations fixed.
+Keep GLM in E009's teacher, pair proposals and student.
+Keep both communities' ordered ten measured depth columns.
+Reuse all six learning outputs.
+Do not fit, infer embeddings, redetect markers or rebuild original learner graphs.
+
+Implement blocked algebraic search with conservative arithmetic error bounds.
+Rerank every candidate that can cross the numerical boundary with the original subtraction-based function.
+Preserve lexical ties and every query.
+Do not normalize the lifted coordinates.
+Test cancellation, extreme calibration, zero profiles, absent modalities, duplicate coordinates and malformed axes.
+Test actual sparse readers, cache restoration, verified resume, refinement and complete exports.
+Freeze the new source, protocol and compatible reuse rules before changed community partitions.
+A passed synthetic formula is not native admission.
+
+Reuse the four sealed E009 caches only after their source, input, axis and runtime contracts pass.
+Preserve their recorded approximation policy.
+Compute only the failed Oral teacher retrieval and the unrun Oral student retrieval.
+Keep the unchanged 0.90 recall gate and global barrier for all six caches.
+Then run the unchanged grouping, export, audit and input-after stages.
+Preserve all short, marker-negative, unknown/non-target, excluded and unassigned DNA.
+
+I authorize new $11 gross, covered entirely by Welcome credits.
+Allocate $8 to CPU completion and $3 to GPU qualification.
+Check live credit balance, scope, expiry, delayed usage, current prices, product coverage, quotas and complete schedules first.
+Stop before unclear or uncovered charges.
+Do not incur real-money charges.
+Record justified covered revisions under the standing direction.
+Do not renew storage through cost flexibility.
+
+Use the existing E2-standard-8/32 GiB and original 30/300 GiB disks for CPU work.
+Count setup, gates, execution, collection and readback within 20 hours from CPU VM start.
+Set provider STOP to 20.25 hours.
+Keep four numerical threads, 26 GB sampled tree RSS and 25 GiB free.
+Keep at most 4 GiB extra disk and 2 GiB compressed return.
+Price up to 6 GiB of review egress.
+Assess archive and sequential local staging before transfer.
+Keep local review within four threads, 8 GB sampled RSS, 4 GiB extra and 6 GiB free.
+Run one native full-shape throughput/space admission before community release.
+
+Independently qualify the prepared Oral batching path on 128 original views.
+Freeze source-blind IDs and length/token/parent-crop/ambiguity strata before probing.
+Reuse the frozen model, tokenizer, custom source and complete GPU runtime after byte/import checks.
+Compare original and batched recipes under the frozen exposure and numerical contracts.
+Require rtol=1e-5, atol=1e-6, maximum error <=1e-5 and cosine >=0.999999.
+Preserve the older failed Mac allclose journal and its tolerance.
+Measure tokenization, padding, batch shapes, warmup, throughput, VRAM and RSS.
+Do not change attention, precision, exposure or tolerances to pass.
+Do not extract the full Oral bank or run confirmation.
+
+Create at most one temporary g2-standard-8/L4 worker.
+Use a 40 GiB boot disk and 64 GiB work disk.
+Check existing balanced quota >=404 GiB.
+Try Iowa b, then c, only after capacity failure.
+One priced T4/n1-standard-8 attempt in f is the capacity fallback.
+Do not request higher quota or resize original resources.
+Count all GPU setup, probes, collection and readback within 90 minutes from GPU VM start.
+Set its provider STOP to 105 minutes.
+Keep four CPU threads, 26 GB sampled RSS and 10 GiB free work space.
+Cap its compressed return at 256 MiB.
+CPU completion does not depend on GPU capacity.
+Delete only temporary GPU resources after all required evidence passes private readback.
+If delivery fails, stop the worker and preserve its disks within the approved interval.
+
+Push the exact clean prepared branch from Mac.
+Synchronize the CPU repository read-only to that commit.
+Do not copy credentials to the temporary worker.
+Arm a new exit watcher before each release.
+Bind it to the current boot and held parent process.
+Test live, exit, crash and restart refusal.
+Retain each provider STOP as an independent fallback.
+Publish control files atomically.
+Record operational corrections and reuse only verified closed stages.
+Do not repeat accepted science or extend a clock automatically.
+Follow short jobs through collection and independently checked shutdown.
+For healthy longer jobs, check progress, wait a few minutes and report the stage without polling to completion.
+
+After shutdown, check actual exits and archive/member/alias/source/input bytes before new-output diagnostics.
+Use conservative E009 v2 and separately named Oral provided-origin/known-shared policies.
+Keep full 156/799 reference denominators and 3.3034% E009 N quarantine.
+Reuse older metrics without rescoring.
+Report teacher/student, parent/post and full-path GLM-off/on effects separately.
+Report target gains/losses, length/origin/eligibility/depth/marker populations and all unassigned DNA.
+Label RNA-unchecked HQ/MQ/LQ counts as threshold-based.
+Do not tune thresholds or run external binners.
+
+Use the GPU probe to price the full Oral bank prospectively.
+Compare full exposure with one justified common cutoff or controlled derivative if necessary.
+Do not acquire DNA, map reads or acquire confirmation data.
+Keep skin unscored and preserve its outstanding biological, truth, overlap, protocol and cost dependencies.
+Keep both machine bounds and all retention within November 4 at 00:00 Copenhagen.
+Obtain a separate preservation decision before that boundary.
+Update records and relevant checks.
+Commit with structured what changed and why.
+Report costs, limits, the strongest next decision and its exact prompt.

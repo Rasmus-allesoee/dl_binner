@@ -1,0 +1,191 @@
+{
+  "status": "PASS_CREDIT_PRICE_STORAGE_EXPORT",
+  "cost_and_retention_admitted": true,
+  "checked_UTC": "2026-11-01T00:28:22.248047+00:00",
+  "rates": {
+    "Balanced PD Capacity": {
+      "USD": 0.09999999984803326,
+      "unit": "GiBy.mo",
+      "base_unit": "By.s",
+      "base_factor": 2875910101401600.0,
+      "tiers": [
+        {
+          "startUsageAmount": 0,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 657809999
+          }
+        }
+      ],
+      "scope": "Conservative highest current tariff, without conditional free-tier deductions"
+    },
+    "External IP Charge on a Standard VM": {
+      "USD": 0.004999999847983061,
+      "unit": "h",
+      "base_unit": "s",
+      "base_factor": 3600,
+      "tiers": [
+        {
+          "startUsageAmount": 0,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 0
+          }
+        },
+        {
+          "startUsageAmount": 744,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 32890499
+          }
+        }
+      ],
+      "scope": "Conservative highest current tariff, without conditional free-tier deductions"
+    },
+    "E2 Instance Core running in Americas": {
+      "USD": 0.02181158997280002,
+      "unit": "h",
+      "base_unit": "s",
+      "base_factor": 3600,
+      "tiers": [
+        {
+          "startUsageAmount": 0,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 143478820
+          }
+        }
+      ],
+      "scope": "Conservative highest current tariff, without conditional free-tier deductions"
+    },
+    "Storage PD Capacity": {
+      "USD": 0.03999999984800155,
+      "unit": "GiBy.mo",
+      "base_unit": "By.s",
+      "base_factor": 2875910101401600.0,
+      "tiers": [
+        {
+          "startUsageAmount": 0,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 0
+          }
+        },
+        {
+          "startUsageAmount": 30,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 263123999
+          }
+        }
+      ],
+      "scope": "Conservative highest current tariff, without conditional free-tier deductions"
+    },
+    "E2 Instance Ram running in Americas": {
+      "USD": 0.0029235298946519756,
+      "unit": "GiBy.h",
+      "base_unit": "By.s",
+      "base_factor": 3865470566400,
+      "tiers": [
+        {
+          "startUsageAmount": 0,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 19231272
+          }
+        }
+      ],
+      "scope": "Conservative highest current tariff, without conditional free-tier deductions"
+    }
+  },
+  "FX_DKK_USD": 6.578099999996525,
+  "credit": {
+    "checked_UTC": "2026-11-01T00:28:19.982507+00:00",
+    "name": "Free Trial upgraded Welcome credit",
+    "remaining_DKK": 1725.24,
+    "original_DKK": 1973.43,
+    "percent": 87,
+    "status": "Available",
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; see the terms for free trial.",
+    "application": "Net pricing",
+    "paid_account": true,
+    "overview_period": "November 1, 2026 current month",
+    "displayed_gross_DKK": 0,
+    "displayed_savings_DKK": 0,
+    "displayed_net_DKK": 0,
+    "delay_warning": "Costs take a few hours to show up, and might take longer than 24 hours.",
+    "pending_reserve_USD": 35,
+    "browser_tabs": [
+      "1767520298",
+      "1767520301"
+    ],
+    "native_AX_tab_action_errors_preserved": "Native follow-up reported Debugger unattached; documented Playwright DOM reader succeeded. No billing settings changed."
+  },
+  "remaining_USD_after_delayed_reserve": 227.27026040967934,
+  "measured_allocation_seconds": 1569.938,
+  "measured_allocation_hours": 0.4360938888888889,
+  "allocated_vCPU_hours": 3.488751111111111,
+  "compute_IP_USD_hour": 0.2730456762592464,
+  "measured_allocation_compute_IP_gross_estimate_USD": 0.11907355080419134,
+  "overlapping_PD_same_allocation_gross_estimate_USD": 0.018287808214332305,
+  "PD_full_pricing_month_USD": 31.199999949850024,
+  "current_PD_until_retention_estimate_USD": 3.0561766395446393,
+  "original_storage_week_upper_USD": 7.823926231357681,
+  "original_storage_ceiling_USD": 8,
+  "all_version_and_soft_deleted_objects": 212,
+  "all_version_and_soft_deleted_bytes": 68568704156,
+  "new_phase_GCS_bytes": 274653044,
+  "new_phase_GCS_until_retention_upper_USD": 0.0005176178468540837,
+  "archive": {
+    "bytes": 274627567,
+    "sha256": "31b1c427cfb81312ce2f40e05f517e99587259cea61d2d200597abb3461f4149"
+  },
+  "archive_generation": "1793480896411579",
+  "expected_materialized_bytes": 287810384,
+  "maximum_extra_local_bytes": 595992383,
+  "measured_local_free_bytes": 10669178880,
+  "one_archive_download_export_upper_USD": 0.030692022331058978,
+  "operations_allowance_USD": 0.02,
+  "complete_run_storage_review_export_gross_upper_USD": 0.1885709991964367,
+  "remaining_original_phase_USD": 4.811429000803563,
+  "original_new_ceiling_USD": 5,
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "new_compute_authorized_or_started": false,
+  "not_invoice_or_credit_delta": true,
+  "coverage_status": "PASS_FOR_SPECIFIED_ORDINARY_FIRST_PARTY_PRODUCTS_ONLY",
+  "sources": [
+    "https://cloud.google.com/storage/pricing",
+    "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "https://docs.cloud.google.com/billing/v1/how-tos/catalog-api"
+  ],
+  "recorded_UTC": "2026-11-01T01:10:01.966355+00:00",
+  "source_digests": {
+    "artifacts/e028-global-discovery-repair/inspection/finance/current-prices.json": {
+      "bytes": 8003,
+      "sha256": "70a5f35e5c8d48b75614e89b9871747caad7e3a4e4ce24e300f5a1b8932eb494"
+    },
+    "artifacts/e028-global-discovery-repair/inspection/finance/billing-browser.json": {
+      "bytes": 830,
+      "sha256": "6c5b7baae7e8bb6180bd8fbb7f4c748042aff6099058962aadbb70dc591dbf57"
+    }
+  },
+  "all_version_and_soft_deleted_inventory": {
+    "versions": {
+      "bytes": 247400,
+      "sha256": "a89dad7a8ff41ef72fc3bc467f133c5072d1b2c0b9a69a3fb77d8515f236cf61"
+    },
+    "soft_deleted": {
+      "bytes": 32,
+      "sha256": "c3388ed74e1296bcc7f0f38033f2bf7f9ac2798c6c003f0df4d1f37d31e16057"
+    }
+  },
+  "charged_uptime_scope": "Price the reported start/stop interval conservatively. Actual invoice timing/free-tier allocations can differ. Displayed November cost lags; credit delta is not an invoice."
+}

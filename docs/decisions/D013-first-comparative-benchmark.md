@@ -1,5 +1,29 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E028 inspected refusal and next scope, November 1, 2026
+
+[Independent inspection](../../experiments/E028-global-discovery-repair/inspection-observed.json)
+verifies FAILED science and safe shutdown. Native setup/input/source and delivery
+contracts pass. Four E009 retrievals pass, while Oral teacher fails the unchanged
+0.90 gate despite complete candidates. No bins or new recovery scores exist.
+Biological KEEP/MODIFY/ABANDON stays NOT ASSESSABLE.
+
+The [matched source/numerical audit](../evidence/2026-11-01-e028-search-refusal.md)
+keeps all 56 Oral queries, calibration and exact kth scores identical to E027.
+Choose certifiable retrieval before another ANN campaign or a larger learner.
+Preserve the biological score, four passed E009 caches, six learning instances
+and all frozen references. The current inspection needs no VM wake.
+
+[The next coherent block](../../experiments/E028-global-discovery-repair/next-block.md)
+combines reliable cached completion with independent native qualification of the
+prepared Oral batching path. The latter must not wait for a recovery threshold.
+It does not authorize a full bank or claim GPU equivalence from mock tests.
+The proposed new scope is $11: $8 existing-CPU/20-hour work plus $3 temporary GPU/
+90-minute qualification. It needs new execution/resource approval and fresh coverage.
+No old budget or storage date carries over. The inspected phase's conservative
+allocation/storage/export upper is $0.18857 within $5, not a credit-delta invoice.
+The November 4 storage boundary stays. A separate preservation decision is due.
+
 ## E028 authorized cached recovery, October 31, 2026
 
 The owner invokes E027's prompt at `a8f5a34` and authorizes its new $5 cached

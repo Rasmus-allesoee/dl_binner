@@ -4,6 +4,13 @@ October 31, 2026. Local preparation only; no GPU or community inference.
 The owner's new flexibility permits a smaller future development dataset/cutoff,
 not an unrecorded change to E028's full-population cached comparison.
 
+November 1 update: [inspection](inspection-observed.json) closes with a search
+refusal and no biological results. [The next proposal](next-block.md) places one
+native batching qualification alongside reliable cached completion. Its new
+planning scope is $3 / 90 minutes / 105-minute STOP, including setup and collection.
+This supersedes the initial one-hour estimate below. No GPU work or full-bank
+admission occurs during inspection.
+
 ## Implemented execution path
 
 `dl_binner.hybrid.batched` preserves canonical whole-view orientation, both strands,

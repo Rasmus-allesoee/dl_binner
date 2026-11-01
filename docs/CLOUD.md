@@ -1,52 +1,57 @@
 # Google Cloud workspace operations
 
-**October 31 E028 RUNNING: all ten native gates passed, cached science released.**
-[Operations](../experiments/E028-global-discovery-repair/OPERATIONS.md) owns actual
-status and the [native receipt](../experiments/E028-global-discovery-repair/native-observed.json).
-Phase `discovery-20261031T204532Z-45a7590` uses exact clean `45a7590`, fetched
-read-only. The original E2/32 GiB and 30/300 GiB disks started at 20:45:50 UTC;
-release was 20:50:46 UTC. Native source/runtime/cache/full-axis/tiny/schedule gates
-all pass. Initial free space 30.15 GiB, latest about 30.07 GiB. Two serial E009
-no-GLM retrievals finish: teacher recall 0.99852, student 0.99926; every populated
-stratum passes. At 20:54:41 UTC the GLM teacher retrieval is active. No bin or
-quality result is implied. Two early IAP readiness failures during boot are retained;
-SSH then succeeds without credential changes or another VM start.
-No provisioning, resize, quota/service change, acquisition, GPU or retention
-extension is part of this scope. Reuse sealed E027 learning; zero new fits,
-original-neighbor rebuilds, marker detection or external binner runs.
+**November 1: E028 is independently TERMINATED; its scientific workflow FAILED.**
+[Inspection](../experiments/E028-global-discovery-repair/inspection-observed.json)
+and [operations](../experiments/E028-global-discovery-repair/OPERATIONS.md) supersede
+the dated native RUNNING handoff. Phase `discovery-20261031T204532Z-45a7590` uses
+exact source `45a7590`. No wake, resource change, science replay or retention
+extension occurs during inspection. Only the original stopped E2 and disks exist.
 
-The measured local complete forecast is 30,666.721 seconds / 8.52 hours including
-downstream reserve; actual Linux forecast is 16,884.679 seconds / 4.69 hours.
-The pre-start plan selects **12 cumulative hours / 12.25-hour provider STOP**,
-under the same new **$5**. Current full upper
-$4.88090: compute/IP $3.34481, conservative overlapping approved PD $0.53083,
-2 GiB WAN $0.24000, GCS/operations and $0.75 contingency. Actual native complete
-throughput/headroom admission passes; live limits remain authoritative. Existing
-four-thread/26 GB, 25 GiB free / 4 GiB total additional / 2 GiB compressed limits
-stay. Fresh boot/process watcher, native exit/crash/live/restart-refusal tests and
-independent provider STOP pass before release. Collection deadline November 1
-08:45:50 UTC / 09:45:50 Copenhagen; STOP 09:00:50 UTC / 10:00:50 Copenhagen.
-No final allocation, archive acceptance or quality result is claimed while running.
+The original E2-standard-8/32 GiB allocation is October 31 20:45:50.098–21:12:00.036 UTC
+(21:45:50–22:12:00 Copenhagen): **1,569.938 seconds**. Its fresh intended watcher
+observes parent exit, waits its grace and requests shutdown at 21:09:48 UTC.
+Provider STOP remains 44,100 seconds with automatic restart off. Native gates pass,
+but Oral teacher recall fails. Four E009 retrievals pass; the global barrier blocks
+all groups/exports/audits. A stopped VM or a complete archive is not a quality result.
 
-Read-only signed-in credit: **DKK 1,726.30 Available / 87%**, January 12, 2027,
-Certain usage/net pricing; paid account, rounded cost/savings DKK 247 / net zero.
-Displayed usage can lag >24 hours; reserve $35. Current Catalog and existing
-ordinary first-party product coverage pass. All 205 Standard versions total
-68,294,051,112 bytes, soft-deleted zero. Conservative storage week including
-2 GiB new return $7.83195 < original $8. This is a forecast, not invoice or a
-credit-delta attribution. **November 4, 00:00 Copenhagen** stays; original stopped
-disks still cost about $31.20 per pricing month. Refresh finance if stale before
-start; do not use an old successful scope as new authorization.
+The private archive has 274,627,567 bytes, SHA256
+`31b1c427cfb81312ce2f40e05f517e99587259cea61d2d200597abb3461f4149`,
+generation `1793480896411579`. All 542 members/seven aliases and source/release
+controls verify. Guest status and exact private completion agree on FAILED.
+Collection/uploads/readbacks pass. The full source before-use contract passes;
+input-after is absent because science fails. No missing evidence requires a wake.
 
-The new exact clean branch was pushed from Mac and fetched read-only. The new
-locked wheel owns a fresh prefix and reuses the accepted complete numerical
-base without dependency install or data recopy. Actual workers verify package
-origin, since legacy research helpers can insert checkout source into sys.path.
-Actual DAG testing caught overlapping four-thread rules despite nominal budgets;
-explicit serial dependencies now pass real ready-rule/barrier/no-op contracts.
-Fresh boot/process held-parent watcher and independent STOP are mandatory.
-Efficient Oral GLM extraction is local preparation only; later GPU/native/complete
-cost/capacity/retention admission is separate. No confirmation scoring.
+[Current costs](../experiments/E028-global-discovery-repair/cost-observed.json):
+compute/IP $0.11907, overlapping disk interval $0.0183, one verified archive
+export $0.03069. Complete phase/storage/export upper estimate **$0.18857** includes
+an operations reserve and stays within the original new $5. It prices reported
+allocation, not sampled CPU. Conditional free-tier deductions are not presumed.
+It is not an invoice and does not attribute a credit delta to this phase.
+Native workflow sampled CPU is 2,685.76 seconds and peak tree RSS 6.695 GB.
+Whole-run minimum free disk is 29.59 GiB; maximum sampled growth is 0.55 GiB.
+No cleanup or additional disk is needed for the inspected phase.
+
+Fresh signed-in paid Billing shows **DKK 1,725.24 Available / 87%**, January 12, 2027
+expiry and Certain usage/net pricing. November 1 displayed cost/savings/net are
+zero. Usage can lag beyond 24 hours; keep the $35 reserve. Current Catalog rates,
+first-party CPU/PD/GCS/IP/network coverage and exact transfer headroom pass.
+The conservative original storage-week total is $7.82393 < $8, including all object
+versions. Stopped disks still cost about $31.20 per pricing month. Standard GCS
+continues separately. No retention extension follows from unused credits.
+
+The [next proposal](../experiments/E028-global-discovery-repair/next-block.md) uses
+new $8 existing-CPU / 20-hour / 20.25-hour STOP and separate $3 GPU / 90-minute /
+105-minute STOP scopes. The latter requests one temporary L4 worker and 40+64 GiB
+disks, with bounded capacity fallback and verified collection/cleanup. It is not
+provisioned or admitted here. Original E2/disks remain protected. Recheck current
+credits/SKUs/quota/headroom, source/runtime and complete schedules before new work.
+Old launch methods contain historical clocks and retention constants; do not reuse
+those constants as current authority. Use fresh per-phase controls and process identities.
+
+**November 4 at 00:00 Copenhagen remains the hard storage boundary.** Obtain a
+separate preservation decision before it. The bucket has seven-day soft deletion;
+any future cleanup decision must account for its charged retained bytes. No unique
+accepted evidence is deleted by this inspection.
 
 ## Preserved E027 inspection
 

@@ -837,3 +837,25 @@ prospectively with explicit population/competition/short-DNA/denominator limits.
 The current matched repair keeps full Oral data. At 1,000 bp, the 56.3% view-count
 reduction is only about a 22% token reduction; measure the whole extraction
 pipeline rather than assume row count predicts speed. Skin remains unscored.
+
+### November 1, 2026: E028 closed evidence and failed Oral search
+
+[E028 inspection](../../experiments/E028-global-discovery-repair/inspection-observed.json)
+verifies shutdown, source/runtime/input-before and every return byte. Four E009
+retrievals finish. Oral teacher fails sampled recall at 0.86548 overall / 0.58333
+measured-zero. No groups or recovery scores exist. Whole-version, teacher/student,
+parent/post and full-path GLM recovery questions remain open. Missing results are
+not zero. No product feature family is rejected.
+
+The [matched source/numerical audit](../evidence/2026-11-01-e028-search-refusal.md)
+keeps exact query populations, kth scores and calibration unchanged. Complete
+initialization is insufficient. A 215-coordinate expansion passes a synthetic
+check and supports a certifiable blocked search route. Production boundaries,
+native performance and full grouping remain untested. Reuse passed E009 caches
+and finished learning. Do not start another ANN or loss grid.
+
+[The next proposal](../../experiments/E028-global-discovery-repair/next-block.md)
+finishes this evidence and independently qualifies Oral batching on 128 original
+views. Full bank, cutoff/derivative and skin confirmation retain their own truth,
+overlap, protocol, cost and retention admission. November 4 needs a separate
+preservation decision. No VM wake, new science or retention change occurs here.

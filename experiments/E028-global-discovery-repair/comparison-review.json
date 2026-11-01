@@ -1,0 +1,162 @@
+{
+  "kind": "E028 preserved frozen comparison, unavailable biological outcomes",
+  "phase": "discovery-20261031T204532Z-45a7590",
+  "reviewed_UTC": "2026-11-01T01:10:01.966355+00:00",
+  "status": "NOT_ASSESSABLE",
+  "reason": "Oral teacher retrieval fails frozen 0.90 recall gate. Global barrier blocks every grouping/export/audit. Missing bins are unavailable, not zero recovery.",
+  "biological_disposition": "NOT_ASSESSABLE",
+  "technical_disposition": "Global fill insufficient as complete Oral retrieval backend; preserve four passed E009 caches and repair search prospectively.",
+  "outputs": {
+    "E009-noGLM": {
+      "teacher-parent": {
+        "status": "NOT_RUN",
+        "R95": null,
+        "target50": null,
+        "target90": null,
+        "secondary_HQ_MQ_LQ": null
+      },
+      "teacher-post": {
+        "status": "NOT_RUN",
+        "R95": null,
+        "target50": null,
+        "target90": null,
+        "secondary_HQ_MQ_LQ": null
+      },
+      "student-parent": {
+        "status": "NOT_RUN",
+        "R95": null,
+        "target50": null,
+        "target90": null,
+        "secondary_HQ_MQ_LQ": null
+      },
+      "student-post": {
+        "status": "NOT_RUN",
+        "R95": null,
+        "target50": null,
+        "target90": null,
+        "secondary_HQ_MQ_LQ": null
+      }
+    },
+    "E009-GLM": {
+      "teacher-parent": {
+        "status": "NOT_RUN",
+        "R95": null,
+        "target50": null,
+        "target90": null,
+        "secondary_HQ_MQ_LQ": null
+      },
+      "teacher-post": {
+        "status": "NOT_RUN",
+        "R95": null,
+        "target50": null,
+        "target90": null,
+        "secondary_HQ_MQ_LQ": null
+      },
+      "student-parent": {
+        "status": "NOT_RUN",
+        "R95": null,
+        "target50": null,
+        "target90": null,
+        "secondary_HQ_MQ_LQ": null
+      },
+      "student-post": {
+        "status": "NOT_RUN",
+        "R95": null,
+        "target50": null,
+        "target90": null,
+        "secondary_HQ_MQ_LQ": null
+      }
+    },
+    "oral-noGLM": {
+      "teacher-parent": {
+        "status": "NOT_RUN",
+        "R95": null,
+        "target50": null,
+        "target90": null,
+        "secondary_HQ_MQ_LQ": null
+      },
+      "teacher-post": {
+        "status": "NOT_RUN",
+        "R95": null,
+        "target50": null,
+        "target90": null,
+        "secondary_HQ_MQ_LQ": null
+      },
+      "student-parent": {
+        "status": "NOT_RUN",
+        "R95": null,
+        "target50": null,
+        "target90": null,
+        "secondary_HQ_MQ_LQ": null
+      },
+      "student-post": {
+        "status": "NOT_RUN",
+        "R95": null,
+        "target50": null,
+        "target90": null,
+        "secondary_HQ_MQ_LQ": null
+      }
+    }
+  },
+  "full_reference_denominators": {
+    "E009": {
+      "targets": 156,
+      "bp": 554661890,
+      "truth": "admitted conservative v2",
+      "N_quarantine_percent": 3.3034
+    },
+    "oral": {
+      "targets": 799,
+      "bp": 2083072211,
+      "truth": "separately named provided-origin oracle",
+      "known_shared_sensitivity": "Required separately; not exhaustive unique support"
+    }
+  },
+  "criteria_preserved": {
+    "keep": {
+      "E009_GLM_R95_gain_over_E023": 0.005,
+      "oral_noGLM_R95_gain_over_E026": 0.005,
+      "no_target50_or_target90_regression_both": true,
+      "all_engineering_native_DNA_contracts_pass": true
+    },
+    "modify": "Not KEEP, and at least one primary E009-GLM or oral-noGLM R95/target50/target90 metric improves over its frozen anchor. GLM off/on interaction is separately interpreted; it does not change this disposition.",
+    "abandon": "Neither primary arm improves any frozen-anchor R95/target50/target90 metric; this frozen bundle only, not feature families."
+  },
+  "frozen_anchors": {
+    "E009_E023": {
+      "R95": 0.1041634228737078,
+      "target50": 19,
+      "target90": 9
+    },
+    "E009_MetaBAT2": {
+      "R95": 0.08549276749480661,
+      "target50": 16,
+      "target90": 5
+    },
+    "oral_E026": {
+      "R95": 0.1385692600936915,
+      "target50": 108,
+      "target90": 58
+    }
+  },
+  "Oral_MetaBAT2_frozen_context": {
+    "R95": 0.17326008915780214,
+    "target50": 129,
+    "target90": 106,
+    "source": "experiments/E027-common-information-binner/oral-reference-review.json"
+  },
+  "unavailable_diagnostics": [
+    "paired teacher/student and parent/post recovery",
+    "per-target gains/losses",
+    "grouping/forest/marker choices",
+    "full partition DNA accounting",
+    "secondary completeness/contamination-upper-bound HQ/MQ/LQ tiers",
+    "all bin-based length/origin/eligibility/marker/unknown/non-target/unassigned strata"
+  ],
+  "native_source_and_axes": "PASS_BEFORE_USE",
+  "source_after": "NOT_RUN",
+  "new_truth_scores_or_old_baseline_rescores": false,
+  "existing_learning_uncertainty": "Accepted E027 Oral student neighborhood regression and provided-origin pair discordance remain. No new causal biological conclusion is possible here.",
+  "next_block": "next-block.md",
+  "new_VM_run_or_confirmation_acquisition": false
+}

@@ -1,0 +1,344 @@
+{
+  "kind": "E028 actual search accuracy; no bin quality",
+  "recalls": {
+    "E009-noGLM/teacher": {
+      "status": "PASS",
+      "overall": 0.9985185185185185,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667,
+        "long": 1.0
+      },
+      "query_count": 45,
+      "min_query_recall": 0.9666666666666667,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "E009-noGLM/student": {
+      "status": "PASS",
+      "overall": 0.9992592592592593,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667,
+        "long": 1.0
+      },
+      "query_count": 45,
+      "min_query_recall": 0.9666666666666667,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "E009-GLM/teacher": {
+      "status": "PASS",
+      "overall": 0.9992592592592593,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667,
+        "long": 1.0
+      },
+      "query_count": 45,
+      "min_query_recall": 0.9666666666666667,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "E009-GLM/student": {
+      "status": "PASS",
+      "overall": 0.9992592592592593,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667,
+        "long": 1.0
+      },
+      "query_count": 45,
+      "min_query_recall": 0.9666666666666667,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "oral-noGLM/teacher": {
+      "status": "FAILED_RECALL_GATE",
+      "overall": 0.8654761904761905,
+      "strata": {
+        "positive_depth": 0.99375,
+        "measured_zero_depth": 0.5833333333333334,
+        "short": 0.88125,
+        "long": 0.9520833333333333
+      },
+      "query_count": 56,
+      "min_query_recall": 0.23333333333333334,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    }
+  },
+  "numeric_full_axes": {
+    "status": "PASS_ACTUAL_READER_AND_AXES",
+    "caches": {
+      "E009-noGLM/teacher": {
+        "status": "PASS_RETURNED_NUMERIC_AND_SOURCE_AXIS",
+        "full_rows": 145702,
+        "full_bp": 231678157,
+        "selected_rows": 89041,
+        "selected_bp": 209642703,
+        "selected_measured_zero_rows": 0,
+        "selected_measured_zero_bp": 0,
+        "all_zero_full_rows": 13,
+        "full_axis_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+        "features": {
+          "bytes": 42384557,
+          "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+        },
+        "numeric": {
+          "bytes": 26781065,
+          "sha256": "714d538efe0e6ee04fe076b938335bb69c83a0deee83216d0f565bababd63bdc"
+        },
+        "recall_status": "PASS",
+        "search_accuracy_is_not_biological_homogeneity": true,
+        "completed_cache": true
+      },
+      "E009-noGLM/student": {
+        "status": "PASS_RETURNED_NUMERIC_AND_SOURCE_AXIS",
+        "full_rows": 145702,
+        "full_bp": 231678157,
+        "selected_rows": 89041,
+        "selected_bp": 209642703,
+        "selected_measured_zero_rows": 0,
+        "selected_measured_zero_bp": 0,
+        "all_zero_full_rows": 13,
+        "full_axis_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+        "features": {
+          "bytes": 42384557,
+          "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+        },
+        "numeric": {
+          "bytes": 26744411,
+          "sha256": "4195fa534f96b200ae6e697cb0186eb4821855c4635a1366ba6241c4f18297c2"
+        },
+        "recall_status": "PASS",
+        "search_accuracy_is_not_biological_homogeneity": true,
+        "completed_cache": true
+      },
+      "E009-GLM/teacher": {
+        "status": "PASS_RETURNED_NUMERIC_AND_SOURCE_AXIS",
+        "full_rows": 145702,
+        "full_bp": 231678157,
+        "selected_rows": 89041,
+        "selected_bp": 209642703,
+        "selected_measured_zero_rows": 0,
+        "selected_measured_zero_bp": 0,
+        "all_zero_full_rows": 13,
+        "full_axis_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+        "features": {
+          "bytes": 42384557,
+          "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+        },
+        "numeric": {
+          "bytes": 26746209,
+          "sha256": "7635525c4c9957517007e69c74666d1404a0d4ad21bca5ea30385ee5634f4c43"
+        },
+        "recall_status": "PASS",
+        "search_accuracy_is_not_biological_homogeneity": true,
+        "completed_cache": true
+      },
+      "E009-GLM/student": {
+        "status": "PASS_RETURNED_NUMERIC_AND_SOURCE_AXIS",
+        "full_rows": 145702,
+        "full_bp": 231678157,
+        "selected_rows": 89041,
+        "selected_bp": 209642703,
+        "selected_measured_zero_rows": 0,
+        "selected_measured_zero_bp": 0,
+        "all_zero_full_rows": 13,
+        "full_axis_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+        "features": {
+          "bytes": 42384557,
+          "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+        },
+        "numeric": {
+          "bytes": 26727871,
+          "sha256": "78ace8a4a0830f5ee58f8ca7286c61efd4442ef095237c00c79ff09a2a998189"
+        },
+        "recall_status": "PASS",
+        "search_accuracy_is_not_biological_homogeneity": true,
+        "completed_cache": true
+      },
+      "oral-noGLM/teacher": {
+        "status": "PASS_RETURNED_NUMERIC_AND_SOURCE_AXIS",
+        "full_rows": 1286547,
+        "full_bp": 1669981123,
+        "selected_rows": 508763,
+        "selected_bp": 1443827664,
+        "selected_measured_zero_rows": 191567,
+        "selected_measured_zero_bp": 231943792,
+        "all_zero_full_rows": 576144,
+        "full_axis_sha256": "77eb90600172cb24d687302197a613146c008567b6922deb0fcee780dce89a89",
+        "features": {
+          "bytes": 338210613,
+          "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+        },
+        "numeric": {
+          "bytes": 156955369,
+          "sha256": "cfc575df4e636c9b6f2004f82db8e93b8342bbf8dac9cfe72b66e2bfb6b7f745"
+        },
+        "recall_status": "FAILED_RECALL_GATE",
+        "search_accuracy_is_not_biological_homogeneity": true,
+        "completed_cache": false
+      }
+    },
+    "model_inference_or_original_graph_rebuild": false,
+    "raw_native_vectors_not_modified": true,
+    "no_new_truth_score": true
+  },
+  "complete_heap_does_not_imply_correct_retrieval": true,
+  "Oral_matched_previous_audit": {
+    "queries": 56,
+    "calibration_identical": true,
+    "exact_kth_identical": true,
+    "max_abs_exact_kth_difference": 0.0,
+    "improved": 6,
+    "worse": 13,
+    "unchanged": 37,
+    "before": {
+      "status": "FAILED_RECALL_GATE",
+      "overall": 0.8851190476190477,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "measured_zero_depth": 0.6104166666666666,
+        "short": 0.9104166666666667,
+        "long": 0.9895833333333334
+      },
+      "query_count": 56,
+      "min_query_recall": 0.26666666666666666,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "after": {
+      "status": "FAILED_RECALL_GATE",
+      "overall": 0.8654761904761905,
+      "strata": {
+        "positive_depth": 0.99375,
+        "measured_zero_depth": 0.5833333333333334,
+        "short": 0.88125,
+        "long": 0.9520833333333333
+      },
+      "query_count": 56,
+      "min_query_recall": 0.23333333333333334,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "no_old_outputs_rescored": true,
+    "before_binding": {
+      "bytes": 413143,
+      "sha256": "802f41a9493b03fb61a7348f303a4924db9c45696d496e913975dabcecd85f3d"
+    }
+  },
+  "synthetic_algebra": {
+    "status": "PASS_SYNTHETIC_EQUIVALENCE_AND_NONMETRIC_COUNTEREXAMPLE",
+    "rows": 256,
+    "dimensions": 215,
+    "max_abs_expansion_error": 8.243405957841787e-15,
+    "max_abs_compiled_metric_error": 2.220446049250313e-16,
+    "triangle_counterexample": [
+      [
+        0.5843487097907776,
+        0.5843487097907776,
+        0.09016945879860387
+      ],
+      [
+        0.5843487097907776,
+        0.5843487097907776,
+        0.09016945879860387
+      ],
+      [
+        0.09016945879860387,
+        0.09016945879860387,
+        0.09016696346674327
+      ]
+    ],
+    "actual_frozen_metric_source": {
+      "bytes": 20485,
+      "sha256": "4a578b351f641fd43c39a571c8eb7aa19cf295926300eead67fb5b48a2cab83b"
+    },
+    "native_vectors_or_index_or_community_score_consumed": false,
+    "limits": [
+      "Tiny synthetic numerical equivalence is not a full native backend admission or throughput result.",
+      "Production needs conservative floating-point boundary handling and original subtraction-based rerank, including extreme calibration and ties.",
+      "No proof that nonmetric geometry is the sole cause of the retained native misses."
+    ]
+  },
+  "synthetic_kernel_measurements": [
+    {
+      "status": "PASS_SYNTHETIC_KERNEL_ONLY",
+      "platform": "macOS-26.1-x86_64-i386-64bit",
+      "pools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libopenblas",
+          "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ],
+      "query_rows": 64,
+      "candidate_rows": 65536,
+      "dimensions": 215,
+      "dtype": "float64",
+      "warmups": 1,
+      "measured_seconds": [
+        0.09562338200339582,
+        0.07870799199736211,
+        0.08640595100587234
+      ],
+      "one_Oral_pairing_count": 258839790169,
+      "one_Oral_linear_projection_seconds": 5901.130707981373,
+      "native_slowdown_planning_factor": 4,
+      "two_Oral_plus_setup_group_export_collection_seconds": 54409.045663850986,
+      "non_kernel_reserve_seconds": 7200,
+      "no_community_vectors_truth_or_index": true,
+      "limits": [
+        "Not a native full-shape or full search throughput measurement.",
+        "Does not implement candidate-boundary certificates, original-distance rerank, complete exporters or resource-monitored native restore.",
+        "Quadratic compute remains; a small query block avoids quadratic persistent storage, not quadratic arithmetic."
+      ]
+    },
+    {
+      "status": "PASS_SYNTHETIC_KERNEL_ONLY",
+      "platform": "macOS-26.1-x86_64-i386-64bit",
+      "pools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libopenblas",
+          "filepath": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ],
+      "query_rows": 64,
+      "candidate_rows": 65536,
+      "dimensions": 215,
+      "dtype": "float64",
+      "warmups": 1,
+      "measured_seconds": [
+        0.1017725959973177,
+        0.07229489700694103,
+        0.06769140998949297
+      ],
+      "one_Oral_pairing_count": 258839790169,
+      "one_Oral_linear_projection_seconds": 6280.612323975592,
+      "native_slowdown_planning_factor": 4,
+      "two_Oral_plus_setup_group_export_collection_seconds": 57444.89859180473,
+      "non_kernel_reserve_seconds": 7200,
+      "no_community_vectors_truth_or_index": true,
+      "limits": [
+        "Synthetic kernel projection, not native full-shape/full-stage throughput.",
+        "Numerical boundary certificates and original rerank are not implemented.",
+        "Blocking bounds memory; pair arithmetic remains quadratic."
+      ]
+    }
+  ],
+  "original_Mac_inference_allclose_failure_and_tolerance": "PRESERVED; cached numeric readers and formula tests do not repair it.",
+  "interpretation": "Global fill fixes heap completeness and all four E009 consumers, but fails Oral accuracy. Nonmetric geometry is a plausible contributor, not proven sole cause. No source/runtime/axis error is established by the reviewed evidence."
+}

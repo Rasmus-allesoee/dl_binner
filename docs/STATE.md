@@ -1,64 +1,75 @@
 # Current Research State
 
-Updated: October 31, 2026 (Copenhagen). This is the single current handoff.
+Updated: November 1, 2026 (Copenhagen). This is the single current handoff.
 
-**E028 is RUNNING after all ten native gates passed; no new quality result yet.**
+**E028 FAILED its Oral retrieval gate. The VM is independently TERMINATED.**
+[Inspection](../experiments/E028-global-discovery-repair/inspection-observed.json)
+supersedes the preserved dated RUNNING receipt for
+`discovery-20261031T204532Z-45a7590`, exact source `45a7590`.
 [Operations](../experiments/E028-global-discovery-repair/OPERATIONS.md) owns the
-exact following prompt for `discovery-20261031T204532Z-45a7590`.
-[Native receipt](../experiments/E028-global-discovery-repair/native-observed.json)
-binds exact clean source `45a7590` on `global-discovery-repair`, based on inspected
-E027 `a8f5a34`. The existing E2 started October 31 at 20:45:50 UTC; release was
-20:50:46 UTC. At 20:54:41 UTC the first two E009 no-GLM retrievals report PASS:
-teacher recall 0.99852, student 0.99926; every populated stratum exceeds 0.90.
-Both complete the 89,041-row exact rerank, then the E009 GLM teacher retrieval
-starts. No bin or recovery outcome is admitted by this launch receipt; the
-all-six cache barrier and independent final admission remain pending.
+new exact following prompt. No VM wake or scientific replay occurred in inspection.
 
-Actual Linux library/source, complete runtime, installed readers/fixtures, serial
-tiny DAG, all retained input/learning/axis contracts and native forecast pass.
-The 4,096-row native probe gives recall 1.0 in every frozen stratum and forecasts
-16,884.679 seconds / 4.69 hours including downstream/collection reserve. The fresh
-boot/PID/start-ticks/command watcher passes normal/crash/live/restart-refusal tests;
-provider STOP is independently read back. Latest free space is about 30.07 GiB.
-For this healthy long job, leave supervision intact; after termination inspect
-actual exits, private completion and archive/member bytes before diagnostics.
+All ten native gates pass. Four E009 retrieval caches seal successfully, with
+sampled recall 0.99852/0.99926 (no GLM) and 0.99926/0.99926 (GLM). Oral teacher
+runs all 15 ANN iterations and completes its 508,763-row rerank. Its complete
+proposals still give recall 0.86548 overall / 0.58333 measured-zero / 0.88125 short,
+below the unchanged 0.90 gate. The [matched audits](../experiments/E028-global-discovery-repair/retrieval-diagnostics.json)
+keep all 56 query IDs, calibration and exact kth scores identical to E027.
+Six queries improve, 13 worsen, 37 stay unchanged. No old recovery score is recomputed.
 
-The [frozen repair](../experiments/E028-global-discovery-repair/design.md) fills
-the partial joint-search initialization globally, while preserving all E027
-learning, native vectors/learner graphs, biological metric, seed and grouping/
-marker policy. All six unchanged 0.90 retrieval proofs precede any bin. The real
-4,096-row synthetic probe passes every stratum at 1.0. Real installed sparse/
-refinement/export/cache/refusal, full runtime and actual serial DAG/barrier/no-op/
-collection checks pass. Synthetic vector/marker fixtures and the analytic GLM
-model are explicitly identified. All 62 inherited package members remain byte
-identical; the new wheel owns 65 files and reuses 41 numerical distributions.
-The actual scientific workers pin the installed package before legacy helper
-source overlays can interfere. Original source freezes and Mac tolerance stay.
+The global barrier prevents all six grouping jobs. Oral student retrieval,
+three exports, three audits and input-after verification never run. [Biological
+KEEP/MODIFY/ABANDON is NOT ASSESSABLE](../experiments/E028-global-discovery-repair/comparison-review.json).
+Parent/post recovery, target gains/losses and secondary quality tiers are
+unavailable, not zero. Keep E023 E009 **10.4163%**, E009 MetaBAT2 **8.5493%**,
+E026 Oral **13.8569%** and E027 Oral MetaBAT2 **17.3260%** as frozen references.
+No product feature family is decided by this failed consumer.
 
-[Resource reassessment](../experiments/E028-global-discovery-repair/resource-plan.json)
-uses 12 cumulative hours / 12.25-hour STOP under the new $5 scope: the actual
-local forecast needs 8.52 hours plus native setup, so the initial six-hour envelope
-was revised before start under standing owner direction. Collection deadline is
-November 1 at 08:45:50 UTC / 09:45:50 Copenhagen; provider STOP is 09:00:50 UTC /
-10:00:50 Copenhagen. Full current upper quote
-$4.88090 includes reserve; four threads / 26 GB sampled RSS, original E2/32 GiB,
-30/300 GiB disks, 25 GiB free reserve, 4 GiB total extra and 2 GiB compressed return
-remain. Current Welcome DKK 1,726.30 Available / 87%, January 12, 2027 expiry,
-net displayed zero, $35 pending reserve. All-current storage week plus new return
-$7.83195 < original $8. **November 4, 00:00 Copenhagen** remains hard; no resource,
-acquisition, external campaign, new training or retention extension.
+Archive/member/alias/source/release/runtime/shutdown proofs pass. Actual sparse
+readers independently verify the full ID and ordered ten-sample axes. Oral has
+191,567 measured-zero eligible contigs / 231,943,792 bp; E009 has none.
+The source before-use contract verifies 191 files and 15 unused arrays by size
+and accepted seals. It does not assert an unperformed global input-after check.
+Old native vectors/learning, accepted data/truth and failed journals remain intact.
+The original Mac inference allclose failure/tolerance remains unchanged.
 
-[Oral GLM batching](../experiments/E028-global-discovery-repair/oral-GLM-plan.md)
-is implemented/tested locally, preserving exact views/chunks/strands/token/pooling
-exposure with a separately identified new bank schema. Published-tokenizer and
-real padding/pooling tests use an analytic model; actual DNABERT/GPU equivalence
-and throughput remain unadmitted. A native probe is the concrete next extraction
-milestone. The owner permits prospectively frozen smaller Oral derivatives or
-practical cutoffs; prefer full-exposure batching when practical. A 1,000 bp cutoff
-removes 56.3% of views but only 21.3% of exposure and about 22% of projected tokens,
-so row count is not GPU-time savings. This repair keeps complete Oral data fixed.
-Any future reduction needs explicit common availability, full denominators/short
-DNA accounting and appropriately limited claims. Skin remains unscored.
+[Measured allocation](../experiments/E028-global-discovery-repair/cost-observed.json)
+is 1,569.938 seconds, October 31 20:45:50–21:12:00 UTC
+(21:45:50–22:12:00 Copenhagen). Conservative compute/IP price is $0.11907,
+with overlapping disks $0.0183 and one archive export $0.03069. The complete
+phase/storage/export upper case is **$0.18857**, including an operations reserve,
+within the original $5. This is a priced estimate, not an invoice or credit delta.
+Latest Welcome credit is **DKK 1,725.24 Available / 87%**, expires January 12, 2027.
+November's displayed net is zero, with >24-hour possible delay; keep $35 reserve.
+Native peak sampled tree RSS is 6.695 GB; minimum free disk is 29.59 GiB.
+No resource increase or cleanup was needed.
+
+**Strongest next block:** [certifiable frozen-score retrieval and completion,
+with independent Oral batching qualification](../experiments/E028-global-discovery-repair/next-block.md).
+A complete ANN heap is insufficient. The current score is nonmetric. A tested
+synthetic algebraic expansion maps its exact squared score to a query constant
+plus a 215-coordinate inner product. It supports a blocked exact fallback without
+changing biology. Production boundary/tie/error handling and native full-shape
+admission are still unimplemented. This is not a new model or measured speedup.
+Reuse the four sealed E009 caches after verification. Compute only the unpassed
+Oral teacher and unrun Oral student retrievals, then the unchanged selection/exports.
+Do not repeat fits, markers, original graphs or a seed/resolution campaign.
+
+The proposed next scope is **new $11 gross**: $8 existing-CPU completion with a
+20-hour clock / 20.25-hour STOP, plus $3 for one temporary GPU batching probe
+with 90 minutes / 105-minute STOP. It needs the owner's new execution/resource
+scope and fresh credit/price/quota/retention admission. It does not renew storage.
+Local kernel estimates are conservative planning evidence, not native throughput.
+The GPU probe must keep exact view/chunk/strand/token/pooling exposure and frozen
+numerical requirements. Full Oral GLM extraction and confirmation remain separate.
+
+Prefer full-quality Oral batching if native throughput makes it practical.
+A prospective common 1,000 bp cutoff removes 56.3% of views but only about 22%
+of projected tokens. Do not apply a reduction to hide this search failure.
+Skin stays unscored with the frozen 610-target / 313 exact-Oral-overlap / 297
+other-genome choice and outstanding biological/unique-truth/depth/protocol admissions.
+**November 4 at 00:00 Copenhagen remains the hard storage boundary.**
+A separate preservation/retention decision is due before that date.
 
 ## Preserved E027 inspection
 
@@ -91,7 +102,7 @@ Full denominators, known-shared sensitivity and all excluded/unassigned DNA rema
 threshold tiers are not formal MIMAG HQ. E009 E023 **10.4163% / 19 / nine** and
 retained MetaBAT2 **8.5493% / 16 / five** remain immutable references.
 
-**Strongest next block:** [repair global joint-search discovery and complete the
+**Superseded E027 recommendation:** [repair global joint-search discovery and complete the
 cached common-version comparison](evidence/2026-10-31-e027-discovery-and-next-block.md),
 reusing all six finished learning instances/native vectors/learner graphs/markers.
 A partial old-geometry warm start bypasses the pinned library's random fill;

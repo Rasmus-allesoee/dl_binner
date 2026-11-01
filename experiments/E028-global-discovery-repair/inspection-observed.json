@@ -1,0 +1,2584 @@
+{
+  "kind": "E028 independent stopped-return inspection",
+  "phase": "discovery-20261031T204532Z-45a7590",
+  "source": {
+    "status": "PASS_EXECUTED_SOURCE_NATIVE_BEFORE_INPUTS",
+    "commit": "45a759051f91ee42f08f4bd0557bb9c68a7455bc",
+    "source_files": 56,
+    "native_gates": 10,
+    "native_gates_exits": {
+      "workflow-origin": 0,
+      "accepted-numerical": 0,
+      "package-install": 0,
+      "owned-complete-runtime": 0,
+      "actual-ANN-source": 0,
+      "installed-discovery": 0,
+      "installed-batched-engineering": 0,
+      "serial-cached-tiny-DAG": 0,
+      "restore-complete-inputs": 0,
+      "synthetic-width-runtime": 0
+    },
+    "owned_package_files": 65,
+    "numerical_distributions": 41,
+    "axes": {
+      "E009-noGLM": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ],
+        "core_rows": 9812,
+        "GLM_in_teacher_proposals_student": false
+      },
+      "E009-GLM": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ],
+        "core_rows": 9812,
+        "GLM_in_teacher_proposals_student": true
+      },
+      "oral-noGLM": {
+        "rows": 1286547,
+        "bp": 1669981123,
+        "eligible": 508763,
+        "samples": [
+          "oral_sample_6",
+          "oral_sample_7",
+          "oral_sample_8",
+          "oral_sample_13",
+          "oral_sample_14",
+          "oral_sample_15",
+          "oral_sample_16",
+          "oral_sample_17",
+          "oral_sample_18",
+          "oral_sample_19"
+        ],
+        "core_rows": 60211,
+        "GLM_in_teacher_proposals_student": false
+      }
+    },
+    "hash_verified_files": 191,
+    "unused_admitted_arrays_stat_only": 15,
+    "used_input_after_present": false,
+    "scope": "Before-use native contracts; no claim of whole-VM after-state"
+  },
+  "shutdown": {
+    "status": "PASS_INDEPENDENT_STOP_AND_DELIVERY",
+    "provider": "TERMINATED",
+    "science_status": "FAILED",
+    "science_completed": false,
+    "stage_exits": {
+      "workflow": 1,
+      "collect": 0,
+      "upload-e028-evidence.tar.gz": 0,
+      "readback-e028-evidence.tar.gz": 0,
+      "upload-e028-evidence.tar.gz.sha256": 0,
+      "readback-e028-evidence.tar.gz.sha256": 0,
+      "upload-collection.json": 0,
+      "readback-collection.json": 0,
+      "upload-collection-disk.jsonl": 0,
+      "readback-collection-disk.jsonl": 0,
+      "upload-terminal-disk.json": 0,
+      "readback-terminal-disk.json": 0
+    },
+    "intended_watchdog_process_verified": true,
+    "measured_allocation_seconds": 1569.938,
+    "guest_private_completion_verified": true
+  },
+  "stages": {
+    "retrieval/E009-noGLM/teacher": {
+      "status": "PASS",
+      "members": 8,
+      "packing": {
+        "rows": 89041,
+        "status": "PASS"
+      },
+      "initialization": {
+        "initialization_sha256": "1928beb779625d5bb75732b436b4d6d63a803361b363c91e6c029267e7963132",
+        "library_source": {
+          "bytes": 83456,
+          "sha256": "6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521"
+        },
+        "missing_entries": 0,
+        "policy": {
+          "biological_policy": {
+            "audit_queries": 32,
+            "audit_stratum_queries": 16,
+            "batch_rows": 512,
+            "calibration_pairs": 8192,
+            "discovery_neighbors": 61,
+            "distance_floor": 1e-06,
+            "exact_threshold": 2048,
+            "index_delta": 0.001,
+            "index_iterations": 15,
+            "length_scale_bp": 2500,
+            "marker_excess_penalty": 5.0,
+            "max_candidates": 60,
+            "min_bin_bp": 10000,
+            "min_bin_contigs": 1,
+            "min_neighbor_recall": 0.9,
+            "min_samples": 10,
+            "neighbors": 30,
+            "neutral_squared_distance": 1.0,
+            "reliable_marker_weight": 0.8,
+            "seed": 11,
+            "singleton_min_bp": 200000,
+            "singleton_min_reliable_families": 2,
+            "version": 1
+          },
+          "exact_rerank_and_recall": "unchanged E027 query/stratum/float64/gate rule",
+          "initialization": "self_native30_unique_uniform_global_fill",
+          "native_library": "pynndescent==0.5.13",
+          "order": "eligible opaque IDs lexical; one PCG64 seed11 row-major stream",
+          "seed": 11,
+          "version": 1
+        },
+        "seed_inputs": "opaque selected axis and retained native neighbors only",
+        "shape": [
+          89041,
+          61
+        ],
+        "status": "PASS_COMPLETE_GLOBAL_INITIALIZATION"
+      },
+      "proposal-audit": {
+        "examples": [],
+        "examples_limit": 32,
+        "full_census_retained": true,
+        "invalid_rows": 0,
+        "missing_or_out_of_range_entries": 0,
+        "status": "PASS"
+      },
+      "recall": {
+        "status": "PASS",
+        "overall": 0.9985185185185185,
+        "strata": {
+          "positive_depth": 0.9979166666666667,
+          "short": 0.9979166666666667,
+          "long": 1.0
+        },
+        "query_count": 45,
+        "min_query_recall": 0.9666666666666667,
+        "threshold": 0.9,
+        "biological_quality_assessed": false
+      }
+    },
+    "retrieval/E009-noGLM/student": {
+      "status": "PASS",
+      "members": 8,
+      "packing": {
+        "rows": 89041,
+        "status": "PASS"
+      },
+      "initialization": {
+        "initialization_sha256": "e5a2aabe8747d09c3e1fad03bc2545b2c860d9247083e498e2cda523fd735bd9",
+        "library_source": {
+          "bytes": 83456,
+          "sha256": "6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521"
+        },
+        "missing_entries": 0,
+        "policy": {
+          "biological_policy": {
+            "audit_queries": 32,
+            "audit_stratum_queries": 16,
+            "batch_rows": 512,
+            "calibration_pairs": 8192,
+            "discovery_neighbors": 61,
+            "distance_floor": 1e-06,
+            "exact_threshold": 2048,
+            "index_delta": 0.001,
+            "index_iterations": 15,
+            "length_scale_bp": 2500,
+            "marker_excess_penalty": 5.0,
+            "max_candidates": 60,
+            "min_bin_bp": 10000,
+            "min_bin_contigs": 1,
+            "min_neighbor_recall": 0.9,
+            "min_samples": 10,
+            "neighbors": 30,
+            "neutral_squared_distance": 1.0,
+            "reliable_marker_weight": 0.8,
+            "seed": 11,
+            "singleton_min_bp": 200000,
+            "singleton_min_reliable_families": 2,
+            "version": 1
+          },
+          "exact_rerank_and_recall": "unchanged E027 query/stratum/float64/gate rule",
+          "initialization": "self_native30_unique_uniform_global_fill",
+          "native_library": "pynndescent==0.5.13",
+          "order": "eligible opaque IDs lexical; one PCG64 seed11 row-major stream",
+          "seed": 11,
+          "version": 1
+        },
+        "seed_inputs": "opaque selected axis and retained native neighbors only",
+        "shape": [
+          89041,
+          61
+        ],
+        "status": "PASS_COMPLETE_GLOBAL_INITIALIZATION"
+      },
+      "proposal-audit": {
+        "examples": [],
+        "examples_limit": 32,
+        "full_census_retained": true,
+        "invalid_rows": 0,
+        "missing_or_out_of_range_entries": 0,
+        "status": "PASS"
+      },
+      "recall": {
+        "status": "PASS",
+        "overall": 0.9992592592592593,
+        "strata": {
+          "positive_depth": 0.9979166666666667,
+          "short": 0.9979166666666667,
+          "long": 1.0
+        },
+        "query_count": 45,
+        "min_query_recall": 0.9666666666666667,
+        "threshold": 0.9,
+        "biological_quality_assessed": false
+      }
+    },
+    "retrieval/E009-GLM/teacher": {
+      "status": "PASS",
+      "members": 8,
+      "packing": {
+        "rows": 89041,
+        "status": "PASS"
+      },
+      "initialization": {
+        "initialization_sha256": "cf1dee16a7f86ecc7d665eb714b3196a5e9f7b151caed011d7d332174a0c78d8",
+        "library_source": {
+          "bytes": 83456,
+          "sha256": "6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521"
+        },
+        "missing_entries": 0,
+        "policy": {
+          "biological_policy": {
+            "audit_queries": 32,
+            "audit_stratum_queries": 16,
+            "batch_rows": 512,
+            "calibration_pairs": 8192,
+            "discovery_neighbors": 61,
+            "distance_floor": 1e-06,
+            "exact_threshold": 2048,
+            "index_delta": 0.001,
+            "index_iterations": 15,
+            "length_scale_bp": 2500,
+            "marker_excess_penalty": 5.0,
+            "max_candidates": 60,
+            "min_bin_bp": 10000,
+            "min_bin_contigs": 1,
+            "min_neighbor_recall": 0.9,
+            "min_samples": 10,
+            "neighbors": 30,
+            "neutral_squared_distance": 1.0,
+            "reliable_marker_weight": 0.8,
+            "seed": 11,
+            "singleton_min_bp": 200000,
+            "singleton_min_reliable_families": 2,
+            "version": 1
+          },
+          "exact_rerank_and_recall": "unchanged E027 query/stratum/float64/gate rule",
+          "initialization": "self_native30_unique_uniform_global_fill",
+          "native_library": "pynndescent==0.5.13",
+          "order": "eligible opaque IDs lexical; one PCG64 seed11 row-major stream",
+          "seed": 11,
+          "version": 1
+        },
+        "seed_inputs": "opaque selected axis and retained native neighbors only",
+        "shape": [
+          89041,
+          61
+        ],
+        "status": "PASS_COMPLETE_GLOBAL_INITIALIZATION"
+      },
+      "proposal-audit": {
+        "examples": [],
+        "examples_limit": 32,
+        "full_census_retained": true,
+        "invalid_rows": 0,
+        "missing_or_out_of_range_entries": 0,
+        "status": "PASS"
+      },
+      "recall": {
+        "status": "PASS",
+        "overall": 0.9992592592592593,
+        "strata": {
+          "positive_depth": 0.9979166666666667,
+          "short": 0.9979166666666667,
+          "long": 1.0
+        },
+        "query_count": 45,
+        "min_query_recall": 0.9666666666666667,
+        "threshold": 0.9,
+        "biological_quality_assessed": false
+      }
+    },
+    "retrieval/E009-GLM/student": {
+      "status": "PASS",
+      "members": 8,
+      "packing": {
+        "rows": 89041,
+        "status": "PASS"
+      },
+      "initialization": {
+        "initialization_sha256": "8dac0ef53c4e3bc64cd0b28ba65642a396550b96ebd9ed62344129b421624b82",
+        "library_source": {
+          "bytes": 83456,
+          "sha256": "6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521"
+        },
+        "missing_entries": 0,
+        "policy": {
+          "biological_policy": {
+            "audit_queries": 32,
+            "audit_stratum_queries": 16,
+            "batch_rows": 512,
+            "calibration_pairs": 8192,
+            "discovery_neighbors": 61,
+            "distance_floor": 1e-06,
+            "exact_threshold": 2048,
+            "index_delta": 0.001,
+            "index_iterations": 15,
+            "length_scale_bp": 2500,
+            "marker_excess_penalty": 5.0,
+            "max_candidates": 60,
+            "min_bin_bp": 10000,
+            "min_bin_contigs": 1,
+            "min_neighbor_recall": 0.9,
+            "min_samples": 10,
+            "neighbors": 30,
+            "neutral_squared_distance": 1.0,
+            "reliable_marker_weight": 0.8,
+            "seed": 11,
+            "singleton_min_bp": 200000,
+            "singleton_min_reliable_families": 2,
+            "version": 1
+          },
+          "exact_rerank_and_recall": "unchanged E027 query/stratum/float64/gate rule",
+          "initialization": "self_native30_unique_uniform_global_fill",
+          "native_library": "pynndescent==0.5.13",
+          "order": "eligible opaque IDs lexical; one PCG64 seed11 row-major stream",
+          "seed": 11,
+          "version": 1
+        },
+        "seed_inputs": "opaque selected axis and retained native neighbors only",
+        "shape": [
+          89041,
+          61
+        ],
+        "status": "PASS_COMPLETE_GLOBAL_INITIALIZATION"
+      },
+      "proposal-audit": {
+        "examples": [],
+        "examples_limit": 32,
+        "full_census_retained": true,
+        "invalid_rows": 0,
+        "missing_or_out_of_range_entries": 0,
+        "status": "PASS"
+      },
+      "recall": {
+        "status": "PASS",
+        "overall": 0.9992592592592593,
+        "strata": {
+          "positive_depth": 0.9979166666666667,
+          "short": 0.9979166666666667,
+          "long": 1.0
+        },
+        "query_count": 45,
+        "min_query_recall": 0.9666666666666667,
+        "threshold": 0.9,
+        "biological_quality_assessed": false
+      }
+    },
+    "retrieval/oral-noGLM/teacher": {
+      "status": "PARTIAL_UNSEALED",
+      "retained_members": 7,
+      "packing": {
+        "rows": 508763,
+        "status": "PASS"
+      },
+      "initialization": {
+        "initialization_sha256": "5c8826e3773f33453f8c5065dd7d1d92b14a7057250d203fd019b3f3a5aae20e",
+        "library_source": {
+          "bytes": 83456,
+          "sha256": "6e9e29ef1e7b05efb6c197cc44754a9b6acdeb6abce8020bb1a0bc1e97ddd521"
+        },
+        "missing_entries": 0,
+        "policy": {
+          "biological_policy": {
+            "audit_queries": 32,
+            "audit_stratum_queries": 16,
+            "batch_rows": 512,
+            "calibration_pairs": 8192,
+            "discovery_neighbors": 61,
+            "distance_floor": 1e-06,
+            "exact_threshold": 2048,
+            "index_delta": 0.001,
+            "index_iterations": 15,
+            "length_scale_bp": 2500,
+            "marker_excess_penalty": 5.0,
+            "max_candidates": 60,
+            "min_bin_bp": 10000,
+            "min_bin_contigs": 1,
+            "min_neighbor_recall": 0.9,
+            "min_samples": 10,
+            "neighbors": 30,
+            "neutral_squared_distance": 1.0,
+            "reliable_marker_weight": 0.8,
+            "seed": 11,
+            "singleton_min_bp": 200000,
+            "singleton_min_reliable_families": 2,
+            "version": 1
+          },
+          "exact_rerank_and_recall": "unchanged E027 query/stratum/float64/gate rule",
+          "initialization": "self_native30_unique_uniform_global_fill",
+          "native_library": "pynndescent==0.5.13",
+          "order": "eligible opaque IDs lexical; one PCG64 seed11 row-major stream",
+          "seed": 11,
+          "version": 1
+        },
+        "seed_inputs": "opaque selected axis and retained native neighbors only",
+        "shape": [
+          508763,
+          61
+        ],
+        "status": "PASS_COMPLETE_GLOBAL_INITIALIZATION"
+      },
+      "proposal-audit": {
+        "examples": [],
+        "examples_limit": 32,
+        "full_census_retained": true,
+        "invalid_rows": 0,
+        "missing_or_out_of_range_entries": 0,
+        "status": "PASS"
+      },
+      "recall": {
+        "status": "FAILED_RECALL_GATE",
+        "overall": 0.8654761904761905,
+        "strata": {
+          "positive_depth": 0.99375,
+          "measured_zero_depth": 0.5833333333333334,
+          "short": 0.88125,
+          "long": 0.9520833333333333
+        },
+        "query_count": 56,
+        "min_query_recall": 0.23333333333333334,
+        "threshold": 0.9,
+        "biological_quality_assessed": false
+      }
+    },
+    "retrieval/oral-noGLM/student": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "barrier": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "groups/E009-noGLM/teacher": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "groups/E009-noGLM/student": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "groups/E009-GLM/teacher": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "groups/E009-GLM/student": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "groups/oral-noGLM/teacher": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "groups/oral-noGLM/student": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "E009-noGLM/export": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "E009-GLM/export": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "oral-noGLM/export": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "E009-noGLM/audit": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "E009-GLM/audit": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    },
+    "oral-noGLM/audit": {
+      "status": "NOT_RUN",
+      "retained_members": 0
+    }
+  },
+  "completed_stages": [
+    "retrieval/E009-noGLM/teacher",
+    "retrieval/E009-noGLM/student",
+    "retrieval/E009-GLM/teacher",
+    "retrieval/E009-GLM/student"
+  ],
+  "final_target_complete": false,
+  "used_inputs_after_present": false,
+  "archive": {
+    "status": "PASS_RETURNED_NUMERIC_AND_SOURCE_AXIS",
+    "full_rows": 1286547,
+    "full_bp": 1669981123,
+    "selected_rows": 508763,
+    "selected_bp": 1443827664,
+    "selected_measured_zero_rows": 191567,
+    "selected_measured_zero_bp": 231943792,
+    "all_zero_full_rows": 576144,
+    "full_axis_sha256": "77eb90600172cb24d687302197a613146c008567b6922deb0fcee780dce89a89",
+    "features": {
+      "bytes": 338210613,
+      "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+    },
+    "numeric": {
+      "bytes": 156955369,
+      "sha256": "cfc575df4e636c9b6f2004f82db8e93b8342bbf8dac9cfe72b66e2bfb6b7f745"
+    },
+    "recall_status": "FAILED_RECALL_GATE",
+    "search_accuracy_is_not_biological_homogeneity": true,
+    "completed_cache": false
+  },
+  "candidate_quality_status": "NOT_ASSESSABLE",
+  "biological_KEEP_MODIFY_ABANDON": "NOT_ASSESSABLE",
+  "matched_Oral_search_receipts": {
+    "queries": 56,
+    "calibration_identical": true,
+    "exact_kth_identical": true,
+    "max_abs_exact_kth_difference": 0.0,
+    "improved": 6,
+    "worse": 13,
+    "unchanged": 37,
+    "before": {
+      "status": "FAILED_RECALL_GATE",
+      "overall": 0.8851190476190477,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "measured_zero_depth": 0.6104166666666666,
+        "short": 0.9104166666666667,
+        "long": 0.9895833333333334
+      },
+      "query_count": 56,
+      "min_query_recall": 0.26666666666666666,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "after": {
+      "status": "FAILED_RECALL_GATE",
+      "overall": 0.8654761904761905,
+      "strata": {
+        "positive_depth": 0.99375,
+        "measured_zero_depth": 0.5833333333333334,
+        "short": 0.88125,
+        "long": 0.9520833333333333
+      },
+      "query_count": 56,
+      "min_query_recall": 0.23333333333333334,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "rows": [
+      {
+        "id": "C0733bb152ba6e1306c83c8d7d1520a33260fe1a64c8959dfbd96286e27e57f20",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.5509627154579294,
+        "kth_exact_after": 0.5509627154579294
+      },
+      {
+        "id": "C09fe6b39fa035a4c5b61d6d43e8e66df450742496b68f0fcedb15ba6ac3e00f0",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.4658983255940616,
+        "kth_exact_after": 0.4658983255940616
+      },
+      {
+        "id": "C142a15568461682cbdad241904cc23917fe1861eb8ec1bf8c73c2814a2433004",
+        "before": 0.5333333333333333,
+        "after": 0.6333333333333333,
+        "delta": 0.09999999999999998,
+        "kth_exact_before": 0.6163624660394509,
+        "kth_exact_after": 0.6163624660394509
+      },
+      {
+        "id": "C2149d23e2b3fb53c592231768516256ee245a77d22199f6b9751efa785992189",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.85606663430982,
+        "kth_exact_after": 0.85606663430982
+      },
+      {
+        "id": "C214c4e7c97c6d042ad0e82ac78ec502486eda86d46bcb508ea50efbbb2c40773",
+        "before": 0.9666666666666667,
+        "after": 1.0,
+        "delta": 0.033333333333333326,
+        "kth_exact_before": 0.34292798392176294,
+        "kth_exact_after": 0.34292798392176294
+      },
+      {
+        "id": "C234919185afb42eb1d76fed6bb69576e6a879a69952b39ad7e2452b9f8910b36",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.44688963324041553,
+        "kth_exact_after": 0.44688963324041553
+      },
+      {
+        "id": "C2428a54908212c8a7ada01d11cd8e62b6c29f96542043e172ed471efd83c8b8d",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.3384894273674631,
+        "kth_exact_after": 0.3384894273674631
+      },
+      {
+        "id": "C27f09c4e1df3a8bf9d1b4b5104149c6fd3c957a5b83ffc53916053da0baa8918",
+        "before": 0.4,
+        "after": 0.23333333333333334,
+        "delta": -0.16666666666666669,
+        "kth_exact_before": 0.6363387046917324,
+        "kth_exact_after": 0.6363387046917324
+      },
+      {
+        "id": "C2b110d1df42b145367176102d2ec554aa7fcc97ca15d35cef8f2684edc416bf1",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.3694391470885298,
+        "kth_exact_after": 0.3694391470885298
+      },
+      {
+        "id": "C2d49814dbd60f53e8e314a04ec297eb763c22c64ed435c7ddb06a36798d56bf5",
+        "before": 0.8,
+        "after": 0.7666666666666667,
+        "delta": -0.033333333333333326,
+        "kth_exact_before": 0.5672851558845057,
+        "kth_exact_after": 0.5672851558845057
+      },
+      {
+        "id": "C333da8105cb6be6482ceda646f147b231a0d9a3217e5e2c716b2276355c88f17",
+        "before": 0.6666666666666666,
+        "after": 0.6666666666666666,
+        "delta": 0.0,
+        "kth_exact_before": 0.628501909415344,
+        "kth_exact_after": 0.628501909415344
+      },
+      {
+        "id": "C3404ffe22ca5193063f1a39f6f6acf9131ae99e2780ea92ea9236076041e095d",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.2662261890293205,
+        "kth_exact_after": 0.2662261890293205
+      },
+      {
+        "id": "C34878a404b7a1be3582d08d7c6f678b6361b55b997f3128daca0a17189de52ec",
+        "before": 0.8666666666666667,
+        "after": 0.23333333333333334,
+        "delta": -0.6333333333333333,
+        "kth_exact_before": 0.4072871819826317,
+        "kth_exact_after": 0.4072871819826317
+      },
+      {
+        "id": "C34a7dbf6d67c4a9b8fab7901f1b787c1471b6b8d618e90a9e4f3e994d670c117",
+        "before": 0.9666666666666667,
+        "after": 0.9333333333333333,
+        "delta": -0.033333333333333326,
+        "kth_exact_before": 0.6214651186161062,
+        "kth_exact_after": 0.6214651186161062
+      },
+      {
+        "id": "C37ae4d61719882b9bfd00cda79416988b437242e68a12223812fc128b9fc2510",
+        "before": 0.36666666666666664,
+        "after": 0.5,
+        "delta": 0.13333333333333336,
+        "kth_exact_before": 0.6282736354194657,
+        "kth_exact_after": 0.6282736354194657
+      },
+      {
+        "id": "C51dfca939cbdcec60c10602ed193164e9060f94b1da050ca4faa00d4c219f767",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.5714691671376652,
+        "kth_exact_after": 0.5714691671376652
+      },
+      {
+        "id": "C5615f1f5d9ab5b777b83f8cc1a7d0f9660d97bdbc22846eec45cc788ae7332bd",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.5759420158459733,
+        "kth_exact_after": 0.5759420158459733
+      },
+      {
+        "id": "C574bce1533dd387a50ef8384c562be575f7cb9f8f88d69ed5056e4761745dcde",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.6129511823977536,
+        "kth_exact_after": 0.6129511823977536
+      },
+      {
+        "id": "C57cf0f51b56cae80b2cff5ea4cfb76c68d2745e6998d8a129067d066d88e920d",
+        "before": 0.6333333333333333,
+        "after": 0.6,
+        "delta": -0.033333333333333326,
+        "kth_exact_before": 0.6319259874432828,
+        "kth_exact_after": 0.6319259874432828
+      },
+      {
+        "id": "C5993d056217c241990fc71b9678b306a5fefc0e91debc7497e9f7b42271f9252",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.4538824467625046,
+        "kth_exact_after": 0.4538824467625046
+      },
+      {
+        "id": "C5e44853d4ff9a89e3ef456b4479a844dd1fcbc4f844a38c93522e3aab6ff17b9",
+        "before": 0.6666666666666666,
+        "after": 0.23333333333333334,
+        "delta": -0.4333333333333333,
+        "kth_exact_before": 0.5491375608622341,
+        "kth_exact_after": 0.5491375608622341
+      },
+      {
+        "id": "C64917293076c8619dc7956df6ac63b1f30cdcc1413ff4af6bb604cee7ea11f61",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.6015088913590886,
+        "kth_exact_after": 0.6015088913590886
+      },
+      {
+        "id": "C683af0868dc897c64b7a856fbfa598a192ea423536bd3dedb664b006e9293b7a",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.3884579043742402,
+        "kth_exact_after": 0.3884579043742402
+      },
+      {
+        "id": "C72aafe4ffb405e233dc153bdcc5f913f0b2310b8473bc4117b2b280351accab6",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.49384771409150413,
+        "kth_exact_after": 0.49384771409150413
+      },
+      {
+        "id": "C74ab3535be94a138e77260d056e7518b0a14947dede477247ca92d097904fd4a",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.3864487325856945,
+        "kth_exact_after": 0.3864487325856945
+      },
+      {
+        "id": "C74aee08f5ab5e74803e7be0fccd8eb5031b7da918fcc775cd68bbd1e1a7b4af1",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.6176489930157432,
+        "kth_exact_after": 0.6176489930157432
+      },
+      {
+        "id": "C75db57f1819faf3fd4f29991e0e6ff60f8d46ece2f52d1c4c23e7a0832d5c4a7",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.5707110300931332,
+        "kth_exact_after": 0.5707110300931332
+      },
+      {
+        "id": "C77402538d874d568063538c1928f5ee61528524c3d1833ec7d508d4af1afbce4",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.43820920832102306,
+        "kth_exact_after": 0.43820920832102306
+      },
+      {
+        "id": "C7a93013582936984f038d38ce710e791c5005299052dbd79708fbf568a3ae488",
+        "before": 1.0,
+        "after": 0.9666666666666667,
+        "delta": -0.033333333333333326,
+        "kth_exact_before": 0.6344894518068283,
+        "kth_exact_after": 0.6344894518068283
+      },
+      {
+        "id": "C845a3481534ffde97139c25a4aca89dcb8ade22a4c6b8804f84348e71592d08a",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.5882372550344881,
+        "kth_exact_after": 0.5882372550344881
+      },
+      {
+        "id": "C8ddc3d99a0a80cd23365ff79c0d5eefb98bfc9307ba1bc03421fb1ba352a8535",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.6289373178906814,
+        "kth_exact_after": 0.6289373178906814
+      },
+      {
+        "id": "C9871019a0f18d744eaffa7adeff20b765961a2b75b2e35ddecb80bbc0acccfa9",
+        "before": 0.7333333333333333,
+        "after": 0.6,
+        "delta": -0.1333333333333333,
+        "kth_exact_before": 0.6726499292380707,
+        "kth_exact_after": 0.6726499292380707
+      },
+      {
+        "id": "Ca075db4c80a69e824c6bcac570e4c1ea9914f72bc1c1ac74cc082e955b925fa7",
+        "before": 0.4666666666666667,
+        "after": 0.5666666666666667,
+        "delta": 0.09999999999999998,
+        "kth_exact_before": 0.6078362208485197,
+        "kth_exact_after": 0.6078362208485197
+      },
+      {
+        "id": "Ca1106efb597501cbe80f3507e5450774bf9da226a0e1bf86a9ff50bf4d926727",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.5586111834967048,
+        "kth_exact_after": 0.5586111834967048
+      },
+      {
+        "id": "Ca5745a28bccf26681e5736ef1b202d17c1673dfbd1dda517a97a4012081de8f4",
+        "before": 0.6666666666666666,
+        "after": 0.4666666666666667,
+        "delta": -0.19999999999999996,
+        "kth_exact_before": 0.6405186533296569,
+        "kth_exact_after": 0.6405186533296569
+      },
+      {
+        "id": "Ca688d770b8caebafd52045019730bbf8e9d0a08ebcc8afb1ca011d510ae83bdf",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.6487662844464868,
+        "kth_exact_after": 0.6487662844464868
+      },
+      {
+        "id": "Ca73279d62a50d0eec4fb9321954022de6bce5ddc39b5d0b5424934cdc809351e",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.5294882440736532,
+        "kth_exact_after": 0.5294882440736532
+      },
+      {
+        "id": "Ca85dd654f76a2226657666631f2a050fe10f0149aa51615ba3048d6fa66e99d1",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.35064453437953313,
+        "kth_exact_after": 0.35064453437953313
+      },
+      {
+        "id": "Ca9c9edcf01ac1ce42550fc1d24433cc58cecaf82be80af9b957ca8d7d3eb6b9b",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.8260096441332649,
+        "kth_exact_after": 0.8260096441332649
+      },
+      {
+        "id": "Caaebdc5c8386b1e81a67d8bea5179b28d7d4cd302f716ff8acbad876432bf104",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.50270043125322,
+        "kth_exact_after": 0.50270043125322
+      },
+      {
+        "id": "Cafa9ae559af29aab2bfdae9df019b58214b1022e3640ed1c4eef9c5a05afc578",
+        "before": 0.5666666666666667,
+        "after": 0.4666666666666667,
+        "delta": -0.09999999999999998,
+        "kth_exact_before": 0.7035740200023138,
+        "kth_exact_after": 0.7035740200023138
+      },
+      {
+        "id": "Cb44cab1a31cc64e43eb3c036930987b54d3bc2ba9f4144e6ee3572bc36f5fc4a",
+        "before": 0.8333333333333334,
+        "after": 0.7666666666666667,
+        "delta": -0.06666666666666665,
+        "kth_exact_before": 0.6621878246143333,
+        "kth_exact_after": 0.6621878246143333
+      },
+      {
+        "id": "Cb4d98034a3880924172797d65f2b1c5dc7fe78fc5db3a1f20d16359635b16ac1",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.5874480447151665,
+        "kth_exact_after": 0.5874480447151665
+      },
+      {
+        "id": "Cb683b2e95e8df0bf33fc1263a3add3563f6a9d4a0e46d5997e6eab3aff3651d8",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.5397729858222463,
+        "kth_exact_after": 0.5397729858222463
+      },
+      {
+        "id": "Cb8caab8f55b9bb142e3fc95bc6c71e297c5d01c426b8023f4a6abf81c3a9293b",
+        "before": 0.5,
+        "after": 0.5666666666666667,
+        "delta": 0.06666666666666665,
+        "kth_exact_before": 0.6221164096618277,
+        "kth_exact_after": 0.6221164096618277
+      },
+      {
+        "id": "Cbf0302b049f446dc37a3908058dc170f4cf82781ee1873e2aea31e8308aaa74e",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.6033966232077229,
+        "kth_exact_after": 0.6033966232077229
+      },
+      {
+        "id": "Cc3e96e6567508606e5810535a21e3b9e57f90736038a3c9377de23af75bba061",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.5588557137021066,
+        "kth_exact_after": 0.5588557137021066
+      },
+      {
+        "id": "Cc78e82a92336bd2bba20a91aff2071c802de8ea3b4960349cf05aa15d904a98e",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.40936942983868274,
+        "kth_exact_after": 0.40936942983868274
+      },
+      {
+        "id": "Ccd807399c89e7e14ce08a4bb85902733f6e32cf9e8b0aa9be1c284cbd5404d24",
+        "before": 0.9,
+        "after": 0.6,
+        "delta": -0.30000000000000004,
+        "kth_exact_before": 0.5735555686942412,
+        "kth_exact_after": 0.5735555686942412
+      },
+      {
+        "id": "Ccee2286c4e7c487b93be8d92461dc40f81871142d67f4b2ece31eed5bef6ec59",
+        "before": 0.7666666666666667,
+        "after": 0.6666666666666666,
+        "delta": -0.10000000000000009,
+        "kth_exact_before": 0.6231733520593893,
+        "kth_exact_after": 0.6231733520593893
+      },
+      {
+        "id": "Ce599b4cc125d3ac0c6d491cbf52c959470e8afebf0edd442a49fd6cc12fc71d0",
+        "before": 0.26666666666666666,
+        "after": 1.0,
+        "delta": 0.7333333333333334,
+        "kth_exact_before": 0.5310486629669903,
+        "kth_exact_after": 0.5310486629669903
+      },
+      {
+        "id": "Cea5ff3ee6b188564aa334a0668e3c10517ad355110c6fedf7f9da0c00920f5eb",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.2497080579261461,
+        "kth_exact_after": 0.2497080579261461
+      },
+      {
+        "id": "Ceaedd535af0c96fc26d6954116dca2ce97e56733a8b196d31a919ca546edcd00",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.6444988530607182,
+        "kth_exact_after": 0.6444988530607182
+      },
+      {
+        "id": "Cec8c888203f59eabf76dcd736e3737f1017393c0e1aba043eecfa29796d7715f",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.6316395166173219,
+        "kth_exact_after": 0.6316395166173219
+      },
+      {
+        "id": "Cf3d7059fd52d935caded2c7e9900b62ee6a13e8a8d010204867c87b3db1a2d66",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.4211899747700179,
+        "kth_exact_after": 0.4211899747700179
+      },
+      {
+        "id": "Cf62231ca3a4e4242cf425ddff9439ba9f42c5cf30d1c114ebf8929cfa1b7c69a",
+        "before": 1.0,
+        "after": 1.0,
+        "delta": 0.0,
+        "kth_exact_before": 0.5907922182221179,
+        "kth_exact_after": 0.5907922182221179
+      }
+    ],
+    "no_old_outputs_rescored": true,
+    "before_binding": {
+      "bytes": 413143,
+      "sha256": "802f41a9493b03fb61a7348f303a4924db9c45696d496e913975dabcecd85f3d"
+    }
+  },
+  "independent_local_feature_metadata": {
+    "E009-noGLM": {
+      "status": "PASS_INDEPENDENT_LOCAL_SAMPLE_AND_ID_AXIS",
+      "metadata": {
+        "bytes": 1103,
+        "sha256": "2b24603bd278f81178b3b843faeb961fb27061accb0df3f7968d9d5a937f9a8a"
+      },
+      "features": {
+        "bytes": 42384557,
+        "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+      },
+      "full_ids_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+      "ordered_samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ]
+    },
+    "oral-noGLM": {
+      "status": "PASS_INDEPENDENT_LOCAL_SAMPLE_AND_ID_AXIS",
+      "metadata": {
+        "bytes": 852,
+        "sha256": "b03907a416f4cfe146a42ce461cd2a937e011a5299382d0e6984c62c5b5c780a"
+      },
+      "features": {
+        "bytes": 338210613,
+        "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+      },
+      "full_ids_sha256": "77eb90600172cb24d687302197a613146c008567b6922deb0fcee780dce89a89",
+      "ordered_samples": [
+        "oral_sample_6",
+        "oral_sample_7",
+        "oral_sample_8",
+        "oral_sample_13",
+        "oral_sample_14",
+        "oral_sample_15",
+        "oral_sample_16",
+        "oral_sample_17",
+        "oral_sample_18",
+        "oral_sample_19"
+      ]
+    }
+  },
+  "no_truth_scores_computed": true,
+  "no_VM_wake_or_science_replay": true,
+  "reviewed_UTC": "2026-11-01T01:10:01.966355+00:00",
+  "dated_launch_receipt_preserved": "native-observed.json",
+  "archive_locator": "gs://dl-binner-archive-167650584170/e028/discovery-20261031T204532Z-45a7590/e028-evidence.tar.gz#1793480896411579",
+  "archive_checksum": {
+    "bytes": 274627567,
+    "sha256": "31b1c427cfb81312ce2f40e05f517e99587259cea61d2d200597abb3461f4149"
+  },
+  "exact_raw_control_readbacks": {
+    "completion.json": {
+      "bytes": 12769,
+      "sha256": "4ca79c2f97594b5171db904a3148ccac20249228ce2317ac406f0f63a664a202",
+      "generation": "1793480911798636",
+      "md5_verified": true
+    },
+    "watchdog-exit.json": {
+      "bytes": 6544,
+      "sha256": "d14dfa223580aa3b98aa04523631d1cf863cb6000b9f539dd89e977e499517c6",
+      "generation": "1793480988510247",
+      "md5_verified": true
+    },
+    "collection.json": {
+      "bytes": 2237,
+      "sha256": "3530411de13edcc1c318c21a10f3cac5fd7c65c7e84578ee191378ecca7744b3",
+      "generation": "1793480903379512",
+      "md5_verified": true
+    },
+    "terminal-disk.json": {
+      "bytes": 2108,
+      "sha256": "75602578f282dcf063d14b19b31692614d6fcb97c0790e4bce3df08cd8f6edcf",
+      "generation": "1793480908914428",
+      "md5_verified": true
+    },
+    "e028-evidence.tar.gz.sha256": {
+      "bytes": 87,
+      "sha256": "29a7ea0e39eb4fa50bd0d0402f3edf95b29d37980076727e44dcb5d607b5a3c0",
+      "generation": "1793480900597410",
+      "md5_verified": true
+    }
+  },
+  "setup_and_science_limits": {
+    "threads": 4,
+    "tree_RSS_bytes": 26000000000,
+    "free_reserve_GiB": 25,
+    "extra_GiB": 4,
+    "compressed_GiB": 2,
+    "cumulative_hours": 12,
+    "provider_STOP_hours": 12.25,
+    "retention": "2026-11-04T00:00:00+01:00"
+  },
+  "scientific_fits_completed": 0,
+  "accepted_learning_instances_restored": 6,
+  "original_graphs_rebuilt": 0,
+  "markers_redetected": 0,
+  "external_binners_run": 0,
+  "full_original_model_reload_and_learning_geometry": "Reuse accepted E027 native proofs; no new inference or old biological rescoring.",
+  "native_used_inputs_after": "NOT_RUN after workflow failure; before-use source/byte contracts pass, whole-VM nonmutation is not asserted.",
+  "full_contig_and_sample_axes": {
+    "status": "PASS_ACTUAL_READER_AND_AXES",
+    "caches": {
+      "E009-noGLM/teacher": {
+        "status": "PASS_RETURNED_NUMERIC_AND_SOURCE_AXIS",
+        "full_rows": 145702,
+        "full_bp": 231678157,
+        "selected_rows": 89041,
+        "selected_bp": 209642703,
+        "selected_measured_zero_rows": 0,
+        "selected_measured_zero_bp": 0,
+        "all_zero_full_rows": 13,
+        "full_axis_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+        "features": {
+          "bytes": 42384557,
+          "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+        },
+        "numeric": {
+          "bytes": 26781065,
+          "sha256": "714d538efe0e6ee04fe076b938335bb69c83a0deee83216d0f565bababd63bdc"
+        },
+        "recall_status": "PASS",
+        "search_accuracy_is_not_biological_homogeneity": true,
+        "completed_cache": true
+      },
+      "E009-noGLM/student": {
+        "status": "PASS_RETURNED_NUMERIC_AND_SOURCE_AXIS",
+        "full_rows": 145702,
+        "full_bp": 231678157,
+        "selected_rows": 89041,
+        "selected_bp": 209642703,
+        "selected_measured_zero_rows": 0,
+        "selected_measured_zero_bp": 0,
+        "all_zero_full_rows": 13,
+        "full_axis_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+        "features": {
+          "bytes": 42384557,
+          "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+        },
+        "numeric": {
+          "bytes": 26744411,
+          "sha256": "4195fa534f96b200ae6e697cb0186eb4821855c4635a1366ba6241c4f18297c2"
+        },
+        "recall_status": "PASS",
+        "search_accuracy_is_not_biological_homogeneity": true,
+        "completed_cache": true
+      },
+      "E009-GLM/teacher": {
+        "status": "PASS_RETURNED_NUMERIC_AND_SOURCE_AXIS",
+        "full_rows": 145702,
+        "full_bp": 231678157,
+        "selected_rows": 89041,
+        "selected_bp": 209642703,
+        "selected_measured_zero_rows": 0,
+        "selected_measured_zero_bp": 0,
+        "all_zero_full_rows": 13,
+        "full_axis_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+        "features": {
+          "bytes": 42384557,
+          "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+        },
+        "numeric": {
+          "bytes": 26746209,
+          "sha256": "7635525c4c9957517007e69c74666d1404a0d4ad21bca5ea30385ee5634f4c43"
+        },
+        "recall_status": "PASS",
+        "search_accuracy_is_not_biological_homogeneity": true,
+        "completed_cache": true
+      },
+      "E009-GLM/student": {
+        "status": "PASS_RETURNED_NUMERIC_AND_SOURCE_AXIS",
+        "full_rows": 145702,
+        "full_bp": 231678157,
+        "selected_rows": 89041,
+        "selected_bp": 209642703,
+        "selected_measured_zero_rows": 0,
+        "selected_measured_zero_bp": 0,
+        "all_zero_full_rows": 13,
+        "full_axis_sha256": "7faf4e45c8255175a6684709dad6c1f9593f32af0310a66f35b1b0262545a095",
+        "features": {
+          "bytes": 42384557,
+          "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+        },
+        "numeric": {
+          "bytes": 26727871,
+          "sha256": "78ace8a4a0830f5ee58f8ca7286c61efd4442ef095237c00c79ff09a2a998189"
+        },
+        "recall_status": "PASS",
+        "search_accuracy_is_not_biological_homogeneity": true,
+        "completed_cache": true
+      },
+      "oral-noGLM/teacher": {
+        "status": "PASS_RETURNED_NUMERIC_AND_SOURCE_AXIS",
+        "full_rows": 1286547,
+        "full_bp": 1669981123,
+        "selected_rows": 508763,
+        "selected_bp": 1443827664,
+        "selected_measured_zero_rows": 191567,
+        "selected_measured_zero_bp": 231943792,
+        "all_zero_full_rows": 576144,
+        "full_axis_sha256": "77eb90600172cb24d687302197a613146c008567b6922deb0fcee780dce89a89",
+        "features": {
+          "bytes": 338210613,
+          "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+        },
+        "numeric": {
+          "bytes": 156955369,
+          "sha256": "cfc575df4e636c9b6f2004f82db8e93b8342bbf8dac9cfe72b66e2bfb6b7f745"
+        },
+        "recall_status": "FAILED_RECALL_GATE",
+        "search_accuracy_is_not_biological_homogeneity": true,
+        "completed_cache": false
+      }
+    },
+    "model_inference_or_original_graph_rebuild": false,
+    "raw_native_vectors_not_modified": true,
+    "no_new_truth_score": true
+  },
+  "scientific_outputs_admitted": false,
+  "diagnostics_blocked_by_missing_partitions": true,
+  "missing_outputs": {
+    "Oral_student_retrieval": true,
+    "global_barrier": true,
+    "groups": 6,
+    "exports": 3,
+    "audits": 3,
+    "used_inputs_after": true
+  },
+  "native_workflow_resources": {
+    "command": [
+      "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/env/bin/python",
+      "-I",
+      "-B",
+      "/srv/dl_binner/repo/scripts/e028_control.py",
+      "--plan",
+      "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/science-plan.json",
+      "--workflow"
+    ],
+    "exit_code": 1,
+    "launched_pid": 2532,
+    "peak_sampled_rss_bytes": 6695075840,
+    "rss_bytes_ceiling": 26000000000,
+    "sample_includes_coordinator": true,
+    "sampled_average_cpus": 2.6361321319723965,
+    "sampled_cpu_seconds": 2685.7599999999998,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 42003.023173332214,
+    "stop_reason": null,
+    "wall_seconds": 1018.826016885
+  },
+  "native_collection_resources": {
+    "command": [
+      "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/env/bin/python",
+      "-I",
+      "-B",
+      "/srv/dl_binner/repo/scripts/e028_collect.py",
+      "--work",
+      "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/work",
+      "--evidence",
+      "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/sealed-evidence",
+      "--output",
+      "/srv/dl_binner/experiments/e028/discovery-20261031T204532Z-45a7590/collection",
+      "--allow-incomplete"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 18.858948629999986,
+    "peak_sampled_rss_bytes": 65949696,
+    "seconds_ceiling": 41284.063020944595,
+    "rss_bytes_ceiling": 26000000000,
+    "launched_pid": 3254,
+    "sampled_cpu_seconds": 19.75,
+    "sampled_average_cpus": 1.0472481996468546,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": true
+  },
+  "closed_whole_run_disk": {
+    "summary": {
+      "samples": 672,
+      "minimum_free_bytes": 31777554432,
+      "maximum_sampled_global_growth_bytes": 590831616,
+      "scope": "Sampled whole-filesystem usage; first-allocation baseline, not exact attributable bytes"
+    },
+    "science_raw": {
+      "bytes": 54445,
+      "sha256": "857172e722098931c15dbc16349b8b56697a09b170b57eed604a0a3d16f83ebb"
+    },
+    "collection_raw": {
+      "bytes": 1732,
+      "sha256": "991dd93a29847db541f36bb7ba086fbb02735c9ac3d9956de9ee43af5b3d6d86"
+    },
+    "command_boundary_samples": [
+      {
+        "stage": "workflow",
+        "epoch": 1793479847.0748544,
+        "used": 284374040576,
+        "free": 32342835200
+      },
+      {
+        "stage": "collect",
+        "epoch": 1793480866.0349934,
+        "used": 284664467456,
+        "free": 32052408320
+      },
+      {
+        "stage": "collect",
+        "epoch": 1793480884.9060397,
+        "used": 284939243520,
+        "free": 31777632256
+      },
+      {
+        "stage": "upload-e028-evidence.tar.gz",
+        "epoch": 1793480884.9060798,
+        "used": 284939243520,
+        "free": 31777632256
+      },
+      {
+        "stage": "upload-e028-evidence.tar.gz",
+        "epoch": 1793480896.902621,
+        "used": 284939259904,
+        "free": 31777615872
+      },
+      {
+        "stage": "readback-e028-evidence.tar.gz",
+        "epoch": 1793480897.112688,
+        "used": 284939259904,
+        "free": 31777615872
+      },
+      {
+        "stage": "readback-e028-evidence.tar.gz",
+        "epoch": 1793480899.5486221,
+        "used": 284939272192,
+        "free": 31777603584
+      },
+      {
+        "stage": "upload-e028-evidence.tar.gz.sha256",
+        "epoch": 1793480899.5486636,
+        "used": 284939272192,
+        "free": 31777603584
+      },
+      {
+        "stage": "upload-e028-evidence.tar.gz.sha256",
+        "epoch": 1793480900.889141,
+        "used": 284939284480,
+        "free": 31777591296
+      },
+      {
+        "stage": "readback-e028-evidence.tar.gz.sha256",
+        "epoch": 1793480900.8892796,
+        "used": 284939284480,
+        "free": 31777591296
+      },
+      {
+        "stage": "readback-e028-evidence.tar.gz.sha256",
+        "epoch": 1793480902.2342832,
+        "used": 284939296768,
+        "free": 31777579008
+      },
+      {
+        "stage": "upload-collection.json",
+        "epoch": 1793480902.234323,
+        "used": 284939296768,
+        "free": 31777579008
+      },
+      {
+        "stage": "upload-collection.json",
+        "epoch": 1793480903.791627,
+        "used": 284939309056,
+        "free": 31777566720
+      },
+      {
+        "stage": "readback-collection.json",
+        "epoch": 1793480903.7917435,
+        "used": 284939309056,
+        "free": 31777566720
+      },
+      {
+        "stage": "readback-collection.json",
+        "epoch": 1793480905.1366262,
+        "used": 284939321344,
+        "free": 31777554432
+      }
+    ],
+    "scope": "Through archive collection/upload/readback; final compact proof delivery follows this closed snapshot"
+  },
+  "parent_numeric_systemd_exit": null,
+  "parent_exit_evidence": "Intended process exit observed by watcher. Numeric systemd parent receipt is not retained. Frozen phase_exit maps this result to 1; do not call that an observed native numeric receipt.",
+  "completion_upload_evidence": "Immutable completion excludes its own later command receipt. Generation-bound private bytes and matching final guest SHA independently verify delivery.",
+  "local_review_clock": {
+    "start_epoch": 1793492535.944934,
+    "deadline_epoch": 1793503335.9449348,
+    "threads": 4,
+    "sampled_RSS_bytes": 8000000000,
+    "extra_owned_bytes": 4294967296,
+    "free_reserve_bytes": 6442450944,
+    "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+  },
+  "local_review_resources": {
+    "algebra-audit-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+          "-I",
+          "-B",
+          "scripts/e028_retrieval_audit.py",
+          "--algebra",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/algebra-audit.json"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793493833.1226912,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489847701504,
+          "free": 10115473408
+        }
+      },
+      "terminal": {
+        "bytes": 300,
+        "sha256": "44ee110b1e1652e406856de021213f9b83b4b230d50e07a9be3f54e25fe04163"
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+            "-I",
+            "-B",
+            "scripts/e028_retrieval_audit.py",
+            "--algebra",
+            "--output",
+            "artifacts/e028-global-discovery-repair/inspection/algebra-audit.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 3.744824501001858,
+          "peak_sampled_rss_bytes": 130830336,
+          "seconds_ceiling": 9502.823286056519,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 75375,
+          "sampled_cpu_seconds": 4.02,
+          "sampled_average_cpus": 1.0734815473794628,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "exit": {
+        "command": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+          "-I",
+          "-B",
+          "scripts/e028_retrieval_audit.py",
+          "--algebra",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/algebra-audit.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 75375,
+        "peak_sampled_rss_bytes": 130830336,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 1.0734815473794628,
+        "sampled_cpu_seconds": 4.02,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 9502.823286056519,
+        "stop_reason": null,
+        "wall_seconds": 3.744824501001858
+      }
+    },
+    "archive-verify-r1": {
+      "command": {
+        "argv": [
+          "python3",
+          "-I",
+          "-B",
+          "artifacts/e028-global-discovery-repair/inspection/verify-stage.py"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793493055.203351,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489584644096,
+          "free": 10378530816
+        }
+      },
+      "terminal": {
+        "bytes": 4944,
+        "sha256": "ee651945e5749a8d0f23c98230446ce2aeed3430c63faaf7919b771ad8738793"
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "python3",
+            "-I",
+            "-B",
+            "artifacts/e028-global-discovery-repair/inspection/verify-stage.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 4.370933840997168,
+          "peak_sampled_rss_bytes": 26857472,
+          "seconds_ceiling": 10280.742384910583,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 74378,
+          "sampled_cpu_seconds": 3.47,
+          "sampled_average_cpus": 0.7938806960318502,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "exit": {
+        "command": [
+          "python3",
+          "-I",
+          "-B",
+          "artifacts/e028-global-discovery-repair/inspection/verify-stage.py"
+        ],
+        "exit_code": 0,
+        "launched_pid": 74378,
+        "peak_sampled_rss_bytes": 26857472,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.7938806960318502,
+        "sampled_cpu_seconds": 3.47,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 10280.742384910583,
+        "stop_reason": null,
+        "wall_seconds": 4.370933840997168
+      }
+    },
+    "download-r1": {
+      "command": {
+        "argv": [
+          "python3",
+          "-I",
+          "-B",
+          "artifacts/e028-global-discovery-repair/inspection/download.py"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793492950.604424,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489294364672,
+          "free": 10668810240
+        }
+      },
+      "terminal": {
+        "bytes": 910,
+        "sha256": "e52ea6cf168abc9c070837b04159427dec68955491c14b5ffbc8244f6b6eec9a"
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "python3",
+            "-I",
+            "-B",
+            "artifacts/e028-global-discovery-repair/inspection/download.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 40.833396175992675,
+          "peak_sampled_rss_bytes": 83382272,
+          "seconds_ceiling": 10385.341387987137,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 74123,
+          "sampled_cpu_seconds": 6.109999999999999,
+          "sampled_average_cpus": 0.14963242277634192,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "exit": {
+        "command": [
+          "python3",
+          "-I",
+          "-B",
+          "artifacts/e028-global-discovery-repair/inspection/download.py"
+        ],
+        "exit_code": 0,
+        "launched_pid": 74123,
+        "peak_sampled_rss_bytes": 83382272,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.14963242277634192,
+        "sampled_cpu_seconds": 6.109999999999999,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 10385.341387987137,
+        "stop_reason": null,
+        "wall_seconds": 40.833396175992675
+      }
+    },
+    "independent-review-r1": {
+      "command": {
+        "argv": [
+          "python3",
+          "-I",
+          "-B",
+          "scripts/e028_inspection.py",
+          "--base",
+          "artifacts/e028-global-discovery-repair/inspection",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/independent-review.json"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793493631.212918,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488503939072,
+          "free": 11459235840
+        }
+      },
+      "terminal": {
+        "bytes": 1086,
+        "sha256": "92a04b5eac649fdc442d5404496a464ea328b1e742f7af66a1e6e7a0134d24ff"
+      },
+      "exit": {
+        "command": [
+          "python3",
+          "-I",
+          "-B",
+          "scripts/e028_inspection.py",
+          "--base",
+          "artifacts/e028-global-discovery-repair/inspection",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/independent-review.json"
+        ],
+        "exit_code": 1,
+        "launched_pid": 74918,
+        "peak_sampled_rss_bytes": 21012480,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.20587641598029083,
+        "sampled_cpu_seconds": 0.28,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 9704.732514858246,
+        "stop_reason": null,
+        "wall_seconds": 1.3600392189982813
+      }
+    },
+    "independent-review-r2": {
+      "command": {
+        "argv": [
+          "python3",
+          "-I",
+          "-B",
+          "scripts/e028_inspection.py",
+          "--base",
+          "artifacts/e028-global-discovery-repair/inspection",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/independent-review.json"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793493825.017546,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489689866240,
+          "free": 10273308672
+        }
+      },
+      "terminal": {
+        "bytes": 902,
+        "sha256": "a84b948007a9a16e06ae4b69da6553d1e7a905d1257946f7a81f3bc6bd9d9a35"
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "python3",
+            "-I",
+            "-B",
+            "scripts/e028_inspection.py",
+            "--base",
+            "artifacts/e028-global-discovery-repair/inspection",
+            "--output",
+            "artifacts/e028-global-discovery-repair/inspection/independent-review.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 2.0760985600063577,
+          "peak_sampled_rss_bytes": 23465984,
+          "seconds_ceiling": 9510.928494691849,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 75261,
+          "sampled_cpu_seconds": 0.39,
+          "sampled_average_cpus": 0.18785235321332996,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "exit": {
+        "command": [
+          "python3",
+          "-I",
+          "-B",
+          "scripts/e028_inspection.py",
+          "--base",
+          "artifacts/e028-global-discovery-repair/inspection",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/independent-review.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 75261,
+        "peak_sampled_rss_bytes": 23465984,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.18785235321332996,
+        "sampled_cpu_seconds": 0.39,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 9510.928494691849,
+        "stop_reason": null,
+        "wall_seconds": 2.0760985600063577
+      }
+    },
+    "independent-review-r3": {
+      "command": {
+        "argv": [
+          "python3",
+          "-I",
+          "-B",
+          "scripts/e028_inspection.py",
+          "--base",
+          "artifacts/e028-global-discovery-repair/inspection",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/independent-review-with-queries.json"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793494538.550066,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489858945024,
+          "free": 10104229888
+        }
+      },
+      "terminal": {
+        "bytes": 902,
+        "sha256": "a84b948007a9a16e06ae4b69da6553d1e7a905d1257946f7a81f3bc6bd9d9a35"
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "python3",
+            "-I",
+            "-B",
+            "scripts/e028_inspection.py",
+            "--base",
+            "artifacts/e028-global-discovery-repair/inspection",
+            "--output",
+            "artifacts/e028-global-discovery-repair/inspection/independent-review-with-queries.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.6681312799919397,
+          "peak_sampled_rss_bytes": 23736320,
+          "seconds_ceiling": 8797.395594835281,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 75949,
+          "sampled_cpu_seconds": 0.34,
+          "sampled_average_cpus": 0.20382088872624154,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "exit": {
+        "command": [
+          "python3",
+          "-I",
+          "-B",
+          "scripts/e028_inspection.py",
+          "--base",
+          "artifacts/e028-global-discovery-repair/inspection",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/independent-review-with-queries.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 75949,
+        "peak_sampled_rss_bytes": 23736320,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.20382088872624154,
+        "sampled_cpu_seconds": 0.34,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 8797.395594835281,
+        "stop_reason": null,
+        "wall_seconds": 1.6681312799919397
+      }
+    },
+    "independent-review-r4": {
+      "command": {
+        "argv": [
+          "python3",
+          "-I",
+          "-B",
+          "scripts/e028_inspection.py",
+          "--base",
+          "artifacts/e028-global-discovery-repair/inspection",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/independent-final-review.json"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793494669.961038,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489859174400,
+          "free": 10104000512
+        }
+      },
+      "terminal": {
+        "bytes": 902,
+        "sha256": "a84b948007a9a16e06ae4b69da6553d1e7a905d1257946f7a81f3bc6bd9d9a35"
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "python3",
+            "-I",
+            "-B",
+            "scripts/e028_inspection.py",
+            "--base",
+            "artifacts/e028-global-discovery-repair/inspection",
+            "--output",
+            "artifacts/e028-global-discovery-repair/inspection/independent-final-review.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 2.2267611759889405,
+          "peak_sampled_rss_bytes": 29421568,
+          "seconds_ceiling": 8665.984323740005,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 76151,
+          "sampled_cpu_seconds": 0.8200000000000001,
+          "sampled_average_cpus": 0.3682478430296077,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "exit": {
+        "command": [
+          "python3",
+          "-I",
+          "-B",
+          "scripts/e028_inspection.py",
+          "--base",
+          "artifacts/e028-global-discovery-repair/inspection",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/independent-final-review.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 76151,
+        "peak_sampled_rss_bytes": 29421568,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.3682478430296077,
+        "sampled_cpu_seconds": 0.8200000000000001,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 8665.984323740005,
+        "stop_reason": null,
+        "wall_seconds": 2.2267611759889405
+      }
+    },
+    "kernel-probe-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e028-global-discovery-repair/inspection/kernel-probe.py"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793494184.692796,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 490925973504,
+          "free": 9037201408
+        }
+      },
+      "terminal": {
+        "bytes": 1478,
+        "sha256": "27c0a07e03285a167a529416170cfc52f583ced27f326c1f9585c4c7b9dd4596"
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+            "-I",
+            "-B",
+            "artifacts/e028-global-discovery-repair/inspection/kernel-probe.py"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.2748059239966096,
+          "peak_sampled_rss_bytes": 253583360,
+          "seconds_ceiling": 9151.252598047256,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 75621,
+          "sampled_cpu_seconds": 2.25,
+          "sampled_average_cpus": 1.7649745405528754,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "exit": {
+        "command": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+          "-I",
+          "-B",
+          "artifacts/e028-global-discovery-repair/inspection/kernel-probe.py"
+        ],
+        "exit_code": 0,
+        "launched_pid": 75621,
+        "peak_sampled_rss_bytes": 253583360,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 1.7649745405528754,
+        "sampled_cpu_seconds": 2.25,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 9151.252598047256,
+        "stop_reason": null,
+        "wall_seconds": 1.2748059239966096
+      }
+    },
+    "maintained-kernel-probe-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+          "-I",
+          "-B",
+          "scripts/e028_retrieval_audit.py",
+          "--kernel",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/kernel-projection-final.json"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793495204.6192179,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489853083648,
+          "free": 10110091264
+        }
+      },
+      "terminal": {
+        "bytes": 301,
+        "sha256": "3b1f7b1c591e723012e394ffac230db9e7b9476db4c6e053420e9b1d0d039609"
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+            "-I",
+            "-B",
+            "scripts/e028_retrieval_audit.py",
+            "--kernel",
+            "--output",
+            "artifacts/e028-global-discovery-repair/inspection/kernel-projection-final.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 1.9071077080006944,
+          "peak_sampled_rss_bytes": 255459328,
+          "seconds_ceiling": 8131.326617717743,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 76637,
+          "sampled_cpu_seconds": 2.7899999999999996,
+          "sampled_average_cpus": 1.462948310834987,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "exit": {
+        "command": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+          "-I",
+          "-B",
+          "scripts/e028_retrieval_audit.py",
+          "--kernel",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/kernel-projection-final.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 76637,
+        "peak_sampled_rss_bytes": 255459328,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 1.462948310834987,
+        "sampled_cpu_seconds": 2.7899999999999996,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 8131.326617717743,
+        "stop_reason": null,
+        "wall_seconds": 1.9071077080006944
+      }
+    },
+    "numeric-cache-audit-r1": {
+      "command": {
+        "argv": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+          "-I",
+          "-B",
+          "scripts/e028_retrieval_audit.py",
+          "--numeric",
+          "--base",
+          "artifacts/e028-global-discovery-repair/inspection",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/numeric-audit.json"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793493806.618308,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488506949632,
+          "free": 11456225280
+        }
+      },
+      "terminal": {
+        "bytes": 428,
+        "sha256": "11db3f1a310f2d5925a5fce04c6cd8ae3813580cddbd9bb88e243d15522a4297"
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+            "-I",
+            "-B",
+            "scripts/e028_retrieval_audit.py",
+            "--numeric",
+            "--base",
+            "artifacts/e028-global-discovery-repair/inspection",
+            "--output",
+            "artifacts/e028-global-discovery-repair/inspection/numeric-audit.json"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 26.115625449005165,
+          "peak_sampled_rss_bytes": 1170370560,
+          "seconds_ceiling": 9529.327657938004,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 75154,
+          "sampled_cpu_seconds": 23.44,
+          "sampled_average_cpus": 0.8975469511833158,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "exit": {
+        "command": [
+          "artifacts/e028-global-discovery-repair/preparation/env-r3/bin/python",
+          "-I",
+          "-B",
+          "scripts/e028_retrieval_audit.py",
+          "--numeric",
+          "--base",
+          "artifacts/e028-global-discovery-repair/inspection",
+          "--output",
+          "artifacts/e028-global-discovery-repair/inspection/numeric-audit.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 75154,
+        "peak_sampled_rss_bytes": 1170370560,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.8975469511833158,
+        "sampled_cpu_seconds": 23.44,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 9529.327657938004,
+        "stop_reason": null,
+        "wall_seconds": 26.115625449005165
+      }
+    },
+    "stopped-contracts-r1": {
+      "command": {
+        "argv": [
+          "python3",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e028_inspection.py",
+          "-v"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793493630.529328,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 488503906304,
+          "free": 11459268608
+        }
+      },
+      "terminal": {
+        "bytes": 839,
+        "sha256": "a568ac0495c76e06874942268d62e7cf0dc71a14a2d47b6564c324491a0bcec3"
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "python3",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_e028_inspection.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 0.42955807100224774,
+          "peak_sampled_rss_bytes": 2519040,
+          "seconds_ceiling": 9705.41643190384,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 74911,
+          "sampled_cpu_seconds": 0.01,
+          "sampled_average_cpus": 0.02327973951616817,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "exit": {
+        "command": [
+          "python3",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e028_inspection.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "launched_pid": 74911,
+        "peak_sampled_rss_bytes": 2519040,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.02327973951616817,
+        "sampled_cpu_seconds": 0.01,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 9705.41643190384,
+        "stop_reason": null,
+        "wall_seconds": 0.42955807100224774
+      }
+    },
+    "stopped-contracts-r2": {
+      "command": {
+        "argv": [
+          "python3",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e028_inspection.py",
+          "-v"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793494537.797962,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489858908160,
+          "free": 10104266752
+        }
+      },
+      "terminal": {
+        "bytes": 1023,
+        "sha256": "da71198e60da71a9b893b7ae8f8aec700bcab153fd3f06f22dccaa495503962c"
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "python3",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_e028_inspection.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 0.4450288500083843,
+          "peak_sampled_rss_bytes": 3395584,
+          "seconds_ceiling": 8798.147430896759,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 75942,
+          "sampled_cpu_seconds": 0.01,
+          "sampled_average_cpus": 0.02247045331962546,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "exit": {
+        "command": [
+          "python3",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e028_inspection.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "launched_pid": 75942,
+        "peak_sampled_rss_bytes": 3395584,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.02247045331962546,
+        "sampled_cpu_seconds": 0.01,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 8798.147430896759,
+        "stop_reason": null,
+        "wall_seconds": 0.4450288500083843
+      }
+    },
+    "stopped-contracts-r3": {
+      "command": {
+        "argv": [
+          "python3",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e028_inspection.py",
+          "-v"
+        ],
+        "common_clock": {
+          "start_epoch": 1793492535.944934,
+          "deadline_epoch": 1793503335.9449348,
+          "threads": 4,
+          "sampled_RSS_bytes": 8000000000,
+          "extra_owned_bytes": 4294967296,
+          "free_reserve_bytes": 6442450944,
+          "scope": "E028 stopped-output inspection and new-output-only frozen diagnostics; no science replay or cloud start."
+        },
+        "started_epoch": 1793494669.1411881,
+        "threads": 4,
+        "sampled_tree_RSS_bytes": 8000000000,
+        "filesystem_before": {
+          "total": 499963174912,
+          "used": 489859280896,
+          "free": 10103894016
+        }
+      },
+      "terminal": {
+        "bytes": 1149,
+        "sha256": "316cb068e81e68449896884ec5b4b04582d165da214ddbfabcef6c1a9bf9ece6"
+      },
+      "completed": {
+        "status": "PASS",
+        "resources": {
+          "command": [
+            "python3",
+            "-I",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_e028_inspection.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 0.4443605650012614,
+          "peak_sampled_rss_bytes": 2490368,
+          "seconds_ceiling": 8666.804869890213,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 76146,
+          "sampled_cpu_seconds": 0.01,
+          "sampled_average_cpus": 0.02250424719837957,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      "exit": {
+        "command": [
+          "python3",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e028_inspection.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "launched_pid": 76146,
+        "peak_sampled_rss_bytes": 2490368,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.02250424719837957,
+        "sampled_cpu_seconds": 0.01,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 8666.804869890213,
+        "stop_reason": null,
+        "wall_seconds": 0.4443605650012614
+      }
+    }
+  },
+  "local_reader_refusals": {
+    "control-read.log": {
+      "binding": {
+        "bytes": 950,
+        "sha256": "35eb9a793b3ac21fdab1036cf75447396530218eacb25ab416160d255bcd0b56"
+      },
+      "scope": "Local read adapter failed; native object bytes independently verified by generation-bound API."
+    },
+    "control-read-r2.log": {
+      "binding": {
+        "bytes": 1250,
+        "sha256": "336abafdc27976ed92afe1fee3918fd5e5598a70a253e4f58ecf5616a62a0d6d"
+      },
+      "scope": "Local read adapter failed; native object bytes independently verified by generation-bound API."
+    }
+  },
+  "corrected_runtime_reader": "First review required PASS but pinned e027_runtime writes PASS_COMPLETE_READONLY_BASE_AND_NEW_OWNED_PACKAGE. Corrected strict writer schema; old refusal preserved.",
+  "inspection_code": {
+    "scripts/e028_inspection.py": {
+      "bytes": 15477,
+      "sha256": "a2e2471547647da4b34cfc542bc1f1f2c1795fc4252cd7bfdbcddeae6a7941e4"
+    },
+    "scripts/e028_retrieval_audit.py": {
+      "bytes": 11570,
+      "sha256": "ac591e4d4c3ebbba92fce645f82ef17632b3573ab093e60c96749b27c436a42e"
+    },
+    "tests/test_e028_inspection.py": {
+      "bytes": 4848,
+      "sha256": "c6095886303d83f463e6a8642a176cf509b775673cde8be38d5f632d5fa55910"
+    }
+  },
+  "raw_evidence_root": "artifacts/e028-global-discovery-repair/inspection",
+  "local_final_owned_bytes": 549625550,
+  "local_final_free_bytes": 10102718464,
+  "cost_record": "cost-observed.json",
+  "retrieval_review": "retrieval-diagnostics.json",
+  "comparison_review": "comparison-review.json",
+  "no_VM_wake_resource_retention_or_product_change": true,
+  "next_decision": "Certifiable unchanged-score retrieval plus independent Oral batching qualification; see next-block.md. No new execution in this inspection.",
+  "final_control_plane_snapshot": "artifacts/e028-global-discovery-repair/inspection/final-control/provider.json",
+  "inspection_only_scope_closed_before_next_authorized_phase": true,
+  "final_documentation_check": "Checked 130 maintained documents and 1826 local links.",
+  "prompt_structural_lint": {
+    "violations": [],
+    "count": 0,
+    "hard_count": 0,
+    "baseline": 0,
+    "words": 939,
+    "per_100_words": 0.0
+  }
+}
