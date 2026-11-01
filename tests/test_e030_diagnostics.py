@@ -6,6 +6,14 @@ import e030_diagnostics as d
 from e024_coverage import binding
 
 class DiagnosticsContracts(unittest.TestCase):
+    def test_two_actual_progress_publications_and_duplicate_refusal(self):
+        with tempfile.TemporaryDirectory()as td:
+            p=Path(td)
+            d.record_progress(p,'runtime',dict(status='PASS',stage=1))
+            d.record_progress(p,'tiny',dict(status='PASS',stage=2))
+            self.assertEqual(json.loads((p/'progress-runtime.json').read_text())['stage'],1)
+            self.assertEqual(json.loads((p/'progress-tiny.json').read_text())['stage'],2)
+            with self.assertRaises(FileExistsError):d.record_progress(p,'runtime',dict(status='CHANGED'))
     def test_original_clock_not_reset(self):
         c=dict(original_start_epoch=d.START,science_source=d.SCIENCE,review_deadline_epoch=d.START+10000,provider_deadline_epoch=d.START+11000,incremental_ceiling_USD=3,numerical_threads=4,review_RSS_bytes=8_000_000_000,complete_cost_USD_upper=2.52,credit_only_admitted=True)
         self.assertTrue(d.check_config(c,d.START+9000))
@@ -34,6 +42,14 @@ class DiagnosticsContracts(unittest.TestCase):
             with tempfile.TemporaryDirectory()as td:
                 r=Path(td);p=self.packet(r,name,bad)
                 with self.assertRaises(ValueError):d.extract_payload(p,binding(p),r/'view')
+
+    def test_actual_passed_payload_reuse_preserves_original(self):
+        with tempfile.TemporaryDirectory()as td:
+            r=Path(td);p=self.packet(r);proof=d.extract_payload(p,binding(p),r/'old')
+            d.reuse_payload_view(r/'old',proof,r/'new')
+            self.assertEqual((r/'old/artifacts/truth.json').stat().st_ino,(r/'new/artifacts/truth.json').stat().st_ino)
+            (r/'old/artifacts/truth.json').write_bytes(b'corrupt')
+            with self.assertRaises(ValueError):d.reuse_payload_view(r/'old',proof,r/'refused')
 
     def test_rendered_arm_cannot_dispatch_science(self):
         text=(ROOT/'scripts/e030_review_arm.py').read_text()

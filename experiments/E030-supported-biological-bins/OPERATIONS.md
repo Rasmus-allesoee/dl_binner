@@ -77,3 +77,13 @@ boot/process watcher and independent STOP before release. Four numerical threads
 apply. Return at most 128 MiB compressed / 256 MiB logical diagnostic evidence.
 Retain failures and collect before shutdown. This operational placement amendment
 does not change any frozen evaluator, truth, criterion or scientific output.
+
+The first diagnostic-only attempt passes the exact runtime and five frozen tiny
+review contracts, then fails before any community diagnostic: an exclusive
+progress publisher sees its own existing name. Its failure archive, completion,
+watcher and shutdown are retained independently. A tested operational repair uses
+one immutable progress name per stage. A fresh supervised attempt may reuse the
+two checksum-bound passed gates and hard-link every verified truth/summary payload
+member, avoiding another extraction/copy. The new source remains a diagnostic-only
+operational commit; original scientific source `638084d`, criteria, clock, budget
+and November 4 boundary remain unchanged. No completed science or score is replayed.

@@ -87,6 +87,25 @@ def make_view(repo,view,mappings):
     return proof
 
 
+def record_progress(root,name,result):
+    """Keep one immutable receipt per distinct completed stage, never overwrite."""
+    if not name or any(not(c.isalnum()or c=='-')for c in name):
+        raise ValueError('Unsafe diagnostic stage label')
+    publish(result,Path(root)/('progress-'+name+'.json'))
+
+
+def reuse_payload_view(prior,proof,destination):
+    """Reuse every admitted read-only payload member with verified hardlinks."""
+    from e014_collect import member_path
+    destination=Path(destination);destination.mkdir(exist_ok=False)
+    if proof['status']!='PASS_EXACT_EVIDENCE_PAYLOAD':raise ValueError('Passed payload proof required')
+    for name,wanted in proof['files'].items():
+        source=member_path(Path(prior),name);target=member_path(destination,name)
+        if source.is_symlink()or binding(source)!=wanted:raise ValueError('Passed payload member changed')
+        target.parent.mkdir(parents=True,exist_ok=True);os.link(source,target)
+    return dict(proof,reused_from=str(prior),no_new_payload_materialization=True)
+
+
 def prepare(config):
     """Restore small truth/summaries only, verify full bytes, and pin native runtime."""
     cfg=json.loads(Path(config).read_text());check_config(cfg,time.time());root=Path(cfg['root']);repo=Path(cfg['repo'])
@@ -98,7 +117,12 @@ def prepare(config):
     u=shutil.disk_usage(root)
     if u.free<25*2**30+256*2**20 or u.used-cfg['initial_filesystem_used_bytes']+256*2**20>4*2**30:
         raise ValueError('Original disk growth/reserve cannot admit diagnostics')
-    payload=extract_payload(root/'payload.tar.gz',cfg['payload'],root/'view')
+    if 'reuse_payload' in cfg:
+        old=cfg['reuse_payload'];record=Path(old['root'])/'inputs.json'
+        if binding(record)!=old['inputs_binding']:raise ValueError('Passed evidence restoration proof differs')
+        payload=reuse_payload_view(Path(old['root'])/'view',json.loads(record.read_text())['payload'],root/'view')
+    else:
+        payload=extract_payload(root/'payload.tar.gz',cfg['payload'],root/'view')
     mapped=make_view(repo,root/'view',cfg['mappings'])
     base=root/'view/artifacts/e030-supported-biological-bins/inspection'
     admission=json.loads((base/'admission.json').read_text())
@@ -127,10 +151,20 @@ def run(config):
                 if left<10:raise TimeoutError('Original review clock exhausted')
                 print('E030_READONLY_STAGE',name,flush=True)
                 resources=sup.supervise(argv,logs/(name+'.log'),left,cfg['review_RSS_bytes'],env,sample_root=os.getpid())
-                result['stages'].append(dict(name=name,resources=resources));publish(dict(result,status='RUNNING',stage=name),root/'progress.json')
+                result['stages'].append(dict(name=name,resources=resources));record_progress(root,name,dict(result,status='RUNNING',stage=name))
             view=root/'view';base=view/'artifacts/e030-supported-biological-bins/inspection'
-            command('runtime',[cfg['python'],'-I','-B',str(Path(cfg['repo'])/'scripts/e027_runtime.py'),'--base',cfg['base_python_root'],'--reference',cfg['runtime_reference'],'--candidate-lock',str(Path(cfg['repo'])/'experiments/E030-supported-biological-bins/candidate-lock.json'),'--output',str(root/'runtime.json')])
-            command('frozen-tiny-review-contracts',[cfg['python'],'-I','-B','-c',"import sys,unittest;sys.path.insert(0,"+repr(str(Path(cfg['repo'])/'tests'))+");r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName('test_e030_review'));sys.exit(not r.wasSuccessful())"])
+            if 'reuse_review_gates' in cfg:
+                old=cfg['reuse_review_gates'];prior=Path(old['root'])
+                for name,wanted in old['files'].items():
+                    if binding(prior/name)!=wanted:raise ValueError('Passed diagnostic gate bytes differ')
+                passed=json.loads((prior/'completion.json').read_text())
+                if [v['name']for v in passed['stages']]!=['runtime','frozen-tiny-review-contracts']or any(v['resources']['exit_code']!=0 for v in passed['stages']):raise ValueError('Passed diagnostic gate receipt differs')
+                shutil.copyfile(prior/'runtime.json',root/'runtime.json')
+                result['reused_gate_proof']=old
+                result['stages'].extend(dict(v,reused=True)for v in passed['stages'])
+            else:
+                command('runtime',[cfg['python'],'-I','-B',str(Path(cfg['repo'])/'scripts/e027_runtime.py'),'--base',cfg['base_python_root'],'--reference',cfg['runtime_reference'],'--candidate-lock',str(Path(cfg['repo'])/'experiments/E030-supported-biological-bins/candidate-lock.json'),'--output',str(root/'runtime.json')])
+                command('frozen-tiny-review-contracts',[cfg['python'],'-I','-B','-c',"import sys,unittest;sys.path.insert(0,"+repr(str(Path(cfg['repo'])/'tests'))+");r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName('test_e030_review'));sys.exit(not r.wasSuccessful())"])
             for unit in ['E009-noGLM','E009-GLM','oral-noGLM']:
                 for role in ['teacher','student']:
                     name='review-'+unit+'-'+role
