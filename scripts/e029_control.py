@@ -71,6 +71,7 @@ def cache_for(p,u,role):
 
 def verify_inputs(p,output):
     """Rebind accepted learning and all four independently admitted old cache seals."""
+    product_scope()
     from e028_control import verify_inputs as original
     from dl_binner.discovery import exact
     result=original(p,Path(output).with_suffix('.learning.json'))

@@ -63,3 +63,17 @@ Keep skin unscored and its biological, truth, overlap and protocol dependencies 
 Obtain a separate preservation decision before November 4 at 00:00 Copenhagen.
 Update records and relevant checks.
 Commit with structured what changed and why.
+
+## Preserved first setup refusal and recovery
+
+Phase `discovery-20261101T014746Z-db257a8` passes eight native setup gates.
+Its input wrapper refuses a checkout import before any community release. The
+repair pins the owned product before inherited/numerical imports; an actual
+installed negative-source test and six operational tests pass. The old held
+parent is explicitly aborted into collection and its existing watcher owns stop.
+The fresh recorded attempt must retain the original VM-start deadline, budget
+and filesystem baseline. Reuse only checksum-bound completed setup receipts and
+the unchanged installed wheel. Do not reinstall dependencies or replay tests
+whose exact passed output is verified. Input restoration and full-shape timing
+remain fresh gates. Provider STOP on a new boot is shortened to the original
+absolute deadline. Record every allocation separately for actual cost.

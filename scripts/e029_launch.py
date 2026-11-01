@@ -61,8 +61,12 @@ from e029_phase import service_content
 freeze();publish(h,root/'host.json');publish(financial,root/'payload/financial-gate.json')
 (root/'logs/process-inventory.txt').write_text(subprocess.check_output(['ps','-eo','pid,ppid,etime,pcpu,rss,args'],text=True))
 p=json.loads((repo/'experiments/E029-certifiable-joint-retrieval/runtime-plan.json').read_text())
-p['work']=str(root/'work');p['python']=str(root/'env/bin/python');p['wheel']=str(root/'payload/dl_binner-0.1.0.dev9-py3-none-any.whl');publish(p,root/'science-plan.json')
+p['work']=str(root/'work');p['python']=ident.get('reused_python',str(root/'env/bin/python'));p['wheel']=str(root/'payload/dl_binner-0.1.0.dev9-py3-none-any.whl');publish(p,root/'science-plan.json')
 cfg=dict(root=str(root),work=p['work'],repo=str(repo),plan=str(root/'science-plan.json'),source_commit=ident['source'],limits=p['limits'],vm_start_epoch=ident['vm_start_epoch'],initial_filesystem_used_bytes=u.used,gcloud=h['gcloud'],archive_prefix=ident['archive_prefix'],watchdog_live=str(root/'logs/watchdog-live-before-release.json'),service_name=ident['service_name'])
+
+if 'reuse_passed_setup'in ident:
+ cfg['reuse_passed_setup']=ident['reuse_passed_setup']
+ cfg['initial_filesystem_used_bytes']=ident['initial_filesystem_used_bytes']
 publish(cfg,root/'config.json');publish(ident,root/'identity.json')
 publish(dict(data_copied=False,reuse_lock=binding(p['reuse_lock']),units=p['units'],scope='Immutable accepted inputs in place; no data/runtime recopy'),root/'external-data.json')
 service_content(root,'/usr/bin/python3',repo/'scripts/e029_phase.py',root/'config.json',h['user'])
@@ -123,7 +127,7 @@ def remote(out,code,seconds=240):
     return value.stdout
 
 
-def start(out):
+def start(out,recovery=None):
     """Start the existing E2 once; any controller failure stops without recovery."""
     out=Path(out).absolute();out.mkdir(parents=True,exist_ok=True)
     if (out/'identity.json').exists():
@@ -151,26 +155,34 @@ def start(out):
         raise ValueError('Original persistent disks differ')
     if not before['shieldedInstanceConfig']['enableSecureBoot']:raise ValueError('Secure Boot differs')
     c.put('provider-before.json',before)
+    recovered=json.loads(Path(recovery).read_text())if recovery else None
     phase='discovery-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+source[:7]
     ident=dict(root='/srv/dl_binner/experiments/e029/'+phase,repo='/srv/dl_binner/repo',source=source,phase=phase,
         user='rasmus_allesoee_gmail_com',service_name='e029-'+phase,
         archive_prefix='gs://dl-binner-archive-167650584170/e029/'+phase+'/',vm_start_epoch=0,
-        wheel_binding=f['wheel_binding'])
+        wheel_binding=f['wheel_binding'],provider_max_duration_seconds=216900)
+    if recovered:
+        ident.update(vm_start_epoch=recovered['original_vm_start_epoch'],reuse_passed_setup=recovered['reuse_passed_setup'],reused_python=recovered['reused_python'],initial_filesystem_used_bytes=recovered['initial_filesystem_used_bytes'],recovery_from=recovered['previous_identity'])
+        ident['provider_max_duration_seconds']=int(ident['vm_start_epoch']+216900-time.time()-120)
+        if ident['provider_max_duration_seconds']<3600:raise TimeoutError('Original clock cannot admit recovery')
     # Both actual consumers compile before changing any provider scheduling.
     for label,code in [('host',render_host(ident,f)),('release',render_release(ident,before))]:
         compile(code,'prestart-'+label,'exec');(out/(label+'-precompiled.py')).write_text(code)
     try:
         c.call(['compute','instances','set-scheduling','dl-binner-cpu','--no-restart-on-failure',
-            '--clear-termination-time','--max-run-duration=216900s','--instance-termination-action=STOP'],'us-central1-a')
+            '--clear-termination-time','--max-run-duration='+str(ident['provider_max_duration_seconds'])+'s','--instance-termination-action=STOP'],'us-central1-a')
         policy=c.state()
-        if str(policy['scheduling']['maxRunDuration']['seconds'])!='216900' or policy['scheduling'].get('terminationTime'):
+        if str(policy['scheduling']['maxRunDuration']['seconds'])!=str(ident['provider_max_duration_seconds']) or policy['scheduling'].get('terminationTime'):
             raise ValueError('New provider STOP readback differs')
         if any(policy[k]!=before[k] for k in ['machineType','disks','metadata','serviceAccounts','shieldedInstanceConfig']):
             raise ValueError('Protected resources changed')
         c.put('STOP-readback.json',policy)
         c.call(['compute','instances','start','dl-binner-cpu'],'us-central1-a');live=c.state()
         if live['status']!='RUNNING' or live['lastStartTimestamp']==before['lastStartTimestamp']:raise ValueError('No fresh allocation')
-        ident['vm_start_epoch']=datetime.datetime.fromisoformat(live['lastStartTimestamp']).timestamp()
+        actual_start=datetime.datetime.fromisoformat(live['lastStartTimestamp']).timestamp()
+        ident['allocation_start_epoch']=actual_start
+        if not recovered:ident['vm_start_epoch']=actual_start
+        if actual_start+ident['provider_max_duration_seconds']>ident['vm_start_epoch']+216900+1:raise ValueError('Recovery provider STOP extends original deadline')
         c.put('provider-start.json',live);(out/'identity.json').write_text(json.dumps(ident,indent=2)+'\n')
         for i in range(12):
             value=subprocess.run(SSH+['true'],capture_output=True,text=True,timeout=20)
@@ -189,16 +201,16 @@ def release(out):
     """Release once, only when fresh independent provider/gate evidence passes."""
     out=Path(out).absolute();ident=json.loads((out/'identity.json').read_text());c=Cloud(out/'release-control')
     state=c.state();c.put('provider-before-release.json',state)
-    if state['status']!='RUNNING' or datetime.datetime.fromisoformat(state['lastStartTimestamp']).timestamp()!=ident['vm_start_epoch']:
+    if state['status']!='RUNNING' or datetime.datetime.fromisoformat(state['lastStartTimestamp']).timestamp()!=ident.get('allocation_start_epoch',ident['vm_start_epoch']):
         raise ValueError('Original new boot no longer running')
-    if str(state['scheduling']['maxRunDuration']['seconds'])!='216900' or state['scheduling']['instanceTerminationAction']!='STOP' or state['scheduling']['automaticRestart']:
+    if str(state['scheduling']['maxRunDuration']['seconds'])!=str(ident['provider_max_duration_seconds']) or state['scheduling']['instanceTerminationAction']!='STOP' or state['scheduling']['automaticRestart']:
         raise ValueError('Provider STOP/restart policy differs')
     remote(out,render_release(ident,state))
 
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--artifact-root',type=Path,required=True)
-    p.add_argument('--start',action='store_true');p.add_argument('--release',action='store_true');a=p.parse_args()
-    if a.start and not a.release:start(a.artifact_root)
+    p.add_argument('--start',action='store_true');p.add_argument('--release',action='store_true');p.add_argument('--recovery',type=Path);a=p.parse_args()
+    if a.start and not a.release:start(a.artifact_root,a.recovery)
     elif a.release and not a.start:release(a.artifact_root)
     else:p.error('Choose exactly start or release')

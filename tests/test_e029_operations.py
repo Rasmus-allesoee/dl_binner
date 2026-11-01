@@ -27,6 +27,13 @@ class Operations(unittest.TestCase):
             f=dict(wheel_path=str(p),wheel_binding=binding(p));ident=dict(root='/srv/dl_binner/experiments/e029/tiny',source='a'*40,wheel_binding=binding(p))
             for code in [render_host(ident,f),render_release(ident,{})]:compile(code,'actual-e029-consumer','exec')
             self.assertIn('certifiable-joint-retrieval',render_host(ident,f));self.assertNotIn('metabat',render_host(ident,f).lower())
+    def test_input_import_guard_precedes_product_and_inherited_helpers(self):
+        import inspect
+        from e029_control import verify_inputs
+        source=inspect.getsource(verify_inputs)
+        self.assertLess(source.index('product_scope()'),source.index('from dl_binner.discovery'))
+        self.assertLess(source.index('product_scope()'),source.index('from e028_control'))
+
     def test_clock_finance_source_and_failed_completion_refusal(self):
         with tempfile.TemporaryDirectory() as t:
             p=Path(t)/'config.json';p.write_text('{}');g=Path(t)/'gate.json';g.write_text('{}');now=1793470000.

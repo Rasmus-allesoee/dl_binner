@@ -672,5 +672,7 @@
     "full-shape-profile-r1 original forecast refused"
   ],
   "scientific_fits": 0,
-  "native_run": false
+  "native_run": false,
+  "native_operational_failure": "Attempt db257a8 passed first eight native setup gates, then input wrapper imported checkout before installed-product scope. No community release.",
+  "repair": "Call product_scope before inherited/numerical imports; actual installed negative-source fixture passes; six launcher tests pass. Reuse only closed first-eight setup receipts; fresh inputs/full-shape checks still required."
 }

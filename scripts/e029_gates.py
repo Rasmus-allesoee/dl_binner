@@ -25,6 +25,19 @@ def run(config):
     sup=supervisor();env=sup.isolated_env(4);env.update(NUMBA_NUM_THREADS='4',NUMBA_CACHE_DIR=str(root/'native-cache'),TMPDIR=str(root/'tmp'),HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1')
     stages=[]
     def command(label,argv):
+        reusable=cfg.get('reuse_passed_setup',{}).get(label)
+        if reusable:
+            if label not in ['workflow-origin','accepted-numerical','package-install','owned-complete-runtime','actual-ANN-source','installed-discovery','installed-batched-engineering','serial-cached-tiny-DAG']:raise ValueError('Input/science gates cannot be reused through setup')
+            for member,wanted in reusable['files'].items():
+                if binding(member)!=wanted:raise ValueError('Passed setup member changed: '+member)
+            previous=json.loads(Path(reusable['exit_receipt']).read_text())
+            if previous['exit_code']!=0 or previous.get('stop_reason') is not None:raise ValueError('Only completed setup gates can be reused')
+            stages.append(dict(stage=label,resources=previous,reused_from=reusable['exit_receipt'],verified_files=reusable['files']))
+            # Retain portable proof bytes; the original environment itself stays in place.
+            if reusable.get('proof'):
+                import shutil
+                shutil.copyfile(reusable['proof'],out/Path(reusable['proof']).name)
+            return
         remaining=deadline-time.time()
         if remaining<30:raise TimeoutError('Setup clock exhausted')
         result=sup.supervise(argv,out/(label+'.log'),remaining,26000000000,env,sample_root=__import__('os').getpid());stages.append(dict(stage=label,resources=result))
