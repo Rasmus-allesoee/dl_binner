@@ -155,6 +155,13 @@ Be particularly careful about:
 
 Claims should follow evidence.
 
+Before attributing a recovery gap to learning, compare the exact embedding/input
+bindings and downstream policies. Identical vectors localize that gap downstream;
+a poor arm with an older learner does not establish failure of its constructor
+with current learning. Prefer a source-bound cached bridge when it can resolve
+that ambiguity cheaply, without replaying accepted science. This does not make
+grouping perfection a prerequisite for a justified learning upgrade.
+
 Record known and unknown pretrained/reference-database overlap as a limitation on
 unseen-genome claims. It is distinct from labels entering our feature/training
 pipeline. An unavailable complete historical training inventory alone is not an
@@ -682,6 +689,13 @@ For a run with multiple storage guards, report total peak growth as the maximum
 sampled filesystem usage minus the original launch snapshot. A guard's own
 growth counter can reset between setup, science and collection; it is not the
 whole-run peak. Retain both scopes when they are useful.
+
+Bind a storage baseline to the actual filesystem/device. For a newly mounted
+scratch disk, record its first post-mount usage before payload/setup writes;
+never subtract an older disk's usage counter from it. Keep the original VM-start
+clock, account for every disk's charged lifetime, and report source/task filesystem
+reserves separately. Reusing accepted files in place can avoid cross-filesystem
+copies while retaining exact member proofs and their existing archive ownership.
 
 Record the owner's actual allocation for every performance run; recommendations and tool thread counts are not allocated vCPUs. Future owner-run resource drivers must accept explicit allocation inputs and use them for thread limits and charged core-hour estimates. Host CPU/RAM reports may describe the whole shared node. Smaller allocations are allowed; extrapolate only at the measured allocation, not by assuming proportional speedup. Distinguish expected runtime from a timeout. Preserve raw returned records and append corrections when allocation was wrong.
 

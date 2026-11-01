@@ -1,5 +1,28 @@
 # Google Cloud workspace operations
 
+## November 1 E031 preparation boundary
+
+[E031 operations](../experiments/E031-bootstrap-preserving-learning/OPERATIONS.md)
+prepare a cached E023 construction bridge first and the requested learning
+candidate separately. No VM start, cloud write, credit refresh, resource change,
+cleanup or paid/community work occurs in preparation. E030's TERMINATED state
+below is the last verified observation, not a new control-plane check.
+
+Proposed complete scopes are $4 / six hours and later $6 / twelve hours, including
+setup/review/collection/shutdown; provider STOP adds 15 minutes. Source is private
+exact-commit Git transport, with read-only GitHub. Fresh complete credit, delayed
+usage, SKU, quota, source/runtime and retention checks precede execution. Original
+November 4 at 00:00 Copenhagen remains; old budgets do not carry.
+
+The last 26.72 GiB free snapshot is insufficient for conservative 33/34 GiB
+admission. Review safe cleanup without deleting required/unique science. The
+future request explicitly permits one temporary 40 GiB balanced disk if needed,
+with its full lifetime, positively identified new-device formatting, post-mount
+baseline, source reserve and verified collection/detach/deletion. No such disk is
+created now; original 30/300 GiB disks stay. A seven-day soft-deletion tail can
+outlast object deletion: price it and obtain any separate preservation coverage
+without silently renewing November 4 or weakening bucket protections.
+
 ## November 1 E030 verified closeout
 
 **Original CPU is TERMINATED; construction and frozen diagnostics both pass.**

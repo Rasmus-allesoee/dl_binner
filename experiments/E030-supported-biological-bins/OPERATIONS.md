@@ -1,6 +1,16 @@
 # E030 operations
 
-## Current boundary
+## E031 preparation resolution
+
+The prompt at `ca7b142` has been invoked for local implementation/preparation.
+[E031](../E031-bootstrap-preserving-learning/OPERATIONS.md) owns the current
+next approval prompt. Its source-bound reassessment orders the E023 cached
+construction bridge before new learner fits, while implementing the requested
+bootstrap-preserving/confidence-aware candidate now. This supersedes the earlier
+learning-first ordering below; all E030 science/results/criteria remain unchanged.
+No new community/cloud execution is authorized by this resolution.
+
+## Preserved E030 execution boundary (completed)
 
 Owner authorization: implement/test and run one new cached bin-construction
 comparison under $3 / six cumulative hours / 6.25-hour provider STOP on the

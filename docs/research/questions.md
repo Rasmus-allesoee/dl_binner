@@ -900,6 +900,15 @@ preservation/retention dependencies are unchanged.
 
 ### November 1, 2026: E030 reviewed construction, unresolved learning quality
 
+**Current ordering correction:** [E031](../../experiments/E031-bootstrap-preserving-learning/design.md)
+implements the proposed learner locally but orders the source-bound E023 bridge
+first. Identical E022 E009 vectors/native graph and E023's older sequence-only
+Oral arm prevent the encoder diagnosis implied by a simple score comparison.
+This is one decision-changing downstream bundle control, not a compulsory return
+to tiny ingredient tests. Q001 remains open; common-policy/GLM compatibility,
+all populations, confirmation and November 4 preservation dependencies remain.
+The following closeout reasoning is preserved with that qualification.
+
 [E030](../../experiments/E030-supported-biological-bins/comparison-review.json)
 raises primary student R95 to 7.6509% GLM E009 / 10.5446% Oral but fails joint KEEP
 against stronger anchors. Root-only adds no R95 beyond the working E029 marker

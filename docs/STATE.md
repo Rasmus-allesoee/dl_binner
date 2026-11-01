@@ -1,6 +1,60 @@
 # Current Research State
 
-Updated: November 1, 2026 (Copenhagen). This is the single current handoff.
+Updated: November 2, 2026 (Copenhagen). This is the single current handoff.
+
+## E031 local preparation: construction bridge first, learner implemented
+
+**E031 is implemented locally; no community or paid cloud work is authorized or
+performed in this preparation.** New branch `bootstrap-preserving-learning`,
+parent `ca7b142`. [Design](../experiments/E031-bootstrap-preserving-learning/design.md),
+[local engineering](../experiments/E031-bootstrap-preserving-learning/local-observed.json),
+[frozen protocol](../experiments/E031-bootstrap-preserving-learning/protocol.json)
+and [operations/exact approval request](../experiments/E031-bootstrap-preserving-learning/OPERATIONS.md#exact-following-prompt)
+own the next action. Source stays private. All accepted E009–E030 evidence and
+failed journals, 52 E023 product files and 68 E030 package members are preserved.
+
+**Recommend the source-bound cached E023 graph/construction bridge before new
+learner fits.** The E023 10.4163% and E030 7.6509% E009 GLM student use identical
+E022 vector **and native graph** bindings. That gap is downstream. E023's poor
+Oral arm used E019 sequence-only learning, so it does not test that constructor
+on the current measured-depth Oral learner. [The reassessment](evidence/2026-11-01-bootstrap-and-construction-priority.md)
+supersedes the learning-first order below. Reuse the completed E009 GLM student
+in place/summary only and compute five new actors across all six fixed common
+teacher/student instances. Keep original E023 semantics, both alternatives,
+matched source-blind query views, full DNA and one joint decision rule. No grid
+or per-dataset winner routing. This is a downstream bundle control.
+
+The requested coherent learner is implemented/tested in parallel. It restores
+bootstrap online/EMA/predictor/buffers/Adam state, retains real views/measured
+parent-depth/topology, and combines lower-rate continuation, a soft fixed anchor
+and cautious signed supervision. Original proposal slots remain the denominator
+when positives abstain. Lazy Adam state and actual step counters are retained.
+No saved bootstrap RNG exists: the fresh seed-11 continuation stream is declared,
+not an exact interrupted-fit resume. Three-mode policy includes E009 GLM throughout
+teacher/proposals/student and measured-depth no-GLM Oral. E030 construction is
+initially fixed; any common amendment following the bridge is frozen before fits.
+
+[Complete resources](../experiments/E031-bootstrap-preserving-learning/resources.json):
+new proposed $4 bridge / $6 later learner scopes, roughly 1.5–3 / 7–11 hours,
+6 / 12-hour cumulative clocks and 6.25 / 12.25-hour STOP. Existing E2/32 GiB,
+four numerical threads / 26 GB sampled RSS, 25 GiB reserve and bounded return.
+The old 26.72 GiB free snapshot does not pass new 33/34 GiB headroom. Safe cleanup
+comes first; optional **one temporary 40 GiB balanced task disk** is explicitly
+included only in the future approval request, never provisioned now. Original
+disks and unbacked E021 bulk remain. Full scratch lifetime, post-mount baseline,
+compressed/logical coexistence, transfer and soft-deletion tail are priced.
+Fresh live credit/eligibility/delay/runtime/quota/storage gates remain unpassed.
+No old budget carries and no fresh VM/financial observation is claimed here.
+
+Both communities remain development data. E023/E026/MetaBAT2 references, full
+156/799 denominators, 3.3034% N-quarantine and Oral origin/shared limitations stay.
+Skin stays unscored with all prior admission dependencies. Full Oral GLM still
+requires the prepared 128-view native batching qualification/capacity/full-bank
+cost case; no GPU attempt or information cut is added. **November 4 at 00:00
+Copenhagen remains hard**; a separate preservation/retention decision, including
+any GCS soft-delete tail, is due. Existing stopped-disk costs continue.
+
+## Preserved E030 closeout and superseded next-priority reasoning
 
 **E030 construction and frozen diagnostics are completed and independently
 admitted; the VM is TERMINATED.** Scientific phase
@@ -35,8 +89,9 @@ complete assigned/unassigned/excluded DNA remain. Full 156/799 denominators,
 E009 N quarantine, separate Oral origin/shared sensitivity and RNA-unchecked
 secondary quality tiers stay unchanged. Both communities remain development.
 
-**Next: implement one bootstrap-preserving, confidence-aware relational learning
-block locally and prepare its separately priced comparison.**
+**Superseded ordering, preserved for provenance: learning preparation first.**
+E031 above implements that block and changes the next execution to the cached
+construction bridge.
 [Recommendation](../experiments/E030-supported-biological-bins/next-block.md)
 uses useful accepted bootstrap states, reliable/abstaining signed proposals and
 teacher preservation, initially retaining encoder topology and E030's common

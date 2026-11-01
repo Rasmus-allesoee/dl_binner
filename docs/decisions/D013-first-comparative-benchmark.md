@@ -1,5 +1,25 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E031 preparation and source-bound priority correction, November 1, 2026
+
+The owner correctly identifies a downstream confound. E023 10.4163% E009 and
+E030 7.6509% consume byte-identical E022 vectors and original native graphs.
+E023 Oral's sequence-only E019 learner cannot reject that constructor with
+current measured-depth learning. [The source audit](../evidence/2026-11-01-bootstrap-and-construction-priority.md)
+therefore orders one cached E023 graph/construction bridge before learner fits.
+Reuse accepted E009 GLM science/summary; compute five new fixed-learning actors.
+This can change the common downstream choice without paying for three new fits
+first. It does not isolate graph versus selection, prove representation optimal
+or permit per-community winner routing. Preserve every old outcome and criterion.
+
+[E031](../../experiments/E031-bootstrap-preserving-learning/README.md) implements
+the requested coherent bootstrap-preserving/confidence-aware learner in parallel,
+with real local engineering contracts and separately priced three-mode comparison.
+There is no community/cloud execution in this task. New $4 bridge / $6 learning
+proposals need fresh complete credit and resource admission. Optional temporary
+40 GiB scratch is a future explicit approval, not a current resource change.
+November 4 remains hard, including a separate preservation/soft-delete decision.
+
 ## E030 verified result and next learning decision, November 1, 2026
 
 [Reviewed E030](../../experiments/E030-supported-biological-bins/comparison-review.json)

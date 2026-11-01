@@ -1,0 +1,482 @@
+{
+  "kind": "E031 local preparation evidence",
+  "status": "LOCAL_ENGINEERING_PASSED_NATIVE_AND_COMMUNITY_UNRUN",
+  "checked_UTC": "2026-11-01T23:48:41.563644+00:00",
+  "parent_commit": "ca7b142aec1d15762fbc46d9f136d2af616dc1af",
+  "branch": "bootstrap-preserving-learning",
+  "decision": "Run source-bound fixed-learning E023 graph/construction bridge before separately priced bootstrap-preserving learner fits; both implementations prepared now.",
+  "scope": {
+    "cloud_started": false,
+    "cloud_writes_or_paid_cloud_work": false,
+    "community_fits_groups_or_scores": false,
+    "data_acquisition": false,
+    "native_DNABERT_extraction": false,
+    "resource_changes_or_deletions": false,
+    "accepted_science_changed": false,
+    "public_push": false,
+    "local_engineering_fits": true
+  },
+  "preservation": {
+    "all_E030_frozen_files_unchanged": 23,
+    "all_E030_package_members_unchanged": 68,
+    "all_E023_product_source_files_unchanged": 52,
+    "accepted_bulk_not_rehashed_or_mutated": true,
+    "vector_graph_identity": "Accepted E023/E027/E028/E030 checksum chain; no new stopped-VM byte read in preparation.",
+    "failed_Mac_portability_tolerance": "Preserved unchanged; no native vector alteration or relaxed tolerance."
+  },
+  "frozen_candidate": {
+    "wheel": {
+      "bytes": 213603,
+      "sha256": "481b59ffc43e8ce4903d7fa28633e87e9154cbb6af28517b3d2c52fece23fb67"
+    },
+    "candidate_lock": {
+      "path": "experiments/E031-bootstrap-preserving-learning/candidate-lock.json",
+      "bytes": 10609,
+      "sha256": "04fdf850f6f38c1b37fb5adad50faeeadd8054c1b02ff17d0197f102d5c0ed30"
+    },
+    "source_lock": {
+      "path": "experiments/E031-bootstrap-preserving-learning/source-lock.json",
+      "bytes": 65654,
+      "sha256": "40c4a3a7871169638e1ab7813b896bfe8c266e35f68a86fde93261660febf9ec"
+    },
+    "science_lock": {
+      "path": "experiments/E031-bootstrap-preserving-learning/science-lock.json",
+      "bytes": 19392,
+      "sha256": "d1f34d2930eae869f779992105cc0dfcfcdc679dc4555878426ae251abd0b2f5"
+    },
+    "full_packet_matches_current_source": true,
+    "operations_clock_change_does_not_change_science_identity": true,
+    "build": {
+      "path": "artifacts/e031-bootstrap-preserving-learning/preparation/build-r5/build.json",
+      "bytes": 291,
+      "sha256": "df7855a51a13a4a6e7958a55533017afe1dbff5ab9658006261d120fddf6796d"
+    },
+    "install": {
+      "path": "artifacts/e031-bootstrap-preserving-learning/preparation/install-r5.json",
+      "bytes": 16387,
+      "sha256": "9ffb8b6d2ef37e5889571e9a4f360c12bff097522fcc5dca9322206c86c56383"
+    },
+    "post_test_formatting_only": "Removed one trailing blank line from each Snakefile; scientific identity unchanged."
+  },
+  "runtime": {
+    "local_numerical_Python": "3.10.15",
+    "Torch": "2.2.2",
+    "NumPy": "1.26.4",
+    "local_workflow_Python": "3.13.12",
+    "Snakemake": "9.16.3",
+    "native_workflow_required_Python": "3.12.10",
+    "installed_own_wheel_with_complete_dependency_base_read_only": true,
+    "native_admission": false
+  },
+  "checks": {
+    "bootstrap-contracts-r5": {
+      "status": "PASS",
+      "tests": 8,
+      "exit": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/bootstrap-contracts-r5/terminal.exit.json",
+        "bytes": 678,
+        "sha256": "1006783262771ab5012678328b1e67e1501b3dc53582945070939933ead8721f"
+      },
+      "terminal": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/bootstrap-contracts-r5/terminal.log",
+        "bytes": 113046,
+        "sha256": "e16f46f960fcdf94d1ab24f900b9579b296140c0e9128de722f92886c6a7cb6c"
+      },
+      "resources": {
+        "command": [
+          "artifacts/e031-bootstrap-preserving-learning/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests/product",
+          "-p",
+          "test_bootstrap.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "launched_pid": 67869,
+        "peak_sampled_rss_bytes": 394338304,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 2.2471848592239176,
+        "sampled_cpu_seconds": 62.72,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 8405.533195972443,
+        "stop_reason": null,
+        "wall_seconds": 27.910476408986142
+      },
+      "filesystem": {
+        "epoch": 1793576029.096826,
+        "filesystem": {
+          "total": 499963174912,
+          "used": 487235235840,
+          "free": 12727939072
+        },
+        "scope": "Filesystem snapshot, not attributable peak storage"
+      }
+    },
+    "operations-r4": {
+      "status": "PASS",
+      "tests": 9,
+      "exit": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/operations-r4/terminal.exit.json",
+        "bytes": 673,
+        "sha256": "389ae1f4c7b2648acc2ff8bbbb2ad9ac93428a8db169c2c8b6f19eb2048b432e"
+      },
+      "terminal": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/operations-r4/terminal.log",
+        "bytes": 1389,
+        "sha256": "92a331e6475038542c26cfac1b8d1db6bb201a149339e042da63d7ea99cdaf81"
+      },
+      "resources": {
+        "command": [
+          "artifacts/e031-bootstrap-preserving-learning/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e031_operations.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "launched_pid": 68096,
+        "peak_sampled_rss_bytes": 28925952,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.387931207829628,
+        "sampled_cpu_seconds": 0.27,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 8275.766676902771,
+        "stop_reason": null,
+        "wall_seconds": 0.6959996889927424
+      },
+      "filesystem": {
+        "epoch": 1793576131.631093,
+        "filesystem": {
+          "total": 499963174912,
+          "used": 487236464640,
+          "free": 12726710272
+        },
+        "scope": "Filesystem snapshot, not attributable peak storage"
+      }
+    },
+    "tiny-bridge-r3": {
+      "status": "PASS",
+      "tests": null,
+      "exit": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/tiny-bridge-r3/terminal.exit.json",
+        "bytes": 808,
+        "sha256": "a18faad29f480a607b0c1b9add1f8612ee28c83a57fdd2ef471f6cabd452bb83"
+      },
+      "terminal": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/tiny-bridge-r3/terminal.log",
+        "bytes": 713,
+        "sha256": "9f3ed636d977f5330049a6373a301d39856187c97c4519671c34c8b6d8d9578c"
+      },
+      "resources": {
+        "command": [
+          "artifacts/e031-bootstrap-preserving-learning/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "scripts/e031_tiny.py",
+          "--root",
+          "artifacts/e031-bootstrap-preserving-learning/preparation/tiny-bridge-r3-work",
+          "--workflow-python",
+          "artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+          "--comparison",
+          "bridge"
+        ],
+        "exit_code": 0,
+        "launched_pid": 68157,
+        "peak_sampled_rss_bytes": 192212992,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 1.1627461076755599,
+        "sampled_cpu_seconds": 15.17,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 8166.86053609848,
+        "stop_reason": null,
+        "wall_seconds": 13.046700307022547
+      },
+      "filesystem": {
+        "epoch": 1793576252.8752909,
+        "filesystem": {
+          "total": 499963174912,
+          "used": 487237238784,
+          "free": 12725936128
+        },
+        "scope": "Filesystem snapshot, not attributable peak storage"
+      },
+      "completion": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/tiny-bridge-r3-work/completed.json",
+        "bytes": 18359,
+        "sha256": "0ff7f0fee244845302950279eee14ca77eab1f9e76abeeeb139349902488db96"
+      },
+      "serial_stages": 10,
+      "verified_resume_noop": true,
+      "archive": {
+        "bytes": 44218,
+        "sha256": "fc34a857921ecf05bdd1acd1c4894d7f65672940a2cc3a9b4c77fa4a626c327d"
+      },
+      "regular_members": 87,
+      "alias_members": 62,
+      "logical_member_bytes": 248270,
+      "every_member_verified": true
+    },
+    "tiny-learning-r3": {
+      "status": "PASS",
+      "tests": null,
+      "exit": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/tiny-learning-r3/terminal.exit.json",
+        "bytes": 811,
+        "sha256": "7ac75b3f07728131ac82e7fc9644b34d9cf56ea99eae86e5df374837dd8e7296"
+      },
+      "terminal": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/tiny-learning-r3/terminal.log",
+        "bytes": 47964,
+        "sha256": "d9580f35e6c47afe929375752ff0ad2139dd9fc5a1f48208260b07b20b6cad53"
+      },
+      "resources": {
+        "command": [
+          "artifacts/e031-bootstrap-preserving-learning/preparation/env-r5/bin/python",
+          "-I",
+          "-B",
+          "scripts/e031_tiny.py",
+          "--root",
+          "artifacts/e031-bootstrap-preserving-learning/preparation/tiny-learning-r3-work",
+          "--workflow-python",
+          "artifacts/e005-linux-pilot/env-workflow-local/bin/python",
+          "--comparison",
+          "learning"
+        ],
+        "exit_code": 0,
+        "launched_pid": 68356,
+        "peak_sampled_rss_bytes": 604475392,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 1.5841448662234594,
+        "sampled_cpu_seconds": 141.6,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 8023.121581077576,
+        "stop_reason": null,
+        "wall_seconds": 89.3857645340031
+      },
+      "filesystem": {
+        "epoch": 1793576473.003407,
+        "filesystem": {
+          "total": 499963174912,
+          "used": 487284006912,
+          "free": 12679168000
+        },
+        "scope": "Filesystem snapshot, not attributable peak storage"
+      },
+      "completion": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/tiny-learning-r3-work/completed.json",
+        "bytes": 30327,
+        "sha256": "512d863d77333820909064dedcc906221d1e08fa25a15edb8339f5fbd757f9a5"
+      },
+      "serial_stages": 28,
+      "verified_resume_noop": true,
+      "archive": {
+        "bytes": 10414305,
+        "sha256": "60771395d7507982a8054e22847bf4804b1d51270ab5221cc7fbf62cd6e963fd"
+      },
+      "regular_members": 260,
+      "alias_members": 118,
+      "logical_member_bytes": 12140484,
+      "every_member_verified": true
+    },
+    "full-batch-probe-r1": {
+      "status": "PASS_VERIFIED_KERNEL_REUSE",
+      "record": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/full-batch-probe-r1.json",
+        "bytes": 1185,
+        "sha256": "04a2e3fdf7a5698e87160396dea9c225dd528fab1cc8f8460c8d52f5ab9f7198"
+      },
+      "exit": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/full-batch-probe-r1/terminal.exit.json",
+        "bytes": 717,
+        "sha256": "7372178bb16f8c8a8b0019134757270dbae348963a0044e7f37b6e7e5dc7efed"
+      },
+      "model_source_unchanged_from_tested_build_r4": true,
+      "probe_source_unchanged": true,
+      "generated_inputs_only": true,
+      "native_or_biological_admission": false,
+      "resources": {
+        "command": [
+          "artifacts/e031-bootstrap-preserving-learning/preparation/env-r4/bin/python",
+          "-I",
+          "-B",
+          "scripts/e031_probe.py",
+          "--output",
+          "artifacts/e031-bootstrap-preserving-learning/preparation/full-batch-probe-r1.json",
+          "--steps",
+          "3"
+        ],
+        "exit_code": 0,
+        "launched_pid": 67059,
+        "peak_sampled_rss_bytes": 404701184,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 1.9551164222180415,
+        "sampled_cpu_seconds": 17.12,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 9405.706014156342,
+        "stop_reason": null,
+        "wall_seconds": 8.756511788989883
+      },
+      "measurements": {
+        "status": "PASS",
+        "cases": {
+          "noGLM": {
+            "batch_parents": 256,
+            "available_views": 1280,
+            "signed_pairs": 256,
+            "measured_step_seconds": [
+              0.27816793601959944,
+              0.2778547700145282,
+              0.27884030097629875
+            ],
+            "median_step_seconds": 0.27816793601959944,
+            "finite_loss": true,
+            "parameter_count": 196434,
+            "threads": 4
+          },
+          "GLM": {
+            "batch_parents": 256,
+            "available_views": 1280,
+            "signed_pairs": 256,
+            "measured_step_seconds": [
+              0.3018263629928697,
+              0.29874517797725275,
+              0.3182294309954159
+            ],
+            "median_step_seconds": 0.3018263629928697,
+            "finite_loss": true,
+            "parameter_count": 311573,
+            "threads": 4
+          }
+        },
+        "generated_inputs_only": true,
+        "community_fit": false,
+        "science_seed_unchanged": 11,
+        "projected_training_seconds_with_50_percent_IO_headroom": {
+          "E009-noGLM": 2904.073252044618,
+          "E009-GLM": 3151.0672296455596,
+          "oral-noGLM": 16589.93570420891
+        },
+        "native_admission": false,
+        "scope": "Full-shape kernels; retained real-bank timing and full complete schedule must also pass on the actual Linux VM"
+      }
+    }
+  },
+  "documentation": {
+    "latest_passed_log": {
+      "path": "artifacts/e031-bootstrap-preserving-learning/preparation/docs-r3.log",
+      "bytes": 689,
+      "sha256": "825ffc203a2b5f9f1d50ddc9b9907f0b74efa507cafa0819d6062b9fc519e32c"
+    },
+    "documents": 144,
+    "links": 1973,
+    "optional_historical_cache_files_unavailable": 10,
+    "final_refresh_pending": false,
+    "prompt_structural_lint": {
+      "path": "artifacts/e031-bootstrap-preserving-learning/preparation/prompt-lint-final.json",
+      "bytes": 113,
+      "sha256": "1437e02aa2788efca447fcf8708ff01dbdca8fd2efcf8347846fcdfa90c5d2eb"
+    },
+    "structural_violations": 0,
+    "structural_linter_is_not_formal_STE_certification": true
+  },
+  "resources": {
+    "local_threads": 4,
+    "local_tree_RSS_ceiling_bytes": 8000000000,
+    "local_engineering_clock": {
+      "start_epoch": 1793570006.405934,
+      "deadline_epoch": 1793584406.405934,
+      "seconds": 14400,
+      "local_only": true
+    },
+    "elapsed_clock_at_closeout_seconds": 6914.921720743179,
+    "clock_was_not_reset": true,
+    "all_recorded_attempt_peak_tree_RSS_bytes": 623407104,
+    "all_observed_owned_preparation_peak_bytes": 133825528,
+    "current_owned_preparation_regular_bytes": 133831455,
+    "minimum_sampled_local_filesystem_free_bytes": 10657861632,
+    "current_filesystem_free_bytes": 12667088896,
+    "local_filesystem_reserve_bytes": 6442450944,
+    "OS_swap_separate_snapshot": {
+      "total_MiB": 9216,
+      "used_MiB": 8451.75,
+      "free_MiB": 764.25,
+      "scope": "System-wide encrypted swap; not attributable to this process tree or experiment."
+    },
+    "no_numerical_work_after_final_closeout_required": true,
+    "new_GCP_compute_cost_USD": 0
+  },
+  "failure_journals": [
+    {
+      "attempt": "bootstrap-contracts-r1",
+      "log": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/bootstrap-contracts-r1/terminal.log",
+        "bytes": 110461,
+        "sha256": "46d0da7e6ae6964cc71ea1a29559df8e7bae02d316edd7043c6f0036bffc9625"
+      },
+      "reason": "Both tiny learning/reload modes passed; graph worker inside Torch process hit the existing numerical-backend isolation guard.",
+      "repair": "Run actual graph/forest/audit/export in isolated subprocess; preserve guard."
+    },
+    {
+      "attempt": "docs-r1",
+      "log": {
+        "path": "artifacts/e031-bootstrap-preserving-learning/preparation/docs-r1.log",
+        "bytes": 1150,
+        "sha256": "bc05f788ceb7d59a1f17c45e3b1c2f2bafe7476ff297472683aa0b24560ad19d"
+      },
+      "reason": "Documentation check ran before the new local receipt existed. Receipt created and check passed."
+    }
+  ],
+  "earlier_attempts": "All r1-r4 builds/contracts/rehearsals remain locally retained; final r5 package was used in final contracts and r3 DAGs.",
+  "actual_fixture_paths": [
+    "DNA window/context and measured-parent-depth readers",
+    "physical marker cache/HMM readers",
+    "context/hybrid bootstrap initialization and actual 20-epoch continuation/reload",
+    "stopped EMA/predictor/optimizer/buffer contracts",
+    "zero-warmup AdamW behavior and original proposal-slot denominator",
+    "sparse graph/query/hierarchy/full-DNA export",
+    "real old recall refusal with measured structured failure capture",
+    "serial Snakemake stage seals and no-op resume after clock change",
+    "deduplicated archive/every-member/alias verification",
+    "new-output review contract reader"
+  ],
+  "synthetic_or_mocked": [
+    "Generated engineering DNA/annotations; at most 35 fixture contigs",
+    "DNABERT model inference via NumericExtractor",
+    "Intentional incorrect retrieval distance report for the original recall refusal test",
+    "Provider, credit, metadata, systemd and mount-state fixtures; no live provider admission"
+  ],
+  "pending_contracts": [
+    "Fresh live credit/scope/expiry/delayed usage/product eligibility/prices and all-version storage costs",
+    "Fresh native source/member/runtime/mount/headroom and actual watchdog/provider STOP admission",
+    "Actual full-bank Linux complete-schedule forecast and community stability/recovery quality",
+    "Separate execution approval; conditional 40 GiB scratch only if needed and admitted",
+    "November 4 preservation/retention and soft-delete-tail coverage decision",
+    "Full Oral GLM native admission and independently admitted unscored confirmation data"
+  ],
+  "new_community_outcome": null,
+  "future_scope": {
+    "bridge_proposed_USD": 4,
+    "bridge_hours": 6,
+    "learning_proposed_USD": 6,
+    "learning_hours": 12,
+    "optional_scratch_GiB": 40,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "fresh_financial_admission": false
+  }
+}

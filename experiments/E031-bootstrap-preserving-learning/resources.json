@@ -1,0 +1,220 @@
+{
+  "kind": "E031 complete prospective cost/resources, not current financial admission",
+  "status": "PREPARATION_ONLY_NO_CLOUD_SPEND",
+  "retained_training_seconds": {
+    "E009-noGLM": 1180.8786993590002,
+    "E009-GLM": 1399.4257174840002,
+    "oral-noGLM": 6779.578555139002
+  },
+  "retained_training_bindings": {
+    "artifacts/e027-common-information-binner/inspection-20261031/controls/work/units/E009-noGLM/student/checkpoint.json": {
+      "bytes": 48753,
+      "sha256": "f8af78c1a9d2fe8187b95bf04b677046197461f2b17043c0b4e60d55611dcebe"
+    },
+    "artifacts/e027-common-information-binner/inspection-20261031/controls/work/units/E009-GLM/student/checkpoint.json": {
+      "bytes": 94554,
+      "sha256": "d75139f19e25584cc14d931d3f933555263a18dc63481918bf1c06be1c1fe729"
+    },
+    "artifacts/e027-common-information-binner/inspection-20261031/controls/work/units/oral-noGLM/student/checkpoint.json": {
+      "bytes": 48613,
+      "sha256": "c4a2b1ab74b6a722e88ec49e0c70539f20fee69024a925647e8f6cc67b48d29a"
+    }
+  },
+  "retained_E023_group_seconds": {
+    "E009": 173.22,
+    "oral": 824.58
+  },
+  "retained_E023_group_peak_RSS_MiB": {
+    "E009": 1322.2,
+    "oral": 6883.85
+  },
+  "retained_E029_fresh_oral_exact_retrieval_seconds": {
+    "teacher": 4747.24,
+    "student": 4742.45
+  },
+  "retained_E009_retrieval_warning": "2-second E029 E009 stages were reused caches, not fresh quadratic retrieval measurements",
+  "learning_nontraining_seconds_upper": 16200.0,
+  "forecast": {
+    "bridge_complete_hours": [
+      1.5,
+      3.0
+    ],
+    "bridge_clock_hours": 6,
+    "bridge_provider_STOP_hours": 6.25,
+    "bridge_new_groupings": 5,
+    "bridge_accepted_E023_actor_reused": 1,
+    "bridge_fits": 0,
+    "learning_complete_hours": [
+      7,
+      11
+    ],
+    "learning_clock_hours": 12,
+    "learning_provider_STOP_hours": 12.25,
+    "learning_fits": 3,
+    "fits_lower_anchor_hours": 2.599967492217223,
+    "learning_fit_planning_factor": [
+      1.4,
+      1.8
+    ],
+    "allocated_vCPU_hours_at_provider_STOP": {
+      "bridge": 50,
+      "learning": 98
+    },
+    "numerical_threads": 4,
+    "allocated_vCPUs": 8,
+    "science_RSS_GB_ceiling": 26,
+    "bridge_expected_RSS_GB": [
+      7,
+      12
+    ],
+    "learning_expected_RSS_GB": [
+      14,
+      21
+    ],
+    "complete_schedule": "Setup, credit/source/hash/runtime/native tiny gates, fits if separately admitted, graph/search, construction, full exports, independent audits, truth review, collector, upload/readback, idle and shutdown",
+    "native_complete_schedule_gate_required": true
+  },
+  "disk": {
+    "original_work_GiB": 300,
+    "original_boot_GiB": 30,
+    "provision_or_resize": false,
+    "reserve_GiB": 25,
+    "bridge_peak_extra_GiB_upper": 7,
+    "learning_peak_extra_GiB_upper": 8,
+    "bridge_target_initial_free_GiB": 33,
+    "learning_target_initial_free_GiB": 34,
+    "latest_dated_VM_free_bytes": 28692807680,
+    "latest_observation": "E030 November 1 terminal; not refreshed in preparation",
+    "current_headroom_pass": false,
+    "bridge_original_E023_work_nonDNA_group_bytes": {
+      "E009": 70921233,
+      "oral": 964087367
+    },
+    "bridge_original_E023_export_nonDNA_bytes": {
+      "E009": 12218325,
+      "oral": 253597369
+    },
+    "bridge_output_forecast_GiB": [
+      2.4,
+      3.2
+    ],
+    "return_compressed_cap_GiB": 2,
+    "return_logical_cap_GiB": 4,
+    "transport_and_scratch_in_peak": true,
+    "full_DNA_reused_not_duplicated": true,
+    "native_cleanup": "Measure first. No protected input/result deletion. The E030 784438675-byte return is a candidate only after current private-generation/full-SHA/member/no-user checks. E021 runtime/bank are NOT established as privately backed up and are not disposable.",
+    "optional_backup": "A separately authorized execution may generation/SHA-readback back up at most 4 GiB of closed inert transports to existing private GCS, then release only proven redundant compressed copies. Preserve original archives until verification. No bank member, required runtime prefix, unique result or failed journal may be removed.",
+    "no_unverified_cleanup_or_extra_disk_assumed": true,
+    "optional_scratch_disk": {
+      "size_GiB": 40,
+      "type": "pd-balanced",
+      "same_zone_as_existing_E2": true,
+      "scope": "Future explicit execution approval only; use only if measured safe cleanup cannot provide 33 GiB (bridge) / 34 GiB (learning). No new VM, resize, quota request or retention extension.",
+      "quota": "40 additional balanced GiB; verify live quota first. Historical 404 GiB scope is not current free quota.",
+      "price_USD_month": 4.0,
+      "maximum_72_hour_storage_USD": 0.39944521497919555,
+      "lifecycle": "Format only the positively identified newly created empty disk. Mount the fresh E031 phase root; snapshot its device/usage after mount before payload writes. Preserve original 30/300 GiB disks and source reserve. Keep on failure until verified backup; detach/delete only after independent collection/member admission and by November 4 under the approved preservation decision.",
+      "accepted_E023_restore": "Read/audit in place; no cross-filesystem hardlink/copy fallback. Fresh accepted-reuse receipt and original private archive own those bytes.",
+      "no_original_disk_cleanup_required_if_scratch_admitted": true
+    },
+    "return_peak_explanation": "Up to 4 GiB logical retained return plus up to 2 GiB compressed archive coexist; 7 GiB bridge / 8 GiB learning guards also cover cache/setup/control bytes. Do not equate compressed export with peak disk."
+  },
+  "local_review": {
+    "threads": 4,
+    "RSS_bytes": 8000000000,
+    "seconds": 3600,
+    "extra_GiB": 4,
+    "filesystem_reserve_GiB": 6,
+    "method": "Download/stream the generation-bound archive at most once within the 2 GiB WAN cap. Verify every member. Reuse that one compressed copy for sequential selective restoration, or stage required compact members in the single verification pass. Count compressed input, decoded staging and OS swap separately."
+  },
+  "pricing": {
+    "source": "experiments/E030-supported-biological-bins/cost-observed.json; November 1 Catalog quote, refresh before execution",
+    "CPU_IP_USD_hour": 0.27304567767858834,
+    "PD_330_GiB_USD_month": 31.2,
+    "PD_Catalog_month_hours": 721,
+    "GCS_Iowa_Standard_USD_GiB_month": 0.02,
+    "WAN_USD_GiB_upper": 0.12,
+    "quotes": {
+      "bridge": {
+        "compute_IP_at_provider_STOP_USD": 1.7065354854911772,
+        "overlapping_original_PD_USD": 0.27045769764216365,
+        "WAN_max_2_GiB_USD": 0.24,
+        "new_GCS_and_soft_delete_tail_upper_USD": 0.04,
+        "operations_USD": 0.05,
+        "contingency_USD": 0.65,
+        "complete_upper_USD": 3.3564383981125365,
+        "sampled_CPU_not_used_for_pricing": true,
+        "optional_scratch_72_hour_storage_upper_USD": 0.39944521497919555
+      },
+      "learning": {
+        "compute_IP_at_provider_STOP_USD": 3.344809551562707,
+        "overlapping_original_PD_USD": 0.5300970873786407,
+        "WAN_max_2_GiB_USD": 0.24,
+        "new_GCS_and_soft_delete_tail_upper_USD": 0.04,
+        "operations_USD": 0.05,
+        "contingency_USD": 0.9,
+        "complete_upper_USD": 5.504351853920544,
+        "sampled_CPU_not_used_for_pricing": true,
+        "optional_scratch_72_hour_storage_upper_USD": 0.39944521497919555
+      }
+    },
+    "original_PD_attribution_overlaps_approved_storage_not_added_twice": true,
+    "credit_delta_is_not_invoice": true
+  },
+  "credit_prerequisites": [
+    "Fresh signed-in Welcome balance/scope/status/expiry and paid billing/product eligibility",
+    "Fresh delayed usage, Catalog currency/prices and complete cost including all-version/soft-delete objects",
+    "Reasonable reserve for pending usage/future work; no real money",
+    "Original storage approval and measured free space; no new retention or resources",
+    "Provider STOP and all collection/shutdown must precede November 4 boundary"
+  ],
+  "soft_delete": {
+    "last_observed_policy_seconds": 604800,
+    "source": "artifacts/e023-inspection/20261027T000221Z/bucket.json; refresh required",
+    "warning": "Deleting a new GCS object may retain a billed soft-deleted copy for seven days. Quote that tail; do not interpret the small monetary amount as permission to retain beyond November 4. Obtain separate preservation/retention coverage if required; do not weaken bucket protections."
+  },
+  "new_execution_proposals_USD": {
+    "bridge": 4,
+    "learning": 6
+  },
+  "prior_budgets_carried_over": false,
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "no_live_credit_or_VM_check_in_preparation": true,
+  "local_full_shape_probe": {
+    "path": "artifacts/e031-bootstrap-preserving-learning/preparation/full-batch-probe-r1.json",
+    "cases": {
+      "noGLM": {
+        "batch_parents": 256,
+        "available_views": 1280,
+        "signed_pairs": 256,
+        "measured_step_seconds": [
+          0.27816793601959944,
+          0.2778547700145282,
+          0.27884030097629875
+        ],
+        "median_step_seconds": 0.27816793601959944,
+        "finite_loss": true,
+        "parameter_count": 196434,
+        "threads": 4
+      },
+      "GLM": {
+        "batch_parents": 256,
+        "available_views": 1280,
+        "signed_pairs": 256,
+        "measured_step_seconds": [
+          0.3018263629928697,
+          0.29874517797725275,
+          0.3182294309954159
+        ],
+        "median_step_seconds": 0.3018263629928697,
+        "finite_loss": true,
+        "parameter_count": 311573,
+        "threads": 4
+      }
+    },
+    "projected_fit_hours": 6.290298940527524,
+    "complete_kernel_plus_nontraining_hours": 10.790298940527524,
+    "native_admission": false,
+    "caveat": "Mac synthetic maximum-side-pair exposure plus 50 percent I/O allowance, not measured community or Linux performance. Fresh native complete-schedule gate required."
+  }
+}

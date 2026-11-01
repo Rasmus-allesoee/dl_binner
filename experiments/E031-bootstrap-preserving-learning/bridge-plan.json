@@ -1,0 +1,112 @@
+{
+  "kind": "E031 frozen bootstrap/construction decision",
+  "comparison": "bridge",
+  "work": "/srv/dl_binner/experiments/e031/NEW_PHASE/work",
+  "units": {
+    "E009-noGLM": {
+      "features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "fasta": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+      "marker_evidence": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json",
+      "teacher": {
+        "embeddings": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-noGLM/teacher-embed/embeddings.npz",
+        "graph": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-noGLM/teacher-graph/graph.npz",
+        "accepted": null,
+        "members": null
+      },
+      "student": {
+        "embeddings": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-noGLM/student-embed/embeddings.npz",
+        "graph": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-noGLM/student-graph/graph.npz",
+        "accepted": null,
+        "members": null
+      }
+    },
+    "E009-GLM": {
+      "features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "fasta": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+      "marker_evidence": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json",
+      "teacher": {
+        "embeddings": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-GLM/teacher-embed/embeddings.npz",
+        "graph": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-GLM/teacher-graph/graph.npz",
+        "accepted": null,
+        "members": null
+      },
+      "student": {
+        "embeddings": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-GLM/student-embed/embeddings.npz",
+        "graph": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-GLM/student-graph/graph.npz",
+        "accepted": "/srv/dl_binner/experiments/e023/density-20261026T213652Z-f13e5a1-r2/work/units/E009-E022/group",
+        "members": {
+          "alternatives.json": {
+            "bytes": 30316,
+            "sha256": "e1bb59c3b23139a647549a1c614a6f4c88ffe6e994f0ad5ca1950fbbed7cd313"
+          },
+          "completed.json": {
+            "bytes": 567385,
+            "sha256": "e1e7d7af07f82fc76465b8aa32d9cb0667e144b637ae4b206b2cd769d78d3d7c"
+          },
+          "density-choices.json": {
+            "bytes": 44812,
+            "sha256": "749840aa797142851a9a05c080c231e9d6171793350285a64a810e1be4621d19"
+          },
+          "density-partition.json": {
+            "bytes": 19045191,
+            "sha256": "0a3f7cd115bfe11460731f9efd73a0dc9b3e38dd0686597dfd78ac29bb8d84b9"
+          },
+          "hierarchy.json": {
+            "bytes": 563684,
+            "sha256": "4304937e3be584f8fc4eced97be4908e63673c7e4b49347c40e0471841c6c45f"
+          },
+          "hierarchy.npz": {
+            "bytes": 31577834,
+            "sha256": "d586b2eadd3cf5659f1a0931d6a3b446e407a07a21f3c325651b73b5793b3046"
+          },
+          "selected-choices.json": {
+            "bytes": 46820,
+            "sha256": "b9eb7d1878a3c57f8fb3998d31213a2aa8ec5f1208a1719581a64e45c7fdc83e"
+          },
+          "selected-partition.json": {
+            "bytes": 19045191,
+            "sha256": "0a3f7cd115bfe11460731f9efd73a0dc9b3e38dd0686597dfd78ac29bb8d84b9"
+          }
+        }
+      }
+    },
+    "oral-noGLM": {
+      "features": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz",
+      "fasta": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+      "marker_evidence": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json",
+      "teacher": {
+        "embeddings": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/teacher-embed/embeddings.npz",
+        "graph": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/teacher-graph/graph.npz",
+        "accepted": null,
+        "members": null
+      },
+      "student": {
+        "embeddings": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/student-embed/embeddings.npz",
+        "graph": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/student-graph/graph.npz",
+        "accepted": null,
+        "members": null
+      }
+    }
+  },
+  "python": "/srv/dl_binner/experiments/e031/NEW_PHASE/env/bin/python",
+  "workflow_python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+  "worker": "/srv/dl_binner/repo/scripts/e031_control.py",
+  "snakefile": "/srv/dl_binner/repo/experiments/E031-bootstrap-preserving-learning/bridge.smk",
+  "limits": {
+    "seconds": 21600,
+    "provider_STOP_seconds": 22500,
+    "ceiling_USD": 4,
+    "numerical_threads": 4,
+    "tree_RSS_bytes": 26000000000,
+    "free_reserve_bytes": 26843545600,
+    "extra_bytes": 7516192768,
+    "compressed_export_bytes": 2147483648,
+    "logical_export_bytes": 4294967296,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "allocated_vCPUs": 8,
+    "WAN_review_bytes": 2147483648
+  },
+  "reuse_lock": "/srv/dl_binner/repo/experiments/E031-bootstrap-preserving-learning/reuse-lock.json",
+  "wheel": "/srv/dl_binner/experiments/e031/NEW_PHASE/payload/dl_binner-0.1.0.dev9-py3-none-any.whl",
+  "engineering": false
+}

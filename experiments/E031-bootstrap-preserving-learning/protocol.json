@@ -1,0 +1,75 @@
+{
+  "record": "E031",
+  "status": "FROZEN_BEFORE_ANY_NEW_COMMUNITY_OUTCOME",
+  "parent_source": "ca7b142",
+  "order": [
+    "source-bound E023 fixed-learning bridge",
+    "review common downstream policy",
+    "separately approved bootstrap continuation comparison"
+  ],
+  "bridge": {
+    "learning_fixed": true,
+    "units": [
+      "E009-noGLM",
+      "E009-GLM",
+      "oral-noGLM"
+    ],
+    "roles": [
+      "teacher",
+      "student"
+    ],
+    "original_E009_GLM_student": "reuse accepted E023 result and summary; zero scientific replay/rescore",
+    "algorithms": "Exact E023 source/defaults, restricted native/TNF proposals, contextual rerank, sparse density and weighted marker selection",
+    "depth_semantics": "Positive-evidence endpoints only; measured all-zero rows remain observed but omitted from original E023 pair depth. Not the later E027 cozero/zero-positive rule.",
+    "biological_hypothesis": "A different graph/forest/antichain bundle recovers the known E009 vector signal and may transfer to the current Oral measured-depth learner",
+    "keep": "All three student modes have no R95 or target-90 regression versus E030; Oral R95 increases by at least 0.005 absolute. The reused E009 GLM anchor is not new evidence.",
+    "abandon": "Neither newly evaluated student mode (E009 no-GLM, Oral no-GLM) improves R95 or target-90 over E030; no common promotion",
+    "modify": "All other valid mixed outcomes; preserve every failed criterion. Choose no per-dataset winner route.",
+    "comparison_scope": "Downstream bundle on matched within-mode learning; not graph-versus-selection isolation or full Oral GLM transfer"
+  },
+  "learning": {
+    "topology_fixed": true,
+    "common_initial_downstream": "E030 exact policy for all three modes, root/pre/post retained",
+    "initialization": "admitted bootstrap online/EMA/predictor/buffers/Adam moments and counters; fresh seed11 continuation RNG explicitly declared",
+    "epochs": 20,
+    "batch_size": 256,
+    "learning_rate": 0.0002,
+    "anchor_weight": 0.1,
+    "relation_weight": 0.1,
+    "seed": 11,
+    "positives": "all available real same-parent DNA views plus cautious cached inter-parent proposals; no invented crop depth",
+    "control": "E023 bridge is the sole selective companion; no loss/seed/grid campaign",
+    "keep": "All three student modes have no R95/target-90 regression versus E030; at least one primary mode reaches E023 E009 or E026 Oral anchor. Retain teacher comparisons and every target loss.",
+    "abandon": "Neither primary mode improves R95 or target-90 versus E030",
+    "modify": "All other valid mixed outcomes",
+    "no_causal_claim": "Continuation exposure, initialization, soft preservation and confidence form a bundle; not proof isolating marker loss",
+    "relation_normalizer": "Original source-pair slots/permutation; withheld positives do not rescale remaining negative force."
+  },
+  "anchors": {
+    "E023_E009_R95": 0.1041634228737078,
+    "E030_E009_GLM_R95": 0.0765091,
+    "E030_oral_R95": 0.105446,
+    "E026_oral_R95": 0.1385692600936915,
+    "MetaBAT2_E009_R95": 0.08549276749480661,
+    "MetaBAT2_oral_R95": 0.173260089158,
+    "exact_values": "Use bound accepted summaries and integer target unions, not rounded display values in decisions"
+  },
+  "truth": {
+    "E009_targets": 156,
+    "E009_reference_bp": 554661890,
+    "N_quarantine_bp": 7653205,
+    "N_quarantine_percent": 3.3034,
+    "oral_targets": 799,
+    "oral_reference_bp": 2083072211,
+    "oral": "provided-origin oracle plus unchanged known-shared sensitivity, not exhaustive unique sequence",
+    "training_access": false,
+    "full_length_origin_eligibility_marker_depth_unknown_nontarget_unassigned_populations": true,
+    "old_summaries_reused_not_rescored": true,
+    "secondary": "Per-bin conservative completeness/impurity and threshold-based HQ/MQ/LQ; RNA unchecked, not formal MIMAG HQ"
+  },
+  "execution_authorized": false,
+  "cloud_work_in_preparation": false,
+  "new_community_scores_in_preparation": false,
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "skin": "unscored; unchanged source/genome/replicon/molecule/taxonomy/near/pretraining-overlap/ambiguity/unique-origin/depth/protocol/cost admission"
+}

@@ -1,5 +1,10 @@
 # Next: bootstrap-preserving, confidence-aware relational learning
 
+**Ordering superseded by [E031's source-bound reassessment](../E031-bootstrap-preserving-learning/design.md).**
+The requested learner is implemented locally, but the E023 graph/construction
+bridge comes first in execution. The reasoning below is the preserved November 1
+proposal, not a competing current requirement or execution authorization.
+
 November 1, 2026. [The evidence note](../../docs/evidence/2026-11-01-e030-recovery-and-learning.md)
 owns results, source observations, alternatives and limitations. This is the next
 proposed implementation block, not authority for a new fit or retention renewal.

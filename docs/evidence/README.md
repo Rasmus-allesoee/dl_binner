@@ -1,5 +1,7 @@
 # Evidence
 
+- [2026-11-01: bootstrap-state implementation and source-bound E023 priority correction](2026-11-01-bootstrap-and-construction-priority.md)
+
 Evidence notes distinguish what a source reports, what we inspected directly, and what we infer. Experiment directories own execution records; notes can interpret their accepted results and audit the next decision.
 
 | Record | Scope |

@@ -1,0 +1,39 @@
+{
+  "kind": "E031 unchanged truth/evaluator and retained-summary inputs",
+  "files": {
+    "experiments/E023-adaptive-density-bins/comparison-review.json": {
+      "bytes": 135634,
+      "sha256": "cb387ada3b948e9d2c2e2c17e0892a20988d33d64eae3f778a72a8970d8744eb"
+    },
+    "experiments/E026-calibrated-evidence-fusion/comparison-review.json": {
+      "bytes": 24679,
+      "sha256": "27c509e5a21eded7523be8444fccc02979f5418b57c4e77333fd67a22befb33f"
+    },
+    "experiments/E030-supported-biological-bins/comparison-review.json": {
+      "bytes": 94113,
+      "sha256": "56ae545970fd0f0b37ae539f15b0c49198a637205e757bda0a2dbf32f83c95a2"
+    },
+    "experiments/E023-adaptive-density-bins/metabat-secondary-review.json": {
+      "bytes": 4593,
+      "sha256": "6e4448b55d20432b841abcdb148967c7a0f94eaa618f650b734ce62239b8b74b"
+    },
+    "experiments/E027-common-information-binner/comparison-review.json": {
+      "bytes": 5967,
+      "sha256": "7cf8ee37f5426781729b9c015024729ca8e6c0aec515b4b510766f0386838649"
+    },
+    "experiments/E013-marker-quality/review-lock.json": {
+      "bytes": 2537,
+      "sha256": "4d928dcc97ebd833b44f13f19e09b5a2d30c95270b923d70018b8197643b7146"
+    },
+    "experiments/E014-multiview-reconstruction/comparison-review.json": {
+      "bytes": 193201,
+      "sha256": "693271ae081fedac758fbd039b6134e94fea2a8e8bce7e5ffbb2695af0fad15c"
+    },
+    "artifacts/e014-multiview-reconstruction/oral-truth-origin-v1/manifest.json": {
+      "bytes": 254660,
+      "sha256": "8e494f97451a820360364faed6c1aef13040ba934276d5d6d344f43ac655d9eb"
+    }
+  },
+  "old_partition_scores_recomputed": false,
+  "truth_in_training": false
+}

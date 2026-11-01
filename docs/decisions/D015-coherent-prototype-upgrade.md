@@ -1,5 +1,43 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E031: source-bound construction first; coherent learning prepared in parallel
+
+November 1, 2026. [The priority/source reassessment](../evidence/2026-11-01-bootstrap-and-construction-priority.md)
+supersedes E030's learning-first ordering. Its strongest E009 contrast holds both
+E022 vectors and original native graph bytes fixed. E023's old Oral learner is
+unmatched to current measured-depth learning. A source-bound cached E023 bridge
+is the most direct decision-changing control: reuse the completed E009 GLM actor
+and run five new teacher/student actors without fitting. Preserve its restricted
+proposal/positive-depth/support semantics; no post-score repair or grid. Retain
+both density/marker selections and full-population/query accounting. The result
+informs one common policy, not separate truth-selected dataset routes.
+
+[The requested learner](../../experiments/E031-bootstrap-preserving-learning/design.md)
+is implemented now. Keep topology and real-view exposure; restore admitted online,
+EMA, predictor, buffer and Adam state. Add cautious signed proposals and a soft
+fixed-bootstrap anchor at a lower continuation rate. Preserve original pair-slot
+normalization under abstention and legitimate lazy/unequal optimizer state.
+Fresh seed-11 RNG is explicit because old checkpoints lack resumable RNG. This
+adds continuation exposure and is not a pure signed-loss claim. Preserve guaranteed
+same-parent positives, measured-parent depth and all unknown/short/marker-negative
+DNA. No larger network, taxonomy or GLM information change is automatic.
+
+The bridge occupies the single selective-control allowance; no loss factorial.
+The initial three-mode learning plan keeps E030 downstream fixed. If the bridge
+supports a common policy change, amend/freeze that comparison before any new fit.
+Do not make grouping perfection a gate to learning, or claim intrinsic information
+loss from an interaction with one constructor. Existing proposal/neighborhood
+evidence still makes this learner a serious follow-through.
+
+[Local receipts](../../experiments/E031-bootstrap-preserving-learning/local-observed.json),
+[prospective criteria](../../experiments/E031-bootstrap-preserving-learning/protocol.json)
+and [complete resource case](../../experiments/E031-bootstrap-preserving-learning/resources.json)
+are preparation, not native/community admission. No VM/cloud/new score now. The
+future $4 bridge / $6 learning proposals include source/runtime/credit/headroom/
+retention gates and optional explicit 40 GiB scratch approval. Original disks,
+accepted evidence and failures remain; November 4 is not extended. Skin stays
+unscored and full Oral GLM retains its native batching/capacity/cost milestone.
+
 ## E030 prospective coherent bin constructor, November 1, 2026
 
 Implement [one root-safe, profile-supported constructor](../../experiments/E030-supported-biological-bins/design.md),
