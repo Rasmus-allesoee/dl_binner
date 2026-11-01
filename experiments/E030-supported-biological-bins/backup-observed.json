@@ -20,5 +20,21 @@
   "no_public_push": true,
   "original_cost_and_retention_unchanged": true,
   "receipt_scope": "The source snapshot contains the prepared backup record; this final receipt separately records the completed generation without a self-reference promise",
-  "every_nested_source_file_Git_identity_verified": 1293
+  "every_nested_source_file_Git_identity_verified": 1293,
+  "final_source_supplement": {
+    "status": "PASS_FINAL_SOURCE_OVERLAY_HISTORY_EVERY_MEMBER",
+    "source_commit": "91fa2ea75c56249ec0294d78e3f5c34204fa2a26",
+    "base_source_commit": "7f9cdaafa382c0029366bd010783b8842207f363",
+    "uri": "gs://dl-binner-archive-167650584170/e030/inspection-source-20261101T181813Z/e030-final-source.tar.gz",
+    "generation": "1793557099512597",
+    "archive": {
+      "bytes": 108842,
+      "sha256": "fafd001a7ddcd6d1e388e2794d568c73c91b27547e945c28503f2e524884c334"
+    },
+    "regular_members": 9,
+    "modified_source_files": 7,
+    "no_public_push": true,
+    "no_credentials_or_environments": true,
+    "within_original_credit_retention": true
+  }
 }
