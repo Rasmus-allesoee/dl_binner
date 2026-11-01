@@ -1,0 +1,252 @@
+{
+  "status": "PASS",
+  "checked_epoch": 1793525988.689464,
+  "actual_local_review_tests": 8,
+  "local_complete_runtime_distributions": 41,
+  "local_owned_product_members": 66,
+  "checks": [
+    {
+      "check": "docs",
+      "argv": [
+        "python3",
+        "scripts/check_docs.py"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 689,
+        "sha256": "edc3b5bd068574a80afe086e892324133151e58d53e069b2586e020095b2dd98"
+      }
+    },
+    {
+      "check": "staged-diff",
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "check": "syntax",
+      "argv": [
+        "python3",
+        "-m",
+        "py_compile",
+        "scripts/e029_inspection.py",
+        "scripts/e029_stage_review.py",
+        "scripts/e029_review.py",
+        "scripts/e029_summary.py",
+        "tests/test_e029_review.py"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "check": "integer-summary",
+      "argv": [
+        "python3",
+        "scripts/e029_summary.py",
+        "--output",
+        "experiments/E029-certifiable-joint-retrieval",
+        "--audit"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 143,
+        "sha256": "2b9007a8ceac4be577613fca926d304977ddfad353e15d4a61a08a104e87f5f3"
+      }
+    },
+    {
+      "check": "independent-inspection",
+      "argv": [
+        "python3",
+        "scripts/e029_inspection.py",
+        "--base",
+        "artifacts/e029-certifiable-joint-retrieval/inspection",
+        "--guest",
+        "artifacts/e029-certifiable-joint-retrieval/continuation-1793520432/CPU-guest.json",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e029-certifiable-joint-retrieval/inspection/final-checks-r2/inspection.json"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 32,
+        "sha256": "d5e4e7b4f53d67ba2cc37856853ed385532318a9ada989e26b21fe9a39155f46"
+      }
+    }
+  ],
+  "checks_receipt": {
+    "path": "artifacts/e029-certifiable-joint-retrieval/inspection/final-checks-r2/checks.json",
+    "binding": {
+      "bytes": 2062,
+      "sha256": "2ae4a8fa191c1ad8c8c8dbe446e2a5b989d207ac9a370c469840a9126c3c4951"
+    }
+  },
+  "independent_final_control_plane": {
+    "path": "artifacts/e029-certifiable-joint-retrieval/inspection/final-control-plane/verified.json",
+    "binding": {
+      "bytes": 397,
+      "sha256": "c2e2b8c01df335a3e89b84e3068ad59b6c6ee2f43355e04ae27ef6aceb2d6397"
+    }
+  },
+  "native_gate_count": 10,
+  "native_scientific_DAG_seals": 19,
+  "phase_delivery_exits": 13,
+  "archive_regular_members": 266,
+  "exact_aliases": 39,
+  "new_partitions_reviewed": 12,
+  "complete_target_rows": 2222,
+  "actual_local_resources": {
+    "E009-review-r1": {
+      "command": [
+        "python3",
+        "artifacts/e029-certifiable-joint-retrieval/inspection/review-E009-driver.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 77.34038016700651,
+      "peak_sampled_rss_bytes": 613761024,
+      "seconds_ceiling": 9118.609992027283,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 97835,
+      "sampled_cpu_seconds": 73.01,
+      "sampled_average_cpus": 0.9440088068140392,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "Oral-teacher-review-r3": {
+      "command": [
+        "artifacts/e029-certifiable-joint-retrieval/preparation/env-r1/bin/python",
+        "-I",
+        "-B",
+        "scripts/e029_review.py",
+        "--base",
+        "artifacts/e029-certifiable-joint-retrieval/inspection",
+        "--staged",
+        "artifacts/e029-certifiable-joint-retrieval/inspection/Oral-staged",
+        "--unit",
+        "oral-noGLM",
+        "--role",
+        "teacher",
+        "--output",
+        "artifacts/e029-certifiable-joint-retrieval/inspection/review-oral-noGLM-teacher"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 364.48472877099994,
+      "peak_sampled_rss_bytes": 3410632704,
+      "seconds_ceiling": 8425.166037082672,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 99685,
+      "sampled_cpu_seconds": 331.52,
+      "sampled_average_cpus": 0.9095579974443561,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "Oral-student-review-r1": {
+      "command": [
+        "artifacts/e029-certifiable-joint-retrieval/preparation/env-r1/bin/python",
+        "-I",
+        "-B",
+        "scripts/e029_review.py",
+        "--base",
+        "artifacts/e029-certifiable-joint-retrieval/inspection",
+        "--staged",
+        "artifacts/e029-certifiable-joint-retrieval/inspection/Oral-staged",
+        "--unit",
+        "oral-noGLM",
+        "--role",
+        "student",
+        "--output",
+        "artifacts/e029-certifiable-joint-retrieval/inspection/review-oral-noGLM-student"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 569.4667943259992,
+      "peak_sampled_rss_bytes": 2878164992,
+      "seconds_ceiling": 7800.753789901733,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 2462,
+      "sampled_cpu_seconds": 514.74,
+      "sampled_average_cpus": 0.9038981818232757,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "final-reader-criteria-tests-r1": {
+      "command": [
+        "artifacts/e029-certifiable-joint-retrieval/preparation/env-r1/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_e029_review.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 3.988726338997367,
+      "peak_sampled_rss_bytes": 84467712,
+      "seconds_ceiling": 6465.276512145996,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 5887,
+      "sampled_cpu_seconds": 3.49,
+      "sampled_average_cpus": 0.8749660175677206,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "final-runtime-r1": {
+      "command": [
+        "artifacts/e029-certifiable-joint-retrieval/preparation/env-r1/bin/python",
+        "-I",
+        "-B",
+        "scripts/e027_runtime.py",
+        "--base",
+        "artifacts/e021-frozen-sequence-hybrid/envs/hybrid-owned-v2",
+        "--reference",
+        "experiments/E021-frozen-sequence-hybrid/local-runtime.json",
+        "--candidate-lock",
+        "experiments/E029-certifiable-joint-retrieval/candidate-lock.json",
+        "--output",
+        "artifacts/e029-certifiable-joint-retrieval/inspection/local-runtime-final.json"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 56.05406322500494,
+      "peak_sampled_rss_bytes": 275283968,
+      "seconds_ceiling": 6823.097551107407,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 5297,
+      "sampled_cpu_seconds": 48.22,
+      "sampled_average_cpus": 0.8602409392953645,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    }
+  },
+  "local_review_clock": {
+    "start_epoch": 1793520822.229484,
+    "deadline_epoch": 1793531622.229484,
+    "threads": 4,
+    "sampled_RSS_bytes": 8000000000,
+    "extra_owned_bytes": 4294967296,
+    "free_reserve_bytes": 6442450944,
+    "scope": "Authorized frozen post-shutdown E029 inspection; separate review clock after completed cloud work, no reset of native clocks or original preparation journals."
+  },
+  "local_peak_review_RSS_bytes": 3410632704,
+  "actual_native_DNABERT_GPU_forwards": 0,
+  "previous_gpu_tiny_contract_scope": "Real source/tokenizer/reader with analytic CPU model; no native GPU equivalence or speedup claim",
+  "failures_preserved": true,
+  "old_baselines_refit_or_rescored": false,
+  "optional_context_cache_files_unavailable": 10
+}

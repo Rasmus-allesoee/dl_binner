@@ -1,5 +1,25 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E029 closed comparison and development decision, November 1, 2026
+
+[Verified E029](../../experiments/E029-certifiable-joint-retrieval/comparison-review.json)
+finally supplies the previously blocked common-version teacher/student, parent/post
+and full-path E009 GLM evidence. Native execution/delivery succeed; the unchanged
+biological rule abandons this frozen bundle against E023 E009 and E026 Oral.
+Keep E023's 10.4163% and both native MetaBAT2 references as immutable context,
+without selecting different product versions per community or spending on a larger
+external-tool campaign. All original denominators, ambiguity/status populations,
+failed journals and the Mac portability limitation remain.
+
+The useful incremental evidence is an observed whole-component selection failure
+despite admitted neighbors, plus an Oral teacher/student loss. D015 chooses a
+coherent cached biological bin-construction upgrade; its value is the recovery
+decision it can change, rather than another expected mature-tool win. No additional
+fits, scoring of old outputs, confirmation or architecture change occurs in this
+inspection. The [new proposed scope](../../experiments/E029-certifiable-joint-retrieval/next-block.md)
+needs fresh execution gates; E029's unused budget and GPU capacity failures do not
+renew storage. November 4 at 00:00 Copenhagen remains hard.
+
 ## E028 inspected refusal and next scope, November 1, 2026
 
 [Independent inspection](../../experiments/E028-global-discovery-repair/inspection-observed.json)

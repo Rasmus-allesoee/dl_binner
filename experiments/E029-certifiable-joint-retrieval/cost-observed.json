@@ -1,0 +1,135 @@
+{
+  "kind": "E029 measured-allocation priced estimate; not invoice or credit delta",
+  "checked_UTC": "2026-11-01T09:09:12.217271+00:00",
+  "CPU_allocation_intervals": [
+    {
+      "status": "failed setup before science",
+      "start": "2026-10-31T18:48:27.213-07:00",
+      "stop": "2026-10-31T18:57:28.285-07:00",
+      "seconds": 541.0720000267029
+    },
+    {
+      "status": "completed cached workflow",
+      "start": "2026-10-31T18:59:03.516-07:00",
+      "stop": "2026-10-31T22:08:02.932-07:00",
+      "seconds": 11339.415999889374
+    }
+  ],
+  "CPU_total_allocated_seconds": 11880.487999916077,
+  "CPU_allocated_vCPU_hours": 26.401084444257947,
+  "CPU_IP_USD_hour": 0.27304567767858834,
+  "CPU_compute_IP_USD": 0.901087749191506,
+  "overlapping_original_PD_USD": 0.1430058740730639,
+  "GPU_compute_USD": 0,
+  "temporary_GPU_disk_upper_USD": 0.0027708725727781844,
+  "review_WAN_upper_bytes": 4730846037,
+  "review_WAN_upper_USD": 0.5287132453545927,
+  "review_WAN_scope": "Four verified whole streams + interrupted stream priced as full + retained first-prefix count + 128 MiB controls/backup/readback reserve; no network Free Tier presumed",
+  "new_archive_72_hour_storage_upper_USD": 0.0015699602011591198,
+  "operations_allowance_USD": 0.03,
+  "subtotal_upper_USD": 1.6071477013931,
+  "contingency_USD": 0.1,
+  "complete_upper_with_reserves_USD": 1.7071477013931,
+  "original_new_CPU_ceiling_USD": 22,
+  "independent_GPU_ceiling_USD": 3,
+  "total_new_ceiling_USD": 25,
+  "native_workflow": {
+    "command": [
+      "/srv/dl_binner/experiments/e029/discovery-20261101T014746Z-db257a8/env/bin/python",
+      "-I",
+      "-B",
+      "/srv/dl_binner/repo/scripts/e029_control.py",
+      "--plan",
+      "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/science-plan.json",
+      "--workflow"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 10321.085490427999,
+    "peak_sampled_rss_bytes": 5624061952,
+    "seconds_ceiling": 213803.24379348755,
+    "rss_bytes_ceiling": 26000000000,
+    "launched_pid": 2737,
+    "sampled_cpu_seconds": 22466.359999999997,
+    "sampled_average_cpus": 2.1767439113682174,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": true
+  },
+  "sampled_CPU_is_not_GCP_allocation": true,
+  "storage": {
+    "checked_epoch": 1793522752.713681,
+    "all_version_and_soft_deleted_bytes": 73069866789,
+    "all_objects": 236,
+    "PD_pricing_month_USD": 31.2,
+    "conservative_original_storage_week_USD": 7.8524262948958,
+    "original_allowance_USD": 8,
+    "retention_end": "2026-11-04T00:00:00+01:00",
+    "no_retention_extended": true,
+    "storage_gate": true
+  },
+  "credit": {
+    "checked_UTC": "2026-11-01T09:06:33.848419+00:00",
+    "remaining_DKK": 1717.4,
+    "original_DKK": 1973.43,
+    "percent": 87,
+    "status": "Available",
+    "expiry": "2027-01-12",
+    "scope": "Certain usage; see the terms for free trial.",
+    "application": "Net pricing",
+    "paid_account": true,
+    "credit_type": "FreeTrialUpgrade",
+    "overview_period": "November 1, 2026 current month",
+    "displayed_gross_DKK": 0,
+    "displayed_savings_DKK": 0,
+    "displayed_net_DKK": 0,
+    "delay_warning": "Costs take a few hours to show up, and might take longer than 24 hours.",
+    "pending_reserve_USD": 35,
+    "browser_tabs": [
+      "1767520329",
+      "1767520332"
+    ],
+    "observed_read_only": true,
+    "credit_delta_is_not_an_invoice": true
+  },
+  "credit_only": true,
+  "not_actual_invoice": true,
+  "no_retention_extended": true,
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "original_PD_ongoing_USD_pricing_month": 31.2,
+  "GCS_ongoing_month_USD_at_current_bytes": 1.3610323292948305,
+  "evidence": {
+    "artifacts/e029-certifiable-joint-retrieval/inspection/finance-admission.json": {
+      "bytes": 1326,
+      "sha256": "16005bbcbfad86b5a7ce571d367a4ecc2d4adfa26685244628b9f3fde65e06d5"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/continuation-finance-20261101T0810Z/current-prices.json": {
+      "bytes": 16242,
+      "sha256": "fb7bb9d24f34dfa23a952a2fb9b0bd2e56d386640a5f08345330db457ff7e7a6"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/final-finance/storage-current.json": {
+      "bytes": 345,
+      "sha256": "6b7a129761927d9cf7b35e1ad5358275a3450524a9ee736f2b4b78e9f759b17e"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/final-finance/billing-browser.json": {
+      "bytes": 724,
+      "sha256": "e49eaae89f626dcfa79becf2122614d6684caf91546dfa7d0bbaaf4e2ce3f043"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/gpu-final-closeout/temporary-disk-cost.json": {
+      "bytes": 4851,
+      "sha256": "bd484737b8d47608b138d551c0b11d051ca7027adf09311d999a6dbd3dea30f2"
+    }
+  },
+  "compact_inspection_backup": {
+    "archive": {
+      "bytes": 3390202,
+      "sha256": "43319c8a31806567e95a0752951899262def9df83ee75e6dd745d771cd9bc6ee"
+    },
+    "private_generation": "1793526155626343",
+    "regular_members": 418,
+    "all_bytes_members_read_back": true,
+    "within_existing_control_export_reserve": true,
+    "additional_monthly_GCS_USD": 6.31474331021309e-05
+  },
+  "post_backup_known_protected_bytes": 73073256991,
+  "conservative_post_backup_storage_week_upper_USD": 7.852440827317687
+}

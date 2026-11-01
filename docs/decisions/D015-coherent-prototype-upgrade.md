@@ -1,5 +1,54 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E029 completed evidence and next algorithmic upgrade, November 1, 2026
+
+[E029 inspection](../../experiments/E029-certifiable-joint-retrieval/inspection-observed.json)
+closes the blocked common-version comparison successfully, with learning fixed,
+full inputs and all return bytes verified. [Biological disposition](../../experiments/E029-certifiable-joint-retrieval/comparison-review.json)
+is ABANDON_THIS_FROZEN_BUNDLE under unchanged criteria: E009 student no-GLM/GLM
+7.2337% / 7.2210%, Oral 10.0559%, below E023 10.4163% and E026 13.8569%.
+Preserve both MetaBAT2 contexts and every individual target change. This is a
+negative bundle result, not a reason to remove GLM, depth, markers or context.
+
+[Direct mechanism/source evidence](../evidence/2026-11-01-e029-bin-construction.md)
+shows density-only root selection swallowing almost the entire eligible community
+in all modes, giving zero R95. Marker selection rescues bins but does not restore
+the anchors. Native cached choice reproduction, actual local sparse readers,
+full axes, source and input-after pass. The heuristic explicitly permits roots;
+this is a harmful declared design choice, not an excuse to rewrite the result as
+a failed run or claim every implementation choice optimal. Root bias is recognized
+in the primary HDBSCAN implementation documentation, though our bp-weighted sparse
+heuristic is not standard HDBSCAN.
+
+Choose one **coherent root-safe, profile-supported biological bin-construction
+upgrade** with the six common teacher/student learning instances fixed. Integrate
+correct root/stability handling, supported whole/child selection, reliable soft
+markers, composition/measured-parent-depth context and supported recruitment with
+abstention. Reuse the admitted graphs/forests; do not spend another block repairing
+or tuning ANN retrieval. No universal channel-AND/profile veto, truth K, per-dataset
+winner router or invented coverage variance. Resolve one source-supported algorithm
+and defaults prospectively during implementation, then one cached comparison.
+At most one root-convention-only control is useful if it changes the design;
+there is no requirement to establish every ingredient separately before coding.
+
+This addresses a demonstrated information-to-bin failure more directly than a
+larger Transformer/GLM, new taxonomy or another small loss fit. Proposal precision
+remains the strongest learning alternative: Oral student loses 0.7405 R95 points
+and its earlier positive-link audit has 27.8% discordant provided origins. That
+does not prove every shared-locus link false or uniquely explain the whole bundle.
+Revisit learning with these matched controls after bin construction is supported;
+do not claim the representation is already sufficient or settle product families.
+
+[The next block](../../experiments/E029-certifiable-joint-retrieval/next-block.md)
+provides a new proposed $3 / six-hour cached CPU case and the exact source,
+runtime, truth, resource and retention gates. No new run or algorithm is executed
+in this inspection. GPU batching is explicitly capacity-blocked after L4 b/c/a
+and T4 f all refuse; no GPU forwards occur, and every temporary disk is removed.
+The original-view cohort/assets and exact tolerances remain ready. Full Oral GLM
+is an explicit blocked admission milestone with its 7.815 GB / 61.05 unbatched-hour
+planning case, not an indefinitely dismissed feature or a claimed transfer result.
+Keep skin unscored and the November 4 storage boundary/preservation decision visible.
+
 ## E028: complete the consumer before changing learning, November 1, 2026
 
 [The inspected phase](../../experiments/E028-global-discovery-repair/inspection-observed.json)

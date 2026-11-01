@@ -1,0 +1,182 @@
+{
+  "status": "NOT_RUN_CAPACITY_BLOCKED",
+  "checked_epoch": 1793522536.422063,
+  "attempts": {
+    "us-central1-b": {
+      "status": "CAPACITY_FAILURE",
+      "receipt": "artifacts/e029-certifiable-joint-retrieval/gpu/control-plane/attempt-us-central1-b.json",
+      "binding": {
+        "bytes": 2692,
+        "sha256": "9a4d9169155a523350e148161da6410f207dbe132d92e19f6bead2aff772c6ef"
+      },
+      "GPU": "L4",
+      "instance_started": false
+    },
+    "us-central1-c": {
+      "status": "CAPACITY_FAILURE",
+      "receipt": "artifacts/e029-certifiable-joint-retrieval/gpu-r2/control-plane/attempt-us-central1-c.json",
+      "binding": {
+        "bytes": 2828,
+        "sha256": "63e314bdd2a692d8e09b9228f5fb5efe2ebad988a3df3f06c9027bec690bafea"
+      },
+      "GPU": "L4",
+      "instance_started": false
+    },
+    "us-central1-f": {
+      "status": "CAPACITY_FAILURE",
+      "receipt": "artifacts/e029-certifiable-joint-retrieval/gpu-r2/control-plane/attempt-us-central1-f.json",
+      "binding": {
+        "bytes": 2701,
+        "sha256": "f1a247e9c660668c2448910e42652551dc068a3072140bcc8e1dbaa6ec3ed9c3"
+      },
+      "GPU": "T4",
+      "instance_started": false
+    },
+    "us-central1-a": {
+      "status": "CAPACITY_FAILURE",
+      "receipt": "artifacts/e029-certifiable-joint-retrieval/gpu-r3/control-plane/attempt-us-central1-a.json",
+      "binding": {
+        "bytes": 2692,
+        "sha256": "afbb0aae8b64c8483254cf028045b2e5a632adc20362b57042dafde73be9e250"
+      },
+      "GPU": "L4",
+      "instance_started": false
+    }
+  },
+  "original_CPU": "TERMINATED",
+  "temporary_instances": 0,
+  "temporary_disks": 0,
+  "GPU_compute_seconds": 0,
+  "actual_model_forwards": 0,
+  "full_Oral_bank_extracted": false,
+  "numerical_equivalence_or_speedup_claimed": false,
+  "cohort": {
+    "bytes": 47872,
+    "sha256": "fead82886e2e2afc5bbcc13e348f91eaad3425097ae9798a9173bf01afac3916"
+  },
+  "runtime_cohort_source_transport": "Private generation/SHA readbacks pass; actual GPU consumer remains unadmitted",
+  "criteria": {
+    "bytes": 2157,
+    "sha256": "ed425545bfed8bd205fb287bfc3adc5e2afbb4a5d437ef6ed1b545aa9d7f5c38"
+  },
+  "original_Mac_tolerance_unchanged": true,
+  "full_view_bank_training_and_confirmation_not_run": true,
+  "operational_failures_preserved": [
+    "Normal composite-object MD5 refusal; generation CRC and native full SHA remain mandatory",
+    "Empty-disk cleanup selection bug and resulting quota refusal; fixed/tested; no quota increase",
+    "Provider-advised Iowa a also refuses actual capacity; no further loop"
+  ],
+  "closeout": {
+    "path": "artifacts/e029-certifiable-joint-retrieval/gpu-final-closeout/closed.json",
+    "binding": {
+      "bytes": 266,
+      "sha256": "4a39046b194aec4e6c002a59ae9f63100eceb24f1cfb0b06e5ed8591cc3be9e4"
+    }
+  },
+  "temporary_disk_cost": {
+    "disks": {
+      "e029-batching-20261101-b-boot": {
+        "size_GiB": 40,
+        "created": "2026-10-31T19:33:59.719-07:00",
+        "source": "artifacts/e029-certifiable-joint-retrieval/gpu/control-plane/1793500436557434000.stdout",
+        "type": "pd-balanced",
+        "delete_call": {
+          "epoch": 1793500683.168216,
+          "source": "artifacts/e029-certifiable-joint-retrieval/gpu/capacity-cleanup-execution/cloud-actions.jsonl"
+        },
+        "seconds_upper_including_120_second_deletion_reserve": 363.44921588897705,
+        "cost_upper_USD": 0.0005608784195817548
+      },
+      "e029-batching-20261101-b-work": {
+        "size_GiB": 64,
+        "created": "2026-10-31T19:34:21.958-07:00",
+        "source": "artifacts/e029-certifiable-joint-retrieval/gpu/control-plane/1793500459054070000.stdout",
+        "type": "pd-balanced",
+        "delete_call": {
+          "epoch": 1793500686.274817,
+          "source": "artifacts/e029-certifiable-joint-retrieval/gpu/capacity-cleanup-execution/cloud-actions.jsonl"
+        },
+        "seconds_upper_including_120_second_deletion_reserve": 344.3168170452118,
+        "cost_upper_USD": 0.0008501649803585476
+      },
+      "e029-batching-20261101-c-boot": {
+        "size_GiB": 40,
+        "created": "2026-11-01T01:20:39.305-07:00",
+        "source": "artifacts/e029-certifiable-joint-retrieval/gpu-r2/control-plane/1793521259963096000.stdout",
+        "type": "pd-balanced",
+        "delete_call": {
+          "epoch": 1793521262.051094,
+          "source": "artifacts/e029-certifiable-joint-retrieval/gpu-r2/control-plane/cloud-actions.jsonl"
+        },
+        "seconds_upper_including_120_second_deletion_reserve": 142.74609398841858,
+        "cost_upper_USD": 0.00022028718208089287
+      },
+      "e029-batching-20261101-c-work": {
+        "size_GiB": 64,
+        "created": "2026-11-01T01:20:44.533-07:00",
+        "source": "artifacts/e029-certifiable-joint-retrieval/gpu-r2/control-plane/1793521241065109000.stdout",
+        "type": "pd-balanced",
+        "delete_call": {
+          "epoch": 1793521265.3397021,
+          "source": "artifacts/e029-certifiable-joint-retrieval/gpu-r2/control-plane/cloud-actions.jsonl"
+        },
+        "seconds_upper_including_120_second_deletion_reserve": 140.8067021369934,
+        "cost_upper_USD": 0.0003476708694740578
+      },
+      "e029-batching-20261101-f-work": {
+        "size_GiB": 64,
+        "created": "2026-11-01T01:21:29.878-07:00",
+        "source": "artifacts/e029-certifiable-joint-retrieval/gpu-r2/control-plane/1793521303233678000.stdout",
+        "type": "pd-standard",
+        "delete_call": {
+          "epoch": 1793521308.824096,
+          "source": "artifacts/e029-certifiable-joint-retrieval/gpu-r2/control-plane/cloud-actions.jsonl"
+        },
+        "seconds_upper_including_120_second_deletion_reserve": 138.94609594345093,
+        "cost_upper_USD": 0.0001372307120429145
+      },
+      "e029-batching-20261101-f-boot": {
+        "size_GiB": 40,
+        "created": "2026-11-01T01:21:11.778-07:00",
+        "source": "artifacts/e029-certifiable-joint-retrieval/gpu-r2/control-plane/1793521268579146000.stdout",
+        "type": "pd-standard",
+        "delete_call": {
+          "epoch": 1793521305.2630012,
+          "source": "artifacts/e029-certifiable-joint-retrieval/gpu-r2/control-plane/cloud-actions.jsonl"
+        },
+        "seconds_upper_including_120_second_deletion_reserve": 153.48500108718872,
+        "cost_upper_USD": 9.474382783159799e-05
+      },
+      "e029-batching-20261101-a-boot": {
+        "size_GiB": 40,
+        "created": "2026-11-01T01:32:37.144-07:00",
+        "source": "artifacts/e029-certifiable-joint-retrieval/gpu-r3/control-plane/1793521975721336000.stdout",
+        "type": "pd-balanced",
+        "delete_call": {
+          "epoch": 1793521978.138329,
+          "source": "artifacts/e029-certifiable-joint-retrieval/gpu-r3/control-plane/cloud-actions.jsonl"
+        },
+        "seconds_upper_including_120_second_deletion_reserve": 140.9943289756775,
+        "cost_upper_USD": 0.00021758384101184803
+      },
+      "e029-batching-20261101-a-work": {
+        "size_GiB": 64,
+        "created": "2026-11-01T01:32:42.463-07:00",
+        "source": "artifacts/e029-certifiable-joint-retrieval/gpu-r3/control-plane/1793521959543759000.stdout",
+        "type": "pd-balanced",
+        "delete_call": {
+          "epoch": 1793521981.09966,
+          "source": "artifacts/e029-certifiable-joint-retrieval/gpu-r3/control-plane/cloud-actions.jsonl"
+        },
+        "seconds_upper_including_120_second_deletion_reserve": 138.63665986061096,
+        "cost_upper_USD": 0.00034231274039657033
+      }
+    },
+    "temporary_disk_USD_upper": 0.0027708725727781844,
+    "pricing": "November 720-hour month; rates 0.10 balanced / 0.04 standard per GiB-month",
+    "GPU_compute_USD": 0,
+    "independent_absence": "artifacts/e029-certifiable-joint-retrieval/gpu-final-closeout/closed.json",
+    "scope": "Creation to logged delete call plus 120-second conservative reserve; not an invoice"
+  },
+  "retention_end": "2026-11-04T00:00:00+01:00"
+}

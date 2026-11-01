@@ -61,3 +61,4 @@ the owner-authorized scope, or prepare an owner-run packet when needed. A submit
 or stopped job is not a successful experiment; inspect its receipts and outputs.
 
 - [E028: cached global-discovery repair and Oral GLM batching preparation](E028-global-discovery-repair/README.md)
+- [E029: certifiable joint retrieval, completed common-version comparison and independent batching admission](E029-certifiable-joint-retrieval/README.md)

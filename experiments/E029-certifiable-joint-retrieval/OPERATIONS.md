@@ -1,5 +1,135 @@
 # E029 operations
 
+## Verified closeout, November 1, 2026
+
+CPU phase `discovery-20261101T015844Z-31fb9c7` is **SUCCESS and independently
+TERMINATED**. [Inspection](inspection-observed.json) verifies all ten native gates,
+19 scientific DAG seals, final input-after, 13 phase/delivery exits, exact executed
+source/product/runtime, complete contig/sample axes and intended watcher/STOP.
+The 842,865,965-byte archive, generation `1793509475767976`, has SHA256
+`8fe3c0ad6d30af8817050c272be3dc7800e055bf97152b9e8aa4eb248090bec7`.
+All 266 regular members and 39 aliases verify; no unique work member is omitted.
+Four sealed E009 caches and all six original learning outputs are reused.
+Both new Oral caches pass the additional exact 1.0 recall contract. No fit,
+embedding inference, original graph construction or detector was repeated.
+The intermediate `science-result.json` retains its pre-collection RUNNING status
+with `science_completed=true` and two zero exits. The frozen phase publishes it
+before assigning final SUCCESS; private completion/guest/delivery independently
+resolve the outcome. The intermediate journal is preserved unchanged.
+
+[Compact inspection backup](inspection-backup.json) has 3,390,202 bytes and 418
+verified regular members, SHA256
+`43319c8a31806567e95a0752951899262def9df83ee75e6dd745d771cd9bc6ee`.
+Private upload and generation-bound full/member readback pass. The first local
+packer correctly refuses its own changing sampler before any upload; the closed
+journal remains and the repaired collection excludes only its live supervisor.
+
+[Frozen diagnostics](comparison-review.json) are complete: E009 student R95
+**7.2337% no GLM / 7.2210% GLM**, Oral **10.0559%**. Every density-only arm is
+zero; marker-selected teacher values are **7.6657% / 6.9105% / 10.7964%**.
+Original disposition: **ABANDON_THIS_FROZEN_BUNDLE**. E023 E009 **10.4163%** and
+E026 Oral **13.8569%**, plus MetaBAT2 **8.5493% / 17.3260%**, remain frozen
+references. No truth-selected version router or product-family ban is adopted.
+[The complete target table](comparison-targets.tsv) retains all target gains/losses.
+
+[GPU qualification](gpu-inspection-observed.json) is **NOT_RUN_CAPACITY_BLOCKED**.
+L4 b/c, T4 f and the provider-advised L4 a all refuse capacity. No GPU instance
+or model forward runs; all eight empty disks are removed and independent final
+inventory confirms no temporary resources. The failed cleanup/quota and composite
+transport journals remain. The prepared 128-view cohort/assets stay bound;
+native equivalence, throughput, full Oral bank and GLM-enabled Oral remain unadmitted.
+
+[Measured cost](cost-observed.json): 11,880.488 allocated CPU seconds over both
+attempts, **$0.9011 compute/IP**, $0.1430 overlapping original disks, under $0.0028
+temporary GPU disks and separately bounded export/storage/operations. Complete
+upper with reserves is **$1.71**, inside the original combined $25. This is a
+priced estimate, not an invoice or credit delta. Workflow wall is 10,321.09 seconds;
+sampled CPU 22,466.36 seconds / peak tree RSS 5.624 GB. Minimum native free space
+is 27.24 GiB and maximum sampled filesystem growth 2.357 GiB. Original Mac
+portability tolerance and all failed source/journals remain unchanged.
+
+Local reviews finish within the separate three-hour / four-thread / 8 GB / 4 GiB
+review scope. A two-actor restore and one preflight/numerical start refuse the
+6 GiB reserve; their journals remain. Verified reuse stages actors serially.
+Six redundant compressed historical returns are released locally only after
+accepted SHA/member proof and current private whole-object MD5/generation match;
+all extracted required inputs, private archives, results and journals remain.
+No old model, source genome archive, data DAG or accepted unique science is deleted.
+
+Latest signed-in credit is **DKK 1,717.40 Available / 87%**, expiry January 12,
+2027, upgraded Welcome-credit Certain usage/net pricing. Current-month displayed
+net is zero with possible >24-hour delay; keep the $35 pending reserve.
+Original stopped disks still cost about **$31.20 per pricing month**, with GCS
+separate. Conservative approved storage week remains **$7.85 < $8**.
+**November 4 at 00:00 Copenhagen stays hard.** Obtain a preservation/retention
+decision before that date; no extension follows from unused credits.
+
+## Exact following prompt
+
+This proposes the next task and a new budget, not execution during E029 inspection.
+
+Our goal is substantially closing the recovery gap through coherent upgrades.
+Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015 and E029's inspection,
+comparison/target/cost records, bin-construction evidence, next-block and operations.
+Preserve dev3/dev4/dev5 and all accepted E009–E029 science, source freezes,
+native vectors, truth, outputs and failed journals. Use a new descriptive branch
+without a codex/ prefix.
+
+Implement and locally test one coherent root-safe, profile-supported biological
+bin-construction upgrade with the six accepted common teacher/student learning
+instances fixed. Use retained retrievals/forests, measured-parent depth, composition
+and cached physical-marker evidence. Resolve one source-supported algorithm/default
+prospectively: correct root/stability eligibility, compare supported whole/child
+alternatives with context/reliability and soft marker evidence, and integrate
+bounded supported recruitment/merging with uncertainty and abstention. Avoid the
+failed universal channel-AND/profile vetoes. No truth K, truth-selected routes,
+threshold grid, marker redetection, new neighbors, fitting, taxonomy or larger
+encoder. Keep short, marker-negative, measured-zero/missing, unknown/non-target,
+excluded and unassigned DNA explicit; invent no window coverage or variance.
+
+Run actual tiny sparse/profile/selection/marker/export/reload and complete-DNA
+contracts. Freeze source/defaults/protocol/keep-modify-abandon before changed
+outcomes. Preserve pre/post choices, profiles and all intermediate evidence.
+Use at most one cached root-convention-only control if it can change the design;
+do not require separate community experiments for each ingredient.
+
+I authorize the resulting separately frozen cached comparison under new $3 gross,
+existing E2/30+300 GiB disks only, six cumulative hours including all setup and
+collection, provider STOP at 6.25 hours, four numerical threads, 26 GB sampled tree
+RSS, 25 GiB free, 4 GiB extra work and 2 GiB compressed export. Fresh
+credits/scope/expiry/delayed usage/prices/product coverage, original retention,
+complete native runtime/source/input/probe/headroom must pass first. Reasonable
+credit-covered cost/time revisions follow the standing direction without another
+approval loop; no real money, resource increase or retention extension. First
+inspect and safely release only verified redundant/regenerable files if needed.
+
+Push the exact clean prepared source from Mac and sync read-only. Reuse passed
+setup/cache contracts without reinstall/recopy fallback. Arm/test fresh boot/process
+held-parent exit supervision and independently verify provider STOP before release.
+Run one candidate across E009 GLM off/on throughout teacher/proposals/student and
+Oral no GLM with the accepted ordered ten-depth inputs. Do not rerun retrieval,
+old fits, old scores or external tools. Debug recoverable operational failures
+with fresh journals and verified reuse inside the justified common clock.
+For a healthy long run, verify supervision/progress, wait a few minutes and hand
+off; follow a short job through collection and independently verified shutdown.
+
+After shutdown and full archive/member/cost admission, evaluate only new outputs
+with conservative E009 v2/full 156 targets/3.3034% N quarantine and separately
+named Oral origin/shared sensitivity/full 799 targets. Reuse E023/E026/E029 and
+both MetaBAT2 summaries. Report paired construction effects, target gains/losses,
+all populations, secondary RNA-unchecked quality tiers and costs. No truth tuning
+or per-community winner router. Both communities are development data.
+Keep the GPU batching admission explicitly capacity-blocked, its assets ready
+and the full Oral GLM milestone concrete; do not add a GPU job or full bank here.
+Keep skin unscored and all source/replicon/taxonomy/overlap/unique-truth/depth/cost
+dependencies. Preserve the November 4 boundary, update records/check/commit with
+structured what changed/why, and recommend one next decision and exact prompt.
+
+## Preserved execution design and dated handoffs
+
+The following records describe the completed launch and recoveries. Their RUNNING
+snapshots and remaining-placement instructions are superseded by verified closeout.
+
 The owner authorizes execution during this task, including sensible credit-covered
 cost/time increases. This is a new scope, separate from failed E028. Use branch
 `certifiable-joint-retrieval`. Preserve all original science and failed journals.
@@ -38,7 +168,7 @@ reference attention and exact original view/chunk/strand/token/pooling exposure.
 It is not a full Oral feature bank, fit or confirmation. E028's native equivalence
 tolerances remain unchanged. CPU completion is independent of GPU capacity.
 
-## Exact following prompt
+## Completed inspection prompt, preserved
 
 Inspect E029's recorded CPU phase and independent GPU qualification without restarting them.
 Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015 and E029's design, locks, receipts and operations.

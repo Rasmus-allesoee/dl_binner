@@ -1,5 +1,15 @@
 # E029: certifiable joint retrieval and cached completion
 
+**Completed and independently reviewed, November 1.** CPU science succeeds and
+the VM is TERMINATED; all 266 members / 39 aliases, native source/stages/axes and
+input-after verify. [Frozen biological disposition](comparison-review.json) is
+ABANDON_THIS_FROZEN_BUNDLE: student R95 is 7.2337% E009 no GLM, 7.2210% E009 GLM,
+10.0559% Oral, below the retained anchors. GPU qualification is capacity-blocked;
+no GPU model runs and all temporary resources are removed. [Operations](OPERATIONS.md)
+owns verified costs/limits and the next exact prompt; [next block](next-block.md)
+recommends a substantive profile-supported bin-construction upgrade with learning
+fixed. All dated preparation and failed journals below remain preserved.
+
 November 1, 2026. Owner authorization follows the completed E028 inspection at
 `9d42eca`: run the prepared work in this task, with sensible credit-covered
 cost/time revisions. No new spending occurs before fresh financial/native gates.

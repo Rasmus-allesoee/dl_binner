@@ -1,0 +1,312 @@
+{
+  "status": "PASS_INDEPENDENT_STOP_SOURCE_STAGES_INPUTS_DELIVERY",
+  "phase": "discovery-20261101T015844Z-31fb9c7",
+  "source": "31fb9c788e3903f10eb8beb012ca44a36fa74400",
+  "provider_status": "TERMINATED",
+  "archive_and_every_member_verified": true,
+  "cost_and_retention_admitted": true,
+  "workflow_completed": true,
+  "archive": {
+    "bytes": 842865965,
+    "sha256": "8fe3c0ad6d30af8817050c272be3dc7800e055bf97152b9e8aa4eb248090bec7"
+  },
+  "regular_members": 266,
+  "aliases": 39,
+  "source_files": 18,
+  "owned_package_files": 66,
+  "numerical_distributions": 41,
+  "native_gate_exits": {
+    "workflow-origin": 0,
+    "accepted-numerical": 0,
+    "package-install": 0,
+    "owned-complete-runtime": 0,
+    "actual-ANN-source": 0,
+    "installed-discovery": 0,
+    "installed-batched-engineering": 0,
+    "serial-cached-tiny-DAG": 0,
+    "restore-complete-inputs": 0,
+    "synthetic-width-runtime": 0
+  },
+  "phase_exits": {
+    "workflow": 0,
+    "used-inputs-after": 0,
+    "collect": 0,
+    "upload-e029-evidence.tar.gz": 0,
+    "readback-e029-evidence.tar.gz": 0,
+    "upload-e029-evidence.tar.gz.sha256": 0,
+    "readback-e029-evidence.tar.gz.sha256": 0,
+    "upload-collection.json": 0,
+    "readback-collection.json": 0,
+    "upload-collection-disk.jsonl": 0,
+    "readback-collection-disk.jsonl": 0,
+    "upload-terminal-disk.json": 0,
+    "readback-terminal-disk.json": 0
+  },
+  "stages": {
+    "retrieval/E009-noGLM/teacher": {
+      "status": "PASS",
+      "members": 2
+    },
+    "retrieval/E009-noGLM/student": {
+      "status": "PASS",
+      "members": 2
+    },
+    "retrieval/E009-GLM/teacher": {
+      "status": "PASS",
+      "members": 2
+    },
+    "retrieval/E009-GLM/student": {
+      "status": "PASS",
+      "members": 2
+    },
+    "retrieval/oral-noGLM/teacher": {
+      "status": "PASS",
+      "members": 7
+    },
+    "retrieval/oral-noGLM/student": {
+      "status": "PASS",
+      "members": 7
+    },
+    "barrier": {
+      "status": "PASS",
+      "members": 2
+    },
+    "groups/E009-noGLM/teacher": {
+      "status": "PASS",
+      "members": 16
+    },
+    "groups/E009-noGLM/student": {
+      "status": "PASS",
+      "members": 16
+    },
+    "groups/E009-GLM/teacher": {
+      "status": "PASS",
+      "members": 16
+    },
+    "groups/E009-GLM/student": {
+      "status": "PASS",
+      "members": 16
+    },
+    "groups/oral-noGLM/teacher": {
+      "status": "PASS",
+      "members": 15
+    },
+    "groups/oral-noGLM/student": {
+      "status": "PASS",
+      "members": 15
+    },
+    "E009-noGLM/export": {
+      "status": "PASS",
+      "members": 11
+    },
+    "E009-GLM/export": {
+      "status": "PASS",
+      "members": 11
+    },
+    "oral-noGLM/export": {
+      "status": "PASS",
+      "members": 11
+    },
+    "E009-noGLM/audit": {
+      "status": "PASS",
+      "members": 2
+    },
+    "E009-GLM/audit": {
+      "status": "PASS",
+      "members": 2
+    },
+    "oral-noGLM/audit": {
+      "status": "PASS",
+      "members": 2
+    }
+  },
+  "recall": {
+    "E009-noGLM/teacher": {
+      "status": "PASS",
+      "overall": 0.9985185185185185,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667,
+        "long": 1.0
+      },
+      "query_count": 45,
+      "min_query_recall": 0.9666666666666667,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "E009-noGLM/student": {
+      "status": "PASS",
+      "overall": 0.9992592592592593,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667,
+        "long": 1.0
+      },
+      "query_count": 45,
+      "min_query_recall": 0.9666666666666667,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "E009-GLM/teacher": {
+      "status": "PASS",
+      "overall": 0.9992592592592593,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667,
+        "long": 1.0
+      },
+      "query_count": 45,
+      "min_query_recall": 0.9666666666666667,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "E009-GLM/student": {
+      "status": "PASS",
+      "overall": 0.9992592592592593,
+      "strata": {
+        "positive_depth": 0.9979166666666667,
+        "short": 0.9979166666666667,
+        "long": 1.0
+      },
+      "query_count": 45,
+      "min_query_recall": 0.9666666666666667,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "oral-noGLM/teacher": {
+      "status": "PASS",
+      "overall": 1.0,
+      "strata": {
+        "positive_depth": 1.0,
+        "measured_zero_depth": 1.0,
+        "short": 1.0,
+        "long": 1.0
+      },
+      "query_count": 56,
+      "min_query_recall": 1.0,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    },
+    "oral-noGLM/student": {
+      "status": "PASS",
+      "overall": 1.0,
+      "strata": {
+        "positive_depth": 1.0,
+        "measured_zero_depth": 1.0,
+        "short": 1.0,
+        "long": 1.0
+      },
+      "query_count": 56,
+      "min_query_recall": 1.0,
+      "threshold": 0.9,
+      "biological_quality_assessed": false
+    }
+  },
+  "axes": {
+    "E009-noGLM": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ],
+      "core_rows": 9812,
+      "GLM_in_teacher_proposals_student": false
+    },
+    "E009-GLM": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ],
+      "core_rows": 9812,
+      "GLM_in_teacher_proposals_student": true
+    },
+    "oral-noGLM": {
+      "rows": 1286547,
+      "bp": 1669981123,
+      "eligible": 508763,
+      "samples": [
+        "oral_sample_6",
+        "oral_sample_7",
+        "oral_sample_8",
+        "oral_sample_13",
+        "oral_sample_14",
+        "oral_sample_15",
+        "oral_sample_16",
+        "oral_sample_17",
+        "oral_sample_18",
+        "oral_sample_19"
+      ],
+      "core_rows": 60211,
+      "GLM_in_teacher_proposals_student": false
+    }
+  },
+  "used_inputs_after_verified": true,
+  "hashed_files": 191,
+  "unused_stat_only": 15,
+  "watchdog_boot_process_verified": true,
+  "measured_allocation_seconds": 11339.416,
+  "actual_serial_dispatches": 20,
+  "original_cumulative_start_epoch": 1793497707.213,
+  "provider_absolute_STOP_epoch": 1793714506.516,
+  "native_disk": {
+    "samples": 5565,
+    "minimum_free_bytes": 29246377984,
+    "maximum_sampled_global_growth_bytes": 2531082240,
+    "scope": "Sampled whole-filesystem usage; first-allocation baseline, not exact attributable bytes"
+  },
+  "no_truth_scores_computed": true,
+  "scope": "Exact used-input before/after and retained cache proofs; no claim about every unrelated VM file",
+  "kind": "E029 independently verified completed CPU inspection",
+  "archive_generation": "1793509475767976",
+  "local_diagnostic_status": "COMPLETED",
+  "gpu_status": "NOT_RUN_CAPACITY_BLOCKED",
+  "native_dated_RUNNING_receipt_preserved": true,
+  "intermediate_science_result": {
+    "status": "RUNNING",
+    "science_completed": true,
+    "scientific_exits": [
+      0,
+      0
+    ],
+    "binding": {
+      "bytes": 2122,
+      "sha256": "8d824ee40f3fb60e5de87e67d6b206bee8881b747bf61068e112acdbd707f4b0"
+    },
+    "interpretation": "Frozen phase publishes this snapshot before collection and final SUCCESS assignment (e029_phase.py lines 186 and 226). The snapshot is preserved, not rewritten; final private/guest completion and actual scientific/delivery exits independently establish success."
+  },
+  "final_control_plane": {
+    "status": "PASS",
+    "checked_epoch": 1793525781.2497091,
+    "CPU": "TERMINATED",
+    "temporary_E029_VM_or_disk": 0,
+    "guest": "SUCCESS",
+    "completion": {
+      "bytes": 11021,
+      "sha256": "db1e69837e1ea551bf60a70cd1b91837c780b7b888a70ec28b7325ecc686a5d5"
+    },
+    "last_start": "2026-10-31T18:59:03.516-07:00",
+    "last_stop": "2026-10-31T22:08:02.932-07:00",
+    "no_VM_start_or_mutation": true
+  }
+}

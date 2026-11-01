@@ -1,15 +1,61 @@
 # Google Cloud workspace operations
 
-Current November 1 execution: E029 is explicitly authorized in this task after
-E028's verified failure/TERMINATED. [E029 operations](../experiments/E029-certifiable-joint-retrieval/OPERATIONS.md)
-owns the fresh $25 credit-only scope: existing E2 completion up to $22 / 60 h
-(provider STOP 60.25 h), plus independent $3 / 90-minute temporary GPU qualification
-(STOP 105 min). Fresh financial/native admission remains required before release.
-No original resize, quota increase, full Oral bank or retention extension.
-November 4 at 00:00 Copenhagen stays hard. Original $8 storage remains adequate
-under the fresh all-version inventory. Prior proposed $11 / 20 h is superseded
-by the complete full-shape timing and explicit owner flexibility.
+**November 1 E029 closeout: CPU SUCCESS, independently TERMINATED; no temporary
+GPU resources.** [Inspection](../experiments/E029-certifiable-joint-retrieval/inspection-observed.json)
+closes phase `discovery-20261101T015844Z-31fb9c7`. All ten native gates, 19 DAG
+seals, 13 phase/delivery exits, full source/runtime/axes/input-after and 266-member /
+39-alias archive pass. Four E009 caches and six models are reused; no scientific
+fit, original graph/detector or embedding inference is repeated. Biological
+[ABANDON_THIS_FROZEN_BUNDLE](../experiments/E029-certifiable-joint-retrieval/comparison-review.json)
+is separate from successful execution.
 
+[Actual priced allocation](../experiments/E029-certifiable-joint-retrieval/cost-observed.json)
+includes the failed setup's 541.072 seconds and successful 11,339.416 seconds:
+11,880.488 seconds total / 26.4011 allocated vCPU-hours, **$0.9011 compute/IP**.
+Successful allocation is November 1 01:59:03.516–05:08:02.932 UTC
+(02:59:03.516–06:08:02.932 Copenhagen). Workflow wall 10,321.09 seconds,
+sampled CPU 22,466.36 seconds and peak RSS 5.624 GB are separate measurements.
+Overlapping original PD costs about $0.1430. Including bounded export, new
+archive storage, temporary disks, operations and reserves, gross upper **$1.71**
+is within the original combined $25 scope. This is not an invoice or credit delta.
+
+[GPU admission](../experiments/E029-certifiable-joint-retrieval/gpu-inspection-observed.json)
+is NOT_RUN_CAPACITY_BLOCKED: L4 b/c, T4 f and provider-advised L4 a all refuse.
+No GPU VM ever starts, so GPU compute is zero. Eight empty 40/64 GiB disks are
+verified removed, priced conservatively below $0.0028 including deletion reserve.
+The initial cleanup/quota error and normal composite-MD5 refusal remain journaled.
+Original CPU hardware/disks stay intact. Do not continue an automatic placement
+loop; a suggested available zone is not an allocation guarantee. The prepared
+128-view cohort and private generation-bound assets remain ready for separately
+admitted native qualification. No full bank or GPU speed/equivalence is claimed.
+
+Fresh signed-in Welcome credit is **DKK 1,717.40 Available / 87%**, paid-upgraded
+Certain usage/net pricing, January 12, 2027 expiry. Current-month displayed
+cost/savings/net are zero, with possible >24-hour delay. Keep $35 pending reserve;
+ordinary first-party CPU/GPU/PD/GCS/network coverage was checked against current
+Catalog prices. No real-money charges are authorized. The all-version/soft-delete
+snapshot before the compact inspection backup has 73,069,866,789 protected bytes;
+the later 3.39 MB backup stays in the existing allowance. The conservative original
+storage week remains **$7.85 < $8**. No GCS object or accepted unique input/result is deleted.
+Six local redundant compressed transport copies release 5,415,205,033 bytes after
+accepted SHA/member proof and current private whole-object MD5/generation checks;
+all extracted needed inputs, results, journals and private backups remain.
+
+Native terminal free space is 27.24 GiB and sampled growth 2.357 GiB within frozen
+25 GiB / 4 GiB limits. Original stopped disks continue about **$31.20 per pricing
+month**, plus about $1.36/month GCS at the inventoried bytes. **November 4 at
+00:00 Copenhagen remains hard**. A separate preservation/retention decision is
+needed before that date; unused budget/credits do not extend storage or delete
+accepted evidence automatically.
+
+[Next proposed scope](../experiments/E029-certifiable-joint-retrieval/next-block.md)
+is one new $3 / six-hour cached CPU algorithm comparison with fresh gates and
+consistent watchdog/6.25-hour provider STOP. It is not started in inspection.
+Full Oral GLM remains separately blocked on native batching/capacity/headroom and
+complete credit-covered schedule/retention admission. The older handoffs below
+are dated operational history and do not override this closeout.
+
+## Preserved E028 inspection
 
 **November 1: E028 is independently TERMINATED; its scientific workflow FAILED.**
 [Inspection](../experiments/E028-global-discovery-repair/inspection-observed.json)

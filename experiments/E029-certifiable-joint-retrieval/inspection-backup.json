@@ -1,0 +1,19 @@
+{
+  "status": "PASS_PRIVATE_READBACK_ARCHIVE_AND_EVERY_MEMBER",
+  "uri": "gs://dl-binner-archive-167650584170/e029/discovery-20261101T015844Z-31fb9c7/inspection-20261101T094234Z/e029-inspection.tar.gz",
+  "generation": "1793526155626343",
+  "archive": {
+    "bytes": 3390202,
+    "sha256": "43319c8a31806567e95a0752951899262def9df83ee75e6dd745d771cd9bc6ee"
+  },
+  "regular_members": 418,
+  "logical_member_bytes": 27635040,
+  "inventory_sha256": "0c77191cf6bd154e99b352d140c9dfd8eb89601561df9a8568e572a13893b84b",
+  "compressed_export_cap_bytes": 67108864,
+  "credential_or_environment_payload": false,
+  "science_replayed": false,
+  "cost_scope": "Within existing E029 128 MiB compact controls/backup/readback allowance and original $25 credit-only scope",
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "storage_retention_extended": false,
+  "source_snapshot": "Exact working-tree member hashes; final structured commit follows"
+}

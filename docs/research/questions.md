@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-10-23
+Updated: 2026-11-01
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -859,3 +859,31 @@ finishes this evidence and independently qualifies Oral batching on 128 original
 views. Full bank, cutoff/derivative and skin confirmation retain their own truth,
 overlap, protocol, cost and retention admission. November 4 needs a separate
 preservation decision. No VM wake, new science or retention change occurs here.
+
+### November 1, 2026: E029 complete evidence and the next bin-construction block
+
+[E029](../../experiments/E029-certifiable-joint-retrieval/comparison-review.json)
+closes execution/bytes/runtime/axes for the three common-version modes. Its original
+rule gives ABANDON_THIS_FROZEN_BUNDLE: E009 student R95 is 7.2337% without GLM /
+7.2210% with full-path GLM, Oral measured-depth student 10.0559%, below both anchors.
+All six density-only alternatives are zero because root utility selects mixed
+community-scale components. Marker selection rescues recovery within those trees.
+No source/ID/depth-column/cache failure is found in the passed audits; the harmful
+root convention was declared. Q001 remains open beyond this scoped diagnosis.
+
+[D015](../decisions/D015-coherent-prototype-upgrade.md) chooses one coherent
+root-safe, profile-supported bin constructor with learning and retained retrievals
+fixed. This is a substantial algorithmic block with at most one decision-changing
+root-only control, not a default loss/grid campaign. Oral student still loses to
+teacher; proposal reliability remains an important subsequent learning alternative.
+Do not infer that any product information family is settled or route different
+versions using truth scores. The common no-GLM comparison is now complete; GLM-enabled
+Oral transfer remains unanswered (Q005). The independently prepared native batching
+probe cannot run after four actual capacity refusals; no GPU speed/equivalence is
+claimed. Keep the 128-view assets and concrete full-bank resource case ready.
+
+Q003 remains open: E009/Oral are development, conservative-v2/N quarantine and
+Oral origin/known-shared limitations stay explicit. Skin is still unscored with
+610 targets / 313 exact-Oral overlaps / 297 other genomes and remaining biological,
+unique-source, depth, protocol, cost and retention admission. November 4 needs a
+separate preservation decision. No confirmation acquisition or fit occurs here.

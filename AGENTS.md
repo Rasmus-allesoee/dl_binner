@@ -500,6 +500,18 @@ separately; allocated core-hours remain useful comparisons, not GCP prices.
 
 For owner-run execution, group commands into fail-fast scripts when later steps depend only on explicit machine-checkable success, not on scientific or operational interpretation. Pause for returned-output review at genuine assessment boundaries, not after every routine command. Explain each command group's purpose, files changed, software/data downloads, expected resource use, requested outputs, and stopping conditions in chat. For owner-run jobs, the owner manages extensions; do not repeatedly request remaining time. Direct connected-VM work needs persistent logs and review at real assessment boundaries, without an artificial upload/return round trip. Retain actual VM uptime, allocation and costs separately from child timing. Keep per-tool environments inside the experiment's persistent work directory. Record actual setup and return-artifact status in the experiment guide and STATE; never infer execution from prepared commands. Storage estimates should inform provisioning, not silently change scientific design when the owner can expand storage.
 
+For local evidence review, budget compressed inputs, materialized members,
+decompression and possible operating-system swap separately. Stage large actors
+sequentially and preserve a usable filesystem reserve throughout numerical work.
+A verified private archive can support generation-bound selective restoration;
+another complete local compressed copy is not required. Before removing a
+redundant transport archive, match its SHA256 to the accepted member-verification
+receipt and its whole-object identity to the current private backup. Retain the
+generation, bindings and release receipt, all extracted required inputs, results
+and journals. Never substitute deletion of unique science for storage planning.
+Build compact backups from closed artifacts. Exclude the packer's live supervisor
+logs from its input inventory and publish its delivery receipts after verification.
+
 Remote scientific commands, including direct SSH runs, must automatically capture
 terminal output to a log file; this also applies to any remaining owner-run command. Request the resulting file instead of asking the owner to copy terminal text. For long native steps, also expose timestamped stage progress and periodic heartbeats to the terminal or a dedicated progress log. Preserve the detailed per-tool logs and command provenance; progress is not a replacement for them. Use Snakemake per-rule `benchmark:` and `--benchmark-extended` for new substantial rules when useful, without rerunning accepted work solely to obtain measurements. Keep sampled process CPU/RAM metrics distinct from charged allocated vCPU-hours.
 

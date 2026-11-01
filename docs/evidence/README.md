@@ -35,3 +35,5 @@ Add a focused note when an investigation produces useful reasoning. Give it a da
 
 - [E026 recovery, source reassessment and one common full version](2026-10-30-e026-recovery-and-common-version.md)
 - [E027 failed discovery, accepted Oral reference and cached recovery decision](2026-10-31-e027-discovery-and-next-block.md)
+- [E028 exact-score retrieval refusal and the certifiable completion route](2026-11-01-e028-search-refusal.md)
+- [E029 completed recovery evidence, root bias and biological bin construction](2026-11-01-e029-bin-construction.md)

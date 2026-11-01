@@ -1,0 +1,157 @@
+{
+  "kind": "E029 final inspection/evaluator provenance; separate from immutable scientific source lock",
+  "science_source": "31fb9c788e3903f10eb8beb012ca44a36fa74400",
+  "files": {
+    "scripts/e029_inspection.py": {
+      "bytes": 11449,
+      "sha256": "93c35018c16f385507f71221652d9bb4496fa926515f9da9c4f0236264871d76"
+    },
+    "scripts/e029_stage_review.py": {
+      "bytes": 6346,
+      "sha256": "c4299bdc9db3417d065b1f334f125bf5bdf7dcd6566d418002586044f7b17f03"
+    },
+    "scripts/e029_review.py": {
+      "bytes": 12155,
+      "sha256": "71a3916eaf58316aaf81c4ee4ce285cec2a27aaa89b5dd9b0324575be831323e"
+    },
+    "scripts/e029_summary.py": {
+      "bytes": 12689,
+      "sha256": "2cf11eec628b2f0747d70fe7ab9159635e93558e025846ed9789e564059df5fe"
+    },
+    "tests/test_e029_review.py": {
+      "bytes": 5912,
+      "sha256": "baf1bfb4f3357cd6853feca38c892cd9efc902ed299e90224e96a755ef160a6d"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/review-E009-noGLM-teacher/review.json": {
+      "bytes": 344691,
+      "sha256": "cc406bde218b1709b45fc73734b57ee65b6ae09b92231f04677a6e379260ca08"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/review-E009-noGLM-student/review.json": {
+      "bytes": 340383,
+      "sha256": "2ccac31ff0efb081a612b401228a9f70b35c41ef7e629855841c891a922b9217"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/review-E009-GLM-teacher/review.json": {
+      "bytes": 343982,
+      "sha256": "af50c097c3e68a0b99e596ae1673fa705f724e00f49bbf51d1afaad715820887"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/review-E009-GLM-student/review.json": {
+      "bytes": 344236,
+      "sha256": "f2f36ff23e4f6162c966ce5aba0e76ae3ae569529548ee7a4418c4c899239cd7"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/review-oral-noGLM-teacher/review.json": {
+      "bytes": 1481814,
+      "sha256": "ee4ea867a84bedc82179608c6eb870ff055c7d81a345d94b46ee21e7aa9b1973"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/review-oral-noGLM-student/review.json": {
+      "bytes": 1448554,
+      "sha256": "2a5577770f1aa0f744fc2f8820c5fa92264a11629ec878ab5df1fa3ad2aebbc0"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/admission-final.json": {
+      "bytes": 7718,
+      "sha256": "b99cc50d58f6b22fd350c5479b3b9982f4f99b84fdc7ef62a6479bc55ab3435f"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/archive-verified.json": {
+      "bytes": 9681,
+      "sha256": "7f1cccd3fc39b26cd772179c14f4a145edc7ae8498bba526fb8855087f72b52a"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/inventory.json": {
+      "bytes": 95231,
+      "sha256": "c44e41e89dca1fc4cc4388b7217b27b31946e2bb675245e939007a9958474095"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/local-runtime-final.json": {
+      "bytes": 25331,
+      "sha256": "7b7fe5f9114f3820cc15eb684fdf1b49625a6d5f6d2fdac6441272a73ad10b5a"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/E009-verified-staging-release.json": {
+      "bytes": 15740,
+      "sha256": "727007a25ad6261e0117e7c62264097416747c7f84942a4263f05b4d3165952f"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/Oral-staging-r1-cleanup.json": {
+      "bytes": 3765,
+      "sha256": "0d18e715648816b7b439546828c74395536aba0b4428e86effb0f68755b6de3a"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/cloud-backed-local-archive-release.json": {
+      "bytes": 2824,
+      "sha256": "02f1e41b34730e14309d986760e26c2b8404684055a5d3370c52648cf4fe2200"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/cloud-backed-local-archive-release-r2.json": {
+      "bytes": 1545,
+      "sha256": "6a41e291250ca3ee17271feb9571473b23f93d9d3a8c11cbd2e4f0318911064a"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/summary-adapter-repairs.json": {
+      "bytes": 976,
+      "sha256": "7c0604ec7cdcd62f1f9fe388748e7697cecdbf8a4828aeee8808e200cbd8d68a"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/E009-review-r1/completed.json": {
+      "bytes": 626,
+      "sha256": "aff9a8413997e3cd3d0b5952ea8b3f66a104bc9f923810bc54aa390fcb3de805"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/Oral-teacher-review-r3/completed.json": {
+      "bytes": 1013,
+      "sha256": "8d23ef281843bbacc625b39ff2231de6bf1e8db47d803de05cbce1bbc26b176d"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/Oral-student-review-r1/completed.json": {
+      "bytes": 1011,
+      "sha256": "47c6aa322d5965b14a185f945cb3f3bde8a1de0e6277fa094a44226f99cebca8"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/final-reader-criteria-tests-r1/completed.json": {
+      "bytes": 755,
+      "sha256": "af8f44b580f258abb8959147ea981e67ca12f344c352ee0d8aa6bbf7b1dcb166"
+    },
+    "artifacts/e029-certifiable-joint-retrieval/inspection/final-runtime-r1/completed.json": {
+      "bytes": 1041,
+      "sha256": "6d254a4823321f7e3f39385c63d9fc4544681cebcc86a4d2831aace6c1281d94"
+    }
+  },
+  "baseline_summaries_and_truth_locks_unchanged_from_science_Git": {
+    "experiments/E023-adaptive-density-bins/comparison-review.json": {
+      "bytes": 135634,
+      "sha256": "cb387ada3b948e9d2c2e2c17e0892a20988d33d64eae3f778a72a8970d8744eb"
+    },
+    "experiments/E023-adaptive-density-bins/comparison-targets.tsv": {
+      "bytes": 51055,
+      "sha256": "e39e45692e09d35126034102af0a77470433df0d1c7dbf5399d17da282b9caf8"
+    },
+    "experiments/E026-calibrated-evidence-fusion/comparison-review.json": {
+      "bytes": 24679,
+      "sha256": "27c509e5a21eded7523be8444fccc02979f5418b57c4e77333fd67a22befb33f"
+    },
+    "experiments/E026-calibrated-evidence-fusion/comparison-targets.tsv": {
+      "bytes": 67850,
+      "sha256": "dba8d5979e07c7d9362a78decf3a701074e79c43aa098c77a2986428e2e12fb1"
+    },
+    "experiments/E027-common-information-binner/oral-reference-review.json": {
+      "bytes": 48387,
+      "sha256": "340bc67d858bb69d734349aedd0c5543edddd9ddc2b56dbc141fb6ccf061de14"
+    },
+    "experiments/E027-common-information-binner/oral-metabat2-targets.tsv": {
+      "bytes": 51357,
+      "sha256": "e94306cdd9c9e5338db7335029842d216071042f1f0f7ec2195f9d00e915d0ba"
+    },
+    "experiments/E027-common-information-binner/learning-components-review.json": {
+      "bytes": 645248,
+      "sha256": "958a5a7e70e2ff4e97dabdadc587678592452d637e367d6cb36f6774553ee723"
+    },
+    "experiments/E013-marker-quality/review-lock.json": {
+      "bytes": 2537,
+      "sha256": "4d928dcc97ebd833b44f13f19e09b5a2d30c95270b923d70018b8197643b7146"
+    }
+  },
+  "native_assembly_sample_axes_and_used_arrays": "Native before/after source proofs; independent local feature/ordered-sample reader in every role",
+  "old_outputs_fit_or_rescored": false,
+  "truth_only_in_local_review": true,
+  "original_Mac_model_tolerance_unchanged": true,
+  "failed_local_journals": [
+    "artifacts/e029-certifiable-joint-retrieval/inspection/archive-admission-r1",
+    "artifacts/e029-certifiable-joint-retrieval/inspection/Oral-stage-r1",
+    "artifacts/e029-certifiable-joint-retrieval/inspection/Oral-teacher-review-r1",
+    "artifacts/e029-certifiable-joint-retrieval/inspection/Oral-teacher-review-r2",
+    "artifacts/e029-certifiable-joint-retrieval/inspection/final-reader-tests-r1"
+  ],
+  "compressed_duplicate_release_receipts": [
+    "artifacts/e029-certifiable-joint-retrieval/inspection/cloud-backed-local-archive-release.json",
+    "artifacts/e029-certifiable-joint-retrieval/inspection/cloud-backed-local-archive-release-r2.json"
+  ],
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "report_null_semantics": "not_recovered bin / not_applicable purity are explicit report nulls; original JSON/native nulls and all numeric endpoints unchanged"
+}
