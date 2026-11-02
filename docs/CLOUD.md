@@ -1,31 +1,48 @@
 # Google Cloud workspace operations
 
-## November 2 E031 independent shutdown and paired follow-through
+## November 2 E031: verified bridge closeout, paired learner active
 
-Control plane independently confirms the original bridge TERMINATED, last stop
-November 2 at 14:11:07.087 UTC / 15:11 Copenhagen. [Inspection](../experiments/E031-bootstrap-preserving-learning/inspection-observed.json)
-verifies actual completion, gates/seals/delivery and every archive member/alias;
-shutdown itself is not the proof. Measured allocation 3,754.657 seconds prices
-about $0.2848 CPU/IPv4, plus $0.0451 overlapping original PD. Actual invoices remain
-delayed. Current Welcome credit is DKK 1,702.62 Available / 86%, January 12, 2027
-expiry; November gross/savings/net DKK 8.27 / 8.27 / 0.00. Keep the $35 delay reserve.
+[Current native receipt](../experiments/E031-bootstrap-preserving-learning/learning-native-observed.json)
+records `learning-20261102T200852Z-ba65911-r2` RUNNING on the existing E2, source
+`ba65911`. All nine native gates, complete retained inputs/runtime, portable
+source guard and actual progress pass. At 21:54 Copenhagen, first arm E009
+no-GLM has finished 20 epochs/native reload and both construction/export paths;
+its E030 audit runs, with finite/full-exposure/no-collapse history.
+At 21:59 its paired final target passes and E009 GLM training is underway.
+No whole-workflow completion or new candidate quality is claimed.
 
-The owner authorizes fixed paired E031 learning independently of bridge quality.
-Its [prospective scope](../experiments/E031-bootstrap-preserving-learning/paired-execution-policy.json)
-uses only the existing E2, original 30/300 GiB disks and the existing single
-40 GiB task disk, without formatting or provisioning. Native full-schedule,
-credit/source/runtime, separate source/task reserves and fresh current-boot
-watcher/provider STOP gates precede release. $8 / 16 hours / 16.25-hour STOP,
-complete upper $7.20, with prospectively enlarged complete paired evidence caps.
-Mac Oral review storage refusal remains failed; only its unfinished read-only
-readers use the native phase, with the original diagnostic deadline and 8 GB RSS.
-Truth stays outside training. No new learner outcome or native launch yet.
+A fresh boot/process watcher is tested and active. Original first start is
+November 2 at 20:02:32 UTC; setup recovery preserves that cumulative clock.
+Driver science/collection ends November 3 at 12:02:32 UTC / 13:02 Copenhagen.
+Actual provider STOP is 12:15:52 UTC / 13:15 Copenhagen, before the original
+12:17:32 UTC fallback horizon. No resources are provisioned or formatted; reuse
+only original disks and the same admitted 40 GiB task disk. Source/task reserves
+are separate; the new filesystem baseline includes retained old bridge work.
 
-November 4 at 00:00 Copenhagen is unchanged. Original stopped disks keep costing
-about $31.20 per pricing month, plus the task disk and GCS. Independent full
-collection/member admission precedes any task-disk deletion. The narrow automatic
-new-archive tail is capped at $0.05 through November 11, not an active renewal.
-The earlier handoff is historical.
+The original bridge is independently TERMINATED and reviewed with MODIFY, not
+inferred from stop. All archive/member and exit proofs pass. Three E009 reviews
+complete locally; only the two unfinished Oral readers and fixed query summary
+move read-only to the native phase after a preserved Mac reserve refusal.
+Their compact archive/member checks pass. One unreleased provenance-parser
+failure is also preserved; exact source bytes repair cross-Python identity
+without changing math, redoing science or resetting the clock.
+
+Fresh admission shows DKK 1,702.62 Available / 86%, January 12, 2027 expiry;
+November gross/savings/net DKK 8.27 / 8.27 / 0.00, with $35 delayed-usage reserve.
+The $8 learner upper is $7.20 including the full paired schedule/return, versus
+original $4 bridge. Original bridge CPU/IPv4 is priced $0.2848; new allocations
+are $0.2162 through 21:54, with storage/export separately accounted. Use current
+Catalog PD conversion (721 hours) for proration; older 730-hour approximations
+stay historical. Sampled CPU and credit changes are not GCP invoices.
+
+**November 4 at 00:00 Copenhagen remains.** Obtain a separate preservation action
+before expiry; do not silently renew or delete unique science. Task deletion
+requires independent full learner return/member verification. Original stopped
+disks continue about $31.20 per pricing month, task disk $4, plus GCS. Only the
+separately approved automatic new-archive soft-delete tail may continue, at most
+$0.05 through November 11. Private exact Git transfer preserves current sensitive
+history; ordinary GitHub push/pull remains preferred where outgoing history is safe.
+The earlier entries are dated history.
 
 ## Earlier November 2 E031 supervised running phase
 

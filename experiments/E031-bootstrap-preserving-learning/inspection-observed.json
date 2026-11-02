@@ -1,5 +1,5 @@
 {
-  "status": "BRIDGE_SCIENCE_DELIVERY_ACCEPTED; THREE_E009_REVIEWS_COMPLETE; ORAL_DIAGNOSTIC_RECOVERY_PREPARED",
+  "status": "BRIDGE_COMPLETED_REVIEWED; FROZEN_DISPOSITION_MODIFY; PAIRED_LEARNER_RELEASED",
   "checked_UTC": "2026-11-02T19:53:17.277381+00:00",
   "phase": "bridge-20261102T130813Z-31962f8",
   "source": "31962f85af266801687885a41fbf6e933cabc33b",
@@ -88,7 +88,7 @@
       }
     }
   },
-  "Oral_truth_review": "Unavailable until the two frozen readers complete under the same one-hour deadline on the existing E2; local storage refusal is preserved",
+  "Oral_truth_review": "Both unfinished readers completed read-only on the existing E2 inside the original one-hour deadline, at <=8 GB sampled RSS. Every compact return member verified.",
   "bridge_quality_does_not_gate_learner": true,
   "evidence": {
     "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/admission.json": {
@@ -126,8 +126,42 @@
     "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/release-redundant-oral-staging.json": {
       "bytes": 9518,
       "sha256": "ea824167d77edd06c0f446c2017de61eecf03db4da619465df3978e0f190bea8"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/native-review-verification.json": {
+      "bytes": 305,
+      "sha256": "3f22b5d7f113ef7a92b1be05f0785d7547965058b7d09a26679686c1894e077f"
     }
   },
   "private_source_history_not_publicly_pushed": true,
-  "retention_end": "2026-11-04T00:00:00+01:00"
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "review": {
+    "summary": {
+      "bytes": 48792,
+      "sha256": "681447fe0a2a8d08032313545ba58670000eef7a0b909eb37efad2056020c401"
+    },
+    "target_table": {
+      "bytes": 164613,
+      "sha256": "362a135fae9c7ab661e7fc397d3d78446a96e2e4ee4a86f83be2a5b78e4f9ffb"
+    },
+    "independent_integer_audit": {
+      "bytes": 2335,
+      "sha256": "e0e0a0adbfed3169709fe2300a7b464a640eb83e0830f4b7e72664daf39dd659"
+    },
+    "native_compact_review": {
+      "bytes": 305,
+      "sha256": "3f22b5d7f113ef7a92b1be05f0785d7547965058b7d09a26679686c1894e077f"
+    },
+    "all_five_new_actor_reviews_complete": true,
+    "accepted_E009_GLM_student_summary_reused": true,
+    "old_baselines_rescored": false,
+    "Oral_review_native_not_a_passing_Mac_portability_contract": true
+  },
+  "learner": {
+    "released": true,
+    "phase": "learning-20261102T200852Z-ba65911-r2",
+    "source": "ba659119c3ec86edc83e27bad95939326fbaa2b8",
+    "bridge_quality_not_a_gate": true,
+    "three_modes_both_constructors": true,
+    "completion_not_claimed": true
+  }
 }

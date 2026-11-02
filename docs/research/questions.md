@@ -936,3 +936,12 @@ quality, retaining the same three new outputs under E023/E030 in every mode.
 [The prospective policy](../../experiments/E031-bootstrap-preserving-learning/paired-execution-policy.json)
 preserves the original scientific criterion, all targets and old references,
 without a dataset-specific winner router. Q003/Q005 and November 4 remain.
+
+November 2 completed bridge review: Q001 remains open. The unchanged rule is
+MODIFY: strong E009 recovery returns under source-bound E023, while current
+measured-depth Oral regresses against E030. Local technical query gains do not
+resolve that grouping trade-off. The owner-authorized fixed learner now runs
+under both common constructors; the same three new outputs will resolve the
+interaction without extra fits or a dataset-specific product. See the
+[reviewed evidence](../evidence/2026-11-02-e031-bridge-and-paired-learning.md).
+All original criteria, Q003/Q005 and the November 4 boundary remain.

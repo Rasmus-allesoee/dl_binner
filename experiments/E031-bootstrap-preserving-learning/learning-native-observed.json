@@ -1,0 +1,387 @@
+{
+  "status": "RUNNING_PROGRESS_AND_SUPERVISION_VERIFIED; NOT_COMPLETED_SCIENCE",
+  "checked_UTC": "2026-11-02T20:54:46.824025+00:00",
+  "phase": "learning-20261102T200852Z-ba65911-r2",
+  "identity": {
+    "root": "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2",
+    "repo": "/srv/dl_binner/repo",
+    "source": "ba659119c3ec86edc83e27bad95939326fbaa2b8",
+    "phase": "learning-20261102T200852Z-ba65911-r2",
+    "user": "rasmus_allesoee_gmail_com",
+    "service_name": "e031-learning-20261102T200852Z-ba65911-r2",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e031/learning-20261102T200852Z-ba65911-r2/",
+    "vm_start_epoch": 1793649752.426,
+    "provider_max_duration_seconds": 58000,
+    "scratch": {
+      "name": "e031-bridge-scratch-20261102131010",
+      "id": "5531031824224302423",
+      "size_GiB": 40,
+      "reused": true
+    },
+    "recovery_from": "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200214Z-1af0926",
+    "original_phase_start_epoch": 1793649752.426,
+    "science_replayed": false,
+    "allocation_start_epoch": 1793650152.24
+  },
+  "prepared_scientific_source": "58d7d59e892304ad20efcf784e61288e8a7d4967",
+  "executed_source": "ba659119c3ec86edc83e27bad95939326fbaa2b8",
+  "unchanged_product_and_original_scientific_stage": true,
+  "provider": {
+    "status": "RUNNING",
+    "machine": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/machineTypes/e2-standard-8",
+    "disk_sizes_GiB": [
+      30,
+      300,
+      40
+    ],
+    "max_duration_seconds": 58000,
+    "termination_action": "STOP",
+    "automatic_restart": false,
+    "provider_STOP_UTC": "2026-11-03T12:15:52.240000+00:00",
+    "provider_STOP_Copenhagen": "2026-11-03T13:15:52.240000+01:00"
+  },
+  "clock": {
+    "first_allocation_start_epoch": 1793649752.426,
+    "current_allocation_start_epoch": 1793650152.24,
+    "cumulative_wall_limit_seconds": 57600,
+    "science_collection_deadline_epoch": 1793707352.426,
+    "original_horizon_not_reset": true,
+    "failed_first_allocation_seconds": 116.495
+  },
+  "supervision": {
+    "boot_id": "79a426fe-15d8-4397-b921-c446b20db355",
+    "checked_utc": "2026-11-02T20:54:31.383658+00:00",
+    "decision": "workflow alive",
+    "expected_process": {
+      "command_sha256": "47590d13f5be07da9ef617ebcc64529841eeaa1805acee65398438cd9770f743",
+      "pid": 1596,
+      "start_ticks": 4177
+    },
+    "observed_process": {
+      "command_sha256": "47590d13f5be07da9ef617ebcc64529841eeaa1805acee65398438cd9770f743",
+      "pid": 1596,
+      "start_ticks": 4177
+    },
+    "shutdown": false,
+    "workflow_root": "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2"
+  },
+  "current_stage": "E009_GLM_train",
+  "latest_progress": {
+    "stage": "bootstrap_continuation_epoch",
+    "utc": "2026-11-02T20:45:32Z",
+    "epoch": 20,
+    "parents_seen": 89041,
+    "available_views": 432664,
+    "depth_dropped_views": 216427,
+    "relation_pairs_exposed": 623,
+    "relation_weight": 0.1,
+    "ema_updates": 6960,
+    "original_pair_slots": 2366,
+    "relation_normalizer": "original proposal slots, not accepted count or weight sum",
+    "inherited_ema_updates": 6960,
+    "last_tau": 0.9999999997962576,
+    "geometry": {
+      "online": {
+        "fused": {
+          "rows": 8192,
+          "effective_rank": 35.87066590482506,
+          "mean_dimension_std": 0.10867232619799622,
+          "mean_other_cosine": 0.23021824111470807,
+          "catastrophic_collapse": false
+        },
+        "sequence": {
+          "rows": 8192,
+          "effective_rank": 35.2083320859381,
+          "mean_dimension_std": 0.10633929687356868,
+          "mean_other_cosine": 0.2621135210877273,
+          "catastrophic_collapse": false
+        }
+      },
+      "target": {
+        "fused": {
+          "rows": 8192,
+          "effective_rank": 35.947789611908696,
+          "mean_dimension_std": 0.10860104957527511,
+          "mean_other_cosine": 0.23127712218746307,
+          "catastrophic_collapse": false
+        },
+        "sequence": {
+          "rows": 8192,
+          "effective_rank": 35.1343424731131,
+          "mean_dimension_std": 0.10625545016564142,
+          "mean_other_cosine": 0.2632790956928805,
+          "catastrophic_collapse": false
+        }
+      }
+    },
+    "loss": 1.0923709549542229,
+    "fused_positive": 0.3797568763545889,
+    "sequence_positive": 0.40415521525928066,
+    "composition_reconstruction": 0.5073669859485039,
+    "depth_reconstruction": 0.022032508588403135,
+    "relation_positive": 0.0018127364086757572,
+    "relation_negative": 3.355959024571878e-05,
+    "anchor_preservation": 0.007816027655753312,
+    "wall_seconds": 1133.568869732
+  },
+  "log": "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/logs/E009_GLM_train.log",
+  "completed_seals": [
+    "barrier/done.json",
+    "E009-noGLM/e023/done.json",
+    "E009-noGLM/forest/done.json",
+    "E009-noGLM/retrieve/done.json",
+    "E009-noGLM/train/done.json",
+    "E009-noGLM/export/done.json",
+    "E009-noGLM/confidence/done.json",
+    "E009-noGLM/graph/done.json",
+    "E009-noGLM/embed/done.json",
+    "E009-noGLM/construct/done.json"
+  ],
+  "native_gates": [
+    {
+      "stage": "workflow-origin",
+      "exit": 0,
+      "wall_seconds": 1.1532511360000015,
+      "sampled_tree_RSS_bytes": 44982272
+    },
+    {
+      "stage": "package-install",
+      "exit": 0,
+      "wall_seconds": 2.460354991999999,
+      "sampled_tree_RSS_bytes": 90832896
+    },
+    {
+      "stage": "owned-complete-runtime",
+      "exit": 0,
+      "wall_seconds": 21.471747365999995,
+      "sampled_tree_RSS_bytes": 314597376
+    },
+    {
+      "stage": "installed-state-pair-reader-export",
+      "exit": 0,
+      "wall_seconds": 20.103684748000006,
+      "sampled_tree_RSS_bytes": 494034944
+    },
+    {
+      "stage": "serial-learning-tiny-DAG",
+      "exit": 0,
+      "wall_seconds": 42.471298085000015,
+      "sampled_tree_RSS_bytes": 719925248
+    },
+    {
+      "stage": "paired-constructors-tiny-reuse-export",
+      "exit": 0,
+      "wall_seconds": 35.27964474799998,
+      "sampled_tree_RSS_bytes": 446615552
+    },
+    {
+      "stage": "synthetic-full-batch-kernels",
+      "exit": 0,
+      "wall_seconds": 3.818520522,
+      "sampled_tree_RSS_bytes": 459640832
+    },
+    {
+      "stage": "restore-complete-inputs",
+      "exit": 0,
+      "wall_seconds": 112.60016656499997,
+      "sampled_tree_RSS_bytes": 3441463296
+    },
+    {
+      "stage": "remaining-frozen-bridge-diagnostics",
+      "exit": 0,
+      "wall_seconds": 413.74051277899997,
+      "sampled_tree_RSS_bytes": 4465848320
+    }
+  ],
+  "standalone_native_Python310_portable_source_guard_passed": true,
+  "input_admission": {
+    "files": 125,
+    "bytes": 11867699595,
+    "axes": {
+      "E009-noGLM-teacher": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "E009-GLM-teacher": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "oral-noGLM-teacher": {
+        "rows": 1286547,
+        "bp": 1669981123,
+        "eligible": 508763,
+        "samples": [
+          "oral_sample_6",
+          "oral_sample_7",
+          "oral_sample_8",
+          "oral_sample_13",
+          "oral_sample_14",
+          "oral_sample_15",
+          "oral_sample_16",
+          "oral_sample_17",
+          "oral_sample_18",
+          "oral_sample_19"
+        ]
+      }
+    },
+    "truth_in_features_or_training": false
+  },
+  "complete_native_schedule": {
+    "status": "PASS",
+    "forecast_remaining_seconds": 34145.073062279735,
+    "actual_remaining_seconds": 56120.22112441063,
+    "scope": "Synthetic native kernels + retained real-bank floor + complete downstream/collection allowance; not a guarantee"
+  },
+  "resources": {
+    "threads": 4,
+    "tree_RSS_GB": 26,
+    "free_reserve_GiB": 25,
+    "extra_GiB": 9,
+    "compressed_return_GiB": 3,
+    "logical_return_GiB": 6,
+    "post_mount_current_phase_baseline_bytes": 4182732800,
+    "task_device": 2080,
+    "source": {
+      "total": 316733652992,
+      "used": 287242252288,
+      "free": 29474623488
+    },
+    "task": {
+      "total": 41956900864,
+      "used": 4582322176,
+      "free": 37357801472
+    },
+    "boot": {
+      "total": 30083776512,
+      "used": 7786479616,
+      "free": 22280519680
+    },
+    "reserve_scope": "Original work/source and task filesystems; boot free space separately observed"
+  },
+  "cost": {
+    "ceiling_USD": 8,
+    "complete_upper_USD": 7.2,
+    "actual_allocated_running_seconds_to_observation": 2851.0790247917175,
+    "priced_CPU_IP_USD_to_observation": 0.21624300123318424,
+    "overlapping_original_PD_USD_to_observation": 0.03427094528182369,
+    "sampled_CPU_not_price": true,
+    "downtime_not_charged_as_compute": true,
+    "actual_final_cost_pending": true,
+    "credit_DKK_at_admission": 1702.62,
+    "pending_reserve_USD": 35,
+    "net_billing_display_DKK": 0,
+    "invoice": false
+  },
+  "bridge_review_completed_and_bytes_verified": true,
+  "bridge_rule": "MODIFY; does not gate this authorized learner",
+  "both_constructors_all_modes": true,
+  "fits_planned": 3,
+  "fits_observed_started": 2,
+  "whole_workflow_completion": false,
+  "new_candidate_quality_not_yet_admitted": true,
+  "old_baselines_not_refit_or_rescored": true,
+  "no_new_resources_GPU_external_tool_acquisition_or_retention_extension": true,
+  "active_retention_end": "2026-11-04T00:00:00+01:00",
+  "automatic_new_archive_tail_max_USD": 0.05,
+  "automatic_tail_latest_end": "2026-11-11T00:00:00+01:00",
+  "evidence": {
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/health-observation.json": {
+      "bytes": 3764,
+      "sha256": "7f74db77d3a1f235d2a99161f646c72d409cf89de51b7124786d3fa3c26e8db8"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/handoff-control/provider.json": {
+      "bytes": 33560,
+      "sha256": "8fde7a97142347c727d792b8bf2f5d90fed7de0b8009165c640256d2d19ae8f2"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/handoff-control/guest.json": {
+      "bytes": 281,
+      "sha256": "3a55f14d3f68b4a09aae3f90a1c1f92b851d0c14e286b68ced717a5679c0a10f"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/native-control/gates/completion.json": {
+      "bytes": 9030,
+      "sha256": "ed56c5de7795c02498eef9a81af1135c9c1ddbbedd93bb45b910d64f72e6088c"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/native-control/gates/data.json": {
+      "bytes": 30713,
+      "sha256": "ef4646384d9056fb522d315a63a8d0ba0961fffde761b0d652fa2d46eff5fe4b"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/native-control/gates/runtime.json": {
+      "bytes": 25386,
+      "sha256": "55536e9c0e62aaa3a9698a009565c1a7e3062485234ca78c0fe4ff93f8d4b9ed"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/native-control/gates/complete-schedule.json": {
+      "bytes": 250,
+      "sha256": "564e2e7bf1c4c5bbd73eda02432cff259ac7f22bfd371eda891fa29e5fb99763"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/native-control/gates/portable-source-numerical-Python.log": {
+      "bytes": 519,
+      "sha256": "2f72e28e00115c299628826dbd2bef6908592fbe318734ec9b25e136cd240952"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/release-terminal.log": {
+      "bytes": 1002,
+      "sha256": "31ec1e99a7add761c1fb5f202b05d93f1042dc7198612c80e3dd40039f0aa304"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/financial-gate.json": {
+      "bytes": 7986,
+      "sha256": "76ac73d3e73c5c058c71d54cd56e25a22d7a9d57c6d289064efcdd509eca95fe"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/health-latest-observation.json": {
+      "bytes": 4077,
+      "sha256": "b2485253ca7129fb3899914945c8fecc6294cd4a2322982368e2dc8a2d248965"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/handoff-latest-control/provider.json": {
+      "bytes": 33560,
+      "sha256": "8fde7a97142347c727d792b8bf2f5d90fed7de0b8009165c640256d2d19ae8f2"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/handoff-latest-control/guest.json": {
+      "bytes": 281,
+      "sha256": "3a55f14d3f68b4a09aae3f90a1c1f92b851d0c14e286b68ced717a5679c0a10f"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/no-failure-handoff.json": {
+      "bytes": 1894,
+      "sha256": "270b3fbbb430a1c59755e514d10064a02b04ba23bf61cca918e25da0dd91111a"
+    }
+  },
+  "previous_observation_UTC": "2026-11-02T20:41:42.807243+00:00",
+  "training_log": "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/logs/E009_noGLM_train.log",
+  "workflow_log": "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/phase-logs/workflow.log",
+  "fits_observed_completed_with_native_reload": 1,
+  "first_mode_full_paired_acceptance_not_yet_independently_verified": true,
+  "latest_workflow_progress_UTC": "2026-11-02T20:59:31.825108+00:00",
+  "current_stage_scope": "Latest workflow progress at 20:59 UTC; process/watcher binding independently checked at 20:54 UTC",
+  "E009_noGLM_paired_final_target_observed_complete": true,
+  "read_only_observer_naming_refusal": {
+    "path": "artifacts/e031-bootstrap-preserving-learning/learning-20261102-r2/handoff-health-terminal.log",
+    "binding": {
+      "bytes": 1362,
+      "sha256": "c55b1aaa5866b4b170325cf0de8fedc9a2b8172cae94269fdcfc01dbd1c0d5a3"
+    },
+    "reason": "A repeated observer used an immutable snapshot name; recovered into distinct snapshot paths without touching the running workflow"
+  }
+}

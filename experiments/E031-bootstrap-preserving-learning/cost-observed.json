@@ -191,5 +191,23 @@
     "scope": "Through archive collection/upload/readback; final compact proof delivery follows this closed snapshot"
   },
   "credit_delta_is_not_invoice": true,
-  "retention_end": "2026-11-04T00:00:00+01:00"
+  "retention_end": "2026-11-04T00:00:00+01:00",
+  "paired_learning_allocation": {
+    "phase": "learning-20261102T200852Z-ba65911-r2",
+    "checked_UTC": "2026-11-02T20:54:46.824025+00:00",
+    "ceiling_USD": 8,
+    "complete_upper_USD": 7.2,
+    "actual_allocated_running_seconds_to_observation": 2851.0790247917175,
+    "priced_CPU_IP_USD_to_observation": 0.21624300123318424,
+    "overlapping_original_PD_USD_to_observation": 0.03427094528182369,
+    "sampled_CPU_not_price": true,
+    "downtime_not_charged_as_compute": true,
+    "actual_final_cost_pending": true,
+    "credit_DKK_at_admission": 1702.62,
+    "pending_reserve_USD": 35,
+    "net_billing_display_DKK": 0,
+    "invoice": false
+  },
+  "new_scopes_costs_not_inferred_from_credit_delta": true,
+  "native_bridge_diagnostic_recovery_allocation_included_in_new_learning_scope": true
 }

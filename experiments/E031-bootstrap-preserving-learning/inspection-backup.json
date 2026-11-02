@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "checked_UTC": "2026-11-02T20:49:07.383400+00:00",
+  "archive": {
+    "bytes": 1776559,
+    "sha256": "ad08313df013aa9ed5a8787444b00a81aa8e92e6c2c1fcff519c1ea57ec7ff2c"
+  },
+  "object": "gs://dl-binner-archive-167650584170/e031/learning-20261102T200852Z-ba65911-r2/bridge-inspection-backup.tar.gz#1793652541288934",
+  "generation": "1793652541288934",
+  "regular_members": 121,
+  "logical_bytes": 5114293,
+  "all_members_verified": true,
+  "private_readback_verified": true,
+  "not_backup_of_omitted_bulk_DNA": true,
+  "packer_live_log_excluded": true,
+  "new_credit_covered_cost_USD_upper": 0.01,
+  "active_retention_end": "2026-11-04T00:00:00+01:00",
+  "automatic_tail_in_existing_approved_005_USD": true,
+  "closed_failure_supplement": {
+    "archive": {
+      "bytes": 46185,
+      "sha256": "e934d33bd489ee372e2684d0a1553fbeeb9e1a5288d45f501e0a316be1914392"
+    },
+    "object": "gs://dl-binner-archive-167650584170/e031/learning-20261102T200852Z-ba65911-r2/bridge-inspection-failure-sidecars.json#1793652747563627",
+    "members": 4,
+    "each_member_and_private_readback_verified": true
+  },
+  "latest_handoff": {
+    "binding": {
+      "bytes": 18056,
+      "sha256": "31d59ec4109b248d5fdf168a187c49b0a29166ac4d891fe3c2184be92809a254"
+    },
+    "object": "gs://dl-binner-archive-167650584170/e031/learning-20261102T200852Z-ba65911-r2/learning-handoff.json#1793653353375844",
+    "native_record": {
+      "bytes": 15075,
+      "sha256": "f6124ead5a0ecd4e23ca78c1832ba3974fb59f97c7500dc4caf759e8398ab82a"
+    },
+    "private_readback_verified": true
+  }
+}

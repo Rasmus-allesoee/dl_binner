@@ -1,59 +1,48 @@
 # E031: bootstrap-preserving learning and a source-bound construction bridge
 
-Status: **native cached bridge running under verified supervision; no admitted community outcome yet**.
-Parent `ca7b142`, branch `bootstrap-preserving-learning`. [Design](design.md),
-[frozen protocol](protocol.json), [source](source-lock.json),
-[candidate](candidate-lock.json), [scientific identity](science-lock.json), [reuse](reuse-lock.json),
-[review inputs](review-lock.json), [resources](resources.json),
-[local receipts](local-observed.json) and [operations](OPERATIONS.md) own the details.
-[Native observation](native-observed.json) records phase
-`bridge-20261102T130813Z-31962f8`, seven passed gates and actual completed actor
-progress. [The paired prospectus](learner-paired-prospectus.json) freezes the
-conditionally authorized learner/constructor comparison before learner outcomes.
-Do not infer scientific success from a later shutdown.
+Status, November 2: **bridge completed/reviewed (MODIFY); paired learner running
+under verified supervision; no new learner quality result yet**.
 
-**First execution: fixed-learning E023 graph/construction bridge.** The same
-E022 vectors and native graph underlie E023's 10.4163% E009 and E030's 7.6509%.
-E023's old Oral learner was sequence-only; it cannot dismiss that constructor on
-the current measured-depth Oral teacher/student. Reuse the accepted E009 GLM
-student in place and compute only five new actors. Keep both density/selected
-alternatives and source-blind matched query views. No fit or old-score replay.
+[Current learner receipt](learning-native-observed.json) records phase
+`learning-20261102T200852Z-ba65911-r2`, exact source `ba65911`, nine native gates,
+full original input/runtime admission. At 21:54 Copenhagen, E009 no-GLM has
+finished 20 epochs/native reload and both construction/export paths; E030 audit
+runs. At 21:59 its paired target passes and E009 GLM training runs. The same three
+new model outputs feed both E023 and E030 in all modes. The owner authorizes this
+regardless of bridge quality. Independent
+watcher/provider STOP and the original first-start clock remain. Use the
+[exact inspection prompt](OPERATIONS.md#exact-following-prompt) when it finishes.
 
-The requested learner is implemented in a separate package, preserving all old
-product modules. It restores bootstrap online/EMA/predictor/buffers/Adam moments,
-continues the same real-view topology at a lower rate, adds a soft fixed-bootstrap
-anchor, and filters uncertain cross-parent positives with abstention. Original
-pair-slot normalization avoids increasing negative force when positives abstain.
-Both actual tiny context/hybrid paths are exercised; GLM inference is explicitly
-mocked in engineering fixtures. A separately gated three-fit comparison initially
-holds E030 downstream policy fixed. No community fit is authorized by preparation.
-The final checks pass: eight product tests, nine operations tests, and real
-10-stage bridge / 28-stage learning fixture workflows with verified no-op resume
-and every archive member/alias checked. Native Linux and financial gates remain.
+[Bridge inspection](inspection-observed.json), [full comparison](bridge-review.json),
+[target table](bridge-targets.tsv), [integer audit](bridge-review-audit.json) and
+[interpretation](../../docs/evidence/2026-11-02-e031-bridge-and-paired-learning.md)
+preserve the completed source-bound result. E009 no-GLM returns to 10.4623% R95;
+accepted E009 GLM 10.4163% is reused, while Oral falls to 9.5438%. Keep the failed
+joint criterion, all target losses and the immutable MetaBAT2/E023/E026 references.
+No per-dataset constructor routing or old baseline rescoring.
 
-[The evidence/priority reassessment](../../docs/evidence/2026-11-01-bootstrap-and-construction-priority.md)
-supersedes E030's learning-first ordering without changing its accepted MODIFY
-result, any source freeze, old failed journal or the E023/E026/MetaBAT2 references.
-This is one selective bridge, not another threshold grid or a separate study per
-ingredient. Any common downstream amendment precedes new learner outcomes.
+[Compact backup and closed supplements](inspection-backup.json) pass full private
+readback and member checks. They include review, failure and running-handoff
+evidence; omitted bulk DNA remains in its original verified private archives.
 
-New proposed envelopes are **$4 / 6 hours / 6.25-hour STOP** for the bridge,
-and **$6 / 12 hours / 12.25-hour STOP** for later learning. Retained timings and
-complete allocation/storage/network costs are explicit. Last known free space
-does not pass the conservative headroom case. A future approval can permit one
-temporary 40 GiB balanced scratch disk on the existing E2 if measured safe cleanup
-does not suffice. No disk, VM, quota, archive upload or deletion occurs here.
+The [original design](design.md), [protocol](protocol.json), [source lock](source-lock.json),
+[candidate](candidate-lock.json), [science identity](science-lock.json), [reuse](reuse-lock.json),
+[review inputs](review-lock.json) and [local preparation](local-observed.json) remain.
+The [paired prospectus](learner-paired-prospectus.json), [execution policy](paired-execution-policy.json),
+[plan](paired-plan.json), [serial DAG](paired.smk), [source supplement](paired-source-lock.json)
+and [engineering checks](paired-local-observed.json) state the prospective extension.
+Original product bytes and scientific stage remain unchanged. The source-bound
+learning/constructor interaction adds no extra fit for each constructor.
 
-All DNA, full 156/799 reference denominators, 3.3034% E009 N-quarantine, separate
-Oral provided-origin/shared sensitivity and secondary non-MIMAG quality tiers
-remain. Both communities are development data; skin stays unscored and Oral GLM
-still needs its native batching/admission milestone. **November 4 at 00:00
-Copenhagen remains hard**, including the preservation and storage-tail decision.
-## November 2 inspection and paired learner authority
+[Failed setup/repair](setup-recovery.json), the failed Mac Oral storage review,
+original allclose failure and all journals stay preserved. Remaining bridge
+readers complete native read-only within their original diagnostic limits.
+No passed Mac portability claim or relaxed tolerance follows.
 
-[Independent bridge inspection](inspection-observed.json) accepts the original
-science/delivery/shutdown. [Paired policy](paired-execution-policy.json) implements
-the owner's requirement to run the unchanged learner under both constructors in
-all three modes after operational/data gates, regardless of bridge score. The
-[operational supplement](paired-source-lock.json) preserves original scientific
-locks. Oral diagnostic recovery is read-only; no community learner fit yet.
+Existing E2 / original disks / same 40 GiB task disk only. $8 / 16 hours with a
+16.25-hour original provider horizon, 25 GiB source/task reserves, 9 GiB extra,
+3 GiB compressed / 6 GiB logical return; no provision/format/resize. See
+[operations](OPERATIONS.md) and [priced observations](cost-observed.json).
+**November 4 at 00:00 Copenhagen remains hard.** The narrow automatic new-archive
+tail is separate. Both communities remain development data; full Oral GLM and
+unscored skin retain their source/truth/runtime/cost/retention admission needs.

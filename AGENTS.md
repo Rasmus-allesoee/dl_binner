@@ -642,6 +642,11 @@ from a fresh source/build directory so stale generated files cannot enter a whee
 
 Keep native Linux checks separate from portable harness tests. Unsolved environment recipes, source inspection, and tiny forward passes are not validated runtimes or full-scale performance evidence. Preserve failed preflights and inspect returned outputs before authorizing scientific execution.
 
+For provenance across Python versions, bind exact file or function source bytes,
+or explicitly version a canonical representation. Parser/AST dumps can differ
+between interpreters. Preserve a failed fingerprint and bind any portable
+replacement to the original source; do not weaken the scientific identity check.
+
 When a short learning smoke approaches an existing collapse/variance guard and
 a longer engineering schedule is cheap, exercise that schedule before claiming
 readiness. Distinguish a shared low-information fixture failure from a treatment

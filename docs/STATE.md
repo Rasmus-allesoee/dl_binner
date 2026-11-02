@@ -2,39 +2,62 @@
 
 Updated: November 2, 2026 (Copenhagen). This is the single current handoff.
 
-## E031 bridge accepted; fixed three-mode paired learning authorized
+## E031 bridge reviewed; paired learner running under verified supervision
 
-November 2 evening. [Independent inspection](../experiments/E031-bootstrap-preserving-learning/inspection-observed.json)
-confirms `bridge-20261102T130813Z-31962f8` completed and the VM stopped at
-15:11 Copenhagen. Every native gate, stage seal, actual phase/delivery exit,
-source/runtime/ordered ten-depth/full-DNA contract and archive member/alias passes.
-Three E009 frozen reviews complete; Mac system/swap growth refuses the Oral
-teacher at the unchanged filesystem reserve, leaving the Oral student unstarted.
-Preserve the failure. Only those unfinished read-only reviews and frozen matched
-queries will use the existing E2, within their original one-hour diagnostic clock.
+[Bridge inspection](../experiments/E031-bootstrap-preserving-learning/inspection-observed.json)
+accepts the completed original phase `bridge-20261102T130813Z-31962f8` and its
+independent shutdown. Every native gate/seal/actual exit, source/runtime/axes,
+input-after and archive member/alias passes. [The complete review](evidence/2026-11-02-e031-bridge-and-paired-learning.md)
+returns **MODIFY**: E009 no-GLM R95 7.8971% → 10.4623%, E009 GLM accepted reuse
+7.6509% → 10.4163%, Oral 10.5446% → 9.5438% with T90 50 → 35. Do not promote a
+per-dataset constructor router. Full references, all DNA and every loss remain.
 
-The owner now expressly requires the unchanged learner regardless of bridge
-quality, subject to data/operational/credit/runtime/retention gates. [Paired policy](../experiments/E031-bootstrap-preserving-learning/paired-execution-policy.json)
-freezes three fits, with the same new outputs under E023 and E030 in every mode.
-No dataset-specific winner router. Original candidate/source/science locks and
-scientific stage AST remain; the supplemental operational freeze and real
-34-stage tiny DAG/export/reload/no-work-resume contracts pass. No community
-learner fit has started. Native complete-schedule and source/task headroom still
-must pass before release. The $8 / 16-hour / 16.25-hour STOP envelope retains
-both full families under prospective 9 GiB growth / 3 GiB compressed / 6 GiB
-logical delivery bounds. Complete upper $7.20 is planning, not native admission.
+The owner explicitly requires learning regardless of bridge quality. [The native
+learner receipt](../experiments/E031-bootstrap-preserving-learning/learning-native-observed.json)
+now records **`learning-20261102T200852Z-ba65911-r2` RUNNING** on the existing E2,
+source `ba65911`, with all nine native gates and 125 original files / 11.87 GB
+verified. Native complete remaining forecast is about 9.5 hours. The same three
+new outputs go to both E023/E030 in all modes, with no change to the prepared
+learner/defaults. At 21:54 Copenhagen, E009 no-GLM has completed its 20-epoch fit,
+native reload, graph and both construction/export paths; its E030 audit is running.
+Full 89,041-parent exposure, finite loss and no-collapse history are observed. At
+21:59, its paired final target has passed and E009 GLM training is underway.
+Whole completion or new candidate quality is not claimed. The process watcher is
+active and current boot/PID/start/command-bound. Independent provider STOP is November 3 at 13:15:52
+Copenhagen, earlier than the original horizon; the cumulative driver deadline is
+13:02:32. Follow the healthy-long-run handoff, without polling to completion.
 
-Fresh credits show DKK 1,702.62 Available, January 12, 2027 expiry, with $35
-reserved for delayed usage; the November gross/net display is DKK 8.27 / 0.00.
-Original bridge compute/IPv4 is priced $0.2848 for 3,754.657 seconds, separately
-from storage/export and sampled CPU. Both original disks and the single admitted
-40 GiB task disk remain. **November 4 at 00:00 Copenhagen stays hard.** Address
-preservation before then; only the narrow $0.05 automatic new-archive tail through
-November 11 is approved. [Operations](../experiments/E031-bootstrap-preserving-learning/OPERATIONS.md)
-own the active gates. Current private financial/account history uses exact
-private source transfer; normal GitHub is preferred when outgoing history is safe.
+Three bridge reviews completed locally. Mac system/swap growth refused the Oral
+teacher at the unchanged reserve; the student had not started. Their two unfinished
+readers and frozen query audit completed read-only on this E2 within the original
+one-hour deadline, at less than 8 GB sampled RSS. The 876,187-byte compact return /
+30 members pass. The Mac failure/allclose tolerance remain. One unreleased setup
+also refused a Python-version-dependent AST fingerprint; its preserved repair
+compares exact original function text. No science was repeated and the first VM
+start clock remains. [Failed setup](../experiments/E031-bootstrap-preserving-learning/setup-recovery.json)
+and all journals remain evidence.
 
-The earlier running handoff below is preserved dated history.
+The [compact inspection backup](../experiments/E031-bootstrap-preserving-learning/inspection-backup.json)
+and its closed failure/handoff supplements pass every member and private readback
+check. They preserve the bridge review and running handoff, not omitted bulk DNA.
+
+No resource was added or formatted for learning. Original 30/300 GiB disks and the
+same 40 GiB task disk remain, with separate 25 GiB source/task reserves. $8 / 16
+hours, 16.25-hour original STOP horizon, 9 GiB growth, 3 GiB compressed / 6 GiB
+logical return; complete upper $7.20. Original bridge compute/IPv4 is $0.2848;
+new learner allocations price $0.2162 through the observed 21:54, not final cost.
+Storage/export are separate. Fresh admission credits were DKK 1,702.62 Available,
+less $35 delay reserve; credit deltas are not invoices. Source remains private
+because its outgoing history contains financial/account records.
+
+**November 4 at 00:00 Copenhagen stays hard.** Obtain the preservation/cleanup
+decision before then. Only the narrow $0.05 automatic new-archive tail through
+November 11 is approved. No GPU, external tool, confirmation or acquisition is
+added. Full Oral GLM and untouched-skin admissions remain concrete dependencies.
+[Operations' exact prompt](../experiments/E031-bootstrap-preserving-learning/OPERATIONS.md#exact-following-prompt)
+owns completed-output inspection and the common learning/construction decision.
+
+The earlier running/preparation handoffs below are preserved dated history.
 
 ## Earlier E031 cached bridge: native gates passed, science running
 

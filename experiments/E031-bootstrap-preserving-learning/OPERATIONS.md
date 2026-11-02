@@ -1,5 +1,34 @@
 # E031 operations
 
+## Current phase: paired learner released, supervised running handoff
+
+[Native learner receipt](learning-native-observed.json) supersedes earlier launch
+statuses. `learning-20261102T200852Z-ba65911-r2` runs exact source `ba65911` on the
+existing E2. All nine native gates and 125 original files / 11.87 GB pass. The
+first arm completes 20 epochs/native reload and both construction/export paths
+at the 21:54 Copenhagen observation; E030 audit runs, with full parent/view
+exposure, finite loss and no-collapse history. At 21:59 its paired final target
+passes and E009 GLM training is underway. This is progress, not complete science
+or quality. The same three new outputs feed both constructors across all three modes.
+
+Fresh current-boot/PID/start/command supervision is active and native exit/crash/
+restart-refusal tests pass. First start 20:02:32 UTC is preserved through the
+unreleased-setup repair. Driver deadline is November 3 at 13:02:32 Copenhagen;
+actual provider STOP is 13:15:52, earlier than the original fallback horizon.
+The complete native remaining forecast is about 9.5 hours. All original resource,
+credit-only and November 4 gates remain, with the declared complete paired byte
+bounds. Follow the healthy-long-run handoff; do not poll to completion.
+
+The completed [bridge comparison](bridge-review.json) is MODIFY. E009 returns to
+the strong E023 range; current measured-depth Oral loses R95/T90 against E030.
+[Interpretation and all limits](../../docs/evidence/2026-11-02-e031-bridge-and-paired-learning.md)
+explain why this does not stop the authorized same-output learner control.
+Original references and every failed criterion remain. The bridge's five new
+reviews and compact native evidence/member checks are complete.
+[The compact inspection backup](inspection-backup.json), closed failure supplement
+and latest handoff pass all member and private readback checks. Original bulk
+archives remain separately retained and verified.
+
 ## Native prerelease guard recovery, November 2
 
 [The failed setup](setup-recovery.json) is preserved. Source/disk sync passed, then
@@ -21,11 +50,11 @@ exits, unchanged before/after inputs and complete DNA accounting. The private
 The watcher observed its bound process exit and requested shutdown. This is
 independent evidence beyond the stopped VM or driver's summary counters.
 
-Three new E009 reviews complete locally; the two Oral readers stop before a
-complete result when Mac system/swap usage crosses the unchanged 6 GiB reserve.
-The failed journal is preserved. Only the remaining read-only Oral diagnostics
-and frozen matched-query view are prepared on the existing E2, at 8 GB sampled
-RSS, four threads and the original one-hour diagnostic deadline. The accepted
+Three new E009 reviews complete locally. Mac system/swap usage refuses the Oral
+teacher at the unchanged 6 GiB reserve; the Oral student has not started there.
+The failed journal is preserved. Both unfinished readers and the frozen matched-
+query view then complete read-only on this E2, below 8 GB sampled RSS, with four
+threads and within the original one-hour diagnostic deadline. The accepted
 E030 truth payload is reused in a separate lexical review view; it cannot enter
 the learning plan. Native review is not a passing Mac portability result.
 
@@ -38,21 +67,22 @@ No dataset-specific constructor routing or threshold tuning is permitted.
 
 [Paired policy](paired-execution-policy.json), [plan](paired-plan.json),
 [serial DAG](paired.smk) and [supplemental source freeze](paired-source-lock.json)
-preserve the original product, scientific stage AST, candidate/source/science
+preserve the original product, scientific stage source, candidate/source/science
 locks and default treatments. Four operational adapters admit explicit paired
 orchestration, final seals and review paths. New consumers add the source-bound
 E023 alternative, complete same-vector/graph/input audit and bounded collection.
 Actual tiny execution passes 34 serial stages, three engineering fits, six
 reader/export contracts and verified no-work resume. Synthetic marker/GLM
-annotations are explicit; native Linux qualification is still required.
+annotations are explicit; all nine native Linux gates have now passed as recorded
+in the current receipt. Tiny synthetic GLM vectors are not real DNABERT inference.
 
 The justified paired envelope is $8 / 16 cumulative hours / 16.25-hour provider
 STOP, four numerical threads, 26 GB sampled tree RSS, 25 GiB source/task reserves,
 9 GiB extra task growth, 3 GiB compressed / 6 GiB logical return. The larger
 delivery envelope retains both full constructor families and intermediate
 evidence; it is declared before execution rather than used as an oversized
-failure fallback. Complete upper is $7.20 pending actual native schedule/headroom
-admission. Use only the existing E2 and already admitted 40 GiB task disk;
+failure fallback. Complete upper is $7.20; actual native schedule/headroom admission
+has passed. Use only the existing E2 and already admitted 40 GiB task disk;
 never format, provision, resize or discard original bridge science. All deadlines
 precede November 4 at 00:00 Copenhagen. Only the separately approved automatic
 new-archive tail may continue, at most $0.05 through November 11.
@@ -65,6 +95,9 @@ redundant E014 local archive and redundant Oral staging were released; private
 generations, original science, required inputs/results and all journals remain.
 
 ## November 2 authorized execution amendment
+
+Historical initial bridge handoff, superseded by the current learner and completed
+inspection above. Preserve its original conditional wording as dated evidence.
 
 [Actual native observation](native-observed.json) now records the running phase,
 seven passed gates, real completed barrier/actor and verified shutdown controls.
@@ -406,11 +439,77 @@ costs, conclusions/limits and the next exact prompt.
 
 ## Exact following prompt
 
-Continue the admitted E031 paired learner handoff recorded in the current native
-receipt. Preserve the original bridge source, failed local storage journals,
-unchanged learner, all three modes and both constructor outputs. Verify current
-control-plane state, actual native gates, original clock, held-parent watcher
-and provider STOP before any release. A poor bridge result does not gate learning.
-No new fit, source/default change, automatic replay or retention extension is
-implied by a stopped VM. After the paired phase is launched, its receipt supplies
-the exact phase/prefix and completed-output inspection prompt.
+Our goal is substantially closing the recovery gap. Read AGENTS.md,
+PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E031's original scientific locks,
+paired policy/source supplement, bridge review, setup recovery, current
+learning-native-observed.json and operations. Inspect phase
+`learning-20261102T200852Z-ba65911-r2`, executed source `ba65911`, without
+starting another learner. Preserve every accepted input, model, result, source
+freeze and failed journal. Do not infer completion from shutdown.
+
+Check GCP control plane, `e031-candidate/status` (require this exact root), and
+private completion.json under
+`gs://dl-binner-archive-167650584170/e031/learning-20261102T200852Z-ba65911-r2/`.
+If healthy and running, report real progress and retain the verified watcher/
+provider STOP, without polling to completion. First cumulative start remains
+November 2 at 20:02:32.426 UTC; the repaired boot starts 20:09:12.240 UTC. Keep
+its 16-hour driver and earlier actual STOP horizon. Preserve the failed first
+allocation and do not reset a clock merely because a boot or source changed.
+
+After independent shutdown, verify all nine native gates, 34 serial stage seals,
+each actual fit/reload/graph/E023/retrieve/forest/E030/export/audit/paired exit,
+used-inputs-after, final target, collection/upload/readback and boot/process exit
+snapshot. Require both source-bound constructors to consume the identical new
+vectors, original candidate graph, features and cached physical markers in each
+mode. Check strict native checkpoint reload, unit geometry, original source/text
+identity, all 20 epochs/full-parent/available-view/slot counts, restored online/
+EMA/predictor/buffer/Adam state and actual lazy step counters, fixed anchor,
+fresh seed-11 continuation RNG semantics and collapse histories. The old AST
+fingerprint/Mac numerical failure remain failed; do not widen a tolerance.
+
+Refresh credits, current prices/delays/product coverage, original new $8 learner
+accounting (including the failed setup), original $4 bridge, storage/all versions/
+tail, local space and export before downloading. Price actual allocation, each
+disk's full lifetime and export separately from sampled CPU. Return caps are
+3 GiB compressed / 6 GiB logical with exact-byte aliases, not an oversized fallback.
+Verify whole archive and every physical member/alias; stage actors sequentially
+and preserve at least 6 GiB local free space with swap separately observed. A
+verified generation-bound selective restoration need not keep another compressed
+copy. Do not replay science or wake for missing evidence without first assessing
+a bounded collection-only recovery inside remaining covered clock/budget/retention.
+Do not provision, resize or silently extend November 4 at 00:00 Copenhagen.
+Only the specifically approved $0.05 automatic new-archive tail may reach November
+11. Task-disk deletion needs complete independent return admission; never delete
+unique results to meet a storage date. Obtain the preservation/cleanup decision.
+
+If complete, evaluate only the three new model outputs under both E023
+(density/selected) and E030 (root-only/pre/post), using the tested E031 new-output
+readers and unchanged conservative E009 v2 / separately named Oral origin/shared
+contracts. Reuse the E031 bridge, E030, E023, E026, MetaBAT2 and older summaries;
+no baseline refit/rescore. Four threads / 8 GB sampled RSS / one hour / 4 GiB
+extra review apply. If Mac resource gates fail, preserve the refusal and assess
+an existing-VM read-only review within the remaining authorization before any
+wake. Keep truth outside features/training. Full 156/799 reference denominators,
+3.3034% N-quarantine and every length/origin/eligibility/marker/observed-zero/
+unknown/non-target/excluded/unassigned population remain. Secondary quality tiers
+are threshold-based, not formal MIMAG HQ.
+
+Apply the original frozen learning criterion separately to both common
+constructors against the same exact E030 baselines/anchors. Also report each
+within-constructor continuation effect, teacher differences, target gains/losses,
+matched-neighbor/geometry and paired density/selection/refinement trade-offs.
+A poor bridge did not gate learning, and its failed criterion is unchanged.
+Do not route datasets to different historical winners, tune a threshold/grid,
+add an external tool/fit, alter the model or acquire confirmation. This is a
+learning bundle on two development communities, not proof isolating its losses
+or settling product feature families.
+
+Recommend one strongest recovery-focused next block from the full evidence,
+weighing information/architecture/efficiency and evaluation alternatives rather
+than defaulting to another small loss test. Keep the concrete full Oral GLM
+128-view native-equivalence/throughput/capacity/complete-cost milestone and the
+frozen unscored skin's source/genome/replicon/molecule/taxonomy/overlap/ambiguity/
+unique-versus-origin truth/depth/protocol/cost/retention dependencies visible.
+No new acquisition, GPU attempt, confirmation or automatic retention renewal.
+Update records, check and commit with structured what changed/why. Report actual
+costs/resources, completion/quality/limits, one next decision and exact prompt.

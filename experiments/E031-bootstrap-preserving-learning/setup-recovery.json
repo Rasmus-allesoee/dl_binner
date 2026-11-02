@@ -1,6 +1,6 @@
 {
   "kind": "E031 prerelease operational provenance refusal and portable exact-source repair",
-  "status": "REPAIRED_LOCALLY; RECOVERY_NATIVE_GATES_PENDING",
+  "status": "FIRST_ATTEMPT_FAILED_PRESERVED; RECOVERY_NATIVE_GATES_PASS_AND_LEARNER_RUNNING",
   "failed_phase": "learning-20261102T200214Z-1af0926",
   "failed_source": "1af09268a491ef3c24dff2db1cbbeb2c9da5428b",
   "original_VM_start_epoch": 1793649752.426,
@@ -35,5 +35,13 @@
       "bytes": 1272,
       "sha256": "4c92e7439f367b62716f5128aa8d74c28ac1b8a340439d22082888c195163efd"
     }
+  },
+  "recovery": {
+    "phase": "learning-20261102T200852Z-ba65911-r2",
+    "source": "ba659119c3ec86edc83e27bad95939326fbaa2b8",
+    "native_gates": 9,
+    "portable_source_guard_Python310_passed": true,
+    "original_clock_not_reset": true,
+    "first_attempt_not_reclassified_success": true
   }
 }

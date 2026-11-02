@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "complete_rows": 2222,
+  "table": {
+    "bytes": 164613,
+    "sha256": "362a135fae9c7ab661e7fc397d3d78446a96e2e4ee4a86f83be2a5b78e4f9ffb"
+  },
+  "integer_reconstruction": {
+    "E009-noGLM/teacher/density": {
+      "recovered_bp": 58979469,
+      "reference_bp": 554661890,
+      "T50": 19,
+      "T90": 9,
+      "R95": 0.10633409300934665
+    },
+    "E009-noGLM/teacher/selected": {
+      "recovered_bp": 58979469,
+      "reference_bp": 554661890,
+      "T50": 19,
+      "T90": 9,
+      "R95": 0.10633409300934665
+    },
+    "E009-noGLM/student/density": {
+      "recovered_bp": 58030481,
+      "reference_bp": 554661890,
+      "T50": 19,
+      "T90": 8,
+      "R95": 0.10462316240980608
+    },
+    "E009-noGLM/student/selected": {
+      "recovered_bp": 58030481,
+      "reference_bp": 554661890,
+      "T50": 19,
+      "T90": 8,
+      "R95": 0.10462316240980608
+    },
+    "E009-GLM/teacher/density": {
+      "recovered_bp": 58507526,
+      "reference_bp": 554661890,
+      "T50": 19,
+      "T90": 9,
+      "R95": 0.1054832269078375
+    },
+    "E009-GLM/teacher/selected": {
+      "recovered_bp": 58507526,
+      "reference_bp": 554661890,
+      "T50": 19,
+      "T90": 9,
+      "R95": 0.1054832269078375
+    },
+    "E009-GLM/student/density": {
+      "recovered_bp": 57775481,
+      "reference_bp": 554661890,
+      "T50": 19,
+      "T90": 9,
+      "R95": 0.1041634228737078
+    },
+    "E009-GLM/student/selected": {
+      "recovered_bp": 57775481,
+      "reference_bp": 554661890,
+      "T50": 19,
+      "T90": 9,
+      "R95": 0.1041634228737078
+    },
+    "oral-noGLM/teacher/density": {
+      "recovered_bp": 188744545,
+      "reference_bp": 2083072211,
+      "T50": 66,
+      "T90": 38,
+      "R95": 0.09060873838328978
+    },
+    "oral-noGLM/teacher/selected": {
+      "recovered_bp": 205286487,
+      "reference_bp": 2083072211,
+      "T50": 72,
+      "T90": 38,
+      "R95": 0.09854986587404482
+    },
+    "oral-noGLM/student/density": {
+      "recovered_bp": 183316589,
+      "reference_bp": 2083072211,
+      "T50": 67,
+      "T90": 35,
+      "R95": 0.08800299290248657
+    },
+    "oral-noGLM/student/selected": {
+      "recovered_bp": 198803995,
+      "reference_bp": 2083072211,
+      "T50": 73,
+      "T90": 35,
+      "R95": 0.09543787966167631
+    }
+  },
+  "threshold_or_truth_changed": false
+}

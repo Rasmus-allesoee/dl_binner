@@ -1,5 +1,18 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E031 bridge reviewed; paired learning released, November 2
+
+The [complete bridge review](../evidence/2026-11-02-e031-bridge-and-paired-learning.md)
+returns MODIFY: E009 no-GLM improves 7.8971% → 10.4623% R95 while Oral falls
+10.5446% → 9.5438%, losing 15 T90 targets. E023's 10.4163% GLM anchor remains
+accepted reuse. Keep every criterion and target loss; no per-community constructor
+router. This is a downstream interaction on fixed within-mode learning, not an
+intrinsic encoder or depth-family verdict. The required fixed learner is released
+under both constructors in all modes after all nine native gates pass, regardless
+of bridge quality. The native 9.5-hour forecast fits the original 16-hour clock.
+A repaired provenance guard and failed Mac Oral storage journal remain preserved.
+No new architecture, data, external tool or retention extension is added.
+
 ## November 2: compare unchanged learning under both common constructors
 
 The owner explicitly removes bridge quality as a learner release condition. After
