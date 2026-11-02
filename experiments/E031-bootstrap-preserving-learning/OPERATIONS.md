@@ -2,6 +2,12 @@
 
 ## November 2 authorized execution amendment
 
+[Actual native observation](native-observed.json) now records the running phase,
+seven passed gates, real completed barrier/actor and verified shutdown controls.
+This is a supervised running handoff, not completion or accepted recovery quality.
+The [conditional paired learner prospectus](learner-paired-prospectus.json) is
+frozen before any learner outcome. The original science and criteria remain.
+
 The owner invokes prepared source `58d7d59` and authorizes the $4 cached bridge,
 with one temporary 40 GiB balanced task disk only if verified safe cleanup cannot
 provide headroom. [Execution policy](execution-policy.json) records the unchanged
@@ -162,7 +168,7 @@ the bridge is frozen before fits. This does not require perfect grouping first.
 No loss factorial or new seed. Both communities remain development data. Keep
 skin unscored and full Oral GLM/independent-data admission dependencies in design.
 
-## Exact following prompt
+## Preserved execution request (invoked November 2)
 
 Our goal is substantially closing the recovery gap.
 Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD and D013/D015.
@@ -266,3 +272,70 @@ Update the records.
 Run the relevant tests.
 Commit with structured what changed/why.
 Give the next exact prompt.
+
+## Exact following prompt
+
+Our goal is substantially closing the recovery gap. Read AGENTS.md,
+PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E031's design, protocol/criteria,
+prepared/native launch locks, execution policy, learner paired prospectus,
+native-observed.json and operations. Inspect phase
+`bridge-20261102T130813Z-31962f8` without starting another bridge job.
+Preserve all accepted evidence, source freezes and failed journals.
+
+Check GCP control-plane state, `e031-candidate/status` and private completion.json
+under `gs://dl-binner-archive-167650584170/e031/bridge-20261102T130813Z-31962f8/`.
+Do not infer success from shutdown. If healthy and running, report real progress
+and leave the verified watcher/provider STOP intact without polling to completion.
+
+After independent shutdown, establish every native gate, serial actor/audit,
+used-input-after, collector, upload/readback and watchdog exit. Refresh credit,
+prices, delayed usage, original $4 accounting, storage and export/local headroom
+before downloading. Preserve the November 4 active boundary. Only the explicitly
+approved automatic new-archive tail may continue through November 11, at most
+$0.05. Do not wake for missing evidence without assessing a bounded collection-only
+recovery; never replay accepted science or extend retention automatically.
+
+Verify archive/every member/alias and exact source/runtime/policy/full contig and
+ordered ten-sample axes, six untouched native vectors/graphs, physical marker
+caches, complete DNA accounting and the source-blind matched query population.
+Admit the E009 GLM student E023 reuse in place; reuse its accepted summary without
+rescoring. Run only frozen bounded new-output diagnostics with conservative E009
+v2 and separately named Oral provided-origin/shared sensitivity. Keep full 156/799
+denominators, 3.3034% N-quarantine and all length/origin/eligibility/marker/depth/
+unknown/non-target/excluded/unassigned populations. Preserve the original Mac
+portability tolerance. Four numerical threads, 8 GB sampled RSS, one hour and
+4 GiB extra local review apply. Stage sequentially and retain filesystem reserve.
+Report density/selection, teacher/student, target and matched-neighbor effects,
+unchanged KEEP/MODIFY/ABANDON and all diagnostic limits. Price actual allocation,
+every disk's lifetime, storage/tail and export separately from sampled CPU.
+
+Then decide the strongest recovery-focused next block. The owner already
+conditionally authorizes a reasonable credit-covered learner follow-through;
+do not ask for another execution approval solely for time or cost. If the bridge
+supports E023, use the frozen paired prospectus: train the unchanged E031 candidate
+once per mode, then evaluate those same outputs under BOTH E023 and E030 across
+all three modes. Complete and test the paired launcher/readers and freeze its
+exact source/protocol before any new learner outcome. Preserve the fixed losses,
+seed, schedule, availability and original decision rule. No per-dataset winner
+router. Reuse all accepted models/results rather than refitting baselines.
+
+Before a new phase, verify fresh complete credit/product/runtime/headroom,
+original retention and a full native schedule including both constructors and
+collection. The prospectus proposes $8 / 16 cumulative hours / 16.25-hour STOP
+for that conditional phase, with combined $12 / approximately $10.15 upper.
+These are not native admission. Use only the existing E2, original disks and the
+single admitted task disk; no second disk/VM/GPU or quota expansion. All deadlines
+must precede November 4 at 00:00 Copenhagen. No real-money charges. Arm/test a
+fresh boot/process-bound held watcher and independent provider STOP. Debug
+authorized operational errors with verified reuse and preserved journals; never
+change a scientific gate to pass. Follow the short-job/healthy-long-job handoff.
+
+If learning is not the strongest justified step or a gate fails, explain the
+specific evidence and prepare at most one strongest alternative. Keep Oral GLM
+and untouched skin admission concrete; no new acquisition, external binner,
+confirmation or automatic architecture change. Independently verify collection
+before deleting a task disk; preserve unique outputs on failure and address the
+November 4 preservation decision. Prefer normal GitHub push/pull when outgoing
+history is safe; retain private transfer for current financial/account history.
+Update records, run checks and commit with structured what changed/why. Report
+costs, conclusions/limits and the next exact prompt.

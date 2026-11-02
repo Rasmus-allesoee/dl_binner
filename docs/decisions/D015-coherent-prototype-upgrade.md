@@ -1,5 +1,17 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E031 November 2 execution and prospective paired learner control
+
+The [cached bridge](../../experiments/E031-bootstrap-preserving-learning/native-observed.json)
+has passed native admission and is running; no new biological result is claimed.
+The owner's conditional same-task learner authority is distinct from its release.
+[The paired prospectus](../../experiments/E031-bootstrap-preserving-learning/learner-paired-prospectus.json)
+holds one new model per mode fixed while testing both E023 and E030 if E023 is
+carried forward. This addresses the constructor/representation interaction without
+extra fits or a dataset-specific winner router. The unchanged original learning
+criterion and all within-constructor effects remain visible. A bridge result alone
+cannot establish how either constructor behaves with the new learner.
+
 ## E031: source-bound construction first; coherent learning prepared in parallel
 
 November 1, 2026. [The priority/source reassessment](../evidence/2026-11-01-bootstrap-and-construction-priority.md)

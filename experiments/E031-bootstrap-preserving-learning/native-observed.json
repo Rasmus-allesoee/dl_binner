@@ -1,0 +1,361 @@
+{
+  "kind": "E031 actual native launch and supervised running handoff, not completed science",
+  "status": "RUNNING_PROGRESS_AND_SUPERVISION_VERIFIED",
+  "checked_UTC": "2026-11-02T13:23:10.696531+00:00",
+  "phase": "bridge-20261102T130813Z-31962f8",
+  "identity": {
+    "root": "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8",
+    "repo": "/srv/dl_binner/repo",
+    "source": "31962f85af266801687885a41fbf6e933cabc33b",
+    "phase": "bridge-20261102T130813Z-31962f8",
+    "user": "rasmus_allesoee_gmail_com",
+    "service_name": "e031-bridge-20261102T130813Z-31962f8",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e031/bridge-20261102T130813Z-31962f8/",
+    "vm_start_epoch": 1793624912.43,
+    "provider_max_duration_seconds": 22500,
+    "scratch": {
+      "name": "e031-bridge-scratch-20261102131010",
+      "id": "5531031824224302423",
+      "created": "2026-11-02T05:10:16.361-08:00",
+      "size_GiB": 40,
+      "zone": "us-central1-a"
+    },
+    "allocation_start_epoch": 1793624912.43
+  },
+  "prepared_scientific_source": "58d7d59e892304ad20efcf784e61288e8a7d4967",
+  "executed_source": "31962f85af266801687885a41fbf6e933cabc33b",
+  "frozen_science_unchanged": true,
+  "provider": {
+    "status": "RUNNING",
+    "machine": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/machineTypes/e2-standard-8",
+    "original_disk_sizes_GiB": [
+      30,
+      300
+    ],
+    "temporary_disk_GiB": 40,
+    "max_run_seconds": 22500,
+    "termination_action": "STOP",
+    "automatic_restart": false,
+    "provider_STOP_UTC": "2026-11-02T19:23:32.430000+00:00"
+  },
+  "supervision": {
+    "boot_id": "94228f9c-c4b0-48e5-a2fe-6f7d9d5cdcc8",
+    "checked_utc": "2026-11-02T13:23:05.433697+00:00",
+    "decision": "workflow alive",
+    "expected_process": {
+      "command_sha256": "a9e29fa8699693074bc71dc4cf1956131957fc7e75bcb4160e277613c7be62dd",
+      "pid": 2178,
+      "start_ticks": 11569
+    },
+    "observed_process": {
+      "command_sha256": "a9e29fa8699693074bc71dc4cf1956131957fc7e75bcb4160e277613c7be62dd",
+      "pid": 2178,
+      "start_ticks": 11569
+    },
+    "shutdown": false,
+    "workflow_root": "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8"
+  },
+  "held_parent": {
+    "pid": 2178,
+    "start_ticks": 11569,
+    "command_sha256": "a9e29fa8699693074bc71dc4cf1956131957fc7e75bcb4160e277613c7be62dd"
+  },
+  "native_gates": [
+    {
+      "stage": "workflow-origin",
+      "exit": 0,
+      "wall_seconds": 0.6987890719999967,
+      "peak_sampled_rss_bytes": 42369024
+    },
+    {
+      "stage": "package-install",
+      "exit": 0,
+      "wall_seconds": 1.7789346940000001,
+      "peak_sampled_rss_bytes": 89264128
+    },
+    {
+      "stage": "owned-complete-runtime",
+      "exit": 0,
+      "wall_seconds": 19.47841198799999,
+      "peak_sampled_rss_bytes": 314068992
+    },
+    {
+      "stage": "installed-state-pair-reader-export",
+      "exit": 0,
+      "wall_seconds": 19.209476891999998,
+      "peak_sampled_rss_bytes": 496099328
+    },
+    {
+      "stage": "serial-bridge-tiny-DAG",
+      "exit": 0,
+      "wall_seconds": 7.166278215999995,
+      "peak_sampled_rss_bytes": 238067712
+    },
+    {
+      "stage": "serial-learning-tiny-DAG",
+      "exit": 0,
+      "wall_seconds": 41.426398484,
+      "peak_sampled_rss_bytes": 721735680
+    },
+    {
+      "stage": "restore-complete-inputs",
+      "exit": 0,
+      "wall_seconds": 134.250217553,
+      "peak_sampled_rss_bytes": 4413931520
+    }
+  ],
+  "native_input_admission": {
+    "axes": {
+      "E009-noGLM-teacher": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "E009-noGLM-student": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "E009-GLM-teacher": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "E009-GLM-student": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "oral-noGLM-teacher": {
+        "rows": 1286547,
+        "bp": 1669981123,
+        "eligible": 508763,
+        "samples": [
+          "oral_sample_6",
+          "oral_sample_7",
+          "oral_sample_8",
+          "oral_sample_13",
+          "oral_sample_14",
+          "oral_sample_15",
+          "oral_sample_16",
+          "oral_sample_17",
+          "oral_sample_18",
+          "oral_sample_19"
+        ]
+      },
+      "oral-noGLM-student": {
+        "rows": 1286547,
+        "bp": 1669981123,
+        "eligible": 508763,
+        "samples": [
+          "oral_sample_6",
+          "oral_sample_7",
+          "oral_sample_8",
+          "oral_sample_13",
+          "oral_sample_14",
+          "oral_sample_15",
+          "oral_sample_16",
+          "oral_sample_17",
+          "oral_sample_18",
+          "oral_sample_19"
+        ]
+      }
+    },
+    "verified_original_files": 40,
+    "verified_original_bytes": 3561015328,
+    "truth_accessed": false
+  },
+  "observed_completed_stages": [
+    "barrier/done.json",
+    "actors/E009-noGLM/teacher/done.json"
+  ],
+  "current_stage": "E009-noGLM student actor after the completed E009-noGLM teacher actor",
+  "progress": "Full barrier and first new actor completed. Next actor starts normally. No reported failure at this observation.",
+  "all_control_completion": false,
+  "community_fits_run": 0,
+  "new_community_truth_diagnostics_run": false,
+  "archive_not_yet_admitted": true,
+  "first_actor_is_not_whole_workflow_success": true,
+  "storage": {
+    "safe_cleanup": {
+      "status": "PASS",
+      "records": [
+        {
+          "path": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/collection/e027-evidence.tar.gz",
+          "status": "already_absent_no_action"
+        },
+        {
+          "path": "/srv/dl_binner/experiments/e029/discovery-20261101T015844Z-31fb9c7/collection/e029-evidence.tar.gz",
+          "status": "already_absent_no_action"
+        },
+        {
+          "path": "/srv/dl_binner/experiments/e026/fusion-20261029T185844Z-f16c2e5/collection/e026-evidence.tar.gz",
+          "status": "already_absent_no_action"
+        },
+        {
+          "path": "/srv/dl_binner/experiments/e030/construction-20261101T161023Z-638084d/collection/e030-evidence.tar.gz",
+          "status": "verified_redundant_transport_released",
+          "binding": {
+            "bytes": 784438675,
+            "sha256": "c4362a34f353c2b97f51a849988c074ec5cf8f2a8d96d4f6eaf6b21e618bb67c"
+          },
+          "private_object": "gs://dl-binner-archive-167650584170/e030/construction-20261101T161023Z-638084d/e030-evidence.tar.gz",
+          "generation": "1793550786780863",
+          "server_crc32c": "bqznUw==",
+          "retained_extracted_inputs_and_journals": true,
+          "epoch": 1793624973.1941686
+        }
+      ],
+      "unique_science_deleted": false,
+      "GCS_mutated": false,
+      "free_bytes": 29475360768
+    },
+    "scratch": {
+      "name": "e031-bridge-scratch-20261102131010",
+      "id": "5531031824224302423",
+      "created": "2026-11-02T05:10:16.361-08:00",
+      "size_GiB": 40,
+      "zone": "us-central1-a"
+    },
+    "post_mount_initial_used_bytes": 24576,
+    "task_device": 2080,
+    "task_observed": {
+      "total": 41956900864,
+      "used": 129839104,
+      "free": 41810284544
+    },
+    "source_observed": {
+      "total": 316733652992,
+      "used": 287241531392,
+      "free": 29475344384
+    },
+    "source_reserve_GiB": 25,
+    "task_reserve_GiB": 25,
+    "whole_run_peak_not_yet_known": true,
+    "active_retention_end": "2026-11-04T00:00:00+01:00",
+    "automatic_archive_tail": {
+      "owner_approved": true,
+      "maximum_USD": 0.05,
+      "latest_end": "2026-11-11T00:00:00+01:00",
+      "active_retention_extended": false
+    }
+  },
+  "cost": {
+    "bridge_ceiling_USD": 4,
+    "estimated_complete_gross_upper_USD": 3.36,
+    "measured_VM_allocation_seconds_to_observation": 878.2665305137634,
+    "priced_CPU_IP_USD_to_observation": 0.06661302222404253,
+    "priced_overlapping_original_PD_USD_to_observation": 0.010557064167052349,
+    "sampled_CPU_not_used_as_VM_price": true,
+    "actual_final_cost_pending": true,
+    "invoice": false,
+    "displayed_credit_remaining_DKK": 1706.83,
+    "pending_reserve_USD": 35
+  },
+  "private_source_transport": {
+    "kind": "private_exact_Git_bundle",
+    "source": "31962f85af266801687885a41fbf6e933cabc33b",
+    "base": "638084d05b257deeb221cade33042e3459025e2d",
+    "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e031-bootstrap-preserving-learning/execution-20261102/native-bridge/source-31962f8.bundle",
+    "bundle": {
+      "bytes": 255962,
+      "sha256": "7478f70c2c5eff9ca3a8d8d62700af41608483c7e032fa37164e50a165cd925b"
+    },
+    "public_GitHub_push_performed": false,
+    "GitHub_access_remains_read_only": true
+  },
+  "evidence": {
+    "artifacts/e031-bootstrap-preserving-learning/execution-20261102/native-bridge/live-supervision-proof.json": {
+      "bytes": 6138,
+      "sha256": "b2ec1f5e690d59bc6709209c3c18a56da18ad7a8a7896f782c78e80d3b68f905"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/execution-20261102/native-bridge/financial-gate.json": {
+      "bytes": 7982,
+      "sha256": "47eb0462c6dd9ddb72c67dcee11b9f5e840e173906d1a27670517aac37f9305e"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/execution-20261102/native-bridge/native-headroom.json": {
+      "bytes": 1628,
+      "sha256": "9078dc3d645218dc85cc9e91c9e4f1ab04e243b91f3ac59bfcbb81473a1fe301"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/execution-20261102/native-bridge/release-terminal.log": {
+      "bytes": 966,
+      "sha256": "25cb6250cc09ce64a8bd9b6ad4c87d7b8aff244396c91efab83083f35360c3d1"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/execution-20261102/native-bridge/start-terminal.log": {
+      "bytes": 6234,
+      "sha256": "a0abee9c568aca85f039ff0edcdd6da0a7cbf972ef5f6f3f83e43eb5bc5508a8"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/execution-20261102/native-bridge/scratch-created.json": {
+      "bytes": 814,
+      "sha256": "634335b9022203b378c4f5dadb63a6210602f0c9963c94913b6f261cef68815b"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/execution-20261102/native-bridge/scratch-attached-provider.json": {
+      "bytes": 33560,
+      "sha256": "98901310b41ff1fa4b897d314c9cc223d289237cdf2e1ffbea317ccd4a89ec45"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/execution-20261102/native-bridge/release-control/provider-before-release.json": {
+      "bytes": 33560,
+      "sha256": "98901310b41ff1fa4b897d314c9cc223d289237cdf2e1ffbea317ccd4a89ec45"
+    }
+  },
+  "learner": {
+    "owner_conditionally_authorized": true,
+    "launched": false,
+    "reason": "Bridge remains running. Independent completion/member/cost/truth review must precede the learning decision; follow the owner-requested healthy-long-run handoff.",
+    "prospective_paired_policy": "learner-paired-prospectus.json",
+    "same_outputs_both_constructors_if_E023_supported": true,
+    "no_new_approval_required_solely_for_a_reasonable_fresh_credit_covered_envelope": true
+  },
+  "no_GPU_acquisition_external_binner_or_retention_extension": true,
+  "failed_journals_preserved": [
+    "local-launch-tests/controller: sandbox prevented ps sampling; permitted sampled r2 and final tests passed"
+  ]
+}

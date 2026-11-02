@@ -1,11 +1,16 @@
 # E031: bootstrap-preserving learning and a source-bound construction bridge
 
-Status: **locally implemented and engineering-tested; no community outcome or cloud release**.
+Status: **native cached bridge running under verified supervision; no admitted community outcome yet**.
 Parent `ca7b142`, branch `bootstrap-preserving-learning`. [Design](design.md),
 [frozen protocol](protocol.json), [source](source-lock.json),
 [candidate](candidate-lock.json), [scientific identity](science-lock.json), [reuse](reuse-lock.json),
 [review inputs](review-lock.json), [resources](resources.json),
 [local receipts](local-observed.json) and [operations](OPERATIONS.md) own the details.
+[Native observation](native-observed.json) records phase
+`bridge-20261102T130813Z-31962f8`, seven passed gates and actual completed actor
+progress. [The paired prospectus](learner-paired-prospectus.json) freezes the
+conditionally authorized learner/constructor comparison before learner outcomes.
+Do not infer scientific success from a later shutdown.
 
 **First execution: fixed-learning E023 graph/construction bridge.** The same
 E022 vectors and native graph underlie E023's 10.4163% E009 and E030's 7.6509%.

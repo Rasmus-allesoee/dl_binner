@@ -1,5 +1,31 @@
 # Google Cloud workspace operations
 
+## November 2 E031 supervised running phase
+
+[Native handoff](../experiments/E031-bootstrap-preserving-learning/native-observed.json)
+supersedes the stopped E030 snapshot for current control-plane state. Existing
+E2/32 GiB is running `bridge-20261102T130813Z-31962f8`, all seven native gates pass,
+and actual cached actor progress plus current-boot/process watcher identity is
+verified. Provider STOP is November 2 at approximately 20:23 Copenhagen; the
+process watcher should stop earlier after collection or failure. Shutdown alone
+will not establish scientific success.
+
+Only a SHA/generation/member-bound redundant E030 transport was removed. Its
+784,438,675 bytes did not supply complete headroom, so the separately approved
+40 GiB `pd-balanced` task disk was added to the original VM. Original disks and
+unbacked E021 transports remain. A post-mount/pre-payload device baseline, source
+and task reserves, full disk lifetime and verified-return-before-release are
+explicit. Stop compute when unused; inspect/delete the task disk after verified
+collection, or reuse it only for an independently admitted conditional learner.
+No retention beyond November 4 is granted for active resources.
+
+Fresh Billing/price/all-version checks support the $4 bridge with a $3.36 complete
+upper and DKK 1,706.83 remaining, less $35 reserved for delayed usage. The original
+storage week's conservative upper is $7.8563 under $8. The owner separately
+approved at most $0.05 of automatic new-archive soft-delete tail through November
+11; bucket protections remain. The branch's financial/account history still
+requires private source transfer; normal GitHub push/pull is preferred when safe.
+
 ## November 1 E031 preparation boundary
 
 [E031 operations](../experiments/E031-bootstrap-preserving-learning/OPERATIONS.md)

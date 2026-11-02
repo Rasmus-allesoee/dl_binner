@@ -1,0 +1,71 @@
+{
+  "kind": "Prospective same-output learning/construction comparison; no learner outcome exists",
+  "frozen_UTC": "2026-11-02T13:19:53.357747+00:00",
+  "candidate_source": "58d7d59e892304ad20efcf784e61288e8a7d4967",
+  "bridge_execution_source": "31962f85af266801687885a41fbf6e933cabc33b",
+  "activation": "Only after independently admitted bridge outcome, scientific recommendation and fresh complete credit/runtime/headroom/retention gates",
+  "unchanged_learning": {
+    "epochs": 20,
+    "seed": 11,
+    "batch_size": 256,
+    "learning_rate": 0.0002,
+    "anchor_weight": 0.1,
+    "relation_weight": 0.1,
+    "views": "Retained actual parent/crop bank",
+    "initialization": "Admitted bootstrap online/EMA/predictor/buffers/Adam state; declared fresh seed11 continuation RNG",
+    "availability": "E009 GLM off/on through bootstrap/proposals/student; Oral measured ten-depth/no GLM"
+  },
+  "modes": [
+    "E009-noGLM",
+    "E009-GLM",
+    "oral-noGLM"
+  ],
+  "fits": 3,
+  "never_train_a_model_per_constructor": true,
+  "paired_constructors": [
+    "Exact source-bound E023 graph/density/marker selection",
+    "Exact E029 retrieval and E030 biological construction"
+  ],
+  "same_new_vectors_and_original_candidate_kNN_per_mode": true,
+  "retain": [
+    "E023 density/selected",
+    "E030 root-only/pre/post",
+    "full vectors/features/cache/neighbor evidence",
+    "all assigned/unassigned/excluded and unknown/non-target DNA"
+  ],
+  "prior_models_and_scores_reused_not_refit_or_rescored": true,
+  "criteria": {
+    "original_E031_learning_rule": "Preserved unchanged and reported for E030; the same rule is also reported separately for E023 against the same E030 historical baseline/anchors",
+    "within_constructor_effect": "Also compare each new output with its fixed-learning counterpart under the same constructor; no biological causal claim from a bundled continuation",
+    "common_policy": "Recommend one constructor across all three modes; no per-dataset winner routing. If neither common candidate passes the frozen learning KEEP criterion, retain the failed criterion and report MODIFY/ABANDON with target-level trade-offs.",
+    "threshold_or_seed_grid": false
+  },
+  "complete_envelope_proposal": {
+    "bridge_USD": 4,
+    "conditional_learning_USD": 8,
+    "combined_new_USD": 12,
+    "bridge_cumulative_hours": 6,
+    "conditional_learning_cumulative_hours": 16,
+    "conditional_provider_STOP_hours": 16.25,
+    "reason": "Headroom for the identical three fits, both constructors, setup/native qualification, collection and review; native complete schedule still required",
+    "new_resource": "No second scratch disk or new VM; use only the approved existing E2 and admitted single task disk",
+    "active_retention_end": "2026-11-04T00:00:00+01:00",
+    "standing_credit_covered_flexibility": true,
+    "fresh_November_2_rates": {
+      "CPU_IP_USD_hour": 0.27304567767858834,
+      "original_PD_USD_month": 31.19999999996773,
+      "balanced_task_USD_GiB_month": 0.1
+    },
+    "conditional_learning_complete_upper_USD": 6.781158928942999,
+    "combined_complete_upper_USD": 10.141158928943,
+    "cost_is_planning_not_native_admission": true,
+    "learning_task_peak_extra_GiB": 8,
+    "task_and_source_free_reserve_GiB": 25,
+    "threads": 4,
+    "tree_RSS_GB": 26,
+    "native_admission_must_include_both_constructors": true
+  },
+  "execution_authorized_by_prospectus": false,
+  "new_community_outcomes": false,
+  "truth_in_learning": false
+}

@@ -1,5 +1,17 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E031 November 2 execution scope
+
+The owner authorizes the cached bridge and conditionally permits learner execution
+after its independent review and fresh gates. [Actual native admission](../../experiments/E031-bootstrap-preserving-learning/native-observed.json)
+passes; the bridge is running, with no quality conclusion yet. A stronger old
+constructor result on retained learning will not establish its interaction with
+new learning. [The prospective paired comparison](../../experiments/E031-bootstrap-preserving-learning/learner-paired-prospectus.json)
+therefore keeps each new model's outputs identical across E023/E030 and all three
+modes. No extra fit or dataset-specific router is required. Existing references,
+truth limits and November 4 active retention stay; the owner separately permits
+only the small automatic new-archive tail.
+
 ## E031 preparation and source-bound priority correction, November 1, 2026
 
 The owner correctly identifies a downstream confound. E023 10.4163% E009 and

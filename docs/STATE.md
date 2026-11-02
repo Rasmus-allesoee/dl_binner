@@ -2,7 +2,38 @@
 
 Updated: November 2, 2026 (Copenhagen). This is the single current handoff.
 
-## E031 local preparation: construction bridge first, learner implemented
+## E031 cached bridge: native gates passed, science running
+
+Phase `bridge-20261102T130813Z-31962f8` runs on the existing E2 at exact private
+source `31962f8`, preserving prepared science `58d7d59`. [Native receipt](../experiments/E031-bootstrap-preserving-learning/native-observed.json)
+records all seven passed gates, 40 original files / 3,561,015,328 verified bytes,
+six full contig/vector/ordered-ten-depth axes, fresh boot/PID watcher tests and
+independent 6.25-hour provider STOP. The full barrier and E009 no-GLM teacher actor
+have completed; E009 no-GLM student is running normally at the recorded observation.
+No new fit or truth diagnostic has run. Whole-workflow completion is **not** claimed.
+
+Verified redundant E030 transport cleanup released 784,438,675 bytes, while its
+private generation and extracted inputs/journals remain. Source free space was
+still below 33 GiB, so the approved **single 40 GiB balanced task disk** was
+created, positively identified, formatted and mounted. Original 30/300 GiB disks
+and unbacked E021 bulk remain. Source/task reserves pass separately. New complete
+bridge upper remains $3.36 under $4; priced allocation is distinct from sampled
+CPU and final cost remains pending. Fresh credits show DKK 1,706.83 available,
+with $35 delayed-usage reserve. Active November 4 retention remains; only the
+explicit $0.05 new-archive soft-delete tail through November 11 is excepted.
+
+[The next prompt](../experiments/E031-bootstrap-preserving-learning/OPERATIONS.md#exact-following-prompt)
+inspects shutdown/exits/bytes/cost before frozen diagnostics. The owner also
+conditionally authorizes learning in the same task when justified and covered;
+it cannot be released from an incomplete bridge. [The prospectus](../experiments/E031-bootstrap-preserving-learning/learner-paired-prospectus.json)
+freezes the same three new learner outputs under both E023/E030, across all modes,
+if E023 is carried forward. No dataset-specific router. Proposed complete combined
+upper is $10.15 under $12, including a separately admitted $8 / 16-hour learner
+envelope. No learner fit has started, no new learner outcome exists, and native
+complete-schedule/headroom/credit admission is still required. Follow the requested
+healthy-long-run handoff rather than polling the bridge to completion.
+
+## Preserved E031 local preparation: construction bridge first, learner implemented
 
 November 2 execution authorization is now recorded in
 [E031 operations](../experiments/E031-bootstrap-preserving-learning/OPERATIONS.md#november-2-authorized-execution-amendment).
