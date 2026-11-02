@@ -1,0 +1,96 @@
+{
+  "kind": "Prospective paired learner source supplement; original locks preserved",
+  "original_source": "58d7d59e892304ad20efcf784e61288e8a7d4967",
+  "amended_operational_files": [
+    "scripts/e031_control.py",
+    "scripts/e031_phase.py",
+    "scripts/e031_gates.py",
+    "scripts/e031_review.py"
+  ],
+  "files": {
+    "scripts/e031_control.py": {
+      "bytes": 14253,
+      "sha256": "f305573b68a839fe9d70db0242576ab83b09059a33455ab75635ac9919058bb6"
+    },
+    "scripts/e031_phase.py": {
+      "bytes": 20763,
+      "sha256": "d2778ffecd106192df6513f5289b2fc52701ea1a7eef937addbc9460e71908c9"
+    },
+    "scripts/e031_gates.py": {
+      "bytes": 5623,
+      "sha256": "8279e6a8326783d50c4480e038386ee478b69eb9dee0e0c9b59fc519cfe3a111"
+    },
+    "scripts/e031_review.py": {
+      "bytes": 10672,
+      "sha256": "303d03c51c242147c82ef505fd7a5695f5e467d6c823eb731b5ec30dd812014c"
+    },
+    "scripts/e031_paired.py": {
+      "bytes": 5117,
+      "sha256": "27e129b36799b60cd728bd83ff5ec60edf42b89b96d474083ee985f7aa3afdf4"
+    },
+    "scripts/e031_paired_tiny.py": {
+      "bytes": 5347,
+      "sha256": "a679de72588af50194d96e805404804060cdc23adf511162a10c65d7b0c756e3"
+    },
+    "scripts/e031_paired_collect.py": {
+      "bytes": 1732,
+      "sha256": "842ad3a3056f3daa018341c1dc240af75fc98d0a231ae4f20ce509f52f4b60ed"
+    },
+    "scripts/e031_learner_launch.py": {
+      "bytes": 12325,
+      "sha256": "dae93299492e6f16d14bca3f22358607f16422b673f967fe1f551af1e1c76056"
+    },
+    "scripts/e031_native_review.py": {
+      "bytes": 7735,
+      "sha256": "89e1ff92f902df81e1adfb7c4e80d4f5de4fc05a584328b1a0cb56cd6f30b969"
+    },
+    "scripts/e031_neighbors.py": {
+      "bytes": 5810,
+      "sha256": "dc139b87acf8c03deeb70033edb9dbbfc636cba6f8fbc7f28b20fd69141b4bba"
+    },
+    "scripts/e031_stream_return.py": {
+      "bytes": 8659,
+      "sha256": "83058af6cae82ed243959fb58142c7b8d5de5d0f07329e0bbe1465feff6a006f"
+    },
+    "scripts/e031_inspection.py": {
+      "bytes": 10622,
+      "sha256": "678adaec0f9cc084a77379e488167066e6d605a5763b9d4f902b8261e8d4acfb"
+    },
+    "scripts/e031_summary.py": {
+      "bytes": 7665,
+      "sha256": "63885c86d190b5dc89cb2a10467cb5889893764da92a2d4acbfd8b51091a6591"
+    },
+    "scripts/e031_freeze_paired.py": {
+      "bytes": 3224,
+      "sha256": "187da493a7c44e2c972039d66285e50729c789c138561d4d5fd1375951f7717e"
+    },
+    "tests/test_e031_followthrough.py": {
+      "bytes": 7162,
+      "sha256": "f16d1123ff7d797e8276a9be0c0e31fda340cfc06f5e9ad26ac6d6cecdf17c63"
+    },
+    "experiments/E031-bootstrap-preserving-learning/paired-plan.json": {
+      "bytes": 4795,
+      "sha256": "f51437467a43600e50823e11f6ad291d045e967985c72a460439be9fe7c47834"
+    },
+    "experiments/E031-bootstrap-preserving-learning/paired.smk": {
+      "bytes": 10791,
+      "sha256": "894bb801617f1a320f3a9fe322452a46ec476ec4cdf99258bb7125683173b08d"
+    },
+    "experiments/E031-bootstrap-preserving-learning/paired-execution-policy.json": {
+      "bytes": 3249,
+      "sha256": "5555b78b9eec54f301514d5e2727cc0d39c9899cf1bc9b63ffc3db75eacadb92"
+    }
+  },
+  "original_frozen_source": {
+    "bytes": 65654,
+    "sha256": "40c4a3a7871169638e1ab7813b896bfe8c266e35f68a86fde93261660febf9ec"
+  },
+  "original_science": {
+    "bytes": 19392,
+    "sha256": "d1f34d2930eae869f779992105cc0dfcfcdc679dc4555878426ae251abd0b2f5"
+  },
+  "product_bytes_changed": false,
+  "original_stage_dispatch_changed": false,
+  "truth_or_loss_or_default_changed": false,
+  "owner_authorization": "November 2: both constructors across all three modes after operational/data gates, regardless of bridge score"
+}

@@ -1,6 +1,33 @@
 # Google Cloud workspace operations
 
-## November 2 E031 supervised running phase
+## November 2 E031 independent shutdown and paired follow-through
+
+Control plane independently confirms the original bridge TERMINATED, last stop
+November 2 at 14:11:07.087 UTC / 15:11 Copenhagen. [Inspection](../experiments/E031-bootstrap-preserving-learning/inspection-observed.json)
+verifies actual completion, gates/seals/delivery and every archive member/alias;
+shutdown itself is not the proof. Measured allocation 3,754.657 seconds prices
+about $0.2848 CPU/IPv4, plus $0.0451 overlapping original PD. Actual invoices remain
+delayed. Current Welcome credit is DKK 1,702.62 Available / 86%, January 12, 2027
+expiry; November gross/savings/net DKK 8.27 / 8.27 / 0.00. Keep the $35 delay reserve.
+
+The owner authorizes fixed paired E031 learning independently of bridge quality.
+Its [prospective scope](../experiments/E031-bootstrap-preserving-learning/paired-execution-policy.json)
+uses only the existing E2, original 30/300 GiB disks and the existing single
+40 GiB task disk, without formatting or provisioning. Native full-schedule,
+credit/source/runtime, separate source/task reserves and fresh current-boot
+watcher/provider STOP gates precede release. $8 / 16 hours / 16.25-hour STOP,
+complete upper $7.20, with prospectively enlarged complete paired evidence caps.
+Mac Oral review storage refusal remains failed; only its unfinished read-only
+readers use the native phase, with the original diagnostic deadline and 8 GB RSS.
+Truth stays outside training. No new learner outcome or native launch yet.
+
+November 4 at 00:00 Copenhagen is unchanged. Original stopped disks keep costing
+about $31.20 per pricing month, plus the task disk and GCS. Independent full
+collection/member admission precedes any task-disk deletion. The narrow automatic
+new-archive tail is capped at $0.05 through November 11, not an active renewal.
+The earlier handoff is historical.
+
+## Earlier November 2 E031 supervised running phase
 
 [Native handoff](../experiments/E031-bootstrap-preserving-learning/native-observed.json)
 supersedes the stopped E030 snapshot for current control-plane state. Existing

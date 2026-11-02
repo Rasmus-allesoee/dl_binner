@@ -26,11 +26,11 @@ def contract(base,staged,unit,role,features,comparison,engineering=False):
     from dl_binner.multiview.views import load
     from e014_review import manifest_bindings
     base,staged=Path(base),Path(staged)
-    if unit not in UNITS or role not in ['teacher','student'] or comparison not in ['bridge','learning']:
+    if unit not in UNITS or role not in ['teacher','student'] or comparison not in ['bridge','learning','learning-E023']:
         raise ValueError('Unknown E031 review actor')
     if comparison=='bridge' and (unit,role)==('E009-GLM','student'):
         raise ValueError('Accepted E023 actor: reuse its bound summary, do not rescore')
-    if comparison=='learning' and role!='student':raise ValueError('No new teacher output to score')
+    if comparison.startswith('learning') and role!='student':raise ValueError('No new teacher output to score')
     admission=admission_contract(base/'admission.json')
     if admission.get('exact_source_schedule_axes_verified') is not True:raise ValueError('Independent exact source/schedule/axes admission required')
     inv=json.loads((base/'inventory.json').read_text())['all_work_members']
@@ -40,14 +40,15 @@ def contract(base,staged,unit,role,features,comparison,engineering=False):
         expected=json.loads((ROOT/'experiments/E031-bootstrap-preserving-learning/reuse-lock.json').read_text())['axes'][unit]
         if axis!=expected:raise ValueError('Full contig/ordered ten-depth source axis differs')
     elif axis['rows']>128 or axis['bp']>1_000_000:raise ValueError('Tiny review fixture exceeded')
-    prefix='actors/'+unit+'/'+role+'/science' if comparison=='bridge' else unit
-    group=staged/'work'/prefix/('result' if comparison=='bridge' else 'construct/result')
+    density=comparison in ['bridge','learning-E023']
+    prefix='actors/'+unit+'/'+role+'/science' if comparison=='bridge' else unit+'/e023/science' if density else unit
+    group=staged/'work'/prefix/('result' if density else 'construct/result')
     export_prefix=prefix+'/export';root=staged/'work'/export_prefix
     complete=json.loads((group/'completed.json').read_text())
     if complete['status']!='SUCCESS' or complete['truth_accessed'] is not False:raise ValueError('New scientific completion absent')
     feature_sha=complete.get('features_sha256',complete.get('input_sha256',{}).get('features'))
     if feature_sha!=binding(features)['sha256']:raise ValueError('New feature bytes differ')
-    if comparison=='bridge':
+    if density:
         from dl_binner.density.grouping import policy
         if complete['config']!=policy(ROOT/'experiments/E023-adaptive-density-bins/config.json'):raise ValueError('E023 policy differs')
         proof=json.loads((staged/'work'/prefix/'bridge.json').read_text())
@@ -60,7 +61,7 @@ def contract(base,staged,unit,role,features,comparison,engineering=False):
         if proof['status']!='PASS':raise ValueError('Native new learning construction audit missing')
         arms=['root-only','pre','post']
     group_prefix=str(group.relative_to(staged/'work'))
-    for p in [group/'completed.json',staged/'work'/prefix/'bridge.json' if comparison=='bridge' else staged/'work'/unit/'audit/proof.json']:
+    for p in [group/'completed.json',staged/'work'/prefix/'bridge.json' if density else staged/'work'/unit/'audit/proof.json']:
         if binding(p)!=inv[str(p.relative_to(staged/'work'))]:raise ValueError('Native completion/audit inventory bytes differ')
     for arm in arms:
         p=group/(arm+'-partition.json');validate_partition(data,p,features)
@@ -142,5 +143,5 @@ if __name__=='__main__':
     a=argparse.ArgumentParser(description=__doc__)
     for key in ['base','staged','features','marker-clean','truth-root','output']:a.add_argument('--'+key,type=Path,required=True)
     a.add_argument('--unit',choices=UNITS,required=True);a.add_argument('--role',choices=['teacher','student'],required=True)
-    a.add_argument('--comparison',choices=['bridge','learning'],required=True);v=a.parse_args()
+    a.add_argument('--comparison',choices=['bridge','learning','learning-E023'],required=True);v=a.parse_args()
     review(v.base,v.staged,v.unit,v.role,v.features,v.comparison,v.marker_clean,v.truth_root,v.output)

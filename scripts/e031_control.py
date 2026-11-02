@@ -32,10 +32,25 @@ def product_scope():
     return str(path)
 
 
-def freeze():
+def freeze(include_files=False):
     """Check source/defaults and all unchanged accepted product members."""
     lock=json.loads((EXP/'source-lock.json').read_text())
-    for name,wanted in lock['files'].items():
+    effective = dict(lock['files'])
+    supplement = EXP/'paired-source-lock.json'
+    if supplement.is_file():
+        import ast,hashlib
+        extra=json.loads(supplement.read_text())
+        allowed={'scripts/e031_control.py','scripts/e031_phase.py','scripts/e031_gates.py','scripts/e031_review.py'}
+        if set(extra['amended_operational_files'])!=allowed:raise ValueError('Unadmitted scientific source amendment')
+        for name,wanted in extra['files'].items():
+            if name in effective and name not in allowed:raise ValueError('Prepared science may not change')
+            if binding(ROOT/name)!=wanted:raise ValueError('Paired supplement differs: '+name)
+        node=next(n for n in ast.parse((ROOT/'scripts/e031_control.py').read_text()).body if isinstance(n,ast.FunctionDef) and n.name=='stage')
+        if hashlib.sha256(ast.dump(node,include_attributes=False).encode()).hexdigest()!=json.loads((EXP/'science-lock.json').read_text())['stage_dispatch_sha256']:
+            raise ValueError('Frozen original scientific stage dispatch changed')
+        effective.update(extra['files'])
+        effective[str(supplement.relative_to(ROOT))]=binding(supplement)
+    for name,wanted in effective.items():
         if binding(ROOT/name)!=wanted:raise ValueError('Frozen E031 source differs: '+name)
     old=json.loads((ROOT/'experiments/E023-adaptive-density-bins/source-lock.json').read_text())
     names=[n for n in old['files'] if n.startswith('src/dl_binner/')]
@@ -43,14 +58,18 @@ def freeze():
         if binding(ROOT/name)!=old['files'][name]:raise ValueError('E023 transitive product source drift: '+name)
     proof=dict(status='PASS',unchanged_E023_product_members=len(names),
                old_lock=binding(ROOT/'experiments/E023-adaptive-density-bins/source-lock.json'))
-    return dict(status='PASS',source=binding(EXP/'source-lock.json'),E023=proof)
+    result=dict(status='PASS',source=binding(EXP/'source-lock.json'),E023=proof,
+        paired_supplement=binding(supplement) if supplement.is_file() else None)
+    if include_files:result['effective_files']=effective
+    return result
 
 
 def read_plan(path,engineering=False):
     """Refuse changed scope, native release drift and hidden GLM/truth routing."""
     p=json.loads(Path(path).read_text());comparison=p.get('comparison')
     if comparison not in ['bridge','learning']:raise ValueError('One frozen comparison required')
-    schema=json.loads((EXP/(comparison+'-plan.json')).read_text())
+    paired=p.get('worker')=='/srv/dl_binner/repo/scripts/e031_paired.py' or (engineering and str(p.get('worker','')).endswith('/e031_paired.py'))
+    schema=json.loads((EXP/('paired-plan.json' if paired else comparison+'-plan.json')).read_text())
     if set(p)!=set(schema) or p['engineering'] is not engineering or set(p['units'])!=set(UNITS):
         raise ValueError('Unknown E031 plan/schema')
     if any(set(p['units'][u])!=set(schema['units'][u]) for u in UNITS):raise ValueError('Unknown scientific/truth input field')

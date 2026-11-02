@@ -1,0 +1,76 @@
+{
+  "kind": "Owner-authorized fixed E031 learner plus both constructors, all modes",
+  "frozen_UTC": "2026-11-02T19:50:39.297252+00:00",
+  "owner_direction": "November 2: poor bridge score must not stop the learner; release after data/operational/credit/runtime/retention gates",
+  "source_preparation": "58d7d59e892304ad20efcf784e61288e8a7d4967",
+  "unchanged_candidate": true,
+  "unchanged_original_science_lock": true,
+  "original_bridge_source": "31962f85af266801687885a41fbf6e933cabc33b",
+  "fits": 3,
+  "modes": [
+    "E009-noGLM",
+    "E009-GLM",
+    "oral-noGLM"
+  ],
+  "constructors": [
+    "E023 source-bound graph/density/marker selection",
+    "E029 exact retrieval + E030 biological construction"
+  ],
+  "same_new_vectors_graph_features_markers_per_mode": true,
+  "old_models_and_results_not_refit_or_rescored": true,
+  "no_dataset_winner_router": true,
+  "decision": "Original E031 learning criterion unchanged for E030 and separately for E023; report within-constructor changes and every target trade-off",
+  "operational_envelope": {
+    "ceiling_USD": 8,
+    "cumulative_hours": 16,
+    "provider_STOP_hours": 16.25,
+    "numerical_threads": 4,
+    "tree_RSS_bytes": 26000000000,
+    "extra_GiB": 9,
+    "compressed_export_GiB": 3,
+    "logical_return_GiB": 6,
+    "free_reserve_GiB": 25,
+    "existing_E2_only": true,
+    "single_existing_40_GiB_task_disk": true,
+    "new_resources": false,
+    "active_retention_end": "2026-11-04T00:00:00+01:00",
+    "automatic_archive_tail_max_USD": 0.05,
+    "automatic_archive_tail_latest_end": "2026-11-11T00:00:00+01:00"
+  },
+  "return_reassessment": {
+    "reason": "Required paired construction retains both full alternative families; old 2/4 GiB envelope belonged to single-constructor preparation",
+    "measured_old_E030_student_result_export_bytes": 1274028074,
+    "measured_E023_E009_student_bytes": 83832586,
+    "measured_E023_oral_student_bytes": 1217023153,
+    "base_both_constructor_three_mode_bytes_estimate": 2658716399,
+    "additional": "New complete checkpoints/vector/graph/retrieval/forest/confidence evidence; exact-byte aliases only",
+    "complete_logical_forecast_GiB": [
+      3.8,
+      5.4
+    ],
+    "complete_compressed_forecast_GiB": [
+      1.7,
+      2.7
+    ],
+    "peak_work_plus_return_GiB_upper": 9,
+    "not_oversized_failure_fallback": true,
+    "all_accepted_science_preserved": true
+  },
+  "financial_admission_required": true,
+  "complete_cost_upper_USD": 7.2,
+  "bridge_and_learner_combined_ceiling_USD": 12,
+  "real_money_authorized": false,
+  "bridge_review_recovery": {
+    "reason": "Mac OS/swap growth refused unchanged 6 GiB reserve during Oral review",
+    "completed_local_actors": 3,
+    "remaining_native_actors": 2,
+    "remaining_read_only": true,
+    "review_RSS_bytes": 8000000000,
+    "original_one_hour_deadline_kept": true,
+    "old_retained_truth_payload_reused": true,
+    "truth_outside_training": true,
+    "failures_preserved": true
+  },
+  "qualification": "Synthetic full-batch native kernels + retained real-bank floor + 4.5 h nontraining allowance + 1 h additional constructor allowance; all setup/verification/collection within same VM start clock",
+  "external_GPU_confirmation_acquisition_architecture_change": false
+}

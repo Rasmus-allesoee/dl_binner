@@ -2,7 +2,41 @@
 
 Updated: November 2, 2026 (Copenhagen). This is the single current handoff.
 
-## E031 cached bridge: native gates passed, science running
+## E031 bridge accepted; fixed three-mode paired learning authorized
+
+November 2 evening. [Independent inspection](../experiments/E031-bootstrap-preserving-learning/inspection-observed.json)
+confirms `bridge-20261102T130813Z-31962f8` completed and the VM stopped at
+15:11 Copenhagen. Every native gate, stage seal, actual phase/delivery exit,
+source/runtime/ordered ten-depth/full-DNA contract and archive member/alias passes.
+Three E009 frozen reviews complete; Mac system/swap growth refuses the Oral
+teacher at the unchanged filesystem reserve, leaving the Oral student unstarted.
+Preserve the failure. Only those unfinished read-only reviews and frozen matched
+queries will use the existing E2, within their original one-hour diagnostic clock.
+
+The owner now expressly requires the unchanged learner regardless of bridge
+quality, subject to data/operational/credit/runtime/retention gates. [Paired policy](../experiments/E031-bootstrap-preserving-learning/paired-execution-policy.json)
+freezes three fits, with the same new outputs under E023 and E030 in every mode.
+No dataset-specific winner router. Original candidate/source/science locks and
+scientific stage AST remain; the supplemental operational freeze and real
+34-stage tiny DAG/export/reload/no-work-resume contracts pass. No community
+learner fit has started. Native complete-schedule and source/task headroom still
+must pass before release. The $8 / 16-hour / 16.25-hour STOP envelope retains
+both full families under prospective 9 GiB growth / 3 GiB compressed / 6 GiB
+logical delivery bounds. Complete upper $7.20 is planning, not native admission.
+
+Fresh credits show DKK 1,702.62 Available, January 12, 2027 expiry, with $35
+reserved for delayed usage; the November gross/net display is DKK 8.27 / 0.00.
+Original bridge compute/IPv4 is priced $0.2848 for 3,754.657 seconds, separately
+from storage/export and sampled CPU. Both original disks and the single admitted
+40 GiB task disk remain. **November 4 at 00:00 Copenhagen stays hard.** Address
+preservation before then; only the narrow $0.05 automatic new-archive tail through
+November 11 is approved. [Operations](../experiments/E031-bootstrap-preserving-learning/OPERATIONS.md)
+own the active gates. Current private financial/account history uses exact
+private source transfer; normal GitHub is preferred when outgoing history is safe.
+
+The earlier running handoff below is preserved dated history.
+
+## Earlier E031 cached bridge: native gates passed, science running
 
 Phase `bridge-20261102T130813Z-31962f8` runs on the existing E2 at exact private
 source `31962f8`, preserving prepared science `58d7d59`. [Native receipt](../experiments/E031-bootstrap-preserving-learning/native-observed.json)

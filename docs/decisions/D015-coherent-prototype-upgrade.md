@@ -1,5 +1,18 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## November 2: compare unchanged learning under both common constructors
+
+The owner explicitly removes bridge quality as a learner release condition. After
+data/operational/credit/runtime/retention gates, execute the fixed E031 continuation
+once per mode and retain both E023/E030 on those same outputs across all modes.
+The bridge and new learner comparison answer different questions; an old-learner
+constructor result cannot establish its interaction with a new learner. Preserve
+the original criteria and every negative result, without dataset-specific routing.
+[The paired policy](../../experiments/E031-bootstrap-preserving-learning/paired-execution-policy.json)
+prospectively records the complete source, schedule, delivery/resource case and
+remaining native gates. No product/loss/default change is added. November 4 stays.
+
+
 ## E031 November 2 execution and prospective paired learner control
 
 The [cached bridge](../../experiments/E031-bootstrap-preserving-learning/native-observed.json)

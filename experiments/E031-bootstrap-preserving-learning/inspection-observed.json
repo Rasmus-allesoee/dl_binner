@@ -1,0 +1,133 @@
+{
+  "status": "BRIDGE_SCIENCE_DELIVERY_ACCEPTED; THREE_E009_REVIEWS_COMPLETE; ORAL_DIAGNOSTIC_RECOVERY_PREPARED",
+  "checked_UTC": "2026-11-02T19:53:17.277381+00:00",
+  "phase": "bridge-20261102T130813Z-31962f8",
+  "source": "31962f85af266801687885a41fbf6e933cabc33b",
+  "provider_status": "TERMINATED",
+  "last_stop_UTC": "2026-11-02T14:11:07.087+00:00",
+  "archive": {
+    "status": "PASS",
+    "archive": {
+      "bytes": 1387643691,
+      "sha256": "64a18d1281b7e3a5043df59f104ab64b818c15f5a11a28f8e73a5f36748e0976"
+    },
+    "generation": "1793628481929267",
+    "every_member_verified": true,
+    "regular_members": 1329,
+    "aliases": 16,
+    "logical_member_bytes": 2660935591,
+    "selectively_restored_physical_bytes": 2071688670,
+    "local_free_after_bytes": 8302649344,
+    "no_complete_local_compressed_copy": true,
+    "new_science": false,
+    "omitted_private_members_not_local_backups": true,
+    "download_seconds": 210.74546718597412,
+    "subprocess_exit": 0
+  },
+  "native_gate_exits": 7,
+  "actual_phase_delivery_exits": 13,
+  "complete_stage_seals": 10,
+  "original_files": 40,
+  "original_bytes": 3561015328,
+  "source_runtime_axes_DNA_inputs_after": true,
+  "scientific_fits": 0,
+  "original_Mac_tolerance_unchanged": true,
+  "local_E009_reviews": {
+    "E009-noGLM/teacher": {
+      "density": {
+        "targets": 156,
+        "reference_bp": 554661890,
+        "bp_weighted_R95": 0.10633409300934665,
+        "macro_R95": 0.11677086212775833,
+        "at_least_50_percent": 19,
+        "at_least_90_percent": 9
+      },
+      "selected": {
+        "targets": 156,
+        "reference_bp": 554661890,
+        "bp_weighted_R95": 0.10633409300934665,
+        "macro_R95": 0.11677086212775833,
+        "at_least_50_percent": 19,
+        "at_least_90_percent": 9
+      }
+    },
+    "E009-GLM/teacher": {
+      "density": {
+        "targets": 156,
+        "reference_bp": 554661890,
+        "bp_weighted_R95": 0.1054832269078375,
+        "macro_R95": 0.11636469637386683,
+        "at_least_50_percent": 19,
+        "at_least_90_percent": 9
+      },
+      "selected": {
+        "targets": 156,
+        "reference_bp": 554661890,
+        "bp_weighted_R95": 0.1054832269078375,
+        "macro_R95": 0.11636469637386683,
+        "at_least_50_percent": 19,
+        "at_least_90_percent": 9
+      }
+    },
+    "E009-noGLM/student": {
+      "density": {
+        "targets": 156,
+        "reference_bp": 554661890,
+        "bp_weighted_R95": 0.10462316240980608,
+        "macro_R95": 0.11577513479123756,
+        "at_least_50_percent": 19,
+        "at_least_90_percent": 8
+      },
+      "selected": {
+        "targets": 156,
+        "reference_bp": 554661890,
+        "bp_weighted_R95": 0.10462316240980608,
+        "macro_R95": 0.11577513479123756,
+        "at_least_50_percent": 19,
+        "at_least_90_percent": 8
+      }
+    }
+  },
+  "Oral_truth_review": "Unavailable until the two frozen readers complete under the same one-hour deadline on the existing E2; local storage refusal is preserved",
+  "bridge_quality_does_not_gate_learner": true,
+  "evidence": {
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/admission.json": {
+      "bytes": 19566,
+      "sha256": "06971653015f4c05d46bdd6e27506d19599af37592bb3a2c9bb774f7e7f982df"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/download-verification.json": {
+      "bytes": 581,
+      "sha256": "16b7e8500960e4c6d55cfbab4f0b2f97ffc4550d746ae8b1104ebaf345930044"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/completion.json": {
+      "bytes": 11021,
+      "sha256": "ba8cbb4e9ca4be824c88f614e5f4a9cc4ed64850f382f56123ba9c49279e3d55"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/watchdog-exit.json": {
+      "bytes": 7447,
+      "sha256": "f34531db7028c5ab93534ec6be5263495eedb70093a3d3dcef272c8b1e1b0b81"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/terminal-disk.json": {
+      "bytes": 2529,
+      "sha256": "6fd131330ecea869511d70fb547d49cf7ba90386834c6712b3cb809c2ad00787"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/stream-failure-and-recovery.json": {
+      "bytes": 840,
+      "sha256": "3701f4c53794eaa13b3705e4a435ae670106f2a06a794eefdbf48b9936359786"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/frozen-review-resources.json": {
+      "bytes": 22467,
+      "sha256": "73fe4d9867242520aece17897219dad5f13fd32a4da6a3bae2356282f54464a6"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/redundant-local-transport-release.json": {
+      "bytes": 1384,
+      "sha256": "72e55fd00f38610ca721c6f794343cd54053a999e8849a9391d956fa6a93592f"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/release-redundant-oral-staging.json": {
+      "bytes": 9518,
+      "sha256": "ea824167d77edd06c0f446c2017de61eecf03db4da619465df3978e0f190bea8"
+    }
+  },
+  "private_source_history_not_publicly_pushed": true,
+  "retention_end": "2026-11-04T00:00:00+01:00"
+}

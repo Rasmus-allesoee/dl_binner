@@ -128,7 +128,7 @@ def run(config):
     p=json.loads(Path(cfg['plan']).read_text())
     if str(work) != p['work'] or cfg['limits'] != p['limits'] or not root.is_relative_to('/srv/dl_binner/experiments/e031'):
         raise ValueError('Plan/config work or limits differ')
-    if cfg['limits'] != json.loads((Path(cfg['repo'])/'experiments/E031-bootstrap-preserving-learning'/(p['comparison']+'-plan.json')).read_text())['limits']:
+    if cfg['limits'] != json.loads((Path(cfg['repo'])/'experiments/E031-bootstrap-preserving-learning'/('paired-plan.json' if p['worker'].endswith('/e031_paired.py') else p['comparison']+'-plan.json')).read_text())['limits']:
         raise ValueError('Frozen comparison resource envelope differs')
     filesystem_contract(root,cfg)
     if shutil.disk_usage('/srv/dl_binner').free<25*1024**3:
@@ -188,7 +188,7 @@ def run(config):
                 os.sched_setaffinity(0,sorted(os.sched_getaffinity(0))[:8])
             command('workflow',[p['python'],'-I','-B',p['worker'],'--plan',cfg['plan'],'--workflow'],reserve=900)
             command('used-inputs-after',[p['python'],'-I','-B',p['worker'],'--plan',cfg['plan'],'--verify-inputs','--output',str(work/'used-inputs-after.json')],reserve=900)
-            if not all((work/unit/'audit/done.json').is_file() for unit in ['E009-noGLM','E009-GLM','oral-noGLM']):raise ValueError('Both final targets must pass')
+            if not all((work/unit/('paired/done.json' if p['worker'].endswith('/e031_paired.py') else 'audit/done.json')).is_file() for unit in ['E009-noGLM','E009-GLM','oral-noGLM']):raise ValueError('Both final targets must pass')
             result['science_completed']=True
             result['grouping_communities_completed']=2
             result['candidate_modes_completed']=3
@@ -225,14 +225,14 @@ def run(config):
                 shutil.copyfile(cfg['watchdog_live'],evidence/'watchdog-live.json')
             from e031_collect import collect_controls
             collect_controls(root,evidence/'controls',allow_incomplete=not result['science_completed'])
-            lock=json.loads((Path(cfg['repo'])/'experiments/E031-bootstrap-preserving-learning/source-lock.json').read_text())
-            for name,expected in lock['files'].items():
+            lock=freeze(include_files=True)
+            for name,expected in lock['effective_files'].items():
                 source=Path(cfg['repo'])/name
                 if binding(source)!=expected:raise ValueError('Frozen preparation source differs')
                 target=evidence/'source'/name;target.parent.mkdir(parents=True,exist_ok=True)
                 shutil.copyfile(source,target)
             # The real collector is invoked through its isolated production path.
-            command('collect',[p['python'],'-I','-B',str(Path(cfg['repo'])/'scripts/e031_collect.py'),
+            command('collect',[p['python'],'-I','-B',str(Path(cfg['repo'])/('scripts/e031_paired_collect.py' if p['worker'].endswith('/e031_paired.py') else 'scripts/e031_collect.py')),
                 '--work',str(work),'--evidence',str(evidence),'--output',str(root/'collection')]
                 + ([] if result['science_completed'] else ['--allow-incomplete']),reserve=600)
             for name in ['e031-evidence.tar.gz','e031-evidence.tar.gz.sha256','collection.json']:

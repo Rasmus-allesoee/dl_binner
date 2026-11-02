@@ -49,3 +49,11 @@ Oral provided-origin/shared sensitivity and secondary non-MIMAG quality tiers
 remain. Both communities are development data; skin stays unscored and Oral GLM
 still needs its native batching/admission milestone. **November 4 at 00:00
 Copenhagen remains hard**, including the preservation and storage-tail decision.
+## November 2 inspection and paired learner authority
+
+[Independent bridge inspection](inspection-observed.json) accepts the original
+science/delivery/shutdown. [Paired policy](paired-execution-policy.json) implements
+the owner's requirement to run the unchanged learner under both constructors in
+all three modes after operational/data gates, regardless of bridge score. The
+[operational supplement](paired-source-lock.json) preserves original scientific
+locks. Oral diagnostic recovery is read-only; no community learner fit yet.

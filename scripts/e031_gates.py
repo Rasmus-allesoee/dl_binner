@@ -46,22 +46,28 @@ def run(config):
     command('owned-complete-runtime',[p['python'],'-I','-B',ROOT/'scripts/e027_runtime.py','--base',base,
         '--reference',reuse['native_runtime_reference'],'--candidate-lock',candidate,'--output',out/'runtime.json'])
     command('installed-state-pair-reader-export',[p['python'],'-I','-B','-c',unit_command(ROOT,'test_bootstrap')])
-    for comparison in ['bridge','learning']:
+    for comparison in (['learning'] if p['worker'].endswith('/e031_paired.py') else ['bridge','learning']):
         command('serial-'+comparison+'-tiny-DAG',[p['python'],'-I','-B',ROOT/'scripts/e031_tiny.py','--root',out/('tiny-'+comparison),
             '--workflow-python',p['workflow_python'],'--comparison',comparison])
+    if p['worker'].endswith('/e031_paired.py'):
+        command('paired-constructors-tiny-reuse-export',[p['python'],'-I','-B',ROOT/'scripts/e031_paired_tiny.py',
+            '--root',out/'tiny-learning','--workflow-python',p['workflow_python']])
     if p['comparison']=='learning':
         command('synthetic-full-batch-kernels',[p['python'],'-I','-B',ROOT/'scripts/e031_probe.py','--output',out/'kernel-probe.json'])
         probe=json.loads((out/'kernel-probe.json').read_text())
         resources=json.loads((ROOT/'experiments/E031-bootstrap-preserving-learning/resources.json').read_text())
         fit=max(sum(probe['projected_training_seconds_with_50_percent_IO_headroom'].values()),
                 sum(resources['retained_training_seconds'].values())*1.5)
-        forecast=fit+resources['learning_nontraining_seconds_upper']
+        extra=3600 if p['worker'].endswith('/e031_paired.py') else 0
+        forecast=fit+resources['learning_nontraining_seconds_upper']+extra
         remaining=cfg['vm_start_epoch']+p['limits']['seconds']-time.time()-900
         write(out/'complete-schedule.json',dict(status='PASS' if forecast<=remaining else 'REFUSED',
             forecast_remaining_seconds=forecast,actual_remaining_seconds=remaining,
             scope='Synthetic native kernels + retained real-bank floor + complete downstream/collection allowance; not a guarantee'))
         if forecast>remaining:raise ValueError('Complete native learning schedule needs a prospective covered envelope revision')
     command('restore-complete-inputs',[p['python'],'-I','-B',ROOT/'scripts/e031_gates.py','--inputs',cfg['plan'],'--output',out/'data.json'])
+    if cfg.get('bridge_review'):
+        command('remaining-frozen-bridge-diagnostics',[p['python'],'-I','-B',ROOT/'scripts/e031_native_review.py','--config',config])
     if not all(x['resources']['exit_code']==0 for x in stages):raise ValueError('Native gate failed')
     publish(dict(status='PASS',config=binding(config),stages=stages,finished_epoch=time.time(),source=freeze(),
         accepted_dependencies_reused=True,dependency_reinstall_or_science_recopy=False),out/'completion.json')

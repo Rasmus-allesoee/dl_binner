@@ -1,5 +1,57 @@
 # E031 operations
 
+## November 2 inspected bridge and unconditional scientific learner follow-through
+
+[Independent inspection](inspection-observed.json) confirms the original phase
+is TERMINATED, with seven native gates, ten complete seals, 13 phase/delivery
+exits, unchanged before/after inputs and complete DNA accounting. The private
+1,387,643,691-byte archive, 1,329 physical members and 16 exact aliases pass.
+The watcher observed its bound process exit and requested shutdown. This is
+independent evidence beyond the stopped VM or driver's summary counters.
+
+Three new E009 reviews complete locally; the two Oral readers stop before a
+complete result when Mac system/swap usage crosses the unchanged 6 GiB reserve.
+The failed journal is preserved. Only the remaining read-only Oral diagnostics
+and frozen matched-query view are prepared on the existing E2, at 8 GB sampled
+RSS, four threads and the original one-hour diagnostic deadline. The accepted
+E030 truth payload is reused in a separate lexical review view; it cannot enter
+the learning plan. Native review is not a passing Mac portability result.
+
+**Latest owner direction:** a poor bridge score must not stop the unchanged
+learner. After data/operational/credit/runtime/retention admission, run one fit
+per mode and both constructors on those same outputs, across all three modes.
+This supersedes the earlier prospectus activation conditional on E023 support;
+the original scientific criteria and the frozen prospectus itself are preserved.
+No dataset-specific constructor routing or threshold tuning is permitted.
+
+[Paired policy](paired-execution-policy.json), [plan](paired-plan.json),
+[serial DAG](paired.smk) and [supplemental source freeze](paired-source-lock.json)
+preserve the original product, scientific stage AST, candidate/source/science
+locks and default treatments. Four operational adapters admit explicit paired
+orchestration, final seals and review paths. New consumers add the source-bound
+E023 alternative, complete same-vector/graph/input audit and bounded collection.
+Actual tiny execution passes 34 serial stages, three engineering fits, six
+reader/export contracts and verified no-work resume. Synthetic marker/GLM
+annotations are explicit; native Linux qualification is still required.
+
+The justified paired envelope is $8 / 16 cumulative hours / 16.25-hour provider
+STOP, four numerical threads, 26 GB sampled tree RSS, 25 GiB source/task reserves,
+9 GiB extra task growth, 3 GiB compressed / 6 GiB logical return. The larger
+delivery envelope retains both full constructor families and intermediate
+evidence; it is declared before execution rather than used as an oversized
+failure fallback. Complete upper is $7.20 pending actual native schedule/headroom
+admission. Use only the existing E2 and already admitted 40 GiB task disk;
+never format, provision, resize or discard original bridge science. All deadlines
+precede November 4 at 00:00 Copenhagen. Only the separately approved automatic
+new-archive tail may continue, at most $0.05 through November 11.
+
+The original bridge's measured allocation is 3,754.657 seconds: about $0.2848
+CPU/IPv4 and $0.0451 overlapping original PD. Export includes the failed local
+stream and repaired read; its conservative bound is $0.3102. Full cost is still
+a priced estimate, not an invoice or credit delta. An independently verified
+redundant E014 local archive and redundant Oral staging were released; private
+generations, original science, required inputs/results and all journals remain.
+
 ## November 2 authorized execution amendment
 
 [Actual native observation](native-observed.json) now records the running phase,
@@ -273,7 +325,7 @@ Run the relevant tests.
 Commit with structured what changed/why.
 Give the next exact prompt.
 
-## Exact following prompt
+## Preserved inspection and conditional-execution prompt (invoked November 2)
 
 Our goal is substantially closing the recovery gap. Read AGENTS.md,
 PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E031's design, protocol/criteria,
@@ -339,3 +391,14 @@ November 4 preservation decision. Prefer normal GitHub push/pull when outgoing
 history is safe; retain private transfer for current financial/account history.
 Update records, run checks and commit with structured what changed/why. Report
 costs, conclusions/limits and the next exact prompt.
+
+## Exact following prompt
+
+Continue the admitted E031 paired learner handoff recorded in the current native
+receipt. Preserve the original bridge source, failed local storage journals,
+unchanged learner, all three modes and both constructor outputs. Verify current
+control-plane state, actual native gates, original clock, held-parent watcher
+and provider STOP before any release. A poor bridge result does not gate learning.
+No new fit, source/default change, automatic replay or retention extension is
+implied by a stopped VM. After the paired phase is launched, its receipt supplies
+the exact phase/prefix and completed-output inspection prompt.

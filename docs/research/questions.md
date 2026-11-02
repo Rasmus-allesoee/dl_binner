@@ -924,3 +924,15 @@ Q003 remains unresolved by development improvements: skin is still unscored with
 its source/overlap/truth/depth/protocol/cost dependencies. November 4 needs a
 separate preservation decision. No new fit, bank, acquisition or confirmation is
 authorized by this closeout.
+
+
+### November 2, 2026: E031 bridge accepted and learner interaction authorized
+
+The bridge's operational/source/input/byte contracts pass independent shutdown.
+Three E009 diagnostics complete; the Mac Oral storage refusal is preserved and
+its two unfinished readers move to bounded native read-only review. Q001 remains
+open. The owner explicitly authorizes the fixed learner regardless of bridge
+quality, retaining the same three new outputs under E023/E030 in every mode.
+[The prospective policy](../../experiments/E031-bootstrap-preserving-learning/paired-execution-policy.json)
+preserves the original scientific criterion, all targets and old references,
+without a dataset-specific winner router. Q003/Q005 and November 4 remain.

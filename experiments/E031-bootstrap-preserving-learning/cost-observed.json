@@ -1,0 +1,195 @@
+{
+  "kind": "Measured allocation priced at refreshed current Catalog; not invoice",
+  "checked_UTC": "2026-11-02T19:57:14.026833+00:00",
+  "phase": "bridge-20261102T130813Z-31962f8",
+  "allocation": {
+    "start": "2026-11-02T05:08:32.430-08:00",
+    "stop": "2026-11-02T06:11:07.087-08:00",
+    "seconds": 3754.657,
+    "allocated_vCPUs": 8,
+    "allocated_vCPU_hours": 8.343682222222222
+  },
+  "prices": {
+    "CPU_RAM_IP_USD_hour": 0.27304567767858834,
+    "original_PD_USD_pricing_month": 31.2,
+    "task_PD_USD_pricing_month": 4,
+    "current_Catalog_PD_pricing_month_hours": 721,
+    "GCS_US_CENTRAL1_Standard_USD_GiB_hour": 2.7397e-05,
+    "WAN_USD_GiB_upper": 0.12
+  },
+  "priced": {
+    "CPU_RAM_IP_USD": 0.2847757958376821,
+    "overlapping_original_PD_USD": 0.04513226167360148,
+    "task_disk_USD_to_observation": 0.037629320130985314,
+    "task_disk_lifetime_not_closed": true,
+    "bridge_return_GCS_USD_to_observation": 0.00020606589148788293,
+    "export_maximum_bytes": 2775287382,
+    "export_USD_upper": 0.3101625347882509,
+    "first_failed_stream_exact_network_bytes_unknown": true,
+    "operations_USD_upper": 0.02,
+    "automatic_new_archive_tail_USD_upper": 0.05
+  },
+  "original_bridge_ceiling_USD": 4,
+  "complete_bridge_USD_upper": 1.4,
+  "shared_stopped_baseline_storage_week_separately_approved": true,
+  "original_PD_still_costs_while_stopped": true,
+  "original_730_hour_overlap_estimate_preserved_in_earlier_receipt": true,
+  "correction": "Use the refreshed Catalog By.s conversion (721 h) for PD proration; do not assume the GCS/PD month conversion is identical.",
+  "sampled_resources": {
+    "command": [
+      "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/env/bin/python",
+      "-I",
+      "-B",
+      "/srv/dl_binner/repo/scripts/e031_control.py",
+      "--plan",
+      "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/science-plan.json",
+      "--workflow"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 2829.8362909650004,
+    "peak_sampled_rss_bytes": 10352848896,
+    "seconds_ceiling": 20237.402738809586,
+    "rss_bytes_ceiling": 26000000000,
+    "launched_pid": 3060,
+    "sampled_cpu_seconds": 3741.6499999999996,
+    "sampled_average_cpus": 1.3222142962637822,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": true
+  },
+  "disk": {
+    "summary": {
+      "samples": 1752,
+      "minimum_free_bytes": 37757513728,
+      "maximum_sampled_global_growth_bytes": 4182585344,
+      "scope": "Sampled task filesystem usage against its first post-mount/pre-payload baseline; source filesystem is separate; not exact attributable bytes"
+    },
+    "task_filesystem_device": 2080,
+    "source_filesystem_terminal": {
+      "total": 316733652992,
+      "used": 287241531392,
+      "free": 29475344384
+    },
+    "science_raw": {
+      "bytes": 137609,
+      "sha256": "713d876b39ba4e8de2b8cfc2546e00d0029f016a0e33f1bc5fbf03d89fab1581"
+    },
+    "collection_raw": {
+      "bytes": 8196,
+      "sha256": "6c5b09eae3956cc3ac5d652ba48b0458611e46ec0479d3f6b9d492a4bd8ae25a"
+    },
+    "command_boundary_samples": [
+      {
+        "stage": "workflow",
+        "epoch": 1793625375.0272856,
+        "used": 45559808,
+        "free": 41894563840
+      },
+      {
+        "stage": "workflow",
+        "epoch": 1793628204.8766396,
+        "used": 2744905728,
+        "free": 39195217920
+      },
+      {
+        "stage": "used-inputs-after",
+        "epoch": 1793628204.8766942,
+        "used": 2744905728,
+        "free": 39195217920
+      },
+      {
+        "stage": "used-inputs-after",
+        "epoch": 1793628318.6226819,
+        "used": 2744987648,
+        "free": 39195136000
+      },
+      {
+        "stage": "collect",
+        "epoch": 1793628318.9121134,
+        "used": 2794512384,
+        "free": 39145611264
+      },
+      {
+        "stage": "collect",
+        "epoch": 1793628456.1419163,
+        "used": 4182523904,
+        "free": 37757599744
+      },
+      {
+        "stage": "upload-e031-evidence.tar.gz",
+        "epoch": 1793628456.1419556,
+        "used": 4182523904,
+        "free": 37757599744
+      },
+      {
+        "stage": "upload-e031-evidence.tar.gz",
+        "epoch": 1793628482.9155219,
+        "used": 4182544384,
+        "free": 37757579264
+      },
+      {
+        "stage": "readback-e031-evidence.tar.gz",
+        "epoch": 1793628485.138702,
+        "used": 4182544384,
+        "free": 37757579264
+      },
+      {
+        "stage": "readback-e031-evidence.tar.gz",
+        "epoch": 1793628500.9774823,
+        "used": 4182560768,
+        "free": 37757562880
+      },
+      {
+        "stage": "upload-e031-evidence.tar.gz.sha256",
+        "epoch": 1793628500.9776185,
+        "used": 4182560768,
+        "free": 37757562880
+      },
+      {
+        "stage": "upload-e031-evidence.tar.gz.sha256",
+        "epoch": 1793628503.8155074,
+        "used": 4182573056,
+        "free": 37757550592
+      },
+      {
+        "stage": "readback-e031-evidence.tar.gz.sha256",
+        "epoch": 1793628503.816063,
+        "used": 4182573056,
+        "free": 37757550592
+      },
+      {
+        "stage": "readback-e031-evidence.tar.gz.sha256",
+        "epoch": 1793628506.1776984,
+        "used": 4182585344,
+        "free": 37757538304
+      },
+      {
+        "stage": "upload-collection.json",
+        "epoch": 1793628506.1777403,
+        "used": 4182585344,
+        "free": 37757538304
+      },
+      {
+        "stage": "upload-collection.json",
+        "epoch": 1793628508.2391448,
+        "used": 4182597632,
+        "free": 37757526016
+      },
+      {
+        "stage": "readback-collection.json",
+        "epoch": 1793628508.2393093,
+        "used": 4182597632,
+        "free": 37757526016
+      },
+      {
+        "stage": "readback-collection.json",
+        "epoch": 1793628509.7902427,
+        "used": 4182609920,
+        "free": 37757513728
+      }
+    ],
+    "scope": "Through archive collection/upload/readback; final compact proof delivery follows this closed snapshot"
+  },
+  "credit_delta_is_not_invoice": true,
+  "retention_end": "2026-11-04T00:00:00+01:00"
+}

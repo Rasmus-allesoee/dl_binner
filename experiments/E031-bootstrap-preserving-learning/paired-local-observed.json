@@ -1,0 +1,1081 @@
+{
+  "status": "PASSED_LOCAL_ENGINEERING; NATIVE_ADMISSION_PENDING",
+  "checked_UTC": "2026-11-02T19:59:41.343639+00:00",
+  "product_and_original_scientific_dispatch_unchanged": true,
+  "paired_tiny": {
+    "status": "PASS",
+    "actual_ready_events": [
+      "barrier",
+      "E009_noGLM_confidence",
+      "E009_noGLM_train",
+      "E009_noGLM_embed",
+      "E009_noGLM_graph",
+      "E009_noGLM_e023",
+      "E009_noGLM_retrieve",
+      "E009_noGLM_forest",
+      "E009_noGLM_construct",
+      "E009_noGLM_export",
+      "E009_noGLM_audit",
+      "E009_noGLM_paired",
+      "E009_GLM_confidence",
+      "E009_GLM_train",
+      "E009_GLM_embed",
+      "E009_GLM_graph",
+      "E009_GLM_e023",
+      "E009_GLM_retrieve",
+      "E009_GLM_forest",
+      "E009_GLM_construct",
+      "E009_GLM_export",
+      "E009_GLM_audit",
+      "E009_GLM_paired",
+      "oral_noGLM_confidence",
+      "oral_noGLM_train",
+      "oral_noGLM_embed",
+      "oral_noGLM_graph",
+      "oral_noGLM_e023",
+      "oral_noGLM_retrieve",
+      "oral_noGLM_forest",
+      "oral_noGLM_construct",
+      "oral_noGLM_export",
+      "oral_noGLM_audit",
+      "oral_noGLM_paired"
+    ],
+    "no_overlap": true,
+    "verified_resume_noop": true,
+    "actual_fits": 3,
+    "same_output_both_constructors": true,
+    "archive": {
+      "status": "SUCCESS",
+      "archive": {
+        "bytes": 10454177,
+        "sha256": "e69dd6b3babcc3e3b52661b8a694e63074da0d94a28c4b0941d2205aa7f8b5eb"
+      },
+      "regular_members": 311,
+      "logical_member_bytes": 12340079,
+      "every_member_verified": true,
+      "aliases": {
+        "work/E009-GLM/construct/result/pre-partition.json": {
+          "bytes": 3855,
+          "sha256": "86f989eb1793ad21cdb935831d0d9614a8ebbd529f5d4ed51019d0f6c261b730",
+          "canonical": "work/E009-GLM/construct/result/post-partition.json"
+        },
+        "work/E009-GLM/construct/result/root-only-choices.json": {
+          "bytes": 419,
+          "sha256": "3ad162f9e4bcc9f6edc27de5e75e179d86a388401582c662aae29a53e25f1689",
+          "canonical": "work/E009-GLM/construct/result/pre-choices.json"
+        },
+        "work/E009-GLM/construct/result/root-only-partition.json": {
+          "bytes": 3855,
+          "sha256": "86f989eb1793ad21cdb935831d0d9614a8ebbd529f5d4ed51019d0f6c261b730",
+          "canonical": "work/E009-GLM/construct/result/post-partition.json"
+        },
+        "work/E009-GLM/e023/science/export/selected/assignments.tsv": {
+          "bytes": 1284,
+          "sha256": "56803860c2d362f19f1e76396fb8e2a4d4aff61b5a7b5dd4cbe5ffff65c3ef5e",
+          "canonical": "work/E009-GLM/e023/science/export/density/assignments.tsv"
+        },
+        "work/E009-GLM/e023/science/export/selected/manifest.json": {
+          "bytes": 718,
+          "sha256": "42e1e001c841715c8226b31bedcdfd8312e57e7bb88a0ba7b8c2302deaa4a935",
+          "canonical": "work/E009-GLM/e023/science/export/density/manifest.json"
+        },
+        "work/E009-GLM/e023/science/result/selected-partition.json": {
+          "bytes": 5855,
+          "sha256": "345a9619de4eef1298c325d42dee5288584b89da4be8ff81c55e49506354a0f3",
+          "canonical": "work/E009-GLM/e023/science/result/density-partition.json"
+        },
+        "work/E009-GLM/export/pre/assignments.tsv": {
+          "bytes": 2109,
+          "sha256": "041992e3446d15d3cd131b107784555852adba310c13423710e120129eef5118",
+          "canonical": "work/E009-GLM/export/post/assignments.tsv"
+        },
+        "work/E009-GLM/export/pre/manifest.json": {
+          "bytes": 718,
+          "sha256": "429373cb3a97cc6cfa26e4c49abb9262e1f1f8939d1cd0664b66d12976d6ac2e",
+          "canonical": "work/E009-GLM/export/post/manifest.json"
+        },
+        "work/E009-GLM/export/root-only/assignments.tsv": {
+          "bytes": 2109,
+          "sha256": "041992e3446d15d3cd131b107784555852adba310c13423710e120129eef5118",
+          "canonical": "work/E009-GLM/export/post/assignments.tsv"
+        },
+        "work/E009-GLM/export/root-only/manifest.json": {
+          "bytes": 718,
+          "sha256": "429373cb3a97cc6cfa26e4c49abb9262e1f1f8939d1cd0664b66d12976d6ac2e",
+          "canonical": "work/E009-GLM/export/post/manifest.json"
+        },
+        "work/E009-GLM/forest/result/post-partition.json": {
+          "bytes": 3722,
+          "sha256": "dd927868c8fd2654d6882e5009d30a83224d087f0b1f964422b61642b83a9781",
+          "canonical": "work/E009-GLM/forest/result/parent-partition.json"
+        },
+        "work/E009-GLM/retrieve/result/audit.json": {
+          "bytes": 9798,
+          "sha256": "f2204f0f02a745d6a0631bf300de58df0f86d8092be1dcd04e5f6bc9cc1a33f9",
+          "canonical": "work/E009-GLM/forest/result/retrieval/audit.json"
+        },
+        "work/E009-GLM/retrieve/result/backend.json": {
+          "bytes": 1103,
+          "sha256": "25e85049e6cdbd45da518c80c36d73af699cdcf318446140e173ef94b2d212fd",
+          "canonical": "work/E009-GLM/forest/result/retrieval/backend.json"
+        },
+        "work/E009-GLM/retrieve/result/certificate.json": {
+          "bytes": 566,
+          "sha256": "2d6d6b96eab8280112ea6e05f7f152bf24cfbf8fa8705dbdb651a5221612ee79",
+          "canonical": "work/E009-GLM/forest/result/retrieval/certificate.json"
+        },
+        "work/E009-GLM/retrieve/result/completed.json": {
+          "bytes": 1873,
+          "sha256": "45b0c6708aa19a08bba984c3415d80c1176e7296a52dd702b4c0ecf28258e91a",
+          "canonical": "work/E009-GLM/forest/result/retrieval/completed.json"
+        },
+        "work/E009-GLM/retrieve/result/neighbors.json": {
+          "bytes": 11141,
+          "sha256": "0263b6ee821c6d396a840a126d4e9a1e4fe6805fb82e4d2c68e48184bc0b3a43",
+          "canonical": "work/E009-GLM/forest/result/retrieval/neighbors.json"
+        },
+        "work/E009-GLM/retrieve/result/neighbors.npz": {
+          "bytes": 4421,
+          "sha256": "910b52e0a9777dac8ed75ac51ad0d17026eafc3fef5a84ffdb3a307a4b71e07b",
+          "canonical": "work/E009-GLM/forest/result/retrieval/neighbors.npz"
+        },
+        "work/E009-GLM/train/result/reference.npz": {
+          "bytes": 6805,
+          "sha256": "2c4744f001b82d93cf2a4c770331e89d69cc942f6f3152d995f446dc93381f64",
+          "canonical": "work/E009-GLM/embed/embeddings.npz"
+        },
+        "work/E009-noGLM/audit/proof.json": {
+          "bytes": 368,
+          "sha256": "122043f191f160295821269ec04c4f0b510f86eef0ab81c26a1cce542d14844b",
+          "canonical": "work/E009-GLM/audit/proof.json"
+        },
+        "work/E009-noGLM/confidence/cache/decisions.jsonl": {
+          "bytes": 2299,
+          "sha256": "183bad74aa146466545d09eae5fc8fbecf2f6b74393cb6448aedf940315d6395",
+          "canonical": "work/E009-GLM/confidence/cache/decisions.jsonl"
+        },
+        "work/E009-noGLM/confidence/cache/pairs.json": {
+          "bytes": 312,
+          "sha256": "c1c209eea4d13bf14f496c6f7532e782be576e56f9f4f33c0697215799a54439",
+          "canonical": "work/E009-GLM/confidence/cache/pairs.json"
+        },
+        "work/E009-noGLM/confidence/cache/pairs.npz": {
+          "bytes": 1446,
+          "sha256": "23d83f52bc02095e6e4d74033fd64c9a71dc4a984a8f48c990a1b3d333859b8e",
+          "canonical": "work/E009-GLM/confidence/cache/pairs.npz"
+        },
+        "work/E009-noGLM/construct/result/pre-partition.json": {
+          "bytes": 3855,
+          "sha256": "83f11d245281668a5b134ff9da3a2291fbbfc4ffc072e8628f4bcfea91c5f31f",
+          "canonical": "work/E009-noGLM/construct/result/post-partition.json"
+        },
+        "work/E009-noGLM/construct/result/root-only-choices.json": {
+          "bytes": 420,
+          "sha256": "8ee711a1429dff0415d1b13207a2453b8e9602d6fde3b1aa662000c0345ef985",
+          "canonical": "work/E009-noGLM/construct/result/pre-choices.json"
+        },
+        "work/E009-noGLM/construct/result/root-only-partition.json": {
+          "bytes": 3855,
+          "sha256": "83f11d245281668a5b134ff9da3a2291fbbfc4ffc072e8628f4bcfea91c5f31f",
+          "canonical": "work/E009-noGLM/construct/result/post-partition.json"
+        },
+        "work/E009-noGLM/construct/result/updates.json": {
+          "bytes": 4675,
+          "sha256": "6066c3851803b2901194ed690caf01836628caa531527bc774c85c8a87d703a0",
+          "canonical": "work/E009-GLM/construct/result/updates.json"
+        },
+        "work/E009-noGLM/e023/science/export/density/assignments.tsv": {
+          "bytes": 1284,
+          "sha256": "56803860c2d362f19f1e76396fb8e2a4d4aff61b5a7b5dd4cbe5ffff65c3ef5e",
+          "canonical": "work/E009-GLM/e023/science/export/density/assignments.tsv"
+        },
+        "work/E009-noGLM/e023/science/export/selected/assignments.tsv": {
+          "bytes": 1284,
+          "sha256": "56803860c2d362f19f1e76396fb8e2a4d4aff61b5a7b5dd4cbe5ffff65c3ef5e",
+          "canonical": "work/E009-GLM/e023/science/export/density/assignments.tsv"
+        },
+        "work/E009-noGLM/e023/science/export/selected/manifest.json": {
+          "bytes": 718,
+          "sha256": "9f572bc67d3d28c2ccd4491d1253ca64d7a51af4760ee38c96c478be7d569b40",
+          "canonical": "work/E009-noGLM/e023/science/export/density/manifest.json"
+        },
+        "work/E009-noGLM/e023/science/result/selected-partition.json": {
+          "bytes": 5852,
+          "sha256": "6d279be88d06619f67d17904077e4b5bd068e14deac16c10e96fec832ad26ccc",
+          "canonical": "work/E009-noGLM/e023/science/result/density-partition.json"
+        },
+        "work/E009-noGLM/export/post/assignments.tsv": {
+          "bytes": 2109,
+          "sha256": "041992e3446d15d3cd131b107784555852adba310c13423710e120129eef5118",
+          "canonical": "work/E009-GLM/export/post/assignments.tsv"
+        },
+        "work/E009-noGLM/export/pre/assignments.tsv": {
+          "bytes": 2109,
+          "sha256": "041992e3446d15d3cd131b107784555852adba310c13423710e120129eef5118",
+          "canonical": "work/E009-GLM/export/post/assignments.tsv"
+        },
+        "work/E009-noGLM/export/pre/manifest.json": {
+          "bytes": 718,
+          "sha256": "51077b81c990c1d2fba64eac93493a1b7b361c78804b402a959f667aa5201a18",
+          "canonical": "work/E009-noGLM/export/post/manifest.json"
+        },
+        "work/E009-noGLM/export/root-only/assignments.tsv": {
+          "bytes": 2109,
+          "sha256": "041992e3446d15d3cd131b107784555852adba310c13423710e120129eef5118",
+          "canonical": "work/E009-GLM/export/post/assignments.tsv"
+        },
+        "work/E009-noGLM/export/root-only/manifest.json": {
+          "bytes": 718,
+          "sha256": "51077b81c990c1d2fba64eac93493a1b7b361c78804b402a959f667aa5201a18",
+          "canonical": "work/E009-noGLM/export/post/manifest.json"
+        },
+        "work/E009-noGLM/forest/result/post-partition.json": {
+          "bytes": 3722,
+          "sha256": "72e166076dd18bd0581b14a7ef980978904373df9a0648247d588cabe6b2232f",
+          "canonical": "work/E009-noGLM/forest/result/parent-partition.json"
+        },
+        "work/E009-noGLM/forest/result/retrieval/backend.json": {
+          "bytes": 1103,
+          "sha256": "25e85049e6cdbd45da518c80c36d73af699cdcf318446140e173ef94b2d212fd",
+          "canonical": "work/E009-GLM/forest/result/retrieval/backend.json"
+        },
+        "work/E009-noGLM/retrieve/result/audit.json": {
+          "bytes": 9792,
+          "sha256": "2d51317bae6d10166208124a5f7cba3cc2c2404543a9269bace5b2e3c90e0ceb",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/audit.json"
+        },
+        "work/E009-noGLM/retrieve/result/backend.json": {
+          "bytes": 1103,
+          "sha256": "25e85049e6cdbd45da518c80c36d73af699cdcf318446140e173ef94b2d212fd",
+          "canonical": "work/E009-GLM/forest/result/retrieval/backend.json"
+        },
+        "work/E009-noGLM/retrieve/result/certificate.json": {
+          "bytes": 566,
+          "sha256": "ed04e17ff16cd325ba351347c8a628239af2d345ce97400d616ae30b8e25ebf6",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/certificate.json"
+        },
+        "work/E009-noGLM/retrieve/result/completed.json": {
+          "bytes": 1873,
+          "sha256": "a423c9309c6a6af591e7d3678c346aea5a1c5937bbf3ea924532d00ef062d585",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/completed.json"
+        },
+        "work/E009-noGLM/retrieve/result/neighbors.json": {
+          "bytes": 11135,
+          "sha256": "ef947c70f3c3ac27db6e3cdb17c8a47e8c223fb8a1245f51d4be48d3b4cb9745",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/neighbors.json"
+        },
+        "work/E009-noGLM/retrieve/result/neighbors.npz": {
+          "bytes": 4425,
+          "sha256": "3ea7195db1f3b78082dbfe1d4e31b317a0ae111b16ff768c2b386fd731977d6a",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/neighbors.npz"
+        },
+        "work/E009-noGLM/train/result/reference.npz": {
+          "bytes": 6807,
+          "sha256": "4c380f2f88b90bf3a6b12d4e2e1599cc0aa912220ea492123dde639890708e42",
+          "canonical": "work/E009-noGLM/embed/embeddings.npz"
+        },
+        "work/logs/E009_GLM_confidence.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/E009_GLM_embed.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/E009_GLM_forest.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/E009_GLM_paired.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/E009_noGLM_audit.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/E009_noGLM_confidence.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/E009_noGLM_embed.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/E009_noGLM_forest.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/E009_noGLM_paired.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/barrier.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/oral_noGLM_audit.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/oral_noGLM_confidence.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/oral_noGLM_embed.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/oral_noGLM_forest.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/logs/oral_noGLM_paired.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "canonical": "work/logs/E009_GLM_audit.log"
+        },
+        "work/oral-noGLM/audit/proof.json": {
+          "bytes": 368,
+          "sha256": "122043f191f160295821269ec04c4f0b510f86eef0ab81c26a1cce542d14844b",
+          "canonical": "work/E009-GLM/audit/proof.json"
+        },
+        "work/oral-noGLM/confidence/cache/cache.json": {
+          "bytes": 1854,
+          "sha256": "5671f587865a1150ecce3f84dc2620dae5403c596472ef9d88580f788d5aa6c7",
+          "canonical": "work/E009-noGLM/confidence/cache/cache.json"
+        },
+        "work/oral-noGLM/confidence/cache/decisions.jsonl": {
+          "bytes": 2299,
+          "sha256": "183bad74aa146466545d09eae5fc8fbecf2f6b74393cb6448aedf940315d6395",
+          "canonical": "work/E009-GLM/confidence/cache/decisions.jsonl"
+        },
+        "work/oral-noGLM/confidence/cache/pairs.json": {
+          "bytes": 312,
+          "sha256": "c1c209eea4d13bf14f496c6f7532e782be576e56f9f4f33c0697215799a54439",
+          "canonical": "work/E009-GLM/confidence/cache/pairs.json"
+        },
+        "work/oral-noGLM/confidence/cache/pairs.npz": {
+          "bytes": 1446,
+          "sha256": "23d83f52bc02095e6e4d74033fd64c9a71dc4a984a8f48c990a1b3d333859b8e",
+          "canonical": "work/E009-GLM/confidence/cache/pairs.npz"
+        },
+        "work/oral-noGLM/construct/result/candidate-profiles.json": {
+          "bytes": 14908,
+          "sha256": "d3ec8f22b449a06d4b49aba986fef9a98658a3f6868992f33cd0efb3ad3da948",
+          "canonical": "work/E009-noGLM/construct/result/candidate-profiles.json"
+        },
+        "work/oral-noGLM/construct/result/candidate-profiles.npz": {
+          "bytes": 2815,
+          "sha256": "8d471ae21e8e80c73001848fcefad532465d62bcc406673728828765b21ff652",
+          "canonical": "work/E009-noGLM/construct/result/candidate-profiles.npz"
+        },
+        "work/oral-noGLM/construct/result/post-partition.json": {
+          "bytes": 3855,
+          "sha256": "83f11d245281668a5b134ff9da3a2291fbbfc4ffc072e8628f4bcfea91c5f31f",
+          "canonical": "work/E009-noGLM/construct/result/post-partition.json"
+        },
+        "work/oral-noGLM/construct/result/pre-choices.json": {
+          "bytes": 420,
+          "sha256": "8ee711a1429dff0415d1b13207a2453b8e9602d6fde3b1aa662000c0345ef985",
+          "canonical": "work/E009-noGLM/construct/result/pre-choices.json"
+        },
+        "work/oral-noGLM/construct/result/pre-partition.json": {
+          "bytes": 3855,
+          "sha256": "83f11d245281668a5b134ff9da3a2291fbbfc4ffc072e8628f4bcfea91c5f31f",
+          "canonical": "work/E009-noGLM/construct/result/post-partition.json"
+        },
+        "work/oral-noGLM/construct/result/profile-calibration.json": {
+          "bytes": 11793,
+          "sha256": "b8643a967d18b2e77d9fcaac7ae3635edf94470a125a4c4e27fc1291324c9ede",
+          "canonical": "work/E009-noGLM/construct/result/profile-calibration.json"
+        },
+        "work/oral-noGLM/construct/result/root-only-choices.json": {
+          "bytes": 420,
+          "sha256": "8ee711a1429dff0415d1b13207a2453b8e9602d6fde3b1aa662000c0345ef985",
+          "canonical": "work/E009-noGLM/construct/result/pre-choices.json"
+        },
+        "work/oral-noGLM/construct/result/root-only-partition.json": {
+          "bytes": 3855,
+          "sha256": "83f11d245281668a5b134ff9da3a2291fbbfc4ffc072e8628f4bcfea91c5f31f",
+          "canonical": "work/E009-noGLM/construct/result/post-partition.json"
+        },
+        "work/oral-noGLM/construct/result/updates.json": {
+          "bytes": 4675,
+          "sha256": "6066c3851803b2901194ed690caf01836628caa531527bc774c85c8a87d703a0",
+          "canonical": "work/E009-GLM/construct/result/updates.json"
+        },
+        "work/oral-noGLM/e023/query-neighbors.json": {
+          "bytes": 11026,
+          "sha256": "ce053c4254318ebfbcb242edd4dc28573c4aa626f02a2100b02d69703880dcdf",
+          "canonical": "work/E009-noGLM/e023/query-neighbors.json"
+        },
+        "work/oral-noGLM/e023/science/export/density/assignments.tsv": {
+          "bytes": 1284,
+          "sha256": "56803860c2d362f19f1e76396fb8e2a4d4aff61b5a7b5dd4cbe5ffff65c3ef5e",
+          "canonical": "work/E009-GLM/e023/science/export/density/assignments.tsv"
+        },
+        "work/oral-noGLM/e023/science/export/density/manifest.json": {
+          "bytes": 718,
+          "sha256": "9f572bc67d3d28c2ccd4491d1253ca64d7a51af4760ee38c96c478be7d569b40",
+          "canonical": "work/E009-noGLM/e023/science/export/density/manifest.json"
+        },
+        "work/oral-noGLM/e023/science/export/selected/assignments.tsv": {
+          "bytes": 1284,
+          "sha256": "56803860c2d362f19f1e76396fb8e2a4d4aff61b5a7b5dd4cbe5ffff65c3ef5e",
+          "canonical": "work/E009-GLM/e023/science/export/density/assignments.tsv"
+        },
+        "work/oral-noGLM/e023/science/export/selected/manifest.json": {
+          "bytes": 718,
+          "sha256": "9f572bc67d3d28c2ccd4491d1253ca64d7a51af4760ee38c96c478be7d569b40",
+          "canonical": "work/E009-noGLM/e023/science/export/density/manifest.json"
+        },
+        "work/oral-noGLM/e023/science/result/alternatives.json": {
+          "bytes": 456,
+          "sha256": "f220e27b5d48eb093dc946f30f4a950845c126fe3f28fa4f9ff9422d21f734d2",
+          "canonical": "work/E009-noGLM/e023/science/result/alternatives.json"
+        },
+        "work/oral-noGLM/e023/science/result/completed.json": {
+          "bytes": 5808,
+          "sha256": "fa774ca76db1054c407055bfa3fb58110f31db0b2dc1169b28d5457a85b9add7",
+          "canonical": "work/E009-noGLM/e023/science/result/completed.json"
+        },
+        "work/oral-noGLM/e023/science/result/density-choices.json": {
+          "bytes": 671,
+          "sha256": "8ecdd87bfe190ad96acb86fc6ab02e77678a663628da2a9fa9981eea06d6df88",
+          "canonical": "work/E009-noGLM/e023/science/result/density-choices.json"
+        },
+        "work/oral-noGLM/e023/science/result/density-partition.json": {
+          "bytes": 5852,
+          "sha256": "6d279be88d06619f67d17904077e4b5bd068e14deac16c10e96fec832ad26ccc",
+          "canonical": "work/E009-noGLM/e023/science/result/density-partition.json"
+        },
+        "work/oral-noGLM/e023/science/result/hierarchy.json": {
+          "bytes": 4854,
+          "sha256": "4fe03ed9d607d0e9a22938933a9cadb62aefad7c0062796583aa99f4713e6419",
+          "canonical": "work/E009-noGLM/e023/science/result/hierarchy.json"
+        },
+        "work/oral-noGLM/e023/science/result/hierarchy.npz": {
+          "bytes": 7394,
+          "sha256": "8d241d65183259d93434575f1bcea0b2912a0e4b6b67e5f87741c8916943dced",
+          "canonical": "work/E009-noGLM/e023/science/result/hierarchy.npz"
+        },
+        "work/oral-noGLM/e023/science/result/selected-choices.json": {
+          "bytes": 702,
+          "sha256": "b55fb0a10e676af7b1be95aa2237a2071db4f8697f023e9e8ac8fc062a95e60d",
+          "canonical": "work/E009-noGLM/e023/science/result/selected-choices.json"
+        },
+        "work/oral-noGLM/e023/science/result/selected-partition.json": {
+          "bytes": 5852,
+          "sha256": "6d279be88d06619f67d17904077e4b5bd068e14deac16c10e96fec832ad26ccc",
+          "canonical": "work/E009-noGLM/e023/science/result/density-partition.json"
+        },
+        "work/oral-noGLM/embed/embeddings.json": {
+          "bytes": 668,
+          "sha256": "3f069941071edd78f527bba37c45f6af4f4e7f9e5e047ae9950274f9d033a46e",
+          "canonical": "work/E009-noGLM/embed/embeddings.json"
+        },
+        "work/oral-noGLM/embed/embeddings.npz": {
+          "bytes": 6807,
+          "sha256": "4c380f2f88b90bf3a6b12d4e2e1599cc0aa912220ea492123dde639890708e42",
+          "canonical": "work/E009-noGLM/embed/embeddings.npz"
+        },
+        "work/oral-noGLM/export/accounting.json": {
+          "bytes": 2362,
+          "sha256": "1bd9063f95112f682a9d2d5640e108c5fc5a803c9d2f6278a2633a147069c946",
+          "canonical": "work/E009-noGLM/export/accounting.json"
+        },
+        "work/oral-noGLM/export/post/assignments.tsv": {
+          "bytes": 2109,
+          "sha256": "041992e3446d15d3cd131b107784555852adba310c13423710e120129eef5118",
+          "canonical": "work/E009-GLM/export/post/assignments.tsv"
+        },
+        "work/oral-noGLM/export/post/manifest.json": {
+          "bytes": 718,
+          "sha256": "51077b81c990c1d2fba64eac93493a1b7b361c78804b402a959f667aa5201a18",
+          "canonical": "work/E009-noGLM/export/post/manifest.json"
+        },
+        "work/oral-noGLM/export/pre/assignments.tsv": {
+          "bytes": 2109,
+          "sha256": "041992e3446d15d3cd131b107784555852adba310c13423710e120129eef5118",
+          "canonical": "work/E009-GLM/export/post/assignments.tsv"
+        },
+        "work/oral-noGLM/export/pre/manifest.json": {
+          "bytes": 718,
+          "sha256": "51077b81c990c1d2fba64eac93493a1b7b361c78804b402a959f667aa5201a18",
+          "canonical": "work/E009-noGLM/export/post/manifest.json"
+        },
+        "work/oral-noGLM/export/root-only/assignments.tsv": {
+          "bytes": 2109,
+          "sha256": "041992e3446d15d3cd131b107784555852adba310c13423710e120129eef5118",
+          "canonical": "work/E009-GLM/export/post/assignments.tsv"
+        },
+        "work/oral-noGLM/export/root-only/manifest.json": {
+          "bytes": 718,
+          "sha256": "51077b81c990c1d2fba64eac93493a1b7b361c78804b402a959f667aa5201a18",
+          "canonical": "work/E009-noGLM/export/post/manifest.json"
+        },
+        "work/oral-noGLM/forest/result/alternatives.json": {
+          "bytes": 138,
+          "sha256": "0cd941a10d9659d13dd5233c59759b0763c972e5309c6147088c47924eb9d1f3",
+          "canonical": "work/E009-noGLM/forest/result/alternatives.json"
+        },
+        "work/oral-noGLM/forest/result/completed.json": {
+          "bytes": 14997,
+          "sha256": "2770f0926ac84ff541eced553e6d1183170dce00a60436398ec6e125ab70370a",
+          "canonical": "work/E009-noGLM/forest/result/completed.json"
+        },
+        "work/oral-noGLM/forest/result/forest.json": {
+          "bytes": 285,
+          "sha256": "d42f2333634a7b05a879de3c2ffc8d640606fce99b77c717af17e9e090b13a91",
+          "canonical": "work/E009-noGLM/forest/result/forest.json"
+        },
+        "work/oral-noGLM/forest/result/forest.npz": {
+          "bytes": 2521,
+          "sha256": "50d679aebc0cb7ef9fcfe3751f5af0e020056c4d82bace23c31328804f25b3f6",
+          "canonical": "work/E009-noGLM/forest/result/forest.npz"
+        },
+        "work/oral-noGLM/forest/result/parent-choices.json": {
+          "bytes": 222,
+          "sha256": "df62d2c9d941491decf3d3e9aed11d06339d79cbf675b94f9f62c30e435dc9f8",
+          "canonical": "work/E009-noGLM/forest/result/parent-choices.json"
+        },
+        "work/oral-noGLM/forest/result/parent-partition.json": {
+          "bytes": 3722,
+          "sha256": "72e166076dd18bd0581b14a7ef980978904373df9a0648247d588cabe6b2232f",
+          "canonical": "work/E009-noGLM/forest/result/parent-partition.json"
+        },
+        "work/oral-noGLM/forest/result/post-choices.json": {
+          "bytes": 237,
+          "sha256": "84a698b33bcc5bfe7535d595e2cab42dcedb8853e56f31dd50a2fa395c6a077a",
+          "canonical": "work/E009-noGLM/forest/result/post-choices.json"
+        },
+        "work/oral-noGLM/forest/result/post-partition.json": {
+          "bytes": 3722,
+          "sha256": "72e166076dd18bd0581b14a7ef980978904373df9a0648247d588cabe6b2232f",
+          "canonical": "work/E009-noGLM/forest/result/parent-partition.json"
+        },
+        "work/oral-noGLM/forest/result/retrieval/audit.json": {
+          "bytes": 9792,
+          "sha256": "2d51317bae6d10166208124a5f7cba3cc2c2404543a9269bace5b2e3c90e0ceb",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/audit.json"
+        },
+        "work/oral-noGLM/forest/result/retrieval/backend.json": {
+          "bytes": 1103,
+          "sha256": "25e85049e6cdbd45da518c80c36d73af699cdcf318446140e173ef94b2d212fd",
+          "canonical": "work/E009-GLM/forest/result/retrieval/backend.json"
+        },
+        "work/oral-noGLM/forest/result/retrieval/certificate.json": {
+          "bytes": 566,
+          "sha256": "ed04e17ff16cd325ba351347c8a628239af2d345ce97400d616ae30b8e25ebf6",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/certificate.json"
+        },
+        "work/oral-noGLM/forest/result/retrieval/completed.json": {
+          "bytes": 1873,
+          "sha256": "a423c9309c6a6af591e7d3678c346aea5a1c5937bbf3ea924532d00ef062d585",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/completed.json"
+        },
+        "work/oral-noGLM/forest/result/retrieval/neighbors.json": {
+          "bytes": 11135,
+          "sha256": "ef947c70f3c3ac27db6e3cdb17c8a47e8c223fb8a1245f51d4be48d3b4cb9745",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/neighbors.json"
+        },
+        "work/oral-noGLM/forest/result/retrieval/neighbors.npz": {
+          "bytes": 4425,
+          "sha256": "3ea7195db1f3b78082dbfe1d4e31b317a0ae111b16ff768c2b386fd731977d6a",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/neighbors.npz"
+        },
+        "work/oral-noGLM/graph/result/completed.json": {
+          "bytes": 2396,
+          "sha256": "06de7b0506ce733e2fea49c70f6d662e0c7e9253a473953d11c82b5bdbe559ee",
+          "canonical": "work/E009-noGLM/graph/result/completed.json"
+        },
+        "work/oral-noGLM/graph/result/graph.json": {
+          "bytes": 1353,
+          "sha256": "9584b0ca402b3416173a3bde6c8c41de53fcf5db25ed866a8f0d971f7eb06abf",
+          "canonical": "work/E009-noGLM/graph/result/graph.json"
+        },
+        "work/oral-noGLM/graph/result/graph.npz": {
+          "bytes": 4101,
+          "sha256": "7799cb111bfa9ea327377921f499c97c473551f239aa40e6a1353255099df469",
+          "canonical": "work/E009-noGLM/graph/result/graph.npz"
+        },
+        "work/oral-noGLM/retrieve/result/audit.json": {
+          "bytes": 9792,
+          "sha256": "2d51317bae6d10166208124a5f7cba3cc2c2404543a9269bace5b2e3c90e0ceb",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/audit.json"
+        },
+        "work/oral-noGLM/retrieve/result/backend.json": {
+          "bytes": 1103,
+          "sha256": "25e85049e6cdbd45da518c80c36d73af699cdcf318446140e173ef94b2d212fd",
+          "canonical": "work/E009-GLM/forest/result/retrieval/backend.json"
+        },
+        "work/oral-noGLM/retrieve/result/certificate.json": {
+          "bytes": 566,
+          "sha256": "ed04e17ff16cd325ba351347c8a628239af2d345ce97400d616ae30b8e25ebf6",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/certificate.json"
+        },
+        "work/oral-noGLM/retrieve/result/completed.json": {
+          "bytes": 1873,
+          "sha256": "a423c9309c6a6af591e7d3678c346aea5a1c5937bbf3ea924532d00ef062d585",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/completed.json"
+        },
+        "work/oral-noGLM/retrieve/result/neighbors.json": {
+          "bytes": 11135,
+          "sha256": "ef947c70f3c3ac27db6e3cdb17c8a47e8c223fb8a1245f51d4be48d3b4cb9745",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/neighbors.json"
+        },
+        "work/oral-noGLM/retrieve/result/neighbors.npz": {
+          "bytes": 4425,
+          "sha256": "3ea7195db1f3b78082dbfe1d4e31b317a0ae111b16ff768c2b386fd731977d6a",
+          "canonical": "work/E009-noGLM/forest/result/retrieval/neighbors.npz"
+        },
+        "work/oral-noGLM/train/result/checkpoint.pt": {
+          "bytes": 4443344,
+          "sha256": "082c96388a2d7b3e31f4e2f4b5f35f1dfe96b566e4241c2bf8b0522159a53274",
+          "canonical": "work/E009-noGLM/train/result/checkpoint.pt"
+        },
+        "work/oral-noGLM/train/result/geometry-01.json": {
+          "bytes": 913,
+          "sha256": "34e3f66efcca39cb20f5e4e0932710b4bbf71ef0d1cea938d45976806206d886",
+          "canonical": "work/E009-noGLM/train/result/geometry-01.json"
+        },
+        "work/oral-noGLM/train/result/geometry-02.json": {
+          "bytes": 912,
+          "sha256": "08f432d69d32765ecca1d42234ab1d3784b7a9579b8f86d4572c53086aa4fa2a",
+          "canonical": "work/E009-noGLM/train/result/geometry-02.json"
+        },
+        "work/oral-noGLM/train/result/geometry-03.json": {
+          "bytes": 909,
+          "sha256": "6d65678d054dd8880463aa9fc9af0ff72bbf8bf6cd4c944ade1711c06f6e7a86",
+          "canonical": "work/E009-noGLM/train/result/geometry-03.json"
+        },
+        "work/oral-noGLM/train/result/geometry-04.json": {
+          "bytes": 912,
+          "sha256": "b347c171d2bc1679542503ebff11b63425c04c98acd0ce9b0791af0ecc3386ad",
+          "canonical": "work/E009-noGLM/train/result/geometry-04.json"
+        },
+        "work/oral-noGLM/train/result/geometry-05.json": {
+          "bytes": 910,
+          "sha256": "8d7208e2578dc4a30eeb3949727c31fa5e19f64d8c3d36db8a8bc47859653257",
+          "canonical": "work/E009-noGLM/train/result/geometry-05.json"
+        },
+        "work/oral-noGLM/train/result/geometry-06.json": {
+          "bytes": 910,
+          "sha256": "e084819138f186b40760cf4c7681f1f5a2ccb2a8020c39ea416c5c55a0721a2b",
+          "canonical": "work/E009-noGLM/train/result/geometry-06.json"
+        },
+        "work/oral-noGLM/train/result/geometry-07.json": {
+          "bytes": 912,
+          "sha256": "4733f165397d8663acdea7ae4960640c677251a66241dfcbd591c904377ec499",
+          "canonical": "work/E009-noGLM/train/result/geometry-07.json"
+        },
+        "work/oral-noGLM/train/result/geometry-08.json": {
+          "bytes": 907,
+          "sha256": "3f2d8755deb47736bd16b09e642d75ccbe49632f97e159e6ef0c3f1f175cc081",
+          "canonical": "work/E009-noGLM/train/result/geometry-08.json"
+        },
+        "work/oral-noGLM/train/result/geometry-09.json": {
+          "bytes": 909,
+          "sha256": "2290d20756be187e93da16123c604b0caae45af38a94ed452eed63f5434dccf5",
+          "canonical": "work/E009-noGLM/train/result/geometry-09.json"
+        },
+        "work/oral-noGLM/train/result/geometry-10.json": {
+          "bytes": 910,
+          "sha256": "fb4faa4b9aac111ef1cf7ebae03fd703490cfe9176e578a570e402e9632179c8",
+          "canonical": "work/E009-noGLM/train/result/geometry-10.json"
+        },
+        "work/oral-noGLM/train/result/geometry-11.json": {
+          "bytes": 910,
+          "sha256": "577ac8030ddaf5f8523df26627a809ada427781499fbe3b547002a8c9a3c52cf",
+          "canonical": "work/E009-noGLM/train/result/geometry-11.json"
+        },
+        "work/oral-noGLM/train/result/geometry-12.json": {
+          "bytes": 908,
+          "sha256": "a6ca93d985b21a60a8a53b5857f733821bc75e6e28ec393ad6a22849bf2e561d",
+          "canonical": "work/E009-noGLM/train/result/geometry-12.json"
+        },
+        "work/oral-noGLM/train/result/geometry-13.json": {
+          "bytes": 911,
+          "sha256": "84f391c0f034ddb7767643005dcff7a90985d466d6948380b4b784bfede78c3a",
+          "canonical": "work/E009-noGLM/train/result/geometry-13.json"
+        },
+        "work/oral-noGLM/train/result/geometry-14.json": {
+          "bytes": 910,
+          "sha256": "14da3980305511cef5a7625aa49be3a7ab18324d5aeee9a74f1e82a80795cc4a",
+          "canonical": "work/E009-noGLM/train/result/geometry-14.json"
+        },
+        "work/oral-noGLM/train/result/geometry-15.json": {
+          "bytes": 910,
+          "sha256": "9380f02bfd887ca1ccb6e4ad05fefd5f8838c7080dfd033340579ff1b951955f",
+          "canonical": "work/E009-noGLM/train/result/geometry-15.json"
+        },
+        "work/oral-noGLM/train/result/geometry-16.json": {
+          "bytes": 911,
+          "sha256": "dec6967ccf98f1fafc8ad156095b15783d1c53f504b9d577f80d5c92b56c5fc7",
+          "canonical": "work/E009-noGLM/train/result/geometry-16.json"
+        },
+        "work/oral-noGLM/train/result/geometry-17.json": {
+          "bytes": 910,
+          "sha256": "e8aa4f78dbdc55b5e8b338fd7d82c2b51f3663f793533e310a16b7b442fc580f",
+          "canonical": "work/E009-noGLM/train/result/geometry-17.json"
+        },
+        "work/oral-noGLM/train/result/geometry-18.json": {
+          "bytes": 909,
+          "sha256": "b2be3f00dce60240b938a5965be50492047cf4d1a2dbcdced7fd0617ea61086a",
+          "canonical": "work/E009-noGLM/train/result/geometry-18.json"
+        },
+        "work/oral-noGLM/train/result/geometry-19.json": {
+          "bytes": 910,
+          "sha256": "67bf00ee81546fd6f4d34ecbc637c21651bda96f09a186a6d8e6b27d0f980bfd",
+          "canonical": "work/E009-noGLM/train/result/geometry-19.json"
+        },
+        "work/oral-noGLM/train/result/geometry-20.json": {
+          "bytes": 910,
+          "sha256": "e3ec93e18fbd6732aa45ee4a65915e8ee53ce3faf9287075f68884560f0c87ab",
+          "canonical": "work/E009-noGLM/train/result/geometry-20.json"
+        },
+        "work/oral-noGLM/train/result/initial-state.json": {
+          "bytes": 2813,
+          "sha256": "d00d0455f07f27e7a769ffcfdf01788b126b018e44ba8803e724baeaac96788f",
+          "canonical": "work/E009-noGLM/train/result/initial-state.json"
+        },
+        "work/oral-noGLM/train/result/reference.json": {
+          "bytes": 552,
+          "sha256": "0604c10e41e14d1dd341511c429ce36ceab19c91c2b4751b78544c81cc68c7fd",
+          "canonical": "work/E009-noGLM/train/result/reference.json"
+        },
+        "work/oral-noGLM/train/result/reference.npz": {
+          "bytes": 6807,
+          "sha256": "4c380f2f88b90bf3a6b12d4e2e1599cc0aa912220ea492123dde639890708e42",
+          "canonical": "work/E009-noGLM/embed/embeddings.npz"
+        }
+      },
+      "omitted_retained_on_disk": {},
+      "control_inventory": {
+        "bytes": 1949,
+        "sha256": "56d644f3fde109deb54c70db8033ac452e76e852b513b2b1ad28a27965213f03"
+      },
+      "omitted_inventory_is_not_backup": true
+    },
+    "reader_contracts": {
+      "E009-noGLM/learning": {
+        "status": "PASS",
+        "comparison": "learning",
+        "unit": "E009-noGLM",
+        "role": "student",
+        "axis": {
+          "rows": 35,
+          "bp": 105648,
+          "eligible": 33,
+          "samples": [
+            "Z9",
+            "A1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6",
+            "q7",
+            "q8",
+            "q0"
+          ]
+        },
+        "features": {
+          "bytes": 9191,
+          "sha256": "97e479a5de44464801f144e3b174db2b09ea8f837a0e933b65831003aa61ac7a"
+        },
+        "native_numeric_audit_verified": true,
+        "independent_archive_admission": {
+          "provider_status": "TERMINATED",
+          "archive_and_every_member_verified": true,
+          "cost_and_retention_admitted": true,
+          "workflow_completed": true,
+          "exact_source_schedule_axes_verified": true,
+          "fixture_only": true,
+          "live_provider_or_billing_observed": false
+        },
+        "local_model_inference": false,
+        "original_Mac_portability_tolerance_unchanged": true
+      },
+      "E009-noGLM/learning-E023": {
+        "status": "PASS",
+        "comparison": "learning-E023",
+        "unit": "E009-noGLM",
+        "role": "student",
+        "axis": {
+          "rows": 35,
+          "bp": 105648,
+          "eligible": 33,
+          "samples": [
+            "Z9",
+            "A1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6",
+            "q7",
+            "q8",
+            "q0"
+          ]
+        },
+        "features": {
+          "bytes": 9191,
+          "sha256": "97e479a5de44464801f144e3b174db2b09ea8f837a0e933b65831003aa61ac7a"
+        },
+        "native_numeric_audit_verified": true,
+        "independent_archive_admission": {
+          "provider_status": "TERMINATED",
+          "archive_and_every_member_verified": true,
+          "cost_and_retention_admitted": true,
+          "workflow_completed": true,
+          "exact_source_schedule_axes_verified": true,
+          "fixture_only": true,
+          "live_provider_or_billing_observed": false
+        },
+        "local_model_inference": false,
+        "original_Mac_portability_tolerance_unchanged": true
+      },
+      "E009-GLM/learning": {
+        "status": "PASS",
+        "comparison": "learning",
+        "unit": "E009-GLM",
+        "role": "student",
+        "axis": {
+          "rows": 35,
+          "bp": 105648,
+          "eligible": 33,
+          "samples": [
+            "Z9",
+            "A1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6",
+            "q7",
+            "q8",
+            "q0"
+          ]
+        },
+        "features": {
+          "bytes": 9191,
+          "sha256": "97e479a5de44464801f144e3b174db2b09ea8f837a0e933b65831003aa61ac7a"
+        },
+        "native_numeric_audit_verified": true,
+        "independent_archive_admission": {
+          "provider_status": "TERMINATED",
+          "archive_and_every_member_verified": true,
+          "cost_and_retention_admitted": true,
+          "workflow_completed": true,
+          "exact_source_schedule_axes_verified": true,
+          "fixture_only": true,
+          "live_provider_or_billing_observed": false
+        },
+        "local_model_inference": false,
+        "original_Mac_portability_tolerance_unchanged": true
+      },
+      "E009-GLM/learning-E023": {
+        "status": "PASS",
+        "comparison": "learning-E023",
+        "unit": "E009-GLM",
+        "role": "student",
+        "axis": {
+          "rows": 35,
+          "bp": 105648,
+          "eligible": 33,
+          "samples": [
+            "Z9",
+            "A1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6",
+            "q7",
+            "q8",
+            "q0"
+          ]
+        },
+        "features": {
+          "bytes": 9191,
+          "sha256": "97e479a5de44464801f144e3b174db2b09ea8f837a0e933b65831003aa61ac7a"
+        },
+        "native_numeric_audit_verified": true,
+        "independent_archive_admission": {
+          "provider_status": "TERMINATED",
+          "archive_and_every_member_verified": true,
+          "cost_and_retention_admitted": true,
+          "workflow_completed": true,
+          "exact_source_schedule_axes_verified": true,
+          "fixture_only": true,
+          "live_provider_or_billing_observed": false
+        },
+        "local_model_inference": false,
+        "original_Mac_portability_tolerance_unchanged": true
+      },
+      "oral-noGLM/learning": {
+        "status": "PASS",
+        "comparison": "learning",
+        "unit": "oral-noGLM",
+        "role": "student",
+        "axis": {
+          "rows": 35,
+          "bp": 105648,
+          "eligible": 33,
+          "samples": [
+            "Z9",
+            "A1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6",
+            "q7",
+            "q8",
+            "q0"
+          ]
+        },
+        "features": {
+          "bytes": 9191,
+          "sha256": "97e479a5de44464801f144e3b174db2b09ea8f837a0e933b65831003aa61ac7a"
+        },
+        "native_numeric_audit_verified": true,
+        "independent_archive_admission": {
+          "provider_status": "TERMINATED",
+          "archive_and_every_member_verified": true,
+          "cost_and_retention_admitted": true,
+          "workflow_completed": true,
+          "exact_source_schedule_axes_verified": true,
+          "fixture_only": true,
+          "live_provider_or_billing_observed": false
+        },
+        "local_model_inference": false,
+        "original_Mac_portability_tolerance_unchanged": true
+      },
+      "oral-noGLM/learning-E023": {
+        "status": "PASS",
+        "comparison": "learning-E023",
+        "unit": "oral-noGLM",
+        "role": "student",
+        "axis": {
+          "rows": 35,
+          "bp": 105648,
+          "eligible": 33,
+          "samples": [
+            "Z9",
+            "A1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6",
+            "q7",
+            "q8",
+            "q0"
+          ]
+        },
+        "features": {
+          "bytes": 9191,
+          "sha256": "97e479a5de44464801f144e3b174db2b09ea8f837a0e933b65831003aa61ac7a"
+        },
+        "native_numeric_audit_verified": true,
+        "independent_archive_admission": {
+          "provider_status": "TERMINATED",
+          "archive_and_every_member_verified": true,
+          "cost_and_retention_admitted": true,
+          "workflow_completed": true,
+          "exact_source_schedule_axes_verified": true,
+          "fixture_only": true,
+          "live_provider_or_billing_observed": false
+        },
+        "local_model_inference": false,
+        "original_Mac_portability_tolerance_unchanged": true
+      }
+    },
+    "truth_scored": false,
+    "actual": [
+      "real generated DNA/retained input-bank readers",
+      "full paired serial DAG",
+      "strict native reload",
+      "both sparse constructors and audits",
+      "six reader/export contracts",
+      "complete exact-byte member/alias collector"
+    ],
+    "synthetic": [
+      "tiny marker calls",
+      "GLM fixture vectors; no DNABERT inference"
+    ],
+    "community_or_cloud_admission": false
+  },
+  "operations_tests": 9,
+  "launch_tests": 3,
+  "followthrough_tests": 7,
+  "real_streamed_bridge_return": {
+    "physical_members": 1329,
+    "aliases": 16,
+    "every_member_verified": true
+  },
+  "actual": [
+    "three tiny fits",
+    "34 serial stages",
+    "strict same-runtime reload",
+    "both real sparse constructors and six complete export/readers",
+    "verified resume without work",
+    "real gzip/tar/member/alias stream checks",
+    "actual payload file/view reader and corruption refusal"
+  ],
+  "synthetic_or_unavailable": [
+    "Marker calls/GLM fixture vectors are synthetic; no DNABERT inference",
+    "Provider, systemd and existing-disk mount not exercised locally",
+    "Mac sandbox blocks Snakemake resource counters; do not claim native benchmarks from this fixture"
+  ],
+  "failed_journals": [
+    "Original compact download hit unchanged 6 GiB reserve; repaired through verified redundant transport release",
+    "Oral local diagnostic failed the same reserve after three complete E009 reviews; no Oral student started",
+    "Expected Python 3.13 gzip finalizer warning after successful capped-writer refusal test"
+  ],
+  "evidence": {
+    "artifacts/e031-bootstrap-preserving-learning/preparation/tiny-learning-r3-work/paired-contract/completed.json": {
+      "bytes": 43031,
+      "sha256": "7f367194f08ba61cf52ad9220dfcfcf6aa8a2146d6b154be6f503143b6669126"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/followthrough-tests-final.log": {
+      "bytes": 1103,
+      "sha256": "6ea05f618243c4eae799471b57795c9382072754252c65947f99d2d28726c9c6"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/existing-operation-tests.log": {
+      "bytes": 2290,
+      "sha256": "dbfc135ec5aa2e2c73518387d72039bd81fa4a674be124b07ae37d5384adcba9"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/paired-collector-contract.json": {
+      "bytes": 33553,
+      "sha256": "8813892d29cf6bc843123a70f9d356a023ddb4e4d75dbf0c1a3a771e6a14ab1d"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/launch-tests-current.log": {
+      "bytes": 1577,
+      "sha256": "9b9ed49c8d2cf55e1d04d980fc6b14e9598982f45a00477c45b696f128ea4a44"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/inspection-20261102/docs-prelaunch-final.log": {
+      "bytes": 689,
+      "sha256": "0ca67590b8d03744d4aeadba2ea494d1978a87d3423ce82a477ed0bbd8bb9c5e"
+    }
+  },
+  "community_fits": 0,
+  "scientific_rule_changed": false
+}
