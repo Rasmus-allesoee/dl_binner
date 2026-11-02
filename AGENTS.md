@@ -777,6 +777,13 @@ squash/rebase away their only durable provenance.
 
 Use GitHub as the durable collaborative record of the project where appropriate.
 
+Owner preference, November 2, 2026: prefer the normal public GitHub push/pull
+workflow when the complete outgoing history has no privacy concern. Private
+Git-bundle transfer is a scoped fallback, not the default product workflow.
+Review the actual outgoing history; private financial/account records or secrets
+remain a reason to use private transfer until their publication is explicitly
+authorized. Do not rewrite preserved history merely to publish a research branch.
+
 Check destination visibility before publishing operational records. Private
 compute/source transfer and public Git publication are separate actions. If
 publication is not admitted, retain the commits locally and, within an authorized

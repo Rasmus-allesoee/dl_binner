@@ -1,0 +1,35 @@
+{
+  "kind": "E031 owner-authorized execution amendment before bridge outcomes",
+  "date": "2026-11-02",
+  "prepared_scientific_source": "58d7d59e892304ad20efcf784e61288e8a7d4967",
+  "unchanged_bridge_science": true,
+  "bridge_approved_USD": 4,
+  "temporary_task_disk": {
+    "approved": true,
+    "GiB": 40,
+    "type": "pd-balanced",
+    "condition": "Native reviewed safe cleanup cannot provide 33 GiB; source retains 25 GiB; no old disk format/resize"
+  },
+  "learner_follow_through": {
+    "owner_conditionally_authorized_in_same_task": true,
+    "decision_after_bridge": true,
+    "no_old_budget_carries": true,
+    "fresh_complete_credit_runtime_and_retention_admission_required": true,
+    "if_E023_supported": "Freeze same new learner outputs under BOTH exact E023 and E030 constructors across all three modes before any new learner outcomes",
+    "no_per_dataset_constructor_router": true,
+    "prepared_loss_weights_and_schedule_unchanged": true
+  },
+  "automatic_soft_delete_tail": {
+    "owner_explicitly_approved": true,
+    "maximum_USD": 0.05,
+    "latest_end": "2026-11-11T00:00:00+01:00",
+    "scope": "New E031 return archives only; not active retention"
+  },
+  "active_retention_end": "2026-11-04T00:00:00+01:00",
+  "real_money_authorized": false,
+  "publication": {
+    "default": "Normal GitHub push/pull when outgoing history is safe",
+    "this_branch": "Private exact-commit transfer because preserved outgoing history includes private financial/account records",
+    "no_history_rewrite": true
+  }
+}

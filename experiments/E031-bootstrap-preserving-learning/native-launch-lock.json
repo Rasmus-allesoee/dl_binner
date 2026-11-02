@@ -1,0 +1,34 @@
+{
+  "kind": "E031 operational launch supplement; prepared science unchanged",
+  "prepared_source": "58d7d59e892304ad20efcf784e61288e8a7d4967",
+  "files": {
+    "scripts/e031_launch.py": {
+      "bytes": 23624,
+      "sha256": "4f2fb350414995c108643accdf2aff64fd0e080e4ca53ef3aa15d5d782c100ed"
+    },
+    "tests/test_e031_launch.py": {
+      "bytes": 4787,
+      "sha256": "bef1374d78fa2fd9a6591d47ab40580b9e5d399d3fb838597763dc22ff5ecbd8"
+    },
+    "experiments/E031-bootstrap-preserving-learning/cleanup-plan.json": {
+      "bytes": 2294,
+      "sha256": "ba1089b4bdc98e36ed187c31f0df11ec0cfd52aa0c6609ce048dae013574c331"
+    },
+    "experiments/E031-bootstrap-preserving-learning/execution-policy.json": {
+      "bytes": 1525,
+      "sha256": "16f13a1e5cc144f23b0639a16f99d83326a4377d03d7a6505b61cfd55d20d02d"
+    },
+    "experiments/E031-bootstrap-preserving-learning/source-lock.json": {
+      "bytes": 65654,
+      "sha256": "40c4a3a7871169638e1ab7813b896bfe8c266e35f68a86fde93261660febf9ec"
+    },
+    "experiments/E031-bootstrap-preserving-learning/science-lock.json": {
+      "bytes": 19392,
+      "sha256": "d1f34d2930eae869f779992105cc0dfcfcdc679dc4555878426ae251abd0b2f5"
+    }
+  },
+  "actual_local_Git_consumer_passed": true,
+  "launch_tests": 3,
+  "existing_operations_tests": 9,
+  "native_provider_mount_and_watchdog_not_yet_admitted": true
+}

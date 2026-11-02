@@ -4,6 +4,14 @@ Updated: November 2, 2026 (Copenhagen). This is the single current handoff.
 
 ## E031 local preparation: construction bridge first, learner implemented
 
+November 2 execution authorization is now recorded in
+[E031 operations](../experiments/E031-bootstrap-preserving-learning/OPERATIONS.md#november-2-authorized-execution-amendment).
+The unchanged bridge may run after fresh gates; conditional same-task learning
+needs its own complete admission and prospectively paired constructors if E023
+is carried forward. Only the new archive's automatic seven-day tail has a narrow
+$0.05 exception; active retention stays November 4. No native start is yet recorded
+in this amendment. The preparation status below describes the accepted `58d7d59`.
+
 **E031 is implemented locally; no community or paid cloud work is authorized or
 performed in this preparation.** New branch `bootstrap-preserving-learning`,
 parent `ca7b142`. [Design](../experiments/E031-bootstrap-preserving-learning/design.md),

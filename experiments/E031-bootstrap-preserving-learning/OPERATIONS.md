@@ -1,6 +1,36 @@
 # E031 operations
 
-## Current boundary
+## November 2 authorized execution amendment
+
+The owner invokes prepared source `58d7d59` and authorizes the $4 cached bridge,
+with one temporary 40 GiB balanced task disk only if verified safe cleanup cannot
+provide headroom. [Execution policy](execution-policy.json) records the unchanged
+science, conditional same-task learner follow-through and the separately approved
+automatic soft-delete tail (at most $0.05 through November 11). Active compute,
+task disks and retention still end November 4 at 00:00 Copenhagen. No learner fit
+is released by the bridge admission alone.
+
+If the bridge supports carrying E023 forward, freeze evaluation of the same new
+learner outputs under **both** E023 and E030 across all three modes before any
+new learner outcome. No dataset-specific constructor choice. Fresh complete
+financial/runtime/headroom admission and a concrete same-task decision are still
+required; reasonable covered cost/time flexibility does not change science or
+retention. The prepared loss/defaults stay fixed.
+
+The [Mac controller](../../scripts/e031_launch.py) and
+[native launch lock](native-launch-lock.json) add tested operational glue without
+changing the prepared product, stage dispatch or science lock. Its actual private
+Git consumer passes on tiny repositories; wrong-size/nonempty new-disk fixtures
+refuse before formatting. Provider/mount states remain mocked in those tests.
+The initial local monitor sandbox refusal is retained; the permitted sampled
+rerun passes three launch tests and the nine existing operations tests.
+
+Normal public GitHub push/pull is now the preferred workflow when the complete
+outgoing history is safe. This branch still contains private financial/account
+records in preserved history, so this execution uses exact private transfer and
+read-only GitHub access. No history rewrite or implicit disclosure is performed.
+
+## Preserved preparation boundary
 
 This task is **local preparation only** at the owner's explicit direction. No VM
 start, community fit/group/score, cloud write/spending, resource change, cleanup,
@@ -227,7 +257,7 @@ Keep its full charged lifetime in the cost record.
 
 Report the common disposition, target gains/losses, teacher/student effects and matched-neighbor evidence.
 Report diagnostic limits and actual allocation, storage and export costs.
-Recommend whether the separately prepared bootstrap-preserving learner should run next.
+Recommend whether the separately prepared bootstrap-preserving learner should run next, or the next strongest step/performance upgrade.
 Freeze any common downstream amendment before later fits.
 Do not route datasets to their historical winners.
 Keep Oral GLM and skin admission dependencies concrete.
