@@ -12,7 +12,7 @@ import unittest
 ROOT=Path(__file__).absolute().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from e031_stream_return import stream_restore
-from e031_learner_launch import learner_host, learner_release, mount_code, MOUNT
+from e031_learner_launch import learner_host, learner_release, mount_code, MOUNT, remaining_provider_seconds
 
 
 def fixture(bad_member=False, bad_alias=False):
@@ -31,6 +31,12 @@ def fixture(bad_member=False, bad_alias=False):
 
 
 class Followthrough(unittest.TestCase):
+    def test_recorded_setup_recovery_keeps_original_provider_horizon(self):
+        remaining=remaining_provider_seconds(1000,1400)
+        self.assertLessEqual(1400+remaining,1000+58500)
+        self.assertLess(remaining,58500)
+        with self.assertRaises(TimeoutError):remaining_provider_seconds(1000,1000+58000)
+
     def test_real_stream_and_exact_alias_reuse(self):
         raw,meta,expected=fixture()
         with tempfile.TemporaryDirectory()as folder:

@@ -1,5 +1,17 @@
 # E031 operations
 
+## Native prerelease guard recovery, November 2
+
+[The failed setup](setup-recovery.json) is preserved. Source/disk sync passed, then
+Linux system Python refused a version-dependent AST-dump fingerprint before any
+native gate or science release. The scientific function's exact source text and
+all product bytes match the original prepared commit. The repair binds that
+portable exact text, preserving the old AST fingerprint and failed refusal.
+Two local interpreters and eight actual stream/view/rendering/recovery contracts
+pass. Recovery keeps the first VM-start clock, original budget/retention and a
+provider STOP no later than the original horizon. No science was available to
+replay; the disk and passed source prerequisite remain.
+
 ## November 2 inspected bridge and unconditional scientific learner follow-through
 
 [Independent inspection](inspection-observed.json) confirms the original phase

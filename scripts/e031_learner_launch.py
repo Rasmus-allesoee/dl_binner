@@ -95,7 +95,15 @@ def learner_release(ident, provider):
     return code
 
 
-def start(out):
+def remaining_provider_seconds(original_start, now, maximum=58500):
+    """Keep the first allocation's STOP horizon during a recorded setup recovery."""
+    value=int(original_start+maximum-now)-120
+    if value < 1800:
+        raise TimeoutError('Original cumulative clock cannot admit another setup attempt')
+    return value
+
+
+def start(out, prior=None):
     """One existing-node start after complete local credit/source/byte admission."""
     out = Path(out).absolute(); out.mkdir(parents=True, exist_ok=True)
     if (out/'identity.json').exists():
@@ -129,27 +137,44 @@ def start(out):
     disk = c.call(['compute','disks','describe',DISK], CPU_ZONE); c.put('existing-task-disk.json', disk)
     if disk['id'] != DISK_ID or int(disk['sizeGb']) != 40 or not disk['type'].endswith('/pd-balanced'):
         raise ValueError('Approved task disk resource identity differs')
-    phase = 'learning-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+source[:7]
+    previous=None
+    if prior is not None:
+        prior=Path(prior)
+        if (prior/'held-gates-dispatched.json').exists():
+            raise ValueError('Recovery requires explicit verified reuse after dispatched native/science work')
+        previous=json.loads((prior/'identity.json').read_text())
+        if previous['scratch']['id']!=DISK_ID:
+            raise ValueError('Original recovery disk identity differs')
+    provider_seconds=(remaining_provider_seconds(previous['vm_start_epoch'],time.time(),limits['provider_STOP_seconds'])
+                      if previous else limits['provider_STOP_seconds'])
+    phase = 'learning-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+source[:7]+('-r2' if previous else '')
     ident = dict(root=MOUNT+'/'+phase, repo='/srv/dl_binner/repo', source=source, phase=phase,
         user='rasmus_allesoee_gmail_com', service_name='e031-'+phase,
         archive_prefix='gs://dl-binner-archive-167650584170/e031/'+phase+'/', vm_start_epoch=0,
-        provider_max_duration_seconds=limits['provider_STOP_seconds'],
+        provider_max_duration_seconds=provider_seconds,
         scratch=dict(name=DISK,id=DISK_ID,size_GiB=40,reused=True))
+    if previous:
+        ident.update(vm_start_epoch=previous['vm_start_epoch'],recovery_from=previous['root'],
+                     original_phase_start_epoch=previous['vm_start_epoch'],science_replayed=False)
     for label, code in [('source',source_code(ident,f['source_transport'])),('mount',mount_code()),
                         ('host',learner_host(ident,f)),('release',learner_release(ident,before))]:
         compile(code, 'prepared-learner-'+label, 'exec')
     c.call(['compute','instances','set-scheduling',CPU,'--no-restart-on-failure',
-            '--max-run-duration='+str(limits['provider_STOP_seconds'])+'s','--instance-termination-action=STOP'], CPU_ZONE)
+            '--max-run-duration='+str(provider_seconds)+'s','--instance-termination-action=STOP'], CPU_ZONE)
     stopped = c.state(); c.put('provider-STOP-readback.json', stopped)
-    if (str(stopped['scheduling']['maxRunDuration']['seconds']) != str(limits['provider_STOP_seconds'])
+    if (str(stopped['scheduling']['maxRunDuration']['seconds']) != str(provider_seconds)
             or stopped['scheduling']['instanceTerminationAction'] != 'STOP' or stopped['scheduling']['automaticRestart']):
         raise ValueError('Independent provider STOP differs')
     try:
         c.call(['compute','instances','start',CPU], CPU_ZONE); live = c.state()
         if live['status'] != 'RUNNING' or live['lastStartTimestamp'] == before['lastStartTimestamp']:
             raise ValueError('Fresh original CPU boot absent')
-        ident['vm_start_epoch'] = datetime.datetime.fromisoformat(live['lastStartTimestamp']).timestamp()
-        ident['allocation_start_epoch'] = ident['vm_start_epoch']; save(out/'identity.json', ident)
+        actual_start=datetime.datetime.fromisoformat(live['lastStartTimestamp']).timestamp()
+        ident['vm_start_epoch'] = previous['vm_start_epoch'] if previous else actual_start
+        ident['allocation_start_epoch'] = actual_start
+        if actual_start+provider_seconds>ident['vm_start_epoch']+limits['provider_STOP_seconds']:
+            raise ValueError('Actual provider STOP would exceed original cumulative horizon')
+        save(out/'identity.json', ident)
         c.put('provider-start.json', live)
         for at in range(12):
             result = subprocess.run(SSH+['true'], capture_output=True, text=True, timeout=25)
@@ -182,7 +207,8 @@ def release(out):
 
 if __name__ == '__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--artifact-root',type=Path,required=True)
+    p.add_argument('--recover-unreleased-from',type=Path)
     p.add_argument('--start',action='store_true');p.add_argument('--release',action='store_true');a=p.parse_args()
-    if a.start and not a.release:start(a.artifact_root)
+    if a.start and not a.release:start(a.artifact_root,a.recover_unreleased_from)
     elif a.release and not a.start:release(a.artifact_root)
     else:p.error('Choose start or release')

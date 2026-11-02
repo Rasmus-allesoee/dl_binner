@@ -45,9 +45,10 @@ def freeze(include_files=False):
         for name,wanted in extra['files'].items():
             if name in effective and name not in allowed:raise ValueError('Prepared science may not change')
             if binding(ROOT/name)!=wanted:raise ValueError('Paired supplement differs: '+name)
-        node=next(n for n in ast.parse((ROOT/'scripts/e031_control.py').read_text()).body if isinstance(n,ast.FunctionDef) and n.name=='stage')
-        if hashlib.sha256(ast.dump(node,include_attributes=False).encode()).hexdigest()!=json.loads((EXP/'science-lock.json').read_text())['stage_dispatch_sha256']:
-            raise ValueError('Frozen original scientific stage dispatch changed')
+        text=(ROOT/'scripts/e031_control.py').read_text()
+        node=next(n for n in ast.parse(text).body if isinstance(n,ast.FunctionDef) and n.name=='stage')
+        if hashlib.sha256(ast.get_source_segment(text,node).encode()).hexdigest()!=extra['original_stage_source_sha256']:
+            raise ValueError('Frozen original scientific stage source bytes changed')
         effective.update(extra['files'])
         effective[str(supplement.relative_to(ROOT))]=binding(supplement)
     for name,wanted in effective.items():

@@ -9,8 +9,8 @@
   ],
   "files": {
     "scripts/e031_control.py": {
-      "bytes": 14253,
-      "sha256": "f305573b68a839fe9d70db0242576ab83b09059a33455ab75635ac9919058bb6"
+      "bytes": 14232,
+      "sha256": "7e13dda501b6a29dac6f9f5ebaf5221ff87c201235ff97354c425660df4bad1e"
     },
     "scripts/e031_phase.py": {
       "bytes": 20763,
@@ -37,8 +37,8 @@
       "sha256": "842ad3a3056f3daa018341c1dc240af75fc98d0a231ae4f20ce509f52f4b60ed"
     },
     "scripts/e031_learner_launch.py": {
-      "bytes": 12325,
-      "sha256": "dae93299492e6f16d14bca3f22358607f16422b673f967fe1f551af1e1c76056"
+      "bytes": 13827,
+      "sha256": "2606f9d1ab7841348c79fcdcf59cb8c146780e6448c95e0b574c8e8d744bd7d2"
     },
     "scripts/e031_native_review.py": {
       "bytes": 7735,
@@ -61,12 +61,12 @@
       "sha256": "63885c86d190b5dc89cb2a10467cb5889893764da92a2d4acbfd8b51091a6591"
     },
     "scripts/e031_freeze_paired.py": {
-      "bytes": 3224,
-      "sha256": "187da493a7c44e2c972039d66285e50729c789c138561d4d5fd1375951f7717e"
+      "bytes": 3699,
+      "sha256": "5c99f79e6b855bc657a1505103d0f1bd273d30fd73bc24cc9a4f8507a89140f4"
     },
     "tests/test_e031_followthrough.py": {
-      "bytes": 7162,
-      "sha256": "f16d1123ff7d797e8276a9be0c0e31fda340cfc06f5e9ad26ac6d6cecdf17c63"
+      "bytes": 7509,
+      "sha256": "f83c5c4d406b81da6b000e020474cc60410aa00415a4e108ccdd538223fbc25f"
     },
     "experiments/E031-bootstrap-preserving-learning/paired-plan.json": {
       "bytes": 4795,
@@ -91,6 +91,9 @@
   },
   "product_bytes_changed": false,
   "original_stage_dispatch_changed": false,
+  "original_stage_source_sha256": "d2afb7c3a208f0d767fc71f5ad37fd34efaf2518d21d31dc820f271c9da46e17",
+  "legacy_AST_fingerprint_preserved": true,
+  "portable_guard": "Exact original source text; AST dumps differ across Python versions",
   "truth_or_loss_or_default_changed": false,
   "owner_authorization": "November 2: both constructors across all three modes after operational/data gates, regardless of bridge score"
 }

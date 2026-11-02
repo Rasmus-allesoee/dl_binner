@@ -1,0 +1,39 @@
+{
+  "kind": "E031 prerelease operational provenance refusal and portable exact-source repair",
+  "status": "REPAIRED_LOCALLY; RECOVERY_NATIVE_GATES_PENDING",
+  "failed_phase": "learning-20261102T200214Z-1af0926",
+  "failed_source": "1af09268a491ef3c24dff2db1cbbeb2c9da5428b",
+  "original_VM_start_epoch": 1793649752.426,
+  "native_failure": "Frozen original scientific stage dispatch changed",
+  "cause": "AST dump fingerprints vary across Python versions; Linux system-Python rejected identical stage source text",
+  "failed_journal_preserved": true,
+  "provider_status": "TERMINATED",
+  "setup_native_gates_dispatched": false,
+  "science_released": false,
+  "community_fits": 0,
+  "original_product_stage_text_unchanged": true,
+  "repair": "Exact ast.get_source_segment bytes against prepared 58d7d59; preserve the old AST fingerprint and failed journal",
+  "local_interpreters": [
+    "Python 3.13 control",
+    "Retained local numerical Python"
+  ],
+  "tests": 8,
+  "cumulative_original_clock_preserved": true,
+  "allocation_seconds": 116.495,
+  "priced_CPU_IP_USD": 0.008835682283657541,
+  "resource_or_retention_change": false,
+  "evidence": {
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102/start-terminal.log": {
+      "bytes": 3843,
+      "sha256": "a754dad90da74b238ad701fdfb885e17b98c23ecbf41e3010849319b9f3c4f05"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102/failure-control/provider-after-start-controller.json": {
+      "bytes": 33452,
+      "sha256": "cc2520172ff3ae4417cb084d522578ce47796372a449efd494283e7fe722ecfa"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-20261102/recovery-tests.log": {
+      "bytes": 1272,
+      "sha256": "4c92e7439f367b62716f5128aa8d74c28ac1b8a340439d22082888c195163efd"
+    }
+  }
+}
