@@ -23,9 +23,20 @@ sys.path.insert(0,str(Path(__file__).absolute().parent))
 from e031_phase import service_content as phase_service
 
 
+def validate_config(cfg):
+    """Refuse incomplete provenance before starting the held service or timer."""
+    needed = ['root', 'repo', 'setup_deadline_epoch', 'service_name',
+              'review_deadline_epoch', 'source_commit', 'operations_source',
+              'vm_start_epoch', 'provider_deadline_epoch']
+    if any(name not in cfg for name in needed):
+        raise ValueError('Complete read-only armer configuration required')
+    if cfg['source_commit'] != cfg['operations_source']:
+        raise ValueError('Read-only operations source differs')
+
+
 def arm(path):
     """Start the held parent, pin its identity and test the fresh watcher timer."""
-    path=Path(path);cfg=json.loads(path.read_text());root=Path(cfg['root']);repo=Path(cfg['repo']);host=json.loads((root/'host.json').read_text())
+    path=Path(path);cfg=json.loads(path.read_text());validate_config(cfg);root=Path(cfg['root']);repo=Path(cfg['repo']);host=json.loads((root/'host.json').read_text())
     if os.geteuid()!=0 or time.time()>=cfg['setup_deadline_epoch']:raise ValueError('Root/current setup clock required')
     if host['boot_id']!=Path('/proc/sys/kernel/random/boot_id').read_text().strip():raise ValueError('Host boot identity differs')
     unit=cfg['service_name']

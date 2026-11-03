@@ -43,6 +43,17 @@ class ReadonlyContracts(unittest.TestCase):
         self.assertIn('try-restart', text)
         self.assertNotIn('instances start', text)
 
+    def test_missing_operations_provenance_refused_before_service_start(self):
+        import sys
+        sys.path.insert(0, str(SCRIPT.parent))
+        from e031_learning_review_arm import validate_config
+        cfg = dict(root='/retained/review', repo='/retained/science', setup_deadline_epoch=100,
+            service_name='e031-test', review_deadline_epoch=200, source_commit='a'*40,
+            operations_source='a'*40, vm_start_epoch=1, provider_deadline_epoch=250)
+        validate_config(cfg)
+        del cfg['source_commit']
+        with self.assertRaises(ValueError): validate_config(cfg)
+
 
 if __name__ == '__main__':
     unittest.main()
